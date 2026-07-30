@@ -3,111 +3,305 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Content Hubs — German Learning</title>
+  <title>Hubs Dashboard — German Learning OS (Design)</title>
+  <link rel="stylesheet" href="../design/infographics/tokens.css">
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
-      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-      background: #fff;
-      color: #1a1a1a;
+      font-family: var(--glos-font-body);
+      background: var(--glos-content-bg);
+      color: var(--glos-text-primary);
       line-height: 1.5;
       font-size: 17px;
       padding-bottom: 2rem;
     }
+
     header {
-      background: #fff;
-      border-bottom: 3px solid #6c5ce7;
+      background: var(--glos-sidebar-bg);
+      color: var(--glos-text-inverse);
       padding: 1rem 1.25rem;
       position: sticky;
       top: 0;
       z-index: 100;
-      box-shadow: 0 2px 8px rgba(0,0,0,.08);
+      box-shadow: var(--glos-shadow-md);
     }
-    header h1 { font-size: 1.35rem; font-weight: 800; }
-    header p { font-size: 0.9rem; color: #555; margin-top: 0.25rem; }
-    header a { color: #6c5ce7; font-weight: 600; }
+
+    header h1 {
+      font-family: var(--glos-font-display);
+      font-size: 1.35rem;
+      font-weight: 800;
+    }
+
+    header p { font-size: 0.9rem; color: rgba(255,255,255,0.72); margin-top: 0.25rem; }
+    header a { color: #c7d2fe; font-weight: 600; }
+    .voice-badge { font-size: 0.8rem; color: #c7d2fe; margin-top: 0.35rem; font-weight: 600; }
+
+    /* Dashboard stats strip — streak icon per INFOGRAPHIC-SYSTEM §9 */
+    .dashboard-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: var(--glos-space-3);
+      padding: var(--glos-space-4) 1rem;
+      background: var(--glos-surface);
+      border-bottom: 1px solid var(--glos-border);
+    }
+
+    .stat-card {
+      text-align: center;
+      padding: var(--glos-space-3);
+      border-radius: var(--glos-radius-md);
+      background: var(--glos-content-bg);
+      border: 1px solid var(--glos-border);
+    }
+
+    .stat-card .stat-value {
+      font-family: var(--glos-font-display);
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--glos-accent);
+      line-height: 1.1;
+    }
+
+    .stat-card .stat-label {
+      margin-top: 4px;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--glos-text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .stat-card--streak .stat-value {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: var(--glos-streak);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .stat-card--streak .streak-icon {
+      width: 26px;
+      height: 26px;
+      flex-shrink: 0;
+    }
+
+    .stat-card--streak .stat-suffix {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--glos-text-secondary);
+      -webkit-text-fill-color: var(--glos-text-secondary);
+    }
+
+    .design-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 0.75rem 1rem;
+      background: var(--glos-surface);
+      border-bottom: 1px solid var(--glos-border);
+    }
+
+    .design-links a {
+      padding: 6px 12px;
+      border-radius: var(--glos-radius-pill);
+      border: 1px solid var(--glos-border);
+      background: var(--glos-content-bg);
+      color: var(--glos-accent);
+      font-size: 12px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .design-links a:hover { border-color: var(--glos-accent); }
+
     nav.tabs {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
       padding: 0.75rem 1rem;
-      background: #f5f5f5;
-      border-bottom: 1px solid #ddd;
+      background: var(--glos-surface);
+      border-bottom: 1px solid var(--glos-border);
       position: sticky;
-      top: 68px;
+      top: 0;
       z-index: 99;
     }
+
     nav.tabs button {
       flex: 1 1 30%;
       min-height: 48px;
       font-weight: 600;
-      border: 2px solid #ccc;
-      border-radius: 10px;
-      background: #fff;
+      font-family: inherit;
+      border: 1px solid var(--glos-border);
+      border-radius: var(--glos-radius-md);
+      background: var(--glos-content-bg);
       cursor: pointer;
+      color: var(--glos-text-primary);
     }
-    nav.tabs button.active { background: #6c5ce7; color: #fff; border-color: #6c5ce7; }
+
+    nav.tabs button.active {
+      background: var(--glos-accent);
+      color: var(--glos-text-inverse);
+      border-color: var(--glos-accent);
+    }
+
     main { padding: 1rem; max-width: 960px; margin: 0 auto; }
     .panel { display: none; }
     .panel.active { display: block; }
+
     .sub-tabs { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 1rem 0; }
     .sub-tabs button {
       padding: 0.4rem 0.75rem;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      background: #fafafa;
+      border: 1px solid var(--glos-border);
+      border-radius: var(--glos-radius-sm);
+      background: var(--glos-surface);
       cursor: pointer;
       font-size: 0.85rem;
+      font-family: inherit;
     }
-    .sub-tabs button.active { background: #ede9fe; border-color: #6c5ce7; color: #4c1d95; font-weight: 700; }
-    h2 { font-size: 1.15rem; margin: 1rem 0 0.5rem; border-bottom: 2px solid #eee; padding-bottom: 0.3rem; }
-    h3 { font-size: 1rem; margin: 1rem 0 0.5rem; color: #444; }
+
+    .sub-tabs button.active {
+      background: var(--glos-accent-soft);
+      border-color: var(--glos-accent);
+      color: var(--glos-accent);
+      font-weight: 700;
+    }
+
+    h2 {
+      font-family: var(--glos-font-display);
+      font-size: 1.15rem;
+      margin: 1rem 0 0.5rem;
+      border-bottom: 2px solid var(--glos-border);
+      padding-bottom: 0.3rem;
+    }
+
+    h3 { font-size: 1rem; margin: 1rem 0 0.5rem; color: var(--glos-text-secondary); }
+
     .row {
       display: flex;
       align-items: center;
       gap: 0.5rem;
       padding: 0.75rem;
-      border: 1px solid #e5e5e5;
-      border-radius: 10px;
+      border: 1px solid var(--glos-border);
+      border-radius: var(--glos-radius-md);
       margin-bottom: 0.4rem;
-      background: #fafafa;
+      background: var(--glos-surface);
+      box-shadow: var(--glos-shadow-sm);
     }
+
     .row .text { flex: 1; }
     .row .de { font-weight: 700; }
-    .row .en { color: #666; font-size: 0.9rem; }
-    .der { color: #2563eb; font-weight: 700; }
-    .die { color: #dc2626; font-weight: 700; }
-    .plural { color: #9333ea; font-weight: 700; }
+    .row .en { color: var(--glos-text-secondary); font-size: 0.9rem; }
+
+    .der { color: var(--glos-der); font-weight: 700; }
+    .die { color: var(--glos-die); font-weight: 700; }
+    .plural { color: var(--glos-plural); font-weight: 700; }
+
     .play, .play-slow {
-      width: 44px; height: 44px; border-radius: 50%; cursor: pointer;
-      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
     }
-    .play { border: none; background: #6c5ce7; color: #fff; font-size: 1.1rem; }
-    .play-slow { border: 2px solid #6c5ce7; background: #fff; color: #6c5ce7; }
-    .empty { color: #888; padding: 2rem; text-align: center; }
-    .voice-badge { font-size: 0.8rem; color: #6c5ce7; margin-top: 0.35rem; font-weight: 600; }
-    table { width: 100%; border-collapse: collapse; margin: 0.5rem 0 1rem; font-size: 0.95rem; }
-    th, td { border: 1px solid #ddd; padding: 0.5rem; text-align: left; }
-    th { background: #f0f0f0; }
-    .qa-block { border-left: 3px solid #6c5ce7; padding-left: 0.75rem; margin: 0.75rem 0; }
-    .tag { display: inline-block; background: #ede9fe; color: #5b21b6; font-size: 0.75rem; padding: 0.1rem 0.4rem; border-radius: 4px; margin-left: 0.25rem; }
-    .alpha-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(48px, 1fr)); gap: 0.35rem; margin: 0.5rem 0 1rem; }
+
+    .play { border: none; background: var(--glos-accent); color: #fff; font-size: 1.1rem; }
+    .play-slow { border: 2px solid var(--glos-accent); background: var(--glos-surface); color: var(--glos-accent); }
+
+    .empty { color: var(--glos-text-muted); padding: 2rem; text-align: center; }
+
+    table { width: 100%; border-collapse: collapse; margin: 0.5rem 0 1rem; font-size: 0.95rem; background: var(--glos-surface); }
+    th, td { border: 1px solid var(--glos-border); padding: 0.5rem; text-align: left; }
+    th { background: var(--glos-sidebar-bg); color: var(--glos-text-inverse); }
+
+    .qa-block { border-left: 3px solid var(--glos-accent); padding-left: 0.75rem; margin: 0.75rem 0; }
+
+    .tag {
+      display: inline-block;
+      background: var(--glos-accent-soft);
+      color: var(--glos-accent);
+      font-size: 0.75rem;
+      padding: 0.1rem 0.4rem;
+      border-radius: 4px;
+      margin-left: 0.25rem;
+    }
+
+    .alpha-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(48px, 1fr));
+      gap: 0.35rem;
+      margin: 0.5rem 0 1rem;
+    }
+
     .alpha-card {
-      min-height: 48px; display: flex; align-items: center; justify-content: center;
-      font-weight: 800; border: 1px solid #ddd; border-radius: 8px; cursor: pointer; background: #fafafa;
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      border: 1px solid var(--glos-border);
+      border-radius: var(--glos-radius-sm);
+      cursor: pointer;
+      background: var(--glos-surface);
     }
+
     .beruf-grid { display: grid; grid-template-columns: 1fr; gap: 0.5rem; }
     @media (min-width: 600px) { .beruf-grid { grid-template-columns: 1fr 1fr; } }
-    .beruf-card { border: 1px solid #e5e5e5; border-radius: 10px; padding: 0.75rem; background: #fafafa; }
+
+    .beruf-card {
+      border: 1px solid var(--glos-border);
+      border-radius: var(--glos-radius-md);
+      padding: 0.75rem;
+      background: var(--glos-surface);
+      box-shadow: var(--glos-shadow-sm);
+    }
+
     .beruf-card .en { font-weight: 700; margin-bottom: 0.35rem; }
   </style>
 </head>
 <body>
   <header>
-    <h1>Content Hubs</h1>
-    <p>Extracted Momente content — vocabulary, phrases, grammar. <a href="exam.html">← Exam cram</a></p>
-    <div id="voice-badge" class="voice-badge">🔊 Loading voice…</div>
+    <h1>German Learning OS — Hubs</h1>
+    <p>Design lane · extracted Momente content. <a href="exam.html">Exam cram</a> · <a href="../design/infographics/">Infographics</a></p>
+    <div id="voice-badge" class="voice-badge">Loading voice…</div>
   </header>
+
+  <div class="dashboard-strip" id="dashboard-strip" role="group" aria-label="Progress stats">
+    <div class="stat-card">
+      <div class="stat-value" id="stat-lessons">—</div>
+      <div class="stat-label">Lessons</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value" id="stat-vocab">—</div>
+      <div class="stat-label">Vocabulary</div>
+    </div>
+    <div class="stat-card stat-card--streak">
+      <div class="stat-value">
+        <img src="assets/icons/streak.png" alt="" class="streak-icon" width="26" height="26">
+        <span id="stat-streak">7</span>
+        <span class="stat-suffix">days</span>
+      </div>
+      <div class="stat-label">Study Streak</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value" id="stat-xp">2,450</div>
+      <div class="stat-label">XP Earned</div>
+    </div>
+  </div>
+
+  <div class="design-links">
+    <a href="../design/infographics/">All previews</a>
+    <a href="../design/infographics/vocab-card-ingenieur.html">Vocab card</a>
+    <a href="../design/infographics/verb-sein.html">Verb sein</a>
+    <a href="../design/infographics/grammar-cases.html">Grammar</a>
+    <a href="../design/infographics/berufe-grid-sample.html">Berufe grid</a>
+  </div>
 
   <nav class="tabs">
     <button class="active" data-tab="vocab">Vocabulary</button>
@@ -138,9 +332,10 @@
       || voices.find(function (v) { return v.lang && v.lang.toLowerCase().startsWith('de'); })
       || null;
     const el = document.getElementById('voice-badge');
-    if (el) el.textContent = deVoice ? ('🔊 Voice: ' + deVoice.name) : '🔊 Voice: de-DE (default)';
+    if (el) el.textContent = deVoice ? ('Voice: ' + deVoice.name) : 'Voice: de-DE (default)';
     return deVoice;
   }
+
   if ('speechSynthesis' in window) {
     pickDeVoice();
     speechSynthesis.onvoiceschanged = function () { deVoice = null; pickDeVoice(); };
@@ -206,7 +401,7 @@
     return div;
   }
 
-  function subTabs(items, activeId, attr, labelFn, onPick) {
+  function subTabs(items, activeId, labelFn, onPick) {
     const nav = document.createElement('div');
     nav.className = 'sub-tabs';
     items.forEach(function (t) {
@@ -218,6 +413,21 @@
       nav.appendChild(btn);
     });
     return nav;
+  }
+
+  function countVocabItems() {
+    const topics = hubs.vocab?.topics || [];
+    return topics.reduce(function (sum, t) {
+      if (t.professions) return sum + t.professions.length;
+      return sum + (t.entries?.length || 0);
+    }, 0);
+  }
+
+  function updateDashboardStrip() {
+    const vocabEl = document.getElementById('stat-vocab');
+    const lessonsEl = document.getElementById('stat-lessons');
+    if (vocabEl) vocabEl.textContent = countVocabItems() || '—';
+    if (lessonsEl) lessonsEl.textContent = String((hubs.vocab ? 1 : 0) + (hubs.phrases ? 1 : 0) + (hubs.grammar ? 1 : 0));
   }
 
   function renderVocab() {
@@ -233,7 +443,7 @@
     const h = document.createElement('h2');
     h.textContent = 'Vocabulary · ' + (topic.title?.en || topic.id);
     el.appendChild(h);
-    el.appendChild(subTabs(hub.topics, vocabTopic, 'vocab', function (t) { return t.title?.en || t.id; }, function (id) {
+    el.appendChild(subTabs(hub.topics, vocabTopic, function (t) { return t.title?.en || t.id; }, function (id) {
       vocabTopic = id;
       renderVocab();
     }));
@@ -282,7 +492,7 @@
     if (!phraseTopic) phraseTopic = hub.topics[0].id;
     const topic = hub.topics.find(function (t) { return t.id === phraseTopic; }) || hub.topics[0];
     el.innerHTML = '';
-    el.appendChild(subTabs(hub.topics, phraseTopic, 'phrase', function (t) { return t.title?.en || t.id; }, function (id) {
+    el.appendChild(subTabs(hub.topics, phraseTopic, function (t) { return t.title?.en || t.id; }, function (id) {
       phraseTopic = id;
       renderPhrases();
     }));
@@ -328,7 +538,7 @@
     if (!grammarTopic) grammarTopic = hub.topics[0].id;
     const topic = hub.topics.find(function (t) { return t.id === grammarTopic; }) || hub.topics[0];
     el.innerHTML = '';
-    el.appendChild(subTabs(hub.topics, grammarTopic, 'grammar', function (t) { return t.title?.en || t.id; }, function (id) {
+    el.appendChild(subTabs(hub.topics, grammarTopic, function (t) { return t.title?.en || t.id; }, function (id) {
       grammarTopic = id;
       renderGrammar();
     }));
@@ -400,6 +610,7 @@
     hubs.vocab = results[0];
     hubs.phrases = results[1];
     hubs.grammar = results[2];
+    updateDashboardStrip();
     renderVocab();
     renderPhrases();
     renderGrammar();
