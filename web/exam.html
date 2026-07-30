@@ -100,7 +100,8 @@
     }
     .play:active { background: #1d4ed8; transform: scale(0.96); }
     .beruf-card .en-title { font-weight: 700; font-size: 1rem; margin-bottom: 0.35rem; }
-    .beruf-card .forms { font-size: 0.92rem; line-height: 1.6; }
+    .beruf-card .forms { font-size: 0.92rem; line-height: 1.6; flex: 1; }
+    .beruf-card .card-actions { display: flex; gap: 0.35rem; margin-left: auto; flex-shrink: 0; }
     table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; font-size: 1rem; }
     th, td { border: 1px solid #ddd; padding: 0.75rem; text-align: left; }
     th { background: #f0f0f0; font-weight: 700; }
@@ -587,10 +588,67 @@
     return span;
   }
 
+  function renderBasics() {
+    const el = document.getElementById('basics');
+
+    const hNum = document.createElement('h2');
+    hNum.textContent = 'Numbers 0–20';
+    el.appendChild(hNum);
+
+    const numGrid = document.createElement('div');
+    numGrid.className = 'num-grid';
+    NUMBERS.forEach(function (pair, i) {
+      const id = 'num-' + pair[0];
+      const row = document.createElement('div');
+      row.className = 'row';
+      row.dataset.weakId = id;
+      if (weakSet.has(id)) row.classList.add('weak');
+      const mid = document.createElement('div');
+      mid.style.flex = '1';
+      const de = document.createElement('div');
+      de.className = 'de';
+      de.style.fontWeight = '700';
+      de.textContent = pair[1];
+      const en = document.createElement('div');
+      en.className = 'en';
+      en.textContent = String(pair[0]);
+      mid.appendChild(de);
+      mid.appendChild(en);
+      row.appendChild(mid);
+      row.appendChild(playControls(pair[1]));
+      row.appendChild(weakBtn(id));
+      row.addEventListener('click', function () { speak(pair[1]); });
+      numGrid.appendChild(row);
+    });
+    el.appendChild(numGrid);
+
+    const hAlpha = document.createElement('h2');
+    hAlpha.textContent = 'Alphabet';
+    el.appendChild(hAlpha);
+
+    const alphaGrid = document.createElement('div');
+    alphaGrid.className = 'alpha-grid';
+    ALPHABET.forEach(function (letter, i) {
+      const id = 'alpha-' + letter;
+      const card = document.createElement('div');
+      card.className = 'alpha-card';
+      card.dataset.weakId = id;
+      if (weakSet.has(id)) card.classList.add('weak');
+      card.textContent = letter;
+      card.title = letter;
+      card.addEventListener('click', function () { speak(letter); });
+      alphaGrid.appendChild(card);
+    });
+    el.appendChild(alphaGrid);
+  }
+
   function renderPhrases() {
     const el = document.getElementById('phrases');
     let lastCat = '';
+    let idx = 0;
     LESSON1.forEach(function (item) {
+      if (item.cat === 'The Alphabet') return;
+      const id = 'phrase-' + idx++;
       if (item.cat !== lastCat) {
         lastCat = item.cat;
         const h = document.createElement('h2');
@@ -599,6 +657,8 @@
       }
       const row = document.createElement('div');
       row.className = 'row';
+      row.dataset.weakId = id;
+      if (weakSet.has(id)) row.classList.add('weak');
       const mid = document.createElement('div');
       mid.style.flex = '1';
       const de = document.createElement('div');
@@ -611,7 +671,8 @@
       mid.appendChild(de);
       mid.appendChild(en);
       row.appendChild(mid);
-      row.appendChild(playBtn(item.de));
+      row.appendChild(playControls(item.de));
+      row.appendChild(weakBtn(id));
       row.addEventListener('click', function () { speak(item.de); });
       el.appendChild(row);
     });
@@ -625,11 +686,14 @@
     const list = document.getElementById('berufe-list');
     list.innerHTML = '';
     const q = (filter || '').toLowerCase();
-    BERUFE.forEach(function (b) {
-      const hay = (b.en + ' ' + b.m + ' ' + b.f).toLowerCase();
+    BERUFE.forEach(function (b, i) {
+      const hay = (b.en + ' ' + b.m + ' ' + b.mpl + ' ' + b.f + ' ' + b.fpl).toLowerCase();
       if (q && hay.indexOf(q) === -1) return;
+      const id = 'beruf-' + i;
       const card = document.createElement('div');
       card.className = 'beruf-card';
+      card.dataset.weakId = id;
+      if (weakSet.has(id)) card.classList.add('weak');
       const title = document.createElement('div');
       title.className = 'en-title';
       title.textContent = b.en;
@@ -644,7 +708,11 @@
       forms.appendChild(colorArticle(b.fpl, 'plural'));
       card.appendChild(title);
       card.appendChild(forms);
-      card.appendChild(playBtn(b.m.split(' / ')[0]));
+      const actions = document.createElement('div');
+      actions.className = 'card-actions';
+      actions.appendChild(playControls(b.m.split(' / ')[0]));
+      actions.appendChild(weakBtn(id));
+      card.appendChild(actions);
       card.style.flexWrap = 'wrap';
       card.addEventListener('click', function () { speak(b.m.split(' / ')[0]); });
       list.appendChild(card);
@@ -668,13 +736,128 @@
         const full = r.p + ' ' + r.f;
         tr.innerHTML = '<td>' + r.p + '</td><td' + (r.hi ? ' style="font-weight:800;color:#2563eb"' : '') + '>' + r.f + '</td><td style="color:#555">' + r.en + '</td><td></td>';
         const td = tr.querySelector('td:last-child');
-        td.appendChild(playBtn(full));
+        const cell = document.createElement('div');
+        cell.style.display = 'flex';
+        cell.style.gap = '4px';
+        cell.appendChild(playControls(full));
+        td.appendChild(cell);
         tr.addEventListener('click', function () { speak(full); });
         tbody.appendChild(tr);
       });
       table.appendChild(tbody);
       el.appendChild(table);
     });
+  }
+
+  let dialogueEntries = [];
+
+  function formatDialogueTitle(entry) {
+    if (entry.title) return entry.title;
+    if (entry.track_id) return 'Track ' + entry.track_id.replace('_', '.');
+    return entry.id || 'Dialogue';
+  }
+
+  function dialoguePreview(entry) {
+    if (entry.lines && entry.lines.length) {
+      return entry.lines.map(function (ln) {
+        const sp = ln.speaker ? ln.speaker + ': ' : '';
+        return sp + (ln.text || '');
+      }).join(' ').slice(0, 180);
+    }
+    return (entry.raw_text || '').replace(/\s+/g, ' ').slice(0, 180);
+  }
+
+  function renderDialogueList(filter) {
+    const list = document.getElementById('dialogue-list');
+    if (!list) return;
+    list.innerHTML = '';
+    const q = (filter || '').toLowerCase();
+    const items = dialogueEntries.filter(function (e) {
+      if (!e.audio_linked || !e.audio || !e.audio.file) return false;
+      if (!q) return true;
+      const hay = [
+        formatDialogueTitle(e),
+        e.track_id,
+        String(e.lesson),
+        dialoguePreview(e),
+        e.raw_text
+      ].join(' ').toLowerCase();
+      return hay.indexOf(q) !== -1;
+    });
+
+    if (!items.length) {
+      list.innerHTML = '<p style="color:#666">No dialogues match. Serve via <code>npm start</code> for transcripts.</p>';
+      return;
+    }
+
+    items.forEach(function (entry) {
+      const card = document.createElement('div');
+      card.className = 'dialogue-card';
+      const h = document.createElement('h3');
+      h.textContent = formatDialogueTitle(entry);
+      card.appendChild(h);
+
+      const meta = document.createElement('div');
+      meta.className = 'dialogue-meta';
+      meta.textContent = 'Lektion ' + (entry.lesson || '?') + ' · Track ' + (entry.track_id || '?');
+      card.appendChild(meta);
+
+      const mp3 = document.createElement('button');
+      mp3.type = 'button';
+      mp3.className = 'mp3-btn';
+      mp3.textContent = '🎧 Play Momente MP3';
+      mp3.addEventListener('click', function (e) {
+        e.stopPropagation();
+        playMp3(entry.audio.file);
+      });
+      card.appendChild(mp3);
+
+      const preview = document.createElement('div');
+      preview.className = 'dialogue-meta';
+      preview.textContent = dialoguePreview(entry) + (dialoguePreview(entry).length >= 180 ? '…' : '');
+      card.appendChild(preview);
+
+      if (entry.lines && entry.lines.length) {
+        entry.lines.slice(0, 6).forEach(function (ln) {
+          const line = document.createElement('div');
+          line.className = 'dialogue-line';
+          if (ln.speaker) {
+            const sp = document.createElement('span');
+            sp.className = 'sp';
+            sp.textContent = ln.speaker + ': ';
+            line.appendChild(sp);
+          }
+          line.appendChild(document.createTextNode(ln.text || ''));
+          card.appendChild(line);
+        });
+        if (entry.lines.length > 6) {
+          const more = document.createElement('div');
+          more.className = 'dialogue-meta';
+          more.textContent = '+' + (entry.lines.length - 6) + ' more lines';
+          card.appendChild(more);
+        }
+      }
+
+      list.appendChild(card);
+    });
+  }
+
+  function loadDialogues() {
+    fetch('../content/extracted/transcripts.json')
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(new Error('no transcripts')); })
+      .then(function (data) {
+        dialogueEntries = (data.entries || []).filter(function (e) {
+          return e.audio_linked && e.audio && e.audio.file;
+        });
+        renderDialogueList(document.getElementById('dialogue-search')?.value || '');
+      })
+      .catch(function () {
+        dialogueEntries = [];
+        const list = document.getElementById('dialogue-list');
+        if (list) {
+          list.innerHTML = '<p style="color:#666">Transcripts need <code>npm start</code> (file:// blocks fetch). Word rows still use TTS only.</p>';
+        }
+      });
   }
 
   let quizMode = 'article';
@@ -779,6 +962,10 @@
     renderBerufe(e.target.value);
   });
 
+  document.getElementById('dialogue-search').addEventListener('input', function (e) {
+    renderDialogueList(e.target.value);
+  });
+
   document.querySelectorAll('.quiz-mode button').forEach(function (btn) {
     btn.addEventListener('click', function () {
       document.querySelectorAll('.quiz-mode button').forEach(function (b) { b.classList.remove('active'); });
@@ -790,10 +977,13 @@
 
   document.getElementById('quiz-next').addEventListener('click', newQuiz);
 
+  renderBasics();
   renderPhrases();
   renderBerufe();
   renderVerbs();
+  loadDialogues();
   newQuiz();
+  updateVoiceBadge();
 })();
   </script>
 </body>

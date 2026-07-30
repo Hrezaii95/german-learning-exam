@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Content Hubs — German Learning</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      background: #fff;
+      color: #1a1a1a;
+      line-height: 1.5;
+      font-size: 17px;
+      padding-bottom: 2rem;
+    }
+    header {
+      background: #fff;
+      border-bottom: 3px solid #6c5ce7;
+      padding: 1rem 1.25rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,.08);
+    }
+    header h1 { font-size: 1.35rem; font-weight: 800; }
+    header p { font-size: 0.9rem; color: #555; margin-top: 0.25rem; }
+    header a { color: #6c5ce7; font-weight: 600; }
+    nav.tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      padding: 0.75rem 1rem;
+      background: #f5f5f5;
+      border-bottom: 1px solid #ddd;
+      position: sticky;
+      top: 68px;
+      z-index: 99;
+    }
+    nav.tabs button {
+      flex: 1 1 30%;
+      min-height: 48px;
+      font-weight: 600;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      background: #fff;
+      cursor: pointer;
+    }
+    nav.tabs button.active { background: #6c5ce7; color: #fff; border-color: #6c5ce7; }
+    main { padding: 1rem; max-width: 960px; margin: 0 auto; }
+    .panel { display: none; }
+    .panel.active { display: block; }
+    .sub-tabs { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 1rem 0; }
+    .sub-tabs button {
+      padding: 0.4rem 0.75rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #fafafa;
+      cursor: pointer;
+      font-size: 0.85rem;
+    }
+    .sub-tabs button.active { background: #ede9fe; border-color: #6c5ce7; color: #4c1d95; font-weight: 700; }
+    h2 { font-size: 1.15rem; margin: 1rem 0 0.5rem; border-bottom: 2px solid #eee; padding-bottom: 0.3rem; }
+    h3 { font-size: 1rem; margin: 1rem 0 0.5rem; color: #444; }
+    .row {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem;
+      border: 1px solid #e5e5e5;
+      border-radius: 10px;
+      margin-bottom: 0.4rem;
+      background: #fafafa;
+    }
+    .row .text { flex: 1; }
+    .row .de { font-weight: 700; }
+    .row .en { color: #666; font-size: 0.9rem; }
+    .der { color: #2563eb; font-weight: 700; }
+    .die { color: #dc2626; font-weight: 700; }
+    .plural { color: #9333ea; font-weight: 700; }
+    .play, .play-slow {
+      width: 44px; height: 44px; border-radius: 50%; cursor: pointer;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .play { border: none; background: #6c5ce7; color: #fff; font-size: 1.1rem; }
+    .play-slow { border: 2px solid #6c5ce7; background: #fff; color: #6c5ce7; }
+    .empty { color: #888; padding: 2rem; text-align: center; }
+    .voice-badge { font-size: 0.8rem; color: #6c5ce7; margin-top: 0.35rem; font-weight: 600; }
+    table { width: 100%; border-collapse: collapse; margin: 0.5rem 0 1rem; font-size: 0.95rem; }
+    th, td { border: 1px solid #ddd; padding: 0.5rem; text-align: left; }
+    th { background: #f0f0f0; }
+    .qa-block { border-left: 3px solid #6c5ce7; padding-left: 0.75rem; margin: 0.75rem 0; }
+    .tag { display: inline-block; background: #ede9fe; color: #5b21b6; font-size: 0.75rem; padding: 0.1rem 0.4rem; border-radius: 4px; margin-left: 0.25rem; }
+    .alpha-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(48px, 1fr)); gap: 0.35rem; margin: 0.5rem 0 1rem; }
+    .alpha-card {
+      min-height: 48px; display: flex; align-items: center; justify-content: center;
+      font-weight: 800; border: 1px solid #ddd; border-radius: 8px; cursor: pointer; background: #fafafa;
+    }
+    .beruf-grid { display: grid; grid-template-columns: 1fr; gap: 0.5rem; }
+    @media (min-width: 600px) { .beruf-grid { grid-template-columns: 1fr 1fr; } }
+    .beruf-card { border: 1px solid #e5e5e5; border-radius: 10px; padding: 0.75rem; background: #fafafa; }
+    .beruf-card .en { font-weight: 700; margin-bottom: 0.35rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Content Hubs</h1>
+    <p>Extracted Momente content — vocabulary, phrases, grammar. <a href="exam.html">← Exam cram</a></p>
+    <div id="voice-badge" class="voice-badge">🔊 Loading voice…</div>
+  </header>
+
+  <nav class="tabs">
+    <button class="active" data-tab="vocab">Vocabulary</button>
+    <button data-tab="phrases">Phrases &amp; Q&amp;A</button>
+    <button data-tab="grammar">Grammar</button>
+  </nav>
+
+  <main>
+    <section id="vocab" class="panel active"><p class="empty">Loading…</p></section>
+    <section id="phrases" class="panel"><p class="empty">Loading…</p></section>
+    <section id="grammar" class="panel"><p class="empty">Loading…</p></section>
+  </main>
+
+  <script>
+(function () {
+  'use strict';
+
+  let hubs = { vocab: null, phrases: null, grammar: null };
+  let vocabTopic = null;
+  let phraseTopic = null;
+  let grammarTopic = null;
+  let deVoice = null;
+
+  function pickDeVoice() {
+    if (!('speechSynthesis' in window)) return null;
+    const voices = speechSynthesis.getVoices();
+    deVoice = voices.find(function (v) { return v.lang === 'de-DE'; })
+      || voices.find(function (v) { return v.lang && v.lang.toLowerCase().startsWith('de'); })
+      || null;
+    const el = document.getElementById('voice-badge');
+    if (el) el.textContent = deVoice ? ('🔊 Voice: ' + deVoice.name) : '🔊 Voice: de-DE (default)';
+    return deVoice;
+  }
+  if ('speechSynthesis' in window) {
+    pickDeVoice();
+    speechSynthesis.onvoiceschanged = function () { deVoice = null; pickDeVoice(); };
+  }
+
+  function speak(text, rate) {
+    if (!text || !('speechSynthesis' in window)) return;
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(String(text).replace(/<[^>]+>/g, '').split(' / ')[0].trim());
+    u.lang = 'de-DE';
+    u.rate = rate || 0.9;
+    const v = deVoice || pickDeVoice();
+    if (v) u.voice = v;
+    speechSynthesis.speak(u);
+  }
+
+  function playBtns(text) {
+    const wrap = document.createElement('span');
+    wrap.style.display = 'inline-flex';
+    wrap.style.gap = '4px';
+    const n = document.createElement('button');
+    n.className = 'play';
+    n.type = 'button';
+    n.textContent = '▶';
+    n.onclick = function (e) { e.stopPropagation(); speak(text, 0.9); };
+    const s = document.createElement('button');
+    s.className = 'play-slow';
+    s.type = 'button';
+    s.textContent = '🐢';
+    s.onclick = function (e) { e.stopPropagation(); speak(text, 0.75); };
+    wrap.appendChild(n);
+    wrap.appendChild(s);
+    return wrap;
+  }
+
+  function colorize(text) {
+    if (!text) return '';
+    if (/^der /.test(text)) return '<span class="der">' + text + '</span>';
+    if (/^die /.test(text)) {
+      const w = text.slice(4);
+      if (/innen$|männer$|frauen$|leute$/.test(w)) return '<span class="plural">' + text + '</span>';
+      return '<span class="die">' + text + '</span>';
+    }
+    return text;
+  }
+
+  function row(de, en) {
+    const div = document.createElement('div');
+    div.className = 'row';
+    const text = document.createElement('div');
+    text.className = 'text';
+    const d = document.createElement('div');
+    d.className = 'de';
+    d.innerHTML = colorize(de);
+    const e = document.createElement('div');
+    e.className = 'en';
+    e.textContent = en || '';
+    text.appendChild(d);
+    text.appendChild(e);
+    div.appendChild(text);
+    div.appendChild(playBtns(de));
+    div.addEventListener('click', function () { speak(de); });
+    return div;
+  }
+
+  function subTabs(items, activeId, attr, labelFn, onPick) {
+    const nav = document.createElement('div');
+    nav.className = 'sub-tabs';
+    items.forEach(function (t) {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.textContent = labelFn(t);
+      if (t.id === activeId) btn.classList.add('active');
+      btn.addEventListener('click', function () { onPick(t.id); });
+      nav.appendChild(btn);
+    });
+    return nav;
+  }
+
+  function renderVocab() {
+    const el = document.getElementById('vocab');
+    const hub = hubs.vocab;
+    if (!hub?.topics?.length) {
+      el.innerHTML = '<p class="empty">vocab-hub.json not loaded. Run <code>npm start</code>.</p>';
+      return;
+    }
+    if (!vocabTopic) vocabTopic = hub.topics[0].id;
+    const topic = hub.topics.find(function (t) { return t.id === vocabTopic; }) || hub.topics[0];
+    el.innerHTML = '';
+    const h = document.createElement('h2');
+    h.textContent = 'Vocabulary · ' + (topic.title?.en || topic.id);
+    el.appendChild(h);
+    el.appendChild(subTabs(hub.topics, vocabTopic, 'vocab', function (t) { return t.title?.en || t.id; }, function (id) {
+      vocabTopic = id;
+      renderVocab();
+    }));
+
+    if (topic.id === 'alphabet') {
+      const grid = document.createElement('div');
+      grid.className = 'alpha-grid';
+      'ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜß'.split('').forEach(function (l) {
+        const c = document.createElement('div');
+        c.className = 'alpha-card';
+        c.textContent = l;
+        c.onclick = function () { speak(l); };
+        grid.appendChild(c);
+      });
+      el.appendChild(grid);
+      return;
+    }
+
+    if (topic.id === 'berufe' && topic.professions) {
+      const grid = document.createElement('div');
+      grid.className = 'beruf-grid';
+      topic.professions.forEach(function (p) {
+        const card = document.createElement('div');
+        card.className = 'beruf-card';
+        card.innerHTML = '<div class="en">' + p.english + '</div><div>' + colorize(p.mascSg) + '<br>' + colorize(p.femSg) + '</div>';
+        card.appendChild(playBtns(p.mascSg));
+        card.onclick = function () { speak(p.mascSg); };
+        grid.appendChild(card);
+      });
+      el.appendChild(grid);
+      return;
+    }
+
+    (topic.entries || []).forEach(function (e) {
+      el.appendChild(row(e.german || e.de, e.english || e.en));
+    });
+  }
+
+  function renderPhrases() {
+    const el = document.getElementById('phrases');
+    const hub = hubs.phrases;
+    if (!hub?.topics?.length) {
+      el.innerHTML = '<p class="empty">phrases-qa-hub.json not loaded.</p>';
+      return;
+    }
+    if (!phraseTopic) phraseTopic = hub.topics[0].id;
+    const topic = hub.topics.find(function (t) { return t.id === phraseTopic; }) || hub.topics[0];
+    el.innerHTML = '';
+    el.appendChild(subTabs(hub.topics, phraseTopic, 'phrase', function (t) { return t.title?.en || t.id; }, function (id) {
+      phraseTopic = id;
+      renderPhrases();
+    }));
+
+    (topic.phrases || []).forEach(function (p) {
+      const r = row(p.de, p.en);
+      if (p.formality || p.category) {
+        const tag = document.createElement('span');
+        tag.className = 'tag';
+        tag.textContent = p.formality || p.category;
+        r.querySelector('.de').appendChild(tag);
+      }
+      el.appendChild(r);
+    });
+
+    (topic.qa_pairs || []).forEach(function (qa) {
+      const block = document.createElement('div');
+      block.className = 'qa-block';
+      let q = '';
+      if (qa.question?.informal || qa.question?.formal) {
+        q = [qa.question.informal, qa.question.formal].filter(Boolean).join(' · ');
+      } else if (qa.question?.de) q = qa.question.de;
+      const qh = document.createElement('h3');
+      qh.textContent = q;
+      block.appendChild(qh);
+      block.appendChild(playBtns(q.split(' · ')[0]));
+      (qa.answers || []).forEach(function (a) {
+        (a.examples || []).forEach(function (ex) {
+          block.appendChild(row(ex, a.pattern || ''));
+        });
+      });
+      el.appendChild(block);
+    });
+  }
+
+  function renderGrammar() {
+    const el = document.getElementById('grammar');
+    const hub = hubs.grammar;
+    if (!hub?.topics?.length) {
+      el.innerHTML = '<p class="empty">grammar-hub.json not loaded.</p>';
+      return;
+    }
+    if (!grammarTopic) grammarTopic = hub.topics[0].id;
+    const topic = hub.topics.find(function (t) { return t.id === grammarTopic; }) || hub.topics[0];
+    el.innerHTML = '';
+    el.appendChild(subTabs(hub.topics, grammarTopic, 'grammar', function (t) { return t.title?.en || t.id; }, function (id) {
+      grammarTopic = id;
+      renderGrammar();
+    }));
+
+    if (topic.rule) {
+      const card = document.createElement('div');
+      card.className = 'row';
+      card.innerHTML = '<div class="text"><div class="de">Rule</div><div class="en">' + topic.rule + '</div></div>';
+      el.appendChild(card);
+    }
+    (topic.items || []).forEach(function (item) {
+      el.appendChild(row(item.de, item.en));
+    });
+    if (topic.table && typeof topic.table === 'object') {
+      Object.keys(topic.table).forEach(function (verb) {
+        const forms = topic.table[verb];
+        const h = document.createElement('h3');
+        h.textContent = verb;
+        el.appendChild(h);
+        if (typeof forms === 'string') {
+          el.appendChild(row(forms, ''));
+        } else {
+          Object.keys(forms).forEach(function (pronoun) {
+            el.appendChild(row(pronoun + ' ' + forms[pronoun], ''));
+          });
+        }
+      });
+    }
+
+    if (hub.verbs?.length && grammarTopic === hub.topics[0].id) {
+      const vh = document.createElement('h2');
+      vh.textContent = 'Verb tables';
+      el.appendChild(vh);
+      hub.verbs.forEach(function (v) {
+        const h = document.createElement('h3');
+        h.textContent = v.infinitive + ' (' + (v.english || '') + ')';
+        el.appendChild(h);
+        const table = document.createElement('table');
+        table.innerHTML = '<thead><tr><th>Pronoun</th><th>Form</th><th></th></tr></thead>';
+        const tbody = document.createElement('tbody');
+        (v.conjugations || []).forEach(function (c) {
+          const tr = document.createElement('tr');
+          const tdPlay = document.createElement('td');
+          tdPlay.appendChild(playBtns(c.pronoun + ' ' + c.form));
+          tr.innerHTML = '<td>' + c.pronoun + '</td><td>' + c.form + '</td>';
+          tr.appendChild(tdPlay);
+          tbody.appendChild(tr);
+        });
+        table.appendChild(tbody);
+        el.appendChild(table);
+      });
+    }
+  }
+
+  document.querySelectorAll('nav.tabs button').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll('nav.tabs button').forEach(function (b) { b.classList.remove('active'); });
+      document.querySelectorAll('.panel').forEach(function (p) { p.classList.remove('active'); });
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.tab).classList.add('active');
+    });
+  });
+
+  Promise.all([
+    fetch('../content/extracted/vocab-hub.json').then(function (r) { return r.ok ? r.json() : null; }),
+    fetch('../content/extracted/phrases-qa-hub.json').then(function (r) { return r.ok ? r.json() : null; }),
+    fetch('../content/extracted/grammar-hub.json').then(function (r) { return r.ok ? r.json() : null; })
+  ]).then(function (results) {
+    hubs.vocab = results[0];
+    hubs.phrases = results[1];
+    hubs.grammar = results[2];
+    renderVocab();
+    renderPhrases();
+    renderGrammar();
+  }).catch(function () {
+    document.getElementById('vocab').innerHTML = '<p class="empty">Failed to load hubs. Use <code>npm start</code> then open this page.</p>';
+  });
+})();
+  </script>
+</body>
+</html>
