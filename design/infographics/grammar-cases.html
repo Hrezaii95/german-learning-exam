@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>German Cases ? Grammar Explorer | GLOS</title>
+  <link rel="stylesheet" href="infographic-components.css">
+  <style>
+    .case-detail {
+      margin-top: var(--glos-space-8);
+      padding: var(--glos-space-6);
+      background: var(--glos-row-alt);
+      border-radius: var(--glos-radius-xl);
+      border: 1px solid var(--glos-border);
+    }
+    .case-detail h3 {
+      font-family: var(--glos-font-display);
+      font-size: 1.35rem;
+      margin: 0 0 var(--glos-space-3);
+    }
+    .case-detail p {
+      margin: 0 0 var(--glos-space-4);
+      color: var(--glos-text-secondary);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .article-examples {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--glos-space-3);
+      margin-top: var(--glos-space-4);
+    }
+    .article-chip {
+      padding: 8px 14px;
+      border-radius: var(--glos-radius-pill);
+      font-family: var(--glos-font-display);
+      font-weight: 700;
+      font-size: 14px;
+      border: 1px solid;
+    }
+    .article-chip--nom { background: var(--glos-der-bg); color: var(--glos-der); border-color: var(--glos-der-border); }
+    .article-chip--acc { background: var(--glos-die-bg); color: var(--glos-die); border-color: var(--glos-die-border); }
+    .article-chip--dat { background: var(--glos-das-bg); color: var(--glos-das); border-color: var(--glos-das-border); }
+    .article-chip--gen { background: var(--glos-plural-bg); color: var(--glos-plural); border-color: var(--glos-plural-border); }
+  </style>
+</head>
+<body>
+  <header class="preview-banner">
+    <strong>GLOS Infographic Preview</strong>
+    <nav>
+      <a href="vocab-card-ingenieur.html">Vocab</a> �
+      <a href="verb-sein.html">Verbs</a> �
+      <a href="grammar-cases.html">Grammar</a> �
+      <a href="berufe-grid-sample.html">Berufe</a>
+    </nav>
+  </header>
+
+  <main class="preview-stage">
+    <article class="ig-card ig-card--wide">
+      <div class="ig-card__header">
+        <h1 class="ig-headword" style="font-size:2rem">German Cases</h1>
+        <p class="ig-subtitle">Die vier F?lle ? overview for A1 learners</p>
+      </div>
+
+      <div class="ig-card__body">
+        <h2 class="ig-section-title">Cases at a Glance</h2>
+        <table class="ig-cases-table">
+          <thead>
+            <tr>
+              <th>Case</th>
+              <th>Question</th>
+              <th>Example (der Mann)</th>
+              <th>Function</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="case-nom">Nominative</span></td>
+              <td>Wer? Was?</td>
+              <td><span class="art-der">der</span> Mann</td>
+              <td>Subject ? who does the action</td>
+            </tr>
+            <tr>
+              <td><span class="case-acc">Accusative</span></td>
+              <td>Wen? Was?</td>
+              <td><span class="art-die">den</span> Mann</td>
+              <td>Direct object ? who/what receives</td>
+            </tr>
+            <tr>
+              <td><span class="case-dat">Dative</span></td>
+              <td>Wem?</td>
+              <td><span class="art-das">dem</span> Mann</td>
+              <td>Indirect object ? to/for whom</td>
+            </tr>
+            <tr>
+              <td><span class="case-gen">Genitive</span></td>
+              <td>Wessen?</td>
+              <td><span class="art-plural">des</span> Mannes</td>
+              <td>Possession ? whose</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="article-examples" aria-label="Article changes across cases">
+          <span class="article-chip article-chip--nom">der Mann</span>
+          <span style="align-self:center;color:var(--glos-text-muted)">?</span>
+          <span class="article-chip article-chip--acc">den Mann</span>
+          <span style="align-self:center;color:var(--glos-text-muted)">?</span>
+          <span class="article-chip article-chip--dat">dem Mann</span>
+          <span style="align-self:center;color:var(--glos-text-muted)">?</span>
+          <span class="article-chip article-chip--gen">des Mannes</span>
+        </div>
+
+        <section class="case-detail">
+          <h3><span class="case-nom">Nominative</span> Case</h3>
+          <p>
+            The nominative is the <strong>default dictionary form</strong>. It marks the subject of a sentence ? the person or thing performing the verb.
+          </p>
+          <div class="ig-example" style="border-left-color:var(--glos-der)">
+            <p class="ig-example__de"><span class="art-der">Der</span> Ingenieur arbeitet bei Siemens.</p>
+            <p class="ig-example__en">The engineer works at Siemens.</p>
+          </div>
+          <div class="ig-example" style="margin-top:12px;border-left-color:var(--glos-die)">
+            <p class="ig-example__de"><span class="art-die">Die</span> ?rztin ist nett.</p>
+            <p class="ig-example__en">The doctor (f.) is nice.</p>
+          </div>
+        </section>
+
+        <section class="case-detail" style="margin-top:var(--glos-space-5)">
+          <h3><span class="case-acc">Accusative</span> Case</h3>
+          <p>
+            Ask <strong>Wen? Was?</strong> to find the direct object. Only masculine articles change: <em>der ? den</em>.
+          </p>
+          <div class="ig-example" style="border-left-color:var(--glos-die)">
+            <p class="ig-example__de">Ich sehe <span class="art-die">den</span> Arzt.</p>
+            <p class="ig-example__en">I see the doctor.</p>
+          </div>
+        </section>
+
+        <aside class="ig-memory-tip">
+          <div class="ig-memory-tip__icon" aria-hidden="true">??</div>
+          <div>
+            <p class="ig-memory-tip__title">Memory Tip</p>
+            <p class="ig-memory-tip__text">At A1, focus on <strong>Nominative</strong> (subjects) and <strong>Accusative</strong> (direct objects). Dative and Genitive come in A2.</p>
+          </div>
+        </aside>
+
+        <div class="ig-audio-row" style="margin-top:var(--glos-space-6)">
+          <button class="ig-btn ig-btn--primary" type="button">Practice Cases ?</button>
+          <button class="ig-btn" type="button">Link: sein + Nominative</button>
+        </div>
+      </div>
+
+      <footer class="ig-card__footer">
+        <span style="font-size:13px;color:var(--glos-text-secondary)">Grammar � A1 � Lesson 1?2</span>
+      </footer>
+    </article>
+  </main>
+</body>
+</html>

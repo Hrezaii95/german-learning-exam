@@ -1,0 +1,595 @@
+/**
+ * Shared infographic component styles ? static preview + future app embed
+ */
+@import url('./tokens.css');
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { font-size: 16px; }
+
+body {
+  margin: 0;
+  font-family: var(--glos-font-body);
+  color: var(--glos-text-primary);
+  background: var(--glos-content-bg);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Preview chrome */
+.preview-banner {
+  background: var(--glos-sidebar-bg);
+  color: var(--glos-text-inverse);
+  padding: var(--glos-space-3) var(--glos-space-6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--glos-space-4);
+  font-size: 13px;
+}
+
+.preview-banner strong {
+  font-family: var(--glos-font-display);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.preview-banner a {
+  color: #c7d2fe;
+  text-decoration: none;
+}
+
+.preview-banner a:hover { text-decoration: underline; }
+
+.preview-stage {
+  min-height: calc(100vh - 48px);
+  padding: var(--glos-space-8) var(--glos-space-6);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* �� Card shell ����������������������������������������� */
+.ig-card {
+  background: var(--glos-surface);
+  border-radius: var(--glos-radius-xl);
+  box-shadow: var(--glos-shadow-card);
+  border: 1px solid var(--glos-border);
+  overflow: hidden;
+  width: min(100%, 720px);
+}
+
+.ig-card--wide { width: min(100%, 920px); }
+.ig-card--grid { width: min(100%, 1040px); }
+
+.ig-card__header {
+  padding: var(--glos-space-6) var(--glos-space-6) 0;
+}
+
+.ig-card__body {
+  padding: var(--glos-space-5) var(--glos-space-6) var(--glos-space-6);
+}
+
+.ig-card__footer {
+  padding: var(--glos-space-4) var(--glos-space-6);
+  border-top: 1px solid var(--glos-border);
+  background: #fafbfc;
+}
+
+/* �� Gender utilities ����������������������������������� */
+.art-der   { color: var(--glos-der); }
+.art-die   { color: var(--glos-die); }
+.art-das   { color: var(--glos-das); }
+.art-plural { color: var(--glos-plural); }
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: var(--glos-radius-pill);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.pill--der {
+  background: var(--glos-der-bg);
+  color: var(--glos-der);
+  border: 1px solid var(--glos-der-border);
+}
+
+.pill--die {
+  background: var(--glos-die-bg);
+  color: var(--glos-die);
+  border: 1px solid var(--glos-die-border);
+}
+
+.pill--das {
+  background: var(--glos-das-bg);
+  color: var(--glos-das);
+  border: 1px solid var(--glos-das-border);
+}
+
+.pill--plural {
+  background: var(--glos-plural-bg);
+  color: var(--glos-plural);
+  border: 1px solid var(--glos-plural-border);
+}
+
+/* �� Headlines ������������������������������������������ */
+.ig-headword {
+  font-family: var(--glos-font-display);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.ig-headword .article { font-weight: 800; }
+.ig-headword .lemma { color: var(--glos-text-primary); }
+
+.ig-subtitle {
+  margin: var(--glos-space-2) 0 0;
+  font-size: 1.125rem;
+  color: var(--glos-text-secondary);
+}
+
+.ig-section-title {
+  font-family: var(--glos-font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 var(--glos-space-4);
+}
+
+/* �� Tabs ����������������������������������������������� */
+.ig-tabs {
+  display: flex;
+  gap: var(--glos-space-1);
+  border-bottom: 1px solid var(--glos-border);
+  padding: 0 var(--glos-space-6);
+  overflow-x: auto;
+}
+
+.ig-tab {
+  padding: var(--glos-space-3) var(--glos-space-4);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--glos-text-secondary);
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+  cursor: default;
+}
+
+.ig-tab--active {
+  color: var(--glos-accent);
+  border-bottom-color: var(--glos-accent);
+}
+
+/* �� Audio controls ������������������������������������� */
+.ig-audio-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--glos-space-3);
+  margin-top: var(--glos-space-4);
+}
+
+.ig-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: var(--glos-radius-pill);
+  font-family: var(--glos-font-body);
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid var(--glos-border);
+  background: var(--glos-surface);
+  color: var(--glos-text-primary);
+  cursor: default;
+}
+
+.ig-btn--primary {
+  background: var(--glos-accent);
+  border-color: var(--glos-accent);
+  color: #fff;
+  box-shadow: 0 4px 14px var(--glos-accent-ring);
+}
+
+.ig-btn--ghost {
+  background: transparent;
+}
+
+.ig-btn__icon {
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+}
+
+/* �� Memory tip ����������������������������������������� */
+.ig-memory-tip {
+  display: flex;
+  gap: var(--glos-space-4);
+  padding: var(--glos-space-4) var(--glos-space-5);
+  background: var(--glos-memory-tip-bg);
+  border: 1px solid var(--glos-memory-tip-border);
+  border-radius: var(--glos-radius-lg);
+  margin-top: var(--glos-space-5);
+}
+
+.ig-memory-tip__icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #fef3c7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.ig-memory-tip__title {
+  font-family: var(--glos-font-display);
+  font-weight: 700;
+  font-size: 14px;
+  margin: 0 0 4px;
+  color: #92400e;
+}
+
+.ig-memory-tip__text {
+  margin: 0;
+  font-size: 14px;
+  color: #78350f;
+}
+
+/* �� Example sentence ����������������������������������� */
+.ig-example {
+  margin-top: var(--glos-space-5);
+  padding: var(--glos-space-4) var(--glos-space-5);
+  background: var(--glos-row-alt);
+  border-radius: var(--glos-radius-lg);
+  border-left: 4px solid var(--glos-accent);
+}
+
+.ig-example__de {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+
+.ig-example__en {
+  margin: 0;
+  font-size: 14px;
+  color: var(--glos-text-secondary);
+}
+
+.ig-speaker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--glos-accent-soft);
+  color: var(--glos-accent);
+  border: none;
+  margin-left: 8px;
+  vertical-align: middle;
+  font-size: 14px;
+}
+
+/* �� Conjugation table ���������������������������������� */
+.ig-conj-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: var(--glos-radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--glos-border);
+}
+
+.ig-conj-table th {
+  background: var(--glos-sidebar-bg);
+  color: #fff;
+  font-family: var(--glos-font-display);
+  font-size: 13px;
+  font-weight: 600;
+  text-align: left;
+  padding: var(--glos-space-3) var(--glos-space-4);
+}
+
+.ig-conj-table td {
+  padding: var(--glos-space-3) var(--glos-space-4);
+  font-size: 15px;
+  border-top: 1px solid var(--glos-border);
+}
+
+.ig-conj-table tr:nth-child(even) td {
+  background: var(--glos-row-alt);
+}
+
+.ig-conj-table tr.irregular td {
+  background: var(--glos-irregular-bg);
+}
+
+.ig-conj-table .pronoun {
+  color: var(--glos-text-secondary);
+  font-weight: 500;
+  width: 38%;
+}
+
+.ig-conj-table .form {
+  font-weight: 700;
+  font-family: var(--glos-font-display);
+}
+
+.ig-star {
+  color: var(--glos-warning);
+  margin-left: 6px;
+  font-size: 12px;
+}
+
+/* �� Grammar grid (sein explorer) ����������������������� */
+.ig-grammar-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--glos-space-3);
+}
+
+@media (max-width: 640px) {
+  .ig-grammar-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+.ig-grammar-cell {
+  padding: var(--glos-space-4);
+  border-radius: var(--glos-radius-lg);
+  border: 1px solid var(--glos-border);
+  text-align: center;
+}
+
+.ig-grammar-cell:nth-child(1) { background: #ecfdf5; border-color: #a7f3d0; }
+.ig-grammar-cell:nth-child(2) { background: #fffbeb; border-color: #fde68a; }
+.ig-grammar-cell:nth-child(3) { background: #eff6ff; border-color: #bfdbfe; }
+.ig-grammar-cell:nth-child(4) { background: #f5f3ff; border-color: #ddd6fe; }
+.ig-grammar-cell:nth-child(5) { background: #fdf2f8; border-color: #fbcfe8; }
+.ig-grammar-cell:nth-child(6) { background: #f0fdf4; border-color: #bbf7d0; }
+
+.ig-grammar-cell .pronoun {
+  font-size: 13px;
+  color: var(--glos-text-secondary);
+  margin-bottom: 4px;
+}
+
+.ig-grammar-cell .form {
+  font-family: var(--glos-font-display);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--glos-text-primary);
+}
+
+.ig-grammar-cell .gloss {
+  font-size: 12px;
+  color: var(--glos-text-muted);
+  margin-top: 4px;
+}
+
+/* �� Cases table ���������������������������������������� */
+.ig-cases-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ig-cases-table th,
+.ig-cases-table td {
+  padding: var(--glos-space-3) var(--glos-space-4);
+  text-align: left;
+  border-bottom: 1px solid var(--glos-border);
+  font-size: 14px;
+}
+
+.ig-cases-table th {
+  font-family: var(--glos-font-display);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--glos-text-muted);
+  background: var(--glos-row-alt);
+}
+
+.case-nom { color: var(--glos-der); font-weight: 700; }
+.case-acc { color: var(--glos-die); font-weight: 700; }
+.case-dat { color: var(--glos-das); font-weight: 700; }
+.case-gen { color: var(--glos-plural); font-weight: 700; }
+
+/* �� Waveform listen panel ������������������������������ */
+.ig-listen-panel {
+  margin-top: var(--glos-space-6);
+  padding: var(--glos-space-6);
+  background: linear-gradient(180deg, #faf5ff 0%, #f8fafc 100%);
+  border-radius: var(--glos-radius-xl);
+  border: 1px solid #e9d5ff;
+  text-align: center;
+}
+
+.ig-waveform {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  height: 64px;
+  margin: var(--glos-space-4) 0;
+}
+
+.ig-waveform__bar {
+  width: 4px;
+  border-radius: 2px;
+  background: linear-gradient(180deg, #a78bfa 0%, var(--glos-accent) 100%);
+  animation: ig-wave 1.2s ease-in-out infinite;
+}
+
+.ig-waveform__bar:nth-child(1)  { height: 18px; animation-delay: 0s; }
+.ig-waveform__bar:nth-child(2)  { height: 32px; animation-delay: 0.1s; }
+.ig-waveform__bar:nth-child(3)  { height: 48px; animation-delay: 0.2s; }
+.ig-waveform__bar:nth-child(4)  { height: 56px; animation-delay: 0.15s; }
+.ig-waveform__bar:nth-child(5)  { height: 40px; animation-delay: 0.25s; }
+.ig-waveform__bar:nth-child(6)  { height: 52px; animation-delay: 0.05s; }
+.ig-waveform__bar:nth-child(7)  { height: 36px; animation-delay: 0.3s; }
+.ig-waveform__bar:nth-child(8)  { height: 44px; animation-delay: 0.12s; }
+.ig-waveform__bar:nth-child(9)  { height: 28px; animation-delay: 0.22s; }
+.ig-waveform__bar:nth-child(10) { height: 38px; animation-delay: 0.08s; }
+.ig-waveform__bar:nth-child(11) { height: 50px; animation-delay: 0.18s; }
+.ig-waveform__bar:nth-child(12) { height: 34px; animation-delay: 0.28s; }
+.ig-waveform__bar:nth-child(13) { height: 42px; animation-delay: 0.14s; }
+.ig-waveform__bar:nth-child(14) { height: 30px; animation-delay: 0.24s; }
+.ig-waveform__bar:nth-child(15) { height: 20px; animation-delay: 0.32s; }
+
+@keyframes ig-wave {
+  0%, 100% { transform: scaleY(0.55); opacity: 0.65; }
+  50%      { transform: scaleY(1); opacity: 1; }
+}
+
+.ig-mic-btn {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--glos-accent);
+  color: #fff;
+  border: none;
+  box-shadow: 0 8px 24px var(--glos-accent-ring);
+  font-size: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: var(--glos-space-3) 0;
+}
+
+/* �� Berufe grid ���������������������������������������� */
+.ig-berufe-hero {
+  text-align: center;
+  padding: var(--glos-space-6);
+  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4338ca 100%);
+  color: #fff;
+}
+
+.ig-berufe-hero h1 {
+  font-family: var(--glos-font-display);
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: 0.04em;
+}
+
+.ig-berufe-hero p {
+  margin: var(--glos-space-2) 0 0;
+  opacity: 0.85;
+  font-size: 15px;
+}
+
+.ig-berufe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: var(--glos-space-4);
+  padding: var(--glos-space-6);
+}
+
+.ig-berufe-cell {
+  background: var(--glos-surface);
+  border: 1px solid var(--glos-border);
+  border-radius: var(--glos-radius-lg);
+  padding: var(--glos-space-4) var(--glos-space-3);
+  text-align: center;
+  transition: box-shadow var(--glos-duration) var(--glos-ease);
+  cursor: default;
+}
+
+.ig-berufe-cell:hover {
+  box-shadow: var(--glos-shadow-md);
+  border-color: var(--glos-accent-ring);
+}
+
+.ig-berufe-cell__art {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto var(--glos-space-3);
+  border-radius: var(--glos-radius-md);
+  background: var(--glos-row-alt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+}
+
+.ig-berufe-cell__label {
+  font-family: var(--glos-font-display);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.ig-berufe-cell__en {
+  font-size: 11px;
+  color: var(--glos-text-muted);
+  margin-top: 4px;
+}
+
+.ig-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--glos-space-3);
+  justify-content: center;
+  padding: var(--glos-space-4) var(--glos-space-6) var(--glos-space-6);
+  border-top: 1px solid var(--glos-border);
+}
+
+.ig-legend__item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.ig-legend__swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+}
+
+/* �� Two-column vocab layout ���������������������������� */
+.ig-vocab-layout {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  gap: var(--glos-space-6);
+  align-items: start;
+}
+
+@media (max-width: 640px) {
+  .ig-vocab-layout { grid-template-columns: 1fr; }
+}
+
+.ig-illustration {
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.ig-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--glos-space-3);
+  margin-top: var(--glos-space-4);
+}
+
+.ig-plural-line {
+  font-size: 14px;
+  color: var(--glos-text-secondary);
+}
+
+.ig-plural-line strong {
+  font-family: var(--glos-font-display);
+}

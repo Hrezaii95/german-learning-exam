@@ -1,0 +1,306 @@
+{
+  "id": "lesson-01",
+  "title": {
+    "de": "Ich hei?e Miriam.",
+    "en": "My name is Miriam."
+  },
+  "cefr": "A1",
+  "module": 1,
+  "sources": [
+    "Lesson 1_260730_050234.txt",
+    "Momente_A1_1_KB_Glossar_Deutsch_Spanisch.pdf"
+  ],
+  "vocabulary": [
+    {
+      "de": "Deutschland",
+      "en": "Germany",
+      "category": "countries"
+    },
+    {
+      "de": "?sterreich",
+      "en": "Austria",
+      "category": "countries"
+    },
+    {
+      "de": "Spanien",
+      "en": "Spain",
+      "category": "countries"
+    },
+    {
+      "de": "Frankreich",
+      "en": "France",
+      "category": "countries"
+    },
+    {
+      "de": "Eritrea",
+      "en": "Eritrea",
+      "category": "countries"
+    },
+    {
+      "de": "die Schweiz",
+      "en": "Switzerland",
+      "article": "die",
+      "genderHint": "red",
+      "category": "countries"
+    },
+    {
+      "de": "die T?rkei",
+      "en": "Turkey",
+      "article": "die",
+      "genderHint": "red",
+      "category": "countries"
+    },
+    {
+      "de": "die USA",
+      "en": "USA",
+      "article": "die",
+      "genderHint": "red",
+      "category": "countries"
+    },
+    {
+      "de": "A, B, C... Z, ?, ?, ?, ?",
+      "en": "Alphabet pronunciation",
+      "category": "alphabet"
+    },
+    {
+      "de": "aus",
+      "en": "from",
+      "category": "preposition"
+    }
+  ],
+  "phrases": [
+    {
+      "de": "Hallo",
+      "en": "Hello",
+      "category": "greetings"
+    },
+    {
+      "de": "Guten Morgen",
+      "en": "Good morning",
+      "category": "greetings"
+    },
+    {
+      "de": "Guten Tag",
+      "en": "Good day / Hello",
+      "category": "greetings"
+    },
+    {
+      "de": "Guten Abend",
+      "en": "Good evening",
+      "category": "greetings"
+    },
+    {
+      "de": "Tsch?s",
+      "en": "Bye",
+      "category": "goodbyes"
+    },
+    {
+      "de": "Auf Wiedersehen",
+      "en": "Goodbye",
+      "category": "goodbyes"
+    },
+    {
+      "de": "Gute Nacht",
+      "en": "Good night",
+      "category": "goodbyes"
+    },
+    {
+      "de": "Super!",
+      "en": "Great!",
+      "category": "wellbeing"
+    },
+    {
+      "de": "Sehr gut, danke.",
+      "en": "I am doing very well, thank you.",
+      "category": "wellbeing"
+    },
+    {
+      "de": "Gut, danke.",
+      "en": "I'm fine, thank you.",
+      "category": "wellbeing"
+    },
+    {
+      "de": "Es geht.",
+      "en": "Not too bad.",
+      "category": "wellbeing"
+    },
+    {
+      "de": "Nicht so gut.",
+      "en": "Not so well.",
+      "category": "wellbeing"
+    },
+    {
+      "de": "Gut, danke. Und dir?",
+      "en": "Good, thanks. And you?",
+      "category": "wellbeing"
+    },
+    {
+      "de": "Wie hei?t du?",
+      "en": "What's your name? (informal)",
+      "category": "questions"
+    },
+    {
+      "de": "Wie hei?en Sie?",
+      "en": "What is your name? (formal)",
+      "category": "questions"
+    },
+    {
+      "de": "Ich hei?e Miriam.",
+      "en": "I am called Miriam.",
+      "category": "answers"
+    },
+    {
+      "de": "Mein Name ist Vera.",
+      "en": "My name is Vera.",
+      "category": "answers"
+    },
+    {
+      "de": "Wer ist das?",
+      "en": "Who is that?",
+      "category": "questions"
+    },
+    {
+      "de": "Wer sind Sie?",
+      "en": "Who are you? (formal)",
+      "category": "questions"
+    },
+    {
+      "de": "Das ist Sergej.",
+      "en": "This is Sergej.",
+      "category": "answers"
+    },
+    {
+      "de": "Ich bin Rita.",
+      "en": "I am Rita.",
+      "category": "answers"
+    },
+    {
+      "de": "Woher kommst du?",
+      "en": "Where are you from? (informal)",
+      "category": "questions"
+    },
+    {
+      "de": "Woher kommen Sie?",
+      "en": "Where are you from? (formal)",
+      "category": "questions"
+    },
+    {
+      "de": "Ich komme aus Deutschland.",
+      "en": "I come from Germany.",
+      "category": "answers"
+    },
+    {
+      "de": "Sie kommt aus Eritrea.",
+      "en": "She comes from Eritrea.",
+      "category": "answers"
+    },
+    {
+      "de": "Wie geht's dir?",
+      "en": "How are you? (informal)",
+      "category": "questions"
+    },
+    {
+      "de": "Wie geht's Ihnen?",
+      "en": "How are you? (formal)",
+      "category": "questions"
+    }
+  ],
+  "grammar": [
+    {
+      "id": "pronouns",
+      "topic": "Personal pronouns",
+      "items": [
+        {
+          "de": "ich",
+          "en": "I"
+        },
+        {
+          "de": "du",
+          "en": "you (informal)"
+        },
+        {
+          "de": "er / sie / es",
+          "en": "he / she / it"
+        },
+        {
+          "de": "Sie",
+          "en": "you (formal)"
+        }
+      ]
+    },
+    {
+      "id": "preposition-aus",
+      "topic": "Preposition aus",
+      "rule": "aus + country (no article for most countries)",
+      "example": "Ich komme aus Deutschland."
+    }
+  ],
+  "verbs": [
+    {
+      "infinitive": "sein",
+      "en": "to be",
+      "lesson": 1
+    },
+    {
+      "infinitive": "hei?en",
+      "en": "to be called",
+      "lesson": 1
+    },
+    {
+      "infinitive": "kommen",
+      "en": "to come",
+      "lesson": 1
+    },
+    {
+      "infinitive": "lernen",
+      "en": "to learn",
+      "lesson": 1
+    }
+  ],
+  "dialogues": [],
+  "workbook_refs": [
+    {
+      "ref": "AB-01-1",
+      "kb": 2,
+      "topic": "Greetings, hei?en",
+      "abPage": 8
+    },
+    {
+      "ref": "AB-01-3",
+      "kb": 2,
+      "topic": "Names listening",
+      "abPage": 8
+    },
+    {
+      "ref": "AB-01-4",
+      "kb": 3,
+      "topic": "Wie geht's dir?",
+      "abPage": 8
+    },
+    {
+      "ref": "AB-01-5",
+      "kb": 4,
+      "topic": "Woher kommst du?",
+      "abPage": 9
+    },
+    {
+      "ref": "AB-01-9",
+      "kb": 9,
+      "topic": "Dialogue names/origins",
+      "abPage": 10,
+      "audio": "l1-dialogue"
+    }
+  ],
+  "links": {},
+  "meta": {
+    "extractedAt": "2026-07-30",
+    "extractMethod": "Lesson 1_260730_050234.txt",
+    "itemCounts": {
+      "vocabulary": 10,
+      "phrases": 27,
+      "grammar": 2,
+      "verbs": 4,
+      "workbook_refs": 5
+    }
+  }
+}

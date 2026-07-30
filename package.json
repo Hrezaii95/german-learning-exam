@@ -1,0 +1,11 @@
+{
+  "name": "german-learning-os",
+  "version": "0.1.0-alpha",
+  "private": true,
+  "scripts": {
+    "prestart": "node scripts/ensure-audio.js",
+    "start": "npx --yes serve . -p 3456",
+    "open": "start http://localhost:3456/web/",
+    "study": "npm run prestart && npx --yes serve . -p 3456"
+  }
+}

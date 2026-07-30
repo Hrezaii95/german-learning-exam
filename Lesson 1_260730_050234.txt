@@ -1,0 +1,297 @@
+Lesson 1 learning check list.
+Here is the restructured table, broken down so every single word, phrase, and grammar rule has its own dedicated row. You can copy and paste this directly into your Google Sheet for your app database.
+
+
+Main Category
+Subcategory
+German
+English
+
+Communication & Phrases
+Greetings
+Hallo
+Hello [1]
+
+
+Greetings
+Guten Morgen
+Good morning [2]
+
+
+Greetings
+Guten Tag
+Good day / Hello [2]
+
+
+Greetings
+Guten Abend
+Good evening [2]
+
+
+Goodbyes
+Tschüs
+Bye [3]
+
+
+Goodbyes
+Auf Wiedersehen
+Goodbye [3]
+
+
+Goodbyes
+Gute Nacht
+Good night [2]
+
+
+Well-Being
+Super!
+Great! [3]
+
+
+Well-Being
+Sehr gut, danke.
+I am doing very well, thank you. [3]
+
+
+Well-Being
+Gut, danke.
+I'm fine, thank you. [3]
+
+
+Well-Being
+Es geht.
+Not too bad. [3]
+
+
+Well-Being
+Nicht so gut.
+Not so well. [3]
+
+Vocabulary
+The Alphabet
+A, B, C... Z, Ä, Ö, Ü, ß
+Alphabet pronunciation [4]
+
+
+Countries
+Deutschland
+Germany [3]
+
+
+Countries
+Österreich
+Austria [5]
+
+
+Countries
+Spanien
+Spain [5]
+
+
+Countries
+Frankreich
+France [5]
+
+
+Countries
+Eritrea
+Eritrea [3]
+
+
+Countries with Articles
+die Schweiz
+Switzerland [3]
+
+
+Countries with Articles
+die Türkei
+Turkey [5]
+
+
+Countries with Articles
+die USA
+USA [5]
+
+Grammar
+Pronouns
+ich
+I [1]
+
+
+Pronouns
+du
+you (informal) [1]
+
+
+Pronouns
+er / sie / es
+he / she / it [3, 6]
+
+
+Pronouns
+Sie
+you (formal) [2]
+
+
+Core Verb: sein
+ich bin
+I am [1]
+
+
+Core Verb: sein
+du bist
+you are [1]
+
+
+Core Verb: sein
+er/sie/es ist
+he/she/it is [7]
+
+
+Core Verb: sein
+Sie sind
+you (formal) are [7]
+
+
+Core Verb: heißen
+ich heiße
+I am called [1]
+
+
+Core Verb: heißen
+du heißt
+you are called [1]
+
+
+Core Verb: heißen
+er/sie/es heißt
+he/she/it is called [8]
+
+
+Core Verb: heißen
+Sie heißen
+you (formal) are called [8]
+
+
+Core Verb: kommen
+ich komme
+I come [9]
+
+
+Core Verb: kommen
+du kommst
+you come [9]
+
+
+Core Verb: kommen
+er/sie/es kommt
+he/she/it comes [8]
+
+
+Core Verb: kommen
+Sie kommen
+you (formal) come [8]
+
+
+Core Verb: lernen
+ich lerne
+I learn [9]
+
+
+Core Verb: lernen
+du lernst
+you learn [9]
+
+
+Core Verb: lernen
+er/sie/es lernt
+he/she/it learns [8]
+
+
+Core Verb: lernen
+Sie lernen
+you (formal) learn [8]
+
+
+Preposition
+aus
+from [3]
+
+Questions & Answers
+Asking Names
+Wie heißt du?
+What's your name? (informal) [1]
+
+
+Asking Names
+Wie heißen Sie?
+What is your name? (formal) [10]
+
+
+Answering Names
+Ich heiße Miriam.
+I am called Miriam. [10]
+
+
+Answering Names
+Mein Name ist Vera.
+My name is Vera. [1]
+
+
+Introducing Others
+Wer ist das?
+Who is that? [3]
+
+
+Introducing Others
+Wer sind Sie?
+Who are you? (formal) [2]
+
+
+Answering Introductions
+Das ist Sergej.
+This is Sergej. [11]
+
+
+Answering Introductions
+Ich bin Rita.
+I am Rita. [12]
+
+
+Asking Origins
+Woher kommst du?
+Where are you from? (informal) [3]
+
+
+Asking Origins
+Woher kommen Sie?
+Where are you from? (formal) [12]
+
+
+Answering Origins
+Ich komme aus Deutschland.
+I come from Germany. [13]
+
+
+Answering Origins
+Sie kommt aus Eritrea.
+She comes from Eritrea. [13]
+
+
+Asking Well-Being
+Wie geht's dir?
+How are you? (informal) [3]
+
+
+Asking Well-Being
+Wie geht's Ihnen?
+How are you? (formal) [12]
+
+
+Answering Well-Being
+Gut, danke. Und dir?
+Good, thanks. And you? [13]
+
+
+
+Would you like me to map out Lesson 2 in this exact same single-cell database format next?

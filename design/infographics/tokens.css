@@ -1,0 +1,94 @@
+/**
+ * GLOS Infographic Design Tokens
+ * Source: GPT mockup (Jul 30, 2026) + openspec infographics-system
+ * Import in app: <link rel="stylesheet" href="/design/infographics/tokens.css">
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap');
+
+:root {
+  /* �� Chrome / shell ������������������������������������� */
+  --glos-sidebar-bg: #1e1b4b;
+  --glos-sidebar-hover: #2d2a5e;
+  --glos-sidebar-text: rgba(255, 255, 255, 0.72);
+  --glos-sidebar-text-active: #ffffff;
+  --glos-sidebar-active-pill: rgba(99, 102, 241, 0.28);
+  --glos-sidebar-active-border: #6366f1;
+
+  --glos-accent: #6366f1;
+  --glos-accent-hover: #4f46e5;
+  --glos-accent-soft: rgba(99, 102, 241, 0.12);
+  --glos-accent-ring: rgba(99, 102, 241, 0.35);
+
+  --glos-content-bg: #f4f6fb;
+  --glos-surface: #ffffff;
+  --glos-surface-elevated: #ffffff;
+  --glos-border: #e2e8f0;
+  --glos-border-strong: #cbd5e1;
+
+  /* �� Typography ��������������������������������������� */
+  --glos-font-display: 'Poppins', system-ui, sans-serif;
+  --glos-font-body: 'Inter', system-ui, sans-serif;
+  --glos-text-primary: #0f172a;
+  --glos-text-secondary: #64748b;
+  --glos-text-muted: #94a3b8;
+  --glos-text-inverse: #ffffff;
+
+  /* �� Gender / article (immutable) ��������������������� */
+  --glos-der: #3b82f6;
+  --glos-der-bg: rgba(59, 130, 246, 0.1);
+  --glos-der-border: rgba(59, 130, 246, 0.35);
+
+  --glos-die: #ef4444;
+  --glos-die-bg: rgba(239, 68, 68, 0.1);
+  --glos-die-border: rgba(239, 68, 68, 0.35);
+
+  --glos-das: #22c55e;
+  --glos-das-bg: rgba(34, 197, 94, 0.1);
+  --glos-das-border: rgba(34, 197, 94, 0.35);
+
+  --glos-plural: #a855f7;
+  --glos-plural-bg: rgba(168, 85, 247, 0.1);
+  --glos-plural-border: rgba(168, 85, 247, 0.35);
+
+  /* �� Semantic ����������������������������������������� */
+  --glos-success: #22c55e;
+  --glos-error: #ef4444;
+  --glos-warning: #f59e0b;
+  --glos-streak: linear-gradient(180deg, #fbbf24 0%, #f97316 55%, #ef4444 100%);
+
+  --glos-memory-tip-bg: #fffbeb;
+  --glos-memory-tip-border: #fde68a;
+  --glos-memory-tip-icon: #f59e0b;
+
+  --glos-irregular-bg: #fef3c7;
+  --glos-irregular-border: #fcd34d;
+  --glos-row-alt: #f8fafc;
+  --glos-row-accent: rgba(99, 102, 241, 0.06);
+
+  /* �� Shape & depth ������������������������������������ */
+  --glos-radius-sm: 8px;
+  --glos-radius-md: 12px;
+  --glos-radius-lg: 16px;
+  --glos-radius-xl: 20px;
+  --glos-radius-pill: 999px;
+
+  --glos-shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06);
+  --glos-shadow-md: 0 4px 16px rgba(15, 23, 42, 0.08);
+  --glos-shadow-lg: 0 12px 40px rgba(15, 23, 42, 0.12);
+  --glos-shadow-card: 0 2px 12px rgba(30, 27, 75, 0.08);
+
+  /* �� Spacing scale ������������������������������������ */
+  --glos-space-1: 4px;
+  --glos-space-2: 8px;
+  --glos-space-3: 12px;
+  --glos-space-4: 16px;
+  --glos-space-5: 20px;
+  --glos-space-6: 24px;
+  --glos-space-8: 32px;
+  --glos-space-10: 40px;
+
+  /* �� Motion ������������������������������������������� */
+  --glos-ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --glos-duration: 180ms;
+}

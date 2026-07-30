@@ -1,0 +1,19 @@
+﻿# Local / IDE
+.cursor/
+.env
+.env.*
+
+# Large media & course PDFs (not needed for exam.html TTS)
+*.pdf
+Audio-*/
+audio/
+*.zip
+
+# Images & misc
+*.png
+*.jpg
+Interactive-Course-Creation.json
+openspec/
+
+# Dependencies
+node_modules/

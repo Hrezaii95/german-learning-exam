@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EXAM CRAM — open this only</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      background: #fff;
+      color: #1a1a1a;
+      line-height: 1.5;
+      font-size: 18px;
+      padding-bottom: 2rem;
+    }
+    header {
+      background: #fff;
+      border-bottom: 3px solid #2563eb;
+      padding: 1rem 1.25rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,.08);
+    }
+    header h1 { font-size: 1.5rem; font-weight: 800; color: #111; }
+    header p { font-size: 0.95rem; color: #555; margin-top: 0.25rem; }
+    nav.tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      padding: 0.75rem 1rem;
+      background: #f5f5f5;
+      border-bottom: 1px solid #ddd;
+      position: sticky;
+      top: 72px;
+      z-index: 99;
+    }
+    nav.tabs button {
+      flex: 1 1 45%;
+      min-height: 52px;
+      font-size: 1rem;
+      font-weight: 600;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      background: #fff;
+      color: #222;
+      cursor: pointer;
+    }
+    nav.tabs button.active {
+      background: #2563eb;
+      color: #fff;
+      border-color: #2563eb;
+    }
+    main { padding: 1rem; max-width: 900px; margin: 0 auto; }
+    .panel { display: none; }
+    .panel.active { display: block; }
+    h2 { font-size: 1.2rem; margin: 1.25rem 0 0.5rem; color: #111; border-bottom: 2px solid #eee; padding-bottom: 0.35rem; }
+    h2:first-child { margin-top: 0; }
+    .search {
+      width: 100%;
+      min-height: 52px;
+      font-size: 1.1rem;
+      padding: 0.75rem 1rem;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    .legend { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem; font-size: 0.95rem; }
+    .der { color: #2563eb; font-weight: 700; }
+    .die { color: #dc2626; font-weight: 700; }
+    .plural { color: #9333ea; font-weight: 700; }
+    .row, .beruf-card, .verb-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.85rem 1rem;
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      margin-bottom: 0.5rem;
+      background: #fafafa;
+      min-height: 56px;
+    }
+    .row:active, .beruf-card:active { background: #eef4ff; }
+    .row .de, .beruf-card .forms { flex: 1; }
+    .row .en { color: #555; font-size: 0.95rem; }
+    .play {
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      border: none;
+      border-radius: 50%;
+      background: #2563eb;
+      color: #fff;
+      font-size: 1.3rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .play:active { background: #1d4ed8; transform: scale(0.96); }
+    .beruf-card .en-title { font-weight: 700; font-size: 1rem; margin-bottom: 0.35rem; }
+    .beruf-card .forms { font-size: 0.92rem; line-height: 1.6; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; font-size: 1rem; }
+    th, td { border: 1px solid #ddd; padding: 0.75rem; text-align: left; }
+    th { background: #f0f0f0; font-weight: 700; }
+    .verb-row { cursor: pointer; }
+    .verb-row:hover { background: #eef4ff; }
+    .quiz-mode { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem; }
+    .quiz-mode button {
+      min-height: 48px;
+      padding: 0.5rem 1rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      background: #fff;
+      cursor: pointer;
+    }
+    .quiz-mode button.active { background: #2563eb; color: #fff; border-color: #2563eb; }
+    .quiz-card {
+      background: #f8f8f8;
+      border: 2px solid #ddd;
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .quiz-prompt { font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; min-height: 2.5rem; }
+    .quiz-options { display: grid; gap: 0.5rem; }
+    .quiz-options button {
+      min-height: 56px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      background: #fff;
+      cursor: pointer;
+      padding: 0.75rem;
+    }
+    .quiz-options button.correct { background: #dcfce7; border-color: #16a34a; color: #166534; }
+    .quiz-options button.wrong { background: #fee2e2; border-color: #dc2626; color: #991b1b; }
+    .quiz-score { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; color: #2563eb; }
+    .quiz-next {
+      margin-top: 1rem;
+      min-height: 52px;
+      width: 100%;
+      font-size: 1.1rem;
+      font-weight: 700;
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    .cat-label { font-size: 0.8rem; color: #888; text-transform: uppercase; letter-spacing: 0.05em; }
+    .voice-badge {
+      font-size: 0.8rem;
+      color: #2563eb;
+      margin-top: 0.35rem;
+      font-weight: 600;
+      word-break: break-word;
+    }
+    .header-links { font-size: 0.85rem; margin-top: 0.35rem; }
+    .header-links a { color: #2563eb; }
+    .play-group { display: flex; gap: 0.35rem; flex-shrink: 0; }
+    .play-slow {
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      border: 2px solid #2563eb;
+      border-radius: 50%;
+      background: #fff;
+      color: #2563eb;
+      font-size: 1.1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .play-slow:active { background: #eef4ff; transform: scale(0.96); }
+    .btn-weak {
+      flex-shrink: 0;
+      min-width: 52px;
+      height: 52px;
+      padding: 0 0.5rem;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      background: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      cursor: pointer;
+      color: #666;
+    }
+    .btn-weak.marked { border-color: #f59e0b; background: #fffbeb; color: #b45309; }
+    .row.weak, .beruf-card.weak { border-color: #f59e0b; background: #fffbeb; }
+    .alpha-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(56px, 1fr));
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .alpha-card {
+      min-height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      font-weight: 800;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      background: #fafafa;
+      cursor: pointer;
+    }
+    .alpha-card:active { background: #eef4ff; }
+    .num-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+    @media (min-width: 600px) { .num-grid { grid-template-columns: 1fr 1fr 1fr; } }
+    .dialogue-card {
+      border: 1px solid #e0e0e0;
+      border-radius: 12px;
+      padding: 1rem;
+      margin-bottom: 0.75rem;
+      background: #fafafa;
+    }
+    .dialogue-card h3 { font-size: 1rem; margin: 0 0 0.5rem; border: none; padding: 0; }
+    .dialogue-meta { font-size: 0.8rem; color: #666; margin-bottom: 0.5rem; }
+    .dialogue-line { font-size: 0.95rem; margin: 0.25rem 0; }
+    .dialogue-line .sp { font-weight: 700; color: #2563eb; }
+    .mp3-btn {
+      min-height: 48px;
+      padding: 0.5rem 1rem;
+      font-size: 0.95rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 10px;
+      background: #16a34a;
+      color: #fff;
+      cursor: pointer;
+      margin-bottom: 0.5rem;
+    }
+    .mp3-btn:active { background: #15803d; }
+    .dialogue-search { margin-bottom: 1rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>EXAM CRAM — open this only</h1>
+    <p>Tap ▶ normal · 🐢 slow (0.75×). TTS = de-DE only.</p>
+    <div id="voice-badge" class="voice-badge">🔊 Loading voice…</div>
+    <div class="header-links"><a href="hubs.html">Extended hubs</a> · <a href="exam.html">Exam cram</a></div>
+  </header>
+
+  <nav class="tabs">
+    <button class="active" data-tab="basics">Basics</button>
+    <button data-tab="phrases">Phrases</button>
+    <button data-tab="berufe">Berufe</button>
+    <button data-tab="verbs">Verbs</button>
+    <button data-tab="dialogues">Dialogues</button>
+    <button data-tab="quiz">Quiz</button>
+  </nav>
+
+  <main>
+    <section id="basics" class="panel active"></section>
+    <section id="phrases" class="panel"></section>
+    <section id="berufe" class="panel">
+      <input type="search" class="search" id="berufe-search" placeholder="Search jobs (English or German)…">
+      <div class="legend">
+        <span class="der">der = blue (masc.)</span>
+        <span class="die">die = red (fem.)</span>
+        <span class="plural">plural = purple</span>
+      </div>
+      <div id="berufe-list"></div>
+    </section>
+    <section id="verbs" class="panel"></section>
+    <section id="dialogues" class="panel">
+      <input type="search" class="search dialogue-search" id="dialogue-search" placeholder="Search dialogues (lesson, track, text)…">
+      <div id="dialogue-list"><p style="color:#666">Loading transcripts…</p></div>
+    </section>
+    <section id="quiz" class="panel">
+      <div class="quiz-mode">
+        <button class="active" data-mode="article">Article (der/die/das)</button>
+        <button data-mode="en-de">EN → DE</button>
+        <button data-mode="de-en">DE → EN</button>
+      </div>
+      <div class="quiz-score" id="quiz-score">Score: 0 / 0</div>
+      <div class="quiz-card">
+        <div class="quiz-prompt" id="quiz-prompt">Loading…</div>
+        <div class="quiz-options" id="quiz-options"></div>
+        <button class="quiz-next" id="quiz-next" style="display:none">Next →</button>
+      </div>
+    </section>
+  </main>
+
+  <script>
+(function () {
+  'use strict';
+
+  const LESSON1 = [
+    { cat: 'Greetings', de: 'Hallo', en: 'Hello' },
+    { cat: 'Greetings', de: 'Guten Morgen', en: 'Good morning' },
+    { cat: 'Greetings', de: 'Guten Tag', en: 'Good day / Hello' },
+    { cat: 'Greetings', de: 'Guten Abend', en: 'Good evening' },
+    { cat: 'Goodbyes', de: 'Tschüs', en: 'Bye' },
+    { cat: 'Goodbyes', de: 'Auf Wiedersehen', en: 'Goodbye' },
+    { cat: 'Goodbyes', de: 'Gute Nacht', en: 'Good night' },
+    { cat: 'Well-Being', de: 'Super!', en: 'Great!' },
+    { cat: 'Well-Being', de: 'Sehr gut, danke.', en: 'I am doing very well, thank you.' },
+    { cat: 'Well-Being', de: 'Gut, danke.', en: "I'm fine, thank you." },
+    { cat: 'Well-Being', de: 'Es geht.', en: 'Not too bad.' },
+    { cat: 'Well-Being', de: 'Nicht so gut.', en: 'Not so well.' },
+    { cat: 'The Alphabet', de: 'A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, Ä, Ö, Ü, ß', en: 'Alphabet pronunciation' },
+    { cat: 'Countries', de: 'Deutschland', en: 'Germany' },
+    { cat: 'Countries', de: 'Österreich', en: 'Austria' },
+    { cat: 'Countries', de: 'Spanien', en: 'Spain' },
+    { cat: 'Countries', de: 'Frankreich', en: 'France' },
+    { cat: 'Countries', de: 'Eritrea', en: 'Eritrea' },
+    { cat: 'Countries with Articles', de: 'die Schweiz', en: 'Switzerland' },
+    { cat: 'Countries with Articles', de: 'die Türkei', en: 'Turkey' },
+    { cat: 'Countries with Articles', de: 'die USA', en: 'USA' },
+    { cat: 'Pronouns', de: 'ich', en: 'I' },
+    { cat: 'Pronouns', de: 'du', en: 'you (informal)' },
+    { cat: 'Pronouns', de: 'er / sie / es', en: 'he / she / it' },
+    { cat: 'Pronouns', de: 'Sie', en: 'you (formal)' },
+    { cat: 'Core Verb: sein', de: 'ich bin', en: 'I am' },
+    { cat: 'Core Verb: sein', de: 'du bist', en: 'you are' },
+    { cat: 'Core Verb: sein', de: 'er/sie/es ist', en: 'he/she/it is' },
+    { cat: 'Core Verb: sein', de: 'Sie sind', en: 'you (formal) are' },
+    { cat: 'Core Verb: heißen', de: 'ich heiße', en: 'I am called' },
+    { cat: 'Core Verb: heißen', de: 'du heißt', en: 'you are called' },
+    { cat: 'Core Verb: heißen', de: 'er/sie/es heißt', en: 'he/she/it is called' },
+    { cat: 'Core Verb: heißen', de: 'Sie heißen', en: 'you (formal) are called' },
+    { cat: 'Core Verb: kommen', de: 'ich komme', en: 'I come' },
+    { cat: 'Core Verb: kommen', de: 'du kommst', en: 'you come' },
+    { cat: 'Core Verb: kommen', de: 'er/sie/es kommt', en: 'he/she/it comes' },
+    { cat: 'Core Verb: kommen', de: 'Sie kommen', en: 'you (formal) come' },
+    { cat: 'Core Verb: lernen', de: 'ich lerne', en: 'I learn' },
+    { cat: 'Core Verb: lernen', de: 'du lernst', en: 'you learn' },
+    { cat: 'Core Verb: lernen', de: 'er/sie/es lernt', en: 'he/she/it learns' },
+    { cat: 'Core Verb: lernen', de: 'Sie lernen', en: 'you (formal) learn' },
+    { cat: 'Preposition', de: 'aus', en: 'from' },
+    { cat: 'Asking Names', de: 'Wie heißt du?', en: "What's your name? (informal)" },
+    { cat: 'Asking Names', de: 'Wie heißen Sie?', en: 'What is your name? (formal)' },
+    { cat: 'Answering Names', de: 'Ich heiße Miriam.', en: 'I am called Miriam.' },
+    { cat: 'Answering Names', de: 'Mein Name ist Vera.', en: 'My name is Vera.' },
+    { cat: 'Introducing Others', de: 'Wer ist das?', en: 'Who is that?' },
+    { cat: 'Introducing Others', de: 'Wer sind Sie?', en: 'Who are you? (formal)' },
+    { cat: 'Answering Introductions', de: 'Das ist Sergej.', en: 'This is Sergej.' },
+    { cat: 'Answering Introductions', de: 'Ich bin Rita.', en: 'I am Rita.' },
+    { cat: 'Asking Origins', de: 'Woher kommst du?', en: 'Where are you from? (informal)' },
+    { cat: 'Asking Origins', de: 'Woher kommen Sie?', en: 'Where are you from? (formal)' },
+    { cat: 'Answering Origins', de: 'Ich komme aus Deutschland.', en: 'I come from Germany.' },
+    { cat: 'Answering Origins', de: 'Sie kommt aus Eritrea.', en: 'She comes from Eritrea.' },
+    { cat: 'Asking Well-Being', de: "Wie geht's dir?", en: 'How are you? (informal)' },
+    { cat: 'Asking Well-Being', de: "Wie geht's Ihnen?", en: 'How are you? (formal)' },
+    { cat: 'Answering Well-Being', de: 'Gut, danke. Und dir?', en: 'Good, thanks. And you?' }
+  ];
+
+  const BERUFE = [
+    { en: 'Electrician', m: 'der Elektriker', mpl: 'die Elektriker', f: 'die Elektrikerin', fpl: 'die Elektrikerinnen' },
+    { en: 'Gardener', m: 'der Gärtner', mpl: 'die Gärtner', f: 'die Gärtnerin', fpl: 'die Gärtnerinnen' },
+    { en: 'Auto Mechanic', m: 'der Automechaniker', mpl: 'die Automechaniker', f: 'die Automechanikerin', fpl: 'die Automechanikerinnen' },
+    { en: 'Bus Driver', m: 'der Busfahrer', mpl: 'die Busfahrer', f: 'die Busfahrerin', fpl: 'die Busfahrerinnen' },
+    { en: 'Hairdresser', m: 'der Friseur', mpl: 'die Friseure', f: 'die Friseurin', fpl: 'die Friseurinnen' },
+    { en: 'Street Worker', m: 'der Straßenarbeiter', mpl: 'die Straßenarbeiter', f: 'die Straßenarbeiterin', fpl: 'die Straßenarbeiterinnen' },
+    { en: 'Baker', m: 'der Bäcker', mpl: 'die Bäcker', f: 'die Bäckerin', fpl: 'die Bäckerinnen' },
+    { en: 'Bricklayer', m: 'der Maurer', mpl: 'die Maurer', f: 'die Maurerin', fpl: 'die Maurerinnen' },
+    { en: 'Farmer', m: 'der Landwirt / der Bauer', mpl: 'die Landwirte / die Bauern', f: 'die Landwirtin / die Bäuerin', fpl: 'die Landwirtinnen / die Bäuerinnen' },
+    { en: 'Photographer', m: 'der Fotograf', mpl: 'die Fotografen', f: 'die Fotografin', fpl: 'die Fotografinnen' },
+    { en: 'Painter', m: 'der Maler', mpl: 'die Maler', f: 'die Malerin', fpl: 'die Malerinnen' },
+    { en: 'Architect', m: 'der Architekt', mpl: 'die Architekten', f: 'die Architektin', fpl: 'die Architektinnen' },
+    { en: 'Teacher', m: 'der Lehrer', mpl: 'die Lehrer', f: 'die Lehrerin', fpl: 'die Lehrerinnen' },
+    { en: 'Cook/Chef', m: 'der Koch', mpl: 'die Köche', f: 'die Köchin', fpl: 'die Köchinnen' },
+    { en: 'Refuse Collector', m: 'der Müllwerker', mpl: 'die Müllwerker', f: 'die Müllwerkerin', fpl: 'die Müllwerkerinnen' },
+    { en: 'Butcher', m: 'der Metzger', mpl: 'die Metzger', f: 'die Metzgerin', fpl: 'die Metzgerinnen' },
+    { en: 'Waiter / Waitress', m: 'der Kellner', mpl: 'die Kellner', f: 'die Kellnerin', fpl: 'die Kellnerinnen' },
+    { en: 'Dentist', m: 'der Zahnarzt', mpl: 'die Zahnärzte', f: 'die Zahnärztin', fpl: 'die Zahnärztinnen' },
+    { en: 'Shop Assistant', m: 'der Verkäufer', mpl: 'die Verkäufer', f: 'die Verkäuferin', fpl: 'die Verkäuferinnen' },
+    { en: 'Actor / Actress', m: 'der Schauspieler', mpl: 'die Schauspieler', f: 'die Schauspielerin', fpl: 'die Schauspielerinnen' },
+    { en: 'Artist', m: 'der Künstler', mpl: 'die Künstler', f: 'die Künstlerin', fpl: 'die Künstlerinnen' },
+    { en: 'Construction Worker', m: 'der Bauarbeiter', mpl: 'die Bauarbeiter', f: 'die Bauarbeiterin', fpl: 'die Bauarbeiterinnen' },
+    { en: 'Doctor', m: 'der Arzt', mpl: 'die Ärzte', f: 'die Ärztin', fpl: 'die Ärztinnen' },
+    { en: 'Engineer', m: 'der Ingenieur', mpl: 'die Ingenieure', f: 'die Ingenieurin', fpl: 'die Ingenieurinnen' },
+    { en: 'Firefighter', m: 'der Feuerwehrmann', mpl: 'die Feuerwehrmänner', f: 'die Feuerwehrfrau', fpl: 'die Feuerwehrfrauen' },
+    { en: 'Confectioner', m: 'der Konditor', mpl: 'die Konditoren', f: 'die Konditorin', fpl: 'die Konditorinnen' },
+    { en: 'Housewife / Househusband', m: 'der Hausmann', mpl: 'die Hausmänner', f: 'die Hausfrau', fpl: 'die Hausfrauen' },
+    { en: 'Nurse', m: 'der Krankenpfleger', mpl: 'die Krankenpfleger', f: 'die Krankenschwester', fpl: 'die Krankenschwestern' },
+    { en: 'Airplane Pilot', m: 'der Flugzeugpilot', mpl: 'die Flugzeugpiloten', f: 'die Flugzeugpilotin', fpl: 'die Flugzeugpilotinnen' },
+    { en: 'Police Officer', m: 'der Polizist', mpl: 'die Polizisten', f: 'die Polizistin', fpl: 'die Polizistinnen' },
+    { en: 'Postman / Letter Carrier', m: 'der Postbote / der Briefträger', mpl: 'die Postboten / die Briefträger', f: 'die Postbotin / die Briefträgerin', fpl: 'die Postbotinnen / die Briefträgerinnen' },
+    { en: 'Secretary', m: 'der Sekretär', mpl: 'die Sekretäre', f: 'die Sekretärin', fpl: 'die Sekretärinnen' },
+    { en: 'Singer', m: 'der Sänger', mpl: 'die Sänger', f: 'die Sängerin', fpl: 'die Sängerinnen' },
+    { en: 'Veterinarian', m: 'der Tierarzt', mpl: 'die Tierärzte', f: 'die Tierärztin', fpl: 'die Tierärztinnen' },
+    { en: 'Soldier', m: 'der Soldat', mpl: 'die Soldaten', f: 'die Soldatin', fpl: 'die Soldatinnen' },
+    { en: 'Carpenter', m: 'der Tischler', mpl: 'die Tischler', f: 'die Tischlerin', fpl: 'die Tischlerinnen' },
+    { en: 'Businessperson', m: 'der Geschäftsmann', mpl: 'die Geschäftsleute', f: 'die Geschäftsfrau', fpl: 'die Geschäftsfrauen' },
+    { en: 'Detective', m: 'der Detektiv', mpl: 'die Detektive', f: 'die Detektivin', fpl: 'die Detektivinnen' },
+    { en: 'Plumber', m: 'der Klempner / der Installateur', mpl: 'die Klempner / die Installateure', f: 'die Klempnerin / die Installateurin', fpl: 'die Klempnerinnen / die Installateurinnen' },
+    { en: 'Surgeon', m: 'der Chirurg', mpl: 'die Chirurgen', f: 'die Chirurgin', fpl: 'die Chirurginnen' },
+    { en: 'Writer', m: 'der Schriftsteller', mpl: 'die Schriftsteller', f: 'die Schriftstellerin', fpl: 'die Schriftstellerinnen' },
+    { en: 'Gas Station Attendant', m: 'der Tankwart', mpl: 'die Tankwarte', f: 'die Tankwartin', fpl: 'die Tankwartinnen' },
+    { en: 'Secret Agent', m: 'der Geheimagent', mpl: 'die Geheimagenten', f: 'die Geheimagentin', fpl: 'die Geheimagentinnen' },
+    { en: 'Lawyer', m: 'der Rechtsanwalt', mpl: 'die Rechtsanwälte', f: 'die Rechtsanwältin', fpl: 'die Rechtsanwältinnen' },
+    { en: 'Judge', m: 'der Richter', mpl: 'die Richter', f: 'die Richterin', fpl: 'die Richterinnen' },
+    { en: 'Journalist', m: 'der Journalist', mpl: 'die Journalisten', f: 'die Journalistin', fpl: 'die Journalistinnen' },
+    { en: 'Cleaner', m: 'der Putzmann', mpl: 'die Putzmänner', f: 'die Putzfrau', fpl: 'die Putzfrauen' },
+    { en: 'Cashier', m: 'der Kassierer', mpl: 'die Kassierer', f: 'die Kassiererin', fpl: 'die Kassiererinnen' }
+  ];
+
+  const VERBS = [
+    { inf: 'sein', en: 'to be', rows: [
+      { p: 'ich', f: 'bin', en: 'I am' }, { p: 'du', f: 'bist', en: 'you are' },
+      { p: 'er/sie/es', f: 'ist', en: 'he/she/it is', hi: true },
+      { p: 'wir', f: 'sind', en: 'we are' }, { p: 'ihr', f: 'seid', en: 'you (pl.) are' },
+      { p: 'Sie', f: 'sind', en: 'you (formal) are' }
+    ]},
+    { inf: 'heißen', en: 'to be called', rows: [
+      { p: 'ich', f: 'heiße', en: 'I am called' }, { p: 'du', f: 'heißt', en: 'you are called' },
+      { p: 'er/sie/es', f: 'heißt', en: 'he/she/it is called', hi: true },
+      { p: 'wir', f: 'heißen', en: 'we are called' }, { p: 'ihr', f: 'heißt', en: 'you (pl.) are called' },
+      { p: 'Sie', f: 'heißen', en: 'you (formal) are called' }
+    ]},
+    { inf: 'kommen', en: 'to come', rows: [
+      { p: 'ich', f: 'komme', en: 'I come' }, { p: 'du', f: 'kommst', en: 'you come' },
+      { p: 'er/sie/es', f: 'kommt', en: 'he/she/it comes', hi: true },
+      { p: 'wir', f: 'kommen', en: 'we come' }, { p: 'ihr', f: 'kommt', en: 'you (pl.) come' },
+      { p: 'Sie', f: 'kommen', en: 'you (formal) come' }
+    ]},
+    { inf: 'lernen', en: 'to learn', rows: [
+      { p: 'ich', f: 'lerne', en: 'I learn' }, { p: 'du', f: 'lernst', en: 'you learn' },
+      { p: 'er/sie/es', f: 'lernt', en: 'he/she/it learns', hi: true },
+      { p: 'wir', f: 'lernen', en: 'we learn' }, { p: 'ihr', f: 'lernt', en: 'you (pl.) learn' },
+      { p: 'Sie', f: 'lernen', en: 'you (formal) learn' }
+    ]}
+  ];
+
+  ];
+
+  const NUMBERS = [
+    [0, 'null'], [1, 'eins'], [2, 'zwei'], [3, 'drei'], [4, 'vier'], [5, 'fünf'],
+    [6, 'sechs'], [7, 'sieben'], [8, 'acht'], [9, 'neun'], [10, 'zehn'],
+    [11, 'elf'], [12, 'zwölf'], [13, 'dreizehn'], [14, 'vierzehn'], [15, 'fünfzehn'],
+    [16, 'sechzehn'], [17, 'siebzehn'], [18, 'achtzehn'], [19, 'neunzehn'], [20, 'zwanzig']
+  ];
+
+  const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜß'.split('');
+
+  const WEAK_KEY = 'exam-cram-weak';
+  const AUDIO_BASE = '../audio';
+  let weakSet = loadWeak();
+  let deVoice = null;
+  let currentAudio = null;
+
+  function loadWeak() {
+    try { return new Set(JSON.parse(localStorage.getItem(WEAK_KEY)) || []); }
+    catch (e) { return new Set(); }
+  }
+
+  function saveWeak() {
+    localStorage.setItem(WEAK_KEY, JSON.stringify(Array.from(weakSet)));
+  }
+
+  function toggleWeak(id) {
+    if (weakSet.has(id)) weakSet.delete(id);
+    else weakSet.add(id);
+    saveWeak();
+    refreshWeakStyles();
+  }
+
+  function refreshWeakStyles() {
+    document.querySelectorAll('[data-weak-id]').forEach(function (el) {
+      const id = el.dataset.weakId;
+      const marked = weakSet.has(id);
+      el.classList.toggle('weak', marked);
+      const btn = el.querySelector('.btn-weak');
+      if (btn) {
+        btn.classList.toggle('marked', marked);
+        btn.textContent = marked ? '★' : '☆';
+        btn.setAttribute('aria-label', marked ? 'Unmark weak' : 'Mark weak');
+      }
+    });
+  }
+
+  function weakBtn(id) {
+    const marked = weakSet.has(id);
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'btn-weak' + (marked ? ' marked' : '');
+    b.textContent = marked ? '★' : '☆';
+    b.setAttribute('aria-label', marked ? 'Unmark weak' : 'Mark weak');
+    b.addEventListener('click', function (e) {
+      e.stopPropagation();
+      toggleWeak(id);
+    });
+    return b;
+  }
+
+  function pickDeVoice() {
+    if (!('speechSynthesis' in window)) return null;
+    const voices = speechSynthesis.getVoices();
+    deVoice = voices.find(function (v) { return v.lang === 'de-DE'; })
+      || voices.find(function (v) { return v.lang && v.lang.toLowerCase().indexOf('de-de') === 0; })
+      || voices.find(function (v) { return v.lang && v.lang.toLowerCase().startsWith('de'); })
+      || null;
+    updateVoiceBadge();
+    return deVoice;
+  }
+
+  function updateVoiceBadge() {
+    const el = document.getElementById('voice-badge');
+    if (!el) return;
+    if (!('speechSynthesis' in window)) {
+      el.textContent = '🔊 TTS not supported in this browser';
+      return;
+    }
+    if (deVoice) el.textContent = '🔊 Voice: ' + deVoice.name + ' (' + deVoice.lang + ')';
+    else el.textContent = '🔊 Voice: de-DE (system default)';
+  }
+
+  if ('speechSynthesis' in window) {
+    pickDeVoice();
+    speechSynthesis.onvoiceschanged = function () { deVoice = null; pickDeVoice(); };
+  }
+
+  function speak(text, rate) {
+    if (!text || !('speechSynthesis' in window)) return;
+    if (currentAudio) { currentAudio.pause(); currentAudio = null; }
+    try { text = decodeURIComponent(String(text)); } catch (e) { text = String(text); }
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = 'de-DE';
+    u.rate = rate || 0.9;
+    const voice = deVoice || pickDeVoice();
+    if (voice) u.voice = voice;
+    speechSynthesis.speak(u);
+  }
+
+  function playMp3(relPath, fallbackText) {
+    if (!relPath) return;
+    speechSynthesis.cancel();
+    if (currentAudio) { currentAudio.pause(); currentAudio = null; }
+    const url = AUDIO_BASE + '/' + relPath.replace(/^\//, '');
+    const audio = new Audio(encodeURI(url).replace(/#/g, '%23'));
+    currentAudio = audio;
+    audio.onerror = function () {
+      currentAudio = null;
+      if (fallbackText) speak(fallbackText);
+    };
+    audio.play().catch(function () {
+      if (fallbackText) speak(fallbackText);
+    });
+  }
+
+  function playControls(text) {
+    const wrap = document.createElement('div');
+    wrap.className = 'play-group';
+    const normal = document.createElement('button');
+    normal.className = 'play';
+    normal.type = 'button';
+    normal.setAttribute('aria-label', 'Speak German');
+    normal.textContent = '▶';
+    normal.addEventListener('click', function (e) {
+      e.stopPropagation();
+      speak(text, 0.9);
+    });
+    const slow = document.createElement('button');
+    slow.className = 'play-slow';
+    slow.type = 'button';
+    slow.setAttribute('aria-label', 'Slow play 0.75');
+    slow.textContent = '🐢';
+    slow.addEventListener('click', function (e) {
+      e.stopPropagation();
+      speak(text, 0.75);
+    });
+    wrap.appendChild(normal);
+    wrap.appendChild(slow);
+    return wrap;
+  }
+
+  function playBtn(text) {
+    return playControls(text);
+  }
+
+  function colorArticle(str, cls) {
+    const span = document.createElement('span');
+    span.className = cls;
+    span.textContent = str;
+    return span;
+  }
+
+  function renderPhrases() {
+    const el = document.getElementById('phrases');
+    let lastCat = '';
+    LESSON1.forEach(function (item) {
+      if (item.cat !== lastCat) {
+        lastCat = item.cat;
+        const h = document.createElement('h2');
+        h.textContent = item.cat;
+        el.appendChild(h);
+      }
+      const row = document.createElement('div');
+      row.className = 'row';
+      const mid = document.createElement('div');
+      mid.style.flex = '1';
+      const de = document.createElement('div');
+      de.className = 'de';
+      de.style.fontWeight = '700';
+      de.textContent = item.de;
+      const en = document.createElement('div');
+      en.className = 'en';
+      en.textContent = item.en;
+      mid.appendChild(de);
+      mid.appendChild(en);
+      row.appendChild(mid);
+      row.appendChild(playBtn(item.de));
+      row.addEventListener('click', function () { speak(item.de); });
+      el.appendChild(row);
+    });
+  }
+
+  function stripArticle(s) {
+    return s.replace(/^(der|die|das)\s+/i, '').split(' / ')[0].trim();
+  }
+
+  function renderBerufe(filter) {
+    const list = document.getElementById('berufe-list');
+    list.innerHTML = '';
+    const q = (filter || '').toLowerCase();
+    BERUFE.forEach(function (b) {
+      const hay = (b.en + ' ' + b.m + ' ' + b.f).toLowerCase();
+      if (q && hay.indexOf(q) === -1) return;
+      const card = document.createElement('div');
+      card.className = 'beruf-card';
+      const title = document.createElement('div');
+      title.className = 'en-title';
+      title.textContent = b.en;
+      const forms = document.createElement('div');
+      forms.className = 'forms';
+      forms.appendChild(colorArticle(b.m, 'der'));
+      forms.appendChild(document.createTextNode(' · '));
+      forms.appendChild(colorArticle(b.mpl, 'plural'));
+      forms.appendChild(document.createTextNode(' · '));
+      forms.appendChild(colorArticle(b.f, 'die'));
+      forms.appendChild(document.createTextNode(' · '));
+      forms.appendChild(colorArticle(b.fpl, 'plural'));
+      card.appendChild(title);
+      card.appendChild(forms);
+      card.appendChild(playBtn(b.m.split(' / ')[0]));
+      card.style.flexWrap = 'wrap';
+      card.addEventListener('click', function () { speak(b.m.split(' / ')[0]); });
+      list.appendChild(card);
+    });
+  }
+
+  function renderVerbs() {
+    const el = document.getElementById('verbs');
+    VERBS.forEach(function (v) {
+      const h = document.createElement('h2');
+      h.textContent = v.inf + ' (' + v.en + ')';
+      el.appendChild(h);
+      const table = document.createElement('table');
+      const thead = document.createElement('thead');
+      thead.innerHTML = '<tr><th>Pronoun</th><th>Form</th><th>English</th><th></th></tr>';
+      table.appendChild(thead);
+      const tbody = document.createElement('tbody');
+      v.rows.forEach(function (r) {
+        const tr = document.createElement('tr');
+        tr.className = 'verb-row';
+        const full = r.p + ' ' + r.f;
+        tr.innerHTML = '<td>' + r.p + '</td><td' + (r.hi ? ' style="font-weight:800;color:#2563eb"' : '') + '>' + r.f + '</td><td style="color:#555">' + r.en + '</td><td></td>';
+        const td = tr.querySelector('td:last-child');
+        td.appendChild(playBtn(full));
+        tr.addEventListener('click', function () { speak(full); });
+        tbody.appendChild(tr);
+      });
+      table.appendChild(tbody);
+      el.appendChild(table);
+    });
+  }
+
+  let quizMode = 'article';
+  let score = 0;
+  let total = 0;
+  let answered = false;
+
+  function shuffle(arr) {
+    const a = arr.slice();
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const t = a[i]; a[i] = a[j]; a[j] = t;
+    }
+    return a;
+  }
+
+  function pickRandom(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
+  }
+
+  function updateScore() {
+    document.getElementById('quiz-score').textContent = 'Score: ' + score + ' / ' + total;
+  }
+
+  function newQuiz() {
+    answered = false;
+    document.getElementById('quiz-next').style.display = 'none';
+    const prompt = document.getElementById('quiz-prompt');
+    const opts = document.getElementById('quiz-options');
+    opts.innerHTML = '';
+
+    if (quizMode === 'article') {
+      const b = pickRandom(BERUFE);
+      const fem = Math.random() < 0.5;
+      const full = fem ? b.f.split(' / ')[0] : b.m.split(' / ')[0];
+      const noun = stripArticle(full);
+      const correct = fem ? 'die' : 'der';
+      prompt.innerHTML = 'Article for: <strong>' + noun + '</strong><br><span style="font-size:0.9rem;color:#666">' + b.en + ' (' + (fem ? 'feminine' : 'masculine') + ')</span>';
+      ['der', 'die', 'das'].forEach(function (art) {
+        const btn = document.createElement('button');
+        btn.textContent = art;
+        btn.addEventListener('click', function () { quizAnswer(btn, art === correct, correct, full); });
+        opts.appendChild(btn);
+      });
+    } else if (quizMode === 'en-de') {
+      const b = pickRandom(BERUFE);
+      const fem = Math.random() < 0.5;
+      const correct = fem ? b.f.split(' / ')[0] : b.m.split(' / ')[0];
+      prompt.textContent = b.en;
+      const wrong = shuffle(BERUFE.filter(function (x) { return x !== b; }).slice(0, 3)).map(function (x) {
+        return (fem ? x.f : x.m).split(' / ')[0];
+      });
+      shuffle([correct].concat(wrong)).forEach(function (opt) {
+        const btn = document.createElement('button');
+        btn.textContent = opt;
+        btn.addEventListener('click', function () { quizAnswer(btn, opt === correct, correct, correct); });
+        opts.appendChild(btn);
+      });
+    } else {
+      const b = pickRandom(BERUFE);
+      const fem = Math.random() < 0.5;
+      const deForm = fem ? b.f.split(' / ')[0] : b.m.split(' / ')[0];
+      const correct = b.en;
+      prompt.innerHTML = '<span class="der" style="font-size:1.4rem">' + deForm + '</span>';
+      const wrong = shuffle(BERUFE.filter(function (x) { return x !== b; }).slice(0, 3)).map(function (x) { return x.en; });
+      shuffle([correct].concat(wrong)).forEach(function (opt) {
+        const btn = document.createElement('button');
+        btn.textContent = opt;
+        btn.addEventListener('click', function () { quizAnswer(btn, opt === correct, correct, deForm); });
+        opts.appendChild(btn);
+      });
+    }
+    speak(prompt.textContent.replace(/Article for:\s*/i, '').split('\n')[0]);
+  }
+
+  function quizAnswer(btn, ok, correct, speakText) {
+    if (answered) return;
+    answered = true;
+    total++;
+    if (ok) { score++; btn.classList.add('correct'); }
+    else {
+      btn.classList.add('wrong');
+      Array.from(document.getElementById('quiz-options').children).forEach(function (b) {
+        if (b.textContent === correct || b.textContent.indexOf(correct) === 0) b.classList.add('correct');
+      });
+    }
+    updateScore();
+    speak(speakText);
+    document.getElementById('quiz-next').style.display = 'block';
+  }
+
+  document.querySelectorAll('nav.tabs button').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll('nav.tabs button').forEach(function (b) { b.classList.remove('active'); });
+      document.querySelectorAll('.panel').forEach(function (p) { p.classList.remove('active'); });
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.tab).classList.add('active');
+    });
+  });
+
+  document.getElementById('berufe-search').addEventListener('input', function (e) {
+    renderBerufe(e.target.value);
+  });
+
+  document.querySelectorAll('.quiz-mode button').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll('.quiz-mode button').forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      quizMode = btn.dataset.mode;
+      newQuiz();
+    });
+  });
+
+  document.getElementById('quiz-next').addEventListener('click', newQuiz);
+
+  renderPhrases();
+  renderBerufe();
+  renderVerbs();
+  newQuiz();
+})();
+  </script>
+</body>
+</html>

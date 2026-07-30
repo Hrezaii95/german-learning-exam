@@ -1,0 +1,4180 @@
+{
+  "generated_at": "2026-07-30T05:02:24.306677+00:00",
+  "root": "E:\\claude-cursor\\side projects\\German learning\\Audio-20260730T043413Z-1-001",
+  "scheme": "Momente A1.1 audio: {cd}_{track}_{KB|AB}_Momente_A11_[L{lesson}_]exercise for Kursbuch; Arbeitsbuch uses A11_{Lektion}_{Übung} without L prefix. Folders: Momente_A1_1_AB_CD1/2 (DE workbook), Momente_A1_1_KB_CD2 (DE coursebook L7–L12), Momente_A11_AB_CZ_* / SK_* (localized AB). url_hint: serve under static prefix audio/<relative path from archive root>.",
+  "total_files": 387,
+  "tracks": [
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_01_Momente_A11_AB_L1_3_a-CZ.mp3",
+      "book": "AB",
+      "lesson": 1,
+      "section": "3 a",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_01_Momente_A11_AB_L1_3_a-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_02_Momente_A11_AB_L1_3_b-CZ.mp3",
+      "book": "AB",
+      "lesson": 1,
+      "section": "3 b",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_02_Momente_A11_AB_L1_3_b-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_03_Momente_A11_AB_L1_3_c-CZ.mp3",
+      "book": "AB",
+      "lesson": 1,
+      "section": "3 c",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_03_Momente_A11_AB_L1_3_c-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_04_Momente_A11_AB_L1_3_d-CZ.mp3",
+      "book": "AB",
+      "lesson": 1,
+      "section": "3 d",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_04_Momente_A11_AB_L1_3_d-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_05_Momente_A11_AB_L1_9a-CZ.mp3",
+      "book": "AB",
+      "lesson": 1,
+      "section": "9a",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_05_Momente_A11_AB_L1_9a-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_06_Momente_A11_AB_L1_9b-CZ.mp3",
+      "book": "AB",
+      "lesson": 1,
+      "section": "9b",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_06_Momente_A11_AB_L1_9b-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_07_Momente_A11_AB_L2_6a_a-CZ.mp3",
+      "book": "AB",
+      "lesson": 2,
+      "section": "6a a",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_07_Momente_A11_AB_L2_6a_a-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_08_Momente_A11_AB_L2_6a_b-CZ.mp3",
+      "book": "AB",
+      "lesson": 2,
+      "section": "6a b",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_08_Momente_A11_AB_L2_6a_b-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_09_Momente_A11_AB_L2_6a_c-CZ.mp3",
+      "book": "AB",
+      "lesson": 2,
+      "section": "6a c",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_09_Momente_A11_AB_L2_6a_c-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_10_Momente_A11_AB_L2_6a_d-CZ.mp3",
+      "book": "AB",
+      "lesson": 2,
+      "section": "6a d",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_10_Momente_A11_AB_L2_6a_d-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_11_Momente_A11_AB_L2_6b_a-CZ.mp3",
+      "book": "AB",
+      "lesson": 2,
+      "section": "6b a",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_11_Momente_A11_AB_L2_6b_a-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_12_Momente_A11_AB_L2_6b_b-CZ.mp3",
+      "book": "AB",
+      "lesson": 2,
+      "section": "6b b",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_12_Momente_A11_AB_L2_6b_b-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_13_Momente_A11_AB_L2_6b_c-CZ.mp3",
+      "book": "AB",
+      "lesson": 2,
+      "section": "6b c",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_13_Momente_A11_AB_L2_6b_c-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_14_Momente_A11_AB_L2_6b_d-CZ.mp3",
+      "book": "AB",
+      "lesson": 2,
+      "section": "6b d",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_14_Momente_A11_AB_L2_6b_d-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_15_Momente_A11_AB_L2_12a_b_d-CZ.mp3",
+      "book": "AB",
+      "lesson": 2,
+      "section": "12a b d",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_15_Momente_A11_AB_L2_12a_b_d-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_16_Momente_A11_AB_L3_7a-CZ.mp3",
+      "book": "AB",
+      "lesson": 3,
+      "section": "7a",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_16_Momente_A11_AB_L3_7a-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_17_Momente_A11_AB_L3_7b_c-CZ.mp3",
+      "book": "AB",
+      "lesson": 3,
+      "section": "7b c",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_17_Momente_A11_AB_L3_7b_c-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_18_Momente_A11_AB_L3_14-CZ.mp3",
+      "book": "AB",
+      "lesson": 3,
+      "section": "14",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_18_Momente_A11_AB_L3_14-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_19_Momente_A11_AB_Wiederholung_3-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 3",
+      "tags": [
+        "locale-cz",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_19_Momente_A11_AB_Wiederholung_3-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_20_Momente_A11_AB_Wiederholung_5-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 5",
+      "tags": [
+        "locale-cz",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_20_Momente_A11_AB_Wiederholung_5-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_21_Momente_A11_AB_Wiederholung_7-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 7",
+      "tags": [
+        "locale-cz",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_21_Momente_A11_AB_Wiederholung_7-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_22_Momente_A11_AB_Wiederholung_9-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 9",
+      "tags": [
+        "locale-cz",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_22_Momente_A11_AB_Wiederholung_9-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_23_Momente_A11_AB_Test_1_1-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-cz",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_23_Momente_A11_AB_Test_1_1-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_24_Momente_A11_AB_Test_1_2-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-cz",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_24_Momente_A11_AB_Test_1_2-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_25_Momente_A11_AB_Test_1_3-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-cz",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_25_Momente_A11_AB_Test_1_3-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_26_Momente_A11_AB_Test_1_4-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-cz",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_26_Momente_A11_AB_Test_1_4-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_27_Momente_A11_AB_Test_1_5-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-cz",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_27_Momente_A11_AB_Test_1_5-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_28_Momente_A11_AB_Test_1_6-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-cz",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_28_Momente_A11_AB_Test_1_6-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_29_Momente_A11_AB_Test_1_7-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-cz",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_29_Momente_A11_AB_Test_1_7-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_30_Momente_A11_AB_Test_4b-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-cz",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_30_Momente_A11_AB_Test_4b-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_31_Momente_A11_AB_L4_9-CZ.mp3",
+      "book": "AB",
+      "lesson": 4,
+      "section": "9",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_31_Momente_A11_AB_L4_9-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_32_Momente_A11_AB_L4_11_a-CZ.mp3",
+      "book": "AB",
+      "lesson": 4,
+      "section": "11 a",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_32_Momente_A11_AB_L4_11_a-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_33_Momente_A11_AB_L4_11_b-CZ.mp3",
+      "book": "AB",
+      "lesson": 4,
+      "section": "11 b",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_33_Momente_A11_AB_L4_11_b-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_34_Momente_A11_AB_L4_11_c-CZ.mp3",
+      "book": "AB",
+      "lesson": 4,
+      "section": "11 c",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_34_Momente_A11_AB_L4_11_c-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_35_Momente_A11_AB_L4_11_d-CZ.mp3",
+      "book": "AB",
+      "lesson": 4,
+      "section": "11 d",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_35_Momente_A11_AB_L4_11_d-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_36_Momente_A11_AB_L4_12-CZ.mp3",
+      "book": "AB",
+      "lesson": 4,
+      "section": "12",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_36_Momente_A11_AB_L4_12-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_37_Momente_A11_AB_L4_15a-CZ.mp3",
+      "book": "AB",
+      "lesson": 4,
+      "section": "15a",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_37_Momente_A11_AB_L4_15a-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_38_Momente_A11_AB_L4_16a-CZ.mp3",
+      "book": "AB",
+      "lesson": 4,
+      "section": "16a",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_38_Momente_A11_AB_L4_16a-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_39_Momente_A11_AB_L4_16b-CZ.mp3",
+      "book": "AB",
+      "lesson": 4,
+      "section": "16b",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_39_Momente_A11_AB_L4_16b-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_40_Momente_A11_AB_L5_14a_1-CZ.mp3",
+      "book": "AB",
+      "lesson": 5,
+      "section": "14a 1",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_40_Momente_A11_AB_L5_14a_1-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_41_Momente_A11_AB_L5_14a_2-CZ.mp3",
+      "book": "AB",
+      "lesson": 5,
+      "section": "14a 2",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_41_Momente_A11_AB_L5_14a_2-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_42_Momente_A11_AB_L5_14b_c-CZ.mp3",
+      "book": "AB",
+      "lesson": 5,
+      "section": "14b c",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_42_Momente_A11_AB_L5_14b_c-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_43_Momente_A11_AB_L5_16a-CZ.mp3",
+      "book": "AB",
+      "lesson": 5,
+      "section": "16a",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_43_Momente_A11_AB_L5_16a-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_44_Momente_A11_AB_L6_5a-CZ.mp3",
+      "book": "AB",
+      "lesson": 6,
+      "section": "5a",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_44_Momente_A11_AB_L6_5a-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_45_Momente_A11_AB_L6_5b_c-CZ.mp3",
+      "book": "AB",
+      "lesson": 6,
+      "section": "5b c",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_45_Momente_A11_AB_L6_5b_c-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_46_Momente_A11_AB_L6_13a-CZ.mp3",
+      "book": "AB",
+      "lesson": 6,
+      "section": "13a",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_46_Momente_A11_AB_L6_13a-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_47_Momente_A11_AB_Wiederholung__4-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung ",
+      "tags": [
+        "locale-cz",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_47_Momente_A11_AB_Wiederholung__4-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_48_Momente_A11_AB_Wiederholung_6-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 6",
+      "tags": [
+        "locale-cz",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_48_Momente_A11_AB_Wiederholung_6-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_49_Momente_A11_AB_Wiederholung_8-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 8",
+      "tags": [
+        "locale-cz",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_49_Momente_A11_AB_Wiederholung_8-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_50_Momente_A11_AB_Wiederholung_10-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 10",
+      "tags": [
+        "locale-cz",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_50_Momente_A11_AB_Wiederholung_10-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_51_Momente_A11_AB_Wiederholung_11a-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 11",
+      "tags": [
+        "locale-cz",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_51_Momente_A11_AB_Wiederholung_11a-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_52_Momente_A11_AB_Test_3_1-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-cz",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_52_Momente_A11_AB_Test_3_1-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_53_Momente_A11_AB_Test_3_2-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-cz",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_53_Momente_A11_AB_Test_3_2-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_54_Momente_A11_AB_Test_3_3-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-cz",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_54_Momente_A11_AB_Test_3_3-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_55_Momente_A11_AB_Test_3_4-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-cz",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_55_Momente_A11_AB_Test_3_4-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_56_Momente_A11_AB_Test_3_5-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-cz",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_56_Momente_A11_AB_Test_3_5-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_57_Momente_A11_AB_Test_3_6-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-cz",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_57_Momente_A11_AB_Test_3_6-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_58_Momente_A11_AB_Test_3_7-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-cz",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_58_Momente_A11_AB_Test_3_7-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD1/1_59_Momente_A11_AB_Test_4b-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-cz",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD1/1_59_Momente_A11_AB_Test_4b-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD2/2_01_Momente_A11_AB_L7_6a_b-CZ.mp3",
+      "book": "AB",
+      "lesson": 7,
+      "section": "6a b",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD2/2_01_Momente_A11_AB_L7_6a_b-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD2/2_02_Momente_A11_AB_L7_8-CZ.mp3",
+      "book": "AB",
+      "lesson": 7,
+      "section": "8",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD2/2_02_Momente_A11_AB_L7_8-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD2/2_03_Momente_A11_AB_L8_13a_b-CZ.mp3",
+      "book": "AB",
+      "lesson": 8,
+      "section": "13a b",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD2/2_03_Momente_A11_AB_L8_13a_b-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD2/2_04_Momente_A11_AB_L8_14_1-CZ.mp3",
+      "book": "AB",
+      "lesson": 8,
+      "section": "14 1",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD2/2_04_Momente_A11_AB_L8_14_1-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD2/2_05_Momente_A11_AB_8_14_2-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "2_05_Momente_A11_AB_8_14_2-CZ",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD2/2_05_Momente_A11_AB_8_14_2-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD2/2_06_Momente_A11_AB_L8_15-CZ.mp3",
+      "book": "AB",
+      "lesson": 8,
+      "section": "15",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD2/2_06_Momente_A11_AB_L8_15-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD2/2_07_Momente_A11_AB_L9_14a_b-CZ.mp3",
+      "book": "AB",
+      "lesson": 9,
+      "section": "14a b",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD2/2_07_Momente_A11_AB_L9_14a_b-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD2/2_08_Momente_A11_AB_Wiederholung_3-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 3",
+      "tags": [
+        "locale-cz",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD2/2_08_Momente_A11_AB_Wiederholung_3-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD2/2_09_Momente_A11_AB_Wiederholung_5-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 5",
+      "tags": [
+        "locale-cz",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD2/2_09_Momente_A11_AB_Wiederholung_5-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD2/2_10_Momente_A11_AB_Wiederholung_10-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 10",
+      "tags": [
+        "locale-cz",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD2/2_10_Momente_A11_AB_Wiederholung_10-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD2/2_11_Momente_A11_AB_Test_1-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-cz",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD2/2_11_Momente_A11_AB_Test_1-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD2/2_12_Momente_A11_AB_Test_4b-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-cz",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD2/2_12_Momente_A11_AB_Test_4b-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD2/2_13_Momente_A11_AB _L7-9_Jugendmagazin_Hoeren_1_Text_1-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "2_13_Momente_A11_AB _L7-9_Jugendmagazin_Hoeren_1_Text_1-CZ",
+      "tags": [
+        "listening",
+        "locale-cz",
+        "magazin"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD2/2_13_Momente_A11_AB _L7-9_Jugendmagazin_Hoeren_1_Text_1-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD2/2_14_Momente_A11_AB _L7-9_Jugendmagazin_Hoeren_1_Text_2-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "2_14_Momente_A11_AB _L7-9_Jugendmagazin_Hoeren_1_Text_2-CZ",
+      "tags": [
+        "listening",
+        "locale-cz",
+        "magazin"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD2/2_14_Momente_A11_AB _L7-9_Jugendmagazin_Hoeren_1_Text_2-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD2/2_15_Momente_A11_AB _L7-9_Jugendmagazin_Hoeren_1_Text_3-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "2_15_Momente_A11_AB _L7-9_Jugendmagazin_Hoeren_1_Text_3-CZ",
+      "tags": [
+        "listening",
+        "locale-cz",
+        "magazin"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD2/2_15_Momente_A11_AB _L7-9_Jugendmagazin_Hoeren_1_Text_3-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD2/2_16_Momente_A11_AB _L7-9_Jugendmagazin_Hoeren_1_Text_4-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "2_16_Momente_A11_AB _L7-9_Jugendmagazin_Hoeren_1_Text_4-CZ",
+      "tags": [
+        "listening",
+        "locale-cz",
+        "magazin"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD2/2_16_Momente_A11_AB _L7-9_Jugendmagazin_Hoeren_1_Text_4-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD2/2_17_Momente_A11_AB_L10_3-CZ.mp3",
+      "book": "AB",
+      "lesson": 10,
+      "section": "3",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD2/2_17_Momente_A11_AB_L10_3-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD2/2_18_Momente_A11_AB_L10_5b_1-CZ.mp3",
+      "book": "AB",
+      "lesson": 10,
+      "section": "5b 1",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD2/2_18_Momente_A11_AB_L10_5b_1-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD2/2_19_Momente_A11_AB_L10_5b_2-CZ.mp3",
+      "book": "AB",
+      "lesson": 10,
+      "section": "5b 2",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD2/2_19_Momente_A11_AB_L10_5b_2-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD2/2_20_Momente_A11_AB_L10_7a_b-CZ.mp3",
+      "book": "AB",
+      "lesson": 10,
+      "section": "7a b",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD2/2_20_Momente_A11_AB_L10_7a_b-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD2/2_21_Momente_A11_AB_L10_13-CZ.mp3",
+      "book": "AB",
+      "lesson": 10,
+      "section": "13",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD2/2_21_Momente_A11_AB_L10_13-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD2/2_22_Momente_A11_AB_L11_9a-CZ.mp3",
+      "book": "AB",
+      "lesson": 11,
+      "section": "9a",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD2/2_22_Momente_A11_AB_L11_9a-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD2/2_23_Momente_A11_AB_L11_11b-CZ.mp3",
+      "book": "AB",
+      "lesson": 11,
+      "section": "11b",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD2/2_23_Momente_A11_AB_L11_11b-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD2/2_24_Momente_A11_AB_L12_1a-CZ.mp3",
+      "book": "AB",
+      "lesson": 12,
+      "section": "1a",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD2/2_24_Momente_A11_AB_L12_1a-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD2/2_25_Momente_A11_AB_L12_5a-CZ.mp3",
+      "book": "AB",
+      "lesson": 12,
+      "section": "5a",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD2/2_25_Momente_A11_AB_L12_5a-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD2/2_26_Momente_A11_AB_L12_5b-CZ.mp3",
+      "book": "AB",
+      "lesson": 12,
+      "section": "5b",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD2/2_26_Momente_A11_AB_L12_5b-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD2/2_27_Momente_A11_AB_Wiederholung_3-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 3",
+      "tags": [
+        "locale-cz",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD2/2_27_Momente_A11_AB_Wiederholung_3-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD2/2_28_Momente_A11_AB_Wiederholung_4b-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 4",
+      "tags": [
+        "locale-cz",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD2/2_28_Momente_A11_AB_Wiederholung_4b-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD2/2_29_Momente_A11_AB_Wiederholung_8-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 8",
+      "tags": [
+        "locale-cz",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD2/2_29_Momente_A11_AB_Wiederholung_8-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD2/2_30_Momente_A11_AB_Wiederholung_9_1-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 9",
+      "tags": [
+        "locale-cz",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD2/2_30_Momente_A11_AB_Wiederholung_9_1-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD2/2_31_Momente_A11_AB_Wiederholung_9_2-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 9",
+      "tags": [
+        "locale-cz",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD2/2_31_Momente_A11_AB_Wiederholung_9_2-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD2/2_32_Momente_A11_AB_Wiederholung_9_3-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 9",
+      "tags": [
+        "locale-cz",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD2/2_32_Momente_A11_AB_Wiederholung_9_3-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD2/2_33_Momente_A11_AB_Test_Modul_4_1-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-cz",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD2/2_33_Momente_A11_AB_Test_Modul_4_1-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD2/2_34_Momente_A11_AB_Test_Modul_4_4b-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-cz",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD2/2_34_Momente_A11_AB_Test_Modul_4_4b-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD2/2_35_Momente_A11_AB_noch_mehr_8_9_leicht_a-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "2_35_Momente_A11_AB_noch_mehr_8_9_leicht_a-CZ",
+      "tags": [
+        "extra",
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD2/2_35_Momente_A11_AB_noch_mehr_8_9_leicht_a-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD2/2_36_Momente_A11_AB_noch_mehr_8_9_leicht_b-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "2_36_Momente_A11_AB_noch_mehr_8_9_leicht_b-CZ",
+      "tags": [
+        "extra",
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD2/2_36_Momente_A11_AB_noch_mehr_8_9_leicht_b-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD2/2_37_Momente_A11_AB_noch_mehr_8_9_leicht_c-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "2_37_Momente_A11_AB_noch_mehr_8_9_leicht_c-CZ",
+      "tags": [
+        "extra",
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD2/2_37_Momente_A11_AB_noch_mehr_8_9_leicht_c-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD2/2_38_Momente_A11_AB_noch_mehr_8_9_leicht_d-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "2_38_Momente_A11_AB_noch_mehr_8_9_leicht_d-CZ",
+      "tags": [
+        "extra",
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD2/2_38_Momente_A11_AB_noch_mehr_8_9_leicht_d-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD2/2_39_Momente_A11_AB_noch_mehr_8_9_leicht_e-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "2_39_Momente_A11_AB_noch_mehr_8_9_leicht_e-CZ",
+      "tags": [
+        "extra",
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD2/2_39_Momente_A11_AB_noch_mehr_8_9_leicht_e-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD2/2_40_Momente_A11_AB_noch_mehr_8_9_leicht_f-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "2_40_Momente_A11_AB_noch_mehr_8_9_leicht_f-CZ",
+      "tags": [
+        "extra",
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD2/2_40_Momente_A11_AB_noch_mehr_8_9_leicht_f-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD2/2_41_Momente_A11_AB_noch_mehr_8_9_schwer-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "2_41_Momente_A11_AB_noch_mehr_8_9_schwer-CZ",
+      "tags": [
+        "extra",
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD2/2_41_Momente_A11_AB_noch_mehr_8_9_schwer-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD3/3_01_Momente_A12_AB_L13_5a_1-CZ.mp3",
+      "book": "AB",
+      "lesson": 13,
+      "section": "5a 1",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD3/3_01_Momente_A12_AB_L13_5a_1-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD3/3_02_Momente_A12_AB_L13_5a_2-CZ.mp3",
+      "book": "AB",
+      "lesson": 13,
+      "section": "5a 2",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD3/3_02_Momente_A12_AB_L13_5a_2-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD3/3_03_Momente_A12_AB_L13_5a_3-CZ.mp3",
+      "book": "AB",
+      "lesson": 13,
+      "section": "5a 3",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD3/3_03_Momente_A12_AB_L13_5a_3-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD3/3_04_Momente_A12_AB_L13_9a-CZ.mp3",
+      "book": "AB",
+      "lesson": 13,
+      "section": "9a",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD3/3_04_Momente_A12_AB_L13_9a-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD3/3_05_Momente_A12_AB_L13_9b_c-CZ.mp3",
+      "book": "AB",
+      "lesson": 13,
+      "section": "9b c",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD3/3_05_Momente_A12_AB_L13_9b_c-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD3/3_06_Momente_A12_AB_L13_10b-CZ.mp3",
+      "book": "AB",
+      "lesson": 13,
+      "section": "10b",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD3/3_06_Momente_A12_AB_L13_10b-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD3/3_07_Momente_A12_AB_L14_2b-CZ.mp3",
+      "book": "AB",
+      "lesson": 14,
+      "section": "2b",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD3/3_07_Momente_A12_AB_L14_2b-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD3/3_08_Momente_A12_AB_L14_10-CZ.mp3",
+      "book": "AB",
+      "lesson": 14,
+      "section": "10",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD3/3_08_Momente_A12_AB_L14_10-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD3/3_09_Momente_A12_AB_L14_11a-CZ.mp3",
+      "book": "AB",
+      "lesson": 14,
+      "section": "11a",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD3/3_09_Momente_A12_AB_L14_11a-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD3/3_10_Momente_A12_AB_L14_11b_c-CZ.mp3",
+      "book": "AB",
+      "lesson": 14,
+      "section": "11b c",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD3/3_10_Momente_A12_AB_L14_11b_c-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD3/3_11_Momente_A12_AB_L15_6a-CZ.mp3",
+      "book": "AB",
+      "lesson": 15,
+      "section": "6a",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD3/3_11_Momente_A12_AB_L15_6a-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD3/3_12_Momente_A12_AB_L15_6b-CZ.mp3",
+      "book": "AB",
+      "lesson": 15,
+      "section": "6b",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD3/3_12_Momente_A12_AB_L15_6b-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD3/3_13_Momente_A12_AB_L15_11_1-CZ.mp3",
+      "book": "AB",
+      "lesson": 15,
+      "section": "11 1",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD3/3_13_Momente_A12_AB_L15_11_1-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD3/3_14_Momente_A12_AB_L15_11_2-CZ.mp3",
+      "book": "AB",
+      "lesson": 15,
+      "section": "11 2",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD3/3_14_Momente_A12_AB_L15_11_2-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD3/3_15_Momente_A12_AB_Wiederholung_4-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 4",
+      "tags": [
+        "locale-cz",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD3/3_15_Momente_A12_AB_Wiederholung_4-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD3/3_16_Momente_A12_AB_Wiederholung_7-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 7",
+      "tags": [
+        "locale-cz",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD3/3_16_Momente_A12_AB_Wiederholung_7-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD3/3_17_Momente_A12_AB_Wiederholung_8-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 8",
+      "tags": [
+        "locale-cz",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD3/3_17_Momente_A12_AB_Wiederholung_8-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD3/3_18_Momente_A12_AB_Test_1-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-cz",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD3/3_18_Momente_A12_AB_Test_1-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD3/3_19_Momente_A12_AB_L13-15_Jugendmagazin_Hoeren_1-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "3_19_Momente_A12_AB_L13-15_Jugendmagazin_Hoeren_1-CZ",
+      "tags": [
+        "listening",
+        "locale-cz",
+        "magazin"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD3/3_19_Momente_A12_AB_L13-15_Jugendmagazin_Hoeren_1-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD3/3_20_Momente_A12_AB_L16_3a-CZ.mp3",
+      "book": "AB",
+      "lesson": 16,
+      "section": "3a",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD3/3_20_Momente_A12_AB_L16_3a-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD3/3_21_Momente_A12_AB_L16_4a-CZ.mp3",
+      "book": "AB",
+      "lesson": 16,
+      "section": "4a",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD3/3_21_Momente_A12_AB_L16_4a-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD3/3_22_Momente_A12_AB_L16_4b-CZ.mp3",
+      "book": "AB",
+      "lesson": 16,
+      "section": "4b",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD3/3_22_Momente_A12_AB_L16_4b-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD3/3_23_Momente_A12_AB_L16_5b-CZ.mp3",
+      "book": "AB",
+      "lesson": 16,
+      "section": "5b",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD3/3_23_Momente_A12_AB_L16_5b-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD3/3_24_Momente_A12_AB_L17_6a-CZ.mp3",
+      "book": "AB",
+      "lesson": 17,
+      "section": "6a",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD3/3_24_Momente_A12_AB_L17_6a-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD3/3_25_Momente_A12_AB_L18_6a-CZ.mp3",
+      "book": "AB",
+      "lesson": 18,
+      "section": "6a",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD3/3_25_Momente_A12_AB_L18_6a-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD3/3_26_Momente_A12_AB_L18_6b-CZ.mp3",
+      "book": "AB",
+      "lesson": 18,
+      "section": "6b",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD3/3_26_Momente_A12_AB_L18_6b-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD3/3_27_Momente_A12_AB_Wiederholung_1b-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 1",
+      "tags": [
+        "locale-cz",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD3/3_27_Momente_A12_AB_Wiederholung_1b-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD3/3_28_Momente_A12_AB_Wiederholung_7-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 7",
+      "tags": [
+        "locale-cz",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD3/3_28_Momente_A12_AB_Wiederholung_7-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD3/3_29_Momente_A12_AB_Wiederholung_9-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 9",
+      "tags": [
+        "locale-cz",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD3/3_29_Momente_A12_AB_Wiederholung_9-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD3/3_30_Momente_A12_AB_Wiederholung_11-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 11",
+      "tags": [
+        "locale-cz",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD3/3_30_Momente_A12_AB_Wiederholung_11-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD3/3_31_Momente_A12_AB_Test_3_1-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-cz",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD3/3_31_Momente_A12_AB_Test_3_1-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD3/3_32_Momente_A12_AB_Test_3_2-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-cz",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD3/3_32_Momente_A12_AB_Test_3_2-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD3/3_33_Momente_A12_AB_Test_3_3-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-cz",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD3/3_33_Momente_A12_AB_Test_3_3-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD3/3_34_Momente_A12_AB_Test_3_4-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-cz",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD3/3_34_Momente_A12_AB_Test_3_4-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD3/3_35_Momente_A12_AB_Test_3_5-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-cz",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD3/3_35_Momente_A12_AB_Test_3_5-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD3/3_36_Momente_A12_AB_Test_3_6-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-cz",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD3/3_36_Momente_A12_AB_Test_3_6-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD3/3_37_Momente_A12_AB_Test_3_7-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-cz",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD3/3_37_Momente_A12_AB_Test_3_7-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD3/3_38_Momente_A12_AB_Test_4b-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-cz",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD3/3_38_Momente_A12_AB_Test_4b-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD3/3_39_Momente_A12_AB_L16-18_Jugendmagazin_Hoeren_Text_1-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "3_39_Momente_A12_AB_L16-18_Jugendmagazin_Hoeren_Text_1-CZ",
+      "tags": [
+        "listening",
+        "locale-cz",
+        "magazin"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD3/3_39_Momente_A12_AB_L16-18_Jugendmagazin_Hoeren_Text_1-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD3/3_40_Momente_A12_AB_L16-18_Jugendmagazin_Hoeren_Text_2-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "3_40_Momente_A12_AB_L16-18_Jugendmagazin_Hoeren_Text_2-CZ",
+      "tags": [
+        "listening",
+        "locale-cz",
+        "magazin"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD3/3_40_Momente_A12_AB_L16-18_Jugendmagazin_Hoeren_Text_2-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD3/3_41_Momente_A12_AB_L16-18_Jugendmagazin_Hoeren_Text_3-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "3_41_Momente_A12_AB_L16-18_Jugendmagazin_Hoeren_Text_3-CZ",
+      "tags": [
+        "listening",
+        "locale-cz",
+        "magazin"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD3/3_41_Momente_A12_AB_L16-18_Jugendmagazin_Hoeren_Text_3-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD3/3_42_Momente_A12_AB_L16-18_Jugendmagazin_Hoeren_Text_4-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "3_42_Momente_A12_AB_L16-18_Jugendmagazin_Hoeren_Text_4-CZ",
+      "tags": [
+        "listening",
+        "locale-cz",
+        "magazin"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD3/3_42_Momente_A12_AB_L16-18_Jugendmagazin_Hoeren_Text_4-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD3/3_43_Momente_A12_AB_L16-18_Jugendmagazin_Hoeren_Text_5-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "3_43_Momente_A12_AB_L16-18_Jugendmagazin_Hoeren_Text_5-CZ",
+      "tags": [
+        "listening",
+        "locale-cz",
+        "magazin"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD3/3_43_Momente_A12_AB_L16-18_Jugendmagazin_Hoeren_Text_5-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_01_Momente_A12_AB_L19_9a_b-CZ.mp3",
+      "book": "AB",
+      "lesson": 19,
+      "section": "9a b",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_01_Momente_A12_AB_L19_9a_b-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_02_Momente_A12_AB_L19_9c-CZ.mp3",
+      "book": "AB",
+      "lesson": 19,
+      "section": "9c",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_02_Momente_A12_AB_L19_9c-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_03_Momente_A12_AB_L19_13a_1-CZ.mp3",
+      "book": "AB",
+      "lesson": 19,
+      "section": "13a 1",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_03_Momente_A12_AB_L19_13a_1-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_04_Momente_A12_AB_L19_13a_2-CZ.mp3",
+      "book": "AB",
+      "lesson": 19,
+      "section": "13a 2",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_04_Momente_A12_AB_L19_13a_2-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_05_Momente_A12_AB_L19_13a_3-CZ.mp3",
+      "book": "AB",
+      "lesson": 19,
+      "section": "13a 3",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_05_Momente_A12_AB_L19_13a_3-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_06_Momente_A12_AB_L20_5c-CZ.mp3",
+      "book": "AB",
+      "lesson": 20,
+      "section": "5c",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_06_Momente_A12_AB_L20_5c-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_07_Momente_A12_AB_L20_7-CZ.mp3",
+      "book": "AB",
+      "lesson": 20,
+      "section": "7",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_07_Momente_A12_AB_L20_7-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_08_Momente_A12_AB_L20_8a_b-CZ.mp3",
+      "book": "AB",
+      "lesson": 20,
+      "section": "8a b",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_08_Momente_A12_AB_L20_8a_b-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_09_Momente_A12_AB_L20_12a_1-CZ.mp3",
+      "book": "AB",
+      "lesson": 20,
+      "section": "12a 1",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_09_Momente_A12_AB_L20_12a_1-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_10_Momente_A12_AB_L20_12a_2-CZ.mp3",
+      "book": "AB",
+      "lesson": 20,
+      "section": "12a 2",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_10_Momente_A12_AB_L20_12a_2-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_11_Momente_A12_AB_L20_12a_3-CZ.mp3",
+      "book": "AB",
+      "lesson": 20,
+      "section": "12a 3",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_11_Momente_A12_AB_L20_12a_3-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_12_Momente_A12_AB_L20_12a_4-CZ.mp3",
+      "book": "AB",
+      "lesson": 20,
+      "section": "12a 4",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_12_Momente_A12_AB_L20_12a_4-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_13_Momente_A12_AB_L21_9a_b-CZ.mp3",
+      "book": "AB",
+      "lesson": 21,
+      "section": "9a b",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_13_Momente_A12_AB_L21_9a_b-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_14_Momente_A12_AB_L21_9c-CZ.mp3",
+      "book": "AB",
+      "lesson": 21,
+      "section": "9c",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_14_Momente_A12_AB_L21_9c-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_15_Momente_A12_AB_Wiederholung_2-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 2",
+      "tags": [
+        "locale-cz",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_15_Momente_A12_AB_Wiederholung_2-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_16_Momente_A12_AB_Wiederholung_4b-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 4",
+      "tags": [
+        "locale-cz",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_16_Momente_A12_AB_Wiederholung_4b-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_17_Momente_A12_AB_Wiederholung_5a-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 5",
+      "tags": [
+        "locale-cz",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_17_Momente_A12_AB_Wiederholung_5a-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_18_Momente_A12_AB_Wiederholung_6-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 6",
+      "tags": [
+        "locale-cz",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_18_Momente_A12_AB_Wiederholung_6-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_19_Momente_A12_AB_Wiederholung_8-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 8",
+      "tags": [
+        "locale-cz",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_19_Momente_A12_AB_Wiederholung_8-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_20_Momente_A12_AB_Test_1_1-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-cz",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_20_Momente_A12_AB_Test_1_1-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_21_Momente_A12_AB_Test_1_2-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-cz",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_21_Momente_A12_AB_Test_1_2-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_22_Momente_A12_AB_Test_1_3-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-cz",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_22_Momente_A12_AB_Test_1_3-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_23_Momente_A12_AB_Test_1_4-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-cz",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_23_Momente_A12_AB_Test_1_4-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_24_Momente_A12_AB_Test_1_5-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-cz",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_24_Momente_A12_AB_Test_1_5-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_25_Momente_A12_AB_Test_1_6-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-cz",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_25_Momente_A12_AB_Test_1_6-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_26_Momente_A12_AB_Test_1_7-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-cz",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_26_Momente_A12_AB_Test_1_7-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_27_Momente_A12_AB_L22_4a-CZ.mp3",
+      "book": "AB",
+      "lesson": 22,
+      "section": "4a",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_27_Momente_A12_AB_L22_4a-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_28_Momente_A12_AB_L22_4b-CZ.mp3",
+      "book": "AB",
+      "lesson": 22,
+      "section": "4b",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_28_Momente_A12_AB_L22_4b-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_29_Momente_A12_AB_L23_3a-CZ.mp3",
+      "book": "AB",
+      "lesson": 23,
+      "section": "3a",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_29_Momente_A12_AB_L23_3a-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_30_Momente_A12_AB_L23_3b-CZ.mp3",
+      "book": "AB",
+      "lesson": 23,
+      "section": "3b",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_30_Momente_A12_AB_L23_3b-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_31_Momente_A12_AB_L24_2a_b-CZ.mp3",
+      "book": "AB",
+      "lesson": 24,
+      "section": "2a b",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_31_Momente_A12_AB_L24_2a_b-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_32_Momente_A12_AB_L24_3-CZ.mp3",
+      "book": "AB",
+      "lesson": 24,
+      "section": "3",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_32_Momente_A12_AB_L24_3-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_33_Momente_A12_AB_L24_5b-CZ.mp3",
+      "book": "AB",
+      "lesson": 24,
+      "section": "5b",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_33_Momente_A12_AB_L24_5b-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_34_Momente_A12_AB_L24_8a-CZ.mp3",
+      "book": "AB",
+      "lesson": 24,
+      "section": "8a",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_34_Momente_A12_AB_L24_8a-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_35_Momente_A12_AB_L24_8c-CZ.mp3",
+      "book": "AB",
+      "lesson": 24,
+      "section": "8c",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_35_Momente_A12_AB_L24_8c-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_36_Momente_A12_AB_L24_8d-CZ.mp3",
+      "book": "AB",
+      "lesson": 24,
+      "section": "8d",
+      "tags": [
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_36_Momente_A12_AB_L24_8d-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_37_Momente_A12_AB_Wiederholung_2-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 2",
+      "tags": [
+        "locale-cz",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_37_Momente_A12_AB_Wiederholung_2-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_38_Momente_A12_AB_Wiederholung_7-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 7",
+      "tags": [
+        "locale-cz",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_38_Momente_A12_AB_Wiederholung_7-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_39_Momente_A12_AB_Wiederholung_9-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 9",
+      "tags": [
+        "locale-cz",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_39_Momente_A12_AB_Wiederholung_9-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_40_Momente_A12_AB_Wiederholung_11-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 11",
+      "tags": [
+        "locale-cz",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_40_Momente_A12_AB_Wiederholung_11-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_41_Momente_A12_AB_Test_2b_Max-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-cz",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_41_Momente_A12_AB_Test_2b_Max-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_42_Momente_A12_AB_Test_2b_Lydia-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-cz",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_42_Momente_A12_AB_Test_2b_Lydia-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_43_Momente_A12_AB_Test_3_1-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-cz",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_43_Momente_A12_AB_Test_3_1-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_44_Momente_A12_AB_Test_3_2-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-cz",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_44_Momente_A12_AB_Test_3_2-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_45_Momente_A12_AB_Test_3_3-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-cz",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_45_Momente_A12_AB_Test_3_3-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_46_Momente_A12_AB_Test_3_4-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-cz",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_46_Momente_A12_AB_Test_3_4-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_47_Momente_A12_AB_Test_3_5-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-cz",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_47_Momente_A12_AB_Test_3_5-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_48_Momente_A12_AB_Test_3_6-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-cz",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_48_Momente_A12_AB_Test_3_6-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_49_Momente_A12_AB_Test_3_7-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-cz",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_49_Momente_A12_AB_Test_3_7-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_50_Momente_A12_AB_L22-24_Jugendmagazin_Lesen_2_Text_1-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "4_50_Momente_A12_AB_L22-24_Jugendmagazin_Lesen_2_Text_1-CZ",
+      "tags": [
+        "locale-cz",
+        "magazin"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_50_Momente_A12_AB_L22-24_Jugendmagazin_Lesen_2_Text_1-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_51_Momente_A12_AB_L22-24_Jugendmagazin_Lesen_2_Text_2-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "4_51_Momente_A12_AB_L22-24_Jugendmagazin_Lesen_2_Text_2-CZ",
+      "tags": [
+        "locale-cz",
+        "magazin"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_51_Momente_A12_AB_L22-24_Jugendmagazin_Lesen_2_Text_2-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_52_Momente_A12_AB_L22-24_Jugendmagazin_Lesen_2_Text_3-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "4_52_Momente_A12_AB_L22-24_Jugendmagazin_Lesen_2_Text_3-CZ",
+      "tags": [
+        "locale-cz",
+        "magazin"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_52_Momente_A12_AB_L22-24_Jugendmagazin_Lesen_2_Text_3-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_53_Momente_A12_AB_L22-24_Jugendmagazin_Lesen_2_Text_4-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "4_53_Momente_A12_AB_L22-24_Jugendmagazin_Lesen_2_Text_4-CZ",
+      "tags": [
+        "locale-cz",
+        "magazin"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_53_Momente_A12_AB_L22-24_Jugendmagazin_Lesen_2_Text_4-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_CZ_Audios_CD4/4_54_Momente_A12_AB_noch_mehr_16_8_schwer-CZ.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "4_54_Momente_A12_AB_noch_mehr_16_8_schwer-CZ",
+      "tags": [
+        "extra",
+        "locale-cz"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_CZ_Audios_CD4/4_54_Momente_A12_AB_noch_mehr_16_8_schwer-CZ.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_SK_Audios_CD2/2_01_Momente_A11_AB_L7_6a_b-SK.mp3",
+      "book": "AB",
+      "lesson": 7,
+      "section": "6a b",
+      "tags": [
+        "locale-sk"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_SK_Audios_CD2/2_01_Momente_A11_AB_L7_6a_b-SK.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_SK_Audios_CD2/2_02_Momente_A11_AB_L7_8-SK.mp3",
+      "book": "AB",
+      "lesson": 7,
+      "section": "8",
+      "tags": [
+        "locale-sk"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_SK_Audios_CD2/2_02_Momente_A11_AB_L7_8-SK.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_SK_Audios_CD2/2_03_Momente_A11_AB_L8_13a_b-SK.mp3",
+      "book": "AB",
+      "lesson": 8,
+      "section": "13a b",
+      "tags": [
+        "locale-sk"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_SK_Audios_CD2/2_03_Momente_A11_AB_L8_13a_b-SK.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_SK_Audios_CD2/2_04_Momente_A11_AB_L8_14_1-SK.mp3",
+      "book": "AB",
+      "lesson": 8,
+      "section": "14 1",
+      "tags": [
+        "locale-sk"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_SK_Audios_CD2/2_04_Momente_A11_AB_L8_14_1-SK.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_SK_Audios_CD2/2_05_Momente_A11_AB_8_14_2-SK.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "2_05_Momente_A11_AB_8_14_2-SK",
+      "tags": [
+        "locale-sk"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_SK_Audios_CD2/2_05_Momente_A11_AB_8_14_2-SK.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_SK_Audios_CD2/2_06_Momente_A11_AB_L8_15-SK.mp3",
+      "book": "AB",
+      "lesson": 8,
+      "section": "15",
+      "tags": [
+        "locale-sk"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_SK_Audios_CD2/2_06_Momente_A11_AB_L8_15-SK.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_SK_Audios_CD2/2_07_Momente_A11_AB_L9_14a_b-SK.mp3",
+      "book": "AB",
+      "lesson": 9,
+      "section": "14a b",
+      "tags": [
+        "locale-sk"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_SK_Audios_CD2/2_07_Momente_A11_AB_L9_14a_b-SK.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_SK_Audios_CD2/2_08_Momente_A11_AB_Wiederholung_3-SK.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 3",
+      "tags": [
+        "locale-sk",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_SK_Audios_CD2/2_08_Momente_A11_AB_Wiederholung_3-SK.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_SK_Audios_CD2/2_09_Momente_A11_AB_Wiederholung_5-SK.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 5",
+      "tags": [
+        "locale-sk",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_SK_Audios_CD2/2_09_Momente_A11_AB_Wiederholung_5-SK.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_SK_Audios_CD2/2_10_Momente_A11_AB_Wiederholung_10-SK.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 10",
+      "tags": [
+        "locale-sk",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_SK_Audios_CD2/2_10_Momente_A11_AB_Wiederholung_10-SK.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_SK_Audios_CD2/2_11_Momente_A11_AB_Test_1-SK.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-sk",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_SK_Audios_CD2/2_11_Momente_A11_AB_Test_1-SK.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_SK_Audios_CD2/2_12_Momente_A11_AB_Test_4b-SK.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-sk",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_SK_Audios_CD2/2_12_Momente_A11_AB_Test_4b-SK.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_SK_Audios_CD2/2_13_Momente_A11_AB _L7-9_Jugendmagazin_Hoeren_1_Text_1-SK.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "2_13_Momente_A11_AB _L7-9_Jugendmagazin_Hoeren_1_Text_1-SK",
+      "tags": [
+        "listening",
+        "locale-sk",
+        "magazin"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_SK_Audios_CD2/2_13_Momente_A11_AB _L7-9_Jugendmagazin_Hoeren_1_Text_1-SK.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_SK_Audios_CD2/2_14_Momente_A11_AB _L7-9_Jugendmagazin_Hoeren_1_Text_2-SK.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "2_14_Momente_A11_AB _L7-9_Jugendmagazin_Hoeren_1_Text_2-SK",
+      "tags": [
+        "listening",
+        "locale-sk",
+        "magazin"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_SK_Audios_CD2/2_14_Momente_A11_AB _L7-9_Jugendmagazin_Hoeren_1_Text_2-SK.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_SK_Audios_CD2/2_15_Momente_A11_AB _L7-9_Jugendmagazin_Hoeren_1_Text_3-SK.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "2_15_Momente_A11_AB _L7-9_Jugendmagazin_Hoeren_1_Text_3-SK",
+      "tags": [
+        "listening",
+        "locale-sk",
+        "magazin"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_SK_Audios_CD2/2_15_Momente_A11_AB _L7-9_Jugendmagazin_Hoeren_1_Text_3-SK.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_SK_Audios_CD2/2_16_Momente_A11_AB _L7-9_Jugendmagazin_Hoeren_1_Text_4-SK.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "2_16_Momente_A11_AB _L7-9_Jugendmagazin_Hoeren_1_Text_4-SK",
+      "tags": [
+        "listening",
+        "locale-sk",
+        "magazin"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_SK_Audios_CD2/2_16_Momente_A11_AB _L7-9_Jugendmagazin_Hoeren_1_Text_4-SK.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_SK_Audios_CD2/2_17_Momente_A11_AB_L10_3-SK.mp3",
+      "book": "AB",
+      "lesson": 10,
+      "section": "3",
+      "tags": [
+        "locale-sk"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_SK_Audios_CD2/2_17_Momente_A11_AB_L10_3-SK.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_SK_Audios_CD2/2_18_Momente_A11_AB_L10_5b_1-SK.mp3",
+      "book": "AB",
+      "lesson": 10,
+      "section": "5b 1",
+      "tags": [
+        "locale-sk"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_SK_Audios_CD2/2_18_Momente_A11_AB_L10_5b_1-SK.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_SK_Audios_CD2/2_19_Momente_A11_AB_L10_5b_2-SK.mp3",
+      "book": "AB",
+      "lesson": 10,
+      "section": "5b 2",
+      "tags": [
+        "locale-sk"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_SK_Audios_CD2/2_19_Momente_A11_AB_L10_5b_2-SK.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_SK_Audios_CD2/2_20_Momente_A11_AB_L10_7a_b-SK.mp3",
+      "book": "AB",
+      "lesson": 10,
+      "section": "7a b",
+      "tags": [
+        "locale-sk"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_SK_Audios_CD2/2_20_Momente_A11_AB_L10_7a_b-SK.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_SK_Audios_CD2/2_21_Momente_A11_AB_L10_13-SK.mp3",
+      "book": "AB",
+      "lesson": 10,
+      "section": "13",
+      "tags": [
+        "locale-sk"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_SK_Audios_CD2/2_21_Momente_A11_AB_L10_13-SK.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_SK_Audios_CD2/2_22_Momente_A11_AB_L11_9a-SK.mp3",
+      "book": "AB",
+      "lesson": 11,
+      "section": "9a",
+      "tags": [
+        "locale-sk"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_SK_Audios_CD2/2_22_Momente_A11_AB_L11_9a-SK.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_SK_Audios_CD2/2_23_Momente_A11_AB_L11_11b-SK.mp3",
+      "book": "AB",
+      "lesson": 11,
+      "section": "11b",
+      "tags": [
+        "locale-sk"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_SK_Audios_CD2/2_23_Momente_A11_AB_L11_11b-SK.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_SK_Audios_CD2/2_24_Momente_A11_AB_L12_1a-SK.mp3",
+      "book": "AB",
+      "lesson": 12,
+      "section": "1a",
+      "tags": [
+        "locale-sk"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_SK_Audios_CD2/2_24_Momente_A11_AB_L12_1a-SK.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_SK_Audios_CD2/2_25_Momente_A11_AB_L12_5a-SK.mp3",
+      "book": "AB",
+      "lesson": 12,
+      "section": "5a",
+      "tags": [
+        "locale-sk"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_SK_Audios_CD2/2_25_Momente_A11_AB_L12_5a-SK.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_SK_Audios_CD2/2_26_Momente_A11_AB_L12_5b-SK.mp3",
+      "book": "AB",
+      "lesson": 12,
+      "section": "5b",
+      "tags": [
+        "locale-sk"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_SK_Audios_CD2/2_26_Momente_A11_AB_L12_5b-SK.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_SK_Audios_CD2/2_27_Momente_A11_AB_Wiederholung_3-SK.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 3",
+      "tags": [
+        "locale-sk",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_SK_Audios_CD2/2_27_Momente_A11_AB_Wiederholung_3-SK.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_SK_Audios_CD2/2_28_Momente_A11_AB_Wiederholung_4b-SK.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 4",
+      "tags": [
+        "locale-sk",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_SK_Audios_CD2/2_28_Momente_A11_AB_Wiederholung_4b-SK.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_SK_Audios_CD2/2_29_Momente_A11_AB_Wiederholung_8-SK.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 8",
+      "tags": [
+        "locale-sk",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_SK_Audios_CD2/2_29_Momente_A11_AB_Wiederholung_8-SK.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_SK_Audios_CD2/2_30_Momente_A11_AB_Wiederholung_9_1-SK.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 9",
+      "tags": [
+        "locale-sk",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_SK_Audios_CD2/2_30_Momente_A11_AB_Wiederholung_9_1-SK.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_SK_Audios_CD2/2_31_Momente_A11_AB_Wiederholung_9_2-SK.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 9",
+      "tags": [
+        "locale-sk",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_SK_Audios_CD2/2_31_Momente_A11_AB_Wiederholung_9_2-SK.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_SK_Audios_CD2/2_32_Momente_A11_AB_Wiederholung_9_3-SK.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 9",
+      "tags": [
+        "locale-sk",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_SK_Audios_CD2/2_32_Momente_A11_AB_Wiederholung_9_3-SK.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_SK_Audios_CD2/2_33_Momente_A11_AB_Test_Modul_4_1-SK.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-sk",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_SK_Audios_CD2/2_33_Momente_A11_AB_Test_Modul_4_1-SK.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_SK_Audios_CD2/2_34_Momente_A11_AB_Test_Modul_4_4b-SK.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-sk",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_SK_Audios_CD2/2_34_Momente_A11_AB_Test_Modul_4_4b-SK.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_SK_Audios_CD2/2_35_Momente_A11_AB_noch_mehr_8_9_leicht_a-SK.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "2_35_Momente_A11_AB_noch_mehr_8_9_leicht_a-SK",
+      "tags": [
+        "extra",
+        "locale-sk"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_SK_Audios_CD2/2_35_Momente_A11_AB_noch_mehr_8_9_leicht_a-SK.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_SK_Audios_CD2/2_36_Momente_A11_AB_noch_mehr_8_9_leicht_b-SK.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "2_36_Momente_A11_AB_noch_mehr_8_9_leicht_b-SK",
+      "tags": [
+        "extra",
+        "locale-sk"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_SK_Audios_CD2/2_36_Momente_A11_AB_noch_mehr_8_9_leicht_b-SK.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_SK_Audios_CD2/2_37_Momente_A11_AB_noch_mehr_8_9_leicht_c-SK.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "2_37_Momente_A11_AB_noch_mehr_8_9_leicht_c-SK",
+      "tags": [
+        "extra",
+        "locale-sk"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_SK_Audios_CD2/2_37_Momente_A11_AB_noch_mehr_8_9_leicht_c-SK.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_SK_Audios_CD2/2_38_Momente_A11_AB_noch_mehr_8_9_leicht_d-SK.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "2_38_Momente_A11_AB_noch_mehr_8_9_leicht_d-SK",
+      "tags": [
+        "extra",
+        "locale-sk"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_SK_Audios_CD2/2_38_Momente_A11_AB_noch_mehr_8_9_leicht_d-SK.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_SK_Audios_CD2/2_39_Momente_A11_AB_noch_mehr_8_9_leicht_e-SK.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "2_39_Momente_A11_AB_noch_mehr_8_9_leicht_e-SK",
+      "tags": [
+        "extra",
+        "locale-sk"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_SK_Audios_CD2/2_39_Momente_A11_AB_noch_mehr_8_9_leicht_e-SK.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_SK_Audios_CD2/2_40_Momente_A11_AB_noch_mehr_8_9_leicht_f-SK.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "2_40_Momente_A11_AB_noch_mehr_8_9_leicht_f-SK",
+      "tags": [
+        "extra",
+        "locale-sk"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_SK_Audios_CD2/2_40_Momente_A11_AB_noch_mehr_8_9_leicht_f-SK.mp3"
+    },
+    {
+      "file": "Audio/Momente_A11_AB_SK_Audios_CD2/2_41_Momente_A11_AB_noch_mehr_8_9_schwer-SK.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "2_41_Momente_A11_AB_noch_mehr_8_9_schwer-SK",
+      "tags": [
+        "extra",
+        "locale-sk"
+      ],
+      "url_hint": "audio/Audio/Momente_A11_AB_SK_Audios_CD2/2_41_Momente_A11_AB_noch_mehr_8_9_schwer-SK.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_01_AB_Momente_A11_1_3.mp3",
+      "book": "AB",
+      "lesson": 1,
+      "section": "1 3",
+      "tags": [
+        "dialogue",
+        "greetings",
+        "lesson-1",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_01_AB_Momente_A11_1_3.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_02_AB_Momente_A11_1_3.mp3",
+      "book": "AB",
+      "lesson": 1,
+      "section": "1 3",
+      "tags": [
+        "dialogue",
+        "greetings",
+        "lesson-1",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_02_AB_Momente_A11_1_3.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_03_AB_Momente_A11_1_3.mp3",
+      "book": "AB",
+      "lesson": 1,
+      "section": "1 3",
+      "tags": [
+        "dialogue",
+        "greetings",
+        "lesson-1",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_03_AB_Momente_A11_1_3.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_04_AB_Momente_A11_1_3.mp3",
+      "book": "AB",
+      "lesson": 1,
+      "section": "1 3",
+      "tags": [
+        "dialogue",
+        "greetings",
+        "lesson-1",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_04_AB_Momente_A11_1_3.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_05_AB_Momente_A11_1_9a.mp3",
+      "book": "AB",
+      "lesson": 1,
+      "section": "1 9a",
+      "tags": [
+        "lesson-1",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_05_AB_Momente_A11_1_9a.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_06_AB_Momente_A11_1_9b.mp3",
+      "book": "AB",
+      "lesson": 1,
+      "section": "1 9b",
+      "tags": [
+        "lesson-1",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_06_AB_Momente_A11_1_9b.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_07_AB_Momente_A11_2_6a.mp3",
+      "book": "AB",
+      "lesson": 2,
+      "section": "2 6a",
+      "tags": [
+        "dialogue",
+        "lesson-2",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_07_AB_Momente_A11_2_6a.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_08_AB_Momente_A11_2_6a.mp3",
+      "book": "AB",
+      "lesson": 2,
+      "section": "2 6a",
+      "tags": [
+        "dialogue",
+        "lesson-2",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_08_AB_Momente_A11_2_6a.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_09_AB_Momente_A11_2_6a.mp3",
+      "book": "AB",
+      "lesson": 2,
+      "section": "2 6a",
+      "tags": [
+        "dialogue",
+        "lesson-2",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_09_AB_Momente_A11_2_6a.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_10_AB_Momente_A11_2_6a.mp3",
+      "book": "AB",
+      "lesson": 2,
+      "section": "2 6a",
+      "tags": [
+        "dialogue",
+        "lesson-2",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_10_AB_Momente_A11_2_6a.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_11_AB_Momente_A11_2_6b.mp3",
+      "book": "AB",
+      "lesson": 2,
+      "section": "2 6b",
+      "tags": [
+        "dialogue",
+        "lesson-2",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_11_AB_Momente_A11_2_6b.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_12_AB_Momente_A11_2_6b.mp3",
+      "book": "AB",
+      "lesson": 2,
+      "section": "2 6b",
+      "tags": [
+        "dialogue",
+        "lesson-2",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_12_AB_Momente_A11_2_6b.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_13_AB_Momente_A11_2_6b.mp3",
+      "book": "AB",
+      "lesson": 2,
+      "section": "2 6b",
+      "tags": [
+        "dialogue",
+        "lesson-2",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_13_AB_Momente_A11_2_6b.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_14_AB_Momente_A11_2_6b.mp3",
+      "book": "AB",
+      "lesson": 2,
+      "section": "2 6b",
+      "tags": [
+        "dialogue",
+        "lesson-2",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_14_AB_Momente_A11_2_6b.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_15_AB_Momente_A11_2_12.mp3",
+      "book": "AB",
+      "lesson": 2,
+      "section": "2 12",
+      "tags": [
+        "lesson-2",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_15_AB_Momente_A11_2_12.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_16_AB_Momente_A11_3_7a.mp3",
+      "book": "AB",
+      "lesson": 3,
+      "section": "3 7a",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_16_AB_Momente_A11_3_7a.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_17_AB_Momente_A11_3_7b+c.mp3",
+      "book": "AB",
+      "lesson": 3,
+      "section": "3 7b+c",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_17_AB_Momente_A11_3_7b+c.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_18_AB_Momente_A11_3_14.mp3",
+      "book": "AB",
+      "lesson": 3,
+      "section": "3 14",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_18_AB_Momente_A11_3_14.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_19_AB_Momente_A11_Wiederholung Modul 1_3.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 1",
+      "tags": [
+        "locale-de",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_19_AB_Momente_A11_Wiederholung Modul 1_3.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_20_AB_Momente_A11_Wiederholung Modul 1_5.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 1",
+      "tags": [
+        "locale-de",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_20_AB_Momente_A11_Wiederholung Modul 1_5.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_21_AB_Momente_A11_Wiederholung Modul 1_7.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 1",
+      "tags": [
+        "locale-de",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_21_AB_Momente_A11_Wiederholung Modul 1_7.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_22_AB_Momente_A11_Wiederholung Modul 1_9.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 1",
+      "tags": [
+        "locale-de",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_22_AB_Momente_A11_Wiederholung Modul 1_9.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_23_AB_Momente_A11_Test Modul 1_1.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-de",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_23_AB_Momente_A11_Test Modul 1_1.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_24_AB_Momente_A11_Test Modul 1_1.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-de",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_24_AB_Momente_A11_Test Modul 1_1.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_25_AB_Momente_A11_Test Modul 1_1.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-de",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_25_AB_Momente_A11_Test Modul 1_1.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_26_AB_Momente_A11_Test Modul 1_1.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-de",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_26_AB_Momente_A11_Test Modul 1_1.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_27_AB_Momente_A11_Test Modul 1_1.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-de",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_27_AB_Momente_A11_Test Modul 1_1.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_28_AB_Momente_A11_Test Modul 1_1.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-de",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_28_AB_Momente_A11_Test Modul 1_1.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_29_AB_Momente_A11_Test Modul 1_1.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-de",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_29_AB_Momente_A11_Test Modul 1_1.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_30_AB_Momente_A11_Test Modul 1_4b.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-de",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_30_AB_Momente_A11_Test Modul 1_4b.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_31_AB_Momente_A11_Fokus Beruf Modul 1_2a+b.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Fokus Beruf",
+      "tags": [
+        "beruf",
+        "fokus-beruf",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_31_AB_Momente_A11_Fokus Beruf Modul 1_2a+b.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_32_AB_Momente_A11_4_9.mp3",
+      "book": "AB",
+      "lesson": 4,
+      "section": "4 9",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_32_AB_Momente_A11_4_9.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_33_AB_Momente_A11_4_11.mp3",
+      "book": "AB",
+      "lesson": 4,
+      "section": "4 11",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_33_AB_Momente_A11_4_11.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_34_AB_Momente_A11_4_11.mp3",
+      "book": "AB",
+      "lesson": 4,
+      "section": "4 11",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_34_AB_Momente_A11_4_11.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_35_AB_Momente_A11_4_11.mp3",
+      "book": "AB",
+      "lesson": 4,
+      "section": "4 11",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_35_AB_Momente_A11_4_11.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_36_AB_Momente_A11_4_11.mp3",
+      "book": "AB",
+      "lesson": 4,
+      "section": "4 11",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_36_AB_Momente_A11_4_11.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_37_AB_Momente_A11_4_12.mp3",
+      "book": "AB",
+      "lesson": 4,
+      "section": "4 12",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_37_AB_Momente_A11_4_12.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_38_AB_Momente_A11_4_15.mp3",
+      "book": "AB",
+      "lesson": 4,
+      "section": "4 15",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_38_AB_Momente_A11_4_15.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_39_AB_Momente_A11_4_16a.mp3",
+      "book": "AB",
+      "lesson": 4,
+      "section": "4 16a",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_39_AB_Momente_A11_4_16a.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_40_AB_Momente_A11_4_16b.mp3",
+      "book": "AB",
+      "lesson": 4,
+      "section": "4 16b",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_40_AB_Momente_A11_4_16b.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_41_AB_Momente_A11_5_14a.mp3",
+      "book": "AB",
+      "lesson": 5,
+      "section": "5 14a",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_41_AB_Momente_A11_5_14a.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_42_AB_Momente_A11_5_14a.mp3",
+      "book": "AB",
+      "lesson": 5,
+      "section": "5 14a",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_42_AB_Momente_A11_5_14a.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_43_AB_Momente_A11_5_14b.mp3",
+      "book": "AB",
+      "lesson": 5,
+      "section": "5 14b",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_43_AB_Momente_A11_5_14b.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_44_AB_Momente_A11_5_16a.mp3",
+      "book": "AB",
+      "lesson": 5,
+      "section": "5 16a",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_44_AB_Momente_A11_5_16a.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_45_AB_Momente_A11_6_5a.mp3",
+      "book": "AB",
+      "lesson": 6,
+      "section": "6 5a",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_45_AB_Momente_A11_6_5a.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_46_AB_Momente_A11_6_5b.mp3",
+      "book": "AB",
+      "lesson": 6,
+      "section": "6 5b",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_46_AB_Momente_A11_6_5b.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_47_AB_Momente_A11_6_13a.mp3",
+      "book": "AB",
+      "lesson": 6,
+      "section": "6 13a",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_47_AB_Momente_A11_6_13a.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_48_AB_Momente_A11_Wiederholung Modul 2_4.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 2",
+      "tags": [
+        "locale-de",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_48_AB_Momente_A11_Wiederholung Modul 2_4.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_49_AB_Momente_A11_Wiederholung Modul 2_6.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 2",
+      "tags": [
+        "locale-de",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_49_AB_Momente_A11_Wiederholung Modul 2_6.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_50_AB_Momente_A11_Wiederholung Modul 2_8.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 2",
+      "tags": [
+        "locale-de",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_50_AB_Momente_A11_Wiederholung Modul 2_8.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_51_AB_Momente_A11_Wiederholung Modul 2_10.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 2",
+      "tags": [
+        "locale-de",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_51_AB_Momente_A11_Wiederholung Modul 2_10.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_52_AB_Momente_A11_Wiederholung Modul 2_11.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 2",
+      "tags": [
+        "locale-de",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_52_AB_Momente_A11_Wiederholung Modul 2_11.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_53_AB_Momente_A11_Test Modul 2_3.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-de",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_53_AB_Momente_A11_Test Modul 2_3.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_54_AB_Momente_A11_Test Modul 2_3.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-de",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_54_AB_Momente_A11_Test Modul 2_3.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_55_AB_Momente_A11_Test Modul 2_3.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-de",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_55_AB_Momente_A11_Test Modul 2_3.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_56_AB_Momente_A11_Test Modul 2_3.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-de",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_56_AB_Momente_A11_Test Modul 2_3.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_57_AB_Momente_A11_Test Modul 2_3.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-de",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_57_AB_Momente_A11_Test Modul 2_3.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_58_AB_Momente_A11_Test Modul 2_3.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-de",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_58_AB_Momente_A11_Test Modul 2_3.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_59_AB_Momente_A11_Test Modul 2_3.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-de",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_59_AB_Momente_A11_Test Modul 2_3.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_60_AB_Momente_A11_Test Modul 2_4b.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-de",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_60_AB_Momente_A11_Test Modul 2_4b.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_61_AB_Momente_A11_Fokus Beruf Modul 2_1.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Fokus Beruf",
+      "tags": [
+        "beruf",
+        "fokus-beruf",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_61_AB_Momente_A11_Fokus Beruf Modul 2_1.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD1/1_62_AB_Momente_A11_Fokus Beruf Modul 2_4.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Fokus Beruf",
+      "tags": [
+        "beruf",
+        "fokus-beruf",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_62_AB_Momente_A11_Fokus Beruf Modul 2_4.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_01_AB_Momente_A11_7_6.mp3",
+      "book": "AB",
+      "lesson": 7,
+      "section": "7 6",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_01_AB_Momente_A11_7_6.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_02_AB_Momente_A11_7_8.mp3",
+      "book": "AB",
+      "lesson": 7,
+      "section": "7 8",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_02_AB_Momente_A11_7_8.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_03_AB_Momente_A11_8_13.mp3",
+      "book": "AB",
+      "lesson": 8,
+      "section": "8 13",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_03_AB_Momente_A11_8_13.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_04_AB_Momente_A11_8_14.mp3",
+      "book": "AB",
+      "lesson": 8,
+      "section": "8 14",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_04_AB_Momente_A11_8_14.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_05_AB_Momente_A11_8_14.mp3",
+      "book": "AB",
+      "lesson": 8,
+      "section": "8 14",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_05_AB_Momente_A11_8_14.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_06_AB_Momente_A11_8_15.mp3",
+      "book": "AB",
+      "lesson": 8,
+      "section": "8 15",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_06_AB_Momente_A11_8_15.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_07_AB_Momente_A11_9_14.mp3",
+      "book": "AB",
+      "lesson": 9,
+      "section": "9 14",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_07_AB_Momente_A11_9_14.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_08_AB_Momente_A11_Wiederholung Modul 3_3.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 3",
+      "tags": [
+        "locale-de",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_08_AB_Momente_A11_Wiederholung Modul 3_3.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_09_AB_Momente_A11_Wiederholung Modul 3_5.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 3",
+      "tags": [
+        "locale-de",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_09_AB_Momente_A11_Wiederholung Modul 3_5.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_10_AB_Momente_A11_Wiederholung Modul 3_10.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 3",
+      "tags": [
+        "locale-de",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_10_AB_Momente_A11_Wiederholung Modul 3_10.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_11_AB_Momente_A11_Test Modul 3_1.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-de",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_11_AB_Momente_A11_Test Modul 3_1.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_12_AB_Momente_A11_Test Modul 3_4b.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-de",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_12_AB_Momente_A11_Test Modul 3_4b.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_13_AB_Momente_A11_Fokus Beruf Modul 3_1b.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Fokus Beruf",
+      "tags": [
+        "beruf",
+        "fokus-beruf",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_13_AB_Momente_A11_Fokus Beruf Modul 3_1b.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_14_AB_Momente_A11_Fokus Beruf Modul 3_1b.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Fokus Beruf",
+      "tags": [
+        "beruf",
+        "fokus-beruf",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_14_AB_Momente_A11_Fokus Beruf Modul 3_1b.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_15_AB_Momente_A11_Fokus Beruf Modul 3_1b.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Fokus Beruf",
+      "tags": [
+        "beruf",
+        "fokus-beruf",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_15_AB_Momente_A11_Fokus Beruf Modul 3_1b.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_16_AB_Momente_A11_Fokus Beruf Modul 3_1b.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Fokus Beruf",
+      "tags": [
+        "beruf",
+        "fokus-beruf",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_16_AB_Momente_A11_Fokus Beruf Modul 3_1b.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_17_AB_Momente_A11_Prüfungstraining, Hören_1b.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "2_17_AB_Momente_A11_Prüfungstraining, Hören_1b",
+      "tags": [
+        "exam-training",
+        "listening",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_17_AB_Momente_A11_Prüfungstraining, Hören_1b.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_18_AB_Momente_A11_Prüfungstraining, Hören_1b.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "2_18_AB_Momente_A11_Prüfungstraining, Hören_1b",
+      "tags": [
+        "exam-training",
+        "listening",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_18_AB_Momente_A11_Prüfungstraining, Hören_1b.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_19_AB_Momente_A11_Prüfungstraining, Hören_2.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "2_19_AB_Momente_A11_Prüfungstraining, Hören_2",
+      "tags": [
+        "exam-training",
+        "listening",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_19_AB_Momente_A11_Prüfungstraining, Hören_2.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_20_AB_Momente_A11_Prüfungstraining, Hören_2.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "2_20_AB_Momente_A11_Prüfungstraining, Hören_2",
+      "tags": [
+        "exam-training",
+        "listening",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_20_AB_Momente_A11_Prüfungstraining, Hören_2.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_21_AB_Momente_A11_Prüfungstraining, Hören_2.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "2_21_AB_Momente_A11_Prüfungstraining, Hören_2",
+      "tags": [
+        "exam-training",
+        "listening",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_21_AB_Momente_A11_Prüfungstraining, Hören_2.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_22_AB_Momente_A11_Prüfungstraining, Hören_2.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "2_22_AB_Momente_A11_Prüfungstraining, Hören_2",
+      "tags": [
+        "exam-training",
+        "listening",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_22_AB_Momente_A11_Prüfungstraining, Hören_2.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_23_AB_Momente_A11_Prüfungstraining, Hören_2.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "2_23_AB_Momente_A11_Prüfungstraining, Hören_2",
+      "tags": [
+        "exam-training",
+        "listening",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_23_AB_Momente_A11_Prüfungstraining, Hören_2.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_24_AB_Momente_A11_Prüfungstraining, Hören_2.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "2_24_AB_Momente_A11_Prüfungstraining, Hören_2",
+      "tags": [
+        "exam-training",
+        "listening",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_24_AB_Momente_A11_Prüfungstraining, Hören_2.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_25_AB_Momente_A11_Prüfungstraining, Hören_2.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "2_25_AB_Momente_A11_Prüfungstraining, Hören_2",
+      "tags": [
+        "exam-training",
+        "listening",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_25_AB_Momente_A11_Prüfungstraining, Hören_2.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_26_AB_Momente_A11_10_3.mp3",
+      "book": "AB",
+      "lesson": 10,
+      "section": "10 3",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_26_AB_Momente_A11_10_3.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_27_AB_Momente_A11_10_5b.mp3",
+      "book": "AB",
+      "lesson": 10,
+      "section": "10 5b",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_27_AB_Momente_A11_10_5b.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_28_AB_Momente_A11_10_5b.mp3",
+      "book": "AB",
+      "lesson": 10,
+      "section": "10 5b",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_28_AB_Momente_A11_10_5b.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_29_AB_Momente_A11_10_7.mp3",
+      "book": "AB",
+      "lesson": 10,
+      "section": "10 7",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_29_AB_Momente_A11_10_7.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_30_AB_Momente_A11_10_13.mp3",
+      "book": "AB",
+      "lesson": 10,
+      "section": "10 13",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_30_AB_Momente_A11_10_13.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_31_AB_Momente_A11_11_9a.mp3",
+      "book": "AB",
+      "lesson": 11,
+      "section": "11 9a",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_31_AB_Momente_A11_11_9a.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_32_AB_Momente_A11_11_11b.mp3",
+      "book": "AB",
+      "lesson": 11,
+      "section": "11 11b",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_32_AB_Momente_A11_11_11b.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_33_AB_Momente_A11_12_1.mp3",
+      "book": "AB",
+      "lesson": 12,
+      "section": "12 1",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_33_AB_Momente_A11_12_1.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_34_AB_Momente_A11_12_5a.mp3",
+      "book": "AB",
+      "lesson": 12,
+      "section": "12 5a",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_34_AB_Momente_A11_12_5a.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_35_AB_Momente_A11_12_5b.mp3",
+      "book": "AB",
+      "lesson": 12,
+      "section": "12 5b",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_35_AB_Momente_A11_12_5b.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_36_AB_Momente_A11_Wiederholung Modul 4_3.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 4",
+      "tags": [
+        "locale-de",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_36_AB_Momente_A11_Wiederholung Modul 4_3.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_37_AB_Momente_A11_Wiederholung Modul 4_4b.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 4",
+      "tags": [
+        "locale-de",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_37_AB_Momente_A11_Wiederholung Modul 4_4b.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_38_AB_Momente_A11_Wiederholung Modul 4_8.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 4",
+      "tags": [
+        "locale-de",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_38_AB_Momente_A11_Wiederholung Modul 4_8.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_39_AB_Momente_A11_Wiederholung Modul 4_9.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 4",
+      "tags": [
+        "locale-de",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_39_AB_Momente_A11_Wiederholung Modul 4_9.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_40_AB_Momente_A11_Wiederholung Modul 4_9.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 4",
+      "tags": [
+        "locale-de",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_40_AB_Momente_A11_Wiederholung Modul 4_9.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_41_AB_Momente_A11_Wiederholung Modul 4_9.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Wiederholung 4",
+      "tags": [
+        "locale-de",
+        "review"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_41_AB_Momente_A11_Wiederholung Modul 4_9.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_42_AB_Momente_A11_Test Modul 4_1.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-de",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_42_AB_Momente_A11_Test Modul 4_1.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_43_AB_Momente_A11_Test Modul 4_4b.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "Test",
+      "tags": [
+        "locale-de",
+        "test"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_43_AB_Momente_A11_Test Modul 4_4b.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_44_AB_Momente_A11_Prüfungstraining, Hören_1c.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "2_44_AB_Momente_A11_Prüfungstraining, Hören_1c",
+      "tags": [
+        "exam-training",
+        "listening",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_44_AB_Momente_A11_Prüfungstraining, Hören_1c.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_45_AB_Momente_A11_Prüfungstraining, Hören_2.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "2_45_AB_Momente_A11_Prüfungstraining, Hören_2",
+      "tags": [
+        "exam-training",
+        "listening",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_45_AB_Momente_A11_Prüfungstraining, Hören_2.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_46_AB_Momente_A11_Prüfungstraining, Hören_2.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "2_46_AB_Momente_A11_Prüfungstraining, Hören_2",
+      "tags": [
+        "exam-training",
+        "listening",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_46_AB_Momente_A11_Prüfungstraining, Hören_2.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_47_AB_Momente_A11_Prüfungstraining, Hören_2.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "2_47_AB_Momente_A11_Prüfungstraining, Hören_2",
+      "tags": [
+        "exam-training",
+        "listening",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_47_AB_Momente_A11_Prüfungstraining, Hören_2.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_48_AB_Momente_A11_Prüfungstraining, Hören_2.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "2_48_AB_Momente_A11_Prüfungstraining, Hören_2",
+      "tags": [
+        "exam-training",
+        "listening",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_48_AB_Momente_A11_Prüfungstraining, Hören_2.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_49_AB_Momente_A11_Prüfungstraining, Hören_2.mp3",
+      "book": "AB",
+      "lesson": null,
+      "section": "2_49_AB_Momente_A11_Prüfungstraining, Hören_2",
+      "tags": [
+        "exam-training",
+        "listening",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_49_AB_Momente_A11_Prüfungstraining, Hören_2.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_50_AB_Momente_A11_8_noch_mehr_9_leicht.mp3",
+      "book": "AB",
+      "lesson": 8,
+      "section": "8 noch mehr 9 leicht",
+      "tags": [
+        "extra",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_50_AB_Momente_A11_8_noch_mehr_9_leicht.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_51_AB_Momente_A11_8_noch_mehr_9_leicht.mp3",
+      "book": "AB",
+      "lesson": 8,
+      "section": "8 noch mehr 9 leicht",
+      "tags": [
+        "extra",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_51_AB_Momente_A11_8_noch_mehr_9_leicht.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_52_AB_Momente_A11_8_noch_mehr_9_leicht.mp3",
+      "book": "AB",
+      "lesson": 8,
+      "section": "8 noch mehr 9 leicht",
+      "tags": [
+        "extra",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_52_AB_Momente_A11_8_noch_mehr_9_leicht.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_53_AB_Momente_A11_8_noch_mehr_9_leicht.mp3",
+      "book": "AB",
+      "lesson": 8,
+      "section": "8 noch mehr 9 leicht",
+      "tags": [
+        "extra",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_53_AB_Momente_A11_8_noch_mehr_9_leicht.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_54_AB_Momente_A11_8_noch_mehr_9_leicht.mp3",
+      "book": "AB",
+      "lesson": 8,
+      "section": "8 noch mehr 9 leicht",
+      "tags": [
+        "extra",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_54_AB_Momente_A11_8_noch_mehr_9_leicht.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_55_AB_Momente_A11_8_noch_mehr_9_leicht.mp3",
+      "book": "AB",
+      "lesson": 8,
+      "section": "8 noch mehr 9 leicht",
+      "tags": [
+        "extra",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_55_AB_Momente_A11_8_noch_mehr_9_leicht.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_AB_CD2/2_56_AB_Momente_A11_8_noch_mehr_9_schwer.mp3",
+      "book": "AB",
+      "lesson": 8,
+      "section": "8 noch mehr 9 schwer",
+      "tags": [
+        "extra",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_56_AB_Momente_A11_8_noch_mehr_9_schwer.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_KB_CD2/2_01_KB_Momente_A11_L7_1b_4.mp3",
+      "book": "KB",
+      "lesson": 7,
+      "section": "1b 4",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_01_KB_Momente_A11_L7_1b_4.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_KB_CD2/2_02_KB_Momente_A11_L7_3_4.mp3",
+      "book": "KB",
+      "lesson": 7,
+      "section": "3 4",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_02_KB_Momente_A11_L7_3_4.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_KB_CD2/2_03_KB_Momente_A11_L7_9b_1.mp3",
+      "book": "KB",
+      "lesson": 7,
+      "section": "9b 1",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_03_KB_Momente_A11_L7_9b_1.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_KB_CD2/2_04_KB_Momente_A11_L7_9b_2.mp3",
+      "book": "KB",
+      "lesson": 7,
+      "section": "9b 2",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_04_KB_Momente_A11_L7_9b_2.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_KB_CD2/2_05_KB_Momente_A11_L7_9b_3.mp3",
+      "book": "KB",
+      "lesson": 7,
+      "section": "9b 3",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_05_KB_Momente_A11_L7_9b_3.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_KB_CD2/2_06_KB_Momente_A11_L8_1a.mp3",
+      "book": "KB",
+      "lesson": 8,
+      "section": "1a",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_06_KB_Momente_A11_L8_1a.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_KB_CD2/2_07_KB_Momente_A11_L8_3a.mp3",
+      "book": "KB",
+      "lesson": 8,
+      "section": "3a",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_07_KB_Momente_A11_L8_3a.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_KB_CD2/2_08_KB_Momente_A11_L8_4b.mp3",
+      "book": "KB",
+      "lesson": 8,
+      "section": "4b",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_08_KB_Momente_A11_L8_4b.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_KB_CD2/2_09_KB_Momente_A11_L9_4.mp3",
+      "book": "KB",
+      "lesson": 9,
+      "section": "4",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_09_KB_Momente_A11_L9_4.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_KB_CD2/2_10_KB_Momente_A11_L9_5.mp3",
+      "book": "KB",
+      "lesson": 9,
+      "section": "5",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_10_KB_Momente_A11_L9_5.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_KB_CD2/2_11_KB_Momente_A11_L9_6.mp3",
+      "book": "KB",
+      "lesson": 9,
+      "section": "6",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_11_KB_Momente_A11_L9_6.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_KB_CD2/2_12_KB_Momente_A11_L9_7.mp3",
+      "book": "KB",
+      "lesson": 9,
+      "section": "7",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_12_KB_Momente_A11_L9_7.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_KB_CD2/2_13_KB_Momente_A11_L9_9a.mp3",
+      "book": "KB",
+      "lesson": 9,
+      "section": "9a",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_13_KB_Momente_A11_L9_9a.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_KB_CD2/2_14_KB_Momente_A11_Magazin 3_Hoeren.mp3",
+      "book": "KB",
+      "lesson": null,
+      "section": "2_14_KB_Momente_A11_Magazin 3_Hoeren",
+      "tags": [
+        "listening",
+        "locale-de",
+        "magazin"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_14_KB_Momente_A11_Magazin 3_Hoeren.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_KB_CD2/2_15_KB_Momente_A11_Magazin 3_Hoeren.mp3",
+      "book": "KB",
+      "lesson": null,
+      "section": "2_15_KB_Momente_A11_Magazin 3_Hoeren",
+      "tags": [
+        "listening",
+        "locale-de",
+        "magazin"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_15_KB_Momente_A11_Magazin 3_Hoeren.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_KB_CD2/2_16_KB_Momente_A11_Magazin 3_Hoeren.mp3",
+      "book": "KB",
+      "lesson": null,
+      "section": "2_16_KB_Momente_A11_Magazin 3_Hoeren",
+      "tags": [
+        "listening",
+        "locale-de",
+        "magazin"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_16_KB_Momente_A11_Magazin 3_Hoeren.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_KB_CD2/2_17_KB_Momente_A11_L10_2_3_4.mp3",
+      "book": "KB",
+      "lesson": 10,
+      "section": "2 3 4",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_17_KB_Momente_A11_L10_2_3_4.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_KB_CD2/2_18_KB_Momente_A11_L10_10_Durchsage_1.mp3",
+      "book": "KB",
+      "lesson": 10,
+      "section": "10 Durchsage 1",
+      "tags": [
+        "listening",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_18_KB_Momente_A11_L10_10_Durchsage_1.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_KB_CD2/2_19_KB_Momente_A11_L10_10_Durchsage_2.mp3",
+      "book": "KB",
+      "lesson": 10,
+      "section": "10 Durchsage 2",
+      "tags": [
+        "listening",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_19_KB_Momente_A11_L10_10_Durchsage_2.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_KB_CD2/2_20_KB_Momente_A11_L10_10_Durchsage_3.mp3",
+      "book": "KB",
+      "lesson": 10,
+      "section": "10 Durchsage 3",
+      "tags": [
+        "listening",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_20_KB_Momente_A11_L10_10_Durchsage_3.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_KB_CD2/2_21_KB_Momente_A11_L10_10_Durchsage_4.mp3",
+      "book": "KB",
+      "lesson": 10,
+      "section": "10 Durchsage 4",
+      "tags": [
+        "listening",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_21_KB_Momente_A11_L10_10_Durchsage_4.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_KB_CD2/2_22_KB_Momente_A11_L10_10_Durchsage_5.mp3",
+      "book": "KB",
+      "lesson": 10,
+      "section": "10 Durchsage 5",
+      "tags": [
+        "listening",
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_22_KB_Momente_A11_L10_10_Durchsage_5.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_KB_CD2/2_23_KB_Momente_A11_L11_1a_2a_A.mp3",
+      "book": "KB",
+      "lesson": 11,
+      "section": "1a 2a A",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_23_KB_Momente_A11_L11_1a_2a_A.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_KB_CD2/2_24_KB_Momente_A11_L11_1a_2a_B.mp3",
+      "book": "KB",
+      "lesson": 11,
+      "section": "1a 2a B",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_24_KB_Momente_A11_L11_1a_2a_B.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_KB_CD2/2_25_KB_Momente_A11_L11_1a_2a_C.mp3",
+      "book": "KB",
+      "lesson": 11,
+      "section": "1a 2a C",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_25_KB_Momente_A11_L11_1a_2a_C.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_KB_CD2/2_26_KB_Momente_A11_L11_1a_2a_D.mp3",
+      "book": "KB",
+      "lesson": 11,
+      "section": "1a 2a D",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_26_KB_Momente_A11_L11_1a_2a_D.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_KB_CD2/2_27_KB_Momente_A11_L11_1a_2a_E.mp3",
+      "book": "KB",
+      "lesson": 11,
+      "section": "1a 2a E",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_27_KB_Momente_A11_L11_1a_2a_E.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_KB_CD2/2_28_KB_Momente_A11_L11_1a_2a_F.mp3",
+      "book": "KB",
+      "lesson": 11,
+      "section": "1a 2a F",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_28_KB_Momente_A11_L11_1a_2a_F.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_KB_CD2/2_29_KB_Momente_A11_L12_1_2.mp3",
+      "book": "KB",
+      "lesson": 12,
+      "section": "1 2",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_29_KB_Momente_A11_L12_1_2.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_KB_CD2/2_30_KB_Momente_A11_L12_6a.mp3",
+      "book": "KB",
+      "lesson": 12,
+      "section": "6a",
+      "tags": [
+        "locale-de"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_30_KB_Momente_A11_L12_6a.mp3"
+    },
+    {
+      "file": "Audio/Momente_A1_1_KB_CD2/2_31_KB_Momente_A11_Magazin 4_Hoeren.mp3",
+      "book": "KB",
+      "lesson": null,
+      "section": "2_31_KB_Momente_A11_Magazin 4_Hoeren",
+      "tags": [
+        "listening",
+        "locale-de",
+        "magazin"
+      ],
+      "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_31_KB_Momente_A11_Magazin 4_Hoeren.mp3"
+    }
+  ],
+  "priority_for_alpha": [
+    "Audio/Momente_A1_1_AB_CD1/1_01_AB_Momente_A11_1_3.mp3",
+    "Audio/Momente_A1_1_AB_CD1/1_02_AB_Momente_A11_1_3.mp3",
+    "Audio/Momente_A1_1_AB_CD1/1_03_AB_Momente_A11_1_3.mp3",
+    "Audio/Momente_A1_1_AB_CD1/1_04_AB_Momente_A11_1_3.mp3",
+    "Audio/Momente_A1_1_AB_CD1/1_05_AB_Momente_A11_1_9a.mp3",
+    "Audio/Momente_A1_1_AB_CD1/1_06_AB_Momente_A11_1_9b.mp3",
+    "Audio/Momente_A1_1_AB_CD1/1_07_AB_Momente_A11_2_6a.mp3",
+    "Audio/Momente_A1_1_AB_CD1/1_08_AB_Momente_A11_2_6a.mp3",
+    "Audio/Momente_A1_1_AB_CD1/1_09_AB_Momente_A11_2_6a.mp3",
+    "Audio/Momente_A1_1_AB_CD1/1_10_AB_Momente_A11_2_6a.mp3",
+    "Audio/Momente_A1_1_AB_CD1/1_11_AB_Momente_A11_2_6b.mp3",
+    "Audio/Momente_A1_1_AB_CD1/1_12_AB_Momente_A11_2_6b.mp3",
+    "Audio/Momente_A1_1_AB_CD1/1_13_AB_Momente_A11_2_6b.mp3",
+    "Audio/Momente_A1_1_AB_CD1/1_14_AB_Momente_A11_2_6b.mp3",
+    "Audio/Momente_A1_1_AB_CD1/1_15_AB_Momente_A11_2_12.mp3",
+    "Audio/Momente_A1_1_AB_CD1/1_31_AB_Momente_A11_Fokus Beruf Modul 1_2a+b.mp3",
+    "Audio/Momente_A1_1_AB_CD1/1_61_AB_Momente_A11_Fokus Beruf Modul 2_1.mp3",
+    "Audio/Momente_A1_1_AB_CD1/1_62_AB_Momente_A11_Fokus Beruf Modul 2_4.mp3"
+  ],
+  "folder_counts": {
+    "Audio/Momente_A11_AB_CZ_Audios_CD1": 59,
+    "Audio/Momente_A11_AB_CZ_Audios_CD2": 41,
+    "Audio/Momente_A11_AB_CZ_Audios_CD3": 43,
+    "Audio/Momente_A11_AB_CZ_Audios_CD4": 54,
+    "Audio/Momente_A11_AB_SK_Audios_CD2": 41,
+    "Audio/Momente_A1_1_AB_CD1": 62,
+    "Audio/Momente_A1_1_AB_CD2": 56,
+    "Audio/Momente_A1_1_KB_CD2": 31
+  }
+}

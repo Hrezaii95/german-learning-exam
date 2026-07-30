@@ -1,0 +1,2046 @@
+{
+  "id": "lesson-02",
+  "title": {
+    "de": "Was macht ihr beruflich?",
+    "en": "What do you do professionally?"
+  },
+  "cefr": "A1",
+  "module": 1,
+  "sources": [
+    "Momente_A1_1_KB_Glossar_Deutsch_Spanisch.pdf",
+    "A1-KB-momente.pdf",
+    "Momente A1.1 AB_7.pdf",
+    "Momente_A1_1_KB_Loesungen.pdf",
+    "Notes_260730_040559.txt"
+  ],
+  "objectives": [
+    "Talk about profession and personal details",
+    "Name place of residence",
+    "Use numbers 1?100",
+    "Conjugate wohnen, leben, haben, sein, arbeiten (singular and plural)",
+    "Use negation with nicht / kein",
+    "Use prepositions als, bei, in",
+    "Form feminine professions with -in"
+  ],
+  "vocabulary": [
+    {
+      "de": "das Jahr",
+      "en": "year",
+      "category": "time",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "das",
+      "gender": "neuter",
+      "genderHint": "green",
+      "plural": "die Jahre",
+      "pluralGenderHint": "purple"
+    },
+    {
+      "de": "alt",
+      "en": "old (age)",
+      "category": "adjective",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ]
+    },
+    {
+      "de": "verheiratet",
+      "en": "married",
+      "category": "familienstand",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ]
+    },
+    {
+      "de": "geschieden",
+      "en": "divorced",
+      "category": "familienstand",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ]
+    },
+    {
+      "de": "das Kind",
+      "en": "child",
+      "category": "family",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "das",
+      "gender": "neuter",
+      "genderHint": "green",
+      "plural": "die Kinder",
+      "pluralGenderHint": "purple"
+    },
+    {
+      "de": "kein / keine",
+      "en": "no / not any",
+      "category": "grammar",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ]
+    },
+    {
+      "de": "der Single",
+      "en": "single (person)",
+      "category": "familienstand",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "der",
+      "gender": "masculine",
+      "genderHint": "blue"
+    },
+    {
+      "de": "allein",
+      "en": "alone",
+      "category": "adverb",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ]
+    },
+    {
+      "de": "zusammen",
+      "en": "together",
+      "category": "adverb",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ]
+    },
+    {
+      "de": "das Interview",
+      "en": "interview",
+      "category": "communication",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "das",
+      "gender": "neuter",
+      "genderHint": "green",
+      "plural": "die Interviews",
+      "pluralGenderHint": "purple"
+    },
+    {
+      "de": "der Partner",
+      "en": "partner (m)",
+      "category": "family",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "der",
+      "gender": "masculine",
+      "genderHint": "blue",
+      "plural": "die Partner",
+      "pluralGenderHint": "purple"
+    },
+    {
+      "de": "die Partnerin",
+      "en": "partner (f)",
+      "category": "family",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "die",
+      "gender": "feminine",
+      "genderHint": "red",
+      "plural": "die Partnerinnen",
+      "pluralGenderHint": "purple"
+    },
+    {
+      "de": "der Satz",
+      "en": "sentence",
+      "category": "grammar",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "der",
+      "gender": "masculine",
+      "genderHint": "blue",
+      "plural": "die S?tze",
+      "pluralGenderHint": "purple"
+    },
+    {
+      "de": "der Punkt",
+      "en": "period / point",
+      "category": "grammar",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "der",
+      "gender": "masculine",
+      "genderHint": "blue",
+      "plural": "die Punkte",
+      "pluralGenderHint": "purple"
+    },
+    {
+      "de": "die Zahl",
+      "en": "number",
+      "category": "numbers",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "die",
+      "gender": "feminine",
+      "genderHint": "red",
+      "plural": "die Zahlen",
+      "pluralGenderHint": "purple"
+    },
+    {
+      "de": "das R?tsel",
+      "en": "riddle",
+      "category": "general",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "das",
+      "gender": "neuter",
+      "genderHint": "green"
+    },
+    {
+      "de": "richtig",
+      "en": "correct",
+      "category": "adjective",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ]
+    },
+    {
+      "de": "falsch",
+      "en": "incorrect",
+      "category": "adjective",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ]
+    },
+    {
+      "de": "beruflich",
+      "en": "professionally",
+      "category": "adverb",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ]
+    },
+    {
+      "de": "der Beruf",
+      "en": "profession",
+      "category": "berufe",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "der",
+      "gender": "masculine",
+      "genderHint": "blue",
+      "plural": "die Berufe",
+      "pluralGenderHint": "purple"
+    },
+    {
+      "de": "der Job",
+      "en": "job",
+      "category": "berufe",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "der",
+      "gender": "masculine",
+      "genderHint": "blue",
+      "plural": "die Jobs",
+      "pluralGenderHint": "purple"
+    },
+    {
+      "de": "die Stelle",
+      "en": "position / job",
+      "category": "berufe",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "die",
+      "gender": "feminine",
+      "genderHint": "red",
+      "plural": "die Stellen",
+      "pluralGenderHint": "purple"
+    },
+    {
+      "de": "die Firma",
+      "en": "company",
+      "category": "work",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "die",
+      "gender": "feminine",
+      "genderHint": "red",
+      "plural": "die Firmen",
+      "pluralGenderHint": "purple"
+    },
+    {
+      "de": "die Speditionsfirma",
+      "en": "shipping company",
+      "category": "work",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "die",
+      "gender": "feminine",
+      "genderHint": "red",
+      "plural": "die Speditionsfirmen",
+      "pluralGenderHint": "purple"
+    },
+    {
+      "de": "die Ausbildung",
+      "en": "vocational training",
+      "category": "education",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "die",
+      "gender": "feminine",
+      "genderHint": "red",
+      "plural": "die Ausbildungen",
+      "pluralGenderHint": "purple"
+    },
+    {
+      "de": "das Praktikum",
+      "en": "internship",
+      "category": "education",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "das",
+      "gender": "neuter",
+      "genderHint": "green",
+      "plural": "die Praktika",
+      "pluralGenderHint": "purple"
+    },
+    {
+      "de": "das Studium",
+      "en": "university studies",
+      "category": "education",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "das",
+      "gender": "neuter",
+      "genderHint": "green"
+    },
+    {
+      "de": "die Herkunft",
+      "en": "origin",
+      "category": "personal",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "die",
+      "gender": "feminine",
+      "genderHint": "red"
+    },
+    {
+      "de": "der Wohnort",
+      "en": "place of residence",
+      "category": "personal",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "der",
+      "gender": "masculine",
+      "genderHint": "blue",
+      "plural": "die Wohnorte",
+      "pluralGenderHint": "purple"
+    },
+    {
+      "de": "das Alter",
+      "en": "age",
+      "category": "personal",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "das",
+      "gender": "neuter",
+      "genderHint": "green"
+    },
+    {
+      "de": "der Familienstand",
+      "en": "marital status",
+      "category": "personal",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "der",
+      "gender": "masculine",
+      "genderHint": "blue"
+    },
+    {
+      "de": "der Paketzusteller",
+      "en": "parcel delivery person (m)",
+      "category": "berufe",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "der",
+      "gender": "masculine",
+      "genderHint": "blue",
+      "berufeRef": 6
+    },
+    {
+      "de": "die Paketzustellerin",
+      "en": "parcel delivery person (f)",
+      "category": "berufe",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "die",
+      "gender": "feminine",
+      "genderHint": "red",
+      "plural": "die Paketzustellerinnen",
+      "pluralGenderHint": "purple"
+    },
+    {
+      "de": "der Friseur",
+      "en": "hairdresser (m)",
+      "category": "berufe",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "der",
+      "gender": "masculine",
+      "genderHint": "blue",
+      "plural": "die Friseure",
+      "pluralGenderHint": "purple",
+      "berufeRef": 5
+    },
+    {
+      "de": "die Friseurin",
+      "en": "hairdresser (f)",
+      "category": "berufe",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "die",
+      "gender": "feminine",
+      "genderHint": "red",
+      "plural": "die Friseurinnen",
+      "pluralGenderHint": "purple",
+      "berufeRef": 5
+    },
+    {
+      "de": "der Kellner",
+      "en": "waiter",
+      "category": "berufe",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "der",
+      "gender": "masculine",
+      "genderHint": "blue",
+      "plural": "die Kellner",
+      "pluralGenderHint": "purple",
+      "berufeRef": 17
+    },
+    {
+      "de": "die Kellnerin",
+      "en": "waitress",
+      "category": "berufe",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "die",
+      "gender": "feminine",
+      "genderHint": "red",
+      "plural": "die Kellnerinnen",
+      "pluralGenderHint": "purple",
+      "berufeRef": 17
+    },
+    {
+      "de": "der Ingenieur",
+      "en": "engineer (m)",
+      "category": "berufe",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "der",
+      "gender": "masculine",
+      "genderHint": "blue",
+      "plural": "die Ingenieure",
+      "pluralGenderHint": "purple",
+      "berufeRef": 24
+    },
+    {
+      "de": "die Ingenieurin",
+      "en": "engineer (f)",
+      "category": "berufe",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "die",
+      "gender": "feminine",
+      "genderHint": "red",
+      "plural": "die Ingenieurinnen",
+      "pluralGenderHint": "purple",
+      "berufeRef": 24
+    },
+    {
+      "de": "der Kfz-Mechatroniker",
+      "en": "auto mechatronics tech (m)",
+      "category": "berufe",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "der",
+      "gender": "masculine",
+      "genderHint": "blue"
+    },
+    {
+      "de": "die Kfz-Mechatronikerin",
+      "en": "auto mechatronics tech (f)",
+      "category": "berufe",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "die",
+      "gender": "feminine",
+      "genderHint": "red",
+      "plural": "die Kfz-Mechatronikerinnen",
+      "pluralGenderHint": "purple"
+    },
+    {
+      "de": "der Student",
+      "en": "student (m)",
+      "category": "berufe",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "der",
+      "gender": "masculine",
+      "genderHint": "blue",
+      "plural": "die Studenten",
+      "pluralGenderHint": "purple"
+    },
+    {
+      "de": "die Studentin",
+      "en": "student (f)",
+      "category": "berufe",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "die",
+      "gender": "feminine",
+      "genderHint": "red",
+      "plural": "die Studentinnen",
+      "pluralGenderHint": "purple"
+    },
+    {
+      "de": "der Journalist",
+      "en": "journalist (m)",
+      "category": "berufe",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "der",
+      "gender": "masculine",
+      "genderHint": "blue",
+      "plural": "die Journalisten",
+      "pluralGenderHint": "purple",
+      "berufeRef": 46
+    },
+    {
+      "de": "die Journalistin",
+      "en": "journalist (f)",
+      "category": "berufe",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "die",
+      "gender": "feminine",
+      "genderHint": "red",
+      "plural": "die Journalistinnen",
+      "pluralGenderHint": "purple",
+      "berufeRef": 46
+    },
+    {
+      "de": "der Architekt",
+      "en": "architect (m)",
+      "category": "berufe",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "der",
+      "gender": "masculine",
+      "genderHint": "blue",
+      "plural": "die Architekten",
+      "pluralGenderHint": "purple",
+      "berufeRef": 12
+    },
+    {
+      "de": "die Architektin",
+      "en": "architect (f)",
+      "category": "berufe",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "die",
+      "gender": "feminine",
+      "genderHint": "red",
+      "plural": "die Architektinnen",
+      "pluralGenderHint": "purple",
+      "berufeRef": 12
+    },
+    {
+      "de": "der Arzt",
+      "en": "doctor (m)",
+      "category": "berufe",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "der",
+      "gender": "masculine",
+      "genderHint": "blue",
+      "plural": "die ?rzte",
+      "pluralGenderHint": "purple",
+      "berufeRef": 23
+    },
+    {
+      "de": "die ?rztin",
+      "en": "doctor (f)",
+      "category": "berufe",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "die",
+      "gender": "feminine",
+      "genderHint": "red",
+      "plural": "die ?rztinnen",
+      "pluralGenderHint": "purple",
+      "berufeRef": 23
+    },
+    {
+      "de": "der Lehrer",
+      "en": "teacher (m)",
+      "category": "berufe",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "der",
+      "gender": "masculine",
+      "genderHint": "blue",
+      "plural": "die Lehrer",
+      "pluralGenderHint": "purple",
+      "berufeRef": 13
+    },
+    {
+      "de": "die Lehrerin",
+      "en": "teacher (f)",
+      "category": "berufe",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "die",
+      "gender": "feminine",
+      "genderHint": "red",
+      "plural": "die Lehrerinnen",
+      "pluralGenderHint": "purple",
+      "berufeRef": 13
+    },
+    {
+      "de": "der Verk?ufer",
+      "en": "shop assistant (m)",
+      "category": "berufe",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "der",
+      "gender": "masculine",
+      "genderHint": "blue",
+      "plural": "die Verk?ufer",
+      "pluralGenderHint": "purple",
+      "berufeRef": 19
+    },
+    {
+      "de": "die Verk?uferin",
+      "en": "shop assistant (f)",
+      "category": "berufe",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "die",
+      "gender": "feminine",
+      "genderHint": "red",
+      "plural": "die Verk?uferinnen",
+      "pluralGenderHint": "purple",
+      "berufeRef": 19
+    },
+    {
+      "de": "der Sch?ler",
+      "en": "pupil (m)",
+      "category": "education",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "der",
+      "gender": "masculine",
+      "genderHint": "blue",
+      "plural": "die Sch?ler",
+      "pluralGenderHint": "purple"
+    },
+    {
+      "de": "die Sch?lerin",
+      "en": "pupil (f)",
+      "category": "education",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "die",
+      "gender": "feminine",
+      "genderHint": "red",
+      "plural": "die Sch?lerinnen",
+      "pluralGenderHint": "purple"
+    },
+    {
+      "de": "der Rentner",
+      "en": "retiree (m)",
+      "category": "berufe",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "der",
+      "gender": "masculine",
+      "genderHint": "blue",
+      "plural": "die Rentner",
+      "pluralGenderHint": "purple"
+    },
+    {
+      "de": "die Rentnerin",
+      "en": "retiree (f)",
+      "category": "berufe",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "die",
+      "gender": "feminine",
+      "genderHint": "red",
+      "plural": "die Rentnerinnen",
+      "pluralGenderHint": "purple"
+    },
+    {
+      "de": "die Krankenschwester",
+      "en": "nurse (f)",
+      "category": "berufe",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "die",
+      "gender": "feminine",
+      "genderHint": "red",
+      "plural": "die Krankenschwestern",
+      "pluralGenderHint": "purple",
+      "berufeRef": 28
+    },
+    {
+      "de": "das Tier",
+      "en": "animal",
+      "category": "general",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "das",
+      "gender": "neuter",
+      "genderHint": "green",
+      "plural": "die Tiere",
+      "pluralGenderHint": "purple"
+    },
+    {
+      "de": "der Tierarzt",
+      "en": "veterinarian (m)",
+      "category": "berufe",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "der",
+      "gender": "masculine",
+      "genderHint": "blue",
+      "plural": "die Tier?rzte",
+      "pluralGenderHint": "purple",
+      "berufeRef": 34
+    },
+    {
+      "de": "die Tier?rztin",
+      "en": "veterinarian (f)",
+      "category": "berufe",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "die",
+      "gender": "feminine",
+      "genderHint": "red",
+      "plural": "die Tier?rztinnen",
+      "pluralGenderHint": "purple",
+      "berufeRef": 34
+    },
+    {
+      "de": "der Schauspieler",
+      "en": "actor",
+      "category": "berufe",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "der",
+      "gender": "masculine",
+      "genderHint": "blue",
+      "plural": "die Schauspieler",
+      "pluralGenderHint": "purple",
+      "berufeRef": 20
+    },
+    {
+      "de": "die Schauspielerin",
+      "en": "actress",
+      "category": "berufe",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "die",
+      "gender": "feminine",
+      "genderHint": "red",
+      "plural": "die Schauspielerinnen",
+      "pluralGenderHint": "purple",
+      "berufeRef": 20
+    },
+    {
+      "de": "der S?nger",
+      "en": "singer (m)",
+      "category": "berufe",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "der",
+      "gender": "masculine",
+      "genderHint": "blue",
+      "plural": "die S?nger",
+      "pluralGenderHint": "purple",
+      "berufeRef": 33
+    },
+    {
+      "de": "die S?ngerin",
+      "en": "singer (f)",
+      "category": "berufe",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "die",
+      "gender": "feminine",
+      "genderHint": "red",
+      "plural": "die S?ngerinnen",
+      "pluralGenderHint": "purple",
+      "berufeRef": 33
+    },
+    {
+      "de": "die Oper",
+      "en": "opera",
+      "category": "culture",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "article": "die",
+      "gender": "feminine",
+      "genderHint": "red",
+      "plural": "die Opern",
+      "pluralGenderHint": "purple"
+    },
+    {
+      "de": "als",
+      "en": "as (profession)",
+      "category": "preposition",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ]
+    },
+    {
+      "de": "bei",
+      "en": "at / for (company)",
+      "category": "preposition",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ]
+    },
+    {
+      "de": "in",
+      "en": "in",
+      "category": "preposition",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ]
+    },
+    {
+      "de": "f?r",
+      "en": "for",
+      "category": "preposition",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ]
+    },
+    {
+      "de": "vielen Dank",
+      "en": "thank you very much",
+      "category": "phrase",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ]
+    },
+    {
+      "de": "Schon fertig?",
+      "en": "Already finished?",
+      "category": "phrase",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ]
+    },
+    {
+      "de": "null",
+      "en": "zero",
+      "category": "numbers",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ]
+    },
+    {
+      "de": "eins",
+      "en": "one",
+      "category": "numbers",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ]
+    },
+    {
+      "de": "zw?lf",
+      "en": "twelve",
+      "category": "numbers",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ]
+    },
+    {
+      "de": "vierzehn",
+      "en": "fourteen",
+      "category": "numbers",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ]
+    },
+    {
+      "de": "achtzehn",
+      "en": "eighteen",
+      "category": "numbers",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ]
+    },
+    {
+      "de": "neunzehn",
+      "en": "nineteen",
+      "category": "numbers",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ]
+    },
+    {
+      "de": "zwanzig",
+      "en": "twenty",
+      "category": "numbers",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ]
+    },
+    {
+      "de": "einundzwanzig",
+      "en": "twenty-one",
+      "category": "numbers",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ]
+    },
+    {
+      "de": "drei?ig",
+      "en": "thirty",
+      "category": "numbers",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ]
+    },
+    {
+      "de": "vierzig",
+      "en": "forty",
+      "category": "numbers",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ]
+    },
+    {
+      "de": "f?nfzig",
+      "en": "fifty",
+      "category": "numbers",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ]
+    },
+    {
+      "de": "sechzig",
+      "en": "sixty",
+      "category": "numbers",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ]
+    },
+    {
+      "de": "achtzig",
+      "en": "eighty",
+      "category": "numbers",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ]
+    },
+    {
+      "de": "neunzig",
+      "en": "ninety",
+      "category": "numbers",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ]
+    },
+    {
+      "de": "(ein)hundert",
+      "en": "one hundred",
+      "category": "numbers",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ]
+    },
+    {
+      "de": "Mexiko",
+      "en": "Mexico",
+      "category": "countries",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ]
+    },
+    {
+      "de": "Portugal",
+      "en": "Portugal",
+      "category": "countries",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ]
+    },
+    {
+      "de": "Augsburg",
+      "en": "Augsburg",
+      "category": "cities",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ]
+    },
+    {
+      "de": "M?nchen",
+      "en": "Munich",
+      "category": "cities",
+      "lesson": 2,
+      "source": [
+        "glossary",
+        "kursbuch"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "de": "Wie alt seid ihr?",
+      "en": "How old are you (pl.)?",
+      "category": "questions",
+      "formality": "informal"
+    },
+    {
+      "de": "Ich bin 28 Jahre alt.",
+      "en": "I am 28 years old.",
+      "category": "answers"
+    },
+    {
+      "de": "Lebt ihr zusammen?",
+      "en": "Do you live together?",
+      "category": "questions"
+    },
+    {
+      "de": "Ja, wir leben zusammen.",
+      "en": "Yes, we live together.",
+      "category": "answers"
+    },
+    {
+      "de": "Wir sind nicht verheiratet.",
+      "en": "We are not married.",
+      "category": "answers"
+    },
+    {
+      "de": "Wir haben keine Kinder.",
+      "en": "We have no children.",
+      "category": "answers"
+    },
+    {
+      "de": "Wo wohnt ihr?",
+      "en": "Where do you (pl.) live?",
+      "category": "questions"
+    },
+    {
+      "de": "Wir wohnen in M?nchen.",
+      "en": "We live in Munich.",
+      "category": "answers"
+    },
+    {
+      "de": "Was macht ihr beruflich?",
+      "en": "What do you do professionally?",
+      "category": "questions"
+    },
+    {
+      "de": "Was bist du von Beruf?",
+      "en": "What is your profession? (informal)",
+      "category": "questions"
+    },
+    {
+      "de": "Was sind Sie von Beruf?",
+      "en": "What is your profession? (formal)",
+      "category": "questions"
+    },
+    {
+      "de": "Und was seid ihr von Beruf?",
+      "en": "And what are your professions? (pl.)",
+      "category": "questions"
+    },
+    {
+      "de": "Was ist sie von Beruf?",
+      "en": "What is her profession?",
+      "category": "questions"
+    },
+    {
+      "de": "Ich bin Paketzusteller und arbeite bei HotSped.",
+      "en": "I am a parcel delivery person and work at HotSped.",
+      "category": "answers"
+    },
+    {
+      "de": "Ich habe zwei Jobs.",
+      "en": "I have two jobs.",
+      "category": "answers"
+    },
+    {
+      "de": "Ich arbeite als Friseurin und als Kellnerin.",
+      "en": "I work as a hairdresser and as a waitress.",
+      "category": "answers"
+    },
+    {
+      "de": "Vielen Dank f?r das Interview!",
+      "en": "Thank you very much for the interview!",
+      "category": "communication"
+    },
+    {
+      "de": "Ich bin ? von Beruf.",
+      "en": "I am a ? by profession.",
+      "category": "patterns"
+    },
+    {
+      "de": "Ich arbeite als ?",
+      "en": "I work as a ?",
+      "category": "patterns"
+    },
+    {
+      "de": "Ich habe eine Stelle / einen Job als ?",
+      "en": "I have a position / job as ?",
+      "category": "patterns"
+    },
+    {
+      "de": "Ich studiere Medizin.",
+      "en": "I study medicine.",
+      "category": "patterns"
+    },
+    {
+      "de": "Ich bin Sch?ler. / Studentin. / Kellner. / Rentnerin.",
+      "en": "I am a pupil / student / waiter / retiree.",
+      "category": "patterns"
+    },
+    {
+      "de": "Ich mache eine Ausbildung / ein Praktikum als ?",
+      "en": "I am doing training / an internship as ?",
+      "category": "patterns"
+    },
+    {
+      "de": "Ich arbeite im Moment nicht.",
+      "en": "I am not working at the moment.",
+      "category": "patterns"
+    },
+    {
+      "de": "Ich bin Single und habe keine Kinder.",
+      "en": "I am single and have no children.",
+      "category": "answers"
+    },
+    {
+      "de": "Ich wohne jetzt in Augsburg.",
+      "en": "I now live in Augsburg.",
+      "category": "answers"
+    },
+    {
+      "de": "Ich habe einen Job als Verk?ufer.",
+      "en": "I have a job as a shop assistant.",
+      "category": "answers"
+    },
+    {
+      "de": "Was machst du beruflich?",
+      "en": "What do you do professionally? (sg.)",
+      "category": "questions"
+    },
+    {
+      "de": "Ich bin ?rztin. Was bist du von Beruf?",
+      "en": "I am a doctor. What is your profession?",
+      "category": "dialogue-cue"
+    },
+    {
+      "de": "Du bist Paketzusteller!",
+      "en": "You are a parcel delivery person!",
+      "category": "guessing-game"
+    },
+    {
+      "de": "Sammeln Sie mehr Berufe.",
+      "en": "Collect more professions.",
+      "category": "instruction"
+    }
+  ],
+  "grammar": [
+    {
+      "id": "konjugation-plural",
+      "topic": "Conjugation plural (wir / ihr / sie)",
+      "rule": "Plural subjects use distinct verb forms; ihr often matches er/sie/es for some verbs.",
+      "table": {
+        "wohnen": {
+          "wir": "wohnen",
+          "ihr": "wohnt",
+          "sie": "wohnen"
+        },
+        "leben": {
+          "wir": "leben",
+          "ihr": "lebt",
+          "sie": "leben"
+        },
+        "sein": {
+          "wir": "sind",
+          "ihr": "seid",
+          "sie": "sind"
+        },
+        "haben": {
+          "wir": "haben",
+          "ihr": "habt",
+          "sie": "haben"
+        }
+      },
+      "source": [
+        "kursbuch",
+        "arbeitsbuch"
+      ]
+    },
+    {
+      "id": "konjugation-arbeiten",
+      "topic": "Conjugation arbeiten",
+      "rule": "Stem + t for er/sie/es; -est for du.",
+      "table": {
+        "ich": "arbeite",
+        "du": "arbeitest",
+        "er/sie/es": "arbeitet",
+        "wir": "arbeiten",
+        "ihr": "arbeitet",
+        "sie/Sie": "arbeiten"
+      },
+      "source": [
+        "kursbuch"
+      ]
+    },
+    {
+      "id": "negation-nicht",
+      "topic": "Negation mit nicht",
+      "rule": "Place nicht after the verb or verb phrase to negate.",
+      "examples": [
+        "Wir sind nicht verheiratet.",
+        "Wir haben keine Kinder.",
+        "Sie hei?t nicht Natalie. Sie hei?t Natascha."
+      ],
+      "source": [
+        "kursbuch",
+        "arbeitsbuch"
+      ]
+    },
+    {
+      "id": "praepositionen-beruf",
+      "topic": "Prepositions als, bei, in",
+      "rule": "als + profession (no article); bei + company; in + city.",
+      "examples": [
+        "Ich arbeite als Friseurin.",
+        "Ich arbeite bei HotSped.",
+        "Wir wohnen in M?nchen."
+      ],
+      "source": [
+        "glossary",
+        "kursbuch"
+      ]
+    },
+    {
+      "id": "wortbildung-in",
+      "topic": "Feminine professions (-in)",
+      "rule": "Add -in for feminine form; plural often -innen.",
+      "examples": [
+        {
+          "masc": "der Architekt",
+          "fem": "die Architektin",
+          "femPl": "die Architektinnen"
+        },
+        {
+          "masc": "der Verk?ufer",
+          "fem": "die Verk?uferin",
+          "femPl": "die Verk?uferinnen"
+        }
+      ],
+      "source": [
+        "kursbuch"
+      ]
+    },
+    {
+      "id": "pronouns-wir-ihr",
+      "topic": "Pronouns wir / ihr",
+      "items": [
+        {
+          "de": "wir",
+          "en": "we"
+        },
+        {
+          "de": "ihr",
+          "en": "you (pl. informal)"
+        },
+        {
+          "de": "sie (Pl.)",
+          "en": "they"
+        }
+      ],
+      "source": [
+        "kursbuch"
+      ]
+    },
+    {
+      "id": "zahlen-1-100",
+      "topic": "Numbers 1?100",
+      "rule": "Compound numbers: ones + und + tens (einundzwanzig); -zehn vs -zig pattern.",
+      "examples": [
+        "14 = vierzehn",
+        "18 = achtzehn",
+        "21 = einundzwanzig",
+        "35 = f?nfunddrei?ig",
+        "100 = (ein)hundert"
+      ],
+      "source": [
+        "kursbuch",
+        "loesungen"
+      ]
+    },
+    {
+      "id": "sein-ohne-artikel-beruf",
+      "topic": "Profession after sein (no article)",
+      "rule": "After sein, profession nouns typically appear without an article.",
+      "example": "Ich bin Ingenieur. / Ich bin ?rztin.",
+      "source": [
+        "kursbuch",
+        "prd"
+      ]
+    }
+  ],
+  "verbs": [
+    {
+      "infinitive": "wohnen",
+      "en": "to live / reside",
+      "lesson": 2,
+      "conjugations": [
+        {
+          "pronoun": "ich",
+          "form": "wohne"
+        },
+        {
+          "pronoun": "du",
+          "form": "wohnst"
+        },
+        {
+          "pronoun": "er/sie/es",
+          "form": "wohnt"
+        },
+        {
+          "pronoun": "wir",
+          "form": "wohnen"
+        },
+        {
+          "pronoun": "ihr",
+          "form": "wohnt"
+        },
+        {
+          "pronoun": "sie/Sie",
+          "form": "wohnen"
+        }
+      ]
+    },
+    {
+      "infinitive": "leben",
+      "en": "to live",
+      "lesson": 2,
+      "conjugations": [
+        {
+          "pronoun": "ich",
+          "form": "lebe"
+        },
+        {
+          "pronoun": "du",
+          "form": "lebst"
+        },
+        {
+          "pronoun": "er/sie/es",
+          "form": "lebt"
+        },
+        {
+          "pronoun": "wir",
+          "form": "leben"
+        },
+        {
+          "pronoun": "ihr",
+          "form": "lebt"
+        },
+        {
+          "pronoun": "sie/Sie",
+          "form": "leben"
+        }
+      ]
+    },
+    {
+      "infinitive": "haben",
+      "en": "to have",
+      "lesson": 2,
+      "note": "Plural forms introduced in L2",
+      "conjugations": [
+        {
+          "pronoun": "ich",
+          "form": "habe"
+        },
+        {
+          "pronoun": "du",
+          "form": "hast"
+        },
+        {
+          "pronoun": "er/sie/es",
+          "form": "hat"
+        },
+        {
+          "pronoun": "wir",
+          "form": "haben"
+        },
+        {
+          "pronoun": "ihr",
+          "form": "habt"
+        },
+        {
+          "pronoun": "sie/Sie",
+          "form": "haben"
+        }
+      ]
+    },
+    {
+      "infinitive": "sein",
+      "en": "to be",
+      "lesson": 2,
+      "note": "Plural forms introduced in L2",
+      "conjugations": [
+        {
+          "pronoun": "ich",
+          "form": "bin"
+        },
+        {
+          "pronoun": "du",
+          "form": "bist"
+        },
+        {
+          "pronoun": "er/sie/es",
+          "form": "ist"
+        },
+        {
+          "pronoun": "wir",
+          "form": "sind"
+        },
+        {
+          "pronoun": "ihr",
+          "form": "seid"
+        },
+        {
+          "pronoun": "sie/Sie",
+          "form": "sind"
+        }
+      ]
+    },
+    {
+      "infinitive": "arbeiten",
+      "en": "to work",
+      "lesson": 2,
+      "conjugations": [
+        {
+          "pronoun": "ich",
+          "form": "arbeite"
+        },
+        {
+          "pronoun": "du",
+          "form": "arbeitest"
+        },
+        {
+          "pronoun": "er/sie/es",
+          "form": "arbeitet"
+        },
+        {
+          "pronoun": "wir",
+          "form": "arbeiten"
+        },
+        {
+          "pronoun": "ihr",
+          "form": "arbeitet"
+        },
+        {
+          "pronoun": "sie/Sie",
+          "form": "arbeiten"
+        }
+      ]
+    },
+    {
+      "infinitive": "machen",
+      "en": "to do / make",
+      "lesson": 2,
+      "conjugations": [
+        {
+          "pronoun": "ich",
+          "form": "mache"
+        },
+        {
+          "pronoun": "du",
+          "form": "machst"
+        },
+        {
+          "pronoun": "er/sie/es",
+          "form": "macht"
+        }
+      ]
+    },
+    {
+      "infinitive": "studieren",
+      "en": "to study (university)",
+      "lesson": 2,
+      "conjugations": [
+        {
+          "pronoun": "ich",
+          "form": "studiere"
+        },
+        {
+          "pronoun": "du",
+          "form": "studierst"
+        },
+        {
+          "pronoun": "er/sie/es",
+          "form": "studiert"
+        }
+      ]
+    }
+  ],
+  "dialogues": [
+    {
+      "id": "lydia-arno-interview",
+      "title": "Interview ? Lydia und Arno",
+      "source": "Kursbuch KB 2, AB 1?3",
+      "audio": "l2-berufe-dialogue",
+      "lines": [
+        {
+          "speaker": "Q",
+          "de": "Wie hei?t du?",
+          "en": "What's your name?"
+        },
+        {
+          "speaker": "Lydia",
+          "de": "Ich hei?e Lydia. Und das ist Arno, mein Partner.",
+          "en": "My name is Lydia. And this is Arno, my partner."
+        },
+        {
+          "speaker": "Q",
+          "de": "Und wie alt seid ihr?",
+          "en": "And how old are you?"
+        },
+        {
+          "speaker": "Lydia",
+          "de": "Ich bin 28 Jahre alt.",
+          "en": "I am 28 years old."
+        },
+        {
+          "speaker": "Arno",
+          "de": "Ich bin auch 28.",
+          "en": "I am also 28."
+        },
+        {
+          "speaker": "Q",
+          "de": "Lebt ihr zusammen?",
+          "en": "Do you live together?"
+        },
+        {
+          "speaker": "Lydia",
+          "de": "Ja, wir leben zusammen.",
+          "en": "Yes, we live together."
+        },
+        {
+          "speaker": "Arno",
+          "de": "Aber wir sind nicht verheiratet ?",
+          "en": "But we are not married ?"
+        },
+        {
+          "speaker": "Lydia",
+          "de": "? und wir haben keine Kinder.",
+          "en": "? and we have no children."
+        },
+        {
+          "speaker": "Q",
+          "de": "Wo wohnt ihr?",
+          "en": "Where do you live?"
+        },
+        {
+          "speaker": "Arno",
+          "de": "Wir wohnen in M?nchen.",
+          "en": "We live in Munich."
+        }
+      ]
+    },
+    {
+      "id": "lydia-arno-berufe",
+      "title": "Was macht ihr beruflich?",
+      "source": "Kursbuch KB 5?6, AB 13",
+      "audio": "l2-berufe-6a",
+      "lines": [
+        {
+          "speaker": "Q",
+          "de": "Was macht ihr beruflich?",
+          "en": "What do you do professionally?"
+        },
+        {
+          "speaker": "Arno",
+          "de": "Ich bin Paketzusteller und arbeite bei HotSped.",
+          "en": "I am a parcel delivery person and work at HotSped."
+        },
+        {
+          "speaker": "Q",
+          "de": "HotSped ist eine Speditionsfirma, oder?",
+          "en": "HotSped is a shipping company, right?"
+        },
+        {
+          "speaker": "Arno",
+          "de": "Richtig!",
+          "en": "Correct!"
+        },
+        {
+          "speaker": "Q",
+          "de": "Und was arbeitest du, Lydia?",
+          "en": "And what do you do, Lydia?"
+        },
+        {
+          "speaker": "Lydia",
+          "de": "Ich habe zwei Jobs. Ich arbeite als Friseurin und als Kellnerin.",
+          "en": "I have two jobs. I work as a hairdresser and as a waitress."
+        },
+        {
+          "speaker": "Q",
+          "de": "Vielen Dank f?r das Interview!",
+          "en": "Thank you very much for the interview!"
+        }
+      ]
+    },
+    {
+      "id": "andreas-profil",
+      "title": "Andreas Hader ? Internetprofil",
+      "source": "Kursbuch KB 7, AB 14",
+      "lines": [
+        {
+          "speaker": "Andreas",
+          "de": "Ich hei?e Andreas Hader. Ich bin 21 Jahre alt und komme aus ?sterreich.",
+          "en": "My name is Andreas Hader. I am 21 years old and come from Austria."
+        },
+        {
+          "speaker": "Andreas",
+          "de": "Ich wohne jetzt in Augsburg. Ich bin Single und habe keine Kinder.",
+          "en": "I now live in Augsburg. I am single and have no children."
+        },
+        {
+          "speaker": "Andreas",
+          "de": "Ich bin Student. Ich studiere Medizin und ich habe einen Job als Verk?ufer.",
+          "en": "I am a student. I study medicine and I have a job as a shop assistant."
+        }
+      ]
+    },
+    {
+      "id": "berufe-raten",
+      "title": "Berufe raten (guessing game)",
+      "source": "Kursbuch KB 5c",
+      "lines": [
+        {
+          "speaker": "A",
+          "de": "Du bist Paketzusteller!",
+          "en": "You are a parcel delivery person!"
+        },
+        {
+          "speaker": "B",
+          "de": "Du bist Verk?ufer.",
+          "en": "You are a shop assistant."
+        },
+        {
+          "speaker": "A",
+          "de": "Nein!",
+          "en": "No!"
+        }
+      ]
+    }
+  ],
+  "workbook_refs": [
+    {
+      "ref": "AB-02-1",
+      "abExercise": 1,
+      "kbRef": 2,
+      "abPage": 12,
+      "topic": "wir/ihr conjugation (sein, wohnen, leben, haben)",
+      "tags": [
+        "?G"
+      ]
+    },
+    {
+      "ref": "AB-02-2",
+      "abExercise": 2,
+      "kbRef": 2,
+      "abPage": 12,
+      "topic": "Conjugation table wohnen/leben/haben/sein",
+      "tags": [
+        "?G",
+        "?l"
+      ]
+    },
+    {
+      "ref": "AB-02-3",
+      "abExercise": 3,
+      "kbRef": 2,
+      "abPage": 12,
+      "topic": "Verb forms in sentences",
+      "tags": [
+        "?G"
+      ]
+    },
+    {
+      "ref": "AB-02-4",
+      "abExercise": 4,
+      "kbRef": 3,
+      "abPage": 13,
+      "topic": "Numbers find and note",
+      "tags": [
+        "?G"
+      ]
+    },
+    {
+      "ref": "AB-02-5",
+      "abExercise": 5,
+      "kbRef": 3,
+      "abPage": 13,
+      "topic": "Numbers 1?100 practice",
+      "tags": [
+        "?G"
+      ]
+    },
+    {
+      "ref": "AB-02-6",
+      "abExercise": 6,
+      "kbRef": 3,
+      "abPage": 13,
+      "topic": "Telefonnummern h?ren",
+      "tags": [
+        "?G"
+      ]
+    },
+    {
+      "ref": "AB-02-7",
+      "abExercise": 7,
+      "kbRef": 4,
+      "abPage": 13,
+      "topic": "Familienstand ordnen",
+      "tags": [
+        "?W"
+      ]
+    },
+    {
+      "ref": "AB-02-8",
+      "abExercise": 8,
+      "kbRef": 4,
+      "abPage": 14,
+      "topic": "S?tze mit nicht schreiben",
+      "tags": [
+        "?G"
+      ]
+    },
+    {
+      "ref": "AB-02-9",
+      "abExercise": 9,
+      "kbRef": 4,
+      "abPage": 14,
+      "topic": "Alles falsch ? correct answers",
+      "tags": [
+        "?G"
+      ]
+    },
+    {
+      "ref": "AB-02-10",
+      "abExercise": 10,
+      "kbRef": 5,
+      "abPage": 14,
+      "topic": "Wo und als was arbeiten (als/bei)",
+      "tags": [
+        "?G"
+      ]
+    },
+    {
+      "ref": "AB-02-11",
+      "abExercise": 11,
+      "kbRef": 5,
+      "abPage": 14,
+      "topic": "Bilden Sie acht Berufe",
+      "tags": [
+        "?W"
+      ]
+    },
+    {
+      "ref": "AB-02-12",
+      "abExercise": 12,
+      "kbRef": 5,
+      "abPage": 15,
+      "topic": "Wortakzent Berufe + listening",
+      "tags": [
+        "AUSSPRACHE"
+      ],
+      "audio": "l2-berufe-6a"
+    },
+    {
+      "ref": "AB-02-13",
+      "abExercise": 13,
+      "kbRef": 6,
+      "abPage": 15,
+      "topic": "von Beruf / beruflich phrases ordnen",
+      "tags": [
+        "?K"
+      ]
+    },
+    {
+      "ref": "AB-02-14",
+      "abExercise": 14,
+      "kbRef": 7,
+      "abPage": 15,
+      "topic": "Profil fields (Vorname, Beruf, Studium?)",
+      "tags": [
+        "?W"
+      ]
+    }
+  ],
+  "links": {
+    "teacherLayer": "berufe.json",
+    "berufeCount": 48,
+    "berufeNote": "Full 48-profession m/f/plural table in berufe.json (Notes_260730_040559.txt). Textbook L2 covers subset; teacher layer extends exam set.",
+    "audioMap": "audio-map.json",
+    "relatedLessons": [
+      "lesson-01"
+    ]
+  },
+  "meta": {
+    "extractedAt": "2026-07-30",
+    "extractMethod": "pymupdf + manual structuring",
+    "itemCounts": {
+      "vocabulary": 91,
+      "phrases": 31,
+      "grammar": 8,
+      "verbs": 7,
+      "dialogues": 4,
+      "workbook_refs": 14
+    }
+  }
+}

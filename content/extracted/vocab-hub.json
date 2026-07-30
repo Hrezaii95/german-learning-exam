@@ -1,0 +1,1836 @@
+{
+  "id": "vocab-hub",
+  "level": "A1",
+  "source": [
+    "lesson1.json",
+    "lesson2.json",
+    "berufe.json"
+  ],
+  "topics": [
+    {
+      "id": "alphabet",
+      "title": {
+        "de": "Alphabet",
+        "en": "Alphabet"
+      },
+      "tags": [
+        "alphabet"
+      ],
+      "lesson": 1,
+      "entries": [
+        {
+          "german": "A, B, C... Z, ?, ?, ?, ?",
+          "english": "Alphabet pronunciation",
+          "lesson": 1
+        }
+      ]
+    },
+    {
+      "id": "countries",
+      "title": {
+        "de": "L?nder",
+        "en": "Countries"
+      },
+      "tags": [
+        "countries"
+      ],
+      "entries": [
+        {
+          "german": "Deutschland",
+          "english": "Germany",
+          "lesson": 1
+        },
+        {
+          "german": "?sterreich",
+          "english": "Austria",
+          "lesson": 1
+        },
+        {
+          "german": "Spanien",
+          "english": "Spain",
+          "lesson": 1
+        },
+        {
+          "german": "Frankreich",
+          "english": "France",
+          "lesson": 1
+        },
+        {
+          "german": "Eritrea",
+          "english": "Eritrea",
+          "lesson": 1
+        },
+        {
+          "german": "die Schweiz",
+          "english": "Switzerland",
+          "article": "die",
+          "genderColor": "red",
+          "lesson": 1
+        },
+        {
+          "german": "die T?rkei",
+          "english": "Turkey",
+          "article": "die",
+          "genderColor": "red",
+          "lesson": 1
+        },
+        {
+          "german": "die USA",
+          "english": "USA",
+          "article": "die",
+          "genderColor": "red",
+          "lesson": 1
+        },
+        {
+          "german": "Mexiko",
+          "english": "Mexico",
+          "lesson": 2
+        },
+        {
+          "german": "Portugal",
+          "english": "Portugal",
+          "lesson": 2
+        }
+      ]
+    },
+    {
+      "id": "numbers",
+      "title": {
+        "de": "Zahlen",
+        "en": "Numbers"
+      },
+      "tags": [
+        "numbers"
+      ],
+      "lesson": 2,
+      "entries": [
+        {
+          "german": "die Zahl",
+          "english": "number",
+          "article": "die",
+          "plural": "die Zahlen",
+          "genderColor": "red",
+          "lesson": 2
+        },
+        {
+          "german": "null",
+          "english": "zero",
+          "lesson": 2
+        },
+        {
+          "german": "eins",
+          "english": "one",
+          "lesson": 2
+        },
+        {
+          "german": "zw?lf",
+          "english": "twelve",
+          "lesson": 2
+        },
+        {
+          "german": "vierzehn",
+          "english": "fourteen",
+          "lesson": 2
+        },
+        {
+          "german": "achtzehn",
+          "english": "eighteen",
+          "lesson": 2
+        },
+        {
+          "german": "neunzehn",
+          "english": "nineteen",
+          "lesson": 2
+        },
+        {
+          "german": "zwanzig",
+          "english": "twenty",
+          "lesson": 2
+        },
+        {
+          "german": "einundzwanzig",
+          "english": "twenty-one",
+          "lesson": 2
+        },
+        {
+          "german": "drei?ig",
+          "english": "thirty",
+          "lesson": 2
+        },
+        {
+          "german": "vierzig",
+          "english": "forty",
+          "lesson": 2
+        },
+        {
+          "german": "f?nfzig",
+          "english": "fifty",
+          "lesson": 2
+        },
+        {
+          "german": "sechzig",
+          "english": "sixty",
+          "lesson": 2
+        },
+        {
+          "german": "achtzig",
+          "english": "eighty",
+          "lesson": 2
+        },
+        {
+          "german": "neunzig",
+          "english": "ninety",
+          "lesson": 2
+        },
+        {
+          "german": "(ein)hundert",
+          "english": "one hundred",
+          "lesson": 2
+        }
+      ]
+    },
+    {
+      "id": "berufe",
+      "title": {
+        "de": "Berufe",
+        "en": "Professions"
+      },
+      "tags": [
+        "berufe"
+      ],
+      "lesson": 2,
+      "teacherLayer": "berufe.json",
+      "professions": [
+        {
+          "id": 1,
+          "english": "Electrician",
+          "mascSg": "der Elektriker",
+          "mascPl": "die Elektriker",
+          "femSg": "die Elektrikerin",
+          "femPl": "die Elektrikerinnen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 2,
+          "english": "Gardener",
+          "mascSg": "der Gärtner",
+          "mascPl": "die Gärtner",
+          "femSg": "die Gärtnerin",
+          "femPl": "die Gärtnerinnen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 3,
+          "english": "Auto Mechanic",
+          "mascSg": "der Automechaniker",
+          "mascPl": "die Automechaniker",
+          "femSg": "die Automechanikerin",
+          "femPl": "die Automechanikerinnen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 4,
+          "english": "Bus Driver",
+          "mascSg": "der Busfahrer",
+          "mascPl": "die Busfahrer",
+          "femSg": "die Busfahrerin",
+          "femPl": "die Busfahrerinnen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 5,
+          "english": "Hairdresser",
+          "mascSg": "der Friseur",
+          "mascPl": "die Friseure",
+          "femSg": "die Friseurin",
+          "femPl": "die Friseurinnen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 6,
+          "english": "Street Worker",
+          "mascSg": "der Straßenarbeiter",
+          "mascPl": "die Straßenarbeiter",
+          "femSg": "die Straßenarbeiterin",
+          "femPl": "die Straßenarbeiterinnen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 7,
+          "english": "Baker",
+          "mascSg": "der Bäcker",
+          "mascPl": "die Bäcker",
+          "femSg": "die Bäckerin",
+          "femPl": "die Bäckerinnen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 8,
+          "english": "Bricklayer",
+          "mascSg": "der Maurer",
+          "mascPl": "die Maurer",
+          "femSg": "die Maurerin",
+          "femPl": "die Maurerinnen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 9,
+          "english": "Farmer",
+          "mascSg": "der Landwirt / der Bauer",
+          "mascPl": "die Landwirte / die Bauern",
+          "femSg": "die Landwirtin / die Bäuerin",
+          "femPl": "die Landwirtinnen / die Bäuerinnen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 10,
+          "english": "Photographer",
+          "mascSg": "der Fotograf",
+          "mascPl": "die Fotografen",
+          "femSg": "die Fotografin",
+          "femPl": "die Fotografinnen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 11,
+          "english": "Painter",
+          "mascSg": "der Maler",
+          "mascPl": "die Maler",
+          "femSg": "die Malerin",
+          "femPl": "die Malerinnen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 12,
+          "english": "Architect",
+          "mascSg": "der Architekt",
+          "mascPl": "die Architekten",
+          "femSg": "die Architektin",
+          "femPl": "die Architektinnen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 13,
+          "english": "Teacher",
+          "mascSg": "der Lehrer",
+          "mascPl": "die Lehrer",
+          "femSg": "die Lehrerin",
+          "femPl": "die Lehrerinnen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 14,
+          "english": "Cook / Chef",
+          "mascSg": "der Koch",
+          "mascPl": "die Köche",
+          "femSg": "die Köchin",
+          "femPl": "die Köchinnen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 15,
+          "english": "Refuse Collector",
+          "mascSg": "der Müllwerker",
+          "mascPl": "die Müllwerker",
+          "femSg": "die Müllwerkerin",
+          "femPl": "die Müllwerkerinnen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 16,
+          "english": "Butcher",
+          "mascSg": "der Metzger",
+          "mascPl": "die Metzger",
+          "femSg": "die Metzgerin",
+          "femPl": "die Metzgerinnen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 17,
+          "english": "Waiter / Waitress",
+          "mascSg": "der Kellner",
+          "mascPl": "die Kellner",
+          "femSg": "die Kellnerin",
+          "femPl": "die Kellnerinnen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 18,
+          "english": "Dentist",
+          "mascSg": "der Zahnarzt",
+          "mascPl": "die Zahnärzte",
+          "femSg": "die Zahnärztin",
+          "femPl": "die Zahnärztinnen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 19,
+          "english": "Shop Assistant",
+          "mascSg": "der Verkäufer",
+          "mascPl": "die Verkäufer",
+          "femSg": "die Verkäuferin",
+          "femPl": "die Verkäuferinnen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 20,
+          "english": "Actor / Actress",
+          "mascSg": "der Schauspieler",
+          "mascPl": "die Schauspieler",
+          "femSg": "die Schauspielerin",
+          "femPl": "die Schauspielerinnen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 21,
+          "english": "Artist",
+          "mascSg": "der Künstler",
+          "mascPl": "die Künstler",
+          "femSg": "die Künstlerin",
+          "femPl": "die Künstlerinnen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 22,
+          "english": "Construction Worker",
+          "mascSg": "der Bauarbeiter",
+          "mascPl": "die Bauarbeiter",
+          "femSg": "die Bauarbeiterin",
+          "femPl": "die Bauarbeiterinnen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 23,
+          "english": "Doctor",
+          "mascSg": "der Arzt",
+          "mascPl": "die Ärzte",
+          "femSg": "die Ärztin",
+          "femPl": "die Ärztinnen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 24,
+          "english": "Engineer",
+          "mascSg": "der Ingenieur",
+          "mascPl": "die Ingenieure",
+          "femSg": "die Ingenieurin",
+          "femPl": "die Ingenieurinnen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 25,
+          "english": "Firefighter",
+          "mascSg": "der Feuerwehrmann",
+          "mascPl": "die Feuerwehrmänner",
+          "femSg": "die Feuerwehrfrau",
+          "femPl": "die Feuerwehrfrauen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 26,
+          "english": "Confectioner",
+          "mascSg": "der Konditor",
+          "mascPl": "die Konditoren",
+          "femSg": "die Konditorin",
+          "femPl": "die Konditorinnen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 27,
+          "english": "Housewife / Househusband",
+          "mascSg": "der Hausmann",
+          "mascPl": "die Hausmänner",
+          "femSg": "die Hausfrau",
+          "femPl": "die Hausfrauen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 28,
+          "english": "Nurse",
+          "mascSg": "der Krankenpfleger",
+          "mascPl": "die Krankenpfleger",
+          "femSg": "die Krankenschwester",
+          "femPl": "die Krankenschwestern",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 29,
+          "english": "Airplane Pilot",
+          "mascSg": "der Flugzeugpilot",
+          "mascPl": "die Flugzeugpiloten",
+          "femSg": "die Flugzeugpilotin",
+          "femPl": "die Flugzeugpilotinnen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 30,
+          "english": "Police Officer",
+          "mascSg": "der Polizist",
+          "mascPl": "die Polizisten",
+          "femSg": "die Polizistin",
+          "femPl": "die Polizistinnen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 31,
+          "english": "Postman / Letter Carrier",
+          "mascSg": "der Postbote / der Briefträger",
+          "mascPl": "die Postboten / die Briefträger",
+          "femSg": "die Postbotin / die Briefträgerin",
+          "femPl": "die Postbotinnen / die Briefträgerinnen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 32,
+          "english": "Secretary",
+          "mascSg": "der Sekretär",
+          "mascPl": "die Sekretäre",
+          "femSg": "die Sekretärin",
+          "femPl": "die Sekretärinnen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 33,
+          "english": "Singer",
+          "mascSg": "der Sänger",
+          "mascPl": "die Sänger",
+          "femSg": "die Sängerin",
+          "femPl": "die Sängerinnen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 34,
+          "english": "Veterinarian",
+          "mascSg": "der Tierarzt",
+          "mascPl": "die Tierärzte",
+          "femSg": "die Tierärztin",
+          "femPl": "die Tierärztinnen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 35,
+          "english": "Soldier",
+          "mascSg": "der Soldat",
+          "mascPl": "die Soldaten",
+          "femSg": "die Soldatin",
+          "femPl": "die Soldatinnen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 36,
+          "english": "Carpenter",
+          "mascSg": "der Tischler",
+          "mascPl": "die Tischler",
+          "femSg": "die Tischlerin",
+          "femPl": "die Tischlerinnen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 37,
+          "english": "Businessperson",
+          "mascSg": "der Geschäftsmann",
+          "mascPl": "die Geschäftsleute",
+          "femSg": "die Geschäftsfrau",
+          "femPl": "die Geschäftsfrauen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 38,
+          "english": "Detective",
+          "mascSg": "der Detektiv",
+          "mascPl": "die Detektive",
+          "femSg": "die Detektivin",
+          "femPl": "die Detektivinnen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 39,
+          "english": "Plumber",
+          "mascSg": "der Klempner / der Installateur",
+          "mascPl": "die Klempner / die Installateure",
+          "femSg": "die Klempnerin / die Installateurin",
+          "femPl": "die Klempnerinnen / die Installateurinnen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 40,
+          "english": "Surgeon",
+          "mascSg": "der Chirurg",
+          "mascPl": "die Chirurgen",
+          "femSg": "die Chirurgin",
+          "femPl": "die Chirurginnen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 41,
+          "english": "Writer",
+          "mascSg": "der Schriftsteller",
+          "mascPl": "die Schriftsteller",
+          "femSg": "die Schriftstellerin",
+          "femPl": "die Schriftstellerinnen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 42,
+          "english": "Gas Station Attendant",
+          "mascSg": "der Tankwart",
+          "mascPl": "die Tankwarte",
+          "femSg": "die Tankwartin",
+          "femPl": "die Tankwartinnen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 43,
+          "english": "Secret Agent",
+          "mascSg": "der Geheimagent",
+          "mascPl": "die Geheimagenten",
+          "femSg": "die Geheimagentin",
+          "femPl": "die Geheimagentinnen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 44,
+          "english": "Lawyer",
+          "mascSg": "der Rechtsanwalt",
+          "mascPl": "die Rechtsanwälte",
+          "femSg": "die Rechtsanwältin",
+          "femPl": "die Rechtsanwältinnen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 45,
+          "english": "Judge",
+          "mascSg": "der Richter",
+          "mascPl": "die Richter",
+          "femSg": "die Richterin",
+          "femPl": "die Richterinnen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 46,
+          "english": "Journalist",
+          "mascSg": "der Journalist",
+          "mascPl": "die Journalisten",
+          "femSg": "die Journalistin",
+          "femPl": "die Journalistinnen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 47,
+          "english": "Cleaner",
+          "mascSg": "der Putzmann",
+          "mascPl": "die Putzmänner",
+          "femSg": "die Putzfrau",
+          "femPl": "die Putzfrauen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        },
+        {
+          "id": 48,
+          "english": "Cashier",
+          "mascSg": "der Kassierer",
+          "mascPl": "die Kassierer",
+          "femSg": "die Kassiererin",
+          "femPl": "die Kassiererinnen",
+          "genderColor": {
+            "masc": "blue",
+            "fem": "red",
+            "plural": "purple"
+          },
+          "tags": [
+            "berufe"
+          ],
+          "lesson": 2,
+          "source": "berufe.json"
+        }
+      ],
+      "textbookVocab": [
+        {
+          "german": "der Beruf",
+          "english": "profession",
+          "article": "der",
+          "plural": "die Berufe",
+          "genderColor": "blue",
+          "lesson": 2
+        },
+        {
+          "german": "der Job",
+          "english": "job",
+          "article": "der",
+          "plural": "die Jobs",
+          "genderColor": "blue",
+          "lesson": 2
+        },
+        {
+          "german": "die Stelle",
+          "english": "position / job",
+          "article": "die",
+          "plural": "die Stellen",
+          "genderColor": "red",
+          "lesson": 2
+        },
+        {
+          "german": "der Paketzusteller",
+          "english": "parcel delivery person (m)",
+          "article": "der",
+          "genderColor": "blue",
+          "lesson": 2,
+          "berufeRef": 6
+        },
+        {
+          "german": "die Paketzustellerin",
+          "english": "parcel delivery person (f)",
+          "article": "die",
+          "plural": "die Paketzustellerinnen",
+          "genderColor": "red",
+          "lesson": 2
+        },
+        {
+          "german": "der Friseur",
+          "english": "hairdresser (m)",
+          "article": "der",
+          "plural": "die Friseure",
+          "genderColor": "blue",
+          "lesson": 2,
+          "berufeRef": 5
+        },
+        {
+          "german": "die Friseurin",
+          "english": "hairdresser (f)",
+          "article": "die",
+          "plural": "die Friseurinnen",
+          "genderColor": "red",
+          "lesson": 2,
+          "berufeRef": 5
+        },
+        {
+          "german": "der Kellner",
+          "english": "waiter",
+          "article": "der",
+          "plural": "die Kellner",
+          "genderColor": "blue",
+          "lesson": 2,
+          "berufeRef": 17
+        },
+        {
+          "german": "die Kellnerin",
+          "english": "waitress",
+          "article": "die",
+          "plural": "die Kellnerinnen",
+          "genderColor": "red",
+          "lesson": 2,
+          "berufeRef": 17
+        },
+        {
+          "german": "der Ingenieur",
+          "english": "engineer (m)",
+          "article": "der",
+          "plural": "die Ingenieure",
+          "genderColor": "blue",
+          "lesson": 2,
+          "berufeRef": 24
+        },
+        {
+          "german": "die Ingenieurin",
+          "english": "engineer (f)",
+          "article": "die",
+          "plural": "die Ingenieurinnen",
+          "genderColor": "red",
+          "lesson": 2,
+          "berufeRef": 24
+        },
+        {
+          "german": "der Kfz-Mechatroniker",
+          "english": "auto mechatronics tech (m)",
+          "article": "der",
+          "genderColor": "blue",
+          "lesson": 2
+        },
+        {
+          "german": "die Kfz-Mechatronikerin",
+          "english": "auto mechatronics tech (f)",
+          "article": "die",
+          "plural": "die Kfz-Mechatronikerinnen",
+          "genderColor": "red",
+          "lesson": 2
+        },
+        {
+          "german": "der Student",
+          "english": "student (m)",
+          "article": "der",
+          "plural": "die Studenten",
+          "genderColor": "blue",
+          "lesson": 2
+        },
+        {
+          "german": "die Studentin",
+          "english": "student (f)",
+          "article": "die",
+          "plural": "die Studentinnen",
+          "genderColor": "red",
+          "lesson": 2
+        },
+        {
+          "german": "der Journalist",
+          "english": "journalist (m)",
+          "article": "der",
+          "plural": "die Journalisten",
+          "genderColor": "blue",
+          "lesson": 2,
+          "berufeRef": 46
+        },
+        {
+          "german": "die Journalistin",
+          "english": "journalist (f)",
+          "article": "die",
+          "plural": "die Journalistinnen",
+          "genderColor": "red",
+          "lesson": 2,
+          "berufeRef": 46
+        },
+        {
+          "german": "der Architekt",
+          "english": "architect (m)",
+          "article": "der",
+          "plural": "die Architekten",
+          "genderColor": "blue",
+          "lesson": 2,
+          "berufeRef": 12
+        },
+        {
+          "german": "die Architektin",
+          "english": "architect (f)",
+          "article": "die",
+          "plural": "die Architektinnen",
+          "genderColor": "red",
+          "lesson": 2,
+          "berufeRef": 12
+        },
+        {
+          "german": "der Arzt",
+          "english": "doctor (m)",
+          "article": "der",
+          "plural": "die ?rzte",
+          "genderColor": "blue",
+          "lesson": 2,
+          "berufeRef": 23
+        },
+        {
+          "german": "die ?rztin",
+          "english": "doctor (f)",
+          "article": "die",
+          "plural": "die ?rztinnen",
+          "genderColor": "red",
+          "lesson": 2,
+          "berufeRef": 23
+        },
+        {
+          "german": "der Lehrer",
+          "english": "teacher (m)",
+          "article": "der",
+          "plural": "die Lehrer",
+          "genderColor": "blue",
+          "lesson": 2,
+          "berufeRef": 13
+        },
+        {
+          "german": "die Lehrerin",
+          "english": "teacher (f)",
+          "article": "die",
+          "plural": "die Lehrerinnen",
+          "genderColor": "red",
+          "lesson": 2,
+          "berufeRef": 13
+        },
+        {
+          "german": "der Verk?ufer",
+          "english": "shop assistant (m)",
+          "article": "der",
+          "plural": "die Verk?ufer",
+          "genderColor": "blue",
+          "lesson": 2,
+          "berufeRef": 19
+        },
+        {
+          "german": "die Verk?uferin",
+          "english": "shop assistant (f)",
+          "article": "die",
+          "plural": "die Verk?uferinnen",
+          "genderColor": "red",
+          "lesson": 2,
+          "berufeRef": 19
+        },
+        {
+          "german": "der Rentner",
+          "english": "retiree (m)",
+          "article": "der",
+          "plural": "die Rentner",
+          "genderColor": "blue",
+          "lesson": 2
+        },
+        {
+          "german": "die Rentnerin",
+          "english": "retiree (f)",
+          "article": "die",
+          "plural": "die Rentnerinnen",
+          "genderColor": "red",
+          "lesson": 2
+        },
+        {
+          "german": "die Krankenschwester",
+          "english": "nurse (f)",
+          "article": "die",
+          "plural": "die Krankenschwestern",
+          "genderColor": "red",
+          "lesson": 2,
+          "berufeRef": 28
+        },
+        {
+          "german": "der Tierarzt",
+          "english": "veterinarian (m)",
+          "article": "der",
+          "plural": "die Tier?rzte",
+          "genderColor": "blue",
+          "lesson": 2,
+          "berufeRef": 34
+        },
+        {
+          "german": "die Tier?rztin",
+          "english": "veterinarian (f)",
+          "article": "die",
+          "plural": "die Tier?rztinnen",
+          "genderColor": "red",
+          "lesson": 2,
+          "berufeRef": 34
+        },
+        {
+          "german": "der Schauspieler",
+          "english": "actor",
+          "article": "der",
+          "plural": "die Schauspieler",
+          "genderColor": "blue",
+          "lesson": 2,
+          "berufeRef": 20
+        },
+        {
+          "german": "die Schauspielerin",
+          "english": "actress",
+          "article": "die",
+          "plural": "die Schauspielerinnen",
+          "genderColor": "red",
+          "lesson": 2,
+          "berufeRef": 20
+        },
+        {
+          "german": "der S?nger",
+          "english": "singer (m)",
+          "article": "der",
+          "plural": "die S?nger",
+          "genderColor": "blue",
+          "lesson": 2,
+          "berufeRef": 33
+        },
+        {
+          "german": "die S?ngerin",
+          "english": "singer (f)",
+          "article": "die",
+          "plural": "die S?ngerinnen",
+          "genderColor": "red",
+          "lesson": 2,
+          "berufeRef": 33
+        }
+      ]
+    },
+    {
+      "id": "lesson2-adjective",
+      "title": {
+        "de": "adjective",
+        "en": "Adjective"
+      },
+      "tags": [
+        "adjective",
+        "lesson2"
+      ],
+      "lesson": 2,
+      "entries": [
+        {
+          "german": "alt",
+          "english": "old (age)",
+          "lesson": 2
+        },
+        {
+          "german": "richtig",
+          "english": "correct",
+          "lesson": 2
+        },
+        {
+          "german": "falsch",
+          "english": "incorrect",
+          "lesson": 2
+        }
+      ]
+    },
+    {
+      "id": "lesson2-adverb",
+      "title": {
+        "de": "adverb",
+        "en": "Adverb"
+      },
+      "tags": [
+        "adverb",
+        "lesson2"
+      ],
+      "lesson": 2,
+      "entries": [
+        {
+          "german": "allein",
+          "english": "alone",
+          "lesson": 2
+        },
+        {
+          "german": "zusammen",
+          "english": "together",
+          "lesson": 2
+        },
+        {
+          "german": "beruflich",
+          "english": "professionally",
+          "lesson": 2
+        }
+      ]
+    },
+    {
+      "id": "lesson2-cities",
+      "title": {
+        "de": "cities",
+        "en": "Cities"
+      },
+      "tags": [
+        "cities",
+        "lesson2"
+      ],
+      "lesson": 2,
+      "entries": [
+        {
+          "german": "Augsburg",
+          "english": "Augsburg",
+          "lesson": 2
+        },
+        {
+          "german": "M?nchen",
+          "english": "Munich",
+          "lesson": 2
+        }
+      ]
+    },
+    {
+      "id": "lesson2-communication",
+      "title": {
+        "de": "communication",
+        "en": "Communication"
+      },
+      "tags": [
+        "communication",
+        "lesson2"
+      ],
+      "lesson": 2,
+      "entries": [
+        {
+          "german": "das Interview",
+          "english": "interview",
+          "article": "das",
+          "plural": "die Interviews",
+          "genderColor": "green",
+          "lesson": 2
+        }
+      ]
+    },
+    {
+      "id": "lesson2-culture",
+      "title": {
+        "de": "culture",
+        "en": "Culture"
+      },
+      "tags": [
+        "culture",
+        "lesson2"
+      ],
+      "lesson": 2,
+      "entries": [
+        {
+          "german": "die Oper",
+          "english": "opera",
+          "article": "die",
+          "plural": "die Opern",
+          "genderColor": "red",
+          "lesson": 2
+        }
+      ]
+    },
+    {
+      "id": "lesson2-education",
+      "title": {
+        "de": "education",
+        "en": "Education"
+      },
+      "tags": [
+        "education",
+        "lesson2"
+      ],
+      "lesson": 2,
+      "entries": [
+        {
+          "german": "die Ausbildung",
+          "english": "vocational training",
+          "article": "die",
+          "plural": "die Ausbildungen",
+          "genderColor": "red",
+          "lesson": 2
+        },
+        {
+          "german": "das Praktikum",
+          "english": "internship",
+          "article": "das",
+          "plural": "die Praktika",
+          "genderColor": "green",
+          "lesson": 2
+        },
+        {
+          "german": "das Studium",
+          "english": "university studies",
+          "article": "das",
+          "genderColor": "green",
+          "lesson": 2
+        },
+        {
+          "german": "der Sch?ler",
+          "english": "pupil (m)",
+          "article": "der",
+          "plural": "die Sch?ler",
+          "genderColor": "blue",
+          "lesson": 2
+        },
+        {
+          "german": "die Sch?lerin",
+          "english": "pupil (f)",
+          "article": "die",
+          "plural": "die Sch?lerinnen",
+          "genderColor": "red",
+          "lesson": 2
+        }
+      ]
+    },
+    {
+      "id": "lesson2-familienstand",
+      "title": {
+        "de": "familienstand",
+        "en": "Familienstand"
+      },
+      "tags": [
+        "familienstand",
+        "lesson2"
+      ],
+      "lesson": 2,
+      "entries": [
+        {
+          "german": "verheiratet",
+          "english": "married",
+          "lesson": 2
+        },
+        {
+          "german": "geschieden",
+          "english": "divorced",
+          "lesson": 2
+        },
+        {
+          "german": "der Single",
+          "english": "single (person)",
+          "article": "der",
+          "genderColor": "blue",
+          "lesson": 2
+        }
+      ]
+    },
+    {
+      "id": "lesson2-family",
+      "title": {
+        "de": "family",
+        "en": "Family"
+      },
+      "tags": [
+        "family",
+        "lesson2"
+      ],
+      "lesson": 2,
+      "entries": [
+        {
+          "german": "das Kind",
+          "english": "child",
+          "article": "das",
+          "plural": "die Kinder",
+          "genderColor": "green",
+          "lesson": 2
+        },
+        {
+          "german": "der Partner",
+          "english": "partner (m)",
+          "article": "der",
+          "plural": "die Partner",
+          "genderColor": "blue",
+          "lesson": 2
+        },
+        {
+          "german": "die Partnerin",
+          "english": "partner (f)",
+          "article": "die",
+          "plural": "die Partnerinnen",
+          "genderColor": "red",
+          "lesson": 2
+        }
+      ]
+    },
+    {
+      "id": "lesson2-general",
+      "title": {
+        "de": "general",
+        "en": "General"
+      },
+      "tags": [
+        "general",
+        "lesson2"
+      ],
+      "lesson": 2,
+      "entries": [
+        {
+          "german": "das R?tsel",
+          "english": "riddle",
+          "article": "das",
+          "genderColor": "green",
+          "lesson": 2
+        },
+        {
+          "german": "das Tier",
+          "english": "animal",
+          "article": "das",
+          "plural": "die Tiere",
+          "genderColor": "green",
+          "lesson": 2
+        }
+      ]
+    },
+    {
+      "id": "lesson2-grammar",
+      "title": {
+        "de": "grammar",
+        "en": "Grammar"
+      },
+      "tags": [
+        "grammar",
+        "lesson2"
+      ],
+      "lesson": 2,
+      "entries": [
+        {
+          "german": "kein / keine",
+          "english": "no / not any",
+          "lesson": 2
+        },
+        {
+          "german": "der Satz",
+          "english": "sentence",
+          "article": "der",
+          "plural": "die S?tze",
+          "genderColor": "blue",
+          "lesson": 2
+        },
+        {
+          "german": "der Punkt",
+          "english": "period / point",
+          "article": "der",
+          "plural": "die Punkte",
+          "genderColor": "blue",
+          "lesson": 2
+        }
+      ]
+    },
+    {
+      "id": "lesson2-personal",
+      "title": {
+        "de": "personal",
+        "en": "Personal"
+      },
+      "tags": [
+        "personal",
+        "lesson2"
+      ],
+      "lesson": 2,
+      "entries": [
+        {
+          "german": "die Herkunft",
+          "english": "origin",
+          "article": "die",
+          "genderColor": "red",
+          "lesson": 2
+        },
+        {
+          "german": "der Wohnort",
+          "english": "place of residence",
+          "article": "der",
+          "plural": "die Wohnorte",
+          "genderColor": "blue",
+          "lesson": 2
+        },
+        {
+          "german": "das Alter",
+          "english": "age",
+          "article": "das",
+          "genderColor": "green",
+          "lesson": 2
+        },
+        {
+          "german": "der Familienstand",
+          "english": "marital status",
+          "article": "der",
+          "genderColor": "blue",
+          "lesson": 2
+        }
+      ]
+    },
+    {
+      "id": "lesson2-phrase",
+      "title": {
+        "de": "phrase",
+        "en": "Phrase"
+      },
+      "tags": [
+        "phrase",
+        "lesson2"
+      ],
+      "lesson": 2,
+      "entries": [
+        {
+          "german": "vielen Dank",
+          "english": "thank you very much",
+          "lesson": 2
+        },
+        {
+          "german": "Schon fertig?",
+          "english": "Already finished?",
+          "lesson": 2
+        }
+      ]
+    },
+    {
+      "id": "lesson2-preposition",
+      "title": {
+        "de": "preposition",
+        "en": "Preposition"
+      },
+      "tags": [
+        "preposition",
+        "lesson2"
+      ],
+      "lesson": 2,
+      "entries": [
+        {
+          "german": "als",
+          "english": "as (profession)",
+          "lesson": 2
+        },
+        {
+          "german": "bei",
+          "english": "at / for (company)",
+          "lesson": 2
+        },
+        {
+          "german": "in",
+          "english": "in",
+          "lesson": 2
+        },
+        {
+          "german": "f?r",
+          "english": "for",
+          "lesson": 2
+        }
+      ]
+    },
+    {
+      "id": "lesson2-time",
+      "title": {
+        "de": "time",
+        "en": "Time"
+      },
+      "tags": [
+        "time",
+        "lesson2"
+      ],
+      "lesson": 2,
+      "entries": [
+        {
+          "german": "das Jahr",
+          "english": "year",
+          "article": "das",
+          "plural": "die Jahre",
+          "genderColor": "green",
+          "lesson": 2
+        }
+      ]
+    },
+    {
+      "id": "lesson2-work",
+      "title": {
+        "de": "work",
+        "en": "Work"
+      },
+      "tags": [
+        "work",
+        "lesson2"
+      ],
+      "lesson": 2,
+      "entries": [
+        {
+          "german": "die Firma",
+          "english": "company",
+          "article": "die",
+          "plural": "die Firmen",
+          "genderColor": "red",
+          "lesson": 2
+        },
+        {
+          "german": "die Speditionsfirma",
+          "english": "shipping company",
+          "article": "die",
+          "plural": "die Speditionsfirmen",
+          "genderColor": "red",
+          "lesson": 2
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "topicCount": 19,
+    "berufeCount": 48
+  }
+}

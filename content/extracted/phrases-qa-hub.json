@@ -1,0 +1,685 @@
+{
+  "id": "phrases-qa-hub",
+  "level": "A1",
+  "source": [
+    "lesson1.json",
+    "lesson2.json"
+  ],
+  "topics": [
+    {
+      "id": "introductions",
+      "title": {
+        "de": "Vorstellen",
+        "en": "Introductions"
+      },
+      "lesson": 1,
+      "phrases": [
+        {
+          "de": "Hallo",
+          "en": "Hello",
+          "category": "greetings",
+          "lesson": 1,
+          "formality": null
+        },
+        {
+          "de": "Guten Morgen",
+          "en": "Good morning",
+          "category": "greetings",
+          "lesson": 1,
+          "formality": null
+        },
+        {
+          "de": "Guten Tag",
+          "en": "Good day / Hello",
+          "category": "greetings",
+          "lesson": 1,
+          "formality": null
+        },
+        {
+          "de": "Guten Abend",
+          "en": "Good evening",
+          "category": "greetings",
+          "lesson": 1,
+          "formality": null
+        },
+        {
+          "de": "Tsch?s",
+          "en": "Bye",
+          "category": "goodbyes",
+          "lesson": 1,
+          "formality": null
+        },
+        {
+          "de": "Auf Wiedersehen",
+          "en": "Goodbye",
+          "category": "goodbyes",
+          "lesson": 1,
+          "formality": null
+        },
+        {
+          "de": "Gute Nacht",
+          "en": "Good night",
+          "category": "goodbyes",
+          "lesson": 1,
+          "formality": null
+        },
+        {
+          "de": "Ich hei?e Miriam.",
+          "en": "I am called Miriam.",
+          "category": "answers",
+          "lesson": 1,
+          "formality": null
+        },
+        {
+          "de": "Mein Name ist Vera.",
+          "en": "My name is Vera.",
+          "category": "answers",
+          "lesson": 1,
+          "formality": null
+        },
+        {
+          "de": "Das ist Sergej.",
+          "en": "This is Sergej.",
+          "category": "answers",
+          "lesson": 1,
+          "formality": null
+        },
+        {
+          "de": "Ich bin Rita.",
+          "en": "I am Rita.",
+          "category": "answers",
+          "lesson": 1,
+          "formality": null
+        },
+        {
+          "de": "Ich komme aus Deutschland.",
+          "en": "I come from Germany.",
+          "category": "answers",
+          "lesson": 1,
+          "formality": null
+        },
+        {
+          "de": "Sie kommt aus Eritrea.",
+          "en": "She comes from Eritrea.",
+          "category": "answers",
+          "lesson": 1,
+          "formality": null
+        }
+      ],
+      "qa_pairs": [
+        {
+          "id": "name-informal",
+          "question": {
+            "informal": "Wie hei?t du?",
+            "formal": "Wie hei?en Sie?"
+          },
+          "answers": [
+            {
+              "pattern": "Ich hei?e ?",
+              "variants": [
+                "du hei?t",
+                "er/sie hei?t",
+                "Sie hei?en"
+              ],
+              "examples": [
+                "Ich hei?e Miriam.",
+                "Mein Name ist Vera."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "who-informal",
+          "question": {
+            "informal": "Wer bist du?",
+            "formal": "Wer sind Sie?"
+          },
+          "answers": [
+            {
+              "pattern": "Ich bin ?",
+              "variants": [
+                "Das ist ?"
+              ],
+              "examples": [
+                "Ich bin Rita.",
+                "Das ist Sergej."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "who-is-that",
+          "question": {
+            "de": "Wer ist das?"
+          },
+          "answers": [
+            {
+              "pattern": "Das ist ?",
+              "examples": [
+                "Das ist Sergej."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wellbeing",
+      "title": {
+        "de": "Wie geht's?",
+        "en": "How are you?"
+      },
+      "lesson": 1,
+      "phrases": [
+        {
+          "de": "Super!",
+          "en": "Great!",
+          "category": "wellbeing",
+          "lesson": 1,
+          "formality": null
+        },
+        {
+          "de": "Sehr gut, danke.",
+          "en": "I am doing very well, thank you.",
+          "category": "wellbeing",
+          "lesson": 1,
+          "formality": null
+        },
+        {
+          "de": "Gut, danke.",
+          "en": "I'm fine, thank you.",
+          "category": "wellbeing",
+          "lesson": 1,
+          "formality": null
+        },
+        {
+          "de": "Es geht.",
+          "en": "Not too bad.",
+          "category": "wellbeing",
+          "lesson": 1,
+          "formality": null
+        },
+        {
+          "de": "Nicht so gut.",
+          "en": "Not so well.",
+          "category": "wellbeing",
+          "lesson": 1,
+          "formality": null
+        },
+        {
+          "de": "Gut, danke. Und dir?",
+          "en": "Good, thanks. And you?",
+          "category": "wellbeing",
+          "lesson": 1,
+          "formality": null
+        }
+      ],
+      "qa_pairs": [
+        {
+          "id": "how-are-you",
+          "question": {
+            "informal": "Wie geht's dir?",
+            "formal": "Wie geht's Ihnen?"
+          },
+          "answers": [
+            {
+              "de": "Sehr gut, danke.",
+              "en": "Very well, thanks."
+            },
+            {
+              "de": "Gut, danke.",
+              "en": "Fine, thanks."
+            },
+            {
+              "de": "Es geht.",
+              "en": "Not too bad."
+            },
+            {
+              "de": "Nicht so gut.",
+              "en": "Not so well."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "origins",
+      "title": {
+        "de": "Herkunft",
+        "en": "Origins"
+      },
+      "lesson": 1,
+      "phrases": [
+        {
+          "de": "Woher kommst du?",
+          "en": "Where are you from? (informal)",
+          "category": "questions",
+          "lesson": 1,
+          "formality": null
+        },
+        {
+          "de": "Woher kommen Sie?",
+          "en": "Where are you from? (formal)",
+          "category": "questions",
+          "lesson": 1,
+          "formality": null
+        },
+        {
+          "de": "Ich komme aus Deutschland.",
+          "en": "I come from Germany.",
+          "category": "answers",
+          "lesson": 1,
+          "formality": null
+        },
+        {
+          "de": "Sie kommt aus Eritrea.",
+          "en": "She comes from Eritrea.",
+          "category": "answers",
+          "lesson": 1,
+          "formality": null
+        }
+      ],
+      "qa_pairs": [
+        {
+          "id": "where-from",
+          "question": {
+            "informal": "Woher kommst du?",
+            "formal": "Woher kommen Sie?"
+          },
+          "answers": [
+            {
+              "pattern": "Ich komme aus ?",
+              "variants": [
+                "du kommst aus",
+                "er/sie kommt aus",
+                "Sie kommen aus"
+              ],
+              "examples": [
+                "Ich komme aus Deutschland.",
+                "Sie kommt aus Eritrea."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "personal-details",
+      "title": {
+        "de": "Pers?nliche Angaben",
+        "en": "Personal details"
+      },
+      "lesson": 2,
+      "phrases": [
+        {
+          "de": "Wie alt seid ihr?",
+          "en": "How old are you (pl.)?",
+          "category": "questions",
+          "lesson": 2,
+          "formality": "informal"
+        },
+        {
+          "de": "Ich bin 28 Jahre alt.",
+          "en": "I am 28 years old.",
+          "category": "answers",
+          "lesson": 2,
+          "formality": null
+        },
+        {
+          "de": "Ja, wir leben zusammen.",
+          "en": "Yes, we live together.",
+          "category": "answers",
+          "lesson": 2,
+          "formality": null
+        },
+        {
+          "de": "Wir sind nicht verheiratet.",
+          "en": "We are not married.",
+          "category": "answers",
+          "lesson": 2,
+          "formality": null
+        },
+        {
+          "de": "Wir haben keine Kinder.",
+          "en": "We have no children.",
+          "category": "answers",
+          "lesson": 2,
+          "formality": null
+        },
+        {
+          "de": "Wo wohnt ihr?",
+          "en": "Where do you (pl.) live?",
+          "category": "questions",
+          "lesson": 2,
+          "formality": null
+        },
+        {
+          "de": "Wir wohnen in M?nchen.",
+          "en": "We live in Munich.",
+          "category": "answers",
+          "lesson": 2,
+          "formality": null
+        },
+        {
+          "de": "Ich bin Single und habe keine Kinder.",
+          "en": "I am single and have no children.",
+          "category": "answers",
+          "lesson": 2,
+          "formality": null
+        },
+        {
+          "de": "Ich wohne jetzt in Augsburg.",
+          "en": "I now live in Augsburg.",
+          "category": "answers",
+          "lesson": 2,
+          "formality": null
+        }
+      ],
+      "qa_pairs": [
+        {
+          "id": "age-plural",
+          "question": {
+            "de": "Wie alt seid ihr?"
+          },
+          "answers": [
+            {
+              "pattern": "Ich bin ? Jahre alt.",
+              "examples": [
+                "Ich bin 28 Jahre alt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "live-together",
+          "question": {
+            "de": "Lebt ihr zusammen?"
+          },
+          "answers": [
+            {
+              "de": "Ja, wir leben zusammen.",
+              "en": "Yes, we live together."
+            },
+            {
+              "de": "Wir sind nicht verheiratet.",
+              "en": "We are not married."
+            }
+          ]
+        },
+        {
+          "id": "where-live",
+          "question": {
+            "de": "Wo wohnt ihr?",
+            "informal": "Wo wohnst du?"
+          },
+          "answers": [
+            {
+              "pattern": "Wir wohnen in ?",
+              "variants": [
+                "Ich wohne in ?"
+              ],
+              "examples": [
+                "Wir wohnen in M?nchen.",
+                "Ich wohne jetzt in Augsburg."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "professions",
+      "title": {
+        "de": "Berufe",
+        "en": "Professions"
+      },
+      "lesson": 2,
+      "phrases": [
+        {
+          "de": "Wie alt seid ihr?",
+          "en": "How old are you (pl.)?",
+          "category": "questions",
+          "lesson": 2,
+          "formality": "informal"
+        },
+        {
+          "de": "Ich bin 28 Jahre alt.",
+          "en": "I am 28 years old.",
+          "category": "answers",
+          "lesson": 2,
+          "formality": null
+        },
+        {
+          "de": "Lebt ihr zusammen?",
+          "en": "Do you live together?",
+          "category": "questions",
+          "lesson": 2,
+          "formality": null
+        },
+        {
+          "de": "Ja, wir leben zusammen.",
+          "en": "Yes, we live together.",
+          "category": "answers",
+          "lesson": 2,
+          "formality": null
+        },
+        {
+          "de": "Wir sind nicht verheiratet.",
+          "en": "We are not married.",
+          "category": "answers",
+          "lesson": 2,
+          "formality": null
+        },
+        {
+          "de": "Wir haben keine Kinder.",
+          "en": "We have no children.",
+          "category": "answers",
+          "lesson": 2,
+          "formality": null
+        },
+        {
+          "de": "Wo wohnt ihr?",
+          "en": "Where do you (pl.) live?",
+          "category": "questions",
+          "lesson": 2,
+          "formality": null
+        },
+        {
+          "de": "Wir wohnen in M?nchen.",
+          "en": "We live in Munich.",
+          "category": "answers",
+          "lesson": 2,
+          "formality": null
+        },
+        {
+          "de": "Was macht ihr beruflich?",
+          "en": "What do you do professionally?",
+          "category": "questions",
+          "lesson": 2,
+          "formality": null
+        },
+        {
+          "de": "Was bist du von Beruf?",
+          "en": "What is your profession? (informal)",
+          "category": "questions",
+          "lesson": 2,
+          "formality": null
+        },
+        {
+          "de": "Was sind Sie von Beruf?",
+          "en": "What is your profession? (formal)",
+          "category": "questions",
+          "lesson": 2,
+          "formality": null
+        },
+        {
+          "de": "Und was seid ihr von Beruf?",
+          "en": "And what are your professions? (pl.)",
+          "category": "questions",
+          "lesson": 2,
+          "formality": null
+        },
+        {
+          "de": "Was ist sie von Beruf?",
+          "en": "What is her profession?",
+          "category": "questions",
+          "lesson": 2,
+          "formality": null
+        },
+        {
+          "de": "Ich bin Paketzusteller und arbeite bei HotSped.",
+          "en": "I am a parcel delivery person and work at HotSped.",
+          "category": "answers",
+          "lesson": 2,
+          "formality": null
+        },
+        {
+          "de": "Ich habe zwei Jobs.",
+          "en": "I have two jobs.",
+          "category": "answers",
+          "lesson": 2,
+          "formality": null
+        },
+        {
+          "de": "Ich arbeite als Friseurin und als Kellnerin.",
+          "en": "I work as a hairdresser and as a waitress.",
+          "category": "answers",
+          "lesson": 2,
+          "formality": null
+        },
+        {
+          "de": "Vielen Dank f?r das Interview!",
+          "en": "Thank you very much for the interview!",
+          "category": "communication",
+          "lesson": 2,
+          "formality": null
+        },
+        {
+          "de": "Ich bin ? von Beruf.",
+          "en": "I am a ? by profession.",
+          "category": "patterns",
+          "lesson": 2,
+          "formality": null
+        },
+        {
+          "de": "Ich arbeite als ?",
+          "en": "I work as a ?",
+          "category": "patterns",
+          "lesson": 2,
+          "formality": null
+        },
+        {
+          "de": "Ich habe eine Stelle / einen Job als ?",
+          "en": "I have a position / job as ?",
+          "category": "patterns",
+          "lesson": 2,
+          "formality": null
+        },
+        {
+          "de": "Ich studiere Medizin.",
+          "en": "I study medicine.",
+          "category": "patterns",
+          "lesson": 2,
+          "formality": null
+        },
+        {
+          "de": "Ich bin Sch?ler. / Studentin. / Kellner. / Rentnerin.",
+          "en": "I am a pupil / student / waiter / retiree.",
+          "category": "patterns",
+          "lesson": 2,
+          "formality": null
+        },
+        {
+          "de": "Ich mache eine Ausbildung / ein Praktikum als ?",
+          "en": "I am doing training / an internship as ?",
+          "category": "patterns",
+          "lesson": 2,
+          "formality": null
+        },
+        {
+          "de": "Ich arbeite im Moment nicht.",
+          "en": "I am not working at the moment.",
+          "category": "patterns",
+          "lesson": 2,
+          "formality": null
+        },
+        {
+          "de": "Ich bin Single und habe keine Kinder.",
+          "en": "I am single and have no children.",
+          "category": "answers",
+          "lesson": 2,
+          "formality": null
+        },
+        {
+          "de": "Ich wohne jetzt in Augsburg.",
+          "en": "I now live in Augsburg.",
+          "category": "answers",
+          "lesson": 2,
+          "formality": null
+        },
+        {
+          "de": "Ich habe einen Job als Verk?ufer.",
+          "en": "I have a job as a shop assistant.",
+          "category": "answers",
+          "lesson": 2,
+          "formality": null
+        },
+        {
+          "de": "Was machst du beruflich?",
+          "en": "What do you do professionally? (sg.)",
+          "category": "questions",
+          "lesson": 2,
+          "formality": null
+        },
+        {
+          "de": "Ich bin ?rztin. Was bist du von Beruf?",
+          "en": "I am a doctor. What is your profession?",
+          "category": "dialogue-cue",
+          "lesson": 2,
+          "formality": null
+        }
+      ],
+      "qa_pairs": [
+        {
+          "id": "profession-informal",
+          "question": {
+            "informal": "Was bist du von Beruf?",
+            "formal": "Was sind Sie von Beruf?",
+            "plural": "Was macht ihr beruflich?"
+          },
+          "answers": [
+            {
+              "pattern": "Ich bin ? von Beruf.",
+              "examples": [
+                "Ich bin Paketzusteller und arbeite bei HotSped."
+              ]
+            },
+            {
+              "pattern": "Ich arbeite als ?",
+              "examples": [
+                "Ich arbeite als Friseurin und als Kellnerin."
+              ]
+            },
+            {
+              "pattern": "Ich habe einen Job als ?",
+              "examples": [
+                "Ich habe einen Job als Verk?ufer."
+              ]
+            },
+            {
+              "pattern": "Ich studiere ?",
+              "examples": [
+                "Ich studiere Medizin."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "topicCount": 5,
+    "phraseCount": 61,
+    "qaPairCount": 9
+  }
+}

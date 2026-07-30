@@ -1,0 +1,4754 @@
+{
+  "generated_at": "2026-07-30T05:51:27.171536+00:00",
+  "source_pdf": "Momente_AB_A1_1_Transskriptionen_2.pdf",
+  "source_path": "E:\\claude-cursor\\side projects\\German learning\\Momente_AB_A1_1_Transskriptionen_2.pdf",
+  "extract_method": "pymupdf",
+  "page_count": 19,
+  "entry_count": 117,
+  "audio_linked_count": 110,
+  "audio_map": "audio-map.json",
+  "entries": [
+    {
+      "id": "transcript-1-01",
+      "track_id": "1_01",
+      "book": "AB",
+      "lesson": 1,
+      "exercise": "3",
+      "header_kind": "lektion",
+      "title": "Lektion 1, Übung 3",
+      "lines": [
+        {
+          "speaker": null,
+          "text": "ajunge Frau : Hallo. Wie heißt du? junger Mann : Ich bin Paco Perez. junge Frau : Wie bitte? junger Mann : P - a - c - o … P"
+        },
+        {
+          "speaker": null,
+          "text": "- e - r - e - z. junge Frau : Danke."
+        }
+      ],
+      "raw_text": "Lektion 1, Übung 3\najunge Frau : Hallo. Wie heißt du? junger Mann : Ich bin Paco Perez. junge Frau : Wie bitte? junger Mann : P - a - c - o … P\n- e - r - e - z. junge Frau : Danke.",
+      "line_count": 2,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_01_AB_Momente_A11_1_3.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_01_AB_Momente_A11_1_3.mp3",
+        "lesson": 1,
+        "section": "1 3",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-02",
+      "track_id": "1_02",
+      "book": "AB",
+      "lesson": 1,
+      "exercise": "3",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "junge",
+          "subpart": "b"
+        },
+        {
+          "speaker": "Frau 1",
+          "text": "Und wer bist du?",
+          "subpart": "b"
+        },
+        {
+          "speaker": "junge Frau 2",
+          "text": "Ich bin Leah Poßner.",
+          "subpart": "b"
+        },
+        {
+          "speaker": "junge Frau 1",
+          "text": "Wie bitte?",
+          "subpart": "b"
+        },
+        {
+          "speaker": "junge Frau 2",
+          "text": "L - e - a - h … P",
+          "subpart": "b"
+        },
+        {
+          "speaker": null,
+          "text": "- o - ß - n - e - r.",
+          "subpart": "b"
+        },
+        {
+          "speaker": "junge Frau 1",
+          "text": "Danke.",
+          "subpart": "b"
+        }
+      ],
+      "raw_text": "b\njunge\nFrau 1: Und wer bist du?\njunge Frau 2: Ich bin Leah Poßner.\njunge Frau 1: Wie bitte?\njunge Frau 2: L - e - a - h … P\n- o - ß - n - e - r.\njunge Frau 1: Danke.",
+      "line_count": 7,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_02_AB_Momente_A11_1_3.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_02_AB_Momente_A11_1_3.mp3",
+        "lesson": 1,
+        "section": "1 3",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-03",
+      "track_id": "1_03",
+      "book": "AB",
+      "lesson": 1,
+      "exercise": "3",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "cjunge Frau : Hallo. Wie heißt du? junger Mann : Ich bin Tom Köppen. junge Frau : Wie bitte? junger Mann : T - o - m … K"
+        },
+        {
+          "speaker": null,
+          "text": "- ö - p - p - e - n. junge Frau : Danke."
+        }
+      ],
+      "raw_text": "cjunge Frau : Hallo. Wie heißt du? junger Mann : Ich bin Tom Köppen. junge Frau : Wie bitte? junger Mann : T - o - m … K\n- ö - p - p - e - n. junge Frau : Danke.",
+      "line_count": 2,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_03_AB_Momente_A11_1_3.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_03_AB_Momente_A11_1_3.mp3",
+        "lesson": 1,
+        "section": "1 3",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-04",
+      "track_id": "1_04",
+      "book": "AB",
+      "lesson": 1,
+      "exercise": "3",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": "djunge Frau 1",
+          "text": "Und wer bist du?"
+        },
+        {
+          "speaker": "Junge Frau 2",
+          "text": "Ich bin Aljina Haven."
+        },
+        {
+          "speaker": "junge Frau 1",
+          "text": "Wie bitte?"
+        },
+        {
+          "speaker": "Junge Frau 2",
+          "text": "A - l - j - i - n - a … H"
+        },
+        {
+          "speaker": null,
+          "text": "- a - v - e - n."
+        },
+        {
+          "speaker": "junge Frau 1",
+          "text": "Danke."
+        }
+      ],
+      "raw_text": "djunge Frau 1: Und wer bist du?\nJunge Frau 2: Ich bin Aljina Haven.\njunge Frau 1: Wie bitte?\nJunge Frau 2: A - l - j - i - n - a … H\n- a - v - e - n.\njunge Frau 1: Danke.",
+      "line_count": 6,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_04_AB_Momente_A11_1_3.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_04_AB_Momente_A11_1_3.mp3",
+        "lesson": 1,
+        "section": "1 3",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-05",
+      "track_id": "1_05",
+      "book": "AB",
+      "lesson": 1,
+      "exercise": "9a",
+      "header_kind": "lektion",
+      "title": "Lektion 1, Übung 9a",
+      "lines": [
+        {
+          "speaker": "junge Frau 1",
+          "text": "Wie heißt du? ↘"
+        },
+        {
+          "speaker": "junger Mann 1",
+          "text": "Ich heiße Pedro. ↘ … Und wer bist du? ↗"
+        },
+        {
+          "speaker": "junge Frau 1",
+          "text": "Ich bin Monika. ↘"
+        }
+      ],
+      "raw_text": "Lektion 1, Übung 9a\njunge Frau 1: Wie heißt du? ↘\njunger Mann 1: Ich heiße Pedro. ↘ … Und wer bist du? ↗\njunge Frau 1: Ich bin Monika. ↘",
+      "line_count": 3,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_05_AB_Momente_A11_1_9a.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_05_AB_Momente_A11_1_9a.mp3",
+        "lesson": 1,
+        "section": "1 9a",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-06",
+      "track_id": "1_06",
+      "book": "AB",
+      "lesson": 1,
+      "exercise": "9b",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "bJunger Mann : Hallo. ↘ Junge Frau : Hallo, Peter. ↘ Woher kommst du? ↘ Junger Mann : Ich komme aus Deutschland. ↘ Und du? ↗"
+        }
+      ],
+      "raw_text": "bJunger Mann : Hallo. ↘ Junge Frau : Hallo, Peter. ↘ Woher kommst du? ↘ Junger Mann : Ich komme aus Deutschland. ↘ Und du? ↗",
+      "line_count": 1,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_06_AB_Momente_A11_1_9b.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_06_AB_Momente_A11_1_9b.mp3",
+        "lesson": 1,
+        "section": "1 9b",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-07",
+      "track_id": "1_07",
+      "book": "AB",
+      "lesson": 2,
+      "exercise": "6a",
+      "header_kind": "lektion",
+      "title": "Lektion 2, Übung 6a",
+      "lines": [
+        {
+          "speaker": null,
+          "text": "a089 / 47 92 31 75"
+        }
+      ],
+      "raw_text": "Lektion 2, Übung 6a\na089 / 47 92 31 75",
+      "line_count": 1,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_07_AB_Momente_A11_2_6a.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_07_AB_Momente_A11_2_6a.mp3",
+        "lesson": 2,
+        "section": "2 6a",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-08",
+      "track_id": "1_08",
+      "book": "AB",
+      "lesson": 2,
+      "exercise": "6a",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "b0176 / 34 67 48 11"
+        }
+      ],
+      "raw_text": "b0176 / 34 67 48 11",
+      "line_count": 1,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_08_AB_Momente_A11_2_6a.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_08_AB_Momente_A11_2_6a.mp3",
+        "lesson": 2,
+        "section": "2 6a",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-09",
+      "track_id": "1_09",
+      "book": "AB",
+      "lesson": 2,
+      "exercise": "6a",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "c0221 / 63 03 58 22"
+        }
+      ],
+      "raw_text": "c0221 / 63 03 58 22",
+      "line_count": 1,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_09_AB_Momente_A11_2_6a.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_09_AB_Momente_A11_2_6a.mp3",
+        "lesson": 2,
+        "section": "2 6a",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-10",
+      "track_id": "1_10",
+      "book": "AB",
+      "lesson": 2,
+      "exercise": "6a",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "d08744 / 23 17 09"
+        }
+      ],
+      "raw_text": "d08744 / 23 17 09",
+      "line_count": 1,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_10_AB_Momente_A11_2_6a.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_10_AB_Momente_A11_2_6a.mp3",
+        "lesson": 2,
+        "section": "2 6a",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-11",
+      "track_id": "1_11",
+      "book": "AB",
+      "lesson": 2,
+      "exercise": "6b",
+      "header_kind": "lektion",
+      "title": "Lektion 2, Übung 6b",
+      "lines": [
+        {
+          "speaker": null,
+          "text": "a030 / 58 76 12 05"
+        }
+      ],
+      "raw_text": "Lektion 2, Übung 6b\na030 / 58 76 12 05",
+      "line_count": 1,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_11_AB_Momente_A11_2_6b.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_11_AB_Momente_A11_2_6b.mp3",
+        "lesson": 2,
+        "section": "2 6b",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-12",
+      "track_id": "1_12",
+      "book": "AB",
+      "lesson": 2,
+      "exercise": "6b",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "b0180 / 95 65 17 43"
+        }
+      ],
+      "raw_text": "b0180 / 95 65 17 43",
+      "line_count": 1,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_12_AB_Momente_A11_2_6b.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_12_AB_Momente_A11_2_6b.mp3",
+        "lesson": 2,
+        "section": "2 6b",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-13",
+      "track_id": "1_13",
+      "book": "AB",
+      "lesson": 2,
+      "exercise": "6b",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Transkriptionen zu Momente A1.1 AB | 978-3-19-011791-8| ©2020 Hueber Verlag c0201 / 72 88 26 37"
+        }
+      ],
+      "raw_text": "Transkriptionen zu Momente A1.1 AB | 978-3-19-011791-8| ©2020 Hueber Verlag c0201 / 72 88 26 37",
+      "line_count": 1,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_13_AB_Momente_A11_2_6b.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_13_AB_Momente_A11_2_6b.mp3",
+        "lesson": 2,
+        "section": "2 6b",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-14",
+      "track_id": "1_14",
+      "book": "AB",
+      "lesson": 2,
+      "exercise": "6b",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "d0163 / 21 53 79 56"
+        }
+      ],
+      "raw_text": "d0163 / 21 53 79 56",
+      "line_count": 1,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_14_AB_Momente_A11_2_6b.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_14_AB_Momente_A11_2_6b.mp3",
+        "lesson": 2,
+        "section": "2 6b",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-15",
+      "track_id": "1_15",
+      "book": "AB",
+      "lesson": 2,
+      "exercise": "12",
+      "header_kind": "lektion",
+      "title": "Lektion 2, Übung 12",
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Student – Lehrer – Verkäufer – Friseur – Journalistin – Ingenieur – Architektin – Ärztin – Kellner"
+        }
+      ],
+      "raw_text": "Lektion 2, Übung 12\nStudent – Lehrer – Verkäufer – Friseur – Journalistin – Ingenieur – Architektin – Ärztin – Kellner",
+      "line_count": 1,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_15_AB_Momente_A11_2_12.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_15_AB_Momente_A11_2_12.mp3",
+        "lesson": 2,
+        "section": "2 12",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-16",
+      "track_id": "1_16",
+      "book": "AB",
+      "lesson": 3,
+      "exercise": "7a",
+      "header_kind": "lektion",
+      "title": "Lektion 3, Übung 7a",
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Wer ist das? ↘ 2 Ist das deine Frau? ↗ 3 Bist du verheiratet? ↗ 4 Wie heißt deine Frau? ↘ 5 Heißt deine Frau Steffi? ↗ 6 Was ist sie von Beruf? ↘",
+          "index": 1
+        }
+      ],
+      "raw_text": "Lektion 3, Übung 7a\n1 Wer ist das? ↘ 2 Ist das deine Frau? ↗ 3 Bist du verheiratet? ↗ 4 Wie heißt deine Frau? ↘ 5 Heißt deine Frau Steffi? ↗ 6 Was ist sie von Beruf? ↘",
+      "line_count": 1,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_16_AB_Momente_A11_3_7a.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_16_AB_Momente_A11_3_7a.mp3",
+        "lesson": 3,
+        "section": "3 7a",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-17",
+      "track_id": "1_17",
+      "book": "AB",
+      "lesson": 3,
+      "exercise": "7b",
+      "header_kind": "lektion",
+      "title": "Lektion 3, Übung 7b",
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Mann : Ist das dein Vater? ↗ Frau : Nein. ↘ Das ist nicht mein Vate r. ↘ Das ist mein Onkel. ↘"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Wo wohnt er? ↘ In Deutschland? ↗"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Ja. ↘ Er wohnt in Berlin. ↘"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Ist er verheiratet? ↗"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Nein. ↘ Er ist nicht verheiratet. ↘"
+        }
+      ],
+      "raw_text": "Lektion 3, Übung 7b\nMann : Ist das dein Vater? ↗ Frau : Nein. ↘ Das ist nicht mein Vate r. ↘ Das ist mein Onkel. ↘\nMann: Wo wohnt er? ↘ In Deutschland? ↗\nFrau: Ja. ↘ Er wohnt in Berlin. ↘\nMann: Ist er verheiratet? ↗\nFrau: Nein. ↘ Er ist nicht verheiratet. ↘",
+      "line_count": 5,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_17_AB_Momente_A11_3_7b+c.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_17_AB_Momente_A11_3_7b+c.mp3",
+        "lesson": 3,
+        "section": "3 7b+c",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-18",
+      "track_id": "1_18",
+      "book": "AB",
+      "lesson": 3,
+      "exercise": "14",
+      "header_kind": "lektion",
+      "title": "Lektion 3, Übung 14",
+      "lines": [
+        {
+          "speaker": "Moderator",
+          "text": "Sie heißen Selma Aslan, sind 34 Jahre alt und Sie kommen aus …"
+        },
+        {
+          "speaker": "Frau Aslan",
+          "text": "… aus Deutschland. Mein Name ist aber türkisch. … Meine Eltern kommen aus der Türkei."
+        },
+        {
+          "speaker": "Moderator",
+          "text": "Sprechen Sie sehr gut Türkisch?"
+        },
+        {
+          "speaker": "Frau Aslan",
+          "text": "Ja, ich spreche sehr gut Türkisch."
+        },
+        {
+          "speaker": "Moderator",
+          "text": "Und welche Sprachen sprechen Sie noch?"
+        },
+        {
+          "speaker": "Fr au Aslan",
+          "text": "Ich spreche Deutsch, aber auch Englisch und ein bisschen Spanisch."
+        },
+        {
+          "speaker": "Moderator",
+          "text": "Und was machen Sie beruflich, Frau Aslan?"
+        },
+        {
+          "speaker": "Frau Aslan",
+          "text": "Ich bin Ärztin. Moderator : Und wo arbeiten Sie?"
+        },
+        {
+          "speaker": "Frau Aslan",
+          "text": "Ich arbeite in der Charité in Berlin. Ich lebe und arbeite in Berlin. Mit meiner Familie."
+        },
+        {
+          "speaker": "Moderator",
+          "text": "Sind Sie verheiratet, Frau Aslan?"
+        },
+        {
+          "speaker": "Frau Aslan",
+          "text": "Ja, ich bin verheiratet und habe zwei Kinder."
+        },
+        {
+          "speaker": "Moderator",
+          "text": "Wie heißen sie?"
+        },
+        {
+          "speaker": "F rau Aslan",
+          "text": "Meine Tochter heißt Merve und mein Sohn heißt Ben."
+        },
+        {
+          "speaker": "Moderator",
+          "text": "Und wie alt sind Ihre Kinder?"
+        },
+        {
+          "speaker": "Frau Aslan",
+          "text": "Merve ist 6, Ben 3."
+        },
+        {
+          "speaker": "Moderator",
+          "text": "Danke, Frau Aslan."
+        },
+        {
+          "speaker": "Frau Aslan",
+          "text": "Sehr gern."
+        }
+      ],
+      "raw_text": "Lektion 3, Übung 14\nModerator: Sie heißen Selma Aslan, sind 34 Jahre alt und Sie kommen aus …\nFrau Aslan: … aus Deutschland. Mein Name ist aber türkisch. … Meine Eltern kommen aus der Türkei.\nModerator: Sprechen Sie sehr gut Türkisch?\nFrau Aslan: Ja, ich spreche sehr gut Türkisch.\nModerator: Und welche Sprachen sprechen Sie noch?\nFr au Aslan: Ich spreche Deutsch, aber auch Englisch und ein bisschen Spanisch.\nModerator: Und was machen Sie beruflich, Frau Aslan?\nFrau Aslan: Ich bin Ärztin. Moderator : Und wo arbeiten Sie?\nFrau Aslan: Ich arbeite in der Charité in Berlin. Ich lebe und arbeite in Berlin. Mit meiner Familie.\nModerator: Sind Sie verheiratet, Frau Aslan?\nFrau Aslan: Ja, ich bin verheiratet und habe zwei Kinder.\nModerator: Wie heißen sie?\nF rau Aslan: Meine Tochter heißt Merve und mein Sohn heißt Ben.\nModerator: Und wie alt sind Ihre Kinder?\nFrau Aslan: Merve ist 6, Ben 3.\nModerator: Danke, Frau Aslan.\nFrau Aslan: Sehr gern.",
+      "line_count": 17,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_18_AB_Momente_A11_3_14.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_18_AB_Momente_A11_3_14.mp3",
+        "lesson": 3,
+        "section": "3 14",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-19",
+      "track_id": "1_19",
+      "book": "AB",
+      "lesson": null,
+      "exercise": "1",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Wiederholung L1"
+        },
+        {
+          "speaker": null,
+          "text": "- 3, Übung 3"
+        },
+        {
+          "speaker": "Und jetzt",
+          "text": "die Lottozahlen zwölf ac htundvierzigneunundzwanzig siebenfünfunddreißig sechzehn"
+        }
+      ],
+      "raw_text": "Wiederholung L1\n- 3, Übung 3\nUnd jetzt: die Lottozahlen zwölf ac htundvierzigneunundzwanzig siebenfünfunddreißig sechzehn",
+      "line_count": 3,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_19_AB_Momente_A11_Wiederholung Modul 1_3.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_19_AB_Momente_A11_Wiederholung Modul 1_3.mp3",
+        "lesson": null,
+        "section": "Wiederholung 1",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-20",
+      "track_id": "1_20",
+      "book": "AB",
+      "lesson": null,
+      "exercise": "1",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Wiederholung L1"
+        },
+        {
+          "speaker": null,
+          "text": "- 3, Übung 5"
+        },
+        {
+          "speaker": "Mann",
+          "text": ""
+        },
+        {
+          "speaker": "Variieren Sie. Beispiel",
+          "text": "Frau Was machst du beruflich? ( Student )"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Ich bin Student. Transkriptionen zu Momente A1.1 AB | 978-3-19-011791-8| ©2020 Hueber Verlag"
+        },
+        {
+          "speaker": "Mann",
+          "text": ""
+        },
+        {
+          "speaker": "Und jetzt Sie",
+          "text": ""
+        },
+        {
+          "speaker": "Frau",
+          "text": "Was machst du beruflich? (Schülerin )"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Ich bin Schülerin."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Was bist du von Beruf? (Architektin )"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Ich bin Architektin."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Was sind Sie von Beruf? ( Job als Verkäufer )"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Ich habe einen Job als Verkäufer."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Was machst du beruflich? (Ausbildung als Friseurin )"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Ich mache eine Ausbildung als Friseurin."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Was machen Sie beruflich? (Praktikum bei Hotsped )"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Ich mache ein Praktikum bei Hotsped ."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Was sind Sie von Beruf? – Lehrer"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Ich bin Lehrer."
+        }
+      ],
+      "raw_text": "Wiederholung L1\n- 3, Übung 5\nMann:\nVariieren Sie. Beispiel: Frau Was machst du beruflich? ( Student )\nMann: Ich bin Student. Transkriptionen zu Momente A1.1 AB | 978-3-19-011791-8| ©2020 Hueber Verlag\nMann:\nUnd jetzt Sie:\nFrau: Was machst du beruflich? (Schülerin )\nMann: Ich bin Schülerin.\nFrau: Was bist du von Beruf? (Architektin )\nMann: Ich bin Architektin.\nFrau: Was sind Sie von Beruf? ( Job als Verkäufer )\nMann: Ich habe einen Job als Verkäufer.\nFrau: Was machst du beruflich? (Ausbildung als Friseurin )\nMann: Ich mache eine Ausbildung als Friseurin.\nFrau: Was machen Sie beruflich? (Praktikum bei Hotsped )\nMann: Ich mache ein Praktikum bei Hotsped .\nFrau: Was sind Sie von Beruf? – Lehrer\nMann: Ich bin Lehrer.",
+      "line_count": 19,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_20_AB_Momente_A11_Wiederholung Modul 1_5.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_20_AB_Momente_A11_Wiederholung Modul 1_5.mp3",
+        "lesson": null,
+        "section": "Wiederholung 1",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-21",
+      "track_id": "1_21",
+      "book": "AB",
+      "lesson": null,
+      "exercise": "1",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Wiederholung L1"
+        },
+        {
+          "speaker": null,
+          "text": "- 3, Übung 7"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Hören Sie die Sätze und fragen Sie."
+        },
+        {
+          "speaker": "Beispiel",
+          "text": ""
+        },
+        {
+          "speaker": "Frau",
+          "text": "Ich komme aus Spanien. ( du? )"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Woher kommst du?"
+        },
+        {
+          "speaker": "Mann",
+          "text": ""
+        },
+        {
+          "speaker": "Und jetzt Sie",
+          "text": ""
+        },
+        {
+          "speaker": "Frau",
+          "text": "Ich komme aus Spanien. ( du? )"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Woher kommst du?"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Ich heiße Jan. ( du? )"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Wie heißt du?"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Ich bin Susanne. ( du? )"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Wer bist du?"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Ich heiße Veronika Müller. ( Sie? )"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Wie heißen Sie?"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Das ist Paul. ( das? )"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Wer ist das?"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Ich heiße Monika Rü h mann. ( Sie? )"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Wie heißen Sie?"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Hallo, ich heiße Marion. ( du? )"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Wie heißt du?"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Ich ko mme aus Österreich. ( Sie? )"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Woher kommen Sie?"
+        }
+      ],
+      "raw_text": "Wiederholung L1\n- 3, Übung 7\nMann: Hören Sie die Sätze und fragen Sie.\nBeispiel:\nFrau: Ich komme aus Spanien. ( du? )\nMann: Woher kommst du?\nMann:\nUnd jetzt Sie:\nFrau: Ich komme aus Spanien. ( du? )\nMann: Woher kommst du?\nFrau: Ich heiße Jan. ( du? )\nMann: Wie heißt du?\nFrau: Ich bin Susanne. ( du? )\nMann: Wer bist du?\nFrau: Ich heiße Veronika Müller. ( Sie? )\nMann: Wie heißen Sie?\nFrau: Das ist Paul. ( das? )\nMann: Wer ist das?\nFrau: Ich heiße Monika Rü h mann. ( Sie? )\nMann: Wie heißen Sie?\nFrau: Hallo, ich heiße Marion. ( du? )\nMann: Wie heißt du?\nFrau: Ich ko mme aus Österreich. ( Sie? )\nMann: Woher kommen Sie?",
+      "line_count": 24,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_21_AB_Momente_A11_Wiederholung Modul 1_7.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_21_AB_Momente_A11_Wiederholung Modul 1_7.mp3",
+        "lesson": null,
+        "section": "Wiederholung 1",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-22",
+      "track_id": "1_22",
+      "book": "AB",
+      "lesson": null,
+      "exercise": "1",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Wiederholung L1"
+        },
+        {
+          "speaker": null,
+          "text": "- 3, Übung 9"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Sagen Sie „nein“ und variieren Sie."
+        },
+        {
+          "speaker": "Beispiel",
+          "text": ""
+        },
+        {
+          "speaker": "Frau",
+          "text": "Sabine ist Friseurin. (Lehrerin )"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Nein, Sabine ist nicht Friseurin. Sie ist Lehrerin."
+        },
+        {
+          "speaker": "Mann",
+          "text": "Und jetzt Sie."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Astrid und Norbert sind verheiratet. (geschieden )"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Nein, Astrid und Nobert sind nicht verheiratet Sie sind geschieden."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Carla lebt allein. (zusammen mit Peter )"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Nein, Carla lebt nicht allein . Sie lebt zusammen mit Peter."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Sie w ohnen in Zürich. ( Bern ) Transkriptionen zu Momente A1.1 AB | 978-3-19-011791-8| ©2020 Hueber Verlag"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Nein, sie wohnen nicht in Zürich. Sie wohnen in Bern."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Sie ist 19 Jahre alt. ( 21 )"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Nein, sie ist nicht 19 Jahre alt. Sie ist 21."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Frau Wachter ist Lehrerin. (Journalistin )"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Nein, Frau Wachter ist nicht L ehrerin. Sie ist Journalistin."
+        }
+      ],
+      "raw_text": "Wiederholung L1\n- 3, Übung 9\nMann: Sagen Sie „nein“ und variieren Sie.\nBeispiel:\nFrau: Sabine ist Friseurin. (Lehrerin )\nMann: Nein, Sabine ist nicht Friseurin. Sie ist Lehrerin.\nMann: Und jetzt Sie.\nFrau: Astrid und Norbert sind verheiratet. (geschieden )\nMann: Nein, Astrid und Nobert sind nicht verheiratet Sie sind geschieden.\nFrau: Carla lebt allein. (zusammen mit Peter )\nMann: Nein, Carla lebt nicht allein . Sie lebt zusammen mit Peter.\nFrau: Sie w ohnen in Zürich. ( Bern ) Transkriptionen zu Momente A1.1 AB | 978-3-19-011791-8| ©2020 Hueber Verlag\nMann: Nein, sie wohnen nicht in Zürich. Sie wohnen in Bern.\nFrau: Sie ist 19 Jahre alt. ( 21 )\nMann: Nein, sie ist nicht 19 Jahre alt. Sie ist 21.\nFrau: Frau Wachter ist Lehrerin. (Journalistin )\nMann: Nein, Frau Wachter ist nicht L ehrerin. Sie ist Journalistin.",
+      "line_count": 17,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_22_AB_Momente_A11_Wiederholung Modul 1_9.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_22_AB_Momente_A11_Wiederholung Modul 1_9.mp3",
+        "lesson": null,
+        "section": "Wiederholung 1",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-23",
+      "track_id": "1_23",
+      "book": "AB",
+      "lesson": null,
+      "exercise": "Test",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Test L1"
+        },
+        {
+          "speaker": null,
+          "text": "- 3, Übung 1"
+        },
+        {
+          "speaker": "Mann 1",
+          "text": "Hallo Richard, wie geht es dir?"
+        },
+        {
+          "speaker": "Mann 2",
+          "text": "Sehr gut. Ich bin jetzt Lehrer. Das ist super. Und wie geht es dir?"
+        },
+        {
+          "speaker": "Mann 1",
+          "text": "Nicht so gut. Ich bin im Moment arbeitslos. Man"
+        },
+        {
+          "speaker": "n 2",
+          "text": "O h …"
+        }
+      ],
+      "raw_text": "Test L1\n- 3, Übung 1\nMann 1: Hallo Richard, wie geht es dir?\nMann 2: Sehr gut. Ich bin jetzt Lehrer. Das ist super. Und wie geht es dir?\nMann 1: Nicht so gut. Ich bin im Moment arbeitslos. Man\nn 2: O h …",
+      "line_count": 6,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_23_AB_Momente_A11_Test Modul 1_1.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_23_AB_Momente_A11_Test Modul 1_1.mp3",
+        "lesson": null,
+        "section": "Test",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-2",
+      "track_id": "1_2",
+      "book": "AB",
+      "lesson": null,
+      "exercise": null,
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": "Frau",
+          "text": "Guten Morgen, ich heiße Emma Cindik. Mann : Hallo Frau Cindik. Cindik? Kommen Sie aus der Türkei? Frau : Ich nicht, aber mein Mann. Mann : Und sprechen Sie auch Türkisch? Frau : Nur ein bisschen. Aber ich spreche sehr gut Englisch und Französisch."
+        }
+      ],
+      "raw_text": "Frau: Guten Morgen, ich heiße Emma Cindik. Mann : Hallo Frau Cindik. Cindik? Kommen Sie aus der Türkei? Frau : Ich nicht, aber mein Mann. Mann : Und sprechen Sie auch Türkisch? Frau : Nur ein bisschen. Aber ich spreche sehr gut Englisch und Französisch.",
+      "line_count": 1,
+      "audio_linked": false
+    },
+    {
+      "id": "transcript-1-2",
+      "track_id": "1_2",
+      "book": "AB",
+      "lesson": null,
+      "exercise": null,
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": "Frau",
+          "text": "Und wer bist du? Junge : Simon Jonas."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Wie alt bist du, Jonas? Junge : Mein Vorname ist Simon, und mein Familienname ist Jonas. Ich bin 15."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Oh Entschuldigung, Simon."
+        }
+      ],
+      "raw_text": "Frau: Und wer bist du? Junge : Simon Jonas.\nFrau: Wie alt bist du, Jonas? Junge : Mein Vorname ist Simon, und mein Familienname ist Jonas. Ich bin 15.\nFrau: Oh Entschuldigung, Simon.",
+      "line_count": 3,
+      "audio_linked": false
+    },
+    {
+      "id": "transcript-1-2",
+      "track_id": "1_2",
+      "book": "AB",
+      "lesson": null,
+      "exercise": null,
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": "Frau 1",
+          "text": "Karin, wie alt bist du? 34 oder 35?"
+        },
+        {
+          "speaker": "Frau 2",
+          "text": "Ich bin 34."
+        },
+        {
+          "speaker": "Frau 1",
+          "text": "Und deine Schwester?"
+        },
+        {
+          "speaker": "Frau 2",
+          "text": "Sie ist 43."
+        }
+      ],
+      "raw_text": "Frau 1: Karin, wie alt bist du? 34 oder 35?\nFrau 2: Ich bin 34.\nFrau 1: Und deine Schwester?\nFrau 2: Sie ist 43.",
+      "line_count": 4,
+      "audio_linked": false
+    },
+    {
+      "id": "transcript-1-27",
+      "track_id": "1_27",
+      "book": "AB",
+      "lesson": null,
+      "exercise": "Test",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Mann 1 :Was machst du beruflich, Henning?"
+        },
+        {
+          "speaker": "Mann 2",
+          "text": "Ich habe einen Job als Verkäufer bei AB"
+        },
+        {
+          "speaker": null,
+          "text": "- Media."
+        },
+        {
+          "speaker": "Mann 1",
+          "text": "AB"
+        },
+        {
+          "speaker": null,
+          "text": "-Media ist eine Elektronikfirma, oder?"
+        },
+        {
+          "speaker": "Mann 2",
+          "text": "Richtig!"
+        }
+      ],
+      "raw_text": "Mann 1 :Was machst du beruflich, Henning?\nMann 2: Ich habe einen Job als Verkäufer bei AB\n- Media.\nMann 1: AB\n-Media ist eine Elektronikfirma, oder?\nMann 2: Richtig!",
+      "line_count": 6,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_27_AB_Momente_A11_Test Modul 1_1.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_27_AB_Momente_A11_Test Modul 1_1.mp3",
+        "lesson": null,
+        "section": "Test",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-28",
+      "track_id": "1_28",
+      "book": "AB",
+      "lesson": null,
+      "exercise": "Test",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Frau : Und wie heißen Sie? Ma nn : Ich bin Tim Schmidt. Frau : Entschuldigung. Können Sie das bitte buchstabieren? Mann : Ja, gern. S – C – H – M – I – D – T Frau : Ähm … D…T , oder T….T. Mann : D…T. Frau : Ah, jetzt verstehe ich. Danke."
+        }
+      ],
+      "raw_text": "Frau : Und wie heißen Sie? Ma nn : Ich bin Tim Schmidt. Frau : Entschuldigung. Können Sie das bitte buchstabieren? Mann : Ja, gern. S – C – H – M – I – D – T Frau : Ähm … D…T , oder T….T. Mann : D…T. Frau : Ah, jetzt verstehe ich. Danke.",
+      "line_count": 1,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_28_AB_Momente_A11_Test Modul 1_1.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_28_AB_Momente_A11_Test Modul 1_1.mp3",
+        "lesson": null,
+        "section": "Test",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-29",
+      "track_id": "1_29",
+      "book": "AB",
+      "lesson": null,
+      "exercise": "Test",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": "Frau",
+          "text": "Herr Freudenthaler, wie ist die Nummer von Frau Speh? Mann : Von Frau Speh? 0176 / 24 78 86"
+        },
+        {
+          "speaker": "Frau",
+          "text": "0176 / 24 87 86? Mann : Nein … 24 78 86. Transkriptionen zu Momente A1.1 AB | 978-3-19-011791-8| ©2020 Hueber Verlag"
+        }
+      ],
+      "raw_text": "Frau: Herr Freudenthaler, wie ist die Nummer von Frau Speh? Mann : Von Frau Speh? 0176 / 24 78 86\nFrau: 0176 / 24 87 86? Mann : Nein … 24 78 86. Transkriptionen zu Momente A1.1 AB | 978-3-19-011791-8| ©2020 Hueber Verlag",
+      "line_count": 2,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_29_AB_Momente_A11_Test Modul 1_1.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_29_AB_Momente_A11_Test Modul 1_1.mp3",
+        "lesson": null,
+        "section": "Test",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-30",
+      "track_id": "1_30",
+      "book": "AB",
+      "lesson": null,
+      "exercise": "Test",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Test L1"
+        },
+        {
+          "speaker": null,
+          "text": "- 3, Übung 4b 1Hallo. Ich bin Miriam. Und wie heißt du? 2Ich komme aus Österreich. Woher kommst du? 3Ich wohne in Wien. Wo wohnst du? Ich bin Ärztin. Was bist du von Beruf? 5Ich bin verheiratet, aber ich habe keine Kinder. Und du ? 6Ich spreche Deutsch und Englisch. Und du?"
+        }
+      ],
+      "raw_text": "Test L1\n- 3, Übung 4b 1Hallo. Ich bin Miriam. Und wie heißt du? 2Ich komme aus Österreich. Woher kommst du? 3Ich wohne in Wien. Wo wohnst du? Ich bin Ärztin. Was bist du von Beruf? 5Ich bin verheiratet, aber ich habe keine Kinder. Und du ? 6Ich spreche Deutsch und Englisch. Und du?",
+      "line_count": 2,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_30_AB_Momente_A11_Test Modul 1_4b.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_30_AB_Momente_A11_Test Modul 1_4b.mp3",
+        "lesson": null,
+        "section": "Test",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-31",
+      "track_id": "1_31",
+      "book": "AB",
+      "lesson": null,
+      "exercise": "Beruf",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Fokus Beruf L1"
+        },
+        {
+          "speaker": null,
+          "text": "- 3, Übung 2"
+        },
+        {
+          "speaker": "Andrea",
+          "text": "Guten Tag, Herr Meindl. Herr M"
+        },
+        {
+          "speaker": ".",
+          "text": "Frau Noll, guten Tag! Wie geht’s Ihnen? Andre"
+        },
+        {
+          "speaker": "a",
+          "text": "Danke, gut. Und Ihnen? Herr M. :Auch gut, danke. Ah ja, also das ist Herr Eschenbach. Er arbeitet bei Gruber. H err"
+        },
+        {
+          "speaker": "E .",
+          "text": "Guten Tag, Frau Noll. Freut mich."
+        },
+        {
+          "speaker": "Herr M.",
+          "text": "Frau Noll ist IT"
+        },
+        {
+          "speaker": null,
+          "text": "-Trainerin bei SAB."
+        },
+        {
+          "speaker": "Andrea",
+          "text": "Nein, nein. Ich arbeite nicht bei SAB. Ich a rbeite jetzt bei X"
+        },
+        {
+          "speaker": null,
+          "text": "- Net."
+        },
+        {
+          "speaker": "Herr E.",
+          "text": "Ah, das ist ja interessant."
+        },
+        {
+          "speaker": "Andrea",
+          "text": "Hier, bitte! Meine Visitenkarte."
+        },
+        {
+          "speaker": "Herr E.",
+          "text": "Vielen Dank! Und das ist meine Visitenkarte."
+        }
+      ],
+      "raw_text": "Fokus Beruf L1\n- 3, Übung 2\nAndrea: Guten Tag, Herr Meindl. Herr M\n. : Frau Noll, guten Tag! Wie geht’s Ihnen? Andre\na: Danke, gut. Und Ihnen? Herr M. :Auch gut, danke. Ah ja, also das ist Herr Eschenbach. Er arbeitet bei Gruber. H err\nE . : Guten Tag, Frau Noll. Freut mich.\nHerr M.: Frau Noll ist IT\n-Trainerin bei SAB.\nAndrea: Nein, nein. Ich arbeite nicht bei SAB. Ich a rbeite jetzt bei X\n- Net.\nHerr E.: Ah, das ist ja interessant.\nAndrea: Hier, bitte! Meine Visitenkarte.\nHerr E.: Vielen Dank! Und das ist meine Visitenkarte.",
+      "line_count": 13,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_31_AB_Momente_A11_Fokus Beruf Modul 1_2a+b.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_31_AB_Momente_A11_Fokus Beruf Modul 1_2a+b.mp3",
+        "lesson": null,
+        "section": "Fokus Beruf",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-32",
+      "track_id": "1_32",
+      "book": "AB",
+      "lesson": 4,
+      "exercise": "91",
+      "header_kind": "lektion",
+      "title": "Lektion 4, Übung 9100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1010, 910, 920, 930,",
+      "lines": [
+        {
+          "speaker": null,
+          "text": ", 950, 960, 970, 980, 1080, 1090, 990, 890, 790, 690, 590, 580, 680, 780, 670, 760, 650, 740, 630, 720, 610, 510, 410, 310, 210, 110, 100",
+          "index": 940
+        }
+      ],
+      "raw_text": "Lektion 4, Übung 9100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1010, 910, 920, 930,\n940, 950, 960, 970, 980, 1080, 1090, 990, 890, 790, 690, 590, 580, 680, 780, 670, 760, 650, 740, 630, 720, 610, 510, 410, 310, 210, 110, 100",
+      "line_count": 1,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_32_AB_Momente_A11_4_9.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_32_AB_Momente_A11_4_9.mp3",
+        "lesson": 4,
+        "section": "4 9",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-33",
+      "track_id": "1_33",
+      "book": "AB",
+      "lesson": 4,
+      "exercise": "11",
+      "header_kind": "lektion",
+      "title": "Lektion 4, Übung 11",
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Mann : Der Sessel ist so schön. Frau : Oh ja! Was kostet er? Mann : Der Sessel kostet nur 79 Euro.",
+          "subpart": "a"
+        }
+      ],
+      "raw_text": "Lektion 4, Übung 11\na\nMann : Der Sessel ist so schön. Frau : Oh ja! Was kostet er? Mann : Der Sessel kostet nur 79 Euro.",
+      "line_count": 1,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_33_AB_Momente_A11_4_11.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_33_AB_Momente_A11_4_11.mp3",
+        "lesson": 4,
+        "section": "4 11",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-34",
+      "track_id": "1_34",
+      "book": "AB",
+      "lesson": 4,
+      "exercise": "11",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Frau : Entschuldigung?",
+          "subpart": "b"
+        },
+        {
+          "speaker": "Verkäufer",
+          "text": "Ja, bitte?",
+          "subpart": "b"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Wie viel kostet der Teppich?",
+          "subpart": "b"
+        },
+        {
+          "speaker": "Verkäufer",
+          "text": "Der Teppich kostet 1259 Euro.",
+          "subpart": "b"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Oh! Das ist aber teuer.",
+          "subpart": "b"
+        }
+      ],
+      "raw_text": "b\nFrau : Entschuldigung?\nVerkäufer: Ja, bitte?\nFrau: Wie viel kostet der Teppich?\nVerkäufer: Der Teppich kostet 1259 Euro.\nFrau: Oh! Das ist aber teuer.",
+      "line_count": 5,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_34_AB_Momente_A11_4_11.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_34_AB_Momente_A11_4_11.mp3",
+        "lesson": 4,
+        "section": "4 11",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-35",
+      "track_id": "1_35",
+      "book": "AB",
+      "lesson": 4,
+      "exercise": "11",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Frau : Schau mal, die Lampe. Sie kostet nur 39,99 Euro. Mann : Oh, das ist aber günstig.",
+          "subpart": "c"
+        }
+      ],
+      "raw_text": "c\nFrau : Schau mal, die Lampe. Sie kostet nur 39,99 Euro. Mann : Oh, das ist aber günstig.",
+      "line_count": 1,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_35_AB_Momente_A11_4_11.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_35_AB_Momente_A11_4_11.mp3",
+        "lesson": 4,
+        "section": "4 11",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-36",
+      "track_id": "1_36",
+      "book": "AB",
+      "lesson": 4,
+      "exercise": "11",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": "dVerkäuferin",
+          "text": "Brauchen Sie Hilfe? Junger Mann : Ja, bitte. Was kostet das Regal?"
+        },
+        {
+          "speaker": "Verkäuferin",
+          "text": "Sie haben Glück. Das ist ein Sonderangebot. Es kostet nur 149 Euro. Junger Mann : Das ist wirklich sehr günstig."
+        }
+      ],
+      "raw_text": "dVerkäuferin: Brauchen Sie Hilfe? Junger Mann : Ja, bitte. Was kostet das Regal?\nVerkäuferin: Sie haben Glück. Das ist ein Sonderangebot. Es kostet nur 149 Euro. Junger Mann : Das ist wirklich sehr günstig.",
+      "line_count": 2,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_36_AB_Momente_A11_4_11.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_36_AB_Momente_A11_4_11.mp3",
+        "lesson": 4,
+        "section": "4 11",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-37",
+      "track_id": "1_37",
+      "book": "AB",
+      "lesson": 4,
+      "exercise": "12",
+      "header_kind": "lektion",
+      "title": "Lektion 4, Übung 12",
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Die Lam pe kostet 0,99 Cent. bDer Teppich kostet 35,50 Euro. cDer Stuhl kostet 64,00 Euro. Transkriptionen zu Momente A1.1 AB | 978-3-19-011791-8| ©2020 Hueber Verlag dDas Bild kostet 49,90 Euro. eDer Tisch kostet 159,00 Euro.",
+          "subpart": "a"
+        }
+      ],
+      "raw_text": "Lektion 4, Übung 12\na\nDie Lam pe kostet 0,99 Cent. bDer Teppich kostet 35,50 Euro. cDer Stuhl kostet 64,00 Euro. Transkriptionen zu Momente A1.1 AB | 978-3-19-011791-8| ©2020 Hueber Verlag dDas Bild kostet 49,90 Euro. eDer Tisch kostet 159,00 Euro.",
+      "line_count": 1,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_37_AB_Momente_A11_4_12.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_37_AB_Momente_A11_4_12.mp3",
+        "lesson": 4,
+        "section": "4 12",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-38",
+      "track_id": "1_38",
+      "book": "AB",
+      "lesson": 4,
+      "exercise": "15",
+      "header_kind": "lektion",
+      "title": "Lektion 4, Übung 15",
+      "lines": [
+        {
+          "speaker": "Mutter",
+          "text": "Entschuldigung?"
+        },
+        {
+          "speaker": "Verkäufer",
+          "text": "Ja, bitte?"
+        },
+        {
+          "speaker": "Mutter",
+          "text": "Wie viel kostet der Schrank?"
+        },
+        {
+          "speaker": "Verkäufer",
+          "text": "Sie haben Glüc k. Das ist ein Sonderangebot. Er kostet nur 250 Euro."
+        },
+        {
+          "speaker": "Mutter",
+          "text": "Oh, das ist aber günstig. Wie findet ihr den Schrank?"
+        },
+        {
+          "speaker": "Kathi",
+          "text": "Ich finde, der Schrank ist wirklich hässlich."
+        },
+        {
+          "speaker": "Mutter",
+          "text": "Oh Mann, Kathi. Das finde ich nicht. Ich finde den Sch rank schön. Und er ist so praktisch. Schau mal …"
+        },
+        {
+          "speaker": "Kathi",
+          "text": "Der Schrank ist gar nicht praktisch. Er ist zu klein."
+        },
+        {
+          "speaker": "Mutter",
+          "text": "Der Schrank ist doch nicht zu klein. Und wie findest du den Schrank, Michi?"
+        },
+        {
+          "speaker": "Michi",
+          "text": "Ich finde ihn auch nicht schön. Er ist zu modern. Oder, Opa?"
+        },
+        {
+          "speaker": "Opa",
+          "text": "Zu modern, Michi? Das finde ich nicht. Aber ich finde ihn zu teuer."
+        },
+        {
+          "speaker": "Mutter",
+          "text": "Zu teuer? Aber das ist ein Sonderangebot … Okay, ich schreibe Papa eine Nachricht …"
+        }
+      ],
+      "raw_text": "Lektion 4, Übung 15\nMutter: Entschuldigung?\nVerkäufer: Ja, bitte?\nMutter: Wie viel kostet der Schrank?\nVerkäufer: Sie haben Glüc k. Das ist ein Sonderangebot. Er kostet nur 250 Euro.\nMutter: Oh, das ist aber günstig. Wie findet ihr den Schrank?\nKathi: Ich finde, der Schrank ist wirklich hässlich.\nMutter: Oh Mann, Kathi. Das finde ich nicht. Ich finde den Sch rank schön. Und er ist so praktisch. Schau mal …\nKathi: Der Schrank ist gar nicht praktisch. Er ist zu klein.\nMutter: Der Schrank ist doch nicht zu klein. Und wie findest du den Schrank, Michi?\nMichi: Ich finde ihn auch nicht schön. Er ist zu modern. Oder, Opa?\nOpa: Zu modern, Michi? Das finde ich nicht. Aber ich finde ihn zu teuer.\nMutter: Zu teuer? Aber das ist ein Sonderangebot … Okay, ich schreibe Papa eine Nachricht …",
+      "line_count": 12,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_38_AB_Momente_A11_4_15.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_38_AB_Momente_A11_4_15.mp3",
+        "lesson": 4,
+        "section": "4 15",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-39",
+      "track_id": "1_39",
+      "book": "AB",
+      "lesson": 4,
+      "exercise": "16a",
+      "header_kind": "lektion",
+      "title": "Lektion 4, Übung 16a",
+      "lines": [
+        {
+          "speaker": "a",
+          "text": "aber – Italien – praktisch – Lampe – La nd"
+        },
+        {
+          "speaker": "e",
+          "text": "Schwe den – sehr – Sessel – Bett – Te ppich"
+        },
+        {
+          "speaker": "i",
+          "text": "wie – viel – Tisch – Zimmer – ni cht"
+        },
+        {
+          "speaker": "o",
+          "text": "Sofa – groß – kosten – So nderangebot"
+        },
+        {
+          "speaker": "u",
+          "text": "Stuhl – zu – gut – hundert – Mu tter"
+        }
+      ],
+      "raw_text": "Lektion 4, Übung 16a\na: aber – Italien – praktisch – Lampe – La nd\ne: Schwe den – sehr – Sessel – Bett – Te ppich\ni: wie – viel – Tisch – Zimmer – ni cht\no: Sofa – groß – kosten – So nderangebot\nu: Stuhl – zu – gut – hundert – Mu tter",
+      "line_count": 5,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_39_AB_Momente_A11_4_16a.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_39_AB_Momente_A11_4_16a.mp3",
+        "lesson": 4,
+        "section": "4 16a",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-40",
+      "track_id": "1_40",
+      "book": "AB",
+      "lesson": 4,
+      "exercise": "16b",
+      "header_kind": "lektion",
+      "title": "Lektion 4, Übung 16b",
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Aber die Lampe aus Italien ist praktisch. 2Der Sessel aus Schweden ist sehr teuer. 3Wie viel? Der Tisch ist nicht günstig. 4 Oh! So groß! Das Sofa ist im Sonderangebot. 5Der Stuhl ist gut. Nur hundert Euro. 6Das Zimmer kostet nur vierzig Euro."
+        }
+      ],
+      "raw_text": "Lektion 4, Übung 16b\nAber die Lampe aus Italien ist praktisch. 2Der Sessel aus Schweden ist sehr teuer. 3Wie viel? Der Tisch ist nicht günstig. 4 Oh! So groß! Das Sofa ist im Sonderangebot. 5Der Stuhl ist gut. Nur hundert Euro. 6Das Zimmer kostet nur vierzig Euro.",
+      "line_count": 1,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_40_AB_Momente_A11_4_16b.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_40_AB_Momente_A11_4_16b.mp3",
+        "lesson": 4,
+        "section": "4 16b",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-41",
+      "track_id": "1_41",
+      "book": "AB",
+      "lesson": 5,
+      "exercise": "14a",
+      "header_kind": "lektion",
+      "title": "Lektion 5, Übung 14a",
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Junge Fra",
+          "index": 1
+        },
+        {
+          "speaker": "u",
+          "text": "Was ist das? Junger Mann : Das ist eine Jacke. Junge Frau : Wie schreibt man das? Junger Mann : Mit c"
+        },
+        {
+          "speaker": null,
+          "text": "- k."
+        }
+      ],
+      "raw_text": "Lektion 5, Übung 14a\n1Junge Fra\nu : Was ist das? Junger Mann : Das ist eine Jacke. Junge Frau : Wie schreibt man das? Junger Mann : Mit c\n- k.",
+      "line_count": 3,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_41_AB_Momente_A11_5_14a.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_41_AB_Momente_A11_5_14a.mp3",
+        "lesson": 5,
+        "section": "5 14a",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-42",
+      "track_id": "1_42",
+      "book": "AB",
+      "lesson": 5,
+      "exercise": "14a",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Junge Frau : Und was ist das? Ist das ein Geldbeutel?Junger Mann : Nein. Das ist kein Geldbeutel, das ist eine Tasche.",
+          "index": 2
+        }
+      ],
+      "raw_text": "2Junge Frau : Und was ist das? Ist das ein Geldbeutel?Junger Mann : Nein. Das ist kein Geldbeutel, das ist eine Tasche.",
+      "line_count": 1,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_42_AB_Momente_A11_5_14a.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_42_AB_Momente_A11_5_14a.mp3",
+        "lesson": 5,
+        "section": "5 14a",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-43",
+      "track_id": "1_43",
+      "book": "AB",
+      "lesson": 5,
+      "exercise": "14b",
+      "header_kind": "lektion",
+      "title": "Lektion 5, Übung 14b",
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Junger Mann : Was ist das? 2Junge Frau : Das ist eine Uhr. 3Junge Frau : Sie ist aus Plastik. 4Junger Mann : Ist das ein Streichholz? Transkriptionen zu Momente A1.1 AB | 978-3-19-011791-8| ©2020 Hueber Verlag Junge Frau : Das ist kein Streichholz, das ist ein Feuerzeug.",
+          "index": 1
+        }
+      ],
+      "raw_text": "Lektion 5, Übung 14b\n1Junger Mann : Was ist das? 2Junge Frau : Das ist eine Uhr. 3Junge Frau : Sie ist aus Plastik. 4Junger Mann : Ist das ein Streichholz? Transkriptionen zu Momente A1.1 AB | 978-3-19-011791-8| ©2020 Hueber Verlag Junge Frau : Das ist kein Streichholz, das ist ein Feuerzeug.",
+      "line_count": 1,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_43_AB_Momente_A11_5_14b.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_43_AB_Momente_A11_5_14b.mp3",
+        "lesson": 5,
+        "section": "5 14b",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-44",
+      "track_id": "1_44",
+      "book": "AB",
+      "lesson": 5,
+      "exercise": "16a",
+      "header_kind": "lektion",
+      "title": "Lektion 5, Übung 16aHallo! Du, Frieda hat doch bald Geburtstag. Sie möchte gern eine schöne Haarbürste haben. Da gibt es eine schöne im Internet. Sie heißt SuperHaar und ist ganz aus Metall. Und die Farbe ist auch super: Sie ist ganz orange. Die Bürste kostet nur 30 Euro. Was",
+      "lines": [
+        {
+          "speaker": null,
+          "text": "sagst du dazu?"
+        }
+      ],
+      "raw_text": "Lektion 5, Übung 16aHallo! Du, Frieda hat doch bald Geburtstag. Sie möchte gern eine schöne Haarbürste haben. Da gibt es eine schöne im Internet. Sie heißt SuperHaar und ist ganz aus Metall. Und die Farbe ist auch super: Sie ist ganz orange. Die Bürste kostet nur 30 Euro. Was\nsagst du dazu?",
+      "line_count": 1,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_44_AB_Momente_A11_5_16a.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_44_AB_Momente_A11_5_16a.mp3",
+        "lesson": 5,
+        "section": "5 16a",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-45",
+      "track_id": "1_45",
+      "book": "AB",
+      "lesson": 6,
+      "exercise": "5a",
+      "header_kind": "lektion",
+      "title": "Lektion 6, Übung 5a",
+      "lines": [
+        {
+          "speaker": null,
+          "text": "viele Grüße Drucker Schlüssel 5 Bildschirm Hunger Stift fünf Stühle"
+        }
+      ],
+      "raw_text": "Lektion 6, Übung 5a\nviele Grüße Drucker Schlüssel 5 Bildschirm Hunger Stift fünf Stühle",
+      "line_count": 1,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_45_AB_Momente_A11_6_5a.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_45_AB_Momente_A11_6_5a.mp3",
+        "lesson": 6,
+        "section": "6 5a",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-46",
+      "track_id": "1_46",
+      "book": "AB",
+      "lesson": 6,
+      "exercise": "5b",
+      "header_kind": "lektion",
+      "title": "Lektion 6, Übung 5b",
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Grüße Schlüssel Stühle Fünf Grün tschüs"
+        }
+      ],
+      "raw_text": "Lektion 6, Übung 5b\nGrüße Schlüssel Stühle Fünf Grün tschüs",
+      "line_count": 1,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_46_AB_Momente_A11_6_5b.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_46_AB_Momente_A11_6_5b.mp3",
+        "lesson": 6,
+        "section": "6 5b",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-47",
+      "track_id": "1_47",
+      "book": "AB",
+      "lesson": 6,
+      "exercise": "13a",
+      "header_kind": "lektion",
+      "title": "Lektion 6, Übung 13a",
+      "lines": [
+        {
+          "speaker": "Klara Stolley",
+          "text": "Firma Hansetec, hier i st Klara"
+        },
+        {
+          "speaker": "Stolley, guten Tag.Florian Stöckl",
+          "text": "Guten Tag. Mein Name ist Florian"
+        },
+        {
+          "speaker": "Stöckl. Ist Frau Thomsen da?Klara Stolley",
+          "text": "Einen Moment bitte. …"
+        },
+        {
+          "speaker": "Frau Thomsen",
+          "text": "Thomsen."
+        },
+        {
+          "speaker": "Florian Stöckl",
+          "text": "Guten Tag, Florian Stöckl hier. Ich möchte eine Bestellung für die Firma Grünfeld"
+        },
+        {
+          "speaker": "aufgeben.Frau Thomsen",
+          "text": "Sehr gern. Was brauchen Sie?"
+        },
+        {
+          "speaker": "Florian Stöckl",
+          "text": "Wir brauchen einen Laptop, eine Laptoptasche, eine Tastatur, einen Bildschirm, ein Tablet, zehn Computer"
+        },
+        {
+          "speaker": null,
+          "text": "-Mäuse, zwölf Bleistifte, fünfzehn Kugelschreiber und einen Kalender. Frau"
+        },
+        {
+          "speaker": "Thomsen",
+          "text": "Vie len Dank. Wie ist Ihre Adresse?"
+        }
+      ],
+      "raw_text": "Lektion 6, Übung 13a\nKlara Stolley: Firma Hansetec, hier i st Klara\nStolley, guten Tag.Florian Stöckl: Guten Tag. Mein Name ist Florian\nStöckl. Ist Frau Thomsen da?Klara Stolley: Einen Moment bitte. …\nFrau Thomsen: Thomsen.\nFlorian Stöckl: Guten Tag, Florian Stöckl hier. Ich möchte eine Bestellung für die Firma Grünfeld\naufgeben.Frau Thomsen: Sehr gern. Was brauchen Sie?\nFlorian Stöckl: Wir brauchen einen Laptop, eine Laptoptasche, eine Tastatur, einen Bildschirm, ein Tablet, zehn Computer\n-Mäuse, zwölf Bleistifte, fünfzehn Kugelschreiber und einen Kalender. Frau\nThomsen: Vie len Dank. Wie ist Ihre Adresse?",
+      "line_count": 9,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_47_AB_Momente_A11_6_13a.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_47_AB_Momente_A11_6_13a.mp3",
+        "lesson": 6,
+        "section": "6 13a",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-48",
+      "track_id": "1_48",
+      "book": "AB",
+      "lesson": null,
+      "exercise": "2",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Wiederholung L4"
+        },
+        {
+          "speaker": null,
+          "text": "- 6, Übung 4 Mann : Was kann ich für Sie tun? Frau : Ich suche einen Sessel. Mann : Schauen Sie doch mal. Der Sessel ist doch schön. Fr au : Ja, das finde ich auch. Er ist wirklich schön. Wie viel kostet er denn? Mann : Sie haben Glück. Er kostet nur 40 Euro. Das ist ein Sonderangebot. Frau : Oh, das ist aber günstig."
+        }
+      ],
+      "raw_text": "Wiederholung L4\n- 6, Übung 4 Mann : Was kann ich für Sie tun? Frau : Ich suche einen Sessel. Mann : Schauen Sie doch mal. Der Sessel ist doch schön. Fr au : Ja, das finde ich auch. Er ist wirklich schön. Wie viel kostet er denn? Mann : Sie haben Glück. Er kostet nur 40 Euro. Das ist ein Sonderangebot. Frau : Oh, das ist aber günstig.",
+      "line_count": 2,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_48_AB_Momente_A11_Wiederholung Modul 2_4.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_48_AB_Momente_A11_Wiederholung Modul 2_4.mp3",
+        "lesson": null,
+        "section": "Wiederholung 2",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-49",
+      "track_id": "1_49",
+      "book": "AB",
+      "lesson": null,
+      "exercise": "2",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Wiederholung L4"
+        },
+        {
+          "speaker": null,
+          "text": "- 6, Übung 6"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Hören Sie und sprechen Sie nach."
+        },
+        {
+          "speaker": "Beispiel",
+          "text": ""
+        },
+        {
+          "speaker": "Frau",
+          "text": "Firma Brenner. Guten Tag. Hier ist Christian S chmidt."
+        },
+        {
+          "speaker": "Mann",
+          "text": "Firma Brenner. Guten Tag. Hier ist Christian Schmidt."
+        },
+        {
+          "speaker": "Mann",
+          "text": ""
+        },
+        {
+          "speaker": "Und jetzt Sie",
+          "text": ""
+        },
+        {
+          "speaker": "Frau",
+          "text": "Guten Tag. Hier ist Marlene Neumann."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Hallo, hier ist Marlene."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Auf Wiedersehen."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Auf Wiederhören."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Tschüs. Transkriptionen zu Momente A1.1 AB | 978-3-19-011791-8| ©2020 Hueber Verlag"
+        }
+      ],
+      "raw_text": "Wiederholung L4\n- 6, Übung 6\nMann: Hören Sie und sprechen Sie nach.\nBeispiel:\nFrau: Firma Brenner. Guten Tag. Hier ist Christian S chmidt.\nMann: Firma Brenner. Guten Tag. Hier ist Christian Schmidt.\nMann:\nUnd jetzt Sie:\nFrau: Guten Tag. Hier ist Marlene Neumann.\nFrau: Hallo, hier ist Marlene.\nFrau: Auf Wiedersehen.\nFrau: Auf Wiederhören.\nFrau: Tschüs. Transkriptionen zu Momente A1.1 AB | 978-3-19-011791-8| ©2020 Hueber Verlag",
+      "line_count": 13,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_49_AB_Momente_A11_Wiederholung Modul 2_6.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_49_AB_Momente_A11_Wiederholung Modul 2_6.mp3",
+        "lesson": null,
+        "section": "Wiederholung 2",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-50",
+      "track_id": "1_50",
+      "book": "AB",
+      "lesson": null,
+      "exercise": "2",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Wiederholung L4"
+        },
+        {
+          "speaker": null,
+          "text": "- 6, Übu ng 8"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Antworten Sie mit nein. Fra"
+        },
+        {
+          "speaker": "u",
+          "text": "Ist das ein Kugelschreiber? – Bleistift"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Nein, das ist kein Kugelschreiber. Das ist ein Bleistift."
+        },
+        {
+          "speaker": "Mann",
+          "text": ""
+        },
+        {
+          "speaker": "Und jetzt Sie",
+          "text": ""
+        },
+        {
+          "speaker": "Frau",
+          "text": "Ist das ein Feuerzeug? – Streichholz"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Nein, das ist kein Feuerzeug. Das ist ein Streichholz."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Ist das ein Stuhl? – Sessel"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Nein, das ist kein Stuhl. Das ist ein Sessel."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Ist das eine Tasche? – Geldbörse"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Nein, das ist keine Tasche. Das ist eine Geldbörse."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Ist das ein Tisch? – Bett"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Nein, das ist kein Tisch. Das ist ein Bett."
+        }
+      ],
+      "raw_text": "Wiederholung L4\n- 6, Übu ng 8\nMann: Antworten Sie mit nein. Fra\nu: Ist das ein Kugelschreiber? – Bleistift\nMann: Nein, das ist kein Kugelschreiber. Das ist ein Bleistift.\nMann:\nUnd jetzt Sie:\nFrau: Ist das ein Feuerzeug? – Streichholz\nMann: Nein, das ist kein Feuerzeug. Das ist ein Streichholz.\nFrau: Ist das ein Stuhl? – Sessel\nMann: Nein, das ist kein Stuhl. Das ist ein Sessel.\nFrau: Ist das eine Tasche? – Geldbörse\nMann: Nein, das ist keine Tasche. Das ist eine Geldbörse.\nFrau: Ist das ein Tisch? – Bett\nMann: Nein, das ist kein Tisch. Das ist ein Bett.",
+      "line_count": 15,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_50_AB_Momente_A11_Wiederholung Modul 2_8.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_50_AB_Momente_A11_Wiederholung Modul 2_8.mp3",
+        "lesson": null,
+        "section": "Wiederholung 2",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-51",
+      "track_id": "1_51",
+      "book": "AB",
+      "lesson": null,
+      "exercise": "2",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Wiederholung L4"
+        },
+        {
+          "speaker": null,
+          "text": "- 6, Übung 10"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Hören Sie die Sätze und antworten Sie. Beispiel:"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Hier ist die Rechnung."
+        },
+        {
+          "speaker": "Mann",
+          "text": "Danke. Ich brauche keine Rechnung."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Ach, Sie brauchen keine Rechnung."
+        },
+        {
+          "speaker": "Mann",
+          "text": ""
+        },
+        {
+          "speaker": "Und jetzt Sie",
+          "text": ""
+        },
+        {
+          "speaker": "Frau",
+          "text": "Hi er ist der Kalender."
+        },
+        {
+          "speaker": "Mann",
+          "text": "Ach, Sie brauchen keinen Kalender."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Hier ist das Notizbuch."
+        },
+        {
+          "speaker": "Mann",
+          "text": "Ach, Sie brauchen kein Notizbuch."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Hier ist der Laptop."
+        },
+        {
+          "speaker": "Mann",
+          "text": "Ach, Sie brauchen keinen Laptop."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Hier ist das Formular."
+        },
+        {
+          "speaker": "Mann",
+          "text": "Ach, Sie brauchen kein Formular."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Hier ist die Maus."
+        },
+        {
+          "speaker": "Mann",
+          "text": "Ach, Sie brauchen keine Maus."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Hier ist das Handy."
+        },
+        {
+          "speaker": "Mann",
+          "text": "Ach, Sie brauchen kein Handy."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Hier ist der Kugelschreiber."
+        },
+        {
+          "speaker": "Mann",
+          "text": "Ach, Sie brauchen keinen Kugelschreiber."
+        }
+      ],
+      "raw_text": "Wiederholung L4\n- 6, Übung 10\nMann: Hören Sie die Sätze und antworten Sie. Beispiel:\nFrau: Hier ist die Rechnung.\nMann: Danke. Ich brauche keine Rechnung.\nFrau: Ach, Sie brauchen keine Rechnung.\nMann:\nUnd jetzt Sie:\nFrau: Hi er ist der Kalender.\nMann: Ach, Sie brauchen keinen Kalender.\nFrau: Hier ist das Notizbuch.\nMann: Ach, Sie brauchen kein Notizbuch.\nFrau: Hier ist der Laptop.\nMann: Ach, Sie brauchen keinen Laptop.\nFrau: Hier ist das Formular.\nMann: Ach, Sie brauchen kein Formular.\nFrau: Hier ist die Maus.\nMann: Ach, Sie brauchen keine Maus.\nFrau: Hier ist das Handy.\nMann: Ach, Sie brauchen kein Handy.\nFrau: Hier ist der Kugelschreiber.\nMann: Ach, Sie brauchen keinen Kugelschreiber.",
+      "line_count": 22,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_51_AB_Momente_A11_Wiederholung Modul 2_10.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_51_AB_Momente_A11_Wiederholung Modul 2_10.mp3",
+        "lesson": null,
+        "section": "Wiederholung 2",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-52",
+      "track_id": "1_52",
+      "book": "AB",
+      "lesson": null,
+      "exercise": "2",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Wiederholung L4"
+        },
+        {
+          "speaker": null,
+          "text": "- 6, Übung"
+        },
+        {
+          "speaker": "Möbel XXX! Ihre Möbel sehr günstig! Die Sonderangebote von heute",
+          "text": "Tisch, aus Holz, braun: nur 56 Euro! Stuhl, aus Plastik, grün: nur 10 Euro. Regal aus Metall, schwarz, nur 23 Euro. Nur heute. Nur bei Möbel XXX in Pleinzberg."
+        }
+      ],
+      "raw_text": "Wiederholung L4\n- 6, Übung\nMöbel XXX! Ihre Möbel sehr günstig! Die Sonderangebote von heute: Tisch, aus Holz, braun: nur 56 Euro! Stuhl, aus Plastik, grün: nur 10 Euro. Regal aus Metall, schwarz, nur 23 Euro. Nur heute. Nur bei Möbel XXX in Pleinzberg.",
+      "line_count": 3,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_52_AB_Momente_A11_Wiederholung Modul 2_11.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_52_AB_Momente_A11_Wiederholung Modul 2_11.mp3",
+        "lesson": null,
+        "section": "Wiederholung 2",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-53",
+      "track_id": "1_53",
+      "book": "AB",
+      "lesson": null,
+      "exercise": "Test",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Test L4"
+        },
+        {
+          "speaker": null,
+          "text": "- 6, Übung 3 1Hallo Michi. Ich bin gerade im Möbelhaus. Du, hier ist ein Sessel. Ich finde ihn super schön und sehr modern. Er ist blau und nicht zu groß. Du findest Blau doch auch gut, oder? Das Problem ist: Er ist nicht günstig. Ruf mich bitte an."
+        }
+      ],
+      "raw_text": "Test L4\n- 6, Übung 3 1Hallo Michi. Ich bin gerade im Möbelhaus. Du, hier ist ein Sessel. Ich finde ihn super schön und sehr modern. Er ist blau und nicht zu groß. Du findest Blau doch auch gut, oder? Das Problem ist: Er ist nicht günstig. Ruf mich bitte an.",
+      "line_count": 2,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_53_AB_Momente_A11_Test Modul 2_3.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_53_AB_Momente_A11_Test Modul 2_3.mp3",
+        "lesson": null,
+        "section": "Test",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-54",
+      "track_id": "1_54",
+      "book": "AB",
+      "lesson": null,
+      "exercise": "Test",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Sandra, hier ist Ingo. Wo bist du denn? Ich bin jetzt im Büro, aber du bist nicht hier. Wir haben doch einen Termin! Also, ich habe jetzt Hunger und brauche einen Kaffee. Ich bin dann im Café Schön und arbeite mit dem Laptop. Kommst du? Bitte melde dich. Transkriptionen zu Momente A1.1 AB | 978-3-19-011791-8| ©2020 Hueber Verlag"
+        }
+      ],
+      "raw_text": "Sandra, hier ist Ingo. Wo bist du denn? Ich bin jetzt im Büro, aber du bist nicht hier. Wir haben doch einen Termin! Also, ich habe jetzt Hunger und brauche einen Kaffee. Ich bin dann im Café Schön und arbeite mit dem Laptop. Kommst du? Bitte melde dich. Transkriptionen zu Momente A1.1 AB | 978-3-19-011791-8| ©2020 Hueber Verlag",
+      "line_count": 1,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_54_AB_Momente_A11_Test Modul 2_3.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_54_AB_Momente_A11_Test Modul 2_3.mp3",
+        "lesson": null,
+        "section": "Test",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-55",
+      "track_id": "1_55",
+      "book": "AB",
+      "lesson": null,
+      "exercise": "Test",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "F rau : Hallo Jan! Bei Fischer"
+        },
+        {
+          "speaker": null,
+          "text": "-Computer gibt es tolle Sonderangebote! Und sehr günstig! Tablets, Handys, Laptops … Wie viel Geld haben wir? Mann : Sylvia! Wir brauchen kein Tablet, kein Handy und auch keinen Laptop. Wir brauchen nur eine Maus. Bitte kauf nur e ine Maus."
+        }
+      ],
+      "raw_text": "F rau : Hallo Jan! Bei Fischer\n-Computer gibt es tolle Sonderangebote! Und sehr günstig! Tablets, Handys, Laptops … Wie viel Geld haben wir? Mann : Sylvia! Wir brauchen kein Tablet, kein Handy und auch keinen Laptop. Wir brauchen nur eine Maus. Bitte kauf nur e ine Maus.",
+      "line_count": 2,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_55_AB_Momente_A11_Test Modul 2_3.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_55_AB_Momente_A11_Test Modul 2_3.mp3",
+        "lesson": null,
+        "section": "Test",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-56",
+      "track_id": "1_56",
+      "book": "AB",
+      "lesson": null,
+      "exercise": "Test",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": "4Sonderangebote bei Computer Hansen",
+          "text": "Maus, Computec, rot und schwarz, nur 7,99 Euro; Tablet, Hangwei, nur 149 Euro, Drucker, Conan, nur 179,99 Euro. Supergünstig! Nur bei Computer Hansen!"
+        }
+      ],
+      "raw_text": "4Sonderangebote bei Computer Hansen: Maus, Computec, rot und schwarz, nur 7,99 Euro; Tablet, Hangwei, nur 149 Euro, Drucker, Conan, nur 179,99 Euro. Supergünstig! Nur bei Computer Hansen!",
+      "line_count": 1,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_56_AB_Momente_A11_Test Modul 2_3.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_56_AB_Momente_A11_Test Modul 2_3.mp3",
+        "lesson": null,
+        "section": "Test",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-57",
+      "track_id": "1_57",
+      "book": "AB",
+      "lesson": null,
+      "exercise": "Test",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Hallo Valentin, hier ist Rita. Du, ich komme nicht",
+          "index": 5
+        },
+        {
+          "speaker": "ins WLAN. Der Computer sagt",
+          "text": "Mein Passwort ist falsch. Aber es ist doch neu. Wo bist du denn? Ich habe um 15 Uhr einen Termin und brauche meine E"
+        },
+        {
+          "speaker": null,
+          "text": "-Mails. Bitte komm jetzt!"
+        }
+      ],
+      "raw_text": "5Hallo Valentin, hier ist Rita. Du, ich komme nicht\nins WLAN. Der Computer sagt: Mein Passwort ist falsch. Aber es ist doch neu. Wo bist du denn? Ich habe um 15 Uhr einen Termin und brauche meine E\n-Mails. Bitte komm jetzt!",
+      "line_count": 3,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_57_AB_Momente_A11_Test Modul 2_3.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_57_AB_Momente_A11_Test Modul 2_3.mp3",
+        "lesson": null,
+        "section": "Test",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-58",
+      "track_id": "1_58",
+      "book": "AB",
+      "lesson": null,
+      "exercise": "Test",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": "6Hallo Markus! Hier ist Anja. Und hier ist mein Rätsel. Also",
+          "text": "Ich sehe etwas. Was ist das? Es ist klein. Es ist aus Papier. Da ist mein Vorname, mein Familienname und mein Beruf."
+        }
+      ],
+      "raw_text": "6Hallo Markus! Hier ist Anja. Und hier ist mein Rätsel. Also: Ich sehe etwas. Was ist das? Es ist klein. Es ist aus Papier. Da ist mein Vorname, mein Familienname und mein Beruf.",
+      "line_count": 1,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_58_AB_Momente_A11_Test Modul 2_3.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_58_AB_Momente_A11_Test Modul 2_3.mp3",
+        "lesson": null,
+        "section": "Test",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-59",
+      "track_id": "1_59",
+      "book": "AB",
+      "lesson": null,
+      "exercise": "Test",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": "Frau",
+          "text": "Bürohaus Hansen. Leider sind wir im Moment nicht da. Bitte sprechen Sie nach dem Ton."
+        },
+        {
+          "speaker": "Mann",
+          "text": "Guten Tag, hier ist Erwin Los von der"
+        },
+        {
+          "speaker": "Firm a Huber. Ich möchte etwas bestellen",
+          "text": "Wir brauchen dreiundzwanzig neue Bürostühle. Modell XXLdreizehneinundfünfzig. Fünfzehn in blau und acht in grau. Und vielleicht auch einen Tisch, vielleicht in braun. Was haben Sie denn da? Meine Telefonnummer ist 03276 …"
+        }
+      ],
+      "raw_text": "Frau: Bürohaus Hansen. Leider sind wir im Moment nicht da. Bitte sprechen Sie nach dem Ton.\nMann: Guten Tag, hier ist Erwin Los von der\nFirm a Huber. Ich möchte etwas bestellen: Wir brauchen dreiundzwanzig neue Bürostühle. Modell XXLdreizehneinundfünfzig. Fünfzehn in blau und acht in grau. Und vielleicht auch einen Tisch, vielleicht in braun. Was haben Sie denn da? Meine Telefonnummer ist 03276 …",
+      "line_count": 3,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_59_AB_Momente_A11_Test Modul 2_3.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_59_AB_Momente_A11_Test Modul 2_3.mp3",
+        "lesson": null,
+        "section": "Test",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-60",
+      "track_id": "1_60",
+      "book": "AB",
+      "lesson": null,
+      "exercise": "Test",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Test L 4 - 6, Übung 4b Kerner AG. Hier ist Martin Holz.Guten Tag! Was kann ich für Sie tun?Einen Moment bitte. … Nein, Frau Müller ist leider nicht da.Sehr gern. Auf Wiederhören!"
+        }
+      ],
+      "raw_text": "Test L 4 - 6, Übung 4b Kerner AG. Hier ist Martin Holz.Guten Tag! Was kann ich für Sie tun?Einen Moment bitte. … Nein, Frau Müller ist leider nicht da.Sehr gern. Auf Wiederhören!",
+      "line_count": 1,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_60_AB_Momente_A11_Test Modul 2_4b.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_60_AB_Momente_A11_Test Modul 2_4b.mp3",
+        "lesson": null,
+        "section": "Test",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-61",
+      "track_id": "1_61",
+      "book": "AB",
+      "lesson": null,
+      "exercise": "Beruf",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Fokus Beruf L4"
+        },
+        {
+          "speaker": null,
+          "text": "- 6 , Übung 1"
+        },
+        {
+          "speaker": "Peter",
+          "text": "B&K Versicherungen, Peter Flemming, guten Tag. Was kann ich für Sie tun?"
+        },
+        {
+          "speaker": "Svenja",
+          "text": "Guten Tag, mein Name ist Svenja Hofert von eco"
+        },
+        {
+          "speaker": null,
+          "text": "-Office. Ist Frau Krämer da?"
+        },
+        {
+          "speaker": "Peter",
+          "text": "Einen Moment bitte. Ich verbinde. ... Hören Sie? Frau Krämer spricht gerade."
+        },
+        {
+          "speaker": "Svenja",
+          "text": "Danke. Ich rufe später wieder an. Auf Wiederhören."
+        },
+        {
+          "speaker": "Peter",
+          "text": "Auf Wiederhören."
+        },
+        {
+          "speaker": "Peter",
+          "text": "B&K Versicherungen. Peter Flemming. Guten Tag."
+        },
+        {
+          "speaker": "Svenja",
+          "text": "Svenja Hofert hier."
+        },
+        {
+          "speaker": "Peter",
+          "text": "Guten Tag, Frau Hofert. Ich verbinde. … Es tut mir leid. Frau Krämer ist gerade nicht am Platz. Sie ruft Sie zurück."
+        },
+        {
+          "speaker": "Svenja",
+          "text": "Nein danke, ich rufe später wieder an. Auf Wiederhören."
+        },
+        {
+          "speaker": "Peter",
+          "text": "Auf Wiederhören."
+        },
+        {
+          "speaker": "Peter",
+          "text": "B&K Versicherungen. Peter Flemming."
+        },
+        {
+          "speaker": "Svenja",
+          "text": "Svenja Hofert nochmal. Ist Frau Krämer da?"
+        },
+        {
+          "speaker": "Peter",
+          "text": "Ja, Frau Krämer ist da. Einen Moment. Ich verbinde."
+        },
+        {
+          "speaker": "Fr. Krämer",
+          "text": "Krämer."
+        },
+        {
+          "speaker": "Sv enja",
+          "text": "Guten Morgen, Frau Krämer. Svenja Hofert von eco"
+        },
+        {
+          "speaker": null,
+          "text": "-Office hier. Vielen Dank für die Bestellung."
+        }
+      ],
+      "raw_text": "Fokus Beruf L4\n- 6 , Übung 1\nPeter: B&K Versicherungen, Peter Flemming, guten Tag. Was kann ich für Sie tun?\nSvenja: Guten Tag, mein Name ist Svenja Hofert von eco\n-Office. Ist Frau Krämer da?\nPeter: Einen Moment bitte. Ich verbinde. ... Hören Sie? Frau Krämer spricht gerade.\nSvenja: Danke. Ich rufe später wieder an. Auf Wiederhören.\nPeter: Auf Wiederhören.\nPeter: B&K Versicherungen. Peter Flemming. Guten Tag.\nSvenja: Svenja Hofert hier.\nPeter: Guten Tag, Frau Hofert. Ich verbinde. … Es tut mir leid. Frau Krämer ist gerade nicht am Platz. Sie ruft Sie zurück.\nSvenja: Nein danke, ich rufe später wieder an. Auf Wiederhören.\nPeter: Auf Wiederhören.\nPeter: B&K Versicherungen. Peter Flemming.\nSvenja: Svenja Hofert nochmal. Ist Frau Krämer da?\nPeter: Ja, Frau Krämer ist da. Einen Moment. Ich verbinde.\nFr. Krämer: Krämer.\nSv enja: Guten Morgen, Frau Krämer. Svenja Hofert von eco\n-Office hier. Vielen Dank für die Bestellung.",
+      "line_count": 19,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_61_AB_Momente_A11_Fokus Beruf Modul 2_1.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_61_AB_Momente_A11_Fokus Beruf Modul 2_1.mp3",
+        "lesson": null,
+        "section": "Fokus Beruf",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-1-62",
+      "track_id": "1_62",
+      "book": "AB",
+      "lesson": null,
+      "exercise": "Beruf",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Fokus Beruf L4"
+        },
+        {
+          "speaker": null,
+          "text": "- 6 , Übung 4"
+        },
+        {
+          "speaker": "Fr. Krämer",
+          "text": "Krämer. Transkriptionen zu Momente A1.1 AB | 978-3-19-011791-8| ©2020 Hueber Verlag"
+        },
+        {
+          "speaker": "Svenja",
+          "text": "Guten Morgen, Frau Krämer. Svenja Hofert von eco"
+        },
+        {
+          "speaker": null,
+          "text": "-Office hier. Vielen Dank für die Bestellung. … Ist das richtig? ... Sie brauchen 2577 Bleistifte?"
+        },
+        {
+          "speaker": "Fr.Krämer",
+          "text": "Oh, nein! Wir brauchen nur 25 Bleistifte."
+        },
+        {
+          "speaker": "Svenja",
+          "text": "Okay. Und wie viele Notizbücher brauchen Sie? Hundertfünfzig? Fr"
+        },
+        {
+          "speaker": ".Krämer",
+          "text": "Nein, nein das ist auch falsch. Wir brauchen nur 15 Notizbücher. Svenja : Gut, 15 Notizbücher ... aus Holz, Farbe braun. Fr"
+        },
+        {
+          "speaker": ". Krämer",
+          "text": "Braun? Nein! Wir brauchen rote Notizbücher."
+        },
+        {
+          "speaker": "Svenja",
+          "text": ""
+        },
+        {
+          "speaker": "Ja, kein Problem. Dann habe ich jetzt",
+          "text": "25 Bleistifte, 50 Kugelschreiber, 15 rote Notizbücher und 20 Mappen. Fr"
+        },
+        {
+          "speaker": ". Krämer",
+          "text": "Ja, genau. Das ist ric htig. Die Mappen sind schwarz, oder?"
+        },
+        {
+          "speaker": "Svenja",
+          "text": "Ja. Sie sind schwarz. Fr"
+        },
+        {
+          "speaker": ". Krämer",
+          "text": "Sehr gut."
+        },
+        {
+          "speaker": "Svenja",
+          "text": "Okay. Dann ist alles klar. Auf Wiederhören, Frau Krämer. Fr"
+        },
+        {
+          "speaker": ". Krämer",
+          "text": "Auf Wiederhören und noch mal vielen Dank, Frau Hofert."
+        }
+      ],
+      "raw_text": "Fokus Beruf L4\n- 6 , Übung 4\nFr. Krämer: Krämer. Transkriptionen zu Momente A1.1 AB | 978-3-19-011791-8| ©2020 Hueber Verlag\nSvenja: Guten Morgen, Frau Krämer. Svenja Hofert von eco\n-Office hier. Vielen Dank für die Bestellung. … Ist das richtig? ... Sie brauchen 2577 Bleistifte?\nFr.Krämer: Oh, nein! Wir brauchen nur 25 Bleistifte.\nSvenja: Okay. Und wie viele Notizbücher brauchen Sie? Hundertfünfzig? Fr\n.Krämer: Nein, nein das ist auch falsch. Wir brauchen nur 15 Notizbücher. Svenja : Gut, 15 Notizbücher ... aus Holz, Farbe braun. Fr\n. Krämer: Braun? Nein! Wir brauchen rote Notizbücher.\nSvenja:\nJa, kein Problem. Dann habe ich jetzt: 25 Bleistifte, 50 Kugelschreiber, 15 rote Notizbücher und 20 Mappen. Fr\n. Krämer: Ja, genau. Das ist ric htig. Die Mappen sind schwarz, oder?\nSvenja: Ja. Sie sind schwarz. Fr\n. Krämer: Sehr gut.\nSvenja: Okay. Dann ist alles klar. Auf Wiederhören, Frau Krämer. Fr\n. Krämer: Auf Wiederhören und noch mal vielen Dank, Frau Hofert.",
+      "line_count": 16,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD1/1_62_AB_Momente_A11_Fokus Beruf Modul 2_4.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD1/1_62_AB_Momente_A11_Fokus Beruf Modul 2_4.mp3",
+        "lesson": null,
+        "section": "Fokus Beruf",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-01",
+      "track_id": "2_01",
+      "book": "AB",
+      "lesson": 7,
+      "exercise": "6",
+      "header_kind": "lektion",
+      "title": "Lektion 7, Übung 6",
+      "lines": [
+        {
+          "speaker": "Fangirl",
+          "text": "Du kannst ja toll backen!"
+        },
+        {
+          "speaker": "Superstar",
+          "text": "Herzlichen Dank!"
+        },
+        {
+          "speaker": "Fangirl",
+          "text": "Du kannst aber gut singen. Das ist toll!"
+        },
+        {
+          "speaker": "Superstar",
+          "text": "Oh, vielen Dank."
+        },
+        {
+          "speaker": "Fangirl",
+          "text": "Du kannst wirklich gut Tennis spielen!"
+        },
+        {
+          "speaker": "Superstar",
+          "text": "Danke sehr!"
+        },
+        {
+          "speaker": "Fangirl",
+          "text": "Du kannst aber super Gitarre spielen!"
+        },
+        {
+          "speaker": "Superstar",
+          "text": "Oh, danke!"
+        }
+      ],
+      "raw_text": "Lektion 7, Übung 6\nFangirl: Du kannst ja toll backen!\nSuperstar: Herzlichen Dank!\nFangirl: Du kannst aber gut singen. Das ist toll!\nSuperstar: Oh, vielen Dank.\nFangirl: Du kannst wirklich gut Tennis spielen!\nSuperstar: Danke sehr!\nFangirl: Du kannst aber super Gitarre spielen!\nSuperstar: Oh, danke!",
+      "line_count": 8,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_KB_CD2/2_01_KB_Momente_A11_L7_1b_4.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_01_KB_Momente_A11_L7_1b_4.mp3",
+        "lesson": 7,
+        "section": "1b 4",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-02",
+      "track_id": "2_02",
+      "book": "AB",
+      "lesson": 7,
+      "exercise": "8",
+      "header_kind": "lektion",
+      "title": "Lektion 7, Übung 8",
+      "lines": [
+        {
+          "speaker": null,
+          "text": "spielenSchach spielenIch kann Schach spielen.Ich kann gut Schach spielen.Ich kann sehr gut Schach spielen. fahren Ski fahrentoll Ski fahrenaber toll Ski fahrenSie können aber toll Ski fahren!"
+        }
+      ],
+      "raw_text": "Lektion 7, Übung 8\nspielenSchach spielenIch kann Schach spielen.Ich kann gut Schach spielen.Ich kann sehr gut Schach spielen. fahren Ski fahrentoll Ski fahrenaber toll Ski fahrenSie können aber toll Ski fahren!",
+      "line_count": 1,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_KB_CD2/2_02_KB_Momente_A11_L7_3_4.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_02_KB_Momente_A11_L7_3_4.mp3",
+        "lesson": 7,
+        "section": "3 4",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-03",
+      "track_id": "2_03",
+      "book": "AB",
+      "lesson": 8,
+      "exercise": "13a",
+      "header_kind": "lektion",
+      "title": "Lektion 8, Übung 13Abend, Idee, können, Museum, Konzert, Morgen, Café, Ausstellung, Woche, Problem",
+      "lines": [],
+      "raw_text": "Lektion 8, Übung 13Abend, Idee, können, Museum, Konzert, Morgen, Café, Ausstellung, Woche, Problem",
+      "line_count": 0,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_KB_CD2/2_03_KB_Momente_A11_L7_9b_1.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_03_KB_Momente_A11_L7_9b_1.mp3",
+        "lesson": 7,
+        "section": "9b 1",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-4",
+      "track_id": "2_4",
+      "book": "AB",
+      "lesson": 8,
+      "exercise": "14",
+      "header_kind": "lektion",
+      "title": "Lektion 8, Übung 14",
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Junger Mann : Hast d u am Samstag Zeit? ↗ Junge Frau : Wann? ↗ Junger Mann : Um sieben? ↗ Junge Frau : Ja, um sieben habe ich Zeit. ↘",
+          "index": 1
+        }
+      ],
+      "raw_text": "Lektion 8, Übung 14\n1Junger Mann : Hast d u am Samstag Zeit? ↗ Junge Frau : Wann? ↗ Junger Mann : Um sieben? ↗ Junge Frau : Ja, um sieben habe ich Zeit. ↘",
+      "line_count": 1,
+      "audio_linked": false
+    },
+    {
+      "id": "transcript-2-5",
+      "track_id": "2_5",
+      "book": "AB",
+      "lesson": null,
+      "exercise": null,
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Junge Frau : Wie spät ist es? ↘ Junger Mann : Viertel vor acht. ↘ Junge Frau : Gehen wir ins Kino? ↗ Junger Mann : Nein, keine Lust. ↘ Transkriptionen zu Momente A1.1 AB | 978-3-19-011791-8| ©2020 Hueber Verlag",
+          "index": 2
+        }
+      ],
+      "raw_text": "2Junge Frau : Wie spät ist es? ↘ Junger Mann : Viertel vor acht. ↘ Junge Frau : Gehen wir ins Kino? ↗ Junger Mann : Nein, keine Lust. ↘ Transkriptionen zu Momente A1.1 AB | 978-3-19-011791-8| ©2020 Hueber Verlag",
+      "line_count": 1,
+      "audio_linked": false
+    },
+    {
+      "id": "transcript-2-06",
+      "track_id": "2_06",
+      "book": "AB",
+      "lesson": 8,
+      "exercise": "15",
+      "header_kind": "lektion",
+      "title": "Lektion 8, Übung 15",
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Frau : Nina Sauer. Mann : Hallo Nina. Hier ist Michael. Frau : Hallo Michael! Wie geht‘ s? Mann : Gut, danke. Du, Nina, hast du heute Zeit? Niklas und ich gehen ins Museum. Frau : Nein. Ich habe heute leider keine Zeit. Ich gehe ins Schwimmbad. Mann : Hm. Und am Freitag? Hast du am Freitag Zeit? Frau : Ja. Ich habe am Freitag Zeit. Mann : Am Nachmittag? Frau : Tut mir leid, da kann ich nicht. Ich habe aber um sieben Zeit. Mann : Gut. Frau : Wir können vielleicht ins Kino gehen. Mann : Ja, gern. Ich schreibe Niklas eine Nachricht. Frau : Gut. Tschüs! Mann : Tschüs Nina!"
+        }
+      ],
+      "raw_text": "Lektion 8, Übung 15\nFrau : Nina Sauer. Mann : Hallo Nina. Hier ist Michael. Frau : Hallo Michael! Wie geht‘ s? Mann : Gut, danke. Du, Nina, hast du heute Zeit? Niklas und ich gehen ins Museum. Frau : Nein. Ich habe heute leider keine Zeit. Ich gehe ins Schwimmbad. Mann : Hm. Und am Freitag? Hast du am Freitag Zeit? Frau : Ja. Ich habe am Freitag Zeit. Mann : Am Nachmittag? Frau : Tut mir leid, da kann ich nicht. Ich habe aber um sieben Zeit. Mann : Gut. Frau : Wir können vielleicht ins Kino gehen. Mann : Ja, gern. Ich schreibe Niklas eine Nachricht. Frau : Gut. Tschüs! Mann : Tschüs Nina!",
+      "line_count": 1,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_KB_CD2/2_06_KB_Momente_A11_L8_1a.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_06_KB_Momente_A11_L8_1a.mp3",
+        "lesson": 8,
+        "section": "1a",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-07",
+      "track_id": "2_07",
+      "book": "AB",
+      "lesson": 9,
+      "exercise": "14",
+      "header_kind": "lektion",
+      "title": "Lektion 9, Übung 14",
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Schinken – Brötchen – Schinkenbrötchen Tomate – Suppe – Tomatensuppe Käse – Kuchen – Käsekuchen Orange – Saft – Orangensaft",
+          "index": 1
+        }
+      ],
+      "raw_text": "Lektion 9, Übung 14\n1Schinken – Brötchen – Schinkenbrötchen Tomate – Suppe – Tomatensuppe Käse – Kuchen – Käsekuchen Orange – Saft – Orangensaft",
+      "line_count": 1,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_KB_CD2/2_07_KB_Momente_A11_L8_3a.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_07_KB_Momente_A11_L8_3a.mp3",
+        "lesson": 8,
+        "section": "3a",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-08",
+      "track_id": "2_08",
+      "book": "AB",
+      "lesson": 8,
+      "exercise": "4b",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Wiederholung L7"
+        },
+        {
+          "speaker": null,
+          "text": "- 9, Übung 3"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Hören Sie und sprechen Sie nach."
+        },
+        {
+          "speaker": "Beispiel",
+          "text": ""
+        },
+        {
+          "speaker": "Frau",
+          "text": "Sie können aber toll Ski fahren! –"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Sie können aber toll Ski fahren!"
+        },
+        {
+          "speaker": "Mann",
+          "text": ""
+        },
+        {
+          "speaker": "Und jetzt Sie",
+          "text": ""
+        },
+        {
+          "speaker": "Frau",
+          "text": "Du kannst wirklich super Gitarre spielen!"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Wow! – Du kannst ja super tanzen!"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Du kannst wirklich toll Fußball spielen!"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Sie können ja super Tennis spielen."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Sie können aber gut malen!"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Wow! – Du kannst wirklich super fotografieren!"
+        }
+      ],
+      "raw_text": "Wiederholung L7\n- 9, Übung 3\nMann: Hören Sie und sprechen Sie nach.\nBeispiel:\nFrau: Sie können aber toll Ski fahren! –\nMann: Sie können aber toll Ski fahren!\nMann:\nUnd jetzt Sie:\nFrau: Du kannst wirklich super Gitarre spielen!\nFrau: Wow! – Du kannst ja super tanzen!\nFrau: Du kannst wirklich toll Fußball spielen!\nFrau: Sie können ja super Tennis spielen.\nFrau: Sie können aber gut malen!\nFrau: Wow! – Du kannst wirklich super fotografieren!",
+      "line_count": 14,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_KB_CD2/2_08_KB_Momente_A11_L8_4b.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_08_KB_Momente_A11_L8_4b.mp3",
+        "lesson": 8,
+        "section": "4b",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-09",
+      "track_id": "2_09",
+      "book": "AB",
+      "lesson": 9,
+      "exercise": "4",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Wiederholung L7"
+        },
+        {
+          "speaker": null,
+          "text": "- 9, Übung 5"
+        },
+        {
+          "speaker": "Mann",
+          "text": ""
+        },
+        {
+          "speaker": "Variieren Sie. Beispiel",
+          "text": "ins Kino"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Gehen wir ins Kino?"
+        },
+        {
+          "speaker": "Mann",
+          "text": "vielleicht ins Theater"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Vielleicht können wir ins Theater gehen?"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Und"
+        },
+        {
+          "speaker": "jetzt Sie",
+          "text": ""
+        },
+        {
+          "speaker": "Mann",
+          "text": "ins Theater"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Gehen wir ins Theater?"
+        },
+        {
+          "speaker": "Mann",
+          "text": "vielleicht ins Schwimmbad"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Vielleicht können wir ins Schwimmbad gehen?"
+        },
+        {
+          "speaker": "Mann",
+          "text": "ins Café"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Gehen wir ins Café?"
+        },
+        {
+          "speaker": "Mann",
+          "text": "vielleicht in eine Ausstellung"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Vielleicht können wir in eine Ausstellung gehen?"
+        },
+        {
+          "speaker": "Mann",
+          "text": "ins Museum"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Gehen wir ins Museum? Transkriptionen zu Momente A1.1 AB | 978-3-19-011791-8| ©2020 Hueber Verlag"
+        },
+        {
+          "speaker": "Mann",
+          "text": "vielleicht in eine Bar"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Vielleicht können wir in eine Bar gehen?"
+        },
+        {
+          "speaker": "Mann",
+          "text": "ins Restaurant"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Gehen wir ins Restaurant?"
+        },
+        {
+          "speaker": "Mann",
+          "text": "vielleicht ins Konzert"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Vielleicht können wir ins Konzert gehen?"
+        }
+      ],
+      "raw_text": "Wiederholung L7\n- 9, Übung 5\nMann:\nVariieren Sie. Beispiel: ins Kino\nFrau: Gehen wir ins Kino?\nMann: vielleicht ins Theater\nFrau: Vielleicht können wir ins Theater gehen?\nMann: Und\njetzt Sie:\nMann: ins Theater\nFrau: Gehen wir ins Theater?\nMann: vielleicht ins Schwimmbad\nFrau: Vielleicht können wir ins Schwimmbad gehen?\nMann: ins Café\nFrau: Gehen wir ins Café?\nMann: vielleicht in eine Ausstellung\nFrau: Vielleicht können wir in eine Ausstellung gehen?\nMann: ins Museum\nFrau: Gehen wir ins Museum? Transkriptionen zu Momente A1.1 AB | 978-3-19-011791-8| ©2020 Hueber Verlag\nMann: vielleicht in eine Bar\nFrau: Vielleicht können wir in eine Bar gehen?\nMann: ins Restaurant\nFrau: Gehen wir ins Restaurant?\nMann: vielleicht ins Konzert\nFrau: Vielleicht können wir ins Konzert gehen?",
+      "line_count": 25,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_KB_CD2/2_09_KB_Momente_A11_L9_4.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_09_KB_Momente_A11_L9_4.mp3",
+        "lesson": 9,
+        "section": "4",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-10",
+      "track_id": "2_10",
+      "book": "AB",
+      "lesson": 9,
+      "exercise": "5",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Wiederholung L7"
+        },
+        {
+          "speaker": null,
+          "text": "- 9, Übung 10 Hmm, also, ich möchte einen Salat mit Schinken. Und dann nehme ich eine Suppe, eine Tomatensuppe. Und einen Orangensaft.Oh, es gibt Schokoladenkuchen. Ich möchte auch gern einen Schokoladenkuchen un d eine Tasse Kaffee."
+        }
+      ],
+      "raw_text": "Wiederholung L7\n- 9, Übung 10 Hmm, also, ich möchte einen Salat mit Schinken. Und dann nehme ich eine Suppe, eine Tomatensuppe. Und einen Orangensaft.Oh, es gibt Schokoladenkuchen. Ich möchte auch gern einen Schokoladenkuchen un d eine Tasse Kaffee.",
+      "line_count": 2,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_KB_CD2/2_10_KB_Momente_A11_L9_5.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_10_KB_Momente_A11_L9_5.mp3",
+        "lesson": 9,
+        "section": "5",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-11",
+      "track_id": "2_11",
+      "book": "AB",
+      "lesson": 9,
+      "exercise": "6",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Test L7"
+        },
+        {
+          "speaker": null,
+          "text": "- 9, Übung 1"
+        },
+        {
+          "speaker": "Moderator",
+          "text": "Hallo an diesem wunderschönen Sonntagmorgen! Hier ist Stefan vom Radio Bodensee, dem Radio mit mehr Musik und guter Laune. Es ist 9 Uhr – seid ihr etwa noch"
+        },
+        {
+          "speaker": "im Bett? Wir möchten gern wissen",
+          "text": "Was macht ihr heute an diesem tollen Tag? Ruft an. Die Telefonnummer ist die 0300 / 33 34 35. … Und hier ist Annegret. Hallo Annegret. Was machen Sie heute?"
+        },
+        {
+          "speaker": "Annegret",
+          "text": "Ich gehe um 10 Uhr ins Schwimmbad."
+        },
+        {
+          "speaker": "Moderator",
+          "text": "Oh, super! Schwimmen Sie oft?"
+        },
+        {
+          "speaker": "Annegret",
+          "text": "Ja, jeden S onntag. Und am Montag und Mittwoch gehe ich immer um 7 Uhr ins Schwimmbad."
+        },
+        {
+          "speaker": "Moderator",
+          "text": "Um 7 Uhr?"
+        },
+        {
+          "speaker": "Annegret",
+          "text": "Ja, ich bin Rentnerin und habe Zeit ."
+        },
+        {
+          "speaker": "Moderator",
+          "text": "Das ist ja toll. Viel Spaß. … Und hier Anrufer Nummer 2. Wie heißen Sie?"
+        },
+        {
+          "speaker": "Mike",
+          "text": "Ich bin Mike. Moderato"
+        },
+        {
+          "speaker": "r",
+          "text": "Hallo Mike. Was machen Sie heute?"
+        },
+        {
+          "speaker": "Mike",
+          "text": "Ich spiele heute Vormittag Tennis. Heute Nachmittag treffe ich meine Freundin, dann gehen wir in eine Ausstellung und heute Abend koche ich."
+        },
+        {
+          "speaker": "Moderator",
+          "text": "Wow. Sie kochen? Können Sie gut kochen?"
+        },
+        {
+          "speaker": "Mike",
+          "text": "Na ja, es geht . Aber meine Freundin kann wirklich super kochen."
+        },
+        {
+          "speaker": "Moderator",
+          "text": "Was gibt es?"
+        },
+        {
+          "speaker": "Mike",
+          "text": "Fisch und Tomatensalat."
+        },
+        {
+          "speaker": "Moderator",
+          "text": "Na, dann guten Appeti t. Und dann Anruferin Nummer 3."
+        },
+        {
+          "speaker": "Moderator",
+          "text": "Und hier haben wir noch Julia. Julia ist 16 Jahre alt. Hallo Julia, was machst du heute?"
+        },
+        {
+          "speaker": "Julia",
+          "text": "Heute um halb vier ist ein Konzert in der Schule. Da spiele ich mit. Ich spiele Gitarre."
+        },
+        {
+          "speaker": "Moderator",
+          "text": "Das ist ja super!"
+        },
+        {
+          "speaker": "Julia",
+          "text": "Ja! Und dann gehen wir alle in das Restaurant beim Theater und essen einen Burger und Pommes!!"
+        },
+        {
+          "speaker": "Moderator",
+          "text": "G ute Idee. Das esse ich auch immer. Herzlichen Dank an Annegret, Mike und Julia. Und nun wieder Musik von …"
+        }
+      ],
+      "raw_text": "Test L7\n- 9, Übung 1\nModerator: Hallo an diesem wunderschönen Sonntagmorgen! Hier ist Stefan vom Radio Bodensee, dem Radio mit mehr Musik und guter Laune. Es ist 9 Uhr – seid ihr etwa noch\nim Bett? Wir möchten gern wissen: Was macht ihr heute an diesem tollen Tag? Ruft an. Die Telefonnummer ist die 0300 / 33 34 35. … Und hier ist Annegret. Hallo Annegret. Was machen Sie heute?\nAnnegret: Ich gehe um 10 Uhr ins Schwimmbad.\nModerator: Oh, super! Schwimmen Sie oft?\nAnnegret: Ja, jeden S onntag. Und am Montag und Mittwoch gehe ich immer um 7 Uhr ins Schwimmbad.\nModerator: Um 7 Uhr?\nAnnegret: Ja, ich bin Rentnerin und habe Zeit .\nModerator: Das ist ja toll. Viel Spaß. … Und hier Anrufer Nummer 2. Wie heißen Sie?\nMike: Ich bin Mike. Moderato\nr: Hallo Mike. Was machen Sie heute?\nMike: Ich spiele heute Vormittag Tennis. Heute Nachmittag treffe ich meine Freundin, dann gehen wir in eine Ausstellung und heute Abend koche ich.\nModerator: Wow. Sie kochen? Können Sie gut kochen?\nMike: Na ja, es geht . Aber meine Freundin kann wirklich super kochen.\nModerator: Was gibt es?\nMike: Fisch und Tomatensalat.\nModerator: Na, dann guten Appeti t. Und dann Anruferin Nummer 3.\nModerator: Und hier haben wir noch Julia. Julia ist 16 Jahre alt. Hallo Julia, was machst du heute?\nJulia: Heute um halb vier ist ein Konzert in der Schule. Da spiele ich mit. Ich spiele Gitarre.\nModerator: Das ist ja super!\nJulia: Ja! Und dann gehen wir alle in das Restaurant beim Theater und essen einen Burger und Pommes!!\nModerator: G ute Idee. Das esse ich auch immer. Herzlichen Dank an Annegret, Mike und Julia. Und nun wieder Musik von …",
+      "line_count": 23,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_KB_CD2/2_11_KB_Momente_A11_L9_6.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_11_KB_Momente_A11_L9_6.mp3",
+        "lesson": 9,
+        "section": "6",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-12",
+      "track_id": "2_12",
+      "book": "AB",
+      "lesson": 9,
+      "exercise": "7",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Test L7"
+        },
+        {
+          "speaker": null,
+          "text": "-9, Übung 4b Hallo, hier ist Tim. Na, wie geht’s? Lust auf Kino heute Abend?Vielleicht um halb acht?Na dann um Viertel nach acht? Okay. Bis dann! Tschüs!"
+        }
+      ],
+      "raw_text": "Test L7\n-9, Übung 4b Hallo, hier ist Tim. Na, wie geht’s? Lust auf Kino heute Abend?Vielleicht um halb acht?Na dann um Viertel nach acht? Okay. Bis dann! Tschüs!",
+      "line_count": 2,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_KB_CD2/2_12_KB_Momente_A11_L9_7.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_12_KB_Momente_A11_L9_7.mp3",
+        "lesson": 9,
+        "section": "7",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-13",
+      "track_id": "2_13",
+      "book": "AB",
+      "lesson": 9,
+      "exercise": "9a",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Fokus Beruf L7"
+        },
+        {
+          "speaker": null,
+          "text": "- 9, Übung 1b 1Praxis Dr. Müller. Frau Schmidt, Sie haben angerufen. Gerne bestätige ich den Termin am Mittwoch um 9 Uhr. Auf Wiederhören. Transkriptionen zu Momente A1.1 AB | 978-3-19-011791-8| ©2020 Hueber Verlag"
+        }
+      ],
+      "raw_text": "Fokus Beruf L7\n- 9, Übung 1b 1Praxis Dr. Müller. Frau Schmidt, Sie haben angerufen. Gerne bestätige ich den Termin am Mittwoch um 9 Uhr. Auf Wiederhören. Transkriptionen zu Momente A1.1 AB | 978-3-19-011791-8| ©2020 Hueber Verlag",
+      "line_count": 2,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_KB_CD2/2_13_KB_Momente_A11_L9_9a.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_13_KB_Momente_A11_L9_9a.mp3",
+        "lesson": 9,
+        "section": "9a",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-14",
+      "track_id": "2_14",
+      "book": "AB",
+      "lesson": null,
+      "exercise": "3_Hoeren",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Guten Morgen, Frau Schmidt. Hier ist Benjamin Kleuber von de r Kiri AG . Viele n Dank für den Terminvorschlag. Dann telefonieren wi r am Montag um zehn Uhr. Schön! Auf Wiederhören.",
+          "index": 2
+        }
+      ],
+      "raw_text": "2Guten Morgen, Frau Schmidt. Hier ist Benjamin Kleuber von de r Kiri AG . Viele n Dank für den Terminvorschlag. Dann telefonieren wi r am Montag um zehn Uhr. Schön! Auf Wiederhören.",
+      "line_count": 1,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_KB_CD2/2_14_KB_Momente_A11_Magazin 3_Hoeren.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_14_KB_Momente_A11_Magazin 3_Hoeren.mp3",
+        "lesson": null,
+        "section": "2_14_KB_Momente_A11_Magazin 3_Hoeren",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-15",
+      "track_id": "2_15",
+      "book": "AB",
+      "lesson": null,
+      "exercise": "3_Hoeren",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Hallo Julia! Felix hier. Alles klar! Am Freitag um elf Uhr dreißig kann ic h auch. Ich komme in dein Büro. Bis dann!",
+          "index": 3
+        }
+      ],
+      "raw_text": "3Hallo Julia! Felix hier. Alles klar! Am Freitag um elf Uhr dreißig kann ic h auch. Ich komme in dein Büro. Bis dann!",
+      "line_count": 1,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_KB_CD2/2_15_KB_Momente_A11_Magazin 3_Hoeren.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_15_KB_Momente_A11_Magazin 3_Hoeren.mp3",
+        "lesson": null,
+        "section": "2_15_KB_Momente_A11_Magazin 3_Hoeren",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-16",
+      "track_id": "2_16",
+      "book": "AB",
+      "lesson": null,
+      "exercise": "3_Hoeren",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Hallo F rau Schmidt! Johanna Mai hier. Danke für den Terminvorschlag! Am Donnerstag um dreizehn Uhr habe ich auch Zeit. Kommen Sie einfach in mein Büro. Dann planen wir das Angebot für die ÖkoBank. Vielen Dank."
+        }
+      ],
+      "raw_text": "Hallo F rau Schmidt! Johanna Mai hier. Danke für den Terminvorschlag! Am Donnerstag um dreizehn Uhr habe ich auch Zeit. Kommen Sie einfach in mein Büro. Dann planen wir das Angebot für die ÖkoBank. Vielen Dank.",
+      "line_count": 1,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_KB_CD2/2_16_KB_Momente_A11_Magazin 3_Hoeren.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_16_KB_Momente_A11_Magazin 3_Hoeren.mp3",
+        "lesson": null,
+        "section": "2_16_KB_Momente_A11_Magazin 3_Hoeren",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-17",
+      "track_id": "2_17",
+      "book": "AB",
+      "lesson": 10,
+      "exercise": "3 4",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Prüfungstraining L7"
+        },
+        {
+          "speaker": null,
+          "text": "- 9, Übung 1b Vorbereitung Be ispiel 0"
+        },
+        {
+          "speaker": "Kundin",
+          "text": "Entschuldigung. Wie viel kostet diese Tasche?"
+        },
+        {
+          "speaker": "Verkäufer",
+          "text": "Einen Moment bitte … Neunzehnfünfundneunzig."
+        },
+        {
+          "speaker": "Kundin",
+          "text": "Waas? 19,95 Euro?"
+        },
+        {
+          "speaker": "Verkäufer",
+          "text": "Ja … Die Tasche ist 40 % billiger."
+        },
+        {
+          "speaker": "Kundin",
+          "text": "Super, die nehme ich."
+        }
+      ],
+      "raw_text": "Prüfungstraining L7\n- 9, Übung 1b Vorbereitung Be ispiel 0\nKundin: Entschuldigung. Wie viel kostet diese Tasche?\nVerkäufer: Einen Moment bitte … Neunzehnfünfundneunzig.\nKundin: Waas? 19,95 Euro?\nVerkäufer: Ja … Die Tasche ist 40 % billiger.\nKundin: Super, die nehme ich.",
+      "line_count": 7,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_KB_CD2/2_17_KB_Momente_A11_L10_2_3_4.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_17_KB_Momente_A11_L10_2_3_4.mp3",
+        "lesson": 10,
+        "section": "2 3 4",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-18",
+      "track_id": "2_18",
+      "book": "AB",
+      "lesson": 10,
+      "exercise": "Durchsage 1",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": "Jan",
+          "text": "Luise, kommst du am Fr eitag mit ins Kino?"
+        },
+        {
+          "speaker": "Luise",
+          "text": "Leider nein, am Freitag habe ich keine Zeit."
+        },
+        {
+          "speaker": "Jan",
+          "text": "Ach ja, da hast du immer Chor, oder? Du singst ja so gern."
+        },
+        {
+          "speaker": "Luise",
+          "text": "Ich singe gern, das stimmt. Aber der Chor ist am Montag. Am Freitag gehe ich immer ins Schwimmbad."
+        },
+        {
+          "speaker": "Jan",
+          "text": "Ah, ok. Schade. Dann vielleicht beim nächsten Mal."
+        }
+      ],
+      "raw_text": "Jan: Luise, kommst du am Fr eitag mit ins Kino?\nLuise: Leider nein, am Freitag habe ich keine Zeit.\nJan: Ach ja, da hast du immer Chor, oder? Du singst ja so gern.\nLuise: Ich singe gern, das stimmt. Aber der Chor ist am Montag. Am Freitag gehe ich immer ins Schwimmbad.\nJan: Ah, ok. Schade. Dann vielleicht beim nächsten Mal.",
+      "line_count": 5,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_KB_CD2/2_18_KB_Momente_A11_L10_10_Durchsage_1.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_18_KB_Momente_A11_L10_10_Durchsage_1.mp3",
+        "lesson": 10,
+        "section": "10 Durchsage 1",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-19",
+      "track_id": "2_19",
+      "book": "AB",
+      "lesson": 10,
+      "exercise": "Durchsage 2",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Prüfungstraining L7"
+        },
+        {
+          "speaker": null,
+          "text": "- 9, Übung 1b In der Prüfung"
+        },
+        {
+          "speaker": "Paul",
+          "text": "Guten Tag, mein Name ist Winter. Paul Winter."
+        },
+        {
+          "speaker": "Anna",
+          "text": "Guten Morgen, Herr Winter. Ich bin Anna Werli. Woher kommen Sie Herr Winter?"
+        },
+        {
+          "speaker": "Paul",
+          "text": "Ich komme aus Österreich, aus Wien. Und Sie?"
+        },
+        {
+          "speaker": "Anna",
+          "text": "Aus der Schweiz."
+        },
+        {
+          "speaker": "Paul",
+          "text": "Ah, da komm t meine Kollegin, Frau Meinert."
+        },
+        {
+          "speaker": "Anna",
+          "text": "Und woher kommt sie?"
+        },
+        {
+          "speaker": "Paul",
+          "text": "Sie kommt aus Deutschland, aus Frankfurt."
+        }
+      ],
+      "raw_text": "Prüfungstraining L7\n- 9, Übung 1b In der Prüfung\nPaul: Guten Tag, mein Name ist Winter. Paul Winter.\nAnna: Guten Morgen, Herr Winter. Ich bin Anna Werli. Woher kommen Sie Herr Winter?\nPaul: Ich komme aus Österreich, aus Wien. Und Sie?\nAnna: Aus der Schweiz.\nPaul: Ah, da komm t meine Kollegin, Frau Meinert.\nAnna: Und woher kommt sie?\nPaul: Sie kommt aus Deutschland, aus Frankfurt.",
+      "line_count": 9,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_KB_CD2/2_19_KB_Momente_A11_L10_10_Durchsage_2.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_19_KB_Momente_A11_L10_10_Durchsage_2.mp3",
+        "lesson": 10,
+        "section": "10 Durchsage 2",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-20",
+      "track_id": "2_20",
+      "book": "AB",
+      "lesson": 10,
+      "exercise": "Durchsage 3",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": "Frau 1",
+          "text": "Na, hast du viel Arbeit mit der Geburtstagsparty deines Manne s."
+        },
+        {
+          "speaker": "Frau 2",
+          "text": "Oh ja, so einen runden Geburtstag hat man ja nicht jeden Tag."
+        },
+        {
+          "speaker": "Frau 1",
+          "text": "Wie alt wird Stephan?"
+        },
+        {
+          "speaker": "Frau 2",
+          "text": "Kaum zu glauben. Stephan wird schon 60."
+        },
+        {
+          "speaker": "Frau 1",
+          "text": "Kommen viele Gäste?"
+        },
+        {
+          "speaker": "Frau 2",
+          "text": "Ja, die ganze Familie. Er hat fünf Brüder und Schwestern. Und die b ringen alle ihre Partner und Kinder mit. Das sind allein schon mehr als 20 Personen."
+        },
+        {
+          "speaker": "Frau 1",
+          "text": "Oh weia …"
+        },
+        {
+          "speaker": "Frau 2",
+          "text": "Und dann Stephans Freunde aus dem Tennisverein und von der Feuerwehr … Das werden zusammen mehr als 70. Transkriptionen zu Momente A1.1 AB | 978-3-19-011791-8| ©2020 Hueber Verlag"
+        },
+        {
+          "speaker": "Frau 1",
+          "text": "Na dann, viel Spaß bei der Par ty."
+        }
+      ],
+      "raw_text": "Frau 1: Na, hast du viel Arbeit mit der Geburtstagsparty deines Manne s.\nFrau 2: Oh ja, so einen runden Geburtstag hat man ja nicht jeden Tag.\nFrau 1: Wie alt wird Stephan?\nFrau 2: Kaum zu glauben. Stephan wird schon 60.\nFrau 1: Kommen viele Gäste?\nFrau 2: Ja, die ganze Familie. Er hat fünf Brüder und Schwestern. Und die b ringen alle ihre Partner und Kinder mit. Das sind allein schon mehr als 20 Personen.\nFrau 1: Oh weia …\nFrau 2: Und dann Stephans Freunde aus dem Tennisverein und von der Feuerwehr … Das werden zusammen mehr als 70. Transkriptionen zu Momente A1.1 AB | 978-3-19-011791-8| ©2020 Hueber Verlag\nFrau 1: Na dann, viel Spaß bei der Par ty.",
+      "line_count": 9,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_KB_CD2/2_20_KB_Momente_A11_L10_10_Durchsage_3.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_20_KB_Momente_A11_L10_10_Durchsage_3.mp3",
+        "lesson": 10,
+        "section": "10 Durchsage 3",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-21",
+      "track_id": "2_21",
+      "book": "AB",
+      "lesson": 10,
+      "exercise": "Durchsage 4",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": "Hanna",
+          "text": "Hi Lukas! Was machst du denn hier. Schön, dich zu sehen."
+        },
+        {
+          "speaker": "Lukas",
+          "text": "Hallo Hanna. Wie geht´s dir?"
+        },
+        {
+          "speaker": "Hanna",
+          "text": "Danke gut."
+        },
+        {
+          "speaker": "Lukas",
+          "text": "Äh … Du, Hanna, ich habe da eine Idee. Du gehst doch gern ins Theater, oder?"
+        },
+        {
+          "speaker": "Hanna",
+          "text": "Ins Theater? Ja, warum?"
+        },
+        {
+          "speaker": "Lukas",
+          "text": "Ich hab nämlich zwei Tickets fürs Stadttheater. Hast du Lust?"
+        },
+        {
+          "speaker": "Hanna",
+          "text": "Na klar. Ins Theater gehe ich doch immer gern. Wann denn?"
+        },
+        {
+          "speaker": "Lukas",
+          "text": "Am Samstag."
+        },
+        {
+          "speaker": "Hanna",
+          "text": "Samstag … hm … ja, ich glaube, da hab ich Zeit. Da gehe ich am Nachmittag um vier ins Kino, aber am A bend … ja … das geht. Lukas : Super! Treffen wir uns um acht Uhr vor dem Stadttheater? Hanna : Hm ja … Warum treffen wir uns nicht einfach um sieben in der Bar im Theater und trinken noch etwas zusammen? Was meinst du? Lukas : Gute Idee. Das machen wir."
+        }
+      ],
+      "raw_text": "Hanna: Hi Lukas! Was machst du denn hier. Schön, dich zu sehen.\nLukas: Hallo Hanna. Wie geht´s dir?\nHanna: Danke gut.\nLukas: Äh … Du, Hanna, ich habe da eine Idee. Du gehst doch gern ins Theater, oder?\nHanna: Ins Theater? Ja, warum?\nLukas: Ich hab nämlich zwei Tickets fürs Stadttheater. Hast du Lust?\nHanna: Na klar. Ins Theater gehe ich doch immer gern. Wann denn?\nLukas: Am Samstag.\nHanna: Samstag … hm … ja, ich glaube, da hab ich Zeit. Da gehe ich am Nachmittag um vier ins Kino, aber am A bend … ja … das geht. Lukas : Super! Treffen wir uns um acht Uhr vor dem Stadttheater? Hanna : Hm ja … Warum treffen wir uns nicht einfach um sieben in der Bar im Theater und trinken noch etwas zusammen? Was meinst du? Lukas : Gute Idee. Das machen wir.",
+      "line_count": 9,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_KB_CD2/2_21_KB_Momente_A11_L10_10_Durchsage_4.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_21_KB_Momente_A11_L10_10_Durchsage_4.mp3",
+        "lesson": 10,
+        "section": "10 Durchsage 4",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-2",
+      "track_id": "2_2",
+      "book": "AB",
+      "lesson": null,
+      "exercise": null,
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": "3Isabelle",
+          "text": "Alejandro, da bist du ja. Komm mit ins Wasser. Es ist herrlich."
+        },
+        {
+          "speaker": "Alejandro",
+          "text": "Hallo Isabelle. Ich komme gleich. Ich möchte zuerst etwas essen. Ich habe Hunger."
+        },
+        {
+          "speaker": "Isabelle",
+          "text": "Hm, ich auch. Die Pommes frites sind gut hier."
+        },
+        {
+          "speaker": "Alejandro",
+          "text": "Stimmt. Und billi g. Pommes mit Ketchup und Majo für nur drei Euro. Oder ein Paar Würstchen?"
+        },
+        {
+          "speaker": "Isabelle",
+          "text": "Nein, ich esse momentan kein Fleisch. Gibt es auch Salat?"
+        },
+        {
+          "speaker": "Alejandro",
+          "text": "Das glaube ich nicht. Dann hole ich Pommes für uns beide. Okay? Mit Cola?"
+        },
+        {
+          "speaker": "Isabelle",
+          "text": "Ja, bitte."
+        }
+      ],
+      "raw_text": "3Isabelle: Alejandro, da bist du ja. Komm mit ins Wasser. Es ist herrlich.\nAlejandro: Hallo Isabelle. Ich komme gleich. Ich möchte zuerst etwas essen. Ich habe Hunger.\nIsabelle: Hm, ich auch. Die Pommes frites sind gut hier.\nAlejandro: Stimmt. Und billi g. Pommes mit Ketchup und Majo für nur drei Euro. Oder ein Paar Würstchen?\nIsabelle: Nein, ich esse momentan kein Fleisch. Gibt es auch Salat?\nAlejandro: Das glaube ich nicht. Dann hole ich Pommes für uns beide. Okay? Mit Cola?\nIsabelle: Ja, bitte.",
+      "line_count": 7,
+      "audio_linked": false
+    },
+    {
+      "id": "transcript-2-23",
+      "track_id": "2_23",
+      "book": "AB",
+      "lesson": 11,
+      "exercise": "2a A",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": "Mann",
+          "text": "Ein Ticket für das Turnier bitte."
+        },
+        {
+          "speaker": "Verkäuferin",
+          "text": "Für das Tennis Turnier in Stuttgart Ende August?"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Ja."
+        },
+        {
+          "speaker": "Verkäuferin",
+          "text": "Möchten Sie ein Ein"
+        },
+        {
+          "speaker": null,
+          "text": "- Tages oder ein Zwei"
+        },
+        {
+          "speaker": null,
+          "text": "- Tages"
+        },
+        {
+          "speaker": null,
+          "text": "- Ticket?"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Was kostet das?"
+        },
+        {
+          "speaker": "Verkäuferin",
+          "text": "Für einen Tag 35,50 Euro, für beide Tag e ist es billiger. Dann bezahlen Sie nur 65 Euro."
+        },
+        {
+          "speaker": "Mann",
+          "text": "Super, dann nehme ich das Zwei"
+        },
+        {
+          "speaker": null,
+          "text": "- Tages"
+        },
+        {
+          "speaker": null,
+          "text": "-Ticket. Hier sind 100 Euro."
+        }
+      ],
+      "raw_text": "Mann: Ein Ticket für das Turnier bitte.\nVerkäuferin: Für das Tennis Turnier in Stuttgart Ende August?\nMann: Ja.\nVerkäuferin: Möchten Sie ein Ein\n- Tages oder ein Zwei\n- Tages\n- Ticket?\nMann: Was kostet das?\nVerkäuferin: Für einen Tag 35,50 Euro, für beide Tag e ist es billiger. Dann bezahlen Sie nur 65 Euro.\nMann: Super, dann nehme ich das Zwei\n- Tages\n-Ticket. Hier sind 100 Euro.",
+      "line_count": 12,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_KB_CD2/2_23_KB_Momente_A11_L11_1a_2a_A.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_23_KB_Momente_A11_L11_1a_2a_A.mp3",
+        "lesson": 11,
+        "section": "1a 2a A",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-24",
+      "track_id": "2_24",
+      "book": "AB",
+      "lesson": 11,
+      "exercise": "2a B",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": "Frau",
+          "text": "Vielen Dank für das Meeting. Gibt es noch offene Punkte?"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Ja. Frau Rittner ist nun zehn Jahre in unserer Firma. Möch ten wir ihr etwas schenken?"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Gute Idee. Pralinen?"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Hm … Vielleicht noch etwas Anderes?"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Was macht sie denn gern in ihrer Freizeit?"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Ich weiß, sie schwimmt nicht gern. Und tanzen mag sie auch nicht."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Aber sie wandert doch viel …"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Richtig. Und im Herbst will sie eine große Tour machen."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Dann können wir ihr doch einen neuen Rucksack kaufen. Transkriptionen zu Momente A1.1 AB | 978-3-19-011791-8| ©2020 Hueber Verlag"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Sehr gut, so machen wir es. Das ist eine gute Idee."
+        }
+      ],
+      "raw_text": "Frau: Vielen Dank für das Meeting. Gibt es noch offene Punkte?\nMann: Ja. Frau Rittner ist nun zehn Jahre in unserer Firma. Möch ten wir ihr etwas schenken?\nFrau: Gute Idee. Pralinen?\nMann: Hm … Vielleicht noch etwas Anderes?\nFrau: Was macht sie denn gern in ihrer Freizeit?\nMann: Ich weiß, sie schwimmt nicht gern. Und tanzen mag sie auch nicht.\nFrau: Aber sie wandert doch viel …\nMann: Richtig. Und im Herbst will sie eine große Tour machen.\nFrau: Dann können wir ihr doch einen neuen Rucksack kaufen. Transkriptionen zu Momente A1.1 AB | 978-3-19-011791-8| ©2020 Hueber Verlag\nMann: Sehr gut, so machen wir es. Das ist eine gute Idee.",
+      "line_count": 10,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_KB_CD2/2_24_KB_Momente_A11_L11_1a_2a_B.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_24_KB_Momente_A11_L11_1a_2a_B.mp3",
+        "lesson": 11,
+        "section": "1a 2a B",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-25",
+      "track_id": "2_25",
+      "book": "AB",
+      "lesson": 11,
+      "exercise": "2a C",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": "Karin",
+          "text": "Hallo Max, hier ist Karin. Denkt ihr daran, am Wochenende is t unser Straßenfest."
+        },
+        {
+          "speaker": "Max",
+          "text": "Ja stimmt, richtig. Wann genau?"
+        },
+        {
+          "speaker": "Karin",
+          "text": "Am Samstag, ab 16 Uhr."
+        },
+        {
+          "speaker": "Max",
+          "text": "Was können wir mitbringen? Kartoffelsalat?"
+        },
+        {
+          "speaker": "Karin",
+          "text": "Sehr gern. Ich glaube Familie Kutter macht auch einen Salat. Ich frage sie mal, dann rufe ich dich am Donnersta g noch einmal an."
+        },
+        {
+          "speaker": "Max",
+          "text": "Da bin ich nicht da. Kannst du bitte am Freitag anrufen?"
+        },
+        {
+          "speaker": "Karin",
+          "text": "Klar, mache ich. Dann bis Freitag und euch einen schönen Abend."
+        },
+        {
+          "speaker": "Max",
+          "text": "Euch auch."
+        }
+      ],
+      "raw_text": "Karin: Hallo Max, hier ist Karin. Denkt ihr daran, am Wochenende is t unser Straßenfest.\nMax: Ja stimmt, richtig. Wann genau?\nKarin: Am Samstag, ab 16 Uhr.\nMax: Was können wir mitbringen? Kartoffelsalat?\nKarin: Sehr gern. Ich glaube Familie Kutter macht auch einen Salat. Ich frage sie mal, dann rufe ich dich am Donnersta g noch einmal an.\nMax: Da bin ich nicht da. Kannst du bitte am Freitag anrufen?\nKarin: Klar, mache ich. Dann bis Freitag und euch einen schönen Abend.\nMax: Euch auch.",
+      "line_count": 8,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_KB_CD2/2_25_KB_Momente_A11_L11_1a_2a_C.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_25_KB_Momente_A11_L11_1a_2a_C.mp3",
+        "lesson": 11,
+        "section": "1a 2a C",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-26",
+      "track_id": "2_26",
+      "book": "AB",
+      "lesson": 10,
+      "exercise": "3",
+      "header_kind": "lektion",
+      "title": "Lektion 10, Übung 3",
+      "lines": [
+        {
+          "speaker": "Mann 1",
+          "text": "Hi Lars, ich komme heute erst am Nachmittag ins Büro . Ich bin leider noch in Madrid. Mein Flug hat Verspätung."
+        },
+        {
+          "speaker": "Mann 2",
+          "text": "Wann fliegst du denn ab?"
+        },
+        {
+          "speaker": "Mann 1",
+          "text": "Die Maschine startet hoffentlich um 11 Uhr. Dann bin ich um kurz nach 14 Uhr am Flughafen in Hamburg. Informierst du die Kollegen? Ich habe nur noch wenig Akku."
+        },
+        {
+          "speaker": "Mann 2",
+          "text": "Okay."
+        }
+      ],
+      "raw_text": "Lektion 10, Übung 3\nMann 1: Hi Lars, ich komme heute erst am Nachmittag ins Büro . Ich bin leider noch in Madrid. Mein Flug hat Verspätung.\nMann 2: Wann fliegst du denn ab?\nMann 1: Die Maschine startet hoffentlich um 11 Uhr. Dann bin ich um kurz nach 14 Uhr am Flughafen in Hamburg. Informierst du die Kollegen? Ich habe nur noch wenig Akku.\nMann 2: Okay.",
+      "line_count": 4,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_KB_CD2/2_26_KB_Momente_A11_L11_1a_2a_D.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_26_KB_Momente_A11_L11_1a_2a_D.mp3",
+        "lesson": 11,
+        "section": "1a 2a D",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-27",
+      "track_id": "2_27",
+      "book": "AB",
+      "lesson": 10,
+      "exercise": "5",
+      "header_kind": "lektion",
+      "title": "Lektion 10, Übung 5",
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Mann : Hallo Lea. Holst du mich am Flughafen ab?",
+          "subpart": "b"
+        },
+        {
+          "speaker": "Lea",
+          "text": "Gern. Wann kommst du an? Mann : Um 19 Uhr.",
+          "subpart": "b"
+        },
+        {
+          "speaker": "Lea",
+          "text": "Oh nein, tut mir leid. Da habe ich keine Zeit.",
+          "subpart": "b"
+        }
+      ],
+      "raw_text": "Lektion 10, Übung 5\nb\nMann : Hallo Lea. Holst du mich am Flughafen ab?\nLea: Gern. Wann kommst du an? Mann : Um 19 Uhr.\nLea: Oh nein, tut mir leid. Da habe ich keine Zeit.",
+      "line_count": 3,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_KB_CD2/2_27_KB_Momente_A11_L11_1a_2a_E.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_27_KB_Momente_A11_L11_1a_2a_E.mp3",
+        "lesson": 11,
+        "section": "1a 2a E",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-28",
+      "track_id": "2_28",
+      "book": "AB",
+      "lesson": 11,
+      "exercise": "2a F",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Mann : Hallo Lisa. Der Flug hat Verspätung."
+        },
+        {
+          "speaker": "Lisa",
+          "text": "Oh nein. Wann landest du? Mann : Ich komme um 19 Uhr in Frankfurt an. Kannst du mich abholen?"
+        },
+        {
+          "speaker": "Lisa",
+          "text": "Natürlich hole ich dich ab."
+        },
+        {
+          "speaker": "Mann",
+          "text": "Danke. Bis dann!"
+        }
+      ],
+      "raw_text": "Mann : Hallo Lisa. Der Flug hat Verspätung.\nLisa: Oh nein. Wann landest du? Mann : Ich komme um 19 Uhr in Frankfurt an. Kannst du mich abholen?\nLisa: Natürlich hole ich dich ab.\nMann: Danke. Bis dann!",
+      "line_count": 4,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_KB_CD2/2_28_KB_Momente_A11_L11_1a_2a_F.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_28_KB_Momente_A11_L11_1a_2a_F.mp3",
+        "lesson": 11,
+        "section": "1a 2a F",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-29",
+      "track_id": "2_29",
+      "book": "AB",
+      "lesson": 10,
+      "exercise": "7",
+      "header_kind": "lektion",
+      "title": "Lektion 10, Übung 7",
+      "lines": [
+        {
+          "speaker": null,
+          "text": "fliegen – abfliegen kommen – ankommen holen – abholen rufen – anrufen"
+        }
+      ],
+      "raw_text": "Lektion 10, Übung 7\nfliegen – abfliegen kommen – ankommen holen – abholen rufen – anrufen",
+      "line_count": 1,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_KB_CD2/2_29_KB_Momente_A11_L12_1_2.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_29_KB_Momente_A11_L12_1_2.mp3",
+        "lesson": 12,
+        "section": "1 2",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-3",
+      "track_id": "2_3",
+      "book": "AB",
+      "lesson": null,
+      "exercise": null,
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Lektion 10, Übung Liebe Fahrgäste, wir haben im Moment leider 30 Minuten Verspätung. In Leipzig kommt der Zug nicht auf Gleis 5, sondern auf Gleis 15 an. Ich wiederhole: Im Moment haben wir 30 Minuten Verspätung. In Leipzig kommen wir nicht auf Gleis 5, sondern heute auf Gleis 15 an. In Leipzig können Sie umsteigen: ICE …",
+          "index": 0
+        }
+      ],
+      "raw_text": "0 Lektion 10, Übung Liebe Fahrgäste, wir haben im Moment leider 30 Minuten Verspätung. In Leipzig kommt der Zug nicht auf Gleis 5, sondern auf Gleis 15 an. Ich wiederhole: Im Moment haben wir 30 Minuten Verspätung. In Leipzig kommen wir nicht auf Gleis 5, sondern heute auf Gleis 15 an. In Leipzig können Sie umsteigen: ICE …",
+      "line_count": 1,
+      "audio_linked": false
+    },
+    {
+      "id": "transcript-2-31",
+      "track_id": "2_31",
+      "book": "AB",
+      "lesson": 11,
+      "exercise": "9a",
+      "header_kind": "lektion",
+      "title": "Lektion 11, Übung 9a",
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Frau : Was hast du heute gemacht? ↘ Mann : Heute? ↗ Nicht viel. ↘ Ich habe gelesen. ↘ Frau : Gelesen? ↗ Was denn? ↗ Mann : Ich habe ein Buch gelesen. ↘ Und ich habe ein bisschen gelernt. ↘ Frau : Gelernt? ↗ Was denn? ↗ Mann : Ich habe natürlich Deutsch gelernt. ↘ Und meine Hausaufgabe gemacht. ↘ Frau : Das ist gut. ↘ Transkriptionen zu Momente A1.1 AB | 978-3-19-011791-8| ©2020 Hueber Verlag"
+        }
+      ],
+      "raw_text": "Lektion 11, Übung 9a\nFrau : Was hast du heute gemacht? ↘ Mann : Heute? ↗ Nicht viel. ↘ Ich habe gelesen. ↘ Frau : Gelesen? ↗ Was denn? ↗ Mann : Ich habe ein Buch gelesen. ↘ Und ich habe ein bisschen gelernt. ↘ Frau : Gelernt? ↗ Was denn? ↗ Mann : Ich habe natürlich Deutsch gelernt. ↘ Und meine Hausaufgabe gemacht. ↘ Frau : Das ist gut. ↘ Transkriptionen zu Momente A1.1 AB | 978-3-19-011791-8| ©2020 Hueber Verlag",
+      "line_count": 1,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_KB_CD2/2_31_KB_Momente_A11_Magazin 4_Hoeren.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_KB_CD2/2_31_KB_Momente_A11_Magazin 4_Hoeren.mp3",
+        "lesson": null,
+        "section": "2_31_KB_Momente_A11_Magazin 4_Hoeren",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-32",
+      "track_id": "2_32",
+      "book": "AB",
+      "lesson": 11,
+      "exercise": "11b",
+      "header_kind": "lektion",
+      "title": "Lektion 11, Übung 11bMein Zahn tut weh. Ich weiß nicht, wann Dr. Simons Praxis wieder",
+      "lines": [
+        {
+          "speaker": null,
+          "text": "geöffnet ist. Können Sie im Internet schauen? Ab wann ist die Praxis wieder geöffnet?"
+        }
+      ],
+      "raw_text": "Lektion 11, Übung 11bMein Zahn tut weh. Ich weiß nicht, wann Dr. Simons Praxis wieder\ngeöffnet ist. Können Sie im Internet schauen? Ab wann ist die Praxis wieder geöffnet?",
+      "line_count": 1,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD2/2_32_AB_Momente_A11_11_11b.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_32_AB_Momente_A11_11_11b.mp3",
+        "lesson": 11,
+        "section": "11 11b",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-33",
+      "track_id": "2_33",
+      "book": "AB",
+      "lesson": 12,
+      "exercise": "1",
+      "header_kind": "lektion",
+      "title": "Lektion 12, Übung 1",
+      "lines": [
+        {
+          "speaker": null,
+          "text": "8 2021 1518 441 1716 2005",
+          "index": 157
+        }
+      ],
+      "raw_text": "Lektion 12, Übung 1\n1578 2021 1518 441 1716 2005",
+      "line_count": 1,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD2/2_33_AB_Momente_A11_12_1.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_33_AB_Momente_A11_12_1.mp3",
+        "lesson": 12,
+        "section": "12 1",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-34",
+      "track_id": "2_34",
+      "book": "AB",
+      "lesson": 12,
+      "exercise": "5a",
+      "header_kind": "lektion",
+      "title": "Lektion 12, Übung 5a",
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Reise Silvester 3 Restaurant Freitag Winter brauchen Kilometer 8 September Sommer"
+        }
+      ],
+      "raw_text": "Lektion 12, Übung 5a\nReise Silvester 3 Restaurant Freitag Winter brauchen Kilometer 8 September Sommer",
+      "line_count": 1,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD2/2_34_AB_Momente_A11_12_5a.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_34_AB_Momente_A11_12_5a.mp3",
+        "lesson": 12,
+        "section": "12 5a",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-35",
+      "track_id": "2_35",
+      "book": "AB",
+      "lesson": 12,
+      "exercise": "5b",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Lektion 12, Übung 5b Das Jahr FrühlingMärz, April, Mai, Radtour HerbstSeptember, Freimarkt, Oktober, November SommerJuni, Juli, August, Geburtstagsparty WinterDezember, Silvester, Januar, Februar"
+        }
+      ],
+      "raw_text": "Lektion 12, Übung 5b Das Jahr FrühlingMärz, April, Mai, Radtour HerbstSeptember, Freimarkt, Oktober, November SommerJuni, Juli, August, Geburtstagsparty WinterDezember, Silvester, Januar, Februar",
+      "line_count": 1,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD2/2_35_AB_Momente_A11_12_5b.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_35_AB_Momente_A11_12_5b.mp3",
+        "lesson": 12,
+        "section": "12 5b",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-36",
+      "track_id": "2_36",
+      "book": "AB",
+      "lesson": null,
+      "exercise": "4",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Wiederholung L10"
+        },
+        {
+          "speaker": null,
+          "text": "- 12, Übung 3"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Wiederholen und variieren Sie mit du"
+        },
+        {
+          "speaker": "oder ihr. Beispiel",
+          "text": "Ich komme um 12 Uhr an."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Ach! Du kommst um 12 Uhr an."
+        },
+        {
+          "speaker": "Mann",
+          "text": "Wir fahren um 11.48 Uhr ab."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Ach! Ihr fahrt um 11.48 Uhr ab."
+        },
+        {
+          "speaker": "Mann",
+          "text": ""
+        },
+        {
+          "speaker": "Und jetzt Sie",
+          "text": ""
+        },
+        {
+          "speaker": "Mann",
+          "text": "Ich komme um 12 Uhr an."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Ach! Du kommst um 12 Uhr an."
+        },
+        {
+          "speaker": "Mann",
+          "text": "Wir fahren um 11.48 Uhr ab."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Ach! Ihr fahrt um 11.48 Uhr ab."
+        },
+        {
+          "speaker": "Mann",
+          "text": "Ich rufe dich morgen an."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Ach! Du rufst mich morgen an."
+        },
+        {
+          "speaker": "Mann",
+          "text": "Wir steige n jetzt in die U"
+        },
+        {
+          "speaker": null,
+          "text": "- Bahn ein."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Ach! Ihr steig t jetzt in die U - Bahn ein."
+        },
+        {
+          "speaker": "Mann",
+          "text": "Vielleicht sehe ich noch etwas fern."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Ach! Vielleicht siehst du noch etwas fern."
+        },
+        {
+          "speaker": "Mann",
+          "text": "Ich komme um 15.24 Uhr in Wien an."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Ach! Du kommst um 15:24 Uhr in Wien an."
+        },
+        {
+          "speaker": "Mann",
+          "text": "Wir kaufen jetzt noch etwas ein."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Ach! Ihr kauft je tzt noch etwas ein."
+        }
+      ],
+      "raw_text": "Wiederholung L10\n- 12, Übung 3\nMann: Wiederholen und variieren Sie mit du\noder ihr. Beispiel:Ich komme um 12 Uhr an.\nFrau: Ach! Du kommst um 12 Uhr an.\nMann: Wir fahren um 11.48 Uhr ab.\nFrau: Ach! Ihr fahrt um 11.48 Uhr ab.\nMann:\nUnd jetzt Sie:\nMann: Ich komme um 12 Uhr an.\nFrau: Ach! Du kommst um 12 Uhr an.\nMann: Wir fahren um 11.48 Uhr ab.\nFrau: Ach! Ihr fahrt um 11.48 Uhr ab.\nMann: Ich rufe dich morgen an.\nFrau: Ach! Du rufst mich morgen an.\nMann: Wir steige n jetzt in die U\n- Bahn ein.\nFrau: Ach! Ihr steig t jetzt in die U - Bahn ein.\nMann: Vielleicht sehe ich noch etwas fern.\nFrau: Ach! Vielleicht siehst du noch etwas fern.\nMann: Ich komme um 15.24 Uhr in Wien an.\nFrau: Ach! Du kommst um 15:24 Uhr in Wien an.\nMann: Wir kaufen jetzt noch etwas ein.\nFrau: Ach! Ihr kauft je tzt noch etwas ein.",
+      "line_count": 24,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD2/2_36_AB_Momente_A11_Wiederholung Modul 4_3.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_36_AB_Momente_A11_Wiederholung Modul 4_3.mp3",
+        "lesson": null,
+        "section": "Wiederholung 4",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-37",
+      "track_id": "2_37",
+      "book": "AB",
+      "lesson": null,
+      "exercise": "4",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Wiederholung L10"
+        },
+        {
+          "speaker": null,
+          "text": "-12, Übung 4b 1 Holst du mich ab? 2 Wo steigen Sie um? 3 Nehmen Sie ein Taxi? Transkriptionen zu Momente A1.1 AB | 978-3-19-011791-8| ©2020 Hueber Verlag 4 Wie fährst du ins Büro? 5 Wo fährt der Zug nach Stuttgart ab? 6 Wann kommt der Zug in Freiburg an?"
+        }
+      ],
+      "raw_text": "Wiederholung L10\n-12, Übung 4b 1 Holst du mich ab? 2 Wo steigen Sie um? 3 Nehmen Sie ein Taxi? Transkriptionen zu Momente A1.1 AB | 978-3-19-011791-8| ©2020 Hueber Verlag 4 Wie fährst du ins Büro? 5 Wo fährt der Zug nach Stuttgart ab? 6 Wann kommt der Zug in Freiburg an?",
+      "line_count": 2,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD2/2_37_AB_Momente_A11_Wiederholung Modul 4_4b.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_37_AB_Momente_A11_Wiederholung Modul 4_4b.mp3",
+        "lesson": null,
+        "section": "Wiederholung 4",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-38",
+      "track_id": "2_38",
+      "book": "AB",
+      "lesson": null,
+      "exercise": "4",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Wiederholung L10"
+        },
+        {
+          "speaker": null,
+          "text": "- 12, Übung 8"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Hören Sie die Fragen und antworten Sie."
+        },
+        {
+          "speaker": "Beispiel",
+          "text": ""
+        },
+        {
+          "speaker": "Mann",
+          "text": "Wohin bist du im Dezember gefahren? (nach Berlin )"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Im Dezember bin ich nach Berlin gefahren."
+        },
+        {
+          "speaker": "Mann",
+          "text": ""
+        },
+        {
+          "speaker": "Und jetzt Sie",
+          "text": ""
+        },
+        {
+          "speaker": "Mann",
+          "text": "Wohin bist du im Juli gefahren? ( in die Schweiz )"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Im Juli bin ich in die Schweiz gefahren."
+        },
+        {
+          "speaker": "Mann",
+          "text": "Wohin bist du im Sommer geflogen? (nach Österreic h )"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Im Sommer bin ich nach Österreich geflogen."
+        },
+        {
+          "speaker": "Mann",
+          "text": "Wohin bist du im Oktober geflogen? (nach München )"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Im Oktober bin ich nach München geflogen."
+        },
+        {
+          "speaker": "Mann",
+          "text": "Wohin bist du im Frühling geflogen? ( in den Iran )"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Im Frühling bin ich in den Iran geflogen."
+        },
+        {
+          "speaker": "Mann",
+          "text": "Wohin bist du im März gefahren? ( nach Spanien )"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Im März bin ich nach Spanien gefahren."
+        }
+      ],
+      "raw_text": "Wiederholung L10\n- 12, Übung 8\nMann: Hören Sie die Fragen und antworten Sie.\nBeispiel:\nMann: Wohin bist du im Dezember gefahren? (nach Berlin )\nFrau: Im Dezember bin ich nach Berlin gefahren.\nMann:\nUnd jetzt Sie:\nMann: Wohin bist du im Juli gefahren? ( in die Schweiz )\nFrau: Im Juli bin ich in die Schweiz gefahren.\nMann: Wohin bist du im Sommer geflogen? (nach Österreic h )\nFrau: Im Sommer bin ich nach Österreich geflogen.\nMann: Wohin bist du im Oktober geflogen? (nach München )\nFrau: Im Oktober bin ich nach München geflogen.\nMann: Wohin bist du im Frühling geflogen? ( in den Iran )\nFrau: Im Frühling bin ich in den Iran geflogen.\nMann: Wohin bist du im März gefahren? ( nach Spanien )\nFrau: Im März bin ich nach Spanien gefahren.",
+      "line_count": 18,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD2/2_38_AB_Momente_A11_Wiederholung Modul 4_8.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_38_AB_Momente_A11_Wiederholung Modul 4_8.mp3",
+        "lesson": null,
+        "section": "Wiederholung 4",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-39",
+      "track_id": "2_39",
+      "book": "AB",
+      "lesson": null,
+      "exercise": "4",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Wiederholung L10"
+        },
+        {
+          "speaker": null,
+          "text": "- 12, Übung 9 Liebe Reisende, bitte"
+        },
+        {
+          "speaker": "beachten Sie",
+          "text": "Im Bordrestaurant gibt es ein großes Angebot an Speisen und Getränken. Das Sonderangebot heute: Hamburger mit Käse und Salat für nur vier neunundneunzig! Dazu Saft, Apfel oder Orange …"
+        }
+      ],
+      "raw_text": "Wiederholung L10\n- 12, Übung 9 Liebe Reisende, bitte\nbeachten Sie: Im Bordrestaurant gibt es ein großes Angebot an Speisen und Getränken. Das Sonderangebot heute: Hamburger mit Käse und Salat für nur vier neunundneunzig! Dazu Saft, Apfel oder Orange …",
+      "line_count": 3,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD2/2_39_AB_Momente_A11_Wiederholung Modul 4_9.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_39_AB_Momente_A11_Wiederholung Modul 4_9.mp3",
+        "lesson": null,
+        "section": "Wiederholung 4",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-40",
+      "track_id": "2_40",
+      "book": "AB",
+      "lesson": null,
+      "exercise": "4",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Verehrte Fahrgäste, unser nächster Halt ist Augsbu rg. Sie können umsteigen in den Regionalexpress 57530 nach Memmingen von Gleis 10. Weiterhin haben Sie Anschluss …",
+          "index": 2
+        }
+      ],
+      "raw_text": "2Verehrte Fahrgäste, unser nächster Halt ist Augsbu rg. Sie können umsteigen in den Regionalexpress 57530 nach Memmingen von Gleis 10. Weiterhin haben Sie Anschluss …",
+      "line_count": 1,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD2/2_40_AB_Momente_A11_Wiederholung Modul 4_9.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_40_AB_Momente_A11_Wiederholung Modul 4_9.mp3",
+        "lesson": null,
+        "section": "Wiederholung 4",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-41",
+      "track_id": "2_41",
+      "book": "AB",
+      "lesson": null,
+      "exercise": "4",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Meine Damen und Herren, der Zug hat leider 20 Minuten Verspätung. Wir kommen um 16:15 in München an. Der Zug fährt nicht an Gleis 16 ein.",
+          "index": 3
+        },
+        {
+          "speaker": "Wir fahren an Gleis 25 ein. Ich wiederhole",
+          "text": "Der Zug hat leider 20 Minuten Verspätung."
+        }
+      ],
+      "raw_text": "3Meine Damen und Herren, der Zug hat leider 20 Minuten Verspätung. Wir kommen um 16:15 in München an. Der Zug fährt nicht an Gleis 16 ein.\nWir fahren an Gleis 25 ein. Ich wiederhole: Der Zug hat leider 20 Minuten Verspätung.",
+      "line_count": 2,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD2/2_41_AB_Momente_A11_Wiederholung Modul 4_9.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_41_AB_Momente_A11_Wiederholung Modul 4_9.mp3",
+        "lesson": null,
+        "section": "Wiederholung 4",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-42",
+      "track_id": "2_42",
+      "book": "AB",
+      "lesson": null,
+      "exercise": "Test",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Test L 1 0 - 12, Übung 1"
+        },
+        {
+          "speaker": "Henning",
+          "text": "Guten Morgen, Antonia. Wie geht’s?"
+        },
+        {
+          "speaker": "Antonia",
+          "text": "Morgen, Hennig!"
+        },
+        {
+          "speaker": "Henning",
+          "text": "Oh, Du hast am Wochenende nicht so viel geschlafen, oder?"
+        },
+        {
+          "speaker": "An tonia",
+          "text": "Richtig, richtig."
+        },
+        {
+          "speaker": "Henning",
+          "text": "Was hast du gemacht?"
+        },
+        {
+          "speaker": "Antonia",
+          "text": "Ach, na ja. Am Samstag hab’ ich am Vormittag Wäsche gewaschen, aufgeräumt …"
+        },
+        {
+          "speaker": "Henning",
+          "text": "Ja, ja, die Arbeit zu Hause. Ich habe am Vormittag auch eingekauft und so. Aber … du hast … nicht viel ges chlafen …?"
+        },
+        {
+          "speaker": "Antonia",
+          "text": "Am Nachmittag habe ich meine Freundin Bea getroffen. Sie hatte Geburtstag. Wir sind ins Café Streuselkuchen gegangen und haben Kaffee getrunken. Ja und dann sind wir noch in eine Bar gegangen und … dann noch in einen Klub. Wir haben vie l getanzt … Transkriptionen zu Momente A1.1 AB | 978-3-19-011791-8| ©2020 Hueber Verlag"
+        },
+        {
+          "speaker": "Henning",
+          "text": "Ich verstehe … Ich habe am Nachmittag gearbeitet."
+        },
+        {
+          "speaker": "Antonia",
+          "text": "Was? Am Samstag?"
+        },
+        {
+          "speaker": "Henning",
+          "text": "Ja, als Arzt arbeitet man ja auch am Wochenende – und in der Nacht. Aber am Sonntag hatte ich dann am Nachmittag frei. Zeitung lesen, einen Spaziergan g machen. Das war richtig schön!"
+        },
+        {
+          "speaker": "Antonia",
+          "text": "Tja – ich hatte am Sonntag einen Fot ografie kurs. Thema „Frühling“. Wir haben ganz viele Blumen fotografiert. Das war schon gut, aber ich habe dann leider nicht so viel geschlafen …"
+        },
+        {
+          "speaker": "Henning",
+          "text": "Ich kann leider gar nich t fotografi eren … Du, sag mal. Hast du am W ochenende vielleicht Zeit? Wir können vielleicht mal zusammen etwas machen, zum Beispiel …"
+        }
+      ],
+      "raw_text": "Test L 1 0 - 12, Übung 1\nHenning: Guten Morgen, Antonia. Wie geht’s?\nAntonia: Morgen, Hennig!\nHenning: Oh, Du hast am Wochenende nicht so viel geschlafen, oder?\nAn tonia: Richtig, richtig.\nHenning: Was hast du gemacht?\nAntonia: Ach, na ja. Am Samstag hab’ ich am Vormittag Wäsche gewaschen, aufgeräumt …\nHenning: Ja, ja, die Arbeit zu Hause. Ich habe am Vormittag auch eingekauft und so. Aber … du hast … nicht viel ges chlafen …?\nAntonia: Am Nachmittag habe ich meine Freundin Bea getroffen. Sie hatte Geburtstag. Wir sind ins Café Streuselkuchen gegangen und haben Kaffee getrunken. Ja und dann sind wir noch in eine Bar gegangen und … dann noch in einen Klub. Wir haben vie l getanzt … Transkriptionen zu Momente A1.1 AB | 978-3-19-011791-8| ©2020 Hueber Verlag\nHenning: Ich verstehe … Ich habe am Nachmittag gearbeitet.\nAntonia: Was? Am Samstag?\nHenning: Ja, als Arzt arbeitet man ja auch am Wochenende – und in der Nacht. Aber am Sonntag hatte ich dann am Nachmittag frei. Zeitung lesen, einen Spaziergan g machen. Das war richtig schön!\nAntonia: Tja – ich hatte am Sonntag einen Fot ografie kurs. Thema „Frühling“. Wir haben ganz viele Blumen fotografiert. Das war schon gut, aber ich habe dann leider nicht so viel geschlafen …\nHenning: Ich kann leider gar nich t fotografi eren … Du, sag mal. Hast du am W ochenende vielleicht Zeit? Wir können vielleicht mal zusammen etwas machen, zum Beispiel …",
+      "line_count": 14,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD2/2_42_AB_Momente_A11_Test Modul 4_1.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_42_AB_Momente_A11_Test Modul 4_1.mp3",
+        "lesson": null,
+        "section": "Test",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-43",
+      "track_id": "2_43",
+      "book": "AB",
+      "lesson": null,
+      "exercise": "Test",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Test L10"
+        },
+        {
+          "speaker": null,
+          "text": "-12, Übung 4b 1 Hallo Du! Wann fährst du denn in Paris los? 2 Wo musst du umsteigen? 3 Rufst du mich noch einmal an? 4 Und wann fährt dein Zug nach München dann ab? 5 Und wann kommst du in München an? 6 Ich freu mich so auf dich. Kann ich dich abholen?"
+        }
+      ],
+      "raw_text": "Test L10\n-12, Übung 4b 1 Hallo Du! Wann fährst du denn in Paris los? 2 Wo musst du umsteigen? 3 Rufst du mich noch einmal an? 4 Und wann fährt dein Zug nach München dann ab? 5 Und wann kommst du in München an? 6 Ich freu mich so auf dich. Kann ich dich abholen?",
+      "line_count": 2,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD2/2_43_AB_Momente_A11_Test Modul 4_4b.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_43_AB_Momente_A11_Test Modul 4_4b.mp3",
+        "lesson": null,
+        "section": "Test",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-44",
+      "track_id": "2_44",
+      "book": "AB",
+      "lesson": null,
+      "exercise": "Hören_1c",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Prüfungstraining L10"
+        },
+        {
+          "speaker": null,
+          "text": "- 12, Übung 1c"
+        },
+        {
+          "speaker": "Vorbereitung Verehrte Fahrgäste, bitte beachten Sie",
+          "text": "ICE 79 nach Basel fährt heute von Gleis 3 ab. Ich wiederhole: ICE 79 nach Basel SBB heute von Gleis 3. Wagen der ersten Klasse halten im Abschnitt A, Wagen der zweiten Klass e."
+        }
+      ],
+      "raw_text": "Prüfungstraining L10\n- 12, Übung 1c\nVorbereitung Verehrte Fahrgäste, bitte beachten Sie: ICE 79 nach Basel fährt heute von Gleis 3 ab. Ich wiederhole: ICE 79 nach Basel SBB heute von Gleis 3. Wagen der ersten Klasse halten im Abschnitt A, Wagen der zweiten Klass e.",
+      "line_count": 3,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD2/2_44_AB_Momente_A11_Prüfungstraining, Hören_1c.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_44_AB_Momente_A11_Prüfungstraining, Hören_1c.mp3",
+        "lesson": null,
+        "section": "2_44_AB_Momente_A11_Prüfungstraining, Hören_1c",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-45",
+      "track_id": "2_45",
+      "book": "AB",
+      "lesson": null,
+      "exercise": "Hören_2",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Prüfungstraining L10"
+        },
+        {
+          "speaker": null,
+          "text": "- 12, Übung 2 In der PrüfungBeispiel 0 Liebe Besucherinnen und Be sucher, unser Museum schließt in 10 Minuten! Bitte gehen Sie nun zum Ausgang. Morgen öffnen wir wieder um 10 Uhr. Dann beginnt auch unsere neue Ausstellung „Menschen und Momente“. Wir freuen uns auf Ihren Besuch und wünschen für heute einen guten Abend."
+        }
+      ],
+      "raw_text": "Prüfungstraining L10\n- 12, Übung 2 In der PrüfungBeispiel 0 Liebe Besucherinnen und Be sucher, unser Museum schließt in 10 Minuten! Bitte gehen Sie nun zum Ausgang. Morgen öffnen wir wieder um 10 Uhr. Dann beginnt auch unsere neue Ausstellung „Menschen und Momente“. Wir freuen uns auf Ihren Besuch und wünschen für heute einen guten Abend.",
+      "line_count": 2,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD2/2_45_AB_Momente_A11_Prüfungstraining, Hören_2.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_45_AB_Momente_A11_Prüfungstraining, Hören_2.mp3",
+        "lesson": null,
+        "section": "2_45_AB_Momente_A11_Prüfungstraining, Hören_2",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-46",
+      "track_id": "2_46",
+      "book": "AB",
+      "lesson": null,
+      "exercise": "Hören_2",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Auf Gleis 9 hat der ICE 239 nach Frankfurt Einfahrt. Der Zug hat eine Verspätung von 30 Minuten. Die geplante Abfahrzeit war 16.40. Auf Gleis 10 fährt der RE 2345 nach Ulm ein. Bitte Vorsicht an der Bahnsteigkante.",
+          "index": 1
+        }
+      ],
+      "raw_text": "1Auf Gleis 9 hat der ICE 239 nach Frankfurt Einfahrt. Der Zug hat eine Verspätung von 30 Minuten. Die geplante Abfahrzeit war 16.40. Auf Gleis 10 fährt der RE 2345 nach Ulm ein. Bitte Vorsicht an der Bahnsteigkante.",
+      "line_count": 1,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD2/2_46_AB_Momente_A11_Prüfungstraining, Hören_2.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_46_AB_Momente_A11_Prüfungstraining, Hören_2.mp3",
+        "lesson": null,
+        "section": "2_46_AB_Momente_A11_Prüfungstraining, Hören_2",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-47",
+      "track_id": "2_47",
+      "book": "AB",
+      "lesson": null,
+      "exercise": "Hören_2",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Liebe Fahrgäste, in ungefä hr 30 Minuten erreichen wir Lindau. Dort machen wir eine kurze Pause. Sie können gern aussteigen, einen Kaffee trinken und eine Kleinigkeit essen. Wir fahren um 17:00 Uhr weiter. Bitte kommen Sie pünktlich zum Bus. Vielen Dank.",
+          "index": 2
+        }
+      ],
+      "raw_text": "2Liebe Fahrgäste, in ungefä hr 30 Minuten erreichen wir Lindau. Dort machen wir eine kurze Pause. Sie können gern aussteigen, einen Kaffee trinken und eine Kleinigkeit essen. Wir fahren um 17:00 Uhr weiter. Bitte kommen Sie pünktlich zum Bus. Vielen Dank.",
+      "line_count": 1,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD2/2_47_AB_Momente_A11_Prüfungstraining, Hören_2.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_47_AB_Momente_A11_Prüfungstraining, Hören_2.mp3",
+        "lesson": null,
+        "section": "2_47_AB_Momente_A11_Prüfungstraining, Hören_2",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-48",
+      "track_id": "2_48",
+      "book": "AB",
+      "lesson": null,
+      "exercise": "Hören_2",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Liebe Kunden, wir bitten Sie um Ihre Aufmerksamkeit. Der Fahrer des Autos mit dem Kennzeichen SIG",
+          "index": 3
+        },
+        {
+          "speaker": null,
+          "text": "- CK"
+        },
+        {
+          "speaker": "-181, ein Opel Astra Caravan",
+          "text": ""
+        },
+        {
+          "speaker": "Bitte kommen Sie zur Information. … Und heute für Sie im Angebot",
+          "text": "drei Flaschen Orangensaft für nur …"
+        }
+      ],
+      "raw_text": "3Liebe Kunden, wir bitten Sie um Ihre Aufmerksamkeit. Der Fahrer des Autos mit dem Kennzeichen SIG\n- CK\n-181, ein Opel Astra Caravan:\nBitte kommen Sie zur Information. … Und heute für Sie im Angebot: drei Flaschen Orangensaft für nur …",
+      "line_count": 4,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD2/2_48_AB_Momente_A11_Prüfungstraining, Hören_2.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_48_AB_Momente_A11_Prüfungstraining, Hören_2.mp3",
+        "lesson": null,
+        "section": "2_48_AB_Momente_A11_Prüfungstraining, Hören_2",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-49",
+      "track_id": "2_49",
+      "book": "AB",
+      "lesson": null,
+      "exercise": "Hören_2",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "… und hier eine Information für Re isende nach Barcelona, Lufthansa",
+          "index": 4
+        },
+        {
+          "speaker": null,
+          "text": "-Flug LH 131. Ihr Flugzeug steht am Ausgang C13 bereit. Wir schließen diesen Flug in wenigen Minuten. Ich wiederhole. Reisende für den LH"
+        },
+        {
+          "speaker": null,
+          "text": "-Flug nach Barcelona, bitte kommen Sie zum Ausgang C13. Transkriptionen zu Momente A1.1 AB | 978-3-19-011791-8| ©2020 Hueber Verlag"
+        }
+      ],
+      "raw_text": "4… und hier eine Information für Re isende nach Barcelona, Lufthansa\n-Flug LH 131. Ihr Flugzeug steht am Ausgang C13 bereit. Wir schließen diesen Flug in wenigen Minuten. Ich wiederhole. Reisende für den LH\n-Flug nach Barcelona, bitte kommen Sie zum Ausgang C13. Transkriptionen zu Momente A1.1 AB | 978-3-19-011791-8| ©2020 Hueber Verlag",
+      "line_count": 3,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD2/2_49_AB_Momente_A11_Prüfungstraining, Hören_2.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_49_AB_Momente_A11_Prüfungstraining, Hören_2.mp3",
+        "lesson": null,
+        "section": "2_49_AB_Momente_A11_Prüfungstraining, Hören_2",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-50",
+      "track_id": "2_50",
+      "book": "AB",
+      "lesson": 8,
+      "exercise": "noch mehr 9 leicht",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": "Noch mehr",
+          "text": "Lektion 8, Übu ng 9, leicht Frau : Wann triffst du Susanne? Mann : Um halb sieben."
+        }
+      ],
+      "raw_text": "Noch mehr: Lektion 8, Übu ng 9, leicht\na Frau : Wann triffst du Susanne? Mann : Um halb sieben.",
+      "line_count": 1,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD2/2_50_AB_Momente_A11_8_noch_mehr_9_leicht.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_50_AB_Momente_A11_8_noch_mehr_9_leicht.mp3",
+        "lesson": 8,
+        "section": "8 noch mehr 9 leicht",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-51",
+      "track_id": "2_51",
+      "book": "AB",
+      "lesson": 8,
+      "exercise": "noch mehr 9 leicht",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": "Mann 1",
+          "text": "Wann gehst du ins Fitnessstudio?",
+          "subpart": "b"
+        },
+        {
+          "speaker": "Mann 2",
+          "text": "Um Viertel vor zwei.",
+          "subpart": "b"
+        }
+      ],
+      "raw_text": "b\nMann 1: Wann gehst du ins Fitnessstudio?\nMann 2: Um Viertel vor zwei.",
+      "line_count": 2,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD2/2_51_AB_Momente_A11_8_noch_mehr_9_leicht.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_51_AB_Momente_A11_8_noch_mehr_9_leicht.mp3",
+        "lesson": 8,
+        "section": "8 noch mehr 9 leicht",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-52",
+      "track_id": "2_52",
+      "book": "AB",
+      "lesson": 8,
+      "exercise": "noch mehr 9 leicht",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": "Mann",
+          "text": "Entschuldigung? Wann fährt der Bus?",
+          "subpart": "c"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Um fünfzehn Uhr fünfundvierzig.",
+          "subpart": "c"
+        }
+      ],
+      "raw_text": "c\nMann: Entschuldigung? Wann fährt der Bus?\nFrau: Um fünfzehn Uhr fünfundvierzig.",
+      "line_count": 2,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD2/2_52_AB_Momente_A11_8_noch_mehr_9_leicht.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_52_AB_Momente_A11_8_noch_mehr_9_leicht.mp3",
+        "lesson": 8,
+        "section": "8 noch mehr 9 leicht",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-53",
+      "track_id": "2_53",
+      "book": "AB",
+      "lesson": 8,
+      "exercise": "noch mehr 9 leicht",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Frau : Emil, wann kommst du? Mann : Um fünf nach halb eins.",
+          "subpart": "d"
+        }
+      ],
+      "raw_text": "d\nFrau : Emil, wann kommst du? Mann : Um fünf nach halb eins.",
+      "line_count": 1,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD2/2_53_AB_Momente_A11_8_noch_mehr_9_leicht.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_53_AB_Momente_A11_8_noch_mehr_9_leicht.mp3",
+        "lesson": 8,
+        "section": "8 noch mehr 9 leicht",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-54",
+      "track_id": "2_54",
+      "book": "AB",
+      "lesson": 8,
+      "exercise": "noch mehr 9 leicht",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Mann : Hallo Erika. Wann hast du heute Zeit? Frau : Hallo Tim. Um Viertel nach drei.",
+          "subpart": "e"
+        }
+      ],
+      "raw_text": "e\nMann : Hallo Erika. Wann hast du heute Zeit? Frau : Hallo Tim. Um Viertel nach drei.",
+      "line_count": 1,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD2/2_54_AB_Momente_A11_8_noch_mehr_9_leicht.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_54_AB_Momente_A11_8_noch_mehr_9_leicht.mp3",
+        "lesson": 8,
+        "section": "8 noch mehr 9 leicht",
+        "match": "track_id"
+      }
+    },
+    {
+      "id": "transcript-2-55",
+      "track_id": "2_55",
+      "book": "AB",
+      "lesson": 8,
+      "exercise": "noch mehr 9 leicht",
+      "header_kind": null,
+      "title": null,
+      "lines": [
+        {
+          "speaker": null,
+          "text": "f"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Wann ist der Deutschkurs?"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Um halb neun."
+        },
+        {
+          "speaker": "2_56 Noch mehr",
+          "text": "Lektion 8, Übung 9, schwer a Um halb neun. b Um fünf nach halb eins. c Um halb sieben. d Um fünfzehn Uhr fünfundvierzig. e Um Viertel vor zwei. f Um Viertel nach drei."
+        }
+      ],
+      "raw_text": "f\nFrau: Wann ist der Deutschkurs?\nMann: Um halb neun.\n2_56 Noch mehr: Lektion 8, Übung 9, schwer a Um halb neun. b Um fünf nach halb eins. c Um halb sieben. d Um fünfzehn Uhr fünfundvierzig. e Um Viertel vor zwei. f Um Viertel nach drei.",
+      "line_count": 4,
+      "audio_linked": true,
+      "audio": {
+        "file": "Audio/Momente_A1_1_AB_CD2/2_55_AB_Momente_A11_8_noch_mehr_9_leicht.mp3",
+        "url_hint": "audio/Audio/Momente_A1_1_AB_CD2/2_55_AB_Momente_A11_8_noch_mehr_9_leicht.mp3",
+        "lesson": 8,
+        "section": "8 noch mehr 9 leicht",
+        "match": "track_id"
+      }
+    }
+  ]
+}

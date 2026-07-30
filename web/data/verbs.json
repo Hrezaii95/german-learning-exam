@@ -1,0 +1,52 @@
+{
+  "verbs": [
+    {
+      "infinitive": "sein",
+      "en": "to be",
+      "conjugations": [
+        { "pronoun": "ich", "form": "bin", "en": "I am" },
+        { "pronoun": "du", "form": "bist", "en": "you are" },
+        { "pronoun": "er/sie/es", "form": "ist", "en": "he/she/it is", "highlight": true },
+        { "pronoun": "wir", "form": "sind", "en": "we are" },
+        { "pronoun": "ihr", "form": "seid", "en": "you (pl.) are" },
+        { "pronoun": "Sie", "form": "sind", "en": "you (formal) are" }
+      ]
+    },
+    {
+      "infinitive": "heißen",
+      "en": "to be called",
+      "conjugations": [
+        { "pronoun": "ich", "form": "heiße", "en": "I am called" },
+        { "pronoun": "du", "form": "heißt", "en": "you are called" },
+        { "pronoun": "er/sie/es", "form": "heißt", "en": "he/she/it is called", "highlight": true },
+        { "pronoun": "wir", "form": "heißen", "en": "we are called" },
+        { "pronoun": "ihr", "form": "heißt", "en": "you (pl.) are called" },
+        { "pronoun": "Sie", "form": "heißen", "en": "you (formal) are called" }
+      ]
+    },
+    {
+      "infinitive": "kommen",
+      "en": "to come",
+      "conjugations": [
+        { "pronoun": "ich", "form": "komme", "en": "I come" },
+        { "pronoun": "du", "form": "kommst", "en": "you come" },
+        { "pronoun": "er/sie/es", "form": "kommt", "en": "he/she/it comes", "highlight": true },
+        { "pronoun": "wir", "form": "kommen", "en": "we come" },
+        { "pronoun": "ihr", "form": "kommt", "en": "you (pl.) come" },
+        { "pronoun": "Sie", "form": "kommen", "en": "you (formal) come" }
+      ]
+    },
+    {
+      "infinitive": "lernen",
+      "en": "to learn",
+      "conjugations": [
+        { "pronoun": "ich", "form": "lerne", "en": "I learn" },
+        { "pronoun": "du", "form": "lernst", "en": "you learn" },
+        { "pronoun": "er/sie/es", "form": "lernt", "en": "he/she/it learns", "highlight": true },
+        { "pronoun": "wir", "form": "lernen", "en": "we learn" },
+        { "pronoun": "ihr", "form": "lernt", "en": "you (pl.) learn" },
+        { "pronoun": "Sie", "form": "lernen", "en": "you (formal) learn" }
+      ]
+    }
+  ]
+}

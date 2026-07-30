@@ -1,0 +1,484 @@
+{
+  "id": "grammar-hub",
+  "level": "A1",
+  "source": [
+    "lesson1.json",
+    "lesson2.json"
+  ],
+  "topics": [
+    {
+      "id": "pronouns",
+      "title": {
+        "de": "Personal pronouns",
+        "en": "Personal pronouns"
+      },
+      "lesson": 1,
+      "rule": null,
+      "items": [
+        {
+          "de": "ich",
+          "en": "I"
+        },
+        {
+          "de": "du",
+          "en": "you (informal)"
+        },
+        {
+          "de": "er / sie / es",
+          "en": "he / she / it"
+        },
+        {
+          "de": "Sie",
+          "en": "you (formal)"
+        }
+      ],
+      "example": null,
+      "examples": null,
+      "phraseTopicRefs": [
+        "introductions",
+        "origins"
+      ]
+    },
+    {
+      "id": "preposition-aus",
+      "title": {
+        "de": "Preposition aus",
+        "en": "Preposition aus"
+      },
+      "lesson": 1,
+      "rule": "aus + country (no article for most countries)",
+      "items": null,
+      "example": "Ich komme aus Deutschland.",
+      "examples": null,
+      "phraseTopicRefs": [
+        "origins"
+      ]
+    },
+    {
+      "id": "konjugation-plural",
+      "title": {
+        "de": "Conjugation plural (wir / ihr / sie)",
+        "en": "Conjugation plural (wir / ihr / sie)"
+      },
+      "lesson": 2,
+      "rule": "Plural subjects use distinct verb forms; ihr often matches er/sie/es for some verbs.",
+      "table": {
+        "wohnen": {
+          "wir": "wohnen",
+          "ihr": "wohnt",
+          "sie": "wohnen"
+        },
+        "leben": {
+          "wir": "leben",
+          "ihr": "lebt",
+          "sie": "leben"
+        },
+        "sein": {
+          "wir": "sind",
+          "ihr": "seid",
+          "sie": "sind"
+        },
+        "haben": {
+          "wir": "haben",
+          "ihr": "habt",
+          "sie": "haben"
+        }
+      },
+      "items": null,
+      "example": null,
+      "examples": null,
+      "source": [
+        "kursbuch",
+        "arbeitsbuch"
+      ],
+      "phraseTopicRefs": [
+        "personal-details"
+      ]
+    },
+    {
+      "id": "konjugation-arbeiten",
+      "title": {
+        "de": "Conjugation arbeiten",
+        "en": "Conjugation arbeiten"
+      },
+      "lesson": 2,
+      "rule": "Stem + t for er/sie/es; -est for du.",
+      "table": {
+        "ich": "arbeite",
+        "du": "arbeitest",
+        "er/sie/es": "arbeitet",
+        "wir": "arbeiten",
+        "ihr": "arbeitet",
+        "sie/Sie": "arbeiten"
+      },
+      "items": null,
+      "example": null,
+      "examples": null,
+      "source": [
+        "kursbuch"
+      ],
+      "phraseTopicRefs": [
+        "professions"
+      ]
+    },
+    {
+      "id": "negation-nicht",
+      "title": {
+        "de": "Negation mit nicht",
+        "en": "Negation mit nicht"
+      },
+      "lesson": 2,
+      "rule": "Place nicht after the verb or verb phrase to negate.",
+      "table": null,
+      "items": null,
+      "example": null,
+      "examples": [
+        "Wir sind nicht verheiratet.",
+        "Wir haben keine Kinder.",
+        "Sie hei?t nicht Natalie. Sie hei?t Natascha."
+      ],
+      "source": [
+        "kursbuch",
+        "arbeitsbuch"
+      ],
+      "phraseTopicRefs": [
+        "personal-details",
+        "professions"
+      ]
+    },
+    {
+      "id": "praepositionen-beruf",
+      "title": {
+        "de": "Prepositions als, bei, in",
+        "en": "Prepositions als, bei, in"
+      },
+      "lesson": 2,
+      "rule": "als + profession (no article); bei + company; in + city.",
+      "table": null,
+      "items": null,
+      "example": null,
+      "examples": [
+        "Ich arbeite als Friseurin.",
+        "Ich arbeite bei HotSped.",
+        "Wir wohnen in M?nchen."
+      ],
+      "source": [
+        "glossary",
+        "kursbuch"
+      ],
+      "phraseTopicRefs": [
+        "professions"
+      ]
+    },
+    {
+      "id": "wortbildung-in",
+      "title": {
+        "de": "Feminine professions (-in)",
+        "en": "Feminine professions (-in)"
+      },
+      "lesson": 2,
+      "rule": "Add -in for feminine form; plural often -innen.",
+      "table": null,
+      "items": null,
+      "example": null,
+      "examples": [
+        {
+          "masc": "der Architekt",
+          "fem": "die Architektin",
+          "femPl": "die Architektinnen"
+        },
+        {
+          "masc": "der Verk?ufer",
+          "fem": "die Verk?uferin",
+          "femPl": "die Verk?uferinnen"
+        }
+      ],
+      "source": [
+        "kursbuch"
+      ],
+      "phraseTopicRefs": [
+        "professions"
+      ]
+    },
+    {
+      "id": "pronouns-wir-ihr",
+      "title": {
+        "de": "Pronouns wir / ihr",
+        "en": "Pronouns wir / ihr"
+      },
+      "lesson": 2,
+      "rule": null,
+      "table": null,
+      "items": [
+        {
+          "de": "wir",
+          "en": "we"
+        },
+        {
+          "de": "ihr",
+          "en": "you (pl. informal)"
+        },
+        {
+          "de": "sie (Pl.)",
+          "en": "they"
+        }
+      ],
+      "example": null,
+      "examples": null,
+      "source": [
+        "kursbuch"
+      ],
+      "phraseTopicRefs": [
+        "personal-details"
+      ]
+    },
+    {
+      "id": "zahlen-1-100",
+      "title": {
+        "de": "Numbers 1?100",
+        "en": "Numbers 1?100"
+      },
+      "lesson": 2,
+      "rule": "Compound numbers: ones + und + tens (einundzwanzig); -zehn vs -zig pattern.",
+      "table": null,
+      "items": null,
+      "example": null,
+      "examples": [
+        "14 = vierzehn",
+        "18 = achtzehn",
+        "21 = einundzwanzig",
+        "35 = f?nfunddrei?ig",
+        "100 = (ein)hundert"
+      ],
+      "source": [
+        "kursbuch",
+        "loesungen"
+      ],
+      "phraseTopicRefs": [
+        "numbers"
+      ]
+    },
+    {
+      "id": "sein-ohne-artikel-beruf",
+      "title": {
+        "de": "Profession after sein (no article)",
+        "en": "Profession after sein (no article)"
+      },
+      "lesson": 2,
+      "rule": "After sein, profession nouns typically appear without an article.",
+      "table": null,
+      "items": null,
+      "example": "Ich bin Ingenieur. / Ich bin ?rztin.",
+      "examples": null,
+      "source": [
+        "kursbuch",
+        "prd"
+      ],
+      "phraseTopicRefs": [
+        "professions"
+      ]
+    }
+  ],
+  "verbs": [
+    {
+      "infinitive": "sein",
+      "english": "to be",
+      "lesson": 1,
+      "conjugations": null,
+      "note": null
+    },
+    {
+      "infinitive": "hei?en",
+      "english": "to be called",
+      "lesson": 1,
+      "conjugations": null,
+      "note": null
+    },
+    {
+      "infinitive": "kommen",
+      "english": "to come",
+      "lesson": 1,
+      "conjugations": null,
+      "note": null
+    },
+    {
+      "infinitive": "lernen",
+      "english": "to learn",
+      "lesson": 1,
+      "conjugations": null,
+      "note": null
+    },
+    {
+      "infinitive": "wohnen",
+      "english": "to live / reside",
+      "lesson": 2,
+      "conjugations": [
+        {
+          "pronoun": "ich",
+          "form": "wohne"
+        },
+        {
+          "pronoun": "du",
+          "form": "wohnst"
+        },
+        {
+          "pronoun": "er/sie/es",
+          "form": "wohnt"
+        },
+        {
+          "pronoun": "wir",
+          "form": "wohnen"
+        },
+        {
+          "pronoun": "ihr",
+          "form": "wohnt"
+        },
+        {
+          "pronoun": "sie/Sie",
+          "form": "wohnen"
+        }
+      ],
+      "note": null
+    },
+    {
+      "infinitive": "leben",
+      "english": "to live",
+      "lesson": 2,
+      "conjugations": [
+        {
+          "pronoun": "ich",
+          "form": "lebe"
+        },
+        {
+          "pronoun": "du",
+          "form": "lebst"
+        },
+        {
+          "pronoun": "er/sie/es",
+          "form": "lebt"
+        },
+        {
+          "pronoun": "wir",
+          "form": "leben"
+        },
+        {
+          "pronoun": "ihr",
+          "form": "lebt"
+        },
+        {
+          "pronoun": "sie/Sie",
+          "form": "leben"
+        }
+      ],
+      "note": null
+    },
+    {
+      "infinitive": "haben",
+      "english": "to have",
+      "lesson": 2,
+      "conjugations": [
+        {
+          "pronoun": "ich",
+          "form": "habe"
+        },
+        {
+          "pronoun": "du",
+          "form": "hast"
+        },
+        {
+          "pronoun": "er/sie/es",
+          "form": "hat"
+        },
+        {
+          "pronoun": "wir",
+          "form": "haben"
+        },
+        {
+          "pronoun": "ihr",
+          "form": "habt"
+        },
+        {
+          "pronoun": "sie/Sie",
+          "form": "haben"
+        }
+      ],
+      "note": "Plural forms introduced in L2"
+    },
+    {
+      "infinitive": "arbeiten",
+      "english": "to work",
+      "lesson": 2,
+      "conjugations": [
+        {
+          "pronoun": "ich",
+          "form": "arbeite"
+        },
+        {
+          "pronoun": "du",
+          "form": "arbeitest"
+        },
+        {
+          "pronoun": "er/sie/es",
+          "form": "arbeitet"
+        },
+        {
+          "pronoun": "wir",
+          "form": "arbeiten"
+        },
+        {
+          "pronoun": "ihr",
+          "form": "arbeitet"
+        },
+        {
+          "pronoun": "sie/Sie",
+          "form": "arbeiten"
+        }
+      ],
+      "note": null
+    },
+    {
+      "infinitive": "machen",
+      "english": "to do / make",
+      "lesson": 2,
+      "conjugations": [
+        {
+          "pronoun": "ich",
+          "form": "mache"
+        },
+        {
+          "pronoun": "du",
+          "form": "machst"
+        },
+        {
+          "pronoun": "er/sie/es",
+          "form": "macht"
+        }
+      ],
+      "note": null
+    },
+    {
+      "infinitive": "studieren",
+      "english": "to study (university)",
+      "lesson": 2,
+      "conjugations": [
+        {
+          "pronoun": "ich",
+          "form": "studiere"
+        },
+        {
+          "pronoun": "du",
+          "form": "studierst"
+        },
+        {
+          "pronoun": "er/sie/es",
+          "form": "studiert"
+        }
+      ],
+      "note": null
+    }
+  ],
+  "meta": {
+    "topicCount": 10,
+    "verbCount": 10
+  }
+}

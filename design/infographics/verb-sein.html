@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sein ? Verb Infographic | GLOS</title>
+  <link rel="stylesheet" href="infographic-components.css">
+  <style>
+    .dual-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--glos-space-6);
+    }
+    @media (max-width: 720px) {
+      .dual-layout { grid-template-columns: 1fr; }
+    }
+    .usage-list {
+      margin: 0;
+      padding-left: 1.25rem;
+      color: var(--glos-text-secondary);
+      font-size: 14px;
+    }
+    .usage-list li { margin-bottom: 8px; }
+    .usage-list strong { color: var(--glos-text-primary); }
+    .remember-box {
+      margin-top: var(--glos-space-5);
+      padding: var(--glos-space-4);
+      background: var(--glos-accent-soft);
+      border-radius: var(--glos-radius-lg);
+      border: 1px solid var(--glos-accent-ring);
+      font-size: 14px;
+    }
+    .remember-box strong { color: var(--glos-accent); }
+  </style>
+</head>
+<body>
+  <header class="preview-banner">
+    <strong>GLOS Infographic Preview</strong>
+    <nav>
+      <a href="vocab-card-ingenieur.html">Vocab</a> �
+      <a href="verb-sein.html">Verbs</a> �
+      <a href="grammar-cases.html">Grammar</a> �
+      <a href="berufe-grid-sample.html">Berufe</a>
+    </nav>
+  </header>
+
+  <main class="preview-stage">
+    <article class="ig-card ig-card--wide">
+      <div class="ig-card__header">
+        <h1 class="ig-headword" style="font-size:2.25rem">
+          <span class="lemma">sein</span>
+          <span style="font-weight:600;font-size:1.25rem;color:var(--glos-text-secondary)"> (to be)</span>
+        </h1>
+        <p class="ig-subtitle">Present Tense � Pr?sens</p>
+      </div>
+
+      <div class="ig-card__body">
+        <div class="dual-layout">
+          <!-- Table -->
+          <section>
+            <h2 class="ig-section-title">Conjugation Table</h2>
+            <table class="ig-conj-table">
+              <thead>
+                <tr>
+                  <th>Person</th>
+                  <th>Form</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="pronoun">ich</td>
+                  <td class="form">bin</td>
+                </tr>
+                <tr class="irregular">
+                  <td class="pronoun">du</td>
+                  <td class="form">bist <span class="ig-star">?</span></td>
+                </tr>
+                <tr class="irregular">
+                  <td class="pronoun">er / sie / es</td>
+                  <td class="form">ist <span class="ig-star">?</span></td>
+                </tr>
+                <tr class="irregular">
+                  <td class="pronoun">wir</td>
+                  <td class="form">sind <span class="ig-star">?</span></td>
+                </tr>
+                <tr class="irregular">
+                  <td class="pronoun">ihr</td>
+                  <td class="form">seid <span class="ig-star">?</span></td>
+                </tr>
+                <tr class="irregular">
+                  <td class="pronoun">sie / Sie</td>
+                  <td class="form">sind <span class="ig-star">?</span></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="remember-box">
+              <strong>Remember:</strong> Only <em>ich bin</em> is regular ? all other forms are irregular. ? = memorize these.
+            </div>
+          </section>
+
+          <!-- Person grid -->
+          <section>
+            <h2 class="ig-section-title">Quick Grid</h2>
+            <div class="ig-grammar-grid">
+              <div class="ig-grammar-cell">
+                <div class="pronoun">ich</div>
+                <div class="form">bin</div>
+                <div class="gloss">I am</div>
+              </div>
+              <div class="ig-grammar-cell">
+                <div class="pronoun">du</div>
+                <div class="form">bist</div>
+                <div class="gloss">you are</div>
+              </div>
+              <div class="ig-grammar-cell">
+                <div class="pronoun">er/sie/es</div>
+                <div class="form">ist</div>
+                <div class="gloss">he/she/it is</div>
+              </div>
+              <div class="ig-grammar-cell">
+                <div class="pronoun">wir</div>
+                <div class="form">sind</div>
+                <div class="gloss">we are</div>
+              </div>
+              <div class="ig-grammar-cell">
+                <div class="pronoun">ihr</div>
+                <div class="form">seid</div>
+                <div class="gloss">you (pl.) are</div>
+              </div>
+              <div class="ig-grammar-cell">
+                <div class="pronoun">sie/Sie</div>
+                <div class="form">sind</div>
+                <div class="gloss">they / You are</div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <section style="margin-top:var(--glos-space-8)">
+          <h2 class="ig-section-title">Usage</h2>
+          <p style="color:var(--glos-text-secondary);font-size:14px;margin:0 0 var(--glos-space-4)">
+            Use <strong>sein</strong> for identity, profession, nationality, emotions, age, and location.
+          </p>
+          <ul class="usage-list">
+            <li><strong>Ich bin Ingenieur.</strong> ? profession <button class="ig-speaker" type="button" aria-label="Play">??</button></li>
+            <li><strong>Du bist nett.</strong> ? personality <button class="ig-speaker" type="button" aria-label="Play">??</button></li>
+            <li><strong>Sie ist aus Deutschland.</strong> ? nationality <button class="ig-speaker" type="button" aria-label="Play">??</button></li>
+            <li><strong>Wir sind m?de.</strong> ? emotion/state <button class="ig-speaker" type="button" aria-label="Play">??</button></li>
+            <li><strong>Ich bin 30 Jahre alt.</strong> ? age <button class="ig-speaker" type="button" aria-label="Play">??</button></li>
+          </ul>
+        </section>
+
+        <div class="ig-audio-row" style="margin-top:var(--glos-space-6)">
+          <button class="ig-btn ig-btn--primary" type="button">? Play all forms</button>
+          <button class="ig-btn" type="button">Slow</button>
+          <button class="ig-btn" type="button">Mini Quiz ?</button>
+        </div>
+      </div>
+
+      <footer class="ig-card__footer">
+        <span style="font-size:13px;color:var(--glos-text-secondary)">Verbs � A1 Core � Links to <strong>Ich bin ?</strong> pattern</span>
+      </footer>
+    </article>
+  </main>
+</body>
+</html>
