@@ -1,0 +1,922 @@
+{
+  "schemaVersion": "1.0.0",
+  "fragmentId": "listening-assets",
+  "meta": {
+    "label": "C1A fixture workbook mappings envelope",
+    "generatedFor": "fixture",
+    "workbookMappings": [
+      {
+        "id": "workbook-map:fixture-01",
+        "sourceAudioId": "src-audio:fixture:01",
+        "filename": "fixture_track_01.blocked",
+        "exerciseRef": "AB fixture 1"
+      },
+      {
+        "id": "workbook-map:fixture-02",
+        "sourceAudioId": "src-audio:fixture:02",
+        "filename": "fixture_track_02.blocked",
+        "exerciseRef": "AB fixture 2"
+      },
+      {
+        "id": "workbook-map:fixture-03",
+        "sourceAudioId": "src-audio:fixture:03",
+        "filename": "fixture_track_03.blocked",
+        "exerciseRef": "AB fixture 3"
+      },
+      {
+        "id": "workbook-map:fixture-04",
+        "sourceAudioId": "src-audio:fixture:04",
+        "filename": "fixture_track_04.blocked",
+        "exerciseRef": "AB fixture 4"
+      },
+      {
+        "id": "workbook-map:fixture-05",
+        "sourceAudioId": "src-audio:fixture:05",
+        "filename": "fixture_track_05.blocked",
+        "exerciseRef": "AB fixture 5"
+      },
+      {
+        "id": "workbook-map:fixture-06",
+        "sourceAudioId": "src-audio:fixture:06",
+        "filename": "fixture_track_06.blocked",
+        "exerciseRef": "AB fixture 6"
+      },
+      {
+        "id": "workbook-map:fixture-07",
+        "sourceAudioId": "src-audio:fixture:07",
+        "filename": "fixture_track_07.blocked",
+        "exerciseRef": "AB fixture 7"
+      },
+      {
+        "id": "workbook-map:fixture-08",
+        "sourceAudioId": "src-audio:fixture:08",
+        "filename": "fixture_track_08.blocked",
+        "exerciseRef": "AB fixture 8"
+      },
+      {
+        "id": "workbook-map:fixture-09",
+        "sourceAudioId": "src-audio:fixture:09",
+        "filename": "fixture_track_09.blocked",
+        "exerciseRef": "AB fixture 9"
+      },
+      {
+        "id": "workbook-map:fixture-10",
+        "sourceAudioId": "src-audio:fixture:10",
+        "filename": "fixture_track_10.blocked",
+        "exerciseRef": "AB fixture 10"
+      },
+      {
+        "id": "workbook-map:fixture-11",
+        "sourceAudioId": "src-audio:fixture:11",
+        "filename": "fixture_track_11.blocked",
+        "exerciseRef": "AB fixture 11"
+      },
+      {
+        "id": "workbook-map:fixture-12",
+        "sourceAudioId": "src-audio:fixture:12",
+        "filename": "fixture_track_12.blocked",
+        "exerciseRef": "AB fixture 12"
+      },
+      {
+        "id": "workbook-map:fixture-13",
+        "sourceAudioId": "src-audio:fixture:13",
+        "filename": "fixture_track_13.blocked",
+        "exerciseRef": "AB fixture 13"
+      },
+      {
+        "id": "workbook-map:fixture-14",
+        "sourceAudioId": "src-audio:fixture:14",
+        "filename": "fixture_track_14.blocked",
+        "exerciseRef": "AB fixture 14"
+      },
+      {
+        "id": "workbook-map:fixture-15",
+        "sourceAudioId": "src-audio:fixture:15",
+        "filename": "fixture_track_15.blocked",
+        "exerciseRef": "AB fixture 15"
+      }
+    ]
+  },
+  "sources": [],
+  "sourceAssertions": [
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:media-workbook-map-fixture-01-variants",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "exercise": "AB fixture 1"
+      },
+      "subjectId": "media:workbook-map-fixture-01",
+      "field": "variants",
+      "value": {
+        "rightsReference": "rights-gated://src-audio:fixture:01",
+        "filename": "fixture_track_01.blocked",
+        "sourceAudioId": "src-audio:fixture:01"
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:media-workbook-map-fixture-02-variants",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "exercise": "AB fixture 2"
+      },
+      "subjectId": "media:workbook-map-fixture-02",
+      "field": "variants",
+      "value": {
+        "rightsReference": "rights-gated://src-audio:fixture:02",
+        "filename": "fixture_track_02.blocked",
+        "sourceAudioId": "src-audio:fixture:02"
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:media-workbook-map-fixture-03-variants",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "exercise": "AB fixture 3"
+      },
+      "subjectId": "media:workbook-map-fixture-03",
+      "field": "variants",
+      "value": {
+        "rightsReference": "rights-gated://src-audio:fixture:03",
+        "filename": "fixture_track_03.blocked",
+        "sourceAudioId": "src-audio:fixture:03"
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:media-workbook-map-fixture-04-variants",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "exercise": "AB fixture 4"
+      },
+      "subjectId": "media:workbook-map-fixture-04",
+      "field": "variants",
+      "value": {
+        "rightsReference": "rights-gated://src-audio:fixture:04",
+        "filename": "fixture_track_04.blocked",
+        "sourceAudioId": "src-audio:fixture:04"
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:media-workbook-map-fixture-05-variants",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "exercise": "AB fixture 5"
+      },
+      "subjectId": "media:workbook-map-fixture-05",
+      "field": "variants",
+      "value": {
+        "rightsReference": "rights-gated://src-audio:fixture:05",
+        "filename": "fixture_track_05.blocked",
+        "sourceAudioId": "src-audio:fixture:05"
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:media-workbook-map-fixture-06-variants",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "exercise": "AB fixture 6"
+      },
+      "subjectId": "media:workbook-map-fixture-06",
+      "field": "variants",
+      "value": {
+        "rightsReference": "rights-gated://src-audio:fixture:06",
+        "filename": "fixture_track_06.blocked",
+        "sourceAudioId": "src-audio:fixture:06"
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:media-workbook-map-fixture-07-variants",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "exercise": "AB fixture 7"
+      },
+      "subjectId": "media:workbook-map-fixture-07",
+      "field": "variants",
+      "value": {
+        "rightsReference": "rights-gated://src-audio:fixture:07",
+        "filename": "fixture_track_07.blocked",
+        "sourceAudioId": "src-audio:fixture:07"
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:media-workbook-map-fixture-08-variants",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "exercise": "AB fixture 8"
+      },
+      "subjectId": "media:workbook-map-fixture-08",
+      "field": "variants",
+      "value": {
+        "rightsReference": "rights-gated://src-audio:fixture:08",
+        "filename": "fixture_track_08.blocked",
+        "sourceAudioId": "src-audio:fixture:08"
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:media-workbook-map-fixture-09-variants",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "exercise": "AB fixture 9"
+      },
+      "subjectId": "media:workbook-map-fixture-09",
+      "field": "variants",
+      "value": {
+        "rightsReference": "rights-gated://src-audio:fixture:09",
+        "filename": "fixture_track_09.blocked",
+        "sourceAudioId": "src-audio:fixture:09"
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:media-workbook-map-fixture-10-variants",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "exercise": "AB fixture 10"
+      },
+      "subjectId": "media:workbook-map-fixture-10",
+      "field": "variants",
+      "value": {
+        "rightsReference": "rights-gated://src-audio:fixture:10",
+        "filename": "fixture_track_10.blocked",
+        "sourceAudioId": "src-audio:fixture:10"
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:media-workbook-map-fixture-11-variants",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "exercise": "AB fixture 11"
+      },
+      "subjectId": "media:workbook-map-fixture-11",
+      "field": "variants",
+      "value": {
+        "rightsReference": "rights-gated://src-audio:fixture:11",
+        "filename": "fixture_track_11.blocked",
+        "sourceAudioId": "src-audio:fixture:11"
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:media-workbook-map-fixture-12-variants",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "exercise": "AB fixture 12"
+      },
+      "subjectId": "media:workbook-map-fixture-12",
+      "field": "variants",
+      "value": {
+        "rightsReference": "rights-gated://src-audio:fixture:12",
+        "filename": "fixture_track_12.blocked",
+        "sourceAudioId": "src-audio:fixture:12"
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:media-workbook-map-fixture-13-variants",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "exercise": "AB fixture 13"
+      },
+      "subjectId": "media:workbook-map-fixture-13",
+      "field": "variants",
+      "value": {
+        "rightsReference": "rights-gated://src-audio:fixture:13",
+        "filename": "fixture_track_13.blocked",
+        "sourceAudioId": "src-audio:fixture:13"
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:media-workbook-map-fixture-14-variants",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "exercise": "AB fixture 14"
+      },
+      "subjectId": "media:workbook-map-fixture-14",
+      "field": "variants",
+      "value": {
+        "rightsReference": "rights-gated://src-audio:fixture:14",
+        "filename": "fixture_track_14.blocked",
+        "sourceAudioId": "src-audio:fixture:14"
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:media-workbook-map-fixture-15-variants",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "exercise": "AB fixture 15"
+      },
+      "subjectId": "media:workbook-map-fixture-15",
+      "field": "variants",
+      "value": {
+        "rightsReference": "rights-gated://src-audio:fixture:15",
+        "filename": "fixture_track_15.blocked",
+        "sourceAudioId": "src-audio:fixture:15"
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    }
+  ],
+  "mediaAssets": [
+    {
+      "kind": "MediaAsset",
+      "id": "media:fixture-generated-placeholder",
+      "mediaKind": "audio",
+      "origin": "generated",
+      "locale": "de-DE",
+      "variants": [
+        {
+          "path": "media/generated/fixture/placeholder.wav",
+          "role": "master"
+        }
+      ],
+      "reviewStatus": "candidate",
+      "linkedConceptIds": [],
+      "sourceAssertionIds": [],
+      "publication": {
+        "status": "draft",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "MediaAsset",
+      "id": "media:workbook-map-fixture-01",
+      "mediaKind": "audio",
+      "origin": "publisher",
+      "locale": "de-DE",
+      "variants": [
+        {
+          "path": "rights-gated://src-audio:fixture:01",
+          "role": "master"
+        }
+      ],
+      "reviewStatus": "candidate",
+      "linkedConceptIds": [],
+      "sourceAssertionIds": [
+        "assert:media-workbook-map-fixture-01-variants"
+      ],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "MediaAsset",
+      "id": "media:workbook-map-fixture-02",
+      "mediaKind": "audio",
+      "origin": "publisher",
+      "locale": "de-DE",
+      "variants": [
+        {
+          "path": "rights-gated://src-audio:fixture:02",
+          "role": "master"
+        }
+      ],
+      "reviewStatus": "candidate",
+      "linkedConceptIds": [],
+      "sourceAssertionIds": [
+        "assert:media-workbook-map-fixture-02-variants"
+      ],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "MediaAsset",
+      "id": "media:workbook-map-fixture-03",
+      "mediaKind": "audio",
+      "origin": "publisher",
+      "locale": "de-DE",
+      "variants": [
+        {
+          "path": "rights-gated://src-audio:fixture:03",
+          "role": "master"
+        }
+      ],
+      "reviewStatus": "candidate",
+      "linkedConceptIds": [],
+      "sourceAssertionIds": [
+        "assert:media-workbook-map-fixture-03-variants"
+      ],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "MediaAsset",
+      "id": "media:workbook-map-fixture-04",
+      "mediaKind": "audio",
+      "origin": "publisher",
+      "locale": "de-DE",
+      "variants": [
+        {
+          "path": "rights-gated://src-audio:fixture:04",
+          "role": "master"
+        }
+      ],
+      "reviewStatus": "candidate",
+      "linkedConceptIds": [],
+      "sourceAssertionIds": [
+        "assert:media-workbook-map-fixture-04-variants"
+      ],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "MediaAsset",
+      "id": "media:workbook-map-fixture-05",
+      "mediaKind": "audio",
+      "origin": "publisher",
+      "locale": "de-DE",
+      "variants": [
+        {
+          "path": "rights-gated://src-audio:fixture:05",
+          "role": "master"
+        }
+      ],
+      "reviewStatus": "candidate",
+      "linkedConceptIds": [],
+      "sourceAssertionIds": [
+        "assert:media-workbook-map-fixture-05-variants"
+      ],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "MediaAsset",
+      "id": "media:workbook-map-fixture-06",
+      "mediaKind": "audio",
+      "origin": "publisher",
+      "locale": "de-DE",
+      "variants": [
+        {
+          "path": "rights-gated://src-audio:fixture:06",
+          "role": "master"
+        }
+      ],
+      "reviewStatus": "candidate",
+      "linkedConceptIds": [],
+      "sourceAssertionIds": [
+        "assert:media-workbook-map-fixture-06-variants"
+      ],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "MediaAsset",
+      "id": "media:workbook-map-fixture-07",
+      "mediaKind": "audio",
+      "origin": "publisher",
+      "locale": "de-DE",
+      "variants": [
+        {
+          "path": "rights-gated://src-audio:fixture:07",
+          "role": "master"
+        }
+      ],
+      "reviewStatus": "candidate",
+      "linkedConceptIds": [],
+      "sourceAssertionIds": [
+        "assert:media-workbook-map-fixture-07-variants"
+      ],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "MediaAsset",
+      "id": "media:workbook-map-fixture-08",
+      "mediaKind": "audio",
+      "origin": "publisher",
+      "locale": "de-DE",
+      "variants": [
+        {
+          "path": "rights-gated://src-audio:fixture:08",
+          "role": "master"
+        }
+      ],
+      "reviewStatus": "candidate",
+      "linkedConceptIds": [],
+      "sourceAssertionIds": [
+        "assert:media-workbook-map-fixture-08-variants"
+      ],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "MediaAsset",
+      "id": "media:workbook-map-fixture-09",
+      "mediaKind": "audio",
+      "origin": "publisher",
+      "locale": "de-DE",
+      "variants": [
+        {
+          "path": "rights-gated://src-audio:fixture:09",
+          "role": "master"
+        }
+      ],
+      "reviewStatus": "candidate",
+      "linkedConceptIds": [],
+      "sourceAssertionIds": [
+        "assert:media-workbook-map-fixture-09-variants"
+      ],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "MediaAsset",
+      "id": "media:workbook-map-fixture-10",
+      "mediaKind": "audio",
+      "origin": "publisher",
+      "locale": "de-DE",
+      "variants": [
+        {
+          "path": "rights-gated://src-audio:fixture:10",
+          "role": "master"
+        }
+      ],
+      "reviewStatus": "candidate",
+      "linkedConceptIds": [],
+      "sourceAssertionIds": [
+        "assert:media-workbook-map-fixture-10-variants"
+      ],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "MediaAsset",
+      "id": "media:workbook-map-fixture-11",
+      "mediaKind": "audio",
+      "origin": "publisher",
+      "locale": "de-DE",
+      "variants": [
+        {
+          "path": "rights-gated://src-audio:fixture:11",
+          "role": "master"
+        }
+      ],
+      "reviewStatus": "candidate",
+      "linkedConceptIds": [],
+      "sourceAssertionIds": [
+        "assert:media-workbook-map-fixture-11-variants"
+      ],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "MediaAsset",
+      "id": "media:workbook-map-fixture-12",
+      "mediaKind": "audio",
+      "origin": "publisher",
+      "locale": "de-DE",
+      "variants": [
+        {
+          "path": "rights-gated://src-audio:fixture:12",
+          "role": "master"
+        }
+      ],
+      "reviewStatus": "candidate",
+      "linkedConceptIds": [],
+      "sourceAssertionIds": [
+        "assert:media-workbook-map-fixture-12-variants"
+      ],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "MediaAsset",
+      "id": "media:workbook-map-fixture-13",
+      "mediaKind": "audio",
+      "origin": "publisher",
+      "locale": "de-DE",
+      "variants": [
+        {
+          "path": "rights-gated://src-audio:fixture:13",
+          "role": "master"
+        }
+      ],
+      "reviewStatus": "candidate",
+      "linkedConceptIds": [],
+      "sourceAssertionIds": [
+        "assert:media-workbook-map-fixture-13-variants"
+      ],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "MediaAsset",
+      "id": "media:workbook-map-fixture-14",
+      "mediaKind": "audio",
+      "origin": "publisher",
+      "locale": "de-DE",
+      "variants": [
+        {
+          "path": "rights-gated://src-audio:fixture:14",
+          "role": "master"
+        }
+      ],
+      "reviewStatus": "candidate",
+      "linkedConceptIds": [],
+      "sourceAssertionIds": [
+        "assert:media-workbook-map-fixture-14-variants"
+      ],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "MediaAsset",
+      "id": "media:workbook-map-fixture-15",
+      "mediaKind": "audio",
+      "origin": "publisher",
+      "locale": "de-DE",
+      "variants": [
+        {
+          "path": "rights-gated://src-audio:fixture:15",
+          "role": "master"
+        }
+      ],
+      "reviewStatus": "candidate",
+      "linkedConceptIds": [],
+      "sourceAssertionIds": [
+        "assert:media-workbook-map-fixture-15-variants"
+      ],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    }
+  ],
+  "listeningAssets": [
+    {
+      "kind": "ListeningAsset",
+      "id": "listen:workbook-fixture-01",
+      "mediaId": "media:workbook-map-fixture-01",
+      "transcriptSegments": [],
+      "exerciseRef": "AB fixture 1",
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "ListeningAsset",
+      "id": "listen:workbook-fixture-02",
+      "mediaId": "media:workbook-map-fixture-02",
+      "transcriptSegments": [],
+      "exerciseRef": "AB fixture 2",
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "ListeningAsset",
+      "id": "listen:workbook-fixture-03",
+      "mediaId": "media:workbook-map-fixture-03",
+      "transcriptSegments": [],
+      "exerciseRef": "AB fixture 3",
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "ListeningAsset",
+      "id": "listen:workbook-fixture-04",
+      "mediaId": "media:workbook-map-fixture-04",
+      "transcriptSegments": [],
+      "exerciseRef": "AB fixture 4",
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "ListeningAsset",
+      "id": "listen:workbook-fixture-05",
+      "mediaId": "media:workbook-map-fixture-05",
+      "transcriptSegments": [],
+      "exerciseRef": "AB fixture 5",
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "ListeningAsset",
+      "id": "listen:workbook-fixture-06",
+      "mediaId": "media:workbook-map-fixture-06",
+      "transcriptSegments": [],
+      "exerciseRef": "AB fixture 6",
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "ListeningAsset",
+      "id": "listen:workbook-fixture-07",
+      "mediaId": "media:workbook-map-fixture-07",
+      "transcriptSegments": [],
+      "exerciseRef": "AB fixture 7",
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "ListeningAsset",
+      "id": "listen:workbook-fixture-08",
+      "mediaId": "media:workbook-map-fixture-08",
+      "transcriptSegments": [],
+      "exerciseRef": "AB fixture 8",
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "ListeningAsset",
+      "id": "listen:workbook-fixture-09",
+      "mediaId": "media:workbook-map-fixture-09",
+      "transcriptSegments": [],
+      "exerciseRef": "AB fixture 9",
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "ListeningAsset",
+      "id": "listen:workbook-fixture-10",
+      "mediaId": "media:workbook-map-fixture-10",
+      "transcriptSegments": [],
+      "exerciseRef": "AB fixture 10",
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "ListeningAsset",
+      "id": "listen:workbook-fixture-11",
+      "mediaId": "media:workbook-map-fixture-11",
+      "transcriptSegments": [],
+      "exerciseRef": "AB fixture 11",
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "ListeningAsset",
+      "id": "listen:workbook-fixture-12",
+      "mediaId": "media:workbook-map-fixture-12",
+      "transcriptSegments": [],
+      "exerciseRef": "AB fixture 12",
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "ListeningAsset",
+      "id": "listen:workbook-fixture-13",
+      "mediaId": "media:workbook-map-fixture-13",
+      "transcriptSegments": [],
+      "exerciseRef": "AB fixture 13",
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "ListeningAsset",
+      "id": "listen:workbook-fixture-14",
+      "mediaId": "media:workbook-map-fixture-14",
+      "transcriptSegments": [],
+      "exerciseRef": "AB fixture 14",
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "ListeningAsset",
+      "id": "listen:workbook-fixture-15",
+      "mediaId": "media:workbook-map-fixture-15",
+      "transcriptSegments": [],
+      "exerciseRef": "AB fixture 15",
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    }
+  ]
+}

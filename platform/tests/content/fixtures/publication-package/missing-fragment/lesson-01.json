@@ -1,0 +1,92 @@
+{
+  "schemaVersion": "1.0.0",
+  "fragmentId": "lesson-01",
+  "meta": {
+    "label": "C1A fixture lesson-01",
+    "generatedFor": "fixture"
+  },
+  "sources": [
+    {
+      "kind": "Source",
+      "id": "source:c1a-fixture",
+      "title": "C1A publication-package fixture source",
+      "sourceKind": "fixture",
+      "language": "de",
+      "priority": 1,
+      "originalPath": "platform/tests/content/fixtures/publication-package/positive",
+      "cefrBand": "A1.1"
+    }
+  ],
+  "sourceAssertions": [],
+  "lessons": [
+    {
+      "kind": "Lesson",
+      "id": "lesson:01",
+      "number": 1,
+      "titleDe": "[fixture-lesson-01]",
+      "titleEn": "Fixture Lesson 1",
+      "cefr": "A1",
+      "communicativeGoals": [
+        "fixture-goal-01"
+      ],
+      "prerequisiteLessonIds": [],
+      "stages": [
+        {
+          "id": "overview",
+          "kind": "overview",
+          "titleEn": "Overview",
+          "activityIds": [
+            "activity:lesson-01-greetings-by-context",
+            "activity:lesson-01-greeting-farewell-match",
+            "activity:lesson-01-name-model-dialogue",
+            "activity:lesson-01-alphabet-listen-spell",
+            "activity:lesson-01-heissen-sein-notice",
+            "activity:lesson-01-wellbeing-scale",
+            "activity:lesson-01-origin-aus-contrast",
+            "activity:lesson-01-pronoun-verb-builder",
+            "activity:lesson-01-register-qa-builder",
+            "activity:lesson-01-workbook-listening",
+            "activity:lesson-01-guided-intro-recording",
+            "activity:lesson-01-checkpoint-summary"
+          ],
+          "estimatedMinutes": 5,
+          "skillTargets": [
+            "exposure"
+          ],
+          "required": true
+        }
+      ],
+      "collections": [],
+      "sourceAssertionIds": [],
+      "relationIds": [],
+      "publication": {
+        "status": "draft",
+        "publishedFields": []
+      }
+    }
+  ],
+  "lexemes": [
+    {
+      "kind": "Lexeme",
+      "id": "lex:fixture-shared",
+      "lemma": "fixturelemma",
+      "partOfSpeech": "noun",
+      "meanings": [
+        {
+          "id": "meaning:fixture-shared",
+          "glossEn": "[fixture-gloss]"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "draft",
+        "publishedFields": []
+      }
+    }
+  ]
+}

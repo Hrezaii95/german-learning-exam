@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0.0",
+  "meta": { "label": "C0R1 missing publication on Verb", "generatedFor": "fixture" },
+  "sources": [
+    {
+      "kind": "Source",
+      "id": "source:fixture-schema",
+      "title": "C0 schema fixture source",
+      "sourceKind": "fixture",
+      "language": "de",
+      "priority": 1,
+      "cefrBand": "A1.1"
+    }
+  ],
+  "sourceAssertions": [],
+  "mediaAssets": [],
+  "lessons": [],
+  "lexemes": [],
+  "verbs": [
+    {
+      "kind": "Verb",
+      "id": "verb:fixture-sein",
+      "infinitive": "sein",
+      "meanings": [{ "glossEn": "[fixture-verb-gloss]" }],
+      "present": [{ "person": "ich", "form": "bin" }],
+      "pronunciation": {},
+      "exampleIds": [],
+      "grammarIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "mediaIds": [],
+      "cardTemplateIds": []
+    }
+  ],
+  "grammarConcepts": [],
+  "phrasePatterns": [],
+  "qaPairs": [],
+  "dialogues": [],
+  "listeningAssets": [],
+  "collections": [],
+  "learningActivities": [],
+  "relationships": [],
+  "contentGaps": []
+}

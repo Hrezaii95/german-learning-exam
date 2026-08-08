@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0.0",
+  "meta": {
+    "label": "C0R2 HTML in LearningActivity prompt and AnswerSpec",
+    "generatedFor": "fixture"
+  },
+  "sources": [
+    {
+      "kind": "Source",
+      "id": "source:fixture-schema",
+      "title": "C0 schema fixture source",
+      "sourceKind": "fixture",
+      "language": "de",
+      "priority": 1,
+      "cefrBand": "A1.1"
+    }
+  ],
+  "sourceAssertions": [],
+  "mediaAssets": [],
+  "lessons": [],
+  "lexemes": [],
+  "verbs": [],
+  "grammarConcepts": [],
+  "phrasePatterns": [],
+  "qaPairs": [],
+  "dialogues": [],
+  "listeningAssets": [],
+  "collections": [],
+  "learningActivities": [
+    {
+      "kind": "LearningActivity",
+      "id": "activity:fixture-html",
+      "mode": "recall",
+      "renderer": "fixture.recall",
+      "conceptIds": [],
+      "prompt": {
+        "instruction": {
+          "tokens": [{ "type": "plain", "text": "Type the <b>lemma</b>." }]
+        },
+        "stem": {
+          "tokens": [{ "type": "plain", "text": "Safe stem" }]
+        },
+        "choices": [
+          {
+            "id": "c1",
+            "label": {
+              "tokens": [{ "type": "plain", "text": "<i>choice</i>" }]
+            }
+          }
+        ]
+      },
+      "answerSpec": {
+        "type": "exact",
+        "accepted": ["ok", "<script>x</script>"]
+      },
+      "skillDimensions": ["recall"],
+      "completionRule": { "type": "correct", "minCorrect": 1 },
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "publication": { "status": "draft", "publishedFields": [] }
+    }
+  ],
+  "relationships": [],
+  "contentGaps": []
+}

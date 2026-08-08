@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "1.0.0",
+  "meta": {
+    "label": "C0R2 null element inside bundle array yields element-level issue",
+    "generatedFor": "fixture"
+  },
+  "sources": [
+    {
+      "kind": "Source",
+      "id": "source:fixture-schema",
+      "title": "C0 schema fixture source",
+      "sourceKind": "fixture",
+      "language": "de",
+      "priority": 1,
+      "cefrBand": "A1.1"
+    }
+  ],
+  "sourceAssertions": [],
+  "mediaAssets": [],
+  "lessons": [],
+  "lexemes": [
+    null,
+    {
+      "kind": "Lexeme",
+      "id": "lex:fixture-after-null",
+      "lemma": "fixtureafternull",
+      "partOfSpeech": "noun",
+      "meanings": [{ "id": "meaning:fixture-after-null", "glossEn": "[fixture-gloss]" }],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": { "status": "draft", "publishedFields": [] }
+    }
+  ],
+  "verbs": [],
+  "grammarConcepts": [],
+  "phrasePatterns": [],
+  "qaPairs": [],
+  "dialogues": [],
+  "listeningAssets": [],
+  "collections": [],
+  "learningActivities": [],
+  "relationships": [],
+  "contentGaps": []
+}

@@ -1,0 +1,164 @@
+{
+  "schemaVersion": "1.0.0",
+  "meta": {
+    "label": "C0R2 picture-dictionary publish with approved enrichment on Lesson 1",
+    "generatedFor": "fixture"
+  },
+  "sources": [
+    {
+      "kind": "Source",
+      "id": "source:fixture-picture-dict",
+      "title": "C0 picture dictionary fixture",
+      "sourceKind": "picture-dictionary",
+      "language": "de",
+      "priority": 4,
+      "cefrBand": "A1.1"
+    },
+    {
+      "kind": "Source",
+      "id": "source:fixture-schema",
+      "title": "C0 schema fixture source",
+      "sourceKind": "fixture",
+      "language": "de",
+      "priority": 1,
+      "cefrBand": "A1.1"
+    }
+  ],
+  "sourceAssertions": [
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lesson-01-title-de",
+      "sourceId": "source:fixture-schema",
+      "location": { "noteRow": 1 },
+      "subjectId": "lesson:01",
+      "field": "titleDe",
+      "value": "[fixture-title-de]",
+      "extraction": "fixture",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c0-fixture"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lesson-01-goals",
+      "sourceId": "source:fixture-schema",
+      "location": { "noteRow": 2 },
+      "subjectId": "lesson:01",
+      "field": "communicativeGoals",
+      "value": ["fixture-goal"],
+      "extraction": "fixture",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c0-fixture"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-picture-lemma",
+      "sourceId": "source:fixture-picture-dict",
+      "location": { "noteRow": 3 },
+      "subjectId": "lex:fixture-picture-ok",
+      "field": "lemma",
+      "value": "[fixture-picture-lemma]",
+      "extraction": "fixture",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c0-fixture"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-picture-meanings",
+      "sourceId": "source:fixture-picture-dict",
+      "location": { "noteRow": 4 },
+      "subjectId": "lex:fixture-picture-ok",
+      "field": "meanings",
+      "value": [{ "id": "meaning:fixture-picture-ok", "glossEn": "[fixture-gloss]" }],
+      "extraction": "fixture",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c0-fixture"
+    }
+  ],
+  "mediaAssets": [],
+  "lessons": [
+    {
+      "kind": "Lesson",
+      "id": "lesson:01",
+      "number": 1,
+      "titleDe": "[fixture-title-de]",
+      "titleEn": "Fixture Lesson 1",
+      "cefr": "A1",
+      "communicativeGoals": ["fixture-goal"],
+      "prerequisiteLessonIds": [],
+      "stages": [
+        {
+          "id": "overview",
+          "kind": "overview",
+          "titleEn": "Overview",
+          "activityIds": [],
+          "estimatedMinutes": 1,
+          "skillTargets": ["exposure"],
+          "required": true
+        }
+      ],
+      "collections": [],
+      "sourceAssertionIds": ["assert:lesson-01-title-de", "assert:lesson-01-goals"],
+      "relationIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          { "field": "titleDe", "assertionId": "assert:lesson-01-title-de" },
+          { "field": "communicativeGoals", "assertionId": "assert:lesson-01-goals" }
+        ]
+      }
+    }
+  ],
+  "lexemes": [
+    {
+      "kind": "Lexeme",
+      "id": "lex:fixture-picture-ok",
+      "lemma": "fixturepictureok",
+      "partOfSpeech": "noun",
+      "meanings": [{ "id": "meaning:fixture-picture-ok", "glossEn": "[fixture-gloss]" }],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": ["rel:picture-introduced"],
+      "sourceAssertionIds": [
+        "assert:lex-picture-lemma",
+        "assert:lex-picture-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          { "field": "lemma", "assertionId": "assert:lex-picture-lemma" },
+          { "field": "meanings", "assertionId": "assert:lex-picture-meanings" }
+        ],
+        "scopeException": {
+          "kind": "approved-enrichment",
+          "attachedLessonId": "lesson:01",
+          "approvalId": "approval:fixture-picture-l1",
+          "note": "Verified picture-dictionary enrichment attached to Lesson 1."
+        }
+      }
+    }
+  ],
+  "verbs": [],
+  "grammarConcepts": [],
+  "phrasePatterns": [],
+  "qaPairs": [],
+  "dialogues": [],
+  "listeningAssets": [],
+  "collections": [],
+  "learningActivities": [],
+  "relationships": [
+    {
+      "kind": "Relationship",
+      "id": "rel:picture-introduced",
+      "type": "introduced-in",
+      "fromId": "lex:fixture-picture-ok",
+      "toId": "lesson:01"
+    }
+  ],
+  "contentGaps": []
+}

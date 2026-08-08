@@ -1,0 +1,5794 @@
+{
+  "schemaVersion": "1.0.0",
+  "fragmentId": "lesson-01",
+  "meta": {
+    "label": "C1 Lesson 1 publication fragment",
+    "generatedFor": "publication"
+  },
+  "sources": [
+    {
+      "kind": "Source",
+      "id": "source:alpha-content-bundle",
+      "title": "Alpha compact content evidence bundle",
+      "sourceKind": "other",
+      "language": "de",
+      "priority": 1,
+      "originalPath": "content/alpha-content.json",
+      "cefrBand": "A1.1"
+    },
+    {
+      "kind": "Source",
+      "id": "source:content-spec-lessons-01-02",
+      "title": "Lessons 1–2 content specification (activity contract)",
+      "sourceKind": "other",
+      "language": "en",
+      "priority": 2,
+      "originalPath": "docs/11-lessons-01-02-content-spec.md",
+      "cefrBand": "A1.1"
+    },
+    {
+      "kind": "Source",
+      "id": "source:glossary-momente-a11",
+      "title": "Momente A1.1 English glossary (Lessons 01–02 scope)",
+      "sourceKind": "glossary",
+      "language": "en",
+      "priority": 1,
+      "originalPath": "resources/original",
+      "cefrBand": "A1.1"
+    },
+    {
+      "kind": "Source",
+      "id": "source:coursebook-momente-a11",
+      "title": "Momente A1.1 coursebook",
+      "sourceKind": "coursebook",
+      "language": "de",
+      "priority": 2,
+      "originalPath": "resources/original/coursebook/A1-KB-momente.pdf",
+      "cefrBand": "A1.1"
+    },
+    {
+      "kind": "Source",
+      "id": "source:workbook-momente-a11",
+      "title": "Momente A1.1 workbook",
+      "sourceKind": "workbook",
+      "language": "de",
+      "priority": 2,
+      "originalPath": "resources/original",
+      "cefrBand": "A1.1"
+    }
+  ],
+  "sourceAssertions": [
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lesson-01-title-de",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "region": "lesson-title",
+        "printedPage": 10
+      },
+      "subjectId": "lesson:01",
+      "field": "titleDe",
+      "value": "Ich heiße Miriam.",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lesson-01-goals",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "region": "communicative-goals",
+        "printedPage": 10
+      },
+      "subjectId": "lesson:01",
+      "field": "communicativeGoals",
+      "value": [
+        "greet and say goodbye",
+        "ask and answer names",
+        "spell a name",
+        "ask and say origin",
+        "ask and answer wellbeing",
+        "choose du or formal Sie"
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-hallo-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:hallo",
+      "field": "lemma",
+      "value": "Hallo",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-hallo-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:hallo",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:hallo-en",
+          "glossEn": "Hello"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-guten-tag-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:guten-tag",
+      "field": "lemma",
+      "value": "Guten Tag",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-guten-tag-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:guten-tag",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:guten-tag-en",
+          "glossEn": "Good day / Hello"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-guten-morgen-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:guten-morgen",
+      "field": "lemma",
+      "value": "Guten Morgen",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-guten-morgen-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:guten-morgen",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:guten-morgen-en",
+          "glossEn": "Good morning"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-guten-abend-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:guten-abend",
+      "field": "lemma",
+      "value": "Guten Abend",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-guten-abend-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:guten-abend",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:guten-abend-en",
+          "glossEn": "Good evening"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-gute-nacht-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:gute-nacht",
+      "field": "lemma",
+      "value": "Gute Nacht",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-gute-nacht-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:gute-nacht",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:gute-nacht-en",
+          "glossEn": "Good night"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-tschues-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:tschues",
+      "field": "lemma",
+      "value": "Tschüs",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-tschues-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:tschues",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:tschues-en",
+          "glossEn": "Bye"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-auf-wiedersehen-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:auf-wiedersehen",
+      "field": "lemma",
+      "value": "Auf Wiedersehen",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-auf-wiedersehen-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:auf-wiedersehen",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:auf-wiedersehen-en",
+          "glossEn": "Goodbye"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-super-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:super",
+      "field": "lemma",
+      "value": "Super!",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-super-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:super",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:super-en",
+          "glossEn": "Great!"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-sehr-gut-danke-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:sehr-gut-danke",
+      "field": "lemma",
+      "value": "Sehr gut, danke.",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-sehr-gut-danke-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:sehr-gut-danke",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:sehr-gut-danke-en",
+          "glossEn": "Very well, thank you."
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-gut-danke-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:gut-danke",
+      "field": "lemma",
+      "value": "Gut, danke.",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-gut-danke-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:gut-danke",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:gut-danke-en",
+          "glossEn": "Fine, thank you."
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-es-geht-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:es-geht",
+      "field": "lemma",
+      "value": "Es geht.",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-es-geht-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:es-geht",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:es-geht-en",
+          "glossEn": "Not too bad."
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-nicht-so-gut-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:nicht-so-gut",
+      "field": "lemma",
+      "value": "Nicht so gut.",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-nicht-so-gut-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:nicht-so-gut",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:nicht-so-gut-en",
+          "glossEn": "Not so well."
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-auch-super-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:auch-super",
+      "field": "lemma",
+      "value": "Auch super.",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-auch-super-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:auch-super",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:auch-super-en",
+          "glossEn": "Great as well."
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-deutschland-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:deutschland",
+      "field": "lemma",
+      "value": "Deutschland",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-deutschland-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:deutschland",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:deutschland-en",
+          "glossEn": "Germany"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-eritrea-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:eritrea",
+      "field": "lemma",
+      "value": "Eritrea",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-eritrea-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:eritrea",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:eritrea-en",
+          "glossEn": "Eritrea"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-oesterreich-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:oesterreich",
+      "field": "lemma",
+      "value": "Österreich",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-oesterreich-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:oesterreich",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:oesterreich-en",
+          "glossEn": "Austria"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-spanien-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:spanien",
+      "field": "lemma",
+      "value": "Spanien",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-spanien-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:spanien",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:spanien-en",
+          "glossEn": "Spain"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-frankreich-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:frankreich",
+      "field": "lemma",
+      "value": "Frankreich",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-frankreich-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:frankreich",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:frankreich-en",
+          "glossEn": "France"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-schweiz-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:schweiz",
+      "field": "lemma",
+      "value": "Schweiz",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-schweiz-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:schweiz",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:schweiz-en",
+          "glossEn": "Switzerland"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-tuerkei-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:tuerkei",
+      "field": "lemma",
+      "value": "Türkei",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-tuerkei-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:tuerkei",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:tuerkei-en",
+          "glossEn": "Turkey"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-usa-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:usa",
+      "field": "lemma",
+      "value": "USA",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-usa-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:usa",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:usa-en",
+          "glossEn": "USA"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-name-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:name",
+      "field": "lemma",
+      "value": "Name",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-name-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:name",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:name-en",
+          "glossEn": "name"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-vorname-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:vorname",
+      "field": "lemma",
+      "value": "Vorname",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-vorname-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:vorname",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:vorname-en",
+          "glossEn": "first name"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-familienname-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:familienname",
+      "field": "lemma",
+      "value": "Familienname",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-familienname-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:familienname",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:familienname-en",
+          "glossEn": "last name"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-herr-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:herr",
+      "field": "lemma",
+      "value": "Herr",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-herr-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:herr",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:herr-en",
+          "glossEn": "Mr / gentleman"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-frau-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:frau",
+      "field": "lemma",
+      "value": "Frau",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-frau-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:frau",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:frau-en",
+          "glossEn": "Ms / Mrs / woman"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:verb-sein-infinitive",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "verb:sein",
+      "field": "infinitive",
+      "value": "sein",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:verb-sein-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "verb:sein",
+      "field": "meanings",
+      "value": [
+        {
+          "glossEn": "to be"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:verb-sein-present",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 10
+      },
+      "subjectId": "verb:sein",
+      "field": "present",
+      "value": [
+        {
+          "person": "ich",
+          "form": "bin"
+        },
+        {
+          "person": "du",
+          "form": "bist"
+        },
+        {
+          "person": "er_sie_es",
+          "form": "ist"
+        },
+        {
+          "person": "wir",
+          "form": "sind"
+        },
+        {
+          "person": "ihr",
+          "form": "seid"
+        },
+        {
+          "person": "sie_plural",
+          "form": "sind"
+        },
+        {
+          "person": "Sie_formal",
+          "form": "sind"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:verb-heissen-infinitive",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "verb:heissen",
+      "field": "infinitive",
+      "value": "heißen",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:verb-heissen-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "verb:heissen",
+      "field": "meanings",
+      "value": [
+        {
+          "glossEn": "to be called"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:verb-heissen-present",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 10
+      },
+      "subjectId": "verb:heissen",
+      "field": "present",
+      "value": [
+        {
+          "person": "ich",
+          "form": "heiße"
+        },
+        {
+          "person": "du",
+          "form": "heißt"
+        },
+        {
+          "person": "er_sie_es",
+          "form": "heißt"
+        },
+        {
+          "person": "Sie_formal",
+          "form": "heißen"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:verb-kommen-infinitive",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "verb:kommen",
+      "field": "infinitive",
+      "value": "kommen",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:verb-kommen-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "verb:kommen",
+      "field": "meanings",
+      "value": [
+        {
+          "glossEn": "to come"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:verb-kommen-present",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 10
+      },
+      "subjectId": "verb:kommen",
+      "field": "present",
+      "value": [
+        {
+          "person": "ich",
+          "form": "komme"
+        },
+        {
+          "person": "du",
+          "form": "kommst"
+        },
+        {
+          "person": "er_sie_es",
+          "form": "kommt"
+        },
+        {
+          "person": "Sie_formal",
+          "form": "kommen"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:verb-lernen-infinitive",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "verb:lernen",
+      "field": "infinitive",
+      "value": "lernen",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:verb-lernen-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "verb:lernen",
+      "field": "meanings",
+      "value": [
+        {
+          "glossEn": "to learn"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:verb-lernen-present",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 10
+      },
+      "subjectId": "verb:lernen",
+      "field": "present",
+      "value": [
+        {
+          "person": "ich",
+          "form": "lerne"
+        },
+        {
+          "person": "du",
+          "form": "lernst"
+        },
+        {
+          "person": "er_sie_es",
+          "form": "lernt"
+        },
+        {
+          "person": "Sie_formal",
+          "form": "lernen"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-name-casual-q-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:name-casual-q",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Wie heißt du?"
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-name-casual-q-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:name-casual-q",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Wie heißt du?"
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-name-casual-a1-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:name-casual-a1",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich heiße …"
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-name-casual-a1-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:name-casual-a1",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich heiße …"
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-name-casual-a2-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:name-casual-a2",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Mein Name ist …"
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-name-casual-a2-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:name-casual-a2",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Mein Name ist …"
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:qa-name-casual-question",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "qa:name-casual",
+      "field": "questionPatternId",
+      "value": "phrase:name-casual-q",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:qa-name-casual-answers",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "qa:name-casual",
+      "field": "answerPatternIds",
+      "value": [
+        "phrase:name-casual-a1",
+        "phrase:name-casual-a2"
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-name-formal-q-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:name-formal-q",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Wie heißen Sie?"
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-name-formal-q-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:name-formal-q",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Wie heißen Sie?"
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-name-formal-a1-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:name-formal-a1",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich heiße …"
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-name-formal-a1-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:name-formal-a1",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich heiße …"
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-name-formal-a2-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:name-formal-a2",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Mein Name ist …"
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-name-formal-a2-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:name-formal-a2",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Mein Name ist …"
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:qa-name-formal-question",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "qa:name-formal",
+      "field": "questionPatternId",
+      "value": "phrase:name-formal-q",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:qa-name-formal-answers",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "qa:name-formal",
+      "field": "answerPatternIds",
+      "value": [
+        "phrase:name-formal-a1",
+        "phrase:name-formal-a2"
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-identity-q-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:identity-q",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Wer ist das?"
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-identity-q-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:identity-q",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Wer ist das?"
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-identity-a1-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:identity-a1",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Das ist …"
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-identity-a1-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:identity-a1",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Das ist …"
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:qa-identity-question",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "qa:identity",
+      "field": "questionPatternId",
+      "value": "phrase:identity-q",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:qa-identity-answers",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "qa:identity",
+      "field": "answerPatternIds",
+      "value": [
+        "phrase:identity-a1"
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-origin-casual-q-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:origin-casual-q",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Woher kommst du?"
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-origin-casual-q-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:origin-casual-q",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Woher kommst du?"
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-origin-casual-a1-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:origin-casual-a1",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich komme aus …"
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-origin-casual-a1-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:origin-casual-a1",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich komme aus …"
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:qa-origin-casual-question",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "qa:origin-casual",
+      "field": "questionPatternId",
+      "value": "phrase:origin-casual-q",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:qa-origin-casual-answers",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "qa:origin-casual",
+      "field": "answerPatternIds",
+      "value": [
+        "phrase:origin-casual-a1"
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-origin-formal-q-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:origin-formal-q",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Woher kommen Sie?"
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-origin-formal-q-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:origin-formal-q",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Woher kommen Sie?"
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-origin-formal-a1-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:origin-formal-a1",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich komme aus …"
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-origin-formal-a1-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:origin-formal-a1",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich komme aus …"
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:qa-origin-formal-question",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "qa:origin-formal",
+      "field": "questionPatternId",
+      "value": "phrase:origin-formal-q",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:qa-origin-formal-answers",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "qa:origin-formal",
+      "field": "answerPatternIds",
+      "value": [
+        "phrase:origin-formal-a1"
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-wellbeing-casual-q-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:wellbeing-casual-q",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Wie geht’s dir?"
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-wellbeing-casual-q-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:wellbeing-casual-q",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Wie geht’s dir?"
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-wellbeing-casual-a1-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:wellbeing-casual-a1",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Super!"
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-wellbeing-casual-a1-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:wellbeing-casual-a1",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Super!"
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-wellbeing-casual-a2-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:wellbeing-casual-a2",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Sehr gut, danke."
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-wellbeing-casual-a2-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:wellbeing-casual-a2",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Sehr gut, danke."
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-wellbeing-casual-a3-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:wellbeing-casual-a3",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Gut, danke."
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-wellbeing-casual-a3-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:wellbeing-casual-a3",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Gut, danke."
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-wellbeing-casual-a4-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:wellbeing-casual-a4",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Es geht."
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-wellbeing-casual-a4-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:wellbeing-casual-a4",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Es geht."
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-wellbeing-casual-a5-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:wellbeing-casual-a5",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Nicht so gut."
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-wellbeing-casual-a5-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:wellbeing-casual-a5",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Nicht so gut."
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:qa-wellbeing-casual-question",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "qa:wellbeing-casual",
+      "field": "questionPatternId",
+      "value": "phrase:wellbeing-casual-q",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:qa-wellbeing-casual-answers",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "qa:wellbeing-casual",
+      "field": "answerPatternIds",
+      "value": [
+        "phrase:wellbeing-casual-a1",
+        "phrase:wellbeing-casual-a2",
+        "phrase:wellbeing-casual-a3",
+        "phrase:wellbeing-casual-a4",
+        "phrase:wellbeing-casual-a5"
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-wellbeing-formal-q-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:wellbeing-formal-q",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Wie geht’s Ihnen?"
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-wellbeing-formal-q-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:wellbeing-formal-q",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Wie geht’s Ihnen?"
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-wellbeing-formal-a1-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:wellbeing-formal-a1",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Sehr gut, danke."
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-wellbeing-formal-a1-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:wellbeing-formal-a1",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Sehr gut, danke."
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-wellbeing-formal-a2-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:wellbeing-formal-a2",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Gut, danke."
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-wellbeing-formal-a2-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:wellbeing-formal-a2",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Gut, danke."
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-wellbeing-formal-a3-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:wellbeing-formal-a3",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Es geht."
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-wellbeing-formal-a3-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:wellbeing-formal-a3",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Es geht."
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-wellbeing-formal-a4-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:wellbeing-formal-a4",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Nicht so gut."
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-wellbeing-formal-a4-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:wellbeing-formal-a4",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Nicht so gut."
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:qa-wellbeing-formal-question",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "qa:wellbeing-formal",
+      "field": "questionPatternId",
+      "value": "phrase:wellbeing-formal-q",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:qa-wellbeing-formal-answers",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "qa:wellbeing-formal",
+      "field": "answerPatternIds",
+      "value": [
+        "phrase:wellbeing-formal-a1",
+        "phrase:wellbeing-formal-a2",
+        "phrase:wellbeing-formal-a3",
+        "phrase:wellbeing-formal-a4"
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    }
+  ],
+  "mediaAssets": [],
+  "lessons": [
+    {
+      "kind": "Lesson",
+      "id": "lesson:01",
+      "number": 1,
+      "titleDe": "Ich heiße Miriam.",
+      "titleEn": "Greetings and introductions",
+      "cefr": "A1",
+      "communicativeGoals": [
+        "greet and say goodbye",
+        "ask and answer names",
+        "spell a name",
+        "ask and say origin",
+        "ask and answer wellbeing",
+        "choose du or formal Sie"
+      ],
+      "prerequisiteLessonIds": [],
+      "stages": [
+        {
+          "id": "overview",
+          "kind": "overview",
+          "titleEn": "Lesson overview",
+          "activityIds": [],
+          "estimatedMinutes": 2,
+          "skillTargets": [
+            "exposure"
+          ],
+          "required": true
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "titleEn": "Learn",
+          "activityIds": [
+            "activity:lesson-01-greetings-by-context",
+            "activity:lesson-01-greeting-farewell-match",
+            "activity:lesson-01-name-model-dialogue",
+            "activity:lesson-01-heissen-sein-notice",
+            "activity:lesson-01-wellbeing-scale",
+            "activity:lesson-01-origin-aus-contrast"
+          ],
+          "estimatedMinutes": 25,
+          "skillTargets": [
+            "exposure",
+            "recognition",
+            "listening"
+          ],
+          "required": true
+        },
+        {
+          "id": "listen",
+          "kind": "listen",
+          "titleEn": "Listening",
+          "activityIds": [
+            "activity:lesson-01-workbook-listening"
+          ],
+          "estimatedMinutes": 10,
+          "skillTargets": [
+            "listening"
+          ],
+          "required": true
+        },
+        {
+          "id": "practise",
+          "kind": "practise",
+          "titleEn": "Practise",
+          "activityIds": [
+            "activity:lesson-01-alphabet-listen-spell",
+            "activity:lesson-01-pronoun-verb-builder",
+            "activity:lesson-01-register-qa-builder",
+            "activity:lesson-01-guided-intro-recording"
+          ],
+          "estimatedMinutes": 20,
+          "skillTargets": [
+            "recall",
+            "production"
+          ],
+          "required": true
+        },
+        {
+          "id": "check",
+          "kind": "check",
+          "titleEn": "Checkpoint",
+          "activityIds": [
+            "activity:lesson-01-checkpoint-summary"
+          ],
+          "estimatedMinutes": 8,
+          "skillTargets": [
+            "recall",
+            "production"
+          ],
+          "required": true
+        }
+      ],
+      "collections": [],
+      "sourceAssertionIds": [
+        "assert:lesson-01-title-de",
+        "assert:lesson-01-goals"
+      ],
+      "relationIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "titleDe",
+            "assertionId": "assert:lesson-01-title-de"
+          },
+          {
+            "field": "communicativeGoals",
+            "assertionId": "assert:lesson-01-goals"
+          }
+        ]
+      }
+    }
+  ],
+  "lexemes": [
+    {
+      "kind": "Lexeme",
+      "id": "lex:hallo",
+      "lemma": "Hallo",
+      "partOfSpeech": "interjection",
+      "meanings": [
+        {
+          "id": "meaning:hallo-en",
+          "glossEn": "Hello"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:hallo-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-hallo-lemma",
+        "assert:lex-hallo-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-hallo-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-hallo-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:guten-tag",
+      "lemma": "Guten Tag",
+      "partOfSpeech": "interjection",
+      "meanings": [
+        {
+          "id": "meaning:guten-tag-en",
+          "glossEn": "Good day / Hello"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:guten-tag-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-guten-tag-lemma",
+        "assert:lex-guten-tag-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-guten-tag-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-guten-tag-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:guten-morgen",
+      "lemma": "Guten Morgen",
+      "partOfSpeech": "interjection",
+      "meanings": [
+        {
+          "id": "meaning:guten-morgen-en",
+          "glossEn": "Good morning"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:guten-morgen-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-guten-morgen-lemma",
+        "assert:lex-guten-morgen-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-guten-morgen-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-guten-morgen-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:guten-abend",
+      "lemma": "Guten Abend",
+      "partOfSpeech": "interjection",
+      "meanings": [
+        {
+          "id": "meaning:guten-abend-en",
+          "glossEn": "Good evening"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:guten-abend-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-guten-abend-lemma",
+        "assert:lex-guten-abend-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-guten-abend-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-guten-abend-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:gute-nacht",
+      "lemma": "Gute Nacht",
+      "partOfSpeech": "interjection",
+      "meanings": [
+        {
+          "id": "meaning:gute-nacht-en",
+          "glossEn": "Good night"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:gute-nacht-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-gute-nacht-lemma",
+        "assert:lex-gute-nacht-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-gute-nacht-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-gute-nacht-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:tschues",
+      "lemma": "Tschüs",
+      "partOfSpeech": "interjection",
+      "meanings": [
+        {
+          "id": "meaning:tschues-en",
+          "glossEn": "Bye"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:tschues-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-tschues-lemma",
+        "assert:lex-tschues-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-tschues-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-tschues-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:auf-wiedersehen",
+      "lemma": "Auf Wiedersehen",
+      "partOfSpeech": "interjection",
+      "meanings": [
+        {
+          "id": "meaning:auf-wiedersehen-en",
+          "glossEn": "Goodbye"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:auf-wiedersehen-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-auf-wiedersehen-lemma",
+        "assert:lex-auf-wiedersehen-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-auf-wiedersehen-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-auf-wiedersehen-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:super",
+      "lemma": "Super!",
+      "partOfSpeech": "phrase",
+      "meanings": [
+        {
+          "id": "meaning:super-en",
+          "glossEn": "Great!"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:super-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-super-lemma",
+        "assert:lex-super-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-super-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-super-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:sehr-gut-danke",
+      "lemma": "Sehr gut, danke.",
+      "partOfSpeech": "phrase",
+      "meanings": [
+        {
+          "id": "meaning:sehr-gut-danke-en",
+          "glossEn": "Very well, thank you."
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:sehr-gut-danke-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-sehr-gut-danke-lemma",
+        "assert:lex-sehr-gut-danke-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-sehr-gut-danke-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-sehr-gut-danke-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:gut-danke",
+      "lemma": "Gut, danke.",
+      "partOfSpeech": "phrase",
+      "meanings": [
+        {
+          "id": "meaning:gut-danke-en",
+          "glossEn": "Fine, thank you."
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:gut-danke-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-gut-danke-lemma",
+        "assert:lex-gut-danke-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-gut-danke-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-gut-danke-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:es-geht",
+      "lemma": "Es geht.",
+      "partOfSpeech": "phrase",
+      "meanings": [
+        {
+          "id": "meaning:es-geht-en",
+          "glossEn": "Not too bad."
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:es-geht-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-es-geht-lemma",
+        "assert:lex-es-geht-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-es-geht-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-es-geht-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:nicht-so-gut",
+      "lemma": "Nicht so gut.",
+      "partOfSpeech": "phrase",
+      "meanings": [
+        {
+          "id": "meaning:nicht-so-gut-en",
+          "glossEn": "Not so well."
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:nicht-so-gut-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-nicht-so-gut-lemma",
+        "assert:lex-nicht-so-gut-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-nicht-so-gut-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-nicht-so-gut-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:auch-super",
+      "lemma": "Auch super.",
+      "partOfSpeech": "phrase",
+      "meanings": [
+        {
+          "id": "meaning:auch-super-en",
+          "glossEn": "Great as well."
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:auch-super-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-auch-super-lemma",
+        "assert:lex-auch-super-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-auch-super-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-auch-super-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:deutschland",
+      "lemma": "Deutschland",
+      "partOfSpeech": "proper-noun",
+      "meanings": [
+        {
+          "id": "meaning:deutschland-en",
+          "glossEn": "Germany"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:deutschland-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-deutschland-lemma",
+        "assert:lex-deutschland-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-deutschland-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-deutschland-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:eritrea",
+      "lemma": "Eritrea",
+      "partOfSpeech": "proper-noun",
+      "meanings": [
+        {
+          "id": "meaning:eritrea-en",
+          "glossEn": "Eritrea"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:eritrea-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-eritrea-lemma",
+        "assert:lex-eritrea-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-eritrea-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-eritrea-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:oesterreich",
+      "lemma": "Österreich",
+      "partOfSpeech": "proper-noun",
+      "meanings": [
+        {
+          "id": "meaning:oesterreich-en",
+          "glossEn": "Austria"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:oesterreich-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-oesterreich-lemma",
+        "assert:lex-oesterreich-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-oesterreich-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-oesterreich-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:spanien",
+      "lemma": "Spanien",
+      "partOfSpeech": "proper-noun",
+      "meanings": [
+        {
+          "id": "meaning:spanien-en",
+          "glossEn": "Spain"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:spanien-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-spanien-lemma",
+        "assert:lex-spanien-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-spanien-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-spanien-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:frankreich",
+      "lemma": "Frankreich",
+      "partOfSpeech": "proper-noun",
+      "meanings": [
+        {
+          "id": "meaning:frankreich-en",
+          "glossEn": "France"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:frankreich-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-frankreich-lemma",
+        "assert:lex-frankreich-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-frankreich-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-frankreich-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:schweiz",
+      "lemma": "Schweiz",
+      "partOfSpeech": "noun",
+      "meanings": [
+        {
+          "id": "meaning:schweiz-en",
+          "glossEn": "Switzerland"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:schweiz-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-schweiz-lemma",
+        "assert:lex-schweiz-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-schweiz-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-schweiz-meanings"
+          }
+        ]
+      },
+      "noun": {
+        "gender": "feminine",
+        "article": "die",
+        "singular": "Schweiz",
+        "plurals": []
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:tuerkei",
+      "lemma": "Türkei",
+      "partOfSpeech": "noun",
+      "meanings": [
+        {
+          "id": "meaning:tuerkei-en",
+          "glossEn": "Turkey"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:tuerkei-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-tuerkei-lemma",
+        "assert:lex-tuerkei-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-tuerkei-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-tuerkei-meanings"
+          }
+        ]
+      },
+      "noun": {
+        "gender": "feminine",
+        "article": "die",
+        "singular": "Türkei",
+        "plurals": []
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:usa",
+      "lemma": "USA",
+      "partOfSpeech": "noun",
+      "meanings": [
+        {
+          "id": "meaning:usa-en",
+          "glossEn": "USA"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:usa-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-usa-lemma",
+        "assert:lex-usa-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-usa-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-usa-meanings"
+          }
+        ]
+      },
+      "noun": {
+        "gender": "feminine",
+        "article": "die",
+        "singular": "USA",
+        "plurals": []
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:name",
+      "lemma": "Name",
+      "partOfSpeech": "noun",
+      "meanings": [
+        {
+          "id": "meaning:name-en",
+          "glossEn": "name"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:name-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-name-lemma",
+        "assert:lex-name-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-name-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-name-meanings"
+          }
+        ]
+      },
+      "noun": {
+        "gender": "masculine",
+        "article": "der",
+        "singular": "Name",
+        "plurals": [
+          {
+            "form": "Namen",
+            "patternIds": []
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:vorname",
+      "lemma": "Vorname",
+      "partOfSpeech": "noun",
+      "meanings": [
+        {
+          "id": "meaning:vorname-en",
+          "glossEn": "first name"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:vorname-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-vorname-lemma",
+        "assert:lex-vorname-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-vorname-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-vorname-meanings"
+          }
+        ]
+      },
+      "noun": {
+        "gender": "masculine",
+        "article": "der",
+        "singular": "Vorname",
+        "plurals": [
+          {
+            "form": "Vornamen",
+            "patternIds": []
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:familienname",
+      "lemma": "Familienname",
+      "partOfSpeech": "noun",
+      "meanings": [
+        {
+          "id": "meaning:familienname-en",
+          "glossEn": "last name"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:familienname-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-familienname-lemma",
+        "assert:lex-familienname-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-familienname-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-familienname-meanings"
+          }
+        ]
+      },
+      "noun": {
+        "gender": "masculine",
+        "article": "der",
+        "singular": "Familienname",
+        "plurals": [
+          {
+            "form": "Familiennamen",
+            "patternIds": []
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:herr",
+      "lemma": "Herr",
+      "partOfSpeech": "noun",
+      "meanings": [
+        {
+          "id": "meaning:herr-en",
+          "glossEn": "Mr / gentleman"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:herr-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-herr-lemma",
+        "assert:lex-herr-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-herr-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-herr-meanings"
+          }
+        ]
+      },
+      "noun": {
+        "gender": "masculine",
+        "article": "der",
+        "singular": "Herr",
+        "plurals": [
+          {
+            "form": "Herren",
+            "patternIds": []
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:frau",
+      "lemma": "Frau",
+      "partOfSpeech": "noun",
+      "meanings": [
+        {
+          "id": "meaning:frau-en",
+          "glossEn": "Ms / Mrs / woman"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:frau-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-frau-lemma",
+        "assert:lex-frau-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-frau-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-frau-meanings"
+          }
+        ]
+      },
+      "noun": {
+        "gender": "feminine",
+        "article": "die",
+        "singular": "Frau",
+        "plurals": [
+          {
+            "form": "Frauen",
+            "patternIds": []
+          }
+        ]
+      }
+    }
+  ],
+  "verbs": [
+    {
+      "kind": "Verb",
+      "id": "verb:sein",
+      "infinitive": "sein",
+      "meanings": [
+        {
+          "glossEn": "to be"
+        }
+      ],
+      "present": [
+        {
+          "person": "ich",
+          "form": "bin"
+        },
+        {
+          "person": "du",
+          "form": "bist"
+        },
+        {
+          "person": "er_sie_es",
+          "form": "ist"
+        },
+        {
+          "person": "wir",
+          "form": "sind"
+        },
+        {
+          "person": "ihr",
+          "form": "seid"
+        },
+        {
+          "person": "sie_plural",
+          "form": "sind"
+        },
+        {
+          "person": "Sie_formal",
+          "form": "sind"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "grammarIds": [],
+      "relationIds": [
+        "rel:sein-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:verb-sein-infinitive",
+        "assert:verb-sein-meanings",
+        "assert:verb-sein-present"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "infinitive",
+            "assertionId": "assert:verb-sein-infinitive"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:verb-sein-meanings"
+          },
+          {
+            "field": "present",
+            "assertionId": "assert:verb-sein-present"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Verb",
+      "id": "verb:heissen",
+      "infinitive": "heißen",
+      "meanings": [
+        {
+          "glossEn": "to be called"
+        }
+      ],
+      "present": [
+        {
+          "person": "ich",
+          "form": "heiße"
+        },
+        {
+          "person": "du",
+          "form": "heißt"
+        },
+        {
+          "person": "er_sie_es",
+          "form": "heißt"
+        },
+        {
+          "person": "Sie_formal",
+          "form": "heißen"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "grammarIds": [],
+      "relationIds": [
+        "rel:heissen-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:verb-heissen-infinitive",
+        "assert:verb-heissen-meanings",
+        "assert:verb-heissen-present"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "infinitive",
+            "assertionId": "assert:verb-heissen-infinitive"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:verb-heissen-meanings"
+          },
+          {
+            "field": "present",
+            "assertionId": "assert:verb-heissen-present"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Verb",
+      "id": "verb:kommen",
+      "infinitive": "kommen",
+      "meanings": [
+        {
+          "glossEn": "to come"
+        }
+      ],
+      "present": [
+        {
+          "person": "ich",
+          "form": "komme"
+        },
+        {
+          "person": "du",
+          "form": "kommst"
+        },
+        {
+          "person": "er_sie_es",
+          "form": "kommt"
+        },
+        {
+          "person": "Sie_formal",
+          "form": "kommen"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "grammarIds": [],
+      "relationIds": [
+        "rel:kommen-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:verb-kommen-infinitive",
+        "assert:verb-kommen-meanings",
+        "assert:verb-kommen-present"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "infinitive",
+            "assertionId": "assert:verb-kommen-infinitive"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:verb-kommen-meanings"
+          },
+          {
+            "field": "present",
+            "assertionId": "assert:verb-kommen-present"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Verb",
+      "id": "verb:lernen",
+      "infinitive": "lernen",
+      "meanings": [
+        {
+          "glossEn": "to learn"
+        }
+      ],
+      "present": [
+        {
+          "person": "ich",
+          "form": "lerne"
+        },
+        {
+          "person": "du",
+          "form": "lernst"
+        },
+        {
+          "person": "er_sie_es",
+          "form": "lernt"
+        },
+        {
+          "person": "Sie_formal",
+          "form": "lernen"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "grammarIds": [],
+      "relationIds": [
+        "rel:lernen-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:verb-lernen-infinitive",
+        "assert:verb-lernen-meanings",
+        "assert:verb-lernen-present"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "infinitive",
+            "assertionId": "assert:verb-lernen-infinitive"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:verb-lernen-meanings"
+          },
+          {
+            "field": "present",
+            "assertionId": "assert:verb-lernen-present"
+          }
+        ]
+      }
+    }
+  ],
+  "grammarConcepts": [],
+  "phrasePatterns": [
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:name-casual-q",
+      "intent": "qa:name-casual",
+      "register": "informal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Wie heißt du?"
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Wie heißt du?"
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-name-casual-q-fixed",
+        "assert:phrase-name-casual-q-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-name-casual-q-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-name-casual-q-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:name-casual-a1",
+      "intent": "qa:name-casual-answer",
+      "register": "informal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich heiße …"
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich heiße …"
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-name-casual-a1-fixed",
+        "assert:phrase-name-casual-a1-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-name-casual-a1-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-name-casual-a1-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:name-casual-a2",
+      "intent": "qa:name-casual-answer",
+      "register": "informal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Mein Name ist …"
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Mein Name ist …"
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-name-casual-a2-fixed",
+        "assert:phrase-name-casual-a2-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-name-casual-a2-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-name-casual-a2-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:name-formal-q",
+      "intent": "qa:name-formal",
+      "register": "formal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Wie heißen Sie?"
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Wie heißen Sie?"
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-name-formal-q-fixed",
+        "assert:phrase-name-formal-q-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-name-formal-q-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-name-formal-q-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:name-formal-a1",
+      "intent": "qa:name-formal-answer",
+      "register": "formal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich heiße …"
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich heiße …"
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-name-formal-a1-fixed",
+        "assert:phrase-name-formal-a1-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-name-formal-a1-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-name-formal-a1-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:name-formal-a2",
+      "intent": "qa:name-formal-answer",
+      "register": "formal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Mein Name ist …"
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Mein Name ist …"
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-name-formal-a2-fixed",
+        "assert:phrase-name-formal-a2-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-name-formal-a2-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-name-formal-a2-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:identity-q",
+      "intent": "qa:identity",
+      "register": "neutral",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Wer ist das?"
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Wer ist das?"
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-identity-q-fixed",
+        "assert:phrase-identity-q-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-identity-q-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-identity-q-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:identity-a1",
+      "intent": "qa:identity-answer",
+      "register": "neutral",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Das ist …"
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Das ist …"
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-identity-a1-fixed",
+        "assert:phrase-identity-a1-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-identity-a1-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-identity-a1-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:origin-casual-q",
+      "intent": "qa:origin-casual",
+      "register": "informal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Woher kommst du?"
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Woher kommst du?"
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-origin-casual-q-fixed",
+        "assert:phrase-origin-casual-q-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-origin-casual-q-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-origin-casual-q-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:origin-casual-a1",
+      "intent": "qa:origin-casual-answer",
+      "register": "informal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich komme aus …"
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich komme aus …"
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-origin-casual-a1-fixed",
+        "assert:phrase-origin-casual-a1-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-origin-casual-a1-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-origin-casual-a1-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:origin-formal-q",
+      "intent": "qa:origin-formal",
+      "register": "formal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Woher kommen Sie?"
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Woher kommen Sie?"
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-origin-formal-q-fixed",
+        "assert:phrase-origin-formal-q-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-origin-formal-q-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-origin-formal-q-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:origin-formal-a1",
+      "intent": "qa:origin-formal-answer",
+      "register": "formal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich komme aus …"
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich komme aus …"
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-origin-formal-a1-fixed",
+        "assert:phrase-origin-formal-a1-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-origin-formal-a1-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-origin-formal-a1-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:wellbeing-casual-q",
+      "intent": "qa:wellbeing-casual",
+      "register": "informal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Wie geht’s dir?"
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Wie geht’s dir?"
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-wellbeing-casual-q-fixed",
+        "assert:phrase-wellbeing-casual-q-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-wellbeing-casual-q-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-wellbeing-casual-q-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:wellbeing-casual-a1",
+      "intent": "qa:wellbeing-casual-answer",
+      "register": "informal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Super!"
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Super!"
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-wellbeing-casual-a1-fixed",
+        "assert:phrase-wellbeing-casual-a1-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-wellbeing-casual-a1-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-wellbeing-casual-a1-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:wellbeing-casual-a2",
+      "intent": "qa:wellbeing-casual-answer",
+      "register": "informal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Sehr gut, danke."
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Sehr gut, danke."
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-wellbeing-casual-a2-fixed",
+        "assert:phrase-wellbeing-casual-a2-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-wellbeing-casual-a2-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-wellbeing-casual-a2-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:wellbeing-casual-a3",
+      "intent": "qa:wellbeing-casual-answer",
+      "register": "informal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Gut, danke."
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Gut, danke."
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-wellbeing-casual-a3-fixed",
+        "assert:phrase-wellbeing-casual-a3-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-wellbeing-casual-a3-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-wellbeing-casual-a3-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:wellbeing-casual-a4",
+      "intent": "qa:wellbeing-casual-answer",
+      "register": "informal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Es geht."
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Es geht."
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-wellbeing-casual-a4-fixed",
+        "assert:phrase-wellbeing-casual-a4-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-wellbeing-casual-a4-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-wellbeing-casual-a4-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:wellbeing-casual-a5",
+      "intent": "qa:wellbeing-casual-answer",
+      "register": "informal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Nicht so gut."
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Nicht so gut."
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-wellbeing-casual-a5-fixed",
+        "assert:phrase-wellbeing-casual-a5-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-wellbeing-casual-a5-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-wellbeing-casual-a5-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:wellbeing-formal-q",
+      "intent": "qa:wellbeing-formal",
+      "register": "formal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Wie geht’s Ihnen?"
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Wie geht’s Ihnen?"
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-wellbeing-formal-q-fixed",
+        "assert:phrase-wellbeing-formal-q-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-wellbeing-formal-q-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-wellbeing-formal-q-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:wellbeing-formal-a1",
+      "intent": "qa:wellbeing-formal-answer",
+      "register": "formal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Sehr gut, danke."
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Sehr gut, danke."
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-wellbeing-formal-a1-fixed",
+        "assert:phrase-wellbeing-formal-a1-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-wellbeing-formal-a1-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-wellbeing-formal-a1-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:wellbeing-formal-a2",
+      "intent": "qa:wellbeing-formal-answer",
+      "register": "formal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Gut, danke."
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Gut, danke."
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-wellbeing-formal-a2-fixed",
+        "assert:phrase-wellbeing-formal-a2-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-wellbeing-formal-a2-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-wellbeing-formal-a2-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:wellbeing-formal-a3",
+      "intent": "qa:wellbeing-formal-answer",
+      "register": "formal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Es geht."
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Es geht."
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-wellbeing-formal-a3-fixed",
+        "assert:phrase-wellbeing-formal-a3-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-wellbeing-formal-a3-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-wellbeing-formal-a3-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:wellbeing-formal-a4",
+      "intent": "qa:wellbeing-formal-answer",
+      "register": "formal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Nicht so gut."
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Nicht so gut."
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-wellbeing-formal-a4-fixed",
+        "assert:phrase-wellbeing-formal-a4-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-wellbeing-formal-a4-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-wellbeing-formal-a4-accepted"
+          }
+        ]
+      }
+    }
+  ],
+  "qaPairs": [
+    {
+      "kind": "QAPair",
+      "id": "qa:name-casual",
+      "intent": "qa:name-casual",
+      "register": "informal",
+      "questionPatternId": "phrase:name-casual-q",
+      "answerPatternIds": [
+        "phrase:name-casual-a1",
+        "phrase:name-casual-a2"
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [
+        "rel:name-casual-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:qa-name-casual-question",
+        "assert:qa-name-casual-answers"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "questionPatternId",
+            "assertionId": "assert:qa-name-casual-question"
+          },
+          {
+            "field": "answerPatternIds",
+            "assertionId": "assert:qa-name-casual-answers"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "QAPair",
+      "id": "qa:name-formal",
+      "intent": "qa:name-formal",
+      "register": "formal",
+      "questionPatternId": "phrase:name-formal-q",
+      "answerPatternIds": [
+        "phrase:name-formal-a1",
+        "phrase:name-formal-a2"
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [
+        "rel:name-formal-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:qa-name-formal-question",
+        "assert:qa-name-formal-answers"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "questionPatternId",
+            "assertionId": "assert:qa-name-formal-question"
+          },
+          {
+            "field": "answerPatternIds",
+            "assertionId": "assert:qa-name-formal-answers"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "QAPair",
+      "id": "qa:identity",
+      "intent": "qa:identity",
+      "register": "neutral",
+      "questionPatternId": "phrase:identity-q",
+      "answerPatternIds": [
+        "phrase:identity-a1"
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [
+        "rel:identity-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:qa-identity-question",
+        "assert:qa-identity-answers"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "questionPatternId",
+            "assertionId": "assert:qa-identity-question"
+          },
+          {
+            "field": "answerPatternIds",
+            "assertionId": "assert:qa-identity-answers"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "QAPair",
+      "id": "qa:origin-casual",
+      "intent": "qa:origin-casual",
+      "register": "informal",
+      "questionPatternId": "phrase:origin-casual-q",
+      "answerPatternIds": [
+        "phrase:origin-casual-a1"
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [
+        "rel:origin-casual-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:qa-origin-casual-question",
+        "assert:qa-origin-casual-answers"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "questionPatternId",
+            "assertionId": "assert:qa-origin-casual-question"
+          },
+          {
+            "field": "answerPatternIds",
+            "assertionId": "assert:qa-origin-casual-answers"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "QAPair",
+      "id": "qa:origin-formal",
+      "intent": "qa:origin-formal",
+      "register": "formal",
+      "questionPatternId": "phrase:origin-formal-q",
+      "answerPatternIds": [
+        "phrase:origin-formal-a1"
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [
+        "rel:origin-formal-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:qa-origin-formal-question",
+        "assert:qa-origin-formal-answers"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "questionPatternId",
+            "assertionId": "assert:qa-origin-formal-question"
+          },
+          {
+            "field": "answerPatternIds",
+            "assertionId": "assert:qa-origin-formal-answers"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "QAPair",
+      "id": "qa:wellbeing-casual",
+      "intent": "qa:wellbeing-casual",
+      "register": "informal",
+      "questionPatternId": "phrase:wellbeing-casual-q",
+      "answerPatternIds": [
+        "phrase:wellbeing-casual-a1",
+        "phrase:wellbeing-casual-a2",
+        "phrase:wellbeing-casual-a3",
+        "phrase:wellbeing-casual-a4",
+        "phrase:wellbeing-casual-a5"
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [
+        "rel:wellbeing-casual-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:qa-wellbeing-casual-question",
+        "assert:qa-wellbeing-casual-answers"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "questionPatternId",
+            "assertionId": "assert:qa-wellbeing-casual-question"
+          },
+          {
+            "field": "answerPatternIds",
+            "assertionId": "assert:qa-wellbeing-casual-answers"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "QAPair",
+      "id": "qa:wellbeing-formal",
+      "intent": "qa:wellbeing-formal",
+      "register": "formal",
+      "questionPatternId": "phrase:wellbeing-formal-q",
+      "answerPatternIds": [
+        "phrase:wellbeing-formal-a1",
+        "phrase:wellbeing-formal-a2",
+        "phrase:wellbeing-formal-a3",
+        "phrase:wellbeing-formal-a4"
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [
+        "rel:wellbeing-formal-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:qa-wellbeing-formal-question",
+        "assert:qa-wellbeing-formal-answers"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "questionPatternId",
+            "assertionId": "assert:qa-wellbeing-formal-question"
+          },
+          {
+            "field": "answerPatternIds",
+            "assertionId": "assert:qa-wellbeing-formal-answers"
+          }
+        ]
+      }
+    }
+  ],
+  "dialogues": [],
+  "listeningAssets": [],
+  "collections": [],
+  "learningActivities": [],
+  "examples": [],
+  "relationships": [
+    {
+      "kind": "Relationship",
+      "id": "rel:hallo-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "lex:hallo",
+      "toId": "lesson:01",
+      "order": 1
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:guten-tag-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "lex:guten-tag",
+      "toId": "lesson:01",
+      "order": 2
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:guten-morgen-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "lex:guten-morgen",
+      "toId": "lesson:01",
+      "order": 3
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:guten-abend-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "lex:guten-abend",
+      "toId": "lesson:01",
+      "order": 4
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:gute-nacht-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "lex:gute-nacht",
+      "toId": "lesson:01",
+      "order": 5
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:tschues-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "lex:tschues",
+      "toId": "lesson:01",
+      "order": 6
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:auf-wiedersehen-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "lex:auf-wiedersehen",
+      "toId": "lesson:01",
+      "order": 7
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:super-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "lex:super",
+      "toId": "lesson:01",
+      "order": 8
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:sehr-gut-danke-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "lex:sehr-gut-danke",
+      "toId": "lesson:01",
+      "order": 9
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:gut-danke-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "lex:gut-danke",
+      "toId": "lesson:01",
+      "order": 10
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:es-geht-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "lex:es-geht",
+      "toId": "lesson:01",
+      "order": 11
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:nicht-so-gut-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "lex:nicht-so-gut",
+      "toId": "lesson:01",
+      "order": 12
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:auch-super-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "lex:auch-super",
+      "toId": "lesson:01",
+      "order": 13
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:deutschland-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "lex:deutschland",
+      "toId": "lesson:01",
+      "order": 14
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:eritrea-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "lex:eritrea",
+      "toId": "lesson:01",
+      "order": 15
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:oesterreich-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "lex:oesterreich",
+      "toId": "lesson:01",
+      "order": 16
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:spanien-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "lex:spanien",
+      "toId": "lesson:01",
+      "order": 17
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:frankreich-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "lex:frankreich",
+      "toId": "lesson:01",
+      "order": 18
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:schweiz-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "lex:schweiz",
+      "toId": "lesson:01",
+      "order": 19
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:tuerkei-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "lex:tuerkei",
+      "toId": "lesson:01",
+      "order": 20
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:usa-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "lex:usa",
+      "toId": "lesson:01",
+      "order": 21
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:name-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "lex:name",
+      "toId": "lesson:01",
+      "order": 22
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:vorname-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "lex:vorname",
+      "toId": "lesson:01",
+      "order": 23
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:familienname-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "lex:familienname",
+      "toId": "lesson:01",
+      "order": 24
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:herr-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "lex:herr",
+      "toId": "lesson:01",
+      "order": 25
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:frau-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "lex:frau",
+      "toId": "lesson:01",
+      "order": 26
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:sein-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "verb:sein",
+      "toId": "lesson:01"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:heissen-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "verb:heissen",
+      "toId": "lesson:01"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:kommen-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "verb:kommen",
+      "toId": "lesson:01"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:lernen-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "verb:lernen",
+      "toId": "lesson:01"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:name-casual-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "qa:name-casual",
+      "toId": "lesson:01"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:name-formal-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "qa:name-formal",
+      "toId": "lesson:01"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:identity-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "qa:identity",
+      "toId": "lesson:01"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:origin-casual-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "qa:origin-casual",
+      "toId": "lesson:01"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:origin-formal-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "qa:origin-formal",
+      "toId": "lesson:01"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:wellbeing-casual-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "qa:wellbeing-casual",
+      "toId": "lesson:01"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:wellbeing-formal-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "qa:wellbeing-formal",
+      "toId": "lesson:01"
+    }
+  ],
+  "contentGaps": [
+    {
+      "kind": "ContentGap",
+      "id": "gap:audio-hallo",
+      "objectId": "lex:hallo",
+      "field": "pronunciation.audioId",
+      "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
+      "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:audio-guten-tag",
+      "objectId": "lex:guten-tag",
+      "field": "pronunciation.audioId",
+      "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
+      "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:audio-guten-morgen",
+      "objectId": "lex:guten-morgen",
+      "field": "pronunciation.audioId",
+      "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
+      "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:audio-guten-abend",
+      "objectId": "lex:guten-abend",
+      "field": "pronunciation.audioId",
+      "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
+      "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:audio-gute-nacht",
+      "objectId": "lex:gute-nacht",
+      "field": "pronunciation.audioId",
+      "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
+      "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:audio-tschues",
+      "objectId": "lex:tschues",
+      "field": "pronunciation.audioId",
+      "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
+      "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:audio-auf-wiedersehen",
+      "objectId": "lex:auf-wiedersehen",
+      "field": "pronunciation.audioId",
+      "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
+      "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:audio-super",
+      "objectId": "lex:super",
+      "field": "pronunciation.audioId",
+      "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
+      "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:audio-sehr-gut-danke",
+      "objectId": "lex:sehr-gut-danke",
+      "field": "pronunciation.audioId",
+      "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
+      "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:audio-gut-danke",
+      "objectId": "lex:gut-danke",
+      "field": "pronunciation.audioId",
+      "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
+      "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:audio-es-geht",
+      "objectId": "lex:es-geht",
+      "field": "pronunciation.audioId",
+      "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
+      "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:audio-nicht-so-gut",
+      "objectId": "lex:nicht-so-gut",
+      "field": "pronunciation.audioId",
+      "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
+      "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:audio-auch-super",
+      "objectId": "lex:auch-super",
+      "field": "pronunciation.audioId",
+      "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
+      "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:audio-deutschland",
+      "objectId": "lex:deutschland",
+      "field": "pronunciation.audioId",
+      "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
+      "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:audio-eritrea",
+      "objectId": "lex:eritrea",
+      "field": "pronunciation.audioId",
+      "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
+      "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:audio-oesterreich",
+      "objectId": "lex:oesterreich",
+      "field": "pronunciation.audioId",
+      "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
+      "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:audio-spanien",
+      "objectId": "lex:spanien",
+      "field": "pronunciation.audioId",
+      "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
+      "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:audio-frankreich",
+      "objectId": "lex:frankreich",
+      "field": "pronunciation.audioId",
+      "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
+      "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:audio-schweiz",
+      "objectId": "lex:schweiz",
+      "field": "pronunciation.audioId",
+      "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
+      "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:audio-tuerkei",
+      "objectId": "lex:tuerkei",
+      "field": "pronunciation.audioId",
+      "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
+      "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:audio-usa",
+      "objectId": "lex:usa",
+      "field": "pronunciation.audioId",
+      "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
+      "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:audio-name",
+      "objectId": "lex:name",
+      "field": "pronunciation.audioId",
+      "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
+      "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:audio-vorname",
+      "objectId": "lex:vorname",
+      "field": "pronunciation.audioId",
+      "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
+      "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:audio-familienname",
+      "objectId": "lex:familienname",
+      "field": "pronunciation.audioId",
+      "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
+      "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:audio-herr",
+      "objectId": "lex:herr",
+      "field": "pronunciation.audioId",
+      "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
+      "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:audio-frau",
+      "objectId": "lex:frau",
+      "field": "pronunciation.audioId",
+      "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
+      "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:grammar-l1-word-order",
+      "objectId": "lesson:01",
+      "field": "grammarConcepts",
+      "reason": "Lesson 1 grammar topics listed in docs/11 are not structured in alpha-content.json; awaiting source-grounded rule encoding",
+      "owner": "codex-content",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:alphabet-l1",
+      "objectId": "lesson:01",
+      "field": "lexemes.alphabet",
+      "reason": "A–Z/Ä/Ö/Ü/ß alphabet inventory is required by docs/11 but absent from alpha-content.json",
+      "owner": "codex-content",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:pronouns-l1",
+      "objectId": "lesson:01",
+      "field": "lexemes.pronouns",
+      "reason": "Pronouns ich/du/er/sie/Sie required by docs/11 but absent as typed entries in alpha-content.json",
+      "owner": "codex-content",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:dialogue-l1-models",
+      "objectId": "lesson:01",
+      "field": "dialogues",
+      "reason": "Model dialogues are not present as typed evidence in alpha-content.json",
+      "owner": "codex-content",
+      "blocksPublication": false
+    }
+  ]
+}

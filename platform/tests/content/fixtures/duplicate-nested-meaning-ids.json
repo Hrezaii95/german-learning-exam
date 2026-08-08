@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0.0",
+  "meta": { "label": "C0R1 duplicate nested meaning IDs", "generatedFor": "fixture" },
+  "sources": [
+    {
+      "kind": "Source",
+      "id": "source:fixture-schema",
+      "title": "C0 schema fixture source",
+      "sourceKind": "fixture",
+      "language": "de",
+      "priority": 1,
+      "cefrBand": "A1.1"
+    }
+  ],
+  "sourceAssertions": [],
+  "mediaAssets": [],
+  "lessons": [],
+  "lexemes": [
+    {
+      "kind": "Lexeme",
+      "id": "lex:fixture-a",
+      "lemma": "fixturea",
+      "partOfSpeech": "noun",
+      "meanings": [{ "id": "meaning:shared-dup", "glossEn": "[fixture-gloss-a]" }],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": { "status": "draft", "publishedFields": [] }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:fixture-b",
+      "lemma": "fixtureb",
+      "partOfSpeech": "noun",
+      "meanings": [{ "id": "meaning:shared-dup", "glossEn": "[fixture-gloss-b]" }],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": { "status": "draft", "publishedFields": [] }
+    }
+  ],
+  "verbs": [],
+  "grammarConcepts": [],
+  "phrasePatterns": [],
+  "qaPairs": [],
+  "dialogues": [],
+  "listeningAssets": [],
+  "collections": [],
+  "learningActivities": [],
+  "relationships": [],
+  "contentGaps": []
+}

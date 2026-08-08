@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0.0",
+  "meta": { "label": "C0R1 null publication on Dialogue", "generatedFor": "fixture" },
+  "sources": [
+    {
+      "kind": "Source",
+      "id": "source:fixture-schema",
+      "title": "C0 schema fixture source",
+      "sourceKind": "fixture",
+      "language": "de",
+      "priority": 1,
+      "cefrBand": "A1.1"
+    }
+  ],
+  "sourceAssertions": [],
+  "mediaAssets": [],
+  "lessons": [],
+  "lexemes": [],
+  "verbs": [],
+  "grammarConcepts": [],
+  "phrasePatterns": [],
+  "qaPairs": [],
+  "dialogues": [
+    {
+      "kind": "Dialogue",
+      "id": "dialogue:fixture-null-pub",
+      "titleEn": "Fixture dialogue",
+      "turns": [
+        {
+          "id": "t1",
+          "speaker": "A",
+          "textDe": { "tokens": [{ "type": "plain", "text": "Hallo" }] },
+          "linkedConceptIds": []
+        }
+      ],
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "mediaIds": [],
+      "publication": null
+    }
+  ],
+  "listeningAssets": [],
+  "collections": [],
+  "learningActivities": [],
+  "relationships": [],
+  "contentGaps": []
+}

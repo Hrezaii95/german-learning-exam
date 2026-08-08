@@ -1,0 +1,1097 @@
+{
+  "activities": [
+    {
+      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-alphabet-listen-spell",
+      "evidence": {
+        "interactionReady": false,
+        "promptPublished": true,
+        "publicationStatus": "published"
+      },
+      "id": "activity:lesson-01-alphabet-listen-spell",
+      "lessonId": "lesson:01",
+      "lessonNumber": 1,
+      "lessonRouteSegment": "01",
+      "mode": "hear",
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "text": "Alphabet listen-and-spell",
+              "type": "plain"
+            }
+          ]
+        }
+      },
+      "promptPlainText": "Alphabet listen-and-spell",
+      "renderer": "activity.hear",
+      "skillDimensions": [
+        "listening"
+      ],
+      "stageId": "practise",
+      "stageTitleEn": "Practise"
+    },
+    {
+      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-checkpoint-summary",
+      "evidence": {
+        "interactionReady": false,
+        "promptPublished": true,
+        "publicationStatus": "published"
+      },
+      "id": "activity:lesson-01-checkpoint-summary",
+      "lessonId": "lesson:01",
+      "lessonNumber": 1,
+      "lessonRouteSegment": "01",
+      "mode": "check",
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "text": "Mixed checkpoint and two-minute summary",
+              "type": "plain"
+            }
+          ]
+        }
+      },
+      "promptPlainText": "Mixed checkpoint and two-minute summary",
+      "renderer": "activity.check",
+      "skillDimensions": [
+        "recall",
+        "production"
+      ],
+      "stageId": "check",
+      "stageTitleEn": "Checkpoint"
+    },
+    {
+      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-greeting-farewell-match",
+      "evidence": {
+        "interactionReady": false,
+        "promptPublished": true,
+        "publicationStatus": "published"
+      },
+      "id": "activity:lesson-01-greeting-farewell-match",
+      "lessonId": "lesson:01",
+      "lessonNumber": 1,
+      "lessonRouteSegment": "01",
+      "mode": "hear",
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "text": "Greeting/farewell picture/audio match",
+              "type": "plain"
+            }
+          ]
+        }
+      },
+      "promptPlainText": "Greeting/farewell picture/audio match",
+      "renderer": "activity.hear",
+      "skillDimensions": [
+        "listening"
+      ],
+      "stageId": "learn",
+      "stageTitleEn": "Learn"
+    },
+    {
+      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-greetings-by-context",
+      "evidence": {
+        "interactionReady": false,
+        "promptPublished": true,
+        "publicationStatus": "published"
+      },
+      "id": "activity:lesson-01-greetings-by-context",
+      "lessonId": "lesson:01",
+      "lessonNumber": 1,
+      "lessonRouteSegment": "01",
+      "mode": "see",
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "text": "Greetings by context visual + hotspot audio",
+              "type": "plain"
+            }
+          ]
+        }
+      },
+      "promptPlainText": "Greetings by context visual + hotspot audio",
+      "renderer": "activity.see",
+      "skillDimensions": [
+        "exposure",
+        "recognition"
+      ],
+      "stageId": "learn",
+      "stageTitleEn": "Learn"
+    },
+    {
+      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-guided-intro-recording",
+      "evidence": {
+        "interactionReady": false,
+        "promptPublished": true,
+        "publicationStatus": "published"
+      },
+      "id": "activity:lesson-01-guided-intro-recording",
+      "lessonId": "lesson:01",
+      "lessonNumber": 1,
+      "lessonRouteSegment": "01",
+      "mode": "use",
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "text": "Guided introduction conversation recording",
+              "type": "plain"
+            }
+          ]
+        }
+      },
+      "promptPlainText": "Guided introduction conversation recording",
+      "renderer": "activity.use",
+      "skillDimensions": [
+        "exposure",
+        "recognition"
+      ],
+      "stageId": "practise",
+      "stageTitleEn": "Practise"
+    },
+    {
+      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-heissen-sein-notice",
+      "evidence": {
+        "interactionReady": false,
+        "promptPublished": true,
+        "publicationStatus": "published"
+      },
+      "id": "activity:lesson-01-heissen-sein-notice",
+      "lessonId": "lesson:01",
+      "lessonNumber": 1,
+      "lessonRouteSegment": "01",
+      "mode": "notice",
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "text": "heißen vs sein notice card",
+              "type": "plain"
+            }
+          ]
+        }
+      },
+      "promptPlainText": "heißen vs sein notice card",
+      "renderer": "activity.notice",
+      "skillDimensions": [
+        "exposure",
+        "recognition"
+      ],
+      "stageId": "learn",
+      "stageTitleEn": "Learn"
+    },
+    {
+      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-name-model-dialogue",
+      "evidence": {
+        "interactionReady": false,
+        "promptPublished": true,
+        "publicationStatus": "published"
+      },
+      "id": "activity:lesson-01-name-model-dialogue",
+      "lessonId": "lesson:01",
+      "lessonNumber": 1,
+      "lessonRouteSegment": "01",
+      "mode": "notice",
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "text": "Name model dialogue",
+              "type": "plain"
+            }
+          ]
+        }
+      },
+      "promptPlainText": "Name model dialogue",
+      "renderer": "activity.notice",
+      "skillDimensions": [
+        "exposure",
+        "recognition"
+      ],
+      "stageId": "learn",
+      "stageTitleEn": "Learn"
+    },
+    {
+      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-origin-aus-contrast",
+      "evidence": {
+        "interactionReady": false,
+        "promptPublished": true,
+        "publicationStatus": "published"
+      },
+      "id": "activity:lesson-01-origin-aus-contrast",
+      "lessonId": "lesson:01",
+      "lessonNumber": 1,
+      "lessonRouteSegment": "01",
+      "mode": "notice",
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "text": "Origin map/cards and aus contrast",
+              "type": "plain"
+            }
+          ]
+        }
+      },
+      "promptPlainText": "Origin map/cards and aus contrast",
+      "renderer": "activity.notice",
+      "skillDimensions": [
+        "exposure",
+        "recognition"
+      ],
+      "stageId": "learn",
+      "stageTitleEn": "Learn"
+    },
+    {
+      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-pronoun-verb-builder",
+      "evidence": {
+        "interactionReady": false,
+        "promptPublished": true,
+        "publicationStatus": "published"
+      },
+      "id": "activity:lesson-01-pronoun-verb-builder",
+      "lessonId": "lesson:01",
+      "lessonNumber": 1,
+      "lessonRouteSegment": "01",
+      "mode": "recall",
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "text": "Pronoun-person map and singular verb builder",
+              "type": "plain"
+            }
+          ]
+        }
+      },
+      "promptPlainText": "Pronoun-person map and singular verb builder",
+      "renderer": "activity.recall",
+      "skillDimensions": [
+        "exposure",
+        "recognition"
+      ],
+      "stageId": "practise",
+      "stageTitleEn": "Practise"
+    },
+    {
+      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-register-qa-builder",
+      "evidence": {
+        "interactionReady": false,
+        "promptPublished": true,
+        "publicationStatus": "published"
+      },
+      "id": "activity:lesson-01-register-qa-builder",
+      "lessonId": "lesson:01",
+      "lessonNumber": 1,
+      "lessonRouteSegment": "01",
+      "mode": "use",
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "text": "Casual/formal Q&A builder",
+              "type": "plain"
+            }
+          ]
+        }
+      },
+      "promptPlainText": "Casual/formal Q&A builder",
+      "renderer": "activity.use",
+      "skillDimensions": [
+        "exposure",
+        "recognition"
+      ],
+      "stageId": "practise",
+      "stageTitleEn": "Practise"
+    },
+    {
+      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-wellbeing-scale",
+      "evidence": {
+        "interactionReady": false,
+        "promptPublished": true,
+        "publicationStatus": "published"
+      },
+      "id": "activity:lesson-01-wellbeing-scale",
+      "lessonId": "lesson:01",
+      "lessonNumber": 1,
+      "lessonRouteSegment": "01",
+      "mode": "hear",
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "text": "Wellbeing scale with phrase audio",
+              "type": "plain"
+            }
+          ]
+        }
+      },
+      "promptPlainText": "Wellbeing scale with phrase audio",
+      "renderer": "activity.hear",
+      "skillDimensions": [
+        "listening"
+      ],
+      "stageId": "learn",
+      "stageTitleEn": "Learn"
+    },
+    {
+      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-workbook-listening",
+      "evidence": {
+        "interactionReady": false,
+        "promptPublished": true,
+        "publicationStatus": "published"
+      },
+      "id": "activity:lesson-01-workbook-listening",
+      "lessonId": "lesson:01",
+      "lessonNumber": 1,
+      "lessonRouteSegment": "01",
+      "mode": "hear",
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "text": "Verified workbook listening for Exercises 3 and 9",
+              "type": "plain"
+            }
+          ]
+        }
+      },
+      "promptPlainText": "Verified workbook listening for Exercises 3 and 9",
+      "renderer": "activity.hear",
+      "skillDimensions": [
+        "listening"
+      ],
+      "stageId": "listen",
+      "stageTitleEn": "Listening"
+    },
+    {
+      "canonicalPath": "/lessons/02/activity/activity%3Alesson-02-checkpoint-summary",
+      "evidence": {
+        "interactionReady": false,
+        "promptPublished": true,
+        "publicationStatus": "published"
+      },
+      "id": "activity:lesson-02-checkpoint-summary",
+      "lessonId": "lesson:02",
+      "lessonNumber": 2,
+      "lessonRouteSegment": "02",
+      "mode": "check",
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "text": "Mixed checkpoint and two-minute summary",
+              "type": "plain"
+            }
+          ]
+        }
+      },
+      "promptPlainText": "Mixed checkpoint and two-minute summary",
+      "renderer": "activity.check",
+      "skillDimensions": [
+        "recall",
+        "production"
+      ],
+      "stageId": "check",
+      "stageTitleEn": "Checkpoint"
+    },
+    {
+      "canonicalPath": "/lessons/02/activity/activity%3Alesson-02-core-professions",
+      "evidence": {
+        "interactionReady": false,
+        "promptPublished": true,
+        "publicationStatus": "published"
+      },
+      "id": "activity:lesson-02-core-professions",
+      "lessonId": "lesson:02",
+      "lessonNumber": 2,
+      "lessonRouteSegment": "02",
+      "mode": "see",
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "text": "Core professions overview and individual cards",
+              "type": "plain"
+            }
+          ]
+        }
+      },
+      "promptPlainText": "Core professions overview and individual cards",
+      "renderer": "activity.see",
+      "skillDimensions": [
+        "exposure",
+        "recognition"
+      ],
+      "stageId": "learn",
+      "stageTitleEn": "Learn"
+    },
+    {
+      "canonicalPath": "/lessons/02/activity/activity%3Alesson-02-full-person-conjugation",
+      "evidence": {
+        "interactionReady": false,
+        "promptPublished": true,
+        "publicationStatus": "published"
+      },
+      "id": "activity:lesson-02-full-person-conjugation",
+      "lessonId": "lesson:02",
+      "lessonNumber": 2,
+      "lessonRouteSegment": "02",
+      "mode": "notice",
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "text": "Full-person conjugation notice/build activities",
+              "type": "plain"
+            }
+          ]
+        }
+      },
+      "promptPlainText": "Full-person conjugation notice/build activities",
+      "renderer": "activity.notice",
+      "skillDimensions": [
+        "exposure",
+        "recognition"
+      ],
+      "stageId": "learn",
+      "stageTitleEn": "Learn"
+    },
+    {
+      "canonicalPath": "/lessons/02/activity/activity%3Alesson-02-numbers-0-100",
+      "evidence": {
+        "interactionReady": false,
+        "promptPublished": true,
+        "publicationStatus": "published"
+      },
+      "id": "activity:lesson-02-numbers-0-100",
+      "lessonId": "lesson:02",
+      "lessonNumber": 2,
+      "lessonRouteSegment": "02",
+      "mode": "hear",
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "text": "Numbers 0–100 visual, build, type and telephone listening",
+              "type": "plain"
+            }
+          ]
+        }
+      },
+      "promptPlainText": "Numbers 0–100 visual, build, type and telephone listening",
+      "renderer": "activity.hear",
+      "skillDimensions": [
+        "listening"
+      ],
+      "stageId": "practise",
+      "stageTitleEn": "Practise"
+    },
+    {
+      "canonicalPath": "/lessons/02/activity/activity%3Alesson-02-person-form-morphology",
+      "evidence": {
+        "interactionReady": false,
+        "promptPublished": true,
+        "publicationStatus": "published"
+      },
+      "id": "activity:lesson-02-person-form-morphology",
+      "lessonId": "lesson:02",
+      "lessonNumber": 2,
+      "lessonRouteSegment": "02",
+      "mode": "notice",
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "text": "Person-form and plural morphology activities",
+              "type": "plain"
+            }
+          ]
+        }
+      },
+      "promptPlainText": "Person-form and plural morphology activities",
+      "renderer": "activity.notice",
+      "skillDimensions": [
+        "exposure",
+        "recognition"
+      ],
+      "stageId": "practise",
+      "stageTitleEn": "Practise"
+    },
+    {
+      "canonicalPath": "/lessons/02/activity/activity%3Alesson-02-personal-profile",
+      "evidence": {
+        "interactionReady": false,
+        "promptPublished": true,
+        "publicationStatus": "published"
+      },
+      "id": "activity:lesson-02-personal-profile",
+      "lessonId": "lesson:02",
+      "lessonNumber": 2,
+      "lessonRouteSegment": "02",
+      "mode": "see",
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "text": "Personal-profile visual and fillable model",
+              "type": "plain"
+            }
+          ]
+        }
+      },
+      "promptPlainText": "Personal-profile visual and fillable model",
+      "renderer": "activity.see",
+      "skillDimensions": [
+        "exposure",
+        "recognition"
+      ],
+      "stageId": "learn",
+      "stageTitleEn": "Learn"
+    },
+    {
+      "canonicalPath": "/lessons/02/activity/activity%3Alesson-02-profession-qa-builder",
+      "evidence": {
+        "interactionReady": false,
+        "promptPublished": true,
+        "publicationStatus": "published"
+      },
+      "id": "activity:lesson-02-profession-qa-builder",
+      "lessonId": "lesson:02",
+      "lessonNumber": 2,
+      "lessonRouteSegment": "02",
+      "mode": "use",
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "text": "Profession Q&A casual/formal builder and recording",
+              "type": "plain"
+            }
+          ]
+        }
+      },
+      "promptPlainText": "Profession Q&A casual/formal builder and recording",
+      "renderer": "activity.use",
+      "skillDimensions": [
+        "exposure",
+        "recognition"
+      ],
+      "stageId": "practise",
+      "stageTitleEn": "Practise"
+    },
+    {
+      "canonicalPath": "/lessons/02/activity/activity%3Alesson-02-profile-reading-writing",
+      "evidence": {
+        "interactionReady": false,
+        "promptPublished": true,
+        "publicationStatus": "published"
+      },
+      "id": "activity:lesson-02-profile-reading-writing",
+      "lessonId": "lesson:02",
+      "lessonNumber": 2,
+      "lessonRouteSegment": "02",
+      "mode": "recall",
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "text": "Profile reading/writing activity",
+              "type": "plain"
+            }
+          ]
+        }
+      },
+      "promptPlainText": "Profile reading/writing activity",
+      "renderer": "activity.recall",
+      "skillDimensions": [
+        "exposure",
+        "recognition"
+      ],
+      "stageId": "practise",
+      "stageTitleEn": "Practise"
+    },
+    {
+      "canonicalPath": "/lessons/02/activity/activity%3Alesson-02-relationship-status",
+      "evidence": {
+        "interactionReady": false,
+        "promptPublished": true,
+        "publicationStatus": "published"
+      },
+      "id": "activity:lesson-02-relationship-status",
+      "lessonId": "lesson:02",
+      "lessonNumber": 2,
+      "lessonRouteSegment": "02",
+      "mode": "see",
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "text": "Relationship/status visual and nicht contrasts",
+              "type": "plain"
+            }
+          ]
+        }
+      },
+      "promptPlainText": "Relationship/status visual and nicht contrasts",
+      "renderer": "activity.see",
+      "skillDimensions": [
+        "exposure",
+        "recognition"
+      ],
+      "stageId": "learn",
+      "stageTitleEn": "Learn"
+    },
+    {
+      "canonicalPath": "/lessons/02/activity/activity%3Alesson-02-sein-arbeiten-contrast",
+      "evidence": {
+        "interactionReady": false,
+        "promptPublished": true,
+        "publicationStatus": "published"
+      },
+      "id": "activity:lesson-02-sein-arbeiten-contrast",
+      "lessonId": "lesson:02",
+      "lessonNumber": 2,
+      "lessonRouteSegment": "02",
+      "mode": "notice",
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "text": "sein profession vs arbeiten als/bei contrast",
+              "type": "plain"
+            }
+          ]
+        }
+      },
+      "promptPlainText": "sein profession vs arbeiten als/bei contrast",
+      "renderer": "activity.notice",
+      "skillDimensions": [
+        "exposure",
+        "recognition"
+      ],
+      "stageId": "learn",
+      "stageTitleEn": "Learn"
+    },
+    {
+      "canonicalPath": "/lessons/02/activity/activity%3Alesson-02-workbook-listening",
+      "evidence": {
+        "interactionReady": false,
+        "promptPublished": true,
+        "publicationStatus": "published"
+      },
+      "id": "activity:lesson-02-workbook-listening",
+      "lessonId": "lesson:02",
+      "lessonNumber": 2,
+      "lessonRouteSegment": "02",
+      "mode": "hear",
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "text": "Verified workbook number and word-stress listening (Exercises 6 and 12)",
+              "type": "plain"
+            }
+          ]
+        }
+      },
+      "promptPlainText": "Verified workbook number and word-stress listening (Exercises 6 and 12)",
+      "renderer": "activity.hear",
+      "skillDimensions": [
+        "listening"
+      ],
+      "stageId": "listen",
+      "stageTitleEn": "Listening"
+    }
+  ],
+  "activityCount": 23,
+  "lessonCount": 2,
+  "lessons": [
+    {
+      "activityCount": 12,
+      "canonicalPath": "/lessons/01",
+      "communicativeGoals": [
+        "greet and say goodbye",
+        "ask and answer names",
+        "spell a name",
+        "ask and say origin",
+        "ask and answer wellbeing",
+        "choose du or formal Sie"
+      ],
+      "estimatedMinutesTotal": 65,
+      "id": "lesson:01",
+      "number": 1,
+      "routeSegment": "01",
+      "stages": [
+        {
+          "activityIds": [],
+          "estimatedMinutes": 2,
+          "id": "overview",
+          "kind": "overview",
+          "required": true,
+          "skillTargets": [
+            "exposure"
+          ],
+          "titleEn": "Lesson overview"
+        },
+        {
+          "activityIds": [
+            "activity:lesson-01-greetings-by-context",
+            "activity:lesson-01-greeting-farewell-match",
+            "activity:lesson-01-name-model-dialogue",
+            "activity:lesson-01-heissen-sein-notice",
+            "activity:lesson-01-wellbeing-scale",
+            "activity:lesson-01-origin-aus-contrast"
+          ],
+          "estimatedMinutes": 25,
+          "id": "learn",
+          "kind": "learn",
+          "required": true,
+          "skillTargets": [
+            "exposure",
+            "recognition",
+            "listening"
+          ],
+          "titleEn": "Learn"
+        },
+        {
+          "activityIds": [
+            "activity:lesson-01-workbook-listening"
+          ],
+          "estimatedMinutes": 10,
+          "id": "listen",
+          "kind": "listen",
+          "required": true,
+          "skillTargets": [
+            "listening"
+          ],
+          "titleEn": "Listening"
+        },
+        {
+          "activityIds": [
+            "activity:lesson-01-alphabet-listen-spell",
+            "activity:lesson-01-pronoun-verb-builder",
+            "activity:lesson-01-register-qa-builder",
+            "activity:lesson-01-guided-intro-recording"
+          ],
+          "estimatedMinutes": 20,
+          "id": "practise",
+          "kind": "practise",
+          "required": true,
+          "skillTargets": [
+            "recall",
+            "production"
+          ],
+          "titleEn": "Practise"
+        },
+        {
+          "activityIds": [
+            "activity:lesson-01-checkpoint-summary"
+          ],
+          "estimatedMinutes": 8,
+          "id": "check",
+          "kind": "check",
+          "required": true,
+          "skillTargets": [
+            "recall",
+            "production"
+          ],
+          "titleEn": "Checkpoint"
+        }
+      ],
+      "titleDe": "Ich heiße Miriam.",
+      "titleEn": "Greetings and introductions"
+    },
+    {
+      "activityCount": 11,
+      "canonicalPath": "/lessons/02",
+      "communicativeGoals": [
+        "give a personal profile",
+        "understand and say numbers 0–100",
+        "talk about relationship and children",
+        "ask and answer about work",
+        "use full present-tense person forms",
+        "form profession person forms"
+      ],
+      "estimatedMinutesTotal": 67,
+      "id": "lesson:02",
+      "number": 2,
+      "routeSegment": "02",
+      "stages": [
+        {
+          "activityIds": [],
+          "estimatedMinutes": 2,
+          "id": "overview",
+          "kind": "overview",
+          "required": true,
+          "skillTargets": [
+            "exposure"
+          ],
+          "titleEn": "Lesson overview"
+        },
+        {
+          "activityIds": [
+            "activity:lesson-02-personal-profile",
+            "activity:lesson-02-full-person-conjugation",
+            "activity:lesson-02-relationship-status",
+            "activity:lesson-02-core-professions",
+            "activity:lesson-02-sein-arbeiten-contrast"
+          ],
+          "estimatedMinutes": 25,
+          "id": "learn",
+          "kind": "learn",
+          "required": true,
+          "skillTargets": [
+            "exposure",
+            "recognition"
+          ],
+          "titleEn": "Learn"
+        },
+        {
+          "activityIds": [
+            "activity:lesson-02-workbook-listening"
+          ],
+          "estimatedMinutes": 10,
+          "id": "listen",
+          "kind": "listen",
+          "required": true,
+          "skillTargets": [
+            "listening"
+          ],
+          "titleEn": "Listening"
+        },
+        {
+          "activityIds": [
+            "activity:lesson-02-numbers-0-100",
+            "activity:lesson-02-person-form-morphology",
+            "activity:lesson-02-profession-qa-builder",
+            "activity:lesson-02-profile-reading-writing"
+          ],
+          "estimatedMinutes": 22,
+          "id": "practise",
+          "kind": "practise",
+          "required": true,
+          "skillTargets": [
+            "recall",
+            "production"
+          ],
+          "titleEn": "Practise"
+        },
+        {
+          "activityIds": [
+            "activity:lesson-02-checkpoint-summary"
+          ],
+          "estimatedMinutes": 8,
+          "id": "check",
+          "kind": "check",
+          "required": true,
+          "skillTargets": [
+            "recall",
+            "production"
+          ],
+          "titleEn": "Checkpoint"
+        }
+      ],
+      "titleDe": "Was macht ihr beruflich?",
+      "titleEn": "Personal details and professions"
+    }
+  ],
+  "ownershipByActivityId": {
+    "activity:lesson-01-alphabet-listen-spell": {
+      "activityId": "activity:lesson-01-alphabet-listen-spell",
+      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-alphabet-listen-spell",
+      "lessonId": "lesson:01",
+      "lessonNumber": 1,
+      "lessonRouteSegment": "01",
+      "stageId": "practise"
+    },
+    "activity:lesson-01-checkpoint-summary": {
+      "activityId": "activity:lesson-01-checkpoint-summary",
+      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-checkpoint-summary",
+      "lessonId": "lesson:01",
+      "lessonNumber": 1,
+      "lessonRouteSegment": "01",
+      "stageId": "check"
+    },
+    "activity:lesson-01-greeting-farewell-match": {
+      "activityId": "activity:lesson-01-greeting-farewell-match",
+      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-greeting-farewell-match",
+      "lessonId": "lesson:01",
+      "lessonNumber": 1,
+      "lessonRouteSegment": "01",
+      "stageId": "learn"
+    },
+    "activity:lesson-01-greetings-by-context": {
+      "activityId": "activity:lesson-01-greetings-by-context",
+      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-greetings-by-context",
+      "lessonId": "lesson:01",
+      "lessonNumber": 1,
+      "lessonRouteSegment": "01",
+      "stageId": "learn"
+    },
+    "activity:lesson-01-guided-intro-recording": {
+      "activityId": "activity:lesson-01-guided-intro-recording",
+      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-guided-intro-recording",
+      "lessonId": "lesson:01",
+      "lessonNumber": 1,
+      "lessonRouteSegment": "01",
+      "stageId": "practise"
+    },
+    "activity:lesson-01-heissen-sein-notice": {
+      "activityId": "activity:lesson-01-heissen-sein-notice",
+      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-heissen-sein-notice",
+      "lessonId": "lesson:01",
+      "lessonNumber": 1,
+      "lessonRouteSegment": "01",
+      "stageId": "learn"
+    },
+    "activity:lesson-01-name-model-dialogue": {
+      "activityId": "activity:lesson-01-name-model-dialogue",
+      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-name-model-dialogue",
+      "lessonId": "lesson:01",
+      "lessonNumber": 1,
+      "lessonRouteSegment": "01",
+      "stageId": "learn"
+    },
+    "activity:lesson-01-origin-aus-contrast": {
+      "activityId": "activity:lesson-01-origin-aus-contrast",
+      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-origin-aus-contrast",
+      "lessonId": "lesson:01",
+      "lessonNumber": 1,
+      "lessonRouteSegment": "01",
+      "stageId": "learn"
+    },
+    "activity:lesson-01-pronoun-verb-builder": {
+      "activityId": "activity:lesson-01-pronoun-verb-builder",
+      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-pronoun-verb-builder",
+      "lessonId": "lesson:01",
+      "lessonNumber": 1,
+      "lessonRouteSegment": "01",
+      "stageId": "practise"
+    },
+    "activity:lesson-01-register-qa-builder": {
+      "activityId": "activity:lesson-01-register-qa-builder",
+      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-register-qa-builder",
+      "lessonId": "lesson:01",
+      "lessonNumber": 1,
+      "lessonRouteSegment": "01",
+      "stageId": "practise"
+    },
+    "activity:lesson-01-wellbeing-scale": {
+      "activityId": "activity:lesson-01-wellbeing-scale",
+      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-wellbeing-scale",
+      "lessonId": "lesson:01",
+      "lessonNumber": 1,
+      "lessonRouteSegment": "01",
+      "stageId": "learn"
+    },
+    "activity:lesson-01-workbook-listening": {
+      "activityId": "activity:lesson-01-workbook-listening",
+      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-workbook-listening",
+      "lessonId": "lesson:01",
+      "lessonNumber": 1,
+      "lessonRouteSegment": "01",
+      "stageId": "listen"
+    },
+    "activity:lesson-02-checkpoint-summary": {
+      "activityId": "activity:lesson-02-checkpoint-summary",
+      "canonicalPath": "/lessons/02/activity/activity%3Alesson-02-checkpoint-summary",
+      "lessonId": "lesson:02",
+      "lessonNumber": 2,
+      "lessonRouteSegment": "02",
+      "stageId": "check"
+    },
+    "activity:lesson-02-core-professions": {
+      "activityId": "activity:lesson-02-core-professions",
+      "canonicalPath": "/lessons/02/activity/activity%3Alesson-02-core-professions",
+      "lessonId": "lesson:02",
+      "lessonNumber": 2,
+      "lessonRouteSegment": "02",
+      "stageId": "learn"
+    },
+    "activity:lesson-02-full-person-conjugation": {
+      "activityId": "activity:lesson-02-full-person-conjugation",
+      "canonicalPath": "/lessons/02/activity/activity%3Alesson-02-full-person-conjugation",
+      "lessonId": "lesson:02",
+      "lessonNumber": 2,
+      "lessonRouteSegment": "02",
+      "stageId": "learn"
+    },
+    "activity:lesson-02-numbers-0-100": {
+      "activityId": "activity:lesson-02-numbers-0-100",
+      "canonicalPath": "/lessons/02/activity/activity%3Alesson-02-numbers-0-100",
+      "lessonId": "lesson:02",
+      "lessonNumber": 2,
+      "lessonRouteSegment": "02",
+      "stageId": "practise"
+    },
+    "activity:lesson-02-person-form-morphology": {
+      "activityId": "activity:lesson-02-person-form-morphology",
+      "canonicalPath": "/lessons/02/activity/activity%3Alesson-02-person-form-morphology",
+      "lessonId": "lesson:02",
+      "lessonNumber": 2,
+      "lessonRouteSegment": "02",
+      "stageId": "practise"
+    },
+    "activity:lesson-02-personal-profile": {
+      "activityId": "activity:lesson-02-personal-profile",
+      "canonicalPath": "/lessons/02/activity/activity%3Alesson-02-personal-profile",
+      "lessonId": "lesson:02",
+      "lessonNumber": 2,
+      "lessonRouteSegment": "02",
+      "stageId": "learn"
+    },
+    "activity:lesson-02-profession-qa-builder": {
+      "activityId": "activity:lesson-02-profession-qa-builder",
+      "canonicalPath": "/lessons/02/activity/activity%3Alesson-02-profession-qa-builder",
+      "lessonId": "lesson:02",
+      "lessonNumber": 2,
+      "lessonRouteSegment": "02",
+      "stageId": "practise"
+    },
+    "activity:lesson-02-profile-reading-writing": {
+      "activityId": "activity:lesson-02-profile-reading-writing",
+      "canonicalPath": "/lessons/02/activity/activity%3Alesson-02-profile-reading-writing",
+      "lessonId": "lesson:02",
+      "lessonNumber": 2,
+      "lessonRouteSegment": "02",
+      "stageId": "practise"
+    },
+    "activity:lesson-02-relationship-status": {
+      "activityId": "activity:lesson-02-relationship-status",
+      "canonicalPath": "/lessons/02/activity/activity%3Alesson-02-relationship-status",
+      "lessonId": "lesson:02",
+      "lessonNumber": 2,
+      "lessonRouteSegment": "02",
+      "stageId": "learn"
+    },
+    "activity:lesson-02-sein-arbeiten-contrast": {
+      "activityId": "activity:lesson-02-sein-arbeiten-contrast",
+      "canonicalPath": "/lessons/02/activity/activity%3Alesson-02-sein-arbeiten-contrast",
+      "lessonId": "lesson:02",
+      "lessonNumber": 2,
+      "lessonRouteSegment": "02",
+      "stageId": "learn"
+    },
+    "activity:lesson-02-workbook-listening": {
+      "activityId": "activity:lesson-02-workbook-listening",
+      "canonicalPath": "/lessons/02/activity/activity%3Alesson-02-workbook-listening",
+      "lessonId": "lesson:02",
+      "lessonNumber": 2,
+      "lessonRouteSegment": "02",
+      "stageId": "listen"
+    }
+  },
+  "projectionKind": "learner-web",
+  "schemaVersion": "1.0.0",
+  "zeroState": {
+    "continueActivityId": "activity:lesson-01-greetings-by-context",
+    "continueLessonId": "lesson:01",
+    "continueLessonTitleDe": "Ich heiße Miriam.",
+    "continuePath": "/lessons/01/activity/activity%3Alesson-01-greetings-by-context"
+  }
+}

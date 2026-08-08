@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "meta": { "label": "C0R1 invalid LearningActivity.mode", "generatedFor": "fixture" },
+  "sources": [],
+  "sourceAssertions": [],
+  "mediaAssets": [],
+  "lessons": [],
+  "lexemes": [],
+  "verbs": [],
+  "grammarConcepts": [],
+  "phrasePatterns": [],
+  "qaPairs": [],
+  "dialogues": [],
+  "listeningAssets": [],
+  "collections": [],
+  "learningActivities": [
+    {
+      "kind": "LearningActivity",
+      "id": "activity:bad-mode",
+      "mode": "memorize",
+      "renderer": "fixture.bad",
+      "conceptIds": [],
+      "prompt": {
+        "instruction": {
+          "tokens": [{ "type": "plain", "text": "Do something." }]
+        }
+      },
+      "skillDimensions": ["exposure"],
+      "completionRule": { "type": "viewed" },
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "publication": { "status": "draft", "publishedFields": [] }
+    }
+  ],
+  "relationships": [],
+  "contentGaps": []
+}

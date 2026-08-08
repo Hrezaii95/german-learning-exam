@@ -1,0 +1,778 @@
+{
+  "schemaVersion": "1.0.0",
+  "fragmentId": "activities",
+  "meta": {
+    "label": "C1A fixture activities",
+    "generatedFor": "fixture"
+  },
+  "learningActivities": [
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-01-greetings-by-context",
+      "lessonId": "lesson:01",
+      "mode": "see",
+      "renderer": "fixture.see",
+      "conceptIds": [
+        "lex:fixture-shared"
+      ],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Fixture activity prompt."
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "exposure"
+      ],
+      "completionRule": {
+        "type": "viewed"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "publication": {
+        "status": "draft",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-01-greeting-farewell-match",
+      "lessonId": "lesson:01",
+      "mode": "see",
+      "renderer": "fixture.see",
+      "conceptIds": [
+        "lex:fixture-shared"
+      ],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Fixture activity prompt."
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "exposure"
+      ],
+      "completionRule": {
+        "type": "viewed"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "publication": {
+        "status": "draft",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-01-name-model-dialogue",
+      "lessonId": "lesson:01",
+      "mode": "see",
+      "renderer": "fixture.see",
+      "conceptIds": [
+        "lex:fixture-shared"
+      ],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Fixture activity prompt."
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "exposure"
+      ],
+      "completionRule": {
+        "type": "viewed"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "publication": {
+        "status": "draft",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-01-alphabet-listen-spell",
+      "lessonId": "lesson:01",
+      "mode": "see",
+      "renderer": "fixture.see",
+      "conceptIds": [
+        "lex:fixture-shared"
+      ],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Fixture activity prompt."
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "exposure"
+      ],
+      "completionRule": {
+        "type": "viewed"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "publication": {
+        "status": "draft",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-01-heissen-sein-notice",
+      "lessonId": "lesson:01",
+      "mode": "see",
+      "renderer": "fixture.see",
+      "conceptIds": [
+        "lex:fixture-shared"
+      ],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Fixture activity prompt."
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "exposure"
+      ],
+      "completionRule": {
+        "type": "viewed"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "publication": {
+        "status": "draft",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-01-wellbeing-scale",
+      "lessonId": "lesson:01",
+      "mode": "see",
+      "renderer": "fixture.see",
+      "conceptIds": [
+        "lex:fixture-shared"
+      ],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Fixture activity prompt."
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "exposure"
+      ],
+      "completionRule": {
+        "type": "viewed"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "publication": {
+        "status": "draft",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-01-origin-aus-contrast",
+      "lessonId": "lesson:01",
+      "mode": "see",
+      "renderer": "fixture.see",
+      "conceptIds": [
+        "lex:fixture-shared"
+      ],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Fixture activity prompt."
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "exposure"
+      ],
+      "completionRule": {
+        "type": "viewed"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "publication": {
+        "status": "draft",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-01-pronoun-verb-builder",
+      "lessonId": "lesson:01",
+      "mode": "see",
+      "renderer": "fixture.see",
+      "conceptIds": [
+        "lex:fixture-shared"
+      ],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Fixture activity prompt."
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "exposure"
+      ],
+      "completionRule": {
+        "type": "viewed"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "publication": {
+        "status": "draft",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-01-register-qa-builder",
+      "lessonId": "lesson:01",
+      "mode": "see",
+      "renderer": "fixture.see",
+      "conceptIds": [
+        "lex:fixture-shared"
+      ],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Fixture activity prompt."
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "exposure"
+      ],
+      "completionRule": {
+        "type": "viewed"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "publication": {
+        "status": "draft",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-01-workbook-listening",
+      "lessonId": "lesson:01",
+      "mode": "see",
+      "renderer": "fixture.see",
+      "conceptIds": [
+        "lex:fixture-shared"
+      ],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Fixture activity prompt."
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "exposure"
+      ],
+      "completionRule": {
+        "type": "viewed"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "publication": {
+        "status": "draft",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-01-guided-intro-recording",
+      "lessonId": "lesson:01",
+      "mode": "see",
+      "renderer": "fixture.see",
+      "conceptIds": [
+        "lex:fixture-shared"
+      ],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Fixture activity prompt."
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "exposure"
+      ],
+      "completionRule": {
+        "type": "viewed"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "publication": {
+        "status": "draft",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-01-checkpoint-summary",
+      "lessonId": "lesson:01",
+      "mode": "see",
+      "renderer": "fixture.see",
+      "conceptIds": [
+        "lex:fixture-shared"
+      ],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Fixture activity prompt."
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "exposure"
+      ],
+      "completionRule": {
+        "type": "viewed"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "publication": {
+        "status": "draft",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-02-personal-profile",
+      "lessonId": "lesson:02",
+      "mode": "see",
+      "renderer": "fixture.see",
+      "conceptIds": [
+        "lex:fixture-shared"
+      ],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Fixture activity prompt."
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "exposure"
+      ],
+      "completionRule": {
+        "type": "viewed"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "publication": {
+        "status": "draft",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-02-full-person-conjugation",
+      "lessonId": "lesson:02",
+      "mode": "see",
+      "renderer": "fixture.see",
+      "conceptIds": [
+        "lex:fixture-shared"
+      ],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Fixture activity prompt."
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "exposure"
+      ],
+      "completionRule": {
+        "type": "viewed"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "publication": {
+        "status": "draft",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-02-numbers-0-100",
+      "lessonId": "lesson:02",
+      "mode": "see",
+      "renderer": "fixture.see",
+      "conceptIds": [
+        "lex:fixture-shared"
+      ],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Fixture activity prompt."
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "exposure"
+      ],
+      "completionRule": {
+        "type": "viewed"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "publication": {
+        "status": "draft",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-02-relationship-status",
+      "lessonId": "lesson:02",
+      "mode": "see",
+      "renderer": "fixture.see",
+      "conceptIds": [
+        "lex:fixture-shared"
+      ],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Fixture activity prompt."
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "exposure"
+      ],
+      "completionRule": {
+        "type": "viewed"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "publication": {
+        "status": "draft",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-02-core-professions",
+      "lessonId": "lesson:02",
+      "mode": "see",
+      "renderer": "fixture.see",
+      "conceptIds": [
+        "lex:fixture-shared"
+      ],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Fixture activity prompt."
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "exposure"
+      ],
+      "completionRule": {
+        "type": "viewed"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "publication": {
+        "status": "draft",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-02-person-form-morphology",
+      "lessonId": "lesson:02",
+      "mode": "see",
+      "renderer": "fixture.see",
+      "conceptIds": [
+        "lex:fixture-shared"
+      ],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Fixture activity prompt."
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "exposure"
+      ],
+      "completionRule": {
+        "type": "viewed"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "publication": {
+        "status": "draft",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-02-profession-qa-builder",
+      "lessonId": "lesson:02",
+      "mode": "see",
+      "renderer": "fixture.see",
+      "conceptIds": [
+        "lex:fixture-shared"
+      ],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Fixture activity prompt."
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "exposure"
+      ],
+      "completionRule": {
+        "type": "viewed"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "publication": {
+        "status": "draft",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-02-sein-arbeiten-contrast",
+      "lessonId": "lesson:02",
+      "mode": "see",
+      "renderer": "fixture.see",
+      "conceptIds": [
+        "lex:fixture-shared"
+      ],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Fixture activity prompt."
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "exposure"
+      ],
+      "completionRule": {
+        "type": "viewed"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "publication": {
+        "status": "draft",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-02-workbook-listening",
+      "lessonId": "lesson:02",
+      "mode": "see",
+      "renderer": "fixture.see",
+      "conceptIds": [
+        "lex:fixture-shared"
+      ],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Fixture activity prompt."
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "exposure"
+      ],
+      "completionRule": {
+        "type": "viewed"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "publication": {
+        "status": "draft",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-02-profile-reading-writing",
+      "lessonId": "lesson:02",
+      "mode": "see",
+      "renderer": "fixture.see",
+      "conceptIds": [
+        "lex:fixture-shared"
+      ],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Fixture activity prompt."
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "exposure"
+      ],
+      "completionRule": {
+        "type": "viewed"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "publication": {
+        "status": "draft",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-02-teacher-professions-deck",
+      "lessonId": "lesson:02",
+      "mode": "see",
+      "renderer": "fixture.see",
+      "conceptIds": [
+        "lex:fixture-shared"
+      ],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Fixture activity prompt."
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "exposure"
+      ],
+      "completionRule": {
+        "type": "viewed"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "publication": {
+        "status": "draft",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-02-checkpoint-summary",
+      "lessonId": "lesson:02",
+      "mode": "see",
+      "renderer": "fixture.see",
+      "conceptIds": [
+        "lex:fixture-shared"
+      ],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Fixture activity prompt."
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "exposure"
+      ],
+      "completionRule": {
+        "type": "viewed"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "publication": {
+        "status": "draft",
+        "publishedFields": []
+      }
+    }
+  ]
+}

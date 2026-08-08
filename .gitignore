@@ -1,19 +1,27 @@
-﻿# Local / IDE
-.cursor/
+# Local secrets and dependencies
 .env
 .env.*
-
-# Large media & course PDFs (not needed for exam.html TTS)
-*.pdf
-Audio-*/
-audio/
-*.zip
-
-# Images & misc
-*.png
-*.jpg
-Interactive-Course-Creation.json
-openspec/
-
-# Dependencies
 node_modules/
+
+# Private or licensed source material (catalogues remain tracked)
+resources/original/**/*.pdf
+resources/original/**/*.mp3
+resources/original/**/*.jpg
+resources/project-context/conversation/*.json
+resources/project-context/ui-reference/*.png
+
+# Isolated Cursor runtime state
+archive/cursor-demo-2026-07-30/.cursor/
+archive/cursor-demo-2026-07-30/audio/
+
+# Generated outputs for the clean rebuild
+derived/
+dist/
+coverage/
+.cache/
+__pycache__/
+*.py[cod]
+
+# Operating-system files
+.DS_Store
+Thumbs.db

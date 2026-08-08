@@ -1,0 +1,1000 @@
+{
+  "schemaVersion": "1.0.0",
+  "fragmentId": "teacher-professions",
+  "meta": {
+    "label": "C1A fixture teacher rows envelope",
+    "generatedFor": "fixture",
+    "teacherSourceRows": [
+      {
+        "sourceRow": 1,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 2,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 3,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 4,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 5,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 6,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 7,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 8,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 9,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 10,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 11,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 12,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 13,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 14,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 15,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 16,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 17,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 18,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 19,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 20,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 21,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 22,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 23,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 24,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 25,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 26,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 27,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 28,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 29,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 30,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 31,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 32,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 33,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 34,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 35,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 36,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 37,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 38,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 39,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 40,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 41,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 42,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 43,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 44,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 45,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 46,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 47,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 48,
+        "subjectId": "lex:fixture-shared"
+      }
+    ]
+  },
+  "sourceAssertions": [
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-01",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 1
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 1
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-02",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 2
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 2
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-03",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 3
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 3
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-04",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 4
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 4
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-05",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 5
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 5
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-06",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 6
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 6
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-07",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 7
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 7
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-08",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 8
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 8
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-09",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 9
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 9
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-10",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 10
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 10
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-11",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 11
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 11
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-12",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 12
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 12
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-13",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 13
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 13
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-14",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 14
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 14
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-15",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 15
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 15
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-16",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 16
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 16
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-17",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 17
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 17
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-18",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 18
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 18
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-19",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 19
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 19
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-20",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 20
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 20
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-21",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 21
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 21
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-22",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 22
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 22
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-23",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 23
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 23
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-24",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 24
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 24
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-25",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 25
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 25
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-26",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 26
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 26
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-27",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 27
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 27
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-28",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 28
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 28
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-29",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 29
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 29
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-30",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 30
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 30
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-31",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 31
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 31
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-32",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 32
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 32
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-33",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 33
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 33
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-34",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 34
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 34
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-35",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 35
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 35
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-36",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 36
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 36
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-37",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 37
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 37
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-38",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 38
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 38
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-39",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 39
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 39
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-40",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 40
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 40
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-41",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 41
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 41
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-42",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 42
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 42
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-43",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 43
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 43
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-44",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 44
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 44
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-45",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 45
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 45
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-46",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 46
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 46
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-47",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 47
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 47
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:fixture-teacher-row-48",
+      "sourceId": "source:c1a-fixture",
+      "location": {
+        "noteRow": 48
+      },
+      "subjectId": "lex:fixture-shared",
+      "field": "sourceRow",
+      "value": {
+        "sourceRow": 48
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    }
+  ],
+  "collections": [
+    {
+      "kind": "Collection",
+      "id": "collection:teacher-professions",
+      "titleEn": "Teacher professions fixture",
+      "membership": {
+        "mode": "static",
+        "memberIds": [
+          "lex:fixture-shared"
+        ]
+      },
+      "lessonLinks": [
+        {
+          "lessonId": "lesson:02",
+          "sourcePriority": 3,
+          "required": false
+        }
+      ],
+      "sourcePriority": 3,
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    }
+  ],
+  "lexemes": []
+}

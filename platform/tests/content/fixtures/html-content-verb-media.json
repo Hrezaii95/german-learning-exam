@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "1.0.0",
+  "meta": {
+    "label": "C0R2 HTML in Verb glossEn and MediaAsset spokenText",
+    "generatedFor": "fixture"
+  },
+  "sources": [
+    {
+      "kind": "Source",
+      "id": "source:fixture-schema",
+      "title": "C0 schema fixture source",
+      "sourceKind": "fixture",
+      "language": "de",
+      "priority": 1,
+      "cefrBand": "A1.1"
+    }
+  ],
+  "sourceAssertions": [],
+  "mediaAssets": [
+    {
+      "kind": "MediaAsset",
+      "id": "media:fixture-spoken-html",
+      "mediaKind": "audio",
+      "origin": "publisher",
+      "locale": "de-DE",
+      "variants": [{ "path": "fixture/spoken.mp3", "role": "master" }],
+      "spokenText": "Ich <strong>heiße</strong> Anna.",
+      "reviewStatus": "verified",
+      "linkedConceptIds": [],
+      "sourceAssertionIds": [],
+      "publication": { "status": "draft", "publishedFields": [] }
+    }
+  ],
+  "lessons": [],
+  "lexemes": [],
+  "verbs": [
+    {
+      "kind": "Verb",
+      "id": "verb:fixture-html-gloss",
+      "infinitive": "heißen",
+      "meanings": [{ "glossEn": "to be <b>called</b>" }],
+      "present": [{ "person": "ich", "form": "heiße" }],
+      "pronunciation": {},
+      "exampleIds": [],
+      "grammarIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": { "status": "draft", "publishedFields": [] }
+    }
+  ],
+  "grammarConcepts": [],
+  "phrasePatterns": [],
+  "qaPairs": [],
+  "dialogues": [],
+  "listeningAssets": [],
+  "collections": [],
+  "learningActivities": [],
+  "relationships": [],
+  "contentGaps": []
+}

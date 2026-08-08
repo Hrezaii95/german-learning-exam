@@ -1,0 +1,30 @@
+id,phase,item,artifact_path,gate_id,exit_criterion_count,depends_on,status
+P0-01,P0,Requirement-to-current-evidence matrix,docs/17-current-state-and-completion-matrix.md,G0,1,,completed
+P0-02,P0,Immutable source inventory with checksums,content/source-index/source-manifest.json,G0,1,,completed
+P0-03,P0,Session and later-decision coverage reconciliation,docs/00-session-decision-ledger.md,G0,1,P0-01,completed
+P0-04,P0,Requirement UX data and test traceability,docs/18-requirement-traceability.md,G0,49,P0-01,completed
+P1-01,P1,Typed canonical schema package,platform/packages/content,G1,1,P0-01|P0-02,completed
+P1-02,P1,Lesson 1 publication manifest,platform/content/published/lesson-01.json,G1,1,P1-01,completed
+P1-03,P1,Lesson 2 publication manifest,platform/content/published/lesson-02.json,G1,1,P1-01,completed
+P1-04,P1,Teacher professions source-row reconciliation,platform/content/published/teacher-professions.json,G1,48,P1-01,completed
+P1-05,P1,Required lesson activity records,platform/content/published/activities.json,G1,24,P1-02|P1-03,completed
+P1-06,P1,Workbook audio mapping records,platform/content/published/listening-assets.json,G1,15,P0-02,completed
+P2-01,P2,Content validators and scope firewall,platform/packages/content/src/validation,G2,1,P1-01,completed
+P2-02,P2,Typed indexes and search,platform/packages/content/src/indexes,G2,1,P1-02|P1-03|P1-04,completed
+P2-03,P2,Event and multidimensional mastery engine,platform/packages/learning/src/mastery,G2,1,P1-05,completed
+P2-04,P2,Review scheduler and mission generator,platform/packages/learning/src/review,G2,1,P2-03,completed
+P2-05,P2,Versioned export-import persistence,platform/packages/learning/src/persistence,G2,1,P2-03|P2-04,completed
+P3-01,P3,Stable lesson stage and activity routes,platform/apps/web,G3,24,P1-05|P2-01,completed
+P3-02,P3,Six canonical hubs,platform/apps/web,G3,6,P2-02|P2-03,pending
+P3-03,P3,Typed global search and back context,platform/apps/web,G3,1,P2-02,pending
+P4-01,P4,Required game modes,platform/apps/web,G4,7,P2-03|P3-02,pending
+P4-02,P4,Q&A conversation progression,platform/apps/web,G4,5,P1-02|P1-03|P3-01,pending
+P4-03,P4,Recorder lifecycle and failure states,platform/apps/web,G4,1,P3-01,pending
+P4-04,P4,Mixed mission tags notes XP and streaks,platform/apps/web,G4,1,P2-04|P3-02,pending
+P5-01,P5,Approved generated audio or explicit gaps,media/manifests/alpha-tts-manifest.json,G5,1,P1-02|P1-03|P1-04,pending
+P5-02,P5,Responsive original infographic families,media/generated/infographics,G5,6,P1-02|P1-03|P1-04,pending
+P5-03,P5,Audio and visual human QA evidence,research/media-qa,G5,2,P5-01|P5-02,pending
+P6-01,P6,Automated engineering and content gates,research/release-evidence,G6,1,P2-01|P4-04|P5-03,pending
+P6-02,P6,Responsive accessibility and production E2E,research/release-evidence,G6,4,P3-01|P3-02|P4-03,pending
+P6-03,P6,Requirement and register final diff,research/release-evidence/completion-audit.json,G6,0,P6-01|P6-02,pending
+P6-04,P6,Owner acceptance,plans/PLAN-BATON-full-alpha.md,G-OWNER,1,P6-03,pending

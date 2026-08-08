@@ -1,0 +1,36 @@
+/**
+ * @deprecated Import from `./gates.js` instead.
+ * Transitional re-exports so older import paths keep resolving.
+ */
+export {
+  assertActivityIdShape,
+  collectPublicSourceMp3Paths,
+  collectSlashLemmas,
+  collectPortablePathViolations,
+  collectTeacherSourceRowsFromAssertions as collectTeacherSourceRows,
+  collectActivityOwnershipMismatches,
+  computePublicationIntegrity,
+  deepCloneJson,
+  findUnresolvedTeacherSourceRows,
+  isForbiddenMp3PathString,
+  isNonPortableFilesystemPath,
+  isRightsGatedUri,
+  pathComponentEndsWithMp3,
+  requiredLessonActivityIds,
+  stripQueryAndFragment,
+  validatePublicationCountGates,
+  validatePublishedActivityCollectionContract,
+  withAttemptedPublicSourceMp3,
+  withContradictoryActivityOwnership,
+  withDuplicateCrossFragmentId,
+  withDuplicateTeacherRow,
+  withFabricatedTeacherRow,
+  withMissingActivity,
+  withMissingTeacherRow,
+  withNonPortablePath,
+  withPublishedActivityUnpublishedCollection,
+  withRightsGatedPublisherUri,
+  withLeakedMp3InSourceAssertionValue,
+  collectForbiddenEmbeddedMp3Paths,
+  type PublicationIntegrityCounts,
+} from "./gates.js";

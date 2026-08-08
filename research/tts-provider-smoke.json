@@ -1,0 +1,393 @@
+{
+  "schemaVersion": 1,
+  "report": "tts-provider-smoke",
+  "checkedAt": "2026-08-07T18:40:22Z",
+  "mode": {
+    "offline": false,
+    "generationChecksAllowed": false,
+    "generationCharacterCeiling": 40,
+    "networkTimeoutSeconds": 12.0
+  },
+  "policy": {
+    "approvedPrimary": "edge-tts",
+    "configuredPrimary": "edge-tts",
+    "fallbackOrder": [
+      "cartesia",
+      "openrouter",
+      "ttsforfree"
+    ],
+    "paidGenerationCallsMade": false,
+    "learnerPlayback": "pre-generated cached files served as static assets",
+    "credentialsInBrowser": false,
+    "publisherAudioTouched": false,
+    "rotation": {
+      "purpose": "resilience-only",
+      "quotaEvasionForbidden": true,
+      "statement": "A second provider may be used when the primary is unavailable or when Codex is comparing voice quality. Keys must not be cycled to obtain more free capacity than a provider grants to one account, and each provider's terms apply to its own key.",
+      "learnerPlayback": "cached static files only; no provider credential ever reaches the browser"
+    },
+    "productionStrategy": "For this three-user Alpha, every learner clip is generated once, reviewed, cached on disk and served as a static file. No provider key is ever used at learner run time."
+  },
+  "configuration": {
+    "files": [
+      {
+        "file": ".secrets.env",
+        "path": "E:\\claude-cursor\\central-home\\secrets\\.secrets.env",
+        "found": true,
+        "variablesWithValue": 100,
+        "variablesLeftBlank": 7,
+        "linesNotUnderstood": 6
+      },
+      {
+        "file": "german-learning-tts.env",
+        "path": "E:\\claude-cursor\\central-home\\secrets\\german-learning-tts.env",
+        "found": true,
+        "variablesWithValue": 4,
+        "variablesLeftBlank": 6,
+        "linesNotUnderstood": 0
+      }
+    ],
+    "variablesLeftBlank": [
+      "CARTESIA_API_KEY",
+      "CARTESIA_VOICE_ID",
+      "HYPERBROWSER_API_KEY_4",
+      "HYPERBROWSER_API_KEY_5",
+      "HYPERBROWSER_API_KEY_6",
+      "HYPERBROWSER_API_KEY_7",
+      "HYPERBROWSER_API_KEY_8",
+      "OPENROUTER_TTS_MODEL",
+      "OPENROUTER_TTS_VOICE",
+      "SKILLSMP_API_KEY",
+      "TTSFORFREE_API_KEY"
+    ],
+    "problems": [
+      {
+        "code": "malformed-line",
+        "severity": "info",
+        "location": ".secrets.env:70",
+        "message": "Line is not a NAME=value setting, so it was ignored. Nothing in this project depends on it."
+      },
+      {
+        "code": "malformed-line",
+        "severity": "info",
+        "location": ".secrets.env:190",
+        "message": "Line is not a NAME=value setting, so it was ignored. Nothing in this project depends on it."
+      },
+      {
+        "code": "malformed-line",
+        "severity": "info",
+        "location": ".secrets.env:192",
+        "message": "Line is not a NAME=value setting, so it was ignored. Nothing in this project depends on it."
+      },
+      {
+        "code": "malformed-line",
+        "severity": "info",
+        "location": ".secrets.env:193",
+        "message": "Line is not a NAME=value setting, so it was ignored. Nothing in this project depends on it."
+      },
+      {
+        "code": "malformed-line",
+        "severity": "info",
+        "location": ".secrets.env:195",
+        "message": "Line is not a NAME=value setting, so it was ignored. Nothing in this project depends on it."
+      },
+      {
+        "code": "malformed-line",
+        "severity": "info",
+        "location": ".secrets.env:201",
+        "message": "Line is not a NAME=value setting, so it was ignored. Nothing in this project depends on it."
+      }
+    ]
+  },
+  "primary": {
+    "provider": "edge-tts",
+    "status": "available"
+  },
+  "recommendedProvider": {
+    "provider": "edge-tts",
+    "reason": "Approved Alpha voice with reviewed cached clips. Learner playback uses those files, not a live call."
+  },
+  "overall": "ok",
+  "providers": [
+    {
+      "provider": "edge-tts",
+      "displayName": "edge-tts (Microsoft neural voices through an unofficial client)",
+      "role": "primary",
+      "enabled": true,
+      "requiresCredential": false,
+      "configured": true,
+      "liveGenerationAllowed": true,
+      "generationRequiresFlag": true,
+      "credentials": [],
+      "optionalSettings": {
+        "GERMAN_TTS_EDGE_VOICE": true,
+        "GERMAN_TTS_EDGE_RATE": true
+      },
+      "nextAction": "Nothing to do. Keep using the cached clips produced by this provider.",
+      "status": "available",
+      "checkedEndpoint": "local: python package edge_tts",
+      "httpStatusClass": "",
+      "errorCategory": "none",
+      "summary": "Package present and the approved German voice is offered.",
+      "metadata": {
+        "packageVersion": "7.2.7",
+        "commandLineToolFound": true,
+        "approvedVoice": "de-DE-KatjaNeural",
+        "voiceCatalogueChecked": true,
+        "germanVoiceCount": 6,
+        "approvedVoiceAvailable": true
+      }
+    },
+    {
+      "provider": "cartesia",
+      "displayName": "Cartesia (paid hosted speech API)",
+      "role": "comparison",
+      "enabled": true,
+      "requiresCredential": true,
+      "configured": false,
+      "liveGenerationAllowed": false,
+      "generationRequiresFlag": true,
+      "credentials": [
+        {
+          "variable": "CARTESIA_API_KEY",
+          "configured": false,
+          "source": "not-set",
+          "discovered": false
+        }
+      ],
+      "optionalSettings": {
+        "CARTESIA_VOICE_ID": false,
+        "CARTESIA_API_VERSION": false
+      },
+      "nextAction": "Optional. Alpha does not need this comparison provider.",
+      "status": "not_configured",
+      "checkedEndpoint": "not checked",
+      "httpStatusClass": "",
+      "errorCategory": "missing_credential",
+      "summary": "No key supplied, so nothing was contacted. To include this provider, put a value next to CARTESIA_API_KEY in german-learning-tts.env. Optional settings for this provider: CARTESIA_VOICE_ID, CARTESIA_API_VERSION.",
+      "metadata": {}
+    },
+    {
+      "provider": "openrouter",
+      "displayName": "OpenRouter (multi-model gateway, some free speech models)",
+      "role": "failover",
+      "enabled": true,
+      "requiresCredential": true,
+      "configured": true,
+      "liveGenerationAllowed": false,
+      "generationRequiresFlag": true,
+      "credentials": [
+        {
+          "variable": "OPENROUTER_API_KEY",
+          "configured": true,
+          "source": ".secrets.env",
+          "discovered": false,
+          "fingerprint": "fp:5202c8726329"
+        },
+        {
+          "variable": "OPENROUTER_API_KEY_<account-2>",
+          "configured": true,
+          "source": ".secrets.env",
+          "discovered": true,
+          "fingerprint": "fp:6ba13c9e0c64"
+        }
+      ],
+      "optionalSettings": {
+        "OPENROUTER_TTS_MODEL": false,
+        "OPENROUTER_TTS_VOICE": false
+      },
+      "nextAction": "Usable for a quality comparison or an outage, once Codex approves the voice.",
+      "status": "available",
+      "checkedEndpoint": "https://openrouter.ai/api/v1/key",
+      "httpStatusClass": "2xx",
+      "errorCategory": "none",
+      "summary": "The key was accepted by the account endpoint. 4 models can return audio, 2 of them free, but audio output alone does not mean a model reads German aloud well. 15 free models are text only and cannot be used for pronunciation at all.",
+      "metadata": {
+        "isFreeTier": false,
+        "isManagementKey": false,
+        "isProvisioningKey": false,
+        "spendLimitSet": false,
+        "spendLimitRemaining": null,
+        "limitResetPeriod": null,
+        "usageAllTime": 13.618333942,
+        "usageToday": 0,
+        "speechModelDiscovery": {
+          "status": "available",
+          "checkedEndpoint": "https://openrouter.ai/api/v1/models",
+          "httpStatusClass": "2xx",
+          "errorCategory": "none",
+          "summary": "4 models can return audio, 2 of them free, but audio output alone does not mean a model reads German aloud well. 15 free models are text only and cannot be used for pronunciation at all.",
+          "metadata": {
+            "catalogueSize": 400,
+            "audioOutputModelCount": 4,
+            "freeAudioOutputModelCount": 2,
+            "freeAudioOutputModels": [
+              "google/lyria-3-clip-preview",
+              "google/lyria-3-pro-preview"
+            ],
+            "audioOutputModelSample": [
+              "google/lyria-3-clip-preview",
+              "google/lyria-3-pro-preview",
+              "openai/gpt-audio",
+              "openai/gpt-audio-mini"
+            ],
+            "freeTextOnlyModelCount": 15,
+            "freeTextOnlyModelsCannotProduceSpeech": true,
+            "audioOutputIsNotProofOfGermanSpeech": "This list only says a model can return audio. Some of them generate music or general sound rather than read German text aloud. Whether a model is usable for A1 German pronunciation is a separate listening judgement that belongs to Codex."
+          }
+        },
+        "keysChecked": 2
+      },
+      "keyChecks": [
+        {
+          "status": "available",
+          "checkedEndpoint": "https://openrouter.ai/api/v1/key",
+          "httpStatusClass": "2xx",
+          "errorCategory": "none",
+          "summary": "The key was accepted by the account endpoint.",
+          "metadata": {
+            "isFreeTier": false,
+            "isManagementKey": false,
+            "isProvisioningKey": false,
+            "spendLimitSet": false,
+            "spendLimitRemaining": null,
+            "limitResetPeriod": null,
+            "usageAllTime": 13.618333942,
+            "usageToday": 0
+          },
+          "variable": "OPENROUTER_API_KEY"
+        },
+        {
+          "status": "unauthorized",
+          "checkedEndpoint": "https://openrouter.ai/api/v1/key",
+          "httpStatusClass": "4xx",
+          "errorCategory": "credential_rejected",
+          "summary": "The provider rejected the supplied key. Replace it with a current key.",
+          "metadata": {},
+          "variable": "OPENROUTER_API_KEY_<account-2>"
+        }
+      ]
+    },
+    {
+      "provider": "ttsforfree",
+      "displayName": "TTSForFree (free-tier speech service)",
+      "role": "comparison",
+      "enabled": true,
+      "requiresCredential": true,
+      "configured": false,
+      "liveGenerationAllowed": false,
+      "generationRequiresFlag": true,
+      "credentials": [
+        {
+          "variable": "TTSFORFREE_API_KEY",
+          "configured": false,
+          "source": "not-set",
+          "discovered": false
+        }
+      ],
+      "optionalSettings": {
+        "TTSFORFREE_API_BASE": false
+      },
+      "nextAction": "Optional. Alpha does not need this comparison provider.",
+      "status": "not_configured",
+      "checkedEndpoint": "not checked",
+      "httpStatusClass": "",
+      "errorCategory": "missing_credential",
+      "summary": "No key supplied, so nothing was contacted. To include this provider, put a value next to TTSFORFREE_API_KEY in german-learning-tts.env. Optional settings for this provider: TTSFORFREE_API_BASE.",
+      "metadata": {}
+    }
+  ],
+  "openrouterModelDiscovery": [
+    {
+      "provider": "openrouter",
+      "kind": "model_discovery",
+      "status": "available",
+      "checkedEndpoint": "https://openrouter.ai/api/v1/models",
+      "httpStatusClass": "2xx",
+      "errorCategory": "none",
+      "summary": "4 models can return audio, 2 of them free, but audio output alone does not mean a model reads German aloud well. 15 free models are text only and cannot be used for pronunciation at all.",
+      "metadata": {
+        "catalogueSize": 400,
+        "audioOutputModelCount": 4,
+        "freeAudioOutputModelCount": 2,
+        "freeAudioOutputModels": [
+          "google/lyria-3-clip-preview",
+          "google/lyria-3-pro-preview"
+        ],
+        "audioOutputModelSample": [
+          "google/lyria-3-clip-preview",
+          "google/lyria-3-pro-preview",
+          "openai/gpt-audio",
+          "openai/gpt-audio-mini"
+        ],
+        "freeTextOnlyModelCount": 15,
+        "freeTextOnlyModelsCannotProduceSpeech": true,
+        "audioOutputIsNotProofOfGermanSpeech": "This list only says a model can return audio. Some of them generate music or general sound rather than read German text aloud. Whether a model is usable for A1 German pronunciation is a separate listening judgement that belongs to Codex."
+      }
+    }
+  ],
+  "approvedAudio": {
+    "clipDirectory": "media/generated/tts-de-de-v1",
+    "clipsOnDisk": 327,
+    "manifestPresent": true,
+    "regeneratedByThisCheck": false,
+    "manifestReadable": true,
+    "manifestVoice": "de-DE-KatjaNeural",
+    "manifestRate": "+4%",
+    "manifestAssetCount": 327,
+    "fileNamesReproducedByCacheKey": 327,
+    "fileNameReproductionComplete": true
+  },
+  "cacheKeyDesign": {
+    "keyedOn": [
+      "normalized spoken text (whitespace collapsed, Unicode NFC, German characters untouched)",
+      "locale",
+      "voice",
+      "provider",
+      "model or voice version",
+      "speaking controls (rate, pitch, volume)",
+      "audio container format"
+    ],
+    "guarantee": "Any change of provider, voice, model version or speaking control produces a different file name, so a fallback clip is stored beside the approved clip and never replaces it.",
+    "approvedBaselineFileNaming": "tts-<first 16 hex of sha256(normalized text)>.mp3 (unchanged from the existing 327 clips)",
+    "fallbackFileNaming": "tts-<provider>-<first 16 hex of composite key>.<format>",
+    "approvedClipDirectory": "media/generated/tts-de-de-v1",
+    "examples": {
+      "approvedBaseline": {
+        "spec": {
+          "text": "die Köchin",
+          "locale": "de-DE",
+          "voice": "de-DE-KatjaNeural",
+          "provider": "edge-tts",
+          "model": "edge-tts/de-DE-neural/v1",
+          "rate": "+4%",
+          "pitch": "+0Hz",
+          "volume": "+0%",
+          "format": "mp3"
+        },
+        "fileName": "tts-29c118329bc8b770.mp3",
+        "cacheKey": "77a3e99f25df6f6344a0d6ffb6aff4bad6da86138262fd714b0da3c95938a851"
+      },
+      "comparisonProvider": {
+        "spec": {
+          "text": "die Köchin",
+          "locale": "de-DE",
+          "voice": "cartesia-de-female-sample",
+          "provider": "cartesia",
+          "model": "cartesia/sonic/unversioned",
+          "rate": "+4%",
+          "pitch": "+0Hz",
+          "volume": "+0%",
+          "format": "mp3"
+        },
+        "fileName": "tts-cartesia-6bc5606cae87f130.mp3",
+        "cacheKey": "6bc5606cae87f130dab763e78078917aecdda95a8b8711c0a4fcc4c0774daeda"
+      }
+    }
+  },
+  "secretExposureCheck": {
+    "status": "passed",
+    "patternsChecked": 10,
+    "findings": []
+  }
+}

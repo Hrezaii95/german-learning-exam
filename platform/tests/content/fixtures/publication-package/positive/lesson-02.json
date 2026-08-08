@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "1.0.0",
+  "fragmentId": "lesson-02",
+  "meta": {
+    "label": "C1A fixture lesson-02",
+    "generatedFor": "fixture"
+  },
+  "lessons": [
+    {
+      "kind": "Lesson",
+      "id": "lesson:02",
+      "number": 2,
+      "titleDe": "[fixture-lesson-02]",
+      "titleEn": "Fixture Lesson 2",
+      "cefr": "A1",
+      "communicativeGoals": [
+        "fixture-goal-02"
+      ],
+      "prerequisiteLessonIds": [
+        "lesson:01"
+      ],
+      "stages": [
+        {
+          "id": "overview",
+          "kind": "overview",
+          "titleEn": "Overview",
+          "activityIds": [
+            "activity:lesson-02-personal-profile",
+            "activity:lesson-02-full-person-conjugation",
+            "activity:lesson-02-numbers-0-100",
+            "activity:lesson-02-relationship-status",
+            "activity:lesson-02-core-professions",
+            "activity:lesson-02-person-form-morphology",
+            "activity:lesson-02-profession-qa-builder",
+            "activity:lesson-02-sein-arbeiten-contrast",
+            "activity:lesson-02-workbook-listening",
+            "activity:lesson-02-profile-reading-writing",
+            "activity:lesson-02-teacher-professions-deck",
+            "activity:lesson-02-checkpoint-summary"
+          ],
+          "estimatedMinutes": 5,
+          "skillTargets": [
+            "exposure"
+          ],
+          "required": true
+        }
+      ],
+      "collections": [],
+      "sourceAssertionIds": [],
+      "relationIds": [],
+      "publication": {
+        "status": "draft",
+        "publishedFields": []
+      }
+    }
+  ]
+}

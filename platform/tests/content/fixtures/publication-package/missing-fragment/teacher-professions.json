@@ -1,0 +1,202 @@
+{
+  "schemaVersion": "1.0.0",
+  "fragmentId": "teacher-professions",
+  "meta": {
+    "label": "C1A fixture teacher rows envelope",
+    "generatedFor": "fixture",
+    "teacherSourceRows": [
+      {
+        "sourceRow": 1,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 2,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 3,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 4,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 5,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 6,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 7,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 8,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 9,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 10,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 11,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 12,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 13,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 14,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 15,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 16,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 17,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 18,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 19,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 20,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 21,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 22,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 23,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 24,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 25,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 26,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 27,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 28,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 29,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 30,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 31,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 32,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 33,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 34,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 35,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 36,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 37,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 38,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 39,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 40,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 41,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 42,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 43,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 44,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 45,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 46,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 47,
+        "subjectId": "lex:fixture-shared"
+      },
+      {
+        "sourceRow": 48,
+        "subjectId": "lex:fixture-shared"
+      }
+    ]
+  }
+}

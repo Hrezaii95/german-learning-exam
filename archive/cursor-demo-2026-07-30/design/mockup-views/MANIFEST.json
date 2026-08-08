@@ -1,0 +1,303 @@
+{
+  "board_A": "file_000000002cac8246b09d9ffdc8b9d45b.png",
+  "board_B": "ChatGPT Image Jul 30, 2026, 07_51_13 AM.png",
+  "exports": [
+    {
+      "file": "01_desktop_dashboard.png",
+      "box": [
+        10,
+        8,
+        512,
+        558
+      ],
+      "w": 502,
+      "h": 550
+    },
+    {
+      "file": "01b_sidebar_only.png",
+      "box": [
+        10,
+        8,
+        175,
+        558
+      ],
+      "w": 165,
+      "h": 550
+    },
+    {
+      "file": "02_desktop_lesson_overview_berufe.png",
+      "box": [
+        518,
+        8,
+        998,
+        558
+      ],
+      "w": 480,
+      "h": 550
+    },
+    {
+      "file": "03_desktop_vocabulary_der_ingenieur.png",
+      "box": [
+        1005,
+        8,
+        1528,
+        558
+      ],
+      "w": 523,
+      "h": 550
+    },
+    {
+      "file": "04_desktop_verb_infographic_arbeiten.png",
+      "box": [
+        18,
+        562,
+        312,
+        798
+      ],
+      "w": 294,
+      "h": 236
+    },
+    {
+      "file": "05_desktop_grammar_explorer_sein.png",
+      "box": [
+        318,
+        562,
+        612,
+        798
+      ],
+      "w": 294,
+      "h": 236
+    },
+    {
+      "file": "06_desktop_listen_and_repeat.png",
+      "box": [
+        618,
+        562,
+        912,
+        798
+      ],
+      "w": 294,
+      "h": 236
+    },
+    {
+      "file": "07_desktop_quiz_der_koch.png",
+      "box": [
+        918,
+        562,
+        1212,
+        798
+      ],
+      "w": 294,
+      "h": 236
+    },
+    {
+      "file": "08_desktop_conversation_builder.png",
+      "box": [
+        1218,
+        562,
+        1520,
+        798
+      ],
+      "w": 302,
+      "h": 236
+    },
+    {
+      "file": "09_mobile_dashboard.png",
+      "box": [
+        55,
+        762,
+        207,
+        1008
+      ],
+      "w": 152,
+      "h": 246
+    },
+    {
+      "file": "10_mobile_lessons.png",
+      "box": [
+        221,
+        762,
+        373,
+        1008
+      ],
+      "w": 152,
+      "h": 246
+    },
+    {
+      "file": "11_mobile_vocabulary.png",
+      "box": [
+        387,
+        762,
+        539,
+        1008
+      ],
+      "w": 152,
+      "h": 246
+    },
+    {
+      "file": "12_mobile_verb_infographic.png",
+      "box": [
+        553,
+        762,
+        705,
+        1008
+      ],
+      "w": 152,
+      "h": 246
+    },
+    {
+      "file": "13_mobile_quiz.png",
+      "box": [
+        719,
+        762,
+        871,
+        1008
+      ],
+      "w": 152,
+      "h": 246
+    },
+    {
+      "file": "14_mobile_conversation.png",
+      "box": [
+        885,
+        762,
+        1037,
+        1008
+      ],
+      "w": 152,
+      "h": 246
+    },
+    {
+      "file": "15_design_system.png",
+      "box": [
+        1108,
+        748,
+        1528,
+        1018
+      ],
+      "w": 420,
+      "h": 270
+    },
+    {
+      "file": "B01_dashboard.png",
+      "box": [
+        8,
+        6,
+        530,
+        440
+      ],
+      "w": 522,
+      "h": 434
+    },
+    {
+      "file": "B02_lessons_catalog.png",
+      "box": [
+        535,
+        6,
+        1025,
+        440
+      ],
+      "w": 490,
+      "h": 434
+    },
+    {
+      "file": "B03_lesson_detail_berufe.png",
+      "box": [
+        1030,
+        6,
+        1528,
+        440
+      ],
+      "w": 498,
+      "h": 434
+    },
+    {
+      "file": "B04_vocab_card.png",
+      "box": [
+        12,
+        430,
+        270,
+        715
+      ],
+      "w": 258,
+      "h": 285
+    },
+    {
+      "file": "B05_verb_sein.png",
+      "box": [
+        275,
+        430,
+        540,
+        715
+      ],
+      "w": 265,
+      "h": 285
+    },
+    {
+      "file": "B06_grammar_cases.png",
+      "box": [
+        545,
+        430,
+        810,
+        715
+      ],
+      "w": 265,
+      "h": 285
+    },
+    {
+      "file": "B07_listen_repeat.png",
+      "box": [
+        815,
+        430,
+        1080,
+        715
+      ],
+      "w": 265,
+      "h": 285
+    },
+    {
+      "file": "B08_quiz.png",
+      "box": [
+        1085,
+        430,
+        1305,
+        715
+      ],
+      "w": 220,
+      "h": 285
+    },
+    {
+      "file": "B09_conversation.png",
+      "box": [
+        1310,
+        430,
+        1528,
+        715
+      ],
+      "w": 218,
+      "h": 285
+    },
+    {
+      "file": "B10_mobile_strip.png",
+      "box": [
+        15,
+        720,
+        1095,
+        1018
+      ],
+      "w": 1080,
+      "h": 298
+    },
+    {
+      "file": "B11_design_legend.png",
+      "box": [
+        1105,
+        725,
+        1528,
+        1018
+      ],
+      "w": 423,
+      "h": 293
+    }
+  ]
+}

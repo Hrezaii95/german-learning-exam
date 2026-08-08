@@ -1,0 +1,138 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://german-learning-os.local/schemas/tts-providers.schema.json",
+  "title": "German Learning OS speech provider registry",
+  "description": "Schema for tools/tts provider records. Contains variable names only, never credential values.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "approvedPrimary", "baselineProfile", "rotationPolicy", "providers"],
+  "properties": {
+    "schemaVersion": { "type": "integer", "const": 1 },
+    "approvedPrimary": { "type": "string", "const": "edge-tts" },
+    "baselineProfile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["provider", "locale", "voice", "model", "rate", "pitch", "volume", "format"],
+      "properties": {
+        "provider": { "type": "string", "const": "edge-tts" },
+        "locale": { "type": "string", "pattern": "^[a-z]{2}-[A-Z]{2}$" },
+        "voice": { "type": "string", "minLength": 1 },
+        "model": { "type": "string", "minLength": 1 },
+        "rate": { "type": "string", "pattern": "^[+-]\\d+%$" },
+        "pitch": { "type": "string", "pattern": "^[+-]\\d+Hz$" },
+        "volume": { "type": "string", "pattern": "^[+-]\\d+%$" },
+        "format": { "type": "string", "enum": ["mp3", "opus", "wav"] }
+      }
+    },
+    "rotationPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["purpose", "quotaEvasionForbidden", "statement", "learnerPlayback"],
+      "properties": {
+        "purpose": { "type": "string", "const": "resilience-only" },
+        "quotaEvasionForbidden": { "type": "boolean", "const": true },
+        "statement": { "type": "string", "minLength": 1 },
+        "learnerPlayback": { "type": "string", "minLength": 1 }
+      }
+    },
+    "providers": {
+      "type": "array",
+      "minItems": 4,
+      "items": { "$ref": "#/$defs/provider" }
+    }
+  },
+  "$defs": {
+    "environmentVariableName": {
+      "type": "string",
+      "pattern": "^[A-Z][A-Z0-9_]*$"
+    },
+    "check": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "method", "endpoint", "authStyle"],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": ["local-package", "account-key-status", "account-listing", "model-catalogue"]
+        },
+        "method": { "type": "string", "enum": ["GET", "LOCAL"] },
+        "endpoint": { "type": "string", "minLength": 1 },
+        "authStyle": { "type": "string", "enum": ["none", "bearer", "header-key"] },
+        "requiredHeaders": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+        "documented": { "type": "boolean" }
+      }
+    },
+    "provider": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "displayName",
+        "role",
+        "enabled",
+        "requiresCredential",
+        "credentialVariables",
+        "optionalVariables",
+        "baseUrl",
+        "verification",
+        "liveGenerationAllowed",
+        "generationRequiresFlag",
+        "costClass",
+        "productionAuthority",
+        "notes"
+      ],
+      "properties": {
+        "id": { "type": "string", "enum": ["edge-tts", "cartesia", "openrouter", "ttsforfree"] },
+        "displayName": { "type": "string", "minLength": 1 },
+        "role": { "type": "string", "enum": ["primary", "comparison", "failover"] },
+        "enabled": { "type": "boolean" },
+        "requiresCredential": { "type": "boolean" },
+        "credentialVariables": { "type": "array", "items": { "$ref": "#/$defs/environmentVariableName" } },
+        "credentialVariablePrefix": { "type": "string", "pattern": "^[A-Z][A-Z0-9_]*_$" },
+        "excludedVariableSubstrings": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+        "optionalVariables": { "type": "array", "items": { "$ref": "#/$defs/environmentVariableName" } },
+        "baseUrl": {
+          "anyOf": [
+            { "type": "null" },
+            { "type": "string", "pattern": "^https://" }
+          ]
+        },
+        "verification": { "$ref": "#/$defs/check" },
+        "discovery": { "$ref": "#/$defs/check" },
+        "liveGenerationAllowed": { "type": "boolean" },
+        "generationRequiresFlag": { "type": "boolean", "const": true },
+        "costClass": { "type": "string", "enum": ["free-unofficial", "free-tier", "mixed-free-and-paid", "paid"] },
+        "productionAuthority": { "type": "boolean", "const": false },
+        "notes": { "type": "string", "minLength": 1 }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": { "requiresCredential": { "const": true } },
+            "required": ["requiresCredential"]
+          },
+          "then": {
+            "properties": { "credentialVariables": { "minItems": 1 } }
+          }
+        },
+        {
+          "if": {
+            "not": { "properties": { "id": { "const": "edge-tts" } } }
+          },
+          "then": {
+            "properties": { "liveGenerationAllowed": { "const": false } }
+          }
+        },
+        {
+          "if": {
+            "properties": { "role": { "const": "primary" } },
+            "required": ["role"]
+          },
+          "then": {
+            "properties": { "id": { "const": "edge-tts" } }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "1.0.0",
+  "meta": { "label": "C0R1 unknown relationship type", "generatedFor": "fixture" },
+  "sources": [
+    {
+      "kind": "Source",
+      "id": "source:fixture-schema",
+      "title": "C0 schema fixture source",
+      "sourceKind": "fixture",
+      "language": "de",
+      "priority": 1,
+      "cefrBand": "A1.1"
+    }
+  ],
+  "sourceAssertions": [],
+  "mediaAssets": [],
+  "lessons": [
+    {
+      "kind": "Lesson",
+      "id": "lesson:01",
+      "number": 1,
+      "titleDe": "[fixture-title-de]",
+      "titleEn": "Fixture Lesson 1",
+      "cefr": "A1",
+      "communicativeGoals": ["fixture-goal"],
+      "prerequisiteLessonIds": [],
+      "stages": [
+        {
+          "id": "overview",
+          "kind": "overview",
+          "titleEn": "Overview",
+          "activityIds": [],
+          "estimatedMinutes": 1,
+          "skillTargets": ["exposure"],
+          "required": true
+        }
+      ],
+      "collections": [],
+      "sourceAssertionIds": [],
+      "relationIds": [],
+      "publication": { "status": "draft", "publishedFields": [] }
+    }
+  ],
+  "lexemes": [
+    {
+      "kind": "Lexeme",
+      "id": "lex:fixture-rel",
+      "lemma": "fixturerel",
+      "partOfSpeech": "noun",
+      "meanings": [{ "id": "meaning:fixture-rel", "glossEn": "[fixture-gloss]" }],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": ["rel:unknown-type"],
+      "sourceAssertionIds": [],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": { "status": "draft", "publishedFields": [] }
+    }
+  ],
+  "verbs": [],
+  "grammarConcepts": [],
+  "phrasePatterns": [],
+  "qaPairs": [],
+  "dialogues": [],
+  "listeningAssets": [],
+  "collections": [],
+  "learningActivities": [],
+  "relationships": [
+    {
+      "kind": "Relationship",
+      "id": "rel:unknown-type",
+      "type": "not-a-real-edge",
+      "fromId": "lex:fixture-rel",
+      "toId": "lesson:01"
+    }
+  ],
+  "contentGaps": []
+}

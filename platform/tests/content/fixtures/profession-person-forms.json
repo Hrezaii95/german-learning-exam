@@ -1,0 +1,221 @@
+{
+  "schemaVersion": "1.0.0",
+  "meta": {
+    "label": "C0 masculine/feminine professions as separate lexemes",
+    "generatedFor": "fixture"
+  },
+  "sources": [
+    {
+      "kind": "Source",
+      "id": "source:fixture-schema",
+      "title": "C0 schema fixture source",
+      "sourceKind": "fixture",
+      "language": "de",
+      "priority": 1,
+      "cefrBand": "A1.1"
+    }
+  ],
+  "sourceAssertions": [
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lesson-02-title-de",
+      "sourceId": "source:fixture-schema",
+      "location": { "noteRow": 1 },
+      "subjectId": "lesson:02",
+      "field": "titleDe",
+      "value": "[fixture-lesson-02]",
+      "extraction": "fixture",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c0-fixture"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lesson-02-goals",
+      "sourceId": "source:fixture-schema",
+      "location": { "noteRow": 2 },
+      "subjectId": "lesson:02",
+      "field": "communicativeGoals",
+      "value": ["fixture-goal"],
+      "extraction": "fixture",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c0-fixture"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-koch-lemma",
+      "sourceId": "source:fixture-schema",
+      "location": { "noteRow": 3 },
+      "subjectId": "lex:koch",
+      "field": "lemma",
+      "value": "Koch",
+      "extraction": "fixture",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c0-fixture"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-koch-meanings",
+      "sourceId": "source:fixture-schema",
+      "location": { "noteRow": 4 },
+      "subjectId": "lex:koch",
+      "field": "meanings",
+      "value": [{ "id": "meaning:koch-en", "glossEn": "[fixture-profession-m]" }],
+      "extraction": "fixture",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c0-fixture"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-koechin-lemma",
+      "sourceId": "source:fixture-schema",
+      "location": { "noteRow": 5 },
+      "subjectId": "lex:koechin",
+      "field": "lemma",
+      "value": "Köchin",
+      "extraction": "fixture",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c0-fixture"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-koechin-meanings",
+      "sourceId": "source:fixture-schema",
+      "location": { "noteRow": 6 },
+      "subjectId": "lex:koechin",
+      "field": "meanings",
+      "value": [{ "id": "meaning:koechin-en", "glossEn": "[fixture-profession-f]" }],
+      "extraction": "fixture",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c0-fixture"
+    }
+  ],
+  "mediaAssets": [],
+  "lessons": [
+    {
+      "kind": "Lesson",
+      "id": "lesson:02",
+      "number": 2,
+      "titleDe": "[fixture-lesson-02]",
+      "titleEn": "Fixture Lesson 2",
+      "cefr": "A1",
+      "communicativeGoals": ["fixture-goal"],
+      "prerequisiteLessonIds": [],
+      "stages": [
+        {
+          "id": "overview",
+          "kind": "overview",
+          "titleEn": "Overview",
+          "activityIds": [],
+          "estimatedMinutes": 1,
+          "skillTargets": ["exposure"],
+          "required": true
+        }
+      ],
+      "collections": [],
+      "sourceAssertionIds": ["assert:lesson-02-title-de", "assert:lesson-02-goals"],
+      "relationIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          { "field": "titleDe", "assertionId": "assert:lesson-02-title-de" },
+          { "field": "communicativeGoals", "assertionId": "assert:lesson-02-goals" }
+        ]
+      }
+    }
+  ],
+  "lexemes": [
+    {
+      "kind": "Lexeme",
+      "id": "lex:koch",
+      "lemma": "Koch",
+      "partOfSpeech": "noun",
+      "noun": {
+        "gender": "masculine",
+        "article": "der",
+        "singular": "Koch",
+        "plurals": [{ "form": "[fixture-plural-m]", "patternIds": [] }],
+        "personFormGroupId": "person-form:koch"
+      },
+      "meanings": [{ "id": "meaning:koch-en", "glossEn": "[fixture-profession-m]" }],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": ["rel:koechin-person-form-of-koch", "rel:koch-introduced"],
+      "sourceAssertionIds": ["assert:lex-koch-lemma", "assert:lex-koch-meanings"],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          { "field": "lemma", "assertionId": "assert:lex-koch-lemma" },
+          { "field": "meanings", "assertionId": "assert:lex-koch-meanings" }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:koechin",
+      "lemma": "Köchin",
+      "partOfSpeech": "noun",
+      "noun": {
+        "gender": "feminine",
+        "article": "die",
+        "singular": "Köchin",
+        "plurals": [{ "form": "[fixture-plural-f]", "patternIds": [] }],
+        "personFormGroupId": "person-form:koch"
+      },
+      "meanings": [{ "id": "meaning:koechin-en", "glossEn": "[fixture-profession-f]" }],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": ["rel:koechin-person-form-of-koch", "rel:koechin-introduced"],
+      "sourceAssertionIds": ["assert:lex-koechin-lemma", "assert:lex-koechin-meanings"],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          { "field": "lemma", "assertionId": "assert:lex-koechin-lemma" },
+          { "field": "meanings", "assertionId": "assert:lex-koechin-meanings" }
+        ]
+      }
+    }
+  ],
+  "verbs": [],
+  "grammarConcepts": [],
+  "phrasePatterns": [],
+  "qaPairs": [],
+  "dialogues": [],
+  "listeningAssets": [],
+  "collections": [],
+  "learningActivities": [],
+  "relationships": [
+    {
+      "kind": "Relationship",
+      "id": "rel:koechin-person-form-of-koch",
+      "type": "person-form-of",
+      "fromId": "lex:koechin",
+      "toId": "lex:koch",
+      "note": "Feminine person form is a separate lexeme (docs/07)."
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:koch-introduced",
+      "type": "introduced-in",
+      "fromId": "lex:koch",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:koechin-introduced",
+      "type": "introduced-in",
+      "fromId": "lex:koechin",
+      "toId": "lesson:02"
+    }
+  ],
+  "contentGaps": []
+}

@@ -1,0 +1,35 @@
+{
+  "name": "german-learning-platform",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "description": "German Learning OS platform workspace (content schemas first)",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "typecheck:web": "npm run typecheck -w @german-learning/web",
+    "test": "vitest run --config vitest.config.ts",
+    "test:web": "vitest run --config vitest.config.ts tests/web",
+    "project:web": "npm run project -w @german-learning/web",
+    "build:web": "npm run build -w @german-learning/web",
+    "check": "npm run typecheck && npm run typecheck:web && npm test && npm run validate:publication && npm run test:web",
+    "audit:prod": "npm audit --omit=dev --audit-level=high",
+    "smoke:web-routes": "npm run smoke:routes -w @german-learning/web",
+    "validate:fixture": "tsx packages/content/src/cli/validate.ts tests/content/fixtures/valid-lesson-01-bundle.json",
+    "validate:publication": "tsx packages/content/src/cli/validate-publication.ts",
+    "encode:publication": "tsx packages/content/src/cli/encode-publication.ts",
+    "validate": "tsx packages/content/src/cli/validate.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.8"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  }
+}

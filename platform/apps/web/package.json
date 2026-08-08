@@ -1,0 +1,30 @@
+{
+  "name": "@german-learning/web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "project": "tsx scripts/project-content.ts",
+    "prebuild": "npm run project",
+    "dev": "npm run project && next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "smoke:routes": "node scripts/smoke-canonical-routes.mjs"
+  },
+  "dependencies": {
+    "@german-learning/content": "*",
+    "next": "16.3.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.8",
+    "@types/react-dom": "19.2.3",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  }
+}

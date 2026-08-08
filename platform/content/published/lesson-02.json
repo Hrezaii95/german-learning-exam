@@ -1,0 +1,7233 @@
+{
+  "schemaVersion": "1.0.0",
+  "fragmentId": "lesson-02",
+  "meta": {
+    "label": "C1 Lesson 2 publication fragment",
+    "generatedFor": "publication"
+  },
+  "sources": [],
+  "sourceAssertions": [
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lesson-02-title-de",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 15
+      },
+      "subjectId": "lesson:02",
+      "field": "titleDe",
+      "value": "Was macht ihr beruflich?",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lesson-02-goals",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 15
+      },
+      "subjectId": "lesson:02",
+      "field": "communicativeGoals",
+      "value": [
+        "give a personal profile",
+        "understand and say numbers 0–100",
+        "talk about relationship and children",
+        "ask and answer about work",
+        "use full present-tense person forms",
+        "form profession person forms"
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-jahr-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:jahr",
+      "field": "lemma",
+      "value": "Jahr",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-jahr-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "lex:jahr",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:jahr-en",
+          "glossEn": "year"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-kind-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:kind",
+      "field": "lemma",
+      "value": "Kind",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-kind-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "lex:kind",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:kind-en",
+          "glossEn": "child"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-verheiratet-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:verheiratet",
+      "field": "lemma",
+      "value": "verheiratet",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-verheiratet-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "lex:verheiratet",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:verheiratet-en",
+          "glossEn": "married"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-geschieden-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:geschieden",
+      "field": "lemma",
+      "value": "geschieden",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-geschieden-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "lex:geschieden",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:geschieden-en",
+          "glossEn": "divorced"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-single-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:single",
+      "field": "lemma",
+      "value": "Single",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-single-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "lex:single",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:single-en",
+          "glossEn": "single person"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-allein-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:allein",
+      "field": "lemma",
+      "value": "allein",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-allein-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "lex:allein",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:allein-en",
+          "glossEn": "alone"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-wohnort-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:wohnort",
+      "field": "lemma",
+      "value": "Wohnort",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-wohnort-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "lex:wohnort",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:wohnort-en",
+          "glossEn": "place of residence"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-herkunft-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:herkunft",
+      "field": "lemma",
+      "value": "Herkunft",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-herkunft-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "lex:herkunft",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:herkunft-en",
+          "glossEn": "origin"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-alter-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:alter",
+      "field": "lemma",
+      "value": "Alter",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-alter-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "lex:alter",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:alter-en",
+          "glossEn": "age"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-familienstand-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:familienstand",
+      "field": "lemma",
+      "value": "Familienstand",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-familienstand-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "lex:familienstand",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:familienstand-en",
+          "glossEn": "marital status"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-studium-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:studium",
+      "field": "lemma",
+      "value": "Studium",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-studium-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "lex:studium",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:studium-en",
+          "glossEn": "studies"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-beruf-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:beruf",
+      "field": "lemma",
+      "value": "Beruf",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-beruf-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "lex:beruf",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:beruf-en",
+          "glossEn": "profession"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-job-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:job",
+      "field": "lemma",
+      "value": "Job",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-job-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "lex:job",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:job-en",
+          "glossEn": "job"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-stelle-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:stelle",
+      "field": "lemma",
+      "value": "Stelle",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-stelle-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "lex:stelle",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:stelle-en",
+          "glossEn": "position/job"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-ausbildung-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:ausbildung",
+      "field": "lemma",
+      "value": "Ausbildung",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-ausbildung-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "lex:ausbildung",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:ausbildung-en",
+          "glossEn": "apprenticeship/training"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-praktikum-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:praktikum",
+      "field": "lemma",
+      "value": "Praktikum",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-praktikum-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "lex:praktikum",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:praktikum-en",
+          "glossEn": "internship"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-firma-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:firma",
+      "field": "lemma",
+      "value": "Firma",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-firma-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "lex:firma",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:firma-en",
+          "glossEn": "company"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-paketzusteller-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:paketzusteller",
+      "field": "lemma",
+      "value": "Paketzusteller",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-paketzusteller-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "lex:paketzusteller",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:paketzusteller-en",
+          "glossEn": "parcel delivery agent"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-paketzustellerin-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:paketzustellerin",
+      "field": "lemma",
+      "value": "Paketzustellerin",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-paketzustellerin-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "lex:paketzustellerin",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:paketzustellerin-en",
+          "glossEn": "parcel delivery agent"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-friseur-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:friseur",
+      "field": "lemma",
+      "value": "Friseur",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-friseur-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "lex:friseur",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:friseur-en",
+          "glossEn": "hairdresser"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-friseurin-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:friseurin",
+      "field": "lemma",
+      "value": "Friseurin",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-friseurin-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "lex:friseurin",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:friseurin-en",
+          "glossEn": "hairdresser"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-kellner-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:kellner",
+      "field": "lemma",
+      "value": "Kellner",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-kellner-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "lex:kellner",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:kellner-en",
+          "glossEn": "waiter / waitress"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-kellnerin-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:kellnerin",
+      "field": "lemma",
+      "value": "Kellnerin",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-kellnerin-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "lex:kellnerin",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:kellnerin-en",
+          "glossEn": "waiter / waitress"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-ingenieur-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:ingenieur",
+      "field": "lemma",
+      "value": "Ingenieur",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-ingenieur-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "lex:ingenieur",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:ingenieur-en",
+          "glossEn": "engineer"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-ingenieurin-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:ingenieurin",
+      "field": "lemma",
+      "value": "Ingenieurin",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-ingenieurin-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "lex:ingenieurin",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:ingenieurin-en",
+          "glossEn": "engineer"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-kfz-mechatroniker-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:kfz-mechatroniker",
+      "field": "lemma",
+      "value": "Kfz-Mechatroniker",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-kfz-mechatroniker-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "lex:kfz-mechatroniker",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:kfz-mechatroniker-en",
+          "glossEn": "automotive mechatronics engineer"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-kfz-mechatronikerin-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:kfz-mechatronikerin",
+      "field": "lemma",
+      "value": "Kfz-Mechatronikerin",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-kfz-mechatronikerin-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "lex:kfz-mechatronikerin",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:kfz-mechatronikerin-en",
+          "glossEn": "automotive mechatronics engineer"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-student-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:student",
+      "field": "lemma",
+      "value": "Student",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-student-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "lex:student",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:student-en",
+          "glossEn": "university student"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-studentin-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:studentin",
+      "field": "lemma",
+      "value": "Studentin",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-studentin-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "lex:studentin",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:studentin-en",
+          "glossEn": "university student"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-journalist-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:journalist",
+      "field": "lemma",
+      "value": "Journalist",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-journalist-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "lex:journalist",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:journalist-en",
+          "glossEn": "journalist"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-journalistin-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:journalistin",
+      "field": "lemma",
+      "value": "Journalistin",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-journalistin-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "lex:journalistin",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:journalistin-en",
+          "glossEn": "journalist"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-architekt-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:architekt",
+      "field": "lemma",
+      "value": "Architekt",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-architekt-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "lex:architekt",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:architekt-en",
+          "glossEn": "architect"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-architektin-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:architektin",
+      "field": "lemma",
+      "value": "Architektin",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-architektin-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "lex:architektin",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:architektin-en",
+          "glossEn": "architect"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-arzt-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:arzt",
+      "field": "lemma",
+      "value": "Arzt",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-arzt-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "lex:arzt",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:arzt-en",
+          "glossEn": "doctor"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-aerztin-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:aerztin",
+      "field": "lemma",
+      "value": "Ärztin",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-aerztin-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "lex:aerztin",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:aerztin-en",
+          "glossEn": "doctor"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-lehrer-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:lehrer",
+      "field": "lemma",
+      "value": "Lehrer",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-lehrer-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "lex:lehrer",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:lehrer-en",
+          "glossEn": "teacher"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-lehrerin-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:lehrerin",
+      "field": "lemma",
+      "value": "Lehrerin",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-lehrerin-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "lex:lehrerin",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:lehrerin-en",
+          "glossEn": "teacher"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-verkaeufer-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:verkaeufer",
+      "field": "lemma",
+      "value": "Verkäufer",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-verkaeufer-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "lex:verkaeufer",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:verkaeufer-en",
+          "glossEn": "shop assistant"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-verkaeuferin-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:verkaeuferin",
+      "field": "lemma",
+      "value": "Verkäuferin",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-verkaeuferin-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "lex:verkaeuferin",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:verkaeuferin-en",
+          "glossEn": "shop assistant"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-schueler-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:schueler",
+      "field": "lemma",
+      "value": "Schüler",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-schueler-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "lex:schueler",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:schueler-en",
+          "glossEn": "school student"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-schuelerin-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:schuelerin",
+      "field": "lemma",
+      "value": "Schülerin",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-schuelerin-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "lex:schuelerin",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:schuelerin-en",
+          "glossEn": "school student"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-rentner-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:rentner",
+      "field": "lemma",
+      "value": "Rentner",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-rentner-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "lex:rentner",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:rentner-en",
+          "glossEn": "pensioner"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-rentnerin-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:rentnerin",
+      "field": "lemma",
+      "value": "Rentnerin",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-rentnerin-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "lex:rentnerin",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:rentnerin-en",
+          "glossEn": "pensioner"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:verb-wohnen-infinitive",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "verb:wohnen",
+      "field": "infinitive",
+      "value": "wohnen",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:verb-wohnen-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "verb:wohnen",
+      "field": "meanings",
+      "value": [
+        {
+          "glossEn": "wohnen",
+          "useNote": "English gloss not present in alpha-content.json; infinitive echoed pending glossary enrichment"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:verb-wohnen-present",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "verb:wohnen",
+      "field": "present",
+      "value": [
+        {
+          "person": "ich",
+          "form": "wohne"
+        },
+        {
+          "person": "du",
+          "form": "wohnst"
+        },
+        {
+          "person": "er_sie_es",
+          "form": "wohnt"
+        },
+        {
+          "person": "wir",
+          "form": "wohnen"
+        },
+        {
+          "person": "ihr",
+          "form": "wohnt"
+        },
+        {
+          "person": "sie_plural",
+          "form": "wohnen"
+        },
+        {
+          "person": "Sie_formal",
+          "form": "wohnen"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:verb-leben-infinitive",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "verb:leben",
+      "field": "infinitive",
+      "value": "leben",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:verb-leben-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "verb:leben",
+      "field": "meanings",
+      "value": [
+        {
+          "glossEn": "leben",
+          "useNote": "English gloss not present in alpha-content.json; infinitive echoed pending glossary enrichment"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:verb-leben-present",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "verb:leben",
+      "field": "present",
+      "value": [
+        {
+          "person": "ich",
+          "form": "lebe"
+        },
+        {
+          "person": "du",
+          "form": "lebst"
+        },
+        {
+          "person": "er_sie_es",
+          "form": "lebt"
+        },
+        {
+          "person": "wir",
+          "form": "leben"
+        },
+        {
+          "person": "ihr",
+          "form": "lebt"
+        },
+        {
+          "person": "sie_plural",
+          "form": "leben"
+        },
+        {
+          "person": "Sie_formal",
+          "form": "leben"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:verb-haben-infinitive",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "verb:haben",
+      "field": "infinitive",
+      "value": "haben",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:verb-haben-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "verb:haben",
+      "field": "meanings",
+      "value": [
+        {
+          "glossEn": "haben",
+          "useNote": "English gloss not present in alpha-content.json; infinitive echoed pending glossary enrichment"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:verb-haben-present",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "verb:haben",
+      "field": "present",
+      "value": [
+        {
+          "person": "ich",
+          "form": "habe"
+        },
+        {
+          "person": "du",
+          "form": "hast"
+        },
+        {
+          "person": "er_sie_es",
+          "form": "hat"
+        },
+        {
+          "person": "wir",
+          "form": "haben"
+        },
+        {
+          "person": "ihr",
+          "form": "habt"
+        },
+        {
+          "person": "sie_plural",
+          "form": "haben"
+        },
+        {
+          "person": "Sie_formal",
+          "form": "haben"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:verb-arbeiten-infinitive",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "verb:arbeiten",
+      "field": "infinitive",
+      "value": "arbeiten",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:verb-arbeiten-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "verb:arbeiten",
+      "field": "meanings",
+      "value": [
+        {
+          "glossEn": "arbeiten",
+          "useNote": "English gloss not present in alpha-content.json; infinitive echoed pending glossary enrichment"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:verb-arbeiten-present",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "verb:arbeiten",
+      "field": "present",
+      "value": [
+        {
+          "person": "ich",
+          "form": "arbeite"
+        },
+        {
+          "person": "du",
+          "form": "arbeitest"
+        },
+        {
+          "person": "er_sie_es",
+          "form": "arbeitet"
+        },
+        {
+          "person": "wir",
+          "form": "arbeiten"
+        },
+        {
+          "person": "ihr",
+          "form": "arbeitet"
+        },
+        {
+          "person": "sie_plural",
+          "form": "arbeiten"
+        },
+        {
+          "person": "Sie_formal",
+          "form": "arbeiten"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:verb-machen-infinitive",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "verb:machen",
+      "field": "infinitive",
+      "value": "machen",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:verb-machen-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "verb:machen",
+      "field": "meanings",
+      "value": [
+        {
+          "glossEn": "machen",
+          "useNote": "English gloss not present in alpha-content.json; infinitive echoed pending glossary enrichment"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:verb-machen-present",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "verb:machen",
+      "field": "present",
+      "value": [
+        {
+          "person": "ich",
+          "form": "mache"
+        },
+        {
+          "person": "du",
+          "form": "machst"
+        },
+        {
+          "person": "er_sie_es",
+          "form": "macht"
+        },
+        {
+          "person": "wir",
+          "form": "machen"
+        },
+        {
+          "person": "ihr",
+          "form": "macht"
+        },
+        {
+          "person": "sie_plural",
+          "form": "machen"
+        },
+        {
+          "person": "Sie_formal",
+          "form": "machen"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:verb-studieren-infinitive",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "verb:studieren",
+      "field": "infinitive",
+      "value": "studieren",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:verb-studieren-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "verb:studieren",
+      "field": "meanings",
+      "value": [
+        {
+          "glossEn": "studieren",
+          "useNote": "English gloss not present in alpha-content.json; infinitive echoed pending glossary enrichment"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:verb-studieren-present",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "verb:studieren",
+      "field": "present",
+      "value": [
+        {
+          "person": "ich",
+          "form": "studiere"
+        },
+        {
+          "person": "du",
+          "form": "studierst"
+        },
+        {
+          "person": "er_sie_es",
+          "form": "studiert"
+        },
+        {
+          "person": "wir",
+          "form": "studieren"
+        },
+        {
+          "person": "ihr",
+          "form": "studiert"
+        },
+        {
+          "person": "sie_plural",
+          "form": "studieren"
+        },
+        {
+          "person": "Sie_formal",
+          "form": "studieren"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-profession-casual-main-q-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:profession-casual-main-q",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Was bist du von Beruf?"
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-profession-casual-main-q-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:profession-casual-main-q",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Was bist du von Beruf?"
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-profession-casual-main-a1-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:profession-casual-main-a1",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich bin … von Beruf."
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-profession-casual-main-a1-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:profession-casual-main-a1",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich bin … von Beruf."
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-profession-casual-main-a2-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:profession-casual-main-a2",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich bin …"
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-profession-casual-main-a2-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:profession-casual-main-a2",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich bin …"
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-profession-casual-main-a3-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:profession-casual-main-a3",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich arbeite als …"
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-profession-casual-main-a3-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:profession-casual-main-a3",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich arbeite als …"
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:qa-profession-casual-main-question",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "qa:profession-casual-main",
+      "field": "questionPatternId",
+      "value": "phrase:profession-casual-main-q",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:qa-profession-casual-main-answers",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "qa:profession-casual-main",
+      "field": "answerPatternIds",
+      "value": [
+        "phrase:profession-casual-main-a1",
+        "phrase:profession-casual-main-a2",
+        "phrase:profession-casual-main-a3"
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-profession-formal-main-q-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:profession-formal-main-q",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Was sind Sie von Beruf?"
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-profession-formal-main-q-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:profession-formal-main-q",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Was sind Sie von Beruf?"
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-profession-formal-main-a1-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:profession-formal-main-a1",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich bin … von Beruf."
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-profession-formal-main-a1-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:profession-formal-main-a1",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich bin … von Beruf."
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-profession-formal-main-a2-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:profession-formal-main-a2",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich bin …"
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-profession-formal-main-a2-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:profession-formal-main-a2",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich bin …"
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-profession-formal-main-a3-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:profession-formal-main-a3",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich arbeite als …"
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-profession-formal-main-a3-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:profession-formal-main-a3",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich arbeite als …"
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:qa-profession-formal-main-question",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "qa:profession-formal-main",
+      "field": "questionPatternId",
+      "value": "phrase:profession-formal-main-q",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:qa-profession-formal-main-answers",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "qa:profession-formal-main",
+      "field": "answerPatternIds",
+      "value": [
+        "phrase:profession-formal-main-a1",
+        "phrase:profession-formal-main-a2",
+        "phrase:profession-formal-main-a3"
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-work-formal-main-q-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:work-formal-main-q",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Was machen Sie beruflich?"
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-work-formal-main-q-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:work-formal-main-q",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Was machen Sie beruflich?"
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-work-formal-main-a1-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:work-formal-main-a1",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich arbeite als …"
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-work-formal-main-a1-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:work-formal-main-a1",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich arbeite als …"
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-work-formal-main-a2-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:work-formal-main-a2",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich arbeite bei …"
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-work-formal-main-a2-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:work-formal-main-a2",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich arbeite bei …"
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-work-formal-main-a3-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:work-formal-main-a3",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich studiere …"
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-work-formal-main-a3-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:work-formal-main-a3",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich studiere …"
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-work-formal-main-a4-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:work-formal-main-a4",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich arbeite im Moment nicht."
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-work-formal-main-a4-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:work-formal-main-a4",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich arbeite im Moment nicht."
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:qa-work-formal-main-question",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "qa:work-formal-main",
+      "field": "questionPatternId",
+      "value": "phrase:work-formal-main-q",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:qa-work-formal-main-answers",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "qa:work-formal-main",
+      "field": "answerPatternIds",
+      "value": [
+        "phrase:work-formal-main-a1",
+        "phrase:work-formal-main-a2",
+        "phrase:work-formal-main-a3",
+        "phrase:work-formal-main-a4"
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-age-casual-q-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:age-casual-q",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Wie alt bist du?"
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-age-casual-q-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:age-casual-q",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Wie alt bist du?"
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-age-casual-a1-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:age-casual-a1",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich bin … Jahre alt."
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-age-casual-a1-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:age-casual-a1",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich bin … Jahre alt."
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:qa-age-casual-question",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "qa:age-casual",
+      "field": "questionPatternId",
+      "value": "phrase:age-casual-q",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:qa-age-casual-answers",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "qa:age-casual",
+      "field": "answerPatternIds",
+      "value": [
+        "phrase:age-casual-a1"
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-age-formal-q-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:age-formal-q",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Wie alt sind Sie?"
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-age-formal-q-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:age-formal-q",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Wie alt sind Sie?"
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-age-formal-a1-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:age-formal-a1",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich bin … Jahre alt."
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-age-formal-a1-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:age-formal-a1",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich bin … Jahre alt."
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:qa-age-formal-question",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "qa:age-formal",
+      "field": "questionPatternId",
+      "value": "phrase:age-formal-q",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:qa-age-formal-answers",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "qa:age-formal",
+      "field": "answerPatternIds",
+      "value": [
+        "phrase:age-formal-a1"
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-residence-casual-q-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:residence-casual-q",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Wo wohnst du?"
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-residence-casual-q-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:residence-casual-q",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Wo wohnst du?"
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-residence-casual-a1-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:residence-casual-a1",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich wohne in …"
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-residence-casual-a1-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:residence-casual-a1",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich wohne in …"
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:qa-residence-casual-question",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "qa:residence-casual",
+      "field": "questionPatternId",
+      "value": "phrase:residence-casual-q",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:qa-residence-casual-answers",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "qa:residence-casual",
+      "field": "answerPatternIds",
+      "value": [
+        "phrase:residence-casual-a1"
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-residence-formal-q-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:residence-formal-q",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Wo wohnen Sie?"
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-residence-formal-q-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:residence-formal-q",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Wo wohnen Sie?"
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-residence-formal-a1-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:residence-formal-a1",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich wohne in …"
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-residence-formal-a1-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:residence-formal-a1",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich wohne in …"
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:qa-residence-formal-question",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "qa:residence-formal",
+      "field": "questionPatternId",
+      "value": "phrase:residence-formal-q",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:qa-residence-formal-answers",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "qa:residence-formal",
+      "field": "answerPatternIds",
+      "value": [
+        "phrase:residence-formal-a1"
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    }
+  ],
+  "mediaAssets": [],
+  "lessons": [
+    {
+      "kind": "Lesson",
+      "id": "lesson:02",
+      "number": 2,
+      "titleDe": "Was macht ihr beruflich?",
+      "titleEn": "Personal details and professions",
+      "cefr": "A1",
+      "communicativeGoals": [
+        "give a personal profile",
+        "understand and say numbers 0–100",
+        "talk about relationship and children",
+        "ask and answer about work",
+        "use full present-tense person forms",
+        "form profession person forms"
+      ],
+      "prerequisiteLessonIds": [
+        "lesson:01"
+      ],
+      "stages": [
+        {
+          "id": "overview",
+          "kind": "overview",
+          "titleEn": "Lesson overview",
+          "activityIds": [],
+          "estimatedMinutes": 2,
+          "skillTargets": [
+            "exposure"
+          ],
+          "required": true
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "titleEn": "Learn",
+          "activityIds": [
+            "activity:lesson-02-personal-profile",
+            "activity:lesson-02-full-person-conjugation",
+            "activity:lesson-02-relationship-status",
+            "activity:lesson-02-core-professions",
+            "activity:lesson-02-sein-arbeiten-contrast"
+          ],
+          "estimatedMinutes": 25,
+          "skillTargets": [
+            "exposure",
+            "recognition"
+          ],
+          "required": true
+        },
+        {
+          "id": "listen",
+          "kind": "listen",
+          "titleEn": "Listening",
+          "activityIds": [
+            "activity:lesson-02-workbook-listening"
+          ],
+          "estimatedMinutes": 10,
+          "skillTargets": [
+            "listening"
+          ],
+          "required": true
+        },
+        {
+          "id": "practise",
+          "kind": "practise",
+          "titleEn": "Practise",
+          "activityIds": [
+            "activity:lesson-02-numbers-0-100",
+            "activity:lesson-02-person-form-morphology",
+            "activity:lesson-02-profession-qa-builder",
+            "activity:lesson-02-profile-reading-writing"
+          ],
+          "estimatedMinutes": 22,
+          "skillTargets": [
+            "recall",
+            "production"
+          ],
+          "required": true
+        },
+        {
+          "id": "review",
+          "kind": "review",
+          "titleEn": "Teacher collection review",
+          "activityIds": [
+            "activity:lesson-02-teacher-professions-deck"
+          ],
+          "estimatedMinutes": 15,
+          "skillTargets": [
+            "review-stability"
+          ],
+          "required": false
+        },
+        {
+          "id": "check",
+          "kind": "check",
+          "titleEn": "Checkpoint",
+          "activityIds": [
+            "activity:lesson-02-checkpoint-summary"
+          ],
+          "estimatedMinutes": 8,
+          "skillTargets": [
+            "recall",
+            "production"
+          ],
+          "required": true
+        }
+      ],
+      "collections": [
+        {
+          "collectionId": "collection:teacher-professions",
+          "sourcePriority": 3,
+          "required": false
+        }
+      ],
+      "sourceAssertionIds": [
+        "assert:lesson-02-title-de",
+        "assert:lesson-02-goals"
+      ],
+      "relationIds": [
+        "rel:lesson-01-prerequisite-of-02"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "titleDe",
+            "assertionId": "assert:lesson-02-title-de"
+          },
+          {
+            "field": "communicativeGoals",
+            "assertionId": "assert:lesson-02-goals"
+          }
+        ]
+      }
+    }
+  ],
+  "lexemes": [
+    {
+      "kind": "Lexeme",
+      "id": "lex:jahr",
+      "lemma": "Jahr",
+      "partOfSpeech": "noun",
+      "meanings": [
+        {
+          "id": "meaning:jahr-en",
+          "glossEn": "year"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:jahr-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-jahr-lemma",
+        "assert:lex-jahr-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-jahr-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-jahr-meanings"
+          }
+        ]
+      },
+      "noun": {
+        "gender": "neuter",
+        "article": "das",
+        "singular": "Jahr",
+        "plurals": []
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:kind",
+      "lemma": "Kind",
+      "partOfSpeech": "noun",
+      "meanings": [
+        {
+          "id": "meaning:kind-en",
+          "glossEn": "child"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:kind-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-kind-lemma",
+        "assert:lex-kind-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-kind-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-kind-meanings"
+          }
+        ]
+      },
+      "noun": {
+        "gender": "neuter",
+        "article": "das",
+        "singular": "Kind",
+        "plurals": []
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:verheiratet",
+      "lemma": "verheiratet",
+      "partOfSpeech": "adjective",
+      "meanings": [
+        {
+          "id": "meaning:verheiratet-en",
+          "glossEn": "married"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:verheiratet-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-verheiratet-lemma",
+        "assert:lex-verheiratet-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-verheiratet-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-verheiratet-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:geschieden",
+      "lemma": "geschieden",
+      "partOfSpeech": "adjective",
+      "meanings": [
+        {
+          "id": "meaning:geschieden-en",
+          "glossEn": "divorced"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:geschieden-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-geschieden-lemma",
+        "assert:lex-geschieden-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-geschieden-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-geschieden-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:single",
+      "lemma": "Single",
+      "partOfSpeech": "noun",
+      "meanings": [
+        {
+          "id": "meaning:single-en",
+          "glossEn": "single person"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:single-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-single-lemma",
+        "assert:lex-single-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-single-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-single-meanings"
+          }
+        ]
+      },
+      "noun": {
+        "gender": "masculine",
+        "article": "der",
+        "singular": "Single",
+        "plurals": []
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:allein",
+      "lemma": "allein",
+      "partOfSpeech": "adjective",
+      "meanings": [
+        {
+          "id": "meaning:allein-en",
+          "glossEn": "alone"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:allein-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-allein-lemma",
+        "assert:lex-allein-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-allein-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-allein-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:wohnort",
+      "lemma": "Wohnort",
+      "partOfSpeech": "noun",
+      "meanings": [
+        {
+          "id": "meaning:wohnort-en",
+          "glossEn": "place of residence"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:wohnort-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-wohnort-lemma",
+        "assert:lex-wohnort-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-wohnort-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-wohnort-meanings"
+          }
+        ]
+      },
+      "noun": {
+        "gender": "masculine",
+        "article": "der",
+        "singular": "Wohnort",
+        "plurals": []
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:herkunft",
+      "lemma": "Herkunft",
+      "partOfSpeech": "noun",
+      "meanings": [
+        {
+          "id": "meaning:herkunft-en",
+          "glossEn": "origin"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:herkunft-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-herkunft-lemma",
+        "assert:lex-herkunft-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-herkunft-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-herkunft-meanings"
+          }
+        ]
+      },
+      "noun": {
+        "gender": "feminine",
+        "article": "die",
+        "singular": "Herkunft",
+        "plurals": []
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:alter",
+      "lemma": "Alter",
+      "partOfSpeech": "noun",
+      "meanings": [
+        {
+          "id": "meaning:alter-en",
+          "glossEn": "age"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:alter-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-alter-lemma",
+        "assert:lex-alter-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-alter-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-alter-meanings"
+          }
+        ]
+      },
+      "noun": {
+        "gender": "neuter",
+        "article": "das",
+        "singular": "Alter",
+        "plurals": []
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:familienstand",
+      "lemma": "Familienstand",
+      "partOfSpeech": "noun",
+      "meanings": [
+        {
+          "id": "meaning:familienstand-en",
+          "glossEn": "marital status"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:familienstand-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-familienstand-lemma",
+        "assert:lex-familienstand-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-familienstand-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-familienstand-meanings"
+          }
+        ]
+      },
+      "noun": {
+        "gender": "masculine",
+        "article": "der",
+        "singular": "Familienstand",
+        "plurals": []
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:studium",
+      "lemma": "Studium",
+      "partOfSpeech": "noun",
+      "meanings": [
+        {
+          "id": "meaning:studium-en",
+          "glossEn": "studies"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:studium-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-studium-lemma",
+        "assert:lex-studium-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-studium-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-studium-meanings"
+          }
+        ]
+      },
+      "noun": {
+        "gender": "neuter",
+        "article": "das",
+        "singular": "Studium",
+        "plurals": []
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:beruf",
+      "lemma": "Beruf",
+      "partOfSpeech": "noun",
+      "meanings": [
+        {
+          "id": "meaning:beruf-en",
+          "glossEn": "profession"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:beruf-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-beruf-lemma",
+        "assert:lex-beruf-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-beruf-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-beruf-meanings"
+          }
+        ]
+      },
+      "noun": {
+        "gender": "masculine",
+        "article": "der",
+        "singular": "Beruf",
+        "plurals": []
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:job",
+      "lemma": "Job",
+      "partOfSpeech": "noun",
+      "meanings": [
+        {
+          "id": "meaning:job-en",
+          "glossEn": "job"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:job-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-job-lemma",
+        "assert:lex-job-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-job-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-job-meanings"
+          }
+        ]
+      },
+      "noun": {
+        "gender": "masculine",
+        "article": "der",
+        "singular": "Job",
+        "plurals": []
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:stelle",
+      "lemma": "Stelle",
+      "partOfSpeech": "noun",
+      "meanings": [
+        {
+          "id": "meaning:stelle-en",
+          "glossEn": "position/job"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:stelle-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-stelle-lemma",
+        "assert:lex-stelle-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-stelle-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-stelle-meanings"
+          }
+        ]
+      },
+      "noun": {
+        "gender": "feminine",
+        "article": "die",
+        "singular": "Stelle",
+        "plurals": []
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:ausbildung",
+      "lemma": "Ausbildung",
+      "partOfSpeech": "noun",
+      "meanings": [
+        {
+          "id": "meaning:ausbildung-en",
+          "glossEn": "apprenticeship/training"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:ausbildung-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-ausbildung-lemma",
+        "assert:lex-ausbildung-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-ausbildung-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-ausbildung-meanings"
+          }
+        ]
+      },
+      "noun": {
+        "gender": "feminine",
+        "article": "die",
+        "singular": "Ausbildung",
+        "plurals": []
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:praktikum",
+      "lemma": "Praktikum",
+      "partOfSpeech": "noun",
+      "meanings": [
+        {
+          "id": "meaning:praktikum-en",
+          "glossEn": "internship"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:praktikum-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-praktikum-lemma",
+        "assert:lex-praktikum-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-praktikum-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-praktikum-meanings"
+          }
+        ]
+      },
+      "noun": {
+        "gender": "neuter",
+        "article": "das",
+        "singular": "Praktikum",
+        "plurals": []
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:firma",
+      "lemma": "Firma",
+      "partOfSpeech": "noun",
+      "meanings": [
+        {
+          "id": "meaning:firma-en",
+          "glossEn": "company"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:firma-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-firma-lemma",
+        "assert:lex-firma-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-firma-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-firma-meanings"
+          }
+        ]
+      },
+      "noun": {
+        "gender": "feminine",
+        "article": "die",
+        "singular": "Firma",
+        "plurals": []
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:paketzusteller",
+      "lemma": "Paketzusteller",
+      "partOfSpeech": "noun",
+      "noun": {
+        "gender": "masculine",
+        "article": "der",
+        "singular": "Paketzusteller",
+        "plurals": [],
+        "personFormGroupId": "person-form:paketzusteller"
+      },
+      "meanings": [
+        {
+          "id": "meaning:paketzusteller-en",
+          "glossEn": "parcel delivery agent"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:paketzusteller-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-paketzusteller-lemma",
+        "assert:lex-paketzusteller-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-paketzusteller-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-paketzusteller-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:paketzustellerin",
+      "lemma": "Paketzustellerin",
+      "partOfSpeech": "noun",
+      "noun": {
+        "gender": "feminine",
+        "article": "die",
+        "singular": "Paketzustellerin",
+        "plurals": [],
+        "personFormGroupId": "person-form:paketzusteller"
+      },
+      "meanings": [
+        {
+          "id": "meaning:paketzustellerin-en",
+          "glossEn": "parcel delivery agent"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:paketzustellerin-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-paketzustellerin-lemma",
+        "assert:lex-paketzustellerin-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-paketzustellerin-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-paketzustellerin-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:friseur",
+      "lemma": "Friseur",
+      "partOfSpeech": "noun",
+      "noun": {
+        "gender": "masculine",
+        "article": "der",
+        "singular": "Friseur",
+        "plurals": [],
+        "personFormGroupId": "person-form:friseur"
+      },
+      "meanings": [
+        {
+          "id": "meaning:friseur-en",
+          "glossEn": "hairdresser"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:friseur-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-friseur-lemma",
+        "assert:lex-friseur-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-friseur-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-friseur-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:friseurin",
+      "lemma": "Friseurin",
+      "partOfSpeech": "noun",
+      "noun": {
+        "gender": "feminine",
+        "article": "die",
+        "singular": "Friseurin",
+        "plurals": [],
+        "personFormGroupId": "person-form:friseur"
+      },
+      "meanings": [
+        {
+          "id": "meaning:friseurin-en",
+          "glossEn": "hairdresser"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:friseurin-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-friseurin-lemma",
+        "assert:lex-friseurin-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-friseurin-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-friseurin-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:kellner",
+      "lemma": "Kellner",
+      "partOfSpeech": "noun",
+      "noun": {
+        "gender": "masculine",
+        "article": "der",
+        "singular": "Kellner",
+        "plurals": [],
+        "personFormGroupId": "person-form:kellner"
+      },
+      "meanings": [
+        {
+          "id": "meaning:kellner-en",
+          "glossEn": "waiter / waitress"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:kellner-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-kellner-lemma",
+        "assert:lex-kellner-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-kellner-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-kellner-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:kellnerin",
+      "lemma": "Kellnerin",
+      "partOfSpeech": "noun",
+      "noun": {
+        "gender": "feminine",
+        "article": "die",
+        "singular": "Kellnerin",
+        "plurals": [],
+        "personFormGroupId": "person-form:kellner"
+      },
+      "meanings": [
+        {
+          "id": "meaning:kellnerin-en",
+          "glossEn": "waiter / waitress"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:kellnerin-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-kellnerin-lemma",
+        "assert:lex-kellnerin-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-kellnerin-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-kellnerin-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:ingenieur",
+      "lemma": "Ingenieur",
+      "partOfSpeech": "noun",
+      "noun": {
+        "gender": "masculine",
+        "article": "der",
+        "singular": "Ingenieur",
+        "plurals": [],
+        "personFormGroupId": "person-form:ingenieur"
+      },
+      "meanings": [
+        {
+          "id": "meaning:ingenieur-en",
+          "glossEn": "engineer"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:ingenieur-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-ingenieur-lemma",
+        "assert:lex-ingenieur-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-ingenieur-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-ingenieur-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:ingenieurin",
+      "lemma": "Ingenieurin",
+      "partOfSpeech": "noun",
+      "noun": {
+        "gender": "feminine",
+        "article": "die",
+        "singular": "Ingenieurin",
+        "plurals": [],
+        "personFormGroupId": "person-form:ingenieur"
+      },
+      "meanings": [
+        {
+          "id": "meaning:ingenieurin-en",
+          "glossEn": "engineer"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:ingenieurin-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-ingenieurin-lemma",
+        "assert:lex-ingenieurin-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-ingenieurin-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-ingenieurin-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:kfz-mechatroniker",
+      "lemma": "Kfz-Mechatroniker",
+      "partOfSpeech": "noun",
+      "noun": {
+        "gender": "masculine",
+        "article": "der",
+        "singular": "Kfz-Mechatroniker",
+        "plurals": [],
+        "personFormGroupId": "person-form:kfz-mechatroniker"
+      },
+      "meanings": [
+        {
+          "id": "meaning:kfz-mechatroniker-en",
+          "glossEn": "automotive mechatronics engineer"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:kfz-mechatroniker-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-kfz-mechatroniker-lemma",
+        "assert:lex-kfz-mechatroniker-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-kfz-mechatroniker-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-kfz-mechatroniker-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:kfz-mechatronikerin",
+      "lemma": "Kfz-Mechatronikerin",
+      "partOfSpeech": "noun",
+      "noun": {
+        "gender": "feminine",
+        "article": "die",
+        "singular": "Kfz-Mechatronikerin",
+        "plurals": [],
+        "personFormGroupId": "person-form:kfz-mechatroniker"
+      },
+      "meanings": [
+        {
+          "id": "meaning:kfz-mechatronikerin-en",
+          "glossEn": "automotive mechatronics engineer"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:kfz-mechatronikerin-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-kfz-mechatronikerin-lemma",
+        "assert:lex-kfz-mechatronikerin-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-kfz-mechatronikerin-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-kfz-mechatronikerin-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:student",
+      "lemma": "Student",
+      "partOfSpeech": "noun",
+      "noun": {
+        "gender": "masculine",
+        "article": "der",
+        "singular": "Student",
+        "plurals": [],
+        "personFormGroupId": "person-form:student"
+      },
+      "meanings": [
+        {
+          "id": "meaning:student-en",
+          "glossEn": "university student"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:student-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-student-lemma",
+        "assert:lex-student-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-student-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-student-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:studentin",
+      "lemma": "Studentin",
+      "partOfSpeech": "noun",
+      "noun": {
+        "gender": "feminine",
+        "article": "die",
+        "singular": "Studentin",
+        "plurals": [],
+        "personFormGroupId": "person-form:student"
+      },
+      "meanings": [
+        {
+          "id": "meaning:studentin-en",
+          "glossEn": "university student"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:studentin-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-studentin-lemma",
+        "assert:lex-studentin-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-studentin-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-studentin-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:journalist",
+      "lemma": "Journalist",
+      "partOfSpeech": "noun",
+      "noun": {
+        "gender": "masculine",
+        "article": "der",
+        "singular": "Journalist",
+        "plurals": [],
+        "personFormGroupId": "person-form:journalist"
+      },
+      "meanings": [
+        {
+          "id": "meaning:journalist-en",
+          "glossEn": "journalist"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:journalist-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-journalist-lemma",
+        "assert:lex-journalist-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-journalist-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-journalist-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:journalistin",
+      "lemma": "Journalistin",
+      "partOfSpeech": "noun",
+      "noun": {
+        "gender": "feminine",
+        "article": "die",
+        "singular": "Journalistin",
+        "plurals": [],
+        "personFormGroupId": "person-form:journalist"
+      },
+      "meanings": [
+        {
+          "id": "meaning:journalistin-en",
+          "glossEn": "journalist"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:journalistin-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-journalistin-lemma",
+        "assert:lex-journalistin-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-journalistin-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-journalistin-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:architekt",
+      "lemma": "Architekt",
+      "partOfSpeech": "noun",
+      "noun": {
+        "gender": "masculine",
+        "article": "der",
+        "singular": "Architekt",
+        "plurals": [],
+        "personFormGroupId": "person-form:architekt"
+      },
+      "meanings": [
+        {
+          "id": "meaning:architekt-en",
+          "glossEn": "architect"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:architekt-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-architekt-lemma",
+        "assert:lex-architekt-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-architekt-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-architekt-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:architektin",
+      "lemma": "Architektin",
+      "partOfSpeech": "noun",
+      "noun": {
+        "gender": "feminine",
+        "article": "die",
+        "singular": "Architektin",
+        "plurals": [],
+        "personFormGroupId": "person-form:architekt"
+      },
+      "meanings": [
+        {
+          "id": "meaning:architektin-en",
+          "glossEn": "architect"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:architektin-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-architektin-lemma",
+        "assert:lex-architektin-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-architektin-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-architektin-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:arzt",
+      "lemma": "Arzt",
+      "partOfSpeech": "noun",
+      "noun": {
+        "gender": "masculine",
+        "article": "der",
+        "singular": "Arzt",
+        "plurals": [],
+        "personFormGroupId": "person-form:arzt"
+      },
+      "meanings": [
+        {
+          "id": "meaning:arzt-en",
+          "glossEn": "doctor"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:arzt-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-arzt-lemma",
+        "assert:lex-arzt-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-arzt-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-arzt-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:aerztin",
+      "lemma": "Ärztin",
+      "partOfSpeech": "noun",
+      "noun": {
+        "gender": "feminine",
+        "article": "die",
+        "singular": "Ärztin",
+        "plurals": [],
+        "personFormGroupId": "person-form:arzt"
+      },
+      "meanings": [
+        {
+          "id": "meaning:aerztin-en",
+          "glossEn": "doctor"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:aerztin-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-aerztin-lemma",
+        "assert:lex-aerztin-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-aerztin-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-aerztin-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:lehrer",
+      "lemma": "Lehrer",
+      "partOfSpeech": "noun",
+      "noun": {
+        "gender": "masculine",
+        "article": "der",
+        "singular": "Lehrer",
+        "plurals": [],
+        "personFormGroupId": "person-form:lehrer"
+      },
+      "meanings": [
+        {
+          "id": "meaning:lehrer-en",
+          "glossEn": "teacher"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:lehrer-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-lehrer-lemma",
+        "assert:lex-lehrer-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-lehrer-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-lehrer-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:lehrerin",
+      "lemma": "Lehrerin",
+      "partOfSpeech": "noun",
+      "noun": {
+        "gender": "feminine",
+        "article": "die",
+        "singular": "Lehrerin",
+        "plurals": [],
+        "personFormGroupId": "person-form:lehrer"
+      },
+      "meanings": [
+        {
+          "id": "meaning:lehrerin-en",
+          "glossEn": "teacher"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:lehrerin-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-lehrerin-lemma",
+        "assert:lex-lehrerin-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-lehrerin-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-lehrerin-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:verkaeufer",
+      "lemma": "Verkäufer",
+      "partOfSpeech": "noun",
+      "noun": {
+        "gender": "masculine",
+        "article": "der",
+        "singular": "Verkäufer",
+        "plurals": [],
+        "personFormGroupId": "person-form:verkaeufer"
+      },
+      "meanings": [
+        {
+          "id": "meaning:verkaeufer-en",
+          "glossEn": "shop assistant"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:verkaeufer-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-verkaeufer-lemma",
+        "assert:lex-verkaeufer-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-verkaeufer-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-verkaeufer-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:verkaeuferin",
+      "lemma": "Verkäuferin",
+      "partOfSpeech": "noun",
+      "noun": {
+        "gender": "feminine",
+        "article": "die",
+        "singular": "Verkäuferin",
+        "plurals": [],
+        "personFormGroupId": "person-form:verkaeufer"
+      },
+      "meanings": [
+        {
+          "id": "meaning:verkaeuferin-en",
+          "glossEn": "shop assistant"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:verkaeuferin-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-verkaeuferin-lemma",
+        "assert:lex-verkaeuferin-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-verkaeuferin-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-verkaeuferin-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:schueler",
+      "lemma": "Schüler",
+      "partOfSpeech": "noun",
+      "noun": {
+        "gender": "masculine",
+        "article": "der",
+        "singular": "Schüler",
+        "plurals": [],
+        "personFormGroupId": "person-form:schueler"
+      },
+      "meanings": [
+        {
+          "id": "meaning:schueler-en",
+          "glossEn": "school student"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:schueler-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-schueler-lemma",
+        "assert:lex-schueler-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-schueler-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-schueler-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:schuelerin",
+      "lemma": "Schülerin",
+      "partOfSpeech": "noun",
+      "noun": {
+        "gender": "feminine",
+        "article": "die",
+        "singular": "Schülerin",
+        "plurals": [],
+        "personFormGroupId": "person-form:schueler"
+      },
+      "meanings": [
+        {
+          "id": "meaning:schuelerin-en",
+          "glossEn": "school student"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:schuelerin-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-schuelerin-lemma",
+        "assert:lex-schuelerin-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-schuelerin-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-schuelerin-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:rentner",
+      "lemma": "Rentner",
+      "partOfSpeech": "noun",
+      "noun": {
+        "gender": "masculine",
+        "article": "der",
+        "singular": "Rentner",
+        "plurals": [],
+        "personFormGroupId": "person-form:rentner"
+      },
+      "meanings": [
+        {
+          "id": "meaning:rentner-en",
+          "glossEn": "pensioner"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:rentner-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-rentner-lemma",
+        "assert:lex-rentner-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-rentner-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-rentner-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:rentnerin",
+      "lemma": "Rentnerin",
+      "partOfSpeech": "noun",
+      "noun": {
+        "gender": "feminine",
+        "article": "die",
+        "singular": "Rentnerin",
+        "plurals": [],
+        "personFormGroupId": "person-form:rentner"
+      },
+      "meanings": [
+        {
+          "id": "meaning:rentnerin-en",
+          "glossEn": "pensioner"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:rentnerin-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-rentnerin-lemma",
+        "assert:lex-rentnerin-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-rentnerin-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-rentnerin-meanings"
+          }
+        ]
+      }
+    }
+  ],
+  "verbs": [
+    {
+      "kind": "Verb",
+      "id": "verb:wohnen",
+      "infinitive": "wohnen",
+      "meanings": [
+        {
+          "glossEn": "wohnen",
+          "useNote": "English gloss not present in alpha-content.json; infinitive echoed pending glossary enrichment"
+        }
+      ],
+      "present": [
+        {
+          "person": "ich",
+          "form": "wohne"
+        },
+        {
+          "person": "du",
+          "form": "wohnst"
+        },
+        {
+          "person": "er_sie_es",
+          "form": "wohnt"
+        },
+        {
+          "person": "wir",
+          "form": "wohnen"
+        },
+        {
+          "person": "ihr",
+          "form": "wohnt"
+        },
+        {
+          "person": "sie_plural",
+          "form": "wohnen"
+        },
+        {
+          "person": "Sie_formal",
+          "form": "wohnen"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "grammarIds": [],
+      "relationIds": [
+        "rel:wohnen-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:verb-wohnen-infinitive",
+        "assert:verb-wohnen-meanings",
+        "assert:verb-wohnen-present"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "Verb",
+      "id": "verb:leben",
+      "infinitive": "leben",
+      "meanings": [
+        {
+          "glossEn": "leben",
+          "useNote": "English gloss not present in alpha-content.json; infinitive echoed pending glossary enrichment"
+        }
+      ],
+      "present": [
+        {
+          "person": "ich",
+          "form": "lebe"
+        },
+        {
+          "person": "du",
+          "form": "lebst"
+        },
+        {
+          "person": "er_sie_es",
+          "form": "lebt"
+        },
+        {
+          "person": "wir",
+          "form": "leben"
+        },
+        {
+          "person": "ihr",
+          "form": "lebt"
+        },
+        {
+          "person": "sie_plural",
+          "form": "leben"
+        },
+        {
+          "person": "Sie_formal",
+          "form": "leben"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "grammarIds": [],
+      "relationIds": [
+        "rel:leben-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:verb-leben-infinitive",
+        "assert:verb-leben-meanings",
+        "assert:verb-leben-present"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "Verb",
+      "id": "verb:haben",
+      "infinitive": "haben",
+      "meanings": [
+        {
+          "glossEn": "haben",
+          "useNote": "English gloss not present in alpha-content.json; infinitive echoed pending glossary enrichment"
+        }
+      ],
+      "present": [
+        {
+          "person": "ich",
+          "form": "habe"
+        },
+        {
+          "person": "du",
+          "form": "hast"
+        },
+        {
+          "person": "er_sie_es",
+          "form": "hat"
+        },
+        {
+          "person": "wir",
+          "form": "haben"
+        },
+        {
+          "person": "ihr",
+          "form": "habt"
+        },
+        {
+          "person": "sie_plural",
+          "form": "haben"
+        },
+        {
+          "person": "Sie_formal",
+          "form": "haben"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "grammarIds": [],
+      "relationIds": [
+        "rel:haben-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:verb-haben-infinitive",
+        "assert:verb-haben-meanings",
+        "assert:verb-haben-present"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "Verb",
+      "id": "verb:arbeiten",
+      "infinitive": "arbeiten",
+      "meanings": [
+        {
+          "glossEn": "arbeiten",
+          "useNote": "English gloss not present in alpha-content.json; infinitive echoed pending glossary enrichment"
+        }
+      ],
+      "present": [
+        {
+          "person": "ich",
+          "form": "arbeite"
+        },
+        {
+          "person": "du",
+          "form": "arbeitest"
+        },
+        {
+          "person": "er_sie_es",
+          "form": "arbeitet"
+        },
+        {
+          "person": "wir",
+          "form": "arbeiten"
+        },
+        {
+          "person": "ihr",
+          "form": "arbeitet"
+        },
+        {
+          "person": "sie_plural",
+          "form": "arbeiten"
+        },
+        {
+          "person": "Sie_formal",
+          "form": "arbeiten"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "grammarIds": [],
+      "relationIds": [
+        "rel:arbeiten-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:verb-arbeiten-infinitive",
+        "assert:verb-arbeiten-meanings",
+        "assert:verb-arbeiten-present"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "Verb",
+      "id": "verb:machen",
+      "infinitive": "machen",
+      "meanings": [
+        {
+          "glossEn": "machen",
+          "useNote": "English gloss not present in alpha-content.json; infinitive echoed pending glossary enrichment"
+        }
+      ],
+      "present": [
+        {
+          "person": "ich",
+          "form": "mache"
+        },
+        {
+          "person": "du",
+          "form": "machst"
+        },
+        {
+          "person": "er_sie_es",
+          "form": "macht"
+        },
+        {
+          "person": "wir",
+          "form": "machen"
+        },
+        {
+          "person": "ihr",
+          "form": "macht"
+        },
+        {
+          "person": "sie_plural",
+          "form": "machen"
+        },
+        {
+          "person": "Sie_formal",
+          "form": "machen"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "grammarIds": [],
+      "relationIds": [
+        "rel:machen-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:verb-machen-infinitive",
+        "assert:verb-machen-meanings",
+        "assert:verb-machen-present"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "Verb",
+      "id": "verb:studieren",
+      "infinitive": "studieren",
+      "meanings": [
+        {
+          "glossEn": "studieren",
+          "useNote": "English gloss not present in alpha-content.json; infinitive echoed pending glossary enrichment"
+        }
+      ],
+      "present": [
+        {
+          "person": "ich",
+          "form": "studiere"
+        },
+        {
+          "person": "du",
+          "form": "studierst"
+        },
+        {
+          "person": "er_sie_es",
+          "form": "studiert"
+        },
+        {
+          "person": "wir",
+          "form": "studieren"
+        },
+        {
+          "person": "ihr",
+          "form": "studiert"
+        },
+        {
+          "person": "sie_plural",
+          "form": "studieren"
+        },
+        {
+          "person": "Sie_formal",
+          "form": "studieren"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "grammarIds": [],
+      "relationIds": [
+        "rel:studieren-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:verb-studieren-infinitive",
+        "assert:verb-studieren-meanings",
+        "assert:verb-studieren-present"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    }
+  ],
+  "grammarConcepts": [],
+  "phrasePatterns": [
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:profession-casual-main-q",
+      "intent": "qa:profession-casual-main",
+      "register": "informal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Was bist du von Beruf?"
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Was bist du von Beruf?"
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-profession-casual-main-q-fixed",
+        "assert:phrase-profession-casual-main-q-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-profession-casual-main-q-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-profession-casual-main-q-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:profession-casual-main-a1",
+      "intent": "qa:profession-casual-main-answer",
+      "register": "informal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich bin … von Beruf."
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich bin … von Beruf."
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-profession-casual-main-a1-fixed",
+        "assert:phrase-profession-casual-main-a1-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-profession-casual-main-a1-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-profession-casual-main-a1-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:profession-casual-main-a2",
+      "intent": "qa:profession-casual-main-answer",
+      "register": "informal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich bin …"
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich bin …"
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-profession-casual-main-a2-fixed",
+        "assert:phrase-profession-casual-main-a2-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-profession-casual-main-a2-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-profession-casual-main-a2-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:profession-casual-main-a3",
+      "intent": "qa:profession-casual-main-answer",
+      "register": "informal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich arbeite als …"
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich arbeite als …"
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-profession-casual-main-a3-fixed",
+        "assert:phrase-profession-casual-main-a3-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-profession-casual-main-a3-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-profession-casual-main-a3-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:profession-formal-main-q",
+      "intent": "qa:profession-formal-main",
+      "register": "formal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Was sind Sie von Beruf?"
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Was sind Sie von Beruf?"
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-profession-formal-main-q-fixed",
+        "assert:phrase-profession-formal-main-q-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-profession-formal-main-q-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-profession-formal-main-q-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:profession-formal-main-a1",
+      "intent": "qa:profession-formal-main-answer",
+      "register": "formal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich bin … von Beruf."
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich bin … von Beruf."
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-profession-formal-main-a1-fixed",
+        "assert:phrase-profession-formal-main-a1-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-profession-formal-main-a1-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-profession-formal-main-a1-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:profession-formal-main-a2",
+      "intent": "qa:profession-formal-main-answer",
+      "register": "formal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich bin …"
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich bin …"
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-profession-formal-main-a2-fixed",
+        "assert:phrase-profession-formal-main-a2-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-profession-formal-main-a2-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-profession-formal-main-a2-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:profession-formal-main-a3",
+      "intent": "qa:profession-formal-main-answer",
+      "register": "formal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich arbeite als …"
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich arbeite als …"
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-profession-formal-main-a3-fixed",
+        "assert:phrase-profession-formal-main-a3-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-profession-formal-main-a3-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-profession-formal-main-a3-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:work-formal-main-q",
+      "intent": "qa:work-formal-main",
+      "register": "formal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Was machen Sie beruflich?"
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Was machen Sie beruflich?"
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-work-formal-main-q-fixed",
+        "assert:phrase-work-formal-main-q-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-work-formal-main-q-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-work-formal-main-q-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:work-formal-main-a1",
+      "intent": "qa:work-formal-main-answer",
+      "register": "formal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich arbeite als …"
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich arbeite als …"
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-work-formal-main-a1-fixed",
+        "assert:phrase-work-formal-main-a1-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-work-formal-main-a1-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-work-formal-main-a1-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:work-formal-main-a2",
+      "intent": "qa:work-formal-main-answer",
+      "register": "formal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich arbeite bei …"
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich arbeite bei …"
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-work-formal-main-a2-fixed",
+        "assert:phrase-work-formal-main-a2-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-work-formal-main-a2-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-work-formal-main-a2-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:work-formal-main-a3",
+      "intent": "qa:work-formal-main-answer",
+      "register": "formal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich studiere …"
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich studiere …"
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-work-formal-main-a3-fixed",
+        "assert:phrase-work-formal-main-a3-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-work-formal-main-a3-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-work-formal-main-a3-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:work-formal-main-a4",
+      "intent": "qa:work-formal-main-answer",
+      "register": "formal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich arbeite im Moment nicht."
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich arbeite im Moment nicht."
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-work-formal-main-a4-fixed",
+        "assert:phrase-work-formal-main-a4-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-work-formal-main-a4-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-work-formal-main-a4-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:age-casual-q",
+      "intent": "qa:age-casual",
+      "register": "informal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Wie alt bist du?"
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Wie alt bist du?"
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-age-casual-q-fixed",
+        "assert:phrase-age-casual-q-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-age-casual-q-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-age-casual-q-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:age-casual-a1",
+      "intent": "qa:age-casual-answer",
+      "register": "informal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich bin … Jahre alt."
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich bin … Jahre alt."
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-age-casual-a1-fixed",
+        "assert:phrase-age-casual-a1-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-age-casual-a1-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-age-casual-a1-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:age-formal-q",
+      "intent": "qa:age-formal",
+      "register": "formal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Wie alt sind Sie?"
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Wie alt sind Sie?"
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-age-formal-q-fixed",
+        "assert:phrase-age-formal-q-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-age-formal-q-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-age-formal-q-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:age-formal-a1",
+      "intent": "qa:age-formal-answer",
+      "register": "formal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich bin … Jahre alt."
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich bin … Jahre alt."
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-age-formal-a1-fixed",
+        "assert:phrase-age-formal-a1-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-age-formal-a1-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-age-formal-a1-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:residence-casual-q",
+      "intent": "qa:residence-casual",
+      "register": "informal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Wo wohnst du?"
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Wo wohnst du?"
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-residence-casual-q-fixed",
+        "assert:phrase-residence-casual-q-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-residence-casual-q-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-residence-casual-q-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:residence-casual-a1",
+      "intent": "qa:residence-casual-answer",
+      "register": "informal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich wohne in …"
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich wohne in …"
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-residence-casual-a1-fixed",
+        "assert:phrase-residence-casual-a1-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-residence-casual-a1-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-residence-casual-a1-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:residence-formal-q",
+      "intent": "qa:residence-formal",
+      "register": "formal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Wo wohnen Sie?"
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Wo wohnen Sie?"
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-residence-formal-q-fixed",
+        "assert:phrase-residence-formal-q-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-residence-formal-q-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-residence-formal-q-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:residence-formal-a1",
+      "intent": "qa:residence-formal-answer",
+      "register": "formal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich wohne in …"
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich wohne in …"
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-residence-formal-a1-fixed",
+        "assert:phrase-residence-formal-a1-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-residence-formal-a1-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-residence-formal-a1-accepted"
+          }
+        ]
+      }
+    }
+  ],
+  "qaPairs": [
+    {
+      "kind": "QAPair",
+      "id": "qa:profession-casual-main",
+      "intent": "qa:profession-casual-main",
+      "register": "informal",
+      "questionPatternId": "phrase:profession-casual-main-q",
+      "answerPatternIds": [
+        "phrase:profession-casual-main-a1",
+        "phrase:profession-casual-main-a2",
+        "phrase:profession-casual-main-a3"
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [
+        "rel:profession-casual-main-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:qa-profession-casual-main-question",
+        "assert:qa-profession-casual-main-answers"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "questionPatternId",
+            "assertionId": "assert:qa-profession-casual-main-question"
+          },
+          {
+            "field": "answerPatternIds",
+            "assertionId": "assert:qa-profession-casual-main-answers"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "QAPair",
+      "id": "qa:profession-formal-main",
+      "intent": "qa:profession-formal-main",
+      "register": "formal",
+      "questionPatternId": "phrase:profession-formal-main-q",
+      "answerPatternIds": [
+        "phrase:profession-formal-main-a1",
+        "phrase:profession-formal-main-a2",
+        "phrase:profession-formal-main-a3"
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [
+        "rel:profession-formal-main-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:qa-profession-formal-main-question",
+        "assert:qa-profession-formal-main-answers"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "questionPatternId",
+            "assertionId": "assert:qa-profession-formal-main-question"
+          },
+          {
+            "field": "answerPatternIds",
+            "assertionId": "assert:qa-profession-formal-main-answers"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "QAPair",
+      "id": "qa:work-formal-main",
+      "intent": "qa:work-formal-main",
+      "register": "formal",
+      "questionPatternId": "phrase:work-formal-main-q",
+      "answerPatternIds": [
+        "phrase:work-formal-main-a1",
+        "phrase:work-formal-main-a2",
+        "phrase:work-formal-main-a3",
+        "phrase:work-formal-main-a4"
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [
+        "rel:work-formal-main-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:qa-work-formal-main-question",
+        "assert:qa-work-formal-main-answers"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "questionPatternId",
+            "assertionId": "assert:qa-work-formal-main-question"
+          },
+          {
+            "field": "answerPatternIds",
+            "assertionId": "assert:qa-work-formal-main-answers"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "QAPair",
+      "id": "qa:age-casual",
+      "intent": "qa:age-casual",
+      "register": "informal",
+      "questionPatternId": "phrase:age-casual-q",
+      "answerPatternIds": [
+        "phrase:age-casual-a1"
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [
+        "rel:age-casual-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:qa-age-casual-question",
+        "assert:qa-age-casual-answers"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "questionPatternId",
+            "assertionId": "assert:qa-age-casual-question"
+          },
+          {
+            "field": "answerPatternIds",
+            "assertionId": "assert:qa-age-casual-answers"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "QAPair",
+      "id": "qa:age-formal",
+      "intent": "qa:age-formal",
+      "register": "formal",
+      "questionPatternId": "phrase:age-formal-q",
+      "answerPatternIds": [
+        "phrase:age-formal-a1"
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [
+        "rel:age-formal-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:qa-age-formal-question",
+        "assert:qa-age-formal-answers"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "questionPatternId",
+            "assertionId": "assert:qa-age-formal-question"
+          },
+          {
+            "field": "answerPatternIds",
+            "assertionId": "assert:qa-age-formal-answers"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "QAPair",
+      "id": "qa:residence-casual",
+      "intent": "qa:residence-casual",
+      "register": "informal",
+      "questionPatternId": "phrase:residence-casual-q",
+      "answerPatternIds": [
+        "phrase:residence-casual-a1"
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [
+        "rel:residence-casual-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:qa-residence-casual-question",
+        "assert:qa-residence-casual-answers"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "questionPatternId",
+            "assertionId": "assert:qa-residence-casual-question"
+          },
+          {
+            "field": "answerPatternIds",
+            "assertionId": "assert:qa-residence-casual-answers"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "QAPair",
+      "id": "qa:residence-formal",
+      "intent": "qa:residence-formal",
+      "register": "formal",
+      "questionPatternId": "phrase:residence-formal-q",
+      "answerPatternIds": [
+        "phrase:residence-formal-a1"
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [
+        "rel:residence-formal-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:qa-residence-formal-question",
+        "assert:qa-residence-formal-answers"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "questionPatternId",
+            "assertionId": "assert:qa-residence-formal-question"
+          },
+          {
+            "field": "answerPatternIds",
+            "assertionId": "assert:qa-residence-formal-answers"
+          }
+        ]
+      }
+    }
+  ],
+  "dialogues": [],
+  "listeningAssets": [],
+  "collections": [],
+  "learningActivities": [],
+  "examples": [],
+  "relationships": [
+    {
+      "kind": "Relationship",
+      "id": "rel:lesson-01-prerequisite-of-02",
+      "type": "prerequisite-of",
+      "fromId": "lesson:01",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:jahr-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:jahr",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:kind-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:kind",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:verheiratet-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:verheiratet",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:geschieden-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:geschieden",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:single-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:single",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:allein-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:allein",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:wohnort-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:wohnort",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:herkunft-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:herkunft",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:alter-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:alter",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:familienstand-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:familienstand",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:studium-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:studium",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:beruf-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:beruf",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:job-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:job",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:stelle-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:stelle",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:ausbildung-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:ausbildung",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:praktikum-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:praktikum",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:firma-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:firma",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:paketzusteller-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:paketzusteller",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:paketzustellerin-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:paketzustellerin",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:paketzusteller-person-form",
+      "type": "person-form-of",
+      "fromId": "lex:paketzustellerin",
+      "toId": "lex:paketzusteller",
+      "note": "core glossary profession person-form pair"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:friseur-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:friseur",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:friseurin-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:friseurin",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:friseur-person-form",
+      "type": "person-form-of",
+      "fromId": "lex:friseurin",
+      "toId": "lex:friseur",
+      "note": "core glossary profession person-form pair"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:kellner-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:kellner",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:kellnerin-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:kellnerin",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:kellner-person-form",
+      "type": "person-form-of",
+      "fromId": "lex:kellnerin",
+      "toId": "lex:kellner",
+      "note": "core glossary profession person-form pair"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:ingenieur-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:ingenieur",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:ingenieurin-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:ingenieurin",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:ingenieur-person-form",
+      "type": "person-form-of",
+      "fromId": "lex:ingenieurin",
+      "toId": "lex:ingenieur",
+      "note": "core glossary profession person-form pair"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:kfz-mechatroniker-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:kfz-mechatroniker",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:kfz-mechatronikerin-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:kfz-mechatronikerin",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:kfz-mechatroniker-person-form",
+      "type": "person-form-of",
+      "fromId": "lex:kfz-mechatronikerin",
+      "toId": "lex:kfz-mechatroniker",
+      "note": "core glossary profession person-form pair"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:student-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:student",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:studentin-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:studentin",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:student-person-form",
+      "type": "person-form-of",
+      "fromId": "lex:studentin",
+      "toId": "lex:student",
+      "note": "core glossary profession person-form pair"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:journalist-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:journalist",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:journalistin-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:journalistin",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:journalist-person-form",
+      "type": "person-form-of",
+      "fromId": "lex:journalistin",
+      "toId": "lex:journalist",
+      "note": "core glossary profession person-form pair"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:architekt-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:architekt",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:architektin-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:architektin",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:architekt-person-form",
+      "type": "person-form-of",
+      "fromId": "lex:architektin",
+      "toId": "lex:architekt",
+      "note": "core glossary profession person-form pair"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:arzt-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:arzt",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:aerztin-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:aerztin",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:arzt-person-form",
+      "type": "person-form-of",
+      "fromId": "lex:aerztin",
+      "toId": "lex:arzt",
+      "note": "core glossary profession person-form pair"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:lehrer-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:lehrer",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:lehrerin-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:lehrerin",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:lehrer-person-form",
+      "type": "person-form-of",
+      "fromId": "lex:lehrerin",
+      "toId": "lex:lehrer",
+      "note": "core glossary profession person-form pair"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:verkaeufer-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:verkaeufer",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:verkaeuferin-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:verkaeuferin",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:verkaeufer-person-form",
+      "type": "person-form-of",
+      "fromId": "lex:verkaeuferin",
+      "toId": "lex:verkaeufer",
+      "note": "core glossary profession person-form pair"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:schueler-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:schueler",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:schuelerin-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:schuelerin",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:schueler-person-form",
+      "type": "person-form-of",
+      "fromId": "lex:schuelerin",
+      "toId": "lex:schueler",
+      "note": "core glossary profession person-form pair"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:rentner-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:rentner",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:rentnerin-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:rentnerin",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:rentner-person-form",
+      "type": "person-form-of",
+      "fromId": "lex:rentnerin",
+      "toId": "lex:rentner",
+      "note": "core glossary profession person-form pair"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:wohnen-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "verb:wohnen",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:leben-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "verb:leben",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:haben-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "verb:haben",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:sein-practised-l2",
+      "type": "practised-in",
+      "fromId": "verb:sein",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:arbeiten-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "verb:arbeiten",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:machen-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "verb:machen",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:studieren-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "verb:studieren",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:profession-casual-main-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "qa:profession-casual-main",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:profession-formal-main-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "qa:profession-formal-main",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:work-formal-main-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "qa:work-formal-main",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:age-casual-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "qa:age-casual",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:age-formal-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "qa:age-formal",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:residence-casual-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "qa:residence-casual",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:residence-formal-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "qa:residence-formal",
+      "toId": "lesson:02"
+    }
+  ],
+  "contentGaps": [
+    {
+      "kind": "ContentGap",
+      "id": "gap:meaning-wohnen",
+      "objectId": "verb:wohnen",
+      "field": "meanings",
+      "reason": "Lesson 2 verb English gloss absent from alpha-content.json; infinitive echoed as placeholder gloss pending glossary assertion",
+      "owner": "codex-content",
+      "blocksPublication": true
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:meaning-leben",
+      "objectId": "verb:leben",
+      "field": "meanings",
+      "reason": "Lesson 2 verb English gloss absent from alpha-content.json; infinitive echoed as placeholder gloss pending glossary assertion",
+      "owner": "codex-content",
+      "blocksPublication": true
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:meaning-haben",
+      "objectId": "verb:haben",
+      "field": "meanings",
+      "reason": "Lesson 2 verb English gloss absent from alpha-content.json; infinitive echoed as placeholder gloss pending glossary assertion",
+      "owner": "codex-content",
+      "blocksPublication": true
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:meaning-arbeiten",
+      "objectId": "verb:arbeiten",
+      "field": "meanings",
+      "reason": "Lesson 2 verb English gloss absent from alpha-content.json; infinitive echoed as placeholder gloss pending glossary assertion",
+      "owner": "codex-content",
+      "blocksPublication": true
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:meaning-machen",
+      "objectId": "verb:machen",
+      "field": "meanings",
+      "reason": "Lesson 2 verb English gloss absent from alpha-content.json; infinitive echoed as placeholder gloss pending glossary assertion",
+      "owner": "codex-content",
+      "blocksPublication": true
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:meaning-studieren",
+      "objectId": "verb:studieren",
+      "field": "meanings",
+      "reason": "Lesson 2 verb English gloss absent from alpha-content.json; infinitive echoed as placeholder gloss pending glossary assertion",
+      "owner": "codex-content",
+      "blocksPublication": true
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:qa-variable-age",
+      "objectId": "lesson:02",
+      "field": "qa.qa:age.register",
+      "reason": "alpha-content register=variable with combined question \"Wie alt bist du / sind Sie?\"; encoded as separate informal/formal patterns using evidenced halves; qualified review of split still required",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:qa-variable-residence",
+      "objectId": "lesson:02",
+      "field": "qa.qa:residence.register",
+      "reason": "alpha-content register=variable with combined question \"Wo wohnst du / wohnen Sie?\"; encoded as separate informal/formal patterns using evidenced halves; qualified review of split still required",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:grammar-l2-endings",
+      "objectId": "lesson:02",
+      "field": "grammarConcepts",
+      "reason": "Lesson 2 grammar topics from docs/11 are not structured in alpha-content.json",
+      "owner": "codex-content",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:numbers-0-100",
+      "objectId": "lesson:02",
+      "field": "lexemes.numbers",
+      "reason": "Numbers 0–100 required by docs/11 but absent from alpha-content.json",
+      "owner": "codex-content",
+      "blocksPublication": false
+    }
+  ]
+}

@@ -1,0 +1,1708 @@
+{
+  "schemaVersion": "1.0.0",
+  "fragmentId": "listening-assets",
+  "meta": {
+    "label": "C1 workbook listening mapping fragment (rights-gated)",
+    "generatedFor": "publication",
+    "workbookMappings": [
+      {
+        "id": "workbook-map:1-01-ab-momente-a11-1-3",
+        "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-01-ab-momente-a11-1-3",
+        "filename": "1_01_AB_Momente_A11_1_3.mp3",
+        "exerciseRef": "AB 3"
+      },
+      {
+        "id": "workbook-map:1-02-ab-momente-a11-1-3",
+        "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-02-ab-momente-a11-1-3",
+        "filename": "1_02_AB_Momente_A11_1_3.mp3",
+        "exerciseRef": "AB 3"
+      },
+      {
+        "id": "workbook-map:1-03-ab-momente-a11-1-3",
+        "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-03-ab-momente-a11-1-3",
+        "filename": "1_03_AB_Momente_A11_1_3.mp3",
+        "exerciseRef": "AB 3"
+      },
+      {
+        "id": "workbook-map:1-04-ab-momente-a11-1-3",
+        "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-04-ab-momente-a11-1-3",
+        "filename": "1_04_AB_Momente_A11_1_3.mp3",
+        "exerciseRef": "AB 3"
+      },
+      {
+        "id": "workbook-map:1-05-ab-momente-a11-1-9a",
+        "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-05-ab-momente-a11-1-9a",
+        "filename": "1_05_AB_Momente_A11_1_9a.mp3",
+        "exerciseRef": "AB 9a"
+      },
+      {
+        "id": "workbook-map:1-06-ab-momente-a11-1-9b",
+        "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-06-ab-momente-a11-1-9b",
+        "filename": "1_06_AB_Momente_A11_1_9b.mp3",
+        "exerciseRef": "AB 9b"
+      },
+      {
+        "id": "workbook-map:1-07-ab-momente-a11-2-6a",
+        "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-07-ab-momente-a11-2-6a",
+        "filename": "1_07_AB_Momente_A11_2_6a.mp3",
+        "exerciseRef": "AB 6a"
+      },
+      {
+        "id": "workbook-map:1-08-ab-momente-a11-2-6a",
+        "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-08-ab-momente-a11-2-6a",
+        "filename": "1_08_AB_Momente_A11_2_6a.mp3",
+        "exerciseRef": "AB 6a"
+      },
+      {
+        "id": "workbook-map:1-09-ab-momente-a11-2-6a",
+        "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-09-ab-momente-a11-2-6a",
+        "filename": "1_09_AB_Momente_A11_2_6a.mp3",
+        "exerciseRef": "AB 6a"
+      },
+      {
+        "id": "workbook-map:1-10-ab-momente-a11-2-6a",
+        "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-10-ab-momente-a11-2-6a",
+        "filename": "1_10_AB_Momente_A11_2_6a.mp3",
+        "exerciseRef": "AB 6a"
+      },
+      {
+        "id": "workbook-map:1-11-ab-momente-a11-2-6b",
+        "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-11-ab-momente-a11-2-6b",
+        "filename": "1_11_AB_Momente_A11_2_6b.mp3",
+        "exerciseRef": "AB 6b"
+      },
+      {
+        "id": "workbook-map:1-12-ab-momente-a11-2-6b",
+        "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-12-ab-momente-a11-2-6b",
+        "filename": "1_12_AB_Momente_A11_2_6b.mp3",
+        "exerciseRef": "AB 6b"
+      },
+      {
+        "id": "workbook-map:1-13-ab-momente-a11-2-6b",
+        "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-13-ab-momente-a11-2-6b",
+        "filename": "1_13_AB_Momente_A11_2_6b.mp3",
+        "exerciseRef": "AB 6b"
+      },
+      {
+        "id": "workbook-map:1-14-ab-momente-a11-2-6b",
+        "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-14-ab-momente-a11-2-6b",
+        "filename": "1_14_AB_Momente_A11_2_6b.mp3",
+        "exerciseRef": "AB 6b"
+      },
+      {
+        "id": "workbook-map:1-15-ab-momente-a11-2-12",
+        "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-15-ab-momente-a11-2-12",
+        "filename": "1_15_AB_Momente_A11_2_12.mp3",
+        "exerciseRef": "AB 12"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "kind": "Source",
+      "id": "source:workbook-audio-map",
+      "title": "Alpha workbook CD1 audio mapping (rights-gated)",
+      "sourceKind": "audio-pack",
+      "language": "de",
+      "priority": 2,
+      "originalPath": "content/source-index/alpha-workbook-audio-map.json",
+      "cefrBand": "A1.1",
+      "trackCount": 15
+    }
+  ],
+  "sourceAssertions": [
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:media-workbook-map-1-01-ab-momente-a11-1-3-variants",
+      "sourceId": "source:workbook-audio-map",
+      "location": {
+        "track": "1_01_AB_Momente_A11_1_3.mp3",
+        "exercise": "AB 3"
+      },
+      "subjectId": "media:workbook-map-1-01-ab-momente-a11-1-3",
+      "field": "variants",
+      "value": {
+        "blockedPath": "rights-gated://src-audio:momente-a1-1-ab-cd1:1-01-ab-momente-a11-1-3",
+        "rightsReference": "rights-gated://src-audio:momente-a1-1-ab-cd1:1-01-ab-momente-a11-1-3",
+        "filename": "1_01_AB_Momente_A11_1_3.mp3",
+        "sha256": "ae243fd2df2a13a8d9a9158ba6abb872a05cafe99c57450965ff524ab05c9d33",
+        "durationSeconds": 35.974,
+        "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-01-ab-momente-a11-1-3",
+        "publicBundleStatus": "blocked-pending-recorded-rights"
+      },
+      "extraction": "filename",
+      "confidence": 0.9,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:listen-workbook-1-01-ab-momente-a11-1-3-segments",
+      "sourceId": "source:workbook-audio-map",
+      "location": {
+        "track": "1_01_AB_Momente_A11_1_3.mp3",
+        "exercise": "AB 3"
+      },
+      "subjectId": "listen:workbook-1-01-ab-momente-a11-1-3",
+      "field": "transcriptSegments",
+      "value": [],
+      "extraction": "filename",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:media-workbook-map-1-02-ab-momente-a11-1-3-variants",
+      "sourceId": "source:workbook-audio-map",
+      "location": {
+        "track": "1_02_AB_Momente_A11_1_3.mp3",
+        "exercise": "AB 3"
+      },
+      "subjectId": "media:workbook-map-1-02-ab-momente-a11-1-3",
+      "field": "variants",
+      "value": {
+        "blockedPath": "rights-gated://src-audio:momente-a1-1-ab-cd1:1-02-ab-momente-a11-1-3",
+        "rightsReference": "rights-gated://src-audio:momente-a1-1-ab-cd1:1-02-ab-momente-a11-1-3",
+        "filename": "1_02_AB_Momente_A11_1_3.mp3",
+        "sha256": "a43cfa2092f02d7f98b4ab6876e893bedadde3b2076bcd35c1e7ca7130c83a47",
+        "durationSeconds": 30.996,
+        "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-02-ab-momente-a11-1-3",
+        "publicBundleStatus": "blocked-pending-recorded-rights"
+      },
+      "extraction": "filename",
+      "confidence": 0.9,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:listen-workbook-1-02-ab-momente-a11-1-3-segments",
+      "sourceId": "source:workbook-audio-map",
+      "location": {
+        "track": "1_02_AB_Momente_A11_1_3.mp3",
+        "exercise": "AB 3"
+      },
+      "subjectId": "listen:workbook-1-02-ab-momente-a11-1-3",
+      "field": "transcriptSegments",
+      "value": [],
+      "extraction": "filename",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:media-workbook-map-1-03-ab-momente-a11-1-3-variants",
+      "sourceId": "source:workbook-audio-map",
+      "location": {
+        "track": "1_03_AB_Momente_A11_1_3.mp3",
+        "exercise": "AB 3"
+      },
+      "subjectId": "media:workbook-map-1-03-ab-momente-a11-1-3",
+      "field": "variants",
+      "value": {
+        "blockedPath": "rights-gated://src-audio:momente-a1-1-ab-cd1:1-03-ab-momente-a11-1-3",
+        "rightsReference": "rights-gated://src-audio:momente-a1-1-ab-cd1:1-03-ab-momente-a11-1-3",
+        "filename": "1_03_AB_Momente_A11_1_3.mp3",
+        "sha256": "644be62239fa56927a2a04629f47150a9d7f1015d3fb2ab7e9b8a09936ed089f",
+        "durationSeconds": 29.98,
+        "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-03-ab-momente-a11-1-3",
+        "publicBundleStatus": "blocked-pending-recorded-rights"
+      },
+      "extraction": "filename",
+      "confidence": 0.9,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:listen-workbook-1-03-ab-momente-a11-1-3-segments",
+      "sourceId": "source:workbook-audio-map",
+      "location": {
+        "track": "1_03_AB_Momente_A11_1_3.mp3",
+        "exercise": "AB 3"
+      },
+      "subjectId": "listen:workbook-1-03-ab-momente-a11-1-3",
+      "field": "transcriptSegments",
+      "value": [],
+      "extraction": "filename",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:media-workbook-map-1-04-ab-momente-a11-1-3-variants",
+      "sourceId": "source:workbook-audio-map",
+      "location": {
+        "track": "1_04_AB_Momente_A11_1_3.mp3",
+        "exercise": "AB 3"
+      },
+      "subjectId": "media:workbook-map-1-04-ab-momente-a11-1-3",
+      "field": "variants",
+      "value": {
+        "blockedPath": "rights-gated://src-audio:momente-a1-1-ab-cd1:1-04-ab-momente-a11-1-3",
+        "rightsReference": "rights-gated://src-audio:momente-a1-1-ab-cd1:1-04-ab-momente-a11-1-3",
+        "filename": "1_04_AB_Momente_A11_1_3.mp3",
+        "sha256": "79dd95ea9a7618e2ff71dd2d6f2bd6434701ddac88a7430029fb21a08464df6a",
+        "durationSeconds": 30.97,
+        "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-04-ab-momente-a11-1-3",
+        "publicBundleStatus": "blocked-pending-recorded-rights"
+      },
+      "extraction": "filename",
+      "confidence": 0.9,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:listen-workbook-1-04-ab-momente-a11-1-3-segments",
+      "sourceId": "source:workbook-audio-map",
+      "location": {
+        "track": "1_04_AB_Momente_A11_1_3.mp3",
+        "exercise": "AB 3"
+      },
+      "subjectId": "listen:workbook-1-04-ab-momente-a11-1-3",
+      "field": "transcriptSegments",
+      "value": [],
+      "extraction": "filename",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:media-workbook-map-1-05-ab-momente-a11-1-9a-variants",
+      "sourceId": "source:workbook-audio-map",
+      "location": {
+        "track": "1_05_AB_Momente_A11_1_9a.mp3",
+        "exercise": "AB 9a"
+      },
+      "subjectId": "media:workbook-map-1-05-ab-momente-a11-1-9a",
+      "field": "variants",
+      "value": {
+        "blockedPath": "rights-gated://src-audio:momente-a1-1-ab-cd1:1-05-ab-momente-a11-1-9a",
+        "rightsReference": "rights-gated://src-audio:momente-a1-1-ab-cd1:1-05-ab-momente-a11-1-9a",
+        "filename": "1_05_AB_Momente_A11_1_9a.mp3",
+        "sha256": "fd88b910fdfe18139f802c88ddf19a3162e8b4d9d3f7d908bd4c061986997627",
+        "durationSeconds": 24.481,
+        "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-05-ab-momente-a11-1-9a",
+        "publicBundleStatus": "blocked-pending-recorded-rights"
+      },
+      "extraction": "filename",
+      "confidence": 0.9,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:listen-workbook-1-05-ab-momente-a11-1-9a-segments",
+      "sourceId": "source:workbook-audio-map",
+      "location": {
+        "track": "1_05_AB_Momente_A11_1_9a.mp3",
+        "exercise": "AB 9a"
+      },
+      "subjectId": "listen:workbook-1-05-ab-momente-a11-1-9a",
+      "field": "transcriptSegments",
+      "value": [],
+      "extraction": "filename",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:media-workbook-map-1-06-ab-momente-a11-1-9b-variants",
+      "sourceId": "source:workbook-audio-map",
+      "location": {
+        "track": "1_06_AB_Momente_A11_1_9b.mp3",
+        "exercise": "AB 9b"
+      },
+      "subjectId": "media:workbook-map-1-06-ab-momente-a11-1-9b",
+      "field": "variants",
+      "value": {
+        "blockedPath": "rights-gated://src-audio:momente-a1-1-ab-cd1:1-06-ab-momente-a11-1-9b",
+        "rightsReference": "rights-gated://src-audio:momente-a1-1-ab-cd1:1-06-ab-momente-a11-1-9b",
+        "filename": "1_06_AB_Momente_A11_1_9b.mp3",
+        "sha256": "2d41f0c2d795b4e25378d975739265b7a6b8380bf6f100c256f2a0243e88db7e",
+        "durationSeconds": 23.986,
+        "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-06-ab-momente-a11-1-9b",
+        "publicBundleStatus": "blocked-pending-recorded-rights"
+      },
+      "extraction": "filename",
+      "confidence": 0.9,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:listen-workbook-1-06-ab-momente-a11-1-9b-segments",
+      "sourceId": "source:workbook-audio-map",
+      "location": {
+        "track": "1_06_AB_Momente_A11_1_9b.mp3",
+        "exercise": "AB 9b"
+      },
+      "subjectId": "listen:workbook-1-06-ab-momente-a11-1-9b",
+      "field": "transcriptSegments",
+      "value": [],
+      "extraction": "filename",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:media-workbook-map-1-07-ab-momente-a11-2-6a-variants",
+      "sourceId": "source:workbook-audio-map",
+      "location": {
+        "track": "1_07_AB_Momente_A11_2_6a.mp3",
+        "exercise": "AB 6a"
+      },
+      "subjectId": "media:workbook-map-1-07-ab-momente-a11-2-6a",
+      "field": "variants",
+      "value": {
+        "blockedPath": "rights-gated://src-audio:momente-a1-1-ab-cd1:1-07-ab-momente-a11-2-6a",
+        "rightsReference": "rights-gated://src-audio:momente-a1-1-ab-cd1:1-07-ab-momente-a11-2-6a",
+        "filename": "1_07_AB_Momente_A11_2_6a.mp3",
+        "sha256": "cdcf35a0898dd0261867dd978795f5284d401b60241030cf2c1477476c73e150",
+        "durationSeconds": 18.017,
+        "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-07-ab-momente-a11-2-6a",
+        "publicBundleStatus": "blocked-pending-recorded-rights"
+      },
+      "extraction": "filename",
+      "confidence": 0.9,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:listen-workbook-1-07-ab-momente-a11-2-6a-segments",
+      "sourceId": "source:workbook-audio-map",
+      "location": {
+        "track": "1_07_AB_Momente_A11_2_6a.mp3",
+        "exercise": "AB 6a"
+      },
+      "subjectId": "listen:workbook-1-07-ab-momente-a11-2-6a",
+      "field": "transcriptSegments",
+      "value": [],
+      "extraction": "filename",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:media-workbook-map-1-08-ab-momente-a11-2-6a-variants",
+      "sourceId": "source:workbook-audio-map",
+      "location": {
+        "track": "1_08_AB_Momente_A11_2_6a.mp3",
+        "exercise": "AB 6a"
+      },
+      "subjectId": "media:workbook-map-1-08-ab-momente-a11-2-6a",
+      "field": "variants",
+      "value": {
+        "blockedPath": "rights-gated://src-audio:momente-a1-1-ab-cd1:1-08-ab-momente-a11-2-6a",
+        "rightsReference": "rights-gated://src-audio:momente-a1-1-ab-cd1:1-08-ab-momente-a11-2-6a",
+        "filename": "1_08_AB_Momente_A11_2_6a.mp3",
+        "sha256": "16dec4472683c5900b68ecf12ec66ec54fb9ff86e3f50d370bb14acf28214e5a",
+        "durationSeconds": 13.039,
+        "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-08-ab-momente-a11-2-6a",
+        "publicBundleStatus": "blocked-pending-recorded-rights"
+      },
+      "extraction": "filename",
+      "confidence": 0.9,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:listen-workbook-1-08-ab-momente-a11-2-6a-segments",
+      "sourceId": "source:workbook-audio-map",
+      "location": {
+        "track": "1_08_AB_Momente_A11_2_6a.mp3",
+        "exercise": "AB 6a"
+      },
+      "subjectId": "listen:workbook-1-08-ab-momente-a11-2-6a",
+      "field": "transcriptSegments",
+      "value": [],
+      "extraction": "filename",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:media-workbook-map-1-09-ab-momente-a11-2-6a-variants",
+      "sourceId": "source:workbook-audio-map",
+      "location": {
+        "track": "1_09_AB_Momente_A11_2_6a.mp3",
+        "exercise": "AB 6a"
+      },
+      "subjectId": "media:workbook-map-1-09-ab-momente-a11-2-6a",
+      "field": "variants",
+      "value": {
+        "blockedPath": "rights-gated://src-audio:momente-a1-1-ab-cd1:1-09-ab-momente-a11-2-6a",
+        "rightsReference": "rights-gated://src-audio:momente-a1-1-ab-cd1:1-09-ab-momente-a11-2-6a",
+        "filename": "1_09_AB_Momente_A11_2_6a.mp3",
+        "sha256": "cc28b5036030832425c9adc72aeaf7af19e353e8664fd51ca741347056bb2431",
+        "durationSeconds": 15.02,
+        "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-09-ab-momente-a11-2-6a",
+        "publicBundleStatus": "blocked-pending-recorded-rights"
+      },
+      "extraction": "filename",
+      "confidence": 0.9,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:listen-workbook-1-09-ab-momente-a11-2-6a-segments",
+      "sourceId": "source:workbook-audio-map",
+      "location": {
+        "track": "1_09_AB_Momente_A11_2_6a.mp3",
+        "exercise": "AB 6a"
+      },
+      "subjectId": "listen:workbook-1-09-ab-momente-a11-2-6a",
+      "field": "transcriptSegments",
+      "value": [],
+      "extraction": "filename",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:media-workbook-map-1-10-ab-momente-a11-2-6a-variants",
+      "sourceId": "source:workbook-audio-map",
+      "location": {
+        "track": "1_10_AB_Momente_A11_2_6a.mp3",
+        "exercise": "AB 6a"
+      },
+      "subjectId": "media:workbook-map-1-10-ab-momente-a11-2-6a",
+      "field": "variants",
+      "value": {
+        "blockedPath": "rights-gated://src-audio:momente-a1-1-ab-cd1:1-10-ab-momente-a11-2-6a",
+        "rightsReference": "rights-gated://src-audio:momente-a1-1-ab-cd1:1-10-ab-momente-a11-2-6a",
+        "filename": "1_10_AB_Momente_A11_2_6a.mp3",
+        "sha256": "009ee8a5264d58e342b68162736bb43f6de6d9e0351c57dc4e4d82b85e494aef",
+        "durationSeconds": 12.909,
+        "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-10-ab-momente-a11-2-6a",
+        "publicBundleStatus": "blocked-pending-recorded-rights"
+      },
+      "extraction": "filename",
+      "confidence": 0.9,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:listen-workbook-1-10-ab-momente-a11-2-6a-segments",
+      "sourceId": "source:workbook-audio-map",
+      "location": {
+        "track": "1_10_AB_Momente_A11_2_6a.mp3",
+        "exercise": "AB 6a"
+      },
+      "subjectId": "listen:workbook-1-10-ab-momente-a11-2-6a",
+      "field": "transcriptSegments",
+      "value": [],
+      "extraction": "filename",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:media-workbook-map-1-11-ab-momente-a11-2-6b-variants",
+      "sourceId": "source:workbook-audio-map",
+      "location": {
+        "track": "1_11_AB_Momente_A11_2_6b.mp3",
+        "exercise": "AB 6b"
+      },
+      "subjectId": "media:workbook-map-1-11-ab-momente-a11-2-6b",
+      "field": "variants",
+      "value": {
+        "blockedPath": "rights-gated://src-audio:momente-a1-1-ab-cd1:1-11-ab-momente-a11-2-6b",
+        "rightsReference": "rights-gated://src-audio:momente-a1-1-ab-cd1:1-11-ab-momente-a11-2-6b",
+        "filename": "1_11_AB_Momente_A11_2_6b.mp3",
+        "sha256": "85fdb2829adf25dabee37908279a24dd65f32214367aca75b40199034d988b3c",
+        "durationSeconds": 17.001,
+        "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-11-ab-momente-a11-2-6b",
+        "publicBundleStatus": "blocked-pending-recorded-rights"
+      },
+      "extraction": "filename",
+      "confidence": 0.9,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:listen-workbook-1-11-ab-momente-a11-2-6b-segments",
+      "sourceId": "source:workbook-audio-map",
+      "location": {
+        "track": "1_11_AB_Momente_A11_2_6b.mp3",
+        "exercise": "AB 6b"
+      },
+      "subjectId": "listen:workbook-1-11-ab-momente-a11-2-6b",
+      "field": "transcriptSegments",
+      "value": [],
+      "extraction": "filename",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:media-workbook-map-1-12-ab-momente-a11-2-6b-variants",
+      "sourceId": "source:workbook-audio-map",
+      "location": {
+        "track": "1_12_AB_Momente_A11_2_6b.mp3",
+        "exercise": "AB 6b"
+      },
+      "subjectId": "media:workbook-map-1-12-ab-momente-a11-2-6b",
+      "field": "variants",
+      "value": {
+        "blockedPath": "rights-gated://src-audio:momente-a1-1-ab-cd1:1-12-ab-momente-a11-2-6b",
+        "rightsReference": "rights-gated://src-audio:momente-a1-1-ab-cd1:1-12-ab-momente-a11-2-6b",
+        "filename": "1_12_AB_Momente_A11_2_6b.mp3",
+        "sha256": "d4eebbc6e02bd49b3a71162c67f37d242f33971c5c2ff71cef5b616eed3da9f8",
+        "durationSeconds": 12.44,
+        "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-12-ab-momente-a11-2-6b",
+        "publicBundleStatus": "blocked-pending-recorded-rights"
+      },
+      "extraction": "filename",
+      "confidence": 0.9,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:listen-workbook-1-12-ab-momente-a11-2-6b-segments",
+      "sourceId": "source:workbook-audio-map",
+      "location": {
+        "track": "1_12_AB_Momente_A11_2_6b.mp3",
+        "exercise": "AB 6b"
+      },
+      "subjectId": "listen:workbook-1-12-ab-momente-a11-2-6b",
+      "field": "transcriptSegments",
+      "value": [],
+      "extraction": "filename",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:media-workbook-map-1-13-ab-momente-a11-2-6b-variants",
+      "sourceId": "source:workbook-audio-map",
+      "location": {
+        "track": "1_13_AB_Momente_A11_2_6b.mp3",
+        "exercise": "AB 6b"
+      },
+      "subjectId": "media:workbook-map-1-13-ab-momente-a11-2-6b",
+      "field": "variants",
+      "value": {
+        "blockedPath": "rights-gated://src-audio:momente-a1-1-ab-cd1:1-13-ab-momente-a11-2-6b",
+        "rightsReference": "rights-gated://src-audio:momente-a1-1-ab-cd1:1-13-ab-momente-a11-2-6b",
+        "filename": "1_13_AB_Momente_A11_2_6b.mp3",
+        "sha256": "2764fc257cd2c2e0e6733366e3e964ca943add96ce99ab31f11e6a877ecb5950",
+        "durationSeconds": 13.508,
+        "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-13-ab-momente-a11-2-6b",
+        "publicBundleStatus": "blocked-pending-recorded-rights"
+      },
+      "extraction": "filename",
+      "confidence": 0.9,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:listen-workbook-1-13-ab-momente-a11-2-6b-segments",
+      "sourceId": "source:workbook-audio-map",
+      "location": {
+        "track": "1_13_AB_Momente_A11_2_6b.mp3",
+        "exercise": "AB 6b"
+      },
+      "subjectId": "listen:workbook-1-13-ab-momente-a11-2-6b",
+      "field": "transcriptSegments",
+      "value": [],
+      "extraction": "filename",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:media-workbook-map-1-14-ab-momente-a11-2-6b-variants",
+      "sourceId": "source:workbook-audio-map",
+      "location": {
+        "track": "1_14_AB_Momente_A11_2_6b.mp3",
+        "exercise": "AB 6b"
+      },
+      "subjectId": "media:workbook-map-1-14-ab-momente-a11-2-6b",
+      "field": "variants",
+      "value": {
+        "blockedPath": "rights-gated://src-audio:momente-a1-1-ab-cd1:1-14-ab-momente-a11-2-6b",
+        "rightsReference": "rights-gated://src-audio:momente-a1-1-ab-cd1:1-14-ab-momente-a11-2-6b",
+        "filename": "1_14_AB_Momente_A11_2_6b.mp3",
+        "sha256": "6a0d40d85b5f263ec530bc2f5f67fb7e8cb26a8020f6250c82a101580896d4ba",
+        "durationSeconds": 14.264,
+        "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-14-ab-momente-a11-2-6b",
+        "publicBundleStatus": "blocked-pending-recorded-rights"
+      },
+      "extraction": "filename",
+      "confidence": 0.9,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:listen-workbook-1-14-ab-momente-a11-2-6b-segments",
+      "sourceId": "source:workbook-audio-map",
+      "location": {
+        "track": "1_14_AB_Momente_A11_2_6b.mp3",
+        "exercise": "AB 6b"
+      },
+      "subjectId": "listen:workbook-1-14-ab-momente-a11-2-6b",
+      "field": "transcriptSegments",
+      "value": [],
+      "extraction": "filename",
+      "confidence": 1,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:media-workbook-map-1-15-ab-momente-a11-2-12-variants",
+      "sourceId": "source:workbook-audio-map",
+      "location": {
+        "track": "1_15_AB_Momente_A11_2_12.mp3",
+        "exercise": "AB 12"
+      },
+      "subjectId": "media:workbook-map-1-15-ab-momente-a11-2-12",
+      "field": "variants",
+      "value": {
+        "blockedPath": "rights-gated://src-audio:momente-a1-1-ab-cd1:1-15-ab-momente-a11-2-12",
+        "rightsReference": "rights-gated://src-audio:momente-a1-1-ab-cd1:1-15-ab-momente-a11-2-12",
+        "filename": "1_15_AB_Momente_A11_2_12.mp3",
+        "sha256": "823b45c79e24fa3eb3b5eeb83dff75b192201e7c41ec74d7f776523e42b43c9c",
+        "durationSeconds": 37.955,
+        "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-15-ab-momente-a11-2-12",
+        "publicBundleStatus": "blocked-pending-recorded-rights"
+      },
+      "extraction": "filename",
+      "confidence": 0.9,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:listen-workbook-1-15-ab-momente-a11-2-12-segments",
+      "sourceId": "source:workbook-audio-map",
+      "location": {
+        "track": "1_15_AB_Momente_A11_2_12.mp3",
+        "exercise": "AB 12"
+      },
+      "subjectId": "listen:workbook-1-15-ab-momente-a11-2-12",
+      "field": "transcriptSegments",
+      "value": [],
+      "extraction": "filename",
+      "confidence": 1,
+      "status": "candidate"
+    }
+  ],
+  "mediaAssets": [
+    {
+      "kind": "MediaAsset",
+      "id": "media:workbook-map-1-01-ab-momente-a11-1-3",
+      "mediaKind": "audio",
+      "origin": "publisher",
+      "locale": "de-DE",
+      "variants": [
+        {
+          "path": "rights-gated://src-audio:momente-a1-1-ab-cd1:1-01-ab-momente-a11-1-3",
+          "role": "master",
+          "checksumSha256": "ae243fd2df2a13a8d9a9158ba6abb872a05cafe99c57450965ff524ab05c9d33"
+        }
+      ],
+      "licenseUseBasis": "private-rights-gated; redistributionBasis null",
+      "reviewStatus": "candidate",
+      "linkedConceptIds": [],
+      "sourceAssertionIds": [
+        "assert:media-workbook-map-1-01-ab-momente-a11-1-3-variants"
+      ],
+      "audioPack": "A1.1",
+      "localizedPack": "de-DE",
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "MediaAsset",
+      "id": "media:workbook-map-1-02-ab-momente-a11-1-3",
+      "mediaKind": "audio",
+      "origin": "publisher",
+      "locale": "de-DE",
+      "variants": [
+        {
+          "path": "rights-gated://src-audio:momente-a1-1-ab-cd1:1-02-ab-momente-a11-1-3",
+          "role": "master",
+          "checksumSha256": "a43cfa2092f02d7f98b4ab6876e893bedadde3b2076bcd35c1e7ca7130c83a47"
+        }
+      ],
+      "licenseUseBasis": "private-rights-gated; redistributionBasis null",
+      "reviewStatus": "candidate",
+      "linkedConceptIds": [],
+      "sourceAssertionIds": [
+        "assert:media-workbook-map-1-02-ab-momente-a11-1-3-variants"
+      ],
+      "audioPack": "A1.1",
+      "localizedPack": "de-DE",
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "MediaAsset",
+      "id": "media:workbook-map-1-03-ab-momente-a11-1-3",
+      "mediaKind": "audio",
+      "origin": "publisher",
+      "locale": "de-DE",
+      "variants": [
+        {
+          "path": "rights-gated://src-audio:momente-a1-1-ab-cd1:1-03-ab-momente-a11-1-3",
+          "role": "master",
+          "checksumSha256": "644be62239fa56927a2a04629f47150a9d7f1015d3fb2ab7e9b8a09936ed089f"
+        }
+      ],
+      "licenseUseBasis": "private-rights-gated; redistributionBasis null",
+      "reviewStatus": "candidate",
+      "linkedConceptIds": [],
+      "sourceAssertionIds": [
+        "assert:media-workbook-map-1-03-ab-momente-a11-1-3-variants"
+      ],
+      "audioPack": "A1.1",
+      "localizedPack": "de-DE",
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "MediaAsset",
+      "id": "media:workbook-map-1-04-ab-momente-a11-1-3",
+      "mediaKind": "audio",
+      "origin": "publisher",
+      "locale": "de-DE",
+      "variants": [
+        {
+          "path": "rights-gated://src-audio:momente-a1-1-ab-cd1:1-04-ab-momente-a11-1-3",
+          "role": "master",
+          "checksumSha256": "79dd95ea9a7618e2ff71dd2d6f2bd6434701ddac88a7430029fb21a08464df6a"
+        }
+      ],
+      "licenseUseBasis": "private-rights-gated; redistributionBasis null",
+      "reviewStatus": "candidate",
+      "linkedConceptIds": [],
+      "sourceAssertionIds": [
+        "assert:media-workbook-map-1-04-ab-momente-a11-1-3-variants"
+      ],
+      "audioPack": "A1.1",
+      "localizedPack": "de-DE",
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "MediaAsset",
+      "id": "media:workbook-map-1-05-ab-momente-a11-1-9a",
+      "mediaKind": "audio",
+      "origin": "publisher",
+      "locale": "de-DE",
+      "variants": [
+        {
+          "path": "rights-gated://src-audio:momente-a1-1-ab-cd1:1-05-ab-momente-a11-1-9a",
+          "role": "master",
+          "checksumSha256": "fd88b910fdfe18139f802c88ddf19a3162e8b4d9d3f7d908bd4c061986997627"
+        }
+      ],
+      "licenseUseBasis": "private-rights-gated; redistributionBasis null",
+      "reviewStatus": "candidate",
+      "linkedConceptIds": [],
+      "sourceAssertionIds": [
+        "assert:media-workbook-map-1-05-ab-momente-a11-1-9a-variants"
+      ],
+      "audioPack": "A1.1",
+      "localizedPack": "de-DE",
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "MediaAsset",
+      "id": "media:workbook-map-1-06-ab-momente-a11-1-9b",
+      "mediaKind": "audio",
+      "origin": "publisher",
+      "locale": "de-DE",
+      "variants": [
+        {
+          "path": "rights-gated://src-audio:momente-a1-1-ab-cd1:1-06-ab-momente-a11-1-9b",
+          "role": "master",
+          "checksumSha256": "2d41f0c2d795b4e25378d975739265b7a6b8380bf6f100c256f2a0243e88db7e"
+        }
+      ],
+      "licenseUseBasis": "private-rights-gated; redistributionBasis null",
+      "reviewStatus": "candidate",
+      "linkedConceptIds": [],
+      "sourceAssertionIds": [
+        "assert:media-workbook-map-1-06-ab-momente-a11-1-9b-variants"
+      ],
+      "audioPack": "A1.1",
+      "localizedPack": "de-DE",
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "MediaAsset",
+      "id": "media:workbook-map-1-07-ab-momente-a11-2-6a",
+      "mediaKind": "audio",
+      "origin": "publisher",
+      "locale": "de-DE",
+      "variants": [
+        {
+          "path": "rights-gated://src-audio:momente-a1-1-ab-cd1:1-07-ab-momente-a11-2-6a",
+          "role": "master",
+          "checksumSha256": "cdcf35a0898dd0261867dd978795f5284d401b60241030cf2c1477476c73e150"
+        }
+      ],
+      "licenseUseBasis": "private-rights-gated; redistributionBasis null",
+      "reviewStatus": "candidate",
+      "linkedConceptIds": [],
+      "sourceAssertionIds": [
+        "assert:media-workbook-map-1-07-ab-momente-a11-2-6a-variants"
+      ],
+      "audioPack": "A1.1",
+      "localizedPack": "de-DE",
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "MediaAsset",
+      "id": "media:workbook-map-1-08-ab-momente-a11-2-6a",
+      "mediaKind": "audio",
+      "origin": "publisher",
+      "locale": "de-DE",
+      "variants": [
+        {
+          "path": "rights-gated://src-audio:momente-a1-1-ab-cd1:1-08-ab-momente-a11-2-6a",
+          "role": "master",
+          "checksumSha256": "16dec4472683c5900b68ecf12ec66ec54fb9ff86e3f50d370bb14acf28214e5a"
+        }
+      ],
+      "licenseUseBasis": "private-rights-gated; redistributionBasis null",
+      "reviewStatus": "candidate",
+      "linkedConceptIds": [],
+      "sourceAssertionIds": [
+        "assert:media-workbook-map-1-08-ab-momente-a11-2-6a-variants"
+      ],
+      "audioPack": "A1.1",
+      "localizedPack": "de-DE",
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "MediaAsset",
+      "id": "media:workbook-map-1-09-ab-momente-a11-2-6a",
+      "mediaKind": "audio",
+      "origin": "publisher",
+      "locale": "de-DE",
+      "variants": [
+        {
+          "path": "rights-gated://src-audio:momente-a1-1-ab-cd1:1-09-ab-momente-a11-2-6a",
+          "role": "master",
+          "checksumSha256": "cc28b5036030832425c9adc72aeaf7af19e353e8664fd51ca741347056bb2431"
+        }
+      ],
+      "licenseUseBasis": "private-rights-gated; redistributionBasis null",
+      "reviewStatus": "candidate",
+      "linkedConceptIds": [],
+      "sourceAssertionIds": [
+        "assert:media-workbook-map-1-09-ab-momente-a11-2-6a-variants"
+      ],
+      "audioPack": "A1.1",
+      "localizedPack": "de-DE",
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "MediaAsset",
+      "id": "media:workbook-map-1-10-ab-momente-a11-2-6a",
+      "mediaKind": "audio",
+      "origin": "publisher",
+      "locale": "de-DE",
+      "variants": [
+        {
+          "path": "rights-gated://src-audio:momente-a1-1-ab-cd1:1-10-ab-momente-a11-2-6a",
+          "role": "master",
+          "checksumSha256": "009ee8a5264d58e342b68162736bb43f6de6d9e0351c57dc4e4d82b85e494aef"
+        }
+      ],
+      "licenseUseBasis": "private-rights-gated; redistributionBasis null",
+      "reviewStatus": "candidate",
+      "linkedConceptIds": [],
+      "sourceAssertionIds": [
+        "assert:media-workbook-map-1-10-ab-momente-a11-2-6a-variants"
+      ],
+      "audioPack": "A1.1",
+      "localizedPack": "de-DE",
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "MediaAsset",
+      "id": "media:workbook-map-1-11-ab-momente-a11-2-6b",
+      "mediaKind": "audio",
+      "origin": "publisher",
+      "locale": "de-DE",
+      "variants": [
+        {
+          "path": "rights-gated://src-audio:momente-a1-1-ab-cd1:1-11-ab-momente-a11-2-6b",
+          "role": "master",
+          "checksumSha256": "85fdb2829adf25dabee37908279a24dd65f32214367aca75b40199034d988b3c"
+        }
+      ],
+      "licenseUseBasis": "private-rights-gated; redistributionBasis null",
+      "reviewStatus": "candidate",
+      "linkedConceptIds": [],
+      "sourceAssertionIds": [
+        "assert:media-workbook-map-1-11-ab-momente-a11-2-6b-variants"
+      ],
+      "audioPack": "A1.1",
+      "localizedPack": "de-DE",
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "MediaAsset",
+      "id": "media:workbook-map-1-12-ab-momente-a11-2-6b",
+      "mediaKind": "audio",
+      "origin": "publisher",
+      "locale": "de-DE",
+      "variants": [
+        {
+          "path": "rights-gated://src-audio:momente-a1-1-ab-cd1:1-12-ab-momente-a11-2-6b",
+          "role": "master",
+          "checksumSha256": "d4eebbc6e02bd49b3a71162c67f37d242f33971c5c2ff71cef5b616eed3da9f8"
+        }
+      ],
+      "licenseUseBasis": "private-rights-gated; redistributionBasis null",
+      "reviewStatus": "candidate",
+      "linkedConceptIds": [],
+      "sourceAssertionIds": [
+        "assert:media-workbook-map-1-12-ab-momente-a11-2-6b-variants"
+      ],
+      "audioPack": "A1.1",
+      "localizedPack": "de-DE",
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "MediaAsset",
+      "id": "media:workbook-map-1-13-ab-momente-a11-2-6b",
+      "mediaKind": "audio",
+      "origin": "publisher",
+      "locale": "de-DE",
+      "variants": [
+        {
+          "path": "rights-gated://src-audio:momente-a1-1-ab-cd1:1-13-ab-momente-a11-2-6b",
+          "role": "master",
+          "checksumSha256": "2764fc257cd2c2e0e6733366e3e964ca943add96ce99ab31f11e6a877ecb5950"
+        }
+      ],
+      "licenseUseBasis": "private-rights-gated; redistributionBasis null",
+      "reviewStatus": "candidate",
+      "linkedConceptIds": [],
+      "sourceAssertionIds": [
+        "assert:media-workbook-map-1-13-ab-momente-a11-2-6b-variants"
+      ],
+      "audioPack": "A1.1",
+      "localizedPack": "de-DE",
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "MediaAsset",
+      "id": "media:workbook-map-1-14-ab-momente-a11-2-6b",
+      "mediaKind": "audio",
+      "origin": "publisher",
+      "locale": "de-DE",
+      "variants": [
+        {
+          "path": "rights-gated://src-audio:momente-a1-1-ab-cd1:1-14-ab-momente-a11-2-6b",
+          "role": "master",
+          "checksumSha256": "6a0d40d85b5f263ec530bc2f5f67fb7e8cb26a8020f6250c82a101580896d4ba"
+        }
+      ],
+      "licenseUseBasis": "private-rights-gated; redistributionBasis null",
+      "reviewStatus": "candidate",
+      "linkedConceptIds": [],
+      "sourceAssertionIds": [
+        "assert:media-workbook-map-1-14-ab-momente-a11-2-6b-variants"
+      ],
+      "audioPack": "A1.1",
+      "localizedPack": "de-DE",
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "MediaAsset",
+      "id": "media:workbook-map-1-15-ab-momente-a11-2-12",
+      "mediaKind": "audio",
+      "origin": "publisher",
+      "locale": "de-DE",
+      "variants": [
+        {
+          "path": "rights-gated://src-audio:momente-a1-1-ab-cd1:1-15-ab-momente-a11-2-12",
+          "role": "master",
+          "checksumSha256": "823b45c79e24fa3eb3b5eeb83dff75b192201e7c41ec74d7f776523e42b43c9c"
+        }
+      ],
+      "licenseUseBasis": "private-rights-gated; redistributionBasis null",
+      "reviewStatus": "candidate",
+      "linkedConceptIds": [],
+      "sourceAssertionIds": [
+        "assert:media-workbook-map-1-15-ab-momente-a11-2-12-variants"
+      ],
+      "audioPack": "A1.1",
+      "localizedPack": "de-DE",
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    }
+  ],
+  "lessons": [],
+  "lexemes": [],
+  "verbs": [],
+  "grammarConcepts": [],
+  "phrasePatterns": [],
+  "qaPairs": [],
+  "dialogues": [],
+  "listeningAssets": [
+    {
+      "kind": "ListeningAsset",
+      "id": "listen:workbook-1-01-ab-momente-a11-1-3",
+      "mediaId": "media:workbook-map-1-01-ab-momente-a11-1-3",
+      "transcriptSegments": [],
+      "exerciseRef": "AB 3",
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:listen-workbook-1-01-ab-momente-a11-1-3-segments",
+        "assert:media-workbook-map-1-01-ab-momente-a11-1-3-variants"
+      ],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "ListeningAsset",
+      "id": "listen:workbook-1-02-ab-momente-a11-1-3",
+      "mediaId": "media:workbook-map-1-02-ab-momente-a11-1-3",
+      "transcriptSegments": [],
+      "exerciseRef": "AB 3",
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:listen-workbook-1-02-ab-momente-a11-1-3-segments",
+        "assert:media-workbook-map-1-02-ab-momente-a11-1-3-variants"
+      ],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "ListeningAsset",
+      "id": "listen:workbook-1-03-ab-momente-a11-1-3",
+      "mediaId": "media:workbook-map-1-03-ab-momente-a11-1-3",
+      "transcriptSegments": [],
+      "exerciseRef": "AB 3",
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:listen-workbook-1-03-ab-momente-a11-1-3-segments",
+        "assert:media-workbook-map-1-03-ab-momente-a11-1-3-variants"
+      ],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "ListeningAsset",
+      "id": "listen:workbook-1-04-ab-momente-a11-1-3",
+      "mediaId": "media:workbook-map-1-04-ab-momente-a11-1-3",
+      "transcriptSegments": [],
+      "exerciseRef": "AB 3",
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:listen-workbook-1-04-ab-momente-a11-1-3-segments",
+        "assert:media-workbook-map-1-04-ab-momente-a11-1-3-variants"
+      ],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "ListeningAsset",
+      "id": "listen:workbook-1-05-ab-momente-a11-1-9a",
+      "mediaId": "media:workbook-map-1-05-ab-momente-a11-1-9a",
+      "transcriptSegments": [],
+      "exerciseRef": "AB 9a",
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:listen-workbook-1-05-ab-momente-a11-1-9a-segments",
+        "assert:media-workbook-map-1-05-ab-momente-a11-1-9a-variants"
+      ],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "ListeningAsset",
+      "id": "listen:workbook-1-06-ab-momente-a11-1-9b",
+      "mediaId": "media:workbook-map-1-06-ab-momente-a11-1-9b",
+      "transcriptSegments": [],
+      "exerciseRef": "AB 9b",
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:listen-workbook-1-06-ab-momente-a11-1-9b-segments",
+        "assert:media-workbook-map-1-06-ab-momente-a11-1-9b-variants"
+      ],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "ListeningAsset",
+      "id": "listen:workbook-1-07-ab-momente-a11-2-6a",
+      "mediaId": "media:workbook-map-1-07-ab-momente-a11-2-6a",
+      "transcriptSegments": [],
+      "exerciseRef": "AB 6a",
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:listen-workbook-1-07-ab-momente-a11-2-6a-segments",
+        "assert:media-workbook-map-1-07-ab-momente-a11-2-6a-variants"
+      ],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "ListeningAsset",
+      "id": "listen:workbook-1-08-ab-momente-a11-2-6a",
+      "mediaId": "media:workbook-map-1-08-ab-momente-a11-2-6a",
+      "transcriptSegments": [],
+      "exerciseRef": "AB 6a",
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:listen-workbook-1-08-ab-momente-a11-2-6a-segments",
+        "assert:media-workbook-map-1-08-ab-momente-a11-2-6a-variants"
+      ],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "ListeningAsset",
+      "id": "listen:workbook-1-09-ab-momente-a11-2-6a",
+      "mediaId": "media:workbook-map-1-09-ab-momente-a11-2-6a",
+      "transcriptSegments": [],
+      "exerciseRef": "AB 6a",
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:listen-workbook-1-09-ab-momente-a11-2-6a-segments",
+        "assert:media-workbook-map-1-09-ab-momente-a11-2-6a-variants"
+      ],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "ListeningAsset",
+      "id": "listen:workbook-1-10-ab-momente-a11-2-6a",
+      "mediaId": "media:workbook-map-1-10-ab-momente-a11-2-6a",
+      "transcriptSegments": [],
+      "exerciseRef": "AB 6a",
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:listen-workbook-1-10-ab-momente-a11-2-6a-segments",
+        "assert:media-workbook-map-1-10-ab-momente-a11-2-6a-variants"
+      ],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "ListeningAsset",
+      "id": "listen:workbook-1-11-ab-momente-a11-2-6b",
+      "mediaId": "media:workbook-map-1-11-ab-momente-a11-2-6b",
+      "transcriptSegments": [],
+      "exerciseRef": "AB 6b",
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:listen-workbook-1-11-ab-momente-a11-2-6b-segments",
+        "assert:media-workbook-map-1-11-ab-momente-a11-2-6b-variants"
+      ],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "ListeningAsset",
+      "id": "listen:workbook-1-12-ab-momente-a11-2-6b",
+      "mediaId": "media:workbook-map-1-12-ab-momente-a11-2-6b",
+      "transcriptSegments": [],
+      "exerciseRef": "AB 6b",
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:listen-workbook-1-12-ab-momente-a11-2-6b-segments",
+        "assert:media-workbook-map-1-12-ab-momente-a11-2-6b-variants"
+      ],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "ListeningAsset",
+      "id": "listen:workbook-1-13-ab-momente-a11-2-6b",
+      "mediaId": "media:workbook-map-1-13-ab-momente-a11-2-6b",
+      "transcriptSegments": [],
+      "exerciseRef": "AB 6b",
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:listen-workbook-1-13-ab-momente-a11-2-6b-segments",
+        "assert:media-workbook-map-1-13-ab-momente-a11-2-6b-variants"
+      ],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "ListeningAsset",
+      "id": "listen:workbook-1-14-ab-momente-a11-2-6b",
+      "mediaId": "media:workbook-map-1-14-ab-momente-a11-2-6b",
+      "transcriptSegments": [],
+      "exerciseRef": "AB 6b",
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:listen-workbook-1-14-ab-momente-a11-2-6b-segments",
+        "assert:media-workbook-map-1-14-ab-momente-a11-2-6b-variants"
+      ],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "ListeningAsset",
+      "id": "listen:workbook-1-15-ab-momente-a11-2-12",
+      "mediaId": "media:workbook-map-1-15-ab-momente-a11-2-12",
+      "transcriptSegments": [],
+      "exerciseRef": "AB 12",
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:listen-workbook-1-15-ab-momente-a11-2-12-segments",
+        "assert:media-workbook-map-1-15-ab-momente-a11-2-12-variants"
+      ],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    }
+  ],
+  "collections": [],
+  "learningActivities": [],
+  "examples": [],
+  "relationships": [
+    {
+      "kind": "Relationship",
+      "id": "rel:workbook-1-01-ab-momente-a11-1-3-practised",
+      "type": "practised-in",
+      "fromId": "listen:workbook-1-01-ab-momente-a11-1-3",
+      "toId": "lesson:01"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:workbook-1-02-ab-momente-a11-1-3-practised",
+      "type": "practised-in",
+      "fromId": "listen:workbook-1-02-ab-momente-a11-1-3",
+      "toId": "lesson:01"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:workbook-1-03-ab-momente-a11-1-3-practised",
+      "type": "practised-in",
+      "fromId": "listen:workbook-1-03-ab-momente-a11-1-3",
+      "toId": "lesson:01"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:workbook-1-04-ab-momente-a11-1-3-practised",
+      "type": "practised-in",
+      "fromId": "listen:workbook-1-04-ab-momente-a11-1-3",
+      "toId": "lesson:01"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:workbook-1-05-ab-momente-a11-1-9a-practised",
+      "type": "practised-in",
+      "fromId": "listen:workbook-1-05-ab-momente-a11-1-9a",
+      "toId": "lesson:01"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:workbook-1-06-ab-momente-a11-1-9b-practised",
+      "type": "practised-in",
+      "fromId": "listen:workbook-1-06-ab-momente-a11-1-9b",
+      "toId": "lesson:01"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:workbook-1-07-ab-momente-a11-2-6a-practised",
+      "type": "practised-in",
+      "fromId": "listen:workbook-1-07-ab-momente-a11-2-6a",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:workbook-1-08-ab-momente-a11-2-6a-practised",
+      "type": "practised-in",
+      "fromId": "listen:workbook-1-08-ab-momente-a11-2-6a",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:workbook-1-09-ab-momente-a11-2-6a-practised",
+      "type": "practised-in",
+      "fromId": "listen:workbook-1-09-ab-momente-a11-2-6a",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:workbook-1-10-ab-momente-a11-2-6a-practised",
+      "type": "practised-in",
+      "fromId": "listen:workbook-1-10-ab-momente-a11-2-6a",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:workbook-1-11-ab-momente-a11-2-6b-practised",
+      "type": "practised-in",
+      "fromId": "listen:workbook-1-11-ab-momente-a11-2-6b",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:workbook-1-12-ab-momente-a11-2-6b-practised",
+      "type": "practised-in",
+      "fromId": "listen:workbook-1-12-ab-momente-a11-2-6b",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:workbook-1-13-ab-momente-a11-2-6b-practised",
+      "type": "practised-in",
+      "fromId": "listen:workbook-1-13-ab-momente-a11-2-6b",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:workbook-1-14-ab-momente-a11-2-6b-practised",
+      "type": "practised-in",
+      "fromId": "listen:workbook-1-14-ab-momente-a11-2-6b",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:workbook-1-15-ab-momente-a11-2-12-practised",
+      "type": "practised-in",
+      "fromId": "listen:workbook-1-15-ab-momente-a11-2-12",
+      "toId": "lesson:02"
+    }
+  ],
+  "contentGaps": [
+    {
+      "kind": "ContentGap",
+      "id": "gap:rights-1-01-ab-momente-a11-1-3",
+      "objectId": "media:workbook-map-1-01-ab-momente-a11-1-3",
+      "field": "variants",
+      "reason": "Workbook source MP3 rights open (blocked-pending-recorded-rights); mapping only — public source MP3 must remain zero",
+      "owner": "owner-review",
+      "blocksPublication": true
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:transcript-1-01-ab-momente-a11-1-3",
+      "objectId": "listen:workbook-1-01-ab-momente-a11-1-3",
+      "field": "transcriptSegments",
+      "reason": "Track is mapped-needs-listening-review; transcript text not encoded in C1 from audio map metadata alone",
+      "owner": "codex-content",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:rights-1-02-ab-momente-a11-1-3",
+      "objectId": "media:workbook-map-1-02-ab-momente-a11-1-3",
+      "field": "variants",
+      "reason": "Workbook source MP3 rights open (blocked-pending-recorded-rights); mapping only — public source MP3 must remain zero",
+      "owner": "owner-review",
+      "blocksPublication": true
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:transcript-1-02-ab-momente-a11-1-3",
+      "objectId": "listen:workbook-1-02-ab-momente-a11-1-3",
+      "field": "transcriptSegments",
+      "reason": "Track is mapped-needs-listening-review; transcript text not encoded in C1 from audio map metadata alone",
+      "owner": "codex-content",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:rights-1-03-ab-momente-a11-1-3",
+      "objectId": "media:workbook-map-1-03-ab-momente-a11-1-3",
+      "field": "variants",
+      "reason": "Workbook source MP3 rights open (blocked-pending-recorded-rights); mapping only — public source MP3 must remain zero",
+      "owner": "owner-review",
+      "blocksPublication": true
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:transcript-1-03-ab-momente-a11-1-3",
+      "objectId": "listen:workbook-1-03-ab-momente-a11-1-3",
+      "field": "transcriptSegments",
+      "reason": "Track is mapped-needs-listening-review; transcript text not encoded in C1 from audio map metadata alone",
+      "owner": "codex-content",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:rights-1-04-ab-momente-a11-1-3",
+      "objectId": "media:workbook-map-1-04-ab-momente-a11-1-3",
+      "field": "variants",
+      "reason": "Workbook source MP3 rights open (blocked-pending-recorded-rights); mapping only — public source MP3 must remain zero",
+      "owner": "owner-review",
+      "blocksPublication": true
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:transcript-1-04-ab-momente-a11-1-3",
+      "objectId": "listen:workbook-1-04-ab-momente-a11-1-3",
+      "field": "transcriptSegments",
+      "reason": "Track is mapped-needs-listening-review; transcript text not encoded in C1 from audio map metadata alone",
+      "owner": "codex-content",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:rights-1-05-ab-momente-a11-1-9a",
+      "objectId": "media:workbook-map-1-05-ab-momente-a11-1-9a",
+      "field": "variants",
+      "reason": "Workbook source MP3 rights open (blocked-pending-recorded-rights); mapping only — public source MP3 must remain zero",
+      "owner": "owner-review",
+      "blocksPublication": true
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:transcript-1-05-ab-momente-a11-1-9a",
+      "objectId": "listen:workbook-1-05-ab-momente-a11-1-9a",
+      "field": "transcriptSegments",
+      "reason": "Track is mapped-needs-listening-review; transcript text not encoded in C1 from audio map metadata alone",
+      "owner": "codex-content",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:rights-1-06-ab-momente-a11-1-9b",
+      "objectId": "media:workbook-map-1-06-ab-momente-a11-1-9b",
+      "field": "variants",
+      "reason": "Workbook source MP3 rights open (blocked-pending-recorded-rights); mapping only — public source MP3 must remain zero",
+      "owner": "owner-review",
+      "blocksPublication": true
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:transcript-1-06-ab-momente-a11-1-9b",
+      "objectId": "listen:workbook-1-06-ab-momente-a11-1-9b",
+      "field": "transcriptSegments",
+      "reason": "Track is mapped-needs-listening-review; transcript text not encoded in C1 from audio map metadata alone",
+      "owner": "codex-content",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:rights-1-07-ab-momente-a11-2-6a",
+      "objectId": "media:workbook-map-1-07-ab-momente-a11-2-6a",
+      "field": "variants",
+      "reason": "Workbook source MP3 rights open (blocked-pending-recorded-rights); mapping only — public source MP3 must remain zero",
+      "owner": "owner-review",
+      "blocksPublication": true
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:transcript-1-07-ab-momente-a11-2-6a",
+      "objectId": "listen:workbook-1-07-ab-momente-a11-2-6a",
+      "field": "transcriptSegments",
+      "reason": "Track is mapped-needs-listening-review; transcript text not encoded in C1 from audio map metadata alone",
+      "owner": "codex-content",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:rights-1-08-ab-momente-a11-2-6a",
+      "objectId": "media:workbook-map-1-08-ab-momente-a11-2-6a",
+      "field": "variants",
+      "reason": "Workbook source MP3 rights open (blocked-pending-recorded-rights); mapping only — public source MP3 must remain zero",
+      "owner": "owner-review",
+      "blocksPublication": true
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:transcript-1-08-ab-momente-a11-2-6a",
+      "objectId": "listen:workbook-1-08-ab-momente-a11-2-6a",
+      "field": "transcriptSegments",
+      "reason": "Track is mapped-needs-listening-review; transcript text not encoded in C1 from audio map metadata alone",
+      "owner": "codex-content",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:rights-1-09-ab-momente-a11-2-6a",
+      "objectId": "media:workbook-map-1-09-ab-momente-a11-2-6a",
+      "field": "variants",
+      "reason": "Workbook source MP3 rights open (blocked-pending-recorded-rights); mapping only — public source MP3 must remain zero",
+      "owner": "owner-review",
+      "blocksPublication": true
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:transcript-1-09-ab-momente-a11-2-6a",
+      "objectId": "listen:workbook-1-09-ab-momente-a11-2-6a",
+      "field": "transcriptSegments",
+      "reason": "Track is mapped-needs-listening-review; transcript text not encoded in C1 from audio map metadata alone",
+      "owner": "codex-content",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:rights-1-10-ab-momente-a11-2-6a",
+      "objectId": "media:workbook-map-1-10-ab-momente-a11-2-6a",
+      "field": "variants",
+      "reason": "Workbook source MP3 rights open (blocked-pending-recorded-rights); mapping only — public source MP3 must remain zero",
+      "owner": "owner-review",
+      "blocksPublication": true
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:transcript-1-10-ab-momente-a11-2-6a",
+      "objectId": "listen:workbook-1-10-ab-momente-a11-2-6a",
+      "field": "transcriptSegments",
+      "reason": "Track is mapped-needs-listening-review; transcript text not encoded in C1 from audio map metadata alone",
+      "owner": "codex-content",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:rights-1-11-ab-momente-a11-2-6b",
+      "objectId": "media:workbook-map-1-11-ab-momente-a11-2-6b",
+      "field": "variants",
+      "reason": "Workbook source MP3 rights open (blocked-pending-recorded-rights); mapping only — public source MP3 must remain zero",
+      "owner": "owner-review",
+      "blocksPublication": true
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:transcript-1-11-ab-momente-a11-2-6b",
+      "objectId": "listen:workbook-1-11-ab-momente-a11-2-6b",
+      "field": "transcriptSegments",
+      "reason": "Track is mapped-needs-listening-review; transcript text not encoded in C1 from audio map metadata alone",
+      "owner": "codex-content",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:rights-1-12-ab-momente-a11-2-6b",
+      "objectId": "media:workbook-map-1-12-ab-momente-a11-2-6b",
+      "field": "variants",
+      "reason": "Workbook source MP3 rights open (blocked-pending-recorded-rights); mapping only — public source MP3 must remain zero",
+      "owner": "owner-review",
+      "blocksPublication": true
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:transcript-1-12-ab-momente-a11-2-6b",
+      "objectId": "listen:workbook-1-12-ab-momente-a11-2-6b",
+      "field": "transcriptSegments",
+      "reason": "Track is mapped-needs-listening-review; transcript text not encoded in C1 from audio map metadata alone",
+      "owner": "codex-content",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:rights-1-13-ab-momente-a11-2-6b",
+      "objectId": "media:workbook-map-1-13-ab-momente-a11-2-6b",
+      "field": "variants",
+      "reason": "Workbook source MP3 rights open (blocked-pending-recorded-rights); mapping only — public source MP3 must remain zero",
+      "owner": "owner-review",
+      "blocksPublication": true
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:transcript-1-13-ab-momente-a11-2-6b",
+      "objectId": "listen:workbook-1-13-ab-momente-a11-2-6b",
+      "field": "transcriptSegments",
+      "reason": "Track is mapped-needs-listening-review; transcript text not encoded in C1 from audio map metadata alone",
+      "owner": "codex-content",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:rights-1-14-ab-momente-a11-2-6b",
+      "objectId": "media:workbook-map-1-14-ab-momente-a11-2-6b",
+      "field": "variants",
+      "reason": "Workbook source MP3 rights open (blocked-pending-recorded-rights); mapping only — public source MP3 must remain zero",
+      "owner": "owner-review",
+      "blocksPublication": true
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:transcript-1-14-ab-momente-a11-2-6b",
+      "objectId": "listen:workbook-1-14-ab-momente-a11-2-6b",
+      "field": "transcriptSegments",
+      "reason": "Track is mapped-needs-listening-review; transcript text not encoded in C1 from audio map metadata alone",
+      "owner": "codex-content",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:rights-1-15-ab-momente-a11-2-12",
+      "objectId": "media:workbook-map-1-15-ab-momente-a11-2-12",
+      "field": "variants",
+      "reason": "Workbook source MP3 rights open (blocked-pending-recorded-rights); mapping only — public source MP3 must remain zero",
+      "owner": "owner-review",
+      "blocksPublication": true
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:transcript-1-15-ab-momente-a11-2-12",
+      "objectId": "listen:workbook-1-15-ab-momente-a11-2-12",
+      "field": "transcriptSegments",
+      "reason": "Track is mapped-needs-listening-review; transcript text not encoded in C1 from audio map metadata alone",
+      "owner": "codex-content",
+      "blocksPublication": false
+    }
+  ]
+}

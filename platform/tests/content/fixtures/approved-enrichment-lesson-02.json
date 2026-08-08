@@ -1,0 +1,225 @@
+{
+  "schemaVersion": "1.0.0",
+  "meta": {
+    "label": "C0 approved enrichment linked to Lesson 2",
+    "generatedFor": "fixture"
+  },
+  "sources": [
+    {
+      "kind": "Source",
+      "id": "source:fixture-schema",
+      "title": "C0 schema fixture source",
+      "sourceKind": "fixture",
+      "language": "de",
+      "priority": 1,
+      "cefrBand": "A1.1"
+    },
+    {
+      "kind": "Source",
+      "id": "source:fixture-teacher",
+      "title": "C0 teacher enrichment fixture",
+      "sourceKind": "teacher-handout",
+      "language": "de",
+      "priority": 3,
+      "cefrBand": "A1.1"
+    }
+  ],
+  "sourceAssertions": [
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lesson-02-title-de",
+      "sourceId": "source:fixture-schema",
+      "location": { "noteRow": 1 },
+      "subjectId": "lesson:02",
+      "field": "titleDe",
+      "value": "[fixture-lesson-02]",
+      "extraction": "fixture",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c0-fixture"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lesson-02-goals",
+      "sourceId": "source:fixture-schema",
+      "location": { "noteRow": 2 },
+      "subjectId": "lesson:02",
+      "field": "communicativeGoals",
+      "value": ["fixture-goal"],
+      "extraction": "fixture",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c0-fixture"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-enrichment-lemma",
+      "sourceId": "source:fixture-teacher",
+      "location": { "noteRow": 3 },
+      "subjectId": "lex:fixture-enrichment",
+      "field": "lemma",
+      "value": "[fixture-enrichment-lemma]",
+      "extraction": "fixture",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c0-fixture"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-enrichment-meanings",
+      "sourceId": "source:fixture-teacher",
+      "location": { "noteRow": 4 },
+      "subjectId": "lex:fixture-enrichment",
+      "field": "meanings",
+      "value": [{ "id": "meaning:fixture-enrichment", "glossEn": "[fixture-gloss]" }],
+      "extraction": "fixture",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c0-fixture"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:collection-teacher-membership",
+      "sourceId": "source:fixture-teacher",
+      "location": { "noteRow": 5 },
+      "subjectId": "collection:fixture-teacher-extra",
+      "field": "membership",
+      "value": { "mode": "static", "memberIds": ["lex:fixture-enrichment"] },
+      "extraction": "fixture",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c0-fixture"
+    }
+  ],
+  "mediaAssets": [],
+  "lessons": [
+    {
+      "kind": "Lesson",
+      "id": "lesson:02",
+      "number": 2,
+      "titleDe": "[fixture-lesson-02]",
+      "titleEn": "Fixture Lesson 2",
+      "cefr": "A1",
+      "communicativeGoals": ["fixture-goal"],
+      "prerequisiteLessonIds": [],
+      "stages": [
+        {
+          "id": "overview",
+          "kind": "overview",
+          "titleEn": "Overview",
+          "activityIds": [],
+          "estimatedMinutes": 1,
+          "skillTargets": ["exposure"],
+          "required": true
+        }
+      ],
+      "collections": [
+        {
+          "collectionId": "collection:fixture-teacher-extra",
+          "sourcePriority": 3,
+          "required": true
+        }
+      ],
+      "sourceAssertionIds": ["assert:lesson-02-title-de", "assert:lesson-02-goals"],
+      "relationIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          { "field": "titleDe", "assertionId": "assert:lesson-02-title-de" },
+          { "field": "communicativeGoals", "assertionId": "assert:lesson-02-goals" }
+        ]
+      }
+    }
+  ],
+  "lexemes": [
+    {
+      "kind": "Lexeme",
+      "id": "lex:fixture-enrichment",
+      "lemma": "fixtureenrichment",
+      "partOfSpeech": "noun",
+      "meanings": [{ "id": "meaning:fixture-enrichment", "glossEn": "[fixture-gloss]" }],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:enrichment-introduced",
+        "rel:enrichment-member"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-enrichment-lemma",
+        "assert:lex-enrichment-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          { "field": "lemma", "assertionId": "assert:lex-enrichment-lemma" },
+          { "field": "meanings", "assertionId": "assert:lex-enrichment-meanings" }
+        ],
+        "scopeException": {
+          "kind": "approved-enrichment",
+          "attachedLessonId": "lesson:02",
+          "approvalId": "approval:fixture-teacher-l2",
+          "note": "Explicitly approved teacher enrichment for Lesson 2 (LRN-006)."
+        }
+      }
+    }
+  ],
+  "verbs": [],
+  "grammarConcepts": [],
+  "phrasePatterns": [],
+  "qaPairs": [],
+  "dialogues": [],
+  "listeningAssets": [],
+  "collections": [
+    {
+      "kind": "Collection",
+      "id": "collection:fixture-teacher-extra",
+      "titleEn": "Fixture teacher extra",
+      "membership": {
+        "mode": "static",
+        "memberIds": ["lex:fixture-enrichment"]
+      },
+      "lessonLinks": [
+        {
+          "lessonId": "lesson:02",
+          "sourcePriority": 3,
+          "required": true
+        }
+      ],
+      "sourcePriority": 3,
+      "relationIds": [],
+      "sourceAssertionIds": ["assert:collection-teacher-membership"],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          { "field": "membership", "assertionId": "assert:collection-teacher-membership" }
+        ],
+        "scopeException": {
+          "kind": "approved-enrichment",
+          "attachedLessonId": "lesson:02",
+          "approvalId": "approval:fixture-teacher-l2",
+          "note": "Teacher collection attached to Lesson 2 without schema change."
+        }
+      }
+    }
+  ],
+  "learningActivities": [],
+  "relationships": [
+    {
+      "kind": "Relationship",
+      "id": "rel:enrichment-introduced",
+      "type": "introduced-in",
+      "fromId": "lex:fixture-enrichment",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:enrichment-member",
+      "type": "member-of-collection",
+      "fromId": "lex:fixture-enrichment",
+      "toId": "collection:fixture-teacher-extra"
+    }
+  ],
+  "contentGaps": []
+}

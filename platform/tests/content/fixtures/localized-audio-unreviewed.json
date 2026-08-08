@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "meta": { "label": "C0 localized audio without verified review", "generatedFor": "fixture" },
+  "sources": [
+    {
+      "kind": "Source",
+      "id": "source:fixture-cs-audio",
+      "title": "C0 Czech-localized fixture audio",
+      "sourceKind": "audio-pack",
+      "language": "cs",
+      "priority": 2,
+      "cefrBand": "A1.1",
+      "localeHint": "cs"
+    }
+  ],
+  "sourceAssertions": [
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:media-cs-path",
+      "sourceId": "source:fixture-cs-audio",
+      "location": { "track": "fixture-cs-01" },
+      "subjectId": "media:fixture-cs-track",
+      "field": "variants",
+      "value": "[fixture-path]",
+      "extraction": "fixture",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c0-fixture"
+    }
+  ],
+  "mediaAssets": [
+    {
+      "kind": "MediaAsset",
+      "id": "media:fixture-cs-track",
+      "mediaKind": "audio",
+      "origin": "publisher",
+      "locale": "cs",
+      "variants": [{ "path": "fixtures/cs-track.mp3", "role": "master" }],
+      "reviewStatus": "candidate",
+      "linkedConceptIds": [],
+      "sourceAssertionIds": ["assert:media-cs-path"],
+      "audioPack": "A1.1",
+      "localizedPack": "cs",
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          { "field": "variants", "assertionId": "assert:media-cs-path" }
+        ]
+      }
+    }
+  ],
+  "lessons": [],
+  "lexemes": [],
+  "verbs": [],
+  "grammarConcepts": [],
+  "phrasePatterns": [],
+  "qaPairs": [],
+  "dialogues": [],
+  "listeningAssets": [],
+  "collections": [],
+  "learningActivities": [],
+  "relationships": [],
+  "contentGaps": []
+}

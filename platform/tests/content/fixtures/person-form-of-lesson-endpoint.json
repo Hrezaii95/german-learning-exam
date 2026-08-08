@@ -1,0 +1,146 @@
+{
+  "schemaVersion": "1.0.0",
+  "meta": { "label": "C0R1 person-form-of with Lesson endpoint", "generatedFor": "fixture" },
+  "sources": [
+    {
+      "kind": "Source",
+      "id": "source:fixture-schema",
+      "title": "C0 schema fixture source",
+      "sourceKind": "fixture",
+      "language": "de",
+      "priority": 1,
+      "cefrBand": "A1.1"
+    }
+  ],
+  "sourceAssertions": [
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lesson-01-title-de",
+      "sourceId": "source:fixture-schema",
+      "location": { "noteRow": 1 },
+      "subjectId": "lesson:01",
+      "field": "titleDe",
+      "value": "[fixture-title-de]",
+      "extraction": "fixture",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c0-fixture"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lesson-01-goals",
+      "sourceId": "source:fixture-schema",
+      "location": { "noteRow": 2 },
+      "subjectId": "lesson:01",
+      "field": "communicativeGoals",
+      "value": ["fixture-goal"],
+      "extraction": "fixture",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c0-fixture"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-endpoint-lemma",
+      "sourceId": "source:fixture-schema",
+      "location": { "noteRow": 3 },
+      "subjectId": "lex:fixture-endpoint",
+      "field": "lemma",
+      "value": "[fixture-lemma]",
+      "extraction": "fixture",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c0-fixture"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-endpoint-meanings",
+      "sourceId": "source:fixture-schema",
+      "location": { "noteRow": 4 },
+      "subjectId": "lex:fixture-endpoint",
+      "field": "meanings",
+      "value": [{ "id": "meaning:fixture-endpoint", "glossEn": "[fixture-gloss]" }],
+      "extraction": "fixture",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c0-fixture"
+    }
+  ],
+  "mediaAssets": [],
+  "lessons": [
+    {
+      "kind": "Lesson",
+      "id": "lesson:01",
+      "number": 1,
+      "titleDe": "[fixture-title-de]",
+      "titleEn": "Fixture Lesson 1",
+      "cefr": "A1",
+      "communicativeGoals": ["fixture-goal"],
+      "prerequisiteLessonIds": [],
+      "stages": [
+        {
+          "id": "overview",
+          "kind": "overview",
+          "titleEn": "Overview",
+          "activityIds": [],
+          "estimatedMinutes": 1,
+          "skillTargets": ["exposure"],
+          "required": true
+        }
+      ],
+      "collections": [],
+      "sourceAssertionIds": ["assert:lesson-01-title-de", "assert:lesson-01-goals"],
+      "relationIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          { "field": "titleDe", "assertionId": "assert:lesson-01-title-de" },
+          { "field": "communicativeGoals", "assertionId": "assert:lesson-01-goals" }
+        ]
+      }
+    }
+  ],
+  "lexemes": [
+    {
+      "kind": "Lexeme",
+      "id": "lex:fixture-endpoint",
+      "lemma": "fixtureendpoint",
+      "partOfSpeech": "noun",
+      "meanings": [{ "id": "meaning:fixture-endpoint", "glossEn": "[fixture-gloss]" }],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": ["rel:person-form-lesson"],
+      "sourceAssertionIds": [
+        "assert:lex-endpoint-lemma",
+        "assert:lex-endpoint-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          { "field": "lemma", "assertionId": "assert:lex-endpoint-lemma" },
+          { "field": "meanings", "assertionId": "assert:lex-endpoint-meanings" }
+        ]
+      }
+    }
+  ],
+  "verbs": [],
+  "grammarConcepts": [],
+  "phrasePatterns": [],
+  "qaPairs": [],
+  "dialogues": [],
+  "listeningAssets": [],
+  "collections": [],
+  "learningActivities": [],
+  "relationships": [
+    {
+      "kind": "Relationship",
+      "id": "rel:person-form-lesson",
+      "type": "person-form-of",
+      "fromId": "lex:fixture-endpoint",
+      "toId": "lesson:01"
+    }
+  ],
+  "contentGaps": []
+}

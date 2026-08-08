@@ -1,0 +1,7 @@
+{
+  "schemaVersion": 1,
+  "approvedManifestSha256": "c546096cfeb1e284313b638ac4ab26d1cd2a2edc678c8b998b0c0295552fb720",
+  "fileCount": 397,
+  "totalBytes": 350139546,
+  "purpose": "Immutable approval lock. Update only through an explicit source-intake review."
+}

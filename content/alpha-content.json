@@ -1,0 +1,1801 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-02T18:40:50.525Z",
+  "scope": {
+    "lessons": [
+      "lesson:01",
+      "lesson:02"
+    ],
+    "teacherCollections": [
+      "collection:teacher-professions"
+    ]
+  },
+  "sourcePriority": {
+    "1": "official glossary/core",
+    "2": "coursebook/workbook context",
+    "3": "teacher assigned",
+    "4": "personal enrichment"
+  },
+  "lessons": [
+    {
+      "id": "lesson:01",
+      "number": 1,
+      "titleDe": "Ich heiße Miriam.",
+      "titleEn": "Greetings and introductions",
+      "cefr": "A1",
+      "sourcePages": {
+        "coursebookPrinted": [
+          10,
+          14
+        ],
+        "workbookPrinted": [
+          6,
+          9
+        ],
+        "glossaryPdf": [
+          1,
+          2
+        ]
+      },
+      "goals": [
+        "greet and say goodbye",
+        "ask and answer names",
+        "spell a name",
+        "ask and say origin",
+        "ask and answer wellbeing",
+        "choose du or formal Sie"
+      ],
+      "vocabulary": {
+        "greetings": [
+          [
+            "Hallo",
+            "Hello"
+          ],
+          [
+            "Guten Tag",
+            "Good day / Hello"
+          ],
+          [
+            "Guten Morgen",
+            "Good morning"
+          ],
+          [
+            "Guten Abend",
+            "Good evening"
+          ],
+          [
+            "Gute Nacht",
+            "Good night"
+          ],
+          [
+            "Tschüs",
+            "Bye"
+          ],
+          [
+            "Auf Wiedersehen",
+            "Goodbye"
+          ]
+        ],
+        "wellbeing": [
+          [
+            "Super!",
+            "Great!"
+          ],
+          [
+            "Sehr gut, danke.",
+            "Very well, thank you."
+          ],
+          [
+            "Gut, danke.",
+            "Fine, thank you."
+          ],
+          [
+            "Es geht.",
+            "Not too bad."
+          ],
+          [
+            "Nicht so gut.",
+            "Not so well."
+          ],
+          [
+            "Auch super.",
+            "Great as well."
+          ]
+        ],
+        "countries": [
+          [
+            "Deutschland",
+            "Germany",
+            null
+          ],
+          [
+            "Eritrea",
+            "Eritrea",
+            null
+          ],
+          [
+            "Österreich",
+            "Austria",
+            null
+          ],
+          [
+            "Spanien",
+            "Spain",
+            null
+          ],
+          [
+            "Frankreich",
+            "France",
+            null
+          ],
+          [
+            "Schweiz",
+            "Switzerland",
+            "die"
+          ],
+          [
+            "Türkei",
+            "Turkey",
+            "die"
+          ],
+          [
+            "USA",
+            "USA",
+            "die-plural"
+          ]
+        ],
+        "identity": [
+          [
+            "der Name",
+            "name",
+            "die Namen"
+          ],
+          [
+            "der Vorname",
+            "first name",
+            "die Vornamen"
+          ],
+          [
+            "der Familienname",
+            "last name",
+            "die Familiennamen"
+          ],
+          [
+            "der Herr",
+            "Mr / gentleman",
+            "die Herren"
+          ],
+          [
+            "die Frau",
+            "Ms / Mrs / woman",
+            "die Frauen"
+          ]
+        ]
+      },
+      "verbs": [
+        {
+          "id": "verb:sein",
+          "infinitive": "sein",
+          "meaningEn": "to be",
+          "forms": {
+            "ich": "bin",
+            "du": "bist",
+            "er/sie": "ist",
+            "Sie": "sind"
+          },
+          "pattern": "irregular"
+        },
+        {
+          "id": "verb:heissen",
+          "infinitive": "heißen",
+          "meaningEn": "to be called",
+          "forms": {
+            "ich": "heiße",
+            "du": "heißt",
+            "er/sie": "heißt",
+            "Sie": "heißen"
+          },
+          "pattern": "special-orthography"
+        },
+        {
+          "id": "verb:kommen",
+          "infinitive": "kommen",
+          "meaningEn": "to come",
+          "forms": {
+            "ich": "komme",
+            "du": "kommst",
+            "er/sie": "kommt",
+            "Sie": "kommen"
+          },
+          "pattern": "regular"
+        },
+        {
+          "id": "verb:lernen",
+          "infinitive": "lernen",
+          "meaningEn": "to learn",
+          "forms": {
+            "ich": "lerne",
+            "du": "lernst",
+            "er/sie": "lernt",
+            "Sie": "lernen"
+          },
+          "pattern": "regular"
+        }
+      ],
+      "qa": [
+        {
+          "id": "qa:name-casual",
+          "register": "casual",
+          "question": "Wie heißt du?",
+          "answers": [
+            "Ich heiße …",
+            "Mein Name ist …"
+          ]
+        },
+        {
+          "id": "qa:name-formal",
+          "register": "formal",
+          "question": "Wie heißen Sie?",
+          "answers": [
+            "Ich heiße …",
+            "Mein Name ist …"
+          ]
+        },
+        {
+          "id": "qa:identity",
+          "register": "neutral",
+          "question": "Wer ist das?",
+          "answers": [
+            "Das ist …"
+          ]
+        },
+        {
+          "id": "qa:origin-casual",
+          "register": "casual",
+          "question": "Woher kommst du?",
+          "answers": [
+            "Ich komme aus …"
+          ]
+        },
+        {
+          "id": "qa:origin-formal",
+          "register": "formal",
+          "question": "Woher kommen Sie?",
+          "answers": [
+            "Ich komme aus …"
+          ]
+        },
+        {
+          "id": "qa:wellbeing-casual",
+          "register": "casual",
+          "question": "Wie geht’s dir?",
+          "answers": [
+            "Super!",
+            "Sehr gut, danke.",
+            "Gut, danke.",
+            "Es geht.",
+            "Nicht so gut."
+          ]
+        },
+        {
+          "id": "qa:wellbeing-formal",
+          "register": "formal",
+          "question": "Wie geht’s Ihnen?",
+          "answers": [
+            "Sehr gut, danke.",
+            "Gut, danke.",
+            "Es geht.",
+            "Nicht so gut."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lesson:02",
+      "number": 2,
+      "titleDe": "Was macht ihr beruflich?",
+      "titleEn": "Personal details and professions",
+      "cefr": "A1",
+      "sourcePages": {
+        "coursebookPrinted": [
+          15,
+          18
+        ],
+        "workbookPrinted": [
+          10,
+          13
+        ],
+        "glossaryPdf": [
+          2,
+          4
+        ]
+      },
+      "goals": [
+        "give a personal profile",
+        "understand and say numbers 0–100",
+        "talk about relationship and children",
+        "ask and answer about work",
+        "use full present-tense person forms",
+        "form profession person forms"
+      ],
+      "coreProfessions": [
+        {
+          "id": "profession:paketzusteller",
+          "masculine": "Paketzusteller",
+          "feminine": "Paketzustellerin",
+          "meaningEn": "parcel delivery agent",
+          "priority": 1
+        },
+        {
+          "id": "profession:friseur",
+          "masculine": "Friseur",
+          "feminine": "Friseurin",
+          "meaningEn": "hairdresser",
+          "priority": 1
+        },
+        {
+          "id": "profession:kellner",
+          "masculine": "Kellner",
+          "feminine": "Kellnerin",
+          "meaningEn": "waiter / waitress",
+          "priority": 1
+        },
+        {
+          "id": "profession:ingenieur",
+          "masculine": "Ingenieur",
+          "feminine": "Ingenieurin",
+          "meaningEn": "engineer",
+          "priority": 1
+        },
+        {
+          "id": "profession:kfz-mechatroniker",
+          "masculine": "Kfz-Mechatroniker",
+          "feminine": "Kfz-Mechatronikerin",
+          "meaningEn": "automotive mechatronics engineer",
+          "priority": 1
+        },
+        {
+          "id": "profession:student",
+          "masculine": "Student",
+          "feminine": "Studentin",
+          "meaningEn": "university student",
+          "priority": 1
+        },
+        {
+          "id": "profession:journalist",
+          "masculine": "Journalist",
+          "feminine": "Journalistin",
+          "meaningEn": "journalist",
+          "priority": 1
+        },
+        {
+          "id": "profession:architekt",
+          "masculine": "Architekt",
+          "feminine": "Architektin",
+          "meaningEn": "architect",
+          "priority": 1
+        },
+        {
+          "id": "profession:arzt",
+          "masculine": "Arzt",
+          "feminine": "Ärztin",
+          "meaningEn": "doctor",
+          "priority": 1
+        },
+        {
+          "id": "profession:lehrer",
+          "masculine": "Lehrer",
+          "feminine": "Lehrerin",
+          "meaningEn": "teacher",
+          "priority": 1
+        },
+        {
+          "id": "profession:verkaufer",
+          "masculine": "Verkäufer",
+          "feminine": "Verkäuferin",
+          "meaningEn": "shop assistant",
+          "priority": 1
+        },
+        {
+          "id": "profession:schuler",
+          "masculine": "Schüler",
+          "feminine": "Schülerin",
+          "meaningEn": "school student",
+          "priority": 1
+        },
+        {
+          "id": "profession:rentner",
+          "masculine": "Rentner",
+          "feminine": "Rentnerin",
+          "meaningEn": "pensioner",
+          "priority": 1
+        }
+      ],
+      "profileVocabulary": [
+        [
+          "das Jahr",
+          "year"
+        ],
+        [
+          "das Kind",
+          "child"
+        ],
+        [
+          "verheiratet",
+          "married"
+        ],
+        [
+          "geschieden",
+          "divorced"
+        ],
+        [
+          "der Single",
+          "single person"
+        ],
+        [
+          "allein",
+          "alone"
+        ],
+        [
+          "der Wohnort",
+          "place of residence"
+        ],
+        [
+          "die Herkunft",
+          "origin"
+        ],
+        [
+          "das Alter",
+          "age"
+        ],
+        [
+          "der Familienstand",
+          "marital status"
+        ],
+        [
+          "das Studium",
+          "studies"
+        ],
+        [
+          "der Beruf",
+          "profession"
+        ],
+        [
+          "der Job",
+          "job"
+        ],
+        [
+          "die Stelle",
+          "position/job"
+        ],
+        [
+          "die Ausbildung",
+          "apprenticeship/training"
+        ],
+        [
+          "das Praktikum",
+          "internship"
+        ],
+        [
+          "die Firma",
+          "company"
+        ]
+      ],
+      "verbs": [
+        {
+          "id": "verb:wohnen",
+          "infinitive": "wohnen",
+          "forms": {
+            "ich": "wohne",
+            "du": "wohnst",
+            "er/sie/es": "wohnt",
+            "wir": "wohnen",
+            "ihr": "wohnt",
+            "sie/Sie": "wohnen"
+          },
+          "pattern": "regular"
+        },
+        {
+          "id": "verb:leben",
+          "infinitive": "leben",
+          "forms": {
+            "ich": "lebe",
+            "du": "lebst",
+            "er/sie/es": "lebt",
+            "wir": "leben",
+            "ihr": "lebt",
+            "sie/Sie": "leben"
+          },
+          "pattern": "regular"
+        },
+        {
+          "id": "verb:haben",
+          "infinitive": "haben",
+          "forms": {
+            "ich": "habe",
+            "du": "hast",
+            "er/sie/es": "hat",
+            "wir": "haben",
+            "ihr": "habt",
+            "sie/Sie": "haben"
+          },
+          "pattern": "irregular"
+        },
+        {
+          "id": "verb:sein",
+          "infinitive": "sein",
+          "forms": {
+            "ich": "bin",
+            "du": "bist",
+            "er/sie/es": "ist",
+            "wir": "sind",
+            "ihr": "seid",
+            "sie/Sie": "sind"
+          },
+          "pattern": "irregular"
+        },
+        {
+          "id": "verb:arbeiten",
+          "infinitive": "arbeiten",
+          "forms": {
+            "ich": "arbeite",
+            "du": "arbeitest",
+            "er/sie/es": "arbeitet",
+            "wir": "arbeiten",
+            "ihr": "arbeitet",
+            "sie/Sie": "arbeiten"
+          },
+          "pattern": "spelling-adjustment"
+        },
+        {
+          "id": "verb:machen",
+          "infinitive": "machen",
+          "forms": {
+            "ich": "mache",
+            "du": "machst",
+            "er/sie/es": "macht",
+            "wir": "machen",
+            "ihr": "macht",
+            "sie/Sie": "machen"
+          },
+          "pattern": "regular"
+        },
+        {
+          "id": "verb:studieren",
+          "infinitive": "studieren",
+          "forms": {
+            "ich": "studiere",
+            "du": "studierst",
+            "er/sie/es": "studiert",
+            "wir": "studieren",
+            "ihr": "studiert",
+            "sie/Sie": "studieren"
+          },
+          "pattern": "regular"
+        }
+      ],
+      "qa": [
+        {
+          "id": "qa:profession-casual",
+          "register": "casual",
+          "question": "Was bist du von Beruf?",
+          "answers": [
+            "Ich bin … von Beruf.",
+            "Ich bin …",
+            "Ich arbeite als …"
+          ]
+        },
+        {
+          "id": "qa:profession-formal",
+          "register": "formal",
+          "question": "Was sind Sie von Beruf?",
+          "answers": [
+            "Ich bin … von Beruf.",
+            "Ich bin …",
+            "Ich arbeite als …"
+          ]
+        },
+        {
+          "id": "qa:work-formal",
+          "register": "formal",
+          "question": "Was machen Sie beruflich?",
+          "answers": [
+            "Ich arbeite als …",
+            "Ich arbeite bei …",
+            "Ich studiere …",
+            "Ich arbeite im Moment nicht."
+          ]
+        },
+        {
+          "id": "qa:age",
+          "register": "variable",
+          "question": "Wie alt bist du / sind Sie?",
+          "answers": [
+            "Ich bin … Jahre alt."
+          ]
+        },
+        {
+          "id": "qa:residence",
+          "register": "variable",
+          "question": "Wo wohnst du / wohnen Sie?",
+          "answers": [
+            "Ich wohne in …"
+          ]
+        }
+      ]
+    }
+  ],
+  "collections": [
+    {
+      "id": "collection:teacher-professions",
+      "titleDe": "Berufe — Lehrermaterial",
+      "titleEn": "Teacher professions",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "priority": 3,
+      "memberIds": [
+        "teacher-job:elektriker",
+        "teacher-job:gartner",
+        "teacher-job:automechaniker",
+        "teacher-job:busfahrer",
+        "teacher-job:friseur",
+        "teacher-job:strassenarbeiter",
+        "teacher-job:backer",
+        "teacher-job:maurer",
+        "teacher-job:landwirt",
+        "teacher-job:fotograf",
+        "teacher-job:maler",
+        "teacher-job:architekt",
+        "teacher-job:lehrer",
+        "teacher-job:koch",
+        "teacher-job:mullwerker",
+        "teacher-job:metzger",
+        "teacher-job:kellner",
+        "teacher-job:zahnarzt",
+        "teacher-job:verkaufer",
+        "teacher-job:schauspieler",
+        "teacher-job:kunstler",
+        "teacher-job:bauarbeiter",
+        "teacher-job:arzt",
+        "teacher-job:ingenieur",
+        "teacher-job:feuerwehrmann",
+        "teacher-job:konditor",
+        "teacher-job:hausmann",
+        "teacher-job:krankenpfleger",
+        "teacher-job:flugzeugpilot",
+        "teacher-job:polizist",
+        "teacher-job:postbote",
+        "teacher-job:sekretar",
+        "teacher-job:sanger",
+        "teacher-job:tierarzt",
+        "teacher-job:soldat",
+        "teacher-job:tischler",
+        "teacher-job:geschaftsmann",
+        "teacher-job:detektiv",
+        "teacher-job:klempner",
+        "teacher-job:chirurg",
+        "teacher-job:schriftsteller",
+        "teacher-job:tankwart",
+        "teacher-job:geheimagent",
+        "teacher-job:rechtsanwalt",
+        "teacher-job:richter",
+        "teacher-job:journalist",
+        "teacher-job:putzmann",
+        "teacher-job:kassierer"
+      ]
+    }
+  ],
+  "teacherProfessions": [
+    {
+      "id": "teacher-job:elektriker",
+      "sourceRow": 1,
+      "meaningEn": "Electrician",
+      "masculineSingular": "der Elektriker",
+      "masculinePlural": "die Elektriker",
+      "feminineSingular": "die Elektrikerin",
+      "femininePlural": "die Elektrikerinnen",
+      "alternatives": {
+        "masculine": [
+          "Elektriker"
+        ],
+        "feminine": [
+          "Elektrikerin"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:gartner",
+      "sourceRow": 2,
+      "meaningEn": "Gardener",
+      "masculineSingular": "der Gärtner",
+      "masculinePlural": "die Gärtner",
+      "feminineSingular": "die Gärtnerin",
+      "femininePlural": "die Gärtnerinnen",
+      "alternatives": {
+        "masculine": [
+          "Gärtner"
+        ],
+        "feminine": [
+          "Gärtnerin"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:automechaniker",
+      "sourceRow": 3,
+      "meaningEn": "Auto Mechanic",
+      "masculineSingular": "der Automechaniker",
+      "masculinePlural": "die Automechaniker",
+      "feminineSingular": "die Automechanikerin",
+      "femininePlural": "die Automechanikerinnen",
+      "alternatives": {
+        "masculine": [
+          "Automechaniker"
+        ],
+        "feminine": [
+          "Automechanikerin"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:busfahrer",
+      "sourceRow": 4,
+      "meaningEn": "Bus Driver",
+      "masculineSingular": "der Busfahrer",
+      "masculinePlural": "die Busfahrer",
+      "feminineSingular": "die Busfahrerin",
+      "femininePlural": "die Busfahrerinnen",
+      "alternatives": {
+        "masculine": [
+          "Busfahrer"
+        ],
+        "feminine": [
+          "Busfahrerin"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:friseur",
+      "sourceRow": 5,
+      "meaningEn": "Hairdresser",
+      "masculineSingular": "der Friseur",
+      "masculinePlural": "die Friseure",
+      "feminineSingular": "die Friseurin",
+      "femininePlural": "die Friseurinnen",
+      "alternatives": {
+        "masculine": [
+          "Friseur"
+        ],
+        "feminine": [
+          "Friseurin"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:strassenarbeiter",
+      "sourceRow": 6,
+      "meaningEn": "Street Worker",
+      "masculineSingular": "der Straßenarbeiter",
+      "masculinePlural": "die Straßenarbeiter",
+      "feminineSingular": "die Straßenarbeiterin",
+      "femininePlural": "die Straßenarbeiterinnen",
+      "alternatives": {
+        "masculine": [
+          "Straßenarbeiter"
+        ],
+        "feminine": [
+          "Straßenarbeiterin"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:backer",
+      "sourceRow": 7,
+      "meaningEn": "Baker",
+      "masculineSingular": "der Bäcker",
+      "masculinePlural": "die Bäcker",
+      "feminineSingular": "die Bäckerin",
+      "femininePlural": "die Bäckerinnen",
+      "alternatives": {
+        "masculine": [
+          "Bäcker"
+        ],
+        "feminine": [
+          "Bäckerin"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:maurer",
+      "sourceRow": 8,
+      "meaningEn": "Bricklayer",
+      "masculineSingular": "der Maurer",
+      "masculinePlural": "die Maurer",
+      "feminineSingular": "die Maurerin",
+      "femininePlural": "die Maurerinnen",
+      "alternatives": {
+        "masculine": [
+          "Maurer"
+        ],
+        "feminine": [
+          "Maurerin"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:landwirt",
+      "sourceRow": 9,
+      "meaningEn": "Farmer",
+      "masculineSingular": "der Landwirt / der Bauer",
+      "masculinePlural": "die Landwirte / die Bauern",
+      "feminineSingular": "die Landwirtin / die Bäuerin",
+      "femininePlural": "die Landwirtinnen / die Bäuerinnen",
+      "alternatives": {
+        "masculine": [
+          "Landwirt",
+          "der Bauer"
+        ],
+        "feminine": [
+          "Landwirtin",
+          "die Bäuerin"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:fotograf",
+      "sourceRow": 10,
+      "meaningEn": "Photographer",
+      "masculineSingular": "der Fotograf",
+      "masculinePlural": "die Fotografen",
+      "feminineSingular": "die Fotografin",
+      "femininePlural": "die Fotografinnen",
+      "alternatives": {
+        "masculine": [
+          "Fotograf"
+        ],
+        "feminine": [
+          "Fotografin"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:maler",
+      "sourceRow": 11,
+      "meaningEn": "Painter",
+      "masculineSingular": "der Maler",
+      "masculinePlural": "die Maler",
+      "feminineSingular": "die Malerin",
+      "femininePlural": "die Malerinnen",
+      "alternatives": {
+        "masculine": [
+          "Maler"
+        ],
+        "feminine": [
+          "Malerin"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:architekt",
+      "sourceRow": 12,
+      "meaningEn": "Architect",
+      "masculineSingular": "der Architekt",
+      "masculinePlural": "die Architekten",
+      "feminineSingular": "die Architektin",
+      "femininePlural": "die Architektinnen",
+      "alternatives": {
+        "masculine": [
+          "Architekt"
+        ],
+        "feminine": [
+          "Architektin"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:lehrer",
+      "sourceRow": 13,
+      "meaningEn": "Teacher",
+      "masculineSingular": "der Lehrer",
+      "masculinePlural": "die Lehrer",
+      "feminineSingular": "die Lehrerin",
+      "femininePlural": "die Lehrerinnen",
+      "alternatives": {
+        "masculine": [
+          "Lehrer"
+        ],
+        "feminine": [
+          "Lehrerin"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:koch",
+      "sourceRow": 14,
+      "meaningEn": "Cook/Chef",
+      "masculineSingular": "der Koch",
+      "masculinePlural": "die Köche",
+      "feminineSingular": "die Köchin",
+      "femininePlural": "die Köchinnen",
+      "alternatives": {
+        "masculine": [
+          "Koch"
+        ],
+        "feminine": [
+          "Köchin"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:mullwerker",
+      "sourceRow": 15,
+      "meaningEn": "Refuse Collector",
+      "masculineSingular": "der Müllwerker",
+      "masculinePlural": "die Müllwerker",
+      "feminineSingular": "die Müllwerkerin",
+      "femininePlural": "die Müllwerkerinnen",
+      "alternatives": {
+        "masculine": [
+          "Müllwerker"
+        ],
+        "feminine": [
+          "Müllwerkerin"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:metzger",
+      "sourceRow": 16,
+      "meaningEn": "Butcher",
+      "masculineSingular": "der Metzger",
+      "masculinePlural": "die Metzger",
+      "feminineSingular": "die Metzgerin",
+      "femininePlural": "die Metzgerinnen",
+      "alternatives": {
+        "masculine": [
+          "Metzger"
+        ],
+        "feminine": [
+          "Metzgerin"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:kellner",
+      "sourceRow": 17,
+      "meaningEn": "Waiter / Waitress",
+      "masculineSingular": "der Kellner",
+      "masculinePlural": "die Kellner",
+      "feminineSingular": "die Kellnerin",
+      "femininePlural": "die Kellnerinnen",
+      "alternatives": {
+        "masculine": [
+          "Kellner"
+        ],
+        "feminine": [
+          "Kellnerin"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:zahnarzt",
+      "sourceRow": 18,
+      "meaningEn": "Dentist",
+      "masculineSingular": "der Zahnarzt",
+      "masculinePlural": "die Zahnärzte",
+      "feminineSingular": "die Zahnärztin",
+      "femininePlural": "die Zahnärztinnen",
+      "alternatives": {
+        "masculine": [
+          "Zahnarzt"
+        ],
+        "feminine": [
+          "Zahnärztin"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:verkaufer",
+      "sourceRow": 19,
+      "meaningEn": "Shop Assistant",
+      "masculineSingular": "der Verkäufer",
+      "masculinePlural": "die Verkäufer",
+      "feminineSingular": "die Verkäuferin",
+      "femininePlural": "die Verkäuferinnen",
+      "alternatives": {
+        "masculine": [
+          "Verkäufer"
+        ],
+        "feminine": [
+          "Verkäuferin"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:schauspieler",
+      "sourceRow": 20,
+      "meaningEn": "Actor / Actress",
+      "masculineSingular": "der Schauspieler",
+      "masculinePlural": "die Schauspieler",
+      "feminineSingular": "die Schauspielerin",
+      "femininePlural": "die Schauspielerinnen",
+      "alternatives": {
+        "masculine": [
+          "Schauspieler"
+        ],
+        "feminine": [
+          "Schauspielerin"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:kunstler",
+      "sourceRow": 21,
+      "meaningEn": "Artist",
+      "masculineSingular": "der Künstler",
+      "masculinePlural": "die Künstler",
+      "feminineSingular": "die Künstlerin",
+      "femininePlural": "die Künstlerinnen",
+      "alternatives": {
+        "masculine": [
+          "Künstler"
+        ],
+        "feminine": [
+          "Künstlerin"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:bauarbeiter",
+      "sourceRow": 22,
+      "meaningEn": "Construction Worker",
+      "masculineSingular": "der Bauarbeiter",
+      "masculinePlural": "die Bauarbeiter",
+      "feminineSingular": "die Bauarbeiterin",
+      "femininePlural": "die Bauarbeiterinnen",
+      "alternatives": {
+        "masculine": [
+          "Bauarbeiter"
+        ],
+        "feminine": [
+          "Bauarbeiterin"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:arzt",
+      "sourceRow": 23,
+      "meaningEn": "Doctor",
+      "masculineSingular": "der Arzt",
+      "masculinePlural": "die Ärzte",
+      "feminineSingular": "die Ärztin",
+      "femininePlural": "die Ärztinnen",
+      "alternatives": {
+        "masculine": [
+          "Arzt"
+        ],
+        "feminine": [
+          "Ärztin"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:ingenieur",
+      "sourceRow": 24,
+      "meaningEn": "Engineer",
+      "masculineSingular": "der Ingenieur",
+      "masculinePlural": "die Ingenieure",
+      "feminineSingular": "die Ingenieurin",
+      "femininePlural": "die Ingenieurinnen",
+      "alternatives": {
+        "masculine": [
+          "Ingenieur"
+        ],
+        "feminine": [
+          "Ingenieurin"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:feuerwehrmann",
+      "sourceRow": 25,
+      "meaningEn": "Firefighter",
+      "masculineSingular": "der Feuerwehrmann",
+      "masculinePlural": "die Feuerwehrmänner",
+      "feminineSingular": "die Feuerwehrfrau",
+      "femininePlural": "die Feuerwehrfrauen",
+      "alternatives": {
+        "masculine": [
+          "Feuerwehrmann"
+        ],
+        "feminine": [
+          "Feuerwehrfrau"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:konditor",
+      "sourceRow": 26,
+      "meaningEn": "Confectioner",
+      "masculineSingular": "der Konditor",
+      "masculinePlural": "die Konditoren",
+      "feminineSingular": "die Konditorin",
+      "femininePlural": "die Konditorinnen",
+      "alternatives": {
+        "masculine": [
+          "Konditor"
+        ],
+        "feminine": [
+          "Konditorin"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:hausmann",
+      "sourceRow": 27,
+      "meaningEn": "Housewife / Househusband",
+      "masculineSingular": "der Hausmann",
+      "masculinePlural": "die Hausmänner",
+      "feminineSingular": "die Hausfrau",
+      "femininePlural": "die Hausfrauen",
+      "alternatives": {
+        "masculine": [
+          "Hausmann"
+        ],
+        "feminine": [
+          "Hausfrau"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:krankenpfleger",
+      "sourceRow": 28,
+      "meaningEn": "Nurse",
+      "masculineSingular": "der Krankenpfleger",
+      "masculinePlural": "die Krankenpfleger",
+      "feminineSingular": "die Krankenschwester",
+      "femininePlural": "die Krankenschwestern",
+      "alternatives": {
+        "masculine": [
+          "Krankenpfleger"
+        ],
+        "feminine": [
+          "Krankenschwester"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:flugzeugpilot",
+      "sourceRow": 29,
+      "meaningEn": "Airplane Pilot",
+      "masculineSingular": "der Flugzeugpilot",
+      "masculinePlural": "die Flugzeugpiloten",
+      "feminineSingular": "die Flugzeugpilotin",
+      "femininePlural": "die Flugzeugpilotinnen",
+      "alternatives": {
+        "masculine": [
+          "Flugzeugpilot"
+        ],
+        "feminine": [
+          "Flugzeugpilotin"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:polizist",
+      "sourceRow": 30,
+      "meaningEn": "Police Officer",
+      "masculineSingular": "der Polizist",
+      "masculinePlural": "die Polizisten",
+      "feminineSingular": "die Polizistin",
+      "femininePlural": "die Polizistinnen",
+      "alternatives": {
+        "masculine": [
+          "Polizist"
+        ],
+        "feminine": [
+          "Polizistin"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:postbote",
+      "sourceRow": 31,
+      "meaningEn": "Postman / Letter Carrier",
+      "masculineSingular": "der Postbote / der Briefträger",
+      "masculinePlural": "die Postboten / die Briefträger",
+      "feminineSingular": "die Postbotin / die Briefträgerin",
+      "femininePlural": "die Postbotinnen / die Briefträgerinnen",
+      "alternatives": {
+        "masculine": [
+          "Postbote",
+          "der Briefträger"
+        ],
+        "feminine": [
+          "Postbotin",
+          "die Briefträgerin"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:sekretar",
+      "sourceRow": 32,
+      "meaningEn": "Secretary",
+      "masculineSingular": "der Sekretär",
+      "masculinePlural": "die Sekretäre",
+      "feminineSingular": "die Sekretärin",
+      "femininePlural": "die Sekretärinnen",
+      "alternatives": {
+        "masculine": [
+          "Sekretär"
+        ],
+        "feminine": [
+          "Sekretärin"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:sanger",
+      "sourceRow": 33,
+      "meaningEn": "Singer",
+      "masculineSingular": "der Sänger",
+      "masculinePlural": "die Sänger",
+      "feminineSingular": "die Sängerin",
+      "femininePlural": "die Sängerinnen",
+      "alternatives": {
+        "masculine": [
+          "Sänger"
+        ],
+        "feminine": [
+          "Sängerin"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:tierarzt",
+      "sourceRow": 34,
+      "meaningEn": "Veterinarian",
+      "masculineSingular": "der Tierarzt",
+      "masculinePlural": "die Tierärzte",
+      "feminineSingular": "die Tierärztin",
+      "femininePlural": "die Tierärztinnen",
+      "alternatives": {
+        "masculine": [
+          "Tierarzt"
+        ],
+        "feminine": [
+          "Tierärztin"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:soldat",
+      "sourceRow": 35,
+      "meaningEn": "Soldier",
+      "masculineSingular": "der Soldat",
+      "masculinePlural": "die Soldaten",
+      "feminineSingular": "die Soldatin",
+      "femininePlural": "die Soldatinnen",
+      "alternatives": {
+        "masculine": [
+          "Soldat"
+        ],
+        "feminine": [
+          "Soldatin"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:tischler",
+      "sourceRow": 36,
+      "meaningEn": "Carpenter",
+      "masculineSingular": "der Tischler",
+      "masculinePlural": "die Tischler",
+      "feminineSingular": "die Tischlerin",
+      "femininePlural": "die Tischlerinnen",
+      "alternatives": {
+        "masculine": [
+          "Tischler"
+        ],
+        "feminine": [
+          "Tischlerin"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:geschaftsmann",
+      "sourceRow": 37,
+      "meaningEn": "Businessperson",
+      "masculineSingular": "der Geschäftsmann",
+      "masculinePlural": "die Geschäftsleute",
+      "feminineSingular": "die Geschäftsfrau",
+      "femininePlural": "die Geschäftsfrauen",
+      "alternatives": {
+        "masculine": [
+          "Geschäftsmann"
+        ],
+        "feminine": [
+          "Geschäftsfrau"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:detektiv",
+      "sourceRow": 38,
+      "meaningEn": "Detective",
+      "masculineSingular": "der Detektiv",
+      "masculinePlural": "die Detektive",
+      "feminineSingular": "die Detektivin",
+      "femininePlural": "die Detektivinnen",
+      "alternatives": {
+        "masculine": [
+          "Detektiv"
+        ],
+        "feminine": [
+          "Detektivin"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:klempner",
+      "sourceRow": 39,
+      "meaningEn": "Plumber",
+      "masculineSingular": "der Klempner / der Installateur",
+      "masculinePlural": "die Klempner / die Installateure",
+      "feminineSingular": "die Klempnerin / die Installateurin",
+      "femininePlural": "die Klempnerinnen / die Installateurinnen",
+      "alternatives": {
+        "masculine": [
+          "Klempner",
+          "der Installateur"
+        ],
+        "feminine": [
+          "Klempnerin",
+          "die Installateurin"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:chirurg",
+      "sourceRow": 40,
+      "meaningEn": "Surgeon",
+      "masculineSingular": "der Chirurg",
+      "masculinePlural": "die Chirurgen",
+      "feminineSingular": "die Chirurgin",
+      "femininePlural": "die Chirurginnen",
+      "alternatives": {
+        "masculine": [
+          "Chirurg"
+        ],
+        "feminine": [
+          "Chirurgin"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:schriftsteller",
+      "sourceRow": 41,
+      "meaningEn": "Writer",
+      "masculineSingular": "der Schriftsteller",
+      "masculinePlural": "die Schriftsteller",
+      "feminineSingular": "die Schriftstellerin",
+      "femininePlural": "die Schriftstellerinnen",
+      "alternatives": {
+        "masculine": [
+          "Schriftsteller"
+        ],
+        "feminine": [
+          "Schriftstellerin"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:tankwart",
+      "sourceRow": 42,
+      "meaningEn": "Gas Station Attendant",
+      "masculineSingular": "der Tankwart",
+      "masculinePlural": "die Tankwarte",
+      "feminineSingular": "die Tankwartin",
+      "femininePlural": "die Tankwartinnen",
+      "alternatives": {
+        "masculine": [
+          "Tankwart"
+        ],
+        "feminine": [
+          "Tankwartin"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:geheimagent",
+      "sourceRow": 43,
+      "meaningEn": "Secret Agent",
+      "masculineSingular": "der Geheimagent",
+      "masculinePlural": "die Geheimagenten",
+      "feminineSingular": "die Geheimagentin",
+      "femininePlural": "die Geheimagentinnen",
+      "alternatives": {
+        "masculine": [
+          "Geheimagent"
+        ],
+        "feminine": [
+          "Geheimagentin"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:rechtsanwalt",
+      "sourceRow": 44,
+      "meaningEn": "Lawyer",
+      "masculineSingular": "der Rechtsanwalt",
+      "masculinePlural": "die Rechtsanwälte",
+      "feminineSingular": "die Rechtsanwältin",
+      "femininePlural": "die Rechtsanwältinnen",
+      "alternatives": {
+        "masculine": [
+          "Rechtsanwalt"
+        ],
+        "feminine": [
+          "Rechtsanwältin"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:richter",
+      "sourceRow": 45,
+      "meaningEn": "Judge",
+      "masculineSingular": "der Richter",
+      "masculinePlural": "die Richter",
+      "feminineSingular": "die Richterin",
+      "femininePlural": "die Richterinnen",
+      "alternatives": {
+        "masculine": [
+          "Richter"
+        ],
+        "feminine": [
+          "Richterin"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:journalist",
+      "sourceRow": 46,
+      "meaningEn": "Journalist",
+      "masculineSingular": "der Journalist",
+      "masculinePlural": "die Journalisten",
+      "feminineSingular": "die Journalistin",
+      "femininePlural": "die Journalistinnen",
+      "alternatives": {
+        "masculine": [
+          "Journalist"
+        ],
+        "feminine": [
+          "Journalistin"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:putzmann",
+      "sourceRow": 47,
+      "meaningEn": "Cleaner",
+      "masculineSingular": "der Putzmann",
+      "masculinePlural": "die Putzmänner",
+      "feminineSingular": "die Putzfrau",
+      "femininePlural": "die Putzfrauen",
+      "alternatives": {
+        "masculine": [
+          "Putzmann"
+        ],
+        "feminine": [
+          "Putzfrau"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "id": "teacher-job:kassierer",
+      "sourceRow": 48,
+      "meaningEn": "Cashier",
+      "masculineSingular": "der Kassierer",
+      "masculinePlural": "die Kassierer",
+      "feminineSingular": "die Kassiererin",
+      "femininePlural": "die Kassiererinnen",
+      "alternatives": {
+        "masculine": [
+          "Kassierer"
+        ],
+        "feminine": [
+          "Kassiererin"
+        ]
+      },
+      "priority": 3,
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "sourceId": "src:learner-note:professions",
+      "validationStatus": "candidate-needs-german-review"
+    }
+  ]
+}

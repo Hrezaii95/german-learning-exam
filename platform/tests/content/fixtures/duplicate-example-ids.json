@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0.0",
+  "meta": {
+    "label": "C0R2 duplicate example IDs across top-level examples array",
+    "generatedFor": "fixture"
+  },
+  "sources": [
+    {
+      "kind": "Source",
+      "id": "source:fixture-schema",
+      "title": "C0 schema fixture source",
+      "sourceKind": "fixture",
+      "language": "de",
+      "priority": 1,
+      "cefrBand": "A1.1"
+    }
+  ],
+  "sourceAssertions": [],
+  "mediaAssets": [],
+  "lessons": [],
+  "lexemes": [
+    {
+      "kind": "Lexeme",
+      "id": "lex:fixture-with-example",
+      "lemma": "fixtureexample",
+      "partOfSpeech": "noun",
+      "meanings": [{ "id": "meaning:fixture-with-example", "glossEn": "[fixture-gloss]" }],
+      "pronunciation": {},
+      "exampleIds": ["example:shared-dup"],
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": { "status": "draft", "publishedFields": [] }
+    }
+  ],
+  "verbs": [],
+  "grammarConcepts": [],
+  "phrasePatterns": [],
+  "qaPairs": [],
+  "dialogues": [],
+  "listeningAssets": [],
+  "collections": [],
+  "learningActivities": [],
+  "examples": [
+    {
+      "kind": "Example",
+      "id": "example:shared-dup",
+      "text": { "tokens": [{ "type": "plain", "text": "Eins." }] },
+      "sourceAssertionIds": []
+    },
+    {
+      "kind": "Example",
+      "id": "example:shared-dup",
+      "text": { "tokens": [{ "type": "plain", "text": "Zwei." }] },
+      "sourceAssertionIds": []
+    }
+  ],
+  "relationships": [],
+  "contentGaps": []
+}

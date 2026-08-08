@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0.0",
+  "meta": {
+    "label": "C0R2 partial publishedFields missing conditional spokenText",
+    "generatedFor": "fixture"
+  },
+  "sources": [
+    {
+      "kind": "Source",
+      "id": "source:fixture-schema",
+      "title": "C0 schema fixture source",
+      "sourceKind": "fixture",
+      "language": "de",
+      "priority": 1,
+      "cefrBand": "A1.1"
+    }
+  ],
+  "sourceAssertions": [
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:media-variants-only",
+      "sourceId": "source:fixture-schema",
+      "location": { "noteRow": 1 },
+      "subjectId": "media:partial-spoken",
+      "field": "variants",
+      "value": [{ "path": "fixture/partial.mp3", "role": "master" }],
+      "extraction": "fixture",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c0-fixture"
+    }
+  ],
+  "mediaAssets": [
+    {
+      "kind": "MediaAsset",
+      "id": "media:partial-spoken",
+      "mediaKind": "audio",
+      "origin": "publisher",
+      "locale": "de-DE",
+      "variants": [{ "path": "fixture/partial.mp3", "role": "master" }],
+      "spokenText": "Guten Tag.",
+      "reviewStatus": "verified",
+      "linkedConceptIds": [],
+      "sourceAssertionIds": ["assert:media-variants-only"],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          { "field": "variants", "assertionId": "assert:media-variants-only" }
+        ]
+      }
+    }
+  ],
+  "lessons": [],
+  "lexemes": [],
+  "verbs": [],
+  "grammarConcepts": [],
+  "phrasePatterns": [],
+  "qaPairs": [],
+  "dialogues": [],
+  "listeningAssets": [],
+  "collections": [],
+  "learningActivities": [],
+  "relationships": [],
+  "contentGaps": []
+}

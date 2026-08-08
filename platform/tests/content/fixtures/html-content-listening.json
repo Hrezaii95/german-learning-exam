@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "1.0.0",
+  "meta": { "label": "C0R2 HTML in ListeningAsset transcript", "generatedFor": "fixture" },
+  "sources": [
+    {
+      "kind": "Source",
+      "id": "source:fixture-schema",
+      "title": "C0 schema fixture source",
+      "sourceKind": "fixture",
+      "language": "de",
+      "priority": 1,
+      "cefrBand": "A1.1"
+    }
+  ],
+  "sourceAssertions": [],
+  "mediaAssets": [
+    {
+      "kind": "MediaAsset",
+      "id": "media:fixture-listen",
+      "mediaKind": "audio",
+      "origin": "publisher",
+      "locale": "de-DE",
+      "variants": [{ "path": "fixture/listen.mp3", "role": "master" }],
+      "reviewStatus": "verified",
+      "linkedConceptIds": [],
+      "sourceAssertionIds": [],
+      "publication": { "status": "draft", "publishedFields": [] }
+    }
+  ],
+  "lessons": [],
+  "lexemes": [],
+  "verbs": [],
+  "grammarConcepts": [],
+  "phrasePatterns": [],
+  "qaPairs": [],
+  "dialogues": [],
+  "listeningAssets": [
+    {
+      "kind": "ListeningAsset",
+      "id": "listen:fixture-html",
+      "mediaId": "media:fixture-listen",
+      "transcriptSegments": [
+        {
+          "id": "seg1",
+          "textDe": {
+            "tokens": [{ "type": "plain", "text": "<em>Guten Tag</em>" }]
+          },
+          "linkedConceptIds": []
+        }
+      ],
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "publication": { "status": "draft", "publishedFields": [] }
+    }
+  ],
+  "collections": [],
+  "learningActivities": [],
+  "relationships": [],
+  "contentGaps": []
+}

@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0.0",
+  "meta": { "label": "C0R1 HTML in dialogue structured text", "generatedFor": "fixture" },
+  "sources": [
+    {
+      "kind": "Source",
+      "id": "source:fixture-schema",
+      "title": "C0 schema fixture source",
+      "sourceKind": "fixture",
+      "language": "de",
+      "priority": 1,
+      "cefrBand": "A1.1"
+    }
+  ],
+  "sourceAssertions": [],
+  "mediaAssets": [],
+  "lessons": [],
+  "lexemes": [],
+  "verbs": [],
+  "grammarConcepts": [],
+  "phrasePatterns": [],
+  "qaPairs": [],
+  "dialogues": [
+    {
+      "kind": "Dialogue",
+      "id": "dialogue:fixture-html",
+      "titleEn": "Fixture HTML dialogue",
+      "turns": [
+        {
+          "id": "t1",
+          "speaker": "A",
+          "textDe": {
+            "tokens": [{ "type": "plain", "text": "<b>Hallo</b>" }]
+          },
+          "translationEn": {
+            "tokens": [{ "type": "plain", "text": "Hello" }]
+          },
+          "taskPrompt": {
+            "tokens": [{ "type": "plain", "text": "Repeat" }]
+          },
+          "linkedConceptIds": []
+        }
+      ],
+      "relationIds": [],
+      "sourceAssertionIds": [],
+      "mediaIds": [],
+      "publication": {
+        "status": "draft",
+        "publishedFields": []
+      }
+    }
+  ],
+  "listeningAssets": [],
+  "collections": [],
+  "learningActivities": [],
+  "relationships": [],
+  "contentGaps": []
+}

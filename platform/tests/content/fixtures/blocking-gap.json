@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "1.0.0",
+  "meta": { "label": "C0 blocking gap rejects publication", "generatedFor": "fixture" },
+  "sources": [
+    {
+      "kind": "Source",
+      "id": "source:fixture-schema",
+      "title": "C0 schema fixture source",
+      "sourceKind": "fixture",
+      "language": "de",
+      "priority": 1,
+      "cefrBand": "A1.1"
+    }
+  ],
+  "sourceAssertions": [
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-gap-lemma",
+      "sourceId": "source:fixture-schema",
+      "location": { "noteRow": 1 },
+      "subjectId": "lex:fixture-gap",
+      "field": "lemma",
+      "value": "[fixture-lemma]",
+      "extraction": "fixture",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c0-fixture"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-gap-meanings",
+      "sourceId": "source:fixture-schema",
+      "location": { "noteRow": 2 },
+      "subjectId": "lex:fixture-gap",
+      "field": "meanings",
+      "value": [{ "id": "meaning:fixture-gap", "glossEn": "[fixture-gloss]" }],
+      "extraction": "fixture",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c0-fixture"
+    }
+  ],
+  "mediaAssets": [],
+  "lessons": [],
+  "lexemes": [
+    {
+      "kind": "Lexeme",
+      "id": "lex:fixture-gap",
+      "lemma": "fixturegap",
+      "partOfSpeech": "noun",
+      "meanings": [{ "id": "meaning:fixture-gap", "glossEn": "[fixture-gloss]" }],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": ["assert:lex-gap-lemma", "assert:lex-gap-meanings"],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          { "field": "lemma", "assertionId": "assert:lex-gap-lemma" },
+          { "field": "meanings", "assertionId": "assert:lex-gap-meanings" }
+        ]
+      }
+    }
+  ],
+  "verbs": [],
+  "grammarConcepts": [],
+  "phrasePatterns": [],
+  "qaPairs": [],
+  "dialogues": [],
+  "listeningAssets": [],
+  "collections": [],
+  "learningActivities": [],
+  "relationships": [],
+  "contentGaps": [
+    {
+      "kind": "ContentGap",
+      "id": "gap:audio:lex-fixture-gap",
+      "objectId": "lex:fixture-gap",
+      "field": "pronunciation.audioId",
+      "reason": "generated audio pending review",
+      "owner": "codex-media",
+      "blocksPublication": true
+    }
+  ]
+}

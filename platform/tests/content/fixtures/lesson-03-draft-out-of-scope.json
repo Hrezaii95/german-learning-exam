@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0.0",
+  "meta": { "label": "C0R1 draft Lesson 3 still out of Alpha scope", "generatedFor": "fixture" },
+  "sources": [],
+  "sourceAssertions": [],
+  "mediaAssets": [],
+  "lessons": [
+    {
+      "kind": "Lesson",
+      "id": "lesson:03",
+      "number": 3,
+      "titleDe": "[fixture-lesson-03]",
+      "titleEn": "Fixture Lesson 3 draft",
+      "cefr": "A1",
+      "communicativeGoals": ["fixture-goal"],
+      "prerequisiteLessonIds": [],
+      "stages": [
+        {
+          "id": "overview",
+          "kind": "overview",
+          "titleEn": "Overview",
+          "activityIds": [],
+          "estimatedMinutes": 1,
+          "skillTargets": ["exposure"],
+          "required": true
+        }
+      ],
+      "collections": [],
+      "sourceAssertionIds": [],
+      "relationIds": [],
+      "publication": {
+        "status": "draft",
+        "publishedFields": [],
+        "scopeException": {
+          "kind": "approved-enrichment",
+          "attachedLessonId": "lesson:02",
+          "approvalId": "approval:cannot-promote-lesson-entity",
+          "note": "Enrichment must not be modeled as Lesson 3+ entity."
+        }
+      }
+    }
+  ],
+  "lexemes": [],
+  "verbs": [],
+  "grammarConcepts": [],
+  "phrasePatterns": [],
+  "qaPairs": [],
+  "dialogues": [],
+  "listeningAssets": [],
+  "collections": [],
+  "learningActivities": [],
+  "relationships": [],
+  "contentGaps": []
+}

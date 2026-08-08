@@ -1,0 +1,1540 @@
+{
+  "schemaVersion": "1.0.0",
+  "fragmentId": "activities",
+  "meta": {
+    "label": "C1 required lesson activities fragment",
+    "generatedFor": "publication"
+  },
+  "sources": [],
+  "sourceAssertions": [
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:activity-lesson-01-greetings-by-context-prompt",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "required-lesson-activities"
+      },
+      "subjectId": "activity:lesson-01-greetings-by-context",
+      "field": "prompt",
+      "value": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Greetings by context visual + hotspot audio"
+            }
+          ]
+        }
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:activity-lesson-01-greeting-farewell-match-prompt",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "required-lesson-activities"
+      },
+      "subjectId": "activity:lesson-01-greeting-farewell-match",
+      "field": "prompt",
+      "value": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Greeting/farewell picture/audio match"
+            }
+          ]
+        }
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:activity-lesson-01-name-model-dialogue-prompt",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "required-lesson-activities"
+      },
+      "subjectId": "activity:lesson-01-name-model-dialogue",
+      "field": "prompt",
+      "value": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Name model dialogue"
+            }
+          ]
+        }
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:activity-lesson-01-alphabet-listen-spell-prompt",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "required-lesson-activities"
+      },
+      "subjectId": "activity:lesson-01-alphabet-listen-spell",
+      "field": "prompt",
+      "value": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Alphabet listen-and-spell"
+            }
+          ]
+        }
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:activity-lesson-01-heissen-sein-notice-prompt",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "required-lesson-activities"
+      },
+      "subjectId": "activity:lesson-01-heissen-sein-notice",
+      "field": "prompt",
+      "value": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "heißen vs sein notice card"
+            }
+          ]
+        }
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:activity-lesson-01-wellbeing-scale-prompt",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "required-lesson-activities"
+      },
+      "subjectId": "activity:lesson-01-wellbeing-scale",
+      "field": "prompt",
+      "value": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Wellbeing scale with phrase audio"
+            }
+          ]
+        }
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:activity-lesson-01-origin-aus-contrast-prompt",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "required-lesson-activities"
+      },
+      "subjectId": "activity:lesson-01-origin-aus-contrast",
+      "field": "prompt",
+      "value": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Origin map/cards and aus contrast"
+            }
+          ]
+        }
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:activity-lesson-01-pronoun-verb-builder-prompt",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "required-lesson-activities"
+      },
+      "subjectId": "activity:lesson-01-pronoun-verb-builder",
+      "field": "prompt",
+      "value": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Pronoun-person map and singular verb builder"
+            }
+          ]
+        }
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:activity-lesson-01-register-qa-builder-prompt",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "required-lesson-activities"
+      },
+      "subjectId": "activity:lesson-01-register-qa-builder",
+      "field": "prompt",
+      "value": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Casual/formal Q&A builder"
+            }
+          ]
+        }
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:activity-lesson-01-workbook-listening-prompt",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "required-lesson-activities"
+      },
+      "subjectId": "activity:lesson-01-workbook-listening",
+      "field": "prompt",
+      "value": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Verified workbook listening for Exercises 3 and 9"
+            }
+          ]
+        }
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:activity-lesson-01-guided-intro-recording-prompt",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "required-lesson-activities"
+      },
+      "subjectId": "activity:lesson-01-guided-intro-recording",
+      "field": "prompt",
+      "value": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Guided introduction conversation recording"
+            }
+          ]
+        }
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:activity-lesson-01-checkpoint-summary-prompt",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "required-lesson-activities"
+      },
+      "subjectId": "activity:lesson-01-checkpoint-summary",
+      "field": "prompt",
+      "value": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Mixed checkpoint and two-minute summary"
+            }
+          ]
+        }
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:activity-lesson-02-personal-profile-prompt",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "required-lesson-activities"
+      },
+      "subjectId": "activity:lesson-02-personal-profile",
+      "field": "prompt",
+      "value": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Personal-profile visual and fillable model"
+            }
+          ]
+        }
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:activity-lesson-02-full-person-conjugation-prompt",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "required-lesson-activities"
+      },
+      "subjectId": "activity:lesson-02-full-person-conjugation",
+      "field": "prompt",
+      "value": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Full-person conjugation notice/build activities"
+            }
+          ]
+        }
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:activity-lesson-02-numbers-0-100-prompt",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "required-lesson-activities"
+      },
+      "subjectId": "activity:lesson-02-numbers-0-100",
+      "field": "prompt",
+      "value": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Numbers 0–100 visual, build, type and telephone listening"
+            }
+          ]
+        }
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:activity-lesson-02-relationship-status-prompt",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "required-lesson-activities"
+      },
+      "subjectId": "activity:lesson-02-relationship-status",
+      "field": "prompt",
+      "value": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Relationship/status visual and nicht contrasts"
+            }
+          ]
+        }
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:activity-lesson-02-core-professions-prompt",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "required-lesson-activities"
+      },
+      "subjectId": "activity:lesson-02-core-professions",
+      "field": "prompt",
+      "value": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Core professions overview and individual cards"
+            }
+          ]
+        }
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:activity-lesson-02-person-form-morphology-prompt",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "required-lesson-activities"
+      },
+      "subjectId": "activity:lesson-02-person-form-morphology",
+      "field": "prompt",
+      "value": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Person-form and plural morphology activities"
+            }
+          ]
+        }
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:activity-lesson-02-profession-qa-builder-prompt",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "required-lesson-activities"
+      },
+      "subjectId": "activity:lesson-02-profession-qa-builder",
+      "field": "prompt",
+      "value": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Profession Q&A casual/formal builder and recording"
+            }
+          ]
+        }
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:activity-lesson-02-sein-arbeiten-contrast-prompt",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "required-lesson-activities"
+      },
+      "subjectId": "activity:lesson-02-sein-arbeiten-contrast",
+      "field": "prompt",
+      "value": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "sein profession vs arbeiten als/bei contrast"
+            }
+          ]
+        }
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:activity-lesson-02-workbook-listening-prompt",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "required-lesson-activities"
+      },
+      "subjectId": "activity:lesson-02-workbook-listening",
+      "field": "prompt",
+      "value": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Verified workbook number and word-stress listening (Exercises 6 and 12)"
+            }
+          ]
+        }
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:activity-lesson-02-profile-reading-writing-prompt",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "required-lesson-activities"
+      },
+      "subjectId": "activity:lesson-02-profile-reading-writing",
+      "field": "prompt",
+      "value": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Profile reading/writing activity"
+            }
+          ]
+        }
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:activity-lesson-02-teacher-professions-deck-prompt",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "required-lesson-activities"
+      },
+      "subjectId": "activity:lesson-02-teacher-professions-deck",
+      "field": "prompt",
+      "value": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Teacher-professions assignment deck, grouped infographic, games and review"
+            }
+          ]
+        }
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:activity-lesson-02-checkpoint-summary-prompt",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "required-lesson-activities"
+      },
+      "subjectId": "activity:lesson-02-checkpoint-summary",
+      "field": "prompt",
+      "value": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Mixed checkpoint and two-minute summary"
+            }
+          ]
+        }
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    }
+  ],
+  "mediaAssets": [],
+  "lessons": [],
+  "lexemes": [],
+  "verbs": [],
+  "grammarConcepts": [],
+  "phrasePatterns": [],
+  "qaPairs": [],
+  "dialogues": [],
+  "listeningAssets": [],
+  "collections": [],
+  "learningActivities": [
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-01-greetings-by-context",
+      "lessonId": "lesson:01",
+      "mode": "see",
+      "renderer": "activity.see",
+      "conceptIds": [],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Greetings by context visual + hotspot audio"
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "exposure",
+        "recognition"
+      ],
+      "completionRule": {
+        "type": "viewed"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:activity-lesson-01-greetings-by-context-prompt"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "prompt",
+            "assertionId": "assert:activity-lesson-01-greetings-by-context-prompt"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-01-greeting-farewell-match",
+      "lessonId": "lesson:01",
+      "mode": "hear",
+      "renderer": "activity.hear",
+      "conceptIds": [],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Greeting/farewell picture/audio match"
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "listening"
+      ],
+      "completionRule": {
+        "type": "viewed"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:activity-lesson-01-greeting-farewell-match-prompt"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "prompt",
+            "assertionId": "assert:activity-lesson-01-greeting-farewell-match-prompt"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-01-name-model-dialogue",
+      "lessonId": "lesson:01",
+      "mode": "notice",
+      "renderer": "activity.notice",
+      "conceptIds": [],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Name model dialogue"
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "exposure",
+        "recognition"
+      ],
+      "completionRule": {
+        "type": "viewed"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:activity-lesson-01-name-model-dialogue-prompt"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "prompt",
+            "assertionId": "assert:activity-lesson-01-name-model-dialogue-prompt"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-01-alphabet-listen-spell",
+      "lessonId": "lesson:01",
+      "mode": "hear",
+      "renderer": "activity.hear",
+      "conceptIds": [],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Alphabet listen-and-spell"
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "listening"
+      ],
+      "completionRule": {
+        "type": "viewed"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:activity-lesson-01-alphabet-listen-spell-prompt"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "prompt",
+            "assertionId": "assert:activity-lesson-01-alphabet-listen-spell-prompt"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-01-heissen-sein-notice",
+      "lessonId": "lesson:01",
+      "mode": "notice",
+      "renderer": "activity.notice",
+      "conceptIds": [],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "heißen vs sein notice card"
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "exposure",
+        "recognition"
+      ],
+      "completionRule": {
+        "type": "viewed"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:activity-lesson-01-heissen-sein-notice-prompt"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "prompt",
+            "assertionId": "assert:activity-lesson-01-heissen-sein-notice-prompt"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-01-wellbeing-scale",
+      "lessonId": "lesson:01",
+      "mode": "hear",
+      "renderer": "activity.hear",
+      "conceptIds": [],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Wellbeing scale with phrase audio"
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "listening"
+      ],
+      "completionRule": {
+        "type": "viewed"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:activity-lesson-01-wellbeing-scale-prompt"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "prompt",
+            "assertionId": "assert:activity-lesson-01-wellbeing-scale-prompt"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-01-origin-aus-contrast",
+      "lessonId": "lesson:01",
+      "mode": "notice",
+      "renderer": "activity.notice",
+      "conceptIds": [],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Origin map/cards and aus contrast"
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "exposure",
+        "recognition"
+      ],
+      "completionRule": {
+        "type": "viewed"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:activity-lesson-01-origin-aus-contrast-prompt"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "prompt",
+            "assertionId": "assert:activity-lesson-01-origin-aus-contrast-prompt"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-01-pronoun-verb-builder",
+      "lessonId": "lesson:01",
+      "mode": "recall",
+      "renderer": "activity.recall",
+      "conceptIds": [],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Pronoun-person map and singular verb builder"
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "exposure",
+        "recognition"
+      ],
+      "completionRule": {
+        "type": "viewed"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:activity-lesson-01-pronoun-verb-builder-prompt"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "prompt",
+            "assertionId": "assert:activity-lesson-01-pronoun-verb-builder-prompt"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-01-register-qa-builder",
+      "lessonId": "lesson:01",
+      "mode": "use",
+      "renderer": "activity.use",
+      "conceptIds": [],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Casual/formal Q&A builder"
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "exposure",
+        "recognition"
+      ],
+      "completionRule": {
+        "type": "recorded"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:activity-lesson-01-register-qa-builder-prompt"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "prompt",
+            "assertionId": "assert:activity-lesson-01-register-qa-builder-prompt"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-01-workbook-listening",
+      "lessonId": "lesson:01",
+      "mode": "hear",
+      "renderer": "activity.hear",
+      "conceptIds": [],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Verified workbook listening for Exercises 3 and 9"
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "listening"
+      ],
+      "completionRule": {
+        "type": "viewed"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:activity-lesson-01-workbook-listening-prompt"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "prompt",
+            "assertionId": "assert:activity-lesson-01-workbook-listening-prompt"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-01-guided-intro-recording",
+      "lessonId": "lesson:01",
+      "mode": "use",
+      "renderer": "activity.use",
+      "conceptIds": [],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Guided introduction conversation recording"
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "exposure",
+        "recognition"
+      ],
+      "completionRule": {
+        "type": "recorded"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:activity-lesson-01-guided-intro-recording-prompt"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "prompt",
+            "assertionId": "assert:activity-lesson-01-guided-intro-recording-prompt"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-01-checkpoint-summary",
+      "lessonId": "lesson:01",
+      "mode": "check",
+      "renderer": "activity.check",
+      "conceptIds": [],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Mixed checkpoint and two-minute summary"
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "recall",
+        "production"
+      ],
+      "completionRule": {
+        "type": "correct",
+        "minCorrect": 1
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:activity-lesson-01-checkpoint-summary-prompt"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "prompt",
+            "assertionId": "assert:activity-lesson-01-checkpoint-summary-prompt"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-02-personal-profile",
+      "lessonId": "lesson:02",
+      "mode": "see",
+      "renderer": "activity.see",
+      "conceptIds": [],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Personal-profile visual and fillable model"
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "exposure",
+        "recognition"
+      ],
+      "completionRule": {
+        "type": "viewed"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:activity-lesson-02-personal-profile-prompt"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "prompt",
+            "assertionId": "assert:activity-lesson-02-personal-profile-prompt"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-02-full-person-conjugation",
+      "lessonId": "lesson:02",
+      "mode": "notice",
+      "renderer": "activity.notice",
+      "conceptIds": [],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Full-person conjugation notice/build activities"
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "exposure",
+        "recognition"
+      ],
+      "completionRule": {
+        "type": "viewed"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:activity-lesson-02-full-person-conjugation-prompt"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "prompt",
+            "assertionId": "assert:activity-lesson-02-full-person-conjugation-prompt"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-02-numbers-0-100",
+      "lessonId": "lesson:02",
+      "mode": "hear",
+      "renderer": "activity.hear",
+      "conceptIds": [],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Numbers 0–100 visual, build, type and telephone listening"
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "listening"
+      ],
+      "completionRule": {
+        "type": "viewed"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:activity-lesson-02-numbers-0-100-prompt"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "prompt",
+            "assertionId": "assert:activity-lesson-02-numbers-0-100-prompt"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-02-relationship-status",
+      "lessonId": "lesson:02",
+      "mode": "see",
+      "renderer": "activity.see",
+      "conceptIds": [],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Relationship/status visual and nicht contrasts"
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "exposure",
+        "recognition"
+      ],
+      "completionRule": {
+        "type": "viewed"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:activity-lesson-02-relationship-status-prompt"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "prompt",
+            "assertionId": "assert:activity-lesson-02-relationship-status-prompt"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-02-core-professions",
+      "lessonId": "lesson:02",
+      "mode": "see",
+      "renderer": "activity.see",
+      "conceptIds": [],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Core professions overview and individual cards"
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "exposure",
+        "recognition"
+      ],
+      "completionRule": {
+        "type": "viewed"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:activity-lesson-02-core-professions-prompt"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "prompt",
+            "assertionId": "assert:activity-lesson-02-core-professions-prompt"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-02-person-form-morphology",
+      "lessonId": "lesson:02",
+      "mode": "notice",
+      "renderer": "activity.notice",
+      "conceptIds": [],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Person-form and plural morphology activities"
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "exposure",
+        "recognition"
+      ],
+      "completionRule": {
+        "type": "viewed"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:activity-lesson-02-person-form-morphology-prompt"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "prompt",
+            "assertionId": "assert:activity-lesson-02-person-form-morphology-prompt"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-02-profession-qa-builder",
+      "lessonId": "lesson:02",
+      "mode": "use",
+      "renderer": "activity.use",
+      "conceptIds": [],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Profession Q&A casual/formal builder and recording"
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "exposure",
+        "recognition"
+      ],
+      "completionRule": {
+        "type": "recorded"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:activity-lesson-02-profession-qa-builder-prompt"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "prompt",
+            "assertionId": "assert:activity-lesson-02-profession-qa-builder-prompt"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-02-sein-arbeiten-contrast",
+      "lessonId": "lesson:02",
+      "mode": "notice",
+      "renderer": "activity.notice",
+      "conceptIds": [],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "sein profession vs arbeiten als/bei contrast"
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "exposure",
+        "recognition"
+      ],
+      "completionRule": {
+        "type": "viewed"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:activity-lesson-02-sein-arbeiten-contrast-prompt"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "prompt",
+            "assertionId": "assert:activity-lesson-02-sein-arbeiten-contrast-prompt"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-02-workbook-listening",
+      "lessonId": "lesson:02",
+      "mode": "hear",
+      "renderer": "activity.hear",
+      "conceptIds": [],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Verified workbook number and word-stress listening (Exercises 6 and 12)"
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "listening"
+      ],
+      "completionRule": {
+        "type": "viewed"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:activity-lesson-02-workbook-listening-prompt"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "prompt",
+            "assertionId": "assert:activity-lesson-02-workbook-listening-prompt"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-02-profile-reading-writing",
+      "lessonId": "lesson:02",
+      "mode": "recall",
+      "renderer": "activity.recall",
+      "conceptIds": [],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Profile reading/writing activity"
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "exposure",
+        "recognition"
+      ],
+      "completionRule": {
+        "type": "viewed"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:activity-lesson-02-profile-reading-writing-prompt"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "prompt",
+            "assertionId": "assert:activity-lesson-02-profile-reading-writing-prompt"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-02-teacher-professions-deck",
+      "lessonId": "lesson:02",
+      "mode": "review",
+      "renderer": "activity.review",
+      "conceptIds": [
+        "collection:teacher-professions"
+      ],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Teacher-professions assignment deck, grouped infographic, games and review"
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "review-stability"
+      ],
+      "completionRule": {
+        "type": "viewed"
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:activity-lesson-02-teacher-professions-deck-prompt"
+      ],
+      "publication": {
+        "status": "review",
+        "publishedFields": []
+      }
+    },
+    {
+      "kind": "LearningActivity",
+      "id": "activity:lesson-02-checkpoint-summary",
+      "lessonId": "lesson:02",
+      "mode": "check",
+      "renderer": "activity.check",
+      "conceptIds": [],
+      "prompt": {
+        "instruction": {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Mixed checkpoint and two-minute summary"
+            }
+          ]
+        }
+      },
+      "skillDimensions": [
+        "recall",
+        "production"
+      ],
+      "completionRule": {
+        "type": "correct",
+        "minCorrect": 1
+      },
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:activity-lesson-02-checkpoint-summary-prompt"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "prompt",
+            "assertionId": "assert:activity-lesson-02-checkpoint-summary-prompt"
+          }
+        ]
+      }
+    }
+  ],
+  "examples": [],
+  "relationships": [],
+  "contentGaps": [
+    {
+      "kind": "ContentGap",
+      "id": "gap:activity-concept-links",
+      "objectId": "activity:lesson-01-greetings-by-context",
+      "field": "conceptIds",
+      "reason": "Activity→concept wiring deferred until hub indexes; activity records and lesson stage references are complete",
+      "owner": "cursor",
+      "blocksPublication": false
+    }
+  ]
+}

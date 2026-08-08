@@ -1,0 +1,59 @@
+{
+  "checkedAt": "2026-08-07",
+  "scope": "redacted provider availability and minimal German speech checks",
+  "secretsStored": false,
+  "primaryDecision": {
+    "provider": "edge-tts",
+    "voice": "de-DE-KatjaNeural",
+    "rate": "+4%",
+    "reason": "owner approved the generated voice; 327 cached clips already exist"
+  },
+  "providers": [
+    {
+      "provider": "edge-tts",
+      "status": "available",
+      "generationSmoke": "previously passed",
+      "approvedCachedClips": 327,
+      "productionUse": "primary cached generation"
+    },
+    {
+      "provider": "gemini",
+      "status": "available",
+      "configuredKeysAccepted": 5,
+      "configuredKeysRejected": 1,
+      "model": "gemini-2.5-flash-preview-tts",
+      "generationSmoke": "passed",
+      "output": "audio/L16;codec=pcm;rate=24000",
+      "decodedBytes": 171406,
+      "productionUse": "backup and quality comparison only"
+    },
+    {
+      "provider": "openrouter",
+      "status": "key accepted; free speech generation unavailable in smoke",
+      "acceptedConfiguredKeys": 1,
+      "rejectedConfiguredKeys": 1,
+      "freeModelAttempted": "fish-audio/s2.1-pro-free:free",
+      "generationResult": "provider HTTP 400",
+      "productionUse": "do not rely on current free lane"
+    },
+    {
+      "provider": "cartesia",
+      "status": "not configured",
+      "generationSmoke": "not run",
+      "productionUse": "optional A/B comparison after key is supplied"
+    },
+    {
+      "provider": "ttsforfree",
+      "status": "not configured",
+      "generationSmoke": "not run",
+      "readOnlyProbe": "GET https://api.ttsforfree.com/api/Common/GetListLanguage with X-API-Key",
+      "productionUse": "optional A/B comparison after key is supplied"
+    }
+  ],
+  "policy": {
+    "learnerPlaybackCallsProviders": false,
+    "keysReachBrowser": false,
+    "quotaRotationAllowed": false,
+    "fallbackUse": "outage resilience or controlled quality comparison only"
+  }
+}
