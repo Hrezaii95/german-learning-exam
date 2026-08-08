@@ -1,27 +1,43 @@
 # Local secrets and dependencies
 .env
 .env.*
+!.env.example
 node_modules/
 
 # Private or licensed source material (catalogues remain tracked)
 resources/original/**/*.pdf
 resources/original/**/*.mp3
 resources/original/**/*.jpg
+resources/original/**/*.jpeg
+resources/original/**/*.png
+resources/original/**/*.wav
 resources/project-context/conversation/*.json
 resources/project-context/ui-reference/*.png
 
+# Visual/reference slice — not the Alpha app (large; keep out of deploy remote)
+samples/
+
 # Isolated Cursor runtime state
+.cursor/
 archive/cursor-demo-2026-07-30/.cursor/
 archive/cursor-demo-2026-07-30/audio/
+archive/cursor-demo-2026-07-30/node_modules/
 
-# Generated outputs for the clean rebuild
+# Build / tool caches
+.next/
+out/
 derived/
 dist/
 coverage/
 .cache/
+.turbo/
+.pytest_cache/
 __pycache__/
 *.py[cod]
+*.tsbuildinfo
 
 # Operating-system files
 .DS_Store
 Thumbs.db
+*.log
+npm-debug.log*
