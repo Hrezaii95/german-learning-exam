@@ -36,11 +36,11 @@ describe("lesson activity interaction behavior", () => {
     return found;
   }
 
-  it("requires a real listening note and media confirmation before completing an ungraded activity", async () => {
+  it("requires a real listening note and media confirmation before completing an ungraded workbook activity", async () => {
     const user = userEvent.setup();
     const onAttempt = vi.fn();
     const onSolved = vi.fn();
-    const target = activity("activity:lesson-01-alphabet-listen-spell");
+    const target = activity("activity:lesson-01-workbook-listening");
     render(createElement(ActivityInteraction, {
       activity: target,
       enrichment: getEnrichedActivity(target.id),

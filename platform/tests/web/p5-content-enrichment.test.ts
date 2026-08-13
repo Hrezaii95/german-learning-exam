@@ -54,7 +54,7 @@ describe("P5 learner content enrichment", () => {
       reviewOnlyTeacherRowsExcluded: 48,
       reviewOnlyTeacherLexemesExcluded: 86,
       professionPluralGaps: 26,
-      professionAudioPendingReview: 26,
+      professionAudioPendingReview: 0,
       professionImageGaps: 26,
       activityContentLinkGaps: 4,
     });
@@ -140,7 +140,8 @@ describe("P5 learner content enrichment", () => {
       });
       expect(card.gameEligibility.find((game) => game.gameId === "article-sort")?.state).toBe("ready");
       expect(card.gameEligibility.find((game) => game.gameId === "plural-forge")?.state).toBe("missing");
-      expect(card.gameEligibility.find((game) => game.gameId === "audio-match")?.state).toBe("pending-review");
+      expect(card.gameEligibility.find((game) => game.gameId === "audio-match")?.state).toBe("ready");
+      expect(card.mediaSlots.find((slot) => slot.kind === "audio")?.state).toBe("ready");
       expect(card.mediaSlots.find((slot) => slot.kind === "image")?.state).toBe("missing");
     }
   });

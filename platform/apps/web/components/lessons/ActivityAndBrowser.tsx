@@ -13,7 +13,14 @@ import { WorkbookAudioPanel } from "@/components/audio/WorkbookAudioPanel";
 import { infographicForActivity } from "@/lib/content/infographics";
 import { InfographicPanel } from "@/components/media/InfographicPanel";
 import { RichLessonVisual } from "@/components/media/RichLessonVisual";
-import { illustrationForActivity } from "@/lib/content/illustrations";
+import {
+  illustrationForActivity,
+  illustrationForLesson,
+} from "@/lib/content/illustrations";
+import {
+  ActivityConceptVisual,
+  LessonJourneyVisual,
+} from "@/components/media/InstructionalVisuals";
 import { getEnrichedActivity } from "@/lib/content/enrichment-client";
 import { ActivityInteraction } from "@/components/activities";
 import {
@@ -111,6 +118,7 @@ export function LessonOverview({
   const completedCount = completedActivityCount(orderedActivities, progress);
   const percent = orderedActivities.length === 0 ? 0 : Math.round((completedCount / orderedActivities.length) * 100);
   const nextActivity = nextIncompleteActivity(orderedActivities, progress);
+  const lessonIllustration = illustrationForLesson(lesson.id);
 
   return (
     <div className="stack">
@@ -149,6 +157,9 @@ export function LessonOverview({
           </p>
         ) : null}
       </header>
+
+      {lessonIllustration ? <RichLessonVisual illustration={lessonIllustration} /> : null}
+      <LessonJourneyVisual lesson={lesson} />
 
       <section className="panel" aria-labelledby="goals-heading">
         <h2 id="goals-heading">Communicative outcome</h2>
@@ -289,6 +300,7 @@ export function ActivityScreen({
       </header>
 
       {illustration ? <RichLessonVisual illustration={illustration} /> : null}
+      <ActivityConceptVisual activityId={activity.id} />
       <p className="dense" id="practice-completion-note">Complete the interactive practice below to finish this activity.</p>
       <ActivityInteraction
         activity={activity}

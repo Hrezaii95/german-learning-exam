@@ -28,7 +28,9 @@ describe("lesson activity content plans", () => {
         expect(plan.questions.length).toBeGreaterThan(0);
         for (const question of plan.questions) {
           expect(question.expected.length).toBeGreaterThan(0);
-          expect(question.targetId).toMatch(/^(lex|verb|phrase|qa):/);
+          if (question.targetId !== null) {
+            expect(question.targetId).toMatch(/^(lex|verb|phrase|qa):/);
+          }
         }
       }
     }
@@ -50,11 +52,27 @@ describe("lesson activity content plans", () => {
       .map(({ activity }) => activity.id)
       .sort();
     expect(listeningOnlyIds).toEqual([
-      "activity:lesson-01-alphabet-listen-spell",
       "activity:lesson-01-workbook-listening",
-      "activity:lesson-02-numbers-0-100",
       "activity:lesson-02-workbook-listening",
     ]);
+  });
+
+  it("uses exact source-backed spelling and number practice instead of an empty listening note", () => {
+    const alphabet = plans.find(({ activity }) => activity.id === "activity:lesson-01-alphabet-listen-spell")!.plan;
+    const numbers = plans.find(({ activity }) => activity.id === "activity:lesson-02-numbers-0-100")!.plan;
+    expect(alphabet.questions.map((question) => question.expected)).toContain("Ä Ö Ü ß");
+    expect(alphabet.questions[0]?.accepted).toContain("ÄÖÜß");
+    expect(numbers.questions.map((question) => question.expected)).toEqual([
+      "einundzwanzig",
+      "siebenunddreißig",
+      "sechsundvierzig",
+      "vierundsechzig",
+      "zweiundsiebzig",
+      "achtundachtzig",
+      "neunundneunzig",
+      "hundert",
+    ]);
+    expect(numbers.questions.at(-1)?.accepted).toContain("einhundert");
   });
 
   it("renders native form controls for every activity instead of completion-only placeholders", () => {

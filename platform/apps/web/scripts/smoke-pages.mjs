@@ -39,6 +39,13 @@ const approvedAudio = new Map(
     asset.sha256,
   ]),
 );
+const synthesizedPronunciationManifest = JSON.parse(readFileSync(
+  join(repoRoot, "media", "manifests", "published-tts-exact-v1.json"),
+  "utf8",
+));
+for (const asset of synthesizedPronunciationManifest.assets) {
+  approvedAudio.set(`out/${asset.publicRelativePath}`, asset.sha256);
+}
 
 const PAGES_BASE = "/german-learning-exam";
 const PORT = process.env.SMOKE_PAGES_PORT
@@ -272,7 +279,7 @@ function verifyAssetRefsAndSecrets(expectedPaths) {
     }
   }
   assert(
-    seenApprovedAudio.size === approvedAudio.size && approvedAudio.size === 15,
+    seenApprovedAudio.size === approvedAudio.size,
     `approved audio set mismatch: expected ${approvedAudio.size}, found ${seenApprovedAudio.size}`,
   );
   console.log(`[smoke:pages] Scanned ${allFiles.length} out files for leaks`);

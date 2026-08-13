@@ -34,7 +34,12 @@ import { infographicForDetail } from "@/lib/content/infographics";
 import { InfographicPanel } from "@/components/media/InfographicPanel";
 import { RichLessonVisual } from "@/components/media/RichLessonVisual";
 import { illustrationForDetail } from "@/lib/content/illustrations";
-import { RapidProfessionMorphologySection } from "@/components/content/rapid-learning-sections";
+import {
+  GrammarConceptVisual,
+  NounSystemVisual,
+  QuestionAnswerFlowVisual,
+  VerbPatternVisual,
+} from "@/components/media/InstructionalVisuals";
 
 function MetaChips({
   lessonIds,
@@ -75,7 +80,7 @@ function VocabularyDetail({ detail }: { detail: LearnerVocabularyDetail }) {
       </header>
 
       {illustration ? <RichLessonVisual illustration={illustration} /> : null}
-      {pf ? <RapidProfessionMorphologySection /> : null}
+      <NounSystemVisual detail={detail} />
 
       <section className="panel" aria-labelledby="vocab-forms-heading">
         <h2 id="vocab-forms-heading">Forms</h2>
@@ -203,6 +208,7 @@ function VerbDetail({ detail }: { detail: LearnerVerbDetail }) {
       </header>
 
       {infographic ? <InfographicPanel infographic={infographic} /> : null}
+      <VerbPatternVisual detail={detail} />
 
       <section className="panel" aria-labelledby="verb-paradigm-heading">
         <h2 id="verb-paradigm-heading">Present paradigm</h2>
@@ -296,6 +302,7 @@ function QaDetail({ detail }: { detail: LearnerQaDetail }) {
       </header>
 
       {infographic ? <InfographicPanel infographic={infographic} /> : null}
+      <QuestionAnswerFlowVisual detail={detail} />
 
       <section className="panel qa-dialogue" aria-labelledby="qa-model-heading">
         <h2 id="qa-model-heading">Model</h2>
@@ -423,6 +430,8 @@ function GrammarDetail({ detail }: { detail: LearnerGrammarDetail }) {
           extra="Published"
         />
       </header>
+
+      <GrammarConceptVisual detail={detail} />
 
       <section className="panel grammar-notice" aria-labelledby="grammar-notice-heading">
         <h2 id="grammar-notice-heading">What to notice</h2>

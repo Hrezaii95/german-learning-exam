@@ -7,8 +7,10 @@ import type {
   ObjectiveTaskFamily,
 } from "@german-learning/learning";
 import { useOptionalLearnerState } from "@/components/learner-state/LearnerStateProvider";
+import { PronunciationControl } from "@/components/audio/PronunciationControl";
 import type { EnrichedActivity } from "@/lib/content/enrichment-types";
 import type { LearnerActivity } from "@/lib/content/types";
+import { resolvePublishedPronunciationExact } from "@/lib/content/media-availability";
 import {
   buildActivityPracticePlan,
   normalizeActivityAnswer,
@@ -47,7 +49,7 @@ function buildAttemptEvent(input: {
   latencyMs: number;
 }): LearnerEvent | null {
   const conceptId = persistedConceptForActivity(input.activity.id);
-  if (conceptId === null || conceptId !== input.question.targetId) return null;
+  if (conceptId === null || input.question.targetId === null || conceptId !== input.question.targetId) return null;
   const shape = evidenceShape(input.question);
   const event: LearnerEvent = {
     schemaVersion: "1.0.0",
@@ -257,6 +259,7 @@ export function ActivityInteraction({
       </section>
     );
   }
+  const pronunciation = resolvePublishedPronunciationExact(question.spokenText);
 
   const checkAnswer = () => {
     noteAttempt();
@@ -264,7 +267,10 @@ export function ActivityInteraction({
       setFeedback("Choose or enter an answer before checking.");
       return;
     }
-    const correct = normalizeActivityAnswer(answer) === normalizeActivityAnswer(question.expected);
+    const acceptedAnswers = [question.expected, ...(question.accepted ?? [])];
+    const correct = acceptedAnswers.some(
+      (candidate) => normalizeActivityAnswer(answer) === normalizeActivityAnswer(candidate),
+    );
     const persistable = buildAttemptEvent({
       activity,
       question,
@@ -312,6 +318,12 @@ export function ActivityInteraction({
         }}
       >
         <h3>{question.prompt}</h3>
+        {pronunciation.state === "preview" ? (
+          <PronunciationControl
+            media={pronunciation}
+            label={question.spokenText}
+          />
+        ) : null}
         <QuestionControl
           key={question.id}
           question={question}

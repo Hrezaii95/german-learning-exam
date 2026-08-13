@@ -69,7 +69,7 @@ export function WorkbookAudioPanel({ tracks }: { tracks: readonly WorkbookAudioT
                 event.currentTarget.preservesPitch = true;
               }}
               onPlay={(event) => {
-                for (const player of players.current.values()) {
+                for (const player of document.querySelectorAll<HTMLAudioElement>("audio")) {
                   if (player !== event.currentTarget) player.pause();
                 }
               }}

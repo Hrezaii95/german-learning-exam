@@ -1,124 +1,66 @@
 /**
- * Read-only TTS manifest status detection for learner detail media.
- * Server-only (node:fs). Client components must import copy from media-copy.ts.
- * Never copies paths, hashes, spoken secrets, or candidate files into artifacts.
+ * Browser-safe exact-string pronunciation lookup.
+ *
+ * The generated projection contains only the owner-approved, technically
+ * validated subset copied to public assets. Matching is deliberately strict:
+ * no Unicode normalization, trimming, case folding, or concept-only fallback.
  */
-import { existsSync, readFileSync } from "node:fs";
-import { dirname, resolve } from "node:path";
-import { fileURLToPath } from "node:url";
+import publishedPronunciation from "./published-pronunciation.json";
 import type { LearnerMediaAvailability } from "./detail-types";
 
-type TtsManifestRow = {
-  id?: unknown;
-  spokenText?: unknown;
-  conceptIds?: unknown;
-  reviewStatus?: unknown;
-  path?: unknown;
-  sha256?: unknown;
+type PublishedPronunciationAsset = {
+  id: string;
+  sourceText: string;
+  spokenText: string;
+  locale: string;
+  voice: string;
+  rate: string;
+  origin: string;
+  publicRelativePath: string;
+  publicationStatus: string;
 };
 
-type TtsManifest = {
-  assets?: unknown;
-};
+const assets = publishedPronunciation.assets as readonly PublishedPronunciationAsset[];
 
-const APPROVED_STATUSES = new Set([
-  "approved",
-  "listening-approved",
-  "published-approved",
-]);
-
-const PENDING_STATUSES = new Set([
-  "candidate-needs-listening-review",
-  "needs-listening-review",
-  "pending-review",
-  "candidate",
-]);
-
-function defaultManifestPath(): string {
-  const here = dirname(fileURLToPath(import.meta.url));
-  // apps/web/lib/content → repo root media/manifests
-  return resolve(
-    here,
-    "..",
-    "..",
-    "..",
-    "..",
-    "..",
-    "media",
-    "manifests",
-    "alpha-tts-manifest.json",
+export function resolvePublishedPronunciationExact(
+  sourceText: string,
+): LearnerMediaAvailability {
+  const row = assets.find(
+    (asset) =>
+      asset.sourceText === sourceText &&
+      asset.spokenText === sourceText &&
+      asset.locale === "de-DE" &&
+      asset.origin === "synthesized-edge-tts" &&
+      asset.publicationStatus === "public-owner-authorized-synthesized-preview",
   );
-}
+  if (!row) return Object.freeze({ state: "missing", assetId: null });
 
-function isPlainObject(value: unknown): value is Record<string, unknown> {
-  return value != null && typeof value === "object" && !Array.isArray(value);
-}
-
-function asRow(value: unknown): TtsManifestRow | null {
-  return isPlainObject(value) ? (value as TtsManifestRow) : null;
+  return Object.freeze({
+    state: "preview",
+    assetId: row.id,
+    publicPath: `/${row.publicRelativePath}`,
+    sourceText: row.sourceText,
+    spokenText: row.spokenText,
+    locale: "de-DE",
+    voice: row.voice,
+    generationRate: row.rate,
+    origin: "synthesized-edge-tts",
+  });
 }
 
 /**
- * Resolve media availability for a representative.
- * Matches by concept id and/or exact spoken-text candidates from published data.
- * Returns pending-review when a technical candidate exists but is not approved.
+ * Resolve the first exact source-text match in caller-provided priority order.
+ * conceptIds remain part of the call contract for provenance, but never select
+ * an asset: concept-only matching could play the wrong German utterance.
  */
 export function resolveMediaAvailability(input: {
   conceptIds: readonly string[];
   spokenTexts: readonly string[];
-  manifestPath?: string;
 }): LearnerMediaAvailability {
-  const path = input.manifestPath ?? defaultManifestPath();
-  if (!existsSync(path)) {
-    return Object.freeze({ state: "missing", assetId: null });
+  void input.conceptIds;
+  for (const sourceText of input.spokenTexts) {
+    const media = resolvePublishedPronunciationExact(sourceText);
+    if (media.state === "preview") return media;
   }
-
-  let parsed: TtsManifest;
-  try {
-    parsed = JSON.parse(readFileSync(path, "utf8")) as TtsManifest;
-  } catch {
-    return Object.freeze({ state: "missing", assetId: null });
-  }
-
-  if (!Array.isArray(parsed.assets)) {
-    return Object.freeze({ state: "missing", assetId: null });
-  }
-
-  const conceptSet = new Set(input.conceptIds);
-  const spokenSet = new Set(input.spokenTexts);
-
-  let best: { state: LearnerMediaAvailability["state"]; assetId: string | null } =
-    { state: "missing", assetId: null };
-
-  for (const raw of parsed.assets) {
-    const row = asRow(raw);
-    if (!row) continue;
-
-    const spoken =
-      typeof row.spokenText === "string" ? row.spokenText : null;
-    const concepts = Array.isArray(row.conceptIds)
-      ? row.conceptIds.filter((c): c is string => typeof c === "string")
-      : [];
-
-    const conceptHit = concepts.some((c) => conceptSet.has(c));
-    const spokenHit = spoken != null && spokenSet.has(spoken);
-    if (!conceptHit && !spokenHit) continue;
-
-    const status =
-      typeof row.reviewStatus === "string" ? row.reviewStatus : "";
-    const id = typeof row.id === "string" ? row.id : null;
-
-    if (APPROVED_STATUSES.has(status) && id) {
-      // Approved wins immediately; asset id is safe to expose without path/hash.
-      return Object.freeze({ state: "approved", assetId: id });
-    }
-    if (PENDING_STATUSES.has(status)) {
-      best = { state: "pending-review", assetId: null };
-    } else if (best.state === "missing") {
-      // Unknown status with a match → treat as pending, never expose path.
-      best = { state: "pending-review", assetId: null };
-    }
-  }
-
-  return Object.freeze(best);
+  return Object.freeze({ state: "missing", assetId: null });
 }

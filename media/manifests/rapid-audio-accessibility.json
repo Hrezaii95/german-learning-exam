@@ -88,10 +88,18 @@
     "publicIntegrationAllowed": false,
     "reason": "No artifact records both required human approvals. Technical codec/hash QA is not listening QA."
   },
+  "generatedTtsPreviewPolicy": {
+    "supersedingDecision": "The owner explicitly authorized the currently demonstrated synthesized voice for continued use as a clearly labelled preview.",
+    "manifest": "media/manifests/published-tts-exact-v1.json",
+    "publicPreviewIntegrationAllowed": true,
+    "productionPronunciationApproval": false,
+    "learnerDisclosureRequired": true,
+    "reason": "Owner-authorized preview use does not replace qualified German accuracy or independent naturalness listening review."
+  },
   "integrationBlockers": [
     "The 2026-08-13 owner decision authorizes redistribution of the exact 15 audio files; no artifact separately authorizes public transcript republication. Keep the verified transcript JSON internal until that right is recorded.",
     "The current WorkbookAudioPanel intentionally omits captions; wire the verified transcript projection into an accessible reveal/transcript control.",
     "Listening-answer activities need a product rule for transcript timing so accessibility does not silently remove the exercise while an equivalent path remains available.",
-    "Do not publish any generated TTS candidate until the existing two-human QA evidence is recorded per asset or approved batch."
+    "Do not label or treat generated TTS as production-approved pronunciation until the existing two-human QA evidence is recorded per asset or approved batch; the separately manifested owner-authorized preview must remain visibly disclosed."
   ]
 }

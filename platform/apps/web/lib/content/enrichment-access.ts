@@ -350,8 +350,8 @@ function projectActivities(bundle: ContentBundle): EnrichedActivity[] {
       mediaSlots.push(Object.freeze({
         slotId: `audio:${activity.id}`,
         kind: "audio",
-        state: media.state === "approved" ? "ready" : media.state,
-        learnerMessage: media.state === "approved" ? "Reviewed pronunciation is available." : "Pronunciation audio is awaiting human listening review.",
+        state: media.state === "preview" ? "ready" : media.state,
+        learnerMessage: media.state === "preview" ? "Exact-source synthesized preview pronunciation is available; independent German listening review is pending." : "No generated clip exactly matches a published activity utterance.",
       }));
     }
     const gaps: EnrichmentGap[] = [];
@@ -478,7 +478,10 @@ function professionGames(audioState: "ready" | "pending-review" | "missing", has
   ];
 }
 
-function professionSections(hasPlural: boolean): EnrichmentPageSection[] {
+function professionSections(
+  hasPlural: boolean,
+  audioState: "ready" | "pending-review" | "missing",
+): EnrichmentPageSection[] {
   return [
     Object.freeze({ id: "hero", title: "Word", state: "ready", fieldKeys: Object.freeze(["displayTextDe", "glossEn"]) }),
     Object.freeze({ id: "meaning", title: "Meaning", state: "ready", fieldKeys: Object.freeze(["glossEn"]) }),
@@ -486,7 +489,7 @@ function professionSections(hasPlural: boolean): EnrichmentPageSection[] {
     Object.freeze({ id: "notice", title: "Person form", state: "ready", fieldKeys: Object.freeze(["personForm"]) }),
     Object.freeze({ id: "practice", title: "Practise", state: "partial", fieldKeys: Object.freeze(["reviewEligibility", "gameEligibility"]) }),
     Object.freeze({ id: "related", title: "Related", state: "ready", fieldKeys: Object.freeze(["personForm.pairedConceptId", "activityIds", "relationIds"]) }),
-    Object.freeze({ id: "media", title: "Hear and see", state: "pending-review", fieldKeys: Object.freeze(["mediaSlots"]) }),
+    Object.freeze({ id: "media", title: "Hear and see", state: audioState === "ready" ? "partial" : audioState, fieldKeys: Object.freeze(["mediaSlots"]) }),
   ];
 }
 
@@ -515,13 +518,13 @@ function projectProfessions(bundle: ContentBundle): EnrichedProfessionCard[] {
     const displayTextDe = `${lexeme.noun.article} ${lexeme.lemma}`;
     const pluralForms = lexeme.noun.plurals.map((plural) => plural.form).filter(Boolean);
     const media = resolveMediaAvailability({ conceptIds: [lexeme.id], spokenTexts: [displayTextDe] });
-    const audioState = media.state === "approved" ? "ready" as const : media.state;
+    const audioState = media.state === "preview" ? "ready" as const : media.state;
     const mediaSlots: EnrichmentMediaSlot[] = [
       Object.freeze({
         slotId: `audio:${lexeme.id}`,
         kind: "audio",
         state: audioState,
-        learnerMessage: audioState === "ready" ? "Reviewed pronunciation is available." : "Pronunciation audio is awaiting human listening review.",
+        learnerMessage: audioState === "ready" ? "Exact-source synthesized preview pronunciation is available; independent German listening review is pending." : "Pronunciation audio is not available for this exact source text.",
       }),
       Object.freeze({
         slotId: `img:job:${lexeme.id.slice(4)}:v1`,
@@ -545,12 +548,14 @@ function projectProfessions(bundle: ContentBundle): EnrichedProfessionCard[] {
         learnerMessage: "Plural awaiting content approval.",
       }));
     }
-    gaps.push(Object.freeze({
-      code: "profession-audio-pending-review",
-      field: "mediaSlots.audio",
-      state: "pending-review",
-      learnerMessage: "Pronunciation audio is not learner-approved yet.",
-    }));
+    if (audioState !== "ready") {
+      gaps.push(Object.freeze({
+        code: "profession-audio-missing",
+        field: "mediaSlots.audio",
+        state: audioState,
+        learnerMessage: "No generated clip exactly matches this published source text.",
+      }));
+    }
     gaps.push(Object.freeze({
       code: "profession-image-missing",
       field: "mediaSlots.image",
@@ -592,7 +597,7 @@ function projectProfessions(bundle: ContentBundle): EnrichedProfessionCard[] {
       }),
       gameEligibility: Object.freeze(professionGames(audioState, pluralForms.length > 0)),
       mediaSlots: Object.freeze(mediaSlots),
-      sections: Object.freeze(professionSections(pluralForms.length > 0)),
+      sections: Object.freeze(professionSections(pluralForms.length > 0, audioState)),
       gaps: Object.freeze(gaps),
     });
   });

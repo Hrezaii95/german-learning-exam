@@ -145,12 +145,18 @@ describe("P3D learner detail projection", () => {
       expect(key.toLowerCase()).not.toMatch(/sourceassertion|assertionvalue|mp3path|audiourl|sha256|reviewstatus/);
     }
     for (const value of strings) {
-      expect(value).not.toMatch(/Architekten|Architektinnen|\.mp3|media\/generated|candidate-needs-listening-review|assert:/i);
+      expect(value).not.toMatch(/Architekten|Architektinnen|media\/generated|candidate-needs-listening-review|assert:/i);
     }
 
     for (const record of projected.representatives) {
-      expect(record.media.state).toBe("pending-review");
-      expect(record.media.assetId).toBeNull();
+      expect(record.media.state).toBe("preview");
+      if (record.media.state !== "preview") throw new Error("expected approved pronunciation");
+      expect(record.media.assetId).toMatch(/^aud:tts:/u);
+      expect(record.media.publicPath).toMatch(/^\/audio\/tts-de-de-v1\/tts-[a-f0-9]{16}\.mp3$/u);
+      expect(record.media.sourceText).toBe(record.media.spokenText);
+      expect(record.media.voice).toBe("de-DE-KatjaNeural");
+      expect(record.media.generationRate).toBe("+4%");
+      expect(record.media.origin).toBe("synthesized-edge-tts");
     }
   });
 

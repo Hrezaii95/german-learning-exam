@@ -22,6 +22,11 @@ import {
   projectPublishedExtraProfessions,
   serializeExtraProfessionsProjection,
 } from "../lib/content/extra-professions.js";
+import {
+  GENERATED_ENRICHMENT_PATH,
+  projectPublishedLearnerEnrichment,
+  serializeEnrichmentProjectionDeterministic,
+} from "../lib/content/enrichment-access.js";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const webRoot = resolve(here, "..");
@@ -67,6 +72,17 @@ function main(): void {
   writeFileSync(detailsOutPath, detailsJson, "utf8");
   process.stdout.write(
     `Wrote learner details: ${details.detailCount} published records (${details.representativeCount} rich representatives) → ${detailsOutPath}\n`,
+  );
+
+  const enrichment = projectPublishedLearnerEnrichment(publishedDir);
+  mkdirSync(dirname(GENERATED_ENRICHMENT_PATH), { recursive: true });
+  writeFileSync(
+    GENERATED_ENRICHMENT_PATH,
+    serializeEnrichmentProjectionDeterministic(enrichment),
+    "utf8",
+  );
+  process.stdout.write(
+    `Wrote learner enrichment: ${enrichment.counts.activities} activities, ${enrichment.counts.professionCards} profession cards → ${GENERATED_ENRICHMENT_PATH}\n`,
   );
 
   const extraProfessions = projectPublishedExtraProfessions(publishedDir);

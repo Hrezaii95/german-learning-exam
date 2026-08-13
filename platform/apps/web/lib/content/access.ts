@@ -417,21 +417,22 @@ const DETAIL_TOP_LEVEL_KEYS = [
 const FORBIDDEN_DETAIL_KEY_FRAGMENTS = [
   ...FORBIDDEN_SEARCH_KEY_FRAGMENTS,
   "reviewStatus",
-  "spokenText",
   "conceptIds",
   "bytes",
   "sha256",
 ] as const;
 
 const FORBIDDEN_DETAIL_STRING_PATTERNS: readonly RegExp[] = [
-  ...FORBIDDEN_SEARCH_STRING_PATTERNS,
+  ...FORBIDDEN_SEARCH_STRING_PATTERNS.filter(
+    (pattern) => pattern.source !== /\.mp3\b/i.source,
+  ),
   /media\/generated/i,
   /candidate-needs-listening-review/i,
   /Architekten/i,
   /Architektinnen/i,
 ];
 
-const MEDIA_STATES = new Set(["approved", "pending-review", "missing"]);
+const MEDIA_STATES = new Set(["preview", "pending-review", "missing"]);
 
 function assertMedia(media: unknown): asserts media is LearnerMediaAvailability {
   if (!isPlainObject(media)) {
@@ -440,12 +441,35 @@ function assertMedia(media: unknown): asserts media is LearnerMediaAvailability 
   if (typeof media.state !== "string" || !MEDIA_STATES.has(media.state)) {
     throw new Error("Detail media state is invalid");
   }
-  if (media.state === "approved") {
+  if (media.state === "preview") {
     if (typeof media.assetId !== "string" || media.assetId.length === 0) {
-      throw new Error("Approved media requires assetId");
+      throw new Error("Preview media requires assetId");
+    }
+    if (
+      typeof media.sourceText !== "string" ||
+      media.sourceText.length === 0 ||
+      media.spokenText !== media.sourceText
+    ) {
+      throw new Error("Preview media requires an exact source/spoken text match");
+    }
+    if (
+      typeof media.publicPath !== "string" ||
+      !/^\/audio\/tts-de-de-v1\/tts-[a-f0-9]{16}\.mp3$/u.test(media.publicPath)
+    ) {
+      throw new Error("Preview media public path is invalid");
+    }
+    if (
+      media.locale !== "de-DE" ||
+      media.origin !== "synthesized-edge-tts" ||
+      typeof media.voice !== "string" ||
+      media.voice.length === 0 ||
+      typeof media.generationRate !== "string" ||
+      media.generationRate.length === 0
+    ) {
+      throw new Error("Preview media provenance is invalid");
     }
   } else if (media.assetId !== null) {
-    throw new Error("Non-approved media must not expose assetId");
+    throw new Error("Unavailable media must not expose assetId");
   }
 }
 

@@ -5,13 +5,63 @@ export type ActivityQuestionKind = "matching" | "selection" | "typing" | "builde
 
 export type ActivityQuestion = Readonly<{
   id: string;
-  targetId: string;
+  /** Published concept ID when the answer can produce mastery evidence. */
+  targetId: string | null;
   kind: ActivityQuestionKind;
   prompt: string;
+  /** Exact published German text; never derived from prompt prose. */
+  spokenText: string;
   expected: string;
+  /** Additional exact source-supported answers accepted by the grader. */
+  accepted?: readonly string[];
   choices: readonly string[];
   tokens: readonly string[];
 }>;
+
+const ALPHABET_PRACTICE: readonly ActivityQuestion[] = Object.freeze([
+  {
+    id: "alphabet:special-characters",
+    targetId: null,
+    kind: "typing",
+    prompt: "Type the four additional German characters in this order: A-umlaut, O-umlaut, U-umlaut, sharp s. Spaces are optional.",
+    spokenText: "Ä Ö Ü ß",
+    expected: "Ä Ö Ü ß",
+    accepted: ["ÄÖÜß"],
+    choices: [],
+    tokens: [],
+  },
+  {
+    id: "alphabet:spell-miriam",
+    targetId: null,
+    kind: "typing",
+    prompt: "Spell the model first name Miriam with spaces between its letters.",
+    spokenText: "M I R I A M",
+    expected: "M I R I A M",
+    choices: [],
+    tokens: [],
+  },
+]);
+
+const NUMBER_PRACTICE: readonly ActivityQuestion[] = Object.freeze([
+  ["21", "einundzwanzig"],
+  ["37", "siebenunddreißig"],
+  ["46", "sechsundvierzig"],
+  ["64", "vierundsechzig"],
+  ["72", "zweiundsiebzig"],
+  ["88", "achtundachtzig"],
+  ["99", "neunundneunzig"],
+  ["100", "hundert", "einhundert"],
+].map(([number, expected, alternate]) => Object.freeze({
+  id: `number:${number}`,
+  targetId: null,
+  kind: "typing" as const,
+  prompt: `Write ${number} as one German word.`,
+  spokenText: expected!,
+  expected: expected!,
+  ...(alternate ? { accepted: Object.freeze([alternate]) } : {}),
+  choices: Object.freeze([]) as readonly string[],
+  tokens: Object.freeze([]) as readonly string[],
+})));
 
 export type ActivityPracticePlan = Readonly<{
   activityId: string;
@@ -77,6 +127,7 @@ function matchingQuestions(targets: readonly EnrichmentContentTarget[]): Activit
     targetId: target.id,
     kind: "matching",
     prompt: `Match “${target.displayTextDe}” to its published English meaning.`,
+    spokenText: target.displayTextDe,
     expected: target.glossEn!.trim(),
     choices: choiceWindow(target.glossEn!.trim(), choices, index),
     tokens: [],
@@ -92,6 +143,7 @@ function builderQuestion(target: EnrichmentContentTarget): ActivityQuestion {
     prompt: target.glossEn?.trim()
       ? `Build the published German item meaning “${target.glossEn.trim()}”.`
       : "Build this published phrase in the correct order.",
+    spokenText: target.displayTextDe,
     expected: target.displayTextDe,
     choices: [],
     tokens: [...sourceTokens].reverse(),
@@ -108,6 +160,7 @@ function recallQuestion(target: EnrichmentContentTarget): ActivityQuestion {
     targetId: target.id,
     kind: "typing",
     prompt: `Type the published German item meaning “${gloss}”.`,
+    spokenText: target.displayTextDe,
     expected: target.displayTextDe,
     choices: [],
     tokens: [],
@@ -127,6 +180,7 @@ function selectionQuestion(
     prompt: target.glossEn?.trim()
       ? `Choose the published German item meaning “${target.glossEn.trim()}”.`
       : `Choose “${target.displayTextDe}” exactly as published.`,
+    spokenText: target.displayTextDe,
     expected: target.displayTextDe,
     choices: choiceWindow(target.displayTextDe, allChoices, index),
     tokens: [],
@@ -147,6 +201,30 @@ export function buildActivityPracticePlan(
     activity.id,
     uniqueTargets(enrichment?.contentTargets ?? []),
   );
+
+  if (activity.id === "activity:lesson-01-alphabet-listen-spell") {
+    return {
+      activityId: activity.id,
+      mechanic: "typing",
+      title: "Alphabet and spelling lab",
+      instructions: "Use the approved workbook audio above, then practise the German special characters and a classroom spelling exchange.",
+      questions: ALPHABET_PRACTICE,
+      gradeable: true,
+      missingReason: null,
+    };
+  }
+
+  if (activity.id === "activity:lesson-02-numbers-0-100") {
+    return {
+      activityId: activity.id,
+      mechanic: "typing",
+      title: "Build numbers from 0 to 100",
+      instructions: "German compound numbers put the ones before und and the tens after it. Write each answer as one word.",
+      questions: NUMBER_PRACTICE,
+      gradeable: true,
+      missingReason: null,
+    };
+  }
 
   if (targets.length === 0) {
     return {

@@ -20,15 +20,34 @@ export type DetailKind = "Lexeme" | "Verb" | "QAPair" | "GrammarConcept";
 export type DetailHubSegment = "vocabulary" | "verbs" | "grammar" | "phrases";
 
 export type MediaAvailabilityState =
-  | "approved"
+  | "preview"
   | "pending-review"
   | "missing";
 
-/** Safe media availability — assetId only when approved; never path/hash. */
-export type LearnerMediaAvailability = {
-  readonly state: MediaAvailabilityState;
-  readonly assetId: string | null;
+/** Safe preview availability — deployable path only; source-private paths/hashes stay excluded. */
+export type LearnerPreviewPronunciation = {
+  readonly state: "preview";
+  readonly assetId: string;
+  /** Root-relative deployable path. The Pages base is added in the client. */
+  readonly publicPath: string;
+  /** Exact learner-source string used to select the generated clip. */
+  readonly sourceText: string;
+  /** Exact text supplied to the speech generator. Equal to sourceText. */
+  readonly spokenText: string;
+  readonly locale: "de-DE";
+  readonly voice: string;
+  readonly generationRate: string;
+  readonly origin: "synthesized-edge-tts";
 };
+
+export type LearnerUnavailablePronunciation = {
+  readonly state: Exclude<MediaAvailabilityState, "preview">;
+  readonly assetId: null;
+};
+
+export type LearnerMediaAvailability =
+  | LearnerPreviewPronunciation
+  | LearnerUnavailablePronunciation;
 
 export type LearnerGender = "masculine" | "feminine" | "neuter";
 

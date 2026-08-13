@@ -44,7 +44,7 @@
         },
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "No generated clip exactly matches a published activity utterance.",
           "slotId": "audio:activity:lesson-01-alphabet-listen-spell",
           "state": "missing"
         }
@@ -379,9 +379,9 @@
         },
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:activity:lesson-01-checkpoint-summary",
-          "state": "pending-review"
+          "state": "ready"
         }
       ],
       "mode": "check",
@@ -605,9 +605,9 @@
         },
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:activity:lesson-01-greeting-farewell-match",
-          "state": "pending-review"
+          "state": "ready"
         }
       ],
       "mode": "hear",
@@ -815,9 +815,9 @@
         },
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:activity:lesson-01-greetings-by-context",
-          "state": "pending-review"
+          "state": "ready"
         }
       ],
       "mode": "see",
@@ -1036,9 +1036,9 @@
         },
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:activity:lesson-01-guided-intro-recording",
-          "state": "pending-review"
+          "state": "ready"
         }
       ],
       "mode": "use",
@@ -1188,9 +1188,9 @@
         },
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:activity:lesson-01-heissen-sein-notice",
-          "state": "pending-review"
+          "state": "ready"
         }
       ],
       "mode": "notice",
@@ -1353,9 +1353,9 @@
         },
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:activity:lesson-01-name-model-dialogue",
-          "state": "pending-review"
+          "state": "ready"
         }
       ],
       "mode": "notice",
@@ -1609,9 +1609,9 @@
         },
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:activity:lesson-01-origin-aus-contrast",
-          "state": "pending-review"
+          "state": "ready"
         }
       ],
       "mode": "notice",
@@ -1790,9 +1790,9 @@
         },
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:activity:lesson-01-pronoun-verb-builder",
-          "state": "pending-review"
+          "state": "ready"
         }
       ],
       "mode": "recall",
@@ -2009,9 +2009,9 @@
         },
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:activity:lesson-01-register-qa-builder",
-          "state": "pending-review"
+          "state": "ready"
         }
       ],
       "mode": "use",
@@ -2248,9 +2248,9 @@
         },
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:activity:lesson-01-wellbeing-scale",
-          "state": "pending-review"
+          "state": "ready"
         }
       ],
       "mode": "hear",
@@ -3156,9 +3156,9 @@
         },
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:activity:lesson-02-checkpoint-summary",
-          "state": "pending-review"
+          "state": "ready"
         }
       ],
       "mode": "check",
@@ -3672,9 +3672,9 @@
         },
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:activity:lesson-02-core-professions",
-          "state": "pending-review"
+          "state": "ready"
         }
       ],
       "mode": "see",
@@ -3843,9 +3843,9 @@
         },
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:activity:lesson-02-full-person-conjugation",
-          "state": "pending-review"
+          "state": "ready"
         }
       ],
       "mode": "notice",
@@ -3968,7 +3968,7 @@
         },
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "No generated clip exactly matches a published activity utterance.",
           "slotId": "audio:activity:lesson-02-numbers-0-100",
           "state": "missing"
         }
@@ -4417,9 +4417,9 @@
         },
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:activity:lesson-02-person-form-morphology",
-          "state": "pending-review"
+          "state": "ready"
         }
       ],
       "mode": "notice",
@@ -4852,9 +4852,9 @@
         },
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:activity:lesson-02-personal-profile",
-          "state": "pending-review"
+          "state": "ready"
         }
       ],
       "mode": "see",
@@ -5035,9 +5035,9 @@
         },
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:activity:lesson-02-profession-qa-builder",
-          "state": "pending-review"
+          "state": "ready"
         }
       ],
       "mode": "use",
@@ -5473,9 +5473,9 @@
         },
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:activity:lesson-02-profile-reading-writing",
-          "state": "pending-review"
+          "state": "ready"
         }
       ],
       "mode": "recall",
@@ -5675,9 +5675,9 @@
         },
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:activity:lesson-02-relationship-status",
-          "state": "pending-review"
+          "state": "ready"
         }
       ],
       "mode": "see",
@@ -5861,9 +5861,9 @@
         },
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:activity:lesson-02-sein-arbeiten-contrast",
-          "state": "pending-review"
+          "state": "ready"
         }
       ],
       "mode": "notice",
@@ -6100,7 +6100,7 @@
         },
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "No generated clip exactly matches a published activity utterance.",
           "slotId": "audio:activity:lesson-01-alphabet-listen-spell",
           "state": "missing"
         }
@@ -6435,9 +6435,9 @@
         },
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:activity:lesson-01-checkpoint-summary",
-          "state": "pending-review"
+          "state": "ready"
         }
       ],
       "mode": "check",
@@ -6661,9 +6661,9 @@
         },
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:activity:lesson-01-greeting-farewell-match",
-          "state": "pending-review"
+          "state": "ready"
         }
       ],
       "mode": "hear",
@@ -6871,9 +6871,9 @@
         },
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:activity:lesson-01-greetings-by-context",
-          "state": "pending-review"
+          "state": "ready"
         }
       ],
       "mode": "see",
@@ -7092,9 +7092,9 @@
         },
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:activity:lesson-01-guided-intro-recording",
-          "state": "pending-review"
+          "state": "ready"
         }
       ],
       "mode": "use",
@@ -7244,9 +7244,9 @@
         },
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:activity:lesson-01-heissen-sein-notice",
-          "state": "pending-review"
+          "state": "ready"
         }
       ],
       "mode": "notice",
@@ -7409,9 +7409,9 @@
         },
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:activity:lesson-01-name-model-dialogue",
-          "state": "pending-review"
+          "state": "ready"
         }
       ],
       "mode": "notice",
@@ -7665,9 +7665,9 @@
         },
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:activity:lesson-01-origin-aus-contrast",
-          "state": "pending-review"
+          "state": "ready"
         }
       ],
       "mode": "notice",
@@ -7846,9 +7846,9 @@
         },
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:activity:lesson-01-pronoun-verb-builder",
-          "state": "pending-review"
+          "state": "ready"
         }
       ],
       "mode": "recall",
@@ -8065,9 +8065,9 @@
         },
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:activity:lesson-01-register-qa-builder",
-          "state": "pending-review"
+          "state": "ready"
         }
       ],
       "mode": "use",
@@ -8304,9 +8304,9 @@
         },
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:activity:lesson-01-wellbeing-scale",
-          "state": "pending-review"
+          "state": "ready"
         }
       ],
       "mode": "hear",
@@ -9212,9 +9212,9 @@
         },
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:activity:lesson-02-checkpoint-summary",
-          "state": "pending-review"
+          "state": "ready"
         }
       ],
       "mode": "check",
@@ -9728,9 +9728,9 @@
         },
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:activity:lesson-02-core-professions",
-          "state": "pending-review"
+          "state": "ready"
         }
       ],
       "mode": "see",
@@ -9899,9 +9899,9 @@
         },
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:activity:lesson-02-full-person-conjugation",
-          "state": "pending-review"
+          "state": "ready"
         }
       ],
       "mode": "notice",
@@ -10024,7 +10024,7 @@
         },
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "No generated clip exactly matches a published activity utterance.",
           "slotId": "audio:activity:lesson-02-numbers-0-100",
           "state": "missing"
         }
@@ -10473,9 +10473,9 @@
         },
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:activity:lesson-02-person-form-morphology",
-          "state": "pending-review"
+          "state": "ready"
         }
       ],
       "mode": "notice",
@@ -10908,9 +10908,9 @@
         },
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:activity:lesson-02-personal-profile",
-          "state": "pending-review"
+          "state": "ready"
         }
       ],
       "mode": "see",
@@ -11091,9 +11091,9 @@
         },
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:activity:lesson-02-profession-qa-builder",
-          "state": "pending-review"
+          "state": "ready"
         }
       ],
       "mode": "use",
@@ -11529,9 +11529,9 @@
         },
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:activity:lesson-02-profile-reading-writing",
-          "state": "pending-review"
+          "state": "ready"
         }
       ],
       "mode": "recall",
@@ -11731,9 +11731,9 @@
         },
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:activity:lesson-02-relationship-status",
-          "state": "pending-review"
+          "state": "ready"
         }
       ],
       "mode": "see",
@@ -11917,9 +11917,9 @@
         },
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:activity:lesson-02-sein-arbeiten-contrast",
-          "state": "pending-review"
+          "state": "ready"
         }
       ],
       "mode": "notice",
@@ -12115,7 +12115,7 @@
     "activities": 23,
     "activityContentLinkGaps": 4,
     "lessons": 2,
-    "professionAudioPendingReview": 26,
+    "professionAudioPendingReview": 0,
     "professionCards": 26,
     "professionImageGaps": 26,
     "professionPairs": 13,
@@ -12158,8 +12158,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -12168,8 +12168,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -12178,12 +12178,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -12201,9 +12195,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:aerztin",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -12300,7 +12294,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -12339,8 +12333,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -12349,8 +12343,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -12359,12 +12353,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -12382,9 +12370,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:architekt",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -12481,7 +12469,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -12520,8 +12508,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -12530,8 +12518,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -12540,12 +12528,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -12563,9 +12545,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:architektin",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -12662,7 +12644,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -12701,8 +12683,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -12711,8 +12693,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -12721,12 +12703,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -12744,9 +12720,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:arzt",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -12843,7 +12819,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -12882,8 +12858,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -12892,8 +12868,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -12902,12 +12878,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -12925,9 +12895,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:friseur",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -13024,7 +12994,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -13063,8 +13033,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -13073,8 +13043,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -13083,12 +13053,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -13106,9 +13070,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:friseurin",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -13205,7 +13169,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -13244,8 +13208,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -13254,8 +13218,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -13264,12 +13228,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -13287,9 +13245,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:ingenieur",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -13386,7 +13344,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -13425,8 +13383,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -13435,8 +13393,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -13445,12 +13403,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -13468,9 +13420,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:ingenieurin",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -13567,7 +13519,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -13606,8 +13558,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -13616,8 +13568,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -13626,12 +13578,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -13649,9 +13595,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:journalist",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -13748,7 +13694,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -13787,8 +13733,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -13797,8 +13743,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -13807,12 +13753,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -13830,9 +13770,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:journalistin",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -13929,7 +13869,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -13968,8 +13908,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -13978,8 +13918,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -13988,12 +13928,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -14011,9 +13945,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:kellner",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -14110,7 +14044,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -14149,8 +14083,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -14159,8 +14093,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -14169,12 +14103,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -14192,9 +14120,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:kellnerin",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -14291,7 +14219,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -14330,8 +14258,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -14340,8 +14268,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -14350,12 +14278,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -14373,9 +14295,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:kfz-mechatroniker",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -14472,7 +14394,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -14511,8 +14433,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -14521,8 +14443,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -14531,12 +14453,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -14554,9 +14470,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:kfz-mechatronikerin",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -14653,7 +14569,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -14692,8 +14608,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -14702,8 +14618,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -14712,12 +14628,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -14735,9 +14645,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:lehrer",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -14834,7 +14744,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -14873,8 +14783,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -14883,8 +14793,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -14893,12 +14803,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -14916,9 +14820,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:lehrerin",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -15015,7 +14919,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -15054,8 +14958,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -15064,8 +14968,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -15074,12 +14978,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -15097,9 +14995,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:paketzusteller",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -15196,7 +15094,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -15235,8 +15133,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -15245,8 +15143,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -15255,12 +15153,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -15278,9 +15170,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:paketzustellerin",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -15377,7 +15269,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -15416,8 +15308,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -15426,8 +15318,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -15436,12 +15328,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -15459,9 +15345,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:rentner",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -15558,7 +15444,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -15597,8 +15483,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -15607,8 +15493,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -15617,12 +15503,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -15640,9 +15520,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:rentnerin",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -15739,7 +15619,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -15778,8 +15658,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -15788,8 +15668,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -15798,12 +15678,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -15821,9 +15695,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:schueler",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -15920,7 +15794,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -15959,8 +15833,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -15969,8 +15843,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -15979,12 +15853,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -16002,9 +15870,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:schuelerin",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -16101,7 +15969,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -16140,8 +16008,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -16150,8 +16018,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -16160,12 +16028,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -16183,9 +16045,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:student",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -16282,7 +16144,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -16321,8 +16183,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -16331,8 +16193,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -16341,12 +16203,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -16364,9 +16220,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:studentin",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -16463,7 +16319,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -16502,8 +16358,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -16512,8 +16368,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -16522,12 +16378,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -16545,9 +16395,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:verkaeufer",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -16644,7 +16494,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -16683,8 +16533,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -16693,8 +16543,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -16703,12 +16553,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -16726,9 +16570,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:verkaeuferin",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -16825,7 +16669,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -16866,8 +16710,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -16876,8 +16720,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -16886,12 +16730,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -16909,9 +16747,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:aerztin",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -17008,7 +16846,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -17047,8 +16885,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -17057,8 +16895,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -17067,12 +16905,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -17090,9 +16922,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:architekt",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -17189,7 +17021,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -17228,8 +17060,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -17238,8 +17070,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -17248,12 +17080,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -17271,9 +17097,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:architektin",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -17370,7 +17196,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -17409,8 +17235,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -17419,8 +17245,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -17429,12 +17255,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -17452,9 +17272,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:arzt",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -17551,7 +17371,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -17590,8 +17410,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -17600,8 +17420,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -17610,12 +17430,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -17633,9 +17447,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:friseur",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -17732,7 +17546,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -17771,8 +17585,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -17781,8 +17595,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -17791,12 +17605,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -17814,9 +17622,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:friseurin",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -17913,7 +17721,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -17952,8 +17760,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -17962,8 +17770,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -17972,12 +17780,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -17995,9 +17797,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:ingenieur",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -18094,7 +17896,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -18133,8 +17935,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -18143,8 +17945,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -18153,12 +17955,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -18176,9 +17972,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:ingenieurin",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -18275,7 +18071,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -18314,8 +18110,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -18324,8 +18120,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -18334,12 +18130,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -18357,9 +18147,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:journalist",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -18456,7 +18246,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -18495,8 +18285,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -18505,8 +18295,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -18515,12 +18305,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -18538,9 +18322,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:journalistin",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -18637,7 +18421,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -18676,8 +18460,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -18686,8 +18470,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -18696,12 +18480,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -18719,9 +18497,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:kellner",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -18818,7 +18596,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -18857,8 +18635,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -18867,8 +18645,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -18877,12 +18655,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -18900,9 +18672,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:kellnerin",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -18999,7 +18771,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -19038,8 +18810,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -19048,8 +18820,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -19058,12 +18830,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -19081,9 +18847,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:kfz-mechatroniker",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -19180,7 +18946,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -19219,8 +18985,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -19229,8 +18995,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -19239,12 +19005,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -19262,9 +19022,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:kfz-mechatronikerin",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -19361,7 +19121,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -19400,8 +19160,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -19410,8 +19170,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -19420,12 +19180,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -19443,9 +19197,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:lehrer",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -19542,7 +19296,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -19581,8 +19335,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -19591,8 +19345,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -19601,12 +19355,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -19624,9 +19372,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:lehrerin",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -19723,7 +19471,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -19762,8 +19510,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -19772,8 +19520,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -19782,12 +19530,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -19805,9 +19547,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:paketzusteller",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -19904,7 +19646,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -19943,8 +19685,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -19953,8 +19695,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -19963,12 +19705,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -19986,9 +19722,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:paketzustellerin",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -20085,7 +19821,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -20124,8 +19860,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -20134,8 +19870,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -20144,12 +19880,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -20167,9 +19897,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:rentner",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -20266,7 +19996,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -20305,8 +20035,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -20315,8 +20045,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -20325,12 +20055,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -20348,9 +20072,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:rentnerin",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -20447,7 +20171,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -20486,8 +20210,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -20496,8 +20220,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -20506,12 +20230,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -20529,9 +20247,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:schueler",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -20628,7 +20346,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -20667,8 +20385,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -20677,8 +20395,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -20687,12 +20405,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -20710,9 +20422,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:schuelerin",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -20809,7 +20521,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -20848,8 +20560,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -20858,8 +20570,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -20868,12 +20580,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -20891,9 +20597,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:student",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -20990,7 +20696,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -21029,8 +20735,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -21039,8 +20745,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -21049,12 +20755,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -21072,9 +20772,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:studentin",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -21171,7 +20871,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -21210,8 +20910,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -21220,8 +20920,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -21230,12 +20930,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -21253,9 +20947,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:verkaeufer",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -21352,7 +21046,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],
@@ -21391,8 +21085,8 @@
         },
         {
           "gameId": "audio-match",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         },
         {
           "gameId": "plural-forge",
@@ -21401,8 +21095,8 @@
         },
         {
           "gameId": "spoken-repeat",
-          "reasonCode": "audio-human-review-open",
-          "state": "pending-review"
+          "reasonCode": "approved-audio",
+          "state": "ready"
         }
       ],
       "gaps": [
@@ -21411,12 +21105,6 @@
           "field": "plural.forms",
           "learnerMessage": "Plural awaiting content approval.",
           "state": "missing"
-        },
-        {
-          "code": "profession-audio-pending-review",
-          "field": "mediaSlots.audio",
-          "learnerMessage": "Pronunciation audio is not learner-approved yet.",
-          "state": "pending-review"
         },
         {
           "code": "profession-image-missing",
@@ -21434,9 +21122,9 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Pronunciation audio is awaiting human listening review.",
+          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
           "slotId": "audio:lex:verkaeuferin",
-          "state": "pending-review"
+          "state": "ready"
         },
         {
           "kind": "image",
@@ -21533,7 +21221,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Hear and see"
         }
       ],

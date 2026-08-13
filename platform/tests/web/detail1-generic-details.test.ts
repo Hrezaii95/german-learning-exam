@@ -52,7 +52,12 @@ describe("DETAIL1 generic published detail projection", () => {
     expect(json).not.toContain("collection:teacher-professions");
     expect(json).not.toContain("person-form:teacher-");
     expect(json).not.toContain("resources/original");
-    expect(json).not.toContain(".mp3");
+    const publicAudioPaths = projection.details.flatMap((detail) =>
+      detail.media.state === "preview" ? [detail.media.publicPath] : [],
+    );
+    expect(publicAudioPaths.length).toBeGreaterThan(0);
+    expect(publicAudioPaths.every((path) => /^\/audio\/tts-de-de-v1\/tts-[a-f0-9]+\.mp3$/u.test(path))).toBe(true);
+    expect(json).not.toContain("media/generated");
     expect(json).not.toMatch(/[A-Z]:\\/);
   });
 });

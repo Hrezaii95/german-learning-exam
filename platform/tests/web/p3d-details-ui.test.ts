@@ -9,9 +9,8 @@ import { beforeAll, describe, expect, it, vi } from "vitest";
 import { projectPublishedLearnerDetails } from "../../apps/web/lib/content/detail-project.js";
 import type { LearnerDetailProjection } from "../../apps/web/lib/content/detail-types.js";
 import {
-  PRONUNCIATION_APPROVED_PENDING_ACTIVATION_EXPLANATION,
-  PRONUNCIATION_PENDING_EXPLANATION,
   ADD_TO_REVIEW_PENDING_EXPLANATION,
+  PRONUNCIATION_PENDING_EXPLANATION,
 } from "../../apps/web/lib/content/media-copy.js";
 import {
   buildHubNavigationContext,
@@ -45,7 +44,6 @@ const publishedDir = join(platformRoot, "content", "published");
 const FORBIDDEN_RENDER = [
   "Architekten",
   "Architektinnen",
-  ".mp3",
   "media/generated",
   "candidate-needs-listening-review",
   "assert:",
@@ -75,7 +73,7 @@ describe("P3D detail UI contracts", () => {
     DetailView = detailMod.DetailView as typeof DetailView;
   });
 
-  it("renders vocabulary semantic tokens, plural gap, and pending audio", () => {
+  it("renders vocabulary semantic tokens, plural gap, and exact-source audio", () => {
     const vocab = details.representativesById["lex:architekt"];
     const html = renderToStaticMarkup(
       createElement(
@@ -102,10 +100,10 @@ describe("P3D detail UI contracts", () => {
     expect(html).toContain('data-gender="feminine"');
     expect(html).toContain('data-gender-token="F"');
     expect(html).toContain("Plural awaiting content approval");
-    expect(html).toContain(PRONUNCIATION_PENDING_EXPLANATION);
+    expect(html).toContain("Play pronunciation");
+    expect(html).toContain("Synthesized German preview voice");
     expect(html).toContain("Review cards, tags, and notes become available when local learning state loads in the browser.");
-    expect(html).toContain('tabindex="-1"');
-    expect(html).toContain("disabled");
+    expect(html).toContain("tts-62dc09ce76149784.mp3");
     expect(html).toContain("Architekt");
     expect(html).toContain("-in");
     expect(html).toContain('href="/vocabulary?lesson=02"');
@@ -129,7 +127,7 @@ describe("P3D detail UI contracts", () => {
     expect(html).toContain("Sie (formal)");
     expect(html).toContain("This paradigm is irregular and must be learned as forms.");
     expect(html).toContain('data-morph="IRR"');
-    expect(html).toContain(PRONUNCIATION_PENDING_EXPLANATION);
+    expect(html).toContain("Play pronunciation");
     expect(html).toContain('href="/search?q=sein"');
   });
 
@@ -147,7 +145,7 @@ describe("P3D detail UI contracts", () => {
     expect(html).toContain("spoken-role-play");
     expect(html).toContain("Open spoken role-play");
     expect(html).not.toContain("Pending P4");
-    expect(html).toContain(PRONUNCIATION_PENDING_EXPLANATION);
+    expect(html).toContain("Play pronunciation");
     for (const bad of FORBIDDEN_RENDER) {
       expect(html).not.toContain(bad);
     }
@@ -169,7 +167,7 @@ describe("P3D detail UI contracts", () => {
     expect(html).not.toContain("evil.example");
   });
 
-  it("never enables Play even for synthetic approved media", async () => {
+  it("enables exact-source approved pronunciation with explicit synthetic metadata", async () => {
     const audioMod = await import(
       "../../apps/web/components/audio/PronunciationControl.tsx"
     );
@@ -177,14 +175,19 @@ describe("P3D detail UI contracts", () => {
     const resolveAudioControl = audioMod.resolveAudioControl;
 
     const approved = {
-      state: "approved" as const,
+      state: "preview" as const,
       assetId: "synthetic-approved-asset",
+      publicPath: "/audio/tts-de-de-v1/tts-62dc09ce76149784.mp3",
+      sourceText: "der Architekt",
+      spokenText: "der Architekt",
+      locale: "de-DE" as const,
+      voice: "de-DE-KatjaNeural",
+      generationRate: "+4%",
+      origin: "synthesized-edge-tts" as const,
     };
     const control = resolveAudioControl(approved);
-    expect(control.canPlay).toBe(false);
-    expect(control.explanation).toBe(
-      PRONUNCIATION_APPROVED_PENDING_ACTIVATION_EXPLANATION,
-    );
+    expect(control.canPlay).toBe(true);
+    expect(control.explanation).toBeNull();
 
     const html = renderToStaticMarkup(
       createElement(PronunciationControl, {
@@ -192,14 +195,13 @@ describe("P3D detail UI contracts", () => {
         label: "Pronunciation",
       }),
     );
-    expect(html).toContain("disabled");
-    expect(html).toContain('aria-disabled="true"');
-    expect(html).toContain('tabindex="-1"');
-    expect(html).toContain(PRONUNCIATION_APPROVED_PENDING_ACTIVATION_EXPLANATION);
-    expect(html).not.toContain("Play pronunciation");
-    expect(html).not.toMatch(/<audio\b/i);
-    expect(html).not.toContain("onClick");
-    expect(html).not.toContain(".mp3");
+    expect(html).toContain("Play pronunciation");
+    expect(html).toContain("Study 0.8×");
+    expect(html).toContain("Normal 1×");
+    expect(html).toContain("Repeat");
+    expect(html).toContain("Synthesized German preview voice");
+    expect(html).toMatch(/<audio\b/i);
+    expect(html).toContain("tts-62dc09ce76149784.mp3");
     expect(html).not.toContain("media/generated");
 
     // pending-review copy remains exact for the real projected state

@@ -433,7 +433,7 @@ describe("P3C typed global search projection", () => {
       // Root may exclude JSX/Next UI/behavior tests; dedicated config must still cover all.
       if (excludedFromRoot) {
         expect(name).toMatch(
-          /-ui\.test\.ts$|-behavior\.test\.ts$|p3ar2-proxy\.test\.ts$|p5-media-integration\.test\.ts$|p5-rich-visuals\.test\.ts$|p5-rapid-content\.test\.ts$|j1-activity-runtime\.test\.ts$|activity-content-plans\.test\.ts$|listening-concepts-hubs\.test\.ts$|extra-professions-ui\.test\.ts$/,
+          /-ui\.test\.ts$|-behavior\.test\.ts$|p3ar2-proxy\.test\.ts$|p5-media-integration\.test\.ts$|p5-rich-visuals\.test\.ts$|p5-rapid-content\.test\.ts$|p5-instructional-visual-system\.test\.ts$|j1-activity-runtime\.test\.ts$|activity-content-plans\.test\.ts$|listening-concepts-hubs\.test\.ts$|extra-professions-ui\.test\.ts$/,
         );
       }
       expect(relative.startsWith("tests/web/")).toBe(true);

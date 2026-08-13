@@ -15,8 +15,15 @@
       ],
       "meaningEn": "doctor",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:74ee8a36e7b01cfb:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-74ee8a36e7b01cfb.mp3",
+        "sourceText": "die Ärztin",
+        "spokenText": "die Ärztin",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -39,8 +46,15 @@
       ],
       "meaningEn": "alone",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:a9d5a11ce03dbf99:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-a9d5a11ce03dbf99.mp3",
+        "sourceText": "allein",
+        "spokenText": "allein",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -63,8 +77,15 @@
       ],
       "meaningEn": "age",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:f9c202035068db9b:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-f9c202035068db9b.mp3",
+        "sourceText": "das Alter",
+        "spokenText": "das Alter",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -87,8 +108,15 @@
       ],
       "meaningEn": "architect",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:62dc09ce76149784:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-62dc09ce76149784.mp3",
+        "sourceText": "der Architekt",
+        "spokenText": "der Architekt",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": {
         "feminineSuffix": "in",
@@ -121,8 +149,15 @@
       ],
       "meaningEn": "architect",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:bab366a7e6e4166e:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-bab366a7e6e4166e.mp3",
+        "sourceText": "die Architektin",
+        "spokenText": "die Architektin",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -145,8 +180,15 @@
       ],
       "meaningEn": "doctor",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:2128ffb48d81a189:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-2128ffb48d81a189.mp3",
+        "sourceText": "der Arzt",
+        "spokenText": "der Arzt",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -169,8 +211,15 @@
       ],
       "meaningEn": "Great as well.",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:d19267787b4beff7:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-d19267787b4beff7.mp3",
+        "sourceText": "Auch super.",
+        "spokenText": "Auch super.",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -193,8 +242,15 @@
       ],
       "meaningEn": "Goodbye",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:6a8284819483191d:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-6a8284819483191d.mp3",
+        "sourceText": "Auf Wiedersehen",
+        "spokenText": "Auf Wiedersehen",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -217,8 +273,15 @@
       ],
       "meaningEn": "apprenticeship/training",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:0722502662730c10:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-0722502662730c10.mp3",
+        "sourceText": "die Ausbildung",
+        "spokenText": "die Ausbildung",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -241,8 +304,15 @@
       ],
       "meaningEn": "profession",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:33570f12e2363ed6:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-33570f12e2363ed6.mp3",
+        "sourceText": "der Beruf",
+        "spokenText": "der Beruf",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -265,8 +335,15 @@
       ],
       "meaningEn": "Germany",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:af6e56aacd8097c3:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-af6e56aacd8097c3.mp3",
+        "sourceText": "Deutschland",
+        "spokenText": "Deutschland",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -289,8 +366,15 @@
       ],
       "meaningEn": "Eritrea",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:01bc4009390083a7:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-01bc4009390083a7.mp3",
+        "sourceText": "Eritrea",
+        "spokenText": "Eritrea",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -313,8 +397,15 @@
       ],
       "meaningEn": "Not too bad.",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:13a77f00d2f60e9b:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-13a77f00d2f60e9b.mp3",
+        "sourceText": "Es geht.",
+        "spokenText": "Es geht.",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -337,8 +428,15 @@
       ],
       "meaningEn": "last name",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:16e34b0c5aec84c4:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-16e34b0c5aec84c4.mp3",
+        "sourceText": "der Familienname",
+        "spokenText": "der Familienname",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -363,8 +461,15 @@
       ],
       "meaningEn": "marital status",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:8129bc89560d926c:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-8129bc89560d926c.mp3",
+        "sourceText": "der Familienstand",
+        "spokenText": "der Familienstand",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -387,8 +492,15 @@
       ],
       "meaningEn": "company",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:927bb49f1fa2a332:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-927bb49f1fa2a332.mp3",
+        "sourceText": "die Firma",
+        "spokenText": "die Firma",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -411,8 +523,15 @@
       ],
       "meaningEn": "France",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:6365760ae1ba1eb5:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-6365760ae1ba1eb5.mp3",
+        "sourceText": "Frankreich",
+        "spokenText": "Frankreich",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -435,8 +554,15 @@
       ],
       "meaningEn": "Ms / Mrs / woman",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:86d4dc95732c901f:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-86d4dc95732c901f.mp3",
+        "sourceText": "die Frau",
+        "spokenText": "die Frau",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -461,8 +587,15 @@
       ],
       "meaningEn": "hairdresser",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:5f9319941cc9793b:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-5f9319941cc9793b.mp3",
+        "sourceText": "der Friseur",
+        "spokenText": "der Friseur",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": {
         "feminineSuffix": "in",
@@ -495,8 +628,15 @@
       ],
       "meaningEn": "hairdresser",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:0406a60db0932ccd:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-0406a60db0932ccd.mp3",
+        "sourceText": "die Friseurin",
+        "spokenText": "die Friseurin",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -519,8 +659,15 @@
       ],
       "meaningEn": "divorced",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:24e6b1580a7ec0aa:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-24e6b1580a7ec0aa.mp3",
+        "sourceText": "geschieden",
+        "spokenText": "geschieden",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -543,8 +690,15 @@
       ],
       "meaningEn": "Fine, thank you.",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:3a7e225e0e49a58a:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-3a7e225e0e49a58a.mp3",
+        "sourceText": "Gut, danke.",
+        "spokenText": "Gut, danke.",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -567,8 +721,15 @@
       ],
       "meaningEn": "Good night",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:1a88dbfbc73aecbd:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-1a88dbfbc73aecbd.mp3",
+        "sourceText": "Gute Nacht",
+        "spokenText": "Gute Nacht",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -591,8 +752,15 @@
       ],
       "meaningEn": "Good evening",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:fa5eacd79f716293:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-fa5eacd79f716293.mp3",
+        "sourceText": "Guten Abend",
+        "spokenText": "Guten Abend",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -615,8 +783,15 @@
       ],
       "meaningEn": "Good morning",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:c872cd6d08e13b1c:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-c872cd6d08e13b1c.mp3",
+        "sourceText": "Guten Morgen",
+        "spokenText": "Guten Morgen",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -639,8 +814,15 @@
       ],
       "meaningEn": "Good day / Hello",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:6b973d266dfceb93:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-6b973d266dfceb93.mp3",
+        "sourceText": "Guten Tag",
+        "spokenText": "Guten Tag",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -663,8 +845,15 @@
       ],
       "meaningEn": "Hello",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:753692ec36adb4c7:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-753692ec36adb4c7.mp3",
+        "sourceText": "Hallo",
+        "spokenText": "Hallo",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -687,8 +876,15 @@
       ],
       "meaningEn": "origin",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:29c752cd40a2185c:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-29c752cd40a2185c.mp3",
+        "sourceText": "die Herkunft",
+        "spokenText": "die Herkunft",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -711,8 +907,15 @@
       ],
       "meaningEn": "Mr / gentleman",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:f85dfe36d5fdc12e:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-f85dfe36d5fdc12e.mp3",
+        "sourceText": "der Herr",
+        "spokenText": "der Herr",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -737,8 +940,15 @@
       ],
       "meaningEn": "engineer",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:e35c3d3e17dd4e01:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-e35c3d3e17dd4e01.mp3",
+        "sourceText": "der Ingenieur",
+        "spokenText": "der Ingenieur",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": {
         "feminineSuffix": "in",
@@ -771,8 +981,15 @@
       ],
       "meaningEn": "engineer",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:364993bc52161c56:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-364993bc52161c56.mp3",
+        "sourceText": "die Ingenieurin",
+        "spokenText": "die Ingenieurin",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -795,8 +1012,15 @@
       ],
       "meaningEn": "year",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:3514df498a8fd952:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-3514df498a8fd952.mp3",
+        "sourceText": "das Jahr",
+        "spokenText": "das Jahr",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -819,8 +1043,15 @@
       ],
       "meaningEn": "job",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:75c9561d41a7e4d0:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-75c9561d41a7e4d0.mp3",
+        "sourceText": "der Job",
+        "spokenText": "der Job",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -843,8 +1074,15 @@
       ],
       "meaningEn": "journalist",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:024e4d5bb888be9b:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-024e4d5bb888be9b.mp3",
+        "sourceText": "der Journalist",
+        "spokenText": "der Journalist",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": {
         "feminineSuffix": "in",
@@ -877,8 +1115,15 @@
       ],
       "meaningEn": "journalist",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:ecf0a4be8f4b7ca2:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-ecf0a4be8f4b7ca2.mp3",
+        "sourceText": "die Journalistin",
+        "spokenText": "die Journalistin",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -901,8 +1146,15 @@
       ],
       "meaningEn": "waiter / waitress",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:2e23404ffca2c901:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-2e23404ffca2c901.mp3",
+        "sourceText": "der Kellner",
+        "spokenText": "der Kellner",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": {
         "feminineSuffix": "in",
@@ -935,8 +1187,15 @@
       ],
       "meaningEn": "waiter / waitress",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:99a4ecfa6f690230:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-99a4ecfa6f690230.mp3",
+        "sourceText": "die Kellnerin",
+        "spokenText": "die Kellnerin",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -959,8 +1218,15 @@
       ],
       "meaningEn": "automotive mechatronics engineer",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:694d6580756afc58:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-694d6580756afc58.mp3",
+        "sourceText": "der Kfz-Mechatroniker",
+        "spokenText": "der Kfz-Mechatroniker",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": {
         "feminineSuffix": "in",
@@ -993,8 +1259,15 @@
       ],
       "meaningEn": "automotive mechatronics engineer",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:7597a282753212ec:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-7597a282753212ec.mp3",
+        "sourceText": "die Kfz-Mechatronikerin",
+        "spokenText": "die Kfz-Mechatronikerin",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -1017,8 +1290,15 @@
       ],
       "meaningEn": "child",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:1bf9a16f327c342b:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-1bf9a16f327c342b.mp3",
+        "sourceText": "das Kind",
+        "spokenText": "das Kind",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -1041,8 +1321,15 @@
       ],
       "meaningEn": "teacher",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:c8c3576e9fbd39ff:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-c8c3576e9fbd39ff.mp3",
+        "sourceText": "der Lehrer",
+        "spokenText": "der Lehrer",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": {
         "feminineSuffix": "in",
@@ -1075,8 +1362,15 @@
       ],
       "meaningEn": "teacher",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:a781c79805eb0ca7:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-a781c79805eb0ca7.mp3",
+        "sourceText": "die Lehrerin",
+        "spokenText": "die Lehrerin",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -1099,8 +1393,15 @@
       ],
       "meaningEn": "name",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:dfbef7017aec5501:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-dfbef7017aec5501.mp3",
+        "sourceText": "der Name",
+        "spokenText": "der Name",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -1125,8 +1426,15 @@
       ],
       "meaningEn": "Not so well.",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:27a3206e9189743e:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-27a3206e9189743e.mp3",
+        "sourceText": "Nicht so gut.",
+        "spokenText": "Nicht so gut.",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -1149,8 +1457,15 @@
       ],
       "meaningEn": "Austria",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:b1b763860d4f30c2:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-b1b763860d4f30c2.mp3",
+        "sourceText": "Österreich",
+        "spokenText": "Österreich",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -1173,8 +1488,15 @@
       ],
       "meaningEn": "parcel delivery agent",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:96c3f14ad104f054:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-96c3f14ad104f054.mp3",
+        "sourceText": "der Paketzusteller",
+        "spokenText": "der Paketzusteller",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": {
         "feminineSuffix": "in",
@@ -1207,8 +1529,15 @@
       ],
       "meaningEn": "parcel delivery agent",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:f61126e82c6643b0:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-f61126e82c6643b0.mp3",
+        "sourceText": "die Paketzustellerin",
+        "spokenText": "die Paketzustellerin",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -1231,8 +1560,15 @@
       ],
       "meaningEn": "internship",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:97dd6c846554c664:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-97dd6c846554c664.mp3",
+        "sourceText": "das Praktikum",
+        "spokenText": "das Praktikum",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -1255,8 +1591,15 @@
       ],
       "meaningEn": "pensioner",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:46d4120aefb3db98:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-46d4120aefb3db98.mp3",
+        "sourceText": "der Rentner",
+        "spokenText": "der Rentner",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": {
         "feminineSuffix": "in",
@@ -1289,8 +1632,15 @@
       ],
       "meaningEn": "pensioner",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:d6fe2f024b6ff8e3:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-d6fe2f024b6ff8e3.mp3",
+        "sourceText": "die Rentnerin",
+        "spokenText": "die Rentnerin",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -1313,8 +1663,15 @@
       ],
       "meaningEn": "school student",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:82409188e9ecda4f:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-82409188e9ecda4f.mp3",
+        "sourceText": "der Schüler",
+        "spokenText": "der Schüler",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": {
         "feminineSuffix": "in",
@@ -1347,8 +1704,15 @@
       ],
       "meaningEn": "school student",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:1568efb25e819544:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-1568efb25e819544.mp3",
+        "sourceText": "die Schülerin",
+        "spokenText": "die Schülerin",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -1371,8 +1735,15 @@
       ],
       "meaningEn": "Switzerland",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:12a3c868aebb375b:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-12a3c868aebb375b.mp3",
+        "sourceText": "Schweiz",
+        "spokenText": "Schweiz",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -1395,8 +1766,15 @@
       ],
       "meaningEn": "Very well, thank you.",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:e84df9345c8a8090:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-e84df9345c8a8090.mp3",
+        "sourceText": "Sehr gut, danke.",
+        "spokenText": "Sehr gut, danke.",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -1419,8 +1797,15 @@
       ],
       "meaningEn": "single person",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:179e27c03454d9db:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-179e27c03454d9db.mp3",
+        "sourceText": "der Single",
+        "spokenText": "der Single",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -1443,8 +1828,15 @@
       ],
       "meaningEn": "Spain",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:6977d57accf6e34b:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-6977d57accf6e34b.mp3",
+        "sourceText": "Spanien",
+        "spokenText": "Spanien",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -1467,8 +1859,15 @@
       ],
       "meaningEn": "position/job",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:0b47e3e32b5a2a70:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-0b47e3e32b5a2a70.mp3",
+        "sourceText": "die Stelle",
+        "spokenText": "die Stelle",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -1491,8 +1890,15 @@
       ],
       "meaningEn": "university student",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:0bc3d512ba27fc05:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-0bc3d512ba27fc05.mp3",
+        "sourceText": "der Student",
+        "spokenText": "der Student",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": {
         "feminineSuffix": "in",
@@ -1525,8 +1931,15 @@
       ],
       "meaningEn": "university student",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:c97661eb9f919a25:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-c97661eb9f919a25.mp3",
+        "sourceText": "die Studentin",
+        "spokenText": "die Studentin",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -1549,8 +1962,15 @@
       ],
       "meaningEn": "studies",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:7dc753eb9fb9c6f5:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-7dc753eb9fb9c6f5.mp3",
+        "sourceText": "das Studium",
+        "spokenText": "das Studium",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -1573,8 +1993,15 @@
       ],
       "meaningEn": "Great!",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:e5931b846e6a58bc:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-e5931b846e6a58bc.mp3",
+        "sourceText": "Super!",
+        "spokenText": "Super!",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -1597,8 +2024,15 @@
       ],
       "meaningEn": "Bye",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:cda2dfd43fca1ece:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-cda2dfd43fca1ece.mp3",
+        "sourceText": "Tschüs",
+        "spokenText": "Tschüs",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -1621,8 +2055,15 @@
       ],
       "meaningEn": "Turkey",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:d48ecf8d74d07426:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-d48ecf8d74d07426.mp3",
+        "sourceText": "Türkei",
+        "spokenText": "Türkei",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -1645,8 +2086,15 @@
       ],
       "meaningEn": "USA",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:aa5ab35a9174c206:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-aa5ab35a9174c206.mp3",
+        "sourceText": "USA",
+        "spokenText": "USA",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -1669,8 +2117,15 @@
       ],
       "meaningEn": "married",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:b98f104a1cad9f27:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-b98f104a1cad9f27.mp3",
+        "sourceText": "verheiratet",
+        "spokenText": "verheiratet",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -1693,8 +2148,15 @@
       ],
       "meaningEn": "shop assistant",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:99e33c36b3d77cd7:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-99e33c36b3d77cd7.mp3",
+        "sourceText": "der Verkäufer",
+        "spokenText": "der Verkäufer",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": {
         "feminineSuffix": "in",
@@ -1727,8 +2189,15 @@
       ],
       "meaningEn": "shop assistant",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:ae8547478d451962:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-ae8547478d451962.mp3",
+        "sourceText": "die Verkäuferin",
+        "spokenText": "die Verkäuferin",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -1751,8 +2220,15 @@
       ],
       "meaningEn": "first name",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:ea30e996b5e54668:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-ea30e996b5e54668.mp3",
+        "sourceText": "der Vorname",
+        "spokenText": "der Vorname",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -1777,8 +2253,15 @@
       ],
       "meaningEn": "place of residence",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:c9fc6c577e157747:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-c9fc6c577e157747.mp3",
+        "sourceText": "der Wohnort",
+        "spokenText": "der Wohnort",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -1799,8 +2282,15 @@
       ],
       "meaningEn": "to be called",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:d291857f6b4bf462:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-d291857f6b4bf462.mp3",
+        "sourceText": "heißen",
+        "spokenText": "heißen",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "paradigmNote": "Only the published present forms are shown.",
       "present": [
@@ -1840,8 +2330,15 @@
       ],
       "meaningEn": "to come",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:529f00bc62dff975:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-529f00bc62dff975.mp3",
+        "sourceText": "kommen",
+        "spokenText": "kommen",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "paradigmNote": "Only the published present forms are shown.",
       "present": [
@@ -1881,8 +2378,15 @@
       ],
       "meaningEn": "to learn",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:9533f477c512a096:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-9533f477c512a096.mp3",
+        "sourceText": "lernen",
+        "spokenText": "lernen",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "paradigmNote": "Only the published present forms are shown.",
       "present": [
@@ -1923,8 +2427,15 @@
       ],
       "meaningEn": "to be",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:f0abec8675ebc550:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-f0abec8675ebc550.mp3",
+        "sourceText": "sein",
+        "spokenText": "sein",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "paradigmNote": "This paradigm is irregular and must be learned as forms.",
       "present": [
@@ -2436,8 +2947,15 @@
         "lesson:01"
       ],
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:2307ddf6671cdc36:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-2307ddf6671cdc36.mp3",
+        "sourceText": "Wer ist das?",
+        "spokenText": "Wer ist das?",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "publicationStatus": "published",
       "question": {
@@ -2477,8 +2995,15 @@
         "lesson:01"
       ],
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:2753e4860651be83:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-2753e4860651be83.mp3",
+        "sourceText": "Wie heißt du?",
+        "spokenText": "Wie heißt du?",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "publicationStatus": "published",
       "question": {
@@ -2518,8 +3043,15 @@
         "lesson:01"
       ],
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:e77cf338c3f6f281:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-e77cf338c3f6f281.mp3",
+        "sourceText": "Wie heißen Sie?",
+        "spokenText": "Wie heißen Sie?",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "publicationStatus": "published",
       "question": {
@@ -2553,8 +3085,15 @@
         "lesson:01"
       ],
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:3f22e95182a83d53:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-3f22e95182a83d53.mp3",
+        "sourceText": "Woher kommst du?",
+        "spokenText": "Woher kommst du?",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "publicationStatus": "published",
       "question": {
@@ -2588,8 +3127,15 @@
         "lesson:01"
       ],
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:fec17b90a93577c6:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-fec17b90a93577c6.mp3",
+        "sourceText": "Woher kommen Sie?",
+        "spokenText": "Woher kommen Sie?",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "publicationStatus": "published",
       "question": {
@@ -2666,8 +3212,15 @@
         "lesson:02"
       ],
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:0fa7d1006e9255e8:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-0fa7d1006e9255e8.mp3",
+        "sourceText": "Was bist du von Beruf?",
+        "spokenText": "Was bist du von Beruf?",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "publicationStatus": "published",
       "question": {
@@ -2713,8 +3266,15 @@
         "lesson:02"
       ],
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:bad67a0dde04dd09:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-bad67a0dde04dd09.mp3",
+        "sourceText": "Was sind Sie von Beruf?",
+        "spokenText": "Was sind Sie von Beruf?",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "publicationStatus": "published",
       "question": {
@@ -2842,8 +3402,15 @@
         "lesson:01"
       ],
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:ba838082d88f7fad:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-ba838082d88f7fad.mp3",
+        "sourceText": "Wie geht’s dir?",
+        "spokenText": "Wie geht’s dir?",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "publicationStatus": "published",
       "question": {
@@ -2895,8 +3462,15 @@
         "lesson:01"
       ],
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:c5c4f17bb2ff6e2d:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-c5c4f17bb2ff6e2d.mp3",
+        "sourceText": "Wie geht’s Ihnen?",
+        "spokenText": "Wie geht’s Ihnen?",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "publicationStatus": "published",
       "question": {
@@ -2948,8 +3522,15 @@
         "lesson:02"
       ],
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:1685acd76a35422f:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-1685acd76a35422f.mp3",
+        "sourceText": "Was machen Sie beruflich?",
+        "spokenText": "Was machen Sie beruflich?",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "publicationStatus": "published",
       "question": {
@@ -3352,8 +3933,15 @@
       ],
       "meaningEn": "doctor",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:74ee8a36e7b01cfb:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-74ee8a36e7b01cfb.mp3",
+        "sourceText": "die Ärztin",
+        "spokenText": "die Ärztin",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -3376,8 +3964,15 @@
       ],
       "meaningEn": "alone",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:a9d5a11ce03dbf99:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-a9d5a11ce03dbf99.mp3",
+        "sourceText": "allein",
+        "spokenText": "allein",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -3400,8 +3995,15 @@
       ],
       "meaningEn": "age",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:f9c202035068db9b:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-f9c202035068db9b.mp3",
+        "sourceText": "das Alter",
+        "spokenText": "das Alter",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -3424,8 +4026,15 @@
       ],
       "meaningEn": "architect",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:62dc09ce76149784:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-62dc09ce76149784.mp3",
+        "sourceText": "der Architekt",
+        "spokenText": "der Architekt",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": {
         "feminineSuffix": "in",
@@ -3458,8 +4067,15 @@
       ],
       "meaningEn": "architect",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:bab366a7e6e4166e:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-bab366a7e6e4166e.mp3",
+        "sourceText": "die Architektin",
+        "spokenText": "die Architektin",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -3482,8 +4098,15 @@
       ],
       "meaningEn": "doctor",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:2128ffb48d81a189:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-2128ffb48d81a189.mp3",
+        "sourceText": "der Arzt",
+        "spokenText": "der Arzt",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -3506,8 +4129,15 @@
       ],
       "meaningEn": "Great as well.",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:d19267787b4beff7:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-d19267787b4beff7.mp3",
+        "sourceText": "Auch super.",
+        "spokenText": "Auch super.",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -3530,8 +4160,15 @@
       ],
       "meaningEn": "Goodbye",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:6a8284819483191d:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-6a8284819483191d.mp3",
+        "sourceText": "Auf Wiedersehen",
+        "spokenText": "Auf Wiedersehen",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -3554,8 +4191,15 @@
       ],
       "meaningEn": "apprenticeship/training",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:0722502662730c10:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-0722502662730c10.mp3",
+        "sourceText": "die Ausbildung",
+        "spokenText": "die Ausbildung",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -3578,8 +4222,15 @@
       ],
       "meaningEn": "profession",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:33570f12e2363ed6:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-33570f12e2363ed6.mp3",
+        "sourceText": "der Beruf",
+        "spokenText": "der Beruf",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -3602,8 +4253,15 @@
       ],
       "meaningEn": "Germany",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:af6e56aacd8097c3:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-af6e56aacd8097c3.mp3",
+        "sourceText": "Deutschland",
+        "spokenText": "Deutschland",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -3626,8 +4284,15 @@
       ],
       "meaningEn": "Eritrea",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:01bc4009390083a7:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-01bc4009390083a7.mp3",
+        "sourceText": "Eritrea",
+        "spokenText": "Eritrea",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -3650,8 +4315,15 @@
       ],
       "meaningEn": "Not too bad.",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:13a77f00d2f60e9b:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-13a77f00d2f60e9b.mp3",
+        "sourceText": "Es geht.",
+        "spokenText": "Es geht.",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -3674,8 +4346,15 @@
       ],
       "meaningEn": "last name",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:16e34b0c5aec84c4:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-16e34b0c5aec84c4.mp3",
+        "sourceText": "der Familienname",
+        "spokenText": "der Familienname",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -3700,8 +4379,15 @@
       ],
       "meaningEn": "marital status",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:8129bc89560d926c:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-8129bc89560d926c.mp3",
+        "sourceText": "der Familienstand",
+        "spokenText": "der Familienstand",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -3724,8 +4410,15 @@
       ],
       "meaningEn": "company",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:927bb49f1fa2a332:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-927bb49f1fa2a332.mp3",
+        "sourceText": "die Firma",
+        "spokenText": "die Firma",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -3748,8 +4441,15 @@
       ],
       "meaningEn": "France",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:6365760ae1ba1eb5:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-6365760ae1ba1eb5.mp3",
+        "sourceText": "Frankreich",
+        "spokenText": "Frankreich",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -3772,8 +4472,15 @@
       ],
       "meaningEn": "Ms / Mrs / woman",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:86d4dc95732c901f:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-86d4dc95732c901f.mp3",
+        "sourceText": "die Frau",
+        "spokenText": "die Frau",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -3798,8 +4505,15 @@
       ],
       "meaningEn": "hairdresser",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:5f9319941cc9793b:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-5f9319941cc9793b.mp3",
+        "sourceText": "der Friseur",
+        "spokenText": "der Friseur",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": {
         "feminineSuffix": "in",
@@ -3832,8 +4546,15 @@
       ],
       "meaningEn": "hairdresser",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:0406a60db0932ccd:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-0406a60db0932ccd.mp3",
+        "sourceText": "die Friseurin",
+        "spokenText": "die Friseurin",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -3856,8 +4577,15 @@
       ],
       "meaningEn": "divorced",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:24e6b1580a7ec0aa:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-24e6b1580a7ec0aa.mp3",
+        "sourceText": "geschieden",
+        "spokenText": "geschieden",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -3880,8 +4608,15 @@
       ],
       "meaningEn": "Fine, thank you.",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:3a7e225e0e49a58a:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-3a7e225e0e49a58a.mp3",
+        "sourceText": "Gut, danke.",
+        "spokenText": "Gut, danke.",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -3904,8 +4639,15 @@
       ],
       "meaningEn": "Good night",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:1a88dbfbc73aecbd:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-1a88dbfbc73aecbd.mp3",
+        "sourceText": "Gute Nacht",
+        "spokenText": "Gute Nacht",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -3928,8 +4670,15 @@
       ],
       "meaningEn": "Good evening",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:fa5eacd79f716293:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-fa5eacd79f716293.mp3",
+        "sourceText": "Guten Abend",
+        "spokenText": "Guten Abend",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -3952,8 +4701,15 @@
       ],
       "meaningEn": "Good morning",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:c872cd6d08e13b1c:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-c872cd6d08e13b1c.mp3",
+        "sourceText": "Guten Morgen",
+        "spokenText": "Guten Morgen",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -3976,8 +4732,15 @@
       ],
       "meaningEn": "Good day / Hello",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:6b973d266dfceb93:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-6b973d266dfceb93.mp3",
+        "sourceText": "Guten Tag",
+        "spokenText": "Guten Tag",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -4000,8 +4763,15 @@
       ],
       "meaningEn": "Hello",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:753692ec36adb4c7:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-753692ec36adb4c7.mp3",
+        "sourceText": "Hallo",
+        "spokenText": "Hallo",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -4024,8 +4794,15 @@
       ],
       "meaningEn": "origin",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:29c752cd40a2185c:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-29c752cd40a2185c.mp3",
+        "sourceText": "die Herkunft",
+        "spokenText": "die Herkunft",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -4048,8 +4825,15 @@
       ],
       "meaningEn": "Mr / gentleman",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:f85dfe36d5fdc12e:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-f85dfe36d5fdc12e.mp3",
+        "sourceText": "der Herr",
+        "spokenText": "der Herr",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -4074,8 +4858,15 @@
       ],
       "meaningEn": "engineer",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:e35c3d3e17dd4e01:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-e35c3d3e17dd4e01.mp3",
+        "sourceText": "der Ingenieur",
+        "spokenText": "der Ingenieur",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": {
         "feminineSuffix": "in",
@@ -4108,8 +4899,15 @@
       ],
       "meaningEn": "engineer",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:364993bc52161c56:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-364993bc52161c56.mp3",
+        "sourceText": "die Ingenieurin",
+        "spokenText": "die Ingenieurin",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -4132,8 +4930,15 @@
       ],
       "meaningEn": "year",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:3514df498a8fd952:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-3514df498a8fd952.mp3",
+        "sourceText": "das Jahr",
+        "spokenText": "das Jahr",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -4156,8 +4961,15 @@
       ],
       "meaningEn": "job",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:75c9561d41a7e4d0:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-75c9561d41a7e4d0.mp3",
+        "sourceText": "der Job",
+        "spokenText": "der Job",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -4180,8 +4992,15 @@
       ],
       "meaningEn": "journalist",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:024e4d5bb888be9b:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-024e4d5bb888be9b.mp3",
+        "sourceText": "der Journalist",
+        "spokenText": "der Journalist",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": {
         "feminineSuffix": "in",
@@ -4214,8 +5033,15 @@
       ],
       "meaningEn": "journalist",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:ecf0a4be8f4b7ca2:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-ecf0a4be8f4b7ca2.mp3",
+        "sourceText": "die Journalistin",
+        "spokenText": "die Journalistin",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -4238,8 +5064,15 @@
       ],
       "meaningEn": "waiter / waitress",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:2e23404ffca2c901:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-2e23404ffca2c901.mp3",
+        "sourceText": "der Kellner",
+        "spokenText": "der Kellner",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": {
         "feminineSuffix": "in",
@@ -4272,8 +5105,15 @@
       ],
       "meaningEn": "waiter / waitress",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:99a4ecfa6f690230:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-99a4ecfa6f690230.mp3",
+        "sourceText": "die Kellnerin",
+        "spokenText": "die Kellnerin",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -4296,8 +5136,15 @@
       ],
       "meaningEn": "automotive mechatronics engineer",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:694d6580756afc58:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-694d6580756afc58.mp3",
+        "sourceText": "der Kfz-Mechatroniker",
+        "spokenText": "der Kfz-Mechatroniker",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": {
         "feminineSuffix": "in",
@@ -4330,8 +5177,15 @@
       ],
       "meaningEn": "automotive mechatronics engineer",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:7597a282753212ec:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-7597a282753212ec.mp3",
+        "sourceText": "die Kfz-Mechatronikerin",
+        "spokenText": "die Kfz-Mechatronikerin",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -4354,8 +5208,15 @@
       ],
       "meaningEn": "child",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:1bf9a16f327c342b:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-1bf9a16f327c342b.mp3",
+        "sourceText": "das Kind",
+        "spokenText": "das Kind",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -4378,8 +5239,15 @@
       ],
       "meaningEn": "teacher",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:c8c3576e9fbd39ff:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-c8c3576e9fbd39ff.mp3",
+        "sourceText": "der Lehrer",
+        "spokenText": "der Lehrer",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": {
         "feminineSuffix": "in",
@@ -4412,8 +5280,15 @@
       ],
       "meaningEn": "teacher",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:a781c79805eb0ca7:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-a781c79805eb0ca7.mp3",
+        "sourceText": "die Lehrerin",
+        "spokenText": "die Lehrerin",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -4436,8 +5311,15 @@
       ],
       "meaningEn": "name",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:dfbef7017aec5501:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-dfbef7017aec5501.mp3",
+        "sourceText": "der Name",
+        "spokenText": "der Name",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -4462,8 +5344,15 @@
       ],
       "meaningEn": "Not so well.",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:27a3206e9189743e:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-27a3206e9189743e.mp3",
+        "sourceText": "Nicht so gut.",
+        "spokenText": "Nicht so gut.",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -4486,8 +5375,15 @@
       ],
       "meaningEn": "Austria",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:b1b763860d4f30c2:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-b1b763860d4f30c2.mp3",
+        "sourceText": "Österreich",
+        "spokenText": "Österreich",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -4510,8 +5406,15 @@
       ],
       "meaningEn": "parcel delivery agent",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:96c3f14ad104f054:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-96c3f14ad104f054.mp3",
+        "sourceText": "der Paketzusteller",
+        "spokenText": "der Paketzusteller",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": {
         "feminineSuffix": "in",
@@ -4544,8 +5447,15 @@
       ],
       "meaningEn": "parcel delivery agent",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:f61126e82c6643b0:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-f61126e82c6643b0.mp3",
+        "sourceText": "die Paketzustellerin",
+        "spokenText": "die Paketzustellerin",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -4568,8 +5478,15 @@
       ],
       "meaningEn": "internship",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:97dd6c846554c664:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-97dd6c846554c664.mp3",
+        "sourceText": "das Praktikum",
+        "spokenText": "das Praktikum",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -4592,8 +5509,15 @@
       ],
       "meaningEn": "pensioner",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:46d4120aefb3db98:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-46d4120aefb3db98.mp3",
+        "sourceText": "der Rentner",
+        "spokenText": "der Rentner",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": {
         "feminineSuffix": "in",
@@ -4626,8 +5550,15 @@
       ],
       "meaningEn": "pensioner",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:d6fe2f024b6ff8e3:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-d6fe2f024b6ff8e3.mp3",
+        "sourceText": "die Rentnerin",
+        "spokenText": "die Rentnerin",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -4650,8 +5581,15 @@
       ],
       "meaningEn": "school student",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:82409188e9ecda4f:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-82409188e9ecda4f.mp3",
+        "sourceText": "der Schüler",
+        "spokenText": "der Schüler",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": {
         "feminineSuffix": "in",
@@ -4684,8 +5622,15 @@
       ],
       "meaningEn": "school student",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:1568efb25e819544:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-1568efb25e819544.mp3",
+        "sourceText": "die Schülerin",
+        "spokenText": "die Schülerin",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -4708,8 +5653,15 @@
       ],
       "meaningEn": "Switzerland",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:12a3c868aebb375b:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-12a3c868aebb375b.mp3",
+        "sourceText": "Schweiz",
+        "spokenText": "Schweiz",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -4732,8 +5684,15 @@
       ],
       "meaningEn": "Very well, thank you.",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:e84df9345c8a8090:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-e84df9345c8a8090.mp3",
+        "sourceText": "Sehr gut, danke.",
+        "spokenText": "Sehr gut, danke.",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -4756,8 +5715,15 @@
       ],
       "meaningEn": "single person",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:179e27c03454d9db:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-179e27c03454d9db.mp3",
+        "sourceText": "der Single",
+        "spokenText": "der Single",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -4780,8 +5746,15 @@
       ],
       "meaningEn": "Spain",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:6977d57accf6e34b:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-6977d57accf6e34b.mp3",
+        "sourceText": "Spanien",
+        "spokenText": "Spanien",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -4804,8 +5777,15 @@
       ],
       "meaningEn": "position/job",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:0b47e3e32b5a2a70:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-0b47e3e32b5a2a70.mp3",
+        "sourceText": "die Stelle",
+        "spokenText": "die Stelle",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -4828,8 +5808,15 @@
       ],
       "meaningEn": "university student",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:0bc3d512ba27fc05:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-0bc3d512ba27fc05.mp3",
+        "sourceText": "der Student",
+        "spokenText": "der Student",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": {
         "feminineSuffix": "in",
@@ -4862,8 +5849,15 @@
       ],
       "meaningEn": "university student",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:c97661eb9f919a25:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-c97661eb9f919a25.mp3",
+        "sourceText": "die Studentin",
+        "spokenText": "die Studentin",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -4886,8 +5880,15 @@
       ],
       "meaningEn": "studies",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:7dc753eb9fb9c6f5:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-7dc753eb9fb9c6f5.mp3",
+        "sourceText": "das Studium",
+        "spokenText": "das Studium",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -4910,8 +5911,15 @@
       ],
       "meaningEn": "Great!",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:e5931b846e6a58bc:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-e5931b846e6a58bc.mp3",
+        "sourceText": "Super!",
+        "spokenText": "Super!",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -4934,8 +5942,15 @@
       ],
       "meaningEn": "Bye",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:cda2dfd43fca1ece:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-cda2dfd43fca1ece.mp3",
+        "sourceText": "Tschüs",
+        "spokenText": "Tschüs",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -4958,8 +5973,15 @@
       ],
       "meaningEn": "Turkey",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:d48ecf8d74d07426:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-d48ecf8d74d07426.mp3",
+        "sourceText": "Türkei",
+        "spokenText": "Türkei",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -4982,8 +6004,15 @@
       ],
       "meaningEn": "USA",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:aa5ab35a9174c206:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-aa5ab35a9174c206.mp3",
+        "sourceText": "USA",
+        "spokenText": "USA",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -5006,8 +6035,15 @@
       ],
       "meaningEn": "married",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:b98f104a1cad9f27:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-b98f104a1cad9f27.mp3",
+        "sourceText": "verheiratet",
+        "spokenText": "verheiratet",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -5030,8 +6066,15 @@
       ],
       "meaningEn": "shop assistant",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:99e33c36b3d77cd7:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-99e33c36b3d77cd7.mp3",
+        "sourceText": "der Verkäufer",
+        "spokenText": "der Verkäufer",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": {
         "feminineSuffix": "in",
@@ -5064,8 +6107,15 @@
       ],
       "meaningEn": "shop assistant",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:ae8547478d451962:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-ae8547478d451962.mp3",
+        "sourceText": "die Verkäuferin",
+        "spokenText": "die Verkäuferin",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -5088,8 +6138,15 @@
       ],
       "meaningEn": "first name",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:ea30e996b5e54668:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-ea30e996b5e54668.mp3",
+        "sourceText": "der Vorname",
+        "spokenText": "der Vorname",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": null,
@@ -5114,8 +6171,15 @@
       ],
       "meaningEn": "place of residence",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:c9fc6c577e157747:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-c9fc6c577e157747.mp3",
+        "sourceText": "der Wohnort",
+        "spokenText": "der Wohnort",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
       "pluralGapMessage": "Plural is not published for this item.",
@@ -5217,8 +6281,15 @@
         "lesson:01"
       ],
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:2307ddf6671cdc36:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-2307ddf6671cdc36.mp3",
+        "sourceText": "Wer ist das?",
+        "spokenText": "Wer ist das?",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "publicationStatus": "published",
       "question": {
@@ -5258,8 +6329,15 @@
         "lesson:01"
       ],
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:2753e4860651be83:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-2753e4860651be83.mp3",
+        "sourceText": "Wie heißt du?",
+        "spokenText": "Wie heißt du?",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "publicationStatus": "published",
       "question": {
@@ -5299,8 +6377,15 @@
         "lesson:01"
       ],
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:e77cf338c3f6f281:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-e77cf338c3f6f281.mp3",
+        "sourceText": "Wie heißen Sie?",
+        "spokenText": "Wie heißen Sie?",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "publicationStatus": "published",
       "question": {
@@ -5334,8 +6419,15 @@
         "lesson:01"
       ],
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:3f22e95182a83d53:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-3f22e95182a83d53.mp3",
+        "sourceText": "Woher kommst du?",
+        "spokenText": "Woher kommst du?",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "publicationStatus": "published",
       "question": {
@@ -5369,8 +6461,15 @@
         "lesson:01"
       ],
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:fec17b90a93577c6:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-fec17b90a93577c6.mp3",
+        "sourceText": "Woher kommen Sie?",
+        "spokenText": "Woher kommen Sie?",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "publicationStatus": "published",
       "question": {
@@ -5447,8 +6546,15 @@
         "lesson:02"
       ],
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:0fa7d1006e9255e8:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-0fa7d1006e9255e8.mp3",
+        "sourceText": "Was bist du von Beruf?",
+        "spokenText": "Was bist du von Beruf?",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "publicationStatus": "published",
       "question": {
@@ -5494,8 +6600,15 @@
         "lesson:02"
       ],
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:bad67a0dde04dd09:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-bad67a0dde04dd09.mp3",
+        "sourceText": "Was sind Sie von Beruf?",
+        "spokenText": "Was sind Sie von Beruf?",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "publicationStatus": "published",
       "question": {
@@ -5623,8 +6736,15 @@
         "lesson:01"
       ],
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:ba838082d88f7fad:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-ba838082d88f7fad.mp3",
+        "sourceText": "Wie geht’s dir?",
+        "spokenText": "Wie geht’s dir?",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "publicationStatus": "published",
       "question": {
@@ -5676,8 +6796,15 @@
         "lesson:01"
       ],
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:c5c4f17bb2ff6e2d:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-c5c4f17bb2ff6e2d.mp3",
+        "sourceText": "Wie geht’s Ihnen?",
+        "spokenText": "Wie geht’s Ihnen?",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "publicationStatus": "published",
       "question": {
@@ -5729,8 +6856,15 @@
         "lesson:02"
       ],
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:1685acd76a35422f:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-1685acd76a35422f.mp3",
+        "sourceText": "Was machen Sie beruflich?",
+        "spokenText": "Was machen Sie beruflich?",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "publicationStatus": "published",
       "question": {
@@ -5753,8 +6887,15 @@
       ],
       "meaningEn": "to be called",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:d291857f6b4bf462:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-d291857f6b4bf462.mp3",
+        "sourceText": "heißen",
+        "spokenText": "heißen",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "paradigmNote": "Only the published present forms are shown.",
       "present": [
@@ -5794,8 +6935,15 @@
       ],
       "meaningEn": "to come",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:529f00bc62dff975:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-529f00bc62dff975.mp3",
+        "sourceText": "kommen",
+        "spokenText": "kommen",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "paradigmNote": "Only the published present forms are shown.",
       "present": [
@@ -5835,8 +6983,15 @@
       ],
       "meaningEn": "to learn",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:9533f477c512a096:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-9533f477c512a096.mp3",
+        "sourceText": "lernen",
+        "spokenText": "lernen",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "paradigmNote": "Only the published present forms are shown.",
       "present": [
@@ -5877,8 +7032,15 @@
       ],
       "meaningEn": "to be",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:f0abec8675ebc550:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-f0abec8675ebc550.mp3",
+        "sourceText": "sein",
+        "spokenText": "sein",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "paradigmNote": "This paradigm is irregular and must be learned as forms.",
       "present": [
@@ -5939,8 +7101,15 @@
       ],
       "meaningEn": "architect",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:62dc09ce76149784:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-62dc09ce76149784.mp3",
+        "sourceText": "der Architekt",
+        "spokenText": "der Architekt",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": {
         "feminineSuffix": "in",
@@ -5972,8 +7141,15 @@
       ],
       "meaningEn": "to be",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:f0abec8675ebc550:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-f0abec8675ebc550.mp3",
+        "sourceText": "sein",
+        "spokenText": "sein",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "paradigmNote": "This paradigm is irregular and must be learned as forms.",
       "present": [
@@ -6082,8 +7258,15 @@
         "lesson:02"
       ],
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:0fa7d1006e9255e8:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-0fa7d1006e9255e8.mp3",
+        "sourceText": "Was bist du von Beruf?",
+        "spokenText": "Was bist du von Beruf?",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "publicationStatus": "published",
       "question": {
@@ -6110,8 +7293,15 @@
       ],
       "meaningEn": "architect",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:62dc09ce76149784:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-62dc09ce76149784.mp3",
+        "sourceText": "der Architekt",
+        "spokenText": "der Architekt",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "personForm": {
         "feminineSuffix": "in",
@@ -6196,8 +7386,15 @@
         "lesson:02"
       ],
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:0fa7d1006e9255e8:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-0fa7d1006e9255e8.mp3",
+        "sourceText": "Was bist du von Beruf?",
+        "spokenText": "Was bist du von Beruf?",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "publicationStatus": "published",
       "question": {
@@ -6221,8 +7418,15 @@
       ],
       "meaningEn": "to be",
       "media": {
-        "assetId": null,
-        "state": "pending-review"
+        "assetId": "aud:tts:f0abec8675ebc550:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-f0abec8675ebc550.mp3",
+        "sourceText": "sein",
+        "spokenText": "sein",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "paradigmNote": "This paradigm is irregular and must be learned as forms.",
       "present": [

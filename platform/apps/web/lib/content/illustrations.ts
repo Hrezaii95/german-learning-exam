@@ -157,6 +157,12 @@ export function illustrationForActivity(activityId: string): LearnerIllustration
   return null;
 }
 
+export function illustrationForLesson(lessonId: string): LearnerIllustration | null {
+  if (lessonId === "lesson:01") return NAME_ORIGIN_CLASS;
+  if (lessonId === "lesson:02") return PROFESSION_ENSEMBLE;
+  return null;
+}
+
 export function illustrationForDetail(detailId: string): LearnerIllustration | null {
   if (detailId === "lex:architekt") return ARCHITECT_STUDIO;
   if (detailId === "verb:sein" || detailId === "verb:arbeiten") return VERBS_CONTEXT;
