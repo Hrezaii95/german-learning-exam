@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-08-13T08:34:00+03:30",
+  "generator": "OpenAI built-in image generation",
+  "policy": {
+    "original": true,
+    "textInImage": false,
+    "reviewOnlyVocabularyIncluded": false,
+    "semanticLabelsRemainHtml": true
+  },
+  "assets": [
+    {
+      "id": "rapid:l1-name-origin-class",
+      "path": "media/generated/rapid-lesson-assets/lesson-01-name-origin-class.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "E408515CB4ACF15474C7ADD678B0D79ABBDAFA1B4749849AE5D59968B1C410EC",
+      "alt": "Four adults in a language class use a blank name badge, symbol tiles, a globe, and a landscape postcard while introducing themselves.",
+      "crop": { "desktop": "center", "tablet": "center", "mobile": "50% 45%" },
+      "concepts": ["name", "introduction", "spelling", "origin", "aus"],
+      "activityIds": [
+        "activity:lesson-01-name-model-dialogue",
+        "activity:lesson-01-origin-aus-contrast",
+        "activity:lesson-01-alphabet-listen-spell",
+        "activity:lesson-01-guided-intro-recording",
+        "activity:lesson-01-checkpoint-summary"
+      ],
+      "promptSummary": "Diverse adult newcomers introduce themselves using a blank badge, non-letter symbol tiles, globe, and postcard in one premium editorial classroom scene; no text, letters, flags, logos, or UI."
+    },
+    {
+      "id": "rapid:l1-wellbeing-five-states",
+      "path": "media/generated/rapid-lesson-assets/lesson-01-wellbeing-five-states.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "2930EE16FB1851686DA8874E95F45EE4F4E0B7750535F99A385AD0326BE166B5",
+      "alt": "The same adult appears in five panels ranging from energized and happy through neutral, tired, and low mood.",
+      "crop": { "desktop": "center", "tablet": "center", "mobile": "panel-specific; do not crop the five-state overview into one ambiguous face" },
+      "concepts": ["wellbeing", "super", "very good", "okay", "not so good"],
+      "activityIds": ["activity:lesson-01-wellbeing-scale", "activity:lesson-01-checkpoint-summary"],
+      "promptSummary": "One recognizable adult across exactly five sophisticated emotional-state panels with contextual weather and comfort cues; safe, non-medical, and text-free."
+    },
+    {
+      "id": "rapid:l2-personal-profile-context",
+      "path": "media/generated/rapid-lesson-assets/lesson-02-personal-profile-context.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "5B46EEEB313246919CFA912CC327723B58C92C0AE351A3C8F4378D073584349B",
+      "alt": "An adult completes a blank profile beside a house model, keys, birthday cake, inclusive family photo, ring, and work bag.",
+      "crop": { "desktop": "center", "tablet": "center", "mobile": "48% 52%" },
+      "concepts": ["personal profile", "age", "residence", "family", "children", "relationship status", "profession"],
+      "activityIds": [
+        "activity:lesson-02-personal-profile",
+        "activity:lesson-02-relationship-status",
+        "activity:lesson-02-profile-reading-writing",
+        "activity:lesson-02-checkpoint-summary"
+      ],
+      "promptSummary": "Adult builds a blank personal profile surrounded by grounded, inclusive life-context objects; no text, numbers, flags, or assumed relationship."
+    },
+    {
+      "id": "rapid:l2-core-profession-pairs-sheet",
+      "path": "media/generated/rapid-lesson-assets/lesson-02-core-profession-pairs-sheet.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "6D386EDAAACDBFE369E013D46C1FBA7F98F93D65AADADC58F6CF2D61F684DE09",
+      "alt": "Thirteen matching masculine- and feminine-presenting profession pairs in a consistent illustrated card grid.",
+      "crop": { "desktop": "full sheet", "tablet": "full sheet", "mobile": "crop individual 4-by-4 grid cells using CSS object-position or generated derivatives" },
+      "concepts": [
+        "paketzusteller", "friseur", "kellner", "ingenieur", "kfz-mechatroniker", "student", "journalist",
+        "architekt", "arzt", "lehrer", "verkaeufer", "schueler", "rentner", "feminine person forms", "-in morphology"
+      ],
+      "activityIds": [
+        "activity:lesson-02-core-professions",
+        "activity:lesson-02-person-form-morphology",
+        "activity:lesson-02-profession-qa-builder",
+        "activity:lesson-02-sein-arbeiten-contrast",
+        "activity:lesson-02-checkpoint-summary"
+      ],
+      "detailIds": ["lex:architekt"],
+      "promptSummary": "Strict 4-by-4 sheet with the thirteen published core profession pairs only, in published order, with three blank cells; no teacher-review-only professions or labels."
+    }
+  ]
+}

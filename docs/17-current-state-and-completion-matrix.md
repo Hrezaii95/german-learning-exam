@@ -45,7 +45,7 @@ Documentation alone is specification evidence, not implementation evidence. The 
 | AUD-001 | Partial | 327/327 cached assets pass exact manifest/disk, SHA-256, codec, sample-rate, channel and duration checks in `media/qa/alpha-tts-technical-audit.json`; current compact content coverage includes all teacher-profession forms | canonical publication-manifest coverage diff plus qualified German listening approval for all candidate clips |
 | AUD-002 | Proven | shared audio controller supports prompt gesture playback, repeat, 0.8 study speed, pitch preservation and error state | preserve in production implementation |
 | AUD-003 | Proven | generated manifest and source workbook map are separate; UI labels rights-gated source lane | preserve metadata/UI distinction |
-| AUD-004 | Proven | 15 tracks mapped by filename/exercise/transcript and tested; public MP3 leakage test exists | use only after rights basis or keep gated |
+| AUD-004 | Proven | 15 tracks mapped by filename/exercise/transcript, owner-approved for this project on 2026-08-13, byte-identical packaged, and hash-tested | keep scope locked to `1_01`–`1_15`; do not infer approval for other publisher media |
 | AUD-005 | Partial | recorder supports permission, record/stop/playback/retry and unmount cleanup | dedicated denial and permission/navigation race tests in the platform |
 | AUD-006 | Proven | UI does not claim AI scoring; docs and decisions explicitly defer it | preserve feature gate |
 | HUB-001 | Partial | Vocabulary, Verbs, Grammar, Phrases/Q&A and Listening exist; Review is separate | Concepts hub is missing and all hub routes must become canonical-data renderers |
@@ -79,7 +79,7 @@ Documentation alone is specification evidence, not implementation evidence. The 
 | Responsive/visual | PARTIAL | current routes pass three sizes; 360×800 and every required screen family are not covered |
 | Engineering | PARTIAL | lint/build/render/content/E2E pass for the sample; clean `platform/`, schemas and production release bundle do not yet exist |
 | German/audio owner review | BLOCKED | no qualified German sign-off or two-pass audio QA record exists |
-| Publisher media rights | BLOCKED | `redistributionBasis` remains unset; private lane must remain private |
+| Publisher media rights | SCOPED APPROVAL | Project-owner redistribution approval is recorded for exactly 15 mapped Lesson 1–2 workbook tracks; all other publisher media remains private/blocked |
 
 ## Immediate build order
 

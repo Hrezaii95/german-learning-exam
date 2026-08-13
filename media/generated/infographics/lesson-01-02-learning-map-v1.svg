@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" role="img" aria-labelledby="title desc" preserveAspectRatio="xMidYMid meet" xml:space="preserve">
+  <title id="title">Learning map for German Lessons 1 and 2</title>
+  <desc id="desc">A two-lane map shows Lesson 1 from greeting through introduction, origin, wellbeing and checkpoint, then Lesson 2 from personal profile through numbers, professions, verb forms and checkpoint. Shared hubs below collect vocabulary, verbs, phrases and questions, and review games. An optional teacher professions deck has separate mastery and does not block the core course.</desc>
+  <defs><style>
+    .h{font:700 38px Inter,Arial,sans-serif;fill:#15192c}.s{font:500 18px Inter,Arial,sans-serif;fill:#5c637a}.k{font:700 14px Inter,Arial,sans-serif;letter-spacing:1.2px}.w{font:700 21px Inter,Arial,sans-serif;fill:#15192c}.sm{font:500 14px Inter,Arial,sans-serif;fill:#5c637a}.card{fill:#fff;stroke:#dddff0;stroke-width:2}.l1{fill:#eef4ff;stroke:#bfd3ff;stroke-width:2}.l2{fill:#f2edff;stroke:#d2c7fa;stroke-width:2}.node{fill:#fff;stroke:#cfd3e5;stroke-width:2}.path1{stroke:#246bfd;stroke-width:5;stroke-linecap:round}.path2{stroke:#6946e8;stroke-width:5;stroke-linecap:round}.hub{fill:#161b31}.extra{fill:#fff8e8;stroke:#e3aa40;stroke-width:2}
+  </style></defs>
+  <rect width="1200" height="720" rx="34" fill="#f8f7fc"/>
+  <text x="58" y="68" class="h">Learn lesson by lesson. Keep everything in your hubs.</text>
+  <text x="58" y="103" class="s">Each lesson builds a usable conversation; every learned item remains available for practice and review.</text>
+
+  <g transform="translate(58 137)">
+    <rect class="l1" width="1084" height="164" rx="25"/>
+    <rect x="22" y="18" width="115" height="34" rx="17" fill="#246bfd"/><text x="80" y="41" text-anchor="middle" class="k" fill="#fff">LESSON 1</text>
+    <text x="158" y="41" class="w">Ich heiße Miriam.</text>
+    <path class="path1" d="M104 104h866"/><path d="M960 92l22 12-22 12z" fill="#246bfd"/>
+    <g transform="translate(36 77)"><circle class="node" cx="45" cy="27" r="28"/><text x="45" y="33" text-anchor="middle" class="w">1</text><text x="45" y="73" text-anchor="middle" class="sm">greet</text></g>
+    <g transform="translate(238 77)"><circle class="node" cx="45" cy="27" r="28"/><text x="45" y="33" text-anchor="middle" class="w">2</text><text x="45" y="73" text-anchor="middle" class="sm">name</text></g>
+    <g transform="translate(440 77)"><circle class="node" cx="45" cy="27" r="28"/><text x="45" y="33" text-anchor="middle" class="w">3</text><text x="45" y="73" text-anchor="middle" class="sm">origin</text></g>
+    <g transform="translate(642 77)"><circle class="node" cx="45" cy="27" r="28"/><text x="45" y="33" text-anchor="middle" class="w">4</text><text x="45" y="73" text-anchor="middle" class="sm">wellbeing</text></g>
+    <g transform="translate(844 77)"><circle cx="45" cy="27" r="28" fill="#246bfd"/><text x="45" y="33" text-anchor="middle" class="w" fill="#fff">✓</text><text x="45" y="73" text-anchor="middle" class="sm">checkpoint</text></g>
+  </g>
+
+  <g transform="translate(58 325)">
+    <rect class="l2" width="1084" height="164" rx="25"/>
+    <rect x="22" y="18" width="115" height="34" rx="17" fill="#6946e8"/><text x="80" y="41" text-anchor="middle" class="k" fill="#fff">LESSON 2</text>
+    <text x="158" y="41" class="w">Was macht ihr beruflich?</text>
+    <path class="path2" d="M104 104h866"/><path d="M960 92l22 12-22 12z" fill="#6946e8"/>
+    <g transform="translate(36 77)"><circle class="node" cx="45" cy="27" r="28"/><text x="45" y="33" text-anchor="middle" class="w">1</text><text x="45" y="73" text-anchor="middle" class="sm">profile</text></g>
+    <g transform="translate(238 77)"><circle class="node" cx="45" cy="27" r="28"/><text x="45" y="33" text-anchor="middle" class="w">2</text><text x="45" y="73" text-anchor="middle" class="sm">numbers</text></g>
+    <g transform="translate(440 77)"><circle class="node" cx="45" cy="27" r="28"/><text x="45" y="33" text-anchor="middle" class="w">3</text><text x="45" y="73" text-anchor="middle" class="sm">professions</text></g>
+    <g transform="translate(642 77)"><circle class="node" cx="45" cy="27" r="28"/><text x="45" y="33" text-anchor="middle" class="w">4</text><text x="45" y="73" text-anchor="middle" class="sm">verb forms</text></g>
+    <g transform="translate(844 77)"><circle cx="45" cy="27" r="28" fill="#6946e8"/><text x="45" y="33" text-anchor="middle" class="w" fill="#fff">✓</text><text x="45" y="73" text-anchor="middle" class="sm">checkpoint</text></g>
+  </g>
+
+  <g transform="translate(58 525)">
+    <rect class="hub" width="792" height="137" rx="24"/>
+    <text x="24" y="35" class="k" fill="#bfc6ff">YOUR LEARNING HUBS</text>
+    <g transform="translate(24 53)">
+      <rect width="174" height="58" rx="16" fill="#282d48"/><text x="87" y="36" text-anchor="middle" class="w" fill="#fff">Vocabulary</text>
+      <rect x="190" width="132" height="58" rx="16" fill="#282d48"/><text x="256" y="36" text-anchor="middle" class="w" fill="#fff">Verbs</text>
+      <rect x="338" width="210" height="58" rx="16" fill="#282d48"/><text x="443" y="36" text-anchor="middle" class="w" fill="#fff">Phrases &amp; Q&amp;A</text>
+      <rect x="564" width="180" height="58" rx="16" fill="#6946e8"/><text x="654" y="36" text-anchor="middle" class="w" fill="#fff">Review games</text>
+    </g>
+  </g>
+  <g transform="translate(874 525)">
+    <rect class="extra" width="268" height="137" rx="24"/>
+    <text x="20" y="33" class="k" fill="#9b5900">EXTRA PROFESSIONS</text>
+    <text x="20" y="67" class="w">Teacher deck</text>
+    <text x="20" y="94" class="sm">optional · separate mastery</text>
+    <text x="20" y="117" class="sm">never blocks core progress</text>
+  </g>
+</svg>

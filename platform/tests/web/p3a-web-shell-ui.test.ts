@@ -139,8 +139,8 @@ describe("P3A behavioral UI (server-rendered from generated projection)", () => 
     expect(html).toContain('href="/vocabulary"');
     expect(html).toContain('href="/verbs"');
     expect(html).toContain('href="/concepts"');
-    expect(html).toContain("Next phase");
-    expect(html).toContain("disabled=\"\"");
+    expect(html).toContain('href="/review"');
+    expect(html).toContain('href="/settings"');
   });
 
   it("renders regular lernen motif without bridge, irregular star, or gender decoration", () => {

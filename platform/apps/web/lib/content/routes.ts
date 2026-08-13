@@ -81,6 +81,13 @@ export type ResolvedRoute =
       canonicalPath: string;
     }
   | {
+      kind: "review";
+      pathname: string;
+      sessionId: "today" | null;
+      canonicalPath: string;
+    }
+  | { kind: "settings"; pathname: string }
+  | {
       kind: "canonical-redirect";
       pathname: string;
       canonicalPath: string;
@@ -271,6 +278,20 @@ export function resolveLearnerRoute(
       canonicalPath: CONVERSATION_ROOT_PATH,
     };
   }
+  if (pathname === "/review") {
+    return { kind: "review", pathname, sessionId: null, canonicalPath: "/review" };
+  }
+  if (pathname === "/review/session/today") {
+    return {
+      kind: "review",
+      pathname,
+      sessionId: "today",
+      canonicalPath: "/review/session/today",
+    };
+  }
+  if (pathname === "/settings") {
+    return { kind: "settings", pathname };
+  }
 
   const hubId = HUB_ID_BY_SEGMENT.get(pathname.slice(1));
   if (hubId && HUB_PATH_BY_ID[hubId] === pathname) {
@@ -367,6 +388,12 @@ export function resolveLearnerRoute(
         pathname,
         reason: "conversation-extra-segment",
       };
+    }
+    if (root === "review") {
+      return { kind: "not-found", pathname, reason: "unknown-review-route" };
+    }
+    if (root === "settings") {
+      return { kind: "not-found", pathname, reason: "settings-extra-segment" };
     }
   }
 
@@ -581,6 +608,10 @@ export function listCanonicalPracticeRoutePaths(): string[] {
 
 export function listCanonicalConversationRoutePaths(): string[] {
   return [CONVERSATION_ROOT_PATH, conversationCanonicalPath()];
+}
+
+export function listCanonicalLearnerStatePaths(): string[] {
+  return ["/review", "/review/session/today", "/settings"];
 }
 
 export function listCanonicalDetailPaths(

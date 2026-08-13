@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" role="img" aria-labelledby="title desc" preserveAspectRatio="xMidYMid meet" xml:space="preserve">
+  <title id="title">Profession person-form morphology</title>
+  <desc id="desc">Three lanes compare a regular in ending from Architekt to Architektin, an umlaut plus in change from Arzt to Ärztin, and the review-only lexical pair Krankenpfleger and Krankenschwester. The graphic explains that each is stored as a separate linked lexeme.</desc>
+  <defs><style>
+    .h{font:700 38px Inter,Arial,sans-serif;fill:#15192c}.s{font:500 18px Inter,Arial,sans-serif;fill:#5c637a}.k{font:700 14px Inter,Arial,sans-serif;letter-spacing:1.2px}.w{font:700 28px Inter,Arial,sans-serif;fill:#15192c}.sm{font:500 15px Inter,Arial,sans-serif;fill:#5c637a}.card{fill:#fff;stroke:#dddff0;stroke-width:2}.m{fill:#246bfd}.f{fill:#e64c86}.regular{fill:#148a87}.special{fill:#b76a00}.irregular{fill:#c52f62}.arrow{stroke:#6946e8;stroke-width:4;stroke-linecap:round}.pill{fill:#f0edff}.outline{fill:none;stroke:#a8aec7;stroke-width:2;stroke-dasharray:6 6}
+  </style></defs>
+  <rect width="1200" height="720" rx="34" fill="#f8f7fc"/>
+  <text x="58" y="68" class="h">Same role, linked word forms</text>
+  <text x="58" y="103" class="s">A transformation arrow shows what changes. The database still keeps two complete words.</text>
+
+  <g transform="translate(58 142)">
+    <rect class="card" width="1084" height="144" rx="24"/>
+    <rect x="22" y="18" width="146" height="28" rx="14" fill="#e8f7f5"/><text x="95" y="37" text-anchor="middle" class="k" fill="#08716e">REGULAR +IN</text>
+    <rect class="m" x="28" y="71" width="44" height="44" rx="10"/><text x="50" y="99" text-anchor="middle" class="k" fill="#fff">M</text>
+    <text x="90" y="102" class="w"><tspan fill="#246bfd">der</tspan><tspan> Architekt</tspan></text>
+    <path class="arrow" d="M404 92h170"/><path d="M564 80l21 12-21 12z" fill="#6946e8"/><text x="490" y="75" text-anchor="middle" class="sm">add feminine suffix</text>
+    <circle class="f" cx="646" cy="93" r="23"/><text x="646" y="99" text-anchor="middle" class="k" fill="#fff">F</text>
+    <text x="685" y="102" class="w"><tspan fill="#e64c86">die</tspan><tspan> Architekt</tspan><tspan fill="#148a87">in</tspan></text>
+    <rect x="932" y="70" width="124" height="44" rx="14" fill="#eef9f7"/><text x="994" y="98" text-anchor="middle" class="k" fill="#08716e">PUBLISHED</text>
+  </g>
+
+  <g transform="translate(58 310)">
+    <rect class="card" width="1084" height="144" rx="24"/>
+    <rect x="22" y="18" width="184" height="28" rx="14" fill="#fff0d4"/><text x="114" y="37" text-anchor="middle" class="k" fill="#9b5900">STEM CHANGE +IN</text>
+    <rect class="m" x="28" y="71" width="44" height="44" rx="10"/><text x="50" y="99" text-anchor="middle" class="k" fill="#fff">M</text>
+    <text x="90" y="102" class="w"><tspan fill="#246bfd">der</tspan><tspan> </tspan><tspan fill="#b76a00">A</tspan><tspan>rzt</tspan></text>
+    <path class="arrow" d="M315 92h259"/><path d="M564 80l21 12-21 12z" fill="#6946e8"/><text x="444" y="75" text-anchor="middle" class="sm">A → Ä, then +in</text>
+    <circle class="f" cx="646" cy="93" r="23"/><text x="646" y="99" text-anchor="middle" class="k" fill="#fff">F</text>
+    <text x="685" y="102" class="w"><tspan fill="#e64c86">die</tspan><tspan> </tspan><tspan fill="#b76a00">Ä</tspan><tspan>rzt</tspan><tspan fill="#148a87">in</tspan></text>
+    <rect x="932" y="70" width="124" height="44" rx="14" fill="#eef9f7"/><text x="994" y="98" text-anchor="middle" class="k" fill="#08716e">PUBLISHED</text>
+  </g>
+
+  <g transform="translate(58 478)">
+    <rect class="card" width="1084" height="158" rx="24"/>
+    <rect x="22" y="18" width="156" height="28" rx="14" fill="#fde8ef"/><text x="100" y="37" text-anchor="middle" class="k" fill="#a92251">LEXICAL PAIR ★</text>
+    <rect class="m" x="28" y="76" width="44" height="44" rx="10"/><text x="50" y="104" text-anchor="middle" class="k" fill="#fff">M</text>
+    <text x="90" y="107" class="w"><tspan fill="#246bfd">der</tspan><tspan> Krankenpfleger</tspan></text>
+    <path class="outline" d="M408 98h139"/><text x="477" y="82" text-anchor="middle" class="sm">linked meaning</text>
+    <circle class="f" cx="606" cy="98" r="23"/><text x="606" y="104" text-anchor="middle" class="k" fill="#fff">F</text>
+    <text x="645" y="107" class="w"><tspan fill="#e64c86">die</tspan><tspan> Krankenschwester</tspan></text>
+    <rect x="918" y="17" width="138" height="46" rx="14" fill="#fff8e8" stroke="#e3aa40"/><text x="987" y="37" text-anchor="middle" class="k" fill="#9b5900">REVIEW-ONLY</text><text x="987" y="56" text-anchor="middle" class="sm">teacher deck</text>
+  </g>
+  <text x="58" y="684" class="sm">Rule: never hide a lexical pair behind a productive “+in” animation. Show the relationship type honestly.</text>
+</svg>

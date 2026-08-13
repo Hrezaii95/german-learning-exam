@@ -1,0 +1,1766 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-13T00:00:00.000Z",
+  "purpose": "rapid high-value audio preview wave for Lessons 1-2, representative details, Q&A, verbs, and extra professions",
+  "sourceManifest": "media/manifests/alpha-tts-manifest.json",
+  "sourceTechnicalAudit": "media/qa/alpha-tts-technical-audit.json",
+  "generator": {
+    "name": "edge-tts",
+    "version": "7.2.7",
+    "productionAuthority": false
+  },
+  "voice": "de-DE-KatjaNeural",
+  "rate": "+4%",
+  "assetCount": 54,
+  "technicalGate": "pass",
+  "humanListeningGate": "pending-human-listening-review",
+  "publicationPolicy": {
+    "publicRelativePathsAreProjectionOnly": true,
+    "copyBytesToDeployableBundle": false,
+    "copyGate": "qualified German text/form and naturalness listening passes",
+    "publisherAudioIncluded": false
+  },
+  "assets": [
+    {
+      "id": "aud:tts:d19267787b4beff7:v1",
+      "spokenText": "Auch super.",
+      "conceptIds": [
+        "lesson:01"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-d19267787b4beff7.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-d19267787b4beff7.mp3",
+      "bytes": 10656,
+      "sha256": "318ce3e297af73f489a148d046db58bedb6a9bc96072e4ec1d5fe83b4c11d1a9",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 1.776,
+      "riskTags": [
+        "ich-or-ach-sound",
+        "r-sound",
+        "connected-speech"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": "/lessons/01",
+          "surface": "Lesson 1 card or activity",
+          "availability": "live"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:6a8284819483191d:v1",
+      "spokenText": "Auf Wiedersehen",
+      "conceptIds": [
+        "lesson:01"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-6a8284819483191d.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-6a8284819483191d.mp3",
+      "bytes": 11088,
+      "sha256": "5189de23e1285423325e65640d49320d20e5c8828d16c28d6e050f6aabc68583",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 1.848,
+      "riskTags": [
+        "r-sound",
+        "connected-speech"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": "/lessons/01",
+          "surface": "Lesson 1 card or activity",
+          "availability": "live"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:3a7e225e0e49a58a:v1",
+      "spokenText": "Gut, danke.",
+      "conceptIds": [
+        "lesson:01",
+        "qa:wellbeing-casual",
+        "qa:wellbeing-formal"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-3a7e225e0e49a58a.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-3a7e225e0e49a58a.mp3",
+      "bytes": 12096,
+      "sha256": "c511833385a5386bc7502ff93128d8003727bf93a128154d13ea8e7cc5b7cc46",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 2.016,
+      "riskTags": [
+        "connected-speech"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": "/lessons/01",
+          "surface": "Lesson 1 card or activity",
+          "availability": "live"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:753692ec36adb4c7:v1",
+      "spokenText": "Hallo",
+      "conceptIds": [
+        "lesson:01"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-753692ec36adb4c7.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-753692ec36adb4c7.mp3",
+      "bytes": 10656,
+      "sha256": "22667d87042013d1fb34d867fb4cc10d38fb8e782ba0179d4587e302b6902209",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 1.776,
+      "riskTags": [],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": "/lessons/01",
+          "surface": "Lesson 1 card or activity",
+          "availability": "live"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:c872cd6d08e13b1c:v1",
+      "spokenText": "Guten Morgen",
+      "conceptIds": [
+        "lesson:01"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-c872cd6d08e13b1c.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-c872cd6d08e13b1c.mp3",
+      "bytes": 11232,
+      "sha256": "522ba865424a13ad813f2fdfeecdadb6e430c0b11b08771c42d00955e1351c6f",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 1.872,
+      "riskTags": [
+        "r-sound",
+        "connected-speech"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": "/lessons/01",
+          "surface": "Lesson 1 card or activity",
+          "availability": "live"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:6b973d266dfceb93:v1",
+      "spokenText": "Guten Tag",
+      "conceptIds": [
+        "lesson:01"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-6b973d266dfceb93.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-6b973d266dfceb93.mp3",
+      "bytes": 10656,
+      "sha256": "806230611a1ab1d01ba67e877e262e1dde0c334ed514c32a6aa8d7e1d79b9ac3",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 1.776,
+      "riskTags": [
+        "final-obstruent",
+        "connected-speech"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": "/lessons/01",
+          "surface": "Lesson 1 card or activity",
+          "availability": "live"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:cda2dfd43fca1ece:v1",
+      "spokenText": "Tschüs",
+      "conceptIds": [
+        "lesson:01"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-cda2dfd43fca1ece.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-cda2dfd43fca1ece.mp3",
+      "bytes": 10656,
+      "sha256": "93ec6294e2e8b4156558ce2d9b65d6707502b592e2f75e8821f1d1157c7aaa0f",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 1.776,
+      "riskTags": [
+        "umlaut-or-eszett",
+        "ich-or-ach-sound"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": "/lessons/01",
+          "surface": "Lesson 1 card or activity",
+          "availability": "live"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:2753e4860651be83:v1",
+      "spokenText": "Wie heißt du?",
+      "conceptIds": [
+        "qa:name-casual"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-2753e4860651be83.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-2753e4860651be83.mp3",
+      "bytes": 10656,
+      "sha256": "e24a7b863c81a52a393c3f490868f5725546166a62c39a24db42443acadf0ddd",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 1.776,
+      "riskTags": [
+        "umlaut-or-eszett",
+        "connected-speech"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": "/lessons/01",
+          "surface": "Lesson 1 card or activity",
+          "availability": "live"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:e77cf338c3f6f281:v1",
+      "spokenText": "Wie heißen Sie?",
+      "conceptIds": [
+        "qa:name-formal"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-e77cf338c3f6f281.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-e77cf338c3f6f281.mp3",
+      "bytes": 11232,
+      "sha256": "ac861e02e6dffda46e62f652f2b68edce0cc6a3cffa6757865c129ad14580b71",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 1.872,
+      "riskTags": [
+        "umlaut-or-eszett",
+        "connected-speech"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": "/lessons/01",
+          "surface": "Lesson 1 card or activity",
+          "availability": "live"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:3f22e95182a83d53:v1",
+      "spokenText": "Woher kommst du?",
+      "conceptIds": [
+        "qa:origin-casual"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-3f22e95182a83d53.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-3f22e95182a83d53.mp3",
+      "bytes": 10656,
+      "sha256": "924b5e3630f5f115b16fa84456104b14a80b577a0f12c1f247551095da62e44d",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 1.776,
+      "riskTags": [
+        "r-sound",
+        "connected-speech"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": "/lessons/01",
+          "surface": "Lesson 1 card or activity",
+          "availability": "live"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:fec17b90a93577c6:v1",
+      "spokenText": "Woher kommen Sie?",
+      "conceptIds": [
+        "qa:origin-formal"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-fec17b90a93577c6.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-fec17b90a93577c6.mp3",
+      "bytes": 12096,
+      "sha256": "45df7a97f9a8e6350be763d4ed0e5380397b2ccc880d275de1d608a56233e218",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 2.016,
+      "riskTags": [
+        "r-sound",
+        "connected-speech"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": "/lessons/01",
+          "surface": "Lesson 1 card or activity",
+          "availability": "live"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:ba838082d88f7fad:v1",
+      "spokenText": "Wie geht’s dir?",
+      "conceptIds": [
+        "qa:wellbeing-casual"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-ba838082d88f7fad.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-ba838082d88f7fad.mp3",
+      "bytes": 11088,
+      "sha256": "ec5aa3b2d56f0d5538b0118b2cc753fabbb8811a847b99cd948eda2435d6dbdc",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 1.848,
+      "riskTags": [
+        "r-sound",
+        "connected-speech"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": "/lessons/01",
+          "surface": "Lesson 1 card or activity",
+          "availability": "live"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:c5c4f17bb2ff6e2d:v1",
+      "spokenText": "Wie geht’s Ihnen?",
+      "conceptIds": [
+        "qa:wellbeing-formal"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-c5c4f17bb2ff6e2d.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-c5c4f17bb2ff6e2d.mp3",
+      "bytes": 12240,
+      "sha256": "f6b293c7aa9f7f298cb5f2d6c9e53286d374c50f16831d4d210257caf6fa0330",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 2.04,
+      "riskTags": [
+        "connected-speech"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": "/lessons/01",
+          "surface": "Lesson 1 card or activity",
+          "availability": "live"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:33570f12e2363ed6:v1",
+      "spokenText": "der Beruf",
+      "conceptIds": [
+        "lesson:02"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-33570f12e2363ed6.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-33570f12e2363ed6.mp3",
+      "bytes": 10656,
+      "sha256": "c5c7818d4ccc5a22f9e89c696d0a4e2c645a74112f5d01fad7e83aa79e10a509",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 1.776,
+      "riskTags": [
+        "r-sound",
+        "connected-speech"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": "/lessons/02",
+          "surface": "Lesson 2 card or activity",
+          "availability": "live"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:75c9561d41a7e4d0:v1",
+      "spokenText": "der Job",
+      "conceptIds": [
+        "lesson:02"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-75c9561d41a7e4d0.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-75c9561d41a7e4d0.mp3",
+      "bytes": 10656,
+      "sha256": "289d1513e57b07fa9cfc9921166126551567be18bfc775cb5cdf6d67a1af6bda",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 1.776,
+      "riskTags": [
+        "r-sound",
+        "final-obstruent",
+        "connected-speech"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": "/lessons/02",
+          "surface": "Lesson 2 card or activity",
+          "availability": "live"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:f9c202035068db9b:v1",
+      "spokenText": "das Alter",
+      "conceptIds": [
+        "lesson:02"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-f9c202035068db9b.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-f9c202035068db9b.mp3",
+      "bytes": 10656,
+      "sha256": "64a149b24d3c06fff951e05b9c35903b756a913e61932b57146b156d0d1bbb60",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 1.776,
+      "riskTags": [
+        "r-sound",
+        "connected-speech"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": "/lessons/02",
+          "surface": "Lesson 2 card or activity",
+          "availability": "live"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:c9fc6c577e157747:v1",
+      "spokenText": "der Wohnort",
+      "conceptIds": [
+        "lesson:02"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-c9fc6c577e157747.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-c9fc6c577e157747.mp3",
+      "bytes": 11232,
+      "sha256": "14b0249a3a8aa43629f47b0dd8aeca3701fd7dcd6d4320d74285bcf300e648f0",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 1.872,
+      "riskTags": [
+        "r-sound",
+        "connected-speech"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": "/lessons/02",
+          "surface": "Lesson 2 card or activity",
+          "availability": "live"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:0fa7d1006e9255e8:v1",
+      "spokenText": "Was bist du von Beruf?",
+      "conceptIds": [
+        "qa:profession-casual"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-0fa7d1006e9255e8.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-0fa7d1006e9255e8.mp3",
+      "bytes": 13104,
+      "sha256": "80da697cd8ebd76d474a691a519353055288d7002916c85425d94445b302ae03",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 2.184,
+      "riskTags": [
+        "r-sound",
+        "connected-speech"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": "/phrases/id-71613a70726f66657373696f6e2d63617375616c2d6d61696e",
+          "surface": "profession Q&A detail",
+          "availability": "live-representative"
+        },
+        {
+          "route": "/conversation/id-71613a70726f66657373696f6e2d63617375616c2d6d61696e",
+          "surface": "profession conversation ladder",
+          "availability": "live-representative"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:bad67a0dde04dd09:v1",
+      "spokenText": "Was sind Sie von Beruf?",
+      "conceptIds": [
+        "qa:profession-formal"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-bad67a0dde04dd09.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-bad67a0dde04dd09.mp3",
+      "bytes": 13104,
+      "sha256": "32c5ef59dd17e486ab344593170d3c74692675e850b7fa0f0b094e0311b2915a",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 2.184,
+      "riskTags": [
+        "r-sound",
+        "connected-speech"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": "/phrases/id-71613a70726f66657373696f6e2d63617375616c2d6d61696e",
+          "surface": "profession Q&A detail",
+          "availability": "live-representative"
+        },
+        {
+          "route": "/conversation/id-71613a70726f66657373696f6e2d63617375616c2d6d61696e",
+          "surface": "profession conversation ladder",
+          "availability": "live-representative"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:d3241bf9c5208ed6:v1",
+      "spokenText": "Ich bin Köchin. Ich arbeite in einem Restaurant.",
+      "conceptIds": [
+        "phrase:profession-model"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-d3241bf9c5208ed6.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-d3241bf9c5208ed6.mp3",
+      "bytes": 26784,
+      "sha256": "53dab7fe4b4d791cfbdc11d65593e48decf8f13c771363a74c10a87e5b262b04",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 4.464,
+      "riskTags": [
+        "umlaut-or-eszett",
+        "ich-or-ach-sound",
+        "r-sound",
+        "feminine-in-or-innen",
+        "connected-speech"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": "/phrases/id-71613a70726f66657373696f6e2d63617375616c2d6d61696e",
+          "surface": "profession Q&A detail",
+          "availability": "live-representative"
+        },
+        {
+          "route": "/conversation/id-71613a70726f66657373696f6e2d63617375616c2d6d61696e",
+          "surface": "profession conversation ladder",
+          "availability": "live-representative"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:f0abec8675ebc550:v1",
+      "spokenText": "sein",
+      "conceptIds": [
+        "verb:sein"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-f0abec8675ebc550.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-f0abec8675ebc550.mp3",
+      "bytes": 10656,
+      "sha256": "422cbe11c50c2fe048ea90a5cab32e05927d1a3148c379d53ee5d67d9fd00926",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 1.776,
+      "riskTags": [
+        "feminine-in-or-innen"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": "/verbs/id-766572623a7365696e",
+          "surface": "sein verb detail and conjugation cards",
+          "availability": "live"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:a1e1057546b3816a:v1",
+      "spokenText": "ich bin",
+      "conceptIds": [
+        "verb:sein"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-a1e1057546b3816a.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-a1e1057546b3816a.mp3",
+      "bytes": 10656,
+      "sha256": "0ad4542a046b76b9233fa6769c68f59e8a57ca5f81298bbe6d1ff8d7211120c9",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 1.776,
+      "riskTags": [
+        "ich-or-ach-sound",
+        "feminine-in-or-innen",
+        "connected-speech",
+        "conjugated-form"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": "/verbs/id-766572623a7365696e",
+          "surface": "sein verb detail and conjugation cards",
+          "availability": "live"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:eb740a0d476fc93c:v1",
+      "spokenText": "du bist",
+      "conceptIds": [
+        "verb:sein"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-eb740a0d476fc93c.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-eb740a0d476fc93c.mp3",
+      "bytes": 10656,
+      "sha256": "05c52718f2bb90289ab58581fb7eccd781290bbd3634c7d030724919abe38bbd",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 1.776,
+      "riskTags": [
+        "connected-speech",
+        "conjugated-form"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": "/verbs/id-766572623a7365696e",
+          "surface": "sein verb detail and conjugation cards",
+          "availability": "live"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:0bbf7a1c7251abe2:v1",
+      "spokenText": "er/sie/es ist",
+      "conceptIds": [
+        "verb:sein"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-0bbf7a1c7251abe2.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-0bbf7a1c7251abe2.mp3",
+      "bytes": 10656,
+      "sha256": "92b225801476d8fb50dd8753993010848f21b2ab4b706642f2b47dec5379e57c",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 1.776,
+      "riskTags": [
+        "r-sound",
+        "connected-speech"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": "/verbs/id-766572623a7365696e",
+          "surface": "sein verb detail and conjugation cards",
+          "availability": "live"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:9ce4ec9417958565:v1",
+      "spokenText": "wir sind",
+      "conceptIds": [
+        "verb:sein"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-9ce4ec9417958565.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-9ce4ec9417958565.mp3",
+      "bytes": 10656,
+      "sha256": "f632b9987dddc0ec10de766e334823e702272b9e30fa86f8c9f906c7aed8721a",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 1.776,
+      "riskTags": [
+        "r-sound",
+        "final-obstruent",
+        "connected-speech",
+        "conjugated-form"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": "/verbs/id-766572623a7365696e",
+          "surface": "sein verb detail and conjugation cards",
+          "availability": "live"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:518602b71f856b0d:v1",
+      "spokenText": "ihr seid",
+      "conceptIds": [
+        "verb:sein"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-518602b71f856b0d.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-518602b71f856b0d.mp3",
+      "bytes": 10656,
+      "sha256": "a37d74e66ff93ddeb08796173fb1a87d900a08e26711cd42a6d02b451ab4cf02",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 1.776,
+      "riskTags": [
+        "r-sound",
+        "final-obstruent",
+        "connected-speech",
+        "conjugated-form"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": "/verbs/id-766572623a7365696e",
+          "surface": "sein verb detail and conjugation cards",
+          "availability": "live"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:8571b87255d733b4:v1",
+      "spokenText": "sie/Sie sind",
+      "conceptIds": [
+        "verb:sein"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-8571b87255d733b4.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-8571b87255d733b4.mp3",
+      "bytes": 10656,
+      "sha256": "01ac3d460545e8d817e16306527e17e1fcf2d790a29935d5240943575337194d",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 1.776,
+      "riskTags": [
+        "final-obstruent",
+        "connected-speech"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": "/verbs/id-766572623a7365696e",
+          "surface": "sein verb detail and conjugation cards",
+          "availability": "live"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:f1ce4cfaa9130b28:v1",
+      "spokenText": "arbeiten",
+      "conceptIds": [
+        "verb:arbeiten"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-f1ce4cfaa9130b28.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-f1ce4cfaa9130b28.mp3",
+      "bytes": 10656,
+      "sha256": "d2daf814b9debf68f5fc8f2abafb1b7f1258643d065c51d5f8c0664c0c62645b",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 1.776,
+      "riskTags": [
+        "r-sound"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": "/verbs",
+          "surface": "verb hub and future arbeiten detail cards",
+          "availability": "hub-live-detail-not-yet-routed"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:e6282cf9be8c7ae1:v1",
+      "spokenText": "ich arbeite",
+      "conceptIds": [
+        "verb:arbeiten"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-e6282cf9be8c7ae1.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-e6282cf9be8c7ae1.mp3",
+      "bytes": 10656,
+      "sha256": "ebbc57bdbf5fb4693fc25458c6842836ed2436dee9304a25835c9d6ddd574bcd",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 1.776,
+      "riskTags": [
+        "ich-or-ach-sound",
+        "r-sound",
+        "connected-speech",
+        "conjugated-form"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": "/verbs",
+          "surface": "verb hub and future arbeiten detail cards",
+          "availability": "hub-live-detail-not-yet-routed"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:55bc73c60d5aff34:v1",
+      "spokenText": "du arbeitest",
+      "conceptIds": [
+        "verb:arbeiten"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-55bc73c60d5aff34.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-55bc73c60d5aff34.mp3",
+      "bytes": 11376,
+      "sha256": "316c6856cf198894d6a537795afdf1b3c193001e424d7990d0c96c26dd140024",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 1.896,
+      "riskTags": [
+        "r-sound",
+        "connected-speech",
+        "conjugated-form"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": "/verbs",
+          "surface": "verb hub and future arbeiten detail cards",
+          "availability": "hub-live-detail-not-yet-routed"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:015411a545d92029:v1",
+      "spokenText": "er/sie/es arbeitet",
+      "conceptIds": [
+        "verb:arbeiten"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-015411a545d92029.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-015411a545d92029.mp3",
+      "bytes": 12816,
+      "sha256": "83c3b6bce7b4106de852ea0289cb5261d6bcfa34cfb69fbdea9f6189d1d19469",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 2.136,
+      "riskTags": [
+        "r-sound",
+        "connected-speech"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": "/verbs",
+          "surface": "verb hub and future arbeiten detail cards",
+          "availability": "hub-live-detail-not-yet-routed"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:0eba6f6bbaaa5b61:v1",
+      "spokenText": "wir arbeiten",
+      "conceptIds": [
+        "verb:arbeiten"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-0eba6f6bbaaa5b61.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-0eba6f6bbaaa5b61.mp3",
+      "bytes": 11520,
+      "sha256": "09e0c2ff17520916e49d27a9da74d1f0c434150488841cabddbbe0fb319d601a",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 1.92,
+      "riskTags": [
+        "r-sound",
+        "connected-speech",
+        "conjugated-form"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": "/verbs",
+          "surface": "verb hub and future arbeiten detail cards",
+          "availability": "hub-live-detail-not-yet-routed"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:a0769ae9d9921e63:v1",
+      "spokenText": "ihr arbeitet",
+      "conceptIds": [
+        "verb:arbeiten"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-a0769ae9d9921e63.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-a0769ae9d9921e63.mp3",
+      "bytes": 11088,
+      "sha256": "f47a0a6e9718de83f727f43a14e5441a2fc747932dd43ddb75cd81bb7f858a89",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 1.848,
+      "riskTags": [
+        "r-sound",
+        "connected-speech",
+        "conjugated-form"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": "/verbs",
+          "surface": "verb hub and future arbeiten detail cards",
+          "availability": "hub-live-detail-not-yet-routed"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:906a799d46a8c8e8:v1",
+      "spokenText": "sie/Sie arbeiten",
+      "conceptIds": [
+        "verb:arbeiten"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-906a799d46a8c8e8.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-906a799d46a8c8e8.mp3",
+      "bytes": 12384,
+      "sha256": "69c1aa5de67eb87f7ffc1f79a37d5e9efacf723373e755ba96317ee6707d0c0b",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 2.064,
+      "riskTags": [
+        "r-sound",
+        "connected-speech"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": "/verbs",
+          "surface": "verb hub and future arbeiten detail cards",
+          "availability": "hub-live-detail-not-yet-routed"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:62dc09ce76149784:v1",
+      "spokenText": "der Architekt",
+      "conceptIds": [
+        "profession:architekt",
+        "teacher-job:architekt"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-62dc09ce76149784.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-62dc09ce76149784.mp3",
+      "bytes": 11376,
+      "sha256": "b5be1e1fc365d06fbd896e1e199b1a012b8ae3d6ad188747d99150b4172c4bf8",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 1.896,
+      "riskTags": [
+        "ich-or-ach-sound",
+        "r-sound",
+        "connected-speech",
+        "profession-form"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": "/vocabulary/id-6c65783a617263686974656b74",
+          "surface": "Architekt vocabulary detail",
+          "availability": "live"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:bab366a7e6e4166e:v1",
+      "spokenText": "die Architektin",
+      "conceptIds": [
+        "profession:architekt",
+        "teacher-job:architekt"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-bab366a7e6e4166e.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-bab366a7e6e4166e.mp3",
+      "bytes": 11952,
+      "sha256": "faa81659059038498a027f43087c5ef3696461e34387d63f8a669820bbcea09c",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 1.992,
+      "riskTags": [
+        "ich-or-ach-sound",
+        "r-sound",
+        "feminine-in-or-innen",
+        "connected-speech",
+        "profession-form"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": "/vocabulary/id-6c65783a617263686974656b74",
+          "surface": "Architekt vocabulary detail",
+          "availability": "live"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:e35c3d3e17dd4e01:v1",
+      "spokenText": "der Ingenieur",
+      "conceptIds": [
+        "profession:ingenieur",
+        "teacher-job:ingenieur"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-e35c3d3e17dd4e01.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-e35c3d3e17dd4e01.mp3",
+      "bytes": 11088,
+      "sha256": "cb3a6ea017e459fd12cbf3830ff47a75deb9bfe1e47c710aa44c4e1c532392aa",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 1.848,
+      "riskTags": [
+        "r-sound",
+        "connected-speech",
+        "profession-form"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": "/vocabulary",
+          "surface": "profession vocabulary hub card",
+          "availability": "hub-live-detail-not-yet-routed"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:364993bc52161c56:v1",
+      "spokenText": "die Ingenieurin",
+      "conceptIds": [
+        "profession:ingenieur",
+        "teacher-job:ingenieur"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-364993bc52161c56.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-364993bc52161c56.mp3",
+      "bytes": 11808,
+      "sha256": "a0be8f09e0be5398e936e511af2fc2089958b601ca7a5a3379df6a549ec44210",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 1.968,
+      "riskTags": [
+        "r-sound",
+        "feminine-in-or-innen",
+        "connected-speech",
+        "profession-form"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": "/vocabulary",
+          "surface": "profession vocabulary hub card",
+          "availability": "hub-live-detail-not-yet-routed"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:2128ffb48d81a189:v1",
+      "spokenText": "der Arzt",
+      "conceptIds": [
+        "profession:arzt",
+        "teacher-job:arzt"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-2128ffb48d81a189.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-2128ffb48d81a189.mp3",
+      "bytes": 10656,
+      "sha256": "448404f793d83955cef78c891109beb2c2af7c7a8504a3a2ecd15ee535707796",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 1.776,
+      "riskTags": [
+        "r-sound",
+        "connected-speech",
+        "profession-form"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": "/vocabulary",
+          "surface": "profession vocabulary hub card",
+          "availability": "hub-live-detail-not-yet-routed"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:27c8c016adc2e8b0:v1",
+      "spokenText": "die Ärzte",
+      "conceptIds": [
+        "teacher-job:arzt"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-27c8c016adc2e8b0.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-27c8c016adc2e8b0.mp3",
+      "bytes": 10656,
+      "sha256": "9e964def54af06fd4bbb2f4cd97b693e12ba0fe88a5d676928c6afce165d14c0",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 1.776,
+      "riskTags": [
+        "umlaut-or-eszett",
+        "r-sound",
+        "connected-speech",
+        "profession-form"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": null,
+          "surface": "extra professions collection card",
+          "availability": "blocked-until-content-and-audio-human-review"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:74ee8a36e7b01cfb:v1",
+      "spokenText": "die Ärztin",
+      "conceptIds": [
+        "profession:arzt",
+        "teacher-job:arzt"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-74ee8a36e7b01cfb.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-74ee8a36e7b01cfb.mp3",
+      "bytes": 11088,
+      "sha256": "af8bcedfe98b440a799a325e0267ffe0332f9955986be52b93da2bc8662ab10c",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 1.848,
+      "riskTags": [
+        "umlaut-or-eszett",
+        "r-sound",
+        "feminine-in-or-innen",
+        "connected-speech",
+        "profession-form"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": "/vocabulary",
+          "surface": "profession vocabulary hub card",
+          "availability": "hub-live-detail-not-yet-routed"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:80798c4d363a9748:v1",
+      "spokenText": "die Ärztinnen",
+      "conceptIds": [
+        "teacher-job:arzt"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-80798c4d363a9748.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-80798c4d363a9748.mp3",
+      "bytes": 11808,
+      "sha256": "8cac7179164006d95850968f793629b7fd9f92e793d570dc3a2454ecf4a0c992",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 1.968,
+      "riskTags": [
+        "umlaut-or-eszett",
+        "r-sound",
+        "feminine-in-or-innen",
+        "connected-speech",
+        "profession-form"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": null,
+          "surface": "extra professions collection card",
+          "availability": "blocked-until-content-and-audio-human-review"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:dd89a6c67a34d33d:v1",
+      "spokenText": "der Polizist",
+      "conceptIds": [
+        "teacher-job:polizist"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-dd89a6c67a34d33d.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-dd89a6c67a34d33d.mp3",
+      "bytes": 11232,
+      "sha256": "a29d167020c7cd3370ae208be4e3432287a6b2ed46e07be035a7b72802197f52",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 1.872,
+      "riskTags": [
+        "r-sound",
+        "connected-speech",
+        "profession-form"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": null,
+          "surface": "extra professions collection card",
+          "availability": "blocked-until-content-and-audio-human-review"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:15c37e6df58994ef:v1",
+      "spokenText": "die Polizisten",
+      "conceptIds": [
+        "teacher-job:polizist"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-15c37e6df58994ef.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-15c37e6df58994ef.mp3",
+      "bytes": 12096,
+      "sha256": "08af665f15680a933758633c45339bb4906aab3ab7433dc21ebfd6c776bdaf3a",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 2.016,
+      "riskTags": [
+        "connected-speech",
+        "profession-form"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": null,
+          "surface": "extra professions collection card",
+          "availability": "blocked-until-content-and-audio-human-review"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:21adcacce0dcc8ee:v1",
+      "spokenText": "die Polizistin",
+      "conceptIds": [
+        "teacher-job:polizist"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-21adcacce0dcc8ee.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-21adcacce0dcc8ee.mp3",
+      "bytes": 12384,
+      "sha256": "eee460b6b915da9cfbbb81f74a7dde5edd0dc79d43869559e8f6bbcac4500c8c",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 2.064,
+      "riskTags": [
+        "feminine-in-or-innen",
+        "connected-speech",
+        "profession-form"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": null,
+          "surface": "extra professions collection card",
+          "availability": "blocked-until-content-and-audio-human-review"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:3f3b37fa618748f2:v1",
+      "spokenText": "die Polizistinnen",
+      "conceptIds": [
+        "teacher-job:polizist"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-3f3b37fa618748f2.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-3f3b37fa618748f2.mp3",
+      "bytes": 12960,
+      "sha256": "6c2826073c35fb6f7844cae2bf0aac9563d2042edd462812dcd33123a7910f65",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 2.16,
+      "riskTags": [
+        "feminine-in-or-innen",
+        "connected-speech",
+        "profession-form"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": null,
+          "surface": "extra professions collection card",
+          "availability": "blocked-until-content-and-audio-human-review"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:3496d498b66ac57c:v1",
+      "spokenText": "der Feuerwehrmann",
+      "conceptIds": [
+        "teacher-job:feuerwehrmann"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-3496d498b66ac57c.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-3496d498b66ac57c.mp3",
+      "bytes": 12096,
+      "sha256": "fd26069b2950986aa585ab7b2811ae3ccc74f70af1096963fb80ef1be72d27fe",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 2.016,
+      "riskTags": [
+        "r-sound",
+        "connected-speech",
+        "profession-form"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": null,
+          "surface": "extra professions collection card",
+          "availability": "blocked-until-content-and-audio-human-review"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:3a1b31be21a07874:v1",
+      "spokenText": "die Feuerwehrfrau",
+      "conceptIds": [
+        "teacher-job:feuerwehrmann"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-3a1b31be21a07874.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-3a1b31be21a07874.mp3",
+      "bytes": 11808,
+      "sha256": "cc3b5621c6e135f78002c2780a2d57bffb2a2573cb6cf63f403c0e27ab87d1a9",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 1.968,
+      "riskTags": [
+        "r-sound",
+        "connected-speech",
+        "profession-form"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": null,
+          "surface": "extra professions collection card",
+          "availability": "blocked-until-content-and-audio-human-review"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:548338f5aac9569b:v1",
+      "spokenText": "die Feuerwehrfrauen",
+      "conceptIds": [
+        "teacher-job:feuerwehrmann"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-548338f5aac9569b.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-548338f5aac9569b.mp3",
+      "bytes": 13248,
+      "sha256": "06340295551293ddaec144209280d7ad2ca180954085d73c2aa81d80e734ab01",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 2.208,
+      "riskTags": [
+        "r-sound",
+        "connected-speech",
+        "profession-form"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": null,
+          "surface": "extra professions collection card",
+          "availability": "blocked-until-content-and-audio-human-review"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:9fb1d64c0171cc58:v1",
+      "spokenText": "die Feuerwehrmänner",
+      "conceptIds": [
+        "teacher-job:feuerwehrmann"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-9fb1d64c0171cc58.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-9fb1d64c0171cc58.mp3",
+      "bytes": 12240,
+      "sha256": "3fc6ba20ce892b067e47273729cba2d3a9b15ccd7f00f735b35b66c2a530025f",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 2.04,
+      "riskTags": [
+        "umlaut-or-eszett",
+        "r-sound",
+        "connected-speech",
+        "profession-form"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": null,
+          "surface": "extra professions collection card",
+          "availability": "blocked-until-content-and-audio-human-review"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:83680e7d8ca6339f:v1",
+      "spokenText": "der Bäcker",
+      "conceptIds": [
+        "teacher-job:backer"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-83680e7d8ca6339f.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-83680e7d8ca6339f.mp3",
+      "bytes": 10656,
+      "sha256": "ad7ee5536db858597c61221ae079e6efe99a03c9c16d4beff6fd3e102f9bcec8",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 1.776,
+      "riskTags": [
+        "umlaut-or-eszett",
+        "r-sound",
+        "connected-speech",
+        "profession-form"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": null,
+          "surface": "extra professions collection card",
+          "availability": "blocked-until-content-and-audio-human-review"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:085bcb14efd9f8e5:v1",
+      "spokenText": "die Bäcker",
+      "conceptIds": [
+        "teacher-job:backer"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-085bcb14efd9f8e5.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-085bcb14efd9f8e5.mp3",
+      "bytes": 10656,
+      "sha256": "9c2737191c6fda6726deef1425a6f888feb69ba441ad289e26107371be14f0f9",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 1.776,
+      "riskTags": [
+        "umlaut-or-eszett",
+        "r-sound",
+        "connected-speech",
+        "profession-form"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": null,
+          "surface": "extra professions collection card",
+          "availability": "blocked-until-content-and-audio-human-review"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:a7e7467bdd8e518a:v1",
+      "spokenText": "die Bäckerin",
+      "conceptIds": [
+        "teacher-job:backer"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-a7e7467bdd8e518a.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-a7e7467bdd8e518a.mp3",
+      "bytes": 10656,
+      "sha256": "a85cb6ea9deebbf32665015420f4ba5d7c5d47d4f3e45b2ef44945e7c28f9acb",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 1.776,
+      "riskTags": [
+        "umlaut-or-eszett",
+        "r-sound",
+        "feminine-in-or-innen",
+        "connected-speech",
+        "profession-form"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": null,
+          "surface": "extra professions collection card",
+          "availability": "blocked-until-content-and-audio-human-review"
+        }
+      ]
+    },
+    {
+      "id": "aud:tts:9df1eb79cf946d87:v1",
+      "spokenText": "die Bäckerinnen",
+      "conceptIds": [
+        "teacher-job:backer"
+      ],
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "sourcePath": "media/generated/tts-de-de-v1/tts-9df1eb79cf946d87.mp3",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-9df1eb79cf946d87.mp3",
+      "bytes": 11376,
+      "sha256": "e9099112b94e6e50d018bbf91c9965b73d1bb4822c9a3db64a999f22d67e74c2",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "durationSeconds": 1.896,
+      "riskTags": [
+        "umlaut-or-eszett",
+        "r-sound",
+        "feminine-in-or-innen",
+        "connected-speech",
+        "profession-form"
+      ],
+      "technicalStatus": "pass",
+      "humanListeningStatus": "pending-human-listening-review",
+      "deploymentEligibility": "blocked-until-human-listening-approval",
+      "pageAndCardMappings": [
+        {
+          "route": null,
+          "surface": "extra professions collection card",
+          "availability": "blocked-until-content-and-audio-human-review"
+        }
+      ]
+    }
+  ]
+}

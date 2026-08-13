@@ -21,3 +21,9 @@ export function withPagesBasePath(appPath: string): string {
   const trimmed = appPath.endsWith("/") ? appPath.slice(0, -1) : appPath;
   return `${base}${trimmed}/`;
 }
+
+/** Prefix an app-relative static asset without adding a route trailing slash. */
+export function withPagesBaseAssetPath(assetPath: string): string {
+  const normalized = assetPath.startsWith("/") ? assetPath : `/${assetPath}`;
+  return `${pagesBasePath()}${normalized}`;
+}

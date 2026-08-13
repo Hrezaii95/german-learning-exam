@@ -21,6 +21,8 @@ import { IndependentConstructionLevel } from "./IndependentConstructionLevel";
 import { ModelLevel } from "./ModelLevel";
 import { SpokenRolePlayLevel } from "./SpokenRolePlayLevel";
 import { SubstitutionLevel } from "./SubstitutionLevel";
+import { useOptionalLearnerState } from "@/components/learner-state/LearnerStateProvider";
+import { normalizeConversationEventForPersistence } from "@/lib/learner-state";
 
 export function ConversationLadder({
   navigation: _navigation = null,
@@ -35,12 +37,28 @@ export function ConversationLadder({
     initialConversationProgress(),
   );
   const [events, setEvents] = useState<LearnerEvent[]>([]);
+  const learnerState = useOptionalLearnerState();
+  const [saveMessage, setSaveMessage] = useState<string | null>(null);
 
   const current = metaForConversationLevel(progress.currentLevelId);
 
   function handleEvent(event: LearnerEvent) {
     setEvents((prev) => [...prev, event]);
     onEvent?.(event);
+    if (!onEvent && learnerState?.controller) {
+      try {
+        const persistent = normalizeConversationEventForPersistence({
+          event,
+          levelId: progress.currentLevelId,
+        });
+        void learnerState.controller.appendEvent(persistent).then(
+          () => setSaveMessage("Conversation evidence saved locally."),
+          () => setSaveMessage("Conversation feedback worked, but local saving failed."),
+        );
+      } catch {
+        setSaveMessage("Conversation feedback worked, but this event could not be saved.");
+      }
+    }
   }
 
   function completeLevel(levelId: ConversationLevelId) {
@@ -53,8 +71,7 @@ export function ConversationLadder({
         <p className="dense">Conversation</p>
         <h1>Five-level ladder</h1>
         <p className="lede">
-          Published informal Q&amp;A only. In-session progress — persistence
-          pending learner-state packet.
+          Published informal Q&amp;A only. Meaningful evidence is stored locally on this device.
         </p>
       </header>
 
@@ -135,8 +152,9 @@ export function ConversationLadder({
       ) : null}
 
       <p className="dense" data-session-events={String(events.length)}>
-        In-session events: {events.length} (not persisted yet)
+        In-session events: {events.length}
       </p>
+      {saveMessage ? <p className="detail-feedback" role="status">{saveMessage}</p> : null}
       {/* Keep exact ordered IDs discoverable for tests */}
       <span hidden data-level-order={CONVERSATION_LEVEL_IDS.join(",")}>
         {CONVERSATION_LEVEL_IDS.join(",")}

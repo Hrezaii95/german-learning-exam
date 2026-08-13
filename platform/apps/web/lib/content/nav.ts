@@ -11,7 +11,9 @@ export type NavKey =
   | "concepts"
   | "hubs"
   | "search"
-  | "practice";
+  | "practice"
+  | "review"
+  | "settings";
 
 /** Active primary nav item, or null when no item should be current (e.g. 404). */
 export type ShellNavCurrent = NavKey | null;

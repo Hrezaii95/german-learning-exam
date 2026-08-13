@@ -1,0 +1,720 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-13T00:00:00.000Z",
+  "sourcePack": "Momente_A1_1_AB_CD1",
+  "transcriptSource": "resources/original/transcripts/Momente_AB_A1_1_Transskriptionen_2.pdf",
+  "trackCount": 15,
+  "scopeLock": {
+    "includedTrackRange": "1_01 through 1_15 only",
+    "includedLessons": [
+      "lesson:01",
+      "lesson:02"
+    ],
+    "otherPublisherAssetsApproved": false
+  },
+  "ownerDecision": {
+    "status": "approved",
+    "authorizedBy": "project owner (user)",
+    "recordedDate": "2026-08-13",
+    "decisionChannel": "active Codex task",
+    "decisionText": "public redistribution approved",
+    "scope": "exact 15 already mapped Momente A1.1 workbook CD1 tracks for Lessons 1-2"
+  },
+  "rightsBasis": "Explicit project-owner approval for public redistribution, recorded 2026-08-13, limited to the exact 15 mapped Lesson 1-2 workbook tracks in this manifest.",
+  "rightsAndApprovalSeparation": {
+    "contentOrListeningApprovalDoesNotNormallyGrantRedistribution": true,
+    "ownerHasNowExplicitlyGrantedProjectRedistributionApproval": true,
+    "qualifiedGermanListeningQaStillSeparatelyRecorded": false
+  },
+  "projections": {
+    "publicDeployable": {
+      "status": "approved-for-packaging-and-web-integration",
+      "assetCount": 15,
+      "publicRoot": "audio/source-workbook-approved-v1",
+      "byteIdentity": "packaged files preserve source SHA-256",
+      "assets": [
+        {
+          "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-01-ab-momente-a11-1-3",
+          "filename": "1_01_AB_Momente_A11_1_3.mp3",
+          "lessonId": "lesson:01",
+          "exercise": "AB 3",
+          "purpose": "names and spelling",
+          "packagedPath": "media/generated/source-workbook-approved-v1/1_01_AB_Momente_A11_1_3.mp3",
+          "publicRelativePath": "audio/source-workbook-approved-v1/1_01_AB_Momente_A11_1_3.mp3",
+          "bytes": 582906,
+          "sha256": "ae243fd2df2a13a8d9a9158ba6abb872a05cafe99c57450965ff524ab05c9d33",
+          "codec": "mp3",
+          "sampleRate": 44100,
+          "channels": 2,
+          "durationSeconds": 35.97425,
+          "mappedDurationSeconds": 35.974,
+          "mappingEvidence": [
+            "filename",
+            "official workbook transcript heading",
+            "workbook exercise reference"
+          ],
+          "sourceIndexMappingStatus": "mapped-needs-listening-review",
+          "ownerApprovalStatus": "approved-for-alpha-public-redistribution",
+          "qualifiedGermanListeningQaStatus": "not-separately-recorded-in-audio-qa-artifact",
+          "pageAndActivityMappings": [
+            {
+              "route": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d616c7068616265742d6c697374656e2d7370656c6c",
+              "surface": "Lesson 1 alphabet, names and spelling listening",
+              "availability": "live-route-audio-integration-required"
+            }
+          ],
+          "referenceUses": [
+            "canonical workbook exercise playback",
+            "prosody and stress reference for generated candidates"
+          ]
+        },
+        {
+          "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-02-ab-momente-a11-1-3",
+          "filename": "1_02_AB_Momente_A11_1_3.mp3",
+          "lessonId": "lesson:01",
+          "exercise": "AB 3",
+          "purpose": "names and spelling",
+          "packagedPath": "media/generated/source-workbook-approved-v1/1_02_AB_Momente_A11_1_3.mp3",
+          "publicRelativePath": "audio/source-workbook-approved-v1/1_02_AB_Momente_A11_1_3.mp3",
+          "bytes": 503258,
+          "sha256": "a43cfa2092f02d7f98b4ab6876e893bedadde3b2076bcd35c1e7ca7130c83a47",
+          "codec": "mp3",
+          "sampleRate": 44100,
+          "channels": 2,
+          "durationSeconds": 30.996313,
+          "mappedDurationSeconds": 30.996,
+          "mappingEvidence": [
+            "filename",
+            "official workbook transcript heading",
+            "workbook exercise reference"
+          ],
+          "sourceIndexMappingStatus": "mapped-needs-listening-review",
+          "ownerApprovalStatus": "approved-for-alpha-public-redistribution",
+          "qualifiedGermanListeningQaStatus": "not-separately-recorded-in-audio-qa-artifact",
+          "pageAndActivityMappings": [
+            {
+              "route": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d616c7068616265742d6c697374656e2d7370656c6c",
+              "surface": "Lesson 1 alphabet, names and spelling listening",
+              "availability": "live-route-audio-integration-required"
+            }
+          ],
+          "referenceUses": [
+            "canonical workbook exercise playback",
+            "prosody and stress reference for generated candidates"
+          ]
+        },
+        {
+          "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-03-ab-momente-a11-1-3",
+          "filename": "1_03_AB_Momente_A11_1_3.mp3",
+          "lessonId": "lesson:01",
+          "exercise": "AB 3",
+          "purpose": "names and spelling",
+          "packagedPath": "media/generated/source-workbook-approved-v1/1_03_AB_Momente_A11_1_3.mp3",
+          "publicRelativePath": "audio/source-workbook-approved-v1/1_03_AB_Momente_A11_1_3.mp3",
+          "bytes": 486995,
+          "sha256": "644be62239fa56927a2a04629f47150a9d7f1015d3fb2ab7e9b8a09936ed089f",
+          "codec": "mp3",
+          "sampleRate": 44100,
+          "channels": 2,
+          "durationSeconds": 29.979875,
+          "mappedDurationSeconds": 29.98,
+          "mappingEvidence": [
+            "filename",
+            "official workbook transcript heading",
+            "workbook exercise reference"
+          ],
+          "sourceIndexMappingStatus": "mapped-needs-listening-review",
+          "ownerApprovalStatus": "approved-for-alpha-public-redistribution",
+          "qualifiedGermanListeningQaStatus": "not-separately-recorded-in-audio-qa-artifact",
+          "pageAndActivityMappings": [
+            {
+              "route": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d616c7068616265742d6c697374656e2d7370656c6c",
+              "surface": "Lesson 1 alphabet, names and spelling listening",
+              "availability": "live-route-audio-integration-required"
+            }
+          ],
+          "referenceUses": [
+            "canonical workbook exercise playback",
+            "prosody and stress reference for generated candidates"
+          ]
+        },
+        {
+          "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-04-ab-momente-a11-1-3",
+          "filename": "1_04_AB_Momente_A11_1_3.mp3",
+          "lessonId": "lesson:01",
+          "exercise": "AB 3",
+          "purpose": "names and spelling",
+          "packagedPath": "media/generated/source-workbook-approved-v1/1_04_AB_Momente_A11_1_3.mp3",
+          "publicRelativePath": "audio/source-workbook-approved-v1/1_04_AB_Momente_A11_1_3.mp3",
+          "bytes": 502841,
+          "sha256": "79dd95ea9a7618e2ff71dd2d6f2bd6434701ddac88a7430029fb21a08464df6a",
+          "codec": "mp3",
+          "sampleRate": 44100,
+          "channels": 2,
+          "durationSeconds": 30.97025,
+          "mappedDurationSeconds": 30.97,
+          "mappingEvidence": [
+            "filename",
+            "official workbook transcript heading",
+            "workbook exercise reference"
+          ],
+          "sourceIndexMappingStatus": "mapped-needs-listening-review",
+          "ownerApprovalStatus": "approved-for-alpha-public-redistribution",
+          "qualifiedGermanListeningQaStatus": "not-separately-recorded-in-audio-qa-artifact",
+          "pageAndActivityMappings": [
+            {
+              "route": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d616c7068616265742d6c697374656e2d7370656c6c",
+              "surface": "Lesson 1 alphabet, names and spelling listening",
+              "availability": "live-route-audio-integration-required"
+            }
+          ],
+          "referenceUses": [
+            "canonical workbook exercise playback",
+            "prosody and stress reference for generated candidates"
+          ]
+        },
+        {
+          "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-05-ab-momente-a11-1-9a",
+          "filename": "1_05_AB_Momente_A11_1_9a.mp3",
+          "lessonId": "lesson:01",
+          "exercise": "AB 9a",
+          "purpose": "sentence melody model",
+          "packagedPath": "media/generated/source-workbook-approved-v1/1_05_AB_Momente_A11_1_9a.mp3",
+          "publicRelativePath": "audio/source-workbook-approved-v1/1_05_AB_Momente_A11_1_9a.mp3",
+          "bytes": 399005,
+          "sha256": "fd88b910fdfe18139f802c88ddf19a3162e8b4d9d3f7d908bd4c061986997627",
+          "codec": "mp3",
+          "sampleRate": 44100,
+          "channels": 2,
+          "durationSeconds": 24.480688,
+          "mappedDurationSeconds": 24.481,
+          "mappingEvidence": [
+            "filename",
+            "official workbook transcript heading",
+            "workbook exercise reference"
+          ],
+          "sourceIndexMappingStatus": "mapped-needs-listening-review",
+          "ownerApprovalStatus": "approved-for-alpha-public-redistribution",
+          "qualifiedGermanListeningQaStatus": "not-separately-recorded-in-audio-qa-artifact",
+          "pageAndActivityMappings": [
+            {
+              "route": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d776f726b626f6f6b2d6c697374656e696e67",
+              "surface": "Lesson 1 workbook sentence-melody listening",
+              "availability": "live-route-audio-integration-required"
+            }
+          ],
+          "referenceUses": [
+            "canonical workbook exercise playback",
+            "prosody and stress reference for generated candidates"
+          ]
+        },
+        {
+          "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-06-ab-momente-a11-1-9b",
+          "filename": "1_06_AB_Momente_A11_1_9b.mp3",
+          "lessonId": "lesson:01",
+          "exercise": "AB 9b",
+          "purpose": "sentence melody comparison",
+          "packagedPath": "media/generated/source-workbook-approved-v1/1_06_AB_Momente_A11_1_9b.mp3",
+          "publicRelativePath": "audio/source-workbook-approved-v1/1_06_AB_Momente_A11_1_9b.mp3",
+          "bytes": 391085,
+          "sha256": "2d41f0c2d795b4e25378d975739265b7a6b8380bf6f100c256f2a0243e88db7e",
+          "codec": "mp3",
+          "sampleRate": 44100,
+          "channels": 2,
+          "durationSeconds": 23.9855,
+          "mappedDurationSeconds": 23.986,
+          "mappingEvidence": [
+            "filename",
+            "official workbook transcript heading",
+            "workbook exercise reference"
+          ],
+          "sourceIndexMappingStatus": "mapped-needs-listening-review",
+          "ownerApprovalStatus": "approved-for-alpha-public-redistribution",
+          "qualifiedGermanListeningQaStatus": "not-separately-recorded-in-audio-qa-artifact",
+          "pageAndActivityMappings": [
+            {
+              "route": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d776f726b626f6f6b2d6c697374656e696e67",
+              "surface": "Lesson 1 workbook sentence-melody listening",
+              "availability": "live-route-audio-integration-required"
+            }
+          ],
+          "referenceUses": [
+            "canonical workbook exercise playback",
+            "prosody and stress reference for generated candidates"
+          ]
+        },
+        {
+          "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-07-ab-momente-a11-2-6a",
+          "filename": "1_07_AB_Momente_A11_2_6a.mp3",
+          "lessonId": "lesson:02",
+          "exercise": "AB 6a",
+          "purpose": "telephone number discrimination",
+          "packagedPath": "media/generated/source-workbook-approved-v1/1_07_AB_Momente_A11_2_6a.mp3",
+          "publicRelativePath": "audio/source-workbook-approved-v1/1_07_AB_Momente_A11_2_6a.mp3",
+          "bytes": 295592,
+          "sha256": "cdcf35a0898dd0261867dd978795f5284d401b60241030cf2c1477476c73e150",
+          "codec": "mp3",
+          "sampleRate": 44100,
+          "channels": 2,
+          "durationSeconds": 18.017188,
+          "mappedDurationSeconds": 18.017,
+          "mappingEvidence": [
+            "filename",
+            "official workbook transcript heading",
+            "workbook exercise reference"
+          ],
+          "sourceIndexMappingStatus": "mapped-needs-listening-review",
+          "ownerApprovalStatus": "approved-for-alpha-public-redistribution",
+          "qualifiedGermanListeningQaStatus": "not-separately-recorded-in-audio-qa-artifact",
+          "pageAndActivityMappings": [
+            {
+              "route": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d776f726b626f6f6b2d6c697374656e696e67",
+              "surface": "Lesson 2 workbook telephone-number listening",
+              "availability": "live-route-audio-integration-required"
+            },
+            {
+              "route": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d6e756d626572732d302d313030",
+              "surface": "Lesson 2 number practice",
+              "availability": "live-route-audio-integration-required"
+            }
+          ],
+          "referenceUses": [
+            "canonical workbook exercise playback",
+            "prosody and stress reference for generated candidates"
+          ]
+        },
+        {
+          "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-08-ab-momente-a11-2-6a",
+          "filename": "1_08_AB_Momente_A11_2_6a.mp3",
+          "lessonId": "lesson:02",
+          "exercise": "AB 6a",
+          "purpose": "telephone number discrimination",
+          "packagedPath": "media/generated/source-workbook-approved-v1/1_08_AB_Momente_A11_2_6a.mp3",
+          "publicRelativePath": "audio/source-workbook-approved-v1/1_08_AB_Momente_A11_2_6a.mp3",
+          "bytes": 215945,
+          "sha256": "16dec4472683c5900b68ecf12ec66ec54fb9ff86e3f50d370bb14acf28214e5a",
+          "codec": "mp3",
+          "sampleRate": 44100,
+          "channels": 2,
+          "durationSeconds": 13.03925,
+          "mappedDurationSeconds": 13.039,
+          "mappingEvidence": [
+            "filename",
+            "official workbook transcript heading",
+            "workbook exercise reference"
+          ],
+          "sourceIndexMappingStatus": "mapped-needs-listening-review",
+          "ownerApprovalStatus": "approved-for-alpha-public-redistribution",
+          "qualifiedGermanListeningQaStatus": "not-separately-recorded-in-audio-qa-artifact",
+          "pageAndActivityMappings": [
+            {
+              "route": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d776f726b626f6f6b2d6c697374656e696e67",
+              "surface": "Lesson 2 workbook telephone-number listening",
+              "availability": "live-route-audio-integration-required"
+            },
+            {
+              "route": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d6e756d626572732d302d313030",
+              "surface": "Lesson 2 number practice",
+              "availability": "live-route-audio-integration-required"
+            }
+          ],
+          "referenceUses": [
+            "canonical workbook exercise playback",
+            "prosody and stress reference for generated candidates"
+          ]
+        },
+        {
+          "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-09-ab-momente-a11-2-6a",
+          "filename": "1_09_AB_Momente_A11_2_6a.mp3",
+          "lessonId": "lesson:02",
+          "exercise": "AB 6a",
+          "purpose": "telephone number discrimination",
+          "packagedPath": "media/generated/source-workbook-approved-v1/1_09_AB_Momente_A11_2_6a.mp3",
+          "publicRelativePath": "audio/source-workbook-approved-v1/1_09_AB_Momente_A11_2_6a.mp3",
+          "bytes": 247637,
+          "sha256": "cc28b5036030832425c9adc72aeaf7af19e353e8664fd51ca741347056bb2431",
+          "codec": "mp3",
+          "sampleRate": 44100,
+          "channels": 2,
+          "durationSeconds": 15.02,
+          "mappedDurationSeconds": 15.02,
+          "mappingEvidence": [
+            "filename",
+            "official workbook transcript heading",
+            "workbook exercise reference"
+          ],
+          "sourceIndexMappingStatus": "mapped-needs-listening-review",
+          "ownerApprovalStatus": "approved-for-alpha-public-redistribution",
+          "qualifiedGermanListeningQaStatus": "not-separately-recorded-in-audio-qa-artifact",
+          "pageAndActivityMappings": [
+            {
+              "route": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d776f726b626f6f6b2d6c697374656e696e67",
+              "surface": "Lesson 2 workbook telephone-number listening",
+              "availability": "live-route-audio-integration-required"
+            },
+            {
+              "route": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d6e756d626572732d302d313030",
+              "surface": "Lesson 2 number practice",
+              "availability": "live-route-audio-integration-required"
+            }
+          ],
+          "referenceUses": [
+            "canonical workbook exercise playback",
+            "prosody and stress reference for generated candidates"
+          ]
+        },
+        {
+          "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-10-ab-momente-a11-2-6a",
+          "filename": "1_10_AB_Momente_A11_2_6a.mp3",
+          "lessonId": "lesson:02",
+          "exercise": "AB 6a",
+          "purpose": "telephone number discrimination",
+          "packagedPath": "media/generated/source-workbook-approved-v1/1_10_AB_Momente_A11_2_6a.mp3",
+          "publicRelativePath": "audio/source-workbook-approved-v1/1_10_AB_Momente_A11_2_6a.mp3",
+          "bytes": 213860,
+          "sha256": "009ee8a5264d58e342b68162736bb43f6de6d9e0351c57dc4e4d82b85e494aef",
+          "codec": "mp3",
+          "sampleRate": 44100,
+          "channels": 2,
+          "durationSeconds": 12.908938,
+          "mappedDurationSeconds": 12.909,
+          "mappingEvidence": [
+            "filename",
+            "official workbook transcript heading",
+            "workbook exercise reference"
+          ],
+          "sourceIndexMappingStatus": "mapped-needs-listening-review",
+          "ownerApprovalStatus": "approved-for-alpha-public-redistribution",
+          "qualifiedGermanListeningQaStatus": "not-separately-recorded-in-audio-qa-artifact",
+          "pageAndActivityMappings": [
+            {
+              "route": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d776f726b626f6f6b2d6c697374656e696e67",
+              "surface": "Lesson 2 workbook telephone-number listening",
+              "availability": "live-route-audio-integration-required"
+            },
+            {
+              "route": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d6e756d626572732d302d313030",
+              "surface": "Lesson 2 number practice",
+              "availability": "live-route-audio-integration-required"
+            }
+          ],
+          "referenceUses": [
+            "canonical workbook exercise playback",
+            "prosody and stress reference for generated candidates"
+          ]
+        },
+        {
+          "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-11-ab-momente-a11-2-6b",
+          "filename": "1_11_AB_Momente_A11_2_6b.mp3",
+          "lessonId": "lesson:02",
+          "exercise": "AB 6b",
+          "purpose": "telephone number transcription",
+          "packagedPath": "media/generated/source-workbook-approved-v1/1_11_AB_Momente_A11_2_6b.mp3",
+          "publicRelativePath": "audio/source-workbook-approved-v1/1_11_AB_Momente_A11_2_6b.mp3",
+          "bytes": 279329,
+          "sha256": "85fdb2829adf25dabee37908279a24dd65f32214367aca75b40199034d988b3c",
+          "codec": "mp3",
+          "sampleRate": 44100,
+          "channels": 2,
+          "durationSeconds": 17.00075,
+          "mappedDurationSeconds": 17.001,
+          "mappingEvidence": [
+            "filename",
+            "official workbook transcript heading",
+            "workbook exercise reference"
+          ],
+          "sourceIndexMappingStatus": "mapped-needs-listening-review",
+          "ownerApprovalStatus": "approved-for-alpha-public-redistribution",
+          "qualifiedGermanListeningQaStatus": "not-separately-recorded-in-audio-qa-artifact",
+          "pageAndActivityMappings": [
+            {
+              "route": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d776f726b626f6f6b2d6c697374656e696e67",
+              "surface": "Lesson 2 workbook telephone-number listening",
+              "availability": "live-route-audio-integration-required"
+            },
+            {
+              "route": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d6e756d626572732d302d313030",
+              "surface": "Lesson 2 number practice",
+              "availability": "live-route-audio-integration-required"
+            }
+          ],
+          "referenceUses": [
+            "canonical workbook exercise playback",
+            "prosody and stress reference for generated candidates"
+          ]
+        },
+        {
+          "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-12-ab-momente-a11-2-6b",
+          "filename": "1_12_AB_Momente_A11_2_6b.mp3",
+          "lessonId": "lesson:02",
+          "exercise": "AB 6b",
+          "purpose": "telephone number transcription",
+          "packagedPath": "media/generated/source-workbook-approved-v1/1_12_AB_Momente_A11_2_6b.mp3",
+          "publicRelativePath": "audio/source-workbook-approved-v1/1_12_AB_Momente_A11_2_6b.mp3",
+          "bytes": 206354,
+          "sha256": "d4eebbc6e02bd49b3a71162c67f37d242f33971c5c2ff71cef5b616eed3da9f8",
+          "codec": "mp3",
+          "sampleRate": 44100,
+          "channels": 2,
+          "durationSeconds": 12.439813,
+          "mappedDurationSeconds": 12.44,
+          "mappingEvidence": [
+            "filename",
+            "official workbook transcript heading",
+            "workbook exercise reference"
+          ],
+          "sourceIndexMappingStatus": "mapped-needs-listening-review",
+          "ownerApprovalStatus": "approved-for-alpha-public-redistribution",
+          "qualifiedGermanListeningQaStatus": "not-separately-recorded-in-audio-qa-artifact",
+          "pageAndActivityMappings": [
+            {
+              "route": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d776f726b626f6f6b2d6c697374656e696e67",
+              "surface": "Lesson 2 workbook telephone-number listening",
+              "availability": "live-route-audio-integration-required"
+            },
+            {
+              "route": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d6e756d626572732d302d313030",
+              "surface": "Lesson 2 number practice",
+              "availability": "live-route-audio-integration-required"
+            }
+          ],
+          "referenceUses": [
+            "canonical workbook exercise playback",
+            "prosody and stress reference for generated candidates"
+          ]
+        },
+        {
+          "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-13-ab-momente-a11-2-6b",
+          "filename": "1_13_AB_Momente_A11_2_6b.mp3",
+          "lessonId": "lesson:02",
+          "exercise": "AB 6b",
+          "purpose": "telephone number transcription",
+          "packagedPath": "media/generated/source-workbook-approved-v1/1_13_AB_Momente_A11_2_6b.mp3",
+          "publicRelativePath": "audio/source-workbook-approved-v1/1_13_AB_Momente_A11_2_6b.mp3",
+          "bytes": 223451,
+          "sha256": "2764fc257cd2c2e0e6733366e3e964ca943add96ce99ab31f11e6a877ecb5950",
+          "codec": "mp3",
+          "sampleRate": 44100,
+          "channels": 2,
+          "durationSeconds": 13.508375,
+          "mappedDurationSeconds": 13.508,
+          "mappingEvidence": [
+            "filename",
+            "official workbook transcript heading",
+            "workbook exercise reference"
+          ],
+          "sourceIndexMappingStatus": "mapped-needs-listening-review",
+          "ownerApprovalStatus": "approved-for-alpha-public-redistribution",
+          "qualifiedGermanListeningQaStatus": "not-separately-recorded-in-audio-qa-artifact",
+          "pageAndActivityMappings": [
+            {
+              "route": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d776f726b626f6f6b2d6c697374656e696e67",
+              "surface": "Lesson 2 workbook telephone-number listening",
+              "availability": "live-route-audio-integration-required"
+            },
+            {
+              "route": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d6e756d626572732d302d313030",
+              "surface": "Lesson 2 number practice",
+              "availability": "live-route-audio-integration-required"
+            }
+          ],
+          "referenceUses": [
+            "canonical workbook exercise playback",
+            "prosody and stress reference for generated candidates"
+          ]
+        },
+        {
+          "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-14-ab-momente-a11-2-6b",
+          "filename": "1_14_AB_Momente_A11_2_6b.mp3",
+          "lessonId": "lesson:02",
+          "exercise": "AB 6b",
+          "purpose": "telephone number transcription",
+          "packagedPath": "media/generated/source-workbook-approved-v1/1_14_AB_Momente_A11_2_6b.mp3",
+          "publicRelativePath": "audio/source-workbook-approved-v1/1_14_AB_Momente_A11_2_6b.mp3",
+          "bytes": 235544,
+          "sha256": "6a0d40d85b5f263ec530bc2f5f67fb7e8cb26a8020f6250c82a101580896d4ba",
+          "codec": "mp3",
+          "sampleRate": 44100,
+          "channels": 2,
+          "durationSeconds": 14.264188,
+          "mappedDurationSeconds": 14.264,
+          "mappingEvidence": [
+            "filename",
+            "official workbook transcript heading",
+            "workbook exercise reference"
+          ],
+          "sourceIndexMappingStatus": "mapped-needs-listening-review",
+          "ownerApprovalStatus": "approved-for-alpha-public-redistribution",
+          "qualifiedGermanListeningQaStatus": "not-separately-recorded-in-audio-qa-artifact",
+          "pageAndActivityMappings": [
+            {
+              "route": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d776f726b626f6f6b2d6c697374656e696e67",
+              "surface": "Lesson 2 workbook telephone-number listening",
+              "availability": "live-route-audio-integration-required"
+            },
+            {
+              "route": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d6e756d626572732d302d313030",
+              "surface": "Lesson 2 number practice",
+              "availability": "live-route-audio-integration-required"
+            }
+          ],
+          "referenceUses": [
+            "canonical workbook exercise playback",
+            "prosody and stress reference for generated candidates"
+          ]
+        },
+        {
+          "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-15-ab-momente-a11-2-12",
+          "filename": "1_15_AB_Momente_A11_2_12.mp3",
+          "lessonId": "lesson:02",
+          "exercise": "AB 12",
+          "purpose": "profession word stress and repetition",
+          "packagedPath": "media/generated/source-workbook-approved-v1/1_15_AB_Momente_A11_2_12.mp3",
+          "publicRelativePath": "audio/source-workbook-approved-v1/1_15_AB_Momente_A11_2_12.mp3",
+          "bytes": 614598,
+          "sha256": "823b45c79e24fa3eb3b5eeb83dff75b192201e7c41ec74d7f776523e42b43c9c",
+          "codec": "mp3",
+          "sampleRate": 44100,
+          "channels": 2,
+          "durationSeconds": 37.955,
+          "mappedDurationSeconds": 37.955,
+          "mappingEvidence": [
+            "filename",
+            "official workbook transcript heading",
+            "workbook exercise reference"
+          ],
+          "sourceIndexMappingStatus": "mapped-needs-listening-review",
+          "ownerApprovalStatus": "approved-for-alpha-public-redistribution",
+          "qualifiedGermanListeningQaStatus": "not-separately-recorded-in-audio-qa-artifact",
+          "pageAndActivityMappings": [
+            {
+              "route": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d776f726b626f6f6b2d6c697374656e696e67",
+              "surface": "Lesson 2 workbook profession-stress listening",
+              "availability": "live-route-audio-integration-required"
+            },
+            {
+              "route": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d636f72652d70726f66657373696f6e73",
+              "surface": "Lesson 2 profession cards",
+              "availability": "live-route-audio-integration-required"
+            }
+          ],
+          "referenceUses": [
+            "canonical workbook exercise playback",
+            "prosody and stress reference for generated candidates"
+          ]
+        }
+      ]
+    },
+    "privateReferenceAuthority": {
+      "status": "retained-for-provenance",
+      "assetCount": 15,
+      "tracks": [
+        {
+          "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-01-ab-momente-a11-1-3",
+          "filename": "1_01_AB_Momente_A11_1_3.mp3",
+          "privateSourceReferencePath": "media/private/source-workbook/1_01_AB_Momente_A11_1_3.mp3",
+          "sha256": "ae243fd2df2a13a8d9a9158ba6abb872a05cafe99c57450965ff524ab05c9d33",
+          "mustRemainOutsideStaticPublicCopyRules": true
+        },
+        {
+          "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-02-ab-momente-a11-1-3",
+          "filename": "1_02_AB_Momente_A11_1_3.mp3",
+          "privateSourceReferencePath": "media/private/source-workbook/1_02_AB_Momente_A11_1_3.mp3",
+          "sha256": "a43cfa2092f02d7f98b4ab6876e893bedadde3b2076bcd35c1e7ca7130c83a47",
+          "mustRemainOutsideStaticPublicCopyRules": true
+        },
+        {
+          "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-03-ab-momente-a11-1-3",
+          "filename": "1_03_AB_Momente_A11_1_3.mp3",
+          "privateSourceReferencePath": "media/private/source-workbook/1_03_AB_Momente_A11_1_3.mp3",
+          "sha256": "644be62239fa56927a2a04629f47150a9d7f1015d3fb2ab7e9b8a09936ed089f",
+          "mustRemainOutsideStaticPublicCopyRules": true
+        },
+        {
+          "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-04-ab-momente-a11-1-3",
+          "filename": "1_04_AB_Momente_A11_1_3.mp3",
+          "privateSourceReferencePath": "media/private/source-workbook/1_04_AB_Momente_A11_1_3.mp3",
+          "sha256": "79dd95ea9a7618e2ff71dd2d6f2bd6434701ddac88a7430029fb21a08464df6a",
+          "mustRemainOutsideStaticPublicCopyRules": true
+        },
+        {
+          "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-05-ab-momente-a11-1-9a",
+          "filename": "1_05_AB_Momente_A11_1_9a.mp3",
+          "privateSourceReferencePath": "media/private/source-workbook/1_05_AB_Momente_A11_1_9a.mp3",
+          "sha256": "fd88b910fdfe18139f802c88ddf19a3162e8b4d9d3f7d908bd4c061986997627",
+          "mustRemainOutsideStaticPublicCopyRules": true
+        },
+        {
+          "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-06-ab-momente-a11-1-9b",
+          "filename": "1_06_AB_Momente_A11_1_9b.mp3",
+          "privateSourceReferencePath": "media/private/source-workbook/1_06_AB_Momente_A11_1_9b.mp3",
+          "sha256": "2d41f0c2d795b4e25378d975739265b7a6b8380bf6f100c256f2a0243e88db7e",
+          "mustRemainOutsideStaticPublicCopyRules": true
+        },
+        {
+          "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-07-ab-momente-a11-2-6a",
+          "filename": "1_07_AB_Momente_A11_2_6a.mp3",
+          "privateSourceReferencePath": "media/private/source-workbook/1_07_AB_Momente_A11_2_6a.mp3",
+          "sha256": "cdcf35a0898dd0261867dd978795f5284d401b60241030cf2c1477476c73e150",
+          "mustRemainOutsideStaticPublicCopyRules": true
+        },
+        {
+          "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-08-ab-momente-a11-2-6a",
+          "filename": "1_08_AB_Momente_A11_2_6a.mp3",
+          "privateSourceReferencePath": "media/private/source-workbook/1_08_AB_Momente_A11_2_6a.mp3",
+          "sha256": "16dec4472683c5900b68ecf12ec66ec54fb9ff86e3f50d370bb14acf28214e5a",
+          "mustRemainOutsideStaticPublicCopyRules": true
+        },
+        {
+          "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-09-ab-momente-a11-2-6a",
+          "filename": "1_09_AB_Momente_A11_2_6a.mp3",
+          "privateSourceReferencePath": "media/private/source-workbook/1_09_AB_Momente_A11_2_6a.mp3",
+          "sha256": "cc28b5036030832425c9adc72aeaf7af19e353e8664fd51ca741347056bb2431",
+          "mustRemainOutsideStaticPublicCopyRules": true
+        },
+        {
+          "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-10-ab-momente-a11-2-6a",
+          "filename": "1_10_AB_Momente_A11_2_6a.mp3",
+          "privateSourceReferencePath": "media/private/source-workbook/1_10_AB_Momente_A11_2_6a.mp3",
+          "sha256": "009ee8a5264d58e342b68162736bb43f6de6d9e0351c57dc4e4d82b85e494aef",
+          "mustRemainOutsideStaticPublicCopyRules": true
+        },
+        {
+          "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-11-ab-momente-a11-2-6b",
+          "filename": "1_11_AB_Momente_A11_2_6b.mp3",
+          "privateSourceReferencePath": "media/private/source-workbook/1_11_AB_Momente_A11_2_6b.mp3",
+          "sha256": "85fdb2829adf25dabee37908279a24dd65f32214367aca75b40199034d988b3c",
+          "mustRemainOutsideStaticPublicCopyRules": true
+        },
+        {
+          "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-12-ab-momente-a11-2-6b",
+          "filename": "1_12_AB_Momente_A11_2_6b.mp3",
+          "privateSourceReferencePath": "media/private/source-workbook/1_12_AB_Momente_A11_2_6b.mp3",
+          "sha256": "d4eebbc6e02bd49b3a71162c67f37d242f33971c5c2ff71cef5b616eed3da9f8",
+          "mustRemainOutsideStaticPublicCopyRules": true
+        },
+        {
+          "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-13-ab-momente-a11-2-6b",
+          "filename": "1_13_AB_Momente_A11_2_6b.mp3",
+          "privateSourceReferencePath": "media/private/source-workbook/1_13_AB_Momente_A11_2_6b.mp3",
+          "sha256": "2764fc257cd2c2e0e6733366e3e964ca943add96ce99ab31f11e6a877ecb5950",
+          "mustRemainOutsideStaticPublicCopyRules": true
+        },
+        {
+          "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-14-ab-momente-a11-2-6b",
+          "filename": "1_14_AB_Momente_A11_2_6b.mp3",
+          "privateSourceReferencePath": "media/private/source-workbook/1_14_AB_Momente_A11_2_6b.mp3",
+          "sha256": "6a0d40d85b5f263ec530bc2f5f67fb7e8cb26a8020f6250c82a101580896d4ba",
+          "mustRemainOutsideStaticPublicCopyRules": true
+        },
+        {
+          "sourceAudioId": "src-audio:momente-a1-1-ab-cd1:1-15-ab-momente-a11-2-12",
+          "filename": "1_15_AB_Momente_A11_2_12.mp3",
+          "privateSourceReferencePath": "media/private/source-workbook/1_15_AB_Momente_A11_2_12.mp3",
+          "sha256": "823b45c79e24fa3eb3b5eeb83dff75b192201e7c41ec74d7f776523e42b43c9c",
+          "mustRemainOutsideStaticPublicCopyRules": true
+        }
+      ]
+    }
+  }
+}

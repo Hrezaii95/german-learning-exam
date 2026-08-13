@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" role="img" aria-labelledby="title desc" preserveAspectRatio="xMidYMid meet" xml:space="preserve">
+  <title id="title">Regular, spelling-adjusted, and irregular present-tense verbs</title>
+  <desc id="desc">A central six-person arbeiten table highlights the stem arbeit, inserted e bridge, and endings. Smaller comparison cards show the regular wohnen pattern and the irregular sein forms bin, bist, ist, sind, seid, sind.</desc>
+  <defs><style>
+    .h{font:700 38px Inter,Arial,sans-serif;fill:#15192c}.s{font:500 18px Inter,Arial,sans-serif;fill:#5c637a}.k{font:700 14px Inter,Arial,sans-serif;letter-spacing:1.2px}.w{font:700 25px Inter,Arial,sans-serif;fill:#15192c}.sm{font:500 14px Inter,Arial,sans-serif;fill:#5c637a}.card{fill:#fff;stroke:#dddff0;stroke-width:2}.row{fill:#fafafe}.stem{fill:#15192c}.end{fill:#148a87}.bridge{fill:#b76a00}.irr{fill:#c52f62}.muted{fill:#707790}.pill{fill:#e8f7f5}.spell{fill:#fff0d4}.star{fill:#fde8ef}
+  </style></defs>
+  <rect width="1200" height="720" rx="34" fill="#f8f7fc"/>
+  <text x="58" y="68" class="h">Build the verb: stem + signal + ending</text>
+  <text x="58" y="103" class="s">Teal marks regular endings. Amber marks a spelling bridge. Magenta marks forms learned as irregular.</text>
+
+  <g transform="translate(58 139)">
+    <rect class="card" width="650" height="520" rx="24"/>
+    <rect class="spell" x="24" y="20" width="176" height="30" rx="15"/><text x="112" y="40" text-anchor="middle" class="k" fill="#9b5900">SPELLING BRIDGE</text>
+    <text x="24" y="88" class="w">arbeiten <tspan class="sm">· to work</tspan></text>
+    <text x="24" y="118" class="sm">When an ending begins with st or t, an extra e keeps the form pronounceable.</text>
+    <g transform="translate(24 145)">
+      <rect class="row" width="602" height="52" rx="12"/><text x="18" y="34" class="sm">ich</text><text x="190" y="35" class="w"><tspan class="stem">arbeit</tspan><tspan class="end">e</tspan></text><text x="454" y="33" class="sm">stem + e</text>
+      <rect class="row" y="58" width="602" height="52" rx="12"/><text x="18" y="92" class="sm">du</text><text x="190" y="93" class="w"><tspan class="stem">arbeit</tspan><tspan class="bridge">e</tspan><tspan class="end">st</tspan></text><text x="454" y="91" class="sm">bridge + st</text>
+      <rect class="row" y="116" width="602" height="52" rx="12"/><text x="18" y="150" class="sm">er / sie / es</text><text x="190" y="151" class="w"><tspan class="stem">arbeit</tspan><tspan class="bridge">e</tspan><tspan class="end">t</tspan></text><text x="454" y="149" class="sm">bridge + t</text>
+      <rect class="row" y="174" width="602" height="52" rx="12"/><text x="18" y="208" class="sm">wir</text><text x="190" y="209" class="w"><tspan class="stem">arbeit</tspan><tspan class="end">en</tspan></text><text x="454" y="207" class="sm">stem + en</text>
+      <rect class="row" y="232" width="602" height="52" rx="12"/><text x="18" y="266" class="sm">ihr</text><text x="190" y="267" class="w"><tspan class="stem">arbeit</tspan><tspan class="bridge">e</tspan><tspan class="end">t</tspan></text><text x="454" y="265" class="sm">bridge + t</text>
+      <rect class="row" y="290" width="602" height="52" rx="12"/><text x="18" y="324" class="sm">sie / Sie</text><text x="190" y="325" class="w"><tspan class="stem">arbeit</tspan><tspan class="end">en</tspan></text><text x="454" y="323" class="sm">stem + en</text>
+    </g>
+  </g>
+
+  <g transform="translate(736 139)">
+    <rect class="card" width="406" height="226" rx="24"/>
+    <rect class="pill" x="22" y="20" width="118" height="30" rx="15"/><text x="81" y="40" text-anchor="middle" class="k" fill="#08716e">REGULAR</text>
+    <text x="22" y="88" class="w">wohnen <tspan class="sm">· to live</tspan></text>
+    <text x="22" y="132" class="w"><tspan class="muted">ich</tspan><tspan> wohn</tspan><tspan class="end">e</tspan></text>
+    <text x="210" y="132" class="w"><tspan class="muted">du</tspan><tspan> wohn</tspan><tspan class="end">st</tspan></text>
+    <text x="22" y="177" class="w"><tspan class="muted">er</tspan><tspan> wohn</tspan><tspan class="end">t</tspan></text>
+    <text x="210" y="177" class="w"><tspan class="muted">wir</tspan><tspan> wohn</tspan><tspan class="end">en</tspan></text>
+    <text x="22" y="207" class="sm">The stem stays visible; the ending carries person.</text>
+  </g>
+
+  <g transform="translate(736 389)">
+    <rect class="card" width="406" height="270" rx="24"/>
+    <rect class="star" x="22" y="20" width="142" height="30" rx="15"/><text x="93" y="40" text-anchor="middle" class="k" fill="#a92251">IRREGULAR ★</text>
+    <text x="22" y="88" class="w">sein <tspan class="sm">· to be</tspan></text>
+    <g transform="translate(22 111)">
+      <text x="0" y="26" class="sm">ich</text><text x="83" y="26" class="w irr">bin</text>
+      <text x="202" y="26" class="sm">du</text><text x="270" y="26" class="w irr">bist</text>
+      <text x="0" y="70" class="sm">er / sie / es</text><text x="117" y="70" class="w irr">ist</text>
+      <text x="202" y="70" class="sm">wir</text><text x="270" y="70" class="w irr">sind</text>
+      <text x="0" y="114" class="sm">ihr</text><text x="83" y="114" class="w irr">seid</text>
+      <text x="202" y="114" class="sm">sie / Sie</text><text x="290" y="114" class="w irr">sind</text>
+    </g>
+    <text x="22" y="245" class="sm">No pretend stem rule: recall the complete forms.</text>
+  </g>
+</svg>

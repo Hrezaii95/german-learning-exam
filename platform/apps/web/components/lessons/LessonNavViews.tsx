@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import {
   NAVIGATION_CONTEXT_PARAM,
@@ -7,6 +8,7 @@ import {
 } from "@/lib/content/navigation-context";
 import type { LearnerActivity, LearnerLesson } from "@/lib/content/types";
 import { ActivityScreen, LessonOverview } from "./ActivityAndBrowser";
+import { useOptionalLearnerState } from "@/components/learner-state/LearnerStateProvider";
 
 function useParsedNavigation() {
   const params = useSearchParams();
@@ -45,6 +47,17 @@ export function ActivityScreenWithNav({
   activity: LearnerActivity;
 }) {
   const navigation = useParsedNavigation();
+  const learnerState = useOptionalLearnerState();
+  useEffect(() => {
+    const controller = learnerState?.controller;
+    if (!controller || learnerState.snapshot.status !== "ready") return;
+    void controller.setResume({
+      lessonId: lesson.id,
+      stageId: activity.stageId,
+      activityId: activity.id,
+      position: 0,
+    }).catch(() => undefined);
+  }, [activity.id, activity.stageId, learnerState?.controller, learnerState?.snapshot.status, lesson.id]);
   return (
     <ActivityScreen
       lesson={lesson}

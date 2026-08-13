@@ -22,15 +22,16 @@ const PRIMARY_NAV: NavItem[] = [
   { key: "listening", href: "/listening", label: "Listening", enabled: true },
   { key: "search", href: "/search", label: "Search", enabled: true },
   { key: "practice", href: "/practice", label: "Practice", enabled: true },
-  { key: "review", label: "Review", enabled: false },
+  { key: "review", href: "/review", label: "Review", enabled: true },
+  { key: "settings", href: "/settings", label: "Settings", enabled: true },
 ];
 
 const MOBILE_NAV: NavItem[] = [
   { key: "dashboard", href: "/", label: "Dashboard", enabled: true },
   { key: "lessons", href: "/lessons", label: "Lessons", enabled: true },
   { key: "hubs", href: "/hubs", label: "Hubs", enabled: true },
-  { key: "review", label: "Review", enabled: false },
-  { key: "profile", label: "Profile", enabled: false },
+  { key: "review", href: "/review", label: "Review", enabled: true },
+  { key: "settings", href: "/settings", label: "Settings", enabled: true },
 ];
 
 /**

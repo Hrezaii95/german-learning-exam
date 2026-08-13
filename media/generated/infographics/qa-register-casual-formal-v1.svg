@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" role="img" aria-labelledby="title desc" preserveAspectRatio="xMidYMid meet" xml:space="preserve">
+  <title id="title">Casual du and formal Sie question-answer patterns</title>
+  <desc id="desc">Two conversation lanes compare casual du and formal Sie questions for name and profession. A question-order strip shows W word, finite verb, person, and complement. Answer choices include Ich heiße, Ich bin, and Ich arbeite als.</desc>
+  <defs><style>
+    .h{font:700 38px Inter,Arial,sans-serif;fill:#15192c}.s{font:500 18px Inter,Arial,sans-serif;fill:#5c637a}.k{font:700 14px Inter,Arial,sans-serif;letter-spacing:1.2px}.w{font:700 24px Inter,Arial,sans-serif;fill:#15192c}.sm{font:500 14px Inter,Arial,sans-serif;fill:#5c637a}.card{fill:#fff;stroke:#dddff0;stroke-width:2}.casual{fill:#eef4ff;stroke:#bfd3ff;stroke-width:2}.formal{fill:#f2edff;stroke:#d2c7fa;stroke-width:2}.bubbleQ{fill:#6946e8}.bubbleA{fill:#fff;stroke:#d9dced;stroke-width:2}.token1{fill:#fde8ef}.token2{fill:#fff0d4}.token3{fill:#e8f7f5}.token4{fill:#edf3ff}
+  </style></defs>
+  <rect width="1200" height="720" rx="34" fill="#f8f7fc"/>
+  <text x="58" y="68" class="h">Choose the relationship, then choose the form</text>
+  <text x="58" y="103" class="s">Casual <tspan font-weight="700">du</tspan> and formal <tspan font-weight="700">Sie</tspan> change the verb too. The meaning stays aligned.</text>
+
+  <g transform="translate(58 140)">
+    <rect class="casual" width="518" height="360" rx="26"/>
+    <rect x="22" y="20" width="128" height="34" rx="17" fill="#246bfd"/><text x="86" y="43" text-anchor="middle" class="k" fill="#fff">CASUAL · DU</text>
+    <text x="22" y="85" class="sm">With friends, classmates and invited informal contexts</text>
+    <rect class="bubbleQ" x="85" y="112" width="405" height="58" rx="19"/><text x="106" y="148" class="w" fill="#fff">Wie heißt du?</text>
+    <rect class="bubbleA" x="22" y="184" width="405" height="58" rx="19"/><text x="43" y="220" class="w">Ich heiße …</text>
+    <rect class="bubbleQ" x="85" y="256" width="405" height="58" rx="19"/><text x="106" y="292" class="w" fill="#fff">Was bist du von Beruf?</text>
+    <text x="22" y="342" class="sm">Answer: Ich bin …  /  Ich arbeite als …</text>
+  </g>
+
+  <g transform="translate(624 140)">
+    <rect class="formal" width="518" height="360" rx="26"/>
+    <rect x="22" y="20" width="144" height="34" rx="17" fill="#7957d5"/><text x="94" y="43" text-anchor="middle" class="k" fill="#fff">FORMAL · SIE</text>
+    <text x="22" y="85" class="sm">With adults in formal, professional or unfamiliar contexts</text>
+    <rect class="bubbleQ" x="85" y="112" width="405" height="58" rx="19"/><text x="106" y="148" class="w" fill="#fff">Wie heißen Sie?</text>
+    <rect class="bubbleA" x="22" y="184" width="405" height="58" rx="19"/><text x="43" y="220" class="w">Ich heiße …</text>
+    <rect class="bubbleQ" x="85" y="256" width="405" height="58" rx="19"/><text x="106" y="292" class="w" fill="#fff">Was sind Sie von Beruf?</text>
+    <text x="22" y="342" class="sm">Answer: Ich bin …  /  Ich arbeite als …</text>
+  </g>
+
+  <g transform="translate(58 538)">
+    <rect class="card" width="1084" height="128" rx="24"/>
+    <text x="24" y="34" class="k" fill="#6946e8">W-QUESTION ORDER</text>
+    <g transform="translate(24 53)">
+      <rect class="token1" width="191" height="48" rx="14"/><text x="95" y="31" text-anchor="middle" class="w">W-word</text>
+      <text x="213" y="32" class="w" fill="#8d93aa">→</text>
+      <rect class="token2" x="242" width="226" height="48" rx="14"/><text x="355" y="31" text-anchor="middle" class="w">finite verb</text>
+      <text x="490" y="32" class="w" fill="#8d93aa">→</text>
+      <rect class="token3" x="519" width="191" height="48" rx="14"/><text x="615" y="31" text-anchor="middle" class="w">person</text>
+      <text x="732" y="32" class="w" fill="#8d93aa">→</text>
+      <rect class="token4" x="761" width="275" height="48" rx="14"/><text x="899" y="31" text-anchor="middle" class="w">complement</text>
+    </g>
+  </g>
+</svg>

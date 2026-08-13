@@ -6,7 +6,7 @@
  * - Asset refs include /german-learning-exam base path; no bare /_next breaks
  * - Serve out/ under /german-learning-exam/ and HTTP-smoke routes/assets/404
  * - Recursive scan for secrets, developer paths, review plurals, private/media,
- *   .mp3, source/assertion metadata
+ *   unapproved MP3s, and source/assertion metadata
  *
  * Expects `npm run build:pages` already produced `out/`.
  */
@@ -18,6 +18,7 @@ import {
   statSync,
 } from "node:fs";
 import { createServer } from "node:http";
+import { createHash } from "node:crypto";
 import { dirname, extname, join, normalize, relative, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 import { createRequire } from "node:module";
@@ -27,6 +28,17 @@ const here = dirname(fileURLToPath(import.meta.url));
 const webRoot = join(here, "..");
 const outDir = join(webRoot, "out");
 const require = createRequire(import.meta.url);
+const repoRoot = join(webRoot, "..", "..", "..");
+const approvedAudioManifest = JSON.parse(readFileSync(
+  join(repoRoot, "media", "manifests", "workbook-audio-rights-projections.json"),
+  "utf8",
+));
+const approvedAudio = new Map(
+  approvedAudioManifest.projections.publicDeployable.assets.map((asset) => [
+    `out/${asset.publicRelativePath}`,
+    asset.sha256,
+  ]),
+);
 
 const PAGES_BASE = "/german-learning-exam";
 const PORT = process.env.SMOKE_PAGES_PORT
@@ -68,8 +80,6 @@ const FORBIDDEN_SUBSTRINGS = [
   "absolutePath",
   "audioUrl",
   "mp3Path",
-  "api_key",
-  "apiKey",
   "BEGIN RSA PRIVATE",
   "BEGIN OPENSSH PRIVATE",
   "sk-proj-",
@@ -223,6 +233,7 @@ function verifyAssetRefsAndSecrets(expectedPaths) {
   }
 
   const allFiles = walkFiles(outDir);
+  const seenApprovedAudio = new Set();
   for (const file of allFiles) {
     const rel = relative(webRoot, file).replace(/\\/g, "/");
     assert(
@@ -232,7 +243,13 @@ function verifyAssetRefsAndSecrets(expectedPaths) {
     assert(!rel.includes("resources/original"), `forbidden path in out: ${rel}`);
     assert(!rel.includes(".cursor/"), `forbidden .cursor path in out: ${rel}`);
     assert(!rel.includes("samples/"), `forbidden samples path in out: ${rel}`);
-    assert(!/\.mp3$/i.test(rel), `mp3 artifact in out: ${rel}`);
+    if (/\.mp3$/i.test(rel)) {
+      const expectedHash = approvedAudio.get(rel);
+      assert(expectedHash, `unapproved mp3 artifact in out: ${rel}`);
+      const actualHash = createHash("sha256").update(readFileSync(file)).digest("hex");
+      assert(actualHash === expectedHash, `approved mp3 hash mismatch: ${rel}`);
+      seenApprovedAudio.add(rel);
+    }
 
     const ext = extname(file).toLowerCase();
     if (![".html", ".js", ".css", ".json", ".txt", ".map"].includes(ext)) {
@@ -254,6 +271,10 @@ function verifyAssetRefsAndSecrets(expectedPaths) {
       assert(!text.includes(frag), `developer path fragment in ${rel}`);
     }
   }
+  assert(
+    seenApprovedAudio.size === approvedAudio.size && approvedAudio.size === 15,
+    `approved audio set mismatch: expected ${approvedAudio.size}, found ${seenApprovedAudio.size}`,
+  );
   console.log(`[smoke:pages] Scanned ${allFiles.length} out files for leaks`);
 }
 

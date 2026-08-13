@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-08-13T08:15:00+03:30",
+  "liveUrl": "https://hrezaii95.github.io/german-learning-exam/",
+  "consecutiveCleanInventoryPasses": 0,
+  "status": "active",
+  "items": [
+    {
+      "id": "VIS-L1-GREETINGS-RICH",
+      "type": "illustration",
+      "priority": 1,
+      "scope": ["activity:lesson-01-greetings-by-context", "activity:lesson-01-greeting-farewell-match"],
+      "state": "integrated",
+      "artifact": "platform/apps/web/public/illustrations/lesson-01-greetings-dayparts.png",
+      "requirements": ["rich contextual scene", "responsive crop", "published-only labels", "alt text"],
+      "blockedBy": []
+    },
+    {
+      "id": "VIS-L2-PROFESSIONS-RICH",
+      "type": "illustration",
+      "priority": 1,
+      "scope": ["activity:lesson-02-core-professions"],
+      "state": "integrated",
+      "artifact": "platform/apps/web/public/illustrations/lesson-02-professions-ensemble.png",
+      "requirements": ["only published core professions", "responsive crop", "HTML labels", "alt text"],
+      "blockedBy": []
+    },
+    {
+      "id": "VIS-VOCAB-ARCHITEKT-RICH",
+      "type": "illustration",
+      "priority": 1,
+      "scope": ["lex:architekt"],
+      "state": "integrated",
+      "artifact": "platform/apps/web/public/illustrations/vocabulary-architekt-studio.png",
+      "requirements": ["architect not engineer", "responsive crop", "alt text"],
+      "blockedBy": []
+    },
+    {
+      "id": "VIS-VERB-CONTEXT-RICH",
+      "type": "illustration",
+      "priority": 1,
+      "scope": ["verb:sein", "verb:arbeiten", "activity:lesson-02-sein-arbeiten-contrast"],
+      "state": "integrated",
+      "artifact": "platform/apps/web/public/illustrations/verbs-arbeiten-sein-context.png",
+      "requirements": ["action versus state cue", "forms remain HTML", "responsive crop", "alt text"],
+      "blockedBy": []
+    },
+    {
+      "id": "VIS-QA-CONVERSATION-RICH",
+      "type": "illustration",
+      "priority": 1,
+      "scope": ["qa:*", "activity:lesson-01-register-qa-builder", "activity:lesson-02-profession-qa-builder"],
+      "state": "integrated",
+      "artifact": "platform/apps/web/public/illustrations/conversation-question-answer.png",
+      "requirements": ["two-person social context", "patterns remain HTML", "responsive crop", "alt text"],
+      "blockedBy": []
+    },
+    {
+      "id": "A11Y-WORKBOOK-TRANSCRIPTS",
+      "type": "transcript-accessibility",
+      "priority": 0,
+      "scope": ["audio/source-workbook-approved-v1/1_01-1_15"],
+      "state": "produced",
+      "artifact": "platform/apps/web/generated/audio/workbook-transcripts-lessons-01-02.json",
+      "requirements": ["source-aligned transcript", "German review", "track segmentation", "accessible reveal", "no answer leakage before attempt where pedagogically relevant"],
+      "blockedBy": ["separate transcript republication approval and accessible reveal policy"]
+    },
+    {
+      "id": "AUDIO-TTS-54-HUMAN-QA",
+      "type": "audio-human-qa",
+      "priority": 0,
+      "scope": ["media/manifests/rapid-preview-tts-candidates.json"],
+      "state": "blocked",
+      "artifact": "media/manifests/rapid-preview-tts-candidates.json",
+      "requirements": ["accuracy/form pass", "naturalness/consistency pass", "per-clip decision"],
+      "blockedBy": ["qualified German listeners"]
+    },
+    {
+      "id": "VIS-PROFESSION-CARDS-26",
+      "type": "illustration-set",
+      "priority": 2,
+      "scope": ["26 published core profession cards"],
+      "state": "integrated",
+      "artifact": "platform/apps/web/public/illustrations/lesson-02-core-profession-pairs-sheet.png",
+      "requirements": ["one coherent original character/scene system", "gender/person-form coherence", "desktop/tablet/mobile crops", "alt text", "no review-only profession leakage"],
+      "blockedBy": []
+    },
+    {
+      "id": "VIS-L1-CONTENT-COVERAGE",
+      "type": "illustration-and-infographic-set",
+      "priority": 2,
+      "scope": ["12 Lesson 1 activities"],
+      "state": "integrated",
+      "artifact": "platform/apps/web/public/illustrations/lesson-01-name-origin-class.png",
+      "requirements": ["inventory every page section", "rich hero/context art", "semantic diagrams", "responsive variants", "no fake content"],
+      "blockedBy": []
+    },
+    {
+      "id": "VIS-L2-CONTENT-COVERAGE",
+      "type": "illustration-and-infographic-set",
+      "priority": 2,
+      "scope": ["11 learner-published Lesson 2 activities"],
+      "state": "integrated",
+      "artifact": "platform/apps/web/public/illustrations/lesson-02-personal-profile-context.png",
+      "requirements": ["inventory every page section", "rich hero/context art", "semantic diagrams", "responsive variants", "no teacher-review leakage"],
+      "blockedBy": []
+    },
+    {
+      "id": "CONTENT-PLURAL-GAPS-26",
+      "type": "content-authority",
+      "priority": 2,
+      "scope": ["26 published profession cards"],
+      "state": "needed",
+      "artifact": null,
+      "requirements": ["source-supported plurals only", "rule family", "irregular marker", "German approval"],
+      "blockedBy": ["verified source or owner content approval"]
+    },
+    {
+      "id": "VIS-RESPONSIVE-E2E",
+      "type": "visual-qa",
+      "priority": 1,
+      "scope": ["all integrated learner media"],
+      "state": "needed",
+      "artifact": "research/release-evidence/media-responsive-e2e.json",
+      "requirements": ["desktop 1440", "tablet 768", "mobile 390", "no tiny text", "no crop loss", "keyboard and screen-reader checks"],
+      "blockedBy": ["current integration deployment"]
+    }
+  ]
+}

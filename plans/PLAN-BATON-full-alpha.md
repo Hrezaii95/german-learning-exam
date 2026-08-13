@@ -1,18 +1,19 @@
 # PLAN-BATON — German Learning OS Full Alpha
 
-updated: 2026-08-13T02:00:00+03:30
+updated: 2026-08-13T07:52:00+03:30
 orchestrator_session: Codex resume 2026-08-13
 active_engine: cursor-cli
-active_phase: P3
+active_phase: P4
 meta_status: n/a
-gate_status: {G0: green, G1: green, G2: green, G3: pending, G4: pending, G5: pending, G6: pending, G-OWNER: pending}
-workers: [C-WEB]
+gate_status: {G0: green, G1: green, G2: green, G3: green, G4: review, G5: partial, G6: pending, G-OWNER: pending}
+workers: [C-LEARN, C-WEB]
 parallel_groups: []
 file_ownership:
+  - C-LEARN: `platform/packages/learning/**`, `platform/tests/learning/**`, learning package integration only
   - C-WEB: `platform/apps/web/**`, `platform/tests/web/**`, web package integration and README only
 open_items_unchanged: true
 violations: []
-next_action: Implement representative published vocabulary, verb and Q&A detail/practice surfaces with approved cached audio and responsive infographic semantics; preserve all review/human/rights gates and keep G3 pending until review traversal exists.
+next_action: Complete independent React/TypeScript review and browser evidence for P4-04/P5 integration, then deploy. G4 remains review until behavior review closes; G5 remains partial because generated TTS still needs qualified human listening approval.
 
 ## Current verified facts
 
@@ -21,8 +22,13 @@ next_action: Implement representative published vocabulary, verb and Q&A detail/
 - Current application is a partial vertical slice, not the complete Alpha.
 - 327 generated pronunciation assets reproduce from the audio manifest.
 - All 327 generated clips pass exact-path, hash, encoding and duration technical audit; all 327 remain pending qualified German listening approval.
-- 15 workbook tracks are provenance-mapped and excluded from the public artifact while rights are open.
+- The project owner explicitly approved public redistribution on 2026-08-13 for exactly 15 mapped workbook CD1 tracks (1_01–1_15). They are byte-identical, hash-audited, and mapped only to their original Lesson 1–2 exercises; no other publisher media is approved.
 - Cursor CLI print mode is affected by a known silent-hang failure. Official Cursor SDK 1.0.27 successfully completed a no-tools probe with `grok-4.5`, `effort=high`, `fast=false`, the SDK-equivalent of the requested non-Fast High variant.
+- The current learner web slice is live at `https://hrezaii95.github.io/german-learning-exam/`; pushes to `codex/live-alpha` deploy through the guarded GitHub Pages workflow.
+- P4-01, P4-02 and P4-03 are implemented and current-disk verified by 169/169 focused web tests, including behavioral game, five-level conversation, and race-safe recorder lifecycle coverage.
+- Local-first persistent learner events, review cards, tags, notes, resume state, daily mission, export/import recovery, and derived XP/streak/badges are implemented; independent review and live-browser evidence remain open.
+- Seven original responsive infographic families passed technical QA. Three published-only families are wired into learner routes; mixed/review-only families remain outside the learner bundle.
+- A deterministic learner-safe enrichment artifact maps 23 activities and 26 core profession cards while excluding 48 teacher rows and 86 review-only lexemes.
 
 ## Worker log
 
@@ -46,4 +52,10 @@ next_action: Implement representative published vocabulary, verb and Q&A detail/
 | P3 | C-WEB | Cursor SDK `grok-4.5` (`effort=high`, `fast=false`) | P3-01 approved after P3AR1-P3AR2 | `platform/apps/web/**`; `platform/tests/web/**`; web package integration | 2 lessons; 24 validated activity records; 23 learner-published SSG routes plus review-only teacher-deck 404; 320 tests, Next 16.3 build, zero production audit vulnerabilities, 8/8 HTTP route smoke and 5/5 responsive visual E2E; Composer and executable review findings remediated |
 | P3 | C-WEB | Cursor CLI attempted then SDK `grok-4.5` (`effort=high`, `fast=false`) | P3-02 approved after P3BR1-P3BR2 | `platform/apps/web/**`; `platform/tests/web/**`; narrow CLI timing test; review evidence | six learner-safe hubs plus `/hubs`; exact counts 69/4/0/58/0/0; on-disk recursive leak scan; deterministic artifact; 339 tests, 37-page build, zero vulnerabilities, 15/15 route smoke; Composer final APPROVE with zero actionable P0-P2 |
 | P3 | C-WEB | Cursor SDK `grok-4.5` (`effort=high`, `fast=false`) | P3-03 approved after P3CR1 | learner search/context web paths and tests | 156 learner-only search docs; canonical alias matching and typed back context; 2 lesson + 23 activity SSG restored; 361 tests, 38-page build, zero vulnerabilities, 18/18 smoke; Composer final APPROVE zero P0-P2 |
+| P3 | C-WEB | Cursor SDK `grok-4.5` (`effort=high`, `fast=false`) | P3D approved after review remediation | representative vocabulary, verb and Q&A detail surfaces | responsive learner-safe detail pages, canonical navigation context and explicit audio gaps; full web and publication gates passed |
+| P4 | C-WEB | Cursor SDK `grok-4.5` (`effort=high`, `fast=false`) | P4-01 approved after P4AR1 | seven registered game modes and behavioral tests | six functional modes plus rights-honest unavailable audio match; deterministic events, hint/anti-luck semantics and responsive UI verified |
+| P4 | C-WEB | Cursor SDK `grok-4.5` (`effort=high`, `fast=false`) | P4-02 and P4-03 approved after P4BR1 | five-level conversation ladder and recorder lifecycle | level locks, published-answer grading, non-strong hint/reveal evidence, record/playback/self-check, permission/error/cleanup races verified |
+| Deploy | ORCH | Codex | live and auto-deploying | `.github/workflows/deploy-pages.yml`; Pages-safe public routes | commits `84abdbb` and `6610fa3`; hosted workflow `31663777289` green; representative public routes HTTP 200 and unknown route 404 |
 | P5 | X-MEDIA | Codex | technical audit complete; human gate open | `media/qa/alpha-tts-technical-audit.json`; `tools/audit-alpha-tts.mjs` | pass — 327 manifest assets = 327 disk files = 327 audited rows; zero technical failures; 327 listening reviews pending |
+| P4 | C-WEB/C-LEARN | Codex subagents + ORCH | implementation complete; independent review open | learner-state controller/provider, review/settings routes, reward engine and tests | `npm run check` green: 482/482 total tests and 181/181 web tests; review verdict pending |
+| P5 | X-MEDIA | Codex subagents + ORCH | public integration complete for approved subset | 15 source tracks; 7 infographic families; enrichment projection | 69/69 rapid audio technical checks; 7/7 infographic QA; exact rights scope recorded; generated TTS human listening remains open |

@@ -1,0 +1,128 @@
+{
+  "schemaVersion": "1.0.0",
+  "manifestId": "manifest:p5-infographics-rapid-v1",
+  "generatedAt": "2026-08-13",
+  "style": {
+    "styleId": "german-os-semantic-infographic-v1",
+    "format": "svg",
+    "viewBox": "0 0 1200 720",
+    "responsiveContract": "Scale by viewBox with preserveAspectRatio=xMidYMid meet; provide the manifest textAlternative beside or below the image at narrow widths.",
+    "fontStack": "Inter, Arial, sans-serif",
+    "tokens": {
+      "brand": "#6946E8",
+      "genderMasculine": "#246BFD",
+      "genderFeminine": "#E64C86",
+      "genderNeuter": "#2E9D68",
+      "plural": "#7957D5",
+      "ruleRegular": "#148A87",
+      "ruleSpecial": "#B76A00",
+      "ruleIrregular": "#C52F62",
+      "ink": "#15192C",
+      "mutedInk": "#5C637A",
+      "canvas": "#F8F7FC"
+    },
+    "nonColorCues": {
+      "masculine": "M in a square plus der",
+      "feminine": "F in a circle plus die",
+      "neuter": "N in a diamond plus das",
+      "plural": "PL in stacked cards plus die",
+      "regular": "REG or named suffix",
+      "spellingAdjustment": "SPELL or amber bridge label",
+      "irregular": "IRR or star"
+    }
+  },
+  "originalityAndLicense": {
+    "origin": "Original deterministic SVG artwork authored for German Learning OS on 2026-08-13.",
+    "sourceArtCopied": false,
+    "externalAssets": false,
+    "externalFonts": false,
+    "licenseNote": "Project-owned original asset; may be used, modified, and distributed with this project. No source-book or teacher-handout illustration was copied.",
+    "contentAuthority": "German labels and forms map to the current validated publication fragments. Teacher-deck examples are visibly marked review-only; unresolved core plural data remains an explicit gap."
+  },
+  "assets": [
+    {
+      "id": "info:system-gender-articles:v1",
+      "family": "gender-article",
+      "path": "media/generated/infographics/gender-article-system-v1.svg",
+      "previewPath": "media/generated/infographics/previews/gender-article-system-v1.png",
+      "conceptIds": ["lex:beruf", "lex:stelle", "lex:praktikum", "lex:architekt", "lex:architektin", "lex:elektriker"],
+      "activityIds": ["activity:lesson-02-core-professions", "activity:lesson-02-person-form-morphology", "activity:lesson-02-teacher-professions-deck"],
+      "pageTargets": ["lesson:02 overview", "vocabulary detail", "vocabulary hub", "review card"],
+      "publicationScope": "Mixed: Lesson 2 core examples are published; Elektriker is teacher-deck review-only and labeled in-art.",
+      "textAlternative": "Masculine nouns use der, an M, and a square; feminine nouns use die, an F, and a circle; neuter nouns use das, an N, and a diamond; all plurals use die, PL, and a stacked badge. Der Architekt and die Architektin are separate linked words.",
+      "sha256": "1ccfd0b66fbc957ebf450311303c190a5dfb23514c2e0516e8f394efd224e94e"
+    },
+    {
+      "id": "info:l2-profession-plurals:v1",
+      "family": "plural-patterns-gaps",
+      "path": "media/generated/infographics/plural-patterns-and-gaps-v1.svg",
+      "previewPath": "media/generated/infographics/previews/plural-patterns-and-gaps-v1.png",
+      "conceptIds": ["lex:elektriker", "lex:elektrikerin", "lex:landwirt", "lex:koch", "lex:bauer", "lex:ingenieur"],
+      "activityIds": ["activity:lesson-02-person-form-morphology", "activity:lesson-02-teacher-professions-deck"],
+      "pageTargets": ["lesson:02 morphology activity", "vocabulary detail", "teacher professions collection", "plural review card"],
+      "publicationScope": "Teacher-deck plural samples are review-only. The published core Ingenieur plural gap is explicitly shown as pending.",
+      "textAlternative": "Profession plural families include unchanged Elektriker, Landwirt plus e, Koch with umlaut plus e, Bauer plus n, and feminine Elektrikerin to Elektrikerinnen. The current published bundle has no verified Ingenieur plural and the interface must not guess it.",
+      "sha256": "d6f07de1b198c9f7f7df9e433b0b3e71c262f0132aacbe760858e8ff5244894a"
+    },
+    {
+      "id": "info:l2-person-forms:v1",
+      "family": "person-form-morphology",
+      "path": "media/generated/infographics/person-form-morphology-v1.svg",
+      "previewPath": "media/generated/infographics/previews/person-form-morphology-v1.png",
+      "conceptIds": ["lex:architekt", "lex:architektin", "lex:arzt", "lex:aerztin", "lex:krankenpfleger", "lex:krankenschwester"],
+      "activityIds": ["activity:lesson-02-person-form-morphology", "activity:lesson-02-teacher-professions-deck"],
+      "pageTargets": ["lesson:02 morphology activity", "vocabulary relation drawer", "profession detail", "review explanation"],
+      "publicationScope": "Architekt/Architektin and Arzt/Ärztin are published core; Krankenpfleger/Krankenschwester is a visibly labeled teacher-deck review-only lexical pair.",
+      "textAlternative": "Architekt becomes Architektin by adding in. Arzt changes A to Ä and adds in to form Ärztin. Krankenpfleger and Krankenschwester are a linked lexical pair, not a productive suffix transformation.",
+      "sha256": "14c2347ee0a661153366e9ab9e1562a1697593b500603fa9b124ba9bef361400"
+    },
+    {
+      "id": "info:l2-verb-patterns:v1",
+      "family": "regular-special-irregular-verb-endings",
+      "path": "media/generated/infographics/verb-endings-regular-special-irregular-v1.svg",
+      "previewPath": "media/generated/infographics/previews/verb-endings-regular-special-irregular-v1.png",
+      "conceptIds": ["verb:arbeiten", "verb:wohnen", "verb:sein"],
+      "activityIds": ["activity:lesson-02-full-person-conjugation", "activity:lesson-02-sein-arbeiten-contrast", "activity:lesson-01-heissen-sein-notice"],
+      "pageTargets": ["verb detail", "lesson:02 conjugation activity", "lesson:01 sein notice", "verb review card"],
+      "publicationScope": "Published Lesson 1 and Lesson 2 verb forms only.",
+      "textAlternative": "Arbeiten uses the stem arbeit with regular endings and an inserted e before st or t: arbeite, arbeitest, arbeitet, arbeiten, arbeitet, arbeiten. Wohnen shows the regular pattern. Sein forms bin, bist, ist, sind, seid, sind are marked irregular.",
+      "sha256": "a00ae4b7b6e61d68e3d123e7c577ef64df44a8eb42b10f7a34c2f07de6621a6b"
+    },
+    {
+      "id": "info:l1-l2-qa-register:v1",
+      "family": "qa-register",
+      "path": "media/generated/infographics/qa-register-casual-formal-v1.svg",
+      "previewPath": "media/generated/infographics/previews/qa-register-casual-formal-v1.png",
+      "conceptIds": ["qa:name-casual", "qa:name-formal", "qa:profession-casual-main", "qa:profession-formal-main"],
+      "activityIds": ["activity:lesson-01-register-qa-builder", "activity:lesson-02-profession-qa-builder"],
+      "pageTargets": ["Q&A detail", "conversation ladder", "lesson practice", "phrase review card"],
+      "publicationScope": "Published Lesson 1 and Lesson 2 Q&A patterns only.",
+      "textAlternative": "Use Wie heißt du and Was bist du von Beruf in casual contexts. Use Wie heißen Sie and Was sind Sie von Beruf in formal contexts. W-questions follow W-word, finite verb, person, complement. Answers include Ich heiße, Ich bin, and Ich arbeite als.",
+      "sha256": "7ad951381f9ee744af71867aff784ae891917558823dad1926cf4e447d59d107"
+    },
+    {
+      "id": "info:l1-2-learning-map:v1",
+      "family": "lesson-progress-map",
+      "path": "media/generated/infographics/lesson-01-02-learning-map-v1.svg",
+      "previewPath": "media/generated/infographics/previews/lesson-01-02-learning-map-v1.png",
+      "conceptIds": ["lesson:01", "lesson:02", "collection:teacher-professions"],
+      "activityIds": ["activity:lesson-01-checkpoint-summary", "activity:lesson-02-checkpoint-summary", "activity:lesson-02-teacher-professions-deck"],
+      "pageTargets": ["dashboard", "lessons catalog", "lesson overview", "checkpoint summary"],
+      "publicationScope": "Published lessons plus clearly separate optional review-only teacher collection.",
+      "textAlternative": "Lesson 1 progresses through greeting, name, origin, wellbeing, and checkpoint. Lesson 2 progresses through profile, numbers, professions, verb forms, and checkpoint. Vocabulary, verbs, phrases and Q&A, and review games remain available in hubs. The extra teacher professions deck has separate mastery and does not block core progress.",
+      "sha256": "9ad0cb79994cef90d97c52afcd8a7625cfc17c42cb87a5a0dacb82d368e0ca9d"
+    },
+    {
+      "id": "info:l1-greetings-day:v1",
+      "family": "greetings-context",
+      "path": "media/generated/infographics/greetings-context-day-v1.svg",
+      "previewPath": "media/generated/infographics/previews/greetings-context-day-v1.png",
+      "conceptIds": ["lex:guten-morgen", "lex:guten-tag", "lex:guten-abend", "lex:gute-nacht", "lex:hallo", "lex:tschues", "lex:auf-wiedersehen"],
+      "activityIds": ["activity:lesson-01-greetings-by-context", "activity:lesson-01-greeting-farewell-match"],
+      "pageTargets": ["lesson:01 overview", "greetings activity", "vocabulary card", "checkpoint summary"],
+      "publicationScope": "Published Lesson 1 vocabulary only.",
+      "textAlternative": "Use Guten Morgen in the morning, Guten Tag during the day, Guten Abend in the evening, and Gute Nacht at bedtime. Hallo and Tschüs are flexible or casual; Auf Wiedersehen is a formal farewell.",
+      "sha256": "11b781c7451b0c6079b407859aa5bd94456e1f5fe72d92dd0ef78330fc655de6"
+    }
+  ]
+}

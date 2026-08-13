@@ -96,7 +96,7 @@ describe("P3B hub UI shell contracts", () => {
     expect(concepts).toContain('href="/hubs"');
   });
 
-  it("keeps disabled Review/Profile non-focusable and mobile Hubs real", () => {
+  it("keeps Review and Settings as real navigable destinations alongside mobile Hubs", () => {
     const html = renderToStaticMarkup(
       createElement(
         AppShell,
@@ -108,11 +108,10 @@ describe("P3B hub UI shell contracts", () => {
       ),
     );
     expect(html).toContain('href="/hubs"');
-    expect(html).toMatch(/<button[^>]*class="nav-disabled"[^>]*disabled/);
     expect(html).toContain("Review");
-    expect(html).toContain("Profile");
-    expect(html).toContain("Next phase");
-    expect(html).not.toContain('href="/review"');
+    expect(html).toContain("Settings");
+    expect(html).toContain('href="/review"');
+    expect(html).toContain('href="/settings"');
     expect(html).not.toContain('href="/profile"');
   });
 

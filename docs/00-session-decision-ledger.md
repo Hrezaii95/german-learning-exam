@@ -28,6 +28,7 @@ Purpose: preserve the accumulated intent without treating the assistant’s old 
 | 2026-08-02 | Pronunciation must be quick, accurate, natural and consistent | Pre-generated de-DE neural audio is used for core items; browser TTS is not the pronunciation authority |
 | 2026-08-02 | Keep generated voice for now because the sample voice was liked | Prototype voice is retained; migration path to official Azure Speech is documented |
 | 2026-08-02 | Plan the whole journey, encode the course/workbook/audio and allow extra vocabulary/grammar/phrases/Q&A per lesson | The model supports arbitrary source layers and lesson attachments without schema changes |
+| 2026-08-13 | “public redistribution approved” for the already identified original textbook audio | Approval is recorded narrowly for the exact 15 mapped Momente A1.1 workbook CD1 tracks `1_01`–`1_15` used by Lessons 1–2. It does not extend to any other publisher audio, transcript, localized pack, image, or later lesson. Hashes and exercise mappings remain mandatory. |
 | 2026-08-02 | After learning or choosing a lesson, expose everything learned in separate hubs and gamified review | Vocabulary, verbs, grammar, phrases/Q&A, listening and concepts have global hubs filtered by learned/unlocked state |
 | 2026-08-02 | Codex owns infographic, image and voice generation; Cursor does implementation legwork | Media manifests are immutable inputs to Cursor; missing media becomes a request, never a fabricated placeholder |
 

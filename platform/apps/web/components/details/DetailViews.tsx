@@ -5,9 +5,6 @@ import type {
   LearnerVocabularyDetail,
 } from "@/lib/content/detail-types";
 import {
-  ADD_TO_REVIEW_PENDING_EXPLANATION,
-} from "@/lib/content/media-copy";
-import {
   lessonMembershipLabel,
   sourcePriorityLabel,
 } from "@/lib/content/search-query";
@@ -30,6 +27,12 @@ import {
   appendNavigationContext,
   buildDetailPracticeNavigationContext,
 } from "@/lib/content/navigation-context";
+import { DetailLearningControls } from "@/components/learner-state/DetailLearningControls";
+import { infographicForDetail } from "@/lib/content/infographics";
+import { InfographicPanel } from "@/components/media/InfographicPanel";
+import { RichLessonVisual } from "@/components/media/RichLessonVisual";
+import { illustrationForDetail } from "@/lib/content/illustrations";
+import { RapidProfessionMorphologySection } from "@/components/content/rapid-learning-sections";
 
 function MetaChips({
   lessonIds,
@@ -49,23 +52,9 @@ function MetaChips({
   );
 }
 
-function AddToReviewDisabled() {
-  return (
-    <button
-      type="button"
-      className="btn btn-secondary"
-      disabled
-      aria-disabled="true"
-      tabIndex={-1}
-      aria-label={`Add to Review — ${ADD_TO_REVIEW_PENDING_EXPLANATION}`}
-    >
-      Add to Review
-    </button>
-  );
-}
-
 function VocabularyDetail({ detail }: { detail: LearnerVocabularyDetail }) {
   const pf = detail.personForm;
+  const illustration = illustrationForDetail(detail.id);
   return (
     <div className="stack detail-page detail-page--vocabulary">
       <header className="page-header">
@@ -82,6 +71,9 @@ function VocabularyDetail({ detail }: { detail: LearnerVocabularyDetail }) {
           extra="Published"
         />
       </header>
+
+      {illustration ? <RichLessonVisual illustration={illustration} /> : null}
+      <RapidProfessionMorphologySection />
 
       <section className="panel" aria-labelledby="vocab-forms-heading">
         <h2 id="vocab-forms-heading">Forms</h2>
@@ -150,14 +142,14 @@ function VocabularyDetail({ detail }: { detail: LearnerVocabularyDetail }) {
 
       <div className="detail-actions">
         <PractiseLink detail={detail} />
-        <AddToReviewDisabled />
-        <span className="dense">{ADD_TO_REVIEW_PENDING_EXPLANATION}</span>
       </div>
+      <DetailLearningControls contentId={detail.id} />
     </div>
   );
 }
 
 function VerbDetail({ detail }: { detail: LearnerVerbDetail }) {
+  const infographic = infographicForDetail(detail.id);
   return (
     <div className="stack detail-page detail-page--verb">
       <header className="page-header">
@@ -174,6 +166,8 @@ function VerbDetail({ detail }: { detail: LearnerVerbDetail }) {
           extra="Published"
         />
       </header>
+
+      {infographic ? <InfographicPanel infographic={infographic} /> : null}
 
       <section className="panel" aria-labelledby="verb-paradigm-heading">
         <h2 id="verb-paradigm-heading">Present paradigm</h2>
@@ -223,14 +217,14 @@ function VerbDetail({ detail }: { detail: LearnerVerbDetail }) {
 
       <div className="detail-actions">
         <PractiseLink detail={detail} />
-        <AddToReviewDisabled />
-        <span className="dense">{ADD_TO_REVIEW_PENDING_EXPLANATION}</span>
       </div>
+      <DetailLearningControls contentId={detail.id} />
     </div>
   );
 }
 
 function QaDetail({ detail }: { detail: LearnerQaDetail }) {
+  const infographic = infographicForDetail(detail.id);
   return (
     <div className="stack detail-page detail-page--qa">
       <header className="page-header">
@@ -247,6 +241,8 @@ function QaDetail({ detail }: { detail: LearnerQaDetail }) {
           extra="Informal"
         />
       </header>
+
+      {infographic ? <InfographicPanel infographic={infographic} /> : null}
 
       <section className="panel qa-dialogue" aria-labelledby="qa-model-heading">
         <h2 id="qa-model-heading">Model</h2>
@@ -336,9 +332,8 @@ function QaDetail({ detail }: { detail: LearnerQaDetail }) {
       <div className="detail-actions">
         <ConversationLink detail={detail} />
         <PractiseLink detail={detail} />
-        <AddToReviewDisabled />
-        <span className="dense">{ADD_TO_REVIEW_PENDING_EXPLANATION}</span>
       </div>
+      <DetailLearningControls contentId={detail.id} />
     </div>
   );
 }

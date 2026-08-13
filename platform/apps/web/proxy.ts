@@ -65,5 +65,8 @@ export const config = {
     "/practice/:path*",
     "/conversation",
     "/conversation/:path*",
+    "/review",
+    "/review/:path*",
+    "/settings",
   ],
 };

@@ -17,12 +17,12 @@ P2-05,P2,Versioned export-import persistence,platform/packages/learning/src/pers
 P3-01,P3,Stable lesson stage and activity routes,platform/apps/web,G3,24,P1-05|P2-01,completed
 P3-02,P3,Six canonical hubs,platform/apps/web,G3,6,P2-02|P2-03,completed
 P3-03,P3,Typed global search and back context,platform/apps/web,G3,1,P2-02,completed
-P4-01,P4,Required game modes,platform/apps/web,G4,7,P2-03|P3-02,pending
-P4-02,P4,Q&A conversation progression,platform/apps/web,G4,5,P1-02|P1-03|P3-01,pending
-P4-03,P4,Recorder lifecycle and failure states,platform/apps/web,G4,1,P3-01,pending
-P4-04,P4,Mixed mission tags notes XP and streaks,platform/apps/web,G4,1,P2-04|P3-02,pending
+P4-01,P4,Required game modes,platform/apps/web,G4,7,P2-03|P3-02,completed
+P4-02,P4,Q&A conversation progression,platform/apps/web,G4,5,P1-02|P1-03|P3-01,completed
+P4-03,P4,Recorder lifecycle and failure states,platform/apps/web,G4,1,P3-01,completed
+P4-04,P4,Mixed mission tags notes XP and streaks,platform/apps/web,G4,1,P2-04|P3-02,in_review
 P5-01,P5,Approved generated audio or explicit gaps,media/manifests/alpha-tts-manifest.json,G5,1,P1-02|P1-03|P1-04,pending
-P5-02,P5,Responsive original infographic families,media/generated/infographics,G5,6,P1-02|P1-03|P1-04,pending
+P5-02,P5,Responsive original infographic families,media/generated/infographics,G5,6,P1-02|P1-03|P1-04,completed
 P5-03,P5,Audio and visual human QA evidence,research/media-qa,G5,2,P5-01|P5-02,pending
 P6-01,P6,Automated engineering and content gates,research/release-evidence,G6,1,P2-01|P4-04|P5-03,pending
 P6-02,P6,Responsive accessibility and production E2E,research/release-evidence,G6,4,P3-01|P3-02|P4-03,pending

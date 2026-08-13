@@ -99,6 +99,8 @@ export function isSafeNavigationPath(pathname: string): boolean {
   if (pathname === "/search") return true;
   if (pathname === "/practice") return true;
   if (pathname === "/conversation") return true;
+  if (pathname === "/review" || pathname === "/review/session/today") return true;
+  if (pathname === "/settings") return true;
 
   const practiceMatch = pathname.match(/^\/practice\/([^/]+)$/);
   if (practiceMatch) {
@@ -198,11 +200,11 @@ function normalizeContext(raw: unknown): NavigationContext | null {
     returnPath = defaultReturnPath(entryContext);
   }
 
-  // Review entry is typed for the contract but has no live routes yet.
+  // Review entry returns to the live review setup.
   if (entryContext === "review") {
     return Object.freeze({
       entryContext,
-      returnPath: "/hubs",
+      returnPath: "/review",
     });
   }
 

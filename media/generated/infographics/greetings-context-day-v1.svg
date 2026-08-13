@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" role="img" aria-labelledby="title desc" preserveAspectRatio="xMidYMid meet" xml:space="preserve">
+  <title id="title">German greetings across the day and by context</title>
+  <desc id="desc">A day arc places Guten Morgen in the morning, Guten Tag in daytime, Guten Abend in the evening, and Gute Nacht at bedtime. A context panel distinguishes flexible Hallo and Tschüs from formal Auf Wiedersehen.</desc>
+  <defs><style>
+    .h{font:700 38px Inter,Arial,sans-serif;fill:#15192c}.s{font:500 18px Inter,Arial,sans-serif;fill:#5c637a}.k{font:700 14px Inter,Arial,sans-serif;letter-spacing:1.2px}.w{font:700 25px Inter,Arial,sans-serif;fill:#15192c}.sm{font:500 14px Inter,Arial,sans-serif;fill:#5c637a}.card{fill:#fff;stroke:#dddff0;stroke-width:2}.arc{fill:none;stroke:#6946e8;stroke-width:8;stroke-linecap:round}.dot{fill:#fff;stroke:#6946e8;stroke-width:5}.casual{fill:#eef4ff;stroke:#bfd3ff;stroke-width:2}.formal{fill:#f2edff;stroke:#d2c7fa;stroke-width:2}
+  </style></defs>
+  <rect width="1200" height="720" rx="34" fill="#f8f7fc"/>
+  <text x="58" y="68" class="h">A greeting belongs to a moment</text>
+  <text x="58" y="103" class="s">Time of day narrows the choice. Relationship and setting decide how formal the farewell feels.</text>
+
+  <g transform="translate(58 143)">
+    <rect class="card" width="720" height="468" rx="26"/>
+    <text x="24" y="40" class="k" fill="#6946e8">TIME OF DAY</text>
+    <path class="arc" d="M88 313C174 97 548 97 634 313"/>
+    <circle cx="360" cy="126" r="48" fill="#ffc43d"/><path d="M360 58v-26M310 74l-18-18M410 74l18-18" stroke="#d98f00" stroke-width="8" stroke-linecap="round"/>
+    <g transform="translate(72 285)"><circle class="dot" cx="28" cy="28" r="23"/><text x="28" y="34" text-anchor="middle" class="k" fill="#6946e8">AM</text><text x="0" y="88" class="w">Guten Morgen</text><text x="0" y="115" class="sm">morning</text></g>
+    <g transform="translate(266 110)"><circle class="dot" cx="94" cy="28" r="23"/><text x="94" y="34" text-anchor="middle" class="k" fill="#6946e8">DAY</text><text x="18" y="92" class="w">Guten Tag</text><text x="68" y="119" text-anchor="middle" class="sm">daytime</text></g>
+    <g transform="translate(497 285)"><circle class="dot" cx="50" cy="28" r="23"/><text x="50" y="34" text-anchor="middle" class="k" fill="#6946e8">PM</text><text x="0" y="88" class="w">Guten Abend</text><text x="0" y="115" class="sm">evening</text></g>
+    <rect x="24" y="401" width="672" height="43" rx="14" fill="#161b31"/><text x="44" y="429" class="w" fill="#fff">Gute Nacht <tspan class="sm" fill="#d9dced">— bedtime / good night</tspan></text>
+  </g>
+
+  <g transform="translate(806 143)">
+    <rect class="card" width="336" height="468" rx="26"/>
+    <text x="22" y="40" class="k" fill="#6946e8">CONTEXT</text>
+    <rect class="casual" x="22" y="68" width="292" height="132" rx="20"/>
+    <text x="42" y="101" class="k" fill="#246bfd">FLEXIBLE / CASUAL</text><text x="42" y="142" class="w">Hallo!</text><text x="42" y="179" class="w">Tschüs!</text>
+    <rect class="formal" x="22" y="220" width="292" height="132" rx="20"/>
+    <text x="42" y="253" class="k" fill="#6946e8">FORMAL FAREWELL</text><text x="42" y="299" class="w">Auf Wiedersehen!</text><text x="42" y="327" class="sm">polite / formal goodbye</text>
+    <rect x="22" y="372" width="292" height="72" rx="18" fill="#fff8e8" stroke="#e3aa40"/>
+    <text x="42" y="402" class="k" fill="#9b5900">LISTEN, THEN CHOOSE</text><text x="42" y="428" class="sm">Audio hotspots attach in the app.</text>
+  </g>
+  <text x="58" y="665" class="sm">Text alternative: morning → Guten Morgen; daytime → Guten Tag; evening → Guten Abend; bedtime → Gute Nacht.</text>
+</svg>

@@ -1,0 +1,174 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectionKind": "rapid-learner-content",
+  "scope": {
+    "lessonIds": ["lesson:01", "lesson:02"],
+    "policy": "Published learner fields only; teacher-deck and review-state vocabulary excluded."
+  },
+  "genderLegend": [
+    { "article": "der", "gender": "masculine", "colorToken": "gender-m", "shape": "square", "learnerLabel": "masculine" },
+    { "article": "die", "gender": "feminine", "colorToken": "gender-f", "shape": "circle", "learnerLabel": "feminine" },
+    { "article": "das", "gender": "neuter", "colorToken": "gender-n", "shape": "diamond", "learnerLabel": "neuter" },
+    { "article": "die", "gender": "plural", "colorToken": "gender-pl", "shape": "double", "learnerLabel": "plural" }
+  ],
+  "greetings": [
+    { "id": "lex:hallo", "de": "Hallo", "en": "Hello", "function": "greeting" },
+    { "id": "lex:guten-tag", "de": "Guten Tag", "en": "Good day / Hello", "function": "greeting" },
+    { "id": "lex:guten-morgen", "de": "Guten Morgen", "en": "Good morning", "function": "greeting" },
+    { "id": "lex:guten-abend", "de": "Guten Abend", "en": "Good evening", "function": "greeting" },
+    { "id": "lex:gute-nacht", "de": "Gute Nacht", "en": "Good night", "function": "farewell" },
+    { "id": "lex:tschues", "de": "Tschüs", "en": "Bye", "function": "farewell" },
+    { "id": "lex:auf-wiedersehen", "de": "Auf Wiedersehen", "en": "Goodbye", "function": "farewell" }
+  ],
+  "qaGroups": [
+    {
+      "id": "qa:name-casual",
+      "title": "Name · informal",
+      "register": "informal",
+      "question": "Wie heißt du?",
+      "answers": ["Ich heiße …", "Mein Name ist …"]
+    },
+    {
+      "id": "qa:name-formal",
+      "title": "Name · formal",
+      "register": "formal",
+      "question": "Wie heißen Sie?",
+      "answers": ["Ich heiße …", "Mein Name ist …"]
+    },
+    {
+      "id": "qa:origin-casual",
+      "title": "Origin · informal",
+      "register": "informal",
+      "question": "Woher kommst du?",
+      "answers": ["Ich komme aus …"]
+    },
+    {
+      "id": "qa:origin-formal",
+      "title": "Origin · formal",
+      "register": "formal",
+      "question": "Woher kommen Sie?",
+      "answers": ["Ich komme aus …"]
+    },
+    {
+      "id": "qa:wellbeing-casual",
+      "title": "Wellbeing · informal",
+      "register": "informal",
+      "question": "Wie geht’s dir?",
+      "answers": ["Super!", "Sehr gut, danke.", "Gut, danke.", "Es geht.", "Nicht so gut."]
+    },
+    {
+      "id": "qa:wellbeing-formal",
+      "title": "Wellbeing · formal",
+      "register": "formal",
+      "question": "Wie geht’s Ihnen?",
+      "answers": ["Sehr gut, danke.", "Gut, danke.", "Es geht.", "Nicht so gut."]
+    },
+    {
+      "id": "qa:profession-casual-main",
+      "title": "Profession · informal",
+      "register": "informal",
+      "question": "Was bist du von Beruf?",
+      "answers": ["Ich bin … von Beruf.", "Ich bin …", "Ich arbeite als …"]
+    },
+    {
+      "id": "qa:profession-formal-main",
+      "title": "Profession · formal",
+      "register": "formal",
+      "question": "Was sind Sie von Beruf?",
+      "answers": ["Ich bin … von Beruf.", "Ich bin …", "Ich arbeite als …"]
+    },
+    {
+      "id": "qa:work-formal-main",
+      "title": "Work · formal",
+      "register": "formal",
+      "question": "Was machen Sie beruflich?",
+      "answers": ["Ich arbeite als …", "Ich arbeite bei …", "Ich studiere …", "Ich arbeite im Moment nicht."]
+    },
+    {
+      "id": "qa:residence-casual",
+      "title": "Residence · informal",
+      "register": "informal",
+      "question": "Wo wohnst du?",
+      "answers": ["Ich wohne in …"]
+    },
+    {
+      "id": "qa:residence-formal",
+      "title": "Residence · formal",
+      "register": "formal",
+      "question": "Wo wohnen Sie?",
+      "answers": ["Ich wohne in …"]
+    }
+  ],
+  "verbs": [
+    {
+      "id": "verb:sein",
+      "infinitive": "sein",
+      "meaningEn": "to be",
+      "pattern": "irregular",
+      "forms": [
+        { "person": "ich", "form": "bin" }, { "person": "du", "form": "bist" },
+        { "person": "er/sie/es", "form": "ist" }, { "person": "wir", "form": "sind" },
+        { "person": "ihr", "form": "seid" }, { "person": "sie", "form": "sind" },
+        { "person": "Sie", "form": "sind" }
+      ]
+    },
+    {
+      "id": "verb:heissen",
+      "infinitive": "heißen",
+      "meaningEn": "to be called",
+      "pattern": "published-partial",
+      "forms": [
+        { "person": "ich", "form": "heiße" }, { "person": "du", "form": "heißt" },
+        { "person": "er/sie", "form": "heißt" }, { "person": "Sie", "form": "heißen" }
+      ]
+    },
+    {
+      "id": "verb:kommen",
+      "infinitive": "kommen",
+      "meaningEn": "to come",
+      "pattern": "published-partial",
+      "forms": [
+        { "person": "ich", "form": "komme" }, { "person": "du", "form": "kommst" },
+        { "person": "er/sie", "form": "kommt" }, { "person": "Sie", "form": "kommen" }
+      ]
+    }
+  ],
+  "verbGap": {
+    "learnerMessage": "Two requested Lesson 2 verb paradigms are awaiting publication. Their approved sentence patterns remain available in Q&A practice.",
+    "state": "publication-pending",
+    "requestedCount": 2
+  },
+  "professionPairs": [
+    { "id": "profession:paketzusteller", "masculine": "der Paketzusteller", "feminine": "die Paketzustellerin", "glossEn": "parcel delivery agent", "operation": "Paketzusteller + in" },
+    { "id": "profession:friseur", "masculine": "der Friseur", "feminine": "die Friseurin", "glossEn": "hairdresser", "operation": "Friseur + in" },
+    { "id": "profession:kellner", "masculine": "der Kellner", "feminine": "die Kellnerin", "glossEn": "waiter / waitress", "operation": "Kellner + in" },
+    { "id": "profession:ingenieur", "masculine": "der Ingenieur", "feminine": "die Ingenieurin", "glossEn": "engineer", "operation": "Ingenieur + in" },
+    { "id": "profession:kfz-mechatroniker", "masculine": "der Kfz-Mechatroniker", "feminine": "die Kfz-Mechatronikerin", "glossEn": "automotive mechatronics engineer", "operation": "Kfz-Mechatroniker + in" },
+    { "id": "profession:student", "masculine": "der Student", "feminine": "die Studentin", "glossEn": "university student", "operation": "Student + in" },
+    { "id": "profession:journalist", "masculine": "der Journalist", "feminine": "die Journalistin", "glossEn": "journalist", "operation": "Journalist + in" },
+    { "id": "profession:architekt", "masculine": "der Architekt", "feminine": "die Architektin", "glossEn": "architect", "operation": "Architekt + in" },
+    { "id": "profession:arzt", "masculine": "der Arzt", "feminine": "die Ärztin", "glossEn": "doctor", "operation": "Arzt → Ärztin (stem change + in)" },
+    { "id": "profession:lehrer", "masculine": "der Lehrer", "feminine": "die Lehrerin", "glossEn": "teacher", "operation": "Lehrer + in" },
+    { "id": "profession:verkaeufer", "masculine": "der Verkäufer", "feminine": "die Verkäuferin", "glossEn": "shop assistant", "operation": "Verkäufer + in" },
+    { "id": "profession:schueler", "masculine": "der Schüler", "feminine": "die Schülerin", "glossEn": "school student", "operation": "Schüler + in" },
+    { "id": "profession:rentner", "masculine": "der Rentner", "feminine": "die Rentnerin", "glossEn": "pensioner", "operation": "Rentner + in" }
+  ],
+  "pluralGap": {
+    "state": "missing",
+    "learnerMessage": "Profession plurals are not published yet. Learn each singular article and person-form pair first."
+  },
+  "practicePrompts": [
+    { "id": "practice:greeting-morning", "kind": "choice", "prompt": "Choose the greeting that means “Good morning”.", "options": ["Guten Morgen", "Guten Abend", "Tschüs"], "answer": "Guten Morgen" },
+    { "id": "practice:name-informal", "kind": "build", "prompt": "Build the informal name question.", "tokens": ["Wie", "heißt", "du?"], "answer": "Wie heißt du?" },
+    { "id": "practice:origin-formal", "kind": "respond", "prompt": "Respond to: Woher kommen Sie?", "accepted": ["Ich komme aus …"] },
+    { "id": "practice:wellbeing", "kind": "respond", "prompt": "Respond to: Wie geht’s dir?", "accepted": ["Super!", "Sehr gut, danke.", "Gut, danke.", "Es geht.", "Nicht so gut."] },
+    { "id": "practice:profession-informal", "kind": "respond", "prompt": "Respond to: Was bist du von Beruf?", "accepted": ["Ich bin … von Beruf.", "Ich bin …", "Ich arbeite als …"] },
+    { "id": "practice:sein-du", "kind": "choice", "prompt": "Choose the published form for du + sein.", "options": ["bin", "bist", "ist"], "answer": "bist" }
+  ],
+  "gaps": [
+    { "code": "verb-paradigms-publication-pending", "state": "publication-pending", "learnerMessage": "Additional Lesson 2 verb paradigms are awaiting publication." },
+    { "code": "profession-plurals-missing", "state": "missing", "learnerMessage": "Profession plurals are awaiting content approval." },
+    { "code": "profession-pronunciation-pending", "state": "pending-review", "learnerMessage": "Profession pronunciation audio remains unavailable until human listening approval." },
+    { "code": "teacher-deck-excluded", "state": "excluded", "learnerMessage": "The separate teacher profession collection is not part of this learner-safe release." }
+  ]
+}

@@ -13,6 +13,7 @@ import {
   crossLessonActivityPath,
   decideLearnerPathRequest,
   listCanonicalActivityPaths,
+  listCanonicalLearnerStatePaths,
   rawColonActivityPath,
   resolveLearnerRoute,
 } from "../../apps/web/lib/content/routes.js";
@@ -192,13 +193,24 @@ describe("P3A route resolution", () => {
     }
   });
 
-  it("fails unknown lesson/activity/extra routes without dashboard fallback", () => {
+  it("resolves learner-state routes and fails unknown lesson/activity/extra routes without dashboard fallback", () => {
+    expect(listCanonicalLearnerStatePaths()).toEqual([
+      "/review",
+      "/review/session/today",
+      "/settings",
+    ]);
+    expect(resolveLearnerRoute("/review", projection).kind).toBe("review");
+    const reviewSession = resolveLearnerRoute("/review/session/today", projection);
+    expect(reviewSession.kind).toBe("review");
+    if (reviewSession.kind === "review") expect(reviewSession.sessionId).toBe("today");
+    expect(resolveLearnerRoute("/settings", projection).kind).toBe("settings");
     const cases = [
       "/lessons/03",
       "/lessons/01/activity/activity%3Amissing",
       "/lessons/01/extra",
       "/lessons/01/activity/activity%3Alesson-01-greetings-by-context/extra",
-      "/review",
+      "/review/unknown",
+      "/settings/unknown",
       "/dashboard",
     ];
     for (const path of cases) {

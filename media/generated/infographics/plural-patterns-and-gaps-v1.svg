@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" role="img" aria-labelledby="title desc" preserveAspectRatio="xMidYMid meet" xml:space="preserve">
+  <title id="title">Profession plural pattern families and an explicit content gap</title>
+  <desc id="desc">Five review-only profession examples show unchanged plural, e ending, umlaut plus e, en ending, and feminine innen. A separate core card states that the plural of Ingenieur is not yet verified in the current published bundle and must not be guessed.</desc>
+  <defs><style>
+    .h{font:700 38px Inter,Arial,sans-serif;fill:#15192c}.s{font:500 18px Inter,Arial,sans-serif;fill:#5c637a}.k{font:700 14px Inter,Arial,sans-serif;letter-spacing:1.2px}.w{font:700 25px Inter,Arial,sans-serif;fill:#15192c}.sm{font:500 14px Inter,Arial,sans-serif;fill:#5c637a}.card{fill:#fff;stroke:#dddff0;stroke-width:2}.arrow{stroke:#7957d5;stroke-width:4;stroke-linecap:round}.pl{fill:#7957d5}.reg{fill:#148a87}.special{fill:#b76a00}.gap{fill:#fff8e8;stroke:#d68a00;stroke-width:2}.chip{fill:#f0edff}.suffix{fill:#e8f7f5}.changed{fill:#fff0d4}
+  </style></defs>
+  <rect width="1200" height="720" rx="34" fill="#f8f7fc"/>
+  <text x="58" y="68" class="h">Plural is stored with every noun</text>
+  <text x="58" y="103" class="s">Notice the family, then remember the exact word. These teacher-deck samples stay review-only.</text>
+
+  <g transform="translate(58 140)">
+    <rect class="card" width="346" height="164" rx="22"/>
+    <rect class="chip" x="20" y="18" width="108" height="28" rx="14"/><text x="74" y="37" text-anchor="middle" class="k" fill="#6543c2">UNCHANGED</text>
+    <text x="20" y="88" class="w">der Elektriker</text><path class="arrow" d="M202 107h54"/><path d="M251 97l17 10-17 10z" class="pl"/>
+    <text x="20" y="140" class="w"><tspan fill="#7957d5">die</tspan><tspan> Elektriker</tspan></text>
+  </g>
+  <g transform="translate(427 140)">
+    <rect class="card" width="346" height="164" rx="22"/>
+    <rect class="suffix" x="20" y="18" width="94" height="28" rx="14"/><text x="67" y="37" text-anchor="middle" class="k" fill="#08716e">ADD -E</text>
+    <text x="20" y="88" class="w">der Landwirt</text><path class="arrow" d="M187 107h54"/><path d="M236 97l17 10-17 10z" class="pl"/>
+    <text x="20" y="140" class="w"><tspan fill="#7957d5">die</tspan><tspan> Landwirt</tspan><tspan fill="#148a87">e</tspan></text>
+  </g>
+  <g transform="translate(796 140)">
+    <rect class="card" width="346" height="164" rx="22"/>
+    <rect class="changed" x="20" y="18" width="144" height="28" rx="14"/><text x="92" y="37" text-anchor="middle" class="k" fill="#9b5900">UMLAUT + -E</text>
+    <text x="20" y="88" class="w">der Koch</text><path class="arrow" d="M141 107h54"/><path d="M190 97l17 10-17 10z" class="pl"/>
+    <text x="20" y="140" class="w"><tspan fill="#7957d5">die</tspan><tspan> K</tspan><tspan fill="#b76a00">ö</tspan><tspan>ch</tspan><tspan fill="#148a87">e</tspan></text>
+  </g>
+
+  <g transform="translate(58 329)">
+    <rect class="card" width="346" height="164" rx="22"/>
+    <rect class="suffix" x="20" y="18" width="104" height="28" rx="14"/><text x="72" y="37" text-anchor="middle" class="k" fill="#08716e">ADD -EN</text>
+    <text x="20" y="88" class="w">der Bauer</text><path class="arrow" d="M155 107h54"/><path d="M204 97l17 10-17 10z" class="pl"/>
+    <text x="20" y="140" class="w"><tspan fill="#7957d5">die</tspan><tspan> Bauer</tspan><tspan fill="#148a87">n</tspan></text>
+  </g>
+  <g transform="translate(427 329)">
+    <rect class="card" width="346" height="164" rx="22"/>
+    <rect class="suffix" x="20" y="18" width="138" height="28" rx="14"/><text x="89" y="37" text-anchor="middle" class="k" fill="#08716e">FEMININE -INNEN</text>
+    <text x="20" y="88" class="w">die Elektrikerin</text><path class="arrow" d="M214 107h40"/><path d="M249 97l17 10-17 10z" class="pl"/>
+    <text x="20" y="140" class="w"><tspan fill="#7957d5">die</tspan><tspan> Elektriker</tspan><tspan fill="#148a87">innen</tspan></text>
+  </g>
+  <g transform="translate(796 329)">
+    <rect class="gap" width="346" height="164" rx="22"/>
+    <path d="M33 18l16 28H17z" fill="#b76a00"/><text x="33" y="41" text-anchor="middle" font-family="Arial" font-size="17" font-weight="700" fill="#fff">!</text>
+    <text x="60" y="38" class="k" fill="#9b5900">CORE CONTENT GAP</text>
+    <text x="20" y="88" class="w"><tspan fill="#246bfd">der</tspan><tspan> Ingenieur</tspan></text>
+    <text x="20" y="119" class="sm">Plural is not verified in the current</text>
+    <text x="20" y="142" class="sm">published bundle. Show “pending”, not a guess.</text>
+  </g>
+
+  <g transform="translate(58 536)">
+    <rect width="1084" height="126" rx="22" fill="#161b31"/>
+    <text x="26" y="37" class="k" fill="#bfc6ff">HOW TO READ A PLURAL CARD</text>
+    <text x="26" y="77" class="w" fill="#fff">article + full plural form + pattern badge</text>
+    <text x="26" y="105" class="sm" fill="#d9dced">A family helps you notice. The stored plural is the authority.</text>
+    <rect x="850" y="33" width="201" height="57" rx="16" fill="#282d48" stroke="#6c7395"/>
+    <text x="950" y="58" text-anchor="middle" class="k" fill="#fff">TEACHER DECK</text><text x="950" y="79" text-anchor="middle" class="sm" fill="#d9dced">optional · review-only</text>
+  </g>
+</svg>

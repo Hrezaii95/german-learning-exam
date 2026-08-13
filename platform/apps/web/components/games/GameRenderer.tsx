@@ -20,8 +20,10 @@ import { WordOrderGame } from "./WordOrderGame";
 import { VerbBuilderGame } from "./VerbBuilderGame";
 import { MorphologyPuzzleGame } from "./MorphologyPuzzleGame";
 import type { GameEventSink } from "./GameFeedback";
+import { useOptionalLearnerState } from "@/components/learner-state/LearnerStateProvider";
+import { normalizePracticeEventForPersistence } from "@/lib/learner-state";
 
-function PracticeGameBody({
+export function PracticeGameBody({
   gameId,
   sessionId,
   onEvent,
@@ -55,16 +57,32 @@ function PracticeGameBody({
 export function GameRenderer({
   gameId,
   navigation = null,
+  onEvent: externalEvent,
 }: {
   gameId: PracticeGameId;
   navigation?: NavigationContext | null;
+  onEvent?: (event: LearnerEvent) => void;
 }) {
   const sessionId = useMemo(() => createPracticeUuid(), []);
   const [emitted, setEmitted] = useState<LearnerEvent[]>([]);
+  const learnerState = useOptionalLearnerState();
+  const [saveMessage, setSaveMessage] = useState<string | null>(null);
   const backHref = resolveBackHref(navigation, "hub");
 
   function onEvent(event: LearnerEvent) {
     setEmitted((prev) => [...prev, event]);
+    externalEvent?.(event);
+    if (!externalEvent && learnerState?.controller) {
+      try {
+        const persistent = normalizePracticeEventForPersistence({ event, gameId });
+        void learnerState.controller.appendEvent(persistent).then(
+          () => setSaveMessage("Practice evidence saved locally."),
+          () => setSaveMessage("Practice feedback worked, but local saving failed."),
+        );
+      } catch {
+        setSaveMessage("Practice feedback worked, but this event could not be saved.");
+      }
+    }
   }
 
   return (
@@ -83,8 +101,9 @@ export function GameRenderer({
         onEvent={onEvent}
       />
       <p className="dense" data-emitted-count={emitted.length}>
-        Events emitted this session: {emitted.length} (not persisted yet)
+        Events emitted this session: {emitted.length}
       </p>
+      {saveMessage ? <p className="detail-feedback" role="status">{saveMessage}</p> : null}
     </div>
   );
 }

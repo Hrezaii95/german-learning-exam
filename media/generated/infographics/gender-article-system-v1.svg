@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" role="img" aria-labelledby="title desc" preserveAspectRatio="xMidYMid meet" xml:space="preserve">
+  <title id="title">German noun article and gender system</title>
+  <desc id="desc">Four labeled cards distinguish masculine der, feminine die, neuter das, and plural die using both color and shape. Examples are der Beruf, die Stelle, das Praktikum, and die Elektriker. A lower example links der Architekt to die Architektin as two related words.</desc>
+  <defs>
+    <style>
+      .heading{font:700 38px Inter,Arial,sans-serif;fill:#15192c}.sub{font:500 18px Inter,Arial,sans-serif;fill:#5c637a}.label{font:700 16px Inter,Arial,sans-serif;letter-spacing:1.4px}.word{font:700 27px Inter,Arial,sans-serif;fill:#15192c}.small{font:500 15px Inter,Arial,sans-serif;fill:#5c637a}.note{font:600 17px Inter,Arial,sans-serif;fill:#353b52}.card{fill:#fff;stroke:#dddff0;stroke-width:2}.m{fill:#246bfd}.f{fill:#e64c86}.n{fill:#2e9d68}.pl{fill:#7957d5}.line{stroke:#6946e8;stroke-width:4;stroke-linecap:round}.token{fill:#f0edff;stroke:#d7cffb;stroke-width:2}
+    </style>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#272c48" flood-opacity=".10"/></filter>
+  </defs>
+  <rect width="1200" height="720" rx="34" fill="#f8f7fc"/>
+  <text x="58" y="68" class="heading">The article travels with the noun</text>
+  <text x="58" y="103" class="sub">Learn the article, shape and label together — color is only a supporting cue.</text>
+
+  <g transform="translate(58 145)" filter="url(#shadow)">
+    <rect class="card" width="248" height="274" rx="24"/>
+    <rect class="m" x="24" y="24" width="58" height="58" rx="12"/>
+    <text x="53" y="61" text-anchor="middle" class="label" fill="#fff">M</text>
+    <text x="98" y="49" class="label" fill="#246bfd">MASCULINE</text>
+    <text x="98" y="74" class="small">square · der</text>
+    <text x="24" y="145" class="word"><tspan fill="#246bfd">der</tspan><tspan> Beruf</tspan></text>
+    <text x="24" y="177" class="small">profession / occupation</text>
+    <path d="M24 205h200" stroke="#dce8ff" stroke-width="2"/>
+    <text x="24" y="237" class="note">Say it as one unit:</text>
+    <text x="24" y="262" class="small">der + Beruf</text>
+  </g>
+
+  <g transform="translate(336 145)" filter="url(#shadow)">
+    <rect class="card" width="248" height="274" rx="24"/>
+    <circle class="f" cx="53" cy="53" r="29"/>
+    <text x="53" y="61" text-anchor="middle" class="label" fill="#fff">F</text>
+    <text x="98" y="49" class="label" fill="#c9346f">FEMININE</text>
+    <text x="98" y="74" class="small">circle · die</text>
+    <text x="24" y="145" class="word"><tspan fill="#e64c86">die</tspan><tspan> Stelle</tspan></text>
+    <text x="24" y="177" class="small">position / job</text>
+    <path d="M24 205h200" stroke="#f8d8e6" stroke-width="2"/>
+    <text x="24" y="237" class="note">The article is visible</text>
+    <text x="24" y="262" class="small">in every noun card.</text>
+  </g>
+
+  <g transform="translate(614 145)" filter="url(#shadow)">
+    <rect class="card" width="248" height="274" rx="24"/>
+    <path class="n" d="M53 20l33 33-33 33-33-33z"/>
+    <text x="53" y="61" text-anchor="middle" class="label" fill="#fff">N</text>
+    <text x="98" y="49" class="label" fill="#247f57">NEUTER</text>
+    <text x="98" y="74" class="small">diamond · das</text>
+    <text x="24" y="145" class="word"><tspan fill="#2e9d68">das</tspan><tspan> Praktikum</tspan></text>
+    <text x="24" y="177" class="small">internship</text>
+    <path d="M24 205h200" stroke="#d8eee4" stroke-width="2"/>
+    <text x="24" y="237" class="note">Shape still works</text>
+    <text x="24" y="262" class="small">without color.</text>
+  </g>
+
+  <g transform="translate(892 145)" filter="url(#shadow)">
+    <rect class="card" width="248" height="274" rx="24"/>
+    <rect class="pl" x="18" y="18" width="58" height="46" rx="10" opacity=".35"/>
+    <rect class="pl" x="26" y="26" width="58" height="58" rx="12"/>
+    <text x="55" y="63" text-anchor="middle" class="label" fill="#fff">PL</text>
+    <text x="98" y="49" class="label" fill="#6543c2">PLURAL</text>
+    <text x="98" y="74" class="small">stack · die</text>
+    <text x="24" y="145" class="word"><tspan fill="#7957d5">die</tspan><tspan> Elektriker</tspan></text>
+    <text x="24" y="177" class="small">the electricians</text>
+    <path d="M24 205h200" stroke="#e2dcf7" stroke-width="2"/>
+    <text x="24" y="237" class="note">Teacher deck example</text>
+    <text x="24" y="262" class="small">review-only · optional</text>
+  </g>
+
+  <g transform="translate(58 468)">
+    <rect class="token" width="1082" height="192" rx="24"/>
+    <text x="30" y="43" class="label" fill="#6946e8">RELATED, NOT MERGED</text>
+    <rect x="31" y="69" width="335" height="83" rx="18" fill="#edf3ff" stroke="#bdd2ff" stroke-width="2"/>
+    <rect class="m" x="49" y="88" width="42" height="42" rx="9"/><text x="70" y="115" text-anchor="middle" class="label" fill="#fff">M</text>
+    <text x="107" y="119" class="word"><tspan fill="#246bfd">der</tspan><tspan> Architekt</tspan></text>
+    <path class="line" d="M400 111h267"/><path d="M656 98l23 13-23 13z" fill="#6946e8"/>
+    <text x="533" y="93" text-anchor="middle" class="small">person-form-of</text>
+    <rect x="709" y="69" width="342" height="83" rx="18" fill="#fff0f6" stroke="#f3bfd3" stroke-width="2"/>
+    <circle class="f" cx="749" cy="110" r="21"/><text x="749" y="116" text-anchor="middle" class="label" fill="#fff">F</text>
+    <text x="785" y="119" class="word"><tspan fill="#e64c86">die</tspan><tspan> Architektin</tspan></text>
+    <text x="30" y="179" class="small">Two canonical lexemes, one visible relationship. The role stays the same; the grammatical form changes.</text>
+  </g>
+</svg>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { LearnerLesson, LearnerWebProjection } from "@/lib/content/types";
+import { LearnerDashboard } from "@/components/learner-state/LearnerDashboard";
 
 export function LessonCard({ lesson }: { lesson: LearnerLesson }) {
   return (
@@ -26,7 +27,7 @@ export function LessonCard({ lesson }: { lesson: LearnerLesson }) {
 }
 
 export function DashboardView({ projection }: { projection: LearnerWebProjection }) {
-  const { zeroState, lessons, activityCount, lessonCount } = projection;
+  const { lessons, activityCount, lessonCount } = projection;
 
   return (
     <div className="stack">
@@ -34,62 +35,12 @@ export function DashboardView({ projection }: { projection: LearnerWebProjection
         <p className="dense">Welcome back</p>
         <h1>Continue where the course begins</h1>
         <p className="lede">
-          No learner progress is stored in this slice yet. Continuation and today’s
-          mission reflect the published zero-state.
+          Lessons, hubs, practice and private progress work together on this device.
         </p>
       </header>
+      <LearnerDashboard projection={projection} />
 
-      <section className="panel" aria-labelledby="continue-heading">
-        <h2 id="continue-heading">Continue</h2>
-        <p className="muted">
-          Next published activity: Start{" "}
-          <span className="german" lang="de">
-            {zeroState.continueLessonTitleDe}
-          </span>
-        </p>
-        <p style={{ marginTop: "1rem" }}>
-          <Link className="btn btn-primary" href={zeroState.continuePath}>
-            Start learning
-          </Link>
-        </p>
-      </section>
-
-      <section className="panel" aria-labelledby="mission-heading">
-        <h2 id="mission-heading">Today’s mission</h2>
-        <p className="placeholder-banner">
-          Placeholder from zero-state: open the first Lesson 1 activity. Review
-          scheduling arrives in a later slice.
-        </p>
-        <p style={{ marginTop: "1rem" }}>
-          <Link className="btn btn-secondary" href={zeroState.continuePath}>
-            Begin mission
-          </Link>
-        </p>
-      </section>
-
-      <section aria-labelledby="metrics-heading">
-        <h2 id="metrics-heading" className="dense">
-          Compact metrics
-        </h2>
-        <div className="metrics">
-          <div className="metric">
-            <span className="metric__label">Published lessons</span>
-            <span className="metric__value">{lessonCount}</span>
-          </div>
-          <div className="metric">
-            <span className="metric__label">Published activities</span>
-            <span className="metric__value">{activityCount}</span>
-          </div>
-          <div className="metric">
-            <span className="metric__label">Learned concepts</span>
-            <span className="metric__value">Not tracked yet</span>
-          </div>
-          <div className="metric">
-            <span className="metric__label">Due / streak / XP</span>
-            <span className="metric__value">Not tracked yet</span>
-          </div>
-        </div>
-      </section>
+      <p className="dense">Published course scope: {lessonCount} lessons · {activityCount} activities.</p>
 
       <section aria-labelledby="lessons-heading">
         <h2 id="lessons-heading">Lessons</h2>

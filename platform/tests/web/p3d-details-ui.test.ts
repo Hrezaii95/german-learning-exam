@@ -103,7 +103,7 @@ describe("P3D detail UI contracts", () => {
     expect(html).toContain('data-gender-token="F"');
     expect(html).toContain("Plural awaiting content approval");
     expect(html).toContain(PRONUNCIATION_PENDING_EXPLANATION);
-    expect(html).toContain(ADD_TO_REVIEW_PENDING_EXPLANATION);
+    expect(html).toContain("Review cards, tags, and notes become available when local learning state loads in the browser.");
     expect(html).toContain('tabindex="-1"');
     expect(html).toContain("disabled");
     expect(html).toContain("Architekt");
