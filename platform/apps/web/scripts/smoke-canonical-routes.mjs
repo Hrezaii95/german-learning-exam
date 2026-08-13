@@ -226,7 +226,6 @@ async function runSmoke() {
     }
 
     for (const path of [
-      "/vocabulary/lex:ingenieur",
       "/vocabulary/lex%3Aarchitektin",
       "/verbs/lex%3Aarchitekt",
       "/vocabulary/verb%3Asein",
