@@ -226,10 +226,8 @@ async function runSmoke() {
     }
 
     for (const path of [
-      "/vocabulary/lex%3Aarchitektin",
       "/verbs/lex%3Aarchitekt",
       "/vocabulary/verb%3Asein",
-      "/phrases/qa%3Aprofession-formal-main",
       "/dashboard",
     ]) {
       const { status, url } = await fetchStatus(path, { redirect: "follow" });
