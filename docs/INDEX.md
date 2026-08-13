@@ -31,6 +31,10 @@ Cursor or any implementation agent must read these documents in order. A later d
 | 20 | `18-requirement-traceability.md` | Every MUST mapped to UX, data/engine contracts and stable acceptance evidence | Cursor packets cannot silently omit a requirement |
 | 21 | `DECISIONS.md` | Accepted architectural and product decisions | Changes require a superseding decision record |
 | 22 | `REFERENCES.md` | Internal evidence and external standards | Claims and implementation choices have inspectable sources |
+| 23 | `22-claude-code-takeover-and-codex-design-handoff.md` | Current verified state, cost-aware ownership, UX audit and Claude takeover sequence | Claude can take over without replaying the 17-hour history |
+| 24 | `23-claude-codex-org-chart.md` | Human-readable organization and media/design delivery loops | Agent boundaries and escalation paths are visible |
+
+Machine-readable execution ownership, tools and loops live in `../config/claude-codex-operating-model.yaml`.
 
 ## Authority order
 

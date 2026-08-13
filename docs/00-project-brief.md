@@ -62,10 +62,11 @@ The repository now contains resources that materially strengthen the plan:
 - official workbook transcripts;
 - a 64-page picture dictionary;
 - a 387-track mixed audio archive;
+- an owner-restored complete Kursbuch audio delivery containing 90 MP3s (CD1: 59; CD2: 31), including 17 filename-scoped Lesson 1–2 CD1 tracks;
 - teacher professions material and learner notes;
 - the complete original product conversation and canonical UI renders.
 
-These sources enable bilingual validation, answer-key checking, transcript-aligned listening exercises, source-backed audio navigation, and richer visual taxonomies. They also expose a critical need for provenance-aware ingestion because the audio archive mixes German, Czech, Slovak, A1.1, and A1.2 packs.
+These sources enable bilingual validation, answer-key checking, transcript-aligned listening exercises, source-backed audio navigation, and richer visual taxonomies. They also expose a critical need for provenance-aware ingestion because the older audio archive mixes German, Czech, Slovak, A1.1, and A1.2 packs. The restored Kursbuch delivery is higher-confidence source packaging, but it still requires checksum registration, duplicate detection, coursebook transcript/exercise alignment, scope filtering, and listening verification before publication.
 
 ## Required product enhancements
 

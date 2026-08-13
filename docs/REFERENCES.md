@@ -9,6 +9,7 @@
 - `resources/original/glossaries/Momente_A1_1_KB_Glossar_Deutsch_Spanisch.pdf` — secondary translation cross-check.
 - `resources/original/transcripts/Momente_AB_A1_1_Transskriptionen_2.pdf` — workbook audio transcript and track/exercise evidence.
 - `resources/original/audio/Audio-20260730T043413Z-1-001/` — mixed 387-track source archive; only verified German Lesson 1–2 tracks ship.
+- `resources/original/hossein added new material that needs to be moved to organized folder structure/Kursbuch-20260813T121208Z-1-001/Kursbuch/` — owner-restored complete Kursbuch audio intake: 90 MP3s (CD1: 59; CD2: 31); awaiting governed move, deduplication, registration and exact coursebook alignment. CD1 `1_01`–`1_17` is the filename-scoped Lessons 1–2 candidate subset.
 - `resources/original/learner-notes/Lesson 1_260730_050234.txt` — learner coverage checklist.
 - `resources/original/learner-notes/Notes_260730_040559.txt` — 48-row professions forms/meaning table.
 - `resources/original/teacher-materials/IMG-20260723-WA0001.jpg` — required professions handout and visual reference.

@@ -1,0 +1,435 @@
+schema_version: 1
+updated: "2026-08-13T15:40:00+03:30"
+
+project:
+  id: german-learning-os-lessons-01-02
+  root: "E:\\claude-cursor\\side projects\\German learning"
+  implementation_root: platform
+  live_url: "https://hrezaii95.github.io/german-learning-exam/"
+  branch: codex/live-alpha
+  deployment: github-pages-continuous
+  authority_docs:
+    - docs/22-claude-code-takeover-and-codex-design-handoff.md
+    - plans/PLAN-BATON-full-alpha.md
+    - plans/full-alpha-register.csv
+    - docs/INDEX.md
+
+owner_policy:
+  owner: hossein
+  objective: "Use Claude for everything it does best; spend Codex where design, art, media, or UX judgment produces the largest quality gain."
+  scope_change_protocol:
+    proposed_by: claude-code-orch
+    approval_channel: current-claude-code-chat
+    proposal_must_include:
+      - requested_codex_scope
+      - quality_or_speed_benefit
+      - estimated_codex_cost
+      - file_ownership
+      - stop_condition
+    effective_only_after_owner_approval: true
+    record_location: scope_overrides
+
+budget_strategy:
+  accounts:
+    claude:
+      plan: "Max 5"
+      approximate_monthly_usd: 100
+      role: primary-workforce
+    codex:
+      plan: "20 USD tier"
+      approximate_monthly_usd: 20
+      role: specialist-studio
+  allocation_rules:
+    - "Route continuous context, reading, coding, testing and deployment to Claude."
+    - "Route visual taste, interaction composition, image generation, infographics, TTS and visual QA to Codex."
+    - "Batch jobs that share style or voice; never regenerate accepted hash-stable assets."
+    - "Use one senior Codex design judgment before many mechanical asset jobs."
+    - "Retry a failed asset at most twice before Claude revises the brief or asks the owner."
+    - "Do not spend Codex quota duplicating Claude code reviews or general research unless an approved scope override says so."
+  default_parallelism:
+    claude_workers: 3
+    codex_jobs: 2
+    rationale: "Enough concurrency for image/audio lanes without multiplying duplicate prompts or exhausting the smaller Codex allowance."
+
+scope:
+  claude_default:
+    owns:
+      - orchestration
+      - claude-codex-integration-setup
+      - mcp-skill-agent-command-configuration
+      - permissions-routing-automations-and-scheduling
+      - source-and-content-audit
+      - german-content-gap-routing
+      - architecture
+      - content-schema-and-publication
+      - react-next-implementation
+      - learning-mastery-review-persistence
+      - accessibility
+      - tests-and-e2e
+      - performance-and-offline
+      - git-ci-deployment
+      - release-evidence
+      - media-integration
+    may_delegate_to_own_agents: true
+  codex_project_default:
+    owns:
+      - senior-ux-ui-direction
+      - visual-design-critique
+      - interaction-and-page-composition-specification
+      - image-generation-and-editing
+      - semantic-infographic-design
+      - tts-generation
+      - technical-audio-qa
+      - responsive-visual-qa
+    forbidden_without_scope_override:
+      - claude-harness-configuration
+      - mcp-registration-or-removal
+      - claude-skill-agent-or-command-installation
+      - permissions-or-automation-changes
+      - canonical-german-content-promotion
+      - publication-status-changes
+      - routine-application-coding
+      - git-commit-or-push
+      - deployment
+      - closing-human-language-review
+      - closing-owner-acceptance
+  scope_overrides: []
+
+organization:
+  orchestrator:
+    id: CC-ORCH
+    runtime: claude-code
+    responsibility: "Own context, baton, inventory, dispatch, integration, verification and owner communication."
+    writes:
+      - plans/PLAN-BATON-full-alpha.md
+      - plans/full-alpha-register.csv
+      - research/release-evidence/**
+    never_claims_done_from_worker_report_alone: true
+
+  claude_agents:
+    - id: CC-CONTENT
+      specialty: source-and-content-audit
+      suggested_agent_type: explorer-or-content-specialist
+      model_policy: "Sonnet for extraction; Opus only for disputed authority judgment."
+    - id: CC-WEB
+      specialty: frontend-and-integration
+      suggested_agent_type: react-reviewer-or-worker
+      model_policy: "Sonnet implementation; independent React review after changes."
+    - id: CC-LEARN
+      specialty: learning-engine-and-state
+      suggested_agent_type: typescript-reviewer-or-worker
+      model_policy: "Sonnet implementation; deterministic tests required."
+    - id: CC-A11Y
+      specialty: accessibility-and-responsive-behavior
+      suggested_agent_type: a11y-architect
+      model_policy: "Sonnet; browser/manual evidence required."
+    - id: CC-RELEASE
+      specialty: build-ci-deployment-and-evidence
+      suggested_agent_type: e2e-runner
+      model_policy: "Mechanical gates on efficient model; high judgment only for release verdict."
+
+  codex_agents:
+    - id: CDX-UX
+      name: codex-senior-ux-ui-designer
+      runtime: fresh-codex-mcp-job
+      objective: "Audit live pages against the approved mock direction and learning loop; produce options, design contract and exact rework briefs."
+      tools:
+        - image_gen__imagegen
+        - view_image
+        - browser-in-app-inspection
+        - web__run
+      skills:
+        - frontend-design-direction
+        - brand-system
+        - make-interfaces-feel-better
+        - motion-ui
+        - browser:control-in-app-browser
+      outputs:
+        - ux-audit.md
+        - design-direction-options.md
+        - chosen-direction-contract.yaml
+        - asset-generation-manifest.json
+      owner_gate: required-for-material-direction-choice
+
+    - id: CDX-INFO
+      name: codex-infographic-designer
+      runtime: fresh-codex-mcp-job
+      objective: "Create coherent responsive semantic diagrams for gender, plural, person form, verb morphology, grammar, number construction and dialogue flow."
+      tools:
+        - image_gen__imagegen
+        - view_image
+        - shell_command
+      skills:
+        - imagegen
+        - brand-system
+        - frontend-design-direction
+      must_preserve:
+        - gender-colors-plus-shapes-and-labels
+        - non-gender-morphology-tokens
+        - german-text-in-html-where-interactive
+        - responsive-360-820-1440
+      outputs:
+        - svg-or-png-assets
+        - alt-text
+        - exact-content-id-map
+        - responsive-notes
+        - structured-result-json
+
+    - id: CDX-IMG
+      name: codex-image-worker
+      runtime: claude-custom-agent-to-codex-mcp
+      installed_agent: "C:\\Users\\h.rezaee\\.claude\\agents\\codex-image-worker.md"
+      installed_skill: codex-image-worker
+      objective: "Generate or edit original learner-safe illustrations and responsive variants."
+      tools:
+        - mcp__codex-media__codex
+        - mcp__codex-media__codex-reply
+        - image_gen__imagegen
+        - view_image
+      quality_checks:
+        - exact-subject-match
+        - coherent-style
+        - no-watermark-or-logo
+        - no-unrequested-embedded-text
+        - crop-safe-desktop-tablet-mobile
+        - accessible-alt-text
+        - deterministic-filename
+      outputs:
+        - versioned-images
+        - responsive-crop-metadata
+        - structured-result-json
+
+    - id: CDX-AUD
+      name: codex-audio-worker
+      runtime: claude-custom-agent-to-codex-mcp
+      installed_agent: "C:\\Users\\h.rezaee\\.claude\\agents\\codex-audio-worker.md"
+      installed_skill: codex-audio-worker
+      objective: "Generate exact-text TTS, preserve approved source audio, bind IDs and run technical QA."
+      tools:
+        - mcp__codex-media__codex
+        - mcp__codex-media__codex-reply
+        - edge-tts
+        - ffprobe
+        - ffmpeg
+        - powershell-get-filehash
+      default_profile:
+        locale: de-DE
+        voice: de-DE-KatjaNeural
+        generation_rate: "+4%"
+        playback_rates: [0.8, 1.0]
+      sandbox_exception:
+        mode: danger-full-access
+        reason: "Local Windows workspace-write helper cannot launch external audio tools."
+        boundary: "Designated audio output directory and media-only prompt."
+      outputs:
+        - mp3-assets
+        - exact-spoken-text-map
+        - sha256-and-duration
+        - ffprobe-audit
+        - human-review-pending-state
+
+    - id: CDX-VQA
+      name: codex-visual-media-reviewer
+      runtime: fresh-codex-mcp-job
+      objective: "Adversarially inspect rendered pages and media; accept artifacts or return precise bounded rework."
+      tools:
+        - browser-in-app-inspection
+        - view_image
+        - ffprobe
+        - shell_command
+      skills:
+        - production-audit
+        - frontend-design-direction
+        - react-testing
+        - browser:control-in-app-browser
+      viewports:
+        - "1440x1000"
+        - "820x1080"
+        - "390x844"
+        - "360x800"
+      outputs:
+        - verdict
+        - screenshot-paths
+        - severity-ranked-findings
+        - accepted-artifact-ids
+        - retry-briefs
+
+interfaces:
+  claude_to_codex:
+    type: user-scoped-mcp
+    name: codex-media
+    scope: all-claude-code-projects
+    command: "codex mcp-server"
+    tools:
+      - mcp__codex-media__codex
+      - mcp__codex-media__codex-reply
+    health_command: "claude mcp get codex-media"
+    current_status: connected-and-smoke-tested
+    limitation: "Creates fresh Codex jobs; it does not control an already-open Codex Desktop thread or its existing subagent tree."
+    configuration_owner: CC-ORCH
+    codex_handoff_contract:
+      - outcome-focused-/goal-prompt
+      - authoritative-spec-paths
+      - current-evidence-and-report-paths
+      - specialist-artifact-paths-after-delegation
+
+skills_and_agents_installed_globally:
+  skills:
+    - codex-image-worker
+    - codex-audio-worker
+    - codex-media-pipeline
+  agents:
+    - codex-image-worker
+    - codex-audio-worker
+    - codex-media-coordinator
+
+plugins_and_apps:
+  active_or_available_in_codex_section:
+    - name: codex-native-image-generation
+      type: tool
+      status: active-in-headless-codex
+      tool: image_gen__imagegen
+    - name: in-app-browser
+      type: bundled-plugin
+      status: active
+      purpose: live-responsive-ux-inspection
+    - name: codex-media
+      type: user-scoped-mcp
+      status: connected
+      purpose: claude-to-codex-control
+  optional_not_installed:
+    - name: Canva
+      use_only_if: "Owner wants collaborative editable design files and approves plugin installation."
+    - name: HeyGen
+      use_only_if: "Avatar/video instruction becomes in scope and owner approves cost/data flow."
+    - name: Remotion
+      use_only_if: "Programmatic lesson video becomes in scope."
+  install_policy: "Do not install optional apps merely because they are available; require a concrete task and owner approval."
+
+commands:
+  connection:
+    - "claude mcp get codex-media"
+    - "codex mcp-server"
+  project_gates:
+    - "cd platform && npm run check"
+    - "cd platform && npm run audit:prod"
+    - "cd platform && npm run build:pages"
+    - "cd platform && npm run smoke:pages"
+    - "node tools/validate-source-manifest.mjs"
+    - "node tools/audit-alpha-tts.mjs"
+  audio_example:
+    - "edge-tts --voice de-DE-KatjaNeural --rate=+4% --text <exact-text> --write-media <output.mp3>"
+    - "ffprobe -v error -show_entries stream=codec_name,sample_rate,channels -show_entries format=duration,size -of json <output.mp3>"
+
+automation_loops:
+  - id: LOOP-INVENTORY
+    owner: CC-ORCH
+    trigger: "New lesson, page, content wave or media request"
+    steps:
+      - derive-required-asset-id-set
+      - diff-against-approved-artifacts
+      - deduplicate-by-content-style-voice
+      - mark-ready-blocked-or-needs-owner
+      - dispatch-only-missing-ready-items
+    stop_when: "Every inventory row is ready, blocked with reason, or rejected with a queued replacement."
+
+  - id: LOOP-UX-DIRECTION
+    owner: CDX-UX
+    trigger: "Material page-family redesign or visual-system expansion"
+    steps:
+      - inspect-approved-mocks-and-live-renders
+      - create-three-coherent-options
+      - estimate-asset-and-implementation-cost
+      - owner-pick-in-claude-chat
+      - publish-chosen-design-contract
+    stop_when: "Owner choice recorded or existing direction explicitly retained."
+
+  - id: LOOP-IMAGE
+    owner: CDX-IMG
+    trigger: "Approved runnable image rows"
+    steps:
+      - generate-one-asset-or-tight-variant-family
+      - inspect-dimensions-style-content-and-crops
+      - accept-or-one-precise-retry
+      - second-retry-or-block
+      - hash-and-return-absolute-paths
+    max_attempts_per_asset: 3
+    stop_when: "Accepted, or blocked after two rework attempts."
+
+  - id: LOOP-AUDIO
+    owner: CDX-AUD
+    trigger: "Exact source text and binding are approved"
+    steps:
+      - reuse-exact-hash-approved-asset-if-present
+      - generate-only-missing-or-version-changed-text
+      - run-ffprobe-hash-and-duration-gates
+      - bind-stable-content-ids
+      - queue-human-german-listening-review
+    stop_when: "Technical gate passes and human state is explicit; technical pass never implies linguistic approval."
+
+  - id: LOOP-INTEGRATE
+    owner: CC-ORCH
+    trigger: "Codex artifact returned"
+    steps:
+      - verify-absolute-path-and-file
+      - inspect-actual-artifact
+      - verify-content-id-rights-and-review-state
+      - integrate-through-canonical-projection
+      - run-focused-tests-and-responsive-check
+      - update-inventory-and-baton
+    stop_when: "Artifact is live and verified, or rejected with a precise return brief."
+
+  - id: LOOP-RELEASE
+    owner: CC-RELEASE
+    trigger: "A coherent integration batch reaches green focused gates"
+    steps:
+      - run-canonical-project-gates
+      - run-source-and-media-audits
+      - run-four-viewport-visual-and-a11y-checks
+      - push-codex-live-alpha
+      - verify-github-pages-and-representative-routes
+      - record-current-evidence-not-old-claims
+    stop_when: "Deploy verified or exact blocker recorded; owner/human gates remain explicit."
+
+result_contract:
+  required_fields:
+    - status
+    - summary
+    - artifacts
+    - next_actions
+  media_extensions:
+    - content_ids
+    - source_or_prompt
+    - dimensions_or_audio_metadata
+    - sha256
+    - technical_qa
+    - human_review_state
+    - rejected_artifacts
+  statuses:
+    - success
+    - warning
+    - blocked
+    - error
+  artifact_claim_rule: "Claude verifies every returned path before marking an inventory row ready."
+
+current_blockers:
+  - id: B-TTS-MANIFEST
+    severity: release-blocking-technical
+    evidence: "Base manifest=327, disk=354, 27 unmanifested supplement files."
+    owner: CC-ORCH-with-CDX-AUD
+  - id: B-TTS-HUMAN
+    severity: release-blocking-human
+    evidence: "Generated clips remain preview pending qualified German listening review."
+    owner: qualified-german-reviewer
+  - id: B-UX-RICHNESS
+    severity: product-quality
+    evidence: "Dashboard and generic hubs remain materially less rich than the approved composites."
+    owner: CDX-UX-with-CC-WEB
+  - id: B-CURRICULUM-GAPS
+    severity: content
+    evidence: "Only four published verb details and five exact stored noun plurals; optional profession rows remain review-pending."
+    owner: CC-CONTENT
+  - id: B-A11Y-OFFLINE
+    severity: acceptance
+    evidence: "Full browser accessibility, screen-reader, transcript and offline acceptance evidence remains incomplete."
+    owner: CC-A11Y-and-CC-RELEASE

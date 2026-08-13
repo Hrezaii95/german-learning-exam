@@ -13,6 +13,7 @@ Everything under `resources/original/` is immutable evidence. OCR, extracted tex
 | Workbook pages 6–13 | practice forms, pronunciation tasks, listening exercise linkage | Priority 2 |
 | Workbook transcript PDF | exact German source-audio transcript and exercise/track mapping | Required for listening publication |
 | German workbook audio CD1 | source listening tracks for Lessons 1–2 | Track mapping must match transcript and exercise |
+| Owner-restored Kursbuch CD1/CD2 audio | coursebook listening and dialogue tracks | Incoming delivery has 90 MP3s (CD1: 59; CD2: 31); hash/register and deduplicate before moving from intake; only mapped Lesson 1–2 tracks may enter Alpha |
 | Coursebook solutions | checkpoint validation where applicable | Does not replace content evidence |
 | Teacher image + professions note | required Lesson 2 enrichment | Priority 3; original image is a reference, not hosted illustration |
 | Learner Lesson 1 note | coverage cross-check | Candidate assertions; verify against official sources |
@@ -65,7 +66,20 @@ For German workbook CD1, filename evidence and transcript headings currently sup
 - `1_11`–`1_14`: Lesson 2, Exercise 6b;
 - `1_15`: Lesson 2, Exercise 12.
 
-These mappings still require checksum registration and a listening review. No German Coursebook CD1 pack is clearly present; workbook tracks must never be labeled coursebook audio.
+These mappings still require checksum registration and a listening review. Workbook tracks must never be labeled coursebook audio.
+
+The owner restored the previously missing full German Kursbuch audio delivery at:
+
+`resources/original/hossein added new material that needs to be moved to organized folder structure/Kursbuch-20260813T121208Z-1-001/Kursbuch/`
+
+Inventory captured on 2026-08-13:
+
+- 90 MP3 files; 66,786,364 bytes total;
+- CD1: 59 tracks, `1_01` through `1_59`;
+- CD2: 31 tracks, `2_01` through `2_31`;
+- the filename-scoped Lesson 1–2 coursebook subset is CD1 `1_01`–`1_17`: Lesson 1 `1_01`–`1_14`, Lesson 2 `1_15`–`1_17`.
+
+Claude Code owns the ingestion operation: compute and register hashes at the intake location, compare hashes and audio fingerprints against the existing mixed archive, record duplicates without silently deleting evidence, move the delivery into the governed `resources/original/audio/` hierarchy, update the source manifest/lock and references, align each Lesson 1–2 track to coursebook page/exercise/transcript evidence, and produce an assertion-level diff. Filenames are navigation evidence, not sufficient publication proof. CD1 Lesson 3+ and all CD2 tracks remain outside the Lessons 1–2 Alpha unless explicitly linked as approved enrichment.
 
 ## Deduplication
 
