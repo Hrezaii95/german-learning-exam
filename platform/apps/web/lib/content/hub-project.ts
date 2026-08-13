@@ -15,6 +15,7 @@ import {
   type LearnerHubRecord,
   type LearnerHubSearchField,
 } from "./hub-types";
+import { projectHubExperience } from "./hub-experiences";
 
 export class HubProjectionError extends Error {
   readonly code = "HUB_PROJECTION_FAILED";
@@ -61,12 +62,12 @@ const HUB_COPY: Readonly<
   listening: Object.freeze({
     title: "Listening",
     description:
-      "Published dialogues and listening assets. Empty while listening remains review-only or absent.",
+      "All 15 approved workbook tracks for Lessons 1–2, grouped by lesson and exercise with direct practice links.",
   }),
   concepts: Object.freeze({
     title: "Concepts",
     description:
-      "Published concept collections. Empty while collections such as teacher decks remain review-only.",
+      "Six source-backed learning paths that connect published vocabulary, grammar, phrases, listening, and activities.",
   }),
 });
 
@@ -188,6 +189,7 @@ function projectHub(
     itemCount: items.length,
     categories: Object.freeze([...categorySet].sort((a, b) => a.localeCompare(b))),
     items: Object.freeze(items),
+    experience: projectHubExperience(indexes, hubId),
   });
 }
 

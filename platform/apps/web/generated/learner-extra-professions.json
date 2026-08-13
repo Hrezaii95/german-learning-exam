@@ -1,0 +1,2190 @@
+{
+  "collection": {
+    "canonicalPath": "/collections/professions",
+    "coreLessonCompletion": false,
+    "detailRouteCount": 48,
+    "fragmentLexemeRecordCount": 86,
+    "humanLanguageReviewRequired": true,
+    "id": "collection:teacher-professions",
+    "inclusion": "optional",
+    "lessonId": "lesson:02",
+    "media": {
+      "audioAvailable": false,
+      "imagesAvailable": false,
+      "message": "No audio or images are published for this optional collection yet."
+    },
+    "slug": "professions",
+    "sourceFormLexemeCount": 102,
+    "sourcePriority": 3,
+    "sourceRowCount": 48,
+    "sourceStatus": "candidate",
+    "titleDe": "Berufe — Lehrermaterial",
+    "titleEn": "Teacher professions"
+  },
+  "projectionKind": "learner-extra-professions",
+  "rows": [
+    {
+      "detailPath": "/collections/professions/01",
+      "feminine": [
+        {
+          "plural": "die Elektrikerinnen",
+          "singular": "die Elektrikerin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:elektriker",
+      "masculine": [
+        {
+          "plural": "die Elektriker",
+          "singular": "der Elektriker"
+        }
+      ],
+      "meaningEn": "Electrician",
+      "routeSegment": "01",
+      "searchText": "Electrician der Elektriker die Elektriker die Elektrikerin die Elektrikerinnen",
+      "sourceRow": 1,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/02",
+      "feminine": [
+        {
+          "plural": "die Gärtnerinnen",
+          "singular": "die Gärtnerin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:gartner",
+      "masculine": [
+        {
+          "plural": "die Gärtner",
+          "singular": "der Gärtner"
+        }
+      ],
+      "meaningEn": "Gardener",
+      "routeSegment": "02",
+      "searchText": "Gardener der Gärtner die Gärtner die Gärtnerin die Gärtnerinnen",
+      "sourceRow": 2,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/03",
+      "feminine": [
+        {
+          "plural": "die Automechanikerinnen",
+          "singular": "die Automechanikerin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:automechaniker",
+      "masculine": [
+        {
+          "plural": "die Automechaniker",
+          "singular": "der Automechaniker"
+        }
+      ],
+      "meaningEn": "Auto Mechanic",
+      "routeSegment": "03",
+      "searchText": "Auto Mechanic der Automechaniker die Automechaniker die Automechanikerin die Automechanikerinnen",
+      "sourceRow": 3,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/04",
+      "feminine": [
+        {
+          "plural": "die Busfahrerinnen",
+          "singular": "die Busfahrerin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:busfahrer",
+      "masculine": [
+        {
+          "plural": "die Busfahrer",
+          "singular": "der Busfahrer"
+        }
+      ],
+      "meaningEn": "Bus Driver",
+      "routeSegment": "04",
+      "searchText": "Bus Driver der Busfahrer die Busfahrer die Busfahrerin die Busfahrerinnen",
+      "sourceRow": 4,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/05",
+      "feminine": [
+        {
+          "plural": "die Friseurinnen",
+          "singular": "die Friseurin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:friseur",
+      "masculine": [
+        {
+          "plural": "die Friseure",
+          "singular": "der Friseur"
+        }
+      ],
+      "meaningEn": "Hairdresser",
+      "routeSegment": "05",
+      "searchText": "Hairdresser der Friseur die Friseure die Friseurin die Friseurinnen",
+      "sourceRow": 5,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/06",
+      "feminine": [
+        {
+          "plural": "die Straßenarbeiterinnen",
+          "singular": "die Straßenarbeiterin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:strassenarbeiter",
+      "masculine": [
+        {
+          "plural": "die Straßenarbeiter",
+          "singular": "der Straßenarbeiter"
+        }
+      ],
+      "meaningEn": "Street Worker",
+      "routeSegment": "06",
+      "searchText": "Street Worker der Straßenarbeiter die Straßenarbeiter die Straßenarbeiterin die Straßenarbeiterinnen",
+      "sourceRow": 6,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/07",
+      "feminine": [
+        {
+          "plural": "die Bäckerinnen",
+          "singular": "die Bäckerin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:backer",
+      "masculine": [
+        {
+          "plural": "die Bäcker",
+          "singular": "der Bäcker"
+        }
+      ],
+      "meaningEn": "Baker",
+      "routeSegment": "07",
+      "searchText": "Baker der Bäcker die Bäcker die Bäckerin die Bäckerinnen",
+      "sourceRow": 7,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/08",
+      "feminine": [
+        {
+          "plural": "die Maurerinnen",
+          "singular": "die Maurerin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:maurer",
+      "masculine": [
+        {
+          "plural": "die Maurer",
+          "singular": "der Maurer"
+        }
+      ],
+      "meaningEn": "Bricklayer",
+      "routeSegment": "08",
+      "searchText": "Bricklayer der Maurer die Maurer die Maurerin die Maurerinnen",
+      "sourceRow": 8,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/09",
+      "feminine": [
+        {
+          "plural": "die Landwirtinnen",
+          "singular": "die Landwirtin"
+        },
+        {
+          "plural": "die Bäuerinnen",
+          "singular": "die Bäuerin"
+        }
+      ],
+      "hasAlternatives": true,
+      "id": "teacher-job:landwirt",
+      "masculine": [
+        {
+          "plural": "die Landwirte",
+          "singular": "der Landwirt"
+        },
+        {
+          "plural": "die Bauern",
+          "singular": "der Bauer"
+        }
+      ],
+      "meaningEn": "Farmer",
+      "routeSegment": "09",
+      "searchText": "Farmer der Landwirt die Landwirte der Bauer die Bauern die Landwirtin die Landwirtinnen die Bäuerin die Bäuerinnen",
+      "sourceRow": 9,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/10",
+      "feminine": [
+        {
+          "plural": "die Fotografinnen",
+          "singular": "die Fotografin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:fotograf",
+      "masculine": [
+        {
+          "plural": "die Fotografen",
+          "singular": "der Fotograf"
+        }
+      ],
+      "meaningEn": "Photographer",
+      "routeSegment": "10",
+      "searchText": "Photographer der Fotograf die Fotografen die Fotografin die Fotografinnen",
+      "sourceRow": 10,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/11",
+      "feminine": [
+        {
+          "plural": "die Malerinnen",
+          "singular": "die Malerin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:maler",
+      "masculine": [
+        {
+          "plural": "die Maler",
+          "singular": "der Maler"
+        }
+      ],
+      "meaningEn": "Painter",
+      "routeSegment": "11",
+      "searchText": "Painter der Maler die Maler die Malerin die Malerinnen",
+      "sourceRow": 11,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/12",
+      "feminine": [
+        {
+          "plural": "die Architektinnen",
+          "singular": "die Architektin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:architekt",
+      "masculine": [
+        {
+          "plural": "die Architekten",
+          "singular": "der Architekt"
+        }
+      ],
+      "meaningEn": "Architect",
+      "routeSegment": "12",
+      "searchText": "Architect der Architekt die Architekten die Architektin die Architektinnen",
+      "sourceRow": 12,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/13",
+      "feminine": [
+        {
+          "plural": "die Lehrerinnen",
+          "singular": "die Lehrerin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:lehrer",
+      "masculine": [
+        {
+          "plural": "die Lehrer",
+          "singular": "der Lehrer"
+        }
+      ],
+      "meaningEn": "Teacher",
+      "routeSegment": "13",
+      "searchText": "Teacher der Lehrer die Lehrer die Lehrerin die Lehrerinnen",
+      "sourceRow": 13,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/14",
+      "feminine": [
+        {
+          "plural": "die Köchinnen",
+          "singular": "die Köchin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:koch",
+      "masculine": [
+        {
+          "plural": "die Köche",
+          "singular": "der Koch"
+        }
+      ],
+      "meaningEn": "Cook/Chef",
+      "routeSegment": "14",
+      "searchText": "Cook/Chef der Koch die Köche die Köchin die Köchinnen",
+      "sourceRow": 14,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/15",
+      "feminine": [
+        {
+          "plural": "die Müllwerkerinnen",
+          "singular": "die Müllwerkerin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:mullwerker",
+      "masculine": [
+        {
+          "plural": "die Müllwerker",
+          "singular": "der Müllwerker"
+        }
+      ],
+      "meaningEn": "Refuse Collector",
+      "routeSegment": "15",
+      "searchText": "Refuse Collector der Müllwerker die Müllwerker die Müllwerkerin die Müllwerkerinnen",
+      "sourceRow": 15,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/16",
+      "feminine": [
+        {
+          "plural": "die Metzgerinnen",
+          "singular": "die Metzgerin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:metzger",
+      "masculine": [
+        {
+          "plural": "die Metzger",
+          "singular": "der Metzger"
+        }
+      ],
+      "meaningEn": "Butcher",
+      "routeSegment": "16",
+      "searchText": "Butcher der Metzger die Metzger die Metzgerin die Metzgerinnen",
+      "sourceRow": 16,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/17",
+      "feminine": [
+        {
+          "plural": "die Kellnerinnen",
+          "singular": "die Kellnerin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:kellner",
+      "masculine": [
+        {
+          "plural": "die Kellner",
+          "singular": "der Kellner"
+        }
+      ],
+      "meaningEn": "Waiter / Waitress",
+      "routeSegment": "17",
+      "searchText": "Waiter / Waitress der Kellner die Kellner die Kellnerin die Kellnerinnen",
+      "sourceRow": 17,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/18",
+      "feminine": [
+        {
+          "plural": "die Zahnärztinnen",
+          "singular": "die Zahnärztin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:zahnarzt",
+      "masculine": [
+        {
+          "plural": "die Zahnärzte",
+          "singular": "der Zahnarzt"
+        }
+      ],
+      "meaningEn": "Dentist",
+      "routeSegment": "18",
+      "searchText": "Dentist der Zahnarzt die Zahnärzte die Zahnärztin die Zahnärztinnen",
+      "sourceRow": 18,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/19",
+      "feminine": [
+        {
+          "plural": "die Verkäuferinnen",
+          "singular": "die Verkäuferin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:verkaufer",
+      "masculine": [
+        {
+          "plural": "die Verkäufer",
+          "singular": "der Verkäufer"
+        }
+      ],
+      "meaningEn": "Shop Assistant",
+      "routeSegment": "19",
+      "searchText": "Shop Assistant der Verkäufer die Verkäufer die Verkäuferin die Verkäuferinnen",
+      "sourceRow": 19,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/20",
+      "feminine": [
+        {
+          "plural": "die Schauspielerinnen",
+          "singular": "die Schauspielerin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:schauspieler",
+      "masculine": [
+        {
+          "plural": "die Schauspieler",
+          "singular": "der Schauspieler"
+        }
+      ],
+      "meaningEn": "Actor / Actress",
+      "routeSegment": "20",
+      "searchText": "Actor / Actress der Schauspieler die Schauspieler die Schauspielerin die Schauspielerinnen",
+      "sourceRow": 20,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/21",
+      "feminine": [
+        {
+          "plural": "die Künstlerinnen",
+          "singular": "die Künstlerin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:kunstler",
+      "masculine": [
+        {
+          "plural": "die Künstler",
+          "singular": "der Künstler"
+        }
+      ],
+      "meaningEn": "Artist",
+      "routeSegment": "21",
+      "searchText": "Artist der Künstler die Künstler die Künstlerin die Künstlerinnen",
+      "sourceRow": 21,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/22",
+      "feminine": [
+        {
+          "plural": "die Bauarbeiterinnen",
+          "singular": "die Bauarbeiterin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:bauarbeiter",
+      "masculine": [
+        {
+          "plural": "die Bauarbeiter",
+          "singular": "der Bauarbeiter"
+        }
+      ],
+      "meaningEn": "Construction Worker",
+      "routeSegment": "22",
+      "searchText": "Construction Worker der Bauarbeiter die Bauarbeiter die Bauarbeiterin die Bauarbeiterinnen",
+      "sourceRow": 22,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/23",
+      "feminine": [
+        {
+          "plural": "die Ärztinnen",
+          "singular": "die Ärztin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:arzt",
+      "masculine": [
+        {
+          "plural": "die Ärzte",
+          "singular": "der Arzt"
+        }
+      ],
+      "meaningEn": "Doctor",
+      "routeSegment": "23",
+      "searchText": "Doctor der Arzt die Ärzte die Ärztin die Ärztinnen",
+      "sourceRow": 23,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/24",
+      "feminine": [
+        {
+          "plural": "die Ingenieurinnen",
+          "singular": "die Ingenieurin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:ingenieur",
+      "masculine": [
+        {
+          "plural": "die Ingenieure",
+          "singular": "der Ingenieur"
+        }
+      ],
+      "meaningEn": "Engineer",
+      "routeSegment": "24",
+      "searchText": "Engineer der Ingenieur die Ingenieure die Ingenieurin die Ingenieurinnen",
+      "sourceRow": 24,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/25",
+      "feminine": [
+        {
+          "plural": "die Feuerwehrfrauen",
+          "singular": "die Feuerwehrfrau"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:feuerwehrmann",
+      "masculine": [
+        {
+          "plural": "die Feuerwehrmänner",
+          "singular": "der Feuerwehrmann"
+        }
+      ],
+      "meaningEn": "Firefighter",
+      "routeSegment": "25",
+      "searchText": "Firefighter der Feuerwehrmann die Feuerwehrmänner die Feuerwehrfrau die Feuerwehrfrauen",
+      "sourceRow": 25,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/26",
+      "feminine": [
+        {
+          "plural": "die Konditorinnen",
+          "singular": "die Konditorin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:konditor",
+      "masculine": [
+        {
+          "plural": "die Konditoren",
+          "singular": "der Konditor"
+        }
+      ],
+      "meaningEn": "Confectioner",
+      "routeSegment": "26",
+      "searchText": "Confectioner der Konditor die Konditoren die Konditorin die Konditorinnen",
+      "sourceRow": 26,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/27",
+      "feminine": [
+        {
+          "plural": "die Hausfrauen",
+          "singular": "die Hausfrau"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:hausmann",
+      "masculine": [
+        {
+          "plural": "die Hausmänner",
+          "singular": "der Hausmann"
+        }
+      ],
+      "meaningEn": "Housewife / Househusband",
+      "routeSegment": "27",
+      "searchText": "Housewife / Househusband der Hausmann die Hausmänner die Hausfrau die Hausfrauen",
+      "sourceRow": 27,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/28",
+      "feminine": [
+        {
+          "plural": "die Krankenschwestern",
+          "singular": "die Krankenschwester"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:krankenpfleger",
+      "masculine": [
+        {
+          "plural": "die Krankenpfleger",
+          "singular": "der Krankenpfleger"
+        }
+      ],
+      "meaningEn": "Nurse",
+      "routeSegment": "28",
+      "searchText": "Nurse der Krankenpfleger die Krankenpfleger die Krankenschwester die Krankenschwestern",
+      "sourceRow": 28,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/29",
+      "feminine": [
+        {
+          "plural": "die Flugzeugpilotinnen",
+          "singular": "die Flugzeugpilotin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:flugzeugpilot",
+      "masculine": [
+        {
+          "plural": "die Flugzeugpiloten",
+          "singular": "der Flugzeugpilot"
+        }
+      ],
+      "meaningEn": "Airplane Pilot",
+      "routeSegment": "29",
+      "searchText": "Airplane Pilot der Flugzeugpilot die Flugzeugpiloten die Flugzeugpilotin die Flugzeugpilotinnen",
+      "sourceRow": 29,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/30",
+      "feminine": [
+        {
+          "plural": "die Polizistinnen",
+          "singular": "die Polizistin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:polizist",
+      "masculine": [
+        {
+          "plural": "die Polizisten",
+          "singular": "der Polizist"
+        }
+      ],
+      "meaningEn": "Police Officer",
+      "routeSegment": "30",
+      "searchText": "Police Officer der Polizist die Polizisten die Polizistin die Polizistinnen",
+      "sourceRow": 30,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/31",
+      "feminine": [
+        {
+          "plural": "die Postbotinnen",
+          "singular": "die Postbotin"
+        },
+        {
+          "plural": "die Briefträgerinnen",
+          "singular": "die Briefträgerin"
+        }
+      ],
+      "hasAlternatives": true,
+      "id": "teacher-job:postbote",
+      "masculine": [
+        {
+          "plural": "die Postboten",
+          "singular": "der Postbote"
+        },
+        {
+          "plural": "die Briefträger",
+          "singular": "der Briefträger"
+        }
+      ],
+      "meaningEn": "Postman / Letter Carrier",
+      "routeSegment": "31",
+      "searchText": "Postman / Letter Carrier der Postbote die Postboten der Briefträger die Briefträger die Postbotin die Postbotinnen die Briefträgerin die Briefträgerinnen",
+      "sourceRow": 31,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/32",
+      "feminine": [
+        {
+          "plural": "die Sekretärinnen",
+          "singular": "die Sekretärin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:sekretar",
+      "masculine": [
+        {
+          "plural": "die Sekretäre",
+          "singular": "der Sekretär"
+        }
+      ],
+      "meaningEn": "Secretary",
+      "routeSegment": "32",
+      "searchText": "Secretary der Sekretär die Sekretäre die Sekretärin die Sekretärinnen",
+      "sourceRow": 32,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/33",
+      "feminine": [
+        {
+          "plural": "die Sängerinnen",
+          "singular": "die Sängerin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:sanger",
+      "masculine": [
+        {
+          "plural": "die Sänger",
+          "singular": "der Sänger"
+        }
+      ],
+      "meaningEn": "Singer",
+      "routeSegment": "33",
+      "searchText": "Singer der Sänger die Sänger die Sängerin die Sängerinnen",
+      "sourceRow": 33,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/34",
+      "feminine": [
+        {
+          "plural": "die Tierärztinnen",
+          "singular": "die Tierärztin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:tierarzt",
+      "masculine": [
+        {
+          "plural": "die Tierärzte",
+          "singular": "der Tierarzt"
+        }
+      ],
+      "meaningEn": "Veterinarian",
+      "routeSegment": "34",
+      "searchText": "Veterinarian der Tierarzt die Tierärzte die Tierärztin die Tierärztinnen",
+      "sourceRow": 34,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/35",
+      "feminine": [
+        {
+          "plural": "die Soldatinnen",
+          "singular": "die Soldatin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:soldat",
+      "masculine": [
+        {
+          "plural": "die Soldaten",
+          "singular": "der Soldat"
+        }
+      ],
+      "meaningEn": "Soldier",
+      "routeSegment": "35",
+      "searchText": "Soldier der Soldat die Soldaten die Soldatin die Soldatinnen",
+      "sourceRow": 35,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/36",
+      "feminine": [
+        {
+          "plural": "die Tischlerinnen",
+          "singular": "die Tischlerin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:tischler",
+      "masculine": [
+        {
+          "plural": "die Tischler",
+          "singular": "der Tischler"
+        }
+      ],
+      "meaningEn": "Carpenter",
+      "routeSegment": "36",
+      "searchText": "Carpenter der Tischler die Tischler die Tischlerin die Tischlerinnen",
+      "sourceRow": 36,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/37",
+      "feminine": [
+        {
+          "plural": "die Geschäftsfrauen",
+          "singular": "die Geschäftsfrau"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:geschaftsmann",
+      "masculine": [
+        {
+          "plural": "die Geschäftsleute",
+          "singular": "der Geschäftsmann"
+        }
+      ],
+      "meaningEn": "Businessperson",
+      "routeSegment": "37",
+      "searchText": "Businessperson der Geschäftsmann die Geschäftsleute die Geschäftsfrau die Geschäftsfrauen",
+      "sourceRow": 37,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/38",
+      "feminine": [
+        {
+          "plural": "die Detektivinnen",
+          "singular": "die Detektivin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:detektiv",
+      "masculine": [
+        {
+          "plural": "die Detektive",
+          "singular": "der Detektiv"
+        }
+      ],
+      "meaningEn": "Detective",
+      "routeSegment": "38",
+      "searchText": "Detective der Detektiv die Detektive die Detektivin die Detektivinnen",
+      "sourceRow": 38,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/39",
+      "feminine": [
+        {
+          "plural": "die Klempnerinnen",
+          "singular": "die Klempnerin"
+        },
+        {
+          "plural": "die Installateurinnen",
+          "singular": "die Installateurin"
+        }
+      ],
+      "hasAlternatives": true,
+      "id": "teacher-job:klempner",
+      "masculine": [
+        {
+          "plural": "die Klempner",
+          "singular": "der Klempner"
+        },
+        {
+          "plural": "die Installateure",
+          "singular": "der Installateur"
+        }
+      ],
+      "meaningEn": "Plumber",
+      "routeSegment": "39",
+      "searchText": "Plumber der Klempner die Klempner der Installateur die Installateure die Klempnerin die Klempnerinnen die Installateurin die Installateurinnen",
+      "sourceRow": 39,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/40",
+      "feminine": [
+        {
+          "plural": "die Chirurginnen",
+          "singular": "die Chirurgin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:chirurg",
+      "masculine": [
+        {
+          "plural": "die Chirurgen",
+          "singular": "der Chirurg"
+        }
+      ],
+      "meaningEn": "Surgeon",
+      "routeSegment": "40",
+      "searchText": "Surgeon der Chirurg die Chirurgen die Chirurgin die Chirurginnen",
+      "sourceRow": 40,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/41",
+      "feminine": [
+        {
+          "plural": "die Schriftstellerinnen",
+          "singular": "die Schriftstellerin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:schriftsteller",
+      "masculine": [
+        {
+          "plural": "die Schriftsteller",
+          "singular": "der Schriftsteller"
+        }
+      ],
+      "meaningEn": "Writer",
+      "routeSegment": "41",
+      "searchText": "Writer der Schriftsteller die Schriftsteller die Schriftstellerin die Schriftstellerinnen",
+      "sourceRow": 41,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/42",
+      "feminine": [
+        {
+          "plural": "die Tankwartinnen",
+          "singular": "die Tankwartin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:tankwart",
+      "masculine": [
+        {
+          "plural": "die Tankwarte",
+          "singular": "der Tankwart"
+        }
+      ],
+      "meaningEn": "Gas Station Attendant",
+      "routeSegment": "42",
+      "searchText": "Gas Station Attendant der Tankwart die Tankwarte die Tankwartin die Tankwartinnen",
+      "sourceRow": 42,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/43",
+      "feminine": [
+        {
+          "plural": "die Geheimagentinnen",
+          "singular": "die Geheimagentin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:geheimagent",
+      "masculine": [
+        {
+          "plural": "die Geheimagenten",
+          "singular": "der Geheimagent"
+        }
+      ],
+      "meaningEn": "Secret Agent",
+      "routeSegment": "43",
+      "searchText": "Secret Agent der Geheimagent die Geheimagenten die Geheimagentin die Geheimagentinnen",
+      "sourceRow": 43,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/44",
+      "feminine": [
+        {
+          "plural": "die Rechtsanwältinnen",
+          "singular": "die Rechtsanwältin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:rechtsanwalt",
+      "masculine": [
+        {
+          "plural": "die Rechtsanwälte",
+          "singular": "der Rechtsanwalt"
+        }
+      ],
+      "meaningEn": "Lawyer",
+      "routeSegment": "44",
+      "searchText": "Lawyer der Rechtsanwalt die Rechtsanwälte die Rechtsanwältin die Rechtsanwältinnen",
+      "sourceRow": 44,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/45",
+      "feminine": [
+        {
+          "plural": "die Richterinnen",
+          "singular": "die Richterin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:richter",
+      "masculine": [
+        {
+          "plural": "die Richter",
+          "singular": "der Richter"
+        }
+      ],
+      "meaningEn": "Judge",
+      "routeSegment": "45",
+      "searchText": "Judge der Richter die Richter die Richterin die Richterinnen",
+      "sourceRow": 45,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/46",
+      "feminine": [
+        {
+          "plural": "die Journalistinnen",
+          "singular": "die Journalistin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:journalist",
+      "masculine": [
+        {
+          "plural": "die Journalisten",
+          "singular": "der Journalist"
+        }
+      ],
+      "meaningEn": "Journalist",
+      "routeSegment": "46",
+      "searchText": "Journalist der Journalist die Journalisten die Journalistin die Journalistinnen",
+      "sourceRow": 46,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/47",
+      "feminine": [
+        {
+          "plural": "die Putzfrauen",
+          "singular": "die Putzfrau"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:putzmann",
+      "masculine": [
+        {
+          "plural": "die Putzmänner",
+          "singular": "der Putzmann"
+        }
+      ],
+      "meaningEn": "Cleaner",
+      "routeSegment": "47",
+      "searchText": "Cleaner der Putzmann die Putzmänner die Putzfrau die Putzfrauen",
+      "sourceRow": 47,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    {
+      "detailPath": "/collections/professions/48",
+      "feminine": [
+        {
+          "plural": "die Kassiererinnen",
+          "singular": "die Kassiererin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:kassierer",
+      "masculine": [
+        {
+          "plural": "die Kassierer",
+          "singular": "der Kassierer"
+        }
+      ],
+      "meaningEn": "Cashier",
+      "routeSegment": "48",
+      "searchText": "Cashier der Kassierer die Kassierer die Kassiererin die Kassiererinnen",
+      "sourceRow": 48,
+      "validationStatus": "candidate-needs-german-review"
+    }
+  ],
+  "rowsBySegment": {
+    "10": {
+      "detailPath": "/collections/professions/10",
+      "feminine": [
+        {
+          "plural": "die Fotografinnen",
+          "singular": "die Fotografin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:fotograf",
+      "masculine": [
+        {
+          "plural": "die Fotografen",
+          "singular": "der Fotograf"
+        }
+      ],
+      "meaningEn": "Photographer",
+      "routeSegment": "10",
+      "searchText": "Photographer der Fotograf die Fotografen die Fotografin die Fotografinnen",
+      "sourceRow": 10,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "11": {
+      "detailPath": "/collections/professions/11",
+      "feminine": [
+        {
+          "plural": "die Malerinnen",
+          "singular": "die Malerin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:maler",
+      "masculine": [
+        {
+          "plural": "die Maler",
+          "singular": "der Maler"
+        }
+      ],
+      "meaningEn": "Painter",
+      "routeSegment": "11",
+      "searchText": "Painter der Maler die Maler die Malerin die Malerinnen",
+      "sourceRow": 11,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "12": {
+      "detailPath": "/collections/professions/12",
+      "feminine": [
+        {
+          "plural": "die Architektinnen",
+          "singular": "die Architektin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:architekt",
+      "masculine": [
+        {
+          "plural": "die Architekten",
+          "singular": "der Architekt"
+        }
+      ],
+      "meaningEn": "Architect",
+      "routeSegment": "12",
+      "searchText": "Architect der Architekt die Architekten die Architektin die Architektinnen",
+      "sourceRow": 12,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "13": {
+      "detailPath": "/collections/professions/13",
+      "feminine": [
+        {
+          "plural": "die Lehrerinnen",
+          "singular": "die Lehrerin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:lehrer",
+      "masculine": [
+        {
+          "plural": "die Lehrer",
+          "singular": "der Lehrer"
+        }
+      ],
+      "meaningEn": "Teacher",
+      "routeSegment": "13",
+      "searchText": "Teacher der Lehrer die Lehrer die Lehrerin die Lehrerinnen",
+      "sourceRow": 13,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "14": {
+      "detailPath": "/collections/professions/14",
+      "feminine": [
+        {
+          "plural": "die Köchinnen",
+          "singular": "die Köchin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:koch",
+      "masculine": [
+        {
+          "plural": "die Köche",
+          "singular": "der Koch"
+        }
+      ],
+      "meaningEn": "Cook/Chef",
+      "routeSegment": "14",
+      "searchText": "Cook/Chef der Koch die Köche die Köchin die Köchinnen",
+      "sourceRow": 14,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "15": {
+      "detailPath": "/collections/professions/15",
+      "feminine": [
+        {
+          "plural": "die Müllwerkerinnen",
+          "singular": "die Müllwerkerin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:mullwerker",
+      "masculine": [
+        {
+          "plural": "die Müllwerker",
+          "singular": "der Müllwerker"
+        }
+      ],
+      "meaningEn": "Refuse Collector",
+      "routeSegment": "15",
+      "searchText": "Refuse Collector der Müllwerker die Müllwerker die Müllwerkerin die Müllwerkerinnen",
+      "sourceRow": 15,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "16": {
+      "detailPath": "/collections/professions/16",
+      "feminine": [
+        {
+          "plural": "die Metzgerinnen",
+          "singular": "die Metzgerin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:metzger",
+      "masculine": [
+        {
+          "plural": "die Metzger",
+          "singular": "der Metzger"
+        }
+      ],
+      "meaningEn": "Butcher",
+      "routeSegment": "16",
+      "searchText": "Butcher der Metzger die Metzger die Metzgerin die Metzgerinnen",
+      "sourceRow": 16,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "17": {
+      "detailPath": "/collections/professions/17",
+      "feminine": [
+        {
+          "plural": "die Kellnerinnen",
+          "singular": "die Kellnerin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:kellner",
+      "masculine": [
+        {
+          "plural": "die Kellner",
+          "singular": "der Kellner"
+        }
+      ],
+      "meaningEn": "Waiter / Waitress",
+      "routeSegment": "17",
+      "searchText": "Waiter / Waitress der Kellner die Kellner die Kellnerin die Kellnerinnen",
+      "sourceRow": 17,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "18": {
+      "detailPath": "/collections/professions/18",
+      "feminine": [
+        {
+          "plural": "die Zahnärztinnen",
+          "singular": "die Zahnärztin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:zahnarzt",
+      "masculine": [
+        {
+          "plural": "die Zahnärzte",
+          "singular": "der Zahnarzt"
+        }
+      ],
+      "meaningEn": "Dentist",
+      "routeSegment": "18",
+      "searchText": "Dentist der Zahnarzt die Zahnärzte die Zahnärztin die Zahnärztinnen",
+      "sourceRow": 18,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "19": {
+      "detailPath": "/collections/professions/19",
+      "feminine": [
+        {
+          "plural": "die Verkäuferinnen",
+          "singular": "die Verkäuferin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:verkaufer",
+      "masculine": [
+        {
+          "plural": "die Verkäufer",
+          "singular": "der Verkäufer"
+        }
+      ],
+      "meaningEn": "Shop Assistant",
+      "routeSegment": "19",
+      "searchText": "Shop Assistant der Verkäufer die Verkäufer die Verkäuferin die Verkäuferinnen",
+      "sourceRow": 19,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "20": {
+      "detailPath": "/collections/professions/20",
+      "feminine": [
+        {
+          "plural": "die Schauspielerinnen",
+          "singular": "die Schauspielerin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:schauspieler",
+      "masculine": [
+        {
+          "plural": "die Schauspieler",
+          "singular": "der Schauspieler"
+        }
+      ],
+      "meaningEn": "Actor / Actress",
+      "routeSegment": "20",
+      "searchText": "Actor / Actress der Schauspieler die Schauspieler die Schauspielerin die Schauspielerinnen",
+      "sourceRow": 20,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "21": {
+      "detailPath": "/collections/professions/21",
+      "feminine": [
+        {
+          "plural": "die Künstlerinnen",
+          "singular": "die Künstlerin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:kunstler",
+      "masculine": [
+        {
+          "plural": "die Künstler",
+          "singular": "der Künstler"
+        }
+      ],
+      "meaningEn": "Artist",
+      "routeSegment": "21",
+      "searchText": "Artist der Künstler die Künstler die Künstlerin die Künstlerinnen",
+      "sourceRow": 21,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "22": {
+      "detailPath": "/collections/professions/22",
+      "feminine": [
+        {
+          "plural": "die Bauarbeiterinnen",
+          "singular": "die Bauarbeiterin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:bauarbeiter",
+      "masculine": [
+        {
+          "plural": "die Bauarbeiter",
+          "singular": "der Bauarbeiter"
+        }
+      ],
+      "meaningEn": "Construction Worker",
+      "routeSegment": "22",
+      "searchText": "Construction Worker der Bauarbeiter die Bauarbeiter die Bauarbeiterin die Bauarbeiterinnen",
+      "sourceRow": 22,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "23": {
+      "detailPath": "/collections/professions/23",
+      "feminine": [
+        {
+          "plural": "die Ärztinnen",
+          "singular": "die Ärztin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:arzt",
+      "masculine": [
+        {
+          "plural": "die Ärzte",
+          "singular": "der Arzt"
+        }
+      ],
+      "meaningEn": "Doctor",
+      "routeSegment": "23",
+      "searchText": "Doctor der Arzt die Ärzte die Ärztin die Ärztinnen",
+      "sourceRow": 23,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "24": {
+      "detailPath": "/collections/professions/24",
+      "feminine": [
+        {
+          "plural": "die Ingenieurinnen",
+          "singular": "die Ingenieurin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:ingenieur",
+      "masculine": [
+        {
+          "plural": "die Ingenieure",
+          "singular": "der Ingenieur"
+        }
+      ],
+      "meaningEn": "Engineer",
+      "routeSegment": "24",
+      "searchText": "Engineer der Ingenieur die Ingenieure die Ingenieurin die Ingenieurinnen",
+      "sourceRow": 24,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "25": {
+      "detailPath": "/collections/professions/25",
+      "feminine": [
+        {
+          "plural": "die Feuerwehrfrauen",
+          "singular": "die Feuerwehrfrau"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:feuerwehrmann",
+      "masculine": [
+        {
+          "plural": "die Feuerwehrmänner",
+          "singular": "der Feuerwehrmann"
+        }
+      ],
+      "meaningEn": "Firefighter",
+      "routeSegment": "25",
+      "searchText": "Firefighter der Feuerwehrmann die Feuerwehrmänner die Feuerwehrfrau die Feuerwehrfrauen",
+      "sourceRow": 25,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "26": {
+      "detailPath": "/collections/professions/26",
+      "feminine": [
+        {
+          "plural": "die Konditorinnen",
+          "singular": "die Konditorin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:konditor",
+      "masculine": [
+        {
+          "plural": "die Konditoren",
+          "singular": "der Konditor"
+        }
+      ],
+      "meaningEn": "Confectioner",
+      "routeSegment": "26",
+      "searchText": "Confectioner der Konditor die Konditoren die Konditorin die Konditorinnen",
+      "sourceRow": 26,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "27": {
+      "detailPath": "/collections/professions/27",
+      "feminine": [
+        {
+          "plural": "die Hausfrauen",
+          "singular": "die Hausfrau"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:hausmann",
+      "masculine": [
+        {
+          "plural": "die Hausmänner",
+          "singular": "der Hausmann"
+        }
+      ],
+      "meaningEn": "Housewife / Househusband",
+      "routeSegment": "27",
+      "searchText": "Housewife / Househusband der Hausmann die Hausmänner die Hausfrau die Hausfrauen",
+      "sourceRow": 27,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "28": {
+      "detailPath": "/collections/professions/28",
+      "feminine": [
+        {
+          "plural": "die Krankenschwestern",
+          "singular": "die Krankenschwester"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:krankenpfleger",
+      "masculine": [
+        {
+          "plural": "die Krankenpfleger",
+          "singular": "der Krankenpfleger"
+        }
+      ],
+      "meaningEn": "Nurse",
+      "routeSegment": "28",
+      "searchText": "Nurse der Krankenpfleger die Krankenpfleger die Krankenschwester die Krankenschwestern",
+      "sourceRow": 28,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "29": {
+      "detailPath": "/collections/professions/29",
+      "feminine": [
+        {
+          "plural": "die Flugzeugpilotinnen",
+          "singular": "die Flugzeugpilotin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:flugzeugpilot",
+      "masculine": [
+        {
+          "plural": "die Flugzeugpiloten",
+          "singular": "der Flugzeugpilot"
+        }
+      ],
+      "meaningEn": "Airplane Pilot",
+      "routeSegment": "29",
+      "searchText": "Airplane Pilot der Flugzeugpilot die Flugzeugpiloten die Flugzeugpilotin die Flugzeugpilotinnen",
+      "sourceRow": 29,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "30": {
+      "detailPath": "/collections/professions/30",
+      "feminine": [
+        {
+          "plural": "die Polizistinnen",
+          "singular": "die Polizistin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:polizist",
+      "masculine": [
+        {
+          "plural": "die Polizisten",
+          "singular": "der Polizist"
+        }
+      ],
+      "meaningEn": "Police Officer",
+      "routeSegment": "30",
+      "searchText": "Police Officer der Polizist die Polizisten die Polizistin die Polizistinnen",
+      "sourceRow": 30,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "31": {
+      "detailPath": "/collections/professions/31",
+      "feminine": [
+        {
+          "plural": "die Postbotinnen",
+          "singular": "die Postbotin"
+        },
+        {
+          "plural": "die Briefträgerinnen",
+          "singular": "die Briefträgerin"
+        }
+      ],
+      "hasAlternatives": true,
+      "id": "teacher-job:postbote",
+      "masculine": [
+        {
+          "plural": "die Postboten",
+          "singular": "der Postbote"
+        },
+        {
+          "plural": "die Briefträger",
+          "singular": "der Briefträger"
+        }
+      ],
+      "meaningEn": "Postman / Letter Carrier",
+      "routeSegment": "31",
+      "searchText": "Postman / Letter Carrier der Postbote die Postboten der Briefträger die Briefträger die Postbotin die Postbotinnen die Briefträgerin die Briefträgerinnen",
+      "sourceRow": 31,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "32": {
+      "detailPath": "/collections/professions/32",
+      "feminine": [
+        {
+          "plural": "die Sekretärinnen",
+          "singular": "die Sekretärin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:sekretar",
+      "masculine": [
+        {
+          "plural": "die Sekretäre",
+          "singular": "der Sekretär"
+        }
+      ],
+      "meaningEn": "Secretary",
+      "routeSegment": "32",
+      "searchText": "Secretary der Sekretär die Sekretäre die Sekretärin die Sekretärinnen",
+      "sourceRow": 32,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "33": {
+      "detailPath": "/collections/professions/33",
+      "feminine": [
+        {
+          "plural": "die Sängerinnen",
+          "singular": "die Sängerin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:sanger",
+      "masculine": [
+        {
+          "plural": "die Sänger",
+          "singular": "der Sänger"
+        }
+      ],
+      "meaningEn": "Singer",
+      "routeSegment": "33",
+      "searchText": "Singer der Sänger die Sänger die Sängerin die Sängerinnen",
+      "sourceRow": 33,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "34": {
+      "detailPath": "/collections/professions/34",
+      "feminine": [
+        {
+          "plural": "die Tierärztinnen",
+          "singular": "die Tierärztin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:tierarzt",
+      "masculine": [
+        {
+          "plural": "die Tierärzte",
+          "singular": "der Tierarzt"
+        }
+      ],
+      "meaningEn": "Veterinarian",
+      "routeSegment": "34",
+      "searchText": "Veterinarian der Tierarzt die Tierärzte die Tierärztin die Tierärztinnen",
+      "sourceRow": 34,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "35": {
+      "detailPath": "/collections/professions/35",
+      "feminine": [
+        {
+          "plural": "die Soldatinnen",
+          "singular": "die Soldatin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:soldat",
+      "masculine": [
+        {
+          "plural": "die Soldaten",
+          "singular": "der Soldat"
+        }
+      ],
+      "meaningEn": "Soldier",
+      "routeSegment": "35",
+      "searchText": "Soldier der Soldat die Soldaten die Soldatin die Soldatinnen",
+      "sourceRow": 35,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "36": {
+      "detailPath": "/collections/professions/36",
+      "feminine": [
+        {
+          "plural": "die Tischlerinnen",
+          "singular": "die Tischlerin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:tischler",
+      "masculine": [
+        {
+          "plural": "die Tischler",
+          "singular": "der Tischler"
+        }
+      ],
+      "meaningEn": "Carpenter",
+      "routeSegment": "36",
+      "searchText": "Carpenter der Tischler die Tischler die Tischlerin die Tischlerinnen",
+      "sourceRow": 36,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "37": {
+      "detailPath": "/collections/professions/37",
+      "feminine": [
+        {
+          "plural": "die Geschäftsfrauen",
+          "singular": "die Geschäftsfrau"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:geschaftsmann",
+      "masculine": [
+        {
+          "plural": "die Geschäftsleute",
+          "singular": "der Geschäftsmann"
+        }
+      ],
+      "meaningEn": "Businessperson",
+      "routeSegment": "37",
+      "searchText": "Businessperson der Geschäftsmann die Geschäftsleute die Geschäftsfrau die Geschäftsfrauen",
+      "sourceRow": 37,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "38": {
+      "detailPath": "/collections/professions/38",
+      "feminine": [
+        {
+          "plural": "die Detektivinnen",
+          "singular": "die Detektivin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:detektiv",
+      "masculine": [
+        {
+          "plural": "die Detektive",
+          "singular": "der Detektiv"
+        }
+      ],
+      "meaningEn": "Detective",
+      "routeSegment": "38",
+      "searchText": "Detective der Detektiv die Detektive die Detektivin die Detektivinnen",
+      "sourceRow": 38,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "39": {
+      "detailPath": "/collections/professions/39",
+      "feminine": [
+        {
+          "plural": "die Klempnerinnen",
+          "singular": "die Klempnerin"
+        },
+        {
+          "plural": "die Installateurinnen",
+          "singular": "die Installateurin"
+        }
+      ],
+      "hasAlternatives": true,
+      "id": "teacher-job:klempner",
+      "masculine": [
+        {
+          "plural": "die Klempner",
+          "singular": "der Klempner"
+        },
+        {
+          "plural": "die Installateure",
+          "singular": "der Installateur"
+        }
+      ],
+      "meaningEn": "Plumber",
+      "routeSegment": "39",
+      "searchText": "Plumber der Klempner die Klempner der Installateur die Installateure die Klempnerin die Klempnerinnen die Installateurin die Installateurinnen",
+      "sourceRow": 39,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "40": {
+      "detailPath": "/collections/professions/40",
+      "feminine": [
+        {
+          "plural": "die Chirurginnen",
+          "singular": "die Chirurgin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:chirurg",
+      "masculine": [
+        {
+          "plural": "die Chirurgen",
+          "singular": "der Chirurg"
+        }
+      ],
+      "meaningEn": "Surgeon",
+      "routeSegment": "40",
+      "searchText": "Surgeon der Chirurg die Chirurgen die Chirurgin die Chirurginnen",
+      "sourceRow": 40,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "41": {
+      "detailPath": "/collections/professions/41",
+      "feminine": [
+        {
+          "plural": "die Schriftstellerinnen",
+          "singular": "die Schriftstellerin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:schriftsteller",
+      "masculine": [
+        {
+          "plural": "die Schriftsteller",
+          "singular": "der Schriftsteller"
+        }
+      ],
+      "meaningEn": "Writer",
+      "routeSegment": "41",
+      "searchText": "Writer der Schriftsteller die Schriftsteller die Schriftstellerin die Schriftstellerinnen",
+      "sourceRow": 41,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "42": {
+      "detailPath": "/collections/professions/42",
+      "feminine": [
+        {
+          "plural": "die Tankwartinnen",
+          "singular": "die Tankwartin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:tankwart",
+      "masculine": [
+        {
+          "plural": "die Tankwarte",
+          "singular": "der Tankwart"
+        }
+      ],
+      "meaningEn": "Gas Station Attendant",
+      "routeSegment": "42",
+      "searchText": "Gas Station Attendant der Tankwart die Tankwarte die Tankwartin die Tankwartinnen",
+      "sourceRow": 42,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "43": {
+      "detailPath": "/collections/professions/43",
+      "feminine": [
+        {
+          "plural": "die Geheimagentinnen",
+          "singular": "die Geheimagentin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:geheimagent",
+      "masculine": [
+        {
+          "plural": "die Geheimagenten",
+          "singular": "der Geheimagent"
+        }
+      ],
+      "meaningEn": "Secret Agent",
+      "routeSegment": "43",
+      "searchText": "Secret Agent der Geheimagent die Geheimagenten die Geheimagentin die Geheimagentinnen",
+      "sourceRow": 43,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "44": {
+      "detailPath": "/collections/professions/44",
+      "feminine": [
+        {
+          "plural": "die Rechtsanwältinnen",
+          "singular": "die Rechtsanwältin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:rechtsanwalt",
+      "masculine": [
+        {
+          "plural": "die Rechtsanwälte",
+          "singular": "der Rechtsanwalt"
+        }
+      ],
+      "meaningEn": "Lawyer",
+      "routeSegment": "44",
+      "searchText": "Lawyer der Rechtsanwalt die Rechtsanwälte die Rechtsanwältin die Rechtsanwältinnen",
+      "sourceRow": 44,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "45": {
+      "detailPath": "/collections/professions/45",
+      "feminine": [
+        {
+          "plural": "die Richterinnen",
+          "singular": "die Richterin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:richter",
+      "masculine": [
+        {
+          "plural": "die Richter",
+          "singular": "der Richter"
+        }
+      ],
+      "meaningEn": "Judge",
+      "routeSegment": "45",
+      "searchText": "Judge der Richter die Richter die Richterin die Richterinnen",
+      "sourceRow": 45,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "46": {
+      "detailPath": "/collections/professions/46",
+      "feminine": [
+        {
+          "plural": "die Journalistinnen",
+          "singular": "die Journalistin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:journalist",
+      "masculine": [
+        {
+          "plural": "die Journalisten",
+          "singular": "der Journalist"
+        }
+      ],
+      "meaningEn": "Journalist",
+      "routeSegment": "46",
+      "searchText": "Journalist der Journalist die Journalisten die Journalistin die Journalistinnen",
+      "sourceRow": 46,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "47": {
+      "detailPath": "/collections/professions/47",
+      "feminine": [
+        {
+          "plural": "die Putzfrauen",
+          "singular": "die Putzfrau"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:putzmann",
+      "masculine": [
+        {
+          "plural": "die Putzmänner",
+          "singular": "der Putzmann"
+        }
+      ],
+      "meaningEn": "Cleaner",
+      "routeSegment": "47",
+      "searchText": "Cleaner der Putzmann die Putzmänner die Putzfrau die Putzfrauen",
+      "sourceRow": 47,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "48": {
+      "detailPath": "/collections/professions/48",
+      "feminine": [
+        {
+          "plural": "die Kassiererinnen",
+          "singular": "die Kassiererin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:kassierer",
+      "masculine": [
+        {
+          "plural": "die Kassierer",
+          "singular": "der Kassierer"
+        }
+      ],
+      "meaningEn": "Cashier",
+      "routeSegment": "48",
+      "searchText": "Cashier der Kassierer die Kassierer die Kassiererin die Kassiererinnen",
+      "sourceRow": 48,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "01": {
+      "detailPath": "/collections/professions/01",
+      "feminine": [
+        {
+          "plural": "die Elektrikerinnen",
+          "singular": "die Elektrikerin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:elektriker",
+      "masculine": [
+        {
+          "plural": "die Elektriker",
+          "singular": "der Elektriker"
+        }
+      ],
+      "meaningEn": "Electrician",
+      "routeSegment": "01",
+      "searchText": "Electrician der Elektriker die Elektriker die Elektrikerin die Elektrikerinnen",
+      "sourceRow": 1,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "02": {
+      "detailPath": "/collections/professions/02",
+      "feminine": [
+        {
+          "plural": "die Gärtnerinnen",
+          "singular": "die Gärtnerin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:gartner",
+      "masculine": [
+        {
+          "plural": "die Gärtner",
+          "singular": "der Gärtner"
+        }
+      ],
+      "meaningEn": "Gardener",
+      "routeSegment": "02",
+      "searchText": "Gardener der Gärtner die Gärtner die Gärtnerin die Gärtnerinnen",
+      "sourceRow": 2,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "03": {
+      "detailPath": "/collections/professions/03",
+      "feminine": [
+        {
+          "plural": "die Automechanikerinnen",
+          "singular": "die Automechanikerin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:automechaniker",
+      "masculine": [
+        {
+          "plural": "die Automechaniker",
+          "singular": "der Automechaniker"
+        }
+      ],
+      "meaningEn": "Auto Mechanic",
+      "routeSegment": "03",
+      "searchText": "Auto Mechanic der Automechaniker die Automechaniker die Automechanikerin die Automechanikerinnen",
+      "sourceRow": 3,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "04": {
+      "detailPath": "/collections/professions/04",
+      "feminine": [
+        {
+          "plural": "die Busfahrerinnen",
+          "singular": "die Busfahrerin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:busfahrer",
+      "masculine": [
+        {
+          "plural": "die Busfahrer",
+          "singular": "der Busfahrer"
+        }
+      ],
+      "meaningEn": "Bus Driver",
+      "routeSegment": "04",
+      "searchText": "Bus Driver der Busfahrer die Busfahrer die Busfahrerin die Busfahrerinnen",
+      "sourceRow": 4,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "05": {
+      "detailPath": "/collections/professions/05",
+      "feminine": [
+        {
+          "plural": "die Friseurinnen",
+          "singular": "die Friseurin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:friseur",
+      "masculine": [
+        {
+          "plural": "die Friseure",
+          "singular": "der Friseur"
+        }
+      ],
+      "meaningEn": "Hairdresser",
+      "routeSegment": "05",
+      "searchText": "Hairdresser der Friseur die Friseure die Friseurin die Friseurinnen",
+      "sourceRow": 5,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "06": {
+      "detailPath": "/collections/professions/06",
+      "feminine": [
+        {
+          "plural": "die Straßenarbeiterinnen",
+          "singular": "die Straßenarbeiterin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:strassenarbeiter",
+      "masculine": [
+        {
+          "plural": "die Straßenarbeiter",
+          "singular": "der Straßenarbeiter"
+        }
+      ],
+      "meaningEn": "Street Worker",
+      "routeSegment": "06",
+      "searchText": "Street Worker der Straßenarbeiter die Straßenarbeiter die Straßenarbeiterin die Straßenarbeiterinnen",
+      "sourceRow": 6,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "07": {
+      "detailPath": "/collections/professions/07",
+      "feminine": [
+        {
+          "plural": "die Bäckerinnen",
+          "singular": "die Bäckerin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:backer",
+      "masculine": [
+        {
+          "plural": "die Bäcker",
+          "singular": "der Bäcker"
+        }
+      ],
+      "meaningEn": "Baker",
+      "routeSegment": "07",
+      "searchText": "Baker der Bäcker die Bäcker die Bäckerin die Bäckerinnen",
+      "sourceRow": 7,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "08": {
+      "detailPath": "/collections/professions/08",
+      "feminine": [
+        {
+          "plural": "die Maurerinnen",
+          "singular": "die Maurerin"
+        }
+      ],
+      "hasAlternatives": false,
+      "id": "teacher-job:maurer",
+      "masculine": [
+        {
+          "plural": "die Maurer",
+          "singular": "der Maurer"
+        }
+      ],
+      "meaningEn": "Bricklayer",
+      "routeSegment": "08",
+      "searchText": "Bricklayer der Maurer die Maurer die Maurerin die Maurerinnen",
+      "sourceRow": 8,
+      "validationStatus": "candidate-needs-german-review"
+    },
+    "09": {
+      "detailPath": "/collections/professions/09",
+      "feminine": [
+        {
+          "plural": "die Landwirtinnen",
+          "singular": "die Landwirtin"
+        },
+        {
+          "plural": "die Bäuerinnen",
+          "singular": "die Bäuerin"
+        }
+      ],
+      "hasAlternatives": true,
+      "id": "teacher-job:landwirt",
+      "masculine": [
+        {
+          "plural": "die Landwirte",
+          "singular": "der Landwirt"
+        },
+        {
+          "plural": "die Bauern",
+          "singular": "der Bauer"
+        }
+      ],
+      "meaningEn": "Farmer",
+      "routeSegment": "09",
+      "searchText": "Farmer der Landwirt die Landwirte der Bauer die Bauern die Landwirtin die Landwirtinnen die Bäuerin die Bäuerinnen",
+      "sourceRow": 9,
+      "validationStatus": "candidate-needs-german-review"
+    }
+  },
+  "schemaVersion": "1.0.0"
+}

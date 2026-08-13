@@ -10,6 +10,7 @@
         "proper-noun"
       ],
       "description": "Published lexemes from the validated course package, including Lesson 2 job vocabulary when published.",
+      "experience": null,
       "id": "vocabulary",
       "itemCount": 69,
       "items": [
@@ -3545,6 +3546,7 @@
         "verb"
       ],
       "description": "Published verbs available to learners. Review-only verbs stay out of this list until approved.",
+      "experience": null,
       "id": "verbs",
       "itemCount": 4,
       "items": [
@@ -3852,6 +3854,7 @@
         "grammar"
       ],
       "description": "Published grammar concepts for Lessons 1–2. Empty until grammar records are learner-published.",
+      "experience": null,
       "id": "grammar",
       "itemCount": 10,
       "items": [
@@ -4261,6 +4264,7 @@
         "neutral"
       ],
       "description": "Published phrase patterns and Q&A pairs for greetings, identity, and related exchanges.",
+      "experience": null,
       "id": "phrases",
       "itemCount": 58,
       "items": [
@@ -7524,7 +7528,223 @@
     },
     {
       "categories": [],
-      "description": "Published dialogues and listening assets. Empty while listening remains review-only or absent.",
+      "description": "All 15 approved workbook tracks for Lessons 1–2, grouped by lesson and exercise with direct practice links.",
+      "experience": {
+        "groups": [
+          {
+            "activity": {
+              "activityId": "activity:lesson-01-alphabet-listen-spell",
+              "label": "Open AB 3 activity",
+              "lessonId": "lesson:01",
+              "path": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d616c7068616265742d6c697374656e2d7370656c6c"
+            },
+            "exercise": "AB 3",
+            "id": "listening:lesson-01-ab-3",
+            "lessonId": "lesson:01",
+            "lessonLabel": "Lesson 01",
+            "purpose": "Names and spelling",
+            "tracks": [
+              {
+                "durationSeconds": 35.974,
+                "exercise": "AB 3",
+                "id": "workbook:1_01",
+                "lessonId": "lesson:01",
+                "purpose": "Names and spelling",
+                "trackId": "1_01"
+              },
+              {
+                "durationSeconds": 30.996,
+                "exercise": "AB 3",
+                "id": "workbook:1_02",
+                "lessonId": "lesson:01",
+                "purpose": "Names and spelling",
+                "trackId": "1_02"
+              },
+              {
+                "durationSeconds": 29.98,
+                "exercise": "AB 3",
+                "id": "workbook:1_03",
+                "lessonId": "lesson:01",
+                "purpose": "Names and spelling",
+                "trackId": "1_03"
+              },
+              {
+                "durationSeconds": 30.97,
+                "exercise": "AB 3",
+                "id": "workbook:1_04",
+                "lessonId": "lesson:01",
+                "purpose": "Names and spelling",
+                "trackId": "1_04"
+              }
+            ]
+          },
+          {
+            "activity": {
+              "activityId": "activity:lesson-01-workbook-listening",
+              "label": "Open AB 9a activity",
+              "lessonId": "lesson:01",
+              "path": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d776f726b626f6f6b2d6c697374656e696e67"
+            },
+            "exercise": "AB 9a",
+            "id": "listening:lesson-01-ab-9a",
+            "lessonId": "lesson:01",
+            "lessonLabel": "Lesson 01",
+            "purpose": "Sentence melody model",
+            "tracks": [
+              {
+                "durationSeconds": 24.481,
+                "exercise": "AB 9a",
+                "id": "workbook:1_05",
+                "lessonId": "lesson:01",
+                "purpose": "Sentence melody model",
+                "trackId": "1_05"
+              }
+            ]
+          },
+          {
+            "activity": {
+              "activityId": "activity:lesson-01-workbook-listening",
+              "label": "Open AB 9b activity",
+              "lessonId": "lesson:01",
+              "path": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d776f726b626f6f6b2d6c697374656e696e67"
+            },
+            "exercise": "AB 9b",
+            "id": "listening:lesson-01-ab-9b",
+            "lessonId": "lesson:01",
+            "lessonLabel": "Lesson 01",
+            "purpose": "Sentence melody comparison",
+            "tracks": [
+              {
+                "durationSeconds": 23.986,
+                "exercise": "AB 9b",
+                "id": "workbook:1_06",
+                "lessonId": "lesson:01",
+                "purpose": "Sentence melody comparison",
+                "trackId": "1_06"
+              }
+            ]
+          },
+          {
+            "activity": {
+              "activityId": "activity:lesson-02-numbers-0-100",
+              "label": "Open AB 6a activity",
+              "lessonId": "lesson:02",
+              "path": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d6e756d626572732d302d313030"
+            },
+            "exercise": "AB 6a",
+            "id": "listening:lesson-02-ab-6a",
+            "lessonId": "lesson:02",
+            "lessonLabel": "Lesson 02",
+            "purpose": "Telephone-number discrimination",
+            "tracks": [
+              {
+                "durationSeconds": 18.017,
+                "exercise": "AB 6a",
+                "id": "workbook:1_07",
+                "lessonId": "lesson:02",
+                "purpose": "Telephone-number discrimination",
+                "trackId": "1_07"
+              },
+              {
+                "durationSeconds": 13.039,
+                "exercise": "AB 6a",
+                "id": "workbook:1_08",
+                "lessonId": "lesson:02",
+                "purpose": "Telephone-number discrimination",
+                "trackId": "1_08"
+              },
+              {
+                "durationSeconds": 15.02,
+                "exercise": "AB 6a",
+                "id": "workbook:1_09",
+                "lessonId": "lesson:02",
+                "purpose": "Telephone-number discrimination",
+                "trackId": "1_09"
+              },
+              {
+                "durationSeconds": 12.909,
+                "exercise": "AB 6a",
+                "id": "workbook:1_10",
+                "lessonId": "lesson:02",
+                "purpose": "Telephone-number discrimination",
+                "trackId": "1_10"
+              }
+            ]
+          },
+          {
+            "activity": {
+              "activityId": "activity:lesson-02-numbers-0-100",
+              "label": "Open AB 6b activity",
+              "lessonId": "lesson:02",
+              "path": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d6e756d626572732d302d313030"
+            },
+            "exercise": "AB 6b",
+            "id": "listening:lesson-02-ab-6b",
+            "lessonId": "lesson:02",
+            "lessonLabel": "Lesson 02",
+            "purpose": "Telephone-number transcription",
+            "tracks": [
+              {
+                "durationSeconds": 17.001,
+                "exercise": "AB 6b",
+                "id": "workbook:1_11",
+                "lessonId": "lesson:02",
+                "purpose": "Telephone-number transcription",
+                "trackId": "1_11"
+              },
+              {
+                "durationSeconds": 12.44,
+                "exercise": "AB 6b",
+                "id": "workbook:1_12",
+                "lessonId": "lesson:02",
+                "purpose": "Telephone-number transcription",
+                "trackId": "1_12"
+              },
+              {
+                "durationSeconds": 13.508,
+                "exercise": "AB 6b",
+                "id": "workbook:1_13",
+                "lessonId": "lesson:02",
+                "purpose": "Telephone-number transcription",
+                "trackId": "1_13"
+              },
+              {
+                "durationSeconds": 14.264,
+                "exercise": "AB 6b",
+                "id": "workbook:1_14",
+                "lessonId": "lesson:02",
+                "purpose": "Telephone-number transcription",
+                "trackId": "1_14"
+              }
+            ]
+          },
+          {
+            "activity": {
+              "activityId": "activity:lesson-02-core-professions",
+              "label": "Open AB 12 activity",
+              "lessonId": "lesson:02",
+              "path": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d636f72652d70726f66657373696f6e73"
+            },
+            "exercise": "AB 12",
+            "id": "listening:lesson-02-ab-12",
+            "lessonId": "lesson:02",
+            "lessonLabel": "Lesson 02",
+            "purpose": "Profession word stress and repetition",
+            "tracks": [
+              {
+                "durationSeconds": 37.955,
+                "exercise": "AB 12",
+                "id": "workbook:1_15",
+                "lessonId": "lesson:02",
+                "purpose": "Profession word stress and repetition",
+                "trackId": "1_15"
+              }
+            ]
+          }
+        ],
+        "itemCount": 15,
+        "kind": "listening"
+      },
       "id": "listening",
       "itemCount": 0,
       "items": [],
@@ -7537,7 +7757,291 @@
     },
     {
       "categories": [],
-      "description": "Published concept collections. Empty while collections such as teacher decks remain review-only.",
+      "description": "Six source-backed learning paths that connect published vocabulary, grammar, phrases, listening, and activities.",
+      "experience": {
+        "itemCount": 6,
+        "kind": "concepts",
+        "topics": [
+          {
+            "activities": [
+              {
+                "activityId": "activity:lesson-01-greetings-by-context",
+                "label": "Greeting contexts",
+                "lessonId": "lesson:01",
+                "path": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d6772656574696e67732d62792d636f6e74657874"
+              },
+              {
+                "activityId": "activity:lesson-01-wellbeing-scale",
+                "label": "Wellbeing phrases",
+                "lessonId": "lesson:01",
+                "path": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d77656c6c6265696e672d7363616c65"
+              }
+            ],
+            "displayLabel": "Greetings, farewells & wellbeing",
+            "hubActions": [
+              {
+                "label": "Greeting vocabulary",
+                "path": "/vocabulary?category=interjection"
+              },
+              {
+                "label": "Wellbeing Q&A",
+                "path": "/phrases?q=Wie%20geht"
+              }
+            ],
+            "id": "concept:greetings-wellbeing",
+            "lessonIds": [
+              "lesson:01"
+            ],
+            "publicationStatus": "published",
+            "sourceEntityIds": [
+              "lex:hallo",
+              "lex:auf-wiedersehen",
+              "qa:wellbeing-casual",
+              "qa:wellbeing-formal"
+            ],
+            "summary": "Lesson 1 greeting contexts, farewell vocabulary, and casual/formal wellbeing exchanges in one review path."
+          },
+          {
+            "activities": [
+              {
+                "activityId": "activity:lesson-01-name-model-dialogue",
+                "label": "Name model dialogue",
+                "lessonId": "lesson:01",
+                "path": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d6e616d652d6d6f64656c2d6469616c6f677565"
+              },
+              {
+                "activityId": "activity:lesson-01-alphabet-listen-spell",
+                "label": "Listen and spell",
+                "lessonId": "lesson:01",
+                "path": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d616c7068616265742d6c697374656e2d7370656c6c"
+              }
+            ],
+            "displayLabel": "Names, identity & spelling",
+            "hubActions": [
+              {
+                "label": "Name phrases",
+                "path": "/phrases?q=hei%C3%9F"
+              },
+              {
+                "label": "W-questions",
+                "path": "/grammar?q=W-Fragen"
+              },
+              {
+                "label": "Workbook listening",
+                "path": "/listening?lesson=01&q=AB%203"
+              }
+            ],
+            "id": "concept:names-identity-spelling",
+            "lessonIds": [
+              "lesson:01"
+            ],
+            "publicationStatus": "published",
+            "sourceEntityIds": [
+              "qa:name-casual",
+              "qa:name-formal",
+              "qa:identity",
+              "gram:w-questions-l1"
+            ],
+            "summary": "Lesson 1 name and identity question patterns connected to alphabet listening and spelling practice."
+          },
+          {
+            "activities": [
+              {
+                "activityId": "activity:lesson-01-origin-aus-contrast",
+                "label": "Origin and aus contrast",
+                "lessonId": "lesson:01",
+                "path": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d6f726967696e2d6175732d636f6e7472617374"
+              }
+            ],
+            "displayLabel": "Origin, countries & aus",
+            "hubActions": [
+              {
+                "label": "Origin grammar",
+                "path": "/grammar?q=Herkunft"
+              },
+              {
+                "label": "Origin Q&A",
+                "path": "/phrases?q=Woher"
+              },
+              {
+                "label": "Country vocabulary",
+                "path": "/vocabulary?category=proper-noun"
+              }
+            ],
+            "id": "concept:origin-aus",
+            "lessonIds": [
+              "lesson:01"
+            ],
+            "publicationStatus": "published",
+            "sourceEntityIds": [
+              "gram:aus-origin-l1",
+              "verb:kommen",
+              "qa:origin-casual",
+              "qa:origin-formal",
+              "lex:deutschland"
+            ],
+            "summary": "Lesson 1 origin questions and country vocabulary connected to the published Herkunft mit aus grammar concept."
+          },
+          {
+            "activities": [
+              {
+                "activityId": "activity:lesson-01-register-qa-builder",
+                "label": "Casual/formal Q&A builder",
+                "lessonId": "lesson:01",
+                "path": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d72656769737465722d71612d6275696c646572"
+              },
+              {
+                "activityId": "activity:lesson-01-guided-intro-recording",
+                "label": "Guided introduction",
+                "lessonId": "lesson:01",
+                "path": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d6775696465642d696e74726f2d7265636f7264696e67"
+              }
+            ],
+            "displayLabel": "du/Sie register & introductions",
+            "hubActions": [
+              {
+                "label": "du and Sie grammar",
+                "path": "/grammar?q=du%20und%20Sie"
+              },
+              {
+                "label": "Formal phrases",
+                "path": "/phrases?category=formal"
+              },
+              {
+                "label": "Informal phrases",
+                "path": "/phrases?category=informal"
+              }
+            ],
+            "id": "concept:register-introductions",
+            "lessonIds": [
+              "lesson:01"
+            ],
+            "publicationStatus": "published",
+            "sourceEntityIds": [
+              "gram:du-sie-register-l1",
+              "qa:name-casual",
+              "qa:name-formal",
+              "gram:personal-pronouns-l1"
+            ],
+            "summary": "Lesson 1 informal and formal introductions connected to the published du und Sie grammar distinction."
+          },
+          {
+            "activities": [
+              {
+                "activityId": "activity:lesson-02-personal-profile",
+                "label": "Personal profile",
+                "lessonId": "lesson:02",
+                "path": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d706572736f6e616c2d70726f66696c65"
+              },
+              {
+                "activityId": "activity:lesson-02-numbers-0-100",
+                "label": "Numbers and telephone listening",
+                "lessonId": "lesson:02",
+                "path": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d6e756d626572732d302d313030"
+              },
+              {
+                "activityId": "activity:lesson-02-relationship-status",
+                "label": "Relationship and status",
+                "lessonId": "lesson:02",
+                "path": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d72656c6174696f6e736869702d737461747573"
+              }
+            ],
+            "displayLabel": "Personal profile, numbers & status",
+            "hubActions": [
+              {
+                "label": "Profile vocabulary",
+                "path": "/vocabulary?lesson=02"
+              },
+              {
+                "label": "Age and residence Q&A",
+                "path": "/phrases?lesson=02"
+              },
+              {
+                "label": "Number listening",
+                "path": "/listening?lesson=02&q=AB%206"
+              }
+            ],
+            "id": "concept:personal-profile",
+            "lessonIds": [
+              "lesson:02"
+            ],
+            "publicationStatus": "published",
+            "sourceEntityIds": [
+              "lex:alter",
+              "lex:familienstand",
+              "qa:age-casual",
+              "qa:residence-casual",
+              "gram:nicht-profile-negation-l2"
+            ],
+            "summary": "Lesson 2 profile fields, age and residence exchanges, telephone-number listening, and nicht contrasts."
+          },
+          {
+            "activities": [
+              {
+                "activityId": "activity:lesson-02-core-professions",
+                "label": "Core professions",
+                "lessonId": "lesson:02",
+                "path": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d636f72652d70726f66657373696f6e73"
+              },
+              {
+                "activityId": "activity:lesson-02-person-form-morphology",
+                "label": "Person-form morphology",
+                "lessonId": "lesson:02",
+                "path": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d706572736f6e2d666f726d2d6d6f7270686f6c6f6779"
+              },
+              {
+                "activityId": "activity:lesson-02-full-person-conjugation",
+                "label": "Full-person conjugation",
+                "lessonId": "lesson:02",
+                "path": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d66756c6c2d706572736f6e2d636f6e6a75676174696f6e"
+              },
+              {
+                "activityId": "activity:lesson-02-profession-qa-builder",
+                "label": "Profession Q&A",
+                "lessonId": "lesson:02",
+                "path": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d70726f66657373696f6e2d71612d6275696c646572"
+              }
+            ],
+            "displayLabel": "Professions, person forms & present tense",
+            "hubActions": [
+              {
+                "label": "Profession vocabulary",
+                "path": "/vocabulary?lesson=02&q=Beruf"
+              },
+              {
+                "label": "Profession grammar",
+                "path": "/grammar?lesson=02&q=Beruf"
+              },
+              {
+                "label": "Profession phrases",
+                "path": "/phrases?lesson=02&q=Beruf"
+              },
+              {
+                "label": "Verb hub",
+                "path": "/verbs"
+              },
+              {
+                "label": "Word-stress listening",
+                "path": "/listening?lesson=02&q=AB%2012"
+              }
+            ],
+            "id": "concept:professions-person-forms",
+            "lessonIds": [
+              "lesson:02"
+            ],
+            "publicationStatus": "published",
+            "sourceEntityIds": [
+              "lex:architekt",
+              "lex:architektin",
+              "gram:profession-expressions-l2",
+              "gram:profession-feminine-forms-l2",
+              "gram:full-present-person-forms-l2",
+              "qa:profession-casual-main"
+            ],
+            "summary": "Lesson 2 profession vocabulary and expressions connected to feminine person forms and full present-tense person forms."
+          }
+        ]
+      },
       "id": "concepts",
       "itemCount": 0,
       "items": [],
@@ -7551,7 +8055,291 @@
   "hubsById": {
     "concepts": {
       "categories": [],
-      "description": "Published concept collections. Empty while collections such as teacher decks remain review-only.",
+      "description": "Six source-backed learning paths that connect published vocabulary, grammar, phrases, listening, and activities.",
+      "experience": {
+        "itemCount": 6,
+        "kind": "concepts",
+        "topics": [
+          {
+            "activities": [
+              {
+                "activityId": "activity:lesson-01-greetings-by-context",
+                "label": "Greeting contexts",
+                "lessonId": "lesson:01",
+                "path": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d6772656574696e67732d62792d636f6e74657874"
+              },
+              {
+                "activityId": "activity:lesson-01-wellbeing-scale",
+                "label": "Wellbeing phrases",
+                "lessonId": "lesson:01",
+                "path": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d77656c6c6265696e672d7363616c65"
+              }
+            ],
+            "displayLabel": "Greetings, farewells & wellbeing",
+            "hubActions": [
+              {
+                "label": "Greeting vocabulary",
+                "path": "/vocabulary?category=interjection"
+              },
+              {
+                "label": "Wellbeing Q&A",
+                "path": "/phrases?q=Wie%20geht"
+              }
+            ],
+            "id": "concept:greetings-wellbeing",
+            "lessonIds": [
+              "lesson:01"
+            ],
+            "publicationStatus": "published",
+            "sourceEntityIds": [
+              "lex:hallo",
+              "lex:auf-wiedersehen",
+              "qa:wellbeing-casual",
+              "qa:wellbeing-formal"
+            ],
+            "summary": "Lesson 1 greeting contexts, farewell vocabulary, and casual/formal wellbeing exchanges in one review path."
+          },
+          {
+            "activities": [
+              {
+                "activityId": "activity:lesson-01-name-model-dialogue",
+                "label": "Name model dialogue",
+                "lessonId": "lesson:01",
+                "path": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d6e616d652d6d6f64656c2d6469616c6f677565"
+              },
+              {
+                "activityId": "activity:lesson-01-alphabet-listen-spell",
+                "label": "Listen and spell",
+                "lessonId": "lesson:01",
+                "path": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d616c7068616265742d6c697374656e2d7370656c6c"
+              }
+            ],
+            "displayLabel": "Names, identity & spelling",
+            "hubActions": [
+              {
+                "label": "Name phrases",
+                "path": "/phrases?q=hei%C3%9F"
+              },
+              {
+                "label": "W-questions",
+                "path": "/grammar?q=W-Fragen"
+              },
+              {
+                "label": "Workbook listening",
+                "path": "/listening?lesson=01&q=AB%203"
+              }
+            ],
+            "id": "concept:names-identity-spelling",
+            "lessonIds": [
+              "lesson:01"
+            ],
+            "publicationStatus": "published",
+            "sourceEntityIds": [
+              "qa:name-casual",
+              "qa:name-formal",
+              "qa:identity",
+              "gram:w-questions-l1"
+            ],
+            "summary": "Lesson 1 name and identity question patterns connected to alphabet listening and spelling practice."
+          },
+          {
+            "activities": [
+              {
+                "activityId": "activity:lesson-01-origin-aus-contrast",
+                "label": "Origin and aus contrast",
+                "lessonId": "lesson:01",
+                "path": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d6f726967696e2d6175732d636f6e7472617374"
+              }
+            ],
+            "displayLabel": "Origin, countries & aus",
+            "hubActions": [
+              {
+                "label": "Origin grammar",
+                "path": "/grammar?q=Herkunft"
+              },
+              {
+                "label": "Origin Q&A",
+                "path": "/phrases?q=Woher"
+              },
+              {
+                "label": "Country vocabulary",
+                "path": "/vocabulary?category=proper-noun"
+              }
+            ],
+            "id": "concept:origin-aus",
+            "lessonIds": [
+              "lesson:01"
+            ],
+            "publicationStatus": "published",
+            "sourceEntityIds": [
+              "gram:aus-origin-l1",
+              "verb:kommen",
+              "qa:origin-casual",
+              "qa:origin-formal",
+              "lex:deutschland"
+            ],
+            "summary": "Lesson 1 origin questions and country vocabulary connected to the published Herkunft mit aus grammar concept."
+          },
+          {
+            "activities": [
+              {
+                "activityId": "activity:lesson-01-register-qa-builder",
+                "label": "Casual/formal Q&A builder",
+                "lessonId": "lesson:01",
+                "path": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d72656769737465722d71612d6275696c646572"
+              },
+              {
+                "activityId": "activity:lesson-01-guided-intro-recording",
+                "label": "Guided introduction",
+                "lessonId": "lesson:01",
+                "path": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d6775696465642d696e74726f2d7265636f7264696e67"
+              }
+            ],
+            "displayLabel": "du/Sie register & introductions",
+            "hubActions": [
+              {
+                "label": "du and Sie grammar",
+                "path": "/grammar?q=du%20und%20Sie"
+              },
+              {
+                "label": "Formal phrases",
+                "path": "/phrases?category=formal"
+              },
+              {
+                "label": "Informal phrases",
+                "path": "/phrases?category=informal"
+              }
+            ],
+            "id": "concept:register-introductions",
+            "lessonIds": [
+              "lesson:01"
+            ],
+            "publicationStatus": "published",
+            "sourceEntityIds": [
+              "gram:du-sie-register-l1",
+              "qa:name-casual",
+              "qa:name-formal",
+              "gram:personal-pronouns-l1"
+            ],
+            "summary": "Lesson 1 informal and formal introductions connected to the published du und Sie grammar distinction."
+          },
+          {
+            "activities": [
+              {
+                "activityId": "activity:lesson-02-personal-profile",
+                "label": "Personal profile",
+                "lessonId": "lesson:02",
+                "path": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d706572736f6e616c2d70726f66696c65"
+              },
+              {
+                "activityId": "activity:lesson-02-numbers-0-100",
+                "label": "Numbers and telephone listening",
+                "lessonId": "lesson:02",
+                "path": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d6e756d626572732d302d313030"
+              },
+              {
+                "activityId": "activity:lesson-02-relationship-status",
+                "label": "Relationship and status",
+                "lessonId": "lesson:02",
+                "path": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d72656c6174696f6e736869702d737461747573"
+              }
+            ],
+            "displayLabel": "Personal profile, numbers & status",
+            "hubActions": [
+              {
+                "label": "Profile vocabulary",
+                "path": "/vocabulary?lesson=02"
+              },
+              {
+                "label": "Age and residence Q&A",
+                "path": "/phrases?lesson=02"
+              },
+              {
+                "label": "Number listening",
+                "path": "/listening?lesson=02&q=AB%206"
+              }
+            ],
+            "id": "concept:personal-profile",
+            "lessonIds": [
+              "lesson:02"
+            ],
+            "publicationStatus": "published",
+            "sourceEntityIds": [
+              "lex:alter",
+              "lex:familienstand",
+              "qa:age-casual",
+              "qa:residence-casual",
+              "gram:nicht-profile-negation-l2"
+            ],
+            "summary": "Lesson 2 profile fields, age and residence exchanges, telephone-number listening, and nicht contrasts."
+          },
+          {
+            "activities": [
+              {
+                "activityId": "activity:lesson-02-core-professions",
+                "label": "Core professions",
+                "lessonId": "lesson:02",
+                "path": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d636f72652d70726f66657373696f6e73"
+              },
+              {
+                "activityId": "activity:lesson-02-person-form-morphology",
+                "label": "Person-form morphology",
+                "lessonId": "lesson:02",
+                "path": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d706572736f6e2d666f726d2d6d6f7270686f6c6f6779"
+              },
+              {
+                "activityId": "activity:lesson-02-full-person-conjugation",
+                "label": "Full-person conjugation",
+                "lessonId": "lesson:02",
+                "path": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d66756c6c2d706572736f6e2d636f6e6a75676174696f6e"
+              },
+              {
+                "activityId": "activity:lesson-02-profession-qa-builder",
+                "label": "Profession Q&A",
+                "lessonId": "lesson:02",
+                "path": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d70726f66657373696f6e2d71612d6275696c646572"
+              }
+            ],
+            "displayLabel": "Professions, person forms & present tense",
+            "hubActions": [
+              {
+                "label": "Profession vocabulary",
+                "path": "/vocabulary?lesson=02&q=Beruf"
+              },
+              {
+                "label": "Profession grammar",
+                "path": "/grammar?lesson=02&q=Beruf"
+              },
+              {
+                "label": "Profession phrases",
+                "path": "/phrases?lesson=02&q=Beruf"
+              },
+              {
+                "label": "Verb hub",
+                "path": "/verbs"
+              },
+              {
+                "label": "Word-stress listening",
+                "path": "/listening?lesson=02&q=AB%2012"
+              }
+            ],
+            "id": "concept:professions-person-forms",
+            "lessonIds": [
+              "lesson:02"
+            ],
+            "publicationStatus": "published",
+            "sourceEntityIds": [
+              "lex:architekt",
+              "lex:architektin",
+              "gram:profession-expressions-l2",
+              "gram:profession-feminine-forms-l2",
+              "gram:full-present-person-forms-l2",
+              "qa:profession-casual-main"
+            ],
+            "summary": "Lesson 2 profession vocabulary and expressions connected to feminine person forms and full present-tense person forms."
+          }
+        ]
+      },
       "id": "concepts",
       "itemCount": 0,
       "items": [],
@@ -7566,6 +8354,7 @@
         "grammar"
       ],
       "description": "Published grammar concepts for Lessons 1–2. Empty until grammar records are learner-published.",
+      "experience": null,
       "id": "grammar",
       "itemCount": 10,
       "items": [
@@ -7970,7 +8759,223 @@
     },
     "listening": {
       "categories": [],
-      "description": "Published dialogues and listening assets. Empty while listening remains review-only or absent.",
+      "description": "All 15 approved workbook tracks for Lessons 1–2, grouped by lesson and exercise with direct practice links.",
+      "experience": {
+        "groups": [
+          {
+            "activity": {
+              "activityId": "activity:lesson-01-alphabet-listen-spell",
+              "label": "Open AB 3 activity",
+              "lessonId": "lesson:01",
+              "path": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d616c7068616265742d6c697374656e2d7370656c6c"
+            },
+            "exercise": "AB 3",
+            "id": "listening:lesson-01-ab-3",
+            "lessonId": "lesson:01",
+            "lessonLabel": "Lesson 01",
+            "purpose": "Names and spelling",
+            "tracks": [
+              {
+                "durationSeconds": 35.974,
+                "exercise": "AB 3",
+                "id": "workbook:1_01",
+                "lessonId": "lesson:01",
+                "purpose": "Names and spelling",
+                "trackId": "1_01"
+              },
+              {
+                "durationSeconds": 30.996,
+                "exercise": "AB 3",
+                "id": "workbook:1_02",
+                "lessonId": "lesson:01",
+                "purpose": "Names and spelling",
+                "trackId": "1_02"
+              },
+              {
+                "durationSeconds": 29.98,
+                "exercise": "AB 3",
+                "id": "workbook:1_03",
+                "lessonId": "lesson:01",
+                "purpose": "Names and spelling",
+                "trackId": "1_03"
+              },
+              {
+                "durationSeconds": 30.97,
+                "exercise": "AB 3",
+                "id": "workbook:1_04",
+                "lessonId": "lesson:01",
+                "purpose": "Names and spelling",
+                "trackId": "1_04"
+              }
+            ]
+          },
+          {
+            "activity": {
+              "activityId": "activity:lesson-01-workbook-listening",
+              "label": "Open AB 9a activity",
+              "lessonId": "lesson:01",
+              "path": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d776f726b626f6f6b2d6c697374656e696e67"
+            },
+            "exercise": "AB 9a",
+            "id": "listening:lesson-01-ab-9a",
+            "lessonId": "lesson:01",
+            "lessonLabel": "Lesson 01",
+            "purpose": "Sentence melody model",
+            "tracks": [
+              {
+                "durationSeconds": 24.481,
+                "exercise": "AB 9a",
+                "id": "workbook:1_05",
+                "lessonId": "lesson:01",
+                "purpose": "Sentence melody model",
+                "trackId": "1_05"
+              }
+            ]
+          },
+          {
+            "activity": {
+              "activityId": "activity:lesson-01-workbook-listening",
+              "label": "Open AB 9b activity",
+              "lessonId": "lesson:01",
+              "path": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d776f726b626f6f6b2d6c697374656e696e67"
+            },
+            "exercise": "AB 9b",
+            "id": "listening:lesson-01-ab-9b",
+            "lessonId": "lesson:01",
+            "lessonLabel": "Lesson 01",
+            "purpose": "Sentence melody comparison",
+            "tracks": [
+              {
+                "durationSeconds": 23.986,
+                "exercise": "AB 9b",
+                "id": "workbook:1_06",
+                "lessonId": "lesson:01",
+                "purpose": "Sentence melody comparison",
+                "trackId": "1_06"
+              }
+            ]
+          },
+          {
+            "activity": {
+              "activityId": "activity:lesson-02-numbers-0-100",
+              "label": "Open AB 6a activity",
+              "lessonId": "lesson:02",
+              "path": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d6e756d626572732d302d313030"
+            },
+            "exercise": "AB 6a",
+            "id": "listening:lesson-02-ab-6a",
+            "lessonId": "lesson:02",
+            "lessonLabel": "Lesson 02",
+            "purpose": "Telephone-number discrimination",
+            "tracks": [
+              {
+                "durationSeconds": 18.017,
+                "exercise": "AB 6a",
+                "id": "workbook:1_07",
+                "lessonId": "lesson:02",
+                "purpose": "Telephone-number discrimination",
+                "trackId": "1_07"
+              },
+              {
+                "durationSeconds": 13.039,
+                "exercise": "AB 6a",
+                "id": "workbook:1_08",
+                "lessonId": "lesson:02",
+                "purpose": "Telephone-number discrimination",
+                "trackId": "1_08"
+              },
+              {
+                "durationSeconds": 15.02,
+                "exercise": "AB 6a",
+                "id": "workbook:1_09",
+                "lessonId": "lesson:02",
+                "purpose": "Telephone-number discrimination",
+                "trackId": "1_09"
+              },
+              {
+                "durationSeconds": 12.909,
+                "exercise": "AB 6a",
+                "id": "workbook:1_10",
+                "lessonId": "lesson:02",
+                "purpose": "Telephone-number discrimination",
+                "trackId": "1_10"
+              }
+            ]
+          },
+          {
+            "activity": {
+              "activityId": "activity:lesson-02-numbers-0-100",
+              "label": "Open AB 6b activity",
+              "lessonId": "lesson:02",
+              "path": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d6e756d626572732d302d313030"
+            },
+            "exercise": "AB 6b",
+            "id": "listening:lesson-02-ab-6b",
+            "lessonId": "lesson:02",
+            "lessonLabel": "Lesson 02",
+            "purpose": "Telephone-number transcription",
+            "tracks": [
+              {
+                "durationSeconds": 17.001,
+                "exercise": "AB 6b",
+                "id": "workbook:1_11",
+                "lessonId": "lesson:02",
+                "purpose": "Telephone-number transcription",
+                "trackId": "1_11"
+              },
+              {
+                "durationSeconds": 12.44,
+                "exercise": "AB 6b",
+                "id": "workbook:1_12",
+                "lessonId": "lesson:02",
+                "purpose": "Telephone-number transcription",
+                "trackId": "1_12"
+              },
+              {
+                "durationSeconds": 13.508,
+                "exercise": "AB 6b",
+                "id": "workbook:1_13",
+                "lessonId": "lesson:02",
+                "purpose": "Telephone-number transcription",
+                "trackId": "1_13"
+              },
+              {
+                "durationSeconds": 14.264,
+                "exercise": "AB 6b",
+                "id": "workbook:1_14",
+                "lessonId": "lesson:02",
+                "purpose": "Telephone-number transcription",
+                "trackId": "1_14"
+              }
+            ]
+          },
+          {
+            "activity": {
+              "activityId": "activity:lesson-02-core-professions",
+              "label": "Open AB 12 activity",
+              "lessonId": "lesson:02",
+              "path": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d636f72652d70726f66657373696f6e73"
+            },
+            "exercise": "AB 12",
+            "id": "listening:lesson-02-ab-12",
+            "lessonId": "lesson:02",
+            "lessonLabel": "Lesson 02",
+            "purpose": "Profession word stress and repetition",
+            "tracks": [
+              {
+                "durationSeconds": 37.955,
+                "exercise": "AB 12",
+                "id": "workbook:1_15",
+                "lessonId": "lesson:02",
+                "purpose": "Profession word stress and repetition",
+                "trackId": "1_15"
+              }
+            ]
+          }
+        ],
+        "itemCount": 15,
+        "kind": "listening"
+      },
       "id": "listening",
       "itemCount": 0,
       "items": [],
@@ -7988,6 +8993,7 @@
         "neutral"
       ],
       "description": "Published phrase patterns and Q&A pairs for greetings, identity, and related exchanges.",
+      "experience": null,
       "id": "phrases",
       "itemCount": 58,
       "items": [
@@ -11254,6 +12260,7 @@
         "verb"
       ],
       "description": "Published verbs available to learners. Review-only verbs stay out of this list until approved.",
+      "experience": null,
       "id": "verbs",
       "itemCount": 4,
       "items": [
@@ -11565,6 +12572,7 @@
         "proper-noun"
       ],
       "description": "Published lexemes from the validated course package, including Lesson 2 job vocabulary when published.",
+      "experience": null,
       "id": "vocabulary",
       "itemCount": 69,
       "items": [

@@ -2,7 +2,7 @@
   "schemaVersion": "1.0.0",
   "fragmentId": "teacher-professions",
   "meta": {
-    "label": "C1 teacher professions publication fragment",
+    "label": "C1 optional source-backed professions publication fragment",
     "generatedFor": "publication",
     "teacherSourceRows": [
       {

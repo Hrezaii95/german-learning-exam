@@ -18,6 +18,10 @@ import {
   projectPublishedLearnerDetails,
   serializeDetailProjectionDeterministic,
 } from "../lib/content/detail-project.js";
+import {
+  projectPublishedExtraProfessions,
+  serializeExtraProfessionsProjection,
+} from "../lib/content/extra-professions.js";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const webRoot = resolve(here, "..");
@@ -27,6 +31,11 @@ const outPath = join(webRoot, "generated", "learner-projection.json");
 const hubsOutPath = join(webRoot, "generated", "learner-hubs.json");
 const searchOutPath = join(webRoot, "generated", "learner-search.json");
 const detailsOutPath = join(webRoot, "generated", "learner-details.json");
+const extraProfessionsOutPath = join(
+  webRoot,
+  "generated",
+  "learner-extra-professions.json",
+);
 
 function main(): void {
   const projection = projectPublishedLearnerWeb(publishedDir);
@@ -58,6 +67,16 @@ function main(): void {
   writeFileSync(detailsOutPath, detailsJson, "utf8");
   process.stdout.write(
     `Wrote learner details: ${details.detailCount} published records (${details.representativeCount} rich representatives) → ${detailsOutPath}\n`,
+  );
+
+  const extraProfessions = projectPublishedExtraProfessions(publishedDir);
+  writeFileSync(
+    extraProfessionsOutPath,
+    serializeExtraProfessionsProjection(extraProfessions),
+    "utf8",
+  );
+  process.stdout.write(
+    `Wrote optional professions: ${extraProfessions.collection.sourceRowCount} source rows, ${extraProfessions.collection.sourceFormLexemeCount} form lexemes → ${extraProfessionsOutPath}\n`,
   );
 }
 

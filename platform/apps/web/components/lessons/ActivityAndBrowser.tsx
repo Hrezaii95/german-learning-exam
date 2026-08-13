@@ -15,6 +15,7 @@ import { InfographicPanel } from "@/components/media/InfographicPanel";
 import { RichLessonVisual } from "@/components/media/RichLessonVisual";
 import { illustrationForActivity } from "@/lib/content/illustrations";
 import { getEnrichedActivity } from "@/lib/content/enrichment-client";
+import { ActivityInteraction } from "@/components/activities";
 import {
   RapidGreetingsSection,
   RapidPracticeSection,
@@ -275,7 +276,7 @@ export function ActivityScreen({
         ) : null}
         <div className="journey-actions">
           {status === "Not started" ? <button className="btn btn-primary" type="button" onClick={onStart} disabled={busy || progressState !== "ready"}>Start activity</button> : null}
-          {status === "In progress" ? <button className="btn btn-primary" type="button" onClick={onComplete} disabled={busy || progressState !== "ready"}>Complete activity</button> : null}
+          {status === "In progress" ? <button className="btn btn-primary" type="button" disabled aria-describedby="practice-completion-note">Complete activity</button> : null}
           {previous ? <Link className="btn btn-secondary" href={appendNavigationContext(previous.canonicalPath, outbound)}>Previous activity</Link> : null}
           {next ? <Link className="btn btn-secondary" href={appendNavigationContext(next.canonicalPath, outbound)}>Next activity</Link> : null}
           <Link className="btn btn-secondary" href={lessonHref}>Return to lesson</Link>
@@ -288,6 +289,13 @@ export function ActivityScreen({
       </header>
 
       {illustration ? <RichLessonVisual illustration={illustration} /> : null}
+      <p className="dense" id="practice-completion-note">Complete the interactive practice below to finish this activity.</p>
+      <ActivityInteraction
+        activity={activity}
+        enrichment={enrichment}
+        onAttempt={status === "Not started" ? onStart : undefined}
+        onSolved={status === "Completed" ? undefined : onComplete}
+      />
       {showGreetings ? <RapidGreetingsSection /> : null}
       {showQa ? <RapidQaSection /> : null}
       {showVerbs ? <RapidVerbSection /> : null}

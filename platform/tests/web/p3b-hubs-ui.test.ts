@@ -115,15 +115,17 @@ describe("P3B hub UI shell contracts", () => {
     expect(html).not.toContain('href="/profile"');
   });
 
-  it("shows empty-hub honesty distinct from no-matches", () => {
-    const empty = renderToStaticMarkup(
+  it("shows populated derived hubs distinct from no-matches", () => {
+    const listening = renderToStaticMarkup(
       createElement(HubListView, {
         hub: hubs.hubsById.listening,
         searchParams: {},
       }),
     );
-    expect(empty).toContain("No published items yet");
-    expect(empty).not.toContain("No matches");
+    expect(listening).toContain("15 published");
+    expect(listening).toContain("Workbook exercises");
+    expect(listening).not.toContain("No published items yet");
+    expect(listening).not.toContain("No matches");
 
     const noMatch = renderToStaticMarkup(
       createElement(HubListView, {
@@ -135,11 +137,12 @@ describe("P3B hub UI shell contracts", () => {
     expect(noMatch).not.toContain("No published items yet");
   });
 
-  it("exposes search and lesson filters on empty hubs without fabricating matches", () => {
-    const emptyHubIds = ["listening", "concepts"] as const;
-    for (const hubId of emptyHubIds) {
+  it("exposes search and lesson filters on derived hubs without fabricating matches", () => {
+    const derivedHubIds = ["listening", "concepts"] as const;
+    for (const hubId of derivedHubIds) {
       const hub = hubs.hubsById[hubId];
       expect(hub.itemCount).toBe(0);
+      expect(hub.experience?.itemCount).toBeGreaterThan(0);
 
       const baseline = renderToStaticMarkup(
         createElement(HubListView, {
@@ -157,7 +160,7 @@ describe("P3B hub UI shell contracts", () => {
       expect(baseline).toContain("Apply filters");
       expect(baseline).toContain("Clear filters");
       expect(baseline).toContain("No active filters");
-      expect(baseline).toContain("No published items yet");
+      expect(baseline).not.toContain("No published items yet");
       expect(baseline).not.toContain("No matches");
       expect(baseline).not.toContain('name="category"');
       expect(baseline).not.toContain("after filters");
@@ -173,15 +176,15 @@ describe("P3B hub UI shell contracts", () => {
       const filteredEmpty = renderToStaticMarkup(
         createElement(HubListView, {
           hub,
-          searchParams: { q: "sein", lesson: "01" },
+          searchParams: { q: "definitely-no-such-item", lesson: "01" },
         }),
       );
-      expect(filteredEmpty).toContain("No published items yet");
-      expect(filteredEmpty).not.toContain("No matches");
+      expect(filteredEmpty).not.toContain("No published items yet");
+      expect(filteredEmpty).toContain("No matches");
       expect(filteredEmpty).toContain("Active filters:");
-      expect(filteredEmpty).toContain("Search: sein");
+      expect(filteredEmpty).toContain("Search: definitely-no-such-item");
       expect(filteredEmpty).toContain("Lesson 01");
-      expect(filteredEmpty).not.toContain("after filters");
+      expect(filteredEmpty).toContain("after filters");
       expect(filteredEmpty).toContain('name="q"');
       expect(filteredEmpty).toContain('name="lesson"');
       expect(filteredEmpty).not.toContain('name="category"');

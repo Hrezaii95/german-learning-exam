@@ -1,8 +1,10 @@
 import Link from "next/link";
 import type {
+  LearnerConceptTopic,
   LearnerHubDefinition,
   LearnerHubProjection,
   LearnerHubRecord,
+  LearnerListeningGroup,
 } from "@/lib/content/hub-types";
 import {
   filterHubRecords,
@@ -21,6 +23,13 @@ import {
   detailHubForId,
 } from "@/lib/content/detail-types";
 import { withPagesBasePath } from "@/lib/content/pages-base-path";
+import { withPagesBaseAssetPath } from "@/lib/content/pages-base-path";
+import {
+  filterConceptTopics,
+  filterListeningGroups,
+  hubVisibleItemCount,
+  publicWorkbookTrackForId,
+} from "@/lib/content/hub-experiences";
 
 function kindLabel(kind: LearnerHubRecord["kind"]): string {
   switch (kind) {
@@ -114,7 +123,7 @@ export function HubDirectoryView({
             <span>
               <span className="hub-shortcut__title">{hub.title}</span>
               <span className="dense hub-shortcut__count">
-                {hub.itemCount} published
+                {hubVisibleItemCount(hub)} published
               </span>
             </span>
             <span className="dense">Open</span>
@@ -139,12 +148,13 @@ function HubEmptyPublished({ hub }: { hub: LearnerHubDefinition }) {
 }
 
 function HubNoMatches({ hub }: { hub: LearnerHubDefinition }) {
+  const visibleItemCount = hubVisibleItemCount(hub);
   return (
     <div className="panel hub-empty" role="status">
       <h2>No matches</h2>
       <p className="muted">
         Nothing in {hub.title} matches the current search and filters. Clear
-        filters to see all {hub.itemCount} published items.
+        filters to see all {visibleItemCount} published items.
       </p>
       <p style={{ marginTop: "1rem" }}>
         <Link className="btn btn-secondary" href={hubClearHref(hub.path)}>
@@ -152,6 +162,86 @@ function HubNoMatches({ hub }: { hub: LearnerHubDefinition }) {
         </Link>
       </p>
     </div>
+  );
+}
+
+function ListeningGroupCard({ group }: { group: LearnerListeningGroup }) {
+  return (
+    <article className="hub-card panel">
+      <div className="meta-row">
+        <span className="meta-chip">{group.lessonLabel}</span>
+        <span className="meta-chip">{group.exercise}</span>
+        <span className="meta-chip">
+          {group.tracks.length} track{group.tracks.length === 1 ? "" : "s"}
+        </span>
+      </div>
+      <h2 className="hub-card__title">{group.purpose}</h2>
+      <ol className="workbook-audio__list">
+        {group.tracks.map((track) => {
+          const media = publicWorkbookTrackForId(track.trackId);
+          if (!media) return null;
+          return (
+            <li key={track.id} className="workbook-audio__track">
+              <div>
+                <strong>
+                  {track.exercise} · Track {track.trackId.replace("_", ".")}
+                </strong>
+                <p className="dense">{Math.round(track.durationSeconds)} sec</p>
+              </div>
+              {/* The transcript is intentionally withheld: revealing it would
+                  disclose listening answers and its public rights are blocked. */}
+              {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
+              <audio
+                controls
+                preload="metadata"
+                src={withPagesBaseAssetPath(
+                  `/audio/source-workbook-approved-v1/${media.filename}`,
+                )}
+                aria-label={`${track.exercise}, track ${track.trackId.replace("_", ".")}, ${track.purpose}`}
+              />
+            </li>
+          );
+        })}
+      </ol>
+      <p style={{ marginTop: "1rem" }}>
+        <Link className="btn btn-primary" href={group.activity.path}>
+          {group.activity.label}
+        </Link>
+      </p>
+    </article>
+  );
+}
+
+function ConceptTopicCard({ topic }: { topic: LearnerConceptTopic }) {
+  return (
+    <article className="hub-card panel">
+      <div className="meta-row">
+        {topic.lessonIds.map((lessonId) => (
+          <span key={lessonId} className="meta-chip">
+            {lessonChips([lessonId])}
+          </span>
+        ))}
+        <span className="meta-chip">
+          {topic.sourceEntityIds.length} published sources
+        </span>
+      </div>
+      <h2 className="hub-card__title">{topic.displayLabel}</h2>
+      <p className="muted">{topic.summary}</p>
+      <div className="hub-filter-actions">
+        {topic.activities.map((activity) => (
+          <Link key={activity.activityId} className="btn btn-primary" href={activity.path}>
+            {activity.label}
+          </Link>
+        ))}
+      </div>
+      <nav className="hub-filter-actions" aria-label={`${topic.displayLabel} related hubs`}>
+        {topic.hubActions.map((action) => (
+          <Link key={`${action.label}:${action.path}`} className="btn btn-secondary" href={action.path}>
+            {action.label}
+          </Link>
+        ))}
+      </nav>
+    </article>
   );
 }
 
@@ -296,7 +386,21 @@ export function HubListView({
 }) {
   const query = parseHubSearchParams(searchParams, hub.categories);
   const filtered = filterHubRecords(hub.items, query);
-  const showAfterFilters = hub.itemCount > 0 && filtered.hasActiveFilters;
+  const visibleItemCount = hubVisibleItemCount(hub);
+  const listeningGroups =
+    hub.experience?.kind === "listening"
+      ? filterListeningGroups(hub.experience, query)
+      : null;
+  const conceptTopics =
+    hub.experience?.kind === "concepts"
+      ? filterConceptTopics(hub.experience, query)
+      : null;
+  const visibleResultCount = listeningGroups
+    ? listeningGroups.reduce((sum, group) => sum + group.tracks.length, 0)
+    : conceptTopics
+      ? conceptTopics.length
+      : filtered.items.length;
+  const showAfterFilters = visibleItemCount > 0 && filtered.hasActiveFilters;
 
   return (
     <div className="stack">
@@ -305,20 +409,49 @@ export function HubListView({
         <h1>{hub.title}</h1>
         <p className="lede">{hub.description}</p>
         <p className="meta-row" style={{ marginTop: "0.5rem" }}>
-          <span className="meta-chip">{hub.itemCount} published</span>
+          <span className="meta-chip">{visibleItemCount} published</span>
           <span className="meta-chip">
-            Showing {filtered.items.length}
+            Showing {visibleResultCount}
             {showAfterFilters ? " after filters" : ""}
           </span>
         </p>
+        {hub.id === "vocabulary" ? (
+          <p style={{ marginTop: "1rem" }}>
+            <Link className="btn btn-secondary" href="/collections/professions">
+              Open 48-row optional professions collection
+            </Link>
+          </p>
+        ) : null}
       </header>
 
       <HubFilters hub={hub} query={query} />
 
-      {hub.itemCount === 0 ? (
+      {visibleItemCount === 0 ? (
         <HubEmptyPublished hub={hub} />
-      ) : filtered.items.length === 0 ? (
+      ) : visibleResultCount === 0 ? (
         <HubNoMatches hub={hub} />
+      ) : listeningGroups ? (
+        <section aria-labelledby="hub-results-heading">
+          <h2 id="hub-results-heading" className="dense">
+            Workbook exercises
+          </h2>
+          <div className="card-grid hub-results">
+            {listeningGroups.map((group) => (
+              <ListeningGroupCard key={group.id} group={group} />
+            ))}
+          </div>
+        </section>
+      ) : conceptTopics ? (
+        <section aria-labelledby="hub-results-heading">
+          <h2 id="hub-results-heading" className="dense">
+            Connected learning paths
+          </h2>
+          <div className="card-grid hub-results">
+            {conceptTopics.map((topic) => (
+              <ConceptTopicCard key={topic.id} topic={topic} />
+            ))}
+          </div>
+        </section>
       ) : (
         <section aria-labelledby="hub-results-heading">
           <h2 id="hub-results-heading" className="dense">

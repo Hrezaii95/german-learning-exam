@@ -47,6 +47,70 @@ export type LearnerHubRecord = {
   searchFields: readonly LearnerHubSearchField[];
 };
 
+/** Canonical learner activity action used by derived hub experiences. */
+export type LearnerHubActivityAction = {
+  activityId: string;
+  label: string;
+  lessonId: "lesson:01" | "lesson:02";
+  path: string;
+};
+
+/** Approved workbook audio metadata. The public media filename stays in the audio registry. */
+export type LearnerListeningTrack = {
+  id: string;
+  trackId: string;
+  lessonId: "lesson:01" | "lesson:02";
+  exercise: string;
+  purpose: string;
+  durationSeconds: number;
+};
+
+export type LearnerListeningGroup = {
+  id: string;
+  lessonId: "lesson:01" | "lesson:02";
+  lessonLabel: string;
+  exercise: string;
+  purpose: string;
+  activity: LearnerHubActivityAction;
+  tracks: readonly LearnerListeningTrack[];
+};
+
+export type LearnerListeningHubExperience = {
+  kind: "listening";
+  itemCount: number;
+  groups: readonly LearnerListeningGroup[];
+};
+
+export type LearnerConceptHubAction = {
+  label: string;
+  path: string;
+};
+
+/**
+ * Cross-domain topic assembled only from learner-published source entities and
+ * activities. Source IDs are retained so projection tests can prove provenance.
+ */
+export type LearnerConceptTopic = {
+  id: string;
+  publicationStatus: "published";
+  displayLabel: string;
+  summary: string;
+  lessonIds: readonly ("lesson:01" | "lesson:02")[];
+  sourceEntityIds: readonly string[];
+  activities: readonly LearnerHubActivityAction[];
+  hubActions: readonly LearnerConceptHubAction[];
+};
+
+export type LearnerConceptsHubExperience = {
+  kind: "concepts";
+  itemCount: number;
+  topics: readonly LearnerConceptTopic[];
+};
+
+export type LearnerHubExperience =
+  | LearnerListeningHubExperience
+  | LearnerConceptsHubExperience;
+
 export type LearnerHubDefinition = {
   id: LearnerHubId;
   path: string;
@@ -56,6 +120,8 @@ export type LearnerHubDefinition = {
   itemCount: number;
   categories: readonly string[];
   items: readonly LearnerHubRecord[];
+  /** Derived learner-safe experiences for hubs not represented by source collections. */
+  experience: LearnerHubExperience | null;
 };
 
 export type LearnerHubProjection = {

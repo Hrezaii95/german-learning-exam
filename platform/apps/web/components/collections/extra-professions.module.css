@@ -1,0 +1,145 @@
+.eyebrow {
+  margin: 0;
+  color: var(--brand);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.notice {
+  border-color: color-mix(in srgb, var(--rule-special) 45%, var(--border));
+  background: color-mix(in srgb, var(--rule-special) 7%, var(--surface));
+}
+
+.notice p:last-child {
+  margin-bottom: 0;
+}
+
+.filters,
+.filters label {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.checkbox {
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  min-height: 44px;
+}
+
+.checkbox input {
+  width: 1.15rem;
+  height: 1.15rem;
+  accent-color: var(--brand);
+}
+
+.sectionHeading,
+.cardTopline,
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.sectionHeading h2 {
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr));
+  gap: 1rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  display: grid;
+  align-content: start;
+  gap: 0.85rem;
+}
+
+.card h3 {
+  margin: 0;
+}
+
+.formsSummary {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0;
+}
+
+.formsSummary div {
+  display: grid;
+  gap: 0.15rem;
+}
+
+.formsSummary dt {
+  color: var(--ink-muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.formsSummary dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+  font-weight: 650;
+}
+
+.review {
+  display: grid;
+  gap: 1rem;
+}
+
+.flashcard {
+  display: grid;
+  justify-items: start;
+  gap: 0.75rem;
+  width: 100%;
+  min-height: 9rem;
+  padding: 1rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--surface-muted);
+  color: var(--ink);
+  text-align: left;
+  cursor: pointer;
+}
+
+.flashcard strong {
+  font-size: clamp(1.1rem, 3vw, 1.45rem);
+  overflow-wrap: anywhere;
+}
+
+.tableWrap {
+  overflow-x: auto;
+}
+
+.formsTable {
+  width: 100%;
+  min-width: 34rem;
+  border-collapse: collapse;
+}
+
+.formsTable th,
+.formsTable td {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+.formsTable td[lang="de"] {
+  font-weight: 650;
+}
+
+@media (max-width: 520px) {
+  .actions .btn,
+  .card .btn,
+  .review > .btn {
+    width: 100%;
+  }
+}

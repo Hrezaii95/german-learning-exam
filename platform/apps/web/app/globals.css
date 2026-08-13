@@ -1539,3 +1539,128 @@ a:hover {
 .gap-list {
   color: var(--ink-muted);
 }
+
+.activity-practice {
+  display: grid;
+  gap: 1rem;
+  border-color: color-mix(in srgb, var(--accent) 52%, var(--border));
+}
+
+.activity-question,
+.activity-listening-form,
+.activity-builder,
+.activity-input-label {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.activity-input-label > span,
+.activity-choice-list legend {
+  font-weight: 700;
+}
+
+.activity-text-input,
+.activity-input-label textarea {
+  width: 100%;
+  min-height: 44px;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+}
+
+.activity-input-label textarea {
+  min-height: 7rem;
+  resize: vertical;
+}
+
+.activity-choice-list {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.activity-choice,
+.activity-confirmation {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  min-height: 44px;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface-muted);
+  cursor: pointer;
+}
+
+.activity-choice input,
+.activity-confirmation input {
+  width: 1.15rem;
+  height: 1.15rem;
+  margin-top: 0.1rem;
+  accent-color: var(--accent);
+}
+
+.activity-builder__answer,
+.activity-source-note,
+.activity-feedback {
+  margin: 0;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface-muted);
+}
+
+.activity-builder__answer {
+  display: grid;
+  gap: 0.35rem;
+  min-height: 72px;
+}
+
+.activity-token-bank,
+.activity-inline-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.activity-token {
+  min-height: 44px;
+  padding: 0.55rem 0.8rem;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.activity-token:hover {
+  background: var(--surface-muted);
+}
+
+.activity-token:focus-visible,
+.activity-text-input:focus-visible,
+.activity-input-label textarea:focus-visible,
+.activity-choice:focus-within,
+.activity-confirmation:focus-within {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.activity-feedback {
+  border-color: var(--accent);
+}
+
+@media (max-width: 520px) {
+  .activity-inline-actions .btn,
+  .activity-question > .btn,
+  .activity-listening-form > .btn {
+    width: 100%;
+  }
+}

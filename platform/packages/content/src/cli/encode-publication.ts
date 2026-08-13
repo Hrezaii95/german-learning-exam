@@ -1734,7 +1734,7 @@ function buildTeacherProfessions(alpha: AlphaContent): ContentFragment {
     schemaVersion: CONTENT_SCHEMA_VERSION,
     fragmentId: "teacher-professions",
     meta: {
-      label: "C1 teacher professions publication fragment",
+      label: "C1 optional source-backed professions publication fragment",
       generatedFor: "publication",
       teacherSourceRows,
     },
