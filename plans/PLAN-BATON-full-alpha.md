@@ -1,9 +1,9 @@
 # PLAN-BATON — German Learning OS Full Alpha
 
-updated: 2026-08-13T07:52:00+03:30
-orchestrator_session: Codex resume 2026-08-13
-active_engine: cursor-cli
-active_phase: P4
+updated: 2026-08-13T16:30:00+03:30
+orchestrator_session: Claude Code takeover 2026-08-13 (session 3a449151)
+active_engine: claude-code
+active_phase: T1-TTS-GATE
 meta_status: n/a
 gate_status: {G0: green, G1: green, G2: green, G3: green, G4: review, G5: partial, G6: pending, G-OWNER: pending}
 workers: [C-LEARN, C-WEB]
@@ -13,7 +13,7 @@ file_ownership:
   - C-WEB: `platform/apps/web/**`, `platform/tests/web/**`, web package integration and README only
 open_items_unchanged: true
 violations: []
-next_action: Complete independent React/TypeScript review and browser evidence for P4-04/P5 integration, then deploy. G4 remains review until behavior review closes; G5 remains partial because generated TTS still needs qualified human listening approval.
+next_action: Ingest and register the 90 restored Kursbuch MP3s (hash, dedupe, governed structure, CD1 1_01-1_17 Lesson 1-2 alignment), then complete P4-04 independent review and dispatch the Codex UX three-direction brief. G4 remains review until behavior review closes; G5 remains partial because generated TTS still needs qualified human listening approval.
 
 ## Current verified facts
 
@@ -21,7 +21,7 @@ next_action: Complete independent React/TypeScript review and browser evidence f
 - Failed Cursor demo is quarantined under `archive/cursor-demo-2026-07-30/`.
 - Current application is a partial vertical slice, not the complete Alpha.
 - 327 generated pronunciation assets reproduce from the audio manifest.
-- All 327 generated clips pass exact-path, hash, encoding and duration technical audit; all 327 remain pending qualified German listening approval.
+- The 27-clip exact-gap supplement is merged verbatim into the canonical TTS manifest: `node tools/audit-alpha-tts.mjs` passes with an exact 354 manifest = 354 disk = 354 audited bijection, zero technical failures, no audio regenerated; all 354 remain pending qualified German listening approval.
 - The project owner explicitly approved public redistribution on 2026-08-13 for exactly 15 mapped workbook CD1 tracks (1_01–1_15). They are byte-identical, hash-audited, and mapped only to their original Lesson 1–2 exercises; no other publisher media is approved.
 - Cursor CLI print mode is affected by a known silent-hang failure. Official Cursor SDK 1.0.27 successfully completed a no-tools probe with `grok-4.5`, `effort=high`, `fast=false`, the SDK-equivalent of the requested non-Fast High variant.
 - The current learner web slice is live at `https://hrezaii95.github.io/german-learning-exam/`; pushes to `codex/live-alpha` deploy through the guarded GitHub Pages workflow.
