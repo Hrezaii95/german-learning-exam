@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { ExtraProfessionsHub } from "@/components/collections/ExtraProfessionsHub";
 import { ShellLayout } from "@/components/shell/ShellLayout";
 import { loadExtraProfessionsProjection } from "@/lib/content/extra-professions";
+import { ProfessionCollectionClient } from "./ProfessionCollectionClient";
 
 export const metadata: Metadata = {
   title: "Optional professions | German Learning OS",
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function ExtraProfessionsPage() {
   return (
     <ShellLayout current="vocabulary">
-      <ExtraProfessionsHub projection={loadExtraProfessionsProjection()} />
+      <ProfessionCollectionClient projection={loadExtraProfessionsProjection()} />
     </ShellLayout>
   );
 }

@@ -13,11 +13,11 @@ Live status rule: **LIVE 200** means the deployed route was included in the 2026
 | Lesson 2 | 11 core activities | Interactive question/check/feedback flow on all 11 | Lesson illustration + 6-stop journey; profession, number, verb and Q&A visuals | Preview TTS and/or approved workbook audio covers all activities | [open](https://hrezaii95.github.io/german-learning-exam/lessons/02/) | LIVE 200 |
 | Vocabulary | 69 published details | Full generated detail routes | 48 noun-system maps; other lexemes keep selectable text | 69/69 exact preview clips | [open](https://hrezaii95.github.io/german-learning-exam/vocabulary/) | LIVE 200 |
 | Verbs | 4 published details | Full paradigms and self-checks | 4/4 semantic stem/ending or irregular-form maps | 4/4 exact preview clips | [open](https://hrezaii95.github.io/german-learning-exam/verbs/) | LIVE 200 |
-| Grammar | 10 published details | Rule, model, learning path and common-error content | 10/10 semantic notice/model/retrieve maps | No exact detail clip yet; text remains complete | [open](https://hrezaii95.github.io/german-learning-exam/grammar/) | LIVE 200 |
-| Phrases & Q&A | 14 Q&A details; 58 hub items | Question, answer and guided-practice content | 14/14 semantic turn/word-order maps | 10/14 exact preview clips; age/residence pairs remain text-only | [open](https://hrezaii95.github.io/german-learning-exam/phrases/) | LIVE 200 |
+| Grammar | 10 published details | Rule, model, learning path and common-error content | 10/10 semantic notice/model/retrieve maps | 10/10 exact preview clips | [open](https://hrezaii95.github.io/german-learning-exam/grammar/) | LIVE 200 |
+| Phrases & Q&A | 14 Q&A details; 58 hub items | Question, answer and guided-practice content | 14/14 semantic turn/word-order maps | 14/14 exact preview clips | [open](https://hrezaii95.github.io/german-learning-exam/phrases/) | LIVE 200 |
 | Listening | 6 exercise groups; 15 tracks | Source-backed listening player and task metadata | Player/waveform UI; no answer-revealing graphic required | 15/15 approved workbook MP3s | [open](https://hrezaii95.github.io/german-learning-exam/listening/) | LIVE 200 |
 | Concepts | 6 experiences | Six cross-hub guided topic paths | Topic cards plus linked semantic lesson/detail visuals | Uses linked activity/detail audio | [open](https://hrezaii95.github.io/german-learning-exam/concepts/) | LIVE 200 |
-| Optional professions | 48 source rows/details | Filterable optional collection; clearly marked candidate language review | No row-specific images yet | No row-specific audio yet | [open](https://hrezaii95.github.io/german-learning-exam/collections/professions/) | LIVE 200 |
+| Optional professions | 48 source rows/details | Filterable optional collection; clearly marked candidate language review | 48/48 responsive semantic person-form/plural maps | 16 exact preview clips across 8 matching rows; other forms explicitly unavailable | [open](https://hrezaii95.github.io/german-learning-exam/collections/professions/) | LIVE 200 |
 | Practice | 7 game routes | Seven interactive game modes | Semantic UI cues; picture game uses published visuals | Audio match consumes published playable audio | [open](https://hrezaii95.github.io/german-learning-exam/practice/) | LIVE 200 |
 
 ## Lesson 1 — 12/12 interactive
@@ -57,10 +57,10 @@ The 48-row professions collection is optional enrichment and does not count towa
 
 ## Remaining media/content gaps
 
-- The 83 synthesized clips are playable **preview** audio, labeled as awaiting independent German listening review; they are not represented here as approved production pronunciation.
-- Exact preview pronunciation is missing for 10 grammar details and four Q&A details: casual/formal age and residence.
+- The 110 synthesized clips are playable **preview** audio, labeled as awaiting independent German listening review; they are not represented here as approved production pronunciation.
+- Exact preview pronunciation now covers 97/97 detail routes and 92/92 unique activity utterances.
 - Only five published noun details have an exact stored plural; missing plurals remain explicitly “Not published” rather than inferred.
-- The optional 48-row profession collection still needs German language review, row-specific graphics, and row-specific audio.
+- The optional 48-row profession collection still needs German language review and broader audio; all rows now have semantic infographics, while 16 exact previews cover eight rows.
 - Approved workbook audio is complete at 15/15, but no public transcript/equivalent is claimed in this checklist.
 
 For row-by-row URLs and media status, use [21-live-content-url-matrix.md](./21-live-content-url-matrix.md).

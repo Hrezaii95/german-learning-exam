@@ -2,8 +2,30 @@
   "schemaVersion": 1,
   "voice": "de-DE-KatjaNeural",
   "rate": "+4%",
-  "assetCount": 83,
+  "assetCount": 110,
   "assets": [
+    {
+      "id": "aud:tts:9b5ae83759130817:v1",
+      "sourceText": "Ä Ö Ü ß",
+      "spokenText": "Ä Ö Ü ß",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "origin": "synthesized-edge-tts",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-9b5ae83759130817.mp3",
+      "publicationStatus": "public-owner-authorized-synthesized-preview"
+    },
+    {
+      "id": "aud:tts:d4ab17bbe9dabe57:v1",
+      "sourceText": "achtundachtzig",
+      "spokenText": "achtundachtzig",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "origin": "synthesized-edge-tts",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-d4ab17bbe9dabe57.mp3",
+      "publicationStatus": "public-owner-authorized-synthesized-preview"
+    },
     {
       "id": "aud:tts:a9d5a11ce03dbf99:v1",
       "sourceText": "allein",
@@ -35,6 +57,17 @@
       "rate": "+4%",
       "origin": "synthesized-edge-tts",
       "publicRelativePath": "audio/tts-de-de-v1/tts-6a8284819483191d.mp3",
+      "publicationStatus": "public-owner-authorized-synthesized-preview"
+    },
+    {
+      "id": "aud:tts:e5c906fcfdddb006:v1",
+      "sourceText": "Beruf ausdrücken",
+      "spokenText": "Beruf ausdrücken",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "origin": "synthesized-edge-tts",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-e5c906fcfdddb006.mp3",
       "publicationStatus": "public-owner-authorized-synthesized-preview"
     },
     {
@@ -511,6 +544,17 @@
       "publicationStatus": "public-owner-authorized-synthesized-preview"
     },
     {
+      "id": "aud:tts:54e06fd517ce5f0e:v1",
+      "sourceText": "die Schweiz",
+      "spokenText": "die Schweiz",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "origin": "synthesized-edge-tts",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-54e06fd517ce5f0e.mp3",
+      "publicationStatus": "public-owner-authorized-synthesized-preview"
+    },
+    {
       "id": "aud:tts:0b47e3e32b5a2a70:v1",
       "sourceText": "die Stelle",
       "spokenText": "die Stelle",
@@ -533,6 +577,28 @@
       "publicationStatus": "public-owner-authorized-synthesized-preview"
     },
     {
+      "id": "aud:tts:c26c9a1b6dec2af6:v1",
+      "sourceText": "die Türkei",
+      "spokenText": "die Türkei",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "origin": "synthesized-edge-tts",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-c26c9a1b6dec2af6.mp3",
+      "publicationStatus": "public-owner-authorized-synthesized-preview"
+    },
+    {
+      "id": "aud:tts:3261a609a298ce3b:v1",
+      "sourceText": "die USA",
+      "spokenText": "die USA",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "origin": "synthesized-edge-tts",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-3261a609a298ce3b.mp3",
+      "publicationStatus": "public-owner-authorized-synthesized-preview"
+    },
+    {
       "id": "aud:tts:ae8547478d451962:v1",
       "sourceText": "die Verkäuferin",
       "spokenText": "die Verkäuferin",
@@ -541,6 +607,28 @@
       "rate": "+4%",
       "origin": "synthesized-edge-tts",
       "publicRelativePath": "audio/tts-de-de-v1/tts-ae8547478d451962.mp3",
+      "publicationStatus": "public-owner-authorized-synthesized-preview"
+    },
+    {
+      "id": "aud:tts:b94fb59b0d31d348:v1",
+      "sourceText": "du und Sie",
+      "spokenText": "du und Sie",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "origin": "synthesized-edge-tts",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-b94fb59b0d31d348.mp3",
+      "publicationStatus": "public-owner-authorized-synthesized-preview"
+    },
+    {
+      "id": "aud:tts:c89c1f59565b0bbf:v1",
+      "sourceText": "einundzwanzig",
+      "spokenText": "einundzwanzig",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "origin": "synthesized-edge-tts",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-c89c1f59565b0bbf.mp3",
       "publicationStatus": "public-owner-authorized-synthesized-preview"
     },
     {
@@ -665,6 +753,28 @@
       "publicationStatus": "public-owner-authorized-synthesized-preview"
     },
     {
+      "id": "aud:tts:4ac446ba3d935fe0:v1",
+      "sourceText": "Herkunft mit aus",
+      "spokenText": "Herkunft mit aus",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "origin": "synthesized-edge-tts",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-4ac446ba3d935fe0.mp3",
+      "publicationStatus": "public-owner-authorized-synthesized-preview"
+    },
+    {
+      "id": "aud:tts:9c39e25180169d26:v1",
+      "sourceText": "hundert",
+      "spokenText": "hundert",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "origin": "synthesized-edge-tts",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-9c39e25180169d26.mp3",
+      "publicationStatus": "public-owner-authorized-synthesized-preview"
+    },
+    {
       "id": "aud:tts:529f00bc62dff975:v1",
       "sourceText": "kommen",
       "spokenText": "kommen",
@@ -684,6 +794,28 @@
       "rate": "+4%",
       "origin": "synthesized-edge-tts",
       "publicRelativePath": "audio/tts-de-de-v1/tts-9533f477c512a096.mp3",
+      "publicationStatus": "public-owner-authorized-synthesized-preview"
+    },
+    {
+      "id": "aud:tts:f9de017e8aab9ec3:v1",
+      "sourceText": "M I R I A M",
+      "spokenText": "M I R I A M",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "origin": "synthesized-edge-tts",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-f9de017e8aab9ec3.mp3",
+      "publicationStatus": "public-owner-authorized-synthesized-preview"
+    },
+    {
+      "id": "aud:tts:8f58daeba6f028ac:v1",
+      "sourceText": "neunundneunzig",
+      "spokenText": "neunundneunzig",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "origin": "synthesized-edge-tts",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-8f58daeba6f028ac.mp3",
       "publicationStatus": "public-owner-authorized-synthesized-preview"
     },
     {
@@ -709,6 +841,50 @@
       "publicationStatus": "public-owner-authorized-synthesized-preview"
     },
     {
+      "id": "aud:tts:78af96a8a269e791:v1",
+      "sourceText": "Personalpronomen",
+      "spokenText": "Personalpronomen",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "origin": "synthesized-edge-tts",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-78af96a8a269e791.mp3",
+      "publicationStatus": "public-owner-authorized-synthesized-preview"
+    },
+    {
+      "id": "aud:tts:2596bcd82f578f92:v1",
+      "sourceText": "Präsens: alle Personen",
+      "spokenText": "Präsens: alle Personen",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "origin": "synthesized-edge-tts",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-2596bcd82f578f92.mp3",
+      "publicationStatus": "public-owner-authorized-synthesized-preview"
+    },
+    {
+      "id": "aud:tts:d4e6cde224b39df6:v1",
+      "sourceText": "Präsensformen",
+      "spokenText": "Präsensformen",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "origin": "synthesized-edge-tts",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-d4e6cde224b39df6.mp3",
+      "publicationStatus": "public-owner-authorized-synthesized-preview"
+    },
+    {
+      "id": "aud:tts:4f7e3e6295887f2f:v1",
+      "sourceText": "Satzstellung im Aussagesatz",
+      "spokenText": "Satzstellung im Aussagesatz",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "origin": "synthesized-edge-tts",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-4f7e3e6295887f2f.mp3",
+      "publicationStatus": "public-owner-authorized-synthesized-preview"
+    },
+    {
       "id": "aud:tts:12a3c868aebb375b:v1",
       "sourceText": "Schweiz",
       "spokenText": "Schweiz",
@@ -717,6 +893,17 @@
       "rate": "+4%",
       "origin": "synthesized-edge-tts",
       "publicRelativePath": "audio/tts-de-de-v1/tts-12a3c868aebb375b.mp3",
+      "publicationStatus": "public-owner-authorized-synthesized-preview"
+    },
+    {
+      "id": "aud:tts:56799127133a4fd0:v1",
+      "sourceText": "sechsundvierzig",
+      "spokenText": "sechsundvierzig",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "origin": "synthesized-edge-tts",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-56799127133a4fd0.mp3",
       "publicationStatus": "public-owner-authorized-synthesized-preview"
     },
     {
@@ -739,6 +926,17 @@
       "rate": "+4%",
       "origin": "synthesized-edge-tts",
       "publicRelativePath": "audio/tts-de-de-v1/tts-f0abec8675ebc550.mp3",
+      "publicationStatus": "public-owner-authorized-synthesized-preview"
+    },
+    {
+      "id": "aud:tts:0d0cd216e2afa2ed:v1",
+      "sourceText": "siebenunddreißig",
+      "spokenText": "siebenunddreißig",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "origin": "synthesized-edge-tts",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-0d0cd216e2afa2ed.mp3",
       "publicationStatus": "public-owner-authorized-synthesized-preview"
     },
     {
@@ -808,6 +1006,39 @@
       "publicationStatus": "public-owner-authorized-synthesized-preview"
     },
     {
+      "id": "aud:tts:80be5b52bd5d9f17:v1",
+      "sourceText": "Verneinung mit nicht",
+      "spokenText": "Verneinung mit nicht",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "origin": "synthesized-edge-tts",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-80be5b52bd5d9f17.mp3",
+      "publicationStatus": "public-owner-authorized-synthesized-preview"
+    },
+    {
+      "id": "aud:tts:c67dfca8d14af76e:v1",
+      "sourceText": "vierundsechzig",
+      "spokenText": "vierundsechzig",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "origin": "synthesized-edge-tts",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-c67dfca8d14af76e.mp3",
+      "publicationStatus": "public-owner-authorized-synthesized-preview"
+    },
+    {
+      "id": "aud:tts:97294db827b7d75d:v1",
+      "sourceText": "W-Fragen",
+      "spokenText": "W-Fragen",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "origin": "synthesized-edge-tts",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-97294db827b7d75d.mp3",
+      "publicationStatus": "public-owner-authorized-synthesized-preview"
+    },
+    {
       "id": "aud:tts:0fa7d1006e9255e8:v1",
       "sourceText": "Was bist du von Beruf?",
       "spokenText": "Was bist du von Beruf?",
@@ -841,6 +1072,17 @@
       "publicationStatus": "public-owner-authorized-synthesized-preview"
     },
     {
+      "id": "aud:tts:f4b6f931f8c04001:v1",
+      "sourceText": "Weibliche Berufsformen",
+      "spokenText": "Weibliche Berufsformen",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "origin": "synthesized-edge-tts",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-f4b6f931f8c04001.mp3",
+      "publicationStatus": "public-owner-authorized-synthesized-preview"
+    },
+    {
       "id": "aud:tts:2307ddf6671cdc36:v1",
       "sourceText": "Wer ist das?",
       "spokenText": "Wer ist das?",
@@ -849,6 +1091,28 @@
       "rate": "+4%",
       "origin": "synthesized-edge-tts",
       "publicRelativePath": "audio/tts-de-de-v1/tts-2307ddf6671cdc36.mp3",
+      "publicationStatus": "public-owner-authorized-synthesized-preview"
+    },
+    {
+      "id": "aud:tts:4000ddf9f15272ec:v1",
+      "sourceText": "Wie alt bist du?",
+      "spokenText": "Wie alt bist du?",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "origin": "synthesized-edge-tts",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-4000ddf9f15272ec.mp3",
+      "publicationStatus": "public-owner-authorized-synthesized-preview"
+    },
+    {
+      "id": "aud:tts:22e7297b10373a91:v1",
+      "sourceText": "Wie alt sind Sie?",
+      "spokenText": "Wie alt sind Sie?",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "origin": "synthesized-edge-tts",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-22e7297b10373a91.mp3",
       "publicationStatus": "public-owner-authorized-synthesized-preview"
     },
     {
@@ -896,6 +1160,28 @@
       "publicationStatus": "public-owner-authorized-synthesized-preview"
     },
     {
+      "id": "aud:tts:1c8a6355de8725ba:v1",
+      "sourceText": "Wo wohnen Sie?",
+      "spokenText": "Wo wohnen Sie?",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "origin": "synthesized-edge-tts",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-1c8a6355de8725ba.mp3",
+      "publicationStatus": "public-owner-authorized-synthesized-preview"
+    },
+    {
+      "id": "aud:tts:f13f25a375359b4c:v1",
+      "sourceText": "Wo wohnst du?",
+      "spokenText": "Wo wohnst du?",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "origin": "synthesized-edge-tts",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-f13f25a375359b4c.mp3",
+      "publicationStatus": "public-owner-authorized-synthesized-preview"
+    },
+    {
       "id": "aud:tts:fec17b90a93577c6:v1",
       "sourceText": "Woher kommen Sie?",
       "spokenText": "Woher kommen Sie?",
@@ -915,6 +1201,17 @@
       "rate": "+4%",
       "origin": "synthesized-edge-tts",
       "publicRelativePath": "audio/tts-de-de-v1/tts-3f22e95182a83d53.mp3",
+      "publicationStatus": "public-owner-authorized-synthesized-preview"
+    },
+    {
+      "id": "aud:tts:a592025cbfd9358a:v1",
+      "sourceText": "zweiundsiebzig",
+      "spokenText": "zweiundsiebzig",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "origin": "synthesized-edge-tts",
+      "publicRelativePath": "audio/tts-de-de-v1/tts-a592025cbfd9358a.mp3",
       "publicationStatus": "public-owner-authorized-synthesized-preview"
     }
   ]

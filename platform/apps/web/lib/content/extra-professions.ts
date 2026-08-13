@@ -1,6 +1,7 @@
 import { readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { resolvePublishedPronunciationExact } from "./media-availability";
 
 export type ExtraProfessionForm = {
   singular: string;
@@ -40,7 +41,11 @@ export type ExtraProfessionsProjection = {
     fragmentLexemeRecordCount: number;
     detailRouteCount: 48;
     media: {
+      /** Original/source audio supplied with this optional collection. */
       audioAvailable: false;
+      synthesizedPreviewAvailable: boolean;
+      synthesizedPreviewAssetCount: number;
+      synthesizedPreviewRowCount: number;
       imagesAvailable: false;
       message: string;
     };
@@ -270,6 +275,17 @@ export function projectExtraProfessionsFragment(
     (count, row) => count + row.masculine.length + row.feminine.length,
     0,
   );
+  const synthesizedPreviewCounts = rows.map((row) =>
+    [...row.masculine, ...row.feminine].reduce(
+      (count, form) =>
+        count +
+        (resolvePublishedPronunciationExact(form.singular).state === "preview" ? 1 : 0) +
+        (resolvePublishedPronunciationExact(form.plural).state === "preview" ? 1 : 0),
+      0,
+    ),
+  );
+  const synthesizedPreviewAssetCount = synthesizedPreviewCounts.reduce((sum, count) => sum + count, 0);
+  const synthesizedPreviewRowCount = synthesizedPreviewCounts.filter((count) => count > 0).length;
   const rowsBySegment = Object.freeze(
     Object.fromEntries(rows.map((row) => [row.routeSegment, row])),
   );
@@ -294,8 +310,11 @@ export function projectExtraProfessionsFragment(
       detailRouteCount: 48,
       media: Object.freeze({
         audioAvailable: false,
+        synthesizedPreviewAvailable: synthesizedPreviewAssetCount > 0,
+        synthesizedPreviewAssetCount,
+        synthesizedPreviewRowCount,
         imagesAvailable: false,
-        message: "No audio or images are published for this optional collection yet.",
+        message: `${synthesizedPreviewAssetCount} exact owner-authorized synthesized previews are playable across ${synthesizedPreviewRowCount} rows; source audio and profession images are not published. Independent German listening review remains pending.`,
       }),
     }),
     rows: Object.freeze(rows),

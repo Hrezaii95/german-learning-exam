@@ -11,7 +11,10 @@
     "media": {
       "audioAvailable": false,
       "imagesAvailable": false,
-      "message": "No audio or images are published for this optional collection yet."
+      "message": "16 exact owner-authorized synthesized previews are playable across 8 rows; source audio and profession images are not published. Independent German listening review remains pending.",
+      "synthesizedPreviewAssetCount": 16,
+      "synthesizedPreviewAvailable": true,
+      "synthesizedPreviewRowCount": 8
     },
     "slug": "professions",
     "sourceFormLexemeCount": 102,

@@ -1,0 +1,474 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-13T08:09:51.937Z",
+  "generator": {
+    "name": "edge-tts",
+    "version": "7.2.7"
+  },
+  "voice": "de-DE-KatjaNeural",
+  "rate": "+4%",
+  "purpose": "Exact-source owner-authorized synthesized preview gap supplement for Lessons 1 and 2",
+  "independentGermanListeningReview": "pending",
+  "assetCount": 27,
+  "assets": [
+    {
+      "id": "aud:tts:9b5ae83759130817:v1",
+      "kind": "speech",
+      "origin": "generated-prototype-edge-tts",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "spokenText": "Ä Ö Ü ß",
+      "conceptIds": [
+        "lesson:01",
+        "lesson:02"
+      ],
+      "path": "media/generated/tts-de-de-v1/tts-9b5ae83759130817.mp3",
+      "bytes": 12960,
+      "sha256": "4a0a66d06e2e581ada7466249ce07b63366c9ca6cf49ef6a0ce85d77a483fe39",
+      "reviewStatus": "candidate-needs-listening-review"
+    },
+    {
+      "id": "aud:tts:f9de017e8aab9ec3:v1",
+      "kind": "speech",
+      "origin": "generated-prototype-edge-tts",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "spokenText": "M I R I A M",
+      "conceptIds": [
+        "lesson:01",
+        "lesson:02"
+      ],
+      "path": "media/generated/tts-de-de-v1/tts-f9de017e8aab9ec3.mp3",
+      "bytes": 12960,
+      "sha256": "cd9fcad0759fe91b4e9a350e8bd22b9bcac4e4ed10e2587c2c8b49f3f135bcc3",
+      "reviewStatus": "candidate-needs-listening-review"
+    },
+    {
+      "id": "aud:tts:d4ab17bbe9dabe57:v1",
+      "kind": "speech",
+      "origin": "generated-prototype-edge-tts",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "spokenText": "achtundachtzig",
+      "conceptIds": [
+        "lesson:01",
+        "lesson:02"
+      ],
+      "path": "media/generated/tts-de-de-v1/tts-d4ab17bbe9dabe57.mp3",
+      "bytes": 11376,
+      "sha256": "83f698ebaabbef663ddd3ab20f0f46f270a1694fff2b644e0b2145f2cdf51ad6",
+      "reviewStatus": "candidate-needs-listening-review"
+    },
+    {
+      "id": "aud:tts:e5c906fcfdddb006:v1",
+      "kind": "speech",
+      "origin": "generated-prototype-edge-tts",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "spokenText": "Beruf ausdrücken",
+      "conceptIds": [
+        "lesson:01",
+        "lesson:02"
+      ],
+      "path": "media/generated/tts-de-de-v1/tts-e5c906fcfdddb006.mp3",
+      "bytes": 12960,
+      "sha256": "5bb537e26c64a47c94c23aff677c2615e76e99354c58179b7faa472ca6b74903",
+      "reviewStatus": "candidate-needs-listening-review"
+    },
+    {
+      "id": "aud:tts:54e06fd517ce5f0e:v1",
+      "kind": "speech",
+      "origin": "generated-prototype-edge-tts",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "spokenText": "die Schweiz",
+      "conceptIds": [
+        "lesson:01",
+        "lesson:02"
+      ],
+      "path": "media/generated/tts-de-de-v1/tts-54e06fd517ce5f0e.mp3",
+      "bytes": 10656,
+      "sha256": "0ad44783cf17c9c432c284726ae6ab7697d0c4bf7b2e09b3459e90d176667700",
+      "reviewStatus": "candidate-needs-listening-review"
+    },
+    {
+      "id": "aud:tts:c26c9a1b6dec2af6:v1",
+      "kind": "speech",
+      "origin": "generated-prototype-edge-tts",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "spokenText": "die Türkei",
+      "conceptIds": [
+        "lesson:01",
+        "lesson:02"
+      ],
+      "path": "media/generated/tts-de-de-v1/tts-c26c9a1b6dec2af6.mp3",
+      "bytes": 10656,
+      "sha256": "21d925c68da84b685f2cbc96b078c99e8f4fbc1fa3f2942b2c9106eb8adaac4e",
+      "reviewStatus": "candidate-needs-listening-review"
+    },
+    {
+      "id": "aud:tts:3261a609a298ce3b:v1",
+      "kind": "speech",
+      "origin": "generated-prototype-edge-tts",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "spokenText": "die USA",
+      "conceptIds": [
+        "lesson:01",
+        "lesson:02"
+      ],
+      "path": "media/generated/tts-de-de-v1/tts-3261a609a298ce3b.mp3",
+      "bytes": 10656,
+      "sha256": "bd1f847436c624974c754f78d53fc4cb7be3c9e6ea6b4d2749e6652aa014e57b",
+      "reviewStatus": "candidate-needs-listening-review"
+    },
+    {
+      "id": "aud:tts:b94fb59b0d31d348:v1",
+      "kind": "speech",
+      "origin": "generated-prototype-edge-tts",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "spokenText": "du und Sie",
+      "conceptIds": [
+        "lesson:01",
+        "lesson:02"
+      ],
+      "path": "media/generated/tts-de-de-v1/tts-b94fb59b0d31d348.mp3",
+      "bytes": 9792,
+      "sha256": "4bd4035e2475f9535e950fdb1e11391afe7a167159184cb233b44be082124aad",
+      "reviewStatus": "candidate-needs-listening-review"
+    },
+    {
+      "id": "aud:tts:c89c1f59565b0bbf:v1",
+      "kind": "speech",
+      "origin": "generated-prototype-edge-tts",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "spokenText": "einundzwanzig",
+      "conceptIds": [
+        "lesson:01",
+        "lesson:02"
+      ],
+      "path": "media/generated/tts-de-de-v1/tts-c89c1f59565b0bbf.mp3",
+      "bytes": 11232,
+      "sha256": "4cdf692b2beb1e9c2c5a08a01f3d90436f8d166a087d688f7cc87d29b92ccf64",
+      "reviewStatus": "candidate-needs-listening-review"
+    },
+    {
+      "id": "aud:tts:9c39e25180169d26:v1",
+      "kind": "speech",
+      "origin": "generated-prototype-edge-tts",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "spokenText": "hundert",
+      "conceptIds": [
+        "lesson:01",
+        "lesson:02"
+      ],
+      "path": "media/generated/tts-de-de-v1/tts-9c39e25180169d26.mp3",
+      "bytes": 8784,
+      "sha256": "f24fd74e326563780e04c6ae4f83ca2764bbf4ed9b596e552420e0851fcefe71",
+      "reviewStatus": "candidate-needs-listening-review"
+    },
+    {
+      "id": "aud:tts:4ac446ba3d935fe0:v1",
+      "kind": "speech",
+      "origin": "generated-prototype-edge-tts",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "spokenText": "Herkunft mit aus",
+      "conceptIds": [
+        "lesson:01",
+        "lesson:02"
+      ],
+      "path": "media/generated/tts-de-de-v1/tts-4ac446ba3d935fe0.mp3",
+      "bytes": 12816,
+      "sha256": "05cf0297f51cc42a2c02f2dedc82d76829e6af337187a36ab42e3348f0d473c3",
+      "reviewStatus": "candidate-needs-listening-review"
+    },
+    {
+      "id": "aud:tts:8f58daeba6f028ac:v1",
+      "kind": "speech",
+      "origin": "generated-prototype-edge-tts",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "spokenText": "neunundneunzig",
+      "conceptIds": [
+        "lesson:01",
+        "lesson:02"
+      ],
+      "path": "media/generated/tts-de-de-v1/tts-8f58daeba6f028ac.mp3",
+      "bytes": 11952,
+      "sha256": "5d81a4c5bfead016f4eddb6a647a1fc7feaa29e29f0d1962ab9c3b3b0b49a0d1",
+      "reviewStatus": "candidate-needs-listening-review"
+    },
+    {
+      "id": "aud:tts:78af96a8a269e791:v1",
+      "kind": "speech",
+      "origin": "generated-prototype-edge-tts",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "spokenText": "Personalpronomen",
+      "conceptIds": [
+        "lesson:01",
+        "lesson:02"
+      ],
+      "path": "media/generated/tts-de-de-v1/tts-78af96a8a269e791.mp3",
+      "bytes": 13536,
+      "sha256": "6695729c60748e1fedc13c4a77de9747aba9dd366bd92f85ad6d830e0be8410d",
+      "reviewStatus": "candidate-needs-listening-review"
+    },
+    {
+      "id": "aud:tts:2596bcd82f578f92:v1",
+      "kind": "speech",
+      "origin": "generated-prototype-edge-tts",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "spokenText": "Präsens: alle Personen",
+      "conceptIds": [
+        "lesson:01",
+        "lesson:02"
+      ],
+      "path": "media/generated/tts-de-de-v1/tts-2596bcd82f578f92.mp3",
+      "bytes": 16704,
+      "sha256": "29cbafdb784853309248e23ebaca69ad527cab5d105cf39586d66752248d909d",
+      "reviewStatus": "candidate-needs-listening-review"
+    },
+    {
+      "id": "aud:tts:d4e6cde224b39df6:v1",
+      "kind": "speech",
+      "origin": "generated-prototype-edge-tts",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "spokenText": "Präsensformen",
+      "conceptIds": [
+        "lesson:01",
+        "lesson:02"
+      ],
+      "path": "media/generated/tts-de-de-v1/tts-d4e6cde224b39df6.mp3",
+      "bytes": 11664,
+      "sha256": "5f51ea419642c06009172b7a4ecdac6483c0ba849c652a6e6187e32d6470bddc",
+      "reviewStatus": "candidate-needs-listening-review"
+    },
+    {
+      "id": "aud:tts:4f7e3e6295887f2f:v1",
+      "kind": "speech",
+      "origin": "generated-prototype-edge-tts",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "spokenText": "Satzstellung im Aussagesatz",
+      "conceptIds": [
+        "lesson:01",
+        "lesson:02"
+      ],
+      "path": "media/generated/tts-de-de-v1/tts-4f7e3e6295887f2f.mp3",
+      "bytes": 16560,
+      "sha256": "ed532d276b5c1d354a86ffedb2af6297ca3c513519f7da6058ead55a1ceeebdb",
+      "reviewStatus": "candidate-needs-listening-review"
+    },
+    {
+      "id": "aud:tts:56799127133a4fd0:v1",
+      "kind": "speech",
+      "origin": "generated-prototype-edge-tts",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "spokenText": "sechsundvierzig",
+      "conceptIds": [
+        "lesson:01",
+        "lesson:02"
+      ],
+      "path": "media/generated/tts-de-de-v1/tts-56799127133a4fd0.mp3",
+      "bytes": 11952,
+      "sha256": "636bdd8e37ceb36a2d76c83547de3bf461a70a17d581b4fdad3c1cb4c2e60bb8",
+      "reviewStatus": "candidate-needs-listening-review"
+    },
+    {
+      "id": "aud:tts:0d0cd216e2afa2ed:v1",
+      "kind": "speech",
+      "origin": "generated-prototype-edge-tts",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "spokenText": "siebenunddreißig",
+      "conceptIds": [
+        "lesson:01",
+        "lesson:02"
+      ],
+      "path": "media/generated/tts-de-de-v1/tts-0d0cd216e2afa2ed.mp3",
+      "bytes": 12096,
+      "sha256": "ca787c44ed637da8df59c30c556af896713fa1dab9f4f0b1995e05bb32889876",
+      "reviewStatus": "candidate-needs-listening-review"
+    },
+    {
+      "id": "aud:tts:80be5b52bd5d9f17:v1",
+      "kind": "speech",
+      "origin": "generated-prototype-edge-tts",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "spokenText": "Verneinung mit nicht",
+      "conceptIds": [
+        "lesson:01",
+        "lesson:02"
+      ],
+      "path": "media/generated/tts-de-de-v1/tts-80be5b52bd5d9f17.mp3",
+      "bytes": 12960,
+      "sha256": "dd7d26d41bfc22827554932b7b8c5ab05085d656700804b36f1cac9929129b64",
+      "reviewStatus": "candidate-needs-listening-review"
+    },
+    {
+      "id": "aud:tts:c67dfca8d14af76e:v1",
+      "kind": "speech",
+      "origin": "generated-prototype-edge-tts",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "spokenText": "vierundsechzig",
+      "conceptIds": [
+        "lesson:01",
+        "lesson:02"
+      ],
+      "path": "media/generated/tts-de-de-v1/tts-c67dfca8d14af76e.mp3",
+      "bytes": 11232,
+      "sha256": "ef6a3a223dfb4afedf2c3601ad14a2f5fcf94e9de20ebc483377bc6f2a8a46c1",
+      "reviewStatus": "candidate-needs-listening-review"
+    },
+    {
+      "id": "aud:tts:f4b6f931f8c04001:v1",
+      "kind": "speech",
+      "origin": "generated-prototype-edge-tts",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "spokenText": "Weibliche Berufsformen",
+      "conceptIds": [
+        "lesson:01",
+        "lesson:02"
+      ],
+      "path": "media/generated/tts-de-de-v1/tts-f4b6f931f8c04001.mp3",
+      "bytes": 14400,
+      "sha256": "90ffe042ff641814469727885f3504e5f730a80bf282aeb9bc3ea8c4d48a937c",
+      "reviewStatus": "candidate-needs-listening-review"
+    },
+    {
+      "id": "aud:tts:4000ddf9f15272ec:v1",
+      "kind": "speech",
+      "origin": "generated-prototype-edge-tts",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "spokenText": "Wie alt bist du?",
+      "conceptIds": [
+        "lesson:01",
+        "lesson:02"
+      ],
+      "path": "media/generated/tts-de-de-v1/tts-4000ddf9f15272ec.mp3",
+      "bytes": 11232,
+      "sha256": "a9443bceced3665a205776ab49a3b6b8b2e04a17a9a84d07624a643d45d43a1f",
+      "reviewStatus": "candidate-needs-listening-review"
+    },
+    {
+      "id": "aud:tts:22e7297b10373a91:v1",
+      "kind": "speech",
+      "origin": "generated-prototype-edge-tts",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "spokenText": "Wie alt sind Sie?",
+      "conceptIds": [
+        "lesson:01",
+        "lesson:02"
+      ],
+      "path": "media/generated/tts-de-de-v1/tts-22e7297b10373a91.mp3",
+      "bytes": 11808,
+      "sha256": "5cc7c2be28527f8cfcced95d276fd9db848fbcf337bb7a4315bda2e2082a68f6",
+      "reviewStatus": "candidate-needs-listening-review"
+    },
+    {
+      "id": "aud:tts:1c8a6355de8725ba:v1",
+      "kind": "speech",
+      "origin": "generated-prototype-edge-tts",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "spokenText": "Wo wohnen Sie?",
+      "conceptIds": [
+        "lesson:01",
+        "lesson:02"
+      ],
+      "path": "media/generated/tts-de-de-v1/tts-1c8a6355de8725ba.mp3",
+      "bytes": 10656,
+      "sha256": "20e12502e766b22c182dd03bec4a3b506b5de1cd62c72dd10f6bd1e8bf7fc6c3",
+      "reviewStatus": "candidate-needs-listening-review"
+    },
+    {
+      "id": "aud:tts:f13f25a375359b4c:v1",
+      "kind": "speech",
+      "origin": "generated-prototype-edge-tts",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "spokenText": "Wo wohnst du?",
+      "conceptIds": [
+        "lesson:01",
+        "lesson:02"
+      ],
+      "path": "media/generated/tts-de-de-v1/tts-f13f25a375359b4c.mp3",
+      "bytes": 10656,
+      "sha256": "af4be8944445fce3539fe79878456e315d49ed6b0847fca6c3018c5592a2dd5e",
+      "reviewStatus": "candidate-needs-listening-review"
+    },
+    {
+      "id": "aud:tts:97294db827b7d75d:v1",
+      "kind": "speech",
+      "origin": "generated-prototype-edge-tts",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "spokenText": "W-Fragen",
+      "conceptIds": [
+        "lesson:01",
+        "lesson:02"
+      ],
+      "path": "media/generated/tts-de-de-v1/tts-97294db827b7d75d.mp3",
+      "bytes": 9648,
+      "sha256": "d751ca5cf819faa7d66e5eacc31aa39124e9851365f1a1ffc68538166451b071",
+      "reviewStatus": "candidate-needs-listening-review"
+    },
+    {
+      "id": "aud:tts:a592025cbfd9358a:v1",
+      "kind": "speech",
+      "origin": "generated-prototype-edge-tts",
+      "locale": "de-DE",
+      "voice": "de-DE-KatjaNeural",
+      "rate": "+4%",
+      "spokenText": "zweiundsiebzig",
+      "conceptIds": [
+        "lesson:01",
+        "lesson:02"
+      ],
+      "path": "media/generated/tts-de-de-v1/tts-a592025cbfd9358a.mp3",
+      "bytes": 11952,
+      "sha256": "2224d939f3a76ca74256d62ed3fa9a68e543e4fc9d55260f042f2cb7514af6ab",
+      "reviewStatus": "candidate-needs-listening-review"
+    }
+  ]
+}

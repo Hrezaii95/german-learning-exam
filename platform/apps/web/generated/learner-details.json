@@ -1735,13 +1735,13 @@
       ],
       "meaningEn": "Switzerland",
       "media": {
-        "assetId": "aud:tts:12a3c868aebb375b:v1",
+        "assetId": "aud:tts:54e06fd517ce5f0e:v1",
         "generationRate": "+4%",
         "locale": "de-DE",
         "origin": "synthesized-edge-tts",
-        "publicPath": "/audio/tts-de-de-v1/tts-12a3c868aebb375b.mp3",
-        "sourceText": "Schweiz",
-        "spokenText": "Schweiz",
+        "publicPath": "/audio/tts-de-de-v1/tts-54e06fd517ce5f0e.mp3",
+        "sourceText": "die Schweiz",
+        "spokenText": "die Schweiz",
         "state": "preview",
         "voice": "de-DE-KatjaNeural"
       },
@@ -2055,13 +2055,13 @@
       ],
       "meaningEn": "Turkey",
       "media": {
-        "assetId": "aud:tts:d48ecf8d74d07426:v1",
+        "assetId": "aud:tts:c26c9a1b6dec2af6:v1",
         "generationRate": "+4%",
         "locale": "de-DE",
         "origin": "synthesized-edge-tts",
-        "publicPath": "/audio/tts-de-de-v1/tts-d48ecf8d74d07426.mp3",
-        "sourceText": "Türkei",
-        "spokenText": "Türkei",
+        "publicPath": "/audio/tts-de-de-v1/tts-c26c9a1b6dec2af6.mp3",
+        "sourceText": "die Türkei",
+        "spokenText": "die Türkei",
         "state": "preview",
         "voice": "de-DE-KatjaNeural"
       },
@@ -2086,13 +2086,13 @@
       ],
       "meaningEn": "USA",
       "media": {
-        "assetId": "aud:tts:aa5ab35a9174c206:v1",
+        "assetId": "aud:tts:3261a609a298ce3b:v1",
         "generationRate": "+4%",
         "locale": "de-DE",
         "origin": "synthesized-edge-tts",
-        "publicPath": "/audio/tts-de-de-v1/tts-aa5ab35a9174c206.mp3",
-        "sourceText": "USA",
-        "spokenText": "USA",
+        "publicPath": "/audio/tts-de-de-v1/tts-3261a609a298ce3b.mp3",
+        "sourceText": "die USA",
+        "spokenText": "die USA",
         "state": "preview",
         "voice": "de-DE-KatjaNeural"
       },
@@ -2492,8 +2492,15 @@
         "lesson:01"
       ],
       "media": {
-        "assetId": null,
-        "state": "missing"
+        "assetId": "aud:tts:4ac446ba3d935fe0:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-4ac446ba3d935fe0.mp3",
+        "sourceText": "Herkunft mit aus",
+        "spokenText": "Herkunft mit aus",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "notice": "The published origin answers use kommen + aus + country name.",
       "prerequisiteIds": [
@@ -2529,8 +2536,15 @@
         "lesson:01"
       ],
       "media": {
-        "assetId": null,
-        "state": "missing"
+        "assetId": "aud:tts:b94fb59b0d31d348:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-b94fb59b0d31d348.mp3",
+        "sourceText": "du und Sie",
+        "spokenText": "du und Sie",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "notice": "Use du in the taught informal patterns and capitalized Sie with the formal verb form.",
       "prerequisiteIds": [
@@ -2566,8 +2580,15 @@
         "lesson:02"
       ],
       "media": {
-        "assetId": null,
-        "state": "missing"
+        "assetId": "aud:tts:2596bcd82f578f92:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-2596bcd82f578f92.mp3",
+        "sourceText": "Präsens: alle Personen",
+        "spokenText": "Präsens: alle Personen",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "notice": "Lesson 2 extends present conjugation to wir, ihr, sie and formal Sie.",
       "prerequisiteIds": [],
@@ -2598,8 +2619,15 @@
         "lesson:01"
       ],
       "media": {
-        "assetId": null,
-        "state": "missing"
+        "assetId": "aud:tts:4f7e3e6295887f2f:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-4f7e3e6295887f2f.mp3",
+        "sourceText": "Satzstellung im Aussagesatz",
+        "spokenText": "Satzstellung im Aussagesatz",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "notice": "In the taught statements, the finite verb is in second position.",
       "prerequisiteIds": [
@@ -2634,8 +2662,15 @@
         "lesson:02"
       ],
       "media": {
-        "assetId": null,
-        "state": "missing"
+        "assetId": "aud:tts:80be5b52bd5d9f17:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-80be5b52bd5d9f17.mp3",
+        "sourceText": "Verneinung mit nicht",
+        "spokenText": "Verneinung mit nicht",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "notice": "Use nicht in the taught profile statements to negate a state or description.",
       "prerequisiteIds": [],
@@ -2667,8 +2702,15 @@
         "lesson:01"
       ],
       "media": {
-        "assetId": null,
-        "state": "missing"
+        "assetId": "aud:tts:78af96a8a269e791:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-78af96a8a269e791.mp3",
+        "sourceText": "Personalpronomen",
+        "spokenText": "Personalpronomen",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "notice": "German finite verbs agree with the person: ich, du, er/sie/es, wir, ihr, sie and formal Sie.",
       "prerequisiteIds": [],
@@ -2700,8 +2742,15 @@
         "lesson:01"
       ],
       "media": {
-        "assetId": null,
-        "state": "missing"
+        "assetId": "aud:tts:d4e6cde224b39df6:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-d4e6cde224b39df6.mp3",
+        "sourceText": "Präsensformen",
+        "spokenText": "Präsensformen",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "notice": "Published present forms include regular endings and the taught special paradigms heißen and sein.",
       "prerequisiteIds": [
@@ -2747,8 +2796,15 @@
         "lesson:02"
       ],
       "media": {
-        "assetId": null,
-        "state": "missing"
+        "assetId": "aud:tts:e5c906fcfdddb006:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-e5c906fcfdddb006.mp3",
+        "sourceText": "Beruf ausdrücken",
+        "spokenText": "Beruf ausdrücken",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "notice": "The taught patterns contrast profession after sein with arbeiten als, bei or in.",
       "prerequisiteIds": [
@@ -2795,8 +2851,15 @@
         "lesson:02"
       ],
       "media": {
-        "assetId": null,
-        "state": "missing"
+        "assetId": "aud:tts:f4b6f931f8c04001:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-f4b6f931f8c04001.mp3",
+        "sourceText": "Weibliche Berufsformen",
+        "spokenText": "Weibliche Berufsformen",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "notice": "Published profession pairs form feminine person words with -in where evidenced; plural -innen is used only when stored in the source.",
       "prerequisiteIds": [],
@@ -2832,8 +2895,15 @@
         "lesson:01"
       ],
       "media": {
-        "assetId": null,
-        "state": "missing"
+        "assetId": "aud:tts:97294db827b7d75d:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-97294db827b7d75d.mp3",
+        "sourceText": "W-Fragen",
+        "spokenText": "W-Fragen",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "notice": "A taught W-question starts with the question word, followed by the finite verb and the person.",
       "prerequisiteIds": [
@@ -2877,8 +2947,15 @@
         "lesson:02"
       ],
       "media": {
-        "assetId": null,
-        "state": "missing"
+        "assetId": "aud:tts:4000ddf9f15272ec:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-4000ddf9f15272ec.mp3",
+        "sourceText": "Wie alt bist du?",
+        "spokenText": "Wie alt bist du?",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "publicationStatus": "published",
       "question": {
@@ -2912,8 +2989,15 @@
         "lesson:02"
       ],
       "media": {
-        "assetId": null,
-        "state": "missing"
+        "assetId": "aud:tts:22e7297b10373a91:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-22e7297b10373a91.mp3",
+        "sourceText": "Wie alt sind Sie?",
+        "spokenText": "Wie alt sind Sie?",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "publicationStatus": "published",
       "question": {
@@ -3308,8 +3392,15 @@
         "lesson:02"
       ],
       "media": {
-        "assetId": null,
-        "state": "missing"
+        "assetId": "aud:tts:f13f25a375359b4c:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-f13f25a375359b4c.mp3",
+        "sourceText": "Wo wohnst du?",
+        "spokenText": "Wo wohnst du?",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "publicationStatus": "published",
       "question": {
@@ -3343,8 +3434,15 @@
         "lesson:02"
       ],
       "media": {
-        "assetId": null,
-        "state": "missing"
+        "assetId": "aud:tts:1c8a6355de8725ba:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-1c8a6355de8725ba.mp3",
+        "sourceText": "Wo wohnen Sie?",
+        "spokenText": "Wo wohnen Sie?",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "publicationStatus": "published",
       "question": {
@@ -3557,8 +3655,15 @@
         "lesson:01"
       ],
       "media": {
-        "assetId": null,
-        "state": "missing"
+        "assetId": "aud:tts:4ac446ba3d935fe0:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-4ac446ba3d935fe0.mp3",
+        "sourceText": "Herkunft mit aus",
+        "spokenText": "Herkunft mit aus",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "notice": "The published origin answers use kommen + aus + country name.",
       "prerequisiteIds": [
@@ -3594,8 +3699,15 @@
         "lesson:01"
       ],
       "media": {
-        "assetId": null,
-        "state": "missing"
+        "assetId": "aud:tts:b94fb59b0d31d348:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-b94fb59b0d31d348.mp3",
+        "sourceText": "du und Sie",
+        "spokenText": "du und Sie",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "notice": "Use du in the taught informal patterns and capitalized Sie with the formal verb form.",
       "prerequisiteIds": [
@@ -3631,8 +3743,15 @@
         "lesson:02"
       ],
       "media": {
-        "assetId": null,
-        "state": "missing"
+        "assetId": "aud:tts:2596bcd82f578f92:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-2596bcd82f578f92.mp3",
+        "sourceText": "Präsens: alle Personen",
+        "spokenText": "Präsens: alle Personen",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "notice": "Lesson 2 extends present conjugation to wir, ihr, sie and formal Sie.",
       "prerequisiteIds": [],
@@ -3663,8 +3782,15 @@
         "lesson:01"
       ],
       "media": {
-        "assetId": null,
-        "state": "missing"
+        "assetId": "aud:tts:4f7e3e6295887f2f:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-4f7e3e6295887f2f.mp3",
+        "sourceText": "Satzstellung im Aussagesatz",
+        "spokenText": "Satzstellung im Aussagesatz",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "notice": "In the taught statements, the finite verb is in second position.",
       "prerequisiteIds": [
@@ -3699,8 +3825,15 @@
         "lesson:02"
       ],
       "media": {
-        "assetId": null,
-        "state": "missing"
+        "assetId": "aud:tts:80be5b52bd5d9f17:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-80be5b52bd5d9f17.mp3",
+        "sourceText": "Verneinung mit nicht",
+        "spokenText": "Verneinung mit nicht",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "notice": "Use nicht in the taught profile statements to negate a state or description.",
       "prerequisiteIds": [],
@@ -3732,8 +3865,15 @@
         "lesson:01"
       ],
       "media": {
-        "assetId": null,
-        "state": "missing"
+        "assetId": "aud:tts:78af96a8a269e791:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-78af96a8a269e791.mp3",
+        "sourceText": "Personalpronomen",
+        "spokenText": "Personalpronomen",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "notice": "German finite verbs agree with the person: ich, du, er/sie/es, wir, ihr, sie and formal Sie.",
       "prerequisiteIds": [],
@@ -3765,8 +3905,15 @@
         "lesson:01"
       ],
       "media": {
-        "assetId": null,
-        "state": "missing"
+        "assetId": "aud:tts:d4e6cde224b39df6:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-d4e6cde224b39df6.mp3",
+        "sourceText": "Präsensformen",
+        "spokenText": "Präsensformen",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "notice": "Published present forms include regular endings and the taught special paradigms heißen and sein.",
       "prerequisiteIds": [
@@ -3812,8 +3959,15 @@
         "lesson:02"
       ],
       "media": {
-        "assetId": null,
-        "state": "missing"
+        "assetId": "aud:tts:e5c906fcfdddb006:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-e5c906fcfdddb006.mp3",
+        "sourceText": "Beruf ausdrücken",
+        "spokenText": "Beruf ausdrücken",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "notice": "The taught patterns contrast profession after sein with arbeiten als, bei or in.",
       "prerequisiteIds": [
@@ -3860,8 +4014,15 @@
         "lesson:02"
       ],
       "media": {
-        "assetId": null,
-        "state": "missing"
+        "assetId": "aud:tts:f4b6f931f8c04001:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-f4b6f931f8c04001.mp3",
+        "sourceText": "Weibliche Berufsformen",
+        "spokenText": "Weibliche Berufsformen",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "notice": "Published profession pairs form feminine person words with -in where evidenced; plural -innen is used only when stored in the source.",
       "prerequisiteIds": [],
@@ -3897,8 +4058,15 @@
         "lesson:01"
       ],
       "media": {
-        "assetId": null,
-        "state": "missing"
+        "assetId": "aud:tts:97294db827b7d75d:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-97294db827b7d75d.mp3",
+        "sourceText": "W-Fragen",
+        "spokenText": "W-Fragen",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "notice": "A taught W-question starts with the question word, followed by the finite verb and the person.",
       "prerequisiteIds": [
@@ -5653,13 +5821,13 @@
       ],
       "meaningEn": "Switzerland",
       "media": {
-        "assetId": "aud:tts:12a3c868aebb375b:v1",
+        "assetId": "aud:tts:54e06fd517ce5f0e:v1",
         "generationRate": "+4%",
         "locale": "de-DE",
         "origin": "synthesized-edge-tts",
-        "publicPath": "/audio/tts-de-de-v1/tts-12a3c868aebb375b.mp3",
-        "sourceText": "Schweiz",
-        "spokenText": "Schweiz",
+        "publicPath": "/audio/tts-de-de-v1/tts-54e06fd517ce5f0e.mp3",
+        "sourceText": "die Schweiz",
+        "spokenText": "die Schweiz",
         "state": "preview",
         "voice": "de-DE-KatjaNeural"
       },
@@ -5973,13 +6141,13 @@
       ],
       "meaningEn": "Turkey",
       "media": {
-        "assetId": "aud:tts:d48ecf8d74d07426:v1",
+        "assetId": "aud:tts:c26c9a1b6dec2af6:v1",
         "generationRate": "+4%",
         "locale": "de-DE",
         "origin": "synthesized-edge-tts",
-        "publicPath": "/audio/tts-de-de-v1/tts-d48ecf8d74d07426.mp3",
-        "sourceText": "Türkei",
-        "spokenText": "Türkei",
+        "publicPath": "/audio/tts-de-de-v1/tts-c26c9a1b6dec2af6.mp3",
+        "sourceText": "die Türkei",
+        "spokenText": "die Türkei",
         "state": "preview",
         "voice": "de-DE-KatjaNeural"
       },
@@ -6004,13 +6172,13 @@
       ],
       "meaningEn": "USA",
       "media": {
-        "assetId": "aud:tts:aa5ab35a9174c206:v1",
+        "assetId": "aud:tts:3261a609a298ce3b:v1",
         "generationRate": "+4%",
         "locale": "de-DE",
         "origin": "synthesized-edge-tts",
-        "publicPath": "/audio/tts-de-de-v1/tts-aa5ab35a9174c206.mp3",
-        "sourceText": "USA",
-        "spokenText": "USA",
+        "publicPath": "/audio/tts-de-de-v1/tts-3261a609a298ce3b.mp3",
+        "sourceText": "die USA",
+        "spokenText": "die USA",
         "state": "preview",
         "voice": "de-DE-KatjaNeural"
       },
@@ -6211,8 +6379,15 @@
         "lesson:02"
       ],
       "media": {
-        "assetId": null,
-        "state": "missing"
+        "assetId": "aud:tts:4000ddf9f15272ec:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-4000ddf9f15272ec.mp3",
+        "sourceText": "Wie alt bist du?",
+        "spokenText": "Wie alt bist du?",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "publicationStatus": "published",
       "question": {
@@ -6246,8 +6421,15 @@
         "lesson:02"
       ],
       "media": {
-        "assetId": null,
-        "state": "missing"
+        "assetId": "aud:tts:22e7297b10373a91:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-22e7297b10373a91.mp3",
+        "sourceText": "Wie alt sind Sie?",
+        "spokenText": "Wie alt sind Sie?",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "publicationStatus": "published",
       "question": {
@@ -6642,8 +6824,15 @@
         "lesson:02"
       ],
       "media": {
-        "assetId": null,
-        "state": "missing"
+        "assetId": "aud:tts:f13f25a375359b4c:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-f13f25a375359b4c.mp3",
+        "sourceText": "Wo wohnst du?",
+        "spokenText": "Wo wohnst du?",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "publicationStatus": "published",
       "question": {
@@ -6677,8 +6866,15 @@
         "lesson:02"
       ],
       "media": {
-        "assetId": null,
-        "state": "missing"
+        "assetId": "aud:tts:1c8a6355de8725ba:v1",
+        "generationRate": "+4%",
+        "locale": "de-DE",
+        "origin": "synthesized-edge-tts",
+        "publicPath": "/audio/tts-de-de-v1/tts-1c8a6355de8725ba.mp3",
+        "sourceText": "Wo wohnen Sie?",
+        "spokenText": "Wo wohnen Sie?",
+        "state": "preview",
+        "voice": "de-DE-KatjaNeural"
       },
       "publicationStatus": "published",
       "question": {

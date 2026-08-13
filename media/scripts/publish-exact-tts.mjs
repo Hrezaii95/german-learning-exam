@@ -16,6 +16,18 @@ const here = dirname(fileURLToPath(import.meta.url));
 const root = resolve(here, "..", "..");
 const alphaPath = join(root, "media", "manifests", "alpha-tts-manifest.json");
 const auditPath = join(root, "media", "qa", "alpha-tts-technical-audit.json");
+const supplementPath = join(
+  root,
+  "media",
+  "manifests",
+  "exact-tts-gap-supplement-v1.json",
+);
+const supplementAuditPath = join(
+  root,
+  "media",
+  "qa",
+  "exact-tts-gap-supplement-v1-technical-audit.json",
+);
 const detailsPath = join(root, "platform", "apps", "web", "generated", "learner-details.json");
 const enrichmentPath = join(
   root,
@@ -78,55 +90,69 @@ function sortedUnique(values) {
 
 const alpha = parse(alphaPath);
 const audit = parse(auditPath);
+const supplement = parse(supplementPath);
+const supplementAudit = parse(supplementAuditPath);
 const details = parse(detailsPath).details;
 const activities = parse(enrichmentPath).activities;
 // These exact strings are the source-backed, purpose-built prompts in the two
 // activities whose enrichment target lists are intentionally empty. Their
-// learning audio is the approved workbook recording; none has a generated TTS
-// exact match in the current 327-clip corpus.
+// primary learning audio is the approved workbook recording; this explicit
+// mapping lets exact prompt previews participate in publication and coverage.
 const specializedPracticeUtterances = Object.freeze([
-  "Ä Ö Ü ß",
-  "M I R I A M",
-  "einundzwanzig",
-  "siebenunddreißig",
-  "sechsundvierzig",
-  "vierundsechzig",
-  "zweiundsiebzig",
-  "achtundachtzig",
-  "neunundneunzig",
-  "hundert",
+  { activityId: "activity:lesson-01-alphabet-listen-spell", sourceText: "Ä Ö Ü ß" },
+  { activityId: "activity:lesson-01-alphabet-listen-spell", sourceText: "M I R I A M" },
+  { activityId: "activity:lesson-02-numbers-0-100", sourceText: "einundzwanzig" },
+  { activityId: "activity:lesson-02-numbers-0-100", sourceText: "siebenunddreißig" },
+  { activityId: "activity:lesson-02-numbers-0-100", sourceText: "sechsundvierzig" },
+  { activityId: "activity:lesson-02-numbers-0-100", sourceText: "vierundsechzig" },
+  { activityId: "activity:lesson-02-numbers-0-100", sourceText: "zweiundsiebzig" },
+  { activityId: "activity:lesson-02-numbers-0-100", sourceText: "achtundachtzig" },
+  { activityId: "activity:lesson-02-numbers-0-100", sourceText: "neunundneunzig" },
+  { activityId: "activity:lesson-02-numbers-0-100", sourceText: "hundert" },
 ]);
 
-if (alpha.assetCount !== alpha.assets.length || audit.assets.length !== alpha.assets.length) {
-  throw new Error("TTS manifest/audit count mismatch");
-}
-if (audit.technicalGate !== "pass") {
-  throw new Error("TTS technical audit is not green");
-}
-
-const auditById = new Map(audit.assets.map((asset) => [asset.id, asset]));
 const alphaByText = new Map();
-for (const asset of alpha.assets) {
-  if (alphaByText.has(asset.spokenText)) {
-    throw new Error(`Duplicate generated spokenText: ${asset.spokenText}`);
-  }
-  const technical = auditById.get(asset.id);
-  if (!technical || technical.technicalStatus !== "pass") {
-    throw new Error(`Generated clip is not technically approved: ${asset.id}`);
-  }
+for (const [corpusName, corpus, corpusAudit] of [
+  ["alpha", alpha, audit],
+  ["exact-gap-supplement", supplement, supplementAudit],
+]) {
   if (
-    technical.spokenText !== asset.spokenText ||
-    technical.sha256 !== asset.sha256 ||
-    technical.bytes !== asset.bytes
+    corpus.assetCount !== corpus.assets.length ||
+    (corpusAudit.assetCount !== undefined &&
+      corpusAudit.assetCount !== corpusAudit.assets.length) ||
+    corpusAudit.assets.length !== corpus.assets.length
   ) {
-    throw new Error(`TTS manifest/audit metadata mismatch: ${asset.id}`);
+    throw new Error(`${corpusName} TTS manifest/audit count mismatch`);
   }
-  const absoluteSource = join(root, ...asset.path.split("/"));
-  if (!existsSync(absoluteSource)) throw new Error(`Missing generated clip: ${asset.id}`);
-  if (statSync(absoluteSource).size !== asset.bytes || sha256(absoluteSource) !== asset.sha256) {
-    throw new Error(`Generated clip bytes do not match manifest: ${asset.id}`);
+  if (corpusAudit.technicalGate !== "pass") {
+    throw new Error(`${corpusName} TTS technical audit is not green`);
   }
-  alphaByText.set(asset.spokenText, { asset, technical, absoluteSource });
+  if (corpus.voice !== alpha.voice || corpus.rate !== alpha.rate) {
+    throw new Error(`${corpusName} TTS voice/rate differs from the alpha corpus`);
+  }
+  const auditById = new Map(corpusAudit.assets.map((asset) => [asset.id, asset]));
+  for (const asset of corpus.assets) {
+    if (alphaByText.has(asset.spokenText)) {
+      throw new Error(`Duplicate generated spokenText: ${asset.spokenText}`);
+    }
+    const technical = auditById.get(asset.id);
+    if (!technical || technical.technicalStatus !== "pass") {
+      throw new Error(`Generated clip is not technically approved: ${asset.id}`);
+    }
+    if (
+      technical.spokenText !== asset.spokenText ||
+      technical.sha256 !== asset.sha256 ||
+      technical.bytes !== asset.bytes
+    ) {
+      throw new Error(`TTS manifest/audit metadata mismatch: ${asset.id}`);
+    }
+    const absoluteSource = join(root, ...asset.path.split("/"));
+    if (!existsSync(absoluteSource)) throw new Error(`Missing generated clip: ${asset.id}`);
+    if (statSync(absoluteSource).size !== asset.bytes || sha256(absoluteSource) !== asset.sha256) {
+      throw new Error(`Generated clip bytes do not match manifest: ${asset.id}`);
+    }
+    alphaByText.set(asset.spokenText, { asset, technical, absoluteSource });
+  }
 }
 
 const detailMappingsByText = new Map();
@@ -168,9 +194,15 @@ for (const activity of activities) {
     activityMappingsByText.set(sourceText, rows);
   }
 }
-for (const sourceText of specializedPracticeUtterances) {
+for (const { activityId, sourceText } of specializedPracticeUtterances) {
   allActivityUtterances.add(sourceText);
-  if (!alphaByText.has(sourceText)) unmappedActivityUtterances.add(sourceText);
+  if (!alphaByText.has(sourceText)) {
+    unmappedActivityUtterances.add(sourceText);
+    continue;
+  }
+  const rows = activityMappingsByText.get(sourceText) ?? [];
+  rows.push({ activityId, sourceText });
+  activityMappingsByText.set(sourceText, rows);
 }
 
 const selectedTexts = sortedUnique([
@@ -238,8 +270,14 @@ const manifest = {
   schemaVersion: 1,
   generatedAt: "2026-08-13T00:00:00.000Z",
   purpose: "Exact-source German pronunciation for the published Lesson 1 and 2 learner experience",
-  sourceManifest: "media/manifests/alpha-tts-manifest.json",
-  sourceTechnicalAudit: "media/qa/alpha-tts-technical-audit.json",
+  sourceManifests: [
+    "media/manifests/alpha-tts-manifest.json",
+    "media/manifests/exact-tts-gap-supplement-v1.json",
+  ],
+  sourceTechnicalAudits: [
+    "media/qa/alpha-tts-technical-audit.json",
+    "media/qa/exact-tts-gap-supplement-v1-technical-audit.json",
+  ],
   publicationPolicy: {
     ownerAuthorizedSynthesizedPreview: true,
     qualifiedGermanListeningReview: false,

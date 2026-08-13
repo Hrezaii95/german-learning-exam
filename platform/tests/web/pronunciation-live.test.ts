@@ -41,9 +41,9 @@ const manifest = JSON.parse(readFileSync(manifestPath, "utf8")) as Manifest;
 
 describe("live exact-source German pronunciation", () => {
   it("publishes only byte-verified exact source/spoken mappings", () => {
-    expect(manifest.assetCount).toBe(83);
-    expect(manifest.assets).toHaveLength(83);
-    expect(readdirSync(publicDir).filter((name) => name.endsWith(".mp3"))).toHaveLength(83);
+    expect(manifest.assetCount).toBe(110);
+    expect(manifest.assets).toHaveLength(110);
+    expect(readdirSync(publicDir).filter((name) => name.endsWith(".mp3"))).toHaveLength(110);
     for (const asset of manifest.assets) {
       expect(asset.spokenText).toBe(asset.sourceText);
       expect(asset.voice).toBe("de-DE-KatjaNeural");
@@ -58,42 +58,25 @@ describe("live exact-source German pronunciation", () => {
   it("reports exact Lesson 1 and 2 coverage without hiding gaps", () => {
     expect(manifest.coverage).toEqual({
       publishedDetailConcepts: 97,
-      detailConceptsWithExactAudio: 83,
-      exactDetailSourceMappings: 83,
+      detailConceptsWithExactAudio: 97,
+      exactDetailSourceMappings: 100,
       uniqueActivityUtterances: 92,
-      activityUtterancesWithExactAudio: 75,
-      activitiesWithExactGeneratedAudio: 19,
+      activityUtterancesWithExactAudio: 92,
+      activitiesWithExactGeneratedAudio: 21,
       activitiesWithApprovedWorkbookAudio: 4,
       activitiesWithEitherAudio: 23,
       totalActivities: 23,
     });
-    expect(manifest.unmappedDetails).toHaveLength(14);
-    expect(manifest.unmappedActivityUtterances).toEqual([
-      "Ä Ö Ü ß",
-      "achtundachtzig",
-      "die Schweiz",
-      "die Türkei",
-      "die USA",
-      "einundzwanzig",
-      "hundert",
-      "M I R I A M",
-      "neunundneunzig",
-      "sechsundvierzig",
-      "siebenunddreißig",
-      "vierundsechzig",
-      "Wie alt bist du?",
-      "Wie alt sind Sie?",
-      "Wo wohnen Sie?",
-      "Wo wohnst du?",
-      "zweiundsiebzig",
-    ]);
+    expect(manifest.unmappedDetails).toEqual([]);
+    expect(manifest.unmappedActivityUtterances).toEqual([]);
   });
 
   it("does not trim, normalize, case-fold, or substitute German source text", () => {
     expect(resolvePublishedPronunciationExact("der Architekt").state).toBe("preview");
     expect(resolvePublishedPronunciationExact(" der Architekt").state).toBe("missing");
     expect(resolvePublishedPronunciationExact("Der Architekt").state).toBe("missing");
-    expect(resolvePublishedPronunciationExact("die Schweiz").state).toBe("missing");
+    expect(resolvePublishedPronunciationExact("die Schweiz").state).toBe("preview");
+    expect(resolvePublishedPronunciationExact(" die Schweiz").state).toBe("missing");
     expect(resolvePublishedPronunciationExact("Schweiz").state).toBe("preview");
   });
 });

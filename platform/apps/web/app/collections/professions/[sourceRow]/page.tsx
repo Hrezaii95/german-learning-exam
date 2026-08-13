@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { ExtraProfessionDetail } from "@/components/collections/ExtraProfessionDetail";
 import { ShellLayout } from "@/components/shell/ShellLayout";
 import { loadExtraProfessionsProjection } from "@/lib/content/extra-professions";
+import { ProfessionRowClient } from "../ProfessionRowClient";
 
 type PageProps = {
   params: Promise<{ sourceRow: string }>;
@@ -33,7 +33,7 @@ export default async function ExtraProfessionDetailPage({ params }: PageProps) {
 
   return (
     <ShellLayout current="vocabulary">
-      <ExtraProfessionDetail row={row} />
+      <ProfessionRowClient row={row} />
     </ShellLayout>
   );
 }
