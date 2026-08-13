@@ -1,11 +1,13 @@
 /**
- * Deterministic learner-safe detail projection for the three P3D representatives.
+ * Deterministic learner-safe detail projection for every published Lexeme,
+ * Verb, GrammarConcept, and QAPair. The three P3D representatives retain their richer views.
  * Uses validated publication + public learner indexes only — never author indexes.
  */
 import {
   buildContentIndexes,
   type ContentBundle,
   type ContentIndexes,
+  type GrammarConcept,
   type Lexeme,
   type PhrasePattern,
   type QAPair,
@@ -25,12 +27,16 @@ import {
   type LearnerDetailProjection,
   type LearnerDetailRecord,
   type LearnerGender,
+  type LearnerGrammarDetail,
   type LearnerPersonFormRelation,
   type LearnerQaDetail,
+  type LearnerQaRepresentative,
   type LearnerVerbDetail,
+  type LearnerVerbRepresentative,
   type LearnerVerbPersonKey,
   type LearnerVerbPresentForm,
   type LearnerVocabularyDetail,
+  type LearnerVocabularyRepresentative,
 } from "./detail-types";
 import { resolveMediaAvailability } from "./media-availability";
 import {
@@ -210,10 +216,90 @@ function personFormFromPublishedPair(
   });
 }
 
+function requirePublishedGrammar(
+  bundle: ContentBundle,
+  id: string,
+): GrammarConcept {
+  const grammar = bundle.grammarConcepts.find((item) => item.id === id);
+  if (!grammar) throw new DetailProjectionError(`Missing grammar concept ${id}`);
+  if (grammar.publication.status !== "published") {
+    throw new DetailProjectionError(`Grammar concept ${id} is not published`);
+  }
+  return grammar;
+}
+
+function publishedPersonForm(
+  bundle: ContentBundle,
+  lexeme: Lexeme,
+): LearnerPersonFormRelation | null {
+  const edge = bundle.relationships.find(
+    (relation) =>
+      relation.type === "person-form-of" &&
+      (relation.fromId === lexeme.id || relation.toId === lexeme.id),
+  );
+  if (!edge) return null;
+  const from = requirePublishedLexeme(bundle, edge.fromId);
+  const to = requirePublishedLexeme(bundle, edge.toId);
+  const masculine = from.noun?.gender === "masculine" ? from : to;
+  const feminine = from.noun?.gender === "feminine" ? from : to;
+  if (
+    masculine.id !== lexeme.id ||
+    masculine.noun?.gender !== "masculine" ||
+    feminine.noun?.gender !== "feminine" ||
+    !feminine.lemma.startsWith(masculine.lemma) ||
+    feminine.lemma.slice(masculine.lemma.length) !== "in"
+  ) {
+    return null;
+  }
+  return personFormFromPublishedPair(masculine, feminine);
+}
+
+function projectAnyVocabulary(
+  bundle: ContentBundle,
+  indexes: ContentIndexes,
+  id: string,
+): LearnerVocabularyDetail {
+  if (id === "lex:architekt") return projectVocabulary(bundle, indexes);
+  const lexeme = requirePublishedLexeme(bundle, id);
+  const meaningEn = lexeme.meanings[0]?.glossEn;
+  if (!meaningEn) throw new DetailProjectionError(`Lexeme ${id} is missing English meaning`);
+  const noun = lexeme.noun;
+  if (noun && !isGender(noun.gender)) {
+    throw new DetailProjectionError(`Lexeme ${id} has unexpected gender`);
+  }
+  const plurals = Object.freeze(
+    (noun?.plurals ?? []).map((entry) => entry.form).filter((form) => form.length > 0),
+  );
+  const displayText = noun ? `${noun.article} ${lexeme.lemma}` : lexeme.lemma;
+  return Object.freeze({
+    kind: "Lexeme",
+    id,
+    hubSegment: "vocabulary",
+    displayText,
+    publicationStatus: "published",
+    lessonIds: indexLessonIds(indexes, id),
+    sourcePriority: indexSourcePriority(indexes, id),
+    lemma: lexeme.lemma,
+    meaningEn,
+    article: noun?.article ?? null,
+    gender: noun?.gender ?? null,
+    singular: noun?.singular ?? lexeme.lemma,
+    plurals,
+    pluralGapMessage:
+      noun && plurals.length === 0 ? "Plural is not published for this item." : null,
+    personForm: publishedPersonForm(bundle, lexeme),
+    media: resolveMediaAvailability({
+      conceptIds: [id],
+      spokenTexts: [displayText, lexeme.lemma],
+    }),
+    canonicalPath: detailCanonicalPath("vocabulary", id),
+  });
+}
+
 function projectVocabulary(
   bundle: ContentBundle,
   indexes: ContentIndexes,
-): LearnerVocabularyDetail {
+): LearnerVocabularyRepresentative {
   const id = "lex:architekt" as const;
   const lexeme = requirePublishedLexeme(bundle, id);
   if (!lexeme.noun) {
@@ -283,7 +369,7 @@ function projectVocabulary(
 function projectVerb(
   bundle: ContentBundle,
   indexes: ContentIndexes,
-): LearnerVerbDetail {
+): LearnerVerbRepresentative {
   const id = "verb:sein" as const;
   const verb = requirePublishedVerb(bundle, id);
   const meaningEn = verb.meanings[0]?.glossEn;
@@ -337,6 +423,47 @@ function projectVerb(
   });
 }
 
+function projectAnyVerb(
+  bundle: ContentBundle,
+  indexes: ContentIndexes,
+  id: string,
+): LearnerVerbDetail {
+  if (id === "verb:sein") return projectVerb(bundle, indexes);
+  const verb = requirePublishedVerb(bundle, id);
+  const meaningEn = verb.meanings[0]?.glossEn;
+  if (!meaningEn) throw new DetailProjectionError(`Verb ${id} is missing English meaning`);
+  const present = Object.freeze(
+    verb.present.map((row) => {
+      if (!isVerbPersonKey(row.person)) {
+        throw new DetailProjectionError(`Verb ${id} has unexpected person key`);
+      }
+      return Object.freeze({
+        person: row.person,
+        form: row.form,
+        personLabel: PERSON_LABELS[row.person],
+      });
+    }),
+  );
+  return Object.freeze({
+    kind: "Verb",
+    id,
+    hubSegment: "verbs",
+    displayText: verb.infinitive,
+    publicationStatus: "published",
+    lessonIds: indexLessonIds(indexes, id),
+    sourcePriority: indexSourcePriority(indexes, id),
+    infinitive: verb.infinitive,
+    meaningEn,
+    present,
+    paradigmNote:
+      present.length > 0
+        ? "Only the published present forms are shown."
+        : "Present forms are not published for this verb.",
+    media: resolveMediaAvailability({ conceptIds: [id], spokenTexts: [verb.infinitive] }),
+    canonicalPath: detailCanonicalPath("verbs", id),
+  });
+}
+
 const QA_CONVERSATION_LEVEL_COPY: Readonly<
   Record<
     (typeof CONVERSATION_LEVEL_IDS)[number],
@@ -385,7 +512,7 @@ function buildQaConversationLevels(): LearnerQaDetail["conversationLevels"] {
 function projectQa(
   bundle: ContentBundle,
   indexes: ContentIndexes,
-): LearnerQaDetail {
+): LearnerQaRepresentative {
   const id = "qa:profession-casual-main" as const;
   const qa = requirePublishedQa(bundle, id);
   if (qa.register !== "informal") {
@@ -440,6 +567,108 @@ function projectQa(
   });
 }
 
+function projectAnyQa(
+  bundle: ContentBundle,
+  indexes: ContentIndexes,
+  id: string,
+): LearnerQaDetail {
+  if (id === "qa:profession-casual-main") return projectQa(bundle, indexes);
+  const qa = requirePublishedQa(bundle, id);
+  const questionPhrase = requirePublishedPhrase(bundle, qa.questionPatternId);
+  const questionText = phraseRealization(questionPhrase);
+  const answers = Object.freeze(
+    qa.answerPatternIds.map((answerId) => {
+      const phrase = requirePublishedPhrase(bundle, answerId);
+      return Object.freeze({
+        id: answerId,
+        realization: phraseRealization(phrase),
+        role: "answer" as const,
+      });
+    }),
+  );
+  if (answers.length === 0) {
+    throw new DetailProjectionError(`QA pair ${id} has no published answers`);
+  }
+  return Object.freeze({
+    kind: "QAPair",
+    id,
+    hubSegment: "phrases",
+    displayText: questionText,
+    publicationStatus: "published",
+    lessonIds: indexLessonIds(indexes, id),
+    sourcePriority: indexSourcePriority(indexes, id),
+    intent: qa.intent,
+    register: qa.register,
+    question: Object.freeze({
+      id: questionPhrase.id,
+      realization: questionText,
+      role: "question",
+    }),
+    answers,
+    acceptedRealizations: Object.freeze([
+      questionText,
+      ...answers.map((answer) => answer.realization),
+    ]),
+    conversationLevels: Object.freeze([]),
+    media: resolveMediaAvailability({ conceptIds: [id], spokenTexts: [questionText] }),
+    canonicalPath: detailCanonicalPath("phrases", id),
+  });
+}
+
+function projectGrammar(
+  bundle: ContentBundle,
+  indexes: ContentIndexes,
+  id: string,
+): LearnerGrammarDetail {
+  const grammar = requirePublishedGrammar(bundle, id);
+  const titleDe = grammar.titleDe?.trim();
+  if (!titleDe) throw new DetailProjectionError(`Grammar concept ${id} is missing German title`);
+  if (grammar.ruleSteps.length === 0) {
+    throw new DetailProjectionError(`Grammar concept ${id} has no published rule steps`);
+  }
+  const prerequisiteLabels = Object.freeze(
+    grammar.prerequisiteIds.map((prerequisiteId) => {
+      const prerequisite = requirePublishedGrammar(bundle, prerequisiteId);
+      return prerequisite.titleDe?.trim() || prerequisite.titleEn;
+    }),
+  );
+  const record = indexes.byId.get(id);
+  if (!record || record.kind !== "GrammarConcept") {
+    throw new DetailProjectionError(`Grammar concept ${id} is missing from learner index`);
+  }
+  const models = grammar.ruleSteps
+    .map((step) => (step.model ? plainTokensText(step.model.tokens) : ""))
+    .filter(Boolean);
+  return Object.freeze({
+    kind: "GrammarConcept",
+    id,
+    hubSegment: "grammar",
+    displayText: titleDe,
+    publicationStatus: "published",
+    lessonIds: indexLessonIds(indexes, id),
+    sourcePriority: indexSourcePriority(indexes, id),
+    titleDe,
+    titleEn: grammar.titleEn,
+    notice: plainTokensText(grammar.noticeTarget.tokens),
+    ruleSteps: Object.freeze(
+      grammar.ruleSteps.map((step) => Object.freeze({
+        id: step.id,
+        notice: plainTokensText(step.notice.tokens),
+        model: step.model ? plainTokensText(step.model.tokens) : null,
+      })),
+    ),
+    prerequisiteIds: Object.freeze([...grammar.prerequisiteIds]),
+    prerequisiteLabels,
+    commonErrorTags: Object.freeze([...grammar.commonErrorTags]),
+    activityIds: Object.freeze([...record.activityIds]),
+    media: resolveMediaAvailability({
+      conceptIds: [id],
+      spokenTexts: [titleDe, ...models],
+    }),
+    canonicalPath: detailCanonicalPath("grammar", id),
+  });
+}
+
 export function projectLearnerDetailProjection(
   bundle: ContentBundle,
 ): LearnerDetailProjection {
@@ -447,11 +676,6 @@ export function projectLearnerDetailProjection(
   const vocabulary = projectVocabulary(bundle, indexes);
   const verb = projectVerb(bundle, indexes);
   const qa = projectQa(bundle, indexes);
-
-  const representatives = Object.freeze([vocabulary, verb, qa] as const);
-  if (representatives.length !== 3) {
-    throw new DetailProjectionError("Expected exactly three representatives");
-  }
 
   const byId = Object.freeze({
     "lex:architekt": vocabulary,
@@ -465,12 +689,45 @@ export function projectLearnerDetailProjection(
     }
   }
 
+  const publishedIds = (kind: "Lexeme" | "Verb" | "GrammarConcept" | "QAPair") =>
+    [...(indexes.byKind.get(kind) ?? [])].sort((a, b) => a.localeCompare(b));
+  const details = Object.freeze([
+    ...publishedIds("Lexeme").map((id) =>
+      id === vocabulary.id ? vocabulary : projectAnyVocabulary(bundle, indexes, id)),
+    ...publishedIds("Verb").map((id) =>
+      id === verb.id ? verb : projectAnyVerb(bundle, indexes, id)),
+    ...publishedIds("GrammarConcept").map((id) =>
+      projectGrammar(bundle, indexes, id)),
+    ...publishedIds("QAPair").map((id) =>
+      id === qa.id ? qa : projectAnyQa(bundle, indexes, id)),
+  ]);
+  const detailsById = Object.freeze(
+    Object.fromEntries(details.map((detail) => [detail.id, detail])),
+  ) as Readonly<Record<string, LearnerDetailRecord>>;
+  if (Object.keys(detailsById).length !== details.length) {
+    throw new DetailProjectionError("Duplicate learner detail id");
+  }
+
+  const representativeDetailsById = Object.freeze({
+    "lex:architekt": detailsById["lex:architekt"]!,
+    "verb:sein": detailsById["verb:sein"]!,
+    "qa:profession-casual-main": detailsById["qa:profession-casual-main"]!,
+  }) as LearnerDetailProjection["representativesById"];
+  const representatives = Object.freeze([
+    representativeDetailsById["lex:architekt"],
+    representativeDetailsById["verb:sein"],
+    representativeDetailsById["qa:profession-casual-main"],
+  ] as const);
+
   return Object.freeze({
     schemaVersion: "1.0.0",
     projectionKind: "learner-details",
     representativeCount: 3,
     representatives,
-    representativesById: byId,
+    representativesById: representativeDetailsById,
+    detailCount: details.length,
+    details,
+    detailsById,
   });
 }
 
@@ -512,8 +769,5 @@ export function getDetailById(
   projection: LearnerDetailProjection,
   id: string,
 ): LearnerDetailRecord | null {
-  if (!(DETAIL_REPRESENTATIVE_IDS as readonly string[]).includes(id)) {
-    return null;
-  }
-  return projection.representativesById[id as DetailRepresentativeId] ?? null;
+  return projection.detailsById[id] ?? null;
 }

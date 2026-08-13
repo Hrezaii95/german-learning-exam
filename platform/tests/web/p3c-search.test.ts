@@ -359,12 +359,7 @@ describe("P3C typed global search projection", () => {
     );
   });
 
-  it("marks only implemented lesson/activity/representative-detail routes as linkable", () => {
-    const detailIds = new Set([
-      "lex:architekt",
-      "verb:sein",
-      "qa:profession-casual-main",
-    ]);
+  it("marks lessons, activities, and every published generic detail as linkable", () => {
     for (const doc of searchProjection.documents) {
       if (doc.kind === "Lesson") {
         expect(doc.canonicalHref).toMatch(/^\/lessons\/(01|02)$/);
@@ -378,7 +373,11 @@ describe("P3C typed global search projection", () => {
           const resolved = resolveLearnerRoute(doc.canonicalHref, lessonProjection);
           expect(resolved.kind).toBe("activity");
         }
-      } else if (detailIds.has(doc.id)) {
+      } else if (
+        doc.kind === "Lexeme" ||
+        doc.kind === "Verb" ||
+        doc.kind === "QAPair"
+      ) {
         expect(doc.canonicalHref).toMatch(
           /^\/(vocabulary|verbs|phrases)\/id-[0-9a-f]+$/,
         );

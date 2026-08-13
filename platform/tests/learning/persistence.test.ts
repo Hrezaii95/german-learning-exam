@@ -192,6 +192,7 @@ function baseEnvelope(
     contentBundle: { ...EXPECTED_BUNDLE },
     settings: { preferredAudioSpeed: 1, timezone: "Europe/Berlin" },
     resume: null,
+    activityProgress: [],
     tags: [],
     notes: [],
     events: [],
@@ -229,11 +230,31 @@ describe("C2D persistence — empty state and schema pins", () => {
     const empty = createEmptyLearnerState({
       contentBundle: { ...EXPECTED_BUNDLE },
     });
-    expect(empty.schemaVersion).toBe("1.0.0");
+    expect(empty.schemaVersion).toBe(LEARNER_STATE_SCHEMA_VERSION);
     expect(empty.masteryReducerVersion).toBe(MASTERY_REDUCER_VERSION);
     expect(empty.reviewSchedulerVersion).toBe(REVIEW_SCHEDULER_VERSION);
     expect(empty.events).toEqual([]);
     expect(empty.resume).toBeNull();
+    expect(empty.activityProgress).toEqual([]);
+  });
+
+  it("validates activity progress as published relational state", () => {
+    const progress = {
+      lessonId: "lesson:01",
+      stageId: "stage:learn",
+      activityId: "activity:01-overview",
+      progressState: "completed",
+      startedAt: "2026-08-08T10:00:00.000Z",
+      completedAt: "2026-08-08T10:05:00.000Z",
+    };
+    expect(parse(baseEnvelope({ activityProgress: [progress] })).activityProgress)
+      .toEqual([progress]);
+    expect(() => parse(baseEnvelope({
+      activityProgress: [{ ...progress, activityId: "activity:review-only" }],
+    }))).toThrow(PersistenceError);
+    expect(() => parse(baseEnvelope({
+      activityProgress: [{ ...progress, completedAt: undefined }],
+    }))).toThrow(PersistenceError);
   });
 
   it("rejects unsupported future envelope schemaVersion", () => {
@@ -1017,7 +1038,7 @@ describe("C2D persistence — migration registry", () => {
       },
       parseOpts,
     );
-    expect(migrated.schemaVersion).toBe("1.0.0");
+    expect(migrated.schemaVersion).toBe(LEARNER_STATE_SCHEMA_VERSION);
   });
 });
 
@@ -1025,7 +1046,7 @@ describe("C2D persistence — parse JSON helper and new cards", () => {
   it("parseLearnerStateJson applies byte limit and parses", () => {
     const json = JSON.stringify(baseEnvelope());
     const state = parseLearnerStateJson(json, parseOpts);
-    expect(state.schemaVersion).toBe("1.0.0");
+    expect(state.schemaVersion).toBe(LEARNER_STATE_SCHEMA_VERSION);
   });
 
   it("accepts createNewReviewCard inside envelope", () => {
@@ -1279,7 +1300,7 @@ describe("C2DR1 persistence — fail-closed boundary adversarial", () => {
       json,
       smuggled as unknown as typeof adapterOpts & { now: Date },
     );
-    expect(hydration.state.schemaVersion).toBe("1.0.0");
+    expect(hydration.state.schemaVersion).toBe(LEARNER_STATE_SCHEMA_VERSION);
   });
 });
 

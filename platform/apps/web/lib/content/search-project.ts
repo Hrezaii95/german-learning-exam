@@ -1,8 +1,6 @@
 import {
-  DETAIL_HUB_BY_ID,
-  DETAIL_KIND_BY_ID,
   detailCanonicalPath,
-  isDetailRepresentativeId,
+  detailHubForId,
 } from "./detail-types";
 import {
   buildContentIndexes,
@@ -88,9 +86,10 @@ function resolveCanonicalHref(
   if (kind === "LearningActivity") {
     return activityPathById.get(id) ?? null;
   }
-  // Only the three implemented representative details are linkable.
-  if (isDetailRepresentativeId(id) && DETAIL_KIND_BY_ID[id] === kind) {
-    return detailCanonicalPath(DETAIL_HUB_BY_ID[id], id);
+  const detailHub = detailHubForId(id);
+  const detailKind = detailHub === "vocabulary" ? "Lexeme" : detailHub === "verbs" ? "Verb" : detailHub === "grammar" ? "GrammarConcept" : detailHub === "phrases" ? "QAPair" : null;
+  if (detailHub && detailKind === kind) {
+    return detailCanonicalPath(detailHub, id);
   }
   void hubPath;
   return null;

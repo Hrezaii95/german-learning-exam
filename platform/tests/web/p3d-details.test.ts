@@ -319,19 +319,16 @@ describe("P3D detail routes", () => {
       }
     }
     expect(listCanonicalDetailPaths(details)).toEqual(
-      DETAIL_REPRESENTATIVE_IDS.map((id) =>
-        detailCanonicalPath(details.representativesById[id].hubSegment, id),
-      ).sort(),
+      details.details.map((detail) => detail.canonicalPath).sort(),
     );
   });
 
-  it("404s wrong kind, unknown, alternate, review, malformed, extra segments", () => {
+  it("404s wrong kind, unknown, review, malformed, and extra segments", () => {
     const cases = [
       "/verbs/lex%3Aarchitekt",
       "/vocabulary/verb%3Asein",
-      "/vocabulary/lex%3Aarchitektin",
-      "/vocabulary/lex%3Aingenieur",
-      "/phrases/qa%3Aprofession-formal-main",
+      "/vocabulary/lex%3Anot-published",
+      "/phrases/qa%3Anot-published",
       "/vocabulary/lex%253Aarchitekt",
       "/vocabulary/lex%3Aarchitekt/extra",
       "/grammar/lex%3Aarchitekt",
@@ -355,38 +352,22 @@ describe("P3D detail routes", () => {
 });
 
 describe("P3D search links and QA normalize", () => {
-  it("search links only the three implemented details", () => {
+  it("search links every published direct detail", () => {
     const search = projectPublishedLearnerSearch(publishedDir);
-    const linked = search.documents
-      .filter((doc) => doc.canonicalHref != null)
-      .filter(
-        (doc) =>
-          doc.kind === "Lexeme" ||
-          doc.kind === "Verb" ||
-          doc.kind === "QAPair" ||
-          doc.kind === "PhrasePattern",
-      )
-      .map((doc) => ({ id: doc.id, href: doc.canonicalHref }));
-
-    const detailLinks = linked.filter((row) =>
-      (DETAIL_REPRESENTATIVE_IDS as readonly string[]).includes(row.id),
+    const details = projectPublishedLearnerDetails(publishedDir);
+    const detailDocuments = search.documents.filter(
+      (doc) => details.detailsById[doc.id] != null,
     );
-    expect(detailLinks).toHaveLength(3);
-    expect(detailLinks.map((r) => r.href).sort()).toEqual(
-      DETAIL_REPRESENTATIVE_IDS.map((id) =>
-        detailCanonicalPath(
-          id.startsWith("lex:")
-            ? "vocabulary"
-            : id.startsWith("verb:")
-              ? "verbs"
-              : "phrases",
-          id,
-        ),
-      ).sort(),
-    );
+    expect(detailDocuments).toHaveLength(details.detailCount);
+    for (const detail of details.details) {
+      const document = detailDocuments.find((row) => row.id === detail.id);
+      expect(document?.canonicalHref).toBe(detail.canonicalPath);
+    }
 
     const otherLex = search.documents.find((d) => d.id === "lex:architektin");
-    expect(otherLex?.canonicalHref).toBeNull();
+    expect(otherLex?.canonicalHref).toBe(
+      detailCanonicalPath("vocabulary", "lex:architektin"),
+    );
   });
 
   it("construction matches only published patterns", () => {

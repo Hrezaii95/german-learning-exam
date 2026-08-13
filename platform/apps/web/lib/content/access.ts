@@ -13,6 +13,8 @@ import {
 import {
   DETAIL_KIND_BY_ID,
   DETAIL_REPRESENTATIVE_IDS,
+  detailCanonicalPath,
+  detailHubForId,
   type DetailRepresentativeId,
   type LearnerDetailProjection,
   type LearnerDetailRecord,
@@ -407,6 +409,9 @@ const DETAIL_TOP_LEVEL_KEYS = [
   "representativeCount",
   "representatives",
   "representativesById",
+  "detailCount",
+  "details",
+  "detailsById",
 ] as const;
 
 const FORBIDDEN_DETAIL_KEY_FRAGMENTS = [
@@ -444,16 +449,16 @@ function assertMedia(media: unknown): asserts media is LearnerMediaAvailability 
   }
 }
 
-function assertDetailRecord(raw: unknown): asserts raw is LearnerDetailRecord {
+function assertGenericDetailRecord(raw: unknown): asserts raw is LearnerDetailRecord {
   if (!isPlainObject(raw)) {
     throw new Error("Detail record shape is invalid");
   }
-  if (typeof raw.id !== "string" || !DETAIL_REPRESENTATIVE_IDS.includes(raw.id as DetailRepresentativeId)) {
-    throw new Error("Detail record id is not a representative");
+  if (typeof raw.id !== "string" || raw.id.length === 0) {
+    throw new Error("Detail record id is invalid");
   }
-  const id = raw.id as DetailRepresentativeId;
-  const contractMeta = DETAIL_REPRESENTATIVE_CONTRACT.byId[id];
-  if (raw.kind !== DETAIL_KIND_BY_ID[id] || raw.kind !== contractMeta.kind) {
+  const hub = detailHubForId(raw.id);
+  const expectedKind = hub === "vocabulary" ? "Lexeme" : hub === "verbs" ? "Verb" : hub === "grammar" ? "GrammarConcept" : hub === "phrases" ? "QAPair" : null;
+  if (hub == null || raw.kind !== expectedKind || raw.hubSegment !== hub) {
     throw new Error("Detail record kind mismatch");
   }
   if (raw.publicationStatus !== "published") {
@@ -464,7 +469,7 @@ function assertDetailRecord(raw: unknown): asserts raw is LearnerDetailRecord {
   }
   if (
     typeof raw.canonicalPath !== "string" ||
-    raw.canonicalPath !== contractMeta.canonicalPath ||
+    raw.canonicalPath !== detailCanonicalPath(hub, raw.id) ||
     !isSafeNavigationPath(raw.canonicalPath)
   ) {
     throw new Error("Detail canonicalPath failed allowlist");
@@ -473,6 +478,75 @@ function assertDetailRecord(raw: unknown): asserts raw is LearnerDetailRecord {
     throw new Error("Detail lessonIds are invalid");
   }
   assertMedia(raw.media);
+
+  if (raw.kind === "Lexeme") {
+    if (typeof raw.lemma !== "string" || typeof raw.singular !== "string" || typeof raw.meaningEn !== "string") {
+      throw new Error("Vocabulary fields are invalid");
+    }
+    if (!Array.isArray(raw.plurals) || raw.plurals.some((value) => typeof value !== "string")) {
+      throw new Error("Vocabulary plurals are invalid");
+    }
+    if (raw.article !== null && typeof raw.article !== "string") throw new Error("Vocabulary article is invalid");
+    if (raw.gender !== null && !["masculine", "feminine", "neuter"].includes(String(raw.gender))) throw new Error("Vocabulary gender is invalid");
+  } else if (raw.kind === "Verb") {
+    if (typeof raw.infinitive !== "string" || typeof raw.meaningEn !== "string" || typeof raw.paradigmNote !== "string" || !Array.isArray(raw.present)) {
+      throw new Error("Verb fields are invalid");
+    }
+  } else if (raw.kind === "QAPair") {
+    if (!["informal", "formal", "neutral"].includes(String(raw.register)) || !isPlainObject(raw.question) || !Array.isArray(raw.answers) || raw.answers.length === 0 || !Array.isArray(raw.acceptedRealizations) || !Array.isArray(raw.conversationLevels)) {
+      throw new Error("QA fields are invalid");
+    }
+  } else if (raw.kind === "GrammarConcept") {
+    if (
+      typeof raw.titleDe !== "string" ||
+      raw.titleDe.length === 0 ||
+      typeof raw.titleEn !== "string" ||
+      raw.titleEn.length === 0 ||
+      typeof raw.notice !== "string" ||
+      raw.notice.length === 0 ||
+      !Array.isArray(raw.ruleSteps) ||
+      raw.ruleSteps.length === 0 ||
+      !Array.isArray(raw.prerequisiteIds) ||
+      !Array.isArray(raw.prerequisiteLabels) ||
+      raw.prerequisiteIds.length !== raw.prerequisiteLabels.length ||
+      !Array.isArray(raw.commonErrorTags) ||
+      !Array.isArray(raw.activityIds)
+    ) {
+      throw new Error("Grammar fields are invalid");
+    }
+    for (const step of raw.ruleSteps) {
+      if (
+        !isPlainObject(step) ||
+        typeof step.id !== "string" ||
+        step.id.length === 0 ||
+        typeof step.notice !== "string" ||
+        step.notice.length === 0 ||
+        !(step.model === null || typeof step.model === "string")
+      ) {
+        throw new Error("Grammar rule step is invalid");
+      }
+    }
+    if (
+      raw.prerequisiteIds.some((value) => typeof value !== "string") ||
+      raw.prerequisiteLabels.some((value) => typeof value !== "string") ||
+      raw.commonErrorTags.some((value) => typeof value !== "string") ||
+      raw.activityIds.some((value) => typeof value !== "string")
+    ) {
+      throw new Error("Grammar reference fields are invalid");
+    }
+  }
+}
+
+function assertDetailRecord(raw: unknown): asserts raw is LearnerDetailRecord {
+  assertGenericDetailRecord(raw);
+  if (!DETAIL_REPRESENTATIVE_IDS.includes(raw.id as DetailRepresentativeId)) {
+    throw new Error("Detail record id is not a representative");
+  }
+  const id = raw.id as DetailRepresentativeId;
+  const contractMeta = DETAIL_REPRESENTATIVE_CONTRACT.byId[id];
+  if (raw.kind !== DETAIL_KIND_BY_ID[id] || raw.kind !== contractMeta.kind) {
+    throw new Error("Detail record kind mismatch");
+  }
 
   if (raw.kind === "Lexeme") {
     if (raw.id !== VOCAB_ARCHITEKT_CANONICAL.id) {
@@ -594,7 +668,12 @@ export function assertLearnerDetailProjection(
     parsed.representativeCount !== 3 ||
     !Array.isArray(parsed.representatives) ||
     parsed.representatives.length !== 3 ||
-    !isPlainObject(parsed.representativesById)
+    !isPlainObject(parsed.representativesById) ||
+    !Number.isSafeInteger(parsed.detailCount) ||
+    parsed.detailCount < 3 ||
+    !Array.isArray(parsed.details) ||
+    parsed.details.length !== parsed.detailCount ||
+    !isPlainObject(parsed.detailsById)
   ) {
     throw new Error("Learner detail projection artifact is invalid or incomplete");
   }
@@ -629,6 +708,28 @@ export function assertLearnerDetailProjection(
   for (const id of DETAIL_REPRESENTATIVE_IDS) {
     if (!seen.has(id)) {
       throw new Error("Detail projection missing required representative");
+    }
+  }
+
+  const detailIds = new Set<string>();
+  for (const record of parsed.details) {
+    assertGenericDetailRecord(record);
+    if (detailIds.has(record.id)) throw new Error("Duplicate learner detail id");
+    detailIds.add(record.id);
+    const byId = parsed.detailsById[record.id];
+    if (byId == null || stableStringifyDetailValue(record) !== stableStringifyDetailValue(byId)) {
+      throw new Error("Detail detailsById is inconsistent");
+    }
+    assertGenericDetailRecord(byId);
+  }
+  const detailByIdKeys = Object.keys(parsed.detailsById);
+  if (detailByIdKeys.length !== parsed.detailCount || detailByIdKeys.some((id) => !detailIds.has(id))) {
+    throw new Error("Detail detailsById key set mismatch");
+  }
+  for (const id of DETAIL_REPRESENTATIVE_IDS) {
+    const detail = parsed.detailsById[id];
+    if (!detail || stableStringifyDetailValue(detail) !== stableStringifyDetailValue(parsed.representativesById[id])) {
+      throw new Error("Detail representative is inconsistent with full detail set");
     }
   }
 
@@ -688,4 +789,8 @@ export function getDetailRepresentative(id: string): LearnerDetailRecord | null 
   return loadLearnerDetailProjection().representativesById[
     id as DetailRepresentativeId
   ];
+}
+
+export function getLearnerDetail(id: string): LearnerDetailRecord | null {
+  return loadLearnerDetailProjection().detailsById[id] ?? null;
 }

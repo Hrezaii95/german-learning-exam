@@ -1,6 +1,7 @@
 /**
- * Learner-safe representative detail projection (P3D).
- * Exactly three published representatives; no review plurals, paths, or secrets.
+ * Learner-safe detail projection. The original three representatives retain
+ * their richer contracts while every published Lexeme, Verb, and QAPair gets
+ * a canonical detail route with honest gap states.
  */
 
 import { encodePublicTypedIdSlug } from "./path-utils";
@@ -14,9 +15,9 @@ export const DETAIL_REPRESENTATIVE_IDS = [
 export type DetailRepresentativeId =
   (typeof DETAIL_REPRESENTATIVE_IDS)[number];
 
-export type DetailKind = "Lexeme" | "Verb" | "QAPair";
+export type DetailKind = "Lexeme" | "Verb" | "QAPair" | "GrammarConcept";
 
-export type DetailHubSegment = "vocabulary" | "verbs" | "phrases";
+export type DetailHubSegment = "vocabulary" | "verbs" | "grammar" | "phrases";
 
 export type MediaAvailabilityState =
   | "approved"
@@ -46,7 +47,7 @@ export type LearnerPersonFormRelation = {
 
 export type LearnerVocabularyDetail = {
   readonly kind: "Lexeme";
-  readonly id: "lex:architekt";
+  readonly id: string;
   readonly hubSegment: "vocabulary";
   readonly displayText: string;
   readonly publicationStatus: "published";
@@ -54,14 +55,24 @@ export type LearnerVocabularyDetail = {
   readonly sourcePriority: 1 | 2 | 3 | 4 | null;
   readonly lemma: string;
   readonly meaningEn: string;
-  readonly article: string;
-  readonly gender: LearnerGender;
+  readonly article: string | null;
+  readonly gender: LearnerGender | null;
   readonly singular: string;
   readonly plurals: readonly string[];
   readonly pluralGapMessage: string | null;
-  readonly personForm: LearnerPersonFormRelation;
+  readonly personForm: LearnerPersonFormRelation | null;
   readonly media: LearnerMediaAvailability;
   readonly canonicalPath: string;
+};
+
+export type LearnerVocabularyRepresentative = Omit<
+  LearnerVocabularyDetail,
+  "id" | "article" | "gender" | "personForm"
+> & {
+  readonly id: "lex:architekt";
+  readonly article: string;
+  readonly gender: LearnerGender;
+  readonly personForm: LearnerPersonFormRelation;
 };
 
 export type LearnerVerbPersonKey =
@@ -81,7 +92,7 @@ export type LearnerVerbPresentForm = {
 
 export type LearnerVerbDetail = {
   readonly kind: "Verb";
-  readonly id: "verb:sein";
+  readonly id: string;
   readonly hubSegment: "verbs";
   readonly displayText: string;
   readonly publicationStatus: "published";
@@ -93,6 +104,10 @@ export type LearnerVerbDetail = {
   readonly paradigmNote: string;
   readonly media: LearnerMediaAvailability;
   readonly canonicalPath: string;
+};
+
+export type LearnerVerbRepresentative = Omit<LearnerVerbDetail, "id"> & {
+  readonly id: "verb:sein";
 };
 
 export type LearnerQaPattern = {
@@ -110,14 +125,14 @@ export type LearnerConversationLevel = {
 
 export type LearnerQaDetail = {
   readonly kind: "QAPair";
-  readonly id: "qa:profession-casual-main";
+  readonly id: string;
   readonly hubSegment: "phrases";
   readonly displayText: string;
   readonly publicationStatus: "published";
   readonly lessonIds: readonly string[];
   readonly sourcePriority: 1 | 2 | 3 | 4 | null;
   readonly intent: string;
-  readonly register: "informal";
+  readonly register: "informal" | "formal" | "neutral";
   readonly question: LearnerQaPattern;
   readonly answers: readonly LearnerQaPattern[];
   readonly acceptedRealizations: readonly string[];
@@ -126,19 +141,60 @@ export type LearnerQaDetail = {
   readonly canonicalPath: string;
 };
 
+export type LearnerQaRepresentative = Omit<LearnerQaDetail, "id" | "register"> & {
+  readonly id: "qa:profession-casual-main";
+  readonly register: "informal";
+};
+
+export type LearnerGrammarRuleStep = {
+  readonly id: string;
+  readonly notice: string;
+  readonly model: string | null;
+};
+
+export type LearnerGrammarDetail = {
+  readonly kind: "GrammarConcept";
+  readonly id: string;
+  readonly hubSegment: "grammar";
+  readonly displayText: string;
+  readonly publicationStatus: "published";
+  readonly lessonIds: readonly string[];
+  readonly sourcePriority: 1 | 2 | 3 | 4 | null;
+  readonly titleDe: string;
+  readonly titleEn: string;
+  readonly notice: string;
+  readonly ruleSteps: readonly LearnerGrammarRuleStep[];
+  readonly prerequisiteIds: readonly string[];
+  readonly prerequisiteLabels: readonly string[];
+  readonly commonErrorTags: readonly string[];
+  readonly activityIds: readonly string[];
+  readonly media: LearnerMediaAvailability;
+  readonly canonicalPath: string;
+};
+
 export type LearnerDetailRecord =
   | LearnerVocabularyDetail
   | LearnerVerbDetail
-  | LearnerQaDetail;
+  | LearnerQaDetail
+  | LearnerGrammarDetail;
 
 export type LearnerDetailProjection = {
   readonly schemaVersion: "1.0.0";
   readonly projectionKind: "learner-details";
   readonly representativeCount: 3;
-  readonly representatives: readonly LearnerDetailRecord[];
-  readonly representativesById: Readonly<
-    Record<DetailRepresentativeId, LearnerDetailRecord>
-  >;
+  readonly representatives: readonly (
+    | LearnerVocabularyRepresentative
+    | LearnerVerbRepresentative
+    | LearnerQaRepresentative
+  )[];
+  readonly representativesById: Readonly<{
+    "lex:architekt": LearnerVocabularyRepresentative;
+    "verb:sein": LearnerVerbRepresentative;
+    "qa:profession-casual-main": LearnerQaRepresentative;
+  }>;
+  readonly detailCount: number;
+  readonly details: readonly LearnerDetailRecord[];
+  readonly detailsById: Readonly<Record<string, LearnerDetailRecord>>;
 };
 
 export const DETAIL_HUB_BY_ID: Readonly<
@@ -163,6 +219,14 @@ export function isDetailRepresentativeId(
   return (DETAIL_REPRESENTATIVE_IDS as readonly string[]).includes(value);
 }
 
+export function detailHubForId(entityId: string): DetailHubSegment | null {
+  if (entityId.startsWith("lex:")) return "vocabulary";
+  if (entityId.startsWith("verb:")) return "verbs";
+  if (entityId.startsWith("qa:")) return "phrases";
+  if (entityId.startsWith("gram:")) return "grammar";
+  return null;
+}
+
 export function encodeDetailRouteSegment(entityId: string): string {
   return encodePublicTypedIdSlug(entityId);
 }
@@ -179,4 +243,17 @@ export function listImplementedDetailPaths(): readonly string[] {
   return DETAIL_REPRESENTATIVE_IDS.map((id) =>
     detailCanonicalPath(DETAIL_HUB_BY_ID[id], id),
   );
+}
+
+export function isProjectedDetailId(
+  projection: LearnerDetailProjection,
+  value: string,
+): boolean {
+  return Object.prototype.hasOwnProperty.call(projection.detailsById, value);
+}
+
+export function listProjectedDetailPaths(
+  projection: LearnerDetailProjection,
+): readonly string[] {
+  return projection.details.map((detail) => detail.canonicalPath);
 }

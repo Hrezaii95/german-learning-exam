@@ -57,7 +57,7 @@ function main(): void {
   const detailsJson = serializeDetailProjectionDeterministic(details);
   writeFileSync(detailsOutPath, detailsJson, "utf8");
   process.stdout.write(
-    `Wrote learner details: ${details.representativeCount} representatives → ${detailsOutPath}\n`,
+    `Wrote learner details: ${details.detailCount} published records (${details.representativeCount} rich representatives) → ${detailsOutPath}\n`,
   );
 }
 

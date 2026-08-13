@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-13T00:00:00.000Z",
+  "scope": "published Lesson 1-2 routes only",
+  "decision": {
+    "publisherWorkbookAudio": "integration-ready",
+    "generatedTts": "blocked-pending-existing-two-human-qa-evidence",
+    "trackCount": 15,
+    "verifiedInternalTranscriptCount": 15,
+    "publicTranscriptCount": 0
+  },
+  "authority": {
+    "rightsManifest": "media/manifests/workbook-audio-rights-projections.json",
+    "sourceAudioMap": "platform/content/authority/workbook-audio-map.projection.json",
+    "transcriptPdf": "resources/original/transcripts/Momente_AB_A1_1_Transskriptionen_2.pdf",
+    "verifiedTranscriptProjection": "platform/apps/web/generated/audio/workbook-transcripts-lessons-01-02.json",
+    "routeProjection": "platform/apps/web/lib/audio/workbook-audio.ts"
+  },
+  "routeMappings": [
+    {
+      "lessonId": "lesson:01",
+      "activityId": "activity:lesson-01-alphabet-listen-spell",
+      "canonicalRoute": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d616c7068616265742d6c697374656e2d7370656c6c",
+      "exercise": "AB 3",
+      "trackIds": ["1_01", "1_02", "1_03", "1_04"],
+      "useNow": true,
+      "accessibilityTranscriptMode": "blocked until transcript-publication right is recorded; then reveal after attempt or on explicit accessibility request"
+    },
+    {
+      "lessonId": "lesson:01",
+      "activityId": "activity:lesson-01-workbook-listening",
+      "canonicalRoute": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d776f726b626f6f6b2d6c697374656e696e67",
+      "exercise": "AB 9a-9b",
+      "trackIds": ["1_05", "1_06"],
+      "useNow": true,
+      "accessibilityTranscriptMode": "blocked until transcript-publication right is recorded; then expose as text alternative with intonation arrows"
+    },
+    {
+      "lessonId": "lesson:02",
+      "activityId": "activity:lesson-02-workbook-listening",
+      "canonicalRoute": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d776f726b626f6f6b2d6c697374656e696e67",
+      "exercise": "AB 6a, AB 6b, AB 12",
+      "trackIds": ["1_07", "1_08", "1_09", "1_10", "1_11", "1_12", "1_13", "1_14", "1_15"],
+      "useNow": true,
+      "accessibilityTranscriptMode": "blocked until transcript-publication right is recorded; then reveal after attempt or on explicit accessibility request"
+    },
+    {
+      "lessonId": "lesson:02",
+      "activityId": "activity:lesson-02-numbers-0-100",
+      "canonicalRoute": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d6e756d626572732d302d313030",
+      "exercise": "AB 6a-6b",
+      "trackIds": ["1_07", "1_08", "1_09", "1_10", "1_11", "1_12", "1_13", "1_14"],
+      "useNow": true,
+      "accessibilityTranscriptMode": "blocked until transcript-publication right is recorded; answer text should then reveal after attempt or on explicit accessibility request"
+    },
+    {
+      "lessonId": "lesson:02",
+      "activityId": "activity:lesson-02-core-professions",
+      "canonicalRoute": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d636f72652d70726f66657373696f6e73",
+      "exercise": "AB 12",
+      "trackIds": ["1_15"],
+      "useNow": true,
+      "accessibilityTranscriptMode": "blocked until transcript-publication right is recorded; then visible word list"
+    }
+  ],
+  "tracks": [
+    { "trackId": "1_01", "exercise": "AB 3a", "filename": "1_01_AB_Momente_A11_1_3.mp3", "publicPath": "/audio/source-workbook-approved-v1/1_01_AB_Momente_A11_1_3.mp3", "sha256": "ae243fd2df2a13a8d9a9158ba6abb872a05cafe99c57450965ff524ab05c9d33", "durationSeconds": 35.97425, "transcriptVerified": true },
+    { "trackId": "1_02", "exercise": "AB 3b", "filename": "1_02_AB_Momente_A11_1_3.mp3", "publicPath": "/audio/source-workbook-approved-v1/1_02_AB_Momente_A11_1_3.mp3", "sha256": "a43cfa2092f02d7f98b4ab6876e893bedadde3b2076bcd35c1e7ca7130c83a47", "durationSeconds": 30.996313, "transcriptVerified": true },
+    { "trackId": "1_03", "exercise": "AB 3c", "filename": "1_03_AB_Momente_A11_1_3.mp3", "publicPath": "/audio/source-workbook-approved-v1/1_03_AB_Momente_A11_1_3.mp3", "sha256": "644be62239fa56927a2a04629f47150a9d7f1015d3fb2ab7e9b8a09936ed089f", "durationSeconds": 29.979875, "transcriptVerified": true },
+    { "trackId": "1_04", "exercise": "AB 3d", "filename": "1_04_AB_Momente_A11_1_3.mp3", "publicPath": "/audio/source-workbook-approved-v1/1_04_AB_Momente_A11_1_3.mp3", "sha256": "79dd95ea9a7618e2ff71dd2d6f2bd6434701ddac88a7430029fb21a08464df6a", "durationSeconds": 30.97025, "transcriptVerified": true },
+    { "trackId": "1_05", "exercise": "AB 9a", "filename": "1_05_AB_Momente_A11_1_9a.mp3", "publicPath": "/audio/source-workbook-approved-v1/1_05_AB_Momente_A11_1_9a.mp3", "sha256": "fd88b910fdfe18139f802c88ddf19a3162e8b4d9d3f7d908bd4c061986997627", "durationSeconds": 24.480688, "transcriptVerified": true },
+    { "trackId": "1_06", "exercise": "AB 9b", "filename": "1_06_AB_Momente_A11_1_9b.mp3", "publicPath": "/audio/source-workbook-approved-v1/1_06_AB_Momente_A11_1_9b.mp3", "sha256": "2d41f0c2d795b4e25378d975739265b7a6b8380bf6f100c256f2a0243e88db7e", "durationSeconds": 23.9855, "transcriptVerified": true },
+    { "trackId": "1_07", "exercise": "AB 6a-a", "filename": "1_07_AB_Momente_A11_2_6a.mp3", "publicPath": "/audio/source-workbook-approved-v1/1_07_AB_Momente_A11_2_6a.mp3", "sha256": "cdcf35a0898dd0261867dd978795f5284d401b60241030cf2c1477476c73e150", "durationSeconds": 18.017188, "transcriptVerified": true },
+    { "trackId": "1_08", "exercise": "AB 6a-b", "filename": "1_08_AB_Momente_A11_2_6a.mp3", "publicPath": "/audio/source-workbook-approved-v1/1_08_AB_Momente_A11_2_6a.mp3", "sha256": "16dec4472683c5900b68ecf12ec66ec54fb9ff86e3f50d370bb14acf28214e5a", "durationSeconds": 13.03925, "transcriptVerified": true },
+    { "trackId": "1_09", "exercise": "AB 6a-c", "filename": "1_09_AB_Momente_A11_2_6a.mp3", "publicPath": "/audio/source-workbook-approved-v1/1_09_AB_Momente_A11_2_6a.mp3", "sha256": "cc28b5036030832425c9adc72aeaf7af19e353e8664fd51ca741347056bb2431", "durationSeconds": 15.02, "transcriptVerified": true },
+    { "trackId": "1_10", "exercise": "AB 6a-d", "filename": "1_10_AB_Momente_A11_2_6a.mp3", "publicPath": "/audio/source-workbook-approved-v1/1_10_AB_Momente_A11_2_6a.mp3", "sha256": "009ee8a5264d58e342b68162736bb43f6de6d9e0351c57dc4e4d82b85e494aef", "durationSeconds": 12.908938, "transcriptVerified": true },
+    { "trackId": "1_11", "exercise": "AB 6b-a", "filename": "1_11_AB_Momente_A11_2_6b.mp3", "publicPath": "/audio/source-workbook-approved-v1/1_11_AB_Momente_A11_2_6b.mp3", "sha256": "85fdb2829adf25dabee37908279a24dd65f32214367aca75b40199034d988b3c", "durationSeconds": 17.00075, "transcriptVerified": true },
+    { "trackId": "1_12", "exercise": "AB 6b-b", "filename": "1_12_AB_Momente_A11_2_6b.mp3", "publicPath": "/audio/source-workbook-approved-v1/1_12_AB_Momente_A11_2_6b.mp3", "sha256": "d4eebbc6e02bd49b3a71162c67f37d242f33971c5c2ff71cef5b616eed3da9f8", "durationSeconds": 12.439813, "transcriptVerified": true },
+    { "trackId": "1_13", "exercise": "AB 6b-c", "filename": "1_13_AB_Momente_A11_2_6b.mp3", "publicPath": "/audio/source-workbook-approved-v1/1_13_AB_Momente_A11_2_6b.mp3", "sha256": "2764fc257cd2c2e0e6733366e3e964ca943add96ce99ab31f11e6a877ecb5950", "durationSeconds": 13.508375, "transcriptVerified": true },
+    { "trackId": "1_14", "exercise": "AB 6b-d", "filename": "1_14_AB_Momente_A11_2_6b.mp3", "publicPath": "/audio/source-workbook-approved-v1/1_14_AB_Momente_A11_2_6b.mp3", "sha256": "6a0d40d85b5f263ec530bc2f5f67fb7e8cb26a8020f6250c82a101580896d4ba", "durationSeconds": 14.264188, "transcriptVerified": true },
+    { "trackId": "1_15", "exercise": "AB 12", "filename": "1_15_AB_Momente_A11_2_12.mp3", "publicPath": "/audio/source-workbook-approved-v1/1_15_AB_Momente_A11_2_12.mp3", "sha256": "823b45c79e24fa3eb3b5eeb83dff75b192201e7c41ec74d7f776523e42b43c9c", "durationSeconds": 37.955, "transcriptVerified": true }
+  ],
+  "generatedTtsGate": {
+    "candidateManifest": "media/manifests/rapid-preview-tts-candidates.json",
+    "technicalQa": "pass",
+    "requiredQa": ["qualified German text/form accuracy reviewer", "independent naturalness/consistency listening reviewer"],
+    "evidenceFound": false,
+    "publicIntegrationAllowed": false,
+    "reason": "No artifact records both required human approvals. Technical codec/hash QA is not listening QA."
+  },
+  "integrationBlockers": [
+    "The 2026-08-13 owner decision authorizes redistribution of the exact 15 audio files; no artifact separately authorizes public transcript republication. Keep the verified transcript JSON internal until that right is recorded.",
+    "The current WorkbookAudioPanel intentionally omits captions; wire the verified transcript projection into an accessible reveal/transcript control.",
+    "Listening-answer activities need a product rule for transcript timing so accessibility does not silently remove the exercise while an equivalent path remains available.",
+    "Do not publish any generated TTS candidate until the existing two-human QA evidence is recorded per asset or approved batch."
+  ]
+}

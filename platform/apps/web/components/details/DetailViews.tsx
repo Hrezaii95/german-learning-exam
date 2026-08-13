@@ -1,5 +1,6 @@
 import type {
   LearnerDetailRecord,
+  LearnerGrammarDetail,
   LearnerQaDetail,
   LearnerVerbDetail,
   LearnerVocabularyDetail,
@@ -28,6 +29,7 @@ import {
   buildDetailPracticeNavigationContext,
 } from "@/lib/content/navigation-context";
 import { DetailLearningControls } from "@/components/learner-state/DetailLearningControls";
+import { detailCanonicalPath } from "@/lib/content/detail-types";
 import { infographicForDetail } from "@/lib/content/infographics";
 import { InfographicPanel } from "@/components/media/InfographicPanel";
 import { RichLessonVisual } from "@/components/media/RichLessonVisual";
@@ -73,66 +75,99 @@ function VocabularyDetail({ detail }: { detail: LearnerVocabularyDetail }) {
       </header>
 
       {illustration ? <RichLessonVisual illustration={illustration} /> : null}
-      <RapidProfessionMorphologySection />
+      {pf ? <RapidProfessionMorphologySection /> : null}
 
       <section className="panel" aria-labelledby="vocab-forms-heading">
         <h2 id="vocab-forms-heading">Forms</h2>
         <div className="detail-form-pair">
-          <article className="detail-form-card" data-person-form="masculine">
-            <GenderBadge gender={detail.gender} />
+          <article className="detail-form-card" data-person-form={detail.gender ?? "none"}>
+            {detail.gender ? <GenderBadge gender={detail.gender} /> : null}
             <p className="detail-form-card__lemma">
               <span className="german" lang="de">
-                {detail.article} {detail.lemma}
+                {detail.article ? `${detail.article} ` : ""}
+                {detail.lemma}
               </span>
             </p>
-            <p className="dense">Singular (published)</p>
-          </article>
-          <article className="detail-form-card" data-person-form="feminine">
-            <GenderBadge gender={pf.relatedGender} />
-            <p className="detail-form-card__lemma">
-              <span className="german" lang="de">
-                {pf.relatedDisplayText}
-              </span>
+            <p className="dense">
+              {detail.article ? "Singular (published)" : "Published form"}
             </p>
-            <p className="dense">Linked person-form (published)</p>
           </article>
+          {pf ? (
+            <article className="detail-form-card" data-person-form="feminine">
+              <GenderBadge gender={pf.relatedGender} />
+              <p className="detail-form-card__lemma">
+                <span className="german" lang="de">{pf.relatedDisplayText}</span>
+              </p>
+              <p className="dense">Linked person-form (published)</p>
+            </article>
+          ) : null}
         </div>
+        {!detail.article || !detail.gender ? (
+          <p className="placeholder-banner" role="status">
+            Article and noun gender are not published for this item.
+          </p>
+        ) : null}
       </section>
 
-      <section className="panel" aria-labelledby="vocab-morph-heading">
-        <h2 id="vocab-morph-heading">Person-form operation</h2>
-        <p className="muted">
-          Sourced from the published person-form pair — not invented morphology.
-        </p>
-        <div
-          className="person-form-infographic"
-          role="img"
-          aria-label={`Shared stem ${pf.sharedStem} plus feminine suffix -${pf.feminineSuffix} yields ${pf.relatedLemma}`}
-        >
-          <span className="morph-token morph-token--stem" lang="de">
-            {pf.sharedStem}
-          </span>
-          <span className="morph-token morph-token--op" aria-hidden="true">
-            +
-          </span>
-          <span className="morph-token morph-token--suffix" lang="de">
-            -{pf.feminineSuffix}
-          </span>
-          <span className="morph-token morph-token--op" aria-hidden="true">
-            →
-          </span>
-          <span className="morph-token morph-token--result german" lang="de">
-            {pf.relatedLemma}
-          </span>
-        </div>
-        <p className="dense">{pf.operationLabel}</p>
-      </section>
+      {pf ? (
+        <section className="panel" aria-labelledby="vocab-morph-heading">
+          <h2 id="vocab-morph-heading">Person-form operation</h2>
+          <p className="muted">
+            Sourced from the published person-form pair — not invented morphology.
+          </p>
+          <div
+            className="person-form-infographic"
+            role="img"
+            aria-label={`Shared stem ${pf.sharedStem} plus feminine suffix -${pf.feminineSuffix} yields ${pf.relatedLemma}`}
+          >
+            <span className="morph-token morph-token--stem" lang="de">
+              {pf.sharedStem}
+            </span>
+            <span className="morph-token morph-token--op" aria-hidden="true">
+              +
+            </span>
+            <span className="morph-token morph-token--suffix" lang="de">
+              -{pf.feminineSuffix}
+            </span>
+            <span className="morph-token morph-token--op" aria-hidden="true">
+              →
+            </span>
+            <span className="morph-token morph-token--result german" lang="de">
+              {pf.relatedLemma}
+            </span>
+          </div>
+          <p className="dense">{pf.operationLabel}</p>
+        </section>
+      ) : (
+        <section className="panel" aria-labelledby="vocab-morph-heading">
+          <h2 id="vocab-morph-heading">Related person form</h2>
+          <p className="placeholder-banner" role="status">
+            No published person-form relation is available for this item.
+          </p>
+        </section>
+      )}
 
       <section className="panel" aria-labelledby="vocab-plural-heading">
         <h2 id="vocab-plural-heading">Plural</h2>
-        <p className="placeholder-banner" role="status">
-          {detail.pluralGapMessage}
-        </p>
+        {detail.plurals.length > 0 ? (
+          <ul>
+            {detail.plurals.map((plural) => (
+              <li key={plural}>
+                <span className="german" lang="de">
+                  {plural}
+                </span>
+              </li>
+            ))}
+          </ul>
+        ) : detail.pluralGapMessage ? (
+          <p className="placeholder-banner" role="status">
+            {detail.pluralGapMessage}
+          </p>
+        ) : (
+          <p className="placeholder-banner" role="status">
+            Plural does not apply to this published item.
+          </p>
+        )}
       </section>
 
       <section className="panel" aria-labelledby="vocab-audio-heading">
@@ -172,7 +207,9 @@ function VerbDetail({ detail }: { detail: LearnerVerbDetail }) {
       <section className="panel" aria-labelledby="verb-paradigm-heading">
         <h2 id="verb-paradigm-heading">Present paradigm</h2>
         <table className="verb-paradigm">
-          <caption className="dense">Seven published present forms</caption>
+          <caption className="dense">
+            {detail.present.length} published present forms
+          </caption>
           <thead>
             <tr>
               <th scope="col">Person</th>
@@ -189,9 +226,9 @@ function VerbDetail({ detail }: { detail: LearnerVerbDetail }) {
                 </th>
                 <td>
                   <span
-                    className="german morph-token morph-token--irr"
+                    className={`german morph-token ${detail.id === "verb:sein" ? "morph-token--irr" : "morph-token--stem"}`}
                     lang="de"
-                    data-morph="IRR"
+                    data-morph={detail.id === "verb:sein" ? "IRR" : "FORM"}
                   >
                     {row.form}
                   </span>
@@ -201,8 +238,15 @@ function VerbDetail({ detail }: { detail: LearnerVerbDetail }) {
           </tbody>
         </table>
         <div className="verb-legend" role="note">
-          <span className="morph-token morph-token--irr" data-morph="IRR">
-            IRR
+          <span
+            className={
+              detail.id === "verb:sein"
+                ? "morph-token morph-token--irr"
+                : "morph-token morph-token--stem"
+            }
+            data-morph={detail.id === "verb:sein" ? "IRR" : "FORM"}
+          >
+            {detail.id === "verb:sein" ? "IRR" : "FORM"}
           </span>
           <p className="dense">{detail.paradigmNote}</p>
         </div>
@@ -213,7 +257,13 @@ function VerbDetail({ detail }: { detail: LearnerVerbDetail }) {
         <PronunciationControl media={detail.media} label={detail.infinitive} />
       </section>
 
-      <VerbSelfCheck detail={detail} />
+      {detail.present.length > 0 ? (
+        <VerbSelfCheck detail={detail} />
+      ) : (
+        <p className="placeholder-banner" role="status">
+          No published present forms are available for self-check.
+        </p>
+      )}
 
       <div className="detail-actions">
         <PractiseLink detail={detail} />
@@ -234,11 +284,14 @@ function QaDetail({ detail }: { detail: LearnerQaDetail }) {
             {detail.question.realization}
           </span>
         </h1>
-        <p className="lede">Informal register · published patterns only</p>
+        <p className="lede">
+          {detail.register[0]!.toUpperCase()}
+          {detail.register.slice(1)} register · published patterns only
+        </p>
         <MetaChips
           lessonIds={detail.lessonIds}
           sourcePriority={detail.sourcePriority}
-          extra="Informal"
+          extra={detail.register[0]!.toUpperCase() + detail.register.slice(1)}
         />
       </header>
 
@@ -269,29 +322,40 @@ function QaDetail({ detail }: { detail: LearnerQaDetail }) {
 
       <section className="panel" aria-labelledby="qa-progress-heading">
         <h2 id="qa-progress-heading">Conversation progression</h2>
-        <p className="muted">
-          Exact five-level ladder (in-session). Open conversation practice for
-          the full recorder lifecycle.
-        </p>
-        <ol className="qa-levels">
-          {buildConversationLevelCatalog().map((level) => (
-            <li
-              key={level.id}
-              className="qa-level"
-              data-status="available"
-              data-level-id={level.id}
+        {detail.conversationLevels.length > 0 ? (
+          <>
+            <p className="muted">
+              Exact five-level ladder (in-session). Open conversation practice
+              for the full recorder lifecycle.
+            </p>
+            <ol className="qa-levels">
+              {buildConversationLevelCatalog().map((level) => (
+                <li
+                  key={level.id}
+                  className="qa-level"
+                  data-status="available"
+                  data-level-id={level.id}
+                >
+                  <strong>
+                    {level.index + 1}. {level.label}
+                  </strong>
+                  <span className="meta-chip">Available</span>
+                  <p className="dense">{level.description}</p>
+                </li>
+              ))}
+            </ol>
+            <span
+              hidden
+              data-level-order={CONVERSATION_LEVEL_IDS.join(",")}
             >
-              <strong>
-                {level.index + 1}. {level.label}
-              </strong>
-              <span className="meta-chip">Available</span>
-              <p className="dense">{level.description}</p>
-            </li>
-          ))}
-        </ol>
-        <span hidden data-level-order={CONVERSATION_LEVEL_IDS.join(",")}>
-          {CONVERSATION_LEVEL_IDS.join(",")}
-        </span>
+              {CONVERSATION_LEVEL_IDS.join(",")}
+            </span>
+          </>
+        ) : (
+          <p className="placeholder-banner" role="status">
+            Conversation ladder is not published for this Q&amp;A yet.
+          </p>
+        )}
       </section>
 
       <section className="panel" aria-labelledby="qa-audio-heading">
@@ -304,35 +368,121 @@ function QaDetail({ detail }: { detail: LearnerQaDetail }) {
 
       <section className="panel" aria-labelledby="qa-recorder-heading">
         <h2 id="qa-recorder-heading">Speaking</h2>
-        <p className="dense" role="status">
-          Spoken role-play lives in conversation practice. Recording stays local
-          and never claims pronunciation accuracy.
-        </p>
-        {(() => {
-          const nav = buildDetailPracticeNavigationContext({
-            hubId: detail.hubSegment,
-            detailPath: detail.canonicalPath,
-            resultId: detail.id,
-          });
-          const href = nav
-            ? appendNavigationContext(conversationCanonicalPath(), nav)
-            : conversationCanonicalPath();
-          return (
-            <Link
-              className="btn btn-secondary"
-              href={href}
-              data-conversation-spoken-link="true"
-            >
-              Open spoken role-play
-            </Link>
-          );
-        })()}
+        {detail.id === "qa:profession-casual-main" ? (
+          <>
+            <p className="dense" role="status">
+              Spoken role-play lives in conversation practice. Recording stays
+              local and never claims pronunciation accuracy.
+            </p>
+            {(() => {
+              const nav = buildDetailPracticeNavigationContext({
+                hubId: detail.hubSegment,
+                detailPath: detail.canonicalPath,
+                resultId: detail.id,
+              });
+              const href = nav
+                ? appendNavigationContext(conversationCanonicalPath(), nav)
+                : conversationCanonicalPath();
+              return (
+                <Link
+                  className="btn btn-secondary"
+                  href={href}
+                  data-conversation-spoken-link="true"
+                >
+                  Open spoken role-play
+                </Link>
+              );
+            })()}
+          </>
+        ) : (
+          <p className="placeholder-banner" role="status">
+            Speaking practice is not published for this Q&amp;A yet.
+          </p>
+        )}
       </section>
 
       <div className="detail-actions">
         <ConversationLink detail={detail} />
         <PractiseLink detail={detail} />
       </div>
+      <DetailLearningControls contentId={detail.id} />
+    </div>
+  );
+}
+
+function GrammarDetail({ detail }: { detail: LearnerGrammarDetail }) {
+  return (
+    <div className="stack detail-page detail-page--grammar">
+      <header className="page-header">
+        <p className="dense">Grammar explorer</p>
+        <h1><span className="german" lang="de">{detail.titleDe}</span></h1>
+        <p className="lede">{detail.titleEn}</p>
+        <MetaChips
+          lessonIds={detail.lessonIds}
+          sourcePriority={detail.sourcePriority}
+          extra="Published"
+        />
+      </header>
+
+      <section className="panel grammar-notice" aria-labelledby="grammar-notice-heading">
+        <h2 id="grammar-notice-heading">What to notice</h2>
+        <p>{detail.notice}</p>
+      </section>
+
+      <section className="panel" aria-labelledby="grammar-rules-heading">
+        <h2 id="grammar-rules-heading">Rule and model</h2>
+        <ol className="grammar-rule-list">
+          {detail.ruleSteps.map((step) => (
+            <li key={step.id} className="grammar-rule-card">
+              <p>{step.notice}</p>
+              {step.model ? (
+                <p className="grammar-model german" lang="de">{step.model}</p>
+              ) : (
+                <p className="placeholder-banner" role="status">
+                  No model sentence is published for this rule step.
+                </p>
+              )}
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section className="panel" aria-labelledby="grammar-links-heading">
+        <h2 id="grammar-links-heading">Learning path</h2>
+        {detail.prerequisiteLabels.length > 0 ? (
+          <div>
+            <h3>Review first</h3>
+            <ul>
+              {detail.prerequisiteIds.map((id, index) => (
+                <li key={id}>
+                  <Link href={detailCanonicalPath("grammar", id)}>
+                    <span className="german" lang="de">{detail.prerequisiteLabels[index]}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : <p className="dense">No prerequisite is required.</p>}
+        <p className="dense">
+          {detail.activityIds.length} linked published {detail.activityIds.length === 1 ? "activity" : "activities"}
+        </p>
+        <div className="detail-actions">
+          {detail.lessonIds.map((lessonId) => {
+            const segment = lessonId.includes(":") ? lessonId.slice(lessonId.indexOf(":") + 1) : lessonId;
+            return <Link key={lessonId} className="btn btn-secondary" href={`/lessons/${segment}`}>Open Lesson {segment}</Link>;
+          })}
+        </div>
+      </section>
+
+      <section className="panel" aria-labelledby="grammar-errors-heading">
+        <h2 id="grammar-errors-heading">Common errors to watch</h2>
+        {detail.commonErrorTags.length > 0 ? (
+          <ul className="tag-list">
+            {detail.commonErrorTags.map((tag) => <li key={tag}><span className="meta-chip">{tag.replaceAll("-", " ")}</span></li>)}
+          </ul>
+        ) : <p className="dense">No common-error tags are published.</p>}
+      </section>
+
       <DetailLearningControls contentId={detail.id} />
     </div>
   );
@@ -360,6 +510,7 @@ export function DetailView({
       {detail.kind === "Lexeme" ? <VocabularyDetail detail={detail} /> : null}
       {detail.kind === "Verb" ? <VerbDetail detail={detail} /> : null}
       {detail.kind === "QAPair" ? <QaDetail detail={detail} /> : null}
+      {detail.kind === "GrammarConcept" ? <GrammarDetail detail={detail} /> : null}
     </div>
   );
 }

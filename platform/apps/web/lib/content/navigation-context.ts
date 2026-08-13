@@ -7,8 +7,7 @@ import {
   tryDecodeEntityRouteSegment,
 } from "./path-utils";
 import {
-  DETAIL_HUB_BY_ID,
-  isDetailRepresentativeId,
+  detailHubForId,
 } from "./detail-types";
 import { isPracticeGameId } from "../games/game-ids";
 import { sanitizeHubQueryText } from "./hub-query";
@@ -141,7 +140,7 @@ export function isSafeNavigationPath(pathname: string): boolean {
 
   // Implemented representative detail routes only (encoded entity segment).
   const detailMatch = pathname.match(
-    /^\/(vocabulary|verbs|phrases)\/([^/]+)$/,
+    /^\/(vocabulary|verbs|grammar|phrases)\/([^/]+)$/,
   );
   if (detailMatch) {
     const hub = detailMatch[1]!;
@@ -149,8 +148,7 @@ export function isSafeNavigationPath(pathname: string): boolean {
     const decoded = tryDecodeEntityRouteSegment(segment);
     if (decoded == null) return false;
     if (encodeEntityRouteSegment(decoded) !== segment) return false;
-    if (!isDetailRepresentativeId(decoded)) return false;
-    if (DETAIL_HUB_BY_ID[decoded] !== hub) return false;
+    if (detailHubForId(decoded) !== hub) return false;
     return true;
   }
 
@@ -335,7 +333,7 @@ export function backHrefFromContext(ctx: NavigationContext): string {
     // Prefer a safe detail return path when present (e.g. Practise → detail).
     if (
       isSafeNavigationPath(safe.returnPath) &&
-      /^\/(vocabulary|verbs|phrases)\/[^/]+$/.test(safe.returnPath)
+      /^\/(vocabulary|verbs|grammar|phrases)\/[^/]+$/.test(safe.returnPath)
     ) {
       return safe.returnPath;
     }
@@ -419,7 +417,7 @@ export function buildDetailPracticeNavigationContext(input: {
   resultId: string;
 }): NavigationContext | null {
   if (!isSafeNavigationPath(input.detailPath)) return null;
-  if (!/^\/(vocabulary|verbs|phrases)\/[^/]+$/.test(input.detailPath)) {
+  if (!/^\/(vocabulary|verbs|grammar|phrases)\/[^/]+$/.test(input.detailPath)) {
     return null;
   }
   const ctx: NavigationContext = {

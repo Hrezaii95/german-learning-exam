@@ -17,6 +17,7 @@ import {
   parseLearnerEvent,
   parseLearnerStateEnvelope,
   type BrowserLikeKeyValueStore,
+  type ActivityProgressRecord,
   type LearnerBuiltInTag,
   type LearnerEvent,
   type LearnerNoteRecord,
@@ -67,12 +68,23 @@ export type LearnerStateController = Readonly<{
   saveNote(contentId: string, text: string): Promise<LearnerStateCoreSnapshot>;
   deleteNote(contentId: string): Promise<LearnerStateCoreSnapshot>;
   setResume(resume: ResumeState): Promise<LearnerStateCoreSnapshot>;
+  startActivity(target: ActivityProgressTarget): Promise<LearnerStateCoreSnapshot>;
+  completeActivity(
+    target: ActivityProgressTarget,
+    nextResume: ResumeState | null,
+  ): Promise<LearnerStateCoreSnapshot>;
   clearResume(): Promise<LearnerStateCoreSnapshot>;
   addRecording(recording: RecordingMetadata): Promise<LearnerStateCoreSnapshot>;
   updateSettings(settings: LearnerSettings): Promise<LearnerStateCoreSnapshot>;
   exportJson(exportedAt?: string): string;
   importJson(jsonText: string, confirmed: true): Promise<LearnerStateCoreSnapshot>;
   reset(confirmed: true): Promise<LearnerStateCoreSnapshot>;
+}>;
+
+export type ActivityProgressTarget = Readonly<{
+  lessonId: string;
+  stageId: string;
+  activityId: string;
 }>;
 
 export type CreateLearnerStateControllerOptions = Readonly<{
@@ -413,6 +425,49 @@ export function createLearnerStateController(
     return commit((current) => ({ ...withoutExportMetadata(current), resume }), "Resume point saved.");
   }
 
+  function startActivity(target: ActivityProgressTarget): Promise<LearnerStateCoreSnapshot> {
+    return commit((current) => {
+      if (current.activityProgress.some((item) => item.activityId === target.activityId)) {
+        return current;
+      }
+      const progress: ActivityProgressRecord = {
+        ...target,
+        progressState: "inProgress",
+        startedAt: assertValidNow(now()).toISOString(),
+      };
+      return {
+        ...withoutExportMetadata(current),
+        activityProgress: [...current.activityProgress, progress],
+        resume: { ...target, position: 0 },
+      };
+    }, "Activity started.");
+  }
+
+  function completeActivity(
+    target: ActivityProgressTarget,
+    nextResume: ResumeState | null,
+  ): Promise<LearnerStateCoreSnapshot> {
+    return commit((current) => {
+      const existing = current.activityProgress.find((item) => item.activityId === target.activityId);
+      if (existing?.progressState === "completed") return current;
+      const timestamp = assertValidNow(now()).toISOString();
+      const progress: ActivityProgressRecord = {
+        ...target,
+        progressState: "completed",
+        startedAt: existing?.startedAt ?? timestamp,
+        completedAt: timestamp,
+      };
+      return {
+        ...withoutExportMetadata(current),
+        activityProgress: [
+          ...current.activityProgress.filter((item) => item.activityId !== target.activityId),
+          progress,
+        ],
+        resume: nextResume,
+      };
+    }, "Activity completed.");
+  }
+
   function clearResume(): Promise<LearnerStateCoreSnapshot> {
     return commit((current) => ({ ...withoutExportMetadata(current), resume: null }), "Resume point cleared.");
   }
@@ -502,6 +557,8 @@ export function createLearnerStateController(
     saveNote,
     deleteNote,
     setResume,
+    startActivity,
+    completeActivity,
     clearResume,
     addRecording,
     updateSettings,

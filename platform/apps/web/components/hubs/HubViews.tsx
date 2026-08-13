@@ -17,9 +17,8 @@ import {
   isSafeNavigationPath,
 } from "@/lib/content/navigation-context";
 import {
-  DETAIL_HUB_BY_ID,
   detailCanonicalPath,
-  isDetailRepresentativeId,
+  detailHubForId,
 } from "@/lib/content/detail-types";
 import { withPagesBasePath } from "@/lib/content/pages-base-path";
 
@@ -63,9 +62,9 @@ function hubDetailHref(
   record: LearnerHubRecord,
   query: HubQueryState,
 ): string | null {
-  if (!isDetailRepresentativeId(record.id)) return null;
-  if (DETAIL_HUB_BY_ID[record.id] !== hub.id) return null;
-  const href = detailCanonicalPath(DETAIL_HUB_BY_ID[record.id], record.id);
+  const detailHub = detailHubForId(record.id);
+  if (detailHub !== hub.id) return null;
+  const href = detailCanonicalPath(detailHub, record.id);
   if (!isSafeNavigationPath(href)) return null;
   return appendNavigationContext(
     href,

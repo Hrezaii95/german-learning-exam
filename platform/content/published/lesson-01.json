@@ -60,6 +60,244 @@
   "sourceAssertions": [
     {
       "kind": "SourceAssertion",
+      "id": "assert:gram-personal-pronouns-l1-notice",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "Lesson 1 grammar"
+      },
+      "subjectId": "gram:personal-pronouns-l1",
+      "field": "noticeTarget",
+      "value": "German finite verbs agree with the person: ich, du, er/sie/es, wir, ihr, sie and formal Sie.",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:gram-personal-pronouns-l1-rules",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "Lesson 1 grammar"
+      },
+      "subjectId": "gram:personal-pronouns-l1",
+      "field": "ruleSteps",
+      "value": [
+        {
+          "id": "pronoun-person",
+          "notice": "Choose the pronoun first, then the matching finite verb form.",
+          "model": "ich heiße · du heißt · Sie heißen"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:gram-w-questions-l1-notice",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "Lesson 1 grammar"
+      },
+      "subjectId": "gram:w-questions-l1",
+      "field": "noticeTarget",
+      "value": "A taught W-question starts with the question word, followed by the finite verb and the person.",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:gram-w-questions-l1-rules",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "Lesson 1 grammar"
+      },
+      "subjectId": "gram:w-questions-l1",
+      "field": "ruleSteps",
+      "value": [
+        {
+          "id": "w-order",
+          "notice": "Use W-word + finite verb + person + complement.",
+          "model": "Wie heißt du? · Woher kommen Sie?"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:gram-main-clause-word-order-l1-notice",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "Lesson 1 grammar"
+      },
+      "subjectId": "gram:main-clause-word-order-l1",
+      "field": "noticeTarget",
+      "value": "In the taught statements, the finite verb is in second position.",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:gram-main-clause-word-order-l1-rules",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "Lesson 1 grammar"
+      },
+      "subjectId": "gram:main-clause-word-order-l1",
+      "field": "ruleSteps",
+      "value": [
+        {
+          "id": "verb-second",
+          "notice": "Build person + finite verb + complement.",
+          "model": "Ich komme aus Spanien."
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:gram-du-sie-register-l1-notice",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "Lesson 1 grammar"
+      },
+      "subjectId": "gram:du-sie-register-l1",
+      "field": "noticeTarget",
+      "value": "Use du in the taught informal patterns and capitalized Sie with the formal verb form.",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:gram-du-sie-register-l1-rules",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "Lesson 1 grammar"
+      },
+      "subjectId": "gram:du-sie-register-l1",
+      "field": "ruleSteps",
+      "value": [
+        {
+          "id": "register-pair",
+          "notice": "Keep pronoun and verb form in the same register.",
+          "model": "Wie heißt du? · Wie heißen Sie?"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:gram-aus-origin-l1-notice",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "Lesson 1 grammar"
+      },
+      "subjectId": "gram:aus-origin-l1",
+      "field": "noticeTarget",
+      "value": "The published origin answers use kommen + aus + country name.",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:gram-aus-origin-l1-rules",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "Lesson 1 grammar"
+      },
+      "subjectId": "gram:aus-origin-l1",
+      "field": "ruleSteps",
+      "value": [
+        {
+          "id": "aus-country",
+          "notice": "Use aus before the published country expression.",
+          "model": "Ich komme aus Deutschland."
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:gram-present-conjugation-l1-notice",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "Lesson 1 grammar"
+      },
+      "subjectId": "gram:present-conjugation-l1",
+      "field": "noticeTarget",
+      "value": "Published present forms include regular endings and the taught special paradigms heißen and sein.",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:gram-present-conjugation-l1-rules",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "Lesson 1 grammar"
+      },
+      "subjectId": "gram:present-conjugation-l1",
+      "field": "ruleSteps",
+      "value": [
+        {
+          "id": "regular-singular",
+          "notice": "Regular forms use a verb stem plus the person ending.",
+          "model": "ich lerne · du lernst"
+        },
+        {
+          "id": "heissen",
+          "notice": "In heißen, du and er/sie/es use heißt.",
+          "model": "du heißt · sie heißt"
+        },
+        {
+          "id": "sein",
+          "notice": "Learn the irregular forms of sein as whole forms.",
+          "model": "ich bin · du bist · Sie sind"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
       "id": "assert:lesson-01-title-de",
       "sourceId": "source:alpha-content-bundle",
       "location": {
@@ -3954,7 +4192,443 @@
       }
     }
   ],
-  "grammarConcepts": [],
+  "grammarConcepts": [
+    {
+      "kind": "GrammarConcept",
+      "id": "gram:personal-pronouns-l1",
+      "titleEn": "Personal pronouns",
+      "titleDe": "Personalpronomen",
+      "prerequisiteIds": [],
+      "noticeTarget": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "German finite verbs agree with the person: ich, du, er/sie/es, wir, ihr, sie and formal Sie."
+          }
+        ]
+      },
+      "ruleSteps": [
+        {
+          "id": "pronoun-person",
+          "notice": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "Choose the pronoun first, then the matching finite verb form."
+              }
+            ]
+          },
+          "model": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "ich heiße · du heißt · Sie heißen"
+              }
+            ]
+          }
+        }
+      ],
+      "exampleIds": [],
+      "commonErrorTags": [
+        "person-agreement",
+        "sie-Sie-capitalization"
+      ],
+      "activityTemplateIds": [],
+      "relationIds": [
+        "rel:gram-personal-pronouns-l1-introduced-01",
+        "rel:gram-personal-pronouns-l1-practised-lesson-01-pronoun-verb-builder"
+      ],
+      "sourceAssertionIds": [
+        "assert:gram-personal-pronouns-l1-notice",
+        "assert:gram-personal-pronouns-l1-rules"
+      ],
+      "mediaIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "noticeTarget",
+            "assertionId": "assert:gram-personal-pronouns-l1-notice"
+          },
+          {
+            "field": "ruleSteps",
+            "assertionId": "assert:gram-personal-pronouns-l1-rules"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "GrammarConcept",
+      "id": "gram:w-questions-l1",
+      "titleEn": "W-questions",
+      "titleDe": "W-Fragen",
+      "prerequisiteIds": [
+        "gram:personal-pronouns-l1"
+      ],
+      "noticeTarget": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "A taught W-question starts with the question word, followed by the finite verb and the person."
+          }
+        ]
+      },
+      "ruleSteps": [
+        {
+          "id": "w-order",
+          "notice": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "Use W-word + finite verb + person + complement."
+              }
+            ]
+          },
+          "model": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "Wie heißt du? · Woher kommen Sie?"
+              }
+            ]
+          }
+        }
+      ],
+      "exampleIds": [],
+      "commonErrorTags": [
+        "word-order"
+      ],
+      "activityTemplateIds": [],
+      "relationIds": [
+        "rel:gram-w-questions-l1-introduced-01",
+        "rel:gram-w-questions-l1-practised-lesson-01-name-model-dialogue",
+        "rel:gram-w-questions-l1-practised-lesson-01-origin-aus-contrast",
+        "rel:gram-w-questions-l1-practised-lesson-01-register-qa-builder"
+      ],
+      "sourceAssertionIds": [
+        "assert:gram-w-questions-l1-notice",
+        "assert:gram-w-questions-l1-rules"
+      ],
+      "mediaIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "noticeTarget",
+            "assertionId": "assert:gram-w-questions-l1-notice"
+          },
+          {
+            "field": "ruleSteps",
+            "assertionId": "assert:gram-w-questions-l1-rules"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "GrammarConcept",
+      "id": "gram:main-clause-word-order-l1",
+      "titleEn": "Main-clause word order",
+      "titleDe": "Satzstellung im Aussagesatz",
+      "prerequisiteIds": [
+        "gram:personal-pronouns-l1"
+      ],
+      "noticeTarget": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "In the taught statements, the finite verb is in second position."
+          }
+        ]
+      },
+      "ruleSteps": [
+        {
+          "id": "verb-second",
+          "notice": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "Build person + finite verb + complement."
+              }
+            ]
+          },
+          "model": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "Ich komme aus Spanien."
+              }
+            ]
+          }
+        }
+      ],
+      "exampleIds": [],
+      "commonErrorTags": [
+        "verb-position"
+      ],
+      "activityTemplateIds": [],
+      "relationIds": [
+        "rel:gram-main-clause-word-order-l1-introduced-01",
+        "rel:gram-main-clause-word-order-l1-practised-lesson-01-pronoun-verb-builder",
+        "rel:gram-main-clause-word-order-l1-practised-lesson-01-guided-intro-recording"
+      ],
+      "sourceAssertionIds": [
+        "assert:gram-main-clause-word-order-l1-notice",
+        "assert:gram-main-clause-word-order-l1-rules"
+      ],
+      "mediaIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "noticeTarget",
+            "assertionId": "assert:gram-main-clause-word-order-l1-notice"
+          },
+          {
+            "field": "ruleSteps",
+            "assertionId": "assert:gram-main-clause-word-order-l1-rules"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "GrammarConcept",
+      "id": "gram:du-sie-register-l1",
+      "titleEn": "Informal du and formal Sie",
+      "titleDe": "du und Sie",
+      "prerequisiteIds": [
+        "gram:personal-pronouns-l1"
+      ],
+      "noticeTarget": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Use du in the taught informal patterns and capitalized Sie with the formal verb form."
+          }
+        ]
+      },
+      "ruleSteps": [
+        {
+          "id": "register-pair",
+          "notice": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "Keep pronoun and verb form in the same register."
+              }
+            ]
+          },
+          "model": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "Wie heißt du? · Wie heißen Sie?"
+              }
+            ]
+          }
+        }
+      ],
+      "exampleIds": [],
+      "commonErrorTags": [
+        "register-mismatch",
+        "sie-Sie-capitalization"
+      ],
+      "activityTemplateIds": [],
+      "relationIds": [
+        "rel:gram-du-sie-register-l1-introduced-01",
+        "rel:gram-du-sie-register-l1-practised-lesson-01-register-qa-builder",
+        "rel:gram-du-sie-register-l1-practised-lesson-01-guided-intro-recording"
+      ],
+      "sourceAssertionIds": [
+        "assert:gram-du-sie-register-l1-notice",
+        "assert:gram-du-sie-register-l1-rules"
+      ],
+      "mediaIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "noticeTarget",
+            "assertionId": "assert:gram-du-sie-register-l1-notice"
+          },
+          {
+            "field": "ruleSteps",
+            "assertionId": "assert:gram-du-sie-register-l1-rules"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "GrammarConcept",
+      "id": "gram:aus-origin-l1",
+      "titleEn": "Origin with aus",
+      "titleDe": "Herkunft mit aus",
+      "prerequisiteIds": [
+        "gram:main-clause-word-order-l1"
+      ],
+      "noticeTarget": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "The published origin answers use kommen + aus + country name."
+          }
+        ]
+      },
+      "ruleSteps": [
+        {
+          "id": "aus-country",
+          "notice": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "Use aus before the published country expression."
+              }
+            ]
+          },
+          "model": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "Ich komme aus Deutschland."
+              }
+            ]
+          }
+        }
+      ],
+      "exampleIds": [],
+      "commonErrorTags": [
+        "preposition-choice"
+      ],
+      "activityTemplateIds": [],
+      "relationIds": [
+        "rel:gram-aus-origin-l1-introduced-01",
+        "rel:gram-aus-origin-l1-practised-lesson-01-origin-aus-contrast",
+        "rel:gram-aus-origin-l1-practised-lesson-01-guided-intro-recording"
+      ],
+      "sourceAssertionIds": [
+        "assert:gram-aus-origin-l1-notice",
+        "assert:gram-aus-origin-l1-rules"
+      ],
+      "mediaIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "noticeTarget",
+            "assertionId": "assert:gram-aus-origin-l1-notice"
+          },
+          {
+            "field": "ruleSteps",
+            "assertionId": "assert:gram-aus-origin-l1-rules"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "GrammarConcept",
+      "id": "gram:present-conjugation-l1",
+      "titleEn": "Present-tense person forms",
+      "titleDe": "Präsensformen",
+      "prerequisiteIds": [
+        "gram:personal-pronouns-l1"
+      ],
+      "noticeTarget": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Published present forms include regular endings and the taught special paradigms heißen and sein."
+          }
+        ]
+      },
+      "ruleSteps": [
+        {
+          "id": "regular-singular",
+          "notice": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "Regular forms use a verb stem plus the person ending."
+              }
+            ]
+          },
+          "model": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "ich lerne · du lernst"
+              }
+            ]
+          }
+        },
+        {
+          "id": "heissen",
+          "notice": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "In heißen, du and er/sie/es use heißt."
+              }
+            ]
+          },
+          "model": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "du heißt · sie heißt"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sein",
+          "notice": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "Learn the irregular forms of sein as whole forms."
+              }
+            ]
+          },
+          "model": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "ich bin · du bist · Sie sind"
+              }
+            ]
+          }
+        }
+      ],
+      "exampleIds": [],
+      "commonErrorTags": [
+        "person-agreement",
+        "irregular-form"
+      ],
+      "activityTemplateIds": [],
+      "relationIds": [
+        "rel:gram-present-conjugation-l1-introduced-01",
+        "rel:gram-present-conjugation-l1-practised-lesson-01-heissen-sein-notice",
+        "rel:gram-present-conjugation-l1-practised-lesson-01-pronoun-verb-builder"
+      ],
+      "sourceAssertionIds": [
+        "assert:gram-present-conjugation-l1-notice",
+        "assert:gram-present-conjugation-l1-rules"
+      ],
+      "mediaIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "noticeTarget",
+            "assertionId": "assert:gram-present-conjugation-l1-notice"
+          },
+          {
+            "field": "ruleSteps",
+            "assertionId": "assert:gram-present-conjugation-l1-rules"
+          }
+        ]
+      }
+    }
+  ],
   "phrasePatterns": [
     {
       "kind": "PhrasePattern",
@@ -5235,11 +5909,149 @@
   "relationships": [
     {
       "kind": "Relationship",
+      "id": "rel:gram-personal-pronouns-l1-introduced-01",
+      "type": "introduced-in",
+      "fromId": "gram:personal-pronouns-l1",
+      "toId": "lesson:01"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:gram-personal-pronouns-l1-practised-lesson-01-pronoun-verb-builder",
+      "type": "practised-in",
+      "fromId": "gram:personal-pronouns-l1",
+      "toId": "activity:lesson-01-pronoun-verb-builder",
+      "lessonId": "lesson:01"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:gram-w-questions-l1-introduced-01",
+      "type": "introduced-in",
+      "fromId": "gram:w-questions-l1",
+      "toId": "lesson:01"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:gram-w-questions-l1-practised-lesson-01-name-model-dialogue",
+      "type": "practised-in",
+      "fromId": "gram:w-questions-l1",
+      "toId": "activity:lesson-01-name-model-dialogue",
+      "lessonId": "lesson:01"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:gram-w-questions-l1-practised-lesson-01-origin-aus-contrast",
+      "type": "practised-in",
+      "fromId": "gram:w-questions-l1",
+      "toId": "activity:lesson-01-origin-aus-contrast",
+      "lessonId": "lesson:01"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:gram-w-questions-l1-practised-lesson-01-register-qa-builder",
+      "type": "practised-in",
+      "fromId": "gram:w-questions-l1",
+      "toId": "activity:lesson-01-register-qa-builder",
+      "lessonId": "lesson:01"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:gram-main-clause-word-order-l1-introduced-01",
+      "type": "introduced-in",
+      "fromId": "gram:main-clause-word-order-l1",
+      "toId": "lesson:01"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:gram-main-clause-word-order-l1-practised-lesson-01-pronoun-verb-builder",
+      "type": "practised-in",
+      "fromId": "gram:main-clause-word-order-l1",
+      "toId": "activity:lesson-01-pronoun-verb-builder",
+      "lessonId": "lesson:01"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:gram-main-clause-word-order-l1-practised-lesson-01-guided-intro-recording",
+      "type": "practised-in",
+      "fromId": "gram:main-clause-word-order-l1",
+      "toId": "activity:lesson-01-guided-intro-recording",
+      "lessonId": "lesson:01"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:gram-du-sie-register-l1-introduced-01",
+      "type": "introduced-in",
+      "fromId": "gram:du-sie-register-l1",
+      "toId": "lesson:01"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:gram-du-sie-register-l1-practised-lesson-01-register-qa-builder",
+      "type": "practised-in",
+      "fromId": "gram:du-sie-register-l1",
+      "toId": "activity:lesson-01-register-qa-builder",
+      "lessonId": "lesson:01"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:gram-du-sie-register-l1-practised-lesson-01-guided-intro-recording",
+      "type": "practised-in",
+      "fromId": "gram:du-sie-register-l1",
+      "toId": "activity:lesson-01-guided-intro-recording",
+      "lessonId": "lesson:01"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:gram-aus-origin-l1-introduced-01",
+      "type": "introduced-in",
+      "fromId": "gram:aus-origin-l1",
+      "toId": "lesson:01"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:gram-aus-origin-l1-practised-lesson-01-origin-aus-contrast",
+      "type": "practised-in",
+      "fromId": "gram:aus-origin-l1",
+      "toId": "activity:lesson-01-origin-aus-contrast",
+      "lessonId": "lesson:01"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:gram-aus-origin-l1-practised-lesson-01-guided-intro-recording",
+      "type": "practised-in",
+      "fromId": "gram:aus-origin-l1",
+      "toId": "activity:lesson-01-guided-intro-recording",
+      "lessonId": "lesson:01"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:gram-present-conjugation-l1-introduced-01",
+      "type": "introduced-in",
+      "fromId": "gram:present-conjugation-l1",
+      "toId": "lesson:01"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:gram-present-conjugation-l1-practised-lesson-01-heissen-sein-notice",
+      "type": "practised-in",
+      "fromId": "gram:present-conjugation-l1",
+      "toId": "activity:lesson-01-heissen-sein-notice",
+      "lessonId": "lesson:01"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:gram-present-conjugation-l1-practised-lesson-01-pronoun-verb-builder",
+      "type": "practised-in",
+      "fromId": "gram:present-conjugation-l1",
+      "toId": "activity:lesson-01-pronoun-verb-builder",
+      "lessonId": "lesson:01"
+    },
+    {
+      "kind": "Relationship",
       "id": "rel:hallo-introduced-l1",
       "type": "introduced-in",
       "fromId": "lex:hallo",
       "toId": "lesson:01",
-      "order": 1
+      "order": 19
     },
     {
       "kind": "Relationship",
@@ -5247,7 +6059,7 @@
       "type": "introduced-in",
       "fromId": "lex:guten-tag",
       "toId": "lesson:01",
-      "order": 2
+      "order": 20
     },
     {
       "kind": "Relationship",
@@ -5255,7 +6067,7 @@
       "type": "introduced-in",
       "fromId": "lex:guten-morgen",
       "toId": "lesson:01",
-      "order": 3
+      "order": 21
     },
     {
       "kind": "Relationship",
@@ -5263,7 +6075,7 @@
       "type": "introduced-in",
       "fromId": "lex:guten-abend",
       "toId": "lesson:01",
-      "order": 4
+      "order": 22
     },
     {
       "kind": "Relationship",
@@ -5271,7 +6083,7 @@
       "type": "introduced-in",
       "fromId": "lex:gute-nacht",
       "toId": "lesson:01",
-      "order": 5
+      "order": 23
     },
     {
       "kind": "Relationship",
@@ -5279,7 +6091,7 @@
       "type": "introduced-in",
       "fromId": "lex:tschues",
       "toId": "lesson:01",
-      "order": 6
+      "order": 24
     },
     {
       "kind": "Relationship",
@@ -5287,7 +6099,7 @@
       "type": "introduced-in",
       "fromId": "lex:auf-wiedersehen",
       "toId": "lesson:01",
-      "order": 7
+      "order": 25
     },
     {
       "kind": "Relationship",
@@ -5295,7 +6107,7 @@
       "type": "introduced-in",
       "fromId": "lex:super",
       "toId": "lesson:01",
-      "order": 8
+      "order": 26
     },
     {
       "kind": "Relationship",
@@ -5303,7 +6115,7 @@
       "type": "introduced-in",
       "fromId": "lex:sehr-gut-danke",
       "toId": "lesson:01",
-      "order": 9
+      "order": 27
     },
     {
       "kind": "Relationship",
@@ -5311,7 +6123,7 @@
       "type": "introduced-in",
       "fromId": "lex:gut-danke",
       "toId": "lesson:01",
-      "order": 10
+      "order": 28
     },
     {
       "kind": "Relationship",
@@ -5319,7 +6131,7 @@
       "type": "introduced-in",
       "fromId": "lex:es-geht",
       "toId": "lesson:01",
-      "order": 11
+      "order": 29
     },
     {
       "kind": "Relationship",
@@ -5327,7 +6139,7 @@
       "type": "introduced-in",
       "fromId": "lex:nicht-so-gut",
       "toId": "lesson:01",
-      "order": 12
+      "order": 30
     },
     {
       "kind": "Relationship",
@@ -5335,7 +6147,7 @@
       "type": "introduced-in",
       "fromId": "lex:auch-super",
       "toId": "lesson:01",
-      "order": 13
+      "order": 31
     },
     {
       "kind": "Relationship",
@@ -5343,7 +6155,7 @@
       "type": "introduced-in",
       "fromId": "lex:deutschland",
       "toId": "lesson:01",
-      "order": 14
+      "order": 32
     },
     {
       "kind": "Relationship",
@@ -5351,7 +6163,7 @@
       "type": "introduced-in",
       "fromId": "lex:eritrea",
       "toId": "lesson:01",
-      "order": 15
+      "order": 33
     },
     {
       "kind": "Relationship",
@@ -5359,7 +6171,7 @@
       "type": "introduced-in",
       "fromId": "lex:oesterreich",
       "toId": "lesson:01",
-      "order": 16
+      "order": 34
     },
     {
       "kind": "Relationship",
@@ -5367,7 +6179,7 @@
       "type": "introduced-in",
       "fromId": "lex:spanien",
       "toId": "lesson:01",
-      "order": 17
+      "order": 35
     },
     {
       "kind": "Relationship",
@@ -5375,7 +6187,7 @@
       "type": "introduced-in",
       "fromId": "lex:frankreich",
       "toId": "lesson:01",
-      "order": 18
+      "order": 36
     },
     {
       "kind": "Relationship",
@@ -5383,7 +6195,7 @@
       "type": "introduced-in",
       "fromId": "lex:schweiz",
       "toId": "lesson:01",
-      "order": 19
+      "order": 37
     },
     {
       "kind": "Relationship",
@@ -5391,7 +6203,7 @@
       "type": "introduced-in",
       "fromId": "lex:tuerkei",
       "toId": "lesson:01",
-      "order": 20
+      "order": 38
     },
     {
       "kind": "Relationship",
@@ -5399,7 +6211,7 @@
       "type": "introduced-in",
       "fromId": "lex:usa",
       "toId": "lesson:01",
-      "order": 21
+      "order": 39
     },
     {
       "kind": "Relationship",
@@ -5407,7 +6219,7 @@
       "type": "introduced-in",
       "fromId": "lex:name",
       "toId": "lesson:01",
-      "order": 22
+      "order": 40
     },
     {
       "kind": "Relationship",
@@ -5415,7 +6227,7 @@
       "type": "introduced-in",
       "fromId": "lex:vorname",
       "toId": "lesson:01",
-      "order": 23
+      "order": 41
     },
     {
       "kind": "Relationship",
@@ -5423,7 +6235,7 @@
       "type": "introduced-in",
       "fromId": "lex:familienname",
       "toId": "lesson:01",
-      "order": 24
+      "order": 42
     },
     {
       "kind": "Relationship",
@@ -5431,7 +6243,7 @@
       "type": "introduced-in",
       "fromId": "lex:herr",
       "toId": "lesson:01",
-      "order": 25
+      "order": 43
     },
     {
       "kind": "Relationship",
@@ -5439,7 +6251,7 @@
       "type": "introduced-in",
       "fromId": "lex:frau",
       "toId": "lesson:01",
-      "order": 26
+      "order": 44
     },
     {
       "kind": "Relationship",

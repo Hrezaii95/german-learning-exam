@@ -6,6 +6,7 @@
 import { persistenceError } from "./errors.js";
 import type {
   ContentBundleIdentity,
+  ActivityProgressRecord,
   LearnerExportMetadata,
   LearnerNoteRecord,
   LearnerSettings,
@@ -124,6 +125,18 @@ function orderedResume(r: ResumeState): Record<string, unknown> {
   };
 }
 
+function orderedActivityProgress(p: ActivityProgressRecord): Record<string, unknown> {
+  const out: Record<string, unknown> = {
+    activityId: p.activityId,
+    lessonId: p.lessonId,
+    stageId: p.stageId,
+    startedAt: p.startedAt,
+    progressState: p.progressState,
+  };
+  if (p.completedAt !== undefined) out.completedAt = p.completedAt;
+  return out;
+}
+
 function orderedTag(t: LearnerTagRecord): Record<string, unknown> {
   return {
     contentId: t.contentId,
@@ -193,6 +206,7 @@ export function toCanonicalPlainObject(
   state: LearnerStateEnvelope,
 ): Record<string, unknown> {
   const out: Record<string, unknown> = {
+    activityProgress: state.activityProgress.map(orderedActivityProgress),
     contentBundle: orderedContentBundle(state.contentBundle),
     events: state.events.map((e) => canonicalizeValue(e) as LearnerEvent),
     learnerEventSchemaVersion: state.learnerEventSchemaVersion,
@@ -240,6 +254,9 @@ export function sortEnvelopeEntities(
   const recordings = [...state.recordings].sort((a, b) =>
     a.recordingId < b.recordingId ? -1 : a.recordingId > b.recordingId ? 1 : 0,
   );
+  const activityProgress = [...state.activityProgress].sort((a, b) =>
+    a.activityId < b.activityId ? -1 : a.activityId > b.activityId ? 1 : 0,
+  );
 
   const base: LearnerStateEnvelope = {
     schemaVersion: state.schemaVersion,
@@ -249,6 +266,7 @@ export function sortEnvelopeEntities(
     contentBundle: state.contentBundle,
     settings: state.settings,
     resume: state.resume,
+    activityProgress,
     tags,
     notes,
     events,

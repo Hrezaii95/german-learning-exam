@@ -16,6 +16,7 @@ import type { ContentFragment } from "../publication/fragment.js";
 import type { Lesson } from "../types/lesson.js";
 import type { Lexeme } from "../types/lexeme.js";
 import type { Verb, PersonKey } from "../types/verb.js";
+import type { GrammarConcept } from "../types/grammar.js";
 import type { PhrasePattern, QAPair } from "../types/phrase.js";
 import type { LearningActivity } from "../types/collection.js";
 import type { Collection } from "../types/collection.js";
@@ -359,6 +360,71 @@ function assertion(args: {
   return base;
 }
 
+function addGrammarConcept(args: {
+  concepts: GrammarConcept[];
+  assertions: SourceAssertion[];
+  relationships: Relationship[];
+  id: `gram:${string}`;
+  lessonId: "lesson:01" | "lesson:02";
+  titleEn: string;
+  titleDe: string;
+  notice: string;
+  rules: Array<{ id: string; notice: string; model?: string }>;
+  activityIds: Array<`activity:${string}`>;
+  prerequisites?: Array<`gram:${string}`>;
+  commonErrorTags?: string[];
+}): void {
+  const slug = args.id.slice(5);
+  const noticeAssertion = assertion({
+    id: `assert:gram-${slug}-notice`,
+    sourceId: "source:content-spec-lessons-01-02",
+    subjectId: args.id,
+    field: "noticeTarget",
+    value: args.notice,
+    status: "verified",
+    location: { region: args.lessonId === "lesson:01" ? "Lesson 1 grammar" : "Lesson 2 grammar" },
+  });
+  const rulesAssertion = assertion({
+    id: `assert:gram-${slug}-rules`,
+    sourceId: "source:content-spec-lessons-01-02",
+    subjectId: args.id,
+    field: "ruleSteps",
+    value: args.rules,
+    status: "verified",
+    location: { region: args.lessonId === "lesson:01" ? "Lesson 1 grammar" : "Lesson 2 grammar" },
+  });
+  args.assertions.push(noticeAssertion, rulesAssertion);
+  const relationIds: `rel:${string}`[] = [];
+  const introducedId = `rel:gram-${slug}-introduced-${args.lessonId.slice(-2)}` as `rel:${string}`;
+  args.relationships.push({ kind: "Relationship", id: introducedId, type: "introduced-in", fromId: args.id, toId: args.lessonId });
+  relationIds.push(introducedId);
+  for (const activityId of args.activityIds) {
+    const activitySlug = activityId.slice(9).replaceAll(":", "-");
+    const relId = `rel:gram-${slug}-practised-${activitySlug}` as `rel:${string}`;
+    args.relationships.push({ kind: "Relationship", id: relId, type: "practised-in", fromId: args.id, toId: activityId, lessonId: args.lessonId });
+    relationIds.push(relId);
+  }
+  args.concepts.push({
+    kind: "GrammarConcept",
+    id: args.id,
+    titleEn: args.titleEn,
+    titleDe: args.titleDe,
+    prerequisiteIds: args.prerequisites ?? [],
+    noticeTarget: plain(args.notice),
+    ruleSteps: args.rules.map((rule) => ({ id: rule.id, notice: plain(rule.notice), ...(rule.model ? { model: plain(rule.model) } : {}) })),
+    exampleIds: [],
+    commonErrorTags: args.commonErrorTags ?? [],
+    activityTemplateIds: [],
+    relationIds,
+    sourceAssertionIds: [noticeAssertion.id, rulesAssertion.id],
+    mediaIds: [],
+    publication: published([
+      { field: "noticeTarget", assertionId: noticeAssertion.id },
+      { field: "ruleSteps", assertionId: rulesAssertion.id },
+    ]),
+  });
+}
+
 function buildLesson01(alpha: AlphaContent): ContentFragment {
   const lesson = alpha.lessons[0]!;
   // Shared sources live only here to keep fragment entity IDs disjoint.
@@ -375,10 +441,20 @@ function buildLesson01(alpha: AlphaContent): ContentFragment {
   const sourceAssertions: SourceAssertion[] = [];
   const lexemes: Lexeme[] = [];
   const verbs: Verb[] = [];
+  const grammarConcepts: GrammarConcept[] = [];
   const phrasePatterns: PhrasePattern[] = [];
   const qaPairs: QAPair[] = [];
   const relationships: Relationship[] = [];
   const contentGaps: ContentGap[] = [];
+
+  const addL1Grammar = (spec: Omit<Parameters<typeof addGrammarConcept>[0], "concepts" | "assertions" | "relationships" | "lessonId">) =>
+    addGrammarConcept({ ...spec, concepts: grammarConcepts, assertions: sourceAssertions, relationships, lessonId: "lesson:01" });
+  addL1Grammar({ id: "gram:personal-pronouns-l1", titleEn: "Personal pronouns", titleDe: "Personalpronomen", notice: "German finite verbs agree with the person: ich, du, er/sie/es, wir, ihr, sie and formal Sie.", rules: [{ id: "pronoun-person", notice: "Choose the pronoun first, then the matching finite verb form.", model: "ich heiße · du heißt · Sie heißen" }], activityIds: ["activity:lesson-01-pronoun-verb-builder"], commonErrorTags: ["person-agreement", "sie-Sie-capitalization"] });
+  addL1Grammar({ id: "gram:w-questions-l1", titleEn: "W-questions", titleDe: "W-Fragen", notice: "A taught W-question starts with the question word, followed by the finite verb and the person.", rules: [{ id: "w-order", notice: "Use W-word + finite verb + person + complement.", model: "Wie heißt du? · Woher kommen Sie?" }], activityIds: ["activity:lesson-01-name-model-dialogue", "activity:lesson-01-origin-aus-contrast", "activity:lesson-01-register-qa-builder"], prerequisites: ["gram:personal-pronouns-l1"], commonErrorTags: ["word-order"] });
+  addL1Grammar({ id: "gram:main-clause-word-order-l1", titleEn: "Main-clause word order", titleDe: "Satzstellung im Aussagesatz", notice: "In the taught statements, the finite verb is in second position.", rules: [{ id: "verb-second", notice: "Build person + finite verb + complement.", model: "Ich komme aus Spanien." }], activityIds: ["activity:lesson-01-pronoun-verb-builder", "activity:lesson-01-guided-intro-recording"], prerequisites: ["gram:personal-pronouns-l1"], commonErrorTags: ["verb-position"] });
+  addL1Grammar({ id: "gram:du-sie-register-l1", titleEn: "Informal du and formal Sie", titleDe: "du und Sie", notice: "Use du in the taught informal patterns and capitalized Sie with the formal verb form.", rules: [{ id: "register-pair", notice: "Keep pronoun and verb form in the same register.", model: "Wie heißt du? · Wie heißen Sie?" }], activityIds: ["activity:lesson-01-register-qa-builder", "activity:lesson-01-guided-intro-recording"], prerequisites: ["gram:personal-pronouns-l1"], commonErrorTags: ["register-mismatch", "sie-Sie-capitalization"] });
+  addL1Grammar({ id: "gram:aus-origin-l1", titleEn: "Origin with aus", titleDe: "Herkunft mit aus", notice: "The published origin answers use kommen + aus + country name.", rules: [{ id: "aus-country", notice: "Use aus before the published country expression.", model: "Ich komme aus Deutschland." }], activityIds: ["activity:lesson-01-origin-aus-contrast", "activity:lesson-01-guided-intro-recording"], prerequisites: ["gram:main-clause-word-order-l1"], commonErrorTags: ["preposition-choice"] });
+  addL1Grammar({ id: "gram:present-conjugation-l1", titleEn: "Present-tense person forms", titleDe: "Präsensformen", notice: "Published present forms include regular endings and the taught special paradigms heißen and sein.", rules: [{ id: "regular-singular", notice: "Regular forms use a verb stem plus the person ending.", model: "ich lerne · du lernst" }, { id: "heissen", notice: "In heißen, du and er/sie/es use heißt.", model: "du heißt · sie heißt" }, { id: "sein", notice: "Learn the irregular forms of sein as whole forms.", model: "ich bin · du bist · Sie sind" }], activityIds: ["activity:lesson-01-heissen-sein-notice", "activity:lesson-01-pronoun-verb-builder"], prerequisites: ["gram:personal-pronouns-l1"], commonErrorTags: ["person-agreement", "irregular-form"] });
 
   const titleAssert = assertion({
     id: "assert:lesson-01-title-de",
@@ -816,7 +892,7 @@ function buildLesson01(alpha: AlphaContent): ContentFragment {
     lessons: [lessonObj],
     lexemes,
     verbs,
-    grammarConcepts: [],
+    grammarConcepts,
     phrasePatterns,
     qaPairs,
     dialogues: [],
@@ -837,10 +913,18 @@ function buildLesson02(alpha: AlphaContent): ContentFragment {
   const sourceAssertions: SourceAssertion[] = [];
   const lexemes: Lexeme[] = [];
   const verbs: Verb[] = [];
+  const grammarConcepts: GrammarConcept[] = [];
   const phrasePatterns: PhrasePattern[] = [];
   const qaPairs: QAPair[] = [];
   const relationships: Relationship[] = [];
   const contentGaps: ContentGap[] = [];
+
+  const addL2Grammar = (spec: Omit<Parameters<typeof addGrammarConcept>[0], "concepts" | "assertions" | "relationships" | "lessonId">) =>
+    addGrammarConcept({ ...spec, concepts: grammarConcepts, assertions: sourceAssertions, relationships, lessonId: "lesson:02" });
+  addL2Grammar({ id: "gram:full-present-person-forms-l2", titleEn: "Full present-tense person forms", titleDe: "Präsens: alle Personen", notice: "Lesson 2 extends present conjugation to wir, ihr, sie and formal Sie.", rules: [{ id: "full-person", notice: "Match each pronoun with its published present form.", model: "wir sind · ihr seid · sie/Sie sind" }], activityIds: ["activity:lesson-02-full-person-conjugation"], commonErrorTags: ["person-agreement", "sie-Sie-capitalization"] });
+  addL2Grammar({ id: "gram:nicht-profile-negation-l2", titleEn: "Negation with nicht", titleDe: "Verneinung mit nicht", notice: "Use nicht in the taught profile statements to negate a state or description.", rules: [{ id: "nicht-profile", notice: "Place nicht with the taught statement pattern.", model: "Ich bin nicht verheiratet." }], activityIds: ["activity:lesson-02-relationship-status", "activity:lesson-02-profile-reading-writing"], commonErrorTags: ["negation-position"] });
+  addL2Grammar({ id: "gram:profession-expressions-l2", titleEn: "Talking about professions", titleDe: "Beruf ausdrücken", notice: "The taught patterns contrast profession after sein with arbeiten als, bei or in.", rules: [{ id: "sein-profession", notice: "After sein, use the taught profession without an article.", model: "Ich bin Architekt." }, { id: "arbeiten-als", notice: "Use arbeiten als before a profession.", model: "Ich arbeite als Architekt." }, { id: "arbeiten-bei-in", notice: "Use bei or in only in the published workplace patterns.", model: "Ich arbeite bei einer Firma." }], activityIds: ["activity:lesson-02-profession-qa-builder", "activity:lesson-02-sein-arbeiten-contrast"], prerequisites: ["gram:full-present-person-forms-l2"], commonErrorTags: ["article-after-sein", "preposition-choice"] });
+  addL2Grammar({ id: "gram:profession-feminine-forms-l2", titleEn: "Feminine profession forms", titleDe: "Weibliche Berufsformen", notice: "Published profession pairs form feminine person words with -in where evidenced; plural -innen is used only when stored in the source.", rules: [{ id: "feminine-in", notice: "Link each published feminine form to its masculine base; preserve source-supported stem changes.", model: "Architekt → Architektin · Arzt → Ärztin" }, { id: "plural-innen", notice: "Use -innen only for a source-published feminine plural.", model: "Lehrerinnen" }], activityIds: ["activity:lesson-02-core-professions", "activity:lesson-02-person-form-morphology"], commonErrorTags: ["person-form", "umlaut", "plural-guessing"] });
 
   const titleAssert = assertion({
     id: "assert:lesson-02-title-de",
@@ -1377,7 +1461,7 @@ function buildLesson02(alpha: AlphaContent): ContentFragment {
     lessons: [lessonObj],
     lexemes,
     verbs,
-    grammarConcepts: [],
+    grammarConcepts,
     phrasePatterns,
     qaPairs,
     dialogues: [],

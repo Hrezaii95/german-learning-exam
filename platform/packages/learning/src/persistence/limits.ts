@@ -10,6 +10,7 @@ export const PERSISTENCE_LIMITS = Object.freeze({
   maxTags: 10_000,
   maxNotes: 5_000,
   maxRecordings: 5_000,
+  maxActivityProgress: 1_000,
   /** Plain-text personal note body. */
   maxNoteTextLength: 4_000,
   /** IDs, timezone, mimeType, bundleId, stageId, etc. */

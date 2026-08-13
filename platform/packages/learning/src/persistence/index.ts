@@ -16,6 +16,8 @@ export {
 } from "./types.js";
 export type {
   ContentBundleIdentity,
+  ActivityProgressRecord,
+  ActivityProgressStatus,
   CreateEmptyLearnerStateInput,
   LearnerBuiltInTag,
   LearnerExportMetadata,

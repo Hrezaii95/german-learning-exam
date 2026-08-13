@@ -54,13 +54,24 @@ export default async function ActivityPage({ params }: PageProps) {
   if (!lesson || !activity) {
     notFound();
   }
+  const lessonActivities = projection.activities.filter((item) => item.lessonId === lesson.id);
+  const prerequisiteLesson = lesson.routeSegment === "02" ? projection.lessons.find((item) => item.routeSegment === "01") : undefined;
+  const prerequisiteActivities = prerequisiteLesson
+    ? projection.activities.filter((item) => item.lessonId === prerequisiteLesson.id)
+    : [];
 
   return (
     <ShellLayout current="lessons">
       <Suspense
-        fallback={<ActivityScreen lesson={lesson} activity={activity} />}
+        fallback={<ActivityScreen lesson={lesson} activity={activity} activities={lessonActivities} />}
       >
-        <ActivityScreenWithNav lesson={lesson} activity={activity} />
+        <ActivityScreenWithNav
+          lesson={lesson}
+          activity={activity}
+          activities={lessonActivities}
+          {...(prerequisiteLesson ? { prerequisiteLesson } : {})}
+          prerequisiteActivities={prerequisiteActivities}
+        />
       </Suspense>
     </ShellLayout>
   );

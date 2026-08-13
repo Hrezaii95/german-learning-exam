@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-08-13T00:00:00.000Z",
+  "status": "pass-with-explicit-blockers",
+  "checks": {
+    "approvedAudioTrackCount": 15,
+    "manifestAudioTrackCount": 15,
+    "verifiedInternalTranscriptCount": 15,
+    "canonicalActivityRouteCount": 5,
+    "allAudioFilesPresentInWebPublic": true,
+    "allManifestHashesMatchRightsManifest": true,
+    "allTranscriptTrackIdsMatchAudioTrackIds": true,
+    "generatedTtsPublicIntegrationAllowed": false,
+    "publicTranscriptIntegrationAllowed": false
+  },
+  "blockers": [
+    "Transcript public-redistribution right is not separately recorded.",
+    "Generated TTS lacks existing two-human QA evidence.",
+    "Accessible transcript reveal behavior is not implemented in WorkbookAudioPanel."
+  ],
+  "evidence": [
+    "media/manifests/workbook-audio-rights-projections.json",
+    "media/manifests/rapid-audio-accessibility.json",
+    "platform/apps/web/generated/audio/workbook-transcripts-lessons-01-02.json",
+    "platform/apps/web/lib/audio/workbook-audio.ts",
+    "resources/original/transcripts/Momente_AB_A1_1_Transskriptionen_2.pdf"
+  ]
+}

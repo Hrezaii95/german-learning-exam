@@ -54,6 +54,7 @@
     "tests/web/p4c-learner-ui-behavior.test.ts",
     "tests/web/p5-media-integration.test.ts",
     "tests/web/p5-rich-visuals.test.ts",
-    "tests/web/p5-rapid-content.test.ts"
+    "tests/web/p5-rapid-content.test.ts",
+    "tests/web/j1-activity-runtime.test.ts"
   ]
 }

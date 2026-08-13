@@ -210,4 +210,37 @@ describe("P3D detail UI contracts", () => {
     expect(pending.canPlay).toBe(false);
     expect(pending.explanation).toBe(PRONUNCIATION_PENDING_EXPLANATION);
   });
+
+  it("renders generic published details with explicit gaps and no invented rich data", () => {
+    const genericLexeme = details.detailsById["lex:alter"];
+    const genericVerb = details.detailsById["verb:lernen"];
+    const genericQa = details.detailsById["qa:name-formal"];
+    if (genericLexeme?.kind !== "Lexeme") throw new Error("expected generic lexeme");
+    if (genericVerb?.kind !== "Verb") throw new Error("expected generic verb");
+    if (genericQa?.kind !== "QAPair") throw new Error("expected generic QA");
+
+    const lexemeHtml = renderToStaticMarkup(
+      createElement(DetailView as any, { detail: genericLexeme }),
+    );
+    expect(lexemeHtml).toContain("das Alter");
+    expect(lexemeHtml).toContain("Plural is not published for this item.");
+    expect(lexemeHtml).toContain("No published person-form relation");
+    expect(lexemeHtml).not.toContain("Thirteen published person-form pairs");
+
+    const verbHtml = renderToStaticMarkup(
+      createElement(DetailView as any, { detail: genericVerb }),
+    );
+    expect(verbHtml).toContain("lernen");
+    expect(verbHtml).toContain("4 published present forms");
+    expect(verbHtml).not.toContain("Seven published present forms");
+    expect(verbHtml).toContain("Only the published present forms are shown.");
+
+    const qaHtml = renderToStaticMarkup(
+      createElement(DetailView as any, { detail: genericQa }),
+    );
+    expect(qaHtml).toContain("Formal register");
+    expect(qaHtml).toContain("Conversation ladder is not published for this Q&amp;A yet.");
+    expect(qaHtml).toContain("Speaking practice is not published for this Q&amp;A yet.");
+    expect(qaHtml).not.toContain("Open spoken role-play");
+  });
 });

@@ -3848,11 +3848,406 @@
       "title": "Verbs"
     },
     {
-      "categories": [],
+      "categories": [
+        "grammar"
+      ],
       "description": "Published grammar concepts for Lessons 1–2. Empty until grammar records are learner-published.",
       "id": "grammar",
-      "itemCount": 0,
-      "items": [],
+      "itemCount": 10,
+      "items": [
+        {
+          "category": "grammar",
+          "displayLabel": "Herkunft mit aus",
+          "hubDestination": {
+            "hub": "grammar",
+            "path": "/grammar/gram:aus-origin-l1"
+          },
+          "id": "gram:aus-origin-l1",
+          "kind": "GrammarConcept",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "Origin with aus",
+              "field": "title",
+              "matchKeys": [
+                "origin with aus"
+              ]
+            },
+            {
+              "displayText": "Herkunft mit aus",
+              "field": "title",
+              "matchKeys": [
+                "herkunft mit aus"
+              ]
+            },
+            {
+              "displayText": "Herkunft mit aus",
+              "field": "label",
+              "matchKeys": [
+                "herkunft mit aus"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "grammar",
+          "displayLabel": "du und Sie",
+          "hubDestination": {
+            "hub": "grammar",
+            "path": "/grammar/gram:du-sie-register-l1"
+          },
+          "id": "gram:du-sie-register-l1",
+          "kind": "GrammarConcept",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "Informal du and formal Sie",
+              "field": "title",
+              "matchKeys": [
+                "informal du and formal sie"
+              ]
+            },
+            {
+              "displayText": "du und Sie",
+              "field": "title",
+              "matchKeys": [
+                "du und sie"
+              ]
+            },
+            {
+              "displayText": "du und Sie",
+              "field": "label",
+              "matchKeys": [
+                "du und sie"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "grammar",
+          "displayLabel": "Präsens: alle Personen",
+          "hubDestination": {
+            "hub": "grammar",
+            "path": "/grammar/gram:full-present-person-forms-l2"
+          },
+          "id": "gram:full-present-person-forms-l2",
+          "kind": "GrammarConcept",
+          "lessonIds": [
+            "lesson:02"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "Full present-tense person forms",
+              "field": "title",
+              "matchKeys": [
+                "full present-tense person forms"
+              ]
+            },
+            {
+              "displayText": "Präsens: alle Personen",
+              "field": "title",
+              "matchKeys": [
+                "präsens: alle personen",
+                "praesens: alle personen",
+                "prasens: alle personen"
+              ]
+            },
+            {
+              "displayText": "Präsens: alle Personen",
+              "field": "label",
+              "matchKeys": [
+                "präsens: alle personen",
+                "praesens: alle personen",
+                "prasens: alle personen"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "grammar",
+          "displayLabel": "Satzstellung im Aussagesatz",
+          "hubDestination": {
+            "hub": "grammar",
+            "path": "/grammar/gram:main-clause-word-order-l1"
+          },
+          "id": "gram:main-clause-word-order-l1",
+          "kind": "GrammarConcept",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "Main-clause word order",
+              "field": "title",
+              "matchKeys": [
+                "main-clause word order"
+              ]
+            },
+            {
+              "displayText": "Satzstellung im Aussagesatz",
+              "field": "title",
+              "matchKeys": [
+                "satzstellung im aussagesatz"
+              ]
+            },
+            {
+              "displayText": "Satzstellung im Aussagesatz",
+              "field": "label",
+              "matchKeys": [
+                "satzstellung im aussagesatz"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "grammar",
+          "displayLabel": "Verneinung mit nicht",
+          "hubDestination": {
+            "hub": "grammar",
+            "path": "/grammar/gram:nicht-profile-negation-l2"
+          },
+          "id": "gram:nicht-profile-negation-l2",
+          "kind": "GrammarConcept",
+          "lessonIds": [
+            "lesson:02"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "Negation with nicht",
+              "field": "title",
+              "matchKeys": [
+                "negation with nicht"
+              ]
+            },
+            {
+              "displayText": "Verneinung mit nicht",
+              "field": "title",
+              "matchKeys": [
+                "verneinung mit nicht"
+              ]
+            },
+            {
+              "displayText": "Verneinung mit nicht",
+              "field": "label",
+              "matchKeys": [
+                "verneinung mit nicht"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "grammar",
+          "displayLabel": "Personalpronomen",
+          "hubDestination": {
+            "hub": "grammar",
+            "path": "/grammar/gram:personal-pronouns-l1"
+          },
+          "id": "gram:personal-pronouns-l1",
+          "kind": "GrammarConcept",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "Personal pronouns",
+              "field": "title",
+              "matchKeys": [
+                "personal pronouns"
+              ]
+            },
+            {
+              "displayText": "Personalpronomen",
+              "field": "title",
+              "matchKeys": [
+                "personalpronomen"
+              ]
+            },
+            {
+              "displayText": "Personalpronomen",
+              "field": "label",
+              "matchKeys": [
+                "personalpronomen"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "grammar",
+          "displayLabel": "Präsensformen",
+          "hubDestination": {
+            "hub": "grammar",
+            "path": "/grammar/gram:present-conjugation-l1"
+          },
+          "id": "gram:present-conjugation-l1",
+          "kind": "GrammarConcept",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "Present-tense person forms",
+              "field": "title",
+              "matchKeys": [
+                "present-tense person forms"
+              ]
+            },
+            {
+              "displayText": "Präsensformen",
+              "field": "title",
+              "matchKeys": [
+                "präsensformen",
+                "praesensformen",
+                "prasensformen"
+              ]
+            },
+            {
+              "displayText": "Präsensformen",
+              "field": "label",
+              "matchKeys": [
+                "präsensformen",
+                "praesensformen",
+                "prasensformen"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "grammar",
+          "displayLabel": "Beruf ausdrücken",
+          "hubDestination": {
+            "hub": "grammar",
+            "path": "/grammar/gram:profession-expressions-l2"
+          },
+          "id": "gram:profession-expressions-l2",
+          "kind": "GrammarConcept",
+          "lessonIds": [
+            "lesson:02"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "Talking about professions",
+              "field": "title",
+              "matchKeys": [
+                "talking about professions"
+              ]
+            },
+            {
+              "displayText": "Beruf ausdrücken",
+              "field": "title",
+              "matchKeys": [
+                "beruf ausdrücken",
+                "beruf ausdruecken",
+                "beruf ausdrucken"
+              ]
+            },
+            {
+              "displayText": "Beruf ausdrücken",
+              "field": "label",
+              "matchKeys": [
+                "beruf ausdrücken",
+                "beruf ausdruecken",
+                "beruf ausdrucken"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "grammar",
+          "displayLabel": "Weibliche Berufsformen",
+          "hubDestination": {
+            "hub": "grammar",
+            "path": "/grammar/gram:profession-feminine-forms-l2"
+          },
+          "id": "gram:profession-feminine-forms-l2",
+          "kind": "GrammarConcept",
+          "lessonIds": [
+            "lesson:02"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "Feminine profession forms",
+              "field": "title",
+              "matchKeys": [
+                "feminine profession forms"
+              ]
+            },
+            {
+              "displayText": "Weibliche Berufsformen",
+              "field": "title",
+              "matchKeys": [
+                "weibliche berufsformen"
+              ]
+            },
+            {
+              "displayText": "Weibliche Berufsformen",
+              "field": "label",
+              "matchKeys": [
+                "weibliche berufsformen"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "grammar",
+          "displayLabel": "W-Fragen",
+          "hubDestination": {
+            "hub": "grammar",
+            "path": "/grammar/gram:w-questions-l1"
+          },
+          "id": "gram:w-questions-l1",
+          "kind": "GrammarConcept",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "W-questions",
+              "field": "title",
+              "matchKeys": [
+                "w-questions"
+              ]
+            },
+            {
+              "displayText": "W-Fragen",
+              "field": "title",
+              "matchKeys": [
+                "w-fragen"
+              ]
+            },
+            {
+              "displayText": "W-Fragen",
+              "field": "label",
+              "matchKeys": [
+                "w-fragen"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        }
+      ],
       "kinds": [
         "GrammarConcept"
       ],
@@ -7167,11 +7562,406 @@
       "title": "Concepts"
     },
     "grammar": {
-      "categories": [],
+      "categories": [
+        "grammar"
+      ],
       "description": "Published grammar concepts for Lessons 1–2. Empty until grammar records are learner-published.",
       "id": "grammar",
-      "itemCount": 0,
-      "items": [],
+      "itemCount": 10,
+      "items": [
+        {
+          "category": "grammar",
+          "displayLabel": "Herkunft mit aus",
+          "hubDestination": {
+            "hub": "grammar",
+            "path": "/grammar/gram:aus-origin-l1"
+          },
+          "id": "gram:aus-origin-l1",
+          "kind": "GrammarConcept",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "Origin with aus",
+              "field": "title",
+              "matchKeys": [
+                "origin with aus"
+              ]
+            },
+            {
+              "displayText": "Herkunft mit aus",
+              "field": "title",
+              "matchKeys": [
+                "herkunft mit aus"
+              ]
+            },
+            {
+              "displayText": "Herkunft mit aus",
+              "field": "label",
+              "matchKeys": [
+                "herkunft mit aus"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "grammar",
+          "displayLabel": "du und Sie",
+          "hubDestination": {
+            "hub": "grammar",
+            "path": "/grammar/gram:du-sie-register-l1"
+          },
+          "id": "gram:du-sie-register-l1",
+          "kind": "GrammarConcept",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "Informal du and formal Sie",
+              "field": "title",
+              "matchKeys": [
+                "informal du and formal sie"
+              ]
+            },
+            {
+              "displayText": "du und Sie",
+              "field": "title",
+              "matchKeys": [
+                "du und sie"
+              ]
+            },
+            {
+              "displayText": "du und Sie",
+              "field": "label",
+              "matchKeys": [
+                "du und sie"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "grammar",
+          "displayLabel": "Präsens: alle Personen",
+          "hubDestination": {
+            "hub": "grammar",
+            "path": "/grammar/gram:full-present-person-forms-l2"
+          },
+          "id": "gram:full-present-person-forms-l2",
+          "kind": "GrammarConcept",
+          "lessonIds": [
+            "lesson:02"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "Full present-tense person forms",
+              "field": "title",
+              "matchKeys": [
+                "full present-tense person forms"
+              ]
+            },
+            {
+              "displayText": "Präsens: alle Personen",
+              "field": "title",
+              "matchKeys": [
+                "präsens: alle personen",
+                "praesens: alle personen",
+                "prasens: alle personen"
+              ]
+            },
+            {
+              "displayText": "Präsens: alle Personen",
+              "field": "label",
+              "matchKeys": [
+                "präsens: alle personen",
+                "praesens: alle personen",
+                "prasens: alle personen"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "grammar",
+          "displayLabel": "Satzstellung im Aussagesatz",
+          "hubDestination": {
+            "hub": "grammar",
+            "path": "/grammar/gram:main-clause-word-order-l1"
+          },
+          "id": "gram:main-clause-word-order-l1",
+          "kind": "GrammarConcept",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "Main-clause word order",
+              "field": "title",
+              "matchKeys": [
+                "main-clause word order"
+              ]
+            },
+            {
+              "displayText": "Satzstellung im Aussagesatz",
+              "field": "title",
+              "matchKeys": [
+                "satzstellung im aussagesatz"
+              ]
+            },
+            {
+              "displayText": "Satzstellung im Aussagesatz",
+              "field": "label",
+              "matchKeys": [
+                "satzstellung im aussagesatz"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "grammar",
+          "displayLabel": "Verneinung mit nicht",
+          "hubDestination": {
+            "hub": "grammar",
+            "path": "/grammar/gram:nicht-profile-negation-l2"
+          },
+          "id": "gram:nicht-profile-negation-l2",
+          "kind": "GrammarConcept",
+          "lessonIds": [
+            "lesson:02"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "Negation with nicht",
+              "field": "title",
+              "matchKeys": [
+                "negation with nicht"
+              ]
+            },
+            {
+              "displayText": "Verneinung mit nicht",
+              "field": "title",
+              "matchKeys": [
+                "verneinung mit nicht"
+              ]
+            },
+            {
+              "displayText": "Verneinung mit nicht",
+              "field": "label",
+              "matchKeys": [
+                "verneinung mit nicht"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "grammar",
+          "displayLabel": "Personalpronomen",
+          "hubDestination": {
+            "hub": "grammar",
+            "path": "/grammar/gram:personal-pronouns-l1"
+          },
+          "id": "gram:personal-pronouns-l1",
+          "kind": "GrammarConcept",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "Personal pronouns",
+              "field": "title",
+              "matchKeys": [
+                "personal pronouns"
+              ]
+            },
+            {
+              "displayText": "Personalpronomen",
+              "field": "title",
+              "matchKeys": [
+                "personalpronomen"
+              ]
+            },
+            {
+              "displayText": "Personalpronomen",
+              "field": "label",
+              "matchKeys": [
+                "personalpronomen"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "grammar",
+          "displayLabel": "Präsensformen",
+          "hubDestination": {
+            "hub": "grammar",
+            "path": "/grammar/gram:present-conjugation-l1"
+          },
+          "id": "gram:present-conjugation-l1",
+          "kind": "GrammarConcept",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "Present-tense person forms",
+              "field": "title",
+              "matchKeys": [
+                "present-tense person forms"
+              ]
+            },
+            {
+              "displayText": "Präsensformen",
+              "field": "title",
+              "matchKeys": [
+                "präsensformen",
+                "praesensformen",
+                "prasensformen"
+              ]
+            },
+            {
+              "displayText": "Präsensformen",
+              "field": "label",
+              "matchKeys": [
+                "präsensformen",
+                "praesensformen",
+                "prasensformen"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "grammar",
+          "displayLabel": "Beruf ausdrücken",
+          "hubDestination": {
+            "hub": "grammar",
+            "path": "/grammar/gram:profession-expressions-l2"
+          },
+          "id": "gram:profession-expressions-l2",
+          "kind": "GrammarConcept",
+          "lessonIds": [
+            "lesson:02"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "Talking about professions",
+              "field": "title",
+              "matchKeys": [
+                "talking about professions"
+              ]
+            },
+            {
+              "displayText": "Beruf ausdrücken",
+              "field": "title",
+              "matchKeys": [
+                "beruf ausdrücken",
+                "beruf ausdruecken",
+                "beruf ausdrucken"
+              ]
+            },
+            {
+              "displayText": "Beruf ausdrücken",
+              "field": "label",
+              "matchKeys": [
+                "beruf ausdrücken",
+                "beruf ausdruecken",
+                "beruf ausdrucken"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "grammar",
+          "displayLabel": "Weibliche Berufsformen",
+          "hubDestination": {
+            "hub": "grammar",
+            "path": "/grammar/gram:profession-feminine-forms-l2"
+          },
+          "id": "gram:profession-feminine-forms-l2",
+          "kind": "GrammarConcept",
+          "lessonIds": [
+            "lesson:02"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "Feminine profession forms",
+              "field": "title",
+              "matchKeys": [
+                "feminine profession forms"
+              ]
+            },
+            {
+              "displayText": "Weibliche Berufsformen",
+              "field": "title",
+              "matchKeys": [
+                "weibliche berufsformen"
+              ]
+            },
+            {
+              "displayText": "Weibliche Berufsformen",
+              "field": "label",
+              "matchKeys": [
+                "weibliche berufsformen"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "grammar",
+          "displayLabel": "W-Fragen",
+          "hubDestination": {
+            "hub": "grammar",
+            "path": "/grammar/gram:w-questions-l1"
+          },
+          "id": "gram:w-questions-l1",
+          "kind": "GrammarConcept",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "W-questions",
+              "field": "title",
+              "matchKeys": [
+                "w-questions"
+              ]
+            },
+            {
+              "displayText": "W-Fragen",
+              "field": "title",
+              "matchKeys": [
+                "w-fragen"
+              ]
+            },
+            {
+              "displayText": "W-Fragen",
+              "field": "label",
+              "matchKeys": [
+                "w-fragen"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        }
+      ],
       "kinds": [
         "GrammarConcept"
       ],

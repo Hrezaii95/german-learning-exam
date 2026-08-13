@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-13T00:00:00.000Z",
+  "status": "verified-internal-projection-publication-blocked",
+  "source": {
+    "path": "resources/original/transcripts/Momente_AB_A1_1_Transskriptionen_2.pdf",
+    "title": "Arbeitsbuch Transkriptionen - Momente A1.1, Module 1-4",
+    "isbn": "978-3-19-011791-8",
+    "publisher": "Hueber Verlag",
+    "copyrightYear": 2020,
+    "verificationMethod": "manual visual transcription from rendered PDF pages; no OCR text accepted without visual confirmation",
+    "verifiedPages": [1, 2]
+  },
+  "rightsStatus": "not-separately-approved-for-public-redistribution",
+  "publicationBlocked": true,
+  "publicationNote": "Transcript text is exact source text for internal accessibility integration preparation. The recorded owner decision covers the 15 audio files, not transcript republication; do not expose this projection publicly until transcript rights are explicitly approved. Product integration must also decide when to reveal answers for listening tasks.",
+  "tracks": [
+    {
+      "trackId": "1_01",
+      "lessonId": "lesson:01",
+      "exercise": "AB 3",
+      "subpart": "a",
+      "sourcePage": 1,
+      "lines": [
+        { "speaker": "junge Frau", "text": "Hallo. Wie heißt du?" },
+        { "speaker": "junger Mann", "text": "Ich bin Paco Perez." },
+        { "speaker": "junge Frau", "text": "Wie bitte?" },
+        { "speaker": "junger Mann", "text": "P-a-c-o … P-e-r-e-z." },
+        { "speaker": "junge Frau", "text": "Danke." }
+      ]
+    },
+    {
+      "trackId": "1_02",
+      "lessonId": "lesson:01",
+      "exercise": "AB 3",
+      "subpart": "b",
+      "sourcePage": 1,
+      "lines": [
+        { "speaker": "junge Frau 1", "text": "Und wer bist du?" },
+        { "speaker": "junge Frau 2", "text": "Ich bin Leah Poßner." },
+        { "speaker": "junge Frau 1", "text": "Wie bitte?" },
+        { "speaker": "junge Frau 2", "text": "L-e-a-h … P-o-ß-n-e-r." },
+        { "speaker": "junge Frau 1", "text": "Danke." }
+      ]
+    },
+    {
+      "trackId": "1_03",
+      "lessonId": "lesson:01",
+      "exercise": "AB 3",
+      "subpart": "c",
+      "sourcePage": 1,
+      "lines": [
+        { "speaker": "junge Frau", "text": "Hallo. Wie heißt du?" },
+        { "speaker": "junger Mann", "text": "Ich bin Tom Köppen." },
+        { "speaker": "junge Frau", "text": "Wie bitte?" },
+        { "speaker": "junger Mann", "text": "T-o-m … K-ö-p-p-e-n." },
+        { "speaker": "junge Frau", "text": "Danke." }
+      ]
+    },
+    {
+      "trackId": "1_04",
+      "lessonId": "lesson:01",
+      "exercise": "AB 3",
+      "subpart": "d",
+      "sourcePage": 1,
+      "lines": [
+        { "speaker": "junge Frau 1", "text": "Und wer bist du?" },
+        { "speaker": "Junge Frau 2", "text": "Ich bin Aljina Haven." },
+        { "speaker": "junge Frau 1", "text": "Wie bitte?" },
+        { "speaker": "Junge Frau 2", "text": "A-l-j-i-n-a … H-a-v-e-n." },
+        { "speaker": "junge Frau 1", "text": "Danke." }
+      ]
+    },
+    {
+      "trackId": "1_05",
+      "lessonId": "lesson:01",
+      "exercise": "AB 9a",
+      "sourcePage": 1,
+      "lines": [
+        { "speaker": "junge Frau 1", "text": "Wie heißt du? ↘" },
+        { "speaker": "junger Mann 1", "text": "Ich heiße Pedro. ↘ … Und wer bist du? ↗" },
+        { "speaker": "junge Frau 1", "text": "Ich bin Monika. ↘" }
+      ]
+    },
+    {
+      "trackId": "1_06",
+      "lessonId": "lesson:01",
+      "exercise": "AB 9b",
+      "subpart": "b",
+      "sourcePage": 1,
+      "lines": [
+        { "speaker": "Junger Mann", "text": "Hallo. ↘" },
+        { "speaker": "Junge Frau", "text": "Hallo, Peter. ↘ Woher kommst du? ↘" },
+        { "speaker": "Junger Mann", "text": "Ich komme aus Deutschland. ↘ Und du? ↗" }
+      ]
+    },
+    { "trackId": "1_07", "lessonId": "lesson:02", "exercise": "AB 6a", "subpart": "a", "sourcePage": 1, "lines": [{ "speaker": null, "text": "089 / 47 92 31 75" }] },
+    { "trackId": "1_08", "lessonId": "lesson:02", "exercise": "AB 6a", "subpart": "b", "sourcePage": 1, "lines": [{ "speaker": null, "text": "0176 / 34 67 48 11" }] },
+    { "trackId": "1_09", "lessonId": "lesson:02", "exercise": "AB 6a", "subpart": "c", "sourcePage": 1, "lines": [{ "speaker": null, "text": "0221 / 63 03 58 22" }] },
+    { "trackId": "1_10", "lessonId": "lesson:02", "exercise": "AB 6a", "subpart": "d", "sourcePage": 1, "lines": [{ "speaker": null, "text": "08744 / 23 17 09" }] },
+    { "trackId": "1_11", "lessonId": "lesson:02", "exercise": "AB 6b", "subpart": "a", "sourcePage": 1, "lines": [{ "speaker": null, "text": "030 / 58 76 12 05" }] },
+    { "trackId": "1_12", "lessonId": "lesson:02", "exercise": "AB 6b", "subpart": "b", "sourcePage": 1, "lines": [{ "speaker": null, "text": "0180 / 95 65 17 43" }] },
+    { "trackId": "1_13", "lessonId": "lesson:02", "exercise": "AB 6b", "subpart": "c", "sourcePage": 2, "lines": [{ "speaker": null, "text": "0201 / 72 88 26 37" }] },
+    { "trackId": "1_14", "lessonId": "lesson:02", "exercise": "AB 6b", "subpart": "d", "sourcePage": 2, "lines": [{ "speaker": null, "text": "0163 / 21 53 79 56" }] },
+    {
+      "trackId": "1_15",
+      "lessonId": "lesson:02",
+      "exercise": "AB 12",
+      "sourcePage": 2,
+      "lines": [
+        { "speaker": null, "text": "Student – Lehrer – Verkäufer – Friseur – Journalistin – Ingenieur – Architektin – Ärztin – Kellner" }
+      ]
+    }
+  ]
+}

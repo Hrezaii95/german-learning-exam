@@ -1,0 +1,27 @@
+{
+  "id": "run-5f323437-b0a0-43b6-875b-36162738f49e",
+  "requestId": "4f1e3d11-2acf-4e87-8144-60916cbc039c",
+  "status": "finished",
+  "result": "# DEPLOY1R2 read-only final review\n\n**Verdict: APPROVED** — sole prior **P2** (weak `must200` HTTP `_next` checks) is closed in code with a shared strict helper, exercised HTTP loop coverage, and focused regressions; no new **P0–P2** identified in DEPLOY1R2 scope. (No shell re-run; evidence from disk only.)\n\n---\n\n## Prior P2 verification (DEPLOY1R1 residual)\n\n| Requirement | Evidence | Status |\n|-------------|----------|--------|\n| Every `must200` HTTP 200 body must include exact base-prefixed `/_next/` hydration | `assertBasePrefixedNextAssets` requires `` `${pagesBase}/_next/` `` (`smoke-pages.mjs` 99–104); loop 355–360 calls it for **each** of 15 paths (337–353: home, lessons, plain + encoded activity, concepts, vocabulary, search + query variants, practice, game, conversation + entity, detail rep) | **Closed** |\n| Reject bare root `src`/`href` `/_next` | Same helper rejects `src=\"/_next/`, `href=\"/_next/`, and `\"/_next/` (105–109) | **Closed** |\n| Remove weak `PAGES_BASE \\|\\| \"_next\"` on `must200` | No `text.includes(PAGES_BASE)` / `includes(\"_next\")` in `platform/`; source contract test forbids that pattern in the `must200` block (`deploy1r2-pages-smoke-hydration.test.ts` 61–73) | **Closed** |\n| Align with game block strictness | Game probe reuses `assertBasePrefixedNextAssets(game.text, \"game page\")` (391); `must200` already includes `/practice/article-choice/` (349) | **Closed** |\n| Real regression tests (not smoke-only) | Six vitest cases import and call exported `assertBasePrefixedNextAssets` from `smoke-pages.mjs` (accept, bare-only, base-without-`_next`, mixed bare `src`, bare `href`, source contract) | **Closed** |\n\n```99:111:platform/apps/web/scripts/smoke-pages.mjs\n/** Require base-prefixed hydration assets; reject bare root /_next. */\nexport function assertBasePrefixedNextAssets(html, label, pagesBase = PAGES_BASE) {\n  assert(\n    html.includes(`${pagesBase}/_next/`),\n    `${label} missing base-prefixed _next hydration assets`,\n  );\n  assert(\n    !html.includes('src=\"/_next/') &&\n      !html.includes('href=\"/_next/') &&\n      !html.includes(\"\\\"/_next/\"),\n    `${label} must not use bare root /_next`,\n  );\n}\n```\n\n```355:360:platform/apps/web/scripts/smoke-pages.mjs\n    for (const path of must200) {\n      const { status, text } = await fetchStatus(path);\n      assert(status === 200, `${path} expected 200 got ${status}`);\n      assert(text.length > 100, `${path} empty body`);\n      assertBasePrefixedNextAssets(text, path);\n    }\n```\n\n---\n\n## Earlier scans not weakened\n\n| Layer | Behavior vs DEPLOY1R1 |\n|-------|------------------------|\n| `verifyAssetRefsAndSecrets` sample HTML | Still requires `` `${PAGES_BASE}/_next/` `` or `` `\"${PAGES_BASE}/\"` `` (204–207) and still rejects bare `src`/`href` `/_next` (208–210) — unchanged pattern reviewer marked “not raised as P2” |\n| Full `out/` leak walk | Same `FORBIDDEN_*` scans and path rules (214–241) |\n| Post-`must200` checks | Index asset regex, 404 honesty, game markers, 404 leak guard (362–397) intact |\n| `isDirectRun` guard | Helper importable for tests without running `main()` (417–431) |\n\nDEPLOY1R2 **strengthens** HTTP `must200` only; it does not relax disk or leak gates.\n\n---\n\n## New P0–P2 (DEPLOY1R2 diff only)\n\n| Severity | Finding |\n|----------|---------|\n| **P0** | None |\n| **P1** | None |\n| **P2** | None actionable |\n\n**Out of scope for this APPROVE gate (unchanged from DEPLOY1R1):** P3 `ssg-dynamic-params.ts` tombstone; Action SHA spot-check without `gh api`; weaker disk-sample OR allowing `` `\"${PAGES_BASE}/\"` `` without `_next/` (defense-in-depth only, not regressed). Single-quoted bare `/_next` attrs are not in packet §6 wording and are not typical Next export output — not elevated to P2 here.\n\n---\n\n## Summary\n\n- **P0:** none  \n- **P1:** none  \n- **P2:** prior sole residual **closed**; no new **P0–P2** in DEPLOY1R2 scope  \n\n**APPROVED** for DEPLOY1R2 on the stated criterion (zero actionable **P0–P2** for base-prefixed `must200` hydration enforcement + regressions + non-weakened scans).",
+  "model": {
+    "id": "composer-2.5",
+    "params": [
+      {
+        "id": "effort",
+        "value": "high"
+      },
+      {
+        "id": "fast",
+        "value": "false"
+      }
+    ]
+  },
+  "durationMs": 36033,
+  "usage": {
+    "inputTokens": 89311,
+    "outputTokens": 4560,
+    "cacheReadTokens": 66915,
+    "cacheWriteTokens": 0,
+    "totalTokens": 160786
+  }
+}

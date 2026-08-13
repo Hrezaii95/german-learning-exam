@@ -8,9 +8,8 @@ import {
 } from "./path-utils";
 import { LEARNER_HUB_IDS, type LearnerHubId } from "./hub-types";
 import {
-  DETAIL_HUB_BY_ID,
-  DETAIL_KIND_BY_ID,
   DETAIL_REPRESENTATIVE_IDS,
+  detailHubForId,
   detailCanonicalPath,
   isDetailRepresentativeId,
   type DetailHubSegment,
@@ -65,7 +64,7 @@ export type ResolvedRoute =
       kind: "detail";
       pathname: string;
       hubSegment: DetailHubSegment;
-      entityId: DetailRepresentativeId;
+      entityId: string;
       canonicalPath: string;
     }
   | {
@@ -108,7 +107,7 @@ const HUB_ID_BY_SEGMENT: ReadonlyMap<string, LearnerHubId> = new Map(
   LEARNER_HUB_IDS.map((id) => [id, id]),
 );
 
-const DETAIL_HUB_SEGMENTS = new Set<string>(["vocabulary", "verbs", "phrases"]);
+const DETAIL_HUB_SEGMENTS = new Set<string>(["vocabulary", "verbs", "grammar", "phrases"]);
 
 function expectedKindForHub(hub: DetailHubSegment): string {
   switch (hub) {
@@ -116,6 +115,8 @@ function expectedKindForHub(hub: DetailHubSegment): string {
       return "Lexeme";
     case "verbs":
       return "Verb";
+    case "grammar":
+      return "GrammarConcept";
     case "phrases":
       return "QAPair";
     default: {
@@ -165,7 +166,15 @@ function resolveDetailRoute(
     };
   }
 
-  if (!isDetailRepresentativeId(entityId)) {
+  const projected = details?.detailsById[entityId];
+  if (!details && !isDetailRepresentativeId(entityId)) {
+    return {
+      kind: "not-found",
+      pathname,
+      reason: "unknown-or-unapproved-detail",
+    };
+  }
+  if (details && (!projected || projected.publicationStatus !== "published")) {
     return {
       kind: "not-found",
       pathname,
@@ -173,7 +182,7 @@ function resolveDetailRoute(
     };
   }
 
-  if (DETAIL_HUB_BY_ID[entityId] !== hub) {
+  if (detailHubForId(entityId) !== hub) {
     return {
       kind: "not-found",
       pathname,
@@ -181,7 +190,7 @@ function resolveDetailRoute(
     };
   }
 
-  if (DETAIL_KIND_BY_ID[entityId] !== expectedKindForHub(hub)) {
+  if (projected && projected.kind !== expectedKindForHub(hub)) {
     return {
       kind: "not-found",
       pathname,
@@ -190,7 +199,7 @@ function resolveDetailRoute(
   }
 
   if (details) {
-    const record = details.representativesById[entityId];
+    const record = details.detailsById[entityId];
     if (!record || record.publicationStatus !== "published") {
       return {
         kind: "not-found",
@@ -618,15 +627,15 @@ export function listCanonicalDetailPaths(
   details?: LearnerDetailProjection | null,
 ): string[] {
   if (details) {
-    return details.representatives.map((r) => r.canonicalPath).sort();
+    return details.details.map((r) => r.canonicalPath).sort();
   }
   return DETAIL_REPRESENTATIVE_IDS.map((id) =>
-    detailCanonicalPath(DETAIL_HUB_BY_ID[id], id),
+    detailCanonicalPath(detailHubForId(id)!, id),
   ).sort();
 }
 
 export function rawColonDetailPath(entityId: DetailRepresentativeId): string {
-  const hub = DETAIL_HUB_BY_ID[entityId];
+  const hub = detailHubForId(entityId)!;
   return `/${hub}/${entityId}`;
 }
 

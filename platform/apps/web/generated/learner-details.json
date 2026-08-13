@@ -1,4 +1,5927 @@
 {
+  "detailCount": 97,
+  "details": [
+    {
+      "article": "die",
+      "canonicalPath": "/vocabulary/id-6c65783a6165727a74696e",
+      "displayText": "die Ärztin",
+      "gender": "feminine",
+      "hubSegment": "vocabulary",
+      "id": "lex:aerztin",
+      "kind": "Lexeme",
+      "lemma": "Ärztin",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "doctor",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Ärztin",
+      "sourcePriority": 1
+    },
+    {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a616c6c65696e",
+      "displayText": "allein",
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:allein",
+      "kind": "Lexeme",
+      "lemma": "allein",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "alone",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "allein",
+      "sourcePriority": 1
+    },
+    {
+      "article": "das",
+      "canonicalPath": "/vocabulary/id-6c65783a616c746572",
+      "displayText": "das Alter",
+      "gender": "neuter",
+      "hubSegment": "vocabulary",
+      "id": "lex:alter",
+      "kind": "Lexeme",
+      "lemma": "Alter",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "age",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Alter",
+      "sourcePriority": 1
+    },
+    {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a617263686974656b74",
+      "displayText": "der Architekt",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:architekt",
+      "kind": "Lexeme",
+      "lemma": "Architekt",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "architect",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": {
+        "feminineSuffix": "in",
+        "operationLabel": "Add feminine -in",
+        "relatedArticle": "die",
+        "relatedDisplayText": "die Architektin",
+        "relatedGender": "feminine",
+        "relatedId": "lex:architektin",
+        "relatedLemma": "Architektin",
+        "relatedMeaningEn": "architect",
+        "sharedStem": "Architekt"
+      },
+      "pluralGapMessage": "Plural awaiting content approval",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Architekt",
+      "sourcePriority": 1
+    },
+    {
+      "article": "die",
+      "canonicalPath": "/vocabulary/id-6c65783a617263686974656b74696e",
+      "displayText": "die Architektin",
+      "gender": "feminine",
+      "hubSegment": "vocabulary",
+      "id": "lex:architektin",
+      "kind": "Lexeme",
+      "lemma": "Architektin",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "architect",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Architektin",
+      "sourcePriority": 1
+    },
+    {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a61727a74",
+      "displayText": "der Arzt",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:arzt",
+      "kind": "Lexeme",
+      "lemma": "Arzt",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "doctor",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Arzt",
+      "sourcePriority": 1
+    },
+    {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a617563682d7375706572",
+      "displayText": "Auch super.",
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:auch-super",
+      "kind": "Lexeme",
+      "lemma": "Auch super.",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Great as well.",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Auch super.",
+      "sourcePriority": 1
+    },
+    {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a6175662d776965646572736568656e",
+      "displayText": "Auf Wiedersehen",
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:auf-wiedersehen",
+      "kind": "Lexeme",
+      "lemma": "Auf Wiedersehen",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Goodbye",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Auf Wiedersehen",
+      "sourcePriority": 1
+    },
+    {
+      "article": "die",
+      "canonicalPath": "/vocabulary/id-6c65783a61757362696c64756e67",
+      "displayText": "die Ausbildung",
+      "gender": "feminine",
+      "hubSegment": "vocabulary",
+      "id": "lex:ausbildung",
+      "kind": "Lexeme",
+      "lemma": "Ausbildung",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "apprenticeship/training",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Ausbildung",
+      "sourcePriority": 1
+    },
+    {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a6265727566",
+      "displayText": "der Beruf",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:beruf",
+      "kind": "Lexeme",
+      "lemma": "Beruf",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "profession",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Beruf",
+      "sourcePriority": 1
+    },
+    {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a646575747363686c616e64",
+      "displayText": "Deutschland",
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:deutschland",
+      "kind": "Lexeme",
+      "lemma": "Deutschland",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Germany",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Deutschland",
+      "sourcePriority": 1
+    },
+    {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a65726974726561",
+      "displayText": "Eritrea",
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:eritrea",
+      "kind": "Lexeme",
+      "lemma": "Eritrea",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Eritrea",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Eritrea",
+      "sourcePriority": 1
+    },
+    {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a65732d67656874",
+      "displayText": "Es geht.",
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:es-geht",
+      "kind": "Lexeme",
+      "lemma": "Es geht.",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Not too bad.",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Es geht.",
+      "sourcePriority": 1
+    },
+    {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a66616d696c69656e6e616d65",
+      "displayText": "der Familienname",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:familienname",
+      "kind": "Lexeme",
+      "lemma": "Familienname",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "last name",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [
+        "Familiennamen"
+      ],
+      "publicationStatus": "published",
+      "singular": "Familienname",
+      "sourcePriority": 1
+    },
+    {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a66616d696c69656e7374616e64",
+      "displayText": "der Familienstand",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:familienstand",
+      "kind": "Lexeme",
+      "lemma": "Familienstand",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "marital status",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Familienstand",
+      "sourcePriority": 1
+    },
+    {
+      "article": "die",
+      "canonicalPath": "/vocabulary/id-6c65783a6669726d61",
+      "displayText": "die Firma",
+      "gender": "feminine",
+      "hubSegment": "vocabulary",
+      "id": "lex:firma",
+      "kind": "Lexeme",
+      "lemma": "Firma",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "company",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Firma",
+      "sourcePriority": 1
+    },
+    {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a6672616e6b7265696368",
+      "displayText": "Frankreich",
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:frankreich",
+      "kind": "Lexeme",
+      "lemma": "Frankreich",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "France",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Frankreich",
+      "sourcePriority": 1
+    },
+    {
+      "article": "die",
+      "canonicalPath": "/vocabulary/id-6c65783a66726175",
+      "displayText": "die Frau",
+      "gender": "feminine",
+      "hubSegment": "vocabulary",
+      "id": "lex:frau",
+      "kind": "Lexeme",
+      "lemma": "Frau",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Ms / Mrs / woman",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [
+        "Frauen"
+      ],
+      "publicationStatus": "published",
+      "singular": "Frau",
+      "sourcePriority": 1
+    },
+    {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a66726973657572",
+      "displayText": "der Friseur",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:friseur",
+      "kind": "Lexeme",
+      "lemma": "Friseur",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "hairdresser",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": {
+        "feminineSuffix": "in",
+        "operationLabel": "Add feminine -in",
+        "relatedArticle": "die",
+        "relatedDisplayText": "die Friseurin",
+        "relatedGender": "feminine",
+        "relatedId": "lex:friseurin",
+        "relatedLemma": "Friseurin",
+        "relatedMeaningEn": "hairdresser",
+        "sharedStem": "Friseur"
+      },
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Friseur",
+      "sourcePriority": 1
+    },
+    {
+      "article": "die",
+      "canonicalPath": "/vocabulary/id-6c65783a66726973657572696e",
+      "displayText": "die Friseurin",
+      "gender": "feminine",
+      "hubSegment": "vocabulary",
+      "id": "lex:friseurin",
+      "kind": "Lexeme",
+      "lemma": "Friseurin",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "hairdresser",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Friseurin",
+      "sourcePriority": 1
+    },
+    {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a6765736368696564656e",
+      "displayText": "geschieden",
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:geschieden",
+      "kind": "Lexeme",
+      "lemma": "geschieden",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "divorced",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "geschieden",
+      "sourcePriority": 1
+    },
+    {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a6775742d64616e6b65",
+      "displayText": "Gut, danke.",
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:gut-danke",
+      "kind": "Lexeme",
+      "lemma": "Gut, danke.",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Fine, thank you.",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Gut, danke.",
+      "sourcePriority": 1
+    },
+    {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a677574652d6e61636874",
+      "displayText": "Gute Nacht",
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:gute-nacht",
+      "kind": "Lexeme",
+      "lemma": "Gute Nacht",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Good night",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Gute Nacht",
+      "sourcePriority": 1
+    },
+    {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a677574656e2d6162656e64",
+      "displayText": "Guten Abend",
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:guten-abend",
+      "kind": "Lexeme",
+      "lemma": "Guten Abend",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Good evening",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Guten Abend",
+      "sourcePriority": 1
+    },
+    {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a677574656e2d6d6f7267656e",
+      "displayText": "Guten Morgen",
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:guten-morgen",
+      "kind": "Lexeme",
+      "lemma": "Guten Morgen",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Good morning",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Guten Morgen",
+      "sourcePriority": 1
+    },
+    {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a677574656e2d746167",
+      "displayText": "Guten Tag",
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:guten-tag",
+      "kind": "Lexeme",
+      "lemma": "Guten Tag",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Good day / Hello",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Guten Tag",
+      "sourcePriority": 1
+    },
+    {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a68616c6c6f",
+      "displayText": "Hallo",
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:hallo",
+      "kind": "Lexeme",
+      "lemma": "Hallo",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Hello",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Hallo",
+      "sourcePriority": 1
+    },
+    {
+      "article": "die",
+      "canonicalPath": "/vocabulary/id-6c65783a6865726b756e6674",
+      "displayText": "die Herkunft",
+      "gender": "feminine",
+      "hubSegment": "vocabulary",
+      "id": "lex:herkunft",
+      "kind": "Lexeme",
+      "lemma": "Herkunft",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "origin",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Herkunft",
+      "sourcePriority": 1
+    },
+    {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a68657272",
+      "displayText": "der Herr",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:herr",
+      "kind": "Lexeme",
+      "lemma": "Herr",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Mr / gentleman",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [
+        "Herren"
+      ],
+      "publicationStatus": "published",
+      "singular": "Herr",
+      "sourcePriority": 1
+    },
+    {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a696e67656e69657572",
+      "displayText": "der Ingenieur",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:ingenieur",
+      "kind": "Lexeme",
+      "lemma": "Ingenieur",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "engineer",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": {
+        "feminineSuffix": "in",
+        "operationLabel": "Add feminine -in",
+        "relatedArticle": "die",
+        "relatedDisplayText": "die Ingenieurin",
+        "relatedGender": "feminine",
+        "relatedId": "lex:ingenieurin",
+        "relatedLemma": "Ingenieurin",
+        "relatedMeaningEn": "engineer",
+        "sharedStem": "Ingenieur"
+      },
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Ingenieur",
+      "sourcePriority": 1
+    },
+    {
+      "article": "die",
+      "canonicalPath": "/vocabulary/id-6c65783a696e67656e69657572696e",
+      "displayText": "die Ingenieurin",
+      "gender": "feminine",
+      "hubSegment": "vocabulary",
+      "id": "lex:ingenieurin",
+      "kind": "Lexeme",
+      "lemma": "Ingenieurin",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "engineer",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Ingenieurin",
+      "sourcePriority": 1
+    },
+    {
+      "article": "das",
+      "canonicalPath": "/vocabulary/id-6c65783a6a616872",
+      "displayText": "das Jahr",
+      "gender": "neuter",
+      "hubSegment": "vocabulary",
+      "id": "lex:jahr",
+      "kind": "Lexeme",
+      "lemma": "Jahr",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "year",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Jahr",
+      "sourcePriority": 1
+    },
+    {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a6a6f62",
+      "displayText": "der Job",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:job",
+      "kind": "Lexeme",
+      "lemma": "Job",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "job",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Job",
+      "sourcePriority": 1
+    },
+    {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a6a6f75726e616c697374",
+      "displayText": "der Journalist",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:journalist",
+      "kind": "Lexeme",
+      "lemma": "Journalist",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "journalist",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": {
+        "feminineSuffix": "in",
+        "operationLabel": "Add feminine -in",
+        "relatedArticle": "die",
+        "relatedDisplayText": "die Journalistin",
+        "relatedGender": "feminine",
+        "relatedId": "lex:journalistin",
+        "relatedLemma": "Journalistin",
+        "relatedMeaningEn": "journalist",
+        "sharedStem": "Journalist"
+      },
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Journalist",
+      "sourcePriority": 1
+    },
+    {
+      "article": "die",
+      "canonicalPath": "/vocabulary/id-6c65783a6a6f75726e616c697374696e",
+      "displayText": "die Journalistin",
+      "gender": "feminine",
+      "hubSegment": "vocabulary",
+      "id": "lex:journalistin",
+      "kind": "Lexeme",
+      "lemma": "Journalistin",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "journalist",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Journalistin",
+      "sourcePriority": 1
+    },
+    {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a6b656c6c6e6572",
+      "displayText": "der Kellner",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:kellner",
+      "kind": "Lexeme",
+      "lemma": "Kellner",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "waiter / waitress",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": {
+        "feminineSuffix": "in",
+        "operationLabel": "Add feminine -in",
+        "relatedArticle": "die",
+        "relatedDisplayText": "die Kellnerin",
+        "relatedGender": "feminine",
+        "relatedId": "lex:kellnerin",
+        "relatedLemma": "Kellnerin",
+        "relatedMeaningEn": "waiter / waitress",
+        "sharedStem": "Kellner"
+      },
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Kellner",
+      "sourcePriority": 1
+    },
+    {
+      "article": "die",
+      "canonicalPath": "/vocabulary/id-6c65783a6b656c6c6e6572696e",
+      "displayText": "die Kellnerin",
+      "gender": "feminine",
+      "hubSegment": "vocabulary",
+      "id": "lex:kellnerin",
+      "kind": "Lexeme",
+      "lemma": "Kellnerin",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "waiter / waitress",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Kellnerin",
+      "sourcePriority": 1
+    },
+    {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a6b667a2d6d6563686174726f6e696b6572",
+      "displayText": "der Kfz-Mechatroniker",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:kfz-mechatroniker",
+      "kind": "Lexeme",
+      "lemma": "Kfz-Mechatroniker",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "automotive mechatronics engineer",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": {
+        "feminineSuffix": "in",
+        "operationLabel": "Add feminine -in",
+        "relatedArticle": "die",
+        "relatedDisplayText": "die Kfz-Mechatronikerin",
+        "relatedGender": "feminine",
+        "relatedId": "lex:kfz-mechatronikerin",
+        "relatedLemma": "Kfz-Mechatronikerin",
+        "relatedMeaningEn": "automotive mechatronics engineer",
+        "sharedStem": "Kfz-Mechatroniker"
+      },
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Kfz-Mechatroniker",
+      "sourcePriority": 1
+    },
+    {
+      "article": "die",
+      "canonicalPath": "/vocabulary/id-6c65783a6b667a2d6d6563686174726f6e696b6572696e",
+      "displayText": "die Kfz-Mechatronikerin",
+      "gender": "feminine",
+      "hubSegment": "vocabulary",
+      "id": "lex:kfz-mechatronikerin",
+      "kind": "Lexeme",
+      "lemma": "Kfz-Mechatronikerin",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "automotive mechatronics engineer",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Kfz-Mechatronikerin",
+      "sourcePriority": 1
+    },
+    {
+      "article": "das",
+      "canonicalPath": "/vocabulary/id-6c65783a6b696e64",
+      "displayText": "das Kind",
+      "gender": "neuter",
+      "hubSegment": "vocabulary",
+      "id": "lex:kind",
+      "kind": "Lexeme",
+      "lemma": "Kind",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "child",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Kind",
+      "sourcePriority": 1
+    },
+    {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a6c6568726572",
+      "displayText": "der Lehrer",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:lehrer",
+      "kind": "Lexeme",
+      "lemma": "Lehrer",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "teacher",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": {
+        "feminineSuffix": "in",
+        "operationLabel": "Add feminine -in",
+        "relatedArticle": "die",
+        "relatedDisplayText": "die Lehrerin",
+        "relatedGender": "feminine",
+        "relatedId": "lex:lehrerin",
+        "relatedLemma": "Lehrerin",
+        "relatedMeaningEn": "teacher",
+        "sharedStem": "Lehrer"
+      },
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Lehrer",
+      "sourcePriority": 1
+    },
+    {
+      "article": "die",
+      "canonicalPath": "/vocabulary/id-6c65783a6c6568726572696e",
+      "displayText": "die Lehrerin",
+      "gender": "feminine",
+      "hubSegment": "vocabulary",
+      "id": "lex:lehrerin",
+      "kind": "Lexeme",
+      "lemma": "Lehrerin",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "teacher",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Lehrerin",
+      "sourcePriority": 1
+    },
+    {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a6e616d65",
+      "displayText": "der Name",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:name",
+      "kind": "Lexeme",
+      "lemma": "Name",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "name",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [
+        "Namen"
+      ],
+      "publicationStatus": "published",
+      "singular": "Name",
+      "sourcePriority": 1
+    },
+    {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a6e696368742d736f2d677574",
+      "displayText": "Nicht so gut.",
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:nicht-so-gut",
+      "kind": "Lexeme",
+      "lemma": "Nicht so gut.",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Not so well.",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Nicht so gut.",
+      "sourcePriority": 1
+    },
+    {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a6f65737465727265696368",
+      "displayText": "Österreich",
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:oesterreich",
+      "kind": "Lexeme",
+      "lemma": "Österreich",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Austria",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Österreich",
+      "sourcePriority": 1
+    },
+    {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a70616b65747a757374656c6c6572",
+      "displayText": "der Paketzusteller",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:paketzusteller",
+      "kind": "Lexeme",
+      "lemma": "Paketzusteller",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "parcel delivery agent",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": {
+        "feminineSuffix": "in",
+        "operationLabel": "Add feminine -in",
+        "relatedArticle": "die",
+        "relatedDisplayText": "die Paketzustellerin",
+        "relatedGender": "feminine",
+        "relatedId": "lex:paketzustellerin",
+        "relatedLemma": "Paketzustellerin",
+        "relatedMeaningEn": "parcel delivery agent",
+        "sharedStem": "Paketzusteller"
+      },
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Paketzusteller",
+      "sourcePriority": 1
+    },
+    {
+      "article": "die",
+      "canonicalPath": "/vocabulary/id-6c65783a70616b65747a757374656c6c6572696e",
+      "displayText": "die Paketzustellerin",
+      "gender": "feminine",
+      "hubSegment": "vocabulary",
+      "id": "lex:paketzustellerin",
+      "kind": "Lexeme",
+      "lemma": "Paketzustellerin",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "parcel delivery agent",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Paketzustellerin",
+      "sourcePriority": 1
+    },
+    {
+      "article": "das",
+      "canonicalPath": "/vocabulary/id-6c65783a7072616b74696b756d",
+      "displayText": "das Praktikum",
+      "gender": "neuter",
+      "hubSegment": "vocabulary",
+      "id": "lex:praktikum",
+      "kind": "Lexeme",
+      "lemma": "Praktikum",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "internship",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Praktikum",
+      "sourcePriority": 1
+    },
+    {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a72656e746e6572",
+      "displayText": "der Rentner",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:rentner",
+      "kind": "Lexeme",
+      "lemma": "Rentner",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "pensioner",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": {
+        "feminineSuffix": "in",
+        "operationLabel": "Add feminine -in",
+        "relatedArticle": "die",
+        "relatedDisplayText": "die Rentnerin",
+        "relatedGender": "feminine",
+        "relatedId": "lex:rentnerin",
+        "relatedLemma": "Rentnerin",
+        "relatedMeaningEn": "pensioner",
+        "sharedStem": "Rentner"
+      },
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Rentner",
+      "sourcePriority": 1
+    },
+    {
+      "article": "die",
+      "canonicalPath": "/vocabulary/id-6c65783a72656e746e6572696e",
+      "displayText": "die Rentnerin",
+      "gender": "feminine",
+      "hubSegment": "vocabulary",
+      "id": "lex:rentnerin",
+      "kind": "Lexeme",
+      "lemma": "Rentnerin",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "pensioner",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Rentnerin",
+      "sourcePriority": 1
+    },
+    {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a73636875656c6572",
+      "displayText": "der Schüler",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:schueler",
+      "kind": "Lexeme",
+      "lemma": "Schüler",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "school student",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": {
+        "feminineSuffix": "in",
+        "operationLabel": "Add feminine -in",
+        "relatedArticle": "die",
+        "relatedDisplayText": "die Schülerin",
+        "relatedGender": "feminine",
+        "relatedId": "lex:schuelerin",
+        "relatedLemma": "Schülerin",
+        "relatedMeaningEn": "school student",
+        "sharedStem": "Schüler"
+      },
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Schüler",
+      "sourcePriority": 1
+    },
+    {
+      "article": "die",
+      "canonicalPath": "/vocabulary/id-6c65783a73636875656c6572696e",
+      "displayText": "die Schülerin",
+      "gender": "feminine",
+      "hubSegment": "vocabulary",
+      "id": "lex:schuelerin",
+      "kind": "Lexeme",
+      "lemma": "Schülerin",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "school student",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Schülerin",
+      "sourcePriority": 1
+    },
+    {
+      "article": "die",
+      "canonicalPath": "/vocabulary/id-6c65783a7363687765697a",
+      "displayText": "die Schweiz",
+      "gender": "feminine",
+      "hubSegment": "vocabulary",
+      "id": "lex:schweiz",
+      "kind": "Lexeme",
+      "lemma": "Schweiz",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Switzerland",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Schweiz",
+      "sourcePriority": 1
+    },
+    {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a736568722d6775742d64616e6b65",
+      "displayText": "Sehr gut, danke.",
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:sehr-gut-danke",
+      "kind": "Lexeme",
+      "lemma": "Sehr gut, danke.",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Very well, thank you.",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Sehr gut, danke.",
+      "sourcePriority": 1
+    },
+    {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a73696e676c65",
+      "displayText": "der Single",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:single",
+      "kind": "Lexeme",
+      "lemma": "Single",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "single person",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Single",
+      "sourcePriority": 1
+    },
+    {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a7370616e69656e",
+      "displayText": "Spanien",
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:spanien",
+      "kind": "Lexeme",
+      "lemma": "Spanien",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Spain",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Spanien",
+      "sourcePriority": 1
+    },
+    {
+      "article": "die",
+      "canonicalPath": "/vocabulary/id-6c65783a7374656c6c65",
+      "displayText": "die Stelle",
+      "gender": "feminine",
+      "hubSegment": "vocabulary",
+      "id": "lex:stelle",
+      "kind": "Lexeme",
+      "lemma": "Stelle",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "position/job",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Stelle",
+      "sourcePriority": 1
+    },
+    {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a73747564656e74",
+      "displayText": "der Student",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:student",
+      "kind": "Lexeme",
+      "lemma": "Student",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "university student",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": {
+        "feminineSuffix": "in",
+        "operationLabel": "Add feminine -in",
+        "relatedArticle": "die",
+        "relatedDisplayText": "die Studentin",
+        "relatedGender": "feminine",
+        "relatedId": "lex:studentin",
+        "relatedLemma": "Studentin",
+        "relatedMeaningEn": "university student",
+        "sharedStem": "Student"
+      },
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Student",
+      "sourcePriority": 1
+    },
+    {
+      "article": "die",
+      "canonicalPath": "/vocabulary/id-6c65783a73747564656e74696e",
+      "displayText": "die Studentin",
+      "gender": "feminine",
+      "hubSegment": "vocabulary",
+      "id": "lex:studentin",
+      "kind": "Lexeme",
+      "lemma": "Studentin",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "university student",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Studentin",
+      "sourcePriority": 1
+    },
+    {
+      "article": "das",
+      "canonicalPath": "/vocabulary/id-6c65783a7374756469756d",
+      "displayText": "das Studium",
+      "gender": "neuter",
+      "hubSegment": "vocabulary",
+      "id": "lex:studium",
+      "kind": "Lexeme",
+      "lemma": "Studium",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "studies",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Studium",
+      "sourcePriority": 1
+    },
+    {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a7375706572",
+      "displayText": "Super!",
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:super",
+      "kind": "Lexeme",
+      "lemma": "Super!",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Great!",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Super!",
+      "sourcePriority": 1
+    },
+    {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a74736368756573",
+      "displayText": "Tschüs",
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:tschues",
+      "kind": "Lexeme",
+      "lemma": "Tschüs",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Bye",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Tschüs",
+      "sourcePriority": 1
+    },
+    {
+      "article": "die",
+      "canonicalPath": "/vocabulary/id-6c65783a747565726b6569",
+      "displayText": "die Türkei",
+      "gender": "feminine",
+      "hubSegment": "vocabulary",
+      "id": "lex:tuerkei",
+      "kind": "Lexeme",
+      "lemma": "Türkei",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Turkey",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Türkei",
+      "sourcePriority": 1
+    },
+    {
+      "article": "die",
+      "canonicalPath": "/vocabulary/id-6c65783a757361",
+      "displayText": "die USA",
+      "gender": "feminine",
+      "hubSegment": "vocabulary",
+      "id": "lex:usa",
+      "kind": "Lexeme",
+      "lemma": "USA",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "USA",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "USA",
+      "sourcePriority": 1
+    },
+    {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a7665726865697261746574",
+      "displayText": "verheiratet",
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:verheiratet",
+      "kind": "Lexeme",
+      "lemma": "verheiratet",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "married",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "verheiratet",
+      "sourcePriority": 1
+    },
+    {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a7665726b616575666572",
+      "displayText": "der Verkäufer",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:verkaeufer",
+      "kind": "Lexeme",
+      "lemma": "Verkäufer",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "shop assistant",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": {
+        "feminineSuffix": "in",
+        "operationLabel": "Add feminine -in",
+        "relatedArticle": "die",
+        "relatedDisplayText": "die Verkäuferin",
+        "relatedGender": "feminine",
+        "relatedId": "lex:verkaeuferin",
+        "relatedLemma": "Verkäuferin",
+        "relatedMeaningEn": "shop assistant",
+        "sharedStem": "Verkäufer"
+      },
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Verkäufer",
+      "sourcePriority": 1
+    },
+    {
+      "article": "die",
+      "canonicalPath": "/vocabulary/id-6c65783a7665726b616575666572696e",
+      "displayText": "die Verkäuferin",
+      "gender": "feminine",
+      "hubSegment": "vocabulary",
+      "id": "lex:verkaeuferin",
+      "kind": "Lexeme",
+      "lemma": "Verkäuferin",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "shop assistant",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Verkäuferin",
+      "sourcePriority": 1
+    },
+    {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a766f726e616d65",
+      "displayText": "der Vorname",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:vorname",
+      "kind": "Lexeme",
+      "lemma": "Vorname",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "first name",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [
+        "Vornamen"
+      ],
+      "publicationStatus": "published",
+      "singular": "Vorname",
+      "sourcePriority": 1
+    },
+    {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a776f686e6f7274",
+      "displayText": "der Wohnort",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:wohnort",
+      "kind": "Lexeme",
+      "lemma": "Wohnort",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "place of residence",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Wohnort",
+      "sourcePriority": 1
+    },
+    {
+      "canonicalPath": "/verbs/id-766572623a6865697373656e",
+      "displayText": "heißen",
+      "hubSegment": "verbs",
+      "id": "verb:heissen",
+      "infinitive": "heißen",
+      "kind": "Verb",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "to be called",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "paradigmNote": "Only the published present forms are shown.",
+      "present": [
+        {
+          "form": "heiße",
+          "person": "ich",
+          "personLabel": "ich"
+        },
+        {
+          "form": "heißt",
+          "person": "du",
+          "personLabel": "du"
+        },
+        {
+          "form": "heißt",
+          "person": "er_sie_es",
+          "personLabel": "er/sie/es"
+        },
+        {
+          "form": "heißen",
+          "person": "Sie_formal",
+          "personLabel": "Sie (formal)"
+        }
+      ],
+      "publicationStatus": "published",
+      "sourcePriority": 1
+    },
+    {
+      "canonicalPath": "/verbs/id-766572623a6b6f6d6d656e",
+      "displayText": "kommen",
+      "hubSegment": "verbs",
+      "id": "verb:kommen",
+      "infinitive": "kommen",
+      "kind": "Verb",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "to come",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "paradigmNote": "Only the published present forms are shown.",
+      "present": [
+        {
+          "form": "komme",
+          "person": "ich",
+          "personLabel": "ich"
+        },
+        {
+          "form": "kommst",
+          "person": "du",
+          "personLabel": "du"
+        },
+        {
+          "form": "kommt",
+          "person": "er_sie_es",
+          "personLabel": "er/sie/es"
+        },
+        {
+          "form": "kommen",
+          "person": "Sie_formal",
+          "personLabel": "Sie (formal)"
+        }
+      ],
+      "publicationStatus": "published",
+      "sourcePriority": 1
+    },
+    {
+      "canonicalPath": "/verbs/id-766572623a6c65726e656e",
+      "displayText": "lernen",
+      "hubSegment": "verbs",
+      "id": "verb:lernen",
+      "infinitive": "lernen",
+      "kind": "Verb",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "to learn",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "paradigmNote": "Only the published present forms are shown.",
+      "present": [
+        {
+          "form": "lerne",
+          "person": "ich",
+          "personLabel": "ich"
+        },
+        {
+          "form": "lernst",
+          "person": "du",
+          "personLabel": "du"
+        },
+        {
+          "form": "lernt",
+          "person": "er_sie_es",
+          "personLabel": "er/sie/es"
+        },
+        {
+          "form": "lernen",
+          "person": "Sie_formal",
+          "personLabel": "Sie (formal)"
+        }
+      ],
+      "publicationStatus": "published",
+      "sourcePriority": 1
+    },
+    {
+      "canonicalPath": "/verbs/id-766572623a7365696e",
+      "displayText": "sein",
+      "hubSegment": "verbs",
+      "id": "verb:sein",
+      "infinitive": "sein",
+      "kind": "Verb",
+      "lessonIds": [
+        "lesson:01",
+        "lesson:02"
+      ],
+      "meaningEn": "to be",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "paradigmNote": "This paradigm is irregular and must be learned as forms.",
+      "present": [
+        {
+          "form": "bin",
+          "person": "ich",
+          "personLabel": "ich"
+        },
+        {
+          "form": "bist",
+          "person": "du",
+          "personLabel": "du"
+        },
+        {
+          "form": "ist",
+          "person": "er_sie_es",
+          "personLabel": "er/sie/es"
+        },
+        {
+          "form": "sind",
+          "person": "wir",
+          "personLabel": "wir"
+        },
+        {
+          "form": "seid",
+          "person": "ihr",
+          "personLabel": "ihr"
+        },
+        {
+          "form": "sind",
+          "person": "sie_plural",
+          "personLabel": "sie (plural)"
+        },
+        {
+          "form": "sind",
+          "person": "Sie_formal",
+          "personLabel": "Sie (formal)"
+        }
+      ],
+      "publicationStatus": "published",
+      "sourcePriority": 1
+    },
+    {
+      "activityIds": [],
+      "canonicalPath": "/grammar/id-6772616d3a6175732d6f726967696e2d6c31",
+      "commonErrorTags": [
+        "preposition-choice"
+      ],
+      "displayText": "Herkunft mit aus",
+      "hubSegment": "grammar",
+      "id": "gram:aus-origin-l1",
+      "kind": "GrammarConcept",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "notice": "The published origin answers use kommen + aus + country name.",
+      "prerequisiteIds": [
+        "gram:main-clause-word-order-l1"
+      ],
+      "prerequisiteLabels": [
+        "Satzstellung im Aussagesatz"
+      ],
+      "publicationStatus": "published",
+      "ruleSteps": [
+        {
+          "id": "aus-country",
+          "model": "Ich komme aus Deutschland.",
+          "notice": "Use aus before the published country expression."
+        }
+      ],
+      "sourcePriority": 2,
+      "titleDe": "Herkunft mit aus",
+      "titleEn": "Origin with aus"
+    },
+    {
+      "activityIds": [],
+      "canonicalPath": "/grammar/id-6772616d3a64752d7369652d72656769737465722d6c31",
+      "commonErrorTags": [
+        "register-mismatch",
+        "sie-Sie-capitalization"
+      ],
+      "displayText": "du und Sie",
+      "hubSegment": "grammar",
+      "id": "gram:du-sie-register-l1",
+      "kind": "GrammarConcept",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "notice": "Use du in the taught informal patterns and capitalized Sie with the formal verb form.",
+      "prerequisiteIds": [
+        "gram:personal-pronouns-l1"
+      ],
+      "prerequisiteLabels": [
+        "Personalpronomen"
+      ],
+      "publicationStatus": "published",
+      "ruleSteps": [
+        {
+          "id": "register-pair",
+          "model": "Wie heißt du? · Wie heißen Sie?",
+          "notice": "Keep pronoun and verb form in the same register."
+        }
+      ],
+      "sourcePriority": 2,
+      "titleDe": "du und Sie",
+      "titleEn": "Informal du and formal Sie"
+    },
+    {
+      "activityIds": [],
+      "canonicalPath": "/grammar/id-6772616d3a66756c6c2d70726573656e742d706572736f6e2d666f726d732d6c32",
+      "commonErrorTags": [
+        "person-agreement",
+        "sie-Sie-capitalization"
+      ],
+      "displayText": "Präsens: alle Personen",
+      "hubSegment": "grammar",
+      "id": "gram:full-present-person-forms-l2",
+      "kind": "GrammarConcept",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "notice": "Lesson 2 extends present conjugation to wir, ihr, sie and formal Sie.",
+      "prerequisiteIds": [],
+      "prerequisiteLabels": [],
+      "publicationStatus": "published",
+      "ruleSteps": [
+        {
+          "id": "full-person",
+          "model": "wir sind · ihr seid · sie/Sie sind",
+          "notice": "Match each pronoun with its published present form."
+        }
+      ],
+      "sourcePriority": 2,
+      "titleDe": "Präsens: alle Personen",
+      "titleEn": "Full present-tense person forms"
+    },
+    {
+      "activityIds": [],
+      "canonicalPath": "/grammar/id-6772616d3a6d61696e2d636c617573652d776f72642d6f726465722d6c31",
+      "commonErrorTags": [
+        "verb-position"
+      ],
+      "displayText": "Satzstellung im Aussagesatz",
+      "hubSegment": "grammar",
+      "id": "gram:main-clause-word-order-l1",
+      "kind": "GrammarConcept",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "notice": "In the taught statements, the finite verb is in second position.",
+      "prerequisiteIds": [
+        "gram:personal-pronouns-l1"
+      ],
+      "prerequisiteLabels": [
+        "Personalpronomen"
+      ],
+      "publicationStatus": "published",
+      "ruleSteps": [
+        {
+          "id": "verb-second",
+          "model": "Ich komme aus Spanien.",
+          "notice": "Build person + finite verb + complement."
+        }
+      ],
+      "sourcePriority": 2,
+      "titleDe": "Satzstellung im Aussagesatz",
+      "titleEn": "Main-clause word order"
+    },
+    {
+      "activityIds": [],
+      "canonicalPath": "/grammar/id-6772616d3a6e696368742d70726f66696c652d6e65676174696f6e2d6c32",
+      "commonErrorTags": [
+        "negation-position"
+      ],
+      "displayText": "Verneinung mit nicht",
+      "hubSegment": "grammar",
+      "id": "gram:nicht-profile-negation-l2",
+      "kind": "GrammarConcept",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "notice": "Use nicht in the taught profile statements to negate a state or description.",
+      "prerequisiteIds": [],
+      "prerequisiteLabels": [],
+      "publicationStatus": "published",
+      "ruleSteps": [
+        {
+          "id": "nicht-profile",
+          "model": "Ich bin nicht verheiratet.",
+          "notice": "Place nicht with the taught statement pattern."
+        }
+      ],
+      "sourcePriority": 2,
+      "titleDe": "Verneinung mit nicht",
+      "titleEn": "Negation with nicht"
+    },
+    {
+      "activityIds": [],
+      "canonicalPath": "/grammar/id-6772616d3a706572736f6e616c2d70726f6e6f756e732d6c31",
+      "commonErrorTags": [
+        "person-agreement",
+        "sie-Sie-capitalization"
+      ],
+      "displayText": "Personalpronomen",
+      "hubSegment": "grammar",
+      "id": "gram:personal-pronouns-l1",
+      "kind": "GrammarConcept",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "notice": "German finite verbs agree with the person: ich, du, er/sie/es, wir, ihr, sie and formal Sie.",
+      "prerequisiteIds": [],
+      "prerequisiteLabels": [],
+      "publicationStatus": "published",
+      "ruleSteps": [
+        {
+          "id": "pronoun-person",
+          "model": "ich heiße · du heißt · Sie heißen",
+          "notice": "Choose the pronoun first, then the matching finite verb form."
+        }
+      ],
+      "sourcePriority": 2,
+      "titleDe": "Personalpronomen",
+      "titleEn": "Personal pronouns"
+    },
+    {
+      "activityIds": [],
+      "canonicalPath": "/grammar/id-6772616d3a70726573656e742d636f6e6a75676174696f6e2d6c31",
+      "commonErrorTags": [
+        "person-agreement",
+        "irregular-form"
+      ],
+      "displayText": "Präsensformen",
+      "hubSegment": "grammar",
+      "id": "gram:present-conjugation-l1",
+      "kind": "GrammarConcept",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "notice": "Published present forms include regular endings and the taught special paradigms heißen and sein.",
+      "prerequisiteIds": [
+        "gram:personal-pronouns-l1"
+      ],
+      "prerequisiteLabels": [
+        "Personalpronomen"
+      ],
+      "publicationStatus": "published",
+      "ruleSteps": [
+        {
+          "id": "regular-singular",
+          "model": "ich lerne · du lernst",
+          "notice": "Regular forms use a verb stem plus the person ending."
+        },
+        {
+          "id": "heissen",
+          "model": "du heißt · sie heißt",
+          "notice": "In heißen, du and er/sie/es use heißt."
+        },
+        {
+          "id": "sein",
+          "model": "ich bin · du bist · Sie sind",
+          "notice": "Learn the irregular forms of sein as whole forms."
+        }
+      ],
+      "sourcePriority": 2,
+      "titleDe": "Präsensformen",
+      "titleEn": "Present-tense person forms"
+    },
+    {
+      "activityIds": [],
+      "canonicalPath": "/grammar/id-6772616d3a70726f66657373696f6e2d65787072657373696f6e732d6c32",
+      "commonErrorTags": [
+        "article-after-sein",
+        "preposition-choice"
+      ],
+      "displayText": "Beruf ausdrücken",
+      "hubSegment": "grammar",
+      "id": "gram:profession-expressions-l2",
+      "kind": "GrammarConcept",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "notice": "The taught patterns contrast profession after sein with arbeiten als, bei or in.",
+      "prerequisiteIds": [
+        "gram:full-present-person-forms-l2"
+      ],
+      "prerequisiteLabels": [
+        "Präsens: alle Personen"
+      ],
+      "publicationStatus": "published",
+      "ruleSteps": [
+        {
+          "id": "sein-profession",
+          "model": "Ich bin Architekt.",
+          "notice": "After sein, use the taught profession without an article."
+        },
+        {
+          "id": "arbeiten-als",
+          "model": "Ich arbeite als Architekt.",
+          "notice": "Use arbeiten als before a profession."
+        },
+        {
+          "id": "arbeiten-bei-in",
+          "model": "Ich arbeite bei einer Firma.",
+          "notice": "Use bei or in only in the published workplace patterns."
+        }
+      ],
+      "sourcePriority": 2,
+      "titleDe": "Beruf ausdrücken",
+      "titleEn": "Talking about professions"
+    },
+    {
+      "activityIds": [],
+      "canonicalPath": "/grammar/id-6772616d3a70726f66657373696f6e2d66656d696e696e652d666f726d732d6c32",
+      "commonErrorTags": [
+        "person-form",
+        "umlaut",
+        "plural-guessing"
+      ],
+      "displayText": "Weibliche Berufsformen",
+      "hubSegment": "grammar",
+      "id": "gram:profession-feminine-forms-l2",
+      "kind": "GrammarConcept",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "notice": "Published profession pairs form feminine person words with -in where evidenced; plural -innen is used only when stored in the source.",
+      "prerequisiteIds": [],
+      "prerequisiteLabels": [],
+      "publicationStatus": "published",
+      "ruleSteps": [
+        {
+          "id": "feminine-in",
+          "model": "Architekt → Architektin · Arzt → Ärztin",
+          "notice": "Link each published feminine form to its masculine base; preserve source-supported stem changes."
+        },
+        {
+          "id": "plural-innen",
+          "model": "Lehrerinnen",
+          "notice": "Use -innen only for a source-published feminine plural."
+        }
+      ],
+      "sourcePriority": 2,
+      "titleDe": "Weibliche Berufsformen",
+      "titleEn": "Feminine profession forms"
+    },
+    {
+      "activityIds": [],
+      "canonicalPath": "/grammar/id-6772616d3a772d7175657374696f6e732d6c31",
+      "commonErrorTags": [
+        "word-order"
+      ],
+      "displayText": "W-Fragen",
+      "hubSegment": "grammar",
+      "id": "gram:w-questions-l1",
+      "kind": "GrammarConcept",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "notice": "A taught W-question starts with the question word, followed by the finite verb and the person.",
+      "prerequisiteIds": [
+        "gram:personal-pronouns-l1"
+      ],
+      "prerequisiteLabels": [
+        "Personalpronomen"
+      ],
+      "publicationStatus": "published",
+      "ruleSteps": [
+        {
+          "id": "w-order",
+          "model": "Wie heißt du? · Woher kommen Sie?",
+          "notice": "Use W-word + finite verb + person + complement."
+        }
+      ],
+      "sourcePriority": 2,
+      "titleDe": "W-Fragen",
+      "titleEn": "W-questions"
+    },
+    {
+      "acceptedRealizations": [
+        "Wie alt bist du?",
+        "Ich bin … Jahre alt."
+      ],
+      "answers": [
+        {
+          "id": "phrase:age-casual-a1",
+          "realization": "Ich bin … Jahre alt.",
+          "role": "answer"
+        }
+      ],
+      "canonicalPath": "/phrases/id-71613a6167652d63617375616c",
+      "conversationLevels": [],
+      "displayText": "Wie alt bist du?",
+      "hubSegment": "phrases",
+      "id": "qa:age-casual",
+      "intent": "qa:age-casual",
+      "kind": "QAPair",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "publicationStatus": "published",
+      "question": {
+        "id": "phrase:age-casual-q",
+        "realization": "Wie alt bist du?",
+        "role": "question"
+      },
+      "register": "informal",
+      "sourcePriority": 1
+    },
+    {
+      "acceptedRealizations": [
+        "Wie alt sind Sie?",
+        "Ich bin … Jahre alt."
+      ],
+      "answers": [
+        {
+          "id": "phrase:age-formal-a1",
+          "realization": "Ich bin … Jahre alt.",
+          "role": "answer"
+        }
+      ],
+      "canonicalPath": "/phrases/id-71613a6167652d666f726d616c",
+      "conversationLevels": [],
+      "displayText": "Wie alt sind Sie?",
+      "hubSegment": "phrases",
+      "id": "qa:age-formal",
+      "intent": "qa:age-formal",
+      "kind": "QAPair",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "publicationStatus": "published",
+      "question": {
+        "id": "phrase:age-formal-q",
+        "realization": "Wie alt sind Sie?",
+        "role": "question"
+      },
+      "register": "formal",
+      "sourcePriority": 1
+    },
+    {
+      "acceptedRealizations": [
+        "Wer ist das?",
+        "Das ist …"
+      ],
+      "answers": [
+        {
+          "id": "phrase:identity-a1",
+          "realization": "Das ist …",
+          "role": "answer"
+        }
+      ],
+      "canonicalPath": "/phrases/id-71613a6964656e74697479",
+      "conversationLevels": [],
+      "displayText": "Wer ist das?",
+      "hubSegment": "phrases",
+      "id": "qa:identity",
+      "intent": "qa:identity",
+      "kind": "QAPair",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "publicationStatus": "published",
+      "question": {
+        "id": "phrase:identity-q",
+        "realization": "Wer ist das?",
+        "role": "question"
+      },
+      "register": "neutral",
+      "sourcePriority": 1
+    },
+    {
+      "acceptedRealizations": [
+        "Wie heißt du?",
+        "Ich heiße …",
+        "Mein Name ist …"
+      ],
+      "answers": [
+        {
+          "id": "phrase:name-casual-a1",
+          "realization": "Ich heiße …",
+          "role": "answer"
+        },
+        {
+          "id": "phrase:name-casual-a2",
+          "realization": "Mein Name ist …",
+          "role": "answer"
+        }
+      ],
+      "canonicalPath": "/phrases/id-71613a6e616d652d63617375616c",
+      "conversationLevels": [],
+      "displayText": "Wie heißt du?",
+      "hubSegment": "phrases",
+      "id": "qa:name-casual",
+      "intent": "qa:name-casual",
+      "kind": "QAPair",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "publicationStatus": "published",
+      "question": {
+        "id": "phrase:name-casual-q",
+        "realization": "Wie heißt du?",
+        "role": "question"
+      },
+      "register": "informal",
+      "sourcePriority": 1
+    },
+    {
+      "acceptedRealizations": [
+        "Wie heißen Sie?",
+        "Ich heiße …",
+        "Mein Name ist …"
+      ],
+      "answers": [
+        {
+          "id": "phrase:name-formal-a1",
+          "realization": "Ich heiße …",
+          "role": "answer"
+        },
+        {
+          "id": "phrase:name-formal-a2",
+          "realization": "Mein Name ist …",
+          "role": "answer"
+        }
+      ],
+      "canonicalPath": "/phrases/id-71613a6e616d652d666f726d616c",
+      "conversationLevels": [],
+      "displayText": "Wie heißen Sie?",
+      "hubSegment": "phrases",
+      "id": "qa:name-formal",
+      "intent": "qa:name-formal",
+      "kind": "QAPair",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "publicationStatus": "published",
+      "question": {
+        "id": "phrase:name-formal-q",
+        "realization": "Wie heißen Sie?",
+        "role": "question"
+      },
+      "register": "formal",
+      "sourcePriority": 1
+    },
+    {
+      "acceptedRealizations": [
+        "Woher kommst du?",
+        "Ich komme aus …"
+      ],
+      "answers": [
+        {
+          "id": "phrase:origin-casual-a1",
+          "realization": "Ich komme aus …",
+          "role": "answer"
+        }
+      ],
+      "canonicalPath": "/phrases/id-71613a6f726967696e2d63617375616c",
+      "conversationLevels": [],
+      "displayText": "Woher kommst du?",
+      "hubSegment": "phrases",
+      "id": "qa:origin-casual",
+      "intent": "qa:origin-casual",
+      "kind": "QAPair",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "publicationStatus": "published",
+      "question": {
+        "id": "phrase:origin-casual-q",
+        "realization": "Woher kommst du?",
+        "role": "question"
+      },
+      "register": "informal",
+      "sourcePriority": 1
+    },
+    {
+      "acceptedRealizations": [
+        "Woher kommen Sie?",
+        "Ich komme aus …"
+      ],
+      "answers": [
+        {
+          "id": "phrase:origin-formal-a1",
+          "realization": "Ich komme aus …",
+          "role": "answer"
+        }
+      ],
+      "canonicalPath": "/phrases/id-71613a6f726967696e2d666f726d616c",
+      "conversationLevels": [],
+      "displayText": "Woher kommen Sie?",
+      "hubSegment": "phrases",
+      "id": "qa:origin-formal",
+      "intent": "qa:origin-formal",
+      "kind": "QAPair",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "publicationStatus": "published",
+      "question": {
+        "id": "phrase:origin-formal-q",
+        "realization": "Woher kommen Sie?",
+        "role": "question"
+      },
+      "register": "formal",
+      "sourcePriority": 1
+    },
+    {
+      "acceptedRealizations": [
+        "Was bist du von Beruf?",
+        "Ich bin … von Beruf.",
+        "Ich bin …",
+        "Ich arbeite als …"
+      ],
+      "answers": [
+        {
+          "id": "phrase:profession-casual-main-a1",
+          "realization": "Ich bin … von Beruf.",
+          "role": "answer"
+        },
+        {
+          "id": "phrase:profession-casual-main-a2",
+          "realization": "Ich bin …",
+          "role": "answer"
+        },
+        {
+          "id": "phrase:profession-casual-main-a3",
+          "realization": "Ich arbeite als …",
+          "role": "answer"
+        }
+      ],
+      "canonicalPath": "/phrases/id-71613a70726f66657373696f6e2d63617375616c2d6d61696e",
+      "conversationLevels": [
+        {
+          "description": "Study the published question and answer patterns.",
+          "id": "model",
+          "status": "available",
+          "title": "Model"
+        },
+        {
+          "description": "Choose among the published answer patterns.",
+          "id": "guided-recognition",
+          "status": "available",
+          "title": "Guided recognition"
+        },
+        {
+          "description": "Build one published answer frame from canonical published fragments.",
+          "id": "substitution",
+          "status": "available",
+          "title": "Substitution"
+        },
+        {
+          "description": "Type only the published fixed patterns; filled profession sentences are not accepted unless published.",
+          "id": "independent-construction",
+          "status": "available",
+          "title": "Independent construction"
+        },
+        {
+          "description": "Record, play back, and self-check. Self-rating is reflection only.",
+          "id": "spoken-role-play",
+          "status": "available",
+          "title": "Spoken role-play"
+        }
+      ],
+      "displayText": "Was bist du von Beruf?",
+      "hubSegment": "phrases",
+      "id": "qa:profession-casual-main",
+      "intent": "qa:profession-casual-main",
+      "kind": "QAPair",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "publicationStatus": "published",
+      "question": {
+        "id": "phrase:profession-casual-main-q",
+        "realization": "Was bist du von Beruf?",
+        "role": "question"
+      },
+      "register": "informal",
+      "sourcePriority": 1
+    },
+    {
+      "acceptedRealizations": [
+        "Was sind Sie von Beruf?",
+        "Ich bin … von Beruf.",
+        "Ich bin …",
+        "Ich arbeite als …"
+      ],
+      "answers": [
+        {
+          "id": "phrase:profession-formal-main-a1",
+          "realization": "Ich bin … von Beruf.",
+          "role": "answer"
+        },
+        {
+          "id": "phrase:profession-formal-main-a2",
+          "realization": "Ich bin …",
+          "role": "answer"
+        },
+        {
+          "id": "phrase:profession-formal-main-a3",
+          "realization": "Ich arbeite als …",
+          "role": "answer"
+        }
+      ],
+      "canonicalPath": "/phrases/id-71613a70726f66657373696f6e2d666f726d616c2d6d61696e",
+      "conversationLevels": [],
+      "displayText": "Was sind Sie von Beruf?",
+      "hubSegment": "phrases",
+      "id": "qa:profession-formal-main",
+      "intent": "qa:profession-formal-main",
+      "kind": "QAPair",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "publicationStatus": "published",
+      "question": {
+        "id": "phrase:profession-formal-main-q",
+        "realization": "Was sind Sie von Beruf?",
+        "role": "question"
+      },
+      "register": "formal",
+      "sourcePriority": 1
+    },
+    {
+      "acceptedRealizations": [
+        "Wo wohnst du?",
+        "Ich wohne in …"
+      ],
+      "answers": [
+        {
+          "id": "phrase:residence-casual-a1",
+          "realization": "Ich wohne in …",
+          "role": "answer"
+        }
+      ],
+      "canonicalPath": "/phrases/id-71613a7265736964656e63652d63617375616c",
+      "conversationLevels": [],
+      "displayText": "Wo wohnst du?",
+      "hubSegment": "phrases",
+      "id": "qa:residence-casual",
+      "intent": "qa:residence-casual",
+      "kind": "QAPair",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "publicationStatus": "published",
+      "question": {
+        "id": "phrase:residence-casual-q",
+        "realization": "Wo wohnst du?",
+        "role": "question"
+      },
+      "register": "informal",
+      "sourcePriority": 1
+    },
+    {
+      "acceptedRealizations": [
+        "Wo wohnen Sie?",
+        "Ich wohne in …"
+      ],
+      "answers": [
+        {
+          "id": "phrase:residence-formal-a1",
+          "realization": "Ich wohne in …",
+          "role": "answer"
+        }
+      ],
+      "canonicalPath": "/phrases/id-71613a7265736964656e63652d666f726d616c",
+      "conversationLevels": [],
+      "displayText": "Wo wohnen Sie?",
+      "hubSegment": "phrases",
+      "id": "qa:residence-formal",
+      "intent": "qa:residence-formal",
+      "kind": "QAPair",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "publicationStatus": "published",
+      "question": {
+        "id": "phrase:residence-formal-q",
+        "realization": "Wo wohnen Sie?",
+        "role": "question"
+      },
+      "register": "formal",
+      "sourcePriority": 1
+    },
+    {
+      "acceptedRealizations": [
+        "Wie geht’s dir?",
+        "Super!",
+        "Sehr gut, danke.",
+        "Gut, danke.",
+        "Es geht.",
+        "Nicht so gut."
+      ],
+      "answers": [
+        {
+          "id": "phrase:wellbeing-casual-a1",
+          "realization": "Super!",
+          "role": "answer"
+        },
+        {
+          "id": "phrase:wellbeing-casual-a2",
+          "realization": "Sehr gut, danke.",
+          "role": "answer"
+        },
+        {
+          "id": "phrase:wellbeing-casual-a3",
+          "realization": "Gut, danke.",
+          "role": "answer"
+        },
+        {
+          "id": "phrase:wellbeing-casual-a4",
+          "realization": "Es geht.",
+          "role": "answer"
+        },
+        {
+          "id": "phrase:wellbeing-casual-a5",
+          "realization": "Nicht so gut.",
+          "role": "answer"
+        }
+      ],
+      "canonicalPath": "/phrases/id-71613a77656c6c6265696e672d63617375616c",
+      "conversationLevels": [],
+      "displayText": "Wie geht’s dir?",
+      "hubSegment": "phrases",
+      "id": "qa:wellbeing-casual",
+      "intent": "qa:wellbeing-casual",
+      "kind": "QAPair",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "publicationStatus": "published",
+      "question": {
+        "id": "phrase:wellbeing-casual-q",
+        "realization": "Wie geht’s dir?",
+        "role": "question"
+      },
+      "register": "informal",
+      "sourcePriority": 1
+    },
+    {
+      "acceptedRealizations": [
+        "Wie geht’s Ihnen?",
+        "Sehr gut, danke.",
+        "Gut, danke.",
+        "Es geht.",
+        "Nicht so gut."
+      ],
+      "answers": [
+        {
+          "id": "phrase:wellbeing-formal-a1",
+          "realization": "Sehr gut, danke.",
+          "role": "answer"
+        },
+        {
+          "id": "phrase:wellbeing-formal-a2",
+          "realization": "Gut, danke.",
+          "role": "answer"
+        },
+        {
+          "id": "phrase:wellbeing-formal-a3",
+          "realization": "Es geht.",
+          "role": "answer"
+        },
+        {
+          "id": "phrase:wellbeing-formal-a4",
+          "realization": "Nicht so gut.",
+          "role": "answer"
+        }
+      ],
+      "canonicalPath": "/phrases/id-71613a77656c6c6265696e672d666f726d616c",
+      "conversationLevels": [],
+      "displayText": "Wie geht’s Ihnen?",
+      "hubSegment": "phrases",
+      "id": "qa:wellbeing-formal",
+      "intent": "qa:wellbeing-formal",
+      "kind": "QAPair",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "publicationStatus": "published",
+      "question": {
+        "id": "phrase:wellbeing-formal-q",
+        "realization": "Wie geht’s Ihnen?",
+        "role": "question"
+      },
+      "register": "formal",
+      "sourcePriority": 1
+    },
+    {
+      "acceptedRealizations": [
+        "Was machen Sie beruflich?",
+        "Ich arbeite als …",
+        "Ich arbeite bei …",
+        "Ich studiere …",
+        "Ich arbeite im Moment nicht."
+      ],
+      "answers": [
+        {
+          "id": "phrase:work-formal-main-a1",
+          "realization": "Ich arbeite als …",
+          "role": "answer"
+        },
+        {
+          "id": "phrase:work-formal-main-a2",
+          "realization": "Ich arbeite bei …",
+          "role": "answer"
+        },
+        {
+          "id": "phrase:work-formal-main-a3",
+          "realization": "Ich studiere …",
+          "role": "answer"
+        },
+        {
+          "id": "phrase:work-formal-main-a4",
+          "realization": "Ich arbeite im Moment nicht.",
+          "role": "answer"
+        }
+      ],
+      "canonicalPath": "/phrases/id-71613a776f726b2d666f726d616c2d6d61696e",
+      "conversationLevels": [],
+      "displayText": "Was machen Sie beruflich?",
+      "hubSegment": "phrases",
+      "id": "qa:work-formal-main",
+      "intent": "qa:work-formal-main",
+      "kind": "QAPair",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "publicationStatus": "published",
+      "question": {
+        "id": "phrase:work-formal-main-q",
+        "realization": "Was machen Sie beruflich?",
+        "role": "question"
+      },
+      "register": "formal",
+      "sourcePriority": 1
+    }
+  ],
+  "detailsById": {
+    "gram:aus-origin-l1": {
+      "activityIds": [],
+      "canonicalPath": "/grammar/id-6772616d3a6175732d6f726967696e2d6c31",
+      "commonErrorTags": [
+        "preposition-choice"
+      ],
+      "displayText": "Herkunft mit aus",
+      "hubSegment": "grammar",
+      "id": "gram:aus-origin-l1",
+      "kind": "GrammarConcept",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "notice": "The published origin answers use kommen + aus + country name.",
+      "prerequisiteIds": [
+        "gram:main-clause-word-order-l1"
+      ],
+      "prerequisiteLabels": [
+        "Satzstellung im Aussagesatz"
+      ],
+      "publicationStatus": "published",
+      "ruleSteps": [
+        {
+          "id": "aus-country",
+          "model": "Ich komme aus Deutschland.",
+          "notice": "Use aus before the published country expression."
+        }
+      ],
+      "sourcePriority": 2,
+      "titleDe": "Herkunft mit aus",
+      "titleEn": "Origin with aus"
+    },
+    "gram:du-sie-register-l1": {
+      "activityIds": [],
+      "canonicalPath": "/grammar/id-6772616d3a64752d7369652d72656769737465722d6c31",
+      "commonErrorTags": [
+        "register-mismatch",
+        "sie-Sie-capitalization"
+      ],
+      "displayText": "du und Sie",
+      "hubSegment": "grammar",
+      "id": "gram:du-sie-register-l1",
+      "kind": "GrammarConcept",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "notice": "Use du in the taught informal patterns and capitalized Sie with the formal verb form.",
+      "prerequisiteIds": [
+        "gram:personal-pronouns-l1"
+      ],
+      "prerequisiteLabels": [
+        "Personalpronomen"
+      ],
+      "publicationStatus": "published",
+      "ruleSteps": [
+        {
+          "id": "register-pair",
+          "model": "Wie heißt du? · Wie heißen Sie?",
+          "notice": "Keep pronoun and verb form in the same register."
+        }
+      ],
+      "sourcePriority": 2,
+      "titleDe": "du und Sie",
+      "titleEn": "Informal du and formal Sie"
+    },
+    "gram:full-present-person-forms-l2": {
+      "activityIds": [],
+      "canonicalPath": "/grammar/id-6772616d3a66756c6c2d70726573656e742d706572736f6e2d666f726d732d6c32",
+      "commonErrorTags": [
+        "person-agreement",
+        "sie-Sie-capitalization"
+      ],
+      "displayText": "Präsens: alle Personen",
+      "hubSegment": "grammar",
+      "id": "gram:full-present-person-forms-l2",
+      "kind": "GrammarConcept",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "notice": "Lesson 2 extends present conjugation to wir, ihr, sie and formal Sie.",
+      "prerequisiteIds": [],
+      "prerequisiteLabels": [],
+      "publicationStatus": "published",
+      "ruleSteps": [
+        {
+          "id": "full-person",
+          "model": "wir sind · ihr seid · sie/Sie sind",
+          "notice": "Match each pronoun with its published present form."
+        }
+      ],
+      "sourcePriority": 2,
+      "titleDe": "Präsens: alle Personen",
+      "titleEn": "Full present-tense person forms"
+    },
+    "gram:main-clause-word-order-l1": {
+      "activityIds": [],
+      "canonicalPath": "/grammar/id-6772616d3a6d61696e2d636c617573652d776f72642d6f726465722d6c31",
+      "commonErrorTags": [
+        "verb-position"
+      ],
+      "displayText": "Satzstellung im Aussagesatz",
+      "hubSegment": "grammar",
+      "id": "gram:main-clause-word-order-l1",
+      "kind": "GrammarConcept",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "notice": "In the taught statements, the finite verb is in second position.",
+      "prerequisiteIds": [
+        "gram:personal-pronouns-l1"
+      ],
+      "prerequisiteLabels": [
+        "Personalpronomen"
+      ],
+      "publicationStatus": "published",
+      "ruleSteps": [
+        {
+          "id": "verb-second",
+          "model": "Ich komme aus Spanien.",
+          "notice": "Build person + finite verb + complement."
+        }
+      ],
+      "sourcePriority": 2,
+      "titleDe": "Satzstellung im Aussagesatz",
+      "titleEn": "Main-clause word order"
+    },
+    "gram:nicht-profile-negation-l2": {
+      "activityIds": [],
+      "canonicalPath": "/grammar/id-6772616d3a6e696368742d70726f66696c652d6e65676174696f6e2d6c32",
+      "commonErrorTags": [
+        "negation-position"
+      ],
+      "displayText": "Verneinung mit nicht",
+      "hubSegment": "grammar",
+      "id": "gram:nicht-profile-negation-l2",
+      "kind": "GrammarConcept",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "notice": "Use nicht in the taught profile statements to negate a state or description.",
+      "prerequisiteIds": [],
+      "prerequisiteLabels": [],
+      "publicationStatus": "published",
+      "ruleSteps": [
+        {
+          "id": "nicht-profile",
+          "model": "Ich bin nicht verheiratet.",
+          "notice": "Place nicht with the taught statement pattern."
+        }
+      ],
+      "sourcePriority": 2,
+      "titleDe": "Verneinung mit nicht",
+      "titleEn": "Negation with nicht"
+    },
+    "gram:personal-pronouns-l1": {
+      "activityIds": [],
+      "canonicalPath": "/grammar/id-6772616d3a706572736f6e616c2d70726f6e6f756e732d6c31",
+      "commonErrorTags": [
+        "person-agreement",
+        "sie-Sie-capitalization"
+      ],
+      "displayText": "Personalpronomen",
+      "hubSegment": "grammar",
+      "id": "gram:personal-pronouns-l1",
+      "kind": "GrammarConcept",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "notice": "German finite verbs agree with the person: ich, du, er/sie/es, wir, ihr, sie and formal Sie.",
+      "prerequisiteIds": [],
+      "prerequisiteLabels": [],
+      "publicationStatus": "published",
+      "ruleSteps": [
+        {
+          "id": "pronoun-person",
+          "model": "ich heiße · du heißt · Sie heißen",
+          "notice": "Choose the pronoun first, then the matching finite verb form."
+        }
+      ],
+      "sourcePriority": 2,
+      "titleDe": "Personalpronomen",
+      "titleEn": "Personal pronouns"
+    },
+    "gram:present-conjugation-l1": {
+      "activityIds": [],
+      "canonicalPath": "/grammar/id-6772616d3a70726573656e742d636f6e6a75676174696f6e2d6c31",
+      "commonErrorTags": [
+        "person-agreement",
+        "irregular-form"
+      ],
+      "displayText": "Präsensformen",
+      "hubSegment": "grammar",
+      "id": "gram:present-conjugation-l1",
+      "kind": "GrammarConcept",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "notice": "Published present forms include regular endings and the taught special paradigms heißen and sein.",
+      "prerequisiteIds": [
+        "gram:personal-pronouns-l1"
+      ],
+      "prerequisiteLabels": [
+        "Personalpronomen"
+      ],
+      "publicationStatus": "published",
+      "ruleSteps": [
+        {
+          "id": "regular-singular",
+          "model": "ich lerne · du lernst",
+          "notice": "Regular forms use a verb stem plus the person ending."
+        },
+        {
+          "id": "heissen",
+          "model": "du heißt · sie heißt",
+          "notice": "In heißen, du and er/sie/es use heißt."
+        },
+        {
+          "id": "sein",
+          "model": "ich bin · du bist · Sie sind",
+          "notice": "Learn the irregular forms of sein as whole forms."
+        }
+      ],
+      "sourcePriority": 2,
+      "titleDe": "Präsensformen",
+      "titleEn": "Present-tense person forms"
+    },
+    "gram:profession-expressions-l2": {
+      "activityIds": [],
+      "canonicalPath": "/grammar/id-6772616d3a70726f66657373696f6e2d65787072657373696f6e732d6c32",
+      "commonErrorTags": [
+        "article-after-sein",
+        "preposition-choice"
+      ],
+      "displayText": "Beruf ausdrücken",
+      "hubSegment": "grammar",
+      "id": "gram:profession-expressions-l2",
+      "kind": "GrammarConcept",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "notice": "The taught patterns contrast profession after sein with arbeiten als, bei or in.",
+      "prerequisiteIds": [
+        "gram:full-present-person-forms-l2"
+      ],
+      "prerequisiteLabels": [
+        "Präsens: alle Personen"
+      ],
+      "publicationStatus": "published",
+      "ruleSteps": [
+        {
+          "id": "sein-profession",
+          "model": "Ich bin Architekt.",
+          "notice": "After sein, use the taught profession without an article."
+        },
+        {
+          "id": "arbeiten-als",
+          "model": "Ich arbeite als Architekt.",
+          "notice": "Use arbeiten als before a profession."
+        },
+        {
+          "id": "arbeiten-bei-in",
+          "model": "Ich arbeite bei einer Firma.",
+          "notice": "Use bei or in only in the published workplace patterns."
+        }
+      ],
+      "sourcePriority": 2,
+      "titleDe": "Beruf ausdrücken",
+      "titleEn": "Talking about professions"
+    },
+    "gram:profession-feminine-forms-l2": {
+      "activityIds": [],
+      "canonicalPath": "/grammar/id-6772616d3a70726f66657373696f6e2d66656d696e696e652d666f726d732d6c32",
+      "commonErrorTags": [
+        "person-form",
+        "umlaut",
+        "plural-guessing"
+      ],
+      "displayText": "Weibliche Berufsformen",
+      "hubSegment": "grammar",
+      "id": "gram:profession-feminine-forms-l2",
+      "kind": "GrammarConcept",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "notice": "Published profession pairs form feminine person words with -in where evidenced; plural -innen is used only when stored in the source.",
+      "prerequisiteIds": [],
+      "prerequisiteLabels": [],
+      "publicationStatus": "published",
+      "ruleSteps": [
+        {
+          "id": "feminine-in",
+          "model": "Architekt → Architektin · Arzt → Ärztin",
+          "notice": "Link each published feminine form to its masculine base; preserve source-supported stem changes."
+        },
+        {
+          "id": "plural-innen",
+          "model": "Lehrerinnen",
+          "notice": "Use -innen only for a source-published feminine plural."
+        }
+      ],
+      "sourcePriority": 2,
+      "titleDe": "Weibliche Berufsformen",
+      "titleEn": "Feminine profession forms"
+    },
+    "gram:w-questions-l1": {
+      "activityIds": [],
+      "canonicalPath": "/grammar/id-6772616d3a772d7175657374696f6e732d6c31",
+      "commonErrorTags": [
+        "word-order"
+      ],
+      "displayText": "W-Fragen",
+      "hubSegment": "grammar",
+      "id": "gram:w-questions-l1",
+      "kind": "GrammarConcept",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "notice": "A taught W-question starts with the question word, followed by the finite verb and the person.",
+      "prerequisiteIds": [
+        "gram:personal-pronouns-l1"
+      ],
+      "prerequisiteLabels": [
+        "Personalpronomen"
+      ],
+      "publicationStatus": "published",
+      "ruleSteps": [
+        {
+          "id": "w-order",
+          "model": "Wie heißt du? · Woher kommen Sie?",
+          "notice": "Use W-word + finite verb + person + complement."
+        }
+      ],
+      "sourcePriority": 2,
+      "titleDe": "W-Fragen",
+      "titleEn": "W-questions"
+    },
+    "lex:aerztin": {
+      "article": "die",
+      "canonicalPath": "/vocabulary/id-6c65783a6165727a74696e",
+      "displayText": "die Ärztin",
+      "gender": "feminine",
+      "hubSegment": "vocabulary",
+      "id": "lex:aerztin",
+      "kind": "Lexeme",
+      "lemma": "Ärztin",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "doctor",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Ärztin",
+      "sourcePriority": 1
+    },
+    "lex:allein": {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a616c6c65696e",
+      "displayText": "allein",
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:allein",
+      "kind": "Lexeme",
+      "lemma": "allein",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "alone",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "allein",
+      "sourcePriority": 1
+    },
+    "lex:alter": {
+      "article": "das",
+      "canonicalPath": "/vocabulary/id-6c65783a616c746572",
+      "displayText": "das Alter",
+      "gender": "neuter",
+      "hubSegment": "vocabulary",
+      "id": "lex:alter",
+      "kind": "Lexeme",
+      "lemma": "Alter",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "age",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Alter",
+      "sourcePriority": 1
+    },
+    "lex:architekt": {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a617263686974656b74",
+      "displayText": "der Architekt",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:architekt",
+      "kind": "Lexeme",
+      "lemma": "Architekt",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "architect",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": {
+        "feminineSuffix": "in",
+        "operationLabel": "Add feminine -in",
+        "relatedArticle": "die",
+        "relatedDisplayText": "die Architektin",
+        "relatedGender": "feminine",
+        "relatedId": "lex:architektin",
+        "relatedLemma": "Architektin",
+        "relatedMeaningEn": "architect",
+        "sharedStem": "Architekt"
+      },
+      "pluralGapMessage": "Plural awaiting content approval",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Architekt",
+      "sourcePriority": 1
+    },
+    "lex:architektin": {
+      "article": "die",
+      "canonicalPath": "/vocabulary/id-6c65783a617263686974656b74696e",
+      "displayText": "die Architektin",
+      "gender": "feminine",
+      "hubSegment": "vocabulary",
+      "id": "lex:architektin",
+      "kind": "Lexeme",
+      "lemma": "Architektin",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "architect",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Architektin",
+      "sourcePriority": 1
+    },
+    "lex:arzt": {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a61727a74",
+      "displayText": "der Arzt",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:arzt",
+      "kind": "Lexeme",
+      "lemma": "Arzt",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "doctor",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Arzt",
+      "sourcePriority": 1
+    },
+    "lex:auch-super": {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a617563682d7375706572",
+      "displayText": "Auch super.",
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:auch-super",
+      "kind": "Lexeme",
+      "lemma": "Auch super.",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Great as well.",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Auch super.",
+      "sourcePriority": 1
+    },
+    "lex:auf-wiedersehen": {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a6175662d776965646572736568656e",
+      "displayText": "Auf Wiedersehen",
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:auf-wiedersehen",
+      "kind": "Lexeme",
+      "lemma": "Auf Wiedersehen",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Goodbye",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Auf Wiedersehen",
+      "sourcePriority": 1
+    },
+    "lex:ausbildung": {
+      "article": "die",
+      "canonicalPath": "/vocabulary/id-6c65783a61757362696c64756e67",
+      "displayText": "die Ausbildung",
+      "gender": "feminine",
+      "hubSegment": "vocabulary",
+      "id": "lex:ausbildung",
+      "kind": "Lexeme",
+      "lemma": "Ausbildung",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "apprenticeship/training",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Ausbildung",
+      "sourcePriority": 1
+    },
+    "lex:beruf": {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a6265727566",
+      "displayText": "der Beruf",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:beruf",
+      "kind": "Lexeme",
+      "lemma": "Beruf",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "profession",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Beruf",
+      "sourcePriority": 1
+    },
+    "lex:deutschland": {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a646575747363686c616e64",
+      "displayText": "Deutschland",
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:deutschland",
+      "kind": "Lexeme",
+      "lemma": "Deutschland",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Germany",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Deutschland",
+      "sourcePriority": 1
+    },
+    "lex:eritrea": {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a65726974726561",
+      "displayText": "Eritrea",
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:eritrea",
+      "kind": "Lexeme",
+      "lemma": "Eritrea",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Eritrea",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Eritrea",
+      "sourcePriority": 1
+    },
+    "lex:es-geht": {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a65732d67656874",
+      "displayText": "Es geht.",
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:es-geht",
+      "kind": "Lexeme",
+      "lemma": "Es geht.",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Not too bad.",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Es geht.",
+      "sourcePriority": 1
+    },
+    "lex:familienname": {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a66616d696c69656e6e616d65",
+      "displayText": "der Familienname",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:familienname",
+      "kind": "Lexeme",
+      "lemma": "Familienname",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "last name",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [
+        "Familiennamen"
+      ],
+      "publicationStatus": "published",
+      "singular": "Familienname",
+      "sourcePriority": 1
+    },
+    "lex:familienstand": {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a66616d696c69656e7374616e64",
+      "displayText": "der Familienstand",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:familienstand",
+      "kind": "Lexeme",
+      "lemma": "Familienstand",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "marital status",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Familienstand",
+      "sourcePriority": 1
+    },
+    "lex:firma": {
+      "article": "die",
+      "canonicalPath": "/vocabulary/id-6c65783a6669726d61",
+      "displayText": "die Firma",
+      "gender": "feminine",
+      "hubSegment": "vocabulary",
+      "id": "lex:firma",
+      "kind": "Lexeme",
+      "lemma": "Firma",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "company",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Firma",
+      "sourcePriority": 1
+    },
+    "lex:frankreich": {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a6672616e6b7265696368",
+      "displayText": "Frankreich",
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:frankreich",
+      "kind": "Lexeme",
+      "lemma": "Frankreich",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "France",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Frankreich",
+      "sourcePriority": 1
+    },
+    "lex:frau": {
+      "article": "die",
+      "canonicalPath": "/vocabulary/id-6c65783a66726175",
+      "displayText": "die Frau",
+      "gender": "feminine",
+      "hubSegment": "vocabulary",
+      "id": "lex:frau",
+      "kind": "Lexeme",
+      "lemma": "Frau",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Ms / Mrs / woman",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [
+        "Frauen"
+      ],
+      "publicationStatus": "published",
+      "singular": "Frau",
+      "sourcePriority": 1
+    },
+    "lex:friseur": {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a66726973657572",
+      "displayText": "der Friseur",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:friseur",
+      "kind": "Lexeme",
+      "lemma": "Friseur",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "hairdresser",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": {
+        "feminineSuffix": "in",
+        "operationLabel": "Add feminine -in",
+        "relatedArticle": "die",
+        "relatedDisplayText": "die Friseurin",
+        "relatedGender": "feminine",
+        "relatedId": "lex:friseurin",
+        "relatedLemma": "Friseurin",
+        "relatedMeaningEn": "hairdresser",
+        "sharedStem": "Friseur"
+      },
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Friseur",
+      "sourcePriority": 1
+    },
+    "lex:friseurin": {
+      "article": "die",
+      "canonicalPath": "/vocabulary/id-6c65783a66726973657572696e",
+      "displayText": "die Friseurin",
+      "gender": "feminine",
+      "hubSegment": "vocabulary",
+      "id": "lex:friseurin",
+      "kind": "Lexeme",
+      "lemma": "Friseurin",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "hairdresser",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Friseurin",
+      "sourcePriority": 1
+    },
+    "lex:geschieden": {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a6765736368696564656e",
+      "displayText": "geschieden",
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:geschieden",
+      "kind": "Lexeme",
+      "lemma": "geschieden",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "divorced",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "geschieden",
+      "sourcePriority": 1
+    },
+    "lex:gut-danke": {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a6775742d64616e6b65",
+      "displayText": "Gut, danke.",
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:gut-danke",
+      "kind": "Lexeme",
+      "lemma": "Gut, danke.",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Fine, thank you.",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Gut, danke.",
+      "sourcePriority": 1
+    },
+    "lex:gute-nacht": {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a677574652d6e61636874",
+      "displayText": "Gute Nacht",
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:gute-nacht",
+      "kind": "Lexeme",
+      "lemma": "Gute Nacht",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Good night",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Gute Nacht",
+      "sourcePriority": 1
+    },
+    "lex:guten-abend": {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a677574656e2d6162656e64",
+      "displayText": "Guten Abend",
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:guten-abend",
+      "kind": "Lexeme",
+      "lemma": "Guten Abend",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Good evening",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Guten Abend",
+      "sourcePriority": 1
+    },
+    "lex:guten-morgen": {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a677574656e2d6d6f7267656e",
+      "displayText": "Guten Morgen",
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:guten-morgen",
+      "kind": "Lexeme",
+      "lemma": "Guten Morgen",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Good morning",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Guten Morgen",
+      "sourcePriority": 1
+    },
+    "lex:guten-tag": {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a677574656e2d746167",
+      "displayText": "Guten Tag",
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:guten-tag",
+      "kind": "Lexeme",
+      "lemma": "Guten Tag",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Good day / Hello",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Guten Tag",
+      "sourcePriority": 1
+    },
+    "lex:hallo": {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a68616c6c6f",
+      "displayText": "Hallo",
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:hallo",
+      "kind": "Lexeme",
+      "lemma": "Hallo",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Hello",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Hallo",
+      "sourcePriority": 1
+    },
+    "lex:herkunft": {
+      "article": "die",
+      "canonicalPath": "/vocabulary/id-6c65783a6865726b756e6674",
+      "displayText": "die Herkunft",
+      "gender": "feminine",
+      "hubSegment": "vocabulary",
+      "id": "lex:herkunft",
+      "kind": "Lexeme",
+      "lemma": "Herkunft",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "origin",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Herkunft",
+      "sourcePriority": 1
+    },
+    "lex:herr": {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a68657272",
+      "displayText": "der Herr",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:herr",
+      "kind": "Lexeme",
+      "lemma": "Herr",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Mr / gentleman",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [
+        "Herren"
+      ],
+      "publicationStatus": "published",
+      "singular": "Herr",
+      "sourcePriority": 1
+    },
+    "lex:ingenieur": {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a696e67656e69657572",
+      "displayText": "der Ingenieur",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:ingenieur",
+      "kind": "Lexeme",
+      "lemma": "Ingenieur",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "engineer",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": {
+        "feminineSuffix": "in",
+        "operationLabel": "Add feminine -in",
+        "relatedArticle": "die",
+        "relatedDisplayText": "die Ingenieurin",
+        "relatedGender": "feminine",
+        "relatedId": "lex:ingenieurin",
+        "relatedLemma": "Ingenieurin",
+        "relatedMeaningEn": "engineer",
+        "sharedStem": "Ingenieur"
+      },
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Ingenieur",
+      "sourcePriority": 1
+    },
+    "lex:ingenieurin": {
+      "article": "die",
+      "canonicalPath": "/vocabulary/id-6c65783a696e67656e69657572696e",
+      "displayText": "die Ingenieurin",
+      "gender": "feminine",
+      "hubSegment": "vocabulary",
+      "id": "lex:ingenieurin",
+      "kind": "Lexeme",
+      "lemma": "Ingenieurin",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "engineer",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Ingenieurin",
+      "sourcePriority": 1
+    },
+    "lex:jahr": {
+      "article": "das",
+      "canonicalPath": "/vocabulary/id-6c65783a6a616872",
+      "displayText": "das Jahr",
+      "gender": "neuter",
+      "hubSegment": "vocabulary",
+      "id": "lex:jahr",
+      "kind": "Lexeme",
+      "lemma": "Jahr",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "year",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Jahr",
+      "sourcePriority": 1
+    },
+    "lex:job": {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a6a6f62",
+      "displayText": "der Job",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:job",
+      "kind": "Lexeme",
+      "lemma": "Job",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "job",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Job",
+      "sourcePriority": 1
+    },
+    "lex:journalist": {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a6a6f75726e616c697374",
+      "displayText": "der Journalist",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:journalist",
+      "kind": "Lexeme",
+      "lemma": "Journalist",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "journalist",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": {
+        "feminineSuffix": "in",
+        "operationLabel": "Add feminine -in",
+        "relatedArticle": "die",
+        "relatedDisplayText": "die Journalistin",
+        "relatedGender": "feminine",
+        "relatedId": "lex:journalistin",
+        "relatedLemma": "Journalistin",
+        "relatedMeaningEn": "journalist",
+        "sharedStem": "Journalist"
+      },
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Journalist",
+      "sourcePriority": 1
+    },
+    "lex:journalistin": {
+      "article": "die",
+      "canonicalPath": "/vocabulary/id-6c65783a6a6f75726e616c697374696e",
+      "displayText": "die Journalistin",
+      "gender": "feminine",
+      "hubSegment": "vocabulary",
+      "id": "lex:journalistin",
+      "kind": "Lexeme",
+      "lemma": "Journalistin",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "journalist",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Journalistin",
+      "sourcePriority": 1
+    },
+    "lex:kellner": {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a6b656c6c6e6572",
+      "displayText": "der Kellner",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:kellner",
+      "kind": "Lexeme",
+      "lemma": "Kellner",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "waiter / waitress",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": {
+        "feminineSuffix": "in",
+        "operationLabel": "Add feminine -in",
+        "relatedArticle": "die",
+        "relatedDisplayText": "die Kellnerin",
+        "relatedGender": "feminine",
+        "relatedId": "lex:kellnerin",
+        "relatedLemma": "Kellnerin",
+        "relatedMeaningEn": "waiter / waitress",
+        "sharedStem": "Kellner"
+      },
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Kellner",
+      "sourcePriority": 1
+    },
+    "lex:kellnerin": {
+      "article": "die",
+      "canonicalPath": "/vocabulary/id-6c65783a6b656c6c6e6572696e",
+      "displayText": "die Kellnerin",
+      "gender": "feminine",
+      "hubSegment": "vocabulary",
+      "id": "lex:kellnerin",
+      "kind": "Lexeme",
+      "lemma": "Kellnerin",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "waiter / waitress",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Kellnerin",
+      "sourcePriority": 1
+    },
+    "lex:kfz-mechatroniker": {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a6b667a2d6d6563686174726f6e696b6572",
+      "displayText": "der Kfz-Mechatroniker",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:kfz-mechatroniker",
+      "kind": "Lexeme",
+      "lemma": "Kfz-Mechatroniker",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "automotive mechatronics engineer",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": {
+        "feminineSuffix": "in",
+        "operationLabel": "Add feminine -in",
+        "relatedArticle": "die",
+        "relatedDisplayText": "die Kfz-Mechatronikerin",
+        "relatedGender": "feminine",
+        "relatedId": "lex:kfz-mechatronikerin",
+        "relatedLemma": "Kfz-Mechatronikerin",
+        "relatedMeaningEn": "automotive mechatronics engineer",
+        "sharedStem": "Kfz-Mechatroniker"
+      },
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Kfz-Mechatroniker",
+      "sourcePriority": 1
+    },
+    "lex:kfz-mechatronikerin": {
+      "article": "die",
+      "canonicalPath": "/vocabulary/id-6c65783a6b667a2d6d6563686174726f6e696b6572696e",
+      "displayText": "die Kfz-Mechatronikerin",
+      "gender": "feminine",
+      "hubSegment": "vocabulary",
+      "id": "lex:kfz-mechatronikerin",
+      "kind": "Lexeme",
+      "lemma": "Kfz-Mechatronikerin",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "automotive mechatronics engineer",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Kfz-Mechatronikerin",
+      "sourcePriority": 1
+    },
+    "lex:kind": {
+      "article": "das",
+      "canonicalPath": "/vocabulary/id-6c65783a6b696e64",
+      "displayText": "das Kind",
+      "gender": "neuter",
+      "hubSegment": "vocabulary",
+      "id": "lex:kind",
+      "kind": "Lexeme",
+      "lemma": "Kind",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "child",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Kind",
+      "sourcePriority": 1
+    },
+    "lex:lehrer": {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a6c6568726572",
+      "displayText": "der Lehrer",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:lehrer",
+      "kind": "Lexeme",
+      "lemma": "Lehrer",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "teacher",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": {
+        "feminineSuffix": "in",
+        "operationLabel": "Add feminine -in",
+        "relatedArticle": "die",
+        "relatedDisplayText": "die Lehrerin",
+        "relatedGender": "feminine",
+        "relatedId": "lex:lehrerin",
+        "relatedLemma": "Lehrerin",
+        "relatedMeaningEn": "teacher",
+        "sharedStem": "Lehrer"
+      },
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Lehrer",
+      "sourcePriority": 1
+    },
+    "lex:lehrerin": {
+      "article": "die",
+      "canonicalPath": "/vocabulary/id-6c65783a6c6568726572696e",
+      "displayText": "die Lehrerin",
+      "gender": "feminine",
+      "hubSegment": "vocabulary",
+      "id": "lex:lehrerin",
+      "kind": "Lexeme",
+      "lemma": "Lehrerin",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "teacher",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Lehrerin",
+      "sourcePriority": 1
+    },
+    "lex:name": {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a6e616d65",
+      "displayText": "der Name",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:name",
+      "kind": "Lexeme",
+      "lemma": "Name",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "name",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [
+        "Namen"
+      ],
+      "publicationStatus": "published",
+      "singular": "Name",
+      "sourcePriority": 1
+    },
+    "lex:nicht-so-gut": {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a6e696368742d736f2d677574",
+      "displayText": "Nicht so gut.",
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:nicht-so-gut",
+      "kind": "Lexeme",
+      "lemma": "Nicht so gut.",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Not so well.",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Nicht so gut.",
+      "sourcePriority": 1
+    },
+    "lex:oesterreich": {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a6f65737465727265696368",
+      "displayText": "Österreich",
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:oesterreich",
+      "kind": "Lexeme",
+      "lemma": "Österreich",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Austria",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Österreich",
+      "sourcePriority": 1
+    },
+    "lex:paketzusteller": {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a70616b65747a757374656c6c6572",
+      "displayText": "der Paketzusteller",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:paketzusteller",
+      "kind": "Lexeme",
+      "lemma": "Paketzusteller",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "parcel delivery agent",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": {
+        "feminineSuffix": "in",
+        "operationLabel": "Add feminine -in",
+        "relatedArticle": "die",
+        "relatedDisplayText": "die Paketzustellerin",
+        "relatedGender": "feminine",
+        "relatedId": "lex:paketzustellerin",
+        "relatedLemma": "Paketzustellerin",
+        "relatedMeaningEn": "parcel delivery agent",
+        "sharedStem": "Paketzusteller"
+      },
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Paketzusteller",
+      "sourcePriority": 1
+    },
+    "lex:paketzustellerin": {
+      "article": "die",
+      "canonicalPath": "/vocabulary/id-6c65783a70616b65747a757374656c6c6572696e",
+      "displayText": "die Paketzustellerin",
+      "gender": "feminine",
+      "hubSegment": "vocabulary",
+      "id": "lex:paketzustellerin",
+      "kind": "Lexeme",
+      "lemma": "Paketzustellerin",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "parcel delivery agent",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Paketzustellerin",
+      "sourcePriority": 1
+    },
+    "lex:praktikum": {
+      "article": "das",
+      "canonicalPath": "/vocabulary/id-6c65783a7072616b74696b756d",
+      "displayText": "das Praktikum",
+      "gender": "neuter",
+      "hubSegment": "vocabulary",
+      "id": "lex:praktikum",
+      "kind": "Lexeme",
+      "lemma": "Praktikum",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "internship",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Praktikum",
+      "sourcePriority": 1
+    },
+    "lex:rentner": {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a72656e746e6572",
+      "displayText": "der Rentner",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:rentner",
+      "kind": "Lexeme",
+      "lemma": "Rentner",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "pensioner",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": {
+        "feminineSuffix": "in",
+        "operationLabel": "Add feminine -in",
+        "relatedArticle": "die",
+        "relatedDisplayText": "die Rentnerin",
+        "relatedGender": "feminine",
+        "relatedId": "lex:rentnerin",
+        "relatedLemma": "Rentnerin",
+        "relatedMeaningEn": "pensioner",
+        "sharedStem": "Rentner"
+      },
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Rentner",
+      "sourcePriority": 1
+    },
+    "lex:rentnerin": {
+      "article": "die",
+      "canonicalPath": "/vocabulary/id-6c65783a72656e746e6572696e",
+      "displayText": "die Rentnerin",
+      "gender": "feminine",
+      "hubSegment": "vocabulary",
+      "id": "lex:rentnerin",
+      "kind": "Lexeme",
+      "lemma": "Rentnerin",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "pensioner",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Rentnerin",
+      "sourcePriority": 1
+    },
+    "lex:schueler": {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a73636875656c6572",
+      "displayText": "der Schüler",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:schueler",
+      "kind": "Lexeme",
+      "lemma": "Schüler",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "school student",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": {
+        "feminineSuffix": "in",
+        "operationLabel": "Add feminine -in",
+        "relatedArticle": "die",
+        "relatedDisplayText": "die Schülerin",
+        "relatedGender": "feminine",
+        "relatedId": "lex:schuelerin",
+        "relatedLemma": "Schülerin",
+        "relatedMeaningEn": "school student",
+        "sharedStem": "Schüler"
+      },
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Schüler",
+      "sourcePriority": 1
+    },
+    "lex:schuelerin": {
+      "article": "die",
+      "canonicalPath": "/vocabulary/id-6c65783a73636875656c6572696e",
+      "displayText": "die Schülerin",
+      "gender": "feminine",
+      "hubSegment": "vocabulary",
+      "id": "lex:schuelerin",
+      "kind": "Lexeme",
+      "lemma": "Schülerin",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "school student",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Schülerin",
+      "sourcePriority": 1
+    },
+    "lex:schweiz": {
+      "article": "die",
+      "canonicalPath": "/vocabulary/id-6c65783a7363687765697a",
+      "displayText": "die Schweiz",
+      "gender": "feminine",
+      "hubSegment": "vocabulary",
+      "id": "lex:schweiz",
+      "kind": "Lexeme",
+      "lemma": "Schweiz",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Switzerland",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Schweiz",
+      "sourcePriority": 1
+    },
+    "lex:sehr-gut-danke": {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a736568722d6775742d64616e6b65",
+      "displayText": "Sehr gut, danke.",
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:sehr-gut-danke",
+      "kind": "Lexeme",
+      "lemma": "Sehr gut, danke.",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Very well, thank you.",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Sehr gut, danke.",
+      "sourcePriority": 1
+    },
+    "lex:single": {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a73696e676c65",
+      "displayText": "der Single",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:single",
+      "kind": "Lexeme",
+      "lemma": "Single",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "single person",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Single",
+      "sourcePriority": 1
+    },
+    "lex:spanien": {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a7370616e69656e",
+      "displayText": "Spanien",
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:spanien",
+      "kind": "Lexeme",
+      "lemma": "Spanien",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Spain",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Spanien",
+      "sourcePriority": 1
+    },
+    "lex:stelle": {
+      "article": "die",
+      "canonicalPath": "/vocabulary/id-6c65783a7374656c6c65",
+      "displayText": "die Stelle",
+      "gender": "feminine",
+      "hubSegment": "vocabulary",
+      "id": "lex:stelle",
+      "kind": "Lexeme",
+      "lemma": "Stelle",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "position/job",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Stelle",
+      "sourcePriority": 1
+    },
+    "lex:student": {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a73747564656e74",
+      "displayText": "der Student",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:student",
+      "kind": "Lexeme",
+      "lemma": "Student",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "university student",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": {
+        "feminineSuffix": "in",
+        "operationLabel": "Add feminine -in",
+        "relatedArticle": "die",
+        "relatedDisplayText": "die Studentin",
+        "relatedGender": "feminine",
+        "relatedId": "lex:studentin",
+        "relatedLemma": "Studentin",
+        "relatedMeaningEn": "university student",
+        "sharedStem": "Student"
+      },
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Student",
+      "sourcePriority": 1
+    },
+    "lex:studentin": {
+      "article": "die",
+      "canonicalPath": "/vocabulary/id-6c65783a73747564656e74696e",
+      "displayText": "die Studentin",
+      "gender": "feminine",
+      "hubSegment": "vocabulary",
+      "id": "lex:studentin",
+      "kind": "Lexeme",
+      "lemma": "Studentin",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "university student",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Studentin",
+      "sourcePriority": 1
+    },
+    "lex:studium": {
+      "article": "das",
+      "canonicalPath": "/vocabulary/id-6c65783a7374756469756d",
+      "displayText": "das Studium",
+      "gender": "neuter",
+      "hubSegment": "vocabulary",
+      "id": "lex:studium",
+      "kind": "Lexeme",
+      "lemma": "Studium",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "studies",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Studium",
+      "sourcePriority": 1
+    },
+    "lex:super": {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a7375706572",
+      "displayText": "Super!",
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:super",
+      "kind": "Lexeme",
+      "lemma": "Super!",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Great!",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Super!",
+      "sourcePriority": 1
+    },
+    "lex:tschues": {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a74736368756573",
+      "displayText": "Tschüs",
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:tschues",
+      "kind": "Lexeme",
+      "lemma": "Tschüs",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Bye",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Tschüs",
+      "sourcePriority": 1
+    },
+    "lex:tuerkei": {
+      "article": "die",
+      "canonicalPath": "/vocabulary/id-6c65783a747565726b6569",
+      "displayText": "die Türkei",
+      "gender": "feminine",
+      "hubSegment": "vocabulary",
+      "id": "lex:tuerkei",
+      "kind": "Lexeme",
+      "lemma": "Türkei",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Turkey",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Türkei",
+      "sourcePriority": 1
+    },
+    "lex:usa": {
+      "article": "die",
+      "canonicalPath": "/vocabulary/id-6c65783a757361",
+      "displayText": "die USA",
+      "gender": "feminine",
+      "hubSegment": "vocabulary",
+      "id": "lex:usa",
+      "kind": "Lexeme",
+      "lemma": "USA",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "USA",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "USA",
+      "sourcePriority": 1
+    },
+    "lex:verheiratet": {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a7665726865697261746574",
+      "displayText": "verheiratet",
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:verheiratet",
+      "kind": "Lexeme",
+      "lemma": "verheiratet",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "married",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "verheiratet",
+      "sourcePriority": 1
+    },
+    "lex:verkaeufer": {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a7665726b616575666572",
+      "displayText": "der Verkäufer",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:verkaeufer",
+      "kind": "Lexeme",
+      "lemma": "Verkäufer",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "shop assistant",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": {
+        "feminineSuffix": "in",
+        "operationLabel": "Add feminine -in",
+        "relatedArticle": "die",
+        "relatedDisplayText": "die Verkäuferin",
+        "relatedGender": "feminine",
+        "relatedId": "lex:verkaeuferin",
+        "relatedLemma": "Verkäuferin",
+        "relatedMeaningEn": "shop assistant",
+        "sharedStem": "Verkäufer"
+      },
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Verkäufer",
+      "sourcePriority": 1
+    },
+    "lex:verkaeuferin": {
+      "article": "die",
+      "canonicalPath": "/vocabulary/id-6c65783a7665726b616575666572696e",
+      "displayText": "die Verkäuferin",
+      "gender": "feminine",
+      "hubSegment": "vocabulary",
+      "id": "lex:verkaeuferin",
+      "kind": "Lexeme",
+      "lemma": "Verkäuferin",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "shop assistant",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Verkäuferin",
+      "sourcePriority": 1
+    },
+    "lex:vorname": {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a766f726e616d65",
+      "displayText": "der Vorname",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:vorname",
+      "kind": "Lexeme",
+      "lemma": "Vorname",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "first name",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [
+        "Vornamen"
+      ],
+      "publicationStatus": "published",
+      "singular": "Vorname",
+      "sourcePriority": 1
+    },
+    "lex:wohnort": {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a776f686e6f7274",
+      "displayText": "der Wohnort",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:wohnort",
+      "kind": "Lexeme",
+      "lemma": "Wohnort",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "place of residence",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": null,
+      "pluralGapMessage": "Plural is not published for this item.",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Wohnort",
+      "sourcePriority": 1
+    },
+    "qa:age-casual": {
+      "acceptedRealizations": [
+        "Wie alt bist du?",
+        "Ich bin … Jahre alt."
+      ],
+      "answers": [
+        {
+          "id": "phrase:age-casual-a1",
+          "realization": "Ich bin … Jahre alt.",
+          "role": "answer"
+        }
+      ],
+      "canonicalPath": "/phrases/id-71613a6167652d63617375616c",
+      "conversationLevels": [],
+      "displayText": "Wie alt bist du?",
+      "hubSegment": "phrases",
+      "id": "qa:age-casual",
+      "intent": "qa:age-casual",
+      "kind": "QAPair",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "publicationStatus": "published",
+      "question": {
+        "id": "phrase:age-casual-q",
+        "realization": "Wie alt bist du?",
+        "role": "question"
+      },
+      "register": "informal",
+      "sourcePriority": 1
+    },
+    "qa:age-formal": {
+      "acceptedRealizations": [
+        "Wie alt sind Sie?",
+        "Ich bin … Jahre alt."
+      ],
+      "answers": [
+        {
+          "id": "phrase:age-formal-a1",
+          "realization": "Ich bin … Jahre alt.",
+          "role": "answer"
+        }
+      ],
+      "canonicalPath": "/phrases/id-71613a6167652d666f726d616c",
+      "conversationLevels": [],
+      "displayText": "Wie alt sind Sie?",
+      "hubSegment": "phrases",
+      "id": "qa:age-formal",
+      "intent": "qa:age-formal",
+      "kind": "QAPair",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "publicationStatus": "published",
+      "question": {
+        "id": "phrase:age-formal-q",
+        "realization": "Wie alt sind Sie?",
+        "role": "question"
+      },
+      "register": "formal",
+      "sourcePriority": 1
+    },
+    "qa:identity": {
+      "acceptedRealizations": [
+        "Wer ist das?",
+        "Das ist …"
+      ],
+      "answers": [
+        {
+          "id": "phrase:identity-a1",
+          "realization": "Das ist …",
+          "role": "answer"
+        }
+      ],
+      "canonicalPath": "/phrases/id-71613a6964656e74697479",
+      "conversationLevels": [],
+      "displayText": "Wer ist das?",
+      "hubSegment": "phrases",
+      "id": "qa:identity",
+      "intent": "qa:identity",
+      "kind": "QAPair",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "publicationStatus": "published",
+      "question": {
+        "id": "phrase:identity-q",
+        "realization": "Wer ist das?",
+        "role": "question"
+      },
+      "register": "neutral",
+      "sourcePriority": 1
+    },
+    "qa:name-casual": {
+      "acceptedRealizations": [
+        "Wie heißt du?",
+        "Ich heiße …",
+        "Mein Name ist …"
+      ],
+      "answers": [
+        {
+          "id": "phrase:name-casual-a1",
+          "realization": "Ich heiße …",
+          "role": "answer"
+        },
+        {
+          "id": "phrase:name-casual-a2",
+          "realization": "Mein Name ist …",
+          "role": "answer"
+        }
+      ],
+      "canonicalPath": "/phrases/id-71613a6e616d652d63617375616c",
+      "conversationLevels": [],
+      "displayText": "Wie heißt du?",
+      "hubSegment": "phrases",
+      "id": "qa:name-casual",
+      "intent": "qa:name-casual",
+      "kind": "QAPair",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "publicationStatus": "published",
+      "question": {
+        "id": "phrase:name-casual-q",
+        "realization": "Wie heißt du?",
+        "role": "question"
+      },
+      "register": "informal",
+      "sourcePriority": 1
+    },
+    "qa:name-formal": {
+      "acceptedRealizations": [
+        "Wie heißen Sie?",
+        "Ich heiße …",
+        "Mein Name ist …"
+      ],
+      "answers": [
+        {
+          "id": "phrase:name-formal-a1",
+          "realization": "Ich heiße …",
+          "role": "answer"
+        },
+        {
+          "id": "phrase:name-formal-a2",
+          "realization": "Mein Name ist …",
+          "role": "answer"
+        }
+      ],
+      "canonicalPath": "/phrases/id-71613a6e616d652d666f726d616c",
+      "conversationLevels": [],
+      "displayText": "Wie heißen Sie?",
+      "hubSegment": "phrases",
+      "id": "qa:name-formal",
+      "intent": "qa:name-formal",
+      "kind": "QAPair",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "publicationStatus": "published",
+      "question": {
+        "id": "phrase:name-formal-q",
+        "realization": "Wie heißen Sie?",
+        "role": "question"
+      },
+      "register": "formal",
+      "sourcePriority": 1
+    },
+    "qa:origin-casual": {
+      "acceptedRealizations": [
+        "Woher kommst du?",
+        "Ich komme aus …"
+      ],
+      "answers": [
+        {
+          "id": "phrase:origin-casual-a1",
+          "realization": "Ich komme aus …",
+          "role": "answer"
+        }
+      ],
+      "canonicalPath": "/phrases/id-71613a6f726967696e2d63617375616c",
+      "conversationLevels": [],
+      "displayText": "Woher kommst du?",
+      "hubSegment": "phrases",
+      "id": "qa:origin-casual",
+      "intent": "qa:origin-casual",
+      "kind": "QAPair",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "publicationStatus": "published",
+      "question": {
+        "id": "phrase:origin-casual-q",
+        "realization": "Woher kommst du?",
+        "role": "question"
+      },
+      "register": "informal",
+      "sourcePriority": 1
+    },
+    "qa:origin-formal": {
+      "acceptedRealizations": [
+        "Woher kommen Sie?",
+        "Ich komme aus …"
+      ],
+      "answers": [
+        {
+          "id": "phrase:origin-formal-a1",
+          "realization": "Ich komme aus …",
+          "role": "answer"
+        }
+      ],
+      "canonicalPath": "/phrases/id-71613a6f726967696e2d666f726d616c",
+      "conversationLevels": [],
+      "displayText": "Woher kommen Sie?",
+      "hubSegment": "phrases",
+      "id": "qa:origin-formal",
+      "intent": "qa:origin-formal",
+      "kind": "QAPair",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "publicationStatus": "published",
+      "question": {
+        "id": "phrase:origin-formal-q",
+        "realization": "Woher kommen Sie?",
+        "role": "question"
+      },
+      "register": "formal",
+      "sourcePriority": 1
+    },
+    "qa:profession-casual-main": {
+      "acceptedRealizations": [
+        "Was bist du von Beruf?",
+        "Ich bin … von Beruf.",
+        "Ich bin …",
+        "Ich arbeite als …"
+      ],
+      "answers": [
+        {
+          "id": "phrase:profession-casual-main-a1",
+          "realization": "Ich bin … von Beruf.",
+          "role": "answer"
+        },
+        {
+          "id": "phrase:profession-casual-main-a2",
+          "realization": "Ich bin …",
+          "role": "answer"
+        },
+        {
+          "id": "phrase:profession-casual-main-a3",
+          "realization": "Ich arbeite als …",
+          "role": "answer"
+        }
+      ],
+      "canonicalPath": "/phrases/id-71613a70726f66657373696f6e2d63617375616c2d6d61696e",
+      "conversationLevels": [
+        {
+          "description": "Study the published question and answer patterns.",
+          "id": "model",
+          "status": "available",
+          "title": "Model"
+        },
+        {
+          "description": "Choose among the published answer patterns.",
+          "id": "guided-recognition",
+          "status": "available",
+          "title": "Guided recognition"
+        },
+        {
+          "description": "Build one published answer frame from canonical published fragments.",
+          "id": "substitution",
+          "status": "available",
+          "title": "Substitution"
+        },
+        {
+          "description": "Type only the published fixed patterns; filled profession sentences are not accepted unless published.",
+          "id": "independent-construction",
+          "status": "available",
+          "title": "Independent construction"
+        },
+        {
+          "description": "Record, play back, and self-check. Self-rating is reflection only.",
+          "id": "spoken-role-play",
+          "status": "available",
+          "title": "Spoken role-play"
+        }
+      ],
+      "displayText": "Was bist du von Beruf?",
+      "hubSegment": "phrases",
+      "id": "qa:profession-casual-main",
+      "intent": "qa:profession-casual-main",
+      "kind": "QAPair",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "publicationStatus": "published",
+      "question": {
+        "id": "phrase:profession-casual-main-q",
+        "realization": "Was bist du von Beruf?",
+        "role": "question"
+      },
+      "register": "informal",
+      "sourcePriority": 1
+    },
+    "qa:profession-formal-main": {
+      "acceptedRealizations": [
+        "Was sind Sie von Beruf?",
+        "Ich bin … von Beruf.",
+        "Ich bin …",
+        "Ich arbeite als …"
+      ],
+      "answers": [
+        {
+          "id": "phrase:profession-formal-main-a1",
+          "realization": "Ich bin … von Beruf.",
+          "role": "answer"
+        },
+        {
+          "id": "phrase:profession-formal-main-a2",
+          "realization": "Ich bin …",
+          "role": "answer"
+        },
+        {
+          "id": "phrase:profession-formal-main-a3",
+          "realization": "Ich arbeite als …",
+          "role": "answer"
+        }
+      ],
+      "canonicalPath": "/phrases/id-71613a70726f66657373696f6e2d666f726d616c2d6d61696e",
+      "conversationLevels": [],
+      "displayText": "Was sind Sie von Beruf?",
+      "hubSegment": "phrases",
+      "id": "qa:profession-formal-main",
+      "intent": "qa:profession-formal-main",
+      "kind": "QAPair",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "publicationStatus": "published",
+      "question": {
+        "id": "phrase:profession-formal-main-q",
+        "realization": "Was sind Sie von Beruf?",
+        "role": "question"
+      },
+      "register": "formal",
+      "sourcePriority": 1
+    },
+    "qa:residence-casual": {
+      "acceptedRealizations": [
+        "Wo wohnst du?",
+        "Ich wohne in …"
+      ],
+      "answers": [
+        {
+          "id": "phrase:residence-casual-a1",
+          "realization": "Ich wohne in …",
+          "role": "answer"
+        }
+      ],
+      "canonicalPath": "/phrases/id-71613a7265736964656e63652d63617375616c",
+      "conversationLevels": [],
+      "displayText": "Wo wohnst du?",
+      "hubSegment": "phrases",
+      "id": "qa:residence-casual",
+      "intent": "qa:residence-casual",
+      "kind": "QAPair",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "publicationStatus": "published",
+      "question": {
+        "id": "phrase:residence-casual-q",
+        "realization": "Wo wohnst du?",
+        "role": "question"
+      },
+      "register": "informal",
+      "sourcePriority": 1
+    },
+    "qa:residence-formal": {
+      "acceptedRealizations": [
+        "Wo wohnen Sie?",
+        "Ich wohne in …"
+      ],
+      "answers": [
+        {
+          "id": "phrase:residence-formal-a1",
+          "realization": "Ich wohne in …",
+          "role": "answer"
+        }
+      ],
+      "canonicalPath": "/phrases/id-71613a7265736964656e63652d666f726d616c",
+      "conversationLevels": [],
+      "displayText": "Wo wohnen Sie?",
+      "hubSegment": "phrases",
+      "id": "qa:residence-formal",
+      "intent": "qa:residence-formal",
+      "kind": "QAPair",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "publicationStatus": "published",
+      "question": {
+        "id": "phrase:residence-formal-q",
+        "realization": "Wo wohnen Sie?",
+        "role": "question"
+      },
+      "register": "formal",
+      "sourcePriority": 1
+    },
+    "qa:wellbeing-casual": {
+      "acceptedRealizations": [
+        "Wie geht’s dir?",
+        "Super!",
+        "Sehr gut, danke.",
+        "Gut, danke.",
+        "Es geht.",
+        "Nicht so gut."
+      ],
+      "answers": [
+        {
+          "id": "phrase:wellbeing-casual-a1",
+          "realization": "Super!",
+          "role": "answer"
+        },
+        {
+          "id": "phrase:wellbeing-casual-a2",
+          "realization": "Sehr gut, danke.",
+          "role": "answer"
+        },
+        {
+          "id": "phrase:wellbeing-casual-a3",
+          "realization": "Gut, danke.",
+          "role": "answer"
+        },
+        {
+          "id": "phrase:wellbeing-casual-a4",
+          "realization": "Es geht.",
+          "role": "answer"
+        },
+        {
+          "id": "phrase:wellbeing-casual-a5",
+          "realization": "Nicht so gut.",
+          "role": "answer"
+        }
+      ],
+      "canonicalPath": "/phrases/id-71613a77656c6c6265696e672d63617375616c",
+      "conversationLevels": [],
+      "displayText": "Wie geht’s dir?",
+      "hubSegment": "phrases",
+      "id": "qa:wellbeing-casual",
+      "intent": "qa:wellbeing-casual",
+      "kind": "QAPair",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "publicationStatus": "published",
+      "question": {
+        "id": "phrase:wellbeing-casual-q",
+        "realization": "Wie geht’s dir?",
+        "role": "question"
+      },
+      "register": "informal",
+      "sourcePriority": 1
+    },
+    "qa:wellbeing-formal": {
+      "acceptedRealizations": [
+        "Wie geht’s Ihnen?",
+        "Sehr gut, danke.",
+        "Gut, danke.",
+        "Es geht.",
+        "Nicht so gut."
+      ],
+      "answers": [
+        {
+          "id": "phrase:wellbeing-formal-a1",
+          "realization": "Sehr gut, danke.",
+          "role": "answer"
+        },
+        {
+          "id": "phrase:wellbeing-formal-a2",
+          "realization": "Gut, danke.",
+          "role": "answer"
+        },
+        {
+          "id": "phrase:wellbeing-formal-a3",
+          "realization": "Es geht.",
+          "role": "answer"
+        },
+        {
+          "id": "phrase:wellbeing-formal-a4",
+          "realization": "Nicht so gut.",
+          "role": "answer"
+        }
+      ],
+      "canonicalPath": "/phrases/id-71613a77656c6c6265696e672d666f726d616c",
+      "conversationLevels": [],
+      "displayText": "Wie geht’s Ihnen?",
+      "hubSegment": "phrases",
+      "id": "qa:wellbeing-formal",
+      "intent": "qa:wellbeing-formal",
+      "kind": "QAPair",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "publicationStatus": "published",
+      "question": {
+        "id": "phrase:wellbeing-formal-q",
+        "realization": "Wie geht’s Ihnen?",
+        "role": "question"
+      },
+      "register": "formal",
+      "sourcePriority": 1
+    },
+    "qa:work-formal-main": {
+      "acceptedRealizations": [
+        "Was machen Sie beruflich?",
+        "Ich arbeite als …",
+        "Ich arbeite bei …",
+        "Ich studiere …",
+        "Ich arbeite im Moment nicht."
+      ],
+      "answers": [
+        {
+          "id": "phrase:work-formal-main-a1",
+          "realization": "Ich arbeite als …",
+          "role": "answer"
+        },
+        {
+          "id": "phrase:work-formal-main-a2",
+          "realization": "Ich arbeite bei …",
+          "role": "answer"
+        },
+        {
+          "id": "phrase:work-formal-main-a3",
+          "realization": "Ich studiere …",
+          "role": "answer"
+        },
+        {
+          "id": "phrase:work-formal-main-a4",
+          "realization": "Ich arbeite im Moment nicht.",
+          "role": "answer"
+        }
+      ],
+      "canonicalPath": "/phrases/id-71613a776f726b2d666f726d616c2d6d61696e",
+      "conversationLevels": [],
+      "displayText": "Was machen Sie beruflich?",
+      "hubSegment": "phrases",
+      "id": "qa:work-formal-main",
+      "intent": "qa:work-formal-main",
+      "kind": "QAPair",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "publicationStatus": "published",
+      "question": {
+        "id": "phrase:work-formal-main-q",
+        "realization": "Was machen Sie beruflich?",
+        "role": "question"
+      },
+      "register": "formal",
+      "sourcePriority": 1
+    },
+    "verb:heissen": {
+      "canonicalPath": "/verbs/id-766572623a6865697373656e",
+      "displayText": "heißen",
+      "hubSegment": "verbs",
+      "id": "verb:heissen",
+      "infinitive": "heißen",
+      "kind": "Verb",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "to be called",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "paradigmNote": "Only the published present forms are shown.",
+      "present": [
+        {
+          "form": "heiße",
+          "person": "ich",
+          "personLabel": "ich"
+        },
+        {
+          "form": "heißt",
+          "person": "du",
+          "personLabel": "du"
+        },
+        {
+          "form": "heißt",
+          "person": "er_sie_es",
+          "personLabel": "er/sie/es"
+        },
+        {
+          "form": "heißen",
+          "person": "Sie_formal",
+          "personLabel": "Sie (formal)"
+        }
+      ],
+      "publicationStatus": "published",
+      "sourcePriority": 1
+    },
+    "verb:kommen": {
+      "canonicalPath": "/verbs/id-766572623a6b6f6d6d656e",
+      "displayText": "kommen",
+      "hubSegment": "verbs",
+      "id": "verb:kommen",
+      "infinitive": "kommen",
+      "kind": "Verb",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "to come",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "paradigmNote": "Only the published present forms are shown.",
+      "present": [
+        {
+          "form": "komme",
+          "person": "ich",
+          "personLabel": "ich"
+        },
+        {
+          "form": "kommst",
+          "person": "du",
+          "personLabel": "du"
+        },
+        {
+          "form": "kommt",
+          "person": "er_sie_es",
+          "personLabel": "er/sie/es"
+        },
+        {
+          "form": "kommen",
+          "person": "Sie_formal",
+          "personLabel": "Sie (formal)"
+        }
+      ],
+      "publicationStatus": "published",
+      "sourcePriority": 1
+    },
+    "verb:lernen": {
+      "canonicalPath": "/verbs/id-766572623a6c65726e656e",
+      "displayText": "lernen",
+      "hubSegment": "verbs",
+      "id": "verb:lernen",
+      "infinitive": "lernen",
+      "kind": "Verb",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "to learn",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "paradigmNote": "Only the published present forms are shown.",
+      "present": [
+        {
+          "form": "lerne",
+          "person": "ich",
+          "personLabel": "ich"
+        },
+        {
+          "form": "lernst",
+          "person": "du",
+          "personLabel": "du"
+        },
+        {
+          "form": "lernt",
+          "person": "er_sie_es",
+          "personLabel": "er/sie/es"
+        },
+        {
+          "form": "lernen",
+          "person": "Sie_formal",
+          "personLabel": "Sie (formal)"
+        }
+      ],
+      "publicationStatus": "published",
+      "sourcePriority": 1
+    },
+    "verb:sein": {
+      "canonicalPath": "/verbs/id-766572623a7365696e",
+      "displayText": "sein",
+      "hubSegment": "verbs",
+      "id": "verb:sein",
+      "infinitive": "sein",
+      "kind": "Verb",
+      "lessonIds": [
+        "lesson:01",
+        "lesson:02"
+      ],
+      "meaningEn": "to be",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "paradigmNote": "This paradigm is irregular and must be learned as forms.",
+      "present": [
+        {
+          "form": "bin",
+          "person": "ich",
+          "personLabel": "ich"
+        },
+        {
+          "form": "bist",
+          "person": "du",
+          "personLabel": "du"
+        },
+        {
+          "form": "ist",
+          "person": "er_sie_es",
+          "personLabel": "er/sie/es"
+        },
+        {
+          "form": "sind",
+          "person": "wir",
+          "personLabel": "wir"
+        },
+        {
+          "form": "seid",
+          "person": "ihr",
+          "personLabel": "ihr"
+        },
+        {
+          "form": "sind",
+          "person": "sie_plural",
+          "personLabel": "sie (plural)"
+        },
+        {
+          "form": "sind",
+          "person": "Sie_formal",
+          "personLabel": "Sie (formal)"
+        }
+      ],
+      "publicationStatus": "published",
+      "sourcePriority": 1
+    }
+  },
   "projectionKind": "learner-details",
   "representativeCount": 3,
   "representatives": [

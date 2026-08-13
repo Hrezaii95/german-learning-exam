@@ -14,7 +14,7 @@ import {
 } from "../review/types.js";
 
 /** Current learner-state envelope identity. Unknown/future versions fail closed. */
-export const LEARNER_STATE_SCHEMA_VERSION = "1.0.0" as const;
+export const LEARNER_STATE_SCHEMA_VERSION = "1.1.0" as const;
 export type LearnerStateSchemaVersion = typeof LEARNER_STATE_SCHEMA_VERSION;
 
 /** Expected content-bundle schema pin for Alpha (injected resolver still required). */
@@ -53,6 +53,18 @@ export type ResumeState = {
   readonly stageId: string;
   /** Non-negative integer progress index within the activity/stage. */
   readonly position: number;
+};
+
+export type ActivityProgressStatus = "inProgress" | "completed";
+
+/** Explicit journey progress. It is navigation state, never mastery evidence. */
+export type ActivityProgressRecord = {
+  readonly lessonId: string;
+  readonly stageId: string;
+  readonly activityId: string;
+  readonly progressState: ActivityProgressStatus;
+  readonly startedAt: string;
+  readonly completedAt?: string;
 };
 
 export type LearnerTagRecord = {
@@ -102,6 +114,7 @@ export type LearnerStateEnvelope = {
   readonly contentBundle: ContentBundleIdentity;
   readonly settings: LearnerSettings;
   readonly resume: ResumeState | null;
+  readonly activityProgress: readonly ActivityProgressRecord[];
   readonly tags: readonly LearnerTagRecord[];
   readonly notes: readonly LearnerNoteRecord[];
   readonly events: readonly LearnerEvent[];

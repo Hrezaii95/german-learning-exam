@@ -23,6 +23,13 @@ import {
   RapidVerbSection,
 } from "@/components/content/rapid-learning-sections";
 import type { LearnerActivity, LearnerLesson } from "@/lib/content/types";
+import type { ActivityProgressRecord } from "@german-learning/learning";
+import {
+  activityDisplayStatus,
+  completedActivityCount,
+  nextIncompleteActivity,
+  orderedLessonActivities,
+} from "@/lib/learner-state/activity-progress";
 
 export function LessonBrowser({ lessons }: { lessons: readonly LearnerLesson[] }) {
   return (
@@ -80,11 +87,17 @@ export function LessonOverview({
   lesson,
   activities,
   navigation = null,
+  progress = [],
+  progressState = "loading",
+  recommendLessonOne = false,
 }: {
   lesson: LearnerLesson;
   /** Projection activities for this lesson — labels resolve from prompts, not raw IDs. */
   activities: readonly LearnerActivity[];
   navigation?: NavigationContext | null;
+  progress?: readonly ActivityProgressRecord[];
+  progressState?: "loading" | "ready" | "error";
+  recommendLessonOne?: boolean;
 }) {
   const activitiesById = new Map(
     activities.map((activity) => [activity.id, activity] as const),
@@ -93,6 +106,10 @@ export function LessonOverview({
   const outbound = resolveOutboundNavigationContext(navigation, currentContext);
   const backHref =
     navigation != null ? resolveBackHref(navigation, "lesson") : null;
+  const orderedActivities = orderedLessonActivities(lesson, activities);
+  const completedCount = completedActivityCount(orderedActivities, progress);
+  const percent = orderedActivities.length === 0 ? 0 : Math.round((completedCount / orderedActivities.length) * 100);
+  const nextActivity = nextIncompleteActivity(orderedActivities, progress);
 
   return (
     <div className="stack">
@@ -109,6 +126,27 @@ export function LessonOverview({
           <span className="meta-chip">{lesson.estimatedMinutesTotal} minutes</span>
           <span className="meta-chip">{lesson.activityCount} activities</span>
         </div>
+        <div className="lesson-progress" aria-live="polite">
+          <strong>{completedCount} of {orderedActivities.length} completed · {percent}%</strong>
+          <progress value={completedCount} max={orderedActivities.length || 1} aria-label={`Lesson ${lesson.routeSegment} progress`} />
+          {progressState === "loading" ? <span className="dense">Loading saved progress…</span> : null}
+          {progressState === "error" ? <span role="alert">Saved progress is unavailable. No stored work was changed.</span> : null}
+        </div>
+        {recommendLessonOne ? (
+          <aside className="recommendation" aria-label="Lesson recommendation">
+            We recommend completing Lesson 01 first. Lesson 02 remains available.
+            {" "}<Link href="/lessons/01">Open Lesson 01</Link>
+          </aside>
+        ) : null}
+        {progressState === "ready" ? (
+          <p>
+            {nextActivity ? (
+              <Link className="btn btn-primary" href={appendNavigationContext(nextActivity.canonicalPath, outbound)}>
+                {activityDisplayStatus(nextActivity.id, progress) === "In progress" ? "Continue activity" : "Start next activity"}
+              </Link>
+            ) : <strong>All published activities in this lesson are completed.</strong>}
+          </p>
+        ) : null}
       </header>
 
       <section className="panel" aria-labelledby="goals-heading">
@@ -126,6 +164,9 @@ export function LessonOverview({
           {lesson.stages.map((stage) => (
             <article key={stage.id} className="stage-card">
               <h3>{stage.titleEn}</h3>
+              <p className="dense">
+                {stage.activityIds.filter((id) => activityDisplayStatus(id, progress) === "Completed").length} of {stage.activityIds.length} completed
+              </p>
               <div className="meta-row">
                 <span className="meta-chip">{stage.estimatedMinutes} min</span>
                 <span className="meta-chip">
@@ -148,6 +189,7 @@ export function LessonOverview({
                         >
                           {activityLabel(activityId, activitiesById)}
                         </Link>
+                        <span className="activity-status">{activityDisplayStatus(activityId, progress)}</span>
                       </li>
                     );
                   })}
@@ -169,10 +211,24 @@ export function ActivityScreen({
   lesson,
   activity,
   navigation = null,
+  activities = [activity],
+  status = "Not started",
+  progressState = "loading",
+  busy = false,
+  recommendLessonOne = false,
+  onStart,
+  onComplete,
 }: {
   lesson: LearnerLesson;
   activity: LearnerActivity;
   navigation?: NavigationContext | null;
+  activities?: readonly LearnerActivity[];
+  status?: "Not started" | "In progress" | "Completed";
+  progressState?: "loading" | "ready" | "error";
+  busy?: boolean;
+  recommendLessonOne?: boolean;
+  onStart?: () => void;
+  onComplete?: () => void;
 }) {
   const lessonContext = buildLessonNavigationContext(
     lessonSegment(lesson),
@@ -190,6 +246,10 @@ export function ActivityScreen({
   const showVerbs = ["activity:lesson-01-heissen-sein-notice", "activity:lesson-01-pronoun-verb-builder", "activity:lesson-02-full-person-conjugation", "activity:lesson-02-sein-arbeiten-contrast"].includes(activity.id);
   const showProfessions = ["activity:lesson-02-core-professions", "activity:lesson-02-person-form-morphology", "activity:lesson-02-profession-qa-builder"].includes(activity.id);
   const showRapidPractice = activity.id.endsWith("checkpoint-summary");
+  const orderedActivities = orderedLessonActivities(lesson, activities);
+  const position = orderedActivities.findIndex((item) => item.id === activity.id);
+  const previous = position > 0 ? orderedActivities[position - 1] ?? null : null;
+  const next = position >= 0 ? orderedActivities[position + 1] ?? null : null;
 
   return (
     <div className="stack">
@@ -200,8 +260,31 @@ export function ActivityScreen({
           {" · "}
           {activity.stageTitleEn}
         </p>
+        <p className="dense">Activity {position + 1} of {orderedActivities.length}</p>
         <h1>{activity.promptPlainText}</h1>
         <p className="lede">Learn from validated course content, then practise through the matching interactive tools.</p>
+        <div className="journey-status" aria-live="polite">
+          <strong>Status: {status}</strong>
+          {progressState === "loading" ? <span>Loading saved progress…</span> : null}
+          {progressState === "error" ? <span role="alert">Saved progress is unavailable. Controls are disabled.</span> : null}
+        </div>
+        {recommendLessonOne ? (
+          <aside className="recommendation" aria-label="Lesson recommendation">
+            We recommend completing Lesson 01 first. Lesson 02 remains available.
+          </aside>
+        ) : null}
+        <div className="journey-actions">
+          {status === "Not started" ? <button className="btn btn-primary" type="button" onClick={onStart} disabled={busy || progressState !== "ready"}>Start activity</button> : null}
+          {status === "In progress" ? <button className="btn btn-primary" type="button" onClick={onComplete} disabled={busy || progressState !== "ready"}>Complete activity</button> : null}
+          {previous ? <Link className="btn btn-secondary" href={appendNavigationContext(previous.canonicalPath, outbound)}>Previous activity</Link> : null}
+          {next ? <Link className="btn btn-secondary" href={appendNavigationContext(next.canonicalPath, outbound)}>Next activity</Link> : null}
+          <Link className="btn btn-secondary" href={lessonHref}>Return to lesson</Link>
+        </div>
+        {status === "Completed" && showRapidPractice ? (
+          <div className="checkpoint-handoff">
+            <strong>Checkpoint recorded.</strong> Continue with <Link href="/review">Review</Link> or <Link href={lessonHref}>the lesson overview</Link>. Review is a separate stage.
+          </div>
+        ) : null}
       </header>
 
       {illustration ? <RichLessonVisual illustration={illustration} /> : null}

@@ -39,6 +39,46 @@
   --content-max: 52rem;
 }
 
+.lesson-progress,
+.journey-status {
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  max-width: 38rem;
+}
+
+.lesson-progress progress {
+  width: 100%;
+  min-height: 0.75rem;
+}
+
+.journey-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.journey-actions .btn,
+.journey-actions button {
+  min-height: 44px;
+}
+
+.activity-status {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.recommendation,
+.checkpoint-handoff {
+  margin-top: 1rem;
+  padding: 0.875rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+}
+
 /* Rich contextual illustrations support recall; semantic rules remain HTML. */
 .rich-visual {
   margin: 0;

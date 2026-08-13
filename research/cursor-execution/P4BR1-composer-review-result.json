@@ -1,0 +1,27 @@
+{
+  "id": "run-cd4f06ea-29c2-4e3c-8c2e-eab51059d60a",
+  "requestId": "81e4a4f2-95ad-48b6-b10d-d9f7c8cb01c4",
+  "status": "finished",
+  "result": "# P4BR1 final re-review (read-only)\n\n**Verdict: APPROVE** — all eight P4B Composer P2 items are closed in current code and tests; no new actionable P0–P2 recorder, event, or React regressions identified from this pass.\n\n---\n\n## Eight P2 closures (verified)\n\n| # | P4B Composer P2 | Evidence in code/tests |\n|---|-----------------|------------------------|\n| **1** | Playback `play()` reject / `audio.onerror` → stable `PlaybackError`, no throw | `createMediaRecorderController.ts` (`playRecording` catch + `onerror` → `stopAudioElement` + `PlaybackError`). Tests: `play() rejection yields PlaybackError without throw`, `audio.onerror yields PlaybackError without throw` in `p4b-recorder-lifecycle-behavior.test.ts` (lines 314–393). |\n| **2** | Dispose during recording + stale `onstop`/data → no `finalized`/`ready` resurrection | Controller guards `disposed \\|\\| token !== generation` on handlers; `dispose()` bumps `generation`. Test: `dispose during recording ignores stale onstop/data; tracks stopped` (395–439). |\n| **3** | Active playback URL lifecycle (no premature revoke; revoke after replace/retry) | `revokeUrl` skips while `playingUrl === url`; `startRecording`/`retry` call `stopAudioElement` before revoke. Test: `active playback + startRecording/retry: no premature revoke; eventual revoke after stop` (441–493) — **no** `stopPlayback()` before mid-playback `startRecording`/`retry`. |\n| **4** | Guided recognition reveal/hint → `partial`, never `correct` | `gradePublishedAnswerAttempt` caps when `revealed \\|\\| hintsUsed > 0`. Emit test: `guided-recognition reveal/hint emits partial never correct` in `p4b-conversation.test.ts` (149–168). |\n| **5** | Substitution reveal/hint → `partial`, never `correct` | Same grading + `substitution reveal/hint emits partial never correct` (194–216). |\n| **6** | Correct submit without Continue does not unlock next level | `GuidedRecognitionLevel` only calls `onComplete` from Continue (`continueAfterSuccess`). Behavior test: `correct submit without Continue does not unlock next level` (125–165) — substitution stays `disabled` / `data-accessible=\"false\"` until Continue. |\n| **7** | `SpokenRolePlayLevel`: no completion until record+playback+self-check; exactly one `recordingCycle` | `emitRecordingCycle` fail-closed on incomplete cycle; `emittedRef` blocks duplicate `onComplete`. `p4b-spoken-behavior.test.ts` mocks `useMediaRecorder`, drives `finishCycle`, asserts `onComplete`/`onEvent` once and `parseLearnerEvent` → `recordingCycle` with required booleans (97–191). |\n| **8** | Detail projection bound to `CONVERSATION_LEVEL_IDS` + `assertExactConversationLevelIds` | `buildQaConversationLevels()` maps `CONVERSATION_LEVEL_IDS` then `assertExactConversationLevelIds` (`detail-project.ts` 371–382). Integration test: `detail projection conversationLevels bind to exact ID constant/order` (350–357). |\n| **9** *(same packet item as mic)* | First-paint mic no-op | `recorderReady = controller != null`; Enable mic `disabled={!recorderReady}`; `data-recorder-phase=\"initializing\"` + `data-recorder-initializing=\"true\"`. Test: `disables mic actions while controller is initializing` (`p4b-spoken-behavior.test.ts` 71–95). |\n\n*(Composer listed eight P2 rows; guided + substitution anti-luck are two rows, mic is the eighth.)*\n\n---\n\n## New P0–P2 regression scan (recorder / events / React)\n\n| Area | Result |\n|------|--------|\n| **Recorder FSM** | Generation/dispose, empty blob, recorder error, permission-after-dispose unchanged and still covered; P4BR1 `startRecording` playback pre-stop aligns with URL ownership tests. |\n| **Events** | `emitGuidedRecognitionAttempt` / `emitSubstitutionAttempt` / `emitRecordingCycle` still route through `gradePublishedAnswerAttempt` and `parseLearnerEvent`; no blob/score fields in cycle events. |\n| **React** | `useMediaRecorder` still creates controller in `useEffect` and disposes on unmount; P4BR1 mitigates first-paint mic via disable + status, not a parallel controller path. |\n| **Progression** | `advanceAfterComplete` only via level `onComplete` → Continue (or spoken finish), consistent with behavior tests. |\n\n**Not raised as P0–P2** (pre-existing / out of P4BR1 scope): `emitRecordingCycle` does not require `listenCompleted` for emission (only passes it through); `dispose()` does not call `onChange` (relevant mainly on unmount); older recorder test `does not revoke currently playing URL prematurely on clear` still uses explicit `stopPlayback()` but is superseded by the mid-playback case above.\n\n---\n\n## Honesty\n\nRead-only review only — no shell, no edits. Persistence (P4C/P4D), pronunciation TTS, and self-rating semantics remain as documented in the worker report; not re-litigated here.\n\n**APPROVE** for P4BR1 adversarial closure against the eight Composer P2s, with zero actionable P0–P2 from this re-review.",
+  "model": {
+    "id": "composer-2.5",
+    "params": [
+      {
+        "id": "effort",
+        "value": "high"
+      },
+      {
+        "id": "fast",
+        "value": "false"
+      }
+    ]
+  },
+  "durationMs": 54572,
+  "usage": {
+    "inputTokens": 274104,
+    "outputTokens": 6632,
+    "cacheReadTokens": 233542,
+    "cacheWriteTokens": 0,
+    "totalTokens": 514278
+  }
+}

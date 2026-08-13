@@ -27,6 +27,7 @@ import {
   EXPECTED_CONTENT_BUNDLE_SCHEMA_VERSION,
   LEARNER_BUILT_IN_TAGS,
   LEARNER_STATE_SCHEMA_VERSION,
+  type ActivityProgressRecord,
   type ContentBundleIdentity,
   type LearnerBuiltInTag,
   type LearnerExportMetadata,
@@ -69,6 +70,7 @@ const ENVELOPE_KEYS = new Set([
   "contentBundle",
   "settings",
   "resume",
+  "activityProgress",
   "tags",
   "notes",
   "events",
@@ -79,6 +81,14 @@ const ENVELOPE_KEYS = new Set([
 
 const SETTINGS_KEYS = new Set(["preferredAudioSpeed", "timezone"]);
 const RESUME_KEYS = new Set(["lessonId", "activityId", "stageId", "position"]);
+const ACTIVITY_PROGRESS_KEYS = new Set([
+  "lessonId",
+  "stageId",
+  "activityId",
+  "progressState",
+  "startedAt",
+  "completedAt",
+]);
 const TAG_KEYS = new Set(["contentId", "tag"]);
 const NOTE_KEYS = new Set(["noteId", "contentId", "text", "updatedAt"]);
 const RECORDING_KEYS = new Set([
@@ -525,6 +535,42 @@ function parseResume(
   return Object.freeze({ lessonId, activityId, stageId, position });
 }
 
+function parseActivityProgress(
+  input: unknown,
+  path: string,
+  publishedIds: PublishedContentResolver,
+): ActivityProgressRecord {
+  const raw = requireObject(input, path);
+  assertOnlyKeys(raw, ACTIVITY_PROGRESS_KEYS, path);
+  const lessonId = requireBoundedString(raw, "lessonId", path);
+  const stageId = requireBoundedString(raw, "stageId", path);
+  const activityId = requireBoundedString(raw, "activityId", path);
+  requirePublishedKind(lessonId, "Lesson", publishedIds, `${path}.lessonId`);
+  requirePublishedKind(activityId, "LearningActivity", publishedIds, `${path}.activityId`);
+  if (!publishedIds.lessonOwnsStage(lessonId, stageId)) {
+    throw persistenceError("CROSS_REFERENCE", "Activity progress stage does not belong to lesson", `${path}.stageId`);
+  }
+  if (!publishedIds.stageOwnsActivity(lessonId, stageId, activityId)) {
+    throw persistenceError("CROSS_REFERENCE", "Activity progress activity does not belong to lesson stage", `${path}.activityId`);
+  }
+  const status = raw.progressState;
+  if (status !== "inProgress" && status !== "completed") {
+    throw persistenceError("INVALID_TYPE", `${path}.progressState is invalid`, `${path}.progressState`);
+  }
+  const startedAt = requireIso(raw, "startedAt", path);
+  if (status === "inProgress") {
+    if ("completedAt" in raw) {
+      throw persistenceError("UNKNOWN_FIELD", "In-progress activity cannot have completedAt", `${path}.completedAt`);
+    }
+    return Object.freeze({ lessonId, stageId, activityId, progressState: status, startedAt });
+  }
+  const completedAt = requireIso(raw, "completedAt", path);
+  if (Date.parse(completedAt) < Date.parse(startedAt)) {
+    throw persistenceError("INVALID_DATE", "completedAt cannot precede startedAt", `${path}.completedAt`);
+  }
+  return Object.freeze({ lessonId, stageId, activityId, progressState: status, startedAt, completedAt });
+}
+
 function parseTag(
   input: unknown,
   path: string,
@@ -900,6 +946,12 @@ export function parseLearnerStateEnvelope(
   if (!Array.isArray(raw.tags)) {
     throw persistenceError("INVALID_TYPE", "tags must be an array", "tags");
   }
+  if (!Array.isArray(raw.activityProgress)) {
+    throw persistenceError("INVALID_TYPE", "activityProgress must be an array", "activityProgress");
+  }
+  if (raw.activityProgress.length > PERSISTENCE_LIMITS.maxActivityProgress) {
+    throw persistenceError("OVERSIZE_ARRAY", "activityProgress exceeds limit", "activityProgress");
+  }
   if (raw.tags.length > PERSISTENCE_LIMITS.maxTags) {
     throw persistenceError("OVERSIZE_ARRAY", "tags exceeds limit", "tags");
   }
@@ -947,6 +999,9 @@ export function parseLearnerStateEnvelope(
   const tags = raw.tags.map((t, i) =>
     parseTag(t, `tags[${i}]`, options.publishedIds),
   );
+  const activityProgress = raw.activityProgress.map((p, i) =>
+    parseActivityProgress(p, `activityProgress[${i}]`, options.publishedIds),
+  );
   const notes = raw.notes.map((n, i) =>
     parseNote(n, `notes[${i}]`, options.publishedIds),
   );
@@ -962,6 +1017,13 @@ export function parseLearnerStateEnvelope(
 
   // Duplicate IDs — replace semantics, never silent merge.
   const tagKeys = new Set<string>();
+  const progressIds = new Set<string>();
+  for (const progress of activityProgress) {
+    if (progressIds.has(progress.activityId)) {
+      throw persistenceError("DUPLICATE_ID", "Duplicate activity progress", "activityProgress");
+    }
+    progressIds.add(progress.activityId);
+  }
   for (const t of tags) {
     const k = `${t.contentId}\0${t.tag}`;
     if (tagKeys.has(k)) {
@@ -1045,6 +1107,7 @@ export function parseLearnerStateEnvelope(
           contentBundle,
           settings,
           resume,
+          activityProgress,
           tags,
           notes,
           events,
@@ -1059,6 +1122,7 @@ export function parseLearnerStateEnvelope(
           contentBundle,
           settings,
           resume,
+          activityProgress,
           tags,
           notes,
           events,
@@ -1126,6 +1190,7 @@ export function createEmptyLearnerState(input: {
       contentBundle,
       settings,
       resume: null,
+      activityProgress: [],
       tags: [],
       notes: [],
       events: [],

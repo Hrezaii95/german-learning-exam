@@ -9,6 +9,173 @@
   "sourceAssertions": [
     {
       "kind": "SourceAssertion",
+      "id": "assert:gram-full-present-person-forms-l2-notice",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "Lesson 2 grammar"
+      },
+      "subjectId": "gram:full-present-person-forms-l2",
+      "field": "noticeTarget",
+      "value": "Lesson 2 extends present conjugation to wir, ihr, sie and formal Sie.",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:gram-full-present-person-forms-l2-rules",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "Lesson 2 grammar"
+      },
+      "subjectId": "gram:full-present-person-forms-l2",
+      "field": "ruleSteps",
+      "value": [
+        {
+          "id": "full-person",
+          "notice": "Match each pronoun with its published present form.",
+          "model": "wir sind · ihr seid · sie/Sie sind"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:gram-nicht-profile-negation-l2-notice",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "Lesson 2 grammar"
+      },
+      "subjectId": "gram:nicht-profile-negation-l2",
+      "field": "noticeTarget",
+      "value": "Use nicht in the taught profile statements to negate a state or description.",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:gram-nicht-profile-negation-l2-rules",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "Lesson 2 grammar"
+      },
+      "subjectId": "gram:nicht-profile-negation-l2",
+      "field": "ruleSteps",
+      "value": [
+        {
+          "id": "nicht-profile",
+          "notice": "Place nicht with the taught statement pattern.",
+          "model": "Ich bin nicht verheiratet."
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:gram-profession-expressions-l2-notice",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "Lesson 2 grammar"
+      },
+      "subjectId": "gram:profession-expressions-l2",
+      "field": "noticeTarget",
+      "value": "The taught patterns contrast profession after sein with arbeiten als, bei or in.",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:gram-profession-expressions-l2-rules",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "Lesson 2 grammar"
+      },
+      "subjectId": "gram:profession-expressions-l2",
+      "field": "ruleSteps",
+      "value": [
+        {
+          "id": "sein-profession",
+          "notice": "After sein, use the taught profession without an article.",
+          "model": "Ich bin Architekt."
+        },
+        {
+          "id": "arbeiten-als",
+          "notice": "Use arbeiten als before a profession.",
+          "model": "Ich arbeite als Architekt."
+        },
+        {
+          "id": "arbeiten-bei-in",
+          "notice": "Use bei or in only in the published workplace patterns.",
+          "model": "Ich arbeite bei einer Firma."
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:gram-profession-feminine-forms-l2-notice",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "Lesson 2 grammar"
+      },
+      "subjectId": "gram:profession-feminine-forms-l2",
+      "field": "noticeTarget",
+      "value": "Published profession pairs form feminine person words with -in where evidenced; plural -innen is used only when stored in the source.",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:gram-profession-feminine-forms-l2-rules",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "Lesson 2 grammar"
+      },
+      "subjectId": "gram:profession-feminine-forms-l2",
+      "field": "ruleSteps",
+      "value": [
+        {
+          "id": "feminine-in",
+          "notice": "Link each published feminine form to its masculine base; preserve source-supported stem changes.",
+          "model": "Architekt → Architektin · Arzt → Ärztin"
+        },
+        {
+          "id": "plural-innen",
+          "notice": "Use -innen only for a source-published feminine plural.",
+          "model": "Lehrerinnen"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
       "id": "assert:lesson-02-title-de",
       "sourceId": "source:alpha-content-bundle",
       "location": {
@@ -5440,7 +5607,326 @@
       }
     }
   ],
-  "grammarConcepts": [],
+  "grammarConcepts": [
+    {
+      "kind": "GrammarConcept",
+      "id": "gram:full-present-person-forms-l2",
+      "titleEn": "Full present-tense person forms",
+      "titleDe": "Präsens: alle Personen",
+      "prerequisiteIds": [],
+      "noticeTarget": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Lesson 2 extends present conjugation to wir, ihr, sie and formal Sie."
+          }
+        ]
+      },
+      "ruleSteps": [
+        {
+          "id": "full-person",
+          "notice": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "Match each pronoun with its published present form."
+              }
+            ]
+          },
+          "model": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "wir sind · ihr seid · sie/Sie sind"
+              }
+            ]
+          }
+        }
+      ],
+      "exampleIds": [],
+      "commonErrorTags": [
+        "person-agreement",
+        "sie-Sie-capitalization"
+      ],
+      "activityTemplateIds": [],
+      "relationIds": [
+        "rel:gram-full-present-person-forms-l2-introduced-02",
+        "rel:gram-full-present-person-forms-l2-practised-lesson-02-full-person-conjugation"
+      ],
+      "sourceAssertionIds": [
+        "assert:gram-full-present-person-forms-l2-notice",
+        "assert:gram-full-present-person-forms-l2-rules"
+      ],
+      "mediaIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "noticeTarget",
+            "assertionId": "assert:gram-full-present-person-forms-l2-notice"
+          },
+          {
+            "field": "ruleSteps",
+            "assertionId": "assert:gram-full-present-person-forms-l2-rules"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "GrammarConcept",
+      "id": "gram:nicht-profile-negation-l2",
+      "titleEn": "Negation with nicht",
+      "titleDe": "Verneinung mit nicht",
+      "prerequisiteIds": [],
+      "noticeTarget": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Use nicht in the taught profile statements to negate a state or description."
+          }
+        ]
+      },
+      "ruleSteps": [
+        {
+          "id": "nicht-profile",
+          "notice": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "Place nicht with the taught statement pattern."
+              }
+            ]
+          },
+          "model": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "Ich bin nicht verheiratet."
+              }
+            ]
+          }
+        }
+      ],
+      "exampleIds": [],
+      "commonErrorTags": [
+        "negation-position"
+      ],
+      "activityTemplateIds": [],
+      "relationIds": [
+        "rel:gram-nicht-profile-negation-l2-introduced-02",
+        "rel:gram-nicht-profile-negation-l2-practised-lesson-02-relationship-status",
+        "rel:gram-nicht-profile-negation-l2-practised-lesson-02-profile-reading-writing"
+      ],
+      "sourceAssertionIds": [
+        "assert:gram-nicht-profile-negation-l2-notice",
+        "assert:gram-nicht-profile-negation-l2-rules"
+      ],
+      "mediaIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "noticeTarget",
+            "assertionId": "assert:gram-nicht-profile-negation-l2-notice"
+          },
+          {
+            "field": "ruleSteps",
+            "assertionId": "assert:gram-nicht-profile-negation-l2-rules"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "GrammarConcept",
+      "id": "gram:profession-expressions-l2",
+      "titleEn": "Talking about professions",
+      "titleDe": "Beruf ausdrücken",
+      "prerequisiteIds": [
+        "gram:full-present-person-forms-l2"
+      ],
+      "noticeTarget": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "The taught patterns contrast profession after sein with arbeiten als, bei or in."
+          }
+        ]
+      },
+      "ruleSteps": [
+        {
+          "id": "sein-profession",
+          "notice": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "After sein, use the taught profession without an article."
+              }
+            ]
+          },
+          "model": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "Ich bin Architekt."
+              }
+            ]
+          }
+        },
+        {
+          "id": "arbeiten-als",
+          "notice": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "Use arbeiten als before a profession."
+              }
+            ]
+          },
+          "model": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "Ich arbeite als Architekt."
+              }
+            ]
+          }
+        },
+        {
+          "id": "arbeiten-bei-in",
+          "notice": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "Use bei or in only in the published workplace patterns."
+              }
+            ]
+          },
+          "model": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "Ich arbeite bei einer Firma."
+              }
+            ]
+          }
+        }
+      ],
+      "exampleIds": [],
+      "commonErrorTags": [
+        "article-after-sein",
+        "preposition-choice"
+      ],
+      "activityTemplateIds": [],
+      "relationIds": [
+        "rel:gram-profession-expressions-l2-introduced-02",
+        "rel:gram-profession-expressions-l2-practised-lesson-02-profession-qa-builder",
+        "rel:gram-profession-expressions-l2-practised-lesson-02-sein-arbeiten-contrast"
+      ],
+      "sourceAssertionIds": [
+        "assert:gram-profession-expressions-l2-notice",
+        "assert:gram-profession-expressions-l2-rules"
+      ],
+      "mediaIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "noticeTarget",
+            "assertionId": "assert:gram-profession-expressions-l2-notice"
+          },
+          {
+            "field": "ruleSteps",
+            "assertionId": "assert:gram-profession-expressions-l2-rules"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "GrammarConcept",
+      "id": "gram:profession-feminine-forms-l2",
+      "titleEn": "Feminine profession forms",
+      "titleDe": "Weibliche Berufsformen",
+      "prerequisiteIds": [],
+      "noticeTarget": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Published profession pairs form feminine person words with -in where evidenced; plural -innen is used only when stored in the source."
+          }
+        ]
+      },
+      "ruleSteps": [
+        {
+          "id": "feminine-in",
+          "notice": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "Link each published feminine form to its masculine base; preserve source-supported stem changes."
+              }
+            ]
+          },
+          "model": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "Architekt → Architektin · Arzt → Ärztin"
+              }
+            ]
+          }
+        },
+        {
+          "id": "plural-innen",
+          "notice": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "Use -innen only for a source-published feminine plural."
+              }
+            ]
+          },
+          "model": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "Lehrerinnen"
+              }
+            ]
+          }
+        }
+      ],
+      "exampleIds": [],
+      "commonErrorTags": [
+        "person-form",
+        "umlaut",
+        "plural-guessing"
+      ],
+      "activityTemplateIds": [],
+      "relationIds": [
+        "rel:gram-profession-feminine-forms-l2-introduced-02",
+        "rel:gram-profession-feminine-forms-l2-practised-lesson-02-core-professions",
+        "rel:gram-profession-feminine-forms-l2-practised-lesson-02-person-form-morphology"
+      ],
+      "sourceAssertionIds": [
+        "assert:gram-profession-feminine-forms-l2-notice",
+        "assert:gram-profession-feminine-forms-l2-rules"
+      ],
+      "mediaIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "noticeTarget",
+            "assertionId": "assert:gram-profession-feminine-forms-l2-notice"
+          },
+          {
+            "field": "ruleSteps",
+            "assertionId": "assert:gram-profession-feminine-forms-l2-rules"
+          }
+        ]
+      }
+    }
+  ],
   "phrasePatterns": [
     {
       "kind": "PhrasePattern",
@@ -6627,6 +7113,90 @@
   "learningActivities": [],
   "examples": [],
   "relationships": [
+    {
+      "kind": "Relationship",
+      "id": "rel:gram-full-present-person-forms-l2-introduced-02",
+      "type": "introduced-in",
+      "fromId": "gram:full-present-person-forms-l2",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:gram-full-present-person-forms-l2-practised-lesson-02-full-person-conjugation",
+      "type": "practised-in",
+      "fromId": "gram:full-present-person-forms-l2",
+      "toId": "activity:lesson-02-full-person-conjugation",
+      "lessonId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:gram-nicht-profile-negation-l2-introduced-02",
+      "type": "introduced-in",
+      "fromId": "gram:nicht-profile-negation-l2",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:gram-nicht-profile-negation-l2-practised-lesson-02-relationship-status",
+      "type": "practised-in",
+      "fromId": "gram:nicht-profile-negation-l2",
+      "toId": "activity:lesson-02-relationship-status",
+      "lessonId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:gram-nicht-profile-negation-l2-practised-lesson-02-profile-reading-writing",
+      "type": "practised-in",
+      "fromId": "gram:nicht-profile-negation-l2",
+      "toId": "activity:lesson-02-profile-reading-writing",
+      "lessonId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:gram-profession-expressions-l2-introduced-02",
+      "type": "introduced-in",
+      "fromId": "gram:profession-expressions-l2",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:gram-profession-expressions-l2-practised-lesson-02-profession-qa-builder",
+      "type": "practised-in",
+      "fromId": "gram:profession-expressions-l2",
+      "toId": "activity:lesson-02-profession-qa-builder",
+      "lessonId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:gram-profession-expressions-l2-practised-lesson-02-sein-arbeiten-contrast",
+      "type": "practised-in",
+      "fromId": "gram:profession-expressions-l2",
+      "toId": "activity:lesson-02-sein-arbeiten-contrast",
+      "lessonId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:gram-profession-feminine-forms-l2-introduced-02",
+      "type": "introduced-in",
+      "fromId": "gram:profession-feminine-forms-l2",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:gram-profession-feminine-forms-l2-practised-lesson-02-core-professions",
+      "type": "practised-in",
+      "fromId": "gram:profession-feminine-forms-l2",
+      "toId": "activity:lesson-02-core-professions",
+      "lessonId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:gram-profession-feminine-forms-l2-practised-lesson-02-person-form-morphology",
+      "type": "practised-in",
+      "fromId": "gram:profession-feminine-forms-l2",
+      "toId": "activity:lesson-02-person-form-morphology",
+      "lessonId": "lesson:02"
+    },
     {
       "kind": "Relationship",
       "id": "rel:lesson-01-prerequisite-of-02",

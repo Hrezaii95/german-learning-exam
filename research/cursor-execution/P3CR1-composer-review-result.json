@@ -1,0 +1,27 @@
+{
+  "id": "run-434ce98b-508c-44b3-9cec-a9a25372fed0",
+  "requestId": "9ebc0329-2e11-4548-bc4e-1adc09c56c85",
+  "status": "finished",
+  "result": "## P3CR1 final read-only review\n\nReviewed: `P3C-composer-review-result.json`, `P3CR1-search-ssg-and-artifact-remediation.md`, `P3CR1-worker-report.md`, P3C routes/libs/components, `platform/tests/web/p3c-*.ts`, smoke script, tsconfigs, and on-disk `.next/prerender-manifest.json` (aligned with current lesson/activity pages).\n\n---\n\n### Prior P1/P2 closure (P3C → P3CR1)\n\n| Requirement | Status | Evidence |\n|-------------|--------|----------|\n| **2+23 SSG (no server `searchParams` on lesson/activity)** | **Closed** | `page.tsx` for lessons/activities: `generateStaticParams`, no `searchParams` prop; nav via `LessonNavViews` + `Suspense`. Manifest: `/lessons/01`, `/lessons/02`, 23 activity keys, each `\"compute\": \"static\"`; `/search` absent (dynamic, expected). Smoke `assertStaticLessonAndActivityPaths()`. |\n| **Client nav safety / hydration** | **Closed** | `useSearchParams` only in `\"use client\"` boundary; static fallback shells omit inbound `nav` (no server echo of `nav`). Parser unchanged (`navigation-context.ts`). |\n| **`canonicalHref` allowlist at render** | **Closed** | `linkableResultHref()` in `SearchViews.tsx`; `assertLearnerSearchProjection` on load; UI tamper test. |\n| **Omit non-canonical `hubDestination.path`** | **Closed** | Types, `search-project.ts`, generated artifact (`hub` only), assert rejects `\"path\"`, disk test `not.toMatch(/\"path\"\\s*:/)`. |\n| **Malicious lesson/activity nav SSR** | **Closed** | `p3c-search-ui.test.ts` payloads + `assertSafeRenderedHrefs`; `BackLink` fail-closed; unit tests for traversal/double-encode. |\n| **Parity breadth** | **Closed** | Queries include `Wie heißen Sie?` and `name-formal` → `qa:name-formal`. |\n| **Mandatory disk artifact + strong assert** | **Closed** | `readFileSync` + byte/hash equality; tamper tests (href, path, secret key, draft); forbidden keys/strings walk. |\n| **All web tests typechecked** | **Closed** | `@ts-nocheck` removed from `p3c-search-ui.test.ts`; `typecheck:web-tests` in `check`; `tsconfig.tests.json` includes `tests/web/**`; four JSX tests excluded from root `tsc`, covered by dedicated config. |\n\n---\n\n### Boundary / regression scan\n\n- **No P0/P1** learner/review/private leakage path: web does not call `openAuthorIndexes`; projection + tests unchanged in intent.\n- **Hub routes** still use server `searchParams` (dynamic) — documented out of scope for pinned 2+23; not a P3CR1 regression.\n- **Optional P3C items** still open by design (not P3CR1 blockers): malformed `nav` on activity → lesson back (not search); `appendNavigationContext` passthrough for already-unsafe base `href` (call sites use internal paths; search links gated by `isSafeNavigationPath`).\n- **Residual test depth (not P0–P2):** malicious `nav` on `/search` Back is not SSR-tested (lesson/activity are); behavior is the same `parseNavigationSearchParams` + `resolveBackHref` stack as unit tests. Smoke does not assert `compute: \"static\"` per activity (manifest shows static for all 23; lesson check is slightly stricter than activity presence-only).\n\n---\n\n### Verdict\n\n**APPROVE** — No actionable **P0–P2** findings for P3CR1. P1 SSG is evidenced in source and prerender manifest; all mandated P2 remediations are implemented and covered by tests/config as specified. Residual items above are optional hardening or explicitly deferred scope, not approval blockers.",
+  "model": {
+    "id": "composer-2.5",
+    "params": [
+      {
+        "id": "effort",
+        "value": "high"
+      },
+      {
+        "id": "fast",
+        "value": "false"
+      }
+    ]
+  },
+  "durationMs": 97967,
+  "usage": {
+    "inputTokens": 480607,
+    "outputTokens": 9955,
+    "cacheReadTokens": 390754,
+    "cacheWriteTokens": 0,
+    "totalTokens": 881316
+  }
+}

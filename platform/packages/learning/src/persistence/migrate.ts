@@ -153,6 +153,29 @@ export function createMigrationRegistry(
   };
 }
 
-/** Default registry: current identity only — no invented historical migrations. */
+const v1ToV11: LearnerStateMigration = Object.freeze({
+  fromVersion: "1.0.0",
+  toVersion: LEARNER_STATE_SCHEMA_VERSION,
+  migrate(raw) {
+    if (raw === null || typeof raw !== "object" || Array.isArray(raw)) {
+      throw persistenceError("MIGRATION_FAILED", "Legacy learner state must be an object");
+    }
+    const source = raw as Record<string, unknown>;
+    if ("activityProgress" in source) {
+      throw persistenceError("MIGRATION_FAILED", "Legacy learner state contains a future field");
+    }
+    const exportMeta = source.exportMeta;
+    return {
+      ...source,
+      schemaVersion: LEARNER_STATE_SCHEMA_VERSION,
+      activityProgress: [],
+      ...(exportMeta !== null && typeof exportMeta === "object" && !Array.isArray(exportMeta)
+        ? { exportMeta: { ...(exportMeta as Record<string, unknown>), schemaVersion: LEARNER_STATE_SCHEMA_VERSION } }
+        : {}),
+    };
+  },
+});
+
+/** Default registry includes the lossless v1 navigation-state migration. */
 export const defaultMigrationRegistry: MigrationRegistry =
-  createMigrationRegistry([]);
+  createMigrationRegistry([v1ToV11]);

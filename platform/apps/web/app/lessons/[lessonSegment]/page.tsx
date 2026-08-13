@@ -33,6 +33,10 @@ export default async function LessonPage({ params }: PageProps) {
   const lessonActivities = projection.activities.filter(
     (activity) => activity.lessonId === lesson.id,
   );
+  const prerequisiteLesson = lesson.routeSegment === "02" ? projection.lessons.find((item) => item.routeSegment === "01") : undefined;
+  const prerequisiteActivities = prerequisiteLesson
+    ? projection.activities.filter((activity) => activity.lessonId === prerequisiteLesson.id)
+    : [];
 
   // Static shell: do not read searchParams on the server. Nav context is parsed
   // in a client boundary under Suspense (fallback has no inbound nav).
@@ -46,6 +50,8 @@ export default async function LessonPage({ params }: PageProps) {
         <LessonOverviewWithNav
           lesson={lesson}
           activities={lessonActivities}
+          {...(prerequisiteLesson ? { prerequisiteLesson } : {})}
+          prerequisiteActivities={prerequisiteActivities}
         />
       </Suspense>
     </ShellLayout>

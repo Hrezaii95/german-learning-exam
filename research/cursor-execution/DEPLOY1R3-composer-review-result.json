@@ -1,0 +1,27 @@
+{
+  "id": "run-48b7afcd-b042-44a6-8fa1-1a15cc88b89a",
+  "requestId": "fbe278fa-68bc-4352-945e-126f619f06c0",
+  "status": "finished",
+  "result": "# DEPLOY1R3 read-only final review\n\n**Verdict: APPROVED** — DEPLOY1R2 residual **P2** (TS7016 on `smoke-pages.mjs`) is addressed on disk with a sibling `.d.mts` that matches the sole runtime export; root and web-tests typecheck paths both include the importing test; `ssg-dynamic-params.ts` is gone with no platform imports. No new actionable **P0–P2** in DEPLOY1R3 scope. (Disk only; no shell re-run.)\n\n---\n\n## 1. `smoke-pages.d.mts` vs `smoke-pages.mjs`\n\n| Check | Evidence | Result |\n|--------|----------|--------|\n| Sole runtime export | `smoke-pages.mjs` has one `export`: `assertBasePrefixedNextAssets` (lines 99–111) | **Match** |\n| Declaration surface | `smoke-pages.d.mts` declares only that symbol | **No over-broad `declare module` / `*.mjs` wildcard** (none in `platform/`) |\n| Signature | Runtime: `(html, label, pagesBase = PAGES_BASE)`; d.mts: `(html: string, label: string, pagesBase?: string) => void` | **Aligned** (optional third arg; default stays runtime-only) |\n| False “all exports typed” | No other exports in `.mjs`; only consumer is `deploy1r2-pages-smoke-hydration.test.ts`, which imports that name only | **Not masking missing exports** |\n| Wrong-name imports | TS would reject unknown named imports; no `any` escape on the import line | **Errors not masked** |\n| `.mjs` implementation typing | Body of `.mjs` still outside `tsc` `include` — pre-existing boundary; R3 only types the import surface | **Acceptable for packet scope** (not a new P2) |\n\nThe `.d.mts` comment correctly scopes intent to `assertBasePrefixedNextAssets` for root + web-tests typecheck, not a full module implementation check.\n\n---\n\n## 2. Root / web typecheck coverage (genuine)\n\n| Gate | How the import is exercised |\n|------|-----------------------------|\n| Root `npm run typecheck` | `platform/tsconfig.json` includes `tests/web/**/*.ts`; `deploy1r2-pages-smoke-hydration.test.ts` is **not** in the UI/behavior exclude list |\n| `npm run typecheck:web-tests` | `apps/web/tsconfig.tests.json` includes `../../tests/web/**/*.ts` (full web test tree, including DEPLOY1R2 hydration test) |\n| `npm run check` | Chains `typecheck` + `typecheck:web` + `typecheck:web-tests` (per `platform/package.json`) |\n\nResolution mechanism on disk is the colocated ESM declaration (`smoke-pages.d.mts` next to `smoke-pages.mjs`), consistent with `moduleResolution: \"bundler\"` — not a shim that bypasses the real import path. No `declare module` ambient stubs for this path.\n\n---\n\n## 3. Deleted tombstone `ssg-dynamic-params.ts`\n\n| Check | Evidence | Result |\n|--------|----------|--------|\n| On disk | `platform/apps/web/lib/content/ssg-dynamic-params.ts` → **not found** | **Absent** |\n| Imports | Grep under `platform` `*.{ts,tsx,js,mjs}` → **no** `ssg-dynamic-params` references | **No dangling imports** |\n| Packet intent | DEPLOY1R1 packet §2: delete unused file | **Satisfied on working tree** |\n\n(Index/stage state for a phantom add was not verified without shell; disk + import graph support hygiene.)\n\n---\n\n## 4. New P0–P2 (DEPLOY1R3 scope)\n\n| Severity | Finding |\n|----------|---------|\n| **P0** | None |\n| **P1** | None |\n| **P2** | None actionable — prior TS7016 gap is closed by accurate, minimal `.d.mts`; no regression in smoke logic (unchanged `.mjs` behavior per worker report) |\n\n**P3** (tombstone / index cleanup) remains non-blocking for release approval.\n\n---\n\n## Honesty\n\n- No commands re-run; approval based on staged-relevant disk artifacts (`smoke-pages.d.mts`, absent tombstone, tsconfig/test wiring).\n- Worker-reported `npm run check` / `build:pages` / `smoke:pages` exits are cited in `DEPLOY1R3-worker-report.md` but not re-executed here.",
+  "model": {
+    "id": "composer-2.5",
+    "params": [
+      {
+        "id": "effort",
+        "value": "high"
+      },
+      {
+        "id": "fast",
+        "value": "false"
+      }
+    ]
+  },
+  "durationMs": 71279,
+  "usage": {
+    "inputTokens": 179023,
+    "outputTokens": 5104,
+    "cacheReadTokens": 154249,
+    "cacheWriteTokens": 0,
+    "totalTokens": 338376
+  }
+}
