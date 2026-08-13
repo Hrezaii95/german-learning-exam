@@ -7,7 +7,9 @@
  * - raw-colon known alias → one 308 to canonical (or documents unsafe 404)
  * - wrong-lesson / unknown / review-only / future hub → 404
  * - no dashboard fallback on those failures
+ * - prerender manifest contains 2 lesson + 23 activity SSG paths
  */
+import { readFileSync } from "node:fs";
 import { spawn } from "node:child_process";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -53,8 +55,55 @@ async function waitForServer(timeoutMs = 30000) {
   throw new Error(`Server did not become ready on ${BASE}`);
 }
 
+function assertStaticLessonAndActivityPaths() {
+  const manifestPath = join(webRoot, ".next", "prerender-manifest.json");
+  const manifest = JSON.parse(readFileSync(manifestPath, "utf8"));
+  const routes = manifest.routes ?? {};
+  const routeKeys = Object.keys(routes);
+
+  const lessonPaths = projection.lessons.map(
+    (lesson) => `/lessons/${lesson.routeSegment}`,
+  );
+  assert(lessonPaths.length === 2, `expected 2 lessons, got ${lessonPaths.length}`);
+  for (const path of lessonPaths) {
+    assert(
+      routeKeys.includes(path),
+      `SSG missing lesson path ${path} in prerender-manifest`,
+    );
+    assert(
+      routes[path]?.compute === "static" || routes[path]?.routeType === "page",
+      `lesson path ${path} is not a static prerender entry`,
+    );
+  }
+
+  const activityPaths = projection.activities.map((a) => a.canonicalPath);
+  assert(
+    activityPaths.length === 23,
+    `expected 23 activities, got ${activityPaths.length}`,
+  );
+  for (const path of activityPaths) {
+    assert(
+      routeKeys.includes(path),
+      `SSG missing activity path ${path} in prerender-manifest`,
+    );
+  }
+
+  return {
+    lessons: lessonPaths.length,
+    activities: activityPaths.length,
+  };
+}
+
 async function runSmoke() {
   const results = [];
+
+  // 0) Build-time SSG: 2 lesson + 23 activity paths must be prerendered
+  {
+    const ssg = assertStaticLessonAndActivityPaths();
+    results.push(
+      `OK SSG prerender lessons=${ssg.lessons} activities=${ssg.activities}`,
+    );
+  }
 
   // 1) Canonical encoded → 200
   {
@@ -106,7 +155,8 @@ async function runSmoke() {
     }
   }
 
-  // 5) Canonical hubs → 200; unimplemented detail + future Review → 404
+  // 5) Canonical hubs → 200; unimplemented / wrong / unknown details → 404;
+  //    implemented representative details → 200; raw-colon → redirect
   {
     for (const path of [
       "/vocabulary",
@@ -122,8 +172,41 @@ async function runSmoke() {
       assert(new URL(url).pathname === path, `${path} must not redirect away`);
       results.push(`OK hub/directory 200 ${path}`);
     }
+
+    const detailPaths = [
+      "/vocabulary/lex%3Aarchitekt",
+      "/verbs/verb%3Asein",
+      "/phrases/qa%3Aprofession-casual-main",
+    ];
+    for (const path of detailPaths) {
+      const { status, url } = await fetchStatus(path, { redirect: "follow" });
+      assert(status === 200, `${path} expected 200, got ${status}`);
+      assert(new URL(url).pathname === path, `${path} must not redirect away`);
+      results.push(`OK detail 200 ${path}`);
+    }
+
+    {
+      const raw = "/vocabulary/lex:architekt";
+      const { status, location } = await fetchStatus(raw);
+      assert(
+        status === 308 || status === 301,
+        `raw-colon detail expected permanent redirect, got ${status}`,
+      );
+      assert(location, "raw-colon detail missing Location");
+      const locPath = new URL(location, BASE).pathname;
+      assert(
+        locPath === "/vocabulary/lex%3Aarchitekt",
+        `raw-colon detail Location ${locPath} unexpected`,
+      );
+      results.push(`OK detail raw-colon ${status} → ${locPath}`);
+    }
+
     for (const path of [
       "/vocabulary/lex:ingenieur",
+      "/vocabulary/lex%3Aarchitektin",
+      "/verbs/lex%3Aarchitekt",
+      "/vocabulary/verb%3Asein",
+      "/phrases/qa%3Aprofession-formal-main",
       "/review",
       "/dashboard",
     ]) {
@@ -131,6 +214,108 @@ async function runSmoke() {
       assert(status === 404, `${path} expected 404, got ${status}`);
       assert(new URL(url).pathname !== "/", `${path} must not fall back to /`);
       results.push(`OK detail/future 404 ${path}`);
+    }
+  }
+
+  // 6) Global search → 200; unknown /search/* → 404
+  {
+    const { status, url } = await fetchStatus("/search", { redirect: "follow" });
+    assert(status === 200, `/search expected 200, got ${status}`);
+    assert(new URL(url).pathname === "/search", `/search must not redirect away`);
+    results.push(`OK search 200 /search`);
+
+    const extra = await fetchStatus("/search/extra", { redirect: "follow" });
+    assert(extra.status === 404, `/search/extra expected 404, got ${extra.status}`);
+    assert(new URL(extra.url).pathname !== "/", `/search/extra must not fall back to /`);
+    results.push(`OK search 404 /search/extra`);
+  }
+
+  // 7) Practice selector + exact seven game routes → 200; unknown/malformed/extra → 404
+  {
+    const { status, url } = await fetchStatus("/practice", { redirect: "follow" });
+    assert(status === 200, `/practice expected 200, got ${status}`);
+    assert(new URL(url).pathname === "/practice", `/practice must not redirect away`);
+    results.push(`OK practice 200 /practice`);
+
+    for (const gameId of [
+      "flashcards",
+      "picture-word-match",
+      "article-choice",
+      "audio-match",
+      "word-order",
+      "verb-builder",
+      "morphology-puzzle",
+    ]) {
+      const path = `/practice/${gameId}`;
+      const res = await fetchStatus(path, { redirect: "follow" });
+      assert(res.status === 200, `${path} expected 200, got ${res.status}`);
+      assert(new URL(res.url).pathname === path, `${path} must not redirect away`);
+      results.push(`OK practice game 200 ${path}`);
+    }
+
+    for (const path of [
+      "/practice/unknown-game",
+      "/practice/flashcards/extra",
+      "/practice/%3Cscript%3E",
+    ]) {
+      const res = await fetchStatus(path, { redirect: "follow" });
+      assert(res.status === 404, `${path} expected 404, got ${res.status}`);
+      assert(new URL(res.url).pathname !== "/", `${path} must not fall back to /`);
+      results.push(`OK practice 404 ${path}`);
+    }
+  }
+
+  // 8) Conversation selector + exact encoded Q&A route → 200;
+  //    raw-colon → redirect; unknown/wrong-kind/malformed/extra → 404
+  {
+    const { status, url } = await fetchStatus("/conversation", {
+      redirect: "follow",
+    });
+    assert(status === 200, `/conversation expected 200, got ${status}`);
+    assert(
+      new URL(url).pathname === "/conversation",
+      `/conversation must not redirect away`,
+    );
+    results.push(`OK conversation 200 /conversation`);
+
+    const canonical = "/conversation/qa%3Aprofession-casual-main";
+    {
+      const res = await fetchStatus(canonical, { redirect: "follow" });
+      assert(res.status === 200, `${canonical} expected 200, got ${res.status}`);
+      assert(
+        new URL(res.url).pathname === canonical,
+        `${canonical} must not redirect away`,
+      );
+      results.push(`OK conversation 200 ${canonical}`);
+    }
+
+    {
+      const raw = "/conversation/qa:profession-casual-main";
+      const { status: st, location } = await fetchStatus(raw);
+      assert(
+        st === 308 || st === 301,
+        `raw-colon conversation expected permanent redirect, got ${st}`,
+      );
+      assert(location, "raw-colon conversation missing Location");
+      const locPath = new URL(location, BASE).pathname;
+      assert(
+        locPath === canonical,
+        `raw-colon conversation Location ${locPath} unexpected`,
+      );
+      results.push(`OK conversation raw-colon ${st} → ${locPath}`);
+    }
+
+    for (const path of [
+      "/conversation/qa%3Aprofession-formal-main",
+      "/conversation/lex%3Aarchitekt",
+      "/conversation/unknown",
+      "/conversation/qa%3Aprofession-casual-main/extra",
+      "/conversation/%3Cscript%3E",
+    ]) {
+      const res = await fetchStatus(path, { redirect: "follow" });
+      assert(res.status === 404, `${path} expected 404, got ${res.status}`);
+      assert(new URL(res.url).pathname !== "/", `${path} must not fall back to /`);
+      results.push(`OK conversation 404 ${path}`);
     }
   }
 

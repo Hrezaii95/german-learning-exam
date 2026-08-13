@@ -8,6 +8,22 @@ export function encodeActivityRouteSegment(activityId: string): string {
   return encodeURIComponent(activityId);
 }
 
+/** Same encoding contract for hub detail entity segments (`lex:…`, `verb:…`, `qa:…`). */
+export function encodeEntityRouteSegment(entityId: string): string {
+  return encodeURIComponent(entityId);
+}
+
+/**
+ * Decode a hub-detail entity segment. Returns null on malformed percent-encoding.
+ */
+export function tryDecodeEntityRouteSegment(segment: string): string | null {
+  try {
+    return decodeURIComponent(segment);
+  } catch {
+    return null;
+  }
+}
+
 /**
  * Decode a route activity segment. Returns null on malformed percent-encoding
  * so callers can fail closed instead of treating the raw segment as decoded.

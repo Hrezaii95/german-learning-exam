@@ -1,5 +1,5 @@
 /**
- * Query-side German match keys for hub filters.
+ * Query-side German match keys for hub filters and global search.
  * Mirrors content-index fold semantics so artifact matchKeys stay compatible.
  * Display labels must remain canonical; never return folded forms to UI.
  */
@@ -18,11 +18,13 @@ const UMLAUT_TO_BASE: Record<string, string> = {
   ß: "ss",
 };
 
-function nfc(text: string): string {
+const TOKEN_SPLIT = /[^\p{L}\p{N}]+/u;
+
+export function nfc(text: string): string {
   return text.normalize("NFC");
 }
 
-function caseFoldNfc(text: string): string {
+export function caseFoldNfc(text: string): string {
   return nfc(text).toLowerCase();
 }
 
@@ -32,6 +34,10 @@ function mapChars(text: string, table: Record<string, string>): string {
     out += table[ch] ?? ch;
   }
   return out;
+}
+
+export function foldUmlautDigraph(text: string): string {
+  return mapChars(caseFoldNfc(text), UMLAUT_TO_DIGRAPH);
 }
 
 /** Deterministic match keys: casefolded NFC, digraph fold, base fold (deduped). */
@@ -44,4 +50,15 @@ export function queryMatchKeys(displayText: string): string[] {
     if (k.length > 0 && !keys.includes(k)) keys.push(k);
   }
   return keys;
+}
+
+/** Alias used by search scoring — identical to queryMatchKeys. */
+export function germanMatchKeys(displayText: string): string[] {
+  return queryMatchKeys(displayText);
+}
+
+/** Safe tokenization on letters/digits; empty tokens dropped. */
+export function tokenizeNormalized(text: string): string[] {
+  const folded = foldUmlautDigraph(text);
+  return folded.split(TOKEN_SPLIT).filter((t) => t.length > 0);
 }

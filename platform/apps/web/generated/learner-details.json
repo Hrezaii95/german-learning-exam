@@ -1,0 +1,347 @@
+{
+  "projectionKind": "learner-details",
+  "representativeCount": 3,
+  "representatives": [
+    {
+      "article": "der",
+      "canonicalPath": "/vocabulary/lex%3Aarchitekt",
+      "displayText": "der Architekt",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:architekt",
+      "kind": "Lexeme",
+      "lemma": "Architekt",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "architect",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": {
+        "feminineSuffix": "in",
+        "operationLabel": "Add feminine -in",
+        "relatedArticle": "die",
+        "relatedDisplayText": "die Architektin",
+        "relatedGender": "feminine",
+        "relatedId": "lex:architektin",
+        "relatedLemma": "Architektin",
+        "relatedMeaningEn": "architect",
+        "sharedStem": "Architekt"
+      },
+      "pluralGapMessage": "Plural awaiting content approval",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Architekt",
+      "sourcePriority": 1
+    },
+    {
+      "canonicalPath": "/verbs/verb%3Asein",
+      "displayText": "sein",
+      "hubSegment": "verbs",
+      "id": "verb:sein",
+      "infinitive": "sein",
+      "kind": "Verb",
+      "lessonIds": [
+        "lesson:01",
+        "lesson:02"
+      ],
+      "meaningEn": "to be",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "paradigmNote": "This paradigm is irregular and must be learned as forms.",
+      "present": [
+        {
+          "form": "bin",
+          "person": "ich",
+          "personLabel": "ich"
+        },
+        {
+          "form": "bist",
+          "person": "du",
+          "personLabel": "du"
+        },
+        {
+          "form": "ist",
+          "person": "er_sie_es",
+          "personLabel": "er/sie/es"
+        },
+        {
+          "form": "sind",
+          "person": "wir",
+          "personLabel": "wir"
+        },
+        {
+          "form": "seid",
+          "person": "ihr",
+          "personLabel": "ihr"
+        },
+        {
+          "form": "sind",
+          "person": "sie_plural",
+          "personLabel": "sie (plural)"
+        },
+        {
+          "form": "sind",
+          "person": "Sie_formal",
+          "personLabel": "Sie (formal)"
+        }
+      ],
+      "publicationStatus": "published",
+      "sourcePriority": 1
+    },
+    {
+      "acceptedRealizations": [
+        "Was bist du von Beruf?",
+        "Ich bin … von Beruf.",
+        "Ich bin …",
+        "Ich arbeite als …"
+      ],
+      "answers": [
+        {
+          "id": "phrase:profession-casual-main-a1",
+          "realization": "Ich bin … von Beruf.",
+          "role": "answer"
+        },
+        {
+          "id": "phrase:profession-casual-main-a2",
+          "realization": "Ich bin …",
+          "role": "answer"
+        },
+        {
+          "id": "phrase:profession-casual-main-a3",
+          "realization": "Ich arbeite als …",
+          "role": "answer"
+        }
+      ],
+      "canonicalPath": "/phrases/qa%3Aprofession-casual-main",
+      "conversationLevels": [
+        {
+          "description": "Study the published question and answer patterns.",
+          "id": "model",
+          "status": "available",
+          "title": "Model"
+        },
+        {
+          "description": "Choose among the published answer patterns.",
+          "id": "guided-recognition",
+          "status": "available",
+          "title": "Guided recognition"
+        },
+        {
+          "description": "Build one published answer frame from canonical published fragments.",
+          "id": "substitution",
+          "status": "available",
+          "title": "Substitution"
+        },
+        {
+          "description": "Type only the published fixed patterns; filled profession sentences are not accepted unless published.",
+          "id": "independent-construction",
+          "status": "available",
+          "title": "Independent construction"
+        },
+        {
+          "description": "Record, play back, and self-check. Self-rating is reflection only.",
+          "id": "spoken-role-play",
+          "status": "available",
+          "title": "Spoken role-play"
+        }
+      ],
+      "displayText": "Was bist du von Beruf?",
+      "hubSegment": "phrases",
+      "id": "qa:profession-casual-main",
+      "intent": "qa:profession-casual-main",
+      "kind": "QAPair",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "publicationStatus": "published",
+      "question": {
+        "id": "phrase:profession-casual-main-q",
+        "realization": "Was bist du von Beruf?",
+        "role": "question"
+      },
+      "register": "informal",
+      "sourcePriority": 1
+    }
+  ],
+  "representativesById": {
+    "lex:architekt": {
+      "article": "der",
+      "canonicalPath": "/vocabulary/lex%3Aarchitekt",
+      "displayText": "der Architekt",
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:architekt",
+      "kind": "Lexeme",
+      "lemma": "Architekt",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "architect",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "personForm": {
+        "feminineSuffix": "in",
+        "operationLabel": "Add feminine -in",
+        "relatedArticle": "die",
+        "relatedDisplayText": "die Architektin",
+        "relatedGender": "feminine",
+        "relatedId": "lex:architektin",
+        "relatedLemma": "Architektin",
+        "relatedMeaningEn": "architect",
+        "sharedStem": "Architekt"
+      },
+      "pluralGapMessage": "Plural awaiting content approval",
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Architekt",
+      "sourcePriority": 1
+    },
+    "qa:profession-casual-main": {
+      "acceptedRealizations": [
+        "Was bist du von Beruf?",
+        "Ich bin … von Beruf.",
+        "Ich bin …",
+        "Ich arbeite als …"
+      ],
+      "answers": [
+        {
+          "id": "phrase:profession-casual-main-a1",
+          "realization": "Ich bin … von Beruf.",
+          "role": "answer"
+        },
+        {
+          "id": "phrase:profession-casual-main-a2",
+          "realization": "Ich bin …",
+          "role": "answer"
+        },
+        {
+          "id": "phrase:profession-casual-main-a3",
+          "realization": "Ich arbeite als …",
+          "role": "answer"
+        }
+      ],
+      "canonicalPath": "/phrases/qa%3Aprofession-casual-main",
+      "conversationLevels": [
+        {
+          "description": "Study the published question and answer patterns.",
+          "id": "model",
+          "status": "available",
+          "title": "Model"
+        },
+        {
+          "description": "Choose among the published answer patterns.",
+          "id": "guided-recognition",
+          "status": "available",
+          "title": "Guided recognition"
+        },
+        {
+          "description": "Build one published answer frame from canonical published fragments.",
+          "id": "substitution",
+          "status": "available",
+          "title": "Substitution"
+        },
+        {
+          "description": "Type only the published fixed patterns; filled profession sentences are not accepted unless published.",
+          "id": "independent-construction",
+          "status": "available",
+          "title": "Independent construction"
+        },
+        {
+          "description": "Record, play back, and self-check. Self-rating is reflection only.",
+          "id": "spoken-role-play",
+          "status": "available",
+          "title": "Spoken role-play"
+        }
+      ],
+      "displayText": "Was bist du von Beruf?",
+      "hubSegment": "phrases",
+      "id": "qa:profession-casual-main",
+      "intent": "qa:profession-casual-main",
+      "kind": "QAPair",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "publicationStatus": "published",
+      "question": {
+        "id": "phrase:profession-casual-main-q",
+        "realization": "Was bist du von Beruf?",
+        "role": "question"
+      },
+      "register": "informal",
+      "sourcePriority": 1
+    },
+    "verb:sein": {
+      "canonicalPath": "/verbs/verb%3Asein",
+      "displayText": "sein",
+      "hubSegment": "verbs",
+      "id": "verb:sein",
+      "infinitive": "sein",
+      "kind": "Verb",
+      "lessonIds": [
+        "lesson:01",
+        "lesson:02"
+      ],
+      "meaningEn": "to be",
+      "media": {
+        "assetId": null,
+        "state": "pending-review"
+      },
+      "paradigmNote": "This paradigm is irregular and must be learned as forms.",
+      "present": [
+        {
+          "form": "bin",
+          "person": "ich",
+          "personLabel": "ich"
+        },
+        {
+          "form": "bist",
+          "person": "du",
+          "personLabel": "du"
+        },
+        {
+          "form": "ist",
+          "person": "er_sie_es",
+          "personLabel": "er/sie/es"
+        },
+        {
+          "form": "sind",
+          "person": "wir",
+          "personLabel": "wir"
+        },
+        {
+          "form": "seid",
+          "person": "ihr",
+          "personLabel": "ihr"
+        },
+        {
+          "form": "sind",
+          "person": "sie_plural",
+          "personLabel": "sie (plural)"
+        },
+        {
+          "form": "sind",
+          "person": "Sie_formal",
+          "personLabel": "Sie (formal)"
+        }
+      ],
+      "publicationStatus": "published",
+      "sourcePriority": 1
+    }
+  },
+  "schemaVersion": "1.0.0"
+}

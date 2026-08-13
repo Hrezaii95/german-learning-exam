@@ -1,0 +1,84 @@
+# Continuous static deploy to GitHub Pages from codex/live-alpha.
+# Does not consume local app/service secrets. Orchestrator owns release approval.
+# Action SHAs resolved from official repos (floating majors → release commits):
+#   gh api repos/<org>/<repo>/git/ref/tags/<tag> (+ deref annotated tags)
+
+name: Deploy Pages
+
+on:
+  push:
+    branches:
+      - codex/live-alpha
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-german-learning-exam
+  cancel-in-progress: true
+
+jobs:
+  # Single sequential job: normal gates first, then Pages wrapper mutation.
+  # Do not parallelize steps that touch build-pages isolation (proxy / *.pages-bak).
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+
+      - name: Setup Node 22
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: platform/package-lock.json
+
+      - name: Install
+        working-directory: platform
+        run: npm ci
+
+      - name: Check
+        working-directory: platform
+        run: npm run check
+
+      - name: Build web (normal)
+        working-directory: platform
+        run: npm run build:web
+
+      - name: Audit production deps
+        working-directory: platform
+        run: npm run audit:prod
+
+      - name: Smoke web routes
+        working-directory: platform
+        run: npm run smoke:web-routes
+
+      - name: Smoke default dev
+        working-directory: platform
+        run: npm run smoke:dev
+
+      - name: Build Pages export
+        working-directory: platform
+        run: npm run build:pages
+
+      - name: Verify static export
+        working-directory: platform
+        run: npm run smoke:pages
+
+      - name: Setup Pages
+        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5.0.0
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3.0.1
+        with:
+          path: platform/apps/web/out
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4.0.5

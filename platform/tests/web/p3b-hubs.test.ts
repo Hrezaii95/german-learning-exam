@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -14,7 +15,10 @@ import {
 } from "../../apps/web/lib/content/hub-project.js";
 import {
   filterHubRecords,
+  HUB_QUERY_MAX_LENGTH,
+  hubFilterSummary,
   parseHubSearchParams,
+  sanitizeHubQueryText,
 } from "../../apps/web/lib/content/hub-query.js";
 import { LEARNER_HUB_IDS } from "../../apps/web/lib/content/hub-types.js";
 import { LEARNER_REVIEW_ONLY_ACTIVITY_IDS } from "../../apps/web/lib/content/learner-publication-policy.js";
@@ -27,6 +31,7 @@ import { projectPublishedLearnerWeb } from "../../apps/web/lib/content/project.j
 const platformRoot = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
 const publishedDir = join(platformRoot, "content", "published");
 const webRoot = join(platformRoot, "apps", "web");
+const generatedHubsPath = join(webRoot, "generated", "learner-hubs.json");
 
 const KNOWN_REVIEW_ONLY_IDS = [
   "collection:teacher-professions",
@@ -39,6 +44,25 @@ const KNOWN_REVIEW_ONLY_IDS = [
   "verb:wohnen",
   "listen:workbook-1-01-ab-momente-a11-1-3",
   "lex:elektriker",
+] as const;
+
+const FORBIDDEN_KEY_FRAGMENTS = [
+  "SourceAssertion",
+  "sourceAssertion",
+  "assertionValue",
+  "assertionValues",
+  "redistributionBasis",
+  "originalPath",
+  "privatePath",
+  "absolutePath",
+  "audioUrl",
+  "mp3Path",
+  "apiKey",
+  "api_key",
+  "secret",
+  "password",
+  "token",
+  "credential",
 ] as const;
 
 function collectStrings(value: unknown, out: string[]): void {
@@ -55,6 +79,39 @@ function collectStrings(value: unknown, out: string[]): void {
       collectStrings(nested, out);
     }
   }
+}
+
+function collectKeys(value: unknown, out: string[]): void {
+  if (Array.isArray(value)) {
+    for (const item of value) collectKeys(item, out);
+    return;
+  }
+  if (value != null && typeof value === "object") {
+    for (const [key, nested] of Object.entries(value as Record<string, unknown>)) {
+      out.push(key);
+      collectKeys(nested, out);
+    }
+  }
+}
+
+function sha256(text: string): string {
+  return createHash("sha256").update(text, "utf8").digest("hex");
+}
+
+function independentHubIdSets(
+  indexes: ReturnType<typeof buildContentIndexes>,
+): Record<string, Set<string>> {
+  const out: Record<string, Set<string>> = {};
+  for (const hubId of LEARNER_HUB_IDS) {
+    const ids = new Set<string>();
+    for (const kind of HUB_KIND_MEMBERSHIP[hubId]) {
+      for (const id of indexes.byKind.get(kind) ?? []) {
+        ids.add(id);
+      }
+    }
+    out[hubId] = ids;
+  }
+  return out;
 }
 
 describe("P3B six canonical hubs projection", () => {
@@ -108,11 +165,33 @@ describe("P3B six canonical hubs projection", () => {
     }
   });
 
+  it("matches generated learner-hubs artifact ID sets exactly", () => {
+    const artifact = JSON.parse(readFileSync(generatedHubsPath, "utf8")) as {
+      hubs: Array<{ id: string; items: Array<{ id: string }> }>;
+      hubsById: Record<string, { items: Array<{ id: string }> }>;
+    };
+    const independent = independentHubIdSets(indexes);
+
+    for (const hubId of LEARNER_HUB_IDS) {
+      const projected = new Set(hubs.hubsById[hubId].items.map((item) => item.id));
+      const fromArtifact = new Set(
+        (artifact.hubsById[hubId]?.items ?? []).map((item) => item.id),
+      );
+      expect(projected).toEqual(independent[hubId]);
+      expect(fromArtifact).toEqual(independent[hubId]);
+      expect(projected.size).toBe(hubs.hubsById[hubId].itemCount);
+    }
+  });
+
   it("keeps every projected hub record published and excludes known review-only IDs recursively", () => {
     const serialized = serializeHubProjectionDeterministic(hubs);
+    const parsed = JSON.parse(serialized);
     const strings: string[] = [];
-    collectStrings(JSON.parse(serialized), strings);
+    const keys: string[] = [];
+    collectStrings(parsed, strings);
+    collectKeys(parsed, keys);
     const blob = strings.join("\n");
+    const keyBlob = keys.join("\n");
 
     for (const id of KNOWN_REVIEW_ONLY_IDS) {
       expect(blob).not.toContain(id);
@@ -123,12 +202,125 @@ describe("P3B six canonical hubs projection", () => {
 
     expect(blob).not.toMatch(/\bassert:/);
     expect(blob).not.toMatch(/\.mp3\b/i);
+    expect(blob).not.toMatch(/https?:\/\/[^\s"]+\.mp3/i);
     expect(blob).not.toMatch(/"publicationStatus"\s*:\s*"(review|draft|blocked)"/);
     expect(blob.toLowerCase()).not.toContain("teacher collection");
+    expect(blob).not.toMatch(/[A-Za-z]:\\/);
+    expect(blob).not.toMatch(/\/Users\//);
+    expect(blob).not.toMatch(/E:\\claude-cursor/i);
+    expect(blob).not.toMatch(/resources\/original/i);
+
+    for (const fragment of FORBIDDEN_KEY_FRAGMENTS) {
+      expect(keyBlob.toLowerCase()).not.toContain(fragment.toLowerCase());
+      expect(blob.toLowerCase()).not.toContain(`"${fragment.toLowerCase()}"`);
+    }
+    expect(keys).not.toContain("Source");
+    expect(keys).not.toContain("sources");
+    expect(keys).not.toContain("assertions");
+    expect(keys).not.toContain("sourceAssertions");
 
     for (const [id, status] of author.publicationStatusById) {
       if (status === "review" || status === "draft" || status === "blocked") {
         expect(blob).not.toContain(id);
+      }
+    }
+  });
+
+  it("recursively leak-scans on-disk learner-hubs.json bytes independently of the in-memory serializer", () => {
+    const independent = independentHubIdSets(indexes);
+    const diskBytes = readFileSync(generatedHubsPath);
+    const diskText = diskBytes.toString("utf8");
+    const artifact = JSON.parse(diskText) as {
+      schemaVersion: string;
+      projectionKind: string;
+      hubCount: number;
+      hubs: Array<{
+        id: string;
+        kinds: string[];
+        itemCount: number;
+        items: Array<{
+          id: string;
+          kind: string;
+          publicationStatus: string;
+        }>;
+      }>;
+      hubsById: Record<
+        string,
+        {
+          id: string;
+          kinds: string[];
+          itemCount: number;
+          items: Array<{
+            id: string;
+            kind: string;
+            publicationStatus: string;
+          }>;
+        }
+      >;
+    };
+
+    expect(artifact.schemaVersion).toBe("1.0.0");
+    expect(artifact.projectionKind).toBe("learner-hubs");
+    expect(artifact.hubCount).toBe(6);
+    expect(artifact.hubs.map((hub) => hub.id)).toEqual([...LEARNER_HUB_IDS]);
+
+    const diskStrings: string[] = [];
+    const diskKeys: string[] = [];
+    collectStrings(artifact, diskStrings);
+    collectKeys(artifact, diskKeys);
+    const diskBlob = diskStrings.join("\n");
+    const diskKeyBlob = diskKeys.join("\n");
+
+    for (const hubId of LEARNER_HUB_IDS) {
+      const hub = artifact.hubsById[hubId];
+      expect(hub).toBeDefined();
+      if (!hub) {
+        throw new Error(`missing on-disk hub ${hubId}`);
+      }
+      expect(hub.id).toBe(hubId);
+      expect(hub.itemCount).toBe(hub.items.length);
+      expect(new Set(hub.items.map((item) => item.id))).toEqual(independent[hubId]);
+      expect(new Set(hub.kinds)).toEqual(new Set(HUB_KIND_MEMBERSHIP[hubId]));
+      for (const item of hub.items) {
+        expect(item.publicationStatus).toBe("published");
+        expect(HUB_KIND_MEMBERSHIP[hubId]).toContain(item.kind as never);
+      }
+    }
+
+    for (const id of KNOWN_REVIEW_ONLY_IDS) {
+      expect(diskBlob).not.toContain(id);
+      expect(diskText).not.toContain(id);
+    }
+    for (const id of LEARNER_REVIEW_ONLY_ACTIVITY_IDS) {
+      expect(diskBlob).not.toContain(id);
+      expect(diskText).not.toContain(id);
+    }
+
+    expect(diskText).not.toMatch(/\bassert:/);
+    expect(diskText).not.toMatch(/\.mp3\b/i);
+    expect(diskText).not.toMatch(/https?:\/\/[^\s"]+\.mp3/i);
+    expect(diskText).not.toMatch(
+      /"publicationStatus"\s*:\s*"(review|draft|blocked)"/,
+    );
+    expect(diskBlob.toLowerCase()).not.toContain("teacher collection");
+    expect(diskText).not.toMatch(/[A-Za-z]:\\/);
+    expect(diskText).not.toMatch(/\/Users\//);
+    expect(diskText).not.toMatch(/E:\\claude-cursor/i);
+    expect(diskText).not.toMatch(/resources\/original/i);
+
+    for (const fragment of FORBIDDEN_KEY_FRAGMENTS) {
+      expect(diskKeyBlob.toLowerCase()).not.toContain(fragment.toLowerCase());
+      expect(diskText.toLowerCase()).not.toContain(`"${fragment.toLowerCase()}"`);
+    }
+    expect(diskKeys).not.toContain("Source");
+    expect(diskKeys).not.toContain("sources");
+    expect(diskKeys).not.toContain("assertions");
+    expect(diskKeys).not.toContain("sourceAssertions");
+
+    for (const [id, status] of author.publicationStatusById) {
+      if (status === "review" || status === "draft" || status === "blocked") {
+        expect(diskBlob).not.toContain(id);
+        expect(diskText).not.toContain(id);
       }
     }
   });
@@ -169,7 +361,7 @@ describe("P3B six canonical hubs projection", () => {
     expect(hubProjectSource).not.toMatch(/\b44\b/);
   });
 
-  it("is deterministic across two projection runs", () => {
+  it("is byte-identical across two projection runs with stable SHA-256", () => {
     const first = serializeHubProjectionDeterministic(
       projectPublishedLearnerHubs(publishedDir),
     );
@@ -177,6 +369,8 @@ describe("P3B six canonical hubs projection", () => {
       projectPublishedLearnerHubs(publishedDir),
     );
     expect(first).toBe(second);
+    expect(sha256(first)).toBe(sha256(second));
+    expect(first.length).toBeGreaterThan(0);
   });
 
   it("rejects unimplemented hub detail aliases as not-found", () => {
@@ -192,6 +386,25 @@ describe("P3B six canonical hubs projection", () => {
       expect(resolved.kind).toBe("not-found");
       expect(resolved.kind).not.toBe("dashboard");
     }
+  });
+
+  it("preserves P3A lesson and activity route resolution", () => {
+    expect(resolveLearnerRoute("/", lessonProjection).kind).toBe("dashboard");
+    expect(resolveLearnerRoute("/lessons", lessonProjection).kind).toBe("lessons");
+    expect(resolveLearnerRoute("/lessons/01", lessonProjection).kind).toBe("lesson");
+    expect(resolveLearnerRoute("/lessons/02", lessonProjection).kind).toBe("lesson");
+    expect(resolveLearnerRoute("/lessons/03", lessonProjection).kind).toBe("not-found");
+
+    const sample = lessonProjection.activities[0];
+    expect(sample).toBeDefined();
+    const activity = resolveLearnerRoute(sample!.canonicalPath, lessonProjection);
+    expect(activity.kind).toBe("activity");
+
+    const reviewOnly = resolveLearnerRoute(
+      "/lessons/02/activity/activity%3Alesson-02-teacher-professions-deck",
+      lessonProjection,
+    );
+    expect(reviewOnly.kind).toBe("not-found");
   });
 });
 
@@ -284,5 +497,66 @@ describe("P3B hub search and filters", () => {
       category: null,
     });
     expect(emptyFiltered.items).toHaveLength(0);
+  });
+
+  it("adversarially bounds query parsing without unsafe reflection", () => {
+    const duplicateQ = parseHubSearchParams(
+      { q: ["Arzt", "<script>alert(1)</script>"], lesson: ["02", "99"] },
+      vocabulary.categories,
+    );
+    expect(duplicateQ.q).toBe("Arzt");
+    expect(duplicateQ.lesson).toBe("02");
+    expect(duplicateQ.q).not.toContain("<");
+    expect(duplicateQ.q).not.toContain("script");
+
+    const html = parseHubSearchParams(
+      { q: '<img src=x onerror="alert(1)">Arzt', lesson: "01" },
+      vocabulary.categories,
+    );
+    expect(html.q).not.toMatch(/[<>]/);
+    expect(html.q).toContain("Arzt");
+    expect(hubFilterSummary(html).join(" ")).not.toMatch(/[<>]/);
+
+    const controls = parseHubSearchParams(
+      { q: "Ar\u0000zt\u0007\u001b[31m", lesson: "all" },
+      vocabulary.categories,
+    );
+    expect(controls.q).toBe("Arzt[31m");
+    expect(controls.q).not.toMatch(/[\u0000-\u001f\u007f]/);
+
+    const longRaw = `A${"x".repeat(HUB_QUERY_MAX_LENGTH + 80)}`;
+    const long = parseHubSearchParams({ q: longRaw }, vocabulary.categories);
+    expect(long.q.length).toBe(HUB_QUERY_MAX_LENGTH);
+    expect(sanitizeHubQueryText(longRaw).length).toBe(HUB_QUERY_MAX_LENGTH);
+
+    const malformed = parseHubSearchParams(
+      {
+        q: "%zz%not-encoding\uD800",
+        lesson: "lesson:01" as unknown as string,
+        category: ["all", "jobs"],
+      },
+      vocabulary.categories,
+    );
+    expect(malformed.lesson).toBe("all");
+    expect(malformed.q).not.toContain("\uD800");
+    expect(malformed.category).toBeNull();
+
+    const unknown = parseHubSearchParams(
+      { lesson: "03", category: "../../etc/passwd", q: "ok" },
+      vocabulary.categories,
+    );
+    expect(unknown).toEqual({ q: "ok", lesson: "all", category: null });
+
+    // Sanitized values may appear in summary text only after stripping markup delimiters.
+    const reflected = hubFilterSummary(
+      parseHubSearchParams(
+        { q: "<script>evil</script>", lesson: "02" },
+        vocabulary.categories,
+      ),
+    );
+    const reflectedText = reflected.join(" ");
+    expect(reflectedText).not.toMatch(/[<>]/);
+    expect(reflectedText).not.toContain("<script>");
+    expect(reflected.some((part) => part.startsWith("Search:"))).toBe(true);
   });
 });

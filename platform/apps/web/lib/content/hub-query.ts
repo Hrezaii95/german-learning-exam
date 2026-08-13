@@ -16,6 +16,9 @@ export type HubFilterResult = {
   hasActiveFilters: boolean;
 };
 
+/** Bound for query string length (characters after sanitization). */
+export const HUB_QUERY_MAX_LENGTH = 200;
+
 const LESSON_FILTER_TO_ID: Readonly<Record<Exclude<HubLessonFilter, "all">, string>> =
   Object.freeze({
     "01": "lesson:01",
@@ -25,8 +28,32 @@ const LESSON_FILTER_TO_ID: Readonly<Record<Exclude<HubLessonFilter, "all">, stri
 function firstParam(
   value: string | string[] | undefined,
 ): string | undefined {
-  if (Array.isArray(value)) return value[0];
-  return value;
+  if (Array.isArray(value)) {
+    // Duplicate keys often arrive as arrays; take the first scalar only.
+    for (const entry of value) {
+      if (typeof entry === "string") return entry;
+    }
+    return undefined;
+  }
+  if (typeof value === "string") return value;
+  return undefined;
+}
+
+/**
+ * Fail closed on adversarial query text: drop C0 controls / unpaired surrogates,
+ * flatten angle brackets so summaries never carry raw markup delimiters, bound length.
+ */
+export function sanitizeHubQueryText(raw: string): string {
+  let out = "";
+  for (const ch of raw) {
+    const code = ch.codePointAt(0)!;
+    if (code < 0x20 || code === 0x7f) continue;
+    if (code >= 0xd800 && code <= 0xdfff) continue;
+    if (ch === "<" || ch === ">") continue;
+    out += ch;
+    if (out.length >= HUB_QUERY_MAX_LENGTH) break;
+  }
+  return out;
 }
 
 function parseLesson(raw: string | undefined): HubLessonFilter {
@@ -39,8 +66,10 @@ function parseCategory(
   allowed: ReadonlySet<string>,
 ): string | null {
   if (raw == null || raw === "" || raw === "all") return null;
-  if (!allowed.has(raw)) return null;
-  return raw;
+  const cleaned = sanitizeHubQueryText(raw).trim();
+  if (cleaned.length === 0 || cleaned === "all") return null;
+  if (!allowed.has(cleaned)) return null;
+  return cleaned;
 }
 
 /** Unknown query values fail safely to defaults — never reflect unsafe input into logic crashes. */
@@ -50,7 +79,8 @@ export function parseHubSearchParams(
 ): HubQueryState {
   const allowed = new Set(availableCategories);
   const qRaw = firstParam(params.q) ?? "";
-  const q = typeof qRaw === "string" ? qRaw.slice(0, 200) : "";
+  const q =
+    typeof qRaw === "string" ? sanitizeHubQueryText(qRaw) : "";
   return {
     q,
     lesson: parseLesson(firstParam(params.lesson)),
@@ -132,6 +162,7 @@ export function hubClearHref(hubPath: string): string {
 export function hubFilterSummary(query: HubQueryState): string[] {
   const parts: string[] = [];
   if (query.q.trim().length > 0) {
+    // query.q is already sanitized; never re-inject raw request params.
     parts.push(`Search: ${query.q.trim()}`);
   }
   if (query.lesson !== "all") {

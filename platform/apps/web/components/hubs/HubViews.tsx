@@ -11,6 +11,17 @@ import {
   parseHubSearchParams,
   type HubQueryState,
 } from "@/lib/content/hub-query";
+import {
+  appendNavigationContext,
+  buildHubNavigationContext,
+  isSafeNavigationPath,
+} from "@/lib/content/navigation-context";
+import {
+  DETAIL_HUB_BY_ID,
+  detailCanonicalPath,
+  isDetailRepresentativeId,
+} from "@/lib/content/detail-types";
+import { withPagesBasePath } from "@/lib/content/pages-base-path";
 
 function kindLabel(kind: LearnerHubRecord["kind"]): string {
   switch (kind) {
@@ -47,6 +58,31 @@ function lessonChips(lessonIds: readonly string[]): string {
     .join(", ");
 }
 
+function hubDetailHref(
+  hub: LearnerHubDefinition,
+  record: LearnerHubRecord,
+  query: HubQueryState,
+): string | null {
+  if (!isDetailRepresentativeId(record.id)) return null;
+  if (DETAIL_HUB_BY_ID[record.id] !== hub.id) return null;
+  const href = detailCanonicalPath(DETAIL_HUB_BY_ID[record.id], record.id);
+  if (!isSafeNavigationPath(href)) return null;
+  return appendNavigationContext(
+    href,
+    buildHubNavigationContext({
+      hubId: hub.id,
+      ...(query.q.trim().length > 0 ? { q: query.q } : {}),
+      ...(query.lesson === "01" || query.lesson === "02"
+        ? { lesson: query.lesson }
+        : {}),
+      ...(query.category && query.category !== "all"
+        ? { category: query.category }
+        : {}),
+      resultId: record.id,
+    }),
+  );
+}
+
 export function HubDirectoryView({
   projection,
 }: {
@@ -62,6 +98,16 @@ export function HubDirectoryView({
           published items with search and filters.
         </p>
       </header>
+
+      <p className="hub-mobile-search">
+        <Link
+          className="btn btn-secondary hub-mobile-search__link"
+          href="/search"
+          aria-label="Open global search"
+        >
+          Search published content
+        </Link>
+      </p>
 
       <div className="hub-shortcuts">
         {projection.hubs.map((hub) => (
@@ -110,13 +156,30 @@ function HubNoMatches({ hub }: { hub: LearnerHubDefinition }) {
   );
 }
 
-function HubRecordCard({ record }: { record: LearnerHubRecord }) {
+function HubRecordCard({
+  hub,
+  record,
+  query,
+}: {
+  hub: LearnerHubDefinition;
+  record: LearnerHubRecord;
+  query: HubQueryState;
+}) {
+  const href = hubDetailHref(hub, record, query);
   return (
     <article className="hub-card panel">
       <h2 className="hub-card__title">
-        <span className="german" lang="de">
-          {record.displayLabel}
-        </span>
+        {href ? (
+          <Link href={href} className="search-result-link">
+            <span className="german" lang="de">
+              {record.displayLabel}
+            </span>
+          </Link>
+        ) : (
+          <span className="german" lang="de">
+            {record.displayLabel}
+          </span>
+        )}
       </h2>
       <div className="meta-row">
         <span className="meta-chip">{kindLabel(record.kind)}</span>
@@ -125,7 +188,9 @@ function HubRecordCard({ record }: { record: LearnerHubRecord }) {
         ) : null}
         <span className="meta-chip">{lessonChips(record.lessonIds)}</span>
       </div>
-      <p className="dense hub-card__cue">Detail view next phase</p>
+      {href ? null : (
+        <p className="dense hub-card__cue">Detail view next phase</p>
+      )}
     </article>
   );
 }
@@ -138,50 +203,66 @@ function HubFilters({
   query: HubQueryState;
 }) {
   const summary = hubFilterSummary(query);
+  const searchId = `hub-search-${hub.id}`;
+  const lessonId = `hub-lesson-${hub.id}`;
+  const categoryId = `hub-category-${hub.id}`;
+  const hasCategories = hub.categories.length > 0;
+
   return (
     <section className="panel hub-filters" aria-labelledby="hub-filters-heading">
       <h2 id="hub-filters-heading">Filter published items</h2>
-      <form className="hub-filter-form" method="get" action={hub.path}>
+      <form
+        className="hub-filter-form"
+        method="get"
+        action={withPagesBasePath(hub.path)}
+      >
         <div className="hub-filter-grid">
-          <label className="hub-field">
+          <label className="hub-field" htmlFor={searchId}>
             <span className="hub-field__label">Search</span>
             <input
+              id={searchId}
               className="hub-input"
               type="search"
               name="q"
               defaultValue={query.q}
               placeholder="Canonical German text"
               autoComplete="off"
+              aria-label={`Search ${hub.title}`}
             />
           </label>
-          <label className="hub-field">
+          <label className="hub-field" htmlFor={lessonId}>
             <span className="hub-field__label">Lesson</span>
             <select
+              id={lessonId}
               className="hub-input"
               name="lesson"
               defaultValue={query.lesson}
+              aria-label={`Filter ${hub.title} by lesson`}
             >
               <option value="all">All</option>
               <option value="01">Lesson 1</option>
               <option value="02">Lesson 2</option>
             </select>
           </label>
-          <label className="hub-field">
-            <span className="hub-field__label">Category</span>
-            <select
-              className="hub-input"
-              name="category"
-              defaultValue={query.category ?? "all"}
-              disabled={hub.categories.length === 0}
-            >
-              <option value="all">All</option>
-              {hub.categories.map((category) => (
-                <option key={category} value={category}>
-                  {category}
-                </option>
-              ))}
-            </select>
-          </label>
+          {hasCategories ? (
+            <label className="hub-field" htmlFor={categoryId}>
+              <span className="hub-field__label">Category</span>
+              <select
+                id={categoryId}
+                className="hub-input"
+                name="category"
+                defaultValue={query.category ?? "all"}
+                aria-label={`Filter ${hub.title} by category`}
+              >
+                <option value="all">All</option>
+                {hub.categories.map((category) => (
+                  <option key={category} value={category}>
+                    {category}
+                  </option>
+                ))}
+              </select>
+            </label>
+          ) : null}
         </div>
         <div className="hub-filter-actions">
           <button className="btn btn-primary" type="submit">
@@ -216,6 +297,7 @@ export function HubListView({
 }) {
   const query = parseHubSearchParams(searchParams, hub.categories);
   const filtered = filterHubRecords(hub.items, query);
+  const showAfterFilters = hub.itemCount > 0 && filtered.hasActiveFilters;
 
   return (
     <div className="stack">
@@ -227,31 +309,33 @@ export function HubListView({
           <span className="meta-chip">{hub.itemCount} published</span>
           <span className="meta-chip">
             Showing {filtered.items.length}
-            {filtered.hasActiveFilters ? " after filters" : ""}
+            {showAfterFilters ? " after filters" : ""}
           </span>
         </p>
       </header>
 
+      <HubFilters hub={hub} query={query} />
+
       {hub.itemCount === 0 ? (
         <HubEmptyPublished hub={hub} />
+      ) : filtered.items.length === 0 ? (
+        <HubNoMatches hub={hub} />
       ) : (
-        <>
-          <HubFilters hub={hub} query={query} />
-          {filtered.items.length === 0 ? (
-            <HubNoMatches hub={hub} />
-          ) : (
-            <section aria-labelledby="hub-results-heading">
-              <h2 id="hub-results-heading" className="dense">
-                Results
-              </h2>
-              <div className="card-grid hub-results">
-                {filtered.items.map((record) => (
-                  <HubRecordCard key={record.id} record={record} />
-                ))}
-              </div>
-            </section>
-          )}
-        </>
+        <section aria-labelledby="hub-results-heading">
+          <h2 id="hub-results-heading" className="dense">
+            Results
+          </h2>
+          <div className="card-grid hub-results">
+            {filtered.items.map((record) => (
+              <HubRecordCard
+                key={record.id}
+                hub={hub}
+                record={record}
+                query={query}
+              />
+            ))}
+          </div>
+        </section>
       )}
     </div>
   );

@@ -1,6 +1,8 @@
+import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import { ShellLayout } from "@/components/shell/ShellLayout";
 import { LessonOverview } from "@/components/lessons/ActivityAndBrowser";
+import { LessonOverviewWithNav } from "@/components/lessons/LessonNavViews";
 import { loadLearnerProjection } from "@/lib/content/access";
 import { resolveLearnerRoute } from "@/lib/content/routes";
 
@@ -32,9 +34,20 @@ export default async function LessonPage({ params }: PageProps) {
     (activity) => activity.lessonId === lesson.id,
   );
 
+  // Static shell: do not read searchParams on the server. Nav context is parsed
+  // in a client boundary under Suspense (fallback has no inbound nav).
   return (
     <ShellLayout current="lessons">
-      <LessonOverview lesson={lesson} activities={lessonActivities} />
+      <Suspense
+        fallback={
+          <LessonOverview lesson={lesson} activities={lessonActivities} />
+        }
+      >
+        <LessonOverviewWithNav
+          lesson={lesson}
+          activities={lessonActivities}
+        />
+      </Suspense>
     </ShellLayout>
   );
 }

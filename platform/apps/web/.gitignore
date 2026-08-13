@@ -3,3 +3,5 @@ out/
 dist/
 node_modules/
 *.tsbuildinfo
+*.pages-bak
+proxy.ts.pages-disabled

@@ -1,6 +1,8 @@
+import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import { ShellLayout } from "@/components/shell/ShellLayout";
 import { ActivityScreen } from "@/components/lessons/ActivityAndBrowser";
+import { ActivityScreenWithNav } from "@/components/lessons/LessonNavViews";
 import {
   encodeActivityRouteSegment,
   tryDecodeActivityRouteSegment,
@@ -18,6 +20,12 @@ type PageProps = {
  * values are required on Windows (raw `:` is not a legal path character); at
  * request time Next decodes `%3A` → `:`, so `dynamicParams` must allow that
  * decoded form to reach the page instead of NoFallbackError.
+ *
+ * Navigation context is client-only (`useSearchParams` under Suspense) so this
+ * route remains statically generated.
+ *
+ * Pages static export flips this to `false` temporarily via `build-pages.mjs`
+ * (static export cannot use dynamicParams); the wrapper restores on exit.
  */
 export const dynamicParams = true;
 
@@ -52,7 +60,11 @@ export default async function ActivityPage({ params }: PageProps) {
 
   return (
     <ShellLayout current="lessons">
-      <ActivityScreen lesson={lesson} activity={activity} />
+      <Suspense
+        fallback={<ActivityScreen lesson={lesson} activity={activity} />}
+      >
+        <ActivityScreenWithNav lesson={lesson} activity={activity} />
+      </Suspense>
     </ShellLayout>
   );
 }

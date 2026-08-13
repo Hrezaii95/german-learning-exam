@@ -30,6 +30,9 @@
       ],
       "@german-learning/content": [
         "../../packages/content/src/index.ts"
+      ],
+      "@german-learning/learning": [
+        "../../packages/learning/src/index.ts"
       ]
     }
   },

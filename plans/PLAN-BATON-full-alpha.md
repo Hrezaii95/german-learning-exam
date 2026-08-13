@@ -1,8 +1,8 @@
 # PLAN-BATON — German Learning OS Full Alpha
 
-updated: 2026-08-08T05:50:00+03:30
-orchestrator_session: current Codex task
-active_engine: cursor-sdk
+updated: 2026-08-13T02:00:00+03:30
+orchestrator_session: Codex resume 2026-08-13
+active_engine: cursor-cli
 active_phase: P3
 meta_status: n/a
 gate_status: {G0: green, G1: green, G2: green, G3: pending, G4: pending, G5: pending, G6: pending, G-OWNER: pending}
@@ -12,7 +12,7 @@ file_ownership:
   - C-WEB: `platform/apps/web/**`, `platform/tests/web/**`, web package integration and README only
 open_items_unchanged: true
 violations: []
-next_action: Implement P3-02 six canonical hubs over the approved learner indexes; preserve 23 learner-published activity routes and the review-only teacher deck boundary.
+next_action: Implement representative published vocabulary, verb and Q&A detail/practice surfaces with approved cached audio and responsive infographic semantics; preserve all review/human/rights gates and keep G3 pending until review traversal exists.
 
 ## Current verified facts
 
@@ -44,4 +44,6 @@ next_action: Implement P3-02 six canonical hubs over the approved learner indexe
 | P2 | C-LEARN | Cursor SDK `grok-4.5` (`effort=high`, `fast=false`) | C2C approved after C2CR1 | `platform/packages/learning/src/review/**`; review tests; package integration | independent typecheck + 208 tests + publication/check pass; deterministic scheduler, balanced mission quotas, new-card authority, learner eligibility and mastery weakness bridge approved by Composer and executable reviewer with zero actionable P0-P2 |
 | P2 | C-LEARN | Cursor SDK `grok-4.5` (`effort=high`, `fast=false`) | C2D approved after C2DR1-C2DR3 | `platform/packages/learning/src/persistence/**`; persistence tests; package integration | independent typecheck + 288 tests + publication/check pass; adapters/import/export, typed ownership, atomic replay and complete string firewall approved by Composer and executable reviewer with zero actionable P0-P2 |
 | P3 | C-WEB | Cursor SDK `grok-4.5` (`effort=high`, `fast=false`) | P3-01 approved after P3AR1-P3AR2 | `platform/apps/web/**`; `platform/tests/web/**`; web package integration | 2 lessons; 24 validated activity records; 23 learner-published SSG routes plus review-only teacher-deck 404; 320 tests, Next 16.3 build, zero production audit vulnerabilities, 8/8 HTTP route smoke and 5/5 responsive visual E2E; Composer and executable review findings remediated |
+| P3 | C-WEB | Cursor CLI attempted then SDK `grok-4.5` (`effort=high`, `fast=false`) | P3-02 approved after P3BR1-P3BR2 | `platform/apps/web/**`; `platform/tests/web/**`; narrow CLI timing test; review evidence | six learner-safe hubs plus `/hubs`; exact counts 69/4/0/58/0/0; on-disk recursive leak scan; deterministic artifact; 339 tests, 37-page build, zero vulnerabilities, 15/15 route smoke; Composer final APPROVE with zero actionable P0-P2 |
+| P3 | C-WEB | Cursor SDK `grok-4.5` (`effort=high`, `fast=false`) | P3-03 approved after P3CR1 | learner search/context web paths and tests | 156 learner-only search docs; canonical alias matching and typed back context; 2 lesson + 23 activity SSG restored; 361 tests, 38-page build, zero vulnerabilities, 18/18 smoke; Composer final APPROVE zero P0-P2 |
 | P5 | X-MEDIA | Codex | technical audit complete; human gate open | `media/qa/alpha-tts-technical-audit.json`; `tools/audit-alpha-tts.mjs` | pass — 327 manifest assets = 327 disk files = 327 audited rows; zero technical failures; 327 listening reviews pending |

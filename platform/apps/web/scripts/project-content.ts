@@ -9,6 +9,15 @@ import {
   projectPublishedLearnerHubs,
   serializeHubProjectionDeterministic,
 } from "../lib/content/hub-project.js";
+import {
+  projectPublishedLearnerSearch,
+  serializeSearchProjectionDeterministic,
+} from "../lib/content/search-project.js";
+import { assertLearnerDetailProjection } from "../lib/content/access.js";
+import {
+  projectPublishedLearnerDetails,
+  serializeDetailProjectionDeterministic,
+} from "../lib/content/detail-project.js";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const webRoot = resolve(here, "..");
@@ -16,6 +25,8 @@ const platformRoot = resolve(webRoot, "..", "..");
 const publishedDir = join(platformRoot, "content", "published");
 const outPath = join(webRoot, "generated", "learner-projection.json");
 const hubsOutPath = join(webRoot, "generated", "learner-hubs.json");
+const searchOutPath = join(webRoot, "generated", "learner-search.json");
+const detailsOutPath = join(webRoot, "generated", "learner-details.json");
 
 function main(): void {
   const projection = projectPublishedLearnerWeb(publishedDir);
@@ -32,6 +43,21 @@ function main(): void {
   const counts = hubs.hubs.map((hub) => `${hub.id}=${hub.itemCount}`).join(", ");
   process.stdout.write(
     `Wrote learner hubs: ${hubs.hubCount} hubs (${counts}) → ${hubsOutPath}\n`,
+  );
+
+  const search = projectPublishedLearnerSearch(publishedDir);
+  const searchJson = serializeSearchProjectionDeterministic(search);
+  writeFileSync(searchOutPath, searchJson, "utf8");
+  process.stdout.write(
+    `Wrote learner search: ${search.documentCount} documents → ${searchOutPath}\n`,
+  );
+
+  const details = projectPublishedLearnerDetails(publishedDir);
+  assertLearnerDetailProjection(details);
+  const detailsJson = serializeDetailProjectionDeterministic(details);
+  writeFileSync(detailsOutPath, detailsJson, "utf8");
+  process.stdout.write(
+    `Wrote learner details: ${details.representativeCount} representatives → ${detailsOutPath}\n`,
   );
 }
 

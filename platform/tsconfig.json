@@ -38,8 +38,17 @@
   "exclude": [
     "node_modules",
     "**/dist",
+    "apps/web/lib/recorder/**",
     "tests/web/p3a-web-shell-ui.test.ts",
     "tests/web/p3ar2-proxy.test.ts",
-    "tests/web/p3b-hubs-ui.test.ts"
+    "tests/web/p3b-hubs-ui.test.ts",
+    "tests/web/p3c-search-ui.test.ts",
+    "tests/web/p3d-details-ui.test.ts",
+    "tests/web/p4a-games-ui.test.ts",
+    "tests/web/p4a-games-behavior.test.ts",
+    "tests/web/p4b-conversation-ui.test.ts",
+    "tests/web/p4b-conversation-behavior.test.ts",
+    "tests/web/p4b-spoken-behavior.test.ts",
+    "tests/web/p4b-recorder-lifecycle-behavior.test.ts"
   ]
 }

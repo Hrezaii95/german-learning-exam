@@ -15,8 +15,8 @@ P2-03,P2,Event and multidimensional mastery engine,platform/packages/learning/sr
 P2-04,P2,Review scheduler and mission generator,platform/packages/learning/src/review,G2,1,P2-03,completed
 P2-05,P2,Versioned export-import persistence,platform/packages/learning/src/persistence,G2,1,P2-03|P2-04,completed
 P3-01,P3,Stable lesson stage and activity routes,platform/apps/web,G3,24,P1-05|P2-01,completed
-P3-02,P3,Six canonical hubs,platform/apps/web,G3,6,P2-02|P2-03,pending
-P3-03,P3,Typed global search and back context,platform/apps/web,G3,1,P2-02,pending
+P3-02,P3,Six canonical hubs,platform/apps/web,G3,6,P2-02|P2-03,completed
+P3-03,P3,Typed global search and back context,platform/apps/web,G3,1,P2-02,completed
 P4-01,P4,Required game modes,platform/apps/web,G4,7,P2-03|P3-02,pending
 P4-02,P4,Q&A conversation progression,platform/apps/web,G4,5,P1-02|P1-03|P3-01,pending
 P4-03,P4,Recorder lifecycle and failure states,platform/apps/web,G4,1,P3-01,pending

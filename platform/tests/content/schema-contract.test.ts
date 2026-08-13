@@ -23,6 +23,9 @@ function errorCodes(result: ReturnType<typeof validateContentBundle>): string[] 
   return result.issues.filter((i) => i.severity === "error").map((i) => i.code);
 }
 
+/** Windows + TSX cold-start CLI probes need a bounded wall clock (not Vitest default 5s). */
+const CLI_SPAWN_TIMEOUT_MS = 20_000;
+
 function runValidateCli(args: string[]): {
   status: number | null;
   stdout: string;
@@ -35,8 +38,30 @@ function runValidateCli(args: string[]): {
       cwd: PLATFORM_ROOT,
       encoding: "utf8",
       env: { ...process.env, NO_COLOR: "1" },
+      timeout: CLI_SPAWN_TIMEOUT_MS,
+      maxBuffer: 2 * 1024 * 1024,
+      killSignal: "SIGTERM",
     },
   );
+
+  if (result.error) {
+    const err = result.error as NodeJS.ErrnoException;
+    const timedOut =
+      err.code === "ETIMEDOUT" ||
+      /ETIMEDOUT|timed out/i.test(err.message);
+    throw new Error(
+      timedOut
+        ? `validate CLI spawn timed out after ${CLI_SPAWN_TIMEOUT_MS}ms: ${err.message}`
+        : `validate CLI spawn failed: ${err.message}${err.code ? ` (${err.code})` : ""}`,
+    );
+  }
+
+  if (result.status === null) {
+    throw new Error(
+      `validate CLI exited without status (signal=${result.signal ?? "none"}; possible timeout after ${CLI_SPAWN_TIMEOUT_MS}ms)`,
+    );
+  }
+
   return {
     status: result.status,
     stdout: result.stdout ?? "",
@@ -507,31 +532,38 @@ describe("C0 content schema contract fixtures", () => {
   });
 });
 
-describe("C0R1 CLI negative contracts", () => {
-  it("missing argument exits nonzero without credentials", () => {
-    const run = runValidateCli([]);
-    expect(run.status).not.toBe(0);
-    const combined = `${run.stdout}\n${run.stderr}`;
-    expect(combined).toMatch(/Usage:/);
-    expect(combined).not.toMatch(/password|token|secret|api[_-]?key/i);
-    expect(combined).not.toMatch(/[A-Za-z]:\\Users\\/);
-  });
+describe(
+  "C0R1 CLI negative contracts",
+  () => {
+    it("missing argument exits nonzero without credentials", () => {
+      const run = runValidateCli([]);
+      expect(run.status).not.toBe(0);
+      const combined = `${run.stdout}\n${run.stderr}`;
+      expect(combined).toMatch(/Usage:/);
+      expect(combined).not.toMatch(/password|token|secret|api[_-]?key/i);
+      expect(combined).not.toMatch(/[A-Za-z]:\\Users\\/);
+      expect(combined).not.toMatch(/\/Users\//);
+      expect(combined).not.toMatch(/E:\\claude-cursor/i);
+    });
 
-  it("invalid JSON exits nonzero with INVALID_JSON", () => {
-    const run = runValidateCli([join(FIXTURES_DIR, "cli-invalid.json")]);
-    expect(run.status).not.toBe(0);
-    const combined = `${run.stdout}\n${run.stderr}`;
-    expect(combined).toContain("INVALID_JSON");
-    expect(combined).not.toMatch(/password|token|secret|api[_-]?key/i);
-  });
+    it("invalid JSON exits nonzero with INVALID_JSON", () => {
+      const run = runValidateCli([join(FIXTURES_DIR, "cli-invalid.json")]);
+      expect(run.status).not.toBe(0);
+      const combined = `${run.stdout}\n${run.stderr}`;
+      expect(combined).toContain("INVALID_JSON");
+      expect(combined).not.toMatch(/password|token|secret|api[_-]?key/i);
+    });
 
-  it("structurally valid but rejected fixture exits nonzero with stable codes", () => {
-    const run = runValidateCli([join(FIXTURES_DIR, "slash-lemma-rejected.json")]);
-    expect(run.status).not.toBe(0);
-    const combined = `${run.stdout}\n${run.stderr}`;
-    expect(combined).toContain("SLASH_LEMMA");
-    expect(combined).toContain("VALIDATION_FAILED");
-    expect(combined).not.toContain("Landwirt/Bauer");
-    expect(combined).not.toMatch(/password|token|secret|api[_-]?key/i);
-  });
-});
+    it("structurally valid but rejected fixture exits nonzero with stable codes", () => {
+      const run = runValidateCli([join(FIXTURES_DIR, "slash-lemma-rejected.json")]);
+      expect(run.status).not.toBe(0);
+      const combined = `${run.stdout}\n${run.stderr}`;
+      expect(combined).toContain("SLASH_LEMMA");
+      expect(combined).toContain("VALIDATION_FAILED");
+      expect(combined).not.toContain("Landwirt/Bauer");
+      expect(combined).not.toMatch(/password|token|secret|api[_-]?key/i);
+    });
+  },
+  // Narrow timeout for TSX CLI cold start on Windows; assertions unchanged.
+  CLI_SPAWN_TIMEOUT_MS,
+);

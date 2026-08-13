@@ -20,6 +20,8 @@ const PRIMARY_NAV: NavItem[] = [
   { key: "grammar", href: "/grammar", label: "Grammar", enabled: true },
   { key: "phrases", href: "/phrases", label: "Phrases & Q&A", enabled: true },
   { key: "listening", href: "/listening", label: "Listening", enabled: true },
+  { key: "search", href: "/search", label: "Search", enabled: true },
+  { key: "practice", href: "/practice", label: "Practice", enabled: true },
   { key: "review", label: "Review", enabled: false },
 ];
 

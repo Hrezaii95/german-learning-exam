@@ -1,4 +1,12 @@
 import Link from "next/link";
+import { BackLink } from "@/components/nav/BackLink";
+import {
+  appendNavigationContext,
+  buildLessonNavigationContext,
+  resolveBackHref,
+  resolveOutboundNavigationContext,
+  type NavigationContext,
+} from "@/lib/content/navigation-context";
 import type { LearnerActivity, LearnerLesson } from "@/lib/content/types";
 
 export function LessonBrowser({ lessons }: { lessons: readonly LearnerLesson[] }) {
@@ -49,21 +57,32 @@ function activityLabel(
   return activitiesById.get(activityId)?.promptPlainText ?? activityId;
 }
 
+function lessonSegment(lesson: LearnerLesson): "01" | "02" {
+  return lesson.routeSegment === "02" ? "02" : "01";
+}
+
 export function LessonOverview({
   lesson,
   activities,
+  navigation = null,
 }: {
   lesson: LearnerLesson;
   /** Projection activities for this lesson — labels resolve from prompts, not raw IDs. */
   activities: readonly LearnerActivity[];
+  navigation?: NavigationContext | null;
 }) {
   const activitiesById = new Map(
     activities.map((activity) => [activity.id, activity] as const),
   );
+  const currentContext = buildLessonNavigationContext(lessonSegment(lesson));
+  const outbound = resolveOutboundNavigationContext(navigation, currentContext);
+  const backHref =
+    navigation != null ? resolveBackHref(navigation, "lesson") : null;
 
   return (
     <div className="stack">
       <header className="page-header">
+        {backHref ? <BackLink href={backHref} /> : null}
         <p className="dense">Lesson {lesson.routeSegment}</p>
         <h1>
           <span className="german" lang="de">
@@ -105,15 +124,18 @@ export function LessonOverview({
               </div>
               {stage.activityIds.length > 0 ? (
                 <ul className="activity-links">
-                  {stage.activityIds.map((activityId) => (
-                    <li key={activityId}>
-                      <Link
-                        href={`/lessons/${lesson.routeSegment}/activity/${encodeURIComponent(activityId)}`}
-                      >
-                        {activityLabel(activityId, activitiesById)}
-                      </Link>
-                    </li>
-                  ))}
+                  {stage.activityIds.map((activityId) => {
+                    const target = `/lessons/${lesson.routeSegment}/activity/${encodeURIComponent(activityId)}`;
+                    return (
+                      <li key={activityId}>
+                        <Link
+                          href={appendNavigationContext(target, outbound)}
+                        >
+                          {activityLabel(activityId, activitiesById)}
+                        </Link>
+                      </li>
+                    );
+                  })}
                 </ul>
               ) : (
                 <p className="dense" style={{ marginTop: "0.75rem" }}>
@@ -131,17 +153,26 @@ export function LessonOverview({
 export function ActivityScreen({
   lesson,
   activity,
+  navigation = null,
 }: {
   lesson: LearnerLesson;
   activity: LearnerActivity;
+  navigation?: NavigationContext | null;
 }) {
+  const lessonContext = buildLessonNavigationContext(
+    lessonSegment(lesson),
+    activity.id,
+  );
+  const outbound = resolveOutboundNavigationContext(navigation, lessonContext);
+  const backHref = resolveBackHref(outbound, "lesson");
+  const lessonHref = appendNavigationContext(lesson.canonicalPath, outbound);
+
   return (
     <div className="stack">
       <header className="page-header">
+        <BackLink href={backHref} />
         <p className="dense">
-          <Link href={lesson.canonicalPath}>
-            Lesson {lesson.routeSegment}
-          </Link>
+          <Link href={lessonHref}>Lesson {lesson.routeSegment}</Link>
           {" · "}
           {activity.stageTitleEn}
         </p>

@@ -32,7 +32,7 @@ describe("P3B hub UI shell contracts", () => {
   let hubs: LearnerHubProjection;
   let AppShell: (props: {
     current: ShellNavCurrent;
-    children: ReactNode;
+    children?: ReactNode;
   }) => ReactNode;
   let HubListView: (props: {
     hub: LearnerHubProjection["hubs"][number];
@@ -48,7 +48,7 @@ describe("P3B hub UI shell contracts", () => {
       "../../apps/web/components/shell/AppShell.tsx"
     );
     const hubMod = await import("../../apps/web/components/hubs/HubViews.tsx");
-    AppShell = shellMod.AppShell;
+    AppShell = shellMod.AppShell as typeof AppShell;
     HubListView = hubMod.HubListView;
     HubDirectoryView = hubMod.HubDirectoryView;
   });
@@ -136,6 +136,68 @@ describe("P3B hub UI shell contracts", () => {
     expect(noMatch).not.toContain("No published items yet");
   });
 
+  it("exposes search and lesson filters on empty hubs without fabricating matches", () => {
+    const emptyHubIds = ["grammar", "listening", "concepts"] as const;
+    for (const hubId of emptyHubIds) {
+      const hub = hubs.hubsById[hubId];
+      expect(hub.itemCount).toBe(0);
+
+      const baseline = renderToStaticMarkup(
+        createElement(HubListView, {
+          hub,
+          searchParams: {},
+        }),
+      );
+      expect(baseline).toContain("Filter published items");
+      expect(baseline).toMatch(/<form[^>]*method="get"/);
+      expect(baseline).toContain(`action="/${hubId}"`);
+      expect(baseline).toContain('name="q"');
+      expect(baseline).toContain('name="lesson"');
+      expect(baseline).toContain("Lesson 1");
+      expect(baseline).toContain("Lesson 2");
+      expect(baseline).toContain("Apply filters");
+      expect(baseline).toContain("Clear filters");
+      expect(baseline).toContain("No active filters");
+      expect(baseline).toContain("No published items yet");
+      expect(baseline).not.toContain("No matches");
+      expect(baseline).not.toContain('name="category"');
+      expect(baseline).not.toContain("after filters");
+      expect(baseline).toContain("mastery");
+      expect(baseline).toMatch(/not available/i);
+      expect(baseline).not.toMatch(
+        /<(?:button|input|select)[^>]*(?:learned|due|mastery|streak)/i,
+      );
+      expect(baseline).not.toMatch(
+        /<(?:button|input)[^>]*>[^<]*(?:Mark learned|Due count|Mastery)/i,
+      );
+
+      const filteredEmpty = renderToStaticMarkup(
+        createElement(HubListView, {
+          hub,
+          searchParams: { q: "sein", lesson: "01" },
+        }),
+      );
+      expect(filteredEmpty).toContain("No published items yet");
+      expect(filteredEmpty).not.toContain("No matches");
+      expect(filteredEmpty).toContain("Active filters:");
+      expect(filteredEmpty).toContain("Search: sein");
+      expect(filteredEmpty).toContain("Lesson 01");
+      expect(filteredEmpty).not.toContain("after filters");
+      expect(filteredEmpty).toContain('name="q"');
+      expect(filteredEmpty).toContain('name="lesson"');
+      expect(filteredEmpty).not.toContain('name="category"');
+    }
+
+    const populated = renderToStaticMarkup(
+      createElement(HubListView, {
+        hub: hubs.hubsById.vocabulary,
+        searchParams: {},
+      }),
+    );
+    expect(populated).toContain('name="category"');
+    expect(populated).toContain("Filter published items");
+  });
+
   it("does not link hub cards to unimplemented detail routes", () => {
     const html = renderToStaticMarkup(
       createElement(HubListView, {
@@ -146,5 +208,58 @@ describe("P3B hub UI shell contracts", () => {
     expect(html).toContain("Detail view next phase");
     expect(html).not.toContain('href="/verbs/verb:');
     expect(html).not.toMatch(/href="\/vocabulary\/lex:/);
+  });
+
+  it("keeps zero aria-current on 404 shell and treats /hubs as mobile directory", () => {
+    const notFound = renderToStaticMarkup(
+      createElement(
+        AppShell,
+        { current: null },
+        createElement("div", null, "Page not found"),
+      ),
+    );
+    expect(notFound).not.toContain('aria-current="page"');
+    expect(notFound).not.toContain("aria-current=");
+    expect(notFound.match(/<main\b/g)?.length).toBe(1);
+    expect(notFound).toContain('href="#main-content"');
+
+    const directory = renderToStaticMarkup(
+      createElement(
+        AppShell,
+        { current: "hubs" },
+        createElement(HubDirectoryView, { projection: hubs }),
+      ),
+    );
+    expect(directory).toContain('href="/vocabulary"');
+    expect(directory).toContain('href="/verbs"');
+    expect(directory).toContain('href="/grammar"');
+    expect(directory).toContain('href="/phrases"');
+    expect(directory).toContain('href="/listening"');
+    expect(directory).toContain('href="/concepts"');
+    expect(directory).toContain("Directory of the six canonical content hubs");
+    // Mobile bottom Hubs is current; desktop primary has no dedicated Hubs item.
+    expect((directory.match(/aria-current="page"/g) ?? []).length).toBe(1);
+  });
+
+  it("renders populated hub results from real components without reflecting unsafe query markup", () => {
+    const html = renderToStaticMarkup(
+      createElement(
+        AppShell,
+        { current: "vocabulary" },
+        createElement(HubListView, {
+          hub: hubs.hubsById.vocabulary,
+          searchParams: {
+            q: ['Arzt', '<script>x</script>'],
+            lesson: "02",
+            category: "not-a-category",
+          },
+        }),
+      ),
+    );
+    expect(html).toContain("published");
+    expect(html).not.toContain("<script>");
+    expect(html).not.toContain("not-a-category");
+    expect(html).toMatch(/lang="de"/);
+    expect(hubs.hubsById.vocabulary.itemCount).toBeGreaterThan(0);
   });
 });

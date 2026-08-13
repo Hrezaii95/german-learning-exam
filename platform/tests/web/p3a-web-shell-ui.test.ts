@@ -34,7 +34,7 @@ describe("P3A behavioral UI (server-rendered from generated projection)", () => 
   // Components are .tsx; load via dynamic import under vitest (esbuild jsx).
   let AppShell: (props: {
     current: "dashboard" | "lessons" | "vocabulary" | "hubs" | null;
-    children: ReactNode;
+    children?: ReactNode;
   }) => ReactNode;
   let DashboardView: (props: {
     projection: LearnerWebProjection;
@@ -55,9 +55,9 @@ describe("P3A behavioral UI (server-rendered from generated projection)", () => 
     const activityMod = await import(
       "../../apps/web/components/lessons/ActivityAndBrowser.tsx"
     );
-    AppShell = shellMod.AppShell;
-    DashboardView = lessonMod.DashboardView;
-    LessonOverview = activityMod.LessonOverview;
+    AppShell = shellMod.AppShell as typeof AppShell;
+    DashboardView = lessonMod.DashboardView as typeof DashboardView;
+    LessonOverview = activityMod.LessonOverview as typeof LessonOverview;
   });
 
   it("renders one main and a working skip-link target", () => {

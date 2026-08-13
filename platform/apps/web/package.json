@@ -6,14 +6,19 @@
   "scripts": {
     "project": "tsx scripts/project-content.ts",
     "prebuild": "npm run project",
-    "dev": "npm run project && next dev",
-    "build": "next build",
+    "dev": "npm run project && next dev --webpack",
+    "build": "next build --webpack",
+    "build:pages": "tsx scripts/build-pages.ts",
     "start": "next start",
     "typecheck": "tsc --noEmit -p tsconfig.json",
-    "smoke:routes": "node scripts/smoke-canonical-routes.mjs"
+    "typecheck:tests": "tsc --noEmit -p tsconfig.tests.json",
+    "smoke:routes": "node scripts/smoke-canonical-routes.mjs",
+    "smoke:dev": "node scripts/smoke-dev-practice.mjs",
+    "smoke:pages": "node scripts/smoke-pages.mjs"
   },
   "dependencies": {
     "@german-learning/content": "*",
+    "@german-learning/learning": "*",
     "next": "16.3.0",
     "react": "19.2.8",
     "react-dom": "19.2.8"
