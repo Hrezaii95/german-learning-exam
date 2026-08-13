@@ -7,6 +7,7 @@ import {
   resolveOutboundNavigationContext,
   type NavigationContext,
 } from "@/lib/content/navigation-context";
+import { activityCanonicalPath } from "@/lib/content/path-utils";
 import type { LearnerActivity, LearnerLesson } from "@/lib/content/types";
 
 export function LessonBrowser({ lessons }: { lessons: readonly LearnerLesson[] }) {
@@ -125,7 +126,7 @@ export function LessonOverview({
               {stage.activityIds.length > 0 ? (
                 <ul className="activity-links">
                   {stage.activityIds.map((activityId) => {
-                    const target = `/lessons/${lesson.routeSegment}/activity/${encodeURIComponent(activityId)}`;
+                    const target = activityCanonicalPath(lesson.number, activityId);
                     return (
                       <li key={activityId}>
                         <Link

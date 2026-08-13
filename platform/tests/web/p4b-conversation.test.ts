@@ -315,7 +315,7 @@ describe("P4B conversation routes", () => {
 
   it("resolves canonical encoded path and redirects raw-colon", () => {
     const canonical = conversationCanonicalPath();
-    expect(canonical).toBe("/conversation/qa%3Aprofession-casual-main");
+    expect(canonical).toMatch(/^\/conversation\/id-[0-9a-f]+$/);
     const ok = resolveLearnerRoute(canonical, projection, details);
     expect(ok.kind).toBe("conversation");
     if (ok.kind === "conversation") {
@@ -358,5 +358,5 @@ describe("P4B conversation routes", () => {
 });
 
 function canonicalSafe() {
-  return "/conversation/qa%3Aprofession-casual-main";
+  return conversationCanonicalPath();
 }

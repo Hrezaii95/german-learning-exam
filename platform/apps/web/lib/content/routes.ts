@@ -141,13 +141,16 @@ function resolveDetailRoute(
     };
   }
 
-  // Double-encoding / non-round-trip forms fail closed (except safe raw-colon alias).
+  // Double-encoding / non-round-trip forms fail closed. The former percent-
+  // encoded canonical form and raw-colon form remain one-hop legacy aliases.
   const expectedEncoded = encodeEntityRouteSegment(entityId);
   const isCanonicalSegment = entitySegment === expectedEncoded;
   const isRawColonAlias =
     entitySegment === entityId && entityId.includes(":") && !entitySegment.includes("%");
+  const isLegacyEncodedAlias =
+    entitySegment.toLowerCase() === encodeURIComponent(entityId).toLowerCase();
 
-  if (!isCanonicalSegment && !isRawColonAlias) {
+  if (!isCanonicalSegment && !isRawColonAlias && !isLegacyEncodedAlias) {
     return {
       kind: "not-found",
       pathname,
@@ -217,8 +220,8 @@ function resolveDetailRoute(
  * `.`/`..`, and a trailing slash are rejected as not-found — trailing-slash
  * redirects are handled only at the Next proxy request boundary.
  *
- * Activity success requires the complete encoded activity ID segment
- * (`activity%3A…`) matching `ownership.canonicalPath`. Safe noncanonical
+ * Activity success requires the complete Pages-safe activity ID segment
+ * matching `ownership.canonicalPath`. Safe noncanonical
  * aliases (raw colon, lowercase hex, etc.) that decode once to a
  * learner-published activity owned by the path lesson return
  * `canonical-redirect`. Wrong-lesson, unknown, review-only, malformed, and
@@ -548,7 +551,7 @@ export function crossLessonActivityPath(
     (lesson) => lesson.routeSegment !== ownership.lessonRouteSegment,
   );
   if (!wrongLesson) return null;
-  return `/lessons/${wrongLesson.routeSegment}/activity/${encodeURIComponent(activityId)}`;
+  return `/lessons/${wrongLesson.routeSegment}/activity/${encodeActivityRouteSegment(activityId)}`;
 }
 
 /** Raw-colon alias under the owning lesson (noncanonical request form). */

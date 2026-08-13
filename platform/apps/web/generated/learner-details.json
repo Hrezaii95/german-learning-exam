@@ -4,7 +4,7 @@
   "representatives": [
     {
       "article": "der",
-      "canonicalPath": "/vocabulary/lex%3Aarchitekt",
+      "canonicalPath": "/vocabulary/id-6c65783a617263686974656b74",
       "displayText": "der Architekt",
       "gender": "masculine",
       "hubSegment": "vocabulary",
@@ -37,7 +37,7 @@
       "sourcePriority": 1
     },
     {
-      "canonicalPath": "/verbs/verb%3Asein",
+      "canonicalPath": "/verbs/id-766572623a7365696e",
       "displayText": "sein",
       "hubSegment": "verbs",
       "id": "verb:sein",
@@ -117,7 +117,7 @@
           "role": "answer"
         }
       ],
-      "canonicalPath": "/phrases/qa%3Aprofession-casual-main",
+      "canonicalPath": "/phrases/id-71613a70726f66657373696f6e2d63617375616c2d6d61696e",
       "conversationLevels": [
         {
           "description": "Study the published question and answer patterns.",
@@ -175,7 +175,7 @@
   "representativesById": {
     "lex:architekt": {
       "article": "der",
-      "canonicalPath": "/vocabulary/lex%3Aarchitekt",
+      "canonicalPath": "/vocabulary/id-6c65783a617263686974656b74",
       "displayText": "der Architekt",
       "gender": "masculine",
       "hubSegment": "vocabulary",
@@ -231,7 +231,7 @@
           "role": "answer"
         }
       ],
-      "canonicalPath": "/phrases/qa%3Aprofession-casual-main",
+      "canonicalPath": "/phrases/id-71613a70726f66657373696f6e2d63617375616c2d6d61696e",
       "conversationLevels": [
         {
           "description": "Study the published question and answer patterns.",
@@ -286,7 +286,7 @@
       "sourcePriority": 1
     },
     "verb:sein": {
-      "canonicalPath": "/verbs/verb%3Asein",
+      "canonicalPath": "/verbs/id-766572623a7365696e",
       "displayText": "sein",
       "hubSegment": "verbs",
       "id": "verb:sein",

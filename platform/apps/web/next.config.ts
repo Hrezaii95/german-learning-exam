@@ -13,7 +13,7 @@ const here = path.dirname(fileURLToPath(import.meta.url));
  *
  * Canonical alias detection in proxy.ts reads the raw request URL string via
  * extractRawPathname — keep skipProxyUrlNormalize off so prerendered
- * `activity%3A…` routes still match.
+ * Pages-safe typed-ID slug routes still match.
  *
  * P4A pulls `@german-learning/learning` (TypeScript ESM with `.js` specifiers)
  * into the App Router graph. Turbopack cannot yet alias `.js` → `.ts`, so

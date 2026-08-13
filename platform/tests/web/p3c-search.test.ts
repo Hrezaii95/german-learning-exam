@@ -380,7 +380,7 @@ describe("P3C typed global search projection", () => {
         }
       } else if (detailIds.has(doc.id)) {
         expect(doc.canonicalHref).toMatch(
-          /^\/(vocabulary|verbs|phrases)\/(lex|verb|qa)%3A/,
+          /^\/(vocabulary|verbs|phrases)\/id-[0-9a-f]+$/,
         );
         expect(isSafeNavigationPath(doc.canonicalHref!)).toBe(true);
       } else {

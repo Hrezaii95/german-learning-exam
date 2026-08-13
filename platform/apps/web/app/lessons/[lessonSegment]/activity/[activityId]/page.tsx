@@ -16,10 +16,8 @@ type PageProps = {
 
 /**
  * Prerender known activities via generateStaticParams. Unknown IDs still fail
- * closed in the page (`resolveLearnerRoute` → notFound). Encoded static param
- * values are required on Windows (raw `:` is not a legal path character); at
- * request time Next decodes `%3A` → `:`, so `dynamicParams` must allow that
- * decoded form to reach the page instead of NoFallbackError.
+ * closed in the page (`resolveLearnerRoute` → notFound). Canonical static
+ * params use the Pages-safe typed-ID slug, which is also legal on Windows.
  *
  * Navigation context is client-only (`useSearchParams` under Suspense) so this
  * route remains statically generated.
@@ -33,8 +31,7 @@ export function generateStaticParams() {
   const projection = loadLearnerProjection();
   return projection.activities.map((activity) => ({
     lessonSegment: activity.lessonRouteSegment,
-    // Encoded form is filesystem-safe on Windows and matches the canonical URL
-    // segment. tryDecode accepts decoded runtime params when Next normalizes.
+    // The canonical slug is filesystem-safe and decodes back to the typed ID.
     activityId: encodeActivityRouteSegment(activity.id),
   }));
 }

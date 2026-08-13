@@ -30,6 +30,12 @@ function assert(cond, msg) {
   if (!cond) throw new Error(msg);
 }
 
+function publicTypedIdSlug(id) {
+  return `id-${[...id]
+    .map((char) => char.charCodeAt(0).toString(16).padStart(2, "0"))
+    .join("")}`;
+}
+
 async function fetchText(path) {
   const res = await fetch(`${BASE}${path}`, { redirect: "follow" });
   const text = await res.text();
@@ -156,7 +162,7 @@ async function runChecks() {
   }
 
   {
-    const path = "/conversation/qa%3Aprofession-casual-main";
+    const path = `/conversation/${publicTypedIdSlug("qa:profession-casual-main")}`;
     const { status, text, url } = await fetchText(path);
     assert(status === 200, `${path} expected 200, got ${status}`);
     assert(

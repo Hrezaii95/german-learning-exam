@@ -20,6 +20,7 @@ const here = dirname(fileURLToPath(import.meta.url));
 const webRoot = join(here, "..");
 const require = createRequire(import.meta.url);
 const projection = require("../generated/learner-projection.json");
+const details = require("../generated/learner-details.json");
 
 const PORT = process.env.SMOKE_PORT ? Number(process.env.SMOKE_PORT) : 4310;
 const BASE = `http://127.0.0.1:${PORT}`;
@@ -33,6 +34,12 @@ if (!sample) {
 
 function assert(cond, msg) {
   if (!cond) throw new Error(msg);
+}
+
+function publicTypedIdSlug(id) {
+  return `id-${[...id]
+    .map((char) => char.charCodeAt(0).toString(16).padStart(2, "0"))
+    .join("")}`;
 }
 
 async function fetchStatus(path, { redirect = "manual" } = {}) {
@@ -136,7 +143,7 @@ async function runSmoke() {
   // 3) Wrong-lesson → 404 (no dashboard)
   {
     const otherLesson = sample.lessonRouteSegment === "01" ? "02" : "01";
-    const wrong = `/lessons/${otherLesson}/activity/${encodeURIComponent(sample.id)}`;
+    const wrong = `/lessons/${otherLesson}/activity/${publicTypedIdSlug(sample.id)}`;
     const { status, url } = await fetchStatus(wrong, { redirect: "follow" });
     assert(status === 404, `wrong-lesson expected 404, got ${status}`);
     assert(new URL(url).pathname !== "/", `wrong-lesson must not fall back to dashboard`);
@@ -145,8 +152,8 @@ async function runSmoke() {
 
   // 4) Unknown + review-only → 404
   {
-    const unknown = `/lessons/01/activity/${encodeURIComponent("activity:missing-totally")}`;
-    const teacher = `/lessons/02/activity/${encodeURIComponent(TEACHER_DECK)}`;
+    const unknown = `/lessons/01/activity/${publicTypedIdSlug("activity:missing-totally")}`;
+    const teacher = `/lessons/02/activity/${publicTypedIdSlug(TEACHER_DECK)}`;
     for (const path of [unknown, teacher]) {
       const { status, url } = await fetchStatus(path, { redirect: "follow" });
       assert(status === 404, `${path} expected 404, got ${status}`);
@@ -173,16 +180,33 @@ async function runSmoke() {
       results.push(`OK hub/directory 200 ${path}`);
     }
 
-    const detailPaths = [
-      "/vocabulary/lex%3Aarchitekt",
-      "/verbs/verb%3Asein",
-      "/phrases/qa%3Aprofession-casual-main",
-    ];
+    const detailPaths = details.representatives.map((rep) => rep.canonicalPath);
     for (const path of detailPaths) {
       const { status, url } = await fetchStatus(path, { redirect: "follow" });
       assert(status === 200, `${path} expected 200, got ${status}`);
       assert(new URL(url).pathname === path, `${path} must not redirect away`);
       results.push(`OK detail 200 ${path}`);
+    }
+
+    for (const rep of details.representatives) {
+      const legacy = `/${rep.hubSegment}/${encodeURIComponent(rep.id)}`;
+      const lowerLegacy = legacy.replace(/%3A/g, "%3a");
+      for (const alias of [legacy, lowerLegacy]) {
+        const { status, location } = await fetchStatus(alias);
+        assert(
+          status === 308 || status === 301,
+          `legacy detail expected permanent redirect, got ${status} for ${alias}`,
+        );
+        assert(location, `legacy detail missing Location for ${alias}`);
+        const locPath = new URL(location, BASE).pathname;
+        assert(
+          locPath === rep.canonicalPath,
+          `legacy detail Location ${locPath} !== ${rep.canonicalPath}`,
+        );
+        const followed = await fetchStatus(locPath);
+        assert(followed.status === 200, `legacy detail follow expected 200`);
+        results.push(`OK detail legacy ${status} ${alias} → ${locPath} → 200`);
+      }
     }
 
     {
@@ -195,7 +219,7 @@ async function runSmoke() {
       assert(location, "raw-colon detail missing Location");
       const locPath = new URL(location, BASE).pathname;
       assert(
-        locPath === "/vocabulary/lex%3Aarchitekt",
+        locPath === details.representativesById["lex:architekt"].canonicalPath,
         `raw-colon detail Location ${locPath} unexpected`,
       );
       results.push(`OK detail raw-colon ${status} → ${locPath}`);
@@ -278,7 +302,7 @@ async function runSmoke() {
     );
     results.push(`OK conversation 200 /conversation`);
 
-    const canonical = "/conversation/qa%3Aprofession-casual-main";
+    const canonical = `/conversation/${publicTypedIdSlug("qa:profession-casual-main")}`;
     {
       const res = await fetchStatus(canonical, { redirect: "follow" });
       assert(res.status === 200, `${canonical} expected 200, got ${res.status}`);

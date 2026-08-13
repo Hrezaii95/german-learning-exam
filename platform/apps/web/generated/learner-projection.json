@@ -1,7 +1,7 @@
 {
   "activities": [
     {
-      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-alphabet-listen-spell",
+      "canonicalPath": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d616c7068616265742d6c697374656e2d7370656c6c",
       "evidence": {
         "interactionReady": false,
         "promptPublished": true,
@@ -31,7 +31,7 @@
       "stageTitleEn": "Practise"
     },
     {
-      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-checkpoint-summary",
+      "canonicalPath": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d636865636b706f696e742d73756d6d617279",
       "evidence": {
         "interactionReady": false,
         "promptPublished": true,
@@ -62,7 +62,7 @@
       "stageTitleEn": "Checkpoint"
     },
     {
-      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-greeting-farewell-match",
+      "canonicalPath": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d6772656574696e672d6661726577656c6c2d6d61746368",
       "evidence": {
         "interactionReady": false,
         "promptPublished": true,
@@ -92,7 +92,7 @@
       "stageTitleEn": "Learn"
     },
     {
-      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-greetings-by-context",
+      "canonicalPath": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d6772656574696e67732d62792d636f6e74657874",
       "evidence": {
         "interactionReady": false,
         "promptPublished": true,
@@ -123,7 +123,7 @@
       "stageTitleEn": "Learn"
     },
     {
-      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-guided-intro-recording",
+      "canonicalPath": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d6775696465642d696e74726f2d7265636f7264696e67",
       "evidence": {
         "interactionReady": false,
         "promptPublished": true,
@@ -154,7 +154,7 @@
       "stageTitleEn": "Practise"
     },
     {
-      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-heissen-sein-notice",
+      "canonicalPath": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d6865697373656e2d7365696e2d6e6f74696365",
       "evidence": {
         "interactionReady": false,
         "promptPublished": true,
@@ -185,7 +185,7 @@
       "stageTitleEn": "Learn"
     },
     {
-      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-name-model-dialogue",
+      "canonicalPath": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d6e616d652d6d6f64656c2d6469616c6f677565",
       "evidence": {
         "interactionReady": false,
         "promptPublished": true,
@@ -216,7 +216,7 @@
       "stageTitleEn": "Learn"
     },
     {
-      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-origin-aus-contrast",
+      "canonicalPath": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d6f726967696e2d6175732d636f6e7472617374",
       "evidence": {
         "interactionReady": false,
         "promptPublished": true,
@@ -247,7 +247,7 @@
       "stageTitleEn": "Learn"
     },
     {
-      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-pronoun-verb-builder",
+      "canonicalPath": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d70726f6e6f756e2d766572622d6275696c646572",
       "evidence": {
         "interactionReady": false,
         "promptPublished": true,
@@ -278,7 +278,7 @@
       "stageTitleEn": "Practise"
     },
     {
-      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-register-qa-builder",
+      "canonicalPath": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d72656769737465722d71612d6275696c646572",
       "evidence": {
         "interactionReady": false,
         "promptPublished": true,
@@ -309,7 +309,7 @@
       "stageTitleEn": "Practise"
     },
     {
-      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-wellbeing-scale",
+      "canonicalPath": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d77656c6c6265696e672d7363616c65",
       "evidence": {
         "interactionReady": false,
         "promptPublished": true,
@@ -339,7 +339,7 @@
       "stageTitleEn": "Learn"
     },
     {
-      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-workbook-listening",
+      "canonicalPath": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d776f726b626f6f6b2d6c697374656e696e67",
       "evidence": {
         "interactionReady": false,
         "promptPublished": true,
@@ -369,7 +369,7 @@
       "stageTitleEn": "Listening"
     },
     {
-      "canonicalPath": "/lessons/02/activity/activity%3Alesson-02-checkpoint-summary",
+      "canonicalPath": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d636865636b706f696e742d73756d6d617279",
       "evidence": {
         "interactionReady": false,
         "promptPublished": true,
@@ -400,7 +400,7 @@
       "stageTitleEn": "Checkpoint"
     },
     {
-      "canonicalPath": "/lessons/02/activity/activity%3Alesson-02-core-professions",
+      "canonicalPath": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d636f72652d70726f66657373696f6e73",
       "evidence": {
         "interactionReady": false,
         "promptPublished": true,
@@ -431,7 +431,7 @@
       "stageTitleEn": "Learn"
     },
     {
-      "canonicalPath": "/lessons/02/activity/activity%3Alesson-02-full-person-conjugation",
+      "canonicalPath": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d66756c6c2d706572736f6e2d636f6e6a75676174696f6e",
       "evidence": {
         "interactionReady": false,
         "promptPublished": true,
@@ -462,7 +462,7 @@
       "stageTitleEn": "Learn"
     },
     {
-      "canonicalPath": "/lessons/02/activity/activity%3Alesson-02-numbers-0-100",
+      "canonicalPath": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d6e756d626572732d302d313030",
       "evidence": {
         "interactionReady": false,
         "promptPublished": true,
@@ -492,7 +492,7 @@
       "stageTitleEn": "Practise"
     },
     {
-      "canonicalPath": "/lessons/02/activity/activity%3Alesson-02-person-form-morphology",
+      "canonicalPath": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d706572736f6e2d666f726d2d6d6f7270686f6c6f6779",
       "evidence": {
         "interactionReady": false,
         "promptPublished": true,
@@ -523,7 +523,7 @@
       "stageTitleEn": "Practise"
     },
     {
-      "canonicalPath": "/lessons/02/activity/activity%3Alesson-02-personal-profile",
+      "canonicalPath": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d706572736f6e616c2d70726f66696c65",
       "evidence": {
         "interactionReady": false,
         "promptPublished": true,
@@ -554,7 +554,7 @@
       "stageTitleEn": "Learn"
     },
     {
-      "canonicalPath": "/lessons/02/activity/activity%3Alesson-02-profession-qa-builder",
+      "canonicalPath": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d70726f66657373696f6e2d71612d6275696c646572",
       "evidence": {
         "interactionReady": false,
         "promptPublished": true,
@@ -585,7 +585,7 @@
       "stageTitleEn": "Practise"
     },
     {
-      "canonicalPath": "/lessons/02/activity/activity%3Alesson-02-profile-reading-writing",
+      "canonicalPath": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d70726f66696c652d72656164696e672d77726974696e67",
       "evidence": {
         "interactionReady": false,
         "promptPublished": true,
@@ -616,7 +616,7 @@
       "stageTitleEn": "Practise"
     },
     {
-      "canonicalPath": "/lessons/02/activity/activity%3Alesson-02-relationship-status",
+      "canonicalPath": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d72656c6174696f6e736869702d737461747573",
       "evidence": {
         "interactionReady": false,
         "promptPublished": true,
@@ -647,7 +647,7 @@
       "stageTitleEn": "Learn"
     },
     {
-      "canonicalPath": "/lessons/02/activity/activity%3Alesson-02-sein-arbeiten-contrast",
+      "canonicalPath": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d7365696e2d617262656974656e2d636f6e7472617374",
       "evidence": {
         "interactionReady": false,
         "promptPublished": true,
@@ -678,7 +678,7 @@
       "stageTitleEn": "Learn"
     },
     {
-      "canonicalPath": "/lessons/02/activity/activity%3Alesson-02-workbook-listening",
+      "canonicalPath": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d776f726b626f6f6b2d6c697374656e696e67",
       "evidence": {
         "interactionReady": false,
         "promptPublished": true,
@@ -903,7 +903,7 @@
   "ownershipByActivityId": {
     "activity:lesson-01-alphabet-listen-spell": {
       "activityId": "activity:lesson-01-alphabet-listen-spell",
-      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-alphabet-listen-spell",
+      "canonicalPath": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d616c7068616265742d6c697374656e2d7370656c6c",
       "lessonId": "lesson:01",
       "lessonNumber": 1,
       "lessonRouteSegment": "01",
@@ -911,7 +911,7 @@
     },
     "activity:lesson-01-checkpoint-summary": {
       "activityId": "activity:lesson-01-checkpoint-summary",
-      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-checkpoint-summary",
+      "canonicalPath": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d636865636b706f696e742d73756d6d617279",
       "lessonId": "lesson:01",
       "lessonNumber": 1,
       "lessonRouteSegment": "01",
@@ -919,7 +919,7 @@
     },
     "activity:lesson-01-greeting-farewell-match": {
       "activityId": "activity:lesson-01-greeting-farewell-match",
-      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-greeting-farewell-match",
+      "canonicalPath": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d6772656574696e672d6661726577656c6c2d6d61746368",
       "lessonId": "lesson:01",
       "lessonNumber": 1,
       "lessonRouteSegment": "01",
@@ -927,7 +927,7 @@
     },
     "activity:lesson-01-greetings-by-context": {
       "activityId": "activity:lesson-01-greetings-by-context",
-      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-greetings-by-context",
+      "canonicalPath": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d6772656574696e67732d62792d636f6e74657874",
       "lessonId": "lesson:01",
       "lessonNumber": 1,
       "lessonRouteSegment": "01",
@@ -935,7 +935,7 @@
     },
     "activity:lesson-01-guided-intro-recording": {
       "activityId": "activity:lesson-01-guided-intro-recording",
-      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-guided-intro-recording",
+      "canonicalPath": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d6775696465642d696e74726f2d7265636f7264696e67",
       "lessonId": "lesson:01",
       "lessonNumber": 1,
       "lessonRouteSegment": "01",
@@ -943,7 +943,7 @@
     },
     "activity:lesson-01-heissen-sein-notice": {
       "activityId": "activity:lesson-01-heissen-sein-notice",
-      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-heissen-sein-notice",
+      "canonicalPath": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d6865697373656e2d7365696e2d6e6f74696365",
       "lessonId": "lesson:01",
       "lessonNumber": 1,
       "lessonRouteSegment": "01",
@@ -951,7 +951,7 @@
     },
     "activity:lesson-01-name-model-dialogue": {
       "activityId": "activity:lesson-01-name-model-dialogue",
-      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-name-model-dialogue",
+      "canonicalPath": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d6e616d652d6d6f64656c2d6469616c6f677565",
       "lessonId": "lesson:01",
       "lessonNumber": 1,
       "lessonRouteSegment": "01",
@@ -959,7 +959,7 @@
     },
     "activity:lesson-01-origin-aus-contrast": {
       "activityId": "activity:lesson-01-origin-aus-contrast",
-      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-origin-aus-contrast",
+      "canonicalPath": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d6f726967696e2d6175732d636f6e7472617374",
       "lessonId": "lesson:01",
       "lessonNumber": 1,
       "lessonRouteSegment": "01",
@@ -967,7 +967,7 @@
     },
     "activity:lesson-01-pronoun-verb-builder": {
       "activityId": "activity:lesson-01-pronoun-verb-builder",
-      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-pronoun-verb-builder",
+      "canonicalPath": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d70726f6e6f756e2d766572622d6275696c646572",
       "lessonId": "lesson:01",
       "lessonNumber": 1,
       "lessonRouteSegment": "01",
@@ -975,7 +975,7 @@
     },
     "activity:lesson-01-register-qa-builder": {
       "activityId": "activity:lesson-01-register-qa-builder",
-      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-register-qa-builder",
+      "canonicalPath": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d72656769737465722d71612d6275696c646572",
       "lessonId": "lesson:01",
       "lessonNumber": 1,
       "lessonRouteSegment": "01",
@@ -983,7 +983,7 @@
     },
     "activity:lesson-01-wellbeing-scale": {
       "activityId": "activity:lesson-01-wellbeing-scale",
-      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-wellbeing-scale",
+      "canonicalPath": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d77656c6c6265696e672d7363616c65",
       "lessonId": "lesson:01",
       "lessonNumber": 1,
       "lessonRouteSegment": "01",
@@ -991,7 +991,7 @@
     },
     "activity:lesson-01-workbook-listening": {
       "activityId": "activity:lesson-01-workbook-listening",
-      "canonicalPath": "/lessons/01/activity/activity%3Alesson-01-workbook-listening",
+      "canonicalPath": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d776f726b626f6f6b2d6c697374656e696e67",
       "lessonId": "lesson:01",
       "lessonNumber": 1,
       "lessonRouteSegment": "01",
@@ -999,7 +999,7 @@
     },
     "activity:lesson-02-checkpoint-summary": {
       "activityId": "activity:lesson-02-checkpoint-summary",
-      "canonicalPath": "/lessons/02/activity/activity%3Alesson-02-checkpoint-summary",
+      "canonicalPath": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d636865636b706f696e742d73756d6d617279",
       "lessonId": "lesson:02",
       "lessonNumber": 2,
       "lessonRouteSegment": "02",
@@ -1007,7 +1007,7 @@
     },
     "activity:lesson-02-core-professions": {
       "activityId": "activity:lesson-02-core-professions",
-      "canonicalPath": "/lessons/02/activity/activity%3Alesson-02-core-professions",
+      "canonicalPath": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d636f72652d70726f66657373696f6e73",
       "lessonId": "lesson:02",
       "lessonNumber": 2,
       "lessonRouteSegment": "02",
@@ -1015,7 +1015,7 @@
     },
     "activity:lesson-02-full-person-conjugation": {
       "activityId": "activity:lesson-02-full-person-conjugation",
-      "canonicalPath": "/lessons/02/activity/activity%3Alesson-02-full-person-conjugation",
+      "canonicalPath": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d66756c6c2d706572736f6e2d636f6e6a75676174696f6e",
       "lessonId": "lesson:02",
       "lessonNumber": 2,
       "lessonRouteSegment": "02",
@@ -1023,7 +1023,7 @@
     },
     "activity:lesson-02-numbers-0-100": {
       "activityId": "activity:lesson-02-numbers-0-100",
-      "canonicalPath": "/lessons/02/activity/activity%3Alesson-02-numbers-0-100",
+      "canonicalPath": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d6e756d626572732d302d313030",
       "lessonId": "lesson:02",
       "lessonNumber": 2,
       "lessonRouteSegment": "02",
@@ -1031,7 +1031,7 @@
     },
     "activity:lesson-02-person-form-morphology": {
       "activityId": "activity:lesson-02-person-form-morphology",
-      "canonicalPath": "/lessons/02/activity/activity%3Alesson-02-person-form-morphology",
+      "canonicalPath": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d706572736f6e2d666f726d2d6d6f7270686f6c6f6779",
       "lessonId": "lesson:02",
       "lessonNumber": 2,
       "lessonRouteSegment": "02",
@@ -1039,7 +1039,7 @@
     },
     "activity:lesson-02-personal-profile": {
       "activityId": "activity:lesson-02-personal-profile",
-      "canonicalPath": "/lessons/02/activity/activity%3Alesson-02-personal-profile",
+      "canonicalPath": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d706572736f6e616c2d70726f66696c65",
       "lessonId": "lesson:02",
       "lessonNumber": 2,
       "lessonRouteSegment": "02",
@@ -1047,7 +1047,7 @@
     },
     "activity:lesson-02-profession-qa-builder": {
       "activityId": "activity:lesson-02-profession-qa-builder",
-      "canonicalPath": "/lessons/02/activity/activity%3Alesson-02-profession-qa-builder",
+      "canonicalPath": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d70726f66657373696f6e2d71612d6275696c646572",
       "lessonId": "lesson:02",
       "lessonNumber": 2,
       "lessonRouteSegment": "02",
@@ -1055,7 +1055,7 @@
     },
     "activity:lesson-02-profile-reading-writing": {
       "activityId": "activity:lesson-02-profile-reading-writing",
-      "canonicalPath": "/lessons/02/activity/activity%3Alesson-02-profile-reading-writing",
+      "canonicalPath": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d70726f66696c652d72656164696e672d77726974696e67",
       "lessonId": "lesson:02",
       "lessonNumber": 2,
       "lessonRouteSegment": "02",
@@ -1063,7 +1063,7 @@
     },
     "activity:lesson-02-relationship-status": {
       "activityId": "activity:lesson-02-relationship-status",
-      "canonicalPath": "/lessons/02/activity/activity%3Alesson-02-relationship-status",
+      "canonicalPath": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d72656c6174696f6e736869702d737461747573",
       "lessonId": "lesson:02",
       "lessonNumber": 2,
       "lessonRouteSegment": "02",
@@ -1071,7 +1071,7 @@
     },
     "activity:lesson-02-sein-arbeiten-contrast": {
       "activityId": "activity:lesson-02-sein-arbeiten-contrast",
-      "canonicalPath": "/lessons/02/activity/activity%3Alesson-02-sein-arbeiten-contrast",
+      "canonicalPath": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d7365696e2d617262656974656e2d636f6e7472617374",
       "lessonId": "lesson:02",
       "lessonNumber": 2,
       "lessonRouteSegment": "02",
@@ -1079,7 +1079,7 @@
     },
     "activity:lesson-02-workbook-listening": {
       "activityId": "activity:lesson-02-workbook-listening",
-      "canonicalPath": "/lessons/02/activity/activity%3Alesson-02-workbook-listening",
+      "canonicalPath": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d776f726b626f6f6b2d6c697374656e696e67",
       "lessonId": "lesson:02",
       "lessonNumber": 2,
       "lessonRouteSegment": "02",
@@ -1092,6 +1092,6 @@
     "continueActivityId": "activity:lesson-01-greetings-by-context",
     "continueLessonId": "lesson:01",
     "continueLessonTitleDe": "Ich heiße Miriam.",
-    "continuePath": "/lessons/01/activity/activity%3Alesson-01-greetings-by-context"
+    "continuePath": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d6772656574696e67732d62792d636f6e74657874"
   }
 }

@@ -2,7 +2,7 @@
   "documentCount": 156,
   "documents": [
     {
-      "canonicalHref": "/lessons/01/activity/activity%3Alesson-01-alphabet-listen-spell",
+      "canonicalHref": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d616c7068616265742d6c697374656e2d7370656c6c",
       "category": "hear",
       "displayLabel": "Alphabet listen-and-spell",
       "fields": [
@@ -40,7 +40,7 @@
       "sourcePriority": 2
     },
     {
-      "canonicalHref": "/lessons/01/activity/activity%3Alesson-01-checkpoint-summary",
+      "canonicalHref": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d636865636b706f696e742d73756d6d617279",
       "category": "check",
       "displayLabel": "Mixed checkpoint and two-minute summary",
       "fields": [
@@ -78,7 +78,7 @@
       "sourcePriority": 2
     },
     {
-      "canonicalHref": "/lessons/01/activity/activity%3Alesson-01-greeting-farewell-match",
+      "canonicalHref": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d6772656574696e672d6661726577656c6c2d6d61746368",
       "category": "hear",
       "displayLabel": "Greeting/farewell picture/audio match",
       "fields": [
@@ -116,7 +116,7 @@
       "sourcePriority": 2
     },
     {
-      "canonicalHref": "/lessons/01/activity/activity%3Alesson-01-greetings-by-context",
+      "canonicalHref": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d6772656574696e67732d62792d636f6e74657874",
       "category": "see",
       "displayLabel": "Greetings by context visual + hotspot audio",
       "fields": [
@@ -154,7 +154,7 @@
       "sourcePriority": 2
     },
     {
-      "canonicalHref": "/lessons/01/activity/activity%3Alesson-01-guided-intro-recording",
+      "canonicalHref": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d6775696465642d696e74726f2d7265636f7264696e67",
       "category": "use",
       "displayLabel": "Guided introduction conversation recording",
       "fields": [
@@ -192,7 +192,7 @@
       "sourcePriority": 2
     },
     {
-      "canonicalHref": "/lessons/01/activity/activity%3Alesson-01-heissen-sein-notice",
+      "canonicalHref": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d6865697373656e2d7365696e2d6e6f74696365",
       "category": "notice",
       "displayLabel": "heißen vs sein notice card",
       "fields": [
@@ -232,7 +232,7 @@
       "sourcePriority": 2
     },
     {
-      "canonicalHref": "/lessons/01/activity/activity%3Alesson-01-name-model-dialogue",
+      "canonicalHref": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d6e616d652d6d6f64656c2d6469616c6f677565",
       "category": "notice",
       "displayLabel": "Name model dialogue",
       "fields": [
@@ -270,7 +270,7 @@
       "sourcePriority": 2
     },
     {
-      "canonicalHref": "/lessons/01/activity/activity%3Alesson-01-origin-aus-contrast",
+      "canonicalHref": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d6f726967696e2d6175732d636f6e7472617374",
       "category": "notice",
       "displayLabel": "Origin map/cards and aus contrast",
       "fields": [
@@ -308,7 +308,7 @@
       "sourcePriority": 2
     },
     {
-      "canonicalHref": "/lessons/01/activity/activity%3Alesson-01-pronoun-verb-builder",
+      "canonicalHref": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d70726f6e6f756e2d766572622d6275696c646572",
       "category": "recall",
       "displayLabel": "Pronoun-person map and singular verb builder",
       "fields": [
@@ -346,7 +346,7 @@
       "sourcePriority": 2
     },
     {
-      "canonicalHref": "/lessons/01/activity/activity%3Alesson-01-register-qa-builder",
+      "canonicalHref": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d72656769737465722d71612d6275696c646572",
       "category": "use",
       "displayLabel": "Casual/formal Q&A builder",
       "fields": [
@@ -384,7 +384,7 @@
       "sourcePriority": 2
     },
     {
-      "canonicalHref": "/lessons/01/activity/activity%3Alesson-01-wellbeing-scale",
+      "canonicalHref": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d77656c6c6265696e672d7363616c65",
       "category": "hear",
       "displayLabel": "Wellbeing scale with phrase audio",
       "fields": [
@@ -422,7 +422,7 @@
       "sourcePriority": 2
     },
     {
-      "canonicalHref": "/lessons/01/activity/activity%3Alesson-01-workbook-listening",
+      "canonicalHref": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d776f726b626f6f6b2d6c697374656e696e67",
       "category": "hear",
       "displayLabel": "Verified workbook listening for Exercises 3 and 9",
       "fields": [
@@ -460,7 +460,7 @@
       "sourcePriority": 2
     },
     {
-      "canonicalHref": "/lessons/02/activity/activity%3Alesson-02-checkpoint-summary",
+      "canonicalHref": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d636865636b706f696e742d73756d6d617279",
       "category": "check",
       "displayLabel": "Mixed checkpoint and two-minute summary",
       "fields": [
@@ -498,7 +498,7 @@
       "sourcePriority": 2
     },
     {
-      "canonicalHref": "/lessons/02/activity/activity%3Alesson-02-core-professions",
+      "canonicalHref": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d636f72652d70726f66657373696f6e73",
       "category": "see",
       "displayLabel": "Core professions overview and individual cards",
       "fields": [
@@ -536,7 +536,7 @@
       "sourcePriority": 2
     },
     {
-      "canonicalHref": "/lessons/02/activity/activity%3Alesson-02-full-person-conjugation",
+      "canonicalHref": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d66756c6c2d706572736f6e2d636f6e6a75676174696f6e",
       "category": "notice",
       "displayLabel": "Full-person conjugation notice/build activities",
       "fields": [
@@ -574,7 +574,7 @@
       "sourcePriority": 2
     },
     {
-      "canonicalHref": "/lessons/02/activity/activity%3Alesson-02-numbers-0-100",
+      "canonicalHref": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d6e756d626572732d302d313030",
       "category": "hear",
       "displayLabel": "Numbers 0–100 visual, build, type and telephone listening",
       "fields": [
@@ -612,7 +612,7 @@
       "sourcePriority": 2
     },
     {
-      "canonicalHref": "/lessons/02/activity/activity%3Alesson-02-person-form-morphology",
+      "canonicalHref": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d706572736f6e2d666f726d2d6d6f7270686f6c6f6779",
       "category": "notice",
       "displayLabel": "Person-form and plural morphology activities",
       "fields": [
@@ -650,7 +650,7 @@
       "sourcePriority": 2
     },
     {
-      "canonicalHref": "/lessons/02/activity/activity%3Alesson-02-personal-profile",
+      "canonicalHref": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d706572736f6e616c2d70726f66696c65",
       "category": "see",
       "displayLabel": "Personal-profile visual and fillable model",
       "fields": [
@@ -688,7 +688,7 @@
       "sourcePriority": 2
     },
     {
-      "canonicalHref": "/lessons/02/activity/activity%3Alesson-02-profession-qa-builder",
+      "canonicalHref": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d70726f66657373696f6e2d71612d6275696c646572",
       "category": "use",
       "displayLabel": "Profession Q&A casual/formal builder and recording",
       "fields": [
@@ -726,7 +726,7 @@
       "sourcePriority": 2
     },
     {
-      "canonicalHref": "/lessons/02/activity/activity%3Alesson-02-profile-reading-writing",
+      "canonicalHref": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d70726f66696c652d72656164696e672d77726974696e67",
       "category": "recall",
       "displayLabel": "Profile reading/writing activity",
       "fields": [
@@ -764,7 +764,7 @@
       "sourcePriority": 2
     },
     {
-      "canonicalHref": "/lessons/02/activity/activity%3Alesson-02-relationship-status",
+      "canonicalHref": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d72656c6174696f6e736869702d737461747573",
       "category": "see",
       "displayLabel": "Relationship/status visual and nicht contrasts",
       "fields": [
@@ -802,7 +802,7 @@
       "sourcePriority": 2
     },
     {
-      "canonicalHref": "/lessons/02/activity/activity%3Alesson-02-sein-arbeiten-contrast",
+      "canonicalHref": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d7365696e2d617262656974656e2d636f6e7472617374",
       "category": "notice",
       "displayLabel": "sein profession vs arbeiten als/bei contrast",
       "fields": [
@@ -840,7 +840,7 @@
       "sourcePriority": 2
     },
     {
-      "canonicalHref": "/lessons/02/activity/activity%3Alesson-02-workbook-listening",
+      "canonicalHref": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d776f726b626f6f6b2d6c697374656e696e67",
       "category": "hear",
       "displayLabel": "Verified workbook number and word-stress listening (Exercises 6 and 12)",
       "fields": [
@@ -1111,7 +1111,7 @@
       "sourcePriority": 1
     },
     {
-      "canonicalHref": "/vocabulary/lex%3Aarchitekt",
+      "canonicalHref": "/vocabulary/id-6c65783a617263686974656b74",
       "category": "noun",
       "displayLabel": "der Architekt",
       "fields": [
@@ -7362,7 +7362,7 @@
       "sourcePriority": 1
     },
     {
-      "canonicalHref": "/phrases/qa%3Aprofession-casual-main",
+      "canonicalHref": "/phrases/id-71613a70726f66657373696f6e2d63617375616c2d6d61696e",
       "category": "informal",
       "displayLabel": "qa:profession-casual-main",
       "fields": [
@@ -7930,7 +7930,7 @@
       "sourcePriority": 1
     },
     {
-      "canonicalHref": "/verbs/verb%3Asein",
+      "canonicalHref": "/verbs/id-766572623a7365696e",
       "category": "verb",
       "displayLabel": "sein",
       "fields": [
@@ -8020,7 +8020,7 @@
   ],
   "documentsById": {
     "activity:lesson-01-alphabet-listen-spell": {
-      "canonicalHref": "/lessons/01/activity/activity%3Alesson-01-alphabet-listen-spell",
+      "canonicalHref": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d616c7068616265742d6c697374656e2d7370656c6c",
       "category": "hear",
       "displayLabel": "Alphabet listen-and-spell",
       "fields": [
@@ -8058,7 +8058,7 @@
       "sourcePriority": 2
     },
     "activity:lesson-01-checkpoint-summary": {
-      "canonicalHref": "/lessons/01/activity/activity%3Alesson-01-checkpoint-summary",
+      "canonicalHref": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d636865636b706f696e742d73756d6d617279",
       "category": "check",
       "displayLabel": "Mixed checkpoint and two-minute summary",
       "fields": [
@@ -8096,7 +8096,7 @@
       "sourcePriority": 2
     },
     "activity:lesson-01-greeting-farewell-match": {
-      "canonicalHref": "/lessons/01/activity/activity%3Alesson-01-greeting-farewell-match",
+      "canonicalHref": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d6772656574696e672d6661726577656c6c2d6d61746368",
       "category": "hear",
       "displayLabel": "Greeting/farewell picture/audio match",
       "fields": [
@@ -8134,7 +8134,7 @@
       "sourcePriority": 2
     },
     "activity:lesson-01-greetings-by-context": {
-      "canonicalHref": "/lessons/01/activity/activity%3Alesson-01-greetings-by-context",
+      "canonicalHref": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d6772656574696e67732d62792d636f6e74657874",
       "category": "see",
       "displayLabel": "Greetings by context visual + hotspot audio",
       "fields": [
@@ -8172,7 +8172,7 @@
       "sourcePriority": 2
     },
     "activity:lesson-01-guided-intro-recording": {
-      "canonicalHref": "/lessons/01/activity/activity%3Alesson-01-guided-intro-recording",
+      "canonicalHref": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d6775696465642d696e74726f2d7265636f7264696e67",
       "category": "use",
       "displayLabel": "Guided introduction conversation recording",
       "fields": [
@@ -8210,7 +8210,7 @@
       "sourcePriority": 2
     },
     "activity:lesson-01-heissen-sein-notice": {
-      "canonicalHref": "/lessons/01/activity/activity%3Alesson-01-heissen-sein-notice",
+      "canonicalHref": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d6865697373656e2d7365696e2d6e6f74696365",
       "category": "notice",
       "displayLabel": "heißen vs sein notice card",
       "fields": [
@@ -8250,7 +8250,7 @@
       "sourcePriority": 2
     },
     "activity:lesson-01-name-model-dialogue": {
-      "canonicalHref": "/lessons/01/activity/activity%3Alesson-01-name-model-dialogue",
+      "canonicalHref": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d6e616d652d6d6f64656c2d6469616c6f677565",
       "category": "notice",
       "displayLabel": "Name model dialogue",
       "fields": [
@@ -8288,7 +8288,7 @@
       "sourcePriority": 2
     },
     "activity:lesson-01-origin-aus-contrast": {
-      "canonicalHref": "/lessons/01/activity/activity%3Alesson-01-origin-aus-contrast",
+      "canonicalHref": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d6f726967696e2d6175732d636f6e7472617374",
       "category": "notice",
       "displayLabel": "Origin map/cards and aus contrast",
       "fields": [
@@ -8326,7 +8326,7 @@
       "sourcePriority": 2
     },
     "activity:lesson-01-pronoun-verb-builder": {
-      "canonicalHref": "/lessons/01/activity/activity%3Alesson-01-pronoun-verb-builder",
+      "canonicalHref": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d70726f6e6f756e2d766572622d6275696c646572",
       "category": "recall",
       "displayLabel": "Pronoun-person map and singular verb builder",
       "fields": [
@@ -8364,7 +8364,7 @@
       "sourcePriority": 2
     },
     "activity:lesson-01-register-qa-builder": {
-      "canonicalHref": "/lessons/01/activity/activity%3Alesson-01-register-qa-builder",
+      "canonicalHref": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d72656769737465722d71612d6275696c646572",
       "category": "use",
       "displayLabel": "Casual/formal Q&A builder",
       "fields": [
@@ -8402,7 +8402,7 @@
       "sourcePriority": 2
     },
     "activity:lesson-01-wellbeing-scale": {
-      "canonicalHref": "/lessons/01/activity/activity%3Alesson-01-wellbeing-scale",
+      "canonicalHref": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d77656c6c6265696e672d7363616c65",
       "category": "hear",
       "displayLabel": "Wellbeing scale with phrase audio",
       "fields": [
@@ -8440,7 +8440,7 @@
       "sourcePriority": 2
     },
     "activity:lesson-01-workbook-listening": {
-      "canonicalHref": "/lessons/01/activity/activity%3Alesson-01-workbook-listening",
+      "canonicalHref": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d776f726b626f6f6b2d6c697374656e696e67",
       "category": "hear",
       "displayLabel": "Verified workbook listening for Exercises 3 and 9",
       "fields": [
@@ -8478,7 +8478,7 @@
       "sourcePriority": 2
     },
     "activity:lesson-02-checkpoint-summary": {
-      "canonicalHref": "/lessons/02/activity/activity%3Alesson-02-checkpoint-summary",
+      "canonicalHref": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d636865636b706f696e742d73756d6d617279",
       "category": "check",
       "displayLabel": "Mixed checkpoint and two-minute summary",
       "fields": [
@@ -8516,7 +8516,7 @@
       "sourcePriority": 2
     },
     "activity:lesson-02-core-professions": {
-      "canonicalHref": "/lessons/02/activity/activity%3Alesson-02-core-professions",
+      "canonicalHref": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d636f72652d70726f66657373696f6e73",
       "category": "see",
       "displayLabel": "Core professions overview and individual cards",
       "fields": [
@@ -8554,7 +8554,7 @@
       "sourcePriority": 2
     },
     "activity:lesson-02-full-person-conjugation": {
-      "canonicalHref": "/lessons/02/activity/activity%3Alesson-02-full-person-conjugation",
+      "canonicalHref": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d66756c6c2d706572736f6e2d636f6e6a75676174696f6e",
       "category": "notice",
       "displayLabel": "Full-person conjugation notice/build activities",
       "fields": [
@@ -8592,7 +8592,7 @@
       "sourcePriority": 2
     },
     "activity:lesson-02-numbers-0-100": {
-      "canonicalHref": "/lessons/02/activity/activity%3Alesson-02-numbers-0-100",
+      "canonicalHref": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d6e756d626572732d302d313030",
       "category": "hear",
       "displayLabel": "Numbers 0–100 visual, build, type and telephone listening",
       "fields": [
@@ -8630,7 +8630,7 @@
       "sourcePriority": 2
     },
     "activity:lesson-02-person-form-morphology": {
-      "canonicalHref": "/lessons/02/activity/activity%3Alesson-02-person-form-morphology",
+      "canonicalHref": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d706572736f6e2d666f726d2d6d6f7270686f6c6f6779",
       "category": "notice",
       "displayLabel": "Person-form and plural morphology activities",
       "fields": [
@@ -8668,7 +8668,7 @@
       "sourcePriority": 2
     },
     "activity:lesson-02-personal-profile": {
-      "canonicalHref": "/lessons/02/activity/activity%3Alesson-02-personal-profile",
+      "canonicalHref": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d706572736f6e616c2d70726f66696c65",
       "category": "see",
       "displayLabel": "Personal-profile visual and fillable model",
       "fields": [
@@ -8706,7 +8706,7 @@
       "sourcePriority": 2
     },
     "activity:lesson-02-profession-qa-builder": {
-      "canonicalHref": "/lessons/02/activity/activity%3Alesson-02-profession-qa-builder",
+      "canonicalHref": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d70726f66657373696f6e2d71612d6275696c646572",
       "category": "use",
       "displayLabel": "Profession Q&A casual/formal builder and recording",
       "fields": [
@@ -8744,7 +8744,7 @@
       "sourcePriority": 2
     },
     "activity:lesson-02-profile-reading-writing": {
-      "canonicalHref": "/lessons/02/activity/activity%3Alesson-02-profile-reading-writing",
+      "canonicalHref": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d70726f66696c652d72656164696e672d77726974696e67",
       "category": "recall",
       "displayLabel": "Profile reading/writing activity",
       "fields": [
@@ -8782,7 +8782,7 @@
       "sourcePriority": 2
     },
     "activity:lesson-02-relationship-status": {
-      "canonicalHref": "/lessons/02/activity/activity%3Alesson-02-relationship-status",
+      "canonicalHref": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d72656c6174696f6e736869702d737461747573",
       "category": "see",
       "displayLabel": "Relationship/status visual and nicht contrasts",
       "fields": [
@@ -8820,7 +8820,7 @@
       "sourcePriority": 2
     },
     "activity:lesson-02-sein-arbeiten-contrast": {
-      "canonicalHref": "/lessons/02/activity/activity%3Alesson-02-sein-arbeiten-contrast",
+      "canonicalHref": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d7365696e2d617262656974656e2d636f6e7472617374",
       "category": "notice",
       "displayLabel": "sein profession vs arbeiten als/bei contrast",
       "fields": [
@@ -8858,7 +8858,7 @@
       "sourcePriority": 2
     },
     "activity:lesson-02-workbook-listening": {
-      "canonicalHref": "/lessons/02/activity/activity%3Alesson-02-workbook-listening",
+      "canonicalHref": "/lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d776f726b626f6f6b2d6c697374656e696e67",
       "category": "hear",
       "displayLabel": "Verified workbook number and word-stress listening (Exercises 6 and 12)",
       "fields": [
@@ -9129,7 +9129,7 @@
       "sourcePriority": 1
     },
     "lex:architekt": {
-      "canonicalHref": "/vocabulary/lex%3Aarchitekt",
+      "canonicalHref": "/vocabulary/id-6c65783a617263686974656b74",
       "category": "noun",
       "displayLabel": "der Architekt",
       "fields": [
@@ -15380,7 +15380,7 @@
       "sourcePriority": 1
     },
     "qa:profession-casual-main": {
-      "canonicalHref": "/phrases/qa%3Aprofession-casual-main",
+      "canonicalHref": "/phrases/id-71613a70726f66657373696f6e2d63617375616c2d6d61696e",
       "category": "informal",
       "displayLabel": "qa:profession-casual-main",
       "fields": [
@@ -15948,7 +15948,7 @@
       "sourcePriority": 1
     },
     "verb:sein": {
-      "canonicalHref": "/verbs/verb%3Asein",
+      "canonicalHref": "/verbs/id-766572623a7365696e",
       "category": "verb",
       "displayLabel": "sein",
       "fields": [

@@ -304,13 +304,24 @@ describe("P3D detail routes", () => {
         expect(alias.canonicalPath).toBe(canonical);
         expect(alias.status).toBe(308);
       }
+
+      for (const legacySegment of [
+        encodeURIComponent(id),
+        encodeURIComponent(id).replace(/%3A/g, "%3a"),
+      ]) {
+        const legacy = `/${details.representativesById[id].hubSegment}/${legacySegment}`;
+        const legacyAlias = resolveLearnerRoute(legacy, web, details);
+        expect(legacyAlias.kind).toBe("canonical-redirect");
+        if (legacyAlias.kind === "canonical-redirect") {
+          expect(legacyAlias.canonicalPath).toBe(canonical);
+          expect(legacyAlias.status).toBe(308);
+        }
+      }
     }
     expect(listCanonicalDetailPaths(details)).toEqual(
-      [
-        "/phrases/qa%3Aprofession-casual-main",
-        "/verbs/verb%3Asein",
-        "/vocabulary/lex%3Aarchitekt",
-      ].sort(),
+      DETAIL_REPRESENTATIVE_IDS.map((id) =>
+        detailCanonicalPath(details.representativesById[id].hubSegment, id),
+      ).sort(),
     );
   });
 
@@ -333,11 +344,10 @@ describe("P3D detail routes", () => {
   });
 
   it("allowlists only implemented detail paths for navigation", () => {
-    expect(isSafeNavigationPath("/vocabulary/lex%3Aarchitekt")).toBe(true);
-    expect(isSafeNavigationPath("/verbs/verb%3Asein")).toBe(true);
-    expect(isSafeNavigationPath("/phrases/qa%3Aprofession-casual-main")).toBe(
-      true,
-    );
+    for (const id of DETAIL_REPRESENTATIVE_IDS) {
+      const record = details.representativesById[id];
+      expect(isSafeNavigationPath(detailCanonicalPath(record.hubSegment, id))).toBe(true);
+    }
     expect(isSafeNavigationPath("/vocabulary/lex:architekt")).toBe(false);
     expect(isSafeNavigationPath("/vocabulary/lex%3Aarchitektin")).toBe(false);
     expect(isSafeNavigationPath("//evil.example")).toBe(false);

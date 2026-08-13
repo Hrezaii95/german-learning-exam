@@ -376,10 +376,10 @@ describe("P4A practice routes", () => {
   it("Practise back context returns to the detail canonical path", () => {
     const nav = buildDetailPracticeNavigationContext({
       hubId: "vocabulary",
-      detailPath: "/vocabulary/lex%3Aarchitekt",
+      detailPath: VOCAB_ARCHITEKT_CANONICAL.canonicalPath,
       resultId: "lex:architekt",
     });
     expect(nav).not.toBeNull();
-    expect(resolveBackHref(nav)).toBe("/vocabulary/lex%3Aarchitekt");
+    expect(resolveBackHref(nav)).toBe(VOCAB_ARCHITEKT_CANONICAL.canonicalPath);
   });
 });

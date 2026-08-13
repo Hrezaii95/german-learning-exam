@@ -17,8 +17,11 @@ import {
   resolveLearnerRoute,
 } from "../../apps/web/lib/content/routes.js";
 import {
+  encodeActivityRouteSegment,
+  encodePublicTypedIdSlug,
   isAbsoluteNormalizedPathname,
   tryDecodeActivityRouteSegment,
+  tryDecodePublicTypedIdSlug,
 } from "../../apps/web/lib/content/path-utils.js";
 
 const platformRoot = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
@@ -85,7 +88,7 @@ describe("P3A learner-safe web projection", () => {
           expect(ownership?.lessonId).toBe(lesson.id);
           expect(ownership?.stageId).toBe(stage.id);
           expect(ownership?.canonicalPath).toBe(
-            `/lessons/${lesson.routeSegment}/activity/${encodeURIComponent(activityId)}`,
+            `/lessons/${lesson.routeSegment}/activity/${encodeActivityRouteSegment(activityId)}`,
           );
         }
       }
@@ -143,6 +146,22 @@ describe("P3A learner-safe web projection", () => {
 });
 
 describe("P3A route resolution", () => {
+  it("uses a bijective GitHub Pages-safe slug for every published activity", () => {
+    const slugs = new Set<string>();
+    for (const activity of projection.activities) {
+      const slug = encodePublicTypedIdSlug(activity.id);
+      expect(slug).toMatch(/^id-[0-9a-f]+$/);
+      expect(slug).not.toMatch(/:|%3a/i);
+      expect(tryDecodePublicTypedIdSlug(slug)).toBe(activity.id);
+      expect(slugs.has(slug)).toBe(false);
+      slugs.add(slug);
+      expect(activity.canonicalPath).toContain(`/activity/${slug}`);
+    }
+    expect(tryDecodePublicTypedIdSlug("id-6C6578")).toBeNull();
+    expect(tryDecodePublicTypedIdSlug("id-abc")).toBeNull();
+    expect(tryDecodePublicTypedIdSlug("activity%3Ax")).toBeNull();
+  });
+
   const projection = projectPublishedLearnerWeb(publishedDir);
   const canonical = listCanonicalActivityPaths(projection);
 
@@ -258,7 +277,7 @@ describe("P3A route resolution", () => {
   it("redirects safe noncanonical aliases of owned learner activities once", () => {
     const sample = projection.activities[0]!;
     const raw = rawColonActivityPath(projection, sample.id)!;
-    const lowerHex = sample.canonicalPath.replace(/%3A/g, "%3a");
+    const legacyEncoded = `/lessons/${sample.lessonRouteSegment}/activity/${encodeURIComponent(sample.id)}`;
 
     const rawResolved = resolveLearnerRoute(raw, projection);
     expect(rawResolved.kind).toBe("canonical-redirect");
@@ -267,10 +286,10 @@ describe("P3A route resolution", () => {
       expect(rawResolved.status).toBe(308);
     }
 
-    const lowerResolved = resolveLearnerRoute(lowerHex, projection);
-    expect(lowerResolved.kind).toBe("canonical-redirect");
-    if (lowerResolved.kind === "canonical-redirect") {
-      expect(lowerResolved.canonicalPath).toBe(sample.canonicalPath);
+    const legacyResolved = resolveLearnerRoute(legacyEncoded, projection);
+    expect(legacyResolved.kind).toBe("canonical-redirect");
+    if (legacyResolved.kind === "canonical-redirect") {
+      expect(legacyResolved.canonicalPath).toBe(sample.canonicalPath);
     }
 
     // Wrong-lesson raw colon must not redirect into the owning lesson.

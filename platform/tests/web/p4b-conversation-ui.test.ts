@@ -8,6 +8,7 @@ import { ConversationLadder } from "../../apps/web/components/conversation/Conve
 import { ConversationSelector } from "../../apps/web/components/conversation/ConversationNavViews.tsx";
 import { GameSelector } from "../../apps/web/components/games/GameSelector.tsx";
 import { CONVERSATION_LEVEL_IDS } from "../../apps/web/lib/conversation/index.js";
+import { conversationCanonicalPath } from "../../apps/web/lib/conversation/conversation-paths.js";
 
 vi.mock("next/link", () => ({
   default: function MockLink({
@@ -47,7 +48,7 @@ describe("P4B conversation UI", () => {
     const html = renderToStaticMarkup(createElement(GameSelector));
     expect(html).toContain("Conversation practice");
     expect(html).toContain('data-conversation-entry="true"');
-    expect(html).toContain("/conversation/qa%3Aprofession-casual-main");
+    expect(html).toContain(conversationCanonicalPath());
   });
 
   it("renders conversation index selector", () => {

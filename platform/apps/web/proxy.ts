@@ -15,8 +15,8 @@ import {
  * Router decoding and issue at most one permanent canonical redirect for
  * safe activity/detail aliases / trailing-slash forms.
  *
- * Requires raw URL observation so encoded `…%3A…` segments remain
- * distinguishable from raw-colon aliases.
+ * Uses the raw URL so legacy percent-colon aliases remain distinguishable
+ * from raw-colon aliases while canonical routes use Pages-safe slugs.
  */
 export function proxy(request: NextRequest) {
   const rawPathname = extractRawPathname(request.url);

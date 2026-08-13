@@ -13,6 +13,7 @@ import {
   loadLearnerProjection,
 } from "@/lib/content/access";
 import { resolveLearnerRoute } from "@/lib/content/routes";
+import { encodeEntityRouteSegment } from "@/lib/content/path-utils";
 
 type PageProps = {
   params: Promise<{ entityId: string }>;
@@ -21,7 +22,7 @@ type PageProps = {
 export const dynamicParams = true;
 
 export function generateStaticParams() {
-  return [{ entityId: encodeURIComponent(CONVERSATION_ENTITY_ID) }];
+  return [{ entityId: encodeEntityRouteSegment(CONVERSATION_ENTITY_ID) }];
 }
 
 export default async function ConversationEntityPage({ params }: PageProps) {

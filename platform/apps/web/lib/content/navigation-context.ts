@@ -1,5 +1,7 @@
 import { LEARNER_HUB_IDS, type LearnerHubId } from "./hub-types";
 import {
+  encodeActivityRouteSegment,
+  encodeEntityRouteSegment,
   isAbsoluteNormalizedPathname,
   tryDecodeActivityRouteSegment,
   tryDecodeEntityRouteSegment,
@@ -110,7 +112,7 @@ export function isSafeNavigationPath(pathname: string): boolean {
     const segment = conversationMatch[1]!;
     const decoded = tryDecodeEntityRouteSegment(segment);
     if (decoded == null) return false;
-    if (encodeURIComponent(decoded) !== segment) return false;
+    if (encodeEntityRouteSegment(decoded) !== segment) return false;
     // Only the published conversation Q&A representative.
     return decoded === "qa:profession-casual-main";
   }
@@ -131,7 +133,7 @@ export function isSafeNavigationPath(pathname: string): boolean {
     if (!decoded.startsWith("activity:")) return false;
     if (decoded.length > NAVIGATION_RESULT_ID_MAX_LENGTH) return false;
     // Round-trip: encoded form must be the canonical encode of the decoded id.
-    if (encodeURIComponent(decoded) !== segment) return false;
+    if (encodeActivityRouteSegment(decoded) !== segment) return false;
     return true;
   }
 
@@ -144,7 +146,7 @@ export function isSafeNavigationPath(pathname: string): boolean {
     const segment = detailMatch[2]!;
     const decoded = tryDecodeEntityRouteSegment(segment);
     if (decoded == null) return false;
-    if (encodeURIComponent(decoded) !== segment) return false;
+    if (encodeEntityRouteSegment(decoded) !== segment) return false;
     if (!isDetailRepresentativeId(decoded)) return false;
     if (DETAIL_HUB_BY_ID[decoded] !== hub) return false;
     return true;

@@ -3,6 +3,8 @@
  * Exactly three published representatives; no review plurals, paths, or secrets.
  */
 
+import { encodePublicTypedIdSlug } from "./path-utils";
+
 export const DETAIL_REPRESENTATIVE_IDS = [
   "lex:architekt",
   "verb:sein",
@@ -162,7 +164,7 @@ export function isDetailRepresentativeId(
 }
 
 export function encodeDetailRouteSegment(entityId: string): string {
-  return encodeURIComponent(entityId);
+  return encodePublicTypedIdSlug(entityId);
 }
 
 export function detailCanonicalPath(

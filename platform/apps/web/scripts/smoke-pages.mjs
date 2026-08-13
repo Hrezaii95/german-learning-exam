@@ -149,8 +149,13 @@ function listExpectedAppPaths() {
     paths.add(`/practice/${gameId}`);
   }
 
-  const conversationEntity = encodeURIComponent("qa:profession-casual-main");
-  paths.add(`/conversation/${conversationEntity}`);
+  const conversationRep = details.representatives.find(
+    (rep) => rep.id === "qa:profession-casual-main",
+  );
+  assert(conversationRep, "missing conversation representative");
+  const conversationSlug = conversationRep.canonicalPath.split("/").at(-1);
+  assert(conversationSlug, "missing conversation public slug");
+  paths.add(`/conversation/${conversationSlug}`);
 
   return [...paths].sort();
 }
@@ -160,6 +165,12 @@ function verifyManifest() {
   assert(existsSync(join(outDir, "404.html")), "missing out/404.html");
 
   const expected = listExpectedAppPaths();
+  for (const appPath of expected) {
+    assert(
+      !appPath.includes(":") && !/%3a/i.test(appPath),
+      `GitHub Pages-unsafe canonical route: ${appPath}`,
+    );
+  }
   const missing = [];
   for (const appPath of expected) {
     const file = appPathToOutFile(appPath);
@@ -214,6 +225,10 @@ function verifyAssetRefsAndSecrets(expectedPaths) {
   const allFiles = walkFiles(outDir);
   for (const file of allFiles) {
     const rel = relative(webRoot, file).replace(/\\/g, "/");
+    assert(
+      !rel.includes(":") && !/%3a/i.test(rel),
+      `GitHub Pages-unsafe output path: ${rel}`,
+    );
     assert(!rel.includes("resources/original"), `forbidden path in out: ${rel}`);
     assert(!rel.includes(".cursor/"), `forbidden .cursor path in out: ${rel}`);
     assert(!rel.includes("samples/"), `forbidden samples path in out: ${rel}`);
@@ -329,17 +344,23 @@ async function httpSmoke(expectedPaths) {
   try {
     await delay(100);
 
-    const encodedActivity = projection.activities.find((a) =>
-      String(a.canonicalPath).includes("%3A"),
+    const pagesSafeActivity = projection.activities.find((a) =>
+      String(a.canonicalPath).includes("/id-"),
     );
-    assert(encodedActivity, "expected an encoded activity canonicalPath");
+    assert(pagesSafeActivity, "expected a Pages-safe activity canonicalPath");
+    const conversationRep = details.representatives.find(
+      (rep) => rep.id === "qa:profession-casual-main",
+    );
+    assert(conversationRep, "missing conversation representative");
+    const conversationSlug = conversationRep.canonicalPath.split("/").at(-1);
+    assert(conversationSlug, "missing conversation public slug");
 
     const must200 = [
       `${PAGES_BASE}/`,
       `${PAGES_BASE}/lessons/`,
       `${PAGES_BASE}/lessons/${projection.lessons[0].routeSegment}/`,
       `${PAGES_BASE}${projection.activities[0].canonicalPath}/`,
-      `${PAGES_BASE}${encodedActivity.canonicalPath}/`,
+      `${PAGES_BASE}${pagesSafeActivity.canonicalPath}/`,
       `${PAGES_BASE}/concepts/`,
       `${PAGES_BASE}/vocabulary/`,
       `${PAGES_BASE}/search/`,
@@ -348,7 +369,7 @@ async function httpSmoke(expectedPaths) {
       `${PAGES_BASE}/practice/`,
       `${PAGES_BASE}/practice/article-choice/`,
       `${PAGES_BASE}/conversation/`,
-      `${PAGES_BASE}/conversation/${encodeURIComponent("qa:profession-casual-main")}/`,
+      `${PAGES_BASE}/conversation/${conversationSlug}/`,
       `${PAGES_BASE}${details.representatives[0].canonicalPath}/`,
     ];
 

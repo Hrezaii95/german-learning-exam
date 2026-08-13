@@ -1,6 +1,7 @@
 /**
  * Canonical `/conversation` and `/conversation/[entityId]` path helpers.
- * Prefer encoded `qa%3A…` segment; raw-colon is a one-hop redirect alias.
+ * Canonical routes use the Pages-safe typed-ID slug; raw/percent-colon forms
+ * are legacy one-hop redirect aliases in server mode.
  * Unknown / wrong-kind / malformed / extra → 404 (via route resolver).
  */
 
@@ -52,11 +53,9 @@ export function tryDecodeConversationEntitySegment(
   const isRawColon =
     segment === decoded && decoded.includes(":") && !segment.includes("%");
 
-  if (!isCanonical && !isRawColon) {
-    // Reject double-encoding / non-round-trip forms.
-    if (encodeURIComponent(decoded) !== segment) return null;
-    return null;
-  }
+  const isLegacyEncoded =
+    segment.toLowerCase() === encodeURIComponent(decoded).toLowerCase();
+  if (!isCanonical && !isRawColon && !isLegacyEncoded) return null;
 
   return decoded;
 }
