@@ -231,7 +231,6 @@ async function runSmoke() {
       "/verbs/lex%3Aarchitekt",
       "/vocabulary/verb%3Asein",
       "/phrases/qa%3Aprofession-formal-main",
-      "/review",
       "/dashboard",
     ]) {
       const { status, url } = await fetchStatus(path, { redirect: "follow" });
@@ -239,6 +238,14 @@ async function runSmoke() {
       assert(new URL(url).pathname !== "/", `${path} must not fall back to /`);
       results.push(`OK detail/future 404 ${path}`);
     }
+  }
+
+  // 5b) Learner-state surfaces added in P4C are first-class routes.
+  for (const path of ["/review", "/review/session/today", "/settings"]) {
+    const { status, url } = await fetchStatus(path, { redirect: "follow" });
+    assert(status === 200, `${path} expected 200, got ${status}`);
+    assert(new URL(url).pathname === path, `${path} must not redirect away`);
+    results.push(`OK learner-state 200 ${path}`);
   }
 
   // 6) Global search → 200; unknown /search/* → 404
