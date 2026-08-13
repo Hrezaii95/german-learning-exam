@@ -16,8 +16,12 @@ export function WorkbookAudioPanel({ tracks }: { tracks: readonly WorkbookAudioT
       audio.playbackRate = preferredSpeed;
       audio.preservesPitch = true;
     }
-    setSelectedSpeeds(Object.fromEntries(tracks.map((track) => [track.id, preferredSpeed])));
-  }, [preferredSpeed, tracks]);
+    // Per-track selections fall back to preferredSpeed, so clearing the
+    // overrides both seeds new tracks and applies a changed preferred speed.
+    // Depending on `tracks` here would reset learner choices whenever a
+    // parent re-render produced a new array identity.
+    setSelectedSpeeds({});
+  }, [preferredSpeed]);
 
   function setSpeed(id: string, speed: number) {
     const audio = players.current.get(id);

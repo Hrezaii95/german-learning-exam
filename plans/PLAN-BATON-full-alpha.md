@@ -13,7 +13,7 @@ file_ownership:
   - C-WEB: `platform/apps/web/**`, `platform/tests/web/**`, web package integration and README only
 open_items_unchanged: true
 violations: []
-next_action: Ingest and register the 90 restored Kursbuch MP3s (hash, dedupe, governed structure, CD1 1_01-1_17 Lesson 1-2 alignment), then complete P4-04 independent review and dispatch the Codex UX three-direction brief. G4 remains review until behavior review closes; G5 remains partial because generated TTS still needs qualified human listening approval.
+next_action: Owner must pick a UX direction from research/ux-direction-2026-08-13/ (Codex options delivered; owner gate OPEN). P4-04 independent review returned BLOCK with two P1 defects (cross-tab commit race; workbook audio speed reset on re-render); fix worker dispatched with reviewer-specified regression tests. After fixes go green: commit, deploy, then learner-language cleanup (all-options release criterion) and curriculum diff. G5 remains partial pending qualified human listening approval.
 
 ## Current verified facts
 

@@ -228,4 +228,29 @@ describe("P4C learner UI behavior", () => {
     expect(studyButtons[1]!.getAttribute("aria-pressed")).toBe("false");
     await waitFor(() => expect(preferred[1]!.getAttribute("aria-pressed")).toBe("true"));
   });
+
+  it("keeps a chosen study speed when tracks rerender with a new array identity", async () => {
+    await seedLearnerState({ preferredAudioSpeed: 1.25 });
+    const makeTracks = (): readonly WorkbookAudioTrack[] => [
+      { id: "1_01", filename: "one.mp3", exercise: "AB 3", purpose: "Names and spelling", durationSeconds: 36 },
+    ];
+    const user = userEvent.setup();
+    const view = renderWithLearnerState(createElement(WorkbookAudioPanel, { tracks: makeTracks() }));
+
+    await screen.findByRole("button", { name: "Preferred 1.25×" });
+    await user.click(screen.getByRole("button", { name: "Study 0.8×" }));
+    expect(screen.getByRole("button", { name: "Study 0.8×" }).getAttribute("aria-pressed")).toBe("true");
+
+    // Structurally equal but referentially new tracks — as any parent
+    // re-render produces — must not reset the learner's chosen speed.
+    view.rerender(createElement(
+      LearnerStateProvider,
+      null,
+      createElement(WorkbookAudioPanel, { tracks: makeTracks() }),
+    ));
+
+    expect(screen.getByRole("button", { name: "Study 0.8×" }).getAttribute("aria-pressed")).toBe("true");
+    const audio = screen.getByLabelText("AB 3, Names and spelling") as HTMLAudioElement;
+    expect(audio.playbackRate).toBe(0.8);
+  });
 });

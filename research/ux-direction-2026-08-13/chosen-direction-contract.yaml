@@ -1,0 +1,44 @@
+schema_version: 1
+decided_at: "2026-08-13T17:55:00+03:30"
+decision_authority: >
+  Owner (hossein) delegated the direction pick to Codex as design authority in the
+  Claude chat on 2026-08-13 ("ux/ui expert is codex not me ... enhance only if it
+  agrees with you"). Claude ORCH proposed; CDX-UX approved with corrections in the
+  decision memo (thread 019ffb26-4372-7ea1-aea3-09fa115ba5d5).
+direction: daily-learning-studio
+density: medium-task-first-selectively-illustrated
+sequence:
+  - tokens-language-cleanup-card-anatomy
+  - dashboard-mission-hierarchy
+  - hubs-and-detail-consolidation
+  - reviewed-asset-batches
+fallback_media_state: >
+  Permanent HTML/CSS "meaning plate" whenever no approved illustration exists —
+  not disposable scaffolding. Illustration replaces only the media treatment;
+  semantic card anatomy remains authoritative.
+meaning_plate_constraints:
+  - same reserved geometry as media (1:1 hub grids, 4:3 detail pages, 96px slot in compact lists)
+  - one surface, one border, no nested shadow, no gradients, no imitation artwork
+  - German lemma/article dominant; gloss secondary
+  - gender always immutable color + shape + label/article
+  - one concise morphology preview and one 44px audio control
+  - selectable HTML with accessible names; German never baked into images
+  - replacement requires approved manifest, alt text, both crops and visual QA
+  - details upgrade individually; hub grids upgrade in coherent reviewed batches (no checkerboards)
+phase_1_adjustments:
+  - tokens first (content-max-reading/browse, typography, focus, surface, motion roles)
+  - self-host Inter Variable with fallback stack; validate German glyphs and CLS, else ship refined system stack temporarily
+  - separate card anatomies per hub type (vocabulary, verbs, grammar, phrases, listening, concepts); no universal panel
+  - remove developer language from learner view; technical precision allowed as secondary help in Data settings
+  - never display mastery/due/audio/progress unless backed by real data
+  - acceptance gates: 360/390/820/1440, keyboard focus, AA contrast, 200% zoom, reduced motion
+invariants:
+  - gender and verb-rule semantics immutable and non-decorative
+  - interactive German stays HTML
+  - light mode only for Alpha
+  - no rights or publication changes
+budget: structural uplift ships independently; $20/month Codex asset budget accumulates toward reviewed illustration batches
+source_documents:
+  - research/ux-direction-2026-08-13/ux-audit.md
+  - research/ux-direction-2026-08-13/design-direction-options.md
+  - research/ux-direction-2026-08-13/recommendation.md

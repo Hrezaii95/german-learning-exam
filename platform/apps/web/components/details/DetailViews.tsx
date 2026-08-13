@@ -183,7 +183,7 @@ function VocabularyDetail({ detail }: { detail: LearnerVocabularyDetail }) {
       <div className="detail-actions">
         <PractiseLink detail={detail} />
       </div>
-      <DetailLearningControls contentId={detail.id} />
+      <DetailLearningControls key={detail.id} contentId={detail.id} />
     </div>
   );
 }
@@ -274,7 +274,7 @@ function VerbDetail({ detail }: { detail: LearnerVerbDetail }) {
       <div className="detail-actions">
         <PractiseLink detail={detail} />
       </div>
-      <DetailLearningControls contentId={detail.id} />
+      <DetailLearningControls key={detail.id} contentId={detail.id} />
     </div>
   );
 }
@@ -412,7 +412,7 @@ function QaDetail({ detail }: { detail: LearnerQaDetail }) {
         <ConversationLink detail={detail} />
         <PractiseLink detail={detail} />
       </div>
-      <DetailLearningControls contentId={detail.id} />
+      <DetailLearningControls key={detail.id} contentId={detail.id} />
     </div>
   );
 }
@@ -492,7 +492,7 @@ function GrammarDetail({ detail }: { detail: LearnerGrammarDetail }) {
         ) : <p className="dense">No common-error tags are published.</p>}
       </section>
 
-      <DetailLearningControls contentId={detail.id} />
+      <DetailLearningControls key={detail.id} contentId={detail.id} />
     </div>
   );
 }

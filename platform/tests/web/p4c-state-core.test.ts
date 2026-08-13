@@ -334,6 +334,29 @@ describe("P4C atomic learner-state controller and mission construction", () => {
       .toBe(1);
   });
 
+  it("rebases an in-flight commit onto an external write instead of clobbering it", async () => {
+    const store = new MemoryStore();
+    const controllerA = createLearnerStateController({ store, now: () => new Date(NOW) });
+    const controllerB = createLearnerStateController({ store, now: () => new Date(NOW) });
+    await controllerA.initialize();
+    await controllerB.initialize();
+
+    // Second-tab write lands after controller A hydrated its (now stale) base
+    // and before A's own commit reaches the shared store.
+    await controllerB.toggleTag("lex:architekt", "Difficult");
+    await controllerA.toggleTag("qa:profession-casual-main", "Teacher");
+
+    const persisted = JSON.parse(store.value!) as {
+      tags: readonly { contentId: string; tag: string }[];
+    };
+    expect(persisted.tags).toHaveLength(2);
+    expect(persisted.tags).toEqual(expect.arrayContaining([
+      { contentId: "lex:architekt", tag: "Difficult" },
+      { contentId: "qa:profession-casual-main", tag: "Teacher" },
+    ]));
+    expect(controllerA.getSnapshot().hydration!.state.tags).toHaveLength(2);
+  });
+
   it("rolls back failed storage writes and never overwrites corrupt initialization", async () => {
     const store = new MemoryStore();
     const controller = createLearnerStateController({ store, now: () => new Date(NOW) });

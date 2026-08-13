@@ -5,6 +5,7 @@
 node_modules/
 
 # Private or licensed source material (catalogues remain tracked)
+archive/duplicates/**/*.mp3
 resources/original/**/*.pdf
 resources/original/**/*.mp3
 resources/original/**/*.jpg

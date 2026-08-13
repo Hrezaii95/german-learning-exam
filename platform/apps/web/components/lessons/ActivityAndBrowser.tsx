@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import Link from "next/link";
 import { BackLink } from "@/components/nav/BackLink";
 import {
@@ -249,7 +250,10 @@ export function ActivityScreen({
   const outbound = resolveOutboundNavigationContext(navigation, lessonContext);
   const backHref = resolveBackHref(outbound, "lesson");
   const lessonHref = appendNavigationContext(lesson.canonicalPath, outbound);
-  const workbookAudio = workbookAudioForActivity(activity.id);
+  // Stable identity across re-renders so audio panels keep per-track state.
+  // (`useMemo` is available in the react-server subset, so the server-rendered
+  // Suspense fallback stays valid.)
+  const workbookAudio = useMemo(() => workbookAudioForActivity(activity.id), [activity.id]);
   const infographic = infographicForActivity(activity.id);
   const illustration = illustrationForActivity(activity.id);
   const enrichment = getEnrichedActivity(activity.id);

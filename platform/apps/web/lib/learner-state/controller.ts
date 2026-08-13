@@ -16,6 +16,7 @@ import {
   masteryError,
   parseLearnerEvent,
   parseLearnerStateEnvelope,
+  serializeCanonicalLearnerState,
   type BrowserLikeKeyValueStore,
   type ActivityProgressRecord,
   type LearnerBuiltInTag,
@@ -238,11 +239,24 @@ export function createLearnerStateController(
       const prior = snapshot.hydration;
       if (prior === null) throw new Error("Learner state is not initialized");
       try {
-        const candidate = build(prior.state);
-        if (candidate === prior.state) {
+        // Optimistic-concurrency guard: another tab may have replaced storage
+        // after this snapshot was hydrated (its storage event has not been
+        // processed yet). Re-load inside the serialized write queue and, when
+        // storage moved, rebase the mutation onto the freshly stored state
+        // instead of silently clobbering the external write.
+        let base = prior.state;
+        const stored = await adapter.load();
+        if (
+          stored !== null &&
+          serializeCanonicalLearnerState(stored) !== serializeCanonicalLearnerState(base)
+        ) {
+          base = stored;
+        }
+        const candidate = build(base);
+        if (candidate === base) {
           return publish(makeSnapshot({
             status: "ready",
-            hydration: prior,
+            hydration: base === prior.state ? prior : hydrate(base),
             statusMessage: message,
           }));
         }
