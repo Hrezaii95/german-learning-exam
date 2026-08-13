@@ -53,6 +53,8 @@ function classify(relativePath) {
     if (normalized.includes("momente_a1_1_ab_cd1")) scope = "a1.1 lessons-01-06 candidate; transcript alignment required";
     else if (normalized.includes("momente_a1_1_ab_cd2")) scope = "a1.1 lessons-07-12; excluded from Alpha unless evidence says otherwise";
     else if (normalized.includes("kb_cd2")) scope = "coursebook lessons-07-12; excluded from Alpha";
+    else if (normalized.includes("kursbuch") && normalized.includes("cd1")) scope = "coursebook audio CD1; tracks 1_01-1_17 named lessons-01-02 candidate; transcript alignment required";
+    else if (normalized.includes("kursbuch") && normalized.includes("cd2")) scope = "coursebook lessons-07-12; excluded from Alpha";
     else if (normalized.includes("_cz_") || normalized.includes("_sk_")) scope = "localized pack; quarantined pending language/deduplication review";
     else scope = "publisher audio; scope unknown until transcript alignment";
   }

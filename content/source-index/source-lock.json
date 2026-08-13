@@ -1,7 +1,9 @@
 {
   "schemaVersion": 1,
-  "approvedManifestSha256": "c546096cfeb1e284313b638ac4ab26d1cd2a2edc678c8b998b0c0295552fb720",
-  "fileCount": 397,
-  "totalBytes": 350139546,
-  "purpose": "Immutable approval lock. Update only through an explicit source-intake review."
+  "approvedManifestSha256": "26795572846734d021b42684813fae8117ddf9e80afd596ece1d37dde1a872e8",
+  "fileCount": 456,
+  "totalBytes": 394106221,
+  "purpose": "Immutable approval lock. Update only through an explicit source-intake review.",
+  "approvedAt": "2026-08-13T17:00:00+03:30",
+  "approvalNote": "Snapshot extended by kursbuch-ingestion-2026-08-13: 59 new Kursbuch CD1 MP3s registered (owner-restored delivery Kursbuch-20260813T121208Z-1-001); 31 CD2 intake copies were byte-identical duplicates of the registered Momente_A1_1_KB_CD2 pack and were quarantined, not re-registered. Evidence: research/kursbuch-ingestion-2026-08-13.json"
 }

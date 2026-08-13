@@ -1,0 +1,670 @@
+{
+  "schemaVersion": 1,
+  "ingestionId": "kursbuch-ingestion-2026-08-13",
+  "performedBy": "claude-code-orch (session 3a449151)",
+  "performedAt": "2026-08-13T16:55:00+03:30",
+  "delivery": "resources/original/hossein added new material .../Kursbuch-20260813T121208Z-1-001 (owner-restored full Kursbuch audio set, 90 MP3s)",
+  "actions": [
+    "Hashed all 90 intake MP3s before any move (see files[] below).",
+    "All 59 CD1 files are new: moved verbatim to resources/original/audio/Kursbuch-20260813T121208Z-1-001/Kursbuch/CD1/.",
+    "All 31 CD2 files are byte-identical (same filename, same sha256) to the registered Momente_A1_1_KB_CD2 archive pack: intake copies quarantined non-destructively at archive/duplicates/Kursbuch-20260813T121208Z-1-001-CD2/; the archive copies remain the single canonical registered instances.",
+    "Extended tools/build-source-manifest.mjs classification: Kursbuch CD1 scope = lessons-01-02 candidate (tracks 1_01-1_17) with transcript alignment required; Kursbuch CD2 remains excluded from Alpha.",
+    "Rebuilt content/source-index/source-manifest.json to a new snapshot including the 59 CD1 files."
+  ],
+  "lessonAlignment": {
+    "basis": "publisher filenames (KB_Momente_A11_L<lesson>_<exercise>)",
+    "lessons12Tracks": [
+      "1_01_KB_Momente_A11_L1_1a.mp3",
+      "1_02_KB_Momente_A11_L1_2a.mp3",
+      "1_03_KB_Momente_A11_L1_2b.mp3",
+      "1_04_KB_Momente_A11_L1_2c.mp3",
+      "1_05_KB_Momente_A11_L1_3a.mp3",
+      "1_06_KB_Momente_A11_L1_4a.mp3",
+      "1_07_KB_Momente_A11_L1_5_1.mp3",
+      "1_08_KB_Momente_A11_L1_5_2.mp3",
+      "1_09_KB_Momente_A11_L1_5_3.mp3",
+      "1_10_KB_Momente_A11_L1_5_4.mp3",
+      "1_11_KB_Momente_A11_L1_5_5.mp3",
+      "1_12_KB_Momente_A11_L1_7.mp3",
+      "1_13_KB_Momente_A11_L1_8_Gespraech_1.mp3",
+      "1_14_KB_Momente_A11_L1_8_Gespraech_2.mp3",
+      "1_15_KB_Momente_A11_L2_1b_2a.mp3",
+      "1_16_KB_Momente_A11_L2_3a.mp3",
+      "1_17_KB_Momente_A11_L2_5a.mp3"
+    ],
+    "note": "Filename-derived alignment only; exact coursebook-exercise binding and transcript alignment remain open before any publication. No workbook track was relabeled. No CD2/later-lesson material enters the Alpha."
+  },
+  "rights": "private-rights-gated publisher audio; NOT approved for redistribution; owner approval currently covers only the 15 mapped workbook CD1 tracks.",
+  "files": [
+    {
+      "cd": "CD1",
+      "name": "1_01_KB_Momente_A11_L1_1a.mp3",
+      "bytes": 1159222,
+      "sha": "74059a9c0f890f1962721e21f574bfa764f1db3b0d519ac3fed233d690d7a73f",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_02_KB_Momente_A11_L1_2a.mp3",
+      "bytes": 517654,
+      "sha": "9a2161e85696cc90c778a9c8773385d1ad4c89fe7063ef8c8cdf602f1a5c939c",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_03_KB_Momente_A11_L1_2b.mp3",
+      "bytes": 2161070,
+      "sha": "094d1ad30a858d2357f30d4fef3f66af2cdeb016a496e5b96b36c8c5cbbc2d56",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_04_KB_Momente_A11_L1_2c.mp3",
+      "bytes": 587453,
+      "sha": "82f720156df0c19d2b06715c8db6df8ad87a52eb0a032c8479f6aa37aa87ca6c",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_05_KB_Momente_A11_L1_3a.mp3",
+      "bytes": 612113,
+      "sha": "8b89fe17798d02dbaae17ee80a1456130c9ef0e582179c4c370da29ac6650968",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_06_KB_Momente_A11_L1_4a.mp3",
+      "bytes": 1699225,
+      "sha": "4c861ac564072f6e16d00fef82c102f0b13cf1413cf7b80950c338abe17a1ab1",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_07_KB_Momente_A11_L1_5_1.mp3",
+      "bytes": 557779,
+      "sha": "7924bc3900e61d2534596b17600f62bc176913216357116e20737196f3f38bef",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_08_KB_Momente_A11_L1_5_2.mp3",
+      "bytes": 447020,
+      "sha": "a19bf94149b0c811a25fc80a7ddcd0bb78cd91fd4346a5f91bb7987bd7c188b6",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_09_KB_Momente_A11_L1_5_3.mp3",
+      "bytes": 428212,
+      "sha": "2b21f7b36f16945ef3b5502f1b79344c90ce84c1fdf4311e4f1c1e413d2ec594",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_10_KB_Momente_A11_L1_5_4.mp3",
+      "bytes": 593307,
+      "sha": "4c586c4ff5bcedccd5784e391349677e5aece42f607cfe6da9388c5bf9da130e",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_11_KB_Momente_A11_L1_5_5.mp3",
+      "bytes": 470427,
+      "sha": "b4b79badb1c5e92aa9dbed86d3b759226b540f847b4ec102b42732039d5e9b59",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_12_KB_Momente_A11_L1_7.mp3",
+      "bytes": 453288,
+      "sha": "3a79f1aa37615f58bd7f9508ae8d22c3c32c3059dea9cfe03aae6b7f4c9b0be5",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_13_KB_Momente_A11_L1_8_Gespraech_1.mp3",
+      "bytes": 431567,
+      "sha": "af914a9ab37103fc14e163e70b42a30f38f70bfbf7f2998644f9f0dea645327a",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_14_KB_Momente_A11_L1_8_Gespraech_2.mp3",
+      "bytes": 434074,
+      "sha": "af4611552cb406938ad78d879c241afa404ad2c2543bd1dcd0e9c7c8fb7407f4",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_15_KB_Momente_A11_L2_1b_2a.mp3",
+      "bytes": 693201,
+      "sha": "bd3267d0f46b65c5d9ba5e9553d5389cccde5fd767fd17df6ea1bbb07f2f57ab",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_16_KB_Momente_A11_L2_3a.mp3",
+      "bytes": 2444029,
+      "sha": "9dab0d06b3b014ac1b5e023f7e1d368dede4271205a141a579064fc73b94dbac",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_17_KB_Momente_A11_L2_5a.mp3",
+      "bytes": 469590,
+      "sha": "c2a4db1d412bd179e25a08c05cf1300b0ac90323e852d7f64af9d32dceaecdc4",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_18_KB_Momente_A11_L3_1b.mp3",
+      "bytes": 722455,
+      "sha": "cc938537a306d5629d01365b4d9e7f0580df0c6adb9e9c76a0384a4f4b6228cf",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_19_KB_Momente_A11_L3_2a.mp3",
+      "bytes": 375967,
+      "sha": "76476cd07d4e03037886c3e581b67088a7b1f3db77b86743699f7eaa7874ad29",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_20_KB_Momente_A11_L3_3.mp3",
+      "bytes": 966542,
+      "sha": "2d7f1c7967f2588d40e59c5356f798717279a805db75b9a5943fd65fcfdfeec1",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_21_KB_Momente_A11_L3_5.mp3",
+      "bytes": 694033,
+      "sha": "c198aa13aafc020cb2a7a33843e26ebca44cb218d67bfc809f08981a96fa5c8e",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_22_KB_Momente_A11_L3_7_1.mp3",
+      "bytes": 458306,
+      "sha": "b5d58a7232b5dc5104891cb94047c96fcdb543751fc95cd56dc7ddf94e0c6ac1",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_23_KB_Momente_A11_L3_7_2.mp3",
+      "bytes": 120595,
+      "sha": "ba26655384331e3ef9b0730e1cec55b7a0b108a70f9e55fb94ae57bd3baebe40",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_24_KB_Momente_A11_L3_7_3.mp3",
+      "bytes": 203351,
+      "sha": "fe31231b52c24533441ea4c3442331583f346724e4583e2c973bff3c46ff182f",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_25_KB_Momente_A11_L3_7_4.mp3",
+      "bytes": 174930,
+      "sha": "0de747b637fc272a5c1fcf8ff268166eca78975514a229bb6c12323f17c0796e",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_26_KB_Momente_A11_L3_7_5.mp3",
+      "bytes": 150688,
+      "sha": "2d8d2e59e2c650e51f64bbb8edd7f45f5bfb8c2857a523fb5cd42a17e75501f6",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_27_KB_Momente_A11_L3_7_6.mp3",
+      "bytes": 123939,
+      "sha": "2234007521324200719dbdcc7eeef9c47ca2914db3f95aa4bd7bbf68fef40637",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_28_KB_Momente_A11_L3_9a.mp3",
+      "bytes": 424032,
+      "sha": "072e970582c0ef253d7450b22183136fafe825a46832c7c9765f987b89efd970",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_29_KB_Momente_A11_Magazin 1_Hoeren.mp3",
+      "bytes": 515574,
+      "sha": "dd936006848f931d824a6e2f35b49db966c4c010d114d9c1fc4dbcdea9159527",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_30_KB_Momente_A11_Magazin 1_Hoeren.mp3",
+      "bytes": 294474,
+      "sha": "8ce7128ab09f980544b20079f9e2f4f507814348a3f89664bebc8082c8cd74ca",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_31_KB_Momente_A11_Magazin 1_Hoeren.mp3",
+      "bytes": 203777,
+      "sha": "436b885854f0e480c1a746fc636f2a4efeecff7972bbef7d9c811daba4328903",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_32_KB_Momente_A11_Magazin 1_Hoeren.mp3",
+      "bytes": 375558,
+      "sha": "3278d10c7e857b46641f90affae0e262f767526eba16de1f9ea60a8b38404268",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_33_KB_Momente_A11_Magazin 1_Hoeren.mp3",
+      "bytes": 358840,
+      "sha": "44350a738118b47330439b6679d83e811a9257a4dddacba4bf2fb911b1368cfd",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_34_KB_Momente_A11_L4_1.mp3",
+      "bytes": 770519,
+      "sha": "c82b6f3e344cc008b1c1b3bcffb67fa08b5254bebe8077e5eefdbb027e0bec80",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_35_KB_Momente_A11_L4_3b.mp3",
+      "bytes": 625489,
+      "sha": "c8a4e4734e250127790d9d8146e22c299b75e26c4849c87adf0c6f82e33828b5",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_36_KB_Momente_A11_L4_4b.mp3",
+      "bytes": 1009593,
+      "sha": "3d800b9623f21436f3090f3c9ff4dbd39ae2b047202e6812a595130b998a81b8",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_37_KB_Momente_A11_L4_5a.mp3",
+      "bytes": 806465,
+      "sha": "cfece892525f0f90d178d529132f03ad05febd2a8da17693794ce2189e2ae755",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_38_KB_Momente_A11_L4_6.mp3",
+      "bytes": 824436,
+      "sha": "392a708277bf7bcf0b524274ed8018b6cbcc1d7098916752bec6bba9ed311282",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_39_KB_Momente_A11_L4_7a_Gespraech _A.mp3",
+      "bytes": 334601,
+      "sha": "93adb85f188361bbdc0ab0788139fe36a932414559888adfe59173a121561114",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_40_KB_Momente_A11_L4_7a_Gespraech_B.mp3",
+      "bytes": 303672,
+      "sha": "b1e25a2f6b4be1bd183fb7143fb2bfb3f4ce1dc844d8e6ce90fa46f489230f47",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_41_KB_Momente_A11_L4_7a_Gespraech_C.mp3",
+      "bytes": 588720,
+      "sha": "a411c4159d06ce8cd86097e5f9561768f1b6912c75009d619eb389ad7823733a",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_42_KB_Momente_A11_L4_8a.mp3",
+      "bytes": 306586,
+      "sha": "997385fd7b0bfb063965aa98cc54f6510938bf6c0182fd7f0e4aa0744f6b06cf",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_43_KB_Momente_A11_L5_1b.mp3",
+      "bytes": 1285028,
+      "sha": "13f024c8a699cf6ff152de638c03df11b274dcb23bddd6a90f878282cd7b8d90",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_44_KB_Momente_A11_L5_2a.mp3",
+      "bytes": 533120,
+      "sha": "59540a086d0c5bff4f516108c06afbb7084f4f3d2eff833c2cfccda3087f8c4b",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_45_KB_Momente_A11_L5_5a_A.mp3",
+      "bytes": 992041,
+      "sha": "16a260a3d7ef02efcfe7598bf8d6b53adff03a815610ff9f3a30e01b324ee941",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_46_KB_Momente_A11_L5_5a_B.mp3",
+      "bytes": 1091097,
+      "sha": "02f796b542861559159452c5ec68ad9d4c960cb92afac54797403798f284edc6",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_47_KB_Momente_A11_L5_5a_C.mp3",
+      "bytes": 1134147,
+      "sha": "f6afcc20273a7967195764aed73b7ccc634faa3a655a2887864a73d88592299b",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_48_KB_Momente_A11_L5_5a_D.mp3",
+      "bytes": 1263714,
+      "sha": "8070c07b2de9414b4bd47fa7a050ad8e0c64c0d9566326d95f459685213f3c94",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_49_KB_Momente_A11_L6_1b_c_A.mp3",
+      "bytes": 1504461,
+      "sha": "2b27d97796ff91a72cc8103fffbb2ff94b1f81c457670fbbc58e0dc781c86b81",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_50_KB_Momente_A11_L6_1b_c_B.mp3",
+      "bytes": 1150867,
+      "sha": "9e9be0e9d0a49d2836feb41127bbc14dce402a7a5dac9c352657354a20c50dc9",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_51_KB_Momente_A11_L6_1b_c_C.mp3",
+      "bytes": 1633192,
+      "sha": "b97799a1315488d5725568b8e5209f002effb2be33d15e9f5295b36178bc105f",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_52_KB_Momente_A11_L6_4.mp3",
+      "bytes": 503444,
+      "sha": "0c8e7334fed8f44223c642ff45a4df5cb9cb31f62ef57f846a79ac7c08a694d0",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_53_KB_Momente_A11_L6_7.mp3",
+      "bytes": 488397,
+      "sha": "1caea30c1d6b640d85309455428721ff23a107ca2c5592a615596c2da088d651",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_54_KB_Momente_A11_L6_9a.mp3",
+      "bytes": 1141250,
+      "sha": "19b420fbf8f46b74130513f5b348c8a5a1410e8d62bdebfecf5fe2c6bb524b99",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_55_KB_Momente_A11_Magazin 2_Hoeren_A.mp3",
+      "bytes": 597914,
+      "sha": "d25a77d77413c1b73cff09db54eda2b1129281ce8f790f1b32627a8301e97dbb",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_56_KB_Momente_A11_Magazin 2_Hoeren_B.mp3",
+      "bytes": 547759,
+      "sha": "b270ff8881d3e6d6f73023091ddf325bbcc5be5da448cfdb911d05549e755097",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_57_KB_Momente_A11_Magazin 2_Hoeren_C.mp3",
+      "bytes": 679834,
+      "sha": "d9421718648e918eed376f3b92925b4094eb97cbb8d71d77db1184349f42db0b",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_58_KB_Momente_A11_Magazin 2_Hoeren_D.mp3",
+      "bytes": 538564,
+      "sha": "515891c11ae75bfcc93655b2f532f9e381a40ce9cc125111ae9e0ce9bd01737e",
+      "dupOf": null
+    },
+    {
+      "cd": "CD1",
+      "name": "1_59_KB_Momente_A11_Magazin 2_Lied.mp3",
+      "bytes": 2989473,
+      "sha": "3f069eceb0e5f1fd18072e94c689be2495b59b367ac75be7c8afacbde6923be9",
+      "dupOf": null
+    },
+    {
+      "cd": "CD2",
+      "name": "2_01_KB_Momente_A11_L7_1b_4.mp3",
+      "bytes": 1451795,
+      "sha": "3ef29d61f0af2a58df5e5103165846dd7dea13fe6c44d210e4514abdfd15d7d3",
+      "dupOf": "audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_01_KB_Momente_A11_L7_1b_4.mp3"
+    },
+    {
+      "cd": "CD2",
+      "name": "2_02_KB_Momente_A11_L7_3_4.mp3",
+      "bytes": 957348,
+      "sha": "3a4b6489799f3306ba6fd98fe921729aa35a3255a155b4e4beb7d79a89858bce",
+      "dupOf": "audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_02_KB_Momente_A11_L7_3_4.mp3"
+    },
+    {
+      "cd": "CD2",
+      "name": "2_03_KB_Momente_A11_L7_9b_1.mp3",
+      "bytes": 785568,
+      "sha": "a9c366530730dec9d59b36ecccc0f454af2b2e2eaf982948387b869aa71d3b98",
+      "dupOf": "audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_03_KB_Momente_A11_L7_9b_1.mp3"
+    },
+    {
+      "cd": "CD2",
+      "name": "2_04_KB_Momente_A11_L7_9b_2.mp3",
+      "bytes": 563214,
+      "sha": "481ee52283b4032fa1c994725526e9bee3a475dac5459cd92f96b3a0cf7f8cbd",
+      "dupOf": "audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_04_KB_Momente_A11_L7_9b_2.mp3"
+    },
+    {
+      "cd": "CD2",
+      "name": "2_05_KB_Momente_A11_L7_9b_3.mp3",
+      "bytes": 501774,
+      "sha": "1995b49cf10f213ee04789495c4cf0a78a49dcdcb4dad85b907e7c22f31d7390",
+      "dupOf": "audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_05_KB_Momente_A11_L7_9b_3.mp3"
+    },
+    {
+      "cd": "CD2",
+      "name": "2_06_KB_Momente_A11_L8_1a.mp3",
+      "bytes": 1452211,
+      "sha": "fc457211d4ec544c1ed88778a7a4afb27913b0a3ba248f71b6ca4d1991fecf1b",
+      "dupOf": "audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_06_KB_Momente_A11_L8_1a.mp3"
+    },
+    {
+      "cd": "CD2",
+      "name": "2_07_KB_Momente_A11_L8_3a.mp3",
+      "bytes": 528103,
+      "sha": "bad85ddba162c31a4d5aecc99d7a101f756c1d2941df585cdc99c781fb7c5d47",
+      "dupOf": "audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_07_KB_Momente_A11_L8_3a.mp3"
+    },
+    {
+      "cd": "CD2",
+      "name": "2_08_KB_Momente_A11_L8_4b.mp3",
+      "bytes": 580766,
+      "sha": "dbce1110399cd75a0e9faee700832cd1c24bbd7952bfc32a5f482f00dd728026",
+      "dupOf": "audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_08_KB_Momente_A11_L8_4b.mp3"
+    },
+    {
+      "cd": "CD2",
+      "name": "2_09_KB_Momente_A11_L9_4.mp3",
+      "bytes": 935194,
+      "sha": "ca3bd6d3afe6581767a3dd7e3a14d3009f9f6bac6d296ff76b1a9978c31a1cc3",
+      "dupOf": "audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_09_KB_Momente_A11_L9_4.mp3"
+    },
+    {
+      "cd": "CD2",
+      "name": "2_10_KB_Momente_A11_L9_5.mp3",
+      "bytes": 659761,
+      "sha": "5e147adaca26e035d23d2600c4be832d7dc79187c75cc8c62b2e61ff8a76504f",
+      "dupOf": "audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_10_KB_Momente_A11_L9_5.mp3"
+    },
+    {
+      "cd": "CD2",
+      "name": "2_11_KB_Momente_A11_L9_6.mp3",
+      "bytes": 607516,
+      "sha": "e9a3738b6008ba6198b7ea2c98a7fffb57c8a8d636b89c3e44e97174335eda34",
+      "dupOf": "audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_11_KB_Momente_A11_L9_6.mp3"
+    },
+    {
+      "cd": "CD2",
+      "name": "2_12_KB_Momente_A11_L9_7.mp3",
+      "bytes": 556943,
+      "sha": "28caf0ef0665a1b4a84a2502b3632a16a1bff1052ab1e126b80cc752bf35b9ad",
+      "dupOf": "audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_12_KB_Momente_A11_L9_7.mp3"
+    },
+    {
+      "cd": "CD2",
+      "name": "2_13_KB_Momente_A11_L9_9a.mp3",
+      "bytes": 1347305,
+      "sha": "d20c80180f67082fdb4628c4a718fe062cf0880ec42401b3c516a400b54e2344",
+      "dupOf": "audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_13_KB_Momente_A11_L9_9a.mp3"
+    },
+    {
+      "cd": "CD2",
+      "name": "2_14_KB_Momente_A11_Magazin 3_Hoeren.mp3",
+      "bytes": 553192,
+      "sha": "8ebd31791f6b28656f25d917d9d0cf32c72d9c9222928000e65bc5143517c29a",
+      "dupOf": "audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_14_KB_Momente_A11_Magazin 3_Hoeren.mp3"
+    },
+    {
+      "cd": "CD2",
+      "name": "2_15_KB_Momente_A11_Magazin 3_Hoeren.mp3",
+      "bytes": 538563,
+      "sha": "d58ae56eb715f430e4f48cbf3534c171ce35b8cdadaebd6490f5d3bc62e3063e",
+      "dupOf": "audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_15_KB_Momente_A11_Magazin 3_Hoeren.mp3"
+    },
+    {
+      "cd": "CD2",
+      "name": "2_16_KB_Momente_A11_Magazin 3_Hoeren.mp3",
+      "bytes": 458733,
+      "sha": "059530ba53367fa743c1293900c1a06e4d083730acd0b873db8ccf165822a572",
+      "dupOf": "audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_16_KB_Momente_A11_Magazin 3_Hoeren.mp3"
+    },
+    {
+      "cd": "CD2",
+      "name": "2_17_KB_Momente_A11_L10_2_3_4.mp3",
+      "bytes": 1220668,
+      "sha": "393182088202f7800c504315c14d305f1ef225e28c07c229caebdeea92007894",
+      "dupOf": "audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_17_KB_Momente_A11_L10_2_3_4.mp3"
+    },
+    {
+      "cd": "CD2",
+      "name": "2_18_KB_Momente_A11_L10_10_Durchsage_1.mp3",
+      "bytes": 721215,
+      "sha": "e1049265fe3d4ccc6663b15a5e2789c05b147dbf545bd5e4c879955721116371",
+      "dupOf": "audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_18_KB_Momente_A11_L10_10_Durchsage_1.mp3"
+    },
+    {
+      "cd": "CD2",
+      "name": "2_19_KB_Momente_A11_L10_10_Durchsage_2.mp3",
+      "bytes": 369294,
+      "sha": "05725215c80c95500b1760e30f313b682b42d3805bc7510b3f0cda5442e64d41",
+      "dupOf": "audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_19_KB_Momente_A11_L10_10_Durchsage_2.mp3"
+    },
+    {
+      "cd": "CD2",
+      "name": "2_20_KB_Momente_A11_L10_10_Durchsage_3.mp3",
+      "bytes": 358845,
+      "sha": "5bf8eb961f91c69b470975a115789c9c8e337b4f2a8284b94c70196c51f0de08",
+      "dupOf": "audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_20_KB_Momente_A11_L10_10_Durchsage_3.mp3"
+    },
+    {
+      "cd": "CD2",
+      "name": "2_21_KB_Momente_A11_L10_10_Durchsage_4.mp3",
+      "bytes": 419031,
+      "sha": "1111a8d98b09e2287de86c05d7de1664f1e96cf8913e818b1381e36c98d295db",
+      "dupOf": "audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_21_KB_Momente_A11_L10_10_Durchsage_4.mp3"
+    },
+    {
+      "cd": "CD2",
+      "name": "2_22_KB_Momente_A11_L10_10_Durchsage_5.mp3",
+      "bytes": 491338,
+      "sha": "1bb6b202e98f54ac41dcc85fc5215c1c4509132d024e038773e4410ceb4e025b",
+      "dupOf": "audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_22_KB_Momente_A11_L10_10_Durchsage_5.mp3"
+    },
+    {
+      "cd": "CD2",
+      "name": "2_23_KB_Momente_A11_L11_1a_2a_A.mp3",
+      "bytes": 610871,
+      "sha": "a732cb05dca81b4abd8b2ed00098bf9a56fa3b16052e96aa55ca493a1b8de24c",
+      "dupOf": "audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_23_KB_Momente_A11_L11_1a_2a_A.mp3"
+    },
+    {
+      "cd": "CD2",
+      "name": "2_24_KB_Momente_A11_L11_1a_2a_B.mp3",
+      "bytes": 575345,
+      "sha": "e6add0d0fc1ed88f96559e6131d711ea1c70b16f8c8e72c1e768e09a0b80b353",
+      "dupOf": "audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_24_KB_Momente_A11_L11_1a_2a_B.mp3"
+    },
+    {
+      "cd": "CD2",
+      "name": "2_25_KB_Momente_A11_L11_1a_2a_C.mp3",
+      "bytes": 370962,
+      "sha": "cb9dce06a54e116e362096d43a4da6a78d156ffaa8fc0798372fd9af56a033d7",
+      "dupOf": "audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_25_KB_Momente_A11_L11_1a_2a_C.mp3"
+    },
+    {
+      "cd": "CD2",
+      "name": "2_26_KB_Momente_A11_L11_1a_2a_D.mp3",
+      "bytes": 480468,
+      "sha": "83de739d5dc26591c28ecddce7ad9a5025879378ba5287ac757c450f3dcb11cb",
+      "dupOf": "audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_26_KB_Momente_A11_L11_1a_2a_D.mp3"
+    },
+    {
+      "cd": "CD2",
+      "name": "2_27_KB_Momente_A11_L11_1a_2a_E.mp3",
+      "bytes": 605020,
+      "sha": "24d0c93b3d390e419554ae2a54baed37297b124ca3ecfdaeaa03f55c37cfef56",
+      "dupOf": "audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_27_KB_Momente_A11_L11_1a_2a_E.mp3"
+    },
+    {
+      "cd": "CD2",
+      "name": "2_28_KB_Momente_A11_L11_1a_2a_F.mp3",
+      "bytes": 452882,
+      "sha": "cfe6314a46667d52ce6ba18bc3f95c122e087ee930803c6e00595eb6c462c8d8",
+      "dupOf": "audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_28_KB_Momente_A11_L11_1a_2a_F.mp3"
+    },
+    {
+      "cd": "CD2",
+      "name": "2_29_KB_Momente_A11_L12_1_2.mp3",
+      "bytes": 768434,
+      "sha": "b75a80d951fd817e03f4c068c2a83dfe645d102e448b71c06d0a76a08728be83",
+      "dupOf": "audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_29_KB_Momente_A11_L12_1_2.mp3"
+    },
+    {
+      "cd": "CD2",
+      "name": "2_30_KB_Momente_A11_L12_6a.mp3",
+      "bytes": 1129549,
+      "sha": "de7f418ca13eacde166eef30b2a2966fddd547cb898199c7918b5716aac84042",
+      "dupOf": "audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_30_KB_Momente_A11_L12_6a.mp3"
+    },
+    {
+      "cd": "CD2",
+      "name": "2_31_KB_Momente_A11_Magazin 4_Hoeren.mp3",
+      "bytes": 1767781,
+      "sha": "a08996c60ac877d151664c84ab509e197bfb6fb5888244db15b58ee869e7e5cf",
+      "dupOf": "audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_31_KB_Momente_A11_Magazin 4_Hoeren.mp3"
+    }
+  ]
+}
