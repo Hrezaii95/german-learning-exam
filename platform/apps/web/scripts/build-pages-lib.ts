@@ -42,6 +42,7 @@ export const DYNAMIC_PARAM_PAGES = [
   "app/lessons/[lessonSegment]/activity/[activityId]/page.tsx",
   "app/vocabulary/[entityId]/page.tsx",
   "app/verbs/[entityId]/page.tsx",
+  "app/grammar/[entityId]/page.tsx",
   "app/phrases/[entityId]/page.tsx",
   "app/practice/[gameId]/page.tsx",
   "app/conversation/[entityId]/page.tsx",

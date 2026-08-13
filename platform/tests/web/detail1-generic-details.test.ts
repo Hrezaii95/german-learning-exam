@@ -11,9 +11,9 @@ describe("DETAIL1 generic published detail projection", () => {
   const projection = projectPublishedLearnerDetails(publishedDir);
 
   it("projects every published vocabulary, verb, and Q&A hub record", () => {
-    expect(projection.detailCount).toBe(87);
-    expect(projection.details).toHaveLength(87);
-    expect(Object.keys(projection.detailsById)).toHaveLength(87);
+    expect(projection.detailCount).toBe(97);
+    expect(projection.details).toHaveLength(97);
+    expect(Object.keys(projection.detailsById)).toHaveLength(97);
     expect(projection.details.filter((row) => row.kind === "Lexeme")).toHaveLength(69);
     expect(projection.details.filter((row) => row.kind === "Verb")).toHaveLength(4);
     expect(projection.details.filter((row) => row.kind === "QAPair")).toHaveLength(14);

@@ -156,9 +156,9 @@ describe("P4C exact learner-safe registry", () => {
     const snapshot = learnerStateRegistrySnapshot();
     expect(snapshot.lessonIds).toHaveLength(2);
     expect(snapshot.activityIds).toHaveLength(23);
-    expect(snapshot.conceptIds).toHaveLength(131);
+    expect(snapshot.conceptIds).toHaveLength(141);
     expect(snapshot.templateIds).toEqual([...REVIEW_TEMPLATE_IDS].sort());
-    expect(snapshot.allEntityIds).toHaveLength(163);
+    expect(snapshot.allEntityIds).toHaveLength(173);
     expect(REVIEW_TEMPLATES).toHaveLength(7);
     expect(REVIEW_TEMPLATES.filter((row) => row.modality === "listening")).toHaveLength(0);
     expect(REVIEW_TEMPLATES.find((row) => row.id === "template:profession-qa-production"))

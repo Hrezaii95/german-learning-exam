@@ -118,7 +118,7 @@ describe("P3B hub UI shell contracts", () => {
   it("shows empty-hub honesty distinct from no-matches", () => {
     const empty = renderToStaticMarkup(
       createElement(HubListView, {
-        hub: hubs.hubsById.grammar,
+        hub: hubs.hubsById.listening,
         searchParams: {},
       }),
     );
@@ -136,7 +136,7 @@ describe("P3B hub UI shell contracts", () => {
   });
 
   it("exposes search and lesson filters on empty hubs without fabricating matches", () => {
-    const emptyHubIds = ["grammar", "listening", "concepts"] as const;
+    const emptyHubIds = ["listening", "concepts"] as const;
     for (const hubId of emptyHubIds) {
       const hub = hubs.hubsById[hubId];
       expect(hub.itemCount).toBe(0);
@@ -197,14 +197,14 @@ describe("P3B hub UI shell contracts", () => {
     expect(populated).toContain("Filter published items");
   });
 
-  it("does not link hub cards to unimplemented detail routes", () => {
+  it("links hub cards to canonical implemented detail routes", () => {
     const html = renderToStaticMarkup(
       createElement(HubListView, {
         hub: hubs.hubsById.verbs,
         searchParams: {},
       }),
     );
-    expect(html).toContain("Detail view next phase");
+    expect(html).toContain('href="/verbs/id-');
     expect(html).not.toContain('href="/verbs/verb:');
     expect(html).not.toMatch(/href="\/vocabulary\/lex:/);
   });
