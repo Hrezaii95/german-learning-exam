@@ -398,7 +398,10 @@ export function projectListeningHubExperience(
     return Object.freeze({
       id: seed.id,
       lessonId: seed.lessonId,
-      lessonLabel: `Lesson ${String(seed.lessonNumber).padStart(2, "0")}`,
+      // Learner-facing lesson wording is unpadded everywhere else the learner
+      // meets it (hub card chips, the lesson filter). "Lesson 01" was the only
+      // padded form left and read as a different lesson to the same learner.
+      lessonLabel: `Lesson ${seed.lessonNumber}`,
       exercise: seed.exercise,
       purpose: seed.purpose,
       activity,

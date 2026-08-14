@@ -355,6 +355,61 @@ describe("P3B six canonical hubs projection", () => {
     expect(hubProjectSource).not.toMatch(/\b44\b/);
   });
 
+  /**
+   * The grammar card anatomy is "rule title plus one worked German model", and
+   * HubViews runs in the client bundle where it can reach neither the bundle
+   * nor the detail projection. The model therefore has to travel on the hub
+   * record itself, read from the published `ruleSteps[].model` the grammar
+   * detail page renders — never invented, never a placeholder.
+   */
+  it("carries one published German model on every grammar hub record", () => {
+    const bundle = publication.bundle!;
+    const publishedGrammar = bundle.grammarConcepts.filter(
+      (concept) => concept.publication.status === "published",
+    );
+    const grammarItems = hubs.hubsById.grammar.items;
+    expect(grammarItems.length).toBe(publishedGrammar.length);
+
+    const firstPublishedModel = (id: string): string | null => {
+      const concept = publishedGrammar.find((entry) => entry.id === id);
+      expect(concept).toBeDefined();
+      for (const step of concept!.ruleSteps) {
+        if (!step.model) continue;
+        const text = step.model.tokens
+          .map((token) => (token.type === "gap" ? token.label : token.text))
+          .join("")
+          .trim();
+        if (text.length > 0) return text;
+      }
+      return null;
+    };
+
+    let withModel = 0;
+    for (const item of grammarItems) {
+      const expected = firstPublishedModel(item.id);
+      if (expected === null) {
+        // No published model means no field at all, not an empty placeholder.
+        expect(item.model).toBeUndefined();
+        continue;
+      }
+      withModel += 1;
+      expect(item.model).toBe(expected);
+      // Learner-safe: a model is German course text, never a raw object id.
+      expect(item.model).not.toMatch(
+        /\b(?:lex|verb|gram|phrase|qa|listen|activity|lesson|collection|media|assert):[a-z0-9-]/i,
+      );
+    }
+    expect(withModel).toBe(grammarItems.length);
+
+    // Only the grammar anatomy shows a model; no other hub record carries one.
+    for (const hub of hubs.hubs) {
+      if (hub.id === "grammar") continue;
+      for (const item of hub.items) {
+        expect(item.model).toBeUndefined();
+      }
+    }
+  });
+
   it("is byte-identical across two projection runs with stable SHA-256", () => {
     const first = serializeHubProjectionDeterministic(
       projectPublishedLearnerHubs(publishedDir),

@@ -63,6 +63,27 @@ describe("Listening and Concepts learner hub projections", () => {
     }
   });
 
+  /**
+   * A learner meets lesson wording in three places — the hub card chips, the
+   * lesson filter, and these group headers. The padded "Lesson 01" form read
+   * as a different lesson from the "Lesson 1" used everywhere else.
+   */
+  it("labels listening groups with the same unpadded lesson wording as every other surface", () => {
+    const labels = listening.groups.map((group) => group.lessonLabel);
+    expect(new Set(labels)).toEqual(new Set(["Lesson 1", "Lesson 2"]));
+    for (const group of listening.groups) {
+      expect(group.lessonLabel).toBe(
+        group.lessonId === "lesson:01" ? "Lesson 1" : "Lesson 2",
+      );
+    }
+    // The underlying id keeps its padded canonical form.
+    expect(new Set(listening.groups.map((group) => group.lessonId))).toEqual(
+      new Set(["lesson:01", "lesson:02"]),
+    );
+    expect(JSON.stringify(listening)).not.toContain("Lesson 01");
+    expect(JSON.stringify(listening)).not.toContain("Lesson 02");
+  });
+
   it("projects six source-backed topics and excludes every non-published source", () => {
     expect(concepts.itemCount).toBe(6);
     expect(concepts.topics).toHaveLength(6);
@@ -138,6 +159,11 @@ describe("Listening and Concepts learner hub UI", () => {
     expect(html).toContain("AB 3");
     expect(html).toContain("AB 12");
     expect(html).toContain("15 items");
+    // Group headers use the same lesson wording as the hub card chips.
+    expect(html).toContain("Lesson 1");
+    expect(html).toContain("Lesson 2");
+    expect(html).not.toContain("Lesson 01");
+    expect(html).not.toContain("Lesson 02");
     expect(html).toMatch(/href="\/lessons\/01\/activity\/id-[0-9a-f]+"/);
     expect(html).toMatch(/href="\/lessons\/02\/activity\/id-[0-9a-f]+"/);
     expect(html).not.toContain("Nothing here yet");

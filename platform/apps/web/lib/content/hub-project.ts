@@ -4,6 +4,7 @@ import {
   type ContentBundle,
   type ContentIndexes,
   type SearchableKind,
+  type TextToken,
 } from "@german-learning/content";
 import { loadValidatedBundleOrThrow } from "./project";
 import {
@@ -71,6 +72,49 @@ const HUB_COPY: Readonly<
   }),
 });
 
+/**
+ * Any raw content id that would be developer language in a learner surface.
+ * Mirrors the RAW_OBJECT_ID rule of the learner-language release gate so a
+ * malformed model fails the build here rather than in exported HTML.
+ */
+const RAW_CONTENT_ID_PATTERN =
+  /\b(?:lex|verb|gram|phrase|qa|listen|activity|lesson|collection|media|assert|rel|ex):[a-z0-9-]/i;
+
+function plainTokensText(tokens: readonly TextToken[]): string {
+  return tokens
+    .map((token) => (token.type === "gap" ? token.label : token.text))
+    .join("");
+}
+
+/**
+ * Grammar cards answer "what does this rule look like in German?", so every
+ * grammar record carries one worked model. The model is the first published
+ * rule step that has one — the same `ruleSteps[].model` field the grammar
+ * detail page renders — so the card and the detail page never disagree.
+ * A concept that publishes no model carries no model at all.
+ */
+function projectGrammarModels(
+  bundle: ContentBundle,
+): ReadonlyMap<string, string> {
+  const models = new Map<string, string>();
+  for (const concept of bundle.grammarConcepts) {
+    if (concept.publication.status !== "published") continue;
+    for (const step of concept.ruleSteps) {
+      if (!step.model) continue;
+      const text = plainTokensText(step.model.tokens).trim();
+      if (text.length === 0) continue;
+      if (RAW_CONTENT_ID_PATTERN.test(text)) {
+        throw new HubProjectionError(
+          `Grammar model for ${concept.id} contains a raw content id`,
+        );
+      }
+      models.set(concept.id, text);
+      break;
+    }
+  }
+  return models;
+}
+
 function isLearnerHubId(value: string): value is LearnerHubId {
   return (LEARNER_HUB_IDS as readonly string[]).includes(value);
 }
@@ -135,6 +179,7 @@ function projectHubRecord(
   indexes: ContentIndexes,
   id: string,
   expectedHub: LearnerHubId,
+  models: ReadonlyMap<string, string>,
 ): LearnerHubRecord {
   const record = indexes.byId.get(id);
   if (!record) {
@@ -164,6 +209,8 @@ function projectHubRecord(
     );
   }
 
+  const model = models.get(record.id);
+
   return Object.freeze({
     id: record.id,
     kind: record.kind,
@@ -176,6 +223,7 @@ function projectHubRecord(
       hub: destination.hub,
       path: destination.path,
     }),
+    ...(model === undefined ? {} : { model }),
     searchFields: projectSearchFields(indexes, id),
   });
 }
@@ -183,6 +231,7 @@ function projectHubRecord(
 function projectHub(
   indexes: ContentIndexes,
   hubId: LearnerHubId,
+  models: ReadonlyMap<string, string>,
 ): LearnerHubDefinition {
   const kinds = HUB_KIND_MEMBERSHIP[hubId];
   const idSet = new Set<string>();
@@ -194,7 +243,7 @@ function projectHub(
 
   const items = [...idSet]
     .sort((a, b) => a.localeCompare(b))
-    .map((id) => projectHubRecord(indexes, id, hubId));
+    .map((id) => projectHubRecord(indexes, id, hubId, models));
 
   const categorySet = new Set<string>();
   for (const item of items) {
@@ -219,12 +268,16 @@ function projectHub(
 
 /**
  * Build a deterministic learner-safe hub list projection from ContentIndexes.
- * Uses only the public learner projection — never openAuthorIndexes.
+ * Uses only the public learner projection — never openAuthorIndexes. The
+ * bundle is read solely for published card content the search index does not
+ * carry (the grammar worked model), under the same published-only guards.
  */
 export function projectLearnerHubProjection(
   indexes: ContentIndexes,
+  bundle: ContentBundle,
 ): LearnerHubProjection {
-  const hubs = LEARNER_HUB_IDS.map((hubId) => projectHub(indexes, hubId));
+  const models = projectGrammarModels(bundle);
+  const hubs = LEARNER_HUB_IDS.map((hubId) => projectHub(indexes, hubId, models));
   const hubsById = Object.freeze(
     Object.fromEntries(hubs.map((hub) => [hub.id, hub])) as Record<
       LearnerHubId,
@@ -249,7 +302,7 @@ export function projectLearnerHubsFromBundle(
   bundle: ContentBundle,
 ): LearnerHubProjection {
   const indexes = buildContentIndexes(bundle);
-  return projectLearnerHubProjection(indexes);
+  return projectLearnerHubProjection(indexes, bundle);
 }
 
 export function projectPublishedLearnerHubs(

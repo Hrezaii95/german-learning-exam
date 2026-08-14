@@ -4656,6 +4656,7 @@
           "lessonIds": [
             "lesson:01"
           ],
+          "model": "Ich komme aus Deutschland.",
           "publicationStatus": "published",
           "searchFields": [
             {
@@ -4694,6 +4695,7 @@
           "lessonIds": [
             "lesson:01"
           ],
+          "model": "Wie heißt du? · Wie heißen Sie?",
           "publicationStatus": "published",
           "searchFields": [
             {
@@ -4732,6 +4734,7 @@
           "lessonIds": [
             "lesson:02"
           ],
+          "model": "wir sind · ihr seid · sie/Sie sind",
           "publicationStatus": "published",
           "searchFields": [
             {
@@ -4774,6 +4777,7 @@
           "lessonIds": [
             "lesson:01"
           ],
+          "model": "Ich komme aus Spanien.",
           "publicationStatus": "published",
           "searchFields": [
             {
@@ -4812,6 +4816,7 @@
           "lessonIds": [
             "lesson:02"
           ],
+          "model": "Ich bin nicht verheiratet.",
           "publicationStatus": "published",
           "searchFields": [
             {
@@ -4850,6 +4855,7 @@
           "lessonIds": [
             "lesson:01"
           ],
+          "model": "ich heiße · du heißt · Sie heißen",
           "publicationStatus": "published",
           "searchFields": [
             {
@@ -4888,6 +4894,7 @@
           "lessonIds": [
             "lesson:01"
           ],
+          "model": "ich lerne · du lernst",
           "publicationStatus": "published",
           "searchFields": [
             {
@@ -4930,6 +4937,7 @@
           "lessonIds": [
             "lesson:02"
           ],
+          "model": "Ich bin Architekt.",
           "publicationStatus": "published",
           "searchFields": [
             {
@@ -4972,6 +4980,7 @@
           "lessonIds": [
             "lesson:02"
           ],
+          "model": "Architekt → Architektin · Arzt → Ärztin",
           "publicationStatus": "published",
           "searchFields": [
             {
@@ -5010,6 +5019,7 @@
           "lessonIds": [
             "lesson:01"
           ],
+          "model": "Wie heißt du? · Woher kommen Sie?",
           "publicationStatus": "published",
           "searchFields": [
             {
@@ -8664,7 +8674,7 @@
             "exercise": "AB 3",
             "id": "listening:lesson-01-ab-3",
             "lessonId": "lesson:01",
-            "lessonLabel": "Lesson 01",
+            "lessonLabel": "Lesson 1",
             "purpose": "Names and spelling",
             "tracks": [
               {
@@ -8711,7 +8721,7 @@
             "exercise": "AB 9a",
             "id": "listening:lesson-01-ab-9a",
             "lessonId": "lesson:01",
-            "lessonLabel": "Lesson 01",
+            "lessonLabel": "Lesson 1",
             "purpose": "Sentence melody model",
             "tracks": [
               {
@@ -8734,7 +8744,7 @@
             "exercise": "AB 9b",
             "id": "listening:lesson-01-ab-9b",
             "lessonId": "lesson:01",
-            "lessonLabel": "Lesson 01",
+            "lessonLabel": "Lesson 1",
             "purpose": "Sentence melody comparison",
             "tracks": [
               {
@@ -8757,7 +8767,7 @@
             "exercise": "AB 6a",
             "id": "listening:lesson-02-ab-6a",
             "lessonId": "lesson:02",
-            "lessonLabel": "Lesson 02",
+            "lessonLabel": "Lesson 2",
             "purpose": "Telephone-number discrimination",
             "tracks": [
               {
@@ -8804,7 +8814,7 @@
             "exercise": "AB 6b",
             "id": "listening:lesson-02-ab-6b",
             "lessonId": "lesson:02",
-            "lessonLabel": "Lesson 02",
+            "lessonLabel": "Lesson 2",
             "purpose": "Telephone-number transcription",
             "tracks": [
               {
@@ -8851,7 +8861,7 @@
             "exercise": "AB 12",
             "id": "listening:lesson-02-ab-12",
             "lessonId": "lesson:02",
-            "lessonLabel": "Lesson 02",
+            "lessonLabel": "Lesson 2",
             "purpose": "Profession word stress and repetition",
             "tracks": [
               {
@@ -9493,6 +9503,7 @@
           "lessonIds": [
             "lesson:01"
           ],
+          "model": "Ich komme aus Deutschland.",
           "publicationStatus": "published",
           "searchFields": [
             {
@@ -9531,6 +9542,7 @@
           "lessonIds": [
             "lesson:01"
           ],
+          "model": "Wie heißt du? · Wie heißen Sie?",
           "publicationStatus": "published",
           "searchFields": [
             {
@@ -9569,6 +9581,7 @@
           "lessonIds": [
             "lesson:02"
           ],
+          "model": "wir sind · ihr seid · sie/Sie sind",
           "publicationStatus": "published",
           "searchFields": [
             {
@@ -9611,6 +9624,7 @@
           "lessonIds": [
             "lesson:01"
           ],
+          "model": "Ich komme aus Spanien.",
           "publicationStatus": "published",
           "searchFields": [
             {
@@ -9649,6 +9663,7 @@
           "lessonIds": [
             "lesson:02"
           ],
+          "model": "Ich bin nicht verheiratet.",
           "publicationStatus": "published",
           "searchFields": [
             {
@@ -9687,6 +9702,7 @@
           "lessonIds": [
             "lesson:01"
           ],
+          "model": "ich heiße · du heißt · Sie heißen",
           "publicationStatus": "published",
           "searchFields": [
             {
@@ -9725,6 +9741,7 @@
           "lessonIds": [
             "lesson:01"
           ],
+          "model": "ich lerne · du lernst",
           "publicationStatus": "published",
           "searchFields": [
             {
@@ -9767,6 +9784,7 @@
           "lessonIds": [
             "lesson:02"
           ],
+          "model": "Ich bin Architekt.",
           "publicationStatus": "published",
           "searchFields": [
             {
@@ -9809,6 +9827,7 @@
           "lessonIds": [
             "lesson:02"
           ],
+          "model": "Architekt → Architektin · Arzt → Ärztin",
           "publicationStatus": "published",
           "searchFields": [
             {
@@ -9847,6 +9866,7 @@
           "lessonIds": [
             "lesson:01"
           ],
+          "model": "Wie heißt du? · Woher kommen Sie?",
           "publicationStatus": "published",
           "searchFields": [
             {
@@ -9895,7 +9915,7 @@
             "exercise": "AB 3",
             "id": "listening:lesson-01-ab-3",
             "lessonId": "lesson:01",
-            "lessonLabel": "Lesson 01",
+            "lessonLabel": "Lesson 1",
             "purpose": "Names and spelling",
             "tracks": [
               {
@@ -9942,7 +9962,7 @@
             "exercise": "AB 9a",
             "id": "listening:lesson-01-ab-9a",
             "lessonId": "lesson:01",
-            "lessonLabel": "Lesson 01",
+            "lessonLabel": "Lesson 1",
             "purpose": "Sentence melody model",
             "tracks": [
               {
@@ -9965,7 +9985,7 @@
             "exercise": "AB 9b",
             "id": "listening:lesson-01-ab-9b",
             "lessonId": "lesson:01",
-            "lessonLabel": "Lesson 01",
+            "lessonLabel": "Lesson 1",
             "purpose": "Sentence melody comparison",
             "tracks": [
               {
@@ -9988,7 +10008,7 @@
             "exercise": "AB 6a",
             "id": "listening:lesson-02-ab-6a",
             "lessonId": "lesson:02",
-            "lessonLabel": "Lesson 02",
+            "lessonLabel": "Lesson 2",
             "purpose": "Telephone-number discrimination",
             "tracks": [
               {
@@ -10035,7 +10055,7 @@
             "exercise": "AB 6b",
             "id": "listening:lesson-02-ab-6b",
             "lessonId": "lesson:02",
-            "lessonLabel": "Lesson 02",
+            "lessonLabel": "Lesson 2",
             "purpose": "Telephone-number transcription",
             "tracks": [
               {
@@ -10082,7 +10102,7 @@
             "exercise": "AB 12",
             "id": "listening:lesson-02-ab-12",
             "lessonId": "lesson:02",
-            "lessonLabel": "Lesson 02",
+            "lessonLabel": "Lesson 2",
             "purpose": "Profession word stress and repetition",
             "tracks": [
               {

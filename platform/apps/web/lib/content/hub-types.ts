@@ -44,6 +44,12 @@ export type LearnerHubRecord = {
   lessonIds: readonly string[];
   sourcePriority: 1 | 2 | 3 | 4 | null;
   hubDestination: LearnerHubDestination;
+  /**
+   * One published German worked model for hubs whose card anatomy shows one
+   * (grammar). Absent — never an empty string or a placeholder — when the
+   * source record publishes no model.
+   */
+  model?: string;
   searchFields: readonly LearnerHubSearchField[];
 };
 

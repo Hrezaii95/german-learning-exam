@@ -316,7 +316,12 @@ function VerbHubCard({
   );
 }
 
-/** Grammar: the German rule title with its plain-English rule name. */
+/**
+ * Grammar: the German rule title, its plain-English rule name, and the one
+ * published worked model that shows the rule in use. The model carries the
+ * same weight as the verb card's forms — dominant German on one line, always
+ * selectable HTML — and a rule that publishes no model simply shows none.
+ */
 function GrammarHubCard({
   hub,
   record,
@@ -331,6 +336,7 @@ function GrammarHubCard({
     fieldTexts(record, "title").find(
       (title) => title !== record.displayLabel,
     ) ?? null;
+  const model = record.model?.trim() ?? "";
   const audio = plateAudioFor(record.displayLabel);
 
   return (
@@ -341,6 +347,16 @@ function GrammarHubCard({
         </span>
       </HubCardTitle>
       {ruleName ? <p className="hub-card__gloss">{ruleName}</p> : null}
+      {model.length > 0 ? (
+        <dl className="hub-card__forms">
+          <div className="hub-card__form">
+            <dt>Model</dt>
+            <dd className="german" lang="de">
+              {model}
+            </dd>
+          </div>
+        </dl>
+      ) : null}
       {audio ? (
         <LemmaAudioButton audio={audio} label={record.displayLabel} />
       ) : null}

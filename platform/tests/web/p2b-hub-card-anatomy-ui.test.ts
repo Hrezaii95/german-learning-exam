@@ -201,12 +201,28 @@ describe("P2B hub card anatomies", () => {
     expect(html).not.toContain("Pronunciation unavailable");
   });
 
-  it("shows grammar rules by their German title and plain-English rule name", () => {
+  it("shows grammar rules by their German title, rule name and one worked model", () => {
     const html = render("grammar");
     expect(html).toContain("Herkunft mit aus");
     expect(html).toContain("Origin with aus");
     expect(html).toContain("Play Herkunft mit aus pronunciation");
     expect(html).not.toMatch(/\bgram:[a-z0-9-]/);
+
+    // The contract's grammar anatomy is rule title plus one HTML model.
+    const modelCount = (html.match(/hub-card__form\b/g) ?? []).length;
+    expect(modelCount).toBe(hubs.hubsById.grammar.items.length);
+    expect(html).toContain("Ich komme aus Deutschland.");
+    expect(html).toContain("Ich bin Architekt.");
+    // German model is selectable HTML, never baked into an image.
+    expect(html).toMatch(
+      /<dd class="german" lang="de">Ich komme aus Deutschland\.<\/dd>/,
+    );
+    expect(html).not.toMatch(/<img/);
+    // Every card shows exactly one model, and no card invents one.
+    for (const item of hubs.hubsById.grammar.items) {
+      expect(typeof item.model).toBe("string");
+      expect(html).toContain(item.model as string);
+    }
   });
 
   it("previews phrases as a learner turn with its register, never a raw id", () => {
