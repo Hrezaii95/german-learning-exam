@@ -41,6 +41,7 @@
     "apps/web/lib/recorder/**",
     "apps/web/lib/content/enrichment-client.ts",
     "tests/web/p2a-studio-dashboard-ui.test.ts",
+    "tests/web/p2b-hub-card-anatomy-ui.test.ts",
     "tests/web/p2a-studio-dashboard-behavior.test.ts",
     "tests/web/p3a-web-shell-ui.test.ts",
     "tests/web/p3ar2-proxy.test.ts",

@@ -34,6 +34,7 @@ import { infographicForDetail } from "@/lib/content/infographics";
 import { InfographicPanel } from "@/components/media/InfographicPanel";
 import { RichLessonVisual } from "@/components/media/RichLessonVisual";
 import { illustrationForDetail } from "@/lib/content/illustrations";
+import { MeaningPlate } from "@/components/media/MeaningPlate";
 import {
   GrammarConceptVisual,
   NounSystemVisual,
@@ -59,9 +60,39 @@ function MetaChips({
   );
 }
 
+/**
+ * Details upgrade individually (chosen-direction-contract.yaml): a vocabulary
+ * page shows its approved illustration when one exists and the permanent
+ * meaning plate — same 4:3 reserved geometry — when one does not. The plate is
+ * the media treatment only; the teaching sections below stay authoritative.
+ */
+function VocabularyMediaSlot({ detail }: { detail: LearnerVocabularyDetail }) {
+  const illustration = illustrationForDetail(detail.id);
+  if (illustration) return <RichLessonVisual illustration={illustration} />;
+  const plural = detail.plurals[0] ?? null;
+  return (
+    <MeaningPlate
+      variant="detail"
+      lemma={detail.lemma}
+      article={detail.article}
+      gloss={detail.meaningEn}
+      gender={detail.gender}
+      morphologyLabel={plural ? "Plural" : null}
+      morphology={plural ? `die ${plural}` : null}
+      audio={
+        detail.media.state === "preview"
+          ? {
+              publicPath: detail.media.publicPath,
+              spokenText: detail.media.spokenText,
+            }
+          : null
+      }
+    />
+  );
+}
+
 function VocabularyDetail({ detail }: { detail: LearnerVocabularyDetail }) {
   const pf = detail.personForm;
-  const illustration = illustrationForDetail(detail.id);
   return (
     <div className="stack detail-page detail-page--vocabulary">
       <header className="page-header">
@@ -78,7 +109,7 @@ function VocabularyDetail({ detail }: { detail: LearnerVocabularyDetail }) {
         />
       </header>
 
-      {illustration ? <RichLessonVisual illustration={illustration} /> : null}
+      <VocabularyMediaSlot detail={detail} />
       <NounSystemVisual detail={detail} />
 
       <section className="panel" aria-labelledby="vocab-forms-heading">

@@ -32,40 +32,371 @@ import {
   hubVisibleItemCount,
   publicWorkbookTrackForId,
 } from "@/lib/content/hub-experiences";
+import type { LearnerGender } from "@/lib/content/detail-types";
+import { resolvePublishedPronunciationExact } from "@/lib/content/media-availability";
+import { illustrationForDetail } from "@/lib/content/illustrations";
+import {
+  LemmaAudioButton,
+  MeaningPlate,
+  type MeaningPlateAudio,
+} from "@/components/media/MeaningPlate";
 
-function kindLabel(kind: LearnerHubRecord["kind"]): string {
-  switch (kind) {
-    case "Lexeme":
-      return "Lexeme";
-    case "Verb":
-      return "Verb";
-    case "GrammarConcept":
-      return "Grammar";
-    case "PhrasePattern":
-      return "Phrase";
-    case "QAPair":
-      return "Q&A";
-    case "Dialogue":
-      return "Dialogue";
-    case "ListeningAsset":
-      return "Listening";
-    case "Collection":
-      return "Collection";
-    default: {
-      const _exhaustive: never = kind;
-      return _exhaustive;
-    }
-  }
+/** Learner-facing lesson labels. Empty membership shows nothing at all. */
+function lessonLabels(lessonIds: readonly string[]): readonly string[] {
+  return lessonIds.map((id) => {
+    const segment = id.includes(":") ? id.slice(id.indexOf(":") + 1) : id;
+    const number = Number.parseInt(segment, 10);
+    return Number.isFinite(number) ? `Lesson ${number}` : `Lesson ${segment}`;
+  });
 }
 
-function lessonChips(lessonIds: readonly string[]): string {
-  if (lessonIds.length === 0) return "No lesson link";
-  return lessonIds
-    .map((id) => {
-      const segment = id.includes(":") ? id.slice(id.indexOf(":") + 1) : id;
-      return `Lesson ${segment}`;
-    })
-    .join(", ");
+/* ------------------------------------------------------------------------ *
+ * Per-type hub card anatomy (Phase 2b).
+ *
+ * The chosen direction forbids one universal panel: each hub answers a
+ * different learner question, so each card exposes a different anatomy built
+ * from the published projection this component already receives. Nothing here
+ * invents a value — every field is read from `record.searchFields`, the
+ * canonical `displayLabel`, or the approved pronunciation registry, and a
+ * field that has no published value simply does not render.
+ * ------------------------------------------------------------------------ */
+
+/** Published field values in projection order. Duplicates matter for verb forms. */
+function fieldTexts(
+  record: LearnerHubRecord,
+  field: string,
+): readonly string[] {
+  return record.searchFields
+    .filter((entry) => entry.field === field)
+    .map((entry) => entry.displayText);
+}
+
+function firstFieldText(
+  record: LearnerHubRecord,
+  field: string,
+): string | null {
+  return fieldTexts(record, field)[0] ?? null;
+}
+
+const ARTICLE_GENDER: Readonly<Record<string, LearnerGender>> = Object.freeze({
+  der: "masculine",
+  die: "feminine",
+  das: "neuter",
+});
+
+/**
+ * Gender is read from the published article, never guessed: `der/die/das` is
+ * the canonical carrier of noun gender and matches the detail projection for
+ * every current item. Items without an article carry no gender cue at all.
+ */
+function splitArticle(label: string): {
+  article: string | null;
+  gender: LearnerGender | null;
+  lemma: string;
+} {
+  const match = /^(der|die|das)\s+(.+)$/u.exec(label);
+  if (!match) return { article: null, gender: null, lemma: label };
+  const article = match[1] as string;
+  return {
+    article,
+    gender: ARTICLE_GENDER[article] ?? null,
+    lemma: match[2] as string,
+  };
+}
+
+/** Only an exact approved clip produces an audio control. */
+function plateAudioFor(sourceText: string): MeaningPlateAudio | null {
+  const media = resolvePublishedPronunciationExact(sourceText);
+  if (media.state !== "preview") return null;
+  return { publicPath: media.publicPath, spokenText: media.spokenText };
+}
+
+type VerbRuleCue = Readonly<{
+  code: "REG" | "SPELL" | "IRR";
+  tone: "regular" | "special" | "irregular";
+  label: string;
+}>;
+
+function verbStem(infinitive: string): string {
+  if (infinitive.endsWith("en")) return infinitive.slice(0, -2);
+  if (infinitive.endsWith("n")) return infinitive.slice(0, -1);
+  return infinitive;
+}
+
+/**
+ * REG / SPELL / IRR derived from the published present forms, using the same
+ * semantics the detail-page verb map teaches. Positions 0–2 of the projected
+ * paradigm are always ich / du / er-sie-es.
+ */
+function classifyVerbRule(
+  infinitive: string,
+  forms: readonly string[],
+): VerbRuleCue | null {
+  if (forms.length < 3) return null;
+  const stem = verbStem(infinitive);
+  if (stem.length === 0) return null;
+  if (forms.some((form) => !form.startsWith(stem))) {
+    return { code: "IRR", tone: "irregular", label: "Learn each form whole" };
+  }
+  const personForms = [`${stem}e`, `${stem}st`, `${stem}t`];
+  const deviates =
+    forms.slice(0, 3).some((form, index) => form !== personForms[index]) ||
+    forms
+      .slice(3)
+      .some((form) => form !== `${stem}en` && form !== `${stem}t`);
+  if (deviates) {
+    return { code: "SPELL", tone: "special", label: "Watch the spelling" };
+  }
+  return { code: "REG", tone: "regular", label: "Regular stem and ending" };
+}
+
+const REGISTER_LABELS: Readonly<Record<string, string>> = Object.freeze({
+  informal: "Informal (du)",
+  formal: "Formal (Sie)",
+  neutral: "Works either way",
+});
+
+function HubCardLessons({ lessonIds }: { lessonIds: readonly string[] }) {
+  const labels = lessonLabels(lessonIds);
+  if (labels.length === 0) return null;
+  return (
+    <p className="meta-row hub-card__meta">
+      {labels.map((label) => (
+        <span key={label} className="meta-chip">
+          {label}
+        </span>
+      ))}
+    </p>
+  );
+}
+
+function HubCardTitle({
+  href,
+  children,
+}: {
+  href: string | null;
+  children: ReactNode;
+}) {
+  return (
+    <h2 className="hub-card__title">
+      {href ? (
+        <Link href={href} className="hub-card__link">
+          {children}
+        </Link>
+      ) : (
+        children
+      )}
+    </h2>
+  );
+}
+
+/**
+ * Vocabulary: a 1:1 media slot (approved illustration when one exists, the
+ * permanent meaning plate otherwise), canonical German lemma with its article,
+ * English gloss, gender badge, one plural preview and audio when a clip exists.
+ * Mastery and due lines are deliberately absent: no card shows review state
+ * that this static projection cannot back with real data.
+ */
+function VocabularyHubCard({
+  hub,
+  record,
+  query,
+}: {
+  hub: LearnerHubDefinition;
+  record: LearnerHubRecord;
+  query: HubQueryState;
+}) {
+  const href = hubDetailHref(hub, record, query);
+  const { article, gender, lemma } = splitArticle(record.displayLabel);
+  const gloss = firstFieldText(record, "meaning");
+  const plural =
+    fieldTexts(record, "form").find((form) => form !== lemma) ?? null;
+  const morphology = plural ? (gender ? `die ${plural}` : plural) : null;
+  const illustration = illustrationForDetail(record.id);
+
+  return (
+    <article
+      className="hub-card hub-card--vocabulary"
+      data-hub-card="vocabulary"
+      data-media={illustration ? "illustration" : "plate"}
+    >
+      {illustration ? (
+        <div className="hub-card__media">
+          <img
+            className="hub-card__image"
+            src={withPagesBaseAssetPath(
+              `/illustrations/${illustration.filename}`,
+            )}
+            alt={illustration.alt}
+            width={illustration.width}
+            height={illustration.height}
+            style={{ objectPosition: illustration.objectPosition }}
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      ) : null}
+      <MeaningPlate
+        variant={illustration ? "body" : "card"}
+        headingLevel={2}
+        href={href}
+        lemma={lemma}
+        article={article}
+        gloss={gloss}
+        gender={gender}
+        morphologyLabel={morphology ? "Plural" : null}
+        morphology={morphology}
+        audio={plateAudioFor(record.displayLabel)}
+      />
+      <HubCardLessons lessonIds={record.lessonIds} />
+    </article>
+  );
+}
+
+/** Verbs: infinitive, gloss, rule cue, two useful forms, audio when present. */
+function VerbHubCard({
+  hub,
+  record,
+  query,
+}: {
+  hub: LearnerHubDefinition;
+  record: LearnerHubRecord;
+  query: HubQueryState;
+}) {
+  const href = hubDetailHref(hub, record, query);
+  const infinitive = firstFieldText(record, "infinitive") ?? record.displayLabel;
+  const gloss = firstFieldText(record, "meaning");
+  const forms = fieldTexts(record, "form");
+  const rule = classifyVerbRule(infinitive, forms);
+  const usefulForms = [
+    { person: "ich", form: forms[0] },
+    { person: "du", form: forms[1] },
+  ].filter((entry): entry is { person: string; form: string } =>
+    Boolean(entry.form),
+  );
+  const audio = plateAudioFor(record.displayLabel);
+
+  return (
+    <article
+      className="hub-card hub-card--verb"
+      data-hub-card="verbs"
+      data-verb-rule={rule ? rule.code : "none"}
+    >
+      <HubCardTitle href={href}>
+        <span className="german" lang="de">
+          {infinitive}
+        </span>
+      </HubCardTitle>
+      {gloss ? <p className="hub-card__gloss">{gloss}</p> : null}
+      {rule ? (
+        <p className="hub-card__cue">
+          <span className="visual-cue" data-tone={rule.tone} data-morph={rule.code}>
+            {rule.code}
+          </span>
+          <span className="hub-card__cue-text">{rule.label}</span>
+        </p>
+      ) : null}
+      {usefulForms.length > 0 ? (
+        <dl className="hub-card__forms">
+          {usefulForms.map((entry) => (
+            <div key={entry.person} className="hub-card__form">
+              <dt className="german" lang="de">
+                {entry.person}
+              </dt>
+              <dd className="german" lang="de">
+                {entry.form}
+              </dd>
+            </div>
+          ))}
+        </dl>
+      ) : null}
+      {audio ? <LemmaAudioButton audio={audio} label={infinitive} /> : null}
+      <HubCardLessons lessonIds={record.lessonIds} />
+    </article>
+  );
+}
+
+/** Grammar: the German rule title with its plain-English rule name. */
+function GrammarHubCard({
+  hub,
+  record,
+  query,
+}: {
+  hub: LearnerHubDefinition;
+  record: LearnerHubRecord;
+  query: HubQueryState;
+}) {
+  const href = hubDetailHref(hub, record, query);
+  const ruleName =
+    fieldTexts(record, "title").find(
+      (title) => title !== record.displayLabel,
+    ) ?? null;
+  const audio = plateAudioFor(record.displayLabel);
+
+  return (
+    <article className="hub-card hub-card--grammar" data-hub-card="grammar">
+      <HubCardTitle href={href}>
+        <span className="german" lang="de">
+          {record.displayLabel}
+        </span>
+      </HubCardTitle>
+      {ruleName ? <p className="hub-card__gloss">{ruleName}</p> : null}
+      {audio ? (
+        <LemmaAudioButton audio={audio} label={record.displayLabel} />
+      ) : null}
+      <HubCardLessons lessonIds={record.lessonIds} />
+    </article>
+  );
+}
+
+/** Phrases: the German turn you can say, its role in the exchange, register. */
+function PhraseHubCard({
+  hub,
+  record,
+  query,
+}: {
+  hub: LearnerHubDefinition;
+  record: LearnerHubRecord;
+  query: HubQueryState;
+}) {
+  const href = hubDetailHref(hub, record, query);
+  const turn = record.displayLabel.trim().endsWith("?") ? "Question" : "Answer";
+  const register = record.category
+    ? REGISTER_LABELS[record.category] ?? null
+    : null;
+  const audio = plateAudioFor(record.displayLabel);
+
+  return (
+    <article
+      className="hub-card hub-card--phrase"
+      data-hub-card="phrases"
+      data-turn={turn.toLowerCase()}
+    >
+      <p className="hub-card__turn">
+        <span
+          className="visual-cue"
+          data-tone={turn === "Question" ? "question" : "answer"}
+        >
+          {turn}
+        </span>
+        {record.kind === "QAPair" ? (
+          <span className="hub-card__cue-text">
+            Opens the whole exchange with its answers
+          </span>
+        ) : null}
+      </p>
+      <HubCardTitle href={href}>
+        <span className="german" lang="de">
+          {record.displayLabel}
+        </span>
+      </HubCardTitle>
+      {register ? <p className="hub-card__gloss">{register}</p> : null}
+      {audio ? (
+        <LemmaAudioButton audio={audio} label={record.displayLabel} />
+      ) : null}
+      <HubCardLessons lessonIds={record.lessonIds} />
+    </article>
+  );
 }
 
 function hubDetailHref(
@@ -362,17 +693,36 @@ function HubNoMatches({ hub }: { hub: LearnerHubDefinition }) {
   );
 }
 
+/** Whole seconds only — the projection stores exact clip durations. */
+function durationLabel(totalSeconds: number): string {
+  const seconds = Math.round(totalSeconds);
+  if (seconds < 60) return `${seconds} sec`;
+  const minutes = Math.floor(seconds / 60);
+  const rest = seconds % 60;
+  return rest === 0 ? `${minutes} min` : `${minutes} min ${rest} sec`;
+}
+
+/**
+ * Listening: what the exercise is for, how long it runs, how many tracks it
+ * holds, and the player action that opens it.
+ */
 function ListeningGroupCard({ group }: { group: LearnerListeningGroup }) {
+  const totalSeconds = group.tracks.reduce(
+    (sum, track) => sum + track.durationSeconds,
+    0,
+  );
   return (
-    <article className="hub-card panel">
-      <div className="meta-row">
-        <span className="meta-chip">{group.lessonLabel}</span>
-        <span className="meta-chip">{group.exercise}</span>
+    <article className="hub-card hub-card--listening" data-hub-card="listening">
+      <h2 className="hub-card__title">{group.purpose}</h2>
+      <p className="hub-card__gloss">
+        {group.exercise} · {group.lessonLabel}
+      </p>
+      <p className="meta-row hub-card__meta">
+        <span className="meta-chip">{durationLabel(totalSeconds)}</span>
         <span className="meta-chip">
           {group.tracks.length} track{group.tracks.length === 1 ? "" : "s"}
         </span>
-      </div>
-      <h2 className="hub-card__title">{group.purpose}</h2>
+      </p>
       <ol className="workbook-audio__list">
         {group.tracks.map((track) => {
           const media = publicWorkbookTrackForId(track.trackId);
@@ -409,21 +759,33 @@ function ListeningGroupCard({ group }: { group: LearnerListeningGroup }) {
   );
 }
 
+/**
+ * Concepts: a topic summary plus a relationship mini-map. The map is a real
+ * accessible list of the hubs this topic reaches, drawn with CSS connectors —
+ * it is never an image, and it lists only destinations the topic really has.
+ */
 function ConceptTopicCard({ topic }: { topic: LearnerConceptTopic }) {
+  const mapId = `concept-map-${topic.id.replaceAll(":", "-")}`;
   return (
-    <article className="hub-card panel">
-      <div className="meta-row">
-        {topic.lessonIds.map((lessonId) => (
-          <span key={lessonId} className="meta-chip">
-            {lessonChips([lessonId])}
-          </span>
-        ))}
-        <span className="meta-chip">
-          {topic.sourceEntityIds.length} related items
-        </span>
-      </div>
+    <article className="hub-card hub-card--concept" data-hub-card="concepts">
       <h2 className="hub-card__title">{topic.displayLabel}</h2>
-      <p className="muted">{topic.summary}</p>
+      <p className="hub-card__gloss">{topic.summary}</p>
+      {topic.hubActions.length > 0 ? (
+        <nav className="concept-map" aria-labelledby={mapId}>
+          <p className="concept-map__label" id={mapId}>
+            Where this topic goes
+          </p>
+          <ul className="concept-map__spokes">
+            {topic.hubActions.map((action) => (
+              <li key={`${action.label}:${action.path}`}>
+                <Link className="concept-map__spoke" href={action.path}>
+                  {action.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      ) : null}
       <div className="hub-filter-actions">
         {topic.activities.map((activity) => (
           <Link key={activity.activityId} className="btn btn-primary" href={activity.path}>
@@ -431,17 +793,24 @@ function ConceptTopicCard({ topic }: { topic: LearnerConceptTopic }) {
           </Link>
         ))}
       </div>
-      <nav className="hub-filter-actions" aria-label={`${topic.displayLabel} related hubs`}>
-        {topic.hubActions.map((action) => (
-          <Link key={`${action.label}:${action.path}`} className="btn btn-secondary" href={action.path}>
-            {action.label}
-          </Link>
+      <p className="meta-row hub-card__meta">
+        {lessonLabels(topic.lessonIds).map((label) => (
+          <span key={label} className="meta-chip">
+            {label}
+          </span>
         ))}
-      </nav>
+        <span className="meta-chip">
+          {topic.sourceEntityIds.length} connected items
+        </span>
+      </p>
     </article>
   );
 }
 
+/**
+ * Routes a published record to the anatomy its hub actually needs. There is no
+ * universal fallback panel: every hub that lists records has a designed card.
+ */
 function HubRecordCard({
   hub,
   record,
@@ -451,31 +820,16 @@ function HubRecordCard({
   record: LearnerHubRecord;
   query: HubQueryState;
 }) {
-  const href = hubDetailHref(hub, record, query);
-  return (
-    <article className="hub-card panel">
-      <h2 className="hub-card__title">
-        {href ? (
-          <Link href={href} className="search-result-link">
-            <span className="german" lang="de">
-              {record.displayLabel}
-            </span>
-          </Link>
-        ) : (
-          <span className="german" lang="de">
-            {record.displayLabel}
-          </span>
-        )}
-      </h2>
-      <div className="meta-row">
-        <span className="meta-chip">{kindLabel(record.kind)}</span>
-        {record.category ? (
-          <span className="meta-chip">{record.category}</span>
-        ) : null}
-        <span className="meta-chip">{lessonChips(record.lessonIds)}</span>
-      </div>
-    </article>
-  );
+  if (hub.id === "verbs") {
+    return <VerbHubCard hub={hub} record={record} query={query} />;
+  }
+  if (hub.id === "grammar") {
+    return <GrammarHubCard hub={hub} record={record} query={query} />;
+  }
+  if (hub.id === "phrases") {
+    return <PhraseHubCard hub={hub} record={record} query={query} />;
+  }
+  return <VocabularyHubCard hub={hub} record={record} query={query} />;
 }
 
 function HubFilters({

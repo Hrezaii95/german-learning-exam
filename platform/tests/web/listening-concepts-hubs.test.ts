@@ -148,7 +148,9 @@ describe("Listening and Concepts learner hub UI", () => {
     const html = renderToStaticMarkup(
       createElement(HubListView, { hub: hubs.hubsById.concepts, searchParams: {} }),
     );
-    expect((html.match(/class="hub-card panel"/g) ?? []).length).toBe(6);
+    // Phase 2b: concepts use their own card anatomy, not the shared panel.
+    expect((html.match(/data-hub-card="concepts"/g) ?? []).length).toBe(6);
+    expect((html.match(/class="concept-map"/g) ?? []).length).toBe(6);
     expect(html).toContain("Greetings, farewells &amp; wellbeing");
     expect(html).toContain("Professions, person forms &amp; present tense");
     expect(html).toContain("6 items");

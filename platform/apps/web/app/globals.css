@@ -2786,3 +2786,361 @@ a:hover {
     margin: calc(var(--space-4) * -1) calc(var(--space-4) * -1) 0;
   }
 }
+
+/* ========================================================================== *
+ * Phase 2b — per-type hub card anatomies + the permanent meaning plate.
+ *
+ * Reuses the Phase 1 token set and the Phase 2a surface language (.tool-drawer
+ * / .studio-board): one raised surface, one hairline border, one shadow role,
+ * and the same 140–200ms hover/focus timing. No new colours are introduced;
+ * gender and verb-rule cues keep the locked --gender-* / --rule-* semantics
+ * through the shared .gender-badge and .visual-cue systems.
+ * ========================================================================== */
+
+/* One responsive results grid for every hub. Declared after the breakpoint
+   blocks above so it governs 360 → 1440 from a single auto-fill rule. */
+.card-grid.hub-results {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr));
+  gap: var(--space-4);
+  align-items: stretch;
+}
+
+.hub-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  min-inline-size: 0;
+  padding: var(--space-4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface-raised);
+  box-shadow: var(--shadow);
+  transition:
+    border-color var(--motion-fast) var(--ease-standard),
+    box-shadow var(--motion-base) var(--ease-standard);
+}
+
+.hub-card:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-interactive);
+}
+
+.hub-card__title {
+  margin: 0;
+  font-size: var(--text-german-card);
+  font-weight: var(--font-weight-strong);
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.hub-card__link {
+  display: inline-block;
+  min-height: 44px;
+  padding: 0.35rem 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+.hub-card__link:hover {
+  color: var(--brand);
+  text-decoration: underline;
+}
+
+.hub-card__gloss {
+  margin: 0;
+  font-size: var(--text-ui);
+  color: var(--ink-muted);
+}
+
+.hub-card__cue,
+.hub-card__turn {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  margin: 0;
+}
+
+.hub-card__cue-text {
+  font-size: var(--text-meta);
+  color: var(--ink-muted);
+}
+
+/* Two useful forms, read as person → form rather than a table fragment. */
+.hub-card__forms {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(6.5rem, 1fr));
+  gap: var(--space-2);
+  margin: var(--space-1) 0 0;
+}
+
+.hub-card__form {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-sm);
+  background: var(--surface-tint);
+}
+
+.hub-card__form dt {
+  margin: 0;
+  font-size: var(--text-meta);
+  font-weight: var(--font-weight-body);
+  color: var(--ink-muted);
+}
+
+.hub-card__form dd {
+  margin: 0;
+  font-size: var(--text-body);
+  font-weight: var(--font-weight-strong);
+}
+
+/* Meta sits on the card floor so uneven anatomies still align in a grid. */
+.hub-card__meta {
+  margin: var(--space-2) 0 0;
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--border-soft);
+}
+
+/* Only the trailing meta row absorbs slack, so cards in a row share a floor
+   without opening a gap inside anatomies that continue below it. */
+.hub-card__meta:last-child {
+  margin-top: auto;
+}
+
+/* A workbook player inside a card column never has the 27rem the standalone
+   track row assumes, so the row stacks instead of forcing the page to scroll. */
+.hub-card--listening .workbook-audio__track {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.hub-card--listening .workbook-audio__track audio {
+  max-inline-size: 100%;
+}
+
+/* Reserved 1:1 media slot: an approved illustration only. */
+.hub-card__media {
+  flex: 0 0 auto;
+  aspect-ratio: var(--media-card-ratio);
+  overflow: hidden;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-sm);
+  background: var(--surface-tint);
+}
+
+.hub-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- Meaning plate ------------------------------------------------------- */
+
+.meaning-plate {
+  display: grid;
+  gap: var(--space-2);
+  align-content: center;
+  justify-items: start;
+  margin: 0;
+  padding: var(--space-4);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-sm);
+  background: var(--surface-tint);
+  box-shadow: none;
+}
+
+/* Same reserved geometry as the media it stands in for. `aspect-ratio` is a
+   preferred size here: the plate still grows rather than clipping German at
+   200% zoom or in narrow columns. */
+.meaning-plate--card {
+  flex: 0 0 auto;
+  aspect-ratio: var(--media-card-ratio);
+}
+
+/* Capped so the reserved 4:3 box reads as a media object in the reading
+   column rather than a full-bleed panel of empty surface. */
+.meaning-plate--detail {
+  aspect-ratio: var(--media-hero-ratio);
+  max-inline-size: 32rem;
+  padding: var(--space-5);
+}
+
+.meaning-plate--compact {
+  min-block-size: 96px;
+  padding: var(--space-3);
+}
+
+/* Companion anatomy beside a real illustration: the semantics stay identical,
+   only the framed media treatment is handed over to the picture. */
+.meaning-plate--body {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  align-content: start;
+}
+
+.meaning-plate__lemma {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-strong);
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.meaning-plate--detail .meaning-plate__lemma {
+  font-size: clamp(1.5rem, 1.1rem + 1.4vw, 2rem);
+}
+
+.meaning-plate--compact .meaning-plate__lemma {
+  font-size: var(--text-german-card);
+}
+
+.meaning-plate__article {
+  color: var(--ink-muted);
+}
+
+.meaning-plate__link {
+  display: inline-block;
+  min-height: 44px;
+  padding: 0.3rem 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+.meaning-plate__link:hover {
+  color: var(--brand);
+  text-decoration: underline;
+}
+
+.meaning-plate__gloss {
+  margin: 0;
+  font-size: var(--text-ui);
+  color: var(--ink-muted);
+}
+
+.meaning-plate__cue {
+  margin: 0;
+}
+
+.meaning-plate__morph {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-2);
+  margin: 0;
+  font-size: var(--text-meta);
+}
+
+.meaning-plate__morph-label {
+  color: var(--ink-muted);
+}
+
+.meaning-plate__audio {
+  margin: var(--space-1) 0 0;
+}
+
+.meaning-plate__audio-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  font-size: var(--text-ui);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition:
+    border-color var(--motion-fast) var(--ease-standard),
+    color var(--motion-fast) var(--ease-standard);
+}
+
+.meaning-plate__audio-btn:hover {
+  border-color: var(--brand);
+  color: var(--brand);
+}
+
+.meaning-plate__audio-btn[data-audio-state="playing"] {
+  border-color: var(--brand);
+  color: var(--brand);
+}
+
+.meaning-plate__audio-glyph {
+  font-size: 0.7rem;
+  line-height: 1;
+}
+
+/* --- Concept relationship mini-map --------------------------------------- */
+
+.concept-map {
+  margin: var(--space-2) 0 0;
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--border-soft);
+}
+
+.concept-map__label {
+  margin: 0 0 var(--space-2);
+  font-size: var(--text-meta);
+  color: var(--ink-muted);
+}
+
+.concept-map__spokes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* The connector is decoration only; the link text carries the whole meaning. */
+.concept-map__spokes li {
+  position: relative;
+  padding-left: 0.9rem;
+}
+
+.concept-map__spokes li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0.6rem;
+  border-top: 1px dashed var(--border-strong);
+}
+
+.concept-map__spoke {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.35rem 0.7rem;
+  border: 1px solid var(--border-soft);
+  border-radius: 999px;
+  background: var(--surface-tint);
+  color: var(--ink);
+  font-size: var(--text-meta);
+  text-decoration: none;
+}
+
+.concept-map__spoke:hover {
+  border-color: var(--brand);
+  color: var(--brand);
+}
+
+/* Mobile (360/390): the 1:1 plate would eat the viewport, so it relaxes to a
+   readable block while keeping one surface and one border. */
+@media (max-width: 480px) {
+  .meaning-plate--card {
+    aspect-ratio: auto;
+    min-block-size: 9.5rem;
+  }
+}
+
+/* Wide (1440): three result columns keep line length inside the browse max. */
+@media (min-width: 1240px) {
+  .card-grid.hub-results {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
