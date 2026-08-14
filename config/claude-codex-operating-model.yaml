@@ -1,6 +1,26 @@
 schema_version: 1
 updated: "2026-08-13T15:40:00+03:30"
 
+deployment_policy:
+  decided_at: "2026-08-14"
+  decided_by: owner (hossein, in Claude Code chat)
+  cadence: push-on-ready
+  rule: >-
+    The live URL is the owner's own progress view. Push every batch the moment it
+    clears its gates; do not hold verified work back to bundle it with the next
+    batch. Claude performs all git work autonomously without being asked.
+  gates_still_required: true
+  audit_amendment_authority: >-
+    Claude may add, amend or replace an audit/secondary check whenever the
+    workflow shows it is missing or wrong (owner grant, 2026-08-14). Amendments
+    are recorded with the evidence that motivated them; a check is never weakened
+    merely to turn a batch green.
+  rights_note: >-
+    "For the owner only" describes the intended audience, not access control:
+    github.io serves the site publicly to anyone with the URL. ADR-011 rights
+    gating on publisher audio and review-only content therefore still applies
+    unchanged.
+
 project:
   id: german-learning-os-lessons-01-02
   root: "E:\\claude-cursor\\side projects\\German learning"
