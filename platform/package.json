@@ -23,6 +23,8 @@
     "smoke:web-routes": "npm run smoke:routes -w @german-learning/web",
     "smoke:dev": "npm run smoke:dev -w @german-learning/web",
     "smoke:pages": "npm run smoke:pages -w @german-learning/web",
+    "audit:learner-language": "node ../tools/audit-learner-language.mjs",
+    "gates:pages": "npm run build:pages && npm run smoke:pages && npm run audit:learner-language",
     "validate:fixture": "tsx packages/content/src/cli/validate.ts tests/content/fixtures/valid-lesson-01-bundle.json",
     "validate:publication": "tsx packages/content/src/cli/validate-publication.ts",
     "encode:publication": "tsx packages/content/src/cli/encode-publication.ts",

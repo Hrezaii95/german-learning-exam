@@ -313,10 +313,20 @@ commands:
   project_gates:
     - "cd platform && npm run check"
     - "cd platform && npm run audit:prod"
-    - "cd platform && npm run build:pages"
-    - "cd platform && npm run smoke:pages"
+    - "cd platform && npm run gates:pages"   # build:pages -> smoke:pages -> audit:learner-language
     - "node tools/validate-source-manifest.mjs"
     - "node tools/audit-alpha-tts.mjs"
+  gate_notes:
+    - >-
+      audit-learner-language reads the EXPORTED HTML, not source. It was added on
+      2026-08-14 after all four then-existing gates passed while the deployed hubs
+      still read "Published lexemes from the validated course package"; its first
+      run rejected 64 distinct real leaks. Run it only after build:pages.
+    - >-
+      build:pages temporarily rewrites tracked sources (isolates proxy.ts, sets
+      literal dynamicParams) and writes .git/claude-hygiene-pause for its duration.
+      Never run two builds, or a typecheck alongside a build, concurrently: the
+      rename is a global mutation and will produce phantom TS2307/flaky failures.
   audio_example:
     - "edge-tts --voice de-DE-KatjaNeural --rate=+4% --text <exact-text> --write-media <output.mp3>"
     - "ffprobe -v error -show_entries stream=codec_name,sample_rate,channels -show_entries format=duration,size -of json <output.mp3>"
