@@ -332,7 +332,7 @@ function projectActivities(bundle: ContentBundle): EnrichedActivity[] {
         slotId: infographicId,
         kind: "infographic",
         state: "missing",
-        learnerMessage: "Original responsive infographic is not attached yet.",
+        learnerMessage: "The teaching visual for this activity is not available yet.",
       }));
     }
     if (isWorkbook) {
@@ -340,7 +340,7 @@ function projectActivities(bundle: ContentBundle): EnrichedActivity[] {
         slotId: `source-listening:${activity.lessonId}`,
         kind: "source-listening",
         state: "pending-review",
-        learnerMessage: "Workbook listening remains unavailable until rights and listening review are complete.",
+        learnerMessage: "The workbook listening audio is not available yet.",
       }));
     } else {
       const media = resolveMediaAvailability({
@@ -351,7 +351,7 @@ function projectActivities(bundle: ContentBundle): EnrichedActivity[] {
         slotId: `audio:${activity.id}`,
         kind: "audio",
         state: media.state === "preview" ? "ready" : media.state,
-        learnerMessage: media.state === "preview" ? "Exact-source synthesized preview pronunciation is available; independent German listening review is pending." : "No generated clip exactly matches a published activity utterance.",
+        learnerMessage: media.state === "preview" ? "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check." : "Pronunciation audio is not available for this activity yet.",
       }));
     }
     const gaps: EnrichmentGap[] = [];
@@ -360,7 +360,7 @@ function projectActivities(bundle: ContentBundle): EnrichedActivity[] {
         code: "activity-content-links-missing",
         field: "contentTargets",
         state: "missing",
-        learnerMessage: "This activity has no learner-published content links yet.",
+        learnerMessage: "The content for this activity is not available yet.",
       }));
     }
     if (infographicId) {
@@ -368,7 +368,7 @@ function projectActivities(bundle: ContentBundle): EnrichedActivity[] {
         code: "activity-infographic-missing",
         field: "mediaSlots.infographic",
         state: "missing",
-        learnerMessage: "The planned responsive teaching visual is not attached yet.",
+        learnerMessage: "The teaching visual for this activity is not available yet.",
       }));
     }
     const activityRecord = indexes.byId.get(activity.id);
@@ -524,19 +524,19 @@ function projectProfessions(bundle: ContentBundle): EnrichedProfessionCard[] {
         slotId: `audio:${lexeme.id}`,
         kind: "audio",
         state: audioState,
-        learnerMessage: audioState === "ready" ? "Exact-source synthesized preview pronunciation is available; independent German listening review is pending." : "Pronunciation audio is not available for this exact source text.",
+        learnerMessage: audioState === "ready" ? "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check." : "Pronunciation audio is not available for this word yet.",
       }),
       Object.freeze({
         slotId: `img:job:${lexeme.id.slice(4)}:v1`,
         kind: "image",
         state: "missing",
-        learnerMessage: "Original profession illustration is not attached yet.",
+        learnerMessage: "An illustration for this word is not available yet.",
       }),
       Object.freeze({
         slotId: "info:l2-person-forms",
         kind: "infographic",
         state: "missing",
-        learnerMessage: "The responsive person-form infographic is not attached yet.",
+        learnerMessage: "The person-form visual is not available yet.",
       }),
     ];
     const gaps: EnrichmentGap[] = [];
@@ -545,7 +545,7 @@ function projectProfessions(bundle: ContentBundle): EnrichedProfessionCard[] {
         code: "profession-plural-missing",
         field: "plural.forms",
         state: "missing",
-        learnerMessage: "Plural awaiting content approval.",
+        learnerMessage: "The plural form is not available yet.",
       }));
     }
     if (audioState !== "ready") {
@@ -553,14 +553,14 @@ function projectProfessions(bundle: ContentBundle): EnrichedProfessionCard[] {
         code: "profession-audio-missing",
         field: "mediaSlots.audio",
         state: audioState,
-        learnerMessage: "No generated clip exactly matches this published source text.",
+        learnerMessage: "Pronunciation audio is not available for this word yet.",
       }));
     }
     gaps.push(Object.freeze({
       code: "profession-image-missing",
       field: "mediaSlots.image",
       state: "missing",
-      learnerMessage: "Original illustration is not attached yet.",
+      learnerMessage: "An illustration for this word is not available yet.",
     }));
     const activityIds = [
       "activity:lesson-02-core-professions",
@@ -585,7 +585,7 @@ function projectProfessions(bundle: ContentBundle): EnrichedProfessionCard[] {
       plural: Object.freeze({
         state: pluralForms.length > 0 ? "ready" as const : "missing" as const,
         forms: Object.freeze(pluralForms),
-        learnerMessage: pluralForms.length > 0 ? null : "Plural awaiting content approval.",
+        learnerMessage: pluralForms.length > 0 ? null : "The plural form is not available yet.",
       }),
       personForm: personFormRelation(lexeme, relation, byLexeme),
       relationIds: Object.freeze([relation.id]),

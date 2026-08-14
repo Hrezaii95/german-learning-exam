@@ -11,12 +11,12 @@ describe("DETAIL1 generic published detail projection", () => {
   const projection = projectPublishedLearnerDetails(publishedDir);
 
   it("projects every published vocabulary, verb, and Q&A hub record", () => {
-    expect(projection.detailCount).toBe(97);
-    expect(projection.details).toHaveLength(97);
-    expect(Object.keys(projection.detailsById)).toHaveLength(97);
+    expect(projection.detailCount).toBe(104);
+    expect(projection.details).toHaveLength(104);
+    expect(Object.keys(projection.detailsById)).toHaveLength(104);
     expect(projection.details.filter((row) => row.kind === "Lexeme")).toHaveLength(69);
-    expect(projection.details.filter((row) => row.kind === "Verb")).toHaveLength(4);
-    expect(projection.details.filter((row) => row.kind === "QAPair")).toHaveLength(14);
+    expect(projection.details.filter((row) => row.kind === "Verb")).toHaveLength(10);
+    expect(projection.details.filter((row) => row.kind === "QAPair")).toHaveLength(15);
   });
 
   it("keeps representative records rich and renders honest generic gaps", () => {
@@ -28,7 +28,13 @@ describe("DETAIL1 generic published detail projection", () => {
     expect(genericLexeme?.kind).toBe("Lexeme");
     if (genericLexeme?.kind !== "Lexeme") throw new Error("expected lexeme");
     expect(genericLexeme.personForm).toBeNull();
-    expect(genericLexeme.pluralGapMessage).toBe("Plural is not published for this item.");
+    expect(genericLexeme.pluralGapMessage).toBe("The plural form is not available yet.");
+
+    const pluralLexeme = projection.detailsById["lex:kellner"];
+    expect(pluralLexeme?.kind).toBe("Lexeme");
+    if (pluralLexeme?.kind !== "Lexeme") throw new Error("expected lexeme");
+    expect(pluralLexeme.plurals).toEqual(["Kellner"]);
+    expect(pluralLexeme.pluralGapMessage).toBeNull();
     expect(genericLexeme.canonicalPath).toBe(
       detailCanonicalPath("vocabulary", "lex:alter"),
     );

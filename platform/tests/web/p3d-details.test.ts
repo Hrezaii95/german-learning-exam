@@ -95,8 +95,8 @@ describe("P3D learner detail projection", () => {
     expect(vocab.article).toBe(lex.noun!.article);
     expect(vocab.gender).toBe(lex.noun!.gender);
     expect(vocab.singular).toBe(lex.noun!.singular);
-    expect(vocab.plurals).toEqual([]);
-    expect(vocab.pluralGapMessage).toBe("Plural awaiting content approval");
+    expect(vocab.plurals).toEqual(["Architekten"]);
+    expect(vocab.pluralGapMessage).toBeNull();
     expect(vocab.meaningEn).toBe(lex.meanings[0]!.glossEn);
     expect(vocab.personForm.relatedId).toBe("lex:architektin");
     expect(vocab.personForm.sharedStem).toBe("Architekt");
@@ -145,7 +145,7 @@ describe("P3D learner detail projection", () => {
       expect(key.toLowerCase()).not.toMatch(/sourceassertion|assertionvalue|mp3path|audiourl|sha256|reviewstatus/);
     }
     for (const value of strings) {
-      expect(value).not.toMatch(/Architekten|Architektinnen|media\/generated|candidate-needs-listening-review|assert:/i);
+      expect(value).not.toMatch(/media\/generated|candidate-needs-listening-review|assert:/i);
     }
 
     for (const record of projected.representatives) {
@@ -171,7 +171,7 @@ describe("P3D learner detail projection", () => {
     const withPlural = structuredClone(projected);
     const vocab = withPlural.representativesById["lex:architekt"];
     if (vocab.kind === "Lexeme") {
-      (vocab.plurals as string[]).push("Architekten");
+      (vocab.plurals as string[]).push("Architekts");
     }
     expect(() => assertLearnerDetailProjection(withPlural)).toThrow();
   });

@@ -42,8 +42,6 @@ const platformRoot = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
 const publishedDir = join(platformRoot, "content", "published");
 
 const FORBIDDEN_RENDER = [
-  "Architekten",
-  "Architektinnen",
   "media/generated",
   "candidate-needs-listening-review",
   "assert:",
@@ -99,7 +97,7 @@ describe("P3D detail UI contracts", () => {
     expect(html).toContain('data-gender-label="Masculine"');
     expect(html).toContain('data-gender="feminine"');
     expect(html).toContain('data-gender-token="F"');
-    expect(html).toContain("Plural awaiting content approval");
+    expect(html).toContain("die Architekten");
     expect(html).toContain("Play pronunciation");
     expect(html).toContain("Synthesized German preview voice");
     expect(html).toContain("Review cards, tags, and notes become available when local learning state loads in the browser.");
@@ -225,7 +223,7 @@ describe("P3D detail UI contracts", () => {
       createElement(DetailView as any, { detail: genericLexeme }),
     );
     expect(lexemeHtml).toContain("das Alter");
-    expect(lexemeHtml).toContain("Plural is not published for this item.");
+    expect(lexemeHtml).toContain("The plural form is not available yet.");
     expect(lexemeHtml).toContain("This item has no related person form.");
     expect(lexemeHtml).not.toContain("Thirteen person-form pairs");
 

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-02T18:40:50.525Z",
+  "generatedAt": "2026-08-14T07:15:10.492Z",
   "scope": {
     "lessons": [
       "lesson:01",
@@ -324,6 +324,8 @@
           "masculine": "Paketzusteller",
           "feminine": "Paketzustellerin",
           "meaningEn": "parcel delivery agent",
+          "masculinePlural": "Paketzusteller",
+          "femininePlural": "Paketzustellerinnen",
           "priority": 1
         },
         {
@@ -331,6 +333,8 @@
           "masculine": "Friseur",
           "feminine": "Friseurin",
           "meaningEn": "hairdresser",
+          "masculinePlural": "Friseure",
+          "femininePlural": "Friseurinnen",
           "priority": 1
         },
         {
@@ -338,6 +342,8 @@
           "masculine": "Kellner",
           "feminine": "Kellnerin",
           "meaningEn": "waiter / waitress",
+          "masculinePlural": "Kellner",
+          "femininePlural": "Kellnerinnen",
           "priority": 1
         },
         {
@@ -345,6 +351,8 @@
           "masculine": "Ingenieur",
           "feminine": "Ingenieurin",
           "meaningEn": "engineer",
+          "masculinePlural": "Ingenieure",
+          "femininePlural": "Ingenieurinnen",
           "priority": 1
         },
         {
@@ -352,6 +360,8 @@
           "masculine": "Kfz-Mechatroniker",
           "feminine": "Kfz-Mechatronikerin",
           "meaningEn": "automotive mechatronics engineer",
+          "masculinePlural": "Kfz-Mechatroniker",
+          "femininePlural": "Kfz-Mechatronikerinnen",
           "priority": 1
         },
         {
@@ -359,6 +369,8 @@
           "masculine": "Student",
           "feminine": "Studentin",
           "meaningEn": "university student",
+          "masculinePlural": "Studenten",
+          "femininePlural": "Studentinnen",
           "priority": 1
         },
         {
@@ -366,6 +378,8 @@
           "masculine": "Journalist",
           "feminine": "Journalistin",
           "meaningEn": "journalist",
+          "masculinePlural": "Journalisten",
+          "femininePlural": "Journalistinnen",
           "priority": 1
         },
         {
@@ -373,6 +387,8 @@
           "masculine": "Architekt",
           "feminine": "Architektin",
           "meaningEn": "architect",
+          "masculinePlural": "Architekten",
+          "femininePlural": "Architektinnen",
           "priority": 1
         },
         {
@@ -380,6 +396,8 @@
           "masculine": "Arzt",
           "feminine": "Ärztin",
           "meaningEn": "doctor",
+          "masculinePlural": "Ärzte",
+          "femininePlural": "Ärztinnen",
           "priority": 1
         },
         {
@@ -387,6 +405,8 @@
           "masculine": "Lehrer",
           "feminine": "Lehrerin",
           "meaningEn": "teacher",
+          "masculinePlural": "Lehrer",
+          "femininePlural": "Lehrerinnen",
           "priority": 1
         },
         {
@@ -394,6 +414,8 @@
           "masculine": "Verkäufer",
           "feminine": "Verkäuferin",
           "meaningEn": "shop assistant",
+          "masculinePlural": "Verkäufer",
+          "femininePlural": "Verkäuferinnen",
           "priority": 1
         },
         {
@@ -401,6 +423,8 @@
           "masculine": "Schüler",
           "feminine": "Schülerin",
           "meaningEn": "school student",
+          "masculinePlural": "Schüler",
+          "femininePlural": "Schülerinnen",
           "priority": 1
         },
         {
@@ -408,17 +432,21 @@
           "masculine": "Rentner",
           "feminine": "Rentnerin",
           "meaningEn": "pensioner",
+          "masculinePlural": "Rentner",
+          "femininePlural": "Rentnerinnen",
           "priority": 1
         }
       ],
       "profileVocabulary": [
         [
           "das Jahr",
-          "year"
+          "year",
+          "die Jahre"
         ],
         [
           "das Kind",
-          "child"
+          "child",
+          "die Kinder"
         ],
         [
           "verheiratet",
@@ -430,7 +458,8 @@
         ],
         [
           "der Single",
-          "single person"
+          "single person",
+          "die Singles"
         ],
         [
           "allein",
@@ -438,7 +467,8 @@
         ],
         [
           "der Wohnort",
-          "place of residence"
+          "place of residence",
+          "die Wohnorte"
         ],
         [
           "die Herkunft",
@@ -458,33 +488,40 @@
         ],
         [
           "der Beruf",
-          "profession"
+          "profession",
+          "die Berufe"
         ],
         [
           "der Job",
-          "job"
+          "job",
+          "die Jobs"
         ],
         [
           "die Stelle",
-          "position/job"
+          "position/job",
+          "die Stellen"
         ],
         [
           "die Ausbildung",
-          "apprenticeship/training"
+          "apprenticeship/training",
+          "die Ausbildungen"
         ],
         [
           "das Praktikum",
-          "internship"
+          "internship",
+          "die Praktika"
         ],
         [
           "die Firma",
-          "company"
+          "company",
+          "die Firmen"
         ]
       ],
       "verbs": [
         {
           "id": "verb:wohnen",
           "infinitive": "wohnen",
+          "meaningEn": "to live (reside)",
           "forms": {
             "ich": "wohne",
             "du": "wohnst",
@@ -498,6 +535,7 @@
         {
           "id": "verb:leben",
           "infinitive": "leben",
+          "meaningEn": "to live",
           "forms": {
             "ich": "lebe",
             "du": "lebst",
@@ -511,6 +549,7 @@
         {
           "id": "verb:haben",
           "infinitive": "haben",
+          "meaningEn": "to have",
           "forms": {
             "ich": "habe",
             "du": "hast",
@@ -524,6 +563,7 @@
         {
           "id": "verb:sein",
           "infinitive": "sein",
+          "meaningEn": "to be",
           "forms": {
             "ich": "bin",
             "du": "bist",
@@ -537,6 +577,7 @@
         {
           "id": "verb:arbeiten",
           "infinitive": "arbeiten",
+          "meaningEn": "to work",
           "forms": {
             "ich": "arbeite",
             "du": "arbeitest",
@@ -550,6 +591,7 @@
         {
           "id": "verb:machen",
           "infinitive": "machen",
+          "meaningEn": "to do",
           "forms": {
             "ich": "mache",
             "du": "machst",
@@ -563,6 +605,7 @@
         {
           "id": "verb:studieren",
           "infinitive": "studieren",
+          "meaningEn": "to study",
           "forms": {
             "ich": "studiere",
             "du": "studierst",
@@ -593,6 +636,17 @@
             "Ich bin … von Beruf.",
             "Ich bin …",
             "Ich arbeite als …"
+          ]
+        },
+        {
+          "id": "qa:work-casual",
+          "register": "casual",
+          "question": "Was macht ihr beruflich?",
+          "answers": [
+            "Ich arbeite als …",
+            "Ich arbeite bei …",
+            "Ich studiere …",
+            "Ich arbeite im Moment nicht."
           ]
         },
         {

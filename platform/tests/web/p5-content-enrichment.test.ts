@@ -53,7 +53,7 @@ describe("P5 learner content enrichment", () => {
       professionPairs: 13,
       reviewOnlyTeacherRowsExcluded: 48,
       reviewOnlyTeacherLexemesExcluded: 86,
-      professionPluralGaps: 26,
+      professionPluralGaps: 0,
       professionAudioPendingReview: 0,
       professionImageGaps: 26,
       activityContentLinkGaps: 4,
@@ -127,19 +127,29 @@ describe("P5 learner content enrichment", () => {
 
   it("exposes only evidence-supported capabilities and explicit gap states", () => {
     const projection = projectPublishedLearnerEnrichment(publishedDir);
+    const publication = loadAndValidatePublication({ publishedDir });
+    if (!publication.bundle) throw new Error("expected validated bundle");
+    const pluralsByLexemeId = new Map(
+      publication.bundle.lexemes.map((lexeme) => [
+        lexeme.id,
+        (lexeme.noun?.plurals ?? []).map((plural) => plural.form),
+      ]),
+    );
     for (const card of projection.professionCards) {
+      // Every core profession now carries its exact glossary-stored plural.
       expect(card.plural).toEqual({
-        state: "missing",
-        forms: [],
-        learnerMessage: "Plural awaiting content approval.",
+        state: "ready",
+        forms: pluralsByLexemeId.get(card.id),
+        learnerMessage: null,
       });
+      expect(card.plural.forms).toHaveLength(1);
       expect(card.reviewEligibility).toEqual({
         conceptEligible: true,
         cardTemplateState: "missing",
         schedulerReady: false,
       });
       expect(card.gameEligibility.find((game) => game.gameId === "article-sort")?.state).toBe("ready");
-      expect(card.gameEligibility.find((game) => game.gameId === "plural-forge")?.state).toBe("missing");
+      expect(card.gameEligibility.find((game) => game.gameId === "plural-forge")?.state).toBe("ready");
       expect(card.gameEligibility.find((game) => game.gameId === "audio-match")?.state).toBe("ready");
       expect(card.mediaSlots.find((slot) => slot.kind === "audio")?.state).toBe("ready");
       expect(card.mediaSlots.find((slot) => slot.kind === "image")?.state).toBe("missing");

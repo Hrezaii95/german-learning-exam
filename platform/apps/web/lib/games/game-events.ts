@@ -14,6 +14,7 @@ import { practiceActivityId } from "./game-prompts";
 import { gradeObjectiveAttempt } from "./game-grading";
 import type { PracticeGameId } from "./game-ids";
 import {
+  AUDIO_MATCH_UNAVAILABLE_REASON,
   PRACTICE_SOURCE_ACTIVITY_MODE,
   type EmitResult,
   type GradedAttemptInput,
@@ -129,8 +130,7 @@ export function emitAudioMatchAttempt(): EmitResult {
       matched: false,
       usedRevealOrHint: false,
       feedbackKind: "unavailable",
-      feedbackMessage:
-        "Audio match is unavailable until listening-approved public media exists.",
+      feedbackMessage: AUDIO_MATCH_UNAVAILABLE_REASON,
     },
   };
 }

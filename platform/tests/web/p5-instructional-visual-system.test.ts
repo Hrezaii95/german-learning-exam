@@ -70,8 +70,9 @@ describe("P5 instructional visual system", () => {
   it("shows exact stored noun forms and never manufactures a missing plural", () => {
     const frau = details.detailsById["lex:frau"];
     const architekt = details.detailsById["lex:architekt"];
+    const alter = details.detailsById["lex:alter"];
     const hallo = details.detailsById["lex:hallo"];
-    if (frau?.kind !== "Lexeme" || architekt?.kind !== "Lexeme" || hallo?.kind !== "Lexeme") {
+    if (frau?.kind !== "Lexeme" || architekt?.kind !== "Lexeme" || alter?.kind !== "Lexeme" || hallo?.kind !== "Lexeme") {
       throw new Error("Expected projected vocabulary details");
     }
 
@@ -81,10 +82,16 @@ describe("P5 instructional visual system", () => {
     expect(publishedPlural).toContain("+en");
     expect(publishedPlural).toContain('data-status="published"');
 
-    const missingPlural = renderToStaticMarkup(createElement(NounSystemVisual, { detail: architekt }));
-    expect(missingPlural).toContain("Plural awaiting content approval");
+    const glossaryPlural = renderToStaticMarkup(createElement(NounSystemVisual, { detail: architekt }));
+    expect(glossaryPlural).toContain("die Architekten");
+    expect(glossaryPlural).toContain("+en");
+    expect(glossaryPlural).toContain('data-status="published"');
+
+    // das Alter is glossary-marked (Sg.) — the visual must never manufacture a plural.
+    const missingPlural = renderToStaticMarkup(createElement(NounSystemVisual, { detail: alter }));
+    expect(missingPlural).toContain("The plural form is not available yet.");
     expect(missingPlural).toContain('data-status="not-published"');
-    expect(missingPlural).not.toContain("Architekten");
+    expect(missingPlural).not.toContain("Altern");
 
     expect(renderToStaticMarkup(createElement(NounSystemVisual, { detail: hallo }))).toBe("");
   });
@@ -114,7 +121,7 @@ describe("P5 instructional visual system", () => {
   it("renders every published Q&A and grammar detail from its exact projected models", () => {
     const qaDetails = details.details.filter((detail) => detail.kind === "QAPair");
     const grammarDetails = details.details.filter((detail) => detail.kind === "GrammarConcept");
-    expect(qaDetails).toHaveLength(14);
+    expect(qaDetails).toHaveLength(15);
     expect(grammarDetails).toHaveLength(10);
 
     for (const detail of qaDetails) {

@@ -1,5 +1,5 @@
 {
-  "documentCount": 166,
+  "documentCount": 178,
   "documents": [
     {
       "canonicalHref": "/lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d616c7068616265742d6c697374656e2d7370656c6c",
@@ -1380,6 +1380,15 @@
           ]
         },
         {
+          "displayText": "Ärztinnen",
+          "field": "form",
+          "matchKeys": [
+            "ärztinnen",
+            "aerztinnen",
+            "arztinnen"
+          ]
+        },
+        {
           "displayText": "doctor",
           "field": "meaning",
           "matchKeys": [
@@ -1529,6 +1538,13 @@
           ]
         },
         {
+          "displayText": "Architekten",
+          "field": "form",
+          "matchKeys": [
+            "architekten"
+          ]
+        },
+        {
           "displayText": "architect",
           "field": "meaning",
           "matchKeys": [
@@ -1581,6 +1597,13 @@
           ]
         },
         {
+          "displayText": "Architektinnen",
+          "field": "form",
+          "matchKeys": [
+            "architektinnen"
+          ]
+        },
+        {
           "displayText": "architect",
           "field": "meaning",
           "matchKeys": [
@@ -1630,6 +1653,15 @@
           "field": "form",
           "matchKeys": [
             "arzt"
+          ]
+        },
+        {
+          "displayText": "Ärzte",
+          "field": "form",
+          "matchKeys": [
+            "ärzte",
+            "aerzte",
+            "arzte"
           ]
         },
         {
@@ -1775,6 +1807,13 @@
           ]
         },
         {
+          "displayText": "Ausbildungen",
+          "field": "form",
+          "matchKeys": [
+            "ausbildungen"
+          ]
+        },
+        {
           "displayText": "apprenticeship/training",
           "field": "meaning",
           "matchKeys": [
@@ -1824,6 +1863,13 @@
           "field": "form",
           "matchKeys": [
             "beruf"
+          ]
+        },
+        {
+          "displayText": "Berufe",
+          "field": "form",
+          "matchKeys": [
+            "berufe"
           ]
         },
         {
@@ -2125,6 +2171,13 @@
           ]
         },
         {
+          "displayText": "Firmen",
+          "field": "form",
+          "matchKeys": [
+            "firmen"
+          ]
+        },
+        {
           "displayText": "company",
           "field": "meaning",
           "matchKeys": [
@@ -2281,6 +2334,13 @@
           ]
         },
         {
+          "displayText": "Friseure",
+          "field": "form",
+          "matchKeys": [
+            "friseure"
+          ]
+        },
+        {
           "displayText": "hairdresser",
           "field": "meaning",
           "matchKeys": [
@@ -2330,6 +2390,13 @@
           "field": "form",
           "matchKeys": [
             "friseurin"
+          ]
+        },
+        {
+          "displayText": "Friseurinnen",
+          "field": "form",
+          "matchKeys": [
+            "friseurinnen"
           ]
         },
         {
@@ -2811,6 +2878,13 @@
           ]
         },
         {
+          "displayText": "Ingenieure",
+          "field": "form",
+          "matchKeys": [
+            "ingenieure"
+          ]
+        },
+        {
           "displayText": "engineer",
           "field": "meaning",
           "matchKeys": [
@@ -2860,6 +2934,13 @@
           "field": "form",
           "matchKeys": [
             "ingenieurin"
+          ]
+        },
+        {
+          "displayText": "Ingenieurinnen",
+          "field": "form",
+          "matchKeys": [
+            "ingenieurinnen"
           ]
         },
         {
@@ -2915,6 +2996,13 @@
           ]
         },
         {
+          "displayText": "Jahre",
+          "field": "form",
+          "matchKeys": [
+            "jahre"
+          ]
+        },
+        {
           "displayText": "year",
           "field": "meaning",
           "matchKeys": [
@@ -2964,6 +3052,13 @@
           "field": "form",
           "matchKeys": [
             "job"
+          ]
+        },
+        {
+          "displayText": "Jobs",
+          "field": "form",
+          "matchKeys": [
+            "jobs"
           ]
         },
         {
@@ -3019,6 +3114,13 @@
           ]
         },
         {
+          "displayText": "Journalisten",
+          "field": "form",
+          "matchKeys": [
+            "journalisten"
+          ]
+        },
+        {
           "displayText": "journalist",
           "field": "meaning",
           "matchKeys": [
@@ -3071,6 +3173,13 @@
           ]
         },
         {
+          "displayText": "Journalistinnen",
+          "field": "form",
+          "matchKeys": [
+            "journalistinnen"
+          ]
+        },
+        {
           "displayText": "journalist",
           "field": "meaning",
           "matchKeys": [
@@ -3113,6 +3222,13 @@
           "field": "label",
           "matchKeys": [
             "der kellner"
+          ]
+        },
+        {
+          "displayText": "Kellner",
+          "field": "form",
+          "matchKeys": [
+            "kellner"
           ]
         },
         {
@@ -3175,6 +3291,13 @@
           ]
         },
         {
+          "displayText": "Kellnerinnen",
+          "field": "form",
+          "matchKeys": [
+            "kellnerinnen"
+          ]
+        },
+        {
           "displayText": "waiter / waitress",
           "field": "meaning",
           "matchKeys": [
@@ -3217,6 +3340,13 @@
           "field": "label",
           "matchKeys": [
             "der kfz-mechatroniker"
+          ]
+        },
+        {
+          "displayText": "Kfz-Mechatroniker",
+          "field": "form",
+          "matchKeys": [
+            "kfz-mechatroniker"
           ]
         },
         {
@@ -3279,6 +3409,13 @@
           ]
         },
         {
+          "displayText": "Kfz-Mechatronikerinnen",
+          "field": "form",
+          "matchKeys": [
+            "kfz-mechatronikerinnen"
+          ]
+        },
+        {
           "displayText": "automotive mechatronics engineer",
           "field": "meaning",
           "matchKeys": [
@@ -3331,6 +3468,13 @@
           ]
         },
         {
+          "displayText": "Kinder",
+          "field": "form",
+          "matchKeys": [
+            "kinder"
+          ]
+        },
+        {
           "displayText": "child",
           "field": "meaning",
           "matchKeys": [
@@ -3373,6 +3517,13 @@
           "field": "label",
           "matchKeys": [
             "der lehrer"
+          ]
+        },
+        {
+          "displayText": "Lehrer",
+          "field": "form",
+          "matchKeys": [
+            "lehrer"
           ]
         },
         {
@@ -3432,6 +3583,13 @@
           "field": "form",
           "matchKeys": [
             "lehrerin"
+          ]
+        },
+        {
+          "displayText": "Lehrerinnen",
+          "field": "form",
+          "matchKeys": [
+            "lehrerinnen"
           ]
         },
         {
@@ -3640,6 +3798,13 @@
           ]
         },
         {
+          "displayText": "Paketzusteller",
+          "field": "form",
+          "matchKeys": [
+            "paketzusteller"
+          ]
+        },
+        {
           "displayText": "parcel delivery agent",
           "field": "meaning",
           "matchKeys": [
@@ -3689,6 +3854,13 @@
           "field": "form",
           "matchKeys": [
             "paketzustellerin"
+          ]
+        },
+        {
+          "displayText": "Paketzustellerinnen",
+          "field": "form",
+          "matchKeys": [
+            "paketzustellerinnen"
           ]
         },
         {
@@ -3744,6 +3916,13 @@
           ]
         },
         {
+          "displayText": "Praktika",
+          "field": "form",
+          "matchKeys": [
+            "praktika"
+          ]
+        },
+        {
           "displayText": "internship",
           "field": "meaning",
           "matchKeys": [
@@ -3786,6 +3965,13 @@
           "field": "label",
           "matchKeys": [
             "der rentner"
+          ]
+        },
+        {
+          "displayText": "Rentner",
+          "field": "form",
+          "matchKeys": [
+            "rentner"
           ]
         },
         {
@@ -3848,6 +4034,13 @@
           ]
         },
         {
+          "displayText": "Rentnerinnen",
+          "field": "form",
+          "matchKeys": [
+            "rentnerinnen"
+          ]
+        },
+        {
           "displayText": "pensioner",
           "field": "meaning",
           "matchKeys": [
@@ -3894,6 +4087,15 @@
             "der schüler",
             "der schueler",
             "der schuler"
+          ]
+        },
+        {
+          "displayText": "Schüler",
+          "field": "form",
+          "matchKeys": [
+            "schüler",
+            "schueler",
+            "schuler"
           ]
         },
         {
@@ -3961,6 +4163,15 @@
             "schülerin",
             "schuelerin",
             "schulerin"
+          ]
+        },
+        {
+          "displayText": "Schülerinnen",
+          "field": "form",
+          "matchKeys": [
+            "schülerinnen",
+            "schuelerinnen",
+            "schulerinnen"
           ]
         },
         {
@@ -4113,6 +4324,13 @@
           ]
         },
         {
+          "displayText": "Singles",
+          "field": "form",
+          "matchKeys": [
+            "singles"
+          ]
+        },
+        {
           "displayText": "single person",
           "field": "meaning",
           "matchKeys": [
@@ -4210,6 +4428,13 @@
           ]
         },
         {
+          "displayText": "Stellen",
+          "field": "form",
+          "matchKeys": [
+            "stellen"
+          ]
+        },
+        {
           "displayText": "position/job",
           "field": "meaning",
           "matchKeys": [
@@ -4262,6 +4487,13 @@
           ]
         },
         {
+          "displayText": "Studenten",
+          "field": "form",
+          "matchKeys": [
+            "studenten"
+          ]
+        },
+        {
           "displayText": "university student",
           "field": "meaning",
           "matchKeys": [
@@ -4311,6 +4543,13 @@
           "field": "form",
           "matchKeys": [
             "studentin"
+          ]
+        },
+        {
+          "displayText": "Studentinnen",
+          "field": "form",
+          "matchKeys": [
+            "studentinnen"
           ]
         },
         {
@@ -4673,6 +4912,15 @@
           ]
         },
         {
+          "displayText": "Verkäufer",
+          "field": "form",
+          "matchKeys": [
+            "verkäufer",
+            "verkaeufer",
+            "verkaufer"
+          ]
+        },
+        {
           "displayText": "shop assistant",
           "field": "meaning",
           "matchKeys": [
@@ -4728,6 +4976,15 @@
             "verkäuferin",
             "verkaeuferin",
             "verkauferin"
+          ]
+        },
+        {
+          "displayText": "Verkäuferinnen",
+          "field": "form",
+          "matchKeys": [
+            "verkäuferinnen",
+            "verkaeuferinnen",
+            "verkauferinnen"
           ]
         },
         {
@@ -4839,6 +5096,13 @@
           "field": "form",
           "matchKeys": [
             "wohnort"
+          ]
+        },
+        {
+          "displayText": "Wohnorte",
+          "field": "form",
+          "matchKeys": [
+            "wohnorte"
           ]
         },
         {
@@ -7104,6 +7368,291 @@
     },
     {
       "canonicalHref": null,
+      "category": "informal",
+      "displayLabel": "Ich arbeite als …",
+      "fields": [
+        {
+          "displayText": "qa:work-casual-main-answer",
+          "field": "intent",
+          "matchKeys": [
+            "qa:work-casual-main-answer"
+          ]
+        },
+        {
+          "displayText": "work-casual-main-answer",
+          "field": "intent",
+          "matchKeys": [
+            "work-casual-main-answer"
+          ]
+        },
+        {
+          "displayText": "Ich arbeite als …",
+          "field": "realization",
+          "matchKeys": [
+            "ich arbeite als …"
+          ]
+        },
+        {
+          "displayText": "Ich arbeite als …",
+          "field": "realization",
+          "matchKeys": [
+            "ich arbeite als …"
+          ]
+        },
+        {
+          "displayText": "Ich arbeite als …",
+          "field": "label",
+          "matchKeys": [
+            "ich arbeite als …"
+          ]
+        },
+        {
+          "displayText": "informal",
+          "field": "category",
+          "matchKeys": [
+            "informal"
+          ]
+        }
+      ],
+      "hubDestination": {
+        "hub": "phrases"
+      },
+      "id": "phrase:work-casual-main-a1",
+      "kind": "PhrasePattern",
+      "lessonIds": [],
+      "publicationStatus": "published",
+      "sourcePriority": 1
+    },
+    {
+      "canonicalHref": null,
+      "category": "informal",
+      "displayLabel": "Ich arbeite bei …",
+      "fields": [
+        {
+          "displayText": "qa:work-casual-main-answer",
+          "field": "intent",
+          "matchKeys": [
+            "qa:work-casual-main-answer"
+          ]
+        },
+        {
+          "displayText": "work-casual-main-answer",
+          "field": "intent",
+          "matchKeys": [
+            "work-casual-main-answer"
+          ]
+        },
+        {
+          "displayText": "Ich arbeite bei …",
+          "field": "realization",
+          "matchKeys": [
+            "ich arbeite bei …"
+          ]
+        },
+        {
+          "displayText": "Ich arbeite bei …",
+          "field": "realization",
+          "matchKeys": [
+            "ich arbeite bei …"
+          ]
+        },
+        {
+          "displayText": "Ich arbeite bei …",
+          "field": "label",
+          "matchKeys": [
+            "ich arbeite bei …"
+          ]
+        },
+        {
+          "displayText": "informal",
+          "field": "category",
+          "matchKeys": [
+            "informal"
+          ]
+        }
+      ],
+      "hubDestination": {
+        "hub": "phrases"
+      },
+      "id": "phrase:work-casual-main-a2",
+      "kind": "PhrasePattern",
+      "lessonIds": [],
+      "publicationStatus": "published",
+      "sourcePriority": 1
+    },
+    {
+      "canonicalHref": null,
+      "category": "informal",
+      "displayLabel": "Ich studiere …",
+      "fields": [
+        {
+          "displayText": "qa:work-casual-main-answer",
+          "field": "intent",
+          "matchKeys": [
+            "qa:work-casual-main-answer"
+          ]
+        },
+        {
+          "displayText": "work-casual-main-answer",
+          "field": "intent",
+          "matchKeys": [
+            "work-casual-main-answer"
+          ]
+        },
+        {
+          "displayText": "Ich studiere …",
+          "field": "realization",
+          "matchKeys": [
+            "ich studiere …"
+          ]
+        },
+        {
+          "displayText": "Ich studiere …",
+          "field": "realization",
+          "matchKeys": [
+            "ich studiere …"
+          ]
+        },
+        {
+          "displayText": "Ich studiere …",
+          "field": "label",
+          "matchKeys": [
+            "ich studiere …"
+          ]
+        },
+        {
+          "displayText": "informal",
+          "field": "category",
+          "matchKeys": [
+            "informal"
+          ]
+        }
+      ],
+      "hubDestination": {
+        "hub": "phrases"
+      },
+      "id": "phrase:work-casual-main-a3",
+      "kind": "PhrasePattern",
+      "lessonIds": [],
+      "publicationStatus": "published",
+      "sourcePriority": 1
+    },
+    {
+      "canonicalHref": null,
+      "category": "informal",
+      "displayLabel": "Ich arbeite im Moment nicht.",
+      "fields": [
+        {
+          "displayText": "qa:work-casual-main-answer",
+          "field": "intent",
+          "matchKeys": [
+            "qa:work-casual-main-answer"
+          ]
+        },
+        {
+          "displayText": "work-casual-main-answer",
+          "field": "intent",
+          "matchKeys": [
+            "work-casual-main-answer"
+          ]
+        },
+        {
+          "displayText": "Ich arbeite im Moment nicht.",
+          "field": "realization",
+          "matchKeys": [
+            "ich arbeite im moment nicht."
+          ]
+        },
+        {
+          "displayText": "Ich arbeite im Moment nicht.",
+          "field": "realization",
+          "matchKeys": [
+            "ich arbeite im moment nicht."
+          ]
+        },
+        {
+          "displayText": "Ich arbeite im Moment nicht.",
+          "field": "label",
+          "matchKeys": [
+            "ich arbeite im moment nicht."
+          ]
+        },
+        {
+          "displayText": "informal",
+          "field": "category",
+          "matchKeys": [
+            "informal"
+          ]
+        }
+      ],
+      "hubDestination": {
+        "hub": "phrases"
+      },
+      "id": "phrase:work-casual-main-a4",
+      "kind": "PhrasePattern",
+      "lessonIds": [],
+      "publicationStatus": "published",
+      "sourcePriority": 1
+    },
+    {
+      "canonicalHref": null,
+      "category": "informal",
+      "displayLabel": "Was macht ihr beruflich?",
+      "fields": [
+        {
+          "displayText": "qa:work-casual-main",
+          "field": "intent",
+          "matchKeys": [
+            "qa:work-casual-main"
+          ]
+        },
+        {
+          "displayText": "work-casual-main",
+          "field": "intent",
+          "matchKeys": [
+            "work-casual-main"
+          ]
+        },
+        {
+          "displayText": "Was macht ihr beruflich?",
+          "field": "realization",
+          "matchKeys": [
+            "was macht ihr beruflich?"
+          ]
+        },
+        {
+          "displayText": "Was macht ihr beruflich?",
+          "field": "realization",
+          "matchKeys": [
+            "was macht ihr beruflich?"
+          ]
+        },
+        {
+          "displayText": "Was macht ihr beruflich?",
+          "field": "label",
+          "matchKeys": [
+            "was macht ihr beruflich?"
+          ]
+        },
+        {
+          "displayText": "informal",
+          "field": "category",
+          "matchKeys": [
+            "informal"
+          ]
+        }
+      ],
+      "hubDestination": {
+        "hub": "phrases"
+      },
+      "id": "phrase:work-casual-main-q",
+      "kind": "PhrasePattern",
+      "lessonIds": [],
+      "publicationStatus": "published",
+      "sourcePriority": 1
+    },
+    {
+      "canonicalHref": null,
       "category": "formal",
       "displayLabel": "Ich arbeite als …",
       "fields": [
@@ -8066,6 +8615,58 @@
       "sourcePriority": 1
     },
     {
+      "canonicalHref": "/phrases/id-71613a776f726b2d63617375616c2d6d61696e",
+      "category": "informal",
+      "displayLabel": "qa:work-casual-main",
+      "fields": [
+        {
+          "displayText": "qa:work-casual-main",
+          "field": "intent",
+          "matchKeys": [
+            "qa:work-casual-main"
+          ]
+        },
+        {
+          "displayText": "work-casual-main",
+          "field": "intent",
+          "matchKeys": [
+            "work-casual-main"
+          ]
+        },
+        {
+          "displayText": "qa:work-casual-main",
+          "field": "label",
+          "matchKeys": [
+            "qa:work-casual-main"
+          ]
+        },
+        {
+          "displayText": "informal",
+          "field": "category",
+          "matchKeys": [
+            "informal"
+          ]
+        },
+        {
+          "displayText": "Was macht ihr beruflich?",
+          "field": "realization",
+          "matchKeys": [
+            "was macht ihr beruflich?"
+          ]
+        }
+      ],
+      "hubDestination": {
+        "hub": "phrases"
+      },
+      "id": "qa:work-casual-main",
+      "kind": "QAPair",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "publicationStatus": "published",
+      "sourcePriority": 1
+    },
+    {
       "canonicalHref": "/phrases/id-71613a776f726b2d666f726d616c2d6d61696e",
       "category": "formal",
       "displayLabel": "qa:work-formal-main",
@@ -8111,6 +8712,180 @@
       },
       "id": "qa:work-formal-main",
       "kind": "QAPair",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "publicationStatus": "published",
+      "sourcePriority": 1
+    },
+    {
+      "canonicalHref": "/verbs/id-766572623a617262656974656e",
+      "category": "verb",
+      "displayLabel": "arbeiten",
+      "fields": [
+        {
+          "displayText": "arbeiten",
+          "field": "infinitive",
+          "matchKeys": [
+            "arbeiten"
+          ]
+        },
+        {
+          "displayText": "arbeiten",
+          "field": "label",
+          "matchKeys": [
+            "arbeiten"
+          ]
+        },
+        {
+          "displayText": "to work",
+          "field": "meaning",
+          "matchKeys": [
+            "to work"
+          ]
+        },
+        {
+          "displayText": "arbeite",
+          "field": "form",
+          "matchKeys": [
+            "arbeite"
+          ]
+        },
+        {
+          "displayText": "arbeitest",
+          "field": "form",
+          "matchKeys": [
+            "arbeitest"
+          ]
+        },
+        {
+          "displayText": "arbeitet",
+          "field": "form",
+          "matchKeys": [
+            "arbeitet"
+          ]
+        },
+        {
+          "displayText": "arbeiten",
+          "field": "form",
+          "matchKeys": [
+            "arbeiten"
+          ]
+        },
+        {
+          "displayText": "arbeitet",
+          "field": "form",
+          "matchKeys": [
+            "arbeitet"
+          ]
+        },
+        {
+          "displayText": "arbeiten",
+          "field": "form",
+          "matchKeys": [
+            "arbeiten"
+          ]
+        },
+        {
+          "displayText": "arbeiten",
+          "field": "form",
+          "matchKeys": [
+            "arbeiten"
+          ]
+        }
+      ],
+      "hubDestination": {
+        "hub": "verbs"
+      },
+      "id": "verb:arbeiten",
+      "kind": "Verb",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "publicationStatus": "published",
+      "sourcePriority": 1
+    },
+    {
+      "canonicalHref": "/verbs/id-766572623a686162656e",
+      "category": "verb",
+      "displayLabel": "haben",
+      "fields": [
+        {
+          "displayText": "haben",
+          "field": "infinitive",
+          "matchKeys": [
+            "haben"
+          ]
+        },
+        {
+          "displayText": "haben",
+          "field": "label",
+          "matchKeys": [
+            "haben"
+          ]
+        },
+        {
+          "displayText": "to have",
+          "field": "meaning",
+          "matchKeys": [
+            "to have"
+          ]
+        },
+        {
+          "displayText": "habe",
+          "field": "form",
+          "matchKeys": [
+            "habe"
+          ]
+        },
+        {
+          "displayText": "hast",
+          "field": "form",
+          "matchKeys": [
+            "hast"
+          ]
+        },
+        {
+          "displayText": "hat",
+          "field": "form",
+          "matchKeys": [
+            "hat"
+          ]
+        },
+        {
+          "displayText": "haben",
+          "field": "form",
+          "matchKeys": [
+            "haben"
+          ]
+        },
+        {
+          "displayText": "habt",
+          "field": "form",
+          "matchKeys": [
+            "habt"
+          ]
+        },
+        {
+          "displayText": "haben",
+          "field": "form",
+          "matchKeys": [
+            "haben"
+          ]
+        },
+        {
+          "displayText": "haben",
+          "field": "form",
+          "matchKeys": [
+            "haben"
+          ]
+        }
+      ],
+      "hubDestination": {
+        "hub": "verbs"
+      },
+      "id": "verb:haben",
+      "kind": "Verb",
       "lessonIds": [
         "lesson:02"
       ],
@@ -8256,6 +9031,93 @@
       "sourcePriority": 1
     },
     {
+      "canonicalHref": "/verbs/id-766572623a6c6562656e",
+      "category": "verb",
+      "displayLabel": "leben",
+      "fields": [
+        {
+          "displayText": "leben",
+          "field": "infinitive",
+          "matchKeys": [
+            "leben"
+          ]
+        },
+        {
+          "displayText": "leben",
+          "field": "label",
+          "matchKeys": [
+            "leben"
+          ]
+        },
+        {
+          "displayText": "to live",
+          "field": "meaning",
+          "matchKeys": [
+            "to live"
+          ]
+        },
+        {
+          "displayText": "lebe",
+          "field": "form",
+          "matchKeys": [
+            "lebe"
+          ]
+        },
+        {
+          "displayText": "lebst",
+          "field": "form",
+          "matchKeys": [
+            "lebst"
+          ]
+        },
+        {
+          "displayText": "lebt",
+          "field": "form",
+          "matchKeys": [
+            "lebt"
+          ]
+        },
+        {
+          "displayText": "leben",
+          "field": "form",
+          "matchKeys": [
+            "leben"
+          ]
+        },
+        {
+          "displayText": "lebt",
+          "field": "form",
+          "matchKeys": [
+            "lebt"
+          ]
+        },
+        {
+          "displayText": "leben",
+          "field": "form",
+          "matchKeys": [
+            "leben"
+          ]
+        },
+        {
+          "displayText": "leben",
+          "field": "form",
+          "matchKeys": [
+            "leben"
+          ]
+        }
+      ],
+      "hubDestination": {
+        "hub": "verbs"
+      },
+      "id": "verb:leben",
+      "kind": "Verb",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "publicationStatus": "published",
+      "sourcePriority": 1
+    },
+    {
       "canonicalHref": "/verbs/id-766572623a6c65726e656e",
       "category": "verb",
       "displayLabel": "lernen",
@@ -8317,6 +9179,93 @@
       "kind": "Verb",
       "lessonIds": [
         "lesson:01"
+      ],
+      "publicationStatus": "published",
+      "sourcePriority": 1
+    },
+    {
+      "canonicalHref": "/verbs/id-766572623a6d616368656e",
+      "category": "verb",
+      "displayLabel": "machen",
+      "fields": [
+        {
+          "displayText": "machen",
+          "field": "infinitive",
+          "matchKeys": [
+            "machen"
+          ]
+        },
+        {
+          "displayText": "machen",
+          "field": "label",
+          "matchKeys": [
+            "machen"
+          ]
+        },
+        {
+          "displayText": "to do",
+          "field": "meaning",
+          "matchKeys": [
+            "to do"
+          ]
+        },
+        {
+          "displayText": "mache",
+          "field": "form",
+          "matchKeys": [
+            "mache"
+          ]
+        },
+        {
+          "displayText": "machst",
+          "field": "form",
+          "matchKeys": [
+            "machst"
+          ]
+        },
+        {
+          "displayText": "macht",
+          "field": "form",
+          "matchKeys": [
+            "macht"
+          ]
+        },
+        {
+          "displayText": "machen",
+          "field": "form",
+          "matchKeys": [
+            "machen"
+          ]
+        },
+        {
+          "displayText": "macht",
+          "field": "form",
+          "matchKeys": [
+            "macht"
+          ]
+        },
+        {
+          "displayText": "machen",
+          "field": "form",
+          "matchKeys": [
+            "machen"
+          ]
+        },
+        {
+          "displayText": "machen",
+          "field": "form",
+          "matchKeys": [
+            "machen"
+          ]
+        }
+      ],
+      "hubDestination": {
+        "hub": "verbs"
+      },
+      "id": "verb:machen",
+      "kind": "Verb",
+      "lessonIds": [
+        "lesson:02"
       ],
       "publicationStatus": "published",
       "sourcePriority": 1
@@ -8404,6 +9353,180 @@
       "kind": "Verb",
       "lessonIds": [
         "lesson:01",
+        "lesson:02"
+      ],
+      "publicationStatus": "published",
+      "sourcePriority": 1
+    },
+    {
+      "canonicalHref": "/verbs/id-766572623a73747564696572656e",
+      "category": "verb",
+      "displayLabel": "studieren",
+      "fields": [
+        {
+          "displayText": "studieren",
+          "field": "infinitive",
+          "matchKeys": [
+            "studieren"
+          ]
+        },
+        {
+          "displayText": "studieren",
+          "field": "label",
+          "matchKeys": [
+            "studieren"
+          ]
+        },
+        {
+          "displayText": "to study",
+          "field": "meaning",
+          "matchKeys": [
+            "to study"
+          ]
+        },
+        {
+          "displayText": "studiere",
+          "field": "form",
+          "matchKeys": [
+            "studiere"
+          ]
+        },
+        {
+          "displayText": "studierst",
+          "field": "form",
+          "matchKeys": [
+            "studierst"
+          ]
+        },
+        {
+          "displayText": "studiert",
+          "field": "form",
+          "matchKeys": [
+            "studiert"
+          ]
+        },
+        {
+          "displayText": "studieren",
+          "field": "form",
+          "matchKeys": [
+            "studieren"
+          ]
+        },
+        {
+          "displayText": "studiert",
+          "field": "form",
+          "matchKeys": [
+            "studiert"
+          ]
+        },
+        {
+          "displayText": "studieren",
+          "field": "form",
+          "matchKeys": [
+            "studieren"
+          ]
+        },
+        {
+          "displayText": "studieren",
+          "field": "form",
+          "matchKeys": [
+            "studieren"
+          ]
+        }
+      ],
+      "hubDestination": {
+        "hub": "verbs"
+      },
+      "id": "verb:studieren",
+      "kind": "Verb",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "publicationStatus": "published",
+      "sourcePriority": 1
+    },
+    {
+      "canonicalHref": "/verbs/id-766572623a776f686e656e",
+      "category": "verb",
+      "displayLabel": "wohnen",
+      "fields": [
+        {
+          "displayText": "wohnen",
+          "field": "infinitive",
+          "matchKeys": [
+            "wohnen"
+          ]
+        },
+        {
+          "displayText": "wohnen",
+          "field": "label",
+          "matchKeys": [
+            "wohnen"
+          ]
+        },
+        {
+          "displayText": "to live (reside)",
+          "field": "meaning",
+          "matchKeys": [
+            "to live (reside)"
+          ]
+        },
+        {
+          "displayText": "wohne",
+          "field": "form",
+          "matchKeys": [
+            "wohne"
+          ]
+        },
+        {
+          "displayText": "wohnst",
+          "field": "form",
+          "matchKeys": [
+            "wohnst"
+          ]
+        },
+        {
+          "displayText": "wohnt",
+          "field": "form",
+          "matchKeys": [
+            "wohnt"
+          ]
+        },
+        {
+          "displayText": "wohnen",
+          "field": "form",
+          "matchKeys": [
+            "wohnen"
+          ]
+        },
+        {
+          "displayText": "wohnt",
+          "field": "form",
+          "matchKeys": [
+            "wohnt"
+          ]
+        },
+        {
+          "displayText": "wohnen",
+          "field": "form",
+          "matchKeys": [
+            "wohnen"
+          ]
+        },
+        {
+          "displayText": "wohnen",
+          "field": "form",
+          "matchKeys": [
+            "wohnen"
+          ]
+        }
+      ],
+      "hubDestination": {
+        "hub": "verbs"
+      },
+      "id": "verb:wohnen",
+      "kind": "Verb",
+      "lessonIds": [
         "lesson:02"
       ],
       "publicationStatus": "published",
@@ -9790,6 +10913,15 @@
           ]
         },
         {
+          "displayText": "Ärztinnen",
+          "field": "form",
+          "matchKeys": [
+            "ärztinnen",
+            "aerztinnen",
+            "arztinnen"
+          ]
+        },
+        {
           "displayText": "doctor",
           "field": "meaning",
           "matchKeys": [
@@ -9939,6 +11071,13 @@
           ]
         },
         {
+          "displayText": "Architekten",
+          "field": "form",
+          "matchKeys": [
+            "architekten"
+          ]
+        },
+        {
           "displayText": "architect",
           "field": "meaning",
           "matchKeys": [
@@ -9991,6 +11130,13 @@
           ]
         },
         {
+          "displayText": "Architektinnen",
+          "field": "form",
+          "matchKeys": [
+            "architektinnen"
+          ]
+        },
+        {
           "displayText": "architect",
           "field": "meaning",
           "matchKeys": [
@@ -10040,6 +11186,15 @@
           "field": "form",
           "matchKeys": [
             "arzt"
+          ]
+        },
+        {
+          "displayText": "Ärzte",
+          "field": "form",
+          "matchKeys": [
+            "ärzte",
+            "aerzte",
+            "arzte"
           ]
         },
         {
@@ -10185,6 +11340,13 @@
           ]
         },
         {
+          "displayText": "Ausbildungen",
+          "field": "form",
+          "matchKeys": [
+            "ausbildungen"
+          ]
+        },
+        {
           "displayText": "apprenticeship/training",
           "field": "meaning",
           "matchKeys": [
@@ -10234,6 +11396,13 @@
           "field": "form",
           "matchKeys": [
             "beruf"
+          ]
+        },
+        {
+          "displayText": "Berufe",
+          "field": "form",
+          "matchKeys": [
+            "berufe"
           ]
         },
         {
@@ -10535,6 +11704,13 @@
           ]
         },
         {
+          "displayText": "Firmen",
+          "field": "form",
+          "matchKeys": [
+            "firmen"
+          ]
+        },
+        {
           "displayText": "company",
           "field": "meaning",
           "matchKeys": [
@@ -10691,6 +11867,13 @@
           ]
         },
         {
+          "displayText": "Friseure",
+          "field": "form",
+          "matchKeys": [
+            "friseure"
+          ]
+        },
+        {
           "displayText": "hairdresser",
           "field": "meaning",
           "matchKeys": [
@@ -10740,6 +11923,13 @@
           "field": "form",
           "matchKeys": [
             "friseurin"
+          ]
+        },
+        {
+          "displayText": "Friseurinnen",
+          "field": "form",
+          "matchKeys": [
+            "friseurinnen"
           ]
         },
         {
@@ -11221,6 +12411,13 @@
           ]
         },
         {
+          "displayText": "Ingenieure",
+          "field": "form",
+          "matchKeys": [
+            "ingenieure"
+          ]
+        },
+        {
           "displayText": "engineer",
           "field": "meaning",
           "matchKeys": [
@@ -11270,6 +12467,13 @@
           "field": "form",
           "matchKeys": [
             "ingenieurin"
+          ]
+        },
+        {
+          "displayText": "Ingenieurinnen",
+          "field": "form",
+          "matchKeys": [
+            "ingenieurinnen"
           ]
         },
         {
@@ -11325,6 +12529,13 @@
           ]
         },
         {
+          "displayText": "Jahre",
+          "field": "form",
+          "matchKeys": [
+            "jahre"
+          ]
+        },
+        {
           "displayText": "year",
           "field": "meaning",
           "matchKeys": [
@@ -11374,6 +12585,13 @@
           "field": "form",
           "matchKeys": [
             "job"
+          ]
+        },
+        {
+          "displayText": "Jobs",
+          "field": "form",
+          "matchKeys": [
+            "jobs"
           ]
         },
         {
@@ -11429,6 +12647,13 @@
           ]
         },
         {
+          "displayText": "Journalisten",
+          "field": "form",
+          "matchKeys": [
+            "journalisten"
+          ]
+        },
+        {
           "displayText": "journalist",
           "field": "meaning",
           "matchKeys": [
@@ -11481,6 +12706,13 @@
           ]
         },
         {
+          "displayText": "Journalistinnen",
+          "field": "form",
+          "matchKeys": [
+            "journalistinnen"
+          ]
+        },
+        {
           "displayText": "journalist",
           "field": "meaning",
           "matchKeys": [
@@ -11523,6 +12755,13 @@
           "field": "label",
           "matchKeys": [
             "der kellner"
+          ]
+        },
+        {
+          "displayText": "Kellner",
+          "field": "form",
+          "matchKeys": [
+            "kellner"
           ]
         },
         {
@@ -11585,6 +12824,13 @@
           ]
         },
         {
+          "displayText": "Kellnerinnen",
+          "field": "form",
+          "matchKeys": [
+            "kellnerinnen"
+          ]
+        },
+        {
           "displayText": "waiter / waitress",
           "field": "meaning",
           "matchKeys": [
@@ -11627,6 +12873,13 @@
           "field": "label",
           "matchKeys": [
             "der kfz-mechatroniker"
+          ]
+        },
+        {
+          "displayText": "Kfz-Mechatroniker",
+          "field": "form",
+          "matchKeys": [
+            "kfz-mechatroniker"
           ]
         },
         {
@@ -11689,6 +12942,13 @@
           ]
         },
         {
+          "displayText": "Kfz-Mechatronikerinnen",
+          "field": "form",
+          "matchKeys": [
+            "kfz-mechatronikerinnen"
+          ]
+        },
+        {
           "displayText": "automotive mechatronics engineer",
           "field": "meaning",
           "matchKeys": [
@@ -11741,6 +13001,13 @@
           ]
         },
         {
+          "displayText": "Kinder",
+          "field": "form",
+          "matchKeys": [
+            "kinder"
+          ]
+        },
+        {
           "displayText": "child",
           "field": "meaning",
           "matchKeys": [
@@ -11783,6 +13050,13 @@
           "field": "label",
           "matchKeys": [
             "der lehrer"
+          ]
+        },
+        {
+          "displayText": "Lehrer",
+          "field": "form",
+          "matchKeys": [
+            "lehrer"
           ]
         },
         {
@@ -11842,6 +13116,13 @@
           "field": "form",
           "matchKeys": [
             "lehrerin"
+          ]
+        },
+        {
+          "displayText": "Lehrerinnen",
+          "field": "form",
+          "matchKeys": [
+            "lehrerinnen"
           ]
         },
         {
@@ -12050,6 +13331,13 @@
           ]
         },
         {
+          "displayText": "Paketzusteller",
+          "field": "form",
+          "matchKeys": [
+            "paketzusteller"
+          ]
+        },
+        {
           "displayText": "parcel delivery agent",
           "field": "meaning",
           "matchKeys": [
@@ -12099,6 +13387,13 @@
           "field": "form",
           "matchKeys": [
             "paketzustellerin"
+          ]
+        },
+        {
+          "displayText": "Paketzustellerinnen",
+          "field": "form",
+          "matchKeys": [
+            "paketzustellerinnen"
           ]
         },
         {
@@ -12154,6 +13449,13 @@
           ]
         },
         {
+          "displayText": "Praktika",
+          "field": "form",
+          "matchKeys": [
+            "praktika"
+          ]
+        },
+        {
           "displayText": "internship",
           "field": "meaning",
           "matchKeys": [
@@ -12196,6 +13498,13 @@
           "field": "label",
           "matchKeys": [
             "der rentner"
+          ]
+        },
+        {
+          "displayText": "Rentner",
+          "field": "form",
+          "matchKeys": [
+            "rentner"
           ]
         },
         {
@@ -12258,6 +13567,13 @@
           ]
         },
         {
+          "displayText": "Rentnerinnen",
+          "field": "form",
+          "matchKeys": [
+            "rentnerinnen"
+          ]
+        },
+        {
           "displayText": "pensioner",
           "field": "meaning",
           "matchKeys": [
@@ -12304,6 +13620,15 @@
             "der schüler",
             "der schueler",
             "der schuler"
+          ]
+        },
+        {
+          "displayText": "Schüler",
+          "field": "form",
+          "matchKeys": [
+            "schüler",
+            "schueler",
+            "schuler"
           ]
         },
         {
@@ -12371,6 +13696,15 @@
             "schülerin",
             "schuelerin",
             "schulerin"
+          ]
+        },
+        {
+          "displayText": "Schülerinnen",
+          "field": "form",
+          "matchKeys": [
+            "schülerinnen",
+            "schuelerinnen",
+            "schulerinnen"
           ]
         },
         {
@@ -12523,6 +13857,13 @@
           ]
         },
         {
+          "displayText": "Singles",
+          "field": "form",
+          "matchKeys": [
+            "singles"
+          ]
+        },
+        {
           "displayText": "single person",
           "field": "meaning",
           "matchKeys": [
@@ -12620,6 +13961,13 @@
           ]
         },
         {
+          "displayText": "Stellen",
+          "field": "form",
+          "matchKeys": [
+            "stellen"
+          ]
+        },
+        {
           "displayText": "position/job",
           "field": "meaning",
           "matchKeys": [
@@ -12672,6 +14020,13 @@
           ]
         },
         {
+          "displayText": "Studenten",
+          "field": "form",
+          "matchKeys": [
+            "studenten"
+          ]
+        },
+        {
           "displayText": "university student",
           "field": "meaning",
           "matchKeys": [
@@ -12721,6 +14076,13 @@
           "field": "form",
           "matchKeys": [
             "studentin"
+          ]
+        },
+        {
+          "displayText": "Studentinnen",
+          "field": "form",
+          "matchKeys": [
+            "studentinnen"
           ]
         },
         {
@@ -13083,6 +14445,15 @@
           ]
         },
         {
+          "displayText": "Verkäufer",
+          "field": "form",
+          "matchKeys": [
+            "verkäufer",
+            "verkaeufer",
+            "verkaufer"
+          ]
+        },
+        {
           "displayText": "shop assistant",
           "field": "meaning",
           "matchKeys": [
@@ -13138,6 +14509,15 @@
             "verkäuferin",
             "verkaeuferin",
             "verkauferin"
+          ]
+        },
+        {
+          "displayText": "Verkäuferinnen",
+          "field": "form",
+          "matchKeys": [
+            "verkäuferinnen",
+            "verkaeuferinnen",
+            "verkauferinnen"
           ]
         },
         {
@@ -13249,6 +14629,13 @@
           "field": "form",
           "matchKeys": [
             "wohnort"
+          ]
+        },
+        {
+          "displayText": "Wohnorte",
+          "field": "form",
+          "matchKeys": [
+            "wohnorte"
           ]
         },
         {
@@ -15512,6 +16899,291 @@
       "publicationStatus": "published",
       "sourcePriority": 1
     },
+    "phrase:work-casual-main-a1": {
+      "canonicalHref": null,
+      "category": "informal",
+      "displayLabel": "Ich arbeite als …",
+      "fields": [
+        {
+          "displayText": "qa:work-casual-main-answer",
+          "field": "intent",
+          "matchKeys": [
+            "qa:work-casual-main-answer"
+          ]
+        },
+        {
+          "displayText": "work-casual-main-answer",
+          "field": "intent",
+          "matchKeys": [
+            "work-casual-main-answer"
+          ]
+        },
+        {
+          "displayText": "Ich arbeite als …",
+          "field": "realization",
+          "matchKeys": [
+            "ich arbeite als …"
+          ]
+        },
+        {
+          "displayText": "Ich arbeite als …",
+          "field": "realization",
+          "matchKeys": [
+            "ich arbeite als …"
+          ]
+        },
+        {
+          "displayText": "Ich arbeite als …",
+          "field": "label",
+          "matchKeys": [
+            "ich arbeite als …"
+          ]
+        },
+        {
+          "displayText": "informal",
+          "field": "category",
+          "matchKeys": [
+            "informal"
+          ]
+        }
+      ],
+      "hubDestination": {
+        "hub": "phrases"
+      },
+      "id": "phrase:work-casual-main-a1",
+      "kind": "PhrasePattern",
+      "lessonIds": [],
+      "publicationStatus": "published",
+      "sourcePriority": 1
+    },
+    "phrase:work-casual-main-a2": {
+      "canonicalHref": null,
+      "category": "informal",
+      "displayLabel": "Ich arbeite bei …",
+      "fields": [
+        {
+          "displayText": "qa:work-casual-main-answer",
+          "field": "intent",
+          "matchKeys": [
+            "qa:work-casual-main-answer"
+          ]
+        },
+        {
+          "displayText": "work-casual-main-answer",
+          "field": "intent",
+          "matchKeys": [
+            "work-casual-main-answer"
+          ]
+        },
+        {
+          "displayText": "Ich arbeite bei …",
+          "field": "realization",
+          "matchKeys": [
+            "ich arbeite bei …"
+          ]
+        },
+        {
+          "displayText": "Ich arbeite bei …",
+          "field": "realization",
+          "matchKeys": [
+            "ich arbeite bei …"
+          ]
+        },
+        {
+          "displayText": "Ich arbeite bei …",
+          "field": "label",
+          "matchKeys": [
+            "ich arbeite bei …"
+          ]
+        },
+        {
+          "displayText": "informal",
+          "field": "category",
+          "matchKeys": [
+            "informal"
+          ]
+        }
+      ],
+      "hubDestination": {
+        "hub": "phrases"
+      },
+      "id": "phrase:work-casual-main-a2",
+      "kind": "PhrasePattern",
+      "lessonIds": [],
+      "publicationStatus": "published",
+      "sourcePriority": 1
+    },
+    "phrase:work-casual-main-a3": {
+      "canonicalHref": null,
+      "category": "informal",
+      "displayLabel": "Ich studiere …",
+      "fields": [
+        {
+          "displayText": "qa:work-casual-main-answer",
+          "field": "intent",
+          "matchKeys": [
+            "qa:work-casual-main-answer"
+          ]
+        },
+        {
+          "displayText": "work-casual-main-answer",
+          "field": "intent",
+          "matchKeys": [
+            "work-casual-main-answer"
+          ]
+        },
+        {
+          "displayText": "Ich studiere …",
+          "field": "realization",
+          "matchKeys": [
+            "ich studiere …"
+          ]
+        },
+        {
+          "displayText": "Ich studiere …",
+          "field": "realization",
+          "matchKeys": [
+            "ich studiere …"
+          ]
+        },
+        {
+          "displayText": "Ich studiere …",
+          "field": "label",
+          "matchKeys": [
+            "ich studiere …"
+          ]
+        },
+        {
+          "displayText": "informal",
+          "field": "category",
+          "matchKeys": [
+            "informal"
+          ]
+        }
+      ],
+      "hubDestination": {
+        "hub": "phrases"
+      },
+      "id": "phrase:work-casual-main-a3",
+      "kind": "PhrasePattern",
+      "lessonIds": [],
+      "publicationStatus": "published",
+      "sourcePriority": 1
+    },
+    "phrase:work-casual-main-a4": {
+      "canonicalHref": null,
+      "category": "informal",
+      "displayLabel": "Ich arbeite im Moment nicht.",
+      "fields": [
+        {
+          "displayText": "qa:work-casual-main-answer",
+          "field": "intent",
+          "matchKeys": [
+            "qa:work-casual-main-answer"
+          ]
+        },
+        {
+          "displayText": "work-casual-main-answer",
+          "field": "intent",
+          "matchKeys": [
+            "work-casual-main-answer"
+          ]
+        },
+        {
+          "displayText": "Ich arbeite im Moment nicht.",
+          "field": "realization",
+          "matchKeys": [
+            "ich arbeite im moment nicht."
+          ]
+        },
+        {
+          "displayText": "Ich arbeite im Moment nicht.",
+          "field": "realization",
+          "matchKeys": [
+            "ich arbeite im moment nicht."
+          ]
+        },
+        {
+          "displayText": "Ich arbeite im Moment nicht.",
+          "field": "label",
+          "matchKeys": [
+            "ich arbeite im moment nicht."
+          ]
+        },
+        {
+          "displayText": "informal",
+          "field": "category",
+          "matchKeys": [
+            "informal"
+          ]
+        }
+      ],
+      "hubDestination": {
+        "hub": "phrases"
+      },
+      "id": "phrase:work-casual-main-a4",
+      "kind": "PhrasePattern",
+      "lessonIds": [],
+      "publicationStatus": "published",
+      "sourcePriority": 1
+    },
+    "phrase:work-casual-main-q": {
+      "canonicalHref": null,
+      "category": "informal",
+      "displayLabel": "Was macht ihr beruflich?",
+      "fields": [
+        {
+          "displayText": "qa:work-casual-main",
+          "field": "intent",
+          "matchKeys": [
+            "qa:work-casual-main"
+          ]
+        },
+        {
+          "displayText": "work-casual-main",
+          "field": "intent",
+          "matchKeys": [
+            "work-casual-main"
+          ]
+        },
+        {
+          "displayText": "Was macht ihr beruflich?",
+          "field": "realization",
+          "matchKeys": [
+            "was macht ihr beruflich?"
+          ]
+        },
+        {
+          "displayText": "Was macht ihr beruflich?",
+          "field": "realization",
+          "matchKeys": [
+            "was macht ihr beruflich?"
+          ]
+        },
+        {
+          "displayText": "Was macht ihr beruflich?",
+          "field": "label",
+          "matchKeys": [
+            "was macht ihr beruflich?"
+          ]
+        },
+        {
+          "displayText": "informal",
+          "field": "category",
+          "matchKeys": [
+            "informal"
+          ]
+        }
+      ],
+      "hubDestination": {
+        "hub": "phrases"
+      },
+      "id": "phrase:work-casual-main-q",
+      "kind": "PhrasePattern",
+      "lessonIds": [],
+      "publicationStatus": "published",
+      "sourcePriority": 1
+    },
     "phrase:work-formal-main-a1": {
       "canonicalHref": null,
       "category": "formal",
@@ -16475,6 +18147,58 @@
       "publicationStatus": "published",
       "sourcePriority": 1
     },
+    "qa:work-casual-main": {
+      "canonicalHref": "/phrases/id-71613a776f726b2d63617375616c2d6d61696e",
+      "category": "informal",
+      "displayLabel": "qa:work-casual-main",
+      "fields": [
+        {
+          "displayText": "qa:work-casual-main",
+          "field": "intent",
+          "matchKeys": [
+            "qa:work-casual-main"
+          ]
+        },
+        {
+          "displayText": "work-casual-main",
+          "field": "intent",
+          "matchKeys": [
+            "work-casual-main"
+          ]
+        },
+        {
+          "displayText": "qa:work-casual-main",
+          "field": "label",
+          "matchKeys": [
+            "qa:work-casual-main"
+          ]
+        },
+        {
+          "displayText": "informal",
+          "field": "category",
+          "matchKeys": [
+            "informal"
+          ]
+        },
+        {
+          "displayText": "Was macht ihr beruflich?",
+          "field": "realization",
+          "matchKeys": [
+            "was macht ihr beruflich?"
+          ]
+        }
+      ],
+      "hubDestination": {
+        "hub": "phrases"
+      },
+      "id": "qa:work-casual-main",
+      "kind": "QAPair",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "publicationStatus": "published",
+      "sourcePriority": 1
+    },
     "qa:work-formal-main": {
       "canonicalHref": "/phrases/id-71613a776f726b2d666f726d616c2d6d61696e",
       "category": "formal",
@@ -16521,6 +18245,180 @@
       },
       "id": "qa:work-formal-main",
       "kind": "QAPair",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "publicationStatus": "published",
+      "sourcePriority": 1
+    },
+    "verb:arbeiten": {
+      "canonicalHref": "/verbs/id-766572623a617262656974656e",
+      "category": "verb",
+      "displayLabel": "arbeiten",
+      "fields": [
+        {
+          "displayText": "arbeiten",
+          "field": "infinitive",
+          "matchKeys": [
+            "arbeiten"
+          ]
+        },
+        {
+          "displayText": "arbeiten",
+          "field": "label",
+          "matchKeys": [
+            "arbeiten"
+          ]
+        },
+        {
+          "displayText": "to work",
+          "field": "meaning",
+          "matchKeys": [
+            "to work"
+          ]
+        },
+        {
+          "displayText": "arbeite",
+          "field": "form",
+          "matchKeys": [
+            "arbeite"
+          ]
+        },
+        {
+          "displayText": "arbeitest",
+          "field": "form",
+          "matchKeys": [
+            "arbeitest"
+          ]
+        },
+        {
+          "displayText": "arbeitet",
+          "field": "form",
+          "matchKeys": [
+            "arbeitet"
+          ]
+        },
+        {
+          "displayText": "arbeiten",
+          "field": "form",
+          "matchKeys": [
+            "arbeiten"
+          ]
+        },
+        {
+          "displayText": "arbeitet",
+          "field": "form",
+          "matchKeys": [
+            "arbeitet"
+          ]
+        },
+        {
+          "displayText": "arbeiten",
+          "field": "form",
+          "matchKeys": [
+            "arbeiten"
+          ]
+        },
+        {
+          "displayText": "arbeiten",
+          "field": "form",
+          "matchKeys": [
+            "arbeiten"
+          ]
+        }
+      ],
+      "hubDestination": {
+        "hub": "verbs"
+      },
+      "id": "verb:arbeiten",
+      "kind": "Verb",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "publicationStatus": "published",
+      "sourcePriority": 1
+    },
+    "verb:haben": {
+      "canonicalHref": "/verbs/id-766572623a686162656e",
+      "category": "verb",
+      "displayLabel": "haben",
+      "fields": [
+        {
+          "displayText": "haben",
+          "field": "infinitive",
+          "matchKeys": [
+            "haben"
+          ]
+        },
+        {
+          "displayText": "haben",
+          "field": "label",
+          "matchKeys": [
+            "haben"
+          ]
+        },
+        {
+          "displayText": "to have",
+          "field": "meaning",
+          "matchKeys": [
+            "to have"
+          ]
+        },
+        {
+          "displayText": "habe",
+          "field": "form",
+          "matchKeys": [
+            "habe"
+          ]
+        },
+        {
+          "displayText": "hast",
+          "field": "form",
+          "matchKeys": [
+            "hast"
+          ]
+        },
+        {
+          "displayText": "hat",
+          "field": "form",
+          "matchKeys": [
+            "hat"
+          ]
+        },
+        {
+          "displayText": "haben",
+          "field": "form",
+          "matchKeys": [
+            "haben"
+          ]
+        },
+        {
+          "displayText": "habt",
+          "field": "form",
+          "matchKeys": [
+            "habt"
+          ]
+        },
+        {
+          "displayText": "haben",
+          "field": "form",
+          "matchKeys": [
+            "haben"
+          ]
+        },
+        {
+          "displayText": "haben",
+          "field": "form",
+          "matchKeys": [
+            "haben"
+          ]
+        }
+      ],
+      "hubDestination": {
+        "hub": "verbs"
+      },
+      "id": "verb:haben",
+      "kind": "Verb",
       "lessonIds": [
         "lesson:02"
       ],
@@ -16665,6 +18563,93 @@
       "publicationStatus": "published",
       "sourcePriority": 1
     },
+    "verb:leben": {
+      "canonicalHref": "/verbs/id-766572623a6c6562656e",
+      "category": "verb",
+      "displayLabel": "leben",
+      "fields": [
+        {
+          "displayText": "leben",
+          "field": "infinitive",
+          "matchKeys": [
+            "leben"
+          ]
+        },
+        {
+          "displayText": "leben",
+          "field": "label",
+          "matchKeys": [
+            "leben"
+          ]
+        },
+        {
+          "displayText": "to live",
+          "field": "meaning",
+          "matchKeys": [
+            "to live"
+          ]
+        },
+        {
+          "displayText": "lebe",
+          "field": "form",
+          "matchKeys": [
+            "lebe"
+          ]
+        },
+        {
+          "displayText": "lebst",
+          "field": "form",
+          "matchKeys": [
+            "lebst"
+          ]
+        },
+        {
+          "displayText": "lebt",
+          "field": "form",
+          "matchKeys": [
+            "lebt"
+          ]
+        },
+        {
+          "displayText": "leben",
+          "field": "form",
+          "matchKeys": [
+            "leben"
+          ]
+        },
+        {
+          "displayText": "lebt",
+          "field": "form",
+          "matchKeys": [
+            "lebt"
+          ]
+        },
+        {
+          "displayText": "leben",
+          "field": "form",
+          "matchKeys": [
+            "leben"
+          ]
+        },
+        {
+          "displayText": "leben",
+          "field": "form",
+          "matchKeys": [
+            "leben"
+          ]
+        }
+      ],
+      "hubDestination": {
+        "hub": "verbs"
+      },
+      "id": "verb:leben",
+      "kind": "Verb",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "publicationStatus": "published",
+      "sourcePriority": 1
+    },
     "verb:lernen": {
       "canonicalHref": "/verbs/id-766572623a6c65726e656e",
       "category": "verb",
@@ -16727,6 +18712,93 @@
       "kind": "Verb",
       "lessonIds": [
         "lesson:01"
+      ],
+      "publicationStatus": "published",
+      "sourcePriority": 1
+    },
+    "verb:machen": {
+      "canonicalHref": "/verbs/id-766572623a6d616368656e",
+      "category": "verb",
+      "displayLabel": "machen",
+      "fields": [
+        {
+          "displayText": "machen",
+          "field": "infinitive",
+          "matchKeys": [
+            "machen"
+          ]
+        },
+        {
+          "displayText": "machen",
+          "field": "label",
+          "matchKeys": [
+            "machen"
+          ]
+        },
+        {
+          "displayText": "to do",
+          "field": "meaning",
+          "matchKeys": [
+            "to do"
+          ]
+        },
+        {
+          "displayText": "mache",
+          "field": "form",
+          "matchKeys": [
+            "mache"
+          ]
+        },
+        {
+          "displayText": "machst",
+          "field": "form",
+          "matchKeys": [
+            "machst"
+          ]
+        },
+        {
+          "displayText": "macht",
+          "field": "form",
+          "matchKeys": [
+            "macht"
+          ]
+        },
+        {
+          "displayText": "machen",
+          "field": "form",
+          "matchKeys": [
+            "machen"
+          ]
+        },
+        {
+          "displayText": "macht",
+          "field": "form",
+          "matchKeys": [
+            "macht"
+          ]
+        },
+        {
+          "displayText": "machen",
+          "field": "form",
+          "matchKeys": [
+            "machen"
+          ]
+        },
+        {
+          "displayText": "machen",
+          "field": "form",
+          "matchKeys": [
+            "machen"
+          ]
+        }
+      ],
+      "hubDestination": {
+        "hub": "verbs"
+      },
+      "id": "verb:machen",
+      "kind": "Verb",
+      "lessonIds": [
+        "lesson:02"
       ],
       "publicationStatus": "published",
       "sourcePriority": 1
@@ -16814,6 +18886,180 @@
       "kind": "Verb",
       "lessonIds": [
         "lesson:01",
+        "lesson:02"
+      ],
+      "publicationStatus": "published",
+      "sourcePriority": 1
+    },
+    "verb:studieren": {
+      "canonicalHref": "/verbs/id-766572623a73747564696572656e",
+      "category": "verb",
+      "displayLabel": "studieren",
+      "fields": [
+        {
+          "displayText": "studieren",
+          "field": "infinitive",
+          "matchKeys": [
+            "studieren"
+          ]
+        },
+        {
+          "displayText": "studieren",
+          "field": "label",
+          "matchKeys": [
+            "studieren"
+          ]
+        },
+        {
+          "displayText": "to study",
+          "field": "meaning",
+          "matchKeys": [
+            "to study"
+          ]
+        },
+        {
+          "displayText": "studiere",
+          "field": "form",
+          "matchKeys": [
+            "studiere"
+          ]
+        },
+        {
+          "displayText": "studierst",
+          "field": "form",
+          "matchKeys": [
+            "studierst"
+          ]
+        },
+        {
+          "displayText": "studiert",
+          "field": "form",
+          "matchKeys": [
+            "studiert"
+          ]
+        },
+        {
+          "displayText": "studieren",
+          "field": "form",
+          "matchKeys": [
+            "studieren"
+          ]
+        },
+        {
+          "displayText": "studiert",
+          "field": "form",
+          "matchKeys": [
+            "studiert"
+          ]
+        },
+        {
+          "displayText": "studieren",
+          "field": "form",
+          "matchKeys": [
+            "studieren"
+          ]
+        },
+        {
+          "displayText": "studieren",
+          "field": "form",
+          "matchKeys": [
+            "studieren"
+          ]
+        }
+      ],
+      "hubDestination": {
+        "hub": "verbs"
+      },
+      "id": "verb:studieren",
+      "kind": "Verb",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "publicationStatus": "published",
+      "sourcePriority": 1
+    },
+    "verb:wohnen": {
+      "canonicalHref": "/verbs/id-766572623a776f686e656e",
+      "category": "verb",
+      "displayLabel": "wohnen",
+      "fields": [
+        {
+          "displayText": "wohnen",
+          "field": "infinitive",
+          "matchKeys": [
+            "wohnen"
+          ]
+        },
+        {
+          "displayText": "wohnen",
+          "field": "label",
+          "matchKeys": [
+            "wohnen"
+          ]
+        },
+        {
+          "displayText": "to live (reside)",
+          "field": "meaning",
+          "matchKeys": [
+            "to live (reside)"
+          ]
+        },
+        {
+          "displayText": "wohne",
+          "field": "form",
+          "matchKeys": [
+            "wohne"
+          ]
+        },
+        {
+          "displayText": "wohnst",
+          "field": "form",
+          "matchKeys": [
+            "wohnst"
+          ]
+        },
+        {
+          "displayText": "wohnt",
+          "field": "form",
+          "matchKeys": [
+            "wohnt"
+          ]
+        },
+        {
+          "displayText": "wohnen",
+          "field": "form",
+          "matchKeys": [
+            "wohnen"
+          ]
+        },
+        {
+          "displayText": "wohnt",
+          "field": "form",
+          "matchKeys": [
+            "wohnt"
+          ]
+        },
+        {
+          "displayText": "wohnen",
+          "field": "form",
+          "matchKeys": [
+            "wohnen"
+          ]
+        },
+        {
+          "displayText": "wohnen",
+          "field": "form",
+          "matchKeys": [
+            "wohnen"
+          ]
+        }
+      ],
+      "hubDestination": {
+        "hub": "verbs"
+      },
+      "id": "verb:wohnen",
+      "kind": "Verb",
+      "lessonIds": [
         "lesson:02"
       ],
       "publicationStatus": "published",

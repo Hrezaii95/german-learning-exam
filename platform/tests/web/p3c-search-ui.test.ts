@@ -46,7 +46,6 @@ const publishedDir = join(platformRoot, "content", "published");
 const FORBIDDEN_RENDER_SNIPPETS = [
   "collection:teacher-professions",
   "activity:lesson-02-teacher-professions-deck",
-  "verb:arbeiten",
   "lex:elektriker",
   "SourceAssertion",
   "assert:",
@@ -196,8 +195,11 @@ describe("P3C search UI + shell contracts", () => {
       }),
     );
     expect(html).toContain("Results (");
-    expect(html).toMatch(/Matched \w+ · /);
-    expect(html).toContain("Priority");
+    // Meta chips must stay learner-readable — no internal field/reason codes or raw priority numbers.
+    expect(html).toMatch(/Found in the \w+/);
+    expect(html).toContain("Core vocabulary");
+    expect(html).not.toMatch(/Matched \w+ · /);
+    expect(html).not.toMatch(/Priority \d/);
     expect(html).not.toContain(">heissen<");
     for (const bad of FORBIDDEN_RENDER_SNIPPETS) {
       expect(html.includes(bad)).toBe(false);

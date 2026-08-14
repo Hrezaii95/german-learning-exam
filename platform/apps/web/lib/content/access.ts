@@ -422,14 +422,14 @@ const FORBIDDEN_DETAIL_KEY_FRAGMENTS = [
   "sha256",
 ] as const;
 
+// Plurals such as "Architekten"/"Architektinnen" are now published glossary
+// evidence (der Architekt, -en — glossary p.3), so they are no longer leak markers.
 const FORBIDDEN_DETAIL_STRING_PATTERNS: readonly RegExp[] = [
   ...FORBIDDEN_SEARCH_STRING_PATTERNS.filter(
     (pattern) => pattern.source !== /\.mp3\b/i.source,
   ),
   /media\/generated/i,
   /candidate-needs-listening-review/i,
-  /Architekten/i,
-  /Architektinnen/i,
 ];
 
 const MEDIA_STATES = new Set(["preview", "pending-review", "missing"]);
@@ -586,8 +586,14 @@ function assertDetailRecord(raw: unknown): asserts raw is LearnerDetailRecord {
     ) {
       throw new Error("Vocabulary canonical fields mismatch");
     }
-    if (!Array.isArray(raw.plurals) || raw.plurals.length !== 0) {
-      throw new Error("Vocabulary plurals must be empty pending approval");
+    if (
+      !Array.isArray(raw.plurals) ||
+      raw.plurals.length !== VOCAB_ARCHITEKT_CANONICAL.plurals.length ||
+      raw.plurals.some(
+        (form, index) => form !== VOCAB_ARCHITEKT_CANONICAL.plurals[index],
+      )
+    ) {
+      throw new Error("Vocabulary plurals mismatch canonical contract");
     }
     if (raw.pluralGapMessage !== VOCAB_ARCHITEKT_CANONICAL.pluralGapMessage) {
       throw new Error("Vocabulary plural gap message mismatch");

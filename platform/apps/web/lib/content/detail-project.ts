@@ -19,6 +19,7 @@ import {
   DETAIL_PLURAL_GAP_MESSAGE,
   DETAIL_VERB_PARADIGM_NOTE,
   VERB_SEIN_PRESENT_CANONICAL,
+  VOCAB_ARCHITEKT_CANONICAL,
 } from "./detail-canonical-contract";
 import {
   DETAIL_REPRESENTATIVE_IDS,
@@ -286,7 +287,7 @@ function projectAnyVocabulary(
     singular: noun?.singular ?? lexeme.lemma,
     plurals,
     pluralGapMessage:
-      noun && plurals.length === 0 ? "Plural is not published for this item." : null,
+      noun && plurals.length === 0 ? DETAIL_PLURAL_GAP_MESSAGE : null,
     personForm: publishedPersonForm(bundle, lexeme),
     media: resolveMediaAvailability({
       conceptIds: [id],
@@ -327,10 +328,13 @@ function projectVocabulary(
   const plurals = Object.freeze(
     lexeme.noun.plurals.map((entry) => entry.form).filter((form) => form.length > 0),
   );
-  // Core published lexemes currently have empty plural arrays — never invent.
-  if (plurals.length > 0) {
+  // Only the glossary-published plural may appear — never an invented form.
+  if (
+    plurals.length !== VOCAB_ARCHITEKT_CANONICAL.plurals.length ||
+    plurals.some((form, index) => form !== VOCAB_ARCHITEKT_CANONICAL.plurals[index])
+  ) {
     throw new DetailProjectionError(
-      `${id} unexpectedly has published plurals; review packet assumptions`,
+      `${id} published plurals diverge from the canonical contract`,
     );
   }
 
@@ -359,7 +363,7 @@ function projectVocabulary(
     gender: lexeme.noun.gender,
     singular: lexeme.noun.singular,
     plurals,
-    pluralGapMessage: DETAIL_PLURAL_GAP_MESSAGE,
+    pluralGapMessage: plurals.length === 0 ? DETAIL_PLURAL_GAP_MESSAGE : null,
     personForm,
     media,
     canonicalPath: detailCanonicalPath("vocabulary", id),

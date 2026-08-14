@@ -13,7 +13,7 @@ file_ownership:
   - C-WEB: `platform/apps/web/**`, `platform/tests/web/**`, web package integration and README only
 open_items_unchanged: true
 violations: []
-next_action: Finish Studio Phase 1b learner-language cleanup (worker running), run full gates, commit+deploy Phase 1 (tokens/Inter + cleanup). Then content wave from research/curriculum-diff-2026-08-13.json: publish 6 encoded verbs by filling official-glossary glosses, store 36 glossary-exact noun plurals, add qa:work-casual-main and the und-linking grammar concept — all glossary-traceable, no invented German. Larger gaps (18 missing phrases/lexemes, listening publication rights, teacher-deck human gate) stay explicitly open. G5 remains partial pending qualified human listening approval.
+next_action: Deploy the glossary content wave (verbs 4->10, 36 stored plurals, qa:work-casual-main, lib-layer learner copy) once gates confirm, then run Studio Phase 2 (dashboard/mission board, per-type hub card anatomies, meaning-plate fallback) against the new counts. Open owner item: ADR-013 derived English gloss for verb:leben. Still open by design: und-linking concept, 18 unencoded phrases/lexemes, listening publication rights, teacher-deck human German gate, and G5 qualified human listening approval.
 
 ## Current verified facts
 

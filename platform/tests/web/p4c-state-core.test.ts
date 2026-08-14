@@ -156,9 +156,10 @@ describe("P4C exact learner-safe registry", () => {
     const snapshot = learnerStateRegistrySnapshot();
     expect(snapshot.lessonIds).toHaveLength(2);
     expect(snapshot.activityIds).toHaveLength(23);
-    expect(snapshot.conceptIds).toHaveLength(141);
+    // 153 concepts = previous 141 + 6 Lesson 2 verbs + qa:work-casual-main + its 5 phrase patterns.
+    expect(snapshot.conceptIds).toHaveLength(153);
     expect(snapshot.templateIds).toEqual([...REVIEW_TEMPLATE_IDS].sort());
-    expect(snapshot.allEntityIds).toHaveLength(173);
+    expect(snapshot.allEntityIds).toHaveLength(185);
     expect(REVIEW_TEMPLATES).toHaveLength(7);
     expect(REVIEW_TEMPLATES.filter((row) => row.modality === "listening")).toHaveLength(0);
     expect(REVIEW_TEMPLATES.find((row) => row.id === "template:profession-qa-production"))
@@ -292,7 +293,7 @@ describe("P4C atomic learner-state controller and mission construction", () => {
     expect(missionView.candidateCount).toBe(7);
     expect(missionView.newCount).toBe(7);
     expect(missionView.mission.newCardsSelected).toBe(4);
-    expect(missionView.availabilityNote).toMatch(/no listening-approved/i);
+    expect(missionView.availabilityNote).toMatch(/listening practice is not included yet/i);
     const lessonOne = buildDailyReviewMission({
       state,
       masteryByConcept: controller.getSnapshot().hydration!.masteryByConcept,

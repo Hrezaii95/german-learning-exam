@@ -1741,13 +1741,14 @@
       "field": "meanings",
       "value": [
         {
-          "glossEn": "wohnen",
-          "useNote": "English gloss not present in alpha-content.json; infinitive echoed pending glossary enrichment"
+          "glossEn": "to live (reside)"
         }
       ],
       "extraction": "manual",
       "confidence": 1,
-      "status": "candidate"
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
     },
     {
       "kind": "SourceAssertion",
@@ -1815,13 +1816,14 @@
       "field": "meanings",
       "value": [
         {
-          "glossEn": "leben",
-          "useNote": "English gloss not present in alpha-content.json; infinitive echoed pending glossary enrichment"
+          "glossEn": "to live"
         }
       ],
       "extraction": "manual",
       "confidence": 1,
-      "status": "candidate"
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
     },
     {
       "kind": "SourceAssertion",
@@ -1889,13 +1891,14 @@
       "field": "meanings",
       "value": [
         {
-          "glossEn": "haben",
-          "useNote": "English gloss not present in alpha-content.json; infinitive echoed pending glossary enrichment"
+          "glossEn": "to have"
         }
       ],
       "extraction": "manual",
       "confidence": 1,
-      "status": "candidate"
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
     },
     {
       "kind": "SourceAssertion",
@@ -1963,13 +1966,14 @@
       "field": "meanings",
       "value": [
         {
-          "glossEn": "arbeiten",
-          "useNote": "English gloss not present in alpha-content.json; infinitive echoed pending glossary enrichment"
+          "glossEn": "to work"
         }
       ],
       "extraction": "manual",
       "confidence": 1,
-      "status": "candidate"
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
     },
     {
       "kind": "SourceAssertion",
@@ -2037,13 +2041,14 @@
       "field": "meanings",
       "value": [
         {
-          "glossEn": "machen",
-          "useNote": "English gloss not present in alpha-content.json; infinitive echoed pending glossary enrichment"
+          "glossEn": "to do"
         }
       ],
       "extraction": "manual",
       "confidence": 1,
-      "status": "candidate"
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
     },
     {
       "kind": "SourceAssertion",
@@ -2111,13 +2116,14 @@
       "field": "meanings",
       "value": [
         {
-          "glossEn": "studieren",
-          "useNote": "English gloss not present in alpha-content.json; infinitive echoed pending glossary enrichment"
+          "glossEn": "to study"
         }
       ],
       "extraction": "manual",
       "confidence": 1,
-      "status": "candidate"
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
     },
     {
       "kind": "SourceAssertion",
@@ -2571,6 +2577,259 @@
         "phrase:profession-formal-main-a1",
         "phrase:profession-formal-main-a2",
         "phrase:profession-formal-main-a3"
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-work-casual-main-q-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:work-casual-main-q",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Was macht ihr beruflich?"
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-work-casual-main-q-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:work-casual-main-q",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Was macht ihr beruflich?"
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-work-casual-main-a1-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:work-casual-main-a1",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich arbeite als …"
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-work-casual-main-a1-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:work-casual-main-a1",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich arbeite als …"
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-work-casual-main-a2-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:work-casual-main-a2",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich arbeite bei …"
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-work-casual-main-a2-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:work-casual-main-a2",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich arbeite bei …"
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-work-casual-main-a3-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:work-casual-main-a3",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich studiere …"
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-work-casual-main-a3-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:work-casual-main-a3",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich studiere …"
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-work-casual-main-a4-fixed",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:work-casual-main-a4",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich arbeite im Moment nicht."
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-work-casual-main-a4-accepted",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "phrase:work-casual-main-a4",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich arbeite im Moment nicht."
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:qa-work-casual-main-question",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "qa:work-casual-main",
+      "field": "questionPatternId",
+      "value": "phrase:work-casual-main-q",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:qa-work-casual-main-answers",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {},
+      "subjectId": "qa:work-casual-main",
+      "field": "answerPatternIds",
+      "value": [
+        "phrase:work-casual-main-a1",
+        "phrase:work-casual-main-a2",
+        "phrase:work-casual-main-a3",
+        "phrase:work-casual-main-a4"
       ],
       "extraction": "manual",
       "confidence": 1,
@@ -3481,7 +3740,12 @@
         "gender": "neuter",
         "article": "das",
         "singular": "Jahr",
-        "plurals": []
+        "plurals": [
+          {
+            "form": "Jahre",
+            "patternIds": []
+          }
+        ]
       }
     },
     {
@@ -3523,7 +3787,12 @@
         "gender": "neuter",
         "article": "das",
         "singular": "Kind",
-        "plurals": []
+        "plurals": [
+          {
+            "form": "Kinder",
+            "patternIds": []
+          }
+        ]
       }
     },
     {
@@ -3637,7 +3906,12 @@
         "gender": "masculine",
         "article": "der",
         "singular": "Single",
-        "plurals": []
+        "plurals": [
+          {
+            "form": "Singles",
+            "patternIds": []
+          }
+        ]
       }
     },
     {
@@ -3715,7 +3989,12 @@
         "gender": "masculine",
         "article": "der",
         "singular": "Wohnort",
-        "plurals": []
+        "plurals": [
+          {
+            "form": "Wohnorte",
+            "patternIds": []
+          }
+        ]
       }
     },
     {
@@ -3925,7 +4204,12 @@
         "gender": "masculine",
         "article": "der",
         "singular": "Beruf",
-        "plurals": []
+        "plurals": [
+          {
+            "form": "Berufe",
+            "patternIds": []
+          }
+        ]
       }
     },
     {
@@ -3967,7 +4251,12 @@
         "gender": "masculine",
         "article": "der",
         "singular": "Job",
-        "plurals": []
+        "plurals": [
+          {
+            "form": "Jobs",
+            "patternIds": []
+          }
+        ]
       }
     },
     {
@@ -4009,7 +4298,12 @@
         "gender": "feminine",
         "article": "die",
         "singular": "Stelle",
-        "plurals": []
+        "plurals": [
+          {
+            "form": "Stellen",
+            "patternIds": []
+          }
+        ]
       }
     },
     {
@@ -4051,7 +4345,12 @@
         "gender": "feminine",
         "article": "die",
         "singular": "Ausbildung",
-        "plurals": []
+        "plurals": [
+          {
+            "form": "Ausbildungen",
+            "patternIds": []
+          }
+        ]
       }
     },
     {
@@ -4093,7 +4392,12 @@
         "gender": "neuter",
         "article": "das",
         "singular": "Praktikum",
-        "plurals": []
+        "plurals": [
+          {
+            "form": "Praktika",
+            "patternIds": []
+          }
+        ]
       }
     },
     {
@@ -4135,7 +4439,12 @@
         "gender": "feminine",
         "article": "die",
         "singular": "Firma",
-        "plurals": []
+        "plurals": [
+          {
+            "form": "Firmen",
+            "patternIds": []
+          }
+        ]
       }
     },
     {
@@ -4147,7 +4456,12 @@
         "gender": "masculine",
         "article": "der",
         "singular": "Paketzusteller",
-        "plurals": [],
+        "plurals": [
+          {
+            "form": "Paketzusteller",
+            "patternIds": []
+          }
+        ],
         "personFormGroupId": "person-form:paketzusteller"
       },
       "meanings": [
@@ -4190,7 +4504,12 @@
         "gender": "feminine",
         "article": "die",
         "singular": "Paketzustellerin",
-        "plurals": [],
+        "plurals": [
+          {
+            "form": "Paketzustellerinnen",
+            "patternIds": []
+          }
+        ],
         "personFormGroupId": "person-form:paketzusteller"
       },
       "meanings": [
@@ -4233,7 +4552,12 @@
         "gender": "masculine",
         "article": "der",
         "singular": "Friseur",
-        "plurals": [],
+        "plurals": [
+          {
+            "form": "Friseure",
+            "patternIds": []
+          }
+        ],
         "personFormGroupId": "person-form:friseur"
       },
       "meanings": [
@@ -4276,7 +4600,12 @@
         "gender": "feminine",
         "article": "die",
         "singular": "Friseurin",
-        "plurals": [],
+        "plurals": [
+          {
+            "form": "Friseurinnen",
+            "patternIds": []
+          }
+        ],
         "personFormGroupId": "person-form:friseur"
       },
       "meanings": [
@@ -4319,7 +4648,12 @@
         "gender": "masculine",
         "article": "der",
         "singular": "Kellner",
-        "plurals": [],
+        "plurals": [
+          {
+            "form": "Kellner",
+            "patternIds": []
+          }
+        ],
         "personFormGroupId": "person-form:kellner"
       },
       "meanings": [
@@ -4362,7 +4696,12 @@
         "gender": "feminine",
         "article": "die",
         "singular": "Kellnerin",
-        "plurals": [],
+        "plurals": [
+          {
+            "form": "Kellnerinnen",
+            "patternIds": []
+          }
+        ],
         "personFormGroupId": "person-form:kellner"
       },
       "meanings": [
@@ -4405,7 +4744,12 @@
         "gender": "masculine",
         "article": "der",
         "singular": "Ingenieur",
-        "plurals": [],
+        "plurals": [
+          {
+            "form": "Ingenieure",
+            "patternIds": []
+          }
+        ],
         "personFormGroupId": "person-form:ingenieur"
       },
       "meanings": [
@@ -4448,7 +4792,12 @@
         "gender": "feminine",
         "article": "die",
         "singular": "Ingenieurin",
-        "plurals": [],
+        "plurals": [
+          {
+            "form": "Ingenieurinnen",
+            "patternIds": []
+          }
+        ],
         "personFormGroupId": "person-form:ingenieur"
       },
       "meanings": [
@@ -4491,7 +4840,12 @@
         "gender": "masculine",
         "article": "der",
         "singular": "Kfz-Mechatroniker",
-        "plurals": [],
+        "plurals": [
+          {
+            "form": "Kfz-Mechatroniker",
+            "patternIds": []
+          }
+        ],
         "personFormGroupId": "person-form:kfz-mechatroniker"
       },
       "meanings": [
@@ -4534,7 +4888,12 @@
         "gender": "feminine",
         "article": "die",
         "singular": "Kfz-Mechatronikerin",
-        "plurals": [],
+        "plurals": [
+          {
+            "form": "Kfz-Mechatronikerinnen",
+            "patternIds": []
+          }
+        ],
         "personFormGroupId": "person-form:kfz-mechatroniker"
       },
       "meanings": [
@@ -4577,7 +4936,12 @@
         "gender": "masculine",
         "article": "der",
         "singular": "Student",
-        "plurals": [],
+        "plurals": [
+          {
+            "form": "Studenten",
+            "patternIds": []
+          }
+        ],
         "personFormGroupId": "person-form:student"
       },
       "meanings": [
@@ -4620,7 +4984,12 @@
         "gender": "feminine",
         "article": "die",
         "singular": "Studentin",
-        "plurals": [],
+        "plurals": [
+          {
+            "form": "Studentinnen",
+            "patternIds": []
+          }
+        ],
         "personFormGroupId": "person-form:student"
       },
       "meanings": [
@@ -4663,7 +5032,12 @@
         "gender": "masculine",
         "article": "der",
         "singular": "Journalist",
-        "plurals": [],
+        "plurals": [
+          {
+            "form": "Journalisten",
+            "patternIds": []
+          }
+        ],
         "personFormGroupId": "person-form:journalist"
       },
       "meanings": [
@@ -4706,7 +5080,12 @@
         "gender": "feminine",
         "article": "die",
         "singular": "Journalistin",
-        "plurals": [],
+        "plurals": [
+          {
+            "form": "Journalistinnen",
+            "patternIds": []
+          }
+        ],
         "personFormGroupId": "person-form:journalist"
       },
       "meanings": [
@@ -4749,7 +5128,12 @@
         "gender": "masculine",
         "article": "der",
         "singular": "Architekt",
-        "plurals": [],
+        "plurals": [
+          {
+            "form": "Architekten",
+            "patternIds": []
+          }
+        ],
         "personFormGroupId": "person-form:architekt"
       },
       "meanings": [
@@ -4792,7 +5176,12 @@
         "gender": "feminine",
         "article": "die",
         "singular": "Architektin",
-        "plurals": [],
+        "plurals": [
+          {
+            "form": "Architektinnen",
+            "patternIds": []
+          }
+        ],
         "personFormGroupId": "person-form:architekt"
       },
       "meanings": [
@@ -4835,7 +5224,12 @@
         "gender": "masculine",
         "article": "der",
         "singular": "Arzt",
-        "plurals": [],
+        "plurals": [
+          {
+            "form": "Ärzte",
+            "patternIds": []
+          }
+        ],
         "personFormGroupId": "person-form:arzt"
       },
       "meanings": [
@@ -4878,7 +5272,12 @@
         "gender": "feminine",
         "article": "die",
         "singular": "Ärztin",
-        "plurals": [],
+        "plurals": [
+          {
+            "form": "Ärztinnen",
+            "patternIds": []
+          }
+        ],
         "personFormGroupId": "person-form:arzt"
       },
       "meanings": [
@@ -4921,7 +5320,12 @@
         "gender": "masculine",
         "article": "der",
         "singular": "Lehrer",
-        "plurals": [],
+        "plurals": [
+          {
+            "form": "Lehrer",
+            "patternIds": []
+          }
+        ],
         "personFormGroupId": "person-form:lehrer"
       },
       "meanings": [
@@ -4964,7 +5368,12 @@
         "gender": "feminine",
         "article": "die",
         "singular": "Lehrerin",
-        "plurals": [],
+        "plurals": [
+          {
+            "form": "Lehrerinnen",
+            "patternIds": []
+          }
+        ],
         "personFormGroupId": "person-form:lehrer"
       },
       "meanings": [
@@ -5007,7 +5416,12 @@
         "gender": "masculine",
         "article": "der",
         "singular": "Verkäufer",
-        "plurals": [],
+        "plurals": [
+          {
+            "form": "Verkäufer",
+            "patternIds": []
+          }
+        ],
         "personFormGroupId": "person-form:verkaeufer"
       },
       "meanings": [
@@ -5050,7 +5464,12 @@
         "gender": "feminine",
         "article": "die",
         "singular": "Verkäuferin",
-        "plurals": [],
+        "plurals": [
+          {
+            "form": "Verkäuferinnen",
+            "patternIds": []
+          }
+        ],
         "personFormGroupId": "person-form:verkaeufer"
       },
       "meanings": [
@@ -5093,7 +5512,12 @@
         "gender": "masculine",
         "article": "der",
         "singular": "Schüler",
-        "plurals": [],
+        "plurals": [
+          {
+            "form": "Schüler",
+            "patternIds": []
+          }
+        ],
         "personFormGroupId": "person-form:schueler"
       },
       "meanings": [
@@ -5136,7 +5560,12 @@
         "gender": "feminine",
         "article": "die",
         "singular": "Schülerin",
-        "plurals": [],
+        "plurals": [
+          {
+            "form": "Schülerinnen",
+            "patternIds": []
+          }
+        ],
         "personFormGroupId": "person-form:schueler"
       },
       "meanings": [
@@ -5179,7 +5608,12 @@
         "gender": "masculine",
         "article": "der",
         "singular": "Rentner",
-        "plurals": [],
+        "plurals": [
+          {
+            "form": "Rentner",
+            "patternIds": []
+          }
+        ],
         "personFormGroupId": "person-form:rentner"
       },
       "meanings": [
@@ -5222,7 +5656,12 @@
         "gender": "feminine",
         "article": "die",
         "singular": "Rentnerin",
-        "plurals": [],
+        "plurals": [
+          {
+            "form": "Rentnerinnen",
+            "patternIds": []
+          }
+        ],
         "personFormGroupId": "person-form:rentner"
       },
       "meanings": [
@@ -5264,8 +5703,7 @@
       "infinitive": "wohnen",
       "meanings": [
         {
-          "glossEn": "wohnen",
-          "useNote": "English gloss not present in alpha-content.json; infinitive echoed pending glossary enrichment"
+          "glossEn": "to live (reside)"
         }
       ],
       "present": [
@@ -5312,8 +5750,21 @@
       "mediaIds": [],
       "cardTemplateIds": [],
       "publication": {
-        "status": "review",
-        "publishedFields": []
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "infinitive",
+            "assertionId": "assert:verb-wohnen-infinitive"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:verb-wohnen-meanings"
+          },
+          {
+            "field": "present",
+            "assertionId": "assert:verb-wohnen-present"
+          }
+        ]
       }
     },
     {
@@ -5322,8 +5773,7 @@
       "infinitive": "leben",
       "meanings": [
         {
-          "glossEn": "leben",
-          "useNote": "English gloss not present in alpha-content.json; infinitive echoed pending glossary enrichment"
+          "glossEn": "to live"
         }
       ],
       "present": [
@@ -5370,8 +5820,21 @@
       "mediaIds": [],
       "cardTemplateIds": [],
       "publication": {
-        "status": "review",
-        "publishedFields": []
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "infinitive",
+            "assertionId": "assert:verb-leben-infinitive"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:verb-leben-meanings"
+          },
+          {
+            "field": "present",
+            "assertionId": "assert:verb-leben-present"
+          }
+        ]
       }
     },
     {
@@ -5380,8 +5843,7 @@
       "infinitive": "haben",
       "meanings": [
         {
-          "glossEn": "haben",
-          "useNote": "English gloss not present in alpha-content.json; infinitive echoed pending glossary enrichment"
+          "glossEn": "to have"
         }
       ],
       "present": [
@@ -5428,8 +5890,21 @@
       "mediaIds": [],
       "cardTemplateIds": [],
       "publication": {
-        "status": "review",
-        "publishedFields": []
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "infinitive",
+            "assertionId": "assert:verb-haben-infinitive"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:verb-haben-meanings"
+          },
+          {
+            "field": "present",
+            "assertionId": "assert:verb-haben-present"
+          }
+        ]
       }
     },
     {
@@ -5438,8 +5913,7 @@
       "infinitive": "arbeiten",
       "meanings": [
         {
-          "glossEn": "arbeiten",
-          "useNote": "English gloss not present in alpha-content.json; infinitive echoed pending glossary enrichment"
+          "glossEn": "to work"
         }
       ],
       "present": [
@@ -5486,8 +5960,21 @@
       "mediaIds": [],
       "cardTemplateIds": [],
       "publication": {
-        "status": "review",
-        "publishedFields": []
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "infinitive",
+            "assertionId": "assert:verb-arbeiten-infinitive"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:verb-arbeiten-meanings"
+          },
+          {
+            "field": "present",
+            "assertionId": "assert:verb-arbeiten-present"
+          }
+        ]
       }
     },
     {
@@ -5496,8 +5983,7 @@
       "infinitive": "machen",
       "meanings": [
         {
-          "glossEn": "machen",
-          "useNote": "English gloss not present in alpha-content.json; infinitive echoed pending glossary enrichment"
+          "glossEn": "to do"
         }
       ],
       "present": [
@@ -5544,8 +6030,21 @@
       "mediaIds": [],
       "cardTemplateIds": [],
       "publication": {
-        "status": "review",
-        "publishedFields": []
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "infinitive",
+            "assertionId": "assert:verb-machen-infinitive"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:verb-machen-meanings"
+          },
+          {
+            "field": "present",
+            "assertionId": "assert:verb-machen-present"
+          }
+        ]
       }
     },
     {
@@ -5554,8 +6053,7 @@
       "infinitive": "studieren",
       "meanings": [
         {
-          "glossEn": "studieren",
-          "useNote": "English gloss not present in alpha-content.json; infinitive echoed pending glossary enrichment"
+          "glossEn": "to study"
         }
       ],
       "present": [
@@ -5602,8 +6100,21 @@
       "mediaIds": [],
       "cardTemplateIds": [],
       "publication": {
-        "status": "review",
-        "publishedFields": []
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "infinitive",
+            "assertionId": "assert:verb-studieren-infinitive"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:verb-studieren-meanings"
+          },
+          {
+            "field": "present",
+            "assertionId": "assert:verb-studieren-present"
+          }
+        ]
       }
     }
   ],
@@ -6290,6 +6801,231 @@
     },
     {
       "kind": "PhrasePattern",
+      "id": "phrase:work-casual-main-q",
+      "intent": "qa:work-casual-main",
+      "register": "informal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Was macht ihr beruflich?"
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Was macht ihr beruflich?"
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-work-casual-main-q-fixed",
+        "assert:phrase-work-casual-main-q-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-work-casual-main-q-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-work-casual-main-q-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:work-casual-main-a1",
+      "intent": "qa:work-casual-main-answer",
+      "register": "informal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich arbeite als …"
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich arbeite als …"
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-work-casual-main-a1-fixed",
+        "assert:phrase-work-casual-main-a1-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-work-casual-main-a1-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-work-casual-main-a1-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:work-casual-main-a2",
+      "intent": "qa:work-casual-main-answer",
+      "register": "informal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich arbeite bei …"
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich arbeite bei …"
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-work-casual-main-a2-fixed",
+        "assert:phrase-work-casual-main-a2-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-work-casual-main-a2-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-work-casual-main-a2-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:work-casual-main-a3",
+      "intent": "qa:work-casual-main-answer",
+      "register": "informal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich studiere …"
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich studiere …"
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-work-casual-main-a3-fixed",
+        "assert:phrase-work-casual-main-a3-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-work-casual-main-a3-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-work-casual-main-a3-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:work-casual-main-a4",
+      "intent": "qa:work-casual-main-answer",
+      "register": "informal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich arbeite im Moment nicht."
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich arbeite im Moment nicht."
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [],
+      "sourceAssertionIds": [
+        "assert:phrase-work-casual-main-a4-fixed",
+        "assert:phrase-work-casual-main-a4-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-work-casual-main-a4-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-work-casual-main-a4-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
       "id": "phrase:work-formal-main-q",
       "intent": "qa:work-formal-main",
       "register": "formal",
@@ -6939,6 +7675,41 @@
           {
             "field": "answerPatternIds",
             "assertionId": "assert:qa-profession-formal-main-answers"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "QAPair",
+      "id": "qa:work-casual-main",
+      "intent": "qa:work-casual-main",
+      "register": "informal",
+      "questionPatternId": "phrase:work-casual-main-q",
+      "answerPatternIds": [
+        "phrase:work-casual-main-a1",
+        "phrase:work-casual-main-a2",
+        "phrase:work-casual-main-a3",
+        "phrase:work-casual-main-a4"
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [
+        "rel:work-casual-main-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:qa-work-casual-main-question",
+        "assert:qa-work-casual-main-answers"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "questionPatternId",
+            "assertionId": "assert:qa-work-casual-main-question"
+          },
+          {
+            "field": "answerPatternIds",
+            "assertionId": "assert:qa-work-casual-main-answers"
           }
         ]
       }
@@ -7674,6 +8445,13 @@
     },
     {
       "kind": "Relationship",
+      "id": "rel:work-casual-main-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "qa:work-casual-main",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
       "id": "rel:work-formal-main-introduced-l2",
       "type": "introduced-in",
       "fromId": "qa:work-formal-main",
@@ -7709,60 +8487,6 @@
     }
   ],
   "contentGaps": [
-    {
-      "kind": "ContentGap",
-      "id": "gap:meaning-wohnen",
-      "objectId": "verb:wohnen",
-      "field": "meanings",
-      "reason": "Lesson 2 verb English gloss absent from alpha-content.json; infinitive echoed as placeholder gloss pending glossary assertion",
-      "owner": "codex-content",
-      "blocksPublication": true
-    },
-    {
-      "kind": "ContentGap",
-      "id": "gap:meaning-leben",
-      "objectId": "verb:leben",
-      "field": "meanings",
-      "reason": "Lesson 2 verb English gloss absent from alpha-content.json; infinitive echoed as placeholder gloss pending glossary assertion",
-      "owner": "codex-content",
-      "blocksPublication": true
-    },
-    {
-      "kind": "ContentGap",
-      "id": "gap:meaning-haben",
-      "objectId": "verb:haben",
-      "field": "meanings",
-      "reason": "Lesson 2 verb English gloss absent from alpha-content.json; infinitive echoed as placeholder gloss pending glossary assertion",
-      "owner": "codex-content",
-      "blocksPublication": true
-    },
-    {
-      "kind": "ContentGap",
-      "id": "gap:meaning-arbeiten",
-      "objectId": "verb:arbeiten",
-      "field": "meanings",
-      "reason": "Lesson 2 verb English gloss absent from alpha-content.json; infinitive echoed as placeholder gloss pending glossary assertion",
-      "owner": "codex-content",
-      "blocksPublication": true
-    },
-    {
-      "kind": "ContentGap",
-      "id": "gap:meaning-machen",
-      "objectId": "verb:machen",
-      "field": "meanings",
-      "reason": "Lesson 2 verb English gloss absent from alpha-content.json; infinitive echoed as placeholder gloss pending glossary assertion",
-      "owner": "codex-content",
-      "blocksPublication": true
-    },
-    {
-      "kind": "ContentGap",
-      "id": "gap:meaning-studieren",
-      "objectId": "verb:studieren",
-      "field": "meanings",
-      "reason": "Lesson 2 verb English gloss absent from alpha-content.json; infinitive echoed as placeholder gloss pending glossary assertion",
-      "owner": "codex-content",
-      "blocksPublication": true
-    },
     {
       "kind": "ContentGap",
       "id": "gap:qa-variable-age",

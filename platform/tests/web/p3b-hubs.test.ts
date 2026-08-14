@@ -36,12 +36,6 @@ const generatedHubsPath = join(webRoot, "generated", "learner-hubs.json");
 const KNOWN_REVIEW_ONLY_IDS = [
   "collection:teacher-professions",
   "activity:lesson-02-teacher-professions-deck",
-  "verb:arbeiten",
-  "verb:haben",
-  "verb:leben",
-  "verb:machen",
-  "verb:studieren",
-  "verb:wohnen",
   "listen:workbook-1-01-ab-momente-a11-1-3",
   "lex:elektriker",
 ] as const;

@@ -161,7 +161,7 @@ describe("P4A practice UI contracts", () => {
       createElement(GameRenderer, { gameId: "audio-match" }),
     );
     expect(html).toContain('data-availability="unavailable"');
-    expect(html).toContain("listening-approved");
+    expect(html).toContain("not available yet");
     expect(html).toContain("aria-disabled");
     expect(html).toContain('data-feedback="unavailable"');
     expect(html).not.toContain("Submit");

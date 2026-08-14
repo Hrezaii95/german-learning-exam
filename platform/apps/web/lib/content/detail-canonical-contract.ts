@@ -14,7 +14,7 @@ import {
 } from "./detail-types";
 
 export const DETAIL_PLURAL_GAP_MESSAGE =
-  "Plural awaiting content approval" as const;
+  "The plural form is not available yet." as const;
 
 export const DETAIL_VERB_PARADIGM_NOTE =
   "This paradigm is irregular and must be learned as forms." as const;
@@ -30,8 +30,9 @@ export const VOCAB_ARCHITEKT_CANONICAL = Object.freeze({
   gender: "masculine" as const,
   singular: "Architekt",
   meaningEn: "architect",
-  plurals: Object.freeze([] as readonly string[]),
-  pluralGapMessage: DETAIL_PLURAL_GAP_MESSAGE,
+  // Glossary p.3: "der Architekt, -en" → plural Architekten.
+  plurals: Object.freeze(["Architekten"] as readonly string[]),
+  pluralGapMessage: null,
   personForm: Object.freeze({
     relatedId: "lex:architektin",
     relatedDisplayText: "die Architektin",

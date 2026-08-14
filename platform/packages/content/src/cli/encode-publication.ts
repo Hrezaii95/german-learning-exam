@@ -53,6 +53,8 @@ type AlphaProfession = {
   masculine: string;
   feminine: string;
   meaningEn: string;
+  masculinePlural?: string;
+  femininePlural?: string;
   priority: number;
 };
 
@@ -93,7 +95,7 @@ type AlphaContent = {
     verbs: AlphaVerb[];
     qa: AlphaQa[];
     coreProfessions?: AlphaProfession[];
-    profileVocabulary?: Array<[string, string]>;
+    profileVocabulary?: Array<[string, string] | [string, string, string]>;
   }>;
   collections: Array<{
     id: string;
@@ -1035,7 +1037,7 @@ function buildLesson02(alpha: AlphaContent): ContentFragment {
   });
 
   // Profile vocabulary
-  for (const [de, en] of lesson.profileVocabulary ?? []) {
+  for (const [de, en, pluralWithArticle] of lesson.profileVocabulary ?? []) {
     const parsed = stripArticle(de);
     const lemma = parsed.lemma;
     const id = `lex:${slugifyDe(lemma)}` as `lex:${string}`;
@@ -1089,7 +1091,9 @@ function buildLesson02(alpha: AlphaContent): ContentFragment {
         gender: genderForArticle(parsed.article),
         article: parsed.article,
         singular: lemma,
-        plurals: [],
+        plurals: pluralWithArticle
+          ? [{ form: stripArticle(pluralWithArticle).lemma, patternIds: [] }]
+          : [],
       };
     }
     lexemes.push(lex);
@@ -1109,12 +1113,14 @@ function buildLesson02(alpha: AlphaContent): ContentFragment {
         lemma: prof.masculine,
         article: "der" as const,
         gender: "masculine" as const,
+        plural: prof.masculinePlural,
       },
       {
         id: femId,
         lemma: prof.feminine,
         article: "die" as const,
         gender: "feminine" as const,
+        plural: prof.femininePlural,
       },
     ]) {
       const lemmaAssert = assertion({
@@ -1158,7 +1164,7 @@ function buildLesson02(alpha: AlphaContent): ContentFragment {
           gender: side.gender,
           article: side.article,
           singular: side.lemma,
-          plurals: [],
+          plurals: side.plural ? [{ form: side.plural, patternIds: [] }] : [],
           personFormGroupId: groupId,
         },
         meanings,

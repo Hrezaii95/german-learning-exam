@@ -157,7 +157,7 @@ export function buildDailyReviewMission(input: {
     newCount: candidates.filter((candidate) => candidate.card.state === "new").length,
     omittedModalities: Object.freeze(["listening"] as const),
     availabilityNote:
-      "Listening review is not included because no listening-approved public template is available yet.",
+      "Listening practice is not included yet — the audio is still being checked.",
   });
 }
 

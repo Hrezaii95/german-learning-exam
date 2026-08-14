@@ -20,13 +20,13 @@
         {
           "code": "activity-content-links-missing",
           "field": "contentTargets",
-          "learnerMessage": "This activity has no learner-published content links yet.",
+          "learnerMessage": "The content for this activity is not available yet.",
           "state": "missing"
         },
         {
           "code": "activity-infographic-missing",
           "field": "mediaSlots.infographic",
-          "learnerMessage": "The planned responsive teaching visual is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -38,13 +38,13 @@
       "mediaSlots": [
         {
           "kind": "infographic",
-          "learnerMessage": "Original responsive infographic is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "slotId": "info:l1-alphabet-sounds",
           "state": "missing"
         },
         {
           "kind": "audio",
-          "learnerMessage": "No generated clip exactly matches a published activity utterance.",
+          "learnerMessage": "Pronunciation audio is not available for this activity yet.",
           "slotId": "audio:activity:lesson-01-alphabet-listen-spell",
           "state": "missing"
         }
@@ -361,7 +361,7 @@
         {
           "code": "activity-infographic-missing",
           "field": "mediaSlots.infographic",
-          "learnerMessage": "The planned responsive teaching visual is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -373,13 +373,13 @@
       "mediaSlots": [
         {
           "kind": "infographic",
-          "learnerMessage": "Original responsive infographic is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "slotId": "info:l1-2-cheatsheets",
           "state": "missing"
         },
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:activity:lesson-01-checkpoint-summary",
           "state": "ready"
         }
@@ -587,7 +587,7 @@
         {
           "code": "activity-infographic-missing",
           "field": "mediaSlots.infographic",
-          "learnerMessage": "The planned responsive teaching visual is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -599,13 +599,13 @@
       "mediaSlots": [
         {
           "kind": "infographic",
-          "learnerMessage": "Original responsive infographic is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "slotId": "info:l1-greetings-day",
           "state": "missing"
         },
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:activity:lesson-01-greeting-farewell-match",
           "state": "ready"
         }
@@ -797,7 +797,7 @@
         {
           "code": "activity-infographic-missing",
           "field": "mediaSlots.infographic",
-          "learnerMessage": "The planned responsive teaching visual is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -809,13 +809,13 @@
       "mediaSlots": [
         {
           "kind": "infographic",
-          "learnerMessage": "Original responsive infographic is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "slotId": "info:l1-greetings-day",
           "state": "missing"
         },
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:activity:lesson-01-greetings-by-context",
           "state": "ready"
         }
@@ -1018,7 +1018,7 @@
         {
           "code": "activity-infographic-missing",
           "field": "mediaSlots.infographic",
-          "learnerMessage": "The planned responsive teaching visual is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -1030,13 +1030,13 @@
       "mediaSlots": [
         {
           "kind": "infographic",
-          "learnerMessage": "Original responsive infographic is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "slotId": "info:l1-introduction-flow",
           "state": "missing"
         },
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:activity:lesson-01-guided-intro-recording",
           "state": "ready"
         }
@@ -1170,7 +1170,7 @@
         {
           "code": "activity-infographic-missing",
           "field": "mediaSlots.infographic",
-          "learnerMessage": "The planned responsive teaching visual is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -1182,13 +1182,13 @@
       "mediaSlots": [
         {
           "kind": "infographic",
-          "learnerMessage": "Original responsive infographic is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "slotId": "info:l1-singular-verbs",
           "state": "missing"
         },
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:activity:lesson-01-heissen-sein-notice",
           "state": "ready"
         }
@@ -1335,7 +1335,7 @@
         {
           "code": "activity-infographic-missing",
           "field": "mediaSlots.infographic",
-          "learnerMessage": "The planned responsive teaching visual is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -1347,13 +1347,13 @@
       "mediaSlots": [
         {
           "kind": "infographic",
-          "learnerMessage": "Original responsive infographic is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "slotId": "info:l1-introduction-flow",
           "state": "missing"
         },
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:activity:lesson-01-name-model-dialogue",
           "state": "ready"
         }
@@ -1591,7 +1591,7 @@
         {
           "code": "activity-infographic-missing",
           "field": "mediaSlots.infographic",
-          "learnerMessage": "The planned responsive teaching visual is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -1603,13 +1603,13 @@
       "mediaSlots": [
         {
           "kind": "infographic",
-          "learnerMessage": "Original responsive infographic is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "slotId": "info:l1-countries-aus",
           "state": "missing"
         },
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:activity:lesson-01-origin-aus-contrast",
           "state": "ready"
         }
@@ -1772,7 +1772,7 @@
         {
           "code": "activity-infographic-missing",
           "field": "mediaSlots.infographic",
-          "learnerMessage": "The planned responsive teaching visual is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -1784,13 +1784,13 @@
       "mediaSlots": [
         {
           "kind": "infographic",
-          "learnerMessage": "Original responsive infographic is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "slotId": "info:l1-pronouns-roles",
           "state": "missing"
         },
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:activity:lesson-01-pronoun-verb-builder",
           "state": "ready"
         }
@@ -1991,7 +1991,7 @@
         {
           "code": "activity-infographic-missing",
           "field": "mediaSlots.infographic",
-          "learnerMessage": "The planned responsive teaching visual is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -2003,13 +2003,13 @@
       "mediaSlots": [
         {
           "kind": "infographic",
-          "learnerMessage": "Original responsive infographic is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "slotId": "info:l1-question-order",
           "state": "missing"
         },
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:activity:lesson-01-register-qa-builder",
           "state": "ready"
         }
@@ -2230,7 +2230,7 @@
         {
           "code": "activity-infographic-missing",
           "field": "mediaSlots.infographic",
-          "learnerMessage": "The planned responsive teaching visual is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -2242,13 +2242,13 @@
       "mediaSlots": [
         {
           "kind": "infographic",
-          "learnerMessage": "Original responsive infographic is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "slotId": "info:l1-introduction-flow",
           "state": "missing"
         },
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:activity:lesson-01-wellbeing-scale",
           "state": "ready"
         }
@@ -2354,7 +2354,7 @@
         {
           "code": "activity-content-links-missing",
           "field": "contentTargets",
-          "learnerMessage": "This activity has no learner-published content links yet.",
+          "learnerMessage": "The content for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -2366,7 +2366,7 @@
       "mediaSlots": [
         {
           "kind": "source-listening",
-          "learnerMessage": "Workbook listening remains unavailable until rights and listening review are complete.",
+          "learnerMessage": "The workbook listening audio is not available yet.",
           "slotId": "source-listening:lesson:01",
           "state": "pending-review"
         }
@@ -3138,7 +3138,7 @@
         {
           "code": "activity-infographic-missing",
           "field": "mediaSlots.infographic",
-          "learnerMessage": "The planned responsive teaching visual is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -3150,13 +3150,13 @@
       "mediaSlots": [
         {
           "kind": "infographic",
-          "learnerMessage": "Original responsive infographic is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "slotId": "info:l1-2-cheatsheets",
           "state": "missing"
         },
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:activity:lesson-02-checkpoint-summary",
           "state": "ready"
         }
@@ -3654,7 +3654,7 @@
         {
           "code": "activity-infographic-missing",
           "field": "mediaSlots.infographic",
-          "learnerMessage": "The planned responsive teaching visual is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -3666,13 +3666,13 @@
       "mediaSlots": [
         {
           "kind": "infographic",
-          "learnerMessage": "Original responsive infographic is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "slotId": "info:l2-core-professions",
           "state": "missing"
         },
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:activity:lesson-02-core-professions",
           "state": "ready"
         }
@@ -3825,7 +3825,7 @@
         {
           "code": "activity-infographic-missing",
           "field": "mediaSlots.infographic",
-          "learnerMessage": "The planned responsive teaching visual is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -3837,13 +3837,13 @@
       "mediaSlots": [
         {
           "kind": "infographic",
-          "learnerMessage": "Original responsive infographic is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "slotId": "info:l2-full-conjugation",
           "state": "missing"
         },
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:activity:lesson-02-full-person-conjugation",
           "state": "ready"
         }
@@ -3944,13 +3944,13 @@
         {
           "code": "activity-content-links-missing",
           "field": "contentTargets",
-          "learnerMessage": "This activity has no learner-published content links yet.",
+          "learnerMessage": "The content for this activity is not available yet.",
           "state": "missing"
         },
         {
           "code": "activity-infographic-missing",
           "field": "mediaSlots.infographic",
-          "learnerMessage": "The planned responsive teaching visual is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -3962,13 +3962,13 @@
       "mediaSlots": [
         {
           "kind": "infographic",
-          "learnerMessage": "Original responsive infographic is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "slotId": "info:l2-numbers-0-100",
           "state": "missing"
         },
         {
           "kind": "audio",
-          "learnerMessage": "No generated clip exactly matches a published activity utterance.",
+          "learnerMessage": "Pronunciation audio is not available for this activity yet.",
           "slotId": "audio:activity:lesson-02-numbers-0-100",
           "state": "missing"
         }
@@ -4399,7 +4399,7 @@
         {
           "code": "activity-infographic-missing",
           "field": "mediaSlots.infographic",
-          "learnerMessage": "The planned responsive teaching visual is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -4411,13 +4411,13 @@
       "mediaSlots": [
         {
           "kind": "infographic",
-          "learnerMessage": "Original responsive infographic is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         },
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:activity:lesson-02-person-form-morphology",
           "state": "ready"
         }
@@ -4834,7 +4834,7 @@
         {
           "code": "activity-infographic-missing",
           "field": "mediaSlots.infographic",
-          "learnerMessage": "The planned responsive teaching visual is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -4846,13 +4846,13 @@
       "mediaSlots": [
         {
           "kind": "infographic",
-          "learnerMessage": "Original responsive infographic is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "slotId": "info:l2-profile",
           "state": "missing"
         },
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:activity:lesson-02-personal-profile",
           "state": "ready"
         }
@@ -5017,7 +5017,7 @@
         {
           "code": "activity-infographic-missing",
           "field": "mediaSlots.infographic",
-          "learnerMessage": "The planned responsive teaching visual is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -5029,13 +5029,13 @@
       "mediaSlots": [
         {
           "kind": "infographic",
-          "learnerMessage": "Original responsive infographic is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "slotId": "info:l2-occupation-qa",
           "state": "missing"
         },
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:activity:lesson-02-profession-qa-builder",
           "state": "ready"
         }
@@ -5455,7 +5455,7 @@
         {
           "code": "activity-infographic-missing",
           "field": "mediaSlots.infographic",
-          "learnerMessage": "The planned responsive teaching visual is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -5467,13 +5467,13 @@
       "mediaSlots": [
         {
           "kind": "infographic",
-          "learnerMessage": "Original responsive infographic is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "slotId": "info:l2-profile",
           "state": "missing"
         },
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:activity:lesson-02-profile-reading-writing",
           "state": "ready"
         }
@@ -5657,7 +5657,7 @@
         {
           "code": "activity-infographic-missing",
           "field": "mediaSlots.infographic",
-          "learnerMessage": "The planned responsive teaching visual is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -5669,13 +5669,13 @@
       "mediaSlots": [
         {
           "kind": "infographic",
-          "learnerMessage": "Original responsive infographic is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "slotId": "info:l2-negation-nicht",
           "state": "missing"
         },
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:activity:lesson-02-relationship-status",
           "state": "ready"
         }
@@ -5843,7 +5843,7 @@
         {
           "code": "activity-infographic-missing",
           "field": "mediaSlots.infographic",
-          "learnerMessage": "The planned responsive teaching visual is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -5855,13 +5855,13 @@
       "mediaSlots": [
         {
           "kind": "infographic",
-          "learnerMessage": "Original responsive infographic is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "slotId": "info:l2-work-prepositions",
           "state": "missing"
         },
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:activity:lesson-02-sein-arbeiten-contrast",
           "state": "ready"
         }
@@ -5965,7 +5965,7 @@
         {
           "code": "activity-content-links-missing",
           "field": "contentTargets",
-          "learnerMessage": "This activity has no learner-published content links yet.",
+          "learnerMessage": "The content for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -5977,7 +5977,7 @@
       "mediaSlots": [
         {
           "kind": "source-listening",
-          "learnerMessage": "Workbook listening remains unavailable until rights and listening review are complete.",
+          "learnerMessage": "The workbook listening audio is not available yet.",
           "slotId": "source-listening:lesson:02",
           "state": "pending-review"
         }
@@ -6076,13 +6076,13 @@
         {
           "code": "activity-content-links-missing",
           "field": "contentTargets",
-          "learnerMessage": "This activity has no learner-published content links yet.",
+          "learnerMessage": "The content for this activity is not available yet.",
           "state": "missing"
         },
         {
           "code": "activity-infographic-missing",
           "field": "mediaSlots.infographic",
-          "learnerMessage": "The planned responsive teaching visual is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -6094,13 +6094,13 @@
       "mediaSlots": [
         {
           "kind": "infographic",
-          "learnerMessage": "Original responsive infographic is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "slotId": "info:l1-alphabet-sounds",
           "state": "missing"
         },
         {
           "kind": "audio",
-          "learnerMessage": "No generated clip exactly matches a published activity utterance.",
+          "learnerMessage": "Pronunciation audio is not available for this activity yet.",
           "slotId": "audio:activity:lesson-01-alphabet-listen-spell",
           "state": "missing"
         }
@@ -6417,7 +6417,7 @@
         {
           "code": "activity-infographic-missing",
           "field": "mediaSlots.infographic",
-          "learnerMessage": "The planned responsive teaching visual is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -6429,13 +6429,13 @@
       "mediaSlots": [
         {
           "kind": "infographic",
-          "learnerMessage": "Original responsive infographic is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "slotId": "info:l1-2-cheatsheets",
           "state": "missing"
         },
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:activity:lesson-01-checkpoint-summary",
           "state": "ready"
         }
@@ -6643,7 +6643,7 @@
         {
           "code": "activity-infographic-missing",
           "field": "mediaSlots.infographic",
-          "learnerMessage": "The planned responsive teaching visual is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -6655,13 +6655,13 @@
       "mediaSlots": [
         {
           "kind": "infographic",
-          "learnerMessage": "Original responsive infographic is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "slotId": "info:l1-greetings-day",
           "state": "missing"
         },
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:activity:lesson-01-greeting-farewell-match",
           "state": "ready"
         }
@@ -6853,7 +6853,7 @@
         {
           "code": "activity-infographic-missing",
           "field": "mediaSlots.infographic",
-          "learnerMessage": "The planned responsive teaching visual is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -6865,13 +6865,13 @@
       "mediaSlots": [
         {
           "kind": "infographic",
-          "learnerMessage": "Original responsive infographic is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "slotId": "info:l1-greetings-day",
           "state": "missing"
         },
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:activity:lesson-01-greetings-by-context",
           "state": "ready"
         }
@@ -7074,7 +7074,7 @@
         {
           "code": "activity-infographic-missing",
           "field": "mediaSlots.infographic",
-          "learnerMessage": "The planned responsive teaching visual is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -7086,13 +7086,13 @@
       "mediaSlots": [
         {
           "kind": "infographic",
-          "learnerMessage": "Original responsive infographic is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "slotId": "info:l1-introduction-flow",
           "state": "missing"
         },
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:activity:lesson-01-guided-intro-recording",
           "state": "ready"
         }
@@ -7226,7 +7226,7 @@
         {
           "code": "activity-infographic-missing",
           "field": "mediaSlots.infographic",
-          "learnerMessage": "The planned responsive teaching visual is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -7238,13 +7238,13 @@
       "mediaSlots": [
         {
           "kind": "infographic",
-          "learnerMessage": "Original responsive infographic is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "slotId": "info:l1-singular-verbs",
           "state": "missing"
         },
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:activity:lesson-01-heissen-sein-notice",
           "state": "ready"
         }
@@ -7391,7 +7391,7 @@
         {
           "code": "activity-infographic-missing",
           "field": "mediaSlots.infographic",
-          "learnerMessage": "The planned responsive teaching visual is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -7403,13 +7403,13 @@
       "mediaSlots": [
         {
           "kind": "infographic",
-          "learnerMessage": "Original responsive infographic is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "slotId": "info:l1-introduction-flow",
           "state": "missing"
         },
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:activity:lesson-01-name-model-dialogue",
           "state": "ready"
         }
@@ -7647,7 +7647,7 @@
         {
           "code": "activity-infographic-missing",
           "field": "mediaSlots.infographic",
-          "learnerMessage": "The planned responsive teaching visual is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -7659,13 +7659,13 @@
       "mediaSlots": [
         {
           "kind": "infographic",
-          "learnerMessage": "Original responsive infographic is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "slotId": "info:l1-countries-aus",
           "state": "missing"
         },
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:activity:lesson-01-origin-aus-contrast",
           "state": "ready"
         }
@@ -7828,7 +7828,7 @@
         {
           "code": "activity-infographic-missing",
           "field": "mediaSlots.infographic",
-          "learnerMessage": "The planned responsive teaching visual is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -7840,13 +7840,13 @@
       "mediaSlots": [
         {
           "kind": "infographic",
-          "learnerMessage": "Original responsive infographic is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "slotId": "info:l1-pronouns-roles",
           "state": "missing"
         },
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:activity:lesson-01-pronoun-verb-builder",
           "state": "ready"
         }
@@ -8047,7 +8047,7 @@
         {
           "code": "activity-infographic-missing",
           "field": "mediaSlots.infographic",
-          "learnerMessage": "The planned responsive teaching visual is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -8059,13 +8059,13 @@
       "mediaSlots": [
         {
           "kind": "infographic",
-          "learnerMessage": "Original responsive infographic is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "slotId": "info:l1-question-order",
           "state": "missing"
         },
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:activity:lesson-01-register-qa-builder",
           "state": "ready"
         }
@@ -8286,7 +8286,7 @@
         {
           "code": "activity-infographic-missing",
           "field": "mediaSlots.infographic",
-          "learnerMessage": "The planned responsive teaching visual is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -8298,13 +8298,13 @@
       "mediaSlots": [
         {
           "kind": "infographic",
-          "learnerMessage": "Original responsive infographic is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "slotId": "info:l1-introduction-flow",
           "state": "missing"
         },
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:activity:lesson-01-wellbeing-scale",
           "state": "ready"
         }
@@ -8410,7 +8410,7 @@
         {
           "code": "activity-content-links-missing",
           "field": "contentTargets",
-          "learnerMessage": "This activity has no learner-published content links yet.",
+          "learnerMessage": "The content for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -8422,7 +8422,7 @@
       "mediaSlots": [
         {
           "kind": "source-listening",
-          "learnerMessage": "Workbook listening remains unavailable until rights and listening review are complete.",
+          "learnerMessage": "The workbook listening audio is not available yet.",
           "slotId": "source-listening:lesson:01",
           "state": "pending-review"
         }
@@ -9194,7 +9194,7 @@
         {
           "code": "activity-infographic-missing",
           "field": "mediaSlots.infographic",
-          "learnerMessage": "The planned responsive teaching visual is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -9206,13 +9206,13 @@
       "mediaSlots": [
         {
           "kind": "infographic",
-          "learnerMessage": "Original responsive infographic is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "slotId": "info:l1-2-cheatsheets",
           "state": "missing"
         },
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:activity:lesson-02-checkpoint-summary",
           "state": "ready"
         }
@@ -9710,7 +9710,7 @@
         {
           "code": "activity-infographic-missing",
           "field": "mediaSlots.infographic",
-          "learnerMessage": "The planned responsive teaching visual is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -9722,13 +9722,13 @@
       "mediaSlots": [
         {
           "kind": "infographic",
-          "learnerMessage": "Original responsive infographic is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "slotId": "info:l2-core-professions",
           "state": "missing"
         },
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:activity:lesson-02-core-professions",
           "state": "ready"
         }
@@ -9881,7 +9881,7 @@
         {
           "code": "activity-infographic-missing",
           "field": "mediaSlots.infographic",
-          "learnerMessage": "The planned responsive teaching visual is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -9893,13 +9893,13 @@
       "mediaSlots": [
         {
           "kind": "infographic",
-          "learnerMessage": "Original responsive infographic is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "slotId": "info:l2-full-conjugation",
           "state": "missing"
         },
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:activity:lesson-02-full-person-conjugation",
           "state": "ready"
         }
@@ -10000,13 +10000,13 @@
         {
           "code": "activity-content-links-missing",
           "field": "contentTargets",
-          "learnerMessage": "This activity has no learner-published content links yet.",
+          "learnerMessage": "The content for this activity is not available yet.",
           "state": "missing"
         },
         {
           "code": "activity-infographic-missing",
           "field": "mediaSlots.infographic",
-          "learnerMessage": "The planned responsive teaching visual is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -10018,13 +10018,13 @@
       "mediaSlots": [
         {
           "kind": "infographic",
-          "learnerMessage": "Original responsive infographic is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "slotId": "info:l2-numbers-0-100",
           "state": "missing"
         },
         {
           "kind": "audio",
-          "learnerMessage": "No generated clip exactly matches a published activity utterance.",
+          "learnerMessage": "Pronunciation audio is not available for this activity yet.",
           "slotId": "audio:activity:lesson-02-numbers-0-100",
           "state": "missing"
         }
@@ -10455,7 +10455,7 @@
         {
           "code": "activity-infographic-missing",
           "field": "mediaSlots.infographic",
-          "learnerMessage": "The planned responsive teaching visual is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -10467,13 +10467,13 @@
       "mediaSlots": [
         {
           "kind": "infographic",
-          "learnerMessage": "Original responsive infographic is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         },
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:activity:lesson-02-person-form-morphology",
           "state": "ready"
         }
@@ -10890,7 +10890,7 @@
         {
           "code": "activity-infographic-missing",
           "field": "mediaSlots.infographic",
-          "learnerMessage": "The planned responsive teaching visual is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -10902,13 +10902,13 @@
       "mediaSlots": [
         {
           "kind": "infographic",
-          "learnerMessage": "Original responsive infographic is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "slotId": "info:l2-profile",
           "state": "missing"
         },
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:activity:lesson-02-personal-profile",
           "state": "ready"
         }
@@ -11073,7 +11073,7 @@
         {
           "code": "activity-infographic-missing",
           "field": "mediaSlots.infographic",
-          "learnerMessage": "The planned responsive teaching visual is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -11085,13 +11085,13 @@
       "mediaSlots": [
         {
           "kind": "infographic",
-          "learnerMessage": "Original responsive infographic is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "slotId": "info:l2-occupation-qa",
           "state": "missing"
         },
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:activity:lesson-02-profession-qa-builder",
           "state": "ready"
         }
@@ -11511,7 +11511,7 @@
         {
           "code": "activity-infographic-missing",
           "field": "mediaSlots.infographic",
-          "learnerMessage": "The planned responsive teaching visual is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -11523,13 +11523,13 @@
       "mediaSlots": [
         {
           "kind": "infographic",
-          "learnerMessage": "Original responsive infographic is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "slotId": "info:l2-profile",
           "state": "missing"
         },
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:activity:lesson-02-profile-reading-writing",
           "state": "ready"
         }
@@ -11713,7 +11713,7 @@
         {
           "code": "activity-infographic-missing",
           "field": "mediaSlots.infographic",
-          "learnerMessage": "The planned responsive teaching visual is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -11725,13 +11725,13 @@
       "mediaSlots": [
         {
           "kind": "infographic",
-          "learnerMessage": "Original responsive infographic is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "slotId": "info:l2-negation-nicht",
           "state": "missing"
         },
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:activity:lesson-02-relationship-status",
           "state": "ready"
         }
@@ -11899,7 +11899,7 @@
         {
           "code": "activity-infographic-missing",
           "field": "mediaSlots.infographic",
-          "learnerMessage": "The planned responsive teaching visual is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -11911,13 +11911,13 @@
       "mediaSlots": [
         {
           "kind": "infographic",
-          "learnerMessage": "Original responsive infographic is not attached yet.",
+          "learnerMessage": "The teaching visual for this activity is not available yet.",
           "slotId": "info:l2-work-prepositions",
           "state": "missing"
         },
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:activity:lesson-02-sein-arbeiten-contrast",
           "state": "ready"
         }
@@ -12021,7 +12021,7 @@
         {
           "code": "activity-content-links-missing",
           "field": "contentTargets",
-          "learnerMessage": "This activity has no learner-published content links yet.",
+          "learnerMessage": "The content for this activity is not available yet.",
           "state": "missing"
         }
       ],
@@ -12033,7 +12033,7 @@
       "mediaSlots": [
         {
           "kind": "source-listening",
-          "learnerMessage": "Workbook listening remains unavailable until rights and listening review are complete.",
+          "learnerMessage": "The workbook listening audio is not available yet.",
           "slotId": "source-listening:lesson:02",
           "state": "pending-review"
         }
@@ -12119,7 +12119,7 @@
     "professionCards": 26,
     "professionImageGaps": 26,
     "professionPairs": 13,
-    "professionPluralGaps": 26,
+    "professionPluralGaps": 0,
     "reviewOnlyTeacherLexemesExcluded": 86,
     "reviewOnlyTeacherRowsExcluded": 48
   },
@@ -12163,8 +12163,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -12174,15 +12174,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -12195,19 +12189,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:aerztin",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:aerztin:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -12221,9 +12215,11 @@
         "transformation": "surface-stem-change-plus-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Ärztinnen"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:arzt-person-form"
@@ -12259,7 +12255,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -12338,8 +12334,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -12349,15 +12345,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -12370,19 +12360,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:architekt",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:architekt:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -12396,9 +12386,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Architekten"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:architekt-person-form"
@@ -12434,7 +12426,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -12513,8 +12505,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -12524,15 +12516,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -12545,19 +12531,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:architektin",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:architektin:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -12571,9 +12557,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Architektinnen"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:architekt-person-form"
@@ -12609,7 +12597,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -12688,8 +12676,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -12699,15 +12687,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -12720,19 +12702,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:arzt",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:arzt:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -12746,9 +12728,11 @@
         "transformation": "surface-stem-change-plus-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Ärzte"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:arzt-person-form"
@@ -12784,7 +12768,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -12863,8 +12847,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -12874,15 +12858,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -12895,19 +12873,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:friseur",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:friseur:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -12921,9 +12899,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Friseure"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:friseur-person-form"
@@ -12959,7 +12939,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -13038,8 +13018,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -13049,15 +13029,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -13070,19 +13044,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:friseurin",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:friseurin:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -13096,9 +13070,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Friseurinnen"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:friseur-person-form"
@@ -13134,7 +13110,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -13213,8 +13189,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -13224,15 +13200,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -13245,19 +13215,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:ingenieur",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:ingenieur:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -13271,9 +13241,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Ingenieure"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:ingenieur-person-form"
@@ -13309,7 +13281,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -13388,8 +13360,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -13399,15 +13371,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -13420,19 +13386,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:ingenieurin",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:ingenieurin:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -13446,9 +13412,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Ingenieurinnen"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:ingenieur-person-form"
@@ -13484,7 +13452,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -13563,8 +13531,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -13574,15 +13542,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -13595,19 +13557,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:journalist",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:journalist:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -13621,9 +13583,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Journalisten"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:journalist-person-form"
@@ -13659,7 +13623,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -13738,8 +13702,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -13749,15 +13713,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -13770,19 +13728,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:journalistin",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:journalistin:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -13796,9 +13754,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Journalistinnen"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:journalist-person-form"
@@ -13834,7 +13794,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -13913,8 +13873,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -13924,15 +13884,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -13945,19 +13899,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:kellner",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:kellner:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -13971,9 +13925,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Kellner"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:kellner-person-form"
@@ -14009,7 +13965,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -14088,8 +14044,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -14099,15 +14055,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -14120,19 +14070,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:kellnerin",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:kellnerin:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -14146,9 +14096,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Kellnerinnen"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:kellner-person-form"
@@ -14184,7 +14136,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -14263,8 +14215,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -14274,15 +14226,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -14295,19 +14241,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:kfz-mechatroniker",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:kfz-mechatroniker:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -14321,9 +14267,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Kfz-Mechatroniker"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:kfz-mechatroniker-person-form"
@@ -14359,7 +14307,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -14438,8 +14386,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -14449,15 +14397,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -14470,19 +14412,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:kfz-mechatronikerin",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:kfz-mechatronikerin:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -14496,9 +14438,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Kfz-Mechatronikerinnen"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:kfz-mechatroniker-person-form"
@@ -14534,7 +14478,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -14613,8 +14557,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -14624,15 +14568,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -14645,19 +14583,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:lehrer",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:lehrer:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -14671,9 +14609,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Lehrer"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:lehrer-person-form"
@@ -14709,7 +14649,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -14788,8 +14728,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -14799,15 +14739,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -14820,19 +14754,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:lehrerin",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:lehrerin:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -14846,9 +14780,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Lehrerinnen"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:lehrer-person-form"
@@ -14884,7 +14820,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -14963,8 +14899,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -14974,15 +14910,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -14995,19 +14925,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:paketzusteller",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:paketzusteller:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -15021,9 +14951,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Paketzusteller"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:paketzusteller-person-form"
@@ -15059,7 +14991,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -15138,8 +15070,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -15149,15 +15081,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -15170,19 +15096,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:paketzustellerin",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:paketzustellerin:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -15196,9 +15122,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Paketzustellerinnen"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:paketzusteller-person-form"
@@ -15234,7 +15162,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -15313,8 +15241,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -15324,15 +15252,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -15345,19 +15267,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:rentner",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:rentner:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -15371,9 +15293,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Rentner"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:rentner-person-form"
@@ -15409,7 +15333,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -15488,8 +15412,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -15499,15 +15423,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -15520,19 +15438,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:rentnerin",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:rentnerin:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -15546,9 +15464,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Rentnerinnen"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:rentner-person-form"
@@ -15584,7 +15504,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -15663,8 +15583,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -15674,15 +15594,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -15695,19 +15609,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:schueler",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:schueler:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -15721,9 +15635,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Schüler"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:schueler-person-form"
@@ -15759,7 +15675,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -15838,8 +15754,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -15849,15 +15765,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -15870,19 +15780,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:schuelerin",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:schuelerin:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -15896,9 +15806,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Schülerinnen"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:schueler-person-form"
@@ -15934,7 +15846,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -16013,8 +15925,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -16024,15 +15936,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -16045,19 +15951,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:student",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:student:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -16071,9 +15977,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Studenten"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:student-person-form"
@@ -16109,7 +16017,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -16188,8 +16096,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -16199,15 +16107,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -16220,19 +16122,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:studentin",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:studentin:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -16246,9 +16148,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Studentinnen"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:student-person-form"
@@ -16284,7 +16188,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -16363,8 +16267,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -16374,15 +16278,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -16395,19 +16293,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:verkaeufer",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:verkaeufer:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -16421,9 +16319,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Verkäufer"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:verkaeufer-person-form"
@@ -16459,7 +16359,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -16538,8 +16438,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -16549,15 +16449,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -16570,19 +16464,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:verkaeuferin",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:verkaeuferin:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -16596,9 +16490,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Verkäuferinnen"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:verkaeufer-person-form"
@@ -16634,7 +16530,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -16715,8 +16611,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -16726,15 +16622,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -16747,19 +16637,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:aerztin",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:aerztin:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -16773,9 +16663,11 @@
         "transformation": "surface-stem-change-plus-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Ärztinnen"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:arzt-person-form"
@@ -16811,7 +16703,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -16890,8 +16782,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -16901,15 +16793,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -16922,19 +16808,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:architekt",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:architekt:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -16948,9 +16834,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Architekten"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:architekt-person-form"
@@ -16986,7 +16874,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -17065,8 +16953,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -17076,15 +16964,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -17097,19 +16979,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:architektin",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:architektin:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -17123,9 +17005,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Architektinnen"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:architekt-person-form"
@@ -17161,7 +17045,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -17240,8 +17124,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -17251,15 +17135,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -17272,19 +17150,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:arzt",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:arzt:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -17298,9 +17176,11 @@
         "transformation": "surface-stem-change-plus-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Ärzte"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:arzt-person-form"
@@ -17336,7 +17216,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -17415,8 +17295,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -17426,15 +17306,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -17447,19 +17321,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:friseur",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:friseur:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -17473,9 +17347,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Friseure"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:friseur-person-form"
@@ -17511,7 +17387,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -17590,8 +17466,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -17601,15 +17477,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -17622,19 +17492,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:friseurin",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:friseurin:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -17648,9 +17518,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Friseurinnen"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:friseur-person-form"
@@ -17686,7 +17558,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -17765,8 +17637,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -17776,15 +17648,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -17797,19 +17663,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:ingenieur",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:ingenieur:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -17823,9 +17689,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Ingenieure"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:ingenieur-person-form"
@@ -17861,7 +17729,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -17940,8 +17808,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -17951,15 +17819,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -17972,19 +17834,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:ingenieurin",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:ingenieurin:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -17998,9 +17860,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Ingenieurinnen"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:ingenieur-person-form"
@@ -18036,7 +17900,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -18115,8 +17979,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -18126,15 +17990,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -18147,19 +18005,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:journalist",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:journalist:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -18173,9 +18031,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Journalisten"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:journalist-person-form"
@@ -18211,7 +18071,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -18290,8 +18150,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -18301,15 +18161,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -18322,19 +18176,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:journalistin",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:journalistin:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -18348,9 +18202,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Journalistinnen"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:journalist-person-form"
@@ -18386,7 +18242,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -18465,8 +18321,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -18476,15 +18332,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -18497,19 +18347,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:kellner",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:kellner:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -18523,9 +18373,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Kellner"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:kellner-person-form"
@@ -18561,7 +18413,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -18640,8 +18492,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -18651,15 +18503,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -18672,19 +18518,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:kellnerin",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:kellnerin:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -18698,9 +18544,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Kellnerinnen"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:kellner-person-form"
@@ -18736,7 +18584,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -18815,8 +18663,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -18826,15 +18674,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -18847,19 +18689,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:kfz-mechatroniker",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:kfz-mechatroniker:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -18873,9 +18715,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Kfz-Mechatroniker"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:kfz-mechatroniker-person-form"
@@ -18911,7 +18755,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -18990,8 +18834,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -19001,15 +18845,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -19022,19 +18860,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:kfz-mechatronikerin",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:kfz-mechatronikerin:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -19048,9 +18886,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Kfz-Mechatronikerinnen"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:kfz-mechatroniker-person-form"
@@ -19086,7 +18926,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -19165,8 +19005,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -19176,15 +19016,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -19197,19 +19031,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:lehrer",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:lehrer:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -19223,9 +19057,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Lehrer"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:lehrer-person-form"
@@ -19261,7 +19097,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -19340,8 +19176,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -19351,15 +19187,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -19372,19 +19202,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:lehrerin",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:lehrerin:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -19398,9 +19228,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Lehrerinnen"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:lehrer-person-form"
@@ -19436,7 +19268,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -19515,8 +19347,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -19526,15 +19358,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -19547,19 +19373,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:paketzusteller",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:paketzusteller:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -19573,9 +19399,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Paketzusteller"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:paketzusteller-person-form"
@@ -19611,7 +19439,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -19690,8 +19518,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -19701,15 +19529,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -19722,19 +19544,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:paketzustellerin",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:paketzustellerin:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -19748,9 +19570,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Paketzustellerinnen"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:paketzusteller-person-form"
@@ -19786,7 +19610,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -19865,8 +19689,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -19876,15 +19700,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -19897,19 +19715,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:rentner",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:rentner:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -19923,9 +19741,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Rentner"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:rentner-person-form"
@@ -19961,7 +19781,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -20040,8 +19860,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -20051,15 +19871,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -20072,19 +19886,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:rentnerin",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:rentnerin:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -20098,9 +19912,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Rentnerinnen"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:rentner-person-form"
@@ -20136,7 +19952,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -20215,8 +20031,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -20226,15 +20042,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -20247,19 +20057,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:schueler",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:schueler:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -20273,9 +20083,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Schüler"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:schueler-person-form"
@@ -20311,7 +20123,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -20390,8 +20202,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -20401,15 +20213,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -20422,19 +20228,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:schuelerin",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:schuelerin:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -20448,9 +20254,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Schülerinnen"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:schueler-person-form"
@@ -20486,7 +20294,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -20565,8 +20373,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -20576,15 +20384,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -20597,19 +20399,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:student",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:student:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -20623,9 +20425,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Studenten"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:student-person-form"
@@ -20661,7 +20465,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -20740,8 +20544,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -20751,15 +20555,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -20772,19 +20570,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:studentin",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:studentin:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -20798,9 +20596,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Studentinnen"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:student-person-form"
@@ -20836,7 +20636,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -20915,8 +20715,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -20926,15 +20726,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -20947,19 +20741,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:verkaeufer",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:verkaeufer:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -20973,9 +20767,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Verkäufer"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:verkaeufer-person-form"
@@ -21011,7 +20807,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {
@@ -21090,8 +20886,8 @@
         },
         {
           "gameId": "plural-forge",
-          "reasonCode": "published-plural-missing",
-          "state": "missing"
+          "reasonCode": "published-plural",
+          "state": "ready"
         },
         {
           "gameId": "spoken-repeat",
@@ -21101,15 +20897,9 @@
       ],
       "gaps": [
         {
-          "code": "profession-plural-missing",
-          "field": "plural.forms",
-          "learnerMessage": "Plural awaiting content approval.",
-          "state": "missing"
-        },
-        {
           "code": "profession-image-missing",
           "field": "mediaSlots.image",
-          "learnerMessage": "Original illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "state": "missing"
         }
       ],
@@ -21122,19 +20912,19 @@
       "mediaSlots": [
         {
           "kind": "audio",
-          "learnerMessage": "Exact-source synthesized preview pronunciation is available; independent German listening review is pending.",
+          "learnerMessage": "Preview pronunciation is available. It is computer-generated and still waiting for a native-speaker check.",
           "slotId": "audio:lex:verkaeuferin",
           "state": "ready"
         },
         {
           "kind": "image",
-          "learnerMessage": "Original profession illustration is not attached yet.",
+          "learnerMessage": "An illustration for this word is not available yet.",
           "slotId": "img:job:verkaeuferin:v1",
           "state": "missing"
         },
         {
           "kind": "infographic",
-          "learnerMessage": "The responsive person-form infographic is not attached yet.",
+          "learnerMessage": "The person-form visual is not available yet.",
           "slotId": "info:l2-person-forms",
           "state": "missing"
         }
@@ -21148,9 +20938,11 @@
         "transformation": "transparent-suffix-in"
       },
       "plural": {
-        "forms": [],
-        "learnerMessage": "Plural awaiting content approval.",
-        "state": "missing"
+        "forms": [
+          "Verkäuferinnen"
+        ],
+        "learnerMessage": null,
+        "state": "ready"
       },
       "relationIds": [
         "rel:verkaeufer-person-form"
@@ -21186,7 +20978,7 @@
             "plural"
           ],
           "id": "forms",
-          "state": "partial",
+          "state": "ready",
           "title": "Forms"
         },
         {

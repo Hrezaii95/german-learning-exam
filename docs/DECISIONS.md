@@ -84,3 +84,18 @@
 **Decision:** The sample application uses `vite preview --host 0.0.0.0` for its local production-like `start` command. The deployment adapter remains responsible for the eventual hosted runtime.  
 **Why:** The current `vinext start` path served application routes but did not mount built `/assets/*`, causing a visually broken production check even though development mode passed. Vite Preview serves the exact built asset graph and is suitable for local release verification.  
 **Consequence:** A passing development server is not release evidence. Validation must build first, start the preview server, and run the responsive browser suite against that server. This decision does not claim that Vite Preview is a public production server or replace the future deployment verification.
+
+## ADR-013 — Derived English gloss for `verb:leben` is published and labeled, not treated as verbatim
+
+**Status:** Accepted with owner-revisit flag (recorded by Claude Code ORCH 2026-08-13)  
+**Decision:** Publish `verb:leben` with the English gloss "to live", derived from the official glossary's p.3 entries "zusammen|leben — to live together" and "Lebt ihr zusammen? — Do you live together?". The glossary carries no standalone `leben` headword. The derivation is recorded in `tools/build-alpha-content.mjs` next to the gloss table and here; all five sibling verb glosses (wohnen, haben, arbeiten, machen, studieren) and every one of the 36 stored noun plurals in the same wave are verbatim glossary forms.  
+**Why:** The German side of `leben` — infinitive and full seven-person paradigm — is already coursebook-sourced and unaffected; only the English meaning label lacked a standalone entry. Withholding the whole verb over an English gloss that the source unambiguously implies would understate real coverage, while silently presenting it as verbatim would overstate source authority.  
+**Consequence:** Lesson 2 publishes ten supported verbs rather than nine. If the owner or a qualified German reviewer rejects the derivation, reverting is a one-line change to the `fullFormGlosses` table plus a rebuild, returning `verb:leben` to review-blocked status.  
+**Revisit when:** The owner rules on the derivation, or a source with a standalone `leben` headword is added.
+
+## ADR-014 — Kursbuch CD2 intake duplicates are quarantined, not re-registered
+
+**Status:** Accepted (recorded by Claude Code ORCH 2026-08-13)  
+**Decision:** Of the owner-restored 90-track Kursbuch delivery, the 31 CD2 files were byte-identical (same filename and sha256) to the already-registered `Momente_A1_1_KB_CD2` pack. They are held at `archive/duplicates/Kursbuch-20260813T121208Z-1-001-CD2/`, excluded from the source manifest and git-ignored; the 59 new CD1 files are registered normally. The archive copies remain the single canonical registered instances.  
+**Why:** Registering a second copy of identical bytes would inflate the source count, create two provenance ids for one artifact, and weaken the manifest's one-file-one-hash guarantee.  
+**Consequence:** Source manifest holds 456 files; nothing is deleted, so the intake set stays recoverable. Rights status is unchanged — all Kursbuch audio remains private-rights-gated per ADR-011.

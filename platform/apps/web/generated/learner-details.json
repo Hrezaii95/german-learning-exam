@@ -1,5 +1,5 @@
 {
-  "detailCount": 97,
+  "detailCount": 104,
   "details": [
     {
       "article": "die",
@@ -26,8 +26,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Ärztinnen"
+      ],
       "publicationStatus": "published",
       "singular": "Ärztin",
       "sourcePriority": 1
@@ -88,7 +90,7 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
+      "pluralGapMessage": "The plural form is not available yet.",
       "plurals": [],
       "publicationStatus": "published",
       "singular": "Alter",
@@ -129,8 +131,10 @@
         "relatedMeaningEn": "architect",
         "sharedStem": "Architekt"
       },
-      "pluralGapMessage": "Plural awaiting content approval",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Architekten"
+      ],
       "publicationStatus": "published",
       "singular": "Architekt",
       "sourcePriority": 1
@@ -160,8 +164,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Architektinnen"
+      ],
       "publicationStatus": "published",
       "singular": "Architektin",
       "sourcePriority": 1
@@ -191,8 +197,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Ärzte"
+      ],
       "publicationStatus": "published",
       "singular": "Arzt",
       "sourcePriority": 1
@@ -284,8 +292,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Ausbildungen"
+      ],
       "publicationStatus": "published",
       "singular": "Ausbildung",
       "sourcePriority": 1
@@ -315,8 +325,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Berufe"
+      ],
       "publicationStatus": "published",
       "singular": "Beruf",
       "sourcePriority": 1
@@ -472,7 +484,7 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
+      "pluralGapMessage": "The plural form is not available yet.",
       "plurals": [],
       "publicationStatus": "published",
       "singular": "Familienstand",
@@ -503,8 +515,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Firmen"
+      ],
       "publicationStatus": "published",
       "singular": "Firma",
       "sourcePriority": 1
@@ -608,8 +622,10 @@
         "relatedMeaningEn": "hairdresser",
         "sharedStem": "Friseur"
       },
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Friseure"
+      ],
       "publicationStatus": "published",
       "singular": "Friseur",
       "sourcePriority": 1
@@ -639,8 +655,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Friseurinnen"
+      ],
       "publicationStatus": "published",
       "singular": "Friseurin",
       "sourcePriority": 1
@@ -887,7 +905,7 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
+      "pluralGapMessage": "The plural form is not available yet.",
       "plurals": [],
       "publicationStatus": "published",
       "singular": "Herkunft",
@@ -961,8 +979,10 @@
         "relatedMeaningEn": "engineer",
         "sharedStem": "Ingenieur"
       },
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Ingenieure"
+      ],
       "publicationStatus": "published",
       "singular": "Ingenieur",
       "sourcePriority": 1
@@ -992,8 +1012,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Ingenieurinnen"
+      ],
       "publicationStatus": "published",
       "singular": "Ingenieurin",
       "sourcePriority": 1
@@ -1023,8 +1045,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Jahre"
+      ],
       "publicationStatus": "published",
       "singular": "Jahr",
       "sourcePriority": 1
@@ -1054,8 +1078,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Jobs"
+      ],
       "publicationStatus": "published",
       "singular": "Job",
       "sourcePriority": 1
@@ -1095,8 +1121,10 @@
         "relatedMeaningEn": "journalist",
         "sharedStem": "Journalist"
       },
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Journalisten"
+      ],
       "publicationStatus": "published",
       "singular": "Journalist",
       "sourcePriority": 1
@@ -1126,8 +1154,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Journalistinnen"
+      ],
       "publicationStatus": "published",
       "singular": "Journalistin",
       "sourcePriority": 1
@@ -1167,8 +1197,10 @@
         "relatedMeaningEn": "waiter / waitress",
         "sharedStem": "Kellner"
       },
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Kellner"
+      ],
       "publicationStatus": "published",
       "singular": "Kellner",
       "sourcePriority": 1
@@ -1198,8 +1230,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Kellnerinnen"
+      ],
       "publicationStatus": "published",
       "singular": "Kellnerin",
       "sourcePriority": 1
@@ -1239,8 +1273,10 @@
         "relatedMeaningEn": "automotive mechatronics engineer",
         "sharedStem": "Kfz-Mechatroniker"
       },
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Kfz-Mechatroniker"
+      ],
       "publicationStatus": "published",
       "singular": "Kfz-Mechatroniker",
       "sourcePriority": 1
@@ -1270,8 +1306,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Kfz-Mechatronikerinnen"
+      ],
       "publicationStatus": "published",
       "singular": "Kfz-Mechatronikerin",
       "sourcePriority": 1
@@ -1301,8 +1339,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Kinder"
+      ],
       "publicationStatus": "published",
       "singular": "Kind",
       "sourcePriority": 1
@@ -1342,8 +1382,10 @@
         "relatedMeaningEn": "teacher",
         "sharedStem": "Lehrer"
       },
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Lehrer"
+      ],
       "publicationStatus": "published",
       "singular": "Lehrer",
       "sourcePriority": 1
@@ -1373,8 +1415,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Lehrerinnen"
+      ],
       "publicationStatus": "published",
       "singular": "Lehrerin",
       "sourcePriority": 1
@@ -1509,8 +1553,10 @@
         "relatedMeaningEn": "parcel delivery agent",
         "sharedStem": "Paketzusteller"
       },
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Paketzusteller"
+      ],
       "publicationStatus": "published",
       "singular": "Paketzusteller",
       "sourcePriority": 1
@@ -1540,8 +1586,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Paketzustellerinnen"
+      ],
       "publicationStatus": "published",
       "singular": "Paketzustellerin",
       "sourcePriority": 1
@@ -1571,8 +1619,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Praktika"
+      ],
       "publicationStatus": "published",
       "singular": "Praktikum",
       "sourcePriority": 1
@@ -1612,8 +1662,10 @@
         "relatedMeaningEn": "pensioner",
         "sharedStem": "Rentner"
       },
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Rentner"
+      ],
       "publicationStatus": "published",
       "singular": "Rentner",
       "sourcePriority": 1
@@ -1643,8 +1695,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Rentnerinnen"
+      ],
       "publicationStatus": "published",
       "singular": "Rentnerin",
       "sourcePriority": 1
@@ -1684,8 +1738,10 @@
         "relatedMeaningEn": "school student",
         "sharedStem": "Schüler"
       },
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Schüler"
+      ],
       "publicationStatus": "published",
       "singular": "Schüler",
       "sourcePriority": 1
@@ -1715,8 +1771,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Schülerinnen"
+      ],
       "publicationStatus": "published",
       "singular": "Schülerin",
       "sourcePriority": 1
@@ -1746,7 +1804,7 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
+      "pluralGapMessage": "The plural form is not available yet.",
       "plurals": [],
       "publicationStatus": "published",
       "singular": "Schweiz",
@@ -1808,8 +1866,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Singles"
+      ],
       "publicationStatus": "published",
       "singular": "Single",
       "sourcePriority": 1
@@ -1870,8 +1930,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Stellen"
+      ],
       "publicationStatus": "published",
       "singular": "Stelle",
       "sourcePriority": 1
@@ -1911,8 +1973,10 @@
         "relatedMeaningEn": "university student",
         "sharedStem": "Student"
       },
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Studenten"
+      ],
       "publicationStatus": "published",
       "singular": "Student",
       "sourcePriority": 1
@@ -1942,8 +2006,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Studentinnen"
+      ],
       "publicationStatus": "published",
       "singular": "Studentin",
       "sourcePriority": 1
@@ -1973,7 +2039,7 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
+      "pluralGapMessage": "The plural form is not available yet.",
       "plurals": [],
       "publicationStatus": "published",
       "singular": "Studium",
@@ -2066,7 +2132,7 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
+      "pluralGapMessage": "The plural form is not available yet.",
       "plurals": [],
       "publicationStatus": "published",
       "singular": "Türkei",
@@ -2097,7 +2163,7 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
+      "pluralGapMessage": "The plural form is not available yet.",
       "plurals": [],
       "publicationStatus": "published",
       "singular": "USA",
@@ -2169,8 +2235,10 @@
         "relatedMeaningEn": "shop assistant",
         "sharedStem": "Verkäufer"
       },
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Verkäufer"
+      ],
       "publicationStatus": "published",
       "singular": "Verkäufer",
       "sourcePriority": 1
@@ -2200,8 +2268,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Verkäuferinnen"
+      ],
       "publicationStatus": "published",
       "singular": "Verkäuferin",
       "sourcePriority": 1
@@ -2264,10 +2334,124 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Wohnorte"
+      ],
       "publicationStatus": "published",
       "singular": "Wohnort",
+      "sourcePriority": 1
+    },
+    {
+      "canonicalPath": "/verbs/id-766572623a617262656974656e",
+      "displayText": "arbeiten",
+      "hubSegment": "verbs",
+      "id": "verb:arbeiten",
+      "infinitive": "arbeiten",
+      "kind": "Verb",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "to work",
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "paradigmNote": "Only the published present forms are shown.",
+      "present": [
+        {
+          "form": "arbeite",
+          "person": "ich",
+          "personLabel": "ich"
+        },
+        {
+          "form": "arbeitest",
+          "person": "du",
+          "personLabel": "du"
+        },
+        {
+          "form": "arbeitet",
+          "person": "er_sie_es",
+          "personLabel": "er/sie/es"
+        },
+        {
+          "form": "arbeiten",
+          "person": "wir",
+          "personLabel": "wir"
+        },
+        {
+          "form": "arbeitet",
+          "person": "ihr",
+          "personLabel": "ihr"
+        },
+        {
+          "form": "arbeiten",
+          "person": "sie_plural",
+          "personLabel": "sie (plural)"
+        },
+        {
+          "form": "arbeiten",
+          "person": "Sie_formal",
+          "personLabel": "Sie (formal)"
+        }
+      ],
+      "publicationStatus": "published",
+      "sourcePriority": 1
+    },
+    {
+      "canonicalPath": "/verbs/id-766572623a686162656e",
+      "displayText": "haben",
+      "hubSegment": "verbs",
+      "id": "verb:haben",
+      "infinitive": "haben",
+      "kind": "Verb",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "to have",
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "paradigmNote": "Only the published present forms are shown.",
+      "present": [
+        {
+          "form": "habe",
+          "person": "ich",
+          "personLabel": "ich"
+        },
+        {
+          "form": "hast",
+          "person": "du",
+          "personLabel": "du"
+        },
+        {
+          "form": "hat",
+          "person": "er_sie_es",
+          "personLabel": "er/sie/es"
+        },
+        {
+          "form": "haben",
+          "person": "wir",
+          "personLabel": "wir"
+        },
+        {
+          "form": "habt",
+          "person": "ihr",
+          "personLabel": "ihr"
+        },
+        {
+          "form": "haben",
+          "person": "sie_plural",
+          "personLabel": "sie (plural)"
+        },
+        {
+          "form": "haben",
+          "person": "Sie_formal",
+          "personLabel": "Sie (formal)"
+        }
+      ],
+      "publicationStatus": "published",
       "sourcePriority": 1
     },
     {
@@ -2367,6 +2551,62 @@
       "sourcePriority": 1
     },
     {
+      "canonicalPath": "/verbs/id-766572623a6c6562656e",
+      "displayText": "leben",
+      "hubSegment": "verbs",
+      "id": "verb:leben",
+      "infinitive": "leben",
+      "kind": "Verb",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "to live",
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "paradigmNote": "Only the published present forms are shown.",
+      "present": [
+        {
+          "form": "lebe",
+          "person": "ich",
+          "personLabel": "ich"
+        },
+        {
+          "form": "lebst",
+          "person": "du",
+          "personLabel": "du"
+        },
+        {
+          "form": "lebt",
+          "person": "er_sie_es",
+          "personLabel": "er/sie/es"
+        },
+        {
+          "form": "leben",
+          "person": "wir",
+          "personLabel": "wir"
+        },
+        {
+          "form": "lebt",
+          "person": "ihr",
+          "personLabel": "ihr"
+        },
+        {
+          "form": "leben",
+          "person": "sie_plural",
+          "personLabel": "sie (plural)"
+        },
+        {
+          "form": "leben",
+          "person": "Sie_formal",
+          "personLabel": "Sie (formal)"
+        }
+      ],
+      "publicationStatus": "published",
+      "sourcePriority": 1
+    },
+    {
       "canonicalPath": "/verbs/id-766572623a6c65726e656e",
       "displayText": "lernen",
       "hubSegment": "verbs",
@@ -2407,6 +2647,62 @@
         },
         {
           "form": "lernen",
+          "person": "Sie_formal",
+          "personLabel": "Sie (formal)"
+        }
+      ],
+      "publicationStatus": "published",
+      "sourcePriority": 1
+    },
+    {
+      "canonicalPath": "/verbs/id-766572623a6d616368656e",
+      "displayText": "machen",
+      "hubSegment": "verbs",
+      "id": "verb:machen",
+      "infinitive": "machen",
+      "kind": "Verb",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "to do",
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "paradigmNote": "Only the published present forms are shown.",
+      "present": [
+        {
+          "form": "mache",
+          "person": "ich",
+          "personLabel": "ich"
+        },
+        {
+          "form": "machst",
+          "person": "du",
+          "personLabel": "du"
+        },
+        {
+          "form": "macht",
+          "person": "er_sie_es",
+          "personLabel": "er/sie/es"
+        },
+        {
+          "form": "machen",
+          "person": "wir",
+          "personLabel": "wir"
+        },
+        {
+          "form": "macht",
+          "person": "ihr",
+          "personLabel": "ihr"
+        },
+        {
+          "form": "machen",
+          "person": "sie_plural",
+          "personLabel": "sie (plural)"
+        },
+        {
+          "form": "machen",
           "person": "Sie_formal",
           "personLabel": "Sie (formal)"
         }
@@ -2471,6 +2767,118 @@
         },
         {
           "form": "sind",
+          "person": "Sie_formal",
+          "personLabel": "Sie (formal)"
+        }
+      ],
+      "publicationStatus": "published",
+      "sourcePriority": 1
+    },
+    {
+      "canonicalPath": "/verbs/id-766572623a73747564696572656e",
+      "displayText": "studieren",
+      "hubSegment": "verbs",
+      "id": "verb:studieren",
+      "infinitive": "studieren",
+      "kind": "Verb",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "to study",
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "paradigmNote": "Only the published present forms are shown.",
+      "present": [
+        {
+          "form": "studiere",
+          "person": "ich",
+          "personLabel": "ich"
+        },
+        {
+          "form": "studierst",
+          "person": "du",
+          "personLabel": "du"
+        },
+        {
+          "form": "studiert",
+          "person": "er_sie_es",
+          "personLabel": "er/sie/es"
+        },
+        {
+          "form": "studieren",
+          "person": "wir",
+          "personLabel": "wir"
+        },
+        {
+          "form": "studiert",
+          "person": "ihr",
+          "personLabel": "ihr"
+        },
+        {
+          "form": "studieren",
+          "person": "sie_plural",
+          "personLabel": "sie (plural)"
+        },
+        {
+          "form": "studieren",
+          "person": "Sie_formal",
+          "personLabel": "Sie (formal)"
+        }
+      ],
+      "publicationStatus": "published",
+      "sourcePriority": 1
+    },
+    {
+      "canonicalPath": "/verbs/id-766572623a776f686e656e",
+      "displayText": "wohnen",
+      "hubSegment": "verbs",
+      "id": "verb:wohnen",
+      "infinitive": "wohnen",
+      "kind": "Verb",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "to live (reside)",
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "paradigmNote": "Only the published present forms are shown.",
+      "present": [
+        {
+          "form": "wohne",
+          "person": "ich",
+          "personLabel": "ich"
+        },
+        {
+          "form": "wohnst",
+          "person": "du",
+          "personLabel": "du"
+        },
+        {
+          "form": "wohnt",
+          "person": "er_sie_es",
+          "personLabel": "er/sie/es"
+        },
+        {
+          "form": "wohnen",
+          "person": "wir",
+          "personLabel": "wir"
+        },
+        {
+          "form": "wohnt",
+          "person": "ihr",
+          "personLabel": "ihr"
+        },
+        {
+          "form": "wohnen",
+          "person": "sie_plural",
+          "personLabel": "sie (plural)"
+        },
+        {
+          "form": "wohnen",
           "person": "Sie_formal",
           "personLabel": "Sie (formal)"
         }
@@ -3581,6 +3989,59 @@
     },
     {
       "acceptedRealizations": [
+        "Was macht ihr beruflich?",
+        "Ich arbeite als …",
+        "Ich arbeite bei …",
+        "Ich studiere …",
+        "Ich arbeite im Moment nicht."
+      ],
+      "answers": [
+        {
+          "id": "phrase:work-casual-main-a1",
+          "realization": "Ich arbeite als …",
+          "role": "answer"
+        },
+        {
+          "id": "phrase:work-casual-main-a2",
+          "realization": "Ich arbeite bei …",
+          "role": "answer"
+        },
+        {
+          "id": "phrase:work-casual-main-a3",
+          "realization": "Ich studiere …",
+          "role": "answer"
+        },
+        {
+          "id": "phrase:work-casual-main-a4",
+          "realization": "Ich arbeite im Moment nicht.",
+          "role": "answer"
+        }
+      ],
+      "canonicalPath": "/phrases/id-71613a776f726b2d63617375616c2d6d61696e",
+      "conversationLevels": [],
+      "displayText": "Was macht ihr beruflich?",
+      "hubSegment": "phrases",
+      "id": "qa:work-casual-main",
+      "intent": "qa:work-casual-main",
+      "kind": "QAPair",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "publicationStatus": "published",
+      "question": {
+        "id": "phrase:work-casual-main-q",
+        "realization": "Was macht ihr beruflich?",
+        "role": "question"
+      },
+      "register": "informal",
+      "sourcePriority": 1
+    },
+    {
+      "acceptedRealizations": [
         "Was machen Sie beruflich?",
         "Ich arbeite als …",
         "Ich arbeite bei …",
@@ -4112,8 +4573,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Ärztinnen"
+      ],
       "publicationStatus": "published",
       "singular": "Ärztin",
       "sourcePriority": 1
@@ -4174,7 +4637,7 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
+      "pluralGapMessage": "The plural form is not available yet.",
       "plurals": [],
       "publicationStatus": "published",
       "singular": "Alter",
@@ -4215,8 +4678,10 @@
         "relatedMeaningEn": "architect",
         "sharedStem": "Architekt"
       },
-      "pluralGapMessage": "Plural awaiting content approval",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Architekten"
+      ],
       "publicationStatus": "published",
       "singular": "Architekt",
       "sourcePriority": 1
@@ -4246,8 +4711,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Architektinnen"
+      ],
       "publicationStatus": "published",
       "singular": "Architektin",
       "sourcePriority": 1
@@ -4277,8 +4744,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Ärzte"
+      ],
       "publicationStatus": "published",
       "singular": "Arzt",
       "sourcePriority": 1
@@ -4370,8 +4839,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Ausbildungen"
+      ],
       "publicationStatus": "published",
       "singular": "Ausbildung",
       "sourcePriority": 1
@@ -4401,8 +4872,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Berufe"
+      ],
       "publicationStatus": "published",
       "singular": "Beruf",
       "sourcePriority": 1
@@ -4558,7 +5031,7 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
+      "pluralGapMessage": "The plural form is not available yet.",
       "plurals": [],
       "publicationStatus": "published",
       "singular": "Familienstand",
@@ -4589,8 +5062,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Firmen"
+      ],
       "publicationStatus": "published",
       "singular": "Firma",
       "sourcePriority": 1
@@ -4694,8 +5169,10 @@
         "relatedMeaningEn": "hairdresser",
         "sharedStem": "Friseur"
       },
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Friseure"
+      ],
       "publicationStatus": "published",
       "singular": "Friseur",
       "sourcePriority": 1
@@ -4725,8 +5202,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Friseurinnen"
+      ],
       "publicationStatus": "published",
       "singular": "Friseurin",
       "sourcePriority": 1
@@ -4973,7 +5452,7 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
+      "pluralGapMessage": "The plural form is not available yet.",
       "plurals": [],
       "publicationStatus": "published",
       "singular": "Herkunft",
@@ -5047,8 +5526,10 @@
         "relatedMeaningEn": "engineer",
         "sharedStem": "Ingenieur"
       },
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Ingenieure"
+      ],
       "publicationStatus": "published",
       "singular": "Ingenieur",
       "sourcePriority": 1
@@ -5078,8 +5559,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Ingenieurinnen"
+      ],
       "publicationStatus": "published",
       "singular": "Ingenieurin",
       "sourcePriority": 1
@@ -5109,8 +5592,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Jahre"
+      ],
       "publicationStatus": "published",
       "singular": "Jahr",
       "sourcePriority": 1
@@ -5140,8 +5625,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Jobs"
+      ],
       "publicationStatus": "published",
       "singular": "Job",
       "sourcePriority": 1
@@ -5181,8 +5668,10 @@
         "relatedMeaningEn": "journalist",
         "sharedStem": "Journalist"
       },
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Journalisten"
+      ],
       "publicationStatus": "published",
       "singular": "Journalist",
       "sourcePriority": 1
@@ -5212,8 +5701,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Journalistinnen"
+      ],
       "publicationStatus": "published",
       "singular": "Journalistin",
       "sourcePriority": 1
@@ -5253,8 +5744,10 @@
         "relatedMeaningEn": "waiter / waitress",
         "sharedStem": "Kellner"
       },
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Kellner"
+      ],
       "publicationStatus": "published",
       "singular": "Kellner",
       "sourcePriority": 1
@@ -5284,8 +5777,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Kellnerinnen"
+      ],
       "publicationStatus": "published",
       "singular": "Kellnerin",
       "sourcePriority": 1
@@ -5325,8 +5820,10 @@
         "relatedMeaningEn": "automotive mechatronics engineer",
         "sharedStem": "Kfz-Mechatroniker"
       },
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Kfz-Mechatroniker"
+      ],
       "publicationStatus": "published",
       "singular": "Kfz-Mechatroniker",
       "sourcePriority": 1
@@ -5356,8 +5853,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Kfz-Mechatronikerinnen"
+      ],
       "publicationStatus": "published",
       "singular": "Kfz-Mechatronikerin",
       "sourcePriority": 1
@@ -5387,8 +5886,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Kinder"
+      ],
       "publicationStatus": "published",
       "singular": "Kind",
       "sourcePriority": 1
@@ -5428,8 +5929,10 @@
         "relatedMeaningEn": "teacher",
         "sharedStem": "Lehrer"
       },
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Lehrer"
+      ],
       "publicationStatus": "published",
       "singular": "Lehrer",
       "sourcePriority": 1
@@ -5459,8 +5962,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Lehrerinnen"
+      ],
       "publicationStatus": "published",
       "singular": "Lehrerin",
       "sourcePriority": 1
@@ -5595,8 +6100,10 @@
         "relatedMeaningEn": "parcel delivery agent",
         "sharedStem": "Paketzusteller"
       },
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Paketzusteller"
+      ],
       "publicationStatus": "published",
       "singular": "Paketzusteller",
       "sourcePriority": 1
@@ -5626,8 +6133,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Paketzustellerinnen"
+      ],
       "publicationStatus": "published",
       "singular": "Paketzustellerin",
       "sourcePriority": 1
@@ -5657,8 +6166,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Praktika"
+      ],
       "publicationStatus": "published",
       "singular": "Praktikum",
       "sourcePriority": 1
@@ -5698,8 +6209,10 @@
         "relatedMeaningEn": "pensioner",
         "sharedStem": "Rentner"
       },
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Rentner"
+      ],
       "publicationStatus": "published",
       "singular": "Rentner",
       "sourcePriority": 1
@@ -5729,8 +6242,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Rentnerinnen"
+      ],
       "publicationStatus": "published",
       "singular": "Rentnerin",
       "sourcePriority": 1
@@ -5770,8 +6285,10 @@
         "relatedMeaningEn": "school student",
         "sharedStem": "Schüler"
       },
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Schüler"
+      ],
       "publicationStatus": "published",
       "singular": "Schüler",
       "sourcePriority": 1
@@ -5801,8 +6318,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Schülerinnen"
+      ],
       "publicationStatus": "published",
       "singular": "Schülerin",
       "sourcePriority": 1
@@ -5832,7 +6351,7 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
+      "pluralGapMessage": "The plural form is not available yet.",
       "plurals": [],
       "publicationStatus": "published",
       "singular": "Schweiz",
@@ -5894,8 +6413,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Singles"
+      ],
       "publicationStatus": "published",
       "singular": "Single",
       "sourcePriority": 1
@@ -5956,8 +6477,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Stellen"
+      ],
       "publicationStatus": "published",
       "singular": "Stelle",
       "sourcePriority": 1
@@ -5997,8 +6520,10 @@
         "relatedMeaningEn": "university student",
         "sharedStem": "Student"
       },
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Studenten"
+      ],
       "publicationStatus": "published",
       "singular": "Student",
       "sourcePriority": 1
@@ -6028,8 +6553,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Studentinnen"
+      ],
       "publicationStatus": "published",
       "singular": "Studentin",
       "sourcePriority": 1
@@ -6059,7 +6586,7 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
+      "pluralGapMessage": "The plural form is not available yet.",
       "plurals": [],
       "publicationStatus": "published",
       "singular": "Studium",
@@ -6152,7 +6679,7 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
+      "pluralGapMessage": "The plural form is not available yet.",
       "plurals": [],
       "publicationStatus": "published",
       "singular": "Türkei",
@@ -6183,7 +6710,7 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
+      "pluralGapMessage": "The plural form is not available yet.",
       "plurals": [],
       "publicationStatus": "published",
       "singular": "USA",
@@ -6255,8 +6782,10 @@
         "relatedMeaningEn": "shop assistant",
         "sharedStem": "Verkäufer"
       },
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Verkäufer"
+      ],
       "publicationStatus": "published",
       "singular": "Verkäufer",
       "sourcePriority": 1
@@ -6286,8 +6815,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Verkäuferinnen"
+      ],
       "publicationStatus": "published",
       "singular": "Verkäuferin",
       "sourcePriority": 1
@@ -6350,8 +6881,10 @@
         "voice": "de-DE-KatjaNeural"
       },
       "personForm": null,
-      "pluralGapMessage": "Plural is not published for this item.",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Wohnorte"
+      ],
       "publicationStatus": "published",
       "singular": "Wohnort",
       "sourcePriority": 1
@@ -7011,6 +7544,59 @@
       "register": "formal",
       "sourcePriority": 1
     },
+    "qa:work-casual-main": {
+      "acceptedRealizations": [
+        "Was macht ihr beruflich?",
+        "Ich arbeite als …",
+        "Ich arbeite bei …",
+        "Ich studiere …",
+        "Ich arbeite im Moment nicht."
+      ],
+      "answers": [
+        {
+          "id": "phrase:work-casual-main-a1",
+          "realization": "Ich arbeite als …",
+          "role": "answer"
+        },
+        {
+          "id": "phrase:work-casual-main-a2",
+          "realization": "Ich arbeite bei …",
+          "role": "answer"
+        },
+        {
+          "id": "phrase:work-casual-main-a3",
+          "realization": "Ich studiere …",
+          "role": "answer"
+        },
+        {
+          "id": "phrase:work-casual-main-a4",
+          "realization": "Ich arbeite im Moment nicht.",
+          "role": "answer"
+        }
+      ],
+      "canonicalPath": "/phrases/id-71613a776f726b2d63617375616c2d6d61696e",
+      "conversationLevels": [],
+      "displayText": "Was macht ihr beruflich?",
+      "hubSegment": "phrases",
+      "id": "qa:work-casual-main",
+      "intent": "qa:work-casual-main",
+      "kind": "QAPair",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "publicationStatus": "published",
+      "question": {
+        "id": "phrase:work-casual-main-q",
+        "realization": "Was macht ihr beruflich?",
+        "role": "question"
+      },
+      "register": "informal",
+      "sourcePriority": 1
+    },
     "qa:work-formal-main": {
       "acceptedRealizations": [
         "Was machen Sie beruflich?",
@@ -7069,6 +7655,118 @@
         "role": "question"
       },
       "register": "formal",
+      "sourcePriority": 1
+    },
+    "verb:arbeiten": {
+      "canonicalPath": "/verbs/id-766572623a617262656974656e",
+      "displayText": "arbeiten",
+      "hubSegment": "verbs",
+      "id": "verb:arbeiten",
+      "infinitive": "arbeiten",
+      "kind": "Verb",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "to work",
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "paradigmNote": "Only the published present forms are shown.",
+      "present": [
+        {
+          "form": "arbeite",
+          "person": "ich",
+          "personLabel": "ich"
+        },
+        {
+          "form": "arbeitest",
+          "person": "du",
+          "personLabel": "du"
+        },
+        {
+          "form": "arbeitet",
+          "person": "er_sie_es",
+          "personLabel": "er/sie/es"
+        },
+        {
+          "form": "arbeiten",
+          "person": "wir",
+          "personLabel": "wir"
+        },
+        {
+          "form": "arbeitet",
+          "person": "ihr",
+          "personLabel": "ihr"
+        },
+        {
+          "form": "arbeiten",
+          "person": "sie_plural",
+          "personLabel": "sie (plural)"
+        },
+        {
+          "form": "arbeiten",
+          "person": "Sie_formal",
+          "personLabel": "Sie (formal)"
+        }
+      ],
+      "publicationStatus": "published",
+      "sourcePriority": 1
+    },
+    "verb:haben": {
+      "canonicalPath": "/verbs/id-766572623a686162656e",
+      "displayText": "haben",
+      "hubSegment": "verbs",
+      "id": "verb:haben",
+      "infinitive": "haben",
+      "kind": "Verb",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "to have",
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "paradigmNote": "Only the published present forms are shown.",
+      "present": [
+        {
+          "form": "habe",
+          "person": "ich",
+          "personLabel": "ich"
+        },
+        {
+          "form": "hast",
+          "person": "du",
+          "personLabel": "du"
+        },
+        {
+          "form": "hat",
+          "person": "er_sie_es",
+          "personLabel": "er/sie/es"
+        },
+        {
+          "form": "haben",
+          "person": "wir",
+          "personLabel": "wir"
+        },
+        {
+          "form": "habt",
+          "person": "ihr",
+          "personLabel": "ihr"
+        },
+        {
+          "form": "haben",
+          "person": "sie_plural",
+          "personLabel": "sie (plural)"
+        },
+        {
+          "form": "haben",
+          "person": "Sie_formal",
+          "personLabel": "Sie (formal)"
+        }
+      ],
+      "publicationStatus": "published",
       "sourcePriority": 1
     },
     "verb:heissen": {
@@ -7167,6 +7865,62 @@
       "publicationStatus": "published",
       "sourcePriority": 1
     },
+    "verb:leben": {
+      "canonicalPath": "/verbs/id-766572623a6c6562656e",
+      "displayText": "leben",
+      "hubSegment": "verbs",
+      "id": "verb:leben",
+      "infinitive": "leben",
+      "kind": "Verb",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "to live",
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "paradigmNote": "Only the published present forms are shown.",
+      "present": [
+        {
+          "form": "lebe",
+          "person": "ich",
+          "personLabel": "ich"
+        },
+        {
+          "form": "lebst",
+          "person": "du",
+          "personLabel": "du"
+        },
+        {
+          "form": "lebt",
+          "person": "er_sie_es",
+          "personLabel": "er/sie/es"
+        },
+        {
+          "form": "leben",
+          "person": "wir",
+          "personLabel": "wir"
+        },
+        {
+          "form": "lebt",
+          "person": "ihr",
+          "personLabel": "ihr"
+        },
+        {
+          "form": "leben",
+          "person": "sie_plural",
+          "personLabel": "sie (plural)"
+        },
+        {
+          "form": "leben",
+          "person": "Sie_formal",
+          "personLabel": "Sie (formal)"
+        }
+      ],
+      "publicationStatus": "published",
+      "sourcePriority": 1
+    },
     "verb:lernen": {
       "canonicalPath": "/verbs/id-766572623a6c65726e656e",
       "displayText": "lernen",
@@ -7208,6 +7962,62 @@
         },
         {
           "form": "lernen",
+          "person": "Sie_formal",
+          "personLabel": "Sie (formal)"
+        }
+      ],
+      "publicationStatus": "published",
+      "sourcePriority": 1
+    },
+    "verb:machen": {
+      "canonicalPath": "/verbs/id-766572623a6d616368656e",
+      "displayText": "machen",
+      "hubSegment": "verbs",
+      "id": "verb:machen",
+      "infinitive": "machen",
+      "kind": "Verb",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "to do",
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "paradigmNote": "Only the published present forms are shown.",
+      "present": [
+        {
+          "form": "mache",
+          "person": "ich",
+          "personLabel": "ich"
+        },
+        {
+          "form": "machst",
+          "person": "du",
+          "personLabel": "du"
+        },
+        {
+          "form": "macht",
+          "person": "er_sie_es",
+          "personLabel": "er/sie/es"
+        },
+        {
+          "form": "machen",
+          "person": "wir",
+          "personLabel": "wir"
+        },
+        {
+          "form": "macht",
+          "person": "ihr",
+          "personLabel": "ihr"
+        },
+        {
+          "form": "machen",
+          "person": "sie_plural",
+          "personLabel": "sie (plural)"
+        },
+        {
+          "form": "machen",
           "person": "Sie_formal",
           "personLabel": "Sie (formal)"
         }
@@ -7278,6 +8088,118 @@
       ],
       "publicationStatus": "published",
       "sourcePriority": 1
+    },
+    "verb:studieren": {
+      "canonicalPath": "/verbs/id-766572623a73747564696572656e",
+      "displayText": "studieren",
+      "hubSegment": "verbs",
+      "id": "verb:studieren",
+      "infinitive": "studieren",
+      "kind": "Verb",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "to study",
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "paradigmNote": "Only the published present forms are shown.",
+      "present": [
+        {
+          "form": "studiere",
+          "person": "ich",
+          "personLabel": "ich"
+        },
+        {
+          "form": "studierst",
+          "person": "du",
+          "personLabel": "du"
+        },
+        {
+          "form": "studiert",
+          "person": "er_sie_es",
+          "personLabel": "er/sie/es"
+        },
+        {
+          "form": "studieren",
+          "person": "wir",
+          "personLabel": "wir"
+        },
+        {
+          "form": "studiert",
+          "person": "ihr",
+          "personLabel": "ihr"
+        },
+        {
+          "form": "studieren",
+          "person": "sie_plural",
+          "personLabel": "sie (plural)"
+        },
+        {
+          "form": "studieren",
+          "person": "Sie_formal",
+          "personLabel": "Sie (formal)"
+        }
+      ],
+      "publicationStatus": "published",
+      "sourcePriority": 1
+    },
+    "verb:wohnen": {
+      "canonicalPath": "/verbs/id-766572623a776f686e656e",
+      "displayText": "wohnen",
+      "hubSegment": "verbs",
+      "id": "verb:wohnen",
+      "infinitive": "wohnen",
+      "kind": "Verb",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "to live (reside)",
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "paradigmNote": "Only the published present forms are shown.",
+      "present": [
+        {
+          "form": "wohne",
+          "person": "ich",
+          "personLabel": "ich"
+        },
+        {
+          "form": "wohnst",
+          "person": "du",
+          "personLabel": "du"
+        },
+        {
+          "form": "wohnt",
+          "person": "er_sie_es",
+          "personLabel": "er/sie/es"
+        },
+        {
+          "form": "wohnen",
+          "person": "wir",
+          "personLabel": "wir"
+        },
+        {
+          "form": "wohnt",
+          "person": "ihr",
+          "personLabel": "ihr"
+        },
+        {
+          "form": "wohnen",
+          "person": "sie_plural",
+          "personLabel": "sie (plural)"
+        },
+        {
+          "form": "wohnen",
+          "person": "Sie_formal",
+          "personLabel": "Sie (formal)"
+        }
+      ],
+      "publicationStatus": "published",
+      "sourcePriority": 1
     }
   },
   "projectionKind": "learner-details",
@@ -7318,8 +8240,10 @@
         "relatedMeaningEn": "architect",
         "sharedStem": "Architekt"
       },
-      "pluralGapMessage": "Plural awaiting content approval",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Architekten"
+      ],
       "publicationStatus": "published",
       "singular": "Architekt",
       "sourcePriority": 1
@@ -7510,8 +8434,10 @@
         "relatedMeaningEn": "architect",
         "sharedStem": "Architekt"
       },
-      "pluralGapMessage": "Plural awaiting content approval",
-      "plurals": [],
+      "pluralGapMessage": null,
+      "plurals": [
+        "Architekten"
+      ],
       "publicationStatus": "published",
       "singular": "Architekt",
       "sourcePriority": 1

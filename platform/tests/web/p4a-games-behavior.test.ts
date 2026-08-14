@@ -260,7 +260,7 @@ describe("P4A practice behavioral interactions", () => {
 
     expect(screen.queryByRole("button", { name: "Submit" })).toBeNull();
     expect(feedbackEl().getAttribute("data-feedback")).toBe("unavailable");
-    expect(document.body.textContent ?? "").toMatch(/listening-approved/i);
+    expect(document.body.textContent ?? "").toMatch(/not available yet/i);
     expect(document.querySelector('[data-availability="unavailable"]')).not.toBeNull();
     expect(onEvent).not.toHaveBeenCalled();
   });

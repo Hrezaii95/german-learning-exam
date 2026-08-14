@@ -86,7 +86,7 @@ export type EmitResult =
     };
 
 export const AUDIO_MATCH_UNAVAILABLE_REASON =
-  "Matching audio is unavailable until listening-approved public media exists. This mode does not emit graded attempts." as const;
+  "Audio practice is not available yet — the recordings are still being checked. Nothing you do here is scored." as const;
 
 export const PRACTICE_SOURCE_ACTIVITY_MODE = "review" as const;
 

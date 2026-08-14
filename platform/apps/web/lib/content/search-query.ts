@@ -340,15 +340,38 @@ export function kindGroupLabel(kind: LearnerSearchableKind): string {
   }
 }
 
+const MATCH_FIELD_LABELS: Readonly<Record<LearnerSearchMatch["field"], string>> =
+  Object.freeze({
+    label: "the name",
+    lemma: "the German word",
+    infinitive: "the verb",
+    meaning: "the English meaning",
+    intent: "what it is used for",
+    title: "the title",
+    realization: "the phrase",
+    form: "a word form",
+    category: "the category",
+  });
+
+/** Learner-readable summary of why a search hit matched (no internal codes). */
 export function matchMetaLabel(match: LearnerSearchMatch): string {
-  return `Matched ${match.field} · ${match.reason}`;
+  return `Found in ${MATCH_FIELD_LABELS[match.field]}`;
 }
 
+const SOURCE_PRIORITY_LABELS: Readonly<Record<1 | 2 | 3 | 4, string>> =
+  Object.freeze({
+    1: "Core vocabulary",
+    2: "From the coursebook",
+    3: "Teacher material",
+    4: "Extra material",
+  });
+
+/** Learner-readable source label (never a raw priority number). */
 export function sourcePriorityLabel(
   priority: 1 | 2 | 3 | 4 | null,
 ): string {
-  if (priority == null) return "Priority unknown";
-  return `Priority ${priority}`;
+  if (priority == null) return "Course material";
+  return SOURCE_PRIORITY_LABELS[priority];
 }
 
 export function lessonMembershipLabel(lessonIds: readonly string[]): string {

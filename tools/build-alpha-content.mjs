@@ -33,14 +33,16 @@ function parseTeacherProfessions(text) {
   return entries;
 }
 
+// Plurals verified against the official glossary (src:glossary:9e35984302ede169) pp. 3–4:
+// "-" = plural same as singular, "-e"/"-en"/"-nen" suffixes, "..e" = umlaut plural (der Arzt, ..e → Ärzte).
 const coreProfessions = [
-  ["Paketzusteller", "Paketzustellerin", "parcel delivery agent"], ["Friseur", "Friseurin", "hairdresser"],
-  ["Kellner", "Kellnerin", "waiter / waitress"], ["Ingenieur", "Ingenieurin", "engineer"],
-  ["Kfz-Mechatroniker", "Kfz-Mechatronikerin", "automotive mechatronics engineer"], ["Student", "Studentin", "university student"],
-  ["Journalist", "Journalistin", "journalist"], ["Architekt", "Architektin", "architect"],
-  ["Arzt", "Ärztin", "doctor"], ["Lehrer", "Lehrerin", "teacher"], ["Verkäufer", "Verkäuferin", "shop assistant"],
-  ["Schüler", "Schülerin", "school student"], ["Rentner", "Rentnerin", "pensioner"],
-].map(([masculine, feminine, meaningEn]) => ({ id: `profession:${slug(masculine)}`, masculine, feminine, meaningEn, priority: 1 }));
+  ["Paketzusteller", "Paketzustellerin", "parcel delivery agent", "Paketzusteller", "Paketzustellerinnen"], ["Friseur", "Friseurin", "hairdresser", "Friseure", "Friseurinnen"],
+  ["Kellner", "Kellnerin", "waiter / waitress", "Kellner", "Kellnerinnen"], ["Ingenieur", "Ingenieurin", "engineer", "Ingenieure", "Ingenieurinnen"],
+  ["Kfz-Mechatroniker", "Kfz-Mechatronikerin", "automotive mechatronics engineer", "Kfz-Mechatroniker", "Kfz-Mechatronikerinnen"], ["Student", "Studentin", "university student", "Studenten", "Studentinnen"],
+  ["Journalist", "Journalistin", "journalist", "Journalisten", "Journalistinnen"], ["Architekt", "Architektin", "architect", "Architekten", "Architektinnen"],
+  ["Arzt", "Ärztin", "doctor", "Ärzte", "Ärztinnen"], ["Lehrer", "Lehrerin", "teacher", "Lehrer", "Lehrerinnen"], ["Verkäufer", "Verkäuferin", "shop assistant", "Verkäufer", "Verkäuferinnen"],
+  ["Schüler", "Schülerin", "school student", "Schüler", "Schülerinnen"], ["Rentner", "Rentnerin", "pensioner", "Rentner", "Rentnerinnen"],
+].map(([masculine, feminine, meaningEn, masculinePlural, femininePlural]) => ({ id: `profession:${slug(masculine)}`, masculine, feminine, meaningEn, masculinePlural, femininePlural, priority: 1 }));
 
 const lesson1 = {
   id: "lesson:01", number: 1, titleDe: "Ich heiße Miriam.", titleEn: "Greetings and introductions", cefr: "A1",
@@ -75,17 +77,29 @@ const fullForms = {
   arbeiten: ["arbeite", "arbeitest", "arbeitet", "arbeiten", "arbeitet", "arbeiten"], machen: ["mache", "machst", "macht", "machen", "macht", "machen"],
   studieren: ["studiere", "studierst", "studiert", "studieren", "studiert", "studieren"],
 };
+// English glosses verified verbatim against the official glossary (src:glossary:9e35984302ede169):
+// wohnen p.3, haben p.2, arbeiten p.3, machen p.3, studieren p.4, sein p.3 ("sein — to be").
+// leben has no standalone glossary entry; "to live" is derived from the p.3 entries
+// "zusammen|leben — to live together" and "Lebt ihr zusammen? — Do you live together?".
+const fullFormGlosses = {
+  wohnen: "to live (reside)", leben: "to live", haben: "to have", sein: "to be",
+  arbeiten: "to work", machen: "to do", studieren: "to study",
+};
 const pronouns = ["ich", "du", "er/sie/es", "wir", "ihr", "sie/Sie"];
 const lesson2 = {
   id: "lesson:02", number: 2, titleDe: "Was macht ihr beruflich?", titleEn: "Personal details and professions", cefr: "A1",
   sourcePages: { coursebookPrinted: [15, 18], workbookPrinted: [10, 13], glossaryPdf: [2, 4] },
   goals: ["give a personal profile", "understand and say numbers 0–100", "talk about relationship and children", "ask and answer about work", "use full present-tense person forms", "form profession person forms"],
   coreProfessions,
-  profileVocabulary: [["das Jahr", "year"], ["das Kind", "child"], ["verheiratet", "married"], ["geschieden", "divorced"], ["der Single", "single person"], ["allein", "alone"], ["der Wohnort", "place of residence"], ["die Herkunft", "origin"], ["das Alter", "age"], ["der Familienstand", "marital status"], ["das Studium", "studies"], ["der Beruf", "profession"], ["der Job", "job"], ["die Stelle", "position/job"], ["die Ausbildung", "apprenticeship/training"], ["das Praktikum", "internship"], ["die Firma", "company"]],
-  verbs: Object.entries(fullForms).map(([infinitive, forms]) => ({ id: `verb:${slug(infinitive)}`, infinitive, forms: Object.fromEntries(pronouns.map((pronoun, index) => [pronoun, forms[index]])), pattern: infinitive === "sein" || infinitive === "haben" ? "irregular" : infinitive === "arbeiten" ? "spelling-adjustment" : "regular" })),
+  // Third element = glossary plural (pp. 2–4); null = glossary marks the noun (Sg.) or lists no plural.
+  profileVocabulary: [["das Jahr", "year", "die Jahre"], ["das Kind", "child", "die Kinder"], ["verheiratet", "married"], ["geschieden", "divorced"], ["der Single", "single person", "die Singles"], ["allein", "alone"], ["der Wohnort", "place of residence", "die Wohnorte"], ["die Herkunft", "origin"], ["das Alter", "age"], ["der Familienstand", "marital status"], ["das Studium", "studies"], ["der Beruf", "profession", "die Berufe"], ["der Job", "job", "die Jobs"], ["die Stelle", "position/job", "die Stellen"], ["die Ausbildung", "apprenticeship/training", "die Ausbildungen"], ["das Praktikum", "internship", "die Praktika"], ["die Firma", "company", "die Firmen"]],
+  verbs: Object.entries(fullForms).map(([infinitive, forms]) => ({ id: `verb:${slug(infinitive)}`, infinitive, meaningEn: fullFormGlosses[infinitive], forms: Object.fromEntries(pronouns.map((pronoun, index) => [pronoun, forms[index]])), pattern: infinitive === "sein" || infinitive === "haben" ? "irregular" : infinitive === "arbeiten" ? "spelling-adjustment" : "regular" })),
   qa: [
     { id: "qa:profession-casual", register: "casual", question: "Was bist du von Beruf?", answers: ["Ich bin … von Beruf.", "Ich bin …", "Ich arbeite als …"] },
     { id: "qa:profession-formal", register: "formal", question: "Was sind Sie von Beruf?", answers: ["Ich bin … von Beruf.", "Ich bin …", "Ich arbeite als …"] },
+    // Casual question verbatim from glossary p.3 Lektion 02 ex.5 ("Was macht ihr beruflich? — What do you do for a living?");
+    // answers mirror the published formal sibling's evidenced answer set.
+    { id: "qa:work-casual", register: "casual", question: "Was macht ihr beruflich?", answers: ["Ich arbeite als …", "Ich arbeite bei …", "Ich studiere …", "Ich arbeite im Moment nicht."] },
     { id: "qa:work-formal", register: "formal", question: "Was machen Sie beruflich?", answers: ["Ich arbeite als …", "Ich arbeite bei …", "Ich studiere …", "Ich arbeite im Moment nicht."] },
     { id: "qa:age", register: "variable", question: "Wie alt bist du / sind Sie?", answers: ["Ich bin … Jahre alt."] },
     { id: "qa:residence", register: "variable", question: "Wo wohnst du / wohnen Sie?", answers: ["Ich wohne in …"] },
