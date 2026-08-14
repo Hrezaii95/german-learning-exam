@@ -1,0 +1,338 @@
+{
+  "schemaVersion": 1,
+  "gate": "fail",
+  "scannedFiles": 204,
+  "distinctFindings": 64,
+  "totalOccurrences": 617,
+  "rules": [
+    "PUBLICATION_JARGON",
+    "VALIDATION_JARGON",
+    "EVIDENCE_INTERNALS",
+    "RAW_OBJECT_ID",
+    "RAW_GAME_STATE",
+    "ROADMAP_LANGUAGE",
+    "SEARCH_DEBUG_CHIP"
+  ],
+  "findings": [
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "vocabulary/id-6c65783a617263686974656b74/index.html",
+      "phrase": "An architect works with plans, a scale ruler, and a building model. The image is a meaning cue; the published word forms below remain authoritative."
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d636865636b706f696e742d73756d6d617279/index.html",
+      "phrase": "Answer each question from the published lesson set. Feedback is immediate; retry any missed item."
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "collections/professions/index.html",
+      "phrase": "Audio not published"
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "phrases/id-71613a70726f66657373696f6e2d63617375616c2d6d61696e/index.html",
+      "phrase": "Build one published answer frame from canonical published fragments only."
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d706572736f6e2d666f726d2d6d6f7270686f6c6f6779/index.html",
+      "phrase": "Build the published German item meaning “architect”."
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d70726f66657373696f6e2d71612d6275696c646572/index.html",
+      "phrase": "Build this published phrase in the correct order."
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "phrases/id-71613a70726f66657373696f6e2d63617375616c2d6d61696e/index.html",
+      "phrase": "Choose an exact published answer pattern that matches the question."
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d636865636b706f696e742d73756d6d617279/index.html",
+      "phrase": "Choose the published form for du + sein."
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d636865636b706f696e742d73756d6d617279/index.html",
+      "phrase": "Choose the published German item meaning “alone”."
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d636f72652d70726f66657373696f6e73/index.html",
+      "phrase": "Choose the published German item meaning “architect”."
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d636865636b706f696e742d73756d6d617279/index.html",
+      "phrase": "Choose the published German item meaning “Goodbye”."
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d77656c6c6265696e672d7363616c65/index.html",
+      "phrase": "Compare five everyday wellbeing cues, then choose a published response from very positive to not so good."
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d70726f66696c652d72656164696e672d77726974696e67/index.html",
+      "phrase": "Complete each source-backed prompt. Answers are checked against the published lesson item."
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d72656c6174696f6e736869702d737461747573/index.html",
+      "phrase": "Connect residence, age, family, relationship status, and profession to the published profile prompts without assuming any one life situation."
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d70726f66657373696f6e2d71612d6275696c646572/index.html",
+      "phrase": "Follow the conversation ladder from a model exchange to your own answer. The image supplies social context; grading uses the published patterns."
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "concepts/index.html",
+      "phrase": "Lesson 1 informal and formal introductions connected to the published du und Sie grammar distinction."
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "concepts/index.html",
+      "phrase": "Lesson 1 origin questions and country vocabulary connected to the published Herkunft mit aus grammar concept."
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "grammar/id-6772616d3a70726f66657373696f6e2d66656d696e696e652d666f726d732d6c32/index.html",
+      "phrase": "Link each published feminine form to its masculine base; preserve source-supported stem changes."
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d72656c6174696f6e736869702d737461747573/index.html",
+      "phrase": "Match “allein” to its published English meaning."
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d77656c6c6265696e672d7363616c65/index.html",
+      "phrase": "Match “Auch super.” to its published English meaning."
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d6772656574696e67732d62792d636f6e74657874/index.html",
+      "phrase": "Match “Auf Wiedersehen” to its published English meaning."
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "grammar/id-6772616d3a66756c6c2d70726573656e742d706572736f6e2d666f726d732d6c32/index.html",
+      "phrase": "Match each pronoun with its published present form."
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d72656c6174696f6e736869702d737461747573/index.html",
+      "phrase": "Match each published German item to its published English meaning."
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d776f726b626f6f6b2d6c697374656e696e67/index.html",
+      "phrase": "No gradeable content targets or answer key are published for this listening-led activity."
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "collections/professions/48/index.html",
+      "phrase": "No source profession image is published. The diagram above is a semantic text infographic, not a claimed source illustration."
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "collections/professions/index.html",
+      "phrase": "only exact owner-authorized synthesized previews are exposed. Every absent match is explicitly marked not published."
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "verbs/id-766572623a776f686e656e/index.html",
+      "phrase": "Only the published present forms are shown."
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d70726f66657373696f6e2d71612d6275696c646572/index.html",
+      "phrase": "Profession plurals are not published yet. Learn each singular article and person-form pair first."
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "collections/professions/index.html",
+      "phrase": "Publication status"
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "grammar/id-6772616d3a70726573656e742d636f6e6a75676174696f6e2d6c31/index.html",
+      "phrase": "Published present forms include regular endings and the taught special paradigms heißen and sein."
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "grammar/id-6772616d3a70726f66657373696f6e2d66656d696e696e652d666f726d732d6c32/index.html",
+      "phrase": "Published profession pairs form feminine person words with -in where evidenced; plural -innen is used only when stored in the source."
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "phrases/id-71613a70726f66657373696f6e2d63617375616c2d6d61696e/index.html",
+      "phrase": "Read the published informal exchange. Pronunciation playback stays unavailable until listening approval."
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d7365696e2d617262656974656e2d636f6e7472617374/index.html",
+      "phrase": "Reconstruct or type the published form, then check it against the lesson data."
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "phrases/id-71613a70726f66657373696f6e2d63617375616c2d6d61696e/index.html",
+      "phrase": "Record, play back, and self-check against the published prompt. Self-rating is reflection only — not pronunciation accuracy."
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d636f72652d70726f66657373696f6e73/index.html",
+      "phrase": "Select the published item"
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "lessons/02/index.html",
+      "phrase": "Six illustrated examples from the published profession set. Use the article colour and the person in the scene together; the complete word list remains below."
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "grammar/id-6772616d3a6175732d6f726967696e2d6c31/index.html",
+      "phrase": "The published origin answers use kommen + aus + country name."
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d6772656574696e67732d62792d636f6e74657874/index.html",
+      "phrase": "The setting and time of day help you choose a greeting. The illustrated people are context cues; the published words and register rules remain authoritative."
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d706572736f6e2d666f726d2d6d6f7270686f6c6f6779/index.html",
+      "phrase": "Thirteen published profession pairs share one coherent visual system. Use the HTML word cards below for exact articles, spelling, and morphology."
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d7365696e2d617262656974656e2d636f6e7472617374/index.html",
+      "phrase": "Two requested Lesson 2 verb paradigms are awaiting publication. Their approved sentence patterns remain available in Q&A practice."
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "phrases/id-71613a70726f66657373696f6e2d63617375616c2d6d61696e/index.html",
+      "phrase": "Type one of the three published answer realizations (ellipsis-safe). Hints prevent strong correct evidence."
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d70726f66696c652d72656164696e672d77726974696e67/index.html",
+      "phrase": "Type the published German item meaning “alone”."
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d6f726967696e2d6175732d636f6e7472617374/index.html",
+      "phrase": "Type the published German item meaning “Germany”."
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d70726f6e6f756e2d766572622d6275696c646572/index.html",
+      "phrase": "Type the published German item meaning “to be called”."
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d7365696e2d617262656974656e2d636f6e7472617374/index.html",
+      "phrase": "Type the published German item meaning “to be”."
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "grammar/id-6772616d3a70726f66657373696f6e2d66656d696e696e652d666f726d732d6c32/index.html",
+      "phrase": "Use -innen only for a source-published feminine plural."
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "grammar/id-6772616d3a6175732d6f726967696e2d6c31/index.html",
+      "phrase": "Use aus before the published country expression."
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "grammar/id-6772616d3a70726f66657373696f6e2d65787072657373696f6e732d6c32/index.html",
+      "phrase": "Use bei or in only in the published workplace patterns."
+    },
+    {
+      "code": "PUBLICATION_JARGON",
+      "route": "lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d776f726b626f6f6b2d6c697374656e696e67/index.html",
+      "phrase": "Use the linked lesson audio, record what you heard, and confirm the listening pass. This activity is ungraded because its published projection has no answer key."
+    },
+    {
+      "code": "RAW_OBJECT_ID",
+      "route": "phrases/index.html",
+      "phrase": "qa:age-casual"
+    },
+    {
+      "code": "RAW_OBJECT_ID",
+      "route": "phrases/index.html",
+      "phrase": "qa:age-formal"
+    },
+    {
+      "code": "RAW_OBJECT_ID",
+      "route": "phrases/index.html",
+      "phrase": "qa:identity"
+    },
+    {
+      "code": "RAW_OBJECT_ID",
+      "route": "phrases/index.html",
+      "phrase": "qa:name-casual"
+    },
+    {
+      "code": "RAW_OBJECT_ID",
+      "route": "phrases/index.html",
+      "phrase": "qa:name-formal"
+    },
+    {
+      "code": "RAW_OBJECT_ID",
+      "route": "phrases/index.html",
+      "phrase": "qa:origin-casual"
+    },
+    {
+      "code": "RAW_OBJECT_ID",
+      "route": "phrases/index.html",
+      "phrase": "qa:origin-formal"
+    },
+    {
+      "code": "RAW_OBJECT_ID",
+      "route": "phrases/index.html",
+      "phrase": "qa:profession-casual-main"
+    },
+    {
+      "code": "RAW_OBJECT_ID",
+      "route": "phrases/index.html",
+      "phrase": "qa:profession-formal-main"
+    },
+    {
+      "code": "RAW_OBJECT_ID",
+      "route": "phrases/index.html",
+      "phrase": "qa:residence-casual"
+    },
+    {
+      "code": "RAW_OBJECT_ID",
+      "route": "phrases/index.html",
+      "phrase": "qa:residence-formal"
+    },
+    {
+      "code": "RAW_OBJECT_ID",
+      "route": "phrases/index.html",
+      "phrase": "qa:wellbeing-casual"
+    },
+    {
+      "code": "RAW_OBJECT_ID",
+      "route": "phrases/index.html",
+      "phrase": "qa:wellbeing-formal"
+    },
+    {
+      "code": "RAW_OBJECT_ID",
+      "route": "phrases/index.html",
+      "phrase": "qa:work-casual-main"
+    },
+    {
+      "code": "RAW_OBJECT_ID",
+      "route": "phrases/index.html",
+      "phrase": "qa:work-formal-main"
+    }
+  ]
+}
