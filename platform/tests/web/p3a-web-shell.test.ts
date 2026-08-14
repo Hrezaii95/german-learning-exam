@@ -330,10 +330,15 @@ describe("P3A route resolution", () => {
 });
 
 describe("P3A UI binds to projection (no second course object)", () => {  it("lesson views render projection fields rather than hard-coded titles", () => {
-    const lessonViews = readFileSync(
-      join(webRoot, "components/lessons/LessonViews.tsx"),
-      "utf8",
-    );
+    // The Lesson 1–2 course cards moved into the learner-state dashboard when
+    // Phase 2a gave them real progress; both files form the dashboard surface.
+    const lessonViews = [
+      readFileSync(join(webRoot, "components/lessons/LessonViews.tsx"), "utf8"),
+      readFileSync(
+        join(webRoot, "components/learner-state/LearnerDashboard.tsx"),
+        "utf8",
+      ),
+    ].join("\n");
     const activityViews = readFileSync(
       join(webRoot, "components/lessons/ActivityAndBrowser.tsx"),
       "utf8",

@@ -35,7 +35,7 @@
       "value": [
         {
           "id": "full-person",
-          "notice": "Match each pronoun with its published present form.",
+          "notice": "Match each pronoun with its present-tense form.",
           "model": "wir sind · ihr seid · sie/Sie sind"
         }
       ],
@@ -121,7 +121,7 @@
         },
         {
           "id": "arbeiten-bei-in",
-          "notice": "Use bei or in only in the published workplace patterns.",
+          "notice": "Use bei or in only in the workplace patterns taught here.",
           "model": "Ich arbeite bei einer Firma."
         }
       ],
@@ -140,7 +140,7 @@
       },
       "subjectId": "gram:profession-feminine-forms-l2",
       "field": "noticeTarget",
-      "value": "Published profession pairs form feminine person words with -in where evidenced; plural -innen is used only when stored in the source.",
+      "value": "Profession pairs form feminine person words with -in where the course shows it; the plural -innen is used only where the course lists it.",
       "extraction": "manual",
       "confidence": 1,
       "status": "verified",
@@ -159,12 +159,12 @@
       "value": [
         {
           "id": "feminine-in",
-          "notice": "Link each published feminine form to its masculine base; preserve source-supported stem changes.",
+          "notice": "Link each feminine form to its masculine base; keep the stem changes the course shows.",
           "model": "Architekt → Architektin · Arzt → Ärztin"
         },
         {
           "id": "plural-innen",
-          "notice": "Use -innen only for a source-published feminine plural.",
+          "notice": "Use -innen only where the course lists a feminine plural.",
           "model": "Lehrerinnen"
         }
       ],
@@ -6140,7 +6140,7 @@
             "tokens": [
               {
                 "type": "plain",
-                "text": "Match each pronoun with its published present form."
+                "text": "Match each pronoun with its present-tense form."
               }
             ]
           },
@@ -6308,7 +6308,7 @@
             "tokens": [
               {
                 "type": "plain",
-                "text": "Use bei or in only in the published workplace patterns."
+                "text": "Use bei or in only in the workplace patterns taught here."
               }
             ]
           },
@@ -6362,7 +6362,7 @@
         "tokens": [
           {
             "type": "plain",
-            "text": "Published profession pairs form feminine person words with -in where evidenced; plural -innen is used only when stored in the source."
+            "text": "Profession pairs form feminine person words with -in where the course shows it; the plural -innen is used only where the course lists it."
           }
         ]
       },
@@ -6373,7 +6373,7 @@
             "tokens": [
               {
                 "type": "plain",
-                "text": "Link each published feminine form to its masculine base; preserve source-supported stem changes."
+                "text": "Link each feminine form to its masculine base; keep the stem changes the course shows."
               }
             ]
           },
@@ -6392,7 +6392,7 @@
             "tokens": [
               {
                 "type": "plain",
-                "text": "Use -innen only for a source-published feminine plural."
+                "text": "Use -innen only where the course lists a feminine plural."
               }
             ]
           },

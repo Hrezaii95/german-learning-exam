@@ -61,31 +61,31 @@ const LEVEL_COPY: Readonly<
     label: "Model",
     shortLabel: "Model",
     description:
-      "Read the published informal exchange. Pronunciation playback stays unavailable until listening approval.",
+      "Read the informal exchange. Spoken playback is not available yet — it is waiting for a German listening check.",
   }),
   "guided-recognition": Object.freeze({
     label: "Guided recognition",
     shortLabel: "Recognition",
     description:
-      "Choose an exact published answer pattern that matches the question.",
+      "Choose the exact answer pattern that matches the question.",
   }),
   substitution: Object.freeze({
     label: "Substitution",
     shortLabel: "Substitution",
     description:
-      "Build one published answer frame from canonical published fragments only.",
+      "Build one complete answer using only the fragments given here.",
   }),
   "independent-construction": Object.freeze({
     label: "Independent construction",
     shortLabel: "Construction",
     description:
-      "Type one of the three published answer realizations (ellipsis-safe). Hints prevent strong correct evidence.",
+      "Type one of the three accepted answers (the … placeholder is allowed). Using a hint means the attempt does not count as fully correct.",
   }),
   "spoken-role-play": Object.freeze({
     label: "Spoken role-play",
     shortLabel: "Speaking",
     description:
-      "Record, play back, and self-check against the published prompt. Self-rating is reflection only — not pronunciation accuracy.",
+      "Record, play back, and self-check against the prompt. Your self-rating is for reflection only — it does not measure pronunciation accuracy.",
   }),
 });
 

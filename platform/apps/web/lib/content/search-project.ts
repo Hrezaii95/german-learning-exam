@@ -119,6 +119,29 @@ function projectFields(
   );
 }
 
+/**
+ * Q&A pairs carry a machine intent (`qa:age-casual`) as their index label, which
+ * a learner must never see in a result title. The German question itself is
+ * already on the document as its `realization` field.
+ */
+function learnerSearchLabel(doc: {
+  readonly id: string;
+  readonly kind: string;
+  readonly displayLabel: string;
+  readonly fields: readonly { readonly field: string; readonly displayText: string }[];
+}): string {
+  if (doc.kind !== "QAPair") return doc.displayLabel;
+  const realization = doc.fields
+    .find((field) => field.field === "realization")
+    ?.displayText.trim();
+  if (!realization) {
+    throw new SearchProjectionError(
+      `Q&A pair ${doc.id} has no question wording to show as its result title`,
+    );
+  }
+  return realization;
+}
+
 function projectDocument(
   indexes: ContentIndexes,
   id: string,
@@ -154,7 +177,7 @@ function projectDocument(
   return Object.freeze({
     id: doc.id,
     kind: doc.kind,
-    displayLabel: doc.displayLabel,
+    displayLabel: learnerSearchLabel(doc),
     publicationStatus: "published",
     sourcePriority: doc.sourcePriority,
     lessonIds: Object.freeze(lessonIds),

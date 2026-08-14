@@ -65,7 +65,7 @@ function FormLane({
                   <span>{singular.noun}</span>
                 </span>
                 <span className={styles.audioState} data-audio-state={singularAudio}>
-                  {singularAudio === "preview" ? "Audio preview ready" : "Audio not published"}
+                  {singularAudio === "preview" ? "Audio preview ready" : "Audio not available yet"}
                 </span>
               </div>
               <span className={styles.numberArrow} aria-label="changes to plural">
@@ -78,7 +78,7 @@ function FormLane({
                   <span>{plural.noun}</span>
                 </span>
                 <span className={styles.audioState} data-audio-state={pluralAudio}>
-                  {pluralAudio === "preview" ? "Audio preview ready" : "Audio not published"}
+                  {pluralAudio === "preview" ? "Audio preview ready" : "Audio not available yet"}
                 </span>
               </div>
             </div>

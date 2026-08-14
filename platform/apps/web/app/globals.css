@@ -1340,69 +1340,8 @@ a:hover {
   padding: var(--space-4);
 }
 
-.metrics {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--space-3);
-}
-
-.metric {
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  padding: var(--space-4);
-  background: var(--surface-muted);
-}
-
-.metric__label {
-  display: block;
-  font-size: 0.8125rem;
-  color: var(--ink-muted);
-  margin-bottom: var(--space-2);
-}
-
-.metric__value {
-  font-size: 1.25rem;
-  font-weight: 700;
-}
-
-.hub-shortcuts {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--space-3);
-}
-
-.hub-shortcut {
-  min-height: 44px;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  background: var(--surface-muted);
-  color: var(--ink-subtle);
-  padding: 0.75rem 0.9rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-2);
-}
-
-.hub-shortcut--link {
-  color: var(--ink);
-  text-decoration: none;
-  background: var(--surface);
-}
-
-.hub-shortcut--link:hover {
-  border-color: color-mix(in srgb, var(--brand) 35%, var(--border));
-}
-
-.hub-shortcut__title {
-  display: block;
-  font-weight: 650;
-}
-
-.hub-shortcut__count {
-  display: block;
-  margin-top: 0.2rem;
-}
+/* The four `.metric` boxes and the six identical `.hub-shortcut` rows were
+   retired in Phase 2a by `.evidence-strip` and `.tool-drawer` respectively. */
 
 .hub-filters {
   display: grid;
@@ -1560,10 +1499,6 @@ a:hover {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .hub-shortcuts {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
   .card-grid.hub-results {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1650,8 +1585,6 @@ a:hover {
     padding-bottom: calc(var(--bottom-nav-height) + var(--space-6) + env(safe-area-inset-bottom, 0px));
   }
 
-  .metrics,
-  .hub-shortcuts,
   .card-grid.lessons,
   .card-grid.hub-results {
     grid-template-columns: 1fr;
@@ -2403,5 +2336,453 @@ a:hover {
   .activity-question > .btn,
   .activity-listening-form > .btn {
     width: 100%;
+  }
+}
+
+/* ===========================================================================
+   Phase 2a — Daily Learning Studio: dashboard board + hub tool drawers.
+   Tokens only; no new colour is introduced. Gender (--gender-*) and verb-rule
+   (--rule-*) colours are deliberately absent here — they stay reserved for real
+   semantics and are never used as decoration.
+   =========================================================================== */
+
+/* Browse surfaces (dashboard, hub directory) get the wider browse measure. */
+.shell-main:has(.browse-shell) {
+  --content-max: var(--content-max-browse);
+}
+
+.dashboard-header h1 {
+  font-size: var(--text-page);
+}
+
+/* --- Studio board: Continue (dominant) + Today's mission (compact) --------- */
+
+.studio-board {
+  display: grid;
+  gap: var(--space-4);
+  align-items: start;
+}
+
+.studio-card {
+  display: grid;
+  gap: var(--space-3);
+  align-content: start;
+}
+
+.studio-card__body {
+  display: grid;
+  gap: var(--space-3);
+  align-content: start;
+}
+
+.studio-card__eyebrow {
+  margin: 0;
+  font-size: var(--text-meta);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.studio-card__title {
+  margin: 0;
+  line-height: 1.2;
+}
+
+.studio-card--continue .studio-card__title {
+  font-size: var(--text-section);
+}
+
+.studio-card__next {
+  margin: 0;
+  color: var(--ink-muted);
+}
+
+.studio-card__action {
+  margin: var(--space-1) 0 0;
+}
+
+.studio-card__action .btn {
+  width: 100%;
+}
+
+/* Media slot — reserved geometry shared by illustration and meaning plate. */
+.studio-media {
+  aspect-ratio: var(--media-hero-ratio);
+  overflow: hidden;
+  border-radius: calc(var(--radius) - 1px) calc(var(--radius) - 1px) 0 0;
+  background: var(--surface-tint);
+  margin: calc(var(--space-5) * -1) calc(var(--space-5) * -1) 0;
+}
+
+.studio-media__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.studio-media--plate {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: var(--space-2);
+  padding: var(--space-5);
+  border-bottom: 1px solid var(--border-soft);
+  text-align: center;
+}
+
+.studio-media__word {
+  font-size: var(--text-german-card);
+  color: var(--ink);
+}
+
+.studio-media__note {
+  font-size: var(--text-meta);
+  color: var(--ink-muted);
+}
+
+/* Due/new mix bar. Every value it encodes is also written out as text. */
+.mission-mix {
+  display: flex;
+  height: 8px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--surface-tint);
+  border: 1px solid var(--border-soft);
+}
+
+.mission-mix__segment {
+  display: block;
+  height: 100%;
+}
+
+.mission-mix__segment--due {
+  background: var(--brand);
+}
+
+.mission-mix__segment--new {
+  background: color-mix(in srgb, var(--brand) 28%, white);
+}
+
+/* --- Evidence strip (replaces the four metric boxes) ---------------------- */
+
+.evidence-strip {
+  display: grid;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface-raised);
+  box-shadow: var(--shadow);
+}
+
+.evidence-strip__heading {
+  margin: 0;
+  font-size: var(--text-ui);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.evidence-strip__note {
+  margin: 0;
+  color: var(--ink-muted);
+}
+
+.evidence-strip__list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.evidence-item {
+  display: grid;
+  gap: var(--space-1);
+  align-content: start;
+  padding-left: var(--space-4);
+  border-left: 1px solid var(--border-soft);
+}
+
+.evidence-item:first-child {
+  padding-left: 0;
+  border-left: 0;
+}
+
+.evidence-item__label {
+  font-size: var(--text-meta);
+  color: var(--ink-muted);
+}
+
+.evidence-item__value {
+  font-size: var(--text-section);
+  font-weight: var(--font-weight-strong);
+  line-height: 1.15;
+}
+
+.evidence-item__mark {
+  display: block;
+  width: 100%;
+  max-width: 8rem;
+  height: 4px;
+  margin-top: var(--space-1);
+  border-radius: 999px;
+  background: var(--surface-tint);
+  border: 1px solid var(--border-soft);
+  overflow: hidden;
+}
+
+.evidence-item__mark-fill {
+  display: block;
+  height: 100%;
+  background: var(--ink-muted);
+}
+
+/* --- Lesson course cards -------------------------------------------------- */
+
+.course-cards {
+  display: grid;
+  gap: var(--space-4);
+  margin-top: var(--space-3);
+}
+
+.course-card {
+  display: grid;
+  gap: var(--space-3);
+  align-content: start;
+}
+
+.course-card__body {
+  display: grid;
+  gap: var(--space-3);
+  align-content: start;
+}
+
+.course-card .studio-media {
+  aspect-ratio: var(--media-card-ratio);
+}
+
+.course-card__title {
+  margin: 0;
+  font-size: var(--text-german-card);
+  line-height: 1.25;
+}
+
+.course-card__progress {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.course-card__progress progress {
+  width: 100%;
+  height: 8px;
+}
+
+.course-card__progress-note {
+  margin: 0;
+}
+
+/* --- Hub tool drawers (3x2 at desktop) ----------------------------------- */
+
+.tool-drawers {
+  display: grid;
+  gap: var(--space-3);
+  margin: var(--space-3) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tool-drawer {
+  position: relative;
+  display: grid;
+  gap: var(--space-2);
+  align-content: start;
+  padding: var(--space-4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface-raised);
+  box-shadow: var(--shadow);
+  transition:
+    border-color var(--motion-fast) var(--ease-standard),
+    box-shadow var(--motion-base) var(--ease-standard);
+}
+
+.tool-drawer:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-interactive);
+}
+
+/* Fallback ring for engines without :has(); refined to keyboard-only below. */
+.tool-drawer:focus-within {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+@supports selector(:has(*)) {
+  .tool-drawer:focus-within {
+    outline: none;
+  }
+
+  .tool-drawer:has(.tool-drawer__link:focus-visible) {
+    outline: 3px solid var(--focus-ring);
+    outline-offset: 3px;
+  }
+}
+
+.tool-drawer__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  border: 1px solid var(--border-soft);
+  background: var(--surface-tint);
+  color: var(--ink-muted);
+}
+
+.tool-drawer__name {
+  margin: 0;
+  font-size: var(--text-german-card);
+  line-height: 1.25;
+}
+
+.tool-drawer__link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Whole tile is the target; the ring is drawn on the tile via :focus-within. */
+.tool-drawer__link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius);
+}
+
+.tool-drawer__link:focus-visible {
+  outline: none;
+}
+
+.tool-drawer__count {
+  margin: 0;
+  font-size: var(--text-ui);
+  font-weight: var(--font-weight-medium);
+  color: var(--ink);
+}
+
+.tool-drawer__benefit {
+  margin: 0;
+  font-size: var(--text-ui);
+  color: var(--ink-muted);
+}
+
+.tool-drawer__preview {
+  margin: var(--space-1) 0 0;
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--border-soft);
+}
+
+.tool-drawer__preview--empty {
+  font-size: var(--text-meta);
+  color: var(--ink-muted);
+}
+
+.tool-drawer__preview-label {
+  margin: 0 0 var(--space-2);
+  font-size: var(--text-meta);
+  color: var(--ink-muted);
+}
+
+.tool-drawer__preview-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--text-meta);
+  color: var(--ink);
+}
+
+.tool-drawer__preview-list li {
+  padding: 0.15rem 0.5rem;
+  border: 1px solid var(--border-soft);
+  border-radius: 8px;
+  background: var(--surface-tint);
+}
+
+.tool-drawer__arrow {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  color: var(--ink-muted);
+}
+
+/* --- Studio responsive ---------------------------------------------------- */
+
+/* Tablet (820px): course cards and drawers pair up; the studio board stays
+   stacked so Continue keeps its dominance and the mission sits compactly
+   below it, clear of the bottom navigation. */
+@media (min-width: 700px) {
+  .course-cards,
+  .tool-drawers {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .studio-card__action .btn {
+    width: auto;
+  }
+}
+
+/* Desktop rail breakpoint: six drawers become a 3x2 grid. */
+@media (min-width: 1100px) {
+  .tool-drawers {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Wide (1440px): first row splits 7/5 — dominant Continue, compact mission. */
+@media (min-width: 1180px) {
+  .studio-board {
+    grid-template-columns: 7fr 5fr;
+  }
+}
+
+@media (max-width: 699px) {
+  .evidence-strip__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-3);
+  }
+
+  .evidence-item {
+    padding-left: 0;
+    border-left: 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .evidence-strip {
+    padding: var(--space-4);
+  }
+
+  .evidence-strip__list {
+    grid-template-columns: 1fr;
+  }
+
+  .studio-card,
+  .course-card {
+    padding: var(--space-4);
+  }
+
+  .studio-media {
+    margin: calc(var(--space-4) * -1) calc(var(--space-4) * -1) 0;
   }
 }

@@ -7861,7 +7861,7 @@
         },
         {
           "category": "informal",
-          "displayLabel": "qa:age-casual",
+          "displayLabel": "Wie alt bist du?",
           "hubDestination": {
             "hub": "phrases",
             "path": "/phrases/qa:age-casual"
@@ -7913,7 +7913,7 @@
         },
         {
           "category": "formal",
-          "displayLabel": "qa:age-formal",
+          "displayLabel": "Wie alt sind Sie?",
           "hubDestination": {
             "hub": "phrases",
             "path": "/phrases/qa:age-formal"
@@ -7965,7 +7965,7 @@
         },
         {
           "category": "neutral",
-          "displayLabel": "qa:identity",
+          "displayLabel": "Wer ist das?",
           "hubDestination": {
             "hub": "phrases",
             "path": "/phrases/qa:identity"
@@ -8017,7 +8017,7 @@
         },
         {
           "category": "informal",
-          "displayLabel": "qa:name-casual",
+          "displayLabel": "Wie heißt du?",
           "hubDestination": {
             "hub": "phrases",
             "path": "/phrases/qa:name-casual"
@@ -8070,7 +8070,7 @@
         },
         {
           "category": "formal",
-          "displayLabel": "qa:name-formal",
+          "displayLabel": "Wie heißen Sie?",
           "hubDestination": {
             "hub": "phrases",
             "path": "/phrases/qa:name-formal"
@@ -8123,7 +8123,7 @@
         },
         {
           "category": "informal",
-          "displayLabel": "qa:origin-casual",
+          "displayLabel": "Woher kommst du?",
           "hubDestination": {
             "hub": "phrases",
             "path": "/phrases/qa:origin-casual"
@@ -8175,7 +8175,7 @@
         },
         {
           "category": "formal",
-          "displayLabel": "qa:origin-formal",
+          "displayLabel": "Woher kommen Sie?",
           "hubDestination": {
             "hub": "phrases",
             "path": "/phrases/qa:origin-formal"
@@ -8227,7 +8227,7 @@
         },
         {
           "category": "informal",
-          "displayLabel": "qa:profession-casual-main",
+          "displayLabel": "Was bist du von Beruf?",
           "hubDestination": {
             "hub": "phrases",
             "path": "/phrases/qa:profession-casual-main"
@@ -8279,7 +8279,7 @@
         },
         {
           "category": "formal",
-          "displayLabel": "qa:profession-formal-main",
+          "displayLabel": "Was sind Sie von Beruf?",
           "hubDestination": {
             "hub": "phrases",
             "path": "/phrases/qa:profession-formal-main"
@@ -8331,7 +8331,7 @@
         },
         {
           "category": "informal",
-          "displayLabel": "qa:residence-casual",
+          "displayLabel": "Wo wohnst du?",
           "hubDestination": {
             "hub": "phrases",
             "path": "/phrases/qa:residence-casual"
@@ -8383,7 +8383,7 @@
         },
         {
           "category": "formal",
-          "displayLabel": "qa:residence-formal",
+          "displayLabel": "Wo wohnen Sie?",
           "hubDestination": {
             "hub": "phrases",
             "path": "/phrases/qa:residence-formal"
@@ -8435,7 +8435,7 @@
         },
         {
           "category": "informal",
-          "displayLabel": "qa:wellbeing-casual",
+          "displayLabel": "Wie geht’s dir?",
           "hubDestination": {
             "hub": "phrases",
             "path": "/phrases/qa:wellbeing-casual"
@@ -8487,7 +8487,7 @@
         },
         {
           "category": "formal",
-          "displayLabel": "qa:wellbeing-formal",
+          "displayLabel": "Wie geht’s Ihnen?",
           "hubDestination": {
             "hub": "phrases",
             "path": "/phrases/qa:wellbeing-formal"
@@ -8539,7 +8539,7 @@
         },
         {
           "category": "informal",
-          "displayLabel": "qa:work-casual-main",
+          "displayLabel": "Was macht ihr beruflich?",
           "hubDestination": {
             "hub": "phrases",
             "path": "/phrases/qa:work-casual-main"
@@ -8591,7 +8591,7 @@
         },
         {
           "category": "formal",
-          "displayLabel": "qa:work-formal-main",
+          "displayLabel": "Was machen Sie beruflich?",
           "hubDestination": {
             "hub": "phrases",
             "path": "/phrases/qa:work-formal-main"
@@ -9003,7 +9003,7 @@
               "qa:origin-formal",
               "lex:deutschland"
             ],
-            "summary": "Lesson 1 origin questions and country vocabulary connected to the published Herkunft mit aus grammar concept."
+            "summary": "Lesson 1 origin questions and country vocabulary connected to the Herkunft mit aus grammar concept."
           },
           {
             "activities": [
@@ -9046,7 +9046,7 @@
               "qa:name-formal",
               "gram:personal-pronouns-l1"
             ],
-            "summary": "Lesson 1 informal and formal introductions connected to the published du und Sie grammar distinction."
+            "summary": "Lesson 1 informal and formal introductions connected to the du und Sie grammar distinction."
           },
           {
             "activities": [
@@ -9301,7 +9301,7 @@
               "qa:origin-formal",
               "lex:deutschland"
             ],
-            "summary": "Lesson 1 origin questions and country vocabulary connected to the published Herkunft mit aus grammar concept."
+            "summary": "Lesson 1 origin questions and country vocabulary connected to the Herkunft mit aus grammar concept."
           },
           {
             "activities": [
@@ -9344,7 +9344,7 @@
               "qa:name-formal",
               "gram:personal-pronouns-l1"
             ],
-            "summary": "Lesson 1 informal and formal introductions connected to the published du und Sie grammar distinction."
+            "summary": "Lesson 1 informal and formal introductions connected to the du und Sie grammar distinction."
           },
           {
             "activities": [
@@ -12927,7 +12927,7 @@
         },
         {
           "category": "informal",
-          "displayLabel": "qa:age-casual",
+          "displayLabel": "Wie alt bist du?",
           "hubDestination": {
             "hub": "phrases",
             "path": "/phrases/qa:age-casual"
@@ -12979,7 +12979,7 @@
         },
         {
           "category": "formal",
-          "displayLabel": "qa:age-formal",
+          "displayLabel": "Wie alt sind Sie?",
           "hubDestination": {
             "hub": "phrases",
             "path": "/phrases/qa:age-formal"
@@ -13031,7 +13031,7 @@
         },
         {
           "category": "neutral",
-          "displayLabel": "qa:identity",
+          "displayLabel": "Wer ist das?",
           "hubDestination": {
             "hub": "phrases",
             "path": "/phrases/qa:identity"
@@ -13083,7 +13083,7 @@
         },
         {
           "category": "informal",
-          "displayLabel": "qa:name-casual",
+          "displayLabel": "Wie heißt du?",
           "hubDestination": {
             "hub": "phrases",
             "path": "/phrases/qa:name-casual"
@@ -13136,7 +13136,7 @@
         },
         {
           "category": "formal",
-          "displayLabel": "qa:name-formal",
+          "displayLabel": "Wie heißen Sie?",
           "hubDestination": {
             "hub": "phrases",
             "path": "/phrases/qa:name-formal"
@@ -13189,7 +13189,7 @@
         },
         {
           "category": "informal",
-          "displayLabel": "qa:origin-casual",
+          "displayLabel": "Woher kommst du?",
           "hubDestination": {
             "hub": "phrases",
             "path": "/phrases/qa:origin-casual"
@@ -13241,7 +13241,7 @@
         },
         {
           "category": "formal",
-          "displayLabel": "qa:origin-formal",
+          "displayLabel": "Woher kommen Sie?",
           "hubDestination": {
             "hub": "phrases",
             "path": "/phrases/qa:origin-formal"
@@ -13293,7 +13293,7 @@
         },
         {
           "category": "informal",
-          "displayLabel": "qa:profession-casual-main",
+          "displayLabel": "Was bist du von Beruf?",
           "hubDestination": {
             "hub": "phrases",
             "path": "/phrases/qa:profession-casual-main"
@@ -13345,7 +13345,7 @@
         },
         {
           "category": "formal",
-          "displayLabel": "qa:profession-formal-main",
+          "displayLabel": "Was sind Sie von Beruf?",
           "hubDestination": {
             "hub": "phrases",
             "path": "/phrases/qa:profession-formal-main"
@@ -13397,7 +13397,7 @@
         },
         {
           "category": "informal",
-          "displayLabel": "qa:residence-casual",
+          "displayLabel": "Wo wohnst du?",
           "hubDestination": {
             "hub": "phrases",
             "path": "/phrases/qa:residence-casual"
@@ -13449,7 +13449,7 @@
         },
         {
           "category": "formal",
-          "displayLabel": "qa:residence-formal",
+          "displayLabel": "Wo wohnen Sie?",
           "hubDestination": {
             "hub": "phrases",
             "path": "/phrases/qa:residence-formal"
@@ -13501,7 +13501,7 @@
         },
         {
           "category": "informal",
-          "displayLabel": "qa:wellbeing-casual",
+          "displayLabel": "Wie geht’s dir?",
           "hubDestination": {
             "hub": "phrases",
             "path": "/phrases/qa:wellbeing-casual"
@@ -13553,7 +13553,7 @@
         },
         {
           "category": "formal",
-          "displayLabel": "qa:wellbeing-formal",
+          "displayLabel": "Wie geht’s Ihnen?",
           "hubDestination": {
             "hub": "phrases",
             "path": "/phrases/qa:wellbeing-formal"
@@ -13605,7 +13605,7 @@
         },
         {
           "category": "informal",
-          "displayLabel": "qa:work-casual-main",
+          "displayLabel": "Was macht ihr beruflich?",
           "hubDestination": {
             "hub": "phrases",
             "path": "/phrases/qa:work-casual-main"
@@ -13657,7 +13657,7 @@
         },
         {
           "category": "formal",
-          "displayLabel": "qa:work-formal-main",
+          "displayLabel": "Was machen Sie beruflich?",
           "hubDestination": {
             "hub": "phrases",
             "path": "/phrases/qa:work-formal-main"

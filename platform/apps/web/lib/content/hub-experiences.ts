@@ -173,7 +173,7 @@ const CONCEPT_TOPIC_SEEDS: readonly ConceptTopicSeed[] = Object.freeze([
     id: "concept:origin-aus",
     displayLabel: "Origin, countries & aus",
     summary:
-      "Lesson 1 origin questions and country vocabulary connected to the published Herkunft mit aus grammar concept.",
+      "Lesson 1 origin questions and country vocabulary connected to the Herkunft mit aus grammar concept.",
     lessonIds: Object.freeze(["lesson:01"] as const),
     sourceEntityIds: Object.freeze([
       "gram:aus-origin-l1",
@@ -200,7 +200,7 @@ const CONCEPT_TOPIC_SEEDS: readonly ConceptTopicSeed[] = Object.freeze([
     id: "concept:register-introductions",
     displayLabel: "du/Sie register & introductions",
     summary:
-      "Lesson 1 informal and formal introductions connected to the published du und Sie grammar distinction.",
+      "Lesson 1 informal and formal introductions connected to the du und Sie grammar distinction.",
     lessonIds: Object.freeze(["lesson:01"] as const),
     sourceEntityIds: Object.freeze([
       "gram:du-sie-register-l1",

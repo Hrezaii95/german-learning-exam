@@ -461,8 +461,8 @@ function projectAnyVerb(
     present,
     paradigmNote:
       present.length > 0
-        ? "Only the published present forms are shown."
-        : "Present forms are not published for this verb.",
+        ? "Only the confirmed present-tense forms are shown."
+        : "Present-tense forms are not available yet for this verb.",
     media: resolveMediaAvailability({ conceptIds: [id], spokenTexts: [verb.infinitive] }),
     canonicalPath: detailCanonicalPath("verbs", id),
   });
@@ -476,21 +476,21 @@ const QA_CONVERSATION_LEVEL_COPY: Readonly<
 > = Object.freeze({
   model: Object.freeze({
     title: "Model",
-    description: "Study the published question and answer patterns.",
+    description: "Study the question and answer patterns.",
   }),
   "guided-recognition": Object.freeze({
     title: "Guided recognition",
-    description: "Choose among the published answer patterns.",
+    description: "Choose among the accepted answer patterns.",
   }),
   substitution: Object.freeze({
     title: "Substitution",
     description:
-      "Build one published answer frame from canonical published fragments.",
+      "Build one complete answer using only the fragments given here.",
   }),
   "independent-construction": Object.freeze({
     title: "Independent construction",
     description:
-      "Type only the published fixed patterns; filled profession sentences are not accepted unless published.",
+      "Type only the fixed patterns taught here; sentences with a profession filled in are not accepted.",
   }),
   "spoken-role-play": Object.freeze({
     title: "Spoken role-play",

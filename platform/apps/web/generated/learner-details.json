@@ -2357,7 +2357,7 @@
         "assetId": null,
         "state": "missing"
       },
-      "paradigmNote": "Only the published present forms are shown.",
+      "paradigmNote": "Only the confirmed present-tense forms are shown.",
       "present": [
         {
           "form": "arbeite",
@@ -2413,7 +2413,7 @@
         "assetId": null,
         "state": "missing"
       },
-      "paradigmNote": "Only the published present forms are shown.",
+      "paradigmNote": "Only the confirmed present-tense forms are shown.",
       "present": [
         {
           "form": "habe",
@@ -2476,7 +2476,7 @@
         "state": "preview",
         "voice": "de-DE-KatjaNeural"
       },
-      "paradigmNote": "Only the published present forms are shown.",
+      "paradigmNote": "Only the confirmed present-tense forms are shown.",
       "present": [
         {
           "form": "heiße",
@@ -2524,7 +2524,7 @@
         "state": "preview",
         "voice": "de-DE-KatjaNeural"
       },
-      "paradigmNote": "Only the published present forms are shown.",
+      "paradigmNote": "Only the confirmed present-tense forms are shown.",
       "present": [
         {
           "form": "komme",
@@ -2565,7 +2565,7 @@
         "assetId": null,
         "state": "missing"
       },
-      "paradigmNote": "Only the published present forms are shown.",
+      "paradigmNote": "Only the confirmed present-tense forms are shown.",
       "present": [
         {
           "form": "lebe",
@@ -2628,7 +2628,7 @@
         "state": "preview",
         "voice": "de-DE-KatjaNeural"
       },
-      "paradigmNote": "Only the published present forms are shown.",
+      "paradigmNote": "Only the confirmed present-tense forms are shown.",
       "present": [
         {
           "form": "lerne",
@@ -2669,7 +2669,7 @@
         "assetId": null,
         "state": "missing"
       },
-      "paradigmNote": "Only the published present forms are shown.",
+      "paradigmNote": "Only the confirmed present-tense forms are shown.",
       "present": [
         {
           "form": "mache",
@@ -2789,7 +2789,7 @@
         "assetId": null,
         "state": "missing"
       },
-      "paradigmNote": "Only the published present forms are shown.",
+      "paradigmNote": "Only the confirmed present-tense forms are shown.",
       "present": [
         {
           "form": "studiere",
@@ -2845,7 +2845,7 @@
         "assetId": null,
         "state": "missing"
       },
-      "paradigmNote": "Only the published present forms are shown.",
+      "paradigmNote": "Only the confirmed present-tense forms are shown.",
       "present": [
         {
           "form": "wohne",
@@ -2910,7 +2910,7 @@
         "state": "preview",
         "voice": "de-DE-KatjaNeural"
       },
-      "notice": "The published origin answers use kommen + aus + country name.",
+      "notice": "The origin answers taught here use kommen + aus + country name.",
       "prerequisiteIds": [
         "gram:main-clause-word-order-l1"
       ],
@@ -2922,7 +2922,7 @@
         {
           "id": "aus-country",
           "model": "Ich komme aus Deutschland.",
-          "notice": "Use aus before the published country expression."
+          "notice": "Use aus before the country expression."
         }
       ],
       "sourcePriority": 2,
@@ -3006,7 +3006,7 @@
         {
           "id": "full-person",
           "model": "wir sind · ihr seid · sie/Sie sind",
-          "notice": "Match each pronoun with its published present form."
+          "notice": "Match each pronoun with its present-tense form."
         }
       ],
       "sourcePriority": 2,
@@ -3160,7 +3160,7 @@
         "state": "preview",
         "voice": "de-DE-KatjaNeural"
       },
-      "notice": "Published present forms include regular endings and the taught special paradigms heißen and sein.",
+      "notice": "The present-tense forms here cover regular endings plus the two special patterns you learn now: heißen and sein.",
       "prerequisiteIds": [
         "gram:personal-pronouns-l1"
       ],
@@ -3236,7 +3236,7 @@
         {
           "id": "arbeiten-bei-in",
           "model": "Ich arbeite bei einer Firma.",
-          "notice": "Use bei or in only in the published workplace patterns."
+          "notice": "Use bei or in only in the workplace patterns taught here."
         }
       ],
       "sourcePriority": 2,
@@ -3269,7 +3269,7 @@
         "state": "preview",
         "voice": "de-DE-KatjaNeural"
       },
-      "notice": "Published profession pairs form feminine person words with -in where evidenced; plural -innen is used only when stored in the source.",
+      "notice": "Profession pairs form feminine person words with -in where the course shows it; the plural -innen is used only where the course lists it.",
       "prerequisiteIds": [],
       "prerequisiteLabels": [],
       "publicationStatus": "published",
@@ -3277,12 +3277,12 @@
         {
           "id": "feminine-in",
           "model": "Architekt → Architektin · Arzt → Ärztin",
-          "notice": "Link each published feminine form to its masculine base; preserve source-supported stem changes."
+          "notice": "Link each feminine form to its masculine base; keep the stem changes the course shows."
         },
         {
           "id": "plural-innen",
           "model": "Lehrerinnen",
-          "notice": "Use -innen only for a source-published feminine plural."
+          "notice": "Use -innen only where the course lists a feminine plural."
         }
       ],
       "sourcePriority": 2,
@@ -3665,25 +3665,25 @@
       "canonicalPath": "/phrases/id-71613a70726f66657373696f6e2d63617375616c2d6d61696e",
       "conversationLevels": [
         {
-          "description": "Study the published question and answer patterns.",
+          "description": "Study the question and answer patterns.",
           "id": "model",
           "status": "available",
           "title": "Model"
         },
         {
-          "description": "Choose among the published answer patterns.",
+          "description": "Choose among the accepted answer patterns.",
           "id": "guided-recognition",
           "status": "available",
           "title": "Guided recognition"
         },
         {
-          "description": "Build one published answer frame from canonical published fragments.",
+          "description": "Build one complete answer using only the fragments given here.",
           "id": "substitution",
           "status": "available",
           "title": "Substitution"
         },
         {
-          "description": "Type only the published fixed patterns; filled profession sentences are not accepted unless published.",
+          "description": "Type only the fixed patterns taught here; sentences with a profession filled in are not accepted.",
           "id": "independent-construction",
           "status": "available",
           "title": "Independent construction"
@@ -4126,7 +4126,7 @@
         "state": "preview",
         "voice": "de-DE-KatjaNeural"
       },
-      "notice": "The published origin answers use kommen + aus + country name.",
+      "notice": "The origin answers taught here use kommen + aus + country name.",
       "prerequisiteIds": [
         "gram:main-clause-word-order-l1"
       ],
@@ -4138,7 +4138,7 @@
         {
           "id": "aus-country",
           "model": "Ich komme aus Deutschland.",
-          "notice": "Use aus before the published country expression."
+          "notice": "Use aus before the country expression."
         }
       ],
       "sourcePriority": 2,
@@ -4222,7 +4222,7 @@
         {
           "id": "full-person",
           "model": "wir sind · ihr seid · sie/Sie sind",
-          "notice": "Match each pronoun with its published present form."
+          "notice": "Match each pronoun with its present-tense form."
         }
       ],
       "sourcePriority": 2,
@@ -4376,7 +4376,7 @@
         "state": "preview",
         "voice": "de-DE-KatjaNeural"
       },
-      "notice": "Published present forms include regular endings and the taught special paradigms heißen and sein.",
+      "notice": "The present-tense forms here cover regular endings plus the two special patterns you learn now: heißen and sein.",
       "prerequisiteIds": [
         "gram:personal-pronouns-l1"
       ],
@@ -4452,7 +4452,7 @@
         {
           "id": "arbeiten-bei-in",
           "model": "Ich arbeite bei einer Firma.",
-          "notice": "Use bei or in only in the published workplace patterns."
+          "notice": "Use bei or in only in the workplace patterns taught here."
         }
       ],
       "sourcePriority": 2,
@@ -4485,7 +4485,7 @@
         "state": "preview",
         "voice": "de-DE-KatjaNeural"
       },
-      "notice": "Published profession pairs form feminine person words with -in where evidenced; plural -innen is used only when stored in the source.",
+      "notice": "Profession pairs form feminine person words with -in where the course shows it; the plural -innen is used only where the course lists it.",
       "prerequisiteIds": [],
       "prerequisiteLabels": [],
       "publicationStatus": "published",
@@ -4493,12 +4493,12 @@
         {
           "id": "feminine-in",
           "model": "Architekt → Architektin · Arzt → Ärztin",
-          "notice": "Link each published feminine form to its masculine base; preserve source-supported stem changes."
+          "notice": "Link each feminine form to its masculine base; keep the stem changes the course shows."
         },
         {
           "id": "plural-innen",
           "model": "Lehrerinnen",
-          "notice": "Use -innen only for a source-published feminine plural."
+          "notice": "Use -innen only where the course lists a feminine plural."
         }
       ],
       "sourcePriority": 2,
@@ -7222,25 +7222,25 @@
       "canonicalPath": "/phrases/id-71613a70726f66657373696f6e2d63617375616c2d6d61696e",
       "conversationLevels": [
         {
-          "description": "Study the published question and answer patterns.",
+          "description": "Study the question and answer patterns.",
           "id": "model",
           "status": "available",
           "title": "Model"
         },
         {
-          "description": "Choose among the published answer patterns.",
+          "description": "Choose among the accepted answer patterns.",
           "id": "guided-recognition",
           "status": "available",
           "title": "Guided recognition"
         },
         {
-          "description": "Build one published answer frame from canonical published fragments.",
+          "description": "Build one complete answer using only the fragments given here.",
           "id": "substitution",
           "status": "available",
           "title": "Substitution"
         },
         {
-          "description": "Type only the published fixed patterns; filled profession sentences are not accepted unless published.",
+          "description": "Type only the fixed patterns taught here; sentences with a profession filled in are not accepted.",
           "id": "independent-construction",
           "status": "available",
           "title": "Independent construction"
@@ -7672,7 +7672,7 @@
         "assetId": null,
         "state": "missing"
       },
-      "paradigmNote": "Only the published present forms are shown.",
+      "paradigmNote": "Only the confirmed present-tense forms are shown.",
       "present": [
         {
           "form": "arbeite",
@@ -7728,7 +7728,7 @@
         "assetId": null,
         "state": "missing"
       },
-      "paradigmNote": "Only the published present forms are shown.",
+      "paradigmNote": "Only the confirmed present-tense forms are shown.",
       "present": [
         {
           "form": "habe",
@@ -7791,7 +7791,7 @@
         "state": "preview",
         "voice": "de-DE-KatjaNeural"
       },
-      "paradigmNote": "Only the published present forms are shown.",
+      "paradigmNote": "Only the confirmed present-tense forms are shown.",
       "present": [
         {
           "form": "heiße",
@@ -7839,7 +7839,7 @@
         "state": "preview",
         "voice": "de-DE-KatjaNeural"
       },
-      "paradigmNote": "Only the published present forms are shown.",
+      "paradigmNote": "Only the confirmed present-tense forms are shown.",
       "present": [
         {
           "form": "komme",
@@ -7880,7 +7880,7 @@
         "assetId": null,
         "state": "missing"
       },
-      "paradigmNote": "Only the published present forms are shown.",
+      "paradigmNote": "Only the confirmed present-tense forms are shown.",
       "present": [
         {
           "form": "lebe",
@@ -7943,7 +7943,7 @@
         "state": "preview",
         "voice": "de-DE-KatjaNeural"
       },
-      "paradigmNote": "Only the published present forms are shown.",
+      "paradigmNote": "Only the confirmed present-tense forms are shown.",
       "present": [
         {
           "form": "lerne",
@@ -7984,7 +7984,7 @@
         "assetId": null,
         "state": "missing"
       },
-      "paradigmNote": "Only the published present forms are shown.",
+      "paradigmNote": "Only the confirmed present-tense forms are shown.",
       "present": [
         {
           "form": "mache",
@@ -8104,7 +8104,7 @@
         "assetId": null,
         "state": "missing"
       },
-      "paradigmNote": "Only the published present forms are shown.",
+      "paradigmNote": "Only the confirmed present-tense forms are shown.",
       "present": [
         {
           "form": "studiere",
@@ -8160,7 +8160,7 @@
         "assetId": null,
         "state": "missing"
       },
-      "paradigmNote": "Only the published present forms are shown.",
+      "paradigmNote": "Only the confirmed present-tense forms are shown.",
       "present": [
         {
           "form": "wohne",
@@ -8339,25 +8339,25 @@
       "canonicalPath": "/phrases/id-71613a70726f66657373696f6e2d63617375616c2d6d61696e",
       "conversationLevels": [
         {
-          "description": "Study the published question and answer patterns.",
+          "description": "Study the question and answer patterns.",
           "id": "model",
           "status": "available",
           "title": "Model"
         },
         {
-          "description": "Choose among the published answer patterns.",
+          "description": "Choose among the accepted answer patterns.",
           "id": "guided-recognition",
           "status": "available",
           "title": "Guided recognition"
         },
         {
-          "description": "Build one published answer frame from canonical published fragments.",
+          "description": "Build one complete answer using only the fragments given here.",
           "id": "substitution",
           "status": "available",
           "title": "Substitution"
         },
         {
-          "description": "Type only the published fixed patterns; filled profession sentences are not accepted unless published.",
+          "description": "Type only the fixed patterns taught here; sentences with a profession filled in are not accepted.",
           "id": "independent-construction",
           "status": "available",
           "title": "Independent construction"
@@ -8469,25 +8469,25 @@
       "canonicalPath": "/phrases/id-71613a70726f66657373696f6e2d63617375616c2d6d61696e",
       "conversationLevels": [
         {
-          "description": "Study the published question and answer patterns.",
+          "description": "Study the question and answer patterns.",
           "id": "model",
           "status": "available",
           "title": "Model"
         },
         {
-          "description": "Choose among the published answer patterns.",
+          "description": "Choose among the accepted answer patterns.",
           "id": "guided-recognition",
           "status": "available",
           "title": "Guided recognition"
         },
         {
-          "description": "Build one published answer frame from canonical published fragments.",
+          "description": "Build one complete answer using only the fragments given here.",
           "id": "substitution",
           "status": "available",
           "title": "Substitution"
         },
         {
-          "description": "Type only the published fixed patterns; filled profession sentences are not accepted unless published.",
+          "description": "Type only the fixed patterns taught here; sentences with a profession filled in are not accepted.",
           "id": "independent-construction",
           "status": "available",
           "title": "Independent construction"

@@ -27,7 +27,7 @@ export function ProfessionRowClient({ row }: { row: ExtraProfessionRow }) {
         </div>
         <div className="meta-row">
           <span className="meta-chip">Candidate — German review pending</span>
-          <span className="meta-chip">{previewCount > 0 ? `${previewCount} exact audio previews` : "Audio not published"}</span>
+          <span className="meta-chip">{previewCount > 0 ? `${previewCount} exact audio previews` : "Audio not available yet"}</span>
           <span className="meta-chip">Does not affect Lesson 2 completion</span>
         </div>
       </header>
@@ -73,7 +73,7 @@ export function ProfessionRowClient({ row }: { row: ExtraProfessionRow }) {
       <aside className={`panel ${styles.notice}`}>
         <h2>Content boundary</h2>
         <p>German forms are reproduced exactly from the optional learner note and remain candidates pending qualified German-language review.</p>
-        <p>No source profession image is published. The diagram above is a semantic text infographic, not a claimed source illustration.</p>
+        <p>There is no course illustration for this profession. The diagram above is a text-based meaning graphic, not an illustration from the course.</p>
       </aside>
     </div>
   );

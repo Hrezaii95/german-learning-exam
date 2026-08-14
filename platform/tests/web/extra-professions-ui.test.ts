@@ -44,7 +44,8 @@ describe("extra professions learner UI", () => {
     expect(html).toContain("102 form lexemes");
     expect(html).toContain("not core completion");
     expect(html).toContain("qualified German-language review");
-    expect(html).toContain("only exact owner-authorized synthesized previews");
+    expect(html).toContain("only approved computer-generated previews of the exact word are offered");
+    expect(html).toContain("marked as not available yet");
     expect(html).toContain('type="search"');
     expect(html).toContain("Show only rows with slash alternatives");
     expect(html).toContain("Source-backed visual flashcards");

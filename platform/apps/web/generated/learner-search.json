@@ -7939,7 +7939,7 @@
     {
       "canonicalHref": "/phrases/id-71613a6167652d63617375616c",
       "category": "informal",
-      "displayLabel": "qa:age-casual",
+      "displayLabel": "Wie alt bist du?",
       "fields": [
         {
           "displayText": "qa:age-casual",
@@ -7991,7 +7991,7 @@
     {
       "canonicalHref": "/phrases/id-71613a6167652d666f726d616c",
       "category": "formal",
-      "displayLabel": "qa:age-formal",
+      "displayLabel": "Wie alt sind Sie?",
       "fields": [
         {
           "displayText": "qa:age-formal",
@@ -8043,7 +8043,7 @@
     {
       "canonicalHref": "/phrases/id-71613a6964656e74697479",
       "category": "neutral",
-      "displayLabel": "qa:identity",
+      "displayLabel": "Wer ist das?",
       "fields": [
         {
           "displayText": "qa:identity",
@@ -8095,7 +8095,7 @@
     {
       "canonicalHref": "/phrases/id-71613a6e616d652d63617375616c",
       "category": "informal",
-      "displayLabel": "qa:name-casual",
+      "displayLabel": "Wie heißt du?",
       "fields": [
         {
           "displayText": "qa:name-casual",
@@ -8148,7 +8148,7 @@
     {
       "canonicalHref": "/phrases/id-71613a6e616d652d666f726d616c",
       "category": "formal",
-      "displayLabel": "qa:name-formal",
+      "displayLabel": "Wie heißen Sie?",
       "fields": [
         {
           "displayText": "qa:name-formal",
@@ -8201,7 +8201,7 @@
     {
       "canonicalHref": "/phrases/id-71613a6f726967696e2d63617375616c",
       "category": "informal",
-      "displayLabel": "qa:origin-casual",
+      "displayLabel": "Woher kommst du?",
       "fields": [
         {
           "displayText": "qa:origin-casual",
@@ -8253,7 +8253,7 @@
     {
       "canonicalHref": "/phrases/id-71613a6f726967696e2d666f726d616c",
       "category": "formal",
-      "displayLabel": "qa:origin-formal",
+      "displayLabel": "Woher kommen Sie?",
       "fields": [
         {
           "displayText": "qa:origin-formal",
@@ -8305,7 +8305,7 @@
     {
       "canonicalHref": "/phrases/id-71613a70726f66657373696f6e2d63617375616c2d6d61696e",
       "category": "informal",
-      "displayLabel": "qa:profession-casual-main",
+      "displayLabel": "Was bist du von Beruf?",
       "fields": [
         {
           "displayText": "qa:profession-casual-main",
@@ -8357,7 +8357,7 @@
     {
       "canonicalHref": "/phrases/id-71613a70726f66657373696f6e2d666f726d616c2d6d61696e",
       "category": "formal",
-      "displayLabel": "qa:profession-formal-main",
+      "displayLabel": "Was sind Sie von Beruf?",
       "fields": [
         {
           "displayText": "qa:profession-formal-main",
@@ -8409,7 +8409,7 @@
     {
       "canonicalHref": "/phrases/id-71613a7265736964656e63652d63617375616c",
       "category": "informal",
-      "displayLabel": "qa:residence-casual",
+      "displayLabel": "Wo wohnst du?",
       "fields": [
         {
           "displayText": "qa:residence-casual",
@@ -8461,7 +8461,7 @@
     {
       "canonicalHref": "/phrases/id-71613a7265736964656e63652d666f726d616c",
       "category": "formal",
-      "displayLabel": "qa:residence-formal",
+      "displayLabel": "Wo wohnen Sie?",
       "fields": [
         {
           "displayText": "qa:residence-formal",
@@ -8513,7 +8513,7 @@
     {
       "canonicalHref": "/phrases/id-71613a77656c6c6265696e672d63617375616c",
       "category": "informal",
-      "displayLabel": "qa:wellbeing-casual",
+      "displayLabel": "Wie geht’s dir?",
       "fields": [
         {
           "displayText": "qa:wellbeing-casual",
@@ -8565,7 +8565,7 @@
     {
       "canonicalHref": "/phrases/id-71613a77656c6c6265696e672d666f726d616c",
       "category": "formal",
-      "displayLabel": "qa:wellbeing-formal",
+      "displayLabel": "Wie geht’s Ihnen?",
       "fields": [
         {
           "displayText": "qa:wellbeing-formal",
@@ -8617,7 +8617,7 @@
     {
       "canonicalHref": "/phrases/id-71613a776f726b2d63617375616c2d6d61696e",
       "category": "informal",
-      "displayLabel": "qa:work-casual-main",
+      "displayLabel": "Was macht ihr beruflich?",
       "fields": [
         {
           "displayText": "qa:work-casual-main",
@@ -8669,7 +8669,7 @@
     {
       "canonicalHref": "/phrases/id-71613a776f726b2d666f726d616c2d6d61696e",
       "category": "formal",
-      "displayLabel": "qa:work-formal-main",
+      "displayLabel": "Was machen Sie beruflich?",
       "fields": [
         {
           "displayText": "qa:work-formal-main",
@@ -17472,7 +17472,7 @@
     "qa:age-casual": {
       "canonicalHref": "/phrases/id-71613a6167652d63617375616c",
       "category": "informal",
-      "displayLabel": "qa:age-casual",
+      "displayLabel": "Wie alt bist du?",
       "fields": [
         {
           "displayText": "qa:age-casual",
@@ -17524,7 +17524,7 @@
     "qa:age-formal": {
       "canonicalHref": "/phrases/id-71613a6167652d666f726d616c",
       "category": "formal",
-      "displayLabel": "qa:age-formal",
+      "displayLabel": "Wie alt sind Sie?",
       "fields": [
         {
           "displayText": "qa:age-formal",
@@ -17576,7 +17576,7 @@
     "qa:identity": {
       "canonicalHref": "/phrases/id-71613a6964656e74697479",
       "category": "neutral",
-      "displayLabel": "qa:identity",
+      "displayLabel": "Wer ist das?",
       "fields": [
         {
           "displayText": "qa:identity",
@@ -17628,7 +17628,7 @@
     "qa:name-casual": {
       "canonicalHref": "/phrases/id-71613a6e616d652d63617375616c",
       "category": "informal",
-      "displayLabel": "qa:name-casual",
+      "displayLabel": "Wie heißt du?",
       "fields": [
         {
           "displayText": "qa:name-casual",
@@ -17681,7 +17681,7 @@
     "qa:name-formal": {
       "canonicalHref": "/phrases/id-71613a6e616d652d666f726d616c",
       "category": "formal",
-      "displayLabel": "qa:name-formal",
+      "displayLabel": "Wie heißen Sie?",
       "fields": [
         {
           "displayText": "qa:name-formal",
@@ -17734,7 +17734,7 @@
     "qa:origin-casual": {
       "canonicalHref": "/phrases/id-71613a6f726967696e2d63617375616c",
       "category": "informal",
-      "displayLabel": "qa:origin-casual",
+      "displayLabel": "Woher kommst du?",
       "fields": [
         {
           "displayText": "qa:origin-casual",
@@ -17786,7 +17786,7 @@
     "qa:origin-formal": {
       "canonicalHref": "/phrases/id-71613a6f726967696e2d666f726d616c",
       "category": "formal",
-      "displayLabel": "qa:origin-formal",
+      "displayLabel": "Woher kommen Sie?",
       "fields": [
         {
           "displayText": "qa:origin-formal",
@@ -17838,7 +17838,7 @@
     "qa:profession-casual-main": {
       "canonicalHref": "/phrases/id-71613a70726f66657373696f6e2d63617375616c2d6d61696e",
       "category": "informal",
-      "displayLabel": "qa:profession-casual-main",
+      "displayLabel": "Was bist du von Beruf?",
       "fields": [
         {
           "displayText": "qa:profession-casual-main",
@@ -17890,7 +17890,7 @@
     "qa:profession-formal-main": {
       "canonicalHref": "/phrases/id-71613a70726f66657373696f6e2d666f726d616c2d6d61696e",
       "category": "formal",
-      "displayLabel": "qa:profession-formal-main",
+      "displayLabel": "Was sind Sie von Beruf?",
       "fields": [
         {
           "displayText": "qa:profession-formal-main",
@@ -17942,7 +17942,7 @@
     "qa:residence-casual": {
       "canonicalHref": "/phrases/id-71613a7265736964656e63652d63617375616c",
       "category": "informal",
-      "displayLabel": "qa:residence-casual",
+      "displayLabel": "Wo wohnst du?",
       "fields": [
         {
           "displayText": "qa:residence-casual",
@@ -17994,7 +17994,7 @@
     "qa:residence-formal": {
       "canonicalHref": "/phrases/id-71613a7265736964656e63652d666f726d616c",
       "category": "formal",
-      "displayLabel": "qa:residence-formal",
+      "displayLabel": "Wo wohnen Sie?",
       "fields": [
         {
           "displayText": "qa:residence-formal",
@@ -18046,7 +18046,7 @@
     "qa:wellbeing-casual": {
       "canonicalHref": "/phrases/id-71613a77656c6c6265696e672d63617375616c",
       "category": "informal",
-      "displayLabel": "qa:wellbeing-casual",
+      "displayLabel": "Wie geht’s dir?",
       "fields": [
         {
           "displayText": "qa:wellbeing-casual",
@@ -18098,7 +18098,7 @@
     "qa:wellbeing-formal": {
       "canonicalHref": "/phrases/id-71613a77656c6c6265696e672d666f726d616c",
       "category": "formal",
-      "displayLabel": "qa:wellbeing-formal",
+      "displayLabel": "Wie geht’s Ihnen?",
       "fields": [
         {
           "displayText": "qa:wellbeing-formal",
@@ -18150,7 +18150,7 @@
     "qa:work-casual-main": {
       "canonicalHref": "/phrases/id-71613a776f726b2d63617375616c2d6d61696e",
       "category": "informal",
-      "displayLabel": "qa:work-casual-main",
+      "displayLabel": "Was macht ihr beruflich?",
       "fields": [
         {
           "displayText": "qa:work-casual-main",
@@ -18202,7 +18202,7 @@
     "qa:work-formal-main": {
       "canonicalHref": "/phrases/id-71613a776f726b2d666f726d616c2d6d61696e",
       "category": "formal",
-      "displayLabel": "qa:work-formal-main",
+      "displayLabel": "Was machen Sie beruflich?",
       "fields": [
         {
           "displayText": "qa:work-formal-main",

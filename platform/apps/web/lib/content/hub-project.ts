@@ -107,6 +107,30 @@ function projectSearchFields(
   );
 }
 
+/**
+ * Q&A pairs carry a machine intent (`qa:age-casual`) as their index label, which
+ * a learner must never see. The search document already carries the German
+ * question itself as its `realization` field — that is the learner-facing name.
+ */
+function learnerHubLabel(
+  indexes: ContentIndexes,
+  id: string,
+  kind: LearnerHubEntityKind,
+  indexLabel: string,
+): string {
+  if (kind !== "QAPair") return indexLabel;
+  const realization = indexes.searchDocumentsById
+    .get(id)
+    ?.fields.find((field) => field.field === "realization")
+    ?.displayText.trim();
+  if (!realization) {
+    throw new HubProjectionError(
+      `Q&A pair ${id} has no question wording to show as its hub label`,
+    );
+  }
+  return realization;
+}
+
 function projectHubRecord(
   indexes: ContentIndexes,
   id: string,
@@ -144,7 +168,7 @@ function projectHubRecord(
     id: record.id,
     kind: record.kind,
     publicationStatus: "published",
-    displayLabel: record.displayLabel,
+    displayLabel: learnerHubLabel(indexes, record.id, record.kind, record.displayLabel),
     category: record.category,
     lessonIds: Object.freeze([...record.lessonIds].sort((a, b) => a.localeCompare(b))),
     sourcePriority: record.sourcePriority,

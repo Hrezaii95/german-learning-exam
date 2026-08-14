@@ -108,10 +108,10 @@ export function ProfessionCollectionClient({ projection }: { projection: ExtraPr
       </header>
 
       <aside className={`panel ${styles.notice}`} aria-labelledby="collection-status-heading">
-        <h2 id="collection-status-heading">Publication status</h2>
+        <h2 id="collection-status-heading">What is ready here</h2>
         <p><strong>Text:</strong> exact source candidates; qualified German-language review pending.</p>
         <p><strong>Graphics:</strong> semantic diagrams built from those exact forms; no profession image was supplied.</p>
-        <p><strong>Audio:</strong> only exact owner-authorized synthesized previews are exposed. Every absent match is explicitly marked not published.</p>
+        <p><strong>Audio:</strong> only approved computer-generated previews of the exact word are offered. Anything without an exact match is marked as not available yet.</p>
       </aside>
 
       <section className={`panel ${styles.filters}`} aria-labelledby="filter-heading">
@@ -145,7 +145,7 @@ export function ProfessionCollectionClient({ projection }: { projection: ExtraPr
                   <div className={styles.cardTopline}>
                     <span className="dense">Source row {row.sourceRow}</span>
                     <span className={audioCount > 0 ? styles.readyBadge : styles.missingBadge}>
-                      {audioCount > 0 ? `${audioCount} audio previews` : "Audio not published"}
+                      {audioCount > 0 ? `${audioCount} audio previews` : "Audio not available yet"}
                     </span>
                   </div>
                   <div>

@@ -1,7 +1,9 @@
+import type { ReactNode } from "react";
 import Link from "next/link";
 import type {
   LearnerConceptTopic,
   LearnerHubDefinition,
+  LearnerHubId,
   LearnerHubProjection,
   LearnerHubRecord,
   LearnerListeningGroup,
@@ -91,13 +93,218 @@ function hubDetailHref(
   );
 }
 
+/**
+ * Tool-drawer presentation for the six hubs (dashboard + /hubs directory).
+ * Icons are drawn inline so no new image asset is required, and they carry no
+ * gender or verb-rule meaning — those systems stay reserved for real semantics.
+ */
+const HUB_TOOL_GLYPHS: Record<LearnerHubId, ReactNode> = {
+  vocabulary: (
+    <>
+      <path d="M4 5.6A1.6 1.6 0 0 1 5.6 4H10a2.4 2.4 0 0 1 2 1.1A2.4 2.4 0 0 1 14 4h4.4A1.6 1.6 0 0 1 20 5.6v11.8a1.6 1.6 0 0 1-1.6 1.6H14a2.4 2.4 0 0 0-2 1.1 2.4 2.4 0 0 0-2-1.1H5.6A1.6 1.6 0 0 1 4 17.4Z" />
+      <path d="M12 5.1v14.9" />
+    </>
+  ),
+  verbs: (
+    <>
+      <path d="M19.6 12a7.6 7.6 0 1 1-2.7-5.8" />
+      <path d="M19.6 4.4V9h-4.6" />
+      <path d="M9 12h6" />
+    </>
+  ),
+  grammar: (
+    <>
+      <rect x="3.4" y="4.4" width="7" height="5.6" rx="1.6" />
+      <rect x="13.6" y="4.4" width="7" height="5.6" rx="1.6" />
+      <rect x="8.5" y="14" width="7" height="5.6" rx="1.6" />
+      <path d="M6.9 10v2.2h10.2V10" />
+      <path d="M12 12.2V14" />
+    </>
+  ),
+  phrases: (
+    <>
+      <rect x="3" y="4.4" width="11" height="7" rx="2.2" />
+      <path d="M6.6 11.4v3.1l3.1-3.1" />
+      <rect x="10" y="12.6" width="11" height="7" rx="2.2" />
+      <path d="M17.4 19.6v2.4l-2.6-2.4" />
+    </>
+  ),
+  listening: (
+    <>
+      <path d="M4.6 15.2V12a7.4 7.4 0 0 1 14.8 0v3.2" />
+      <rect x="2.8" y="13.8" width="4.2" height="6.2" rx="2.1" />
+      <rect x="17" y="13.8" width="4.2" height="6.2" rx="2.1" />
+    </>
+  ),
+  concepts: (
+    <>
+      <circle cx="12" cy="5.6" r="2.6" />
+      <circle cx="5.6" cy="17.2" r="2.6" />
+      <circle cx="18.4" cy="17.2" r="2.6" />
+      <path d="M10.6 7.7 7 14.9" />
+      <path d="M13.4 7.7 17 14.9" />
+      <path d="M8.2 17.2h7.6" />
+    </>
+  ),
+};
+
+type HubToolCopy = Readonly<{
+  /** Learner-language noun for the count. Never a schema or entity name. */
+  countNoun: (count: number) => string;
+  benefit: string;
+  previewLabel: string;
+  previewLang: "de" | "en";
+}>;
+
+const HUB_TOOL_COPY: Readonly<Record<LearnerHubId, HubToolCopy>> = Object.freeze({
+  vocabulary: Object.freeze({
+    countNoun: (count: number) => `${count} ${count === 1 ? "word" : "words"}`,
+    benefit: "Look a word up with its article, meaning and plural.",
+    previewLabel: "Words inside",
+    previewLang: "de",
+  }),
+  verbs: Object.freeze({
+    countNoun: (count: number) => `${count} ${count === 1 ? "verb" : "verbs"}`,
+    benefit: "See every present-tense form and how the ending changes.",
+    previewLabel: "Verbs inside",
+    previewLang: "de",
+  }),
+  grammar: Object.freeze({
+    countNoun: (count: number) => `${count} ${count === 1 ? "rule" : "rules"}`,
+    benefit: "Short rules, each with one worked German model.",
+    previewLabel: "Rules inside",
+    previewLang: "de",
+  }),
+  phrases: Object.freeze({
+    countNoun: (count: number) => `${count} ${count === 1 ? "phrase" : "phrases"}`,
+    benefit: "Whole questions and answers you can say straight away.",
+    previewLabel: "Turns inside",
+    previewLang: "de",
+  }),
+  listening: Object.freeze({
+    countNoun: (count: number) => `${count} audio ${count === 1 ? "track" : "tracks"}`,
+    benefit: "Workbook audio kept with the exercise it belongs to.",
+    previewLabel: "Exercises inside",
+    previewLang: "en",
+  }),
+  concepts: Object.freeze({
+    countNoun: (count: number) => `${count} ${count === 1 ? "topic" : "topics"}`,
+    benefit: "See how one topic links lessons, words and grammar.",
+    previewLabel: "Topics inside",
+    previewLang: "en",
+  }),
+});
+
+const HUB_PREVIEW_LIMIT = 3;
+
+/** Type-specific sample drawn from the real projection — never invented copy. */
+export function hubToolPreviewItems(hub: LearnerHubDefinition): readonly string[] {
+  const source =
+    hub.experience?.kind === "listening"
+      ? hub.experience.groups.map((group) => group.purpose)
+      : hub.experience?.kind === "concepts"
+        ? hub.experience.topics.map((topic) => topic.displayLabel)
+        : hub.items.map((item) => item.displayLabel);
+  const seen = new Set<string>();
+  const unique: string[] = [];
+  for (const label of source) {
+    if (seen.has(label)) continue;
+    seen.add(label);
+    unique.push(label);
+    if (unique.length === HUB_PREVIEW_LIMIT) break;
+  }
+  return unique;
+}
+
+function HubToolDrawer({ hub }: { hub: LearnerHubDefinition }) {
+  const copy = HUB_TOOL_COPY[hub.id];
+  const count = hubVisibleItemCount(hub);
+  const preview = count === 0 ? [] : hubToolPreviewItems(hub);
+  const nameId = `tool-drawer-${hub.id}`;
+
+  return (
+    <li className="tool-drawer">
+      <span className="tool-drawer__icon" aria-hidden="true">
+        <svg
+          viewBox="0 0 24 24"
+          width="24"
+          height="24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.6"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          focusable="false"
+        >
+          {HUB_TOOL_GLYPHS[hub.id]}
+        </svg>
+      </span>
+      <h3 className="tool-drawer__name" id={nameId}>
+        <Link
+          className="tool-drawer__link"
+          href={hub.path}
+          aria-label={`Open ${hub.title}`}
+        >
+          {hub.title}
+        </Link>
+      </h3>
+      <p className="tool-drawer__count">{copy.countNoun(count)}</p>
+      <p className="tool-drawer__benefit">{copy.benefit}</p>
+      {preview.length > 0 ? (
+        <div className="tool-drawer__preview">
+          <p className="tool-drawer__preview-label" id={`${nameId}-preview`}>
+            {copy.previewLabel}
+          </p>
+          <ul
+            className="tool-drawer__preview-list"
+            aria-labelledby={`${nameId}-preview`}
+          >
+            {preview.map((label) => (
+              <li key={label}>
+                {copy.previewLang === "de" ? (
+                  <span className="german" lang="de">
+                    {label}
+                  </span>
+                ) : (
+                  label
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : (
+        <p className="tool-drawer__preview tool-drawer__preview--empty">
+          Nothing here yet — this hub fills up as the course grows.
+        </p>
+      )}
+      <span className="tool-drawer__arrow" aria-hidden="true">
+        →
+      </span>
+    </li>
+  );
+}
+
+export function HubToolDrawerGrid({
+  hubs,
+}: {
+  hubs: readonly LearnerHubDefinition[];
+}) {
+  return (
+    <ul className="tool-drawers">
+      {hubs.map((hub) => (
+        <HubToolDrawer key={hub.id} hub={hub} />
+      ))}
+    </ul>
+  );
+}
+
 export function HubDirectoryView({
   projection,
 }: {
   projection: LearnerHubProjection;
 }) {
   return (
-    <div className="stack">
+    <div className="stack browse-shell">
       <header className="page-header">
         <p className="dense">Learner hubs</p>
         <h1>Hubs</h1>
@@ -117,19 +324,10 @@ export function HubDirectoryView({
         </Link>
       </p>
 
-      <div className="hub-shortcuts">
-        {projection.hubs.map((hub) => (
-          <Link key={hub.id} className="hub-shortcut hub-shortcut--link" href={hub.path}>
-            <span>
-              <span className="hub-shortcut__title">{hub.title}</span>
-              <span className="dense hub-shortcut__count">
-                {hubVisibleItemCount(hub)} items
-              </span>
-            </span>
-            <span className="dense">Open</span>
-          </Link>
-        ))}
-      </div>
+      <section aria-labelledby="hub-directory-heading">
+        <h2 id="hub-directory-heading">Open a hub</h2>
+        <HubToolDrawerGrid hubs={projection.hubs} />
+      </section>
     </div>
   );
 }

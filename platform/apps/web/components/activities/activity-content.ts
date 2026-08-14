@@ -126,7 +126,7 @@ function matchingQuestions(targets: readonly EnrichmentContentTarget[]): Activit
     id: `${target.id}:meaning`,
     targetId: target.id,
     kind: "matching",
-    prompt: `Match “${target.displayTextDe}” to its published English meaning.`,
+    prompt: `Match “${target.displayTextDe}” to its English meaning.`,
     spokenText: target.displayTextDe,
     expected: target.glossEn!.trim(),
     choices: choiceWindow(target.glossEn!.trim(), choices, index),
@@ -141,8 +141,8 @@ function builderQuestion(target: EnrichmentContentTarget): ActivityQuestion {
     targetId: target.id,
     kind: "builder",
     prompt: target.glossEn?.trim()
-      ? `Build the published German item meaning “${target.glossEn.trim()}”.`
-      : "Build this published phrase in the correct order.",
+      ? `Build the German word or phrase meaning “${target.glossEn.trim()}”.`
+      : "Build this phrase in the correct order.",
     spokenText: target.displayTextDe,
     expected: target.displayTextDe,
     choices: [],
@@ -159,7 +159,7 @@ function recallQuestion(target: EnrichmentContentTarget): ActivityQuestion {
     id: `${target.id}:recall`,
     targetId: target.id,
     kind: "typing",
-    prompt: `Type the published German item meaning “${gloss}”.`,
+    prompt: `Type the German word or phrase meaning “${gloss}”.`,
     spokenText: target.displayTextDe,
     expected: target.displayTextDe,
     choices: [],
@@ -178,8 +178,8 @@ function selectionQuestion(
     targetId: target.id,
     kind: "selection",
     prompt: target.glossEn?.trim()
-      ? `Choose the published German item meaning “${target.glossEn.trim()}”.`
-      : `Choose “${target.displayTextDe}” exactly as published.`,
+      ? `Choose the German word or phrase meaning “${target.glossEn.trim()}”.`
+      : `Choose “${target.displayTextDe}” exactly as it is written.`,
     spokenText: target.displayTextDe,
     expected: target.displayTextDe,
     choices: choiceWindow(target.displayTextDe, allChoices, index),
@@ -231,10 +231,10 @@ export function buildActivityPracticePlan(
       activityId: activity.id,
       mechanic: "listening-notes",
       title: "Listening check",
-      instructions: "Use the linked lesson audio, record what you heard, and confirm the listening pass. This activity is ungraded because its published projection has no answer key.",
+      instructions: "Use the linked lesson audio, record what you heard, and confirm the listening pass. This activity is not graded because it has no answer key yet.",
       questions: [],
       gradeable: false,
-      missingReason: "No gradeable content targets or answer key are published for this listening-led activity.",
+      missingReason: "This listening activity has no answer key yet, so your answers cannot be checked.",
     };
   }
 
@@ -243,7 +243,7 @@ export function buildActivityPracticePlan(
       activityId: activity.id,
       mechanic: "checkpoint",
       title: "Checkpoint questions",
-      instructions: "Answer each question from the published lesson set. Feedback is immediate; retry any missed item.",
+      instructions: "Answer each question from this lesson. Feedback is immediate; retry any missed item.",
       questions: questionsForCheckpoint(targets),
       gradeable: true,
       missingReason: null,
@@ -257,7 +257,7 @@ export function buildActivityPracticePlan(
         activityId: activity.id,
         mechanic: "matching",
         title: "Meaning match",
-        instructions: "Match each published German item to its published English meaning.",
+        instructions: "Match each German item to its English meaning.",
         questions,
         gradeable: true,
         missingReason: null,
@@ -267,7 +267,7 @@ export function buildActivityPracticePlan(
     return {
       activityId: activity.id,
       mechanic: "selection",
-      title: "Select the published item",
+      title: "Select the right item",
       instructions: "Choose the item that matches the source-backed prompt.",
       questions: selected.map((target, index) => selectionQuestion(target, targets, index)),
       gradeable: true,
@@ -284,7 +284,7 @@ export function buildActivityPracticePlan(
       activityId: activity.id,
       mechanic: questions.some((question) => question.kind === "builder") ? "builder" : "typing",
       title: "Notice and build",
-      instructions: "Reconstruct or type the published form, then check it against the lesson data.",
+      instructions: "Reconstruct or type the German form, then check it against the lesson.",
       questions,
       gradeable: true,
       missingReason: null,
@@ -296,7 +296,7 @@ export function buildActivityPracticePlan(
     activityId: activity.id,
     mechanic: questions.some((question) => question.kind === "builder") ? "builder" : "typing",
     title: activity.mode === "use" ? "Build and use" : "Recall from memory",
-    instructions: "Complete each source-backed prompt. Answers are checked against the published lesson item.",
+    instructions: "Complete each source-backed prompt. Answers are checked against the lesson item.",
     questions,
     gradeable: true,
     missingReason: null,

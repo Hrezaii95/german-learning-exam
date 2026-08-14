@@ -219,7 +219,7 @@
       },
       "subjectId": "gram:aus-origin-l1",
       "field": "noticeTarget",
-      "value": "The published origin answers use kommen + aus + country name.",
+      "value": "The origin answers taught here use kommen + aus + country name.",
       "extraction": "manual",
       "confidence": 1,
       "status": "verified",
@@ -238,7 +238,7 @@
       "value": [
         {
           "id": "aus-country",
-          "notice": "Use aus before the published country expression.",
+          "notice": "Use aus before the country expression.",
           "model": "Ich komme aus Deutschland."
         }
       ],
@@ -257,7 +257,7 @@
       },
       "subjectId": "gram:present-conjugation-l1",
       "field": "noticeTarget",
-      "value": "Published present forms include regular endings and the taught special paradigms heißen and sein.",
+      "value": "The present-tense forms here cover regular endings plus the two special patterns you learn now: heißen and sein.",
       "extraction": "manual",
       "confidence": 1,
       "status": "verified",
@@ -4469,7 +4469,7 @@
         "tokens": [
           {
             "type": "plain",
-            "text": "The published origin answers use kommen + aus + country name."
+            "text": "The origin answers taught here use kommen + aus + country name."
           }
         ]
       },
@@ -4480,7 +4480,7 @@
             "tokens": [
               {
                 "type": "plain",
-                "text": "Use aus before the published country expression."
+                "text": "Use aus before the country expression."
               }
             ]
           },
@@ -4535,7 +4535,7 @@
         "tokens": [
           {
             "type": "plain",
-            "text": "Published present forms include regular endings and the taught special paradigms heißen and sein."
+            "text": "The present-tense forms here cover regular endings plus the two special patterns you learn now: heißen and sein."
           }
         ]
       },

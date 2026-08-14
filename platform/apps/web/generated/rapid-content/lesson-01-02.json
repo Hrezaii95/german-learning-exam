@@ -134,7 +134,7 @@
     }
   ],
   "verbGap": {
-    "learnerMessage": "Two requested Lesson 2 verb paradigms are awaiting publication. Their approved sentence patterns remain available in Q&A practice.",
+    "learnerMessage": "Two Lesson 2 verb tables are not ready yet. Their approved sentence patterns are still available in Q&A practice.",
     "state": "publication-pending",
     "requestedCount": 2
   },
@@ -155,7 +155,7 @@
   ],
   "pluralGap": {
     "state": "missing",
-    "learnerMessage": "Profession plurals are not published yet. Learn each singular article and person-form pair first."
+    "learnerMessage": "Profession plurals are not available yet. Learn each singular article and person-form pair first."
   },
   "practicePrompts": [
     { "id": "practice:greeting-morning", "kind": "choice", "prompt": "Choose the greeting that means “Good morning”.", "options": ["Guten Morgen", "Guten Abend", "Tschüs"], "answer": "Guten Morgen" },
@@ -163,10 +163,10 @@
     { "id": "practice:origin-formal", "kind": "respond", "prompt": "Respond to: Woher kommen Sie?", "accepted": ["Ich komme aus …"] },
     { "id": "practice:wellbeing", "kind": "respond", "prompt": "Respond to: Wie geht’s dir?", "accepted": ["Super!", "Sehr gut, danke.", "Gut, danke.", "Es geht.", "Nicht so gut."] },
     { "id": "practice:profession-informal", "kind": "respond", "prompt": "Respond to: Was bist du von Beruf?", "accepted": ["Ich bin … von Beruf.", "Ich bin …", "Ich arbeite als …"] },
-    { "id": "practice:sein-du", "kind": "choice", "prompt": "Choose the published form for du + sein.", "options": ["bin", "bist", "ist"], "answer": "bist" }
+    { "id": "practice:sein-du", "kind": "choice", "prompt": "Choose the correct form for du + sein.", "options": ["bin", "bist", "ist"], "answer": "bist" }
   ],
   "gaps": [
-    { "code": "verb-paradigms-publication-pending", "state": "publication-pending", "learnerMessage": "Additional Lesson 2 verb paradigms are awaiting publication." },
+    { "code": "verb-paradigms-publication-pending", "state": "publication-pending", "learnerMessage": "More Lesson 2 verb tables are not ready yet." },
     { "code": "profession-plurals-missing", "state": "missing", "learnerMessage": "Profession plurals are awaiting content approval." },
     { "code": "profession-pronunciation-pending", "state": "pending-review", "learnerMessage": "Profession pronunciation audio remains unavailable until human listening approval." },
     { "code": "teacher-deck-excluded", "state": "excluded", "learnerMessage": "The separate teacher profession collection is not part of this learner-safe release." }
