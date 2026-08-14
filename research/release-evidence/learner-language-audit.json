@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "gate": "pass",
-  "scannedFiles": 204,
+  "scannedFiles": 205,
   "distinctFindings": 0,
   "totalOccurrences": 0,
   "rules": [
@@ -11,7 +11,8 @@
     "RAW_OBJECT_ID",
     "RAW_GAME_STATE",
     "ROADMAP_LANGUAGE",
-    "SEARCH_DEBUG_CHIP"
+    "SEARCH_DEBUG_CHIP",
+    "PADDED_LESSON_LABEL"
   ],
   "findings": []
 }

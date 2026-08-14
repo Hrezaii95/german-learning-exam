@@ -33,10 +33,12 @@ const publishedDir = join(platformRoot, "content", "published");
 const webRoot = join(platformRoot, "apps", "web");
 const generatedHubsPath = join(webRoot, "generated", "learner-hubs.json");
 
+// The workbook listening assets used to sit here as review-only leak probes.
+// ADR-015/016 released them, so they are learner content now and belong in the
+// hub projection; the remaining ids are still genuinely review-only.
 const KNOWN_REVIEW_ONLY_IDS = [
   "collection:teacher-professions",
   "activity:lesson-02-teacher-professions-deck",
-  "listen:workbook-1-01-ab-momente-a11-1-3",
   "lex:elektriker",
 ] as const;
 

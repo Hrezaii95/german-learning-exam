@@ -141,7 +141,9 @@ describe("P3B hub UI shell contracts", () => {
     const derivedHubIds = ["listening", "concepts"] as const;
     for (const hubId of derivedHubIds) {
       const hub = hubs.hubsById[hubId];
-      expect(hub.itemCount).toBe(0);
+      // Derived hubs render their experience, not their record list. Listening
+      // now also carries 15 released records (ADR-015/016); concepts still
+      // carries none, and both must render identically from the experience.
       expect(hub.experience?.itemCount).toBeGreaterThan(0);
 
       const baseline = renderToStaticMarkup(

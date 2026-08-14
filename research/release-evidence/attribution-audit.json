@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "basis": "ADR-016 — owner-asserted full Momente A1.1/A1.2 rights, conditional on visible attribution",
-  "gate": "fail",
+  "gate": "pass",
   "requiredWorks": [
     "MOMENTE_TITLE",
     "LEVEL_A1_1",
@@ -17,27 +17,6 @@
     "listening/index.html",
     "practice/index.html"
   ],
-  "failureCount": 5,
-  "failures": [
-    {
-      "code": "ATTRIBUTION_PAGE_MISSING",
-      "detail": "platform/apps/web/out/references/index.html was not exported"
-    },
-    {
-      "code": "ATTRIBUTION_NOT_LINKED",
-      "detail": "index.html has no link to /references/"
-    },
-    {
-      "code": "ATTRIBUTION_NOT_LINKED",
-      "detail": "vocabulary/index.html has no link to /references/"
-    },
-    {
-      "code": "ATTRIBUTION_NOT_LINKED",
-      "detail": "listening/index.html has no link to /references/"
-    },
-    {
-      "code": "ATTRIBUTION_NOT_LINKED",
-      "detail": "practice/index.html has no link to /references/"
-    }
-  ]
+  "failureCount": 0,
+  "failures": []
 }

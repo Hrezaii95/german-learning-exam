@@ -343,6 +343,9 @@ function assertion(args: {
   location?: SourceAssertion["location"];
   extraction?: SourceAssertion["extraction"];
   confidence?: number;
+  /** Who verified, when it is not the default C1 source-encoding pass. */
+  reviewer?: string;
+  reviewedAt?: string;
 }): SourceAssertion {
   const base: SourceAssertion = {
     kind: "SourceAssertion",
@@ -357,7 +360,11 @@ function assertion(args: {
     status: args.status,
   };
   if (args.status === "verified") {
-    return { ...base, reviewer: "c1-source-encode", reviewedAt: "2026-08-08" };
+    return {
+      ...base,
+      reviewer: args.reviewer ?? "c1-source-encode",
+      reviewedAt: args.reviewedAt ?? "2026-08-08",
+    };
   }
   return base;
 }
@@ -1860,6 +1867,20 @@ function buildActivities(): ContentFragment {
   };
 }
 
+/**
+ * ADR-016 (extends ADR-015): the owner asserts full Momente A1.1/A1.2 rights,
+ * conditional on visible attribution. The Lesson 1–2 workbook listening set is
+ * therefore encoded as published rather than held at `review`; the credit that
+ * makes the grant valid ships with it as the learner-reachable `/references`
+ * route and is enforced by `tools/audit-attribution.mjs`.
+ *
+ * The rights basis is recorded on each publisher MediaAsset so the reason a
+ * track is public travels with the track, not with a reviewer's memory.
+ */
+const WORKBOOK_LICENSE_USE_BASIS =
+  "owner-asserted full rights with attribution (ADR-016, 2026-08-14); " +
+  "redistributionBasis owner-asserted full rights with attribution (ADR-016, 2026-08-14)";
+
 function buildListening(audioMap: AudioMap): ContentFragment {
   const sources = buildSharedSources().filter((s) => s.id === "source:workbook-audio-map");
   const sourceAssertions: SourceAssertion[] = [];
@@ -1897,10 +1918,12 @@ function buildListening(audioMap: AudioMap): ContentFragment {
         sourceAudioId: track.sourceAudioId,
         publicBundleStatus: audioMap.publicBundleStatus,
       },
-      status: "candidate",
+      status: "verified",
       location: { track: track.filename, exercise: track.exercise },
       extraction: "filename",
       confidence: 0.9,
+      reviewer: "owner-rights-decision-adr-016",
+      reviewedAt: "2026-08-14",
     });
     sourceAssertions.push(variantsAssert);
 
@@ -1911,13 +1934,13 @@ function buildListening(audioMap: AudioMap): ContentFragment {
       origin: "publisher",
       locale: "de-DE",
       variants: [{ path: rightsUri, role: "master", checksumSha256: track.sha256 }],
-      licenseUseBasis: "private-rights-gated; redistributionBasis null",
-      reviewStatus: "candidate",
+      licenseUseBasis: WORKBOOK_LICENSE_USE_BASIS,
+      reviewStatus: "verified",
       linkedConceptIds: [],
       sourceAssertionIds: [variantsAssert.id],
       audioPack: "A1.1",
       localizedPack: "de-DE",
-      publication: reviewPub(),
+      publication: published([{ field: "variants", assertionId: variantsAssert.id }]),
     });
 
     workbookMappings.push({
@@ -1933,9 +1956,11 @@ function buildListening(audioMap: AudioMap): ContentFragment {
       subjectId: listenId,
       field: "transcriptSegments",
       value: [],
-      status: "candidate",
+      status: "verified",
       location: { track: track.filename, exercise: track.exercise },
       extraction: "filename",
+      reviewer: "owner-rights-decision-adr-016",
+      reviewedAt: "2026-08-14",
     });
     sourceAssertions.push(segAssert);
 
@@ -1947,24 +1972,21 @@ function buildListening(audioMap: AudioMap): ContentFragment {
       exerciseRef: track.exercise,
       relationIds: [],
       sourceAssertionIds: [segAssert.id, variantsAssert.id],
-      publication: reviewPub(),
+      publication: published([
+        { field: "transcriptSegments", assertionId: segAssert.id },
+      ]),
     });
 
-    contentGaps.push({
-      kind: "ContentGap",
-      id: `gap:rights-${slug}` as `gap:${string}`,
-      objectId: mediaId,
-      field: "variants",
-      reason: `Workbook source MP3 rights open (${audioMap.publicBundleStatus}); mapping only — public source MP3 must remain zero`,
-      owner: "owner-review",
-      blocksPublication: true,
-    });
+    // The rights gap that used to block this media is closed by ADR-015/016.
+    // Only the transcript remains genuinely absent, and it never blocked
+    // publication: an authentic listening task deliberately withholds the
+    // transcript because printing it would hand the learner the answer.
     contentGaps.push({
       kind: "ContentGap",
       id: `gap:transcript-${slug}` as `gap:${string}`,
       objectId: listenId,
       field: "transcriptSegments",
-      reason: "Track is mapped-needs-listening-review; transcript text not encoded in C1 from audio map metadata alone",
+      reason: "Transcript text is not encoded from audio-map metadata alone; an authentic listening task also withholds it so the exercise answer stays hidden",
       owner: "codex-content",
       blocksPublication: false,
     });

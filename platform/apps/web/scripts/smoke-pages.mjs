@@ -141,6 +141,9 @@ function listExpectedAppPaths() {
     "/search",
     "/practice",
     "/conversation",
+    // The course-material credit is a release condition (ADR-016), so its route
+    // is verified like any other learner route, not assumed to exist.
+    "/references",
     ...HUB_PATHS,
   ]);
 

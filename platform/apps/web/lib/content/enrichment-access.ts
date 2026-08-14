@@ -11,6 +11,7 @@ import type {
 } from "@german-learning/content";
 import { buildContentIndexes } from "@german-learning/content";
 import { resolveMediaAvailability } from "./media-availability";
+import { workbookAudioForActivity } from "../audio/workbook-audio";
 import {
   loadValidatedBundleOrThrow,
   projectLearnerWebProjection,
@@ -277,14 +278,17 @@ function activityGames(activity: { mode: string; renderer: string }, targets: re
   return base;
 }
 
-function activitySections(targetCount: number): EnrichmentPageSection[] {
+function activitySections(
+  targetCount: number,
+  mediaState: EnrichmentPageSection["state"],
+): EnrichmentPageSection[] {
   return [
     Object.freeze({ id: "hero", title: "Activity", state: "ready", fieldKeys: Object.freeze(["displayText", "mode", "skillDimensions"]) }),
     Object.freeze({ id: "meaning", title: "Learn", state: targetCount > 0 ? "ready" : "missing", fieldKeys: Object.freeze(["contentTargets.displayTextDe", "contentTargets.glossEn"]) }),
     Object.freeze({ id: "notice", title: "Notice", state: targetCount > 0 ? "partial" : "missing", fieldKeys: Object.freeze(["relationIds"]) }),
     Object.freeze({ id: "practice", title: "Practise", state: targetCount > 0 ? "partial" : "missing", fieldKeys: Object.freeze(["gameEligibility", "reviewEligible"]) }),
     Object.freeze({ id: "related", title: "Related", state: targetCount > 0 ? "ready" : "missing", fieldKeys: Object.freeze(["contentTargets", "relationIds"]) }),
-    Object.freeze({ id: "media", title: "Media", state: "pending-review", fieldKeys: Object.freeze(["mediaSlots"]) }),
+    Object.freeze({ id: "media", title: "Media", state: mediaState, fieldKeys: Object.freeze(["mediaSlots"]) }),
   ];
 }
 
@@ -336,11 +340,18 @@ function projectActivities(bundle: ContentBundle): EnrichedActivity[] {
       }));
     }
     if (isWorkbook) {
+      // ADR-015/016 released the Lessons 1–2 workbook recordings, and the
+      // activity page now plays them, so the old "not available yet" line was
+      // describing a state the learner can already hear past.
+      const trackCount = workbookAudioForActivity(activity.id).length;
       mediaSlots.push(Object.freeze({
         slotId: `source-listening:${activity.lessonId}`,
         kind: "source-listening",
-        state: "pending-review",
-        learnerMessage: "The workbook listening audio is not available yet.",
+        state: trackCount > 0 ? "ready" : "missing",
+        learnerMessage:
+          trackCount > 0
+            ? `The original workbook recordings for this exercise are ready to play — ${trackCount} track${trackCount === 1 ? "" : "s"}.`
+            : "The workbook listening audio is not available for this activity yet.",
       }));
     } else {
       const media = resolveMediaAvailability({
@@ -398,7 +409,16 @@ function projectActivities(bundle: ContentBundle): EnrichedActivity[] {
       reviewEligible: targets.length > 0,
       gameEligibility: Object.freeze(activityGames(activity, targets)),
       mediaSlots: Object.freeze(mediaSlots),
-      sections: Object.freeze(activitySections(targets.length)),
+      sections: Object.freeze(
+        activitySections(
+          targets.length,
+          mediaSlots.every((slot) => slot.state === "ready")
+            ? "ready"
+            : mediaSlots.some((slot) => slot.state === "ready")
+              ? "partial"
+              : "pending-review",
+        ),
+      ),
       gaps: Object.freeze(gaps),
     });
   });

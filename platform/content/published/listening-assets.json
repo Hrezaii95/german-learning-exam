@@ -132,7 +132,9 @@
       },
       "extraction": "filename",
       "confidence": 0.9,
-      "status": "candidate"
+      "status": "verified",
+      "reviewer": "owner-rights-decision-adr-016",
+      "reviewedAt": "2026-08-14"
     },
     {
       "kind": "SourceAssertion",
@@ -147,7 +149,9 @@
       "value": [],
       "extraction": "filename",
       "confidence": 1,
-      "status": "candidate"
+      "status": "verified",
+      "reviewer": "owner-rights-decision-adr-016",
+      "reviewedAt": "2026-08-14"
     },
     {
       "kind": "SourceAssertion",
@@ -170,7 +174,9 @@
       },
       "extraction": "filename",
       "confidence": 0.9,
-      "status": "candidate"
+      "status": "verified",
+      "reviewer": "owner-rights-decision-adr-016",
+      "reviewedAt": "2026-08-14"
     },
     {
       "kind": "SourceAssertion",
@@ -185,7 +191,9 @@
       "value": [],
       "extraction": "filename",
       "confidence": 1,
-      "status": "candidate"
+      "status": "verified",
+      "reviewer": "owner-rights-decision-adr-016",
+      "reviewedAt": "2026-08-14"
     },
     {
       "kind": "SourceAssertion",
@@ -208,7 +216,9 @@
       },
       "extraction": "filename",
       "confidence": 0.9,
-      "status": "candidate"
+      "status": "verified",
+      "reviewer": "owner-rights-decision-adr-016",
+      "reviewedAt": "2026-08-14"
     },
     {
       "kind": "SourceAssertion",
@@ -223,7 +233,9 @@
       "value": [],
       "extraction": "filename",
       "confidence": 1,
-      "status": "candidate"
+      "status": "verified",
+      "reviewer": "owner-rights-decision-adr-016",
+      "reviewedAt": "2026-08-14"
     },
     {
       "kind": "SourceAssertion",
@@ -246,7 +258,9 @@
       },
       "extraction": "filename",
       "confidence": 0.9,
-      "status": "candidate"
+      "status": "verified",
+      "reviewer": "owner-rights-decision-adr-016",
+      "reviewedAt": "2026-08-14"
     },
     {
       "kind": "SourceAssertion",
@@ -261,7 +275,9 @@
       "value": [],
       "extraction": "filename",
       "confidence": 1,
-      "status": "candidate"
+      "status": "verified",
+      "reviewer": "owner-rights-decision-adr-016",
+      "reviewedAt": "2026-08-14"
     },
     {
       "kind": "SourceAssertion",
@@ -284,7 +300,9 @@
       },
       "extraction": "filename",
       "confidence": 0.9,
-      "status": "candidate"
+      "status": "verified",
+      "reviewer": "owner-rights-decision-adr-016",
+      "reviewedAt": "2026-08-14"
     },
     {
       "kind": "SourceAssertion",
@@ -299,7 +317,9 @@
       "value": [],
       "extraction": "filename",
       "confidence": 1,
-      "status": "candidate"
+      "status": "verified",
+      "reviewer": "owner-rights-decision-adr-016",
+      "reviewedAt": "2026-08-14"
     },
     {
       "kind": "SourceAssertion",
@@ -322,7 +342,9 @@
       },
       "extraction": "filename",
       "confidence": 0.9,
-      "status": "candidate"
+      "status": "verified",
+      "reviewer": "owner-rights-decision-adr-016",
+      "reviewedAt": "2026-08-14"
     },
     {
       "kind": "SourceAssertion",
@@ -337,7 +359,9 @@
       "value": [],
       "extraction": "filename",
       "confidence": 1,
-      "status": "candidate"
+      "status": "verified",
+      "reviewer": "owner-rights-decision-adr-016",
+      "reviewedAt": "2026-08-14"
     },
     {
       "kind": "SourceAssertion",
@@ -360,7 +384,9 @@
       },
       "extraction": "filename",
       "confidence": 0.9,
-      "status": "candidate"
+      "status": "verified",
+      "reviewer": "owner-rights-decision-adr-016",
+      "reviewedAt": "2026-08-14"
     },
     {
       "kind": "SourceAssertion",
@@ -375,7 +401,9 @@
       "value": [],
       "extraction": "filename",
       "confidence": 1,
-      "status": "candidate"
+      "status": "verified",
+      "reviewer": "owner-rights-decision-adr-016",
+      "reviewedAt": "2026-08-14"
     },
     {
       "kind": "SourceAssertion",
@@ -398,7 +426,9 @@
       },
       "extraction": "filename",
       "confidence": 0.9,
-      "status": "candidate"
+      "status": "verified",
+      "reviewer": "owner-rights-decision-adr-016",
+      "reviewedAt": "2026-08-14"
     },
     {
       "kind": "SourceAssertion",
@@ -413,7 +443,9 @@
       "value": [],
       "extraction": "filename",
       "confidence": 1,
-      "status": "candidate"
+      "status": "verified",
+      "reviewer": "owner-rights-decision-adr-016",
+      "reviewedAt": "2026-08-14"
     },
     {
       "kind": "SourceAssertion",
@@ -436,7 +468,9 @@
       },
       "extraction": "filename",
       "confidence": 0.9,
-      "status": "candidate"
+      "status": "verified",
+      "reviewer": "owner-rights-decision-adr-016",
+      "reviewedAt": "2026-08-14"
     },
     {
       "kind": "SourceAssertion",
@@ -451,7 +485,9 @@
       "value": [],
       "extraction": "filename",
       "confidence": 1,
-      "status": "candidate"
+      "status": "verified",
+      "reviewer": "owner-rights-decision-adr-016",
+      "reviewedAt": "2026-08-14"
     },
     {
       "kind": "SourceAssertion",
@@ -474,7 +510,9 @@
       },
       "extraction": "filename",
       "confidence": 0.9,
-      "status": "candidate"
+      "status": "verified",
+      "reviewer": "owner-rights-decision-adr-016",
+      "reviewedAt": "2026-08-14"
     },
     {
       "kind": "SourceAssertion",
@@ -489,7 +527,9 @@
       "value": [],
       "extraction": "filename",
       "confidence": 1,
-      "status": "candidate"
+      "status": "verified",
+      "reviewer": "owner-rights-decision-adr-016",
+      "reviewedAt": "2026-08-14"
     },
     {
       "kind": "SourceAssertion",
@@ -512,7 +552,9 @@
       },
       "extraction": "filename",
       "confidence": 0.9,
-      "status": "candidate"
+      "status": "verified",
+      "reviewer": "owner-rights-decision-adr-016",
+      "reviewedAt": "2026-08-14"
     },
     {
       "kind": "SourceAssertion",
@@ -527,7 +569,9 @@
       "value": [],
       "extraction": "filename",
       "confidence": 1,
-      "status": "candidate"
+      "status": "verified",
+      "reviewer": "owner-rights-decision-adr-016",
+      "reviewedAt": "2026-08-14"
     },
     {
       "kind": "SourceAssertion",
@@ -550,7 +594,9 @@
       },
       "extraction": "filename",
       "confidence": 0.9,
-      "status": "candidate"
+      "status": "verified",
+      "reviewer": "owner-rights-decision-adr-016",
+      "reviewedAt": "2026-08-14"
     },
     {
       "kind": "SourceAssertion",
@@ -565,7 +611,9 @@
       "value": [],
       "extraction": "filename",
       "confidence": 1,
-      "status": "candidate"
+      "status": "verified",
+      "reviewer": "owner-rights-decision-adr-016",
+      "reviewedAt": "2026-08-14"
     },
     {
       "kind": "SourceAssertion",
@@ -588,7 +636,9 @@
       },
       "extraction": "filename",
       "confidence": 0.9,
-      "status": "candidate"
+      "status": "verified",
+      "reviewer": "owner-rights-decision-adr-016",
+      "reviewedAt": "2026-08-14"
     },
     {
       "kind": "SourceAssertion",
@@ -603,7 +653,9 @@
       "value": [],
       "extraction": "filename",
       "confidence": 1,
-      "status": "candidate"
+      "status": "verified",
+      "reviewer": "owner-rights-decision-adr-016",
+      "reviewedAt": "2026-08-14"
     },
     {
       "kind": "SourceAssertion",
@@ -626,7 +678,9 @@
       },
       "extraction": "filename",
       "confidence": 0.9,
-      "status": "candidate"
+      "status": "verified",
+      "reviewer": "owner-rights-decision-adr-016",
+      "reviewedAt": "2026-08-14"
     },
     {
       "kind": "SourceAssertion",
@@ -641,7 +695,9 @@
       "value": [],
       "extraction": "filename",
       "confidence": 1,
-      "status": "candidate"
+      "status": "verified",
+      "reviewer": "owner-rights-decision-adr-016",
+      "reviewedAt": "2026-08-14"
     },
     {
       "kind": "SourceAssertion",
@@ -664,7 +720,9 @@
       },
       "extraction": "filename",
       "confidence": 0.9,
-      "status": "candidate"
+      "status": "verified",
+      "reviewer": "owner-rights-decision-adr-016",
+      "reviewedAt": "2026-08-14"
     },
     {
       "kind": "SourceAssertion",
@@ -679,7 +737,9 @@
       "value": [],
       "extraction": "filename",
       "confidence": 1,
-      "status": "candidate"
+      "status": "verified",
+      "reviewer": "owner-rights-decision-adr-016",
+      "reviewedAt": "2026-08-14"
     }
   ],
   "mediaAssets": [
@@ -696,8 +756,8 @@
           "checksumSha256": "ae243fd2df2a13a8d9a9158ba6abb872a05cafe99c57450965ff524ab05c9d33"
         }
       ],
-      "licenseUseBasis": "private-rights-gated; redistributionBasis null",
-      "reviewStatus": "candidate",
+      "licenseUseBasis": "owner-asserted full rights with attribution (ADR-016, 2026-08-14); redistributionBasis owner-asserted full rights with attribution (ADR-016, 2026-08-14)",
+      "reviewStatus": "verified",
       "linkedConceptIds": [],
       "sourceAssertionIds": [
         "assert:media-workbook-map-1-01-ab-momente-a11-1-3-variants"
@@ -705,8 +765,13 @@
       "audioPack": "A1.1",
       "localizedPack": "de-DE",
       "publication": {
-        "status": "review",
-        "publishedFields": []
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "variants",
+            "assertionId": "assert:media-workbook-map-1-01-ab-momente-a11-1-3-variants"
+          }
+        ]
       }
     },
     {
@@ -722,8 +787,8 @@
           "checksumSha256": "a43cfa2092f02d7f98b4ab6876e893bedadde3b2076bcd35c1e7ca7130c83a47"
         }
       ],
-      "licenseUseBasis": "private-rights-gated; redistributionBasis null",
-      "reviewStatus": "candidate",
+      "licenseUseBasis": "owner-asserted full rights with attribution (ADR-016, 2026-08-14); redistributionBasis owner-asserted full rights with attribution (ADR-016, 2026-08-14)",
+      "reviewStatus": "verified",
       "linkedConceptIds": [],
       "sourceAssertionIds": [
         "assert:media-workbook-map-1-02-ab-momente-a11-1-3-variants"
@@ -731,8 +796,13 @@
       "audioPack": "A1.1",
       "localizedPack": "de-DE",
       "publication": {
-        "status": "review",
-        "publishedFields": []
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "variants",
+            "assertionId": "assert:media-workbook-map-1-02-ab-momente-a11-1-3-variants"
+          }
+        ]
       }
     },
     {
@@ -748,8 +818,8 @@
           "checksumSha256": "644be62239fa56927a2a04629f47150a9d7f1015d3fb2ab7e9b8a09936ed089f"
         }
       ],
-      "licenseUseBasis": "private-rights-gated; redistributionBasis null",
-      "reviewStatus": "candidate",
+      "licenseUseBasis": "owner-asserted full rights with attribution (ADR-016, 2026-08-14); redistributionBasis owner-asserted full rights with attribution (ADR-016, 2026-08-14)",
+      "reviewStatus": "verified",
       "linkedConceptIds": [],
       "sourceAssertionIds": [
         "assert:media-workbook-map-1-03-ab-momente-a11-1-3-variants"
@@ -757,8 +827,13 @@
       "audioPack": "A1.1",
       "localizedPack": "de-DE",
       "publication": {
-        "status": "review",
-        "publishedFields": []
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "variants",
+            "assertionId": "assert:media-workbook-map-1-03-ab-momente-a11-1-3-variants"
+          }
+        ]
       }
     },
     {
@@ -774,8 +849,8 @@
           "checksumSha256": "79dd95ea9a7618e2ff71dd2d6f2bd6434701ddac88a7430029fb21a08464df6a"
         }
       ],
-      "licenseUseBasis": "private-rights-gated; redistributionBasis null",
-      "reviewStatus": "candidate",
+      "licenseUseBasis": "owner-asserted full rights with attribution (ADR-016, 2026-08-14); redistributionBasis owner-asserted full rights with attribution (ADR-016, 2026-08-14)",
+      "reviewStatus": "verified",
       "linkedConceptIds": [],
       "sourceAssertionIds": [
         "assert:media-workbook-map-1-04-ab-momente-a11-1-3-variants"
@@ -783,8 +858,13 @@
       "audioPack": "A1.1",
       "localizedPack": "de-DE",
       "publication": {
-        "status": "review",
-        "publishedFields": []
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "variants",
+            "assertionId": "assert:media-workbook-map-1-04-ab-momente-a11-1-3-variants"
+          }
+        ]
       }
     },
     {
@@ -800,8 +880,8 @@
           "checksumSha256": "fd88b910fdfe18139f802c88ddf19a3162e8b4d9d3f7d908bd4c061986997627"
         }
       ],
-      "licenseUseBasis": "private-rights-gated; redistributionBasis null",
-      "reviewStatus": "candidate",
+      "licenseUseBasis": "owner-asserted full rights with attribution (ADR-016, 2026-08-14); redistributionBasis owner-asserted full rights with attribution (ADR-016, 2026-08-14)",
+      "reviewStatus": "verified",
       "linkedConceptIds": [],
       "sourceAssertionIds": [
         "assert:media-workbook-map-1-05-ab-momente-a11-1-9a-variants"
@@ -809,8 +889,13 @@
       "audioPack": "A1.1",
       "localizedPack": "de-DE",
       "publication": {
-        "status": "review",
-        "publishedFields": []
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "variants",
+            "assertionId": "assert:media-workbook-map-1-05-ab-momente-a11-1-9a-variants"
+          }
+        ]
       }
     },
     {
@@ -826,8 +911,8 @@
           "checksumSha256": "2d41f0c2d795b4e25378d975739265b7a6b8380bf6f100c256f2a0243e88db7e"
         }
       ],
-      "licenseUseBasis": "private-rights-gated; redistributionBasis null",
-      "reviewStatus": "candidate",
+      "licenseUseBasis": "owner-asserted full rights with attribution (ADR-016, 2026-08-14); redistributionBasis owner-asserted full rights with attribution (ADR-016, 2026-08-14)",
+      "reviewStatus": "verified",
       "linkedConceptIds": [],
       "sourceAssertionIds": [
         "assert:media-workbook-map-1-06-ab-momente-a11-1-9b-variants"
@@ -835,8 +920,13 @@
       "audioPack": "A1.1",
       "localizedPack": "de-DE",
       "publication": {
-        "status": "review",
-        "publishedFields": []
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "variants",
+            "assertionId": "assert:media-workbook-map-1-06-ab-momente-a11-1-9b-variants"
+          }
+        ]
       }
     },
     {
@@ -852,8 +942,8 @@
           "checksumSha256": "cdcf35a0898dd0261867dd978795f5284d401b60241030cf2c1477476c73e150"
         }
       ],
-      "licenseUseBasis": "private-rights-gated; redistributionBasis null",
-      "reviewStatus": "candidate",
+      "licenseUseBasis": "owner-asserted full rights with attribution (ADR-016, 2026-08-14); redistributionBasis owner-asserted full rights with attribution (ADR-016, 2026-08-14)",
+      "reviewStatus": "verified",
       "linkedConceptIds": [],
       "sourceAssertionIds": [
         "assert:media-workbook-map-1-07-ab-momente-a11-2-6a-variants"
@@ -861,8 +951,13 @@
       "audioPack": "A1.1",
       "localizedPack": "de-DE",
       "publication": {
-        "status": "review",
-        "publishedFields": []
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "variants",
+            "assertionId": "assert:media-workbook-map-1-07-ab-momente-a11-2-6a-variants"
+          }
+        ]
       }
     },
     {
@@ -878,8 +973,8 @@
           "checksumSha256": "16dec4472683c5900b68ecf12ec66ec54fb9ff86e3f50d370bb14acf28214e5a"
         }
       ],
-      "licenseUseBasis": "private-rights-gated; redistributionBasis null",
-      "reviewStatus": "candidate",
+      "licenseUseBasis": "owner-asserted full rights with attribution (ADR-016, 2026-08-14); redistributionBasis owner-asserted full rights with attribution (ADR-016, 2026-08-14)",
+      "reviewStatus": "verified",
       "linkedConceptIds": [],
       "sourceAssertionIds": [
         "assert:media-workbook-map-1-08-ab-momente-a11-2-6a-variants"
@@ -887,8 +982,13 @@
       "audioPack": "A1.1",
       "localizedPack": "de-DE",
       "publication": {
-        "status": "review",
-        "publishedFields": []
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "variants",
+            "assertionId": "assert:media-workbook-map-1-08-ab-momente-a11-2-6a-variants"
+          }
+        ]
       }
     },
     {
@@ -904,8 +1004,8 @@
           "checksumSha256": "cc28b5036030832425c9adc72aeaf7af19e353e8664fd51ca741347056bb2431"
         }
       ],
-      "licenseUseBasis": "private-rights-gated; redistributionBasis null",
-      "reviewStatus": "candidate",
+      "licenseUseBasis": "owner-asserted full rights with attribution (ADR-016, 2026-08-14); redistributionBasis owner-asserted full rights with attribution (ADR-016, 2026-08-14)",
+      "reviewStatus": "verified",
       "linkedConceptIds": [],
       "sourceAssertionIds": [
         "assert:media-workbook-map-1-09-ab-momente-a11-2-6a-variants"
@@ -913,8 +1013,13 @@
       "audioPack": "A1.1",
       "localizedPack": "de-DE",
       "publication": {
-        "status": "review",
-        "publishedFields": []
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "variants",
+            "assertionId": "assert:media-workbook-map-1-09-ab-momente-a11-2-6a-variants"
+          }
+        ]
       }
     },
     {
@@ -930,8 +1035,8 @@
           "checksumSha256": "009ee8a5264d58e342b68162736bb43f6de6d9e0351c57dc4e4d82b85e494aef"
         }
       ],
-      "licenseUseBasis": "private-rights-gated; redistributionBasis null",
-      "reviewStatus": "candidate",
+      "licenseUseBasis": "owner-asserted full rights with attribution (ADR-016, 2026-08-14); redistributionBasis owner-asserted full rights with attribution (ADR-016, 2026-08-14)",
+      "reviewStatus": "verified",
       "linkedConceptIds": [],
       "sourceAssertionIds": [
         "assert:media-workbook-map-1-10-ab-momente-a11-2-6a-variants"
@@ -939,8 +1044,13 @@
       "audioPack": "A1.1",
       "localizedPack": "de-DE",
       "publication": {
-        "status": "review",
-        "publishedFields": []
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "variants",
+            "assertionId": "assert:media-workbook-map-1-10-ab-momente-a11-2-6a-variants"
+          }
+        ]
       }
     },
     {
@@ -956,8 +1066,8 @@
           "checksumSha256": "85fdb2829adf25dabee37908279a24dd65f32214367aca75b40199034d988b3c"
         }
       ],
-      "licenseUseBasis": "private-rights-gated; redistributionBasis null",
-      "reviewStatus": "candidate",
+      "licenseUseBasis": "owner-asserted full rights with attribution (ADR-016, 2026-08-14); redistributionBasis owner-asserted full rights with attribution (ADR-016, 2026-08-14)",
+      "reviewStatus": "verified",
       "linkedConceptIds": [],
       "sourceAssertionIds": [
         "assert:media-workbook-map-1-11-ab-momente-a11-2-6b-variants"
@@ -965,8 +1075,13 @@
       "audioPack": "A1.1",
       "localizedPack": "de-DE",
       "publication": {
-        "status": "review",
-        "publishedFields": []
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "variants",
+            "assertionId": "assert:media-workbook-map-1-11-ab-momente-a11-2-6b-variants"
+          }
+        ]
       }
     },
     {
@@ -982,8 +1097,8 @@
           "checksumSha256": "d4eebbc6e02bd49b3a71162c67f37d242f33971c5c2ff71cef5b616eed3da9f8"
         }
       ],
-      "licenseUseBasis": "private-rights-gated; redistributionBasis null",
-      "reviewStatus": "candidate",
+      "licenseUseBasis": "owner-asserted full rights with attribution (ADR-016, 2026-08-14); redistributionBasis owner-asserted full rights with attribution (ADR-016, 2026-08-14)",
+      "reviewStatus": "verified",
       "linkedConceptIds": [],
       "sourceAssertionIds": [
         "assert:media-workbook-map-1-12-ab-momente-a11-2-6b-variants"
@@ -991,8 +1106,13 @@
       "audioPack": "A1.1",
       "localizedPack": "de-DE",
       "publication": {
-        "status": "review",
-        "publishedFields": []
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "variants",
+            "assertionId": "assert:media-workbook-map-1-12-ab-momente-a11-2-6b-variants"
+          }
+        ]
       }
     },
     {
@@ -1008,8 +1128,8 @@
           "checksumSha256": "2764fc257cd2c2e0e6733366e3e964ca943add96ce99ab31f11e6a877ecb5950"
         }
       ],
-      "licenseUseBasis": "private-rights-gated; redistributionBasis null",
-      "reviewStatus": "candidate",
+      "licenseUseBasis": "owner-asserted full rights with attribution (ADR-016, 2026-08-14); redistributionBasis owner-asserted full rights with attribution (ADR-016, 2026-08-14)",
+      "reviewStatus": "verified",
       "linkedConceptIds": [],
       "sourceAssertionIds": [
         "assert:media-workbook-map-1-13-ab-momente-a11-2-6b-variants"
@@ -1017,8 +1137,13 @@
       "audioPack": "A1.1",
       "localizedPack": "de-DE",
       "publication": {
-        "status": "review",
-        "publishedFields": []
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "variants",
+            "assertionId": "assert:media-workbook-map-1-13-ab-momente-a11-2-6b-variants"
+          }
+        ]
       }
     },
     {
@@ -1034,8 +1159,8 @@
           "checksumSha256": "6a0d40d85b5f263ec530bc2f5f67fb7e8cb26a8020f6250c82a101580896d4ba"
         }
       ],
-      "licenseUseBasis": "private-rights-gated; redistributionBasis null",
-      "reviewStatus": "candidate",
+      "licenseUseBasis": "owner-asserted full rights with attribution (ADR-016, 2026-08-14); redistributionBasis owner-asserted full rights with attribution (ADR-016, 2026-08-14)",
+      "reviewStatus": "verified",
       "linkedConceptIds": [],
       "sourceAssertionIds": [
         "assert:media-workbook-map-1-14-ab-momente-a11-2-6b-variants"
@@ -1043,8 +1168,13 @@
       "audioPack": "A1.1",
       "localizedPack": "de-DE",
       "publication": {
-        "status": "review",
-        "publishedFields": []
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "variants",
+            "assertionId": "assert:media-workbook-map-1-14-ab-momente-a11-2-6b-variants"
+          }
+        ]
       }
     },
     {
@@ -1060,8 +1190,8 @@
           "checksumSha256": "823b45c79e24fa3eb3b5eeb83dff75b192201e7c41ec74d7f776523e42b43c9c"
         }
       ],
-      "licenseUseBasis": "private-rights-gated; redistributionBasis null",
-      "reviewStatus": "candidate",
+      "licenseUseBasis": "owner-asserted full rights with attribution (ADR-016, 2026-08-14); redistributionBasis owner-asserted full rights with attribution (ADR-016, 2026-08-14)",
+      "reviewStatus": "verified",
       "linkedConceptIds": [],
       "sourceAssertionIds": [
         "assert:media-workbook-map-1-15-ab-momente-a11-2-12-variants"
@@ -1069,8 +1199,13 @@
       "audioPack": "A1.1",
       "localizedPack": "de-DE",
       "publication": {
-        "status": "review",
-        "publishedFields": []
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "variants",
+            "assertionId": "assert:media-workbook-map-1-15-ab-momente-a11-2-12-variants"
+          }
+        ]
       }
     }
   ],
@@ -1094,8 +1229,13 @@
         "assert:media-workbook-map-1-01-ab-momente-a11-1-3-variants"
       ],
       "publication": {
-        "status": "review",
-        "publishedFields": []
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "transcriptSegments",
+            "assertionId": "assert:listen-workbook-1-01-ab-momente-a11-1-3-segments"
+          }
+        ]
       }
     },
     {
@@ -1110,8 +1250,13 @@
         "assert:media-workbook-map-1-02-ab-momente-a11-1-3-variants"
       ],
       "publication": {
-        "status": "review",
-        "publishedFields": []
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "transcriptSegments",
+            "assertionId": "assert:listen-workbook-1-02-ab-momente-a11-1-3-segments"
+          }
+        ]
       }
     },
     {
@@ -1126,8 +1271,13 @@
         "assert:media-workbook-map-1-03-ab-momente-a11-1-3-variants"
       ],
       "publication": {
-        "status": "review",
-        "publishedFields": []
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "transcriptSegments",
+            "assertionId": "assert:listen-workbook-1-03-ab-momente-a11-1-3-segments"
+          }
+        ]
       }
     },
     {
@@ -1142,8 +1292,13 @@
         "assert:media-workbook-map-1-04-ab-momente-a11-1-3-variants"
       ],
       "publication": {
-        "status": "review",
-        "publishedFields": []
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "transcriptSegments",
+            "assertionId": "assert:listen-workbook-1-04-ab-momente-a11-1-3-segments"
+          }
+        ]
       }
     },
     {
@@ -1158,8 +1313,13 @@
         "assert:media-workbook-map-1-05-ab-momente-a11-1-9a-variants"
       ],
       "publication": {
-        "status": "review",
-        "publishedFields": []
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "transcriptSegments",
+            "assertionId": "assert:listen-workbook-1-05-ab-momente-a11-1-9a-segments"
+          }
+        ]
       }
     },
     {
@@ -1174,8 +1334,13 @@
         "assert:media-workbook-map-1-06-ab-momente-a11-1-9b-variants"
       ],
       "publication": {
-        "status": "review",
-        "publishedFields": []
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "transcriptSegments",
+            "assertionId": "assert:listen-workbook-1-06-ab-momente-a11-1-9b-segments"
+          }
+        ]
       }
     },
     {
@@ -1190,8 +1355,13 @@
         "assert:media-workbook-map-1-07-ab-momente-a11-2-6a-variants"
       ],
       "publication": {
-        "status": "review",
-        "publishedFields": []
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "transcriptSegments",
+            "assertionId": "assert:listen-workbook-1-07-ab-momente-a11-2-6a-segments"
+          }
+        ]
       }
     },
     {
@@ -1206,8 +1376,13 @@
         "assert:media-workbook-map-1-08-ab-momente-a11-2-6a-variants"
       ],
       "publication": {
-        "status": "review",
-        "publishedFields": []
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "transcriptSegments",
+            "assertionId": "assert:listen-workbook-1-08-ab-momente-a11-2-6a-segments"
+          }
+        ]
       }
     },
     {
@@ -1222,8 +1397,13 @@
         "assert:media-workbook-map-1-09-ab-momente-a11-2-6a-variants"
       ],
       "publication": {
-        "status": "review",
-        "publishedFields": []
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "transcriptSegments",
+            "assertionId": "assert:listen-workbook-1-09-ab-momente-a11-2-6a-segments"
+          }
+        ]
       }
     },
     {
@@ -1238,8 +1418,13 @@
         "assert:media-workbook-map-1-10-ab-momente-a11-2-6a-variants"
       ],
       "publication": {
-        "status": "review",
-        "publishedFields": []
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "transcriptSegments",
+            "assertionId": "assert:listen-workbook-1-10-ab-momente-a11-2-6a-segments"
+          }
+        ]
       }
     },
     {
@@ -1254,8 +1439,13 @@
         "assert:media-workbook-map-1-11-ab-momente-a11-2-6b-variants"
       ],
       "publication": {
-        "status": "review",
-        "publishedFields": []
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "transcriptSegments",
+            "assertionId": "assert:listen-workbook-1-11-ab-momente-a11-2-6b-segments"
+          }
+        ]
       }
     },
     {
@@ -1270,8 +1460,13 @@
         "assert:media-workbook-map-1-12-ab-momente-a11-2-6b-variants"
       ],
       "publication": {
-        "status": "review",
-        "publishedFields": []
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "transcriptSegments",
+            "assertionId": "assert:listen-workbook-1-12-ab-momente-a11-2-6b-segments"
+          }
+        ]
       }
     },
     {
@@ -1286,8 +1481,13 @@
         "assert:media-workbook-map-1-13-ab-momente-a11-2-6b-variants"
       ],
       "publication": {
-        "status": "review",
-        "publishedFields": []
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "transcriptSegments",
+            "assertionId": "assert:listen-workbook-1-13-ab-momente-a11-2-6b-segments"
+          }
+        ]
       }
     },
     {
@@ -1302,8 +1502,13 @@
         "assert:media-workbook-map-1-14-ab-momente-a11-2-6b-variants"
       ],
       "publication": {
-        "status": "review",
-        "publishedFields": []
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "transcriptSegments",
+            "assertionId": "assert:listen-workbook-1-14-ab-momente-a11-2-6b-segments"
+          }
+        ]
       }
     },
     {
@@ -1318,8 +1523,13 @@
         "assert:media-workbook-map-1-15-ab-momente-a11-2-12-variants"
       ],
       "publication": {
-        "status": "review",
-        "publishedFields": []
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "transcriptSegments",
+            "assertionId": "assert:listen-workbook-1-15-ab-momente-a11-2-12-segments"
+          }
+        ]
       }
     }
   ],
@@ -1436,271 +1646,136 @@
   "contentGaps": [
     {
       "kind": "ContentGap",
-      "id": "gap:rights-1-01-ab-momente-a11-1-3",
-      "objectId": "media:workbook-map-1-01-ab-momente-a11-1-3",
-      "field": "variants",
-      "reason": "Workbook source MP3 rights open (blocked-pending-recorded-rights); mapping only — public source MP3 must remain zero",
-      "owner": "owner-review",
-      "blocksPublication": true
-    },
-    {
-      "kind": "ContentGap",
       "id": "gap:transcript-1-01-ab-momente-a11-1-3",
       "objectId": "listen:workbook-1-01-ab-momente-a11-1-3",
       "field": "transcriptSegments",
-      "reason": "Track is mapped-needs-listening-review; transcript text not encoded in C1 from audio map metadata alone",
+      "reason": "Transcript text is not encoded from audio-map metadata alone; an authentic listening task also withholds it so the exercise answer stays hidden",
       "owner": "codex-content",
       "blocksPublication": false
-    },
-    {
-      "kind": "ContentGap",
-      "id": "gap:rights-1-02-ab-momente-a11-1-3",
-      "objectId": "media:workbook-map-1-02-ab-momente-a11-1-3",
-      "field": "variants",
-      "reason": "Workbook source MP3 rights open (blocked-pending-recorded-rights); mapping only — public source MP3 must remain zero",
-      "owner": "owner-review",
-      "blocksPublication": true
     },
     {
       "kind": "ContentGap",
       "id": "gap:transcript-1-02-ab-momente-a11-1-3",
       "objectId": "listen:workbook-1-02-ab-momente-a11-1-3",
       "field": "transcriptSegments",
-      "reason": "Track is mapped-needs-listening-review; transcript text not encoded in C1 from audio map metadata alone",
+      "reason": "Transcript text is not encoded from audio-map metadata alone; an authentic listening task also withholds it so the exercise answer stays hidden",
       "owner": "codex-content",
       "blocksPublication": false
-    },
-    {
-      "kind": "ContentGap",
-      "id": "gap:rights-1-03-ab-momente-a11-1-3",
-      "objectId": "media:workbook-map-1-03-ab-momente-a11-1-3",
-      "field": "variants",
-      "reason": "Workbook source MP3 rights open (blocked-pending-recorded-rights); mapping only — public source MP3 must remain zero",
-      "owner": "owner-review",
-      "blocksPublication": true
     },
     {
       "kind": "ContentGap",
       "id": "gap:transcript-1-03-ab-momente-a11-1-3",
       "objectId": "listen:workbook-1-03-ab-momente-a11-1-3",
       "field": "transcriptSegments",
-      "reason": "Track is mapped-needs-listening-review; transcript text not encoded in C1 from audio map metadata alone",
+      "reason": "Transcript text is not encoded from audio-map metadata alone; an authentic listening task also withholds it so the exercise answer stays hidden",
       "owner": "codex-content",
       "blocksPublication": false
-    },
-    {
-      "kind": "ContentGap",
-      "id": "gap:rights-1-04-ab-momente-a11-1-3",
-      "objectId": "media:workbook-map-1-04-ab-momente-a11-1-3",
-      "field": "variants",
-      "reason": "Workbook source MP3 rights open (blocked-pending-recorded-rights); mapping only — public source MP3 must remain zero",
-      "owner": "owner-review",
-      "blocksPublication": true
     },
     {
       "kind": "ContentGap",
       "id": "gap:transcript-1-04-ab-momente-a11-1-3",
       "objectId": "listen:workbook-1-04-ab-momente-a11-1-3",
       "field": "transcriptSegments",
-      "reason": "Track is mapped-needs-listening-review; transcript text not encoded in C1 from audio map metadata alone",
+      "reason": "Transcript text is not encoded from audio-map metadata alone; an authentic listening task also withholds it so the exercise answer stays hidden",
       "owner": "codex-content",
       "blocksPublication": false
-    },
-    {
-      "kind": "ContentGap",
-      "id": "gap:rights-1-05-ab-momente-a11-1-9a",
-      "objectId": "media:workbook-map-1-05-ab-momente-a11-1-9a",
-      "field": "variants",
-      "reason": "Workbook source MP3 rights open (blocked-pending-recorded-rights); mapping only — public source MP3 must remain zero",
-      "owner": "owner-review",
-      "blocksPublication": true
     },
     {
       "kind": "ContentGap",
       "id": "gap:transcript-1-05-ab-momente-a11-1-9a",
       "objectId": "listen:workbook-1-05-ab-momente-a11-1-9a",
       "field": "transcriptSegments",
-      "reason": "Track is mapped-needs-listening-review; transcript text not encoded in C1 from audio map metadata alone",
+      "reason": "Transcript text is not encoded from audio-map metadata alone; an authentic listening task also withholds it so the exercise answer stays hidden",
       "owner": "codex-content",
       "blocksPublication": false
-    },
-    {
-      "kind": "ContentGap",
-      "id": "gap:rights-1-06-ab-momente-a11-1-9b",
-      "objectId": "media:workbook-map-1-06-ab-momente-a11-1-9b",
-      "field": "variants",
-      "reason": "Workbook source MP3 rights open (blocked-pending-recorded-rights); mapping only — public source MP3 must remain zero",
-      "owner": "owner-review",
-      "blocksPublication": true
     },
     {
       "kind": "ContentGap",
       "id": "gap:transcript-1-06-ab-momente-a11-1-9b",
       "objectId": "listen:workbook-1-06-ab-momente-a11-1-9b",
       "field": "transcriptSegments",
-      "reason": "Track is mapped-needs-listening-review; transcript text not encoded in C1 from audio map metadata alone",
+      "reason": "Transcript text is not encoded from audio-map metadata alone; an authentic listening task also withholds it so the exercise answer stays hidden",
       "owner": "codex-content",
       "blocksPublication": false
-    },
-    {
-      "kind": "ContentGap",
-      "id": "gap:rights-1-07-ab-momente-a11-2-6a",
-      "objectId": "media:workbook-map-1-07-ab-momente-a11-2-6a",
-      "field": "variants",
-      "reason": "Workbook source MP3 rights open (blocked-pending-recorded-rights); mapping only — public source MP3 must remain zero",
-      "owner": "owner-review",
-      "blocksPublication": true
     },
     {
       "kind": "ContentGap",
       "id": "gap:transcript-1-07-ab-momente-a11-2-6a",
       "objectId": "listen:workbook-1-07-ab-momente-a11-2-6a",
       "field": "transcriptSegments",
-      "reason": "Track is mapped-needs-listening-review; transcript text not encoded in C1 from audio map metadata alone",
+      "reason": "Transcript text is not encoded from audio-map metadata alone; an authentic listening task also withholds it so the exercise answer stays hidden",
       "owner": "codex-content",
       "blocksPublication": false
-    },
-    {
-      "kind": "ContentGap",
-      "id": "gap:rights-1-08-ab-momente-a11-2-6a",
-      "objectId": "media:workbook-map-1-08-ab-momente-a11-2-6a",
-      "field": "variants",
-      "reason": "Workbook source MP3 rights open (blocked-pending-recorded-rights); mapping only — public source MP3 must remain zero",
-      "owner": "owner-review",
-      "blocksPublication": true
     },
     {
       "kind": "ContentGap",
       "id": "gap:transcript-1-08-ab-momente-a11-2-6a",
       "objectId": "listen:workbook-1-08-ab-momente-a11-2-6a",
       "field": "transcriptSegments",
-      "reason": "Track is mapped-needs-listening-review; transcript text not encoded in C1 from audio map metadata alone",
+      "reason": "Transcript text is not encoded from audio-map metadata alone; an authentic listening task also withholds it so the exercise answer stays hidden",
       "owner": "codex-content",
       "blocksPublication": false
-    },
-    {
-      "kind": "ContentGap",
-      "id": "gap:rights-1-09-ab-momente-a11-2-6a",
-      "objectId": "media:workbook-map-1-09-ab-momente-a11-2-6a",
-      "field": "variants",
-      "reason": "Workbook source MP3 rights open (blocked-pending-recorded-rights); mapping only — public source MP3 must remain zero",
-      "owner": "owner-review",
-      "blocksPublication": true
     },
     {
       "kind": "ContentGap",
       "id": "gap:transcript-1-09-ab-momente-a11-2-6a",
       "objectId": "listen:workbook-1-09-ab-momente-a11-2-6a",
       "field": "transcriptSegments",
-      "reason": "Track is mapped-needs-listening-review; transcript text not encoded in C1 from audio map metadata alone",
+      "reason": "Transcript text is not encoded from audio-map metadata alone; an authentic listening task also withholds it so the exercise answer stays hidden",
       "owner": "codex-content",
       "blocksPublication": false
-    },
-    {
-      "kind": "ContentGap",
-      "id": "gap:rights-1-10-ab-momente-a11-2-6a",
-      "objectId": "media:workbook-map-1-10-ab-momente-a11-2-6a",
-      "field": "variants",
-      "reason": "Workbook source MP3 rights open (blocked-pending-recorded-rights); mapping only — public source MP3 must remain zero",
-      "owner": "owner-review",
-      "blocksPublication": true
     },
     {
       "kind": "ContentGap",
       "id": "gap:transcript-1-10-ab-momente-a11-2-6a",
       "objectId": "listen:workbook-1-10-ab-momente-a11-2-6a",
       "field": "transcriptSegments",
-      "reason": "Track is mapped-needs-listening-review; transcript text not encoded in C1 from audio map metadata alone",
+      "reason": "Transcript text is not encoded from audio-map metadata alone; an authentic listening task also withholds it so the exercise answer stays hidden",
       "owner": "codex-content",
       "blocksPublication": false
-    },
-    {
-      "kind": "ContentGap",
-      "id": "gap:rights-1-11-ab-momente-a11-2-6b",
-      "objectId": "media:workbook-map-1-11-ab-momente-a11-2-6b",
-      "field": "variants",
-      "reason": "Workbook source MP3 rights open (blocked-pending-recorded-rights); mapping only — public source MP3 must remain zero",
-      "owner": "owner-review",
-      "blocksPublication": true
     },
     {
       "kind": "ContentGap",
       "id": "gap:transcript-1-11-ab-momente-a11-2-6b",
       "objectId": "listen:workbook-1-11-ab-momente-a11-2-6b",
       "field": "transcriptSegments",
-      "reason": "Track is mapped-needs-listening-review; transcript text not encoded in C1 from audio map metadata alone",
+      "reason": "Transcript text is not encoded from audio-map metadata alone; an authentic listening task also withholds it so the exercise answer stays hidden",
       "owner": "codex-content",
       "blocksPublication": false
-    },
-    {
-      "kind": "ContentGap",
-      "id": "gap:rights-1-12-ab-momente-a11-2-6b",
-      "objectId": "media:workbook-map-1-12-ab-momente-a11-2-6b",
-      "field": "variants",
-      "reason": "Workbook source MP3 rights open (blocked-pending-recorded-rights); mapping only — public source MP3 must remain zero",
-      "owner": "owner-review",
-      "blocksPublication": true
     },
     {
       "kind": "ContentGap",
       "id": "gap:transcript-1-12-ab-momente-a11-2-6b",
       "objectId": "listen:workbook-1-12-ab-momente-a11-2-6b",
       "field": "transcriptSegments",
-      "reason": "Track is mapped-needs-listening-review; transcript text not encoded in C1 from audio map metadata alone",
+      "reason": "Transcript text is not encoded from audio-map metadata alone; an authentic listening task also withholds it so the exercise answer stays hidden",
       "owner": "codex-content",
       "blocksPublication": false
-    },
-    {
-      "kind": "ContentGap",
-      "id": "gap:rights-1-13-ab-momente-a11-2-6b",
-      "objectId": "media:workbook-map-1-13-ab-momente-a11-2-6b",
-      "field": "variants",
-      "reason": "Workbook source MP3 rights open (blocked-pending-recorded-rights); mapping only — public source MP3 must remain zero",
-      "owner": "owner-review",
-      "blocksPublication": true
     },
     {
       "kind": "ContentGap",
       "id": "gap:transcript-1-13-ab-momente-a11-2-6b",
       "objectId": "listen:workbook-1-13-ab-momente-a11-2-6b",
       "field": "transcriptSegments",
-      "reason": "Track is mapped-needs-listening-review; transcript text not encoded in C1 from audio map metadata alone",
+      "reason": "Transcript text is not encoded from audio-map metadata alone; an authentic listening task also withholds it so the exercise answer stays hidden",
       "owner": "codex-content",
       "blocksPublication": false
-    },
-    {
-      "kind": "ContentGap",
-      "id": "gap:rights-1-14-ab-momente-a11-2-6b",
-      "objectId": "media:workbook-map-1-14-ab-momente-a11-2-6b",
-      "field": "variants",
-      "reason": "Workbook source MP3 rights open (blocked-pending-recorded-rights); mapping only — public source MP3 must remain zero",
-      "owner": "owner-review",
-      "blocksPublication": true
     },
     {
       "kind": "ContentGap",
       "id": "gap:transcript-1-14-ab-momente-a11-2-6b",
       "objectId": "listen:workbook-1-14-ab-momente-a11-2-6b",
       "field": "transcriptSegments",
-      "reason": "Track is mapped-needs-listening-review; transcript text not encoded in C1 from audio map metadata alone",
+      "reason": "Transcript text is not encoded from audio-map metadata alone; an authentic listening task also withholds it so the exercise answer stays hidden",
       "owner": "codex-content",
       "blocksPublication": false
-    },
-    {
-      "kind": "ContentGap",
-      "id": "gap:rights-1-15-ab-momente-a11-2-12",
-      "objectId": "media:workbook-map-1-15-ab-momente-a11-2-12",
-      "field": "variants",
-      "reason": "Workbook source MP3 rights open (blocked-pending-recorded-rights); mapping only — public source MP3 must remain zero",
-      "owner": "owner-review",
-      "blocksPublication": true
     },
     {
       "kind": "ContentGap",
       "id": "gap:transcript-1-15-ab-momente-a11-2-12",
       "objectId": "listen:workbook-1-15-ab-momente-a11-2-12",
       "field": "transcriptSegments",
-      "reason": "Track is mapped-needs-listening-review; transcript text not encoded in C1 from audio map metadata alone",
+      "reason": "Transcript text is not encoded from audio-map metadata alone; an authentic listening task also withholds it so the exercise answer stays hidden",
       "owner": "codex-content",
       "blocksPublication": false
     }

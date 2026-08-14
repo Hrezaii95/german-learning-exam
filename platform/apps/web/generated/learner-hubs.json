@@ -8660,8 +8660,10 @@
       "title": "Phrases & Q&A"
     },
     {
-      "categories": [],
-      "description": "All 15 approved workbook tracks for Lessons 1–2, grouped by lesson and exercise with direct practice links.",
+      "categories": [
+        "listening"
+      ],
+      "description": "All 15 workbook tracks for Lessons 1–2, grouped by lesson and exercise with direct practice links. The recordings are the original Momente A1.1 Arbeitsbuch CD tracks (Hueber Verlag).",
       "experience": {
         "groups": [
           {
@@ -8879,8 +8881,474 @@
         "kind": "listening"
       },
       "id": "listening",
-      "itemCount": 0,
-      "items": [],
+      "itemCount": 15,
+      "items": [
+        {
+          "category": "listening",
+          "displayLabel": "AB 3",
+          "hubDestination": {
+            "hub": "listening",
+            "path": "/listening/listen:workbook-1-01-ab-momente-a11-1-3"
+          },
+          "id": "listen:workbook-1-01-ab-momente-a11-1-3",
+          "kind": "ListeningAsset",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "AB 3",
+              "field": "label",
+              "matchKeys": [
+                "ab 3"
+              ]
+            },
+            {
+              "displayText": "listen:workbook-1-01-ab-momente-a11-1-3",
+              "field": "label",
+              "matchKeys": [
+                "listen:workbook-1-01-ab-momente-a11-1-3"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "listening",
+          "displayLabel": "AB 3",
+          "hubDestination": {
+            "hub": "listening",
+            "path": "/listening/listen:workbook-1-02-ab-momente-a11-1-3"
+          },
+          "id": "listen:workbook-1-02-ab-momente-a11-1-3",
+          "kind": "ListeningAsset",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "AB 3",
+              "field": "label",
+              "matchKeys": [
+                "ab 3"
+              ]
+            },
+            {
+              "displayText": "listen:workbook-1-02-ab-momente-a11-1-3",
+              "field": "label",
+              "matchKeys": [
+                "listen:workbook-1-02-ab-momente-a11-1-3"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "listening",
+          "displayLabel": "AB 3",
+          "hubDestination": {
+            "hub": "listening",
+            "path": "/listening/listen:workbook-1-03-ab-momente-a11-1-3"
+          },
+          "id": "listen:workbook-1-03-ab-momente-a11-1-3",
+          "kind": "ListeningAsset",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "AB 3",
+              "field": "label",
+              "matchKeys": [
+                "ab 3"
+              ]
+            },
+            {
+              "displayText": "listen:workbook-1-03-ab-momente-a11-1-3",
+              "field": "label",
+              "matchKeys": [
+                "listen:workbook-1-03-ab-momente-a11-1-3"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "listening",
+          "displayLabel": "AB 3",
+          "hubDestination": {
+            "hub": "listening",
+            "path": "/listening/listen:workbook-1-04-ab-momente-a11-1-3"
+          },
+          "id": "listen:workbook-1-04-ab-momente-a11-1-3",
+          "kind": "ListeningAsset",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "AB 3",
+              "field": "label",
+              "matchKeys": [
+                "ab 3"
+              ]
+            },
+            {
+              "displayText": "listen:workbook-1-04-ab-momente-a11-1-3",
+              "field": "label",
+              "matchKeys": [
+                "listen:workbook-1-04-ab-momente-a11-1-3"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "listening",
+          "displayLabel": "AB 9a",
+          "hubDestination": {
+            "hub": "listening",
+            "path": "/listening/listen:workbook-1-05-ab-momente-a11-1-9a"
+          },
+          "id": "listen:workbook-1-05-ab-momente-a11-1-9a",
+          "kind": "ListeningAsset",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "AB 9a",
+              "field": "label",
+              "matchKeys": [
+                "ab 9a"
+              ]
+            },
+            {
+              "displayText": "listen:workbook-1-05-ab-momente-a11-1-9a",
+              "field": "label",
+              "matchKeys": [
+                "listen:workbook-1-05-ab-momente-a11-1-9a"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "listening",
+          "displayLabel": "AB 9b",
+          "hubDestination": {
+            "hub": "listening",
+            "path": "/listening/listen:workbook-1-06-ab-momente-a11-1-9b"
+          },
+          "id": "listen:workbook-1-06-ab-momente-a11-1-9b",
+          "kind": "ListeningAsset",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "AB 9b",
+              "field": "label",
+              "matchKeys": [
+                "ab 9b"
+              ]
+            },
+            {
+              "displayText": "listen:workbook-1-06-ab-momente-a11-1-9b",
+              "field": "label",
+              "matchKeys": [
+                "listen:workbook-1-06-ab-momente-a11-1-9b"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "listening",
+          "displayLabel": "AB 6a",
+          "hubDestination": {
+            "hub": "listening",
+            "path": "/listening/listen:workbook-1-07-ab-momente-a11-2-6a"
+          },
+          "id": "listen:workbook-1-07-ab-momente-a11-2-6a",
+          "kind": "ListeningAsset",
+          "lessonIds": [
+            "lesson:02"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "AB 6a",
+              "field": "label",
+              "matchKeys": [
+                "ab 6a"
+              ]
+            },
+            {
+              "displayText": "listen:workbook-1-07-ab-momente-a11-2-6a",
+              "field": "label",
+              "matchKeys": [
+                "listen:workbook-1-07-ab-momente-a11-2-6a"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "listening",
+          "displayLabel": "AB 6a",
+          "hubDestination": {
+            "hub": "listening",
+            "path": "/listening/listen:workbook-1-08-ab-momente-a11-2-6a"
+          },
+          "id": "listen:workbook-1-08-ab-momente-a11-2-6a",
+          "kind": "ListeningAsset",
+          "lessonIds": [
+            "lesson:02"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "AB 6a",
+              "field": "label",
+              "matchKeys": [
+                "ab 6a"
+              ]
+            },
+            {
+              "displayText": "listen:workbook-1-08-ab-momente-a11-2-6a",
+              "field": "label",
+              "matchKeys": [
+                "listen:workbook-1-08-ab-momente-a11-2-6a"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "listening",
+          "displayLabel": "AB 6a",
+          "hubDestination": {
+            "hub": "listening",
+            "path": "/listening/listen:workbook-1-09-ab-momente-a11-2-6a"
+          },
+          "id": "listen:workbook-1-09-ab-momente-a11-2-6a",
+          "kind": "ListeningAsset",
+          "lessonIds": [
+            "lesson:02"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "AB 6a",
+              "field": "label",
+              "matchKeys": [
+                "ab 6a"
+              ]
+            },
+            {
+              "displayText": "listen:workbook-1-09-ab-momente-a11-2-6a",
+              "field": "label",
+              "matchKeys": [
+                "listen:workbook-1-09-ab-momente-a11-2-6a"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "listening",
+          "displayLabel": "AB 6a",
+          "hubDestination": {
+            "hub": "listening",
+            "path": "/listening/listen:workbook-1-10-ab-momente-a11-2-6a"
+          },
+          "id": "listen:workbook-1-10-ab-momente-a11-2-6a",
+          "kind": "ListeningAsset",
+          "lessonIds": [
+            "lesson:02"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "AB 6a",
+              "field": "label",
+              "matchKeys": [
+                "ab 6a"
+              ]
+            },
+            {
+              "displayText": "listen:workbook-1-10-ab-momente-a11-2-6a",
+              "field": "label",
+              "matchKeys": [
+                "listen:workbook-1-10-ab-momente-a11-2-6a"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "listening",
+          "displayLabel": "AB 6b",
+          "hubDestination": {
+            "hub": "listening",
+            "path": "/listening/listen:workbook-1-11-ab-momente-a11-2-6b"
+          },
+          "id": "listen:workbook-1-11-ab-momente-a11-2-6b",
+          "kind": "ListeningAsset",
+          "lessonIds": [
+            "lesson:02"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "AB 6b",
+              "field": "label",
+              "matchKeys": [
+                "ab 6b"
+              ]
+            },
+            {
+              "displayText": "listen:workbook-1-11-ab-momente-a11-2-6b",
+              "field": "label",
+              "matchKeys": [
+                "listen:workbook-1-11-ab-momente-a11-2-6b"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "listening",
+          "displayLabel": "AB 6b",
+          "hubDestination": {
+            "hub": "listening",
+            "path": "/listening/listen:workbook-1-12-ab-momente-a11-2-6b"
+          },
+          "id": "listen:workbook-1-12-ab-momente-a11-2-6b",
+          "kind": "ListeningAsset",
+          "lessonIds": [
+            "lesson:02"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "AB 6b",
+              "field": "label",
+              "matchKeys": [
+                "ab 6b"
+              ]
+            },
+            {
+              "displayText": "listen:workbook-1-12-ab-momente-a11-2-6b",
+              "field": "label",
+              "matchKeys": [
+                "listen:workbook-1-12-ab-momente-a11-2-6b"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "listening",
+          "displayLabel": "AB 6b",
+          "hubDestination": {
+            "hub": "listening",
+            "path": "/listening/listen:workbook-1-13-ab-momente-a11-2-6b"
+          },
+          "id": "listen:workbook-1-13-ab-momente-a11-2-6b",
+          "kind": "ListeningAsset",
+          "lessonIds": [
+            "lesson:02"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "AB 6b",
+              "field": "label",
+              "matchKeys": [
+                "ab 6b"
+              ]
+            },
+            {
+              "displayText": "listen:workbook-1-13-ab-momente-a11-2-6b",
+              "field": "label",
+              "matchKeys": [
+                "listen:workbook-1-13-ab-momente-a11-2-6b"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "listening",
+          "displayLabel": "AB 6b",
+          "hubDestination": {
+            "hub": "listening",
+            "path": "/listening/listen:workbook-1-14-ab-momente-a11-2-6b"
+          },
+          "id": "listen:workbook-1-14-ab-momente-a11-2-6b",
+          "kind": "ListeningAsset",
+          "lessonIds": [
+            "lesson:02"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "AB 6b",
+              "field": "label",
+              "matchKeys": [
+                "ab 6b"
+              ]
+            },
+            {
+              "displayText": "listen:workbook-1-14-ab-momente-a11-2-6b",
+              "field": "label",
+              "matchKeys": [
+                "listen:workbook-1-14-ab-momente-a11-2-6b"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "listening",
+          "displayLabel": "AB 12",
+          "hubDestination": {
+            "hub": "listening",
+            "path": "/listening/listen:workbook-1-15-ab-momente-a11-2-12"
+          },
+          "id": "listen:workbook-1-15-ab-momente-a11-2-12",
+          "kind": "ListeningAsset",
+          "lessonIds": [
+            "lesson:02"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "AB 12",
+              "field": "label",
+              "matchKeys": [
+                "ab 12"
+              ]
+            },
+            {
+              "displayText": "listen:workbook-1-15-ab-momente-a11-2-12",
+              "field": "label",
+              "matchKeys": [
+                "listen:workbook-1-15-ab-momente-a11-2-12"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        }
+      ],
       "kinds": [
         "Dialogue",
         "ListeningAsset"
@@ -9901,8 +10369,10 @@
       "title": "Grammar"
     },
     "listening": {
-      "categories": [],
-      "description": "All 15 approved workbook tracks for Lessons 1–2, grouped by lesson and exercise with direct practice links.",
+      "categories": [
+        "listening"
+      ],
+      "description": "All 15 workbook tracks for Lessons 1–2, grouped by lesson and exercise with direct practice links. The recordings are the original Momente A1.1 Arbeitsbuch CD tracks (Hueber Verlag).",
       "experience": {
         "groups": [
           {
@@ -10120,8 +10590,474 @@
         "kind": "listening"
       },
       "id": "listening",
-      "itemCount": 0,
-      "items": [],
+      "itemCount": 15,
+      "items": [
+        {
+          "category": "listening",
+          "displayLabel": "AB 3",
+          "hubDestination": {
+            "hub": "listening",
+            "path": "/listening/listen:workbook-1-01-ab-momente-a11-1-3"
+          },
+          "id": "listen:workbook-1-01-ab-momente-a11-1-3",
+          "kind": "ListeningAsset",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "AB 3",
+              "field": "label",
+              "matchKeys": [
+                "ab 3"
+              ]
+            },
+            {
+              "displayText": "listen:workbook-1-01-ab-momente-a11-1-3",
+              "field": "label",
+              "matchKeys": [
+                "listen:workbook-1-01-ab-momente-a11-1-3"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "listening",
+          "displayLabel": "AB 3",
+          "hubDestination": {
+            "hub": "listening",
+            "path": "/listening/listen:workbook-1-02-ab-momente-a11-1-3"
+          },
+          "id": "listen:workbook-1-02-ab-momente-a11-1-3",
+          "kind": "ListeningAsset",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "AB 3",
+              "field": "label",
+              "matchKeys": [
+                "ab 3"
+              ]
+            },
+            {
+              "displayText": "listen:workbook-1-02-ab-momente-a11-1-3",
+              "field": "label",
+              "matchKeys": [
+                "listen:workbook-1-02-ab-momente-a11-1-3"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "listening",
+          "displayLabel": "AB 3",
+          "hubDestination": {
+            "hub": "listening",
+            "path": "/listening/listen:workbook-1-03-ab-momente-a11-1-3"
+          },
+          "id": "listen:workbook-1-03-ab-momente-a11-1-3",
+          "kind": "ListeningAsset",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "AB 3",
+              "field": "label",
+              "matchKeys": [
+                "ab 3"
+              ]
+            },
+            {
+              "displayText": "listen:workbook-1-03-ab-momente-a11-1-3",
+              "field": "label",
+              "matchKeys": [
+                "listen:workbook-1-03-ab-momente-a11-1-3"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "listening",
+          "displayLabel": "AB 3",
+          "hubDestination": {
+            "hub": "listening",
+            "path": "/listening/listen:workbook-1-04-ab-momente-a11-1-3"
+          },
+          "id": "listen:workbook-1-04-ab-momente-a11-1-3",
+          "kind": "ListeningAsset",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "AB 3",
+              "field": "label",
+              "matchKeys": [
+                "ab 3"
+              ]
+            },
+            {
+              "displayText": "listen:workbook-1-04-ab-momente-a11-1-3",
+              "field": "label",
+              "matchKeys": [
+                "listen:workbook-1-04-ab-momente-a11-1-3"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "listening",
+          "displayLabel": "AB 9a",
+          "hubDestination": {
+            "hub": "listening",
+            "path": "/listening/listen:workbook-1-05-ab-momente-a11-1-9a"
+          },
+          "id": "listen:workbook-1-05-ab-momente-a11-1-9a",
+          "kind": "ListeningAsset",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "AB 9a",
+              "field": "label",
+              "matchKeys": [
+                "ab 9a"
+              ]
+            },
+            {
+              "displayText": "listen:workbook-1-05-ab-momente-a11-1-9a",
+              "field": "label",
+              "matchKeys": [
+                "listen:workbook-1-05-ab-momente-a11-1-9a"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "listening",
+          "displayLabel": "AB 9b",
+          "hubDestination": {
+            "hub": "listening",
+            "path": "/listening/listen:workbook-1-06-ab-momente-a11-1-9b"
+          },
+          "id": "listen:workbook-1-06-ab-momente-a11-1-9b",
+          "kind": "ListeningAsset",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "AB 9b",
+              "field": "label",
+              "matchKeys": [
+                "ab 9b"
+              ]
+            },
+            {
+              "displayText": "listen:workbook-1-06-ab-momente-a11-1-9b",
+              "field": "label",
+              "matchKeys": [
+                "listen:workbook-1-06-ab-momente-a11-1-9b"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "listening",
+          "displayLabel": "AB 6a",
+          "hubDestination": {
+            "hub": "listening",
+            "path": "/listening/listen:workbook-1-07-ab-momente-a11-2-6a"
+          },
+          "id": "listen:workbook-1-07-ab-momente-a11-2-6a",
+          "kind": "ListeningAsset",
+          "lessonIds": [
+            "lesson:02"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "AB 6a",
+              "field": "label",
+              "matchKeys": [
+                "ab 6a"
+              ]
+            },
+            {
+              "displayText": "listen:workbook-1-07-ab-momente-a11-2-6a",
+              "field": "label",
+              "matchKeys": [
+                "listen:workbook-1-07-ab-momente-a11-2-6a"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "listening",
+          "displayLabel": "AB 6a",
+          "hubDestination": {
+            "hub": "listening",
+            "path": "/listening/listen:workbook-1-08-ab-momente-a11-2-6a"
+          },
+          "id": "listen:workbook-1-08-ab-momente-a11-2-6a",
+          "kind": "ListeningAsset",
+          "lessonIds": [
+            "lesson:02"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "AB 6a",
+              "field": "label",
+              "matchKeys": [
+                "ab 6a"
+              ]
+            },
+            {
+              "displayText": "listen:workbook-1-08-ab-momente-a11-2-6a",
+              "field": "label",
+              "matchKeys": [
+                "listen:workbook-1-08-ab-momente-a11-2-6a"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "listening",
+          "displayLabel": "AB 6a",
+          "hubDestination": {
+            "hub": "listening",
+            "path": "/listening/listen:workbook-1-09-ab-momente-a11-2-6a"
+          },
+          "id": "listen:workbook-1-09-ab-momente-a11-2-6a",
+          "kind": "ListeningAsset",
+          "lessonIds": [
+            "lesson:02"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "AB 6a",
+              "field": "label",
+              "matchKeys": [
+                "ab 6a"
+              ]
+            },
+            {
+              "displayText": "listen:workbook-1-09-ab-momente-a11-2-6a",
+              "field": "label",
+              "matchKeys": [
+                "listen:workbook-1-09-ab-momente-a11-2-6a"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "listening",
+          "displayLabel": "AB 6a",
+          "hubDestination": {
+            "hub": "listening",
+            "path": "/listening/listen:workbook-1-10-ab-momente-a11-2-6a"
+          },
+          "id": "listen:workbook-1-10-ab-momente-a11-2-6a",
+          "kind": "ListeningAsset",
+          "lessonIds": [
+            "lesson:02"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "AB 6a",
+              "field": "label",
+              "matchKeys": [
+                "ab 6a"
+              ]
+            },
+            {
+              "displayText": "listen:workbook-1-10-ab-momente-a11-2-6a",
+              "field": "label",
+              "matchKeys": [
+                "listen:workbook-1-10-ab-momente-a11-2-6a"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "listening",
+          "displayLabel": "AB 6b",
+          "hubDestination": {
+            "hub": "listening",
+            "path": "/listening/listen:workbook-1-11-ab-momente-a11-2-6b"
+          },
+          "id": "listen:workbook-1-11-ab-momente-a11-2-6b",
+          "kind": "ListeningAsset",
+          "lessonIds": [
+            "lesson:02"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "AB 6b",
+              "field": "label",
+              "matchKeys": [
+                "ab 6b"
+              ]
+            },
+            {
+              "displayText": "listen:workbook-1-11-ab-momente-a11-2-6b",
+              "field": "label",
+              "matchKeys": [
+                "listen:workbook-1-11-ab-momente-a11-2-6b"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "listening",
+          "displayLabel": "AB 6b",
+          "hubDestination": {
+            "hub": "listening",
+            "path": "/listening/listen:workbook-1-12-ab-momente-a11-2-6b"
+          },
+          "id": "listen:workbook-1-12-ab-momente-a11-2-6b",
+          "kind": "ListeningAsset",
+          "lessonIds": [
+            "lesson:02"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "AB 6b",
+              "field": "label",
+              "matchKeys": [
+                "ab 6b"
+              ]
+            },
+            {
+              "displayText": "listen:workbook-1-12-ab-momente-a11-2-6b",
+              "field": "label",
+              "matchKeys": [
+                "listen:workbook-1-12-ab-momente-a11-2-6b"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "listening",
+          "displayLabel": "AB 6b",
+          "hubDestination": {
+            "hub": "listening",
+            "path": "/listening/listen:workbook-1-13-ab-momente-a11-2-6b"
+          },
+          "id": "listen:workbook-1-13-ab-momente-a11-2-6b",
+          "kind": "ListeningAsset",
+          "lessonIds": [
+            "lesson:02"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "AB 6b",
+              "field": "label",
+              "matchKeys": [
+                "ab 6b"
+              ]
+            },
+            {
+              "displayText": "listen:workbook-1-13-ab-momente-a11-2-6b",
+              "field": "label",
+              "matchKeys": [
+                "listen:workbook-1-13-ab-momente-a11-2-6b"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "listening",
+          "displayLabel": "AB 6b",
+          "hubDestination": {
+            "hub": "listening",
+            "path": "/listening/listen:workbook-1-14-ab-momente-a11-2-6b"
+          },
+          "id": "listen:workbook-1-14-ab-momente-a11-2-6b",
+          "kind": "ListeningAsset",
+          "lessonIds": [
+            "lesson:02"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "AB 6b",
+              "field": "label",
+              "matchKeys": [
+                "ab 6b"
+              ]
+            },
+            {
+              "displayText": "listen:workbook-1-14-ab-momente-a11-2-6b",
+              "field": "label",
+              "matchKeys": [
+                "listen:workbook-1-14-ab-momente-a11-2-6b"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "listening",
+          "displayLabel": "AB 12",
+          "hubDestination": {
+            "hub": "listening",
+            "path": "/listening/listen:workbook-1-15-ab-momente-a11-2-12"
+          },
+          "id": "listen:workbook-1-15-ab-momente-a11-2-12",
+          "kind": "ListeningAsset",
+          "lessonIds": [
+            "lesson:02"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "AB 12",
+              "field": "label",
+              "matchKeys": [
+                "ab 12"
+              ]
+            },
+            {
+              "displayText": "listen:workbook-1-15-ab-momente-a11-2-12",
+              "field": "label",
+              "matchKeys": [
+                "listen:workbook-1-15-ab-momente-a11-2-12"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        }
+      ],
       "kinds": [
         "Dialogue",
         "ListeningAsset"

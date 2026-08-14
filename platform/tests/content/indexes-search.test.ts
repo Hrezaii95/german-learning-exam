@@ -578,7 +578,7 @@ describe("C2A typed indexes and search (real publication)", () => {
 describe("C2AR1 learner-safety and filter completion", () => {
   const { bundle, indexes } = loadRealIndexes();
 
-  it("fail-closed helpers exclude teacher/review listening/deck without audience review", () => {
+  it("fail-closed helpers exclude teacher review content while exposing released workbook listening", () => {
     const allSearchable = filterIndexedEntities(indexes, "all-searchable", {});
     expect(allSearchable).not.toContain("lex:elektriker");
     expect(allSearchable).not.toContain("collection:teacher-professions");
@@ -615,20 +615,23 @@ describe("C2AR1 learner-safety and filter completion", () => {
     );
     expect(teacherMembersReview).toContain("lex:elektriker");
 
+    // ADR-015/016 released the Lessons 1–2 workbook listening set, so it is
+    // learner content the public barrel must now return. Fail-closed behaviour
+    // is still proven by the teacher lexeme, collection and deck above.
     const listeningId = bundle.listeningAssets[0]?.id;
     expect(listeningId).toBeDefined();
-    expect(searchContent(indexes, listeningId!).some((h) => h.id === listeningId)).toBe(
-      false,
-    );
-    expect(
-      filterIndexedEntities(indexes, "all-searchable", { kinds: ["ListeningAsset"] }),
-    ).toEqual([]);
+    expect(indexes.byId.get(listeningId!)?.publicationStatus).toBe("published");
+    const learnerListening = filterIndexedEntities(indexes, "all-searchable", {
+      kinds: ["ListeningAsset"],
+    });
+    expect(learnerListening).toHaveLength(15);
+    expect(learnerListening).toContain(listeningId);
     expect(
       filterIndexedEntities(indexes, "all-searchable", {
         kinds: ["ListeningAsset"],
         audience: "review",
-      }).length,
-    ).toBeGreaterThan(0);
+      }),
+    ).toEqual(learnerListening);
 
     expect(indexes.reviewableConceptIds.has("lex:elektriker")).toBe(false);
     expect(
@@ -872,10 +875,20 @@ describe("C2AR2 opaque boundary and dynamic query correctness", () => {
       indexes.lessonMembership.get("lesson:02")?.includes("lex:elektriker"),
     ).toBe(false);
 
+    expect(
+      indexes.byId.get("activity:lesson-02-teacher-professions-deck"),
+    ).toBeUndefined();
+    expect(
+      getEntityRecord(indexes, "activity:lesson-02-teacher-professions-deck"),
+    ).toBeUndefined();
+
+    // Released by ADR-015/016 — the public barrel is expected to hand this back.
     const listeningId = bundle.listeningAssets[0]?.id;
     expect(listeningId).toBeDefined();
-    expect(indexes.byId.get(listeningId!)).toBeUndefined();
-    expect(getEntityRecord(indexes, listeningId!)).toBeUndefined();
+    expect(indexes.byId.get(listeningId!)?.publicationStatus).toBe("published");
+    expect(getEntityRecord(indexes, listeningId!)?.publicationStatus).toBe(
+      "published",
+    );
 
     const author = openAuthorIndexes(indexes);
     expect(author.byId.get("lex:elektriker")?.publicationStatus).toBe("review");
@@ -1080,13 +1093,13 @@ describe("C2AR2 opaque boundary and dynamic query correctness", () => {
 describe("C2AR3 complete learner-safe projection", () => {
   const { bundle, indexes } = loadRealIndexes();
   const author = openAuthorIndexes(indexes);
-  const listeningId = bundle.listeningAssets[0]!.id;
+  // Workbook listening ids are deliberately absent: ADR-015/016 released them,
+  // so they are learner content and must appear in the learner projection.
   const FORBIDDEN_LEARNER_IDS = [
     "lex:elektriker",
     "lex:gaertner",
     "collection:teacher-professions",
     "activity:lesson-02-teacher-professions-deck",
-    listeningId,
   ] as const;
 
   function collectStrings(value: unknown, out: string[]): void {
@@ -1437,11 +1450,10 @@ describe("C2AR4 nested link, lesson, and tag projection", () => {
   });
 
   it("recursive leak scan covers helper records and search hits for review and blocked IDs", () => {
-    const listeningId = bundle.listeningAssets[0]!.id;
     const FORBIDDEN_LEARNER = [
       "lex:elektriker",
       "collection:teacher-professions",
-      listeningId,
+      "activity:lesson-02-teacher-professions-deck",
     ] as const;
 
     const learnerHelpers = [

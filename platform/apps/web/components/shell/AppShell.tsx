@@ -23,6 +23,10 @@ const PRIMARY_NAV: NavItem[] = [
   { key: "search", href: "/search", label: "Search", enabled: true },
   { key: "practice", href: "/practice", label: "Practice", enabled: true },
   { key: "review", href: "/review", label: "Review", enabled: true },
+  // ADR-016: the course-material credit must stay reachable from every
+  // ordinary learner page, so it lives in primary navigation rather than in a
+  // footnote that only one route shows.
+  { key: "references", href: "/references", label: "References", enabled: true },
   { key: "settings", href: "/settings", label: "Settings", enabled: true },
 ];
 
@@ -134,6 +138,18 @@ export function AppShell({
         <main id="main-content" className="shell-main">
           {children}
         </main>
+        {/* The source credit is a condition of using this course material
+            (ADR-016), so it rides with every page rather than depending on a
+            navigation surface a phone learner never sees. */}
+        <footer className="shell-credit">
+          <p>
+            Course material from <span lang="de">Momente</span> A1.1 / A1.2 by
+            Hueber Verlag.{" "}
+            <Link href="/references" className="shell-credit__link">
+              References
+            </Link>
+          </p>
+        </footer>
       </div>
 
       <nav className="shell-bottomnav" aria-label="Mobile">

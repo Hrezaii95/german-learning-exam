@@ -23,9 +23,11 @@ This allocation may be expanded or reduced. Before changing it, Claude must prop
 - Live app: `https://hrezaii95.github.io/german-learning-exam/`
 - Active implementation: `platform/`; the sample and failed Cursor demo are not implementation foundations.
 - Current root worktree has one pre-existing dirty submodule: `samples/german-learning-ui-samples`. Do not revert or absorb it.
-- Current application gates pass, but `node tools/audit-alpha-tts.mjs` fails because 27 supplement MP3s are present outside the base 327-asset manifest.
-- The owner restored the previously missing full Kursbuch audio set under `resources/original/hossein added new material that needs to be moved to organized folder structure/Kursbuch-20260813T121208Z-1-001/`: 90 MP3s total (CD1: 59; CD2: 31). Claude must register hashes and provenance, deduplicate against the mixed archive, move it into the governed audio structure, and map the 17 Lesson 1–2 CD1 tracks before using it.
-- Generated pronunciation remains preview audio pending qualified German listening approval.
+- All application gates pass, including `node tools/audit-alpha-tts.mjs` (354 manifest = 354 disk = 354 audited, zero failures) after the 27-clip supplement was merged into the canonical manifest.
+- The restored Kursbuch delivery is ingested: 59 new CD1 tracks registered (source manifest 456 files, lock updated), the 31 CD2 intake copies were byte-identical duplicates and are quarantined per ADR-014. Evidence: `research/kursbuch-ingestion-2026-08-13.json`.
+- ADR-015/ADR-016: the owner holds full Momente A1.1/A1.2 rights, conditional on attribution. The 15 workbook listening tracks are published and the `/references` page discharges the credit; `node tools/audit-attribution.mjs` enforces it.
+- Generated TTS pronunciation remains preview audio pending qualified German listening approval (G5). This is a pedagogical gate about the synthetic voice and is unaffected by the rights decisions.
+- Release gates now include `cd platform && npm run gates:pages` (build → smoke → learner-language) plus `node tools/audit-attribution.mjs`. Never run two builds, or a typecheck alongside a build, concurrently — `build:pages` globally renames `proxy.ts`. A pre-commit hook blocks commits that capture build-intermediate state.
 - Acquire the existing plan baton before implementation; one engine writes it at a time.
 
 Do not ask the owner to restate requirements already encoded in the handoff and specifications.

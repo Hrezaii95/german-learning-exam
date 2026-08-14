@@ -63,7 +63,7 @@ const HUB_COPY: Readonly<
   listening: Object.freeze({
     title: "Listening",
     description:
-      "All 15 approved workbook tracks for Lessons 1–2, grouped by lesson and exercise with direct practice links.",
+      "All 15 workbook tracks for Lessons 1–2, grouped by lesson and exercise with direct practice links. The recordings are the original Momente A1.1 Arbeitsbuch CD tracks (Hueber Verlag).",
   }),
   concepts: Object.freeze({
     title: "Concepts",

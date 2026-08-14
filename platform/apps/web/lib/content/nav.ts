@@ -13,6 +13,7 @@ export type NavKey =
   | "search"
   | "practice"
   | "review"
+  | "references"
   | "settings";
 
 /** Active primary nav item, or null when no item should be current (e.g. 404). */

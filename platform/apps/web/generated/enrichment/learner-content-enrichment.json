@@ -457,7 +457,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Media"
         }
       ],
@@ -673,7 +673,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Media"
         }
       ],
@@ -883,7 +883,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Media"
         }
       ],
@@ -1104,7 +1104,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Media"
         }
       ],
@@ -1252,7 +1252,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Media"
         }
       ],
@@ -1417,7 +1417,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Media"
         }
       ],
@@ -1680,7 +1680,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Media"
         }
       ],
@@ -1856,7 +1856,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Media"
         }
       ],
@@ -2077,7 +2077,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Media"
         }
       ],
@@ -2317,7 +2317,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Media"
         }
       ],
@@ -2366,9 +2366,9 @@
       "mediaSlots": [
         {
           "kind": "source-listening",
-          "learnerMessage": "The workbook listening audio is not available yet.",
+          "learnerMessage": "The original workbook recordings for this exercise are ready to play — 2 tracks.",
           "slotId": "source-listening:lesson:01",
-          "state": "pending-review"
+          "state": "ready"
         }
       ],
       "mode": "hear",
@@ -2426,7 +2426,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "ready",
           "title": "Media"
         }
       ],
@@ -3282,7 +3282,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Media"
         }
       ],
@@ -3772,7 +3772,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Media"
         }
       ],
@@ -3906,7 +3906,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Media"
         }
       ],
@@ -4517,7 +4517,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Media"
         }
       ],
@@ -4934,7 +4934,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Media"
         }
       ],
@@ -5099,7 +5099,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Media"
         }
       ],
@@ -5558,7 +5558,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Media"
         }
       ],
@@ -5741,7 +5741,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Media"
         }
       ],
@@ -5927,7 +5927,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Media"
         }
       ],
@@ -5977,9 +5977,9 @@
       "mediaSlots": [
         {
           "kind": "source-listening",
-          "learnerMessage": "The workbook listening audio is not available yet.",
+          "learnerMessage": "The original workbook recordings for this exercise are ready to play — 9 tracks.",
           "slotId": "source-listening:lesson:02",
-          "state": "pending-review"
+          "state": "ready"
         }
       ],
       "mode": "hear",
@@ -6037,7 +6037,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "ready",
           "title": "Media"
         }
       ],
@@ -6513,7 +6513,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Media"
         }
       ],
@@ -6729,7 +6729,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Media"
         }
       ],
@@ -6939,7 +6939,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Media"
         }
       ],
@@ -7160,7 +7160,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Media"
         }
       ],
@@ -7308,7 +7308,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Media"
         }
       ],
@@ -7473,7 +7473,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Media"
         }
       ],
@@ -7736,7 +7736,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Media"
         }
       ],
@@ -7912,7 +7912,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Media"
         }
       ],
@@ -8133,7 +8133,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Media"
         }
       ],
@@ -8373,7 +8373,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Media"
         }
       ],
@@ -8422,9 +8422,9 @@
       "mediaSlots": [
         {
           "kind": "source-listening",
-          "learnerMessage": "The workbook listening audio is not available yet.",
+          "learnerMessage": "The original workbook recordings for this exercise are ready to play — 2 tracks.",
           "slotId": "source-listening:lesson:01",
-          "state": "pending-review"
+          "state": "ready"
         }
       ],
       "mode": "hear",
@@ -8482,7 +8482,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "ready",
           "title": "Media"
         }
       ],
@@ -9338,7 +9338,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Media"
         }
       ],
@@ -9828,7 +9828,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Media"
         }
       ],
@@ -9962,7 +9962,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Media"
         }
       ],
@@ -10573,7 +10573,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Media"
         }
       ],
@@ -10990,7 +10990,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Media"
         }
       ],
@@ -11155,7 +11155,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Media"
         }
       ],
@@ -11614,7 +11614,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Media"
         }
       ],
@@ -11797,7 +11797,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Media"
         }
       ],
@@ -11983,7 +11983,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "partial",
           "title": "Media"
         }
       ],
@@ -12033,9 +12033,9 @@
       "mediaSlots": [
         {
           "kind": "source-listening",
-          "learnerMessage": "The workbook listening audio is not available yet.",
+          "learnerMessage": "The original workbook recordings for this exercise are ready to play — 9 tracks.",
           "slotId": "source-listening:lesson:02",
-          "state": "pending-review"
+          "state": "ready"
         }
       ],
       "mode": "hear",
@@ -12093,7 +12093,7 @@
             "mediaSlots"
           ],
           "id": "media",
-          "state": "pending-review",
+          "state": "ready",
           "title": "Media"
         }
       ],

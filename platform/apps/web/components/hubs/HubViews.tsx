@@ -856,7 +856,10 @@ function HubFilters({
   const searchId = `hub-search-${hub.id}`;
   const lessonId = `hub-lesson-${hub.id}`;
   const categoryId = `hub-category-${hub.id}`;
-  const hasCategories = hub.categories.length > 0;
+  // A hub that renders a derived experience filters that experience, not its
+  // record list, so its record categories cannot narrow anything a learner can
+  // see. Offering them would be a control that does nothing.
+  const hasCategories = hub.experience == null && hub.categories.length > 0;
 
   return (
     <section className="panel hub-filters" aria-labelledby="hub-filters-heading">

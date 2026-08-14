@@ -47,7 +47,13 @@ export function WorkbookAudioPanel({ tracks }: { tracks: readonly WorkbookAudioT
         </div>
         <span className="meta-chip">{tracks.length} approved track{tracks.length === 1 ? "" : "s"}</span>
       </div>
-      <p className="muted">Official exercise recordings mapped to this lesson activity. Study speed preserves pitch.</p>
+      {/* ADR-016 asks for the source credit to travel with the media itself,
+          not only with a page elsewhere in the app. */}
+      <p className="muted">
+        Original exercise recordings from the <span lang="de">Momente</span> A1.1{" "}
+        <span lang="de">Arbeitsbuch</span> CD (Hueber Verlag), mapped to this
+        lesson activity. Study speed preserves pitch.
+      </p>
       <ol className="workbook-audio__list">
         {tracks.map((track) => (
           <li key={track.id} className="workbook-audio__track">
