@@ -7,10 +7,12 @@ import {
 
 /**
  * Learner-reachable source credit for the course material this app teaches
- * from (ADR-016). Two claims are kept visibly apart because blurring them
- * would be dishonest in opposite directions: the course books and CDs are
- * real published material used with the owner's rights, while the short
- * pronunciation previews are machine-made and still unchecked.
+ * from (ADR-016). Three claims are kept visibly apart because blurring them
+ * would be dishonest in different directions: the course books and CDs are
+ * real published material used with the owner's rights; the in-app
+ * illustrations are original artwork that the course must not be credited
+ * for; and the short pronunciation previews are machine-made and still
+ * unchecked.
  */
 
 function ReferenceGroupSection({ group }: { group: ReferenceGroup }) {
@@ -62,6 +64,29 @@ export function ReferencesView() {
           and from the second workbook CD is left out because those lessons are
           not built yet — that is a decision about how much of the course exists
           in the app, not a question about the sources.
+        </p>
+      </section>
+
+      <section
+        className="panel reference-note reference-note--artwork"
+        aria-labelledby="references-artwork"
+      >
+        <h2 id="references-artwork">
+          The pictures were drawn for this app, not taken from the course
+        </h2>
+        <p>
+          Every illustration you see here — on the word cards and on the word
+          pages — was made for this app. None of it comes from the{" "}
+          <span lang="de">Momente</span> books, their workbooks, or any other
+          course material, and nothing on this page credits{" "}
+          {REFERENCES_PUBLISHER} for a picture.
+        </p>
+        <p>
+          The job pictures deliberately show the work being done — hands and
+          tools, never a face. That is what lets one drawing stand for both the{" "}
+          <span lang="de">der</span> word and the <span lang="de">die</span>{" "}
+          word. The article, the word ending and the colour badge are what tell
+          those two forms apart; the picture never does.
         </p>
       </section>
 

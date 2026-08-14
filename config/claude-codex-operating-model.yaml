@@ -116,7 +116,35 @@ scope:
       - deployment
       - closing-human-language-review
       - closing-owner-acceptance
-  scope_overrides: []
+  scope_overrides:
+    - id: SO-001
+      decided_at: "2026-08-14"
+      decided_by: owner (hossein, in Claude Code chat)
+      trigger: >-
+        Owner moved to the GPT Pro 100 USD tier and said "we can assign more
+        tasks to it", lifting the practical constraint that kept Codex to one
+        senior judgment call before bulk work.
+      change: expand
+      added_scope:
+        - adversarial-responsive-visual-qa-of-live-and-exported-builds
+        - vocabulary-illustration-batches-against-the-locked-style-system
+        - remaining-semantic-infographic-families
+        - per-batch-visual-acceptance-review-before-Claude-integration
+      unchanged_forbidden:
+        - claude-harness-configuration
+        - canonical-german-content-promotion
+        - publication-status-changes
+        - git-commit-or-push
+        - deployment
+        - closing-human-language-review
+        - closing-owner-acceptance
+      budget_effect: >-
+        Codex parallelism raised from 2 to 4 concurrent jobs. Claude still
+        inspects every returned artifact before integration; a worker report is
+        a claim, not evidence.
+      stop_condition: >-
+        Revert to the default split if Codex output starts requiring more Claude
+        rework than it saves, or if the owner narrows the grant.
 
 organization:
   orchestrator:

@@ -131,6 +131,26 @@
   object-fit: cover;
 }
 
+/* A <picture> is inline by default, which would collapse the image inside the
+   reserved media box. It is a pass-through wrapper, so it fills that box. */
+.rich-visual__picture,
+.hub-card__picture {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+/* Profession concept illustrations are cropped to 4:3 and reserve exactly the
+   box `.meaning-plate--detail` holds, so a vocabulary page that gains a
+   picture keeps the same media geometry the plate had. */
+.rich-visual--concept {
+  max-inline-size: 32rem;
+}
+
+.rich-visual--concept .rich-visual__media {
+  aspect-ratio: var(--media-hero-ratio);
+}
+
 .rich-visual__eyebrow {
   position: absolute;
   top: 1rem;
@@ -3222,8 +3242,10 @@ a:hover {
   margin-bottom: 0;
 }
 
-/* The synthetic-voice caveat is a different kind of statement from the credit
-   above it, so it gets its own tinted ground rather than blending in. */
+/* Two statements say what did NOT come from the course — the original artwork
+   and the synthetic voice. Both are a different kind of claim from the credit
+   above them, so they share one tinted ground rather than blending in. */
+.reference-note--artwork,
 .reference-note--synthetic {
   background: var(--surface-tint);
   box-shadow: none;

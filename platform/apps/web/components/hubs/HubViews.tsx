@@ -36,6 +36,7 @@ import {
 import type { LearnerGender } from "@/lib/content/detail-types";
 import { resolvePublishedPronunciationExact } from "@/lib/content/media-availability";
 import { illustrationForDetail } from "@/lib/content/illustrations";
+import { IllustrationPicture } from "@/components/media/IllustrationPicture";
 import {
   LemmaAudioButton,
   MeaningPlate,
@@ -219,18 +220,30 @@ function VocabularyHubCard({
     >
       {illustration ? (
         <div className="hub-card__media">
-          <img
-            className="hub-card__image"
-            src={withPagesBaseAssetPath(
-              `/illustrations/${illustration.filename}`,
-            )}
-            alt={illustration.alt}
-            width={illustration.width}
-            height={illustration.height}
-            style={{ objectPosition: illustration.objectPosition }}
-            loading="lazy"
-            decoding="async"
-          />
+          {illustration.responsive ? (
+            <IllustrationPicture
+              variant={illustration.responsive.card}
+              alt={illustration.alt}
+              imageClassName="hub-card__image"
+              pictureClassName="hub-card__picture"
+              /* Browse grids scroll; only the first rows are ever in view. */
+              loading="lazy"
+              objectPosition={illustration.objectPosition}
+            />
+          ) : (
+            <img
+              className="hub-card__image"
+              src={withPagesBaseAssetPath(
+                `/illustrations/${illustration.filename}`,
+              )}
+              alt={illustration.alt}
+              width={illustration.width}
+              height={illustration.height}
+              style={{ objectPosition: illustration.objectPosition }}
+              loading="lazy"
+              decoding="async"
+            />
+          )}
         </div>
       ) : null}
       <MeaningPlate

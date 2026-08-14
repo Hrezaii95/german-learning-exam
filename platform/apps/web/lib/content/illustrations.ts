@@ -4,20 +4,73 @@ export type LearnerIllustrationLabel = Readonly<{
   gender: "masculine" | "feminine";
 }>;
 
+/** One encoded file: a path under `/illustrations/` plus its real pixel box. */
+export type LearnerIllustrationRendition = Readonly<{
+  /** Root-relative path under `/illustrations/`, before the Pages base. */
+  path: string;
+  width: number;
+  height: number;
+}>;
+
+export type LearnerIllustrationSourceSet = Readonly<{
+  type: "image/avif" | "image/webp";
+  renditions: readonly LearnerIllustrationRendition[];
+}>;
+
+/**
+ * Everything one media slot needs to serve the right pixels: the modern
+ * formats in preference order, the raster fallback every browser can read, and
+ * the intrinsic box that fixes the aspect ratio so nothing shifts on load.
+ */
+export type LearnerIllustrationVariant = Readonly<{
+  sizes: string;
+  sources: readonly LearnerIllustrationSourceSet[];
+  fallback: readonly LearnerIllustrationRendition[];
+  /** The rendition whose width/height are written onto the `<img>`. */
+  intrinsic: LearnerIllustrationRendition;
+}>;
+
+/**
+ * The two slots the same artwork is painted into, each pre-cropped: the 1:1
+ * hub card box and the 4:3 detail box. Both mirror the geometry the meaning
+ * plate reserves, so a card that has a picture and a card that has a plate
+ * still line up inside one grid row.
+ */
+export type LearnerIllustrationResponsive = Readonly<{
+  card: LearnerIllustrationVariant;
+  detail: LearnerIllustrationVariant;
+}>;
+
 export type LearnerIllustration = Readonly<{
   id: string;
   filename: string;
   eyebrow: string;
   title: string;
+  /** Language of `title` — profession concepts are titled in learner English. */
+  titleLang: "de" | "en";
   caption: string;
   alt: string;
   width: number;
   height: number;
   objectPosition: string;
   labels: readonly LearnerIllustrationLabel[];
+  /** Optimized multi-format sources, or `null` for the single-file legacy set. */
+  responsive: LearnerIllustrationResponsive | null;
 }>;
 
-const PROFESSION_ENSEMBLE: LearnerIllustration = Object.freeze({
+/**
+ * The lesson- and activity-level set was generated before the optimized
+ * derivative pipeline existed: one large PNG each, titled in German, served
+ * from a single `<img src>`. Kept as-is so this change stays scoped to the
+ * profession concepts.
+ */
+function legacyIllustration(
+  fields: Omit<LearnerIllustration, "titleLang" | "responsive">,
+): LearnerIllustration {
+  return Object.freeze({ ...fields, titleLang: "de", responsive: null });
+}
+
+const PROFESSION_ENSEMBLE: LearnerIllustration = legacyIllustration({
   id: "illustration:l2-core-professions:v1",
   filename: "lesson-02-professions-ensemble.png",
   eyebrow: "Picture vocabulary",
@@ -38,7 +91,7 @@ const PROFESSION_ENSEMBLE: LearnerIllustration = Object.freeze({
   ]),
 });
 
-const ARCHITECT_STUDIO: LearnerIllustration = Object.freeze({
+const ARCHITECT_STUDIO: LearnerIllustration = legacyIllustration({
   id: "illustration:architekt-studio:v1",
   filename: "vocabulary-architekt-studio.png",
   eyebrow: "Vocabulary in context",
@@ -54,7 +107,7 @@ const ARCHITECT_STUDIO: LearnerIllustration = Object.freeze({
   ]),
 });
 
-const GREETINGS_DAYPARTS: LearnerIllustration = Object.freeze({
+const GREETINGS_DAYPARTS: LearnerIllustration = legacyIllustration({
   id: "illustration:l1-greetings-dayparts:v1",
   filename: "lesson-01-greetings-dayparts.png",
   eyebrow: "Greeting in context",
@@ -67,7 +120,7 @@ const GREETINGS_DAYPARTS: LearnerIllustration = Object.freeze({
   labels: Object.freeze([]),
 });
 
-const VERBS_CONTEXT: LearnerIllustration = Object.freeze({
+const VERBS_CONTEXT: LearnerIllustration = legacyIllustration({
   id: "illustration:arbeiten-sein-context:v1",
   filename: "verbs-arbeiten-sein-context.png",
   eyebrow: "Verb in context",
@@ -80,7 +133,7 @@ const VERBS_CONTEXT: LearnerIllustration = Object.freeze({
   labels: Object.freeze([]),
 });
 
-const CONVERSATION_CONTEXT: LearnerIllustration = Object.freeze({
+const CONVERSATION_CONTEXT: LearnerIllustration = legacyIllustration({
   id: "illustration:conversation-qa:v1",
   filename: "conversation-question-answer.png",
   eyebrow: "Conversation in context",
@@ -93,7 +146,7 @@ const CONVERSATION_CONTEXT: LearnerIllustration = Object.freeze({
   labels: Object.freeze([]),
 });
 
-const NAME_ORIGIN_CLASS: LearnerIllustration = Object.freeze({
+const NAME_ORIGIN_CLASS: LearnerIllustration = legacyIllustration({
   id: "illustration:l1-name-origin-class:v1",
   filename: "lesson-01-name-origin-class.png",
   eyebrow: "Introduction in context",
@@ -106,7 +159,7 @@ const NAME_ORIGIN_CLASS: LearnerIllustration = Object.freeze({
   labels: Object.freeze([]),
 });
 
-const WELLBEING_STATES: LearnerIllustration = Object.freeze({
+const WELLBEING_STATES: LearnerIllustration = legacyIllustration({
   id: "illustration:l1-wellbeing-five-states:v1",
   filename: "lesson-01-wellbeing-five-states.png",
   eyebrow: "Meaning in context",
@@ -119,7 +172,7 @@ const WELLBEING_STATES: LearnerIllustration = Object.freeze({
   labels: Object.freeze([]),
 });
 
-const PERSONAL_PROFILE: LearnerIllustration = Object.freeze({
+const PERSONAL_PROFILE: LearnerIllustration = legacyIllustration({
   id: "illustration:l2-personal-profile:v1",
   filename: "lesson-02-personal-profile-context.png",
   eyebrow: "Profile in context",
@@ -132,7 +185,7 @@ const PERSONAL_PROFILE: LearnerIllustration = Object.freeze({
   labels: Object.freeze([]),
 });
 
-const PROFESSION_PAIRS: LearnerIllustration = Object.freeze({
+const PROFESSION_PAIRS: LearnerIllustration = legacyIllustration({
   id: "illustration:l2-profession-pairs:v1",
   filename: "lesson-02-core-profession-pairs-sheet.png",
   eyebrow: "Person-form pairs",
@@ -144,6 +197,234 @@ const PROFESSION_PAIRS: LearnerIllustration = Object.freeze({
   objectPosition: "50% 50%",
   labels: Object.freeze([]),
 });
+
+/* ---------------------------------------------------------------------------
+ * Profession concept illustrations
+ *
+ * Original artwork commissioned for this app (`vocabulary-professions-v1`) —
+ * not course material, which is why /references states that separately.
+ *
+ * One image per profession CONCEPT, shared by the masculine and the feminine
+ * lexeme. That is the whole point of the set: every scene shows the work being
+ * done — hands and tools, no face, no gendered body — so the picture cannot
+ * imply which of the two words a learner is looking at. Grammatical gender is
+ * carried where it can be read and checked: the article, the word ending, and
+ * the gender badge.
+ * ------------------------------------------------------------------------- */
+
+const PROFESSION_ASSET_DIR = "professions";
+
+/** Hub card media measures roughly 220–300 CSS px across 360 → 1440. */
+const CARD_SIZES = "(min-width: 700px) 288px, 82vw";
+/** Detail media is capped at the meaning plate's 32rem reserved box. */
+const DETAIL_SIZES = "(min-width: 560px) 512px, 92vw";
+
+const CARD_WIDTHS: readonly number[] = Object.freeze([240, 480]);
+const DETAIL_WIDTHS: readonly number[] = Object.freeze([512, 1024]);
+
+function rendition(
+  key: string,
+  shape: "square" | "wide",
+  extension: "avif" | "webp" | "jpg",
+  width: number,
+): LearnerIllustrationRendition {
+  return Object.freeze({
+    path: `${PROFESSION_ASSET_DIR}/${key}-${shape}-${width}.${extension}`,
+    width,
+    height: shape === "square" ? width : Math.round((width * 3) / 4),
+  });
+}
+
+function renditions(
+  key: string,
+  shape: "square" | "wide",
+  extension: "avif" | "webp" | "jpg",
+  widths: readonly number[],
+): readonly LearnerIllustrationRendition[] {
+  return Object.freeze(widths.map((width) => rendition(key, shape, extension, width)));
+}
+
+function variant(
+  key: string,
+  shape: "square" | "wide",
+  widths: readonly number[],
+  sizes: string,
+): LearnerIllustrationVariant {
+  const largest = widths.reduce((a, b) => (b > a ? b : a), 0);
+  return Object.freeze({
+    sizes,
+    sources: Object.freeze([
+      Object.freeze({
+        type: "image/avif" as const,
+        renditions: renditions(key, shape, "avif", widths),
+      }),
+      Object.freeze({
+        type: "image/webp" as const,
+        renditions: renditions(key, shape, "webp", widths),
+      }),
+    ]),
+    fallback: renditions(key, shape, "jpg", widths),
+    intrinsic: rendition(key, shape, "jpg", largest),
+  });
+}
+
+type ProfessionConceptSeed = Readonly<{
+  /** Asset key; also the derivative filename stem. */
+  key: string;
+  /** What the picture means, in learner English. Never a German word. */
+  concept: string;
+  /** Alt text taken verbatim from the accepted set's manifest. */
+  alt: string;
+  masculine: string;
+  feminine: string;
+  /** The two lexemes that share this one image: masculine first. */
+  lexemeIds: readonly [string, string];
+}>;
+
+const PROFESSION_CAPTION =
+  "One picture for both words, because it shows the work and not a person. The article, the word ending and the gender badge below are what tell the two forms apart.";
+
+function professionConcept(seed: ProfessionConceptSeed): LearnerIllustration {
+  const detail = variant(seed.key, "wide", DETAIL_WIDTHS, DETAIL_SIZES);
+  return Object.freeze({
+    id: `illustration:profession-${seed.key}:v1`,
+    filename: detail.intrinsic.path,
+    eyebrow: "Vocabulary in context",
+    title: seed.concept,
+    titleLang: "en",
+    caption: PROFESSION_CAPTION,
+    alt: seed.alt,
+    width: detail.intrinsic.width,
+    height: detail.intrinsic.height,
+    objectPosition: "50% 50%",
+    labels: Object.freeze([
+      Object.freeze({ de: seed.masculine, en: seed.concept, gender: "masculine" as const }),
+      Object.freeze({ de: seed.feminine, en: seed.concept, gender: "feminine" as const }),
+    ]),
+    responsive: Object.freeze({
+      card: variant(seed.key, "square", CARD_WIDTHS, CARD_SIZES),
+      detail,
+    }),
+  });
+}
+
+const PROFESSION_CONCEPT_SEEDS: readonly ProfessionConceptSeed[] = Object.freeze([
+  Object.freeze({
+    key: "arzt",
+    concept: "Doctor",
+    alt: "Cropped hands check a blood-pressure cuff and stethoscope on a patient’s forearm in a quiet examination room.",
+    masculine: "der Arzt",
+    feminine: "die Ärztin",
+    lexemeIds: Object.freeze(["lex:arzt", "lex:aerztin"] as const),
+  }),
+  Object.freeze({
+    key: "friseur",
+    concept: "Hairdresser",
+    alt: "Cropped hands use a comb and scissors to trim brown hair above a salon cape.",
+    masculine: "der Friseur",
+    feminine: "die Friseurin",
+    lexemeIds: Object.freeze(["lex:friseur", "lex:friseurin"] as const),
+  }),
+  Object.freeze({
+    key: "ingenieur",
+    concept: "Engineer",
+    alt: "Cropped hands measure a compact gear assembly with a caliper above an unlabeled technical drawing.",
+    masculine: "der Ingenieur",
+    feminine: "die Ingenieurin",
+    lexemeIds: Object.freeze(["lex:ingenieur", "lex:ingenieurin"] as const),
+  }),
+  Object.freeze({
+    key: "journalist",
+    concept: "Journalist",
+    alt: "Cropped hands hold a microphone and blank notebook during an interview, with a small recorder nearby.",
+    masculine: "der Journalist",
+    feminine: "die Journalistin",
+    lexemeIds: Object.freeze(["lex:journalist", "lex:journalistin"] as const),
+  }),
+  Object.freeze({
+    key: "kellner",
+    concept: "Waiter",
+    alt: "Cropped hands carry a tray with a covered dish and water while setting cutlery at a restaurant table.",
+    masculine: "der Kellner",
+    feminine: "die Kellnerin",
+    lexemeIds: Object.freeze(["lex:kellner", "lex:kellnerin"] as const),
+  }),
+  Object.freeze({
+    key: "kfz-mechatroniker",
+    concept: "Car mechatronics technician",
+    alt: "Cropped hands test a car battery with probes and a blank diagnostic meter in an open engine bay.",
+    masculine: "der Kfz-Mechatroniker",
+    feminine: "die Kfz-Mechatronikerin",
+    lexemeIds: Object.freeze(["lex:kfz-mechatroniker", "lex:kfz-mechatronikerin"] as const),
+  }),
+  Object.freeze({
+    key: "lehrer",
+    concept: "Teacher",
+    alt: "A cropped hand points to an unlabeled world map while two pupils raise their hands from classroom desks.",
+    masculine: "der Lehrer",
+    feminine: "die Lehrerin",
+    lexemeIds: Object.freeze(["lex:lehrer", "lex:lehrerin"] as const),
+  }),
+  Object.freeze({
+    key: "paketzusteller",
+    concept: "Parcel delivery agent",
+    alt: "Cropped hands pass a plain parcel at a doorway while a blank handheld scanner is held nearby.",
+    masculine: "der Paketzusteller",
+    feminine: "die Paketzustellerin",
+    lexemeIds: Object.freeze(["lex:paketzusteller", "lex:paketzustellerin"] as const),
+  }),
+  Object.freeze({
+    key: "rentner",
+    concept: "Pensioner",
+    alt: "Older hands tend a small flowering plant on a balcony table beside a mug and an unmarked book.",
+    masculine: "der Rentner",
+    feminine: "die Rentnerin",
+    lexemeIds: Object.freeze(["lex:rentner", "lex:rentnerin"] as const),
+  }),
+  Object.freeze({
+    key: "schueler",
+    concept: "School student",
+    alt: "Child-sized hands use a purple pencil and ruler to complete geometric shapes in an exercise book at a school desk.",
+    masculine: "der Schüler",
+    feminine: "die Schülerin",
+    lexemeIds: Object.freeze(["lex:schueler", "lex:schuelerin"] as const),
+  }),
+  Object.freeze({
+    key: "student",
+    concept: "University student",
+    alt: "Adult hands study an open diagram book beside a laptop with an unlabeled abstract diagram in a university library.",
+    masculine: "der Student",
+    feminine: "die Studentin",
+    lexemeIds: Object.freeze(["lex:student", "lex:studentin"] as const),
+  }),
+  Object.freeze({
+    key: "verkaeufer",
+    concept: "Shop assistant",
+    alt: "Cropped hands place a folded sweater into a plain shopping bag while a customer offers an unmarked card at a blank terminal.",
+    masculine: "der Verkäufer",
+    feminine: "die Verkäuferin",
+    lexemeIds: Object.freeze(["lex:verkaeufer", "lex:verkaeuferin"] as const),
+  }),
+]);
+
+/** lexeme id → the concept image its pair shares. Both forms resolve to one entry. */
+const PROFESSION_CONCEPT_BY_LEXEME: ReadonlyMap<string, LearnerIllustration> = new Map(
+  PROFESSION_CONCEPT_SEEDS.flatMap((seed) => {
+    const illustration = professionConcept(seed);
+    return seed.lexemeIds.map((lexemeId) => [lexemeId, illustration] as const);
+  }),
+);
+
+/** The exact lexeme ids the concept set covers — read by the coverage test. */
+export const PROFESSION_CONCEPT_LEXEME_IDS: readonly string[] = Object.freeze(
+  PROFESSION_CONCEPT_SEEDS.flatMap((seed) => [...seed.lexemeIds]),
+);
+
+export function professionConceptIllustration(
+  lexemeId: string,
+): LearnerIllustration | null {
+  return PROFESSION_CONCEPT_BY_LEXEME.get(lexemeId) ?? null;
+}
 
 export function illustrationForActivity(activityId: string): LearnerIllustration | null {
   if (activityId === "activity:lesson-02-core-professions") return PROFESSION_ENSEMBLE;
@@ -164,6 +445,15 @@ export function illustrationForLesson(lessonId: string): LearnerIllustration | n
 }
 
 export function illustrationForDetail(detailId: string): LearnerIllustration | null {
+  const concept = professionConceptIllustration(detailId);
+  if (concept) return concept;
+  // `lex:architektin` deliberately does NOT share this asset. Every concept
+  // image above is gender-neutral by construction, which is what makes one
+  // picture safe for both forms. The older architect illustration shows a
+  // male architect at a desk and its own alt text says so, so attaching it to
+  // the feminine lexeme would assert with a picture exactly what the concept
+  // set is built to avoid. `die Architektin` keeps the meaning plate until a
+  // neutral architect scene exists in the same set.
   if (detailId === "lex:architekt") return ARCHITECT_STUDIO;
   if (detailId === "verb:sein" || detailId === "verb:arbeiten") return VERBS_CONTEXT;
   if (detailId.startsWith("qa:")) return CONVERSATION_CONTEXT;
