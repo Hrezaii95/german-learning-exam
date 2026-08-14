@@ -42,22 +42,22 @@ const HUB_COPY: Readonly<
   vocabulary: Object.freeze({
     title: "Vocabulary",
     description:
-      "Published lexemes from the validated course package, including Lesson 2 job vocabulary when published.",
+      "Words from your course, including the Lesson 2 job vocabulary.",
   }),
   verbs: Object.freeze({
     title: "Verbs",
     description:
-      "Published verbs available to learners. Review-only verbs stay out of this list until approved.",
+      "Verbs you can study now. Verbs still being checked are not listed yet.",
   }),
   grammar: Object.freeze({
     title: "Grammar",
     description:
-      "Published grammar concepts for Lessons 1–2. Empty until grammar records are learner-published.",
+      "Grammar concepts for Lessons 1–2.",
   }),
   phrases: Object.freeze({
     title: "Phrases & Q&A",
     description:
-      "Published phrase patterns and Q&A pairs for greetings, identity, and related exchanges.",
+      "Phrase patterns and question-and-answer pairs for greetings, identity, and related exchanges.",
   }),
   listening: Object.freeze({
     title: "Listening",
@@ -67,7 +67,7 @@ const HUB_COPY: Readonly<
   concepts: Object.freeze({
     title: "Concepts",
     description:
-      "Six source-backed learning paths that connect published vocabulary, grammar, phrases, listening, and activities.",
+      "Six learning paths that connect vocabulary, grammar, phrases, listening, and activities.",
   }),
 });
 

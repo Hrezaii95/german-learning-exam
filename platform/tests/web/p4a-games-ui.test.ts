@@ -120,7 +120,8 @@ describe("P4A practice UI contracts", () => {
     const picture = renderToStaticMarkup(
       createElement(GameRenderer, { gameId: "picture-word-match" }),
     );
-    expect(picture).toContain("semantic visual");
+    // The cue must stay honestly labelled as a meaning cue rather than a photograph.
+    expect(picture).toContain("not a photo");
     expect(picture).toContain('data-gender="masculine"');
     expect(picture).toContain("der Architekt");
     expect(picture).toContain("die Architektin");

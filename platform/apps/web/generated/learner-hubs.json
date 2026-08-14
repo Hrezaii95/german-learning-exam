@@ -9,7 +9,7 @@
         "phrase",
         "proper-noun"
       ],
-      "description": "Published lexemes from the validated course package, including Lesson 2 job vocabulary when published.",
+      "description": "Words from your course, including the Lesson 2 job vocabulary.",
       "experience": null,
       "id": "vocabulary",
       "itemCount": 69,
@@ -3809,7 +3809,7 @@
       "categories": [
         "verb"
       ],
-      "description": "Published verbs available to learners. Review-only verbs stay out of this list until approved.",
+      "description": "Verbs you can study now. Verbs still being checked are not listed yet.",
       "experience": null,
       "id": "verbs",
       "itemCount": 10,
@@ -4639,7 +4639,7 @@
       "categories": [
         "grammar"
       ],
-      "description": "Published grammar concepts for Lessons 1–2. Empty until grammar records are learner-published.",
+      "description": "Grammar concepts for Lessons 1–2.",
       "experience": null,
       "id": "grammar",
       "itemCount": 10,
@@ -5049,7 +5049,7 @@
         "informal",
         "neutral"
       ],
-      "description": "Published phrase patterns and Q&A pairs for greetings, identity, and related exchanges.",
+      "description": "Phrase patterns and question-and-answer pairs for greetings, identity, and related exchanges.",
       "experience": null,
       "id": "phrases",
       "itemCount": 64,
@@ -8880,7 +8880,7 @@
     },
     {
       "categories": [],
-      "description": "Six source-backed learning paths that connect published vocabulary, grammar, phrases, listening, and activities.",
+      "description": "Six learning paths that connect vocabulary, grammar, phrases, listening, and activities.",
       "experience": {
         "itemCount": 6,
         "kind": "concepts",
@@ -9178,7 +9178,7 @@
   "hubsById": {
     "concepts": {
       "categories": [],
-      "description": "Six source-backed learning paths that connect published vocabulary, grammar, phrases, listening, and activities.",
+      "description": "Six learning paths that connect vocabulary, grammar, phrases, listening, and activities.",
       "experience": {
         "itemCount": 6,
         "kind": "concepts",
@@ -9476,7 +9476,7 @@
       "categories": [
         "grammar"
       ],
-      "description": "Published grammar concepts for Lessons 1–2. Empty until grammar records are learner-published.",
+      "description": "Grammar concepts for Lessons 1–2.",
       "experience": null,
       "id": "grammar",
       "itemCount": 10,
@@ -10115,7 +10115,7 @@
         "informal",
         "neutral"
       ],
-      "description": "Published phrase patterns and Q&A pairs for greetings, identity, and related exchanges.",
+      "description": "Phrase patterns and question-and-answer pairs for greetings, identity, and related exchanges.",
       "experience": null,
       "id": "phrases",
       "itemCount": 64,
@@ -13719,7 +13719,7 @@
       "categories": [
         "verb"
       ],
-      "description": "Published verbs available to learners. Review-only verbs stay out of this list until approved.",
+      "description": "Verbs you can study now. Verbs still being checked are not listed yet.",
       "experience": null,
       "id": "verbs",
       "itemCount": 10,
@@ -14553,7 +14553,7 @@
         "phrase",
         "proper-noun"
       ],
-      "description": "Published lexemes from the validated course package, including Lesson 2 job vocabulary when published.",
+      "description": "Words from your course, including the Lesson 2 job vocabulary.",
       "experience": null,
       "id": "vocabulary",
       "itemCount": 69,

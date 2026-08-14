@@ -106,7 +106,7 @@ function metaForGame(id: PracticeGameId): PracticeGameMeta {
       return Object.freeze({
         id,
         title: "Flashcards",
-        description: "Self-rate recall of the published vocabulary card.",
+        description: "Rate how well you remember each word.",
         availability: "enabled",
         unavailableReason: null,
         conceptId: "lex:architekt",
@@ -118,7 +118,7 @@ function metaForGame(id: PracticeGameId): PracticeGameMeta {
         id,
         title: "Picture–word match",
         description:
-          "Match the semantic gender visual to the published person form.",
+          "Match the gender cue to the right person form.",
         availability: "enabled",
         unavailableReason: null,
         conceptId: "lex:architekt",
@@ -129,7 +129,7 @@ function metaForGame(id: PracticeGameId): PracticeGameMeta {
       return Object.freeze({
         id,
         title: "Article choice",
-        description: "Choose the published article for the lemma.",
+        description: "Choose the right article for the word.",
         availability: "enabled",
         unavailableReason: null,
         conceptId: "lex:architekt",
@@ -140,7 +140,7 @@ function metaForGame(id: PracticeGameId): PracticeGameMeta {
       return Object.freeze({
         id,
         title: "Audio match",
-        description: "Match spoken audio to a published form.",
+        description: "Match what you hear to the right form.",
         availability: "unavailable",
         unavailableReason: AUDIO_MATCH_UNAVAILABLE_REASON,
         conceptId: "lex:architekt",
@@ -151,7 +151,7 @@ function metaForGame(id: PracticeGameId): PracticeGameMeta {
       return Object.freeze({
         id,
         title: "Word order",
-        description: "Rebuild the published informal question token order.",
+        description: "Put the informal question back in the right order.",
         availability: "enabled",
         unavailableReason: null,
         conceptId: "qa:profession-casual-main",
@@ -162,7 +162,7 @@ function metaForGame(id: PracticeGameId): PracticeGameMeta {
       return Object.freeze({
         id,
         title: "Verb builder",
-        description: "Supply the published present form for a person.",
+        description: "Give the present form for each person.",
         availability: "enabled",
         unavailableReason: null,
         conceptId: "verb:sein",
@@ -173,7 +173,7 @@ function metaForGame(id: PracticeGameId): PracticeGameMeta {
       return Object.freeze({
         id,
         title: "Morphology puzzle",
-        description: "Apply the published stem + -in person-form operation.",
+        description: "Build the -in person form from the stem.",
         availability: "enabled",
         unavailableReason: null,
         conceptId: "lex:architekt",
@@ -222,7 +222,7 @@ export function buildPictureWordMatchPrompt(
     conceptId: VOCAB_ARCHITEKT_CANONICAL.id,
     promptLabel: "Semantic gender visual (not a profession photograph)",
     semanticNote:
-      "Match the gender badge shape and token to the published person form. This is a semantic visual cue, not a photo.",
+      "Match the gender badge shape and colour to the right person form. This is a meaning cue, not a photo.",
     targetGender,
     targetDisplayText: target.displayText,
     choices,
