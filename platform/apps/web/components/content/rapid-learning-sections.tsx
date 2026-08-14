@@ -59,7 +59,7 @@ export function RapidQaSection({ content = getRapidLearnerContent() }: { content
 export function RapidVerbSection({ content = getRapidLearnerContent() }: { content?: RapidLearnerContent }) {
   return (
     <section className="panel" aria-labelledby="rapid-verbs-heading">
-      <p className="dense">Published paradigms only</p>
+      <p className="dense">Lesson 1 verb patterns</p>
       <h2 id="rapid-verbs-heading">Core verb patterns</h2>
       <div className="card-grid">
         {content.verbs.map((verb) => (
@@ -67,7 +67,7 @@ export function RapidVerbSection({ content = getRapidLearnerContent() }: { conte
             <h3><German>{verb.infinitive}</German></h3>
             <p>{verb.meaningEn}</p>
             <table className="verb-paradigm">
-              <caption className="dense">{verb.pattern === "irregular" ? "Irregular pattern" : "Published Lesson 1 forms"}</caption>
+              <caption className="dense">{verb.pattern === "irregular" ? "Irregular pattern" : "Lesson 1 forms"}</caption>
               <tbody>
                 {verb.forms.map((row) => (
                   <tr key={row.person}>
@@ -92,7 +92,7 @@ export function RapidVerbSection({ content = getRapidLearnerContent() }: { conte
 export function RapidProfessionMorphologySection({ content = getRapidLearnerContent() }: { content?: RapidLearnerContent }) {
   return (
     <section className="panel" aria-labelledby="rapid-professions-heading">
-      <p className="dense">Lesson 2 · 13 published person-form pairs</p>
+      <p className="dense">Lesson 2 · 13 person-form pairs</p>
       <h2 id="rapid-professions-heading">Article, gender, and person form</h2>
       <ul className="meta-row" aria-label="Article and gender legend">
         {content.genderLegend.map((item) => <GenderKey key={`${item.gender}-${item.article}`} item={item} />)}
@@ -103,7 +103,7 @@ export function RapidProfessionMorphologySection({ content = getRapidLearnerCont
             <p className="detail-form-card__lemma"><German>{pair.masculine}</German></p>
             <p className="detail-form-card__lemma"><German>{pair.feminine}</German></p>
             <p>{pair.glossEn}</p>
-            <div className="person-form-infographic" role="note" aria-label={`Published person-form operation: ${pair.operation}`}>
+            <div className="person-form-infographic" role="note" aria-label={`Person-form change: ${pair.operation}`}>
               <span className={pair.id === "profession:arzt" ? "morph-token morph-token--irr" : "morph-token morph-token--suffix"}>
                 <German>{pair.operation}</German>
               </span>
@@ -120,7 +120,7 @@ function PromptAnswer({ prompt }: { prompt: RapidPracticePrompt }) {
   const answer = prompt.answer ?? prompt.accepted?.join(" · ") ?? prompt.tokens?.join(" ") ?? "";
   return (
     <details>
-      <summary>Check the published model</summary>
+      <summary>Check the model answer</summary>
       <p><German>{answer}</German></p>
     </details>
   );

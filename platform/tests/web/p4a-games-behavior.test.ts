@@ -232,7 +232,7 @@ describe("P4A practice behavioral interactions", () => {
       }),
     );
 
-    const input = screen.getByLabelText(/feminine lemma/i);
+    const input = screen.getByLabelText(/feminine form/i);
     await user.type(input, "wrong");
     await user.click(screen.getByRole("button", { name: "Submit" }));
     expect(feedbackEl().getAttribute("data-feedback")).toBe("incorrect");

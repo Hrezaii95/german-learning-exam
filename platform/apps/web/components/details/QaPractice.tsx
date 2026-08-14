@@ -12,10 +12,10 @@ export function QaConstruction({ detail }: { detail: LearnerQaDetail }) {
   function onCheck() {
     const ok = matchPublishedQaPattern(value, answerPatterns);
     if (ok) {
-      setMessage("Matches a published answer pattern.");
+      setMessage("Matches an accepted answer pattern.");
     } else {
       setMessage(
-        "Does not match a published fixed pattern. Filled profession sentences are not accepted unless published.",
+        "Not one of the accepted answer patterns. Type the pattern exactly as you learned it.",
       );
     }
   }
@@ -24,8 +24,8 @@ export function QaConstruction({ detail }: { detail: LearnerQaDetail }) {
     <section className="panel" aria-labelledby="qa-construction-heading">
       <h2 id="qa-construction-heading">Construction</h2>
       <p className="muted">
-        Type one of the published answer patterns exactly (ellipsis-safe). Do not
-        invent filled profession sentences.
+        Type one of the answer patterns exactly as you learned it (the ellipsis
+        is fine to keep).
       </p>
       <label className="hub-field" htmlFor="qa-construction-input">
         <span className="hub-field__label">Your answer pattern</span>
@@ -37,7 +37,7 @@ export function QaConstruction({ detail }: { detail: LearnerQaDetail }) {
           autoComplete="off"
           value={value}
           onChange={(event) => setValue(event.target.value)}
-          aria-label="Type a published answer pattern"
+          aria-label="Type an answer pattern"
         />
       </label>
       <div className="detail-actions">
@@ -61,9 +61,9 @@ export function QaGuidedChoice({ detail }: { detail: LearnerQaDetail }) {
   return (
     <section className="panel" aria-labelledby="qa-guided-heading">
       <h2 id="qa-guided-heading">Guided choice</h2>
-      <p className="muted">Choose one of the published answer patterns.</p>
+      <p className="muted">Choose one of the answer patterns.</p>
       <fieldset className="qa-guided">
-        <legend className="hub-field__label">Published answers</legend>
+        <legend className="hub-field__label">Answer choices</legend>
         {detail.answers.map((answer) => (
           <label key={answer.id} className="qa-guided__option">
             <input
@@ -88,10 +88,10 @@ export function QaGuidedChoice({ detail }: { detail: LearnerQaDetail }) {
           className="btn btn-primary"
           onClick={() => {
             if (!selected) {
-              setMessage("Select a published answer pattern first.");
+              setMessage("Select an answer pattern first.");
               return;
             }
-            setMessage("Selected a published answer pattern. Mastery is not recorded yet.");
+            setMessage("Good choice — that is one of the accepted answer patterns.");
           }}
         >
           Confirm choice

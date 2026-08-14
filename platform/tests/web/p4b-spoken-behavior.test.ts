@@ -121,7 +121,7 @@ describe("P4B spoken role-play behavioral gate", () => {
     );
 
     await user.click(
-      screen.getByRole("button", { name: /Review published prompt/i }),
+      screen.getByRole("button", { name: /Review the prompt/i }),
     );
     await user.click(screen.getByRole("button", { name: /Complete speaking level/i }));
     expect(onComplete).not.toHaveBeenCalled();

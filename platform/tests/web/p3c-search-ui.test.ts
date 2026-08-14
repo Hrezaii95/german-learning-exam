@@ -164,10 +164,10 @@ describe("P3C search UI + shell contracts", () => {
     expect(html).toContain('href="#main-content"');
     expect((html.match(/aria-current="page"/g) ?? []).length).toBe(2);
     expect(html).toContain('href="/search"');
-    expect(html).toContain('aria-label="Search published learner content"');
+    expect(html).toContain('aria-label="Search learning content"');
     expect(html).toContain('type="search"');
     expect(html).toContain("Enter a search");
-    expect(html).toContain("Recent searches are not stored");
+    expect(html).toContain("Type a German word, meaning, or label");
   });
 
   it("exposes accessible mobile search entry from /hubs without crowding bottom nav", () => {
@@ -180,7 +180,7 @@ describe("P3C search UI + shell contracts", () => {
     );
     expect(directory).toContain('aria-label="Open global search"');
     expect(directory).toContain('href="/search"');
-    expect(directory).toContain("Search published content");
+    expect(directory).toContain("Search all content");
     expect(directory).toContain('href="/hubs"');
     const bottomNavSearchLinks = (
       directory.match(/shell-bottomnav[\s\S]*?href="\/search"/) ?? []
@@ -198,9 +198,6 @@ describe("P3C search UI + shell contracts", () => {
     expect(html).toContain("Results (");
     expect(html).toMatch(/Matched \w+ · /);
     expect(html).toContain("Priority");
-    if (html.includes("Detail view next phase")) {
-      expect(html).toContain("Detail view next phase");
-    }
     expect(html).not.toContain(">heissen<");
     for (const bad of FORBIDDEN_RENDER_SNIPPETS) {
       expect(html.includes(bad)).toBe(false);
@@ -383,7 +380,8 @@ describe("P3C search UI + shell contracts", () => {
     expect(html).not.toContain("evil.example");
     expect(html).not.toMatch(/href="\/\/[^"]+"/);
     if (html.includes(base.displayLabel)) {
-      expect(html).toContain("Detail view next phase");
+      // The tampered hit must render as an unlinked card, never as a link.
+      expect(html).not.toContain("search-result-link");
     }
   });
 

@@ -52,7 +52,7 @@ export function ConversationLadder({
           levelId: progress.currentLevelId,
         });
         void learnerState.controller.appendEvent(persistent).then(
-          () => setSaveMessage("Conversation evidence saved locally."),
+          () => setSaveMessage("Conversation progress saved on this device."),
           () => setSaveMessage("Conversation feedback worked, but local saving failed."),
         );
       } catch {
@@ -71,7 +71,8 @@ export function ConversationLadder({
         <p className="dense">Conversation</p>
         <h1>Five-level ladder</h1>
         <p className="lede">
-          Published informal Q&amp;A only. Meaningful evidence is stored locally on this device.
+          Practise the informal question and answer step by step. Your progress
+          stays on this device.
         </p>
       </header>
 

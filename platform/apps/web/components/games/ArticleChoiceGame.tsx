@@ -31,7 +31,7 @@ export function ArticleChoiceGame({
   function submit() {
     if (!selected) {
       setFeedbackKind("empty");
-      setMessage("Choose a published article first.");
+      setMessage("Choose an article first.");
       return;
     }
     const result = emitObjectiveGameAttempt({
@@ -67,11 +67,11 @@ export function ArticleChoiceGame({
     <section className="panel game-panel" aria-labelledby="article-choice-heading">
       <h2 id="article-choice-heading">Article choice</h2>
       <p className="muted">
-        Choose the published article for{" "}
+        Choose the correct article for{" "}
         <span className="german" lang="de">
           {prompt.lemma}
         </span>
-        . Choices are published articles only.
+        .
       </p>
       <fieldset className="game-choice">
         <legend className="hub-field__label">Article</legend>
@@ -100,7 +100,7 @@ export function ArticleChoiceGame({
           setRevealed(true);
           setHintsUsed((n) => n + 1);
           setFeedbackKind("revealed");
-          setMessage(`Published article: ${prompt.correctArticle}`);
+          setMessage(`Correct article: ${prompt.correctArticle}`);
         }}
         revealDisabled={revealed}
       />

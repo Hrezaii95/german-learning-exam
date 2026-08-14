@@ -21,23 +21,23 @@ export function VerbSelfCheck({ detail }: { detail: LearnerVerbDetail }) {
     const got = typed.normalize("NFC").trim();
     setRevealed(false);
     if (got === expected) {
-      setFeedback("Correct for this published form. Mastery is not recorded yet.");
+      setFeedback("Correct — that is the right form.");
     } else {
-      setFeedback("Not a match for the published form. Try again or reveal.");
+      setFeedback("Not quite. Try again or reveal the form.");
     }
   }
 
   function reveal() {
     setRevealed(true);
-    setFeedback(`Published form: ${row!.form}`);
+    setFeedback(`Correct form: ${row!.form}`);
   }
 
   return (
     <section className="panel detail-selfcheck" aria-labelledby="verb-selfcheck-heading">
       <h2 id="verb-selfcheck-heading">Self-check</h2>
       <p className="muted">
-        Practice the published present forms. Feedback is local only — nothing is
-        saved and mastery is not claimed.
+        Practise the present forms. Feedback is instant and stays on this
+        device.
       </p>
       <div className="detail-selfcheck__controls">
         <label className="hub-field" htmlFor="verb-selfcheck-person">
@@ -86,7 +86,7 @@ export function VerbSelfCheck({ detail }: { detail: LearnerVerbDetail }) {
         <p className="detail-feedback" role="status" data-revealed={revealed ? "true" : "false"}>
           {revealed ? (
             <>
-              Published form:{" "}
+              Correct form:{" "}
               <span className="german" lang="de">
                 {row.form}
               </span>

@@ -26,7 +26,7 @@
   --radius: 18px;
   --radius-sm: 12px;
   --shadow: 0 1px 2px rgba(28, 26, 36, 0.06), 0 8px 24px rgba(28, 26, 36, 0.04);
-  --font: "Segoe UI", "Segoe UI Historic", "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+  --font: InterVariable, "Segoe UI", "Noto Sans", Arial, sans-serif;
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
@@ -36,7 +36,35 @@
   --space-7: 48px;
   --rail-width: 248px;
   --bottom-nav-height: 72px;
-  --content-max: 52rem;
+  --content-max: var(--content-max-reading);
+
+  /* Daily Learning Studio — Phase 1a token set (Option 1 contract).
+     Locked semantic tokens above (--gender-*, --rule-*, --brand, --nav,
+     --canvas) are unchanged. InterVariable is self-hosted; its @font-face
+     is declared in app/layout.tsx so the GitHub Pages basePath applies. */
+  --font-weight-body: 450;
+  --font-weight-medium: 600;
+  --font-weight-strong: 720;
+  --text-meta: 0.8125rem;
+  --text-ui: 0.875rem;
+  --text-body: 1rem;
+  --text-german-card: 1.125rem;
+  --text-section: 1.375rem;
+  --text-page: clamp(2rem, 3vw, 2.5rem);
+  --content-max-reading: 52rem;
+  --content-max-browse: 76rem;
+  --surface-raised: #ffffff;
+  --surface-tint: #f8f5f0;
+  --surface-brand-soft: #f0ecff;
+  --border-soft: #ebe5dc;
+  --shadow-raised: 0 1px 2px rgba(28, 26, 36, 0.06), 0 12px 32px rgba(28, 26, 36, 0.07);
+  --shadow-interactive: 0 10px 24px rgba(47, 35, 91, 0.1);
+  --focus-ring: #4f2fcf;
+  --motion-fast: 140ms;
+  --motion-base: 200ms;
+  --ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --media-card-ratio: 1 / 1;
+  --media-hero-ratio: 4 / 3;
 }
 
 .lesson-progress,
@@ -993,8 +1021,9 @@ body {
   margin: 0;
   min-height: 100%;
   font-family: var(--font);
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: var(--text-body);
+  font-weight: var(--font-weight-body);
+  line-height: 1.55;
   color: var(--ink);
   background:
     radial-gradient(1200px 500px at 10% -10%, rgba(105, 70, 232, 0.08), transparent 55%),
@@ -1013,7 +1042,7 @@ a:hover {
 }
 
 :focus-visible {
-  outline: 3px solid var(--focus);
+  outline: 3px solid var(--focus-ring);
   outline-offset: 3px;
 }
 
@@ -1028,7 +1057,7 @@ a:hover {
   color: var(--brand-ink);
   font-weight: 600;
   transform: translateY(-160%);
-  transition: transform 160ms ease;
+  transition: transform var(--motion-fast) var(--ease-standard);
 }
 
 .skip-link:focus {
@@ -2062,7 +2091,7 @@ a:hover {
 }
 
 .conversation-progress__btn:focus-visible {
-  outline: 2px solid var(--focus, #2f5d8c);
+  outline: 2px solid var(--focus-ring);
   outline-offset: 2px;
 }
 
@@ -2221,7 +2250,7 @@ a:hover {
 }
 
 .infographic-panel__viewport:focus-visible {
-  outline: 3px solid var(--focus);
+  outline: 3px solid var(--focus-ring);
   outline-offset: 3px;
 }
 
@@ -2361,7 +2390,7 @@ a:hover {
 .activity-input-label textarea:focus-visible,
 .activity-choice:focus-within,
 .activity-confirmation:focus-within {
-  outline: 3px solid var(--focus);
+  outline: 3px solid var(--focus-ring);
   outline-offset: 2px;
 }
 

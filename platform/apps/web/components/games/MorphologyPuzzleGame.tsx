@@ -97,7 +97,7 @@ export function MorphologyPuzzleGame({
               submit();
             }
           }}
-          aria-label="Type the published feminine lemma"
+          aria-label="Type the feminine form"
         />
       </label>
       <GameActionBar
@@ -108,7 +108,7 @@ export function MorphologyPuzzleGame({
           setHintsUsed((n) => n + 1);
           setTyped(prompt.expectedLemma);
           setFeedbackKind("revealed");
-          setMessage(`Published result: ${prompt.expectedLemma}`);
+          setMessage(`Correct form: ${prompt.expectedLemma}`);
         }}
         revealDisabled={revealed}
       />

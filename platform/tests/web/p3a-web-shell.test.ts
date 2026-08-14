@@ -408,7 +408,7 @@ describe("P3A shell accessibility and responsive contract", () => {
     expect(shell).toContain('aria-label="Mobile"');
     expect(shell).toContain('href: "/hubs"');
     expect(shell).toContain('href: "/vocabulary"');
-    expect(shell).toContain("Next phase");
+    expect(shell).toContain("Coming soon");
   });
 
   it("defines deliberate desktop/tablet/mobile navigation breakpoints", () => {

@@ -77,13 +77,13 @@ export function SpokenRolePlayLevel({
     >
       <h2 id="conversation-spoken-heading">Spoken role-play</h2>
       <p className="muted">
-        Respond to the published prompt. Recording is optional for earlier
+        Respond to the prompt. Recording is optional for earlier
         levels and stays local — never uploaded. Self-rating is reflection
         only, not pronunciation accuracy.
       </p>
 
       <div className="qa-bubble qa-bubble--question">
-        <p className="dense">Published prompt</p>
+        <p className="dense">Prompt</p>
         <p className="german" lang="de">
           {CONVERSATION_QUESTION}
         </p>
@@ -97,7 +97,7 @@ export function SpokenRolePlayLevel({
           aria-pressed={promptReviewed}
           data-prompt-reviewed={promptReviewed ? "true" : "false"}
         >
-          {promptReviewed ? "Prompt reviewed" : "Review published prompt"}
+          {promptReviewed ? "Prompt reviewed" : "Review the prompt"}
         </button>
       </div>
 
@@ -183,8 +183,8 @@ export function SpokenRolePlayLevel({
           Self-compare (reflection only)
         </legend>
         <p className="dense">
-          Compare your recording to the published answer patterns. This is not
-          a pronunciation score.
+          Compare your recording to the model answers. This is not a
+          pronunciation score.
         </p>
         <div className="game-rating" role="group" aria-label="Self-rating">
           {SELF_RATINGS.map((rating) => (

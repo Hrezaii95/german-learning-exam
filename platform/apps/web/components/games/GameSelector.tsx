@@ -33,16 +33,16 @@ export function GameSelector({
         <p className="dense">Practice</p>
         <h1>Seven game modes</h1>
         <p className="lede">
-          Representative prompts only. Local feedback emits typed learner
-          events — it is not mastery.
+          Short practice rounds built from your lessons, with instant feedback
+          on every answer.
         </p>
       </header>
 
       <section className="panel" aria-labelledby="conversation-practice-heading">
         <h2 id="conversation-practice-heading">Conversation practice</h2>
         <p className="muted">
-          Five-level ladder for the published informal profession Q&amp;A,
-          including the race-safe local recorder.
+          A five-level ladder for the informal profession question and answer,
+          including an optional voice recorder that stays on your device.
         </p>
         <Link
           href={conversationHref}

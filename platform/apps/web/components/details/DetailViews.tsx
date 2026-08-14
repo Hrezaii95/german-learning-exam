@@ -75,7 +75,6 @@ function VocabularyDetail({ detail }: { detail: LearnerVocabularyDetail }) {
         <MetaChips
           lessonIds={detail.lessonIds}
           sourcePriority={detail.sourcePriority}
-          extra="Published"
         />
       </header>
 
@@ -94,7 +93,7 @@ function VocabularyDetail({ detail }: { detail: LearnerVocabularyDetail }) {
               </span>
             </p>
             <p className="dense">
-              {detail.article ? "Singular (published)" : "Published form"}
+              {detail.article ? "Singular" : "Base form"}
             </p>
           </article>
           {pf ? (
@@ -103,13 +102,13 @@ function VocabularyDetail({ detail }: { detail: LearnerVocabularyDetail }) {
               <p className="detail-form-card__lemma">
                 <span className="german" lang="de">{pf.relatedDisplayText}</span>
               </p>
-              <p className="dense">Linked person-form (published)</p>
+              <p className="dense">Linked person form</p>
             </article>
           ) : null}
         </div>
         {!detail.article || !detail.gender ? (
           <p className="placeholder-banner" role="status">
-            Article and noun gender are not published for this item.
+            This item does not carry an article or noun gender.
           </p>
         ) : null}
       </section>
@@ -118,7 +117,8 @@ function VocabularyDetail({ detail }: { detail: LearnerVocabularyDetail }) {
         <section className="panel" aria-labelledby="vocab-morph-heading">
           <h2 id="vocab-morph-heading">Person-form operation</h2>
           <p className="muted">
-            Sourced from the published person-form pair — not invented morphology.
+            The masculine and feminine forms belong together — learn them as a
+            pair.
           </p>
           <div
             className="person-form-infographic"
@@ -147,7 +147,7 @@ function VocabularyDetail({ detail }: { detail: LearnerVocabularyDetail }) {
         <section className="panel" aria-labelledby="vocab-morph-heading">
           <h2 id="vocab-morph-heading">Related person form</h2>
           <p className="placeholder-banner" role="status">
-            No published person-form relation is available for this item.
+            This item has no related person form.
           </p>
         </section>
       )}
@@ -170,7 +170,7 @@ function VocabularyDetail({ detail }: { detail: LearnerVocabularyDetail }) {
           </p>
         ) : (
           <p className="placeholder-banner" role="status">
-            Plural does not apply to this published item.
+            Plural does not apply to this item.
           </p>
         )}
       </section>
@@ -203,7 +203,6 @@ function VerbDetail({ detail }: { detail: LearnerVerbDetail }) {
         <MetaChips
           lessonIds={detail.lessonIds}
           sourcePriority={detail.sourcePriority}
-          extra="Published"
         />
       </header>
 
@@ -214,7 +213,7 @@ function VerbDetail({ detail }: { detail: LearnerVerbDetail }) {
         <h2 id="verb-paradigm-heading">Present paradigm</h2>
         <table className="verb-paradigm">
           <caption className="dense">
-            {detail.present.length} published present forms
+            {detail.present.length} present forms
           </caption>
           <thead>
             <tr>
@@ -267,7 +266,7 @@ function VerbDetail({ detail }: { detail: LearnerVerbDetail }) {
         <VerbSelfCheck detail={detail} />
       ) : (
         <p className="placeholder-banner" role="status">
-          No published present forms are available for self-check.
+          This verb has no present forms to self-check yet.
         </p>
       )}
 
@@ -292,7 +291,7 @@ function QaDetail({ detail }: { detail: LearnerQaDetail }) {
         </h1>
         <p className="lede">
           {detail.register[0]!.toUpperCase()}
-          {detail.register.slice(1)} register · published patterns only
+          {detail.register.slice(1)} register
         </p>
         <MetaChips
           lessonIds={detail.lessonIds}
@@ -360,7 +359,7 @@ function QaDetail({ detail }: { detail: LearnerQaDetail }) {
           </>
         ) : (
           <p className="placeholder-banner" role="status">
-            Conversation ladder is not published for this Q&amp;A yet.
+            Conversation practice is not available for this Q&amp;A yet.
           </p>
         )}
       </section>
@@ -403,7 +402,7 @@ function QaDetail({ detail }: { detail: LearnerQaDetail }) {
           </>
         ) : (
           <p className="placeholder-banner" role="status">
-            Speaking practice is not published for this Q&amp;A yet.
+            Speaking practice is not available for this Q&amp;A yet.
           </p>
         )}
       </section>
@@ -427,7 +426,6 @@ function GrammarDetail({ detail }: { detail: LearnerGrammarDetail }) {
         <MetaChips
           lessonIds={detail.lessonIds}
           sourcePriority={detail.sourcePriority}
-          extra="Published"
         />
       </header>
 
@@ -448,7 +446,7 @@ function GrammarDetail({ detail }: { detail: LearnerGrammarDetail }) {
                 <p className="grammar-model german" lang="de">{step.model}</p>
               ) : (
                 <p className="placeholder-banner" role="status">
-                  No model sentence is published for this rule step.
+                  No model sentence accompanies this rule step yet.
                 </p>
               )}
             </li>
@@ -473,7 +471,7 @@ function GrammarDetail({ detail }: { detail: LearnerGrammarDetail }) {
           </div>
         ) : <p className="dense">No prerequisite is required.</p>}
         <p className="dense">
-          {detail.activityIds.length} linked published {detail.activityIds.length === 1 ? "activity" : "activities"}
+          {detail.activityIds.length} linked {detail.activityIds.length === 1 ? "activity" : "activities"}
         </p>
         <div className="detail-actions">
           {detail.lessonIds.map((lessonId) => {
@@ -489,7 +487,7 @@ function GrammarDetail({ detail }: { detail: LearnerGrammarDetail }) {
           <ul className="tag-list">
             {detail.commonErrorTags.map((tag) => <li key={tag}><span className="meta-chip">{tag.replaceAll("-", " ")}</span></li>)}
           </ul>
-        ) : <p className="dense">No common-error tags are published.</p>}
+        ) : <p className="dense">No common errors are listed for this topic.</p>}
       </section>
 
       <DetailLearningControls key={detail.id} contentId={detail.id} />

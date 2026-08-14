@@ -5,7 +5,7 @@ orchestrator_session: Claude Code takeover 2026-08-13 (session 3a449151)
 active_engine: claude-code
 active_phase: T1-TTS-GATE
 meta_status: n/a
-gate_status: {G0: green, G1: green, G2: green, G3: green, G4: review, G5: partial, G6: pending, G-OWNER: pending}
+gate_status: {G0: green, G1: green, G2: green, G3: green, G4: green, G5: partial, G6: pending, G-OWNER: pending}
 workers: [C-LEARN, C-WEB]
 parallel_groups: []
 file_ownership:
@@ -13,7 +13,7 @@ file_ownership:
   - C-WEB: `platform/apps/web/**`, `platform/tests/web/**`, web package integration and README only
 open_items_unchanged: true
 violations: []
-next_action: Owner must pick a UX direction from research/ux-direction-2026-08-13/ (Codex options delivered; owner gate OPEN). P4-04 independent review returned BLOCK with two P1 defects (cross-tab commit race; workbook audio speed reset on re-render); fix worker dispatched with reviewer-specified regression tests. After fixes go green: commit, deploy, then learner-language cleanup (all-options release criterion) and curriculum diff. G5 remains partial pending qualified human listening approval.
+next_action: Finish Studio Phase 1b learner-language cleanup (worker running), run full gates, commit+deploy Phase 1 (tokens/Inter + cleanup). Then content wave from research/curriculum-diff-2026-08-13.json: publish 6 encoded verbs by filling official-glossary glosses, store 36 glossary-exact noun plurals, add qa:work-casual-main and the und-linking grammar concept — all glossary-traceable, no invented German. Larger gaps (18 missing phrases/lexemes, listening publication rights, teacher-deck human gate) stay explicitly open. G5 remains partial pending qualified human listening approval.
 
 ## Current verified facts
 
@@ -30,6 +30,7 @@ next_action: Owner must pick a UX direction from research/ux-direction-2026-08-1
 - Local-first persistent learner events, review cards, tags, notes, resume state, daily mission, export/import recovery, and derived XP/streak/badges are implemented; independent review and live-browser evidence remain open.
 - Seven original responsive infographic families passed technical QA. Three published-only families are wired into learner routes; mixed/review-only families remain outside the learner bundle.
 - A deterministic learner-safe enrichment artifact maps 23 activities and 26 core profession cards while excluding 48 teacher rows and 86 review-only lexemes.
+- Exact curriculum diff on disk (`research/curriculum-diff-2026-08-13.json`, id-set verified published+missing==required per family): verbs 10/4 published — all 6 missing verbs fully encoded at review status, blocked only on English glosses recoverable verbatim from the official glossary; noun plurals 5 exact-stored / 36 missing-but-glossary-recoverable (exact forms recorded) / 7 not-applicable; Q&A intents 14/15 (missing qa:work-casual-main "Was macht ihr beruflich?"); grammar 10/11 (missing und-linking); 18 spec phrases/lexemes unencoded; listening 0/4 required workbook exercises published (rights review gate); teacher deck blocked on human German gate.
 
 ## Worker log
 
@@ -62,3 +63,5 @@ next_action: Owner must pick a UX direction from research/ux-direction-2026-08-1
 | P5 | X-MEDIA | Codex subagents + ORCH | public integration complete for approved subset | 15 source tracks; 7 infographic families; enrichment projection | 69/69 rapid audio technical checks; 7/7 infographic QA; exact rights scope recorded; generated TTS human listening remains open |
 | T1 | CC-ORCH | Claude Code (fable) | complete | `media/manifests/alpha-tts-manifest.json`; `media/qa/alpha-tts-technical-audit.json` | pass — 27-clip supplement merged verbatim; audit 354 manifest = 354 disk = 354 audited, 0 failures; no audio regenerated; 354 listening reviews remain pending |
 | T1b | CC-ORCH | Claude Code (fable) | complete | `content/source-index/source-manifest.json`; `content/source-index/source-lock.json`; `research/kursbuch-ingestion-2026-08-13.json`; `tools/build-source-manifest.mjs` | pass — validator green at 456 files; 59 new KB CD1 tracks registered, 31 CD2 byte-dupes quarantined; 17 CD1 tracks filename-aligned to Lessons 1–2, transcript alignment open |
+| P4-04 | CC-WEB + react-reviewer | Claude agents (fable) | complete — independent review APPROVE | `platform/apps/web/lib/learner-state/controller.ts`; `platform/apps/web/components/audio/WorkbookAudioPanel.tsx`; `platform/apps/web/components/details/DetailViews.tsx`; two regression tests | review BLOCK → two P1 defects fixed (commit rebase guard; audio speed persistence) with fail-first regression tests; re-review APPROVE; 42 files/541 tests, web 35/239, eslint clean, 197-page production build green |
+| T2 | CDX-UX + CC-ORCH | Codex GPT-5 + Claude | complete — direction chosen | `research/ux-direction-2026-08-13/{ux-audit.md,design-direction-options.md,recommendation.md,chosen-direction-contract.yaml}` | three coherent options on disk; owner delegated pick to Codex; Daily Learning Studio + phased assets + permanent meaning-plate fallback recorded as design contract |

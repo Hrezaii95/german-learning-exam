@@ -226,23 +226,23 @@ describe("P3D detail UI contracts", () => {
     );
     expect(lexemeHtml).toContain("das Alter");
     expect(lexemeHtml).toContain("Plural is not published for this item.");
-    expect(lexemeHtml).toContain("No published person-form relation");
-    expect(lexemeHtml).not.toContain("Thirteen published person-form pairs");
+    expect(lexemeHtml).toContain("This item has no related person form.");
+    expect(lexemeHtml).not.toContain("Thirteen person-form pairs");
 
     const verbHtml = renderToStaticMarkup(
       createElement(DetailView as any, { detail: genericVerb }),
     );
     expect(verbHtml).toContain("lernen");
-    expect(verbHtml).toContain("4 published present forms");
-    expect(verbHtml).not.toContain("Seven published present forms");
-    expect(verbHtml).toContain("Only the published present forms are shown.");
+    expect(verbHtml).toContain("4 present forms");
+    expect(verbHtml).not.toContain("7 present forms");
+    expect(verbHtml).toContain("Present paradigm");
 
     const qaHtml = renderToStaticMarkup(
       createElement(DetailView as any, { detail: genericQa }),
     );
     expect(qaHtml).toContain("Formal register");
-    expect(qaHtml).toContain("Conversation ladder is not published for this Q&amp;A yet.");
-    expect(qaHtml).toContain("Speaking practice is not published for this Q&amp;A yet.");
+    expect(qaHtml).toContain("Conversation practice is not available for this Q&amp;A yet.");
+    expect(qaHtml).toContain("Speaking practice is not available for this Q&amp;A yet.");
     expect(qaHtml).not.toContain("Open spoken role-play");
   });
 });

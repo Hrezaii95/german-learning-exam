@@ -32,7 +32,7 @@ export function PictureWordMatchGame({
   function submit() {
     if (!selected) {
       setFeedbackKind("empty");
-      setMessage("Select a published person form first.");
+      setMessage("Select a person form first.");
       return;
     }
     const result = emitObjectiveGameAttempt({
@@ -80,7 +80,7 @@ export function PictureWordMatchGame({
         <span className="dense">{prompt.promptLabel}</span>
       </div>
       <fieldset className="game-choice">
-        <legend className="hub-field__label">Published person forms</legend>
+        <legend className="hub-field__label">Person forms</legend>
         {prompt.choices.map((choice) => (
           <label key={choice.id} className="game-choice__option">
             <input
@@ -107,7 +107,7 @@ export function PictureWordMatchGame({
           setRevealed(true);
           setHintsUsed((n) => n + 1);
           setFeedbackKind("revealed");
-          setMessage(`Published match: ${prompt.targetDisplayText}`);
+          setMessage(`Correct match: ${prompt.targetDisplayText}`);
         }}
         revealDisabled={revealed}
       />

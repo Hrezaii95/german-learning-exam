@@ -45,7 +45,7 @@ export function ConversationSelector({
         <p className="dense">Conversation</p>
         <h1>Conversation practice</h1>
         <p className="lede">
-          Five-level ladder for the published informal profession Q&amp;A.
+          A five-level ladder for the informal profession question and answer.
         </p>
       </header>
       <ul className="game-selector__list">

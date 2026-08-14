@@ -122,9 +122,9 @@ describe("P3B hub UI shell contracts", () => {
         searchParams: {},
       }),
     );
-    expect(listening).toContain("15 published");
+    expect(listening).toContain("15 items");
     expect(listening).toContain("Workbook exercises");
-    expect(listening).not.toContain("No published items yet");
+    expect(listening).not.toContain("Nothing here yet");
     expect(listening).not.toContain("No matches");
 
     const noMatch = renderToStaticMarkup(
@@ -134,7 +134,7 @@ describe("P3B hub UI shell contracts", () => {
       }),
     );
     expect(noMatch).toContain("No matches");
-    expect(noMatch).not.toContain("No published items yet");
+    expect(noMatch).not.toContain("Nothing here yet");
   });
 
   it("exposes search and lesson filters on derived hubs without fabricating matches", () => {
@@ -150,7 +150,7 @@ describe("P3B hub UI shell contracts", () => {
           searchParams: {},
         }),
       );
-      expect(baseline).toContain("Filter published items");
+      expect(baseline).toContain("Filter items");
       expect(baseline).toMatch(/<form[^>]*method="get"/);
       expect(baseline).toContain(`action="/${hubId}"`);
       expect(baseline).toContain('name="q"');
@@ -160,12 +160,10 @@ describe("P3B hub UI shell contracts", () => {
       expect(baseline).toContain("Apply filters");
       expect(baseline).toContain("Clear filters");
       expect(baseline).toContain("No active filters");
-      expect(baseline).not.toContain("No published items yet");
+      expect(baseline).not.toContain("Nothing here yet");
       expect(baseline).not.toContain("No matches");
       expect(baseline).not.toContain('name="category"');
       expect(baseline).not.toContain("after filters");
-      expect(baseline).toContain("mastery");
-      expect(baseline).toMatch(/not available/i);
       expect(baseline).not.toMatch(
         /<(?:button|input|select)[^>]*(?:learned|due|mastery|streak)/i,
       );
@@ -179,7 +177,7 @@ describe("P3B hub UI shell contracts", () => {
           searchParams: { q: "definitely-no-such-item", lesson: "01" },
         }),
       );
-      expect(filteredEmpty).not.toContain("No published items yet");
+      expect(filteredEmpty).not.toContain("Nothing here yet");
       expect(filteredEmpty).toContain("No matches");
       expect(filteredEmpty).toContain("Active filters:");
       expect(filteredEmpty).toContain("Search: definitely-no-such-item");
@@ -197,7 +195,7 @@ describe("P3B hub UI shell contracts", () => {
       }),
     );
     expect(populated).toContain('name="category"');
-    expect(populated).toContain("Filter published items");
+    expect(populated).toContain("Filter items");
   });
 
   it("links hub cards to canonical implemented detail routes", () => {
@@ -238,7 +236,7 @@ describe("P3B hub UI shell contracts", () => {
     expect(directory).toContain('href="/phrases"');
     expect(directory).toContain('href="/listening"');
     expect(directory).toContain('href="/concepts"');
-    expect(directory).toContain("Directory of the six canonical content hubs");
+    expect(directory).toContain("Six content hubs cover everything you are learning");
     // Mobile bottom Hubs is current; desktop primary has no dedicated Hubs item.
     expect((directory.match(/aria-current="page"/g) ?? []).length).toBe(1);
   });
@@ -258,7 +256,7 @@ describe("P3B hub UI shell contracts", () => {
         }),
       ),
     );
-    expect(html).toContain("published");
+    expect(html).toContain("items");
     expect(html).not.toContain("<script>");
     expect(html).not.toContain("not-a-category");
     expect(html).toMatch(/lang="de"/);

@@ -35,7 +35,7 @@ export function GuidedRecognitionLevel({
   function submit() {
     if (!selected) {
       setFeedbackKind("empty");
-      setMessage("Select a published answer pattern first.");
+      setMessage("Select an answer first.");
       return;
     }
     const result = emitGuidedRecognitionAttempt({
@@ -81,7 +81,7 @@ export function GuidedRecognitionLevel({
         </span>
       </p>
       <fieldset className="qa-guided">
-        <legend className="hub-field__label">Published answers</legend>
+        <legend className="hub-field__label">Answer choices</legend>
         {CONVERSATION_ANSWER_REALIZATIONS.map((realization) => (
           <label key={realization} className="qa-guided__option">
             <input
@@ -108,7 +108,7 @@ export function GuidedRecognitionLevel({
           setHintsUsed((n) => n + 1);
           setFeedbackKind("revealed");
           setMessage(
-            `Published patterns: ${CONVERSATION_ANSWER_REALIZATIONS.join(" · ")}`,
+            `Accepted answers: ${CONVERSATION_ANSWER_REALIZATIONS.join(" · ")}`,
           );
         }}
         revealDisabled={revealed}

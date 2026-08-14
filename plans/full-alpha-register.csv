@@ -20,7 +20,7 @@ P3-03,P3,Typed global search and back context,platform/apps/web,G3,1,P2-02,compl
 P4-01,P4,Required game modes,platform/apps/web,G4,7,P2-03|P3-02,completed
 P4-02,P4,Q&A conversation progression,platform/apps/web,G4,5,P1-02|P1-03|P3-01,completed
 P4-03,P4,Recorder lifecycle and failure states,platform/apps/web,G4,1,P3-01,completed
-P4-04,P4,Mixed mission tags notes XP and streaks,platform/apps/web,G4,1,P2-04|P3-02,in_review
+P4-04,P4,Mixed mission tags notes XP and streaks,platform/apps/web,G4,1,P2-04|P3-02,completed
 P5-01,P5,Approved generated audio or explicit gaps,media/manifests/alpha-tts-manifest.json,G5,1,P1-02|P1-03|P1-04,pending
 P5-02,P5,Responsive original infographic families,media/generated/infographics,G5,6,P1-02|P1-03|P1-04,completed
 P5-03,P5,Audio and visual human QA evidence,research/media-qa,G5,2,P5-01|P5-02,pending

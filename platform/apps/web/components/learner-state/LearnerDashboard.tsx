@@ -20,7 +20,7 @@ export function LearnerDashboard({ projection }: { projection: LearnerWebProject
       <div className="stack">
         <section className="panel" aria-labelledby="continue-heading">
           <h2 id="continue-heading">Continue</h2>
-          <p className="muted">Start the first published Lesson 1 activity.</p>
+          <p className="muted">Start with the first Lesson 1 activity.</p>
           <p style={{ marginTop: "1rem" }}>
             <Link className="btn btn-primary" href={projection.zeroState.continuePath}>Start learning</Link>
           </p>
@@ -69,7 +69,7 @@ export function LearnerDashboard({ projection }: { projection: LearnerWebProject
       <section className="panel" aria-labelledby="continue-heading">
         <h2 id="continue-heading">Continue</h2>
         <p className="muted">
-          {resumeActivity ? resumeActivity.promptPlainText : "Start the first published Lesson 1 activity."}
+          {resumeActivity ? resumeActivity.promptPlainText : "Start with the first Lesson 1 activity."}
         </p>
         <p style={{ marginTop: "1rem" }}>
           <Link className="btn btn-primary" href={continuePath}>
@@ -100,7 +100,7 @@ export function LearnerDashboard({ projection }: { projection: LearnerWebProject
       </section>
 
       <section aria-labelledby="metrics-heading">
-        <h2 id="metrics-heading" className="dense">My evidence</h2>
+        <h2 id="metrics-heading" className="dense">My progress</h2>
         <div className="metrics">
           <div className="metric"><span className="metric__label">Meaningful attempts</span><span className="metric__value">{rewards?.meaningfulEventCount ?? 0}</span></div>
           <div className="metric"><span className="metric__label">Strong / mastered</span><span className="metric__value">{strong} / {mastered}</span></div>

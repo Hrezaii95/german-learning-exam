@@ -40,7 +40,7 @@ export function DashboardView({ projection }: { projection: LearnerWebProjection
       </header>
       <LearnerDashboard projection={projection} />
 
-      <p className="dense">Published course scope: {lessonCount} lessons · {activityCount} activities.</p>
+      <p className="dense">Course scope: {lessonCount} lessons · {activityCount} activities.</p>
 
       <section aria-labelledby="lessons-heading">
         <h2 id="lessons-heading">Lessons</h2>

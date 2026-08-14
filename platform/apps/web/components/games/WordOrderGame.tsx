@@ -80,7 +80,7 @@ export function WordOrderGame({
     <section className="panel game-panel" aria-labelledby="word-order-heading">
       <h2 id="word-order-heading">Word order</h2>
       <p className="muted">
-        Rebuild the published informal question using only its published tokens.
+        Rebuild the informal question using the word tiles below.
       </p>
       <fieldset className="game-tokens">
         <legend className="hub-field__label">Your order</legend>
@@ -129,7 +129,7 @@ export function WordOrderGame({
           setOrdered([...prompt.canonicalTokens]);
           setPool([]);
           setFeedbackKind("revealed");
-          setMessage(`Published order: ${prompt.sourceSentence}`);
+          setMessage(`Correct order: ${prompt.sourceSentence}`);
         }}
         revealDisabled={revealed}
       />

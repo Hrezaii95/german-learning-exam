@@ -137,10 +137,10 @@ describe("Listening and Concepts learner hub UI", () => {
     expect((html.match(/source-workbook-approved-v1/g) ?? []).length).toBe(15);
     expect(html).toContain("AB 3");
     expect(html).toContain("AB 12");
-    expect(html).toContain("15 published");
+    expect(html).toContain("15 items");
     expect(html).toMatch(/href="\/lessons\/01\/activity\/id-[0-9a-f]+"/);
     expect(html).toMatch(/href="\/lessons\/02\/activity\/id-[0-9a-f]+"/);
-    expect(html).not.toContain("No published items yet");
+    expect(html).not.toContain("Nothing here yet");
     expect(html).not.toMatch(/<figcaption[^>]*>.*transcript/i);
   });
 
@@ -151,11 +151,11 @@ describe("Listening and Concepts learner hub UI", () => {
     expect((html.match(/class="hub-card panel"/g) ?? []).length).toBe(6);
     expect(html).toContain("Greetings, farewells &amp; wellbeing");
     expect(html).toContain("Professions, person forms &amp; present tense");
-    expect(html).toContain("6 published");
+    expect(html).toContain("6 items");
     expect(html).toContain('href="/grammar?');
     expect(html).toContain('href="/phrases?');
     expect(html).toContain('href="/listening?');
     expect(html).toMatch(/href="\/lessons\/02\/activity\/id-[0-9a-f]+"/);
-    expect(html).not.toContain("No published items yet");
+    expect(html).not.toContain("Nothing here yet");
   });
 });

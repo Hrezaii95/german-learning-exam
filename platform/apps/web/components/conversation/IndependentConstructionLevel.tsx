@@ -70,7 +70,7 @@ export function IndependentConstructionLevel({
     >
       <h2 id="conversation-construction-heading">Independent construction</h2>
       <p className="muted">
-        Type one of the three published answer realizations for{" "}
+        Type one of the three accepted answers for{" "}
         <span className="german" lang="de">
           {CONVERSATION_QUESTION}
         </span>
@@ -86,7 +86,7 @@ export function IndependentConstructionLevel({
           autoComplete="off"
           value={value}
           onChange={(event) => setValue(event.target.value)}
-          aria-label="Type a published answer pattern"
+          aria-label="Type your answer"
         />
       </label>
       <ConversationActionBar
@@ -96,14 +96,14 @@ export function IndependentConstructionLevel({
         onHint={() => {
           setHintsUsed((n) => n + 1);
           setFeedbackKind("revealed");
-          setMessage("Hint: start with “Ich …” — exact published patterns only.");
+          setMessage("Hint: start with “Ich …” and use one of the exact patterns you learned.");
         }}
         onReveal={() => {
           setRevealed(true);
           setHintsUsed((n) => n + 1);
           setFeedbackKind("revealed");
           setMessage(
-            `Published patterns: ${CONVERSATION_ANSWER_REALIZATIONS.join(" · ")}`,
+            `Accepted answers: ${CONVERSATION_ANSWER_REALIZATIONS.join(" · ")}`,
           );
         }}
         revealDisabled={revealed}

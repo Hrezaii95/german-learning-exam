@@ -73,7 +73,7 @@ function NavItems({
             <li key={item.key}>
               <button className="nav-disabled" type="button" disabled>
                 <span>{item.label}</span>
-                <span className="nav-disabled__badge">Next phase</span>
+                <span className="nav-disabled__badge">Coming soon</span>
               </button>
             </li>
           );
@@ -119,9 +119,6 @@ export function AppShell({
         <nav aria-label="Primary">
           <NavItems current={current} variant="rail" />
         </nav>
-        <p className="dense" style={{ color: "var(--nav-muted)", margin: 0 }}>
-          Content from validated publication only.
-        </p>
       </aside>
 
       <header className="shell-topnav" aria-label="Tablet navigation">

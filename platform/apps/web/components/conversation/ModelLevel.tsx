@@ -54,8 +54,7 @@ export function ModelLevel({
     >
       <h2 id="conversation-model-heading">Model</h2>
       <p className="muted">
-        Study the published informal exchange. Pronunciation playback is
-        unavailable until listening approval.
+        Study the model informal exchange before you practise it.
       </p>
       <div className="qa-bubble qa-bubble--question">
         <p className="dense">Question</p>

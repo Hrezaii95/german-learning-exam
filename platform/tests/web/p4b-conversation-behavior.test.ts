@@ -93,7 +93,7 @@ describe("P4B conversation behavioral interactions", () => {
     expect(feedbackEl().getAttribute("data-feedback")).toBe("empty");
 
     await user.type(
-      screen.getByLabelText(/published answer pattern/i),
+      screen.getByLabelText(/Type your answer/i),
       CONVERSATION_ANSWER_REALIZATIONS[2]!,
     );
     await user.click(screen.getByRole("button", { name: "Submit" }));
@@ -109,7 +109,7 @@ describe("P4B conversation behavioral interactions", () => {
 
     await user.click(screen.getByRole("button", { name: "Hint" }));
     await user.type(
-      screen.getByLabelText(/published answer pattern/i),
+      screen.getByLabelText(/Type your answer/i),
       CONVERSATION_ANSWER_REALIZATIONS[0]!,
     );
     await user.click(screen.getByRole("button", { name: "Submit" }));

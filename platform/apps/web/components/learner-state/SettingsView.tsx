@@ -21,7 +21,7 @@ export function SettingsView() {
   if (!state || !controller) return <p className="placeholder-banner" role="alert">{snapshot.statusMessage}</p>;
 
   async function importFile(file: File) {
-    if (!window.confirm("Replace all local learner state with this validated export?")) return;
+    if (!window.confirm("Replace everything saved on this device with the contents of this file?")) return;
     try {
       await controller!.importJson(await file.text(), true);
       setMessage("Learner state imported and replayed.");
@@ -47,7 +47,7 @@ export function SettingsView() {
 
   return (
     <div className="stack">
-      <header className="page-header"><p className="dense">Local-first</p><h1>Settings &amp; data</h1><p className="lede">Your learning evidence stays in this browser unless you export it.</p></header>
+      <header className="page-header"><p className="dense">Local-first</p><h1>Settings &amp; data</h1><p className="lede">Your learning data stays in this browser unless you export it.</p></header>
       <section className="panel" aria-labelledby="preferences-heading">
         <h2 id="preferences-heading">Preferences</h2>
         <div className="hub-filter-grid">
@@ -58,7 +58,7 @@ export function SettingsView() {
       </section>
       <section className="panel" aria-labelledby="data-heading">
         <h2 id="data-heading">Export, import, reset</h2>
-        <p>Exports contain validated events, cards, tags, notes, settings, resume state, and recording metadata. Raw microphone audio is excluded.</p>
+        <p>Exports contain your practice history, cards, tags, notes, settings, resume state, and recording metadata. Raw microphone audio is excluded.</p>
         <div className="detail-actions">
           <button className="btn btn-secondary" type="button" onClick={downloadExport}>Download JSON export</button>
           <button className="btn btn-secondary" type="button" onClick={() => fileRef.current?.click()}>Import JSON</button>

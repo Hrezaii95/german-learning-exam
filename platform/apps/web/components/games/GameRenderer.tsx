@@ -76,7 +76,7 @@ export function GameRenderer({
       try {
         const persistent = normalizePracticeEventForPersistence({ event, gameId });
         void learnerState.controller.appendEvent(persistent).then(
-          () => setSaveMessage("Practice evidence saved locally."),
+          () => setSaveMessage("Practice progress saved on this device."),
           () => setSaveMessage("Practice feedback worked, but local saving failed."),
         );
       } catch {
@@ -92,7 +92,8 @@ export function GameRenderer({
         <p className="dense">Practice</p>
         <h1>{gameTitle(gameId)}</h1>
         <p className="lede">
-          Typed evidence events only — local feedback is not mastery.
+          Answer at your own pace — feedback is instant and your progress stays
+          on this device.
         </p>
       </header>
       <PracticeGameBody
@@ -101,7 +102,7 @@ export function GameRenderer({
         onEvent={onEvent}
       />
       <p className="dense" data-emitted-count={emitted.length}>
-        Events emitted this session: {emitted.length}
+        Attempts this session: {emitted.length}
       </p>
       {saveMessage ? <p className="detail-feedback" role="status">{saveMessage}</p> : null}
     </div>

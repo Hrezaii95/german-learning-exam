@@ -152,7 +152,7 @@ function NumberRangeVisual() {
     <VisualFrame
       eyebrow="Lesson 2 · number field"
       title="Scan the range before you listen"
-      summary="The published activity covers 0–100. This map shows the numeric territory without inventing an unpublished spelling key."
+      summary="This activity covers 0–100. This map shows the numeric territory one band at a time."
       kind="numbers-0-100"
     >
       <div className="number-map" aria-label="Number range zero through one hundred">
@@ -177,7 +177,7 @@ function ProfessionPairsVisual({ limit = 6 }: { limit?: number }) {
     <VisualFrame
       eyebrow="Lesson 2 · person-form system"
       title="Article + person word travel together"
-      summary="Blue square marks masculine der; pink circle marks feminine die. Amber marks the visible change between the two published forms."
+      summary="Blue square marks masculine der; pink circle marks feminine die. Amber marks the visible change between the two forms."
       kind="profession-pairs"
     >
       <div className="profession-pair-grid">
@@ -190,7 +190,7 @@ function ProfessionPairsVisual({ limit = 6 }: { limit?: number }) {
           </article>
         ))}
       </div>
-      <p className="visual-note">Plural is deliberately absent here because profession plurals are not published in the core lesson data.</p>
+      <p className="visual-note">Plural forms are deliberately absent here — these lessons focus on the singular pair.</p>
     </VisualFrame>
   );
 }
@@ -232,7 +232,7 @@ function ProfessionExpressionVisual() {
     <VisualFrame
       eyebrow="Lesson 2 · meaning contrast"
       title="Identity and work use different frames"
-      summary="Each lane below is a complete published model. Keep the connector with the expression that follows it."
+      summary="Each lane below is a complete model sentence. Keep the connector with the expression that follows it."
       kind="profession-expressions"
     >
       <div className="expression-lanes">
@@ -296,8 +296,8 @@ function PluralLane({ detail }: { detail: LearnerVocabularyDetail }) {
     return (
       <div className="noun-system__plural" data-status="not-published">
         <Cue tone="plural"><span aria-hidden="true">◫</span> die · plural</Cue>
-        <strong>Not published</strong>
-        <span>{detail.pluralGapMessage ?? "Plural does not apply to this published item."}</span>
+        <strong>No plural</strong>
+        <span>{detail.pluralGapMessage ?? "Plural does not apply to this item."}</span>
       </div>
     );
   }
@@ -330,13 +330,13 @@ export function NounSystemVisual({ detail }: { detail: LearnerVocabularyDetail }
         <div className="noun-system__singular" data-gender={detail.gender}>
           <GenderBadge gender={detail.gender} />
           <strong><German>{detail.displayText}</German></strong>
-          <span>singular · published</span>
+          <span>singular</span>
         </div>
         <span className="noun-system__arrow" aria-hidden="true">→</span>
         <PluralLane detail={detail} />
       </div>
       {detail.personForm ? (
-        <div className="noun-system__person-pair" aria-label={`Related published person form ${detail.personForm.relatedDisplayText}`}>
+        <div className="noun-system__person-pair" aria-label={`Related person form ${detail.personForm.relatedDisplayText}`}>
           <div><GenderBadge gender={detail.gender} /><German>{detail.displayText}</German></div>
           <span aria-hidden="true">+</span>
           <Cue tone={detail.personForm.sharedStem === detail.lemma ? "special" : "irregular"}><German>{detail.personForm.operationLabel}</German></Cue>
@@ -372,7 +372,7 @@ export function VerbPatternVisual({ detail }: { detail: LearnerVerbDetail }) {
     <VisualFrame
       eyebrow="Verb map · person, stem, ending"
       title={irregular ? "Learn sein as complete forms" : "Keep the stem; read the person signal"}
-      summary={irregular ? "Magenta means no pretend stem rule: recall each published form as a whole." : spellingSensitive ? "Amber highlights heißt, where the taught spelling does not show an extra s before t." : "Teal separates the stable stem from each exact published ending."}
+      summary={irregular ? "Magenta means no pretend stem rule: recall each form as a whole." : spellingSensitive ? "Amber highlights heißt, where the taught spelling does not show an extra s before t." : "Teal separates the stable stem from each exact ending."}
       kind={`verb-${detail.id.replace(":", "-")}`}
     >
       <div className="verb-build-map">
@@ -422,7 +422,7 @@ export function QuestionAnswerFlowVisual({ detail }: { detail: LearnerQaDetail }
         <div className="dialogue-flow__speaker" aria-hidden="true">A</div>
         <div className="dialogue-flow__bubble" data-role="question"><span>ask</span><German>{detail.question.realization}</German></div>
         <span className="dialogue-flow__arrow" aria-hidden="true">→</span>
-        <div className="dialogue-flow__answers" aria-label="Published answer patterns">
+        <div className="dialogue-flow__answers" aria-label="Answer patterns">
           {detail.answers.map((answer) => <div key={answer.id} className="dialogue-flow__bubble" data-role="answer"><span>answer</span><German>{answer.realization}</German></div>)}
         </div>
         <div className="dialogue-flow__speaker" aria-hidden="true">B</div>
@@ -457,7 +457,7 @@ export function GrammarConceptVisual({ detail }: { detail: LearnerGrammarDetail 
           </li>
         ))}
       </ol>
-      {models.length > 0 ? <p className="visual-note">All examples shown here are the exact published models for this grammar topic.</p> : null}
+      {models.length > 0 ? <p className="visual-note">All examples shown here are the exact model sentences for this grammar topic.</p> : null}
       {detail.id === "gram:present-conjugation-l1" || detail.id === "gram:full-present-person-forms-l2" ? <RuleLegend /> : null}
     </VisualFrame>
   );

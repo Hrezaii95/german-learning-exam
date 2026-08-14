@@ -77,7 +77,6 @@ function SearchResultCard({
         </span>
       </h3>
       {meta}
-      <p className="dense hub-card__cue">Detail view next phase</p>
     </article>
   );
 }
@@ -104,14 +103,14 @@ export function SearchView({
         <p className="dense">Global search</p>
         <h1>Search</h1>
         <p className="lede">
-          Search published learner content by canonical German forms, meanings,
-          and safe labels. Umlaut aliases match quietly; results always show
-          correct German spelling.
+          Search everything you are learning by German form, meaning, or label.
+          Umlaut-free spellings match quietly; results always show correct
+          German spelling.
         </p>
       </header>
 
       <section className="panel hub-filters" aria-labelledby="search-form-heading">
-        <h2 id="search-form-heading">Find published content</h2>
+        <h2 id="search-form-heading">Find content</h2>
         <form
           className="hub-filter-form"
           method="get"
@@ -127,7 +126,7 @@ export function SearchView({
               defaultValue={query}
               placeholder="e.g. heißen, Ingenieur, sein"
               autoComplete="off"
-              aria-label="Search published learner content"
+              aria-label="Search learning content"
             />
           </label>
           <div className="hub-filter-actions">
@@ -145,16 +144,15 @@ export function SearchView({
         <div className="panel hub-empty" role="status">
           <h2>Enter a search</h2>
           <p className="muted">
-            Type a German word, meaning, or label to see grouped published
-            results. Recent searches are not stored in this slice yet.
+            Type a German word, meaning, or label to see grouped results.
           </p>
         </div>
       ) : hits.length === 0 ? (
         <div className="panel hub-empty" role="status">
           <h2>No matches</h2>
           <p className="muted">
-            No published learner items match “{trimmed}”. Try another spelling
-            or clear the query. Review-only material never appears here.
+            Nothing matches “{trimmed}”. Try another spelling or clear the
+            query.
           </p>
         </div>
       ) : (

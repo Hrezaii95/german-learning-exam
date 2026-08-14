@@ -62,7 +62,7 @@ export function VerbBuilderGame({
     <section className="panel game-panel" aria-labelledby="verb-builder-heading">
       <h2 id="verb-builder-heading">Verb builder</h2>
       <p className="muted">
-        Build the published present form of{" "}
+        Build the present form of{" "}
         <span className="german" lang="de">
           {prompt.infinitive}
         </span>{" "}
@@ -96,7 +96,7 @@ export function VerbBuilderGame({
           setHintsUsed((n) => n + 1);
           setTyped(prompt.expectedForm);
           setFeedbackKind("revealed");
-          setMessage(`Published form: ${prompt.expectedForm}`);
+          setMessage(`Correct form: ${prompt.expectedForm}`);
         }}
         revealDisabled={revealed}
       />

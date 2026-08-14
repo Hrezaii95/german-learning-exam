@@ -146,7 +146,7 @@ export function ReviewSession() {
   if (!row) {
     return (
       <div className="stack">
-        <header className="page-header"><p className="dense">Review complete</p><h1>Mission finished</h1><p className="lede">Your evidence and next due dates are saved locally.</p></header>
+        <header className="page-header"><p className="dense">Review complete</p><h1>Mission finished</h1><p className="lede">Your progress and next review dates are saved on this device.</p></header>
         <Link className="btn btn-primary" href="/review">Back to review</Link>
         <Link className="btn btn-secondary" href="/">Dashboard</Link>
       </div>

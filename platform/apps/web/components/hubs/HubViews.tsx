@@ -102,8 +102,8 @@ export function HubDirectoryView({
         <p className="dense">Learner hubs</p>
         <h1>Hubs</h1>
         <p className="lede">
-          Directory of the six canonical content hubs. Open a hub to browse
-          published items with search and filters.
+          Six content hubs cover everything you are learning. Open a hub to
+          browse its items with search and filters.
         </p>
       </header>
 
@@ -113,7 +113,7 @@ export function HubDirectoryView({
           href="/search"
           aria-label="Open global search"
         >
-          Search published content
+          Search all content
         </Link>
       </p>
 
@@ -123,7 +123,7 @@ export function HubDirectoryView({
             <span>
               <span className="hub-shortcut__title">{hub.title}</span>
               <span className="dense hub-shortcut__count">
-                {hubVisibleItemCount(hub)} published
+                {hubVisibleItemCount(hub)} items
               </span>
             </span>
             <span className="dense">Open</span>
@@ -137,11 +137,10 @@ export function HubDirectoryView({
 function HubEmptyPublished({ hub }: { hub: LearnerHubDefinition }) {
   return (
     <div className="panel hub-empty" role="status">
-      <h2>No published items yet</h2>
+      <h2>Nothing here yet</h2>
       <p className="muted">
-        {hub.title} has no learner-published records in the current validated
-        package. Approved content will appear here when publication status
-        allows it. Review-only material is never shown as a substitute.
+        {hub.title} has no items yet. New content will appear here as the
+        course grows.
       </p>
     </div>
   );
@@ -154,7 +153,7 @@ function HubNoMatches({ hub }: { hub: LearnerHubDefinition }) {
       <h2>No matches</h2>
       <p className="muted">
         Nothing in {hub.title} matches the current search and filters. Clear
-        filters to see all {visibleItemCount} published items.
+        filters to see all {visibleItemCount} items.
       </p>
       <p style={{ marginTop: "1rem" }}>
         <Link className="btn btn-secondary" href={hubClearHref(hub.path)}>
@@ -222,7 +221,7 @@ function ConceptTopicCard({ topic }: { topic: LearnerConceptTopic }) {
           </span>
         ))}
         <span className="meta-chip">
-          {topic.sourceEntityIds.length} published sources
+          {topic.sourceEntityIds.length} related items
         </span>
       </div>
       <h2 className="hub-card__title">{topic.displayLabel}</h2>
@@ -277,9 +276,6 @@ function HubRecordCard({
         ) : null}
         <span className="meta-chip">{lessonChips(record.lessonIds)}</span>
       </div>
-      {href ? null : (
-        <p className="dense hub-card__cue">Detail view next phase</p>
-      )}
     </article>
   );
 }
@@ -299,7 +295,7 @@ function HubFilters({
 
   return (
     <section className="panel hub-filters" aria-labelledby="hub-filters-heading">
-      <h2 id="hub-filters-heading">Filter published items</h2>
+      <h2 id="hub-filters-heading">Filter items</h2>
       <form
         className="hub-filter-form"
         method="get"
@@ -369,10 +365,6 @@ function HubFilters({
       ) : (
         <p className="dense hub-filter-summary">No active filters</p>
       )}
-      <p className="placeholder-banner hub-state-note">
-        Learned, due, mastery, and streak controls are not available in this
-        slice. Counts and filters reflect published content only.
-      </p>
     </section>
   );
 }
@@ -405,11 +397,11 @@ export function HubListView({
   return (
     <div className="stack">
       <header className="page-header">
-        <p className="dense">Canonical hub</p>
+        <p className="dense">Hub</p>
         <h1>{hub.title}</h1>
         <p className="lede">{hub.description}</p>
         <p className="meta-row" style={{ marginTop: "0.5rem" }}>
-          <span className="meta-chip">{visibleItemCount} published</span>
+          <span className="meta-chip">{visibleItemCount} items</span>
           <span className="meta-chip">
             Showing {visibleResultCount}
             {showAfterFilters ? " after filters" : ""}

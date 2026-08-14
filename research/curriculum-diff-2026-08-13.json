@@ -1,0 +1,250 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-14",
+  "scope": "lessons-01-02 curriculum diff: docs/11-lessons-01-02-content-spec.md vs published state on disk",
+  "authorities": [
+    "docs/11-lessons-01-02-content-spec.md",
+    "docs/02-product-requirements.md",
+    "docs/18-requirement-traceability.md"
+  ],
+  "evidence": {
+    "publishedPackages": [
+      "platform/content/published/lesson-01.json",
+      "platform/content/published/lesson-02.json",
+      "platform/content/published/activities.json",
+      "platform/content/published/listening-assets.json",
+      "platform/content/published/teacher-professions.json"
+    ],
+    "learnerProjections": [
+      "platform/apps/web/generated/learner-details.json (97 details: 69 Lexeme, 4 Verb, 10 GrammarConcept, 14 QAPair)",
+      "platform/apps/web/generated/learner-hubs.json (vocabulary 69, verbs 4, grammar 10, phrases+qa 58, listening 0)",
+      "platform/apps/web/generated/learner-extra-professions.json (48 teacher rows, optional collection)"
+    ],
+    "canonicalSource": "content/alpha-content.json",
+    "officialGlossary": "content/source-index/source-manifest.json src:glossary:9e35984302ede169 -> resources/original/glossaries/Momente_A1_1_KB_Glossar_Deutsch_Englisch.pdf (Lektion 01-02 = PDF pages 1-4; plural notation read directly from the PDF)"
+  },
+  "verbs": {
+    "required": [
+      "verb:sein", "verb:heissen", "verb:kommen", "verb:lernen",
+      "verb:wohnen", "verb:leben", "verb:haben", "verb:arbeiten", "verb:machen", "verb:studieren"
+    ],
+    "requiredNote": "docs/11: Lesson 1 table names sein/heissen/kommen/lernen; Lesson 2 verb list names wohnen/leben/haben/sein/arbeiten/machen/studieren plus carried-forward heissen and kommen. Distinct id set = 10.",
+    "published": ["verb:sein", "verb:heissen", "verb:kommen", "verb:lernen"],
+    "missing": ["verb:wohnen", "verb:leben", "verb:haben", "verb:arbeiten", "verb:machen", "verb:studieren"],
+    "blocked": [
+      { "id": "verb:wohnen", "reason": "publication.status='review', publishedFields=[] in lesson-02.json; ContentGap gap:meaning-wohnen: English gloss absent from alpha-content.json, infinitive echoed as placeholder pending glossary assertion enrichment. Full present paradigm IS encoded. Gloss recoverable from official glossary p.2 ('wohnen — to live (reside)')." },
+      { "id": "verb:leben", "reason": "publication.status='review', publishedFields=[]; ContentGap gap:meaning-leben (gloss missing from alpha-content.json). Paradigm encoded. Gloss recoverable from glossary p.3 ('zusammen|leben — to live together' context; 'leben' core entry Lektion 02 ex.2)." },
+      { "id": "verb:haben", "reason": "publication.status='review', publishedFields=[]; ContentGap gap:meaning-haben (gloss missing from alpha-content.json). Paradigm encoded. Gloss recoverable from glossary p.2 ('haben — to have')." },
+      { "id": "verb:arbeiten", "reason": "publication.status='review', publishedFields=[]; ContentGap gap:meaning-arbeiten (gloss missing from alpha-content.json). Paradigm encoded. Gloss recoverable from glossary p.3 ('arbeiten — to work')." },
+      { "id": "verb:machen", "reason": "publication.status='review', publishedFields=[]; ContentGap gap:meaning-machen (gloss missing from alpha-content.json). Paradigm encoded. Gloss recoverable from glossary p.3 ('machen — to do')." },
+      { "id": "verb:studieren", "reason": "publication.status='review', publishedFields=[]; ContentGap gap:meaning-studieren (gloss missing from alpha-content.json). Paradigm encoded. Gloss recoverable from glossary p.4 ('studieren — to study')." }
+    ],
+    "blockingClass": "missing-source-data (English gloss never landed in alpha-content.json) -> review-pending; NOT never-encoded: all six verbs exist in lesson-02.json with full 7-person present paradigms."
+  },
+  "nounPlurals": {
+    "publishedNounCount": 48,
+    "exactStored": [
+      { "id": "lex:name", "plural": "Namen" },
+      { "id": "lex:vorname", "plural": "Vornamen" },
+      { "id": "lex:familienname", "plural": "Familiennamen" },
+      { "id": "lex:herr", "plural": "Herren" },
+      { "id": "lex:frau", "plural": "Frauen" }
+    ],
+    "notApplicable": [
+      { "id": "lex:schweiz", "note": "proper-noun country; glossary lists 'die Schweiz' with no plural notation" },
+      { "id": "lex:tuerkei", "note": "glossary marks 'die Türkei (Sg.)'" },
+      { "id": "lex:usa", "note": "glossary marks 'die USA (Pl.)' — plural-only lexeme" },
+      { "id": "lex:herkunft", "note": "glossary marks 'die Herkunft (Sg.)'" },
+      { "id": "lex:alter", "note": "glossary marks 'das Alter (Sg.)'" },
+      { "id": "lex:familienstand", "note": "glossary marks 'der Familienstand (Sg.)'" },
+      { "id": "lex:studium", "note": "glossary marks 'das Studium (Sg.)'" }
+    ],
+    "missing": [
+      "lex:jahr", "lex:kind", "lex:wohnort", "lex:beruf", "lex:job", "lex:stelle",
+      "lex:ausbildung", "lex:praktikum", "lex:firma", "lex:single",
+      "lex:paketzusteller", "lex:paketzustellerin", "lex:friseur", "lex:friseurin",
+      "lex:kellner", "lex:kellnerin", "lex:ingenieur", "lex:ingenieurin",
+      "lex:kfz-mechatroniker", "lex:kfz-mechatronikerin", "lex:student", "lex:studentin",
+      "lex:journalist", "lex:journalistin", "lex:architekt", "lex:architektin",
+      "lex:arzt", "lex:aerztin", "lex:lehrer", "lex:lehrerin",
+      "lex:verkaeufer", "lex:verkaeuferin", "lex:schueler", "lex:schuelerin",
+      "lex:rentner", "lex:rentnerin"
+    ],
+    "missingRecoverableFromGlossary": [
+      { "id": "lex:jahr", "glossaryPlural": "Jahre", "notation": "das Jahr, -e (p.2)" },
+      { "id": "lex:kind", "glossaryPlural": "Kinder", "notation": "das Kind, -er (p.3)" },
+      { "id": "lex:wohnort", "glossaryPlural": "Wohnorte", "notation": "der Wohnort, -e (p.4)" },
+      { "id": "lex:beruf", "glossaryPlural": "Berufe", "notation": "der Beruf, -e (p.3)" },
+      { "id": "lex:job", "glossaryPlural": "Jobs", "notation": "der Job, -s (p.3)" },
+      { "id": "lex:stelle", "glossaryPlural": "Stellen", "notation": "die Stelle, -n (p.4)" },
+      { "id": "lex:ausbildung", "glossaryPlural": "Ausbildungen", "notation": "die Ausbildung, -en (p.4)" },
+      { "id": "lex:praktikum", "glossaryPlural": "Praktika", "notation": "das Praktikum, Praktika (p.4)" },
+      { "id": "lex:firma", "glossaryPlural": "Firmen", "notation": "die Firma, Firmen (p.3)" },
+      { "id": "lex:single", "glossaryPlural": "Singles", "notation": "der Single, -s (p.3)" },
+      { "id": "lex:paketzusteller", "glossaryPlural": "Paketzusteller", "notation": "der Paketzusteller, - (p.3)" },
+      { "id": "lex:paketzustellerin", "glossaryPlural": "Paketzustellerinnen", "notation": "die Paketzustellerin, -nen (p.3)" },
+      { "id": "lex:friseur", "glossaryPlural": "Friseure", "notation": "der Friseur, -e (p.3)" },
+      { "id": "lex:friseurin", "glossaryPlural": "Friseurinnen", "notation": "die Friseurin, -nen (p.3)" },
+      { "id": "lex:kellner", "glossaryPlural": "Kellner", "notation": "der Kellner, - (p.3)" },
+      { "id": "lex:kellnerin", "glossaryPlural": "Kellnerinnen", "notation": "die Kellnerin, -nen (p.3)" },
+      { "id": "lex:ingenieur", "glossaryPlural": "Ingenieure", "notation": "der Ingenieur, -e (p.3)" },
+      { "id": "lex:ingenieurin", "glossaryPlural": "Ingenieurinnen", "notation": "die Ingenieurin, -nen (p.3)" },
+      { "id": "lex:kfz-mechatroniker", "glossaryPlural": "Kfz-Mechatroniker", "notation": "der Kfz-Mechatroniker, - (p.3)" },
+      { "id": "lex:kfz-mechatronikerin", "glossaryPlural": "Kfz-Mechatronikerinnen", "notation": "die Kfz-Mechatronikerin, -nen (p.3)" },
+      { "id": "lex:student", "glossaryPlural": "Studenten", "notation": "der Student, -en (p.3)" },
+      { "id": "lex:studentin", "glossaryPlural": "Studentinnen", "notation": "die Studentin, -nen (p.3)" },
+      { "id": "lex:journalist", "glossaryPlural": "Journalisten", "notation": "der Journalist, -en (p.3)" },
+      { "id": "lex:journalistin", "glossaryPlural": "Journalistinnen", "notation": "die Journalistin, -nen (p.3)" },
+      { "id": "lex:architekt", "glossaryPlural": "Architekten", "notation": "der Architekt, -en (p.3)" },
+      { "id": "lex:architektin", "glossaryPlural": "Architektinnen", "notation": "die Architektin, -nen (p.3)" },
+      { "id": "lex:arzt", "glossaryPlural": "Ärzte", "notation": "der Arzt, ¨-e umlaut plural (p.4)" },
+      { "id": "lex:aerztin", "glossaryPlural": "Ärztinnen", "notation": "die Ärztin, -nen (p.4)" },
+      { "id": "lex:lehrer", "glossaryPlural": "Lehrer", "notation": "der Lehrer, - (p.4)" },
+      { "id": "lex:lehrerin", "glossaryPlural": "Lehrerinnen", "notation": "die Lehrerin, -nen (p.4)" },
+      { "id": "lex:verkaeufer", "glossaryPlural": "Verkäufer", "notation": "der Verkäufer, - (p.4)" },
+      { "id": "lex:verkaeuferin", "glossaryPlural": "Verkäuferinnen", "notation": "die Verkäuferin, -nen (p.4)" },
+      { "id": "lex:schueler", "glossaryPlural": "Schüler", "notation": "der Schüler, - (p.4)" },
+      { "id": "lex:schuelerin", "glossaryPlural": "Schülerinnen", "notation": "die Schülerin, -nen (p.4)" },
+      { "id": "lex:rentner", "glossaryPlural": "Rentner", "notation": "der Rentner, - (p.4)" },
+      { "id": "lex:rentnerin", "glossaryPlural": "Rentnerinnen", "notation": "die Rentnerin, -nen (p.4)" }
+    ],
+    "recoverability": "36 of 36 missing plurals are recoverable from the official English glossary (src:glossary:9e35984302ede169). The 4 (Sg.)-marked nouns and 3 country lexemes are confirmed not-applicable by the same source. Every published noun currently shows the generic pluralGapMessage instead of the recoverable form."
+  },
+  "qaIntents": {
+    "required": [
+      "qa:name-casual", "qa:name-formal", "qa:identity",
+      "qa:origin-casual", "qa:origin-formal",
+      "qa:wellbeing-casual", "qa:wellbeing-formal",
+      "qa:profession-casual-main", "qa:profession-formal-main",
+      "qa:work-casual-main", "qa:work-formal-main",
+      "qa:age-casual", "qa:age-formal",
+      "qa:residence-casual", "qa:residence-formal"
+    ],
+    "requiredNote": "docs/11 Lesson 2 work language lists BOTH 'Was macht ihr beruflich?' (casual/plural — also the lesson title and glossary Lektion 02 ex.5 core entry) and 'Was machen Sie beruflich?'. qa:work-casual-main is the normalized id for the ihr-variant.",
+    "published": [
+      "qa:name-casual", "qa:name-formal", "qa:identity",
+      "qa:origin-casual", "qa:origin-formal",
+      "qa:wellbeing-casual", "qa:wellbeing-formal",
+      "qa:profession-casual-main", "qa:profession-formal-main",
+      "qa:work-formal-main",
+      "qa:age-casual", "qa:age-formal",
+      "qa:residence-casual", "qa:residence-formal"
+    ],
+    "missing": ["qa:work-casual-main"],
+    "blocked": [
+      { "id": "qa:work-casual-main", "reason": "never encoded: alpha-content.json lesson:02 qa list contains only qa:work-formal ('Was machen Sie beruflich?'); the ihr-variant 'Was macht ihr beruflich?' exists only as the lesson title. Glossary p.3 Lektion 02 ex.5 confirms it as core learning vocabulary ('Was macht ihr beruflich? — What do you do for a living?')." }
+    ],
+    "hubConsistency": "learner-hubs.json phrases hub = 58 items = 14 QAPair details + 44 phrase patterns; matches learner-details.json exactly. No hub/detail drift."
+  },
+  "activities": {
+    "required": [
+      "activity:lesson-01-greetings-by-context", "activity:lesson-01-greeting-farewell-match",
+      "activity:lesson-01-name-model-dialogue", "activity:lesson-01-alphabet-listen-spell",
+      "activity:lesson-01-heissen-sein-notice", "activity:lesson-01-wellbeing-scale",
+      "activity:lesson-01-origin-aus-contrast", "activity:lesson-01-pronoun-verb-builder",
+      "activity:lesson-01-register-qa-builder", "activity:lesson-01-workbook-listening",
+      "activity:lesson-01-guided-intro-recording", "activity:lesson-01-checkpoint-summary",
+      "activity:lesson-02-personal-profile", "activity:lesson-02-full-person-conjugation",
+      "activity:lesson-02-numbers-0-100", "activity:lesson-02-relationship-status",
+      "activity:lesson-02-core-professions", "activity:lesson-02-person-form-morphology",
+      "activity:lesson-02-profession-qa-builder", "activity:lesson-02-sein-arbeiten-contrast",
+      "activity:lesson-02-workbook-listening", "activity:lesson-02-profile-reading-writing",
+      "activity:lesson-02-teacher-professions-deck", "activity:lesson-02-checkpoint-summary"
+    ],
+    "published": [
+      "activity:lesson-01-greetings-by-context", "activity:lesson-01-greeting-farewell-match",
+      "activity:lesson-01-name-model-dialogue", "activity:lesson-01-alphabet-listen-spell",
+      "activity:lesson-01-heissen-sein-notice", "activity:lesson-01-wellbeing-scale",
+      "activity:lesson-01-origin-aus-contrast", "activity:lesson-01-pronoun-verb-builder",
+      "activity:lesson-01-register-qa-builder", "activity:lesson-01-workbook-listening",
+      "activity:lesson-01-guided-intro-recording", "activity:lesson-01-checkpoint-summary",
+      "activity:lesson-02-personal-profile", "activity:lesson-02-full-person-conjugation",
+      "activity:lesson-02-numbers-0-100", "activity:lesson-02-relationship-status",
+      "activity:lesson-02-core-professions", "activity:lesson-02-person-form-morphology",
+      "activity:lesson-02-profession-qa-builder", "activity:lesson-02-sein-arbeiten-contrast",
+      "activity:lesson-02-workbook-listening", "activity:lesson-02-profile-reading-writing",
+      "activity:lesson-02-checkpoint-summary"
+    ],
+    "missing": ["activity:lesson-02-teacher-professions-deck"],
+    "blocked": [
+      { "id": "activity:lesson-02-teacher-professions-deck", "reason": "publication.status='review' in activities.json; depends on collection:teacher-professions whose 86 fragment lexemes are ALL status 'review' with humanLanguageReviewRequired=true (qualified German reviewer gate). A learner projection of 48 rows exists in learner-extra-professions.json as an optional collection with audioAvailable=false and imagesAvailable=false." }
+    ],
+    "substanceCaveats": [
+      { "id": "activity:lesson-01-alphabet-listen-spell", "caveat": "published, but ContentGap gap:alphabet-l1: the A-Z/Ä/Ö/Ü/ß alphabet inventory is absent from alpha-content.json — no alphabet lexemes back the activity." },
+      { "id": "activity:lesson-01-workbook-listening", "caveat": "published, but all 15 workbook listening assets in listening-assets.json are status 'review' (rights-gated publisher audio); learner-hubs listening hub has 0 items." },
+      { "id": "activity:lesson-02-workbook-listening", "caveat": "same: L2 exercise 6/12 clips (listen:workbook-1-07 .. 1-15) exist but are review-gated; nothing published." },
+      { "id": "activity:lesson-02-numbers-0-100", "caveat": "published, but ContentGap gap:numbers-0-100: numbers 0-100 required by docs/11 are absent from alpha-content.json — no number lexemes exist." },
+      { "id": "activity:lesson-01-name-model-dialogue", "caveat": "published, but lesson-01.json dialogues=[] and ContentGap gap:dialogue-l1-models: model dialogues not present as typed evidence." },
+      { "id": "activity:lesson-01-pronoun-verb-builder", "caveat": "published, but ContentGap gap:pronouns-l1: ich/du/er/sie/Sie are not typed lexeme entries." }
+    ]
+  },
+  "grammarConcepts": {
+    "required": [
+      "gram:main-clause-word-order-l1", "gram:w-questions-l1", "gram:present-conjugation-l1",
+      "gram:aus-origin-l1", "gram:du-sie-register-l1", "gram:personal-pronouns-l1",
+      "gram:und-linking-l1",
+      "gram:full-present-person-forms-l2", "gram:nicht-profile-negation-l2",
+      "gram:profession-expressions-l2", "gram:profession-feminine-forms-l2"
+    ],
+    "requiredNote": "docs/11 Lesson 1 grammar list ends with 'linking with und'; normalized here as gram:und-linking-l1. Lesson 2 items 'als/bei/in' and 'professions without article after sein' are both encoded inside gram:profession-expressions-l2; 'plural forms as lexically stored patterns' is a storage policy realized in the noun records (and partially in gram:profession-feminine-forms-l2), not a standalone concept.",
+    "published": [
+      "gram:main-clause-word-order-l1", "gram:w-questions-l1", "gram:present-conjugation-l1",
+      "gram:aus-origin-l1", "gram:du-sie-register-l1", "gram:personal-pronouns-l1",
+      "gram:full-present-person-forms-l2", "gram:nicht-profile-negation-l2",
+      "gram:profession-expressions-l2", "gram:profession-feminine-forms-l2"
+    ],
+    "missing": ["gram:und-linking-l1"],
+    "blocked": [
+      { "id": "gram:und-linking-l1", "reason": "never encoded: no grammar concept for 'linking with und' exists in lesson-01.json; not covered by any published concept." }
+    ]
+  },
+  "phrasesAndLexemes": {
+    "requiredWithNoPublishedCounterpart": [
+      { "id": "lex:und-dir", "specText": "Und dir?", "lesson": "01", "reason": "never encoded (absent from alpha-content.json wellbeing list and both lesson packages); glossary p.2 core entry" },
+      { "id": "lex:und-ihnen", "specText": "Und Ihnen?", "lesson": "01", "reason": "never encoded; docs/11 wellbeing group requires it" },
+      { "id": "lex:entschuldigung", "specText": "Entschuldigung", "lesson": "01", "reason": "never encoded; glossary p.1 core entry 'Entschuldigung. — Sorry.'" },
+      { "id": "lex:wie-bitte", "specText": "Wie bitte?", "lesson": "01", "reason": "never encoded; glossary p.1 core entry 'Wie bitte? — Pardon?'" },
+      { "id": "lex:danke", "specText": "Danke", "lesson": "01", "reason": "never encoded as standalone lexeme (only inside 'Sehr gut, danke.' / 'Gut, danke.'); glossary p.1 core entry 'Danke. — Thank you.'" },
+      { "id": "phrase:identity-wer-sind-sie", "specText": "Wer sind Sie?", "lesson": "01", "reason": "never encoded: qa:identity covers only 'Wer ist das?'; glossary p.2 ex.8 core entry" },
+      { "id": "phrase:identity-und-wer-bist-du", "specText": "Und wer bist du?", "lesson": "01", "reason": "never encoded; glossary p.1 ex.1 core entry" },
+      { "id": "phrase:name-answer-ich-bin", "specText": "Ich bin ... (as name/identity answer)", "lesson": "01", "reason": "never encoded in Lesson 1 (published name answers are only 'Ich heiße ...' and 'Mein Name ist ...'); glossary p.1 ex.1 'Ich bin ... — I am ...'" },
+      { "id": "lexemes.alphabet", "specText": "A-Z, Ä, Ö, Ü, ß inventory", "lesson": "01", "reason": "ContentGap gap:alphabet-l1: absent from alpha-content.json" },
+      { "id": "lexemes.pronouns", "specText": "ich/du/er/sie/Sie typed entries", "lesson": "01", "reason": "ContentGap gap:pronouns-l1: absent as typed entries" },
+      { "id": "lexemes.numbers", "specText": "numbers 0-100 + compound inversion", "lesson": "02", "reason": "ContentGap gap:numbers-0-100: absent from alpha-content.json" },
+      { "id": "lex:partner", "specText": "Partner/Partnerin (spec core noun)", "lesson": "02", "reason": "never encoded; glossary p.3 ex.2 'der Partner, - / die Partnerin, -nen'" },
+      { "id": "lex:interview", "specText": "Interview (spec core noun)", "lesson": "02", "reason": "never encoded; glossary p.3 ex.2 'das Interview, -s'" },
+      { "id": "lex:text", "specText": "Text (spec core noun)", "lesson": "02", "reason": "never encoded; glossary p.4 lists 'der Text, -e' (italic = non-core there; spec still names it a core noun — classification decision needed)" },
+      { "id": "lex:zusammenleben", "specText": "zusammenleben (status group)", "lesson": "02", "reason": "never encoded; glossary p.3 ex.2 'zusammen|leben — to live together'" },
+      { "id": "phrase:status-keine-kinder", "specText": "keine Kinder / ein-zwei Kinder", "lesson": "02", "reason": "never encoded as pattern or lexeme; glossary p.3 'keine Kinder — no children'" },
+      { "id": "phrase:work-job-stelle-haben", "specText": "Ich habe einen Job/eine Stelle als ...", "lesson": "02", "reason": "never encoded: work-formal answers cover only arbeiten als/bei, studieren, arbeite im Moment nicht" },
+      { "id": "phrase:work-ausbildung-praktikum", "specText": "Ich mache eine Ausbildung/ein Praktikum als/bei ...", "lesson": "02", "reason": "never encoded: nouns Ausbildung/Praktikum are published but the taught sentence pattern is not" }
+    ],
+    "classificationPending": [
+      { "id": "lex:suedafrika", "specText": "Südafrika (glossary ex.6, italic/non-core)", "reason": "docs/11 requires explicit core/non-core classification using formatting evidence; glossary p.2 prints it italic (non-core). Not encoded anywhere; classification decision not yet recorded." }
+    ]
+  },
+  "listening": {
+    "required": ["workbook L1 ex.3", "workbook L1 ex.9", "workbook L2 ex.6", "workbook L2 ex.12"],
+    "publishedAssets": [],
+    "reviewAssets": [
+      "listen:workbook-1-01-ab-momente-a11-1-3", "listen:workbook-1-02-ab-momente-a11-1-3",
+      "listen:workbook-1-03-ab-momente-a11-1-3", "listen:workbook-1-04-ab-momente-a11-1-3",
+      "listen:workbook-1-05-ab-momente-a11-1-9a", "listen:workbook-1-06-ab-momente-a11-1-9b",
+      "listen:workbook-1-07-ab-momente-a11-2-6a", "listen:workbook-1-08-ab-momente-a11-2-6a",
+      "listen:workbook-1-09-ab-momente-a11-2-6a", "listen:workbook-1-10-ab-momente-a11-2-6a",
+      "listen:workbook-1-11-ab-momente-a11-2-6b", "listen:workbook-1-12-ab-momente-a11-2-6b",
+      "listen:workbook-1-13-ab-momente-a11-2-6b", "listen:workbook-1-14-ab-momente-a11-2-6b",
+      "listen:workbook-1-15-ab-momente-a11-2-12"
+    ],
+    "note": "All 15 workbook listening assets covering every spec-required exercise exist but are status 'review' (rights-gated publisher audio); listening hub is empty (0 items). Both workbook-listening activities are published against unpublished assets."
+  },
+  "summary": {
+    "verbs": "10 required / 4 published / 6 missing — all 6 Lesson 2 verbs (wohnen, leben, haben, arbeiten, machen, studieren) are fully encoded with paradigms but review-blocked solely on missing English glosses in alpha-content.json; all glosses are recoverable from the official glossary PDF pages 2-4.",
+    "nounPlurals": "48 published nouns: 5 exact-stored / 36 missing / 7 not-applicable. All 36 missing plurals are recoverable verbatim from the official English glossary (exact forms listed).",
+    "qaIntents": "15 required / 14 published / 1 missing: qa:work-casual-main ('Was macht ihr beruflich?' — the Lesson 2 title itself) was never encoded; only the formal variant exists.",
+    "activities": "24 required / 23 published / 1 blocked: teacher-professions deck behind the human German-language review gate (86 collection lexemes all in review). Six published activities carry substance caveats (no alphabet lexemes, no number lexemes, no typed dialogues/pronouns, all workbook listening assets review-gated).",
+    "grammar": "11 required / 10 published / 1 missing: 'linking with und' (L1) has no concept.",
+    "phrasesLexemes": "18 spec-required items have no published counterpart, dominated by Lesson 1 courtesy/identity items (Und dir?, Und Ihnen?, Entschuldigung, Wie bitte?, Danke, Wer sind Sie?, Und wer bist du?, Ich bin ...) and Lesson 2 profile items (Partner/in, Interview, Text, zusammenleben, keine Kinder, Job/Stelle-haben and Ausbildung/Praktikum-machen patterns, numbers 0-100).",
+    "listening": "0 of 4 spec-required workbook listening exercises have published audio; all 15 candidate assets are rights-review-gated."
+  }
+}

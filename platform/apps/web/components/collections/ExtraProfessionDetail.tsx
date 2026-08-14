@@ -76,8 +76,8 @@ export function ExtraProfessionDetail({ row }: { row: ExtraProfessionRow }) {
       </section>
 
       <aside className={`panel ${styles.notice}`}>
-        <h2>Media status</h2>
-        <p>No audio or image is published for this row. The interface does not show fake media controls.</p>
+        <h2>Audio and images</h2>
+        <p>This word does not have audio or an image yet.</p>
       </aside>
     </div>
   );

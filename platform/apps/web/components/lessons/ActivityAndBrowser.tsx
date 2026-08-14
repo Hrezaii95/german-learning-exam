@@ -23,6 +23,12 @@ import {
   LessonJourneyVisual,
 } from "@/components/media/InstructionalVisuals";
 import { getEnrichedActivity } from "@/lib/content/enrichment-client";
+import {
+  isPracticeGameId,
+  practiceCanonicalPath,
+  type PracticeGameId,
+} from "@/lib/games";
+import { gameTitle } from "@/components/games/GameSelector";
 import { ActivityInteraction } from "@/components/activities";
 import {
   RapidGreetingsSection,
@@ -46,8 +52,8 @@ export function LessonBrowser({ lessons }: { lessons: readonly LearnerLesson[] }
       <header className="page-header">
         <h1>Lessons</h1>
         <p className="lede">
-          {lessons.length} validated Alpha lessons from the publication bundle.
-          Titles, goals, and counts come from the learner projection.
+          Work through {lessons.length} lessons. Each one shows its goals,
+          activities, and estimated time.
         </p>
       </header>
       <div className="card-grid lessons">
@@ -154,7 +160,7 @@ export function LessonOverview({
               <Link className="btn btn-primary" href={appendNavigationContext(nextActivity.canonicalPath, outbound)}>
                 {activityDisplayStatus(nextActivity.id, progress) === "In progress" ? "Continue activity" : "Start next activity"}
               </Link>
-            ) : <strong>All published activities in this lesson are completed.</strong>}
+            ) : <strong>All activities in this lesson are completed.</strong>}
           </p>
         ) : null}
       </header>
@@ -278,7 +284,7 @@ export function ActivityScreen({
         </p>
         <p className="dense">Activity {position + 1} of {orderedActivities.length}</p>
         <h1>{activity.promptPlainText}</h1>
-        <p className="lede">Learn from validated course content, then practise through the matching interactive tools.</p>
+        <p className="lede">Learn the new material, then practise it with the matching interactive tools.</p>
         <div className="journey-status" aria-live="polite">
           <strong>Status: {status}</strong>
           {progressState === "loading" ? <span>Loading saved progress…</span> : null}
@@ -319,7 +325,7 @@ export function ActivityScreen({
       {showRapidPractice ? <RapidPracticeSection /> : null}
 
       <section className="panel" aria-labelledby="prompt-heading">
-        <h2 id="prompt-heading">Validated prompt</h2>
+        <h2 id="prompt-heading">Your task</h2>
         <p>
           {activity.prompt.instruction.tokens.map((token, index) => {
             if (token.type === "gap") {
@@ -334,7 +340,7 @@ export function ActivityScreen({
         <section className="panel" aria-labelledby="activity-content-heading">
           <div className="workbook-audio__heading">
             <div>
-              <p className="dense">Published learning set</p>
+              <p className="dense">From this lesson</p>
               <h2 id="activity-content-heading">Words and patterns in this activity</h2>
             </div>
             <span className="meta-chip">{enrichment.contentTargets.length} items</span>
@@ -349,7 +355,7 @@ export function ActivityScreen({
               ))}
             </ul>
           ) : (
-            <p className="placeholder-banner">This listening-led activity has no separate learner-published word list yet.</p>
+            <p className="placeholder-banner">This listening activity has no separate word list — focus on the audio.</p>
           )}
         </section>
       ) : null}
@@ -359,16 +365,10 @@ export function ActivityScreen({
       {workbookAudio.length > 0 ? <WorkbookAudioPanel tracks={workbookAudio} /> : null}
 
       <section className="panel" aria-labelledby="meta-heading">
-        <h2 id="meta-heading">Stage, skills, evidence</h2>
+        <h2 id="meta-heading">About this activity</h2>
         <div className="meta-row">
           <span className="meta-chip">Stage: {activity.stageTitleEn}</span>
           <span className="meta-chip">Practice type: {activity.mode}</span>
-          <span className="meta-chip">
-            Status: {activity.evidence.publicationStatus}
-          </span>
-          <span className="meta-chip">
-            Prompt published: {activity.evidence.promptPublished ? "yes" : "no"}
-          </span>
           {activity.skillDimensions.map((skill) => (
             <span key={skill} className="meta-chip">
               {skill}
@@ -379,19 +379,27 @@ export function ActivityScreen({
 
       {enrichment ? (
         <section className="panel" aria-labelledby="activity-tools-heading">
-          <h2 id="activity-tools-heading">Practice readiness</h2>
-          <div className="meta-row">
-            {enrichment.gameEligibility.map((game) => (
-              <span className="meta-chip" key={game.gameId}>{game.gameId}: {game.state}</span>
-            ))}
-          </div>
-          {enrichment.gaps.length > 0 ? (
-            <ul className="gap-list">
-              {enrichment.gaps
-                .filter((gap) => !(infographic && gap.field === "mediaSlots.infographic"))
-                .map((gap) => <li key={`${gap.code}-${gap.field}`}>{gap.learnerMessage}</li>)}
-            </ul>
-          ) : null}
+          <h2 id="activity-tools-heading">More practice</h2>
+          {(() => {
+            const practiceLinks = enrichment.gameEligibility.filter(
+              (game) =>
+                isPracticeGameId(game.gameId) &&
+                (game.state === "ready" || game.state === "partial"),
+            );
+            return practiceLinks.length > 0 ? (
+              <div className="meta-row">
+                {practiceLinks.map((game) => (
+                  <Link
+                    key={game.gameId}
+                    className="btn btn-secondary"
+                    href={practiceCanonicalPath(game.gameId as PracticeGameId)}
+                  >
+                    {gameTitle(game.gameId as PracticeGameId)}
+                  </Link>
+                ))}
+              </div>
+            ) : null;
+          })()}
           <p style={{ marginTop: "1rem" }}><Link className="btn btn-primary" href="/practice">Open practice games</Link></p>
         </section>
       ) : null}

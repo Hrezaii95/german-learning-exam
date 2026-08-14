@@ -255,7 +255,7 @@ export function ActivityInteraction({
     return (
       <section className="panel activity-practice" aria-labelledby="activity-practice-heading">
         <h2 id="activity-practice-heading">Practice unavailable</h2>
-        <p role="status">No source-backed question can be built from the published activity data.</p>
+        <p role="status">This activity has no practice questions yet.</p>
       </section>
     );
   }
@@ -286,7 +286,7 @@ export function ActivityInteraction({
       );
     }
     if (!correct) {
-      setFeedback("Not yet. Check the published words and try again.");
+      setFeedback("Not yet. Check the words from this lesson and try again.");
       return;
     }
     if (questionIndex + 1 >= plan.questions.length) {

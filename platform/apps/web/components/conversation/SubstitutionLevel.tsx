@@ -73,7 +73,7 @@ export function SubstitutionLevel({
     >
       <h2 id="conversation-substitution-heading">Substitution</h2>
       <p className="muted">
-        Choose published fragments to rebuild one exact answer frame.
+        Choose fragments to rebuild one exact answer.
       </p>
       <div className="game-tokens" aria-label="Selected fragments">
         <div className="game-tokens__row" data-role="built">
@@ -99,7 +99,7 @@ export function SubstitutionLevel({
         </div>
       </div>
       <fieldset className="game-tokens">
-        <legend className="hub-field__label">Published fragments</legend>
+        <legend className="hub-field__label">Fragments</legend>
         <div className="game-tokens__row" data-role="pool">
           {fragments.map((token) => (
             <button
@@ -123,7 +123,7 @@ export function SubstitutionLevel({
           setHintsUsed((n) => n + 1);
           setFeedbackKind("revealed");
           setMessage(
-            `One published frame: ${CONVERSATION_ANSWER_REALIZATIONS[0]}`,
+            `One correct answer: ${CONVERSATION_ANSWER_REALIZATIONS[0]}`,
           );
         }}
         revealDisabled={revealed}
