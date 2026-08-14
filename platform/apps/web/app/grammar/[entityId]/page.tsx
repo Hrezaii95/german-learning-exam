@@ -14,7 +14,7 @@ type PageProps = {
   params: Promise<{ entityId: string }>;
 };
 
-export const dynamicParams = false; /* pages-export temporary */
+export const dynamicParams = true;
 
 export function generateStaticParams() {
   return loadLearnerDetailProjection().details
