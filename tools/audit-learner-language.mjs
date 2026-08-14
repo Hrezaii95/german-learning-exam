@@ -34,6 +34,11 @@ const RULES = [
   { code: "RAW_GAME_STATE", pattern: /\bgameId\b|\bgame:[a-z-]+\s*:/i },
   { code: "ROADMAP_LANGUAGE", pattern: /\b(next phase|this slice|not available in this slice|coming in a later phase)\b/i },
   { code: "SEARCH_DEBUG_CHIP", pattern: /\bPriority \d+\b|\bMatched \w+ ·/i },
+  // Zero-padding is an addressing detail of ids/routes/filter values, never
+  // learner wording: "Lesson 01" reads as a different lesson from "Lesson 1".
+  // Rendered HTML is the only place this is checkable end to end, because the
+  // label can also arrive from content data rather than a component literal.
+  { code: "PADDED_LESSON_LABEL", pattern: /\bLesson 0\d/ },
 ];
 
 async function walkHtml(directory) {

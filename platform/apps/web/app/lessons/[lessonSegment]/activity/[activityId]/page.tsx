@@ -25,7 +25,7 @@ type PageProps = {
  * Pages static export flips this to `false` temporarily via `build-pages.mjs`
  * (static export cannot use dynamicParams); the wrapper restores on exit.
  */
-export const dynamicParams = false; /* pages-export temporary */
+export const dynamicParams = true;
 
 export function generateStaticParams() {
   const projection = loadLearnerProjection();

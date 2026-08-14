@@ -1,0 +1,4 @@
+#!/bin/sh
+# Blocks commits that capture build:pages intermediate state. See
+# tools/assert-no-build-intermediate.mjs for why this exists.
+node tools/assert-no-build-intermediate.mjs || exit 1
