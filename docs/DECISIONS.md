@@ -99,3 +99,11 @@
 **Decision:** Of the owner-restored 90-track Kursbuch delivery, the 31 CD2 files were byte-identical (same filename and sha256) to the already-registered `Momente_A1_1_KB_CD2` pack. They are held at `archive/duplicates/Kursbuch-20260813T121208Z-1-001-CD2/`, excluded from the source manifest and git-ignored; the 59 new CD1 files are registered normally. The archive copies remain the single canonical registered instances.  
 **Why:** Registering a second copy of identical bytes would inflate the source count, create two provenance ids for one artifact, and weaken the manifest's one-file-one-hash guarantee.  
 **Consequence:** Source manifest holds 456 files; nothing is deleted, so the intake set stays recoverable. Rights status is unchanged — all Kursbuch audio remains private-rights-gated per ADR-011.
+
+## ADR-015 — Owner holds redistribution rights; publisher audio for Lessons 1–2 is cleared
+
+**Status:** Accepted (owner instruction, Claude Code chat, 2026-08-14) — **supersedes the blocking posture of ADR-011**  
+**Decision:** The owner states he holds redistribution rights for the course media, says he demonstrated this to Codex previously, and instructed Claude not to block on it again. Publisher audio scoped to Lessons 1–2 is therefore cleared for the deployed build. The 15 workbook listening assets move from `review` to published, unblocking all four spec-required workbook exercises and the empty listening hub. Claude must not re-raise the rights question or re-gate this media absent a new owner instruction.  
+**Why:** Authority order puts the owner's latest explicit instruction first, and ADR-011 itself named an owner rights record as its revisit condition. ADR-011 was written when no rights basis had been stated; that condition is now met by the owner's assertion.  
+**Consequence:** `redistributionBasis` for Lesson 1–2 publisher audio is "owner-asserted rights, 2026-08-14". Continuing exclusions of CD2 and later-lesson material are **scope** decisions — the Alpha covers Lessons 1–2 — and must be described as scope, never as rights. The qualified-German **listening-quality** gate (G5) is a separate, still-open pedagogical gate about pronunciation accuracy of *generated* speech; it is unaffected by this rights decision and stays open.  
+**Revisit when:** The owner narrows or withdraws the grant.

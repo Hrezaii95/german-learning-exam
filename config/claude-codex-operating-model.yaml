@@ -16,10 +16,13 @@ deployment_policy:
     are recorded with the evidence that motivated them; a check is never weakened
     merely to turn a batch green.
   rights_note: >-
-    "For the owner only" describes the intended audience, not access control:
-    github.io serves the site publicly to anyone with the URL. ADR-011 rights
-    gating on publisher audio and review-only content therefore still applies
-    unchanged.
+    SUPERSEDED 2026-08-14 by ADR-015. The owner states he holds redistribution
+    rights for the course media and demonstrated this to Codex previously; he
+    instructed Claude not to block on it again. Publisher audio for Lessons 1-2
+    is cleared for the deployed build. Do not re-raise the rights question or
+    re-gate this media absent a new owner instruction. Remaining exclusions of
+    CD2 / later-lesson material are SCOPE decisions (Alpha covers Lessons 1-2),
+    not rights decisions, and must be described as such.
 
 project:
   id: german-learning-os-lessons-01-02
