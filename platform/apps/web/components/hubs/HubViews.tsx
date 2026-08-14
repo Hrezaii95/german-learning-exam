@@ -24,6 +24,7 @@ import {
   detailCanonicalPath,
   detailHubForId,
 } from "@/lib/content/detail-types";
+import { lessonLabel } from "@/lib/content/lesson-label";
 import { withPagesBasePath } from "@/lib/content/pages-base-path";
 import { withPagesBaseAssetPath } from "@/lib/content/pages-base-path";
 import {
@@ -43,11 +44,7 @@ import {
 
 /** Learner-facing lesson labels. Empty membership shows nothing at all. */
 function lessonLabels(lessonIds: readonly string[]): readonly string[] {
-  return lessonIds.map((id) => {
-    const segment = id.includes(":") ? id.slice(id.indexOf(":") + 1) : id;
-    const number = Number.parseInt(segment, 10);
-    return Number.isFinite(number) ? `Lesson ${number}` : `Lesson ${segment}`;
-  });
+  return lessonIds.map((id) => lessonLabel(id));
 }
 
 /* ------------------------------------------------------------------------ *

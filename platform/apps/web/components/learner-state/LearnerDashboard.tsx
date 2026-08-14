@@ -13,6 +13,7 @@ import {
   illustrationForLesson,
   type LearnerIllustration,
 } from "@/lib/content/illustrations";
+import { lessonLabel } from "@/lib/content/lesson-label";
 import { withPagesBaseAssetPath } from "@/lib/content/pages-base-path";
 import { useOptionalLearnerState } from "./LearnerStateProvider";
 import { buildDailyReviewMission } from "@/lib/learner-state";
@@ -237,7 +238,7 @@ function CourseCard({
     <article className="panel course-card">
       <StudioMedia illustration={illustration} titleDe={lesson.titleDe} />
       <div className="course-card__body">
-        <p className="studio-card__eyebrow">Lesson {lesson.routeSegment}</p>
+        <p className="studio-card__eyebrow">{lessonLabel(lesson.routeSegment)}</p>
         <h3 className="course-card__title">
           <span className="german" lang="de">
             {lesson.titleDe}
@@ -256,7 +257,7 @@ function CourseCard({
             <progress
               value={completed}
               max={ordered.length || 1}
-              aria-label={`Lesson ${lesson.routeSegment} progress`}
+              aria-label={`${lessonLabel(lesson.routeSegment)} progress`}
             />
           </div>
         ) : (
@@ -355,9 +356,9 @@ export function LearnerDashboard({
     (resumeActivity ? illustrationForActivity(resumeActivity.id) : null) ??
     illustrationForLesson(continueLessonId);
   const continueChips = resumeActivity
-    ? [`Lesson ${resumeActivity.lessonRouteSegment}`, resumeActivity.stageTitleEn]
+    ? [lessonLabel(resumeActivity.lessonRouteSegment), resumeActivity.stageTitleEn]
     : continueLesson
-      ? [`Lesson ${continueLesson.routeSegment}`, "First activity"]
+      ? [lessonLabel(continueLesson.routeSegment), "First activity"]
       : [];
 
   let mission = null;

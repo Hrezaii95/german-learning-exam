@@ -137,9 +137,8 @@ describe("P2A studio dashboard behavior", () => {
     renderDashboard();
 
     const lessonOne = projection.lessons[0]!;
-    const bar = await screen.findByLabelText(
-      `Lesson ${lessonOne.routeSegment} progress`,
-    );
+    // Learner-visible wording is the unpadded label, not the route segment.
+    const bar = await screen.findByLabelText("Lesson 1 progress");
     expect(bar.getAttribute("max")).toBe(String(lessonOne.activityCount));
     expect(bar.getAttribute("value")).toBe("0");
     expect(

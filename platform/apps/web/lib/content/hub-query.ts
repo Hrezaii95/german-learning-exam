@@ -1,3 +1,4 @@
+import { lessonLabel } from "./lesson-label";
 import { queryMatchKeys } from "./match-keys";
 import type { LearnerHubRecord } from "./hub-types";
 
@@ -166,7 +167,7 @@ export function hubFilterSummary(query: HubQueryState): string[] {
     parts.push(`Search: ${query.q.trim()}`);
   }
   if (query.lesson !== "all") {
-    parts.push(`Lesson ${query.lesson}`);
+    parts.push(lessonLabel(query.lesson));
   }
   if (query.category != null) {
     parts.push(`Category: ${query.category}`);
@@ -176,5 +177,5 @@ export function hubFilterSummary(query: HubQueryState): string[] {
 
 export function lessonFilterLabel(lesson: HubLessonFilter): string {
   if (lesson === "all") return "All lessons";
-  return `Lesson ${lesson}`;
+  return lessonLabel(lesson);
 }

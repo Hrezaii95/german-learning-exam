@@ -30,6 +30,7 @@ import {
 } from "@/lib/content/navigation-context";
 import { DetailLearningControls } from "@/components/learner-state/DetailLearningControls";
 import { detailCanonicalPath } from "@/lib/content/detail-types";
+import { lessonLabel } from "@/lib/content/lesson-label";
 import { infographicForDetail } from "@/lib/content/infographics";
 import { InfographicPanel } from "@/components/media/InfographicPanel";
 import { RichLessonVisual } from "@/components/media/RichLessonVisual";
@@ -507,7 +508,7 @@ function GrammarDetail({ detail }: { detail: LearnerGrammarDetail }) {
         <div className="detail-actions">
           {detail.lessonIds.map((lessonId) => {
             const segment = lessonId.includes(":") ? lessonId.slice(lessonId.indexOf(":") + 1) : lessonId;
-            return <Link key={lessonId} className="btn btn-secondary" href={`/lessons/${segment}`}>Open Lesson {segment}</Link>;
+            return <Link key={lessonId} className="btn btn-secondary" href={`/lessons/${segment}`}>Open {lessonLabel(lessonId)}</Link>;
           })}
         </div>
       </section>

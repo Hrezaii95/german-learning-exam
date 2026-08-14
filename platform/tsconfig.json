@@ -64,6 +64,7 @@
     "tests/web/listening-concepts-hubs.test.ts",
     "tests/web/extra-professions-ui.test.ts",
     "tests/web/p5-instructional-visual-system.test.ts",
-    "tests/web/pronunciation-control-behavior.test.ts"
+    "tests/web/pronunciation-control-behavior.test.ts",
+    "tests/web/lesson-label-ui.test.ts"
   ]
 }

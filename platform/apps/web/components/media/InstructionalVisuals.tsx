@@ -5,6 +5,7 @@ import type {
   LearnerVocabularyDetail,
 } from "@/lib/content/detail-types";
 import type { LearnerLesson } from "@/lib/content/types";
+import { lessonLabel } from "@/lib/content/lesson-label";
 import { getRapidLearnerContent } from "@/lib/content/rapid-content";
 import { GenderBadge } from "@/components/details/GenderBadge";
 
@@ -96,12 +97,12 @@ export function LessonJourneyVisual({ lesson }: { lesson: LearnerLesson }) {
   const journey = LESSON_JOURNEYS[lesson.routeSegment === "02" ? "02" : "01"];
   return (
     <VisualFrame
-      eyebrow={`Lesson ${lesson.routeSegment} · visual route`}
+      eyebrow={`${lessonLabel(lesson.routeSegment)} · visual route`}
       title="See the whole lesson before you start"
       summary="Move left to right. Each stop prepares language that returns in later practice and the checkpoint."
       kind={`lesson-${lesson.routeSegment}-journey`}
     >
-      <ol className="visual-journey" aria-label={`Lesson ${lesson.routeSegment} learning sequence`}>
+      <ol className="visual-journey" aria-label={`${lessonLabel(lesson.routeSegment)} learning sequence`}>
         {journey.map((step, index) => (
           <li key={step.de} className="visual-journey__step">
             <span className="visual-journey__index" aria-hidden="true">{index + 1}</span>

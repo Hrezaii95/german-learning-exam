@@ -8,6 +8,7 @@ import {
   resolveOutboundNavigationContext,
   type NavigationContext,
 } from "@/lib/content/navigation-context";
+import { lessonLabel } from "@/lib/content/lesson-label";
 import { activityCanonicalPath } from "@/lib/content/path-utils";
 import { workbookAudioForActivity } from "@/lib/audio/workbook-audio";
 import { WorkbookAudioPanel } from "@/components/audio/WorkbookAudioPanel";
@@ -59,7 +60,7 @@ export function LessonBrowser({ lessons }: { lessons: readonly LearnerLesson[] }
       <div className="card-grid lessons">
         {lessons.map((lesson) => (
           <article key={lesson.id} className="panel">
-            <p className="dense">Lesson {lesson.routeSegment}</p>
+            <p className="dense">{lessonLabel(lesson.routeSegment)}</p>
             <h2>
               <span className="german" lang="de">
                 {lesson.titleDe}
@@ -131,7 +132,7 @@ export function LessonOverview({
     <div className="stack">
       <header className="page-header">
         {backHref ? <BackLink href={backHref} /> : null}
-        <p className="dense">Lesson {lesson.routeSegment}</p>
+        <p className="dense">{lessonLabel(lesson.routeSegment)}</p>
         <h1>
           <span className="german" lang="de">
             {lesson.titleDe}
@@ -144,14 +145,14 @@ export function LessonOverview({
         </div>
         <div className="lesson-progress" aria-live="polite">
           <strong>{completedCount} of {orderedActivities.length} completed · {percent}%</strong>
-          <progress value={completedCount} max={orderedActivities.length || 1} aria-label={`Lesson ${lesson.routeSegment} progress`} />
+          <progress value={completedCount} max={orderedActivities.length || 1} aria-label={`${lessonLabel(lesson.routeSegment)} progress`} />
           {progressState === "loading" ? <span className="dense">Loading saved progress…</span> : null}
           {progressState === "error" ? <span role="alert">Saved progress is unavailable. No stored work was changed.</span> : null}
         </div>
         {recommendLessonOne ? (
           <aside className="recommendation" aria-label="Lesson recommendation">
-            We recommend completing Lesson 01 first. Lesson 02 remains available.
-            {" "}<Link href="/lessons/01">Open Lesson 01</Link>
+            We recommend completing Lesson 1 first. Lesson 2 remains available.
+            {" "}<Link href="/lessons/01">Open Lesson 1</Link>
           </aside>
         ) : null}
         {progressState === "ready" ? (
@@ -278,7 +279,7 @@ export function ActivityScreen({
       <header className="page-header">
         <BackLink href={backHref} />
         <p className="dense">
-          <Link href={lessonHref}>Lesson {lesson.routeSegment}</Link>
+          <Link href={lessonHref}>{lessonLabel(lesson.routeSegment)}</Link>
           {" · "}
           {activity.stageTitleEn}
         </p>
@@ -292,7 +293,7 @@ export function ActivityScreen({
         </div>
         {recommendLessonOne ? (
           <aside className="recommendation" aria-label="Lesson recommendation">
-            We recommend completing Lesson 01 first. Lesson 02 remains available.
+            We recommend completing Lesson 1 first. Lesson 2 remains available.
           </aside>
         ) : null}
         <div className="journey-actions">

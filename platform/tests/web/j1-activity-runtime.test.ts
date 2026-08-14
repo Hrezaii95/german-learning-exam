@@ -98,7 +98,8 @@ describe("J1 activity runtime", () => {
       recommendLessonOne: true,
     }));
     expect(overview).toContain("1 of 11 completed");
-    expect(overview).toContain("Lesson 02 progress");
+    expect(overview).toContain("Lesson 2 progress");
+    expect(overview).not.toContain("Lesson 02");
     expect(overview).toContain("remains available");
   });
 });

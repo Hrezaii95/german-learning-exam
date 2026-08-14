@@ -19,7 +19,7 @@ type PageProps = {
   params: Promise<{ gameId: string }>;
 };
 
-export const dynamicParams = true;
+export const dynamicParams = false; /* pages-export temporary */
 
 export function generateStaticParams() {
   return PRACTICE_GAME_IDS.map((gameId) => ({ gameId }));

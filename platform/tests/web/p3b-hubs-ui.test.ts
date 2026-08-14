@@ -181,7 +181,8 @@ describe("P3B hub UI shell contracts", () => {
       expect(filteredEmpty).toContain("No matches");
       expect(filteredEmpty).toContain("Active filters:");
       expect(filteredEmpty).toContain("Search: definitely-no-such-item");
-      expect(filteredEmpty).toContain("Lesson 01");
+      expect(filteredEmpty).toContain("Lesson 1");
+      expect(filteredEmpty).not.toContain("Lesson 01");
       expect(filteredEmpty).toContain("after filters");
       expect(filteredEmpty).toContain('name="q"');
       expect(filteredEmpty).toContain('name="lesson"');

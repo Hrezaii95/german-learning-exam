@@ -1,3 +1,4 @@
+import { lessonLabel } from "./lesson-label";
 import {
   caseFoldNfc,
   germanMatchKeys,
@@ -376,10 +377,5 @@ export function sourcePriorityLabel(
 
 export function lessonMembershipLabel(lessonIds: readonly string[]): string {
   if (lessonIds.length === 0) return "No lesson link";
-  return lessonIds
-    .map((id) => {
-      const segment = id.includes(":") ? id.slice(id.indexOf(":") + 1) : id;
-      return `Lesson ${segment}`;
-    })
-    .join(", ");
+  return lessonIds.map((id) => lessonLabel(id)).join(", ");
 }

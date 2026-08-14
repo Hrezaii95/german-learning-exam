@@ -19,7 +19,7 @@ type PageProps = {
   params: Promise<{ entityId: string }>;
 };
 
-export const dynamicParams = true;
+export const dynamicParams = false; /* pages-export temporary */
 
 export function generateStaticParams() {
   return [{ entityId: encodeEntityRouteSegment(CONVERSATION_ENTITY_ID) }];
