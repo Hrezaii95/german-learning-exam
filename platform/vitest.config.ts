@@ -19,6 +19,13 @@ export default defineConfig({
     ],
     root: platformRoot,
     globals: false,
+    // The behavioural web tests drive real user-event interaction against jsdom.
+    // Individually they finish in ~1.5s, but under full-suite parallel load they
+    // exceeded the 5s default and reported as failures — a flaky gate is worse
+    // than a slow one, because it teaches everyone to re-run instead of read.
+    // This raises only the wall-clock allowance; no assertion is relaxed.
+    testTimeout: 20_000,
+    hookTimeout: 20_000,
   },
   esbuild: {
     jsx: "automatic",
