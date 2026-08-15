@@ -25,6 +25,6 @@ P5-01,P5,Approved generated audio or explicit gaps,media/manifests/alpha-tts-man
 P5-02,P5,Responsive original infographic families,media/generated/infographics,G5,6,P1-02|P1-03|P1-04,completed
 P5-03,P5,Audio and visual human QA evidence,research/media-qa,G5,2,P5-01|P5-02,pending
 P6-01,P6,Automated engineering and content gates,research/release-evidence,G6,1,P2-01|P4-04|P5-03,pending
-P6-02,P6,Responsive accessibility and production E2E,research/release-evidence,G6,4,P3-01|P3-02|P4-03,pending
+P6-02,P6,Responsive accessibility and production E2E,research/release-evidence,G6,4,P3-01|P3-02|P4-03,in_review
 P6-03,P6,Requirement and register final diff,research/release-evidence/completion-audit.json,G6,0,P6-01|P6-02,pending
 P6-04,P6,Owner acceptance,plans/PLAN-BATON-full-alpha.md,G-OWNER,1,P6-03,pending
