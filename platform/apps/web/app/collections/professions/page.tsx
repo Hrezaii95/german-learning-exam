@@ -4,7 +4,8 @@ import { loadExtraProfessionsProjection } from "@/lib/content/extra-professions"
 import { ProfessionCollectionClient } from "./ProfessionCollectionClient";
 
 export const metadata: Metadata = {
-  title: "Optional professions | German Learning OS",
+  // The root layout template appends the product name; it is not repeated here.
+  title: "Optional professions",
   description: "The 48 source-backed optional professions rows for Lesson 2.",
 };
 

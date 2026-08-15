@@ -6,6 +6,10 @@ import type {
   MasteryDimension,
   ObjectiveTaskFamily,
 } from "@german-learning/learning";
+import {
+  StatusMessage,
+  useAnnouncement,
+} from "@/components/a11y/StatusMessage";
 import { useOptionalLearnerState } from "@/components/learner-state/LearnerStateProvider";
 import { PronunciationControl } from "@/components/audio/PronunciationControl";
 import type { EnrichedActivity } from "@/lib/content/enrichment-types";
@@ -94,6 +98,9 @@ function QuestionControl({
             <button
               className="activity-token"
               type="button"
+              // The token IS the German being taught: without `lang` a screen
+              // reader speaks "ihr" with English phonics (WCAG 3.1.2).
+              lang="de"
               key={`${token}-${index}`}
               onClick={() => {
                 const next = [...builtTokens, token];
@@ -141,6 +148,8 @@ function QuestionControl({
         <input
           className="activity-text-input"
           type="text"
+          // What the learner types here is German, as in QaPractice.
+          lang="de"
           value={value}
           maxLength={160}
           autoComplete="off"
@@ -189,8 +198,10 @@ export function ActivityInteraction({
   const solved = useRef(false);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [answer, setAnswer] = useState("");
-  const [feedback, setFeedback] = useState<string | null>(null);
-  const [saveMessage, setSaveMessage] = useState<string | null>(null);
+  // Both regions are announcements, not strings: "Not yet…" is the same words
+  // on every wrong answer, so only a bumped counter can make the repeat audible.
+  const [feedback, setFeedback] = useAnnouncement();
+  const [saveMessage, setSaveMessage] = useAnnouncement();
   const [listeningNotes, setListeningNotes] = useState("");
   const [listeningConfirmed, setListeningConfirmed] = useState(false);
 
@@ -245,7 +256,7 @@ export function ActivityInteraction({
           </label>
           <button className="btn btn-primary" type="submit">Finish listening check</button>
         </form>
-        {feedback ? <p className="activity-feedback" role="status">{feedback}</p> : null}
+        <StatusMessage announcement={feedback} className="activity-feedback" />
       </section>
     );
   }
@@ -332,8 +343,8 @@ export function ActivityInteraction({
         />
         <button className="btn btn-primary" type="submit">Check answer</button>
       </form>
-      {feedback ? <p className="activity-feedback" role="status" aria-live="polite">{feedback}</p> : null}
-      {saveMessage ? <p className="dense" role="status">{saveMessage}</p> : null}
+      <StatusMessage announcement={feedback} className="activity-feedback" />
+      <StatusMessage announcement={saveMessage} className="dense" />
     </section>
   );
 }

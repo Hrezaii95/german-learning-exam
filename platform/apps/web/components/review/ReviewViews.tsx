@@ -13,6 +13,10 @@ import {
 } from "@/lib/learner-state";
 import { createPracticeUuid } from "@/lib/games";
 import { PracticeGameBody } from "@/components/games/GameRenderer";
+import {
+  StatusMessage,
+  useAnnouncement,
+} from "@/components/a11y/StatusMessage";
 import { IndependentConstructionLevel } from "@/components/conversation/IndependentConstructionLevel";
 
 const REVIEW_CONFIG_KEY = "german-learning-os:review-config:v1";
@@ -116,7 +120,8 @@ export function ReviewSession() {
   const { snapshot, controller } = useLearnerState();
   const [index, setIndex] = useState(0);
   const [saving, setSaving] = useState(false);
-  const [message, setMessage] = useState<string | null>(null);
+  const [savingAnnouncement, announceSaving] = useAnnouncement();
+  const [message, setMessage] = useAnnouncement();
   const handled = useRef(new Set<string>());
   const missionRows = useRef<readonly SelectedMissionCard[] | null>(null);
   const config = useRef<ReviewConfig | null>(null);
@@ -159,6 +164,7 @@ export function ReviewSession() {
     if (saving || handled.current.has(event.eventId)) return;
     handled.current.add(event.eventId);
     setSaving(true);
+    announceSaving("Saving attempt…");
     try {
       const review = { cardId: row!.candidate.cardId, templateId: template!.id };
       const normalized = template!.gameId
@@ -172,6 +178,7 @@ export function ReviewSession() {
       setMessage("This attempt was not saved. Try again.");
     } finally {
       setSaving(false);
+      announceSaving(null);
     }
   }
 
@@ -187,8 +194,8 @@ export function ReviewSession() {
       ) : (
         <IndependentConstructionLevel sessionId={sessionId} onEvent={(event) => void persist(event)} onComplete={() => undefined} />
       )}
-      {saving ? <p role="status">Saving attempt…</p> : null}
-      {message ? <p className="detail-feedback" role="status">{message}</p> : null}
+      <StatusMessage announcement={savingAnnouncement} />
+      <StatusMessage announcement={message} className="detail-feedback" />
       <Link className="btn btn-secondary" href="/review">Exit mission</Link>
     </div>
   );

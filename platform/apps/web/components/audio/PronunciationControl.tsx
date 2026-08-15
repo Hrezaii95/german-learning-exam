@@ -84,7 +84,10 @@ export function PronunciationControl({
           disabled
           aria-disabled="true"
           tabIndex={-1}
-          aria-label={`${label} unavailable`}
+          // Visible label first, then which word it would have spoken — the
+          // old "der Elektriker unavailable" contained none of the visible
+          // wording (WCAG 2.5.3 Label in Name).
+          aria-label={`Pronunciation unavailable — ${label}`}
         >
           Pronunciation unavailable
         </button>
@@ -163,7 +166,10 @@ export function PronunciationControl({
           type="button"
           className="btn btn-primary audio-control__btn"
           onClick={togglePlayback}
-          aria-label={`${isPlaying ? "Pause" : "Play"} ${label} pronunciation`}
+          // The visible string is "Play pronunciation"; the old name split it
+          // around the lemma ("Play der Friseur pronunciation") so it was not
+          // contained contiguously. Visible label first, lemma after.
+          aria-label={`${isPlaying ? "Pause" : "Play pronunciation"} — ${label}`}
         >
           {isPlaying ? "Pause" : "Play pronunciation"}
         </button>

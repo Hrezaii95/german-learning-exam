@@ -177,7 +177,8 @@ describe("P3C search UI + shell contracts", () => {
         createElement(HubDirectoryView, { projection: hubs }),
       ),
     );
-    expect(directory).toContain('aria-label="Open global search"');
+    // The visible words compute the name; an aria-label would replace them.
+    expect(directory).not.toContain('aria-label="Open global search"');
     expect(directory).toContain('href="/search"');
     expect(directory).toContain("Search all content");
     expect(directory).toContain('href="/hubs"');

@@ -1,12 +1,20 @@
 import type { Metadata } from "next";
 import { LearnerStateProvider } from "@/components/learner-state/LearnerStateProvider";
 import { withPagesBaseAssetPath } from "@/lib/content/pages-base-path";
+import { SITE_DESCRIPTION, SITE_NAME } from "@/lib/content/page-metadata";
 import "./globals.css";
 
+/**
+ * `default` is the title for any route that does not set one; `template`
+ * appends the product name to every route that does. Route metadata therefore
+ * carries only the part that identifies the page — see `page-metadata.ts`.
+ */
 export const metadata: Metadata = {
-  title: "German Learning OS",
-  description:
-    "Lessons 1–2 Alpha web shell with validated publication routes and learner-safe content projection.",
+  title: {
+    default: SITE_NAME,
+    template: `%s | ${SITE_NAME}`,
+  },
+  description: SITE_DESCRIPTION,
 };
 
 /**

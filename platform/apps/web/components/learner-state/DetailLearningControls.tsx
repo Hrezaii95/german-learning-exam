@@ -2,6 +2,10 @@
 
 import { useEffect, useState } from "react";
 import {
+  StatusMessage,
+  useAnnouncement,
+} from "@/components/a11y/StatusMessage";
+import {
   LEARNER_BUILT_IN_TAGS,
   PERSISTENCE_LIMITS,
   type LearnerBuiltInTag,
@@ -17,7 +21,7 @@ export function DetailLearningControls({ contentId }: { contentId: string }) {
   const savedNote = state?.notes.find((row) => row.contentId === contentId)?.text ?? "";
   const [note, setNote] = useState(savedNote);
   const [busy, setBusy] = useState(false);
-  const [message, setMessage] = useState<string | null>(null);
+  const [message, setMessage] = useAnnouncement();
   const eligibleCount = eligibleReviewTemplateCount(contentId);
   const addedCount = state?.reviewCards.filter((row) => row.conceptId === contentId).length ?? 0;
 
@@ -127,7 +131,7 @@ export function DetailLearningControls({ contentId }: { contentId: string }) {
         </button>
         <span className="dense">{note.length}/{PERSISTENCE_LIMITS.maxNoteTextLength}</span>
       </div>
-      {message ? <p className="detail-feedback" role="status">{message}</p> : null}
+      <StatusMessage announcement={message} className="detail-feedback" />
     </section>
   );
 }

@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ShellLayout } from "@/components/shell/ShellLayout";
 import { ActivityScreen } from "@/components/lessons/ActivityAndBrowser";
@@ -8,6 +9,7 @@ import {
   tryDecodeActivityRouteSegment,
 } from "@/lib/content/path-utils";
 import { loadLearnerProjection } from "@/lib/content/access";
+import { activityPageMetadata } from "@/lib/content/page-metadata";
 import { resolveLearnerRoute } from "@/lib/content/routes";
 
 type PageProps = {
@@ -34,6 +36,18 @@ export function generateStaticParams() {
     // The canonical slug is filesystem-safe and decodes back to the typed ID.
     activityId: encodeActivityRouteSegment(activity.id),
   }));
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { activityId: activitySegment } = await params;
+  const activityId = tryDecodeActivityRouteSegment(activitySegment);
+  if (activityId == null) return {};
+  const projection = loadLearnerProjection();
+  const activity = projection.activities.find((item) => item.id === activityId);
+  const lesson = activity
+    ? projection.lessons.find((item) => item.id === activity.lessonId)
+    : undefined;
+  return activity && lesson ? activityPageMetadata(lesson, activity) : {};
 }
 
 export default async function ActivityPage({ params }: PageProps) {

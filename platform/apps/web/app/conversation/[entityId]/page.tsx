@@ -1,8 +1,10 @@
 import { Suspense } from "react";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ShellLayout } from "@/components/shell/ShellLayout";
 import { ConversationWithNav } from "@/components/conversation/ConversationNavViews";
 import { ConversationLadder } from "@/components/conversation/ConversationLadder";
+import { pageMetadata } from "@/lib/content/page-metadata";
 import {
   CONVERSATION_ENTITY_ID,
   conversationCanonicalPath,
@@ -23,6 +25,16 @@ export const dynamicParams = true;
 
 export function generateStaticParams() {
   return [{ entityId: encodeEntityRouteSegment(CONVERSATION_ENTITY_ID) }];
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { entityId: segment } = await params;
+  if (tryDecodeConversationEntitySegment(segment) == null) return {};
+  // "Five-level ladder" is the visible h1 on this page.
+  return pageMetadata(
+    "Five-level ladder · Conversation practice",
+    "Work up from the model dialogue to a spoken role-play, one level at a time.",
+  );
 }
 
 export default async function ConversationEntityPage({ params }: PageProps) {

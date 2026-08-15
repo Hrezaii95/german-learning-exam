@@ -36,6 +36,18 @@ describe("lesson activity interaction behavior", () => {
     return found;
   }
 
+  /**
+   * The activity screen now carries two `role="status"` live regions — the
+   * answer feedback and the local-save notice — and both are rendered before
+   * their first message so assistive technology is already watching them
+   * (WCAG 4.1.3). Target the answer channel by its own class.
+   */
+  function answerFeedback(): HTMLElement {
+    const el = document.querySelector<HTMLElement>('p.activity-feedback[role="status"]');
+    if (!el) throw new Error("expected the answer feedback region to be speaking");
+    return el;
+  }
+
   it("requires a real listening note and media confirmation before completing an ungraded workbook activity", async () => {
     const user = userEvent.setup();
     const onAttempt = vi.fn();
@@ -49,14 +61,14 @@ describe("lesson activity interaction behavior", () => {
     }));
 
     await user.click(screen.getByRole("button", { name: /finish listening check/i }));
-    expect(screen.getByRole("status").textContent).toMatch(/add a short listening note/i);
+    expect(answerFeedback().textContent).toMatch(/add a short listening note/i);
     expect(onAttempt).toHaveBeenCalledTimes(1);
     expect(onSolved).not.toHaveBeenCalled();
 
     await user.type(screen.getByLabelText(/what did you hear/i), "A, B, C");
     await user.click(screen.getByRole("checkbox", { name: /used the linked lesson audio/i }));
     await user.click(screen.getByRole("button", { name: /finish listening check/i }));
-    expect(screen.getByRole("status").textContent).toMatch(/listening pass complete/i);
+    expect(answerFeedback().textContent).toMatch(/listening pass complete/i);
     expect(onSolved).toHaveBeenCalledTimes(1);
   });
 
@@ -69,11 +81,11 @@ describe("lesson activity interaction behavior", () => {
     }));
 
     await user.click(screen.getByRole("button", { name: /check answer/i }));
-    expect(screen.getByRole("status").textContent).toMatch(/choose or enter/i);
+    expect(answerFeedback().textContent).toMatch(/choose or enter/i);
 
     await user.click(screen.getByRole("radio", { name: /goodbye/i }));
     await user.click(screen.getByRole("button", { name: /check answer/i }));
-    expect(screen.getByRole("status").textContent).toMatch(/correct/i);
+    expect(answerFeedback().textContent).toMatch(/correct/i);
     expect(screen.getByText("2 / 5")).toBeTruthy();
   });
 
@@ -89,7 +101,7 @@ describe("lesson activity interaction behavior", () => {
       await user.click(screen.getByRole("button", { name: token }));
     }
     await user.click(screen.getByRole("button", { name: /check answer/i }));
-    expect(screen.getByRole("status").textContent).toMatch(/correct/i);
+    expect(answerFeedback().textContent).toMatch(/correct/i);
     expect(screen.getByText("2 / 3")).toBeTruthy();
   });
 

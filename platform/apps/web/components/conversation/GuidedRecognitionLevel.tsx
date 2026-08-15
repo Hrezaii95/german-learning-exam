@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { useFeedbackChannel } from "@/components/a11y/StatusMessage";
 import {
   CONVERSATION_ANSWER_REALIZATIONS,
   CONVERSATION_QUESTION,
@@ -28,9 +29,8 @@ export function GuidedRecognitionLevel({
   const [selected, setSelected] = useState<string | null>(null);
   const [revealed, setRevealed] = useState(false);
   const [hintsUsed, setHintsUsed] = useState(0);
-  const [feedbackKind, setFeedbackKind] =
-    useState<ConversationFeedbackKind | null>(null);
-  const [message, setMessage] = useState<string | null>(null);
+  const { kind: feedbackKind, message, seq, setFeedbackKind, setMessage } =
+    useFeedbackChannel<ConversationFeedbackKind>();
 
   function submit() {
     if (!selected) {
@@ -123,7 +123,7 @@ export function GuidedRecognitionLevel({
           Continue
         </button>
       ) : null}
-      <ConversationFeedback kind={feedbackKind} message={message} />
+      <ConversationFeedback kind={feedbackKind} message={message} seq={seq} />
     </section>
   );
 }

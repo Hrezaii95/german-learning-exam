@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useRef, useState } from "react";
+import { useFeedbackChannel } from "@/components/a11y/StatusMessage";
 import {
   CONVERSATION_ANSWER_REALIZATIONS,
   createConversationTimestamp,
@@ -30,9 +31,8 @@ export function SubstitutionLevel({
   const [built, setBuilt] = useState<string[]>([]);
   const [revealed, setRevealed] = useState(false);
   const [hintsUsed, setHintsUsed] = useState(0);
-  const [feedbackKind, setFeedbackKind] =
-    useState<ConversationFeedbackKind | null>(null);
-  const [message, setMessage] = useState<string | null>(null);
+  const { kind: feedbackKind, message, seq, setFeedbackKind, setMessage } =
+    useFeedbackChannel<ConversationFeedbackKind>();
 
   function submit() {
     const assembled = joinConversationTokens(built);
@@ -138,7 +138,7 @@ export function SubstitutionLevel({
           Continue
         </button>
       ) : null}
-      <ConversationFeedback kind={feedbackKind} message={message} />
+      <ConversationFeedback kind={feedbackKind} message={message} seq={seq} />
     </section>
   );
 }

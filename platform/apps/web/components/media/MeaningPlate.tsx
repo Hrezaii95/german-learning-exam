@@ -104,7 +104,11 @@ export function LemmaAudioButton({
         className="meaning-plate__audio-btn"
         data-audio-state={isPlaying ? "playing" : "idle"}
         onClick={toggle}
-        aria-label={`${isPlaying ? "Pause" : "Play"} ${label} pronunciation`}
+        // The accessible name must START with the words the learner can see
+        // ("Listen" / "Pause"), or speech control — Dragon, Voice Control,
+        // Voice Access — cannot match "click Listen" (WCAG 2.5.3 Label in
+        // Name). The lemma follows so the name still says which word it plays.
+        aria-label={`${isPlaying ? "Pause" : "Listen"} — ${label} pronunciation`}
       >
         <span className="meaning-plate__audio-glyph" aria-hidden="true">
           {isPlaying ? "❚❚" : "▶"}

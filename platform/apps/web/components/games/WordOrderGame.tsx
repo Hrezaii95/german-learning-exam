@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useRef, useState } from "react";
+import { useFeedbackChannel } from "@/components/a11y/StatusMessage";
 import {
   buildWordOrderPrompt,
   createPracticeTimestamp,
@@ -30,8 +31,8 @@ export function WordOrderGame({
   const [ordered, setOrdered] = useState<string[]>([]);
   const [revealed, setRevealed] = useState(false);
   const [hintsUsed, setHintsUsed] = useState(0);
-  const [feedbackKind, setFeedbackKind] = useState<GameFeedbackKind | null>(null);
-  const [message, setMessage] = useState<string | null>(null);
+  const { kind: feedbackKind, message, seq, setFeedbackKind, setMessage } =
+    useFeedbackChannel<GameFeedbackKind>();
 
   function pick(token: string, index: number) {
     setPool((prev) => prev.filter((_, i) => i !== index));
@@ -133,7 +134,7 @@ export function WordOrderGame({
         }}
         revealDisabled={revealed}
       />
-      <GameFeedback kind={feedbackKind} message={message} />
+      <GameFeedback kind={feedbackKind} message={message} seq={seq} />
     </section>
   );
 }

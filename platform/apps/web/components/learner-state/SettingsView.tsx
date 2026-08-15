@@ -1,6 +1,10 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import {
+  StatusMessage,
+  useAnnouncement,
+} from "@/components/a11y/StatusMessage";
 import { useLearnerState } from "./LearnerStateProvider";
 
 export function SettingsView() {
@@ -8,7 +12,7 @@ export function SettingsView() {
   const state = snapshot.hydration?.state;
   const [timezone, setTimezone] = useState(state?.settings.timezone ?? "UTC");
   const [speed, setSpeed] = useState(state?.settings.preferredAudioSpeed ?? 1);
-  const [message, setMessage] = useState<string | null>(null);
+  const [message, setMessage] = useAnnouncement();
   const fileRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -66,7 +70,7 @@ export function SettingsView() {
           <button className="btn btn-secondary" type="button" onClick={() => { if(window.confirm("Reset all local learner state on this device?")) void controller.reset(true).then(() => setMessage("Local learner state reset."), () => setMessage("Reset failed; prior state remains.")); }}>Reset local data</button>
         </div>
       </section>
-      {message ? <p className="detail-feedback" role="status">{message}</p> : null}
+      <StatusMessage announcement={message} className="detail-feedback" />
     </div>
   );
 }

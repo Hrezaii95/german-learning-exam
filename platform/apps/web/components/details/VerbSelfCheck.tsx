@@ -1,6 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import {
+  StatusMessage,
+  useAnnouncement,
+} from "@/components/a11y/StatusMessage";
 import type { LearnerVerbDetail } from "@/lib/content/detail-types";
 
 /**
@@ -11,7 +15,9 @@ export function VerbSelfCheck({ detail }: { detail: LearnerVerbDetail }) {
   const [person, setPerson] = useState(detail.present[0]?.person ?? "ich");
   const [typed, setTyped] = useState("");
   const [revealed, setRevealed] = useState(false);
-  const [feedback, setFeedback] = useState<string | null>(null);
+  // "Not quite. Try again…" is the same words on every wrong attempt, so the
+  // announcement carries a counter instead of relying on the text changing.
+  const [feedback, setFeedback] = useAnnouncement();
 
   const row = detail.present.find((item) => item.person === person);
   if (!row) return null;
@@ -45,6 +51,10 @@ export function VerbSelfCheck({ detail }: { detail: LearnerVerbDetail }) {
           <select
             id="verb-selfcheck-person"
             className="hub-input"
+            // The options ARE the German pronouns being taught; the options
+            // inherit this, so a screen reader stops reading "ihr" as "ear"
+            // (WCAG 3.1.2 Language of Parts).
+            lang="de"
             value={person}
             onChange={(event) => {
               setPerson(event.target.value as typeof person);
@@ -82,20 +92,18 @@ export function VerbSelfCheck({ detail }: { detail: LearnerVerbDetail }) {
           Reveal
         </button>
       </div>
-      {feedback ? (
-        <p className="detail-feedback" role="status" data-revealed={revealed ? "true" : "false"}>
-          {revealed ? (
-            <>
-              Correct form:{" "}
-              <span className="german" lang="de">
-                {row.form}
-              </span>
-            </>
-          ) : (
-            feedback
-          )}
-        </p>
-      ) : null}
+      <StatusMessage announcement={feedback} className="detail-feedback">
+        {revealed ? (
+          <>
+            Correct form:{" "}
+            <span className="german" lang="de">
+              {row.form}
+            </span>
+          </>
+        ) : (
+          feedback.text
+        )}
+      </StatusMessage>
     </section>
   );
 }

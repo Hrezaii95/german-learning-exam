@@ -5,22 +5,34 @@ import type { ConversationFeedbackKind } from "@/lib/conversation";
 
 export type ConversationEventSink = (event: LearnerEvent) => void;
 
+/**
+ * Same contract as the practice-game feedback region: present from the first
+ * paint, and keyed on the announcement counter so a repeated identical outcome
+ * is still announced. See `components/a11y/StatusMessage.tsx`.
+ */
 export function ConversationFeedback({
   kind,
   message,
+  seq = 0,
 }: {
   kind: ConversationFeedbackKind | null;
   message: string | null;
+  seq?: number;
 }) {
-  if (!kind || !message) return null;
+  const speaking = Boolean(kind && message);
   return (
     <p
-      className={`conversation-feedback conversation-feedback--${kind}`}
-      data-feedback={kind}
+      className={
+        speaking
+          ? `live-region conversation-feedback conversation-feedback--${kind}`
+          : "live-region live-region--idle"
+      }
       role="status"
       aria-live="polite"
+      data-announcement-seq={seq}
+      {...(speaking ? { "data-feedback": kind as string } : {})}
     >
-      {message}
+      {speaking ? <span key={seq}>{message}</span> : null}
     </p>
   );
 }

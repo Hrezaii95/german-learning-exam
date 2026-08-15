@@ -1,6 +1,7 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef } from "react";
+import { useFeedbackChannel } from "@/components/a11y/StatusMessage";
 import {
   CONVERSATION_ANSWER_REALIZATIONS,
   CONVERSATION_QUESTION,
@@ -24,9 +25,8 @@ export function ModelLevel({
   onEvent?: ConversationEventSink;
   onComplete: () => void;
 }) {
-  const [feedbackKind, setFeedbackKind] =
-    useState<ConversationFeedbackKind | null>(null);
-  const [message, setMessage] = useState<string | null>(null);
+  const { kind: feedbackKind, message, seq, setFeedbackKind, setMessage } =
+    useFeedbackChannel<ConversationFeedbackKind>();
   const emitted = useRef(false);
 
   function markStudied() {
@@ -77,7 +77,7 @@ export function ModelLevel({
         onSubmit={markStudied}
         showReveal={false}
       />
-      <ConversationFeedback kind={feedbackKind} message={message} />
+      <ConversationFeedback kind={feedbackKind} message={message} seq={seq} />
     </section>
   );
 }

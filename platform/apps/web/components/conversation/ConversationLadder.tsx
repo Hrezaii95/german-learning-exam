@@ -1,6 +1,10 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import {
+  StatusMessage,
+  useAnnouncement,
+} from "@/components/a11y/StatusMessage";
 import type { LearnerEvent } from "@german-learning/learning";
 import {
   CONVERSATION_LEVEL_IDS,
@@ -38,7 +42,7 @@ export function ConversationLadder({
   );
   const [events, setEvents] = useState<LearnerEvent[]>([]);
   const learnerState = useOptionalLearnerState();
-  const [saveMessage, setSaveMessage] = useState<string | null>(null);
+  const [saveMessage, setSaveMessage] = useAnnouncement();
 
   const current = metaForConversationLevel(progress.currentLevelId);
 
@@ -155,7 +159,7 @@ export function ConversationLadder({
       <p className="dense" data-session-events={String(events.length)}>
         In-session events: {events.length}
       </p>
-      {saveMessage ? <p className="detail-feedback" role="status">{saveMessage}</p> : null}
+      <StatusMessage announcement={saveMessage} className="detail-feedback" />
       {/* Keep exact ordered IDs discoverable for tests */}
       <span hidden data-level-order={CONVERSATION_LEVEL_IDS.join(",")}>
         {CONVERSATION_LEVEL_IDS.join(",")}

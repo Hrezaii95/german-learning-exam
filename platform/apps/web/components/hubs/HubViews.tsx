@@ -675,7 +675,9 @@ export function HubDirectoryView({
         <Link
           className="btn btn-secondary hub-mobile-search__link"
           href="/search"
-          aria-label="Open global search"
+          // No aria-label: "Open global search" replaced the visible words in
+          // the accessible name, so "click Search all content" matched nothing
+          // by voice (WCAG 2.5.3). The visible text is already descriptive.
         >
           Search all content
         </Link>

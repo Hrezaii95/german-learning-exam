@@ -137,7 +137,7 @@ describe("P2B hub card anatomies", () => {
   it("keeps the plate honest: audio only for real clips, no invented review state", () => {
     const html = render("vocabulary");
     expect(html).toContain('data-meaning-plate-audio="true"');
-    expect(html).toContain("Play die Ärztin pronunciation");
+    expect(html).toContain("Listen — die Ärztin pronunciation");
     for (const phrase of UNBACKED_STATE_COPY) {
       expect(html).not.toContain(phrase);
     }
@@ -196,8 +196,8 @@ describe("P2B hub card anatomies", () => {
     expect(html).toContain("du");
 
     // Four of ten verbs have an approved clip; the rest show no player.
-    expect(html).toContain("Play heißen pronunciation");
-    expect(html).not.toContain("Play arbeiten pronunciation");
+    expect(html).toContain("Listen — heißen pronunciation");
+    expect(html).not.toContain("Listen — arbeiten pronunciation");
     expect(html).not.toContain("Pronunciation unavailable");
   });
 
@@ -205,7 +205,7 @@ describe("P2B hub card anatomies", () => {
     const html = render("grammar");
     expect(html).toContain("Herkunft mit aus");
     expect(html).toContain("Origin with aus");
-    expect(html).toContain("Play Herkunft mit aus pronunciation");
+    expect(html).toContain("Listen — Herkunft mit aus pronunciation");
     expect(html).not.toMatch(/\bgram:[a-z0-9-]/);
 
     // The contract's grammar anatomy is rule title plus one HTML model.
@@ -275,7 +275,7 @@ describe("P2B hub card anatomies", () => {
     expect(withPlate).toContain('data-meaning-plate="detail"');
     expect(withPlate).toContain("meaning-plate--detail");
     expect(withPlate).toContain("die Berufe");
-    expect(withPlate).toContain("Play der Beruf pronunciation");
+    expect(withPlate).toContain("Listen — der Beruf pronunciation");
 
     // A detail with no stored plural shows no morphology preview at all.
     const noPlural = renderToStaticMarkup(

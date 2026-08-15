@@ -1,9 +1,11 @@
 import { Suspense } from "react";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ShellLayout } from "@/components/shell/ShellLayout";
 import { LessonOverview } from "@/components/lessons/ActivityAndBrowser";
 import { LessonOverviewWithNav } from "@/components/lessons/LessonNavViews";
 import { loadLearnerProjection } from "@/lib/content/access";
+import { lessonPageMetadata } from "@/lib/content/page-metadata";
 import { resolveLearnerRoute } from "@/lib/content/routes";
 
 type PageProps = {
@@ -16,6 +18,14 @@ export function generateStaticParams() {
   return loadLearnerProjection().lessons.map((lesson) => ({
     lessonSegment: lesson.routeSegment,
   }));
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { lessonSegment } = await params;
+  const lesson = loadLearnerProjection().lessons.find(
+    (item) => item.routeSegment === lessonSegment,
+  );
+  return lesson ? lessonPageMetadata(lesson) : {};
 }
 
 export default async function LessonPage({ params }: PageProps) {

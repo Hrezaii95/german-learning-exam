@@ -50,7 +50,11 @@ export function GameSelector({
             conversationRelated ? " game-selector__card--related" : ""
           }`}
           data-conversation-entry="true"
-          aria-label="Conversation practice"
+          // No aria-label: it named this card "Conversation practice" while the
+          // visible title reads "Conversation ladder", so speech control could
+          // not match what the learner sees, and the description and level
+          // count were dropped from the accessible name (WCAG 2.5.3). The
+          // visible spans below now compute the name in full.
         >
           <span className="game-selector__title">Conversation ladder</span>
           <span className="game-selector__desc">
@@ -78,9 +82,11 @@ export function GameSelector({
                 }${related ? " game-selector__card--related" : ""}`}
                 data-game-id={game.id}
                 data-availability={game.availability}
-                aria-label={`${game.title}${
-                  game.availability === "unavailable" ? " (unavailable)" : ""
-                }`}
+                // No aria-label: it replaced the visible description and the
+                // Enabled/Unavailable chip in the accessible name, so a screen
+                // reader heard seven bare game names with no idea what any of
+                // them did or which were ready. The visible spans below carry
+                // all of that, so they are left to compute the name.
               >
                 <span className="game-selector__title">{game.title}</span>
                 <span className="game-selector__desc">{game.description}</span>

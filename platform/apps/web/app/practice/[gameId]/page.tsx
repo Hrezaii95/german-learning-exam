@@ -1,9 +1,12 @@
 import { Suspense } from "react";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ShellLayout } from "@/components/shell/ShellLayout";
 import { GameRenderer } from "@/components/games/GameRenderer";
 import { PracticeGameWithNav } from "@/components/games/PracticeNavViews";
+import { pageMetadata } from "@/lib/content/page-metadata";
 import {
+  buildPracticeGameCatalog,
   isPracticeGameId,
   PRACTICE_GAME_IDS,
   practiceCanonicalPath,
@@ -23,6 +26,13 @@ export const dynamicParams = true;
 
 export function generateStaticParams() {
   return PRACTICE_GAME_IDS.map((gameId) => ({ gameId }));
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { gameId: segment } = await params;
+  const game = buildPracticeGameCatalog().find((item) => item.id === segment);
+  // The game's own title is the visible h1, so the two cannot drift apart.
+  return game ? pageMetadata(`${game.title} · Practice`, game.description) : {};
 }
 
 export default async function PracticeGamePage({ params }: PageProps) {

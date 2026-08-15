@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useRef, useState } from "react";
+import { useFeedbackChannel } from "@/components/a11y/StatusMessage";
 import type { SelfRating } from "@german-learning/learning";
 import {
   buildFlashcardPrompt,
@@ -24,10 +25,8 @@ export function FlashcardsGame({
   const startedAt = useRef(Date.now());
   const [flipped, setFlipped] = useState(false);
   const [hintsUsed, setHintsUsed] = useState(0);
-  const [message, setMessage] = useState<string | null>(null);
-  const [feedbackKind, setFeedbackKind] = useState<
-    "empty" | "self-rated" | "retry" | null
-  >(null);
+  const { kind: feedbackKind, message, seq, setFeedbackKind, setMessage } =
+    useFeedbackChannel<"empty" | "self-rated" | "retry">();
 
   function rate(rating: SelfRating) {
     const result = emitSelfRatedFlashcard({
@@ -94,7 +93,7 @@ export function FlashcardsGame({
         ))}
       </fieldset>
       <GameActionBar onRetry={retry} />
-      <GameFeedback kind={feedbackKind} message={message} />
+      <GameFeedback kind={feedbackKind} message={message} seq={seq} />
     </section>
   );
 }

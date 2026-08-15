@@ -33,7 +33,9 @@ export function AudioMatchGame({
         disabled
         aria-disabled="true"
         tabIndex={-1}
-        aria-label={AUDIO_MATCH_UNAVAILABLE_REASON}
+        // Visible label first, reason after: the accessible name has to contain
+        // the words on the button (WCAG 2.5.3 Label in Name).
+        aria-label={`Match audio (unavailable) — ${AUDIO_MATCH_UNAVAILABLE_REASON}`}
       >
         Match audio (unavailable)
       </button>

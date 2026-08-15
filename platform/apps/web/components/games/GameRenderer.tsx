@@ -1,6 +1,10 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import {
+  StatusMessage,
+  useAnnouncement,
+} from "@/components/a11y/StatusMessage";
 import type { LearnerEvent } from "@german-learning/learning";
 import { BackLink } from "@/components/nav/BackLink";
 import {
@@ -66,7 +70,7 @@ export function GameRenderer({
   const sessionId = useMemo(() => createPracticeUuid(), []);
   const [emitted, setEmitted] = useState<LearnerEvent[]>([]);
   const learnerState = useOptionalLearnerState();
-  const [saveMessage, setSaveMessage] = useState<string | null>(null);
+  const [saveMessage, setSaveMessage] = useAnnouncement();
   const backHref = resolveBackHref(navigation, "hub");
 
   function onEvent(event: LearnerEvent) {
@@ -104,7 +108,7 @@ export function GameRenderer({
       <p className="dense" data-emitted-count={emitted.length}>
         Attempts this session: {emitted.length}
       </p>
-      {saveMessage ? <p className="detail-feedback" role="status">{saveMessage}</p> : null}
+      <StatusMessage announcement={saveMessage} className="detail-feedback" />
     </div>
   );
 }

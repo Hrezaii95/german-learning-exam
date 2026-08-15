@@ -194,7 +194,9 @@ describe("P2A studio dashboard + hub tool drawers", () => {
   });
 
   it("keeps the hub directory search entry and lede while switching to drawers", () => {
-    expect(directoryHtml).toContain('aria-label="Open global search"');
+    // No aria-label may override the visible label: the accessible name has
+    // to contain the words a voice-control user says (WCAG 2.5.3).
+    expect(directoryHtml).not.toContain('aria-label="Open global search"');
     expect(directoryHtml).toContain("Search all content");
     expect(directoryHtml).toContain(
       "Six content hubs cover everything you are learning",

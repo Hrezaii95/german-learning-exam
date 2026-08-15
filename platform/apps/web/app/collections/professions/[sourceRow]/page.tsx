@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const row = loadExtraProfessionsProjection().rowsBySegment[sourceRow];
   if (!row) return {};
   return {
-    title: `${row.meaningEn} | Optional professions`,
+    title: `${row.meaningEn} · Optional professions`,
     description: `Source-backed masculine and feminine forms from professions row ${row.sourceRow}.`,
   };
 }

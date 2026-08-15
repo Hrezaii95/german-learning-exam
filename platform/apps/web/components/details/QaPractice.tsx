@@ -1,12 +1,16 @@
 "use client";
 
 import { useState } from "react";
+import {
+  StatusMessage,
+  useAnnouncement,
+} from "@/components/a11y/StatusMessage";
 import type { LearnerQaDetail } from "@/lib/content/detail-types";
 import { matchPublishedQaPattern } from "@/lib/content/qa-normalize";
 
 export function QaConstruction({ detail }: { detail: LearnerQaDetail }) {
   const [value, setValue] = useState("");
-  const [message, setMessage] = useState<string | null>(null);
+  const [message, setMessage] = useAnnouncement();
   const answerPatterns = detail.answers.map((a) => a.realization);
 
   function onCheck() {
@@ -37,7 +41,10 @@ export function QaConstruction({ detail }: { detail: LearnerQaDetail }) {
           autoComplete="off"
           value={value}
           onChange={(event) => setValue(event.target.value)}
-          aria-label="Type an answer pattern"
+          // No aria-label: the <label for> above already reads "Your answer
+          // pattern", and a competing aria-label would replace that visible
+          // wording in the accessible name (WCAG 2.5.3 Label in Name), so
+          // "click Your answer pattern" would match nothing by voice.
         />
       </label>
       <div className="detail-actions">
@@ -45,18 +52,14 @@ export function QaConstruction({ detail }: { detail: LearnerQaDetail }) {
           Check pattern
         </button>
       </div>
-      {message ? (
-        <p className="detail-feedback" role="status">
-          {message}
-        </p>
-      ) : null}
+      <StatusMessage announcement={message} className="detail-feedback" />
     </section>
   );
 }
 
 export function QaGuidedChoice({ detail }: { detail: LearnerQaDetail }) {
   const [selected, setSelected] = useState<string | null>(null);
-  const [message, setMessage] = useState<string | null>(null);
+  const [message, setMessage] = useAnnouncement();
 
   return (
     <section className="panel" aria-labelledby="qa-guided-heading">
@@ -97,11 +100,7 @@ export function QaGuidedChoice({ detail }: { detail: LearnerQaDetail }) {
           Confirm choice
         </button>
       </div>
-      {message ? (
-        <p className="detail-feedback" role="status">
-          {message}
-        </p>
-      ) : null}
+      <StatusMessage announcement={message} className="detail-feedback" />
     </section>
   );
 }

@@ -47,7 +47,7 @@ describe("pronunciation control behavior", () => {
     expect(screen.getByText("der Architekt", { selector: "p" }).getAttribute("lang")).toBe("de");
     expect(screen.getByText(/Synthesized German preview voice/u)).not.toBeNull();
 
-    await user.click(screen.getByRole("button", { name: "Play der Architekt pronunciation" }));
+    await user.click(screen.getByRole("button", { name: "Play pronunciation — der Architekt" }));
     expect(play).toHaveBeenCalledTimes(1);
   });
 

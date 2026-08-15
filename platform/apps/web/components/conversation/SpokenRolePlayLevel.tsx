@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { useFeedbackChannel } from "@/components/a11y/StatusMessage";
 import type { SelfRating } from "@german-learning/learning";
 import {
   CONVERSATION_QUESTION,
@@ -37,9 +38,8 @@ export function SpokenRolePlayLevel({
   const [promptReviewed, setPromptReviewed] = useState(false);
   const [selfCheckCompleted, setSelfCheckCompleted] = useState(false);
   const [selfRating, setSelfRating] = useState<SelfRating | null>(null);
-  const [feedbackKind, setFeedbackKind] =
-    useState<ConversationFeedbackKind | null>(null);
-  const [message, setMessage] = useState<string | null>(null);
+  const { kind: feedbackKind, message, seq, setFeedbackKind, setMessage } =
+    useFeedbackChannel<ConversationFeedbackKind>();
 
   function finishCycle() {
     if (emittedRef.current) return;
@@ -223,7 +223,7 @@ export function SpokenRolePlayLevel({
         </button>
       </div>
 
-      <ConversationFeedback kind={feedbackKind} message={message} />
+      <ConversationFeedback kind={feedbackKind} message={message} seq={seq} />
     </section>
   );
 }
