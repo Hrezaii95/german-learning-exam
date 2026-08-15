@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "gate": "pass",
+  "version": "ec1af2e371386ee8",
+  "basePath": "/german-learning-exam",
+  "shellCache": "german-learning-os-shell-vec1af2e371386ee8",
+  "runtimeCache": "german-learning-os-runtime-vec1af2e371386ee8",
+  "precacheCount": 87,
+  "precacheBytes": 4349122,
+  "precachedNavigationRoutes": 19,
+  "exportedFiles": 1369,
+  "manifestStartUrl": "/german-learning-exam/",
+  "failures": []
+}

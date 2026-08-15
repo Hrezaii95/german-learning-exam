@@ -20,26 +20,19 @@
 import { readdir, readFile, mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { LEARNER_LANGUAGE_RULES } from "./learner-language-rules.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const exportRoot = path.join(repoRoot, "platform", "apps", "web", "out");
 const reportPath = path.join(repoRoot, "research", "release-evidence", "learner-language-audit.json");
 
-/** Each rule states the learner-visible wording that must never ship. */
-const RULES = [
-  { code: "PUBLICATION_JARGON", pattern: /\b(published|publication|unpublished|learner-published)\b/i },
-  { code: "VALIDATION_JARGON", pattern: /\bvalidated\b/i },
-  { code: "EVIDENCE_INTERNALS", pattern: /\b(typed learner events|evidence internals|emits? typed|mastery is not recorded)\b/i },
-  { code: "RAW_OBJECT_ID", pattern: /\b(?:lex|qa|gram|verb|activity|lesson):[a-z0-9-]/i },
-  { code: "RAW_GAME_STATE", pattern: /\bgameId\b|\bgame:[a-z-]+\s*:/i },
-  { code: "ROADMAP_LANGUAGE", pattern: /\b(next phase|this slice|not available in this slice|coming in a later phase)\b/i },
-  { code: "SEARCH_DEBUG_CHIP", pattern: /\bPriority \d+\b|\bMatched \w+ ·/i },
-  // Zero-padding is an addressing detail of ids/routes/filter values, never
-  // learner wording: "Lesson 01" reads as a different lesson from "Lesson 1".
-  // Rendered HTML is the only place this is checkable end to end, because the
-  // label can also arrive from content data rather than a component literal.
-  { code: "PADDED_LESSON_LABEL", pattern: /\bLesson 0\d/ },
-];
+/**
+ * The rules live in `learner-language-rules.mjs` so the offline gate can hold
+ * the service worker's compiled-in copy to exactly the same standard — that
+ * copy is rendered from browser state and never reaches the exported HTML
+ * this script reads.
+ */
+const RULES = LEARNER_LANGUAGE_RULES;
 
 async function walkHtml(directory) {
   const out = [];

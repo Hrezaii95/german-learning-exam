@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "project": "tsx scripts/project-content.ts",
+    "icons:app": "tsx scripts/generate-app-icons.ts",
     "prebuild": "npm run project",
     "dev": "npm run project && next dev --webpack",
     "build": "next build --webpack",

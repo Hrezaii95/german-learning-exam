@@ -1,13 +1,24 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { LearnerStateProvider } from "@/components/learner-state/LearnerStateProvider";
+import { OfflineRuntime } from "@/components/offline/OfflineRuntime";
 import { withPagesBaseAssetPath } from "@/lib/content/pages-base-path";
 import { SITE_DESCRIPTION, SITE_NAME } from "@/lib/content/page-metadata";
+import {
+  APPLE_TOUCH_ICON_PATH,
+  OFFLINE_THEME_COLOR,
+  WEB_APP_MANIFEST_PATH,
+} from "@/lib/offline/policy";
 import "./globals.css";
 
 /**
  * `default` is the title for any route that does not set one; `template`
  * appends the product name to every route that does. Route metadata therefore
  * carries only the part that identifies the page — see `page-metadata.ts`.
+ *
+ * `manifest` and the Apple touch icon are written through
+ * `withPagesBaseAssetPath` for the same reason the font below is: Next renders
+ * these hrefs verbatim, so an absolute `/manifest.webmanifest` would 404 under
+ * `/german-learning-exam/` and take the install prompt down with it.
  */
 export const metadata: Metadata = {
   title: {
@@ -15,6 +26,26 @@ export const metadata: Metadata = {
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_DESCRIPTION,
+  manifest: withPagesBaseAssetPath(WEB_APP_MANIFEST_PATH),
+  applicationName: SITE_NAME,
+  appleWebApp: {
+    capable: true,
+    title: "German OS",
+    statusBarStyle: "black-translucent",
+  },
+  icons: {
+    apple: withPagesBaseAssetPath(APPLE_TOUCH_ICON_PATH),
+  },
+};
+
+/**
+ * The browser paints the address bar and the installed app's window chrome
+ * with these, so they are the shipped navigation and canvas tokens rather than
+ * a second set of colours that could drift from `globals.css`.
+ */
+export const viewport: Viewport = {
+  themeColor: OFFLINE_THEME_COLOR,
+  colorScheme: "light",
 };
 
 /**
@@ -61,6 +92,10 @@ export default function RootLayout({
             text child of <style>, so raw injection is required. */}
         <style dangerouslySetInnerHTML={{ __html: interFontFace }} />
         <LearnerStateProvider>{children}</LearnerStateProvider>
+        {/* Installs the offline worker and owns every sentence the app says
+            about being offline or about a waiting update. Renders nothing
+            until it has something true to report. */}
+        <OfflineRuntime />
       </body>
     </html>
   );

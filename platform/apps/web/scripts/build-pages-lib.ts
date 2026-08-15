@@ -31,6 +31,11 @@ import { dirname, join } from "node:path";
 import { createRequire } from "node:module";
 import { fileURLToPath } from "node:url";
 
+import {
+  finalizeOfflineExport,
+  summarizeOfflineExport,
+} from "./offline-export.js";
+
 const require = createRequire(import.meta.url);
 
 export const PAGES_BASE_PATH = "/german-learning-exam";
@@ -281,6 +286,12 @@ export function createPagesBuildController(
     if (!existsSync(join(outDir, ".nojekyll"))) {
       throw new Error(".nojekyll missing after write");
     }
+
+    // Offline support is finished here rather than in `public/`, because the
+    // precache list can only name the exported build's content-hashed assets,
+    // and every cached URL has to carry the Pages base path. See
+    // `scripts/offline-export.ts`.
+    log(summarizeOfflineExport(finalizeOfflineExport(outDir, PAGES_BASE_PATH)));
   }
 
   function run(

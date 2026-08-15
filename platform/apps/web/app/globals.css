@@ -3305,3 +3305,113 @@ a:hover {
   clip-path: inset(50%);
   white-space: nowrap;
 }
+
+/* ---------------------------------------------------------------------------
+   Offline runtime notices
+
+   A fixed stack in the bottom-left corner: the connection state and, when one
+   is waiting, the update prompt. It sits above the mobile bottom navigation
+   rather than over it, because a learner losing the connection must not also
+   lose the way out of the page they are on.
+
+   Both cards are opt-in interruptions with real information, so they get the
+   product's raised surface treatment (layered shadow, 1px hairline, tinted
+   left edge carrying the meaning) instead of a flat browser-style banner.
+   --------------------------------------------------------------------------- */
+.offline-runtime {
+  position: fixed;
+  left: var(--space-4);
+  right: var(--space-4);
+  bottom: calc(var(--bottom-nav-height) + var(--space-4));
+  z-index: 60;
+  display: grid;
+  gap: var(--space-3);
+  justify-items: start;
+  pointer-events: none;
+}
+
+@media (min-width: 900px) {
+  .offline-runtime {
+    left: calc(var(--rail-width) + var(--space-5));
+    right: auto;
+    bottom: var(--space-5);
+    max-width: 26rem;
+  }
+}
+
+.offline-runtime__card,
+.offline-runtime__notice {
+  pointer-events: auto;
+  width: 100%;
+  max-width: 26rem;
+  padding: var(--space-4) var(--space-5);
+  background: var(--surface);
+  color: var(--ink);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--ink-subtle);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow), 0 16px 40px rgba(28, 26, 36, 0.12);
+  /* The stack rises into place; a notice that simply appears reads as a
+     rendering glitch rather than as the app answering. */
+  animation: offline-runtime-rise 220ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes offline-runtime-rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .offline-runtime__card,
+  .offline-runtime__notice {
+    animation: none;
+  }
+}
+
+.offline-runtime__card[data-variant="offline"] {
+  border-left-color: var(--rule-special);
+}
+
+.offline-runtime__card[data-variant="update"] {
+  border-left-color: var(--brand);
+}
+
+.offline-runtime__notice {
+  border-left-color: var(--rule-special);
+  font-size: var(--text-meta);
+  color: var(--ink-muted);
+}
+
+.offline-runtime__title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin: 0;
+  font-weight: var(--font-weight-strong);
+  font-size: 0.9375rem;
+  letter-spacing: -0.01em;
+}
+
+.offline-runtime__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--rule-special);
+  flex: none;
+}
+
+.offline-runtime__body {
+  margin: var(--space-2) 0 0;
+  font-size: var(--text-meta);
+  line-height: 1.55;
+  color: var(--ink-muted);
+}
+
+.offline-runtime__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
