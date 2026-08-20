@@ -473,6 +473,28 @@ function assertMedia(media: unknown): asserts media is LearnerMediaAvailability 
   }
 }
 
+/**
+ * A vocabulary example is either absent (`null`) or complete: German, the
+ * book's own English, and the book-and-page label. A half-filled example would
+ * put unattributable German in front of a learner, so it fails the artifact.
+ */
+function assertVocabularyExample(example: unknown): void {
+  if (example === null) return;
+  if (!isPlainObject(example)) {
+    throw new Error("Vocabulary example shape is invalid");
+  }
+  for (const key of ["de", "en", "sourceLabel"] as const) {
+    const value = example[key];
+    if (typeof value !== "string" || value.length === 0) {
+      throw new Error("Vocabulary example is incomplete");
+    }
+  }
+  const keys = Object.keys(example).sort();
+  if (keys.length !== 3 || keys.some((key, i) => key !== ["de", "en", "sourceLabel"][i])) {
+    throw new Error("Vocabulary example has unexpected shape");
+  }
+}
+
 function assertGenericDetailRecord(raw: unknown): asserts raw is LearnerDetailRecord {
   if (!isPlainObject(raw)) {
     throw new Error("Detail record shape is invalid");
@@ -512,6 +534,7 @@ function assertGenericDetailRecord(raw: unknown): asserts raw is LearnerDetailRe
     }
     if (raw.article !== null && typeof raw.article !== "string") throw new Error("Vocabulary article is invalid");
     if (raw.gender !== null && !["masculine", "feminine", "neuter"].includes(String(raw.gender))) throw new Error("Vocabulary gender is invalid");
+    assertVocabularyExample(raw.example);
   } else if (raw.kind === "Verb") {
     if (typeof raw.infinitive !== "string" || typeof raw.meaningEn !== "string" || typeof raw.paradigmNote !== "string" || !Array.isArray(raw.present)) {
       throw new Error("Verb fields are invalid");

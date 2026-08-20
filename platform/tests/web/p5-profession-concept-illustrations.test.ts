@@ -9,6 +9,7 @@ import { IllustrationPicture } from "../../apps/web/components/media/Illustratio
 import { MeaningPlate } from "../../apps/web/components/media/MeaningPlate.js";
 import {
   PROFESSION_CONCEPT_LEXEME_IDS,
+  VOCABULARY_CONCEPT_LEXEME_IDS,
   illustrationForDetail,
   type LearnerIllustration,
 } from "../../apps/web/lib/content/illustrations.js";
@@ -236,20 +237,25 @@ describe("profession concept illustrations", () => {
 });
 
 describe("the meaning plate keeps the vocabulary items that have no picture", () => {
-  it("splits the vocabulary hub into 25 illustrated and 44 plate items", () => {
+  it("splits the vocabulary hub into 44 illustrated and 25 plate items", () => {
     const ids = vocabularyItemIds();
     expect(ids).toHaveLength(69);
 
     const illustrated = ids.filter((id) => illustrationForDetail(id) !== null);
     const plated = ids.filter((id) => illustrationForDetail(id) === null);
 
-    expect(illustrated).toHaveLength(25);
-    expect(plated).toHaveLength(44);
-    // The 24 professions plus the older architect studio scene.
+    expect(illustrated).toHaveLength(44);
+    expect(plated).toHaveLength(25);
+    // The 24 professions, the 19 vocabulary concepts, and the older architect
+    // studio scene.
     expect([...illustrated].sort()).toEqual(
-      [...ALL_PROFESSION_IDS, "lex:architekt"].sort(),
+      [
+        ...ALL_PROFESSION_IDS,
+        ...VOCABULARY_CONCEPT_LEXEME_IDS,
+        "lex:architekt",
+      ].sort(),
     );
-    for (const id of ["lex:hallo", "lex:beruf", "lex:wohnort", "lex:familienstand"]) {
+    for (const id of ["lex:wohnort", "lex:familienstand"]) {
       expect(plated).toContain(id);
     }
   });

@@ -213,6 +213,7 @@ const PROFESSION_PAIRS: LearnerIllustration = legacyIllustration({
  * ------------------------------------------------------------------------- */
 
 const PROFESSION_ASSET_DIR = "professions";
+const VOCABULARY_ASSET_DIR = "vocabulary";
 
 /** Hub card media measures roughly 220–300 CSS px across 360 → 1440. */
 const CARD_SIZES = "(min-width: 700px) 288px, 82vw";
@@ -223,28 +224,31 @@ const CARD_WIDTHS: readonly number[] = Object.freeze([240, 480]);
 const DETAIL_WIDTHS: readonly number[] = Object.freeze([512, 1024]);
 
 function rendition(
+  dir: string,
   key: string,
   shape: "square" | "wide",
   extension: "avif" | "webp" | "jpg",
   width: number,
 ): LearnerIllustrationRendition {
   return Object.freeze({
-    path: `${PROFESSION_ASSET_DIR}/${key}-${shape}-${width}.${extension}`,
+    path: `${dir}/${key}-${shape}-${width}.${extension}`,
     width,
     height: shape === "square" ? width : Math.round((width * 3) / 4),
   });
 }
 
 function renditions(
+  dir: string,
   key: string,
   shape: "square" | "wide",
   extension: "avif" | "webp" | "jpg",
   widths: readonly number[],
 ): readonly LearnerIllustrationRendition[] {
-  return Object.freeze(widths.map((width) => rendition(key, shape, extension, width)));
+  return Object.freeze(widths.map((width) => rendition(dir, key, shape, extension, width)));
 }
 
 function variant(
+  dir: string,
   key: string,
   shape: "square" | "wide",
   widths: readonly number[],
@@ -256,15 +260,23 @@ function variant(
     sources: Object.freeze([
       Object.freeze({
         type: "image/avif" as const,
-        renditions: renditions(key, shape, "avif", widths),
+        renditions: renditions(dir, key, shape, "avif", widths),
       }),
       Object.freeze({
         type: "image/webp" as const,
-        renditions: renditions(key, shape, "webp", widths),
+        renditions: renditions(dir, key, shape, "webp", widths),
       }),
     ]),
-    fallback: renditions(key, shape, "jpg", widths),
-    intrinsic: rendition(key, shape, "jpg", largest),
+    fallback: renditions(dir, key, shape, "jpg", widths),
+    intrinsic: rendition(dir, key, shape, "jpg", largest),
+  });
+}
+
+/** The card and detail slot pair every optimized batch is encoded into. */
+function responsiveSlots(dir: string, key: string): LearnerIllustrationResponsive {
+  return Object.freeze({
+    card: variant(dir, key, "square", CARD_WIDTHS, CARD_SIZES),
+    detail: variant(dir, key, "wide", DETAIL_WIDTHS, DETAIL_SIZES),
   });
 }
 
@@ -285,7 +297,8 @@ const PROFESSION_CAPTION =
   "One picture for both words, because it shows the work and not a person. The article, the word ending and the gender badge below are what tell the two forms apart.";
 
 function professionConcept(seed: ProfessionConceptSeed): LearnerIllustration {
-  const detail = variant(seed.key, "wide", DETAIL_WIDTHS, DETAIL_SIZES);
+  const responsive = responsiveSlots(PROFESSION_ASSET_DIR, seed.key);
+  const detail = responsive.detail;
   return Object.freeze({
     id: `illustration:profession-${seed.key}:v1`,
     filename: detail.intrinsic.path,
@@ -301,10 +314,7 @@ function professionConcept(seed: ProfessionConceptSeed): LearnerIllustration {
       Object.freeze({ de: seed.masculine, en: seed.concept, gender: "masculine" as const }),
       Object.freeze({ de: seed.feminine, en: seed.concept, gender: "feminine" as const }),
     ]),
-    responsive: Object.freeze({
-      card: variant(seed.key, "square", CARD_WIDTHS, CARD_SIZES),
-      detail,
-    }),
+    responsive,
   });
 }
 
@@ -426,6 +436,194 @@ export function professionConceptIllustration(
   return PROFESSION_CONCEPT_BY_LEXEME.get(lexemeId) ?? null;
 }
 
+/* ---------------------------------------------------------------------------
+ * Vocabulary concept illustrations
+ *
+ * Original artwork commissioned for this app (`vocabulary-batch-v2`) — not
+ * course material, which is why /references states that separately.
+ *
+ * One image per lexeme this time, because these words are not gendered pairs:
+ * greetings and farewells, the wellbeing answers, and the work-and-study
+ * nouns. Every scene stays a meaning cue — objects, light and cropped hands —
+ * so the artwork never spells out the German word the learner is meant to
+ * recall. The word itself, its article and its meaning stay in the HTML below
+ * the picture, where they are selectable, searchable and readable aloud.
+ *
+ * Encoded from the same derivative recipe as the profession set: 1:1 at 240
+ * and 480 for the hub card, 4:3 at 512 and 1024 for the detail slot, each in
+ * AVIF, WebP and JPEG. The ~2MB source PNGs are never served.
+ * ------------------------------------------------------------------------- */
+
+type VocabularyConceptSeed = Readonly<{
+  /** Asset key; also the derivative filename stem. */
+  key: string;
+  /** The single lexeme this picture belongs to. */
+  lexemeId: string;
+  /** The German word as a learner meets it, article included where there is one. */
+  title: string;
+  /** Alt text taken verbatim from the accepted set's manifest. */
+  alt: string;
+}>;
+
+const VOCABULARY_CAPTION =
+  "Original artwork made for this app. The picture is a meaning cue only — the word, its article and the examples below are what to learn.";
+
+function vocabularyConcept(seed: VocabularyConceptSeed): LearnerIllustration {
+  const responsive = responsiveSlots(VOCABULARY_ASSET_DIR, seed.key);
+  return Object.freeze({
+    id: `illustration:vocabulary-${seed.key}:v1`,
+    filename: responsive.detail.intrinsic.path,
+    eyebrow: "Vocabulary in context",
+    title: seed.title,
+    titleLang: "de",
+    caption: VOCABULARY_CAPTION,
+    alt: seed.alt,
+    width: responsive.detail.intrinsic.width,
+    height: responsive.detail.intrinsic.height,
+    objectPosition: "50% 50%",
+    // No label list: these entries are not masculine/feminine pairs, and the
+    // article that some of them do carry is already in the title and in the
+    // teaching sections underneath.
+    labels: Object.freeze([]),
+    responsive,
+  });
+}
+
+const VOCABULARY_CONCEPT_SEEDS: readonly VocabularyConceptSeed[] = Object.freeze([
+  Object.freeze({
+    key: "hallo",
+    lexemeId: "lex:hallo",
+    title: "Hallo",
+    alt: "An open hand waves against a warm neutral daylight background.",
+  }),
+  Object.freeze({
+    key: "guten-morgen",
+    lexemeId: "lex:guten-morgen",
+    title: "Guten Morgen",
+    alt: "Sunrise light falls across a breakfast table with a cup of coffee.",
+  }),
+  Object.freeze({
+    key: "guten-tag",
+    lexemeId: "lex:guten-tag",
+    title: "Guten Tag",
+    alt: "Two hands meet in a friendly handshake on a bright midday street.",
+  }),
+  Object.freeze({
+    key: "guten-abend",
+    lexemeId: "lex:guten-abend",
+    title: "Guten Abend",
+    alt: "A dusk sky shows through a window beside a warmly glowing lamp.",
+  }),
+  Object.freeze({
+    key: "gute-nacht",
+    lexemeId: "lex:gute-nacht",
+    title: "Gute Nacht",
+    alt: "A crescent moon shines through a night window beside a dim bedside lamp.",
+  }),
+  Object.freeze({
+    key: "auf-wiedersehen",
+    lexemeId: "lex:auf-wiedersehen",
+    title: "Auf Wiedersehen",
+    alt: "A hand waves from the window of a departing train.",
+  }),
+  Object.freeze({
+    key: "tschues",
+    lexemeId: "lex:tschues",
+    title: "Tschüs",
+    alt: "Two people exchange a casual wave at a cafe doorway.",
+  }),
+  Object.freeze({
+    key: "super",
+    lexemeId: "lex:super",
+    title: "Super!",
+    alt: "Two hands give thumbs up in bright sunburst light.",
+  }),
+  Object.freeze({
+    key: "auch-super",
+    lexemeId: "lex:auch-super",
+    title: "Auch super.",
+    alt: "A raised open palm pauses mid high-five in bright light.",
+  }),
+  Object.freeze({
+    key: "sehr-gut-danke",
+    lexemeId: "lex:sehr-gut-danke",
+    title: "Sehr gut, danke.",
+    alt: "Relaxed hands cradle a warm mug beside a sunny window.",
+  }),
+  Object.freeze({
+    key: "gut-danke",
+    lexemeId: "lex:gut-danke",
+    title: "Gut, danke.",
+    alt: "A steady hand gives a thumbs-up gesture in calm daylight.",
+  }),
+  Object.freeze({
+    key: "es-geht",
+    lexemeId: "lex:es-geht",
+    title: "Es geht.",
+    alt: "A flat hand tilts from side to side under neutral overcast light.",
+  }),
+  Object.freeze({
+    key: "nicht-so-gut",
+    lexemeId: "lex:nicht-so-gut",
+    title: "Nicht so gut.",
+    alt: "A hand rests against a forehead beside a grey rainy window.",
+  }),
+  Object.freeze({
+    key: "beruf",
+    lexemeId: "lex:beruf",
+    title: "der Beruf",
+    alt: "A workbench displays neatly arranged tools from several trades.",
+  }),
+  Object.freeze({
+    key: "job",
+    lexemeId: "lex:job",
+    title: "der Job",
+    alt: "A tidy desk holds a laptop, notebook, pen, and coffee cup.",
+  }),
+  Object.freeze({
+    key: "firma",
+    lexemeId: "lex:firma",
+    title: "die Firma",
+    alt: "A modern office building rises in repeating glass floors.",
+  }),
+  Object.freeze({
+    key: "ausbildung",
+    lexemeId: "lex:ausbildung",
+    title: "die Ausbildung",
+    alt: "Apprentice tools and an open instructional manual rest on a workshop bench.",
+  }),
+  Object.freeze({
+    key: "praktikum",
+    lexemeId: "lex:praktikum",
+    title: "das Praktikum",
+    alt: "A blank lanyard badge lies beside a notebook and pen on a desk.",
+  }),
+  Object.freeze({
+    key: "studium",
+    lexemeId: "lex:studium",
+    title: "das Studium",
+    alt: "An empty university lecture hall has tiered seating and books.",
+  }),
+]);
+
+/** lexeme id → its own concept image. One picture, one word, no sharing. */
+const VOCABULARY_CONCEPT_BY_LEXEME: ReadonlyMap<string, LearnerIllustration> = new Map(
+  VOCABULARY_CONCEPT_SEEDS.map(
+    (seed) => [seed.lexemeId, vocabularyConcept(seed)] as const,
+  ),
+);
+
+/** The exact lexeme ids the vocabulary set covers — read by the coverage test. */
+export const VOCABULARY_CONCEPT_LEXEME_IDS: readonly string[] = Object.freeze(
+  VOCABULARY_CONCEPT_SEEDS.map((seed) => seed.lexemeId),
+);
+
+export function vocabularyConceptIllustration(
+  lexemeId: string,
+): LearnerIllustration | null {
+  return VOCABULARY_CONCEPT_BY_LEXEME.get(lexemeId) ?? null;
+}
+
 export function illustrationForActivity(activityId: string): LearnerIllustration | null {
   if (activityId === "activity:lesson-02-core-professions") return PROFESSION_ENSEMBLE;
   if (activityId === "activity:lesson-01-greetings-by-context" || activityId === "activity:lesson-01-greeting-farewell-match") return GREETINGS_DAYPARTS;
@@ -447,6 +645,8 @@ export function illustrationForLesson(lessonId: string): LearnerIllustration | n
 export function illustrationForDetail(detailId: string): LearnerIllustration | null {
   const concept = professionConceptIllustration(detailId);
   if (concept) return concept;
+  const vocabulary = vocabularyConceptIllustration(detailId);
+  if (vocabulary) return vocabulary;
   // `lex:architektin` deliberately does NOT share this asset. Every concept
   // image above is gender-neutral by construction, which is what makes one
   // picture safe for both forms. The older architect illustration shows a

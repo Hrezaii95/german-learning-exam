@@ -265,17 +265,18 @@ describe("P2B hub card anatomies", () => {
     expect(withPicture).toContain("vocabulary-architekt-studio.png");
     expect(withPicture).not.toContain('data-meaning-plate="detail"');
 
-    // `lex:beruf` has no illustration, so it keeps the plate. (`lex:aerztin`
-    // used to stand here and now shares the profession concept picture.)
+    // `lex:wohnort` has no illustration, so it keeps the plate. (`lex:aerztin`
+    // stood here before the profession set, and `lex:beruf` before the
+    // vocabulary set; both now have a picture of their own.)
     const withPlate = renderToStaticMarkup(
       createElement(DetailView, {
-        detail: details.detailsById["lex:beruf"],
+        detail: details.detailsById["lex:wohnort"],
       }),
     );
     expect(withPlate).toContain('data-meaning-plate="detail"');
     expect(withPlate).toContain("meaning-plate--detail");
-    expect(withPlate).toContain("die Berufe");
-    expect(withPlate).toContain("Listen — der Beruf pronunciation");
+    expect(withPlate).toContain("die Wohnorte");
+    expect(withPlate).toContain("Listen — der Wohnort pronunciation");
 
     // A detail with no stored plural shows no morphology preview at all.
     const noPlural = renderToStaticMarkup(

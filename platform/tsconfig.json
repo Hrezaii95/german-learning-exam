@@ -58,6 +58,7 @@
     "tests/web/p5-media-integration.test.ts",
     "tests/web/p5-rich-visuals.test.ts",
     "tests/web/p5-profession-concept-illustrations.test.ts",
+    "tests/web/p6-vocabulary-concept-illustrations.test.ts",
     "tests/web/p5-rapid-content.test.ts",
     "tests/web/j1-activity-runtime.test.ts",
     "tests/web/j2-resume-pointer-behavior.test.ts",
