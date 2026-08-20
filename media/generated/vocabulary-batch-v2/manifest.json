@@ -169,5 +169,221 @@
     "height": 1254,
     "sha256": "7e6966d27542dd0a054b40f3257f3b7936cc1e3bf95187fe8d0a07e7e0751508",
     "alt": "An empty university lecture hall has tiered seating and books."
+  },
+  {
+    "filename": "deutschland.png",
+    "key": "deutschland",
+    "german": "Deutschland",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "79defda27a693570ddd8259942c0a7086a91afd609df530cce04b175894647af",
+    "alt": "A neoclassical columned gateway stands before a simplified city skyline."
+  },
+  {
+    "filename": "eritrea.png",
+    "key": "eritrea",
+    "german": "Eritrea",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "d321251f708cfbea9d03ea4faa9ef6622f256a22372a060e7a90b739eccb9ddf",
+    "alt": "A calm coastline curves below a high plateau dotted with acacia trees."
+  },
+  {
+    "filename": "frankreich.png",
+    "key": "frankreich",
+    "german": "Frankreich",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "a73fa1755631995c9a5ea2177ce15d8809d0b92a61ddf9b8b0f283e7f80419be",
+    "alt": "Rows of lavender lead toward an iron lattice tower on the horizon."
+  },
+  {
+    "filename": "oesterreich.png",
+    "key": "oesterreich",
+    "german": "Österreich",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "f0855c7886f689489134d6f4852576511014173c9c89cbc0fc165ea1a44387ec",
+    "alt": "An alpine village with steep roofs sits beside a lake below high peaks."
+  },
+  {
+    "filename": "schweiz.png",
+    "key": "schweiz",
+    "german": "Schweiz",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "460cd72ac64afd18446a27627fed0afc1ed57ffb22d74ce1d2154e1aba420814",
+    "alt": "Two cable cars cross a valley beneath a sharp snow-capped mountain."
+  },
+  {
+    "filename": "spanien.png",
+    "key": "spanien",
+    "german": "Spanien",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "027442b4443224ae8c6ba845c3b672e1924cca9c388b0eae7838514e66c07e52",
+    "alt": "Orange trees shade a bright plaza surrounded by arches and tiled roofs."
+  },
+  {
+    "filename": "tuerkei.png",
+    "key": "tuerkei",
+    "german": "Türkei",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "f786274d82835e45b84560ee1a70c5dddad5d6782e76c32b5366a35cf8c2aa8f",
+    "alt": "Passenger ferries cross calm water below a domed skyline and slender minarets."
+  },
+  {
+    "filename": "usa.png",
+    "key": "usa",
+    "german": "USA",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "7bbb01aa706cbdfa0bfb9b8aa8839aaf83b8a3ed2d890435cc192cf19ba22aa3",
+    "alt": "A straight desert road runs through a broad valley between red sandstone mesas."
+  },
+  {
+    "filename": "name.png",
+    "key": "name",
+    "german": "Name",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "cfd0a88e0c058a0e14519626fbdab144b9f22cd839eb1cb72f22deb9ddc89d51",
+    "alt": "A fountain pen rests across a blank paper form with one ruled line."
+  },
+  {
+    "filename": "vorname.png",
+    "key": "vorname",
+    "german": "Vorname",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "1a72a7f233f680b8f6e6c8d9479ac58a30cd3e23609de51174c7692003e34f94",
+    "alt": "A blank form has two ruled lines with the upper line softly highlighted."
+  },
+  {
+    "filename": "familienname.png",
+    "key": "familienname",
+    "german": "Familienname",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "b9f474e0455f5218cc4cd59c9088de917ade81bf0448a637ea6c2fe6e1977149",
+    "alt": "A blank form has two ruled lines with the lower line softly highlighted."
+  },
+  {
+    "filename": "alter.png",
+    "key": "alter",
+    "german": "das Alter",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "a51d986bab70eee73bab8c6ea46cc49ffa292abc483e78103dd0fba78b18663a",
+    "alt": "A round birthday cake with several unlit candles sits on a cake stand."
+  },
+  {
+    "filename": "jahr.png",
+    "key": "jahr",
+    "german": "das Jahr",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "1afaa90cb158aa4dae2171885633e350b8fdfca8f7a9b0f76996657e9fa2028d",
+    "alt": "A small calendar displays four panels with symbols for the seasons."
+  },
+  {
+    "filename": "kind.png",
+    "key": "kind",
+    "german": "das Kind",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "91a4ceff3354bcc9d33b876f57bfb42ee9ee36516302f88a99a0fcb432e23dea",
+    "alt": "A small backpack, little shoes, and a wooden pull toy rest on the floor."
+  },
+  {
+    "filename": "herkunft.png",
+    "key": "herkunft",
+    "german": "die Herkunft",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "c3e8d1d35ef9be85261d4fdf64a70db6b6cde1fc5e5422c19ab26eb1ab81c082",
+    "alt": "A desk globe stands beside a worn travel suitcase with a blank tag."
+  },
+  {
+    "filename": "wohnort.png",
+    "key": "wohnort",
+    "german": "der Wohnort",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "c7e44e08dc4902b0424bd333eb32f947a08b6c1f7a0f8c5f460ba050fc2a4013",
+    "alt": "A map pin floats above the roof of a small house."
+  },
+  {
+    "filename": "verheiratet.png",
+    "key": "verheiratet",
+    "german": "verheiratet",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "43db6866744dde673986924767a4d26fa8f9939391d7dbba7adf371a39bbfe71",
+    "alt": "Two plain wedding bands rest together on softly folded linen."
+  },
+  {
+    "filename": "geschieden.png",
+    "key": "geschieden",
+    "german": "geschieden",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "179437bc26b3bafa35bc4017e6aa376c0374780ccf349e65a2c698c0f852677f",
+    "alt": "Two plain wedding bands sit far apart with a soft shadow between them."
+  },
+  {
+    "filename": "single.png",
+    "key": "single",
+    "german": "Single",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "e79bcb6e2ff718208fdd89f46b821d4ec62bbc9d674d04e6fe15366c37037dfe",
+    "alt": "One plain ring rests beside a coffee cup on a bright windowsill."
+  },
+  {
+    "filename": "allein.png",
+    "key": "allein",
+    "german": "allein",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "cab9e4488a4a77e0d6ed75f57884c70f7aaf0deffa991d82a2bb04408f6afe5e",
+    "alt": "An empty wooden chair stands beside a window in soft daylight."
+  },
+  {
+    "filename": "familienstand.png",
+    "key": "familienstand",
+    "german": "der Familienstand",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "fb31c2460f100683aecd8970bc80cd43e8b754cc86ef4c8bfe9a29915c4f5c7b",
+    "alt": "A blank paper form shows four empty tick boxes and ruled lines."
+  },
+  {
+    "filename": "herr.png",
+    "key": "herr",
+    "german": "Herr",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "bf2d5a4f8913008fa23e4b0fce920933d4ead0092d0e18bb86adfea2dfdf18dc",
+    "alt": "A formal overcoat and brimmed hat hang from a wooden coat stand."
+  },
+  {
+    "filename": "frau.png",
+    "key": "frau",
+    "german": "Frau",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "540501638bf80586ab3ad79dff58cf63caed62605ddacc4cea5ad468fc2bebb3",
+    "alt": "A solid scarf and structured handbag hang from a wooden coat stand."
+  },
+  {
+    "filename": "stelle.png",
+    "key": "stelle",
+    "german": "die Stelle",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "7c4894ec8d4e9e116f080fc0c608f2ecb1fe09a781b2e629eeaea6bf70c38cfc",
+    "alt": "An empty office chair sits at a tidy desk with a blank nameplate."
   }
 ]

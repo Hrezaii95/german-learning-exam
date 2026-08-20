@@ -237,16 +237,15 @@ describe("profession concept illustrations", () => {
 });
 
 describe("the meaning plate keeps the vocabulary items that have no picture", () => {
-  it("splits the vocabulary hub into 44 illustrated and 25 plate items", () => {
+  it("splits the vocabulary hub into 68 illustrated and 1 plate item", () => {
     const ids = vocabularyItemIds();
     expect(ids).toHaveLength(69);
 
     const illustrated = ids.filter((id) => illustrationForDetail(id) !== null);
     const plated = ids.filter((id) => illustrationForDetail(id) === null);
 
-    expect(illustrated).toHaveLength(44);
-    expect(plated).toHaveLength(25);
-    // The 24 professions, the 19 vocabulary concepts, and the older architect
+    expect(illustrated).toHaveLength(68);
+    // The 24 professions, the 43 vocabulary concepts, and the older architect
     // studio scene.
     expect([...illustrated].sort()).toEqual(
       [
@@ -255,9 +254,10 @@ describe("the meaning plate keeps the vocabulary items that have no picture", ()
         "lex:architekt",
       ].sort(),
     );
-    for (const id of ["lex:wohnort", "lex:familienstand"]) {
-      expect(plated).toContain(id);
-    }
+    // The plate is not retired by full coverage: it is the declared media
+    // treatment for anything without an approved illustration, and one
+    // vocabulary item deliberately still uses it.
+    expect(plated).toEqual(["lex:architektin"]);
   });
 
   it("keeps the feminine architect on the plate while its scene shows a man", () => {

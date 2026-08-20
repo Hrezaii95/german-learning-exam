@@ -2,44 +2,19 @@
   "schemaVersion": 1,
   "total": 69,
   "complete": {
-    "image": 45,
+    "image": 69,
     "lemmaAudio": 69,
     "pluralAudio": 0,
     "example": 6
   },
   "missingCounts": {
-    "image": 24,
+    "image": 0,
     "lemmaAudio": 0,
     "pluralAudio": 41,
     "example": 63
   },
   "missing": {
-    "image": [
-      "lex:allein",
-      "lex:alter",
-      "lex:deutschland",
-      "lex:eritrea",
-      "lex:familienname",
-      "lex:familienstand",
-      "lex:frankreich",
-      "lex:frau",
-      "lex:geschieden",
-      "lex:herkunft",
-      "lex:herr",
-      "lex:jahr",
-      "lex:kind",
-      "lex:name",
-      "lex:oesterreich",
-      "lex:schweiz",
-      "lex:single",
-      "lex:spanien",
-      "lex:stelle",
-      "lex:tuerkei",
-      "lex:usa",
-      "lex:verheiratet",
-      "lex:vorname",
-      "lex:wohnort"
-    ],
+    "image": [],
     "lemmaAudio": [],
     "pluralAudio": [
       "lex:aerztin",
@@ -183,7 +158,7 @@
       ],
       "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a616c6c65696e",
       "has": {
-        "image": false,
+        "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
         "example": false
@@ -201,7 +176,7 @@
       ],
       "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a616c746572",
       "has": {
-        "image": false,
+        "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
         "example": false
@@ -355,7 +330,7 @@
       ],
       "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a646575747363686c616e64",
       "has": {
-        "image": false,
+        "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
         "example": false
@@ -373,7 +348,7 @@
       ],
       "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a65726974726561",
       "has": {
-        "image": false,
+        "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
         "example": false
@@ -411,7 +386,7 @@
       ],
       "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a66616d696c69656e6e616d65",
       "has": {
-        "image": false,
+        "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
         "example": false
@@ -429,7 +404,7 @@
       ],
       "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a66616d696c69656e7374616e64",
       "has": {
-        "image": false,
+        "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
         "example": false
@@ -467,7 +442,7 @@
       ],
       "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a6672616e6b7265696368",
       "has": {
-        "image": false,
+        "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
         "example": false
@@ -487,7 +462,7 @@
       ],
       "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a66726175",
       "has": {
-        "image": false,
+        "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
         "example": false
@@ -545,7 +520,7 @@
       ],
       "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a6765736368696564656e",
       "has": {
-        "image": false,
+        "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
         "example": true
@@ -671,7 +646,7 @@
       ],
       "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a6865726b756e6674",
       "has": {
-        "image": false,
+        "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
         "example": false
@@ -691,7 +666,7 @@
       ],
       "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a68657272",
       "has": {
-        "image": false,
+        "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
         "example": false
@@ -751,7 +726,7 @@
       ],
       "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a6a616872",
       "has": {
-        "image": false,
+        "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
         "example": true
@@ -911,7 +886,7 @@
       ],
       "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a6b696e64",
       "has": {
-        "image": false,
+        "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
         "example": true
@@ -971,7 +946,7 @@
       ],
       "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a6e616d65",
       "has": {
-        "image": false,
+        "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
         "example": true
@@ -1007,7 +982,7 @@
       ],
       "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a6f65737465727265696368",
       "has": {
-        "image": false,
+        "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
         "example": false
@@ -1165,7 +1140,7 @@
       ],
       "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a7363687765697a",
       "has": {
-        "image": false,
+        "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
         "example": true
@@ -1203,7 +1178,7 @@
       ],
       "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a73696e676c65",
       "has": {
-        "image": false,
+        "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
         "example": false
@@ -1221,7 +1196,7 @@
       ],
       "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a7370616e69656e",
       "has": {
-        "image": false,
+        "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
         "example": false
@@ -1241,7 +1216,7 @@
       ],
       "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a7374656c6c65",
       "has": {
-        "image": false,
+        "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
         "example": false
@@ -1353,7 +1328,7 @@
       ],
       "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a747565726b6569",
       "has": {
-        "image": false,
+        "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
         "example": false
@@ -1371,7 +1346,7 @@
       ],
       "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a757361",
       "has": {
-        "image": false,
+        "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
         "example": false
@@ -1389,7 +1364,7 @@
       ],
       "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a7665726865697261746574",
       "has": {
-        "image": false,
+        "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
         "example": false
@@ -1449,7 +1424,7 @@
       ],
       "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a766f726e616d65",
       "has": {
-        "image": false,
+        "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
         "example": false
@@ -1469,7 +1444,7 @@
       ],
       "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a776f686e6f7274",
       "has": {
-        "image": false,
+        "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
         "example": false

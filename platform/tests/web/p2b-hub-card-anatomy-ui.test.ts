@@ -265,24 +265,34 @@ describe("P2B hub card anatomies", () => {
     expect(withPicture).toContain("vocabulary-architekt-studio.png");
     expect(withPicture).not.toContain('data-meaning-plate="detail"');
 
-    // `lex:wohnort` has no illustration, so it keeps the plate. (`lex:aerztin`
-    // stood here before the profession set, and `lex:beruf` before the
-    // vocabulary set; both now have a picture of their own.)
+    // `lex:architektin` has no illustration, so it keeps the plate. (`lex:aerztin`
+    // stood here before the profession set, `lex:beruf` before the first
+    // vocabulary batch and `lex:wohnort` before the second; all three now have a
+    // picture of their own. The plate is not a gap treatment being phased out —
+    // it is the declared media treatment for anything without an approved
+    // illustration, so it is asserted here on the item that still uses it.)
     const withPlate = renderToStaticMarkup(
       createElement(DetailView, {
-        detail: details.detailsById["lex:wohnort"],
+        detail: details.detailsById["lex:architektin"],
       }),
     );
     expect(withPlate).toContain('data-meaning-plate="detail"');
     expect(withPlate).toContain("meaning-plate--detail");
-    expect(withPlate).toContain("die Wohnorte");
-    expect(withPlate).toContain("Listen — der Wohnort pronunciation");
+    expect(withPlate).toContain("die Architektinnen");
+    expect(withPlate).toContain("Listen — die Architektin pronunciation");
 
     // A detail with no stored plural shows no morphology preview at all.
+    // Every projected no-plural lexeme now carries an illustration, so this
+    // holds the behaviour on a synthetic record instead: same shape as the
+    // projected `lex:alter`, under an id no illustration is mapped to.
+    const projectedNoPlural = details.detailsById["lex:alter"];
+    if (projectedNoPlural?.kind !== "Lexeme") throw new Error("expected a lexeme");
+    const syntheticNoPlural = {
+      ...projectedNoPlural,
+      id: "lex:__no-illustration-fixture",
+    };
     const noPlural = renderToStaticMarkup(
-      createElement(DetailView, {
-        detail: details.detailsById["lex:alter"],
-      }),
+      createElement(DetailView, { detail: syntheticNoPlural }),
     );
     expect(noPlural).toContain('data-meaning-plate="detail"');
     expect(noPlural).not.toContain("meaning-plate__morph");

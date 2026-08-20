@@ -24,8 +24,9 @@ const sourceManifest = JSON.parse(
 
 /**
  * The declared needed set: the greetings and farewells, the five wellbeing
- * answers, and the work-and-study nouns of the accepted `vocabulary-batch-v2`
- * delivery. One image per lexeme — these words are not gendered pairs.
+ * answers, the work-and-study nouns, the eight countries, and the profile,
+ * status and address words of the accepted `vocabulary-batch-v2` delivery.
+ * One image per lexeme — these words are not gendered pairs.
  */
 const VOCABULARY_CONCEPT_IDS: readonly string[] = [
   "lex:hallo",
@@ -47,7 +48,34 @@ const VOCABULARY_CONCEPT_IDS: readonly string[] = [
   "lex:ausbildung",
   "lex:praktikum",
   "lex:studium",
+  "lex:deutschland",
+  "lex:eritrea",
+  "lex:frankreich",
+  "lex:oesterreich",
+  "lex:schweiz",
+  "lex:spanien",
+  "lex:tuerkei",
+  "lex:usa",
+  "lex:name",
+  "lex:vorname",
+  "lex:familienname",
+  "lex:alter",
+  "lex:jahr",
+  "lex:kind",
+  "lex:herkunft",
+  "lex:wohnort",
+  "lex:verheiratet",
+  "lex:geschieden",
+  "lex:single",
+  "lex:allein",
+  "lex:familienstand",
+  "lex:herr",
+  "lex:frau",
+  "lex:stelle",
 ];
+
+/** Every key is encoded twice per slot and three ways per encode. */
+const DERIVATIVES_PER_KEY = 12;
 
 /** Nothing a learner downloads may approach the ~2MB accepted source PNGs. */
 const MAX_DERIVATIVE_BYTES = 100_000;
@@ -70,8 +98,8 @@ function everyRendition(illustration: LearnerIllustration): readonly string[] {
 }
 
 describe("vocabulary concept illustrations", () => {
-  it("covers exactly the 19 lexemes of the accepted set", () => {
-    expect(VOCABULARY_CONCEPT_IDS).toHaveLength(19);
+  it("covers exactly the 43 lexemes of the accepted set", () => {
+    expect(VOCABULARY_CONCEPT_IDS).toHaveLength(43);
     expect([...VOCABULARY_CONCEPT_LEXEME_IDS].sort()).toEqual(
       [...VOCABULARY_CONCEPT_IDS].sort(),
     );
@@ -84,11 +112,11 @@ describe("vocabulary concept illustrations", () => {
 
   it("gives every lexeme its own picture, never a shared one", () => {
     const filenames = VOCABULARY_CONCEPT_IDS.map((id) => resolved(id).filename);
-    expect(new Set(filenames).size).toBe(19);
+    expect(new Set(filenames).size).toBe(43);
   });
 
   it("carries the accepted manifest's alt text verbatim", () => {
-    expect(sourceManifest).toHaveLength(19);
+    expect(sourceManifest).toHaveLength(43);
     for (const entry of sourceManifest) {
       const illustration = resolved(`lex:${entry.key}`);
       expect(illustration.alt).toBe(entry.alt);
@@ -130,7 +158,7 @@ describe("vocabulary concept illustrations", () => {
     }
   });
 
-  it("ships all 228 derivatives, each well under the payload budget", () => {
+  it("ships all 516 derivatives, each well under the payload budget", () => {
     const missing: string[] = [];
     const oversized: string[] = [];
     let counted = 0;
@@ -147,7 +175,8 @@ describe("vocabulary concept illustrations", () => {
       }
     }
 
-    expect(counted).toBe(228);
+    expect(counted).toBe(VOCABULARY_CONCEPT_IDS.length * DERIVATIVES_PER_KEY);
+    expect(counted).toBe(516);
     expect(missing).toEqual([]);
     expect(oversized).toEqual([]);
   });
@@ -195,6 +224,25 @@ describe("vocabulary concept illustrations", () => {
     expect(html).toContain('lang="de"');
     expect(html).toContain("Guten Morgen");
     expect(html).toContain("Sunrise light falls across a breakfast table");
+  });
+
+  it("titles a country by its learner-facing display form, article included", () => {
+    // `Deutschland` takes no article and `die Schweiz` does; the title has to
+    // follow the projected display text rather than a rule invented here.
+    const germany = renderToStaticMarkup(
+      createElement(RichLessonVisual, { illustration: resolved("lex:deutschland") }),
+    );
+    expect(germany).toContain("Deutschland");
+    expect(germany).toContain("/illustrations/vocabulary/deutschland-wide-1024.avif 1024w");
+    expect(germany).toContain('loading="eager"');
+
+    const switzerland = renderToStaticMarkup(
+      createElement(RichLessonVisual, { illustration: resolved("lex:schweiz") }),
+    );
+    expect(switzerland).toContain("die Schweiz");
+    expect(switzerland).toContain("Two cable cars cross a valley");
+    // No flag, no map outline, no lettering: the scene is a place, not an emblem.
+    expect(switzerland.toLowerCase()).not.toContain("flag");
   });
 
   it("applies the GitHub Pages base path to every responsive source", () => {

@@ -443,11 +443,19 @@ export function professionConceptIllustration(
  * course material, which is why /references states that separately.
  *
  * One image per lexeme this time, because these words are not gendered pairs:
- * greetings and farewells, the wellbeing answers, and the work-and-study
- * nouns. Every scene stays a meaning cue — objects, light and cropped hands —
- * so the artwork never spells out the German word the learner is meant to
- * recall. The word itself, its article and its meaning stay in the HTML below
- * the picture, where they are selectable, searchable and readable aloud.
+ * greetings and farewells, the wellbeing answers, the work-and-study nouns,
+ * the eight countries, and the profile, status and address words a learner
+ * fills a form with. Every scene stays a meaning cue — objects, light and
+ * cropped hands — so the artwork never spells out the German word the learner
+ * is meant to recall. The word itself, its article and its meaning stay in the
+ * HTML below the picture, where they are selectable, searchable and readable
+ * aloud.
+ *
+ * The country scenes are landscape and architecture only: no flag, no map
+ * outline, no writing. A flag would make the picture a national emblem rather
+ * than a meaning cue, and `Herr`/`Frau` are shown as an object on a coat stand
+ * for the same reason — the words are forms of address, not a claim about the
+ * person who is being addressed.
  *
  * Encoded from the same derivative recipe as the profession set: 1:1 at 240
  * and 480 for the hub card, 4:3 at 512 and 1024 for the detail slot, each in
@@ -604,6 +612,150 @@ const VOCABULARY_CONCEPT_SEEDS: readonly VocabularyConceptSeed[] = Object.freeze
     title: "das Studium",
     alt: "An empty university lecture hall has tiered seating and books.",
   }),
+  Object.freeze({
+    key: "deutschland",
+    lexemeId: "lex:deutschland",
+    title: "Deutschland",
+    alt: "A neoclassical columned gateway stands before a simplified city skyline.",
+  }),
+  Object.freeze({
+    key: "eritrea",
+    lexemeId: "lex:eritrea",
+    title: "Eritrea",
+    alt: "A calm coastline curves below a high plateau dotted with acacia trees.",
+  }),
+  Object.freeze({
+    key: "frankreich",
+    lexemeId: "lex:frankreich",
+    title: "Frankreich",
+    alt: "Rows of lavender lead toward an iron lattice tower on the horizon.",
+  }),
+  Object.freeze({
+    key: "oesterreich",
+    lexemeId: "lex:oesterreich",
+    title: "Österreich",
+    alt: "An alpine village with steep roofs sits beside a lake below high peaks.",
+  }),
+  Object.freeze({
+    key: "schweiz",
+    lexemeId: "lex:schweiz",
+    title: "die Schweiz",
+    alt: "Two cable cars cross a valley beneath a sharp snow-capped mountain.",
+  }),
+  Object.freeze({
+    key: "spanien",
+    lexemeId: "lex:spanien",
+    title: "Spanien",
+    alt: "Orange trees shade a bright plaza surrounded by arches and tiled roofs.",
+  }),
+  Object.freeze({
+    key: "tuerkei",
+    lexemeId: "lex:tuerkei",
+    title: "die Türkei",
+    alt: "Passenger ferries cross calm water below a domed skyline and slender minarets.",
+  }),
+  Object.freeze({
+    key: "usa",
+    lexemeId: "lex:usa",
+    title: "die USA",
+    alt: "A straight desert road runs through a broad valley between red sandstone mesas.",
+  }),
+  Object.freeze({
+    key: "name",
+    lexemeId: "lex:name",
+    title: "der Name",
+    alt: "A fountain pen rests across a blank paper form with one ruled line.",
+  }),
+  Object.freeze({
+    key: "vorname",
+    lexemeId: "lex:vorname",
+    title: "der Vorname",
+    alt: "A blank form has two ruled lines with the upper line softly highlighted.",
+  }),
+  Object.freeze({
+    key: "familienname",
+    lexemeId: "lex:familienname",
+    title: "der Familienname",
+    alt: "A blank form has two ruled lines with the lower line softly highlighted.",
+  }),
+  Object.freeze({
+    key: "alter",
+    lexemeId: "lex:alter",
+    title: "das Alter",
+    alt: "A round birthday cake with several unlit candles sits on a cake stand.",
+  }),
+  Object.freeze({
+    key: "jahr",
+    lexemeId: "lex:jahr",
+    title: "das Jahr",
+    alt: "A small calendar displays four panels with symbols for the seasons.",
+  }),
+  Object.freeze({
+    key: "kind",
+    lexemeId: "lex:kind",
+    title: "das Kind",
+    alt: "A small backpack, little shoes, and a wooden pull toy rest on the floor.",
+  }),
+  Object.freeze({
+    key: "herkunft",
+    lexemeId: "lex:herkunft",
+    title: "die Herkunft",
+    alt: "A desk globe stands beside a worn travel suitcase with a blank tag.",
+  }),
+  Object.freeze({
+    key: "wohnort",
+    lexemeId: "lex:wohnort",
+    title: "der Wohnort",
+    alt: "A map pin floats above the roof of a small house.",
+  }),
+  Object.freeze({
+    key: "verheiratet",
+    lexemeId: "lex:verheiratet",
+    title: "verheiratet",
+    alt: "Two plain wedding bands rest together on softly folded linen.",
+  }),
+  Object.freeze({
+    key: "geschieden",
+    lexemeId: "lex:geschieden",
+    title: "geschieden",
+    alt: "Two plain wedding bands sit far apart with a soft shadow between them.",
+  }),
+  Object.freeze({
+    key: "single",
+    lexemeId: "lex:single",
+    title: "der Single",
+    alt: "One plain ring rests beside a coffee cup on a bright windowsill.",
+  }),
+  Object.freeze({
+    key: "allein",
+    lexemeId: "lex:allein",
+    title: "allein",
+    alt: "An empty wooden chair stands beside a window in soft daylight.",
+  }),
+  Object.freeze({
+    key: "familienstand",
+    lexemeId: "lex:familienstand",
+    title: "der Familienstand",
+    alt: "A blank paper form shows four empty tick boxes and ruled lines.",
+  }),
+  Object.freeze({
+    key: "herr",
+    lexemeId: "lex:herr",
+    title: "der Herr",
+    alt: "A formal overcoat and brimmed hat hang from a wooden coat stand.",
+  }),
+  Object.freeze({
+    key: "frau",
+    lexemeId: "lex:frau",
+    title: "die Frau",
+    alt: "A solid scarf and structured handbag hang from a wooden coat stand.",
+  }),
+  Object.freeze({
+    key: "stelle",
+    lexemeId: "lex:stelle",
+    title: "die Stelle",
+    alt: "An empty office chair sits at a tidy desk with a blank nameplate.",
+  }),
 ]);
 
 /** lexeme id → its own concept image. One picture, one word, no sharing. */
@@ -653,7 +805,9 @@ export function illustrationForDetail(detailId: string): LearnerIllustration | n
   // male architect at a desk and its own alt text says so, so attaching it to
   // the feminine lexeme would assert with a picture exactly what the concept
   // set is built to avoid. `die Architektin` keeps the meaning plate until a
-  // neutral architect scene exists in the same set.
+  // neutral architect scene exists in the same set — it is now the last
+  // vocabulary item on the plate, and the plate stays the permanent media
+  // treatment for anything that arrives without an approved illustration.
   if (detailId === "lex:architekt") return ARCHITECT_STUDIO;
   if (detailId === "verb:sein" || detailId === "verb:arbeiten") return VERBS_CONTEXT;
   if (detailId.startsWith("qa:")) return CONVERSATION_CONTEXT;
