@@ -541,7 +541,7 @@ describe("P3B hub search and filters", () => {
     expect(unknownCategory.category).toBeNull();
     expect(unknownCategory.q).toBe("ok");
 
-    expect(grammar.itemCount).toBe(10);
+    expect(grammar.itemCount).toBe(11);
     const emptyFiltered = filterHubRecords(grammar.items, {
       q: "sein",
       lesson: "01",

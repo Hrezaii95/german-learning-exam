@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-20T09:09:20.544Z",
+  "generatedAt": "2026-08-20T10:13:37.581Z",
   "scope": {
     "lessons": [
       "lesson:01",
@@ -98,8 +98,60 @@
             "Not so well."
           ],
           [
+            "Und dir?",
+            "What about you?",
+            2
+          ],
+          [
             "Auch super.",
-            "Great as well."
+            "Great as well.",
+            2
+          ]
+        ],
+        "courtesy": [
+          [
+            "Entschuldigung.",
+            "Sorry."
+          ],
+          [
+            "Wie bitte?",
+            "Pardon?"
+          ],
+          [
+            "Danke.",
+            "Thank you."
+          ]
+        ],
+        "pronouns": [
+          [
+            "ich",
+            "I",
+            null,
+            1
+          ],
+          [
+            "du",
+            "you",
+            null,
+            1
+          ],
+          [
+            "er",
+            "he",
+            null,
+            2
+          ],
+          [
+            "sie",
+            "she",
+            null,
+            2
+          ],
+          [
+            "Sie",
+            "you (formal)",
+            "sie-formal",
+            2
           ]
         ],
         "countries": [
@@ -172,6 +224,44 @@
           ]
         ]
       },
+      "phrases": [
+        {
+          "id": "phrase:identity-und-wer-bist-du",
+          "intent": "identity-question-casual",
+          "register": "casual",
+          "de": "Und wer bist du?",
+          "source": "glossary",
+          "page": 1,
+          "exercise": "Lektion 01, 1"
+        },
+        {
+          "id": "phrase:identity-wer-sind-sie",
+          "intent": "identity-question-formal",
+          "register": "formal",
+          "de": "Wer sind Sie?",
+          "source": "glossary",
+          "page": 2,
+          "exercise": "Lektion 01, 8"
+        },
+        {
+          "id": "phrase:name-answer-ich-bin",
+          "intent": "name-answer",
+          "register": "neutral",
+          "de": "Ich bin …",
+          "source": "glossary",
+          "page": 1,
+          "exercise": "Lektion 01, 1"
+        },
+        {
+          "id": "phrase:wellbeing-und-ihnen",
+          "intent": "wellbeing-follow-up-formal",
+          "register": "formal",
+          "de": "Und Ihnen?",
+          "source": "workbook",
+          "page": 9,
+          "exercise": "Lektion 01, Übung zu Kursbuch 8"
+        }
+      ],
       "verbs": [
         {
           "id": "verb:sein",
@@ -515,7 +605,67 @@
           "die Firma",
           "company",
           "die Firmen"
+        ],
+        [
+          "das Interview",
+          "interview",
+          "die Interviews",
+          null,
+          3
+        ],
+        [
+          "zusammenleben",
+          "to live together",
+          null,
+          "verb",
+          3
+        ],
+        [
+          "der Text",
+          "text",
+          "die Texte",
+          null,
+          4
         ]
+      ],
+      "personPairs": [
+        {
+          "masculine": "Partner",
+          "masculinePlural": "Partner",
+          "feminine": "Partnerin",
+          "femininePlural": "Partnerinnen",
+          "meaningEn": "partner (m./f.)",
+          "page": 3
+        }
+      ],
+      "phrases": [
+        {
+          "id": "phrase:status-keine-kinder",
+          "intent": "status-children-none",
+          "register": "neutral",
+          "de": "keine Kinder",
+          "source": "glossary",
+          "page": 3,
+          "exercise": "Lektion 02, 1"
+        },
+        {
+          "id": "phrase:work-job-stelle-haben",
+          "intent": "work-statement-job-or-position",
+          "register": "neutral",
+          "de": "Ich habe eine Stelle / einen Job als …",
+          "source": "coursebook",
+          "page": 18,
+          "exercise": "Lektion 02, 6"
+        },
+        {
+          "id": "phrase:work-ausbildung-praktikum",
+          "intent": "work-statement-training-or-internship",
+          "register": "neutral",
+          "de": "Ich mache eine Ausbildung / ein Praktikum als … / bei …",
+          "source": "coursebook",
+          "page": 18,
+          "exercise": "Lektion 02, 6"
+        }
       ],
       "verbs": [
         {
@@ -745,6 +895,11 @@
       "lemma": "Arzt",
       "de": "Paul ist Arzt.",
       "en": "Paul is a doctor."
+    },
+    {
+      "lemma": "Architekt",
+      "de": "Thomas ist Architekt.",
+      "en": "Thomas is an architect."
     },
     {
       "lemma": "Architektin",

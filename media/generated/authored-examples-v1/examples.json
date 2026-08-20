@@ -12,6 +12,12 @@
     "confidence": "high"
   },
   {
+    "lemma": "Architekt",
+    "de": "Thomas ist Architekt.",
+    "en": "Thomas is an architect.",
+    "confidence": "high"
+  },
+  {
     "lemma": "Architektin",
     "de": "Anna ist Architektin.",
     "en": "Anna is an architect.",

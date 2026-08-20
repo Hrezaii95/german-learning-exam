@@ -435,6 +435,10 @@ function publishedProfessionRelations(
     // Overlapping teacher rows can point at otherwise published core lexemes.
     // Their relationship remains review-only and must not enter this learner artifact.
     .filter((relationship) => !relationship.id.startsWith("rel:teacher-row-"))
+    // Not every masculine/feminine pair in Lesson 2 is a job: the glossary also
+    // prints "der Partner / die Partnerin". Those carry the same person-form
+    // link, and belong in the vocabulary, but never in the professions deck.
+    .filter((relationship) => !relationship.id.startsWith("rel:person-pair-"))
     .filter((relationship) => indexes.byId.has(relationship.fromId) && indexes.byId.has(relationship.toId))
     .filter((relationship) => {
       const from = indexes.byId.get(relationship.fromId);

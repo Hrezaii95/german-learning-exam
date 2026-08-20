@@ -65,6 +65,7 @@ const EXPECTED_APP_AUTHORED: ReadonlyArray<{
 }> = [
   { id: "lex:aerztin", de: "Maria ist Ärztin.", en: "Maria is a doctor." },
   { id: "lex:arzt", de: "Paul ist Arzt.", en: "Paul is a doctor." },
+  { id: "lex:architekt", de: "Thomas ist Architekt.", en: "Thomas is an architect." },
   { id: "lex:architektin", de: "Anna ist Architektin.", en: "Anna is an architect." },
   { id: "lex:allein", de: "Ich bin allein.", en: "I am alone." },
   { id: "lex:alter", de: "Mein Alter ist 30 Jahre.", en: "I am 30 years old." },

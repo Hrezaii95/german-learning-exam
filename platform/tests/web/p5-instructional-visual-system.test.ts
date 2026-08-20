@@ -122,7 +122,7 @@ describe("P5 instructional visual system", () => {
     const qaDetails = details.details.filter((detail) => detail.kind === "QAPair");
     const grammarDetails = details.details.filter((detail) => detail.kind === "GrammarConcept");
     expect(qaDetails).toHaveLength(15);
-    expect(grammarDetails).toHaveLength(10);
+    expect(grammarDetails).toHaveLength(11);
 
     for (const detail of qaDetails) {
       const html = renderToStaticMarkup(createElement(QuestionAnswerFlowVisual, { detail }));

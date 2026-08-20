@@ -64,10 +64,35 @@ const EXPECTED_EXAMPLE_IDS = [
 ] as const;
 
 /** How many words carry a sentence the app wrote and nobody has checked yet. */
-const APP_AUTHORED_COUNT = 62;
+const APP_AUTHORED_COUNT = 63;
 
-/** The one published word with no sentence of either kind. */
-const NO_EXAMPLE_ID = "lex:architekt";
+/**
+ * The published words with no sentence of either kind.
+ *
+ * All fourteen were encoded straight from the official glossary — the Lesson 1
+ * courtesy phrases and pronouns, and the Lesson 2 profile nouns. The glossary
+ * prints them as bare headwords with no example beside them, and the app has
+ * not written one, so the honest rendering is no example section at all.
+ */
+const NO_EXAMPLE_IDS = [
+  "lex:danke",
+  "lex:du",
+  "lex:entschuldigung",
+  "lex:er",
+  "lex:ich",
+  "lex:interview",
+  "lex:partner",
+  "lex:partnerin",
+  "lex:sie",
+  "lex:sie-formal",
+  "lex:text",
+  "lex:und-dir",
+  "lex:wie-bitte",
+  "lex:zusammenleben",
+] as const;
+
+/** One of them, used where a single rendered page is enough. */
+const NO_EXAMPLE_ID = "lex:interview";
 
 function vocabulary(
   projection: LearnerDetailProjection,
@@ -90,7 +115,7 @@ describe("vocabulary example projection", () => {
   }
 
   it("projects a quoted example for exactly the words the sources show in use", () => {
-    expect(lexemes()).toHaveLength(69);
+    expect(lexemes()).toHaveLength(83);
     const quoted = lexemes().filter((row) => row.example?.origin === "glossary");
     expect(quoted.map((row) => row.id).sort()).toEqual([...EXPECTED_EXAMPLE_IDS]);
   });
@@ -160,7 +185,7 @@ describe("vocabulary example projection", () => {
 
   it("projects null — never an empty or placeholder example — for the rest", () => {
     const others = lexemes().filter((row) => row.example == null);
-    expect(others.map((row) => row.id)).toEqual([NO_EXAMPLE_ID]);
+    expect(others.map((row) => row.id).sort()).toEqual([...NO_EXAMPLE_IDS].sort());
   });
 
   it("keeps internal ids and file paths out of every learner-visible label", () => {

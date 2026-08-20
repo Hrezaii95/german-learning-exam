@@ -260,6 +260,69 @@
     },
     {
       "kind": "SourceAssertion",
+      "id": "assert:gram-und-linking-l1-notice",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "Lesson 1 grammar"
+      },
+      "subjectId": "gram:und-linking-l1",
+      "field": "noticeTarget",
+      "value": "Two statements about the same person join into one sentence with und.",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:gram-und-linking-l1-rules",
+      "sourceId": "source:content-spec-lessons-01-02",
+      "location": {
+        "region": "Lesson 1 grammar"
+      },
+      "subjectId": "gram:und-linking-l1",
+      "field": "ruleSteps",
+      "value": [
+        {
+          "id": "und-links-two-statements",
+          "notice": "Join the two statements with und; each half keeps its own person and finite verb.",
+          "model": "Sie kommt aus Frankreich und sie lernt Deutsch."
+        },
+        {
+          "id": "und-drops-the-repeated-subject",
+          "notice": "When both halves share the same subject, the second one can be left out.",
+          "model": "Sie kommt aus Frankreich und lernt Deutsch."
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:gram-und-linking-l1-models",
+      "sourceId": "source:workbook-momente-a11",
+      "location": {
+        "printedPage": 8,
+        "exercise": "Lektion 01, 6"
+      },
+      "subjectId": "gram:und-linking-l1",
+      "field": "ruleSteps.model",
+      "value": [
+        "Sie kommt aus Frankreich und sie lernt Deutsch.",
+        "Sie kommt aus Frankreich und lernt Deutsch."
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
       "id": "assert:gram-present-conjugation-l1-notice",
       "sourceId": "source:content-spec-lessons-01-02",
       "location": {
@@ -997,10 +1060,47 @@
     },
     {
       "kind": "SourceAssertion",
+      "id": "assert:lex-und-dir-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:und-dir",
+      "field": "lemma",
+      "value": "Und dir?",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-und-dir-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:und-dir",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:und-dir-en",
+          "glossEn": "What about you?"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
       "id": "assert:lex-auch-super-lemma",
       "sourceId": "source:alpha-content-bundle",
       "location": {
-        "printedPage": 1
+        "printedPage": 2
       },
       "subjectId": "lex:auch-super",
       "field": "lemma",
@@ -1016,7 +1116,7 @@
       "id": "assert:lex-auch-super-meanings",
       "sourceId": "source:alpha-content-bundle",
       "location": {
-        "printedPage": 1
+        "printedPage": 2
       },
       "subjectId": "lex:auch-super",
       "field": "meanings",
@@ -1048,6 +1148,302 @@
       "extraction": "generated",
       "confidence": 0.7,
       "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-entschuldigung-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:entschuldigung",
+      "field": "lemma",
+      "value": "Entschuldigung.",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-entschuldigung-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:entschuldigung",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:entschuldigung-en",
+          "glossEn": "Sorry."
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-wie-bitte-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:wie-bitte",
+      "field": "lemma",
+      "value": "Wie bitte?",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-wie-bitte-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:wie-bitte",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:wie-bitte-en",
+          "glossEn": "Pardon?"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-danke-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:danke",
+      "field": "lemma",
+      "value": "Danke.",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-danke-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:danke",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:danke-en",
+          "glossEn": "Thank you."
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-ich-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:ich",
+      "field": "lemma",
+      "value": "ich",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-ich-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:ich",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:ich-en",
+          "glossEn": "I"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-du-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:du",
+      "field": "lemma",
+      "value": "du",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-du-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 1
+      },
+      "subjectId": "lex:du",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:du-en",
+          "glossEn": "you"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-er-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:er",
+      "field": "lemma",
+      "value": "er",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-er-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:er",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:er-en",
+          "glossEn": "he"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-sie-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:sie",
+      "field": "lemma",
+      "value": "sie",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-sie-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:sie",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:sie-en",
+          "glossEn": "she"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-sie-formal-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:sie-formal",
+      "field": "lemma",
+      "value": "Sie",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-sie-formal-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 2
+      },
+      "subjectId": "lex:sie-formal",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:sie-formal-en",
+          "glossEn": "you (formal)"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
     },
     {
       "kind": "SourceAssertion",
@@ -3291,6 +3687,206 @@
       "status": "verified",
       "reviewer": "c1-source-encode",
       "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-identity-und-wer-bist-du-fixed",
+      "sourceId": "source:glossary-momente-a11",
+      "location": {
+        "printedPage": 1,
+        "exercise": "Lektion 01, 1"
+      },
+      "subjectId": "phrase:identity-und-wer-bist-du",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Und wer bist du?"
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-identity-und-wer-bist-du-accepted",
+      "sourceId": "source:glossary-momente-a11",
+      "location": {
+        "printedPage": 1,
+        "exercise": "Lektion 01, 1"
+      },
+      "subjectId": "phrase:identity-und-wer-bist-du",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Und wer bist du?"
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-identity-wer-sind-sie-fixed",
+      "sourceId": "source:glossary-momente-a11",
+      "location": {
+        "printedPage": 2,
+        "exercise": "Lektion 01, 8"
+      },
+      "subjectId": "phrase:identity-wer-sind-sie",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Wer sind Sie?"
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-identity-wer-sind-sie-accepted",
+      "sourceId": "source:glossary-momente-a11",
+      "location": {
+        "printedPage": 2,
+        "exercise": "Lektion 01, 8"
+      },
+      "subjectId": "phrase:identity-wer-sind-sie",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Wer sind Sie?"
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-name-answer-ich-bin-fixed",
+      "sourceId": "source:glossary-momente-a11",
+      "location": {
+        "printedPage": 1,
+        "exercise": "Lektion 01, 1"
+      },
+      "subjectId": "phrase:name-answer-ich-bin",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich bin …"
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-name-answer-ich-bin-accepted",
+      "sourceId": "source:glossary-momente-a11",
+      "location": {
+        "printedPage": 1,
+        "exercise": "Lektion 01, 1"
+      },
+      "subjectId": "phrase:name-answer-ich-bin",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich bin …"
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-wellbeing-und-ihnen-fixed",
+      "sourceId": "source:workbook-momente-a11",
+      "location": {
+        "printedPage": 9,
+        "exercise": "Lektion 01, Übung zu Kursbuch 8"
+      },
+      "subjectId": "phrase:wellbeing-und-ihnen",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Und Ihnen?"
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-wellbeing-und-ihnen-accepted",
+      "sourceId": "source:workbook-momente-a11",
+      "location": {
+        "printedPage": 9,
+        "exercise": "Lektion 01, Übung zu Kursbuch 8"
+      },
+      "subjectId": "phrase:wellbeing-und-ihnen",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Und Ihnen?"
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
     }
   ],
   "mediaAssets": [],
@@ -3928,6 +4524,42 @@
     },
     {
       "kind": "Lexeme",
+      "id": "lex:und-dir",
+      "lemma": "Und dir?",
+      "partOfSpeech": "phrase",
+      "meanings": [
+        {
+          "id": "meaning:und-dir-en",
+          "glossEn": "What about you?"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:und-dir-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-und-dir-lemma",
+        "assert:lex-und-dir-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-und-dir-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-und-dir-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
       "id": "lex:auch-super",
       "lemma": "Auch super.",
       "partOfSpeech": "phrase",
@@ -3967,6 +4599,294 @@
         "de": "Auch super.",
         "translationEn": "I'm great too.",
         "reviewState": "pending-german-review"
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:entschuldigung",
+      "lemma": "Entschuldigung.",
+      "partOfSpeech": "phrase",
+      "meanings": [
+        {
+          "id": "meaning:entschuldigung-en",
+          "glossEn": "Sorry."
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:entschuldigung-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-entschuldigung-lemma",
+        "assert:lex-entschuldigung-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-entschuldigung-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-entschuldigung-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:wie-bitte",
+      "lemma": "Wie bitte?",
+      "partOfSpeech": "phrase",
+      "meanings": [
+        {
+          "id": "meaning:wie-bitte-en",
+          "glossEn": "Pardon?"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:wie-bitte-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-wie-bitte-lemma",
+        "assert:lex-wie-bitte-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-wie-bitte-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-wie-bitte-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:danke",
+      "lemma": "Danke.",
+      "partOfSpeech": "phrase",
+      "meanings": [
+        {
+          "id": "meaning:danke-en",
+          "glossEn": "Thank you."
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:danke-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-danke-lemma",
+        "assert:lex-danke-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-danke-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-danke-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:ich",
+      "lemma": "ich",
+      "partOfSpeech": "pronoun",
+      "meanings": [
+        {
+          "id": "meaning:ich-en",
+          "glossEn": "I"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:ich-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-ich-lemma",
+        "assert:lex-ich-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-ich-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-ich-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:du",
+      "lemma": "du",
+      "partOfSpeech": "pronoun",
+      "meanings": [
+        {
+          "id": "meaning:du-en",
+          "glossEn": "you"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:du-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-du-lemma",
+        "assert:lex-du-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-du-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-du-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:er",
+      "lemma": "er",
+      "partOfSpeech": "pronoun",
+      "meanings": [
+        {
+          "id": "meaning:er-en",
+          "glossEn": "he"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:er-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-er-lemma",
+        "assert:lex-er-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-er-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-er-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:sie",
+      "lemma": "sie",
+      "partOfSpeech": "pronoun",
+      "meanings": [
+        {
+          "id": "meaning:sie-en",
+          "glossEn": "she"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:sie-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-sie-lemma",
+        "assert:lex-sie-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-sie-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-sie-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:sie-formal",
+      "lemma": "Sie",
+      "partOfSpeech": "pronoun",
+      "meanings": [
+        {
+          "id": "meaning:sie-formal-en",
+          "glossEn": "you (formal)"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:sie-formal-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-sie-formal-lemma",
+        "assert:lex-sie-formal-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-sie-formal-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-sie-formal-meanings"
+          }
+        ]
       }
     },
     {
@@ -5199,6 +6119,93 @@
     },
     {
       "kind": "GrammarConcept",
+      "id": "gram:und-linking-l1",
+      "titleEn": "Linking with und",
+      "titleDe": "Sätze mit und verbinden",
+      "prerequisiteIds": [
+        "gram:main-clause-word-order-l1"
+      ],
+      "noticeTarget": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Two statements about the same person join into one sentence with und."
+          }
+        ]
+      },
+      "ruleSteps": [
+        {
+          "id": "und-links-two-statements",
+          "notice": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "Join the two statements with und; each half keeps its own person and finite verb."
+              }
+            ]
+          },
+          "model": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "Sie kommt aus Frankreich und sie lernt Deutsch."
+              }
+            ]
+          }
+        },
+        {
+          "id": "und-drops-the-repeated-subject",
+          "notice": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "When both halves share the same subject, the second one can be left out."
+              }
+            ]
+          },
+          "model": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "Sie kommt aus Frankreich und lernt Deutsch."
+              }
+            ]
+          }
+        }
+      ],
+      "exampleIds": [],
+      "commonErrorTags": [
+        "subject-repetition",
+        "verb-position"
+      ],
+      "activityTemplateIds": [],
+      "relationIds": [
+        "rel:gram-und-linking-l1-introduced-01",
+        "rel:gram-und-linking-l1-practised-lesson-01-pronoun-verb-builder",
+        "rel:gram-und-linking-l1-practised-lesson-01-guided-intro-recording"
+      ],
+      "sourceAssertionIds": [
+        "assert:gram-und-linking-l1-notice",
+        "assert:gram-und-linking-l1-rules",
+        "assert:gram-und-linking-l1-models"
+      ],
+      "mediaIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "noticeTarget",
+            "assertionId": "assert:gram-und-linking-l1-notice"
+          },
+          {
+            "field": "ruleSteps",
+            "assertionId": "assert:gram-und-linking-l1-rules"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "GrammarConcept",
       "id": "gram:present-conjugation-l1",
       "titleEn": "Present-tense person forms",
       "titleDe": "Präsensformen",
@@ -6338,6 +7345,194 @@
           }
         ]
       }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:identity-und-wer-bist-du",
+      "intent": "identity-question-casual",
+      "register": "informal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Und wer bist du?"
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Und wer bist du?"
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [
+        "rel:identity-und-wer-bist-du-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:phrase-identity-und-wer-bist-du-fixed",
+        "assert:phrase-identity-und-wer-bist-du-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-identity-und-wer-bist-du-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-identity-und-wer-bist-du-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:identity-wer-sind-sie",
+      "intent": "identity-question-formal",
+      "register": "formal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Wer sind Sie?"
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Wer sind Sie?"
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [
+        "rel:identity-wer-sind-sie-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:phrase-identity-wer-sind-sie-fixed",
+        "assert:phrase-identity-wer-sind-sie-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-identity-wer-sind-sie-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-identity-wer-sind-sie-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:name-answer-ich-bin",
+      "intent": "name-answer",
+      "register": "neutral",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich bin …"
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich bin …"
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [
+        "rel:name-answer-ich-bin-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:phrase-name-answer-ich-bin-fixed",
+        "assert:phrase-name-answer-ich-bin-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-name-answer-ich-bin-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-name-answer-ich-bin-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:wellbeing-und-ihnen",
+      "intent": "wellbeing-follow-up-formal",
+      "register": "formal",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Und Ihnen?"
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Und Ihnen?"
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [
+        "rel:wellbeing-und-ihnen-introduced-l1"
+      ],
+      "sourceAssertionIds": [
+        "assert:phrase-wellbeing-und-ihnen-fixed",
+        "assert:phrase-wellbeing-und-ihnen-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-wellbeing-und-ihnen-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-wellbeing-und-ihnen-accepted"
+          }
+        ]
+      }
     }
   ],
   "qaPairs": [
@@ -6698,6 +7893,29 @@
     },
     {
       "kind": "Relationship",
+      "id": "rel:gram-und-linking-l1-introduced-01",
+      "type": "introduced-in",
+      "fromId": "gram:und-linking-l1",
+      "toId": "lesson:01"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:gram-und-linking-l1-practised-lesson-01-pronoun-verb-builder",
+      "type": "practised-in",
+      "fromId": "gram:und-linking-l1",
+      "toId": "activity:lesson-01-pronoun-verb-builder",
+      "lessonId": "lesson:01"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:gram-und-linking-l1-practised-lesson-01-guided-intro-recording",
+      "type": "practised-in",
+      "fromId": "gram:und-linking-l1",
+      "toId": "activity:lesson-01-guided-intro-recording",
+      "lessonId": "lesson:01"
+    },
+    {
+      "kind": "Relationship",
       "id": "rel:gram-present-conjugation-l1-introduced-01",
       "type": "introduced-in",
       "fromId": "gram:present-conjugation-l1",
@@ -6725,7 +7943,7 @@
       "type": "introduced-in",
       "fromId": "lex:hallo",
       "toId": "lesson:01",
-      "order": 19
+      "order": 22
     },
     {
       "kind": "Relationship",
@@ -6733,7 +7951,7 @@
       "type": "introduced-in",
       "fromId": "lex:guten-tag",
       "toId": "lesson:01",
-      "order": 20
+      "order": 23
     },
     {
       "kind": "Relationship",
@@ -6741,7 +7959,7 @@
       "type": "introduced-in",
       "fromId": "lex:guten-morgen",
       "toId": "lesson:01",
-      "order": 21
+      "order": 24
     },
     {
       "kind": "Relationship",
@@ -6749,7 +7967,7 @@
       "type": "introduced-in",
       "fromId": "lex:guten-abend",
       "toId": "lesson:01",
-      "order": 22
+      "order": 25
     },
     {
       "kind": "Relationship",
@@ -6757,7 +7975,7 @@
       "type": "introduced-in",
       "fromId": "lex:gute-nacht",
       "toId": "lesson:01",
-      "order": 23
+      "order": 26
     },
     {
       "kind": "Relationship",
@@ -6765,7 +7983,7 @@
       "type": "introduced-in",
       "fromId": "lex:tschues",
       "toId": "lesson:01",
-      "order": 24
+      "order": 27
     },
     {
       "kind": "Relationship",
@@ -6773,7 +7991,7 @@
       "type": "introduced-in",
       "fromId": "lex:auf-wiedersehen",
       "toId": "lesson:01",
-      "order": 25
+      "order": 28
     },
     {
       "kind": "Relationship",
@@ -6781,7 +7999,7 @@
       "type": "introduced-in",
       "fromId": "lex:super",
       "toId": "lesson:01",
-      "order": 26
+      "order": 29
     },
     {
       "kind": "Relationship",
@@ -6789,7 +8007,7 @@
       "type": "introduced-in",
       "fromId": "lex:sehr-gut-danke",
       "toId": "lesson:01",
-      "order": 27
+      "order": 30
     },
     {
       "kind": "Relationship",
@@ -6797,7 +8015,7 @@
       "type": "introduced-in",
       "fromId": "lex:gut-danke",
       "toId": "lesson:01",
-      "order": 28
+      "order": 31
     },
     {
       "kind": "Relationship",
@@ -6805,7 +8023,7 @@
       "type": "introduced-in",
       "fromId": "lex:es-geht",
       "toId": "lesson:01",
-      "order": 29
+      "order": 32
     },
     {
       "kind": "Relationship",
@@ -6813,7 +8031,15 @@
       "type": "introduced-in",
       "fromId": "lex:nicht-so-gut",
       "toId": "lesson:01",
-      "order": 30
+      "order": 33
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:und-dir-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "lex:und-dir",
+      "toId": "lesson:01",
+      "order": 34
     },
     {
       "kind": "Relationship",
@@ -6821,7 +8047,71 @@
       "type": "introduced-in",
       "fromId": "lex:auch-super",
       "toId": "lesson:01",
-      "order": 31
+      "order": 35
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:entschuldigung-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "lex:entschuldigung",
+      "toId": "lesson:01",
+      "order": 36
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:wie-bitte-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "lex:wie-bitte",
+      "toId": "lesson:01",
+      "order": 37
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:danke-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "lex:danke",
+      "toId": "lesson:01",
+      "order": 38
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:ich-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "lex:ich",
+      "toId": "lesson:01",
+      "order": 39
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:du-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "lex:du",
+      "toId": "lesson:01",
+      "order": 40
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:er-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "lex:er",
+      "toId": "lesson:01",
+      "order": 41
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:sie-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "lex:sie",
+      "toId": "lesson:01",
+      "order": 42
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:sie-formal-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "lex:sie-formal",
+      "toId": "lesson:01",
+      "order": 43
     },
     {
       "kind": "Relationship",
@@ -6829,7 +8119,7 @@
       "type": "introduced-in",
       "fromId": "lex:deutschland",
       "toId": "lesson:01",
-      "order": 32
+      "order": 44
     },
     {
       "kind": "Relationship",
@@ -6837,7 +8127,7 @@
       "type": "introduced-in",
       "fromId": "lex:eritrea",
       "toId": "lesson:01",
-      "order": 33
+      "order": 45
     },
     {
       "kind": "Relationship",
@@ -6845,7 +8135,7 @@
       "type": "introduced-in",
       "fromId": "lex:oesterreich",
       "toId": "lesson:01",
-      "order": 34
+      "order": 46
     },
     {
       "kind": "Relationship",
@@ -6853,7 +8143,7 @@
       "type": "introduced-in",
       "fromId": "lex:spanien",
       "toId": "lesson:01",
-      "order": 35
+      "order": 47
     },
     {
       "kind": "Relationship",
@@ -6861,7 +8151,7 @@
       "type": "introduced-in",
       "fromId": "lex:frankreich",
       "toId": "lesson:01",
-      "order": 36
+      "order": 48
     },
     {
       "kind": "Relationship",
@@ -6869,7 +8159,7 @@
       "type": "introduced-in",
       "fromId": "lex:schweiz",
       "toId": "lesson:01",
-      "order": 37
+      "order": 49
     },
     {
       "kind": "Relationship",
@@ -6877,7 +8167,7 @@
       "type": "introduced-in",
       "fromId": "lex:tuerkei",
       "toId": "lesson:01",
-      "order": 38
+      "order": 50
     },
     {
       "kind": "Relationship",
@@ -6885,7 +8175,7 @@
       "type": "introduced-in",
       "fromId": "lex:usa",
       "toId": "lesson:01",
-      "order": 39
+      "order": 51
     },
     {
       "kind": "Relationship",
@@ -6893,7 +8183,7 @@
       "type": "introduced-in",
       "fromId": "lex:name",
       "toId": "lesson:01",
-      "order": 40
+      "order": 52
     },
     {
       "kind": "Relationship",
@@ -6901,7 +8191,7 @@
       "type": "introduced-in",
       "fromId": "lex:vorname",
       "toId": "lesson:01",
-      "order": 41
+      "order": 53
     },
     {
       "kind": "Relationship",
@@ -6909,7 +8199,7 @@
       "type": "introduced-in",
       "fromId": "lex:familienname",
       "toId": "lesson:01",
-      "order": 42
+      "order": 54
     },
     {
       "kind": "Relationship",
@@ -6917,7 +8207,7 @@
       "type": "introduced-in",
       "fromId": "lex:herr",
       "toId": "lesson:01",
-      "order": 43
+      "order": 55
     },
     {
       "kind": "Relationship",
@@ -6925,7 +8215,7 @@
       "type": "introduced-in",
       "fromId": "lex:frau",
       "toId": "lesson:01",
-      "order": 44
+      "order": 56
     },
     {
       "kind": "Relationship",
@@ -7002,6 +8292,34 @@
       "id": "rel:wellbeing-formal-introduced-l1",
       "type": "introduced-in",
       "fromId": "qa:wellbeing-formal",
+      "toId": "lesson:01"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:identity-und-wer-bist-du-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "phrase:identity-und-wer-bist-du",
+      "toId": "lesson:01"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:identity-wer-sind-sie-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "phrase:identity-wer-sind-sie",
+      "toId": "lesson:01"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:name-answer-ich-bin-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "phrase:name-answer-ich-bin",
+      "toId": "lesson:01"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:wellbeing-und-ihnen-introduced-l1",
+      "type": "introduced-in",
+      "fromId": "phrase:wellbeing-und-ihnen",
       "toId": "lesson:01"
     }
   ],
@@ -7224,6 +8542,15 @@
     },
     {
       "kind": "ContentGap",
+      "id": "gap:audio-und-dir",
+      "objectId": "lex:und-dir",
+      "field": "pronunciation.audioId",
+      "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
+      "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
       "id": "gap:example-auch-super-german-review",
       "objectId": "lex:auch-super",
       "field": "example",
@@ -7235,6 +8562,78 @@
       "kind": "ContentGap",
       "id": "gap:audio-auch-super",
       "objectId": "lex:auch-super",
+      "field": "pronunciation.audioId",
+      "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
+      "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:audio-entschuldigung",
+      "objectId": "lex:entschuldigung",
+      "field": "pronunciation.audioId",
+      "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
+      "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:audio-wie-bitte",
+      "objectId": "lex:wie-bitte",
+      "field": "pronunciation.audioId",
+      "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
+      "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:audio-danke",
+      "objectId": "lex:danke",
+      "field": "pronunciation.audioId",
+      "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
+      "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:audio-ich",
+      "objectId": "lex:ich",
+      "field": "pronunciation.audioId",
+      "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
+      "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:audio-du",
+      "objectId": "lex:du",
+      "field": "pronunciation.audioId",
+      "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
+      "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:audio-er",
+      "objectId": "lex:er",
+      "field": "pronunciation.audioId",
+      "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
+      "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:audio-sie",
+      "objectId": "lex:sie",
+      "field": "pronunciation.audioId",
+      "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
+      "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:audio-sie-formal",
+      "objectId": "lex:sie-formal",
       "field": "pronunciation.audioId",
       "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
       "owner": "codex-media",
@@ -7458,6 +8857,15 @@
     },
     {
       "kind": "ContentGap",
+      "id": "gap:meaning-und-ihnen",
+      "objectId": "phrase:wellbeing-und-ihnen",
+      "field": "meanings",
+      "reason": "The German is printed in the workbook (printed page 9, Lesson 1) but the word \"Ihnen\" appears nowhere in the official English glossary, so no publisher English exists for the formal variant. Encoded German-only; a glossed vocabulary entry would have needed an English half no source prints.",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
       "id": "gap:grammar-l1-word-order",
       "objectId": "lesson:01",
       "field": "grammarConcepts",
@@ -7470,16 +8878,7 @@
       "id": "gap:alphabet-l1",
       "objectId": "lesson:01",
       "field": "lexemes.alphabet",
-      "reason": "A–Z/Ä/Ö/Ü/ß alphabet inventory is required by docs/11 but absent from alpha-content.json",
-      "owner": "codex-content",
-      "blocksPublication": false
-    },
-    {
-      "kind": "ContentGap",
-      "id": "gap:pronouns-l1",
-      "objectId": "lesson:01",
-      "field": "lexemes.pronouns",
-      "reason": "Pronouns ich/du/er/sie/Sie required by docs/11 but absent as typed entries in alpha-content.json",
+      "reason": "A–Z/Ä/Ö/Ü/ß alphabet inventory is required by docs/11. The coursebook prints the letters and their German names on printed page 12, but no official source prints an English meaning for a single letter, and a vocabulary entry cannot be stored without one",
       "owner": "codex-content",
       "blocksPublication": false
     },

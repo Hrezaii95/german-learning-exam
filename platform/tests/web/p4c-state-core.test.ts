@@ -156,10 +156,12 @@ describe("P4C exact learner-safe registry", () => {
     const snapshot = learnerStateRegistrySnapshot();
     expect(snapshot.lessonIds).toHaveLength(2);
     expect(snapshot.activityIds).toHaveLength(23);
-    // 153 concepts = previous 141 + 6 Lesson 2 verbs + qa:work-casual-main + its 5 phrase patterns.
-    expect(snapshot.conceptIds).toHaveLength(153);
+    // 175 concepts = previous 153 + 14 source-backed lexemes (courtesy, pronouns,
+    // Partner/Partnerin, Interview, Text, zusammenleben, Und dir?), 7 standalone
+    // phrase patterns, and the Lesson 1 und-linking grammar concept.
+    expect(snapshot.conceptIds).toHaveLength(175);
     expect(snapshot.templateIds).toEqual([...REVIEW_TEMPLATE_IDS].sort());
-    expect(snapshot.allEntityIds).toHaveLength(185);
+    expect(snapshot.allEntityIds).toHaveLength(207);
     expect(REVIEW_TEMPLATES).toHaveLength(7);
     expect(REVIEW_TEMPLATES.filter((row) => row.modality === "listening")).toHaveLength(0);
     expect(REVIEW_TEMPLATES.find((row) => row.id === "template:profession-qa-production"))

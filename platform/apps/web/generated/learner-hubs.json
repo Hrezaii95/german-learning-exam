@@ -7,12 +7,14 @@
         "interjection",
         "noun",
         "phrase",
-        "proper-noun"
+        "pronoun",
+        "proper-noun",
+        "verb"
       ],
       "description": "Words from your course, including the Lesson 2 job vocabulary.",
       "experience": null,
       "id": "vocabulary",
-      "itemCount": 69,
+      "itemCount": 83,
       "items": [
         {
           "category": "noun",
@@ -566,6 +568,51 @@
           "sourcePriority": 1
         },
         {
+          "category": "phrase",
+          "displayLabel": "Danke.",
+          "hubDestination": {
+            "hub": "vocabulary",
+            "path": "/vocabulary/lex:danke"
+          },
+          "id": "lex:danke",
+          "kind": "Lexeme",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "Danke.",
+              "field": "lemma",
+              "matchKeys": [
+                "danke."
+              ]
+            },
+            {
+              "displayText": "Danke.",
+              "field": "label",
+              "matchKeys": [
+                "danke."
+              ]
+            },
+            {
+              "displayText": "Thank you.",
+              "field": "meaning",
+              "matchKeys": [
+                "thank you."
+              ]
+            },
+            {
+              "displayText": "phrase",
+              "field": "category",
+              "matchKeys": [
+                "phrase"
+              ]
+            }
+          ],
+          "sourcePriority": 1
+        },
+        {
           "category": "proper-noun",
           "displayLabel": "Deutschland",
           "hubDestination": {
@@ -605,6 +652,141 @@
               "field": "category",
               "matchKeys": [
                 "proper-noun"
+              ]
+            }
+          ],
+          "sourcePriority": 1
+        },
+        {
+          "category": "pronoun",
+          "displayLabel": "du",
+          "hubDestination": {
+            "hub": "vocabulary",
+            "path": "/vocabulary/lex:du"
+          },
+          "id": "lex:du",
+          "kind": "Lexeme",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "du",
+              "field": "lemma",
+              "matchKeys": [
+                "du"
+              ]
+            },
+            {
+              "displayText": "du",
+              "field": "label",
+              "matchKeys": [
+                "du"
+              ]
+            },
+            {
+              "displayText": "you",
+              "field": "meaning",
+              "matchKeys": [
+                "you"
+              ]
+            },
+            {
+              "displayText": "pronoun",
+              "field": "category",
+              "matchKeys": [
+                "pronoun"
+              ]
+            }
+          ],
+          "sourcePriority": 1
+        },
+        {
+          "category": "phrase",
+          "displayLabel": "Entschuldigung.",
+          "hubDestination": {
+            "hub": "vocabulary",
+            "path": "/vocabulary/lex:entschuldigung"
+          },
+          "id": "lex:entschuldigung",
+          "kind": "Lexeme",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "Entschuldigung.",
+              "field": "lemma",
+              "matchKeys": [
+                "entschuldigung."
+              ]
+            },
+            {
+              "displayText": "Entschuldigung.",
+              "field": "label",
+              "matchKeys": [
+                "entschuldigung."
+              ]
+            },
+            {
+              "displayText": "Sorry.",
+              "field": "meaning",
+              "matchKeys": [
+                "sorry."
+              ]
+            },
+            {
+              "displayText": "phrase",
+              "field": "category",
+              "matchKeys": [
+                "phrase"
+              ]
+            }
+          ],
+          "sourcePriority": 1
+        },
+        {
+          "category": "pronoun",
+          "displayLabel": "er",
+          "hubDestination": {
+            "hub": "vocabulary",
+            "path": "/vocabulary/lex:er"
+          },
+          "id": "lex:er",
+          "kind": "Lexeme",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "er",
+              "field": "lemma",
+              "matchKeys": [
+                "er"
+              ]
+            },
+            {
+              "displayText": "er",
+              "field": "label",
+              "matchKeys": [
+                "er"
+              ]
+            },
+            {
+              "displayText": "he",
+              "field": "meaning",
+              "matchKeys": [
+                "he"
+              ]
+            },
+            {
+              "displayText": "pronoun",
+              "field": "category",
+              "matchKeys": [
+                "pronoun"
               ]
             }
           ],
@@ -1519,6 +1701,51 @@
           "sourcePriority": 1
         },
         {
+          "category": "pronoun",
+          "displayLabel": "ich",
+          "hubDestination": {
+            "hub": "vocabulary",
+            "path": "/vocabulary/lex:ich"
+          },
+          "id": "lex:ich",
+          "kind": "Lexeme",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "ich",
+              "field": "lemma",
+              "matchKeys": [
+                "ich"
+              ]
+            },
+            {
+              "displayText": "ich",
+              "field": "label",
+              "matchKeys": [
+                "ich"
+              ]
+            },
+            {
+              "displayText": "I",
+              "field": "meaning",
+              "matchKeys": [
+                "i"
+              ]
+            },
+            {
+              "displayText": "pronoun",
+              "field": "category",
+              "matchKeys": [
+                "pronoun"
+              ]
+            }
+          ],
+          "sourcePriority": 1
+        },
+        {
           "category": "noun",
           "displayLabel": "der Ingenieur",
           "hubDestination": {
@@ -1624,6 +1851,65 @@
               "field": "meaning",
               "matchKeys": [
                 "engineer"
+              ]
+            },
+            {
+              "displayText": "noun",
+              "field": "category",
+              "matchKeys": [
+                "noun"
+              ]
+            }
+          ],
+          "sourcePriority": 1
+        },
+        {
+          "category": "noun",
+          "displayLabel": "das Interview",
+          "hubDestination": {
+            "hub": "vocabulary",
+            "path": "/vocabulary/lex:interview"
+          },
+          "id": "lex:interview",
+          "kind": "Lexeme",
+          "lessonIds": [
+            "lesson:02"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "Interview",
+              "field": "lemma",
+              "matchKeys": [
+                "interview"
+              ]
+            },
+            {
+              "displayText": "das Interview",
+              "field": "label",
+              "matchKeys": [
+                "das interview"
+              ]
+            },
+            {
+              "displayText": "Interview",
+              "field": "form",
+              "matchKeys": [
+                "interview"
+              ]
+            },
+            {
+              "displayText": "Interviews",
+              "field": "form",
+              "matchKeys": [
+                "interviews"
+              ]
+            },
+            {
+              "displayText": "interview",
+              "field": "meaning",
+              "matchKeys": [
+                "interview"
               ]
             },
             {
@@ -2558,6 +2844,124 @@
         },
         {
           "category": "noun",
+          "displayLabel": "der Partner",
+          "hubDestination": {
+            "hub": "vocabulary",
+            "path": "/vocabulary/lex:partner"
+          },
+          "id": "lex:partner",
+          "kind": "Lexeme",
+          "lessonIds": [
+            "lesson:02"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "Partner",
+              "field": "lemma",
+              "matchKeys": [
+                "partner"
+              ]
+            },
+            {
+              "displayText": "der Partner",
+              "field": "label",
+              "matchKeys": [
+                "der partner"
+              ]
+            },
+            {
+              "displayText": "Partner",
+              "field": "form",
+              "matchKeys": [
+                "partner"
+              ]
+            },
+            {
+              "displayText": "Partner",
+              "field": "form",
+              "matchKeys": [
+                "partner"
+              ]
+            },
+            {
+              "displayText": "partner (m./f.)",
+              "field": "meaning",
+              "matchKeys": [
+                "partner (m./f.)"
+              ]
+            },
+            {
+              "displayText": "noun",
+              "field": "category",
+              "matchKeys": [
+                "noun"
+              ]
+            }
+          ],
+          "sourcePriority": 1
+        },
+        {
+          "category": "noun",
+          "displayLabel": "die Partnerin",
+          "hubDestination": {
+            "hub": "vocabulary",
+            "path": "/vocabulary/lex:partnerin"
+          },
+          "id": "lex:partnerin",
+          "kind": "Lexeme",
+          "lessonIds": [
+            "lesson:02"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "Partnerin",
+              "field": "lemma",
+              "matchKeys": [
+                "partnerin"
+              ]
+            },
+            {
+              "displayText": "die Partnerin",
+              "field": "label",
+              "matchKeys": [
+                "die partnerin"
+              ]
+            },
+            {
+              "displayText": "Partnerin",
+              "field": "form",
+              "matchKeys": [
+                "partnerin"
+              ]
+            },
+            {
+              "displayText": "Partnerinnen",
+              "field": "form",
+              "matchKeys": [
+                "partnerinnen"
+              ]
+            },
+            {
+              "displayText": "partner (m./f.)",
+              "field": "meaning",
+              "matchKeys": [
+                "partner (m./f.)"
+              ]
+            },
+            {
+              "displayText": "noun",
+              "field": "category",
+              "matchKeys": [
+                "noun"
+              ]
+            }
+          ],
+          "sourcePriority": 1
+        },
+        {
+          "category": "noun",
           "displayLabel": "das Praktikum",
           "hubDestination": {
             "hub": "vocabulary",
@@ -2965,6 +3369,96 @@
           "sourcePriority": 1
         },
         {
+          "category": "pronoun",
+          "displayLabel": "sie",
+          "hubDestination": {
+            "hub": "vocabulary",
+            "path": "/vocabulary/lex:sie"
+          },
+          "id": "lex:sie",
+          "kind": "Lexeme",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "sie",
+              "field": "lemma",
+              "matchKeys": [
+                "sie"
+              ]
+            },
+            {
+              "displayText": "sie",
+              "field": "label",
+              "matchKeys": [
+                "sie"
+              ]
+            },
+            {
+              "displayText": "she",
+              "field": "meaning",
+              "matchKeys": [
+                "she"
+              ]
+            },
+            {
+              "displayText": "pronoun",
+              "field": "category",
+              "matchKeys": [
+                "pronoun"
+              ]
+            }
+          ],
+          "sourcePriority": 1
+        },
+        {
+          "category": "pronoun",
+          "displayLabel": "Sie",
+          "hubDestination": {
+            "hub": "vocabulary",
+            "path": "/vocabulary/lex:sie-formal"
+          },
+          "id": "lex:sie-formal",
+          "kind": "Lexeme",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "Sie",
+              "field": "lemma",
+              "matchKeys": [
+                "sie"
+              ]
+            },
+            {
+              "displayText": "Sie",
+              "field": "label",
+              "matchKeys": [
+                "sie"
+              ]
+            },
+            {
+              "displayText": "you (formal)",
+              "field": "meaning",
+              "matchKeys": [
+                "you (formal)"
+              ]
+            },
+            {
+              "displayText": "pronoun",
+              "field": "category",
+              "matchKeys": [
+                "pronoun"
+              ]
+            }
+          ],
+          "sourcePriority": 1
+        },
+        {
           "category": "noun",
           "displayLabel": "der Single",
           "hubDestination": {
@@ -3343,6 +3837,65 @@
           "sourcePriority": 1
         },
         {
+          "category": "noun",
+          "displayLabel": "der Text",
+          "hubDestination": {
+            "hub": "vocabulary",
+            "path": "/vocabulary/lex:text"
+          },
+          "id": "lex:text",
+          "kind": "Lexeme",
+          "lessonIds": [
+            "lesson:02"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "Text",
+              "field": "lemma",
+              "matchKeys": [
+                "text"
+              ]
+            },
+            {
+              "displayText": "der Text",
+              "field": "label",
+              "matchKeys": [
+                "der text"
+              ]
+            },
+            {
+              "displayText": "Text",
+              "field": "form",
+              "matchKeys": [
+                "text"
+              ]
+            },
+            {
+              "displayText": "Texte",
+              "field": "form",
+              "matchKeys": [
+                "texte"
+              ]
+            },
+            {
+              "displayText": "text",
+              "field": "meaning",
+              "matchKeys": [
+                "text"
+              ]
+            },
+            {
+              "displayText": "noun",
+              "field": "category",
+              "matchKeys": [
+                "noun"
+              ]
+            }
+          ],
+          "sourcePriority": 1
+        },
+        {
           "category": "interjection",
           "displayLabel": "Tschüs",
           "hubDestination": {
@@ -3444,6 +3997,51 @@
               "field": "category",
               "matchKeys": [
                 "noun"
+              ]
+            }
+          ],
+          "sourcePriority": 1
+        },
+        {
+          "category": "phrase",
+          "displayLabel": "Und dir?",
+          "hubDestination": {
+            "hub": "vocabulary",
+            "path": "/vocabulary/lex:und-dir"
+          },
+          "id": "lex:und-dir",
+          "kind": "Lexeme",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "Und dir?",
+              "field": "lemma",
+              "matchKeys": [
+                "und dir?"
+              ]
+            },
+            {
+              "displayText": "Und dir?",
+              "field": "label",
+              "matchKeys": [
+                "und dir?"
+              ]
+            },
+            {
+              "displayText": "What about you?",
+              "field": "meaning",
+              "matchKeys": [
+                "what about you?"
+              ]
+            },
+            {
+              "displayText": "phrase",
+              "field": "category",
+              "matchKeys": [
+                "phrase"
               ]
             }
           ],
@@ -3740,6 +4338,51 @@
           "sourcePriority": 1
         },
         {
+          "category": "phrase",
+          "displayLabel": "Wie bitte?",
+          "hubDestination": {
+            "hub": "vocabulary",
+            "path": "/vocabulary/lex:wie-bitte"
+          },
+          "id": "lex:wie-bitte",
+          "kind": "Lexeme",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "Wie bitte?",
+              "field": "lemma",
+              "matchKeys": [
+                "wie bitte?"
+              ]
+            },
+            {
+              "displayText": "Wie bitte?",
+              "field": "label",
+              "matchKeys": [
+                "wie bitte?"
+              ]
+            },
+            {
+              "displayText": "Pardon?",
+              "field": "meaning",
+              "matchKeys": [
+                "pardon?"
+              ]
+            },
+            {
+              "displayText": "phrase",
+              "field": "category",
+              "matchKeys": [
+                "phrase"
+              ]
+            }
+          ],
+          "sourcePriority": 1
+        },
+        {
           "category": "noun",
           "displayLabel": "der Wohnort",
           "hubDestination": {
@@ -3793,6 +4436,51 @@
               "field": "category",
               "matchKeys": [
                 "noun"
+              ]
+            }
+          ],
+          "sourcePriority": 1
+        },
+        {
+          "category": "verb",
+          "displayLabel": "zusammenleben",
+          "hubDestination": {
+            "hub": "vocabulary",
+            "path": "/vocabulary/lex:zusammenleben"
+          },
+          "id": "lex:zusammenleben",
+          "kind": "Lexeme",
+          "lessonIds": [
+            "lesson:02"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "zusammenleben",
+              "field": "lemma",
+              "matchKeys": [
+                "zusammenleben"
+              ]
+            },
+            {
+              "displayText": "zusammenleben",
+              "field": "label",
+              "matchKeys": [
+                "zusammenleben"
+              ]
+            },
+            {
+              "displayText": "to live together",
+              "field": "meaning",
+              "matchKeys": [
+                "to live together"
+              ]
+            },
+            {
+              "displayText": "verb",
+              "field": "category",
+              "matchKeys": [
+                "verb"
               ]
             }
           ],
@@ -4642,7 +5330,7 @@
       "description": "Grammar concepts for Lessons 1–2.",
       "experience": null,
       "id": "grammar",
-      "itemCount": 10,
+      "itemCount": 11,
       "items": [
         {
           "category": "grammar",
@@ -5009,6 +5697,49 @@
         },
         {
           "category": "grammar",
+          "displayLabel": "Sätze mit und verbinden",
+          "hubDestination": {
+            "hub": "grammar",
+            "path": "/grammar/gram:und-linking-l1"
+          },
+          "id": "gram:und-linking-l1",
+          "kind": "GrammarConcept",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "model": "Sie kommt aus Frankreich und sie lernt Deutsch.",
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "Linking with und",
+              "field": "title",
+              "matchKeys": [
+                "linking with und"
+              ]
+            },
+            {
+              "displayText": "Sätze mit und verbinden",
+              "field": "title",
+              "matchKeys": [
+                "sätze mit und verbinden",
+                "saetze mit und verbinden",
+                "satze mit und verbinden"
+              ]
+            },
+            {
+              "displayText": "Sätze mit und verbinden",
+              "field": "label",
+              "matchKeys": [
+                "sätze mit und verbinden",
+                "saetze mit und verbinden",
+                "satze mit und verbinden"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "grammar",
           "displayLabel": "W-Fragen",
           "hubDestination": {
             "hub": "grammar",
@@ -5062,7 +5793,7 @@
       "description": "Phrase patterns and question-and-answer pairs for greetings, identity, and related exchanges.",
       "experience": null,
       "id": "phrases",
-      "itemCount": 64,
+      "itemCount": 71,
       "items": [
         {
           "category": "informal",
@@ -5394,6 +6125,162 @@
               "field": "label",
               "matchKeys": [
                 "wer ist das?"
+              ]
+            },
+            {
+              "displayText": "neutral",
+              "field": "category",
+              "matchKeys": [
+                "neutral"
+              ]
+            }
+          ],
+          "sourcePriority": 1
+        },
+        {
+          "category": "informal",
+          "displayLabel": "Und wer bist du?",
+          "hubDestination": {
+            "hub": "phrases",
+            "path": "/phrases/phrase:identity-und-wer-bist-du"
+          },
+          "id": "phrase:identity-und-wer-bist-du",
+          "kind": "PhrasePattern",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "identity-question-casual",
+              "field": "intent",
+              "matchKeys": [
+                "identity-question-casual"
+              ]
+            },
+            {
+              "displayText": "Und wer bist du?",
+              "field": "realization",
+              "matchKeys": [
+                "und wer bist du?"
+              ]
+            },
+            {
+              "displayText": "Und wer bist du?",
+              "field": "realization",
+              "matchKeys": [
+                "und wer bist du?"
+              ]
+            },
+            {
+              "displayText": "Und wer bist du?",
+              "field": "label",
+              "matchKeys": [
+                "und wer bist du?"
+              ]
+            },
+            {
+              "displayText": "informal",
+              "field": "category",
+              "matchKeys": [
+                "informal"
+              ]
+            }
+          ],
+          "sourcePriority": 1
+        },
+        {
+          "category": "formal",
+          "displayLabel": "Wer sind Sie?",
+          "hubDestination": {
+            "hub": "phrases",
+            "path": "/phrases/phrase:identity-wer-sind-sie"
+          },
+          "id": "phrase:identity-wer-sind-sie",
+          "kind": "PhrasePattern",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "identity-question-formal",
+              "field": "intent",
+              "matchKeys": [
+                "identity-question-formal"
+              ]
+            },
+            {
+              "displayText": "Wer sind Sie?",
+              "field": "realization",
+              "matchKeys": [
+                "wer sind sie?"
+              ]
+            },
+            {
+              "displayText": "Wer sind Sie?",
+              "field": "realization",
+              "matchKeys": [
+                "wer sind sie?"
+              ]
+            },
+            {
+              "displayText": "Wer sind Sie?",
+              "field": "label",
+              "matchKeys": [
+                "wer sind sie?"
+              ]
+            },
+            {
+              "displayText": "formal",
+              "field": "category",
+              "matchKeys": [
+                "formal"
+              ]
+            }
+          ],
+          "sourcePriority": 1
+        },
+        {
+          "category": "neutral",
+          "displayLabel": "Ich bin …",
+          "hubDestination": {
+            "hub": "phrases",
+            "path": "/phrases/phrase:name-answer-ich-bin"
+          },
+          "id": "phrase:name-answer-ich-bin",
+          "kind": "PhrasePattern",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "name-answer",
+              "field": "intent",
+              "matchKeys": [
+                "name-answer"
+              ]
+            },
+            {
+              "displayText": "Ich bin …",
+              "field": "realization",
+              "matchKeys": [
+                "ich bin …"
+              ]
+            },
+            {
+              "displayText": "Ich bin …",
+              "field": "realization",
+              "matchKeys": [
+                "ich bin …"
+              ]
+            },
+            {
+              "displayText": "Ich bin …",
+              "field": "label",
+              "matchKeys": [
+                "ich bin …"
               ]
             },
             {
@@ -6673,6 +7560,58 @@
           "sourcePriority": 1
         },
         {
+          "category": "neutral",
+          "displayLabel": "keine Kinder",
+          "hubDestination": {
+            "hub": "phrases",
+            "path": "/phrases/phrase:status-keine-kinder"
+          },
+          "id": "phrase:status-keine-kinder",
+          "kind": "PhrasePattern",
+          "lessonIds": [
+            "lesson:02"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "status-children-none",
+              "field": "intent",
+              "matchKeys": [
+                "status-children-none"
+              ]
+            },
+            {
+              "displayText": "keine Kinder",
+              "field": "realization",
+              "matchKeys": [
+                "keine kinder"
+              ]
+            },
+            {
+              "displayText": "keine Kinder",
+              "field": "realization",
+              "matchKeys": [
+                "keine kinder"
+              ]
+            },
+            {
+              "displayText": "keine Kinder",
+              "field": "label",
+              "matchKeys": [
+                "keine kinder"
+              ]
+            },
+            {
+              "displayText": "neutral",
+              "field": "category",
+              "matchKeys": [
+                "neutral"
+              ]
+            }
+          ],
+          "sourcePriority": 1
+        },
+        {
           "category": "informal",
           "displayLabel": "Super!",
           "hubDestination": {
@@ -7300,6 +8239,110 @@
           "sourcePriority": 1
         },
         {
+          "category": "formal",
+          "displayLabel": "Und Ihnen?",
+          "hubDestination": {
+            "hub": "phrases",
+            "path": "/phrases/phrase:wellbeing-und-ihnen"
+          },
+          "id": "phrase:wellbeing-und-ihnen",
+          "kind": "PhrasePattern",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "wellbeing-follow-up-formal",
+              "field": "intent",
+              "matchKeys": [
+                "wellbeing-follow-up-formal"
+              ]
+            },
+            {
+              "displayText": "Und Ihnen?",
+              "field": "realization",
+              "matchKeys": [
+                "und ihnen?"
+              ]
+            },
+            {
+              "displayText": "Und Ihnen?",
+              "field": "realization",
+              "matchKeys": [
+                "und ihnen?"
+              ]
+            },
+            {
+              "displayText": "Und Ihnen?",
+              "field": "label",
+              "matchKeys": [
+                "und ihnen?"
+              ]
+            },
+            {
+              "displayText": "formal",
+              "field": "category",
+              "matchKeys": [
+                "formal"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "neutral",
+          "displayLabel": "Ich mache eine Ausbildung / ein Praktikum als … / bei …",
+          "hubDestination": {
+            "hub": "phrases",
+            "path": "/phrases/phrase:work-ausbildung-praktikum"
+          },
+          "id": "phrase:work-ausbildung-praktikum",
+          "kind": "PhrasePattern",
+          "lessonIds": [
+            "lesson:02"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "work-statement-training-or-internship",
+              "field": "intent",
+              "matchKeys": [
+                "work-statement-training-or-internship"
+              ]
+            },
+            {
+              "displayText": "Ich mache eine Ausbildung / ein Praktikum als … / bei …",
+              "field": "realization",
+              "matchKeys": [
+                "ich mache eine ausbildung / ein praktikum als … / bei …"
+              ]
+            },
+            {
+              "displayText": "Ich mache eine Ausbildung / ein Praktikum als … / bei …",
+              "field": "realization",
+              "matchKeys": [
+                "ich mache eine ausbildung / ein praktikum als … / bei …"
+              ]
+            },
+            {
+              "displayText": "Ich mache eine Ausbildung / ein Praktikum als … / bei …",
+              "field": "label",
+              "matchKeys": [
+                "ich mache eine ausbildung / ein praktikum als … / bei …"
+              ]
+            },
+            {
+              "displayText": "neutral",
+              "field": "category",
+              "matchKeys": [
+                "neutral"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
           "category": "informal",
           "displayLabel": "Ich arbeite als …",
           "hubDestination": {
@@ -7868,6 +8911,58 @@
             }
           ],
           "sourcePriority": 1
+        },
+        {
+          "category": "neutral",
+          "displayLabel": "Ich habe eine Stelle / einen Job als …",
+          "hubDestination": {
+            "hub": "phrases",
+            "path": "/phrases/phrase:work-job-stelle-haben"
+          },
+          "id": "phrase:work-job-stelle-haben",
+          "kind": "PhrasePattern",
+          "lessonIds": [
+            "lesson:02"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "work-statement-job-or-position",
+              "field": "intent",
+              "matchKeys": [
+                "work-statement-job-or-position"
+              ]
+            },
+            {
+              "displayText": "Ich habe eine Stelle / einen Job als …",
+              "field": "realization",
+              "matchKeys": [
+                "ich habe eine stelle / einen job als …"
+              ]
+            },
+            {
+              "displayText": "Ich habe eine Stelle / einen Job als …",
+              "field": "realization",
+              "matchKeys": [
+                "ich habe eine stelle / einen job als …"
+              ]
+            },
+            {
+              "displayText": "Ich habe eine Stelle / einen Job als …",
+              "field": "label",
+              "matchKeys": [
+                "ich habe eine stelle / einen job als …"
+              ]
+            },
+            {
+              "displayText": "neutral",
+              "field": "category",
+              "matchKeys": [
+                "neutral"
+              ]
+            }
+          ],
+          "sourcePriority": 2
         },
         {
           "category": "informal",
@@ -9957,7 +11052,7 @@
       "description": "Grammar concepts for Lessons 1–2.",
       "experience": null,
       "id": "grammar",
-      "itemCount": 10,
+      "itemCount": 11,
       "items": [
         {
           "category": "grammar",
@@ -10317,6 +11412,49 @@
               "field": "label",
               "matchKeys": [
                 "weibliche berufsformen"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "grammar",
+          "displayLabel": "Sätze mit und verbinden",
+          "hubDestination": {
+            "hub": "grammar",
+            "path": "/grammar/gram:und-linking-l1"
+          },
+          "id": "gram:und-linking-l1",
+          "kind": "GrammarConcept",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "model": "Sie kommt aus Frankreich und sie lernt Deutsch.",
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "Linking with und",
+              "field": "title",
+              "matchKeys": [
+                "linking with und"
+              ]
+            },
+            {
+              "displayText": "Sätze mit und verbinden",
+              "field": "title",
+              "matchKeys": [
+                "sätze mit und verbinden",
+                "saetze mit und verbinden",
+                "satze mit und verbinden"
+              ]
+            },
+            {
+              "displayText": "Sätze mit und verbinden",
+              "field": "label",
+              "matchKeys": [
+                "sätze mit und verbinden",
+                "saetze mit und verbinden",
+                "satze mit und verbinden"
               ]
             }
           ],
@@ -11074,7 +12212,7 @@
       "description": "Phrase patterns and question-and-answer pairs for greetings, identity, and related exchanges.",
       "experience": null,
       "id": "phrases",
-      "itemCount": 64,
+      "itemCount": 71,
       "items": [
         {
           "category": "informal",
@@ -11406,6 +12544,162 @@
               "field": "label",
               "matchKeys": [
                 "wer ist das?"
+              ]
+            },
+            {
+              "displayText": "neutral",
+              "field": "category",
+              "matchKeys": [
+                "neutral"
+              ]
+            }
+          ],
+          "sourcePriority": 1
+        },
+        {
+          "category": "informal",
+          "displayLabel": "Und wer bist du?",
+          "hubDestination": {
+            "hub": "phrases",
+            "path": "/phrases/phrase:identity-und-wer-bist-du"
+          },
+          "id": "phrase:identity-und-wer-bist-du",
+          "kind": "PhrasePattern",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "identity-question-casual",
+              "field": "intent",
+              "matchKeys": [
+                "identity-question-casual"
+              ]
+            },
+            {
+              "displayText": "Und wer bist du?",
+              "field": "realization",
+              "matchKeys": [
+                "und wer bist du?"
+              ]
+            },
+            {
+              "displayText": "Und wer bist du?",
+              "field": "realization",
+              "matchKeys": [
+                "und wer bist du?"
+              ]
+            },
+            {
+              "displayText": "Und wer bist du?",
+              "field": "label",
+              "matchKeys": [
+                "und wer bist du?"
+              ]
+            },
+            {
+              "displayText": "informal",
+              "field": "category",
+              "matchKeys": [
+                "informal"
+              ]
+            }
+          ],
+          "sourcePriority": 1
+        },
+        {
+          "category": "formal",
+          "displayLabel": "Wer sind Sie?",
+          "hubDestination": {
+            "hub": "phrases",
+            "path": "/phrases/phrase:identity-wer-sind-sie"
+          },
+          "id": "phrase:identity-wer-sind-sie",
+          "kind": "PhrasePattern",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "identity-question-formal",
+              "field": "intent",
+              "matchKeys": [
+                "identity-question-formal"
+              ]
+            },
+            {
+              "displayText": "Wer sind Sie?",
+              "field": "realization",
+              "matchKeys": [
+                "wer sind sie?"
+              ]
+            },
+            {
+              "displayText": "Wer sind Sie?",
+              "field": "realization",
+              "matchKeys": [
+                "wer sind sie?"
+              ]
+            },
+            {
+              "displayText": "Wer sind Sie?",
+              "field": "label",
+              "matchKeys": [
+                "wer sind sie?"
+              ]
+            },
+            {
+              "displayText": "formal",
+              "field": "category",
+              "matchKeys": [
+                "formal"
+              ]
+            }
+          ],
+          "sourcePriority": 1
+        },
+        {
+          "category": "neutral",
+          "displayLabel": "Ich bin …",
+          "hubDestination": {
+            "hub": "phrases",
+            "path": "/phrases/phrase:name-answer-ich-bin"
+          },
+          "id": "phrase:name-answer-ich-bin",
+          "kind": "PhrasePattern",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "name-answer",
+              "field": "intent",
+              "matchKeys": [
+                "name-answer"
+              ]
+            },
+            {
+              "displayText": "Ich bin …",
+              "field": "realization",
+              "matchKeys": [
+                "ich bin …"
+              ]
+            },
+            {
+              "displayText": "Ich bin …",
+              "field": "realization",
+              "matchKeys": [
+                "ich bin …"
+              ]
+            },
+            {
+              "displayText": "Ich bin …",
+              "field": "label",
+              "matchKeys": [
+                "ich bin …"
               ]
             },
             {
@@ -12685,6 +13979,58 @@
           "sourcePriority": 1
         },
         {
+          "category": "neutral",
+          "displayLabel": "keine Kinder",
+          "hubDestination": {
+            "hub": "phrases",
+            "path": "/phrases/phrase:status-keine-kinder"
+          },
+          "id": "phrase:status-keine-kinder",
+          "kind": "PhrasePattern",
+          "lessonIds": [
+            "lesson:02"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "status-children-none",
+              "field": "intent",
+              "matchKeys": [
+                "status-children-none"
+              ]
+            },
+            {
+              "displayText": "keine Kinder",
+              "field": "realization",
+              "matchKeys": [
+                "keine kinder"
+              ]
+            },
+            {
+              "displayText": "keine Kinder",
+              "field": "realization",
+              "matchKeys": [
+                "keine kinder"
+              ]
+            },
+            {
+              "displayText": "keine Kinder",
+              "field": "label",
+              "matchKeys": [
+                "keine kinder"
+              ]
+            },
+            {
+              "displayText": "neutral",
+              "field": "category",
+              "matchKeys": [
+                "neutral"
+              ]
+            }
+          ],
+          "sourcePriority": 1
+        },
+        {
           "category": "informal",
           "displayLabel": "Super!",
           "hubDestination": {
@@ -13312,6 +14658,110 @@
           "sourcePriority": 1
         },
         {
+          "category": "formal",
+          "displayLabel": "Und Ihnen?",
+          "hubDestination": {
+            "hub": "phrases",
+            "path": "/phrases/phrase:wellbeing-und-ihnen"
+          },
+          "id": "phrase:wellbeing-und-ihnen",
+          "kind": "PhrasePattern",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "wellbeing-follow-up-formal",
+              "field": "intent",
+              "matchKeys": [
+                "wellbeing-follow-up-formal"
+              ]
+            },
+            {
+              "displayText": "Und Ihnen?",
+              "field": "realization",
+              "matchKeys": [
+                "und ihnen?"
+              ]
+            },
+            {
+              "displayText": "Und Ihnen?",
+              "field": "realization",
+              "matchKeys": [
+                "und ihnen?"
+              ]
+            },
+            {
+              "displayText": "Und Ihnen?",
+              "field": "label",
+              "matchKeys": [
+                "und ihnen?"
+              ]
+            },
+            {
+              "displayText": "formal",
+              "field": "category",
+              "matchKeys": [
+                "formal"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
+          "category": "neutral",
+          "displayLabel": "Ich mache eine Ausbildung / ein Praktikum als … / bei …",
+          "hubDestination": {
+            "hub": "phrases",
+            "path": "/phrases/phrase:work-ausbildung-praktikum"
+          },
+          "id": "phrase:work-ausbildung-praktikum",
+          "kind": "PhrasePattern",
+          "lessonIds": [
+            "lesson:02"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "work-statement-training-or-internship",
+              "field": "intent",
+              "matchKeys": [
+                "work-statement-training-or-internship"
+              ]
+            },
+            {
+              "displayText": "Ich mache eine Ausbildung / ein Praktikum als … / bei …",
+              "field": "realization",
+              "matchKeys": [
+                "ich mache eine ausbildung / ein praktikum als … / bei …"
+              ]
+            },
+            {
+              "displayText": "Ich mache eine Ausbildung / ein Praktikum als … / bei …",
+              "field": "realization",
+              "matchKeys": [
+                "ich mache eine ausbildung / ein praktikum als … / bei …"
+              ]
+            },
+            {
+              "displayText": "Ich mache eine Ausbildung / ein Praktikum als … / bei …",
+              "field": "label",
+              "matchKeys": [
+                "ich mache eine ausbildung / ein praktikum als … / bei …"
+              ]
+            },
+            {
+              "displayText": "neutral",
+              "field": "category",
+              "matchKeys": [
+                "neutral"
+              ]
+            }
+          ],
+          "sourcePriority": 2
+        },
+        {
           "category": "informal",
           "displayLabel": "Ich arbeite als …",
           "hubDestination": {
@@ -13880,6 +15330,58 @@
             }
           ],
           "sourcePriority": 1
+        },
+        {
+          "category": "neutral",
+          "displayLabel": "Ich habe eine Stelle / einen Job als …",
+          "hubDestination": {
+            "hub": "phrases",
+            "path": "/phrases/phrase:work-job-stelle-haben"
+          },
+          "id": "phrase:work-job-stelle-haben",
+          "kind": "PhrasePattern",
+          "lessonIds": [
+            "lesson:02"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "work-statement-job-or-position",
+              "field": "intent",
+              "matchKeys": [
+                "work-statement-job-or-position"
+              ]
+            },
+            {
+              "displayText": "Ich habe eine Stelle / einen Job als …",
+              "field": "realization",
+              "matchKeys": [
+                "ich habe eine stelle / einen job als …"
+              ]
+            },
+            {
+              "displayText": "Ich habe eine Stelle / einen Job als …",
+              "field": "realization",
+              "matchKeys": [
+                "ich habe eine stelle / einen job als …"
+              ]
+            },
+            {
+              "displayText": "Ich habe eine Stelle / einen Job als …",
+              "field": "label",
+              "matchKeys": [
+                "ich habe eine stelle / einen job als …"
+              ]
+            },
+            {
+              "displayText": "neutral",
+              "field": "category",
+              "matchKeys": [
+                "neutral"
+              ]
+            }
+          ],
+          "sourcePriority": 2
         },
         {
           "category": "informal",
@@ -15507,12 +17009,14 @@
         "interjection",
         "noun",
         "phrase",
-        "proper-noun"
+        "pronoun",
+        "proper-noun",
+        "verb"
       ],
       "description": "Words from your course, including the Lesson 2 job vocabulary.",
       "experience": null,
       "id": "vocabulary",
-      "itemCount": 69,
+      "itemCount": 83,
       "items": [
         {
           "category": "noun",
@@ -16066,6 +17570,51 @@
           "sourcePriority": 1
         },
         {
+          "category": "phrase",
+          "displayLabel": "Danke.",
+          "hubDestination": {
+            "hub": "vocabulary",
+            "path": "/vocabulary/lex:danke"
+          },
+          "id": "lex:danke",
+          "kind": "Lexeme",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "Danke.",
+              "field": "lemma",
+              "matchKeys": [
+                "danke."
+              ]
+            },
+            {
+              "displayText": "Danke.",
+              "field": "label",
+              "matchKeys": [
+                "danke."
+              ]
+            },
+            {
+              "displayText": "Thank you.",
+              "field": "meaning",
+              "matchKeys": [
+                "thank you."
+              ]
+            },
+            {
+              "displayText": "phrase",
+              "field": "category",
+              "matchKeys": [
+                "phrase"
+              ]
+            }
+          ],
+          "sourcePriority": 1
+        },
+        {
           "category": "proper-noun",
           "displayLabel": "Deutschland",
           "hubDestination": {
@@ -16105,6 +17654,141 @@
               "field": "category",
               "matchKeys": [
                 "proper-noun"
+              ]
+            }
+          ],
+          "sourcePriority": 1
+        },
+        {
+          "category": "pronoun",
+          "displayLabel": "du",
+          "hubDestination": {
+            "hub": "vocabulary",
+            "path": "/vocabulary/lex:du"
+          },
+          "id": "lex:du",
+          "kind": "Lexeme",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "du",
+              "field": "lemma",
+              "matchKeys": [
+                "du"
+              ]
+            },
+            {
+              "displayText": "du",
+              "field": "label",
+              "matchKeys": [
+                "du"
+              ]
+            },
+            {
+              "displayText": "you",
+              "field": "meaning",
+              "matchKeys": [
+                "you"
+              ]
+            },
+            {
+              "displayText": "pronoun",
+              "field": "category",
+              "matchKeys": [
+                "pronoun"
+              ]
+            }
+          ],
+          "sourcePriority": 1
+        },
+        {
+          "category": "phrase",
+          "displayLabel": "Entschuldigung.",
+          "hubDestination": {
+            "hub": "vocabulary",
+            "path": "/vocabulary/lex:entschuldigung"
+          },
+          "id": "lex:entschuldigung",
+          "kind": "Lexeme",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "Entschuldigung.",
+              "field": "lemma",
+              "matchKeys": [
+                "entschuldigung."
+              ]
+            },
+            {
+              "displayText": "Entschuldigung.",
+              "field": "label",
+              "matchKeys": [
+                "entschuldigung."
+              ]
+            },
+            {
+              "displayText": "Sorry.",
+              "field": "meaning",
+              "matchKeys": [
+                "sorry."
+              ]
+            },
+            {
+              "displayText": "phrase",
+              "field": "category",
+              "matchKeys": [
+                "phrase"
+              ]
+            }
+          ],
+          "sourcePriority": 1
+        },
+        {
+          "category": "pronoun",
+          "displayLabel": "er",
+          "hubDestination": {
+            "hub": "vocabulary",
+            "path": "/vocabulary/lex:er"
+          },
+          "id": "lex:er",
+          "kind": "Lexeme",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "er",
+              "field": "lemma",
+              "matchKeys": [
+                "er"
+              ]
+            },
+            {
+              "displayText": "er",
+              "field": "label",
+              "matchKeys": [
+                "er"
+              ]
+            },
+            {
+              "displayText": "he",
+              "field": "meaning",
+              "matchKeys": [
+                "he"
+              ]
+            },
+            {
+              "displayText": "pronoun",
+              "field": "category",
+              "matchKeys": [
+                "pronoun"
               ]
             }
           ],
@@ -17019,6 +18703,51 @@
           "sourcePriority": 1
         },
         {
+          "category": "pronoun",
+          "displayLabel": "ich",
+          "hubDestination": {
+            "hub": "vocabulary",
+            "path": "/vocabulary/lex:ich"
+          },
+          "id": "lex:ich",
+          "kind": "Lexeme",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "ich",
+              "field": "lemma",
+              "matchKeys": [
+                "ich"
+              ]
+            },
+            {
+              "displayText": "ich",
+              "field": "label",
+              "matchKeys": [
+                "ich"
+              ]
+            },
+            {
+              "displayText": "I",
+              "field": "meaning",
+              "matchKeys": [
+                "i"
+              ]
+            },
+            {
+              "displayText": "pronoun",
+              "field": "category",
+              "matchKeys": [
+                "pronoun"
+              ]
+            }
+          ],
+          "sourcePriority": 1
+        },
+        {
           "category": "noun",
           "displayLabel": "der Ingenieur",
           "hubDestination": {
@@ -17124,6 +18853,65 @@
               "field": "meaning",
               "matchKeys": [
                 "engineer"
+              ]
+            },
+            {
+              "displayText": "noun",
+              "field": "category",
+              "matchKeys": [
+                "noun"
+              ]
+            }
+          ],
+          "sourcePriority": 1
+        },
+        {
+          "category": "noun",
+          "displayLabel": "das Interview",
+          "hubDestination": {
+            "hub": "vocabulary",
+            "path": "/vocabulary/lex:interview"
+          },
+          "id": "lex:interview",
+          "kind": "Lexeme",
+          "lessonIds": [
+            "lesson:02"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "Interview",
+              "field": "lemma",
+              "matchKeys": [
+                "interview"
+              ]
+            },
+            {
+              "displayText": "das Interview",
+              "field": "label",
+              "matchKeys": [
+                "das interview"
+              ]
+            },
+            {
+              "displayText": "Interview",
+              "field": "form",
+              "matchKeys": [
+                "interview"
+              ]
+            },
+            {
+              "displayText": "Interviews",
+              "field": "form",
+              "matchKeys": [
+                "interviews"
+              ]
+            },
+            {
+              "displayText": "interview",
+              "field": "meaning",
+              "matchKeys": [
+                "interview"
               ]
             },
             {
@@ -18058,6 +19846,124 @@
         },
         {
           "category": "noun",
+          "displayLabel": "der Partner",
+          "hubDestination": {
+            "hub": "vocabulary",
+            "path": "/vocabulary/lex:partner"
+          },
+          "id": "lex:partner",
+          "kind": "Lexeme",
+          "lessonIds": [
+            "lesson:02"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "Partner",
+              "field": "lemma",
+              "matchKeys": [
+                "partner"
+              ]
+            },
+            {
+              "displayText": "der Partner",
+              "field": "label",
+              "matchKeys": [
+                "der partner"
+              ]
+            },
+            {
+              "displayText": "Partner",
+              "field": "form",
+              "matchKeys": [
+                "partner"
+              ]
+            },
+            {
+              "displayText": "Partner",
+              "field": "form",
+              "matchKeys": [
+                "partner"
+              ]
+            },
+            {
+              "displayText": "partner (m./f.)",
+              "field": "meaning",
+              "matchKeys": [
+                "partner (m./f.)"
+              ]
+            },
+            {
+              "displayText": "noun",
+              "field": "category",
+              "matchKeys": [
+                "noun"
+              ]
+            }
+          ],
+          "sourcePriority": 1
+        },
+        {
+          "category": "noun",
+          "displayLabel": "die Partnerin",
+          "hubDestination": {
+            "hub": "vocabulary",
+            "path": "/vocabulary/lex:partnerin"
+          },
+          "id": "lex:partnerin",
+          "kind": "Lexeme",
+          "lessonIds": [
+            "lesson:02"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "Partnerin",
+              "field": "lemma",
+              "matchKeys": [
+                "partnerin"
+              ]
+            },
+            {
+              "displayText": "die Partnerin",
+              "field": "label",
+              "matchKeys": [
+                "die partnerin"
+              ]
+            },
+            {
+              "displayText": "Partnerin",
+              "field": "form",
+              "matchKeys": [
+                "partnerin"
+              ]
+            },
+            {
+              "displayText": "Partnerinnen",
+              "field": "form",
+              "matchKeys": [
+                "partnerinnen"
+              ]
+            },
+            {
+              "displayText": "partner (m./f.)",
+              "field": "meaning",
+              "matchKeys": [
+                "partner (m./f.)"
+              ]
+            },
+            {
+              "displayText": "noun",
+              "field": "category",
+              "matchKeys": [
+                "noun"
+              ]
+            }
+          ],
+          "sourcePriority": 1
+        },
+        {
+          "category": "noun",
           "displayLabel": "das Praktikum",
           "hubDestination": {
             "hub": "vocabulary",
@@ -18465,6 +20371,96 @@
           "sourcePriority": 1
         },
         {
+          "category": "pronoun",
+          "displayLabel": "sie",
+          "hubDestination": {
+            "hub": "vocabulary",
+            "path": "/vocabulary/lex:sie"
+          },
+          "id": "lex:sie",
+          "kind": "Lexeme",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "sie",
+              "field": "lemma",
+              "matchKeys": [
+                "sie"
+              ]
+            },
+            {
+              "displayText": "sie",
+              "field": "label",
+              "matchKeys": [
+                "sie"
+              ]
+            },
+            {
+              "displayText": "she",
+              "field": "meaning",
+              "matchKeys": [
+                "she"
+              ]
+            },
+            {
+              "displayText": "pronoun",
+              "field": "category",
+              "matchKeys": [
+                "pronoun"
+              ]
+            }
+          ],
+          "sourcePriority": 1
+        },
+        {
+          "category": "pronoun",
+          "displayLabel": "Sie",
+          "hubDestination": {
+            "hub": "vocabulary",
+            "path": "/vocabulary/lex:sie-formal"
+          },
+          "id": "lex:sie-formal",
+          "kind": "Lexeme",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "Sie",
+              "field": "lemma",
+              "matchKeys": [
+                "sie"
+              ]
+            },
+            {
+              "displayText": "Sie",
+              "field": "label",
+              "matchKeys": [
+                "sie"
+              ]
+            },
+            {
+              "displayText": "you (formal)",
+              "field": "meaning",
+              "matchKeys": [
+                "you (formal)"
+              ]
+            },
+            {
+              "displayText": "pronoun",
+              "field": "category",
+              "matchKeys": [
+                "pronoun"
+              ]
+            }
+          ],
+          "sourcePriority": 1
+        },
+        {
           "category": "noun",
           "displayLabel": "der Single",
           "hubDestination": {
@@ -18843,6 +20839,65 @@
           "sourcePriority": 1
         },
         {
+          "category": "noun",
+          "displayLabel": "der Text",
+          "hubDestination": {
+            "hub": "vocabulary",
+            "path": "/vocabulary/lex:text"
+          },
+          "id": "lex:text",
+          "kind": "Lexeme",
+          "lessonIds": [
+            "lesson:02"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "Text",
+              "field": "lemma",
+              "matchKeys": [
+                "text"
+              ]
+            },
+            {
+              "displayText": "der Text",
+              "field": "label",
+              "matchKeys": [
+                "der text"
+              ]
+            },
+            {
+              "displayText": "Text",
+              "field": "form",
+              "matchKeys": [
+                "text"
+              ]
+            },
+            {
+              "displayText": "Texte",
+              "field": "form",
+              "matchKeys": [
+                "texte"
+              ]
+            },
+            {
+              "displayText": "text",
+              "field": "meaning",
+              "matchKeys": [
+                "text"
+              ]
+            },
+            {
+              "displayText": "noun",
+              "field": "category",
+              "matchKeys": [
+                "noun"
+              ]
+            }
+          ],
+          "sourcePriority": 1
+        },
+        {
           "category": "interjection",
           "displayLabel": "Tschüs",
           "hubDestination": {
@@ -18944,6 +20999,51 @@
               "field": "category",
               "matchKeys": [
                 "noun"
+              ]
+            }
+          ],
+          "sourcePriority": 1
+        },
+        {
+          "category": "phrase",
+          "displayLabel": "Und dir?",
+          "hubDestination": {
+            "hub": "vocabulary",
+            "path": "/vocabulary/lex:und-dir"
+          },
+          "id": "lex:und-dir",
+          "kind": "Lexeme",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "Und dir?",
+              "field": "lemma",
+              "matchKeys": [
+                "und dir?"
+              ]
+            },
+            {
+              "displayText": "Und dir?",
+              "field": "label",
+              "matchKeys": [
+                "und dir?"
+              ]
+            },
+            {
+              "displayText": "What about you?",
+              "field": "meaning",
+              "matchKeys": [
+                "what about you?"
+              ]
+            },
+            {
+              "displayText": "phrase",
+              "field": "category",
+              "matchKeys": [
+                "phrase"
               ]
             }
           ],
@@ -19240,6 +21340,51 @@
           "sourcePriority": 1
         },
         {
+          "category": "phrase",
+          "displayLabel": "Wie bitte?",
+          "hubDestination": {
+            "hub": "vocabulary",
+            "path": "/vocabulary/lex:wie-bitte"
+          },
+          "id": "lex:wie-bitte",
+          "kind": "Lexeme",
+          "lessonIds": [
+            "lesson:01"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "Wie bitte?",
+              "field": "lemma",
+              "matchKeys": [
+                "wie bitte?"
+              ]
+            },
+            {
+              "displayText": "Wie bitte?",
+              "field": "label",
+              "matchKeys": [
+                "wie bitte?"
+              ]
+            },
+            {
+              "displayText": "Pardon?",
+              "field": "meaning",
+              "matchKeys": [
+                "pardon?"
+              ]
+            },
+            {
+              "displayText": "phrase",
+              "field": "category",
+              "matchKeys": [
+                "phrase"
+              ]
+            }
+          ],
+          "sourcePriority": 1
+        },
+        {
           "category": "noun",
           "displayLabel": "der Wohnort",
           "hubDestination": {
@@ -19293,6 +21438,51 @@
               "field": "category",
               "matchKeys": [
                 "noun"
+              ]
+            }
+          ],
+          "sourcePriority": 1
+        },
+        {
+          "category": "verb",
+          "displayLabel": "zusammenleben",
+          "hubDestination": {
+            "hub": "vocabulary",
+            "path": "/vocabulary/lex:zusammenleben"
+          },
+          "id": "lex:zusammenleben",
+          "kind": "Lexeme",
+          "lessonIds": [
+            "lesson:02"
+          ],
+          "publicationStatus": "published",
+          "searchFields": [
+            {
+              "displayText": "zusammenleben",
+              "field": "lemma",
+              "matchKeys": [
+                "zusammenleben"
+              ]
+            },
+            {
+              "displayText": "zusammenleben",
+              "field": "label",
+              "matchKeys": [
+                "zusammenleben"
+              ]
+            },
+            {
+              "displayText": "to live together",
+              "field": "meaning",
+              "matchKeys": [
+                "to live together"
+              ]
+            },
+            {
+              "displayText": "verb",
+              "field": "category",
+              "matchKeys": [
+                "verb"
               ]
             }
           ],

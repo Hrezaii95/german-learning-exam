@@ -90,6 +90,34 @@ type AlphaAppAuthoredExample = {
   reviewerNote?: string;
 };
 
+/**
+ * One taught pattern that stands on its own rather than answering a Q&A pair.
+ *
+ * A phrase pattern is German-only on every learner surface, so it carries no
+ * English half — which is what lets "Und Ihnen?" be encoded at all: the
+ * workbook prints the German, and no official source prints an English gloss
+ * for the formal variant.
+ */
+type AlphaPhrase = {
+  id: string;
+  intent: string;
+  register: string;
+  de: string;
+  source: "glossary" | "coursebook" | "workbook";
+  page: number;
+  exercise?: string;
+};
+
+/** A masculine/feminine person pair printed as one slashed glossary entry. */
+type AlphaPersonPair = {
+  masculine: string;
+  masculinePlural?: string;
+  feminine: string;
+  femininePlural?: string;
+  meaningEn: string;
+  page?: number;
+};
+
 type AlphaContent = {
   glossaryExamples?: AlphaGlossaryExample[];
   appAuthoredExamples?: AlphaAppAuthoredExample[];
@@ -107,14 +135,25 @@ type AlphaContent = {
     goals: string[];
     vocabulary?: {
       greetings: Array<[string, string]>;
-      wellbeing: Array<[string, string]>;
+      /** lemma, gloss, and the glossary page when it is not the lesson's first. */
+      wellbeing: Array<[string, string] | [string, string, number]>;
+      courtesy?: Array<[string, string]>;
+      /** lemma, gloss, id-suffix override (sie/Sie slug clash), glossary page. */
+      pronouns?: Array<[string, string, string | null, number]>;
       countries: Array<[string, string, string | null]>;
       identity: Array<[string, string, string]>;
     };
     verbs: AlphaVerb[];
     qa: AlphaQa[];
+    phrases?: AlphaPhrase[];
     coreProfessions?: AlphaProfession[];
-    profileVocabulary?: Array<[string, string] | [string, string, string]>;
+    personPairs?: AlphaPersonPair[];
+    profileVocabulary?: Array<
+      | [string, string]
+      | [string, string, string | null]
+      | [string, string, string | null, string]
+      | [string, string, string | null, string | null, number]
+    >;
   }>;
   collections: Array<{
     id: string;
@@ -227,6 +266,88 @@ function reviewPub(): PublicationState {
 
 function splitSlashForms(raw: string): string[] {
   return raw.split(/\s*\/\s*/u).map((s) => s.trim()).filter(Boolean);
+}
+
+/** Which published document a standalone phrase was transcribed from. */
+const PHRASE_SOURCE_IDS: Record<AlphaPhrase["source"], `source:${string}`> = {
+  glossary: "source:glossary-momente-a11",
+  coursebook: "source:coursebook-momente-a11",
+  workbook: "source:workbook-momente-a11",
+};
+
+/**
+ * Encodes one taught pattern the course prints on its own.
+ *
+ * The Q&A loops below build their patterns out of a question and its answers
+ * and assert them against the compact alpha bundle. These do not come from a
+ * Q&A pair, so their two assertions name the actual document and printed page
+ * the German was read from instead — the only provenance that means anything
+ * for a line quoted straight off a page.
+ *
+ * A phrase pattern is German-only on every learner surface, so no English is
+ * stored here and none is invented.
+ */
+function addStandalonePhrase(args: {
+  phrase: AlphaPhrase;
+  lessonId: "lesson:01" | "lesson:02";
+  phrasePatterns: PhrasePattern[];
+  assertions: SourceAssertion[];
+  relationships: Relationship[];
+}): void {
+  const { phrase } = args;
+  const id = phrase.id as `phrase:${string}`;
+  const slug = id.slice(7);
+  const location: SourceAssertion["location"] = {
+    printedPage: phrase.page,
+    ...(phrase.exercise ? { exercise: phrase.exercise } : {}),
+  };
+  const sourceId = PHRASE_SOURCE_IDS[phrase.source];
+  const fixedTokens = plain(phrase.de);
+  const acceptedRealizations = [plain(phrase.de)];
+  const fixedAssert = assertion({
+    id: `assert:phrase-${slug}-fixed`,
+    sourceId,
+    subjectId: id,
+    field: "fixedTokens",
+    value: fixedTokens,
+    status: "verified",
+    location,
+  });
+  const acceptedAssert = assertion({
+    id: `assert:phrase-${slug}-accepted`,
+    sourceId,
+    subjectId: id,
+    field: "acceptedRealizations",
+    value: acceptedRealizations,
+    status: "verified",
+    location,
+  });
+  args.assertions.push(fixedAssert, acceptedAssert);
+  const relId = `rel:${slug}-introduced-${args.lessonId === "lesson:01" ? "l1" : "l2"}` as `rel:${string}`;
+  args.relationships.push({
+    kind: "Relationship",
+    id: relId,
+    type: "introduced-in",
+    fromId: id,
+    toId: args.lessonId,
+  });
+  args.phrasePatterns.push({
+    kind: "PhrasePattern",
+    id,
+    intent: phrase.intent,
+    register: mapRegister(phrase.register),
+    fixedTokens,
+    slots: [],
+    acceptedRealizations,
+    grammarIds: [],
+    audioIds: [],
+    relationIds: [relId],
+    sourceAssertionIds: [fixedAssert.id, acceptedAssert.id],
+    publication: published([
+      { field: "fixedTokens", assertionId: fixedAssert.id },
+      { field: "acceptedRealizations", assertionId: acceptedAssert.id },
+    ]),
+  });
 }
 
 const L1_ACTIVITY_DEFS: Array<{
@@ -578,6 +699,17 @@ function addGrammarConcept(args: {
   activityIds: Array<`activity:${string}`>;
   prerequisites?: Array<`gram:${string}`>;
   commonErrorTags?: string[];
+  /**
+   * Where the worked German models were read from, when they are quotations
+   * rather than app-written illustrations. The notice and rule wording is
+   * still English prose asserted against the content spec — only the German
+   * gets a document and a printed page, because only the German was printed.
+   */
+  modelEvidence?: {
+    sourceId: `source:${string}`;
+    printedPage: number;
+    exercise?: string;
+  };
 }): void {
   const slug = args.id.slice(5);
   const noticeAssertion = assertion({
@@ -599,6 +731,27 @@ function addGrammarConcept(args: {
     location: { region: args.lessonId === "lesson:01" ? "Lesson 1 grammar" : "Lesson 2 grammar" },
   });
   args.assertions.push(noticeAssertion, rulesAssertion);
+  const evidenceAssertionIds: `assert:${string}`[] = [];
+  if (args.modelEvidence) {
+    const models = args.rules.map((rule) => rule.model).filter((m): m is string => Boolean(m));
+    if (models.length === 0) {
+      throw new Error(`${args.id} declares model evidence but publishes no model`);
+    }
+    const modelAssertion = assertion({
+      id: `assert:gram-${slug}-models`,
+      sourceId: args.modelEvidence.sourceId,
+      subjectId: args.id,
+      field: "ruleSteps.model",
+      value: models,
+      status: "verified",
+      location: {
+        printedPage: args.modelEvidence.printedPage,
+        ...(args.modelEvidence.exercise ? { exercise: args.modelEvidence.exercise } : {}),
+      },
+    });
+    args.assertions.push(modelAssertion);
+    evidenceAssertionIds.push(modelAssertion.id);
+  }
   const relationIds: `rel:${string}`[] = [];
   const introducedId = `rel:gram-${slug}-introduced-${args.lessonId.slice(-2)}` as `rel:${string}`;
   args.relationships.push({ kind: "Relationship", id: introducedId, type: "introduced-in", fromId: args.id, toId: args.lessonId });
@@ -621,7 +774,7 @@ function addGrammarConcept(args: {
     commonErrorTags: args.commonErrorTags ?? [],
     activityTemplateIds: [],
     relationIds,
-    sourceAssertionIds: [noticeAssertion.id, rulesAssertion.id],
+    sourceAssertionIds: [noticeAssertion.id, rulesAssertion.id, ...evidenceAssertionIds],
     mediaIds: [],
     publication: published([
       { field: "noticeTarget", assertionId: noticeAssertion.id },
@@ -660,6 +813,11 @@ function buildLesson01(alpha: AlphaContent): ContentFragment {
   addL1Grammar({ id: "gram:main-clause-word-order-l1", titleEn: "Main-clause word order", titleDe: "Satzstellung im Aussagesatz", notice: "In the taught statements, the finite verb is in second position.", rules: [{ id: "verb-second", notice: "Build person + finite verb + complement.", model: "Ich komme aus Spanien." }], activityIds: ["activity:lesson-01-pronoun-verb-builder", "activity:lesson-01-guided-intro-recording"], prerequisites: ["gram:personal-pronouns-l1"], commonErrorTags: ["verb-position"] });
   addL1Grammar({ id: "gram:du-sie-register-l1", titleEn: "Informal du and formal Sie", titleDe: "du und Sie", notice: "Use du in the taught informal patterns and capitalized Sie with the formal verb form.", rules: [{ id: "register-pair", notice: "Keep pronoun and verb form in the same register.", model: "Wie heißt du? · Wie heißen Sie?" }], activityIds: ["activity:lesson-01-register-qa-builder", "activity:lesson-01-guided-intro-recording"], prerequisites: ["gram:personal-pronouns-l1"], commonErrorTags: ["register-mismatch", "sie-Sie-capitalization"] });
   addL1Grammar({ id: "gram:aus-origin-l1", titleEn: "Origin with aus", titleDe: "Herkunft mit aus", notice: "The origin answers taught here use kommen + aus + country name.", rules: [{ id: "aus-country", notice: "Use aus before the country expression.", model: "Ich komme aus Deutschland." }], activityIds: ["activity:lesson-01-origin-aus-contrast", "activity:lesson-01-guided-intro-recording"], prerequisites: ["gram:main-clause-word-order-l1"], commonErrorTags: ["preposition-choice"] });
+  // Both models are quoted off the workbook's own worked box on printed page 8
+  // (Lektion 01, exercise 6, "Sätze mit er/sie und und verbinden"), which prints
+  // the linked sentence first and then the same sentence with the repeated
+  // subject dropped. Nothing here is composed.
+  addL1Grammar({ id: "gram:und-linking-l1", titleEn: "Linking with und", titleDe: "Sätze mit und verbinden", notice: "Two statements about the same person join into one sentence with und.", rules: [{ id: "und-links-two-statements", notice: "Join the two statements with und; each half keeps its own person and finite verb.", model: "Sie kommt aus Frankreich und sie lernt Deutsch." }, { id: "und-drops-the-repeated-subject", notice: "When both halves share the same subject, the second one can be left out.", model: "Sie kommt aus Frankreich und lernt Deutsch." }], activityIds: ["activity:lesson-01-pronoun-verb-builder", "activity:lesson-01-guided-intro-recording"], prerequisites: ["gram:main-clause-word-order-l1"], commonErrorTags: ["subject-repetition", "verb-position"], modelEvidence: { sourceId: "source:workbook-momente-a11", printedPage: 8, exercise: "Lektion 01, 6" } });
   addL1Grammar({ id: "gram:present-conjugation-l1", titleEn: "Present-tense person forms", titleDe: "Präsensformen", notice: "The present-tense forms here cover regular endings plus the two special patterns you learn now: heißen and sein.", rules: [{ id: "regular-singular", notice: "Regular forms use a verb stem plus the person ending.", model: "ich lerne · du lernst" }, { id: "heissen", notice: "In heißen, du and er/sie/es use heißt.", model: "du heißt · sie heißt" }, { id: "sein", notice: "Learn the irregular forms of sein as whole forms.", model: "ich bin · du bist · Sie sind" }], activityIds: ["activity:lesson-01-heissen-sein-notice", "activity:lesson-01-pronoun-verb-builder"], prerequisites: ["gram:personal-pronouns-l1"], commonErrorTags: ["person-agreement", "irregular-form"] });
 
   const titleAssert = assertion({
@@ -835,8 +993,21 @@ function buildLesson01(alpha: AlphaContent): ContentFragment {
   for (const [de, en] of lesson.vocabulary?.greetings ?? []) {
     addLex(`lex:${slugifyDe(de)}` as `lex:${string}`, de, "interjection", en);
   }
-  for (const [de, en] of lesson.vocabulary?.wellbeing ?? []) {
-    addLex(`lex:${slugifyDe(de)}` as `lex:${string}`, de, "phrase", en);
+  for (const [de, en, printedPage] of lesson.vocabulary?.wellbeing ?? []) {
+    addLex(`lex:${slugifyDe(de)}` as `lex:${string}`, de, "phrase", en, {
+      ...(printedPage != null ? { printedPage } : {}),
+    });
+  }
+  for (const [de, en] of lesson.vocabulary?.courtesy ?? []) {
+    addLex(`lex:${slugifyDe(de)}` as `lex:${string}`, de, "phrase", en, { printedPage: 1 });
+  }
+  for (const [de, en, idSuffix, page] of lesson.vocabulary?.pronouns ?? []) {
+    // "sie" (she) and "Sie" (you, formal) are two glossary entries that slug to
+    // the same string, so the formal one carries an explicit id suffix rather
+    // than silently overwriting its sibling.
+    addLex(`lex:${idSuffix ?? slugifyDe(de)}` as `lex:${string}`, de, "pronoun", en, {
+      printedPage: page,
+    });
   }
   for (const [de, en, articleHint] of lesson.vocabulary?.countries ?? []) {
     const id = `lex:${slugifyDe(de)}` as `lex:${string}`;
@@ -1050,7 +1221,32 @@ function buildLesson01(alpha: AlphaContent): ContentFragment {
     });
   }
 
-  // Spec-required grammar / alphabet / pronouns not present as structured evidence in alpha-content.
+  for (const phrase of lesson.phrases ?? []) {
+    addStandalonePhrase({
+      phrase,
+      lessonId: "lesson:01",
+      phrasePatterns,
+      assertions: sourceAssertions,
+      relationships,
+    });
+  }
+
+  // Its informal twin "Und dir?" is a glossed vocabulary entry because the
+  // glossary prints both halves of it. The formal variant is printed only in
+  // German, so it is taught as a phrase pattern and the missing English half
+  // stays a visible, countable gap rather than a quietly borrowed translation.
+  contentGaps.push({
+    kind: "ContentGap",
+    id: "gap:meaning-und-ihnen",
+    objectId: "phrase:wellbeing-und-ihnen",
+    field: "meanings",
+    reason:
+      "The German is printed in the workbook (printed page 9, Lesson 1) but the word \"Ihnen\" appears nowhere in the official English glossary, so no publisher English exists for the formal variant. Encoded German-only; a glossed vocabulary entry would have needed an English half no source prints.",
+    owner: "owner-review",
+    blocksPublication: false,
+  });
+
+  // Spec-required grammar / alphabet not present as structured evidence in alpha-content.
   for (const gap of [
     {
       id: "gap:grammar-l1-word-order",
@@ -1060,12 +1256,7 @@ function buildLesson01(alpha: AlphaContent): ContentFragment {
     {
       id: "gap:alphabet-l1",
       field: "lexemes.alphabet",
-      reason: "A–Z/Ä/Ö/Ü/ß alphabet inventory is required by docs/11 but absent from alpha-content.json",
-    },
-    {
-      id: "gap:pronouns-l1",
-      field: "lexemes.pronouns",
-      reason: "Pronouns ich/du/er/sie/Sie required by docs/11 but absent as typed entries in alpha-content.json",
+      reason: "A–Z/Ä/Ö/Ü/ß alphabet inventory is required by docs/11. The coursebook prints the letters and their German names on printed page 12, but no official source prints an English meaning for a single letter, and a vocabulary entry cannot be stored without one",
     },
     {
       id: "gap:dialogue-l1-models",
@@ -1241,8 +1432,19 @@ function buildLesson02(alpha: AlphaContent): ContentFragment {
     toId: "lesson:02",
   });
 
-  // Profile vocabulary
-  for (const [de, en, pluralWithArticle] of lesson.profileVocabulary ?? []) {
+  // Profile vocabulary. Also used for the one non-profession person pair the
+  // glossary prints (Partner / Partnerin), which needs the same lexeme shape
+  // plus the shared person-form group the profession pairs get.
+  const addProfileLexeme = (spec: {
+    de: string;
+    en: string;
+    pluralWithArticle?: string | null | undefined;
+    posOverride?: string;
+    personFormGroupId?: string;
+    /** Exact glossary page, where the entry was read off a known one. */
+    printedPage?: number;
+  }): `lex:${string}` => {
+    const { de, en, pluralWithArticle } = spec;
     const parsed = stripArticle(de);
     const lemma = parsed.lemma;
     const id = `lex:${slugifyDe(lemma)}` as `lex:${string}`;
@@ -1254,7 +1456,9 @@ function buildLesson02(alpha: AlphaContent): ContentFragment {
       field: "lemma",
       value: lemma,
       status: "verified",
-      location: pageLoc(lesson.sourcePages.glossaryPdf),
+      location: pageLoc(
+        spec.printedPage != null ? [spec.printedPage] : lesson.sourcePages.glossaryPdf,
+      ),
     });
     const meanings = [{ id: `meaning:${slugifyDe(lemma)}-en` as `meaning:${string}`, glossEn: en }];
     const meaningsAssert = assertion({
@@ -1264,6 +1468,7 @@ function buildLesson02(alpha: AlphaContent): ContentFragment {
       field: "meanings",
       value: meanings,
       status: "verified",
+      ...(spec.printedPage != null ? { location: pageLoc([spec.printedPage]) } : {}),
     });
     sourceAssertions.push(lemmaAssert, meaningsAssert);
     const relId = `rel:${slugifyDe(lemma)}-introduced-l2` as `rel:${string}`;
@@ -1278,7 +1483,7 @@ function buildLesson02(alpha: AlphaContent): ContentFragment {
       kind: "Lexeme",
       id,
       lemma,
-      partOfSpeech: isNoun ? "noun" : "adjective",
+      partOfSpeech: spec.posOverride ?? (isNoun ? "noun" : "adjective"),
       meanings,
       pronunciation: {},
       exampleIds: [],
@@ -1299,10 +1504,79 @@ function buildLesson02(alpha: AlphaContent): ContentFragment {
         plurals: pluralWithArticle
           ? [{ form: stripArticle(pluralWithArticle).lemma, patternIds: [] }]
           : [],
+        ...(spec.personFormGroupId ? { personFormGroupId: spec.personFormGroupId } : {}),
       };
     }
     attachLexemeExample(lex, sourceAssertions, contentGaps);
     lexemes.push(lex);
+    return id;
+  };
+
+  for (const [de, en, pluralWithArticle, posOverride, printedPage] of lesson.profileVocabulary ??
+    []) {
+    addProfileLexeme({
+      de,
+      en,
+      pluralWithArticle,
+      ...(posOverride ? { posOverride } : {}),
+      ...(printedPage != null ? { printedPage } : {}),
+    });
+  }
+
+  // docs/11 names Text a core Lesson 2 noun; the glossary prints "der Text, -e"
+  // (p.4, Lektion 02 ex.7) in the italic style its own key reserves for words
+  // outside the learning vocabulary. The spec wins on inclusion, and the
+  // disagreement is recorded rather than resolved silently in either direction.
+  contentGaps.push({
+    kind: "ContentGap",
+    id: "gap:classification-text",
+    objectId: "lex:text",
+    field: "sourcePriority",
+    reason:
+      "docs/11 lists Text among the core Lesson 2 nouns, but the official glossary prints it in italics, its own marking for words outside the learning vocabulary. Encoded as spec-core; a qualified reviewer still has to rule on the classification.",
+    owner: "owner-review",
+    blocksPublication: false,
+  });
+
+  // The one non-profession person pair the glossary prints as a slashed entry.
+  for (const pair of lesson.personPairs ?? []) {
+    const groupId = `person-form:${slugifyDe(pair.masculine)}`;
+    const mascId = addProfileLexeme({
+      de: `der ${pair.masculine}`,
+      en: pair.meaningEn,
+      pluralWithArticle: pair.masculinePlural ? `die ${pair.masculinePlural}` : null,
+      personFormGroupId: groupId,
+      ...(pair.page != null ? { printedPage: pair.page } : {}),
+    });
+    const femId = addProfileLexeme({
+      de: `die ${pair.feminine}`,
+      en: pair.meaningEn,
+      pluralWithArticle: pair.femininePlural ? `die ${pair.femininePlural}` : null,
+      personFormGroupId: groupId,
+      ...(pair.page != null ? { printedPage: pair.page } : {}),
+    });
+    // Deliberately prefixed `rel:person-pair-`: this is a person-form pair but
+    // not a profession pair, and the profession enrichment selects its members
+    // from exactly this relationship type. The prefix is what keeps Partner out
+    // of the professions deck without weakening the linguistic link.
+    relationships.push({
+      kind: "Relationship",
+      id: `rel:person-pair-${slugifyDe(pair.masculine)}-person-form` as `rel:${string}`,
+      type: "person-form-of",
+      fromId: femId,
+      toId: mascId,
+      note: "core glossary person-form pair (not a profession)",
+    });
+  }
+
+  for (const phrase of lesson.phrases ?? []) {
+    addStandalonePhrase({
+      phrase,
+      lessonId: "lesson:02",
+      phrasePatterns,
+      assertions: sourceAssertions,
+      relationships,
+    });
   }
 
   // Core professions as separate M/F lexemes

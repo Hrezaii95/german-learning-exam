@@ -1146,6 +1146,341 @@
     },
     {
       "kind": "SourceAssertion",
+      "id": "assert:lex-interview-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 3
+      },
+      "subjectId": "lex:interview",
+      "field": "lemma",
+      "value": "Interview",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-interview-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 3
+      },
+      "subjectId": "lex:interview",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:interview-en",
+          "glossEn": "interview"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-zusammenleben-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 3
+      },
+      "subjectId": "lex:zusammenleben",
+      "field": "lemma",
+      "value": "zusammenleben",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-zusammenleben-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 3
+      },
+      "subjectId": "lex:zusammenleben",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:zusammenleben-en",
+          "glossEn": "to live together"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-text-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 4
+      },
+      "subjectId": "lex:text",
+      "field": "lemma",
+      "value": "Text",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-text-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 4
+      },
+      "subjectId": "lex:text",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:text-en",
+          "glossEn": "text"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-partner-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 3
+      },
+      "subjectId": "lex:partner",
+      "field": "lemma",
+      "value": "Partner",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-partner-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 3
+      },
+      "subjectId": "lex:partner",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:partner-en",
+          "glossEn": "partner (m./f.)"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-partnerin-lemma",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 3
+      },
+      "subjectId": "lex:partnerin",
+      "field": "lemma",
+      "value": "Partnerin",
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-partnerin-meanings",
+      "sourceId": "source:alpha-content-bundle",
+      "location": {
+        "printedPage": 3
+      },
+      "subjectId": "lex:partnerin",
+      "field": "meanings",
+      "value": [
+        {
+          "id": "meaning:partnerin-en",
+          "glossEn": "partner (m./f.)"
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-status-keine-kinder-fixed",
+      "sourceId": "source:glossary-momente-a11",
+      "location": {
+        "printedPage": 3,
+        "exercise": "Lektion 02, 1"
+      },
+      "subjectId": "phrase:status-keine-kinder",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "keine Kinder"
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-status-keine-kinder-accepted",
+      "sourceId": "source:glossary-momente-a11",
+      "location": {
+        "printedPage": 3,
+        "exercise": "Lektion 02, 1"
+      },
+      "subjectId": "phrase:status-keine-kinder",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "keine Kinder"
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-work-job-stelle-haben-fixed",
+      "sourceId": "source:coursebook-momente-a11",
+      "location": {
+        "printedPage": 18,
+        "exercise": "Lektion 02, 6"
+      },
+      "subjectId": "phrase:work-job-stelle-haben",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich habe eine Stelle / einen Job als …"
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-work-job-stelle-haben-accepted",
+      "sourceId": "source:coursebook-momente-a11",
+      "location": {
+        "printedPage": 18,
+        "exercise": "Lektion 02, 6"
+      },
+      "subjectId": "phrase:work-job-stelle-haben",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich habe eine Stelle / einen Job als …"
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-work-ausbildung-praktikum-fixed",
+      "sourceId": "source:coursebook-momente-a11",
+      "location": {
+        "printedPage": 18,
+        "exercise": "Lektion 02, 6"
+      },
+      "subjectId": "phrase:work-ausbildung-praktikum",
+      "field": "fixedTokens",
+      "value": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich mache eine Ausbildung / ein Praktikum als … / bei …"
+          }
+        ]
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:phrase-work-ausbildung-praktikum-accepted",
+      "sourceId": "source:coursebook-momente-a11",
+      "location": {
+        "printedPage": 18,
+        "exercise": "Lektion 02, 6"
+      },
+      "subjectId": "phrase:work-ausbildung-praktikum",
+      "field": "acceptedRealizations",
+      "value": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich mache eine Ausbildung / ein Praktikum als … / bei …"
+            }
+          ]
+        }
+      ],
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "c1-source-encode",
+      "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
       "id": "assert:lex-paketzusteller-lemma",
       "sourceId": "source:alpha-content-bundle",
       "location": {
@@ -1906,6 +2241,23 @@
       "status": "verified",
       "reviewer": "c1-source-encode",
       "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-architekt-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:architekt",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Thomas ist Architekt.",
+        "translationEn": "Thomas is an architect.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
     },
     {
       "kind": "SourceAssertion",
@@ -5368,6 +5720,232 @@
     },
     {
       "kind": "Lexeme",
+      "id": "lex:interview",
+      "lemma": "Interview",
+      "partOfSpeech": "noun",
+      "meanings": [
+        {
+          "id": "meaning:interview-en",
+          "glossEn": "interview"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:interview-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-interview-lemma",
+        "assert:lex-interview-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-interview-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-interview-meanings"
+          }
+        ]
+      },
+      "noun": {
+        "gender": "neuter",
+        "article": "das",
+        "singular": "Interview",
+        "plurals": [
+          {
+            "form": "Interviews",
+            "patternIds": []
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:zusammenleben",
+      "lemma": "zusammenleben",
+      "partOfSpeech": "verb",
+      "meanings": [
+        {
+          "id": "meaning:zusammenleben-en",
+          "glossEn": "to live together"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:zusammenleben-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-zusammenleben-lemma",
+        "assert:lex-zusammenleben-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-zusammenleben-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-zusammenleben-meanings"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:text",
+      "lemma": "Text",
+      "partOfSpeech": "noun",
+      "meanings": [
+        {
+          "id": "meaning:text-en",
+          "glossEn": "text"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:text-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-text-lemma",
+        "assert:lex-text-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-text-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-text-meanings"
+          }
+        ]
+      },
+      "noun": {
+        "gender": "masculine",
+        "article": "der",
+        "singular": "Text",
+        "plurals": [
+          {
+            "form": "Texte",
+            "patternIds": []
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:partner",
+      "lemma": "Partner",
+      "partOfSpeech": "noun",
+      "meanings": [
+        {
+          "id": "meaning:partner-en",
+          "glossEn": "partner (m./f.)"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:partner-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-partner-lemma",
+        "assert:lex-partner-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-partner-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-partner-meanings"
+          }
+        ]
+      },
+      "noun": {
+        "gender": "masculine",
+        "article": "der",
+        "singular": "Partner",
+        "plurals": [
+          {
+            "form": "Partner",
+            "patternIds": []
+          }
+        ],
+        "personFormGroupId": "person-form:partner"
+      }
+    },
+    {
+      "kind": "Lexeme",
+      "id": "lex:partnerin",
+      "lemma": "Partnerin",
+      "partOfSpeech": "noun",
+      "meanings": [
+        {
+          "id": "meaning:partnerin-en",
+          "glossEn": "partner (m./f.)"
+        }
+      ],
+      "pronunciation": {},
+      "exampleIds": [],
+      "relationIds": [
+        "rel:partnerin-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:lex-partnerin-lemma",
+        "assert:lex-partnerin-meanings"
+      ],
+      "mediaIds": [],
+      "cardTemplateIds": [],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "lemma",
+            "assertionId": "assert:lex-partnerin-lemma"
+          },
+          {
+            "field": "meanings",
+            "assertionId": "assert:lex-partnerin-meanings"
+          }
+        ]
+      },
+      "noun": {
+        "gender": "feminine",
+        "article": "die",
+        "singular": "Partnerin",
+        "plurals": [
+          {
+            "form": "Partnerinnen",
+            "patternIds": []
+          }
+        ],
+        "personFormGroupId": "person-form:partner"
+      }
+    },
+    {
+      "kind": "Lexeme",
       "id": "lex:paketzusteller",
       "lemma": "Paketzusteller",
       "partOfSpeech": "noun",
@@ -6166,7 +6744,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-architekt-lemma",
-        "assert:lex-architekt-meanings"
+        "assert:lex-architekt-meanings",
+        "assert:lex-architekt-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -6182,6 +6761,12 @@
             "assertionId": "assert:lex-architekt-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Thomas ist Architekt.",
+        "translationEn": "Thomas is an architect.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -7533,6 +8118,147 @@
     }
   ],
   "phrasePatterns": [
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:status-keine-kinder",
+      "intent": "status-children-none",
+      "register": "neutral",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "keine Kinder"
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "keine Kinder"
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [
+        "rel:status-keine-kinder-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:phrase-status-keine-kinder-fixed",
+        "assert:phrase-status-keine-kinder-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-status-keine-kinder-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-status-keine-kinder-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:work-job-stelle-haben",
+      "intent": "work-statement-job-or-position",
+      "register": "neutral",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich habe eine Stelle / einen Job als …"
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich habe eine Stelle / einen Job als …"
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [
+        "rel:work-job-stelle-haben-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:phrase-work-job-stelle-haben-fixed",
+        "assert:phrase-work-job-stelle-haben-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-work-job-stelle-haben-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-work-job-stelle-haben-accepted"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PhrasePattern",
+      "id": "phrase:work-ausbildung-praktikum",
+      "intent": "work-statement-training-or-internship",
+      "register": "neutral",
+      "fixedTokens": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich mache eine Ausbildung / ein Praktikum als … / bei …"
+          }
+        ]
+      },
+      "slots": [],
+      "acceptedRealizations": [
+        {
+          "tokens": [
+            {
+              "type": "plain",
+              "text": "Ich mache eine Ausbildung / ein Praktikum als … / bei …"
+            }
+          ]
+        }
+      ],
+      "grammarIds": [],
+      "audioIds": [],
+      "relationIds": [
+        "rel:work-ausbildung-praktikum-introduced-l2"
+      ],
+      "sourceAssertionIds": [
+        "assert:phrase-work-ausbildung-praktikum-fixed",
+        "assert:phrase-work-ausbildung-praktikum-accepted"
+      ],
+      "publication": {
+        "status": "published",
+        "publishedFields": [
+          {
+            "field": "fixedTokens",
+            "assertionId": "assert:phrase-work-ausbildung-praktikum-fixed"
+          },
+          {
+            "field": "acceptedRealizations",
+            "assertionId": "assert:phrase-work-ausbildung-praktikum-accepted"
+          }
+        ]
+      }
+    },
     {
       "kind": "PhrasePattern",
       "id": "phrase:profession-casual-main-q",
@@ -9190,6 +9916,70 @@
     },
     {
       "kind": "Relationship",
+      "id": "rel:interview-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:interview",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:zusammenleben-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:zusammenleben",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:text-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:text",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:partner-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:partner",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:partnerin-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "lex:partnerin",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:person-pair-partner-person-form",
+      "type": "person-form-of",
+      "fromId": "lex:partnerin",
+      "toId": "lex:partner",
+      "note": "core glossary person-form pair (not a profession)"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:status-keine-kinder-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "phrase:status-keine-kinder",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:work-job-stelle-haben-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "phrase:work-job-stelle-haben",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
+      "id": "rel:work-ausbildung-praktikum-introduced-l2",
+      "type": "introduced-in",
+      "fromId": "phrase:work-ausbildung-praktikum",
+      "toId": "lesson:02"
+    },
+    {
+      "kind": "Relationship",
       "id": "rel:paketzusteller-introduced-l2",
       "type": "introduced-in",
       "fromId": "lex:paketzusteller",
@@ -9700,6 +10490,15 @@
     },
     {
       "kind": "ContentGap",
+      "id": "gap:classification-text",
+      "objectId": "lex:text",
+      "field": "sourcePriority",
+      "reason": "docs/11 lists Text among the core Lesson 2 nouns, but the official glossary prints it in italics, its own marking for words outside the learning vocabulary. Encoded as spec-core; a qualified reviewer still has to rule on the classification.",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
       "id": "gap:example-paketzusteller-german-review",
       "objectId": "lex:paketzusteller",
       "field": "example",
@@ -9819,6 +10618,15 @@
       "kind": "ContentGap",
       "id": "gap:example-journalistin-german-review",
       "objectId": "lex:journalistin",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-architekt-german-review",
+      "objectId": "lex:architekt",
       "field": "example",
       "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
       "owner": "owner-review",

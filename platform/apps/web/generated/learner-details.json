@@ -1,5 +1,5 @@
 {
-  "detailCount": 104,
+  "detailCount": 119,
   "details": [
     {
       "article": "die",
@@ -118,7 +118,12 @@
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a617263686974656b74",
       "displayText": "der Architekt",
-      "example": null,
+      "example": {
+        "de": "Thomas ist Architekt.",
+        "en": "Thomas is an architect.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "masculine",
       "hubSegment": "vocabulary",
       "id": "lex:architekt",
@@ -390,6 +395,31 @@
     },
     {
       "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a64616e6b65",
+      "displayText": "Danke.",
+      "example": null,
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:danke",
+      "kind": "Lexeme",
+      "lemma": "Danke.",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Thank you.",
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Danke.",
+      "sourcePriority": 1
+    },
+    {
+      "article": null,
       "canonicalPath": "/vocabulary/id-6c65783a646575747363686c616e64",
       "displayText": "Deutschland",
       "example": {
@@ -423,6 +453,81 @@
       "plurals": [],
       "publicationStatus": "published",
       "singular": "Deutschland",
+      "sourcePriority": 1
+    },
+    {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a6475",
+      "displayText": "du",
+      "example": null,
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:du",
+      "kind": "Lexeme",
+      "lemma": "du",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "you",
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "du",
+      "sourcePriority": 1
+    },
+    {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a656e74736368756c646967756e67",
+      "displayText": "Entschuldigung.",
+      "example": null,
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:entschuldigung",
+      "kind": "Lexeme",
+      "lemma": "Entschuldigung.",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Sorry.",
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Entschuldigung.",
+      "sourcePriority": 1
+    },
+    {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a6572",
+      "displayText": "er",
+      "example": null,
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:er",
+      "kind": "Lexeme",
+      "lemma": "er",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "he",
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "er",
       "sourcePriority": 1
     },
     {
@@ -1114,6 +1219,31 @@
       "sourcePriority": 1
     },
     {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a696368",
+      "displayText": "ich",
+      "example": null,
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:ich",
+      "kind": "Lexeme",
+      "lemma": "ich",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "I",
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "ich",
+      "sourcePriority": 1
+    },
+    {
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a696e67656e69657572",
       "displayText": "der Ingenieur",
@@ -1199,6 +1329,33 @@
       ],
       "publicationStatus": "published",
       "singular": "Ingenieurin",
+      "sourcePriority": 1
+    },
+    {
+      "article": "das",
+      "canonicalPath": "/vocabulary/id-6c65783a696e74657276696577",
+      "displayText": "das Interview",
+      "example": null,
+      "gender": "neuter",
+      "hubSegment": "vocabulary",
+      "id": "lex:interview",
+      "kind": "Lexeme",
+      "lemma": "Interview",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "interview",
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [
+        "Interviews"
+      ],
+      "publicationStatus": "published",
+      "singular": "Interview",
       "sourcePriority": 1
     },
     {
@@ -1872,6 +2029,70 @@
       "sourcePriority": 1
     },
     {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a706172746e6572",
+      "displayText": "der Partner",
+      "example": null,
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:partner",
+      "kind": "Lexeme",
+      "lemma": "Partner",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "partner (m./f.)",
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "personForm": {
+        "feminineSuffix": "in",
+        "operationLabel": "Add feminine -in",
+        "relatedArticle": "die",
+        "relatedDisplayText": "die Partnerin",
+        "relatedGender": "feminine",
+        "relatedId": "lex:partnerin",
+        "relatedLemma": "Partnerin",
+        "relatedMeaningEn": "partner (m./f.)",
+        "sharedStem": "Partner"
+      },
+      "pluralGapMessage": null,
+      "plurals": [
+        "Partner"
+      ],
+      "publicationStatus": "published",
+      "singular": "Partner",
+      "sourcePriority": 1
+    },
+    {
+      "article": "die",
+      "canonicalPath": "/vocabulary/id-6c65783a706172746e6572696e",
+      "displayText": "die Partnerin",
+      "example": null,
+      "gender": "feminine",
+      "hubSegment": "vocabulary",
+      "id": "lex:partnerin",
+      "kind": "Lexeme",
+      "lemma": "Partnerin",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "partner (m./f.)",
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [
+        "Partnerinnen"
+      ],
+      "publicationStatus": "published",
+      "singular": "Partnerin",
+      "sourcePriority": 1
+    },
+    {
       "article": "das",
       "canonicalPath": "/vocabulary/id-6c65783a7072616b74696b756d",
       "displayText": "das Praktikum",
@@ -2161,6 +2382,56 @@
       "sourcePriority": 1
     },
     {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a736965",
+      "displayText": "sie",
+      "example": null,
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:sie",
+      "kind": "Lexeme",
+      "lemma": "sie",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "she",
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "sie",
+      "sourcePriority": 1
+    },
+    {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a7369652d666f726d616c",
+      "displayText": "Sie",
+      "example": null,
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:sie-formal",
+      "kind": "Lexeme",
+      "lemma": "Sie",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "you (formal)",
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Sie",
+      "sourcePriority": 1
+    },
+    {
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a73696e676c65",
       "displayText": "der Single",
@@ -2438,6 +2709,33 @@
       "sourcePriority": 1
     },
     {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a74657874",
+      "displayText": "der Text",
+      "example": null,
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:text",
+      "kind": "Lexeme",
+      "lemma": "Text",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "text",
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [
+        "Texte"
+      ],
+      "publicationStatus": "published",
+      "singular": "Text",
+      "sourcePriority": 1
+    },
+    {
       "article": null,
       "canonicalPath": "/vocabulary/id-6c65783a74736368756573",
       "displayText": "Tschüs",
@@ -2509,6 +2807,31 @@
       "plurals": [],
       "publicationStatus": "published",
       "singular": "Türkei",
+      "sourcePriority": 1
+    },
+    {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a756e642d646972",
+      "displayText": "Und dir?",
+      "example": null,
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:und-dir",
+      "kind": "Lexeme",
+      "lemma": "Und dir?",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "What about you?",
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Und dir?",
       "sourcePriority": 1
     },
     {
@@ -2713,6 +3036,31 @@
       "sourcePriority": 1
     },
     {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a7769652d6269747465",
+      "displayText": "Wie bitte?",
+      "example": null,
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:wie-bitte",
+      "kind": "Lexeme",
+      "lemma": "Wie bitte?",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Pardon?",
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Wie bitte?",
+      "sourcePriority": 1
+    },
+    {
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a776f686e6f7274",
       "displayText": "der Wohnort",
@@ -2749,6 +3097,31 @@
       ],
       "publicationStatus": "published",
       "singular": "Wohnort",
+      "sourcePriority": 1
+    },
+    {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a7a7573616d6d656e6c6562656e",
+      "displayText": "zusammenleben",
+      "example": null,
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:zusammenleben",
+      "kind": "Lexeme",
+      "lemma": "zusammenleben",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "to live together",
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "zusammenleben",
       "sourcePriority": 1
     },
     {
@@ -3697,6 +4070,48 @@
       "sourcePriority": 2,
       "titleDe": "Weibliche Berufsformen",
       "titleEn": "Feminine profession forms"
+    },
+    {
+      "activityIds": [],
+      "canonicalPath": "/grammar/id-6772616d3a756e642d6c696e6b696e672d6c31",
+      "commonErrorTags": [
+        "subject-repetition",
+        "verb-position"
+      ],
+      "displayText": "Sätze mit und verbinden",
+      "hubSegment": "grammar",
+      "id": "gram:und-linking-l1",
+      "kind": "GrammarConcept",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "notice": "Two statements about the same person join into one sentence with und.",
+      "prerequisiteIds": [
+        "gram:main-clause-word-order-l1"
+      ],
+      "prerequisiteLabels": [
+        "Satzstellung im Aussagesatz"
+      ],
+      "publicationStatus": "published",
+      "ruleSteps": [
+        {
+          "id": "und-links-two-statements",
+          "model": "Sie kommt aus Frankreich und sie lernt Deutsch.",
+          "notice": "Join the two statements with und; each half keeps its own person and finite verb."
+        },
+        {
+          "id": "und-drops-the-repeated-subject",
+          "model": "Sie kommt aus Frankreich und lernt Deutsch.",
+          "notice": "When both halves share the same subject, the second one can be left out."
+        }
+      ],
+      "sourcePriority": 2,
+      "titleDe": "Sätze mit und verbinden",
+      "titleEn": "Linking with und"
     },
     {
       "activityIds": [],
@@ -4914,6 +5329,48 @@
       "titleDe": "Weibliche Berufsformen",
       "titleEn": "Feminine profession forms"
     },
+    "gram:und-linking-l1": {
+      "activityIds": [],
+      "canonicalPath": "/grammar/id-6772616d3a756e642d6c696e6b696e672d6c31",
+      "commonErrorTags": [
+        "subject-repetition",
+        "verb-position"
+      ],
+      "displayText": "Sätze mit und verbinden",
+      "hubSegment": "grammar",
+      "id": "gram:und-linking-l1",
+      "kind": "GrammarConcept",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "notice": "Two statements about the same person join into one sentence with und.",
+      "prerequisiteIds": [
+        "gram:main-clause-word-order-l1"
+      ],
+      "prerequisiteLabels": [
+        "Satzstellung im Aussagesatz"
+      ],
+      "publicationStatus": "published",
+      "ruleSteps": [
+        {
+          "id": "und-links-two-statements",
+          "model": "Sie kommt aus Frankreich und sie lernt Deutsch.",
+          "notice": "Join the two statements with und; each half keeps its own person and finite verb."
+        },
+        {
+          "id": "und-drops-the-repeated-subject",
+          "model": "Sie kommt aus Frankreich und lernt Deutsch.",
+          "notice": "When both halves share the same subject, the second one can be left out."
+        }
+      ],
+      "sourcePriority": 2,
+      "titleDe": "Sätze mit und verbinden",
+      "titleEn": "Linking with und"
+    },
     "gram:w-questions-l1": {
       "activityIds": [],
       "canonicalPath": "/grammar/id-6772616d3a772d7175657374696f6e732d6c31",
@@ -5074,7 +5531,12 @@
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a617263686974656b74",
       "displayText": "der Architekt",
-      "example": null,
+      "example": {
+        "de": "Thomas ist Architekt.",
+        "en": "Thomas is an architect.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "masculine",
       "hubSegment": "vocabulary",
       "id": "lex:architekt",
@@ -5344,6 +5806,31 @@
       "singular": "Beruf",
       "sourcePriority": 1
     },
+    "lex:danke": {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a64616e6b65",
+      "displayText": "Danke.",
+      "example": null,
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:danke",
+      "kind": "Lexeme",
+      "lemma": "Danke.",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Thank you.",
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Danke.",
+      "sourcePriority": 1
+    },
     "lex:deutschland": {
       "article": null,
       "canonicalPath": "/vocabulary/id-6c65783a646575747363686c616e64",
@@ -5379,6 +5866,81 @@
       "plurals": [],
       "publicationStatus": "published",
       "singular": "Deutschland",
+      "sourcePriority": 1
+    },
+    "lex:du": {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a6475",
+      "displayText": "du",
+      "example": null,
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:du",
+      "kind": "Lexeme",
+      "lemma": "du",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "you",
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "du",
+      "sourcePriority": 1
+    },
+    "lex:entschuldigung": {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a656e74736368756c646967756e67",
+      "displayText": "Entschuldigung.",
+      "example": null,
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:entschuldigung",
+      "kind": "Lexeme",
+      "lemma": "Entschuldigung.",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Sorry.",
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Entschuldigung.",
+      "sourcePriority": 1
+    },
+    "lex:er": {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a6572",
+      "displayText": "er",
+      "example": null,
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:er",
+      "kind": "Lexeme",
+      "lemma": "er",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "he",
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "er",
       "sourcePriority": 1
     },
     "lex:eritrea": {
@@ -6069,6 +6631,31 @@
       "singular": "Herr",
       "sourcePriority": 1
     },
+    "lex:ich": {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a696368",
+      "displayText": "ich",
+      "example": null,
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:ich",
+      "kind": "Lexeme",
+      "lemma": "ich",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "I",
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "ich",
+      "sourcePriority": 1
+    },
     "lex:ingenieur": {
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a696e67656e69657572",
@@ -6155,6 +6742,33 @@
       ],
       "publicationStatus": "published",
       "singular": "Ingenieurin",
+      "sourcePriority": 1
+    },
+    "lex:interview": {
+      "article": "das",
+      "canonicalPath": "/vocabulary/id-6c65783a696e74657276696577",
+      "displayText": "das Interview",
+      "example": null,
+      "gender": "neuter",
+      "hubSegment": "vocabulary",
+      "id": "lex:interview",
+      "kind": "Lexeme",
+      "lemma": "Interview",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "interview",
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [
+        "Interviews"
+      ],
+      "publicationStatus": "published",
+      "singular": "Interview",
       "sourcePriority": 1
     },
     "lex:jahr": {
@@ -6827,6 +7441,70 @@
       "singular": "Paketzustellerin",
       "sourcePriority": 1
     },
+    "lex:partner": {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a706172746e6572",
+      "displayText": "der Partner",
+      "example": null,
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:partner",
+      "kind": "Lexeme",
+      "lemma": "Partner",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "partner (m./f.)",
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "personForm": {
+        "feminineSuffix": "in",
+        "operationLabel": "Add feminine -in",
+        "relatedArticle": "die",
+        "relatedDisplayText": "die Partnerin",
+        "relatedGender": "feminine",
+        "relatedId": "lex:partnerin",
+        "relatedLemma": "Partnerin",
+        "relatedMeaningEn": "partner (m./f.)",
+        "sharedStem": "Partner"
+      },
+      "pluralGapMessage": null,
+      "plurals": [
+        "Partner"
+      ],
+      "publicationStatus": "published",
+      "singular": "Partner",
+      "sourcePriority": 1
+    },
+    "lex:partnerin": {
+      "article": "die",
+      "canonicalPath": "/vocabulary/id-6c65783a706172746e6572696e",
+      "displayText": "die Partnerin",
+      "example": null,
+      "gender": "feminine",
+      "hubSegment": "vocabulary",
+      "id": "lex:partnerin",
+      "kind": "Lexeme",
+      "lemma": "Partnerin",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "partner (m./f.)",
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [
+        "Partnerinnen"
+      ],
+      "publicationStatus": "published",
+      "singular": "Partnerin",
+      "sourcePriority": 1
+    },
     "lex:praktikum": {
       "article": "das",
       "canonicalPath": "/vocabulary/id-6c65783a7072616b74696b756d",
@@ -7116,6 +7794,56 @@
       "singular": "Sehr gut, danke.",
       "sourcePriority": 1
     },
+    "lex:sie": {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a736965",
+      "displayText": "sie",
+      "example": null,
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:sie",
+      "kind": "Lexeme",
+      "lemma": "sie",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "she",
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "sie",
+      "sourcePriority": 1
+    },
+    "lex:sie-formal": {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a7369652d666f726d616c",
+      "displayText": "Sie",
+      "example": null,
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:sie-formal",
+      "kind": "Lexeme",
+      "lemma": "Sie",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "you (formal)",
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Sie",
+      "sourcePriority": 1
+    },
     "lex:single": {
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a73696e676c65",
@@ -7393,6 +8121,33 @@
       "singular": "Super!",
       "sourcePriority": 1
     },
+    "lex:text": {
+      "article": "der",
+      "canonicalPath": "/vocabulary/id-6c65783a74657874",
+      "displayText": "der Text",
+      "example": null,
+      "gender": "masculine",
+      "hubSegment": "vocabulary",
+      "id": "lex:text",
+      "kind": "Lexeme",
+      "lemma": "Text",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "text",
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [
+        "Texte"
+      ],
+      "publicationStatus": "published",
+      "singular": "Text",
+      "sourcePriority": 1
+    },
     "lex:tschues": {
       "article": null,
       "canonicalPath": "/vocabulary/id-6c65783a74736368756573",
@@ -7465,6 +8220,31 @@
       "plurals": [],
       "publicationStatus": "published",
       "singular": "Türkei",
+      "sourcePriority": 1
+    },
+    "lex:und-dir": {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a756e642d646972",
+      "displayText": "Und dir?",
+      "example": null,
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:und-dir",
+      "kind": "Lexeme",
+      "lemma": "Und dir?",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "What about you?",
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Und dir?",
       "sourcePriority": 1
     },
     "lex:usa": {
@@ -7668,6 +8448,31 @@
       "singular": "Vorname",
       "sourcePriority": 1
     },
+    "lex:wie-bitte": {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a7769652d6269747465",
+      "displayText": "Wie bitte?",
+      "example": null,
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:wie-bitte",
+      "kind": "Lexeme",
+      "lemma": "Wie bitte?",
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "meaningEn": "Pardon?",
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "Wie bitte?",
+      "sourcePriority": 1
+    },
     "lex:wohnort": {
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a776f686e6f7274",
@@ -7705,6 +8510,31 @@
       ],
       "publicationStatus": "published",
       "singular": "Wohnort",
+      "sourcePriority": 1
+    },
+    "lex:zusammenleben": {
+      "article": null,
+      "canonicalPath": "/vocabulary/id-6c65783a7a7573616d6d656e6c6562656e",
+      "displayText": "zusammenleben",
+      "example": null,
+      "gender": null,
+      "hubSegment": "vocabulary",
+      "id": "lex:zusammenleben",
+      "kind": "Lexeme",
+      "lemma": "zusammenleben",
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "meaningEn": "to live together",
+      "media": {
+        "assetId": null,
+        "state": "missing"
+      },
+      "personForm": null,
+      "pluralGapMessage": null,
+      "plurals": [],
+      "publicationStatus": "published",
+      "singular": "zusammenleben",
       "sourcePriority": 1
     },
     "qa:age-casual": {
@@ -9027,7 +9857,12 @@
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a617263686974656b74",
       "displayText": "der Architekt",
-      "example": null,
+      "example": {
+        "de": "Thomas ist Architekt.",
+        "en": "Thomas is an architect.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "masculine",
       "hubSegment": "vocabulary",
       "id": "lex:architekt",
@@ -9222,7 +10057,12 @@
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a617263686974656b74",
       "displayText": "der Architekt",
-      "example": null,
+      "example": {
+        "de": "Thomas ist Architekt.",
+        "en": "Thomas is an architect.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "masculine",
       "hubSegment": "vocabulary",
       "id": "lex:architekt",

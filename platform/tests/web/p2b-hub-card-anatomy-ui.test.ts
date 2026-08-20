@@ -213,6 +213,14 @@ describe("P2B hub card anatomies", () => {
     expect(modelCount).toBe(hubs.hubsById.grammar.items.length);
     expect(html).toContain("Ich komme aus Deutschland.");
     expect(html).toContain("Ich bin Architekt.");
+    // The Lesson 1 und-linking rule: its card names the rule in both languages
+    // and shows the first of the two models the workbook prints on page 8.
+    expect(html).toContain("Sätze mit und verbinden");
+    expect(html).toContain("Linking with und");
+    expect(html).toContain("Sie kommt aus Frankreich und sie lernt Deutsch.");
+    expect(
+      hubs.hubsById.grammar.items.find((item) => item.id === "gram:und-linking-l1")?.model,
+    ).toBe("Sie kommt aus Frankreich und sie lernt Deutsch.");
     // German model is selectable HTML, never baked into an image.
     expect(html).toMatch(
       /<dd class="german" lang="de">Ich komme aus Deutschland\.<\/dd>/,

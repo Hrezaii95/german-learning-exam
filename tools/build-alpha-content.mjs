@@ -45,16 +45,51 @@ const coreProfessions = [
   ["Schüler", "Schülerin", "school student", "Schüler", "Schülerinnen"], ["Rentner", "Rentnerin", "pensioner", "Rentner", "Rentnerinnen"],
 ].map(([masculine, feminine, meaningEn, masculinePlural, femininePlural]) => ({ id: `profession:${slug(masculine)}`, masculine, feminine, meaningEn, masculinePlural, femininePlural, priority: 1 }));
 
+// Standalone taught patterns, transcribed verbatim from the official sources.
+//
+// These are PhrasePatterns, not Lexemes: the app renders a phrase pattern as
+// German only, so no English gloss is stored for them and none is needed. That
+// matters for one entry in particular — "Und Ihnen?" is printed in the workbook
+// but appears nowhere in the English glossary, so a glossed vocabulary entry
+// would have required an English half no source publishes.
+//
+// `source` names the document the German was read from and `page` is that
+// document's own printed page number.
+const lesson1Phrases = [
+  { id: "phrase:identity-und-wer-bist-du", intent: "identity-question-casual", register: "casual", de: "Und wer bist du?", source: "glossary", page: 1, exercise: "Lektion 01, 1" },
+  { id: "phrase:identity-wer-sind-sie", intent: "identity-question-formal", register: "formal", de: "Wer sind Sie?", source: "glossary", page: 2, exercise: "Lektion 01, 8" },
+  { id: "phrase:name-answer-ich-bin", intent: "name-answer", register: "neutral", de: "Ich bin …", source: "glossary", page: 1, exercise: "Lektion 01, 1" },
+  { id: "phrase:wellbeing-und-ihnen", intent: "wellbeing-follow-up-formal", register: "formal", de: "Und Ihnen?", source: "workbook", page: 9, exercise: "Lektion 01, Übung zu Kursbuch 8" },
+];
+
+const lesson2Phrases = [
+  { id: "phrase:status-keine-kinder", intent: "status-children-none", register: "neutral", de: "keine Kinder", source: "glossary", page: 3, exercise: "Lektion 02, 1" },
+  { id: "phrase:work-job-stelle-haben", intent: "work-statement-job-or-position", register: "neutral", de: "Ich habe eine Stelle / einen Job als …", source: "coursebook", page: 18, exercise: "Lektion 02, 6" },
+  { id: "phrase:work-ausbildung-praktikum", intent: "work-statement-training-or-internship", register: "neutral", de: "Ich mache eine Ausbildung / ein Praktikum als … / bei …", source: "coursebook", page: 18, exercise: "Lektion 02, 6" },
+];
+
 const lesson1 = {
   id: "lesson:01", number: 1, titleDe: "Ich heiße Miriam.", titleEn: "Greetings and introductions", cefr: "A1",
   sourcePages: { coursebookPrinted: [10, 14], workbookPrinted: [6, 9], glossaryPdf: [1, 2] },
   goals: ["greet and say goodbye", "ask and answer names", "spell a name", "ask and say origin", "ask and answer wellbeing", "choose du or formal Sie"],
   vocabulary: {
     greetings: [["Hallo", "Hello"], ["Guten Tag", "Good day / Hello"], ["Guten Morgen", "Good morning"], ["Guten Abend", "Good evening"], ["Gute Nacht", "Good night"], ["Tschüs", "Bye"], ["Auf Wiedersehen", "Goodbye"]],
-    wellbeing: [["Super!", "Great!"], ["Sehr gut, danke.", "Very well, thank you."], ["Gut, danke.", "Fine, thank you."], ["Es geht.", "Not too bad."], ["Nicht so gut.", "Not so well."], ["Auch super.", "Great as well."]],
+    // Third element = glossary page, where the entry falls past the page break.
+    // Lektion 01 exercise 3 starts on p.1 and its last two entries — "Und dir? —
+    // What about you?" and "Auch super. — Great as well." — are printed at the
+    // top of p.2, both in the roman (core) style.
+    wellbeing: [["Super!", "Great!"], ["Sehr gut, danke.", "Very well, thank you."], ["Gut, danke.", "Fine, thank you."], ["Es geht.", "Not too bad."], ["Nicht so gut.", "Not so well."], ["Und dir?", "What about you?", 2], ["Auch super.", "Great as well.", 2]],
+    // Glossary p.1, Lektion 01 exercise 2 — German and English both quoted as
+    // printed, trailing full stops included, exactly like the wellbeing block.
+    courtesy: [["Entschuldigung.", "Sorry."], ["Wie bitte?", "Pardon?"], ["Danke.", "Thank you."]],
+    // Glossary pp.1–2: ich/du are exercise 1 entries, er/sie exercise 4, formal
+    // Sie exercise 8. The third element is an id suffix, needed only because
+    // "sie" (she) and "Sie" (you, formal) slug identically.
+    pronouns: [["ich", "I", null, 1], ["du", "you", null, 1], ["er", "he", null, 2], ["sie", "she", null, 2], ["Sie", "you (formal)", "sie-formal", 2]],
     countries: [["Deutschland", "Germany", null], ["Eritrea", "Eritrea", null], ["Österreich", "Austria", null], ["Spanien", "Spain", null], ["Frankreich", "France", null], ["Schweiz", "Switzerland", "die"], ["Türkei", "Turkey", "die"], ["USA", "USA", "die-plural"]],
     identity: [["der Name", "name", "die Namen"], ["der Vorname", "first name", "die Vornamen"], ["der Familienname", "last name", "die Familiennamen"], ["der Herr", "Mr / gentleman", "die Herren"], ["die Frau", "Ms / Mrs / woman", "die Frauen"]],
   },
+  phrases: lesson1Phrases,
   verbs: [
     { id: "verb:sein", infinitive: "sein", meaningEn: "to be", forms: { ich: "bin", du: "bist", "er/sie": "ist", Sie: "sind" }, pattern: "irregular" },
     { id: "verb:heissen", infinitive: "heißen", meaningEn: "to be called", forms: { ich: "heiße", du: "heißt", "er/sie": "heißt", Sie: "heißen" }, pattern: "special-orthography" },
@@ -93,7 +128,25 @@ const lesson2 = {
   goals: ["give a personal profile", "understand and say numbers 0–100", "talk about relationship and children", "ask and answer about work", "use full present-tense person forms", "form profession person forms"],
   coreProfessions,
   // Third element = glossary plural (pp. 2–4); null = glossary marks the noun (Sg.) or lists no plural.
-  profileVocabulary: [["das Jahr", "year", "die Jahre"], ["das Kind", "child", "die Kinder"], ["verheiratet", "married"], ["geschieden", "divorced"], ["der Single", "single person", "die Singles"], ["allein", "alone"], ["der Wohnort", "place of residence", "die Wohnorte"], ["die Herkunft", "origin"], ["das Alter", "age"], ["der Familienstand", "marital status"], ["das Studium", "studies"], ["der Beruf", "profession", "die Berufe"], ["der Job", "job", "die Jobs"], ["die Stelle", "position/job", "die Stellen"], ["die Ausbildung", "apprenticeship/training", "die Ausbildungen"], ["das Praktikum", "internship", "die Praktika"], ["die Firma", "company", "die Firmen"]],
+  // Fourth element = part of speech, only where it is not derivable from the article.
+  // Fifth element = the exact glossary page, where it is known for that entry.
+  //
+  // The last three entries close spec gaps against the official glossary:
+  //   das Interview, -s — interview        (p.3, Lektion 02 ex.2)
+  //   zusammen|leben — to live together    (p.3, Lektion 02 ex.2; the pipe is
+  //     the glossary's separable-prefix marker, so the lemma is zusammenleben)
+  //   der Text, -e — text                  (p.4, Lektion 02 ex.7, printed in
+  //     the italic style the glossary reserves for non-core words; docs/11
+  //     nevertheless names Text a core Lesson 2 noun, and the divergence is
+  //     recorded as a content gap rather than silently resolved either way)
+  profileVocabulary: [["das Jahr", "year", "die Jahre"], ["das Kind", "child", "die Kinder"], ["verheiratet", "married"], ["geschieden", "divorced"], ["der Single", "single person", "die Singles"], ["allein", "alone"], ["der Wohnort", "place of residence", "die Wohnorte"], ["die Herkunft", "origin"], ["das Alter", "age"], ["der Familienstand", "marital status"], ["das Studium", "studies"], ["der Beruf", "profession", "die Berufe"], ["der Job", "job", "die Jobs"], ["die Stelle", "position/job", "die Stellen"], ["die Ausbildung", "apprenticeship/training", "die Ausbildungen"], ["das Praktikum", "internship", "die Praktika"], ["die Firma", "company", "die Firmen"], ["das Interview", "interview", "die Interviews", null, 3], ["zusammenleben", "to live together", null, "verb", 3], ["der Text", "text", "die Texte", null, 4]],
+  // Glossary p.3, Lektion 02 ex.2: "der Partner, - / die Partnerin, -nen —
+  // partner (m./f.)". docs/11 requires slash alternatives to become separate
+  // linked lexemes, so the pair is stored exactly the way profession pairs are.
+  personPairs: [
+    { masculine: "Partner", masculinePlural: "Partner", feminine: "Partnerin", femininePlural: "Partnerinnen", meaningEn: "partner (m./f.)", page: 3 },
+  ],
+  phrases: lesson2Phrases,
   verbs: Object.entries(fullForms).map(([infinitive, forms]) => ({ id: `verb:${slug(infinitive)}`, infinitive, meaningEn: fullFormGlosses[infinitive], forms: Object.fromEntries(pronouns.map((pronoun, index) => [pronoun, forms[index]])), pattern: infinitive === "sein" || infinitive === "haben" ? "irregular" : infinitive === "arbeiten" ? "spelling-adjustment" : "regular" })),
   qa: [
     { id: "qa:profession-casual", register: "casual", question: "Was bist du von Beruf?", answers: ["Ich bin … von Beruf.", "Ich bin …", "Ich arbeite als …"] },

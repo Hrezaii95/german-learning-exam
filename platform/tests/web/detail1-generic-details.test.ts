@@ -11,10 +11,10 @@ describe("DETAIL1 generic published detail projection", () => {
   const projection = projectPublishedLearnerDetails(publishedDir);
 
   it("projects every published vocabulary, verb, and Q&A hub record", () => {
-    expect(projection.detailCount).toBe(104);
-    expect(projection.details).toHaveLength(104);
-    expect(Object.keys(projection.detailsById)).toHaveLength(104);
-    expect(projection.details.filter((row) => row.kind === "Lexeme")).toHaveLength(69);
+    expect(projection.detailCount).toBe(119);
+    expect(projection.details).toHaveLength(119);
+    expect(Object.keys(projection.detailsById)).toHaveLength(119);
+    expect(projection.details.filter((row) => row.kind === "Lexeme")).toHaveLength(83);
     expect(projection.details.filter((row) => row.kind === "Verb")).toHaveLength(10);
     expect(projection.details.filter((row) => row.kind === "QAPair")).toHaveLength(15);
   });

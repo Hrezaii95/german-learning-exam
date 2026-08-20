@@ -237,9 +237,9 @@ describe("profession concept illustrations", () => {
 });
 
 describe("the meaning plate keeps the vocabulary items that have no picture", () => {
-  it("splits the vocabulary hub into 68 illustrated and 1 plate item", () => {
+  it("splits the vocabulary hub into 68 illustrated and 15 plate items", () => {
     const ids = vocabularyItemIds();
-    expect(ids).toHaveLength(69);
+    expect(ids).toHaveLength(83);
 
     const illustrated = ids.filter((id) => illustrationForDetail(id) !== null);
     const plated = ids.filter((id) => illustrationForDetail(id) === null);
@@ -255,9 +255,30 @@ describe("the meaning plate keeps the vocabulary items that have no picture", ()
       ].sort(),
     );
     // The plate is not retired by full coverage: it is the declared media
-    // treatment for anything without an approved illustration, and one
-    // vocabulary item deliberately still uses it.
-    expect(plated).toEqual(["lex:architektin"]);
+    // treatment for anything without an approved illustration. Alongside the
+    // feminine architect it now carries the fourteen words encoded straight
+    // from the official glossary — courtesy phrases, the Lesson 1 pronouns,
+    // and the Lesson 2 profile nouns — none of which has an approved
+    // illustration yet. Drawing one is a media job, not a content one.
+    expect([...plated].sort()).toEqual(
+      [
+        "lex:architektin",
+        "lex:danke",
+        "lex:du",
+        "lex:entschuldigung",
+        "lex:er",
+        "lex:ich",
+        "lex:interview",
+        "lex:partner",
+        "lex:partnerin",
+        "lex:sie",
+        "lex:sie-formal",
+        "lex:text",
+        "lex:und-dir",
+        "lex:wie-bitte",
+        "lex:zusammenleben",
+      ].sort(),
+    );
   });
 
   it("keeps the feminine architect on the plate while its scene shows a man", () => {

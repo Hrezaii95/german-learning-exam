@@ -1,0 +1,372 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-20",
+  "generatedBy": "node tools/build-curriculum-diff.mjs",
+  "supersedes": "research/curriculum-diff-2026-08-13.json (hand-written; reported verbs and noun plurals that had already been closed)",
+  "scope": "lessons-01-02 curriculum diff: docs/11-lessons-01-02-content-spec.md required id sets vs platform/content/published on disk",
+  "method": "Required id sets are declared from docs/11; every published set is read from platform/content/published and compared as an id-set difference. Nothing in this file is a status somebody wrote about their own work.",
+  "authorities": [
+    "docs/11-lessons-01-02-content-spec.md",
+    "docs/02-product-requirements.md",
+    "docs/18-requirement-traceability.md"
+  ],
+  "evidence": {
+    "publishedPackages": [
+      "platform/content/published/activities.json",
+      "platform/content/published/lesson-01.json",
+      "platform/content/published/lesson-02.json",
+      "platform/content/published/listening-assets.json",
+      "platform/content/published/teacher-professions.json"
+    ],
+    "canonicalSource": "content/alpha-content.json",
+    "officialGlossary": "content/source-index/source-manifest.json src:glossary:9e35984302ede169 -> resources/original/glossaries/Momente_A1_1_KB_Glossar_Deutsch_Englisch.pdf (Lektion 01-02 = PDF pages 1-4)",
+    "officialCoursebook": "content/source-index/source-manifest.json src:coursebook:335bea7212f88574 -> resources/original/coursebook/A1-KB-momente.pdf (Lektion 01-02 = printed pages 10-18)",
+    "officialWorkbook": "content/source-index/source-manifest.json src:workbook:11708c7b58ae76d1 -> resources/original/workbook/Momente A1.1 AB_7.pdf (Lektion 01-02 = printed pages 6-13)"
+  },
+  "verbs": {
+    "requiredCount": 10,
+    "publishedCount": 10,
+    "missing": []
+  },
+  "qaIntents": {
+    "requiredCount": 15,
+    "publishedCount": 15,
+    "missing": []
+  },
+  "activities": {
+    "requiredCount": 24,
+    "publishedCount": 23,
+    "missing": [
+      "activity:lesson-02-teacher-professions-deck"
+    ],
+    "blocked": [
+      {
+        "id": "activity:lesson-02-teacher-professions-deck",
+        "status": "review",
+        "reason": "depends on collection:teacher-professions, whose 86 fragment lexemes are all status 'review' behind the qualified German reviewer gate"
+      }
+    ]
+  },
+  "grammarConcepts": {
+    "requiredCount": 11,
+    "publishedCount": 11,
+    "missing": []
+  },
+  "nounPlurals": {
+    "publishedNounCount": 52,
+    "exactStored": 45,
+    "noPluralBySource": [
+      {
+        "id": "lex:schweiz",
+        "note": "glossary p.2 prints 'die Schweiz' with no plural notation (proper-noun country)"
+      },
+      {
+        "id": "lex:tuerkei",
+        "note": "glossary p.2 prints 'die Türkei (Sg.)'"
+      },
+      {
+        "id": "lex:usa",
+        "note": "glossary p.2 prints 'die USA (Pl.)' — plural-only lexeme"
+      },
+      {
+        "id": "lex:herkunft",
+        "note": "glossary p.4 prints 'die Herkunft (Sg.)'"
+      },
+      {
+        "id": "lex:alter",
+        "note": "glossary p.4 prints 'das Alter (Sg.)'"
+      },
+      {
+        "id": "lex:familienstand",
+        "note": "glossary p.4 prints 'der Familienstand (Sg.)'"
+      },
+      {
+        "id": "lex:studium",
+        "note": "glossary p.4 prints 'das Studium (Sg.)'"
+      }
+    ],
+    "unexplainedMissing": []
+  },
+  "specItems": {
+    "requiredCount": 18,
+    "closedCount": 16,
+    "openCount": 2,
+    "items": [
+      {
+        "id": "lex:und-dir",
+        "specText": "Und dir?",
+        "lesson": "01",
+        "status": "closed",
+        "publishedAs": [
+          {
+            "id": "lex:und-dir",
+            "status": "published"
+          }
+        ],
+        "evidence": "glossary p.2, Lektion 01 ex.3 — 'Und dir? — What about you?' (roman/core)"
+      },
+      {
+        "id": "lex:und-ihnen",
+        "specText": "Und Ihnen?",
+        "lesson": "01",
+        "status": "closed",
+        "publishedAs": [
+          {
+            "id": "phrase:wellbeing-und-ihnen",
+            "status": "published"
+          }
+        ],
+        "evidence": "workbook printed p.9, Lesson 1 'Was passt? Kreuzen Sie an.' — German only",
+        "note": "Encoded as a German-only phrase pattern, not a glossed vocabulary entry: the token 'Ihnen' appears nowhere in the official English glossary, so no publisher English exists for the formal variant. Recorded as ContentGap gap:meaning-und-ihnen."
+      },
+      {
+        "id": "lex:entschuldigung",
+        "specText": "Entschuldigung",
+        "lesson": "01",
+        "status": "closed",
+        "publishedAs": [
+          {
+            "id": "lex:entschuldigung",
+            "status": "published"
+          }
+        ],
+        "evidence": "glossary p.1, Lektion 01 ex.2 — 'Entschuldigung. — Sorry.'"
+      },
+      {
+        "id": "lex:wie-bitte",
+        "specText": "Wie bitte?",
+        "lesson": "01",
+        "status": "closed",
+        "publishedAs": [
+          {
+            "id": "lex:wie-bitte",
+            "status": "published"
+          }
+        ],
+        "evidence": "glossary p.1, Lektion 01 ex.2 — 'Wie bitte? — Pardon?'"
+      },
+      {
+        "id": "lex:danke",
+        "specText": "Danke",
+        "lesson": "01",
+        "status": "closed",
+        "publishedAs": [
+          {
+            "id": "lex:danke",
+            "status": "published"
+          }
+        ],
+        "evidence": "glossary p.1, Lektion 01 ex.2 — 'Danke. — Thank you.'"
+      },
+      {
+        "id": "phrase:identity-wer-sind-sie",
+        "specText": "Wer sind Sie?",
+        "lesson": "01",
+        "status": "closed",
+        "publishedAs": [
+          {
+            "id": "phrase:identity-wer-sind-sie",
+            "status": "published"
+          }
+        ],
+        "evidence": "glossary p.2, Lektion 01 ex.8 — 'Wer sind Sie? — Who are you?'"
+      },
+      {
+        "id": "phrase:identity-und-wer-bist-du",
+        "specText": "Und wer bist du?",
+        "lesson": "01",
+        "status": "closed",
+        "publishedAs": [
+          {
+            "id": "phrase:identity-und-wer-bist-du",
+            "status": "published"
+          }
+        ],
+        "evidence": "glossary p.1, Lektion 01 ex.1 — 'Und wer bist du? — And who are you?'"
+      },
+      {
+        "id": "phrase:name-answer-ich-bin",
+        "specText": "Ich bin ... (as name/identity answer)",
+        "lesson": "01",
+        "status": "closed",
+        "publishedAs": [
+          {
+            "id": "phrase:name-answer-ich-bin",
+            "status": "published"
+          }
+        ],
+        "evidence": "glossary p.1, Lektion 01 ex.1 — 'Ich bin … — I am …'"
+      },
+      {
+        "id": "lexemes.alphabet",
+        "specText": "A-Z, Ä, Ö, Ü, ß inventory",
+        "lesson": "01",
+        "status": "open",
+        "publishedAs": [],
+        "openReason": "The coursebook prints the letters and their German names on printed page 12 (ex.2b), and the glossary prints only 'das Alphabet, -e — alphabet'. No official source prints an English meaning for an individual letter, and a Lexeme cannot be stored without one, so encoding the inventory would have meant authoring 30 glosses. Recorded as ContentGap gap:alphabet-l1."
+      },
+      {
+        "id": "lexemes.pronouns",
+        "specText": "ich/du/er/sie/Sie typed entries",
+        "lesson": "01",
+        "status": "closed",
+        "publishedAs": [
+          {
+            "id": "lex:ich",
+            "status": "published"
+          },
+          {
+            "id": "lex:du",
+            "status": "published"
+          },
+          {
+            "id": "lex:er",
+            "status": "published"
+          },
+          {
+            "id": "lex:sie",
+            "status": "published"
+          },
+          {
+            "id": "lex:sie-formal",
+            "status": "published"
+          }
+        ],
+        "evidence": "glossary p.1 ex.1 ('ich — I', 'du — you') and p.2 ex.4/ex.8 ('er — he', 'sie — she', 'Sie — you (formal)')",
+        "note": "'sie' and 'Sie' slug identically, so the formal entry carries the explicit id lex:sie-formal."
+      },
+      {
+        "id": "lexemes.numbers",
+        "specText": "numbers 0-100 + compound inversion",
+        "lesson": "02",
+        "status": "open",
+        "publishedAs": [],
+        "openReason": "The coursebook prints the number words on printed page 16 (ex.3a) as a fill-in exercise with seven blanks, and the answer key supplies those seven. No official source prints an English gloss for any of them, and compound inversion is taught rather than listed. Recorded as ContentGap gap:numbers-0-100."
+      },
+      {
+        "id": "lex:partner",
+        "specText": "Partner/Partnerin (spec core noun)",
+        "lesson": "02",
+        "status": "closed",
+        "publishedAs": [
+          {
+            "id": "lex:partner",
+            "status": "published"
+          },
+          {
+            "id": "lex:partnerin",
+            "status": "published"
+          }
+        ],
+        "evidence": "glossary p.3, Lektion 02 ex.2 — 'der Partner, - / die Partnerin, -nen — partner (m./f.)'",
+        "note": "Linked by rel:person-pair-partner-person-form, which the professions deck deliberately excludes."
+      },
+      {
+        "id": "lex:interview",
+        "specText": "Interview (spec core noun)",
+        "lesson": "02",
+        "status": "closed",
+        "publishedAs": [
+          {
+            "id": "lex:interview",
+            "status": "published"
+          }
+        ],
+        "evidence": "glossary p.3, Lektion 02 ex.2 — 'das Interview, -s — interview'"
+      },
+      {
+        "id": "lex:text",
+        "specText": "Text (spec core noun)",
+        "lesson": "02",
+        "status": "closed",
+        "publishedAs": [
+          {
+            "id": "lex:text",
+            "status": "published"
+          }
+        ],
+        "evidence": "glossary p.4, Lektion 02 ex.7 — 'der Text, -e — text'",
+        "note": "Printed in the italic style the glossary reserves for non-core words (verified from the rendered page); docs/11 nevertheless names Text a core noun. Encoded as spec-core with the disagreement recorded as ContentGap gap:classification-text."
+      },
+      {
+        "id": "lex:zusammenleben",
+        "specText": "zusammenleben (status group)",
+        "lesson": "02",
+        "status": "closed",
+        "publishedAs": [
+          {
+            "id": "lex:zusammenleben",
+            "status": "published"
+          }
+        ],
+        "evidence": "glossary p.3, Lektion 02 ex.2 — 'zusammen|leben — to live together'",
+        "note": "The pipe is the glossary's separable-prefix marker, so the stored lemma is 'zusammenleben'."
+      },
+      {
+        "id": "phrase:status-keine-kinder",
+        "specText": "keine Kinder / ein-zwei Kinder",
+        "lesson": "02",
+        "status": "closed",
+        "publishedAs": [
+          {
+            "id": "phrase:status-keine-kinder",
+            "status": "published"
+          }
+        ],
+        "evidence": "glossary p.3, Lektion 02 ex.1 — 'keine Kinder — no children'",
+        "note": "'ein/zwei Kinder' is not printed as an entry in any official word list; only the evidenced half is encoded."
+      },
+      {
+        "id": "phrase:work-job-stelle-haben",
+        "specText": "Ich habe einen Job/eine Stelle als ...",
+        "lesson": "02",
+        "status": "closed",
+        "publishedAs": [
+          {
+            "id": "phrase:work-job-stelle-haben",
+            "status": "published"
+          }
+        ],
+        "evidence": "coursebook printed p.18, Lektion 02 ex.6 — 'Ich habe eine Stelle / einen Job als …'",
+        "note": "Stored in the coursebook's own word order, which reverses the spec's paraphrase."
+      },
+      {
+        "id": "phrase:work-ausbildung-praktikum",
+        "specText": "Ich mache eine Ausbildung/ein Praktikum als/bei ...",
+        "lesson": "02",
+        "status": "closed",
+        "publishedAs": [
+          {
+            "id": "phrase:work-ausbildung-praktikum",
+            "status": "published"
+          }
+        ],
+        "evidence": "coursebook printed p.18, Lektion 02 ex.6 — 'Ich mache eine Ausbildung / ein Praktikum als … / bei …'"
+      }
+    ]
+  },
+  "listening": {
+    "required": [
+      "workbook L1 ex.3",
+      "workbook L1 ex.9",
+      "workbook L2 ex.6",
+      "workbook L2 ex.12"
+    ],
+    "publishedAssetCount": 15,
+    "totalAssetCount": 15
+  },
+  "contentGaps": {
+    "total": 173,
+    "blockingPublication": 0,
+    "blocking": []
+  },
+  "summary": {
+    "verbs": "10 required / 10 published / 0 missing",
+    "qaIntents": "15 required / 15 published / 0 missing",
+    "activities": "24 required / 23 published / 1 blocked",
+    "grammar": "11 required / 11 published / 0 missing",
+    "nounPlurals": "52 published nouns: 45 with an exact stored plural, 7 the glossary itself marks as having none, 0 unexplained",
+    "specItems": "18 spec items previously without a published counterpart: 16 closed from official sources, 2 still open (lexemes.alphabet, lexemes.numbers)",
+    "listening": "15 of 15 workbook listening assets published, covering all 4 spec-required exercises"
+  }
+}

@@ -1,5 +1,9 @@
 {
   "schemaVersion": 1,
+  "status": "SUPERSEDED — historical snapshot, not current state",
+  "supersededBy": "research/curriculum-diff-2026-08-20.json",
+  "supersededOn": "2026-08-20",
+  "supersessionNote": "Kept as the 2026-08-14 record because later evidence files cite it by name. Its body is stale in at least two places: 'verbs missing 6' and 'nounPlurals missing 36' were both closed by content waves after it was written, and the 18 phrase/lexeme items it lists are now 16 closed / 2 open. Read research/curriculum-diff-2026-08-20.json for current state; that file is regenerated from disk by tools/build-curriculum-diff.mjs rather than written by hand.",
   "generatedAt": "2026-08-14",
   "scope": "lessons-01-02 curriculum diff: docs/11-lessons-01-02-content-spec.md vs published state on disk",
   "authorities": [
