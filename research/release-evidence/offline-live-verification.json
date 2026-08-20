@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "verifiedAt": "2026-08-16",
+  "verifiedBy": "Claude Code ORCH, in-browser against the live deployment",
+  "target": "https://hrezaii95.github.io/german-learning-exam/",
+  "closes": "P6-02 open item 'live service-worker registration unverified' — the implementing agent could not test this because the local Chrome refused to register any service worker, including a one-line probe.",
+  "serviceWorker": {
+    "supported": true,
+    "registrationCount": 1,
+    "scope": "https://hrezaii95.github.io/german-learning-exam/",
+    "activeState": "activated",
+    "controllingThePage": true,
+    "scriptURL": "https://hrezaii95.github.io/german-learning-exam/sw.js"
+  },
+  "cache": {
+    "keys": ["german-learning-os-shell-vca98119d0f56c8c3"],
+    "shellEntries": 85,
+    "runtimeCacheAbsentAsDesigned": true,
+    "note": "The runtime cache is created on first content visit, so its absence on a fresh load is the intended behaviour, not a failure."
+  },
+  "servedFromCacheProof": {
+    "url": "/german-learning-exam/vocabulary/",
+    "presentInShellCache": true,
+    "bytes": 315824,
+    "titleMatched": true,
+    "meaning": "A real learner document is genuinely stored and would be served without the network."
+  },
+  "openObservation": {
+    "shellEntriesLiveVsLocal": "85 live vs 87 in the local Windows export",
+    "likelyCause": "The same platform difference that made the local export write nested __next.<route>/__PAGE__.txt paths where the Linux CI build writes flat __next.<route>.__PAGE__.txt files. The live cache version hash (ca98119d0f56c8c3) differs from the local one for the same reason.",
+    "status": "Not a defect on the live site — every live precache URL resolves. Recorded so the count difference is not later mistaken for a missing asset."
+  }
+}

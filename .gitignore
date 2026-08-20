@@ -37,8 +37,19 @@ __pycache__/
 *.py[cod]
 *.tsbuildinfo
 
+# End-to-end (Playwright) run artifacts — traces, screenshots, HTML reports
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+# Browser binaries, kept off the (full) system drive — see playwright.config.ts
+.playwright-browsers/
+
 # Operating-system files
 .DS_Store
 Thumbs.db
 *.log
 npm-debug.log*
+
+# Local Claude Code session state (skills cache, agent worktrees) — machine-specific
+.claude/

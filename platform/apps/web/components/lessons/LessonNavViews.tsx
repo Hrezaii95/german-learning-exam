@@ -74,16 +74,46 @@ export function ActivityScreenWithNav({
   const status = activityDisplayStatus(activity.id, progress);
   const recommendLessonOne = learnerState?.snapshot.status === "ready" && lesson.routeSegment === "02" && prerequisiteLesson !== undefined
     && !isLessonComplete(prerequisiteLesson, prerequisiteActivities, progress);
+  const hasStoredResume =
+    (learnerState?.snapshot.hydration?.state.resume ?? null) !== null;
+  /**
+   * Seed the resume pointer; never overwrite one.
+   *
+   * "Continue" means where the learner left off, so the pointer moves on
+   * deliberate acts only — starting an activity, or finishing one. Opening a
+   * page is not such an act. This effect used to write unconditionally on every
+   * mount, which meant reloading a finished activity immediately rewound
+   * "Continue" onto work the learner had already completed, and the stored
+   * pointer never survived a reload at all.
+   *
+   * Two conditions, and both are needed:
+   *   - a stored pointer wins, so nothing already recorded is clobbered;
+   *   - a completed activity is behind the learner, so it is never the seed —
+   *     finishing the last activity of a lesson clears the pointer on purpose,
+   *     and re-opening that page must not resurrect it.
+   * What remains is the case this seed exists for: a learner with nothing
+   * stored who lands straight on an activity URL still gets a Continue target.
+   */
   useEffect(() => {
     const controller = learnerState?.controller;
     if (!controller || learnerState.snapshot.status !== "ready") return;
+    if (hasStoredResume || status === "Completed") return;
     void controller.setResume({
       lessonId: lesson.id,
       stageId: activity.stageId,
       activityId: activity.id,
       position: Math.max(index, 0),
     }).catch(() => undefined);
-  }, [activity.id, activity.stageId, index, learnerState?.controller, learnerState?.snapshot.status, lesson.id]);
+  }, [
+    activity.id,
+    activity.stageId,
+    hasStoredResume,
+    index,
+    learnerState?.controller,
+    learnerState?.snapshot.status,
+    lesson.id,
+    status,
+  ]);
   const run = (operation: (() => Promise<unknown>) | undefined) => {
     if (!operation) return;
     setBusy(true);
