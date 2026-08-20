@@ -38,6 +38,16 @@
     },
     {
       "kind": "Source",
+      "id": "source:app-authored-examples",
+      "title": "App-authored example sentences (awaiting German review)",
+      "sourceKind": "other",
+      "language": "de",
+      "priority": 4,
+      "originalPath": "media/generated/authored-examples-v1/examples.json",
+      "cefrBand": "A1.1"
+    },
+    {
+      "kind": "Source",
       "id": "source:coursebook-momente-a11",
       "title": "Momente A1.1 coursebook",
       "sourceKind": "coursebook",
@@ -376,6 +386,23 @@
     },
     {
       "kind": "SourceAssertion",
+      "id": "assert:lex-hallo-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:hallo",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Hallo, ich heiße Tom.",
+        "translationEn": "Hello, my name is Tom.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
       "id": "assert:lex-guten-tag-lemma",
       "sourceId": "source:alpha-content-bundle",
       "location": {
@@ -410,6 +437,23 @@
       "status": "verified",
       "reviewer": "c1-source-encode",
       "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-guten-tag-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:guten-tag",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Guten Tag, ich heiße Mia.",
+        "translationEn": "Hello, my name is Mia.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
     },
     {
       "kind": "SourceAssertion",
@@ -450,6 +494,23 @@
     },
     {
       "kind": "SourceAssertion",
+      "id": "assert:lex-guten-morgen-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:guten-morgen",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Guten Morgen, Herr Braun.",
+        "translationEn": "Good morning, Mr Braun.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
       "id": "assert:lex-guten-abend-lemma",
       "sourceId": "source:alpha-content-bundle",
       "location": {
@@ -484,6 +545,23 @@
       "status": "verified",
       "reviewer": "c1-source-encode",
       "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-guten-abend-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:guten-abend",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Guten Abend, Frau Müller.",
+        "translationEn": "Good evening, Mrs Müller.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
     },
     {
       "kind": "SourceAssertion",
@@ -524,6 +602,23 @@
     },
     {
       "kind": "SourceAssertion",
+      "id": "assert:lex-gute-nacht-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:gute-nacht",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Gute Nacht, Anna.",
+        "translationEn": "Good night, Anna.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
       "id": "assert:lex-tschues-lemma",
       "sourceId": "source:alpha-content-bundle",
       "location": {
@@ -558,6 +653,23 @@
       "status": "verified",
       "reviewer": "c1-source-encode",
       "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-tschues-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:tschues",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Tschüs, Anna!",
+        "translationEn": "Bye, Anna!",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
     },
     {
       "kind": "SourceAssertion",
@@ -598,6 +710,23 @@
     },
     {
       "kind": "SourceAssertion",
+      "id": "assert:lex-auf-wiedersehen-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:auf-wiedersehen",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Auf Wiedersehen, Herr Braun.",
+        "translationEn": "Goodbye, Mr Braun.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
       "id": "assert:lex-super-lemma",
       "sourceId": "source:alpha-content-bundle",
       "location": {
@@ -632,6 +761,23 @@
       "status": "verified",
       "reviewer": "c1-source-encode",
       "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-super-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:super",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Super!",
+        "translationEn": "Great!",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
     },
     {
       "kind": "SourceAssertion",
@@ -672,6 +818,23 @@
     },
     {
       "kind": "SourceAssertion",
+      "id": "assert:lex-sehr-gut-danke-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:sehr-gut-danke",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Sehr gut, danke.",
+        "translationEn": "Very well, thanks.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
       "id": "assert:lex-gut-danke-lemma",
       "sourceId": "source:alpha-content-bundle",
       "location": {
@@ -706,6 +869,23 @@
       "status": "verified",
       "reviewer": "c1-source-encode",
       "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-gut-danke-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:gut-danke",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Gut, danke.",
+        "translationEn": "Fine, thanks.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
     },
     {
       "kind": "SourceAssertion",
@@ -746,6 +926,23 @@
     },
     {
       "kind": "SourceAssertion",
+      "id": "assert:lex-es-geht-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:es-geht",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Es geht.",
+        "translationEn": "I'm okay.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
       "id": "assert:lex-nicht-so-gut-lemma",
       "sourceId": "source:alpha-content-bundle",
       "location": {
@@ -780,6 +977,23 @@
       "status": "verified",
       "reviewer": "c1-source-encode",
       "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-nicht-so-gut-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:nicht-so-gut",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Nicht so gut.",
+        "translationEn": "Not so good.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
     },
     {
       "kind": "SourceAssertion",
@@ -820,6 +1034,23 @@
     },
     {
       "kind": "SourceAssertion",
+      "id": "assert:lex-auch-super-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:auch-super",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Auch super.",
+        "translationEn": "I'm great too.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
       "id": "assert:lex-deutschland-lemma",
       "sourceId": "source:alpha-content-bundle",
       "location": {
@@ -854,6 +1085,23 @@
       "status": "verified",
       "reviewer": "c1-source-encode",
       "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-deutschland-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:deutschland",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Ich komme aus Deutschland.",
+        "translationEn": "I come from Germany.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
     },
     {
       "kind": "SourceAssertion",
@@ -894,6 +1142,23 @@
     },
     {
       "kind": "SourceAssertion",
+      "id": "assert:lex-eritrea-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:eritrea",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Ich komme aus Eritrea.",
+        "translationEn": "I come from Eritrea.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
       "id": "assert:lex-oesterreich-lemma",
       "sourceId": "source:alpha-content-bundle",
       "location": {
@@ -928,6 +1193,23 @@
       "status": "verified",
       "reviewer": "c1-source-encode",
       "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-oesterreich-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:oesterreich",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Ich komme aus Österreich.",
+        "translationEn": "I come from Austria.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
     },
     {
       "kind": "SourceAssertion",
@@ -968,6 +1250,23 @@
     },
     {
       "kind": "SourceAssertion",
+      "id": "assert:lex-spanien-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:spanien",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Ich komme aus Spanien.",
+        "translationEn": "I come from Spain.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
       "id": "assert:lex-frankreich-lemma",
       "sourceId": "source:alpha-content-bundle",
       "location": {
@@ -1002,6 +1301,23 @@
       "status": "verified",
       "reviewer": "c1-source-encode",
       "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-frankreich-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:frankreich",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Ich komme aus Frankreich.",
+        "translationEn": "I come from France.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
     },
     {
       "kind": "SourceAssertion",
@@ -1052,6 +1368,7 @@
       "subjectId": "lex:schweiz",
       "field": "example",
       "value": {
+        "origin": "glossary",
         "de": "Er kommt aus der Schweiz.",
         "translationEn": "He is from Switzerland.",
         "sourceRef": {
@@ -1106,6 +1423,23 @@
     },
     {
       "kind": "SourceAssertion",
+      "id": "assert:lex-tuerkei-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:tuerkei",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Ich komme aus der Türkei.",
+        "translationEn": "I come from Turkey.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
       "id": "assert:lex-usa-lemma",
       "sourceId": "source:alpha-content-bundle",
       "location": {
@@ -1140,6 +1474,23 @@
       "status": "verified",
       "reviewer": "c1-source-encode",
       "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-usa-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:usa",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Ich komme aus den USA.",
+        "translationEn": "I come from the USA.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
     },
     {
       "kind": "SourceAssertion",
@@ -1190,6 +1541,7 @@
       "subjectId": "lex:name",
       "field": "example",
       "value": {
+        "origin": "glossary",
         "de": "Mein Name ist …",
         "translationEn": "My name is …",
         "sourceRef": {
@@ -1244,6 +1596,23 @@
     },
     {
       "kind": "SourceAssertion",
+      "id": "assert:lex-vorname-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:vorname",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Mein Vorname ist Anna.",
+        "translationEn": "My first name is Anna.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
       "id": "assert:lex-familienname-lemma",
       "sourceId": "source:alpha-content-bundle",
       "location": {
@@ -1278,6 +1647,23 @@
       "status": "verified",
       "reviewer": "c1-source-encode",
       "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-familienname-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:familienname",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Mein Familienname ist Müller.",
+        "translationEn": "My surname is Müller.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
     },
     {
       "kind": "SourceAssertion",
@@ -1318,6 +1704,23 @@
     },
     {
       "kind": "SourceAssertion",
+      "id": "assert:lex-herr-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:herr",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Herr Müller ist Arzt.",
+        "translationEn": "Mr Müller is a doctor.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
       "id": "assert:lex-frau-lemma",
       "sourceId": "source:alpha-content-bundle",
       "location": {
@@ -1352,6 +1755,23 @@
       "status": "verified",
       "reviewer": "c1-source-encode",
       "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-frau-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:frau",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Frau Müller ist Ärztin.",
+        "translationEn": "Mrs Müller is a doctor.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
     },
     {
       "kind": "SourceAssertion",
@@ -3008,7 +3428,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-hallo-lemma",
-        "assert:lex-hallo-meanings"
+        "assert:lex-hallo-meanings",
+        "assert:lex-hallo-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -3024,6 +3445,12 @@
             "assertionId": "assert:lex-hallo-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Hallo, ich heiße Tom.",
+        "translationEn": "Hello, my name is Tom.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -3044,7 +3471,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-guten-tag-lemma",
-        "assert:lex-guten-tag-meanings"
+        "assert:lex-guten-tag-meanings",
+        "assert:lex-guten-tag-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -3060,6 +3488,12 @@
             "assertionId": "assert:lex-guten-tag-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Guten Tag, ich heiße Mia.",
+        "translationEn": "Hello, my name is Mia.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -3080,7 +3514,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-guten-morgen-lemma",
-        "assert:lex-guten-morgen-meanings"
+        "assert:lex-guten-morgen-meanings",
+        "assert:lex-guten-morgen-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -3096,6 +3531,12 @@
             "assertionId": "assert:lex-guten-morgen-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Guten Morgen, Herr Braun.",
+        "translationEn": "Good morning, Mr Braun.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -3116,7 +3557,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-guten-abend-lemma",
-        "assert:lex-guten-abend-meanings"
+        "assert:lex-guten-abend-meanings",
+        "assert:lex-guten-abend-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -3132,6 +3574,12 @@
             "assertionId": "assert:lex-guten-abend-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Guten Abend, Frau Müller.",
+        "translationEn": "Good evening, Mrs Müller.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -3152,7 +3600,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-gute-nacht-lemma",
-        "assert:lex-gute-nacht-meanings"
+        "assert:lex-gute-nacht-meanings",
+        "assert:lex-gute-nacht-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -3168,6 +3617,12 @@
             "assertionId": "assert:lex-gute-nacht-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Gute Nacht, Anna.",
+        "translationEn": "Good night, Anna.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -3188,7 +3643,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-tschues-lemma",
-        "assert:lex-tschues-meanings"
+        "assert:lex-tschues-meanings",
+        "assert:lex-tschues-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -3204,6 +3660,12 @@
             "assertionId": "assert:lex-tschues-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Tschüs, Anna!",
+        "translationEn": "Bye, Anna!",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -3224,7 +3686,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-auf-wiedersehen-lemma",
-        "assert:lex-auf-wiedersehen-meanings"
+        "assert:lex-auf-wiedersehen-meanings",
+        "assert:lex-auf-wiedersehen-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -3240,6 +3703,12 @@
             "assertionId": "assert:lex-auf-wiedersehen-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Auf Wiedersehen, Herr Braun.",
+        "translationEn": "Goodbye, Mr Braun.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -3260,7 +3729,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-super-lemma",
-        "assert:lex-super-meanings"
+        "assert:lex-super-meanings",
+        "assert:lex-super-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -3276,6 +3746,12 @@
             "assertionId": "assert:lex-super-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Super!",
+        "translationEn": "Great!",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -3296,7 +3772,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-sehr-gut-danke-lemma",
-        "assert:lex-sehr-gut-danke-meanings"
+        "assert:lex-sehr-gut-danke-meanings",
+        "assert:lex-sehr-gut-danke-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -3312,6 +3789,12 @@
             "assertionId": "assert:lex-sehr-gut-danke-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Sehr gut, danke.",
+        "translationEn": "Very well, thanks.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -3332,7 +3815,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-gut-danke-lemma",
-        "assert:lex-gut-danke-meanings"
+        "assert:lex-gut-danke-meanings",
+        "assert:lex-gut-danke-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -3348,6 +3832,12 @@
             "assertionId": "assert:lex-gut-danke-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Gut, danke.",
+        "translationEn": "Fine, thanks.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -3368,7 +3858,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-es-geht-lemma",
-        "assert:lex-es-geht-meanings"
+        "assert:lex-es-geht-meanings",
+        "assert:lex-es-geht-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -3384,6 +3875,12 @@
             "assertionId": "assert:lex-es-geht-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Es geht.",
+        "translationEn": "I'm okay.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -3404,7 +3901,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-nicht-so-gut-lemma",
-        "assert:lex-nicht-so-gut-meanings"
+        "assert:lex-nicht-so-gut-meanings",
+        "assert:lex-nicht-so-gut-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -3420,6 +3918,12 @@
             "assertionId": "assert:lex-nicht-so-gut-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Nicht so gut.",
+        "translationEn": "Not so good.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -3440,7 +3944,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-auch-super-lemma",
-        "assert:lex-auch-super-meanings"
+        "assert:lex-auch-super-meanings",
+        "assert:lex-auch-super-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -3456,6 +3961,12 @@
             "assertionId": "assert:lex-auch-super-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Auch super.",
+        "translationEn": "I'm great too.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -3476,7 +3987,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-deutschland-lemma",
-        "assert:lex-deutschland-meanings"
+        "assert:lex-deutschland-meanings",
+        "assert:lex-deutschland-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -3492,6 +4004,12 @@
             "assertionId": "assert:lex-deutschland-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Ich komme aus Deutschland.",
+        "translationEn": "I come from Germany.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -3512,7 +4030,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-eritrea-lemma",
-        "assert:lex-eritrea-meanings"
+        "assert:lex-eritrea-meanings",
+        "assert:lex-eritrea-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -3528,6 +4047,12 @@
             "assertionId": "assert:lex-eritrea-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Ich komme aus Eritrea.",
+        "translationEn": "I come from Eritrea.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -3548,7 +4073,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-oesterreich-lemma",
-        "assert:lex-oesterreich-meanings"
+        "assert:lex-oesterreich-meanings",
+        "assert:lex-oesterreich-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -3564,6 +4090,12 @@
             "assertionId": "assert:lex-oesterreich-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Ich komme aus Österreich.",
+        "translationEn": "I come from Austria.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -3584,7 +4116,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-spanien-lemma",
-        "assert:lex-spanien-meanings"
+        "assert:lex-spanien-meanings",
+        "assert:lex-spanien-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -3600,6 +4133,12 @@
             "assertionId": "assert:lex-spanien-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Ich komme aus Spanien.",
+        "translationEn": "I come from Spain.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -3620,7 +4159,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-frankreich-lemma",
-        "assert:lex-frankreich-meanings"
+        "assert:lex-frankreich-meanings",
+        "assert:lex-frankreich-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -3636,6 +4176,12 @@
             "assertionId": "assert:lex-frankreich-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Ich komme aus Frankreich.",
+        "translationEn": "I come from France.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -3685,6 +4231,7 @@
         "plurals": []
       },
       "example": {
+        "origin": "glossary",
         "de": "Er kommt aus der Schweiz.",
         "translationEn": "He is from Switzerland.",
         "sourceRef": {
@@ -3713,7 +4260,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-tuerkei-lemma",
-        "assert:lex-tuerkei-meanings"
+        "assert:lex-tuerkei-meanings",
+        "assert:lex-tuerkei-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -3735,6 +4283,12 @@
         "article": "die",
         "singular": "Türkei",
         "plurals": []
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Ich komme aus der Türkei.",
+        "translationEn": "I come from Turkey.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -3755,7 +4309,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-usa-lemma",
-        "assert:lex-usa-meanings"
+        "assert:lex-usa-meanings",
+        "assert:lex-usa-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -3777,6 +4332,12 @@
         "article": "die",
         "singular": "USA",
         "plurals": []
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Ich komme aus den USA.",
+        "translationEn": "I come from the USA.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -3831,6 +4392,7 @@
         ]
       },
       "example": {
+        "origin": "glossary",
         "de": "Mein Name ist …",
         "translationEn": "My name is …",
         "sourceRef": {
@@ -3859,7 +4421,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-vorname-lemma",
-        "assert:lex-vorname-meanings"
+        "assert:lex-vorname-meanings",
+        "assert:lex-vorname-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -3886,6 +4449,12 @@
             "patternIds": []
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Mein Vorname ist Anna.",
+        "translationEn": "My first name is Anna.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -3906,7 +4475,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-familienname-lemma",
-        "assert:lex-familienname-meanings"
+        "assert:lex-familienname-meanings",
+        "assert:lex-familienname-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -3933,6 +4503,12 @@
             "patternIds": []
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Mein Familienname ist Müller.",
+        "translationEn": "My surname is Müller.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -3953,7 +4529,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-herr-lemma",
-        "assert:lex-herr-meanings"
+        "assert:lex-herr-meanings",
+        "assert:lex-herr-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -3980,6 +4557,12 @@
             "patternIds": []
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Herr Müller ist Arzt.",
+        "translationEn": "Mr Müller is a doctor.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -4000,7 +4583,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-frau-lemma",
-        "assert:lex-frau-meanings"
+        "assert:lex-frau-meanings",
+        "assert:lex-frau-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -4027,6 +4611,12 @@
             "patternIds": []
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Frau Müller ist Ärztin.",
+        "translationEn": "Mrs Müller is a doctor.",
+        "reviewState": "pending-german-review"
       }
     }
   ],
@@ -6418,11 +7008,29 @@
   "contentGaps": [
     {
       "kind": "ContentGap",
+      "id": "gap:example-hallo-german-review",
+      "objectId": "lex:hallo",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
       "id": "gap:audio-hallo",
       "objectId": "lex:hallo",
       "field": "pronunciation.audioId",
       "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
       "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-guten-tag-german-review",
+      "objectId": "lex:guten-tag",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
       "blocksPublication": false
     },
     {
@@ -6436,11 +7044,29 @@
     },
     {
       "kind": "ContentGap",
+      "id": "gap:example-guten-morgen-german-review",
+      "objectId": "lex:guten-morgen",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
       "id": "gap:audio-guten-morgen",
       "objectId": "lex:guten-morgen",
       "field": "pronunciation.audioId",
       "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
       "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-guten-abend-german-review",
+      "objectId": "lex:guten-abend",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
       "blocksPublication": false
     },
     {
@@ -6454,11 +7080,29 @@
     },
     {
       "kind": "ContentGap",
+      "id": "gap:example-gute-nacht-german-review",
+      "objectId": "lex:gute-nacht",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
       "id": "gap:audio-gute-nacht",
       "objectId": "lex:gute-nacht",
       "field": "pronunciation.audioId",
       "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
       "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-tschues-german-review",
+      "objectId": "lex:tschues",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
       "blocksPublication": false
     },
     {
@@ -6472,11 +7116,29 @@
     },
     {
       "kind": "ContentGap",
+      "id": "gap:example-auf-wiedersehen-german-review",
+      "objectId": "lex:auf-wiedersehen",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
       "id": "gap:audio-auf-wiedersehen",
       "objectId": "lex:auf-wiedersehen",
       "field": "pronunciation.audioId",
       "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
       "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-super-german-review",
+      "objectId": "lex:super",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
       "blocksPublication": false
     },
     {
@@ -6490,11 +7152,29 @@
     },
     {
       "kind": "ContentGap",
+      "id": "gap:example-sehr-gut-danke-german-review",
+      "objectId": "lex:sehr-gut-danke",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
       "id": "gap:audio-sehr-gut-danke",
       "objectId": "lex:sehr-gut-danke",
       "field": "pronunciation.audioId",
       "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
       "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-gut-danke-german-review",
+      "objectId": "lex:gut-danke",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
       "blocksPublication": false
     },
     {
@@ -6508,11 +7188,29 @@
     },
     {
       "kind": "ContentGap",
+      "id": "gap:example-es-geht-german-review",
+      "objectId": "lex:es-geht",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
       "id": "gap:audio-es-geht",
       "objectId": "lex:es-geht",
       "field": "pronunciation.audioId",
       "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
       "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-nicht-so-gut-german-review",
+      "objectId": "lex:nicht-so-gut",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
       "blocksPublication": false
     },
     {
@@ -6526,11 +7224,29 @@
     },
     {
       "kind": "ContentGap",
+      "id": "gap:example-auch-super-german-review",
+      "objectId": "lex:auch-super",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
       "id": "gap:audio-auch-super",
       "objectId": "lex:auch-super",
       "field": "pronunciation.audioId",
       "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
       "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-deutschland-german-review",
+      "objectId": "lex:deutschland",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
       "blocksPublication": false
     },
     {
@@ -6544,11 +7260,29 @@
     },
     {
       "kind": "ContentGap",
+      "id": "gap:example-eritrea-german-review",
+      "objectId": "lex:eritrea",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
       "id": "gap:audio-eritrea",
       "objectId": "lex:eritrea",
       "field": "pronunciation.audioId",
       "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
       "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-oesterreich-german-review",
+      "objectId": "lex:oesterreich",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
       "blocksPublication": false
     },
     {
@@ -6562,11 +7296,29 @@
     },
     {
       "kind": "ContentGap",
+      "id": "gap:example-spanien-german-review",
+      "objectId": "lex:spanien",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
       "id": "gap:audio-spanien",
       "objectId": "lex:spanien",
       "field": "pronunciation.audioId",
       "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
       "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-frankreich-german-review",
+      "objectId": "lex:frankreich",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
       "blocksPublication": false
     },
     {
@@ -6589,11 +7341,29 @@
     },
     {
       "kind": "ContentGap",
+      "id": "gap:example-tuerkei-german-review",
+      "objectId": "lex:tuerkei",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
       "id": "gap:audio-tuerkei",
       "objectId": "lex:tuerkei",
       "field": "pronunciation.audioId",
       "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
       "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-usa-german-review",
+      "objectId": "lex:usa",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
       "blocksPublication": false
     },
     {
@@ -6616,11 +7386,29 @@
     },
     {
       "kind": "ContentGap",
+      "id": "gap:example-vorname-german-review",
+      "objectId": "lex:vorname",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
       "id": "gap:audio-vorname",
       "objectId": "lex:vorname",
       "field": "pronunciation.audioId",
       "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
       "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-familienname-german-review",
+      "objectId": "lex:familienname",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
       "blocksPublication": false
     },
     {
@@ -6634,11 +7422,29 @@
     },
     {
       "kind": "ContentGap",
+      "id": "gap:example-herr-german-review",
+      "objectId": "lex:herr",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
       "id": "gap:audio-herr",
       "objectId": "lex:herr",
       "field": "pronunciation.audioId",
       "reason": "generated pronunciation media exists in TTS manifest but remains human-review-pending; not attached in C1",
       "owner": "codex-media",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-frau-german-review",
+      "objectId": "lex:frau",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
       "blocksPublication": false
     },
     {

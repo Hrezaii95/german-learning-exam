@@ -46,9 +46,12 @@ export function requiredPublishedFieldsFor(
   entity: Record<string, unknown>,
 ): string[] {
   const fields = [...MINIMUM_PUBLISHED_FIELDS[kind]];
-  // A learner-visible example is a source quote: if one is stored it must map
-  // to a verified assertion, so the page it was transcribed from is provable.
-  if (kind === "Lexeme" && entity["example"] != null) {
+  // A glossary example is a source quote: if one is stored it must map to a
+  // verified assertion, so the page it was transcribed from is provable. An
+  // app-authored example is deliberately excluded — it has no source to assert,
+  // and {@link forbiddenPublishedFieldsFor} keeps it out of publishedFields
+  // entirely rather than letting it borrow a source field's authority.
+  if (kind === "Lexeme" && exampleOrigin(entity) === "glossary") {
     fields.push("example");
   }
   if (kind === "LearningActivity" && entity["answerSpec"] != null) {
@@ -62,6 +65,33 @@ export function requiredPublishedFieldsFor(
     fields.push("spokenText");
   }
   return fields;
+}
+
+/**
+ * Fields this entity must NOT declare as source-backed published fields.
+ *
+ * `publishedFields` means "a verified source assertion supplies this value".
+ * An app-authored example has no source, so declaring it there would dress a
+ * model-written sentence in a coursebook's provenance. Naming the field here
+ * makes that a validation error instead of an easy mistake.
+ */
+export function forbiddenPublishedFieldsFor(
+  kind: PublishableKind,
+  entity: Record<string, unknown>,
+): string[] {
+  if (kind === "Lexeme" && exampleOrigin(entity) === "app-authored") {
+    return ["example"];
+  }
+  return [];
+}
+
+function exampleOrigin(entity: Record<string, unknown>): string | null {
+  const example = entity["example"];
+  if (example == null || typeof example !== "object" || Array.isArray(example)) {
+    return null;
+  }
+  const origin = (example as Record<string, unknown>)["origin"];
+  return typeof origin === "string" ? origin : null;
 }
 
 export function isPublishableKind(kind: string): kind is PublishableKind {

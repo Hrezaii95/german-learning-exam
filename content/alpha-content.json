@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-20T06:24:12.205Z",
+  "generatedAt": "2026-08-20T09:09:20.544Z",
   "scope": {
     "lessons": [
       "lesson:01",
@@ -733,6 +733,336 @@
       "exercise": "Lektion 02, 6",
       "sourceFileId": "src:glossary:9e35984302ede169",
       "documentTitle": "Momente A1.1 KB Glossar Deutsch–Englisch"
+    }
+  ],
+  "appAuthoredExamples": [
+    {
+      "lemma": "Ärztin",
+      "de": "Maria ist Ärztin.",
+      "en": "Maria is a doctor."
+    },
+    {
+      "lemma": "Arzt",
+      "de": "Paul ist Arzt.",
+      "en": "Paul is a doctor."
+    },
+    {
+      "lemma": "Architektin",
+      "de": "Anna ist Architektin.",
+      "en": "Anna is an architect."
+    },
+    {
+      "lemma": "allein",
+      "de": "Ich bin allein.",
+      "en": "I am alone."
+    },
+    {
+      "lemma": "das Alter",
+      "de": "Mein Alter ist 30 Jahre.",
+      "en": "I am 30 years old.",
+      "reviewerNote": "Please check whether this form-like use sounds natural enough; in ordinary speech, ‘Ich bin 30 Jahre alt’ is more idiomatic but does not contain the target noun."
+    },
+    {
+      "lemma": "Auch super.",
+      "de": "Auch super.",
+      "en": "I'm great too."
+    },
+    {
+      "lemma": "Auf Wiedersehen",
+      "de": "Auf Wiedersehen, Herr Braun.",
+      "en": "Goodbye, Mr Braun."
+    },
+    {
+      "lemma": "die Ausbildung",
+      "de": "Ich mache eine Ausbildung.",
+      "en": "I'm doing vocational training."
+    },
+    {
+      "lemma": "der Beruf",
+      "de": "Mein Beruf ist Lehrer.",
+      "en": "I am a teacher."
+    },
+    {
+      "lemma": "Deutschland",
+      "de": "Ich komme aus Deutschland.",
+      "en": "I come from Germany."
+    },
+    {
+      "lemma": "Eritrea",
+      "de": "Ich komme aus Eritrea.",
+      "en": "I come from Eritrea."
+    },
+    {
+      "lemma": "Es geht.",
+      "de": "Es geht.",
+      "en": "I'm okay."
+    },
+    {
+      "lemma": "der Familienname",
+      "de": "Mein Familienname ist Müller.",
+      "en": "My surname is Müller."
+    },
+    {
+      "lemma": "der Familienstand",
+      "de": "Mein Familienstand ist verheiratet.",
+      "en": "I am married.",
+      "reviewerNote": "Please check this full-sentence use; ‘Familienstand: verheiratet’ is typical on forms, while the version here is deliberately a complete A1 clause."
+    },
+    {
+      "lemma": "die Firma",
+      "de": "Die Firma heißt Mosaik.",
+      "en": "The company is called Mosaik."
+    },
+    {
+      "lemma": "Frankreich",
+      "de": "Ich komme aus Frankreich.",
+      "en": "I come from France."
+    },
+    {
+      "lemma": "die Frau",
+      "de": "Frau Müller ist Ärztin.",
+      "en": "Mrs Müller is a doctor."
+    },
+    {
+      "lemma": "der Friseur",
+      "de": "Ali ist Friseur.",
+      "en": "Ali is a hairdresser."
+    },
+    {
+      "lemma": "die Friseurin",
+      "de": "Eva ist Friseurin.",
+      "en": "Eva is a hairdresser."
+    },
+    {
+      "lemma": "geschieden",
+      "de": "Ich bin geschieden.",
+      "en": "I am divorced."
+    },
+    {
+      "lemma": "Gut, danke.",
+      "de": "Gut, danke.",
+      "en": "Fine, thanks."
+    },
+    {
+      "lemma": "Gute Nacht",
+      "de": "Gute Nacht, Anna.",
+      "en": "Good night, Anna."
+    },
+    {
+      "lemma": "Guten Abend",
+      "de": "Guten Abend, Frau Müller.",
+      "en": "Good evening, Mrs Müller."
+    },
+    {
+      "lemma": "Guten Morgen",
+      "de": "Guten Morgen, Herr Braun.",
+      "en": "Good morning, Mr Braun."
+    },
+    {
+      "lemma": "Guten Tag",
+      "de": "Guten Tag, ich heiße Mia.",
+      "en": "Hello, my name is Mia."
+    },
+    {
+      "lemma": "Hallo",
+      "de": "Hallo, ich heiße Tom.",
+      "en": "Hello, my name is Tom."
+    },
+    {
+      "lemma": "die Herkunft",
+      "de": "Meine Herkunft ist Eritrea.",
+      "en": "I am originally from Eritrea.",
+      "reviewerNote": "Please check whether this noun-based construction is sufficiently natural for A1; ‘Ich komme aus Eritrea’ is more idiomatic in conversation but does not contain the target noun."
+    },
+    {
+      "lemma": "der Herr",
+      "de": "Herr Müller ist Arzt.",
+      "en": "Mr Müller is a doctor."
+    },
+    {
+      "lemma": "der Ingenieur",
+      "de": "Omar ist Ingenieur.",
+      "en": "Omar is an engineer."
+    },
+    {
+      "lemma": "die Ingenieurin",
+      "de": "Lea ist Ingenieurin.",
+      "en": "Lea is an engineer."
+    },
+    {
+      "lemma": "der Job",
+      "de": "Mein Job ist super.",
+      "en": "My job is great."
+    },
+    {
+      "lemma": "der Journalist",
+      "de": "Ben ist Journalist.",
+      "en": "Ben is a journalist."
+    },
+    {
+      "lemma": "die Journalistin",
+      "de": "Sara ist Journalistin.",
+      "en": "Sara is a journalist."
+    },
+    {
+      "lemma": "der Kellner",
+      "de": "Lukas ist Kellner.",
+      "en": "Lukas is a waiter."
+    },
+    {
+      "lemma": "die Kellnerin",
+      "de": "Nina ist Kellnerin.",
+      "en": "Nina is a waitress."
+    },
+    {
+      "lemma": "der Kfz-Mechatroniker",
+      "de": "Max ist Kfz-Mechatroniker.",
+      "en": "Max is a car mechatronics technician."
+    },
+    {
+      "lemma": "die Kfz-Mechatronikerin",
+      "de": "Lena ist Kfz-Mechatronikerin.",
+      "en": "Lena is a car mechatronics technician."
+    },
+    {
+      "lemma": "der Lehrer",
+      "de": "Herr Koch ist Lehrer.",
+      "en": "Mr Koch is a teacher."
+    },
+    {
+      "lemma": "die Lehrerin",
+      "de": "Frau Klein ist Lehrerin.",
+      "en": "Mrs Klein is a teacher."
+    },
+    {
+      "lemma": "Nicht so gut.",
+      "de": "Nicht so gut.",
+      "en": "Not so good."
+    },
+    {
+      "lemma": "Österreich",
+      "de": "Ich komme aus Österreich.",
+      "en": "I come from Austria."
+    },
+    {
+      "lemma": "der Paketzusteller",
+      "de": "Jan ist Paketzusteller.",
+      "en": "Jan is a parcel deliverer."
+    },
+    {
+      "lemma": "die Paketzustellerin",
+      "de": "Mia ist Paketzustellerin.",
+      "en": "Mia is a parcel deliverer."
+    },
+    {
+      "lemma": "das Praktikum",
+      "de": "Ich mache ein Praktikum.",
+      "en": "I am doing an internship."
+    },
+    {
+      "lemma": "der Rentner",
+      "de": "Herr Weber ist Rentner.",
+      "en": "Mr Weber is retired."
+    },
+    {
+      "lemma": "die Rentnerin",
+      "de": "Frau Wolf ist Rentnerin.",
+      "en": "Mrs Wolf is retired."
+    },
+    {
+      "lemma": "der Schüler",
+      "de": "Tom ist Schüler.",
+      "en": "Tom is a pupil."
+    },
+    {
+      "lemma": "die Schülerin",
+      "de": "Mia ist Schülerin.",
+      "en": "Mia is a pupil."
+    },
+    {
+      "lemma": "die Schweiz",
+      "de": "Ich komme aus der Schweiz.",
+      "en": "I come from Switzerland."
+    },
+    {
+      "lemma": "Sehr gut, danke.",
+      "de": "Sehr gut, danke.",
+      "en": "Very well, thanks."
+    },
+    {
+      "lemma": "Single",
+      "de": "Ich bin Single.",
+      "en": "I am single."
+    },
+    {
+      "lemma": "Spanien",
+      "de": "Ich komme aus Spanien.",
+      "en": "I come from Spain."
+    },
+    {
+      "lemma": "die Stelle",
+      "de": "Ich habe eine Stelle.",
+      "en": "I have a job."
+    },
+    {
+      "lemma": "der Student",
+      "de": "Paul ist Student.",
+      "en": "Paul is a university student."
+    },
+    {
+      "lemma": "die Studentin",
+      "de": "Anna ist Studentin.",
+      "en": "Anna is a university student."
+    },
+    {
+      "lemma": "das Studium",
+      "de": "Mein Studium ist super.",
+      "en": "My studies are going great."
+    },
+    {
+      "lemma": "Super!",
+      "de": "Super!",
+      "en": "Great!"
+    },
+    {
+      "lemma": "Türkei",
+      "de": "Ich komme aus der Türkei.",
+      "en": "I come from Turkey."
+    },
+    {
+      "lemma": "Tschüs",
+      "de": "Tschüs, Anna!",
+      "en": "Bye, Anna!"
+    },
+    {
+      "lemma": "USA",
+      "de": "Ich komme aus den USA.",
+      "en": "I come from the USA."
+    },
+    {
+      "lemma": "der Verkäufer",
+      "de": "Felix ist Verkäufer.",
+      "en": "Felix is a sales assistant."
+    },
+    {
+      "lemma": "die Verkäuferin",
+      "de": "Sofia ist Verkäuferin.",
+      "en": "Sofia is a sales assistant."
+    },
+    {
+      "lemma": "der Vorname",
+      "de": "Mein Vorname ist Anna.",
+      "en": "My first name is Anna."
+    },
+    {
+      "lemma": "verheiratet",
+      "de": "Ich bin verheiratet.",
+      "en": "I am married."
+    },
+    {
+      "lemma": "der Wohnort",
+      "de": "Mein Wohnort ist Berlin.",
+      "en": "I live in Berlin."
     }
   ],
   "collections": [

@@ -65,17 +65,27 @@ export type LearnerPersonFormRelation = {
 };
 
 /**
- * One usage example quoted from the course material, ready to show.
+ * One usage example, ready to show, together with the one line that tells the
+ * learner where it came from.
  *
- * Both strings are the source's own wording — `de` as printed and `en` as the
- * book itself translates it. `sourceLabel` names the book and page so the
- * learner can look the line up. A word the sources never show in use projects
- * `null` here, and the detail page then renders no example section at all.
+ * The two origins are kept apart all the way to the page, because they promise
+ * the learner different things:
+ *
+ *  - `"glossary"` — the source's own wording, `de` as printed and `en` as the
+ *    book itself translates it. `provenanceLabel` names the book and page so
+ *    the learner can look the line up.
+ *  - `"app-authored"` — a sentence written for this app that no German speaker
+ *    has checked yet. `provenanceLabel` says exactly that, and never names a
+ *    book, because naming one would be a lie about where the sentence is from.
+ *
+ * A word with neither projects `null` here, and the detail page then renders no
+ * example section at all.
  */
 export type LearnerVocabularyExample = {
+  readonly origin: "glossary" | "app-authored";
   readonly de: string;
   readonly en: string;
-  readonly sourceLabel: string;
+  readonly provenanceLabel: string;
 };
 
 export type LearnerVocabularyDetail = {

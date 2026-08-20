@@ -1,0 +1,395 @@
+[
+  {
+    "lemma": "Ärztin",
+    "de": "Maria ist Ärztin.",
+    "en": "Maria is a doctor.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "Arzt",
+    "de": "Paul ist Arzt.",
+    "en": "Paul is a doctor.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "Architektin",
+    "de": "Anna ist Architektin.",
+    "en": "Anna is an architect.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "allein",
+    "de": "Ich bin allein.",
+    "en": "I am alone.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "das Alter",
+    "de": "Mein Alter ist 30 Jahre.",
+    "en": "I am 30 years old.",
+    "confidence": "check",
+    "note": "Please check whether this form-like use sounds natural enough; in ordinary speech, ‘Ich bin 30 Jahre alt’ is more idiomatic but does not contain the target noun."
+  },
+  {
+    "lemma": "Auch super.",
+    "de": "Auch super.",
+    "en": "I'm great too.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "Auf Wiedersehen",
+    "de": "Auf Wiedersehen, Herr Braun.",
+    "en": "Goodbye, Mr Braun.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "die Ausbildung",
+    "de": "Ich mache eine Ausbildung.",
+    "en": "I'm doing vocational training.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "der Beruf",
+    "de": "Mein Beruf ist Lehrer.",
+    "en": "I am a teacher.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "Deutschland",
+    "de": "Ich komme aus Deutschland.",
+    "en": "I come from Germany.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "Eritrea",
+    "de": "Ich komme aus Eritrea.",
+    "en": "I come from Eritrea.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "Es geht.",
+    "de": "Es geht.",
+    "en": "I'm okay.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "der Familienname",
+    "de": "Mein Familienname ist Müller.",
+    "en": "My surname is Müller.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "der Familienstand",
+    "de": "Mein Familienstand ist verheiratet.",
+    "en": "I am married.",
+    "confidence": "check",
+    "note": "Please check this full-sentence use; ‘Familienstand: verheiratet’ is typical on forms, while the version here is deliberately a complete A1 clause."
+  },
+  {
+    "lemma": "die Firma",
+    "de": "Die Firma heißt Mosaik.",
+    "en": "The company is called Mosaik.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "Frankreich",
+    "de": "Ich komme aus Frankreich.",
+    "en": "I come from France.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "die Frau",
+    "de": "Frau Müller ist Ärztin.",
+    "en": "Mrs Müller is a doctor.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "der Friseur",
+    "de": "Ali ist Friseur.",
+    "en": "Ali is a hairdresser.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "die Friseurin",
+    "de": "Eva ist Friseurin.",
+    "en": "Eva is a hairdresser.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "geschieden",
+    "de": "Ich bin geschieden.",
+    "en": "I am divorced.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "Gut, danke.",
+    "de": "Gut, danke.",
+    "en": "Fine, thanks.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "Gute Nacht",
+    "de": "Gute Nacht, Anna.",
+    "en": "Good night, Anna.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "Guten Abend",
+    "de": "Guten Abend, Frau Müller.",
+    "en": "Good evening, Mrs Müller.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "Guten Morgen",
+    "de": "Guten Morgen, Herr Braun.",
+    "en": "Good morning, Mr Braun.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "Guten Tag",
+    "de": "Guten Tag, ich heiße Mia.",
+    "en": "Hello, my name is Mia.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "Hallo",
+    "de": "Hallo, ich heiße Tom.",
+    "en": "Hello, my name is Tom.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "die Herkunft",
+    "de": "Meine Herkunft ist Eritrea.",
+    "en": "I am originally from Eritrea.",
+    "confidence": "check",
+    "note": "Please check whether this noun-based construction is sufficiently natural for A1; ‘Ich komme aus Eritrea’ is more idiomatic in conversation but does not contain the target noun."
+  },
+  {
+    "lemma": "der Herr",
+    "de": "Herr Müller ist Arzt.",
+    "en": "Mr Müller is a doctor.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "der Ingenieur",
+    "de": "Omar ist Ingenieur.",
+    "en": "Omar is an engineer.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "die Ingenieurin",
+    "de": "Lea ist Ingenieurin.",
+    "en": "Lea is an engineer.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "der Job",
+    "de": "Mein Job ist super.",
+    "en": "My job is great.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "der Journalist",
+    "de": "Ben ist Journalist.",
+    "en": "Ben is a journalist.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "die Journalistin",
+    "de": "Sara ist Journalistin.",
+    "en": "Sara is a journalist.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "der Kellner",
+    "de": "Lukas ist Kellner.",
+    "en": "Lukas is a waiter.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "die Kellnerin",
+    "de": "Nina ist Kellnerin.",
+    "en": "Nina is a waitress.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "der Kfz-Mechatroniker",
+    "de": "Max ist Kfz-Mechatroniker.",
+    "en": "Max is a car mechatronics technician.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "die Kfz-Mechatronikerin",
+    "de": "Lena ist Kfz-Mechatronikerin.",
+    "en": "Lena is a car mechatronics technician.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "der Lehrer",
+    "de": "Herr Koch ist Lehrer.",
+    "en": "Mr Koch is a teacher.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "die Lehrerin",
+    "de": "Frau Klein ist Lehrerin.",
+    "en": "Mrs Klein is a teacher.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "Nicht so gut.",
+    "de": "Nicht so gut.",
+    "en": "Not so good.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "Österreich",
+    "de": "Ich komme aus Österreich.",
+    "en": "I come from Austria.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "der Paketzusteller",
+    "de": "Jan ist Paketzusteller.",
+    "en": "Jan is a parcel deliverer.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "die Paketzustellerin",
+    "de": "Mia ist Paketzustellerin.",
+    "en": "Mia is a parcel deliverer.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "das Praktikum",
+    "de": "Ich mache ein Praktikum.",
+    "en": "I am doing an internship.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "der Rentner",
+    "de": "Herr Weber ist Rentner.",
+    "en": "Mr Weber is retired.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "die Rentnerin",
+    "de": "Frau Wolf ist Rentnerin.",
+    "en": "Mrs Wolf is retired.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "der Schüler",
+    "de": "Tom ist Schüler.",
+    "en": "Tom is a pupil.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "die Schülerin",
+    "de": "Mia ist Schülerin.",
+    "en": "Mia is a pupil.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "die Schweiz",
+    "de": "Ich komme aus der Schweiz.",
+    "en": "I come from Switzerland.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "Sehr gut, danke.",
+    "de": "Sehr gut, danke.",
+    "en": "Very well, thanks.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "Single",
+    "de": "Ich bin Single.",
+    "en": "I am single.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "Spanien",
+    "de": "Ich komme aus Spanien.",
+    "en": "I come from Spain.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "die Stelle",
+    "de": "Ich habe eine Stelle.",
+    "en": "I have a job.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "der Student",
+    "de": "Paul ist Student.",
+    "en": "Paul is a university student.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "die Studentin",
+    "de": "Anna ist Studentin.",
+    "en": "Anna is a university student.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "das Studium",
+    "de": "Mein Studium ist super.",
+    "en": "My studies are going great.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "Super!",
+    "de": "Super!",
+    "en": "Great!",
+    "confidence": "high"
+  },
+  {
+    "lemma": "Türkei",
+    "de": "Ich komme aus der Türkei.",
+    "en": "I come from Turkey.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "Tschüs",
+    "de": "Tschüs, Anna!",
+    "en": "Bye, Anna!",
+    "confidence": "high"
+  },
+  {
+    "lemma": "USA",
+    "de": "Ich komme aus den USA.",
+    "en": "I come from the USA.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "der Verkäufer",
+    "de": "Felix ist Verkäufer.",
+    "en": "Felix is a sales assistant.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "die Verkäuferin",
+    "de": "Sofia ist Verkäuferin.",
+    "en": "Sofia is a sales assistant.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "der Vorname",
+    "de": "Mein Vorname ist Anna.",
+    "en": "My first name is Anna.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "verheiratet",
+    "de": "Ich bin verheiratet.",
+    "en": "I am married.",
+    "confidence": "high"
+  },
+  {
+    "lemma": "der Wohnort",
+    "de": "Mein Wohnort ist Berlin.",
+    "en": "I live in Berlin.",
+    "confidence": "high"
+  }
+]

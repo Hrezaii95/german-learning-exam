@@ -5,7 +5,12 @@
       "article": "die",
       "canonicalPath": "/vocabulary/id-6c65783a6165727a74696e",
       "displayText": "die Ärztin",
-      "example": null,
+      "example": {
+        "de": "Maria ist Ärztin.",
+        "en": "Maria is a doctor.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "feminine",
       "hubSegment": "vocabulary",
       "id": "lex:aerztin",
@@ -39,7 +44,12 @@
       "article": null,
       "canonicalPath": "/vocabulary/id-6c65783a616c6c65696e",
       "displayText": "allein",
-      "example": null,
+      "example": {
+        "de": "Ich bin allein.",
+        "en": "I am alone.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": null,
       "hubSegment": "vocabulary",
       "id": "lex:allein",
@@ -71,7 +81,12 @@
       "article": "das",
       "canonicalPath": "/vocabulary/id-6c65783a616c746572",
       "displayText": "das Alter",
-      "example": null,
+      "example": {
+        "de": "Mein Alter ist 30 Jahre.",
+        "en": "I am 30 years old.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "neuter",
       "hubSegment": "vocabulary",
       "id": "lex:alter",
@@ -147,7 +162,12 @@
       "article": "die",
       "canonicalPath": "/vocabulary/id-6c65783a617263686974656b74696e",
       "displayText": "die Architektin",
-      "example": null,
+      "example": {
+        "de": "Anna ist Architektin.",
+        "en": "Anna is an architect.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "feminine",
       "hubSegment": "vocabulary",
       "id": "lex:architektin",
@@ -181,7 +201,12 @@
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a61727a74",
       "displayText": "der Arzt",
-      "example": null,
+      "example": {
+        "de": "Paul ist Arzt.",
+        "en": "Paul is a doctor.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "masculine",
       "hubSegment": "vocabulary",
       "id": "lex:arzt",
@@ -215,7 +240,12 @@
       "article": null,
       "canonicalPath": "/vocabulary/id-6c65783a617563682d7375706572",
       "displayText": "Auch super.",
-      "example": null,
+      "example": {
+        "de": "Auch super.",
+        "en": "I'm great too.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": null,
       "hubSegment": "vocabulary",
       "id": "lex:auch-super",
@@ -247,7 +277,12 @@
       "article": null,
       "canonicalPath": "/vocabulary/id-6c65783a6175662d776965646572736568656e",
       "displayText": "Auf Wiedersehen",
-      "example": null,
+      "example": {
+        "de": "Auf Wiedersehen, Herr Braun.",
+        "en": "Goodbye, Mr Braun.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": null,
       "hubSegment": "vocabulary",
       "id": "lex:auf-wiedersehen",
@@ -279,7 +314,12 @@
       "article": "die",
       "canonicalPath": "/vocabulary/id-6c65783a61757362696c64756e67",
       "displayText": "die Ausbildung",
-      "example": null,
+      "example": {
+        "de": "Ich mache eine Ausbildung.",
+        "en": "I'm doing vocational training.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "feminine",
       "hubSegment": "vocabulary",
       "id": "lex:ausbildung",
@@ -316,7 +356,8 @@
       "example": {
         "de": "von Beruf",
         "en": "by profession",
-        "sourceLabel": "Momente A1.1 KB Glossar Deutsch–Englisch, page 4"
+        "origin": "glossary",
+        "provenanceLabel": "From Momente A1.1 KB Glossar Deutsch–Englisch, page 4"
       },
       "gender": "masculine",
       "hubSegment": "vocabulary",
@@ -351,7 +392,12 @@
       "article": null,
       "canonicalPath": "/vocabulary/id-6c65783a646575747363686c616e64",
       "displayText": "Deutschland",
-      "example": null,
+      "example": {
+        "de": "Ich komme aus Deutschland.",
+        "en": "I come from Germany.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": null,
       "hubSegment": "vocabulary",
       "id": "lex:deutschland",
@@ -383,7 +429,12 @@
       "article": null,
       "canonicalPath": "/vocabulary/id-6c65783a65726974726561",
       "displayText": "Eritrea",
-      "example": null,
+      "example": {
+        "de": "Ich komme aus Eritrea.",
+        "en": "I come from Eritrea.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": null,
       "hubSegment": "vocabulary",
       "id": "lex:eritrea",
@@ -415,7 +466,12 @@
       "article": null,
       "canonicalPath": "/vocabulary/id-6c65783a65732d67656874",
       "displayText": "Es geht.",
-      "example": null,
+      "example": {
+        "de": "Es geht.",
+        "en": "I'm okay.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": null,
       "hubSegment": "vocabulary",
       "id": "lex:es-geht",
@@ -447,7 +503,12 @@
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a66616d696c69656e6e616d65",
       "displayText": "der Familienname",
-      "example": null,
+      "example": {
+        "de": "Mein Familienname ist Müller.",
+        "en": "My surname is Müller.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "masculine",
       "hubSegment": "vocabulary",
       "id": "lex:familienname",
@@ -481,7 +542,12 @@
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a66616d696c69656e7374616e64",
       "displayText": "der Familienstand",
-      "example": null,
+      "example": {
+        "de": "Mein Familienstand ist verheiratet.",
+        "en": "I am married.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "masculine",
       "hubSegment": "vocabulary",
       "id": "lex:familienstand",
@@ -513,7 +579,12 @@
       "article": "die",
       "canonicalPath": "/vocabulary/id-6c65783a6669726d61",
       "displayText": "die Firma",
-      "example": null,
+      "example": {
+        "de": "Die Firma heißt Mosaik.",
+        "en": "The company is called Mosaik.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "feminine",
       "hubSegment": "vocabulary",
       "id": "lex:firma",
@@ -547,7 +618,12 @@
       "article": null,
       "canonicalPath": "/vocabulary/id-6c65783a6672616e6b7265696368",
       "displayText": "Frankreich",
-      "example": null,
+      "example": {
+        "de": "Ich komme aus Frankreich.",
+        "en": "I come from France.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": null,
       "hubSegment": "vocabulary",
       "id": "lex:frankreich",
@@ -579,7 +655,12 @@
       "article": "die",
       "canonicalPath": "/vocabulary/id-6c65783a66726175",
       "displayText": "die Frau",
-      "example": null,
+      "example": {
+        "de": "Frau Müller ist Ärztin.",
+        "en": "Mrs Müller is a doctor.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "feminine",
       "hubSegment": "vocabulary",
       "id": "lex:frau",
@@ -613,7 +694,12 @@
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a66726973657572",
       "displayText": "der Friseur",
-      "example": null,
+      "example": {
+        "de": "Ali ist Friseur.",
+        "en": "Ali is a hairdresser.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "masculine",
       "hubSegment": "vocabulary",
       "id": "lex:friseur",
@@ -657,7 +743,12 @@
       "article": "die",
       "canonicalPath": "/vocabulary/id-6c65783a66726973657572696e",
       "displayText": "die Friseurin",
-      "example": null,
+      "example": {
+        "de": "Eva ist Friseurin.",
+        "en": "Eva is a hairdresser.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "feminine",
       "hubSegment": "vocabulary",
       "id": "lex:friseurin",
@@ -694,7 +785,8 @@
       "example": {
         "de": "geschieden sein",
         "en": "to be divorced",
-        "sourceLabel": "Momente A1.1 KB Glossar Deutsch–Englisch, page 3"
+        "origin": "glossary",
+        "provenanceLabel": "From Momente A1.1 KB Glossar Deutsch–Englisch, page 3"
       },
       "gender": null,
       "hubSegment": "vocabulary",
@@ -727,7 +819,12 @@
       "article": null,
       "canonicalPath": "/vocabulary/id-6c65783a6775742d64616e6b65",
       "displayText": "Gut, danke.",
-      "example": null,
+      "example": {
+        "de": "Gut, danke.",
+        "en": "Fine, thanks.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": null,
       "hubSegment": "vocabulary",
       "id": "lex:gut-danke",
@@ -759,7 +856,12 @@
       "article": null,
       "canonicalPath": "/vocabulary/id-6c65783a677574652d6e61636874",
       "displayText": "Gute Nacht",
-      "example": null,
+      "example": {
+        "de": "Gute Nacht, Anna.",
+        "en": "Good night, Anna.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": null,
       "hubSegment": "vocabulary",
       "id": "lex:gute-nacht",
@@ -791,7 +893,12 @@
       "article": null,
       "canonicalPath": "/vocabulary/id-6c65783a677574656e2d6162656e64",
       "displayText": "Guten Abend",
-      "example": null,
+      "example": {
+        "de": "Guten Abend, Frau Müller.",
+        "en": "Good evening, Mrs Müller.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": null,
       "hubSegment": "vocabulary",
       "id": "lex:guten-abend",
@@ -823,7 +930,12 @@
       "article": null,
       "canonicalPath": "/vocabulary/id-6c65783a677574656e2d6d6f7267656e",
       "displayText": "Guten Morgen",
-      "example": null,
+      "example": {
+        "de": "Guten Morgen, Herr Braun.",
+        "en": "Good morning, Mr Braun.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": null,
       "hubSegment": "vocabulary",
       "id": "lex:guten-morgen",
@@ -855,7 +967,12 @@
       "article": null,
       "canonicalPath": "/vocabulary/id-6c65783a677574656e2d746167",
       "displayText": "Guten Tag",
-      "example": null,
+      "example": {
+        "de": "Guten Tag, ich heiße Mia.",
+        "en": "Hello, my name is Mia.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": null,
       "hubSegment": "vocabulary",
       "id": "lex:guten-tag",
@@ -887,7 +1004,12 @@
       "article": null,
       "canonicalPath": "/vocabulary/id-6c65783a68616c6c6f",
       "displayText": "Hallo",
-      "example": null,
+      "example": {
+        "de": "Hallo, ich heiße Tom.",
+        "en": "Hello, my name is Tom.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": null,
       "hubSegment": "vocabulary",
       "id": "lex:hallo",
@@ -919,7 +1041,12 @@
       "article": "die",
       "canonicalPath": "/vocabulary/id-6c65783a6865726b756e6674",
       "displayText": "die Herkunft",
-      "example": null,
+      "example": {
+        "de": "Meine Herkunft ist Eritrea.",
+        "en": "I am originally from Eritrea.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "feminine",
       "hubSegment": "vocabulary",
       "id": "lex:herkunft",
@@ -951,7 +1078,12 @@
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a68657272",
       "displayText": "der Herr",
-      "example": null,
+      "example": {
+        "de": "Herr Müller ist Arzt.",
+        "en": "Mr Müller is a doctor.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "masculine",
       "hubSegment": "vocabulary",
       "id": "lex:herr",
@@ -985,7 +1117,12 @@
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a696e67656e69657572",
       "displayText": "der Ingenieur",
-      "example": null,
+      "example": {
+        "de": "Omar ist Ingenieur.",
+        "en": "Omar is an engineer.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "masculine",
       "hubSegment": "vocabulary",
       "id": "lex:ingenieur",
@@ -1029,7 +1166,12 @@
       "article": "die",
       "canonicalPath": "/vocabulary/id-6c65783a696e67656e69657572696e",
       "displayText": "die Ingenieurin",
-      "example": null,
+      "example": {
+        "de": "Lea ist Ingenieurin.",
+        "en": "Lea is an engineer.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "feminine",
       "hubSegment": "vocabulary",
       "id": "lex:ingenieurin",
@@ -1066,7 +1208,8 @@
       "example": {
         "de": "… Jahre alt",
         "en": "… years old",
-        "sourceLabel": "Momente A1.1 KB Glossar Deutsch–Englisch, page 2"
+        "origin": "glossary",
+        "provenanceLabel": "From Momente A1.1 KB Glossar Deutsch–Englisch, page 2"
       },
       "gender": "neuter",
       "hubSegment": "vocabulary",
@@ -1101,7 +1244,12 @@
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a6a6f62",
       "displayText": "der Job",
-      "example": null,
+      "example": {
+        "de": "Mein Job ist super.",
+        "en": "My job is great.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "masculine",
       "hubSegment": "vocabulary",
       "id": "lex:job",
@@ -1135,7 +1283,12 @@
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a6a6f75726e616c697374",
       "displayText": "der Journalist",
-      "example": null,
+      "example": {
+        "de": "Ben ist Journalist.",
+        "en": "Ben is a journalist.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "masculine",
       "hubSegment": "vocabulary",
       "id": "lex:journalist",
@@ -1179,7 +1332,12 @@
       "article": "die",
       "canonicalPath": "/vocabulary/id-6c65783a6a6f75726e616c697374696e",
       "displayText": "die Journalistin",
-      "example": null,
+      "example": {
+        "de": "Sara ist Journalistin.",
+        "en": "Sara is a journalist.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "feminine",
       "hubSegment": "vocabulary",
       "id": "lex:journalistin",
@@ -1213,7 +1371,12 @@
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a6b656c6c6e6572",
       "displayText": "der Kellner",
-      "example": null,
+      "example": {
+        "de": "Lukas ist Kellner.",
+        "en": "Lukas is a waiter.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "masculine",
       "hubSegment": "vocabulary",
       "id": "lex:kellner",
@@ -1257,7 +1420,12 @@
       "article": "die",
       "canonicalPath": "/vocabulary/id-6c65783a6b656c6c6e6572696e",
       "displayText": "die Kellnerin",
-      "example": null,
+      "example": {
+        "de": "Nina ist Kellnerin.",
+        "en": "Nina is a waitress.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "feminine",
       "hubSegment": "vocabulary",
       "id": "lex:kellnerin",
@@ -1291,7 +1459,12 @@
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a6b667a2d6d6563686174726f6e696b6572",
       "displayText": "der Kfz-Mechatroniker",
-      "example": null,
+      "example": {
+        "de": "Max ist Kfz-Mechatroniker.",
+        "en": "Max is a car mechatronics technician.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "masculine",
       "hubSegment": "vocabulary",
       "id": "lex:kfz-mechatroniker",
@@ -1335,7 +1508,12 @@
       "article": "die",
       "canonicalPath": "/vocabulary/id-6c65783a6b667a2d6d6563686174726f6e696b6572696e",
       "displayText": "die Kfz-Mechatronikerin",
-      "example": null,
+      "example": {
+        "de": "Lena ist Kfz-Mechatronikerin.",
+        "en": "Lena is a car mechatronics technician.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "feminine",
       "hubSegment": "vocabulary",
       "id": "lex:kfz-mechatronikerin",
@@ -1372,7 +1550,8 @@
       "example": {
         "de": "keine Kinder",
         "en": "no children",
-        "sourceLabel": "Momente A1.1 KB Glossar Deutsch–Englisch, page 3"
+        "origin": "glossary",
+        "provenanceLabel": "From Momente A1.1 KB Glossar Deutsch–Englisch, page 3"
       },
       "gender": "neuter",
       "hubSegment": "vocabulary",
@@ -1407,7 +1586,12 @@
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a6c6568726572",
       "displayText": "der Lehrer",
-      "example": null,
+      "example": {
+        "de": "Herr Koch ist Lehrer.",
+        "en": "Mr Koch is a teacher.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "masculine",
       "hubSegment": "vocabulary",
       "id": "lex:lehrer",
@@ -1451,7 +1635,12 @@
       "article": "die",
       "canonicalPath": "/vocabulary/id-6c65783a6c6568726572696e",
       "displayText": "die Lehrerin",
-      "example": null,
+      "example": {
+        "de": "Frau Klein ist Lehrerin.",
+        "en": "Mrs Klein is a teacher.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "feminine",
       "hubSegment": "vocabulary",
       "id": "lex:lehrerin",
@@ -1488,7 +1677,8 @@
       "example": {
         "de": "Mein Name ist …",
         "en": "My name is …",
-        "sourceLabel": "Momente A1.1 KB Glossar Deutsch–Englisch, page 1"
+        "origin": "glossary",
+        "provenanceLabel": "From Momente A1.1 KB Glossar Deutsch–Englisch, page 1"
       },
       "gender": "masculine",
       "hubSegment": "vocabulary",
@@ -1523,7 +1713,12 @@
       "article": null,
       "canonicalPath": "/vocabulary/id-6c65783a6e696368742d736f2d677574",
       "displayText": "Nicht so gut.",
-      "example": null,
+      "example": {
+        "de": "Nicht so gut.",
+        "en": "Not so good.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": null,
       "hubSegment": "vocabulary",
       "id": "lex:nicht-so-gut",
@@ -1555,7 +1750,12 @@
       "article": null,
       "canonicalPath": "/vocabulary/id-6c65783a6f65737465727265696368",
       "displayText": "Österreich",
-      "example": null,
+      "example": {
+        "de": "Ich komme aus Österreich.",
+        "en": "I come from Austria.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": null,
       "hubSegment": "vocabulary",
       "id": "lex:oesterreich",
@@ -1587,7 +1787,12 @@
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a70616b65747a757374656c6c6572",
       "displayText": "der Paketzusteller",
-      "example": null,
+      "example": {
+        "de": "Jan ist Paketzusteller.",
+        "en": "Jan is a parcel deliverer.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "masculine",
       "hubSegment": "vocabulary",
       "id": "lex:paketzusteller",
@@ -1631,7 +1836,12 @@
       "article": "die",
       "canonicalPath": "/vocabulary/id-6c65783a70616b65747a757374656c6c6572696e",
       "displayText": "die Paketzustellerin",
-      "example": null,
+      "example": {
+        "de": "Mia ist Paketzustellerin.",
+        "en": "Mia is a parcel deliverer.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "feminine",
       "hubSegment": "vocabulary",
       "id": "lex:paketzustellerin",
@@ -1665,7 +1875,12 @@
       "article": "das",
       "canonicalPath": "/vocabulary/id-6c65783a7072616b74696b756d",
       "displayText": "das Praktikum",
-      "example": null,
+      "example": {
+        "de": "Ich mache ein Praktikum.",
+        "en": "I am doing an internship.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "neuter",
       "hubSegment": "vocabulary",
       "id": "lex:praktikum",
@@ -1699,7 +1914,12 @@
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a72656e746e6572",
       "displayText": "der Rentner",
-      "example": null,
+      "example": {
+        "de": "Herr Weber ist Rentner.",
+        "en": "Mr Weber is retired.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "masculine",
       "hubSegment": "vocabulary",
       "id": "lex:rentner",
@@ -1743,7 +1963,12 @@
       "article": "die",
       "canonicalPath": "/vocabulary/id-6c65783a72656e746e6572696e",
       "displayText": "die Rentnerin",
-      "example": null,
+      "example": {
+        "de": "Frau Wolf ist Rentnerin.",
+        "en": "Mrs Wolf is retired.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "feminine",
       "hubSegment": "vocabulary",
       "id": "lex:rentnerin",
@@ -1777,7 +2002,12 @@
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a73636875656c6572",
       "displayText": "der Schüler",
-      "example": null,
+      "example": {
+        "de": "Tom ist Schüler.",
+        "en": "Tom is a pupil.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "masculine",
       "hubSegment": "vocabulary",
       "id": "lex:schueler",
@@ -1821,7 +2051,12 @@
       "article": "die",
       "canonicalPath": "/vocabulary/id-6c65783a73636875656c6572696e",
       "displayText": "die Schülerin",
-      "example": null,
+      "example": {
+        "de": "Mia ist Schülerin.",
+        "en": "Mia is a pupil.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "feminine",
       "hubSegment": "vocabulary",
       "id": "lex:schuelerin",
@@ -1858,7 +2093,8 @@
       "example": {
         "de": "Er kommt aus der Schweiz.",
         "en": "He is from Switzerland.",
-        "sourceLabel": "Momente A1.1 KB Glossar Deutsch–Englisch, page 2"
+        "origin": "glossary",
+        "provenanceLabel": "From Momente A1.1 KB Glossar Deutsch–Englisch, page 2"
       },
       "gender": "feminine",
       "hubSegment": "vocabulary",
@@ -1891,7 +2127,12 @@
       "article": null,
       "canonicalPath": "/vocabulary/id-6c65783a736568722d6775742d64616e6b65",
       "displayText": "Sehr gut, danke.",
-      "example": null,
+      "example": {
+        "de": "Sehr gut, danke.",
+        "en": "Very well, thanks.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": null,
       "hubSegment": "vocabulary",
       "id": "lex:sehr-gut-danke",
@@ -1923,7 +2164,12 @@
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a73696e676c65",
       "displayText": "der Single",
-      "example": null,
+      "example": {
+        "de": "Ich bin Single.",
+        "en": "I am single.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "masculine",
       "hubSegment": "vocabulary",
       "id": "lex:single",
@@ -1957,7 +2203,12 @@
       "article": null,
       "canonicalPath": "/vocabulary/id-6c65783a7370616e69656e",
       "displayText": "Spanien",
-      "example": null,
+      "example": {
+        "de": "Ich komme aus Spanien.",
+        "en": "I come from Spain.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": null,
       "hubSegment": "vocabulary",
       "id": "lex:spanien",
@@ -1989,7 +2240,12 @@
       "article": "die",
       "canonicalPath": "/vocabulary/id-6c65783a7374656c6c65",
       "displayText": "die Stelle",
-      "example": null,
+      "example": {
+        "de": "Ich habe eine Stelle.",
+        "en": "I have a job.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "feminine",
       "hubSegment": "vocabulary",
       "id": "lex:stelle",
@@ -2023,7 +2279,12 @@
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a73747564656e74",
       "displayText": "der Student",
-      "example": null,
+      "example": {
+        "de": "Paul ist Student.",
+        "en": "Paul is a university student.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "masculine",
       "hubSegment": "vocabulary",
       "id": "lex:student",
@@ -2067,7 +2328,12 @@
       "article": "die",
       "canonicalPath": "/vocabulary/id-6c65783a73747564656e74696e",
       "displayText": "die Studentin",
-      "example": null,
+      "example": {
+        "de": "Anna ist Studentin.",
+        "en": "Anna is a university student.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "feminine",
       "hubSegment": "vocabulary",
       "id": "lex:studentin",
@@ -2101,7 +2367,12 @@
       "article": "das",
       "canonicalPath": "/vocabulary/id-6c65783a7374756469756d",
       "displayText": "das Studium",
-      "example": null,
+      "example": {
+        "de": "Mein Studium ist super.",
+        "en": "My studies are going great.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "neuter",
       "hubSegment": "vocabulary",
       "id": "lex:studium",
@@ -2133,7 +2404,12 @@
       "article": null,
       "canonicalPath": "/vocabulary/id-6c65783a7375706572",
       "displayText": "Super!",
-      "example": null,
+      "example": {
+        "de": "Super!",
+        "en": "Great!",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": null,
       "hubSegment": "vocabulary",
       "id": "lex:super",
@@ -2165,7 +2441,12 @@
       "article": null,
       "canonicalPath": "/vocabulary/id-6c65783a74736368756573",
       "displayText": "Tschüs",
-      "example": null,
+      "example": {
+        "de": "Tschüs, Anna!",
+        "en": "Bye, Anna!",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": null,
       "hubSegment": "vocabulary",
       "id": "lex:tschues",
@@ -2197,7 +2478,12 @@
       "article": "die",
       "canonicalPath": "/vocabulary/id-6c65783a747565726b6569",
       "displayText": "die Türkei",
-      "example": null,
+      "example": {
+        "de": "Ich komme aus der Türkei.",
+        "en": "I come from Turkey.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "feminine",
       "hubSegment": "vocabulary",
       "id": "lex:tuerkei",
@@ -2229,7 +2515,12 @@
       "article": "die",
       "canonicalPath": "/vocabulary/id-6c65783a757361",
       "displayText": "die USA",
-      "example": null,
+      "example": {
+        "de": "Ich komme aus den USA.",
+        "en": "I come from the USA.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "feminine",
       "hubSegment": "vocabulary",
       "id": "lex:usa",
@@ -2261,7 +2552,12 @@
       "article": null,
       "canonicalPath": "/vocabulary/id-6c65783a7665726865697261746574",
       "displayText": "verheiratet",
-      "example": null,
+      "example": {
+        "de": "Ich bin verheiratet.",
+        "en": "I am married.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": null,
       "hubSegment": "vocabulary",
       "id": "lex:verheiratet",
@@ -2293,7 +2589,12 @@
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a7665726b616575666572",
       "displayText": "der Verkäufer",
-      "example": null,
+      "example": {
+        "de": "Felix ist Verkäufer.",
+        "en": "Felix is a sales assistant.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "masculine",
       "hubSegment": "vocabulary",
       "id": "lex:verkaeufer",
@@ -2337,7 +2638,12 @@
       "article": "die",
       "canonicalPath": "/vocabulary/id-6c65783a7665726b616575666572696e",
       "displayText": "die Verkäuferin",
-      "example": null,
+      "example": {
+        "de": "Sofia ist Verkäuferin.",
+        "en": "Sofia is a sales assistant.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "feminine",
       "hubSegment": "vocabulary",
       "id": "lex:verkaeuferin",
@@ -2371,7 +2677,12 @@
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a766f726e616d65",
       "displayText": "der Vorname",
-      "example": null,
+      "example": {
+        "de": "Mein Vorname ist Anna.",
+        "en": "My first name is Anna.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "masculine",
       "hubSegment": "vocabulary",
       "id": "lex:vorname",
@@ -2405,7 +2716,12 @@
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a776f686e6f7274",
       "displayText": "der Wohnort",
-      "example": null,
+      "example": {
+        "de": "Mein Wohnort ist Berlin.",
+        "en": "I live in Berlin.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "masculine",
       "hubSegment": "vocabulary",
       "id": "lex:wohnort",
@@ -4645,7 +4961,12 @@
       "article": "die",
       "canonicalPath": "/vocabulary/id-6c65783a6165727a74696e",
       "displayText": "die Ärztin",
-      "example": null,
+      "example": {
+        "de": "Maria ist Ärztin.",
+        "en": "Maria is a doctor.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "feminine",
       "hubSegment": "vocabulary",
       "id": "lex:aerztin",
@@ -4679,7 +5000,12 @@
       "article": null,
       "canonicalPath": "/vocabulary/id-6c65783a616c6c65696e",
       "displayText": "allein",
-      "example": null,
+      "example": {
+        "de": "Ich bin allein.",
+        "en": "I am alone.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": null,
       "hubSegment": "vocabulary",
       "id": "lex:allein",
@@ -4711,7 +5037,12 @@
       "article": "das",
       "canonicalPath": "/vocabulary/id-6c65783a616c746572",
       "displayText": "das Alter",
-      "example": null,
+      "example": {
+        "de": "Mein Alter ist 30 Jahre.",
+        "en": "I am 30 years old.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "neuter",
       "hubSegment": "vocabulary",
       "id": "lex:alter",
@@ -4787,7 +5118,12 @@
       "article": "die",
       "canonicalPath": "/vocabulary/id-6c65783a617263686974656b74696e",
       "displayText": "die Architektin",
-      "example": null,
+      "example": {
+        "de": "Anna ist Architektin.",
+        "en": "Anna is an architect.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "feminine",
       "hubSegment": "vocabulary",
       "id": "lex:architektin",
@@ -4821,7 +5157,12 @@
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a61727a74",
       "displayText": "der Arzt",
-      "example": null,
+      "example": {
+        "de": "Paul ist Arzt.",
+        "en": "Paul is a doctor.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "masculine",
       "hubSegment": "vocabulary",
       "id": "lex:arzt",
@@ -4855,7 +5196,12 @@
       "article": null,
       "canonicalPath": "/vocabulary/id-6c65783a617563682d7375706572",
       "displayText": "Auch super.",
-      "example": null,
+      "example": {
+        "de": "Auch super.",
+        "en": "I'm great too.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": null,
       "hubSegment": "vocabulary",
       "id": "lex:auch-super",
@@ -4887,7 +5233,12 @@
       "article": null,
       "canonicalPath": "/vocabulary/id-6c65783a6175662d776965646572736568656e",
       "displayText": "Auf Wiedersehen",
-      "example": null,
+      "example": {
+        "de": "Auf Wiedersehen, Herr Braun.",
+        "en": "Goodbye, Mr Braun.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": null,
       "hubSegment": "vocabulary",
       "id": "lex:auf-wiedersehen",
@@ -4919,7 +5270,12 @@
       "article": "die",
       "canonicalPath": "/vocabulary/id-6c65783a61757362696c64756e67",
       "displayText": "die Ausbildung",
-      "example": null,
+      "example": {
+        "de": "Ich mache eine Ausbildung.",
+        "en": "I'm doing vocational training.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "feminine",
       "hubSegment": "vocabulary",
       "id": "lex:ausbildung",
@@ -4956,7 +5312,8 @@
       "example": {
         "de": "von Beruf",
         "en": "by profession",
-        "sourceLabel": "Momente A1.1 KB Glossar Deutsch–Englisch, page 4"
+        "origin": "glossary",
+        "provenanceLabel": "From Momente A1.1 KB Glossar Deutsch–Englisch, page 4"
       },
       "gender": "masculine",
       "hubSegment": "vocabulary",
@@ -4991,7 +5348,12 @@
       "article": null,
       "canonicalPath": "/vocabulary/id-6c65783a646575747363686c616e64",
       "displayText": "Deutschland",
-      "example": null,
+      "example": {
+        "de": "Ich komme aus Deutschland.",
+        "en": "I come from Germany.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": null,
       "hubSegment": "vocabulary",
       "id": "lex:deutschland",
@@ -5023,7 +5385,12 @@
       "article": null,
       "canonicalPath": "/vocabulary/id-6c65783a65726974726561",
       "displayText": "Eritrea",
-      "example": null,
+      "example": {
+        "de": "Ich komme aus Eritrea.",
+        "en": "I come from Eritrea.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": null,
       "hubSegment": "vocabulary",
       "id": "lex:eritrea",
@@ -5055,7 +5422,12 @@
       "article": null,
       "canonicalPath": "/vocabulary/id-6c65783a65732d67656874",
       "displayText": "Es geht.",
-      "example": null,
+      "example": {
+        "de": "Es geht.",
+        "en": "I'm okay.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": null,
       "hubSegment": "vocabulary",
       "id": "lex:es-geht",
@@ -5087,7 +5459,12 @@
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a66616d696c69656e6e616d65",
       "displayText": "der Familienname",
-      "example": null,
+      "example": {
+        "de": "Mein Familienname ist Müller.",
+        "en": "My surname is Müller.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "masculine",
       "hubSegment": "vocabulary",
       "id": "lex:familienname",
@@ -5121,7 +5498,12 @@
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a66616d696c69656e7374616e64",
       "displayText": "der Familienstand",
-      "example": null,
+      "example": {
+        "de": "Mein Familienstand ist verheiratet.",
+        "en": "I am married.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "masculine",
       "hubSegment": "vocabulary",
       "id": "lex:familienstand",
@@ -5153,7 +5535,12 @@
       "article": "die",
       "canonicalPath": "/vocabulary/id-6c65783a6669726d61",
       "displayText": "die Firma",
-      "example": null,
+      "example": {
+        "de": "Die Firma heißt Mosaik.",
+        "en": "The company is called Mosaik.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "feminine",
       "hubSegment": "vocabulary",
       "id": "lex:firma",
@@ -5187,7 +5574,12 @@
       "article": null,
       "canonicalPath": "/vocabulary/id-6c65783a6672616e6b7265696368",
       "displayText": "Frankreich",
-      "example": null,
+      "example": {
+        "de": "Ich komme aus Frankreich.",
+        "en": "I come from France.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": null,
       "hubSegment": "vocabulary",
       "id": "lex:frankreich",
@@ -5219,7 +5611,12 @@
       "article": "die",
       "canonicalPath": "/vocabulary/id-6c65783a66726175",
       "displayText": "die Frau",
-      "example": null,
+      "example": {
+        "de": "Frau Müller ist Ärztin.",
+        "en": "Mrs Müller is a doctor.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "feminine",
       "hubSegment": "vocabulary",
       "id": "lex:frau",
@@ -5253,7 +5650,12 @@
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a66726973657572",
       "displayText": "der Friseur",
-      "example": null,
+      "example": {
+        "de": "Ali ist Friseur.",
+        "en": "Ali is a hairdresser.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "masculine",
       "hubSegment": "vocabulary",
       "id": "lex:friseur",
@@ -5297,7 +5699,12 @@
       "article": "die",
       "canonicalPath": "/vocabulary/id-6c65783a66726973657572696e",
       "displayText": "die Friseurin",
-      "example": null,
+      "example": {
+        "de": "Eva ist Friseurin.",
+        "en": "Eva is a hairdresser.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "feminine",
       "hubSegment": "vocabulary",
       "id": "lex:friseurin",
@@ -5334,7 +5741,8 @@
       "example": {
         "de": "geschieden sein",
         "en": "to be divorced",
-        "sourceLabel": "Momente A1.1 KB Glossar Deutsch–Englisch, page 3"
+        "origin": "glossary",
+        "provenanceLabel": "From Momente A1.1 KB Glossar Deutsch–Englisch, page 3"
       },
       "gender": null,
       "hubSegment": "vocabulary",
@@ -5367,7 +5775,12 @@
       "article": null,
       "canonicalPath": "/vocabulary/id-6c65783a6775742d64616e6b65",
       "displayText": "Gut, danke.",
-      "example": null,
+      "example": {
+        "de": "Gut, danke.",
+        "en": "Fine, thanks.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": null,
       "hubSegment": "vocabulary",
       "id": "lex:gut-danke",
@@ -5399,7 +5812,12 @@
       "article": null,
       "canonicalPath": "/vocabulary/id-6c65783a677574652d6e61636874",
       "displayText": "Gute Nacht",
-      "example": null,
+      "example": {
+        "de": "Gute Nacht, Anna.",
+        "en": "Good night, Anna.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": null,
       "hubSegment": "vocabulary",
       "id": "lex:gute-nacht",
@@ -5431,7 +5849,12 @@
       "article": null,
       "canonicalPath": "/vocabulary/id-6c65783a677574656e2d6162656e64",
       "displayText": "Guten Abend",
-      "example": null,
+      "example": {
+        "de": "Guten Abend, Frau Müller.",
+        "en": "Good evening, Mrs Müller.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": null,
       "hubSegment": "vocabulary",
       "id": "lex:guten-abend",
@@ -5463,7 +5886,12 @@
       "article": null,
       "canonicalPath": "/vocabulary/id-6c65783a677574656e2d6d6f7267656e",
       "displayText": "Guten Morgen",
-      "example": null,
+      "example": {
+        "de": "Guten Morgen, Herr Braun.",
+        "en": "Good morning, Mr Braun.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": null,
       "hubSegment": "vocabulary",
       "id": "lex:guten-morgen",
@@ -5495,7 +5923,12 @@
       "article": null,
       "canonicalPath": "/vocabulary/id-6c65783a677574656e2d746167",
       "displayText": "Guten Tag",
-      "example": null,
+      "example": {
+        "de": "Guten Tag, ich heiße Mia.",
+        "en": "Hello, my name is Mia.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": null,
       "hubSegment": "vocabulary",
       "id": "lex:guten-tag",
@@ -5527,7 +5960,12 @@
       "article": null,
       "canonicalPath": "/vocabulary/id-6c65783a68616c6c6f",
       "displayText": "Hallo",
-      "example": null,
+      "example": {
+        "de": "Hallo, ich heiße Tom.",
+        "en": "Hello, my name is Tom.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": null,
       "hubSegment": "vocabulary",
       "id": "lex:hallo",
@@ -5559,7 +5997,12 @@
       "article": "die",
       "canonicalPath": "/vocabulary/id-6c65783a6865726b756e6674",
       "displayText": "die Herkunft",
-      "example": null,
+      "example": {
+        "de": "Meine Herkunft ist Eritrea.",
+        "en": "I am originally from Eritrea.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "feminine",
       "hubSegment": "vocabulary",
       "id": "lex:herkunft",
@@ -5591,7 +6034,12 @@
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a68657272",
       "displayText": "der Herr",
-      "example": null,
+      "example": {
+        "de": "Herr Müller ist Arzt.",
+        "en": "Mr Müller is a doctor.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "masculine",
       "hubSegment": "vocabulary",
       "id": "lex:herr",
@@ -5625,7 +6073,12 @@
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a696e67656e69657572",
       "displayText": "der Ingenieur",
-      "example": null,
+      "example": {
+        "de": "Omar ist Ingenieur.",
+        "en": "Omar is an engineer.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "masculine",
       "hubSegment": "vocabulary",
       "id": "lex:ingenieur",
@@ -5669,7 +6122,12 @@
       "article": "die",
       "canonicalPath": "/vocabulary/id-6c65783a696e67656e69657572696e",
       "displayText": "die Ingenieurin",
-      "example": null,
+      "example": {
+        "de": "Lea ist Ingenieurin.",
+        "en": "Lea is an engineer.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "feminine",
       "hubSegment": "vocabulary",
       "id": "lex:ingenieurin",
@@ -5706,7 +6164,8 @@
       "example": {
         "de": "… Jahre alt",
         "en": "… years old",
-        "sourceLabel": "Momente A1.1 KB Glossar Deutsch–Englisch, page 2"
+        "origin": "glossary",
+        "provenanceLabel": "From Momente A1.1 KB Glossar Deutsch–Englisch, page 2"
       },
       "gender": "neuter",
       "hubSegment": "vocabulary",
@@ -5741,7 +6200,12 @@
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a6a6f62",
       "displayText": "der Job",
-      "example": null,
+      "example": {
+        "de": "Mein Job ist super.",
+        "en": "My job is great.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "masculine",
       "hubSegment": "vocabulary",
       "id": "lex:job",
@@ -5775,7 +6239,12 @@
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a6a6f75726e616c697374",
       "displayText": "der Journalist",
-      "example": null,
+      "example": {
+        "de": "Ben ist Journalist.",
+        "en": "Ben is a journalist.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "masculine",
       "hubSegment": "vocabulary",
       "id": "lex:journalist",
@@ -5819,7 +6288,12 @@
       "article": "die",
       "canonicalPath": "/vocabulary/id-6c65783a6a6f75726e616c697374696e",
       "displayText": "die Journalistin",
-      "example": null,
+      "example": {
+        "de": "Sara ist Journalistin.",
+        "en": "Sara is a journalist.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "feminine",
       "hubSegment": "vocabulary",
       "id": "lex:journalistin",
@@ -5853,7 +6327,12 @@
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a6b656c6c6e6572",
       "displayText": "der Kellner",
-      "example": null,
+      "example": {
+        "de": "Lukas ist Kellner.",
+        "en": "Lukas is a waiter.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "masculine",
       "hubSegment": "vocabulary",
       "id": "lex:kellner",
@@ -5897,7 +6376,12 @@
       "article": "die",
       "canonicalPath": "/vocabulary/id-6c65783a6b656c6c6e6572696e",
       "displayText": "die Kellnerin",
-      "example": null,
+      "example": {
+        "de": "Nina ist Kellnerin.",
+        "en": "Nina is a waitress.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "feminine",
       "hubSegment": "vocabulary",
       "id": "lex:kellnerin",
@@ -5931,7 +6415,12 @@
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a6b667a2d6d6563686174726f6e696b6572",
       "displayText": "der Kfz-Mechatroniker",
-      "example": null,
+      "example": {
+        "de": "Max ist Kfz-Mechatroniker.",
+        "en": "Max is a car mechatronics technician.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "masculine",
       "hubSegment": "vocabulary",
       "id": "lex:kfz-mechatroniker",
@@ -5975,7 +6464,12 @@
       "article": "die",
       "canonicalPath": "/vocabulary/id-6c65783a6b667a2d6d6563686174726f6e696b6572696e",
       "displayText": "die Kfz-Mechatronikerin",
-      "example": null,
+      "example": {
+        "de": "Lena ist Kfz-Mechatronikerin.",
+        "en": "Lena is a car mechatronics technician.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "feminine",
       "hubSegment": "vocabulary",
       "id": "lex:kfz-mechatronikerin",
@@ -6012,7 +6506,8 @@
       "example": {
         "de": "keine Kinder",
         "en": "no children",
-        "sourceLabel": "Momente A1.1 KB Glossar Deutsch–Englisch, page 3"
+        "origin": "glossary",
+        "provenanceLabel": "From Momente A1.1 KB Glossar Deutsch–Englisch, page 3"
       },
       "gender": "neuter",
       "hubSegment": "vocabulary",
@@ -6047,7 +6542,12 @@
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a6c6568726572",
       "displayText": "der Lehrer",
-      "example": null,
+      "example": {
+        "de": "Herr Koch ist Lehrer.",
+        "en": "Mr Koch is a teacher.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "masculine",
       "hubSegment": "vocabulary",
       "id": "lex:lehrer",
@@ -6091,7 +6591,12 @@
       "article": "die",
       "canonicalPath": "/vocabulary/id-6c65783a6c6568726572696e",
       "displayText": "die Lehrerin",
-      "example": null,
+      "example": {
+        "de": "Frau Klein ist Lehrerin.",
+        "en": "Mrs Klein is a teacher.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "feminine",
       "hubSegment": "vocabulary",
       "id": "lex:lehrerin",
@@ -6128,7 +6633,8 @@
       "example": {
         "de": "Mein Name ist …",
         "en": "My name is …",
-        "sourceLabel": "Momente A1.1 KB Glossar Deutsch–Englisch, page 1"
+        "origin": "glossary",
+        "provenanceLabel": "From Momente A1.1 KB Glossar Deutsch–Englisch, page 1"
       },
       "gender": "masculine",
       "hubSegment": "vocabulary",
@@ -6163,7 +6669,12 @@
       "article": null,
       "canonicalPath": "/vocabulary/id-6c65783a6e696368742d736f2d677574",
       "displayText": "Nicht so gut.",
-      "example": null,
+      "example": {
+        "de": "Nicht so gut.",
+        "en": "Not so good.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": null,
       "hubSegment": "vocabulary",
       "id": "lex:nicht-so-gut",
@@ -6195,7 +6706,12 @@
       "article": null,
       "canonicalPath": "/vocabulary/id-6c65783a6f65737465727265696368",
       "displayText": "Österreich",
-      "example": null,
+      "example": {
+        "de": "Ich komme aus Österreich.",
+        "en": "I come from Austria.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": null,
       "hubSegment": "vocabulary",
       "id": "lex:oesterreich",
@@ -6227,7 +6743,12 @@
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a70616b65747a757374656c6c6572",
       "displayText": "der Paketzusteller",
-      "example": null,
+      "example": {
+        "de": "Jan ist Paketzusteller.",
+        "en": "Jan is a parcel deliverer.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "masculine",
       "hubSegment": "vocabulary",
       "id": "lex:paketzusteller",
@@ -6271,7 +6792,12 @@
       "article": "die",
       "canonicalPath": "/vocabulary/id-6c65783a70616b65747a757374656c6c6572696e",
       "displayText": "die Paketzustellerin",
-      "example": null,
+      "example": {
+        "de": "Mia ist Paketzustellerin.",
+        "en": "Mia is a parcel deliverer.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "feminine",
       "hubSegment": "vocabulary",
       "id": "lex:paketzustellerin",
@@ -6305,7 +6831,12 @@
       "article": "das",
       "canonicalPath": "/vocabulary/id-6c65783a7072616b74696b756d",
       "displayText": "das Praktikum",
-      "example": null,
+      "example": {
+        "de": "Ich mache ein Praktikum.",
+        "en": "I am doing an internship.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "neuter",
       "hubSegment": "vocabulary",
       "id": "lex:praktikum",
@@ -6339,7 +6870,12 @@
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a72656e746e6572",
       "displayText": "der Rentner",
-      "example": null,
+      "example": {
+        "de": "Herr Weber ist Rentner.",
+        "en": "Mr Weber is retired.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "masculine",
       "hubSegment": "vocabulary",
       "id": "lex:rentner",
@@ -6383,7 +6919,12 @@
       "article": "die",
       "canonicalPath": "/vocabulary/id-6c65783a72656e746e6572696e",
       "displayText": "die Rentnerin",
-      "example": null,
+      "example": {
+        "de": "Frau Wolf ist Rentnerin.",
+        "en": "Mrs Wolf is retired.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "feminine",
       "hubSegment": "vocabulary",
       "id": "lex:rentnerin",
@@ -6417,7 +6958,12 @@
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a73636875656c6572",
       "displayText": "der Schüler",
-      "example": null,
+      "example": {
+        "de": "Tom ist Schüler.",
+        "en": "Tom is a pupil.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "masculine",
       "hubSegment": "vocabulary",
       "id": "lex:schueler",
@@ -6461,7 +7007,12 @@
       "article": "die",
       "canonicalPath": "/vocabulary/id-6c65783a73636875656c6572696e",
       "displayText": "die Schülerin",
-      "example": null,
+      "example": {
+        "de": "Mia ist Schülerin.",
+        "en": "Mia is a pupil.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "feminine",
       "hubSegment": "vocabulary",
       "id": "lex:schuelerin",
@@ -6498,7 +7049,8 @@
       "example": {
         "de": "Er kommt aus der Schweiz.",
         "en": "He is from Switzerland.",
-        "sourceLabel": "Momente A1.1 KB Glossar Deutsch–Englisch, page 2"
+        "origin": "glossary",
+        "provenanceLabel": "From Momente A1.1 KB Glossar Deutsch–Englisch, page 2"
       },
       "gender": "feminine",
       "hubSegment": "vocabulary",
@@ -6531,7 +7083,12 @@
       "article": null,
       "canonicalPath": "/vocabulary/id-6c65783a736568722d6775742d64616e6b65",
       "displayText": "Sehr gut, danke.",
-      "example": null,
+      "example": {
+        "de": "Sehr gut, danke.",
+        "en": "Very well, thanks.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": null,
       "hubSegment": "vocabulary",
       "id": "lex:sehr-gut-danke",
@@ -6563,7 +7120,12 @@
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a73696e676c65",
       "displayText": "der Single",
-      "example": null,
+      "example": {
+        "de": "Ich bin Single.",
+        "en": "I am single.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "masculine",
       "hubSegment": "vocabulary",
       "id": "lex:single",
@@ -6597,7 +7159,12 @@
       "article": null,
       "canonicalPath": "/vocabulary/id-6c65783a7370616e69656e",
       "displayText": "Spanien",
-      "example": null,
+      "example": {
+        "de": "Ich komme aus Spanien.",
+        "en": "I come from Spain.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": null,
       "hubSegment": "vocabulary",
       "id": "lex:spanien",
@@ -6629,7 +7196,12 @@
       "article": "die",
       "canonicalPath": "/vocabulary/id-6c65783a7374656c6c65",
       "displayText": "die Stelle",
-      "example": null,
+      "example": {
+        "de": "Ich habe eine Stelle.",
+        "en": "I have a job.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "feminine",
       "hubSegment": "vocabulary",
       "id": "lex:stelle",
@@ -6663,7 +7235,12 @@
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a73747564656e74",
       "displayText": "der Student",
-      "example": null,
+      "example": {
+        "de": "Paul ist Student.",
+        "en": "Paul is a university student.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "masculine",
       "hubSegment": "vocabulary",
       "id": "lex:student",
@@ -6707,7 +7284,12 @@
       "article": "die",
       "canonicalPath": "/vocabulary/id-6c65783a73747564656e74696e",
       "displayText": "die Studentin",
-      "example": null,
+      "example": {
+        "de": "Anna ist Studentin.",
+        "en": "Anna is a university student.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "feminine",
       "hubSegment": "vocabulary",
       "id": "lex:studentin",
@@ -6741,7 +7323,12 @@
       "article": "das",
       "canonicalPath": "/vocabulary/id-6c65783a7374756469756d",
       "displayText": "das Studium",
-      "example": null,
+      "example": {
+        "de": "Mein Studium ist super.",
+        "en": "My studies are going great.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "neuter",
       "hubSegment": "vocabulary",
       "id": "lex:studium",
@@ -6773,7 +7360,12 @@
       "article": null,
       "canonicalPath": "/vocabulary/id-6c65783a7375706572",
       "displayText": "Super!",
-      "example": null,
+      "example": {
+        "de": "Super!",
+        "en": "Great!",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": null,
       "hubSegment": "vocabulary",
       "id": "lex:super",
@@ -6805,7 +7397,12 @@
       "article": null,
       "canonicalPath": "/vocabulary/id-6c65783a74736368756573",
       "displayText": "Tschüs",
-      "example": null,
+      "example": {
+        "de": "Tschüs, Anna!",
+        "en": "Bye, Anna!",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": null,
       "hubSegment": "vocabulary",
       "id": "lex:tschues",
@@ -6837,7 +7434,12 @@
       "article": "die",
       "canonicalPath": "/vocabulary/id-6c65783a747565726b6569",
       "displayText": "die Türkei",
-      "example": null,
+      "example": {
+        "de": "Ich komme aus der Türkei.",
+        "en": "I come from Turkey.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "feminine",
       "hubSegment": "vocabulary",
       "id": "lex:tuerkei",
@@ -6869,7 +7471,12 @@
       "article": "die",
       "canonicalPath": "/vocabulary/id-6c65783a757361",
       "displayText": "die USA",
-      "example": null,
+      "example": {
+        "de": "Ich komme aus den USA.",
+        "en": "I come from the USA.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "feminine",
       "hubSegment": "vocabulary",
       "id": "lex:usa",
@@ -6901,7 +7508,12 @@
       "article": null,
       "canonicalPath": "/vocabulary/id-6c65783a7665726865697261746574",
       "displayText": "verheiratet",
-      "example": null,
+      "example": {
+        "de": "Ich bin verheiratet.",
+        "en": "I am married.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": null,
       "hubSegment": "vocabulary",
       "id": "lex:verheiratet",
@@ -6933,7 +7545,12 @@
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a7665726b616575666572",
       "displayText": "der Verkäufer",
-      "example": null,
+      "example": {
+        "de": "Felix ist Verkäufer.",
+        "en": "Felix is a sales assistant.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "masculine",
       "hubSegment": "vocabulary",
       "id": "lex:verkaeufer",
@@ -6977,7 +7594,12 @@
       "article": "die",
       "canonicalPath": "/vocabulary/id-6c65783a7665726b616575666572696e",
       "displayText": "die Verkäuferin",
-      "example": null,
+      "example": {
+        "de": "Sofia ist Verkäuferin.",
+        "en": "Sofia is a sales assistant.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "feminine",
       "hubSegment": "vocabulary",
       "id": "lex:verkaeuferin",
@@ -7011,7 +7633,12 @@
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a766f726e616d65",
       "displayText": "der Vorname",
-      "example": null,
+      "example": {
+        "de": "Mein Vorname ist Anna.",
+        "en": "My first name is Anna.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "masculine",
       "hubSegment": "vocabulary",
       "id": "lex:vorname",
@@ -7045,7 +7672,12 @@
       "article": "der",
       "canonicalPath": "/vocabulary/id-6c65783a776f686e6f7274",
       "displayText": "der Wohnort",
-      "example": null,
+      "example": {
+        "de": "Mein Wohnort ist Berlin.",
+        "en": "I live in Berlin.",
+        "origin": "app-authored",
+        "provenanceLabel": "We wrote this sentence for the app. A German speaker still needs to check it."
+      },
       "gender": "masculine",
       "hubSegment": "vocabulary",
       "id": "lex:wohnort",

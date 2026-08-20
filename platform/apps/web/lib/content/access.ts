@@ -474,23 +474,33 @@ function assertMedia(media: unknown): asserts media is LearnerMediaAvailability 
 }
 
 /**
- * A vocabulary example is either absent (`null`) or complete: German, the
- * book's own English, and the book-and-page label. A half-filled example would
- * put unattributable German in front of a learner, so it fails the artifact.
+ * A vocabulary example is either absent (`null`) or complete: German, English,
+ * a declared origin, and the one provenance line that goes with that origin. A
+ * half-filled example would put unattributable German in front of a learner,
+ * and an undeclared origin would leave the page unable to say truthfully where
+ * the sentence came from — either one fails the artifact.
  */
+const VOCABULARY_EXAMPLE_KEYS = ["de", "en", "origin", "provenanceLabel"] as const;
+
 function assertVocabularyExample(example: unknown): void {
   if (example === null) return;
   if (!isPlainObject(example)) {
     throw new Error("Vocabulary example shape is invalid");
   }
-  for (const key of ["de", "en", "sourceLabel"] as const) {
+  for (const key of VOCABULARY_EXAMPLE_KEYS) {
     const value = example[key];
     if (typeof value !== "string" || value.length === 0) {
       throw new Error("Vocabulary example is incomplete");
     }
   }
+  if (example.origin !== "glossary" && example.origin !== "app-authored") {
+    throw new Error("Vocabulary example has an undeclared origin");
+  }
   const keys = Object.keys(example).sort();
-  if (keys.length !== 3 || keys.some((key, i) => key !== ["de", "en", "sourceLabel"][i])) {
+  if (
+    keys.length !== VOCABULARY_EXAMPLE_KEYS.length ||
+    keys.some((key, i) => key !== VOCABULARY_EXAMPLE_KEYS[i])
+  ) {
     throw new Error("Vocabulary example has unexpected shape");
   }
 }

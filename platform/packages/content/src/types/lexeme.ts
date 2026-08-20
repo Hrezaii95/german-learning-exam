@@ -46,18 +46,59 @@ export type LexemeExampleSourceRef = {
 };
 
 /**
+ * Where a usage example came from. The discriminator is required because the
+ * two origins carry different, mutually exclusive obligations — a reader (or a
+ * validator) must never have to guess which kind of sentence it is holding.
+ */
+export type LexemeExampleOrigin = "glossary" | "app-authored";
+
+/**
+ * Review state for a sentence nobody has checked yet. There is exactly one
+ * state today: the app wrote it and a qualified German speaker has not seen it.
+ * A checked sentence does not become a different review state — it becomes a
+ * different kind of example, or it is corrected and stays here until reviewed.
+ */
+export type LexemeExampleReviewState = "pending-german-review";
+
+/**
  * One usage example for a lexeme, transcribed verbatim from an official source.
  *
  * Both halves are quoted, never composed: `de` is the German exactly as the
  * source prints it and `translationEn` is that source's own published English.
- * A lexeme whose sources print no example simply has no `example` — an honest
- * gap is always correct, an invented sentence never is.
+ * The `sourceRef` is mandatory — this is the only example kind a learner may
+ * be told a book and page for.
  */
-export type LexemeExample = {
+export type GlossaryLexemeExample = {
+  origin: "glossary";
   de: string;
   translationEn: string;
   sourceRef: LexemeExampleSourceRef;
 };
+
+/**
+ * One usage example written for this app, not quoted from any source.
+ *
+ * It is deliberately unable to carry a `sourceRef`: an app-authored sentence
+ * has no page, and letting it name one would let model-written German pass
+ * itself off as coursebook material. What it carries instead is the honest
+ * fact about it — that no qualified German speaker has checked it yet — plus
+ * the optional note explaining what specifically needs a second opinion.
+ */
+export type AppAuthoredLexemeExample = {
+  origin: "app-authored";
+  de: string;
+  translationEn: string;
+  reviewState: LexemeExampleReviewState;
+  /** What the reviewer should look at, when the author flagged something. */
+  reviewerNote?: string;
+};
+
+/**
+ * A lexeme whose sources print no example and for which the app has written
+ * none simply has no `example` — an honest gap is always correct, an invented
+ * sentence dressed up as a quotation never is.
+ */
+export type LexemeExample = GlossaryLexemeExample | AppAuthoredLexemeExample;
 
 /**
  * Lexeme — one canonical concept. Profession M/F forms are separate lexemes
@@ -72,8 +113,9 @@ export type Lexeme = {
   meanings: Meaning[];
   pronunciation: PronunciationRef;
   /**
-   * Optional source-transcribed usage example. Present only when an official
-   * source prints the word in use together with its own English translation.
+   * Optional usage example. Either transcribed from an official source (and
+   * then traceable to a page) or written for this app (and then openly marked
+   * as awaiting German review). Absent when neither exists.
    */
   example?: LexemeExample;
   exampleIds: ExampleId[];

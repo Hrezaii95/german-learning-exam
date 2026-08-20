@@ -16,7 +16,9 @@ import {
 } from "@german-learning/content";
 import { loadValidatedBundleOrThrow } from "./project";
 import {
+  DETAIL_APP_AUTHORED_EXAMPLE_NOTE,
   DETAIL_PLURAL_GAP_MESSAGE,
+  DETAIL_SOURCED_EXAMPLE_PREFIX,
   DETAIL_VERB_PARADIGM_NOTE,
   VERB_SEIN_PRESENT_CANONICAL,
   VOCAB_ARCHITEKT_CANONICAL,
@@ -260,17 +262,49 @@ function publishedPersonForm(
  * Projects the usage example when the published lexeme carries one.
  *
  * Nothing is composed here: both strings pass through untouched and the only
- * new text is the book-and-page label. A lexeme without a source example
- * projects `null`, which the detail page renders as no section at all — never
- * as an empty slot or a "coming soon" line.
+ * new text is the provenance line, which is chosen by the example's declared
+ * origin and by nothing else. A quoted example gets its book and page; an
+ * app-written one gets the sentence that says nobody has checked it yet, and
+ * can never reach the book-and-page branch. A lexeme with no example projects
+ * `null`, which the detail page renders as no section at all — never as an
+ * empty slot or a "coming soon" line.
  */
 function publishedExample(lexeme: Lexeme): LearnerVocabularyExample | null {
   const example = lexeme.example;
   if (!example) return null;
-  const { de, translationEn, sourceRef } = example;
+  const { de, translationEn } = example;
+  if (de.length === 0 || translationEn.length === 0) {
+    throw new DetailProjectionError(
+      `Lexeme ${lexeme.id} has an example missing one of its two languages`,
+    );
+  }
+  const declared = lexeme.publication.publishedFields.some(
+    (ref) => ref.field === "example",
+  );
+
+  if (example.origin === "app-authored") {
+    // The one thing that must never happen quietly: an unchecked sentence
+    // wearing a source field's authority. Fail the artifact instead.
+    if (declared) {
+      throw new DetailProjectionError(
+        `Lexeme ${lexeme.id} example was written for the app and must not be a source-backed field`,
+      );
+    }
+    if (example.reviewState !== "pending-german-review") {
+      throw new DetailProjectionError(
+        `Lexeme ${lexeme.id} app-authored example has an unknown review state`,
+      );
+    }
+    return Object.freeze({
+      origin: "app-authored" as const,
+      de,
+      en: translationEn,
+      provenanceLabel: DETAIL_APP_AUTHORED_EXAMPLE_NOTE,
+    });
+  }
+
+  const { sourceRef } = example;
   if (
-    de.length === 0 ||
-    translationEn.length === 0 ||
     sourceRef == null ||
     sourceRef.documentTitle.length === 0 ||
     !Number.isSafeInteger(sourceRef.page) ||
@@ -280,18 +314,16 @@ function publishedExample(lexeme: Lexeme): LearnerVocabularyExample | null {
       `Lexeme ${lexeme.id} has an example without a usable source reference`,
     );
   }
-  const declared = lexeme.publication.publishedFields.some(
-    (ref) => ref.field === "example",
-  );
   if (!declared) {
     throw new DetailProjectionError(
       `Lexeme ${lexeme.id} example is not backed by a published field`,
     );
   }
   return Object.freeze({
+    origin: "glossary" as const,
     de,
     en: translationEn,
-    sourceLabel: `${sourceRef.documentTitle}, page ${sourceRef.page}`,
+    provenanceLabel: `${DETAIL_SOURCED_EXAMPLE_PREFIX}${sourceRef.documentTitle}, page ${sourceRef.page}`,
   });
 }
 

@@ -113,12 +113,23 @@ function VocabularyDetail({ detail }: { detail: LearnerVocabularyDetail }) {
       <VocabularyMediaSlot detail={detail} />
       <NounSystemVisual detail={detail} />
 
-      {/* Rendered only when the course material actually prints this word in
-          use. Where it does not, the section is absent entirely — an empty
-          "Example" heading would teach the learner nothing and imply a gap in
-          the app rather than in the book. */}
+      {/* Rendered only when there is a sentence to show. Where there is none,
+          the section is absent entirely — an empty "Example" heading would
+          teach the learner nothing and imply a gap in the app rather than in
+          the book.
+
+          The line under the sentence is the whole point of the slot: it either
+          names the book and page a learner can look up, or says in plain words
+          that we wrote the sentence and a German speaker has not checked it.
+          Which line appears is decided by the example's own origin, and
+          `data-example-origin` carries that decision into the markup so the
+          two never look alike by accident. */}
       {detail.example ? (
-        <section className="panel" aria-labelledby="vocab-example-heading">
+        <section
+          className="panel"
+          aria-labelledby="vocab-example-heading"
+          data-example-origin={detail.example.origin}
+        >
           <h2 id="vocab-example-heading">Example</h2>
           <figure className="vocab-example">
             <p className="vocab-example__de german" lang="de">
@@ -128,8 +139,8 @@ function VocabularyDetail({ detail }: { detail: LearnerVocabularyDetail }) {
               {detail.example.en}
             </figcaption>
           </figure>
-          <p className="dense vocab-example__source">
-            From {detail.example.sourceLabel}
+          <p className="dense vocab-example__provenance">
+            {detail.example.provenanceLabel}
           </p>
         </section>
       ) : null}

@@ -260,6 +260,7 @@
       "subjectId": "lex:jahr",
       "field": "example",
       "value": {
+        "origin": "glossary",
         "de": "… Jahre alt",
         "translationEn": "… years old",
         "sourceRef": {
@@ -322,6 +323,7 @@
       "subjectId": "lex:kind",
       "field": "example",
       "value": {
+        "origin": "glossary",
         "de": "keine Kinder",
         "translationEn": "no children",
         "sourceRef": {
@@ -374,6 +376,23 @@
     },
     {
       "kind": "SourceAssertion",
+      "id": "assert:lex-verheiratet-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:verheiratet",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Ich bin verheiratet.",
+        "translationEn": "I am married.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
       "id": "assert:lex-geschieden-lemma",
       "sourceId": "source:alpha-content-bundle",
       "location": {
@@ -419,6 +438,7 @@
       "subjectId": "lex:geschieden",
       "field": "example",
       "value": {
+        "origin": "glossary",
         "de": "geschieden sein",
         "translationEn": "to be divorced",
         "sourceRef": {
@@ -471,6 +491,23 @@
     },
     {
       "kind": "SourceAssertion",
+      "id": "assert:lex-single-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:single",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Ich bin Single.",
+        "translationEn": "I am single.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
       "id": "assert:lex-allein-lemma",
       "sourceId": "source:alpha-content-bundle",
       "location": {
@@ -503,6 +540,23 @@
       "status": "verified",
       "reviewer": "c1-source-encode",
       "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-allein-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:allein",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Ich bin allein.",
+        "translationEn": "I am alone.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
     },
     {
       "kind": "SourceAssertion",
@@ -541,6 +595,23 @@
     },
     {
       "kind": "SourceAssertion",
+      "id": "assert:lex-wohnort-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:wohnort",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Mein Wohnort ist Berlin.",
+        "translationEn": "I live in Berlin.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
       "id": "assert:lex-herkunft-lemma",
       "sourceId": "source:alpha-content-bundle",
       "location": {
@@ -573,6 +644,24 @@
       "status": "verified",
       "reviewer": "c1-source-encode",
       "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-herkunft-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:herkunft",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Meine Herkunft ist Eritrea.",
+        "translationEn": "I am originally from Eritrea.",
+        "reviewState": "pending-german-review",
+        "reviewerNote": "Please check whether this noun-based construction is sufficiently natural for A1; ‘Ich komme aus Eritrea’ is more idiomatic in conversation but does not contain the target noun."
+      },
+      "extraction": "generated",
+      "confidence": 0.5,
+      "status": "candidate"
     },
     {
       "kind": "SourceAssertion",
@@ -611,6 +700,24 @@
     },
     {
       "kind": "SourceAssertion",
+      "id": "assert:lex-alter-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:alter",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Mein Alter ist 30 Jahre.",
+        "translationEn": "I am 30 years old.",
+        "reviewState": "pending-german-review",
+        "reviewerNote": "Please check whether this form-like use sounds natural enough; in ordinary speech, ‘Ich bin 30 Jahre alt’ is more idiomatic but does not contain the target noun."
+      },
+      "extraction": "generated",
+      "confidence": 0.5,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
       "id": "assert:lex-familienstand-lemma",
       "sourceId": "source:alpha-content-bundle",
       "location": {
@@ -646,6 +753,24 @@
     },
     {
       "kind": "SourceAssertion",
+      "id": "assert:lex-familienstand-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:familienstand",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Mein Familienstand ist verheiratet.",
+        "translationEn": "I am married.",
+        "reviewState": "pending-german-review",
+        "reviewerNote": "Please check this full-sentence use; ‘Familienstand: verheiratet’ is typical on forms, while the version here is deliberately a complete A1 clause."
+      },
+      "extraction": "generated",
+      "confidence": 0.5,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
       "id": "assert:lex-studium-lemma",
       "sourceId": "source:alpha-content-bundle",
       "location": {
@@ -678,6 +803,23 @@
       "status": "verified",
       "reviewer": "c1-source-encode",
       "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-studium-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:studium",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Mein Studium ist super.",
+        "translationEn": "My studies are going great.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
     },
     {
       "kind": "SourceAssertion",
@@ -726,6 +868,7 @@
       "subjectId": "lex:beruf",
       "field": "example",
       "value": {
+        "origin": "glossary",
         "de": "von Beruf",
         "translationEn": "by profession",
         "sourceRef": {
@@ -778,6 +921,23 @@
     },
     {
       "kind": "SourceAssertion",
+      "id": "assert:lex-job-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:job",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Mein Job ist super.",
+        "translationEn": "My job is great.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
       "id": "assert:lex-stelle-lemma",
       "sourceId": "source:alpha-content-bundle",
       "location": {
@@ -810,6 +970,23 @@
       "status": "verified",
       "reviewer": "c1-source-encode",
       "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-stelle-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:stelle",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Ich habe eine Stelle.",
+        "translationEn": "I have a job.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
     },
     {
       "kind": "SourceAssertion",
@@ -848,6 +1025,23 @@
     },
     {
       "kind": "SourceAssertion",
+      "id": "assert:lex-ausbildung-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:ausbildung",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Ich mache eine Ausbildung.",
+        "translationEn": "I'm doing vocational training.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
       "id": "assert:lex-praktikum-lemma",
       "sourceId": "source:alpha-content-bundle",
       "location": {
@@ -880,6 +1074,23 @@
       "status": "verified",
       "reviewer": "c1-source-encode",
       "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-praktikum-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:praktikum",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Ich mache ein Praktikum.",
+        "translationEn": "I am doing an internship.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
     },
     {
       "kind": "SourceAssertion",
@@ -918,6 +1129,23 @@
     },
     {
       "kind": "SourceAssertion",
+      "id": "assert:lex-firma-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:firma",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Die Firma heißt Mosaik.",
+        "translationEn": "The company is called Mosaik.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
       "id": "assert:lex-paketzusteller-lemma",
       "sourceId": "source:alpha-content-bundle",
       "location": {
@@ -950,6 +1178,23 @@
       "status": "verified",
       "reviewer": "c1-source-encode",
       "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-paketzusteller-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:paketzusteller",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Jan ist Paketzusteller.",
+        "translationEn": "Jan is a parcel deliverer.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
     },
     {
       "kind": "SourceAssertion",
@@ -988,6 +1233,23 @@
     },
     {
       "kind": "SourceAssertion",
+      "id": "assert:lex-paketzustellerin-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:paketzustellerin",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Mia ist Paketzustellerin.",
+        "translationEn": "Mia is a parcel deliverer.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
       "id": "assert:lex-friseur-lemma",
       "sourceId": "source:alpha-content-bundle",
       "location": {
@@ -1020,6 +1282,23 @@
       "status": "verified",
       "reviewer": "c1-source-encode",
       "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-friseur-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:friseur",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Ali ist Friseur.",
+        "translationEn": "Ali is a hairdresser.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
     },
     {
       "kind": "SourceAssertion",
@@ -1058,6 +1337,23 @@
     },
     {
       "kind": "SourceAssertion",
+      "id": "assert:lex-friseurin-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:friseurin",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Eva ist Friseurin.",
+        "translationEn": "Eva is a hairdresser.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
       "id": "assert:lex-kellner-lemma",
       "sourceId": "source:alpha-content-bundle",
       "location": {
@@ -1090,6 +1386,23 @@
       "status": "verified",
       "reviewer": "c1-source-encode",
       "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-kellner-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:kellner",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Lukas ist Kellner.",
+        "translationEn": "Lukas is a waiter.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
     },
     {
       "kind": "SourceAssertion",
@@ -1128,6 +1441,23 @@
     },
     {
       "kind": "SourceAssertion",
+      "id": "assert:lex-kellnerin-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:kellnerin",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Nina ist Kellnerin.",
+        "translationEn": "Nina is a waitress.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
       "id": "assert:lex-ingenieur-lemma",
       "sourceId": "source:alpha-content-bundle",
       "location": {
@@ -1160,6 +1490,23 @@
       "status": "verified",
       "reviewer": "c1-source-encode",
       "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-ingenieur-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:ingenieur",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Omar ist Ingenieur.",
+        "translationEn": "Omar is an engineer.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
     },
     {
       "kind": "SourceAssertion",
@@ -1198,6 +1545,23 @@
     },
     {
       "kind": "SourceAssertion",
+      "id": "assert:lex-ingenieurin-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:ingenieurin",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Lea ist Ingenieurin.",
+        "translationEn": "Lea is an engineer.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
       "id": "assert:lex-kfz-mechatroniker-lemma",
       "sourceId": "source:alpha-content-bundle",
       "location": {
@@ -1230,6 +1594,23 @@
       "status": "verified",
       "reviewer": "c1-source-encode",
       "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-kfz-mechatroniker-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:kfz-mechatroniker",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Max ist Kfz-Mechatroniker.",
+        "translationEn": "Max is a car mechatronics technician.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
     },
     {
       "kind": "SourceAssertion",
@@ -1268,6 +1649,23 @@
     },
     {
       "kind": "SourceAssertion",
+      "id": "assert:lex-kfz-mechatronikerin-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:kfz-mechatronikerin",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Lena ist Kfz-Mechatronikerin.",
+        "translationEn": "Lena is a car mechatronics technician.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
       "id": "assert:lex-student-lemma",
       "sourceId": "source:alpha-content-bundle",
       "location": {
@@ -1300,6 +1698,23 @@
       "status": "verified",
       "reviewer": "c1-source-encode",
       "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-student-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:student",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Paul ist Student.",
+        "translationEn": "Paul is a university student.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
     },
     {
       "kind": "SourceAssertion",
@@ -1338,6 +1753,23 @@
     },
     {
       "kind": "SourceAssertion",
+      "id": "assert:lex-studentin-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:studentin",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Anna ist Studentin.",
+        "translationEn": "Anna is a university student.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
       "id": "assert:lex-journalist-lemma",
       "sourceId": "source:alpha-content-bundle",
       "location": {
@@ -1373,6 +1805,23 @@
     },
     {
       "kind": "SourceAssertion",
+      "id": "assert:lex-journalist-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:journalist",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Ben ist Journalist.",
+        "translationEn": "Ben is a journalist.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
       "id": "assert:lex-journalistin-lemma",
       "sourceId": "source:alpha-content-bundle",
       "location": {
@@ -1405,6 +1854,23 @@
       "status": "verified",
       "reviewer": "c1-source-encode",
       "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-journalistin-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:journalistin",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Sara ist Journalistin.",
+        "translationEn": "Sara is a journalist.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
     },
     {
       "kind": "SourceAssertion",
@@ -1478,6 +1944,23 @@
     },
     {
       "kind": "SourceAssertion",
+      "id": "assert:lex-architektin-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:architektin",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Anna ist Architektin.",
+        "translationEn": "Anna is an architect.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
       "id": "assert:lex-arzt-lemma",
       "sourceId": "source:alpha-content-bundle",
       "location": {
@@ -1510,6 +1993,23 @@
       "status": "verified",
       "reviewer": "c1-source-encode",
       "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-arzt-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:arzt",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Paul ist Arzt.",
+        "translationEn": "Paul is a doctor.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
     },
     {
       "kind": "SourceAssertion",
@@ -1548,6 +2048,23 @@
     },
     {
       "kind": "SourceAssertion",
+      "id": "assert:lex-aerztin-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:aerztin",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Maria ist Ärztin.",
+        "translationEn": "Maria is a doctor.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
       "id": "assert:lex-lehrer-lemma",
       "sourceId": "source:alpha-content-bundle",
       "location": {
@@ -1580,6 +2097,23 @@
       "status": "verified",
       "reviewer": "c1-source-encode",
       "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-lehrer-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:lehrer",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Herr Koch ist Lehrer.",
+        "translationEn": "Mr Koch is a teacher.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
     },
     {
       "kind": "SourceAssertion",
@@ -1618,6 +2152,23 @@
     },
     {
       "kind": "SourceAssertion",
+      "id": "assert:lex-lehrerin-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:lehrerin",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Frau Klein ist Lehrerin.",
+        "translationEn": "Mrs Klein is a teacher.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
       "id": "assert:lex-verkaeufer-lemma",
       "sourceId": "source:alpha-content-bundle",
       "location": {
@@ -1650,6 +2201,23 @@
       "status": "verified",
       "reviewer": "c1-source-encode",
       "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-verkaeufer-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:verkaeufer",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Felix ist Verkäufer.",
+        "translationEn": "Felix is a sales assistant.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
     },
     {
       "kind": "SourceAssertion",
@@ -1688,6 +2256,23 @@
     },
     {
       "kind": "SourceAssertion",
+      "id": "assert:lex-verkaeuferin-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:verkaeuferin",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Sofia ist Verkäuferin.",
+        "translationEn": "Sofia is a sales assistant.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
       "id": "assert:lex-schueler-lemma",
       "sourceId": "source:alpha-content-bundle",
       "location": {
@@ -1720,6 +2305,23 @@
       "status": "verified",
       "reviewer": "c1-source-encode",
       "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-schueler-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:schueler",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Tom ist Schüler.",
+        "translationEn": "Tom is a pupil.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
     },
     {
       "kind": "SourceAssertion",
@@ -1758,6 +2360,23 @@
     },
     {
       "kind": "SourceAssertion",
+      "id": "assert:lex-schuelerin-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:schuelerin",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Mia ist Schülerin.",
+        "translationEn": "Mia is a pupil.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
       "id": "assert:lex-rentner-lemma",
       "sourceId": "source:alpha-content-bundle",
       "location": {
@@ -1793,6 +2412,23 @@
     },
     {
       "kind": "SourceAssertion",
+      "id": "assert:lex-rentner-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:rentner",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Herr Weber ist Rentner.",
+        "translationEn": "Mr Weber is retired.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
+    },
+    {
+      "kind": "SourceAssertion",
       "id": "assert:lex-rentnerin-lemma",
       "sourceId": "source:alpha-content-bundle",
       "location": {
@@ -1825,6 +2461,23 @@
       "status": "verified",
       "reviewer": "c1-source-encode",
       "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-rentnerin-app-example",
+      "sourceId": "source:app-authored-examples",
+      "location": {},
+      "subjectId": "lex:rentnerin",
+      "field": "example",
+      "value": {
+        "origin": "app-authored",
+        "de": "Frau Wolf ist Rentnerin.",
+        "translationEn": "Mrs Wolf is retired.",
+        "reviewState": "pending-german-review"
+      },
+      "extraction": "generated",
+      "confidence": 0.7,
+      "status": "candidate"
     },
     {
       "kind": "SourceAssertion",
@@ -3861,6 +4514,7 @@
         ]
       },
       "example": {
+        "origin": "glossary",
         "de": "… Jahre alt",
         "translationEn": "… years old",
         "sourceRef": {
@@ -3923,6 +4577,7 @@
         ]
       },
       "example": {
+        "origin": "glossary",
         "de": "keine Kinder",
         "translationEn": "no children",
         "sourceRef": {
@@ -3951,7 +4606,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-verheiratet-lemma",
-        "assert:lex-verheiratet-meanings"
+        "assert:lex-verheiratet-meanings",
+        "assert:lex-verheiratet-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -3967,6 +4623,12 @@
             "assertionId": "assert:lex-verheiratet-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Ich bin verheiratet.",
+        "translationEn": "I am married.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -4010,6 +4672,7 @@
         ]
       },
       "example": {
+        "origin": "glossary",
         "de": "geschieden sein",
         "translationEn": "to be divorced",
         "sourceRef": {
@@ -4038,7 +4701,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-single-lemma",
-        "assert:lex-single-meanings"
+        "assert:lex-single-meanings",
+        "assert:lex-single-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -4065,6 +4729,12 @@
             "patternIds": []
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Ich bin Single.",
+        "translationEn": "I am single.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -4085,7 +4755,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-allein-lemma",
-        "assert:lex-allein-meanings"
+        "assert:lex-allein-meanings",
+        "assert:lex-allein-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -4101,6 +4772,12 @@
             "assertionId": "assert:lex-allein-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Ich bin allein.",
+        "translationEn": "I am alone.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -4121,7 +4798,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-wohnort-lemma",
-        "assert:lex-wohnort-meanings"
+        "assert:lex-wohnort-meanings",
+        "assert:lex-wohnort-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -4148,6 +4826,12 @@
             "patternIds": []
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Mein Wohnort ist Berlin.",
+        "translationEn": "I live in Berlin.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -4168,7 +4852,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-herkunft-lemma",
-        "assert:lex-herkunft-meanings"
+        "assert:lex-herkunft-meanings",
+        "assert:lex-herkunft-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -4190,6 +4875,13 @@
         "article": "die",
         "singular": "Herkunft",
         "plurals": []
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Meine Herkunft ist Eritrea.",
+        "translationEn": "I am originally from Eritrea.",
+        "reviewState": "pending-german-review",
+        "reviewerNote": "Please check whether this noun-based construction is sufficiently natural for A1; ‘Ich komme aus Eritrea’ is more idiomatic in conversation but does not contain the target noun."
       }
     },
     {
@@ -4210,7 +4902,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-alter-lemma",
-        "assert:lex-alter-meanings"
+        "assert:lex-alter-meanings",
+        "assert:lex-alter-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -4232,6 +4925,13 @@
         "article": "das",
         "singular": "Alter",
         "plurals": []
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Mein Alter ist 30 Jahre.",
+        "translationEn": "I am 30 years old.",
+        "reviewState": "pending-german-review",
+        "reviewerNote": "Please check whether this form-like use sounds natural enough; in ordinary speech, ‘Ich bin 30 Jahre alt’ is more idiomatic but does not contain the target noun."
       }
     },
     {
@@ -4252,7 +4952,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-familienstand-lemma",
-        "assert:lex-familienstand-meanings"
+        "assert:lex-familienstand-meanings",
+        "assert:lex-familienstand-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -4274,6 +4975,13 @@
         "article": "der",
         "singular": "Familienstand",
         "plurals": []
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Mein Familienstand ist verheiratet.",
+        "translationEn": "I am married.",
+        "reviewState": "pending-german-review",
+        "reviewerNote": "Please check this full-sentence use; ‘Familienstand: verheiratet’ is typical on forms, while the version here is deliberately a complete A1 clause."
       }
     },
     {
@@ -4294,7 +5002,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-studium-lemma",
-        "assert:lex-studium-meanings"
+        "assert:lex-studium-meanings",
+        "assert:lex-studium-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -4316,6 +5025,12 @@
         "article": "das",
         "singular": "Studium",
         "plurals": []
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Mein Studium ist super.",
+        "translationEn": "My studies are going great.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -4370,6 +5085,7 @@
         ]
       },
       "example": {
+        "origin": "glossary",
         "de": "von Beruf",
         "translationEn": "by profession",
         "sourceRef": {
@@ -4398,7 +5114,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-job-lemma",
-        "assert:lex-job-meanings"
+        "assert:lex-job-meanings",
+        "assert:lex-job-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -4425,6 +5142,12 @@
             "patternIds": []
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Mein Job ist super.",
+        "translationEn": "My job is great.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -4445,7 +5168,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-stelle-lemma",
-        "assert:lex-stelle-meanings"
+        "assert:lex-stelle-meanings",
+        "assert:lex-stelle-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -4472,6 +5196,12 @@
             "patternIds": []
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Ich habe eine Stelle.",
+        "translationEn": "I have a job.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -4492,7 +5222,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-ausbildung-lemma",
-        "assert:lex-ausbildung-meanings"
+        "assert:lex-ausbildung-meanings",
+        "assert:lex-ausbildung-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -4519,6 +5250,12 @@
             "patternIds": []
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Ich mache eine Ausbildung.",
+        "translationEn": "I'm doing vocational training.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -4539,7 +5276,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-praktikum-lemma",
-        "assert:lex-praktikum-meanings"
+        "assert:lex-praktikum-meanings",
+        "assert:lex-praktikum-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -4566,6 +5304,12 @@
             "patternIds": []
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Ich mache ein Praktikum.",
+        "translationEn": "I am doing an internship.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -4586,7 +5330,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-firma-lemma",
-        "assert:lex-firma-meanings"
+        "assert:lex-firma-meanings",
+        "assert:lex-firma-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -4613,6 +5358,12 @@
             "patternIds": []
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Die Firma heißt Mosaik.",
+        "translationEn": "The company is called Mosaik.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -4645,7 +5396,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-paketzusteller-lemma",
-        "assert:lex-paketzusteller-meanings"
+        "assert:lex-paketzusteller-meanings",
+        "assert:lex-paketzusteller-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -4661,6 +5413,12 @@
             "assertionId": "assert:lex-paketzusteller-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Jan ist Paketzusteller.",
+        "translationEn": "Jan is a parcel deliverer.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -4693,7 +5451,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-paketzustellerin-lemma",
-        "assert:lex-paketzustellerin-meanings"
+        "assert:lex-paketzustellerin-meanings",
+        "assert:lex-paketzustellerin-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -4709,6 +5468,12 @@
             "assertionId": "assert:lex-paketzustellerin-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Mia ist Paketzustellerin.",
+        "translationEn": "Mia is a parcel deliverer.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -4741,7 +5506,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-friseur-lemma",
-        "assert:lex-friseur-meanings"
+        "assert:lex-friseur-meanings",
+        "assert:lex-friseur-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -4757,6 +5523,12 @@
             "assertionId": "assert:lex-friseur-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Ali ist Friseur.",
+        "translationEn": "Ali is a hairdresser.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -4789,7 +5561,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-friseurin-lemma",
-        "assert:lex-friseurin-meanings"
+        "assert:lex-friseurin-meanings",
+        "assert:lex-friseurin-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -4805,6 +5578,12 @@
             "assertionId": "assert:lex-friseurin-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Eva ist Friseurin.",
+        "translationEn": "Eva is a hairdresser.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -4837,7 +5616,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-kellner-lemma",
-        "assert:lex-kellner-meanings"
+        "assert:lex-kellner-meanings",
+        "assert:lex-kellner-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -4853,6 +5633,12 @@
             "assertionId": "assert:lex-kellner-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Lukas ist Kellner.",
+        "translationEn": "Lukas is a waiter.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -4885,7 +5671,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-kellnerin-lemma",
-        "assert:lex-kellnerin-meanings"
+        "assert:lex-kellnerin-meanings",
+        "assert:lex-kellnerin-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -4901,6 +5688,12 @@
             "assertionId": "assert:lex-kellnerin-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Nina ist Kellnerin.",
+        "translationEn": "Nina is a waitress.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -4933,7 +5726,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-ingenieur-lemma",
-        "assert:lex-ingenieur-meanings"
+        "assert:lex-ingenieur-meanings",
+        "assert:lex-ingenieur-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -4949,6 +5743,12 @@
             "assertionId": "assert:lex-ingenieur-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Omar ist Ingenieur.",
+        "translationEn": "Omar is an engineer.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -4981,7 +5781,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-ingenieurin-lemma",
-        "assert:lex-ingenieurin-meanings"
+        "assert:lex-ingenieurin-meanings",
+        "assert:lex-ingenieurin-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -4997,6 +5798,12 @@
             "assertionId": "assert:lex-ingenieurin-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Lea ist Ingenieurin.",
+        "translationEn": "Lea is an engineer.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -5029,7 +5836,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-kfz-mechatroniker-lemma",
-        "assert:lex-kfz-mechatroniker-meanings"
+        "assert:lex-kfz-mechatroniker-meanings",
+        "assert:lex-kfz-mechatroniker-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -5045,6 +5853,12 @@
             "assertionId": "assert:lex-kfz-mechatroniker-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Max ist Kfz-Mechatroniker.",
+        "translationEn": "Max is a car mechatronics technician.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -5077,7 +5891,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-kfz-mechatronikerin-lemma",
-        "assert:lex-kfz-mechatronikerin-meanings"
+        "assert:lex-kfz-mechatronikerin-meanings",
+        "assert:lex-kfz-mechatronikerin-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -5093,6 +5908,12 @@
             "assertionId": "assert:lex-kfz-mechatronikerin-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Lena ist Kfz-Mechatronikerin.",
+        "translationEn": "Lena is a car mechatronics technician.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -5125,7 +5946,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-student-lemma",
-        "assert:lex-student-meanings"
+        "assert:lex-student-meanings",
+        "assert:lex-student-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -5141,6 +5963,12 @@
             "assertionId": "assert:lex-student-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Paul ist Student.",
+        "translationEn": "Paul is a university student.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -5173,7 +6001,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-studentin-lemma",
-        "assert:lex-studentin-meanings"
+        "assert:lex-studentin-meanings",
+        "assert:lex-studentin-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -5189,6 +6018,12 @@
             "assertionId": "assert:lex-studentin-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Anna ist Studentin.",
+        "translationEn": "Anna is a university student.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -5221,7 +6056,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-journalist-lemma",
-        "assert:lex-journalist-meanings"
+        "assert:lex-journalist-meanings",
+        "assert:lex-journalist-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -5237,6 +6073,12 @@
             "assertionId": "assert:lex-journalist-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Ben ist Journalist.",
+        "translationEn": "Ben is a journalist.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -5269,7 +6111,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-journalistin-lemma",
-        "assert:lex-journalistin-meanings"
+        "assert:lex-journalistin-meanings",
+        "assert:lex-journalistin-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -5285,6 +6128,12 @@
             "assertionId": "assert:lex-journalistin-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Sara ist Journalistin.",
+        "translationEn": "Sara is a journalist.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -5365,7 +6214,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-architektin-lemma",
-        "assert:lex-architektin-meanings"
+        "assert:lex-architektin-meanings",
+        "assert:lex-architektin-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -5381,6 +6231,12 @@
             "assertionId": "assert:lex-architektin-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Anna ist Architektin.",
+        "translationEn": "Anna is an architect.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -5413,7 +6269,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-arzt-lemma",
-        "assert:lex-arzt-meanings"
+        "assert:lex-arzt-meanings",
+        "assert:lex-arzt-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -5429,6 +6286,12 @@
             "assertionId": "assert:lex-arzt-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Paul ist Arzt.",
+        "translationEn": "Paul is a doctor.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -5461,7 +6324,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-aerztin-lemma",
-        "assert:lex-aerztin-meanings"
+        "assert:lex-aerztin-meanings",
+        "assert:lex-aerztin-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -5477,6 +6341,12 @@
             "assertionId": "assert:lex-aerztin-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Maria ist Ärztin.",
+        "translationEn": "Maria is a doctor.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -5509,7 +6379,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-lehrer-lemma",
-        "assert:lex-lehrer-meanings"
+        "assert:lex-lehrer-meanings",
+        "assert:lex-lehrer-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -5525,6 +6396,12 @@
             "assertionId": "assert:lex-lehrer-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Herr Koch ist Lehrer.",
+        "translationEn": "Mr Koch is a teacher.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -5557,7 +6434,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-lehrerin-lemma",
-        "assert:lex-lehrerin-meanings"
+        "assert:lex-lehrerin-meanings",
+        "assert:lex-lehrerin-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -5573,6 +6451,12 @@
             "assertionId": "assert:lex-lehrerin-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Frau Klein ist Lehrerin.",
+        "translationEn": "Mrs Klein is a teacher.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -5605,7 +6489,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-verkaeufer-lemma",
-        "assert:lex-verkaeufer-meanings"
+        "assert:lex-verkaeufer-meanings",
+        "assert:lex-verkaeufer-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -5621,6 +6506,12 @@
             "assertionId": "assert:lex-verkaeufer-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Felix ist Verkäufer.",
+        "translationEn": "Felix is a sales assistant.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -5653,7 +6544,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-verkaeuferin-lemma",
-        "assert:lex-verkaeuferin-meanings"
+        "assert:lex-verkaeuferin-meanings",
+        "assert:lex-verkaeuferin-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -5669,6 +6561,12 @@
             "assertionId": "assert:lex-verkaeuferin-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Sofia ist Verkäuferin.",
+        "translationEn": "Sofia is a sales assistant.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -5701,7 +6599,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-schueler-lemma",
-        "assert:lex-schueler-meanings"
+        "assert:lex-schueler-meanings",
+        "assert:lex-schueler-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -5717,6 +6616,12 @@
             "assertionId": "assert:lex-schueler-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Tom ist Schüler.",
+        "translationEn": "Tom is a pupil.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -5749,7 +6654,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-schuelerin-lemma",
-        "assert:lex-schuelerin-meanings"
+        "assert:lex-schuelerin-meanings",
+        "assert:lex-schuelerin-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -5765,6 +6671,12 @@
             "assertionId": "assert:lex-schuelerin-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Mia ist Schülerin.",
+        "translationEn": "Mia is a pupil.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -5797,7 +6709,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-rentner-lemma",
-        "assert:lex-rentner-meanings"
+        "assert:lex-rentner-meanings",
+        "assert:lex-rentner-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -5813,6 +6726,12 @@
             "assertionId": "assert:lex-rentner-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Herr Weber ist Rentner.",
+        "translationEn": "Mr Weber is retired.",
+        "reviewState": "pending-german-review"
       }
     },
     {
@@ -5845,7 +6764,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-rentnerin-lemma",
-        "assert:lex-rentnerin-meanings"
+        "assert:lex-rentnerin-meanings",
+        "assert:lex-rentnerin-app-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -5861,6 +6781,12 @@
             "assertionId": "assert:lex-rentnerin-meanings"
           }
         ]
+      },
+      "example": {
+        "origin": "app-authored",
+        "de": "Frau Wolf ist Rentnerin.",
+        "translationEn": "Mrs Wolf is retired.",
+        "reviewState": "pending-german-review"
       }
     }
   ],
@@ -8655,6 +9581,348 @@
     }
   ],
   "contentGaps": [
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-verheiratet-german-review",
+      "objectId": "lex:verheiratet",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-single-german-review",
+      "objectId": "lex:single",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-allein-german-review",
+      "objectId": "lex:allein",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-wohnort-german-review",
+      "objectId": "lex:wohnort",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-herkunft-german-review",
+      "objectId": "lex:herkunft",
+      "field": "example",
+      "reason": "App-authored example awaits German review; author flagged: Please check whether this noun-based construction is sufficiently natural for A1; ‘Ich komme aus Eritrea’ is more idiomatic in conversation but does not contain the target noun.",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-alter-german-review",
+      "objectId": "lex:alter",
+      "field": "example",
+      "reason": "App-authored example awaits German review; author flagged: Please check whether this form-like use sounds natural enough; in ordinary speech, ‘Ich bin 30 Jahre alt’ is more idiomatic but does not contain the target noun.",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-familienstand-german-review",
+      "objectId": "lex:familienstand",
+      "field": "example",
+      "reason": "App-authored example awaits German review; author flagged: Please check this full-sentence use; ‘Familienstand: verheiratet’ is typical on forms, while the version here is deliberately a complete A1 clause.",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-studium-german-review",
+      "objectId": "lex:studium",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-job-german-review",
+      "objectId": "lex:job",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-stelle-german-review",
+      "objectId": "lex:stelle",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-ausbildung-german-review",
+      "objectId": "lex:ausbildung",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-praktikum-german-review",
+      "objectId": "lex:praktikum",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-firma-german-review",
+      "objectId": "lex:firma",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-paketzusteller-german-review",
+      "objectId": "lex:paketzusteller",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-paketzustellerin-german-review",
+      "objectId": "lex:paketzustellerin",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-friseur-german-review",
+      "objectId": "lex:friseur",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-friseurin-german-review",
+      "objectId": "lex:friseurin",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-kellner-german-review",
+      "objectId": "lex:kellner",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-kellnerin-german-review",
+      "objectId": "lex:kellnerin",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-ingenieur-german-review",
+      "objectId": "lex:ingenieur",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-ingenieurin-german-review",
+      "objectId": "lex:ingenieurin",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-kfz-mechatroniker-german-review",
+      "objectId": "lex:kfz-mechatroniker",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-kfz-mechatronikerin-german-review",
+      "objectId": "lex:kfz-mechatronikerin",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-student-german-review",
+      "objectId": "lex:student",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-studentin-german-review",
+      "objectId": "lex:studentin",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-journalist-german-review",
+      "objectId": "lex:journalist",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-journalistin-german-review",
+      "objectId": "lex:journalistin",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-architektin-german-review",
+      "objectId": "lex:architektin",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-arzt-german-review",
+      "objectId": "lex:arzt",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-aerztin-german-review",
+      "objectId": "lex:aerztin",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-lehrer-german-review",
+      "objectId": "lex:lehrer",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-lehrerin-german-review",
+      "objectId": "lex:lehrerin",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-verkaeufer-german-review",
+      "objectId": "lex:verkaeufer",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-verkaeuferin-german-review",
+      "objectId": "lex:verkaeuferin",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-schueler-german-review",
+      "objectId": "lex:schueler",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-schuelerin-german-review",
+      "objectId": "lex:schuelerin",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-rentner-german-review",
+      "objectId": "lex:rentner",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
+    {
+      "kind": "ContentGap",
+      "id": "gap:example-rentnerin-german-review",
+      "objectId": "lex:rentnerin",
+      "field": "example",
+      "reason": "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+      "owner": "owner-review",
+      "blocksPublication": false
+    },
     {
       "kind": "ContentGap",
       "id": "gap:qa-variable-age",

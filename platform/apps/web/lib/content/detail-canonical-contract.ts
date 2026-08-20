@@ -16,6 +16,21 @@ import {
 export const DETAIL_PLURAL_GAP_MESSAGE =
   "The plural form is not available yet." as const;
 
+/**
+ * The line under an example sentence the app wrote itself.
+ *
+ * It has to do two things at once: never let the sentence be mistaken for
+ * course material, and stay readable to someone whose English is their second
+ * or third language. So it says plainly who wrote the sentence and what has
+ * not happened to it yet — no hedge words, no process vocabulary, and
+ * deliberately no book title, because there is no book behind it.
+ */
+export const DETAIL_APP_AUTHORED_EXAMPLE_NOTE =
+  "We wrote this sentence for the app. A German speaker still needs to check it." as const;
+
+/** Prefix for an example quoted from a book, completed by title and page. */
+export const DETAIL_SOURCED_EXAMPLE_PREFIX = "From " as const;
+
 export const DETAIL_VERB_PARADIGM_NOTE =
   "This paradigm is irregular and must be learned as forms." as const;
 

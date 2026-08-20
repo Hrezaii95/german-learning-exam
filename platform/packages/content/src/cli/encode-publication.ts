@@ -83,8 +83,16 @@ type AlphaGlossaryExample = {
   documentTitle: string;
 };
 
+type AlphaAppAuthoredExample = {
+  lemma: string;
+  de: string;
+  en: string;
+  reviewerNote?: string;
+};
+
 type AlphaContent = {
   glossaryExamples?: AlphaGlossaryExample[];
+  appAuthoredExamples?: AlphaAppAuthoredExample[];
   lessons: Array<{
     id: string;
     number: number;
@@ -268,6 +276,17 @@ const CORE_OWNED_LEX_SLUGS = new Set<string>();
 const GLOSSARY_EXAMPLES = new Map<string, AlphaGlossaryExample>();
 /** Lexeme ids that actually received their authored example this run. */
 const ATTACHED_EXAMPLE_IDS = new Set<string>();
+/** App-written examples, keyed by article-stripped lowercase lemma. */
+const APP_AUTHORED_EXAMPLES = new Map<string, AlphaAppAuthoredExample>();
+/** Lemma keys whose app-written example actually reached a lexeme this run. */
+const ATTACHED_APP_AUTHORED_KEYS = new Set<string>();
+/** Lemma keys deliberately dropped because the lexeme has a glossary quote. */
+const SUPERSEDED_APP_AUTHORED_KEYS = new Set<string>();
+
+/** Article-stripped, case-folded lemma — the key both sides of the join use. */
+function lemmaKey(lemma: string): string {
+  return lemma.normalize("NFC").replace(/^(der|die|das)\s+/iu, "").trim().toLowerCase();
+}
 
 function loadGlossaryExamples(alpha: AlphaContent): void {
   GLOSSARY_EXAMPLES.clear();
@@ -280,19 +299,45 @@ function loadGlossaryExamples(alpha: AlphaContent): void {
   }
 }
 
+function loadAppAuthoredExamples(alpha: AlphaContent): void {
+  APP_AUTHORED_EXAMPLES.clear();
+  ATTACHED_APP_AUTHORED_KEYS.clear();
+  SUPERSEDED_APP_AUTHORED_KEYS.clear();
+  for (const item of alpha.appAuthoredExamples ?? []) {
+    const key = lemmaKey(item.lemma);
+    if (APP_AUTHORED_EXAMPLES.has(key)) {
+      throw new Error(`Duplicate app-authored example for lemma ${item.lemma}`);
+    }
+    APP_AUTHORED_EXAMPLES.set(key, item);
+  }
+}
+
 /**
- * Attaches the transcribed usage example for this lexeme when the sources
- * printed one, together with the verified assertion that makes it traceable
- * back to a document and page. A lexeme with no source example is left exactly
- * as it was — no empty field, no placeholder value.
+ * Attaches whichever usage example this lexeme is entitled to.
+ *
+ * A transcribed glossary quote always wins: it is evidence, and evidence
+ * outranks anything the app wrote about the same word. Only when the sources
+ * print nothing does an app-authored sentence get the slot — and it is stored
+ * as what it is, never dressed up as a quotation. A lexeme entitled to neither
+ * is left exactly as it was: no empty field, no placeholder value.
  */
-function attachGlossaryExample(lex: Lexeme, assertions: SourceAssertion[]): void {
+function attachLexemeExample(
+  lex: Lexeme,
+  assertions: SourceAssertion[],
+  gaps: ContentGap[],
+): void {
+  if (attachGlossaryExample(lex, assertions)) return;
+  attachAppAuthoredExample(lex, assertions, gaps);
+}
+
+function attachGlossaryExample(lex: Lexeme, assertions: SourceAssertion[]): boolean {
   const authored = GLOSSARY_EXAMPLES.get(lex.id);
-  if (!authored) return;
+  if (!authored) return false;
   if (lex.publication.status !== "published") {
     throw new Error(`Glossary example authored for unpublished lexeme ${lex.id}`);
   }
   const example: LexemeExample = {
+    origin: "glossary",
     de: authored.de,
     translationEn: authored.en,
     sourceRef: {
@@ -326,6 +371,69 @@ function attachGlossaryExample(lex: Lexeme, assertions: SourceAssertion[]): void
     { field: "example", assertionId: exampleAssert.id },
   ];
   ATTACHED_EXAMPLE_IDS.add(lex.id);
+  // The same lemma may also have an app-written sentence queued. It loses, and
+  // is recorded as superseded so the end-of-run tally does not read it as lost.
+  const key = lemmaKey(lex.lemma);
+  if (APP_AUTHORED_EXAMPLES.has(key)) SUPERSEDED_APP_AUTHORED_KEYS.add(key);
+  return true;
+}
+
+/**
+ * Attaches the app-written sentence for this lexeme.
+ *
+ * Deliberately unlike its glossary sibling in three ways, all of them the
+ * point: the stored example carries no `sourceRef`, its assertion points at
+ * the app's own authoring pass rather than at Momente, and that assertion stays
+ * `candidate` — so it can never be declared a published source field. The
+ * matching non-blocking gap turns "waiting for a German speaker" into a
+ * countable worklist instead of a promise.
+ */
+function attachAppAuthoredExample(
+  lex: Lexeme,
+  assertions: SourceAssertion[],
+  gaps: ContentGap[],
+): void {
+  const key = lemmaKey(lex.lemma);
+  const authored = APP_AUTHORED_EXAMPLES.get(key);
+  if (!authored) return;
+  if (lex.publication.status !== "published") return;
+  if (ATTACHED_APP_AUTHORED_KEYS.has(key)) {
+    throw new Error(`App-authored example for ${authored.lemma} matched more than one lexeme`);
+  }
+  const example: LexemeExample = {
+    origin: "app-authored",
+    de: authored.de,
+    translationEn: authored.en,
+    reviewState: "pending-german-review",
+    ...(authored.reviewerNote ? { reviewerNote: authored.reviewerNote } : {}),
+  };
+  const exampleAssert = assertion({
+    id: `assert:${lex.id.replace(":", "-")}-app-example` as `assert:${string}`,
+    sourceId: "source:app-authored-examples",
+    subjectId: lex.id,
+    field: "example",
+    value: example,
+    // Candidate, never verified: nobody qualified has read this German yet, and
+    // a "verified" here is exactly how unchecked wording would gain authority.
+    status: "candidate",
+    extraction: "generated",
+    confidence: authored.reviewerNote ? 0.5 : 0.7,
+  });
+  assertions.push(exampleAssert);
+  lex.example = example;
+  lex.sourceAssertionIds = [...lex.sourceAssertionIds, exampleAssert.id];
+  gaps.push({
+    kind: "ContentGap",
+    id: `gap:example-${lex.id.slice(4)}-german-review` as `gap:${string}`,
+    objectId: lex.id,
+    field: "example",
+    reason: authored.reviewerNote
+      ? `App-authored example awaits German review; author flagged: ${authored.reviewerNote}`
+      : "App-authored example awaits German review; shown to learners as unchecked, never as source material",
+    owner: "owner-review",
+    blocksPublication: false,
+  });
+  ATTACHED_APP_AUTHORED_KEYS.add(key);
 }
 
 function loadJson<T>(abs: string): T {
@@ -362,6 +470,19 @@ function buildSharedSources(): Source[] {
       language: "en",
       priority: 1,
       originalPath: "resources/original",
+      cefrBand: "A1.1",
+    },
+    {
+      // Not a document, and named so it can never be mistaken for one: the app
+      // is the origin of these sentences, and the assertions pointing here stay
+      // `candidate` until a qualified German speaker has read them.
+      kind: "Source",
+      id: "source:app-authored-examples",
+      title: "App-authored example sentences (awaiting German review)",
+      sourceKind: "other",
+      language: "de",
+      priority: 4,
+      originalPath: "media/generated/authored-examples-v1/examples.json",
       cefrBand: "A1.1",
     },
     {
@@ -519,6 +640,7 @@ function buildLesson01(alpha: AlphaContent): ContentFragment {
       "source:coursebook-momente-a11",
       "source:workbook-momente-a11",
       "source:content-spec-lessons-01-02",
+      "source:app-authored-examples",
     ].includes(s.id),
   );
 
@@ -697,7 +819,7 @@ function buildLesson01(alpha: AlphaContent): ContentFragment {
           : [],
       };
     }
-    attachGlossaryExample(lex, sourceAssertions);
+    attachLexemeExample(lex, sourceAssertions, contentGaps);
     lexemes.push(lex);
     contentGaps.push({
       kind: "ContentGap",
@@ -1179,7 +1301,7 @@ function buildLesson02(alpha: AlphaContent): ContentFragment {
           : [],
       };
     }
-    attachGlossaryExample(lex, sourceAssertions);
+    attachLexemeExample(lex, sourceAssertions, contentGaps);
     lexemes.push(lex);
   }
 
@@ -1263,7 +1385,7 @@ function buildLesson02(alpha: AlphaContent): ContentFragment {
           { field: "meanings", assertionId: meaningsAssert.id },
         ]),
       };
-      attachGlossaryExample(professionLex, sourceAssertions);
+      attachLexemeExample(professionLex, sourceAssertions, contentGaps);
       lexemes.push(professionLex);
     }
     relationships.push({
@@ -2137,6 +2259,7 @@ function main(): void {
   mkdirSync(PUBLISHED_DIR, { recursive: true });
   writeAuthorityProjection(audioMap);
   loadGlossaryExamples(alpha);
+  loadAppAuthoredExamples(alpha);
 
   // Lesson 2 must run before teacher fragment so CORE_OWNED_LEX_SLUGS is populated.
   const lesson01 = buildLesson01(alpha);
@@ -2156,6 +2279,20 @@ function main(): void {
     );
   }
 
+  // Same discipline for the app-written sentences: every one either reached a
+  // lexeme or lost its slot to a glossary quote. Anything else is a sentence
+  // that vanished between the authoring file and the package, and a silent
+  // drop is exactly what an id-set diff exists to catch.
+  const droppedAppAuthored = [...APP_AUTHORED_EXAMPLES.keys()].filter(
+    (key) =>
+      !ATTACHED_APP_AUTHORED_KEYS.has(key) && !SUPERSEDED_APP_AUTHORED_KEYS.has(key),
+  );
+  if (droppedAppAuthored.length > 0) {
+    throw new Error(
+      `App-authored examples matched no published lexeme: ${droppedAppAuthored.join(", ")}`,
+    );
+  }
+
   const fragments: Array<[string, ContentFragment]> = [
     ["lesson-01.json", lesson01],
     ["lesson-02.json", lesson02],
@@ -2170,6 +2307,10 @@ function main(): void {
   }
   console.log(
     `Attached ${ATTACHED_EXAMPLE_IDS.size}/${GLOSSARY_EXAMPLES.size} transcribed glossary examples`,
+  );
+  console.log(
+    `Attached ${ATTACHED_APP_AUTHORED_KEYS.size}/${APP_AUTHORED_EXAMPLES.size} app-authored examples awaiting German review` +
+      ` (${SUPERSEDED_APP_AUTHORED_KEYS.size} superseded by a glossary quote: ${[...SUPERSEDED_APP_AUTHORED_KEYS].sort().join(", ")})`,
   );
   console.log(`PUBLISHED_DIR=${PUBLISHED_DIR}`);
 }

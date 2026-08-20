@@ -2,6 +2,7 @@ import type { ContentBundle } from "../types/bundle.js";
 import type { PublicationState } from "../types/common.js";
 import { issue, type ValidationIssue } from "./errors.js";
 import {
+  forbiddenPublishedFieldsFor,
   isPublishableKind,
   requiredPublishedFieldsFor,
   type PublishableKind,
@@ -125,10 +126,8 @@ export function validatePublishedAssertions(bundle: ContentBundle): ValidationIs
     }
 
     if (isPublishableKind(obj.kind)) {
-      const required = requiredPublishedFieldsFor(
-        obj.kind as PublishableKind,
-        obj as unknown as Record<string, unknown>,
-      );
+      const entity = obj as unknown as Record<string, unknown>;
+      const required = requiredPublishedFieldsFor(obj.kind as PublishableKind, entity);
       for (const field of required) {
         if (!declared.has(field)) {
           issues.push(
@@ -136,6 +135,21 @@ export function validatePublishedAssertions(bundle: ContentBundle): ValidationIs
               "PUBLISHED_ASSERTION_MISSING",
               `Published object missing required published field mapping`,
               { objectId: obj.id, field },
+            ),
+          );
+        }
+      }
+      // The other direction matters just as much: a field with no source must
+      // never be declared as source-backed, or unreviewed app wording inherits
+      // the authority of a verified quotation.
+      for (const field of forbiddenPublishedFieldsFor(obj.kind as PublishableKind, entity)) {
+        const assertionId = declared.get(field);
+        if (assertionId !== undefined) {
+          issues.push(
+            issue(
+              "PUBLISHED_ASSERTION_MISMATCH",
+              `Field has no source and must not be declared as a published field`,
+              { objectId: obj.id, field, assertionId },
             ),
           );
         }

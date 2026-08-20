@@ -5,13 +5,13 @@
     "image": 69,
     "lemmaAudio": 69,
     "pluralAudio": 0,
-    "example": 6
+    "example": 68
   },
   "missingCounts": {
     "image": 0,
     "lemmaAudio": 0,
     "pluralAudio": 41,
-    "example": 63
+    "example": 1
   },
   "missing": {
     "image": [],
@@ -60,69 +60,7 @@
       "lex:wohnort"
     ],
     "example": [
-      "lex:aerztin",
-      "lex:allein",
-      "lex:alter",
-      "lex:architekt",
-      "lex:architektin",
-      "lex:arzt",
-      "lex:auch-super",
-      "lex:auf-wiedersehen",
-      "lex:ausbildung",
-      "lex:deutschland",
-      "lex:eritrea",
-      "lex:es-geht",
-      "lex:familienname",
-      "lex:familienstand",
-      "lex:firma",
-      "lex:frankreich",
-      "lex:frau",
-      "lex:friseur",
-      "lex:friseurin",
-      "lex:gut-danke",
-      "lex:gute-nacht",
-      "lex:guten-abend",
-      "lex:guten-morgen",
-      "lex:guten-tag",
-      "lex:hallo",
-      "lex:herkunft",
-      "lex:herr",
-      "lex:ingenieur",
-      "lex:ingenieurin",
-      "lex:job",
-      "lex:journalist",
-      "lex:journalistin",
-      "lex:kellner",
-      "lex:kellnerin",
-      "lex:kfz-mechatroniker",
-      "lex:kfz-mechatronikerin",
-      "lex:lehrer",
-      "lex:lehrerin",
-      "lex:nicht-so-gut",
-      "lex:oesterreich",
-      "lex:paketzusteller",
-      "lex:paketzustellerin",
-      "lex:praktikum",
-      "lex:rentner",
-      "lex:rentnerin",
-      "lex:schueler",
-      "lex:schuelerin",
-      "lex:sehr-gut-danke",
-      "lex:single",
-      "lex:spanien",
-      "lex:stelle",
-      "lex:student",
-      "lex:studentin",
-      "lex:studium",
-      "lex:super",
-      "lex:tschues",
-      "lex:tuerkei",
-      "lex:usa",
-      "lex:verheiratet",
-      "lex:verkaeufer",
-      "lex:verkaeuferin",
-      "lex:vorname",
-      "lex:wohnort"
+      "lex:architekt"
     ]
   },
   "rows": [
@@ -143,7 +81,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -161,7 +99,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -179,7 +117,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -219,7 +157,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -239,7 +177,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -257,7 +195,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -275,7 +213,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -295,7 +233,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -333,7 +271,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -351,7 +289,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -369,7 +307,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -389,7 +327,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -407,7 +345,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -427,7 +365,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -445,7 +383,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -465,7 +403,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -485,7 +423,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -505,7 +443,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -541,7 +479,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -559,7 +497,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -577,7 +515,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -595,7 +533,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -613,7 +551,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -631,7 +569,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -649,7 +587,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -669,7 +607,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -689,7 +627,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -709,7 +647,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -749,7 +687,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -769,7 +707,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -789,7 +727,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -809,7 +747,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -829,7 +767,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -849,7 +787,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -869,7 +807,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -909,7 +847,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -929,7 +867,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -967,7 +905,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -985,7 +923,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -1005,7 +943,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -1025,7 +963,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -1045,7 +983,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -1065,7 +1003,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -1085,7 +1023,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -1105,7 +1043,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -1125,7 +1063,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -1161,7 +1099,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -1181,7 +1119,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -1199,7 +1137,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -1219,7 +1157,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -1239,7 +1177,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -1259,7 +1197,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -1277,7 +1215,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -1295,7 +1233,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -1313,7 +1251,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -1331,7 +1269,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -1349,7 +1287,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -1367,7 +1305,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -1387,7 +1325,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -1407,7 +1345,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -1427,7 +1365,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     },
     {
@@ -1447,7 +1385,7 @@
         "image": true,
         "lemmaAudio": true,
         "pluralAudio": false,
-        "example": false
+        "example": true
       }
     }
   ]

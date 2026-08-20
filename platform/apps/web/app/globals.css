@@ -1716,11 +1716,17 @@ a:hover {
   font-size: 1.25rem;
 }
 
-/* Vocabulary example — a quoted line from the course material, so it reads as
-   a quotation rather than app copy: German dominant on the reading line, the
-   book's own English directly beneath it, and a quiet brand rule down the left
-   marking the whole block as borrowed text. Measured on `--surface-muted`:
-   `--ink` 15.66:1, `--ink-muted` 6.27:1 — both clear WCAG 1.4.3 AA. */
+/* Vocabulary example — German dominant on the reading line, English directly
+   beneath it, and a rule down the left marking the whole block as a sentence
+   rather than app copy. Measured on `--surface-muted`: `--ink` 15.66:1,
+   `--ink-muted` 6.27:1 — both clear WCAG 1.4.3 AA.
+
+   The left rule carries the one distinction that matters here. A brand rule
+   means the line is borrowed from the course material; the dashed amber rule
+   below means we wrote it and a German speaker has not checked it yet. The
+   colour never carries that meaning alone — the line under the sentence says
+   it in words, and the border style differs as well as the hue, so the
+   distinction survives both colour-blindness and a greyscale print. */
 .vocab-example {
   margin: 0;
   padding: var(--space-4) var(--space-4) var(--space-4) var(--space-5);
@@ -1744,8 +1750,13 @@ a:hover {
   line-height: 1.4;
 }
 
-.vocab-example__source {
+.vocab-example__provenance {
   margin: var(--space-3) 0 0;
+}
+
+[data-example-origin="app-authored"] .vocab-example {
+  border-left-style: dashed;
+  border-left-color: color-mix(in srgb, var(--rule-special) 70%, var(--border));
 }
 
 .person-form-infographic {

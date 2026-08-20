@@ -332,9 +332,18 @@ function checkAnswerSpec(
 
 /** Emit a stable element-level issue for null/non-object array members; never throw. */
 /**
- * A lexeme usage example must be a verbatim source quote that can be traced
- * back to a page: German, that source's own English, and the document + page.
- * Anything partial is rejected rather than shipped as an untraceable example.
+ * A lexeme usage example is one of exactly two kinds, and the kind is declared,
+ * never inferred:
+ *
+ *  - `origin: "glossary"` is a verbatim source quote and must be traceable back
+ *    to a page — document, page, and the source's own English. Missing the
+ *    reference is rejected rather than shipped as an untraceable quotation.
+ *  - `origin: "app-authored"` was written for this app and must NOT claim a
+ *    source reference. It carries a review state instead, because no qualified
+ *    German speaker has checked it. A `sourceRef` here would let model-written
+ *    German masquerade as coursebook material, so it is a hard error.
+ *
+ * Anything partial, or with no declared origin at all, is rejected.
  */
 function checkLexemeExample(
   issues: ValidationIssue[],
@@ -354,6 +363,40 @@ function checkLexemeExample(
   requireString(issues, objectId, "example.translationEn", example.translationEn);
   rejectHtml(issues, objectId, "example.translationEn", example.translationEn);
 
+  const origin = example.origin;
+  if (origin === "app-authored") {
+    checkAppAuthoredExample(issues, objectId, example);
+    return;
+  }
+  if (origin === "glossary") {
+    checkGlossaryExample(issues, objectId, example);
+    return;
+  }
+  issues.push(
+    issue("INVALID_DISCRIMINANT", `example.origin must be "glossary" or "app-authored"`, {
+      objectId,
+      field: "example.origin",
+    }),
+  );
+}
+
+/** A quoted example is only a quotation if it names the page it was read from. */
+function checkGlossaryExample(
+  issues: ValidationIssue[],
+  objectId: string,
+  example: Record<string, unknown>,
+): void {
+  for (const forbidden of ["reviewState", "reviewerNote"] as const) {
+    if (forbidden in example) {
+      issues.push(
+        issue(
+          "INVALID_TYPE",
+          `example.${forbidden} is only meaningful on an app-authored example`,
+          { objectId, field: `example.${forbidden}` },
+        ),
+      );
+    }
+  }
   const ref = example.sourceRef;
   if (ref == null || typeof ref !== "object" || Array.isArray(ref)) {
     issues.push(
@@ -383,6 +426,39 @@ function checkLexemeExample(
   if ("exercise" in sourceRef) {
     requireString(issues, objectId, "example.sourceRef.exercise", sourceRef.exercise);
     rejectHtml(issues, objectId, "example.sourceRef.exercise", sourceRef.exercise);
+  }
+}
+
+/**
+ * A sentence the app wrote has no page. Claiming one is the exact failure this
+ * discriminator exists to prevent, so it is rejected before anything else.
+ */
+function checkAppAuthoredExample(
+  issues: ValidationIssue[],
+  objectId: string,
+  example: Record<string, unknown>,
+): void {
+  if ("sourceRef" in example) {
+    issues.push(
+      issue(
+        "PUBLISHED_ASSERTION_MISMATCH",
+        `An app-authored example must not claim a source reference`,
+        { objectId, field: "example.sourceRef" },
+      ),
+    );
+  }
+  if (example.reviewState !== "pending-german-review") {
+    issues.push(
+      issue(
+        "REQUIRED_FIELD",
+        `example.reviewState must be "pending-german-review"`,
+        { objectId, field: "example.reviewState" },
+      ),
+    );
+  }
+  if ("reviewerNote" in example) {
+    requireString(issues, objectId, "example.reviewerNote", example.reviewerNote);
+    rejectHtml(issues, objectId, "example.reviewerNote", example.reviewerNote);
   }
 }
 

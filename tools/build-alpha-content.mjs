@@ -2,6 +2,7 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 
 const sourceNote = resolve("resources/original/learner-notes/Notes_260730_040559.txt");
+const authoredExamplesFile = resolve("media/generated/authored-examples-v1/examples.json");
 const output = resolve("content/alpha-content.json");
 
 const slug = (value) => value.normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/ß/g, "ss").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
@@ -133,6 +134,46 @@ if (new Set(glossaryExamples.map((item) => item.lexemeId)).size !== glossaryExam
   throw new Error("Each lexeme may carry at most one transcribed glossary example.");
 }
 
+// Example sentences WRITTEN FOR THIS APP — the opposite provenance to the block
+// above. Nothing here is quoted from Momente or any other source, no page can
+// be cited for it, and no qualified German speaker has checked it yet. The
+// encoder therefore stores them with origin "app-authored" and the review state
+// that says so, and the vocabulary page tells the learner the same thing.
+//
+// The lemma is carried, not a lexeme id: id slugs are the encoder's business
+// (Ärztin → lex:aerztin), and duplicating that rule here is how the two would
+// drift apart. Where a lemma also has a transcribed glossary example the
+// glossary keeps it — a quotation always outranks a sentence we wrote.
+const authoredLemmaKey = (value) => value.normalize("NFC").replace(/^(der|die|das)\s+/i, "").trim().toLowerCase();
+const rawAuthoredExamples = JSON.parse(await readFile(authoredExamplesFile, "utf8"));
+if (!Array.isArray(rawAuthoredExamples) || rawAuthoredExamples.length === 0) {
+  throw new Error(`${authoredExamplesFile} must hold a non-empty array of authored examples.`);
+}
+const appAuthoredExamples = rawAuthoredExamples.map((item, index) => {
+  for (const field of ["lemma", "de", "en", "confidence"]) {
+    if (typeof item?.[field] !== "string" || item[field].trim().length === 0) {
+      throw new Error(`Authored example ${index} is missing a usable "${field}".`);
+    }
+  }
+  if (item.confidence !== "high" && item.confidence !== "check") {
+    throw new Error(`Authored example ${index} (${item.lemma}) has unknown confidence "${item.confidence}".`);
+  }
+  // A "check" flag is a question for the reviewer, so it must arrive with the
+  // question attached — a flag with no note tells the reviewer nothing.
+  if (item.confidence === "check" && (typeof item.note !== "string" || item.note.trim().length === 0)) {
+    throw new Error(`Authored example ${index} (${item.lemma}) is flagged for checking but carries no note.`);
+  }
+  return {
+    lemma: item.lemma,
+    de: item.de,
+    en: item.en,
+    ...(typeof item.note === "string" && item.note.trim().length > 0 ? { reviewerNote: item.note.trim() } : {}),
+  };
+});
+if (new Set(appAuthoredExamples.map((item) => authoredLemmaKey(item.lemma))).size !== appAuthoredExamples.length) {
+  throw new Error("Each lemma may carry at most one app-authored example.");
+}
+
 const teacherProfessions = parseTeacherProfessions(await readFile(sourceNote, "utf8")).map((item) => ({ id: `teacher-job:${slug(item.alternatives.masculine[0])}`, ...item, priority: 3, lessonIds: ["lesson:02"], sourceId: "src:learner-note:professions", validationStatus: "candidate-needs-german-review" }));
 if (teacherProfessions.length !== 48) throw new Error(`Expected 48 teacher jobs, found ${teacherProfessions.length}.`);
 
@@ -143,10 +184,11 @@ const content = {
   sourcePriority: { 1: "official glossary/core", 2: "coursebook/workbook context", 3: "teacher assigned", 4: "personal enrichment" },
   lessons: [lesson1, lesson2],
   glossaryExamples,
+  appAuthoredExamples,
   collections: [{ id: "collection:teacher-professions", titleDe: "Berufe — Lehrermaterial", titleEn: "Teacher professions", lessonIds: ["lesson:02"], priority: 3, memberIds: teacherProfessions.map((item) => item.id) }],
   teacherProfessions,
 };
 
 await mkdir(dirname(output), { recursive: true });
 await writeFile(output, `${JSON.stringify(content, null, 2)}\n`);
-console.log(`Built Lessons 1–2 content with ${teacherProfessions.length} teacher jobs and ${glossaryExamples.length} transcribed glossary examples into ${output}.`);
+console.log(`Built Lessons 1–2 content with ${teacherProfessions.length} teacher jobs, ${glossaryExamples.length} transcribed glossary examples and ${appAuthoredExamples.length} app-authored examples awaiting German review into ${output}.`);
