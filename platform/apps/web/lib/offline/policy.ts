@@ -234,6 +234,16 @@ export function stampServiceWorker(
  * ------------------------------------------------------------------------ */
 
 /**
+ * Top-level routes that exist but are not part of the learner's app.
+ *
+ * They are exported (they are real pages) and they are cached on use like any
+ * other route, but they never join the install-time shell.
+ */
+const NON_LEARNER_TOP_LEVEL_ROUTES: readonly string[] = Object.freeze([
+  "review-audio",
+]);
+
+/**
  * True for the navigation surfaces a learner can reach from anywhere, plus the
  * two lesson pages and the 404 page.
  *
@@ -252,7 +262,15 @@ export function isShellHtmlRoute(relPath: string): boolean {
   if (parts[parts.length - 1] !== "index.html") return false;
   const segments = parts.slice(0, -1);
   // A single segment is a top-level route: /vocabulary/, /search/, /settings/…
-  if (segments.length === 1) return true;
+  if (segments.length === 1) {
+    // …except the ones that are not learner navigation at all. The
+    // pronunciation listening check is a reviewer's instrument reachable only
+    // by typing its address; it is also the single largest page in the export
+    // (110 audio players). Precaching it would put a tool no learner opens
+    // into every learner's install, and make the shell version churn on work
+    // that has nothing to do with the course.
+    return !NON_LEARNER_TOP_LEVEL_ROUTES.includes(segments[0] as string);
+  }
   // The two lesson pages sit one level deeper and are the app's front door
   // into the course itself.
   return segments.length === 2 && segments[0] === "lessons";

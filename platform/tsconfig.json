@@ -70,6 +70,7 @@
     "tests/web/pronunciation-control-behavior.test.ts",
     "tests/web/lesson-label-ui.test.ts",
     "tests/web/p6-a11y-remediation-behavior.test.ts",
-    "tests/web/vocabulary-examples-ui.test.ts"
+    "tests/web/vocabulary-examples-ui.test.ts",
+    "tests/web/pronunciation-review-ui.test.ts"
   ]
 }

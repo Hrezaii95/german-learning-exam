@@ -3458,3 +3458,529 @@ a:hover {
   gap: var(--space-2);
   margin-top: var(--space-4);
 }
+
+/* ---------------------------------------------------------------------------
+   Pronunciation listening check (/review-audio)
+
+   A workbench, not a learner surface. It sits outside the app shell — no rail,
+   no bottom bar — because the person using it is doing one job for an hour and
+   every pixel of chrome is a pixel not spent on German.
+
+   The composition breaks the product's card grid on purpose: a sticky control
+   column on wide screens holds the filters still while the clip column scrolls
+   past it, so "which sound am I on, how many left" is answerable without
+   scrolling back. Each clip card is an editorial block — German at display
+   scale, and a hairline rule that takes on the colour of the verdict.
+   --------------------------------------------------------------------------- */
+.review-audio {
+  /* The morphology palette already means "regular / watch this / irregular"
+     across the product, so the three verdicts borrow it rather than inventing
+     a fourth colour language. These are used as rules and outlines only — the
+     verdict itself is carried by a real checked radio and its visible label,
+     never by colour alone — but they still have to clear 3:1 against the card
+     to be seen at all (WCAG 1.4.11). The shipped amber is 2.65:1 on white, so
+     the outline tone is darkened here; the token itself is left alone, because
+     it is the right amber everywhere else it is used. */
+  --review-approve: var(--rule-regular);
+  --review-re-record: color-mix(in srgb, var(--rule-special) 78%, var(--ink));
+  --review-reject: var(--rule-irregular);
+  --review-approve-soft: color-mix(in srgb, var(--rule-regular) 12%, #ffffff);
+  --review-re-record-soft: color-mix(in srgb, var(--rule-special) 14%, #ffffff);
+  --review-reject-soft: color-mix(in srgb, var(--rule-irregular) 11%, #ffffff);
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      120% 60% at 12% -10%,
+      color-mix(in srgb, var(--brand) 9%, transparent) 0%,
+      transparent 62%
+    ),
+    var(--canvas);
+}
+
+.review-audio__main {
+  max-width: var(--content-max-browse);
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-5) var(--space-7);
+  display: grid;
+  gap: var(--space-5);
+}
+
+/* The visually-hidden box used to lengthen an accessible name past the words
+   on screen. It always FOLLOWS the visible label, so the accessible name still
+   starts with what a person can see and read aloud (WCAG 2.5.3). */
+.review-audio__quiet {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.review-audio__eyebrow {
+  margin: 0;
+  font-size: var(--text-meta);
+  font-weight: var(--font-weight-strong);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brand);
+}
+
+.review-audio__header h1 {
+  font-size: var(--text-page);
+}
+
+/* The honesty panel is the first thing on the page and reads as a notice, not
+   as decoration: a heavy brand edge, roomy leading, no card shadow competing
+   with the clip cards below it. */
+.review-audio__truth {
+  border-left: 5px solid var(--brand);
+  background: var(--surface-brand-soft);
+  box-shadow: none;
+}
+
+.review-audio__truth ul {
+  margin: 0;
+  padding-left: 1.2em;
+  display: grid;
+  gap: var(--space-3);
+  line-height: 1.6;
+}
+
+.review-audio__truth p {
+  margin: var(--space-4) 0 0;
+}
+
+.review-board {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.review-board__aside,
+.review-board__stream {
+  display: grid;
+  gap: var(--space-5);
+  align-content: start;
+  min-width: 0;
+}
+
+/* Two columns once there is room for them: the instrument's controls on the
+   left, the clips on the right. Below this the same markup stacks, which is
+   the honest mobile reading order — decide what to listen to, then listen. */
+@media (min-width: 1080px) {
+  .review-board {
+    grid-template-columns: 22rem minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .review-board__aside {
+    position: sticky;
+    top: var(--space-5);
+    /* Bounded and scrollable, not just pinned. A panel taller than the window
+       would put its last control — "only the ones I have not reviewed yet" —
+       permanently below the fold, unreachable by any amount of page scrolling,
+       because sticky pins the top rather than the bottom. */
+    max-height: calc(100vh - var(--space-6));
+    overflow-y: auto;
+    /* Reserve the scrollbar track so the panel does not reflow the moment it
+       becomes scrollable — on a tall window it never does. */
+    scrollbar-gutter: stable;
+    /* Room for a focus ring that would otherwise be clipped by the scroll box. */
+    padding: 3px;
+    margin: -3px;
+  }
+}
+
+.review-board__controls,
+.review-board__progress {
+  display: grid;
+  gap: var(--space-4);
+  align-content: start;
+}
+
+.review-board__reviewer {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.review-board__reviewer label {
+  font-weight: var(--font-weight-medium);
+}
+
+.review-board__reviewer input {
+  min-height: 44px;
+  padding: 0 var(--space-3);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+}
+
+.review-board__filters {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-2);
+}
+
+.review-board__filters legend {
+  padding: 0;
+  font-weight: var(--font-weight-medium);
+}
+
+/* A named list of nine sounds, not a pill cloud. In a 22rem column each label
+   ("ich / ach sound (22)") is nearly the full width anyway, so they are laid
+   out as deliberate full-width rows: the names line up on the left and the
+   counts on the right, which is what makes "where is the work" scannable. */
+.review-board__chips {
+  display: grid;
+  gap: 6px;
+}
+
+.review-board__chip {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 var(--space-3);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  font-size: var(--text-ui);
+  font-weight: var(--font-weight-medium);
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background var(--motion-fast) var(--ease-standard),
+    border-color var(--motion-fast) var(--ease-standard);
+}
+
+.review-board__chip-count {
+  margin-left: auto;
+  padding-left: var(--space-2);
+  color: var(--ink-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.review-board__chip[aria-pressed="true"] .review-board__chip-count {
+  color: var(--nav-muted);
+}
+
+.review-board__chip:hover:not(:disabled) {
+  background: var(--surface-tint);
+  border-color: var(--ink-subtle);
+}
+
+.review-board__chip[aria-pressed="true"] {
+  background: var(--nav);
+  border-color: var(--nav);
+  color: var(--nav-active);
+}
+
+.review-board__chip:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.review-board__switches {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.review-board__switch {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: 44px;
+  cursor: pointer;
+}
+
+.review-board__switch input {
+  width: 20px;
+  height: 20px;
+  flex: none;
+  accent-color: var(--brand);
+}
+
+.review-board__glossary summary {
+  cursor: pointer;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-weight: var(--font-weight-medium);
+}
+
+.review-board__glossary dl {
+  margin: 0;
+  display: grid;
+  gap: var(--space-3);
+}
+
+.review-board__glossary dt {
+  font-weight: var(--font-weight-strong);
+}
+
+.review-board__glossary dd {
+  margin: var(--space-1) 0 0;
+  color: var(--ink-muted);
+  font-size: var(--text-ui);
+  line-height: 1.55;
+}
+
+.review-board__count {
+  margin: 0;
+  font-size: var(--text-section);
+  line-height: 1.2;
+}
+
+.review-board__bar {
+  width: 100%;
+  height: 10px;
+  appearance: none;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  overflow: hidden;
+  background: var(--surface-muted);
+}
+
+.review-board__bar::-webkit-progress-bar {
+  background: var(--surface-muted);
+}
+
+.review-board__bar::-webkit-progress-value {
+  background: var(--brand);
+}
+
+.review-board__bar::-moz-progress-bar {
+  background: var(--brand);
+}
+
+.review-board__warning {
+  margin: 0;
+  padding: var(--space-3);
+  border-radius: var(--radius-sm);
+  border-left: 4px solid var(--danger);
+  background: color-mix(in srgb, var(--danger) 8%, #ffffff);
+  color: var(--ink);
+  font-size: var(--text-ui);
+}
+
+.review-board__group {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.review-board__group h2 {
+  margin: 0;
+  font-size: var(--text-section);
+  letter-spacing: -0.01em;
+}
+
+.review-board__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-4);
+}
+
+.review-board__empty {
+  margin: 0;
+}
+
+/* One clip. The left rule is the state: neutral until judged, then the
+   morphology palette's regular / special / irregular tones, which already
+   carry "fine / watch this / wrong" everywhere else in the product. */
+.review-clip {
+  display: grid;
+  gap: var(--space-3);
+  padding: var(--space-5);
+  background: var(--surface-raised);
+  border: 1px solid var(--border-soft);
+  border-left: 5px solid var(--border-strong);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-raised);
+}
+
+.review-clip[data-verdict="approve"] {
+  border-left-color: var(--review-approve);
+}
+
+.review-clip[data-verdict="needs-re-record"] {
+  border-left-color: var(--review-re-record);
+}
+
+.review-clip[data-verdict="reject"] {
+  border-left-color: var(--review-reject);
+}
+
+.review-clip__head {
+  display: grid;
+  gap: var(--space-2);
+}
+
+/* The German is the reason the page exists, so it gets display scale and is
+   selectable — a reviewer pastes it into a message about what they heard. */
+.review-clip__german {
+  margin: 0;
+  font-size: clamp(1.5rem, 1.1rem + 1.4vw, 2rem);
+  font-weight: var(--font-weight-strong);
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  user-select: text;
+}
+
+.review-clip__meta {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.review-clip__tag {
+  border-color: color-mix(in srgb, var(--brand) 35%, var(--border));
+  background: var(--surface-brand-soft);
+  color: color-mix(in srgb, var(--brand) 70%, var(--ink));
+}
+
+.review-clip__audio {
+  width: 100%;
+  min-height: 44px;
+}
+
+.review-clip__verdict {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-2);
+}
+
+.review-clip__verdict legend {
+  padding: 0;
+  font-size: var(--text-ui);
+  font-weight: var(--font-weight-medium);
+  color: var(--ink-muted);
+}
+
+.review-clip__choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.review-clip__choice {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 44px;
+  padding: 0 var(--space-4);
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: border-color var(--motion-fast) var(--ease-standard);
+}
+
+.review-clip__choice input {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  accent-color: var(--brand);
+}
+
+.review-clip__choice:hover {
+  border-color: var(--ink-subtle);
+}
+
+.review-clip__choice[data-choice="approve"][data-selected="true"] {
+  border-color: var(--review-approve);
+  background: var(--review-approve-soft);
+  box-shadow: inset 0 0 0 1px var(--review-approve);
+}
+
+.review-clip__choice[data-choice="needs-re-record"][data-selected="true"] {
+  border-color: var(--review-re-record);
+  background: var(--review-re-record-soft);
+  box-shadow: inset 0 0 0 1px var(--review-re-record);
+}
+
+.review-clip__choice[data-choice="reject"][data-selected="true"] {
+  border-color: var(--review-reject);
+  background: var(--review-reject-soft);
+  box-shadow: inset 0 0 0 1px var(--review-reject);
+}
+
+.review-clip__clear:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.review-clip__note {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.review-clip__note label {
+  font-size: var(--text-ui);
+  font-weight: var(--font-weight-medium);
+  color: var(--ink-muted);
+}
+
+.review-clip__note textarea {
+  width: 100%;
+  min-height: 44px;
+  padding: var(--space-3);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  resize: vertical;
+}
+
+.review-clip__usage summary {
+  cursor: pointer;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-size: var(--text-ui);
+  color: var(--ink-muted);
+}
+
+.review-clip__usage ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-2);
+}
+
+.review-clip__usage a {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  min-height: 44px;
+  color: var(--ink);
+}
+
+.review-clip__usage-context {
+  font-size: var(--text-meta);
+  color: var(--ink-muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .review-board__chip,
+  .review-clip__choice {
+    transition: none;
+  }
+}
