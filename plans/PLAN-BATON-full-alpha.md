@@ -3,9 +3,9 @@
 updated: 2026-08-13T16:30:00+03:30
 orchestrator_session: Claude Code takeover 2026-08-13 (session 3a449151)
 active_engine: claude-code
-active_phase: T1-TTS-GATE
+active_phase: P6-OWNER-GATES
 meta_status: n/a
-gate_status: {G0: green, G1: green, G2: green, G3: green, G4: green, G5: partial, G6: pending, G-OWNER: pending}
+gate_status: {G0: green, G1: green, G2: green, G3: green, G4: green, G5: partial, G6: green, G-OWNER: pending}
 workers: [C-LEARN, C-WEB]
 parallel_groups: []
 file_ownership:
@@ -13,7 +13,7 @@ file_ownership:
   - C-WEB: `platform/apps/web/**`, `platform/tests/web/**`, web package integration and README only
 open_items_unchanged: true
 violations: []
-next_action: Build the end-to-end layer (Playwright is not installed; all 659 tests are unit/component against jsdom, so no critical journey has end-to-end proof). Then the final requirement/register diff (P6-03). Accessibility remediation and the offline-first policy are done and gated; evidence and remaining leads in research/release-evidence/p6-02-status.md. Open owner item: ADR-013 derived English gloss for verb:leben. Still open by design: und-linking grammar concept, 18 unencoded phrases/lexemes, teacher-deck human German gate, and G5 qualified human listening approval of generated TTS (a pedagogical gate, unaffected by the ADR-015/016 rights decisions).
+next_action: Blocked on the owner for the last three items — (1) OPENAI_API_KEY in the Codex environment to generate the 41 missing plural clips in a GPT voice and run the edge-tts A/B, (2) G5 qualified German listening approval of the 354 generated clips AND of the 62 newly app-authored example sentences, (3) ADR-013 ruling on the derived verb:leben gloss. Everything else is shipped and gated: vocabulary media is complete (69/69 images, 69/69 lemma audio, 68/69 examples), E2E 36/36, offline live-verified, accessibility remediated. Still open by design: und-linking grammar concept, 18 unencoded phrases/lexemes, teacher-deck human German gate.
 
 ## Current verified facts
 
