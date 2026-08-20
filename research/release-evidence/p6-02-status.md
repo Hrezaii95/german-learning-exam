@@ -1,7 +1,9 @@
 # P6-02 — Accessibility, responsive, E2E and offline evidence
 
-Status: **partial — accessibility remediated and guarded; offline policy and a real
-end-to-end layer remain open.** Recorded 2026-08-15 by Claude Code ORCH.
+Status: **accessibility remediated and guarded; offline policy shipped and
+live-verified; end-to-end layer built and green.** Unadjudicated audit leads and
+human-only checks remain open. Recorded 2026-08-15, updated 2026-08-16 by Claude
+Code ORCH.
 
 ## Method
 
@@ -43,15 +45,18 @@ horizontal overflow (browser-verified during Phase 2b).
 
 ## Open — NOT closed by this work
 
-1. **Offline-first policy does not exist.** No service worker, no
-   `manifest.webmanifest`, no cache/version strategy. The spec requires
-   offline-first; this is a genuine spec gap needing an owner decision on scope,
-   not a defect to quietly patch.
-2. **No end-to-end layer exists.** All 610 tests are unit/component level against
-   jsdom. Critical journeys (activity completion persisting across reload, review
-   card creation through a session, import recovery, playing each game to a scored
-   outcome, the conversation ladder reaching level five) have no automated
-   end-to-end proof. Several were raised by the audit but never adjudicated.
+1. ~~**Offline-first policy does not exist.**~~ **CLOSED 2026-08-16.** Shipped as a
+   versioned service worker + manifest with a shell precache and a runtime
+   cache-on-use tier, gated by `tools/audit-offline-export.mjs`. Verified on the
+   live deployment in-browser: the worker registers, activates and controls the
+   page, and `/vocabulary/` is genuinely served from an 85-entry shell cache.
+   Evidence: `offline-live-verification.json`.
+2. ~~**No end-to-end layer exists.**~~ **CLOSED 2026-08-16.** 12 Playwright specs /
+   36 tests drive the served export across all 10 critical journeys; 36/36 green.
+   Its first run found a real product defect — the resume pointer was overwritten
+   on every mount, so no stored pointer survived a reload and Continue always sent
+   the learner backwards. Fixed, with a non-vacuous guard (3 of 4 guard cases fail
+   when the fix is disabled).
 3. **Delivery weight** — raw PNG illustrations, font subsetting, per-route bundle
    contents and eager/lazy policy were audited but the findings were not verified.
 4. **Real assistive-technology testing.** Automated checks cannot establish that a
