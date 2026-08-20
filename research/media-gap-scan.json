@@ -1,0 +1,1504 @@
+{
+  "schemaVersion": 1,
+  "total": 69,
+  "complete": {
+    "image": 26,
+    "lemmaAudio": 69,
+    "pluralAudio": 0,
+    "example": 0
+  },
+  "missingCounts": {
+    "image": 43,
+    "lemmaAudio": 0,
+    "pluralAudio": 41,
+    "example": 69
+  },
+  "missing": {
+    "image": [
+      "lex:allein",
+      "lex:alter",
+      "lex:auch-super",
+      "lex:auf-wiedersehen",
+      "lex:ausbildung",
+      "lex:beruf",
+      "lex:deutschland",
+      "lex:eritrea",
+      "lex:es-geht",
+      "lex:familienname",
+      "lex:familienstand",
+      "lex:firma",
+      "lex:frankreich",
+      "lex:frau",
+      "lex:geschieden",
+      "lex:gut-danke",
+      "lex:gute-nacht",
+      "lex:guten-abend",
+      "lex:guten-morgen",
+      "lex:guten-tag",
+      "lex:hallo",
+      "lex:herkunft",
+      "lex:herr",
+      "lex:jahr",
+      "lex:job",
+      "lex:kind",
+      "lex:name",
+      "lex:nicht-so-gut",
+      "lex:oesterreich",
+      "lex:praktikum",
+      "lex:schweiz",
+      "lex:sehr-gut-danke",
+      "lex:single",
+      "lex:spanien",
+      "lex:stelle",
+      "lex:studium",
+      "lex:super",
+      "lex:tschues",
+      "lex:tuerkei",
+      "lex:usa",
+      "lex:verheiratet",
+      "lex:vorname",
+      "lex:wohnort"
+    ],
+    "lemmaAudio": [],
+    "pluralAudio": [
+      "lex:aerztin",
+      "lex:architekt",
+      "lex:architektin",
+      "lex:arzt",
+      "lex:ausbildung",
+      "lex:beruf",
+      "lex:familienname",
+      "lex:firma",
+      "lex:frau",
+      "lex:friseur",
+      "lex:friseurin",
+      "lex:herr",
+      "lex:ingenieur",
+      "lex:ingenieurin",
+      "lex:jahr",
+      "lex:job",
+      "lex:journalist",
+      "lex:journalistin",
+      "lex:kellner",
+      "lex:kellnerin",
+      "lex:kfz-mechatroniker",
+      "lex:kfz-mechatronikerin",
+      "lex:kind",
+      "lex:lehrer",
+      "lex:lehrerin",
+      "lex:name",
+      "lex:paketzusteller",
+      "lex:paketzustellerin",
+      "lex:praktikum",
+      "lex:rentner",
+      "lex:rentnerin",
+      "lex:schueler",
+      "lex:schuelerin",
+      "lex:single",
+      "lex:stelle",
+      "lex:student",
+      "lex:studentin",
+      "lex:verkaeufer",
+      "lex:verkaeuferin",
+      "lex:vorname",
+      "lex:wohnort"
+    ],
+    "example": [
+      "lex:aerztin",
+      "lex:allein",
+      "lex:alter",
+      "lex:architekt",
+      "lex:architektin",
+      "lex:arzt",
+      "lex:auch-super",
+      "lex:auf-wiedersehen",
+      "lex:ausbildung",
+      "lex:beruf",
+      "lex:deutschland",
+      "lex:eritrea",
+      "lex:es-geht",
+      "lex:familienname",
+      "lex:familienstand",
+      "lex:firma",
+      "lex:frankreich",
+      "lex:frau",
+      "lex:friseur",
+      "lex:friseurin",
+      "lex:geschieden",
+      "lex:gut-danke",
+      "lex:gute-nacht",
+      "lex:guten-abend",
+      "lex:guten-morgen",
+      "lex:guten-tag",
+      "lex:hallo",
+      "lex:herkunft",
+      "lex:herr",
+      "lex:ingenieur",
+      "lex:ingenieurin",
+      "lex:jahr",
+      "lex:job",
+      "lex:journalist",
+      "lex:journalistin",
+      "lex:kellner",
+      "lex:kellnerin",
+      "lex:kfz-mechatroniker",
+      "lex:kfz-mechatronikerin",
+      "lex:kind",
+      "lex:lehrer",
+      "lex:lehrerin",
+      "lex:name",
+      "lex:nicht-so-gut",
+      "lex:oesterreich",
+      "lex:paketzusteller",
+      "lex:paketzustellerin",
+      "lex:praktikum",
+      "lex:rentner",
+      "lex:rentnerin",
+      "lex:schueler",
+      "lex:schuelerin",
+      "lex:schweiz",
+      "lex:sehr-gut-danke",
+      "lex:single",
+      "lex:spanien",
+      "lex:stelle",
+      "lex:student",
+      "lex:studentin",
+      "lex:studium",
+      "lex:super",
+      "lex:tschues",
+      "lex:tuerkei",
+      "lex:usa",
+      "lex:verheiratet",
+      "lex:verkaeufer",
+      "lex:verkaeuferin",
+      "lex:vorname",
+      "lex:wohnort"
+    ]
+  },
+  "rows": [
+    {
+      "id": "lex:aerztin",
+      "lemma": "Ärztin",
+      "display": "die Ärztin",
+      "gender": "feminine",
+      "meaningEn": "doctor",
+      "plurals": [
+        "Ärztinnen"
+      ],
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a6165727a74696e",
+      "has": {
+        "image": true,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:allein",
+      "lemma": "allein",
+      "display": "allein",
+      "gender": null,
+      "meaningEn": "alone",
+      "plurals": [],
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a616c6c65696e",
+      "has": {
+        "image": false,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:alter",
+      "lemma": "Alter",
+      "display": "das Alter",
+      "gender": "neuter",
+      "meaningEn": "age",
+      "plurals": [],
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a616c746572",
+      "has": {
+        "image": false,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:architekt",
+      "lemma": "Architekt",
+      "display": "der Architekt",
+      "gender": "masculine",
+      "meaningEn": "architect",
+      "plurals": [
+        "Architekten"
+      ],
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a617263686974656b74",
+      "has": {
+        "image": true,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:architektin",
+      "lemma": "Architektin",
+      "display": "die Architektin",
+      "gender": "feminine",
+      "meaningEn": "architect",
+      "plurals": [
+        "Architektinnen"
+      ],
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a617263686974656b74696e",
+      "has": {
+        "image": true,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:arzt",
+      "lemma": "Arzt",
+      "display": "der Arzt",
+      "gender": "masculine",
+      "meaningEn": "doctor",
+      "plurals": [
+        "Ärzte"
+      ],
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a61727a74",
+      "has": {
+        "image": true,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:auch-super",
+      "lemma": "Auch super.",
+      "display": "Auch super.",
+      "gender": null,
+      "meaningEn": "Great as well.",
+      "plurals": [],
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a617563682d7375706572",
+      "has": {
+        "image": false,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:auf-wiedersehen",
+      "lemma": "Auf Wiedersehen",
+      "display": "Auf Wiedersehen",
+      "gender": null,
+      "meaningEn": "Goodbye",
+      "plurals": [],
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a6175662d776965646572736568656e",
+      "has": {
+        "image": false,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:ausbildung",
+      "lemma": "Ausbildung",
+      "display": "die Ausbildung",
+      "gender": "feminine",
+      "meaningEn": "apprenticeship/training",
+      "plurals": [
+        "Ausbildungen"
+      ],
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a61757362696c64756e67",
+      "has": {
+        "image": false,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:beruf",
+      "lemma": "Beruf",
+      "display": "der Beruf",
+      "gender": "masculine",
+      "meaningEn": "profession",
+      "plurals": [
+        "Berufe"
+      ],
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a6265727566",
+      "has": {
+        "image": false,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:deutschland",
+      "lemma": "Deutschland",
+      "display": "Deutschland",
+      "gender": null,
+      "meaningEn": "Germany",
+      "plurals": [],
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a646575747363686c616e64",
+      "has": {
+        "image": false,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:eritrea",
+      "lemma": "Eritrea",
+      "display": "Eritrea",
+      "gender": null,
+      "meaningEn": "Eritrea",
+      "plurals": [],
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a65726974726561",
+      "has": {
+        "image": false,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:es-geht",
+      "lemma": "Es geht.",
+      "display": "Es geht.",
+      "gender": null,
+      "meaningEn": "Not too bad.",
+      "plurals": [],
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a65732d67656874",
+      "has": {
+        "image": false,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:familienname",
+      "lemma": "Familienname",
+      "display": "der Familienname",
+      "gender": "masculine",
+      "meaningEn": "last name",
+      "plurals": [
+        "Familiennamen"
+      ],
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a66616d696c69656e6e616d65",
+      "has": {
+        "image": false,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:familienstand",
+      "lemma": "Familienstand",
+      "display": "der Familienstand",
+      "gender": "masculine",
+      "meaningEn": "marital status",
+      "plurals": [],
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a66616d696c69656e7374616e64",
+      "has": {
+        "image": false,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:firma",
+      "lemma": "Firma",
+      "display": "die Firma",
+      "gender": "feminine",
+      "meaningEn": "company",
+      "plurals": [
+        "Firmen"
+      ],
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a6669726d61",
+      "has": {
+        "image": false,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:frankreich",
+      "lemma": "Frankreich",
+      "display": "Frankreich",
+      "gender": null,
+      "meaningEn": "France",
+      "plurals": [],
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a6672616e6b7265696368",
+      "has": {
+        "image": false,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:frau",
+      "lemma": "Frau",
+      "display": "die Frau",
+      "gender": "feminine",
+      "meaningEn": "Ms / Mrs / woman",
+      "plurals": [
+        "Frauen"
+      ],
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a66726175",
+      "has": {
+        "image": false,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:friseur",
+      "lemma": "Friseur",
+      "display": "der Friseur",
+      "gender": "masculine",
+      "meaningEn": "hairdresser",
+      "plurals": [
+        "Friseure"
+      ],
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a66726973657572",
+      "has": {
+        "image": true,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:friseurin",
+      "lemma": "Friseurin",
+      "display": "die Friseurin",
+      "gender": "feminine",
+      "meaningEn": "hairdresser",
+      "plurals": [
+        "Friseurinnen"
+      ],
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a66726973657572696e",
+      "has": {
+        "image": true,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:geschieden",
+      "lemma": "geschieden",
+      "display": "geschieden",
+      "gender": null,
+      "meaningEn": "divorced",
+      "plurals": [],
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a6765736368696564656e",
+      "has": {
+        "image": false,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:gut-danke",
+      "lemma": "Gut, danke.",
+      "display": "Gut, danke.",
+      "gender": null,
+      "meaningEn": "Fine, thank you.",
+      "plurals": [],
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a6775742d64616e6b65",
+      "has": {
+        "image": false,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:gute-nacht",
+      "lemma": "Gute Nacht",
+      "display": "Gute Nacht",
+      "gender": null,
+      "meaningEn": "Good night",
+      "plurals": [],
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a677574652d6e61636874",
+      "has": {
+        "image": false,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:guten-abend",
+      "lemma": "Guten Abend",
+      "display": "Guten Abend",
+      "gender": null,
+      "meaningEn": "Good evening",
+      "plurals": [],
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a677574656e2d6162656e64",
+      "has": {
+        "image": false,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:guten-morgen",
+      "lemma": "Guten Morgen",
+      "display": "Guten Morgen",
+      "gender": null,
+      "meaningEn": "Good morning",
+      "plurals": [],
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a677574656e2d6d6f7267656e",
+      "has": {
+        "image": false,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:guten-tag",
+      "lemma": "Guten Tag",
+      "display": "Guten Tag",
+      "gender": null,
+      "meaningEn": "Good day / Hello",
+      "plurals": [],
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a677574656e2d746167",
+      "has": {
+        "image": false,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:hallo",
+      "lemma": "Hallo",
+      "display": "Hallo",
+      "gender": null,
+      "meaningEn": "Hello",
+      "plurals": [],
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a68616c6c6f",
+      "has": {
+        "image": false,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:herkunft",
+      "lemma": "Herkunft",
+      "display": "die Herkunft",
+      "gender": "feminine",
+      "meaningEn": "origin",
+      "plurals": [],
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a6865726b756e6674",
+      "has": {
+        "image": false,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:herr",
+      "lemma": "Herr",
+      "display": "der Herr",
+      "gender": "masculine",
+      "meaningEn": "Mr / gentleman",
+      "plurals": [
+        "Herren"
+      ],
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a68657272",
+      "has": {
+        "image": false,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:ingenieur",
+      "lemma": "Ingenieur",
+      "display": "der Ingenieur",
+      "gender": "masculine",
+      "meaningEn": "engineer",
+      "plurals": [
+        "Ingenieure"
+      ],
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a696e67656e69657572",
+      "has": {
+        "image": true,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:ingenieurin",
+      "lemma": "Ingenieurin",
+      "display": "die Ingenieurin",
+      "gender": "feminine",
+      "meaningEn": "engineer",
+      "plurals": [
+        "Ingenieurinnen"
+      ],
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a696e67656e69657572696e",
+      "has": {
+        "image": true,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:jahr",
+      "lemma": "Jahr",
+      "display": "das Jahr",
+      "gender": "neuter",
+      "meaningEn": "year",
+      "plurals": [
+        "Jahre"
+      ],
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a6a616872",
+      "has": {
+        "image": false,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:job",
+      "lemma": "Job",
+      "display": "der Job",
+      "gender": "masculine",
+      "meaningEn": "job",
+      "plurals": [
+        "Jobs"
+      ],
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a6a6f62",
+      "has": {
+        "image": false,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:journalist",
+      "lemma": "Journalist",
+      "display": "der Journalist",
+      "gender": "masculine",
+      "meaningEn": "journalist",
+      "plurals": [
+        "Journalisten"
+      ],
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a6a6f75726e616c697374",
+      "has": {
+        "image": true,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:journalistin",
+      "lemma": "Journalistin",
+      "display": "die Journalistin",
+      "gender": "feminine",
+      "meaningEn": "journalist",
+      "plurals": [
+        "Journalistinnen"
+      ],
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a6a6f75726e616c697374696e",
+      "has": {
+        "image": true,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:kellner",
+      "lemma": "Kellner",
+      "display": "der Kellner",
+      "gender": "masculine",
+      "meaningEn": "waiter / waitress",
+      "plurals": [
+        "Kellner"
+      ],
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a6b656c6c6e6572",
+      "has": {
+        "image": true,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:kellnerin",
+      "lemma": "Kellnerin",
+      "display": "die Kellnerin",
+      "gender": "feminine",
+      "meaningEn": "waiter / waitress",
+      "plurals": [
+        "Kellnerinnen"
+      ],
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a6b656c6c6e6572696e",
+      "has": {
+        "image": true,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:kfz-mechatroniker",
+      "lemma": "Kfz-Mechatroniker",
+      "display": "der Kfz-Mechatroniker",
+      "gender": "masculine",
+      "meaningEn": "automotive mechatronics engineer",
+      "plurals": [
+        "Kfz-Mechatroniker"
+      ],
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a6b667a2d6d6563686174726f6e696b6572",
+      "has": {
+        "image": true,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:kfz-mechatronikerin",
+      "lemma": "Kfz-Mechatronikerin",
+      "display": "die Kfz-Mechatronikerin",
+      "gender": "feminine",
+      "meaningEn": "automotive mechatronics engineer",
+      "plurals": [
+        "Kfz-Mechatronikerinnen"
+      ],
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a6b667a2d6d6563686174726f6e696b6572696e",
+      "has": {
+        "image": true,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:kind",
+      "lemma": "Kind",
+      "display": "das Kind",
+      "gender": "neuter",
+      "meaningEn": "child",
+      "plurals": [
+        "Kinder"
+      ],
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a6b696e64",
+      "has": {
+        "image": false,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:lehrer",
+      "lemma": "Lehrer",
+      "display": "der Lehrer",
+      "gender": "masculine",
+      "meaningEn": "teacher",
+      "plurals": [
+        "Lehrer"
+      ],
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a6c6568726572",
+      "has": {
+        "image": true,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:lehrerin",
+      "lemma": "Lehrerin",
+      "display": "die Lehrerin",
+      "gender": "feminine",
+      "meaningEn": "teacher",
+      "plurals": [
+        "Lehrerinnen"
+      ],
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a6c6568726572696e",
+      "has": {
+        "image": true,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:name",
+      "lemma": "Name",
+      "display": "der Name",
+      "gender": "masculine",
+      "meaningEn": "name",
+      "plurals": [
+        "Namen"
+      ],
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a6e616d65",
+      "has": {
+        "image": false,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:nicht-so-gut",
+      "lemma": "Nicht so gut.",
+      "display": "Nicht so gut.",
+      "gender": null,
+      "meaningEn": "Not so well.",
+      "plurals": [],
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a6e696368742d736f2d677574",
+      "has": {
+        "image": false,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:oesterreich",
+      "lemma": "Österreich",
+      "display": "Österreich",
+      "gender": null,
+      "meaningEn": "Austria",
+      "plurals": [],
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a6f65737465727265696368",
+      "has": {
+        "image": false,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:paketzusteller",
+      "lemma": "Paketzusteller",
+      "display": "der Paketzusteller",
+      "gender": "masculine",
+      "meaningEn": "parcel delivery agent",
+      "plurals": [
+        "Paketzusteller"
+      ],
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a70616b65747a757374656c6c6572",
+      "has": {
+        "image": true,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:paketzustellerin",
+      "lemma": "Paketzustellerin",
+      "display": "die Paketzustellerin",
+      "gender": "feminine",
+      "meaningEn": "parcel delivery agent",
+      "plurals": [
+        "Paketzustellerinnen"
+      ],
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a70616b65747a757374656c6c6572696e",
+      "has": {
+        "image": true,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:praktikum",
+      "lemma": "Praktikum",
+      "display": "das Praktikum",
+      "gender": "neuter",
+      "meaningEn": "internship",
+      "plurals": [
+        "Praktika"
+      ],
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a7072616b74696b756d",
+      "has": {
+        "image": false,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:rentner",
+      "lemma": "Rentner",
+      "display": "der Rentner",
+      "gender": "masculine",
+      "meaningEn": "pensioner",
+      "plurals": [
+        "Rentner"
+      ],
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a72656e746e6572",
+      "has": {
+        "image": true,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:rentnerin",
+      "lemma": "Rentnerin",
+      "display": "die Rentnerin",
+      "gender": "feminine",
+      "meaningEn": "pensioner",
+      "plurals": [
+        "Rentnerinnen"
+      ],
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a72656e746e6572696e",
+      "has": {
+        "image": true,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:schueler",
+      "lemma": "Schüler",
+      "display": "der Schüler",
+      "gender": "masculine",
+      "meaningEn": "school student",
+      "plurals": [
+        "Schüler"
+      ],
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a73636875656c6572",
+      "has": {
+        "image": true,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:schuelerin",
+      "lemma": "Schülerin",
+      "display": "die Schülerin",
+      "gender": "feminine",
+      "meaningEn": "school student",
+      "plurals": [
+        "Schülerinnen"
+      ],
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a73636875656c6572696e",
+      "has": {
+        "image": true,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:schweiz",
+      "lemma": "Schweiz",
+      "display": "die Schweiz",
+      "gender": "feminine",
+      "meaningEn": "Switzerland",
+      "plurals": [],
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a7363687765697a",
+      "has": {
+        "image": false,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:sehr-gut-danke",
+      "lemma": "Sehr gut, danke.",
+      "display": "Sehr gut, danke.",
+      "gender": null,
+      "meaningEn": "Very well, thank you.",
+      "plurals": [],
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a736568722d6775742d64616e6b65",
+      "has": {
+        "image": false,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:single",
+      "lemma": "Single",
+      "display": "der Single",
+      "gender": "masculine",
+      "meaningEn": "single person",
+      "plurals": [
+        "Singles"
+      ],
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a73696e676c65",
+      "has": {
+        "image": false,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:spanien",
+      "lemma": "Spanien",
+      "display": "Spanien",
+      "gender": null,
+      "meaningEn": "Spain",
+      "plurals": [],
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a7370616e69656e",
+      "has": {
+        "image": false,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:stelle",
+      "lemma": "Stelle",
+      "display": "die Stelle",
+      "gender": "feminine",
+      "meaningEn": "position/job",
+      "plurals": [
+        "Stellen"
+      ],
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a7374656c6c65",
+      "has": {
+        "image": false,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:student",
+      "lemma": "Student",
+      "display": "der Student",
+      "gender": "masculine",
+      "meaningEn": "university student",
+      "plurals": [
+        "Studenten"
+      ],
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a73747564656e74",
+      "has": {
+        "image": true,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:studentin",
+      "lemma": "Studentin",
+      "display": "die Studentin",
+      "gender": "feminine",
+      "meaningEn": "university student",
+      "plurals": [
+        "Studentinnen"
+      ],
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a73747564656e74696e",
+      "has": {
+        "image": true,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:studium",
+      "lemma": "Studium",
+      "display": "das Studium",
+      "gender": "neuter",
+      "meaningEn": "studies",
+      "plurals": [],
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a7374756469756d",
+      "has": {
+        "image": false,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:super",
+      "lemma": "Super!",
+      "display": "Super!",
+      "gender": null,
+      "meaningEn": "Great!",
+      "plurals": [],
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a7375706572",
+      "has": {
+        "image": false,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:tschues",
+      "lemma": "Tschüs",
+      "display": "Tschüs",
+      "gender": null,
+      "meaningEn": "Bye",
+      "plurals": [],
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a74736368756573",
+      "has": {
+        "image": false,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:tuerkei",
+      "lemma": "Türkei",
+      "display": "die Türkei",
+      "gender": "feminine",
+      "meaningEn": "Turkey",
+      "plurals": [],
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a747565726b6569",
+      "has": {
+        "image": false,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:usa",
+      "lemma": "USA",
+      "display": "die USA",
+      "gender": "feminine",
+      "meaningEn": "USA",
+      "plurals": [],
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a757361",
+      "has": {
+        "image": false,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:verheiratet",
+      "lemma": "verheiratet",
+      "display": "verheiratet",
+      "gender": null,
+      "meaningEn": "married",
+      "plurals": [],
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a7665726865697261746574",
+      "has": {
+        "image": false,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:verkaeufer",
+      "lemma": "Verkäufer",
+      "display": "der Verkäufer",
+      "gender": "masculine",
+      "meaningEn": "shop assistant",
+      "plurals": [
+        "Verkäufer"
+      ],
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a7665726b616575666572",
+      "has": {
+        "image": true,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:verkaeuferin",
+      "lemma": "Verkäuferin",
+      "display": "die Verkäuferin",
+      "gender": "feminine",
+      "meaningEn": "shop assistant",
+      "plurals": [
+        "Verkäuferinnen"
+      ],
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a7665726b616575666572696e",
+      "has": {
+        "image": true,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:vorname",
+      "lemma": "Vorname",
+      "display": "der Vorname",
+      "gender": "masculine",
+      "meaningEn": "first name",
+      "plurals": [
+        "Vornamen"
+      ],
+      "lessonIds": [
+        "lesson:01"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a766f726e616d65",
+      "has": {
+        "image": false,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    },
+    {
+      "id": "lex:wohnort",
+      "lemma": "Wohnort",
+      "display": "der Wohnort",
+      "gender": "masculine",
+      "meaningEn": "place of residence",
+      "plurals": [
+        "Wohnorte"
+      ],
+      "lessonIds": [
+        "lesson:02"
+      ],
+      "cardUrl": "https://hrezaii95.github.io/german-learning-exam/vocabulary/id-6c65783a776f686e6f7274",
+      "has": {
+        "image": false,
+        "lemmaAudio": true,
+        "pluralAudio": false,
+        "example": false
+      }
+    }
+  ]
+}

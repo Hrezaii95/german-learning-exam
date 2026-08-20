@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-14T07:15:10.492Z",
+  "generatedAt": "2026-08-20T06:24:12.205Z",
   "scope": {
     "lessons": [
       "lesson:01",
@@ -677,6 +677,62 @@
           ]
         }
       ]
+    }
+  ],
+  "glossaryExamples": [
+    {
+      "lexemeId": "lex:name",
+      "de": "Mein Name ist …",
+      "en": "My name is …",
+      "page": 1,
+      "exercise": "Lektion 01, 2",
+      "sourceFileId": "src:glossary:9e35984302ede169",
+      "documentTitle": "Momente A1.1 KB Glossar Deutsch–Englisch"
+    },
+    {
+      "lexemeId": "lex:schweiz",
+      "de": "Er kommt aus der Schweiz.",
+      "en": "He is from Switzerland.",
+      "page": 2,
+      "exercise": "Lektion 01, 4",
+      "sourceFileId": "src:glossary:9e35984302ede169",
+      "documentTitle": "Momente A1.1 KB Glossar Deutsch–Englisch"
+    },
+    {
+      "lexemeId": "lex:jahr",
+      "de": "… Jahre alt",
+      "en": "… years old",
+      "page": 2,
+      "exercise": "Lektion 02, 1",
+      "sourceFileId": "src:glossary:9e35984302ede169",
+      "documentTitle": "Momente A1.1 KB Glossar Deutsch–Englisch"
+    },
+    {
+      "lexemeId": "lex:kind",
+      "de": "keine Kinder",
+      "en": "no children",
+      "page": 3,
+      "exercise": "Lektion 02, 1",
+      "sourceFileId": "src:glossary:9e35984302ede169",
+      "documentTitle": "Momente A1.1 KB Glossar Deutsch–Englisch"
+    },
+    {
+      "lexemeId": "lex:geschieden",
+      "de": "geschieden sein",
+      "en": "to be divorced",
+      "page": 3,
+      "exercise": "Lektion 02, 4",
+      "sourceFileId": "src:glossary:9e35984302ede169",
+      "documentTitle": "Momente A1.1 KB Glossar Deutsch–Englisch"
+    },
+    {
+      "lexemeId": "lex:beruf",
+      "de": "von Beruf",
+      "en": "by profession",
+      "page": 4,
+      "exercise": "Lektion 02, 6",
+      "sourceFileId": "src:glossary:9e35984302ede169",
+      "documentTitle": "Momente A1.1 KB Glossar Deutsch–Englisch"
     }
   ],
   "collections": [

@@ -37,6 +37,7 @@ import {
   type LearnerVerbPersonKey,
   type LearnerVerbPresentForm,
   type LearnerVocabularyDetail,
+  type LearnerVocabularyExample,
   type LearnerVocabularyRepresentative,
 } from "./detail-types";
 import { resolveMediaAvailability } from "./media-availability";
@@ -255,6 +256,45 @@ function publishedPersonForm(
   return personFormFromPublishedPair(masculine, feminine);
 }
 
+/**
+ * Projects the usage example when the published lexeme carries one.
+ *
+ * Nothing is composed here: both strings pass through untouched and the only
+ * new text is the book-and-page label. A lexeme without a source example
+ * projects `null`, which the detail page renders as no section at all — never
+ * as an empty slot or a "coming soon" line.
+ */
+function publishedExample(lexeme: Lexeme): LearnerVocabularyExample | null {
+  const example = lexeme.example;
+  if (!example) return null;
+  const { de, translationEn, sourceRef } = example;
+  if (
+    de.length === 0 ||
+    translationEn.length === 0 ||
+    sourceRef == null ||
+    sourceRef.documentTitle.length === 0 ||
+    !Number.isSafeInteger(sourceRef.page) ||
+    sourceRef.page < 1
+  ) {
+    throw new DetailProjectionError(
+      `Lexeme ${lexeme.id} has an example without a usable source reference`,
+    );
+  }
+  const declared = lexeme.publication.publishedFields.some(
+    (ref) => ref.field === "example",
+  );
+  if (!declared) {
+    throw new DetailProjectionError(
+      `Lexeme ${lexeme.id} example is not backed by a published field`,
+    );
+  }
+  return Object.freeze({
+    de,
+    en: translationEn,
+    sourceLabel: `${sourceRef.documentTitle}, page ${sourceRef.page}`,
+  });
+}
+
 function projectAnyVocabulary(
   bundle: ContentBundle,
   indexes: ContentIndexes,
@@ -289,6 +329,7 @@ function projectAnyVocabulary(
     pluralGapMessage:
       noun && plurals.length === 0 ? DETAIL_PLURAL_GAP_MESSAGE : null,
     personForm: publishedPersonForm(bundle, lexeme),
+    example: publishedExample(lexeme),
     media: resolveMediaAvailability({
       conceptIds: [id],
       spokenTexts: [displayText, lexeme.lemma],
@@ -365,6 +406,7 @@ function projectVocabulary(
     plurals,
     pluralGapMessage: plurals.length === 0 ? DETAIL_PLURAL_GAP_MESSAGE : null,
     personForm,
+    example: publishedExample(lexeme),
     media,
     canonicalPath: detailCanonicalPath("vocabulary", id),
   });

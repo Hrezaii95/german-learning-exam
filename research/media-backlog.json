@@ -1,0 +1,491 @@
+{
+  "generatedAt": "2026-08-20",
+  "total": 69,
+  "needImage": 43,
+  "needTts": 0,
+  "rows": [
+    {
+      "id": "lex:aerztin",
+      "lemma": "Ärztin",
+      "article": "die",
+      "hasImage": true,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:allein",
+      "lemma": "allein",
+      "article": "",
+      "hasImage": false,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:alter",
+      "lemma": "Alter",
+      "article": "das",
+      "hasImage": false,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:architekt",
+      "lemma": "Architekt",
+      "article": "der",
+      "hasImage": true,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:architektin",
+      "lemma": "Architektin",
+      "article": "die",
+      "hasImage": true,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:arzt",
+      "lemma": "Arzt",
+      "article": "der",
+      "hasImage": true,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:auch-super",
+      "lemma": "Auch super.",
+      "article": "",
+      "hasImage": false,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:auf-wiedersehen",
+      "lemma": "Auf Wiedersehen",
+      "article": "",
+      "hasImage": false,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:ausbildung",
+      "lemma": "Ausbildung",
+      "article": "die",
+      "hasImage": false,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:beruf",
+      "lemma": "Beruf",
+      "article": "der",
+      "hasImage": false,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:deutschland",
+      "lemma": "Deutschland",
+      "article": "",
+      "hasImage": false,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:eritrea",
+      "lemma": "Eritrea",
+      "article": "",
+      "hasImage": false,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:es-geht",
+      "lemma": "Es geht.",
+      "article": "",
+      "hasImage": false,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:familienname",
+      "lemma": "Familienname",
+      "article": "der",
+      "hasImage": false,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:familienstand",
+      "lemma": "Familienstand",
+      "article": "der",
+      "hasImage": false,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:firma",
+      "lemma": "Firma",
+      "article": "die",
+      "hasImage": false,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:frankreich",
+      "lemma": "Frankreich",
+      "article": "",
+      "hasImage": false,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:frau",
+      "lemma": "Frau",
+      "article": "die",
+      "hasImage": false,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:friseur",
+      "lemma": "Friseur",
+      "article": "der",
+      "hasImage": true,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:friseurin",
+      "lemma": "Friseurin",
+      "article": "die",
+      "hasImage": true,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:geschieden",
+      "lemma": "geschieden",
+      "article": "",
+      "hasImage": false,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:gut-danke",
+      "lemma": "Gut, danke.",
+      "article": "",
+      "hasImage": false,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:gute-nacht",
+      "lemma": "Gute Nacht",
+      "article": "",
+      "hasImage": false,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:guten-abend",
+      "lemma": "Guten Abend",
+      "article": "",
+      "hasImage": false,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:guten-morgen",
+      "lemma": "Guten Morgen",
+      "article": "",
+      "hasImage": false,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:guten-tag",
+      "lemma": "Guten Tag",
+      "article": "",
+      "hasImage": false,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:hallo",
+      "lemma": "Hallo",
+      "article": "",
+      "hasImage": false,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:herkunft",
+      "lemma": "Herkunft",
+      "article": "die",
+      "hasImage": false,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:herr",
+      "lemma": "Herr",
+      "article": "der",
+      "hasImage": false,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:ingenieur",
+      "lemma": "Ingenieur",
+      "article": "der",
+      "hasImage": true,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:ingenieurin",
+      "lemma": "Ingenieurin",
+      "article": "die",
+      "hasImage": true,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:jahr",
+      "lemma": "Jahr",
+      "article": "das",
+      "hasImage": false,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:job",
+      "lemma": "Job",
+      "article": "der",
+      "hasImage": false,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:journalist",
+      "lemma": "Journalist",
+      "article": "der",
+      "hasImage": true,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:journalistin",
+      "lemma": "Journalistin",
+      "article": "die",
+      "hasImage": true,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:kellner",
+      "lemma": "Kellner",
+      "article": "der",
+      "hasImage": true,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:kellnerin",
+      "lemma": "Kellnerin",
+      "article": "die",
+      "hasImage": true,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:kfz-mechatroniker",
+      "lemma": "Kfz-Mechatroniker",
+      "article": "der",
+      "hasImage": true,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:kfz-mechatronikerin",
+      "lemma": "Kfz-Mechatronikerin",
+      "article": "die",
+      "hasImage": true,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:kind",
+      "lemma": "Kind",
+      "article": "das",
+      "hasImage": false,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:lehrer",
+      "lemma": "Lehrer",
+      "article": "der",
+      "hasImage": true,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:lehrerin",
+      "lemma": "Lehrerin",
+      "article": "die",
+      "hasImage": true,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:name",
+      "lemma": "Name",
+      "article": "der",
+      "hasImage": false,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:nicht-so-gut",
+      "lemma": "Nicht so gut.",
+      "article": "",
+      "hasImage": false,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:oesterreich",
+      "lemma": "Österreich",
+      "article": "",
+      "hasImage": false,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:paketzusteller",
+      "lemma": "Paketzusteller",
+      "article": "der",
+      "hasImage": true,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:paketzustellerin",
+      "lemma": "Paketzustellerin",
+      "article": "die",
+      "hasImage": true,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:praktikum",
+      "lemma": "Praktikum",
+      "article": "das",
+      "hasImage": false,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:rentner",
+      "lemma": "Rentner",
+      "article": "der",
+      "hasImage": true,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:rentnerin",
+      "lemma": "Rentnerin",
+      "article": "die",
+      "hasImage": true,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:schueler",
+      "lemma": "Schüler",
+      "article": "der",
+      "hasImage": true,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:schuelerin",
+      "lemma": "Schülerin",
+      "article": "die",
+      "hasImage": true,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:schweiz",
+      "lemma": "Schweiz",
+      "article": "die",
+      "hasImage": false,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:sehr-gut-danke",
+      "lemma": "Sehr gut, danke.",
+      "article": "",
+      "hasImage": false,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:single",
+      "lemma": "Single",
+      "article": "der",
+      "hasImage": false,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:spanien",
+      "lemma": "Spanien",
+      "article": "",
+      "hasImage": false,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:stelle",
+      "lemma": "Stelle",
+      "article": "die",
+      "hasImage": false,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:student",
+      "lemma": "Student",
+      "article": "der",
+      "hasImage": true,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:studentin",
+      "lemma": "Studentin",
+      "article": "die",
+      "hasImage": true,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:studium",
+      "lemma": "Studium",
+      "article": "das",
+      "hasImage": false,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:super",
+      "lemma": "Super!",
+      "article": "",
+      "hasImage": false,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:tschues",
+      "lemma": "Tschüs",
+      "article": "",
+      "hasImage": false,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:tuerkei",
+      "lemma": "Türkei",
+      "article": "die",
+      "hasImage": false,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:usa",
+      "lemma": "USA",
+      "article": "die",
+      "hasImage": false,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:verheiratet",
+      "lemma": "verheiratet",
+      "article": "",
+      "hasImage": false,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:verkaeufer",
+      "lemma": "Verkäufer",
+      "article": "der",
+      "hasImage": true,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:verkaeuferin",
+      "lemma": "Verkäuferin",
+      "article": "die",
+      "hasImage": true,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:vorname",
+      "lemma": "Vorname",
+      "article": "der",
+      "hasImage": false,
+      "hasTTS": true
+    },
+    {
+      "id": "lex:wohnort",
+      "lemma": "Wohnort",
+      "article": "der",
+      "hasImage": false,
+      "hasTTS": true
+    }
+  ]
+}

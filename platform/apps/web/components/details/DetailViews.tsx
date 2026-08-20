@@ -113,6 +113,27 @@ function VocabularyDetail({ detail }: { detail: LearnerVocabularyDetail }) {
       <VocabularyMediaSlot detail={detail} />
       <NounSystemVisual detail={detail} />
 
+      {/* Rendered only when the course material actually prints this word in
+          use. Where it does not, the section is absent entirely — an empty
+          "Example" heading would teach the learner nothing and imply a gap in
+          the app rather than in the book. */}
+      {detail.example ? (
+        <section className="panel" aria-labelledby="vocab-example-heading">
+          <h2 id="vocab-example-heading">Example</h2>
+          <figure className="vocab-example">
+            <p className="vocab-example__de german" lang="de">
+              {detail.example.de}
+            </p>
+            <figcaption className="vocab-example__en">
+              {detail.example.en}
+            </figcaption>
+          </figure>
+          <p className="dense vocab-example__source">
+            From {detail.example.sourceLabel}
+          </p>
+        </section>
+      ) : null}
+
       <section className="panel" aria-labelledby="vocab-forms-heading">
         <h2 id="vocab-forms-heading">Forms</h2>
         <div className="detail-form-pair">

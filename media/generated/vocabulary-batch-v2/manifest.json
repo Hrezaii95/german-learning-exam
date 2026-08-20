@@ -1,0 +1,173 @@
+[
+  {
+    "filename": "hallo.png",
+    "key": "hallo",
+    "german": "Hallo",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "cb33edeaaa22826328d8286b193abbfe558940812b001e24e305b51f15ea3bc0",
+    "alt": "An open hand waves against a warm neutral daylight background."
+  },
+  {
+    "filename": "guten-morgen.png",
+    "key": "guten-morgen",
+    "german": "Guten Morgen",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "e1b39d67a167c4573ff25d04bdbb7a4211eeb4d3903952976c62f1fa2715b260",
+    "alt": "Sunrise light falls across a breakfast table with a cup of coffee."
+  },
+  {
+    "filename": "guten-tag.png",
+    "key": "guten-tag",
+    "german": "Guten Tag",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "8962abcd0adeb19465004d9aca79713ca0c4639abb51f434b7bc64b9a13094c7",
+    "alt": "Two hands meet in a friendly handshake on a bright midday street."
+  },
+  {
+    "filename": "guten-abend.png",
+    "key": "guten-abend",
+    "german": "Guten Abend",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "bec8bf0f07f6ce95853e4925523a6d3907b0cbc9b85aa987b991b628e0f2ed11",
+    "alt": "A dusk sky shows through a window beside a warmly glowing lamp."
+  },
+  {
+    "filename": "gute-nacht.png",
+    "key": "gute-nacht",
+    "german": "Gute Nacht",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "58c897e89295c760641394f752dcd325cec7eccae84a9adfc6cb2d4532e10e42",
+    "alt": "A crescent moon shines through a night window beside a dim bedside lamp."
+  },
+  {
+    "filename": "auf-wiedersehen.png",
+    "key": "auf-wiedersehen",
+    "german": "Auf Wiedersehen",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "c4ef6e09bea33c8a306033cc7b4004403a01b9a3ab8d25625559dfc5c621159d",
+    "alt": "A hand waves from the window of a departing train."
+  },
+  {
+    "filename": "tschues.png",
+    "key": "tschues",
+    "german": "Tschüs",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "d85903112eb8fe072ff2ccdd8cf71c44d35bc221099d1febe84a23f889788155",
+    "alt": "Two people exchange a casual wave at a cafe doorway."
+  },
+  {
+    "filename": "super.png",
+    "key": "super",
+    "german": "Super!",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "1e72d593f73b763e68c106150f86b7246a90c53c3f3a88116c1d6f06c852160d",
+    "alt": "Two hands give thumbs up in bright sunburst light."
+  },
+  {
+    "filename": "auch-super.png",
+    "key": "auch-super",
+    "german": "Auch super.",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "9f2b7ed15106de5c2f050b875e742030f917a100456fd1ced6e90a6f8efd2e9c",
+    "alt": "A raised open palm pauses mid high-five in bright light."
+  },
+  {
+    "filename": "sehr-gut-danke.png",
+    "key": "sehr-gut-danke",
+    "german": "Sehr gut, danke.",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "8385dd5ac6cf79b77b62b1de0ca9e9dcc85dec2f52ae6d0c8cf3ad3f62bb835d",
+    "alt": "Relaxed hands cradle a warm mug beside a sunny window."
+  },
+  {
+    "filename": "gut-danke.png",
+    "key": "gut-danke",
+    "german": "Gut, danke.",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "1792fd19dd8a062fec1506a95628d7b9e2bdc2834dc2761089f2c2b47ee919ba",
+    "alt": "A steady hand gives a thumbs-up gesture in calm daylight."
+  },
+  {
+    "filename": "es-geht.png",
+    "key": "es-geht",
+    "german": "Es geht.",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "b55ab7d682f03140990bd7743e9ddee16c759a30eafa343252d740819bc2f4c0",
+    "alt": "A flat hand tilts from side to side under neutral overcast light."
+  },
+  {
+    "filename": "nicht-so-gut.png",
+    "key": "nicht-so-gut",
+    "german": "Nicht so gut.",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "9f050e2d93d024a83c43218a630d809c2b578c964931fe3f4b0efc529b98195b",
+    "alt": "A hand rests against a forehead beside a grey rainy window."
+  },
+  {
+    "filename": "beruf.png",
+    "key": "beruf",
+    "german": "Beruf",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "7fc5918f78f4a7e8520a53b3a139c0e27e831ae326e19f829aacc4f898df3a7e",
+    "alt": "A workbench displays neatly arranged tools from several trades."
+  },
+  {
+    "filename": "job.png",
+    "key": "job",
+    "german": "Job",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "13779dd09f4664b76d461ec2886e2762237e5ad41dbe058e7632f9f0bfe48685",
+    "alt": "A tidy desk holds a laptop, notebook, pen, and coffee cup."
+  },
+  {
+    "filename": "firma.png",
+    "key": "firma",
+    "german": "Firma",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "cc04760d8ed43fa9b443e3efa11faefcf164d601d9fb7c55eed72dc8f3a9a844",
+    "alt": "A modern office building rises in repeating glass floors."
+  },
+  {
+    "filename": "ausbildung.png",
+    "key": "ausbildung",
+    "german": "Ausbildung",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "7f6740e1f197b95c70c0bffcf868c6ce5a5dea010a7028b36f19e86ac1a43920",
+    "alt": "Apprentice tools and an open instructional manual rest on a workshop bench."
+  },
+  {
+    "filename": "praktikum.png",
+    "key": "praktikum",
+    "german": "Praktikum",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "7367ff1882a4e07752d735bc1c96e3662346ce902055c803d0c2c65d17715db4",
+    "alt": "A blank lanyard badge lies beside a notebook and pen on a desk."
+  },
+  {
+    "filename": "studium.png",
+    "key": "studium",
+    "german": "Studium",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "7e6966d27542dd0a054b40f3257f3b7936cc1e3bf95187fe8d0a07e7e0751508",
+    "alt": "An empty university lecture hall has tiered seating and books."
+  }
+]

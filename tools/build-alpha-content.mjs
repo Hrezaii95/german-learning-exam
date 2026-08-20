@@ -106,6 +106,33 @@ const lesson2 = {
   ],
 };
 
+// Usage examples transcribed VERBATIM from the official Momente A1.1 Kursbuch
+// glossary Deutsch–Englisch (src:glossary:9e35984302ede169). Both halves are
+// quoted from the same printed line pair — the German exactly as it appears and
+// the publisher's own English beside it. Nothing here is composed, translated
+// or paraphrased, and `page` is the PDF page the pair was read from.
+//
+// The glossary lists Lektion 01–02 on PDF pages 1–4 only. Most of its example
+// sentences illustrate verbs and function words (heißen, sein, kommen, ihr),
+// which are not Lexemes, so only the six lexemes below have one. Every other
+// Lesson 1–2 lexeme is printed as a bare headword with no example anywhere in
+// the official sources, and therefore gets none.
+const glossaryExamples = [
+  { lexemeId: "lex:name", de: "Mein Name ist …", en: "My name is …", page: 1, exercise: "Lektion 01, 2" },
+  { lexemeId: "lex:schweiz", de: "Er kommt aus der Schweiz.", en: "He is from Switzerland.", page: 2, exercise: "Lektion 01, 4" },
+  { lexemeId: "lex:jahr", de: "… Jahre alt", en: "… years old", page: 2, exercise: "Lektion 02, 1" },
+  { lexemeId: "lex:kind", de: "keine Kinder", en: "no children", page: 3, exercise: "Lektion 02, 1" },
+  { lexemeId: "lex:geschieden", de: "geschieden sein", en: "to be divorced", page: 3, exercise: "Lektion 02, 4" },
+  { lexemeId: "lex:beruf", de: "von Beruf", en: "by profession", page: 4, exercise: "Lektion 02, 6" },
+].map((item) => ({
+  ...item,
+  sourceFileId: "src:glossary:9e35984302ede169",
+  documentTitle: "Momente A1.1 KB Glossar Deutsch–Englisch",
+}));
+if (new Set(glossaryExamples.map((item) => item.lexemeId)).size !== glossaryExamples.length) {
+  throw new Error("Each lexeme may carry at most one transcribed glossary example.");
+}
+
 const teacherProfessions = parseTeacherProfessions(await readFile(sourceNote, "utf8")).map((item) => ({ id: `teacher-job:${slug(item.alternatives.masculine[0])}`, ...item, priority: 3, lessonIds: ["lesson:02"], sourceId: "src:learner-note:professions", validationStatus: "candidate-needs-german-review" }));
 if (teacherProfessions.length !== 48) throw new Error(`Expected 48 teacher jobs, found ${teacherProfessions.length}.`);
 
@@ -115,10 +142,11 @@ const content = {
   scope: { lessons: ["lesson:01", "lesson:02"], teacherCollections: ["collection:teacher-professions"] },
   sourcePriority: { 1: "official glossary/core", 2: "coursebook/workbook context", 3: "teacher assigned", 4: "personal enrichment" },
   lessons: [lesson1, lesson2],
+  glossaryExamples,
   collections: [{ id: "collection:teacher-professions", titleDe: "Berufe — Lehrermaterial", titleEn: "Teacher professions", lessonIds: ["lesson:02"], priority: 3, memberIds: teacherProfessions.map((item) => item.id) }],
   teacherProfessions,
 };
 
 await mkdir(dirname(output), { recursive: true });
 await writeFile(output, `${JSON.stringify(content, null, 2)}\n`);
-console.log(`Built Lessons 1–2 content with ${teacherProfessions.length} teacher jobs into ${output}.`);
+console.log(`Built Lessons 1–2 content with ${teacherProfessions.length} teacher jobs and ${glossaryExamples.length} transcribed glossary examples into ${output}.`);

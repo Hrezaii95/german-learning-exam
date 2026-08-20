@@ -57,7 +57,7 @@ export const REFERENCE_GROUPS: readonly ReferenceGroup[] = Object.freeze([
         title: "Momente A1.1 KB Glossar Deutsch–Englisch",
         role: "Glossary",
         contribution:
-          "The German–English word list behind the meanings shown on vocabulary cards.",
+          "The German–English word list behind the meanings and the example wording shown on vocabulary cards.",
       }),
       Object.freeze({
         id: "glossar-de-es",

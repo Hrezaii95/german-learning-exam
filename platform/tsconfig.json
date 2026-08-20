@@ -68,6 +68,7 @@
     "tests/web/p5-instructional-visual-system.test.ts",
     "tests/web/pronunciation-control-behavior.test.ts",
     "tests/web/lesson-label-ui.test.ts",
-    "tests/web/p6-a11y-remediation-behavior.test.ts"
+    "tests/web/p6-a11y-remediation-behavior.test.ts",
+    "tests/web/vocabulary-examples-ui.test.ts"
   ]
 }

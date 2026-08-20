@@ -1042,6 +1042,33 @@
     },
     {
       "kind": "SourceAssertion",
+      "id": "assert:lex-schweiz-example",
+      "sourceId": "source:glossary-momente-a11",
+      "location": {
+        "page": 2,
+        "printedPage": 2,
+        "exercise": "Lektion 01, 4"
+      },
+      "subjectId": "lex:schweiz",
+      "field": "example",
+      "value": {
+        "de": "Er kommt aus der Schweiz.",
+        "translationEn": "He is from Switzerland.",
+        "sourceRef": {
+          "sourceFileId": "src:glossary:9e35984302ede169",
+          "documentTitle": "Momente A1.1 KB Glossar Deutsch–Englisch",
+          "page": 2,
+          "exercise": "Lektion 01, 4"
+        }
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "glossary-example-transcription",
+      "reviewedAt": "2026-08-20"
+    },
+    {
+      "kind": "SourceAssertion",
       "id": "assert:lex-tuerkei-lemma",
       "sourceId": "source:alpha-content-bundle",
       "location": {
@@ -1150,6 +1177,33 @@
       "status": "verified",
       "reviewer": "c1-source-encode",
       "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-name-example",
+      "sourceId": "source:glossary-momente-a11",
+      "location": {
+        "page": 1,
+        "printedPage": 1,
+        "exercise": "Lektion 01, 2"
+      },
+      "subjectId": "lex:name",
+      "field": "example",
+      "value": {
+        "de": "Mein Name ist …",
+        "translationEn": "My name is …",
+        "sourceRef": {
+          "sourceFileId": "src:glossary:9e35984302ede169",
+          "documentTitle": "Momente A1.1 KB Glossar Deutsch–Englisch",
+          "page": 1,
+          "exercise": "Lektion 01, 2"
+        }
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "glossary-example-transcription",
+      "reviewedAt": "2026-08-20"
     },
     {
       "kind": "SourceAssertion",
@@ -3602,7 +3656,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-schweiz-lemma",
-        "assert:lex-schweiz-meanings"
+        "assert:lex-schweiz-meanings",
+        "assert:lex-schweiz-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -3616,6 +3671,10 @@
           {
             "field": "meanings",
             "assertionId": "assert:lex-schweiz-meanings"
+          },
+          {
+            "field": "example",
+            "assertionId": "assert:lex-schweiz-example"
           }
         ]
       },
@@ -3624,6 +3683,16 @@
         "article": "die",
         "singular": "Schweiz",
         "plurals": []
+      },
+      "example": {
+        "de": "Er kommt aus der Schweiz.",
+        "translationEn": "He is from Switzerland.",
+        "sourceRef": {
+          "sourceFileId": "src:glossary:9e35984302ede169",
+          "documentTitle": "Momente A1.1 KB Glossar Deutsch–Englisch",
+          "page": 2,
+          "exercise": "Lektion 01, 4"
+        }
       }
     },
     {
@@ -3728,7 +3797,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-name-lemma",
-        "assert:lex-name-meanings"
+        "assert:lex-name-meanings",
+        "assert:lex-name-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -3742,6 +3812,10 @@
           {
             "field": "meanings",
             "assertionId": "assert:lex-name-meanings"
+          },
+          {
+            "field": "example",
+            "assertionId": "assert:lex-name-example"
           }
         ]
       },
@@ -3755,6 +3829,16 @@
             "patternIds": []
           }
         ]
+      },
+      "example": {
+        "de": "Mein Name ist …",
+        "translationEn": "My name is …",
+        "sourceRef": {
+          "sourceFileId": "src:glossary:9e35984302ede169",
+          "documentTitle": "Momente A1.1 KB Glossar Deutsch–Englisch",
+          "page": 1,
+          "exercise": "Lektion 01, 2"
+        }
       }
     },
     {

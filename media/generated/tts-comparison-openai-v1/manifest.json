@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-20",
+  "status": "blocked-no-openai-api-credential",
+  "provider": "openai",
+  "requestedModel": "gpt-4o-mini-tts",
+  "selectedVoice": null,
+  "selectionNote": "No voice was selected or claimed because the API was not reachable and no samples could be auditioned.",
+  "format": "mp3",
+  "speed": "neutral; not applied",
+  "succeeded": 0,
+  "requested": 12,
+  "clips": [],
+  "requestedSamples": [
+    {
+      "filename": "sample-01-umlauts.mp3",
+      "spokenText": "Ä Ö Ü ß",
+      "status": "not-generated"
+    },
+    {
+      "filename": "sample-02-achtundachtzig.mp3",
+      "spokenText": "achtundachtzig",
+      "status": "not-generated"
+    },
+    {
+      "filename": "sample-03-ich-heisse-anna.mp3",
+      "spokenText": "Ich heiße Anna.",
+      "status": "not-generated"
+    },
+    {
+      "filename": "sample-04-wie-heissen-sie.mp3",
+      "spokenText": "Wie heißen Sie?",
+      "status": "not-generated"
+    },
+    {
+      "filename": "sample-05-deutschland.mp3",
+      "spokenText": "Ich komme aus Deutschland.",
+      "status": "not-generated"
+    },
+    {
+      "filename": "sample-06-architekt.mp3",
+      "spokenText": "der Architekt",
+      "status": "not-generated"
+    },
+    {
+      "filename": "sample-07-architektin.mp3",
+      "spokenText": "die Architektin",
+      "status": "not-generated"
+    },
+    {
+      "filename": "sample-08-arzt.mp3",
+      "spokenText": "der Arzt",
+      "status": "not-generated"
+    },
+    {
+      "filename": "sample-09-aerztin.mp3",
+      "spokenText": "die Ärztin",
+      "status": "not-generated"
+    },
+    {
+      "filename": "sample-10-kfz-mechatronikerin.mp3",
+      "spokenText": "die Kfz-Mechatronikerin",
+      "status": "not-generated"
+    },
+    {
+      "filename": "sample-11-guten-morgen.mp3",
+      "spokenText": "Guten Morgen. Wie geht es Ihnen?",
+      "status": "not-generated"
+    },
+    {
+      "filename": "sample-12-firma-oesterreich.mp3",
+      "spokenText": "Ich arbeite bei einer Firma in Österreich.",
+      "status": "not-generated"
+    }
+  ],
+  "blocker": "No usable OpenAI API credential is present in this process. The installed OpenAI CLI reports that OPENAI_API_KEY must be set.",
+  "requiredToGenerate": "A securely supplied OPENAI_API_KEY with API billing/access for POST /v1/audio/speech and outbound HTTPS to api.openai.com."
+}

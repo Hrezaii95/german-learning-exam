@@ -331,6 +331,61 @@ function checkAnswerSpec(
 }
 
 /** Emit a stable element-level issue for null/non-object array members; never throw. */
+/**
+ * A lexeme usage example must be a verbatim source quote that can be traced
+ * back to a page: German, that source's own English, and the document + page.
+ * Anything partial is rejected rather than shipped as an untraceable example.
+ */
+function checkLexemeExample(
+  issues: ValidationIssue[],
+  objectId: string,
+  value: unknown,
+): void {
+  if (value == null) return;
+  if (typeof value !== "object" || Array.isArray(value)) {
+    issues.push(
+      issue("INVALID_TYPE", `example must be an object`, { objectId, field: "example" }),
+    );
+    return;
+  }
+  const example = value as Record<string, unknown>;
+  requireString(issues, objectId, "example.de", example.de);
+  rejectHtml(issues, objectId, "example.de", example.de);
+  requireString(issues, objectId, "example.translationEn", example.translationEn);
+  rejectHtml(issues, objectId, "example.translationEn", example.translationEn);
+
+  const ref = example.sourceRef;
+  if (ref == null || typeof ref !== "object" || Array.isArray(ref)) {
+    issues.push(
+      issue("REQUIRED_FIELD", `example.sourceRef required`, {
+        objectId,
+        field: "example.sourceRef",
+      }),
+    );
+    return;
+  }
+  const sourceRef = ref as Record<string, unknown>;
+  requireString(issues, objectId, "example.sourceRef.sourceFileId", sourceRef.sourceFileId);
+  requireString(issues, objectId, "example.sourceRef.documentTitle", sourceRef.documentTitle);
+  rejectHtml(issues, objectId, "example.sourceRef.documentTitle", sourceRef.documentTitle);
+  if (
+    typeof sourceRef.page !== "number" ||
+    !Number.isSafeInteger(sourceRef.page) ||
+    sourceRef.page < 1
+  ) {
+    issues.push(
+      issue("REQUIRED_FIELD", `example.sourceRef.page must be a positive page number`, {
+        objectId,
+        field: "example.sourceRef.page",
+      }),
+    );
+  }
+  if ("exercise" in sourceRef) {
+    requireString(issues, objectId, "example.sourceRef.exercise", sourceRef.exercise);
+    rejectHtml(issues, objectId, "example.sourceRef.exercise", sourceRef.exercise);
+  }
+}
+
 function requireObjectElement(
   issues: ValidationIssue[],
   arrayField: string,
@@ -604,6 +659,9 @@ export function validateSchemaShape(bundle: unknown): {
           field: "pronunciation",
         }),
       );
+    }
+    if ("example" in lex) {
+      checkLexemeExample(issues, objectId, lex.example);
     }
     requirePublication(issues, objectId, lex.publication);
   }

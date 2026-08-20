@@ -19,7 +19,7 @@ export type PublishableKind =
 
 /**
  * Base required published fields when status === "published".
- * Conditional extras (answerSpec, spokenText) are added by
+ * Conditional extras (example, answerSpec, spokenText) are added by
  * {@link requiredPublishedFieldsFor} when those properties are present.
  */
 export const MINIMUM_PUBLISHED_FIELDS: Readonly<
@@ -46,6 +46,11 @@ export function requiredPublishedFieldsFor(
   entity: Record<string, unknown>,
 ): string[] {
   const fields = [...MINIMUM_PUBLISHED_FIELDS[kind]];
+  // A learner-visible example is a source quote: if one is stored it must map
+  // to a verified assertion, so the page it was transcribed from is provable.
+  if (kind === "Lexeme" && entity["example"] != null) {
+    fields.push("example");
+  }
   if (kind === "LearningActivity" && entity["answerSpec"] != null) {
     fields.push("answerSpec");
   }

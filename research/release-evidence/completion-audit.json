@@ -1,0 +1,853 @@
+{
+  "schemaVersion": 1,
+  "artifact": "P6-03 — Requirement and register final diff",
+  "registerRow": "P6-03",
+  "declaredArtifactPath": "research/release-evidence/completion-audit.json",
+  "generatedAt": "2026-08-20",
+  "generatedBy": "Claude Code — read-only audit agent (no source, build, or git changes)",
+  "scope": "German Learning OS Lessons 1-2 Alpha. Judges the state on disk at E:\\claude-cursor\\side projects\\German learning against docs/02-product-requirements.md, plans/full-alpha-register.csv and docs/13-quality-and-acceptance.md.",
+
+  "method": {
+    "rule": "Every status traces to a file on disk, a measured count, or a named absence. Where a plan or an older research file asserts a number, the number was re-measured from the current artifacts and the measured value is what is recorded. Prose claims that could not be re-measured are labelled as claims.",
+    "measurementScripts": "Read-only Node scripts over platform/content/published/*.json, platform/apps/web/generated/*.json, platform/apps/web/out/**, media/**, content/source-index/**, platform/tests/**. No build was run; no file in the application was modified.",
+    "supersession": "docs/17-current-state-and-completion-matrix.md is the frozen 2026-08-07 G0 baseline written against samples/german-learning-ui-samples, not against platform/. It is NOT current state. research/curriculum-diff-2026-08-13.json is likewise a 2026-08-14 snapshot that later content waves partly closed; every one of its id-sets was re-diffed here.",
+    "buildInFlight": "Another agent was mid-build and mid-E2E-triage during this audit. platform/apps/web/out/ was read as found (205 HTML pages, 1369 files) and may be regenerated after this run; the offline audit artifact on disk reports exportedFiles 1369, which matches, so the export read here is coherent. The offline audit's version hash changed from ec1af2e371386ee8 to 12e570650d2328d0 during the run as that build completed; every other value in it (gate pass, precacheCount 87, exportedFiles 1369, 0 failures) was unchanged.",
+    "concurrentClosuresMidAudit": "Two items open at the start of this audit were closed by concurrent agents while it ran, and both are reflected below: (1) research/release-evidence/offline-live-verification.json appeared on disk and closes live service-worker registration; (2) research/release-evidence/p6-02-status.md was rewritten to mark the end-to-end layer closed at 36/36 green. Both are recorded from their artifacts. This audit read and checked those artifacts; it did NOT re-execute the browser session or the Playwright run behind them, and says so wherever it relies on them."
+  },
+
+  "authorities": [
+    "docs/02-product-requirements.md",
+    "docs/18-requirement-traceability.md",
+    "docs/13-quality-and-acceptance.md",
+    "docs/11-lessons-01-02-content-spec.md",
+    "plans/full-alpha-register.csv",
+    "plans/PLAN-BATON-full-alpha.md",
+    "docs/DECISIONS.md (ADR-011 .. ADR-016)",
+    "research/curriculum-diff-2026-08-13.json",
+    "research/release-evidence/p6-02-status.md",
+    "research/release-evidence/p6-02-confirmed-findings.json"
+  ],
+
+  "requirements": {
+    "idSetCompleteness": {
+      "statement": "required-set == covered-set UNION open-set, with no element in two sets and none outside the union.",
+      "requiredSetSource": "docs/02-product-requirements.md",
+      "requiredCount": 49,
+      "requiredByFamily": { "LRN": 6, "LES": 5, "VOC": 5, "VER": 3, "GRM": 2, "PQA": 4, "AUD": 6, "HUB": 3, "REV": 4, "DAT": 5, "UX": 6 },
+      "familySum": "6+5+5+3+2+4+6+3+4+5+6 = 49",
+      "crossCheck": {
+        "docs02_ids": 49,
+        "docs18_ids": 49,
+        "onlyInDocs02": [],
+        "onlyInDocs18": [],
+        "verdict": "docs/02 MUST-id set and docs/18 traceability-matrix id set are identical; symmetric difference is empty."
+      },
+      "arithmetic": {
+        "met": 32,
+        "partial": 17,
+        "unmet": 0,
+        "notInAlphaScope": 0,
+        "coveredSet": "met = 32",
+        "openSet": "partial + unmet = 17 + 0 = 17",
+        "sum": "32 + 17 + 0 + 0 = 49",
+        "equalsRequired": true,
+        "intersectionOfCoveredAndOpen": 0,
+        "outsideUnion": 0
+      },
+      "keywordStrength": {
+        "must": 48,
+        "should": 1,
+        "shouldIds": ["UX-004"],
+        "note": "docs/02 line 3 states 'Each MUST is a release gate'. Exactly one of the 49 requirements is phrased SHOULD, not MUST: UX-004 (offline). REV-002 contains a MAY clause but its main obligation is MUST. docs/18's change history describes the set as 'all 49 MUST requirement IDs', which is inaccurate by one — see disagreements DIS-08. By docs/02's own rule, UX-004 is not a release gate."
+      },
+      "coveredIds": [
+        "LRN-002", "LRN-003", "LRN-004", "LRN-005", "LRN-006",
+        "LES-004",
+        "VOC-002",
+        "VER-002", "VER-003",
+        "PQA-001", "PQA-003", "PQA-004",
+        "AUD-001", "AUD-002", "AUD-003", "AUD-004", "AUD-005", "AUD-006",
+        "HUB-001", "HUB-003",
+        "REV-001", "REV-002", "REV-003", "REV-004",
+        "DAT-001", "DAT-002", "DAT-003", "DAT-004", "DAT-005",
+        "UX-003", "UX-004", "UX-006"
+      ],
+      "openIds": [
+        "LRN-001",
+        "LES-001", "LES-002", "LES-003", "LES-005",
+        "VOC-001", "VOC-003", "VOC-004", "VOC-005",
+        "VER-001",
+        "GRM-001", "GRM-002",
+        "PQA-002",
+        "HUB-002",
+        "UX-001", "UX-002", "UX-005"
+      ],
+      "unmetIds": [],
+      "notInAlphaScopeIds": [],
+      "note": "coveredIds has 32 entries, openIds has 17, no id appears in both, and every one of the 49 required ids appears in exactly one list. Counted directly from the rows below. UX-004 moved from partial to met DURING this audit when research/release-evidence/offline-live-verification.json appeared on disk."
+    },
+
+    "statusDefinitions": {
+      "met": "The requirement's behaviour exists on disk and is evidenced by a measured artifact. A named residual risk may still be recorded in gaps.",
+      "partial": "A real slice exists and is evidenced, but at least one element the requirement names is measurably absent.",
+      "unmet": "No implementation evidence covers the required behaviour.",
+      "not-in-alpha-scope": "Explicitly deferred in docs/02 'Explicitly deferred' or docs/15."
+    },
+
+    "rows": [
+      {
+        "id": "LRN-001",
+        "statement": "Implement See->Hear->Notice->Repeat->Recall->Use->Feedback->Review->Master for every canonical concept type.",
+        "status": "partial",
+        "evidence": "platform/content/published/activities.json — 24 LearningActivity records, modes measured: see 4, hear 6, notice 6, recall 2, use 3, check 2, review 1 (=24). skillDimensions populated on all 24. Runtime loop surfaces exist: components/activities/ActivityInteraction.tsx (attempt + feedback), components/audio/PronunciationControl.tsx (repeat), packages/learning/src/review (review), packages/learning/src/mastery (master).",
+        "gaps": [
+          "docs/18 declares the canonical contract as `LearningActivity.phases[]` with typed attempts across eight loop phases. No `phases` array exists on any record; the schema carries a single `mode` per activity. The declared engine contract is not the implemented one.",
+          "23 of 24 activities have conceptIds: [] — only activity:lesson-02-teacher-professions-deck names a concept. Declared as ContentGap gap:activity-concept-links with blocksPublication:false, so no published activity states which canonical concept it teaches.",
+          "No activity mode encodes Repeat, Feedback or Master; those exist only as runtime behaviour, not as loop evidence per concept type.",
+          "19 of 24 activities complete on completionRule 'viewed'; 3 on 'recorded'; 2 on 'correct'."
+        ]
+      },
+      {
+        "id": "LRN-002",
+        "statement": "Follow Lesson 1 then 2, enter either lesson directly, or enter a learned concept through a global hub.",
+        "status": "met",
+        "evidence": "Exported routes measured in platform/apps/web/out: /lessons (1) + 2 lesson overviews + 23 activity routes = 26 pages; 6 hubs + /hubs index; 104 detail routes (vocabulary 69, verbs 10, grammar 10, phrases/Q&A 15). lesson-02.json carries prerequisiteLessonIds. E2E platform/tests/e2e/01-first-visit.spec.ts (3 tests), 03-lesson-stage-checkpoint.spec.ts (3 tests).",
+        "gaps": []
+      },
+      {
+        "id": "LRN-003",
+        "statement": "Lesson progress MUST be multidimensional: exposure, recognition, recall, listening, production and review stability.",
+        "status": "met",
+        "evidence": "platform/packages/learning/src/mastery/dimensions.ts — MASTERY_DIMENSIONS = [exposure, recognition, recall, listening, form, production]; STABILITY_EVIDENCE_KIND models review stability as derived scheduling/history evidence rather than a vector slot, documented in the file. platform/tests/learning (4 files, 196 static test cases) covers reduction, reload derivation and per-dimension lapse recovery.",
+        "gaps": [
+          "Naming deviation from the literal requirement: the vector's sixth slot is `form`, and `review stability` is derived from review history instead of being a vector dimension. All six named concepts are represented; the composition differs from the wording of LRN-003."
+        ]
+      },
+      {
+        "id": "LRN-004",
+        "statement": "Page views and multiple-choice recognition MUST NOT alone mark an item mastered.",
+        "status": "met",
+        "evidence": "platform/packages/learning/src/mastery/policy.ts (threshold + evidence reducer); platform/packages/learning/src/persistence/types.ts:60 states ActivityProgressRecord is 'navigation state, never mastery evidence'. Anti-luck coverage in platform/tests/learning/mastery tests.",
+        "gaps": []
+      },
+      {
+        "id": "LRN-005",
+        "statement": "Alpha MUST contain only verified Lesson 1, Lesson 2 and explicitly attached teacher/personal enrichment.",
+        "status": "met",
+        "evidence": "platform/packages/content/src/validation (scope firewall). Measured across the five published fragments: exactly 2 Lesson records (lesson:01, lesson:02); the only attached collection is collection:teacher-professions, declared on lesson:02 with required:false and sourcePriority 3. No Lesson 3+ / A1.2 id appears in any fragment.",
+        "gaps": []
+      },
+      {
+        "id": "LRN-006",
+        "statement": "Extra vocabulary, grammar, verbs, phrases, Q&A, dialogues and assignments MUST attach to any lesson without changing the schema.",
+        "status": "met",
+        "evidence": "309 typed relationship records across the five fragments, 0 unresolved endpoints (measured against the 1307-record id space). The 86-lexeme teacher collection attaches to lesson:02 purely through Collection.membership.memberIds plus relationships — no schema field was added for it.",
+        "gaps": [
+          "Dialogue is a supported type with zero instances (0 Dialogue records in any fragment). The attachment mechanism is proven for the types that have instances."
+        ]
+      },
+      {
+        "id": "LES-001",
+        "statement": "The dashboard MUST expose Continue, Today's Mission, Lessons 1-2, review due, weak skills, recent items and hub shortcuts.",
+        "status": "partial",
+        "evidence": "platform/apps/web/components/learner-state/LearnerDashboard.tsx — ContinueCard (line 74), MissionCard 'Today's mission' (line 124) with MissionMix due/new split (line 146), EvidenceStrip 'My progress' (line 172), CourseCards for both lessons (line 280), Badges section (line 495), hub shortcuts via /hubs links.",
+        "gaps": [
+          "5 of the 7 named elements present. 'weak skills' — no section; the strings weak/Weak do not occur anywhere in components/learner-state/.",
+          "'recent items' — no section; the strings recent/Recent do not occur anywhere in components/learner-state/."
+        ]
+      },
+      {
+        "id": "LES-002",
+        "statement": "Each lesson MUST have Overview, Learn, Listen, Practise, Check and Review stages plus a two-minute visual summary.",
+        "status": "partial",
+        "evidence": "Two-minute summaries exist as activity:lesson-01-checkpoint-summary and activity:lesson-02-checkpoint-summary, both published and rendered ('Mixed checkpoint and two-minute summary'). Stage data measured from platform/content/published: lesson:01 = [overview, learn, listen, practise, check] (5); lesson:02 = [overview, learn, listen, practise, review, check] (6). 24 activity IDs declared, 23 published and route-resolvable.",
+        "gaps": [
+          "11 of the 12 required lesson-stages exist in data: lesson:01 has no `review` stage at all.",
+          "On the learner surface both lessons render only 5 stages. Read from platform/apps/web/out/lessons/02/index.html, lesson 2's `review` stage is not rendered because its sole activity (activity:lesson-02-teacher-professions-deck) is publication status 'review'. Neither lesson shows a Review stage to a learner."
+        ]
+      },
+      {
+        "id": "LES-003",
+        "statement": "A lesson overview MUST show objectives, content counts by source priority, estimated time, progress by skill and required teacher extras.",
+        "status": "partial",
+        "evidence": "Read from platform/apps/web/out/lessons/01/index.html: 6 communicative outcomes listed; '65 minutes'; '12 activities'; '0 of 12 completed'; per-stage estimates (2/25/10/20/8 min) and per-stage skill targets (exposure, recognition, listening / recall, production); per-stage completion counters.",
+        "gaps": [
+          "'content counts by source priority' — absent. The page shows a single activity count; no source-priority breakdown exists in platform/apps/web/generated/learner-projection.json (lesson keys: activityCount, canonicalPath, communicativeGoals, estimatedMinutesTotal, id, number, routeSegment, stages, titleDe, titleEn).",
+          "'required teacher extras' — absent from the learner surface. lesson-02.json carries collections:[{collectionId: collection:teacher-professions, sourcePriority: 3, required: false}], but `collections` is not projected and the rendered lesson 2 page never mentions the teacher collection.",
+          "'progress by skill' is delivered as per-stage skill targets plus per-stage completion counts, not as progress per mastery dimension."
+        ]
+      },
+      {
+        "id": "LES-004",
+        "statement": "Lesson activities MUST be resumeable at a stable activity ID.",
+        "status": "met",
+        "evidence": "ResumeState in platform/packages/learning/src/persistence/types.ts; ActivityProgressRecord carries lessonId + stageId + activityId + progressState. Stable route shape /lessons/:lessonSegment/activity/id-<hex> exported for all 23 published activities. E2E platform/tests/e2e/02-progress-persistence.spec.ts (5 tests, 'completion survives a reload'). Regression coverage in platform/tests/web/j1-activity-runtime.test.ts.",
+        "gaps": []
+      },
+      {
+        "id": "LES-005",
+        "statement": "Every hub item MUST link back to all source lessons and relevant lesson activity.",
+        "status": "partial",
+        "evidence": "Lesson backlink is complete: 104 of 104 detail records in platform/apps/web/generated/learner-details.json carry non-empty lessonIds; every hub item record carries lessonIds. Activity backlinks exist for two derived surfaces: the concepts hub's 6 topics link 14 distinct activities and 26 source entity ids, and each of the listening hub's 6 exercise groups links its lesson activity.",
+        "gaps": [
+          "0 of 104 detail records reference any activity id. All 10 GrammarConcept details carry activityIds: [].",
+          "Root cause is the same as LRN-001: 23 of 24 activities have conceptIds: [] (ContentGap gap:activity-concept-links, blocksPublication:false), so the inverse relation cannot be derived for the general case."
+        ]
+      },
+      {
+        "id": "VOC-001",
+        "statement": "Every noun MUST expose lemma, article, gender, singular, plural form/pattern, English meaning, pronunciation, audio, example, source, lesson and review status.",
+        "status": "partial",
+        "evidence": "48 published nouns measured: 48/48 article, 48/48 gender (masculine|feminine|neuter), 48/48 singular, 41/48 plural form stored (the 7 without are the glossary-marked (Sg.)/(Pl.) lexemes: Schweiz, Türkei, USA, Herkunft, Alter, Familienstand, Studium). 69/69 published lexemes carry an English gloss. Audio: 97 of 104 details resolve a concrete de-DE asset. Source: 373/373 published fields carry a resolvable SourceAssertion. Lesson: 104/104 lessonIds. Review status: publicationStatus on every record plus learner review-card state.",
+        "gaps": [
+          "'plural pattern' — 0 of 48 nouns carry noun.plurals[].patternIds; only the literal form string is stored.",
+          "'example' — 0 example records exist in any published fragment; 0 of 69 lexemes carry exampleIds; no detail page renders an example sentence."
+        ]
+      },
+      {
+        "id": "VOC-002",
+        "statement": "Profession entries MUST support masculine and feminine person forms and their independent plurals without pretending every pair follows one rule.",
+        "status": "met",
+        "evidence": "platform/content/published/teacher-professions.json: 48 teacherSourceRows, 86 fragment lexemes as independent masculine/feminine records (8 further rows resolve to canonical core lexemes rather than duplicates: friseur, architekt, lehrer, kellner, verkaeufer, arzt, ingenieur, journalist). Learner projection carries a per-lexeme personForm block with relatedId, relatedLemma, relatedArticle, relatedGender, sharedStem, feminineSuffix and a human operationLabel (e.g. 'Add feminine -in'), so each pair states its own rule. Lexical pairs are kept separate (landwirt/bauer, landwirtin/baeuerin present as distinct ids).",
+        "gaps": [
+          "Publication of the teacher deck is blocked by the qualified-German human review gate, not by a schema gap: all 86 fragment lexemes and collection:teacher-professions are publication status 'review'. This is tracked under `open`, not counted against VOC-002."
+        ]
+      },
+      {
+        "id": "VOC-003",
+        "statement": "Morphology MUST mark stem changes, umlauts, suffixes and irregular plurals using the shared infographic code.",
+        "status": "partial",
+        "evidence": "Person-form morphology is encoded and rendered: personForm.sharedStem + feminineSuffix + operationLabel on profession lexemes. The shared code exists: media/generated/infographics/manifest.json declares style tokens plus nonColorCues for masculine/feminine/neuter/plural and regular/spellingAdjustment/irregular; person-form-morphology-v1.svg and plural-patterns-and-gaps-v1.svg exist on disk. A morphology-puzzle game mode is one of the 7 registered modes.",
+        "gaps": [
+          "0 of 48 published nouns carry plural patternIds; 0 carry any morphology-operation record. docs/18 names the data contract as 'ordered morphology operations and plural patterns' — the ordered-operation model is not encoded for noun plurals (umlaut, stem change, suffix class, irregular are not machine-readable).",
+          "Of the 7 infographic families, only 3 are shipped into platform/apps/web/public/infographics (greetings-context-day-v1, qa-register-casual-formal-v1, verb-endings-regular-special-irregular-v1). person-form-morphology-v1 and plural-patterns-and-gaps-v1 are NOT in the learner bundle."
+        ]
+      },
+      {
+        "id": "VOC-004",
+        "statement": "Vocabulary MUST support image->German, German->meaning, audio->word, article choice, plural formation, typing and spoken-repeat card templates.",
+        "status": "partial",
+        "evidence": "platform/apps/web/lib/games/game-ids.ts declares exactly 7 modes (flashcards, picture-word-match, article-choice, audio-match, word-order, verb-builder, morphology-puzzle) with assertExactPracticeGameIds failing closed on unknown/duplicate/missing. 8 practice routes exported (index + 7). Behavioural coverage in platform/tests/web/p4a-games-behavior.test.ts; E2E platform/tests/e2e/05-practice-games.spec.ts (5 tests).",
+        "gaps": [
+          "0 of 69 published lexemes carry cardTemplateIds. docs/18's data contract ('seven vocabulary card templates and normalization rules') has no per-item binding in the published content; template eligibility is decided in app code, not in the content graph.",
+          "audio-match ships as an honest 'unavailable' state rather than a playable mode, so 6 of 7 modes are playable.",
+          "The registered 7 are game modes, not a one-to-one match with the 7 card templates named in VOC-004 (no distinct image->German vs German->meaning vs spoken-repeat template ids exist)."
+        ]
+      },
+      {
+        "id": "VOC-005",
+        "statement": "The 48 teacher professions MUST be filterable as 'Teacher extra · Lesson 2' and grouped by semantic category.",
+        "status": "partial",
+        "evidence": "48 rows exist and are route-resolvable: /collections/professions plus 48 row pages = 49 exported HTML pages. platform/apps/web/generated/learner-extra-professions.json carries the 48 rows with a rowsBySegment index and collection metadata (lessonId, sourcePriority, inclusion, humanLanguageReviewRequired, media flags).",
+        "gaps": [
+          "The collection and all 86 fragment lexemes are publication status 'review'; the collection is exposed as an optional extra with audioAvailable=false and imagesAvailable=false, and is excluded from the 69-item vocabulary hub.",
+          "No 'Teacher extra · Lesson 2' filter exists on any hub: HubQueryState is {q, lesson, category} only — there is no source-priority or teacher filter (see HUB-002).",
+          "docs/11's 7 semantic categories (trades, transport/service/retail, food/agriculture, health/science, education/creative/media, technical/professional/legal, public/safety/other) are not the hub's category axis; the vocabulary hub's categories are parts of speech (adjective, interjection, noun, phrase, proper-noun)."
+        ]
+      },
+      {
+        "id": "VER-001",
+        "statement": "Every taught verb MUST expose infinitive, meanings/uses, separability/reflexivity where applicable, present conjugation, pronunciation, examples, patterns, source links and review cards.",
+        "status": "partial",
+        "evidence": "10 published verbs measured. 10/10 infinitive, 10/10 meanings, 10/10 present paradigm (7 persons for the six Lesson 2 verbs, 4 persons for the four Lesson 1 verbs, matching docs/11's per-lesson form requirement). Pronunciation resolves for 4 of 10 through the audio projection. Source links: every published field carries a resolvable assertion. Review cards are created by the learning engine, evidenced in platform/tests/e2e/04-review-session.spec.ts. Verb self-check UI at components/details/VerbSelfCheck.tsx.",
+        "gaps": [
+          "0 of 10 verbs carry exampleIds; 0 carry grammarIds; 0 carry cardTemplateIds.",
+          "6 of 10 verbs have no audio asset (arbeiten, haben, leben, machen, studieren, wohnen) — they render the explicit {assetId:null,state:'missing'} gap state. See AUD-001.",
+          "No separability or reflexivity field exists on the Verb record. None of the ten Alpha verbs is separable or reflexive, so 'where applicable' is arguably vacuous, but the schema could not express it if a later lesson needed it."
+        ]
+      },
+      {
+        "id": "VER-002",
+        "statement": "Regular endings, spelling adjustments and irregular stems/forms MUST use distinct non-gender semantic tokens.",
+        "status": "met",
+        "evidence": "ADR-004 fixes the token split. media/generated/infographics/manifest.json style.tokens carries ruleRegular #148A87, ruleSpecial #B76A00, ruleIrregular #C52F62 as a separate axis from genderMasculine/Feminine/Neuter/plural, and style.nonColorCues gives each a label/shape (REG or named suffix, SPELL or amber bridge label, IRR or star) so meaning never rests on hue. verb-endings-regular-special-irregular-v1.svg is shipped to platform/apps/web/public/infographics. The Studio P2a worker log records 'no gender/rule colour in new CSS'.",
+        "gaps": []
+      },
+      {
+        "id": "VER-003",
+        "statement": "Alpha MUST include sein, heissen, kommen, lernen, wohnen, leben, haben, arbeiten, machen and studieren where supported by Lessons 1-2.",
+        "status": "met",
+        "evidence": "Id-set diff measured against the published verbs: required 10, present 10, missing [], extra []. All ten are publication status 'published'. This closes the 10-required / 4-published state recorded in research/curriculum-diff-2026-08-13.json.",
+        "gaps": [
+          "ADR-013: verb:leben's English gloss 'to live' is derived from the glossary's zusammen|leben entries, not a verbatim standalone headword, and is Accepted with an owner-revisit flag. Reverting is a one-line change to the fullFormGlosses table plus a rebuild. Tracked under `open`."
+        ]
+      },
+      {
+        "id": "GRM-001",
+        "statement": "Grammar pages MUST teach through a visual model, noticed contrast, examples, guided manipulation, recall and contextual use.",
+        "status": "partial",
+        "evidence": "10 published GrammarConcept records carry titleDe, titleEn, noticeTarget, ruleSteps (each with a model sentence and a notice line), commonErrorTags and prerequisiteIds; the learner projection renders notice, ruleSteps, prerequisiteLabels and an audio asset per concept. 11 grammar routes exported (index + 10 details).",
+        "gaps": [
+          "0 of 10 grammar details carry activityIds; the record field activityTemplateIds is empty on all 10. The 'guided manipulation, recall and contextual use' activity sequence docs/18 names is not linked from the concept.",
+          "0 of 10 carry exampleIds (model sentences live inside ruleSteps instead of typed Example records).",
+          "Only 1 of the 7 infographic families targets a grammar concept surface in the shipped bundle."
+        ]
+      },
+      {
+        "id": "GRM-002",
+        "statement": "Alpha MUST cover W-questions and statement word order, pronouns, singular/plural present conjugation, du/Sie, aus with article-bearing countries, negation with nicht, als/bei/in, and person-form -in.",
+        "status": "partial",
+        "evidence": "Id-set diff measured against the 11 required concept ids from research/curriculum-diff-2026-08-13.json: required 11, present 10, missing 1, extra 0. Published: gram:main-clause-word-order-l1, w-questions-l1, present-conjugation-l1, aus-origin-l1, du-sie-register-l1, personal-pronouns-l1, full-present-person-forms-l2, nicht-profile-negation-l2, profession-expressions-l2 (covers als/bei/in and article-less professions after sein), profession-feminine-forms-l2 (covers -in).",
+        "gaps": [
+          "gram:und-linking-l1 ('linking with und', docs/11 Lesson 1 grammar list) has never been encoded and is not covered by any published concept. Unchanged since the 2026-08-14 curriculum diff."
+        ]
+      },
+      {
+        "id": "PQA-001",
+        "statement": "Phrases and Q&A MUST be first-class objects, not strings embedded only in lessons.",
+        "status": "met",
+        "evidence": "49 published PhrasePattern records and 15 published QAPair records, each with its own canonical id, its own source assertions, hub entries (phrases hub = 64 items = 49 + 15) and, for the 15 QAPairs, their own detail routes (/phrases/id-… , 16 exported pages including the index). 193 typed search documents include PhrasePattern 49 and QAPair 15 as distinct kinds.",
+        "gaps": [
+          "The third typed conversational object, Dialogue, has 0 records in every fragment. activity:lesson-01-name-model-dialogue is published against zero typed dialogues (ContentGap gap:dialogue-l1-models)."
+        ]
+      },
+      {
+        "id": "PQA-002",
+        "statement": "A Q&A object MUST support register, intent, question audio, multiple accepted answer patterns, slot substitutions, grammar links and conversation use.",
+        "status": "partial",
+        "evidence": "15 published QAPairs measured: intent on all 15; register on all 15 across three values (informal, formal, neutral); questionPatternId on all 15; answerPatternIds between 1 and 5 per pair. Conversation use is proven by the 5-level ladder (see PQA-004). Question audio resolves for 14 of 15 through the audio projection.",
+        "gaps": [
+          "'slot substitutions' — the QAPair record has no slots field. PhrasePattern does declare `slots`, but 0 of 49 published phrase patterns populate it.",
+          "0 of 15 QAPairs carry grammarIds — the grammar-link field is empty on every one.",
+          "0 of 15 carry audioIds at the content layer; audio is attached later by the projection, so the content graph itself does not record question audio.",
+          "qa:work-casual-main has no audio asset at all (explicit missing state)."
+        ]
+      },
+      {
+        "id": "PQA-003",
+        "statement": "Alpha MUST support greetings/farewells, name, origin, wellbeing, identity, age, residence, relationship/family status and occupation patterns supported by Lessons 1-2.",
+        "status": "met",
+        "evidence": "Id-set diff against the 15 required communicative intents: required 15, present 15, missing [], extra []. qa:work-casual-main ('Was macht ihr beruflich?' — the Lesson 2 title) was added after the 2026-08-14 diff and is now published, closing that diff's single miss.",
+        "gaps": []
+      },
+      {
+        "id": "PQA-004",
+        "statement": "Conversation practice MUST progress from model dialogue to guided choice, slot substitution, word-order construction, spoken rehearsal and independent role-play prompt.",
+        "status": "met",
+        "evidence": "platform/apps/web/lib/conversation/level-ids.ts declares 'Exact five P4B conversation ladder level IDs — centralized, ordered, immutable'; conversation-progress.ts enforces ordered, idempotent level completion. 2 conversation routes exported. Coverage: platform/tests/web/p4b-conversation-behavior.test.ts, p4b-conversation-ui.test.ts, p4b-spoken-behavior.test.ts; E2E platform/tests/e2e/06-conversation-ladder.spec.ts (3 tests, 'conversation ladder to level five').",
+        "gaps": []
+      },
+      {
+        "id": "AUD-001",
+        "statement": "Every core word, canonical form and model sentence MUST have a reviewed de-DE audio asset or an explicit gap state.",
+        "status": "met",
+        "evidence": "Measured against platform/apps/web/public/audio/tts-de-de-v1/manifest.json (110 assets) and the 104 detail concepts: 97 resolve a concrete asset; the remaining 7 carry the explicit gap contract {assetId: null, state: 'missing'} and render a disabled 'Pronunciation unavailable' control. That explicit gap state is exactly what the requirement permits, so the contract holds. Coverage manifest also reports activityUtterancesWithExactAudio 92/92 and activitiesWithEitherAudio 23/23. media/qa/alpha-tts-technical-audit.json + tools/audit-alpha-tts.mjs: 354 manifest = 354 disk = 354 audited, zero technical failures.",
+        "gaps": [
+          "The 7 concepts with no audio are verb:arbeiten, verb:haben, verb:leben, verb:machen, verb:studieren, verb:wohnen and qa:work-casual-main — precisely the content added by the ADR-013 wave that took details from 97 to 104.",
+          "Cause is a stale generation step, not a missing feature: media/manifests/published-tts-exact-v1.json (and its copy under public/audio) still reports coverage.publishedDetailConcepts 97 / detailConceptsWithExactAudio 97 and unmappedDetails 0. The manifest was generated before the content wave and never regenerated, so it reports full coverage of a 97-concept world that no longer exists.",
+          "'reviewed' is not yet true of any clip: all 354 TTS assets carry reviewStatus 'candidate-needs-listening-review'. The G5 human listening gate is open (see `open`)."
+        ]
+      },
+      {
+        "id": "AUD-002",
+        "statement": "Audio MUST begin promptly after a learner gesture, support repeat, normal and study speed, preserve pitch and show playback/error state.",
+        "status": "met",
+        "evidence": "platform/apps/web/components/audio/PronunciationControl.tsx and WorkbookAudioPanel.tsx; audio speed persistence is a fixed P1 defect with a fail-first regression test (PLAN-BATON P4-04 row). Coverage: platform/tests/web/pronunciation-control-behavior.test.ts, pronunciation-live.test.ts. E2E platform/tests/e2e/08-listening-playback.spec.ts (3 tests, 'workbook listening plays for real') runs with --autoplay-policy=no-user-gesture-required so playback is assertable.",
+        "gaps": [
+          "docs/18 also names a 'latency sample report' as required evidence for AUD-002. No such artifact exists on disk."
+        ]
+      },
+      {
+        "id": "AUD-003",
+        "statement": "The platform MUST distinguish publisher/source audio from generated pronunciation audio in metadata and UI detail.",
+        "status": "met",
+        "evidence": "MediaAsset.origin measured as 'publisher' for all 15 workbook assets and 'synthesized-edge-tts' for the generated lane. Publisher variants use rights-gated:// master paths with SHA-256 and licenseUseBasis 'owner-asserted full rights with attribution (ADR-016, 2026-08-14)'. The TTS manifest carries publicationPolicy.learnerLabel 'Synthesized German preview voice — independent German listening review pending' and qualifiedGermanListeningReview:false. The two lanes ship to separate public directories (public/audio/source-workbook-approved-v1 = 15 files, public/audio/tts-de-de-v1 = 110 mp3 + manifest).",
+        "gaps": []
+      },
+      {
+        "id": "AUD-004",
+        "statement": "Workbook listening activities MUST use only track mappings verified by filename, transcript heading and exercise reference.",
+        "status": "met",
+        "evidence": "15 published ListeningAsset records, 15 published MediaAssets, 15 MP3s served. Exercise references measured: AB 3, AB 9a, AB 9b, AB 6a, AB 6b, AB 12 — 6 groups covering all 4 spec-required workbook exercises (L1 ex.3, L1 ex.9, L2 ex.6, L2 ex.12). Each of the 6 listening-hub groups links its lesson activity. Transcripts were verified manually: platform/apps/web/generated/audio/workbook-transcripts-lessons-01-02.json holds 15 tracks with speaker-attributed lines and verificationMethod 'manual visual transcription from rendered PDF pages; no OCR text accepted without visual confirmation'. tools/audit-attribution.mjs gate: pass, 0 failures.",
+        "gaps": [
+          "Transcript text is deliberately withheld from the product: ListeningAsset.transcriptSegments is [] on all 15, with ContentGap gap:transcript-… explaining that an authentic listening task withholds the answer. Verified no leak — the string 'Paco Perez' occurs 0 times in the exported listening page.",
+          "Drift, not a defect in this requirement: the transcript projection file still declares rightsStatus 'not-separately-approved-for-public-redistribution' and publicationBlocked:true, wording that predates ADR-016's full-rights-with-attribution grant. Flagged under `disagreements`."
+        ]
+      },
+      {
+        "id": "AUD-005",
+        "statement": "Speaking practice MUST support microphone permission, recording, stop, playback, retry and safe track cleanup on navigation/unmount.",
+        "status": "met",
+        "evidence": "platform/apps/web/lib/recorder/{createMediaRecorderController.ts, useMediaRecorder.ts, recorder-types.ts}. Race-safe lifecycle coverage in platform/tests/web/p4b-recorder-lifecycle-behavior.test.ts (permission allow/deny and navigation-during-permission races). playwright.config.ts launches chromium with --use-fake-ui-for-media-stream and --use-fake-device-for-media-stream plus permissions:['microphone'], so getUserMedia runs for real in E2E rather than being stubbed. 3 activities complete on completionRule 'recorded'.",
+        "gaps": []
+      },
+      {
+        "id": "AUD-006",
+        "statement": "Alpha MUST NOT label recording as AI pronunciation scoring; future assessment requires a separate validated feature flag.",
+        "status": "met",
+        "evidence": "platform/packages/learning/src/persistence/types.ts RecordingMetadata.pronunciationAccuracy is typed literally `null` with the comment '(ADR-006 / Alpha unscored)', so a score cannot be persisted. ADR-006 records the deferral. tools/audit-learner-language.mjs scanned 205 exported files and reports gate:pass, 0 distinct findings, 0 occurrences across 8 rules.",
+        "gaps": []
+      },
+      {
+        "id": "HUB-001",
+        "statement": "Global hubs MUST exist for Vocabulary, Verbs, Grammar, Phrases & Q&A, Listening and Concepts.",
+        "status": "met",
+        "evidence": "Id-set diff over platform/apps/web/generated/learner-hubs.json: exactly 6 hubs — vocabulary (69 items), verbs (10), grammar (10), phrases (64 = 49 phrase patterns + 15 Q&A), listening (15 tracks in 6 exercise groups), concepts (6 topics rendered from a derived experience, each with summary, sourceEntityIds, hubActions and linked activities; 26 distinct source entities and 14 distinct activities across the 6 topics). A /hubs index route is also exported.",
+        "gaps": []
+      },
+      {
+        "id": "HUB-002",
+        "statement": "Hubs MUST default to learned/unlocked content and allow scope filters for lesson, priority, category, mastery, tag and due status.",
+        "status": "partial",
+        "evidence": "Shared filter bar rendered on every hub by components/hubs/HubViews.tsx HubFilters, backed by lib/content/hub-query.ts. Query state and filtering are hardened (input sanitization, length bound, unknown values fail closed to defaults) and parameterized across all six hubs.",
+        "gaps": [
+          "HubQueryState is exactly {q: string, lesson: 'all'|'01'|'02', category: string|null}. Of the six named scope fields, 2 are implemented (lesson, category). Missing: priority, mastery, tag, due status.",
+          "The 'category' axis is part-of-speech (adjective, interjection, noun, phrase, proper-noun), not source priority or semantic grouping.",
+          "Hubs do not default to learned/unlocked content — they render the full published set (all 69 vocabulary items on first visit)."
+        ]
+      },
+      {
+        "id": "HUB-003",
+        "statement": "Learners MUST be able to mark Favorite, Difficult, Confusing, Teacher, Exam and add a personal note.",
+        "status": "met",
+        "evidence": "platform/packages/learning/src/persistence/types.ts LEARNER_BUILT_IN_TAGS = [Favorite, Difficult, Confusing, Exam, Teacher] — exactly the five required, with LearnerNoteRecord {noteId, contentId, text, updatedAt} alongside. UI at components/learner-state/DetailLearningControls.tsx renders a Tags fieldset over LEARNER_BUILT_IN_TAGS with toggleTag plus a length-bounded 'Personal note' field. Review deck relation: packages/learning/src/review/difficult.ts routes Difficult/Confusing into the mission and flags Teacher. Persistence, export and import round-trips covered in platform/tests/learning/persistence.test.ts; controller behaviour in platform/tests/web/p4c-state-core.test.ts; recovery E2E in platform/tests/e2e/09-export-reset-import.spec.ts (4 tests).",
+        "gaps": []
+      },
+      {
+        "id": "REV-001",
+        "statement": "A review mission MUST mix due/weak items across recognition, recall, listening and production rather than show only flashcards.",
+        "status": "met",
+        "evidence": "platform/packages/learning/src/review/mission.ts — deterministic daily mission generator with DEFAULT_MISSION_MIX, per-modality quotas, an interleaving phase for listening/production/form and a maintenance/backfill phase; unknown filters throw rather than silently pass. Weakness input comes from mastery-bridge.ts. Dashboard MissionCard shows a due/new split. E2E platform/tests/e2e/04-review-session.spec.ts (2 tests, 'review cards created by practice, session run to the end').",
+        "gaps": []
+      },
+      {
+        "id": "REV-002",
+        "statement": "Review scheduling MUST persist event history and expose a scheduler contract compatible with FSRS; Alpha MAY use conservative defaults.",
+        "status": "met",
+        "evidence": "Append-only LearnerEvent list plus ReviewCardState in the LearnerStateEnvelope, with masteryReducerVersion, reviewSchedulerVersion and learnerEventSchemaVersion stamped into the envelope so a stored state declares which engine produced it. packages/learning/src/review/alpha-scheduler.ts sits behind the review interface (ADR-007). Deterministic-clock and export/import-equivalence coverage in platform/tests/learning/persistence.test.ts and review tests (196 static cases across tests/learning).",
+        "gaps": []
+      },
+      {
+        "id": "REV-003",
+        "statement": "Games MUST include flashcards, picture/word match, article sort, audio match, word order, verb builder and word puzzle when content supports them.",
+        "status": "met",
+        "evidence": "Exact seven-mode set asserted in code, not merely present: lib/games/game-ids.ts PRACTICE_GAME_IDS plus assertExactPracticeGameIds/practiceGameIdDiff, which throw on unknown, duplicate or missing modes. 8 practice routes exported (index + 7 game routes). Behaviour tests in platform/tests/web/p4a-games-behavior.test.ts; E2E platform/tests/e2e/05-practice-games.spec.ts (5 tests, 'every practice game reaches a scored outcome').",
+        "gaps": [
+          "audio-match renders a rights/coverage-honest 'unavailable' state rather than being playable, so 6 of 7 modes are playable today. The requirement's 'when content supports them' clause covers this."
+        ]
+      },
+      {
+        "id": "REV-004",
+        "statement": "XP, streak and badges MUST reward meaningful attempts and consistency and MUST NOT override mastery evidence.",
+        "status": "met",
+        "evidence": "Separate package boundary: platform/packages/learning/src/rewards/{derive.ts, types.ts, errors.ts} derives XP/streak/badges from the same append-only event log, with no write path into the mastery reducer (packages/learning/src/mastery). Dashboard renders a Badges section. Reward-separation coverage in platform/tests/web/p4c-learner-ui-behavior.test.ts and tests/learning.",
+        "gaps": []
+      },
+      {
+        "id": "DAT-001",
+        "statement": "All teachable objects MUST use stable canonical IDs and typed relationships.",
+        "status": "met",
+        "evidence": "Scripted id-space measurement over all five published fragments: 1307 records, 1307 distinct ids, 0 duplicates. 309 typed relationship records (kind, id, type, fromId, toId, lessonId, order, note, sourceAssertionId) with 0 unresolved endpoints against that id space. Enforced by platform/packages/content/src/validation and `npm run validate:publication`, which is inside `npm run check`.",
+        "gaps": []
+      },
+      {
+        "id": "DAT-002",
+        "statement": "Every published field MUST retain source assertion(s), page/exercise/track location, extraction method, confidence and validation state.",
+        "status": "met",
+        "evidence": "Scripted 100% check: 373 published-field entries across all published records; 373 carry an assertionId; 373 resolve to a real SourceAssertion; 0 missing, 0 unresolved. Every resolved assertion carries location (373/373), extraction (373/373), confidence (373/373) and status (373/373). Assertion record keys measured: kind, id, sourceId, location, subjectId, field, value, extraction, confidence, status, reviewer, reviewedAt.",
+        "gaps": []
+      },
+      {
+        "id": "DAT-003",
+        "statement": "The system MUST detect duplicate canonical concepts while preserving multiple source links.",
+        "status": "met",
+        "evidence": "The core/teacher overlap is the designed test case and it resolves once: 8 teacher source rows (friseur, architekt, lehrer, kellner, verkaeufer, arzt, ingenieur, journalist) name subjectIds that are already canonical Lesson 2 lexemes, and the teacher fragment does not re-declare them — it references them through collection membership. Result: 0 duplicate ids across 1307 records, with both the lesson and the collection linking the single canonical record.",
+        "gaps": []
+      },
+      {
+        "id": "DAT-004",
+        "statement": "A scope firewall MUST reject Lesson 3+ and A1.2 content from the Alpha bundle unless explicitly attached as approved enrichment.",
+        "status": "met",
+        "evidence": "platform/packages/content/src/validation holds the publish-time firewall; `npm run validate:publication` runs inside `npm run check`. Measured bundle contents: exactly lesson:01 and lesson:02, plus the one explicitly attached collection (required:false, sourcePriority 3). ADR-016 makes A1.2 rights-clear but the bundle still ships Lessons 1-2 only, which the ADR records as a scope decision.",
+        "gaps": []
+      },
+      {
+        "id": "DAT-005",
+        "statement": "Content and media manifests MUST validate in CI before build.",
+        "status": "met",
+        "evidence": "platform/package.json: `check` = typecheck + typecheck:web + typecheck:web-tests + lint:web + test + validate:publication + test:web; `gates:pages` = build:pages + smoke:pages + audit:learner-language + audit:offline. Additional scripted manifest gates: tools/validate-source-manifest.mjs (456 files), tools/audit-alpha-tts.mjs (354 = 354 = 354), tools/audit-attribution.mjs (pass, 0 failures), tools/assert-no-build-intermediate.mjs wired into .githooks/pre-commit.",
+        "gaps": [
+          "The offline gate and the attribution gate were each fixture-tested to reject a known-bad input; that discipline is not yet recorded for every gate."
+        ]
+      },
+      {
+        "id": "UX-001",
+        "statement": "The platform MUST work at 360px mobile, tablet and desktop widths without horizontal page overflow.",
+        "status": "partial",
+        "evidence": "Design-level evidence exists: responsive primitives in app/globals.css including an explicit mobile 360/390 reflow rule for the meaning plate; p6-02-status.md records that the meaning plate and per-type hub cards hold reserved geometry at 360/390/820/1440 with zero horizontal overflow, browser-verified during Studio P2b, where two real defects were found and fixed that way.",
+        "gaps": [
+          "There is no re-runnable artifact. The strings 1440, 820, 390 and 360 do not appear in ANY file under platform/tests. docs/18's declared evidence id E2E-RESPONSIVE-01 has no implementation.",
+          "playwright.config.ts defines a single project, chromium with the Desktop Chrome device. No mobile or tablet viewport is exercised anywhere in the automated suite.",
+          "The 360/390/820/1440 zero-overflow claim currently lives only as prose in plans/PLAN-BATON-full-alpha.md and research/release-evidence/p6-02-status.md — a claim, not a gate."
+        ]
+      },
+      {
+        "id": "UX-002",
+        "statement": "Primary journeys MUST be keyboard operable, screen-reader labeled, reduced-motion aware and WCAG 2.2 AA compliant.",
+        "status": "partial",
+        "evidence": "Seven WCAG defects were confirmed (from 48 raw findings; 41 refuted) and each fix is guarded by a test that fails without it: platform/tests/web/p6-page-titles.test.ts, p6-gender-badge-contrast.test.ts, p6-a11y-remediation-behavior.test.ts. Independently re-measured on the current export in this audit: 205 exported HTML pages, 203 distinct <title> values, 0 pages without a title (only the three 404 copies repeat). Contrast remediation 4.10/3.32/3.13 -> 7.00/5.87/5.25 keeping identifying hue on swatch/border/shape. Reduced motion: prefers-reduced-motion blocks present in app/globals.css. lint gate includes eslint-plugin-jsx-a11y at --max-warnings=0. components/a11y/StatusMessage.tsx gives every announcement a bumped sequence so repeated identical outcomes still fire.",
+        "gaps": [
+          "No automated accessibility scanner exists anywhere in the repository. A repo-wide search for axe / jest-axe / @axe-core / vitest-axe returns only two false positives ('relaxes', 'relaxed') in prose comments. docs/18's declared evidence id A11Y-AUTO-01 has no implementation, and the p6-02 sweep was a one-off agent-authored scan, not a standing gate.",
+          "A11Y-KEYBOARD-01 has no implementation; no keyboard-only journey is automated.",
+          "The manual screen-reader checklist docs/18 requires has not been performed by a human. Tracked under `open`.",
+          "The p6-02 verification stage was interrupted by an account session limit after 24 of 102 agents. An unadjudicated set of raw findings remains — see `open`."
+        ]
+      },
+      {
+        "id": "UX-003",
+        "statement": "Meaning MUST NOT rely on color alone.",
+        "status": "met",
+        "evidence": "ADR-004 requires a label and shape with every semantic cue. media/generated/infographics/manifest.json style.nonColorCues declares them explicitly: masculine 'M in a square plus der', feminine 'F in a circle plus die', neuter 'N in a diamond plus das', plural 'PL in stacked cards plus die', regular 'REG or named suffix', spellingAdjustment 'SPELL or amber bridge label', irregular 'IRR or star'. The gender-badge contrast fix deliberately darkened only the ink and kept the identifying hue on the swatch, border and shape, so the non-colour channel survived the remediation. Rendered pages carry the badge token plus its word (e.g. 'der Lehrer' with masculine label).",
+        "gaps": [
+          "docs/18's A11Y-COLOR-01 is described as 'DOM and visual checks'; the DOM half is covered by the contrast test, the visual half has no scripted artifact."
+        ]
+      },
+      {
+        "id": "UX-004",
+        "statement": "Core Lessons 1-2 content, generated audio, permitted source audio and local progress SHOULD work offline after first load.",
+        "keyword": "SHOULD — the only non-MUST among the 49, so by docs/02's own rule it is not a release gate.",
+        "status": "met",
+        "statusChangedDuringThisAudit": "partial -> met. research/release-evidence/offline-live-verification.json appeared on disk during this run and supplies the live proof that was missing at the start of it.",
+        "evidence": "Code and export: platform/apps/web/public/sw.js (12,845 bytes) plus manifest.webmanifest, both present. tools/audit-offline-export.mjs gate:pass — precacheCount 87, precacheBytes 4,349,122, precachedNavigationRoutes 19, exportedFiles 1369, failures []. Registration logic is DOM-free and total (lib/offline/register.ts: 'this must never throw'). Regression test platform/tests/web/p6-offline-first.test.ts. The gate was fixture-tested to reject an unstamped worker, a missing precache file and basePath loss. LIVE PROOF: research/release-evidence/offline-live-verification.json (verifiedAt 2026-08-16, in-browser against https://hrezaii95.github.io/german-learning-exam/) records supported:true, registrationCount 1, activeState 'activated', controllingThePage:true, scriptURL .../sw.js, shell cache german-learning-os-shell-vca98119d0f56c8c3 with 85 entries, and a served-from-cache proof that /german-learning-exam/vocabulary/ is genuinely stored (315,824 bytes, title matched).",
+        "gaps": [
+          "This audit read that artifact; it did not re-run the browser session behind it.",
+          "Shell entries differ live vs local: 85 live vs 87 in the local Windows export, with a different cache version hash. The artifact attributes this to the same platform difference that makes the local export write nested __next.<route>/__PAGE__.txt where Linux CI writes flat files, and records that every live precache URL resolves. Recorded so the count difference is not later mistaken for a missing asset.",
+          "No offline E2E exists and none can be added to the current suite as configured: playwright.config.ts sets serviceWorkers: 'block' deliberately, so a cached response cannot make a spec pass against stale bytes. docs/18's E2E-OFFLINE-01 remains unimplemented.",
+          "The live proof covers a learner DOCUMENT. The requirement also names generated audio and permitted source audio; no run has demonstrated cached AUDIO playing with the network off (docs/13 Gate 4 journey 10).",
+          "87 precached URLs and 19 navigation routes out of 205 exported pages: the precache is a shell, and the remaining routes depend on the runtime cache-on-use tier, which no test exercises."
+        ]
+      },
+      {
+        "id": "UX-005",
+        "statement": "Search MUST return typed results with lesson, source priority, mastery and matched field.",
+        "status": "partial",
+        "evidence": "platform/apps/web/generated/learner-search.json holds 193 typed documents: LearningActivity 23, Lexeme 69, PhrasePattern 49, QAPair 15, ListeningAsset 15, GrammarConcept 10, Verb 10, Lesson 2. Each document carries kind, lessonIds, sourcePriority, publicationStatus, category, canonicalHref, hubDestination and a `fields` array giving the matched field with its displayText and normalized matchKeys (including German umlaut aliases). components/search/SearchViews.tsx renders the kind chip and a sourcePriorityLabel chip and groups hits by kind. E2E platform/tests/e2e/07-search-back-context.spec.ts (4 tests).",
+        "gaps": [
+          "Mastery is absent. The strings mastery/Mastered do not appear in components/search/SearchViews.tsx and no mastery field exists on the search document, so 3 of the 4 named result dimensions are delivered."
+        ]
+      },
+      {
+        "id": "UX-006",
+        "statement": "The product MUST preserve an obvious path back after entering a deep concept from a lesson, hub, review or search.",
+        "status": "met",
+        "evidence": "Serialized navigation context in platform/apps/web/lib/content/navigation-context.ts with components/nav/BackLink.tsx and per-surface nav views (components/details/DetailNavViews.tsx, components/search/SearchNavViews.tsx). Coverage: platform/tests/web/p3c-search.test.ts, p3d-details.test.ts; E2E platform/tests/e2e/07-search-back-context.spec.ts (4 tests, 'search, open a result, come back').",
+        "gaps": []
+      }
+    ]
+  },
+
+  "register": {
+    "source": "plans/full-alpha-register.csv",
+    "rowCount": 29,
+    "arithmetic": {
+      "declaredCompleted": 23,
+      "declaredInReview": 1,
+      "declaredPending": 5,
+      "sum": "23 + 1 + 5 = 29",
+      "declaredCompletedIds": ["P0-01", "P0-02", "P0-03", "P0-04", "P1-01", "P1-02", "P1-03", "P1-04", "P1-05", "P1-06", "P2-01", "P2-02", "P2-03", "P2-04", "P2-05", "P3-01", "P3-02", "P3-03", "P4-01", "P4-02", "P4-03", "P4-04", "P5-02"],
+      "declaredInReviewIds": ["P6-02"],
+      "declaredPendingIds": ["P5-01", "P5-03", "P6-01", "P6-03", "P6-04"],
+      "measuredArtifactPresent": 29,
+      "measuredArtifactAbsent": 0,
+      "rowsWhereMeasuredCountEqualsDeclared": 12,
+      "rowsWithNoNumericExitCriterion": 13,
+      "rowsWhereMeasuredCountDiffersFromDeclared": 3,
+      "rowsWhereStatusDisagreesWithMeasuredReality": 3,
+      "note": "12 rows declare a count that could be re-measured and matched. 13 rows declare exit_criterion_count 1 or 0, which is an existence check rather than a count. 3 rows have a numeric delta (P1-05 -1 published, P3-01 -1, P5-02 +1). 3 rows carry a status that disagrees with what is on disk (P0-01, P5-02, P6-01) — listed under disagreements."
+    },
+    "rows": [
+      { "id": "P0-01", "item": "Requirement-to-current-evidence matrix", "artifactPath": "docs/17-current-state-and-completion-matrix.md", "gate": "G0", "declaredCount": 1, "measured": "file present, 49 requirement rows", "measuredCount": 1, "declaredStatus": "completed", "measuredStatus": "artifact-present-but-stale", "delta": 0, "note": "Dated 2026-08-07 and written against samples/german-learning-ui-samples, not platform/. Its per-requirement verdicts (e.g. LRN-003 Missing, DAT-002 Missing, HUB-001 Concepts hub missing) are all superseded by measurements in this file. Correct as a frozen G0 baseline; wrong if read as current state." },
+      { "id": "P0-02", "item": "Immutable source inventory with checksums", "artifactPath": "content/source-index/source-manifest.json", "gate": "G0", "declaredCount": 1, "measured": "456 hashed source files (was 397 at P0; +59 Kursbuch CD1 per ADR-014)", "measuredCount": 1, "declaredStatus": "completed", "measuredStatus": "completed", "delta": 0, "note": "tools/validate-source-manifest.mjs green at 456." },
+      { "id": "P0-03", "item": "Session and later-decision coverage reconciliation", "artifactPath": "docs/00-session-decision-ledger.md", "gate": "G0", "declaredCount": 1, "measured": "file present", "measuredCount": 1, "declaredStatus": "completed", "measuredStatus": "completed", "delta": 0, "note": "" },
+      { "id": "P0-04", "item": "Requirement UX data and test traceability", "artifactPath": "docs/18-requirement-traceability.md", "gate": "G0", "declaredCount": 49, "measured": "49 distinct requirement ids, symmetric difference with docs/02 is empty", "measuredCount": 49, "declaredStatus": "completed", "measuredStatus": "completed", "delta": 0, "note": "The map is complete. Several of its declared evidence ids are not implemented (A11Y-AUTO-01, A11Y-KEYBOARD-01, E2E-RESPONSIVE-01, E2E-OFFLINE-01, LearningActivity.phases[]) — that is a P6 gap, not a P0-04 gap." },
+      { "id": "P1-01", "item": "Typed canonical schema package", "artifactPath": "platform/packages/content", "gate": "G1", "declaredCount": 1, "measured": "package present with cli, ids, indexes, publication, types, validation", "measuredCount": 1, "declaredStatus": "completed", "measuredStatus": "completed", "delta": 0, "note": "" },
+      { "id": "P1-02", "item": "Lesson 1 publication manifest", "artifactPath": "platform/content/published/lesson-01.json", "gate": "G1", "declaredCount": 1, "measured": "1 lesson, 26 lexemes, 4 verbs, 6 grammar, 23 phrase patterns, 7 Q&A, 138 assertions, 55 relationships, 30 content gaps", "measuredCount": 1, "declaredStatus": "completed", "measuredStatus": "completed", "delta": 0, "note": "0 dialogues; lesson:01 has 5 stages (no review stage)." },
+      { "id": "P1-03", "item": "Lesson 2 publication manifest", "artifactPath": "platform/content/published/lesson-02.json", "gate": "G1", "declaredCount": 1, "measured": "1 lesson, 43 lexemes, 6 verbs, 4 grammar, 26 phrase patterns, 8 Q&A, 182 assertions, 83 relationships, 4 content gaps", "measuredCount": 1, "declaredStatus": "completed", "measuredStatus": "completed", "delta": 0, "note": "" },
+      { "id": "P1-04", "item": "Teacher professions source-row reconciliation", "artifactPath": "platform/content/published/teacher-professions.json", "gate": "G1", "declaredCount": 48, "measured": "48 teacherSourceRows, 86 fragment lexemes, 1 collection, 221 assertions, 156 relationships, 50 content gaps", "measuredCount": 48, "declaredStatus": "completed", "measuredStatus": "completed-but-review-gated", "delta": 0, "note": "Reconciliation is complete at 48/48. Publication is not: 86 of 86 fragment lexemes and the collection are status 'review' behind the qualified-German human gate." },
+      { "id": "P1-05", "item": "Required lesson activity records", "artifactPath": "platform/content/published/activities.json", "gate": "G1", "declaredCount": 24, "measured": "24 records present; 23 published, 1 in review", "measuredCount": 24, "declaredStatus": "completed", "measuredStatus": "completed", "delta": "0 records / -1 published", "note": "activity:lesson-02-teacher-professions-deck is status 'review', blocked on the same human gate. 23 of 24 have conceptIds: []." },
+      { "id": "P1-06", "item": "Workbook audio mapping records", "artifactPath": "platform/content/published/listening-assets.json", "gate": "G1", "declaredCount": 15, "measured": "15 ListeningAssets, 15 MediaAssets, all published; 6 exercise refs covering the 4 spec-required exercises", "measuredCount": 15, "declaredStatus": "completed", "measuredStatus": "completed", "delta": 0, "note": "Moved from review to published by ADR-015/016. transcriptSegments deliberately empty on all 15." },
+      { "id": "P2-01", "item": "Content validators and scope firewall", "artifactPath": "platform/packages/content/src/validation", "gate": "G2", "declaredCount": 1, "measured": "directory present; validate:publication inside npm run check", "measuredCount": 1, "declaredStatus": "completed", "measuredStatus": "completed", "delta": 0, "note": "" },
+      { "id": "P2-02", "item": "Typed indexes and search", "artifactPath": "platform/packages/content/src/indexes", "gate": "G2", "declaredCount": 1, "measured": "directory present; 193 search documents projected", "measuredCount": 1, "declaredStatus": "completed", "measuredStatus": "completed", "delta": 0, "note": "" },
+      { "id": "P2-03", "item": "Event and multidimensional mastery engine", "artifactPath": "platform/packages/learning/src/mastery", "gate": "G2", "declaredCount": 1, "measured": "8 modules; 6 named dimensions plus derived stability", "measuredCount": 1, "declaredStatus": "completed", "measuredStatus": "completed", "delta": 0, "note": "" },
+      { "id": "P2-04", "item": "Review scheduler and mission generator", "artifactPath": "platform/packages/learning/src/review", "gate": "G2", "declaredCount": 1, "measured": "10 modules incl. alpha-scheduler, mission, mastery-bridge, difficult, grading", "measuredCount": 1, "declaredStatus": "completed", "measuredStatus": "completed", "delta": 0, "note": "" },
+      { "id": "P2-05", "item": "Versioned export-import persistence", "artifactPath": "platform/packages/learning/src/persistence", "gate": "G2", "declaredCount": 1, "measured": "11 modules; envelope stamps schema + reducer + scheduler + event-schema versions", "measuredCount": 1, "declaredStatus": "completed", "measuredStatus": "completed", "delta": 0, "note": "" },
+      { "id": "P3-01", "item": "Stable lesson stage and activity routes", "artifactPath": "platform/apps/web", "gate": "G3", "declaredCount": 24, "measured": "26 exported pages under /lessons = 1 index + 2 lesson overviews + 23 activity routes", "measuredCount": 23, "declaredStatus": "completed", "measuredStatus": "completed", "delta": -1, "note": "The 24th activity route is absent because activity:lesson-02-teacher-professions-deck is review-gated; the route intentionally 404s. The register's count of 24 was never adjusted to distinguish declared from published." },
+      { "id": "P3-02", "item": "Six canonical hubs", "artifactPath": "platform/apps/web", "gate": "G3", "declaredCount": 6, "measured": "6 hubs: vocabulary 69, verbs 10, grammar 10, phrases 64, listening 15 in 6 groups, concepts 6 topics", "measuredCount": 6, "declaredStatus": "completed", "measuredStatus": "completed", "delta": 0, "note": "Counts have grown since the P3-02 log line (69/4/0/58/0/0): verbs 4->10, listening 0->15, phrases 58->64, concepts 0->6 topics." },
+      { "id": "P3-03", "item": "Typed global search and back context", "artifactPath": "platform/apps/web", "gate": "G3", "declaredCount": 1, "measured": "193 search documents (was 156, then 178); navigation-context.ts + BackLink present", "measuredCount": 1, "declaredStatus": "completed", "measuredStatus": "completed", "delta": 0, "note": "Mastery is not part of the search document — see UX-005." },
+      { "id": "P4-01", "item": "Required game modes", "artifactPath": "platform/apps/web", "gate": "G4", "declaredCount": 7, "measured": "7 ids in PRACTICE_GAME_IDS, asserted exact at runtime; 8 practice routes exported", "measuredCount": 7, "declaredStatus": "completed", "measuredStatus": "completed", "delta": 0, "note": "6 of 7 playable; audio-match ships an honest unavailable state." },
+      { "id": "P4-02", "item": "Q&A conversation progression", "artifactPath": "platform/apps/web", "gate": "G4", "declaredCount": 5, "measured": "5 level ids, 'centralized, ordered, immutable' in lib/conversation/level-ids.ts", "measuredCount": 5, "declaredStatus": "completed", "measuredStatus": "completed", "delta": 0, "note": "" },
+      { "id": "P4-03", "item": "Recorder lifecycle and failure states", "artifactPath": "platform/apps/web", "gate": "G4", "declaredCount": 1, "measured": "lib/recorder controller + hook + types; race-safe lifecycle test present", "measuredCount": 1, "declaredStatus": "completed", "measuredStatus": "completed", "delta": 0, "note": "" },
+      { "id": "P4-04", "item": "Mixed mission tags notes XP and streaks", "artifactPath": "platform/apps/web", "gate": "G4", "declaredCount": 1, "measured": "5 built-in tags + notes + mission + rewards package all present; independent react-reviewer APPROVE after two P1 fixes", "measuredCount": 1, "declaredStatus": "completed", "measuredStatus": "completed", "delta": 0, "note": "" },
+      { "id": "P5-01", "item": "Approved generated audio or explicit gaps", "artifactPath": "media/manifests/alpha-tts-manifest.json", "gate": "G5", "declaredCount": 1, "measured": "354 assets, 354 on disk, 354 audited, 0 technical failures; reviewStatus 'candidate-needs-listening-review' on 354 of 354", "measuredCount": 1, "declaredStatus": "pending", "measuredStatus": "pending", "delta": 0, "note": "Correctly pending. Technical audit is complete and green; the human listening approval (G5) has not happened for a single clip." },
+      { "id": "P5-02", "item": "Responsive original infographic families", "artifactPath": "media/generated/infographics", "gate": "G5", "declaredCount": 6, "measured": "7 families in manifest.json and 7 SVGs on disk; 3 shipped into platform/apps/web/public/infographics", "measuredCount": 7, "declaredStatus": "completed", "measuredStatus": "completed-with-count-drift", "delta": "+1 authored / -3 shipped vs authored", "note": "The register declares 6; disk holds 7 (info:system-gender-articles, l2-profession-plurals, l2-person-forms, l2-verb-patterns, l1-l2-qa-register, l1-2-learning-map, l1-greetings-day). Only greetings-context-day-v1, qa-register-casual-formal-v1 and verb-endings-regular-special-irregular-v1 reach the learner bundle; person-form-morphology-v1 and plural-patterns-and-gaps-v1 do not." },
+      { "id": "P5-03", "item": "Audio and visual human QA evidence", "artifactPath": "research/media-qa", "gate": "G5", "declaredCount": 2, "measured": "6 report files present (P5-audio-rapid-report.md, P5-infographics-rapid-report.md, P5-rapid-audio-accessibility.md, P5-rapid-visual-coverage.md, P5-rich-illustrations-report.md, P6-media-coverage-audit.md)", "measuredCount": 2, "declaredStatus": "pending", "measuredStatus": "pending", "delta": 0, "note": "Correctly pending. Artifacts exist and the visual/technical passes are documented, but the two required human passes for generated speech (text/form accuracy and naturalness/consistency, docs/13 'Pronunciation acceptance') have not been performed. This is the G5 gate." },
+      { "id": "P6-01", "item": "Automated engineering and content gates", "artifactPath": "research/release-evidence", "gate": "G6", "declaredCount": 1, "measured": "3 scripted gate artifacts on disk, all reporting gate:pass — learner-language-audit.json (205 files, 0 findings), offline-export-audit.json (87 precache, 0 failures), attribution-audit.json (0 failures)", "measuredCount": 1, "declaredStatus": "pending", "measuredStatus": "artifacts-present-and-passing", "delta": 0, "note": "DISAGREEMENT: the row still reads pending while its artifacts exist and pass. Its depends_on includes P5-03, which is genuinely pending, so the row cannot be closed — but 'pending' understates what is on disk. Flagged rather than smoothed; not closed here." },
+      { "id": "P6-02", "item": "Responsive accessibility and production E2E", "artifactPath": "research/release-evidence", "gate": "G6", "declaredCount": 4, "measured": "3 of 4 dimensions now have artifacts: accessibility remediated (7 confirmed defects fixed, 3 regression tests, 203 distinct titles / 205 pages re-measured here), offline closed both export-side (gate:pass) and live (offline-live-verification.json), and the E2E layer reported 36/36 green. Responsive has no artifact at all.", "measuredCount": 3, "declaredStatus": "in_review", "measuredStatus": "in_review", "delta": -1, "note": "Both the offline-live and E2E closures landed from concurrent agents DURING this audit and are recorded from their artifacts, not independently re-executed here. The E2E suite remains deliberately outside npm run check and gates:pages, so even at 36/36 it is not yet on the release path. Responsive (UX-001) still has no automated evidence — no viewport dimension appears in any test file. Unadjudicated raw findings remain from the interrupted 102-agent verification (delivery weight), and real assistive-technology testing stays open as a human gate." },
+      { "id": "P6-03", "item": "Requirement and register final diff", "artifactPath": "research/release-evidence/completion-audit.json", "gate": "G6", "declaredCount": 0, "measured": "this file plus completion-audit.md; the path did not exist before this run", "measuredCount": 1, "declaredStatus": "pending", "measuredStatus": "artifact-now-present", "delta": 0, "note": "The artifact now exists. The row's own status is not changed by this audit — its depends_on (P6-01, P6-02) are both still open, and an executing session must not ratify its own completion." },
+      { "id": "P6-04", "item": "Owner acceptance", "artifactPath": "plans/PLAN-BATON-full-alpha.md", "gate": "G-OWNER", "declaredCount": 1, "measured": "no owner acceptance record exists", "measuredCount": 0, "declaredStatus": "pending", "measuredStatus": "pending", "delta": 0, "note": "Human gate. Cannot be discharged by any agent." }
+    ]
+  },
+
+  "gates": {
+    "arithmetic": {
+      "totalGateRows": 15,
+      "scriptedGates": 10,
+      "scriptedGreenVerifiedHere": 9,
+      "scriptedGreenByConcurrentAgentReport": 1,
+      "scriptedRed": 0,
+      "scriptedSum": "9 + 1 + 0 = 10",
+      "humanJudgedGates": 5,
+      "humanJudgedClosed": 0,
+      "humanJudgedOpen": 5,
+      "note": "9 of 10 scripted gates were verified green from their own on-disk verdict artifacts during this audit. The tenth (Playwright E2E) is reported 36/36 green by a concurrent agent's rewrite of p6-02-status.md; this audit did not execute it and records it as reported, not independently verified. 0 of 5 human-judged gates are closed. Green scripted gates say the machine-checkable predicates hold; they say nothing about the five human gates."
+    },
+    "rows": [
+      { "gate": "npm run check", "kind": "scripted", "computes": "typecheck (root, web, web-tests) + eslint --max-warnings=0 + vitest content/learning + validate:publication + vitest web", "result": "green — reported 659 tests, 357 web. Static re-count of the same tree: 51 vitest files with 646 literal it()/test() call sites (43 further cases live in the 12 Playwright specs, which this command does not run). Static counting undercounts .each-generated cases, so 646 static vs 659 executed is consistent.", "artifact": "run output only — no verdict file is written", "verdict": "green" },
+      { "gate": "npm run build:pages", "kind": "scripted", "computes": "static export of the Next app under the GitHub Pages base path", "result": "green — 205 HTML pages, 1369 files, 125 MP3s in platform/apps/web/out at the time of this audit", "artifact": "platform/apps/web/out/**", "verdict": "green" },
+      { "gate": "npm run smoke:pages", "kind": "scripted", "computes": "HTTP smoke over the computed canonical route set (2 lessons + 23 activities + 3 detail representatives + 7 games + static routes) plus static-asset presence and 404 behaviour; asserts the projection counts (2 lessons, 23 activities, 3 representatives)", "result": "green — 49 routes", "artifact": "run output only", "verdict": "green" },
+      { "gate": "node tools/audit-learner-language.mjs", "kind": "scripted", "computes": "8 learner-language rules (publication jargon, validation jargon, evidence internals, raw object ids, raw game state, roadmap language, search debug chips, padded lesson labels) over every exported HTML file", "result": "gate pass — 205 files scanned, 0 distinct findings, 0 occurrences. First run found 64 distinct findings that all four then-existing gates had passed.", "artifact": "research/release-evidence/learner-language-audit.json", "verdict": "green" },
+      { "gate": "node tools/audit-offline-export.mjs", "kind": "scripted", "computes": "service-worker version stamping, precache manifest fetchability, base-path preservation, webmanifest start_url", "result": "gate pass — version ec1af2e371386ee8, 87 precache URLs, 4,349,122 bytes, 19 navigation routes, 1369 exported files, 0 failures. Fixture-tested to reject an unstamped worker, a missing precache file and basePath loss.", "artifact": "research/release-evidence/offline-export-audit.json", "verdict": "green" },
+      { "gate": "node tools/audit-attribution.mjs", "kind": "scripted", "computes": "presence and nav-reachability of the ADR-016 attribution for 7 required works (MOMENTE_TITLE, LEVEL_A1_1, COURSEBOOK, WORKBOOK, GLOSSARY, AUDIO, PUBLISHER) across sampled pages", "result": "gate pass — 0 failures. Independently confirmed here: 'Course material from Momente A1.1 / A1.2 by Hueber Verlag.' plus a References link is in the footer of the exported lesson pages.", "artifact": "research/release-evidence/attribution-audit.json", "verdict": "green" },
+      { "gate": "node tools/audit-alpha-tts.mjs", "kind": "scripted", "computes": "exact manifest/disk bijection plus SHA-256, codec, sample-rate, channel and duration checks on every generated clip", "result": "green — 354 manifest = 354 disk = 354 audited, zero technical failures. Re-measured here: 354 assets in media/manifests/alpha-tts-manifest.json.", "artifact": "media/qa/alpha-tts-technical-audit.json", "verdict": "green" },
+      { "gate": "node tools/validate-source-manifest.mjs", "kind": "scripted", "computes": "one-file-one-hash integrity of the immutable source inventory", "result": "green — 456 files", "artifact": "content/source-index/{source-manifest.json, source-lock.json}", "verdict": "green" },
+      { "gate": "node tools/assert-no-build-intermediate.mjs (.githooks/pre-commit)", "kind": "scripted", "computes": "refuses a commit that captures build-intermediate state (build:pages globally renames proxy.ts)", "result": "green — installed as a pre-commit hook. Its own first implementation was caught giving a false pass by fixture-testing (diff -S reports only a CHANGE in occurrence count, so it read every commit as clean once a bad snapshot was already in HEAD).", "artifact": "tools/assert-no-build-intermediate.mjs", "verdict": "green" },
+      { "gate": "npm run test:e2e (Playwright)", "kind": "scripted", "computes": "12 journey specs driving a real browser against the served static export over the Pages base path: serving contract, first visit, progress persistence, lesson stage checkpoint, review session, practice games, conversation ladder, search back-context, listening playback, export/reset/import, settings effects, RSC prefetch. Static count of top-level test( call sites: 31 (3+2+4+2+1+4+2+3+2+3+4+1); parameterized loops expand some of these at runtime.", "result": "REPORTED GREEN BY A CONCURRENT AGENT DURING THIS AUDIT. At the start of this run the suite stood at 33 passed / 3 failed with a triage agent mid-repair; research/release-evidence/p6-02-status.md was then rewritten to record '12 Playwright specs / 36 tests ... 36/36 green' across all 10 critical journeys, and to record that the suite's first run found a real product defect — the resume pointer was overwritten on every mount, so no stored pointer survived a reload and Continue always sent the learner backwards — now fixed behind a non-vacuous guard (3 of 4 guard cases fail when the fix is disabled). THIS AUDIT DID NOT EXECUTE THE SUITE and does not independently confirm 36/36.", "artifact": "platform/tests/e2e/**, platform/playwright.config.ts, research/release-evidence/p6-02-status.md", "verdict": "reported green by another agent — counted as scripted-green-by-report, not independently verified here" },
+      { "gate": "docs/13 Gate 1 — source/content", "kind": "human-judged", "computes": "German spelling, capitalization, articles, plurals and conjugations pass human review; teacher 48-job rows reconcile to note and image", "result": "OPEN. The scripted halves pass (ids, assertions, referential integrity, scope firewall). The human German review has not happened: 86 of 86 teacher fragment lexemes and the collection remain status 'review'.", "artifact": "none", "verdict": "open" },
+      { "gate": "docs/13 Gate 2 — media / Pronunciation acceptance", "kind": "human-judged", "computes": "two listening passes per generated batch (text/form accuracy, naturalness/consistency) over high-risk items: umlauts, ch, r, final consonants, -in/-innen, plural stem changes, profession stress, names/countries, connected-speech questions", "result": "OPEN. 354 of 354 clips carry reviewStatus 'candidate-needs-listening-review'; 0 have been listened to by a qualified German reviewer. The technical half is green.", "artifact": "media/qa/alpha-tts-technical-audit.json covers the technical pass only", "verdict": "open" },
+      { "gate": "docs/13 Gate 5 — accessibility (human half)", "kind": "human-judged", "computes": "full primary journeys by keyboard only; screen-reader comprehension of audio controls and transcript reveal; 200% zoom and 360px reflow", "result": "OPEN. Automated checks cannot establish that a screen-reader journey is coherent, and no human has run one. No keyboard-journey automation exists either (A11Y-KEYBOARD-01 unimplemented).", "artifact": "none", "verdict": "open" },
+      { "gate": "docs/13 Gate 6 — responsive/visual baselines", "kind": "human-judged", "computes": "visual baselines at 1440x1000, 820x1080, 390x844 and 360x800 across dashboard, lesson overview, one activity, vocabulary, verb, Q&A, hub, game and review", "result": "OPEN and unautomated. No viewport dimension appears in any test file; Playwright runs Desktop Chrome only. The zero-overflow claim exists only as prose.", "artifact": "none", "verdict": "open" },
+      { "gate": "docs/13 Gate 7 — engineering (independent review + clean worktree)", "kind": "human-judged", "computes": "no unresolved high-severity review finding; git worktree clean after committed release artifacts", "result": "PARTIALLY OPEN. Independent reviews were run per packet and returned APPROVE (P4-04 react-reviewer APPROVE after two P1 fixes). The worktree at the start of this session was dirty (modified .gitignore, git-hygiene-log.md, package.json/lock; untracked .claude/, playwright.config.ts, tests/e2e/, research/cowork-codex-control-smoke-2026-08-16.md) plus one pre-existing dirty submodule.", "artifact": "research/cursor-execution/**, PLAN-BATON worker log", "verdict": "open" }
+    ]
+  },
+
+  "contentIdSetDiffs": {
+    "note": "Every diff below was recomputed from platform/content/published/*.json against the required sets in research/curriculum-diff-2026-08-13.json (themselves derived from docs/11). Where the 2026-08-14 diff is now stale, both values are shown.",
+    "verbs": { "required": 10, "publishedNow": 10, "missing": [], "extra": [], "was_2026_08_14": "10 required / 4 published / 6 missing", "verdict": "closed" },
+    "qaIntents": { "required": 15, "publishedNow": 15, "missing": [], "extra": [], "was_2026_08_14": "15 required / 14 published / 1 missing (qa:work-casual-main)", "verdict": "closed" },
+    "listeningAssets": { "required": 15, "publishedNow": 15, "missing": [], "extra": [], "was_2026_08_14": "0 of 4 required exercises published; all 15 assets rights-review-gated", "verdict": "closed by ADR-015/016" },
+    "grammarConcepts": { "required": 11, "publishedNow": 10, "missing": ["gram:und-linking-l1"], "extra": [], "was_2026_08_14": "11 required / 10 published / 1 missing", "verdict": "unchanged — still open" },
+    "activities": { "required": 24, "publishedNow": 23, "missing": ["activity:lesson-02-teacher-professions-deck"], "extra": [], "was_2026_08_14": "24 required / 23 published / 1 blocked", "verdict": "unchanged — blocked on the human German gate" },
+    "nounPlurals": { "publishedNouns": 48, "withStoredPluralForm": 41, "notApplicablePerGlossary": 7, "withPluralPatternIds": 0, "was_2026_08_14": "5 exact-stored / 36 missing / 7 not-applicable", "verdict": "forms closed (5 -> 41); patterns never encoded" },
+    "specPhrasesAndLexemes": { "requiredWithNoPublishedCounterpart": 18, "presentAnywhereNow": 0, "publishedNow": 0, "stillMissing": 18, "ids": ["lex:und-dir", "lex:und-ihnen", "lex:entschuldigung", "lex:wie-bitte", "lex:danke", "phrase:identity-wer-sind-sie", "phrase:identity-und-wer-bist-du", "phrase:name-answer-ich-bin", "lexemes.alphabet", "lexemes.pronouns", "lexemes.numbers", "lex:partner", "lex:interview", "lex:text", "lex:zusammenleben", "phrase:status-keine-kinder", "phrase:work-job-stelle-haben", "phrase:work-ausbildung-praktikum"], "verdict": "unchanged — 18 of 18 still absent" },
+    "classificationPending": [{ "id": "lex:suedafrika", "reason": "docs/11 requires an explicit core/non-core classification from formatting evidence; the glossary prints it italic (non-core). Not encoded anywhere and no classification decision recorded." }],
+    "detailAudioCoverage": { "detailConcepts": 104, "withExactAudio": 97, "withExplicitMissingState": 7, "missingIds": ["verb:arbeiten", "verb:haben", "verb:leben", "verb:machen", "verb:studieren", "verb:wohnen", "qa:work-casual-main"], "verdict": "new gap, first measured here — the published TTS coverage manifest still reports 97/97 for a 97-concept world that grew to 104" },
+    "publishedInventory": { "lessons": 2, "lexemes": { "total": 155, "published": 69, "review": 86 }, "verbs": { "total": 10, "published": 10 }, "grammarConcepts": { "total": 10, "published": 10 }, "phrasePatterns": { "total": 49, "published": 49 }, "qaPairs": { "total": 15, "published": 15 }, "dialogues": 0, "listeningAssets": { "total": 15, "published": 15 }, "collections": { "total": 1, "review": 1 }, "learningActivities": { "total": 24, "published": 23, "review": 1 }, "examples": 0, "mediaAssets": { "total": 15, "published": 15 }, "sourceAssertions": 595, "relationships": 309, "contentGaps": 100 }
+  },
+
+  "open": [
+    {
+      "id": "OPEN-01",
+      "title": "G5 — qualified German listening approval of the synthetic voice",
+      "owner": "owner / a qualified German listener (human)",
+      "whyAnAgentCannotClose": "Pronunciation accuracy and naturalness are perceptual judgements about speech. docs/13 requires two independent listening passes per generated batch, targeting umlauts, ch, r, final consonants, -in/-innen, plural stem changes, profession stress, names/countries and connected speech. No script can substitute for a competent listener, and the technical audit deliberately does not try.",
+      "measuredState": "354 of 354 clips carry reviewStatus 'candidate-needs-listening-review'. Technical audit green: 354 manifest = 354 disk = 354 audited, 0 failures. The learner-facing label already tells the truth ('Synthesized German preview voice — independent German listening review pending').",
+      "blocks": ["P5-01", "P5-03", "docs/13 Gate 2"],
+      "unaffectedBy": "ADR-015 and ADR-016 are RIGHTS decisions. This is a separate pedagogical gate about generated speech quality and is untouched by them."
+    },
+    {
+      "id": "OPEN-02",
+      "title": "Teacher-professions deck — qualified German human review of 86 lexemes",
+      "owner": "owner / a qualified German reviewer (human)",
+      "whyAnAgentCannotClose": "The 48 teacher rows are learner-supplied German job words including forms flagged in docs/11 as needing judgement: slash alternatives that must become separate linked lexemes (Landwirt/Bauer), a lexical pair that is not a productive suffix pair (Krankenpfleger/Krankenschwester), a collective plural needing a usage note (Geschäftsleute), and forms like Putzmann that may be less neutral or current and must be preserved rather than silently corrected. Each is a language judgement with a preservation constraint.",
+      "measuredState": "86 of 86 fragment lexemes and collection:teacher-professions are publication status 'review'; 50 content gaps recorded on the fragment. 48 rows are reachable as an optional collection (49 exported pages) with audioAvailable=false and imagesAvailable=false. activity:lesson-02-teacher-professions-deck is the one unpublished activity, which is why 23 of 24 activity routes exist.",
+      "blocks": ["P1-04 publication", "P1-05 24th activity", "P3-01 24th route", "VOC-005", "docs/13 Gate 1"]
+    },
+    {
+      "id": "OPEN-03",
+      "title": "ADR-013 — derived English gloss for verb:leben awaits an owner ruling",
+      "owner": "owner",
+      "whyAnAgentCannotClose": "ADR-013 is recorded as 'Accepted with owner-revisit flag'. The gloss 'to live' is derived from the glossary's 'zusammen|leben — to live together' and 'Lebt ihr zusammen?' entries; the glossary carries no standalone leben headword. Publishing a derived gloss as if verbatim would overstate source authority; withholding the verb would understate coverage. Only the owner can rule on which.",
+      "measuredState": "verb:leben is published, so the 10-verb id-set diff is empty. Reverting is a one-line change to the fullFormGlosses table in tools/build-alpha-content.mjs plus a rebuild, which returns verb:leben to review-blocked and reopens the verb diff at 9/10.",
+      "blocks": ["VER-003 residual risk", "P6-04"]
+    },
+    {
+      "id": "OPEN-04",
+      "title": "Live service-worker registration on the deployed URL",
+      "status": "CLOSED DURING THIS AUDIT — retained for the record",
+      "owner": "was Claude Code (needed a working browser)",
+      "closedBy": "research/release-evidence/offline-live-verification.json, verifiedAt 2026-08-16 by Claude Code ORCH in-browser against the live deployment. The file appeared on disk while this audit was running; it was open at the start of the run and closed before the end of it.",
+      "measuredState": "supported:true, registrationCount 1, scope https://hrezaii95.github.io/german-learning-exam/, activeState 'activated', controllingThePage:true. Shell cache german-learning-os-shell-vca98119d0f56c8c3 holds 85 entries; /german-learning-exam/vocabulary/ is genuinely present in it at 315,824 bytes with a matching title, so a real learner document would be served without the network. The runtime cache is absent on a fresh load by design.",
+      "residual": [
+        "This audit read the artifact and did not re-run the browser session behind it.",
+        "85 live shell entries vs 87 in the local Windows export, with a different version hash — attributed to the Windows/Linux export path-shape difference, with every live precache URL resolving. Recorded so the difference is never mistaken for a missing asset.",
+        "Still unproven: cached AUDIO playing with the network off (docs/13 Gate 4 journey 10). The live proof covers a document, not media playback."
+      ],
+      "blocks": []
+    },
+    {
+      "id": "OPEN-05",
+      "title": "gram:und-linking-l1 — 'linking with und' has never been encoded",
+      "owner": "Claude Code content agent (encodable), then the German review gate",
+      "whyAnAgentCannotClose": "Encodable, but it is a curriculum-content decision that has not been made or scheduled, and any new German content re-enters the same human review gate as OPEN-02. It has been open and unchanged since the 2026-08-14 curriculum diff.",
+      "measuredState": "Grammar id-set diff: 11 required, 10 published, 1 missing. No published concept covers it.",
+      "blocks": ["GRM-002"]
+    },
+    {
+      "id": "OPEN-06",
+      "title": "18 spec-required phrases and lexemes have no published counterpart",
+      "owner": "Claude Code content agent (encodable), then the German review gate",
+      "whyAnAgentCannotClose": "Same shape as OPEN-05 — mechanically encodable, but it is unmade curriculum work and every new German string re-enters the human review gate. One of the 18 (lex:text) additionally needs a core/non-core classification decision, and lex:suedafrika is explicitly recorded as classification-pending.",
+      "measuredState": "Re-checked all 18 ids against the current published id space: 0 present anywhere, 0 published. Dominated by Lesson 1 courtesy/identity items (Und dir?, Und Ihnen?, Entschuldigung, Wie bitte?, Danke, Wer sind Sie?, Und wer bist du?, Ich bin …) and Lesson 2 profile items (Partner/in, Interview, Text, zusammenleben, keine Kinder, Job/Stelle-haben and Ausbildung/Praktikum-machen patterns). Three are whole inventories rather than single items: the A-Z/Ä/Ö/Ü/ß alphabet, typed pronoun entries, and numbers 0-100.",
+      "consequence": "Six published activities carry substance caveats because of this: alphabet-listen-spell has no alphabet lexemes, numbers-0-100 has no number lexemes, pronoun-verb-builder has no typed pronouns, and name-model-dialogue has no typed dialogue (0 Dialogue records exist).",
+      "blocks": ["PQA-003 depth", "LRN-001 substance", "docs/13 Gate 1"]
+    },
+    {
+      "id": "OPEN-07",
+      "title": "Unadjudicated P6-02 audit leads — verification stopped after 24 of 102 agents",
+      "owner": "Claude Code (re-run the adjudication) then owner for scope",
+      "whyAnAgentCannotClose": "The verification stage was cut off by an account session limit. 7 findings were fully verified and fixed; a further set was never adjudicated and is recorded as leads, not facts. Believing them silently would be as wrong as dropping them. Re-running the adjudication is possible but has not been done, and the 85% rejection rate on the adjudicated batch means most leads are probably wrong — which is exactly why they cannot be acted on unverified.",
+      "measuredState": "48 raw findings -> 7 confirmed, 41 refuted. Unadjudicated leads listed in research/release-evidence/p6-02-status.md include: png-only-illustrations-21mib, font-not-subset-and-force-preloaded, whole-content-corpus-in-every-route-bundle, below-fold-illustrations-eager-and-preloaded, activity-completion-never-executed, review-card-creation-zero-coverage, import-recovery-never-executed, word-order-game-never-played, review-session-only-runs-against-a-mock, conversation-ladder-never-reaches-level-five, game-and-conversation-persistence-branch-dead, storage-failure-code-collapsed-no-quota-strategy, dashboard-permanent-loading-on-write-failure, practice-loop-silently-discards-attempts, listening-page-15-metadata-fetches, duplicate-rsc-txt-payloads, unhandled-rejection-activity-progress, route-smoke-orphaned-from-gate-chain, plus several contrast/reflow items on infographic and morphology surfaces.",
+      "note": "Several of the coverage leads are now directly addressed by the new E2E layer (activity completion, review card creation, import recovery, word-order game, conversation level five each have a named spec). Whether those specs pass is the in-flight question in OPEN-08.",
+      "blocks": ["P6-02"]
+    },
+    {
+      "id": "OPEN-08",
+      "title": "End-to-end suite: now reported green, still not wired into any release gate",
+      "status": "PARTIALLY CLOSED DURING THIS AUDIT",
+      "owner": "Claude Code (e2e-triage agent, active during this audit)",
+      "closedPart": "research/release-evidence/p6-02-status.md was rewritten during this run to record '12 Playwright specs / 36 tests ... 36/36 green' across all 10 critical journeys, replacing the 33-passed/3-failed state that held at the start. It also records that the suite earned its keep on first run by finding a real product defect: the resume pointer was overwritten on every mount, so no stored pointer survived a reload and Continue always sent the learner backwards. Fixed, behind a guard proven non-vacuous (3 of 4 guard cases fail when the fix is disabled).",
+      "stillOpen": [
+        "This audit did NOT execute the suite. 36/36 is a concurrent agent's report read from its artifact, not an independent verification.",
+        "Even green, the suite is not a release gate. playwright.config.ts states the boundary explicitly: it is deliberately NOT wired into npm run check, and it is absent from gates:pages. A passing suite nobody runs on the release path protects nothing.",
+        "Chromium / Desktop Chrome only — no second browser engine and no non-desktop viewport (see OPEN-09).",
+        "Count note: static analysis of the 12 spec files finds 31 top-level test( call sites (3+2+4+2+1+4+2+3+2+3+4+1). The reported 36 executed tests exceeds that, which is consistent with parameterized loops expanding some call sites at runtime. An earlier draft of this audit said 43; that was an over-count caused by a regex that also matched test.describe( and test.beforeEach(. Corrected here."
+      ],
+      "blocks": ["docs/13 Gate 4 until it is on the release path"]
+    },
+    {
+      "id": "OPEN-09",
+      "title": "Responsive baselines (UX-001 / docs/13 Gate 6) have no automated or re-runnable evidence",
+      "owner": "Claude Code (implementable) then owner sign-off",
+      "whyAnAgentCannotClose": "Implementable — a Playwright project per viewport with an overflow assertion would settle it in one run. It simply has not been built, and the current evidence is prose in a plan file, which the masterplan SOP explicitly says is a claim rather than a fact.",
+      "measuredState": "The strings 1440, 820, 390 and 360 appear in 0 files under platform/tests. playwright.config.ts declares one project (chromium / Desktop Chrome). docs/18's E2E-RESPONSIVE-01 is unimplemented.",
+      "blocks": ["UX-001", "docs/13 Gate 6"]
+    },
+    {
+      "id": "OPEN-10",
+      "title": "No automated accessibility scanner exists; the human screen-reader pass has not happened",
+      "owner": "Claude Code (scanner is implementable); human for the assistive-technology pass",
+      "whyAnAgentCannotClose": "Two separate things. The scanner half is buildable and simply absent. The screen-reader half is irreducibly human: automated checks cannot establish that a screen-reader journey is coherent, only that individual attributes are present.",
+      "measuredState": "A repo-wide search for axe / jest-axe / @axe-core / vitest-axe returns 0 real hits. docs/18's A11Y-AUTO-01 and A11Y-KEYBOARD-01 are unimplemented. What does exist: eslint-plugin-jsx-a11y at --max-warnings=0, and 3 regression tests pinning the 7 fixed WCAG defects.",
+      "blocks": ["UX-002", "docs/13 Gate 5"]
+    },
+    {
+      "id": "OPEN-11",
+      "title": "7 detail concepts have no pronunciation audio because the TTS coverage manifest is stale",
+      "owner": "Claude Code media pipeline, then OPEN-01's human gate for the new clips",
+      "whyAnAgentCannotClose": "Regenerating the clips is mechanical, but every new clip lands as 'candidate-needs-listening-review' and re-enters the G5 human gate, so the gap cannot be fully closed by an agent.",
+      "measuredState": "97 of 104 detail concepts resolve exact audio; 7 render the explicit {assetId:null,state:'missing'} gap state: verb:arbeiten, verb:haben, verb:leben, verb:machen, verb:studieren, verb:wohnen, qa:work-casual-main. media/manifests/published-tts-exact-v1.json still reports coverage.publishedDetailConcepts 97 / detailConceptsWithExactAudio 97 / unmappedDetails 0 — a full-coverage report about a content set that has since grown to 104.",
+      "note": "First measured in this audit. The contract holds (AUD-001 permits an explicit gap state), but a reader of the coverage manifest alone would conclude audio coverage is complete when it is 97/104.",
+      "blocks": ["AUD-001 completeness", "VER-001 for six verbs"]
+    },
+    {
+      "id": "OPEN-12",
+      "title": "P6-04 owner acceptance",
+      "owner": "owner",
+      "whyAnAgentCannotClose": "By definition. It is the G-OWNER gate and depends on P6-03, which is this file.",
+      "measuredState": "No owner acceptance record exists in plans/PLAN-BATON-full-alpha.md.",
+      "blocks": ["release"]
+    }
+  ],
+
+  "disagreements": [
+    {
+      "id": "DIS-01",
+      "where": "plans/full-alpha-register.csv row P5-02",
+      "declared": "exit_criterion_count 6, status completed",
+      "measured": "7 infographic families in media/generated/infographics/manifest.json and 7 SVGs on disk",
+      "handling": "Recorded as a +1 delta. Not smoothed: the register was never updated after the seventh family was authored, and only 3 of the 7 reach the learner bundle, so 'completed 6' overstates delivery and understates authoring at the same time."
+    },
+    {
+      "id": "DIS-02",
+      "where": "plans/full-alpha-register.csv row P6-01",
+      "declared": "status pending",
+      "measured": "All three of its scripted gate artifacts exist and report gate:pass (learner-language 205 files / 0 findings; offline 87 precache / 0 failures; attribution 0 failures)",
+      "handling": "Flagged, not closed. The row's depends_on includes P5-03, which is genuinely pending on a human gate, so the row legitimately cannot go to completed — but 'pending' with no qualifier misrepresents what is on disk."
+    },
+    {
+      "id": "DIS-03",
+      "where": "plans/full-alpha-register.csv row P0-01 -> docs/17-current-state-and-completion-matrix.md",
+      "declared": "status completed",
+      "measured": "The artifact exists but was written 2026-08-07 against samples/german-learning-ui-samples. Its verdicts contradict current measurements in many rows (it records LRN-003 Missing, REV-002 Missing, DAT-002 Missing, DAT-003 Missing, LES-004 Missing, HUB-001 'Concepts hub is missing'; all six are now met and measured).",
+      "handling": "The row is correctly 'completed' as a frozen G0 baseline. The risk is a reader treating docs/17 as current state. This file supersedes it for current status; docs/17 is not edited here."
+    },
+    {
+      "id": "DIS-04",
+      "where": "media/manifests/published-tts-exact-v1.json (and its shipped copy at platform/apps/web/public/audio/tts-de-de-v1/manifest.json)",
+      "declared": "coverage.publishedDetailConcepts 97, detailConceptsWithExactAudio 97, unmappedDetails 0",
+      "measured": "104 detail concepts exist; 97 have audio, 7 do not",
+      "handling": "Flagged as OPEN-11. The manifest is not lying about its own generation moment; it is stale relative to the content wave that followed. A gate that re-derives coverage from the current detail set would have caught it."
+    },
+    {
+      "id": "DIS-05",
+      "where": "platform/apps/web/generated/audio/workbook-transcripts-lessons-01-02.json",
+      "declared": "rightsStatus 'not-separately-approved-for-public-redistribution', publicationBlocked true, publicationNote 'the recorded owner decision covers the 15 audio files, not transcript republication'",
+      "measured": "ADR-016 (2026-08-14) grants full Momente A1.1/A1.2 rights — coursebook, workbook, glossary, transcripts and audio — conditional on visible attribution, which tools/audit-attribution.mjs now enforces and which passes.",
+      "handling": "Flagged, not changed. This is exactly the drift pattern the project's own lessons warn about: an older, well-encoded decision silently outvoting a newer one. Note the product ALSO withholds transcripts for a pedagogical reason (ContentGap: an authentic listening task withholds the answer), so the correct behaviour may be unchanged even after the rights wording is corrected. That is an owner/decision call, not an agent edit."
+    },
+    {
+      "id": "DIS-06",
+      "where": "docs/18-requirement-traceability.md, LRN-001 engine contract",
+      "declared": "`LearningActivity.phases[]`; typed attempts across eight loop phases",
+      "measured": "No `phases` field exists on any LearningActivity. The schema carries a single `mode` per activity plus skillDimensions; the loop is distributed across 24 activities.",
+      "handling": "Recorded against LRN-001 as partial. The traceability doc's data contract and the implemented schema disagree; one of them should move, and that is a decision, not a fix an audit makes."
+    },
+    {
+      "id": "DIS-08",
+      "where": "docs/18-requirement-traceability.md change history vs docs/02-product-requirements.md",
+      "declared": "'2026-08-07: created with all 49 MUST requirement IDs'",
+      "measured": "48 of the 49 are MUST. Exactly one, UX-004 (offline), is phrased SHOULD. docs/02 line 3 states 'Each MUST is a release gate unless explicitly deferred', so by the specification's own rule UX-004 is not a release gate.",
+      "handling": "Flagged. Low practical impact today because UX-004 is now met anyway, but the mislabel matters for gate arithmetic: anyone counting release gates from docs/18 would count 49 where the specification defines 48."
+    },
+    {
+      "id": "DIS-07",
+      "where": "plans/PLAN-BATON-full-alpha.md 'Current verified facts' and gate_status",
+      "declared": "gate_status {G5: partial, G6: pending}; the curriculum-diff bullet still reads 'verbs 10/4 published … listening 0/4 required workbook exercises published … qa 14/15 … details 97'",
+      "measured": "verbs 10/10, qa 15/15, listening 15/15 published, details 104",
+      "handling": "The baton's own worker log rows record the later waves correctly (Content row: 'verbs 4->10 … details 97->104'; Rights row: 'listening hub 0->15'). The summary bullet above them was not updated. Flagged so nobody reads the stale bullet as current. The baton is not edited by this audit — one engine writes it at a time."
+    }
+  ],
+
+  "summary": {
+    "headline": "The content graph, the learning engine and the scripted gate layer are in good, measurable shape. The learner-facing product has real, named holes in filtering, activity-to-concept wiring, examples and morphology data. Nothing that requires a human — German language review, pronunciation listening, screen-reader testing, owner acceptance — has been done, and no amount of green scripted output changes that.",
+
+    "whatAnOwnerCanRelyOn": [
+      "Requirement coverage arithmetic: 49 required requirements (48 MUST + 1 SHOULD); 32 met, 17 partial, 0 unmet, 0 out of scope. 32 + 17 = 49, no id in two buckets, no id outside the union. The docs/02 and docs/18 id sets are identical (symmetric difference empty).",
+      "Offline is now live-verified, not just export-verified: the worker registers, activates and controls the deployed page, and /vocabulary/ is genuinely served from an 85-entry shell cache. That closed during this audit.",
+      "The end-to-end layer exists and is reported 36/36 green across 10 critical journeys — and it earned its keep, finding a real defect on first run (the resume pointer was overwritten on every mount, so Continue always sent the learner backwards). Fixed behind a guard proven non-vacuous.",
+      "Provenance is genuinely complete, not asserted: 373 of 373 published fields resolve to a real SourceAssertion carrying location, extraction, confidence and status. This is a scripted count, not a claim.",
+      "Identity integrity is genuinely complete: 1307 records, 1307 distinct ids, 0 duplicates; 309 typed relationships, 0 unresolved endpoints. The core/teacher overlap (8 professions) resolves to one canonical record each.",
+      "Curriculum id-set diffs that were open on 2026-08-14 are now closed and re-verified: verbs 10/10, Q&A intents 15/15, workbook listening 15/15 published covering all 4 required exercises.",
+      "Nine scripted gates report green, including three that write a verdict file to disk (learner-language 205 files / 0 findings, offline 87 precache / 0 failures, attribution 0 failures) and two that assert exact bijections (TTS 354=354=354, source manifest 456).",
+      "Three of those gates were fixture-tested to reject a known-bad input, and one guard was caught giving a false pass by its own fixture test. The gate layer has demonstrated it can fail something real.",
+      "The seven confirmed WCAG defects are fixed and each is pinned by a regression test. Independently re-measured on the current export in this audit: 203 distinct titles across 205 pages, 0 untitled pages.",
+      "The attribution obligation ADR-016 attaches to the content rights is actually discharged and enforced by a script, not by reviewer memory.",
+      "The product is honest about its own gaps where it matters most: 7 concepts without audio render an explicit missing state rather than a broken control, and every generated clip is labelled a preview pending review."
+    ],
+
+    "whatMustNotBeReadAsDone": [
+      "NOT DONE — every human gate. 0 of 5. No qualified German speaker has listened to any of the 354 generated clips. No qualified German reviewer has passed the 86 teacher lexemes. No human has run a screen-reader journey. No responsive baseline has been signed off. The owner has not accepted. Green scripted gates are silent about all five.",
+      "NOT ON THE RELEASE PATH — the end-to-end layer. It is reported 36/36 green, but this audit did not execute it, and playwright.config.ts states the boundary explicitly: the suite is deliberately outside npm run check and absent from gates:pages. A passing suite nobody runs on the release path protects nothing. Chromium only.",
+      "NOT PROVEN — offline AUDIO. The live verification proves a learner document is served from cache with the network off; it does not cover generated or source audio playback, which UX-004 also names (docs/13 Gate 4 journey 10). No offline E2E exists and none can be added as the suite is configured, since it blocks service workers by design.",
+      "NOT MEASURED — responsive behaviour. The 360/390/820/1440 zero-overflow claim exists only as prose in a plan file. No viewport dimension appears in any test; Playwright runs Desktop Chrome only.",
+      "NOT COMPLETE — audio coverage. 97 of 104 detail concepts have audio. The coverage manifest still reports 97/97 for a content set that grew to 104, so reading that manifest alone gives a false all-clear.",
+      "NOT COMPLETE — hub filtering. HubQueryState is {q, lesson, category}. Of the six scope filters HUB-002 requires, 2 exist. Hubs show everything published rather than defaulting to learned/unlocked.",
+      "NOT WIRED — activities to concepts. 23 of 24 activities have conceptIds: [], and 0 of 104 details carry an activity backlink. LES-005's activity half and LRN-001's per-concept-type claim both rest on this.",
+      "NOT PRESENT — examples and plural patterns. 0 Example records exist anywhere; 0 lexemes, verbs or grammar concepts carry exampleIds; 0 of 48 nouns carry plural patternIds. VOC-001, VOC-003, VER-001 and GRM-001 are all partial for this reason.",
+      "NOT ENCODED — 18 spec phrases/lexemes, the und-linking grammar concept, and three whole inventories (alphabet A-Z/Ä/Ö/Ü/ß, typed pronouns, numbers 0-100). Six published activities carry substance caveats because the content they teach is not in the graph. 0 Dialogue records exist.",
+      "STALE, DO NOT READ AS CURRENT — docs/17-current-state-and-completion-matrix.md (2026-08-07, written against the sample app) and the 'Current verified facts' bullet in plans/PLAN-BATON-full-alpha.md, which still reads verbs 4/10 and listening 0/4."
+    ],
+
+    "arithmeticOneLine": "Requirements 32 met / 17 partial / 0 unmet of 49. Register 23 completed / 1 in review / 5 pending of 29 rows, with 3 numeric deltas and 3 status disagreements flagged. Gates 10 of 10 scripted green (9 verified here from their own verdict artifacts, 1 reported by a concurrent agent), 0 scripted red, and 0 of 5 human gates closed.",
+    "movedDuringThisAudit": "UX-004 partial -> met (live service-worker verification landed on disk mid-run). OPEN-04 closed. OPEN-08 partially closed — E2E reported 36/36 green, but it remains off the release path. The E2E case count was corrected from an over-counted 43 to 31 static top-level test( call sites against 36 reported executed tests.",
+
+    "recommendedNextActions": [
+      "Do not treat this file as permission to release. It is the diff, not the acceptance.",
+      "The single highest-value unblocked item is the human German pass — it gates the teacher deck (OPEN-02), the 24th activity, the 24th route, VOC-005, and every future content wave.",
+      "Wire the E2E suite onto the release path. It is reported green and it has already caught a real learner-facing defect, but it is deliberately outside npm run check and gates:pages, so nothing forces it to run before a deploy (OPEN-08).",
+      "The cheapest real risk reduction is regenerating the 7 missing TTS clips AND replacing the static coverage manifest with a gate that re-derives coverage from the current detail set, so this class of staleness cannot recur (OPEN-11 / DIS-04).",
+      "Add a viewport-matrix Playwright project (OPEN-09) and an automated a11y scan (OPEN-10); both are implementable and both would convert prose claims into re-runnable evidence.",
+      "Reconcile DIS-05 (transcript rights wording vs ADR-016) as a decision row, since an old well-encoded decision silently outvoting a new one is the project's own most expensive recorded failure mode."
+    ]
+  }
+}

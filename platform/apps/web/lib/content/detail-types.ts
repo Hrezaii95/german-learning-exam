@@ -64,6 +64,20 @@ export type LearnerPersonFormRelation = {
   readonly operationLabel: string;
 };
 
+/**
+ * One usage example quoted from the course material, ready to show.
+ *
+ * Both strings are the source's own wording — `de` as printed and `en` as the
+ * book itself translates it. `sourceLabel` names the book and page so the
+ * learner can look the line up. A word the sources never show in use projects
+ * `null` here, and the detail page then renders no example section at all.
+ */
+export type LearnerVocabularyExample = {
+  readonly de: string;
+  readonly en: string;
+  readonly sourceLabel: string;
+};
+
 export type LearnerVocabularyDetail = {
   readonly kind: "Lexeme";
   readonly id: string;
@@ -80,6 +94,7 @@ export type LearnerVocabularyDetail = {
   readonly plurals: readonly string[];
   readonly pluralGapMessage: string | null;
   readonly personForm: LearnerPersonFormRelation | null;
+  readonly example: LearnerVocabularyExample | null;
   readonly media: LearnerMediaAvailability;
   readonly canonicalPath: string;
 };

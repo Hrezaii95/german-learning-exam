@@ -250,6 +250,33 @@
     },
     {
       "kind": "SourceAssertion",
+      "id": "assert:lex-jahr-example",
+      "sourceId": "source:glossary-momente-a11",
+      "location": {
+        "page": 2,
+        "printedPage": 2,
+        "exercise": "Lektion 02, 1"
+      },
+      "subjectId": "lex:jahr",
+      "field": "example",
+      "value": {
+        "de": "… Jahre alt",
+        "translationEn": "… years old",
+        "sourceRef": {
+          "sourceFileId": "src:glossary:9e35984302ede169",
+          "documentTitle": "Momente A1.1 KB Glossar Deutsch–Englisch",
+          "page": 2,
+          "exercise": "Lektion 02, 1"
+        }
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "glossary-example-transcription",
+      "reviewedAt": "2026-08-20"
+    },
+    {
+      "kind": "SourceAssertion",
       "id": "assert:lex-kind-lemma",
       "sourceId": "source:alpha-content-bundle",
       "location": {
@@ -282,6 +309,33 @@
       "status": "verified",
       "reviewer": "c1-source-encode",
       "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-kind-example",
+      "sourceId": "source:glossary-momente-a11",
+      "location": {
+        "page": 3,
+        "printedPage": 3,
+        "exercise": "Lektion 02, 1"
+      },
+      "subjectId": "lex:kind",
+      "field": "example",
+      "value": {
+        "de": "keine Kinder",
+        "translationEn": "no children",
+        "sourceRef": {
+          "sourceFileId": "src:glossary:9e35984302ede169",
+          "documentTitle": "Momente A1.1 KB Glossar Deutsch–Englisch",
+          "page": 3,
+          "exercise": "Lektion 02, 1"
+        }
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "glossary-example-transcription",
+      "reviewedAt": "2026-08-20"
     },
     {
       "kind": "SourceAssertion",
@@ -352,6 +406,33 @@
       "status": "verified",
       "reviewer": "c1-source-encode",
       "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-geschieden-example",
+      "sourceId": "source:glossary-momente-a11",
+      "location": {
+        "page": 3,
+        "printedPage": 3,
+        "exercise": "Lektion 02, 4"
+      },
+      "subjectId": "lex:geschieden",
+      "field": "example",
+      "value": {
+        "de": "geschieden sein",
+        "translationEn": "to be divorced",
+        "sourceRef": {
+          "sourceFileId": "src:glossary:9e35984302ede169",
+          "documentTitle": "Momente A1.1 KB Glossar Deutsch–Englisch",
+          "page": 3,
+          "exercise": "Lektion 02, 4"
+        }
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "glossary-example-transcription",
+      "reviewedAt": "2026-08-20"
     },
     {
       "kind": "SourceAssertion",
@@ -632,6 +713,33 @@
       "status": "verified",
       "reviewer": "c1-source-encode",
       "reviewedAt": "2026-08-08"
+    },
+    {
+      "kind": "SourceAssertion",
+      "id": "assert:lex-beruf-example",
+      "sourceId": "source:glossary-momente-a11",
+      "location": {
+        "page": 4,
+        "printedPage": 4,
+        "exercise": "Lektion 02, 6"
+      },
+      "subjectId": "lex:beruf",
+      "field": "example",
+      "value": {
+        "de": "von Beruf",
+        "translationEn": "by profession",
+        "sourceRef": {
+          "sourceFileId": "src:glossary:9e35984302ede169",
+          "documentTitle": "Momente A1.1 KB Glossar Deutsch–Englisch",
+          "page": 4,
+          "exercise": "Lektion 02, 6"
+        }
+      },
+      "extraction": "manual",
+      "confidence": 1,
+      "status": "verified",
+      "reviewer": "glossary-example-transcription",
+      "reviewedAt": "2026-08-20"
     },
     {
       "kind": "SourceAssertion",
@@ -3719,7 +3827,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-jahr-lemma",
-        "assert:lex-jahr-meanings"
+        "assert:lex-jahr-meanings",
+        "assert:lex-jahr-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -3733,6 +3842,10 @@
           {
             "field": "meanings",
             "assertionId": "assert:lex-jahr-meanings"
+          },
+          {
+            "field": "example",
+            "assertionId": "assert:lex-jahr-example"
           }
         ]
       },
@@ -3746,6 +3859,16 @@
             "patternIds": []
           }
         ]
+      },
+      "example": {
+        "de": "… Jahre alt",
+        "translationEn": "… years old",
+        "sourceRef": {
+          "sourceFileId": "src:glossary:9e35984302ede169",
+          "documentTitle": "Momente A1.1 KB Glossar Deutsch–Englisch",
+          "page": 2,
+          "exercise": "Lektion 02, 1"
+        }
       }
     },
     {
@@ -3766,7 +3889,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-kind-lemma",
-        "assert:lex-kind-meanings"
+        "assert:lex-kind-meanings",
+        "assert:lex-kind-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -3780,6 +3904,10 @@
           {
             "field": "meanings",
             "assertionId": "assert:lex-kind-meanings"
+          },
+          {
+            "field": "example",
+            "assertionId": "assert:lex-kind-example"
           }
         ]
       },
@@ -3793,6 +3921,16 @@
             "patternIds": []
           }
         ]
+      },
+      "example": {
+        "de": "keine Kinder",
+        "translationEn": "no children",
+        "sourceRef": {
+          "sourceFileId": "src:glossary:9e35984302ede169",
+          "documentTitle": "Momente A1.1 KB Glossar Deutsch–Englisch",
+          "page": 3,
+          "exercise": "Lektion 02, 1"
+        }
       }
     },
     {
@@ -3849,7 +3987,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-geschieden-lemma",
-        "assert:lex-geschieden-meanings"
+        "assert:lex-geschieden-meanings",
+        "assert:lex-geschieden-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -3863,8 +4002,22 @@
           {
             "field": "meanings",
             "assertionId": "assert:lex-geschieden-meanings"
+          },
+          {
+            "field": "example",
+            "assertionId": "assert:lex-geschieden-example"
           }
         ]
+      },
+      "example": {
+        "de": "geschieden sein",
+        "translationEn": "to be divorced",
+        "sourceRef": {
+          "sourceFileId": "src:glossary:9e35984302ede169",
+          "documentTitle": "Momente A1.1 KB Glossar Deutsch–Englisch",
+          "page": 3,
+          "exercise": "Lektion 02, 4"
+        }
       }
     },
     {
@@ -4183,7 +4336,8 @@
       ],
       "sourceAssertionIds": [
         "assert:lex-beruf-lemma",
-        "assert:lex-beruf-meanings"
+        "assert:lex-beruf-meanings",
+        "assert:lex-beruf-example"
       ],
       "mediaIds": [],
       "cardTemplateIds": [],
@@ -4197,6 +4351,10 @@
           {
             "field": "meanings",
             "assertionId": "assert:lex-beruf-meanings"
+          },
+          {
+            "field": "example",
+            "assertionId": "assert:lex-beruf-example"
           }
         ]
       },
@@ -4210,6 +4368,16 @@
             "patternIds": []
           }
         ]
+      },
+      "example": {
+        "de": "von Beruf",
+        "translationEn": "by profession",
+        "sourceRef": {
+          "sourceFileId": "src:glossary:9e35984302ede169",
+          "documentTitle": "Momente A1.1 KB Glossar Deutsch–Englisch",
+          "page": 4,
+          "exercise": "Lektion 02, 6"
+        }
       }
     },
     {

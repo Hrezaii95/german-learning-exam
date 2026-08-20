@@ -1716,6 +1716,38 @@ a:hover {
   font-size: 1.25rem;
 }
 
+/* Vocabulary example — a quoted line from the course material, so it reads as
+   a quotation rather than app copy: German dominant on the reading line, the
+   book's own English directly beneath it, and a quiet brand rule down the left
+   marking the whole block as borrowed text. Measured on `--surface-muted`:
+   `--ink` 15.66:1, `--ink-muted` 6.27:1 — both clear WCAG 1.4.3 AA. */
+.vocab-example {
+  margin: 0;
+  padding: var(--space-4) var(--space-4) var(--space-4) var(--space-5);
+  border: 1px solid var(--border);
+  border-left: 3px solid color-mix(in srgb, var(--brand) 55%, var(--border));
+  border-radius: var(--radius-sm);
+  background: var(--surface-muted);
+}
+
+.vocab-example__de {
+  margin: 0;
+  color: var(--ink);
+  font-size: 1.25rem;
+  line-height: 1.35;
+}
+
+.vocab-example__en {
+  margin: var(--space-2) 0 0;
+  color: var(--ink-muted);
+  font-size: var(--text-body);
+  line-height: 1.4;
+}
+
+.vocab-example__source {
+  margin: var(--space-3) 0 0;
+}
+
 .person-form-infographic {
   display: flex;
   flex-wrap: wrap;

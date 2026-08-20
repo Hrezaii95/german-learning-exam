@@ -82,6 +82,28 @@ export function detailPageMetadata(detail: LearnerDetailRecord): Metadata {
   );
 }
 
+/**
+ * The pronunciation listening surface (`/review-audio`).
+ *
+ * Not a learner page: it carries no place in the navigation and no learner
+ * route links to it. It still exports HTML like every other route, so it needs
+ * a title of its own — a tab reading only the product name is exactly the
+ * defect this module exists to prevent, whoever the reader is.
+ *
+ * `robots` is the second half of "reachable by address only": the page is not
+ * secret, but a search engine offering it to a learner would undo the point of
+ * keeping it out of the menu.
+ */
+export function pronunciationReviewPageMetadata(): Metadata {
+  return {
+    ...pageMetadata(
+      "Pronunciation listening check",
+      "Every computer-voiced German clip the app can play, gathered on one page so a qualified listener can judge them and keep notes.",
+    ),
+    robots: { index: false, follow: false },
+  };
+}
+
 function detailDescription(detail: LearnerDetailRecord): string {
   switch (detail.kind) {
     case "Lexeme":

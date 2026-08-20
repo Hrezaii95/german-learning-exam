@@ -14,7 +14,7 @@ import {
 } from "../publication/authority.js";
 import type { ContentFragment } from "../publication/fragment.js";
 import type { Lesson } from "../types/lesson.js";
-import type { Lexeme } from "../types/lexeme.js";
+import type { Lexeme, LexemeExample } from "../types/lexeme.js";
 import type { Verb, PersonKey } from "../types/verb.js";
 import type { GrammarConcept } from "../types/grammar.js";
 import type { PhrasePattern, QAPair } from "../types/phrase.js";
@@ -73,7 +73,18 @@ type AlphaTeacherJob = {
   validationStatus: string;
 };
 
+type AlphaGlossaryExample = {
+  lexemeId: string;
+  de: string;
+  en: string;
+  page: number;
+  exercise?: string;
+  sourceFileId: string;
+  documentTitle: string;
+};
+
 type AlphaContent = {
+  glossaryExamples?: AlphaGlossaryExample[];
   lessons: Array<{
     id: string;
     number: number;
@@ -252,6 +263,70 @@ const L2_ACTIVITY_DEFS: Array<{
 
 /** Core profession lemmas also present in the teacher note — owned by lesson-02 fragment. */
 const CORE_OWNED_LEX_SLUGS = new Set<string>();
+
+/** Usage examples transcribed from the official glossary, keyed by lexeme id. */
+const GLOSSARY_EXAMPLES = new Map<string, AlphaGlossaryExample>();
+/** Lexeme ids that actually received their authored example this run. */
+const ATTACHED_EXAMPLE_IDS = new Set<string>();
+
+function loadGlossaryExamples(alpha: AlphaContent): void {
+  GLOSSARY_EXAMPLES.clear();
+  ATTACHED_EXAMPLE_IDS.clear();
+  for (const item of alpha.glossaryExamples ?? []) {
+    if (GLOSSARY_EXAMPLES.has(item.lexemeId)) {
+      throw new Error(`Duplicate glossary example authored for ${item.lexemeId}`);
+    }
+    GLOSSARY_EXAMPLES.set(item.lexemeId, item);
+  }
+}
+
+/**
+ * Attaches the transcribed usage example for this lexeme when the sources
+ * printed one, together with the verified assertion that makes it traceable
+ * back to a document and page. A lexeme with no source example is left exactly
+ * as it was — no empty field, no placeholder value.
+ */
+function attachGlossaryExample(lex: Lexeme, assertions: SourceAssertion[]): void {
+  const authored = GLOSSARY_EXAMPLES.get(lex.id);
+  if (!authored) return;
+  if (lex.publication.status !== "published") {
+    throw new Error(`Glossary example authored for unpublished lexeme ${lex.id}`);
+  }
+  const example: LexemeExample = {
+    de: authored.de,
+    translationEn: authored.en,
+    sourceRef: {
+      sourceFileId: authored.sourceFileId,
+      documentTitle: authored.documentTitle,
+      page: authored.page,
+      ...(authored.exercise ? { exercise: authored.exercise } : {}),
+    },
+  };
+  const exampleAssert = assertion({
+    id: `assert:${lex.id.replace(":", "-")}-example` as `assert:${string}`,
+    sourceId: "source:glossary-momente-a11",
+    subjectId: lex.id,
+    field: "example",
+    value: example,
+    status: "verified",
+    location: {
+      page: authored.page,
+      printedPage: authored.page,
+      ...(authored.exercise ? { exercise: authored.exercise } : {}),
+    },
+    extraction: "manual",
+    reviewer: "glossary-example-transcription",
+    reviewedAt: "2026-08-20",
+  });
+  assertions.push(exampleAssert);
+  lex.example = example;
+  lex.sourceAssertionIds = [...lex.sourceAssertionIds, exampleAssert.id];
+  lex.publication.publishedFields = [
+    ...lex.publication.publishedFields,
+    { field: "example", assertionId: exampleAssert.id },
+  ];
+  ATTACHED_EXAMPLE_IDS.add(lex.id);
+}
 
 function loadJson<T>(abs: string): T {
   return JSON.parse(readFileSync(abs, "utf8")) as T;
@@ -622,6 +697,7 @@ function buildLesson01(alpha: AlphaContent): ContentFragment {
           : [],
       };
     }
+    attachGlossaryExample(lex, sourceAssertions);
     lexemes.push(lex);
     contentGaps.push({
       kind: "ContentGap",
@@ -1103,6 +1179,7 @@ function buildLesson02(alpha: AlphaContent): ContentFragment {
           : [],
       };
     }
+    attachGlossaryExample(lex, sourceAssertions);
     lexemes.push(lex);
   }
 
@@ -1162,7 +1239,7 @@ function buildLesson02(alpha: AlphaContent): ContentFragment {
         fromId: side.id,
         toId: "lesson:02",
       });
-      lexemes.push({
+      const professionLex: Lexeme = {
         kind: "Lexeme",
         id: side.id,
         lemma: side.lemma,
@@ -1185,7 +1262,9 @@ function buildLesson02(alpha: AlphaContent): ContentFragment {
           { field: "lemma", assertionId: lemmaAssert.id },
           { field: "meanings", assertionId: meaningsAssert.id },
         ]),
-      });
+      };
+      attachGlossaryExample(professionLex, sourceAssertions);
+      lexemes.push(professionLex);
     }
     relationships.push({
       kind: "Relationship",
@@ -2057,6 +2136,7 @@ function main(): void {
 
   mkdirSync(PUBLISHED_DIR, { recursive: true });
   writeAuthorityProjection(audioMap);
+  loadGlossaryExamples(alpha);
 
   // Lesson 2 must run before teacher fragment so CORE_OWNED_LEX_SLUGS is populated.
   const lesson01 = buildLesson01(alpha);
@@ -2064,6 +2144,17 @@ function main(): void {
   const teacher = buildTeacherProfessions(alpha);
   const activities = buildActivities();
   const listening = buildListening(audioMap);
+
+  // Fail closed: an authored example that never reached a lexeme would be a
+  // silently dropped source quote, so name the ids instead of shipping without.
+  const unattached = [...GLOSSARY_EXAMPLES.keys()].filter(
+    (id) => !ATTACHED_EXAMPLE_IDS.has(id),
+  );
+  if (unattached.length > 0) {
+    throw new Error(
+      `Transcribed examples did not match any published lexeme: ${unattached.join(", ")}`,
+    );
+  }
 
   const fragments: Array<[string, ContentFragment]> = [
     ["lesson-01.json", lesson01],
@@ -2077,6 +2168,9 @@ function main(): void {
     writeFragment(fragment, name);
     console.log(`Wrote ${name} fragmentId=${fragment.fragmentId}`);
   }
+  console.log(
+    `Attached ${ATTACHED_EXAMPLE_IDS.size}/${GLOSSARY_EXAMPLES.size} transcribed glossary examples`,
+  );
   console.log(`PUBLISHED_DIR=${PUBLISHED_DIR}`);
 }
 
