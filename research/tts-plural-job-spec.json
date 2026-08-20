@@ -1,0 +1,327 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Plural pronunciation clips missing from the app. BLOCKED: requires an OPENAI_API_KEY with Audio Speech access in the Codex environment. Nothing here has been generated.",
+  "blockedOn": "OPENAI_API_KEY absent — verified by Codex capability check 2026-08-20; edge-tts/ffmpeg/ffprobe are installed but the owner has asked for GPT voices, so no substitute was generated.",
+  "outputDir": "media/generated/tts-plural-openai-v1/",
+  "voiceGuidance": "Natural clear German suitable for an A1 learner. Neutral pace, no dramatisation. State which voice/model was used.",
+  "spokenTextRule": "German nominative plural takes the article die regardless of the singular gender, so each clip speaks \"die <plural>\".",
+  "reviewState": "Every generated clip is candidate-needs-listening-review and must appear in /review-audio before it can be called approved.",
+  "count": 45,
+  "jobs": [
+    {
+      "lexemeId": "lex:aerztin",
+      "lemma": "Ärztin",
+      "singularDisplay": "die Ärztin",
+      "pluralForm": "Ärztinnen",
+      "spokenText": "die Ärztinnen"
+    },
+    {
+      "lexemeId": "lex:architekt",
+      "lemma": "Architekt",
+      "singularDisplay": "der Architekt",
+      "pluralForm": "Architekten",
+      "spokenText": "die Architekten"
+    },
+    {
+      "lexemeId": "lex:architektin",
+      "lemma": "Architektin",
+      "singularDisplay": "die Architektin",
+      "pluralForm": "Architektinnen",
+      "spokenText": "die Architektinnen"
+    },
+    {
+      "lexemeId": "lex:arzt",
+      "lemma": "Arzt",
+      "singularDisplay": "der Arzt",
+      "pluralForm": "Ärzte",
+      "spokenText": "die Ärzte"
+    },
+    {
+      "lexemeId": "lex:ausbildung",
+      "lemma": "Ausbildung",
+      "singularDisplay": "die Ausbildung",
+      "pluralForm": "Ausbildungen",
+      "spokenText": "die Ausbildungen"
+    },
+    {
+      "lexemeId": "lex:beruf",
+      "lemma": "Beruf",
+      "singularDisplay": "der Beruf",
+      "pluralForm": "Berufe",
+      "spokenText": "die Berufe"
+    },
+    {
+      "lexemeId": "lex:familienname",
+      "lemma": "Familienname",
+      "singularDisplay": "der Familienname",
+      "pluralForm": "Familiennamen",
+      "spokenText": "die Familiennamen"
+    },
+    {
+      "lexemeId": "lex:firma",
+      "lemma": "Firma",
+      "singularDisplay": "die Firma",
+      "pluralForm": "Firmen",
+      "spokenText": "die Firmen"
+    },
+    {
+      "lexemeId": "lex:frau",
+      "lemma": "Frau",
+      "singularDisplay": "die Frau",
+      "pluralForm": "Frauen",
+      "spokenText": "die Frauen"
+    },
+    {
+      "lexemeId": "lex:friseur",
+      "lemma": "Friseur",
+      "singularDisplay": "der Friseur",
+      "pluralForm": "Friseure",
+      "spokenText": "die Friseure"
+    },
+    {
+      "lexemeId": "lex:friseurin",
+      "lemma": "Friseurin",
+      "singularDisplay": "die Friseurin",
+      "pluralForm": "Friseurinnen",
+      "spokenText": "die Friseurinnen"
+    },
+    {
+      "lexemeId": "lex:herr",
+      "lemma": "Herr",
+      "singularDisplay": "der Herr",
+      "pluralForm": "Herren",
+      "spokenText": "die Herren"
+    },
+    {
+      "lexemeId": "lex:ingenieur",
+      "lemma": "Ingenieur",
+      "singularDisplay": "der Ingenieur",
+      "pluralForm": "Ingenieure",
+      "spokenText": "die Ingenieure"
+    },
+    {
+      "lexemeId": "lex:ingenieurin",
+      "lemma": "Ingenieurin",
+      "singularDisplay": "die Ingenieurin",
+      "pluralForm": "Ingenieurinnen",
+      "spokenText": "die Ingenieurinnen"
+    },
+    {
+      "lexemeId": "lex:interview",
+      "lemma": "Interview",
+      "singularDisplay": "das Interview",
+      "pluralForm": "Interviews",
+      "spokenText": "die Interviews"
+    },
+    {
+      "lexemeId": "lex:jahr",
+      "lemma": "Jahr",
+      "singularDisplay": "das Jahr",
+      "pluralForm": "Jahre",
+      "spokenText": "die Jahre"
+    },
+    {
+      "lexemeId": "lex:job",
+      "lemma": "Job",
+      "singularDisplay": "der Job",
+      "pluralForm": "Jobs",
+      "spokenText": "die Jobs"
+    },
+    {
+      "lexemeId": "lex:journalist",
+      "lemma": "Journalist",
+      "singularDisplay": "der Journalist",
+      "pluralForm": "Journalisten",
+      "spokenText": "die Journalisten"
+    },
+    {
+      "lexemeId": "lex:journalistin",
+      "lemma": "Journalistin",
+      "singularDisplay": "die Journalistin",
+      "pluralForm": "Journalistinnen",
+      "spokenText": "die Journalistinnen"
+    },
+    {
+      "lexemeId": "lex:kellner",
+      "lemma": "Kellner",
+      "singularDisplay": "der Kellner",
+      "pluralForm": "Kellner",
+      "spokenText": "die Kellner"
+    },
+    {
+      "lexemeId": "lex:kellnerin",
+      "lemma": "Kellnerin",
+      "singularDisplay": "die Kellnerin",
+      "pluralForm": "Kellnerinnen",
+      "spokenText": "die Kellnerinnen"
+    },
+    {
+      "lexemeId": "lex:kfz-mechatroniker",
+      "lemma": "Kfz-Mechatroniker",
+      "singularDisplay": "der Kfz-Mechatroniker",
+      "pluralForm": "Kfz-Mechatroniker",
+      "spokenText": "die Kfz-Mechatroniker"
+    },
+    {
+      "lexemeId": "lex:kfz-mechatronikerin",
+      "lemma": "Kfz-Mechatronikerin",
+      "singularDisplay": "die Kfz-Mechatronikerin",
+      "pluralForm": "Kfz-Mechatronikerinnen",
+      "spokenText": "die Kfz-Mechatronikerinnen"
+    },
+    {
+      "lexemeId": "lex:kind",
+      "lemma": "Kind",
+      "singularDisplay": "das Kind",
+      "pluralForm": "Kinder",
+      "spokenText": "die Kinder"
+    },
+    {
+      "lexemeId": "lex:lehrer",
+      "lemma": "Lehrer",
+      "singularDisplay": "der Lehrer",
+      "pluralForm": "Lehrer",
+      "spokenText": "die Lehrer"
+    },
+    {
+      "lexemeId": "lex:lehrerin",
+      "lemma": "Lehrerin",
+      "singularDisplay": "die Lehrerin",
+      "pluralForm": "Lehrerinnen",
+      "spokenText": "die Lehrerinnen"
+    },
+    {
+      "lexemeId": "lex:name",
+      "lemma": "Name",
+      "singularDisplay": "der Name",
+      "pluralForm": "Namen",
+      "spokenText": "die Namen"
+    },
+    {
+      "lexemeId": "lex:paketzusteller",
+      "lemma": "Paketzusteller",
+      "singularDisplay": "der Paketzusteller",
+      "pluralForm": "Paketzusteller",
+      "spokenText": "die Paketzusteller"
+    },
+    {
+      "lexemeId": "lex:paketzustellerin",
+      "lemma": "Paketzustellerin",
+      "singularDisplay": "die Paketzustellerin",
+      "pluralForm": "Paketzustellerinnen",
+      "spokenText": "die Paketzustellerinnen"
+    },
+    {
+      "lexemeId": "lex:partner",
+      "lemma": "Partner",
+      "singularDisplay": "der Partner",
+      "pluralForm": "Partner",
+      "spokenText": "die Partner"
+    },
+    {
+      "lexemeId": "lex:partnerin",
+      "lemma": "Partnerin",
+      "singularDisplay": "die Partnerin",
+      "pluralForm": "Partnerinnen",
+      "spokenText": "die Partnerinnen"
+    },
+    {
+      "lexemeId": "lex:praktikum",
+      "lemma": "Praktikum",
+      "singularDisplay": "das Praktikum",
+      "pluralForm": "Praktika",
+      "spokenText": "die Praktika"
+    },
+    {
+      "lexemeId": "lex:rentner",
+      "lemma": "Rentner",
+      "singularDisplay": "der Rentner",
+      "pluralForm": "Rentner",
+      "spokenText": "die Rentner"
+    },
+    {
+      "lexemeId": "lex:rentnerin",
+      "lemma": "Rentnerin",
+      "singularDisplay": "die Rentnerin",
+      "pluralForm": "Rentnerinnen",
+      "spokenText": "die Rentnerinnen"
+    },
+    {
+      "lexemeId": "lex:schueler",
+      "lemma": "Schüler",
+      "singularDisplay": "der Schüler",
+      "pluralForm": "Schüler",
+      "spokenText": "die Schüler"
+    },
+    {
+      "lexemeId": "lex:schuelerin",
+      "lemma": "Schülerin",
+      "singularDisplay": "die Schülerin",
+      "pluralForm": "Schülerinnen",
+      "spokenText": "die Schülerinnen"
+    },
+    {
+      "lexemeId": "lex:single",
+      "lemma": "Single",
+      "singularDisplay": "der Single",
+      "pluralForm": "Singles",
+      "spokenText": "die Singles"
+    },
+    {
+      "lexemeId": "lex:stelle",
+      "lemma": "Stelle",
+      "singularDisplay": "die Stelle",
+      "pluralForm": "Stellen",
+      "spokenText": "die Stellen"
+    },
+    {
+      "lexemeId": "lex:student",
+      "lemma": "Student",
+      "singularDisplay": "der Student",
+      "pluralForm": "Studenten",
+      "spokenText": "die Studenten"
+    },
+    {
+      "lexemeId": "lex:studentin",
+      "lemma": "Studentin",
+      "singularDisplay": "die Studentin",
+      "pluralForm": "Studentinnen",
+      "spokenText": "die Studentinnen"
+    },
+    {
+      "lexemeId": "lex:text",
+      "lemma": "Text",
+      "singularDisplay": "der Text",
+      "pluralForm": "Texte",
+      "spokenText": "die Texte"
+    },
+    {
+      "lexemeId": "lex:verkaeufer",
+      "lemma": "Verkäufer",
+      "singularDisplay": "der Verkäufer",
+      "pluralForm": "Verkäufer",
+      "spokenText": "die Verkäufer"
+    },
+    {
+      "lexemeId": "lex:verkaeuferin",
+      "lemma": "Verkäuferin",
+      "singularDisplay": "die Verkäuferin",
+      "pluralForm": "Verkäuferinnen",
+      "spokenText": "die Verkäuferinnen"
+    },
+    {
+      "lexemeId": "lex:vorname",
+      "lemma": "Vorname",
+      "singularDisplay": "der Vorname",
+      "pluralForm": "Vornamen",
+      "spokenText": "die Vornamen"
+    },
+    {
+      "lexemeId": "lex:wohnort",
+      "lemma": "Wohnort",
+      "singularDisplay": "der Wohnort",
+      "pluralForm": "Wohnorte",
+      "spokenText": "die Wohnorte"
+    }
+  ]
+}
