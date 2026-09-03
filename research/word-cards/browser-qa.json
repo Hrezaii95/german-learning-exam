@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-03T05:46:09.174Z",
+  "checkedAt": "2026-09-03T06:13:43.862Z",
   "base": "http://127.0.0.1:8781/german-learning-exam",
   "passed": true,
   "responsiveChecks": [
@@ -245,10 +245,11 @@
     }
   ],
   "filters": [
-    "German search",
+    "Original German search and Apply/Clear controls",
+    "Return to filtered results",
     "Lesson 3",
     "101 numbers",
-    "48 teacher jobs"
+    "48 teacher jobs and slash-alternative filter"
   ],
   "audioSampleCardIds": [
     "W126",

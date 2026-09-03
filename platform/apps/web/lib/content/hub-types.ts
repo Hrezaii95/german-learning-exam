@@ -36,6 +36,8 @@ export type LearnerHubDestination = {
 };
 
 export type LearnerHubRecord = {
+  /** Aggregated vocabulary preview; the complete teaching card opens on its detail route. */
+  wordFamily?: import("./word-card-types").WordCard;
   id: string;
   kind: LearnerHubEntityKind;
   publicationStatus: "published";

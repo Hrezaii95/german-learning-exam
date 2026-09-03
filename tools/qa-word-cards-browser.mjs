@@ -35,17 +35,41 @@ try {
   }
   await page.setViewportSize({ width: 1440, height: 1000 });
   await page.goto(`${base}/vocabulary/?q=ingenieur`);
-  await page.locator('[data-word-card="W126"]').waitFor();
-  await page.getByRole("searchbox").fill("Krankenpfleger");
+  await page.locator('[data-word-family="W126"]').waitFor();
+  await page.getByRole("searchbox", { name: "Search Vocabulary" }).fill("Krankenpfleger");
+  await page.getByRole("button", {name:"Apply filters"}).click();
+  await page.waitForURL('**/*q=Krankenpfleger*');
+  await page.locator('[data-word-family="W152"]').waitFor();
+  await page.getByRole("link", {name:"Study this word family"}).click();
   await page.locator('[data-word-card="W152"]').waitFor();
-  await page.getByRole("button", { name: "Clear filters" }).click();
-  await page.getByLabel("Lesson", { exact: true }).selectOption("3");
-  check((await page.locator('[role="status"]').allTextContents()).some(t => t.includes("58 families")), "Lesson 3 filter did not return 58 families");
-  await page.getByRole("button", { name: "Clear filters" }).click();
-  await page.getByLabel("Topic", { exact: true }).selectOption("Number");
-  check((await page.locator('[role="status"]').allTextContents()).some(t => t.includes("101 families")), "Numbers filter is incomplete");
+  await page.getByRole("link", {name:"← Back", exact:true}).click();
+  await page.waitForURL('**/*q=Krankenpfleger*');
+  await page.locator('[data-word-family="W152"]').waitFor();
+  await page.locator(".hub-filters").getByRole("link", { name: "Clear filters", exact:true }).click();
+  await page.waitForURL('**/vocabulary/');
+  await page.getByRole("combobox", { name: "Filter Vocabulary by lesson" }).selectOption("03");
+  await page.getByRole("button", {name:"Apply filters"}).click();
+  await page.waitForURL('**/*lesson=03*');
+  await page.waitForFunction(() => document.querySelector('select[name="lesson"]')?.value === '03');
+  check(await page.locator('[data-word-family]').count() >= 58, "Lesson 3 filter omitted source families");
+  await page.locator(".hub-filters").getByRole("link", { name: "Clear filters", exact:true }).click();
+  await page.waitForURL('**/vocabulary/');
+  await page.getByRole("combobox", { name: "Filter Vocabulary by category" }).selectOption("number");
+  await page.getByRole("button", {name:"Apply filters"}).click();
+  await page.waitForURL('**/*category=number*');
+  await page.waitForFunction(() => document.querySelectorAll('[data-word-family]').length === 101);
+  check(await page.locator('[data-word-family]').count() === 101, "Numbers filter is incomplete");
+  for (const width of [1440,390]) {
+    await page.setViewportSize({width,height:900});
+    await page.goto(`${base}/vocabulary/?q=ingenieur`, {waitUntil:'networkidle'});
+    await page.locator('[data-word-family="W126"]').waitFor();
+    check(!(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1)), `${width}: restored browse grid overflow`);
+    await page.screenshot({path:resolve(root,`research/word-cards/restored-browse-${width}.png`),fullPage:true});
+  }
   await page.goto(`${base}/collections/professions/`);
-  check((await page.locator('[role="status"]').allTextContents()).some(t => t.includes("48 families")), "Teacher job filter is incomplete");
+  check((await page.locator('[role="status"]').allTextContents()).some(t => t.includes("Showing 48 of 48 rows")), "Teacher job filter is incomplete");
+  await page.getByRole("checkbox", {name:"Show only rows with slash alternatives"}).check();
+  check(!(await page.locator('[role="status"]').allTextContents()).some(t => t.includes("Showing 48 of 48 rows")), "Teacher alternatives filter did not narrow the rows");
   await page.goto(`${base}/search/?q=Chocolati%C3%A8res`);
   const rare = page.getByRole("link", { name: "der Chocolatier / die Chocolatière", exact: true });
   await rare.waitFor(); await rare.click();
@@ -69,7 +93,7 @@ try {
   }
 } catch (error) { failures.push(String(error)); }
 finally { await browser.close(); }
-const report = { checkedAt: new Date().toISOString(), base, passed: failures.length === 0, responsiveChecks: checks, filters: ["German search", "Lesson 3", "101 numbers", "48 teacher jobs"], audioSampleCardIds: ["W126", "W386", "W171"], failures };
+const report = { checkedAt: new Date().toISOString(), base, passed: failures.length === 0, responsiveChecks: checks, filters: ["Original German search and Apply/Clear controls", "Return to filtered results", "Lesson 3", "101 numbers", "48 teacher jobs and slash-alternative filter"], audioSampleCardIds: ["W126", "W386", "W171"], failures };
 writeFileSync(resolve(root, "research/word-cards/browser-qa.json"), JSON.stringify(report, null, 2) + "\n");
 console.log(JSON.stringify({ passed: report.passed, responsiveChecks: checks.length, failures }, null, 2));
 if (failures.length) process.exitCode = 1;

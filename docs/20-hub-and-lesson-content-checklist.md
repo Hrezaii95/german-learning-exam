@@ -6,6 +6,8 @@ The new vocabulary catalogue supersedes the older vocabulary and optional-job co
 
 Implementation evidence: `research/word-cards/coverage.json`; complete mapping: `docs/vocabulary-card-index.csv`. These are technical/content-coverage checks, not human pronunciation approval. Other hub and lesson activity counts are outside this vocabulary expansion. The older dated tables below are historical.
 
+The original vocabulary hub layout, search/lesson/category filters, Apply/Clear controls and browse grid are preserved. Its previews aggregate related forms and open the complete Learn/Recall card. The optional professions collection retains its original search, alternatives filter and review controls. Dashboard and shared page styling remain unchanged.
+
 Snapshot: 2026-08-13
 
 Base URL: `https://hrezaii95.github.io/german-learning-exam/`

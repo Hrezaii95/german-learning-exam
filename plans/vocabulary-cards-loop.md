@@ -1,6 +1,6 @@
 # Vocabulary cards completion loop
 
-Owner request: 2026-09-03. Executor: Codex. Status: implementation and local release checks complete; deployment verification follows this commit.
+Owner request: 2026-09-03. Executor: Codex. Status: original card batch deployed and verified; owner-requested browse UI restoration implemented and locally verified; deployment verification follows this commit.
 
 Input: `study-guides/lessons-01-03/01-vocabulary.pdf` and its exact builder data `research/lesson-03-study-pack/vocabulary.json`.
 
@@ -28,3 +28,11 @@ Pre-existing dirty sample submodule is outside this work. Human language/listeni
 - Windows Next 16.3 segment filenames normalized to the browser protocol, preserving payloads; Linux exports remain unchanged.
 - Pages smoke, vocabulary coverage, audio hashes, attribution, learner language and offline gates passed.
 - Live destination: https://hrezaii95.github.io/german-learning-exam/vocabulary/
+
+## Preserve the previous page experience
+
+The owner clarified that page/filter UX and dashboard must match the version before the card integration (`54e83a3`). The vocabulary route again uses the original `HubRoutePage`, filter form, Apply/Clear actions and grid. The hub inventory supplies all 591 grouped families and their complete cards. Existing category names are preserved, and Lesson 3 is added to the existing lesson selector. The original optional professions collection, search, alternatives checkbox and review controls are restored. Card Back navigation preserves hub/search context. Dashboard, shell and global CSS are unchanged from the baseline.
+
+Required evidence: production browser verification of restored filters, grid, card-to-results return, all 48 jobs and all 722 complete card routes; unchanged-file comparison for dashboard/layout; successful Pages deployment. The original human language/listening review boundary is unchanged.
+
+Restoration verification: 12 baseline comparisons passed, preserving the dashboard, shell, global CSS, vocabulary page structure and jobs controls. The existing filter form differs only by the Lesson 3 option and an invisible React key that fixes stale input after clearing filters. Card/hub interaction regression tests passed 17/17. Browser QA passed 48 responsive card checks, original search/apply/clear, return context, Lesson 3, numbers and jobs alternatives. Final preview colors have 5.08:1 or better measured contrast; engineer forms remain on one line at 1440 and 390 px. Final Pages gates passed with 722 complete exported card routes. Evidence: `browse-preservation.json`, `browser-qa.json`, `preview-visual-qa.json` and `coverage.json` in `research/word-cards/`.

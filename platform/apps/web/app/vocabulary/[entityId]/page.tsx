@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import { ShellLayout } from "@/components/shell/ShellLayout";
 import { WordFamilyCard } from "@/components/word-cards/WordFamilyCard";
+import { WordCardBackLink } from "@/components/word-cards/WordCardBackLink";
+import { BackLink } from "@/components/nav/BackLink";
 import { loadWordCards, wordCardForPath } from "@/lib/content/word-cards";
 import { DetailLearningControls } from "@/components/learner-state/DetailLearningControls";
 import { tryDecodeEntityRouteSegment } from "@/lib/content/path-utils";
@@ -22,10 +24,8 @@ export default async function VocabularyDetailPage({ params }: PageProps) {
   const { entityId } = await params;
   const card = wordCardForPath(`/vocabulary/${entityId}`);
   if (!card) notFound();
-  const cards = loadWordCards().cards;
-  const index = cards.findIndex(c => c.id === card.id);
   const oldPath = card.aliases.find(p => p.startsWith("/vocabulary/id-"));
   const requestedLearningId = tryDecodeEntityRouteSegment(entityId);
   const learningId = requestedLearningId?.startsWith("lex:") ? requestedLearningId : oldPath ? tryDecodeEntityRouteSegment(oldPath.split("/").at(-1)!) : null;
-  return <ShellLayout current="vocabulary"><div className={styles.detailFrame}><nav className={styles.cardNavigation} aria-label="Vocabulary cards"><Link href="/vocabulary">← All vocabulary</Link>{index > 0 && <Link href={cards[index - 1]!.path} prefetch={false}>Previous family</Link>}{index < cards.length - 1 && <Link href={cards[index + 1]!.path} prefetch={false}>Next family →</Link>}</nav><WordFamilyCard key={card.id} card={card} /></div>{learningId && <DetailLearningControls key={learningId} contentId={learningId} />}</ShellLayout>;
+  return <ShellLayout current="vocabulary"><div className="stack"><Suspense fallback={<BackLink href="/vocabulary" />}><WordCardBackLink /></Suspense><div className={styles.detailFrame}><WordFamilyCard key={card.id} card={card} /></div>{learningId && <DetailLearningControls key={learningId} contentId={learningId} />}</div></ShellLayout>;
 }

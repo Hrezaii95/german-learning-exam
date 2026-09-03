@@ -1,0 +1,66 @@
+{
+  "checkedAt": "2026-09-03T06:10:53.888Z",
+  "baseline": "54e83a3",
+  "passed": true,
+  "checks": [
+    {
+      "path": "platform/apps/web/app/page.tsx",
+      "unchanged": true,
+      "sha256": "cddda6d473086753516e8e784dba1fd9a0798d1a15ff0ffbdd2cdeaddc9850fc"
+    },
+    {
+      "path": "platform/apps/web/components/learner-state/LearnerDashboard.tsx",
+      "unchanged": true,
+      "sha256": "92a22655f968757958859b2ef284c60c146be2f739d260a912ea216e541b0e0d"
+    },
+    {
+      "path": "platform/apps/web/components/shell/AppShell.tsx",
+      "unchanged": true,
+      "sha256": "7f3460c78471b0103a668e82788120f362b542c0c172d524da4e1fbb285e2686"
+    },
+    {
+      "path": "platform/apps/web/components/shell/ShellLayout.tsx",
+      "unchanged": true,
+      "sha256": "0e18d82d857f7f8745fa8a4596b00bdca8b5664264dedbf3aaa25cadf1055c1b"
+    },
+    {
+      "path": "platform/apps/web/app/globals.css",
+      "unchanged": true,
+      "sha256": "4f62c3fd02ffde07f941ae6d32c61d70ff631f451ea6954c02310292c0aa03e3"
+    },
+    {
+      "path": "platform/apps/web/components/hubs/HubNavViews.tsx",
+      "unchanged": true,
+      "sha256": "6becd77e7fcbb4b0eae28e60b88b9801dfd7ba3b28c9e45e1db52906d39f4c1c"
+    },
+    {
+      "path": "platform/apps/web/app/collections/professions/ProfessionCollectionClient.tsx",
+      "unchanged": true,
+      "sha256": "01186b2c00767f9e3c9985aae986b3bab8565ccff004bacf06b858f5868897df"
+    },
+    {
+      "path": "platform/apps/web/app/collections/professions/professions.module.css",
+      "unchanged": true,
+      "sha256": "543d2bcd4b515a8be419c24aa06102ca62d87a46c2474ad5bb33cc0623cf8847"
+    },
+    {
+      "path": "platform/apps/web/app/collections/professions/page.tsx",
+      "unchanged": true,
+      "sha256": "e595adb464ac88a116ed35f5d7ce152eb570eca50caa3a63ebde437fcf9719d7"
+    },
+    {
+      "path": "platform/apps/web/app/vocabulary/page.tsx",
+      "unchanged": true,
+      "sha256": "bf262a4896d3e22aad16b8134b7990150f1f995e1ed493525cb99a25d4de949e"
+    },
+    {
+      "path": "platform/apps/web/components/hubs/HubViews.tsx#HubFilters",
+      "unchanged": true,
+      "permittedChange": "Lesson 3 option; invisible React key resets edited input values after filter navigation"
+    },
+    {
+      "path": "platform/apps/web/components/hubs/HubViews.tsx#HubListView",
+      "unchanged": true
+    }
+  ]
+}

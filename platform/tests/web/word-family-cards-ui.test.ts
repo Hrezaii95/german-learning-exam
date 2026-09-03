@@ -7,10 +7,55 @@ import { resolve } from "node:path";
 import { WordFamilyCard } from "../../apps/web/components/word-cards/WordFamilyCard";
 import type { WordCardCatalog } from "../../apps/web/lib/content/word-card-types";
 import { isSafeNavigationPath } from "../../apps/web/lib/content/navigation-context";
+import { buildHubNavigationContext, resolveBackHref } from "../../apps/web/lib/content/navigation-context";
+import { withWordCardHub } from "../../apps/web/lib/content/word-cards";
+import type { LearnerHubProjection } from "../../apps/web/lib/content/hub-types";
+import { HubListView } from "../../apps/web/components/hubs/HubViews";
+import { filterHubRecords, parseHubSearchParams } from "../../apps/web/lib/content/hub-query";
 
 const catalog = JSON.parse(readFileSync(resolve("apps/web/generated/word-cards.json"), "utf8")) as WordCardCatalog;
 const engineer = catalog.cards.find(c => c.id === "W126")!;
+const originalHub = (JSON.parse(readFileSync(resolve("apps/web/generated/learner-hubs.json"), "utf8")) as LearnerHubProjection).hubsById.vocabulary;
 afterEach(cleanup);
+
+describe("original vocabulary browsing with complete cards", () => {
+  it("keeps every complete family reachable through the original grid inventory", () => {
+    const hub = withWordCardHub(originalHub);
+    expect(hub.items).toHaveLength(catalog.cards.length);
+    expect(new Set(hub.items.map(i => i.hubDestination.path))).toEqual(new Set(catalog.cards.map(c => c.path)));
+    expect(hub.title).toBe(originalHub.title);
+    expect(hub.description).toBe(originalHub.description);
+    expect(hub.categories).toEqual(expect.arrayContaining([...originalHub.categories]));
+  });
+  it("preserves the original filter form and grid, with one aggregated engineer result", () => {
+    render(createElement(HubListView, { hub: withWordCardHub(originalHub), searchParams: { q: "Ingenieurinnen", lesson: "02", category: "noun" } }));
+    expect(screen.getByRole("searchbox", {name:"Search Vocabulary"})).toBeTruthy();
+    expect(screen.getByRole("combobox", {name:"Filter Vocabulary by lesson"})).toBeTruthy();
+    expect(screen.getByRole("combobox", {name:"Filter Vocabulary by category"})).toBeTruthy();
+    expect(screen.getByRole("button", {name:"Apply filters"})).toBeTruthy();
+    expect(screen.getByRole("link", {name:"Clear filters"})).toBeTruthy();
+    expect(document.querySelectorAll(".card-grid.hub-results [data-word-family]")).toHaveLength(1);
+    for(const text of ["der Ingenieur", "die Ingenieure", "die Ingenieurin", "die Ingenieurinnen"]) expect(screen.getByText(text, {exact:true})).toBeTruthy();
+    expect(screen.getByRole("link", {name:"Study this word family"}).getAttribute("href")).toMatch(/^\/vocabulary\/w126\?nav=/);
+  });
+  it("keeps Lesson 3 and every added number searchable and preserves return filters", () => {
+    const hub = withWordCardHub(originalHub);
+    const third = filterHubRecords(hub.items, parseHubSearchParams({lesson:"03"},hub.categories));
+    expect(third.items.length).toBeGreaterThanOrEqual(58);
+    const numbers = filterHubRecords(hub.items, parseHubSearchParams({category:"number"},hub.categories));
+    expect(numbers.items).toHaveLength(101);
+    const navigation = buildHubNavigationContext({hubId:"vocabulary",lesson:"03",q:"meine",category:"pronoun"});
+    expect(resolveBackHref(navigation,"hub")).toBe("/vocabulary?q=meine&lesson=03&category=pronoun");
+  });
+  it("clears edited form values when navigation clears the active filters", () => {
+    const complete = withWordCardHub(originalHub);
+    const hub = { ...complete, items: complete.items.filter(i => i.wordFamily?.id === "W126"), itemCount: 1 };
+    const view = render(createElement(HubListView, { hub, searchParams: {q:"Ingenieur"} }));
+    fireEvent.change(screen.getByRole("searchbox", {name:"Search Vocabulary"}), {target:{value:"Krankenpfleger"}});
+    view.rerender(createElement(HubListView, { hub, searchParams: {} }));
+    expect((screen.getByRole("searchbox", {name:"Search Vocabulary"}) as HTMLInputElement).value).toBe("");
+  });
+});
 
 describe("complete word-family cards", () => {
   it("keeps both engineer entries and all four forms together", () => {

@@ -37,6 +37,7 @@ import type { LearnerGender } from "@/lib/content/detail-types";
 import { resolvePublishedPronunciationExact } from "@/lib/content/media-availability";
 import { illustrationForDetail } from "@/lib/content/illustrations";
 import { IllustrationPicture } from "@/components/media/IllustrationPicture";
+import { WordFamilyPreview } from "@/components/word-cards/WordFamilyPreview";
 import {
   LemmaAudioButton,
   MeaningPlate,
@@ -205,6 +206,7 @@ function VocabularyHubCard({
   query: HubQueryState;
 }) {
   const href = hubDetailHref(hub, record, query);
+  if (record.wordFamily && href) return <WordFamilyPreview card={record.wordFamily} href={href} lessonIds={record.lessonIds} />;
   const { article, gender, lemma } = splitArticle(record.displayLabel);
   const gloss = firstFieldText(record, "meaning");
   const plural =
@@ -432,14 +434,14 @@ function hubDetailHref(
 ): string | null {
   const detailHub = detailHubForId(record.id);
   if (detailHub !== hub.id) return null;
-  const href = detailCanonicalPath(detailHub, record.id);
+  const href = record.wordFamily ? record.hubDestination.path : detailCanonicalPath(detailHub, record.id);
   if (!isSafeNavigationPath(href)) return null;
   return appendNavigationContext(
     href,
     buildHubNavigationContext({
       hubId: hub.id,
       ...(query.q.trim().length > 0 ? { q: query.q } : {}),
-      ...(query.lesson === "01" || query.lesson === "02"
+      ...(query.lesson === "01" || query.lesson === "02" || query.lesson === "03"
         ? { lesson: query.lesson }
         : {}),
       ...(query.category && query.category !== "all"
@@ -880,6 +882,7 @@ function HubFilters({
     <section className="panel hub-filters" aria-labelledby="hub-filters-heading">
       <h2 id="hub-filters-heading">Filter items</h2>
       <form
+        key={JSON.stringify([query.q, query.lesson, query.category])}
         className="hub-filter-form"
         method="get"
         action={withPagesBasePath(hub.path)}
@@ -910,6 +913,7 @@ function HubFilters({
               <option value="all">All</option>
               <option value="01">Lesson 1</option>
               <option value="02">Lesson 2</option>
+              {hub.items.some(item => item.lessonIds.includes("lesson:03")) && <option value="03">Lesson 3</option>}
             </select>
           </label>
           {hasCategories ? (

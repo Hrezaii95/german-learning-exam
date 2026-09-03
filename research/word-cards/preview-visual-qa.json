@@ -1,0 +1,58 @@
+{
+  "checkedAt": "2026-09-03T06:16:39.593Z",
+  "passed": true,
+  "checks": [
+    {
+      "width": 1440,
+      "forms": [
+        {
+          "text": "der Ingenieur",
+          "contrast": 7.795985486361773,
+          "lines": 1
+        },
+        {
+          "text": "die Ingenieure",
+          "contrast": 5.076035609559234,
+          "lines": 1
+        },
+        {
+          "text": "die Ingenieurin",
+          "contrast": 6.458215917144391,
+          "lines": 1
+        },
+        {
+          "text": "die Ingenieurinnen",
+          "contrast": 5.076035609559234,
+          "lines": 1
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "forms": [
+        {
+          "text": "der Ingenieur",
+          "contrast": 7.795985486361773,
+          "lines": 1
+        },
+        {
+          "text": "die Ingenieure",
+          "contrast": 5.076035609559234,
+          "lines": 1
+        },
+        {
+          "text": "die Ingenieurin",
+          "contrast": 6.458215917144391,
+          "lines": 1
+        },
+        {
+          "text": "die Ingenieurinnen",
+          "contrast": 5.076035609559234,
+          "lines": 1
+        }
+      ],
+      "overflow": false
+    }
+  ]
+}

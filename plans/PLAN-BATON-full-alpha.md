@@ -3,7 +3,7 @@
 updated: 2026-09-03
 orchestrator_session: Codex owner-requested vocabulary cards, 2026-09-03
 active_engine: codex
-active_phase: VOCABULARY-CARDS-RELEASE
+active_phase: VOCABULARY-BROWSE-PRESERVATION-RELEASE
 meta_status: n/a
 gate_status: {G0: green, G1: green, G2: green, G3: green, G4: green, G5: partial, G6: green, G-OWNER: pending}
 workers: []
@@ -13,7 +13,7 @@ file_ownership:
   - C-WEB: `platform/apps/web/**`, `platform/tests/web/**`, web package integration and README only
 open_items_unchanged: true
 violations: []
-next_action: Complete owner-requested Lesson 1–3 vocabulary card integration and release checks. Active loop and explicit scope: plans/vocabulary-cards-loop.md and ADR-017. Human language/listening approval remains open.
+next_action: Publish the verified restoration of the previous vocabulary/jobs browse UI, retaining every complete card. Verify the live filters and all card routes. Evidence: plans/vocabulary-cards-loop.md and research/word-cards/browse-preservation.json. Human language/listening approval remains open.
 
 ## Current verified facts
 
