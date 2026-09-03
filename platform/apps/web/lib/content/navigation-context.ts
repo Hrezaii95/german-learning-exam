@@ -100,6 +100,13 @@ export function isSafeNavigationPath(pathname: string): boolean {
   if (pathname === "/conversation") return true;
   if (pathname === "/review" || pathname === "/review/session/today") return true;
   if (pathname === "/settings") return true;
+  // Source-bounded word-family pages, including number and spelling cards.
+  const wordCard = /^\/vocabulary\/(w(\d{3})|number-(\d{1,3})|letter-(\d{1,2}))$/.exec(pathname);
+  if (wordCard) {
+    if (wordCard[2]) return Number(wordCard[2]) >= 1 && Number(wordCard[2]) <= 543;
+    if (wordCard[3]) return Number(wordCard[3]) <= 100 && String(Number(wordCard[3])) === wordCard[3];
+    return Number(wordCard[4]) >= 1 && Number(wordCard[4]) <= 30 && String(Number(wordCard[4])) === wordCard[4];
+  }
 
   const practiceMatch = pathname.match(/^\/practice\/([^/]+)$/);
   if (practiceMatch) {

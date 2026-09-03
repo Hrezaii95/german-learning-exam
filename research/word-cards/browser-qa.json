@@ -1,0 +1,259 @@
+{
+  "checkedAt": "2026-09-03T05:46:09.174Z",
+  "base": "http://127.0.0.1:8781/german-learning-exam",
+  "passed": true,
+  "responsiveChecks": [
+    {
+      "width": 1440,
+      "path": "/vocabulary/w126",
+      "recall": true
+    },
+    {
+      "width": 1440,
+      "path": "/vocabulary/w128",
+      "recall": true
+    },
+    {
+      "width": 1440,
+      "path": "/vocabulary/w059",
+      "recall": true
+    },
+    {
+      "width": 1440,
+      "path": "/vocabulary/w171",
+      "recall": true
+    },
+    {
+      "width": 1440,
+      "path": "/vocabulary/w052",
+      "recall": true
+    },
+    {
+      "width": 1440,
+      "path": "/vocabulary/w008",
+      "recall": true
+    },
+    {
+      "width": 1440,
+      "path": "/vocabulary/w186",
+      "recall": true
+    },
+    {
+      "width": 1440,
+      "path": "/vocabulary/w386",
+      "recall": true
+    },
+    {
+      "width": 1440,
+      "path": "/vocabulary/w011",
+      "recall": true
+    },
+    {
+      "width": 1440,
+      "path": "/vocabulary/number-21",
+      "recall": true
+    },
+    {
+      "width": 1440,
+      "path": "/vocabulary/letter-30",
+      "recall": true
+    },
+    {
+      "width": 1440,
+      "path": "/collections/professions/01",
+      "recall": true
+    },
+    {
+      "width": 820,
+      "path": "/vocabulary/w126",
+      "recall": true
+    },
+    {
+      "width": 820,
+      "path": "/vocabulary/w128",
+      "recall": true
+    },
+    {
+      "width": 820,
+      "path": "/vocabulary/w059",
+      "recall": true
+    },
+    {
+      "width": 820,
+      "path": "/vocabulary/w171",
+      "recall": true
+    },
+    {
+      "width": 820,
+      "path": "/vocabulary/w052",
+      "recall": true
+    },
+    {
+      "width": 820,
+      "path": "/vocabulary/w008",
+      "recall": true
+    },
+    {
+      "width": 820,
+      "path": "/vocabulary/w186",
+      "recall": true
+    },
+    {
+      "width": 820,
+      "path": "/vocabulary/w386",
+      "recall": true
+    },
+    {
+      "width": 820,
+      "path": "/vocabulary/w011",
+      "recall": true
+    },
+    {
+      "width": 820,
+      "path": "/vocabulary/number-21",
+      "recall": true
+    },
+    {
+      "width": 820,
+      "path": "/vocabulary/letter-30",
+      "recall": true
+    },
+    {
+      "width": 820,
+      "path": "/collections/professions/01",
+      "recall": true
+    },
+    {
+      "width": 390,
+      "path": "/vocabulary/w126",
+      "recall": true
+    },
+    {
+      "width": 390,
+      "path": "/vocabulary/w128",
+      "recall": true
+    },
+    {
+      "width": 390,
+      "path": "/vocabulary/w059",
+      "recall": true
+    },
+    {
+      "width": 390,
+      "path": "/vocabulary/w171",
+      "recall": true
+    },
+    {
+      "width": 390,
+      "path": "/vocabulary/w052",
+      "recall": true
+    },
+    {
+      "width": 390,
+      "path": "/vocabulary/w008",
+      "recall": true
+    },
+    {
+      "width": 390,
+      "path": "/vocabulary/w186",
+      "recall": true
+    },
+    {
+      "width": 390,
+      "path": "/vocabulary/w386",
+      "recall": true
+    },
+    {
+      "width": 390,
+      "path": "/vocabulary/w011",
+      "recall": true
+    },
+    {
+      "width": 390,
+      "path": "/vocabulary/number-21",
+      "recall": true
+    },
+    {
+      "width": 390,
+      "path": "/vocabulary/letter-30",
+      "recall": true
+    },
+    {
+      "width": 390,
+      "path": "/collections/professions/01",
+      "recall": true
+    },
+    {
+      "width": 360,
+      "path": "/vocabulary/w126",
+      "recall": true
+    },
+    {
+      "width": 360,
+      "path": "/vocabulary/w128",
+      "recall": true
+    },
+    {
+      "width": 360,
+      "path": "/vocabulary/w059",
+      "recall": true
+    },
+    {
+      "width": 360,
+      "path": "/vocabulary/w171",
+      "recall": true
+    },
+    {
+      "width": 360,
+      "path": "/vocabulary/w052",
+      "recall": true
+    },
+    {
+      "width": 360,
+      "path": "/vocabulary/w008",
+      "recall": true
+    },
+    {
+      "width": 360,
+      "path": "/vocabulary/w186",
+      "recall": true
+    },
+    {
+      "width": 360,
+      "path": "/vocabulary/w386",
+      "recall": true
+    },
+    {
+      "width": 360,
+      "path": "/vocabulary/w011",
+      "recall": true
+    },
+    {
+      "width": 360,
+      "path": "/vocabulary/number-21",
+      "recall": true
+    },
+    {
+      "width": 360,
+      "path": "/vocabulary/letter-30",
+      "recall": true
+    },
+    {
+      "width": 360,
+      "path": "/collections/professions/01",
+      "recall": true
+    }
+  ],
+  "filters": [
+    "German search",
+    "Lesson 3",
+    "101 numbers",
+    "48 teacher jobs"
+  ],
+  "audioSampleCardIds": [
+    "W126",
+    "W386",
+    "W171"
+  ],
+  "failures": []
+}

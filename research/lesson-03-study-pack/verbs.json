@@ -1,0 +1,1646 @@
+{
+  "title": "Verbs to know through the end of Momente Lessons 1–3",
+  "scope": "Core lesson verbs, essential formula verbs, and a separately labelled reference inventory of verbs in the covered classroom instructions and optional Module 1 material. Full forms for recognition-only verbs are not a requirement to memorize all those paradigms.",
+  "priority_guide": {
+    "core": "Use actively in personal-profile, family and language conversations. See each note for whether the complete paradigm is explicitly tested.",
+    "phrase": "Master or recognize the stated fixed expression; full forms are reference.",
+    "classroom": "Recognize the task/context meaning. Full forms are optional reference, not end-of-Lesson-3 conjugation targets."
+  },
+  "source_key": "KB = owned Momente A1 coursebook; AB = owned Momente A1.1 workbook. Page references are printed page numbers, not PDF page indices. The glossary is the official English glossary. Module 1 includes the review, magazine, business and exam sections after Lesson 3.",
+  "entries": [
+    {
+      "id": "v01",
+      "lesson": 1,
+      "priority": "core",
+      "infinitive": "sein",
+      "english": "to be",
+      "forms": {
+        "ich": "bin",
+        "du": "bist",
+        "er_sie_es": "ist",
+        "wir": "sind",
+        "ihr": "seid",
+        "sie_Sie": "sind"
+      },
+      "example": "Ich bin 28 Jahre alt. Wir sind verheiratet.",
+      "translation": "I am 28 years old. We are married.",
+      "notes": "Memorize all six forms. Lesson 1 introduces singular/formal forms; Lesson 2 completes the plural. Use sein for age, profession and marital status: bin Single / bin geschieden / bin verheiratet. The es form is supplied as reference.",
+      "source": "KB pp12–14,16–18,27; AB pp6–7,9–10."
+    },
+    {
+      "id": "v02",
+      "lesson": 1,
+      "priority": "core",
+      "infinitive": "heißen",
+      "english": "to be called; to have the name",
+      "forms": {
+        "ich": "heiße",
+        "du": "heißt",
+        "er_sie_es": "heißt",
+        "wir": "heißen",
+        "ihr": "heißt",
+        "sie_Sie": "heißen"
+      },
+      "example": "Wie heißt du? Ich heiße Sara.",
+      "translation": "What is your name? My name is Sara.",
+      "notes": "du heißt, with no extra s; ich heiße, with ß. Do not write ich heißt. The plural forms are consolidated in the module grammar table.",
+      "source": "KB pp12–14,27; AB pp6–7,9."
+    },
+    {
+      "id": "v03",
+      "lesson": 1,
+      "priority": "core",
+      "infinitive": "kommen",
+      "english": "to come; to be from",
+      "forms": {
+        "ich": "komme",
+        "du": "kommst",
+        "er_sie_es": "kommt",
+        "wir": "kommen",
+        "ihr": "kommt",
+        "sie_Sie": "kommen"
+      },
+      "example": "Woher kommt er? Er kommt aus der Schweiz.",
+      "translation": "Where is he from? He is from Switzerland.",
+      "notes": "Use kommen aus + place for origin. Contrast wohnen in + place for residence.",
+      "source": "KB pp13–14,27; AB pp7–10."
+    },
+    {
+      "id": "v04",
+      "lesson": 1,
+      "priority": "core",
+      "infinitive": "lernen",
+      "english": "to learn; to study a language",
+      "forms": {
+        "ich": "lerne",
+        "du": "lernst",
+        "er_sie_es": "lernt",
+        "wir": "lernen",
+        "ihr": "lernt",
+        "sie_Sie": "lernen"
+      },
+      "example": "Sie lernt Deutsch. Wir lernen Deutsch.",
+      "translation": "She is learning German. We are learning German.",
+      "notes": "Use lernen for learning German. University subjects use studieren in the taught profile patterns.",
+      "source": "KB pp13–14,27; AB p7."
+    },
+    {
+      "id": "v05",
+      "lesson": 1,
+      "priority": "core",
+      "infinitive": "buchstabieren",
+      "english": "to spell out",
+      "forms": {
+        "ich": "buchstabiere",
+        "du": "buchstabierst",
+        "er_sie_es": "buchstabiert",
+        "wir": "buchstabieren",
+        "ihr": "buchstabiert",
+        "sie_Sie": "buchstabieren"
+      },
+      "example": "Ich buchstabiere: S–A–R–A.",
+      "translation": "I will spell it: S–A–R–A.",
+      "notes": "Master spelling your name and recognizing Buchstabieren Sie bitte. Full regular forms are useful reference; the course grammar tables do not separately test this whole paradigm.",
+      "source": "Glossary L1 ex6; KB p155; AB pp24–25."
+    },
+    {
+      "id": "v06",
+      "lesson": 2,
+      "priority": "core",
+      "infinitive": "wohnen",
+      "english": "to live; to reside",
+      "forms": {
+        "ich": "wohne",
+        "du": "wohnst",
+        "er_sie_es": "wohnt",
+        "wir": "wohnen",
+        "ihr": "wohnt",
+        "sie_Sie": "wohnen"
+      },
+      "example": "Wo wohnt ihr? Wir wohnen in Berlin.",
+      "translation": "Where do you live? We live in Berlin.",
+      "notes": "Residence: wohnen in + town. Wo? asks where; Woher? asks origin.",
+      "source": "KB pp15–16,27; AB p10."
+    },
+    {
+      "id": "v07",
+      "lesson": 2,
+      "priority": "core",
+      "infinitive": "leben",
+      "english": "to live",
+      "forms": {
+        "ich": "lebe",
+        "du": "lebst",
+        "er_sie_es": "lebt",
+        "wir": "leben",
+        "ihr": "lebt",
+        "sie_Sie": "leben"
+      },
+      "example": "Meine Eltern leben in Köln.",
+      "translation": "My parents live in Cologne.",
+      "notes": "In these profile examples leben in and wohnen in both describe residence. Also master Ich lebe allein and Wir leben zusammen.",
+      "source": "KB pp16–18,27–28; AB pp10–12."
+    },
+    {
+      "id": "v08",
+      "lesson": 2,
+      "priority": "core",
+      "infinitive": "zusammenleben",
+      "english": "to live together",
+      "forms": {
+        "ich": "lebe zusammen",
+        "du": "lebst zusammen",
+        "er_sie_es": "lebt zusammen",
+        "wir": "leben zusammen",
+        "ihr": "lebt zusammen",
+        "sie_Sie": "leben zusammen"
+      },
+      "example": "Lebt ihr zusammen? Ja, wir leben zusammen.",
+      "translation": "Do you live together? Yes, we live together.",
+      "notes": "The glossary lists zusammen|leben; the lesson teaches leben … zusammen as a relationship-status pattern. Memorize this pattern. A full general theory of separable verbs is beyond Lesson 3.",
+      "source": "Glossary L2 ex2; KB pp16–17; AB pp10–12."
+    },
+    {
+      "id": "v09",
+      "lesson": 2,
+      "priority": "core",
+      "infinitive": "haben",
+      "english": "to have",
+      "forms": {
+        "ich": "habe",
+        "du": "hast",
+        "er_sie_es": "hat",
+        "wir": "haben",
+        "ihr": "habt",
+        "sie_Sie": "haben"
+      },
+      "example": "Habt ihr Kinder? Wir haben zwei Kinder.",
+      "translation": "Do you have children? We have two children.",
+      "notes": "Irregular du hast and er/sie hat: no b. Also learn habe keine Kinder and habe einen Job / eine Stelle as complete patterns.",
+      "source": "KB pp15–18,27–28; AB pp10–12."
+    },
+    {
+      "id": "v10",
+      "lesson": 2,
+      "priority": "core",
+      "infinitive": "arbeiten",
+      "english": "to work",
+      "forms": {
+        "ich": "arbeite",
+        "du": "arbeitest",
+        "er_sie_es": "arbeitet",
+        "wir": "arbeiten",
+        "ihr": "arbeitet",
+        "sie_Sie": "arbeiten"
+      },
+      "example": "Sie arbeitet als Ärztin. Ich arbeite bei X-Net.",
+      "translation": "She works as a doctor. I work at X-Net.",
+      "notes": "Keep the extra e: du arbeitest, er/sie arbeitet, ihr arbeitet. als introduces the role; bei introduces the employer.",
+      "source": "KB pp17–18,27–28; AB pp12–13."
+    },
+    {
+      "id": "v11",
+      "lesson": 2,
+      "priority": "core",
+      "infinitive": "machen",
+      "english": "to do; to make",
+      "forms": {
+        "ich": "mache",
+        "du": "machst",
+        "er_sie_es": "macht",
+        "wir": "machen",
+        "ihr": "macht",
+        "sie_Sie": "machen"
+      },
+      "example": "Was machst du beruflich? Ich mache eine Ausbildung.",
+      "translation": "What do you do for a living? I am doing vocational training.",
+      "notes": "Required patterns: Was machst du / machen Sie beruflich? and eine Ausbildung / ein Praktikum machen. Regular present endings.",
+      "source": "KB pp17–18,28; AB p13."
+    },
+    {
+      "id": "v12",
+      "lesson": 2,
+      "priority": "core",
+      "infinitive": "studieren",
+      "english": "to study at university",
+      "forms": {
+        "ich": "studiere",
+        "du": "studierst",
+        "er_sie_es": "studiert",
+        "wir": "studieren",
+        "ihr": "studiert",
+        "sie_Sie": "studieren"
+      },
+      "example": "Was studierst du? Ich studiere Medizin.",
+      "translation": "What do you study? I study medicine.",
+      "notes": "Use studieren for a university course/subject. German language study is usually Deutsch lernen in these lessons.",
+      "source": "KB pp18,28; AB p13."
+    },
+    {
+      "id": "v13",
+      "lesson": 3,
+      "priority": "core",
+      "infinitive": "sprechen",
+      "english": "to speak",
+      "forms": {
+        "ich": "spreche",
+        "du": "sprichst",
+        "er_sie_es": "spricht",
+        "wir": "sprechen",
+        "ihr": "sprecht",
+        "sie_Sie": "sprechen"
+      },
+      "example": "Welche Sprachen sprichst du? Ich spreche Deutsch und Englisch.",
+      "translation": "Which languages do you speak? I speak German and English.",
+      "notes": "Only du and er/sie/es change the stem e to i: sprichst, spricht. ihr sprecht keeps e. Learn all six forms.",
+      "source": "KB pp22,27–28; AB p17."
+    },
+    {
+      "id": "v14",
+      "lesson": 1,
+      "priority": "phrase",
+      "infinitive": "gehen",
+      "english": "to go; to be going",
+      "forms": {
+        "ich": "gehe",
+        "du": "gehst",
+        "er_sie_es": "geht",
+        "wir": "gehen",
+        "ihr": "geht",
+        "sie_Sie": "gehen"
+      },
+      "example": "Wie geht es dir? Es geht.",
+      "translation": "How are you? So-so.",
+      "notes": "Required now: Wie geht's? = Wie geht es?; Wie geht's dir/Ihnen?; Es geht. Here es is the subject, so geht stays singular even with Ihnen. Other forms are reference, not a Lesson 3 movement-verb requirement.",
+      "source": "KB pp12,14,28; AB pp6,9,16."
+    },
+    {
+      "id": "v15",
+      "lesson": 3,
+      "priority": "phrase",
+      "infinitive": "glauben",
+      "english": "to think; to believe",
+      "forms": {
+        "ich": "glaube",
+        "du": "glaubst",
+        "er_sie_es": "glaubt",
+        "wir": "glauben",
+        "ihr": "glaubt",
+        "sie_Sie": "glauben"
+      },
+      "example": "Ich glaube, Lara ist Toms Schwester.",
+      "translation": "I think Lara is Tom's sister.",
+      "notes": "Required now: Ich glaube, … as a short opinion/guessing frame followed by a normal statement. Learn the chunk; the other forms are reference. No dass-clause is needed.",
+      "source": "Glossary L3 ex1; KB pp19,28."
+    },
+    {
+      "id": "v16",
+      "lesson": "module 1",
+      "priority": "phrase",
+      "infinitive": "freuen",
+      "english": "to please; to be glad",
+      "forms": {
+        "ich": "freue",
+        "du": "freust",
+        "er_sie_es": "freut",
+        "wir": "freuen",
+        "ihr": "freut",
+        "sie_Sie": "freuen"
+      },
+      "example": "Freut mich.",
+      "translation": "Pleased to meet you.",
+      "notes": "Optional business-module phrase. Freut mich is short for Das freut mich. Do not use these bare reference forms to invent reflexive sentences; sich freuen has its own pronouns and is not a Lesson 3 grammar target.",
+      "source": "AB pp22–23; AB transcript track1_31, visually inspected."
+    },
+    {
+      "id": "v17",
+      "lesson": "module 1",
+      "priority": "phrase",
+      "infinitive": "können",
+      "english": "can; to be able to",
+      "forms": {
+        "ich": "kann",
+        "du": "kannst",
+        "er_sie_es": "kann",
+        "wir": "können",
+        "ihr": "könnt",
+        "sie_Sie": "können"
+      },
+      "example": "Können Sie das bitte buchstabieren?",
+      "translation": "Could you spell that, please?",
+      "notes": "Recognition/request chunk in the module listening test only. The modal verb system and conjugation mastery are taught later; these six forms are reference.",
+      "source": "AB transcript track1_28, visually inspected; module test AB p20."
+    },
+    {
+      "id": "v18",
+      "lesson": 1,
+      "priority": "classroom",
+      "infinitive": "ankreuzen",
+      "english": "to tick; to mark with a cross",
+      "forms": {
+        "ich": "kreuze an",
+        "du": "kreuzt an",
+        "er_sie_es": "kreuzt an",
+        "wir": "kreuzen an",
+        "ihr": "kreuzt an",
+        "sie_Sie": "kreuzen an"
+      },
+      "example": "Kreuzen Sie an.",
+      "translation": "Tick the answer.",
+      "notes": "Recognize the instruction; full forms are reference. Separable an appears at the end.",
+      "source": "Glossary L1 ex3; KB p12; AB pp7,9."
+    },
+    {
+      "id": "v19",
+      "lesson": 1,
+      "priority": "classroom",
+      "infinitive": "sagen",
+      "english": "to say; to tell",
+      "forms": {
+        "ich": "sage",
+        "du": "sagst",
+        "er_sie_es": "sagt",
+        "wir": "sagen",
+        "ihr": "sagt",
+        "sie_Sie": "sagen"
+      },
+      "example": "Sagen Sie Ihren Namen.",
+      "translation": "Say your name.",
+      "notes": "Recognize sagen/sagt and the classroom instruction Sagen Sie. No separate conjugation requirement.",
+      "source": "KB pp10–11; AB module p19."
+    },
+    {
+      "id": "v20",
+      "lesson": 1,
+      "priority": "classroom",
+      "infinitive": "ansehen",
+      "english": "to look at; to watch",
+      "forms": {
+        "ich": "sehe an",
+        "du": "siehst an",
+        "er_sie_es": "sieht an",
+        "wir": "sehen an",
+        "ihr": "seht an",
+        "sie_Sie": "sehen an"
+      },
+      "example": "Sehen Sie das Bild an.",
+      "translation": "Look at the picture.",
+      "notes": "Classroom instruction. Separable an; du siehst and er/sie sieht are reference, not core L3 targets.",
+      "source": "KB pp11,13–14; AB p87 upper L3 section."
+    },
+    {
+      "id": "v21",
+      "lesson": 1,
+      "priority": "classroom",
+      "infinitive": "sehen",
+      "english": "to see",
+      "forms": {
+        "ich": "sehe",
+        "du": "siehst",
+        "er_sie_es": "sieht",
+        "wir": "sehen",
+        "ihr": "seht",
+        "sie_Sie": "sehen"
+      },
+      "example": "Hören Sie und sehen Sie das Bildlexikon an.",
+      "translation": "Listen and look at the picture dictionary.",
+      "notes": "Recognize the base verb inside ansehen instructions. The general e→ie conjugation pattern belongs to later study; forms here are reference.",
+      "source": "KB p13 ex7; KB module pp24–26."
+    },
+    {
+      "id": "v22",
+      "lesson": 1,
+      "priority": "classroom",
+      "infinitive": "hören",
+      "english": "to hear; to listen",
+      "forms": {
+        "ich": "höre",
+        "du": "hörst",
+        "er_sie_es": "hört",
+        "wir": "hören",
+        "ihr": "hört",
+        "sie_Sie": "hören"
+      },
+      "example": "Hören Sie noch einmal.",
+      "translation": "Listen again.",
+      "notes": "A frequent classroom instruction; recognize it immediately.",
+      "source": "KB pp11–14; AB pp6–7."
+    },
+    {
+      "id": "v23",
+      "lesson": 1,
+      "priority": "classroom",
+      "infinitive": "verbinden",
+      "english": "to connect; to match",
+      "forms": {
+        "ich": "verbinde",
+        "du": "verbindest",
+        "er_sie_es": "verbindet",
+        "wir": "verbinden",
+        "ihr": "verbindet",
+        "sie_Sie": "verbinden"
+      },
+      "example": "Hören Sie und verbinden Sie.",
+      "translation": "Listen and match.",
+      "notes": "Instruction for connecting words, pictures or sentences. Extra e in du/er/ihr forms is reference.",
+      "source": "KB p11; AB pp7–8."
+    },
+    {
+      "id": "v24",
+      "lesson": 1,
+      "priority": "classroom",
+      "infinitive": "zeichnen",
+      "english": "to draw",
+      "forms": {
+        "ich": "zeichne",
+        "du": "zeichnest",
+        "er_sie_es": "zeichnet",
+        "wir": "zeichnen",
+        "ihr": "zeichnet",
+        "sie_Sie": "zeichnen"
+      },
+      "example": "Zeichnen Sie einen Sitzplan.",
+      "translation": "Draw a seating plan.",
+      "notes": "Recognize in classroom instructions. Extra e in du/er/ihr forms is reference.",
+      "source": "KB p11 ex1c."
+    },
+    {
+      "id": "v25",
+      "lesson": 1,
+      "priority": "classroom",
+      "infinitive": "notieren",
+      "english": "to note down",
+      "forms": {
+        "ich": "notiere",
+        "du": "notierst",
+        "er_sie_es": "notiert",
+        "wir": "notieren",
+        "ihr": "notiert",
+        "sie_Sie": "notieren"
+      },
+      "example": "Notieren Sie die Namen.",
+      "translation": "Write down the names.",
+      "notes": "Instruction vocabulary, with regular reference forms.",
+      "source": "KB pp11–13; AB p6."
+    },
+    {
+      "id": "v26",
+      "lesson": 1,
+      "priority": "classroom",
+      "infinitive": "wissen",
+      "english": "to know a fact",
+      "forms": {
+        "ich": "weiß",
+        "du": "weißt",
+        "er_sie_es": "weiß",
+        "wir": "wissen",
+        "ihr": "wisst",
+        "sie_Sie": "wissen"
+      },
+      "example": "Was wissen Sie noch?",
+      "translation": "What do you still remember?",
+      "notes": "Recognize weiß/wissen in task questions. Irregular present paradigm is supplied for reference only; it is not required by the L1–3 grammar tables.",
+      "source": "KB pp11,13."
+    },
+    {
+      "id": "v27",
+      "lesson": 1,
+      "priority": "classroom",
+      "infinitive": "ergänzen",
+      "english": "to complete; to fill in",
+      "forms": {
+        "ich": "ergänze",
+        "du": "ergänzt",
+        "er_sie_es": "ergänzt",
+        "wir": "ergänzen",
+        "ihr": "ergänzt",
+        "sie_Sie": "ergänzen"
+      },
+      "example": "Ergänzen Sie die Sätze.",
+      "translation": "Complete the sentences.",
+      "notes": "Recognize as an instruction. du ergänzt has no added s after z.",
+      "source": "KB pp12–14; AB pp6–7."
+    },
+    {
+      "id": "v28",
+      "lesson": 1,
+      "priority": "classroom",
+      "infinitive": "nachsprechen",
+      "english": "to repeat aloud after a model",
+      "forms": {
+        "ich": "spreche nach",
+        "du": "sprichst nach",
+        "er_sie_es": "spricht nach",
+        "wir": "sprechen nach",
+        "ihr": "sprecht nach",
+        "sie_Sie": "sprechen nach"
+      },
+      "example": "Hören Sie und sprechen Sie nach.",
+      "translation": "Listen and repeat.",
+      "notes": "Instruction: repeat the model aloud. The sprechen stem changes are core in L3; the separable verb paradigm here is only reference.",
+      "source": "KB p12; AB p7."
+    },
+    {
+      "id": "v29",
+      "lesson": 1,
+      "priority": "classroom",
+      "infinitive": "fragen",
+      "english": "to ask",
+      "forms": {
+        "ich": "frage",
+        "du": "fragst",
+        "er_sie_es": "fragt",
+        "wir": "fragen",
+        "ihr": "fragt",
+        "sie_Sie": "fragen"
+      },
+      "example": "Fragen Sie drei Personen.",
+      "translation": "Ask three people.",
+      "notes": "Recognize the instruction. Also used in question-and-answer task descriptions.",
+      "source": "KB p12 ex2c; AB p25."
+    },
+    {
+      "id": "v30",
+      "lesson": 1,
+      "priority": "classroom",
+      "infinitive": "markieren",
+      "english": "to mark; to highlight",
+      "forms": {
+        "ich": "markiere",
+        "du": "markierst",
+        "er_sie_es": "markiert",
+        "wir": "markieren",
+        "ihr": "markiert",
+        "sie_Sie": "markieren"
+      },
+      "example": "Markieren Sie die Verben.",
+      "translation": "Highlight the verbs.",
+      "notes": "Instruction vocabulary; full forms are reference.",
+      "source": "KB p13 ex4b; AB pp8,15."
+    },
+    {
+      "id": "v31",
+      "lesson": 1,
+      "priority": "classroom",
+      "infinitive": "zuordnen",
+      "english": "to match; to assign",
+      "forms": {
+        "ich": "ordne zu",
+        "du": "ordnest zu",
+        "er_sie_es": "ordnet zu",
+        "wir": "ordnen zu",
+        "ihr": "ordnet zu",
+        "sie_Sie": "ordnen zu"
+      },
+      "example": "Ordnen Sie zu.",
+      "translation": "Match the items.",
+      "notes": "Recognize the separated instruction Ordnen … zu. Distinct from ordnen, to put in order.",
+      "source": "KB pp13–14; AB pp6,8."
+    },
+    {
+      "id": "v32",
+      "lesson": 1,
+      "priority": "classroom",
+      "infinitive": "schließen",
+      "english": "to close",
+      "forms": {
+        "ich": "schließe",
+        "du": "schließt",
+        "er_sie_es": "schließt",
+        "wir": "schließen",
+        "ihr": "schließt",
+        "sie_Sie": "schließen"
+      },
+      "example": "Schließen Sie Ihre Bücher.",
+      "translation": "Close your books.",
+      "notes": "Recognize this classroom instruction. No separate conjugation mastery target.",
+      "source": "KB p13 ex7."
+    },
+    {
+      "id": "v33",
+      "lesson": 1,
+      "priority": "classroom",
+      "infinitive": "schreiben",
+      "english": "to write",
+      "forms": {
+        "ich": "schreibe",
+        "du": "schreibst",
+        "er_sie_es": "schreibt",
+        "wir": "schreiben",
+        "ihr": "schreibt",
+        "sie_Sie": "schreiben"
+      },
+      "example": "Schreiben Sie Sätze.",
+      "translation": "Write sentences.",
+      "notes": "Frequent classroom instruction. Also recognize Wie schreibt man das? in the module exam task; man uses the er/sie/es form.",
+      "source": "AB pp7–9; module AB pp24–25."
+    },
+    {
+      "id": "v34",
+      "lesson": 1,
+      "priority": "classroom",
+      "infinitive": "lesen",
+      "english": "to read",
+      "forms": {
+        "ich": "lese",
+        "du": "liest",
+        "er_sie_es": "liest",
+        "wir": "lesen",
+        "ihr": "lest",
+        "sie_Sie": "lesen"
+      },
+      "example": "Lesen Sie die Texte.",
+      "translation": "Read the texts.",
+      "notes": "Instruction recognition now; du liest and er/sie liest are reference, not a new L3 core stem-change target.",
+      "source": "AB p8; KB pp16–18."
+    },
+    {
+      "id": "v35",
+      "lesson": 1,
+      "priority": "classroom",
+      "infinitive": "sortieren",
+      "english": "to put in order; to sort",
+      "forms": {
+        "ich": "sortiere",
+        "du": "sortierst",
+        "er_sie_es": "sortiert",
+        "wir": "sortieren",
+        "ihr": "sortiert",
+        "sie_Sie": "sortieren"
+      },
+      "example": "Sortieren Sie das Gespräch.",
+      "translation": "Put the conversation in order.",
+      "notes": "Recognize the instruction.",
+      "source": "AB p6 ex2."
+    },
+    {
+      "id": "v36",
+      "lesson": 1,
+      "priority": "classroom",
+      "infinitive": "vergleichen",
+      "english": "to compare",
+      "forms": {
+        "ich": "vergleiche",
+        "du": "vergleichst",
+        "er_sie_es": "vergleicht",
+        "wir": "vergleichen",
+        "ihr": "vergleicht",
+        "sie_Sie": "vergleichen"
+      },
+      "example": "Hören Sie und vergleichen Sie.",
+      "translation": "Listen and compare.",
+      "notes": "Recognize the instruction, including comparing your answers with a partner.",
+      "source": "AB pp7,9; KB p15."
+    },
+    {
+      "id": "v37",
+      "lesson": 1,
+      "priority": "classroom",
+      "infinitive": "werfen",
+      "english": "to throw; to toss",
+      "forms": {
+        "ich": "werfe",
+        "du": "wirfst",
+        "er_sie_es": "wirft",
+        "wir": "werfen",
+        "ihr": "werft",
+        "sie_Sie": "werfen"
+      },
+      "example": "Werfen Sie eine Münze.",
+      "translation": "Toss a coin.",
+      "notes": "From the du/Sie partner game. Strong forms are reference only.",
+      "source": "Glossary L1 ex8; KB p156 upper L1 section."
+    },
+    {
+      "id": "v38",
+      "lesson": 1,
+      "priority": "classroom",
+      "infinitive": "antworten",
+      "english": "to answer; to reply",
+      "forms": {
+        "ich": "antworte",
+        "du": "antwortest",
+        "er_sie_es": "antwortet",
+        "wir": "antworten",
+        "ihr": "antwortet",
+        "sie_Sie": "antworten"
+      },
+      "example": "Fragen Sie und antworten Sie.",
+      "translation": "Ask and answer.",
+      "notes": "Frequent instruction. Extra e in du/er/ihr forms is reference.",
+      "source": "KB p156 L1 partner activity; AB pp12,21."
+    },
+    {
+      "id": "v39",
+      "lesson": 1,
+      "priority": "classroom",
+      "infinitive": "tauschen",
+      "english": "to exchange; to swap",
+      "forms": {
+        "ich": "tausche",
+        "du": "tauschst",
+        "er_sie_es": "tauscht",
+        "wir": "tauschen",
+        "ihr": "tauscht",
+        "sie_Sie": "tauschen"
+      },
+      "example": "Tauschen Sie mit Ihrer Partnerin.",
+      "translation": "Swap with your partner.",
+      "notes": "Recognize the instruction. Full reference forms are provided, not required as a separate core drill.",
+      "source": "AB p9 ex15b; KB module p24."
+    },
+    {
+      "id": "v40",
+      "lesson": 1,
+      "priority": "classroom",
+      "infinitive": "lösen",
+      "english": "to solve; to complete an exercise",
+      "forms": {
+        "ich": "löse",
+        "du": "löst",
+        "er_sie_es": "löst",
+        "wir": "lösen",
+        "ihr": "löst",
+        "sie_Sie": "lösen"
+      },
+      "example": "Sie löst die Aufgabe.",
+      "translation": "She completes the exercise.",
+      "notes": "From partner-task directions. du löst, with no extra s after s.",
+      "source": "AB p9 ex15b."
+    },
+    {
+      "id": "v41",
+      "lesson": 1,
+      "priority": "classroom",
+      "infinitive": "begrüßen",
+      "english": "to greet",
+      "forms": {
+        "ich": "begrüße",
+        "du": "begrüßt",
+        "er_sie_es": "begrüßt",
+        "wir": "begrüßen",
+        "ihr": "begrüßt",
+        "sie_Sie": "begrüßen"
+      },
+      "example": "sich begrüßen",
+      "translation": "to greet one another",
+      "notes": "Appears as a learning-goal label. Recognition only. Reflexive uses and their pronouns are not a Lesson 3 conjugation requirement.",
+      "source": "KB p11 learning goals."
+    },
+    {
+      "id": "v42",
+      "lesson": 1,
+      "priority": "classroom",
+      "infinitive": "verabschieden",
+      "english": "to say goodbye; to take leave",
+      "forms": {
+        "ich": "verabschiede",
+        "du": "verabschiedest",
+        "er_sie_es": "verabschiedet",
+        "wir": "verabschieden",
+        "ihr": "verabschiedet",
+        "sie_Sie": "verabschieden"
+      },
+      "example": "sich verabschieden",
+      "translation": "to say goodbye",
+      "notes": "Appears in the learning goals with sich. Bare forms are reference; the reflexive verb system is beyond this scope.",
+      "source": "KB p11 learning goals."
+    },
+    {
+      "id": "v43",
+      "lesson": 1,
+      "priority": "classroom",
+      "infinitive": "vorstellen",
+      "english": "to introduce",
+      "forms": {
+        "ich": "stelle vor",
+        "du": "stellst vor",
+        "er_sie_es": "stellt vor",
+        "wir": "stellen vor",
+        "ihr": "stellt vor",
+        "sie_Sie": "stellen vor"
+      },
+      "example": "Stellen Sie sich vor.",
+      "translation": "Introduce yourself.",
+      "notes": "Recognize both sich vorstellen (introduce oneself) and eine Person vorstellen (introduce someone). These separated forms are reference; memorize the classroom chunks.",
+      "source": "KB p11 learning goals; KB pp18,158; AB pp19,24."
+    },
+    {
+      "id": "v44",
+      "lesson": 1,
+      "priority": "classroom",
+      "infinitive": "nennen",
+      "english": "to name; to state",
+      "forms": {
+        "ich": "nenne",
+        "du": "nennst",
+        "er_sie_es": "nennt",
+        "wir": "nennen",
+        "ihr": "nennt",
+        "sie_Sie": "nennen"
+      },
+      "example": "die Herkunft nennen",
+      "translation": "to state where someone is from",
+      "notes": "Learning-goal vocabulary rather than an active conjugation target.",
+      "source": "KB p11 learning goals; KB p28 headings."
+    },
+    {
+      "id": "v45",
+      "lesson": 1,
+      "priority": "classroom",
+      "infinitive": "bitten",
+      "english": "to ask for; to request",
+      "forms": {
+        "ich": "bitte",
+        "du": "bittest",
+        "er_sie_es": "bittet",
+        "wir": "bitten",
+        "ihr": "bittet",
+        "sie_Sie": "bitten"
+      },
+      "example": "um Wiederholung bitten",
+      "translation": "to ask someone to repeat",
+      "notes": "Occurs in the module communication summary heading. Master the actual phrases Entschuldigung and Wie bitte?; no full bitten paradigm drill is required.",
+      "source": "KB p28, L1 communication summary."
+    },
+    {
+      "id": "v46",
+      "lesson": 1,
+      "priority": "classroom",
+      "infinitive": "bedanken",
+      "english": "to thank",
+      "forms": {
+        "ich": "bedanke",
+        "du": "bedankst",
+        "er_sie_es": "bedankt",
+        "wir": "bedanken",
+        "ihr": "bedankt",
+        "sie_Sie": "bedanken"
+      },
+      "example": "sich bedanken",
+      "translation": "to say thank you",
+      "notes": "Learning-goal label with sich. Master Danke as the L1 phrase. Reflexive constructions and these bare forms are reference only.",
+      "source": "KB p28, L1 communication summary."
+    },
+    {
+      "id": "v47",
+      "lesson": 2,
+      "priority": "classroom",
+      "infinitive": "üben",
+      "english": "to practise",
+      "forms": {
+        "ich": "übe",
+        "du": "übst",
+        "er_sie_es": "übt",
+        "wir": "üben",
+        "ihr": "übt",
+        "sie_Sie": "üben"
+      },
+      "example": "Zahlen üben",
+      "translation": "to practise numbers",
+      "notes": "Instruction/heading vocabulary.",
+      "source": "KB pp16,157."
+    },
+    {
+      "id": "v48",
+      "lesson": 2,
+      "priority": "classroom",
+      "infinitive": "passen",
+      "english": "to fit; to match",
+      "forms": {
+        "ich": "passe",
+        "du": "passt",
+        "er_sie_es": "passt",
+        "wir": "passen",
+        "ihr": "passt",
+        "sie_Sie": "passen"
+      },
+      "example": "Was passt?",
+      "translation": "What fits?",
+      "notes": "Frequent task question. du passt, without an extra s.",
+      "source": "KB p17; AB p10."
+    },
+    {
+      "id": "v49",
+      "lesson": 2,
+      "priority": "classroom",
+      "infinitive": "sammeln",
+      "english": "to collect",
+      "forms": {
+        "ich": "sammle",
+        "du": "sammelst",
+        "er_sie_es": "sammelt",
+        "wir": "sammeln",
+        "ihr": "sammelt",
+        "sie_Sie": "sammeln"
+      },
+      "example": "Sammeln Sie mehr Berufe.",
+      "translation": "Collect more job names.",
+      "notes": "Instruction in Schon fertig? optional work. ich sammle is the standard short form; ich sammele is also possible.",
+      "source": "Glossary L2 ex5; KB p17."
+    },
+    {
+      "id": "v50",
+      "lesson": 2,
+      "priority": "classroom",
+      "infinitive": "vorspielen",
+      "english": "to act out; to demonstrate",
+      "forms": {
+        "ich": "spiele vor",
+        "du": "spielst vor",
+        "er_sie_es": "spielt vor",
+        "wir": "spielen vor",
+        "ihr": "spielt vor",
+        "sie_Sie": "spielen vor"
+      },
+      "example": "Spielen Sie einen Beruf vor.",
+      "translation": "Act out a job.",
+      "notes": "Game instruction. Separable vor; no general separable-verb system is required now.",
+      "source": "KB p17 ex5c."
+    },
+    {
+      "id": "v51",
+      "lesson": 2,
+      "priority": "classroom",
+      "infinitive": "spielen",
+      "english": "to play",
+      "forms": {
+        "ich": "spiele",
+        "du": "spielst",
+        "er_sie_es": "spielt",
+        "wir": "spielen",
+        "ihr": "spielt",
+        "sie_Sie": "spielen"
+      },
+      "example": "Spielen Sie zehn Minuten.",
+      "translation": "Play for ten minutes.",
+      "notes": "Appears in L2 partner-game instructions, and role-play instructions later in the module.",
+      "source": "KB p156 lower L2 section; AB p22."
+    },
+    {
+      "id": "v52",
+      "lesson": 2,
+      "priority": "classroom",
+      "infinitive": "raten",
+      "english": "to guess",
+      "forms": {
+        "ich": "rate",
+        "du": "rätst",
+        "er_sie_es": "rät",
+        "wir": "raten",
+        "ihr": "ratet",
+        "sie_Sie": "raten"
+      },
+      "example": "Die anderen raten.",
+      "translation": "The others guess.",
+      "notes": "Guessing-game instruction. Irregular du rätst / er rät are reference only.",
+      "source": "KB p17 ex5c; AB p23."
+    },
+    {
+      "id": "v53",
+      "lesson": 2,
+      "priority": "classroom",
+      "infinitive": "ordnen",
+      "english": "to arrange; to put in order",
+      "forms": {
+        "ich": "ordne",
+        "du": "ordnest",
+        "er_sie_es": "ordnet",
+        "wir": "ordnen",
+        "ihr": "ordnet",
+        "sie_Sie": "ordnen"
+      },
+      "example": "Ordnen Sie und notieren Sie.",
+      "translation": "Put the items in order and write them down.",
+      "notes": "Base ordnen occurs in the L2 quick test; zuordnen is separately listed for matching tasks.",
+      "source": "KB p18 quick test."
+    },
+    {
+      "id": "v54",
+      "lesson": 2,
+      "priority": "classroom",
+      "infinitive": "finden",
+      "english": "to find",
+      "forms": {
+        "ich": "finde",
+        "du": "findest",
+        "er_sie_es": "findet",
+        "wir": "finden",
+        "ihr": "findet",
+        "sie_Sie": "finden"
+      },
+      "example": "Finden Sie die Zahlen.",
+      "translation": "Find the numbers.",
+      "notes": "Recognition of the literal task meaning only. The opinion pattern Ich finde … belongs to Lesson 4 and is excluded here.",
+      "source": "AB p11 ex4; KB p158 directions."
+    },
+    {
+      "id": "v55",
+      "lesson": 2,
+      "priority": "classroom",
+      "infinitive": "vorlesen",
+      "english": "to read aloud",
+      "forms": {
+        "ich": "lese vor",
+        "du": "liest vor",
+        "er_sie_es": "liest vor",
+        "wir": "lesen vor",
+        "ihr": "lest vor",
+        "sie_Sie": "lesen vor"
+      },
+      "example": "Lesen Sie die Telefonnummern vor.",
+      "translation": "Read the phone numbers aloud.",
+      "notes": "Recognize the separated instruction lesen … vor. Forms supplied as reference.",
+      "source": "AB p11 ex6c; KB pp158,192."
+    },
+    {
+      "id": "v56",
+      "lesson": 2,
+      "priority": "classroom",
+      "infinitive": "mitklatschen",
+      "english": "to clap along",
+      "forms": {
+        "ich": "klatsche mit",
+        "du": "klatschst mit",
+        "er_sie_es": "klatscht mit",
+        "wir": "klatschen mit",
+        "ihr": "klatscht mit",
+        "sie_Sie": "klatschen mit"
+      },
+      "example": "Hören Sie und klatschen Sie mit.",
+      "translation": "Listen and clap along.",
+      "notes": "Pronunciation-task instruction. Full paradigm is reference only.",
+      "source": "AB p13 ex12a."
+    },
+    {
+      "id": "v57",
+      "lesson": 2,
+      "priority": "classroom",
+      "infinitive": "betonen",
+      "english": "to stress; to emphasize",
+      "forms": {
+        "ich": "betone",
+        "du": "betonst",
+        "er_sie_es": "betont",
+        "wir": "betonen",
+        "ihr": "betont",
+        "sie_Sie": "betonen"
+      },
+      "example": "Welche Silbe ist betont?",
+      "translation": "Which syllable is stressed?",
+      "notes": "Encountered as betont in a pronunciation task. Recognize the meaning; passive grammar is not required.",
+      "source": "AB p13 ex12b."
+    },
+    {
+      "id": "v58",
+      "lesson": 2,
+      "priority": "classroom",
+      "infinitive": "ziehen",
+      "english": "to draw; to move a game piece",
+      "forms": {
+        "ich": "ziehe",
+        "du": "ziehst",
+        "er_sie_es": "zieht",
+        "wir": "ziehen",
+        "ihr": "zieht",
+        "sie_Sie": "ziehen"
+      },
+      "example": "Ziehen Sie mit Ihrer Spielfigur.",
+      "translation": "Move your game piece.",
+      "notes": "Also used for drawing a business card in the module. No core conjugation requirement.",
+      "source": "KB p156 L2 game; AB p23."
+    },
+    {
+      "id": "v59",
+      "lesson": 2,
+      "priority": "classroom",
+      "infinitive": "würfeln",
+      "english": "to roll dice",
+      "forms": {
+        "ich": "würfle",
+        "du": "würfelst",
+        "er_sie_es": "würfelt",
+        "wir": "würfeln",
+        "ihr": "würfelt",
+        "sie_Sie": "würfeln"
+      },
+      "example": "Würfeln Sie.",
+      "translation": "Roll the dice.",
+      "notes": "Instruction. ich würfle is the common short form; ich würfele is also possible.",
+      "source": "KB p156 L2 game."
+    },
+    {
+      "id": "v60",
+      "lesson": 2,
+      "priority": "classroom",
+      "infinitive": "bekommen",
+      "english": "to get; to receive",
+      "forms": {
+        "ich": "bekomme",
+        "du": "bekommst",
+        "er_sie_es": "bekommt",
+        "wir": "bekommen",
+        "ihr": "bekommt",
+        "sie_Sie": "bekommen"
+      },
+      "example": "Sie bekommen einen Punkt.",
+      "translation": "You get a point.",
+      "notes": "Recognize in game directions. bekommen means get/receive, not English become.",
+      "source": "KB p156 L2 game."
+    },
+    {
+      "id": "v61",
+      "lesson": 2,
+      "priority": "classroom",
+      "infinitive": "wählen",
+      "english": "to choose",
+      "forms": {
+        "ich": "wähle",
+        "du": "wählst",
+        "er_sie_es": "wählt",
+        "wir": "wählen",
+        "ihr": "wählt",
+        "sie_Sie": "wählen"
+      },
+      "example": "Wählen Sie eine Aufgabe.",
+      "translation": "Choose a task.",
+      "notes": "Instruction vocabulary.",
+      "source": "KB p157 L2 activity; AB pp20,24."
+    },
+    {
+      "id": "v62",
+      "lesson": 2,
+      "priority": "classroom",
+      "infinitive": "fehlen",
+      "english": "to be missing",
+      "forms": {
+        "ich": "fehle",
+        "du": "fehlst",
+        "er_sie_es": "fehlt",
+        "wir": "fehlen",
+        "ihr": "fehlt",
+        "sie_Sie": "fehlen"
+      },
+      "example": "Welche Zahl fehlt?",
+      "translation": "Which number is missing?",
+      "notes": "Recognize fehlt in number games and fehlend in instructions.",
+      "source": "KB p157 L2 number task."
+    },
+    {
+      "id": "v63",
+      "lesson": 2,
+      "priority": "classroom",
+      "infinitive": "erzählen",
+      "english": "to tell; to talk about",
+      "forms": {
+        "ich": "erzähle",
+        "du": "erzählst",
+        "er_sie_es": "erzählt",
+        "wir": "erzählen",
+        "ihr": "erzählt",
+        "sie_Sie": "erzählen"
+      },
+      "example": "Erzählen Sie im Kurs.",
+      "translation": "Tell the class.",
+      "notes": "Occurs in L2 partner activity and is listed under Magazin 01 in the glossary. Task recognition, not an additional core conjugation drill.",
+      "source": "KB p157 ex6c; glossary Magazin01; KB pp24–25."
+    },
+    {
+      "id": "v64",
+      "lesson": 2,
+      "priority": "classroom",
+      "infinitive": "verstehen",
+      "english": "to understand",
+      "forms": {
+        "ich": "verstehe",
+        "du": "verstehst",
+        "er_sie_es": "versteht",
+        "wir": "verstehen",
+        "ihr": "versteht",
+        "sie_Sie": "verstehen"
+      },
+      "example": "Verstehen Sie ein Wort nicht?",
+      "translation": "Do you not understand a word?",
+      "notes": "Useful recognition and classroom phrase. Also Ah, jetzt verstehe ich in the module listening test. Full paradigm is reference.",
+      "source": "KB pp158,192; AB transcript track1_28, visually inspected."
+    },
+    {
+      "id": "v65",
+      "lesson": 2,
+      "priority": "classroom",
+      "infinitive": "präsentieren",
+      "english": "to present; to introduce",
+      "forms": {
+        "ich": "präsentiere",
+        "du": "präsentierst",
+        "er_sie_es": "präsentiert",
+        "wir": "präsentieren",
+        "ihr": "präsentiert",
+        "sie_Sie": "präsentieren"
+      },
+      "example": "Präsentieren Sie eine Person.",
+      "translation": "Introduce a person.",
+      "notes": "Extra-practice instruction. Full reference paradigm only.",
+      "source": "AB p86 L2 extension."
+    },
+    {
+      "id": "v66",
+      "lesson": 3,
+      "priority": "classroom",
+      "infinitive": "suchen",
+      "english": "to look for; to search",
+      "forms": {
+        "ich": "suche",
+        "du": "suchst",
+        "er_sie_es": "sucht",
+        "wir": "suchen",
+        "ihr": "sucht",
+        "sie_Sie": "suchen"
+      },
+      "example": "Suchen Sie im Bildlexikon.",
+      "translation": "Look in the picture dictionary.",
+      "notes": "Classroom task vocabulary.",
+      "source": "KB p20 ex3; module KB p24."
+    },
+    {
+      "id": "v67",
+      "lesson": 3,
+      "priority": "classroom",
+      "infinitive": "planen",
+      "english": "to plan",
+      "forms": {
+        "ich": "plane",
+        "du": "planst",
+        "er_sie_es": "plant",
+        "wir": "planen",
+        "ihr": "plant",
+        "sie_Sie": "planen"
+      },
+      "example": "Sie planen ein Familienfest.",
+      "translation": "You are planning a family celebration.",
+      "notes": "Only the optional Schon fertig? task requires recognizing this meaning. Do not add general future tense study.",
+      "source": "Glossary L3 ex4; KB p20."
+    },
+    {
+      "id": "v68",
+      "lesson": 3,
+      "priority": "classroom",
+      "infinitive": "korrigieren",
+      "english": "to correct",
+      "forms": {
+        "ich": "korrigiere",
+        "du": "korrigierst",
+        "er_sie_es": "korrigiert",
+        "wir": "korrigieren",
+        "ihr": "korrigiert",
+        "sie_Sie": "korrigieren"
+      },
+      "example": "Korrigieren Sie die Sätze.",
+      "translation": "Correct the sentences.",
+      "notes": "Frequent instruction, not a separate active paradigm requirement.",
+      "source": "KB p21 ex7b; module KB p24."
+    },
+    {
+      "id": "v69",
+      "lesson": 3,
+      "priority": "classroom",
+      "infinitive": "geben",
+      "english": "to give",
+      "forms": {
+        "ich": "gebe",
+        "du": "gibst",
+        "er_sie_es": "gibt",
+        "wir": "geben",
+        "ihr": "gebt",
+        "sie_Sie": "geben"
+      },
+      "example": "Geben Sie den Steckbrief Ihrer Partnerin.",
+      "translation": "Give the profile to your partner.",
+      "notes": "Instruction on the L3 partner page. Strong present forms are reference only; dative objects are not a required grammar system yet.",
+      "source": "KB p159 upper L3 activity."
+    },
+    {
+      "id": "v70",
+      "lesson": 3,
+      "priority": "classroom",
+      "infinitive": "vermuten",
+      "english": "to suppose; to make a guess",
+      "forms": {
+        "ich": "vermute",
+        "du": "vermutest",
+        "er_sie_es": "vermutet",
+        "wir": "vermuten",
+        "ihr": "vermutet",
+        "sie_Sie": "vermuten"
+      },
+      "example": "etwas vermuten",
+      "translation": "to make a guess",
+      "notes": "Communication-summary label. The actual learner phrase is Ich glaube, … . Full forms are reference.",
+      "source": "KB p28 L3 communication heading."
+    },
+    {
+      "id": "v71",
+      "lesson": "module 1",
+      "priority": "classroom",
+      "infinitive": "aufhängen",
+      "english": "to hang up; to put up",
+      "forms": {
+        "ich": "hänge auf",
+        "du": "hängst auf",
+        "er_sie_es": "hängt auf",
+        "wir": "hängen auf",
+        "ihr": "hängt auf",
+        "sie_Sie": "hängen auf"
+      },
+      "example": "Hängen Sie die Texte auf.",
+      "translation": "Put the texts up.",
+      "notes": "Optional magazine-project instruction. No general separable-verb mastery requirement.",
+      "source": "KB p23 project."
+    },
+    {
+      "id": "v72",
+      "lesson": "module 1",
+      "priority": "classroom",
+      "infinitive": "kennen",
+      "english": "to know; to be familiar with",
+      "forms": {
+        "ich": "kenne",
+        "du": "kennst",
+        "er_sie_es": "kennt",
+        "wir": "kennen",
+        "ihr": "kennt",
+        "sie_Sie": "kennen"
+      },
+      "example": "Welche Berufe kennen Sie?",
+      "translation": "Which professions do you know?",
+      "notes": "Optional magazine task recognition. Distinguish from wissen (know a fact), but no full new verb drill is required.",
+      "source": "KB pp24,26."
+    },
+    {
+      "id": "v73",
+      "lesson": "module 1",
+      "priority": "classroom",
+      "infinitive": "zeigen",
+      "english": "to show",
+      "forms": {
+        "ich": "zeige",
+        "du": "zeigst",
+        "er_sie_es": "zeigt",
+        "wir": "zeigen",
+        "ihr": "zeigt",
+        "sie_Sie": "zeigen"
+      },
+      "example": "Zeigen Sie Fotos.",
+      "translation": "Show photos.",
+      "notes": "Optional magazine task instruction.",
+      "source": "KB p24 ex6."
+    },
+    {
+      "id": "v74",
+      "lesson": "module 1",
+      "priority": "classroom",
+      "infinitive": "filmen",
+      "english": "to film; to record a video",
+      "forms": {
+        "ich": "filme",
+        "du": "filmst",
+        "er_sie_es": "filmt",
+        "wir": "filmen",
+        "ihr": "filmt",
+        "sie_Sie": "filmen"
+      },
+      "example": "Ihre Partnerin filmt.",
+      "translation": "Your partner records a video.",
+      "notes": "Optional magazine-project instruction.",
+      "source": "KB p25 film task."
+    },
+    {
+      "id": "v75",
+      "lesson": "module 1",
+      "priority": "classroom",
+      "infinitive": "recherchieren",
+      "english": "to research; to look up information",
+      "forms": {
+        "ich": "recherchiere",
+        "du": "recherchierst",
+        "er_sie_es": "recherchiert",
+        "wir": "recherchieren",
+        "ihr": "recherchiert",
+        "sie_Sie": "recherchieren"
+      },
+      "example": "Recherchieren Sie im Internet.",
+      "translation": "Look up information on the internet.",
+      "notes": "Optional magazine-project instruction.",
+      "source": "KB p26 project."
+    },
+    {
+      "id": "v76",
+      "lesson": "module 1",
+      "priority": "classroom",
+      "infinitive": "bedeuten",
+      "english": "to mean",
+      "forms": {
+        "ich": "bedeute",
+        "du": "bedeutest",
+        "er_sie_es": "bedeutet",
+        "wir": "bedeuten",
+        "ihr": "bedeutet",
+        "sie_Sie": "bedeuten"
+      },
+      "example": "Was bedeuten die Namen?",
+      "translation": "What do the names mean?",
+      "notes": "Optional surname-project question. Extra e in du/er/ihr forms is reference.",
+      "source": "KB p26 project."
+    },
+    {
+      "id": "v77",
+      "lesson": 2,
+      "priority": "classroom",
+      "infinitive": "bilden",
+      "english": "to form; to build",
+      "forms": {
+        "ich": "bilde",
+        "du": "bildest",
+        "er_sie_es": "bildet",
+        "wir": "bilden",
+        "ihr": "bildet",
+        "sie_Sie": "bilden"
+      },
+      "example": "Bilden Sie Wörter.",
+      "translation": "Form words.",
+      "notes": "Also occurs in L2 and L3 workbook word-building instructions; earliest taught content AB p12. Classified as classroom recognition.",
+      "source": "AB pp12,16,18."
+    },
+    {
+      "id": "v78",
+      "lesson": "module 1",
+      "priority": "classroom",
+      "infinitive": "einkreisen",
+      "english": "to circle",
+      "forms": {
+        "ich": "kreise ein",
+        "du": "kreist ein",
+        "er_sie_es": "kreist ein",
+        "wir": "kreisen ein",
+        "ihr": "kreist ein",
+        "sie_Sie": "kreisen ein"
+      },
+      "example": "Kreisen Sie die Zahlen ein.",
+      "translation": "Circle the numbers.",
+      "notes": "Module review instruction. Separable ein; no extra s after the stem s.",
+      "source": "AB p18 ex3."
+    },
+    {
+      "id": "v79",
+      "lesson": "module 1",
+      "priority": "classroom",
+      "infinitive": "variieren",
+      "english": "to vary; to change a model",
+      "forms": {
+        "ich": "variiere",
+        "du": "variierst",
+        "er_sie_es": "variiert",
+        "wir": "variieren",
+        "ihr": "variiert",
+        "sie_Sie": "variieren"
+      },
+      "example": "Hören Sie und variieren Sie.",
+      "translation": "Listen and make variations.",
+      "notes": "Audio-training instruction. Keep the two consecutive i letters in variieren.",
+      "source": "AB pp18–19."
+    },
+    {
+      "id": "v80",
+      "lesson": "module 1",
+      "priority": "classroom",
+      "infinitive": "aufnehmen",
+      "english": "to record",
+      "forms": {
+        "ich": "nehme auf",
+        "du": "nimmst auf",
+        "er_sie_es": "nimmt auf",
+        "wir": "nehmen auf",
+        "ihr": "nehmt auf",
+        "sie_Sie": "nehmen auf"
+      },
+      "example": "Nehmen Sie Ihre Antworten auf.",
+      "translation": "Record your answers.",
+      "notes": "Module speaking-test instruction. Irregular reference forms only; no general separable-verb system required.",
+      "source": "AB p21."
+    },
+    {
+      "id": "v81",
+      "lesson": "module 1",
+      "priority": "classroom",
+      "infinitive": "mischen",
+      "english": "to mix; to shuffle",
+      "forms": {
+        "ich": "mische",
+        "du": "mischst",
+        "er_sie_es": "mischt",
+        "wir": "mischen",
+        "ihr": "mischt",
+        "sie_Sie": "mischen"
+      },
+      "example": "Mischen Sie die Visitenkarten.",
+      "translation": "Shuffle the business cards.",
+      "notes": "Optional business task instruction.",
+      "source": "AB p23 ex3c."
+    },
+    {
+      "id": "v82",
+      "lesson": "module 1",
+      "priority": "classroom",
+      "infinitive": "nehmen",
+      "english": "to take",
+      "forms": {
+        "ich": "nehme",
+        "du": "nimmst",
+        "er_sie_es": "nimmt",
+        "wir": "nehmen",
+        "ihr": "nehmt",
+        "sie_Sie": "nehmen"
+      },
+      "example": "Nehmen Sie Ihre Visitenkarte.",
+      "translation": "Take your business card.",
+      "notes": "Optional business task. du nimmst / er nimmt are reference; active conjugation comes later.",
+      "source": "AB p23 ex4."
+    },
+    {
+      "id": "v83",
+      "lesson": "module 1",
+      "priority": "classroom",
+      "infinitive": "helfen",
+      "english": "to help",
+      "forms": {
+        "ich": "helfe",
+        "du": "hilfst",
+        "er_sie_es": "hilft",
+        "wir": "helfen",
+        "ihr": "helft",
+        "sie_Sie": "helfen"
+      },
+      "example": "Ihre Kursleiterin hilft Ihnen.",
+      "translation": "Your teacher helps you.",
+      "notes": "Module exam-preparation instruction. Stem-changing forms and dative grammar are recognition only.",
+      "source": "AB p24 ex1b."
+    },
+    {
+      "id": "v84",
+      "lesson": "module 1",
+      "priority": "classroom",
+      "infinitive": "aktivieren",
+      "english": "to activate; to turn on",
+      "forms": {
+        "ich": "aktiviere",
+        "du": "aktivierst",
+        "er_sie_es": "aktiviert",
+        "wir": "aktivieren",
+        "ihr": "aktiviert",
+        "sie_Sie": "aktivieren"
+      },
+      "example": "Aktivieren Sie das Mikrofon.",
+      "translation": "Turn on the microphone.",
+      "notes": "Module exam-preparation instruction.",
+      "source": "AB p24."
+    },
+    {
+      "id": "v85",
+      "lesson": "module 1",
+      "priority": "classroom",
+      "infinitive": "achten",
+      "english": "to pay attention",
+      "forms": {
+        "ich": "achte",
+        "du": "achtest",
+        "er_sie_es": "achtet",
+        "wir": "achten",
+        "ihr": "achtet",
+        "sie_Sie": "achten"
+      },
+      "example": "Achten Sie auf die Informationen.",
+      "translation": "Pay attention to the information.",
+      "notes": "Module writing-test instruction; auf is part of the phrase, not a separable prefix.",
+      "source": "AB p25."
+    },
+    {
+      "id": "v86",
+      "lesson": 2,
+      "priority": "classroom",
+      "infinitive": "meinen",
+      "english": "to think; to mean",
+      "forms": {
+        "ich": "meine",
+        "du": "meinst",
+        "er_sie_es": "meint",
+        "wir": "meinen",
+        "ihr": "meint",
+        "sie_Sie": "meinen"
+      },
+      "example": "Was meinen Sie?",
+      "translation": "What do you think?",
+      "notes": "Recognize this opinion prompt in classroom tasks. The full paradigm is reference, not a separate Lesson 3 conjugation requirement.",
+      "source": "KB p15 ex1a; p19 ex1a."
+    }
+  ]
+}

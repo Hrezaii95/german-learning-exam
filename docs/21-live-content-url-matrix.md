@@ -1,5 +1,9 @@
 # Live Content URL Matrix — Current Disk / Deployed Wave
 
+## Vocabulary update — 2026-09-03
+
+The complete new vocabulary route matrix is `docs/vocabulary-card-index.csv`: 591 canonical family pages plus 131 preserved vocabulary/job aliases, for 722 card routes. The entries cover all 543 words in the Lesson 1–3 vocabulary PDF, 0–100, A–Z/Ä/Ö/Ü/ß and the 48-row teacher supplement. Each canonical route renders the shared Learn/Recall card. See `research/word-cards/coverage.json` for export verification and `research/word-cards/browser-qa.json` for browser verification. New deployment confirmation is recorded separately in `plans/vocabulary-cards-loop.md`; the older LIVE labels below refer to the dated releases described there.
+
 Snapshot: 2026-08-13
 
 Base URL: `https://hrezaii95.github.io/german-learning-exam/`

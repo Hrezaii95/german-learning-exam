@@ -1,19 +1,19 @@
 # PLAN-BATON — German Learning OS Full Alpha
 
-updated: 2026-08-13T16:30:00+03:30
-orchestrator_session: Claude Code takeover 2026-08-13 (session 3a449151)
-active_engine: claude-code
-active_phase: P6-OWNER-GATES
+updated: 2026-09-03
+orchestrator_session: Codex owner-requested vocabulary cards, 2026-09-03
+active_engine: codex
+active_phase: VOCABULARY-CARDS-RELEASE
 meta_status: n/a
 gate_status: {G0: green, G1: green, G2: green, G3: green, G4: green, G5: partial, G6: green, G-OWNER: pending}
-workers: [C-LEARN, C-WEB]
+workers: []
 parallel_groups: []
 file_ownership:
   - C-LEARN: `platform/packages/learning/**`, `platform/tests/learning/**`, learning package integration only
   - C-WEB: `platform/apps/web/**`, `platform/tests/web/**`, web package integration and README only
 open_items_unchanged: true
 violations: []
-next_action: ALL AGENT-BUILDABLE WORK IS COMPLETE AND DEPLOYED. Remaining items are owner-gated and cannot be closed by an agent — (1) OPENAI_API_KEY in the Codex environment to generate the 41 missing plural clips in a GPT voice and run the edge-tts A/B, (2) G5 qualified German listening approval of the 354 generated clips AND of the 62 newly app-authored example sentences, (3) ADR-013 ruling on the derived verb:leben gloss, (4) whether 'Und Ihnen?' should carry an English gloss it has nowhere in the sources (gap:meaning-und-ihnen), (5) whether 'Text' is core vocabulary as docs/11 says or non-core as the glossary's italics say (gap:classification-text). The listening gate is now performable: /review-audio puts all 110 published clips on one page with risk-tag filters and exports sha256-bound verdicts. Everything else is shipped and gated: 83 lexemes / 119 detail routes, 69/69 vocabulary images, 69/69 lemma audio, 69 examples of 83 lexemes (6 glossary-quoted + 63 app-authored, the 14 newest are bare headwords in the source so none was invented), und-linking encoded from workbook p.8, 16 of 18 spec gaps closed from source, E2E 38/38, offline live-verified, accessibility remediated, 768 tests. Still open by design: alphabet and numbers 0-100 (no source prints an English gloss per letter/number), and the teacher-deck human German gate which alone blocks activity 24 of 24.
+next_action: Complete owner-requested Lesson 1–3 vocabulary card integration and release checks. Active loop and explicit scope: plans/vocabulary-cards-loop.md and ADR-017. Human language/listening approval remains open.
 
 ## Current verified facts
 

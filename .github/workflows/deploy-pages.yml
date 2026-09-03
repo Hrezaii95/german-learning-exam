@@ -71,6 +71,10 @@ jobs:
         working-directory: platform
         run: npm run smoke:pages
 
+      - name: Verify every Lesson 1–3 vocabulary card
+        working-directory: platform
+        run: npm run audit:word-cards -- --export
+
       - name: Setup Pages
         uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5.0.0
 

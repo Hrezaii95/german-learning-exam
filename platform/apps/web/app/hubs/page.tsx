@@ -3,6 +3,7 @@ import { ShellLayout } from "@/components/shell/ShellLayout";
 import { HubDirectoryView } from "@/components/hubs/HubViews";
 import { loadLearnerHubProjection } from "@/lib/content/access";
 import { pageMetadata } from "@/lib/content/page-metadata";
+import { loadWordCards } from "@/lib/content/word-cards";
 
 export const metadata: Metadata = pageMetadata(
   "Hubs",
@@ -10,7 +11,9 @@ export const metadata: Metadata = pageMetadata(
 );
 
 export default function HubsDirectoryPage() {
-  const projection = loadLearnerHubProjection();
+  const original = loadLearnerHubProjection();
+  const vocabulary = { ...original.hubsById.vocabulary, itemCount: loadWordCards().cards.length, description: "Complete word-family cards through Lesson 3, including numbers, spelling and all 48 teacher jobs." };
+  const projection = { ...original, hubs: original.hubs.map(h => h.id === "vocabulary" ? vocabulary : h), hubsById: { ...original.hubsById, vocabulary } };
   return (
     <ShellLayout current="hubs">
       <HubDirectoryView projection={projection} />

@@ -35,6 +35,7 @@ import {
   finalizeOfflineExport,
   summarizeOfflineExport,
 } from "./offline-export.js";
+import { normalizeExportSegments } from "./normalize-export-segments.js";
 
 const require = createRequire(import.meta.url);
 
@@ -272,6 +273,8 @@ export function createPagesBuildController(
     if (!existsSync(outDir)) {
       throw new Error(`Pages export missing out/ at ${outDir}`);
     }
+    const segments = normalizeExportSegments(outDir);
+    if (segments) log(`[build:pages] Normalized ${segments} Windows RSC segment filenames`);
     writeFileSync(join(outDir, ".nojekyll"), "");
     const notFoundSrc = join(outDir, "404.html");
     if (!existsSync(notFoundSrc)) {

@@ -36,6 +36,7 @@
     "vitest.config.ts"
   ],
   "exclude": [
+    "tests/web/word-family-cards-ui.test.ts",
     "node_modules",
     "**/dist",
     "apps/web/lib/recorder/**",

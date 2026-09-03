@@ -1,6 +1,7 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { projectWordCards } from "./project-word-cards";
 import {
   projectPublishedLearnerWeb,
   serializeProjectionDeterministic,
@@ -94,6 +95,7 @@ function main(): void {
   process.stdout.write(
     `Wrote optional professions: ${extraProfessions.collection.sourceRowCount} source rows, ${extraProfessions.collection.sourceFormLexemeCount} form lexemes → ${extraProfessionsOutPath}\n`,
   );
+  projectWordCards();
 }
 
 try {

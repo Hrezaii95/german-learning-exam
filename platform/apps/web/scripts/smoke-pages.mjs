@@ -46,6 +46,13 @@ const synthesizedPronunciationManifest = JSON.parse(readFileSync(
 for (const asset of synthesizedPronunciationManifest.assets) {
   approvedAudio.set(`out/${asset.publicRelativePath}`, asset.sha256);
 }
+// ADR-017: the owner-requested card catalogue has its own exact-text preview
+// manifest. Preserve the existing checksum gate for every new audio file.
+const wordCardAudio = JSON.parse(readFileSync(join(repoRoot, "media/manifests/word-cards-public-audio-v1.json"), "utf8"));
+for (const asset of wordCardAudio.assets) {
+  if (!/^audio\/word-cards-v1\/(?:word|tts)-[a-f0-9]{16}\.mp3$/.test(asset.publicRelativePath)) throw new Error("Invalid word-card preview path");
+  approvedAudio.set(`out/${asset.publicRelativePath}`, asset.sha256);
+}
 
 const PAGES_BASE = "/german-learning-exam";
 const PORT = process.env.SMOKE_PAGES_PORT

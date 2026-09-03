@@ -1,0 +1,277 @@
+# Card ID|App-authored German model|English translation|Memory or usage cue
+W001|Wie heißt du?|What is your name?|wie asks how; learn it in Wie heißt du?
+W002|Wer ist das?|Who is that?|wer asks about a person.
+W003|Woher kommst du?|Where are you from?|woher asks about origin; answer with aus.
+W004|Ich heiße Sara.|My name is Sara.|ich refers to the speaker: I.
+W005|Du lernst Deutsch.|You are learning German.|du is for one person you address informally.
+W006|Er kommt aus Spanien.|He comes from Spain.|er refers to a masculine person or noun.
+W007|Sie wohnt hier. / Sie wohnen hier.|She lives here. / They live here.|sie can mean she or they. The verb helps: sie wohnt / sie wohnen.
+W008|Wo wohnen Sie?|Where do you live?|Formal Sie always starts with a capital S, even inside a sentence.
+W009|Wie geht es dir?|How are you?|Learn dir in Wie geht es dir? Use it with someone you call du.
+W010|Das ist meine Mutter.|That is my mother.|Here das points to someone or something; it is not a noun article.
+W011|Das ist mein Vater.|That is my father.|mein Vater, but meine Mutter: notice the ending with a feminine noun.
+W016|Ich lerne das Alphabet.|I am learning the alphabet.|Practise the German letter names, then spell your own name.
+W017|Mein Name ist Sara.|My name is Sara.|Name is the general word; Vorname is first name.
+W018|Mein Vorname ist Sara.|My first name is Sara.|Vor- points to the first part of a full name.
+W019|Mein Familienname ist Müller.|My surname is Müller.|Familienname and Nachname both mean surname.
+W020|Die Musik ist gut.|The music is good.|Learn Musik as a singular word for music.
+W021|Deutschland ist ein Land.|Germany is a country.|Land → Länder: notice ä and -er.
+W022|Die Information ist richtig.|The information is correct.|One piece of information is eine Information; several are Informationen.
+W023|Guten Tag, Herr Müller!|Hello, Mr Müller!|Use Herr before a man's surname when addressing him formally.
+W024|Guten Tag, Frau Müller!|Hello, Ms Müller!|Frau is a title before a surname; it also means woman or wife.
+W025|Das Gespräch ist interessant.|The conversation is interesting.|Link Gespräch with sprechen: a conversation involves speaking.
+W026|Hallo! Wie geht es dir?|Hello! How are you?|A simple greeting when you meet someone.
+W027|Tschüs! Bis morgen!|Bye! See you tomorrow!|Say Tschüs when leaving; the extra phrase means see you tomorrow.
+W028|Danke! Das ist sehr gut.|Thank you! That is very good.|A short way to thank someone.
+W029|Entschuldigung! Wie heißen Sie?|Excuse me! What is your name?|Use Entschuldigung to get attention politely or to apologise.
+W030|Guten Tag, Frau Müller!|Hello, Ms Müller!|A polite daytime greeting. Learn Guten Tag as one chunk.
+W031|Guten Morgen, Herr Müller!|Good morning, Mr Müller!|Use in the morning; keep the -en in Guten.
+W032|Guten Abend, Frau Müller!|Good evening, Ms Müller!|Use when greeting someone in the evening.
+W033|Gute Nacht, Mama!|Good night, Mum!|Use when parting for the night or going to bed; Gute has no n here.
+W034|Auf Wiedersehen, Herr Müller!|Goodbye, Mr Müller!|A polite farewell. Learn the whole phrase together.
+W035|Sara und Ali lernen Deutsch.|Sara and Ali are learning German.|und joins two people or ideas.
+W036|Ich komme aus Deutschland.|I come from Germany.|Use kommen aus to talk about origin.
+W037|Ich lerne auch Deutsch.|I am learning German too.|auch adds the meaning also or too.
+W038|Ich bin nicht verheiratet.|I am not married.|nicht makes this description negative.
+W039|Mir geht es sehr gut.|I am very well.|sehr strengthens gut: very well.
+W040|Mir geht es nicht so gut.|I am not feeling so well.|Learn nicht so gut as a useful chunk.
+W041|Mir geht es gut.|I am well.|gut describes how you feel in this phrase.
+W042|Das ist super!|That is great!|Use super for a positive reaction.
+W043|Wie geht es dir?|How are you?|es is part of the fixed question Wie geht es dir?
+W044|Buchstabieren Sie bitte.|Please spell it.|bitte makes the request polite.
+W045|Gut, danke. Und Ihnen?|Fine, thank you. And you?|Ihnen is the formal counterpart of dir in this exchange.
+W046|Der Tag ist schön.|The day is lovely.|Link Tag with the greeting Guten Tag.
+W047|Guten Morgen!|Good morning!|Morgen is a noun here. Lowercase morgen can mean tomorrow.
+W048|Guten Abend!|Good evening!|Abend is the time of day in Guten Abend.
+W049|Gute Nacht!|Good night!|Nacht → Nächte: keep the umlaut in the plural.
+W058|Ah, du kommst aus Spanien!|Ah, you come from Spain!|ah can signal that you have just understood something.
+W059|Sie ist eine bekannte Persönlichkeit.|She is a well-known public figure.|Learn the adjective and noun together as a descriptive phrase.
+W064|Das ist eine Münze.|That is a coin.|Münze ends in -e; the plural adds -n.
+W065|Der Test ist fertig.|The test is finished.|Test is similar to English; remember der.
+W066|Wir machen einen Schnelltest.|We are doing a quick test.|schnell + Test: a quick test.
+W075|Ich habe keine Kinder.|I have no children.|kein changes its ending: no children is keine Kinder.
+W076|Ich wohne in Berlin.|I live in Berlin.|Use wohnen in for your place of residence.
+W077|Wo wohnt ihr?|Where do you live?|ihr addresses several people informally; the verb is wohnt.
+W078|Wir lernen Deutsch.|We are learning German.|wir includes the speaker and other people.
+W079|Ja, ich wohne hier.|Yes, I live here.|ja confirms an ordinary question or statement.
+W080|Ich bin verheiratet, aber ich habe keine Kinder.|I am married, but I have no children.|aber introduces a contrast.
+W081|Wo wohnst du?|Where do you live?|wo asks about location; woher asks about origin.
+W082|Was machst du beruflich?|What do you do for a living?|was asks what; learn this profession question as a chunk.
+W083|Ich arbeite als Lehrer.|I work as a teacher.|als introduces the job in arbeiten als.
+W084|Ich arbeite bei Siemens.|I work for Siemens.|bei can introduce an employer.
+W085|Das ist ein Foto von meiner Familie.|That is a photo of my family.|Learn von in ein Foto von meiner Familie.
+W086|Ich bin 28 Jahre alt.|I am 28 years old.|Use sein for age: Ich bin … Jahre alt.
+W087|Wir sind verheiratet.|We are married.|verheiratet describes marital status.
+W088|Wir wohnen zusammen.|We live together.|zusammen means together; compare allein.
+W089|Die Antwort ist richtig.|The answer is correct.|richtig is the opposite of falsch.
+W090|Die Antwort ist falsch.|The answer is wrong.|falsch is the opposite of richtig.
+W091|Ich bin geschieden.|I am divorced.|Use Ich bin + marital status.
+W092|Ich wohne allein.|I live alone.|allein means alone; compare zusammen.
+W093|Was machen Sie beruflich?|What do you do for a living?|beruflich comes from Beruf and points to work.
+W094|Ich wohne jetzt in Berlin.|I live in Berlin now.|jetzt places the statement in the present.
+W095|Drei minus eins ist zwei.|Three minus one is two.|minus subtracts.
+W096|Zwei plus eins ist drei.|Two plus one is three.|plus adds.
+W097|Ich bin 28 Jahre alt.|I am 28 years old.|In the age phrase, use plural Jahre.
+W098|Das Kind heißt Alex.|The child's name is Alex.|Kind → Kinder; remember das even when the child is a boy or girl.
+W099|Wir machen ein Interview.|We are doing an interview.|Interview is borrowed from English; remember das.
+W100|Das ist mein Partner. / Das ist meine Partnerin.|That is my partner.|Partner has no extra plural ending; Partnerin becomes Partnerinnen.
+W102|Der Satz ist richtig.|The sentence is correct.|Satz → Sätze: notice ä and -e.
+W103|Der Satz hat einen Punkt.|The sentence has a full stop.|Punkt can mean a full stop or a point.
+W104|Die Zahl ist drei.|The number is three.|Zahl names a number; practise its German spelling.
+W105|Das Rätsel ist interessant.|The puzzle is interesting.|Rätsel has the same word form in singular and plural; the article changes.
+W106|Ich bin Single.|I am single.|In this personal-status statement, say bin Single without an article.
+W107|Die Firma ist in Berlin.|The company is in Berlin.|Firma → Firmen is a stem-ending change to remember.
+W108|Mein Job ist interessant.|My job is interesting.|Job is borrowed from English; its article is der.
+W109|Was sind Sie von Beruf?|What is your profession?|Learn von Beruf as a question chunk.
+W110|Die Stelle ist neu.|The position is new.|Here Stelle means a job or position.
+W111|Ich mache eine Ausbildung.|I am doing vocational training.|Use machen with Ausbildung.
+W112|Ich mache ein Praktikum.|I am doing an internship.|Praktikum → Praktika is irregular.
+W113|Einen Moment, bitte!|One moment, please!|Learn the polite request Einen Moment, bitte! as a chunk.
+W114|Meine Herkunft: Spanien.|My origin: Spain.|Herkunft labels where someone comes from on a profile.
+W115|Mein Wohnort ist Berlin.|My place of residence is Berlin.|wohn- links this noun to wohnen; Ort means place.
+W116|Mein Alter: 28 Jahre.|My age: 28 years.|Alter is the profile heading; give your age with Ich bin … Jahre alt.
+W117|Mein Familienstand: verheiratet.|My marital status: married.|A profile heading for ledig, verheiratet or geschieden.
+W118|Mein Studium ist interessant.|My university studies are interesting.|Studium connects to studieren and university study.
+W119|Das Tier ist hier.|The animal is here.|Tier also appears in Tierarzt: an animal doctor.
+W153|Vielen Dank für die Information!|Thank you very much for the information!|Learn Vielen Dank as one phrase, with -en on Vielen.
+W154|Vielen Dank!|Many thanks!|The noun is der Dank, but the fixed thanks phrase is Vielen Dank.
+W155|Ich arbeite bei einer Speditionsfirma.|I work for a freight forwarding company.|Spedition + Firma describes the type of company.
+W156|Die Oper ist in Berlin.|The opera house is in Berlin.|Oper can mean the musical work or the opera house.
+W157|Sprichst du Deutsch oder Englisch?|Do you speak German or English?|oder offers a choice; at the end of a statement it can ask right?
+W158|Danke für die Information.|Thank you for the information.|Learn für in Danke für …
+W159|Ich lerne mehr Wörter.|I am learning more words.|mehr means more; the noun Wörter is plural.
+W160|Ich bin fertig.|I am finished.|A useful classroom reply after completing a task.
+W161|Ich spreche schon ein bisschen Deutsch.|I already speak a little German.|schon means already.
+W162|Der Text ist interessant.|The text is interesting.|Text → Texte; German adds -e in this plural.
+W165|Ich studiere Medizin.|I study medicine.|Medizin is a university subject here; use studieren.
+W166|Wie ist deine Telefonnummer?|What is your telephone number?|Telefon + Nummer; practise saying the digits aloud.
+W172|Ist das dein Bruder?|Is that your brother?|dein Bruder, but deine Schwester.
+W173|Nein, ich wohne nicht hier.|No, I do not live here.|nein answers the question; nicht negates the statement.
+W174|Bist du nicht verheiratet? — Doch!|Aren't you married? — Yes, I am!|doch contradicts a negative question or claim.
+W175|Welche Sprachen sprichst du?|Which languages do you speak?|Use Welche Sprachen …? when asking about languages.
+W176|Ich spreche ein bisschen Deutsch.|I speak a little German.|Learn ein bisschen as one amount phrase.
+W177|Ich spreche gar nicht Französisch.|I do not speak French at all.|gar makes nicht stronger: not at all.
+W178|Das ist ein Kind.|That is a child.|ein can mean a/an or one; its ending depends on the noun and sentence.
+W179|Meine Familie wohnt in Spanien.|My family lives in Spain.|Familie is singular even though it includes several people.
+W180|Das ist meine Mutter.|That is my mother.|Mutter → Mütter: the umlaut marks the plural.
+W181|Das ist mein Vater.|That is my father.|Vater → Väter: the umlaut marks the plural.
+W182|Meine Schwester heißt Sara.|My sister's name is Sara.|Schwester → Schwestern: add -n.
+W183|Mein Onkel wohnt hier.|My uncle lives here.|Onkel has the same form in singular and plural.
+W184|Meine Oma wohnt in Berlin.|My grandma lives in Berlin.|Oma is the familiar word for Großmutter.
+W185|Das ist mein Enkelkind.|That is my grandchild.|Enkelkind does not specify a boy or a girl; its article is das.
+W186|Meine Eltern wohnen in Spanien.|My parents live in Spain.|Eltern is plural; use wohnen, not wohnt.
+W187|Mein Sohn lernt Deutsch.|My son is learning German.|Sohn → Söhne: notice ö and -e.
+W188|Meine Tochter lernt Deutsch.|My daughter is learning German.|Tochter → Töchter: the umlaut marks the plural.
+W189|Mein Bruder heißt Ali.|My brother's name is Ali.|Bruder → Brüder: the umlaut marks the plural.
+W190|Meine Geschwister wohnen hier.|My siblings live here.|Geschwister refers to brothers and sisters together and is usually plural.
+W191|Das ist mein Großvater.|That is my grandfather.|Großvater is the fuller form of Opa.
+W192|Das ist meine Großmutter.|That is my grandmother.|Großmutter is the fuller form of Oma.
+W193|Meine Großeltern wohnen in Berlin.|My grandparents live in Berlin.|Großeltern is plural, just like Eltern.
+W194|Das ist mein Enkel. / Das ist meine Enkelin.|That is my grandson. / That is my granddaughter.|Enkel and Enkelin name a grandchild's relationship to a grandparent.
+W196|Das ist mein Ehemann.|That is my husband.|Ehe- makes the marriage relationship explicit.
+W197|Das ist meine Ehefrau.|That is my wife.|Ehe- makes the marriage relationship explicit.
+W198|Er ist ein Verwandter. / Sie ist eine Verwandte.|He is a relative. / She is a relative.|These are adjective-like nouns: der Verwandte, but ein Verwandter.
+W200|Meine Tante wohnt hier.|My aunt lives here.|Tante → Tanten: add -n.
+W201|Das ist mein Mann.|That is my husband.|Mann can mean man or husband; the context tells you which.
+W202|Mein Papa heißt Ali.|My dad's name is Ali.|Papa is the familiar word for Vater.
+W203|Meine Mama heißt Sara.|My mum's name is Sara.|Mama is the familiar word for Mutter.
+W204|Mein Opa heißt Paul.|My grandpa's name is Paul.|Opa is the familiar word for Großvater.
+W205|Das Fest ist heute.|The celebration is today.|Fest also appears in Familienfest; heute means today.
+W206|Die Liste ist fertig.|The list is finished.|Liste → Listen: add -n.
+W207|Ich bin Mitglied.|I am a member.|Mitglied has neuter gender even when it refers to a person.
+W208|Welche Sprachen sprichst du?|Which languages do you speak?|Sprache connects to sprechen.
+W219|Mein Steckbrief ist fertig.|My short personal profile is finished.|A Steckbrief brings name, origin and other personal details together.
+W220|Der Brief ist von meiner Mutter.|The letter is from my mother.|Here von tells you who sent the letter.
+W221|Das ist ein Familienmitglied.|That is a family member.|Familie + Mitglied; the last part gives the noun its article: das.
+W222|Das Familienfest ist heute.|The family celebration is today.|Familie + Fest; the last part gives the noun its article: das.
+W285|Ich bin Geschäftsmann. / Ich bin Geschäftsfrau.|I am a businessman. / I am a businesswoman.|Geschäftsleute is a general plural for businesspeople; Geschäftsfrauen specifies women.
+W324|Hamburg liegt im Norden.|Hamburg is in the north.|Use im Norden for location; liegt means is situated.
+W325|Berlin liegt im Osten.|Berlin is in the east.|Use im Osten for location; liegt means is situated.
+W326|München liegt im Süden.|Munich is in the south.|Use im Süden for location; liegt means is situated.
+W327|Köln liegt im Westen.|Cologne is in the west.|Use im Westen for location; liegt means is situated.
+W328|Die Stadt liegt im Nordosten.|The city is in the northeast.|Nord + Osten makes Nordosten.
+W329|Die Stadt liegt im Südosten.|The city is in the southeast.|Süd + Osten makes Südosten.
+W330|Die Stadt liegt im Südwesten.|The city is in the southwest.|Süd + Westen makes Südwesten.
+W331|Die Stadt liegt im Nordwesten.|The city is in the northwest.|Nord + Westen makes Nordwesten.
+W332|Deutschland liegt in Europa.|Germany is in Europe.|Use in Europa without an article in this sentence.
+W333|China liegt in Asien.|China is in Asia.|Use in Asien without an article in this sentence.
+W334|Kanada liegt in Nordamerika.|Canada is in North America.|Nord + Amerika; use in Nordamerika for location.
+W335|Europa ist ein Kontinent.|Europe is a continent.|Kontinent resembles English continent; remember der.
+W336|Der Mensch spricht.|The person is speaking.|Mensch → Menschen. It refers to a human being, regardless of gender.
+W337|Ich studiere Robotik.|I study robotics.|Robotik names the field; use studieren for a university subject.
+W338|Mein Handy ist neu.|My mobile phone is new.|German Handy means mobile phone, not the English adjective handy.
+W339|Das ist ein Foto von meiner Familie.|That is a photo of my family.|Foto → Fotos; learn das Foto with the article.
+W340|Meine Muttersprache ist Persisch.|My native language is Persian.|Mutter + Sprache: mother tongue. Persisch means Persian.
+W341|Deutsch ist eine Fremdsprache für mich.|German is a foreign language for me.|Fremd- points to foreign or unfamiliar.
+W342|Menschen lernen überall auf der Welt Deutsch.|People learn German all over the world.|Learn auf der Welt as a location phrase.
+W343|Das ist eine Million.|That is one million.|Million is a noun, with a capital M and article die.
+W344|Die Region ist interessant.|The region is interesting.|Region resembles English; learn the -en plural.
+W345|Das ist mein Freund. / Das ist meine Freundin.|That is my friend.|Freund/Freundin can also mean boyfriend/girlfriend in context.
+W347|Das ist supercool!|That is really cool!|An informal enthusiastic reaction.
+W348|Ich lerne noch Deutsch.|I am still learning German.|Here noch means still; its meaning depends on the phrase.
+W349|Ich lerne viel.|I study a lot.|viel refers to a large amount.
+W350|Ich wohne hier.|I live here.|hier points to this place.
+W351|Ich spreche nur Deutsch.|I speak only German.|nur limits the statement: only German.
+W352|Er ist etwa 30 Jahre alt.|He is about 30 years old.|etwa makes the number approximate.
+W353|Das ist anders.|That is different.|anders expresses a difference.
+W354|Überall lernen Menschen Deutsch.|People are learning German everywhere.|überall means in every place.
+W355|Die Region ist deutschsprachig.|The region is German-speaking.|Deutsch + sprachig: German-speaking.
+W356|Warum lernst du Deutsch?|Why are you learning German?|warum asks for a reason.
+W357|Ich lerne gern Deutsch.|I like learning German.|gern expresses liking an activity; English often uses like + -ing.
+W358|Sag mal, woher kommst du?|Tell me, where are you from?|In Sag mal, mal softens the request; do not translate it word for word.
+W370|Ich bin Auszubildender. / Ich bin Auszubildende.|I am a trainee.|Article-sensitive endings: der Auszubildende, but ein Auszubildender.
+W392|Die Konferenz ist in Berlin.|The conference is in Berlin.|Konferenz → Konferenzen.
+W393|Mein Profil ist fertig.|My profile is finished.|A Profil collects personal or professional information.
+W394|Das ist meine Visitenkarte.|That is my business card.|A Visitenkarte carries contact details.
+W395|Meine Abteilung ist hier.|My department is here.|Abteilung appears at the end of longer department names.
+W396|Wie ist Ihre E-Mail-Adresse?|What is your email address?|Practise spelling the address aloud.
+W397|Die Homepage ist neu.|The website is new.|Homepage is a borrowed word; remember die.
+W398|Die Stadt heißt Berlin.|The city is called Berlin.|Stadt → Städte: notice ä and -e.
+W399|Wie heißt die Straße?|What is the street called?|Straße uses ß; its plural adds -n.
+W400|Meine Hausnummer ist 12.|My house number is 12.|Haus + Nummer; remember the feminine final noun Nummer.
+W401|Ich arbeite in der Personalabteilung.|I work in the human resources department.|Personal + Abteilung; learn in der Personalabteilung as a phrase.
+W402|Ich arbeite in der Marketingabteilung.|I work in the marketing department.|Marketing + Abteilung; the final noun determines the article.
+W403|Ich arbeite in der IT-Abteilung.|I work in the IT department.|Keep the hyphen after the abbreviation IT.
+W404|Ich arbeite im Marketing.|I work in marketing.|im Marketing is a common work-field phrase.
+W405|Wie ist deine Adresse?|What is your address?|Adresse has a double s.
+W406|Mein Hobby ist Musik.|My hobby is music.|Hobby → Hobbys; German keeps y before plural s.
+W407|Das Formular ist fertig.|The form is complete.|A Formular is a form you fill in.
+W408|Mein Nachname ist Müller.|My surname is Müller.|Nachname and Familienname both mean surname.
+W409|Wie ist die Postleitzahl?|What is the postal code?|Post + Leit + Zahl: the number used in a postal address.
+W410|Der Ort heißt Bonn.|The town is called Bonn.|Ort can mean a place or a town.
+W411|Meine Wohnung ist in Berlin.|My flat is in Berlin.|Wohnung connects to wohnen.
+W412|Die Nachricht ist von Sara.|The message is from Sara.|Nachricht names a message; Nachrichten can also mean news.
+W413|Mein Beruf ist interessant.|My profession is interesting.|Use interessant to describe something that interests you.
+W414|Ich bin ledig.|I am unmarried.|ledig means never married; compare verheiratet and geschieden.
+W415|Mein Handy ist neu.|My mobile phone is new.|neu means new; compare alt.
+W416|Also, ich heiße Sara.|Well, my name is Sara.|German also means so/well/then; it does not mean English also.
+W417|Das freut mich.|I am pleased to hear that.|Learn mich in Das freut mich.
+W418|Ist das Ihr Sohn?|Is that your son?|Formal Ihr starts with a capital I; feminine: Ihre Tochter.
+W419|Das ist mein Kollege. / Das ist meine Kollegin.|That is my colleague.|Kollege loses its final e before feminine -in: Kollegin.
+W461|Die Aufgabe ist fertig.|The task is finished.|Aufgabe is a task or an exercise to complete.
+W462|Wir machen die Übung.|We are doing the exercise.|Link Übung to üben: to practise.
+W463|Wie heißt das Wort auf Deutsch?|What is the word in German?|Wort → Wörter for individual vocabulary items.
+W464|Das Bild zeigt eine Familie.|The picture shows a family.|Bild → Bilder; zeigt means shows.
+W465|Das Bildlexikon zeigt Berufe.|The picture dictionary shows professions.|Bild + Lexikon; remember the plural Bildlexika.
+W466|Das Buch ist interessant.|The book is interesting.|Buch → Bücher: notice ü and -er.
+W467|Das Wort steht im Wörterbuch.|The word is in the dictionary.|Wörter + Buch; im Wörterbuch means in the dictionary.
+W468|Das Wort steht im Online-Wörterbuch.|The word is in the online dictionary.|Online + Wörterbuch; keep the hyphen.
+W469|Der Kurs ist in Berlin.|The course is in Berlin.|Kurs can mean the course or class.
+W470|Ich mache einen Deutschkurs.|I am taking a German course.|Deutsch + Kurs; use machen for taking this course.
+W471|Die Person heißt Sara.|The person's name is Sara.|Person is grammatically feminine regardless of the person's gender.
+W472|Wir arbeiten in einer Gruppe.|We are working in a group.|Gruppe has a double p; plural Gruppen.
+W473|Die Tabelle ist fertig.|The table is complete.|A Tabelle arranges information in rows and columns.
+W474|Ich habe eine Frage.|I have a question.|A useful classroom phrase: Ich habe eine Frage.
+W475|Die Antwort ist richtig.|The answer is correct.|Pair Frage with Antwort: question and answer.
+W476|Die Lösung ist richtig.|The solution is correct.|Lösung connects to lösen: solve.
+W477|Der Sitzplan zeigt die Namen.|The seating plan shows the names.|Sitz + Plan; plural Sitzpläne.
+W478|Der Name steht auf dem Zettel.|The name is on the slip of paper.|Zettel has the same word form in singular and plural.
+W479|Das ist ein Beispiel.|That is an example.|Learn zum Beispiel as the common phrase for for example.
+W480|Meine Nummer ist 12.|My number is 12.|Nummer often labels an assigned number; Zahl names a number itself.
+W481|Eine Minute, bitte!|One minute, please!|A useful short request; plural Minuten.
+W482|Das Spiel ist interessant.|The game is interesting.|Spiel connects to spielen: play.
+W483|Wir spielen ein Würfelspiel.|We are playing a dice game.|Würfel + Spiel; the final noun gives das.
+W484|Die Spielfigur ist hier.|The playing piece is here.|Spiel + Figur; the final noun gives die.
+W485|Wir lösen die Rechenaufgabe.|We are solving the arithmetic problem.|Rechen + Aufgabe: a calculation task.
+W486|Ergänzen Sie die Lücke.|Fill in the gap.|A common classroom instruction; plural Lücken.
+W487|Die Angabe ist richtig.|The detail is correct.|Angaben are individual details entered on a form.
+W488|Das ist mein Stammbaum.|That is my family tree.|Stammbaum shows family relationships; plural Stammbäume.
+W489|Wir üben die Aussprache.|We are practising pronunciation.|Aussprache connects to speaking; learn it as a singular topic word.
+W490|Markieren Sie den Wortakzent.|Mark the word stress.|Wort + Akzent: the stressed part of a word.
+W491|Das Wort hat zwei Silben.|The word has two syllables.|Silbe → Silben; count the syllables as you say a word.
+W492|Hören Sie die Satzmelodie.|Listen to the sentence intonation.|Satz + Melodie: the rise and fall of the voice in a sentence.
+W493|Lernen ist ein Verb.|Lernen is a verb.|German Verb resembles English verb; remember das.
+W494|Wo wohnst du? — Das ist eine W-Frage.|Where do you live? — That is a question-word question.|A W-Frage starts with a question word such as wo, wer or was.
+W495|Wohnst du hier? — Das ist eine Ja-/Nein-Frage.|Do you live here? — That is a yes/no question.|The conjugated verb comes first in this question.
+W496|Ich wohne hier. — Das ist eine Aussage.|I live here. — That is a statement.|In the model statement, the conjugated verb is in second position.
+W497|Lesen Sie. Dann schreiben Sie.|Read. Then write.|dann puts the second step after the first.
+W498|Hören Sie noch einmal.|Listen once again.|noch einmal means one more time.
+W499|Lesen Sie weiter.|Continue reading.|weiter means continue or further in this instruction.
+W500|Arbeiten Sie zu zweit.|Work in pairs.|zu zweit means two people working together.
+W501|Arbeiten Sie zu dritt.|Work in groups of three.|zu dritt means three people working together.
+W502|Schreiben Sie selbst einen Satz.|Write a sentence yourself.|selbst emphasises doing it yourself.
+W503|Ich lerne mit Sara.|I study with Sara.|mit connects you with another person.
+W504|Wir sprechen über die Familie.|We are talking about the family.|Use sprechen über for the topic you talk about.
+W505|Das Buch liegt auf dem Tisch.|The book is on the table.|Learn the location phrase auf dem Tisch; Tisch means table.
+W506|Nach dem Kurs lerne ich Deutsch.|After the class, I study German.|Here nach means after; learn nach dem Kurs as a chunk.
+W519|Wir sind im Kursraum.|We are in the classroom.|Kurs + Raum; plural Kursräume.
+W520|Wir sehen einen Film.|We are watching a film.|Film is similar to English; remember der and plural Filme.
+W521|Das ist die Flagge von Deutschland.|That is the flag of Germany.|Flagge has a double g; plural Flaggen.
+W522|Ich schreibe eine Notiz.|I am writing a note.|Notiz → Notizen.
+W523|Die Kursstatistik zeigt unsere Sprachen.|The class statistics show our languages.|Kurs + Statistik; unsere means our.
+W524|Die Prüfung ist fertig.|The examination is finished.|Prüfung means examination; remember the umlaut.
+W525|Die Vorbereitung ist wichtig.|The preparation is important.|Vorbereitung is preparation; wichtig means important.
+W526|Das Mikrofon ist hier.|The microphone is here.|Mikrofon resembles microphone; remember das.
+W527|Die Sprechblase zeigt einen Satz.|The speech bubble shows a sentence.|Sprech + Blase: a bubble containing speech.
+W528|Das ist unser Kursleiter. / Das ist unsere Kursleiterin.|That is our course instructor.|Kurs + Leiter; unser/unsere means our.
+W530|Lesen Sie laut.|Read aloud.|laut can mean aloud or loud; here it describes how to read.
+W531|Ich bin arbeitslos.|I am unemployed.|Arbeit + -los: without work.
+W532|Ich arbeite bei einer Elektronikfirma.|I work for an electronics company.|Elektronik + Firma; the final noun determines the article.
+W534|Das ist türkisch.|That is Turkish.|The adjective türkisch is lowercase; the language name Türkisch is uppercase.
+W538|Der Kurs dauert eine Stunde.|The class lasts one hour.|Stunde can mean an hour or a lesson; dauert means lasts.
+W539|Wir spielen ein Kettenspiel.|We are playing a chain game.|Kette + Spiel: each person's turn links to the previous one.
+W540|Wir machen einen Kursspaziergang.|We are doing a class mingling activity.|Kurs + Spaziergang: walk around the class and speak with others.
+W541|Ich habe eine Rückfrage.|I have a clarification question.|Rückfrage asks for more detail or clarification.
+W542|Viel Glück!|Good luck!|Learn Viel Glück as one good-wishes phrase.
+W543|Achtung! Hören Sie zu!|Attention! Listen!|Achtung draws attention to something important.
+W459|Klatschen Sie die Silben.|Clap the syllables.|Clap once for each syllable while saying the word.

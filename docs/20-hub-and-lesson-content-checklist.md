@@ -1,5 +1,11 @@
 # Hub and Lesson Content Checklist — Current Disk
 
+## Vocabulary update — 2026-09-03
+
+The new vocabulary catalogue supersedes the older vocabulary and optional-job counts below: **591 word-family cards**, covering **543 PDF vocabulary entries, 101 numbers, 30 spelling items and all 48 teacher job rows**. There are 989 displayed form slots; every form and every example has exact-text generated preview audio. The existing 83 vocabulary URLs and 48 job URLs remain aliases of these cards. Each card uses the approved engineer format: meaning, grouped forms, pattern, translated example, hidden-answer recall and source notes. Context and Classroom remain recognition-first.
+
+Implementation evidence: `research/word-cards/coverage.json`; complete mapping: `docs/vocabulary-card-index.csv`. These are technical/content-coverage checks, not human pronunciation approval. Other hub and lesson activity counts are outside this vocabulary expansion. The older dated tables below are historical.
+
 Snapshot: 2026-08-13
 
 Base URL: `https://hrezaii95.github.io/german-learning-exam/`

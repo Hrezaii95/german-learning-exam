@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ShellLayout } from "@/components/shell/ShellLayout";
 import { loadExtraProfessionsProjection } from "@/lib/content/extra-professions";
-import { ProfessionRowClient } from "../ProfessionRowClient";
+import Link from "next/link";
+import { WordFamilyCard } from "@/components/word-cards/WordFamilyCard";
+import { wordCardForPath } from "@/lib/content/word-cards";
+import styles from "@/components/word-cards/word-cards.module.css";
 
 type PageProps = {
   params: Promise<{ sourceRow: string }>;
@@ -30,10 +33,12 @@ export default async function ExtraProfessionDetailPage({ params }: PageProps) {
   const { sourceRow } = await params;
   const row = loadExtraProfessionsProjection().rowsBySegment[sourceRow];
   if (!row) notFound();
+  const card = wordCardForPath(row.detailPath);
+  if (!card) notFound();
 
   return (
     <ShellLayout current="vocabulary">
-      <ProfessionRowClient row={row} />
+      <div className={styles.detailFrame}><nav className={styles.cardNavigation} aria-label="Vocabulary cards"><Link href="/collections/professions">← Teacher jobs</Link><Link href="/vocabulary">All vocabulary</Link></nav><WordFamilyCard key={card.id} card={card} /></div>
     </ShellLayout>
   );
 }

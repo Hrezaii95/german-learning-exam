@@ -2,7 +2,8 @@
  * DEPLOY1R1 — Pages release-hardening fault injection.
  * Uses disposable fixtures; does not mutate the real web app tree.
  */
-import { mkdtempSync, renameSync, writeFileSync } from "node:fs";
+import { mkdirSync, mkdtempSync, renameSync, writeFileSync } from "node:fs";
+import { normalizeExportSegments } from "../../apps/web/scripts/normalize-export-segments.js";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { afterEach, describe, expect, it } from "vitest";
@@ -21,6 +22,22 @@ import {
 } from "../../apps/web/scripts/build-pages-lib.js";
 
 const fixtures: string[] = [];
+
+describe("Windows static RSC segment export", () => {
+  it("provides browser filenames, preserves payloads and is idempotent", () => {
+    const root = freshFixture();
+    const nested = join(root, "vocabulary", "__next.vocabulary", "w126");
+    mkdirSync(nested, { recursive: true });
+    writeFileSync(join(nested, "__PAGE__.txt"), "RSC payload");
+    expect(normalizeExportSegments(root)).toBe(1);
+    const target = join(root, "vocabulary", "__next.vocabulary.w126.__PAGE__.txt");
+    expect(readUtf8(target)).toBe("RSC payload");
+    expect(normalizeExportSegments(root)).toBe(0);
+    writeFileSync(target, "conflict");
+    expect(() => normalizeExportSegments(root)).toThrow(/Conflicting RSC segment/);
+    expect(readUtf8(target)).toBe("conflict");
+  });
+});
 
 function freshFixture() {
   const root = mkdtempSync(join(tmpdir(), "gl-pages-harden-"));

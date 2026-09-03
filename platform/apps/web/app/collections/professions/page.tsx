@@ -1,7 +1,8 @@
+import { Suspense } from "react";
 import type { Metadata } from "next";
 import { ShellLayout } from "@/components/shell/ShellLayout";
-import { loadExtraProfessionsProjection } from "@/lib/content/extra-professions";
-import { ProfessionCollectionClient } from "./ProfessionCollectionClient";
+import { WordCardLibrary, WordCardLibraryWithParams } from "@/components/word-cards/WordCardLibrary";
+import { loadWordCards } from "@/lib/content/word-cards";
 
 export const metadata: Metadata = {
   // The root layout template appends the product name; it is not repeated here.
@@ -10,9 +11,10 @@ export const metadata: Metadata = {
 };
 
 export default function ExtraProfessionsPage() {
+  const catalog = loadWordCards();
   return (
     <ShellLayout current="vocabulary">
-      <ProfessionCollectionClient projection={loadExtraProfessionsProjection()} />
+      <Suspense fallback={<WordCardLibrary catalog={catalog} teachersOnly />}><WordCardLibraryWithParams catalog={catalog} teachersOnly /></Suspense>
     </ShellLayout>
   );
 }

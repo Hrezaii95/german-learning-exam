@@ -1,11 +1,11 @@
+import { Suspense } from "react";
 import type { Metadata } from "next";
-import { HubRoutePage } from "@/components/hubs/HubRoutePage";
-import { getHubById } from "@/lib/content/access";
-import { hubPageMetadata } from "@/lib/content/page-metadata";
+import { ShellLayout } from "@/components/shell/ShellLayout";
+import { WordCardLibrary, WordCardLibraryWithParams } from "@/components/word-cards/WordCardLibrary";
+import { loadWordCards } from "@/lib/content/word-cards";
 
-/** Title and description come from the hub itself, so they cannot drift. */
-export const metadata: Metadata = hubPageMetadata(getHubById("vocabulary"));
-
+export const metadata: Metadata = { title: "Vocabulary · Lessons 1–3", description: "All vocabulary through Lesson 3, numbers, spelling and teacher professions in complete word-family cards." };
 export default function VocabularyPage() {
-  return <HubRoutePage hubId="vocabulary" />;
+  const catalog = loadWordCards();
+  return <ShellLayout current="vocabulary"><Suspense fallback={<WordCardLibrary catalog={catalog} />}><WordCardLibraryWithParams catalog={catalog} /></Suspense></ShellLayout>;
 }

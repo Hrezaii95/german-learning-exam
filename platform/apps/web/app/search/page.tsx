@@ -5,6 +5,7 @@ import { SearchView } from "@/components/search/SearchViews";
 import { SearchViewWithParams } from "@/components/search/SearchNavViews";
 import { loadLearnerSearchProjection } from "@/lib/content/access";
 import { pageMetadata } from "@/lib/content/page-metadata";
+import { withWordCardSearch } from "@/lib/content/word-cards";
 
 export const metadata: Metadata = pageMetadata(
   "Search",
@@ -16,7 +17,7 @@ export const metadata: Metadata = pageMetadata(
  * Suspense so static export stays compatible without dropping filters/back.
  */
 export default function SearchPage() {
-  const projection = loadLearnerSearchProjection();
+  const projection = withWordCardSearch(loadLearnerSearchProjection());
   return (
     <ShellLayout current="search">
       <Suspense
