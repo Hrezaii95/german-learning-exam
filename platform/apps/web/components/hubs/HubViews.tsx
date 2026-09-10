@@ -26,6 +26,8 @@ import {
   detailHubForId,
 } from "@/lib/content/detail-types";
 import { lessonLabel } from "@/lib/content/lesson-label";
+import { ListeningTranscript } from "@/components/audio/ListeningTranscript";
+import { workbookTranscript } from "@/lib/audio/listening-transcripts";
 import { withPagesBasePath } from "@/lib/content/pages-base-path";
 import { withPagesBaseAssetPath } from "@/lib/content/pages-base-path";
 import {
@@ -770,8 +772,7 @@ function ListeningGroupCard({ group }: { group: LearnerListeningGroup }) {
                 </strong>
                 <p className="dense">{Math.round(track.durationSeconds)} sec</p>
               </div>
-              {/* The transcript is intentionally withheld: revealing it would
-                  disclose listening answers and its public rights are blocked. */}
+              {/* Reveal the source transcript when the learner wants to read along. */}
               {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
               <audio
                 controls
@@ -781,6 +782,7 @@ function ListeningGroupCard({ group }: { group: LearnerListeningGroup }) {
                 )}
                 aria-label={`${track.exercise}, track ${track.trackId.replace("_", ".")}, ${track.purpose}`}
               />
+              <ListeningTranscript transcript={workbookTranscript(track.trackId)} />
             </li>
           );
         })}

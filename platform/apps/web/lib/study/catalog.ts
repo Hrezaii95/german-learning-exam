@@ -4,6 +4,7 @@ import { dirname, join } from "node:path";
 import { loadWordCards } from "../content/word-cards";
 import { lessonFourWords, lessonFourVerbs } from "./lesson-four";
 import type { BookManifest, DictionaryEntry } from "./types";
+import { bookTranscript } from "../audio/listening-transcripts";
 const generated = join(
   dirname(fileURLToPath(import.meta.url)),
   "../../generated",
@@ -28,6 +29,7 @@ export function loadBook(): BookManifest {
         label,
         src,
         pageId,
+        transcript: bookTranscript(id)!,
       }),
     ),
   };

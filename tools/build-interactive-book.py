@@ -49,7 +49,7 @@ def main():
                 printed = start + offset
                 page = doc[printed + 1]
                 page_id = f"{kind}-{printed}"
-                pix = page.get_pixmap(matrix=pymupdf.Matrix(1.8, 1.8), alpha=False)
+                pix = page.get_pixmap(matrix=pymupdf.Matrix(3.2, 3.2), alpha=False)
                 Image.frombytes("RGB", (pix.width, pix.height), pix.samples).save(PUBLIC / "pages" / f"{page_id}.webp", quality=86)
                 lines = []
                 for block in page.get_text("dict")["blocks"]:

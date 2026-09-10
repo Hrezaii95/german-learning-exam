@@ -11,6 +11,7 @@ try {
   const context = await browser.newContext({ viewport: { width: 1280, height: 900 }, serviceWorkers: "block" });
   const page = await context.newPage();
   await page.goto(`${base}/book/?page=coursebook-30`, { waitUntil: "networkidle" });
+  await page.getByRole("button", { name: "Page + text", exact: true }).click();
   await page.locator(".book-track audio").first().evaluate(async audio => { await audio.play(); });
   await page.waitForFunction(() => document.querySelector(".book-track audio")?.currentTime > .1);
   const tts = page.locator(".book-readable-lines .study-audio-button").filter({ hasText: "" }).nth(3);
@@ -49,6 +50,7 @@ try {
   await page.locator(".study-saved-card").first().waitFor();
   assert(await page.locator(".study-saved-card").count() === 1, "Exported backup restores selected concepts");
   await page.locator("input[type=file]").setInputFiles({ name: "bad.json", mimeType: "application/json", buffer: Buffer.from('{"version":99}') });
+  await page.getByText("This file is not a supported study backup.", { exact: true }).waitFor();
   assert((await page.locator(".study-backup").innerText()).includes("not a supported study backup"), "Invalid backup is rejected");
   assert(await page.locator(".study-saved-card").count() === 1, "Invalid import preserves existing selections");
   await page.getByRole("button", { name: /Review 1 item/ }).click();

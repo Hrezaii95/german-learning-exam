@@ -71,7 +71,14 @@ export const REFERENCE_GROUPS: readonly ReferenceGroup[] = Object.freeze([
         title: "Momente AB A1.1 Transskriptionen",
         role: "Audio transcripts",
         contribution:
-          "The written text of the workbook recordings, used to match each track to the right exercise.",
+          "The source transcripts shown beside workbook recordings in the book, listening hub and lesson activities.",
+      }),
+      Object.freeze({
+        id: "kursbuch-transkriptionen",
+        title: "Momente A1.1 Kursbuch Transkriptionen",
+        role: "Audio transcripts",
+        contribution:
+          "Publisher transcripts for the coursebook recordings in Lessons 1–4, shown on demand so you can listen first and then read along.",
       }),
       Object.freeze({
         id: "loesungen",

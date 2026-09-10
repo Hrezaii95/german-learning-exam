@@ -1,0 +1,26 @@
+{
+  "base": "http://127.0.0.1:4331/german-learning-exam",
+  "passed": true,
+  "checks": [
+    "Default view gives the original page its own full-width row",
+    "Desktop original page is at least 1050 pixels wide",
+    "Higher-resolution page image loads",
+    "Transcript is hidden until requested",
+    "Coursebook transcript matches the picture-price dialogue",
+    "Transcript words open the dictionary",
+    "Full-screen reader uses the viewport width",
+    "200% zoom enlarges the actual page",
+    "Enlarged page can be panned",
+    "Fit width returns the page to the viewport",
+    "Escape closes full-screen reading",
+    "Mobile starts at readable size rather than shrinking the whole page",
+    "Mobile panning stays inside the reader",
+    "Every workbook recording on page 28 has a transcript",
+    "Workbook track matches its exercise despite shifted disc numbering",
+    "Mobile transcript text is at least 18 pixels",
+    "Existing listening hub also has all 15 source transcripts",
+    "Legacy listening transcript can be revealed",
+    "No browser runtime errors: "
+  ],
+  "errors": []
+}

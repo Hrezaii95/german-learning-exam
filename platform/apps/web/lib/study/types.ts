@@ -29,6 +29,13 @@ export type DictionaryEntry = {
   audio: string | null;
 };
 export type BookLine = { id: string; text: string; box: number[] };
+export type ListeningTranscript = {
+  lines: { speaker: string | null; text: string }[];
+  sourceTrack: string;
+  sourcePages: number[];
+  sourceTitle: string;
+  credit: string;
+};
 export type BookPage = {
   id: string;
   kind: string;
@@ -49,6 +56,7 @@ export type BookTrack = {
   label: string;
   src: string;
   pageId: string;
+  transcript?: ListeningTranscript;
 };
 export type BookManifest = {
   version: number;

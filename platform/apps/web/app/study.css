@@ -1550,3 +1550,163 @@
     margin-bottom: 20px;
   }
 }
+/* Give the original page the available reading width, instead of shrinking it into a card. */
+.shell-main:has(.book-workspace) {
+  width: 100%;
+  max-width: none;
+  padding: 24px clamp(12px, 2vw, 32px) 80px;
+}
+.book-workspace {
+  max-width: 1600px;
+}
+.book-reading-grid.book-view-page {
+  grid-template-columns: minmax(0, 1fr);
+}
+.book-view-page .book-original {
+  position: static;
+}
+.book-view-page .book-text-panel {
+  width: 100%;
+}
+.book-page-scroll {
+  max-height: 80vh;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+}
+.book-page-toolbar {
+  font-size: 14px;
+  padding: 4px 4px 12px;
+  flex-wrap: wrap;
+}
+.book-page-toolbar select {
+  min-height: 40px;
+  border: 1px solid var(--study-line);
+  border-radius: 6px;
+  padding: 4px 8px;
+  background: white;
+}
+.book-page-caption {
+  font-size: 12px;
+}
+.book-line p,
+.book-view-read .book-line p {
+  font-size: 18px;
+  line-height: 1.8;
+}
+.book-fullscreen {
+  width: 100vw;
+  height: 100dvh;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 16px;
+  border: 0;
+  background: #f4f2eb;
+  color: var(--study-ink);
+  overflow: auto;
+}
+.book-fullscreen::backdrop {
+  background: #10211fee;
+}
+.book-fullscreen-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+.book-fullscreen-header h2 {
+  font-size: 19px;
+  margin: 0;
+}
+.book-fullscreen .book-original {
+  position: static;
+}
+.book-fullscreen .book-page-scroll {
+  max-height: calc(100dvh - 190px);
+}
+.book-fullscreen .book-selected-line {
+  max-height: 22vh;
+  overflow: auto;
+}
+.listening-transcript {
+  margin: 12px 0 0;
+  border: 1px solid #cbd9d1;
+  border-radius: 9px;
+  background: #fffefa;
+  color: #203536;
+  overflow: hidden;
+}
+.listening-transcript summary {
+  padding: 12px 14px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 650;
+}
+.listening-transcript summary span {
+  font-weight: 400;
+  font-size: 12px;
+  margin-left: 12px;
+  color: #526562;
+}
+.listening-transcript[open] summary {
+  border-bottom: 1px solid #dce4df;
+  background: #edf3eb;
+}
+.listening-transcript-body {
+  padding: 16px;
+}
+.listening-transcript-lines {
+  max-height: 65vh;
+  overflow: auto;
+  padding-right: 8px;
+}
+.listening-transcript-lines > p {
+  margin: 0 0 18px;
+  font-size: 19px;
+  line-height: 1.8;
+}
+.listening-transcript-lines > p > strong {
+  display: block;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #476259;
+  margin-bottom: 3px;
+}
+.listening-transcript-hint,
+.listening-transcript-credit {
+  font-size: 12px;
+  line-height: 1.6;
+  color: #526562;
+}
+.listening-transcript-credit {
+  border-top: 1px solid #dce4df;
+  padding-top: 12px;
+  margin-bottom: 0;
+}
+@media (max-width: 1250px) {
+  .book-reading-grid.book-view-split {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (max-width: 760px) {
+  .book-original {
+    padding: 6px;
+  }
+  .book-fullscreen {
+    padding: 8px;
+  }
+  .book-fullscreen-header h2 {
+    font-size: 16px;
+  }
+  .book-header,
+  .book-chapter-title {
+    margin-bottom: 16px;
+  }
+  .listening-transcript-body {
+    padding: 12px;
+  }
+  .listening-transcript-lines > p {
+    font-size: 18px;
+  }
+}

@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import { withPagesBaseAssetPath } from "@/lib/content/pages-base-path";
 import type { WorkbookAudioTrack } from "@/lib/audio/workbook-audio";
 import { useOptionalLearnerState } from "@/components/learner-state/LearnerStateProvider";
+import { ListeningTranscript } from "./ListeningTranscript";
+import { workbookTranscript } from "@/lib/audio/listening-transcripts";
 
 export function WorkbookAudioPanel({ tracks }: { tracks: readonly WorkbookAudioTrack[] }) {
   const players = useRef(new Map<string, HTMLAudioElement>());
@@ -61,9 +63,7 @@ export function WorkbookAudioPanel({ tracks }: { tracks: readonly WorkbookAudioT
               <strong>{track.exercise} · Track {track.id.replace("_", ".")}</strong>
               <p className="dense">{track.purpose} · {Math.round(track.durationSeconds)} sec</p>
             </div>
-            {/* Authentic listening tasks intentionally omit captions because a
-                caption would disclose the exercise answer. The adjacent label
-                still identifies the source exercise and learning purpose. */}
+            {/* Learners choose when to reveal the transcript. */}
             {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
             <audio
               ref={(node) => {
@@ -84,6 +84,7 @@ export function WorkbookAudioPanel({ tracks }: { tracks: readonly WorkbookAudioT
                 }
               }}
             />
+            <ListeningTranscript transcript={workbookTranscript(track.id)} />
             <div className="workbook-audio__actions" role="group" aria-label={`Playback speed for ${track.id}`}>
               <button type="button" className="btn btn-secondary" aria-pressed={(selectedSpeeds[track.id] ?? preferredSpeed) === preferredSpeed} onClick={() => setSpeed(track.id, preferredSpeed)}>Preferred {preferredSpeed}×</button>
               <button type="button" className="btn btn-secondary" aria-pressed={selectedSpeeds[track.id] === 0.8} onClick={() => setSpeed(track.id, 0.8)}>Study 0.8×</button>
