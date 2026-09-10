@@ -1,0 +1,357 @@
+{
+  "reference": "User-supplied easydeutsch home vocabulary image, including its Zuhause heading",
+  "book": "Momente A1.1 Lessons 1–4; KB printed pages 11–22, 29–32; AB 6–17, 26–29; glossary pages 1–6",
+  "words": [
+    {
+      "id": "haus",
+      "de": "das Haus",
+      "plural": "die Häuser",
+      "image": true,
+      "book": []
+    },
+    {
+      "id": "zimmer",
+      "de": "das Zimmer",
+      "plural": "die Zimmer",
+      "image": true,
+      "book": [
+        "L4 · KB 32"
+      ]
+    },
+    {
+      "id": "tisch",
+      "de": "der Tisch",
+      "plural": "die Tische",
+      "image": true,
+      "book": [
+        "L4 · KB 31"
+      ]
+    },
+    {
+      "id": "stuhl",
+      "de": "der Stuhl",
+      "plural": "die Stühle",
+      "image": true,
+      "book": [
+        "L4 · KB 30"
+      ]
+    },
+    {
+      "id": "bett",
+      "de": "das Bett",
+      "plural": "die Betten",
+      "image": true,
+      "book": [
+        "L4 · KB 30"
+      ]
+    },
+    {
+      "id": "schrank",
+      "de": "der Schrank",
+      "plural": "die Schränke",
+      "image": true,
+      "book": [
+        "L4 · KB 31"
+      ]
+    },
+    {
+      "id": "lampe",
+      "de": "die Lampe",
+      "plural": "die Lampen",
+      "image": true,
+      "book": [
+        "L4 · KB 30"
+      ]
+    },
+    {
+      "id": "sofa",
+      "de": "das Sofa",
+      "plural": "die Sofas",
+      "image": true,
+      "book": [
+        "L4 · KB 31"
+      ]
+    },
+    {
+      "id": "teppich",
+      "de": "der Teppich",
+      "plural": "die Teppiche",
+      "image": true,
+      "book": [
+        "L4 · KB 31"
+      ]
+    },
+    {
+      "id": "fernseher",
+      "de": "der Fernseher",
+      "plural": "die Fernseher",
+      "image": true,
+      "book": []
+    },
+    {
+      "id": "fenster",
+      "de": "das Fenster",
+      "plural": "die Fenster",
+      "image": true,
+      "book": []
+    },
+    {
+      "id": "tuer",
+      "de": "die Tür",
+      "plural": "die Türen",
+      "image": true,
+      "book": []
+    },
+    {
+      "id": "spiegel",
+      "de": "der Spiegel",
+      "plural": "die Spiegel",
+      "image": true,
+      "book": [
+        "L4 · KB 30"
+      ]
+    },
+    {
+      "id": "kissen",
+      "de": "das Kissen",
+      "plural": "die Kissen",
+      "image": true,
+      "book": []
+    },
+    {
+      "id": "decke",
+      "de": "die Decke",
+      "plural": "die Decken",
+      "image": true,
+      "book": []
+    },
+    {
+      "id": "uhr",
+      "de": "die Uhr",
+      "plural": "die Uhren",
+      "image": true,
+      "book": []
+    },
+    {
+      "id": "computer",
+      "de": "der Computer",
+      "plural": "die Computer",
+      "image": true,
+      "book": []
+    },
+    {
+      "id": "regal",
+      "de": "das Regal",
+      "plural": "die Regale",
+      "image": true,
+      "book": [
+        "L4 · KB 31"
+      ]
+    },
+    {
+      "id": "pflanze",
+      "de": "die Pflanze",
+      "plural": "die Pflanzen",
+      "image": true,
+      "book": []
+    },
+    {
+      "id": "radio",
+      "de": "das Radio",
+      "plural": "die Radios",
+      "image": true,
+      "book": []
+    },
+    {
+      "id": "zuhause",
+      "de": "das Zuhause",
+      "plural": null,
+      "image": true,
+      "book": []
+    },
+    {
+      "id": "bild",
+      "de": "das Bild",
+      "plural": "die Bilder",
+      "image": false,
+      "book": [
+        "L4 · KB 29–30"
+      ]
+    },
+    {
+      "id": "sessel",
+      "de": "der Sessel",
+      "plural": "die Sessel",
+      "image": false,
+      "book": [
+        "L4 · KB 30"
+      ]
+    },
+    {
+      "id": "moebel",
+      "de": "die Möbel",
+      "plural": null,
+      "image": false,
+      "book": [
+        "L4 · KB 29; AB 26"
+      ]
+    },
+    {
+      "id": "geschaeft",
+      "de": "das Geschäft",
+      "plural": "die Geschäfte",
+      "image": false,
+      "book": [
+        "L4 · glossary 5"
+      ]
+    },
+    {
+      "id": "moebelgeschaeft",
+      "de": "das Möbelgeschäft",
+      "plural": "die Möbelgeschäfte",
+      "image": false,
+      "book": [
+        "L4 · KB 29; AB 29"
+      ]
+    },
+    {
+      "id": "hotel",
+      "de": "das Hotel",
+      "plural": "die Hotels",
+      "image": false,
+      "book": [
+        "L4 · glossary 6"
+      ]
+    },
+    {
+      "id": "hotelzimmer",
+      "de": "das Hotelzimmer",
+      "plural": "die Hotelzimmer",
+      "image": false,
+      "book": [
+        "L4 · KB 32"
+      ]
+    },
+    {
+      "id": "wohnort",
+      "de": "der Wohnort",
+      "plural": "die Wohnorte",
+      "image": false,
+      "book": [
+        "L2 · KB 18; L3 · AB 17"
+      ]
+    },
+    {
+      "id": "buch",
+      "de": "das Buch",
+      "plural": "die Bücher",
+      "image": false,
+      "book": [
+        "L4 · KB 30, instruction"
+      ]
+    }
+  ],
+  "adjectives": [
+    {
+      "de": "schön",
+      "en": "beautiful",
+      "opposite": "hässlich",
+      "oppositeEn": "ugly",
+      "cue": "Appearance",
+      "symbol": "✦ / ✕"
+    },
+    {
+      "de": "groß",
+      "en": "big",
+      "opposite": "klein",
+      "oppositeEn": "small",
+      "cue": "Size",
+      "symbol": "◯ / ·"
+    },
+    {
+      "de": "teuer",
+      "en": "expensive",
+      "opposite": "günstig",
+      "oppositeEn": "inexpensive / good value",
+      "cue": "Price",
+      "symbol": "€€€ / €"
+    },
+    {
+      "de": "alt",
+      "en": "old",
+      "opposite": "neu",
+      "oppositeEn": "new",
+      "cue": "Age · AB 28",
+      "symbol": "↶ / ✨"
+    },
+    {
+      "de": "modern",
+      "en": "modern",
+      "opposite": null,
+      "oppositeEn": null,
+      "cue": "Style",
+      "symbol": "◇"
+    },
+    {
+      "de": "praktisch",
+      "en": "practical / handy",
+      "opposite": null,
+      "oppositeEn": null,
+      "cue": "Usefulness",
+      "symbol": "✓"
+    }
+  ],
+  "phrases": [
+    {
+      "de": "Ich bin zu Hause.",
+      "en": "I am at home.",
+      "cue": "zu Hause = at home · L4 KB 29"
+    },
+    {
+      "de": "Ich wohne in Berlin.",
+      "en": "I live in Berlin.",
+      "cue": "wohnen = to live / reside · L2"
+    },
+    {
+      "de": "Wo wohnst du?",
+      "en": "Where do you live?",
+      "cue": "Ask about someone's home town · L2–3"
+    },
+    {
+      "de": "Das Bild ist so schön.",
+      "en": "The picture is so beautiful.",
+      "cue": "so = so / really · L4"
+    },
+    {
+      "de": "Der Schrank ist zu klein.",
+      "en": "The wardrobe is too small.",
+      "cue": "zu + adjective = too · L4"
+    },
+    {
+      "de": "Wie viel kostet der Stuhl?",
+      "en": "How much does the chair cost?",
+      "cue": "One object → kostet · L4"
+    },
+    {
+      "de": "Er kostet 59 Euro.",
+      "en": "It costs 59 euros.",
+      "cue": "der Stuhl → er · L4"
+    },
+    {
+      "de": "Das ist ein Sonderangebot.",
+      "en": "That is a special offer.",
+      "cue": "das Sonderangebot · L4"
+    },
+    {
+      "de": "Das finde ich auch.",
+      "en": "I think so too.",
+      "cue": "Agree with an opinion · L4"
+    },
+    {
+      "de": "Das finde ich nicht.",
+      "en": "I don't think so.",
+      "cue": "Disagree with an opinion · L4"
+    }
+  ],
+  "speechTexts": 112
+}

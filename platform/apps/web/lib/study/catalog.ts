@@ -9,6 +9,7 @@ import { phraseMeanings, bookPhraseMeanings } from "./phrase-meanings";
 import { phraseKey } from "./lookup";
 import { countries, countryName, countryFrom, countryOriginMeaning, countryGroups, languageMeanings } from "./countries";
 import { bookTranscript } from "../audio/listening-transcripts";
+import { homeWords, homeLabels, homePhrases } from "./home";
 const generated = join(
   dirname(fileURLToPath(import.meta.url)),
   "../../generated",
@@ -166,5 +167,17 @@ export function loadDictionary(): DictionaryEntry[] {
     entries.push({id:`language-${de}`,de,en,forms:de==="Persisch"?["Farsi"]:[],example:`Ich spreche ${de}.`,translation:`I speak ${en.split(" / ")[0]}.`,
       href:"/cheat-sheets",kind:"word",audio:countrySpeech[de]??null,displayForms:[{text:de,tone:"neuter",label:"Language · normally no article"}]});
   }
+  const homeSpeech = loadHomeSpeech();
+  for (const word of homeWords) {
+    if (entries.some(entry=>entry.kind==="word"&&entry.de===word.de)) continue;
+    entries.push({id:`home-${word.id}`,saveId:`home-${word.id}`,de:word.de,en:word.en,forms:word.plural?[word.plural]:[],example:"",translation:"",kind:"word",href:`/cheat-sheets/home#home-${word.id}`,audio:homeSpeech[word.de]??null,displayForms:[{text:word.de,tone:word.tone,label:homeLabels[word.tone]},...(word.plural?[{text:word.plural,tone:"plural" as const,label:"Plural · die"}]:[])]});
+  }
+  homePhrases.forEach((phrase,index)=>{
+    if(entries.some(entry=>entry.de===phrase.de))return;
+    entries.push({id:`home-phrase-${index}`,saveId:`home-phrase-${index}`,de:phrase.de,en:phrase.en,forms:[],example:"",translation:"",kind:"phrase",href:"/cheat-sheets/home#home-describe",audio:homeSpeech[phrase.de]??null});
+  });
   return entries;
+}
+export function loadHomeSpeech(): Record<string,string> {
+  return JSON.parse(readFileSync(join(generated,"home-speech.json"),"utf8")) as Record<string,string>;
 }

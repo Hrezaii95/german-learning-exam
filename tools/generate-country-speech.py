@@ -1,4 +1,5 @@
-"""Generate exact German clips for the country sheet, reusing existing audio."""
+"""Generate exact German clips for a cheat sheet, reusing existing audio."""
+import argparse
 import asyncio
 import hashlib
 import json
@@ -7,13 +8,16 @@ import edge_tts
 
 ROOT = Path(__file__).resolve().parents[1]
 WEB = ROOT / "platform/apps/web"
-OUT = WEB / "public/audio/country-sheet"
-MAPPING = WEB / "generated/country-speech.json"
+parser = argparse.ArgumentParser()
+parser.add_argument("--sheet", choices=["country", "home"], default="country")
+SHEET = parser.parse_args().sheet
+OUT = WEB / f"public/audio/{SHEET}-sheet"
+MAPPING = WEB / f"generated/{SHEET}-speech.json"
 
 
 async def main():
     OUT.mkdir(parents=True, exist_ok=True)
-    texts = json.loads((WEB / "generated/country-speech-texts.json").read_text(encoding="utf-8"))
+    texts = json.loads((WEB / f"generated/{SHEET}-speech-texts.json").read_text(encoding="utf-8"))
     existing = json.loads((WEB / "generated/study-speech.json").read_text(encoding="utf-8"))
     for card in json.loads((WEB / "generated/word-cards.json").read_text(encoding="utf-8"))["cards"]:
         for row in card["rows"]:
@@ -23,7 +27,7 @@ async def main():
         for example in card["examples"]:
             if example["audio"]:
                 existing.setdefault(example["de"], example["audio"])
-    mapping = json.loads(MAPPING.read_text(encoding="utf-8"))
+    mapping = json.loads(MAPPING.read_text(encoding="utf-8")) if MAPPING.exists() else {}
     mapping.update({text: existing[text] for text in texts if text in existing})
     semaphore = asyncio.Semaphore(6)
     failures = []
@@ -42,7 +46,7 @@ async def main():
                         if partial.stat().st_size < 1000:
                             raise ValueError("Empty speech file")
                         partial.replace(path)
-                    mapping[text] = f"/audio/country-sheet/{path.name}"
+                    mapping[text] = f"/audio/{SHEET}-sheet/{path.name}"
                     break
                 except Exception as error:
                     if attempt == 2:
@@ -52,20 +56,20 @@ async def main():
             count += 1
             if count % 25 == 0 or count == len(pending):
                 MAPPING.write_text(json.dumps(mapping, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-                print(f"Country speech {count}/{len(pending)}; failures {len(failures)}", flush=True)
+                print(f"{SHEET} speech {count}/{len(pending)}; failures {len(failures)}", flush=True)
 
     await asyncio.gather(*(one(text) for text in pending))
     MAPPING.write_text(json.dumps(mapping, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     report = {"required": len(texts), "mapped": sum(t in mapping for t in texts), "failures": failures, "voice": "de-DE-KatjaNeural", "rate": "-5%", "files": [{"path": p.relative_to(WEB / "public").as_posix(), "bytes": p.stat().st_size, "sha256": hashlib.sha256(p.read_bytes()).hexdigest()} for p in sorted(OUT.glob("*.mp3"))]}
-    (ROOT / "research/country-cheatsheet/speech-audit.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
+    (ROOT / f"research/{SHEET}-cheatsheet/speech-audit.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     if failures:
-        raise SystemExit("Country speech generation incomplete")
+        raise SystemExit("Cheat sheet speech generation incomplete")
     manifest = {"version": 1, "voice": report["voice"], "rate": report["rate"], "assets": [
         {"publicRelativePath": asset["path"], "sha256": asset["sha256"], "bytes": asset["bytes"],
          "exactText": next(text for text, path in mapping.items() if path == "/" + asset["path"])}
         for asset in report["files"]
     ]}
-    (ROOT / "media/manifests/country-sheet-public-audio-v1.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    (ROOT / f"media/manifests/{SHEET}-sheet-public-audio-v1.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
 if __name__ == "__main__":

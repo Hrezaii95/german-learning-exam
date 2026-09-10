@@ -1746,3 +1746,5 @@
     font-size: 18px;
   }
 }
+.cheat-sheet-switcher{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px;font-size:13px}.cheat-sheet-switcher a{padding:12px 16px;border:1px solid #ccd5ca;border-radius:8px;text-decoration:none;color:#405d50;background:#fffefa}.cheat-sheet-switcher a[aria-current=page]{background:#294d3e;color:white;border-color:#294d3e}.cheat-sheet-switcher a:focus-visible{outline:3px solid #9c671d;outline-offset:3px}@media print{.cheat-sheet-switcher{display:none!important}}
+.home-hub-link{display:flex;flex-wrap:wrap;gap:10px 20px;padding:20px;margin:0 0 24px;border:1px solid #d6ccba;border-radius:12px;background:#eee8da;color:#354e43}

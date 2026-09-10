@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { countries, countryGroups, countryName, countryFrom, countryWhere, countryTo, spokenLanguage, countryOriginMeaning, type Country, type CountryGroup } from "@/lib/study/countries";
 import { GermanText, SaveButton, useStudy } from "./StudyProvider";
 import { LineAudio } from "./StudyAudio";
+import { CheatSheetNav } from "./CheatSheetNav";
 
 const groups = Object.keys(countryGroups) as CountryGroup[];
 const quiz = ["IR", "CH", "US", "NL", "DE", "PL", "TR", "MV", "IR-language", "AT-language"];
@@ -49,6 +50,7 @@ export function CountryCheatSheet({ speech, cardLinks }: { speech: Record<string
     [...new Set([`aus der ${quizCountry.name}`, `aus ${quizCountry.name}`, `aus den ${quizCountry.dative ?? quizCountry.name}`, `aus dem ${quizCountry.name}`])] : [];
 
   return <div className="country-sheet">
+    <CheatSheetNav current="countries"/>
     <header className="country-heading">
       <div><p className="study-eyebrow">Cheat sheets · 01 / Your language passport</p><h1>Countries, without the guesswork.</h1>
         <p>Learn the country. Keep its color. Let <b lang="de">aus</b> change the article.</p></div>

@@ -18,6 +18,7 @@ export default function HubsDirectoryPage() {
   return (
     <ShellLayout current="hubs">
       <Link href="/cheat-sheets" className="country-hub-link"><strong>Cheat sheets</strong><span>Countries, articles & languages · visual patterns and quick practice →</span></Link>
+      <Link href="/cheat-sheets/home" className="home-hub-link"><strong>Home & furniture</strong><span>Illustrated vocabulary, plurals & pronouns · your next cheat sheet →</span></Link>
       <HubDirectoryView projection={projection} />
     </ShellLayout>
   );

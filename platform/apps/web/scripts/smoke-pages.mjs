@@ -62,6 +62,11 @@ for (const asset of bookAudio.assets) {
 }
 
 const PAGES_BASE = "/german-learning-exam";
+const homeAudio = JSON.parse(readFileSync(join(repoRoot, "media/manifests/home-sheet-public-audio-v1.json"), "utf8"));
+for (const asset of homeAudio.assets) {
+  if (!/^audio\/home-sheet\/[a-f0-9]{20}\.mp3$/.test(asset.publicRelativePath)) throw new Error("Invalid home-sheet audio path");
+  approvedAudio.set(`out/${asset.publicRelativePath}`, asset.sha256);
+}
 const countryAudio = JSON.parse(readFileSync(join(repoRoot, "media/manifests/country-sheet-public-audio-v1.json"), "utf8"));
 for (const asset of countryAudio.assets) {
   if (!/^audio\/country-sheet\/[a-f0-9]{20}\.mp3$/.test(asset.publicRelativePath)) throw new Error("Invalid country-sheet audio path");
@@ -84,6 +89,7 @@ const HUB_PATHS = [
   "/concepts",
   "/hubs",
   "/cheat-sheets",
+  "/cheat-sheets/home",
 ];
 
 const PRACTICE_GAMES = [
