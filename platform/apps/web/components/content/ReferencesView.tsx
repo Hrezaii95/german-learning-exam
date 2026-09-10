@@ -60,10 +60,9 @@ export function ReferencesView() {
       <section className="panel reference-note" aria-labelledby="references-scope">
         <h2 id="references-scope">What this release covers</h2>
         <p>
-          This release builds Lessons 1 and 2 only. Material from later lessons
-          and from the second workbook CD is left out because those lessons are
-          not built yet — that is a decision about how much of the course exists
-          in the app, not a question about the sources.
+          The interactive book covers Lessons 1–4: 32 original coursebook and
+          workbook pages with 64 original exercise recordings. Lesson 4 adds
+          furniture, prices and opinions, with authored explanations and practice.
         </p>
       </section>
 
@@ -72,14 +71,13 @@ export function ReferencesView() {
         aria-labelledby="references-artwork"
       >
         <h2 id="references-artwork">
-          The pictures were drawn for this app, not taken from the course
+          Course pages and app illustrations
         </h2>
         <p>
-          Every illustration you see here — on the word cards and on the word
-          pages — was made for this app. None of it comes from the{" "}
-          <span lang="de">Momente</span> books, their workbooks, or any other
-          course material, and nothing on this page credits{" "}
-          {REFERENCES_PUBLISHER} for a picture.
+          The original pages and the pictures inside the interactive book come
+          from <span lang="de">Momente</span> and are credited to {REFERENCES_PUBLISHER}.
+          The profession illustrations on the vocabulary cards and the Lesson 4
+          room diagram were created for this app.
         </p>
         <p>
           The job pictures deliberately show the work being done — hands and

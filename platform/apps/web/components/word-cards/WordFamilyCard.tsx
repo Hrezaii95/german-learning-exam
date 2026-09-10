@@ -5,6 +5,8 @@ import type { WordCard, WordForm } from "@/lib/content/word-card-types";
 import { normalizeCardAnswer } from "@/lib/content/word-card-types";
 import { withPagesBaseAssetPath } from "@/lib/content/pages-base-path";
 import styles from "./word-cards.module.css";
+import { SaveButton } from "@/components/study/StudyProvider";
+import { LineAudio, stopStudyAudio } from "@/components/study/StudyAudio";
 
 function Speaker() {
   return <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M11 5 6 9H3v6h3l5 4V5Zm4 3a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" /></svg>;
@@ -28,7 +30,7 @@ function Term({ form, stem, play, playing }: { form: WordForm; stem: string; pla
   const hasEnding = stem && word.startsWith(stem) && word.length > stem.length;
   return <div className={`${styles.term} ${styles[form.tone]}`}>
     <span className={styles.word} lang="de">{match && <><span className={styles.article}>{match[1]}</span>{" "}</>}<span className={styles.stem}>{hasEnding ? stem : word}</span>{hasEnding && <span className={styles.ending}>{word.slice(stem.length)}</span>}</span>
-    {form.audio && <button className={styles.listen} type="button" aria-label={`Listen: ${form.text}`} aria-pressed={playing === form.text} onClick={() => play(form.audio!, form.text)}><Speaker /></button>}
+    {!form.audio && <LineAudio text={form.text} compact />}{form.audio && <button className={styles.listen} type="button" aria-label={`Listen: ${form.text}`} aria-pressed={playing === form.text} onClick={() => play(form.audio!, form.text)}><Speaker /></button>}
   </div>;
 }
 
@@ -43,19 +45,24 @@ export function WordFamilyCard({ card }: { card: WordCard }) {
   const [audioStatus, setAudioStatus] = useState("");
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
-  useEffect(() => () => { audioRef.current?.pause(); }, []);
+  useEffect(() => {
+    const stop = () => { audioRef.current?.pause(); setPlaying(null); setAudioStatus(""); };
+    window.addEventListener("study-stop-audio", stop);
+    return () => { audioRef.current?.pause(); window.removeEventListener("study-stop-audio", stop); };
+  }, []);
   useEffect(() => { if (mode === "recall") inputRef.current?.focus(); }, [mode]);
   const prompt = card.prompts[promptIndex]!;
   const hasPlural = card.rows.some(row => row.plurals.length > 0);
   const stem = card.rows[0]!.singular.text.replace(/^(der|die|das) /, "");
   const formCount = card.rows.reduce((total, row) => total + 1 + row.plurals.length, 0);
   const isProfession = card.category === "Profession";
-  const lessonText = card.lessons.includes("1–3") ? "Lessons 1–3" : card.lessons.filter(l => /^[123]$/.test(l)).map(l => `Lesson ${l}`).join(" · ") || (card.lessons.includes("Teacher notes") ? "Teacher extra" : "Module 1");
+  const lessonText = card.lessons.includes("1–3") ? "Lessons 1–3" : card.lessons.filter(l => /^[1234]$/.test(l)).map(l => `Lesson ${l}`).join(" · ") || (card.lessons.includes("Teacher notes") ? "Teacher extra" : "Module 1");
   const switchMode = (next: "learn" | "recall") => {
     audioRef.current?.pause(); audioRef.current = null; setPlaying(null); setAudioStatus("");
     setMode(next); setFeedback(null); setAnswer("");
   };
   async function play(path: string, text: string) {
+    stopStudyAudio();
     audioRef.current?.pause();
     const clip = new Audio(withPagesBaseAssetPath(path));
     audioRef.current = clip; setPlaying(text); setAudioStatus(`Playing: ${text}`);
@@ -72,6 +79,7 @@ export function WordFamilyCard({ card }: { card: WordCard }) {
   }
   return <div className={styles.cardShell} data-word-card={card.id}>
     <header className={styles.toolbar}>
+      <SaveButton item={{ id: `card-${card.id}`, title: card.rows.map(r => r.singular.text).join(" / "), meaning: card.title, kind: "word", href: card.path, audio: card.rows[0]?.singular.audio ?? null }} />
       <div className={styles.brand}><span className={styles.brandSymbol} aria-hidden="true">w</span> WORD FAMILIES</div>
       <div className={styles.mode} role="group" aria-label="Study mode"><button type="button" aria-pressed={mode === "learn"} onClick={() => switchMode("learn")}>Learn</button><button type="button" aria-pressed={mode === "recall"} onClick={() => switchMode("recall")}>Recall</button></div>
     </header>
@@ -88,7 +96,7 @@ export function WordFamilyCard({ card }: { card: WordCard }) {
           </tbody></table>
         </section>
         <section className={styles.pattern}><h2 className={styles.sectionLabel}>Notice<br />the pattern</h2><div><div className={styles.patternLine} lang="de">{card.pattern.map((part, i) => <span key={`${i}-${part}`}>{i > 0 && <span className={styles.arrow}>→</span>}<PatternToken text={part} card={card} /></span>)}</div><small>{card.tip}</small></div></section>
-        <section className={styles.example}><h2 className={styles.sectionLabel}>Use it</h2><div>{card.examples.map(ex => <div key={ex.de}><div className={styles.exampleLine}><p className={styles.germanExample} lang="de"><ExampleText text={ex.de} card={card} /></p>{ex.audio && <button type="button" className={styles.listen} aria-label={`Listen to example: ${ex.de}`} aria-pressed={playing === ex.de} onClick={() => play(ex.audio!, ex.de)}><Speaker /></button>}</div><p className={styles.englishExample}>{ex.en}</p></div>)}<p className={styles.grammarTip}>{isProfession ? "✧ After “Ich bin”, a profession usually has no article." : card.note.split(/(?<=[.!?])\s/)[0]}</p></div></section>
+        <section className={styles.example}><h2 className={styles.sectionLabel}>Use it</h2><div>{card.examples.map(ex => <div key={ex.de}><div className={styles.exampleLine}><p className={styles.germanExample} lang="de"><ExampleText text={ex.de} card={card} /></p>{!ex.audio && <LineAudio text={ex.de} compact />}{ex.audio && <button type="button" className={styles.listen} aria-label={`Listen to example: ${ex.de}`} aria-pressed={playing === ex.de} onClick={() => play(ex.audio!, ex.de)}><Speaker /></button>}</div><p className={styles.englishExample}>{ex.en}</p></div>)}<p className={styles.grammarTip}>{isProfession ? "✧ After “Ich bin”, a profession usually has no article." : card.note.split(/(?<=[.!?])\s/)[0]}</p></div></section>
         <section className={styles.recallInvite}><div><h2>Ready to remember it?</h2><p>Hide the German. Say it from memory.</p></div><button type="button" className={styles.primary} onClick={() => switchMode("recall")}>Try recall <span aria-hidden="true">→</span></button></section>
       </div> : <section aria-labelledby={`${uid}-prompt`}>
         <div className={styles.practice}><div className={styles.practiceHeader}><h2 className={styles.sectionLabel}>Your turn</h2><span>{promptIndex + 1} / {card.prompts.length}</span></div><h3 className={styles.prompt} id={`${uid}-prompt`}>{prompt.question}</h3><p className={styles.promptHint}>Say it aloud, or type your answer. Include the article for a noun.</p>

@@ -12,6 +12,7 @@ import {
 import { isPracticeGameId } from "../games/game-ids";
 import { sanitizeHubQueryText } from "./hub-query";
 import { sanitizeSearchQueryText } from "./search-query";
+import { lessonFourWords } from "../study/lesson-four";
 
 /**
  * Typed, bounded, serializable learner navigation context (UX-006 / P3C).
@@ -30,7 +31,7 @@ export type NavigationContext = {
   /** Hub id when entryContext is hub. */
   hubId?: LearnerHubId;
   /** Hub lesson filter. */
-  lesson?: "all" | "01" | "02" | "03";
+  lesson?: "all" | "01" | "02" | "03" | "04";
   /** Hub category filter. */
   category?: string;
   /** Optional safe result id that was opened (entity id, not assertion). */
@@ -96,6 +97,8 @@ export function isSafeNavigationPath(pathname: string): boolean {
     return true;
   }
   if (pathname === "/search") return true;
+  if (pathname === "/book" || pathname === "/saved") return true;
+  if (lessonFourWords.some(word => pathname === `/vocabulary/${word.id}`)) return true;
   if (pathname === "/practice") return true;
   if (pathname === "/conversation") return true;
   if (pathname === "/review" || pathname === "/review/session/today") return true;
@@ -128,7 +131,7 @@ export function isSafeNavigationPath(pathname: string): boolean {
   const hubMatch = pathname.match(/^\/(vocabulary|verbs|grammar|phrases|listening|concepts)$/);
   if (hubMatch) return true;
 
-  const lessonMatch = pathname.match(/^\/lessons\/(01|02)$/);
+  const lessonMatch = pathname.match(/^\/lessons\/(01|02|03|04)$/);
   if (lessonMatch) return true;
 
   const activityMatch = pathname.match(
@@ -230,7 +233,7 @@ function normalizeContext(raw: unknown): NavigationContext | null {
         ctx.returnPath = `/${obj.hubId}`;
       }
     }
-    if (obj.lesson === "01" || obj.lesson === "02" || obj.lesson === "03" || obj.lesson === "all") {
+    if (obj.lesson === "01" || obj.lesson === "02" || obj.lesson === "03" || obj.lesson === "04" || obj.lesson === "all") {
       ctx.lesson = obj.lesson;
     }
     if (typeof obj.category === "string") {
@@ -393,7 +396,7 @@ export function buildSearchNavigationContext(
 export function buildHubNavigationContext(input: {
   hubId: LearnerHubId;
   q?: string;
-  lesson?: "all" | "01" | "02" | "03";
+  lesson?: "all" | "01" | "02" | "03" | "04";
   category?: string;
   resultId?: string;
 }): NavigationContext {
@@ -404,7 +407,7 @@ export function buildHubNavigationContext(input: {
   };
   const q = input.q != null ? sanitizeSearchQueryText(input.q).trim() : "";
   if (q.length > 0) ctx.q = q;
-  if (input.lesson === "01" || input.lesson === "02" || input.lesson === "03") ctx.lesson = input.lesson;
+  if (input.lesson === "01" || input.lesson === "02" || input.lesson === "03" || input.lesson === "04") ctx.lesson = input.lesson;
   if (input.category) {
     const category = sanitizeHubQueryText(input.category).trim();
     if (category.length > 0 && category !== "all") ctx.category = category;

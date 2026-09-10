@@ -1,9 +1,9 @@
 # PLAN-BATON — German Learning OS Full Alpha
 
-updated: 2026-09-03
-orchestrator_session: Codex owner-requested vocabulary cards, 2026-09-03
+updated: 2026-09-10
+orchestrator_session: Codex owner-delegated Lesson 4 and interactive book release
 active_engine: codex
-active_phase: VOCABULARY-BROWSE-PRESERVATION-RELEASE
+active_phase: LESSON-04-INTERACTIVE-BOOK
 meta_status: n/a
 gate_status: {G0: green, G1: green, G2: green, G3: green, G4: green, G5: partial, G6: green, G-OWNER: pending}
 workers: []
@@ -13,9 +13,16 @@ file_ownership:
   - C-WEB: `platform/apps/web/**`, `platform/tests/web/**`, web package integration and README only
 open_items_unchanged: true
 violations: []
-next_action: Publish the verified restoration of the previous vocabulary/jobs browse UI, retaining every complete card. Verify the live filters and all card routes. Evidence: plans/vocabulary-cards-loop.md and research/word-cards/browse-preservation.json. Human language/listening approval remains open.
+next_action: Finish the owner-delegated Lesson 4 and interactive book release through the guarded Pages workflow, then verify the live learning flows. Evidence: plans/lesson-04-interactive-book-operation.md and research/lesson-04-book/.
 
-## Current verified facts
+## Current release
+
+- The owner delegated implementation, product decisions and live deployment to Codex on 2026-09-10; SO-002 records that release scope.
+- Lessons 1–4 are reachable in the book; Lesson 4 adds a complete study route and 45 cards to the existing vocabulary browser.
+- The interactive book combines 32 original coursebook/workbook pages, 64 source recordings, selectable text, synthesized speech, dictionary lookup and persistent personal review.
+- Earlier technical and human-review checkpoints below remain historical records, not restrictions that replace the owner's current release instruction. The later full-distribution authorization and attribution decision apply to this media release.
+
+## Earlier full-alpha facts (historical checkpoints)
 
 - 77-message original session is present and indexed in the decision ledger.
 - Failed Cursor demo is quarantined under `archive/cursor-demo-2026-07-30/`.

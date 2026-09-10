@@ -15,6 +15,8 @@ type NavItem =
 const PRIMARY_NAV: NavItem[] = [
   { key: "dashboard", href: "/", label: "Dashboard", enabled: true },
   { key: "lessons", href: "/lessons", label: "Lessons", enabled: true },
+  { key: "book", href: "/book", label: "Interactive book", enabled: true },
+  { key: "saved", href: "/saved", label: "My review", enabled: true },
   { key: "vocabulary", href: "/vocabulary", label: "Vocabulary", enabled: true },
   { key: "verbs", href: "/verbs", label: "Verbs", enabled: true },
   { key: "grammar", href: "/grammar", label: "Grammar", enabled: true },
@@ -32,9 +34,9 @@ const PRIMARY_NAV: NavItem[] = [
 
 const MOBILE_NAV: NavItem[] = [
   { key: "dashboard", href: "/", label: "Dashboard", enabled: true },
-  { key: "lessons", href: "/lessons", label: "Lessons", enabled: true },
+  { key: "book", href: "/book", label: "Book", enabled: true },
   { key: "hubs", href: "/hubs", label: "Hubs", enabled: true },
-  { key: "review", href: "/review", label: "Review", enabled: true },
+  { key: "saved", href: "/saved", label: "My review", enabled: true },
   { key: "settings", href: "/settings", label: "Settings", enabled: true },
 ];
 
@@ -117,7 +119,7 @@ export function AppShell({
       <aside className="shell-rail" aria-label="Desktop navigation">
         <div className="shell-brand">
           <div className="shell-brand__name">German Learning OS</div>
-          <div className="shell-brand__tag">Lessons 1–2 Alpha shell</div>
+          <div className="shell-brand__tag">Your daily German studio</div>
           <MorphologyStrip />
         </div>
         <nav aria-label="Primary">

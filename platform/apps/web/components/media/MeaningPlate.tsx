@@ -5,6 +5,7 @@ import Link from "next/link";
 import type { LearnerGender } from "@/lib/content/detail-types";
 import { GenderBadge } from "@/components/details/GenderBadge";
 import { withPagesBaseAssetPath } from "@/lib/content/pages-base-path";
+import { stopStudyAudio } from "@/components/study/StudyAudio";
 
 /**
  * Meaning plate — the permanent media treatment for a learning object that has
@@ -77,6 +78,7 @@ export function LemmaAudioButton({
       element.pause();
       return;
     }
+    stopStudyAudio();
     for (const other of document.querySelectorAll<HTMLAudioElement>("audio")) {
       if (other !== element) other.pause();
     }

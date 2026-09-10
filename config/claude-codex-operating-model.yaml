@@ -146,6 +146,22 @@ scope:
         Revert to the default split if Codex output starts requiring more Claude
         rework than it saves, or if the owner narrows the grant.
 
+    - id: SO-002
+      decided_at: "2026-09-10"
+      decided_by: owner (hossein, current Codex task)
+      trigger: "Owner requested Lesson 4, an interactive audio book, UX/UI improvements, dictionary, selectable review, execution and live deployment; delegated all product decisions."
+      change: expand-for-this-release
+      added_scope:
+        - lesson-04-source-integration-and-publication
+        - lessons-01-04-interactive-book-and-original-audio
+        - ui-implementation-and-personal-review-persistence
+        - tests-git-push-and-live-deployment
+      preserved_limits:
+        - do-not-claim-human-language-or-listening-approval
+        - preserve-unrelated-working-files
+      execution_plan: plans/lesson-04-interactive-book-operation.md
+      stop_condition: "Release passes technical checks and is verified at the live URL."
+
 organization:
   orchestrator:
     id: CC-ORCH

@@ -7,6 +7,8 @@ import { LessonOverviewWithNav } from "@/components/lessons/LessonNavViews";
 import { loadLearnerProjection } from "@/lib/content/access";
 import { lessonPageMetadata } from "@/lib/content/page-metadata";
 import { resolveLearnerRoute } from "@/lib/content/routes";
+import { LessonFour, LessonThreeBridge } from "@/components/study/LessonFour";
+import { loadStudySpeech } from "@/lib/study/catalog";
 
 type PageProps = {
   params: Promise<{ lessonSegment: string }>;
@@ -15,13 +17,15 @@ type PageProps = {
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return loadLearnerProjection().lessons.map((lesson) => ({
+  return [...loadLearnerProjection().lessons.map((lesson) => ({
     lessonSegment: lesson.routeSegment,
-  }));
+  })), { lessonSegment: "03" }, { lessonSegment: "04" }];
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { lessonSegment } = await params;
+  if (lessonSegment === "04") return { title: "Lesson 4 · Das Bild ist so schön.", description: "Furniture, prices and opinions: learn with original audio, an interactive book and personal review." };
+  if (lessonSegment === "03") return { title: "Lesson 3 · Das ist meine Schwester." };
   const lesson = loadLearnerProjection().lessons.find(
     (item) => item.routeSegment === lessonSegment,
   );
@@ -30,6 +34,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function LessonPage({ params }: PageProps) {
   const { lessonSegment } = await params;
+  if (lessonSegment === "04") return <ShellLayout current="lessons"><LessonFour speech={loadStudySpeech()} /></ShellLayout>;
+  if (lessonSegment === "03") return <ShellLayout current="lessons"><LessonThreeBridge /></ShellLayout>;
   const projection = loadLearnerProjection();
   const resolved = resolveLearnerRoute(`/lessons/${lessonSegment}`, projection);
   if (resolved.kind !== "lesson") {

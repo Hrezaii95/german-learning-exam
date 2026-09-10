@@ -53,8 +53,7 @@ export function LessonBrowser({ lessons }: { lessons: readonly LearnerLesson[] }
       <header className="page-header">
         <h1>Lessons</h1>
         <p className="lede">
-          Work through {lessons.length} lessons. Each one shows its goals,
-          activities, and estimated time.
+          Start with the guided lessons, then continue with your interactive book.
         </p>
       </header>
       <div className="card-grid lessons">

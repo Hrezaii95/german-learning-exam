@@ -3,6 +3,7 @@ import type { LearnerWebProjection } from "@/lib/content/types";
 import { loadLearnerHubProjection } from "@/lib/content/access";
 import { HubToolDrawerGrid } from "@/components/hubs/HubViews";
 import { LearnerDashboard } from "@/components/learner-state/LearnerDashboard";
+import { NewChapterCards } from "@/components/study/LessonFour";
 
 /**
  * Daily Learning Studio home. The first row (Continue + Today's mission), the
@@ -18,7 +19,7 @@ export function DashboardView({
   /** Injectable for tests; defaults to the build-time hub artifact. */
   hubs?: LearnerHubProjection;
 }) {
-  const { activityCount, lessonCount } = projection;
+  const { activityCount } = projection;
   const hubProjection = hubs ?? loadLearnerHubProjection();
 
   return (
@@ -30,10 +31,11 @@ export function DashboardView({
           Continue the lesson you were on, then practise today’s review set.
         </p>
         <p className="dense">
-          {lessonCount} lessons · {activityCount} activities available.
+          4 lessons · {activityCount} guided activities · your interactive book.
         </p>
       </header>
 
+      <NewChapterCards />
       <LearnerDashboard projection={projection} />
 
       <section aria-labelledby="hubs-heading">

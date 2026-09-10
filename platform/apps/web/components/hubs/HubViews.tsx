@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { SaveButton } from "@/components/study/StudyProvider";
 import Link from "next/link";
 import type {
   LearnerConceptTopic,
@@ -261,6 +262,7 @@ function VocabularyHubCard({
         audio={plateAudioFor(record.displayLabel)}
       />
       <HubCardLessons lessonIds={record.lessonIds} />
+      {href && <SaveButton item={{ id: `concept-${record.id}`, title: record.model || record.displayLabel, meaning: record.searchFields.filter(field => /meaning|title|english/.test(field.field)).map(field => field.displayText).filter(text => text !== record.displayLabel).join(" · ") || record.displayLabel, kind: hub.id === "phrases" ? "phrase" : "concept", href }} />}
     </article>
   );
 }
@@ -324,6 +326,7 @@ function VerbHubCard({
       ) : null}
       {audio ? <LemmaAudioButton audio={audio} label={infinitive} /> : null}
       <HubCardLessons lessonIds={record.lessonIds} />
+      {href && <SaveButton item={{ id: `concept-${record.id}`, title: record.model || record.displayLabel, meaning: record.searchFields.filter(field => /meaning|title|english/.test(field.field)).map(field => field.displayText).filter(text => text !== record.displayLabel).join(" · ") || record.displayLabel, kind: hub.id === "phrases" ? "phrase" : "concept", href }} />}
     </article>
   );
 }
@@ -373,6 +376,7 @@ function GrammarHubCard({
         <LemmaAudioButton audio={audio} label={record.displayLabel} />
       ) : null}
       <HubCardLessons lessonIds={record.lessonIds} />
+      {href && <SaveButton item={{ id: `concept-${record.id}`, title: record.model || record.displayLabel, meaning: record.searchFields.filter(field => /meaning|title|english/.test(field.field)).map(field => field.displayText).filter(text => text !== record.displayLabel).join(" · ") || record.displayLabel, kind: hub.id === "phrases" ? "phrase" : "concept", href }} />}
     </article>
   );
 }
@@ -423,6 +427,7 @@ function PhraseHubCard({
         <LemmaAudioButton audio={audio} label={record.displayLabel} />
       ) : null}
       <HubCardLessons lessonIds={record.lessonIds} />
+      {href && <SaveButton item={{ id: `concept-${record.id}`, title: record.model || record.displayLabel, meaning: record.searchFields.filter(field => /meaning|title|english/.test(field.field)).map(field => field.displayText).filter(text => text !== record.displayLabel).join(" · ") || record.displayLabel, kind: hub.id === "phrases" ? "phrase" : "concept", href }} />}
     </article>
   );
 }
@@ -441,7 +446,7 @@ function hubDetailHref(
     buildHubNavigationContext({
       hubId: hub.id,
       ...(query.q.trim().length > 0 ? { q: query.q } : {}),
-      ...(query.lesson === "01" || query.lesson === "02" || query.lesson === "03"
+      ...(query.lesson === "01" || query.lesson === "02" || query.lesson === "03" || query.lesson === "04"
         ? { lesson: query.lesson }
         : {}),
       ...(query.category && query.category !== "all"
@@ -914,6 +919,7 @@ function HubFilters({
               <option value="01">Lesson 1</option>
               <option value="02">Lesson 2</option>
               {hub.items.some(item => item.lessonIds.includes("lesson:03")) && <option value="03">Lesson 3</option>}
+              {hub.items.some(item => item.lessonIds.includes("lesson:04")) && <option value="04">Lesson 4</option>}
             </select>
           </label>
           {hasCategories ? (

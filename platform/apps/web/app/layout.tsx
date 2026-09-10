@@ -9,6 +9,9 @@ import {
   WEB_APP_MANIFEST_PATH,
 } from "@/lib/offline/policy";
 import "./globals.css";
+import "./study.css";
+import { StudyProvider } from "@/components/study/StudyProvider";
+import { loadDictionary } from "@/lib/study/catalog";
 
 /**
  * `default` is the title for any route that does not set one; `template`
@@ -91,7 +94,7 @@ export default function RootLayout({
         {/* Static build-time string; React would entity-escape quotes in a
             text child of <style>, so raw injection is required. */}
         <style dangerouslySetInnerHTML={{ __html: interFontFace }} />
-        <LearnerStateProvider>{children}</LearnerStateProvider>
+        <LearnerStateProvider><StudyProvider dictionary={loadDictionary()}>{children}</StudyProvider></LearnerStateProvider>
         {/* Installs the offline worker and owns every sentence the app says
             about being offline or about a waiting update. Renders nothing
             until it has something true to report. */}

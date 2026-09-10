@@ -86,6 +86,9 @@ export async function registerOfflineWorker(
       // can sit on a superseded worker until the browser decides otherwise.
       updateViaCache: "none",
     });
+    if (!registration || typeof registration.addEventListener !== "function") {
+      throw new Error("Service worker registration was blocked.");
+    }
   } catch (reason) {
     options.onUnavailable?.(reason);
     return null;

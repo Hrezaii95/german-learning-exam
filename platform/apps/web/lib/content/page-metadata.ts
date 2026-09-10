@@ -28,7 +28,7 @@ export const SITE_NAME = "German Learning OS";
  * written for a learner deciding whether to open the app — not for the team.
  */
 export const SITE_DESCRIPTION =
-  "Learn the German of Lessons 1 and 2: words, verbs, grammar, everyday phrases, listening and short practice rounds, with your progress kept on your own device.";
+  "Learn German with Momente Lessons 1–4: an interactive book, original audio, a click dictionary, vocabulary and grammar practice, with your personal review collection saved on this device.";
 
 /** Separator between the page subject and the surface it belongs to. */
 const PART = " · ";

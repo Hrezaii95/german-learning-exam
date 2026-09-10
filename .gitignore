@@ -31,6 +31,7 @@ derived/
 dist/
 coverage/
 .cache/
+.cache-lesson4-python/
 .turbo/
 .pytest_cache/
 __pycache__/

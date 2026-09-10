@@ -2,7 +2,7 @@ import { lessonLabel } from "./lesson-label";
 import { queryMatchKeys } from "./match-keys";
 import type { LearnerHubRecord } from "./hub-types";
 
-export type HubLessonFilter = "all" | "01" | "02" | "03";
+export type HubLessonFilter = "all" | "01" | "02" | "03" | "04";
 
 export type HubQueryState = {
   q: string;
@@ -25,6 +25,7 @@ const LESSON_FILTER_TO_ID: Readonly<Record<Exclude<HubLessonFilter, "all">, stri
     "01": "lesson:01",
     "02": "lesson:02",
     "03": "lesson:03",
+    "04": "lesson:04",
   });
 
 function firstParam(
@@ -59,7 +60,7 @@ export function sanitizeHubQueryText(raw: string): string {
 }
 
 function parseLesson(raw: string | undefined): HubLessonFilter {
-  if (raw === "01" || raw === "02" || raw === "03") return raw;
+  if (raw === "01" || raw === "02" || raw === "03" || raw === "04") return raw;
   return "all";
 }
 

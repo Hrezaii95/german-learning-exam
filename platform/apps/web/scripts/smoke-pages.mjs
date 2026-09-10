@@ -53,6 +53,13 @@ for (const asset of wordCardAudio.assets) {
   if (!/^audio\/word-cards-v1\/(?:word|tts)-[a-f0-9]{16}\.mp3$/.test(asset.publicRelativePath)) throw new Error("Invalid word-card preview path");
   approvedAudio.set(`out/${asset.publicRelativePath}`, asset.sha256);
 }
+// Owner-delegated Lessons 1–4 release: publisher tracks and exact-text speech
+// retain the same byte-level allowlist checks as every earlier recording.
+const bookAudio = JSON.parse(readFileSync(join(repoRoot, "media/manifests/interactive-book-public-audio-v1.json"), "utf8"));
+for (const asset of bookAudio.assets) {
+  if (!/^book\/(audio|speech)\/[a-z0-9-]+\.mp3$/.test(asset.publicRelativePath)) throw new Error("Invalid interactive book audio path");
+  approvedAudio.set(`out/${asset.publicRelativePath}`, asset.sha256);
+}
 
 const PAGES_BASE = "/german-learning-exam";
 const PORT = process.env.SMOKE_PAGES_PORT
@@ -151,6 +158,8 @@ function listExpectedAppPaths() {
     // The course-material credit is a release condition (ADR-016), so its route
     // is verified like any other learner route, not assumed to exist.
     "/references",
+    "/book", "/saved", "/lessons/03", "/lessons/04",
+    ...bookAudio.wordCardPaths,
     ...HUB_PATHS,
   ]);
 

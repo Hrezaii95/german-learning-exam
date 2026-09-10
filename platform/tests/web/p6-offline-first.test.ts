@@ -720,6 +720,21 @@ describe("registration", () => {
     expect(reasons).toHaveLength(1);
   });
 
+  it("survives browser policies that resolve registration without an object", async () => {
+    const reasons: unknown[] = [];
+    const result = await registerOfflineWorker({
+      controller: null,
+      register: () => Promise.resolve(undefined as unknown as OfflineWorkerRegistration),
+    }, {
+      scriptUrl: `${PAGES_BASE}/sw.js`,
+      scope: `${PAGES_BASE}/`,
+      onUpdateReady: () => { throw new Error("must not be called"); },
+      onUnavailable: reason => reasons.push(reason),
+    });
+    expect(result).toBeNull();
+    expect(reasons).toHaveLength(1);
+  });
+
   it("registers at the base-path-correct script URL and scope", async () => {
     const calls: { scriptUrl: string; scope: string; updateViaCache: string }[] = [];
     const container: OfflineWorkerContainer = {

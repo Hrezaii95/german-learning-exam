@@ -3,6 +3,8 @@ import type { LearnerHubId } from "./hub-types";
 export type NavKey =
   | "dashboard"
   | "lessons"
+  | "book"
+  | "saved"
   | "vocabulary"
   | "verbs"
   | "grammar"

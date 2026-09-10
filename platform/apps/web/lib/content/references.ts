@@ -43,7 +43,7 @@ export const REFERENCE_GROUPS: readonly ReferenceGroup[] = Object.freeze([
         title: "Momente A1.1 Kursbuch",
         role: "Coursebook",
         contribution:
-          "The lesson content itself: greetings, introductions, numbers, jobs, and the dialogues they appear in.",
+          "Original pages and lesson content: greetings, introductions, family, jobs, furniture, prices and opinions.",
       }),
       Object.freeze({
         id: "arbeitsbuch",
@@ -93,21 +93,21 @@ export const REFERENCE_GROUPS: readonly ReferenceGroup[] = Object.freeze([
         title: "Momente A1.1 Arbeitsbuch CD 1",
         role: "Workbook audio",
         contribution:
-          "The 15 workbook listening tracks you can play in the Listening section and inside the listening activities.",
+          "Original workbook recordings for Lessons 1–4, mapped to their printed exercises in the interactive book; the earlier Listening activities remain available.",
       }),
       Object.freeze({
         id: "ab-cd2",
         title: "Momente A1.1 Arbeitsbuch CD 2",
         role: "Workbook audio",
         contribution:
-          "Recordings for the later workbook exercises. They are not in this release yet, because it only builds Lessons 1 and 2.",
+          "Recordings for later workbook lessons, outside the Lessons 1–4 book in this release.",
       }),
       Object.freeze({
         id: "kb-cd1",
         title: "Momente A1.1 Kursbuch CD 1",
         role: "Coursebook audio",
         contribution:
-          "The coursebook recordings for the early lessons, used while matching tracks to exercises.",
+          "Original coursebook recordings for Lessons 1–4, playable beside the matching pages in the interactive book.",
       }),
       Object.freeze({
         id: "kb-cd2",

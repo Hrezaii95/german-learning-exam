@@ -3,6 +3,7 @@ import { ShellLayout } from "@/components/shell/ShellLayout";
 import { LessonBrowser } from "@/components/lessons/ActivityAndBrowser";
 import { loadLearnerProjection } from "@/lib/content/access";
 import { pageMetadata } from "@/lib/content/page-metadata";
+import { NewChapterCards } from "@/components/study/LessonFour";
 
 export const metadata: Metadata = pageMetadata(
   "Lessons",
@@ -14,6 +15,7 @@ export default function LessonsPage() {
   return (
     <ShellLayout current="lessons">
       <LessonBrowser lessons={projection.lessons} />
+      <NewChapterCards />
     </ShellLayout>
   );
 }

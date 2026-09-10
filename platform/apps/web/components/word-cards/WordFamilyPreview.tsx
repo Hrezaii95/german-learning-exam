@@ -4,9 +4,11 @@ import { withPagesBaseAssetPath } from "@/lib/content/pages-base-path";
 import { LemmaAudioButton } from "@/components/media/MeaningPlate";
 import { lessonLabel } from "@/lib/content/lesson-label";
 import styles from "./word-family-preview.module.css";
+import { SaveButton } from "@/components/study/StudyProvider";
+import { LineAudio } from "@/components/study/StudyAudio";
 
 function Form({ form }: { form: WordForm }) {
-  return <div className={styles.form}><span className={styles[form.tone]} lang="de">{form.text}</span>{form.audio && <LemmaAudioButton audio={{ publicPath: form.audio, spokenText: form.text }} label={form.text} />}</div>;
+  return <div className={styles.form}><span className={styles[form.tone]} lang="de">{form.text}</span>{form.audio ? <LemmaAudioButton audio={{ publicPath: form.audio, spokenText: form.text }} label={form.text} /> : <LineAudio text={form.text} compact />}</div>;
 }
 
 /** Compact entry in the existing browse grid; opens the full approved card. */
@@ -18,6 +20,7 @@ export function WordFamilyPreview({ card, href, lessonIds }: { card: WordCard; h
       {card.rows.map((row, index) => <div className={styles.row} key={`${index}-${row.singular.text}`}><span className={styles.label}>{row.label}</span><Form form={row.singular} />{row.plurals.map(form => <div key={form.text}><span className={styles.label}>Plural</span><Form form={form} /></div>)}</div>)}
       <p className="meta-row hub-card__meta">{lessonIds.map(id => <span key={id} className="meta-chip">{lessonLabel(id)}</span>)}</p>
       <Link className="btn btn-secondary" href={href} prefetch={false}>Study this word family</Link>
+      <SaveButton item={{ id: `card-${card.id}`, title: card.rows.map(r => r.singular.text).join(" / "), meaning: card.title, kind: "word", href: card.path, audio: card.rows[0]?.singular.audio ?? null }} />
     </div>
   </article>;
 }

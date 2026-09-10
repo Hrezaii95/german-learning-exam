@@ -593,7 +593,7 @@ describe("P3B hub search and filters", () => {
     expect(malformed.category).toBeNull();
 
     const unknown = parseHubSearchParams(
-      { lesson: "04", category: "../../etc/passwd", q: "ok" },
+      { lesson: "99", category: "../../etc/passwd", q: "ok" },
       vocabulary.categories,
     );
     expect(unknown).toEqual({ q: "ok", lesson: "all", category: null });

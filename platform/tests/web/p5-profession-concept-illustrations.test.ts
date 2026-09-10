@@ -342,7 +342,8 @@ describe("the references page states where the artwork came from", () => {
       "utf8",
     );
     expect(view).toContain("references-artwork");
-    expect(view).toContain("was made for this app");
-    expect(view).toContain("None of it comes from the");
+    expect(view).toContain("room diagram were created for this app");
+    expect(view).toContain("pictures inside the interactive book come");
+    expect(view).toContain("are credited to {REFERENCES_PUBLISHER}");
   });
 });

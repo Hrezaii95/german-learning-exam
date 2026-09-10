@@ -33,7 +33,7 @@ describe("P3A behavioral UI (server-rendered from generated projection)", () => 
   let projection: LearnerWebProjection;
   // Components are .tsx; load via dynamic import under vitest (esbuild jsx).
   let AppShell: (props: {
-    current: "dashboard" | "lessons" | "vocabulary" | "hubs" | null;
+    current: "dashboard" | "book" | "lessons" | "vocabulary" | "hubs" | null;
     children?: ReactNode;
   }) => ReactNode;
   let DashboardView: (props: {
@@ -82,9 +82,11 @@ describe("P3A behavioral UI (server-rendered from generated projection)", () => 
     );
     expect(dash).toContain("Dashboard");
     expect(lessons).toContain("Lessons");
-    // Three nav surfaces (rail/top/bottom) share the same current item.
+    // Dashboard is on all three surfaces; mobile prioritizes Book over Lessons.
     expect((dash.match(/aria-current="page"/g) ?? []).length).toBe(3);
-    expect((lessons.match(/aria-current="page"/g) ?? []).length).toBe(3);
+    expect((lessons.match(/aria-current="page"/g) ?? []).length).toBe(2);
+    const book = renderToStaticMarkup(createElement(AppShell, { current: "book" }, createElement("div", null, "book")));
+    expect((book.match(/aria-current="page"/g) ?? []).length).toBe(3);
     expect(dash).toContain('href="/"');
     expect(lessons).toContain('href="/lessons"');
   });
