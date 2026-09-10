@@ -23,6 +23,7 @@ import { dirname, extname, join, normalize, relative, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 import { createRequire } from "node:module";
 import { setTimeout as delay } from "node:timers/promises";
+import { developerPathFragment } from "./export-path-leaks.mjs";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const webRoot = join(here, "..");
@@ -124,15 +125,6 @@ const FORBIDDEN_SUBSTRINGS = [
   "candidate-media",
   "review-plurals",
   "ReviewPlural",
-];
-
-const FORBIDDEN_PATH_FRAGMENTS = [
-  `${sep}Users${sep}`,
-  `${sep}home${sep}`,
-  "E:\\\\claude-cursor",
-  "E:/claude-cursor",
-  "/Users/",
-  "C:\\\\Users\\\\",
 ];
 
 function assert(cond, msg) {
@@ -305,9 +297,7 @@ function verifyAssetRefsAndSecrets(expectedPaths) {
         `forbidden substring "${frag}" in ${rel}`,
       );
     }
-    for (const frag of FORBIDDEN_PATH_FRAGMENTS) {
-      assert(!text.includes(frag), `developer path fragment in ${rel}`);
-    }
+    assert(!developerPathFragment(text), `developer path fragment in ${rel}`);
   }
   assert(
     seenApprovedAudio.size === approvedAudio.size,
