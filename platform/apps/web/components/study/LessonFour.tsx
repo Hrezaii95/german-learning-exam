@@ -83,7 +83,7 @@ export function LessonFour({ speech }: { speech: Record<string, string> }) {
           </div>
           <div className="room-rug" />
           <div className="room-price">
-            59 €<small>der Stuhl → er</small>
+            59 €<small>das Sofa → es</small>
           </div>
         </div>
       </header>
