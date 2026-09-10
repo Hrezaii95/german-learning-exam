@@ -17,9 +17,14 @@ const tabs = ["Words", "Grammar", "Verbs", "Phrases", "Practice"] as const;
 export function LessonFour({ speech }: { speech: Record<string, string> }) {
   const [tab, setTab] = useState<(typeof tabs)[number]>("Words");
   useEffect(() => {
-    const section = window.location.hash.slice(1).toLowerCase();
-    const found = tabs.find((value) => value.toLowerCase() === section);
-    if (found) setTab(found);
+    const selectSection = () => {
+      const section = window.location.hash.slice(1).toLowerCase();
+      const found = tabs.find((value) => value.toLowerCase() === section);
+      if (found) setTab(found);
+    };
+    selectSection();
+    window.addEventListener("hashchange", selectSection);
+    return () => window.removeEventListener("hashchange", selectSection);
   }, []);
   const [category, setCategory] = useState("All");
   const [query, setQuery] = useState("");

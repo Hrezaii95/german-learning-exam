@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import type { ListeningTranscript as Transcript } from "@/lib/study/types";
-import { GermanText } from "@/components/study/StudyProvider";
+import { GermanText, MeaningButton } from "@/components/study/StudyProvider";
 
 export function ListeningTranscript({
   transcript,
@@ -22,13 +22,14 @@ export function ListeningTranscript({
       </summary>
       <div className="listening-transcript-body">
         <p className="listening-transcript-hint">
-          Listen first, then read along. Tap a German word for its meaning.
+          Listen first, then read along. Tap a word or highlight a phrase for its meaning.
         </p>
         <div className="listening-transcript-lines">
           {transcript.lines.map((line, index) => (
             <p key={index}>
               {line.speaker && <strong lang="de">{line.speaker}</strong>}
               <GermanText text={line.text} />
+              <MeaningButton text={line.text} />
             </p>
           ))}
         </div>

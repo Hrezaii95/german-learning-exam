@@ -1,0 +1,15 @@
+import {readFileSync,writeFileSync} from "node:fs";
+import {countries,countryName,countryFrom,countryWhere,countryTo,spokenLanguage} from "../platform/apps/web/lib/study/countries";
+const root=new URL("../",import.meta.url);
+const read=(path:string)=>JSON.parse(readFileSync(new URL(path,root),"utf8"));
+const texts=[...new Set(["Russisch",...countries.flatMap(c=>[countryName(c),`Ich komme ${countryFrom(c)}.`,`Ich wohne ${countryWhere(c)}.`,`Ich fahre ${countryTo(c)}.`,...c.languages.flatMap(l=>[spokenLanguage(l),`Ich spreche ${spokenLanguage(l)}.`])]),"Ich komme aus Iran."])];
+writeFileSync(new URL("platform/apps/web/generated/country-speech-texts.json",root),JSON.stringify(texts,null,2)+"\n");
+const cards=read("platform/apps/web/generated/word-cards.json").cards as {id:string;category:string;rows:{singular:{text:string}}[]}[];
+const hits=read("research/country-cheatsheet/source-country-hits.json") as Record<string,Record<string,number[]>>;
+const coverage=countries.map(c=>({id:c.id,name:c.name,cardId:cards.find(card=>card.category==="Country"&&card.rows.some(row=>row.singular.text===countryName(c)))?.id??null,pdfPages:Object.fromEntries(Object.entries(hits[c.name]??{}).map(([kind,pages])=>[kind,[...new Set(pages)].filter(p=>kind!=="coursebook"||p>10)])),group:c.group,from:countryFrom(c),extra:c.extra??false}));
+const missing=cards.filter(card=>card.category==="Country"&&!coverage.some(c=>c.cardId===card.id));
+if(missing.length)throw Error(`Country cards missing: ${missing.map(c=>c.id)}`);
+const absent=Object.keys(hits).filter(name=>!countries.some(c=>c.name===name));
+if(absent.length)throw Error(`Source country names missing: ${absent.join(", ")}`);
+writeFileSync(new URL("research/country-cheatsheet/coverage.json",root),JSON.stringify({countries:coverage.length,existingCountryCards:coverage.filter(c=>c.cardId).length,additionalBookMentions:coverage.filter(c=>c.extra).length,speechTexts:texts.length,coverage},null,2)+"\n");
+console.log(JSON.stringify({countries:coverage.length,existingCountryCards:coverage.filter(c=>c.cardId).length,speechTexts:texts.length}));

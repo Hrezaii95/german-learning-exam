@@ -4,6 +4,7 @@ export type NavKey =
   | "dashboard"
   | "lessons"
   | "book"
+  | "cheat-sheets"
   | "saved"
   | "vocabulary"
   | "verbs"
@@ -22,6 +23,7 @@ export type NavKey =
 export type ShellNavCurrent = NavKey | null;
 
 const HUB_NAV_KEYS = new Set<NavKey>([
+  "cheat-sheets",
   "vocabulary",
   "verbs",
   "grammar",

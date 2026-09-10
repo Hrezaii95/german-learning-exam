@@ -27,6 +27,13 @@ export type DictionaryEntry = {
   translation: string;
   href: string;
   audio: string | null;
+  kind?: "word" | "phrase" | "sentence";
+  saveId?: string;
+  displayForms?: {
+    text: string;
+    tone: "male" | "female" | "neuter" | "plural" | "plain";
+    label: string;
+  }[];
 };
 export type BookLine = { id: string; text: string; box: number[] };
 export type ListeningTranscript = {

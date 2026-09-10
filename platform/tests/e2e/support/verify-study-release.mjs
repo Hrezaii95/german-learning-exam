@@ -46,6 +46,8 @@ try {
   await page.waitForFunction(() => { const a = document.querySelector(".book-track audio"); return a && a.currentTime > .1 && !a.paused; });
   checks.push("Original publisher recording plays");
   await page.getByRole("button", { name: "Select line: Der Stuhl ist so schön", exact: false }).first().click();
+  await page.getByRole("dialog", { name: "Quick dictionary" }).waitFor();
+  await page.keyboard.press("Escape");
   assert(await page.locator(".book-selected-line").isVisible(), "Original page line opens study controls");
   await page.locator(".book-selected-line").getByRole("button", { name: /Save to review/ }).click();
   await page.getByRole("button", { name: "☆ Bookmark", exact: true }).click();

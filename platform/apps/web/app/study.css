@@ -203,7 +203,10 @@
 .study-german {
   line-height: 1.65;
 }
+.country-hub-link { display:flex; flex-wrap:wrap; gap:10px 20px; margin:0 0 24px; padding:20px; border:1px solid #c3d1bc; border-radius:12px; background:#edf2e7; color:#294e40; }
 .study-word {
+  user-select: text;
+  -webkit-user-select: text;
   font: inherit;
   color: inherit;
   border: 0;
@@ -213,6 +216,39 @@
   cursor: pointer;
   text-align: inherit;
   line-height: inherit;
+}
+
+.study-selection-meaning {
+  position: fixed;
+  inset: auto 16px 90px;
+  margin: 0 auto;
+  width: min(640px, calc(100vw - 32px));
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #bccdbd;
+  border-radius: 14px;
+  background: #fffefa;
+  color: var(--study-ink);
+  box-shadow: 0 8px 36px #163b3030;
+}
+.study-selection-meaning:popover-open { display: flex; align-items: center; gap: 12px; }
+.study-selection-meaning > span { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.study-selection-meaning .study-primary { flex-shrink: 0; min-height: 44px; }
+.study-meaning-button { font: inherit; font-size: 13px; font-weight: 650; color: #224b3f; background: #eef3ea; border: 1px solid #bccdbd; padding: 8px 12px; border-radius: 8px; min-height: 40px; cursor: pointer; }
+.listening-transcript-lines .study-meaning-button { display: block; margin-top: 8px; }
+.study-dictionary-forms { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 16px 0; }
+.study-dictionary-form { padding: 10px; border: 1px solid currentColor; border-radius: 10px; overflow-wrap: anywhere; }
+.study-dictionary-form small { display: block; margin-bottom: 6px; font-size: 12px; }
+.study-dictionary-form strong { font-size: 19px; }
+.study-tone-male { color: var(--gender-m-ink); }
+.study-tone-female { color: var(--gender-f-ink); }
+.study-tone-neuter { color: var(--gender-n-ink); }
+.study-tone-plural { color: var(--gender-pl); }
+.study-tone-plain { color: var(--study-ink); }
+@media (max-width: 520px) {
+  .study-selection-meaning:popover-open { flex-wrap: wrap; gap: 8px; }
+  .study-selection-meaning > span { flex-basis: 100%; }
+  .study-selection-meaning .study-primary { flex: 1; }
 }
 .study-word:hover {
   background: #e4eddc;

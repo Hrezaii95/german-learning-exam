@@ -2,8 +2,12 @@ import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import { loadWordCards } from "../content/word-cards";
-import { lessonFourWords, lessonFourVerbs } from "./lesson-four";
+import { lessonFourWords, lessonFourVerbs, lessonFourPhrases } from "./lesson-four";
 import type { BookManifest, DictionaryEntry } from "./types";
+import type { LearnerQaDetail } from "../content/detail-types";
+import { phraseMeanings, bookPhraseMeanings } from "./phrase-meanings";
+import { phraseKey } from "./lookup";
+import { countries, countryName, countryFrom, countryOriginMeaning, countryGroups, languageMeanings } from "./countries";
 import { bookTranscript } from "../audio/listening-transcripts";
 const generated = join(
   dirname(fileURLToPath(import.meta.url)),
@@ -39,6 +43,9 @@ export function loadStudySpeech(): Record<string, string> {
     readFileSync(join(generated, "study-speech.json"), "utf8"),
   ) as Record<string, string>;
 }
+export function loadCountrySpeech(): Record<string,string> {
+  return JSON.parse(readFileSync(join(generated,"country-speech.json"),"utf8")) as Record<string,string>;
+}
 export function loadDictionary(): DictionaryEntry[] {
   const entries: DictionaryEntry[] = loadWordCards().cards.map((card) => ({
     id: card.id,
@@ -52,6 +59,12 @@ export function loadDictionary(): DictionaryEntry[] {
     translation: card.examples[0]?.en ?? "",
     href: card.path,
     audio: card.rows[0]?.singular.audio ?? null,
+    kind: "word",
+    displayForms: card.rows.flatMap(row => [row.singular, ...row.plurals].map(form => ({
+      text: form.text,
+      tone: form.tone,
+      label: { male: "Masculine · der", female: "Feminine · die", neuter: "Neuter · das", plural: "Plural · die", plain: form.label }[form.tone],
+    }))),
   }));
   for (const word of lessonFourWords) {
     const verb = lessonFourVerbs.find((v) => v.verb === word.de);
@@ -100,5 +113,58 @@ export function loadDictionary(): DictionaryEntry[] {
       audio: null,
     }),
   );
+  const speech = loadStudySpeech();
+  // Reuse every translated card example, not just the first example on a card.
+  for (const card of loadWordCards().cards) {
+    card.examples.forEach((example, index) => {
+      if (!example.de || !example.en) return;
+      entries.push({ id: `example-${card.id}-${index}`, de: example.de, en: example.en,
+        forms: [], example: "", translation: "", kind: "sentence", href: card.path,
+        audio: example.audio ?? speech[example.de] ?? null });
+    });
+  }
+  const details = JSON.parse(readFileSync(join(generated, "learner-details.json"), "utf8")) as {
+    details: { kind: string }[];
+  };
+  for (const detail of details.details) {
+    if (detail.kind !== "QAPair") continue;
+    const qa = detail as LearnerQaDetail;
+    qa.acceptedRealizations.forEach((de, index) => {
+      const en = phraseMeanings[de];
+      if (!en) throw new Error(`Missing phrase meaning: ${de}`);
+      entries.push({ id: `${qa.id}-${index}`, de, en, forms: [], example: "", translation: "",
+        kind: "phrase", href: qa.canonicalPath, audio: speech[de] ?? null });
+    });
+  }
+  lessonFourPhrases.forEach(([de, en], index) => entries.push({
+    id: `l4-phrase-${index}`, saveId: `l4-phrase-${index}`, de, en, forms: [],
+    example: "", translation: "", kind: "phrase", href: "/lessons/04#phrases",
+    audio: speech[de] ?? null,
+  }));
+  const pages = loadBook().pages;
+  Object.entries(bookPhraseMeanings).forEach(([de, en], index) => {
+    const page = pages.find(p => p.lines.some(line => phraseKey(line.text).includes(phraseKey(de))));
+    entries.push({ id: `book-meaning-${index}`, de, en, forms: [], example: "", translation: "",
+      kind: "sentence", href: `/book?page=${page?.id ?? "coursebook-30"}`, audio: speech[de] ?? null });
+  });
+  const countrySpeech = loadCountrySpeech();
+  for (const country of countries) {
+    const de = countryName(country);
+    const existing = entries.find(entry => entry.kind === "word" && entry.de === de);
+    const displayForms = [{text:de,tone:country.group,label:countryGroups[country.group].label}];
+    if (existing) {
+      existing.displayForms = displayForms;
+      if (country.dative) existing.forms.push(country.dative);
+    } else entries.push({id:`country-${country.id}`,de,en:country.en,forms:[country.name,country.dative??country.name],
+      example:`Ich komme ${countryFrom(country)}.`,translation:countryOriginMeaning(country),href:`/cheat-sheets#country-${country.id}`,
+      audio:countrySpeech[de]??null,kind:"word",displayForms});
+    entries.push({id:`country-origin-${country.id}`,de:`Ich komme ${countryFrom(country)}.`,en:countryOriginMeaning(country),forms:[],example:"",translation:"",
+      href:`/cheat-sheets#country-${country.id}`,kind:"sentence",audio:countrySpeech[`Ich komme ${countryFrom(country)}.`]??null});
+  }
+  for (const [de,en] of Object.entries(languageMeanings)) {
+    if (entries.some(entry=>entry.kind==="word"&&entry.de===de)) continue;
+    entries.push({id:`language-${de}`,de,en,forms:de==="Persisch"?["Farsi"]:[],example:`Ich spreche ${de}.`,translation:`I speak ${en.split(" / ")[0]}.`,
+      href:"/cheat-sheets",kind:"word",audio:countrySpeech[de]??null,displayForms:[{text:de,tone:"neuter",label:"Language · normally no article"}]});
+  }
   return entries;
 }

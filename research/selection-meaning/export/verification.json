@@ -1,0 +1,31 @@
+{
+  "base": "http://127.0.0.1:4331/german-learning-exam",
+  "passed": true,
+  "checks": [
+    "Clicked word opens its vocabulary meaning",
+    "Masculine forms carry the blue vocabulary color",
+    "Gender is labelled in text as well as color",
+    "Plural has its distinct purple color",
+    "Masculine uses the existing semantic ink token",
+    "Matching vocabulary card is directly linked",
+    "Feminine forms carry the pink vocabulary color",
+    "Neuter forms carry the green vocabulary color",
+    "Dragging across words does not trigger an accidental word popup",
+    "Highlighted phrase shows its full meaning",
+    "Phrase result links to the existing lesson phrase card",
+    "Saving through lookup selects the same existing phrase card",
+    "Phrase link selects the phrase tab even from the same lesson",
+    "Clicking an original-page sentence opens its complete meaning",
+    "Selection lookup works above the full-screen reader",
+    "Closing lookup keeps the full-screen reading position",
+    "Line Meaning button works without text selection",
+    "Earlier conversation sentence has an English meaning",
+    "Existing phrase card opens successfully",
+    "Selection toolbar stays inside the mobile viewport",
+    "Mobile transcript selection gives sentence meaning",
+    "Unknown sentence has an honest fallback",
+    "Translation link carries the complete selected sentence",
+    "No browser errors: "
+  ],
+  "errors": []
+}

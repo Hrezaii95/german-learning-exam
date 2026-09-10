@@ -62,6 +62,11 @@ for (const asset of bookAudio.assets) {
 }
 
 const PAGES_BASE = "/german-learning-exam";
+const countryAudio = JSON.parse(readFileSync(join(repoRoot, "media/manifests/country-sheet-public-audio-v1.json"), "utf8"));
+for (const asset of countryAudio.assets) {
+  if (!/^audio\/country-sheet\/[a-f0-9]{20}\.mp3$/.test(asset.publicRelativePath)) throw new Error("Invalid country-sheet audio path");
+  approvedAudio.set(`out/${asset.publicRelativePath}`, asset.sha256);
+}
 const PORT = process.env.SMOKE_PAGES_PORT
   ? Number(process.env.SMOKE_PAGES_PORT)
   : 4330;
@@ -78,6 +83,7 @@ const HUB_PATHS = [
   "/listening",
   "/concepts",
   "/hubs",
+  "/cheat-sheets",
 ];
 
 const PRACTICE_GAMES = [

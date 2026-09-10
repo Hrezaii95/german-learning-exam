@@ -18,6 +18,9 @@ import {
   STUDY_KEY,
 } from "@/lib/study/storage";
 import { LineAudio } from "./StudyAudio";
+import { SelectionMeaning } from "./SelectionMeaning";
+import { lookupEntries } from "@/lib/study/lookup";
+import { withPagesBaseAssetPath } from "@/lib/content/pages-base-path";
 
 type StudyContextValue = {
   state: StudyState;
@@ -149,25 +152,14 @@ export function StudyProvider({
     } else dialog.current?.close();
   }, [open]);
   const key = dictionaryKey(query);
-  const exact = dictionary.filter((entry) =>
-    [entry.de, ...entry.forms].some((form) => dictionaryKey(form) === key),
-  );
-  const matches = (
-    exact.length
-      ? exact
-      : dictionary.filter(
-          (entry) =>
-            key &&
-            [entry.de, entry.en, ...entry.forms].some((form) =>
-              dictionaryKey(form).includes(key),
-            ),
-        )
-  ).slice(0, 12);
+  const result = lookupEntries(dictionary, query);
+  const matches = result.entries;
   return (
     <StudyContext.Provider
       value={{ state, ready, error, update, lookup, dictionary }}
     >
       {children}
+      <SelectionMeaning lookup={lookup} />
       <button
         type="button"
         className="study-dictionary-launch"
@@ -203,29 +195,39 @@ export function StudyProvider({
           </button>
         </div>
         <label className="study-field">
-          German or English
+          German or English · word, phrase, or sentence
           <input
             ref={input}
+            aria-label="German or English"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Try Stuhl, kostet, or chair"
+            placeholder="Try Stuhl or Das finde ich auch."
             autoComplete="off"
           />
         </label>
         <div aria-live="polite" className="study-dictionary-results">
           {!key ? (
             <p className="muted">
-              Look up a word or tap a German word as you read.
+              Tap a German word, or highlight a phrase or sentence and choose Meaning of selection.
             </p>
           ) : matches.length ? (
-            matches.map((entry) => (
-              <article key={entry.id}>
+            <>
+            {!result.exact && <p className="muted">Related study cards — choose the phrase that matches your meaning.</p>}
+            {matches.map((entry) => (
+              <article key={entry.id} data-lookup-kind={entry.kind ?? "word"}>
+                <p className="study-eyebrow">{entry.kind === "phrase" ? "Phrase card" : entry.kind === "sentence" ? "Sentence meaning" : "Vocabulary"}</p>
                 <div className="study-row">
-                  <h3 lang="de">{entry.de}</h3>
+                  <h3 lang="de" className={entry.displayForms?.[0] && !entry.de.includes(" / ") ? `study-tone-${entry.displayForms[0].tone}` : undefined}>{entry.de}</h3>
                   <LineAudio text={entry.de} src={entry.audio} compact />
                 </div>
                 <p>{entry.en}</p>
-                {entry.forms.length > 0 && (
+                {entry.displayForms?.length ? (
+                  <div className="study-dictionary-forms">
+                    {entry.displayForms.map((form, index) => <div key={index} className={`study-dictionary-form study-tone-${form.tone}`}>
+                      <small>{form.label}</small><strong lang="de">{form.text}</strong>
+                    </div>)}
+                  </div>
+                ) : entry.forms.length > 0 && (
                   <p className="dense" lang="de">
                     {[...new Set(entry.forms)].join(" · ")}
                   </p>
@@ -239,29 +241,30 @@ export function StudyProvider({
                 <div className="study-row">
                   <SaveButton
                     item={{
-                      id: `card-${entry.id}`,
+                      id: entry.saveId ?? `card-${entry.id}`,
                       title: entry.de,
                       meaning: entry.en,
-                      kind: "word",
+                      kind: entry.kind === "phrase" ? "phrase" : entry.kind === "sentence" ? "line" : "word",
                       href: entry.href,
                       audio: entry.audio,
                     }}
                   />
-                  <Link href={entry.href} onClick={() => setOpen(false)}>
-                    Open study card →
-                  </Link>
+                  {entry.href.includes("#") ? <a href={withPagesBaseAssetPath(entry.href.replace(/\/?#/, "/#"))} onClick={() => setOpen(false)}>{entry.href.startsWith("/cheat-sheets") ? "Open cheat sheet →" : "Open phrase card →"}</a> : <Link href={entry.href} onClick={() => setOpen(false)}>
+                    {entry.kind === "phrase" ? "Open phrase card →" : entry.href.startsWith("/book") ? "Open book page →" : entry.href.startsWith("/cheat-sheets") ? "Open cheat sheet →" : "Open study card →"}
+                  </Link>}
                 </div>
               </article>
-            ))
+            ))}</>
           ) : (
             <p>
-              No local definition for “{query}”. Try the base form, or look it
-              up below.
+              No local definition for “{query}” yet. You can translate this selection below.
             </p>
           )}
         </div>
         {key && (
           <div className="study-dictionary-footer">
+            <a href={`https://translate.google.com/?sl=de&tl=en&text=${encodeURIComponent(query)}&op=translate`}
+              target="_blank" rel="noreferrer">Translate selection ↗</a>
             <a
               href={`https://dict.leo.org/german-english/${encodeURIComponent(query)}`}
               target="_blank"
@@ -337,7 +340,7 @@ export function GermanText({
             type="button"
             className="study-word"
             key={i}
-            onClick={() => study?.lookup(part)}
+            onClick={() => { if (!window.getSelection()?.toString().trim()) study?.lookup(part); }}
             aria-label={`Look up ${part}`}
           >
             {part}
@@ -348,4 +351,11 @@ export function GermanText({
       )}
     </span>
   );
+}
+
+export function MeaningButton({ text }: { text: string }) {
+  const study = useStudy();
+  if (!study) return null;
+  return <button type="button" className="study-meaning-button" aria-label={`Meaning: ${text}`}
+    onClick={() => study.lookup(text)}>Meaning</button>;
 }

@@ -12,7 +12,7 @@ import type {
   BookPage,
 } from "@/lib/study/types";
 import { ListeningTranscript } from "@/components/audio/ListeningTranscript";
-import { GermanText, SaveButton, useStudy } from "./StudyProvider";
+import { GermanText, MeaningButton, SaveButton, useStudy } from "./StudyProvider";
 import { LineAudio, stopStudyAudio } from "./StudyAudio";
 
 function OriginalTrack({ track, rate }: { track: BookTrack; rate: number }) {
@@ -77,6 +77,7 @@ function OriginalPage({
   selected: string | null;
   select: (id: string) => void;
 }) {
+  const study = useStudy();
   return (
     <section
       className="book-original"
@@ -134,13 +135,13 @@ function OriginalPage({
               }}
               aria-label={`Select line: ${value.text}`}
               title={value.text}
-              onClick={() => select(value.id)}
+              onClick={() => { select(value.id); study?.lookup(value.text); }}
             />
           ))}
         </div>
       </div>
       <p className="book-page-caption">
-        © Hueber Verlag · Tap a line to study it. Scroll across on a small
+        © Hueber Verlag · Tap a line for its meaning. Scroll across on a small
         screen, or choose Fit width.
       </p>
     </section>
@@ -243,6 +244,7 @@ export function BookReader({
         <GermanText text={value.text} />
       </p>
       <div className="book-line-actions">
+        <MeaningButton text={value.text} />
         <LineAudio
           text={value.text}
           src={speech[value.text]}
@@ -277,6 +279,7 @@ export function BookReader({
         </Link>
       </header>
       <div className="book-top-tools">
+        <Link href="/cheat-sheets" className="study-secondary">Cheat sheets →</Link>
         <button
           type="button"
           className="study-secondary"
@@ -510,7 +513,7 @@ export function BookReader({
               <div className="book-text-heading">
                 <h3>Read & explore</h3>
                 <p>
-                  Tap a word for its meaning.{" "}
+                  Tap a word, or highlight a phrase for its meaning.{" "}
                   <span>Synthesized line audio</span>
                 </p>
               </div>

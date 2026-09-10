@@ -1,0 +1,471 @@
+{
+  "Brasilien": {
+    "coursebook": [
+      4,
+      130
+    ]
+  },
+  "Deutschland": {
+    "coursebook": [
+      4,
+      4,
+      5,
+      5,
+      15,
+      15,
+      25,
+      25,
+      27,
+      27,
+      28,
+      28,
+      29,
+      29,
+      61,
+      61,
+      76,
+      76,
+      108,
+      108,
+      118,
+      118,
+      132,
+      132,
+      133,
+      133,
+      144,
+      144,
+      149,
+      149,
+      154,
+      154,
+      157,
+      157,
+      193,
+      193,
+      206,
+      206,
+      207,
+      207,
+      210,
+      210
+    ],
+    "workbook": [
+      4,
+      4,
+      9,
+      9,
+      17,
+      17,
+      21,
+      21,
+      24,
+      24,
+      25,
+      25,
+      33,
+      33,
+      44,
+      44,
+      66,
+      66,
+      84,
+      84,
+      96,
+      96
+    ],
+    "glossary": [
+      2,
+      2
+    ]
+  },
+  "Spanien": {
+    "coursebook": [
+      4,
+      15,
+      26,
+      77,
+      85,
+      86,
+      194,
+      207,
+      208
+    ],
+    "workbook": [
+      10,
+      18,
+      19,
+      21,
+      88,
+      89,
+      96,
+      120
+    ],
+    "glossary": [
+      2
+    ]
+  },
+  "Ungarn": {
+    "coursebook": [
+      4,
+      43
+    ]
+  },
+  "Italien": {
+    "coursebook": [
+      4,
+      43,
+      146,
+      155,
+      174,
+      200
+    ],
+    "workbook": [
+      18,
+      20,
+      23,
+      31,
+      79,
+      89
+    ]
+  },
+  "Australien": {
+    "coursebook": [
+      5,
+      25,
+      56,
+      128,
+      153,
+      207
+    ],
+    "workbook": [
+      21
+    ]
+  },
+  "Schweiz": {
+    "coursebook": [
+      15,
+      16,
+      25,
+      27,
+      28,
+      29,
+      76,
+      83,
+      157,
+      160,
+      194,
+      207
+    ],
+    "workbook": [
+      9,
+      11,
+      14,
+      15,
+      18,
+      66,
+      76,
+      88,
+      96,
+      118
+    ],
+    "glossary": [
+      2
+    ]
+  },
+  "Eritrea": {
+    "coursebook": [
+      15,
+      16,
+      29,
+      30
+    ],
+    "workbook": [
+      9,
+      10,
+      95,
+      96
+    ],
+    "glossary": [
+      2
+    ]
+  },
+  "Frankreich": {
+    "coursebook": [
+      15,
+      15,
+      132,
+      132,
+      174,
+      174,
+      193,
+      193,
+      194,
+      194
+    ],
+    "workbook": [
+      10,
+      10,
+      14,
+      14,
+      18,
+      18,
+      23,
+      23,
+      29,
+      29,
+      76,
+      76,
+      96,
+      96
+    ],
+    "glossary": [
+      2,
+      2
+    ]
+  },
+  "USA": {
+    "coursebook": [
+      15,
+      26,
+      29,
+      193,
+      207
+    ],
+    "workbook": [
+      9,
+      10,
+      19,
+      96
+    ],
+    "glossary": [
+      2
+    ]
+  },
+  "Portugal": {
+    "coursebook": [
+      16,
+      29,
+      160
+    ],
+    "glossary": [
+      4
+    ]
+  },
+  "Polen": {
+    "coursebook": [
+      23
+    ],
+    "workbook": [
+      23,
+      27,
+      100
+    ],
+    "glossary": [
+      5
+    ]
+  },
+  "Kanada": {
+    "coursebook": [
+      25
+    ]
+  },
+  "Schweden": {
+    "coursebook": [
+      25,
+      154,
+      207
+    ],
+    "workbook": [
+      18,
+      31
+    ]
+  },
+  "Liechtenstein": {
+    "coursebook": [
+      27,
+      188,
+      210
+    ],
+    "workbook": [
+      32
+    ]
+  },
+  "Argentinien": {
+    "coursebook": [
+      43
+    ]
+  },
+  "Indien": {
+    "coursebook": [
+      86
+    ]
+  },
+  "Norwegen": {
+    "coursebook": [
+      110
+    ]
+  },
+  "Marokko": {
+    "coursebook": [
+      145
+    ]
+  },
+  "Malediven": {
+    "coursebook": [
+      145
+    ]
+  },
+  "Uganda": {
+    "coursebook": [
+      154
+    ]
+  },
+  "Mexiko": {
+    "coursebook": [
+      160,
+      194
+    ],
+    "glossary": [
+      4
+    ]
+  },
+  "Andorra": {
+    "coursebook": [
+      188,
+      210
+    ]
+  },
+  "Monaco": {
+    "coursebook": [
+      188,
+      210
+    ]
+  },
+  "Iran": {
+    "coursebook": [
+      207,
+      207
+    ]
+  },
+  "Niederlande": {
+    "coursebook": [
+      207
+    ]
+  },
+  "Mauritius": {
+    "coursebook": [
+      208
+    ]
+  },
+  "China": {
+    "workbook": [
+      18
+    ]
+  },
+  "England": {
+    "workbook": [
+      18,
+      21
+    ]
+  },
+  "Irland": {
+    "workbook": [
+      20
+    ]
+  },
+  "Griechenland": {
+    "workbook": [
+      21,
+      27
+    ]
+  },
+  "Afghanistan": {
+    "workbook": [
+      22,
+      120
+    ]
+  },
+  "Madagaskar": {
+    "workbook": [
+      22,
+      120
+    ]
+  },
+  "Peru": {
+    "workbook": [
+      22,
+      120
+    ]
+  },
+  "Belgien": {
+    "workbook": [
+      79
+    ]
+  },
+  "Singapur": {
+    "workbook": [
+      84
+    ]
+  },
+  "Großbritannien": {
+    "coursebook": [
+      43
+    ]
+  },
+  "Österreich": {
+    "workbook": [
+      10,
+      11,
+      12,
+      14,
+      18,
+      23,
+      66,
+      88,
+      96,
+      99,
+      118
+    ],
+    "coursebook": [
+      15,
+      20,
+      24,
+      27,
+      28,
+      29,
+      76,
+      83,
+      132,
+      161,
+      193
+    ]
+  },
+  "Türkei": {
+    "workbook": [
+      10,
+      18,
+      20,
+      76,
+      88,
+      96
+    ],
+    "coursebook": [
+      15,
+      29,
+      76,
+      83,
+      207
+    ]
+  },
+  "Dänemark": {
+    "coursebook": [
+      28
+    ]
+  },
+  "Südafrika": {
+    "coursebook": [
+      157
+    ]
+  }
+}

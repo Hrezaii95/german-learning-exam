@@ -1,0 +1,751 @@
+{
+  "countries": 41,
+  "existingCountryCards": 28,
+  "additionalBookMentions": 13,
+  "speechTexts": 240,
+  "coverage": [
+    {
+      "id": "IR",
+      "name": "Iran",
+      "cardId": "W314",
+      "pdfPages": {
+        "coursebook": [
+          207
+        ]
+      },
+      "group": "male",
+      "from": "aus dem Iran",
+      "extra": false
+    },
+    {
+      "id": "DE",
+      "name": "Deutschland",
+      "cardId": "W051",
+      "pdfPages": {
+        "coursebook": [
+          15,
+          25,
+          27,
+          28,
+          29,
+          61,
+          76,
+          108,
+          118,
+          132,
+          133,
+          144,
+          149,
+          154,
+          157,
+          193,
+          206,
+          207,
+          210
+        ],
+        "workbook": [
+          4,
+          9,
+          17,
+          21,
+          24,
+          25,
+          33,
+          44,
+          66,
+          84,
+          96
+        ],
+        "glossary": [
+          2
+        ]
+      },
+      "group": "neuter",
+      "from": "aus Deutschland",
+      "extra": false
+    },
+    {
+      "id": "CH",
+      "name": "Schweiz",
+      "cardId": "W052",
+      "pdfPages": {
+        "coursebook": [
+          15,
+          16,
+          25,
+          27,
+          28,
+          29,
+          76,
+          83,
+          157,
+          160,
+          194,
+          207
+        ],
+        "workbook": [
+          9,
+          11,
+          14,
+          15,
+          18,
+          66,
+          76,
+          88,
+          96,
+          118
+        ],
+        "glossary": [
+          2
+        ]
+      },
+      "group": "female",
+      "from": "aus der Schweiz",
+      "extra": false
+    },
+    {
+      "id": "TR",
+      "name": "Türkei",
+      "cardId": "W053",
+      "pdfPages": {
+        "workbook": [
+          10,
+          18,
+          20,
+          76,
+          88,
+          96
+        ],
+        "coursebook": [
+          15,
+          29,
+          76,
+          83,
+          207
+        ]
+      },
+      "group": "female",
+      "from": "aus der Türkei",
+      "extra": false
+    },
+    {
+      "id": "US",
+      "name": "USA",
+      "cardId": "W057",
+      "pdfPages": {
+        "coursebook": [
+          15,
+          26,
+          29,
+          193,
+          207
+        ],
+        "workbook": [
+          9,
+          10,
+          19,
+          96
+        ],
+        "glossary": [
+          2
+        ]
+      },
+      "group": "plural",
+      "from": "aus den USA",
+      "extra": false
+    },
+    {
+      "id": "NL",
+      "name": "Niederlande",
+      "cardId": "W311",
+      "pdfPages": {
+        "coursebook": [
+          207
+        ]
+      },
+      "group": "plural",
+      "from": "aus den Niederlanden",
+      "extra": false
+    },
+    {
+      "id": "ER",
+      "name": "Eritrea",
+      "cardId": "W050",
+      "pdfPages": {
+        "coursebook": [
+          15,
+          16,
+          29,
+          30
+        ],
+        "workbook": [
+          9,
+          10,
+          95,
+          96
+        ],
+        "glossary": [
+          2
+        ]
+      },
+      "group": "neuter",
+      "from": "aus Eritrea",
+      "extra": false
+    },
+    {
+      "id": "ES",
+      "name": "Spanien",
+      "cardId": "W054",
+      "pdfPages": {
+        "coursebook": [
+          15,
+          26,
+          77,
+          85,
+          86,
+          194,
+          207,
+          208
+        ],
+        "workbook": [
+          10,
+          18,
+          19,
+          21,
+          88,
+          89,
+          96,
+          120
+        ],
+        "glossary": [
+          2
+        ]
+      },
+      "group": "neuter",
+      "from": "aus Spanien",
+      "extra": false
+    },
+    {
+      "id": "FR",
+      "name": "Frankreich",
+      "cardId": "W055",
+      "pdfPages": {
+        "coursebook": [
+          15,
+          132,
+          174,
+          193,
+          194
+        ],
+        "workbook": [
+          10,
+          14,
+          18,
+          23,
+          29,
+          76,
+          96
+        ],
+        "glossary": [
+          2
+        ]
+      },
+      "group": "neuter",
+      "from": "aus Frankreich",
+      "extra": false
+    },
+    {
+      "id": "AT",
+      "name": "Österreich",
+      "cardId": "W056",
+      "pdfPages": {
+        "workbook": [
+          10,
+          11,
+          12,
+          14,
+          18,
+          23,
+          66,
+          88,
+          96,
+          99,
+          118
+        ],
+        "coursebook": [
+          15,
+          20,
+          24,
+          27,
+          28,
+          29,
+          76,
+          83,
+          132,
+          161,
+          193
+        ]
+      },
+      "group": "neuter",
+      "from": "aus Österreich",
+      "extra": false
+    },
+    {
+      "id": "ZA",
+      "name": "Südafrika",
+      "cardId": "W060",
+      "pdfPages": {
+        "coursebook": [
+          157
+        ]
+      },
+      "group": "neuter",
+      "from": "aus Südafrika",
+      "extra": false
+    },
+    {
+      "id": "MX",
+      "name": "Mexiko",
+      "cardId": "W163",
+      "pdfPages": {
+        "coursebook": [
+          160,
+          194
+        ],
+        "glossary": [
+          4
+        ]
+      },
+      "group": "neuter",
+      "from": "aus Mexiko",
+      "extra": false
+    },
+    {
+      "id": "PT",
+      "name": "Portugal",
+      "cardId": "W164",
+      "pdfPages": {
+        "coursebook": [
+          16,
+          29,
+          160
+        ],
+        "glossary": [
+          4
+        ]
+      },
+      "group": "neuter",
+      "from": "aus Portugal",
+      "extra": false
+    },
+    {
+      "id": "PL",
+      "name": "Polen",
+      "cardId": "W209",
+      "pdfPages": {
+        "coursebook": [
+          23
+        ],
+        "workbook": [
+          23,
+          27,
+          100
+        ],
+        "glossary": [
+          5
+        ]
+      },
+      "group": "neuter",
+      "from": "aus Polen",
+      "extra": false
+    },
+    {
+      "id": "IT",
+      "name": "Italien",
+      "cardId": "W225",
+      "pdfPages": {
+        "coursebook": [
+          43,
+          146,
+          155,
+          174,
+          200
+        ],
+        "workbook": [
+          18,
+          20,
+          23,
+          31,
+          79,
+          89
+        ]
+      },
+      "group": "neuter",
+      "from": "aus Italien",
+      "extra": false
+    },
+    {
+      "id": "SE",
+      "name": "Schweden",
+      "cardId": "W226",
+      "pdfPages": {
+        "coursebook": [
+          25,
+          154,
+          207
+        ],
+        "workbook": [
+          18,
+          31
+        ]
+      },
+      "group": "neuter",
+      "from": "aus Schweden",
+      "extra": false
+    },
+    {
+      "id": "CN",
+      "name": "China",
+      "cardId": "W227",
+      "pdfPages": {
+        "workbook": [
+          18
+        ]
+      },
+      "group": "neuter",
+      "from": "aus China",
+      "extra": false
+    },
+    {
+      "id": "GB-ENG",
+      "name": "England",
+      "cardId": "W228",
+      "pdfPages": {
+        "workbook": [
+          18,
+          21
+        ]
+      },
+      "group": "neuter",
+      "from": "aus England",
+      "extra": false
+    },
+    {
+      "id": "AU",
+      "name": "Australien",
+      "cardId": "W309",
+      "pdfPages": {
+        "coursebook": [
+          25,
+          56,
+          128,
+          153,
+          207
+        ],
+        "workbook": [
+          21
+        ]
+      },
+      "group": "neuter",
+      "from": "aus Australien",
+      "extra": false
+    },
+    {
+      "id": "CA",
+      "name": "Kanada",
+      "cardId": "W310",
+      "pdfPages": {
+        "coursebook": [
+          25
+        ]
+      },
+      "group": "neuter",
+      "from": "aus Kanada",
+      "extra": false
+    },
+    {
+      "id": "DK",
+      "name": "Dänemark",
+      "cardId": "W312",
+      "pdfPages": {
+        "coursebook": [
+          28
+        ]
+      },
+      "group": "neuter",
+      "from": "aus Dänemark",
+      "extra": false
+    },
+    {
+      "id": "SG",
+      "name": "Singapur",
+      "cardId": "W313",
+      "pdfPages": {
+        "workbook": [
+          84
+        ]
+      },
+      "group": "neuter",
+      "from": "aus Singapur",
+      "extra": false
+    },
+    {
+      "id": "LI",
+      "name": "Liechtenstein",
+      "cardId": "W315",
+      "pdfPages": {
+        "coursebook": [
+          27,
+          188,
+          210
+        ],
+        "workbook": [
+          32
+        ]
+      },
+      "group": "neuter",
+      "from": "aus Liechtenstein",
+      "extra": false
+    },
+    {
+      "id": "IE",
+      "name": "Irland",
+      "cardId": "W316",
+      "pdfPages": {
+        "workbook": [
+          20
+        ]
+      },
+      "group": "neuter",
+      "from": "aus Irland",
+      "extra": false
+    },
+    {
+      "id": "GR",
+      "name": "Griechenland",
+      "cardId": "W317",
+      "pdfPages": {
+        "workbook": [
+          21,
+          27
+        ]
+      },
+      "group": "neuter",
+      "from": "aus Griechenland",
+      "extra": false
+    },
+    {
+      "id": "PE",
+      "name": "Peru",
+      "cardId": "W318",
+      "pdfPages": {
+        "workbook": [
+          22,
+          120
+        ]
+      },
+      "group": "neuter",
+      "from": "aus Peru",
+      "extra": false
+    },
+    {
+      "id": "AF",
+      "name": "Afghanistan",
+      "cardId": "W319",
+      "pdfPages": {
+        "workbook": [
+          22,
+          120
+        ]
+      },
+      "group": "neuter",
+      "from": "aus Afghanistan",
+      "extra": false
+    },
+    {
+      "id": "MG",
+      "name": "Madagaskar",
+      "cardId": "W320",
+      "pdfPages": {
+        "workbook": [
+          22,
+          120
+        ]
+      },
+      "group": "neuter",
+      "from": "aus Madagaskar",
+      "extra": false
+    },
+    {
+      "id": "BR",
+      "name": "Brasilien",
+      "cardId": null,
+      "pdfPages": {
+        "coursebook": [
+          130
+        ]
+      },
+      "group": "neuter",
+      "from": "aus Brasilien",
+      "extra": true
+    },
+    {
+      "id": "HU",
+      "name": "Ungarn",
+      "cardId": null,
+      "pdfPages": {
+        "coursebook": [
+          43
+        ]
+      },
+      "group": "neuter",
+      "from": "aus Ungarn",
+      "extra": true
+    },
+    {
+      "id": "AR",
+      "name": "Argentinien",
+      "cardId": null,
+      "pdfPages": {
+        "coursebook": [
+          43
+        ]
+      },
+      "group": "neuter",
+      "from": "aus Argentinien",
+      "extra": true
+    },
+    {
+      "id": "IN",
+      "name": "Indien",
+      "cardId": null,
+      "pdfPages": {
+        "coursebook": [
+          86
+        ]
+      },
+      "group": "neuter",
+      "from": "aus Indien",
+      "extra": true
+    },
+    {
+      "id": "NO",
+      "name": "Norwegen",
+      "cardId": null,
+      "pdfPages": {
+        "coursebook": [
+          110
+        ]
+      },
+      "group": "neuter",
+      "from": "aus Norwegen",
+      "extra": true
+    },
+    {
+      "id": "MA",
+      "name": "Marokko",
+      "cardId": null,
+      "pdfPages": {
+        "coursebook": [
+          145
+        ]
+      },
+      "group": "neuter",
+      "from": "aus Marokko",
+      "extra": true
+    },
+    {
+      "id": "MV",
+      "name": "Malediven",
+      "cardId": null,
+      "pdfPages": {
+        "coursebook": [
+          145
+        ]
+      },
+      "group": "plural",
+      "from": "aus den Malediven",
+      "extra": true
+    },
+    {
+      "id": "UG",
+      "name": "Uganda",
+      "cardId": null,
+      "pdfPages": {
+        "coursebook": [
+          154
+        ]
+      },
+      "group": "neuter",
+      "from": "aus Uganda",
+      "extra": true
+    },
+    {
+      "id": "AD",
+      "name": "Andorra",
+      "cardId": null,
+      "pdfPages": {
+        "coursebook": [
+          188,
+          210
+        ]
+      },
+      "group": "neuter",
+      "from": "aus Andorra",
+      "extra": true
+    },
+    {
+      "id": "MC",
+      "name": "Monaco",
+      "cardId": null,
+      "pdfPages": {
+        "coursebook": [
+          188,
+          210
+        ]
+      },
+      "group": "neuter",
+      "from": "aus Monaco",
+      "extra": true
+    },
+    {
+      "id": "MU",
+      "name": "Mauritius",
+      "cardId": null,
+      "pdfPages": {
+        "coursebook": [
+          208
+        ]
+      },
+      "group": "neuter",
+      "from": "aus Mauritius",
+      "extra": true
+    },
+    {
+      "id": "BE",
+      "name": "Belgien",
+      "cardId": null,
+      "pdfPages": {
+        "workbook": [
+          79
+        ]
+      },
+      "group": "neuter",
+      "from": "aus Belgien",
+      "extra": true
+    },
+    {
+      "id": "GB",
+      "name": "Großbritannien",
+      "cardId": null,
+      "pdfPages": {
+        "coursebook": [
+          43
+        ]
+      },
+      "group": "neuter",
+      "from": "aus Großbritannien",
+      "extra": true
+    }
+  ]
+}

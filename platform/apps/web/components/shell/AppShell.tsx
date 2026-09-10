@@ -16,6 +16,7 @@ const PRIMARY_NAV: NavItem[] = [
   { key: "dashboard", href: "/", label: "Dashboard", enabled: true },
   { key: "lessons", href: "/lessons", label: "Lessons", enabled: true },
   { key: "book", href: "/book", label: "Interactive book", enabled: true },
+  { key: "cheat-sheets", href: "/cheat-sheets", label: "Cheat sheets", enabled: true },
   { key: "saved", href: "/saved", label: "My review", enabled: true },
   { key: "vocabulary", href: "/vocabulary", label: "Vocabulary", enabled: true },
   { key: "verbs", href: "/verbs", label: "Verbs", enabled: true },
