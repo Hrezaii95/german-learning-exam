@@ -1,0 +1,21 @@
+{
+  "base": "http://127.0.0.1:4331/german-learning-exam",
+  "passed": true,
+  "checks": [
+    "Synthesized line clip starts",
+    "Line speech stops original audio",
+    "Line audio stops on second click",
+    "Audio speed control changes playback rate",
+    "Unknown dictionary word has an honest no-match state",
+    "Lesson 4 filter in the existing vocabulary hub returns all 45 cards",
+    "Study-card navigation preserves Lesson 4 filter",
+    "Earlier grammar concepts can be selected for personal review",
+    "Collection can be emptied by deselection",
+    "Exported backup restores selected concepts",
+    "Invalid backup is rejected",
+    "Invalid import preserves existing selections",
+    "Failed recall save does not advance or lose the current card",
+    "Storage failure is visible",
+    "Failed save is not shown as saved"
+  ]
+}

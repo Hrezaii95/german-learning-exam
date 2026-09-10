@@ -6,6 +6,8 @@ import { countries, countryGroups, countryName, countryFrom, countryWhere, count
 import { GermanText, SaveButton, useStudy } from "./StudyProvider";
 import { LineAudio } from "./StudyAudio";
 import { CheatSheetNav } from "./CheatSheetNav";
+import { CountryFlag } from "./CountryFlag";
+import { CountryOverview } from "./CountryOverview";
 
 const groups = Object.keys(countryGroups) as CountryGroup[];
 const quiz = ["IR", "CH", "US", "NL", "DE", "PL", "TR", "MV", "IR-language", "AT-language"];
@@ -57,8 +59,10 @@ export function CountryCheatSheet({ speech, cardLinks }: { speech: Record<string
       <button type="button" className="study-secondary country-print" onClick={() => {setRecall(false);setFilter("all");setScope("all");setSearch("");requestAnimationFrame(()=>window.print());}}>Print cheat sheet</button>
     </header>
     <nav className="country-jump" aria-label="Cheat sheet sections">
+      <a href="#country-overview">Map & flag overview</a>
       <a href="#country-patterns">The 4 patterns</a><a href="#country-passport">Build a sentence</a><a href="#country-index">All {countries.length} countries</a><a href="#country-practice">Test yourself</a>
     </nav>
+    <CountryOverview selected={chosen} onSelect={setChosen} speech={speech}/>
     <section id="country-patterns" className="country-patterns" aria-labelledby="patterns-title">
       <div className="study-section-heading"><div><p className="study-eyebrow">One rule, four paths</p><h2 id="patterns-title">Pass through the AUS gate.</h2></div><span className="country-rule-stamp">AUS + DATIVE</span></div>
       <p>Imagine the article showing its passport at <b lang="de">aus</b>. It changes into the dative form. The country’s grammatical gender stays the same.</p>
@@ -79,7 +83,7 @@ export function CountryCheatSheet({ speech, cardLinks }: { speech: Record<string
       <div className={`country-passport study-tone-${current.group}`}>
         <div className="country-passport-top"><span>MY LANGUAGE PASSPORT</span><svg width="42" height="42" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="20"/><ellipse cx="24" cy="24" rx="9" ry="20"/><path d="M4 24h40M8 12h32M8 36h32"/></svg></div>
         <label className="study-field">Choose a country<select aria-label="Choose a country" value={chosen} onChange={event => setChosen(event.target.value)}>{countries.map(c => <option key={c.id} value={c.id}>{countryName(c)} · {c.en}</option>)}</select></label>
-        <h2 id="passport-title" lang="de">{countryName(current)}</h2><p className="country-passport-type">{countryGroups[current.group].label}</p>
+        <h2 id="passport-title" lang="de"><CountryFlag id={current.id} label={current.en}/>{countryName(current)}</h2><p className="country-passport-type">{countryGroups[current.group].label}</p>
         <div className="country-passport-line"><span>01 / WHERE FROM?</span><p><GermanText text={`Ich komme ${countryFrom(current)}.`}/>{clip(`Ich komme ${countryFrom(current)}.`)}</p></div>
         <div className="country-passport-line"><span>02 / A LANGUAGE EXAMPLE</span><p><GermanText text={`Ich spreche ${spokenLanguage(current.languages[0]!)}.`}/>{clip(`Ich spreche ${spokenLanguage(current.languages[0]!)}.`)}</p></div>
         <SaveButton item={{...savedCountry(current), audio:speech[`Ich komme ${countryFrom(current)}.`] ?? null}} />
@@ -111,7 +115,7 @@ export function CountryCheatSheet({ speech, cardLinks }: { speech: Record<string
       <div className="country-ledger-head" aria-hidden="true"><span>COUNTRY / GENDER</span><span>WHERE FROM? · AUS</span><span>LANGUAGE EXAMPLES</span><span>REVIEW</span></div>
       <div className="country-ledger">
         {visible.map(c => {const hidden = recall && !revealed.includes(c.id); return <article key={c.id} id={`country-${c.id}`} data-country={c.id} className={`country-row study-tone-${c.group}`}>
-          <div><span className="country-code" aria-hidden="true">{c.id === "GB-ENG" ? "EN" : c.id}</span><h3><GermanText text={countryName(c)}/></h3><p>{c.en}</p><small>{countryGroups[c.group].label}{c.extra ? " · Other book mention" : ""}</small></div>
+          <div><CountryFlag id={c.id} label={c.en}/><h3><GermanText text={countryName(c)}/></h3><p>{c.en}</p><small>{countryGroups[c.group].label}{c.extra ? " · Other book mention" : ""}</small></div>
           <div className="country-answer">{hidden ? <button type="button" className="study-secondary" onClick={()=>setRevealed([...revealed,c.id])} aria-label={`Reveal ${c.name}`}>Reveal origin & language</button> : <><strong><GermanText text={countryFrom(c)}/></strong>{clip(`Ich komme ${countryFrom(c)}.`)}<small>Ich komme …</small></>}</div>
           <div className="country-languages">{hidden ? <span className="muted">Try saying it first.</span> : c.languages.map(language => <span key={language}><GermanText text={language}/>{clip(spokenLanguage(language))}</span>)}</div>
           <div className="country-row-save"><SaveButton compact item={{...savedCountry(c),audio:speech[`Ich komme ${countryFrom(c)}.`] ?? null}} /></div>

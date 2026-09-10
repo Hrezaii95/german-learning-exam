@@ -1,0 +1,22 @@
+{
+  "source": "Natural Earth 110m / 50m admin-0 map units",
+  "license": "Public domain",
+  "countries": 41,
+  "smallCountryMarkers": [
+    "SG",
+    "LI",
+    "MV",
+    "AD",
+    "MC",
+    "MU"
+  ],
+  "greatBritainUnits": [
+    "England",
+    "Scotland",
+    "Wales"
+  ],
+  "sourceHashes": {
+    "map-units-50m.geojson": "b8d421aca6e9e08e8cdf09cc26af111cc3e0deba4fe915611d58ade71e8a4db0",
+    "map-units.geojson": "718ac51d68ed2bf5de4f563fff2e2e045db706c1d3222805f3e317140a64213b"
+  }
+}

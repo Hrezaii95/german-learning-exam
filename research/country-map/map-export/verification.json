@@ -1,0 +1,26 @@
+{
+  "base": "http://127.0.0.1:4331/german-learning-exam",
+  "passed": true,
+  "checks": [
+    "Map has exactly 41 selectable study country names",
+    "Memory chart shows all 41 names",
+    "All country index entries have flags",
+    "Flag chart selection shows the correct origin phrase",
+    "Switzerland keeps feminine color with dative der",
+    "Overview updates the existing sentence builder",
+    "Map country can be selected with the keyboard",
+    "Europe zoom makes small countries easier to find",
+    "Small-country marker selects its country",
+    "Full-screen overview opens as a dialog",
+    "Full-screen overview includes every country",
+    "Overview renders one interactive chart without duplicate controls",
+    "Full-screen interaction preserves the dative plural ending",
+    "Chart-only mode removes the map for a compact memory view",
+    "Closing overview restores keyboard focus",
+    "Every chart flag image loads",
+    "Map and chart fit the mobile viewport",
+    "Mobile flag selection works",
+    "No browser errors: "
+  ],
+  "errors": []
+}

@@ -1,0 +1,30 @@
+{
+  "base": "http://127.0.0.1:4331/german-learning-exam",
+  "checks": [
+    "Lesson 4 has 45 word and expression cards",
+    "Furniture category filter works",
+    "Word selection survives reload",
+    "One-click dictionary gives chair definition",
+    "Escape closes dictionary",
+    "Five grammar concepts available",
+    "Wrong practice answer gets correction",
+    "Correct practice answer gets feedback",
+    "Original book page renders",
+    "Coursebook page 30 has the matching two tracks",
+    "Original publisher recording plays",
+    "Original page line opens study controls",
+    "Page turn changes the original audio set",
+    "Book resumes at last page",
+    "Words, concepts and book lines share one review collection",
+    "Personal note survives reload",
+    "Recall rating advances session",
+    "Deselection survives reload",
+    "No mobile overflow: /lessons/04/",
+    "No mobile overflow: /book/?page=coursebook-29",
+    "No mobile overflow: /saved/",
+    "No mobile overflow: /vocabulary/l4-stuhl/",
+    "No browser runtime errors: "
+  ],
+  "errors": [],
+  "passed": true
+}
