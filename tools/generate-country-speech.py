@@ -9,7 +9,7 @@ import edge_tts
 ROOT = Path(__file__).resolve().parents[1]
 WEB = ROOT / "platform/apps/web"
 parser = argparse.ArgumentParser()
-parser.add_argument("--sheet", choices=["country", "home"], default="country")
+parser.add_argument("--sheet", choices=["country", "home", "collection"], default="country")
 SHEET = parser.parse_args().sheet
 OUT = WEB / f"public/audio/{SHEET}-sheet"
 MAPPING = WEB / f"generated/{SHEET}-speech.json"
@@ -19,6 +19,8 @@ async def main():
     OUT.mkdir(parents=True, exist_ok=True)
     texts = json.loads((WEB / f"generated/{SHEET}-speech-texts.json").read_text(encoding="utf-8"))
     existing = json.loads((WEB / "generated/study-speech.json").read_text(encoding="utf-8"))
+    for name in ["country", "home"]:
+        existing.update(json.loads((WEB / f"generated/{name}-speech.json").read_text(encoding="utf-8")))
     for card in json.loads((WEB / "generated/word-cards.json").read_text(encoding="utf-8"))["cards"]:
         for row in card["rows"]:
             for form in [row["singular"], *row["plurals"]]:

@@ -1,0 +1,955 @@
+{
+  "version": 1,
+  "voice": "de-DE-KatjaNeural",
+  "rate": "-5%",
+  "assets": [
+    {
+      "publicRelativePath": "audio/collection-sheet/00ce4057749e17d33131.mp3",
+      "sha256": "dd749945ff9dc78dc348aca57a51cf4d86bf4cbb322d887d4cd3f7c493a333fb",
+      "bytes": 14688,
+      "exactText": "Noch einmal, bitte."
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/02f61d32a880f6b2e523.mp3",
+      "sha256": "1f9e685d74659c1ca33d0790f98e4293fc7dec96bdf0d31a960a9a9b0093b36b",
+      "bytes": 11088,
+      "exactText": "wir sammeln"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/0886563561d7d30d973e.mp3",
+      "sha256": "163febf5502565d5b6006e0d238cdd6bce86b06ebf9753c280239c7fe6e4c28c",
+      "bytes": 11376,
+      "exactText": "ihr plant"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/08f271887ce94707da82.mp3",
+      "sha256": "2ac650652245f932acad30da20e2dac5be29d35dba91d86de33f3c998e9b5975",
+      "bytes": 7776,
+      "exactText": "M"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/0c943625493e78ee73e7.mp3",
+      "sha256": "fe6fbcffcb74081d857177978867a902ddd10e7f9417f2fff6b2be72e7c364c7",
+      "bytes": 11376,
+      "exactText": "wir lernen"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/0dcdef25c8cff5a0042e.mp3",
+      "sha256": "6b358ea1ed426454ee0b6f44ef7078695aa61744c66154891c391e3fab124311",
+      "bytes": 11520,
+      "exactText": "ihr studiert"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/0eba6f6bbaaa5b616053.mp3",
+      "sha256": "4250f410403e28915310f5991d7a9af206d1f7a6758576b51c082e80daa59f0b",
+      "bytes": 12528,
+      "exactText": "wir arbeiten"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/0ec4ee9dc510c4e13f18.mp3",
+      "sha256": "85c68c5edbd072528b1815483cd2127851a5a69a9410b197bfb403198e061a10",
+      "bytes": 10656,
+      "exactText": "er sammelt"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/0fa7d1006e9255e888b4.mp3",
+      "sha256": "dc2937414d6ca8e218e5100e8e0f80ae9c17815c4a0f23c9fe7906f1e25e3a10",
+      "bytes": 14256,
+      "exactText": "Was bist du von Beruf?"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/1382c150959d74cb928c.mp3",
+      "sha256": "72b780ae603057c4cb893aa50c587f2f18e3a76c16eae7289b592f007c528e74",
+      "bytes": 10944,
+      "exactText": "er plant"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/14fbd7e7dee5a7dd79d0.mp3",
+      "sha256": "798ecfbc0d92f6a5ea3aa0b4e645f1487fe5f831e5c31f38b871f81afde18430",
+      "bytes": 12384,
+      "exactText": "sie arbeiten"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/16b36ea733151b5ec18f.mp3",
+      "sha256": "984ad21c7a4444d2e319e385716720fa4f6c78c4aa882226754bfd592d986a60",
+      "bytes": 10512,
+      "exactText": "ich komme"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/188f6170247fada51db5.mp3",
+      "sha256": "6858c61a2af15967495ba9582eacbbb0dfdc33a2f743e1d3620e86c2a7ad3e79",
+      "bytes": 10368,
+      "exactText": "ich mache"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/18f5384d58bcb1bba0bc.mp3",
+      "sha256": "00dd3251a6d66375ef8f7efd2b1468ab6181b4d2c9375d67b382bdbadd46244d",
+      "bytes": 10512,
+      "exactText": "Y"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/1990ca0bd26dac277b94.mp3",
+      "sha256": "0aa427b38dafd77a40c448c79b96eccbe0c59d7a3a15b849131fedb543d37e8f",
+      "bytes": 13536,
+      "exactText": "Was bedeutet das?"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/1eaceba81ec0b2c7a5e1.mp3",
+      "sha256": "fd15a10579a2b27ca2fd4eb078ac3553b1c8ae41f299454717f8e1cb64da5d50",
+      "bytes": 10368,
+      "exactText": "sie sind"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/1fae996e37d854a8b365.mp3",
+      "sha256": "7aef60739f640d9fdd380ef9e6cb5a3cf16637c3f1ebf2b4ac252b8c2e837f1c",
+      "bytes": 10800,
+      "exactText": "sie kommen"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/20ade717e6598aa548f8.mp3",
+      "sha256": "247dba8191ad67d25e6fb32c03b5b256b0608c406ff63603ea7ae28ebd0e3e05",
+      "bytes": 10080,
+      "exactText": "ihr geht"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/20b1a9fd018499904ad6.mp3",
+      "sha256": "2bea5818b9369c1e637c341919483a9b7504a2fb4425b3b482a4e21ee325d005",
+      "bytes": 11520,
+      "exactText": "sie sprechen"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/20c6f01cc34d6860b9e8.mp3",
+      "sha256": "3fb0b194890330142edd5c1565ac7f163ddddcaacb5ab349cacae5f740931d48",
+      "bytes": 10656,
+      "exactText": "du gehst"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/226ac5ac1dd8fbf51f65.mp3",
+      "sha256": "0e182fcf59c5bf45c41a9596a2768a7bd4b9958d74e9690fe39a0a8f79f18193",
+      "bytes": 9936,
+      "exactText": "ihr lernt"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/22e7297b10373a919ef2.mp3",
+      "sha256": "46e0d057ef7d9635ec44b1c5ab4b15ea622506d2583ee7dbee47645cf6b19184",
+      "bytes": 12960,
+      "exactText": "Wie alt sind Sie?"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/236586a319fa8893ad45.mp3",
+      "sha256": "7f0175edc7437067881d8007d5c14550e995b0ba645a90526d76ba2992379cf8",
+      "bytes": 11952,
+      "exactText": "du studierst"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/23c9a3ab6616ac1c2c91.mp3",
+      "sha256": "e8014bf20c002c4ec1ca231746b6c6765bdf85be000d7905d09fc6c5859e7933",
+      "bytes": 11088,
+      "exactText": "sie shoppen"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/23fad1ff066e571f3c2a.mp3",
+      "sha256": "0bb66f6b6a25ad58d8452a9782c1716229a8cd37988c61b2cac4c6d5b2596c27",
+      "bytes": 10224,
+      "exactText": "ihr wohnt"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/267c66068097aabf973e.mp3",
+      "sha256": "0e14fd1ca8da9a74d1342e8434a0709c6b5e531e58d4d4e269b949ef3f604619",
+      "bytes": 10800,
+      "exactText": "einhundert"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/26f7972b591c750ff244.mp3",
+      "sha256": "1f337c7345fb6c33c27d2e48c9a64a093dab640c8623cc3df7539dffd65d772e",
+      "bytes": 13392,
+      "exactText": "einhunderttausend"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/28aa6b629110164818dd.mp3",
+      "sha256": "0628455fc10f8bf66c282b028848e9e919388f17d6462fc9713cfb46c774e729",
+      "bytes": 10944,
+      "exactText": "wir leben"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/2901821d21368d01867c.mp3",
+      "sha256": "418c5968a34270da07ad25de3510cba897329b6c6a0a455fefd3795b44bdc963",
+      "bytes": 11088,
+      "exactText": "wir shoppen"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/29766d7de2b67829ef48.mp3",
+      "sha256": "28a734f7aecc45c2259d6d86e02e09b7bfcf48c695ca5124c78a457dcdf0be41",
+      "bytes": 10800,
+      "exactText": "mein Kind"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/29cf011cf02c0b645496.mp3",
+      "sha256": "75859e618747e15efdffec33e3fc2355b9ae6e232ec3fb8fad05d0200b9d4052",
+      "bytes": 9648,
+      "exactText": "er geht"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/2d7d7b3015c4e924b841.mp3",
+      "sha256": "1ce5766a3c7385ad7210fa8a3e8941e446a7f6a5679c9465ae3fe5af91860afc",
+      "bytes": 10512,
+      "exactText": "du hast"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/2f4f649fa93afd99ca7b.mp3",
+      "sha256": "e2d4c16a035780e08cccbdd9f570ad0f577578296940e91dd69ae9eb4ae2520e",
+      "bytes": 9216,
+      "exactText": "er ist"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/2fe5ca1c1a3d50bd92f1.mp3",
+      "sha256": "d2aa9b615582de9403e65218bb4df8aef607b3b3e85705af9a964e1c573c81e1",
+      "bytes": 7632,
+      "exactText": "Ä"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/3043db1997cdbb407b3c.mp3",
+      "sha256": "ac1defe6db733461b8f2ca58c82bcf495fb61aa71d23fad34ffcc97e5dfe9650",
+      "bytes": 10368,
+      "exactText": "er heißt"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/30d8d08d097edc5ba322.mp3",
+      "sha256": "b5fbf56130c3982969566d8e4bc7c66f5d267191126b5a0cdd0fae229d30ef0c",
+      "bytes": 11520,
+      "exactText": "sie lernen"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/333e0a1e27815d0ceee5.mp3",
+      "sha256": "7976cb82bb852fb7642b406111076cd6802ae66b172e4ef77ff75dfd3148fbf8",
+      "bytes": 8208,
+      "exactText": "G"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/34e4c8c24f16870240ff.mp3",
+      "sha256": "5d52fe32256027956ed2a2a5feabc0f7481411fc24c3af01a59f16c03c0ece0f",
+      "bytes": 13248,
+      "exactText": "er lebt zusammen"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/36a7818f9d4450778cdc.mp3",
+      "sha256": "c880173a015a01be99d7b97dc71216a8aa4292a8d4d947639cca286c7687f2cb",
+      "bytes": 9936,
+      "exactText": "er shoppt"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/384be15ce315128433c9.mp3",
+      "sha256": "42d513b58eb095559909dea325adc15ab6e608c72d1a73da2928e18785a6c6e1",
+      "bytes": 11232,
+      "exactText": "sie leben"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/3d47c1a0e22c8104459f.mp3",
+      "sha256": "8b29a94394300889ebe276a762cba29e8b3b0ea0b583aea539c53d23d18c9c80",
+      "bytes": 11232,
+      "exactText": "meine Mutter"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/3e32f329023f4b01c247.mp3",
+      "sha256": "21862d5aca46ed84221ab6a13c90513a3723fe73c88813a655b435e5c9ee6b33",
+      "bytes": 18576,
+      "exactText": "Ich bin einundzwanzig Jahre alt."
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/3f39d5c348e5b79d06e8.mp3",
+      "sha256": "c74142f9e6c64efda1ddbc847e3bc55b9e0ea1f64b0a1aae95bccab852328892",
+      "bytes": 7920,
+      "exactText": "D"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/3f9d298bb0e91459e2a7.mp3",
+      "sha256": "fe127eb2d06ac64d661dd015fcbff99c0bc5c6591368d2cdc04604e5986d20a6",
+      "bytes": 12240,
+      "exactText": "er arbeitet"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/4000ddf9f15272ec95c7.mp3",
+      "sha256": "9def24fbb4ff4db664ef8ffad501867998c10a984b33e4bbec4041bde46ae3fa",
+      "bytes": 12240,
+      "exactText": "Wie alt bist du?"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/40233a66dd1eeb6862db.mp3",
+      "sha256": "2fbf6f8310ac93c491bb9b6184ffe21aa529a65ba6ac9c2aab38ef4dd7880858",
+      "bytes": 11088,
+      "exactText": "du sprichst"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/4063cdfd1fe5052c3466.mp3",
+      "sha256": "06437b1a663e4d7a12a6a0c37d006c117acdcd2a936a9786178e051330ecf15b",
+      "bytes": 9792,
+      "exactText": "er macht"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/4306714b7397973302f3.mp3",
+      "sha256": "5899763e645ac0a1ae2b16f0a48328576adad49b5818455edd556a12678723b2",
+      "bytes": 10656,
+      "exactText": "du wohnst"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/431d441b57ccb9337bfd.mp3",
+      "sha256": "95c4e96f0e29083594ae3f796cb262210ea2b972b68b5fbc525957d3fd6b15bf",
+      "bytes": 10224,
+      "exactText": "ich sammle"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/446e3c1626e99a1bfc6e.mp3",
+      "sha256": "6bc952fb41ccb61b7fab997e7887f20bc0dda8e9e2c36e341f2c5051a9976439",
+      "bytes": 21168,
+      "exactText": "null, eins, sieben, sechs"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/44bd7ae60f478fae1061.mp3",
+      "sha256": "81b970a789d0c296c94dee5d5476a3ccaab1604ef9298a1ddd721a599b8f2b9c",
+      "bytes": 7632,
+      "exactText": "H"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/45d5de033e9c9c5faf43.mp3",
+      "sha256": "7caacc620342aa16fd1dfc49ee443174a8ab808beb1cb2a73bcb187ef0e0c825",
+      "bytes": 9936,
+      "exactText": "ihr shoppt"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/468ebd85f775e85fde6e.mp3",
+      "sha256": "46fd0f4d4be15a1ddd3dc8ae42b3aa097f750cc256e21abb74526f9eed733c9c",
+      "bytes": 10656,
+      "exactText": "mein Vater"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/47fb541d84de6710fe56.mp3",
+      "sha256": "ae5f68adb5ea5ac742674662b79380fddf4e3383dfba0ecd2f77e33c7b44f7f7",
+      "bytes": 13392,
+      "exactText": "Wie schreibt man das?"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/4acb8e52cc4278d46bfd.mp3",
+      "sha256": "782efda358194888328f543d7fb30205c01108b6d88243e11c974b6b2a138ec6",
+      "bytes": 9936,
+      "exactText": "ich wohne"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/4ae81572f06e1b88fd5c.mp3",
+      "sha256": "2ed51b5c960b4c4a7659d20b17c8814ab9eb23f8f5502a580fc6963c308c7526",
+      "bytes": 8064,
+      "exactText": "Q"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/4ae9af1b4ebd2eb255e8.mp3",
+      "sha256": "84ac989ecaba441d6da7e601b4775fc0e2f749ad6cea4625b916e6eabd4822db",
+      "bytes": 11088,
+      "exactText": "wir gehen"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/4b68ab3847feda7d6c62.mp3",
+      "sha256": "55ab8dfdff29fdc44fcdbdad6b05f9ac8729e70e981b79732bd63d34e9f22a6e",
+      "bytes": 8352,
+      "exactText": "X"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/4ba4ce4fa1aed2a2c827.mp3",
+      "sha256": "dc0d8ccc7aacdc1b1ebf35ba55f7906173eab62f38a9c1bb0c57caf5cbf7bfa3",
+      "bytes": 10224,
+      "exactText": "du shoppst"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/4c075bdc8d37eae20880.mp3",
+      "sha256": "2ede9b7ff005fb6828507c47dd1b707b97571d943e5d2d08b49a12de61c1a2c4",
+      "bytes": 12240,
+      "exactText": "Ich bin Ärztin."
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/4c9d17beb76ac0ff8a4b.mp3",
+      "sha256": "2270a7a54be3694ba687d550d5438bc27f03b25804442a4bf65a2409267214cd",
+      "bytes": 11088,
+      "exactText": "sie sammeln"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/518602b71f856b0ddc3a.mp3",
+      "sha256": "920dc208825198909727e31d58bd48b992cc0dcf9b08c7357fa278925b9d444a",
+      "bytes": 10224,
+      "exactText": "ihr seid"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/559aead08264d5795d39.mp3",
+      "sha256": "1167094b3b932417d8b21530483da78cd8e26aa712f54837584066fb25f0fa8f",
+      "bytes": 7776,
+      "exactText": "A"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/55bc73c60d5aff348386.mp3",
+      "sha256": "d080a549afc1525d39879aceb80e6d38a82798fa17ca7c9aa4fcc71aae41d16f",
+      "bytes": 12384,
+      "exactText": "du arbeitest"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/5c62e091b8c0565f1baf.mp3",
+      "sha256": "cbde32c7cf16b34660dd5fb4257f291bb57086462f1c3820a28c0d0fee809c7d",
+      "bytes": 8064,
+      "exactText": "P"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/5ef49635921d74448ddd.mp3",
+      "sha256": "274893040fc48342614dfeaae8c51776c533fc018f05fbdd8fbd0a6a77b611d8",
+      "bytes": 12960,
+      "exactText": "sie studieren"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/607d8fd68fb9a460e216.mp3",
+      "sha256": "4327eb497c6b66b693c99b940958560930d4a51baeb5e488fdaf1c495aec9543",
+      "bytes": 10656,
+      "exactText": "du lernst"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/6196048c0864dd5a75a8.mp3",
+      "sha256": "8ef58dec8d5feb61b45e28fafd2314ba28dc3cecf628cd6db08e121525a37d8d",
+      "bytes": 10944,
+      "exactText": "wir machen"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/65fdb7af19437b974355.mp3",
+      "sha256": "61c9484eaea34d725d1d929dcd2b9fe16a8e6e4e1a6d5ec3503c20a0dbdb9b93",
+      "bytes": 9936,
+      "exactText": "ihr kommt"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/662c21f930ee4c5fd964.mp3",
+      "sha256": "248a538a34b63e202ac06e507627254465e28bcfbb48daa57c5f89ca8a4a0f48",
+      "bytes": 12816,
+      "exactText": "Was kostet das?"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/68748b0b854147407839.mp3",
+      "sha256": "1771b329f8849d21b811d431f217d6120ced8d20ceab422f488186452b711137",
+      "bytes": 10656,
+      "exactText": "du lebst"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/6a5cd5198a6efe495f7d.mp3",
+      "sha256": "aaab10d90d05028d49faf0881bf5b2fd4062d7cc86af812d3f66235635f6a47f",
+      "bytes": 20160,
+      "exactText": "Ich spreche Persisch und ein bisschen Deutsch."
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/6b23c0d5f35d1b11f9b6.mp3",
+      "sha256": "5ba32f39616891151350db460dbf31de8ddc745fc790c76bdd1dfb1098dfae87",
+      "bytes": 7920,
+      "exactText": "C"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/6b7885bb5d079ac2d5c3.mp3",
+      "sha256": "3bcc3479e4ed27185e6f22d5980b19ad11f8d4f724c7ba16fcf9c08f2f5baafd",
+      "bytes": 11520,
+      "exactText": "eintausend"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/6bb34d3e778a86d0a3b4.mp3",
+      "sha256": "d16b0ebe1979291fc0489b1904a346c44eda44c6a4a7b3c1463c0c62027d8e07",
+      "bytes": 11232,
+      "exactText": "ich glaube"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/6da43b944e494e885e69.mp3",
+      "sha256": "d0d9038c80baf5e44570361561c7c8cb63798905391335362e7b030c03548c3a",
+      "bytes": 8784,
+      "exactText": "J"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/6ef39d0ce0e2dc10c64e.mp3",
+      "sha256": "93a6e094331ab86a035d7b9cfefd718af408a8fee648f316dc49bff13b13a239",
+      "bytes": 10224,
+      "exactText": "du machst"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/70ee61ac1afaed7a2889.mp3",
+      "sha256": "9ad5657c27ed88fb5e2084ae08842c6e5f24eff4f79f5188e5e96486f8a732cf",
+      "bytes": 10656,
+      "exactText": "ich heiße"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/72cf34c0a43f4fa4da50.mp3",
+      "sha256": "ac13a05643b4b98f97e8533c3308768c5ada4c0ab55b69bd19fb06a49b6dfbbb",
+      "bytes": 13680,
+      "exactText": "ihr lebt zusammen"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/72dfcfb0c470ac255cde.mp3",
+      "sha256": "a352a5d6e385f76f02df043d170da698e98a784b8895d500c70604c510d184dd",
+      "bytes": 7920,
+      "exactText": "L"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/7450d93b34535009b30f.mp3",
+      "sha256": "7b5f252f34e1fc1fbcefdba587b61a025269e507a6cac4c02a653a531edc293c",
+      "bytes": 11088,
+      "exactText": "du glaubst"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/74e7d242a19f7c58a072.mp3",
+      "sha256": "4be7052450f5390eb218faa668cb8dfe022d302938f2289d3700649b600eeb9d",
+      "bytes": 14256,
+      "exactText": "Langsam, bitte."
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/7552c138de38f56612a2.mp3",
+      "sha256": "c4068367e00414ba6b6c16a65f34d2efa90397e0fd316eec7b9c2885eff93537",
+      "bytes": 10512,
+      "exactText": "ihr heißt"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/772f36c14cb17ee9e561.mp3",
+      "sha256": "c5d45d3fa1aeee43f390363f58bd1aa9c274545ae9e7ff1882180a88ab439e26",
+      "bytes": 10800,
+      "exactText": "ich plane"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/79467d40ddd40a8093f3.mp3",
+      "sha256": "363c023904ecb140945612fc8f01a856d5de2b3d90170488fee707e9fdc08f10",
+      "bytes": 10512,
+      "exactText": "ich shoppe"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/7ae10cbe61bcfc65bbb4.mp3",
+      "sha256": "0d8282edaddfc9bb32357207a4c63c64d52004914a023b2e6da40d4a73240abc",
+      "bytes": 11376,
+      "exactText": "er studiert"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/8191b5f67c42bcde9cad.mp3",
+      "sha256": "f49ffdaa9d3ce9200ee4b3856f49c7489c1a3966aead949bc04c90aebd4562eb",
+      "bytes": 10224,
+      "exactText": "er kommt"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/86be9a55762d316a3026.mp3",
+      "sha256": "fc57a9ab17937cae5d7975a07ddee464a70964e8bad5b85b67f47ec2770152d2",
+      "bytes": 8496,
+      "exactText": "K"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/88513427e14febf6fd90.mp3",
+      "sha256": "45c767951b1a18b7ede3fa4c1a19b889be87d5b473e78e51acace93359580a4d",
+      "bytes": 11808,
+      "exactText": "sie glauben"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/899c99dba1ca59593542.mp3",
+      "sha256": "702e12163bfe1d6cec16acb922ddceedaa5fdb33ecb6c566bf62d492e5df3431",
+      "bytes": 10944,
+      "exactText": "du heißt"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/8c2574892063f995fdf7.mp3",
+      "sha256": "25e4fdaed8fa71e0c15c1bd8d380216b5c4ccdf6d1eec4760d48d125126bef45",
+      "bytes": 7920,
+      "exactText": "R"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/8ce86a6ae65d3692e730.mp3",
+      "sha256": "7e74ce2ebeb8c335141c0011ddcae37904bc81d3dcd42aa1c317573f30ce0455",
+      "bytes": 7776,
+      "exactText": "N"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/8db8d09464d021f148be.mp3",
+      "sha256": "9554a00ff725746b0b2c998d78c34668a49981b8201512de50973f7acb3f9328",
+      "bytes": 11376,
+      "exactText": "ich studiere"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/8de0b3c47f112c59745f.mp3",
+      "sha256": "202d12d4a931cf2cb1a86182ebc346a58c8673ec5c3c0b4b34ee8720a3b69d78",
+      "bytes": 7920,
+      "exactText": "S"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/8df1f331e26b9355eb66.mp3",
+      "sha256": "8d456db98484416982698e2e7a1f97ea4bee365328f9443359aa45b72f5981e3",
+      "bytes": 9792,
+      "exactText": "ich habe"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/8e68e264cfdce9a84368.mp3",
+      "sha256": "cf391e04e4e733dbb2b027d6c91b3c8af785fda0811043dc390ea989d84f747f",
+      "bytes": 12096,
+      "exactText": "sie planen"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/913d7314efae6e928bc4.mp3",
+      "sha256": "338e26b5e3521a9d72d9f2cca89a831e885352af3dfcd7661ec9587e7ba1c0a7",
+      "bytes": 7776,
+      "exactText": "Ü"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/91b8c604acda335b951a.mp3",
+      "sha256": "2dd8c4c037122436e3f68a94afb920343864d12cab94459e11ad861742e4d8f4",
+      "bytes": 10656,
+      "exactText": "er spricht"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/9844e6053589ec46fc0e.mp3",
+      "sha256": "f480136baeeec799754e9815f4b43a753071bd4b21ddd6fbda16e0ef4f83d532",
+      "bytes": 11232,
+      "exactText": "wir wohnen"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/9a4153ed9bdf22fe5c24.mp3",
+      "sha256": "601051cfa23d8510bb459ed7282f6db227b6c154e066d81e7fe11b935ce58e33",
+      "bytes": 11088,
+      "exactText": "wir heißen"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/9a923113d43472f53742.mp3",
+      "sha256": "fa71cebe529739512e22060d8271a0a706528eb633feba96282d36e43b5459cd",
+      "bytes": 11520,
+      "exactText": "sie wohnen"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/9ce4ec941795856572a3.mp3",
+      "sha256": "f92a74919625ec74d78f4f3ae4c51f6f41430888039277a21b00ad2a674214e1",
+      "bytes": 10656,
+      "exactText": "wir sind"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/9df209960a726936a3d5.mp3",
+      "sha256": "0d6fe3233b0663e4c705ebd8032679e872533cc9c9b412528a26404142575907",
+      "bytes": 10944,
+      "exactText": "wir kommen"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/9fc637cf6414abf2e037.mp3",
+      "sha256": "2b8c4e3866a3bd3d08afbffdd685ff85c35c8cd1c782959619a23416a5b2727a",
+      "bytes": 10224,
+      "exactText": "er lernt"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/a0769ae9d9921e630cf9.mp3",
+      "sha256": "906687c7fd997b45d2519e54f559c4f617197cd9155251f92bc221d002c5fd01",
+      "bytes": 12096,
+      "exactText": "ihr arbeitet"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/a1e1057546b3816a711f.mp3",
+      "sha256": "3d573f895832f029a0c7892726601abae4928b9763ed021106c5bbd7af79dfcb",
+      "bytes": 9504,
+      "exactText": "ich bin"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/a25513c7e0f6eaa80a33.mp3",
+      "sha256": "85f2a38f52b7db2850bb46cbf6218cc2397c4b0a9097af882395fd0dc46f2766",
+      "bytes": 7488,
+      "exactText": "U"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/a83dd0ccbffe39d071cc.mp3",
+      "sha256": "71eff457e5b8d3b7b226966afb89bd3b025d3a90f1e6765971c4a9c9a26dcad5",
+      "bytes": 7344,
+      "exactText": "I"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/a9f51566bd6705f7ea6a.mp3",
+      "sha256": "dcc0b0de69e6ecb52d704b74f30c8e8bcca7aa640e2480c56954fc7d95f37cc0",
+      "bytes": 7776,
+      "exactText": "E"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/ae8f3419f2285fc482b0.mp3",
+      "sha256": "ad0312df7f1096b12fab2767d71af9e0b3f54ea30c9f7ca7be9719d689242e7b",
+      "bytes": 7776,
+      "exactText": "Ö"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/afacbd4b896d5ebe73bc.mp3",
+      "sha256": "54946e2a321d2dd8425a2d8c3953250e11a7303b2fb518055086975d999976f9",
+      "bytes": 9648,
+      "exactText": "er hat"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/b29302b7fc9a4ae7ef70.mp3",
+      "sha256": "eae45762c32b39d902f298b853908965611b215668660b455301fef535e6dee7",
+      "bytes": 10368,
+      "exactText": "sie haben"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/b4305623832668a3e5fc.mp3",
+      "sha256": "8c91da6255bbbae7cfc252dec55a46e92b582b7560e19c0adafc8d93193e82c7",
+      "bytes": 13104,
+      "exactText": "wir studieren"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/b49428c8588c19e9726c.mp3",
+      "sha256": "487226b9dcb1871270c43a4635643b768f48de79fc20360602549e7a5ad1d7d6",
+      "bytes": 11808,
+      "exactText": "wir glauben"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/baf53d60815d497c496b.mp3",
+      "sha256": "3b8a4b4ef893b1bc5c77a5ed65720ac4a3933b37622c6810c1e7a8858600cee1",
+      "bytes": 10656,
+      "exactText": "er glaubt"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/bbeebd879e1dff691854.mp3",
+      "sha256": "b9b0460177b86a1ef6ce0457327d873378cdf0e050007224de705c3060cf73e6",
+      "bytes": 8352,
+      "exactText": "Z"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/c33a2e93e40f91b06daa.mp3",
+      "sha256": "1dbea559de68d467b52fc7635c8ed2a2bb688ed7c2e6c45497916f004e058cfe",
+      "bytes": 11952,
+      "exactText": "wir sprechen"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/c4694f2e93d5c4e7d51f.mp3",
+      "sha256": "356413bc78e928aecad50cd34f9b762fecef962ba1c6dd760ffaacfb8415cead",
+      "bytes": 7920,
+      "exactText": "O"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/c5c4f17bb2ff6e2d1662.mp3",
+      "sha256": "f5ca80a53e13b8fba8327df86ab2bd5125b1e949f2f8adc0fb5000fc7810536e",
+      "bytes": 13248,
+      "exactText": "Wie geht’s Ihnen?"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/ca95a5015ddeb5a72d9d.mp3",
+      "sha256": "b5d3dd3fecbd1e772c97f68a95bca7b9e71de860352f6232e6b30686ad1cc49a",
+      "bytes": 10224,
+      "exactText": "ich spreche"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/cd3a7e92a9114307055e.mp3",
+      "sha256": "583f34f55e4eded0ca75933c2693b8cd1a81308619815b5fcdfa50ff9015ba3a",
+      "bytes": 9648,
+      "exactText": "ß"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/cdc830fbf8711aa258a9.mp3",
+      "sha256": "e7efa1c2d279352fc6f9c4c91bbac5cacf8cd0cca728160bd0196938d29a1a9f",
+      "bytes": 9936,
+      "exactText": "ihr habt"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/d0b439088b76217c30d3.mp3",
+      "sha256": "7bebaa475b4e2d85b8e0f3d43e4fbc695060a94deee8165c04ef41762a4d9d40",
+      "bytes": 9936,
+      "exactText": "er wohnt"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/d45bc11e3df38723340e.mp3",
+      "sha256": "2d13d3b7d15cac0bb4e4241fa6243255e185059eccf6a4191c506ba0c71cc579",
+      "bytes": 9792,
+      "exactText": "er lebt"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/d5f88ab590af5ba79957.mp3",
+      "sha256": "a63e5f948dda75ecfb8d65c424cb2fa2373d0db65ddb11663317cfea7b6d420d",
+      "bytes": 11088,
+      "exactText": "ihr glaubt"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/d62c50ae889d1bc494a8.mp3",
+      "sha256": "103d13f92bfc9df04382d116949df3560cce254e5c719e64226ba0d7b1137fc1",
+      "bytes": 11520,
+      "exactText": "du sammelst"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/d9c5fd8c086dec2d8873.mp3",
+      "sha256": "57d7f7e15101734118aceabf020c9d18042242a672140829b265706b0583a5ee",
+      "bytes": 9936,
+      "exactText": "ihr lebt"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/dd163303a97edb7e8a75.mp3",
+      "sha256": "bb12ee3cab682486e29e04dfa4b286940bc5df05c95900c1f976a79291ff907f",
+      "bytes": 10656,
+      "exactText": "sie heißen"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/dd3c8c367bbc1a614251.mp3",
+      "sha256": "3f392ecf9913d48e034bed944de79000560563de9b95c24bd4b99bf9a4bf3595",
+      "bytes": 14112,
+      "exactText": "wir leben zusammen"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/dd5276b8756351462733.mp3",
+      "sha256": "74f00fe563e58bd9179479040c9813f66c50c47665b77c4da5f579cb182c0b3e",
+      "bytes": 10656,
+      "exactText": "du kommst"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/dd8a87e7196b4e2f2480.mp3",
+      "sha256": "a55eabaeab972b34846399b178516804fffed2b90f10eb04fb679499b30ef57b",
+      "bytes": 10368,
+      "exactText": "wir haben"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/dde94a7abaaab3b15ae7.mp3",
+      "sha256": "f6762dbf0eacd298bfee5b760a7438b935b9927f4eba6be02089152e23b5dbb7",
+      "bytes": 13968,
+      "exactText": "ich lebe zusammen"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/de359d5e2c734a1977c6.mp3",
+      "sha256": "3c403c1c5d46a1f7f8240dfd94483ba7902c25ec1b2f38656689311ebb543d6a",
+      "bytes": 12960,
+      "exactText": "Wohnst du in Berlin?"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/de5a6f78116eca62d7fc.mp3",
+      "sha256": "854f2750c933a98340f9558c8a99a71786ba8a8d6f4f401e6514319237ebc974",
+      "bytes": 8208,
+      "exactText": "V"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/de7c4bbd6fddc537f0a5.mp3",
+      "sha256": "76029e7e947234bc3df737c92edb258c6d7b0d1908bca5c2c8c4e6eb09d82580",
+      "bytes": 10656,
+      "exactText": "ich lebe"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/df0483843d5f3b0c0241.mp3",
+      "sha256": "a907d747297f4ae71e46daaef5f3281817ea3c5440021ebeb742315360aa966d",
+      "bytes": 10656,
+      "exactText": "ihr sammelt"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/df7e70e5021544f4834b.mp3",
+      "sha256": "51773a9508e898ef840f3135ff32d93708c4a2ea5883319fe6260e967a0b324f",
+      "bytes": 8064,
+      "exactText": "B"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/e07e78dc8d0930d29cff.mp3",
+      "sha256": "7d7256d8429872eafd09970a79572fc92aae0cd17d3d79642beefa0f4225cc40",
+      "bytes": 12240,
+      "exactText": "wir planen"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/e6282cf9be8c7ae16614.mp3",
+      "sha256": "37a34827d60fe5cfd0e071aa1712d6587a327634f4b9cda331de33a70a40ea07",
+      "bytes": 11520,
+      "exactText": "ich arbeite"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/e632b7095b0bf32c260f.mp3",
+      "sha256": "a4283836ca6485e8fc4c997789c5b94cdd1ebbf03a7e55e19791e2cc8ad4c9b0",
+      "bytes": 7776,
+      "exactText": "T"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/e77cf338c3f6f2816b46.mp3",
+      "sha256": "59ac26235a8b41e02664ae0c89df099ed3ded6d050732ee7313ed07a69686ccb",
+      "bytes": 12240,
+      "exactText": "Wie heißen Sie?"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/e8e1ac700a44fc7a581b.mp3",
+      "sha256": "c4132765f5c77bc8149e9f78ae7928d7592ee6afd61f9ed5c4aafcde0f6fea70",
+      "bytes": 20880,
+      "exactText": "vierundzwanzig Euro fünfzig Cent"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/e90f7e1a0fa3923d244f.mp3",
+      "sha256": "d80b8ef6ccd87cf69588395107e41267f61214a089f2da255ee89ef46fbc87f9",
+      "bytes": 11088,
+      "exactText": "ihr sprecht"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/ea9be7b8edcabc5eb83d.mp3",
+      "sha256": "e4579e8925d029408c6d8b2c641ef62f318860c2626b5c556b131fe9f39e0eb2",
+      "bytes": 11088,
+      "exactText": "du planst"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/eb740a0d476fc93ca30b.mp3",
+      "sha256": "9c137136c5ad8f52b282234b76555c764906ccd63b3bee6a764ff595fdccda2f",
+      "bytes": 9792,
+      "exactText": "du bist"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/ec9755022841fa827ea4.mp3",
+      "sha256": "40c1c71af770a52f192b44bf23ab5f65e3b9353c122feac8f5244440df3f5e91",
+      "bytes": 13104,
+      "exactText": "du lebst zusammen"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/f1f0f410b3ac9e954ada.mp3",
+      "sha256": "1b901e666d43250b4113607059c94781890a38d01f654d25d8262093c843112a",
+      "bytes": 11232,
+      "exactText": "sie gehen"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/f299189075c68577ada8.mp3",
+      "sha256": "18bafb208a6259f18e3e25c40210e972997d9742dbe7bb73ecc052ef1b45340e",
+      "bytes": 16848,
+      "exactText": "Welche Sprachen sprechen Sie?"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/f44bafcab746632b0bbf.mp3",
+      "sha256": "ae4f6512add6ff61843a0aef5e2c7812df81e8ceb0354e2b73cb93044e7add54",
+      "bytes": 10368,
+      "exactText": "ihr macht"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/f50e1b28c71e67064258.mp3",
+      "sha256": "794c70fba0540f4804f3e12ad47241feefecbc3ba6ff54f5c24bd9aba7669f4f",
+      "bytes": 10800,
+      "exactText": "sie machen"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/f5daa493ad326d4c21db.mp3",
+      "sha256": "8ef69a87891e5ab5ace2e02e1ef84b779a45e960129d0dd7901be163fffb509d",
+      "bytes": 10512,
+      "exactText": "ich lerne"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/f652b5c6cf55016fd1b6.mp3",
+      "sha256": "f9071a54cf7dc234a4ef864088d2fd683c560646c1fae4752d3094263dae1486",
+      "bytes": 13968,
+      "exactText": "Ich verstehe das nicht."
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/f67ab10ad4e4c53121b6.mp3",
+      "sha256": "6cdb5dbc26cbf88f6c4807d264df9273992762e4c43a22d521dbbd8fd14f0b86",
+      "bytes": 7920,
+      "exactText": "F"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/f7b0746e7e3640eeafb4.mp3",
+      "sha256": "180cc9fb51809b6813dfe1cfbe29186d042c3e03f618a1b71a62638e11238a06",
+      "bytes": 9792,
+      "exactText": "ich gehe"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/f99ecb0688a7c662ed34.mp3",
+      "sha256": "458b024fa19ee518ee9aa3ffb769b31030a587f74284a89a5ce18fd0e10d7098",
+      "bytes": 14112,
+      "exactText": "sie leben zusammen"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/fa7c2c0588e3fb9ad5b9.mp3",
+      "sha256": "3750827ad3f5e65d3bac91a4f746a901ad44fee7ca2b8e4537be841d733c740f",
+      "bytes": 13536,
+      "exactText": "Ich bin Ingenieurin."
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/fcb5f40df9be6bae66c1.mp3",
+      "sha256": "cb8132794b569c9a254e4582668a70584d1a1498e9c80d2dc756c6931c459649",
+      "bytes": 8064,
+      "exactText": "W"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/fec17b90a93577c6ecb9.mp3",
+      "sha256": "0d93f8e822d7773b9d3e9bd299310394ab89cbd37be47e027f053e623a7c61ef",
+      "bytes": 13248,
+      "exactText": "Woher kommen Sie?"
+    }
+  ]
+}

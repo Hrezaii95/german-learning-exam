@@ -1,4 +1,5 @@
 import Link from "next/link";
+import {MobileNavigation} from "./MobileNavigation";
 import type { ReactNode } from "react";
 import {
   shellCurrentMatches,
@@ -33,13 +34,6 @@ const PRIMARY_NAV: NavItem[] = [
   { key: "settings", href: "/settings", label: "Settings", enabled: true },
 ];
 
-const MOBILE_NAV: NavItem[] = [
-  { key: "dashboard", href: "/", label: "Dashboard", enabled: true },
-  { key: "book", href: "/book", label: "Book", enabled: true },
-  { key: "hubs", href: "/hubs", label: "Hubs", enabled: true },
-  { key: "saved", href: "/saved", label: "My review", enabled: true },
-  { key: "settings", href: "/settings", label: "Settings", enabled: true },
-];
 
 /**
  * Regular `lernen` product motif: outlined stem + `en` ending in the regular
@@ -70,7 +64,7 @@ function NavItems({
   current: ShellNavCurrent;
   variant: "rail" | "top" | "bottom";
 }) {
-  const items = variant === "bottom" ? MOBILE_NAV : PRIMARY_NAV;
+  const items = PRIMARY_NAV;
 
   return (
     <ul className="nav-list">
@@ -155,9 +149,7 @@ export function AppShell({
         </footer>
       </div>
 
-      <nav className="shell-bottomnav" aria-label="Mobile">
-        <NavItems current={current} variant="bottom" />
-      </nav>
+      <MobileNavigation current={current}/>
     </div>
   );
 }

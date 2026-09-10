@@ -1,0 +1,11 @@
+import {writeFileSync,mkdirSync} from "node:fs";
+import {resolve} from "node:path";
+import {loadWordCards} from "../platform/apps/web/lib/content/word-cards";
+import {cardsForSheet} from "../platform/apps/web/lib/study/sheet-cards";
+import {grammarPatterns,conversationFrames,verbModels,spokenVerb,germanNumber,germanPrice,spellingLetters} from "../platform/apps/web/lib/study/sheet-topics";
+const extras=["der Lehrer","die Lehrerin","die Lehrerinnen","mein Vater","mein Kind","meine Mutter","meine Eltern","Ich arbeite als Lehrer.","ledig","verheiratet","geschieden","allein","zusammen","Wie bitte?","Wie schreibt man das?","Noch einmal, bitte.","Ich verstehe das nicht.","Was bedeutet das?","Langsam, bitte.","Was kostet das?","null, eins, sieben, sechs"];
+const texts=[...new Set([...grammarPatterns.map(p=>p.de),...conversationFrames.flatMap(f=>[f.casual,f.formal,f.answer,...(f.formalAnswer?[f.formalAnswer]:[])]),...verbModels.flatMap(v=>v.forms.map((f,i)=>spokenVerb(i,f))),...Array.from({length:101},(_,i)=>germanNumber(i)),...[200,452,1000,10000,100000,1000000].map(germanNumber),germanPrice("24,50")!,...spellingLetters.map(l=>l.de),...extras])];
+mkdirSync(resolve("research/collection-cheatsheet"),{recursive:true});
+for(const sheet of ["people","verbs","numbers","conversation"] as const)for(const c of cardsForSheet(loadWordCards().cards,sheet))for(const text of [...c.rows.flatMap(r=>[r.singular.text,...r.plurals.map(p=>p.text)]),...c.examples.map(e=>e.de)])if(!texts.includes(text))texts.push(text);
+writeFileSync(resolve("platform/apps/web/generated/collection-speech-texts.json"),JSON.stringify(texts,null,2)+"\n");
+console.log(`${texts.length} exact speech texts`);

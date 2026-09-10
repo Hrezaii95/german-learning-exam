@@ -410,8 +410,8 @@ describe("P3A shell accessibility and responsive contract", () => {
     expect(shell).toContain('aria-label="Primary"');
     expect(shell).toContain('aria-label="Desktop navigation"');
     expect(shell).toContain('aria-label="Tablet navigation"');
-    expect(shell).toContain('aria-label="Mobile"');
-    expect(shell).toContain('href: "/hubs"');
+    expect(readFileSync(join(webRoot, "components/shell/MobileNavigation.tsx"), "utf8")).toContain('aria-label="Mobile"');
+    expect(shell).toContain("<MobileNavigation current={current}/>");
     expect(shell).toContain('href: "/vocabulary"');
     expect(shell).toContain("Coming soon");
   });

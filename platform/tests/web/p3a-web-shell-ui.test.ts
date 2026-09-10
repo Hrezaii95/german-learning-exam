@@ -82,9 +82,9 @@ describe("P3A behavioral UI (server-rendered from generated projection)", () => 
     );
     expect(dash).toContain("Dashboard");
     expect(lessons).toContain("Lessons");
-    // Dashboard is on all three surfaces; mobile prioritizes Book over Lessons.
+    // Dashboard remains in the mobile menu; Lessons is a direct mobile tab.
     expect((dash.match(/aria-current="page"/g) ?? []).length).toBe(3);
-    expect((lessons.match(/aria-current="page"/g) ?? []).length).toBe(2);
+    expect((lessons.match(/aria-current="page"/g) ?? []).length).toBe(3);
     const book = renderToStaticMarkup(createElement(AppShell, { current: "book" }, createElement("div", null, "book")));
     expect((book.match(/aria-current="page"/g) ?? []).length).toBe(3);
     expect(dash).toContain('href="/"');

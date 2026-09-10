@@ -66,7 +66,7 @@ describe("P3B hub UI shell contracts", () => {
     );
     expect(vocabulary.match(/<main\b/g)?.length).toBe(1);
     expect(vocabulary).toContain('href="#main-content"');
-    // Rail + topnav highlight Vocabulary; bottomnav highlights Hubs.
+    // Rail, topnav and the mobile menu highlight Vocabulary.
     expect((vocabulary.match(/aria-current="page"/g) ?? []).length).toBe(3);
     expect(vocabulary).toContain('href="/vocabulary"');
     expect(vocabulary).toContain('href="/hubs"');
@@ -91,12 +91,12 @@ describe("P3B hub UI shell contracts", () => {
         }),
       ),
     );
-    // Concepts is not in desktop primary nav; only mobile Hubs is current.
+    // Concepts is not in desktop primary nav; its mobile menu link is current.
     expect((concepts.match(/aria-current="page"/g) ?? []).length).toBe(1);
     expect(concepts).toContain('href="/hubs"');
   });
 
-  it("keeps Review and Settings as real navigable destinations alongside mobile Hubs", () => {
+  it("keeps Review and Settings as real navigable destinations in the mobile menu", () => {
     const html = renderToStaticMarkup(
       createElement(
         AppShell,
@@ -240,7 +240,7 @@ describe("P3B hub UI shell contracts", () => {
     expect(directory).toContain('href="/listening"');
     expect(directory).toContain('href="/concepts"');
     expect(directory).toContain("Six content hubs cover everything you are learning");
-    // Mobile bottom Hubs is current; desktop primary has no dedicated Hubs item.
+    // The mobile Study library link is current; desktop has no dedicated Hubs item.
     expect((directory.match(/aria-current="page"/g) ?? []).length).toBe(1);
   });
 
