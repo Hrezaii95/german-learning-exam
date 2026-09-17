@@ -1,0 +1,31 @@
+{
+  "milestone": "Lessons 1-7",
+  "status": "local validation passed; deployment pending",
+  "coreTests": 872,
+  "webTests": 533,
+  "focusedTests": 39,
+  "staticPages": 1140,
+  "browserChecks": {
+    "bookReader": 19,
+    "dictionary": 14,
+    "hobbies": 14,
+    "studyScope": 18,
+    "questions": 42,
+    "collectionSheets": 59,
+    "lessonSeven": 13,
+    "bookAnswers": 419
+  },
+  "bookPages": 120,
+  "originalRecordings": 128,
+  "answerGroups": 113,
+  "requiredSpeechTexts": 7428,
+  "lessonSevenSourceWords": 94,
+  "lessonSevenWordFamilies": 93,
+  "byteVerifiedMedia": 30,
+  "manualReview": "Source mappings, code changes, desktop meaning chart and phone sentence builder inspected",
+  "limitations": [
+    "Complete ordinary workbook exercise keys were not supplied; available official keys and explicit source transcripts stay distinguished.",
+    "Technical audio checks are not a full language listening review."
+  ],
+  "fullGoal": "All 12 lessons; Lessons 8-12 remain"
+}

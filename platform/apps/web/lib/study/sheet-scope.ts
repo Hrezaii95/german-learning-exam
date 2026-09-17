@@ -6,13 +6,14 @@ import {countryName,type Country} from "./countries";
 export const sheetTags:Record<SheetId,StudyTags>={
   countries:{lessons:[1,3],concepts:["countries","grammar"],source:"course",sources:["course","study-extra"]},
   home:{lessons:[2,3,4,5,6],concepts:["home","objects","grammar","descriptions"],source:"course",sources:["course","study-extra"]},
-  people:{lessons:[2,3,6],concepts:["people","grammar"],source:"course",sources:["course","teacher-extra"]},
-  verbs:{lessons:[1,2,3,4,5,6],concepts:["verbs","grammar","questions"],source:"course"},
-  numbers:{lessons:[1,2,3,4,5,6],concepts:["numbers"],source:"course"},
-  conversation:{lessons:[1,2,3,4,5,6],concepts:["conversation","introductions","classroom"],source:"course"},
-  questions:{lessons:[1,2,3,4,5,6],concepts:["questions","grammar"],source:"course",sources:["course","study-extra"]},
+  people:{lessons:[2,3,6,7],concepts:["people","grammar"],source:"course",sources:["course","teacher-extra"]},
+  verbs:{lessons:[1,2,3,4,5,6,7],concepts:["verbs","grammar","questions"],source:"course"},
+  numbers:{lessons:[1,2,3,4,5,6,7],concepts:["numbers"],source:"course"},
+  conversation:{lessons:[1,2,3,4,5,6,7],concepts:["conversation","introductions","classroom"],source:"course"},
+  questions:{lessons:[1,2,3,4,5,6,7],concepts:["questions","grammar"],source:"course",sources:["course","study-extra"]},
   objects:{lessons:[5],concepts:["objects","colours-materials","grammar","classroom"],source:"course"},
   office:{lessons:[6],concepts:["office","objects","grammar","conversation","verbs"],source:"course"},
+  hobbies:{lessons:[7],concepts:["hobbies","verbs","grammar","conversation","questions"],source:"course"},
 };
 export function countryStudyTags(country:Country,dictionary:DictionaryEntry[]=[]):StudyTags{
   const found=dictionary.find(e=>e.de===countryName(country));

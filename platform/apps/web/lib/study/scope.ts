@@ -1,5 +1,5 @@
 /** Shared course selection. The available ceiling advances only after each lesson is integrated. */
-export const LAST_AVAILABLE_LESSON = 6;
+export const LAST_AVAILABLE_LESSON = 7;
 export const A1_LESSON_COUNT = 12;
 export const STUDY_SCOPE_KEY = "german-study-scope-v1";
 
@@ -12,6 +12,7 @@ export const studyConcepts = [
   {id:"objects",label:"Everyday objects"},
   {id:"colours-materials",label:"Colours, shapes & materials"},
   {id:"office",label:"Office & communication"},
+  {id:"hobbies",label:"Hobbies, abilities & frequency"},
   {id:"grammar",label:"Articles & sentence patterns"},
   {id:"verbs",label:"Verbs & conjugation"},
   {id:"conversation",label:"Useful conversations"},
@@ -22,7 +23,7 @@ export const studyConcepts = [
 ] as const;
 export type StudyConcept = typeof studyConcepts[number]["id"];
 export type StudySource = "course" | "teacher-extra" | "study-extra";
-export type StudyTags = {lessons:number[];concepts:StudyConcept[];source:StudySource;sources?:StudySource[]};
+export type StudyTags = {lessons:number[];concepts:StudyConcept[];source:StudySource;sources?:StudySource[];sourceLessons?:Partial<Record<StudySource,number[]>>};
 export type StudyScope = {
   mode:"all"|"one"|"multiple"|"through";
   lessons:number[];
@@ -51,7 +52,8 @@ export function parseStudyScope(raw:string|null):StudyScope{
   return {mode,lessons,concepts:[...new Set(value.concepts)] as StudyConcept[],source:value.source as StudyScope["source"]};
 }
 export function matchesStudyScope(tags:StudyTags,scope:StudyScope):boolean{
-  return (tags.lessons.length?tags.lessons.some(n=>selectedLessons(scope).includes(n)):scope.mode==="all")
+  const lessons=scope.source==="all"?tags.lessons:tags.sourceLessons?.[scope.source]??tags.lessons;
+  return (lessons.length?lessons.some(n=>selectedLessons(scope).includes(n)):scope.mode==="all")
     &&(!scope.concepts.length||tags.concepts.some(c=>scope.concepts.includes(c)))
     &&(scope.source==="all"||(tags.sources??[tags.source]).includes(scope.source));
 }
@@ -79,6 +81,7 @@ export const lessonConcepts:Record<number,StudyConcept[]> = {
   4:["home","numbers","grammar","conversation","questions","descriptions"],
   5:["objects","colours-materials","grammar","conversation","verbs","questions","classroom"],
   6:["office","objects","numbers","verbs","grammar","conversation","questions"],
+  7:["hobbies","people","verbs","grammar","conversation","questions","descriptions"],
 };
 export function tagsForLesson(lesson:number):StudyTags{
   return {lessons:[lesson],concepts:lessonConcepts[lesson]??[],source:"course"};

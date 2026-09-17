@@ -1,4 +1,4 @@
-import { readFileSync, readdirSync, writeFileSync } from "node:fs";
+import { readFileSync, readdirSync, writeFileSync, renameSync, existsSync, unlinkSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -12,13 +12,21 @@ import { loadBook, loadBookAnswers,loadDictionary } from "../lib/study/catalog";
 import {studyUnits} from "../lib/study/course-lessons";
 import {objectSheetSpeech} from "../lib/study/object-sheet";
 import {officeSheetSpeech} from "../lib/study/office-sheet";
+import {hobbiesSpeech} from "../lib/study/hobbies-sheet";
 import {questionSpeechTexts} from "../lib/study/questions";
+function writeSnapshot(target:string|URL,text:string){
+  const path=target instanceof URL?fileURLToPath(target):target;
+  const temporary=`${path}.${process.pid}.tmp`;
+  try{writeFileSync(temporary,text,"utf8");renameSync(temporary,path);}
+  finally{if(existsSync(temporary))unlinkSync(temporary);}
+}
 const texts = [
   ...new Set([
     ...objectSheetSpeech,
     ...officeSheetSpeech,
+    ...hobbiesSpeech,
     ...questionSpeechTexts(),
-    ...studyUnits.flatMap(u=>[...(u.words?.flatMap(w=>[w.de,w.plural,w.example]).filter(Boolean)??[]),...u.concepts.flatMap(c=>[c.de,...c.examples]),...u.phrases.map(p=>p.de),...u.verbs.flatMap(v=>v.forms.map((f,i)=>`${["ich","du","er","wir","ihr","sie"][i]} ${f}`))]),
+    ...studyUnits.flatMap(u=>[...(u.words?.flatMap(w=>[w.de,w.plural,w.example]).filter(t=>Boolean(t)&&t!=="plural only")??[]),...u.concepts.flatMap(c=>[c.de,...c.examples]),...u.phrases.map(p=>p.de),...u.verbs.flatMap(v=>v.forms.map((f,i)=>`${["ich","du","er","wir","ihr","sie"][i]} ${f}`))]),
     ...loadBook().pages.flatMap((page) => page.lines.map((line) => line.text)),
     ...loadBookAnswers().flatMap(answer=>answer.text.split(/\n+/)),
     ...lessonFourWords.flatMap((word) => [
@@ -38,13 +46,13 @@ const texts = [
     ),
   ]),
 ];
-writeFileSync(
+writeSnapshot(
   new URL("../generated/study-speech-texts.json", import.meta.url),
   `${JSON.stringify(texts, null, 2)}\n`,
 );
 console.log(`${texts.length} study utterances`);
 if (process.argv.includes("--manifest")) {
-  writeFileSync(new URL("../generated/study-dictionary.json",import.meta.url),JSON.stringify(loadDictionary())+"\n");
+  writeSnapshot(new URL("../generated/study-dictionary.json",import.meta.url),JSON.stringify(loadDictionary())+"\n");
   const web = join(dirname(fileURLToPath(import.meta.url)), "..");
   const assets = ["audio", "speech"].flatMap((kind) =>
     readdirSync(join(web, "public/book", kind))
@@ -63,7 +71,7 @@ if (process.argv.includes("--manifest")) {
         };
       }),
   );
-  writeFileSync(
+  writeSnapshot(
     join(web, "../../../media/manifests/interactive-book-public-audio-v1.json"),
     JSON.stringify(
       {

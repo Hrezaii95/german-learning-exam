@@ -36,6 +36,8 @@ export function wordStudyTags(card:WordCard):StudyTags{
     if(["Materials","Colours"].includes(word.category))concepts.add("colours-materials");
     if(["Forms","Office"].includes(word.category))concepts.add("office");
     if(word.category==="People")concepts.add("people");
+    if(["Hobbies","Frequency"].includes(word.category)||(unit.number===7&&word.category==="Verbs"))concepts.add("hobbies");
+    if(word.category==="Time")concepts.add("numbers");
     if(word.category==="Classroom")concepts.add("classroom");
     if(word.category==="Grammar")concepts.add("grammar");
   }
@@ -43,7 +45,7 @@ export function wordStudyTags(card:WordCard):StudyTags{
   const teacher=card.teacherRows.length>0||card.priorities.includes("Teacher extra");
   const core=numbered.length>0;
   const source=teacher&&!core?"teacher-extra":"course";
-  return {lessons,concepts:[...concepts],source,sources:teacher&&core?["course","teacher-extra"]:[source]};
+  return {lessons,concepts:[...concepts],source,sources:teacher&&core?["course","teacher-extra"]:[source],sourceLessons:{...(core?{course:numbered}:{}),...(teacher?{"teacher-extra":[2]}:{})}};
 }
 export function hubStudyTags(record:LearnerHubRecord):StudyTags{
   if(record.wordFamily)return wordStudyTags(record.wordFamily);

@@ -1,0 +1,1436 @@
+{
+  "number": 7,
+  "summary": "Talk about hobbies, abilities and frequency. Build sentences with können, give compliments and practise lesen, treffen and fahren.",
+  "words": [
+    {
+      "de": "können",
+      "en": "to be able to / can",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich kann gut schwimmen.",
+      "translation": "I can swim well.",
+      "id": "l7-koennen"
+    },
+    {
+      "de": "tanzen",
+      "en": "to dance",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Du kannst toll tanzen.",
+      "translation": "You can dance really well.",
+      "id": "l7-tanzen"
+    },
+    {
+      "de": "toll",
+      "en": "great",
+      "plural": "",
+      "category": "Adjectives",
+      "example": "Ich finde das toll.",
+      "translation": "I think that is great.",
+      "id": "l7-toll"
+    },
+    {
+      "de": "normal",
+      "en": "normal",
+      "plural": "",
+      "category": "Adjectives",
+      "example": "Das ist normal.",
+      "translation": "That is normal.",
+      "id": "l7-normal"
+    },
+    {
+      "de": "komisch",
+      "en": "strange / funny",
+      "plural": "",
+      "category": "Adjectives",
+      "example": "Ich finde das komisch.",
+      "translation": "I find that strange.",
+      "id": "l7-komisch"
+    },
+    {
+      "de": "blöd",
+      "en": "stupid / silly",
+      "plural": "",
+      "category": "Adjectives",
+      "example": "Das finde ich blöd.",
+      "translation": "I think that is silly.",
+      "id": "l7-bloed"
+    },
+    {
+      "de": "interessant",
+      "en": "interesting",
+      "plural": "",
+      "category": "Adjectives",
+      "example": "Das Buch ist interessant.",
+      "translation": "The book is interesting.",
+      "id": "l7-interessant"
+    },
+    {
+      "de": "lustig",
+      "en": "funny",
+      "plural": "",
+      "category": "Adjectives",
+      "example": "Mein Freund ist lustig.",
+      "translation": "My friend is funny.",
+      "id": "l7-lustig"
+    },
+    {
+      "de": "überall",
+      "en": "anywhere / everywhere",
+      "plural": "",
+      "category": "Adverbs",
+      "example": "Ich kann überall tanzen.",
+      "translation": "I can dance anywhere.",
+      "id": "l7-ueberall"
+    },
+    {
+      "de": "hören",
+      "en": "to hear / listen to",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich höre gern Musik.",
+      "translation": "I like listening to music.",
+      "id": "l7-hoeren"
+    },
+    {
+      "de": "zurzeit",
+      "en": "currently / at the moment",
+      "plural": "",
+      "category": "Adverbs",
+      "example": "Zurzeit lese ich ein Buch.",
+      "translation": "I am reading a book at the moment.",
+      "id": "l7-zurzeit"
+    },
+    {
+      "de": "immer",
+      "en": "always",
+      "plural": "",
+      "category": "Frequency",
+      "example": "Ich höre immer Musik.",
+      "translation": "I always listen to music.",
+      "id": "l7-immer"
+    },
+    {
+      "de": "die Minute",
+      "en": "minute",
+      "plural": "die Minuten",
+      "category": "Time",
+      "example": "Eine Minute, bitte.",
+      "translation": "One minute, please.",
+      "id": "l7-minute"
+    },
+    {
+      "de": "kochen",
+      "en": "to cook",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich koche gern.",
+      "translation": "I like cooking.",
+      "id": "l7-kochen"
+    },
+    {
+      "de": "singen",
+      "en": "to sing",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Sie kann sehr gut singen.",
+      "translation": "She can sing very well.",
+      "id": "l7-singen"
+    },
+    {
+      "de": "schwimmen",
+      "en": "to swim",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Wir können schwimmen.",
+      "translation": "We can swim.",
+      "id": "l7-schwimmen"
+    },
+    {
+      "de": "fotografieren",
+      "en": "to take photographs",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Er fotografiert gern.",
+      "translation": "He likes taking photographs.",
+      "id": "l7-fotografieren"
+    },
+    {
+      "de": "Schach spielen",
+      "en": "to play chess",
+      "plural": "",
+      "category": "Hobbies",
+      "example": "Kannst du Schach spielen?",
+      "translation": "Can you play chess?",
+      "id": "l7-schach-spielen"
+    },
+    {
+      "de": "malen",
+      "en": "to paint",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich male gern.",
+      "translation": "I like painting.",
+      "id": "l7-malen"
+    },
+    {
+      "de": "backen",
+      "en": "to bake",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich kann ein bisschen backen.",
+      "translation": "I can bake a little.",
+      "id": "l7-backen"
+    },
+    {
+      "de": "Fußball spielen",
+      "en": "to play football",
+      "plural": "",
+      "category": "Hobbies",
+      "example": "Wir spielen oft Fußball.",
+      "translation": "We often play football.",
+      "id": "l7-fussball-spielen"
+    },
+    {
+      "de": "Tennis spielen",
+      "en": "to play tennis",
+      "plural": "",
+      "category": "Hobbies",
+      "example": "Könnt ihr Tennis spielen?",
+      "translation": "Can you play tennis?",
+      "id": "l7-tennis-spielen"
+    },
+    {
+      "de": "Gitarre spielen",
+      "en": "to play the guitar",
+      "plural": "",
+      "category": "Hobbies",
+      "example": "Er kann Gitarre spielen.",
+      "translation": "He can play the guitar.",
+      "id": "l7-gitarre-spielen"
+    },
+    {
+      "de": "Rad / Fahrrad fahren",
+      "en": "to cycle",
+      "plural": "",
+      "category": "Hobbies",
+      "example": "Ich fahre gern Rad.",
+      "translation": "I like cycling.",
+      "id": "l7-rad-fahrrad-fahren"
+    },
+    {
+      "de": "Ski fahren",
+      "en": "to ski",
+      "plural": "",
+      "category": "Hobbies",
+      "example": "Sie kann gut Ski fahren.",
+      "translation": "She can ski well.",
+      "id": "l7-ski-fahren"
+    },
+    {
+      "de": "reiten",
+      "en": "to ride a horse",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Kannst du reiten?",
+      "translation": "Can you ride a horse?",
+      "id": "l7-reiten"
+    },
+    {
+      "de": "das Hobby",
+      "en": "hobby",
+      "plural": "die Hobbys",
+      "category": "Hobbies",
+      "example": "Was sind deine Hobbys?",
+      "translation": "What are your hobbies?",
+      "id": "l7-hobby"
+    },
+    {
+      "de": "Du kannst ja …",
+      "en": "You really can … (surprised compliment)",
+      "plural": "",
+      "category": "Conversation",
+      "example": "Du kannst ja toll tanzen!",
+      "translation": "You really can dance very well!",
+      "id": "l7-du-kannst-ja"
+    },
+    {
+      "de": "ja",
+      "en": "really (emphasis in a compliment)",
+      "plural": "",
+      "category": "Grammar",
+      "example": "Du kannst ja toll kochen!",
+      "translation": "You really can cook very well!",
+      "id": "l7-ja"
+    },
+    {
+      "de": "Du kannst wirklich …",
+      "en": "You really can …",
+      "plural": "",
+      "category": "Conversation",
+      "example": "Du kannst wirklich gut singen!",
+      "translation": "You really can sing well!",
+      "id": "l7-du-kannst-wirklich"
+    },
+    {
+      "de": "wirklich",
+      "en": "really",
+      "plural": "",
+      "category": "Adverbs",
+      "example": "Das macht wirklich Spaß.",
+      "translation": "That is really fun.",
+      "id": "l7-wirklich"
+    },
+    {
+      "de": "Du kannst aber …",
+      "en": "You really can … (emphatic compliment)",
+      "plural": "",
+      "category": "Conversation",
+      "example": "Du kannst aber gut malen!",
+      "translation": "You really can paint well!",
+      "id": "l7-du-kannst-aber"
+    },
+    {
+      "de": "aber",
+      "en": "but; emphasis in a compliment",
+      "plural": "",
+      "category": "Grammar",
+      "example": "Ich kann singen, aber nicht tanzen.",
+      "translation": "I can sing, but I cannot dance.",
+      "id": "l7-aber"
+    },
+    {
+      "de": "Herzlichen Dank!",
+      "en": "Thank you very much!",
+      "plural": "",
+      "category": "Conversation",
+      "example": "Herzlichen Dank!",
+      "translation": "Thank you very much!",
+      "id": "l7-herzlichen-dank"
+    },
+    {
+      "de": "wir alle",
+      "en": "all of us",
+      "plural": "",
+      "category": "Grammar",
+      "example": "Wir alle können schwimmen.",
+      "translation": "All of us can swim.",
+      "id": "l7-wir-alle"
+    },
+    {
+      "de": "alle",
+      "en": "all",
+      "plural": "",
+      "category": "Grammar",
+      "example": "Wir können alle schwimmen.",
+      "translation": "We can all swim.",
+      "id": "l7-alle"
+    },
+    {
+      "de": "alle drei",
+      "en": "all three",
+      "plural": "",
+      "category": "Grammar",
+      "example": "Wir können alle drei schwimmen.",
+      "translation": "All three of us can swim.",
+      "id": "l7-alle-drei"
+    },
+    {
+      "de": "beide",
+      "en": "both",
+      "plural": "",
+      "category": "Grammar",
+      "example": "Wir können beide tanzen.",
+      "translation": "Both of us can dance.",
+      "id": "l7-beide"
+    },
+    {
+      "de": "auch nicht",
+      "en": "not either",
+      "plural": "",
+      "category": "Grammar",
+      "example": "Ich kann auch nicht backen.",
+      "translation": "I cannot bake either.",
+      "id": "l7-auch-nicht"
+    },
+    {
+      "de": "auflegen",
+      "en": "to DJ / put on music",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich lege gern Musik auf.",
+      "translation": "I like DJing.",
+      "id": "l7-auflegen"
+    },
+    {
+      "de": "mixen",
+      "en": "to mix music",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Er mixt Musik.",
+      "translation": "He mixes music.",
+      "id": "l7-mixen"
+    },
+    {
+      "de": "der DJ",
+      "en": "DJ",
+      "plural": "die DJs",
+      "category": "People",
+      "example": "Er ist DJ.",
+      "translation": "He is a DJ.",
+      "id": "l7-dj"
+    },
+    {
+      "de": "lieben",
+      "en": "to love",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich liebe Musik.",
+      "translation": "I love music.",
+      "id": "l7-lieben"
+    },
+    {
+      "de": "das Kickboxen",
+      "en": "kickboxing",
+      "plural": "",
+      "category": "Hobbies",
+      "example": "Ich liebe Kickboxen.",
+      "translation": "I love kickboxing.",
+      "id": "l7-kickboxen"
+    },
+    {
+      "de": "die Senioren",
+      "en": "senior citizens",
+      "plural": "plural only",
+      "category": "People",
+      "example": "Die Senioren hören gern Musik.",
+      "translation": "The senior citizens like listening to music.",
+      "id": "l7-senioren"
+    },
+    {
+      "de": "das Seniorenheim",
+      "en": "care home for older people",
+      "plural": "die Seniorenheime",
+      "category": "Places",
+      "example": "Er wohnt im Seniorenheim.",
+      "translation": "He lives in a care home for older people.",
+      "id": "l7-seniorenheim"
+    },
+    {
+      "de": "richtig",
+      "en": "properly / correctly",
+      "plural": "",
+      "category": "Adverbs",
+      "example": "Er kann nicht richtig gehen.",
+      "translation": "He cannot walk properly.",
+      "id": "l7-richtig"
+    },
+    {
+      "de": "gehen",
+      "en": "to go / walk",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich gehe nach Hause.",
+      "translation": "I am going home.",
+      "id": "l7-gehen"
+    },
+    {
+      "de": "die Versicherung",
+      "en": "insurance / insurance company",
+      "plural": "die Versicherungen",
+      "category": "Work",
+      "example": "Sie arbeitet bei einer Versicherung.",
+      "translation": "She works for an insurance company.",
+      "id": "l7-versicherung"
+    },
+    {
+      "de": "der Kaufmann",
+      "en": "businessman / merchant",
+      "plural": "die Kaufleute",
+      "category": "People",
+      "example": "Er ist Kaufmann.",
+      "translation": "He is a businessman.",
+      "id": "l7-kaufmann"
+    },
+    {
+      "de": "die Kauffrau",
+      "en": "businesswoman / merchant",
+      "plural": "die Kauffrauen",
+      "category": "People",
+      "example": "Sie ist Kauffrau.",
+      "translation": "She is a businesswoman.",
+      "id": "l7-kauffrau"
+    },
+    {
+      "de": "die Kaufleute",
+      "en": "businesspeople / merchants",
+      "plural": "plural only",
+      "category": "People",
+      "example": "Die Kaufleute arbeiten hier.",
+      "translation": "The businesspeople work here.",
+      "id": "l7-kaufleute"
+    },
+    {
+      "de": "der Versicherungskaufmann",
+      "en": "insurance clerk (male)",
+      "plural": "die Versicherungskaufmänner",
+      "category": "People",
+      "example": "Er macht eine Ausbildung als Versicherungskaufmann.",
+      "translation": "He is training as an insurance clerk.",
+      "id": "l7-versicherungskaufmann"
+    },
+    {
+      "de": "die Versicherungskauffrau",
+      "en": "insurance clerk (female)",
+      "plural": "die Versicherungskauffrauen",
+      "category": "People",
+      "example": "Sie ist Versicherungskauffrau.",
+      "translation": "She is an insurance clerk.",
+      "id": "l7-versicherungskauffrau"
+    },
+    {
+      "de": "die Versicherungskaufleute",
+      "en": "insurance clerks",
+      "plural": "plural only",
+      "category": "People",
+      "example": "Die Versicherungskaufleute arbeiten im Büro.",
+      "translation": "The insurance clerks work in the office.",
+      "id": "l7-versicherungskaufleute"
+    },
+    {
+      "de": "in der Freizeit",
+      "en": "in one's free time",
+      "plural": "",
+      "category": "Hobbies",
+      "example": "In der Freizeit spiele ich Tennis.",
+      "translation": "I play tennis in my free time.",
+      "id": "l7-in-der-freizeit"
+    },
+    {
+      "de": "die Freizeit",
+      "en": "free time / leisure",
+      "plural": "",
+      "category": "Hobbies",
+      "example": "Was machst du in deiner Freizeit?",
+      "translation": "What do you do in your free time?",
+      "id": "l7-freizeit"
+    },
+    {
+      "de": "oft",
+      "en": "often",
+      "plural": "",
+      "category": "Frequency",
+      "example": "Ich lese oft.",
+      "translation": "I often read.",
+      "id": "l7-oft"
+    },
+    {
+      "de": "der Klub",
+      "en": "club",
+      "plural": "die Klubs",
+      "category": "Places",
+      "example": "Er geht oft in Klubs.",
+      "translation": "He often goes to clubs.",
+      "id": "l7-klub"
+    },
+    {
+      "de": "das Konzert",
+      "en": "concert",
+      "plural": "die Konzerte",
+      "category": "Hobbies",
+      "example": "Ich gehe gern in Konzerte.",
+      "translation": "I like going to concerts.",
+      "id": "l7-konzert"
+    },
+    {
+      "de": "das Start-up",
+      "en": "start-up company",
+      "plural": "die Start-ups",
+      "category": "Work",
+      "example": "Sie hat ein Start-up.",
+      "translation": "She has a start-up company.",
+      "id": "l7-start-up"
+    },
+    {
+      "de": "die Fitness",
+      "en": "fitness",
+      "plural": "",
+      "category": "Hobbies",
+      "example": "Fitness ist mein Hobby.",
+      "translation": "Fitness is my hobby.",
+      "id": "l7-fitness"
+    },
+    {
+      "de": "das Studio",
+      "en": "studio",
+      "plural": "die Studios",
+      "category": "Places",
+      "example": "Das Studio ist modern.",
+      "translation": "The studio is modern.",
+      "id": "l7-studio"
+    },
+    {
+      "de": "das Fitnessstudio",
+      "en": "gym / fitness centre",
+      "plural": "die Fitnessstudios",
+      "category": "Places",
+      "example": "Das Fitnessstudio ist groß.",
+      "translation": "The gym is big.",
+      "id": "l7-fitnessstudio"
+    },
+    {
+      "de": "nie",
+      "en": "never",
+      "plural": "",
+      "category": "Frequency",
+      "example": "Ich spiele nie Schach.",
+      "translation": "I never play chess.",
+      "id": "l7-nie"
+    },
+    {
+      "de": "lange",
+      "en": "for a long time / long",
+      "plural": "",
+      "category": "Adverbs",
+      "example": "Sie arbeitet oft lange.",
+      "translation": "She often works long hours.",
+      "id": "l7-lange"
+    },
+    {
+      "de": "manchmal",
+      "en": "sometimes",
+      "plural": "",
+      "category": "Frequency",
+      "example": "Manchmal fahre ich Rad.",
+      "translation": "Sometimes I go cycling.",
+      "id": "l7-manchmal"
+    },
+    {
+      "de": "vertikal",
+      "en": "vertical",
+      "plural": "",
+      "category": "Classroom",
+      "example": "Die Namen sind vertikal.",
+      "translation": "The names are arranged vertically.",
+      "id": "l7-vertikal"
+    },
+    {
+      "de": "horizontal",
+      "en": "horizontal",
+      "plural": "",
+      "category": "Classroom",
+      "example": "Die Namen sind horizontal.",
+      "translation": "The names are arranged horizontally.",
+      "id": "l7-horizontal"
+    },
+    {
+      "de": "diagonal",
+      "en": "diagonal",
+      "plural": "",
+      "category": "Classroom",
+      "example": "Die Namen sind diagonal.",
+      "translation": "The names are arranged diagonally.",
+      "id": "l7-diagonal"
+    },
+    {
+      "de": "lesen",
+      "en": "to read",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Liest du gern?",
+      "translation": "Do you like reading?",
+      "id": "l7-lesen"
+    },
+    {
+      "de": "Freunde treffen",
+      "en": "to meet friends",
+      "plural": "",
+      "category": "Hobbies",
+      "example": "Ich treffe gern Freunde.",
+      "translation": "I like meeting friends.",
+      "id": "l7-freunde-treffen"
+    },
+    {
+      "de": "der Freund",
+      "en": "friend (male) / boyfriend",
+      "plural": "die Freunde",
+      "category": "People",
+      "example": "Das ist mein Freund.",
+      "translation": "That is my friend.",
+      "id": "l7-freund"
+    },
+    {
+      "de": "die Freundin",
+      "en": "friend (female) / girlfriend",
+      "plural": "die Freundinnen",
+      "category": "People",
+      "example": "Das ist meine Freundin.",
+      "translation": "That is my friend.",
+      "id": "l7-freundin"
+    },
+    {
+      "de": "treffen",
+      "en": "to meet",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Triffst du heute Anna?",
+      "translation": "Are you meeting Anna today?",
+      "id": "l7-treffen"
+    },
+    {
+      "de": "fahren",
+      "en": "to drive / ride / travel",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Fährst du gern Auto?",
+      "translation": "Do you like driving?",
+      "id": "l7-fahren"
+    },
+    {
+      "de": "der Ausflug",
+      "en": "trip / outing",
+      "plural": "die Ausflüge",
+      "category": "Hobbies",
+      "example": "Wir machen einen Ausflug.",
+      "translation": "We are going on an outing.",
+      "id": "l7-ausflug"
+    },
+    {
+      "de": "das Radio",
+      "en": "radio",
+      "plural": "die Radios",
+      "category": "Hobbies",
+      "example": "Ich höre gern Radio.",
+      "translation": "I like listening to the radio.",
+      "id": "l7-radio"
+    },
+    {
+      "de": "im Internet surfen",
+      "en": "to browse the internet",
+      "plural": "",
+      "category": "Hobbies",
+      "example": "Ich surfe manchmal im Internet.",
+      "translation": "I sometimes browse the internet.",
+      "id": "l7-im-internet-surfen"
+    },
+    {
+      "de": "das Internet",
+      "en": "internet",
+      "plural": "",
+      "category": "Hobbies",
+      "example": "Ich brauche das Internet.",
+      "translation": "I need the internet.",
+      "id": "l7-internet"
+    },
+    {
+      "de": "surfen",
+      "en": "to browse / surf",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich surfe gern im Internet.",
+      "translation": "I like browsing the internet.",
+      "id": "l7-surfen"
+    },
+    {
+      "de": "Spaß machen",
+      "en": "to be fun",
+      "plural": "",
+      "category": "Conversation",
+      "example": "Das macht Spaß.",
+      "translation": "That is fun.",
+      "id": "l7-spass-machen"
+    },
+    {
+      "de": "der Spaß",
+      "en": "fun",
+      "plural": "",
+      "category": "Hobbies",
+      "example": "Wir haben Spaß.",
+      "translation": "We are having fun.",
+      "id": "l7-spass"
+    },
+    {
+      "de": "Lieblings-",
+      "en": "favourite (word prefix)",
+      "plural": "",
+      "category": "Grammar",
+      "example": "Mein Lieblingsbuch ist interessant.",
+      "translation": "My favourite book is interesting.",
+      "id": "l7-lieblings"
+    },
+    {
+      "de": "Was machst du gern?",
+      "en": "What do you like doing?",
+      "plural": "",
+      "category": "Conversation",
+      "example": "Was machst du gern?",
+      "translation": "What do you like doing?",
+      "id": "l7-was-machst-du-gern"
+    },
+    {
+      "de": "gern tun",
+      "en": "to like doing",
+      "plural": "",
+      "category": "Conversation",
+      "example": "Was tust du gern?",
+      "translation": "What do you like doing?",
+      "id": "l7-gern-tun"
+    },
+    {
+      "de": "in deiner Freizeit",
+      "en": "in your free time",
+      "plural": "",
+      "category": "Hobbies",
+      "example": "Was machst du in deiner Freizeit?",
+      "translation": "What do you do in your free time?",
+      "id": "l7-in-deiner-freizeit"
+    },
+    {
+      "de": "zeichnen",
+      "en": "to draw",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Sie kann sehr gut zeichnen.",
+      "translation": "She can draw very well.",
+      "id": "l7-zeichnen"
+    },
+    {
+      "de": "planen",
+      "en": "to plan",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Wer kann gut planen?",
+      "translation": "Who can plan well?",
+      "id": "l7-planen"
+    },
+    {
+      "de": "schreiben",
+      "en": "to write",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Er kann toll schreiben.",
+      "translation": "He can write very well.",
+      "id": "l7-schreiben"
+    },
+    {
+      "de": "schlecht",
+      "en": "bad / badly",
+      "plural": "",
+      "category": "Adjectives",
+      "example": "Ich spreche schlecht Englisch.",
+      "translation": "I speak English badly.",
+      "id": "l7-schlecht"
+    },
+    {
+      "de": "die Stunde",
+      "en": "hour",
+      "plural": "die Stunden",
+      "category": "Time",
+      "example": "Er schwimmt eine Stunde.",
+      "translation": "He swims for an hour.",
+      "id": "l7-stunde"
+    },
+    {
+      "de": "kennen",
+      "en": "to know / be familiar with",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Kennst du die Musik?",
+      "translation": "Do you know the music?",
+      "id": "l7-kennen"
+    },
+    {
+      "de": "spielen",
+      "en": "to play",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich spiele gern Tennis.",
+      "translation": "I like playing tennis.",
+      "id": "l7-spielen"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "l7-koennen",
+      "title": "Can: learn the six forms together",
+      "de": "kann · kannst · kann · können · könnt · können",
+      "en": "Können expresses an ability here. The singular changes ö to a. Ich and er/sie/es have the same form, kann; ich has no -e and er has no -t. The plural keeps ö. Formal Sie uses können.",
+      "examples": [
+        "Ich kann schwimmen.",
+        "Er kann gut kochen.",
+        "Könnt ihr tanzen?"
+      ],
+      "source": "KB 48; AB 46-48"
+    },
+    {
+      "id": "l7-bracket",
+      "title": "Two verbs make a frame",
+      "de": "Ich kann [sehr gut] schwimmen.",
+      "en": "In a statement, conjugate können in position 2. Put the other verb at the end in its infinitive form, with no zu. With an activity such as Gitarre spielen, spielen closes the frame. Count sentence blocks rather than words.",
+      "examples": [
+        "Ich kann sehr gut Gitarre spielen.",
+        "Meine Freundin kann gut Ski fahren.",
+        "Wir können nicht tanzen."
+      ],
+      "source": "KB 48; AB 46-48"
+    },
+    {
+      "id": "l7-questions",
+      "title": "Ask about an ability",
+      "de": "Kannst du schwimmen? · Was kannst du gut?",
+      "en": "For a yes/no question, put können first. For a W-question, put the question phrase first and können second. The activity verb still goes at the end. Wer can be the subject: Wer kann gut kochen?",
+      "examples": [
+        "Kannst du gut schwimmen?",
+        "Können Sie Gitarre spielen?",
+        "Wer kann gut kochen?"
+      ],
+      "source": "KB 49; AB 48-49"
+    },
+    {
+      "id": "l7-ability",
+      "title": "How well? Choose an ability phrase",
+      "de": "toll / sehr gut / super · gut · ein bisschen · nicht so gut · gar nicht",
+      "en": "Gut describes skill. Gern describes enjoyment. These are different: you can enjoy singing without singing well. Gar nicht means not at all; nicht so gut means not very well.",
+      "examples": [
+        "Ich kann gut kochen.",
+        "Ich koche gern.",
+        "Ich kann gar nicht singen, aber ich singe gern."
+      ],
+      "source": "KB 48-50; AB 48"
+    },
+    {
+      "id": "l7-frequency",
+      "title": "How often? Keep a different scale",
+      "de": "immer → oft → manchmal → nie",
+      "en": "Immer means always; oft often; manchmal sometimes; nie never. These describe frequency, not skill. Oft and manchmal do not have fixed percentages. Ask Wie oft …? Keep the conjugated verb in position 2 even when the time word comes first.",
+      "examples": [
+        "Wie oft spielst du Tennis?",
+        "Ich spiele manchmal Tennis.",
+        "Manchmal spiele ich Tennis."
+      ],
+      "source": "KB 49-50; AB 49"
+    },
+    {
+      "id": "l7-vowel-change",
+      "title": "Three verbs change their vowel",
+      "de": "lesen → liest · treffen → triffst · fahren → fährst",
+      "en": "The vowel changes only in du and er/sie/es: liest/liest, triffst/trifft, fährst/fährt. Ich and the plural keep the original vowel. After können, use the unchanged infinitive: Du kannst lesen, not Du kannst liest.",
+      "examples": [
+        "Liest du gern?",
+        "Er trifft Freunde.",
+        "Sie fährt Rad.",
+        "Du kannst gut lesen."
+      ],
+      "source": "KB 50; AB 49"
+    },
+    {
+      "id": "l7-compliment",
+      "title": "Make and accept a compliment",
+      "de": "Du kannst ja / wirklich / aber toll tanzen! → Herzlichen Dank!",
+      "en": "Ja and aber can add surprised emphasis in a compliment; they do not mean yes and but in this use. Wirklich means really. Thank the speaker with Oh, danke!, Danke sehr!, Vielen Dank! or Herzlichen Dank!",
+      "examples": [
+        "Sie können wirklich super tanzen!",
+        "Du kannst aber gut singen!",
+        "Herzlichen Dank!"
+      ],
+      "source": "KB 48; AB 48"
+    },
+    {
+      "id": "l7-all-both",
+      "title": "All of us, all three, both",
+      "de": "wir alle · alle drei · beide · auch nicht",
+      "en": "Alle means all; alle drei all three; beide both. Auch nicht adds a second negative statement: Ich kann auch nicht backen means I cannot bake either.",
+      "examples": [
+        "Wir können alle drei schwimmen.",
+        "Wir können beide tanzen.",
+        "Ich kann auch nicht backen."
+      ],
+      "source": "KB 49"
+    }
+  ],
+  "verbs": [
+    {
+      "verb": "können",
+      "meaning": "can / to be able to",
+      "forms": [
+        "kann",
+        "kannst",
+        "kann",
+        "können",
+        "könnt",
+        "können"
+      ],
+      "tip": "The other verb stays in the infinitive at the end, with no zu."
+    },
+    {
+      "verb": "lesen",
+      "meaning": "to read",
+      "forms": [
+        "lese",
+        "liest",
+        "liest",
+        "lesen",
+        "lest",
+        "lesen"
+      ],
+      "tip": "e → ie in du and er/sie/es. Du and er have the same form, liest."
+    },
+    {
+      "verb": "treffen",
+      "meaning": "to meet",
+      "forms": [
+        "treffe",
+        "triffst",
+        "trifft",
+        "treffen",
+        "trefft",
+        "treffen"
+      ],
+      "tip": "e → i in du and er/sie/es."
+    },
+    {
+      "verb": "fahren",
+      "meaning": "to drive / ride",
+      "forms": [
+        "fahre",
+        "fährst",
+        "fährt",
+        "fahren",
+        "fahrt",
+        "fahren"
+      ],
+      "tip": "a → ä in du and er/sie/es. Rad fahren, Ski fahren, Auto fahren."
+    },
+    {
+      "verb": "tanzen",
+      "meaning": "to dance",
+      "forms": [
+        "tanze",
+        "tanzt",
+        "tanzt",
+        "tanzen",
+        "tanzt",
+        "tanzen"
+      ],
+      "tip": "After the z sound, du uses -t, not -st."
+    },
+    {
+      "verb": "kochen",
+      "meaning": "to cook",
+      "forms": [
+        "koche",
+        "kochst",
+        "kocht",
+        "kochen",
+        "kocht",
+        "kochen"
+      ],
+      "tip": "Ich koche gern expresses enjoyment; ich kann gut kochen expresses ability."
+    },
+    {
+      "verb": "singen",
+      "meaning": "to sing",
+      "forms": [
+        "singe",
+        "singst",
+        "singt",
+        "singen",
+        "singt",
+        "singen"
+      ],
+      "tip": "The present-tense vowel stays i."
+    },
+    {
+      "verb": "schwimmen",
+      "meaning": "to swim",
+      "forms": [
+        "schwimme",
+        "schwimmst",
+        "schwimmt",
+        "schwimmen",
+        "schwimmt",
+        "schwimmen"
+      ],
+      "tip": "Keep the double m in these forms."
+    },
+    {
+      "verb": "fotografieren",
+      "meaning": "to take photographs",
+      "forms": [
+        "fotografiere",
+        "fotografierst",
+        "fotografiert",
+        "fotografieren",
+        "fotografiert",
+        "fotografieren"
+      ],
+      "tip": "Regular -ieren forms."
+    },
+    {
+      "verb": "malen",
+      "meaning": "to paint",
+      "forms": [
+        "male",
+        "malst",
+        "malt",
+        "malen",
+        "malt",
+        "malen"
+      ],
+      "tip": "Malen is painting; zeichnen is drawing."
+    },
+    {
+      "verb": "backen",
+      "meaning": "to bake",
+      "forms": [
+        "backe",
+        "backst",
+        "backt",
+        "backen",
+        "backt",
+        "backen"
+      ],
+      "tip": "Du bäckst and er/sie/es bäckt are also accepted. After können use backen."
+    },
+    {
+      "verb": "reiten",
+      "meaning": "to ride a horse",
+      "forms": [
+        "reite",
+        "reitest",
+        "reitet",
+        "reiten",
+        "reitet",
+        "reiten"
+      ],
+      "tip": "Add the connecting e after t: reitest, reitet."
+    },
+    {
+      "verb": "spielen",
+      "meaning": "to play",
+      "forms": [
+        "spiele",
+        "spielst",
+        "spielt",
+        "spielen",
+        "spielt",
+        "spielen"
+      ],
+      "tip": "Fußball spielen, Schach spielen, Gitarre spielen."
+    },
+    {
+      "verb": "hören",
+      "meaning": "to hear / listen",
+      "forms": [
+        "höre",
+        "hörst",
+        "hört",
+        "hören",
+        "hört",
+        "hören"
+      ],
+      "tip": "Ich höre Musik. No extra preposition is needed here."
+    },
+    {
+      "verb": "lieben",
+      "meaning": "to love",
+      "forms": [
+        "liebe",
+        "liebst",
+        "liebt",
+        "lieben",
+        "liebt",
+        "lieben"
+      ],
+      "tip": "Ich liebe Musik. Ich liebe Schwimmen. Capitalize a verb used as a noun."
+    },
+    {
+      "verb": "gehen",
+      "meaning": "to go / walk",
+      "forms": [
+        "gehe",
+        "gehst",
+        "geht",
+        "gehen",
+        "geht",
+        "gehen"
+      ],
+      "tip": "The present tense is regular."
+    },
+    {
+      "verb": "surfen",
+      "meaning": "to browse / surf",
+      "forms": [
+        "surfe",
+        "surfst",
+        "surft",
+        "surfen",
+        "surft",
+        "surfen"
+      ],
+      "tip": "For browsing: im Internet surfen."
+    },
+    {
+      "verb": "mixen",
+      "meaning": "to mix",
+      "forms": [
+        "mixe",
+        "mixt",
+        "mixt",
+        "mixen",
+        "mixt",
+        "mixen"
+      ],
+      "tip": "After x, du uses -t: du mixt."
+    },
+    {
+      "verb": "auflegen",
+      "meaning": "to DJ / put on music",
+      "forms": [
+        "lege auf",
+        "legst auf",
+        "legt auf",
+        "legen auf",
+        "legt auf",
+        "legen auf"
+      ],
+      "tip": "A preview of separable verbs: Ich lege Musik auf. After können it stays together: Ich kann Musik auflegen."
+    },
+    {
+      "verb": "zeichnen",
+      "meaning": "to draw",
+      "forms": [
+        "zeichne",
+        "zeichnest",
+        "zeichnet",
+        "zeichnen",
+        "zeichnet",
+        "zeichnen"
+      ],
+      "tip": "The n follows a consonant: du zeichnest, er zeichnet."
+    },
+    {
+      "verb": "planen",
+      "meaning": "to plan",
+      "forms": [
+        "plane",
+        "planst",
+        "plant",
+        "planen",
+        "plant",
+        "planen"
+      ],
+      "tip": "Workbook phrase: Wer kann gut planen?"
+    },
+    {
+      "verb": "schreiben",
+      "meaning": "to write",
+      "forms": [
+        "schreibe",
+        "schreibst",
+        "schreibt",
+        "schreiben",
+        "schreibt",
+        "schreiben"
+      ],
+      "tip": "The present-tense vowel stays ei."
+    },
+    {
+      "verb": "kennen",
+      "meaning": "to know / be familiar with",
+      "forms": [
+        "kenne",
+        "kennst",
+        "kennt",
+        "kennen",
+        "kennt",
+        "kennen"
+      ],
+      "tip": "Use kennen for familiarity with people or things: Kennst du die Musik?"
+    }
+  ],
+  "phrases": [
+    {
+      "de": "Sie können super tanzen!",
+      "en": "You can dance very well!"
+    },
+    {
+      "de": "Du kannst ja toll Ski fahren!",
+      "en": "You really can ski very well!"
+    },
+    {
+      "de": "Herzlichen Dank!",
+      "en": "Thank you very much!"
+    },
+    {
+      "de": "Oh, danke!",
+      "en": "Oh, thank you!"
+    },
+    {
+      "de": "Danke sehr!",
+      "en": "Thank you very much!"
+    },
+    {
+      "de": "Ich kann nicht so gut kochen.",
+      "en": "I cannot cook very well."
+    },
+    {
+      "de": "Ich kann gar nicht backen.",
+      "en": "I cannot bake at all."
+    },
+    {
+      "de": "Könnt ihr schwimmen?",
+      "en": "Can you swim?"
+    },
+    {
+      "de": "Wir können alle drei schwimmen.",
+      "en": "All three of us can swim."
+    },
+    {
+      "de": "Wir können beide tanzen.",
+      "en": "Both of us can dance."
+    },
+    {
+      "de": "Ich kann auch nicht backen.",
+      "en": "I cannot bake either."
+    },
+    {
+      "de": "Was sind deine Hobbys?",
+      "en": "What are your hobbies?"
+    },
+    {
+      "de": "Was machst du gern?",
+      "en": "What do you like doing?"
+    },
+    {
+      "de": "Was machst du in deiner Freizeit?",
+      "en": "What do you do in your free time?"
+    },
+    {
+      "de": "Ich lese gern.",
+      "en": "I like reading."
+    },
+    {
+      "de": "Ich treffe gern Freunde.",
+      "en": "I like meeting friends."
+    },
+    {
+      "de": "Wie oft spielst du Tennis?",
+      "en": "How often do you play tennis?"
+    },
+    {
+      "de": "Ich spiele manchmal Tennis.",
+      "en": "I sometimes play tennis."
+    },
+    {
+      "de": "Das macht Spaß.",
+      "en": "That is fun."
+    },
+    {
+      "de": "Mein Hobby ist Musik auflegen und mixen.",
+      "en": "My hobby is DJing and mixing music."
+    }
+  ],
+  "quiz": [
+    {
+      "q": "Du ___ gut schwimmen.",
+      "options": [
+        "kann",
+        "kannst",
+        "könnt"
+      ],
+      "answer": "kannst",
+      "why": "Du uses kannst. The activity verb stays schwimmen."
+    },
+    {
+      "q": "Er ___ super tanzen.",
+      "options": [
+        "könnt",
+        "kann",
+        "kannt"
+      ],
+      "answer": "kann",
+      "why": "Ich and er/sie/es share kann. Do not add a t."
+    },
+    {
+      "q": "Which sentence has the correct verb frame?",
+      "options": [
+        "Ich kann gut schwimmen.",
+        "Ich kann schwimme gut.",
+        "Ich gut schwimmen kann."
+      ],
+      "answer": "Ich kann gut schwimmen.",
+      "why": "Kann is in position 2; schwimmen is the final infinitive."
+    },
+    {
+      "q": "Which is a yes/no question?",
+      "options": [
+        "Du kannst kochen?",
+        "Kannst du kochen?",
+        "Was kannst du kochen?"
+      ],
+      "answer": "Kannst du kochen?",
+      "why": "The standard yes/no pattern starts with the conjugated verb."
+    },
+    {
+      "q": "Ich koche gern means …",
+      "options": [
+        "I can cook well.",
+        "I like cooking.",
+        "I always cook."
+      ],
+      "answer": "I like cooking.",
+      "why": "Gern expresses enjoyment. Gut expresses skill; immer expresses frequency."
+    },
+    {
+      "q": "Put frequency in descending order.",
+      "options": [
+        "immer → oft → manchmal → nie",
+        "oft → immer → nie → manchmal",
+        "nie → manchmal → oft → immer"
+      ],
+      "answer": "immer → oft → manchmal → nie",
+      "why": "Always, often, sometimes, never. The middle words have no fixed percentage."
+    },
+    {
+      "q": "___ du gern? (lesen)",
+      "options": [
+        "Lest",
+        "Lesst",
+        "Liest"
+      ],
+      "answer": "Liest",
+      "why": "Lesen changes e to ie in du and er/sie/es: liest."
+    },
+    {
+      "q": "Er ___ Freunde.",
+      "options": [
+        "trefft",
+        "trifft",
+        "triffst"
+      ],
+      "answer": "trifft",
+      "why": "Treffen changes e to i: er trifft."
+    },
+    {
+      "q": "Du ___ gern Rad.",
+      "options": [
+        "fährst",
+        "fahrt",
+        "fährt"
+      ],
+      "answer": "fährst",
+      "why": "Fahren changes a to ä in du and er/sie/es: du fährst."
+    },
+    {
+      "q": "Both of us can dance.",
+      "options": [
+        "Wir können beide tanzen.",
+        "Wir können alle drei tanzen.",
+        "Wir kann beide tanzen."
+      ],
+      "answer": "Wir können beide tanzen.",
+      "why": "Beide means both. Wir takes können."
+    }
+  ]
+}

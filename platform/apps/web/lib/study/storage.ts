@@ -7,7 +7,8 @@ function validTags(value:unknown):value is StudyTags{
   const sources=["course","teacher-extra","study-extra"];
   return Array.isArray(t.lessons)&&t.lessons.every(n=>Number.isInteger(n)&&n>=1&&n<=A1_LESSON_COUNT)
     &&Array.isArray(t.concepts)&&t.concepts.every(id=>studyConcepts.some(c=>c.id===id))
-    &&sources.includes(t.source)&&(t.sources===undefined||(Array.isArray(t.sources)&&t.sources.every(s=>sources.includes(s))));
+    &&sources.includes(t.source)&&(t.sources===undefined||(Array.isArray(t.sources)&&t.sources.every(s=>sources.includes(s))))
+    &&(t.sourceLessons===undefined||(t.sourceLessons!==null&&typeof t.sourceLessons==="object"&&!Array.isArray(t.sourceLessons)&&Object.entries(t.sourceLessons).every(([source,lessons])=>sources.includes(source)&&Array.isArray(lessons)&&lessons.every(n=>Number.isInteger(n)&&n>=1&&n<=A1_LESSON_COUNT))));
 }
 
 export const STUDY_KEY = "german-learning-os:study-book:v1";

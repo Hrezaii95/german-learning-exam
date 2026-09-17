@@ -1,0 +1,35 @@
+{
+  "milestone": "Lessons 1-6 ready for live review",
+  "commit": "90cb7735fcecfbaf976b339fade4189808863d76",
+  "deploymentRun": 35214209682,
+  "deployment": "success",
+  "url": "https://hrezaii95.github.io/german-learning-exam/lessons/06/",
+  "cheatSheet": "https://hrezaii95.github.io/german-learning-exam/cheat-sheets/office/",
+  "liveBrowserChecks": {
+    "lessonSix": 15,
+    "dictionary": 14,
+    "studyScope": 18,
+    "lessonFiveRegression": 14,
+    "collections": 59,
+    "bookAnswers": 363,
+    "bookReader": 19
+  },
+  "liveMediaByteChecks": 49,
+  "browserErrors": 0,
+  "phoneScreens": "inspected",
+  "localValidation": "lesson-six-local-validation.json",
+  "evidence": [
+    "lesson-six-live/verification.json",
+    "lesson-six-live/dictionary-loading.json",
+    "lesson-six-live/checks.json",
+    "lesson-six-live/media-verification.json",
+    "../book-answers/lesson-six-live/checks.json",
+    "../book-reader-update/lesson-six-live/verification.json",
+    "../collection-cheatsheet/lesson-six-live/checks.json",
+    "through-six-lesson-five-live/verification.json"
+  ],
+  "remaining": [
+    "Lessons 7-12 under the full A1.1 expansion objective",
+    "Complete ordinary workbook answer key was not supplied; available official/source answers and labelled samples remain distinct"
+  ]
+}

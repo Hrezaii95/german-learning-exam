@@ -5,7 +5,7 @@ const lesson=Number(process.env.STUDY_TEST_LESSON??5),segment=String(lesson).pad
 const base=(process.env.STUDY_TEST_BASE??'http://localhost:3210/german-learning-exam').replace(/\/$/,'');
 const output=resolve('../research/lesson-expansion',process.env.STUDY_TEST_LABEL??`lesson-${lesson}-export`);
 await mkdir(output,{recursive:true});
-const unit=JSON.parse(await readFile(`apps/web/generated/lesson-${lesson===5?'five':'six'}-study.json`,'utf8'));
+const unit=JSON.parse(await readFile(`apps/web/generated/lesson-${({5:'five',6:'six',7:'seven'})[lesson]}-study.json`,'utf8'));
 const browser=await chromium.launch(),page=await browser.newPage({viewport:{width:1440,height:1000},serviceWorkers:'block'});
 const checks=[],errors=[];page.on('pageerror',e=>errors.push(e.message));
 const check=(pass,label)=>{if(!pass)throw Error(label);checks.push(label);};
@@ -16,7 +16,7 @@ try{
  await expect(page.locator('.lesson-concept')).toHaveCount(unit.concepts.length);check(true,'All lesson grammar concepts render');
  await tabs.getByRole('button',{name:'Verbs',exact:true}).click();await expect(page.locator('.lesson-concept')).toHaveCount(unit.verbs.length);check(true,'All verb paradigms render');
  await tabs.getByRole('button',{name:'Phrases',exact:true}).click();await expect(page.locator('.lesson-concept')).toHaveCount(unit.phrases.length);check(true,'All phrases render');
- await tabs.getByRole('button',{name:'Words',exact:true}).click();check(await page.locator('[data-word-family]').count()===(lesson===6?73:98),'Every source entry has a word card');
+ await tabs.getByRole('button',{name:'Words',exact:true}).click();check(await page.locator('[data-word-family]').count()===({5:98,6:73,7:93})[lesson],'Every source entry has a word card');
  await tabs.getByRole('button',{name:'Practice',exact:true}).click();
  for(const q of unit.quiz){await page.getByRole('button',{name:q.answer,exact:true}).click();await expect(page.getByRole('heading',{name:'Correct!',exact:true})).toBeVisible();await page.getByRole('button',{name:'Next question →',exact:true}).click();}
  await expect(page.getByRole('heading',{name:`${unit.quiz.length} / ${unit.quiz.length}`,exact:true})).toBeVisible();check(true,'Every quiz question advances and scores correctly');
@@ -26,7 +26,7 @@ try{
  if(lesson===5){await page.getByRole('button',{name:'die Uhr watch',exact:true}).click();await expect(page.locator('.object-result')).toContainText('Das ist eine Uhr.');await page.getByLabel('Correct a guess with kein / keine').check();await expect(page.locator('.object-result')).toContainText('Das ist keine Uhr.');check(true,'Article builder switches gender and negation correctly');await page.screenshot({path:resolve(output,'objects-desktop.png')});}
  if(lesson===6){await visit('/cheat-sheets/office/');await expect(page.locator('.office-output')).toContainText('Ich brauche einen Kalender.');await page.getByLabel('Negate with kein',{exact:true}).check();await expect(page.locator('.office-output')).toContainText('Ich brauche keinen Kalender.');await page.getByLabel('Make it plural',{exact:true}).check();await expect(page.locator('.office-output')).toContainText('Ich brauche keine Kalender.');await page.getByLabel(/^Choose an office word/).selectOption('2');await expect(page.locator('.office-output')).toContainText('Ich brauche keine Mäuse.');check(true,'Accusative switchboard handles gender, negation and plural');for(let i=0;i<6;i++)await page.getByRole('button',{name:'Next turn →',exact:true}).click();await expect(page.getByRole('button',{name:'Start again',exact:true})).toBeVisible();check(true,'All seven phone turns are reachable');await page.screenshot({path:resolve(output,'office-desktop.png')});}
  await page.setViewportSize({width:390,height:844});await visit(`/lessons/${segment}/`);await page.screenshot({path:resolve(output,'lesson-mobile.png')});check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Lesson fits phone width');
- await visit(lesson===5?'/cheat-sheets/objects/':'/cheat-sheets/office/');await page.screenshot({path:resolve(output,'sheet-mobile.png')});check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Cheat sheet fits phone width');
+ await visit(lesson===5?'/cheat-sheets/objects/':lesson===6?'/cheat-sheets/office/':'/cheat-sheets/hobbies/');await page.screenshot({path:resolve(output,'sheet-mobile.png')});check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Cheat sheet fits phone width');
  check(errors.length===0,`No browser exceptions: ${errors.join('; ')}`);
  await writeFile(resolve(output,'verification.json'),JSON.stringify({base,lesson,checks,errors},null,2));console.log(JSON.stringify({base,lesson,passed:checks.length}));
 }finally{await browser.close();}

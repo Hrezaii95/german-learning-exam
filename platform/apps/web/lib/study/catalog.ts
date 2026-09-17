@@ -11,11 +11,12 @@ import { countries, countryName, countryFrom, countryOriginMeaning, countryGroup
 import { bookTranscript } from "../audio/listening-transcripts";
 import { homeWords, homeLabels, homePhrases } from "./home";
 import {grammarPatterns,conversationFrames,verbModels,spokenVerb} from "./sheet-topics";
-import {questionWords,questionBuilders,questionReplyCases} from "./questions";
+import {questionWords,questionBuilders,questionReplyCases,questionWordLessons} from "./questions";
 import {studyUnits} from "./course-lessons";
 import {tagsForLesson} from "./scope";
 import {objectModels,objectSentences,materialModels} from "./object-sheet";
 import {officeModels,officeSentence,officeMeaning,phoneSteps,type OfficeMode} from "./office-sheet";
+import {hobbyModels,hobbyPeople,abilityLevels,frequencyWords,abilitySentence,abilityMeaning,frequencySentence,frequencyMeaning} from "./hobbies-sheet";
 const generated = join(
   dirname(fileURLToPath(import.meta.url)),
   "../../generated",
@@ -95,6 +96,10 @@ export function loadDictionary(): DictionaryEntry[] {
     for(const mode of ["identify","have","need","find"] as OfficeMode[])for(const negative of [false,true])for(const plural of [false,true])addStudySentence(`office-${i}-${mode}-${negative}-${plural}`,officeSentence(i,mode,negative,plural),officeMeaning(i,mode,negative,plural),6,"/cheat-sheets/office#office-lab",`l6-office-${i}-${mode}-${negative}-${plural}`);
   });
   phoneSteps.forEach((p,i)=>addStudySentence(`office-phone-${i}`,p.de,p.en,6,"/cheat-sheets/office#phone-lab",`l6-phone-${i}`));
+  hobbyModels.forEach((_,h)=>{
+    hobbyPeople.forEach((_,p)=>abilityLevels.forEach((_,a)=>[false,true].forEach(q=>addStudySentence(`hobby-${h}-${p}-${a}-${q}`,abilitySentence(h,p,a,q),abilityMeaning(h,p,a,q),7,"/cheat-sheets/hobbies#ability-lab",`l7-ability-${h}-${p}-${a}-${q}`))));
+    frequencyWords.forEach((_,f)=>addStudySentence(`hobby-frequency-${h}-${f}`,frequencySentence(h,f),frequencyMeaning(h,f),7,"/cheat-sheets/hobbies#frequency-lab",`l7-frequency-${h}-${f}`));
+  });
   for(const unit of studyUnits){
     for(const verb of unit.verbs){const entry=entries.find(e=>e.de===verb.verb||e.de.startsWith(verb.verb+" "));if(entry)entry.forms=[...new Set([...entry.forms,...verb.forms])];}
     for(const [index,phrase] of unit.phrases.entries())entries.push({id:`unit-${unit.number}-phrase-${index}`,saveId:`l${unit.number}-phrase-${index}`,de:phrase.de,en:phrase.en,forms:[phrase.de],example:"",translation:"",href:`/lessons/${String(unit.number).padStart(2,"0")}#phrases`,audio:speech[phrase.de]??null,kind:"phrase",studyTags:{...tagsForLesson(unit.number),concepts:["conversation"]}});
@@ -204,12 +209,12 @@ export function loadDictionary(): DictionaryEntry[] {
     entries.push({id:`home-phrase-${index}`,saveId:`home-phrase-${index}`,de:phrase.de,en:phrase.en,forms:[],example:"",translation:"",kind:"phrase",href:"/cheat-sheets/home#home-describe",audio:homeSpeech[phrase.de]??null});
   });
   const collectionSpeech=loadCollectionSpeech();
-  const addQuestion=(id:string,de:string,en:string)=>{
+  const addQuestion=(id:string,de:string,en:string,studyTags?:ReturnType<typeof tagsForLesson>,saveId?:string)=>{
     if(entries.some(entry=>entry.de===de))return;
-    entries.push({id:`question-${id}`,de,en,forms:[],example:"",translation:"",href:"/cheat-sheets/questions",audio:collectionSpeech[de]??null,kind:"phrase"});
+    entries.push({id:`question-${id}`,de,en,forms:[],example:"",translation:"",href:"/cheat-sheets/questions",audio:speech[de]??collectionSpeech[de]??null,kind:"phrase",...(studyTags?{studyTags}:{}),...(saveId?{saveId}:{})});
   };
-  for(const word of questionWords){addQuestion(word.id,word.word,word.meaning);addQuestion(`${word.id}-ask`,word.question,word.translation);addQuestion(`${word.id}-answer`,word.answer,word.answerMeaning);}
-  for(const builder of questionBuilders){for(const [i,parts] of [builder.w,builder.formal,builder.yes,builder.yesFormal].entries())addQuestion(`${builder.id}-${i}`,parts.join(" "),i<2?builder.meaning:builder.yesMeaning);}
+  for(const word of questionWords){const tags:ReturnType<typeof tagsForLesson>={lessons:questionWordLessons(word),concepts:["questions","grammar"],source:word.lesson?"course":"study-extra"};addQuestion(word.id,word.word,word.meaning,tags);addQuestion(`${word.id}-ask`,word.question,word.translation,tags,`question-${word.id}`);addQuestion(`${word.id}-answer`,word.answer,word.answerMeaning,tags);}
+  for(const builder of questionBuilders){for(const [i,parts] of [builder.w,builder.formal,builder.yes,builder.yesFormal].entries())addQuestion(`${builder.id}-${i}`,parts.join(" "),i<2?builder.meaning:builder.yesMeaning,tagsForLesson(builder.lesson),`question-builder-${builder.id}-${i===1||i===3}-${i>=2}`);}
   for(const [i,reply] of questionReplyCases.entries()){addQuestion(`reply-${i}`,reply.question,reply.translation);addQuestion(`reply-${i}-yes`,reply.yes,reply.yesMeaning);addQuestion(`reply-${i}-no`,reply.no,reply.noMeaning);}
   for(const [i,[de,en]] of [["Wer kommt aus dem Iran?","Who comes from Iran?"],["Welche Sprache sprichst du?","Which language do you speak?"],["Welcher Tisch ist schön?","Which table is beautiful?"],["Welches Buch ist das?","Which book is that?"]].entries())addQuestion(`example-${i}`,de!,en!);
   for(const p of grammarPatterns) entries.push({id:`sheet-pattern-${p.id}`,de:p.de,en:p.en,forms:[p.de],example:p.de,translation:p.en,href:`/cheat-sheets/verbs#pattern-${p.id}`,audio:collectionSpeech[p.de]??null,kind:"sentence",saveId:`sheet-pattern-${p.id}`});

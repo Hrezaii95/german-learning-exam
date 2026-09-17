@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "gate": "pass",
-  "scannedFiles": 1044,
+  "scannedFiles": 1140,
   "distinctFindings": 0,
   "totalOccurrences": 0,
   "rules": [

@@ -14,6 +14,11 @@ import {studyUnits} from "../study/course-lessons";
 import { wordStudyTags } from "../study/tags";
 
 let cached: WordCardCatalog | undefined;
+function mergeMeaning(existing:string,addition:string):string{
+  if(existing.toLocaleLowerCase('en').includes(addition.toLocaleLowerCase('en')))return existing;
+  if(addition.toLocaleLowerCase('en').includes(existing.toLocaleLowerCase('en')))return addition;
+  return `${existing} / ${addition}`;
+}
 const catalogPath = join(
   dirname(fileURLToPath(import.meta.url)),
   "../../generated/word-cards.json",
@@ -32,6 +37,8 @@ export function loadWordCards(): WordCardCatalog {
       for(const addition of studyWordCards(unit.words!,unit.number,source)){
         const existing=families.find(c=>c.rows.some(r=>r.singular.text===addition.rows[0]?.singular.text));
         if(existing){
+          existing.title=mergeMeaning(existing.title,addition.title);
+          for(const row of existing.rows){const added=addition.rows.find(r=>r.singular.text===row.singular.text);if(added)row.meaning=mergeMeaning(row.meaning,added.meaning);}
           existing.lessons=[...new Set([...existing.lessons,...addition.lessons])];
           existing.aliases=[...new Set([...existing.aliases,addition.path])];
           existing.sourceIds=[...new Set([...existing.sourceIds,...addition.sourceIds])];

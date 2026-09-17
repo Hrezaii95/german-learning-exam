@@ -42098,6 +42098,2454 @@
       "pageLabel": "Page 46"
     },
     {
+      "id": "coursebook-47",
+      "kind": "coursebook",
+      "lesson": 7,
+      "printedPage": 47,
+      "pdfPage": 49,
+      "image": "/book/pages/coursebook-47.webp",
+      "width": 1905,
+      "height": 2695,
+      "lines": [
+        {
+          "id": "coursebook-47-line-1",
+          "text": "Sie können",
+          "box": [
+            10.768,
+            5.726,
+            36.357,
+            6.376
+          ]
+        },
+        {
+          "id": "coursebook-47-line-2",
+          "text": "super tanzen!",
+          "box": [
+            10.768,
+            9.873,
+            51.451,
+            6.376
+          ]
+        },
+        {
+          "id": "coursebook-47-line-3",
+          "text": "H Ö R E N : Aussagen zu Freizeit aktivitäten K O M M U N I K AT I O N : Komplimente machen: Sie können wirklich super",
+          "box": [
+            14.293,
+            89.551,
+            73.797,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-47-line-4",
+          "text": "tanzen! sich bedanken: Oh, danke! über Fähigkeiten sprechen: Ich kann nicht so gut kochen. über Häufigkeit",
+          "box": [
+            14.286,
+            91.012,
+            74.987,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-47-line-5",
+          "text": "sprechen: immer, nie … über Hobbys sprechen: Mein Hobby ist Musik auflegen. W Ö R T E R : Freizeitaktivitäten",
+          "box": [
+            14.286,
+            92.473,
+            73.12,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-47-line-6",
+          "text": "G R A M M AT I K : Modalverb: können Satzklammer: Sie können super tanzen! Konjugation: lesen, treffen, fahren, ...",
+          "box": [
+            14.293,
+            93.934,
+            74.638,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-47-line-7",
+          "text": "1 Amalie tanzt auf der Straße.",
+          "box": [
+            11.292,
+            62.371,
+            30.097,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-47-line-8",
+          "text": "a Sehen Sie das Bild an. Was meinen Sie:",
+          "box": [
+            11.313,
+            64.328,
+            33.256,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-47-line-9",
+          "text": "Wie findet Erika das?",
+          "box": [
+            14.286,
+            66.296,
+            16.965,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-47-line-10",
+          "text": "b Hören Sie und vergleichen Sie.",
+          "box": [
+            11.275,
+            72.665,
+            26.962,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-47-line-11",
+          "text": "2 Und wie finden Sie das? AB 1",
+          "box": [
+            11.23,
+            76.371,
+            28.694,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-47-line-12",
+          "text": "Ich glaube, Erika findet das …",
+          "box": [
+            15.798,
+            69.126,
+            19.667,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-47-line-13",
+          "text": "Ich finde das interessant. Und wie findest du das?",
+          "box": [
+            15.798,
+            79.528,
+            33.474,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-47-line-14",
+          "text": "Ich finde das …",
+          "box": [
+            46.036,
+            82.024,
+            9.932,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-47-line-15",
+          "text": "Ich finde das",
+          "box": [
+            63.655,
+            75.159,
+            8.613,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-47-line-16",
+          "text": "Du findest das",
+          "box": [
+            63.655,
+            76.62,
+            9.787,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-47-line-17",
+          "text": "Er / Sie findet das",
+          "box": [
+            63.655,
+            78.081,
+            11.531,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-47-line-18",
+          "text": "toll / super.",
+          "box": [
+            79.678,
+            73.25,
+            7.2,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-47-line-19",
+          "text": "normal.",
+          "box": [
+            79.678,
+            74.711,
+            5.165,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-47-line-20",
+          "text": "komisch.",
+          "box": [
+            79.678,
+            76.172,
+            5.958,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-47-line-21",
+          "text": "blöd.",
+          "box": [
+            79.678,
+            77.633,
+            3.381,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-47-line-22",
+          "text": "interessant.",
+          "box": [
+            79.678,
+            79.094,
+            7.98,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-47-line-23",
+          "text": "lustig.",
+          "box": [
+            79.678,
+            80.555,
+            4.114,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-47-line-24",
+          "text": "Amalie",
+          "box": [
+            23.143,
+            43.248,
+            4.661,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-47-line-25",
+          "text": "Erika",
+          "box": [
+            67.714,
+            42.659,
+            3.376,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-47-line-26",
+          "text": "siebenundvierzig",
+          "box": [
+            94.254,
+            74.186,
+            2.216,
+            7.692
+          ]
+        }
+      ],
+      "audioIds": [
+        "coursebook-l7-ex1-3ef29d61"
+      ],
+      "section": "Lesson 7",
+      "pageLabel": "Page 47"
+    },
+    {
+      "id": "coursebook-48",
+      "kind": "coursebook",
+      "lesson": 7,
+      "printedPage": 48,
+      "pdfPage": 50,
+      "image": "/book/pages/coursebook-48.webp",
+      "width": 1905,
+      "height": 2695,
+      "lines": [
+        {
+          "id": "coursebook-48-line-1",
+          "text": "3 Erika kann toll tanzen.",
+          "box": [
+            11.224,
+            4.796,
+            24.719,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-48-line-2",
+          "text": "Hören Sie das Gespräch weiter.",
+          "box": [
+            14.286,
+            7.033,
+            24.358,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-48-line-3",
+          "text": "Was ist richtig? Kreuzen Sie an.",
+          "box": [
+            14.286,
+            8.72,
+            24.396,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-48-line-4",
+          "text": "a Erika kennt die Musik nicht.",
+          "box": [
+            14.286,
+            10.651,
+            25.143,
+            2.162
+          ]
+        },
+        {
+          "id": "coursebook-48-line-5",
+          "text": "b Amalie ist die Enkelin von Erika.",
+          "box": [
+            14.286,
+            12.433,
+            28.336,
+            2.162
+          ]
+        },
+        {
+          "id": "coursebook-48-line-6",
+          "text": "c Amalie findet: Erika kann toll tanzen.",
+          "box": [
+            14.286,
+            14.214,
+            32.16,
+            2.162
+          ]
+        },
+        {
+          "id": "coursebook-48-line-7",
+          "text": "4 Sie können wirklich super tanzen! AB 2 – 4",
+          "box": [
+            11.211,
+            17.996,
+            39.895,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-48-line-8",
+          "text": "Wer sagt was? Ordnen Sie zu.",
+          "box": [
+            14.286,
+            20.233,
+            23.172,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-48-line-9",
+          "text": "Amalie = A, Erika = E. Hören Sie dann",
+          "box": [
+            14.286,
+            21.92,
+            29.688,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-48-line-10",
+          "text": "noch einmal und vergleichen Sie.",
+          "box": [
+            14.286,
+            23.607,
+            25.468,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-48-line-11",
+          "text": "Sie können wirklich super tanzen!",
+          "box": [
+            14.286,
+            36.228,
+            28.483,
+            2.162
+          ]
+        },
+        {
+          "id": "coursebook-48-line-12",
+          "text": "Ich kann überall tanzen!",
+          "box": [
+            14.286,
+            38.009,
+            20.784,
+            2.162
+          ]
+        },
+        {
+          "id": "coursebook-48-line-13",
+          "text": "Meine Enkelin hört das zurzeit",
+          "box": [
+            14.286,
+            39.791,
+            26.169,
+            2.162
+          ]
+        },
+        {
+          "id": "coursebook-48-line-14",
+          "text": "immer. Sie kann auch gut tanzen.",
+          "box": [
+            17.046,
+            41.825,
+            25.089,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-48-line-15",
+          "text": "Na, Sie können aber auch",
+          "box": [
+            14.286,
+            43.354,
+            22.499,
+            2.162
+          ]
+        },
+        {
+          "id": "coursebook-48-line-16",
+          "text": "super tanzen!",
+          "box": [
+            17.046,
+            45.388,
+            10.214,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-48-line-17",
+          "text": "5 Wer kann reiten? AB 5",
+          "box": [
+            11.215,
+            48.917,
+            22.44,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-48-line-18",
+          "text": "Sehen Sie das Bildlexikon zwei Minuten lang an. Schließen",
+          "box": [
+            14.286,
+            51.155,
+            45.641,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-48-line-19",
+          "text": "Sie dann Ihr Buch. Ihre Kursleiterin / Ihr Kursleiter fragt:",
+          "box": [
+            14.286,
+            52.842,
+            43.499,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-48-line-20",
+          "text": "Wer kann …? Sie können das? Dann stehen Sie auf.",
+          "box": [
+            14.286,
+            54.529,
+            39.865,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-48-line-21",
+          "text": "6 Pantomime: Komplimente machen AB 6",
+          "box": [
+            11.215,
+            58.459,
+            38.141,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-48-line-22",
+          "text": "Arbeiten Sie in Gruppen. Spielen Sie ein Hobby vor. Die",
+          "box": [
+            14.286,
+            60.696,
+            43.317,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-48-line-23",
+          "text": "anderen machen Komplimente. Bedanken Sie sich dann.",
+          "box": [
+            14.286,
+            62.383,
+            43.477,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-48-line-24",
+          "text": "7 Ich kann nicht so gut kochen. AB 7 – 8",
+          "box": [
+            11.222,
+            75.222,
+            35.552,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-48-line-25",
+          "text": "Sortieren Sie.",
+          "box": [
+            14.286,
+            77.459,
+            10.452,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-48-line-26",
+          "text": "ein bisschen | gar nicht | toll / sehr gut / super | gut | nicht so gut",
+          "box": [
+            14.286,
+            78.94,
+            46.396,
+            3.599
+          ]
+        },
+        {
+          "id": "coursebook-48-line-27",
+          "text": "toll / sehr gut / super -",
+          "box": [
+            16.975,
+            82.913,
+            17.653,
+            1.858
+          ]
+        },
+        {
+          "id": "coursebook-48-line-28",
+          "text": "kochen",
+          "box": [
+            5.421,
+            95.39,
+            5.313,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-48-line-29",
+          "text": "singen",
+          "box": [
+            19.115,
+            95.39,
+            4.802,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-48-line-30",
+          "text": "schwimmen",
+          "box": [
+            31.598,
+            95.39,
+            8.394,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-48-line-31",
+          "text": "fotografieren",
+          "box": [
+            45.421,
+            95.39,
+            9.641,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-48-line-32",
+          "text": "Schach spielen",
+          "box": [
+            58.953,
+            95.39,
+            10.465,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-48-line-33",
+          "text": "malen",
+          "box": [
+            76.39,
+            95.39,
+            4.486,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-48-line-34",
+          "text": "backen",
+          "box": [
+            90.317,
+            95.39,
+            5.189,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-48-line-35",
+          "text": "können",
+          "box": [
+            57.868,
+            33.772,
+            5.01,
+            1.428
+          ]
+        },
+        {
+          "id": "coursebook-48-line-36",
+          "text": "ich",
+          "box": [
+            48.81,
+            35.668,
+            1.994,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-48-line-37",
+          "text": "kann",
+          "box": [
+            57.868,
+            35.668,
+            3.18,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-48-line-38",
+          "text": "du",
+          "box": [
+            48.81,
+            37.562,
+            1.66,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-48-line-39",
+          "text": "kannst",
+          "box": [
+            57.868,
+            37.562,
+            4.442,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-48-line-40",
+          "text": "er / es / sie",
+          "box": [
+            48.81,
+            39.455,
+            6.388,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-48-line-41",
+          "text": "kann",
+          "box": [
+            57.868,
+            39.455,
+            3.18,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-48-line-42",
+          "text": "wir",
+          "box": [
+            48.81,
+            41.348,
+            2.068,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-48-line-43",
+          "text": "können",
+          "box": [
+            57.868,
+            41.348,
+            4.971,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-48-line-44",
+          "text": "ihr",
+          "box": [
+            48.81,
+            43.241,
+            1.822,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-48-line-45",
+          "text": "könnt",
+          "box": [
+            57.868,
+            43.241,
+            3.89,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-48-line-46",
+          "text": "sie / Sie",
+          "box": [
+            48.81,
+            45.135,
+            4.693,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-48-line-47",
+          "text": "können",
+          "box": [
+            57.868,
+            45.135,
+            4.971,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-48-line-48",
+          "text": "Position 2",
+          "box": [
+            60.143,
+            23.506,
+            6.802,
+            1.428
+          ]
+        },
+        {
+          "id": "coursebook-48-line-49",
+          "text": "Ende",
+          "box": [
+            80.381,
+            23.506,
+            3.414,
+            1.428
+          ]
+        },
+        {
+          "id": "coursebook-48-line-50",
+          "text": "Sie",
+          "box": [
+            48.81,
+            25.646,
+            2.014,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-48-line-51",
+          "text": "Meine Enkelin",
+          "box": [
+            48.81,
+            27.108,
+            9.542,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-48-line-52",
+          "text": "können",
+          "box": [
+            60.143,
+            25.646,
+            4.971,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-48-line-53",
+          "text": "kann",
+          "box": [
+            60.143,
+            27.108,
+            3.18,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-48-line-54",
+          "text": "wirklich super",
+          "box": [
+            69.285,
+            25.646,
+            9.472,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-48-line-55",
+          "text": "auch gut",
+          "box": [
+            69.285,
+            27.108,
+            5.901,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-48-line-56",
+          "text": "tanzen!",
+          "box": [
+            80.381,
+            25.486,
+            4.942,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-48-line-57",
+          "text": "tanzen!",
+          "box": [
+            80.381,
+            27.268,
+            4.942,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-48-line-58",
+          "text": "ja",
+          "box": [
+            71.121,
+            61.657,
+            1.498,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-48-line-59",
+          "text": "Du kannst wirklich toll Ski fahren!",
+          "box": [
+            62.721,
+            63.119,
+            25.182,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-48-line-60",
+          "text": "aber",
+          "box": [
+            71.121,
+            64.58,
+            3.028,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-48-line-61",
+          "text": "Vielen Dank! / Oh, danke! /",
+          "box": [
+            62.721,
+            66.932,
+            18.825,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-48-line-62",
+          "text": "Danke sehr! / Herzlichen Dank!",
+          "box": [
+            62.721,
+            68.393,
+            21.212,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-48-line-63",
+          "text": "Was können Sie super /",
+          "box": [
+            72.053,
+            77.59,
+            15.445,
+            1.289
+          ]
+        },
+        {
+          "id": "coursebook-48-line-64",
+          "text": "gar nicht gut? Schreiben",
+          "box": [
+            72.053,
+            78.992,
+            16.573,
+            1.289
+          ]
+        },
+        {
+          "id": "coursebook-48-line-65",
+          "text": "Sie zwei Sätze.",
+          "box": [
+            72.053,
+            80.393,
+            9.56,
+            1.289
+          ]
+        },
+        {
+          "id": "coursebook-48-line-66",
+          "text": "Du kannst ja",
+          "box": [
+            15.798,
+            65.597,
+            8.687,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-48-line-67",
+          "text": "toll Ski fahren!",
+          "box": [
+            15.798,
+            67.058,
+            9.9,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-48-line-68",
+          "text": "Oh, danke!",
+          "box": [
+            41.727,
+            64.94,
+            7.334,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-48-line-69",
+          "text": "achtundvierzig",
+          "box": [
+            3.383,
+            75.123,
+            2.216,
+            6.756
+          ]
+        }
+      ],
+      "audioIds": [
+        "coursebook-l7-ex3-3a4b6489"
+      ],
+      "section": "Lesson 7",
+      "pageLabel": "Page 48"
+    },
+    {
+      "id": "coursebook-49",
+      "kind": "coursebook",
+      "lesson": 7,
+      "printedPage": 49,
+      "pdfPage": 51,
+      "image": "/book/pages/coursebook-49.webp",
+      "width": 1905,
+      "height": 2695,
+      "lines": [
+        {
+          "id": "coursebook-49-line-1",
+          "text": "8 Könnt ihr schwimmen? AB 9 – 10",
+          "box": [
+            11.219,
+            4.796,
+            30.164,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-49-line-2",
+          "text": "a Arbeiten Sie zu dritt. Ergänzen Sie Ihre Namen.",
+          "box": [
+            11.313,
+            6.752,
+            40.236,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-49-line-3",
+          "text": "Sprechen Sie dann und ergänzen Sie wie im Beispiel.",
+          "box": [
+            14.286,
+            8.72,
+            40.461,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-49-line-4",
+          "text": "Maria: Ich kann schwimmen. Könnt ihr auch schwimmen?",
+          "box": [
+            16.429,
+            32.283,
+            43.192,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-49-line-5",
+          "text": "Murat: Ja, ich kann auch schwimmen. Und du, José?",
+          "box": [
+            16.429,
+            34.065,
+            39.353,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-49-line-6",
+          "text": "José: Ich kann auch schwimmen. Ich kann sehr gut backen.",
+          "box": [
+            16.429,
+            35.847,
+            44.999,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-49-line-7",
+          "text": "Murat, kannst du auch backen?",
+          "box": [
+            16.429,
+            37.628,
+            23.571,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-49-line-8",
+          "text": "Murat: Nein, ich kann gar nicht backen.",
+          "box": [
+            16.429,
+            39.41,
+            30.29,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-49-line-9",
+          "text": "Maria: Ich kann auch nicht backen, aber ich …",
+          "box": [
+            16.429,
+            41.192,
+            34.789,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-49-line-10",
+          "text": "b Erzählen Sie im Kurs.",
+          "box": [
+            11.275,
+            43.644,
+            19.648,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-49-line-11",
+          "text": "c Wer kann was? Arbeiten Sie zu zweit.",
+          "box": [
+            11.401,
+            46.273,
+            32.13,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-49-line-12",
+          "text": "PARTNER/IN A → S. 162",
+          "box": [
+            14.723,
+            47.959,
+            16.523,
+            2.054
+          ]
+        },
+        {
+          "id": "coursebook-49-line-13",
+          "text": "PARTNER/IN B → S. 194",
+          "box": [
+            32.315,
+            47.959,
+            16.876,
+            2.054
+          ]
+        },
+        {
+          "id": "coursebook-49-line-14",
+          "text": "9 Mein Hobby ist … AB 11",
+          "box": [
+            11.217,
+            51.667,
+            23.502,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-49-line-15",
+          "text": "a Wer sagt was? Ordnen Sie",
+          "box": [
+            11.313,
+            53.623,
+            23.39,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-49-line-16",
+          "text": "die Sätze den Bildern zu.",
+          "box": [
+            14.286,
+            55.591,
+            19.527,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-49-line-17",
+          "text": "1 Mein Hobby ist Musik",
+          "box": [
+            14.286,
+            57.522,
+            21.633,
+            2.162
+          ]
+        },
+        {
+          "id": "coursebook-49-line-18",
+          "text": "auflegen und mixen.",
+          "box": [
+            19.189,
+            59.555,
+            15.386,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-49-line-19",
+          "text": "2 Ich liebe Kickboxen.",
+          "box": [
+            14.286,
+            61.085,
+            20.411,
+            2.162
+          ]
+        },
+        {
+          "id": "coursebook-49-line-20",
+          "text": "3 Ich male sehr gern.",
+          "box": [
+            14.286,
+            62.867,
+            19.848,
+            2.162
+          ]
+        },
+        {
+          "id": "coursebook-49-line-21",
+          "text": "b Was ist richtig? Hören Sie und kreuzen Sie an.",
+          "box": [
+            11.275,
+            65.571,
+            38.658,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-49-line-22",
+          "text": "1 Erwin Matzewitsch wohnt",
+          "box": [
+            14.286,
+            68.026,
+            22.108,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-49-line-23",
+          "text": "zu Hause.",
+          "box": [
+            44.411,
+            67.783,
+            9.878,
+            2.162
+          ]
+        },
+        {
+          "id": "coursebook-49-line-24",
+          "text": "im Seniorenheim.",
+          "box": [
+            61.21,
+            67.783,
+            15.376,
+            2.162
+          ]
+        },
+        {
+          "id": "coursebook-49-line-25",
+          "text": "Er kann nicht richtig",
+          "box": [
+            16.429,
+            69.817,
+            15.883,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-49-line-26",
+          "text": "gehen.",
+          "box": [
+            44.411,
+            69.565,
+            7.743,
+            2.162
+          ]
+        },
+        {
+          "id": "coursebook-49-line-27",
+          "text": "sehen.",
+          "box": [
+            61.21,
+            69.565,
+            7.059,
+            2.162
+          ]
+        },
+        {
+          "id": "coursebook-49-line-28",
+          "text": "2 Josef macht eine Ausbildung als",
+          "box": [
+            14.287,
+            71.589,
+            27.078,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-49-line-29",
+          "text": "DJ.",
+          "box": [
+            44.413,
+            71.347,
+            5.033,
+            2.162
+          ]
+        },
+        {
+          "id": "coursebook-49-line-30",
+          "text": "Versicherungskaufmann.",
+          "box": [
+            61.212,
+            71.347,
+            20.921,
+            2.162
+          ]
+        },
+        {
+          "id": "coursebook-49-line-31",
+          "text": "In der Freizeit geht er oft",
+          "box": [
+            16.431,
+            73.38,
+            19.727,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-49-line-32",
+          "text": "in Klubs.",
+          "box": [
+            44.413,
+            73.128,
+            8.887,
+            2.162
+          ]
+        },
+        {
+          "id": "coursebook-49-line-33",
+          "text": "in Konzerte.",
+          "box": [
+            61.212,
+            73.128,
+            11.217,
+            2.162
+          ]
+        },
+        {
+          "id": "coursebook-49-line-34",
+          "text": "3 Carmen hat",
+          "box": [
+            14.289,
+            75.152,
+            11.595,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-49-line-35",
+          "text": "ein Start-up.",
+          "box": [
+            44.415,
+            74.91,
+            12.14,
+            2.162
+          ]
+        },
+        {
+          "id": "coursebook-49-line-36",
+          "text": "ein Fitnessstudio.",
+          "box": [
+            61.214,
+            74.91,
+            15.45,
+            2.162
+          ]
+        },
+        {
+          "id": "coursebook-49-line-37",
+          "text": "Sie arbeitet",
+          "box": [
+            16.434,
+            76.944,
+            9.266,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-49-line-38",
+          "text": "nie lange.",
+          "box": [
+            44.415,
+            76.692,
+            9.886,
+            2.162
+          ]
+        },
+        {
+          "id": "coursebook-49-line-39",
+          "text": "oft lange.",
+          "box": [
+            61.214,
+            76.692,
+            9.449,
+            2.162
+          ]
+        },
+        {
+          "id": "coursebook-49-line-40",
+          "text": "Erwin Matzewitsch",
+          "box": [
+            46.476,
+            62.037,
+            13.196,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-49-line-41",
+          "text": "Josef",
+          "box": [
+            65.8,
+            62.037,
+            4.049,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-49-line-42",
+          "text": "Carmen",
+          "box": [
+            80.561,
+            62.037,
+            5.411,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-49-line-43",
+          "text": "Fußball spielen",
+          "box": [
+            3.079,
+            95.39,
+            10.576,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-49-line-44",
+          "text": "Rad fahren",
+          "box": [
+            18.054,
+            95.39,
+            7.839,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-49-line-45",
+          "text": "tanzen",
+          "box": [
+            33.461,
+            95.39,
+            4.912,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-49-line-46",
+          "text": "Tennis spielen",
+          "box": [
+            44.934,
+            95.39,
+            9.852,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-49-line-47",
+          "text": "Gitarre spielen",
+          "box": [
+            59.217,
+            95.39,
+            10.917,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-49-line-48",
+          "text": "Ski fahren",
+          "box": [
+            74.814,
+            95.39,
+            7.209,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-49-line-49",
+          "text": "reiten",
+          "box": [
+            90.479,
+            95.39,
+            4.073,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-49-line-50",
+          "text": "Wie oft?",
+          "box": [
+            69.572,
+            80.676,
+            6.179,
+            1.428
+          ]
+        },
+        {
+          "id": "coursebook-49-line-51",
+          "text": "immer, oft, manchmal, nie",
+          "box": [
+            69.572,
+            83.602,
+            17.84,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-49-line-52",
+          "text": "Maria",
+          "box": [
+            33.561,
+            11.995,
+            4.339,
+            1.655
+          ]
+        },
+        {
+          "id": "coursebook-49-line-53",
+          "text": "schwimmen",
+          "box": [
+            31.521,
+            23.192,
+            8.825,
+            1.697
+          ]
+        },
+        {
+          "id": "coursebook-49-line-54",
+          "text": "José",
+          "box": [
+            16.074,
+            27.653,
+            3.535,
+            1.648
+          ]
+        },
+        {
+          "id": "coursebook-49-line-55",
+          "text": "backen",
+          "box": [
+            16.105,
+            29.302,
+            5.068,
+            1.662
+          ]
+        },
+        {
+          "id": "coursebook-49-line-56",
+          "text": "Murat",
+          "box": [
+            52.416,
+            27.306,
+            4.649,
+            1.658
+          ]
+        },
+        {
+          "id": "coursebook-49-line-57",
+          "text": "Das können Murat und Maria:",
+          "box": [
+            37.84,
+            14.278,
+            14.162,
+            12.445
+          ]
+        },
+        {
+          "id": "coursebook-49-line-58",
+          "text": "Das können José und Murat:",
+          "box": [
+            25.643,
+            28.833,
+            19.978,
+            1.721
+          ]
+        },
+        {
+          "id": "coursebook-49-line-59",
+          "text": "Das können",
+          "box": [
+            31.999,
+            20.643,
+            8.091,
+            1.409
+          ]
+        },
+        {
+          "id": "coursebook-49-line-60",
+          "text": "wir alle:",
+          "box": [
+            33.367,
+            21.691,
+            5.041,
+            1.38
+          ]
+        },
+        {
+          "id": "coursebook-49-line-61",
+          "text": "Das kann nur:",
+          "box": [
+            23.422,
+            12.094,
+            9.01,
+            1.417
+          ]
+        },
+        {
+          "id": "coursebook-49-line-62",
+          "text": "Das können Maria und José:",
+          "box": [
+            19.906,
+            14.614,
+            13.011,
+            12.062
+          ]
+        },
+        {
+          "id": "coursebook-49-line-63",
+          "text": "Kannst",
+          "box": [
+            67.56,
+            24.452,
+            4.626,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-49-line-64",
+          "text": "du",
+          "box": [
+            74.869,
+            24.452,
+            1.66,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-49-line-65",
+          "text": "Könnt",
+          "box": [
+            67.56,
+            26.345,
+            4.055,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-49-line-66",
+          "text": "ihr",
+          "box": [
+            74.869,
+            26.345,
+            1.822,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-49-line-67",
+          "text": "schwimmen?",
+          "box": [
+            79.285,
+            26.345,
+            8.706,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-49-line-68",
+          "text": "Können",
+          "box": [
+            67.56,
+            28.238,
+            5.136,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-49-line-69",
+          "text": "Sie",
+          "box": [
+            74.869,
+            28.238,
+            2.014,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-49-line-70",
+          "text": "tanzen",
+          "box": [
+            26.801,
+            19.368,
+            4.872,
+            3.921
+          ]
+        },
+        {
+          "id": "coursebook-49-line-71",
+          "text": "Wir können alle drei schwimmen.",
+          "box": [
+            65.6,
+            36.488,
+            22.715,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-49-line-72",
+          "text": "Aber nur José kann backen. José",
+          "box": [
+            65.6,
+            37.949,
+            22.358,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-49-line-73",
+          "text": "und Maria können beide tanzen.",
+          "box": [
+            65.6,
+            39.41,
+            21.607,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-49-line-74",
+          "text": "neunundvierzig",
+          "box": [
+            94.254,
+            74.858,
+            2.216,
+            7.021
+          ]
+        }
+      ],
+      "audioIds": [
+        "coursebook-l7-ex9-a9c36653",
+        "coursebook-l7-ex9-481ee522",
+        "coursebook-l7-ex9-1995b49c"
+      ],
+      "section": "Lesson 7",
+      "pageLabel": "Page 49"
+    },
+    {
+      "id": "coursebook-50",
+      "kind": "coursebook",
+      "lesson": 7,
+      "printedPage": 50,
+      "pdfPage": 52,
+      "image": "/book/pages/coursebook-50.webp",
+      "width": 1905,
+      "height": 2695,
+      "lines": [
+        {
+          "id": "coursebook-50-line-1",
+          "text": "1 Was passt nicht? Streichen Sie.",
+          "box": [
+            14.286,
+            50.716,
+            23.846,
+            1.382
+          ]
+        },
+        {
+          "id": "coursebook-50-line-2",
+          "text": "a kochen – backen – malen",
+          "box": [
+            14.286,
+            52.757,
+            20.209,
+            1.428
+          ]
+        },
+        {
+          "id": "coursebook-50-line-3",
+          "text": "b Schach spielen – tanzen – singen",
+          "box": [
+            14.286,
+            54.218,
+            25.012,
+            1.428
+          ]
+        },
+        {
+          "id": "coursebook-50-line-4",
+          "text": "c Ski fahren – fotografieren – Fußball spielen",
+          "box": [
+            14.286,
+            55.68,
+            31.859,
+            1.428
+          ]
+        },
+        {
+          "id": "coursebook-50-line-5",
+          "text": "d schwimmen – kochen – reiten",
+          "box": [
+            14.286,
+            57.141,
+            22.825,
+            1.428
+          ]
+        },
+        {
+          "id": "coursebook-50-line-6",
+          "text": "2 Sortieren Sie.",
+          "box": [
+            14.286,
+            59.594,
+            11.627,
+            1.382
+          ]
+        },
+        {
+          "id": "coursebook-50-line-7",
+          "text": "nie oft immer manchmal",
+          "box": [
+            16.429,
+            61.649,
+            28.585,
+            2.162
+          ]
+        },
+        {
+          "id": "coursebook-50-line-8",
+          "text": "b ein bisschen gar nicht toll nicht so gut gut",
+          "box": [
+            14.286,
+            63.49,
+            46.358,
+            2.162
+          ]
+        },
+        {
+          "id": "coursebook-50-line-9",
+          "text": "Schreiben Sie Sätze.",
+          "box": [
+            14.286,
+            67.673,
+            14.351,
+            1.382
+          ]
+        },
+        {
+          "id": "coursebook-50-line-10",
+          "text": "a können – du – auch – backen – ein bisschen –?",
+          "box": [
+            14.286,
+            69.713,
+            34.033,
+            1.428
+          ]
+        },
+        {
+          "id": "coursebook-50-line-11",
+          "text": "b toll – wirklich – kochen – er – können –.",
+          "box": [
+            14.286,
+            71.175,
+            29.62,
+            1.428
+          ]
+        },
+        {
+          "id": "coursebook-50-line-12",
+          "text": "c Tennis – ihr – können – gut – spielen –?",
+          "box": [
+            14.286,
+            72.636,
+            29.418,
+            1.428
+          ]
+        },
+        {
+          "id": "coursebook-50-line-13",
+          "text": "d ich – können – fahren – Ski – nicht –.",
+          "box": [
+            14.286,
+            74.097,
+            27.38,
+            1.428
+          ]
+        },
+        {
+          "id": "coursebook-50-line-14",
+          "text": "Ergänzen Sie.",
+          "box": [
+            14.286,
+            77.913,
+            9.496,
+            1.382
+          ]
+        },
+        {
+          "id": "coursebook-50-line-15",
+          "text": "Du",
+          "box": [
+            16.429,
+            80.013,
+            4.571,
+            1.783
+          ]
+        },
+        {
+          "id": "coursebook-50-line-16",
+          "text": "ja super malen !",
+          "box": [
+            33.838,
+            79.868,
+            13.024,
+            1.858
+          ]
+        },
+        {
+          "id": "coursebook-50-line-17",
+          "text": "Herzlichen",
+          "box": [
+            16.429,
+            81.783,
+            9.961,
+            1.783
+          ]
+        },
+        {
+          "id": "coursebook-50-line-18",
+          "text": "Dank. /",
+          "box": [
+            50.11,
+            82.065,
+            5.624,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-50-line-19",
+          "text": "sehr!",
+          "box": [
+            67.238,
+            82.065,
+            3.731,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-50-line-20",
+          "text": "Was machst du in deiner",
+          "box": [
+            16.429,
+            84.467,
+            19.151,
+            1.783
+          ]
+        },
+        {
+          "id": "coursebook-50-line-21",
+          "text": "Lesen und Rad fahren.",
+          "box": [
+            16.429,
+            85.916,
+            17.386,
+            1.783
+          ]
+        },
+        {
+          "id": "coursebook-50-line-22",
+          "text": "Was sind deine",
+          "box": [
+            16.429,
+            88.601,
+            12.634,
+            1.783
+          ]
+        },
+        {
+          "id": "coursebook-50-line-23",
+          "text": "Ich spiele",
+          "box": [
+            16.429,
+            90.37,
+            9.021,
+            1.783
+          ]
+        },
+        {
+          "id": "coursebook-50-line-24",
+          "text": "Fußball. Das macht",
+          "box": [
+            35.316,
+            90.653,
+            13.786,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-50-line-25",
+          "text": "LÖSUNGEN → S. 203",
+          "box": [
+            10.913,
+            94.947,
+            14.469,
+            2.054
+          ]
+        },
+        {
+          "id": "coursebook-50-line-26",
+          "text": "10 Aktivitäten-Bingo AB 12",
+          "box": [
+            10.592,
+            4.796,
+            24.719,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-50-line-27",
+          "text": "Wer macht was wie oft?",
+          "box": [
+            14.286,
+            7.033,
+            18.266,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-50-line-28",
+          "text": "Machen Sie einen Kursspaziergang. → S. 162",
+          "box": [
+            14.286,
+            8.438,
+            34.191,
+            2.054
+          ]
+        },
+        {
+          "id": "coursebook-50-line-29",
+          "text": "11 Was sind deine Hobbys? AB 13",
+          "box": [
+            10.684,
+            23.68,
+            29.758,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-50-line-30",
+          "text": "Fragen und antworten Sie in der Gruppe.",
+          "box": [
+            14.286,
+            25.917,
+            32.158,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-50-line-31",
+          "text": "Maria, was sind deine Hobbys?",
+          "box": [
+            16.429,
+            28.1,
+            23.641,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-50-line-32",
+          "text": "Ski fahren und Freunde treffen.",
+          "box": [
+            41.396,
+            27.94,
+            26.077,
+            1.783
+          ]
+        },
+        {
+          "id": "coursebook-50-line-33",
+          "text": "Was machst du gern, Ahmed?",
+          "box": [
+            16.429,
+            30.773,
+            23.02,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-50-line-34",
+          "text": "Ich liebe Rad fahren. Das macht Spaß.",
+          "box": [
+            40.775,
+            30.624,
+            30.637,
+            1.783
+          ]
+        },
+        {
+          "id": "coursebook-50-line-35",
+          "text": "Und was machst du in deiner Freizeit?",
+          "box": [
+            16.429,
+            33.445,
+            29.279,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-50-line-36",
+          "text": "Ich lese gern. Mein Lieblingsbuch ist …",
+          "box": [
+            47.034,
+            33.297,
+            30.855,
+            1.783
+          ]
+        },
+        {
+          "id": "coursebook-50-line-37",
+          "text": "lesen",
+          "box": [
+            70.69,
+            5.736,
+            3.529,
+            1.428
+          ]
+        },
+        {
+          "id": "coursebook-50-line-38",
+          "text": "treffen",
+          "box": [
+            76.067,
+            5.736,
+            4.902,
+            1.428
+          ]
+        },
+        {
+          "id": "coursebook-50-line-39",
+          "text": "fahren",
+          "box": [
+            82.955,
+            5.736,
+            4.484,
+            1.428
+          ]
+        },
+        {
+          "id": "coursebook-50-line-40",
+          "text": "ich",
+          "box": [
+            62.633,
+            7.632,
+            1.994,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-50-line-41",
+          "text": "lese",
+          "box": [
+            70.692,
+            7.632,
+            2.678,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-50-line-42",
+          "text": "treffe",
+          "box": [
+            76.068,
+            7.632,
+            4.02,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-50-line-43",
+          "text": "fahre",
+          "box": [
+            82.957,
+            7.632,
+            3.592,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-50-line-44",
+          "text": "du",
+          "box": [
+            62.635,
+            9.525,
+            1.66,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-50-line-45",
+          "text": "liest",
+          "box": [
+            70.693,
+            9.525,
+            2.842,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-50-line-46",
+          "text": "triffst",
+          "box": [
+            76.07,
+            9.525,
+            4.049,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-50-line-47",
+          "text": "fährst",
+          "box": [
+            82.958,
+            9.525,
+            4.046,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-50-line-48",
+          "text": "er / es / sie",
+          "box": [
+            62.637,
+            11.419,
+            6.388,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-50-line-49",
+          "text": "liest",
+          "box": [
+            70.695,
+            11.419,
+            2.842,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-50-line-50",
+          "text": "trifft",
+          "box": [
+            76.071,
+            11.419,
+            3.76,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-50-line-51",
+          "text": "fährt",
+          "box": [
+            82.96,
+            11.419,
+            3.394,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-50-line-52",
+          "text": "Was sind deine Hobbys?",
+          "box": [
+            15.798,
+            37.331,
+            16.728,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-50-line-53",
+          "text": "Meine Hobbys sind … und …",
+          "box": [
+            42.341,
+            37.331,
+            18.627,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-50-line-54",
+          "text": "Was machst du gern?",
+          "box": [
+            15.798,
+            39.683,
+            14.824,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-50-line-55",
+          "text": "Ich … gern. Mein Lieblings … / … ist …",
+          "box": [
+            42.341,
+            39.683,
+            24.426,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-50-line-56",
+          "text": "Was machst du in deiner Freizeit?",
+          "box": [
+            15.798,
+            42.034,
+            23.203,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-50-line-57",
+          "text": "Ich liebe Schwimmen. / … Das macht Spaß.",
+          "box": [
+            42.341,
+            42.034,
+            28.61,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-50-line-58",
+          "text": "/ 5 Punkte",
+          "box": [
+            81.528,
+            61.527,
+            6.852,
+            1.151
+          ]
+        },
+        {
+          "id": "coursebook-50-line-59",
+          "text": "3 – 5 Punkte",
+          "box": [
+            80.61,
+            63.243,
+            7.79,
+            1.151
+          ]
+        },
+        {
+          "id": "coursebook-50-line-60",
+          "text": "0 – 2 Punkte",
+          "box": [
+            80.639,
+            64.908,
+            7.76,
+            1.151
+          ]
+        },
+        {
+          "id": "coursebook-50-line-61",
+          "text": "/ 3 Punkte",
+          "box": [
+            81.528,
+            71.762,
+            6.852,
+            1.151
+          ]
+        },
+        {
+          "id": "coursebook-50-line-62",
+          "text": "2 – 3 Punkte",
+          "box": [
+            80.61,
+            73.478,
+            7.79,
+            1.151
+          ]
+        },
+        {
+          "id": "coursebook-50-line-63",
+          "text": "0 – 1 Punkte",
+          "box": [
+            80.639,
+            75.144,
+            7.76,
+            1.151
+          ]
+        },
+        {
+          "id": "coursebook-50-line-64",
+          "text": "/ 8 Punkte",
+          "box": [
+            81.528,
+            88.328,
+            6.852,
+            1.151
+          ]
+        },
+        {
+          "id": "coursebook-50-line-65",
+          "text": "5 – 8 Punkte",
+          "box": [
+            80.61,
+            90.044,
+            7.79,
+            1.151
+          ]
+        },
+        {
+          "id": "coursebook-50-line-66",
+          "text": "0 – 4 Punkte",
+          "box": [
+            80.639,
+            91.709,
+            7.76,
+            1.151
+          ]
+        },
+        {
+          "id": "coursebook-50-line-67",
+          "text": "a: Kannst du auch ein",
+          "box": [
+            53.711,
+            70.459,
+            16.812,
+            1.822
+          ]
+        },
+        {
+          "id": "coursebook-50-line-68",
+          "text": "bisschen backen?",
+          "box": [
+            55.455,
+            72.154,
+            12.461,
+            1.768
+          ]
+        },
+        {
+          "id": "coursebook-50-line-69",
+          "text": "fünfzig",
+          "box": [
+            3.3,
+            78.702,
+            2.216,
+            3.177
+          ]
+        }
+      ],
+      "audioIds": [],
+      "section": "Lesson 7",
+      "pageLabel": "Page 50"
+    },
+    {
       "id": "coursebook-155",
       "kind": "coursebook",
       "lesson": 1,
@@ -44622,6 +47070,2307 @@
       "pageLabel": "Page 161",
       "lessons": [
         6
+      ]
+    },
+    {
+      "id": "coursebook-162",
+      "kind": "coursebook",
+      "lesson": 7,
+      "printedPage": 162,
+      "pdfPage": 164,
+      "image": "/book/pages/coursebook-162.webp",
+      "width": 1905,
+      "height": 2695,
+      "lines": [
+        {
+          "id": "coursebook-162-line-1",
+          "text": "einhundertzweiundsechzig",
+          "box": [
+            3.383,
+            69.632,
+            2.216,
+            12.247
+          ]
+        },
+        {
+          "id": "coursebook-162-line-2",
+          "text": "PARTNER/IN A",
+          "box": [
+            25.066,
+            10.337,
+            10.844,
+            1.19
+          ]
+        },
+        {
+          "id": "coursebook-162-line-3",
+          "text": "Wer kann was?",
+          "box": [
+            14.524,
+            12.795,
+            14.127,
+            1.607
+          ]
+        },
+        {
+          "id": "coursebook-162-line-4",
+          "text": "a Fragen Sie Ihre Partnerin / Ihren Partner und ergänzen Sie die fehlenden Informationen.",
+          "box": [
+            14.524,
+            14.75,
+            71.171,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-162-line-5",
+          "text": "Diego",
+          "box": [
+            28.375,
+            23.659,
+            4.559,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-162-line-6",
+          "text": "Frau Saidi",
+          "box": [
+            40.281,
+            23.659,
+            7.914,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-162-line-7",
+          "text": "Leoni",
+          "box": [
+            52.186,
+            22.056,
+            4.551,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-162-line-8",
+          "text": "und Anna",
+          "box": [
+            52.186,
+            23.659,
+            7.262,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-162-line-9",
+          "text": "Ich",
+          "box": [
+            64.092,
+            23.659,
+            2.301,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-162-line-10",
+          "text": "Meine Partnerin /",
+          "box": [
+            75.994,
+            22.056,
+            13.252,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-162-line-11",
+          "text": "Mein Partner",
+          "box": [
+            75.994,
+            23.659,
+            10.084,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-162-line-12",
+          "text": "kochen",
+          "box": [
+            15.28,
+            25.866,
+            5.513,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-162-line-13",
+          "text": "toll",
+          "box": [
+            28.374,
+            25.866,
+            2.468,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-162-line-14",
+          "text": "nicht so gut",
+          "box": [
+            52.184,
+            25.866,
+            9.07,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-162-line-15",
+          "text": "backen",
+          "box": [
+            15.28,
+            28.223,
+            5.382,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-162-line-16",
+          "text": "gar nicht",
+          "box": [
+            28.375,
+            28.361,
+            7.674,
+            1.858
+          ]
+        },
+        {
+          "id": "coursebook-162-line-17",
+          "text": "gar nicht",
+          "box": [
+            40.28,
+            28.224,
+            6.763,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-162-line-18",
+          "text": "singen",
+          "box": [
+            15.28,
+            30.58,
+            4.932,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-162-line-19",
+          "text": "nicht so gut",
+          "box": [
+            28.375,
+            30.58,
+            9.07,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-162-line-20",
+          "text": "sehr gut",
+          "box": [
+            52.184,
+            30.58,
+            6.258,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-162-line-21",
+          "text": "malen",
+          "box": [
+            15.28,
+            32.937,
+            4.569,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-162-line-22",
+          "text": "nicht so gut",
+          "box": [
+            28.375,
+            32.937,
+            9.07,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-162-line-23",
+          "text": "super",
+          "box": [
+            40.28,
+            32.937,
+            4.227,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-162-line-24",
+          "text": "schwimmen",
+          "box": [
+            15.28,
+            35.294,
+            8.967,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-162-line-25",
+          "text": "ein bisschen",
+          "box": [
+            52.184,
+            35.294,
+            9.35,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-162-line-26",
+          "text": "tanzen",
+          "box": [
+            15.28,
+            37.65,
+            5.056,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-162-line-27",
+          "text": "sehr gut",
+          "box": [
+            28.375,
+            37.65,
+            6.258,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-162-line-28",
+          "text": "toll",
+          "box": [
+            40.28,
+            37.65,
+            2.468,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-162-line-29",
+          "text": "Gitarre spielen",
+          "box": [
+            15.28,
+            40.007,
+            11.267,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-162-line-30",
+          "text": "gut",
+          "box": [
+            40.28,
+            40.007,
+            2.523,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-162-line-31",
+          "text": "gar nicht",
+          "box": [
+            52.185,
+            40.007,
+            6.763,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-162-line-32",
+          "text": "Fußball spielen",
+          "box": [
+            15.282,
+            42.363,
+            11.38,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-162-line-33",
+          "text": "gut",
+          "box": [
+            28.376,
+            42.363,
+            2.523,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-162-line-34",
+          "text": "Partner/in A: Kann Diego backen?",
+          "box": [
+            16.905,
+            46.088,
+            25.744,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-162-line-35",
+          "text": "Partner/in B: Nein, er kann gar nicht backen.",
+          "box": [
+            16.905,
+            47.869,
+            33.895,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-162-line-36",
+          "text": "b Wählen Sie drei Informationen über Ihre Partnerin / Ihren Partner. Erzählen Sie dann im Kurs.",
+          "box": [
+            14.524,
+            50.321,
+            75.194,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-162-line-37",
+          "text": "Aktivitäten-Bingo",
+          "box": [
+            14.524,
+            57.562,
+            17.354,
+            1.607
+          ]
+        },
+        {
+          "id": "coursebook-162-line-38",
+          "text": "Wer macht was wie oft? Machen Sie einen Kursspaziergang und notieren Sie",
+          "box": [
+            14.524,
+            60.506,
+            59.256,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-162-line-39",
+          "text": "die Namen in der Tabelle auf S. 163. Wer hat zuerst vier Personen?",
+          "box": [
+            14.524,
+            62.193,
+            51.794,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-162-line-40",
+          "text": "Möglichkeit 1: vertikal",
+          "box": [
+            14.524,
+            64.375,
+            16.503,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-162-line-41",
+          "text": "Möglichkeit 2: horizontal",
+          "box": [
+            14.524,
+            67.938,
+            18.914,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-162-line-42",
+          "text": "Möglichkeit 3: diagonal",
+          "box": [
+            14.524,
+            71.502,
+            17.728,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-162-line-43",
+          "text": "Carla, spielst du sehr oft Fußball?",
+          "box": [
+            16.905,
+            75.956,
+            25.517,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-162-line-44",
+          "text": "Ja, ich spiele sehr oft Fußball.",
+          "box": [
+            16.905,
+            77.738,
+            22.622,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-162-line-45",
+          "text": "ni",
+          "box": [
+            54.958,
+            22.056,
+            1.777,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-162-line-46",
+          "text": "Partner/in A: Kannst du …?",
+          "box": [
+            59.476,
+            46.039,
+            20.523,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-162-line-47",
+          "text": "Partner/in B: Ja, ich kann …",
+          "box": [
+            59.476,
+            47.821,
+            20.94,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-162-line-48",
+          "text": "Leon, was machst du sehr oft?",
+          "box": [
+            50.595,
+            75.93,
+            23.51,
+            1.535
+          ]
+        }
+      ],
+      "audioIds": [],
+      "section": "Partner activities · Lesson 7",
+      "pageLabel": "Page 162",
+      "lessons": [
+        7
+      ]
+    },
+    {
+      "id": "coursebook-163",
+      "kind": "coursebook",
+      "lesson": 7,
+      "printedPage": 163,
+      "pdfPage": 165,
+      "image": "/book/pages/coursebook-163.webp",
+      "width": 1905,
+      "height": 2695,
+      "lines": [
+        {
+          "id": "coursebook-163-line-1",
+          "text": "einhundertdreiundsechzig",
+          "box": [
+            94.254,
+            69.826,
+            2.216,
+            12.053
+          ]
+        },
+        {
+          "id": "coursebook-163-line-2",
+          "text": "sehr oft",
+          "box": [
+            15.28,
+            10.208,
+            6.034,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-163-line-3",
+          "text": "oft",
+          "box": [
+            34.009,
+            10.208,
+            2.298,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-163-line-4",
+          "text": "manchmal",
+          "box": [
+            52.738,
+            10.208,
+            7.835,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-163-line-5",
+          "text": "nie",
+          "box": [
+            71.467,
+            10.208,
+            2.295,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-163-line-6",
+          "text": "schwimmen",
+          "box": [
+            15.282,
+            12.415,
+            8.967,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-163-line-7",
+          "text": "tanzen",
+          "box": [
+            34.011,
+            12.415,
+            5.056,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-163-line-8",
+          "text": "lesen",
+          "box": [
+            52.74,
+            12.415,
+            3.958,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-163-line-9",
+          "text": "Ausflüge machen",
+          "box": [
+            71.469,
+            12.415,
+            13.632,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-163-line-10",
+          "text": "Fußball spielen",
+          "box": [
+            15.283,
+            19.149,
+            11.38,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-163-line-11",
+          "text": "Carla",
+          "box": [
+            15.28,
+            20.935,
+            4.545,
+            1.858
+          ]
+        },
+        {
+          "id": "coursebook-163-line-12",
+          "text": "E-Mails schreiben",
+          "box": [
+            34.009,
+            19.15,
+            13.952,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-163-line-13",
+          "text": "Auto fahren",
+          "box": [
+            52.738,
+            19.15,
+            9.528,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-163-line-14",
+          "text": "Radio hören",
+          "box": [
+            71.467,
+            19.15,
+            9.661,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-163-line-15",
+          "text": "singen",
+          "box": [
+            15.281,
+            25.883,
+            4.932,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-163-line-16",
+          "text": "Freunde treffen",
+          "box": [
+            34.01,
+            25.883,
+            12.166,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-163-line-17",
+          "text": "fotografieren",
+          "box": [
+            52.739,
+            25.883,
+            10.296,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-163-line-18",
+          "text": "reiten",
+          "box": [
+            71.469,
+            25.883,
+            4.499,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-163-line-19",
+          "text": "Rad fahren",
+          "box": [
+            15.283,
+            32.617,
+            8.332,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-163-line-20",
+          "text": "im Internet surfen",
+          "box": [
+            34.012,
+            32.617,
+            14.24,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-163-line-21",
+          "text": "Tennis spielen",
+          "box": [
+            52.741,
+            32.617,
+            10.577,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-163-line-22",
+          "text": "telefonieren",
+          "box": [
+            71.47,
+            32.617,
+            9.8,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-163-line-23",
+          "text": "Eine Woche frei!",
+          "box": [
+            14.524,
+            44.127,
+            15.55,
+            1.607
+          ]
+        },
+        {
+          "id": "coursebook-163-line-24",
+          "text": "Was machen Sie? Ergänzen Sie. Fragen Sie dann Ihre Partnerin / Ihren Partner.",
+          "box": [
+            14.524,
+            46.365,
+            61.155,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-163-line-25",
+          "text": "Ich",
+          "box": [
+            37.696,
+            48.934,
+            2.301,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-163-line-26",
+          "text": "Meine Partnerin / Mein Partner",
+          "box": [
+            63.887,
+            48.934,
+            24.186,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-163-line-27",
+          "text": "Montag",
+          "box": [
+            15.281,
+            51.141,
+            5.868,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-163-line-28",
+          "text": "Dienstag",
+          "box": [
+            15.281,
+            54.171,
+            6.76,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-163-line-29",
+          "text": "Mittwoch",
+          "box": [
+            15.281,
+            57.201,
+            7.25,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-163-line-30",
+          "text": "Donnerstag",
+          "box": [
+            15.281,
+            60.231,
+            8.999,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-163-line-31",
+          "text": "Freitag",
+          "box": [
+            15.281,
+            63.261,
+            5.362,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-163-line-32",
+          "text": "Wochenende",
+          "box": [
+            15.281,
+            66.291,
+            10.913,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-163-line-33",
+          "text": "(Samstag und Sonntag)",
+          "box": [
+            15.281,
+            67.895,
+            17.773,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-163-line-34",
+          "text": "a Was machst du am Montag?",
+          "box": [
+            14.762,
+            70.955,
+            23.46,
+            1.783
+          ]
+        },
+        {
+          "id": "coursebook-163-line-35",
+          "text": "b Am Montag fahre ich Ski.",
+          "box": [
+            14.762,
+            72.725,
+            21.721,
+            1.783
+          ]
+        },
+        {
+          "id": "coursebook-163-line-36",
+          "text": "a Und am Dienstag?",
+          "box": [
+            14.762,
+            74.518,
+            16.445,
+            1.783
+          ]
+        },
+        {
+          "id": "coursebook-163-line-37",
+          "text": "Notieren Sie Termine in Ihrem",
+          "box": [
+            68.767,
+            74.692,
+            20.094,
+            1.289
+          ]
+        },
+        {
+          "id": "coursebook-163-line-38",
+          "text": "Kalender auf Deutsch.",
+          "box": [
+            68.767,
+            76.094,
+            14.958,
+            1.289
+          ]
+        }
+      ],
+      "audioIds": [],
+      "section": "Partner activities · Lesson 7 / 8",
+      "pageLabel": "Page 163",
+      "lessons": [
+        7,
+        8
+      ]
+    },
+    {
+      "id": "coursebook-191",
+      "kind": "coursebook",
+      "lesson": 1,
+      "printedPage": 191,
+      "pdfPage": 193,
+      "image": "/book/pages/coursebook-191.webp",
+      "width": 1905,
+      "height": 2695,
+      "lines": [
+        {
+          "id": "coursebook-191-line-1",
+          "text": "einhunderteinundneunzig",
+          "box": [
+            94.254,
+            70.038,
+            2.216,
+            11.841
+          ]
+        },
+        {
+          "id": "coursebook-191-line-2",
+          "text": "AUFGABEN FÜR PARTNER/IN B",
+          "box": [
+            66.667,
+            10.003,
+            22.591,
+            1.271
+          ]
+        },
+        {
+          "id": "coursebook-191-line-3",
+          "text": "N01 6 > S. 13 PARTNER/IN B",
+          "box": [
+            10.476,
+            12.316,
+            23.991,
+            2.81
+          ]
+        },
+        {
+          "id": "coursebook-191-line-4",
+          "text": "Bekannte Persönlichkeiten",
+          "box": [
+            14.524,
+            15.765,
+            25.198,
+            1.607
+          ]
+        },
+        {
+          "id": "coursebook-191-line-5",
+          "text": "Wer ist das? Das ist …",
+          "box": [
+            14.524,
+            18.002,
+            18.309,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-191-line-6",
+          "text": "Fragen Sie Ihre Partnerin / Ihren Partner und ergänzen Sie die fehlenden Informationen.",
+          "box": [
+            14.524,
+            19.688,
+            68.772,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-191-line-7",
+          "text": "a Partner/in A: Wer ist das?",
+          "box": [
+            14.762,
+            21.723,
+            21.527,
+            1.783
+          ]
+        },
+        {
+          "id": "coursebook-191-line-8",
+          "text": "b Partner/in B: Das ist Albert Einstein. Woher kommt er?",
+          "box": [
+            14.762,
+            23.493,
+            43.849,
+            1.783
+          ]
+        },
+        {
+          "id": "coursebook-191-line-9",
+          "text": "a Partner/in A: Er kommt aus Deutschland.",
+          "box": [
+            14.762,
+            25.286,
+            33.33,
+            1.783
+          ]
+        },
+        {
+          "id": "coursebook-191-line-10",
+          "text": "Name",
+          "box": [
+            28.375,
+            28.124,
+            4.479,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-191-line-11",
+          "text": "kommt aus …",
+          "box": [
+            59.327,
+            28.124,
+            9.905,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-191-line-12",
+          "text": "Albert Einstein",
+          "box": [
+            28.375,
+            33.536,
+            11.322,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-191-line-13",
+          "text": "Deutschland",
+          "box": [
+            59.328,
+            33.576,
+            12.051,
+            1.858
+          ]
+        },
+        {
+          "id": "coursebook-191-line-14",
+          "text": "Frankreich",
+          "box": [
+            59.328,
+            41.784,
+            8.053,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-191-line-15",
+          "text": "Roger Federer",
+          "box": [
+            28.376,
+            50.034,
+            11.118,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-191-line-16",
+          "text": "! USA",
+          "box": [
+            59.328,
+            58.061,
+            5.859,
+            2.162
+          ]
+        },
+        {
+          "id": "coursebook-191-line-17",
+          "text": "Nelson Mandela",
+          "box": [
+            28.376,
+            66.532,
+            12.287,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-191-line-18",
+          "text": "Österreich",
+          "box": [
+            59.328,
+            74.782,
+            8.29,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-191-line-19",
+          "text": "Angela Merkel",
+          "box": [
+            28.376,
+            83.031,
+            10.948,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-191-line-20",
+          "text": "Buchstabieren Sie die",
+          "box": [
+            71.148,
+            90.817,
+            14.613,
+            1.289
+          ]
+        },
+        {
+          "id": "coursebook-191-line-21",
+          "text": "Namen und Länder.",
+          "box": [
+            71.148,
+            92.219,
+            12.802,
+            1.289
+          ]
+        }
+      ],
+      "audioIds": [],
+      "section": "Partner activities · Lesson 1",
+      "pageLabel": "Page 191",
+      "lessons": [
+        1
+      ]
+    },
+    {
+      "id": "coursebook-192",
+      "kind": "coursebook",
+      "lesson": 2,
+      "printedPage": 192,
+      "pdfPage": 194,
+      "image": "/book/pages/coursebook-192.webp",
+      "width": 1905,
+      "height": 2695,
+      "lines": [
+        {
+          "id": "coursebook-192-line-1",
+          "text": "einhundertzweiundneunzig",
+          "box": [
+            3.383,
+            69.46,
+            2.216,
+            12.419
+          ]
+        },
+        {
+          "id": "coursebook-192-line-2",
+          "text": "PARTNER/IN B",
+          "box": [
+            23.729,
+            10.337,
+            10.785,
+            1.19
+          ]
+        },
+        {
+          "id": "coursebook-192-line-3",
+          "text": "Texte lesen und Personen vorstellen",
+          "box": [
+            14.524,
+            12.795,
+            33.711,
+            1.607
+          ]
+        },
+        {
+          "id": "coursebook-192-line-4",
+          "text": "a Ihre Partnerin / Ihr Partner liest Ihnen drei Texte vor.",
+          "box": [
+            14.524,
+            14.75,
+            44.138,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-192-line-5",
+          "text": "Hören Sie und kreuzen Sie an: richtig oder falsch?",
+          "box": [
+            16.524,
+            16.719,
+            38.538,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-192-line-6",
+          "text": "richtig falsch",
+          "box": [
+            57.027,
+            18.901,
+            10.97,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-192-line-7",
+          "text": "1 Pablo und Marcela kommen aus Mexiko.",
+          "box": [
+            14.524,
+            20.673,
+            33.761,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-192-line-8",
+          "text": "2 Sie wohnen in Berlin.",
+          "box": [
+            14.524,
+            22.455,
+            19.674,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-192-line-9",
+          "text": "3 Sie haben zwei Kinder.",
+          "box": [
+            14.524,
+            24.237,
+            20.653,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-192-line-10",
+          "text": "4 Mateo ist 5 Jahre alt.",
+          "box": [
+            14.524,
+            26.019,
+            19.808,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-192-line-11",
+          "text": "5 Pablo ist Arzt und Marcela arbeitet als Verkäuferin.",
+          "box": [
+            14.524,
+            27.8,
+            42.187,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-192-line-12",
+          "text": "6 Ana Fabião kommt aus Spanien.",
+          "box": [
+            14.524,
+            32.254,
+            27.823,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-192-line-13",
+          "text": "7 Sie wohnt in Essen.",
+          "box": [
+            14.524,
+            34.036,
+            18.341,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-192-line-14",
+          "text": "8 Sie ist 25 Jahre alt.",
+          "box": [
+            14.524,
+            35.818,
+            18.13,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-192-line-15",
+          "text": "9 Sie macht eine Ausbildung.",
+          "box": [
+            14.524,
+            37.6,
+            23.86,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-192-line-16",
+          "text": "10 Sie hat keine Kinder.",
+          "box": [
+            14.524,
+            39.381,
+            18.706,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-192-line-17",
+          "text": "11 Petra und Thomas Kramer sind verheiratet.",
+          "box": [
+            14.524,
+            43.836,
+            35.97,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-192-line-18",
+          "text": "12 Sie haben keine Kinder.",
+          "box": [
+            14.524,
+            45.617,
+            21.823,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-192-line-19",
+          "text": "13 Sie leben in München.",
+          "box": [
+            14.524,
+            47.399,
+            20.075,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-192-line-20",
+          "text": "14 Petra ist Tierärztin, Thomas ist Journalist.",
+          "box": [
+            14.524,
+            49.181,
+            35.493,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-192-line-21",
+          "text": "15 Sie sind 43 Jahre alt.",
+          "box": [
+            14.524,
+            50.962,
+            19.517,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-192-line-22",
+          "text": "b Lesen Sie Ihrer Partnerin / Ihrem Partner die Texte vor. Verstehen Sie ein Wort nicht?",
+          "box": [
+            14.524,
+            53.424,
+            68.855,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-192-line-23",
+          "text": "Hilfe finden Sie im Bildlexikon oder im Online-Wörterbuch.",
+          "box": [
+            16.524,
+            55.392,
+            46.244,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-192-line-24",
+          "text": "Louis und Hugo kommen aus Frankreich",
+          "box": [
+            16.513,
+            58.597,
+            30.853,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-192-line-25",
+          "text": "und wohnen jetzt in der Schweiz. Louis",
+          "box": [
+            16.513,
+            60.378,
+            29.796,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-192-line-26",
+          "text": "ist 30 Jahre alt und arbeitet im Moment",
+          "box": [
+            16.513,
+            62.16,
+            30.885,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-192-line-27",
+          "text": "nicht. Hugo ist 27 Jahre alt und macht ein",
+          "box": [
+            16.513,
+            63.942,
+            32.249,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-192-line-28",
+          "text": "Praktikum als Architekt.",
+          "box": [
+            16.513,
+            65.724,
+            18.108,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-192-line-29",
+          "text": "Fritz Heller ist 72 und Rentner.",
+          "box": [
+            16.513,
+            71.185,
+            23.774,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-192-line-30",
+          "text": "Er ist geschieden und hat drei Kinder.",
+          "box": [
+            16.513,
+            72.966,
+            28.882,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-192-line-31",
+          "text": "Er wohnt in Kiel.",
+          "box": [
+            16.513,
+            74.748,
+            12.3,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-192-line-32",
+          "text": "Lukas und Melanie leben zusammen, sie",
+          "box": [
+            16.513,
+            80.842,
+            30.532,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-192-line-33",
+          "text": "sind aber nicht verheiratet. Sie wohnen",
+          "box": [
+            16.513,
+            82.624,
+            30.285,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-192-line-34",
+          "text": "in Dresden. Melanie ist Sängerin. Sie",
+          "box": [
+            16.513,
+            84.405,
+            28.118,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-192-line-35",
+          "text": "arbeitet bei der Semperoper in Dresden.",
+          "box": [
+            16.513,
+            86.187,
+            31.317,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-192-line-36",
+          "text": "Lukas ist Ingenieur von Beruf.",
+          "box": [
+            16.513,
+            87.969,
+            22.867,
+            1.535
+          ]
+        }
+      ],
+      "audioIds": [],
+      "section": "Partner activities · Lesson 2",
+      "pageLabel": "Page 192",
+      "lessons": [
+        2
+      ]
+    },
+    {
+      "id": "coursebook-193",
+      "kind": "coursebook",
+      "lesson": 5,
+      "printedPage": 193,
+      "pdfPage": 195,
+      "image": "/book/pages/coursebook-193.webp",
+      "width": 1905,
+      "height": 2695,
+      "lines": [
+        {
+          "id": "coursebook-193-line-1",
+          "text": "einhundertdreiundneunzig",
+          "box": [
+            94.254,
+            69.654,
+            2.216,
+            12.225
+          ]
+        },
+        {
+          "id": "coursebook-193-line-2",
+          "text": "PARTNER/IN B",
+          "box": [
+            24.938,
+            10.337,
+            10.785,
+            1.19
+          ]
+        },
+        {
+          "id": "coursebook-193-line-3",
+          "text": "Was kostet das?",
+          "box": [
+            14.524,
+            12.795,
+            15.165,
+            1.607
+          ]
+        },
+        {
+          "id": "coursebook-193-line-4",
+          "text": "a Was kostet das? Fragen und antworten Sie. Notieren Sie die Preise.",
+          "box": [
+            14.524,
+            14.75,
+            53.797,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-193-line-5",
+          "text": "Partner/in A: Wie viel / Was kostet der Stuhl?",
+          "box": [
+            16.905,
+            46.613,
+            34.295,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-193-line-6",
+          "text": "Partner/in B: Der Stuhl / Er kostet 179 Euro.",
+          "box": [
+            16.905,
+            48.394,
+            33.344,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-193-line-7",
+          "text": "Partner/in A: Oh! Das ist wirklich günstig. / Das ist so teuer.",
+          "box": [
+            16.905,
+            50.176,
+            45.775,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-193-line-8",
+          "text": "b Haben Sie die Preise richtig notiert? Vergleichen Sie mit Ihrer Partnerin / Ihrem Partner.",
+          "box": [
+            14.524,
+            52.628,
+            70.681,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-193-line-9",
+          "text": "PARTNER/IN B",
+          "box": [
+            24.965,
+            57.41,
+            10.785,
+            1.19
+          ]
+        },
+        {
+          "id": "coursebook-193-line-10",
+          "text": "Wie heißt das auf Deutsch?",
+          "box": [
+            14.524,
+            59.868,
+            25.782,
+            1.607
+          ]
+        },
+        {
+          "id": "coursebook-193-line-11",
+          "text": "a Sehen Sie die Bilder D – F an. Sehen Sie dann im Online-Wörterbuch nach",
+          "box": [
+            14.524,
+            61.823,
+            59.491,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-193-line-12",
+          "text": "und hören Sie die Aussprache.",
+          "box": [
+            16.524,
+            63.792,
+            23.214,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-193-line-13",
+          "text": "eine Jacke",
+          "box": [
+            16.905,
+            76.506,
+            9.016,
+            1.858
+          ]
+        },
+        {
+          "id": "coursebook-193-line-14",
+          "text": "eine Seife",
+          "box": [
+            21.632,
+            89.128,
+            6.737,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-193-line-15",
+          "text": "ein Handtuch",
+          "box": [
+            41.378,
+            89.128,
+            9.51,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-193-line-16",
+          "text": "ein Fön",
+          "box": [
+            64.397,
+            89.128,
+            5.378,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-193-line-17",
+          "text": "Die Neuen sind da!",
+          "box": [
+            15.524,
+            17.719,
+            24.106,
+            2.407
+          ]
+        },
+        {
+          "id": "coursebook-193-line-18",
+          "text": "Jetzt shoppen!",
+          "box": [
+            15.524,
+            19.741,
+            11.504,
+            1.907
+          ]
+        }
+      ],
+      "audioIds": [],
+      "section": "Partner activities · Lesson 4 / 5",
+      "pageLabel": "Page 193",
+      "lessons": [
+        4,
+        5
+      ]
+    },
+    {
+      "id": "coursebook-194",
+      "kind": "coursebook",
+      "lesson": 7,
+      "printedPage": 194,
+      "pdfPage": 196,
+      "image": "/book/pages/coursebook-194.webp",
+      "width": 1905,
+      "height": 2695,
+      "lines": [
+        {
+          "id": "coursebook-194-line-1",
+          "text": "einhundertvierundneunzig",
+          "box": [
+            3.383,
+            69.739,
+            2.216,
+            12.14
+          ]
+        },
+        {
+          "id": "coursebook-194-line-2",
+          "text": "b Spielen Sie dann Gespräche zu den Bildern A – C mit Ihrer Partnerin / Ihrem Partner.",
+          "box": [
+            14.524,
+            9.846,
+            67.564,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-194-line-3",
+          "text": "Partner/in B ergänzt die fehlenden Informationen.",
+          "box": [
+            16.524,
+            11.815,
+            39.286,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-194-line-4",
+          "text": "a Partner/in A: Bild A! Wie heißt das",
+          "box": [
+            14.524,
+            13.875,
+            28.535,
+            1.783
+          ]
+        },
+        {
+          "id": "coursebook-194-line-5",
+          "text": "auf Deutsch?",
+          "box": [
+            16.666,
+            15.805,
+            12.334,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-194-line-6",
+          "text": "b Partner/in B: Ich weiß nicht.",
+          "box": [
+            54.245,
+            17.486,
+            23.881,
+            1.783
+          ]
+        },
+        {
+          "id": "coursebook-194-line-7",
+          "text": "a Partner/in A: Jacke. Das ist eine Jacke.",
+          "box": [
+            14.524,
+            19.34,
+            31.88,
+            1.783
+          ]
+        },
+        {
+          "id": "coursebook-194-line-8",
+          "text": "b Partner/in B: Wie bitte? /",
+          "box": [
+            54.245,
+            21.169,
+            21.623,
+            1.783
+          ]
+        },
+        {
+          "id": "coursebook-194-line-9",
+          "text": "Noch einmal, bitte.",
+          "box": [
+            56.388,
+            23.112,
+            14.555,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-194-line-10",
+          "text": "a Partner/in A: Das ist eine Jacke.",
+          "box": [
+            14.524,
+            24.804,
+            26.353,
+            1.783
+          ]
+        },
+        {
+          "id": "coursebook-194-line-11",
+          "text": "b Partner/in B: Wie schreibt man Jacke?",
+          "box": [
+            54.245,
+            26.634,
+            31.113,
+            1.783
+          ]
+        },
+        {
+          "id": "coursebook-194-line-12",
+          "text": "a Partner/in A: J-A-C-K-E.",
+          "box": [
+            14.524,
+            28.488,
+            20.813,
+            1.783
+          ]
+        },
+        {
+          "id": "coursebook-194-line-13",
+          "text": "b Partner/in B: Danke. / Dankeschön.",
+          "box": [
+            54.245,
+            30.317,
+            28.956,
+            1.783
+          ]
+        },
+        {
+          "id": "coursebook-194-line-14",
+          "text": "a Partner/in A: Bitteschön. / Bitte.",
+          "box": [
+            14.524,
+            32.171,
+            27.279,
+            1.783
+          ]
+        },
+        {
+          "id": "coursebook-194-line-15",
+          "text": "(Sehr) gern. / Kein Problem.",
+          "box": [
+            16.666,
+            34.101,
+            21.264,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-194-line-16",
+          "text": "c Tauschen Sie die Rollen und spielen Sie Gespräche wie in",
+          "box": [
+            14.524,
+            37.058,
+            46.208,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-194-line-17",
+          "text": "b mit Ihrer Partnerin / Ihrem Partner zu den Bildern D – F.",
+          "box": [
+            16.524,
+            39.007,
+            45.221,
+            1.542
+          ]
+        },
+        {
+          "id": "coursebook-194-line-18",
+          "text": "Partner/in A ergänzt die fehlenden Informationen.",
+          "box": [
+            16.524,
+            40.713,
+            39.743,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-194-line-19",
+          "text": "PARTNER/IN B",
+          "box": [
+            25.066,
+            45.214,
+            10.785,
+            1.19
+          ]
+        },
+        {
+          "id": "coursebook-194-line-20",
+          "text": "Wer kann was?",
+          "box": [
+            14.524,
+            47.672,
+            14.127,
+            1.607
+          ]
+        },
+        {
+          "id": "coursebook-194-line-21",
+          "text": "Arbeiten Sie zu zweit.",
+          "box": [
+            14.524,
+            49.909,
+            17.215,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-194-line-22",
+          "text": "a Fragen Sie Ihre Partnerin / Ihren Partner und ergänzen Sie die fehlenden Informationen.",
+          "box": [
+            14.524,
+            51.313,
+            71.171,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-194-line-23",
+          "text": "Diego",
+          "box": [
+            28.375,
+            60.223,
+            4.559,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-194-line-24",
+          "text": "Frau Saidi",
+          "box": [
+            40.281,
+            60.223,
+            7.914,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-194-line-25",
+          "text": "Leoni",
+          "box": [
+            52.186,
+            58.619,
+            4.551,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-194-line-26",
+          "text": "und Anna",
+          "box": [
+            52.186,
+            60.223,
+            7.262,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-194-line-27",
+          "text": "Ich",
+          "box": [
+            64.092,
+            60.223,
+            2.301,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-194-line-28",
+          "text": "Meine Partnerin /",
+          "box": [
+            75.994,
+            58.619,
+            12.857,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-194-line-29",
+          "text": "Mein Partner",
+          "box": [
+            75.994,
+            60.223,
+            10.084,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-194-line-30",
+          "text": "kochen",
+          "box": [
+            15.28,
+            62.43,
+            5.513,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-194-line-31",
+          "text": "toll",
+          "box": [
+            28.375,
+            62.567,
+            3.32,
+            1.858
+          ]
+        },
+        {
+          "id": "coursebook-194-line-32",
+          "text": "gut",
+          "box": [
+            40.28,
+            62.43,
+            2.523,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-194-line-33",
+          "text": "backen",
+          "box": [
+            15.28,
+            64.787,
+            5.382,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-194-line-34",
+          "text": "gar nicht",
+          "box": [
+            28.375,
+            64.787,
+            6.763,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-194-line-35",
+          "text": "gar nicht",
+          "box": [
+            52.184,
+            64.787,
+            6.763,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-194-line-36",
+          "text": "singen",
+          "box": [
+            15.28,
+            67.143,
+            4.932,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-194-line-37",
+          "text": "ein bisschen",
+          "box": [
+            40.28,
+            67.143,
+            9.35,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-194-line-38",
+          "text": "malen",
+          "box": [
+            15.28,
+            69.5,
+            4.569,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-194-line-39",
+          "text": "ein bisschen",
+          "box": [
+            52.184,
+            69.5,
+            9.35,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-194-line-40",
+          "text": "schwimmen",
+          "box": [
+            15.28,
+            71.856,
+            8.967,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-194-line-41",
+          "text": "gut",
+          "box": [
+            28.375,
+            71.856,
+            2.523,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-194-line-42",
+          "text": "super",
+          "box": [
+            40.28,
+            71.856,
+            4.227,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-194-line-43",
+          "text": "tanzen",
+          "box": [
+            15.28,
+            74.213,
+            5.056,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-194-line-44",
+          "text": "sehr gut",
+          "box": [
+            52.184,
+            74.213,
+            6.258,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-194-line-45",
+          "text": "Gitarre spielen",
+          "box": [
+            15.28,
+            76.57,
+            11.267,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-194-line-46",
+          "text": "gar nicht",
+          "box": [
+            28.375,
+            76.57,
+            6.763,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-194-line-47",
+          "text": "Fußball spielen",
+          "box": [
+            15.28,
+            78.926,
+            11.38,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-194-line-48",
+          "text": "gar nicht",
+          "box": [
+            40.28,
+            78.926,
+            6.763,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-194-line-49",
+          "text": "toll",
+          "box": [
+            52.185,
+            78.926,
+            2.468,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-194-line-50",
+          "text": "Partner/in B: Kann Diego kochen?",
+          "box": [
+            16.905,
+            82.651,
+            25.832,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-194-line-51",
+          "text": "Partner/in A: Ja, er kann toll kochen.",
+          "box": [
+            16.905,
+            84.433,
+            27.772,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-194-line-52",
+          "text": "Partner/in B: Kannst du …?",
+          "box": [
+            56.932,
+            82.651,
+            20.076,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-194-line-53",
+          "text": "Partner/in A: Ja, ich kann …",
+          "box": [
+            56.932,
+            84.433,
+            20.58,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-194-line-54",
+          "text": "b Wählen Sie drei Informationen über Ihre Partnerin / Ihren Partner. Erzählen Sie dann im Kurs.",
+          "box": [
+            14.524,
+            86.885,
+            75.193,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-194-line-55",
+          "text": "Machen Sie Fotos im Klassenraum.",
+          "box": [
+            65.434,
+            35.84,
+            23.148,
+            1.289
+          ]
+        },
+        {
+          "id": "coursebook-194-line-56",
+          "text": "Spielen Sie dann Gespräche",
+          "box": [
+            65.434,
+            37.242,
+            18.71,
+            1.289
+          ]
+        },
+        {
+          "id": "coursebook-194-line-57",
+          "text": "mit Ihrer Partnerin / Ihrem Partner.",
+          "box": [
+            65.434,
+            38.644,
+            23.213,
+            1.289
+          ]
+        },
+        {
+          "id": "coursebook-194-line-58",
+          "text": "ni",
+          "box": [
+            54.958,
+            58.619,
+            1.777,
+            1.587
+          ]
+        }
+      ],
+      "audioIds": [],
+      "section": "Partner activities · Lesson 5 / 7",
+      "pageLabel": "Page 194",
+      "lessons": [
+        5,
+        7
       ]
     },
     {
@@ -68282,6 +73031,3466 @@
       "audioIds": [],
       "section": "Module 2 · Exam practice",
       "pageLabel": "Page 45"
+    },
+    {
+      "id": "workbook-46",
+      "kind": "workbook",
+      "lesson": 7,
+      "printedPage": 46,
+      "pdfPage": 48,
+      "image": "/book/pages/workbook-46.webp",
+      "width": 1905,
+      "height": 2695,
+      "lines": [
+        {
+          "id": "workbook-46-line-1",
+          "text": "sechsundvierzig",
+          "box": [
+            3.881,
+            74.58,
+            1.627,
+            7.299
+          ]
+        },
+        {
+          "id": "workbook-46-line-2",
+          "text": "Sie können super tanzen!",
+          "box": [
+            20.333,
+            3.611,
+            62.337,
+            3.783
+          ]
+        },
+        {
+          "id": "workbook-46-line-3",
+          "text": "1 Ich finde das super. K KB 2",
+          "box": [
+            10.476,
+            20.187,
+            28.121,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-46-line-4",
+          "text": "a Verbinden Sie.",
+          "box": [
+            10.476,
+            22.143,
+            14.997,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-46-line-5",
+          "text": "a lustig",
+          "box": [
+            28.571,
+            24.726,
+            6.246,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-46-line-6",
+          "text": "b toll / super",
+          "box": [
+            28.571,
+            26.508,
+            10.467,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-46-line-7",
+          "text": "c blöd",
+          "box": [
+            28.571,
+            28.29,
+            5.473,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-46-line-8",
+          "text": "d interessant",
+          "box": [
+            61.746,
+            24.726,
+            10.587,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-46-line-9",
+          "text": "e komisch",
+          "box": [
+            61.746,
+            26.508,
+            8.354,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-46-line-10",
+          "text": "f normal",
+          "box": [
+            61.746,
+            28.29,
+            7.457,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-46-line-11",
+          "text": "b Wie finden Sie das? Antworten Sie. Benutzen Sie die Wörter aus a.",
+          "box": [
+            10.476,
+            30.761,
+            55.157,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-46-line-12",
+          "text": "2 Ergänzen Sie können in der richtigen Form. G KB 4",
+          "box": [
+            10.476,
+            53.68,
+            50.333,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-46-line-13",
+          "text": "3 Markieren Sie die Satzenden und ergänzen Sie. G l KB 4",
+          "box": [
+            10.476,
+            73.692,
+            55.976,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-46-line-14",
+          "text": "Erkanntollschreibensiekanngutenglischsprechen",
+          "box": [
+            14.296,
+            77.853,
+            52.96,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-46-line-15",
+          "text": "Position 2",
+          "box": [
+            25.518,
+            80.108,
+            7.633,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-46-line-16",
+          "text": "Ende",
+          "box": [
+            55.042,
+            80.108,
+            3.818,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-46-line-17",
+          "text": "Sie",
+          "box": [
+            15.042,
+            82.297,
+            3.593,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-46-line-18",
+          "text": "kann",
+          "box": [
+            25.518,
+            82.297,
+            5.124,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-46-line-19",
+          "text": "sehr gut",
+          "box": [
+            35.994,
+            82.297,
+            7.27,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-46-line-20",
+          "text": "zeichnen.",
+          "box": [
+            55.042,
+            82.297,
+            8.359,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-46-line-21",
+          "text": "Pia arbeitet im Hotel und spricht schlecht Englisch.",
+          "box": [
+            18.774,
+            34.496,
+            35.33,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-46-line-22",
+          "text": "Ich finde das nicht normal. Und du?",
+          "box": [
+            18.774,
+            35.957,
+            24.018,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-46-line-23",
+          "text": "Mein Freund schwimmt jeden Tag eine",
+          "box": [
+            18.774,
+            40.821,
+            26.336,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-46-line-24",
+          "text": "Stunde. Ich finde das komisch. Und du?",
+          "box": [
+            18.774,
+            42.282,
+            26.543,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-46-line-25",
+          "text": "Mein Opa lernt Chinesisch. Ich",
+          "box": [
+            18.774,
+            47.145,
+            21.281,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-46-line-26",
+          "text": "finde das interessant. Und du?",
+          "box": [
+            18.774,
+            48.607,
+            20.536,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-46-line-27",
+          "text": "Ich finde das",
+          "box": [
+            61.394,
+            34.329,
+            10.88,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-46-line-28",
+          "text": "Meine Schwester Lisa kann (1) sehr",
+          "box": [
+            15.714,
+            57.177,
+            25.789,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-46-line-29",
+          "text": "gut zeichnen und mein Bruder Tobias",
+          "box": [
+            15.715,
+            59.081,
+            25.395,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-46-line-30",
+          "text": "(2) super Fußball spielen.",
+          "box": [
+            24.219,
+            60.863,
+            17.815,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-46-line-31",
+          "text": "Meine Eltern",
+          "box": [
+            15.715,
+            62.645,
+            9.197,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-46-line-32",
+          "text": "(3) wirk-",
+          "box": [
+            33.436,
+            62.645,
+            6.491,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-46-line-33",
+          "text": "lich gut tanzen und Oma und Opa",
+          "box": [
+            15.715,
+            64.106,
+            23.596,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-46-line-34",
+          "text": "(4) sehr gut Spanisch",
+          "box": [
+            24.219,
+            65.888,
+            15.477,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-46-line-35",
+          "text": "sprechen. Und ihr? Was",
+          "box": [
+            15.715,
+            67.67,
+            16.316,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-46-line-36",
+          "text": "ihr gut?",
+          "box": [
+            15.715,
+            69.132,
+            5.224,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-46-line-37",
+          "text": "Wir? Ich",
+          "box": [
+            49.286,
+            57.343,
+            5.927,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-46-line-38",
+          "text": "(6) nicht gut",
+          "box": [
+            63.737,
+            57.343,
+            9.201,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-46-line-39",
+          "text": "zeichnen oder Spanisch sprechen. Aber",
+          "box": [
+            49.286,
+            58.804,
+            27.066,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-46-line-40",
+          "text": "ich",
+          "box": [
+            49.286,
+            60.586,
+            2.395,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-46-line-41",
+          "text": "(7) gut tanzen. Papa,",
+          "box": [
+            60.205,
+            60.586,
+            14.674,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-46-line-42",
+          "text": "Mama, mein Bruder und ich – wir alle",
+          "box": [
+            49.286,
+            62.048,
+            25.486,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-46-line-43",
+          "text": "(8) wirklich super tanzen!",
+          "box": [
+            57.79,
+            63.83,
+            17.532,
+            1.069
+          ]
+        }
+      ],
+      "audioIds": [],
+      "section": "Lesson 7",
+      "pageLabel": "Page 46"
+    },
+    {
+      "id": "workbook-47",
+      "kind": "workbook",
+      "lesson": 7,
+      "printedPage": 47,
+      "pdfPage": 49,
+      "image": "/book/pages/workbook-47.webp",
+      "width": 1905,
+      "height": 2695,
+      "lines": [
+        {
+          "id": "workbook-47-line-1",
+          "text": "Übungen",
+          "box": [
+            75.395,
+            1.975,
+            12.579,
+            2.149
+          ]
+        },
+        {
+          "id": "workbook-47-line-2",
+          "text": "siebenundvierzig",
+          "box": [
+            94.753,
+            74.186,
+            1.627,
+            7.692
+          ]
+        },
+        {
+          "id": "workbook-47-line-3",
+          "text": "4 Schreiben Sie Sätze. Beginnen Sie mit dem markierten Wort. G KB 4",
+          "box": [
+            10.476,
+            5.036,
+            66.547,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-47-line-4",
+          "text": "a nicht gut | kann | singen | Ich",
+          "box": [
+            14.286,
+            6.997,
+            27.162,
+            1.514
+          ]
+        },
+        {
+          "id": "workbook-47-line-5",
+          "text": "Ich kann nicht gut singen.",
+          "box": [
+            51.13,
+            6.973,
+            21.007,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-47-line-6",
+          "text": "b Englisch sprechen | Sie | kann | toll",
+          "box": [
+            14.286,
+            8.779,
+            31.229,
+            1.514
+          ]
+        },
+        {
+          "id": "workbook-47-line-7",
+          "text": "c kannst | zeichnen | auch gut | Du",
+          "box": [
+            14.286,
+            10.56,
+            29.606,
+            1.514
+          ]
+        },
+        {
+          "id": "workbook-47-line-8",
+          "text": "d Französisch sprechen | Wer | kann | gut",
+          "box": [
+            14.286,
+            12.342,
+            34.565,
+            1.514
+          ]
+        },
+        {
+          "id": "workbook-47-line-9",
+          "text": "e Ihr | tanzen | könnt | wirklich super",
+          "box": [
+            14.286,
+            14.124,
+            30.952,
+            1.514
+          ]
+        },
+        {
+          "id": "workbook-47-line-10",
+          "text": "5 Wer kann …? W KB 5",
+          "box": [
+            10.476,
+            17.921,
+            21.973,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-47-line-11",
+          "text": "a Ergänzen Sie.",
+          "box": [
+            10.476,
+            19.877,
+            14.27,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-47-line-12",
+          "text": "b Ordnen Sie zu und vergleichen Sie.",
+          "box": [
+            10.476,
+            56.96,
+            30.728,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-47-line-13",
+          "text": "backen | Gitarre spielen | Ski fahren | schwimmen | singen | Tennis spielen",
+          "box": [
+            14.286,
+            59.115,
+            52.291,
+            1.782
+          ]
+        },
+        {
+          "id": "workbook-47-line-14",
+          "text": "Deutsch",
+          "box": [
+            15.28,
+            62.599,
+            6.388,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-47-line-15",
+          "text": "Englisch",
+          "box": [
+            34.335,
+            62.599,
+            6.345,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-47-line-16",
+          "text": "Andere Sprachen",
+          "box": [
+            49.492,
+            62.599,
+            13.221,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-47-line-17",
+          "text": "Gitarre spielen",
+          "box": [
+            15.518,
+            65.13,
+            11.981,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-47-line-18",
+          "text": "to play the guitar",
+          "box": [
+            34.566,
+            65.059,
+            12.083,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-47-line-19",
+          "text": "to ski",
+          "box": [
+            34.566,
+            67.43,
+            4.028,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-47-line-20",
+          "text": "to swim",
+          "box": [
+            34.566,
+            69.525,
+            5.641,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-47-line-21",
+          "text": "to bake",
+          "box": [
+            34.566,
+            71.62,
+            5.401,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-47-line-22",
+          "text": "to play tennis",
+          "box": [
+            34.566,
+            73.716,
+            9.54,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-47-line-23",
+          "text": "to sing",
+          "box": [
+            34.566,
+            75.811,
+            4.976,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-47-line-24",
+          "text": "c Wie heißen die Wörter? Notieren Sie. Schreiben Sie dann:",
+          "box": [
+            10.476,
+            78.815,
+            49.228,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-47-line-25",
+          "text": "Was kann Simone",
+          "box": [
+            14.286,
+            80.794,
+            14.163,
+            1.283
+          ]
+        },
+        {
+          "id": "workbook-47-line-26",
+          "text": "und was kann sie nicht",
+          "box": [
+            30.068,
+            80.794,
+            18.559,
+            1.283
+          ]
+        },
+        {
+          "id": "workbook-47-line-27",
+          "text": "1 TARGIRE LENSPIE Gitarre spielen",
+          "box": [
+            14.286,
+            83.002,
+            29.645,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-47-line-28",
+          "text": "Gensin",
+          "box": [
+            16.429,
+            85.135,
+            6.817,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-47-line-29",
+          "text": "singen",
+          "box": [
+            31.925,
+            84.784,
+            6.02,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-47-line-30",
+          "text": "2 CKENBA",
+          "box": [
+            14.286,
+            87.807,
+            9.407,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-47-line-31",
+          "text": "Chenko",
+          "box": [
+            16.429,
+            89.589,
+            7.706,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-47-line-32",
+          "text": "3 MENSCHWIM",
+          "box": [
+            55.238,
+            83.353,
+            13.387,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-47-line-33",
+          "text": "Zentan",
+          "box": [
+            57.382,
+            85.135,
+            7.009,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-47-line-34",
+          "text": "4 TOFOGRARENFIE",
+          "box": [
+            55.238,
+            87.457,
+            18.653,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-47-line-35",
+          "text": "5 LENMA",
+          "box": [
+            55.238,
+            89.589,
+            8.416,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-47-line-36",
+          "text": "1 Simone kann Gitarre spielen, aber sie kann nicht singen.",
+          "box": [
+            16.027,
+            93.444,
+            42.533,
+            1.622
+          ]
+        }
+      ],
+      "audioIds": [],
+      "section": "Lesson 7",
+      "pageLabel": "Page 47"
+    },
+    {
+      "id": "workbook-48",
+      "kind": "workbook",
+      "lesson": 7,
+      "printedPage": 48,
+      "pdfPage": 50,
+      "image": "/book/pages/workbook-48.webp",
+      "width": 1905,
+      "height": 2695,
+      "lines": [
+        {
+          "id": "workbook-48-line-1",
+          "text": "achtundvierzig",
+          "box": [
+            3.881,
+            75.123,
+            1.627,
+            6.756
+          ]
+        },
+        {
+          "id": "workbook-48-line-2",
+          "text": "6 Du kannst aber toll … K KB 6",
+          "box": [
+            10.476,
+            5.036,
+            30.253,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-48-line-3",
+          "text": "a Was passt? Hören Sie und verbinden Sie.",
+          "box": [
+            10.476,
+            6.992,
+            35.221,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-48-line-4",
+          "text": "1 Du kannst ja toll backen!",
+          "box": [
+            14.286,
+            9.507,
+            20.791,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-48-line-5",
+          "text": "2 Du kannst aber gut singen. Das ist toll!",
+          "box": [
+            14.286,
+            11.289,
+            31.523,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-48-line-6",
+          "text": "3 Du kannst wirklich gut Tennis spielen!",
+          "box": [
+            14.286,
+            13.071,
+            30.582,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-48-line-7",
+          "text": "4 Du kannst aber super Gitarre spielen!",
+          "box": [
+            14.286,
+            14.853,
+            30.551,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-48-line-8",
+          "text": "a Danke sehr!",
+          "box": [
+            54.763,
+            9.507,
+            11.139,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-48-line-9",
+          "text": "b Oh, danke!",
+          "box": [
+            54.763,
+            11.289,
+            10.346,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-48-line-10",
+          "text": "c Herzlichen Dank!",
+          "box": [
+            54.763,
+            13.071,
+            15.176,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-48-line-11",
+          "text": "d Oh, vielen Dank!",
+          "box": [
+            54.763,
+            14.853,
+            14.719,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-48-line-12",
+          "text": "b Hören Sie noch einmal und vergleichen Sie. Sprechen Sie nach.",
+          "box": [
+            10.476,
+            17.246,
+            52.246,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-48-line-13",
+          "text": "7 Wer kann was? W KB 7",
+          "box": [
+            10.476,
+            20.953,
+            23.575,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-48-line-14",
+          "text": "a Was passt? Kreuzen Sie an.",
+          "box": [
+            10.476,
+            22.909,
+            24.704,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-48-line-15",
+          "text": "1 Sie kann toll | Ù nicht so gut Ski fahren.",
+          "box": [
+            14.286,
+            25.402,
+            35.709,
+            1.425
+          ]
+        },
+        {
+          "id": "workbook-48-line-16",
+          "text": "2 Er kann sehr gut | gar nicht schwimmen.",
+          "box": [
+            14.286,
+            27.184,
+            37.912,
+            1.425
+          ]
+        },
+        {
+          "id": "workbook-48-line-17",
+          "text": "3 Sie kann gut | nicht gut singen.",
+          "box": [
+            14.286,
+            28.966,
+            30.892,
+            1.425
+          ]
+        },
+        {
+          "id": "workbook-48-line-18",
+          "text": "4 Er kann sehr gut | ein bisschen Rad fahren.",
+          "box": [
+            14.286,
+            30.748,
+            39.864,
+            1.425
+          ]
+        },
+        {
+          "id": "workbook-48-line-19",
+          "text": "b Und was können Sie gut, nicht so gut oder gar nicht? Schreiben Sie.",
+          "box": [
+            10.476,
+            33.17,
+            54.641,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-48-line-20",
+          "text": "Ich kann gut",
+          "box": [
+            14.286,
+            35.342,
+            10.857,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-48-line-21",
+          "text": "8 Wandernder Satzakzent: Hören Sie und sprechen Sie nach. KB 7",
+          "box": [
+            10.476,
+            42.727,
+            63.543,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-48-line-22",
+          "text": "Aussprache",
+          "box": [
+            79.638,
+            43.053,
+            9.55,
+            0.831
+          ]
+        },
+        {
+          "id": "workbook-48-line-23",
+          "text": "9 Was passt wo? Ordnen Sie zu. G KB 8",
+          "box": [
+            10.476,
+            64.936,
+            37.218,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-48-line-24",
+          "text": "a Könnt ihr gut Schach spielen ?",
+          "box": [
+            14.286,
+            68.655,
+            26.888,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-48-line-25",
+          "text": "b Nein, wir",
+          "box": [
+            14.286,
+            70.758,
+            9.315,
+            1.217
+          ]
+        },
+        {
+          "id": "workbook-48-line-26",
+          "text": "nicht gut Schach",
+          "box": [
+            34.075,
+            70.787,
+            13.79,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-48-line-27",
+          "text": "du gut",
+          "box": [
+            28.187,
+            75.241,
+            5.796,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-48-line-28",
+          "text": "b Ich",
+          "box": [
+            14.286,
+            76.994,
+            4.872,
+            1.217
+          ]
+        },
+        {
+          "id": "workbook-48-line-29",
+          "text": "ein bisschen",
+          "box": [
+            30.967,
+            77.023,
+            10.257,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-48-line-30",
+          "text": "Marc gut",
+          "box": [
+            28.187,
+            81.477,
+            7.795,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-48-line-31",
+          "text": "b Ja, ich glaube, er",
+          "box": [
+            14.286,
+            83.23,
+            15.396,
+            1.217
+          ]
+        },
+        {
+          "id": "workbook-48-line-32",
+          "text": "gut",
+          "box": [
+            41.492,
+            83.259,
+            3.43,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-48-line-33",
+          "text": "Sie Gitarre",
+          "box": [
+            29.511,
+            87.713,
+            9.083,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-48-line-34",
+          "text": "b Ja, ich",
+          "box": [
+            14.286,
+            89.465,
+            7.373,
+            1.217
+          ]
+        },
+        {
+          "id": "workbook-48-line-35",
+          "text": "ein bisschen Gitarre",
+          "box": [
+            31.93,
+            89.495,
+            16.184,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-48-line-36",
+          "text": "spielen",
+          "box": [
+            15.188,
+            47.624,
+            5.396,
+            1.319
+          ]
+        },
+        {
+          "id": "workbook-48-line-37",
+          "text": "Schach spielen",
+          "box": [
+            15.299,
+            49.721,
+            11.812,
+            1.477
+          ]
+        },
+        {
+          "id": "workbook-48-line-38",
+          "text": "Ich kann Schach spielen.",
+          "box": [
+            15.411,
+            51.798,
+            19.042,
+            1.656
+          ]
+        },
+        {
+          "id": "workbook-48-line-39",
+          "text": "Ich kann gut Schach spielen.",
+          "box": [
+            15.522,
+            53.979,
+            22.066,
+            1.73
+          ]
+        },
+        {
+          "id": "workbook-48-line-40",
+          "text": "Ich kann sehr gut Schach spielen.",
+          "box": [
+            15.634,
+            56.153,
+            25.368,
+            1.812
+          ]
+        },
+        {
+          "id": "workbook-48-line-41",
+          "text": "fahren",
+          "box": [
+            43.406,
+            48.1,
+            5.013,
+            1.309
+          ]
+        },
+        {
+          "id": "workbook-48-line-42",
+          "text": "Ski fahren",
+          "box": [
+            43.294,
+            50.356,
+            7.629,
+            1.374
+          ]
+        },
+        {
+          "id": "workbook-48-line-43",
+          "text": "toll Ski fahren",
+          "box": [
+            43.183,
+            52.611,
+            10.599,
+            1.447
+          ]
+        },
+        {
+          "id": "workbook-48-line-44",
+          "text": "aber toll Ski fahren",
+          "box": [
+            43.071,
+            54.867,
+            14.458,
+            1.543
+          ]
+        },
+        {
+          "id": "workbook-48-line-45",
+          "text": "Sie können aber toll Ski fahren!",
+          "box": [
+            42.96,
+            57.122,
+            23.727,
+            1.771
+          ]
+        },
+        {
+          "id": "workbook-48-line-46",
+          "text": "Satzakzent = wichtige",
+          "box": [
+            72.862,
+            53.952,
+            15.215,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-48-line-47",
+          "text": "Information:",
+          "box": [
+            72.862,
+            55.414,
+            8.907,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-48-line-48",
+          "text": "Ich kann gut Schach",
+          "box": [
+            72.862,
+            56.875,
+            14.011,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-48-line-49",
+          "text": "spielen.",
+          "box": [
+            72.862,
+            58.336,
+            5.184,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-48-line-50",
+          "text": "könnt",
+          "box": [
+            68.024,
+            66.966,
+            4.363,
+            1.293
+          ]
+        },
+        {
+          "id": "workbook-48-line-51",
+          "text": "spielen",
+          "box": [
+            77.746,
+            66.897,
+            5.396,
+            1.319
+          ]
+        },
+        {
+          "id": "workbook-48-line-52",
+          "text": "spielen",
+          "box": [
+            67.658,
+            69.984,
+            5.396,
+            1.319
+          ]
+        },
+        {
+          "id": "workbook-48-line-53",
+          "text": "kann",
+          "box": [
+            68.519,
+            82.969,
+            3.597,
+            1.274
+          ]
+        },
+        {
+          "id": "workbook-48-line-54",
+          "text": "können",
+          "box": [
+            67.67,
+            86.479,
+            5.609,
+            1.324
+          ]
+        },
+        {
+          "id": "workbook-48-line-55",
+          "text": "kannst",
+          "box": [
+            78.6,
+            74.041,
+            4.946,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-48-line-56",
+          "text": "kann",
+          "box": [
+            79.104,
+            89.202,
+            3.54,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-48-line-57",
+          "text": "kochen",
+          "box": [
+            78.751,
+            76.734,
+            5.513,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-48-line-58",
+          "text": "kann",
+          "box": [
+            81.564,
+            80.392,
+            3.54,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-48-line-59",
+          "text": "spielen",
+          "box": [
+            78.203,
+            86.667,
+            5.34,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-48-line-60",
+          "text": "können",
+          "box": [
+            77.937,
+            69.776,
+            5.554,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-48-line-61",
+          "text": "kochen",
+          "box": [
+            67.491,
+            73.908,
+            5.542,
+            1.256
+          ]
+        },
+        {
+          "id": "workbook-48-line-62",
+          "text": "kann",
+          "box": [
+            68.275,
+            76.684,
+            3.597,
+            1.274
+          ]
+        },
+        {
+          "id": "workbook-48-line-63",
+          "text": "schwimmen",
+          "box": [
+            66.79,
+            80.236,
+            8.995,
+            1.298
+          ]
+        },
+        {
+          "id": "workbook-48-line-64",
+          "text": "schwimmen",
+          "box": [
+            77.355,
+            82.931,
+            9.02,
+            1.408
+          ]
+        },
+        {
+          "id": "workbook-48-line-65",
+          "text": "spielen",
+          "box": [
+            67.746,
+            89.063,
+            5.396,
+            1.319
+          ]
+        }
+      ],
+      "audioIds": [
+        "workbook-l7-ex6-bec2f5f0",
+        "workbook-l7-ex8-1be61293"
+      ],
+      "section": "Lesson 7",
+      "pageLabel": "Page 48"
+    },
+    {
+      "id": "workbook-49",
+      "kind": "workbook",
+      "lesson": 7,
+      "printedPage": 49,
+      "pdfPage": 51,
+      "image": "/book/pages/workbook-49.webp",
+      "width": 1905,
+      "height": 2695,
+      "lines": [
+        {
+          "id": "workbook-49-line-1",
+          "text": "Übungen",
+          "box": [
+            75.395,
+            1.975,
+            12.579,
+            2.149
+          ]
+        },
+        {
+          "id": "workbook-49-line-2",
+          "text": "neunundvierzig",
+          "box": [
+            94.753,
+            74.858,
+            1.627,
+            7.021
+          ]
+        },
+        {
+          "id": "workbook-49-line-3",
+          "text": "10 Partneraufgabe: Schreiben Sie zwei Fragen mit können auf Kärtchen. G KB 8",
+          "box": [
+            10.476,
+            5.036,
+            74.134,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-49-line-4",
+          "text": "Tauschen Sie dann mit Ihrer Partnerin / Ihrem Partner.",
+          "box": [
+            14.286,
+            7.19,
+            43.718,
+            1.283
+          ]
+        },
+        {
+          "id": "workbook-49-line-5",
+          "text": "Sie / Er legt die Fragen und antwortet.",
+          "box": [
+            14.286,
+            8.876,
+            29.761,
+            1.283
+          ]
+        },
+        {
+          "id": "workbook-49-line-6",
+          "text": "11 Wie oft …? K KB 9",
+          "box": [
+            10.476,
+            19.126,
+            19.973,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-49-line-7",
+          "text": "a Bilden Sie Wörter und ordnen Sie zu.",
+          "box": [
+            10.476,
+            21.083,
+            32.394,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-49-line-8",
+          "text": "tof | remmi | ine | malchman",
+          "box": [
+            14.286,
+            23.743,
+            20.866,
+            1.782
+          ]
+        },
+        {
+          "id": "workbook-49-line-9",
+          "text": "4 nie",
+          "box": [
+            72.143,
+            28.91,
+            5.406,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-49-line-10",
+          "text": "b Bilden Sie Sätze und antworten Sie.",
+          "box": [
+            10.476,
+            31.654,
+            31.718,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-49-line-11",
+          "text": "1 Sie | wie | Tennis spielen | oft | ?",
+          "box": [
+            14.286,
+            33.851,
+            29.585,
+            1.514
+          ]
+        },
+        {
+          "id": "workbook-49-line-12",
+          "text": "Wie oft spielen Sie Tennis?",
+          "box": [
+            46.191,
+            33.826,
+            21.387,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-49-line-13",
+          "text": "Manchmal.",
+          "box": [
+            74.762,
+            33.826,
+            9.994,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-49-line-14",
+          "text": "2 Rad fahren | oft | ? | wie | Sie",
+          "box": [
+            14.286,
+            35.632,
+            27.389,
+            1.514
+          ]
+        },
+        {
+          "id": "workbook-49-line-15",
+          "text": "3 Sie | oft | wie | ? | kochen",
+          "box": [
+            14.286,
+            37.414,
+            24.57,
+            1.514
+          ]
+        },
+        {
+          "id": "workbook-49-line-16",
+          "text": "4 ? | oft | wie | Sie | Gitarre spielen",
+          "box": [
+            14.286,
+            39.196,
+            30.324,
+            1.514
+          ]
+        },
+        {
+          "id": "workbook-49-line-17",
+          "text": "12 Treffen / lesen / fahren – Ergänzen Sie. G KB 10",
+          "box": [
+            10.476,
+            44.774,
+            46.277,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-49-line-18",
+          "text": "a a Micha, was machst du in",
+          "box": [
+            14.286,
+            46.99,
+            23.669,
+            1.205
+          ]
+        },
+        {
+          "id": "workbook-49-line-19",
+          "text": "der Freizeit?",
+          "box": [
+            18.571,
+            48.789,
+            9.428,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-49-line-20",
+          "text": "b Ich l ese gern und ich",
+          "box": [
+            16.429,
+            50.22,
+            19.936,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-49-line-21",
+          "text": "Freunde.",
+          "box": [
+            28.499,
+            52.353,
+            7.138,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-49-line-22",
+          "text": "du manchmal Lilja?",
+          "box": [
+            28.741,
+            55.025,
+            14.823,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-49-line-23",
+          "text": "b Ja … Ich t",
+          "box": [
+            16.429,
+            56.778,
+            9.156,
+            1.217
+          ]
+        },
+        {
+          "id": "workbook-49-line-24",
+          "text": "Lilja morgen …",
+          "box": [
+            34.901,
+            56.807,
+            11.304,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-49-line-25",
+          "text": "du gern?",
+          "box": [
+            64.692,
+            47.007,
+            7.093,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-49-line-26",
+          "text": "b Ja! Ich l",
+          "box": [
+            52.143,
+            48.76,
+            8.334,
+            1.217
+          ]
+        },
+        {
+          "id": "workbook-49-line-27",
+          "text": "sehr gern!",
+          "box": [
+            69.6,
+            48.789,
+            8.154,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-49-line-28",
+          "text": "du gern Auto?",
+          "box": [
+            64.8,
+            51.462,
+            11.272,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-49-line-29",
+          "text": "b Nein, ich f",
+          "box": [
+            52.143,
+            53.214,
+            9.971,
+            1.217
+          ]
+        },
+        {
+          "id": "workbook-49-line-30",
+          "text": "nicht so gern Auto.",
+          "box": [
+            54.285,
+            55.025,
+            14.645,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-49-line-31",
+          "text": "13 Chat im Deutschkurs K KB 11",
+          "box": [
+            10.476,
+            59.802,
+            31.483,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-49-line-32",
+          "text": "Schreiben",
+          "box": [
+            80.799,
+            60.128,
+            8.388,
+            0.831
+          ]
+        },
+        {
+          "id": "workbook-49-line-33",
+          "text": "a Ordnen Sie zu.",
+          "box": [
+            10.476,
+            61.758,
+            15.216,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-49-line-34",
+          "text": "deine Hobbys | mache gern | machst du in deiner Freizeit | macht auch Spaß | meine Lieblingshobbys sind",
+          "box": [
+            14.286,
+            64.419,
+            73.691,
+            1.782
+          ]
+        },
+        {
+          "id": "workbook-49-line-35",
+          "text": "b Stellen Sie Laura und Lars aus a vor. Schreiben Sie.",
+          "box": [
+            10.476,
+            81.82,
+            43.151,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-49-line-36",
+          "text": "Kannst",
+          "box": [
+            16.204,
+            13.253,
+            6.465,
+            1.725
+          ]
+        },
+        {
+          "id": "workbook-49-line-37",
+          "text": "gut",
+          "box": [
+            40.337,
+            12.98,
+            2.702,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-49-line-38",
+          "text": "du",
+          "box": [
+            30.121,
+            13.383,
+            2.089,
+            1.617
+          ]
+        },
+        {
+          "id": "workbook-49-line-39",
+          "text": "schwimmen",
+          "box": [
+            49.604,
+            13.303,
+            10.11,
+            1.815
+          ]
+        },
+        {
+          "id": "workbook-49-line-40",
+          "text": "Was sind deine Hobbys (1)?",
+          "box": [
+            25.408,
+            68.782,
+            19.693,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-49-line-41",
+          "text": "Ich",
+          "box": [
+            15.714,
+            77.033,
+            2.434,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-49-line-42",
+          "text": "(5) Musik.",
+          "box": [
+            35.295,
+            77.033,
+            7.437,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-49-line-43",
+          "text": "Ich singe gern und ich spiele Gitarre.",
+          "box": [
+            15.714,
+            78.495,
+            25.336,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-49-line-44",
+          "text": "Skifahren und Radfahren.",
+          "box": [
+            50.285,
+            70.928,
+            17.66,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-49-line-45",
+          "text": "Und Kochen!",
+          "box": [
+            69.869,
+            70.928,
+            9.67,
+            1.274
+          ]
+        },
+        {
+          "id": "workbook-49-line-46",
+          "text": "Das",
+          "box": [
+            50.286,
+            72.71,
+            2.91,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-49-line-47",
+          "text": "(3). Und du? Was",
+          "box": [
+            50.286,
+            74.492,
+            11.84,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-49-line-48",
+          "text": "Ja, ich kann sehr",
+          "box": [
+            76.862,
+            12.403,
+            11.514,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-49-line-49",
+          "text": "gut schwimmen.",
+          "box": [
+            76.862,
+            13.864,
+            11.453,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-49-line-50",
+          "text": "Das sind Laura und Lars.",
+          "box": [
+            15.714,
+            85.565,
+            17.075,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-49-line-51",
+          "text": "Sie sind im Deutschkurs.",
+          "box": [
+            15.714,
+            87.026,
+            17.382,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-49-line-52",
+          "text": "Laura macht gern …",
+          "box": [
+            15.714,
+            88.488,
+            13.274,
+            1.069
+          ]
+        }
+      ],
+      "audioIds": [],
+      "section": "Lesson 7",
+      "pageLabel": "Page 49"
+    },
+    {
+      "id": "workbook-86",
+      "kind": "workbook",
+      "lesson": 2,
+      "printedPage": 86,
+      "pdfPage": 88,
+      "image": "/book/pages/workbook-86.webp",
+      "width": 1905,
+      "height": 2695,
+      "lines": [
+        {
+          "id": "workbook-86-line-1",
+          "text": "sechsundachtzig",
+          "box": [
+            3.881,
+            74.221,
+            1.627,
+            7.658
+          ]
+        },
+        {
+          "id": "workbook-86-line-2",
+          "text": "Ergänzen Sie das Gespräch. K",
+          "box": [
+            14.524,
+            16.888,
+            27.917,
+            1.414
+          ]
+        },
+        {
+          "id": "workbook-86-line-3",
+          "text": "a Hallo!",
+          "box": [
+            48.809,
+            18.996,
+            7.378,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-86-line-4",
+          "text": "a Ich bin Philipp. Und wie heißt du?",
+          "box": [
+            48.809,
+            22.559,
+            28.405,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-86-line-5",
+          "text": "a Woher kommst du?",
+          "box": [
+            48.809,
+            26.123,
+            17.586,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-86-line-6",
+          "text": "a Ich komme aus der Schweiz.",
+          "box": [
+            48.809,
+            31.468,
+            24.734,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-86-line-7",
+          "text": "Schreiben Sie das Gespräch. K",
+          "box": [
+            14.524,
+            42.361,
+            28.4,
+            1.414
+          ]
+        },
+        {
+          "id": "workbook-86-line-8",
+          "text": "a Guten Tag!",
+          "box": [
+            48.809,
+            44.469,
+            11.437,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-86-line-9",
+          "text": "a Ich bin Raphael Sanchez. Und wie heißen Sie?",
+          "box": [
+            48.809,
+            48.033,
+            39.123,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-86-line-10",
+          "text": "Präsentieren Sie die neue Kollegin Heidi Rüegg. K",
+          "box": [
+            14.524,
+            72.527,
+            47.087,
+            1.414
+          ]
+        },
+        {
+          "id": "workbook-86-line-11",
+          "text": "Präsentieren Sie eine Person (Familie / Freunde / Kollegen).",
+          "box": [
+            14.524,
+            90.013,
+            57.913,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-86-line-12",
+          "text": "Schreiben",
+          "box": [
+            80.799,
+            90.339,
+            8.388,
+            0.831
+          ]
+        },
+        {
+          "id": "workbook-86-line-13",
+          "text": "ZU",
+          "box": [
+            11.082,
+            9.893,
+            1.735,
+            0.891
+          ]
+        },
+        {
+          "id": "workbook-86-line-14",
+          "text": "Lektion",
+          "box": [
+            6.7,
+            10.962,
+            6.117,
+            0.891
+          ]
+        },
+        {
+          "id": "workbook-86-line-15",
+          "text": "ZU",
+          "box": [
+            14.295,
+            9.893,
+            1.735,
+            0.891
+          ]
+        },
+        {
+          "id": "workbook-86-line-16",
+          "text": "ÜBUNG",
+          "box": [
+            14.295,
+            10.962,
+            5.067,
+            0.891
+          ]
+        },
+        {
+          "id": "workbook-86-line-17",
+          "text": "Raphael Sanchez",
+          "box": [
+            19.048,
+            62.572,
+            10.868,
+            1.01
+          ]
+        },
+        {
+          "id": "workbook-86-line-18",
+          "text": "– Spanien –",
+          "box": [
+            20.743,
+            64.116,
+            7.477,
+            1.01
+          ]
+        },
+        {
+          "id": "workbook-86-line-19",
+          "text": "Birgit Hauptmann",
+          "box": [
+            35.23,
+            60.916,
+            11.938,
+            1.303
+          ]
+        },
+        {
+          "id": "workbook-86-line-20",
+          "text": "– Österreich –",
+          "box": [
+            36.35,
+            62.493,
+            9.511,
+            1.243
+          ]
+        },
+        {
+          "id": "workbook-86-line-21",
+          "text": "Philipp Rose",
+          "box": [
+            34.963,
+            34.65,
+            8.011,
+            1.01
+          ]
+        },
+        {
+          "id": "workbook-86-line-22",
+          "text": "– Schweiz –",
+          "box": [
+            35.193,
+            36.194,
+            7.551,
+            1.01
+          ]
+        },
+        {
+          "id": "workbook-86-line-23",
+          "text": "Özlem Akay",
+          "box": [
+            21.295,
+            35.504,
+            8.14,
+            1.307
+          ]
+        },
+        {
+          "id": "workbook-86-line-24",
+          "text": "– Türkei –",
+          "box": [
+            22.165,
+            37.086,
+            6.286,
+            1.238
+          ]
+        },
+        {
+          "id": "workbook-86-line-25",
+          "text": "Das ist",
+          "box": [
+            50.173,
+            76.286,
+            4.941,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-86-line-26",
+          "text": "von Beruf.",
+          "box": [
+            80.653,
+            78.068,
+            7.443,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-86-line-27",
+          "text": "Sie ist 27",
+          "box": [
+            50.173,
+            79.85,
+            6.5,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-86-line-28",
+          "text": "Sie kommt aus",
+          "box": [
+            50.173,
+            81.632,
+            10.216,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-86-line-29",
+          "text": "Sie wohnt",
+          "box": [
+            50.173,
+            83.414,
+            7.084,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-86-line-30",
+          "text": "Heidi Rüegg, Ärztin",
+          "box": [
+            27.428,
+            79.933,
+            14.194,
+            1.755
+          ]
+        },
+        {
+          "id": "workbook-86-line-31",
+          "text": "27 Jahre, verheiratet",
+          "box": [
+            27.52,
+            81.569,
+            15.094,
+            1.78
+          ]
+        },
+        {
+          "id": "workbook-86-line-32",
+          "text": "Schweiz, Basel",
+          "box": [
+            27.613,
+            83.349,
+            10.839,
+            1.662
+          ]
+        }
+      ],
+      "audioIds": [],
+      "section": "Extra practice · Lesson 1 / 2",
+      "pageLabel": "Page 86",
+      "lessons": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "workbook-87",
+      "kind": "workbook",
+      "lesson": 4,
+      "printedPage": 87,
+      "pdfPage": 89,
+      "image": "/book/pages/workbook-87.webp",
+      "width": 1905,
+      "height": 2695,
+      "lines": [
+        {
+          "id": "workbook-87-line-1",
+          "text": "siebenundachtzig",
+          "box": [
+            94.753,
+            73.827,
+            1.627,
+            8.052
+          ]
+        },
+        {
+          "id": "workbook-87-line-2",
+          "text": "Susannes Familie. Ordnen Sie zu. W",
+          "box": [
+            14.524,
+            12.848,
+            33.338,
+            1.414
+          ]
+        },
+        {
+          "id": "workbook-87-line-3",
+          "text": "Bruder | Ehemann | Mutter | Schwester | Sohn | Tochter | Vater",
+          "box": [
+            14.286,
+            15.208,
+            45.461,
+            1.782
+          ]
+        },
+        {
+          "id": "workbook-87-line-4",
+          "text": "Was sagt Susanne? W",
+          "box": [
+            14.524,
+            38.086,
+            19.813,
+            1.414
+          ]
+        },
+        {
+          "id": "workbook-87-line-5",
+          "text": "Sehen Sie den Stammbaum oben (",
+          "box": [
+            14.286,
+            40.411,
+            26.27,
+            1.283
+          ]
+        },
+        {
+          "id": "workbook-87-line-6",
+          "text": ") an und schreiben Sie.",
+          "box": [
+            43.178,
+            40.411,
+            17.513,
+            1.283
+          ]
+        },
+        {
+          "id": "workbook-87-line-7",
+          "text": "Mein Name ist Susanne. Das ist meine Familie: Mein Mann heißt Bernd.",
+          "box": [
+            14.524,
+            42.385,
+            56.839,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-87-line-8",
+          "text": "Wir haben zwei Kinder. Der",
+          "box": [
+            14.523,
+            44.518,
+            20.931,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-87-line-9",
+          "text": "heißt Hendrik, die",
+          "box": [
+            50.856,
+            44.518,
+            14.557,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-87-line-10",
+          "text": "heißt Valentina. Ich habe zwei",
+          "box": [
+            14.525,
+            46.299,
+            23.051,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-87-line-11",
+          "text": "Mein",
+          "box": [
+            14.525,
+            48.081,
+            4.181,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-87-line-12",
+          "text": "heißt Martin und meine",
+          "box": [
+            34.107,
+            48.081,
+            18.798,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-87-line-13",
+          "text": "Julia.",
+          "box": [
+            74.122,
+            48.081,
+            4.201,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-87-line-14",
+          "text": "Meine",
+          "box": [
+            14.525,
+            49.863,
+            5.12,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-87-line-15",
+          "text": "sind 52 und 50 Jahre alt. Mein",
+          "box": [
+            35.046,
+            49.863,
+            23.952,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-87-line-16",
+          "text": "heißt Manfred und",
+          "box": [
+            14.527,
+            51.645,
+            14.677,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-87-line-17",
+          "text": "Er, es oder sie? Ersetzen Sie die markierten Wörter. G",
+          "box": [
+            14.524,
+            57.971,
+            50.448,
+            1.414
+          ]
+        },
+        {
+          "id": "workbook-87-line-18",
+          "text": "Schreiben Sie einen Chat wie oben (",
+          "box": [
+            14.524,
+            82.685,
+            33.232,
+            1.283
+          ]
+        },
+        {
+          "id": "workbook-87-line-19",
+          "text": "). Verwenden Sie er, es und sie. G",
+          "box": [
+            50.539,
+            82.554,
+            31.259,
+            1.414
+          ]
+        },
+        {
+          "id": "workbook-87-line-20",
+          "text": "Lampe aus Italien: schön",
+          "box": [
+            14.524,
+            85.012,
+            19.122,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-87-line-21",
+          "text": "Lampe schön, aber teuer.",
+          "box": [
+            43.095,
+            86.794,
+            20.204,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-87-line-22",
+          "text": "Stuhl: schön",
+          "box": [
+            43.095,
+            88.576,
+            9.355,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-87-line-23",
+          "text": "Stuhl: nicht so schön, teuer",
+          "box": [
+            14.524,
+            90.357,
+            21.353,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-87-line-24",
+          "text": "Sofa: schön, günstig",
+          "box": [
+            43.095,
+            92.139,
+            15.438,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-87-line-25",
+          "text": "Sofa: schön, günstig",
+          "box": [
+            14.524,
+            93.921,
+            15.438,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-87-line-26",
+          "text": "Ja, der Sessel ist wirklich schön und",
+          "box": [
+            15.952,
+            76.596,
+            24.525,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-87-line-27",
+          "text": "der Sessel ist sehr günstig.",
+          "box": [
+            15.952,
+            78.948,
+            18.026,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-87-line-28",
+          "text": "Hm, ich finde, die Lampe ist nicht so",
+          "box": [
+            15.952,
+            69.159,
+            25.083,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-87-line-29",
+          "text": "schön und die Lampe ist auch teuer.",
+          "box": [
+            15.952,
+            71.511,
+            24.354,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-87-line-30",
+          "text": "Ja, das Bild ist schön, aber das Bild ist zu teuer.",
+          "box": [
+            46.341,
+            65.64,
+            32.077,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-87-line-31",
+          "text": "Schau mal, die Lampe hier ist auch schön.",
+          "box": [
+            46.341,
+            67.992,
+            28.127,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-87-line-32",
+          "text": "Und der Sessel? Der Sessel ist schön",
+          "box": [
+            46.341,
+            73.033,
+            25.081,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-87-line-33",
+          "text": "und nicht teuer.",
+          "box": [
+            46.341,
+            74.494,
+            11.167,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-87-line-34",
+          "text": "Schau doch mal, da! Das Bild kommt",
+          "box": [
+            15.952,
+            61.785,
+            24.935,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-87-line-35",
+          "text": "aus Spanien. Das Bild ist so schön.",
+          "box": [
+            15.952,
+            64.137,
+            23.052,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-87-line-36",
+          "text": "Es",
+          "box": [
+            26.088,
+            63.109,
+            2.245,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-87-line-37",
+          "text": "Schau mal, da! Die Lampe",
+          "box": [
+            67.607,
+            87.209,
+            20.453,
+            2.116
+          ]
+        },
+        {
+          "id": "workbook-87-line-38",
+          "text": "kommt aus Italien. Sie …",
+          "box": [
+            67.73,
+            88.972,
+            17.668,
+            2.013
+          ]
+        },
+        {
+          "id": "workbook-87-line-39",
+          "text": "Hendrik",
+          "box": [
+            51.127,
+            33.007,
+            6.096,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-87-line-40",
+          "text": "Valentina",
+          "box": [
+            69.598,
+            33.007,
+            7.104,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-87-line-41",
+          "text": "Martin",
+          "box": [
+            18.398,
+            26.222,
+            5.068,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-87-line-42",
+          "text": "Julia",
+          "box": [
+            37.499,
+            26.222,
+            3.424,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-87-line-43",
+          "text": "Susanne",
+          "box": [
+            52.878,
+            26.222,
+            6.236,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-87-line-44",
+          "text": "Bernd",
+          "box": [
+            69.066,
+            26.222,
+            4.591,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-87-line-45",
+          "text": "Manfred",
+          "box": [
+            28.238,
+            19.243,
+            6.489,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-87-line-46",
+          "text": "Anja",
+          "box": [
+            44.848,
+            19.243,
+            3.351,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-87-line-47",
+          "text": "Ehemann",
+          "box": [
+            68.003,
+            28.368,
+            9.057,
+            1.568
+          ]
+        }
+      ],
+      "audioIds": [],
+      "section": "Extra practice · Lesson 3 / 4",
+      "pageLabel": "Page 87",
+      "lessons": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "workbook-88",
+      "kind": "workbook",
+      "lesson": 6,
+      "printedPage": 88,
+      "pdfPage": 90,
+      "image": "/book/pages/workbook-88.webp",
+      "width": 1905,
+      "height": 2695,
+      "lines": [
+        {
+          "id": "workbook-88-line-1",
+          "text": "achtundachtzig",
+          "box": [
+            3.881,
+            74.763,
+            1.627,
+            7.115
+          ]
+        },
+        {
+          "id": "workbook-88-line-2",
+          "text": "Reaktionen … Was passt? Kreuzen Sie an. K",
+          "box": [
+            14.524,
+            12.848,
+            41.245,
+            1.414
+          ]
+        },
+        {
+          "id": "workbook-88-line-3",
+          "text": "a a Wie bitte?",
+          "box": [
+            14.286,
+            15.289,
+            11.974,
+            1.205
+          ]
+        },
+        {
+          "id": "workbook-88-line-4",
+          "text": "b Bürste. Das ist eine Bürste.",
+          "box": [
+            16.429,
+            17.059,
+            24.461,
+            1.217
+          ]
+        },
+        {
+          "id": "workbook-88-line-5",
+          "text": "Kein Problem.",
+          "box": [
+            18.574,
+            18.84,
+            12.267,
+            1.217
+          ]
+        },
+        {
+          "id": "workbook-88-line-6",
+          "text": "b a Entschuldigung, wie heißt das auf Deutsch?",
+          "box": [
+            14.288,
+            21.525,
+            37.549,
+            1.205
+          ]
+        },
+        {
+          "id": "workbook-88-line-7",
+          "text": "b Das ist ein Handtuch.",
+          "box": [
+            16.429,
+            23.295,
+            20.115,
+            1.217
+          ]
+        },
+        {
+          "id": "workbook-88-line-8",
+          "text": "Wie schreibt man das?",
+          "box": [
+            18.574,
+            25.076,
+            18.758,
+            1.217
+          ]
+        },
+        {
+          "id": "workbook-88-line-9",
+          "text": "c a Das ist ein Geldbeutel.",
+          "box": [
+            14.288,
+            27.761,
+            21.503,
+            1.205
+          ]
+        },
+        {
+          "id": "workbook-88-line-10",
+          "text": "b Bitte schön.",
+          "box": [
+            16.429,
+            29.531,
+            13.414,
+            1.217
+          ]
+        },
+        {
+          "id": "workbook-88-line-11",
+          "text": "Wie bitte? Noch einmal, bitte.",
+          "box": [
+            18.574,
+            31.312,
+            24.471,
+            1.217
+          ]
+        },
+        {
+          "id": "workbook-88-line-12",
+          "text": "d a Danke schön!",
+          "box": [
+            14.288,
+            33.997,
+            14.542,
+            1.205
+          ]
+        },
+        {
+          "id": "workbook-88-line-13",
+          "text": "b Bitte. Sehr gern.",
+          "box": [
+            16.429,
+            35.767,
+            16.339,
+            1.217
+          ]
+        },
+        {
+          "id": "workbook-88-line-14",
+          "text": "Wie bitte?",
+          "box": [
+            18.574,
+            37.548,
+            9.412,
+            1.217
+          ]
+        },
+        {
+          "id": "workbook-88-line-15",
+          "text": "Ergänzen Sie das Gespräch. K",
+          "box": [
+            14.524,
+            40.103,
+            27.906,
+            1.414
+          ]
+        },
+        {
+          "id": "workbook-88-line-16",
+          "text": "a Entschuldigung,",
+          "box": [
+            14.524,
+            42.21,
+            14.46,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-88-line-17",
+          "text": "b Das ist ein Wörterbuch.",
+          "box": [
+            14.524,
+            44.313,
+            19.829,
+            1.217
+          ]
+        },
+        {
+          "id": "workbook-88-line-18",
+          "text": "b Wörterbuch. W Ö R T E R B U C H.",
+          "box": [
+            14.524,
+            47.877,
+            28.447,
+            1.217
+          ]
+        },
+        {
+          "id": "workbook-88-line-19",
+          "text": "b Bitte schön. Kein Problem.",
+          "box": [
+            14.524,
+            51.44,
+            22.096,
+            1.217
+          ]
+        },
+        {
+          "id": "workbook-88-line-20",
+          "text": "Notieren Sie die Pluralformen. G",
+          "box": [
+            14.524,
+            57.797,
+            31.069,
+            1.414
+          ]
+        },
+        {
+          "id": "workbook-88-line-21",
+          "text": "das Auto, das Handy,",
+          "box": [
+            14.524,
+            59.78,
+            16.322,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-88-line-22",
+          "text": "der Job, die E-Mail",
+          "box": [
+            14.524,
+            61.562,
+            14.261,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-88-line-23",
+          "text": "die Autos,",
+          "box": [
+            44.881,
+            59.622,
+            7.515,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-88-line-24",
+          "text": "das Problem, das Formular,",
+          "box": [
+            14.524,
+            64.27,
+            20.661,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-88-line-25",
+          "text": "das Regal, der Preis",
+          "box": [
+            14.524,
+            66.051,
+            14.924,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-88-line-26",
+          "text": "die Probleme,",
+          "box": [
+            44.881,
+            64.112,
+            10.157,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-88-line-27",
+          "text": "das Bett, die Tasche,",
+          "box": [
+            14.524,
+            68.759,
+            15.969,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-88-line-28",
+          "text": "die Flasche, die Jacke",
+          "box": [
+            14.524,
+            70.541,
+            16.466,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-88-line-29",
+          "text": "der Spiegel, der Sessel,",
+          "box": [
+            14.524,
+            73.249,
+            18.045,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-88-line-30",
+          "text": "das Zimmer, der Schlüssel",
+          "box": [
+            14.524,
+            75.031,
+            19.672,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-88-line-31",
+          "text": "das Bild, das Kind,",
+          "box": [
+            14.524,
+            77.739,
+            13.957,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-88-line-32",
+          "text": "das Mitglied",
+          "box": [
+            14.524,
+            79.52,
+            9.248,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-88-line-33",
+          "text": "-er",
+          "box": [
+            38.571,
+            77.739,
+            2.281,
+            1.188
+          ]
+        }
+      ],
+      "audioIds": [],
+      "section": "Extra practice · Lesson 5 / 6",
+      "pageLabel": "Page 88",
+      "lessons": [
+        5,
+        6
+      ]
+    },
+    {
+      "id": "workbook-89",
+      "kind": "workbook",
+      "lesson": 7,
+      "printedPage": 89,
+      "pdfPage": 91,
+      "image": "/book/pages/workbook-89.webp",
+      "width": 1905,
+      "height": 2695,
+      "lines": [
+        {
+          "id": "workbook-89-line-1",
+          "text": "neunundachtzig",
+          "box": [
+            94.753,
+            74.499,
+            1.627,
+            7.38
+          ]
+        },
+        {
+          "id": "workbook-89-line-2",
+          "text": "Sehen Sie das Bild an. Was sucht Herr Los? G",
+          "box": [
+            14.524,
+            10.033,
+            42.266,
+            1.414
+          ]
+        },
+        {
+          "id": "workbook-89-line-3",
+          "text": "Hilfe!",
+          "box": [
+            60.476,
+            12.141,
+            5.154,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-89-line-4",
+          "text": "Wo sind die Kugelschreiber?",
+          "box": [
+            60.476,
+            13.922,
+            21.069,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-89-line-5",
+          "text": "Wo sind",
+          "box": [
+            60.476,
+            15.703,
+            6.891,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-89-line-6",
+          "text": "Ergänzen Sie die Verben in der richtigen Form. G",
+          "box": [
+            14.524,
+            40.199,
+            46.336,
+            1.414
+          ]
+        },
+        {
+          "id": "workbook-89-line-7",
+          "text": "fahren | kommen | lesen | spielen | treffen | wohnen",
+          "box": [
+            14.286,
+            42.559,
+            37.524,
+            1.782
+          ]
+        },
+        {
+          "id": "workbook-89-line-8",
+          "text": "Stellen Sie eine Person vor.",
+          "box": [
+            14.524,
+            64.576,
+            27.618,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-89-line-9",
+          "text": "Schreiben",
+          "box": [
+            80.799,
+            64.902,
+            8.388,
+            0.831
+          ]
+        },
+        {
+          "id": "workbook-89-line-10",
+          "text": "Schreiben Sie einen Text wie oben (",
+          "box": [
+            14.286,
+            66.966,
+            27.306,
+            1.283
+          ]
+        },
+        {
+          "id": "workbook-89-line-11",
+          "text": "Was machen Sie am Wochenende? Ergänzen Sie. K",
+          "box": [
+            14.524,
+            73.836,
+            46.727,
+            1.414
+          ]
+        },
+        {
+          "id": "workbook-89-line-12",
+          "text": "Am Freitagabend gehe ich ins Kino.",
+          "box": [
+            14.524,
+            75.944,
+            27.753,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-89-line-13",
+          "text": "Am Samstagvormittag",
+          "box": [
+            14.524,
+            77.725,
+            18.216,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-89-line-14",
+          "text": "Am Samstagabend",
+          "box": [
+            14.524,
+            81.288,
+            16.002,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-89-line-15",
+          "text": "Am Sonntag",
+          "box": [
+            14.524,
+            84.85,
+            11.135,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-89-line-16",
+          "text": "Das ist mein Freund Martin. Er kommt (1) aus Hamburg, aber",
+          "box": [
+            36.717,
+            48.308,
+            47.9,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-89-line-17",
+          "text": "er",
+          "box": [
+            36.718,
+            50.441,
+            1.982,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-89-line-18",
+          "text": "(2) jetzt hier in Dortmund. In der Freizeit",
+          "box": [
+            50.218,
+            50.441,
+            31.904,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-89-line-19",
+          "text": "(3) er gern Fußball und er",
+          "box": [
+            48.185,
+            52.222,
+            20.507,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-89-line-20",
+          "text": "gern Rad. Am Wochenende",
+          "box": [
+            36.718,
+            54.004,
+            21.308,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-89-line-21",
+          "text": "(5) er oft Freunde.",
+          "box": [
+            69.541,
+            54.004,
+            15.517,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-89-line-22",
+          "text": "Und Martin",
+          "box": [
+            36.718,
+            55.786,
+            9.063,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-89-line-23",
+          "text": "(6) viel. Sein Lieblingsbuch?",
+          "box": [
+            57.299,
+            55.786,
+            22.393,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-89-line-24",
+          "text": "Harry Potter.",
+          "box": [
+            36.72,
+            57.567,
+            10.432,
+            1.188
+          ]
+        }
+      ],
+      "audioIds": [],
+      "section": "Extra practice · Lesson 6 / 7 / 8",
+      "pageLabel": "Page 89",
+      "lessons": [
+        6,
+        7,
+        8
+      ]
     }
   ],
   "audio": [
@@ -68658,6 +76867,83 @@
       "source": "resources/original/audio/Audio-20260730T043413Z-1-001/Audio/Momente_A11_AB_CZ_Audios_CD1/1_46_Momente_A11_AB_L6_13a-CZ.mp3",
       "sha256": "112eb1dc3d381ee51c8d8a682262bb0e29423107021d76501dad9937665d7b2a",
       "pageId": "workbook-37"
+    },
+    {
+      "id": "workbook-l7-ex6-bec2f5f0",
+      "lesson": 7,
+      "kind": "workbook",
+      "exercise": 6,
+      "label": "Exercise 6 · a b",
+      "src": "/book/audio/workbook-l7-ex6-bec2f5f0.mp3",
+      "source": "resources/original/audio/Audio-20260730T043413Z-1-001/Audio/Momente_A11_AB_CZ_Audios_CD2/2_01_Momente_A11_AB_L7_6a_b-CZ.mp3",
+      "sha256": "bec2f5f0d922be95ea688c32ea633294cc4b1e9e3018faa150d299b243360133",
+      "pageId": "workbook-48"
+    },
+    {
+      "id": "workbook-l7-ex8-1be61293",
+      "lesson": 7,
+      "kind": "workbook",
+      "exercise": 8,
+      "label": "Exercise 8",
+      "src": "/book/audio/workbook-l7-ex8-1be61293.mp3",
+      "source": "resources/original/audio/Audio-20260730T043413Z-1-001/Audio/Momente_A11_AB_CZ_Audios_CD2/2_02_Momente_A11_AB_L7_8-CZ.mp3",
+      "sha256": "1be612931c8575f3d2753b6dde02cf6b240eb073d87032c45e0f69c4e05046ce",
+      "pageId": "workbook-48"
+    },
+    {
+      "id": "coursebook-l7-ex1-3ef29d61",
+      "lesson": 7,
+      "kind": "coursebook",
+      "exercise": 1,
+      "label": "Exercise 1 · b 4",
+      "src": "/book/audio/coursebook-l7-ex1-3ef29d61.mp3",
+      "source": "resources/original/audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_01_KB_Momente_A11_L7_1b_4.mp3",
+      "sha256": "3ef29d61f0af2a58df5e5103165846dd7dea13fe6c44d210e4514abdfd15d7d3",
+      "pageId": "coursebook-47"
+    },
+    {
+      "id": "coursebook-l7-ex3-3a4b6489",
+      "lesson": 7,
+      "kind": "coursebook",
+      "exercise": 3,
+      "label": "Exercise 3 · 4",
+      "src": "/book/audio/coursebook-l7-ex3-3a4b6489.mp3",
+      "source": "resources/original/audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_02_KB_Momente_A11_L7_3_4.mp3",
+      "sha256": "3a4b6489799f3306ba6fd98fe921729aa35a3255a155b4e4beb7d79a89858bce",
+      "pageId": "coursebook-48"
+    },
+    {
+      "id": "coursebook-l7-ex9-a9c36653",
+      "lesson": 7,
+      "kind": "coursebook",
+      "exercise": 9,
+      "label": "Exercise 9 · b 1",
+      "src": "/book/audio/coursebook-l7-ex9-a9c36653.mp3",
+      "source": "resources/original/audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_03_KB_Momente_A11_L7_9b_1.mp3",
+      "sha256": "a9c366530730dec9d59b36ecccc0f454af2b2e2eaf982948387b869aa71d3b98",
+      "pageId": "coursebook-49"
+    },
+    {
+      "id": "coursebook-l7-ex9-481ee522",
+      "lesson": 7,
+      "kind": "coursebook",
+      "exercise": 9,
+      "label": "Exercise 9 · b 2",
+      "src": "/book/audio/coursebook-l7-ex9-481ee522.mp3",
+      "source": "resources/original/audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_04_KB_Momente_A11_L7_9b_2.mp3",
+      "sha256": "481ee52283b4032fa1c994725526e9bee3a475dac5459cd92f96b3a0cf7f8cbd",
+      "pageId": "coursebook-49"
+    },
+    {
+      "id": "coursebook-l7-ex9-1995b49c",
+      "lesson": 7,
+      "kind": "coursebook",
+      "exercise": 9,
+      "label": "Exercise 9 · b 3",
+      "src": "/book/audio/coursebook-l7-ex9-1995b49c.mp3",
+      "source": "resources/original/audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_05_KB_Momente_A11_L7_9b_3.mp3",
+      "sha256": "1995b49cf10f213ee04789495c4cf0a78a49dcdcb4dad85b907e7c22f31d7390",
+      "pageId": "coursebook-49"
     },
     {
       "id": "coursebook-l1-ex1-74059a9c",

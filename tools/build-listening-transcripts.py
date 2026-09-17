@@ -54,17 +54,18 @@ def main():
     ab.update(json.loads((ROOT / "research/lesson-expansion/ab-lesson5-6-transcripts.json").read_text(encoding="utf8")))
     ab.update(json.loads((ROOT / 'research/book-answers/module1-workbook-transcripts.json').read_text(encoding='utf8')))
     ab.update(json.loads((ROOT / 'research/lesson-expansion/module2-workbook-transcripts.json').read_text(encoding='utf8')))
+    ab.update(json.loads((ROOT / 'research/lesson-expansion/ab-lesson7-transcripts.json').read_text(encoding='utf8')))
     tracks, legacy = {}, {}
     for audio in catalog['audio']:
-        number = int(re.match(r'1_(\d+)', Path(audio['source']).name)[1])
+        disc, number = map(int, re.match(r'([12])_(\d+)', Path(audio['source']).name).groups())
         source_number = number + (1 if audio['kind'] == 'workbook' and 4 <= audio['lesson'] <= 6 and '-m' not in audio['id'] else 0)
-        source_id = f'1/{source_number:02}' if audio['kind'] == 'coursebook' else f'1_{source_number:02}'
+        source_id = f'{disc}/{source_number:02}' if audio['kind'] == 'coursebook' else f'{disc}_{source_number:02}'
         transcript = (kb if audio['kind'] == 'coursebook' else ab)[source_id]
         assert transcript['lines'], audio['id']
         item = {**transcript, 'sourceTrack': source_id, 'credit': 'Momente A1.1 · © Hueber Verlag', 'sourceTitle': transcript.get('sourceTitle','Kursbuch Transkriptionen' if audio['kind'] == 'coursebook' else 'Arbeitsbuch Transkriptionen')}
         tracks[audio['id']] = item
         if audio['kind'] == 'workbook' and '-m' not in audio['id']:
-            legacy[f'1_{number:02}'] = item
+            legacy[f'{disc}_{number:02}'] = item
     output = {'tracks': tracks, 'workbook': legacy}
     (GEN / 'audio/listening-transcripts.json').write_text(json.dumps(output, ensure_ascii=False, indent=2)+'\n', encoding='utf8')
     audit = {'tracks': len(tracks), 'workbookTracks': len(legacy), 'coursebookSourceUrl': URL, 'sources': [{'file': str(p.relative_to(ROOT)), 'sha256': hashlib.sha256(p.read_bytes()).hexdigest()} for p in [KB, AB]], 'mappingNote': 'AB Lessons 4-6 source transcript numbers are one greater than the supplied audio filenames; exercise and subpart were checked visually.'}

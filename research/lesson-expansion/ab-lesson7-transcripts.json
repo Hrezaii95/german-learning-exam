@@ -1,0 +1,30 @@
+{
+  "2_01": {
+    "sourcePages": [10],
+    "lines": [
+      {"speaker": "1 · Fangirl", "text": "Du kannst ja toll backen!"},
+      {"speaker": "Superstar", "text": "Herzlichen Dank!"},
+      {"speaker": "2 · Fangirl", "text": "Du kannst aber gut singen. Das ist toll!"},
+      {"speaker": "Superstar", "text": "Oh, vielen Dank."},
+      {"speaker": "3 · Fangirl", "text": "Du kannst wirklich gut Tennis spielen!"},
+      {"speaker": "Superstar", "text": "Danke sehr!"},
+      {"speaker": "4 · Fangirl", "text": "Du kannst aber super Gitarre spielen!"},
+      {"speaker": "Superstar", "text": "Oh, danke!"}
+    ]
+  },
+  "2_02": {
+    "sourcePages": [10],
+    "lines": [
+      {"speaker": null, "text": "spielen"},
+      {"speaker": null, "text": "Schach spielen"},
+      {"speaker": null, "text": "Ich kann Schach spielen."},
+      {"speaker": null, "text": "Ich kann gut Schach spielen."},
+      {"speaker": null, "text": "Ich kann sehr gut Schach spielen."},
+      {"speaker": null, "text": "fahren"},
+      {"speaker": null, "text": "Ski fahren"},
+      {"speaker": null, "text": "toll Ski fahren"},
+      {"speaker": null, "text": "aber toll Ski fahren"},
+      {"speaker": null, "text": "Sie können aber toll Ski fahren!"}
+    ]
+  }
+}

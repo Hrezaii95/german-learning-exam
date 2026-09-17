@@ -18,11 +18,11 @@ GENERATED = ROOT / "platform/apps/web/generated"
 DIGITS = str.maketrans(dict(zip("", "0123456789")))
 
 # Printed page starts; PDF page = printed page + 2 for these source files.
-LESSONS = [(1, 11, 6), (2, 15, 10), (3, 19, 14), (4, 29, 26), (5, 33, 30), (6, 37, 34)]
+LESSONS = [(1, 11, 6), (2, 15, 10), (3, 19, 14), (4, 29, 26), (5, 33, 30), (6, 37, 34), (7, 47, 46)]
 # Each page's exercise starts, checked against the source pages.
 EXERCISES = {
-    "coursebook": {1: [1, 2, 4, 8], 2: [1, 2, 4, 6], 3: [1, 2, 5, 9], 4: [1, 3, 5, 8], 5: [1, 2, 5, 6], 6: [1, 2, 4, 9]},
-    "workbook": {1: [1, 5, 10, 13], 2: [1, 4, 8, 12], 3: [1, 5, 9, 12], 4: [1, 4, 9, 14], 5: [1, 5, 9, 15], 6: [1, 4, 7, 10]},
+    "coursebook": {1: [1, 2, 4, 8], 2: [1, 2, 4, 6], 3: [1, 2, 5, 9], 4: [1, 3, 5, 8], 5: [1, 2, 5, 6], 6: [1, 2, 4, 9], 7: [1, 3, 8, 10]},
+    "workbook": {1: [1, 5, 10, 13], 2: [1, 4, 8, 12], 3: [1, 5, 9, 12], 4: [1, 4, 9, 14], 5: [1, 5, 9, 15], 6: [1, 4, 7, 10], 7: [1, 4, 6, 10]},
 }
 
 
@@ -35,7 +35,7 @@ def clean(text):
 
 def main():
     parser=argparse.ArgumentParser()
-    parser.add_argument("--through",type=int,choices=[4,5,6],default=6)
+    parser.add_argument("--through",type=int,choices=[4,5,6,7],default=7)
     through=parser.parse_args().through
     PUBLIC.mkdir(parents=True, exist_ok=True)
     (PUBLIC / "audio").mkdir(exist_ok=True)
@@ -50,15 +50,17 @@ def main():
         sources.append({"kind": kind, "path": path.relative_to(ROOT).as_posix(), "sha256": hashlib.sha256(path.read_bytes()).hexdigest()})
         last=next((kb,ab) for lesson,kb,ab in LESSONS if lesson==through)
         end = (46 if kind=="coursebook" else 45) if through==6 else last[0 if kind=="coursebook" else 1]+3
-        action_lessons={155:[1],156:[1],157:[2],158:[2],159:[3,4],160:[5],161:[6]}
-        printed_pages=list(range(-1,end+1))+(list(action_lessons) if kind=="coursebook" and through==6 else [])
+        action_lessons={155:[1],156:[1],157:[2],158:[2],159:[3,4],160:[5],161:[6]} if kind=="coursebook" else {}
+        if through>=7:
+            action_lessons.update({162:[7],163:[7,8],191:[1],192:[2],193:[4,5],194:[5,7]} if kind=="coursebook" else {86:[1,2],87:[3,4],88:[5,6],89:[6,7,8]})
+        printed_pages=list(range(-1,end+1))+(list(action_lessons) if through>=6 else [])
         corrections=json.loads((ROOT/'research/lesson-expansion/book-line-corrections.json').read_text(encoding='utf8'))
         for printed in printed_pages:
             starts = [(lesson, kb if kind == "coursebook" else ab) for lesson, kb, ab in LESSONS if lesson<=through]
             lesson = max((lesson for lesson, start in starts if printed >= start), default=1)
-            if kind=="coursebook" and printed in action_lessons:
-                lesson=action_lessons[printed][-1]
-                section="Partner activities · Lesson "+" / ".join(map(str,action_lessons[printed]))
+            if printed in action_lessons:
+                lesson=max(n for n in action_lessons[printed] if n<=through)
+                section=("Partner activities" if kind=="coursebook" else "Extra practice")+" · Lesson "+" / ".join(map(str,action_lessons[printed]))
             elif printed < starts[0][1]:
                 section = "Getting started"
             elif kind == "coursebook" and 23 <= printed <= 28:
@@ -80,7 +82,7 @@ def main():
             for block in page.get_text("dict")["blocks"]:
                 for line in block.get("lines", []):
                     raw_text="".join(span["text"] for span in line["spans"])
-                    text = clean(next((c['text'] for c in corrections.get(page_id,[]) if raw_text.startswith(c['startsWith'])),raw_text))
+                    text = clean(next((c['text'] for c in corrections.get(page_id,[]) if raw_text.lstrip().startswith(c['startsWith'].lstrip())),raw_text))
                     if len(text) < 2 or not re.search(r"[A-Za-zÄÖÜäöüß]{2}", text):
                         continue
                     if re.fullmatch(r"[A-Z ]{5,}", text) and len(text.replace(" ", "")) > 4:
@@ -90,7 +92,7 @@ def main():
                         continue
                     lines.append({"id": f"{page_id}-line-{len(lines)+1}", "text": text, "box": [round(x0 / page.rect.width * 100, 3), round(y0 / page.rect.height * 100, 3), round((x1-x0) / page.rect.width * 100, 3), round((y1-y0) / page.rect.height * 100, 3)]})
             pages.append({"id": page_id, "kind": kind, "lesson": lesson, "printedPage": printed, "pdfPage": printed + 2, "image": f"/book/pages/{page_id}.webp", "width": pix.width, "height": pix.height, "lines": lines, "audioIds": [], "section": section, "pageLabel": "Cover" if printed == -1 else "Inside cover · map" if printed == 0 else f"Page {printed}"})
-            if kind=="coursebook" and printed in action_lessons:
+            if printed in action_lessons:
                 pages[-1]['lessons']=action_lessons[printed]
     for file in sorted((ROOT / "resources/original/audio").rglob("*.mp3")):
         match = re.search(r"_(KB|AB)_(?:Momente_A11_)?L(\d+)_(\d+)(.*)\.mp3$", file.name)
@@ -99,6 +101,9 @@ def main():
         label, lesson, exercise, suffix = match.groups()
         lesson, exercise = int(lesson), int(exercise)
         if lesson>through:
+            continue
+        if lesson>=7 and file.name.endswith('-SK.mp3') and any((ROOT/'resources/original/audio').rglob(file.name.replace('-SK.mp3','-CZ.mp3'))):
+            # Use one supplied edition of each recording, not duplicate regional copies.
             continue
         kind = "coursebook" if label == "KB" else "workbook"
         # AB names carry Momente before AB; the regex supports both source naming schemes.

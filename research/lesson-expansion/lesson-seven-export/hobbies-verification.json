@@ -1,0 +1,20 @@
+{
+  "base": "http://localhost:3210/german-learning-exam",
+  "checks": [
+    "Three meanings remain visibly separate",
+    "Question mode moves the conjugated modal to the front",
+    "Formal address, negation and a multiword hobby preserve the verb frame",
+    "The exact generated question plays its audio file",
+    "Whole-sentence selection opens the exact meaning",
+    "Saving in the dictionary updates the builder selection",
+    "The sentence can be deselected again",
+    "Frequency changes the ordinary verb sentence, not the ability statement",
+    "English can be hidden for recall",
+    "The sheet fits a 390px phone",
+    "The sheet fits a 320px phone",
+    "Lesson 7 questions and the ability builder follow the shared selection",
+    "Partner B is reachable within the Lesson 7 book selection",
+    "No browser exceptions"
+  ],
+  "errors": []
+}
