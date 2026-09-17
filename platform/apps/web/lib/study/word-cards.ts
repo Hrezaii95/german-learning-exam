@@ -48,14 +48,13 @@ export function studyWordCards(words:StudyWord[],lesson:number,source:string):Wo
           singular: { text: word.de, label: "German", tone, audio: null },
           plurals:
             word.plural && word.plural !== "plural only"
-              ? [
+              ? [word.plural,...(word.pluralVariants??[])].map(text=>(
                   {
-                    text: word.plural,
+                    text,
                     label: "Plural",
-                    tone: "plural",
+                    tone: "plural" as const,
                     audio: null,
-                  },
-                ]
+                  }))
               : [],
           usage:
             word.plural === "plural only"
@@ -68,6 +67,7 @@ export function studyWordCards(words:StudyWord[],lesson:number,source:string):Wo
         word.de,
         ...(word.variants??[]),
         ...(word.plural && word.plural !== "plural only" ? [word.plural] : []),
+        ...(word.pluralVariants??[]),
       ],
       tip: word.variants?.length?'Both article forms are accepted. Each form keeps its own gender colour.':noun
         ? "Recall the article together with the noun."
@@ -89,13 +89,13 @@ export function studyWordCards(words:StudyWord[],lesson:number,source:string):Wo
           ? [
               {
                 question: `What is the plural of ${word.de}?`,
-                answers: [word.plural],
+                answers: [word.plural,...(word.pluralVariants??[])],
                 hint: "Plural nouns use die.",
               },
             ]
           : []),
       ],
-      searchText: `${word.de} ${(word.variants??[]).join(' ')} ${word.en} ${word.plural} Lesson ${lesson}`,
+      searchText: `${word.de} ${(word.variants??[]).join(' ')} ${word.en} ${word.plural} ${(word.pluralVariants??[]).join(' ')} Lesson ${lesson}`,
     };
   });
 }

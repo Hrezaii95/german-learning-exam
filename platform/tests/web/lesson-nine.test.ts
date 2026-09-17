@@ -44,13 +44,13 @@ describe('Lesson 9 food and Module 3 source coverage',()=>{
   expect(foodCompounds.find(c=>c.result==='das Schinkenbrötchen')?.tone).toBe('neuter');
  });
  it('includes continuous Module 3 pages, partner pages and every exam track',()=>{
-  const book=loadBook();expect(book.pages).toHaveLength(155);expect(book.audio).toHaveLength(169);
+  const book=loadBook();expect(book.pages).toHaveLength(165);expect(book.audio).toHaveLength(180);
   for(const id of ['coursebook-165','coursebook-166','workbook-91'])expect(book.pages.find(p=>p.id===id)?.lessons).toContain(9);
   const tracks=book.audio.filter(a=>a.lesson===9);expect(tracks).toHaveLength(27);expect(tracks.filter(a=>a.id.includes('-l9-'))).toHaveLength(6);
   for(let n=17;n<=25;n++){const a=tracks.find(a=>a.kind==='workbook'&&a.transcript?.sourceTrack===`2_${n}`)!;expect(a,`Exam track ${n}`).toBeDefined();expect(a.pageId).toBe(n<19?'workbook-64':'workbook-65');expect(a.transcript?.lines.length).toBeGreaterThan(0);}
  });
  it('maps exercise 10 correctly without misreading a wrapped partner item as exercise 14',()=>{
-  const answers=loadBookAnswers();expect(answers).toHaveLength(146);
+  const answers=loadBookAnswers();expect(answers).toHaveLength(165);
   expect(answers.find(a=>a.pageId==='coursebook-58'&&a.exercise==='Exercise 10a')?.text).toBeTruthy();
   expect(answers.filter(a=>a.pageId==='coursebook-58'&&a.exercise.startsWith('Quick test'))).toHaveLength(3);
   expect(answers.find(a=>a.pageId==='coursebook-18'&&a.exercise==='Exercise 14')).toBeUndefined();

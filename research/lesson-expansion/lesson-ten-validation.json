@@ -1,0 +1,24 @@
+{
+  "lesson": 10,
+  "status": "local-export-verified",
+  "unitTests": 893,
+  "webTestSuite": 554,
+  "staticPages": 1407,
+  "browserChecks": 826,
+  "mediaByteChecks": 34,
+  "bookPages": 165,
+  "originalTracks": 180,
+  "answerGroups": 165,
+  "requiredSpeech": 10360,
+  "speechFailures": 0,
+  "wordFamilies": 1071,
+  "newLessonEntries": 87,
+  "newLessonFamilies": 86,
+  "manualReview": [
+    "German verb forms and sentence order",
+    "Source audio and transcript mapping",
+    "Model answer labels and prior answer preservation",
+    "Desktop builder and 320px layout",
+    "Plural variants and shared review identities"
+  ]
+}

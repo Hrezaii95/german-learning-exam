@@ -38,7 +38,7 @@ export function loadWordCards(): WordCardCatalog {
         const existing=families.find(c=>c.rows.some(r=>r.singular.text===addition.rows[0]?.singular.text));
         if(existing){
           existing.title=mergeMeaning(existing.title,addition.title);
-          for(const row of existing.rows){const added=addition.rows.find(r=>r.singular.text===row.singular.text);if(added)row.meaning=mergeMeaning(row.meaning,added.meaning);}
+          for(const row of existing.rows){const added=addition.rows.find(r=>r.singular.text===row.singular.text);if(added){row.meaning=mergeMeaning(row.meaning,added.meaning);for(const plural of added.plurals)if(!row.plurals.some(p=>p.text===plural.text))row.plurals.push(plural);}}
           for(const row of addition.rows)if(!existing.rows.some(r=>r.singular.text===row.singular.text))existing.rows.push(row);
           existing.lessons=[...new Set([...existing.lessons,...addition.lessons])];
           existing.aliases=[...new Set([...existing.aliases,addition.path])];
@@ -46,6 +46,8 @@ export function loadWordCards(): WordCardCatalog {
           existing.sources=[...new Set([...existing.sources,...addition.sources])];
           existing.priorities=[...new Set([...existing.priorities,...addition.priorities])];
           existing.examples=[...existing.examples,...addition.examples.filter(e=>!existing.examples.some(old=>old.de===e.de))];
+          existing.pattern=[...new Set([...existing.pattern,...addition.pattern])];
+          for(const prompt of addition.prompts){const same=existing.prompts.find(p=>p.question===prompt.question);if(same)same.answers=[...new Set([...same.answers,...prompt.answers])];}
           existing.searchText+=` ${addition.searchText}`;
         }else families.push(addition);
       }

@@ -1,0 +1,1402 @@
+{
+  "number": 10,
+  "summary": "Plan a journey, understand announcements and put separable verbs in the right places. Practise arrival, departure, calls and pickups.",
+  "words": [
+    {
+      "de": "der Flughafen",
+      "en": "airport",
+      "plural": "die Flughäfen",
+      "category": "Travel",
+      "example": "Ich bin am Flughafen.",
+      "translation": "I am at the airport.",
+      "id": "l10-flughafen"
+    },
+    {
+      "de": "chatten",
+      "en": "to chat online",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich chatte mit Sara.",
+      "translation": "I am chatting with Sara.",
+      "id": "l10-chatten"
+    },
+    {
+      "de": "der Kollege",
+      "en": "male colleague",
+      "plural": "die Kollegen",
+      "category": "People",
+      "example": "Mein Kollege kommt morgen.",
+      "translation": "My colleague is coming tomorrow.",
+      "id": "l10-kollege"
+    },
+    {
+      "de": "die Kollegin",
+      "en": "female colleague",
+      "plural": "die Kolleginnen",
+      "category": "People",
+      "example": "Meine Kollegin ist in Berlin.",
+      "translation": "My colleague is in Berlin.",
+      "id": "l10-kollegin"
+    },
+    {
+      "de": "der Flug",
+      "en": "flight",
+      "plural": "die Flüge",
+      "category": "Travel",
+      "example": "Mein Flug hat Verspätung.",
+      "translation": "My flight is delayed.",
+      "id": "l10-flug"
+    },
+    {
+      "de": "der Abendflug",
+      "en": "evening flight",
+      "plural": "die Abendflüge",
+      "category": "Travel",
+      "example": "Ich nehme den Abendflug.",
+      "translation": "I am taking the evening flight.",
+      "id": "l10-abendflug"
+    },
+    {
+      "de": "die Reise",
+      "en": "journey / trip",
+      "plural": "die Reisen",
+      "category": "Travel",
+      "example": "Die Reise ist schön.",
+      "translation": "The journey is lovely.",
+      "id": "l10-reise"
+    },
+    {
+      "de": "kurz",
+      "en": "shortly / short",
+      "plural": "",
+      "category": "Time",
+      "example": "Ich komme kurz nach sechs an.",
+      "translation": "I arrive shortly after six.",
+      "id": "l10-kurz"
+    },
+    {
+      "de": "abfliegen",
+      "en": "to depart by plane",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Wann fliegst du ab?",
+      "translation": "When do you depart?",
+      "id": "l10-abfliegen"
+    },
+    {
+      "de": "starten",
+      "en": "to take off / start",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Die Maschine startet um elf Uhr.",
+      "translation": "The plane takes off at eleven.",
+      "id": "l10-starten"
+    },
+    {
+      "de": "ankommen",
+      "en": "to arrive",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich komme um acht Uhr an.",
+      "translation": "I arrive at eight.",
+      "id": "l10-ankommen"
+    },
+    {
+      "de": "dort",
+      "en": "there",
+      "plural": "",
+      "category": "Places",
+      "example": "Wann kommst du dort an?",
+      "translation": "When do you arrive there?",
+      "id": "l10-dort"
+    },
+    {
+      "de": "so",
+      "en": "around / approximately",
+      "plural": "",
+      "category": "Time",
+      "example": "Ich komme so um sechs an.",
+      "translation": "I arrive around six.",
+      "id": "l10-so"
+    },
+    {
+      "de": "anrufen",
+      "en": "to call by phone",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Rufst du mich noch mal an?",
+      "translation": "Will you call me again?",
+      "id": "l10-anrufen"
+    },
+    {
+      "de": "mich",
+      "en": "me",
+      "plural": "",
+      "category": "Grammar",
+      "example": "Kannst du mich abholen?",
+      "translation": "Can you pick me up?",
+      "id": "l10-mich"
+    },
+    {
+      "de": "noch mal",
+      "en": "again",
+      "plural": "",
+      "category": "Conversation",
+      "example": "Ich rufe dich noch mal an.",
+      "translation": "I will call you again.",
+      "id": "l10-noch-mal"
+    },
+    {
+      "de": "früh",
+      "en": "early",
+      "plural": "",
+      "category": "Time",
+      "example": "Der Flug startet früh.",
+      "translation": "The flight leaves early.",
+      "id": "l10-frueh"
+    },
+    {
+      "de": "sicher",
+      "en": "sure / certain",
+      "plural": "",
+      "category": "Adjectives",
+      "example": "Bist du sicher?",
+      "translation": "Are you sure?",
+      "id": "l10-sicher"
+    },
+    {
+      "de": "die Stimme",
+      "en": "voice",
+      "plural": "die Stimmen",
+      "category": "People",
+      "example": "Ich möchte deine Stimme hören.",
+      "translation": "I would like to hear your voice.",
+      "id": "l10-stimme"
+    },
+    {
+      "de": "versuchen",
+      "en": "to try",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich versuche es.",
+      "translation": "I will try.",
+      "id": "l10-versuchen"
+    },
+    {
+      "de": "hoffentlich",
+      "en": "hopefully",
+      "plural": "",
+      "category": "Conversation",
+      "example": "Hoffentlich haben wir keine Verspätung.",
+      "translation": "Hopefully we will not be delayed.",
+      "id": "l10-hoffentlich"
+    },
+    {
+      "de": "die Verspätung",
+      "en": "delay",
+      "plural": "die Verspätungen",
+      "category": "Travel",
+      "example": "Der Zug hat Verspätung.",
+      "translation": "The train is delayed.",
+      "id": "l10-verspaetung"
+    },
+    {
+      "de": "kaputt",
+      "en": "broken",
+      "plural": "",
+      "category": "Adjectives",
+      "example": "Mein Handy ist kaputt.",
+      "translation": "My phone is broken.",
+      "id": "l10-kaputt"
+    },
+    {
+      "de": "die Maschine",
+      "en": "plane / machine",
+      "plural": "die Maschinen",
+      "category": "Travel",
+      "example": "Die Maschine landet um halb neun.",
+      "translation": "The plane lands at half past eight.",
+      "id": "l10-maschine"
+    },
+    {
+      "de": "landen",
+      "en": "to land",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Wann landest du?",
+      "translation": "When do you land?",
+      "id": "l10-landen"
+    },
+    {
+      "de": "alles",
+      "en": "everything",
+      "plural": "",
+      "category": "Conversation",
+      "example": "Ist alles okay?",
+      "translation": "Is everything okay?",
+      "id": "l10-alles"
+    },
+    {
+      "de": "alles klar",
+      "en": "all clear / all right",
+      "plural": "",
+      "category": "Conversation",
+      "example": "Alles klar, bis gleich!",
+      "translation": "All right, see you in a moment!",
+      "id": "l10-alles-klar"
+    },
+    {
+      "de": "lieber",
+      "en": "rather / preferably",
+      "plural": "",
+      "category": "Conversation",
+      "example": "Ich rufe lieber nicht an.",
+      "translation": "I would rather not call.",
+      "id": "l10-lieber"
+    },
+    {
+      "de": "wenig",
+      "en": "little / not much",
+      "plural": "",
+      "category": "Adjectives",
+      "example": "Mein Handy hat nur noch wenig Akku.",
+      "translation": "My phone has very little battery left.",
+      "id": "l10-wenig"
+    },
+    {
+      "de": "der Akku",
+      "en": "battery",
+      "plural": "die Akkus",
+      "category": "Objects",
+      "example": "Der Akku ist leer.",
+      "translation": "The battery is empty.",
+      "id": "l10-akku"
+    },
+    {
+      "de": "verstehen",
+      "en": "to understand",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich verstehe.",
+      "translation": "I understand.",
+      "id": "l10-verstehen"
+    },
+    {
+      "de": "abholen",
+      "en": "to pick up",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich hole dich am Flughafen ab.",
+      "translation": "I will pick you up at the airport.",
+      "id": "l10-abholen"
+    },
+    {
+      "de": "was für",
+      "en": "what a / what kind of",
+      "plural": "",
+      "category": "Questions",
+      "example": "Was für eine Frage!",
+      "translation": "What a question!",
+      "id": "l10-was-fuer"
+    },
+    {
+      "de": "natürlich",
+      "en": "of course",
+      "plural": "",
+      "category": "Conversation",
+      "example": "Natürlich hole ich dich ab.",
+      "translation": "Of course I will pick you up.",
+      "id": "l10-natuerlich"
+    },
+    {
+      "de": "sich freuen",
+      "en": "to be happy / look forward",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich freue mich auf dich.",
+      "translation": "I am looking forward to seeing you.",
+      "id": "l10-sich-freuen"
+    },
+    {
+      "de": "Bis gleich!",
+      "en": "See you in a moment!",
+      "plural": "",
+      "category": "Conversation",
+      "example": "Bis gleich, Sara!",
+      "translation": "See you in a moment, Sara!",
+      "id": "l10-bis-gleich"
+    },
+    {
+      "de": "einsteigen",
+      "en": "to get on / get in",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich steige in die U-Bahn ein.",
+      "translation": "I am getting on the underground train.",
+      "id": "l10-einsteigen"
+    },
+    {
+      "de": "umsteigen",
+      "en": "to change trains or buses",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Wir steigen in Hamburg um.",
+      "translation": "We change trains in Hamburg.",
+      "id": "l10-umsteigen"
+    },
+    {
+      "de": "aussteigen",
+      "en": "to get off / get out",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich steige am Hauptbahnhof aus.",
+      "translation": "I get off at the main station.",
+      "id": "l10-aussteigen"
+    },
+    {
+      "de": "der Verkehr",
+      "en": "traffic",
+      "plural": "",
+      "category": "Travel",
+      "example": "In der Stadt ist viel Verkehr.",
+      "translation": "There is a lot of traffic in the city.",
+      "id": "l10-verkehr"
+    },
+    {
+      "de": "das Verkehrsmittel",
+      "en": "means of transport",
+      "plural": "die Verkehrsmittel",
+      "category": "Travel",
+      "example": "Welche Verkehrsmittel kennst du?",
+      "translation": "Which means of transport do you know?",
+      "id": "l10-verkehrsmittel"
+    },
+    {
+      "de": "das Gepäck",
+      "en": "luggage",
+      "plural": "",
+      "category": "Travel",
+      "example": "Ich habe viel Gepäck.",
+      "translation": "I have a lot of luggage.",
+      "id": "l10-gepaeck"
+    },
+    {
+      "de": "der Bahnhof",
+      "en": "station",
+      "plural": "die Bahnhöfe",
+      "category": "Travel",
+      "example": "Wir treffen uns am Bahnhof.",
+      "translation": "We are meeting at the station.",
+      "id": "l10-bahnhof"
+    },
+    {
+      "de": "die U-Bahn",
+      "en": "underground / subway",
+      "plural": "die U-Bahnen",
+      "category": "Travel",
+      "example": "Ich nehme die U-Bahn.",
+      "translation": "I take the underground.",
+      "id": "l10-u-bahn"
+    },
+    {
+      "de": "das Taxi",
+      "en": "taxi",
+      "plural": "die Taxen",
+      "category": "Travel",
+      "example": "Ich nehme ein Taxi.",
+      "translation": "I take a taxi.",
+      "id": "l10-taxi",
+      "pluralVariants": [
+        "die Taxis"
+      ]
+    },
+    {
+      "de": "der Bus",
+      "en": "bus",
+      "plural": "die Busse",
+      "category": "Travel",
+      "example": "Der Bus fährt um acht Uhr ab.",
+      "translation": "The bus departs at eight.",
+      "id": "l10-bus"
+    },
+    {
+      "de": "der Zug",
+      "en": "train",
+      "plural": "die Züge",
+      "category": "Travel",
+      "example": "Wann kommt der Zug an?",
+      "translation": "When does the train arrive?",
+      "id": "l10-zug"
+    },
+    {
+      "de": "die Straßenbahn",
+      "en": "tram",
+      "plural": "die Straßenbahnen",
+      "category": "Travel",
+      "example": "Ich nehme die Straßenbahn.",
+      "translation": "I take the tram.",
+      "id": "l10-strassenbahn"
+    },
+    {
+      "de": "die S-Bahn",
+      "en": "suburban / urban rail",
+      "plural": "die S-Bahnen",
+      "category": "Travel",
+      "example": "Die S-Bahn fährt zum Flughafen.",
+      "translation": "The suburban train goes to the airport.",
+      "id": "l10-s-bahn"
+    },
+    {
+      "de": "das Flugzeug",
+      "en": "airplane",
+      "plural": "die Flugzeuge",
+      "category": "Travel",
+      "example": "Das Flugzeug startet um vier Uhr.",
+      "translation": "The plane takes off at four.",
+      "id": "l10-flugzeug"
+    },
+    {
+      "de": "der Koffer",
+      "en": "suitcase",
+      "plural": "die Koffer",
+      "category": "Travel",
+      "example": "Ich habe zwei Koffer.",
+      "translation": "I have two suitcases.",
+      "id": "l10-koffer"
+    },
+    {
+      "de": "der Rucksack",
+      "en": "backpack",
+      "plural": "die Rucksäcke",
+      "category": "Travel",
+      "example": "Mein Rucksack ist blau.",
+      "translation": "My backpack is blue.",
+      "id": "l10-rucksack"
+    },
+    {
+      "de": "die Tasche",
+      "en": "bag",
+      "plural": "die Taschen",
+      "category": "Travel",
+      "example": "Meine Tasche ist schwer.",
+      "translation": "My bag is heavy.",
+      "id": "l10-tasche"
+    },
+    {
+      "de": "einkaufen",
+      "en": "to shop / buy groceries",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Wir kaufen jetzt Brot ein.",
+      "translation": "We are buying bread now.",
+      "id": "l10-einkaufen"
+    },
+    {
+      "de": "abfahren",
+      "en": "to depart by train or road",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Der Zug fährt von Gleis vier ab.",
+      "translation": "The train departs from track four.",
+      "id": "l10-abfahren"
+    },
+    {
+      "de": "fernsehen",
+      "en": "to watch television",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Wann seht ihr fern?",
+      "translation": "When do you watch television?",
+      "id": "l10-fernsehen"
+    },
+    {
+      "de": "die Durchsage",
+      "en": "announcement",
+      "plural": "die Durchsagen",
+      "category": "Travel",
+      "example": "Hören Sie die Durchsage.",
+      "translation": "Listen to the announcement.",
+      "id": "l10-durchsage"
+    },
+    {
+      "de": "der Intercity",
+      "en": "intercity train",
+      "plural": "die Intercitys",
+      "category": "Travel",
+      "example": "Der Intercity fährt nach Salzburg.",
+      "translation": "The intercity train goes to Salzburg.",
+      "id": "l10-intercity"
+    },
+    {
+      "de": "der Bahnsteig",
+      "en": "platform",
+      "plural": "die Bahnsteige",
+      "category": "Travel",
+      "example": "Der Zug fährt von Bahnsteig drei ab.",
+      "translation": "The train departs from platform three.",
+      "id": "l10-bahnsteig"
+    },
+    {
+      "de": "von Bahnsteig …",
+      "en": "from platform …",
+      "plural": "",
+      "category": "Travel",
+      "example": "Der Zug fährt von Bahnsteig fünf ab.",
+      "translation": "The train departs from platform five.",
+      "id": "l10-von-bahnsteig"
+    },
+    {
+      "de": "die Abfahrt",
+      "en": "departure",
+      "plural": "die Abfahrten",
+      "category": "Travel",
+      "example": "Die Abfahrt ist um zwölf Uhr.",
+      "translation": "Departure is at twelve.",
+      "id": "l10-abfahrt"
+    },
+    {
+      "de": "die Richtung",
+      "en": "direction",
+      "plural": "die Richtungen",
+      "category": "Travel",
+      "example": "Die U-Bahn fährt Richtung Pankow.",
+      "translation": "The underground train is heading towards Pankow.",
+      "id": "l10-richtung"
+    },
+    {
+      "de": "einfahren",
+      "en": "to pull in / arrive at a station",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Der Zug fährt an Gleis zwei ein.",
+      "translation": "The train is pulling in at track two.",
+      "id": "l10-einfahren"
+    },
+    {
+      "de": "das Gleis",
+      "en": "track / numbered boarding track",
+      "plural": "die Gleise",
+      "category": "Travel",
+      "example": "Der Zug steht auf Gleis sieben.",
+      "translation": "The train is at track seven.",
+      "id": "l10-gleis"
+    },
+    {
+      "de": "an Gleis …",
+      "en": "at track …",
+      "plural": "",
+      "category": "Travel",
+      "example": "Die U-Bahn fährt an Gleis zwei ein.",
+      "translation": "The underground train is pulling in at track two.",
+      "id": "l10-an-gleis"
+    },
+    {
+      "de": "die Fahrt",
+      "en": "journey / ride",
+      "plural": "die Fahrten",
+      "category": "Travel",
+      "example": "Die Fahrt endet hier.",
+      "translation": "The journey ends here.",
+      "id": "l10-fahrt"
+    },
+    {
+      "de": "enden",
+      "en": "to end",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Die Fahrt endet an der Turmstraße.",
+      "translation": "The journey ends at Turmstraße.",
+      "id": "l10-enden"
+    },
+    {
+      "de": "beginnen",
+      "en": "to begin",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Die Fahrt beginnt hier.",
+      "translation": "The journey starts here.",
+      "id": "l10-beginnen"
+    },
+    {
+      "de": "stehen",
+      "en": "to stand / be situated",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Das Flugzeug steht am Ausgang B48.",
+      "translation": "The plane is at gate B48.",
+      "id": "l10-stehen"
+    },
+    {
+      "de": "der Ausgang",
+      "en": "exit / airport gate",
+      "plural": "die Ausgänge",
+      "category": "Travel",
+      "example": "Wo ist der Ausgang?",
+      "translation": "Where is the exit?",
+      "id": "l10-ausgang"
+    },
+    {
+      "de": "nächst-",
+      "en": "next (changes ending)",
+      "plural": "",
+      "category": "Adjectives",
+      "example": "Der nächste Halt ist Hamburg.",
+      "translation": "The next stop is Hamburg.",
+      "id": "l10-naechst"
+    },
+    {
+      "de": "der Halt",
+      "en": "stop",
+      "plural": "die Halte",
+      "category": "Travel",
+      "example": "Der nächste Halt ist der Hauptbahnhof.",
+      "translation": "The next stop is the main station.",
+      "id": "l10-halt"
+    },
+    {
+      "de": "der Hauptbahnhof",
+      "en": "main station",
+      "plural": "die Hauptbahnhöfe",
+      "category": "Travel",
+      "example": "Ich steige am Hauptbahnhof aus.",
+      "translation": "I get off at the main station.",
+      "id": "l10-hauptbahnhof"
+    },
+    {
+      "de": "die Vorsicht",
+      "en": "caution",
+      "plural": "",
+      "category": "Conversation",
+      "example": "Bitte Vorsicht!",
+      "translation": "Please be careful!",
+      "id": "l10-vorsicht"
+    },
+    {
+      "de": "Achtung!",
+      "en": "Attention! / Watch out!",
+      "plural": "",
+      "category": "Conversation",
+      "example": "Achtung, der Zug fährt ein!",
+      "translation": "Attention, the train is pulling in!",
+      "id": "l10-achtung"
+    },
+    {
+      "de": "dich",
+      "en": "you (informal singular object)",
+      "plural": "",
+      "category": "Grammar",
+      "example": "Ich rufe dich morgen an.",
+      "translation": "I will call you tomorrow.",
+      "id": "l10-dich"
+    },
+    {
+      "de": "kurz vor",
+      "en": "shortly before",
+      "plural": "",
+      "category": "Time",
+      "example": "Ich komme kurz vor sieben an.",
+      "translation": "I arrive shortly before seven.",
+      "id": "l10-kurz-vor"
+    },
+    {
+      "de": "kurz nach",
+      "en": "shortly after",
+      "plural": "",
+      "category": "Time",
+      "example": "Ich komme kurz nach sechs an.",
+      "translation": "I arrive shortly after six.",
+      "id": "l10-kurz-nach"
+    },
+    {
+      "de": "fliegen",
+      "en": "to fly",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Wir fliegen nach Mallorca.",
+      "translation": "We are flying to Mallorca.",
+      "id": "l10-fliegen"
+    },
+    {
+      "de": "fahren",
+      "en": "to go by vehicle",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich fahre nach Berlin.",
+      "translation": "I am travelling to Berlin.",
+      "id": "l10-fahren"
+    },
+    {
+      "de": "der Fahrgast",
+      "en": "passenger",
+      "plural": "die Fahrgäste",
+      "category": "Travel",
+      "example": "Die Fahrgäste steigen aus.",
+      "translation": "The passengers are getting off.",
+      "id": "l10-fahrgast"
+    },
+    {
+      "de": "informieren",
+      "en": "to inform",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Informierst du die Kollegen?",
+      "translation": "Will you inform our colleagues?",
+      "id": "l10-informieren"
+    },
+    {
+      "de": "bestellen",
+      "en": "to order",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich bestelle einen Kaffee.",
+      "translation": "I am ordering a coffee.",
+      "id": "l10-bestellen"
+    },
+    {
+      "de": "besuchen",
+      "en": "to visit",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich besuche meine Freundin.",
+      "translation": "I am visiting my friend.",
+      "id": "l10-besuchen"
+    },
+    {
+      "de": "gerade",
+      "en": "right now",
+      "plural": "",
+      "category": "Time",
+      "example": "Was machst du gerade?",
+      "translation": "What are you doing right now?",
+      "id": "l10-gerade"
+    },
+    {
+      "de": "der Busbahnhof",
+      "en": "bus station",
+      "plural": "die Busbahnhöfe",
+      "category": "Travel",
+      "example": "Du steigst am Busbahnhof um.",
+      "translation": "You change buses at the bus station.",
+      "id": "l10-busbahnhof"
+    },
+    {
+      "de": "die Flugreise",
+      "en": "journey by plane",
+      "plural": "die Flugreisen",
+      "category": "Travel",
+      "example": "Die Flugreise dauert zwei Stunden.",
+      "translation": "The flight takes two hours.",
+      "id": "l10-flugreise"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "l10-bracket",
+      "title": "A separable verb makes a sentence bracket",
+      "de": "Ich komme um acht Uhr an.",
+      "en": "In an ordinary main clause, conjugate the verb stem in position 2. Put the separable prefix at the end. Ankommen becomes komme … an. Count sentence parts: um acht Uhr can be one first-position time phrase.",
+      "examples": [
+        "Ich komme um acht Uhr an.",
+        "Um acht Uhr komme ich an.",
+        "Natürlich hole ich dich ab."
+      ],
+      "source": "KB66-67; AB67"
+    },
+    {
+      "id": "l10-questions",
+      "title": "Two question patterns, the same final prefix",
+      "de": "Wann kommst du an? / Kommst du um acht Uhr an?",
+      "en": "A W-question starts with the question word, then the conjugated stem. A yes/no question starts with the conjugated stem itself. In both, the separable prefix remains at the end.",
+      "examples": [
+        "Wann fliegst du ab?",
+        "Rufst du mich noch mal an?",
+        "Wo steigt ihr um?"
+      ],
+      "source": "KB66-67; AB67-68"
+    },
+    {
+      "id": "l10-modal",
+      "title": "With können, keep the infinitive together",
+      "de": "Kannst du mich abholen?",
+      "en": "Können supplies the conjugated verb. The other verb stays together as an infinitive at the end: abholen, not holen … ab. Compare Du holst mich ab with Du kannst mich abholen.",
+      "examples": [
+        "Du holst mich ab.",
+        "Du kannst mich abholen.",
+        "Kannst du mich anrufen?"
+      ],
+      "source": "KB66-67; AB67-68"
+    },
+    {
+      "id": "l10-prefixes",
+      "title": "One stem, several journeys",
+      "de": "einsteigen → umsteigen → aussteigen",
+      "en": "Einsteigen means get on or in. Umsteigen means change trains or buses. Aussteigen means get off or out. Abfahren is departing; einfahren is pulling into a station; ankommen is arriving. Abfliegen specifically means departing by plane.",
+      "examples": [
+        "Ich steige in die U-Bahn ein.",
+        "Wir steigen in Hamburg um.",
+        "Ich steige am Hauptbahnhof aus."
+      ],
+      "source": "KB67-68; AB68"
+    },
+    {
+      "id": "l10-stress",
+      "title": "Stress the separable prefix",
+      "de": "ABfliegen · ANkommen · ABholen · ANrufen",
+      "en": "The stressed prefix helps you hear a separable verb as a whole word. When you use it in a sentence, remember that the final prefix still belongs to the earlier verb. Listen to the workbook pronunciation recording for the four source pairs.",
+      "examples": [
+        "fliegen – abfliegen",
+        "kommen – ankommen",
+        "holen – abholen",
+        "rufen – anrufen"
+      ],
+      "source": "AB67 Exercise7"
+    },
+    {
+      "id": "l10-irregular",
+      "title": "A separated prefix does not remove a vowel change",
+      "de": "du fährst ab · er sieht fern",
+      "en": "Abfahren and einfahren use the present-tense forms of fahren: du fährst, er fährt. Fernsehen follows sehen: du siehst, er sieht. Wir and Sie use fahren / sehen before the final prefix.",
+      "examples": [
+        "Wann fährt der Zug ab?",
+        "Siehst du heute fern?",
+        "Ihr seht am Abend fern."
+      ],
+      "source": "KB67 partner pages167/195; AB68"
+    },
+    {
+      "id": "l10-announcements",
+      "title": "Listen for destination, time and boarding place",
+      "de": "nach Salzburg · von Bahnsteig drei · an Gleis zwei",
+      "en": "Nach names the destination city. Bahnsteig is the platform where passengers wait; Gleis is the track, often the number used for boarding. Learn the exact source chunks: von Bahnsteig 3, von Gleis 4, auf Gleis 7, an Gleis 2. An airport Ausgang may mean the boarding gate in an announcement.",
+      "examples": [
+        "Der Zug fährt von Bahnsteig drei ab.",
+        "Die U-Bahn fährt an Gleis zwei ein.",
+        "Das Flugzeug steht am Ausgang B48."
+      ],
+      "source": "KB68; AB69"
+    },
+    {
+      "id": "l10-reactions",
+      "title": "Keep travel messages short and clear",
+      "de": "Hoffentlich … / Verstehe. / Alles klar! / Bis gleich!",
+      "en": "Hoffentlich expresses a hope. Verstehe acknowledges that you understand. Alles klar confirms that things are clear. Bis gleich says you expect to see the other person very soon. Mich and dich name the person receiving the action: Holst du mich ab? Ich hole dich ab.",
+      "examples": [
+        "Hoffentlich haben wir keine Verspätung.",
+        "Mein Handy hat nur noch wenig Akku.",
+        "Verstehe. Bis gleich!"
+      ],
+      "source": "KB66; AB69"
+    }
+  ],
+  "verbs": [
+    {
+      "verb": "ankommen",
+      "meaning": "to arrive",
+      "forms": [
+        "komme an",
+        "kommst an",
+        "kommt an",
+        "kommen an",
+        "kommt an",
+        "kommen an"
+      ],
+      "tip": "The prefix an goes to the end."
+    },
+    {
+      "verb": "abfliegen",
+      "meaning": "to depart by plane",
+      "forms": [
+        "fliege ab",
+        "fliegst ab",
+        "fliegt ab",
+        "fliegen ab",
+        "fliegt ab",
+        "fliegen ab"
+      ],
+      "tip": "Conjugate fliegen and place ab at the end."
+    },
+    {
+      "verb": "abholen",
+      "meaning": "to pick up",
+      "forms": [
+        "hole ab",
+        "holst ab",
+        "holt ab",
+        "holen ab",
+        "holt ab",
+        "holen ab"
+      ],
+      "tip": "Ich hole dich ab; with können: Ich kann dich abholen."
+    },
+    {
+      "verb": "anrufen",
+      "meaning": "to call by phone",
+      "forms": [
+        "rufe an",
+        "rufst an",
+        "ruft an",
+        "rufen an",
+        "ruft an",
+        "rufen an"
+      ],
+      "tip": "Rufst du mich an? The prefix is still last in a question."
+    },
+    {
+      "verb": "einsteigen",
+      "meaning": "to get on / in",
+      "forms": [
+        "steige ein",
+        "steigst ein",
+        "steigt ein",
+        "steigen ein",
+        "steigt ein",
+        "steigen ein"
+      ],
+      "tip": "Ich steige in die U-Bahn ein."
+    },
+    {
+      "verb": "umsteigen",
+      "meaning": "to change trains or buses",
+      "forms": [
+        "steige um",
+        "steigst um",
+        "steigt um",
+        "steigen um",
+        "steigt um",
+        "steigen um"
+      ],
+      "tip": "Wir steigen in Hamburg um."
+    },
+    {
+      "verb": "aussteigen",
+      "meaning": "to get off / out",
+      "forms": [
+        "steige aus",
+        "steigst aus",
+        "steigt aus",
+        "steigen aus",
+        "steigt aus",
+        "steigen aus"
+      ],
+      "tip": "Ich steige am Hauptbahnhof aus."
+    },
+    {
+      "verb": "einkaufen",
+      "meaning": "to shop / buy groceries",
+      "forms": [
+        "kaufe ein",
+        "kaufst ein",
+        "kauft ein",
+        "kaufen ein",
+        "kauft ein",
+        "kaufen ein"
+      ],
+      "tip": "Ich kaufe Brot ein."
+    },
+    {
+      "verb": "abfahren",
+      "meaning": "to depart",
+      "forms": [
+        "fahre ab",
+        "fährst ab",
+        "fährt ab",
+        "fahren ab",
+        "fahrt ab",
+        "fahren ab"
+      ],
+      "tip": "Du and er/sie/es change a to ä: fährst, fährt."
+    },
+    {
+      "verb": "einfahren",
+      "meaning": "to pull in",
+      "forms": [
+        "fahre ein",
+        "fährst ein",
+        "fährt ein",
+        "fahren ein",
+        "fahrt ein",
+        "fahren ein"
+      ],
+      "tip": "Same vowel change as fahren. A train fährt ein."
+    },
+    {
+      "verb": "fernsehen",
+      "meaning": "to watch television",
+      "forms": [
+        "sehe fern",
+        "siehst fern",
+        "sieht fern",
+        "sehen fern",
+        "seht fern",
+        "sehen fern"
+      ],
+      "tip": "Du siehst and er/sie/es sieht change e to ie."
+    },
+    {
+      "verb": "starten",
+      "meaning": "to start / take off",
+      "forms": [
+        "starte",
+        "startest",
+        "startet",
+        "starten",
+        "startet",
+        "starten"
+      ],
+      "tip": "Extra e makes du startest and er startet easier to say."
+    },
+    {
+      "verb": "landen",
+      "meaning": "to land",
+      "forms": [
+        "lande",
+        "landest",
+        "landet",
+        "landen",
+        "landet",
+        "landen"
+      ],
+      "tip": "Extra e after d: du landest, ihr landet."
+    },
+    {
+      "verb": "versuchen",
+      "meaning": "to try",
+      "forms": [
+        "versuche",
+        "versuchst",
+        "versucht",
+        "versuchen",
+        "versucht",
+        "versuchen"
+      ],
+      "tip": "Ver- stays attached. Ich versuche es."
+    },
+    {
+      "verb": "verstehen",
+      "meaning": "to understand",
+      "forms": [
+        "verstehe",
+        "verstehst",
+        "versteht",
+        "verstehen",
+        "versteht",
+        "verstehen"
+      ],
+      "tip": "Ver- is not separated: Ich verstehe."
+    },
+    {
+      "verb": "beginnen",
+      "meaning": "to begin",
+      "forms": [
+        "beginne",
+        "beginnst",
+        "beginnt",
+        "beginnen",
+        "beginnt",
+        "beginnen"
+      ],
+      "tip": "Be- stays attached. Do not separate every verb beginning."
+    },
+    {
+      "verb": "enden",
+      "meaning": "to end",
+      "forms": [
+        "ende",
+        "endest",
+        "endet",
+        "enden",
+        "endet",
+        "enden"
+      ],
+      "tip": "Die Fahrt endet hier."
+    },
+    {
+      "verb": "stehen",
+      "meaning": "to stand / be situated",
+      "forms": [
+        "stehe",
+        "stehst",
+        "steht",
+        "stehen",
+        "steht",
+        "stehen"
+      ],
+      "tip": "The plane stands at the gate: Das Flugzeug steht am Ausgang."
+    },
+    {
+      "verb": "chatten",
+      "meaning": "to chat online",
+      "forms": [
+        "chatte",
+        "chattest",
+        "chattet",
+        "chatten",
+        "chattet",
+        "chatten"
+      ],
+      "tip": "Keep both t letters and add an e where needed."
+    },
+    {
+      "verb": "sich freuen",
+      "meaning": "to be happy / look forward",
+      "forms": [
+        "freue mich",
+        "freust dich",
+        "freut sich",
+        "freuen uns",
+        "freut euch",
+        "freuen sich"
+      ],
+      "tip": "Learn the whole source phrase: Ich freue mich auf dich."
+    },
+    {
+      "verb": "fahren",
+      "meaning": "to go by vehicle",
+      "forms": [
+        "fahre",
+        "fährst",
+        "fährt",
+        "fahren",
+        "fahrt",
+        "fahren"
+      ],
+      "tip": "Base verb for abfahren and einfahren."
+    },
+    {
+      "verb": "fliegen",
+      "meaning": "to fly",
+      "forms": [
+        "fliege",
+        "fliegst",
+        "fliegt",
+        "fliegen",
+        "fliegt",
+        "fliegen"
+      ],
+      "tip": "Present-tense forms are regular; abfliegen separates ab."
+    },
+    {
+      "verb": "informieren",
+      "meaning": "to inform",
+      "forms": [
+        "informiere",
+        "informierst",
+        "informiert",
+        "informieren",
+        "informiert",
+        "informieren"
+      ],
+      "tip": "Informierst du die Kollegen?"
+    },
+    {
+      "verb": "bestellen",
+      "meaning": "to order",
+      "forms": [
+        "bestelle",
+        "bestellst",
+        "bestellt",
+        "bestellen",
+        "bestellt",
+        "bestellen"
+      ],
+      "tip": "Be- stays attached: Ich bestelle einen Kaffee."
+    },
+    {
+      "verb": "besuchen",
+      "meaning": "to visit",
+      "forms": [
+        "besuche",
+        "besuchst",
+        "besucht",
+        "besuchen",
+        "besucht",
+        "besuchen"
+      ],
+      "tip": "Be- stays attached: Ich besuche meine Freundin."
+    }
+  ],
+  "phrases": [
+    {
+      "de": "Wann kommst du an?",
+      "en": "When do you arrive?"
+    },
+    {
+      "de": "Ich komme um acht Uhr an.",
+      "en": "I arrive at eight."
+    },
+    {
+      "de": "Wann fliegst du denn ab?",
+      "en": "So when do you depart?"
+    },
+    {
+      "de": "Ich nehme jetzt doch den Abendflug.",
+      "en": "I am taking the evening flight after all."
+    },
+    {
+      "de": "Hoffentlich haben wir keine Verspätung.",
+      "en": "Hopefully we will not be delayed."
+    },
+    {
+      "de": "So früh? Bist du sicher?",
+      "en": "So early? Are you sure?"
+    },
+    {
+      "de": "Ich versuche es.",
+      "en": "I will try."
+    },
+    {
+      "de": "Rufst du mich noch mal an?",
+      "en": "Will you call me again?"
+    },
+    {
+      "de": "Mein Handy hat nur noch wenig Akku.",
+      "en": "My phone has very little battery left."
+    },
+    {
+      "de": "Kannst du mich abholen?",
+      "en": "Can you pick me up?"
+    },
+    {
+      "de": "Natürlich hole ich dich ab.",
+      "en": "Of course I will pick you up."
+    },
+    {
+      "de": "Ich freue mich auf dich.",
+      "en": "I am looking forward to seeing you."
+    },
+    {
+      "de": "Verstehe.",
+      "en": "I understand."
+    },
+    {
+      "de": "Alles klar!",
+      "en": "All right!"
+    },
+    {
+      "de": "Bis gleich!",
+      "en": "See you in a moment!"
+    },
+    {
+      "de": "Wo steigst du um?",
+      "en": "Where do you change trains or buses?"
+    },
+    {
+      "de": "Wir steigen in Hamburg um.",
+      "en": "We change trains in Hamburg."
+    },
+    {
+      "de": "Wo fährt der Zug nach Stuttgart ab?",
+      "en": "Where does the train to Stuttgart depart from?"
+    },
+    {
+      "de": "Von Gleis vier.",
+      "en": "From track four."
+    },
+    {
+      "de": "Bitte Vorsicht!",
+      "en": "Please be careful!"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "Ich ___ um acht Uhr ___.",
+      "options": [
+        "komme … an",
+        "ankomme … —",
+        "an … komme"
+      ],
+      "answer": "komme … an",
+      "why": "Conjugate komme in position 2; put an at the end."
+    },
+    {
+      "q": "A W-question about arrival",
+      "options": [
+        "Wann kommst du an?",
+        "Wann du kommst an?",
+        "Wann ankommst du?"
+      ],
+      "answer": "Wann kommst du an?",
+      "why": "Question word, conjugated stem, subject, final prefix."
+    },
+    {
+      "q": "Standard yes/no question: verb first",
+      "options": [
+        "Holst du mich ab?",
+        "Du holst mich ab?",
+        "Abholst du mich?"
+      ],
+      "answer": "Holst du mich ab?",
+      "why": "The conjugated stem starts an ordinary yes/no question."
+    },
+    {
+      "q": "Kannst du mich ___?",
+      "options": [
+        "abholen",
+        "holen ab",
+        "abholst"
+      ],
+      "answer": "abholen",
+      "why": "After können, keep the infinitive together at the end."
+    },
+    {
+      "q": "Der Zug ___ um zwölf Uhr ab.",
+      "options": [
+        "fährt",
+        "fahrt",
+        "fahre"
+      ],
+      "answer": "fährt",
+      "why": "Er/der Zug uses fährt with ä."
+    },
+    {
+      "q": "Du ___ heute fern.",
+      "options": [
+        "siehst",
+        "sehst",
+        "seht"
+      ],
+      "answer": "siehst",
+      "why": "Fernsehen follows sehen: du siehst."
+    },
+    {
+      "q": "Change trains or buses",
+      "options": [
+        "umsteigen",
+        "einsteigen",
+        "aussteigen"
+      ],
+      "answer": "umsteigen",
+      "why": "Einsteigen gets on; umsteigen changes; aussteigen gets off."
+    },
+    {
+      "q": "Ich komme kurz vor sieben an.",
+      "options": [
+        "Shortly before seven",
+        "Shortly after seven",
+        "Exactly at seven"
+      ],
+      "answer": "Shortly before seven",
+      "why": "Vor means before; nach means after."
+    },
+    {
+      "q": "Which prefix stays attached?",
+      "options": [
+        "ver- in verstehen",
+        "an- in anrufen",
+        "ab- in abholen"
+      ],
+      "answer": "ver- in verstehen",
+      "why": "Ver- in verstehen is not separated."
+    },
+    {
+      "q": "The platform where passengers wait",
+      "options": [
+        "der Bahnsteig",
+        "das Gleis",
+        "der Ausgang"
+      ],
+      "answer": "der Bahnsteig",
+      "why": "Gleis is the track; Ausgang is an exit or airport gate."
+    }
+  ]
+}

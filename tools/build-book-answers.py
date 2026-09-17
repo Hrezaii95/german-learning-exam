@@ -27,7 +27,7 @@ def add(page, exercise, text, source_page=1, model=False, source="coursebook-key
 
 doc = pymupdf.open(KEY)
 texts = [re.sub(r"[ \t]+\n", "\n", re.sub(r"(\w)-\n(\w)", r"\1\2", p.get_text())) for p in doc]
-starts = {1: (11, [1, 2, 4, 8]), 2: (15, [1, 2, 4, 6]), 3: (19, [1, 2, 5, 9]), 4: (29, [1, 3, 5, 8]), 5: (33, [1, 2, 5, 6]), 6: (37, [1, 2, 4, 9]), 7: (47, [1, 3, 8, 10]), 8: (51, [1, 2, 5, 7]), 9: (55, [1, 3, 8, 10])}
+starts = {1: (11, [1, 2, 4, 8]), 2: (15, [1, 2, 4, 6]), 3: (19, [1, 2, 5, 9]), 4: (29, [1, 3, 5, 8]), 5: (33, [1, 2, 5, 6]), 6: (37, [1, 2, 4, 9]), 7: (47, [1, 3, 8, 10]), 8: (51, [1, 2, 5, 7]), 9: (55, [1, 3, 8, 10]), 10: (65, [1, 3, 6, 10])}
 for lesson, (first, boundaries) in starts.items():
     source_page = 1 if lesson < 4 else 2 if lesson<=8 else 3
     text = texts[source_page-1].split(f"Lektion {lesson}\n", 1)[1]
@@ -45,7 +45,8 @@ for lesson, (first, boundaries) in starts.items():
     previous = 1
     for index, match in enumerate(entries):
         label = match[1]
-        model = label == "Schon fertig?"
+        extension = label == "Schon fertig?"
+        model = extension
         exercise = previous if model else int(re.match(r"\d+",label)[0])
         previous = exercise
         page = first + max(i for i, boundary in enumerate(boundaries) if exercise >= boundary)
@@ -54,9 +55,12 @@ for lesson, (first, boundaries) in starts.items():
         body = " ".join(text[match.end():entries[index+1].start() if index+1 < len(entries) else len(text)].split())
         if lesson==8:
             body=body.replace("\uf04a","(Zustimmung)").replace("\uf04b","(Vielleicht)").replace("\uf04c","(Absage)")
+        model = model or body.startswith("(mögliche Antworten)")
         if model:
             body = body.removeprefix("(mögliche Antworten) ")
-        add(f"coursebook-{page}", f"Exercise {previous} · Schon fertig?" if model else f"Exercise {label}", body, 3 if lesson==8 and label in ("4b","6a","7a") else source_page, model)
+        add(f"coursebook-{page}", f"Exercise {previous} · Schon fertig?" if extension else f"Exercise {label}", body, 3 if lesson==8 and label in ("4b","6a","7a") else source_page, model)
+        if lesson==10 and label in ('9a','9b'):
+            add('coursebook-'+('167' if label=='9a' else '195'),f'Exercise {label} · Partner answers',body,source_page,note='Publisher key for this partner table; worked item 1 is already printed in the book.')
         if lesson==7 and label=='8c':
             add('coursebook-162','Exercise 8c · Partner answers',body,source_page,note='Publisher key includes the missing information for both partner tables.')
             add('coursebook-194','Exercise 8c · Partner answers',body,source_page,note='Publisher key includes the missing information for both partner tables.')
@@ -82,6 +86,10 @@ add("workbook-18", "Review · Exercise 5", "Ich bin Student. (Beispiel)\nIch bin
 add("workbook-19", "Review · Exercise 7", "Woher kommst du?\nWie heißt du?\nWer bist du?\nWie heißen Sie?\nWer ist das?\nWie heißen Sie?\nWie heißt du?\nWoher kommen Sie?", 3, source="workbook-transcript", note="Responses in order after the example, track 1/21.")
 add("workbook-19", "Review · Exercise 9", "Nein, Astrid und Norbert sind nicht verheiratet. Sie sind geschieden.\nNein, Carla lebt nicht allein. Sie lebt zusammen mit Peter.\nNein, sie wohnen nicht in Zürich. Sie wohnen in Bern.\nNein, sie ist nicht 19 Jahre alt. Sie ist 21.\nNein, Frau Wachter ist nicht Lehrerin. Sie ist Journalistin.", 4, source="workbook-transcript", note="Responses after the example, track 1/22; transcript pages 3–4.")
 add("workbook-22", "Work & careers · Exercise 2b", "Danke, gut.\nFreut mich.\ndas ist ja interessant\nVielen Dank", 5, source="workbook-transcript", note="The four missing phrases in order, track 1/31. Wie geht’s Ihnen is already filled in.")
+
+add("workbook-66","Exercise 3","2 Verspätung · 3 Maschine · 4 Flughafen · 5 Kollegen · 6 Akku",15,source="workbook-transcript",note="Missing words in order from track 2/26. Flug is already filled in as the example.")
+add("workbook-67","Exercise 5a","1 Hallo Lea. Holst du mich am Flughafen ab? → Gern. Wann kommst du an? → Um 19 Uhr. → Oh nein, tut mir leid. Da habe ich keine Zeit.\n2 Hallo Lisa. Der Flug hat Verspätung. → Oh nein. Wann landest du? → Ich komme um 19 Uhr in Frankfurt an. Kannst du mich abholen? → Natürlich hole ich dich ab. → Danke. Bis dann!",15,source="workbook-transcript",note="Dialogue order from tracks 2/27 and 2/28; compare with the lines to sort.")
+add("workbook-69","Exercise 13 · Announcement facts","30 Minuten Verspätung · Ankunft in Leipzig auf Gleis 15, nicht auf Gleis 5",15,source="workbook-transcript",note="Facts stated in track 2/30. The writing task has no supplied complete model message; compose your own message using these facts.")
 
 # End-of-lesson quick tests have a separate official key in the book appendix.
 add("coursebook-41","Reading 1","a: „Kuli“ · b: Italienisch · c: Budapest",2)
@@ -125,6 +133,6 @@ book = json.loads((GEN / "interactive-book.json").read_text(encoding="utf-8"))
 assert all(a["pageId"] in {p["id"] for p in book["pages"]} for a in answers)
 assert all(a["text"] and a["exercise"] for a in answers)
 (GEN / "book-answers.json").write_text(json.dumps(answers, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
-audit = {"answers": len(answers), "pagesWithAnswers": len({a["pageId"] for a in answers}), "bySource": {s: sum(a["source"] == s for a in answers) for s in sorted({a["source"] for a in answers})}, "sources": [{"file": p.relative_to(ROOT).as_posix(), "sha256": hashlib.sha256(p.read_bytes()).hexdigest()} for p in [KEY, AB, TRANSCRIPT, ROOT / quick["source"]]], "scope": "All entries in the supplied coursebook key for Lessons 1–9 and Magazines 1–3; coursebook quick-test answers in the appendix, p. 203; all Module 1–3 workbook skills-test answers; explicit responses in available Module 1–3 review and Lesson 7–9 and extra-practice transcripts."}
+audit = {"answers": len(answers), "pagesWithAnswers": len({a["pageId"] for a in answers}), "bySource": {s: sum(a["source"] == s for a in answers) for s in sorted({a["source"] for a in answers})}, "sources": [{"file": p.relative_to(ROOT).as_posix(), "sha256": hashlib.sha256(p.read_bytes()).hexdigest()} for p in [KEY, AB, TRANSCRIPT, ROOT / quick["source"]]], "scope": "All entries in the supplied coursebook key for Lessons 1–10 and Magazines 1–3; coursebook quick-test answers in the appendix, p. 203; all Module 1–3 workbook skills-test answers; explicit responses in available Module 1–3 review and Lesson 7–10 and extra-practice transcripts."}
 (ROOT / "research/book-answers/answer-source-audit.json").write_text(json.dumps(audit, indent=2)+"\n", encoding="utf-8")
 print(json.dumps(audit))

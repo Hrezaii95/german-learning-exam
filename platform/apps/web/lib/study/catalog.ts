@@ -18,6 +18,7 @@ import {objectModels,objectSentences,materialModels} from "./object-sheet";
 import {officeModels,officeSentence,officeMeaning,phoneSteps,type OfficeMode} from "./office-sheet";
 import {hobbyModels,hobbyPeople,abilityLevels,frequencyWords,abilitySentence,abilityMeaning,frequencySentence,frequencyMeaning} from "./hobbies-sheet";
 import {clockSaveId,clockHours,clockMinutes,clockSentence,clockMeaning,weekDays,timePlaces,planSentence,planMeaning} from "./time-sheet";
+import {travelVerbs,travelPeople,travelModes,travelSentence,travelMeaning,travelSaveId,announcementModels} from "./travel-sheet";
 import {foodModels,foodModes,foodSentence,foodMeaning,foodSaveId} from "./food-sheet";
 const generated = join(
   dirname(fileURLToPath(import.meta.url)),
@@ -104,6 +105,8 @@ export function loadDictionary(): DictionaryEntry[] {
   });
   clockHours.forEach(h=>clockMinutes.forEach(m=>(["official","everyday"] as const).filter(mode=>mode==='official'||h<12).forEach(mode=>addStudySentence(`clock-${h}-${m}-${mode}`,clockSentence(h,m,mode),clockMeaning(h,m,mode),8,"/cheat-sheets/time#clock-lab",clockSaveId(h,m,mode)))));
   weekDays.forEach((_,d)=>timePlaces.forEach((_,p)=>[false,true].forEach(front=>addStudySentence(`plan-${d}-${p}-${front}`,planSentence(d,p,front),planMeaning(d,p),8,"/cheat-sheets/time#plan-lab",`l8-plan-${d}-${p}-${front}`))));
+  travelVerbs.forEach((_,v)=>travelPeople.forEach((_,p)=>travelModes.forEach(m=>addStudySentence(`travel-${v}-${p}-${m.id}`,travelSentence(v,p,m.id),travelMeaning(v,p,m.id),10,"/cheat-sheets/travel#travel-bracket",travelSaveId(v,p,m.id)))));
+  announcementModels.forEach((a,i)=>addStudySentence(`announcement-${i}`,a.de,a.en,10,"/cheat-sheets/travel#travel-listening",`l10-announcement-${i}`));
   foodModels.forEach((_,f)=>foodModes.forEach(mode=>[false,true].forEach(n=>addStudySentence(`food-${f}-${mode.id}-${n}`,foodSentence(f,mode.id,n),foodMeaning(f,mode.id,n),9,"/cheat-sheets/food#food-lab",foodSaveId(f,mode.id,n)))));
   for(const unit of studyUnits){
     for(const verb of unit.verbs){const entry=entries.find(e=>e.de===verb.verb||e.de.startsWith(verb.verb+" "));if(entry)entry.forms=[...new Set([...entry.forms,...verb.forms])];}

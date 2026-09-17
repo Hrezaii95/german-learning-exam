@@ -59,5 +59,5 @@
     "Verify KB203 quick keys and all irregular separable forms against source.",
     "Glossary15 still contains five Lesson10 entries before Lektion11: naechst-, Halt, Hauptbahnhof, Vorsicht and Achtung."
   ],
-  "status": "Source preparation only; not implemented or published"
+  "status": "Implemented and locally validated; deployment pending"
 }

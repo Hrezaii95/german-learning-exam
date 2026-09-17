@@ -1,0 +1,28 @@
+{
+  "base": "http://localhost:3210/german-learning-exam",
+  "checks": [
+    "Ten verb builders, nine gender-coded transport words and all 86 families render",
+    "The default W-question displays its separated stem and final prefix",
+    "Selecting a sentence opens its dictionary meaning and shares the phrase review identity",
+    "Formal Sie stays capitalized in a verb-first question",
+    "Können leaves the complete infinitive at the end",
+    "The exact built sentence plays file-backed German speech",
+    "Recall controls hide the translation and final verb without leaking the complete written sentence",
+    "Irregular vowels survive both separable sentence patterns",
+    "All three journey steps load their matching sentence",
+    "Announcement 1 checks the source-based detail and resets its transcript and feedback",
+    "Announcement 2 checks the source-based detail and resets its transcript and feedback",
+    "Announcement 3 checks the source-based detail and resets its transcript and feedback",
+    "Announcement 4 checks the source-based detail and resets its transcript and feedback",
+    "Announcement 5 checks the source-based detail and resets its transcript and feedback",
+    "Announcement 6 checks the source-based detail and resets its transcript and feedback",
+    "Phrase search preserves the review identity of the travel builder sentence",
+    "Saved travel phrases persist after navigation and can be deselected",
+    "The travel sheet fits a 390px phone",
+    "The travel sheet fits a 320px phone",
+    "The taxi card displays both accepted plurals",
+    "The question builder follows the Lesson 10 travel selection",
+    "No browser exceptions"
+  ],
+  "errors": []
+}

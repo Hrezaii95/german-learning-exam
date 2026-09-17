@@ -1,0 +1,109 @@
+{
+  "2_26": {
+    "sourcePages": [
+      15
+    ],
+    "lines": [
+      {
+        "speaker": "Mann 1",
+        "text": "Hi Lars, ich komme heute erst am Nachmittag ins Büro. Ich bin leider noch in Madrid. Mein Flug hat Verspätung."
+      },
+      {
+        "speaker": "Mann 2",
+        "text": "Wann fliegst du denn ab?"
+      },
+      {
+        "speaker": "Mann 1",
+        "text": "Die Maschine startet hoffentlich um 11 Uhr. Dann bin ich um kurz nach 14 Uhr am Flughafen in Hamburg. Informierst du die Kollegen? Ich habe nur noch wenig Akku."
+      },
+      {
+        "speaker": "Mann 2",
+        "text": "Okay."
+      }
+    ]
+  },
+  "2_27": {
+    "sourcePages": [
+      15
+    ],
+    "lines": [
+      {
+        "speaker": "Mann",
+        "text": "Hallo Lea. Holst du mich am Flughafen ab?"
+      },
+      {
+        "speaker": "Lea",
+        "text": "Gern. Wann kommst du an?"
+      },
+      {
+        "speaker": "Mann",
+        "text": "Um 19 Uhr."
+      },
+      {
+        "speaker": "Lea",
+        "text": "Oh nein, tut mir leid. Da habe ich keine Zeit."
+      }
+    ]
+  },
+  "2_28": {
+    "sourcePages": [
+      15
+    ],
+    "lines": [
+      {
+        "speaker": "Mann",
+        "text": "Hallo Lisa. Der Flug hat Verspätung."
+      },
+      {
+        "speaker": "Lisa",
+        "text": "Oh nein. Wann landest du?"
+      },
+      {
+        "speaker": "Mann",
+        "text": "Ich komme um 19 Uhr in Frankfurt an. Kannst du mich abholen?"
+      },
+      {
+        "speaker": "Lisa",
+        "text": "Natürlich hole ich dich ab."
+      },
+      {
+        "speaker": "Mann",
+        "text": "Danke. Bis dann!"
+      }
+    ]
+  },
+  "2_29": {
+    "sourcePages": [
+      15
+    ],
+    "lines": [
+      {
+        "speaker": "1",
+        "text": "fliegen – abfliegen"
+      },
+      {
+        "speaker": "2",
+        "text": "kommen – ankommen"
+      },
+      {
+        "speaker": "3",
+        "text": "holen – abholen"
+      },
+      {
+        "speaker": "4",
+        "text": "rufen – anrufen"
+      }
+    ]
+  },
+  "2_30": {
+    "sourcePages": [
+      15
+    ],
+    "lines": [
+      {
+        "speaker": null,
+        "text": "Liebe Fahrgäste, wir haben im Moment leider 30 Minuten Verspätung. In Leipzig kommt der Zug nicht auf Gleis 5, sondern auf Gleis 15 an. Ich wiederhole: Im Moment haben wir 30 Minuten Verspätung. In Leipzig kommen wir nicht auf Gleis 5, sondern heute auf Gleis 15 an. In Leipzig können Sie umsteigen: ICE …"
+      }
+    ]
+  }
+}

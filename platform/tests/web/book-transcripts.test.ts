@@ -6,7 +6,7 @@ import { bookTranscript, workbookTranscript } from "../../apps/web/lib/audio/lis
 const book = JSON.parse(readFileSync(resolve("apps/web/generated/interactive-book.json"), "utf8")) as {audio: {id:string;kind:string;lesson:number;exercise:number}[];pages:{width:number}[]};
 describe("source transcript mapping", () => {
   it("covers every original track in the seven-lesson book", () => {
-    expect(book.audio).toHaveLength(169);
+    expect(book.audio).toHaveLength(180);
     for (const track of book.audio) {
       const transcript = bookTranscript(track.id)!;
       expect(transcript, track.id).toBeDefined();

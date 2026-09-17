@@ -1,0 +1,41 @@
+{
+  "milestone": "Lessons 1-9 ready for live review",
+  "commit": "442c4407eaf69710963b174f62a118f63609a345",
+  "featureCommit": "8d6c0e6da2cd37f6f5ea8829ce732e9ae399ee42",
+  "deploymentRun": 35229391116,
+  "deployment": "success",
+  "url": "https://hrezaii95.github.io/german-learning-exam/lessons/09/",
+  "cheatSheet": "https://hrezaii95.github.io/german-learning-exam/cheat-sheets/food/",
+  "liveBrowserChecks": {
+    "foodSheet": 17,
+    "bookAnswers": 581,
+    "collections": 59,
+    "bookReader": 19,
+    "dictionary": 14,
+    "questions": 42,
+    "studyScope": 18,
+    "lessonNine": 13,
+    "smallPhoneBook": 6
+  },
+  "liveBrowserTotal": 769,
+  "liveMediaByteChecks": 50,
+  "browserErrors": 0,
+  "phoneScreens": "320px and 390px inspected",
+  "localValidation": "lesson-nine-local-validation.json",
+  "evidence": [
+    "research/lesson-expansion/lesson-nine-live/food-verification.json",
+    "research/book-answers/lesson-nine-live/checks.json",
+    "research/collection-cheatsheet/lesson-nine-live/checks.json",
+    "research/book-reader-update/lesson-nine-live/verification.json",
+    "research/lesson-expansion/lesson-nine-live/dictionary-loading.json",
+    "research/question-cheatsheet/lesson-nine-live/checks.json",
+    "research/lesson-expansion/lesson-nine-live/checks.json",
+    "research/lesson-expansion/lesson-nine-live/verification.json",
+    "research/lesson-expansion/lesson-nine-live/small-phone-book.json"
+  ],
+  "remaining": [
+    "Lessons 10-12 under the full A1.1 expansion objective",
+    "Complete ordinary workbook answer key was not supplied"
+  ],
+  "nextSourcePlan": "lesson-ten-source-plan.json"
+}

@@ -11,7 +11,7 @@ const checks=[],errors=[];
 const assert=(v,m)=>{if(!v)throw Error(m);checks.push(m);};
 page.on('pageerror',e=>errors.push(e.message));
 try{
-  for(const [sheet,count] of [['people',112],['verbs',155],['numbers',104],['conversation',149]]){
+  for(const [sheet,count] of [['people',113],['verbs',178],['numbers',104],['conversation',166]]){
     await page.goto(`${base}/cheat-sheets/${sheet}/`,{waitUntil:'networkidle'});
     assert(await page.locator('[data-sheet-card]').count()===count,`${sheet}: all ${count} canonical cards render`);
     await page.getByRole('button',{name:'Expand overview',exact:true}).click();
@@ -39,9 +39,9 @@ try{
   const audio=await requestPromise;
   assert((await page.request.get(audio.url())).ok(),'Conjugated phrase audio is served successfully');
   await page.getByRole('button',{name:'Hide answers & recall',exact:true}).click();
-  assert(await page.getByRole('button',{name:'Reveal German',exact:true}).count()===155,'Recall mode conceals all German cards');
+  assert(await page.getByRole('button',{name:'Reveal German',exact:true}).count()===178,'Recall mode conceals all German cards');
   await page.getByRole('button',{name:'Reveal German',exact:true}).first().click();
-  assert(await page.getByRole('button',{name:'Reveal German',exact:true}).count()===154,'Recall reveals one card at a time');
+  assert(await page.getByRole('button',{name:'Reveal German',exact:true}).count()===177,'Recall reveals one card at a time');
   await page.locator('#sheet-practice').getByRole('button',{name:'sprichst',exact:true}).click();
   assert((await page.locator('#sheet-practice [role=status]').innerText()).includes('Exactly.'),'Quiz gives correct feedback');
   await page.goto(`${base}/cheat-sheets/people/`,{waitUntil:'networkidle'});
@@ -70,7 +70,7 @@ try{
   }
   await page.setViewportSize({width:390,height:844});
   await page.locator('.sheet-mobile-switcher summary').click();
-  assert(await page.getByRole('navigation',{name:'Choose a cheat sheet on phone'}).getByRole('link').count()===12,'Phone selector exposes all twelve sheets');
+  assert(await page.getByRole('navigation',{name:'Choose a cheat sheet on phone'}).getByRole('link').count()===13,'Phone selector exposes all thirteen sheets');
   await page.getByRole('navigation',{name:'Choose a cheat sheet on phone'}).getByRole('link',{name:/Conversation/}).click();
   await page.waitForURL('**/cheat-sheets/conversation/');
   assert(await page.getByRole('heading',{name:'Keep the conversation moving.'}).isVisible(),'Phone sheet navigation reaches conversation');
