@@ -40,6 +40,12 @@ def main():
                 else:
                     lines[-1]['text'] += ' ' + text
 
+    # The transcript PDF names the song but omits its lyrics. Show the book's
+    # lyric reference (printed p. 44), completing blanks from the official key.
+    # It is labelled as book text, not a verbatim recording transcript.
+    song=["Hubertus Grille braucht eine Brille.","Marina Hartner sucht einen Partner.","Benjamin Rüssel hat keinen Schlüssel.","Janina Rift hat einen Stift.","Alina Hampe braucht eine Lampe.","Liane Rühle hat keine Stühle.","Johannes Frisch hat keinen Tisch.","Elena Blücher kauft keine Bücher.","Hans-Peter Reife hat keine Seife.","Mario Klinge hat keine Ringe.","Florian Masche braucht eine Tasche.","Larissa Nuh hat keine Uhr.","Wir suchen hier. Wir suchen da. Wir finden alles. Das ist ja klar.","Wir lernen sehr schnell. Es ist ja nicht schwer. Wir brauchen keine Hilfe. Nein, nein, nein – danke sehr!"]
+    kb['1/59']={'lines':[{'speaker':None,'text':line} for line in song],'sourcePages':[44],'sourceTitle':'Kursbuch · song text + official answer key (book order)'}
+
     # This existing projection was checked visually against source pp. 1–2.
     old = json.loads((GEN / 'audio/workbook-transcripts-lessons-01-02.json').read_text(encoding='utf8'))
     ab = {t['trackId']: {'lines': t['lines'], 'sourcePages': [t['sourcePage']]} for t in old['tracks']}
@@ -47,6 +53,7 @@ def main():
     ab.update(manual)
     ab.update(json.loads((ROOT / "research/lesson-expansion/ab-lesson5-6-transcripts.json").read_text(encoding="utf8")))
     ab.update(json.loads((ROOT / 'research/book-answers/module1-workbook-transcripts.json').read_text(encoding='utf8')))
+    ab.update(json.loads((ROOT / 'research/lesson-expansion/module2-workbook-transcripts.json').read_text(encoding='utf8')))
     tracks, legacy = {}, {}
     for audio in catalog['audio']:
         number = int(re.match(r'1_(\d+)', Path(audio['source']).name)[1])
@@ -54,9 +61,9 @@ def main():
         source_id = f'1/{source_number:02}' if audio['kind'] == 'coursebook' else f'1_{source_number:02}'
         transcript = (kb if audio['kind'] == 'coursebook' else ab)[source_id]
         assert transcript['lines'], audio['id']
-        item = {**transcript, 'sourceTrack': source_id, 'credit': 'Momente A1.1 · © Hueber Verlag', 'sourceTitle': 'Kursbuch Transkriptionen' if audio['kind'] == 'coursebook' else 'Arbeitsbuch Transkriptionen'}
+        item = {**transcript, 'sourceTrack': source_id, 'credit': 'Momente A1.1 · © Hueber Verlag', 'sourceTitle': transcript.get('sourceTitle','Kursbuch Transkriptionen' if audio['kind'] == 'coursebook' else 'Arbeitsbuch Transkriptionen')}
         tracks[audio['id']] = item
-        if audio['kind'] == 'workbook' and '-m1-' not in audio['id']:
+        if audio['kind'] == 'workbook' and '-m' not in audio['id']:
             legacy[f'1_{number:02}'] = item
     output = {'tracks': tracks, 'workbook': legacy}
     (GEN / 'audio/listening-transcripts.json').write_text(json.dumps(output, ensure_ascii=False, indent=2)+'\n', encoding='utf8')

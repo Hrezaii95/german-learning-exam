@@ -1,0 +1,22 @@
+{
+  "base": "http://localhost:3210/german-learning-exam",
+  "chunk": "8697.38613ccf142357aa.js",
+  "checks": [
+    "A failed dictionary request shows an actionable error",
+    "Loading failure does not claim that a known word is missing",
+    "Retry loads the dictionary and the masculine card colour",
+    "Lesson 6 irregular plural resolves to its vocabulary card",
+    "Selecting an entire builder sentence opens its exact meaning",
+    "New sentence can be selected for later review",
+    "Dictionary and sentence builder share the same saved item",
+    "Loaded dictionary remains usable without a network connection",
+    "Client navigation reuses the loaded dictionary",
+    "Questions follow the Lesson 6 selection",
+    "A question shared across lessons stays saved after reload",
+    "Saved question retains all its lesson memberships",
+    "Dictionary and sheet fit a phone screen",
+    "No uncaught browser errors"
+  ],
+  "attempts": 3,
+  "errors": []
+}

@@ -2,6 +2,7 @@
 import asyncio
 import hashlib
 import json
+import uuid
 from pathlib import Path
 import edge_tts
 
@@ -32,8 +33,22 @@ async def main():
     pending = [text for text in texts if text not in mapping]
     count = 0
 
-    def persist():
-        MAPPING.write_text(json.dumps(mapping, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    async def persist():
+        # Atomic replacement keeps concurrent readers and interrupted runs on a
+        # complete snapshot. Windows indexers can briefly lock a target file.
+        temporary=MAPPING.with_name(f"study-speech-{uuid.uuid4().hex}.tmp")
+        try:
+            for attempt in range(5):
+                try:
+                    temporary.write_text(json.dumps(mapping,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+                    temporary.replace(MAPPING)
+                    return
+                except OSError:
+                    if attempt==4:
+                        raise
+                    await asyncio.sleep(.25*(attempt+1))
+        finally:
+            temporary.unlink(missing_ok=True)
 
     async def one(text):
         nonlocal count
@@ -57,12 +72,12 @@ async def main():
                         await asyncio.sleep(2)
             count += 1
             if count % 25 == 0 or count == len(pending):
-                persist()
+                await persist()
                 print(f"Speech {count}/{len(pending)}; failed {len(failures)}", flush=True)
 
     print(f"Required {len(texts)}; existing {len(texts)-len(pending)}; generating {len(pending)}", flush=True)
     await asyncio.gather(*(one(text) for text in pending))
-    persist()
+    await persist()
     report = {"voice": "de-DE-KatjaNeural", "rate": "-5%", "label": "Synthesized German speech", "required": len(texts), "mapped": sum(t in mapping for t in texts), "failures": failures, "files": [{"path": p.relative_to(WEB / "public").as_posix(), "bytes": p.stat().st_size, "sha256": hashlib.sha256(p.read_bytes()).hexdigest()} for p in sorted(OUT.glob("*.mp3"))]}
     (ROOT / "research/lesson-04-book/speech-audit.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     if failures:

@@ -1,3 +1,4 @@
+import {loadDictionary} from "../lib/study/catalog";
 import { mkdirSync, writeFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -96,6 +97,7 @@ function main(): void {
     `Wrote optional professions: ${extraProfessions.collection.sourceRowCount} source rows, ${extraProfessions.collection.sourceFormLexemeCount} form lexemes → ${extraProfessionsOutPath}\n`,
   );
   projectWordCards();
+  writeFileSync(join(dirname(outPath),"study-dictionary.json"),JSON.stringify(loadDictionary())+"\n","utf8");
 }
 
 try {

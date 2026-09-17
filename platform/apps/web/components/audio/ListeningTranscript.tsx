@@ -11,18 +11,19 @@ export function ListeningTranscript({
 }) {
   const [open, setOpen] = useState(false);
   if (!transcript) return null;
+  const song=transcript.sourceTitle.includes("song text");
   return (
     <details
       className="listening-transcript"
       onToggle={(event) => setOpen(event.currentTarget.open)}
     >
       <summary>
-        {open ? "Hide transcript" : "Show transcript"}
+        {song?(open?"Hide song text":"Show song text"):(open ? "Hide transcript" : "Show transcript")}
         <span>Read along</span>
       </summary>
       <div className="listening-transcript-body">
         <p className="listening-transcript-hint">
-          Listen first, then read along. Tap a word or highlight a phrase for its meaning.
+          {song?"Song text from the book, completed with the official answer key. Shown in book order; the recording may repeat verses.":"Listen first, then read along. Tap a word or highlight a phrase for its meaning."}
         </p>
         <div className="listening-transcript-lines">
           {transcript.lines.map((line, index) => (

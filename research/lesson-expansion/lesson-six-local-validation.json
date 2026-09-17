@@ -1,0 +1,30 @@
+{
+  "milestone": "Lessons 1-6",
+  "status": "local validation passed; deployment pending",
+  "coreTests": 865,
+  "webTests": 526,
+  "finalFocusedTests": 24,
+  "staticPages": 1044,
+  "browserChecks": {
+    "lessonSix": 15,
+    "dictionary": 14,
+    "bookAnswers": 363,
+    "bookReader": 19,
+    "studyScope": 18,
+    "questions": 42,
+    "collectionSheets": 59
+  },
+  "bookPages": 102,
+  "originalRecordings": 121,
+  "answerGroups": 100,
+  "requiredSpeechTexts": 6149,
+  "lessonSixSourceWords": 74,
+  "lessonSixWordFamilies": 73,
+  "manualReview": "Source mappings, code changes, desktop case chart, phone sentence builder and offline notice inspected",
+  "limitations": [
+    "Ordinary workbook exercise keys were not supplied. Only available official keys, explicit source transcripts and labelled sample answers are shown.",
+    "Technical audio checks do not constitute a full listening-language approval."
+  ],
+  "fullGoal": "All 12 lessons; Lessons 7-12 remain after this milestone",
+  "byteVerifiedMedia": 49
+}

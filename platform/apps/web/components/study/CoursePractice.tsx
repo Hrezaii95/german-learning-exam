@@ -11,6 +11,7 @@ import {tagsForLesson} from "@/lib/study/scope";
 export function CoursePractice(){
   const study=useStudy();const {scope,matches}=useStudyScope();
   if(!study)return null;
+  if(!study.ready)return <p role="status">Loading your practice cards…</p>;
   const entries=study.dictionary.filter(e=>e.kind==="word"&&e.studyTags&&matches(e.studyTags));
   const lessons=courseChapters.filter(c=>c.number>=3&&matches(tagsForLesson(c.number)));
   return <section className="panel course-practice"><h2>Recall your selected words</h2><p>{entries.length} word families · Your study selection sets the practice pool.</p><Recall key={JSON.stringify(scope)} entries={entries}/><div className="study-row">{lessons.map(c=><Link key={c.number} href={`/lessons/${String(c.number).padStart(2,"0")}#practice`}>Lesson {c.number} quiz →</Link>)}</div><p><Link href="/saved">Review only the cards you saved →</Link></p></section>;

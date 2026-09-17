@@ -3365,7 +3365,7 @@ a:hover {
   position: fixed;
   left: var(--space-4);
   right: var(--space-4);
-  bottom: calc(var(--bottom-nav-height) + var(--space-4));
+  bottom: calc(var(--bottom-nav-height) + var(--space-4) + 4rem);
   z-index: 60;
   display: grid;
   gap: var(--space-3);

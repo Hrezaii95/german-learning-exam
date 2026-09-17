@@ -34,7 +34,8 @@ export function wordStudyTags(card:WordCard):StudyTags{
   for(const unit of studyUnits){const word=unit.words?.find(w=>w.id===card.id||card.aliases.includes(`/vocabulary/${w.id}`));if(!word)continue;
     if(word.category==="Objects"||word.category==="Shopping")concepts.add("objects");
     if(["Materials","Colours"].includes(word.category))concepts.add("colours-materials");
-    if(word.category==="Forms")concepts.add("office");
+    if(["Forms","Office"].includes(word.category))concepts.add("office");
+    if(word.category==="People")concepts.add("people");
     if(word.category==="Classroom")concepts.add("classroom");
     if(word.category==="Grammar")concepts.add("grammar");
   }

@@ -30,6 +30,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (lessonSegment === "04") return { title: "Lesson 4 · Das Bild ist so schön.", description: "Furniture, prices and opinions: learn with original audio, an interactive book and personal review." };
   if (lessonSegment === "03") return { title: "Lesson 3 · Das ist meine Schwester." };
   if (lessonSegment === "05") return {title:"Lesson 5 · Ist das ein Tisch?"};
+  if (lessonSegment === "06") return {title:"Lesson 6 · Wir haben einen Termin."};
   const lesson = loadLearnerProjection().lessons.find(
     (item) => item.routeSegment === lessonSegment,
   );

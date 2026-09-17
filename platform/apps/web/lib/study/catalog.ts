@@ -14,6 +14,8 @@ import {grammarPatterns,conversationFrames,verbModels,spokenVerb} from "./sheet-
 import {questionWords,questionBuilders,questionReplyCases} from "./questions";
 import {studyUnits} from "./course-lessons";
 import {tagsForLesson} from "./scope";
+import {objectModels,objectSentences,materialModels} from "./object-sheet";
+import {officeModels,officeSentence,officeMeaning,phoneSteps,type OfficeMode} from "./office-sheet";
 const generated = join(
   dirname(fileURLToPath(import.meta.url)),
   "../../generated",
@@ -82,8 +84,19 @@ export function loadDictionary(): DictionaryEntry[] {
     entry.forms = [...entry.forms, ...(verb?.forms ?? [])];
   }
   const speech=loadStudySpeech();
+  const addStudySentence=(id:string,de:string,en:string,lesson:number,href:string,saveId?:string)=>entries.push({id,de,en,forms:[de],example:"",translation:"",href,audio:speech[de]??null,kind:"sentence",studyTags:tagsForLesson(lesson),...(saveId?{saveId}:{})});
+  objectModels.forEach((m,i)=>{
+    const material=materialModels.find(row=>row[0]===m.material)?.[1]??m.material;
+    const colours:Record<string,string>={braun:"brown",blau:"blue",schwarz:"black",grün:"green",grau:"grey"};
+    const meanings=[`This is a ${m.en}.`,`This is not a ${m.en}.`,`The ${m.en} is made of ${material}.`,`It is ${colours[m.colour]}.`];
+    objectSentences(i).forEach((de,n)=>addStudySentence(`objects-${i}-${n}`,de,meanings[n]!,5,"/cheat-sheets/objects#object-lab",n<2?`l5-description-${i}-${n===1}`:undefined));
+  });
+  officeModels.forEach((_,i)=>{
+    for(const mode of ["identify","have","need","find"] as OfficeMode[])for(const negative of [false,true])for(const plural of [false,true])addStudySentence(`office-${i}-${mode}-${negative}-${plural}`,officeSentence(i,mode,negative,plural),officeMeaning(i,mode,negative,plural),6,"/cheat-sheets/office#office-lab",`l6-office-${i}-${mode}-${negative}-${plural}`);
+  });
+  phoneSteps.forEach((p,i)=>addStudySentence(`office-phone-${i}`,p.de,p.en,6,"/cheat-sheets/office#phone-lab",`l6-phone-${i}`));
   for(const unit of studyUnits){
-    for(const verb of unit.verbs){const entry=entries.find(e=>e.de===verb.verb);if(entry)entry.forms=[...new Set([...entry.forms,...verb.forms])];}
+    for(const verb of unit.verbs){const entry=entries.find(e=>e.de===verb.verb||e.de.startsWith(verb.verb+" "));if(entry)entry.forms=[...new Set([...entry.forms,...verb.forms])];}
     for(const [index,phrase] of unit.phrases.entries())entries.push({id:`unit-${unit.number}-phrase-${index}`,saveId:`l${unit.number}-phrase-${index}`,de:phrase.de,en:phrase.en,forms:[phrase.de],example:"",translation:"",href:`/lessons/${String(unit.number).padStart(2,"0")}#phrases`,audio:speech[phrase.de]??null,kind:"phrase",studyTags:{...tagsForLesson(unit.number),concepts:["conversation"]}});
   }
   const instructions: [string, string, string[]][] = [

@@ -1,0 +1,460 @@
+{
+  "1_48": {
+    "sourcePages": [
+      7
+    ],
+    "lines": [
+      {
+        "speaker": "Mann",
+        "text": "Was kann ich für Sie tun?"
+      },
+      {
+        "speaker": "Frau",
+        "text": "Ich suche einen Sessel."
+      },
+      {
+        "speaker": "Mann",
+        "text": "Schauen Sie doch mal. Der Sessel ist doch schön."
+      },
+      {
+        "speaker": "Frau",
+        "text": "Ja, das finde ich auch. Er ist wirklich schön. Wie viel kostet er denn?"
+      },
+      {
+        "speaker": "Mann",
+        "text": "Sie haben Glück. Er kostet nur 40 Euro. Das ist ein Sonderangebot."
+      },
+      {
+        "speaker": "Frau",
+        "text": "Oh, das ist aber günstig."
+      }
+    ]
+  },
+  "1_49": {
+    "sourcePages": [
+      7
+    ],
+    "lines": [
+      {
+        "speaker": "Mann",
+        "text": "Hören Sie und sprechen Sie nach. Beispiel:"
+      },
+      {
+        "speaker": "Frau",
+        "text": "Firma Brenner. Guten Tag. Hier ist Christian Schmidt."
+      },
+      {
+        "speaker": "Mann",
+        "text": "Firma Brenner. Guten Tag. Hier ist Christian Schmidt."
+      },
+      {
+        "speaker": "Mann",
+        "text": "Und jetzt Sie:"
+      },
+      {
+        "speaker": "Frau",
+        "text": "Guten Tag. Hier ist Marlene Neumann."
+      },
+      {
+        "speaker": "Frau",
+        "text": "Hallo, hier ist Marlene."
+      },
+      {
+        "speaker": "Frau",
+        "text": "Auf Wiedersehen."
+      },
+      {
+        "speaker": "Frau",
+        "text": "Auf Wiederhören."
+      },
+      {
+        "speaker": "Frau",
+        "text": "Tschüs."
+      }
+    ]
+  },
+  "1_50": {
+    "sourcePages": [
+      8
+    ],
+    "lines": [
+      {
+        "speaker": "Mann",
+        "text": "Antworten Sie mit nein."
+      },
+      {
+        "speaker": "Frau",
+        "text": "Ist das ein Kugelschreiber? – Bleistift"
+      },
+      {
+        "speaker": "Mann",
+        "text": "Nein, das ist kein Kugelschreiber. Das ist ein Bleistift."
+      },
+      {
+        "speaker": "Mann",
+        "text": "Und jetzt Sie:"
+      },
+      {
+        "speaker": "Frau",
+        "text": "Ist das ein Feuerzeug? – Streichholz"
+      },
+      {
+        "speaker": "Mann",
+        "text": "Nein, das ist kein Feuerzeug. Das ist ein Streichholz."
+      },
+      {
+        "speaker": "Frau",
+        "text": "Ist das ein Stuhl? – Sessel"
+      },
+      {
+        "speaker": "Mann",
+        "text": "Nein, das ist kein Stuhl. Das ist ein Sessel."
+      },
+      {
+        "speaker": "Frau",
+        "text": "Ist das eine Tasche? – Geldbörse"
+      },
+      {
+        "speaker": "Mann",
+        "text": "Nein, das ist keine Tasche. Das ist eine Geldbörse."
+      },
+      {
+        "speaker": "Frau",
+        "text": "Ist das ein Tisch? – Bett"
+      },
+      {
+        "speaker": "Mann",
+        "text": "Nein, das ist kein Tisch. Das ist ein Bett."
+      }
+    ]
+  },
+  "1_51": {
+    "sourcePages": [
+      8
+    ],
+    "lines": [
+      {
+        "speaker": "Mann",
+        "text": "Hören Sie die Sätze und antworten Sie. Beispiel:"
+      },
+      {
+        "speaker": "Frau",
+        "text": "Hier ist die Rechnung."
+      },
+      {
+        "speaker": "Mann",
+        "text": "Danke. Ich brauche keine Rechnung."
+      },
+      {
+        "speaker": "Frau",
+        "text": "Ach, Sie brauchen keine Rechnung."
+      },
+      {
+        "speaker": "Mann",
+        "text": "Und jetzt Sie:"
+      },
+      {
+        "speaker": "Frau",
+        "text": "Hier ist der Kalender."
+      },
+      {
+        "speaker": "Mann",
+        "text": "Ach, Sie brauchen keinen Kalender."
+      },
+      {
+        "speaker": "Frau",
+        "text": "Hier ist das Notizbuch."
+      },
+      {
+        "speaker": "Mann",
+        "text": "Ach, Sie brauchen kein Notizbuch."
+      },
+      {
+        "speaker": "Frau",
+        "text": "Hier ist der Laptop."
+      },
+      {
+        "speaker": "Mann",
+        "text": "Ach, Sie brauchen keinen Laptop."
+      },
+      {
+        "speaker": "Frau",
+        "text": "Hier ist das Formular."
+      },
+      {
+        "speaker": "Mann",
+        "text": "Ach, Sie brauchen kein Formular."
+      },
+      {
+        "speaker": "Frau",
+        "text": "Hier ist die Maus."
+      },
+      {
+        "speaker": "Mann",
+        "text": "Ach, Sie brauchen keine Maus."
+      },
+      {
+        "speaker": "Frau",
+        "text": "Hier ist das Handy."
+      },
+      {
+        "speaker": "Mann",
+        "text": "Ach, Sie brauchen kein Handy."
+      },
+      {
+        "speaker": "Frau",
+        "text": "Hier ist der Kugelschreiber."
+      },
+      {
+        "speaker": "Mann",
+        "text": "Ach, Sie brauchen keinen Kugelschreiber."
+      }
+    ]
+  },
+  "1_52": {
+    "sourcePages": [
+      8
+    ],
+    "lines": [
+      {
+        "speaker": null,
+        "text": "Möbel XXX! Ihre Möbel sehr günstig! Die Sonderangebote von heute: Tisch, aus Holz, braun: nur 56 Euro! Stuhl, aus Plastik, grün: nur 10 Euro. Regal aus Metall, schwarz, nur 23 Euro. Nur heute. Nur bei Möbel XXX in Pleinzberg."
+      }
+    ]
+  },
+  "1_53": {
+    "sourcePages": [
+      8
+    ],
+    "lines": [
+      {
+        "speaker": null,
+        "text": "Hallo Michi. Ich bin gerade im Möbelhaus. Du, hier ist ein Sessel. Ich finde ihn super schön und sehr modern. Er ist blau und nicht zu groß. Du findest Blau doch auch gut, oder? Das Problem ist: Er ist nicht günstig. Ruf mich bitte an."
+      }
+    ]
+  },
+  "1_54": {
+    "sourcePages": [
+      8
+    ],
+    "lines": [
+      {
+        "speaker": null,
+        "text": "Sandra, hier ist Ingo. Wo bist du denn? Ich bin jetzt im Büro, aber du bist nicht hier. Wir haben doch einen Termin! Also, ich habe jetzt Hunger und brauche einen Kaffee. Ich bin dann im Café Schön und arbeite mit dem Laptop. Kommst du? Bitte melde dich."
+      }
+    ]
+  },
+  "1_55": {
+    "sourcePages": [
+      9
+    ],
+    "lines": [
+      {
+        "speaker": "Frau",
+        "text": "Hallo Jan! Bei Fischer-Computer gibt es tolle Sonderangebote! Und sehr günstig! Tablets, Handys, Laptops … Wie viel Geld haben wir?"
+      },
+      {
+        "speaker": "Mann",
+        "text": "Sylvia! Wir brauchen kein Tablet, kein Handy und auch keinen Laptop. Wir brauchen nur eine Maus. Bitte kauf nur eine Maus."
+      }
+    ]
+  },
+  "1_56": {
+    "sourcePages": [
+      9
+    ],
+    "lines": [
+      {
+        "speaker": null,
+        "text": "Sonderangebote bei Computer Hansen: Maus, Computec, rot und schwarz, nur 7,99 Euro; Tablet, Hangwei, nur 149 Euro, Drucker, Conan, nur 179,99 Euro. Supergünstig! Nur bei Computer Hansen!"
+      }
+    ]
+  },
+  "1_57": {
+    "sourcePages": [
+      9
+    ],
+    "lines": [
+      {
+        "speaker": null,
+        "text": "Hallo Valentin, hier ist Rita. Du, ich komme nicht ins WLAN. Der Computer sagt: Mein Passwort ist falsch. Aber es ist doch neu. Wo bist du denn? Ich habe um 15 Uhr einen Termin und brauche meine E-Mails. Bitte komm jetzt!"
+      }
+    ]
+  },
+  "1_58": {
+    "sourcePages": [
+      9
+    ],
+    "lines": [
+      {
+        "speaker": null,
+        "text": "Hallo Markus! Hier ist Anja. Und hier ist mein Rätsel. Also: Ich sehe etwas. Was ist das? Es ist klein. Es ist aus Papier. Da ist mein Vorname, mein Familienname und mein Beruf."
+      }
+    ]
+  },
+  "1_59": {
+    "sourcePages": [
+      9
+    ],
+    "lines": [
+      {
+        "speaker": "Frau",
+        "text": "Bürohaus Hansen. Leider sind wir im Moment nicht da. Bitte sprechen Sie nach dem Ton."
+      },
+      {
+        "speaker": "Mann",
+        "text": "Guten Tag, hier ist Erwin Los von der Firma Huber. Ich möchte etwas bestellen: Wir brauchen dreiundzwanzig neue Bürostühle. Modell XXLdreizehneinundfünfzig. Fünfzehn in blau und acht in grau. Und vielleicht auch einen Tisch, vielleicht in braun. Was haben Sie denn da? Meine Telefonnummer ist 03276 …"
+      }
+    ]
+  },
+  "1_60": {
+    "sourcePages": [
+      9
+    ],
+    "lines": [
+      {
+        "speaker": null,
+        "text": "Kerner AG. Hier ist Martin Holz."
+      },
+      {
+        "speaker": null,
+        "text": "Guten Tag! Was kann ich für Sie tun?"
+      },
+      {
+        "speaker": null,
+        "text": "Einen Moment bitte. … Nein, Frau Müller ist leider nicht da."
+      },
+      {
+        "speaker": null,
+        "text": "Sehr gern. Auf Wiederhören!"
+      }
+    ]
+  },
+  "1_61": {
+    "sourcePages": [
+      9
+    ],
+    "lines": [
+      {
+        "speaker": "Peter",
+        "text": "B&K Versicherungen, Peter Flemming, guten Tag. Was kann ich für Sie tun?"
+      },
+      {
+        "speaker": "Svenja",
+        "text": "Guten Tag, mein Name ist Svenja Hofert von eco-Office. Ist Frau Krämer da?"
+      },
+      {
+        "speaker": "Peter",
+        "text": "Einen Moment bitte. Ich verbinde. ... Hören Sie? Frau Krämer spricht gerade."
+      },
+      {
+        "speaker": "Svenja",
+        "text": "Danke. Ich rufe später wieder an. Auf Wiederhören."
+      },
+      {
+        "speaker": "Peter",
+        "text": "Auf Wiederhören."
+      },
+      {
+        "speaker": "Peter",
+        "text": "B&K Versicherungen. Peter Flemming. Guten Tag."
+      },
+      {
+        "speaker": "Svenja",
+        "text": "Svenja Hofert hier."
+      },
+      {
+        "speaker": "Peter",
+        "text": "Guten Tag, Frau Hofert. Ich verbinde. … Es tut mir leid. Frau Krämer ist gerade nicht am Platz. Sie ruft Sie zurück."
+      },
+      {
+        "speaker": "Svenja",
+        "text": "Nein danke, ich rufe später wieder an. Auf Wiederhören."
+      },
+      {
+        "speaker": "Peter",
+        "text": "Auf Wiederhören."
+      },
+      {
+        "speaker": "Peter",
+        "text": "B&K Versicherungen. Peter Flemming."
+      },
+      {
+        "speaker": "Svenja",
+        "text": "Svenja Hofert nochmal. Ist Frau Krämer da?"
+      },
+      {
+        "speaker": "Peter",
+        "text": "Ja, Frau Krämer ist da. Einen Moment. Ich verbinde."
+      },
+      {
+        "speaker": "Fr. Krämer",
+        "text": "Krämer."
+      },
+      {
+        "speaker": "Svenja",
+        "text": "Guten Morgen, Frau Krämer. Svenja Hofert von eco-Office hier. Vielen Dank für die Bestellung."
+      }
+    ]
+  },
+  "1_62": {
+    "sourcePages": [
+      9,
+      10
+    ],
+    "lines": [
+      {
+        "speaker": "Fr. Krämer",
+        "text": "Krämer."
+      },
+      {
+        "speaker": "Svenja",
+        "text": "Guten Morgen, Frau Krämer. Svenja Hofert von eco-Office hier. Vielen Dank für die Bestellung. … Ist das richtig? ... Sie brauchen 2577 Bleistifte?"
+      },
+      {
+        "speaker": "Fr. Krämer",
+        "text": "Oh, nein! Wir brauchen nur 25 Bleistifte."
+      },
+      {
+        "speaker": "Svenja",
+        "text": "Okay. Und wie viele Notizbücher brauchen Sie? Hundertfünfzig?"
+      },
+      {
+        "speaker": "Fr. Krämer",
+        "text": "Nein, nein das ist auch falsch. Wir brauchen nur 15 Notizbücher."
+      },
+      {
+        "speaker": "Svenja",
+        "text": "Gut, 15 Notizbücher ... aus Holz, Farbe braun."
+      },
+      {
+        "speaker": "Fr. Krämer",
+        "text": "Braun? Nein! Wir brauchen rote Notizbücher."
+      },
+      {
+        "speaker": "Svenja",
+        "text": "Ja, kein Problem. Dann habe ich jetzt: 25 Bleistifte, 50 Kugelschreiber, 15 rote Notizbücher und 20 Mappen."
+      },
+      {
+        "speaker": "Fr. Krämer",
+        "text": "Ja, genau. Das ist richtig. Die Mappen sind schwarz, oder?"
+      },
+      {
+        "speaker": "Svenja",
+        "text": "Ja. Sie sind schwarz."
+      },
+      {
+        "speaker": "Fr. Krämer",
+        "text": "Sehr gut."
+      },
+      {
+        "speaker": "Svenja",
+        "text": "Okay. Dann ist alles klar. Auf Wiederhören, Frau Krämer."
+      },
+      {
+        "speaker": "Fr. Krämer",
+        "text": "Auf Wiederhören und noch mal vielen Dank, Frau Hofert."
+      }
+    ]
+  }
+}

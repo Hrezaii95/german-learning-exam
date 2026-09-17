@@ -11,7 +11,7 @@ export function SheetWorkshops({sheet,cards,speech}:{sheet:ExtendedSheetId;cards
   const [person,setPerson]=useState(0),[verb,setVerb]=useState("wohnen");
   const [number,setNumber]=useState("21"),[price,setPrice]=useState("24,50"),[phone,setPhone]=useState("0176");
   const [formal,setFormal]=useState(false),[topic,setTopic]=useState("name"),[relative,setRelative]=useState("die Mutter");
-  const verbModels=[...allVerbModels,...studyUnits.flatMap(u=>u.verbs).filter(v=>!allVerbModels.some(old=>old.verb===v.verb))].filter(v=>cards.some(c=>c.rows.some(r=>r.singular.text===v.verb)));
+  const verbModels=[...new Map([...allVerbModels,...studyUnits.flatMap(u=>u.verbs)].map(v=>[v.verb,v])).values()].filter(v=>cards.some(c=>c.rows.some(r=>r.singular.text===v.verb)));
   const audio=(text:string)=><LineAudio text={text} src={speech[text]} compact/>;
   const say=(text:string)=><span className="sheet-spoken"><GermanText text={text}/>{audio(text)}</span>;
   if(sheet==="people"){

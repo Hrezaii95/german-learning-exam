@@ -161,7 +161,7 @@ export function BookReader({
 }) {
   const study = useStudy();
   const {scope,setScope}=useStudyScope();
-  const selectedPages=useMemo(()=>book.pages.filter(p=>matchesStudyScope(tagsForLesson(p.lesson),scope)),[book,scope]);
+  const selectedPages=useMemo(()=>book.pages.filter(p=>matchesStudyScope({...tagsForLesson(p.lesson),lessons:p.lessons??[p.lesson]},scope)),[book,scope]);
   const chapters=courseChapters.filter(c=>matchesStudyScope(tagsForLesson(c.number),scope));
   const params = useSearchParams();
   const router = useRouter();
@@ -266,7 +266,7 @@ export function BookReader({
             kind: "line",
             href: `/book?page=${page.id}`,
             lesson: page.lesson,
-            studyTags:tagsForLesson(page.lesson),
+            studyTags:{...tagsForLesson(page.lesson),lessons:page.lessons??[page.lesson]},
             audio: speech[value.text] ?? null,
           }}
         />
@@ -275,7 +275,7 @@ export function BookReader({
   );
   return (
     <div className="book-workspace">
-      <StudyScopeNotice tags={tagsForLesson(page.lesson)}/>
+      <StudyScopeNotice tags={{...tagsForLesson(page.lesson),lessons:page.lessons??[page.lesson]}}/>
       <header className="book-header">
         <div>
           <p className="study-eyebrow">Momente A1 · Lessons 1–{LAST_AVAILABLE_LESSON}</p>

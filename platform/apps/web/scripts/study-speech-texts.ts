@@ -8,12 +8,16 @@ import {
   lessonFourPhrases,
   lessonFourVerbs,
 } from "../lib/study/lesson-four";
-import { loadBook, loadBookAnswers } from "../lib/study/catalog";
+import { loadBook, loadBookAnswers,loadDictionary } from "../lib/study/catalog";
 import {studyUnits} from "../lib/study/course-lessons";
 import {objectSheetSpeech} from "../lib/study/object-sheet";
+import {officeSheetSpeech} from "../lib/study/office-sheet";
+import {questionSpeechTexts} from "../lib/study/questions";
 const texts = [
   ...new Set([
     ...objectSheetSpeech,
+    ...officeSheetSpeech,
+    ...questionSpeechTexts(),
     ...studyUnits.flatMap(u=>[...(u.words?.flatMap(w=>[w.de,w.plural,w.example]).filter(Boolean)??[]),...u.concepts.flatMap(c=>[c.de,...c.examples]),...u.phrases.map(p=>p.de),...u.verbs.flatMap(v=>v.forms.map((f,i)=>`${["ich","du","er","wir","ihr","sie"][i]} ${f}`))]),
     ...loadBook().pages.flatMap((page) => page.lines.map((line) => line.text)),
     ...loadBookAnswers().flatMap(answer=>answer.text.split(/\n+/)),
@@ -40,6 +44,7 @@ writeFileSync(
 );
 console.log(`${texts.length} study utterances`);
 if (process.argv.includes("--manifest")) {
+  writeFileSync(new URL("../generated/study-dictionary.json",import.meta.url),JSON.stringify(loadDictionary())+"\n");
   const web = join(dirname(fileURLToPath(import.meta.url)), "..");
   const assets = ["audio", "speech"].flatMap((kind) =>
     readdirSync(join(web, "public/book", kind))

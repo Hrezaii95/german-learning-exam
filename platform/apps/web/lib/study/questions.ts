@@ -24,11 +24,17 @@ export const questionWords:QuestionWord[]=[
   {id:"wessen",word:"Wessen?",meaning:"Whose?",cue:"Ownership: attach a name label to the object.",icon:"⌑",question:"Wessen Buch ist das?",translation:"Whose book is that?",answer:"Das ist Saras Buch.",answerMeaning:"That is Sara’s book.",lesson:null,family:"person"},
 ];
 export const questionBuilders=[
+  {id:"objects",title:"Name an object",lesson:5,w:["Was","ist","das?"],formal:["Was","ist","das?"],yes:["Ist","das","ein Buch?"],yesFormal:["Ist","das","ein Buch?"],meaning:"What is that?",yesMeaning:"Is that a book?",answer:"Das ist ein Buch.",answerMeaning:"That is a book."},
+  {id:"office",title:"What you need",lesson:6,w:["Was","brauchst","du?"],formal:["Was","brauchen","Sie?"],yes:["Brauchst","du","einen Stift?"],yesFormal:["Brauchen","Sie","einen Stift?"],meaning:"What do you need?",yesMeaning:"Do you need a pen?",answer:"Ich brauche einen Stift.",answerMeaning:"I need a pen."},
   {id:"home",title:"Where you live",lesson:2,w:["Wo","wohnst","du?"],formal:["Wo","wohnen","Sie?"],yes:["Wohnst","du","in Berlin?"],yesFormal:["Wohnen","Sie","in Berlin?"],meaning:"Where do you live?",yesMeaning:"Do you live in Berlin?",answer:"Ich wohne in Berlin.",answerMeaning:"I live in Berlin."},
   {id:"origin",title:"Where you are from",lesson:1,w:["Woher","kommst","du?"],formal:["Woher","kommen","Sie?"],yes:["Kommst","du","aus dem Iran?"],yesFormal:["Kommen","Sie","aus dem Iran?"],meaning:"Where are you from?",yesMeaning:"Are you from Iran?",answer:"Ich komme aus dem Iran.",answerMeaning:"I come from Iran."},
   {id:"age",title:"How old you are",lesson:2,w:["Wie alt","bist","du?"],formal:["Wie alt","sind","Sie?"],yes:["Bist","du","26 Jahre alt?"],yesFormal:["Sind","Sie","26 Jahre alt?"],meaning:"How old are you?",yesMeaning:"Are you 26 years old?",answer:"Ich bin 26 Jahre alt.",answerMeaning:"I am 26 years old."},
   {id:"price",title:"The price",lesson:4,w:["Wie viel","kostet","der Stuhl?"],formal:["Wie viel","kostet","der Stuhl?"],yes:["Kostet","der Stuhl","59 Euro?"],yesFormal:["Kostet","der Stuhl","59 Euro?"],meaning:"How much does the chair cost?",yesMeaning:"Does the chair cost 59 euros?",answer:"Der Stuhl kostet 59 Euro.",answerMeaning:"The chair costs 59 euros."},
 ];
+export function questionWordLessons(word:QuestionWord):number[]{
+  const membership:Record<string,number[]>={wer:[1,3],was:[2,4,5,6],wie:[1,2,3,4,5],wo:[2,6],woher:[1,2,3],"wie-alt":[2,3],"wie-viel":[4,5,6],"wie-viele":[3,6],welche:[3,5,6]};
+  return membership[word.id]??(word.lesson?[word.lesson]:[1,2,3,4,5,6]);
+}
 export const questionReplyCases=[
   {question:"Kommst du aus dem Iran?",translation:"Are you from Iran?",yes:"Ja, ich komme aus dem Iran.",no:"Nein, ich komme aus Deutschland.",yesMeaning:"Yes, I come from Iran.",noMeaning:"No, I come from Germany.",cue:"An ordinary yes/no question: ja confirms it; nein rejects it."},
   {question:"Kommst du nicht aus dem Iran?",translation:"Aren’t you from Iran?",yes:"Doch, ich komme aus dem Iran.",no:"Nein, ich komme nicht aus dem Iran.",yesMeaning:"Actually yes, I come from Iran.",noMeaning:"No, I do not come from Iran.",cue:"DOCH pushes back against NOT. NEIN confirms the negative. Say the full sentence to make your meaning clear."},

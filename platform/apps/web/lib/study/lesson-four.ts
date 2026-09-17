@@ -629,4 +629,5 @@ export const courseChapters = [
     ab: 26,
   },
   {number:5,title:"Ist das ein Tisch?",topic:"Objects, colours, materials & forms",kb:33,ab:30},
+  {number:6,title:"Wir haben einen Termin.",topic:"Office, plurals, accusative & phone calls",kb:37,ab:34},
 ];

@@ -792,6 +792,76 @@
       "credit": "Momente A1.1 · © Hueber Verlag",
       "sourceTitle": "Arbeitsbuch Transkriptionen"
     },
+    "workbook-l6-ex5-51b9bd39": {
+      "sourcePages": [
+        7
+      ],
+      "lines": [
+        {
+          "speaker": null,
+          "text": "1 viele · 2 Grüße · 3 Drucker · 4 Schlüssel · 5 Bildschirm · 6 Hunger · 7 Stift · 8 fünf · 9 Stühle"
+        }
+      ],
+      "sourceTrack": "1_45",
+      "credit": "Momente A1.1 · © Hueber Verlag",
+      "sourceTitle": "Arbeitsbuch Transkriptionen"
+    },
+    "workbook-l6-ex5-eb767216": {
+      "sourcePages": [
+        7
+      ],
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Grüße · Schlüssel · Stühle · Fünf · Grün · tschüs"
+        }
+      ],
+      "sourceTrack": "1_46",
+      "credit": "Momente A1.1 · © Hueber Verlag",
+      "sourceTitle": "Arbeitsbuch Transkriptionen"
+    },
+    "workbook-l6-ex13-112eb1dc": {
+      "sourcePages": [
+        7
+      ],
+      "lines": [
+        {
+          "speaker": "Klara Stolley",
+          "text": "Firma Hansetec, hier ist Klara Stolley, guten Tag."
+        },
+        {
+          "speaker": "Florian Stöckl",
+          "text": "Guten Tag. Mein Name ist Florian Stöckl. Ist Frau Thomsen da?"
+        },
+        {
+          "speaker": "Klara Stolley",
+          "text": "Einen Moment bitte. …"
+        },
+        {
+          "speaker": "Frau Thomsen",
+          "text": "Thomsen."
+        },
+        {
+          "speaker": "Florian Stöckl",
+          "text": "Guten Tag, Florian Stöckl hier. Ich möchte eine Bestellung für die Firma Grünfeld aufgeben."
+        },
+        {
+          "speaker": "Frau Thomsen",
+          "text": "Sehr gern. Was brauchen Sie?"
+        },
+        {
+          "speaker": "Florian Stöckl",
+          "text": "Wir brauchen einen Laptop, eine Laptoptasche, eine Tastatur, einen Bildschirm, ein Tablet, zehn Computer-Mäuse, zwölf Bleistifte, fünfzehn Kugelschreiber und einen Kalender."
+        },
+        {
+          "speaker": "Frau Thomsen",
+          "text": "Vielen Dank. Wie ist Ihre Adresse?"
+        }
+      ],
+      "sourceTrack": "1_47",
+      "credit": "Momente A1.1 · © Hueber Verlag",
+      "sourceTitle": "Arbeitsbuch Transkriptionen"
+    },
     "coursebook-l1-ex1-74059a9c": {
       "lines": [
         {
@@ -2236,6 +2306,254 @@
       "credit": "Momente A1.1 · © Hueber Verlag",
       "sourceTitle": "Kursbuch Transkriptionen"
     },
+    "coursebook-l6-ex1-2b27d977": {
+      "lines": [
+        {
+          "speaker": null,
+          "text": "A"
+        },
+        {
+          "speaker": "Svenja",
+          "text": "Was? … Das Passwort ist falsch. … Hmm … Komisch! … Häh! … Ich komme nicht ins WLAN. Ist das Passwort neu? …Wo sind denn die Passwörter? Ich finde sie nicht. … Aaahh! Super!"
+        }
+      ],
+      "sourcePages": [
+        7
+      ],
+      "sourceTrack": "1/49",
+      "credit": "Momente A1.1 · © Hueber Verlag",
+      "sourceTitle": "Kursbuch Transkriptionen"
+    },
+    "coursebook-l6-ex1-9e9be0e9": {
+      "lines": [
+        {
+          "speaker": null,
+          "text": "B"
+        },
+        {
+          "speaker": "Stimme",
+          "text": "Herr Patschorke?! … Hey, Herr Patschorke!!!"
+        },
+        {
+          "speaker": "Patschorke",
+          "text": "… Hhh?!… Wer sind Sie?"
+        },
+        {
+          "speaker": "Stimme",
+          "text": "Kennen Sie mich nicht? Wir haben doch einen Termin, Herr Patschorke."
+        },
+        {
+          "speaker": "Patschorke",
+          "text": "… Einen Termin?"
+        },
+        {
+          "speaker": "Stimme",
+          "text": "Haben Sie keinen Kalender?"
+        },
+        {
+          "speaker": "Patschorke",
+          "text": "Doch. … Aber ich sehe keinen Termin."
+        },
+        {
+          "speaker": "Stimme",
+          "text": "Dann suchen Sie bitte einen Stift und notieren Sie."
+        },
+        {
+          "speaker": "Patschorke",
+          "text": "… Ich habe keinen Stift."
+        },
+        {
+          "speaker": "Stimme",
+          "text": "Das ist nicht gut, Herr Patschorke! … Sie brauchen einen Stift!"
+        },
+        {
+          "speaker": "Patschorke",
+          "text": "NEIIIN! … Ich brauche keinen Stift! … Ich … Ich … Hhh!? … Hoohhh! Fffffuh! … Ich brauche einen KAFFEE!"
+        }
+      ],
+      "sourcePages": [
+        7
+      ],
+      "sourceTrack": "1/50",
+      "credit": "Momente A1.1 · © Hueber Verlag",
+      "sourceTitle": "Kursbuch Transkriptionen"
+    },
+    "coursebook-l6-ex1-b97799a1": {
+      "lines": [
+        {
+          "speaker": null,
+          "text": "C"
+        },
+        {
+          "speaker": "Herr Hansen",
+          "text": "Oh Mann. Wo ist denn der Kalender? Frau Atkinson, haben Sie den Kalender?"
+        },
+        {
+          "speaker": "Frau Atkinson",
+          "text": "Ähm, nein, ich ..."
+        },
+        {
+          "speaker": "Herr Hansen",
+          "text": "Ach, da ist er ja! Puh. Aber wo ist jetzt schon wieder das Tablet? Haben Sie vielleicht das Tablet, Frau Atkinson?"
+        },
+        {
+          "speaker": "Herr Hansen",
+          "text": "Firma Hendriks und Partner. … Mein Name ist Mario Hansen. … Guten Tag! … Ah ja, … das macht meine Kollegin, Frau Atkinson."
+        },
+        {
+          "speaker": "Frau Atkinson",
+          "text": "… Wahh!"
+        },
+        {
+          "speaker": "Herr Hansen",
+          "text": "Einen Moment bitte!"
+        },
+        {
+          "speaker": "Frau Atkinson",
+          "text": "Moment, … Moment, … Ups! … So! … Firma Hendriks und Partner. … Hier ist Sarah Atkinson."
+        },
+        {
+          "speaker": "Herr Klein",
+          "text": "Hallo, Frau Atkinson! … Jonas Klein hier."
+        },
+        {
+          "speaker": "Frau Atkinson",
+          "text": "Guten Tag, Herr Klein. … Was kann ich für Sie tun?"
+        },
+        {
+          "speaker": "Herr Klein",
+          "text": "Ich habe die Versicherungsnummer XSZ20067-AJ-295 …"
+        },
+        {
+          "speaker": "Frau Atkinson",
+          "text": "Ja, Herr Klein. … Das machen wir. …"
+        },
+        {
+          "speaker": "Herr Klein",
+          "text": "Aah! … Vielen Dank, Frau Atkinson!"
+        },
+        {
+          "speaker": "Frau Atkinson",
+          "text": "Sehr gern, Herr Klein. … Auf Wiederhören."
+        },
+        {
+          "speaker": "Herr Klein",
+          "text": "Auf Wiederhören. …"
+        },
+        {
+          "speaker": "Frau Atkinson",
+          "text": "… Na endlich. … Hm. Lecker!"
+        }
+      ],
+      "sourcePages": [
+        7
+      ],
+      "sourceTrack": "1/51",
+      "credit": "Momente A1.1 · © Hueber Verlag",
+      "sourceTitle": "Kursbuch Transkriptionen"
+    },
+    "coursebook-l6-ex4-0c8e7334": {
+      "lines": [
+        {
+          "speaker": "Stimme",
+          "text": "Wir haben doch einen Termin, Herr Patschorke. Haben Sie keinen Kalender?"
+        },
+        {
+          "speaker": "Patschorke",
+          "text": "Doch. … Aber ich sehe keinen Termin."
+        },
+        {
+          "speaker": "Stimme",
+          "text": "Dann suchen Sie bitte einen Stift und notieren Sie."
+        },
+        {
+          "speaker": "Patschorke",
+          "text": "… Ich habe keinen Stift."
+        },
+        {
+          "speaker": "Stimme",
+          "text": "Das ist nicht gut, Herr Patschorke! … Sie brauchen einen Stift!"
+        }
+      ],
+      "sourcePages": [
+        8
+      ],
+      "sourceTrack": "1/52",
+      "credit": "Momente A1.1 · © Hueber Verlag",
+      "sourceTitle": "Kursbuch Transkriptionen"
+    },
+    "coursebook-l6-ex7-1caea30c": {
+      "lines": [
+        {
+          "speaker": "Herr Hansen",
+          "text": "Oh Mann. Wo ist denn der Kalender? Frau Atkinson, haben Sie den Kalender?"
+        },
+        {
+          "speaker": "Frau Atkinson",
+          "text": "Ähm, nein, ich ..."
+        },
+        {
+          "speaker": "Herr Hansen",
+          "text": "Ach, da ist er ja! Puh. Aber wo ist jetzt schon wieder das Tablet? Haben Sie vielleicht das Tablet, Frau Atkinson?"
+        }
+      ],
+      "sourcePages": [
+        8
+      ],
+      "sourceTrack": "1/53",
+      "credit": "Momente A1.1 · © Hueber Verlag",
+      "sourceTitle": "Kursbuch Transkriptionen"
+    },
+    "coursebook-l6-ex9-19b420fb": {
+      "lines": [
+        {
+          "speaker": "Frau Atkinson",
+          "text": "Sehr gern, Herr Klein. … Auf Wiederhören."
+        },
+        {
+          "speaker": "Herr Klein",
+          "text": "Auf Wiederhören. …"
+        },
+        {
+          "speaker": "Frau Atkinson",
+          "text": "… Na endlich. … Hm. Lecker!"
+        },
+        {
+          "speaker": "Frau Atkinson",
+          "text": "Oh nee, nicht schon wieder! Firma Hendriks und Partner, hier ist Sarah Atkinson, guten Tag."
+        },
+        {
+          "speaker": "Herr Lauber",
+          "text": "Hallo, Julian Lauber hier."
+        },
+        {
+          "speaker": "Frau Atkinson",
+          "text": "Guten Tag, Herr Lauber. Was kann ich für Sie tun?"
+        },
+        {
+          "speaker": "Herr Lauber",
+          "text": "Ist Frau Roth da?"
+        },
+        {
+          "speaker": "Frau Atkinson",
+          "text": "Einen Moment bitte. … Herr Lauber? Frau Roth ist leider nicht da."
+        },
+        {
+          "speaker": "Herr Lauber",
+          "text": "Ah, okay. Vielen Dank. Auf Wiederhören."
+        },
+        {
+          "speaker": "Frau Atkinson",
+          "text": "Sehr gern. Auf Wiederhören, Herr Lauber. Woah! Jetzt ist mein Burger kalt."
+        }
+      ],
+      "sourcePages": [
+        8
+      ],
+      "sourceTrack": "1/54",
+      "credit": "Momente A1.1 · © Hueber Verlag",
+      "sourceTitle": "Kursbuch Transkriptionen"
+    },
     "workbook-m1-track19-32d13392": {
       "sourcePages": [
         2
@@ -2772,6 +3090,509 @@
       "credit": "Momente A1.1 · © Hueber Verlag",
       "sourceTitle": "Arbeitsbuch Transkriptionen"
     },
+    "workbook-m2-track48-3b0950cf": {
+      "sourcePages": [
+        7
+      ],
+      "lines": [
+        {
+          "speaker": "Mann",
+          "text": "Was kann ich für Sie tun?"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Ich suche einen Sessel."
+        },
+        {
+          "speaker": "Mann",
+          "text": "Schauen Sie doch mal. Der Sessel ist doch schön."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Ja, das finde ich auch. Er ist wirklich schön. Wie viel kostet er denn?"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Sie haben Glück. Er kostet nur 40 Euro. Das ist ein Sonderangebot."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Oh, das ist aber günstig."
+        }
+      ],
+      "sourceTrack": "1_48",
+      "credit": "Momente A1.1 · © Hueber Verlag",
+      "sourceTitle": "Arbeitsbuch Transkriptionen"
+    },
+    "workbook-m2-track49-a95960b2": {
+      "sourcePages": [
+        7
+      ],
+      "lines": [
+        {
+          "speaker": "Mann",
+          "text": "Hören Sie und sprechen Sie nach. Beispiel:"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Firma Brenner. Guten Tag. Hier ist Christian Schmidt."
+        },
+        {
+          "speaker": "Mann",
+          "text": "Firma Brenner. Guten Tag. Hier ist Christian Schmidt."
+        },
+        {
+          "speaker": "Mann",
+          "text": "Und jetzt Sie:"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Guten Tag. Hier ist Marlene Neumann."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Hallo, hier ist Marlene."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Auf Wiedersehen."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Auf Wiederhören."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Tschüs."
+        }
+      ],
+      "sourceTrack": "1_49",
+      "credit": "Momente A1.1 · © Hueber Verlag",
+      "sourceTitle": "Arbeitsbuch Transkriptionen"
+    },
+    "workbook-m2-track50-084dd94b": {
+      "sourcePages": [
+        8
+      ],
+      "lines": [
+        {
+          "speaker": "Mann",
+          "text": "Antworten Sie mit nein."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Ist das ein Kugelschreiber? – Bleistift"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Nein, das ist kein Kugelschreiber. Das ist ein Bleistift."
+        },
+        {
+          "speaker": "Mann",
+          "text": "Und jetzt Sie:"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Ist das ein Feuerzeug? – Streichholz"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Nein, das ist kein Feuerzeug. Das ist ein Streichholz."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Ist das ein Stuhl? – Sessel"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Nein, das ist kein Stuhl. Das ist ein Sessel."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Ist das eine Tasche? – Geldbörse"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Nein, das ist keine Tasche. Das ist eine Geldbörse."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Ist das ein Tisch? – Bett"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Nein, das ist kein Tisch. Das ist ein Bett."
+        }
+      ],
+      "sourceTrack": "1_50",
+      "credit": "Momente A1.1 · © Hueber Verlag",
+      "sourceTitle": "Arbeitsbuch Transkriptionen"
+    },
+    "workbook-m2-track51-7efe07f8": {
+      "sourcePages": [
+        8
+      ],
+      "lines": [
+        {
+          "speaker": "Mann",
+          "text": "Hören Sie die Sätze und antworten Sie. Beispiel:"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Hier ist die Rechnung."
+        },
+        {
+          "speaker": "Mann",
+          "text": "Danke. Ich brauche keine Rechnung."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Ach, Sie brauchen keine Rechnung."
+        },
+        {
+          "speaker": "Mann",
+          "text": "Und jetzt Sie:"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Hier ist der Kalender."
+        },
+        {
+          "speaker": "Mann",
+          "text": "Ach, Sie brauchen keinen Kalender."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Hier ist das Notizbuch."
+        },
+        {
+          "speaker": "Mann",
+          "text": "Ach, Sie brauchen kein Notizbuch."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Hier ist der Laptop."
+        },
+        {
+          "speaker": "Mann",
+          "text": "Ach, Sie brauchen keinen Laptop."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Hier ist das Formular."
+        },
+        {
+          "speaker": "Mann",
+          "text": "Ach, Sie brauchen kein Formular."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Hier ist die Maus."
+        },
+        {
+          "speaker": "Mann",
+          "text": "Ach, Sie brauchen keine Maus."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Hier ist das Handy."
+        },
+        {
+          "speaker": "Mann",
+          "text": "Ach, Sie brauchen kein Handy."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Hier ist der Kugelschreiber."
+        },
+        {
+          "speaker": "Mann",
+          "text": "Ach, Sie brauchen keinen Kugelschreiber."
+        }
+      ],
+      "sourceTrack": "1_51",
+      "credit": "Momente A1.1 · © Hueber Verlag",
+      "sourceTitle": "Arbeitsbuch Transkriptionen"
+    },
+    "workbook-m2-track52-b5c67e3a": {
+      "sourcePages": [
+        8
+      ],
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Möbel XXX! Ihre Möbel sehr günstig! Die Sonderangebote von heute: Tisch, aus Holz, braun: nur 56 Euro! Stuhl, aus Plastik, grün: nur 10 Euro. Regal aus Metall, schwarz, nur 23 Euro. Nur heute. Nur bei Möbel XXX in Pleinzberg."
+        }
+      ],
+      "sourceTrack": "1_52",
+      "credit": "Momente A1.1 · © Hueber Verlag",
+      "sourceTitle": "Arbeitsbuch Transkriptionen"
+    },
+    "workbook-m2-track53-0f72f60d": {
+      "sourcePages": [
+        8
+      ],
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Hallo Michi. Ich bin gerade im Möbelhaus. Du, hier ist ein Sessel. Ich finde ihn super schön und sehr modern. Er ist blau und nicht zu groß. Du findest Blau doch auch gut, oder? Das Problem ist: Er ist nicht günstig. Ruf mich bitte an."
+        }
+      ],
+      "sourceTrack": "1_53",
+      "credit": "Momente A1.1 · © Hueber Verlag",
+      "sourceTitle": "Arbeitsbuch Transkriptionen"
+    },
+    "workbook-m2-track54-0a78fd05": {
+      "sourcePages": [
+        8
+      ],
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Sandra, hier ist Ingo. Wo bist du denn? Ich bin jetzt im Büro, aber du bist nicht hier. Wir haben doch einen Termin! Also, ich habe jetzt Hunger und brauche einen Kaffee. Ich bin dann im Café Schön und arbeite mit dem Laptop. Kommst du? Bitte melde dich."
+        }
+      ],
+      "sourceTrack": "1_54",
+      "credit": "Momente A1.1 · © Hueber Verlag",
+      "sourceTitle": "Arbeitsbuch Transkriptionen"
+    },
+    "workbook-m2-track55-f6829655": {
+      "sourcePages": [
+        9
+      ],
+      "lines": [
+        {
+          "speaker": "Frau",
+          "text": "Hallo Jan! Bei Fischer-Computer gibt es tolle Sonderangebote! Und sehr günstig! Tablets, Handys, Laptops … Wie viel Geld haben wir?"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Sylvia! Wir brauchen kein Tablet, kein Handy und auch keinen Laptop. Wir brauchen nur eine Maus. Bitte kauf nur eine Maus."
+        }
+      ],
+      "sourceTrack": "1_55",
+      "credit": "Momente A1.1 · © Hueber Verlag",
+      "sourceTitle": "Arbeitsbuch Transkriptionen"
+    },
+    "workbook-m2-track56-19136042": {
+      "sourcePages": [
+        9
+      ],
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Sonderangebote bei Computer Hansen: Maus, Computec, rot und schwarz, nur 7,99 Euro; Tablet, Hangwei, nur 149 Euro, Drucker, Conan, nur 179,99 Euro. Supergünstig! Nur bei Computer Hansen!"
+        }
+      ],
+      "sourceTrack": "1_56",
+      "credit": "Momente A1.1 · © Hueber Verlag",
+      "sourceTitle": "Arbeitsbuch Transkriptionen"
+    },
+    "workbook-m2-track57-991858b6": {
+      "sourcePages": [
+        9
+      ],
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Hallo Valentin, hier ist Rita. Du, ich komme nicht ins WLAN. Der Computer sagt: Mein Passwort ist falsch. Aber es ist doch neu. Wo bist du denn? Ich habe um 15 Uhr einen Termin und brauche meine E-Mails. Bitte komm jetzt!"
+        }
+      ],
+      "sourceTrack": "1_57",
+      "credit": "Momente A1.1 · © Hueber Verlag",
+      "sourceTitle": "Arbeitsbuch Transkriptionen"
+    },
+    "workbook-m2-track58-9e54650d": {
+      "sourcePages": [
+        9
+      ],
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Hallo Markus! Hier ist Anja. Und hier ist mein Rätsel. Also: Ich sehe etwas. Was ist das? Es ist klein. Es ist aus Papier. Da ist mein Vorname, mein Familienname und mein Beruf."
+        }
+      ],
+      "sourceTrack": "1_58",
+      "credit": "Momente A1.1 · © Hueber Verlag",
+      "sourceTitle": "Arbeitsbuch Transkriptionen"
+    },
+    "workbook-m2-track59-ef0056fe": {
+      "sourcePages": [
+        9
+      ],
+      "lines": [
+        {
+          "speaker": "Frau",
+          "text": "Bürohaus Hansen. Leider sind wir im Moment nicht da. Bitte sprechen Sie nach dem Ton."
+        },
+        {
+          "speaker": "Mann",
+          "text": "Guten Tag, hier ist Erwin Los von der Firma Huber. Ich möchte etwas bestellen: Wir brauchen dreiundzwanzig neue Bürostühle. Modell XXLdreizehneinundfünfzig. Fünfzehn in blau und acht in grau. Und vielleicht auch einen Tisch, vielleicht in braun. Was haben Sie denn da? Meine Telefonnummer ist 03276 …"
+        }
+      ],
+      "sourceTrack": "1_59",
+      "credit": "Momente A1.1 · © Hueber Verlag",
+      "sourceTitle": "Arbeitsbuch Transkriptionen"
+    },
+    "workbook-m2-track60-1e1baaac": {
+      "sourcePages": [
+        9
+      ],
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Kerner AG. Hier ist Martin Holz."
+        },
+        {
+          "speaker": null,
+          "text": "Guten Tag! Was kann ich für Sie tun?"
+        },
+        {
+          "speaker": null,
+          "text": "Einen Moment bitte. … Nein, Frau Müller ist leider nicht da."
+        },
+        {
+          "speaker": null,
+          "text": "Sehr gern. Auf Wiederhören!"
+        }
+      ],
+      "sourceTrack": "1_60",
+      "credit": "Momente A1.1 · © Hueber Verlag",
+      "sourceTitle": "Arbeitsbuch Transkriptionen"
+    },
+    "workbook-m2-track61-381cfc5f": {
+      "sourcePages": [
+        9
+      ],
+      "lines": [
+        {
+          "speaker": "Peter",
+          "text": "B&K Versicherungen, Peter Flemming, guten Tag. Was kann ich für Sie tun?"
+        },
+        {
+          "speaker": "Svenja",
+          "text": "Guten Tag, mein Name ist Svenja Hofert von eco-Office. Ist Frau Krämer da?"
+        },
+        {
+          "speaker": "Peter",
+          "text": "Einen Moment bitte. Ich verbinde. ... Hören Sie? Frau Krämer spricht gerade."
+        },
+        {
+          "speaker": "Svenja",
+          "text": "Danke. Ich rufe später wieder an. Auf Wiederhören."
+        },
+        {
+          "speaker": "Peter",
+          "text": "Auf Wiederhören."
+        },
+        {
+          "speaker": "Peter",
+          "text": "B&K Versicherungen. Peter Flemming. Guten Tag."
+        },
+        {
+          "speaker": "Svenja",
+          "text": "Svenja Hofert hier."
+        },
+        {
+          "speaker": "Peter",
+          "text": "Guten Tag, Frau Hofert. Ich verbinde. … Es tut mir leid. Frau Krämer ist gerade nicht am Platz. Sie ruft Sie zurück."
+        },
+        {
+          "speaker": "Svenja",
+          "text": "Nein danke, ich rufe später wieder an. Auf Wiederhören."
+        },
+        {
+          "speaker": "Peter",
+          "text": "Auf Wiederhören."
+        },
+        {
+          "speaker": "Peter",
+          "text": "B&K Versicherungen. Peter Flemming."
+        },
+        {
+          "speaker": "Svenja",
+          "text": "Svenja Hofert nochmal. Ist Frau Krämer da?"
+        },
+        {
+          "speaker": "Peter",
+          "text": "Ja, Frau Krämer ist da. Einen Moment. Ich verbinde."
+        },
+        {
+          "speaker": "Fr. Krämer",
+          "text": "Krämer."
+        },
+        {
+          "speaker": "Svenja",
+          "text": "Guten Morgen, Frau Krämer. Svenja Hofert von eco-Office hier. Vielen Dank für die Bestellung."
+        }
+      ],
+      "sourceTrack": "1_61",
+      "credit": "Momente A1.1 · © Hueber Verlag",
+      "sourceTitle": "Arbeitsbuch Transkriptionen"
+    },
+    "workbook-m2-track62-65a59b42": {
+      "sourcePages": [
+        9,
+        10
+      ],
+      "lines": [
+        {
+          "speaker": "Fr. Krämer",
+          "text": "Krämer."
+        },
+        {
+          "speaker": "Svenja",
+          "text": "Guten Morgen, Frau Krämer. Svenja Hofert von eco-Office hier. Vielen Dank für die Bestellung. … Ist das richtig? ... Sie brauchen 2577 Bleistifte?"
+        },
+        {
+          "speaker": "Fr. Krämer",
+          "text": "Oh, nein! Wir brauchen nur 25 Bleistifte."
+        },
+        {
+          "speaker": "Svenja",
+          "text": "Okay. Und wie viele Notizbücher brauchen Sie? Hundertfünfzig?"
+        },
+        {
+          "speaker": "Fr. Krämer",
+          "text": "Nein, nein das ist auch falsch. Wir brauchen nur 15 Notizbücher."
+        },
+        {
+          "speaker": "Svenja",
+          "text": "Gut, 15 Notizbücher ... aus Holz, Farbe braun."
+        },
+        {
+          "speaker": "Fr. Krämer",
+          "text": "Braun? Nein! Wir brauchen rote Notizbücher."
+        },
+        {
+          "speaker": "Svenja",
+          "text": "Ja, kein Problem. Dann habe ich jetzt: 25 Bleistifte, 50 Kugelschreiber, 15 rote Notizbücher und 20 Mappen."
+        },
+        {
+          "speaker": "Fr. Krämer",
+          "text": "Ja, genau. Das ist richtig. Die Mappen sind schwarz, oder?"
+        },
+        {
+          "speaker": "Svenja",
+          "text": "Ja. Sie sind schwarz."
+        },
+        {
+          "speaker": "Fr. Krämer",
+          "text": "Sehr gut."
+        },
+        {
+          "speaker": "Svenja",
+          "text": "Okay. Dann ist alles klar. Auf Wiederhören, Frau Krämer."
+        },
+        {
+          "speaker": "Fr. Krämer",
+          "text": "Auf Wiederhören und noch mal vielen Dank, Frau Hofert."
+        }
+      ],
+      "sourceTrack": "1_62",
+      "credit": "Momente A1.1 · © Hueber Verlag",
+      "sourceTitle": "Arbeitsbuch Transkriptionen"
+    },
     "coursebook-m1-track29-dd936006": {
       "lines": [
         {
@@ -2841,6 +3662,189 @@
       "sourceTrack": "1/33",
       "credit": "Momente A1.1 · © Hueber Verlag",
       "sourceTitle": "Kursbuch Transkriptionen"
+    },
+    "coursebook-m2-track55-d25a77d7": {
+      "lines": [
+        {
+          "speaker": null,
+          "text": "A"
+        },
+        {
+          "speaker": "Sprecherin",
+          "text": "Hallo! Eine Frage: Was braucht ihr? oder Was braucht ihr nicht?"
+        },
+        {
+          "speaker": "Marlene",
+          "text": "Was wir brauchen? Na, das ist doch"
+        },
+        {
+          "speaker": "ganz einfach",
+          "text": "Wir brauchen Freunde! Alle brauchen Freunde. … Stimmt doch, oder?"
+        },
+        {
+          "speaker": "Alle im Chor",
+          "text": "Jaaa!"
+        },
+        {
+          "speaker": "Marlene",
+          "text": "Nochmal! … Was brauchen wir alle?"
+        },
+        {
+          "speaker": "Alle",
+          "text": "Wir brauchen Freun-de! Wir brauchen Freun-de! Wir brauchen Freun-de!"
+        }
+      ],
+      "sourcePages": [
+        8
+      ],
+      "sourceTrack": "1/55",
+      "credit": "Momente A1.1 · © Hueber Verlag",
+      "sourceTitle": "Kursbuch Transkriptionen"
+    },
+    "coursebook-m2-track56-b270ff88": {
+      "lines": [
+        {
+          "speaker": null,
+          "text": "B"
+        },
+        {
+          "speaker": "Sprecherin",
+          "text": "Hallo! Eine Frage: Was brauchen Sie? oder Was brauchen Sie nicht?"
+        },
+        {
+          "speaker": "Florian",
+          "text": "Was brauche ich? … Was brauche ich nicht? … Hmmm … Aah! … Ich weiß es: Ich brauche keine Kamera! Warum nicht? … Ganz einfach: Mein Handy hat eine super Kamera. Ich brauche also keine Kamera. Ich brauche nur das Handy."
+        }
+      ],
+      "sourcePages": [
+        8
+      ],
+      "sourceTrack": "1/56",
+      "credit": "Momente A1.1 · © Hueber Verlag",
+      "sourceTitle": "Kursbuch Transkriptionen"
+    },
+    "coursebook-m2-track57-d9421718": {
+      "lines": [
+        {
+          "speaker": null,
+          "text": "C"
+        },
+        {
+          "speaker": "Sprecherin",
+          "text": "Hallo! Eine Frage: Was brauchen Sie? oder Was brauchen Sie nicht?"
+        },
+        {
+          "speaker": "Hardy",
+          "text": "Huuuuaaachhh … Start-up … Elf Stunden arbeiten, … arbeiten, … arbeiten … arbeiten … Boaahhh … Ich bin soooo müüüüde … Ich brauche ein Bett … Ein BETT! … JETZT! … SOFORT! … Huuuuaaa …"
+        }
+      ],
+      "sourcePages": [
+        8
+      ],
+      "sourceTrack": "1/57",
+      "credit": "Momente A1.1 · © Hueber Verlag",
+      "sourceTitle": "Kursbuch Transkriptionen"
+    },
+    "coursebook-m2-track58-515891c1": {
+      "lines": [
+        {
+          "speaker": null,
+          "text": "D"
+        },
+        {
+          "speaker": "Sprecherin",
+          "text": "Und was braucht ihr? oder Was braucht ihr nicht?"
+        },
+        {
+          "speaker": "Lissi",
+          "text": "Was brauche ich? … Hmm … Was brauche ich nicht? Hmm! … … Hah, genau! … Ich brauche keinen Tisch. … Hahaha!"
+        },
+        {
+          "speaker": "Frida",
+          "text": "Und ich brauche keinen Stuhl!"
+        },
+        {
+          "speaker": "Elli",
+          "text": "Ja, genau! … Wir machen ein Picknick. Wir brauchen heute … keinen Tisch …"
+        },
+        {
+          "speaker": "Frida",
+          "text": "… und keine Stühle!"
+        }
+      ],
+      "sourcePages": [
+        8,
+        9
+      ],
+      "sourceTrack": "1/58",
+      "credit": "Momente A1.1 · © Hueber Verlag",
+      "sourceTitle": "Kursbuch Transkriptionen"
+    },
+    "coursebook-m2-track59-3f069ece": {
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Hubertus Grille braucht eine Brille."
+        },
+        {
+          "speaker": null,
+          "text": "Marina Hartner sucht einen Partner."
+        },
+        {
+          "speaker": null,
+          "text": "Benjamin Rüssel hat keinen Schlüssel."
+        },
+        {
+          "speaker": null,
+          "text": "Janina Rift hat einen Stift."
+        },
+        {
+          "speaker": null,
+          "text": "Alina Hampe braucht eine Lampe."
+        },
+        {
+          "speaker": null,
+          "text": "Liane Rühle hat keine Stühle."
+        },
+        {
+          "speaker": null,
+          "text": "Johannes Frisch hat keinen Tisch."
+        },
+        {
+          "speaker": null,
+          "text": "Elena Blücher kauft keine Bücher."
+        },
+        {
+          "speaker": null,
+          "text": "Hans-Peter Reife hat keine Seife."
+        },
+        {
+          "speaker": null,
+          "text": "Mario Klinge hat keine Ringe."
+        },
+        {
+          "speaker": null,
+          "text": "Florian Masche braucht eine Tasche."
+        },
+        {
+          "speaker": null,
+          "text": "Larissa Nuh hat keine Uhr."
+        },
+        {
+          "speaker": null,
+          "text": "Wir suchen hier. Wir suchen da. Wir finden alles. Das ist ja klar."
+        },
+        {
+          "speaker": null,
+          "text": "Wir lernen sehr schnell. Es ist ja nicht schwer. Wir brauchen keine Hilfe. Nein, nein, nein – danke sehr!"
+        }
+      ],
+      "sourcePages": [
+        44
+      ],
+      "sourceTitle": "Kursbuch · song text + official answer key (book order)",
+      "sourceTrack": "1/59",
+      "credit": "Momente A1.1 · © Hueber Verlag"
     }
   },
   "workbook": {
@@ -3633,6 +4637,76 @@
         }
       ],
       "sourceTrack": "1_44",
+      "credit": "Momente A1.1 · © Hueber Verlag",
+      "sourceTitle": "Arbeitsbuch Transkriptionen"
+    },
+    "1_44": {
+      "sourcePages": [
+        7
+      ],
+      "lines": [
+        {
+          "speaker": null,
+          "text": "1 viele · 2 Grüße · 3 Drucker · 4 Schlüssel · 5 Bildschirm · 6 Hunger · 7 Stift · 8 fünf · 9 Stühle"
+        }
+      ],
+      "sourceTrack": "1_45",
+      "credit": "Momente A1.1 · © Hueber Verlag",
+      "sourceTitle": "Arbeitsbuch Transkriptionen"
+    },
+    "1_45": {
+      "sourcePages": [
+        7
+      ],
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Grüße · Schlüssel · Stühle · Fünf · Grün · tschüs"
+        }
+      ],
+      "sourceTrack": "1_46",
+      "credit": "Momente A1.1 · © Hueber Verlag",
+      "sourceTitle": "Arbeitsbuch Transkriptionen"
+    },
+    "1_46": {
+      "sourcePages": [
+        7
+      ],
+      "lines": [
+        {
+          "speaker": "Klara Stolley",
+          "text": "Firma Hansetec, hier ist Klara Stolley, guten Tag."
+        },
+        {
+          "speaker": "Florian Stöckl",
+          "text": "Guten Tag. Mein Name ist Florian Stöckl. Ist Frau Thomsen da?"
+        },
+        {
+          "speaker": "Klara Stolley",
+          "text": "Einen Moment bitte. …"
+        },
+        {
+          "speaker": "Frau Thomsen",
+          "text": "Thomsen."
+        },
+        {
+          "speaker": "Florian Stöckl",
+          "text": "Guten Tag, Florian Stöckl hier. Ich möchte eine Bestellung für die Firma Grünfeld aufgeben."
+        },
+        {
+          "speaker": "Frau Thomsen",
+          "text": "Sehr gern. Was brauchen Sie?"
+        },
+        {
+          "speaker": "Florian Stöckl",
+          "text": "Wir brauchen einen Laptop, eine Laptoptasche, eine Tastatur, einen Bildschirm, ein Tablet, zehn Computer-Mäuse, zwölf Bleistifte, fünfzehn Kugelschreiber und einen Kalender."
+        },
+        {
+          "speaker": "Frau Thomsen",
+          "text": "Vielen Dank. Wie ist Ihre Adresse?"
+        }
+      ],
+      "sourceTrack": "1_47",
       "credit": "Momente A1.1 · © Hueber Verlag",
       "sourceTitle": "Arbeitsbuch Transkriptionen"
     }

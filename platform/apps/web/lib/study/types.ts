@@ -60,6 +60,7 @@ export type BookPage = {
   id: string;
   kind: string;
   lesson: number;
+  lessons?: number[];
   printedPage: number;
   pdfPage: number;
   image: string;

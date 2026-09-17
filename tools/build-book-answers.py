@@ -27,7 +27,7 @@ def add(page, exercise, text, source_page=1, model=False, source="coursebook-key
 
 doc = pymupdf.open(KEY)
 texts = [re.sub(r"[ \t]+\n", "\n", re.sub(r"(\w)-\n(\w)", r"\1\2", p.get_text())) for p in doc]
-starts = {1: (11, [1, 2, 4, 6]), 2: (15, [1, 2, 4, 6]), 3: (19, [1, 2, 5, 8]), 4: (29, [1, 3, 5, 8]), 5: (33, [1, 2, 5, 6])}
+starts = {1: (11, [1, 2, 4, 8]), 2: (15, [1, 2, 4, 6]), 3: (19, [1, 2, 5, 9]), 4: (29, [1, 3, 5, 8]), 5: (33, [1, 2, 5, 6]), 6: (37, [1, 2, 4, 9])}
 for lesson, (first, boundaries) in starts.items():
     source_page = 1 if lesson < 4 else 2
     text = texts[source_page-1].split(f"Lektion {lesson}\n", 1)[1]
@@ -68,6 +68,20 @@ add("workbook-19", "Review · Exercise 9", "Nein, Astrid und Norbert sind nicht 
 add("workbook-22", "Work & careers · Exercise 2b", "Danke, gut.\nFreut mich.\ndas ist ja interessant\nVielen Dank", 5, source="workbook-transcript", note="The four missing phrases in order, track 1/31. Wie geht’s Ihnen is already filled in.")
 
 # End-of-lesson quick tests have a separate official key in the book appendix.
+add("coursebook-41","Reading 1","a: „Kuli“ · b: Italienisch · c: Budapest",2)
+add("coursebook-41","Film","10 Euro; nicht zu groß; nicht zu klein; nicht teuer",2)
+add("coursebook-42","Listening 1","Florian: keine Kamera.\nHardy: ein Bett.\nLissi, Frida, Elli: keinen Tisch und keine Stühle.",2,note="Marlene: Freunde is already filled in on the exercise page.")
+add("coursebook-44","Song 1","einen Partner · keinen Schlüssel · einen Stift · eine Lampe · keine Stühle · keinen Tisch · keine Bücher · keine Seife · eine Tasche · keine Uhr",2)
+add("coursebook-161","Exercise 6a","Er hat eine Brille, einen Kalender, ein Handy, eine Tastatur, eine Maus.\nEr braucht eine Lampe, einen Stuhl, einen Bildschirm, Stifte, ein Telefon.",2,note="The partner activity continues Lesson 6, exercise 6, from coursebook p. 39.")
+add("workbook-40","Skills test · Exercise 1","b Nein, ich brauche keine Tasche.\nc Ja, ich brauche eine Lampe.\nd Ich finde, die Kette ist schön. / Sie ist schön.\ne Wie viel / Was kostet sie / die Kette?\nf Das ist zu teuer. / Das finde ich teuer.\ng Ja, das ist gut.",118,True,"workbook-key")
+add("workbook-40","Skills test · Exercise 2","A: 1 falsch · 2 richtig · 3 falsch · 4 richtig\nB: 5 falsch · 6 falsch · 7 falsch",118,source="workbook-key")
+add("workbook-41","Skills test · Exercise 3","2 b · 3 c · 4 c · 5 b · 6 a · 7 c",118,source="workbook-key",note="Item 1 is the worked example.")
+add("workbook-41","Skills test · Exercise 4","1 Guten Tag, Herr Holz. Mein Name ist Graham Scott.\n2 Ist Frau Müller da?\n3 Vielen Dank. Auf Wiederhören.",118,True,"workbook-key",note="Publisher model response; substitute your own name when practising.")
+add("workbook-38","Review · Exercise 4","Was kann ich für Sie tun?\nIch suche einen Sessel.\nSchauen Sie doch mal. Der Sessel ist doch schön.\nJa, das finde ich auch. Er ist wirklich schön. Wie viel kostet er denn?\nSie haben Glück. Er kostet nur 40 Euro. Das ist ein Sonderangebot.\nOh, das ist aber günstig.",7,source="workbook-transcript",note="Complete source dialogue from track 1/48; use it to check the missing words.")
+add("workbook-39","Review · Exercise 8","Nein, das ist kein Feuerzeug. Das ist ein Streichholz.\nNein, das ist kein Stuhl. Das ist ein Sessel.\nNein, das ist keine Tasche. Das ist eine Geldbörse.\nNein, das ist kein Tisch. Das ist ein Bett.",8,source="workbook-transcript",note="Responses after the example, track 1/50.")
+add("workbook-39","Review · Exercise 11a","Tisch: aus Holz, braun, 56 Euro.\nStuhl: aus Plastik, grün, 10 Euro.\nRegal: aus Metall, schwarz, 23 Euro.",8,source="workbook-transcript",note="Explicit product details from track 1/52.")
+add("workbook-43","Work & careers · Exercise 4","25 Bleistifte · 50 Kugelschreiber · 15 rote Notizbücher · 20 schwarze Mappen",10,source="workbook-transcript",note="Corrected order stated in track 1/62; not the caller's initial misread quantities.")
+
 quick = json.loads((ROOT / "research/book-answers/coursebook-quick-test-keys.json").read_text(encoding="utf-8"))
 for lesson, (first, _) in starts.items():
     for label, text in zip(["Vocabulary", "Grammar", "Communication"], quick["lessons"][str(lesson)]):
@@ -78,6 +92,6 @@ book = json.loads((GEN / "interactive-book.json").read_text(encoding="utf-8"))
 assert all(a["pageId"] in {p["id"] for p in book["pages"]} for a in answers)
 assert all(a["text"] and a["exercise"] for a in answers)
 (GEN / "book-answers.json").write_text(json.dumps(answers, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
-audit = {"answers": len(answers), "pagesWithAnswers": len({a["pageId"] for a in answers}), "bySource": {s: sum(a["source"] == s for a in answers) for s in sorted({a["source"] for a in answers})}, "sources": [{"file": p.relative_to(ROOT).as_posix(), "sha256": hashlib.sha256(p.read_bytes()).hexdigest()} for p in [KEY, AB, TRANSCRIPT, ROOT / quick["source"]]], "scope": "All entries in the supplied coursebook key for Lessons 1–5 and Magazine 1–3; coursebook quick-test answers in the appendix, p. 203; all Module 1 workbook skills-test answers; explicit responses in available Module 1 review transcripts."}
+audit = {"answers": len(answers), "pagesWithAnswers": len({a["pageId"] for a in answers}), "bySource": {s: sum(a["source"] == s for a in answers) for s in sorted({a["source"] for a in answers})}, "sources": [{"file": p.relative_to(ROOT).as_posix(), "sha256": hashlib.sha256(p.read_bytes()).hexdigest()} for p in [KEY, AB, TRANSCRIPT, ROOT / quick["source"]]], "scope": "All entries in the supplied coursebook key for Lessons 1–6 and Magazines 1–2; coursebook quick-test answers in the appendix, p. 203; all Module 1–2 workbook skills-test answers; explicit responses in available Module 1–2 review transcripts."}
 (ROOT / "research/book-answers/answer-source-audit.json").write_text(json.dumps(audit, indent=2)+"\n", encoding="utf-8")
 print(json.dumps(audit))

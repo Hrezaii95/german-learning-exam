@@ -66,8 +66,8 @@
     "note": ""
   },
   {
-    "id": "coursebook-14-answer-exercise-6",
-    "pageId": "coursebook-14",
+    "id": "coursebook-13-answer-exercise-6",
+    "pageId": "coursebook-13",
     "exercise": "Exercise 6",
     "text": "A Albert Einstein, Deutschland B Coco Chanel, Frankreich C Roger Federer, Schweiz D Walt Disney, USA E Nelson Mandela, Südafrika F Gustav Klimt, Österreich G Angela Merkel, Deutschland",
     "kind": "solution",
@@ -77,8 +77,8 @@
     "note": ""
   },
   {
-    "id": "coursebook-14-answer-exercise-7",
-    "pageId": "coursebook-14",
+    "id": "coursebook-13-answer-exercise-7",
+    "pageId": "coursebook-13",
     "exercise": "Exercise 7",
     "text": "links: Tschüs rechts: Guten Tag, Guten Morgen, Guten Abend, Auf Wiedersehen",
     "kind": "solution",
@@ -495,6 +495,83 @@
     "note": ""
   },
   {
+    "id": "coursebook-37-answer-exercise-1b",
+    "pageId": "coursebook-37",
+    "exercise": "Exercise 1b",
+    "text": "1C 2A 3B",
+    "kind": "solution",
+    "source": "coursebook-key",
+    "sourceTitle": "Kursbuch Lösungen · Lessons 1–12",
+    "sourcePage": 2,
+    "note": ""
+  },
+  {
+    "id": "coursebook-37-answer-exercise-1c",
+    "pageId": "coursebook-37",
+    "exercise": "Exercise 1c",
+    "text": "C, A, B, C, B",
+    "kind": "solution",
+    "source": "coursebook-key",
+    "sourceTitle": "Kursbuch Lösungen · Lessons 1–12",
+    "sourcePage": 2,
+    "note": ""
+  },
+  {
+    "id": "coursebook-38-answer-exercise-2",
+    "pageId": "coursebook-38",
+    "exercise": "Exercise 2",
+    "text": "Passwörter, Termine, E-Mails",
+    "kind": "solution",
+    "source": "coursebook-key",
+    "sourceTitle": "Kursbuch Lösungen · Lessons 1–12",
+    "sourcePage": 2,
+    "note": ""
+  },
+  {
+    "id": "coursebook-39-answer-exercise-4",
+    "pageId": "coursebook-39",
+    "exercise": "Exercise 4",
+    "text": "keinen, einen, keinen, einen",
+    "kind": "solution",
+    "source": "coursebook-key",
+    "sourceTitle": "Kursbuch Lösungen · Lessons 1–12",
+    "sourcePage": 2,
+    "note": ""
+  },
+  {
+    "id": "coursebook-39-answer-exercise-6a",
+    "pageId": "coursebook-39",
+    "exercise": "Exercise 6a",
+    "text": "Er hat eine Brille, einen Kalender, ein Handy, eine Tastatur, eine Maus Er braucht eine Lampe, einen Stuhl, einen Bildschirm, Stifte, ein Telefon",
+    "kind": "solution",
+    "source": "coursebook-key",
+    "sourceTitle": "Kursbuch Lösungen · Lessons 1–12",
+    "sourcePage": 2,
+    "note": ""
+  },
+  {
+    "id": "coursebook-39-answer-exercise-7",
+    "pageId": "coursebook-39",
+    "exercise": "Exercise 7",
+    "text": "der, das, den, das",
+    "kind": "solution",
+    "source": "coursebook-key",
+    "sourceTitle": "Kursbuch Lösungen · Lessons 1–12",
+    "sourcePage": 2,
+    "note": ""
+  },
+  {
+    "id": "coursebook-40-answer-exercise-9a",
+    "pageId": "coursebook-40",
+    "exercise": "Exercise 9a",
+    "text": "Frau Roth",
+    "kind": "solution",
+    "source": "coursebook-key",
+    "sourceTitle": "Kursbuch Lösungen · Lessons 1–12",
+    "sourcePage": 2,
+    "note": ""
+  },
+  {
     "id": "coursebook-23-answer-reading-1",
     "pageId": "coursebook-23",
     "exercise": "Reading 1",
@@ -682,6 +759,149 @@
     "note": "The four missing phrases in order, track 1/31. Wie geht’s Ihnen is already filled in."
   },
   {
+    "id": "coursebook-41-answer-reading-1",
+    "pageId": "coursebook-41",
+    "exercise": "Reading 1",
+    "text": "a: „Kuli“ · b: Italienisch · c: Budapest",
+    "kind": "solution",
+    "source": "coursebook-key",
+    "sourceTitle": "Kursbuch Lösungen · Lessons 1–12",
+    "sourcePage": 2,
+    "note": ""
+  },
+  {
+    "id": "coursebook-41-answer-film",
+    "pageId": "coursebook-41",
+    "exercise": "Film",
+    "text": "10 Euro; nicht zu groß; nicht zu klein; nicht teuer",
+    "kind": "solution",
+    "source": "coursebook-key",
+    "sourceTitle": "Kursbuch Lösungen · Lessons 1–12",
+    "sourcePage": 2,
+    "note": ""
+  },
+  {
+    "id": "coursebook-42-answer-listening-1",
+    "pageId": "coursebook-42",
+    "exercise": "Listening 1",
+    "text": "Florian: keine Kamera.\nHardy: ein Bett.\nLissi, Frida, Elli: keinen Tisch und keine Stühle.",
+    "kind": "solution",
+    "source": "coursebook-key",
+    "sourceTitle": "Kursbuch Lösungen · Lessons 1–12",
+    "sourcePage": 2,
+    "note": "Marlene: Freunde is already filled in on the exercise page."
+  },
+  {
+    "id": "coursebook-44-answer-song-1",
+    "pageId": "coursebook-44",
+    "exercise": "Song 1",
+    "text": "einen Partner · keinen Schlüssel · einen Stift · eine Lampe · keine Stühle · keinen Tisch · keine Bücher · keine Seife · eine Tasche · keine Uhr",
+    "kind": "solution",
+    "source": "coursebook-key",
+    "sourceTitle": "Kursbuch Lösungen · Lessons 1–12",
+    "sourcePage": 2,
+    "note": ""
+  },
+  {
+    "id": "coursebook-161-answer-exercise-6a",
+    "pageId": "coursebook-161",
+    "exercise": "Exercise 6a",
+    "text": "Er hat eine Brille, einen Kalender, ein Handy, eine Tastatur, eine Maus.\nEr braucht eine Lampe, einen Stuhl, einen Bildschirm, Stifte, ein Telefon.",
+    "kind": "solution",
+    "source": "coursebook-key",
+    "sourceTitle": "Kursbuch Lösungen · Lessons 1–12",
+    "sourcePage": 2,
+    "note": "The partner activity continues Lesson 6, exercise 6, from coursebook p. 39."
+  },
+  {
+    "id": "workbook-40-answer-skills-test-exercise-1",
+    "pageId": "workbook-40",
+    "exercise": "Skills test · Exercise 1",
+    "text": "b Nein, ich brauche keine Tasche.\nc Ja, ich brauche eine Lampe.\nd Ich finde, die Kette ist schön. / Sie ist schön.\ne Wie viel / Was kostet sie / die Kette?\nf Das ist zu teuer. / Das finde ich teuer.\ng Ja, das ist gut.",
+    "kind": "sample",
+    "source": "workbook-key",
+    "sourceTitle": "Arbeitsbuch · Lösungsschlüssel Tests",
+    "sourcePage": 118,
+    "note": ""
+  },
+  {
+    "id": "workbook-40-answer-skills-test-exercise-2",
+    "pageId": "workbook-40",
+    "exercise": "Skills test · Exercise 2",
+    "text": "A: 1 falsch · 2 richtig · 3 falsch · 4 richtig\nB: 5 falsch · 6 falsch · 7 falsch",
+    "kind": "solution",
+    "source": "workbook-key",
+    "sourceTitle": "Arbeitsbuch · Lösungsschlüssel Tests",
+    "sourcePage": 118,
+    "note": ""
+  },
+  {
+    "id": "workbook-41-answer-skills-test-exercise-3",
+    "pageId": "workbook-41",
+    "exercise": "Skills test · Exercise 3",
+    "text": "2 b · 3 c · 4 c · 5 b · 6 a · 7 c",
+    "kind": "solution",
+    "source": "workbook-key",
+    "sourceTitle": "Arbeitsbuch · Lösungsschlüssel Tests",
+    "sourcePage": 118,
+    "note": "Item 1 is the worked example."
+  },
+  {
+    "id": "workbook-41-answer-skills-test-exercise-4",
+    "pageId": "workbook-41",
+    "exercise": "Skills test · Exercise 4",
+    "text": "1 Guten Tag, Herr Holz. Mein Name ist Graham Scott.\n2 Ist Frau Müller da?\n3 Vielen Dank. Auf Wiederhören.",
+    "kind": "sample",
+    "source": "workbook-key",
+    "sourceTitle": "Arbeitsbuch · Lösungsschlüssel Tests",
+    "sourcePage": 118,
+    "note": "Publisher model response; substitute your own name when practising."
+  },
+  {
+    "id": "workbook-38-answer-review-exercise-4",
+    "pageId": "workbook-38",
+    "exercise": "Review · Exercise 4",
+    "text": "Was kann ich für Sie tun?\nIch suche einen Sessel.\nSchauen Sie doch mal. Der Sessel ist doch schön.\nJa, das finde ich auch. Er ist wirklich schön. Wie viel kostet er denn?\nSie haben Glück. Er kostet nur 40 Euro. Das ist ein Sonderangebot.\nOh, das ist aber günstig.",
+    "kind": "solution",
+    "source": "workbook-transcript",
+    "sourceTitle": "Arbeitsbuch · Publisher transcript",
+    "sourcePage": 7,
+    "note": "Complete source dialogue from track 1/48; use it to check the missing words."
+  },
+  {
+    "id": "workbook-39-answer-review-exercise-8",
+    "pageId": "workbook-39",
+    "exercise": "Review · Exercise 8",
+    "text": "Nein, das ist kein Feuerzeug. Das ist ein Streichholz.\nNein, das ist kein Stuhl. Das ist ein Sessel.\nNein, das ist keine Tasche. Das ist eine Geldbörse.\nNein, das ist kein Tisch. Das ist ein Bett.",
+    "kind": "solution",
+    "source": "workbook-transcript",
+    "sourceTitle": "Arbeitsbuch · Publisher transcript",
+    "sourcePage": 8,
+    "note": "Responses after the example, track 1/50."
+  },
+  {
+    "id": "workbook-39-answer-review-exercise-11a",
+    "pageId": "workbook-39",
+    "exercise": "Review · Exercise 11a",
+    "text": "Tisch: aus Holz, braun, 56 Euro.\nStuhl: aus Plastik, grün, 10 Euro.\nRegal: aus Metall, schwarz, 23 Euro.",
+    "kind": "solution",
+    "source": "workbook-transcript",
+    "sourceTitle": "Arbeitsbuch · Publisher transcript",
+    "sourcePage": 8,
+    "note": "Explicit product details from track 1/52."
+  },
+  {
+    "id": "workbook-43-answer-work-careers-exercise-4",
+    "pageId": "workbook-43",
+    "exercise": "Work & careers · Exercise 4",
+    "text": "25 Bleistifte · 50 Kugelschreiber · 15 rote Notizbücher · 20 schwarze Mappen",
+    "kind": "solution",
+    "source": "workbook-transcript",
+    "sourceTitle": "Arbeitsbuch · Publisher transcript",
+    "sourcePage": 10,
+    "note": "Corrected order stated in track 1/62; not the caller's initial misread quantities."
+  },
+  {
     "id": "coursebook-14-answer-quick-test-vocabulary",
     "pageId": "coursebook-14",
     "exercise": "Quick test · Vocabulary",
@@ -840,6 +1060,39 @@
     "pageId": "coursebook-36",
     "exercise": "Quick test · Communication",
     "text": "a auf Deutsch, Wie bitte\nb Wie schreibt man, Danke schön",
+    "kind": "solution",
+    "source": "coursebook-key",
+    "sourceTitle": "Kursbuch · Lösungen zu den Schnelltests",
+    "sourcePage": 203,
+    "note": "Answers in printed order; worked examples may already be filled on the page."
+  },
+  {
+    "id": "coursebook-40-answer-quick-test-vocabulary",
+    "pageId": "coursebook-40",
+    "exercise": "Quick test · Vocabulary",
+    "text": "die Visitenkarte · der Bildschirm · die Nachricht · die Tastatur · der Computer",
+    "kind": "solution",
+    "source": "coursebook-key",
+    "sourceTitle": "Kursbuch · Lösungen zu den Schnelltests",
+    "sourcePage": 203,
+    "note": "Answers in printed order; worked examples may already be filled on the page."
+  },
+  {
+    "id": "coursebook-40-answer-quick-test-grammar",
+    "pageId": "coursebook-40",
+    "exercise": "Quick test · Grammar",
+    "text": "1 den, keinen, ein, das, das\n2 die E-Mails · die Tastaturen · die Bildschirme · die Kalender",
+    "kind": "solution",
+    "source": "coursebook-key",
+    "sourceTitle": "Kursbuch · Lösungen zu den Schnelltests",
+    "sourcePage": 203,
+    "note": "Answers in printed order; worked examples may already be filled on the page."
+  },
+  {
+    "id": "coursebook-40-answer-quick-test-communication",
+    "pageId": "coursebook-40",
+    "exercise": "Quick test · Communication",
+    "text": "5 · 6 · 3 · 2 · 7 · 1 · 4",
     "kind": "solution",
     "source": "coursebook-key",
     "sourceTitle": "Kursbuch · Lösungen zu den Schnelltests",

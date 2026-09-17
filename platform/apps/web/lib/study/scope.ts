@@ -1,5 +1,5 @@
 /** Shared course selection. The available ceiling advances only after each lesson is integrated. */
-export const LAST_AVAILABLE_LESSON = 5;
+export const LAST_AVAILABLE_LESSON = 6;
 export const A1_LESSON_COUNT = 12;
 export const STUDY_SCOPE_KEY = "german-study-scope-v1";
 
@@ -77,8 +77,8 @@ export const lessonConcepts:Record<number,StudyConcept[]> = {
   2:["people","numbers","verbs","grammar","conversation","questions"],
   3:["people","countries","verbs","grammar","conversation","questions"],
   4:["home","numbers","grammar","conversation","questions","descriptions"],
-  5:["objects","colours-materials","grammar","conversation"],
-  6:["office","objects","numbers","verbs","grammar","conversation"],
+  5:["objects","colours-materials","grammar","conversation","verbs","questions","classroom"],
+  6:["office","objects","numbers","verbs","grammar","conversation","questions"],
 };
 export function tagsForLesson(lesson:number):StudyTags{
   return {lessons:[lesson],concepts:lessonConcepts[lesson]??[],source:"course"};

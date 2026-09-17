@@ -1,0 +1,24 @@
+{
+  "base": "http://localhost:3210/german-learning-exam",
+  "checks": [
+    "Lesson 3 vocabulary appears",
+    "All nine Lesson 3 grammar concepts are in the hub",
+    "Dashboard follows the same lesson",
+    "Listening uses selected lesson",
+    "Original listening transcript opens",
+    "Book contents has the selected chapters plus start link",
+    "Saved card remains in selected review",
+    "Changing lessons excludes the saved Lesson 4 card",
+    "Every teacher result is explicitly labelled",
+    "Teacher extras do not leak into unrelated lessons",
+    "Up to Lesson 2 includes both lessons",
+    "Empty selection stays empty after navigation",
+    "Lesson 3 practice gives feedback",
+    "Practice recalls vocabulary from the selected lesson",
+    "Next practice card hides its answer",
+    "Article practice checks the actual noun article",
+    "Phone study controls fit the viewport",
+    "No browser errors: "
+  ],
+  "errors": []
+}

@@ -11,7 +11,6 @@ import {
 import "./globals.css";
 import "./study.css";
 import { StudyProvider } from "@/components/study/StudyProvider";
-import { loadDictionary } from "@/lib/study/catalog";
 import { StudyScopeProvider } from "@/components/study/StudyScope";
 
 /**
@@ -95,7 +94,7 @@ export default function RootLayout({
         {/* Static build-time string; React would entity-escape quotes in a
             text child of <style>, so raw injection is required. */}
         <style dangerouslySetInnerHTML={{ __html: interFontFace }} />
-        <LearnerStateProvider><StudyScopeProvider><StudyProvider dictionary={loadDictionary()}>{children}</StudyProvider></StudyScopeProvider></LearnerStateProvider>
+        <LearnerStateProvider><StudyScopeProvider><StudyProvider>{children}</StudyProvider></StudyScopeProvider></LearnerStateProvider>
         {/* Installs the offline worker and owns every sentence the app says
             about being offline or about a waiting update. Renders nothing
             until it has something true to report. */}

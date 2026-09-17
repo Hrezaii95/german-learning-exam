@@ -1,0 +1,1032 @@
+{
+  "number": 6,
+  "summary": "Handle office messages and calls, learn noun plurals and use accusative objects with confidence. Includes Module 2 review.",
+  "words": [
+    {
+      "de": "Oh Gott!",
+      "en": "Oh God!",
+      "plural": "",
+      "category": "Expressions",
+      "id": "l6-oh-gott",
+      "example": "Oh Gott! So viel Arbeit!",
+      "translation": "Oh God! So much work!"
+    },
+    {
+      "de": "der Gott",
+      "en": "god",
+      "plural": "die Götter",
+      "category": "Objects",
+      "id": "l6-gott",
+      "example": "Das ist ein Gott.",
+      "translation": "This is a god."
+    },
+    {
+      "de": "viel",
+      "en": "much",
+      "plural": "",
+      "category": "Adjectives",
+      "id": "l6-viel",
+      "example": "Ich habe viel Arbeit.",
+      "translation": "I have a lot of work."
+    },
+    {
+      "de": "die Arbeit",
+      "en": "work",
+      "plural": "",
+      "category": "Office",
+      "id": "l6-arbeit",
+      "example": "Ich habe viel Arbeit.",
+      "translation": "I have a lot of work."
+    },
+    {
+      "de": "Hilfe!",
+      "en": "Help!",
+      "plural": "",
+      "category": "Expressions",
+      "id": "l6-hilfe",
+      "example": "Hilfe! Mein Passwort ist falsch.",
+      "translation": "Help! My password is wrong."
+    },
+    {
+      "de": "das Passwort",
+      "en": "password",
+      "plural": "die Passwörter",
+      "category": "Office",
+      "id": "l6-passwort",
+      "example": "Das ist ein Passwort.",
+      "translation": "This is a password."
+    },
+    {
+      "de": "der Traum",
+      "en": "dream",
+      "plural": "die Träume",
+      "category": "Objects",
+      "id": "l6-traum",
+      "example": "Das ist ein Traum.",
+      "translation": "This is a dream."
+    },
+    {
+      "de": "der Albtraum",
+      "en": "nightmare",
+      "plural": "die Albträume",
+      "category": "Objects",
+      "id": "l6-albtraum",
+      "example": "Das ist ein Albtraum.",
+      "translation": "This is a nightmare."
+    },
+    {
+      "de": "die Person",
+      "en": "person",
+      "plural": "die Personen",
+      "category": "People",
+      "id": "l6-person",
+      "example": "Das ist eine Person.",
+      "translation": "This is a person."
+    },
+    {
+      "de": "der Hunger",
+      "en": "hunger",
+      "plural": "",
+      "category": "Everyday",
+      "id": "l6-hunger",
+      "example": "Ich habe Hunger.",
+      "translation": "I am hungry."
+    },
+    {
+      "de": "Hunger haben",
+      "en": "to be hungry",
+      "plural": "",
+      "category": "Expressions",
+      "id": "l6-hunger-haben",
+      "example": "Ich habe Hunger.",
+      "translation": "I am hungry."
+    },
+    {
+      "de": "telefonieren",
+      "en": "to talk on the phone",
+      "plural": "",
+      "category": "Verbs",
+      "id": "l6-telefonieren",
+      "example": "Ich telefoniere mit Anna.",
+      "translation": "I am talking on the phone to Anna."
+    },
+    {
+      "de": "das WLAN",
+      "en": "Wi-Fi",
+      "plural": "",
+      "category": "Office",
+      "id": "l6-wlan",
+      "example": "Ich komme nicht ins WLAN.",
+      "translation": "I cannot connect to the Wi-Fi."
+    },
+    {
+      "de": "der Stift",
+      "en": "pen",
+      "plural": "die Stifte",
+      "category": "Office",
+      "id": "l6-stift",
+      "example": "Das ist ein Stift.",
+      "translation": "This is a pen."
+    },
+    {
+      "de": "brauchen",
+      "en": "to need",
+      "plural": "",
+      "category": "Verbs",
+      "id": "l6-brauchen",
+      "example": "Wir brauchen einen Stift.",
+      "translation": "We need a pen."
+    },
+    {
+      "de": "der Kaffee",
+      "en": "coffee",
+      "plural": "die Kaffees",
+      "category": "Everyday",
+      "id": "l6-kaffee",
+      "example": "Das ist ein Kaffee.",
+      "translation": "This is a coffee."
+    },
+    {
+      "de": "die Nachricht",
+      "en": "message",
+      "plural": "die Nachrichten",
+      "category": "Office",
+      "id": "l6-nachricht",
+      "example": "Das ist eine Nachricht.",
+      "translation": "This is a message."
+    },
+    {
+      "de": "das Büro",
+      "en": "office",
+      "plural": "die Büros",
+      "category": "Office",
+      "id": "l6-buero",
+      "example": "Das ist ein Büro.",
+      "translation": "This is an office."
+    },
+    {
+      "de": "neu",
+      "en": "new",
+      "plural": "",
+      "category": "Adjectives",
+      "id": "l6-neu",
+      "example": "Ist das Passwort neu?",
+      "translation": "Is the password new?"
+    },
+    {
+      "de": "Viele Grüße",
+      "en": "kind regards",
+      "plural": "",
+      "category": "Expressions",
+      "id": "l6-viele-gruesse",
+      "example": "Viele Grüße!",
+      "translation": "Kind regards!"
+    },
+    {
+      "de": "der Gruß",
+      "en": "greeting",
+      "plural": "die Grüße",
+      "category": "Expressions",
+      "id": "l6-gruss",
+      "example": "Das ist ein Gruß.",
+      "translation": "This is a greeting."
+    },
+    {
+      "de": "das Yoga",
+      "en": "yoga",
+      "plural": "",
+      "category": "Everyday",
+      "id": "l6-yoga",
+      "example": "Morgen leider kein Yoga.",
+      "translation": "Unfortunately, no yoga tomorrow."
+    },
+    {
+      "de": "morgen",
+      "en": "tomorrow",
+      "plural": "",
+      "category": "Adverbs",
+      "id": "l6-morgen",
+      "example": "Morgen habe ich einen Termin.",
+      "translation": "I have an appointment tomorrow."
+    },
+    {
+      "de": "leider",
+      "en": "unfortunately",
+      "plural": "",
+      "category": "Adverbs",
+      "id": "l6-leider",
+      "example": "Frau Müller ist leider nicht da.",
+      "translation": "Unfortunately, Ms Müller is not here."
+    },
+    {
+      "de": "Zeit haben",
+      "en": "to have time",
+      "plural": "",
+      "category": "Expressions",
+      "id": "l6-zeit-haben",
+      "example": "Ich habe Zeit.",
+      "translation": "I have time."
+    },
+    {
+      "de": "keine Zeit haben",
+      "en": "to have no time",
+      "plural": "",
+      "category": "Expressions",
+      "id": "l6-keine-zeit-haben",
+      "example": "Ich habe keine Zeit.",
+      "translation": "I have no time."
+    },
+    {
+      "de": "die Zeit",
+      "en": "time",
+      "plural": "",
+      "category": "Everyday",
+      "id": "l6-zeit",
+      "example": "Ich habe keine Zeit.",
+      "translation": "I have no time."
+    },
+    {
+      "de": "der Termin",
+      "en": "appointment",
+      "plural": "die Termine",
+      "category": "Office",
+      "id": "l6-termin",
+      "example": "Das ist ein Termin.",
+      "translation": "This is an appointment."
+    },
+    {
+      "de": "von",
+      "en": "from / of",
+      "plural": "",
+      "category": "Grammar",
+      "id": "l6-von",
+      "example": "Das ist eine Nachricht von Anna.",
+      "translation": "This is a message from Anna."
+    },
+    {
+      "de": "Liebe Grüße / LG",
+      "en": "kind regards / love",
+      "plural": "",
+      "category": "Expressions",
+      "id": "l6-liebe-gruesse-lg",
+      "example": "Liebe Grüße!",
+      "translation": "Kind regards!"
+    },
+    {
+      "de": "der Laptop",
+      "en": "laptop",
+      "plural": "die Laptops",
+      "category": "Office",
+      "id": "l6-laptop",
+      "example": "Das ist ein Laptop.",
+      "translation": "This is a laptop."
+    },
+    {
+      "de": "der Drucker",
+      "en": "printer",
+      "plural": "die Drucker",
+      "category": "Office",
+      "id": "l6-drucker",
+      "example": "Das ist ein Drucker.",
+      "translation": "This is a printer."
+    },
+    {
+      "de": "die Maus",
+      "en": "mouse",
+      "plural": "die Mäuse",
+      "category": "Office",
+      "id": "l6-maus",
+      "example": "Das ist eine Maus.",
+      "translation": "This is a mouse."
+    },
+    {
+      "de": "der Computer",
+      "en": "computer",
+      "plural": "die Computer",
+      "category": "Office",
+      "id": "l6-computer",
+      "example": "Das ist ein Computer.",
+      "translation": "This is a computer."
+    },
+    {
+      "de": "der Kalender",
+      "en": "calendar",
+      "plural": "die Kalender",
+      "category": "Office",
+      "id": "l6-kalender",
+      "example": "Das ist ein Kalender.",
+      "translation": "This is a calendar."
+    },
+    {
+      "de": "der Bildschirm",
+      "en": "monitor",
+      "plural": "die Bildschirme",
+      "category": "Office",
+      "id": "l6-bildschirm",
+      "example": "Das ist ein Bildschirm.",
+      "translation": "This is a monitor."
+    },
+    {
+      "de": "das Tablet",
+      "en": "tablet",
+      "plural": "die Tablets",
+      "category": "Office",
+      "id": "l6-tablet",
+      "example": "Das ist ein Tablet.",
+      "translation": "This is a tablet."
+    },
+    {
+      "de": "die Visitenkarte",
+      "en": "business card",
+      "plural": "die Visitenkarten",
+      "category": "Office",
+      "id": "l6-visitenkarte",
+      "example": "Das ist eine Visitenkarte.",
+      "translation": "This is a business card."
+    },
+    {
+      "de": "die Tastatur",
+      "en": "keyboard",
+      "plural": "die Tastaturen",
+      "category": "Office",
+      "id": "l6-tastatur",
+      "example": "Das ist eine Tastatur.",
+      "translation": "This is a keyboard."
+    },
+    {
+      "de": "dann",
+      "en": "then",
+      "plural": "",
+      "category": "Adverbs",
+      "id": "l6-dann",
+      "example": "Dann suchen Sie bitte einen Stift.",
+      "translation": "Then please look for a pen."
+    },
+    {
+      "de": "notieren",
+      "en": "to note down",
+      "plural": "",
+      "category": "Verbs",
+      "id": "l6-notieren",
+      "example": "Ich notiere den Termin.",
+      "translation": "I note down the appointment."
+    },
+    {
+      "de": "in die Tasche packen",
+      "en": "to put in the bag",
+      "plural": "",
+      "category": "Expressions",
+      "id": "l6-in-die-tasche-packen",
+      "example": "Ich packe einen Laptop in meine Tasche.",
+      "translation": "I put a laptop in my bag."
+    },
+    {
+      "de": "der Schreibtisch",
+      "en": "desk",
+      "plural": "die Schreibtische",
+      "category": "Office",
+      "id": "l6-schreibtisch",
+      "example": "Das ist ein Schreibtisch.",
+      "translation": "This is a desk."
+    },
+    {
+      "de": "der Arbeitsplatz",
+      "en": "workspace",
+      "plural": "die Arbeitsplätze",
+      "category": "Office",
+      "id": "l6-arbeitsplatz",
+      "example": "Das ist ein Arbeitsplatz.",
+      "translation": "This is a workspace."
+    },
+    {
+      "de": "Ach, da ist er ja!",
+      "en": "Oh, there it is!",
+      "plural": "",
+      "category": "Expressions",
+      "id": "l6-ach-da-ist-er-ja",
+      "example": "Ach, da ist er ja!",
+      "translation": "Oh, there it is!"
+    },
+    {
+      "de": "schon wieder",
+      "en": "again",
+      "plural": "",
+      "category": "Adverbs",
+      "id": "l6-schon-wieder",
+      "example": "Wo ist schon wieder der Kalender?",
+      "translation": "Where is the calendar again?"
+    },
+    {
+      "de": "vielleicht",
+      "en": "maybe",
+      "plural": "",
+      "category": "Adverbs",
+      "id": "l6-vielleicht",
+      "example": "Haben Sie vielleicht den Kalender?",
+      "translation": "Do you perhaps have the calendar?"
+    },
+    {
+      "de": "das Quartett",
+      "en": "quartets (card game)",
+      "plural": "die Quartette",
+      "category": "Objects",
+      "id": "l6-quartett",
+      "example": "Das ist ein Quartett.",
+      "translation": "This is a quartets."
+    },
+    {
+      "de": "Hallo, … hier.",
+      "en": "Hello, … speaking.",
+      "plural": "",
+      "category": "Expressions",
+      "id": "l6-hallo-hier",
+      "example": "Hallo, Sara hier.",
+      "translation": "Hello, Sara speaking."
+    },
+    {
+      "de": "hier",
+      "en": "here / speaking (on the phone)",
+      "plural": "",
+      "category": "Adverbs",
+      "id": "l6-hier",
+      "example": "Hier ist Sara.",
+      "translation": "This is Sara speaking."
+    },
+    {
+      "de": "Was kann ich für Sie tun?",
+      "en": "How can I help you?",
+      "plural": "",
+      "category": "Expressions",
+      "id": "l6-was-kann-ich-fuer-sie-tun",
+      "example": "Was kann ich für Sie tun?",
+      "translation": "How can I help you?"
+    },
+    {
+      "de": "da sein",
+      "en": "to be there",
+      "plural": "",
+      "category": "Expressions",
+      "id": "l6-da-sein",
+      "example": "Ist Frau Müller da?",
+      "translation": "Is Ms Müller there?"
+    },
+    {
+      "de": "Auf Wiederhören.",
+      "en": "Goodbye (on the phone).",
+      "plural": "",
+      "category": "Expressions",
+      "id": "l6-auf-wiederhoeren",
+      "example": "Auf Wiederhören.",
+      "translation": "Goodbye (on the phone)."
+    },
+    {
+      "de": "schnell",
+      "en": "quick / fast",
+      "plural": "",
+      "category": "Adjectives",
+      "id": "l6-schnell",
+      "example": "Der Computer ist schnell.",
+      "translation": "The computer is fast."
+    },
+    {
+      "de": "schwer",
+      "en": "heavy / difficult",
+      "plural": "",
+      "category": "Adjectives",
+      "id": "l6-schwer",
+      "example": "Der Tisch ist schwer.",
+      "translation": "The table is heavy."
+    },
+    {
+      "de": "suchen",
+      "en": "to look for",
+      "plural": "",
+      "category": "Verbs",
+      "id": "l6-suchen",
+      "example": "Ich suche den Kalender.",
+      "translation": "I am looking for the calendar."
+    },
+    {
+      "de": "packen",
+      "en": "to pack",
+      "plural": "",
+      "category": "Verbs",
+      "id": "l6-packen",
+      "example": "Ich packe einen Stift in meine Tasche.",
+      "translation": "I put a pen in my bag."
+    },
+    {
+      "de": "haben",
+      "en": "to have",
+      "plural": "",
+      "category": "Verbs",
+      "id": "l6-haben",
+      "example": "Wir haben einen Termin.",
+      "translation": "We have an appointment."
+    },
+    {
+      "de": "sehen",
+      "en": "to see",
+      "plural": "",
+      "category": "Verbs",
+      "id": "l6-sehen",
+      "example": "Ich sehe keinen Kalender.",
+      "translation": "I do not see a calendar."
+    },
+    {
+      "de": "finden",
+      "en": "to find / have an opinion",
+      "plural": "",
+      "category": "Verbs",
+      "id": "l6-finden",
+      "example": "Ich finde das Passwort nicht.",
+      "translation": "I cannot find the password."
+    },
+    {
+      "de": "der Autoschlüssel",
+      "en": "car key",
+      "plural": "die Autoschlüssel",
+      "category": "Objects",
+      "id": "l6-autoschluessel",
+      "example": "Das ist ein Autoschlüssel.",
+      "translation": "This is a car key."
+    },
+    {
+      "de": "die Handynummer",
+      "en": "mobile phone number",
+      "plural": "die Handynummern",
+      "category": "Office",
+      "id": "l6-handynummer",
+      "example": "Das ist eine Handynummer.",
+      "translation": "This is a mobile phone number."
+    },
+    {
+      "de": "das Leder",
+      "en": "leather",
+      "plural": "",
+      "category": "Materials",
+      "id": "l6-leder",
+      "example": "Die Tasche ist aus Leder.",
+      "translation": "The bag is made of leather."
+    },
+    {
+      "de": "das Sonderangebot",
+      "en": "special offer",
+      "plural": "die Sonderangebote",
+      "category": "Shopping",
+      "id": "l6-sonderangebot",
+      "example": "Das ist ein Sonderangebot.",
+      "translation": "This is a special offer."
+    },
+    {
+      "de": "der Kollege",
+      "en": "colleague (male)",
+      "plural": "die Kollegen",
+      "category": "People",
+      "id": "l6-kollege",
+      "example": "Das ist ein Kollege.",
+      "translation": "This is a colleague."
+    },
+    {
+      "de": "die Kollegin",
+      "en": "colleague (female)",
+      "plural": "die Kolleginnen",
+      "category": "People",
+      "id": "l6-kollegin",
+      "example": "Das ist eine Kollegin.",
+      "translation": "This is a colleague."
+    },
+    {
+      "de": "der Kuli",
+      "en": "ballpoint pen (informal)",
+      "plural": "die Kulis",
+      "category": "Objects",
+      "id": "l6-kuli",
+      "example": "Das ist ein Kuli.",
+      "translation": "This is a ballpoint pen."
+    },
+    {
+      "de": "die Abkürzung",
+      "en": "abbreviation",
+      "plural": "die Abkürzungen",
+      "category": "Classroom",
+      "id": "l6-abkuerzung",
+      "example": "Das ist eine Abkürzung.",
+      "translation": "This is an abbreviation."
+    },
+    {
+      "de": "die Idee",
+      "en": "idea",
+      "plural": "die Ideen",
+      "category": "Everyday",
+      "id": "l6-idee",
+      "example": "Das ist eine Idee.",
+      "translation": "This is an idea."
+    },
+    {
+      "de": "der Stress",
+      "en": "stress",
+      "plural": "",
+      "category": "Everyday",
+      "id": "l6-stress",
+      "example": "Wir brauchen keinen Stress.",
+      "translation": "We do not need stress."
+    },
+    {
+      "de": "die Liebe",
+      "en": "love",
+      "plural": "",
+      "category": "Everyday",
+      "id": "l6-liebe",
+      "example": "Wir brauchen Liebe.",
+      "translation": "We need love."
+    },
+    {
+      "de": "das Glück",
+      "en": "happiness / luck",
+      "plural": "",
+      "category": "Everyday",
+      "id": "l6-glueck",
+      "example": "Ich habe Glück.",
+      "translation": "I am lucky."
+    },
+    {
+      "de": "der Würfel",
+      "en": "die / dice",
+      "plural": "die Würfel",
+      "category": "Objects",
+      "id": "l6-wuerfel",
+      "example": "Das ist ein Würfel.",
+      "translation": "This is a die."
+    },
+    {
+      "de": "würfeln",
+      "en": "to roll dice",
+      "plural": "",
+      "category": "Verbs",
+      "id": "l6-wuerfeln",
+      "example": "Du würfelst zuerst.",
+      "translation": "You roll the dice first."
+    }
+  ],
+  "concepts": [
+    {
+      "id": "l6-plural",
+      "title": "One noun, five plural families",
+      "de": "-n / -en · -s · -e · -er · no ending",
+      "en": "Learn the plural with each noun. Nachricht → Nachrichten, Laptop → Laptops, Stift → Stifte, Passwort → Passwörter, Drucker → Drucker. Some plurals add an umlaut, with or without an ending: Maus → Mäuse; Vater → Väter. Every definite plural uses die.",
+      "examples": [
+        "der Termin → die Termine",
+        "die Maus → die Mäuse",
+        "das Passwort → die Passwörter"
+      ],
+      "source": "KB 38; AB 34–35"
+    },
+    {
+      "id": "l6-accusative",
+      "title": "The object changes the masculine article",
+      "de": "der → den · ein → einen · kein → keinen",
+      "en": "After haben, brauchen, suchen, sehen and finden, the direct object takes the accusative. In the singular only the masculine article changes. Neuter das/ein/kein and feminine die/eine/keine keep their form. Compare the subject or identification (nominative) with the object (accusative).",
+      "examples": [
+        "Das ist ein Stift. Ich brauche einen Stift.",
+        "Wo ist der Kalender? Ich habe den Kalender.",
+        "Ich suche die Maus. Ich brauche das Tablet."
+      ],
+      "source": "KB 39; AB 35–37"
+    },
+    {
+      "id": "l6-no-plural-ein",
+      "title": "Plural: no ein, but still keine",
+      "de": "ein Termin → Termine · kein Termin → keine Termine",
+      "en": "There is no plural of ein as an indefinite article. Say Ich habe Termine, or Ich habe zwei Termine. For none, use keine: Ich habe keine Termine. The definite plural is die in both nominative and accusative.",
+      "examples": [
+        "Ich brauche Stifte.",
+        "Ich habe keine Stifte.",
+        "Wo sind die Stifte? Ich suche die Stifte."
+      ],
+      "source": "KB 38–39; AB 36"
+    },
+    {
+      "id": "l6-negation",
+      "title": "No thing or not a description?",
+      "de": "Ich habe keinen Stift. Das Passwort ist nicht richtig.",
+      "en": "Use kein with a noun that would have ein or no article, and choose the case ending. Use nicht to negate an adjective or another statement. Fixed chunks: keine Zeit haben, keinen Hunger haben.",
+      "examples": [
+        "Ich habe keine Zeit.",
+        "Ich brauche keinen Kaffee.",
+        "Der Laptop ist nicht günstig."
+      ],
+      "source": "KB 37–39; AB 36–37"
+    },
+    {
+      "id": "l6-messages",
+      "title": "Read an appointment message",
+      "de": "morgen · leider · von · Viele Grüße · LG",
+      "en": "Morgen means tomorrow; leider means unfortunately. Von introduces the sender or owner. End a message with Viele Grüße or Liebe Grüße; LG abbreviates Liebe Grüße. Capitalize nouns and formal Sie/Ihr.",
+      "examples": [
+        "Morgen habe ich einen Termin.",
+        "Ich habe leider keine Zeit.",
+        "Das ist eine Nachricht von Anna."
+      ],
+      "source": "KB 38; AB 37"
+    },
+    {
+      "id": "l6-phone",
+      "title": "A phone call in five moves",
+      "de": "Hier ist … → Was kann ich für Sie tun? → Ist … da? → Einen Moment bitte. → Auf Wiederhören.",
+      "en": "Give the company and your name. Ask who the caller needs. Use Herr before a male name and Frau before a female name. Auf Wiederhören is the usual telephone goodbye. Learn Was kann ich für Sie tun? as a fixed phrase here.",
+      "examples": [
+        "Guten Tag, hier ist Sara Rahimi.",
+        "Ist Frau Müller da?",
+        "Frau Müller ist leider nicht da."
+      ],
+      "source": "KB 40; AB 37"
+    },
+    {
+      "id": "l6-ue",
+      "title": "Say ü: start with i, round your lips",
+      "de": "Grüße · Schlüssel · Stühle · fünf · grün · tschüs",
+      "en": "Keep your tongue in the i position while rounding your lips. Long ü: Grüße, Stühle, grün. Short ü: Schlüssel, fünf, tschüs. Use the original workbook recordings to compare i, u and ü.",
+      "examples": [
+        "Grüße",
+        "Schlüssel",
+        "Stühle",
+        "fünf",
+        "grün",
+        "tschüs"
+      ],
+      "source": "AB 35, exercise 5"
+    }
+  ],
+  "verbs": [
+    {
+      "verb": "haben",
+      "meaning": "to have",
+      "forms": [
+        "habe",
+        "hast",
+        "hat",
+        "haben",
+        "habt",
+        "haben"
+      ],
+      "tip": "du and er/sie/es lose b: hast, hat."
+    },
+    {
+      "verb": "brauchen",
+      "meaning": "to need",
+      "forms": [
+        "brauche",
+        "brauchst",
+        "braucht",
+        "brauchen",
+        "braucht",
+        "brauchen"
+      ],
+      "tip": "The thing you need takes the accusative."
+    },
+    {
+      "verb": "suchen",
+      "meaning": "to look for",
+      "forms": [
+        "suche",
+        "suchst",
+        "sucht",
+        "suchen",
+        "sucht",
+        "suchen"
+      ],
+      "tip": "Ich suche den Kalender. The searched-for object is accusative."
+    },
+    {
+      "verb": "sehen",
+      "meaning": "to see",
+      "forms": [
+        "sehe",
+        "siehst",
+        "sieht",
+        "sehen",
+        "seht",
+        "sehen"
+      ],
+      "tip": "e → ie in du and er/sie/es. Ich sehe einen Stift."
+    },
+    {
+      "verb": "finden",
+      "meaning": "to find / have an opinion",
+      "forms": [
+        "finde",
+        "findest",
+        "findet",
+        "finden",
+        "findet",
+        "finden"
+      ],
+      "tip": "Extra e after d. Ich finde das Passwort nicht."
+    },
+    {
+      "verb": "packen",
+      "meaning": "to pack",
+      "forms": [
+        "packe",
+        "packst",
+        "packt",
+        "packen",
+        "packt",
+        "packen"
+      ],
+      "tip": "Learn the full chunk: Ich packe einen Laptop in meine Tasche."
+    },
+    {
+      "verb": "notieren",
+      "meaning": "to note down",
+      "forms": [
+        "notiere",
+        "notierst",
+        "notiert",
+        "notieren",
+        "notiert",
+        "notieren"
+      ],
+      "tip": "Regular forms; note the ending -ieren."
+    },
+    {
+      "verb": "telefonieren",
+      "meaning": "to talk on the phone",
+      "forms": [
+        "telefoniere",
+        "telefonierst",
+        "telefoniert",
+        "telefonieren",
+        "telefoniert",
+        "telefonieren"
+      ],
+      "tip": "Use mit for the person you are speaking to: mit Anna."
+    },
+    {
+      "verb": "würfeln",
+      "meaning": "to roll dice",
+      "forms": [
+        "würfle",
+        "würfelst",
+        "würfelt",
+        "würfeln",
+        "würfelt",
+        "würfeln"
+      ],
+      "tip": "Module 2 game vocabulary. ich würfle; ich würfele is also possible."
+    }
+  ],
+  "phrases": [
+    {
+      "de": "Wir haben einen Termin.",
+      "en": "We have an appointment."
+    },
+    {
+      "de": "Ich brauche einen Kaffee.",
+      "en": "I need a coffee."
+    },
+    {
+      "de": "Ich habe keinen Stift.",
+      "en": "I do not have a pen."
+    },
+    {
+      "de": "Ich habe keine Zeit.",
+      "en": "I have no time."
+    },
+    {
+      "de": "Ich habe Hunger.",
+      "en": "I am hungry."
+    },
+    {
+      "de": "Wo sind die Passwörter?",
+      "en": "Where are the passwords?"
+    },
+    {
+      "de": "Ich komme nicht ins WLAN.",
+      "en": "I cannot connect to the Wi-Fi."
+    },
+    {
+      "de": "Haben Sie vielleicht den Kalender?",
+      "en": "Do you perhaps have the calendar?"
+    },
+    {
+      "de": "Ach, da ist er ja!",
+      "en": "Oh, there it is!"
+    },
+    {
+      "de": "Guten Tag, hier ist Sara Rahimi.",
+      "en": "Hello, this is Sara Rahimi speaking."
+    },
+    {
+      "de": "Was kann ich für Sie tun?",
+      "en": "How can I help you?"
+    },
+    {
+      "de": "Ist Frau Müller da?",
+      "en": "Is Ms Müller there?"
+    },
+    {
+      "de": "Einen Moment bitte.",
+      "en": "One moment, please."
+    },
+    {
+      "de": "Frau Müller ist leider nicht da.",
+      "en": "Unfortunately, Ms Müller is not here."
+    },
+    {
+      "de": "Vielen Dank. Auf Wiederhören.",
+      "en": "Thank you very much. Goodbye (on the phone)."
+    },
+    {
+      "de": "Viele Grüße",
+      "en": "Kind regards"
+    },
+    {
+      "de": "Liebe Grüße",
+      "en": "Kind regards / love"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "Ich brauche ___ Stift.",
+      "options": [
+        "ein",
+        "einen",
+        "eine"
+      ],
+      "answer": "einen",
+      "why": "Der Stift is masculine; brauchen takes an accusative object: einen Stift."
+    },
+    {
+      "q": "Wo ist ___ Kalender?",
+      "options": [
+        "der",
+        "den",
+        "dem"
+      ],
+      "answer": "der",
+      "why": "Here the calendar is the subject: nominative der."
+    },
+    {
+      "q": "Hast du ___ Kalender?",
+      "options": [
+        "der",
+        "den",
+        "dem"
+      ],
+      "answer": "den",
+      "why": "The calendar is the object of haben: accusative den."
+    },
+    {
+      "q": "Ich suche ___ Tablet.",
+      "options": [
+        "den",
+        "das",
+        "der"
+      ],
+      "answer": "das",
+      "why": "Neuter das stays das in the accusative."
+    },
+    {
+      "q": "Wir haben ___ Termine. (none)",
+      "options": [
+        "kein",
+        "keinen",
+        "keine"
+      ],
+      "answer": "keine",
+      "why": "The plural negative article is keine."
+    },
+    {
+      "q": "What is the plural of das Passwort?",
+      "options": [
+        "die Passworte",
+        "die Passwörter",
+        "die Passworts"
+      ],
+      "answer": "die Passwörter",
+      "why": "Passwort adds an umlaut and -er: Passwörter."
+    },
+    {
+      "q": "What is the plural of der Drucker?",
+      "options": [
+        "die Drucker",
+        "die Druckern",
+        "die Drücker"
+      ],
+      "answer": "die Drucker",
+      "why": "Drucker keeps its form. The plural article is die."
+    },
+    {
+      "q": "Which goodbye fits a telephone call?",
+      "options": [
+        "Auf Wiederhören.",
+        "Guten Morgen.",
+        "Wie bitte?"
+      ],
+      "answer": "Auf Wiederhören.",
+      "why": "Auf Wiederhören is the standard telephone goodbye."
+    }
+  ]
+}

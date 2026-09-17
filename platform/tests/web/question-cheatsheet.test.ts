@@ -35,7 +35,7 @@ describe("question patterns and learning support",()=>{
     for(const text of ["Wessen Buch ist das?","Wem hilfst du?","Wie lange bleibst du?","Wohnen Sie in Berlin?","Doch, ich komme aus dem Iran."]){expect(lookupEntries(dictionary,text).entries.length,text).toBeGreaterThan(0);}
   });
   it("ships a real exact-text clip for every question and builder combination",()=>{
-    const speech=JSON.parse(readFileSync(resolve("apps/web/generated/collection-speech.json"),"utf8")) as Record<string,string>;
+    const speech={...JSON.parse(readFileSync(resolve("apps/web/generated/study-speech.json"),"utf8")),...JSON.parse(readFileSync(resolve("apps/web/generated/collection-speech.json"),"utf8"))} as Record<string,string>;
     for(const text of questionSpeechTexts()){expect(speech[text],text).toBeTruthy();expect(statSync(resolve(`apps/web/public${speech[text]}`)).size).toBeGreaterThan(1000);}
   });
 });

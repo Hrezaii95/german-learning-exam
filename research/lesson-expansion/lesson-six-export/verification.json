@@ -1,0 +1,22 @@
+{
+  "base": "http://localhost:3210/german-learning-exam",
+  "lesson": 6,
+  "checks": [
+    "All lesson grammar concepts render",
+    "All verb paradigms render",
+    "All phrases render",
+    "Every source entry has a word card",
+    "Every quiz question advances and scores correctly",
+    "grammar hub follows Lesson 6",
+    "verbs hub follows Lesson 6",
+    "phrases hub follows Lesson 6",
+    "Selected lesson has original audio players",
+    "Listening transcripts are available",
+    "Accusative switchboard handles gender, negation and plural",
+    "All seven phone turns are reachable",
+    "Lesson fits phone width",
+    "Cheat sheet fits phone width",
+    "No browser exceptions: "
+  ],
+  "errors": []
+}

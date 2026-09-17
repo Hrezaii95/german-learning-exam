@@ -36,12 +36,23 @@ const StudyContext = createContext<StudyContextValue | null>(null);
 export const useStudy = () => useContext(StudyContext);
 
 export function StudyProvider({
-  dictionary,
+  dictionary: suppliedDictionary,
   children,
 }: {
-  dictionary: DictionaryEntry[];
+  dictionary?: DictionaryEntry[];
   children: ReactNode;
 }) {
+  const [dictionary,setDictionary]=useState<DictionaryEntry[]>(suppliedDictionary??[]);
+  const [dictionaryLoaded,setDictionaryLoaded]=useState(Boolean(suppliedDictionary));
+  const [dictionaryError,setDictionaryError]=useState("");
+  const [dictionaryAttempt,setDictionaryAttempt]=useState(0);
+  useEffect(()=>{
+    if(suppliedDictionary){setDictionary(suppliedDictionary);setDictionaryLoaded(true);return;}
+    let cancelled=false;
+    setDictionaryError("");
+    import("../../generated/study-dictionary.json").then(data=>{if(!cancelled){setDictionary(data.default as DictionaryEntry[]);setDictionaryLoaded(true);}}).catch(()=>{if(!cancelled)setDictionaryError("The dictionary could not load. Check your connection and try again.");});
+    return()=>{cancelled=true;};
+  },[suppliedDictionary,dictionaryAttempt]);
   const [state, setState] = useState<StudyState>(emptyStudy);
   const [ready, setReady] = useState(false);
   const [error, setError] = useState("");
@@ -158,8 +169,9 @@ export function StudyProvider({
   const matches = result.entries;
   return (
     <StudyContext.Provider
-      value={{ state, ready, error, update, lookup, dictionary }}
+      value={{ state, ready:ready&&dictionaryLoaded, error, update, lookup, dictionary }}
     >
+      {dictionaryError&&<aside role="alert" className="study-storage-error">{dictionaryError} <button type="button" onClick={()=>setDictionaryAttempt(n=>n+1)}>Retry dictionary</button></aside>}
       {children}
       <SelectionMeaning lookup={lookup} />
       <button
@@ -208,7 +220,8 @@ export function StudyProvider({
           />
         </label>
         <div aria-live="polite" className="study-dictionary-results">
-          {!key ? (
+          {!dictionaryLoaded&&<p role="status">{dictionaryError||"Loading your dictionary…"}{dictionaryError&&<button type="button" onClick={()=>setDictionaryAttempt(n=>n+1)}>Try again</button>}</p>}
+          {!dictionaryLoaded ? null : !key ? (
             <p className="muted">
               Tap a German word, or highlight a phrase or sentence and choose Meaning of selection.
             </p>
