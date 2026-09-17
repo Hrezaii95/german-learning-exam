@@ -62,12 +62,14 @@ export function studyWordCards(words:StudyWord[],lesson:number,source:string):Wo
               ? "Used in the plural in German."
               : "",
         },
+        ...(word.variants??[]).map(text=>({label:text.startsWith('das ')?'Neuter alternative':text.startsWith('der ')?'Masculine alternative':'Feminine alternative',meaning:word.en,singular:{text,label:'German alternative',tone:text.startsWith('das ')?'neuter' as const:text.startsWith('der ')?'male' as const:'female' as const,audio:null},plurals:[],usage:'Both articles are accepted; learn both forms.'})),
       ],
       pattern: [
         word.de,
+        ...(word.variants??[]),
         ...(word.plural && word.plural !== "plural only" ? [word.plural] : []),
       ],
-      tip: noun
+      tip: word.variants?.length?'Both article forms are accepted. Each form keeps its own gender colour.':noun
         ? "Recall the article together with the noun."
         : "Say the whole expression aloud.",
       examples: [{ de: word.example, en: word.translation, audio: null }],
@@ -80,7 +82,7 @@ export function studyWordCards(words:StudyWord[],lesson:number,source:string):Wo
       prompts: [
         {
           question: `How do you say ‘${word.en}’ in German?`,
-          answers: [word.de],
+          answers: [word.de,...(word.variants??[])],
           hint: noun ? "Include the article." : "Recall the expression.",
         },
         ...(word.plural && word.plural !== "plural only"
@@ -93,7 +95,7 @@ export function studyWordCards(words:StudyWord[],lesson:number,source:string):Wo
             ]
           : []),
       ],
-      searchText: `${word.de} ${word.en} ${word.plural} Lesson ${lesson}`,
+      searchText: `${word.de} ${(word.variants??[]).join(' ')} ${word.en} ${word.plural} Lesson ${lesson}`,
     };
   });
 }

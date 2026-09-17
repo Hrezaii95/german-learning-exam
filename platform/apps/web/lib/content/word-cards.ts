@@ -39,6 +39,7 @@ export function loadWordCards(): WordCardCatalog {
         if(existing){
           existing.title=mergeMeaning(existing.title,addition.title);
           for(const row of existing.rows){const added=addition.rows.find(r=>r.singular.text===row.singular.text);if(added)row.meaning=mergeMeaning(row.meaning,added.meaning);}
+          for(const row of addition.rows)if(!existing.rows.some(r=>r.singular.text===row.singular.text))existing.rows.push(row);
           existing.lessons=[...new Set([...existing.lessons,...addition.lessons])];
           existing.aliases=[...new Set([...existing.aliases,addition.path])];
           existing.sourceIds=[...new Set([...existing.sourceIds,...addition.sourceIds])];

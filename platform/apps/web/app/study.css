@@ -1338,13 +1338,17 @@
   }
   .book-top-tools > .study-inline-field select {
     flex: 1;
-    max-width: none;
+    min-width: 0;
+    max-width: 100%;
   }
   .book-chapter-title {
     align-items: flex-start;
+    flex-wrap: wrap;
   }
   .book-chapter-title > div {
     gap: 12px;
+    min-width: 0;
+    max-width: 100%;
   }
   .book-chapter-title h2 {
     font-size: 25px;

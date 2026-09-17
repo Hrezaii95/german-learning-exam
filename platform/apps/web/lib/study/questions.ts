@@ -25,6 +25,7 @@ export const questionWords:QuestionWord[]=[
   {id:"wessen",word:"Wessen?",meaning:"Whose?",cue:"Ownership: attach a name label to the object.",icon:"⌑",question:"Wessen Buch ist das?",translation:"Whose book is that?",answer:"Das ist Saras Buch.",answerMeaning:"That is Sara’s book.",lesson:null,family:"person"},
 ];
 export const questionBuilders=[
+  {id:"preferences",title:"Food preferences",lesson:9,w:["Was","magst","du?"],formal:["Was","mögen","Sie?"],yes:["Magst","du","Tee?"],yesFormal:["Mögen","Sie","Tee?"],meaning:"What do you like?",yesMeaning:"Do you like tea?",answer:"Ich mag Tee.",answerMeaning:"I like tea."},
   {id:"availability",title:"Make a plan",lesson:8,w:["Wann","hast","du Zeit?"],formal:["Wann","haben","Sie Zeit?"],yes:["Hast","du","am Samstag Zeit?"],yesFormal:["Haben","Sie","am Samstag Zeit?"],meaning:"When do you have time?",yesMeaning:"Do you have time on Saturday?",answer:"Am Samstag habe ich Zeit.",answerMeaning:"I have time on Saturday."},
   {id:"ability",title:"What you can do",lesson:7,w:["Was","kannst","du gut?"],formal:["Was","können","Sie gut?"],yes:["Kannst","du","gut schwimmen?"],yesFormal:["Können","Sie","gut schwimmen?"],meaning:"What can you do well?",yesMeaning:"Can you swim well?",answer:"Ich kann gut schwimmen.",answerMeaning:"I can swim well."},
   {id:"objects",title:"Name an object",lesson:5,w:["Was","ist","das?"],formal:["Was","ist","das?"],yes:["Ist","das","ein Buch?"],yesFormal:["Ist","das","ein Buch?"],meaning:"What is that?",yesMeaning:"Is that a book?",answer:"Das ist ein Buch.",answerMeaning:"That is a book."},
@@ -35,8 +36,8 @@ export const questionBuilders=[
   {id:"price",title:"The price",lesson:4,w:["Wie viel","kostet","der Stuhl?"],formal:["Wie viel","kostet","der Stuhl?"],yes:["Kostet","der Stuhl","59 Euro?"],yesFormal:["Kostet","der Stuhl","59 Euro?"],meaning:"How much does the chair cost?",yesMeaning:"Does the chair cost 59 euros?",answer:"Der Stuhl kostet 59 Euro.",answerMeaning:"The chair costs 59 euros."},
 ];
 export function questionWordLessons(word:QuestionWord):number[]{
-  const membership:Record<string,number[]>={wer:[1,3,7],was:[2,4,5,6,7],wie:[1,2,3,4,5],wo:[2,6],woher:[1,2,3],"wie-alt":[2,3],"wie-viel":[4,5,6],"wie-viele":[3,6],welche:[3,5,6]};
-  return membership[word.id]??(word.lesson?[word.lesson]:[1,2,3,4,5,6,7,8]);
+  const membership:Record<string,number[]>={wer:[1,3,7],was:[2,4,5,6,7,9],wie:[1,2,3,4,5],wo:[2,6],woher:[1,2,3],"wie-alt":[2,3],"wie-viel":[4,5,6,9],"wie-viele":[3,6],welche:[3,5,6]};
+  return membership[word.id]??(word.lesson?[word.lesson]:[1,2,3,4,5,6,7,8,9]);
 }
 export const questionReplyCases=[
   {question:"Kommst du aus dem Iran?",translation:"Are you from Iran?",yes:"Ja, ich komme aus dem Iran.",no:"Nein, ich komme aus Deutschland.",yesMeaning:"Yes, I come from Iran.",noMeaning:"No, I come from Germany.",cue:"An ordinary yes/no question: ja confirms it; nein rejects it."},

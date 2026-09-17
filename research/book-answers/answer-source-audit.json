@@ -1,10 +1,10 @@
 {
-  "answers": 124,
-  "pagesWithAnswers": 54,
+  "answers": 146,
+  "pagesWithAnswers": 66,
   "bySource": {
-    "coursebook-key": 105,
-    "workbook-key": 8,
-    "workbook-transcript": 11
+    "coursebook-key": 119,
+    "workbook-key": 12,
+    "workbook-transcript": 15
   },
   "sources": [
     {
@@ -24,5 +24,5 @@
       "sha256": "335bea7212f88574e05beaa3a96e269f41f2cd1cb7a27cfa00ffdb8ae3dd7a4e"
     }
   ],
-  "scope": "All entries in the supplied coursebook key for Lessons 1\u20138 and Magazines 1\u20132; coursebook quick-test answers in the appendix, p. 203; all Module 1\u20132 workbook skills-test answers; explicit responses in available Module 1\u20132 review and Lesson 7\u20138 and extra-practice transcripts."
+  "scope": "All entries in the supplied coursebook key for Lessons 1\u20139 and Magazines 1\u20133; coursebook quick-test answers in the appendix, p. 203; all Module 1\u20133 workbook skills-test answers; explicit responses in available Module 1\u20133 review and Lesson 7\u20139 and extra-practice transcripts."
 }

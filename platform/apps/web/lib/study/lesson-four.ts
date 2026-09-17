@@ -6,6 +6,7 @@ export type StudyWord = {
   category: string;
   example: string;
   translation: string;
+  variants?: string[];
 };
 const rows = [
   [
@@ -632,4 +633,5 @@ export const courseChapters = [
   {number:6,title:"Wir haben einen Termin.",topic:"Office, plurals, accusative & phone calls",kb:37,ab:34},
   {number:7,title:"Sie können super tanzen!",topic:"Hobbies, abilities & frequency",kb:47,ab:46},
   {number:8,title:"Ich habe leider keine Zeit.",topic:"Time, weekdays & making plans",kb:51,ab:50},
+  {number:9,title:"Ich mag Hamburger.",topic:"Food, preferences, ordering & compound nouns",kb:55,ab:54},
 ];

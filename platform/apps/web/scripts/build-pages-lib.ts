@@ -123,8 +123,9 @@ export function createPagesBuildController(
     for (const rel of DYNAMIC_PARAM_PAGES) {
       const bak = bakPath(rel);
       if (!existsSync(bak)) continue;
-      writeFileSync(filePath(rel), readFileSync(bak, "utf8"));
-      unlinkSync(bak);
+      // Replace the source atomically. Reopening it for truncation can fail on
+      // Windows while build/indexing readers still hold the old file handle.
+      renameSync(bak, filePath(rel));
       restored.push(rel);
       mutatedParamRels.delete(rel);
     }
@@ -213,8 +214,7 @@ export function createPagesBuildController(
           );
           continue;
         }
-        writeFileSync(src, bakText);
-        unlinkSync(bak);
+        renameSync(bak, src);
         paramsRestored.push(rel);
       }
     }

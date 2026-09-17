@@ -1,0 +1,1325 @@
+{
+  "number": 9,
+  "summary": "Talk about food preferences, order politely and build compound nouns. Practise mögen, essen, möchten and nehmen, then review Module 3.",
+  "words": [
+    {
+      "de": "mögen",
+      "en": "to like",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich mag Hamburger.",
+      "translation": "I like hamburgers.",
+      "id": "l9-moegen"
+    },
+    {
+      "de": "der Hamburger",
+      "en": "hamburger",
+      "plural": "die Hamburger",
+      "category": "Food",
+      "example": "Ich möchte einen Hamburger.",
+      "translation": "I would like a hamburger.",
+      "id": "l9-hamburger"
+    },
+    {
+      "de": "die Schokolade",
+      "en": "chocolate",
+      "plural": "",
+      "category": "Food",
+      "example": "Ich liebe Schokolade.",
+      "translation": "I love chocolate.",
+      "id": "l9-schokolade"
+    },
+    {
+      "de": "der Käse",
+      "en": "cheese",
+      "plural": "",
+      "category": "Food",
+      "example": "Ich mag keinen Käse.",
+      "translation": "I do not like cheese.",
+      "id": "l9-kaese"
+    },
+    {
+      "de": "der Salat",
+      "en": "salad",
+      "plural": "die Salate",
+      "category": "Food",
+      "example": "Ich nehme einen Salat.",
+      "translation": "I will have a salad.",
+      "id": "l9-salat"
+    },
+    {
+      "de": "der Kuchen",
+      "en": "cake",
+      "plural": "die Kuchen",
+      "category": "Food",
+      "example": "Der Kuchen ist lecker.",
+      "translation": "The cake is delicious.",
+      "id": "l9-kuchen"
+    },
+    {
+      "de": "die Suppe",
+      "en": "soup",
+      "plural": "die Suppen",
+      "category": "Food",
+      "example": "Ich möchte eine Suppe.",
+      "translation": "I would like a soup.",
+      "id": "l9-suppe"
+    },
+    {
+      "de": "der Apfel",
+      "en": "apple",
+      "plural": "die Äpfel",
+      "category": "Food",
+      "example": "Ich esse einen Apfel.",
+      "translation": "I am eating an apple.",
+      "id": "l9-apfel"
+    },
+    {
+      "de": "der Tee",
+      "en": "tea",
+      "plural": "die Tees",
+      "category": "Food",
+      "example": "Ich trinke gern Tee.",
+      "translation": "I like drinking tea.",
+      "id": "l9-tee"
+    },
+    {
+      "de": "die Orange",
+      "en": "orange",
+      "plural": "die Orangen",
+      "category": "Food",
+      "example": "Ich esse eine Orange.",
+      "translation": "I am eating an orange.",
+      "id": "l9-orange"
+    },
+    {
+      "de": "der Fisch",
+      "en": "fish",
+      "plural": "die Fische",
+      "category": "Food",
+      "example": "Ich esse gern Fisch.",
+      "translation": "I like eating fish.",
+      "id": "l9-fisch"
+    },
+    {
+      "de": "die Tomate",
+      "en": "tomato",
+      "plural": "die Tomaten",
+      "category": "Food",
+      "example": "Ich mag Tomaten.",
+      "translation": "I like tomatoes.",
+      "id": "l9-tomate"
+    },
+    {
+      "de": "das Brot",
+      "en": "bread",
+      "plural": "die Brote",
+      "category": "Food",
+      "example": "Ich esse Brot mit Käse.",
+      "translation": "I eat bread with cheese.",
+      "id": "l9-brot"
+    },
+    {
+      "de": "das Fleisch",
+      "en": "meat",
+      "plural": "",
+      "category": "Food",
+      "example": "Ich esse kein Fleisch.",
+      "translation": "I do not eat meat.",
+      "id": "l9-fleisch"
+    },
+    {
+      "de": "das Brötchen",
+      "en": "bread roll",
+      "plural": "die Brötchen",
+      "category": "Food",
+      "example": "Ich nehme ein Brötchen.",
+      "translation": "I will have a bread roll.",
+      "id": "l9-broetchen"
+    },
+    {
+      "de": "die Marmelade",
+      "en": "jam",
+      "plural": "die Marmeladen",
+      "category": "Food",
+      "example": "Ich esse gern Brot mit Marmelade.",
+      "translation": "I like eating bread with jam.",
+      "id": "l9-marmelade"
+    },
+    {
+      "de": "der Saft",
+      "en": "juice",
+      "plural": "die Säfte",
+      "category": "Food",
+      "example": "Ich möchte einen Saft.",
+      "translation": "I would like a juice.",
+      "id": "l9-saft"
+    },
+    {
+      "de": "zum Frühstück",
+      "en": "for breakfast",
+      "plural": "",
+      "category": "Food",
+      "example": "Zum Frühstück esse ich Müsli.",
+      "translation": "I eat muesli for breakfast.",
+      "id": "l9-zum-fruehstueck"
+    },
+    {
+      "de": "das Frühstück",
+      "en": "breakfast",
+      "plural": "",
+      "category": "Food",
+      "example": "Das Frühstück ist lecker.",
+      "translation": "The breakfast is delicious.",
+      "id": "l9-fruehstueck"
+    },
+    {
+      "de": "besonders",
+      "en": "especially",
+      "plural": "",
+      "category": "Adjectives",
+      "example": "Besonders gern mag ich Schokolade.",
+      "translation": "I especially like chocolate.",
+      "id": "l9-besonders"
+    },
+    {
+      "de": "Guten Appetit!",
+      "en": "Enjoy your meal!",
+      "plural": "",
+      "category": "Conversation",
+      "example": "Hier bitte, guten Appetit!",
+      "translation": "There you are, enjoy your meal!",
+      "id": "l9-guten-appetit"
+    },
+    {
+      "de": "hier bitte",
+      "en": "there you are",
+      "plural": "",
+      "category": "Conversation",
+      "example": "Hier bitte, Ihr Kaffee.",
+      "translation": "There you are, your coffee.",
+      "id": "l9-hier-bitte"
+    },
+    {
+      "de": "lecker",
+      "en": "delicious",
+      "plural": "",
+      "category": "Adjectives",
+      "example": "Die Suppe ist lecker.",
+      "translation": "The soup is delicious.",
+      "id": "l9-lecker"
+    },
+    {
+      "de": "essen",
+      "en": "to eat",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Was isst du gern?",
+      "translation": "What do you like eating?",
+      "id": "l9-essen"
+    },
+    {
+      "de": "der Ketchup",
+      "en": "ketchup (also das Ketchup)",
+      "plural": "",
+      "category": "Food",
+      "example": "Ich mag Ketchup.",
+      "translation": "I like ketchup.",
+      "id": "l9-ketchup",
+      "variants": [
+        "das Ketchup"
+      ]
+    },
+    {
+      "de": "der Witz",
+      "en": "joke",
+      "plural": "die Witze",
+      "category": "Conversation",
+      "example": "Das ist ein Witz.",
+      "translation": "That is a joke.",
+      "id": "l9-witz"
+    },
+    {
+      "de": "fit",
+      "en": "fit",
+      "plural": "",
+      "category": "Adjectives",
+      "example": "Ich bin fit.",
+      "translation": "I am fit.",
+      "id": "l9-fit"
+    },
+    {
+      "de": "intelligent",
+      "en": "intelligent",
+      "plural": "",
+      "category": "Adjectives",
+      "example": "Sie ist intelligent.",
+      "translation": "She is intelligent.",
+      "id": "l9-intelligent"
+    },
+    {
+      "de": "prima",
+      "en": "great",
+      "plural": "",
+      "category": "Adjectives",
+      "example": "Das ist prima!",
+      "translation": "That is great!",
+      "id": "l9-prima"
+    },
+    {
+      "de": "das Gedicht",
+      "en": "poem",
+      "plural": "die Gedichte",
+      "category": "Conversation",
+      "example": "Ich schreibe ein Gedicht.",
+      "translation": "I am writing a poem.",
+      "id": "l9-gedicht"
+    },
+    {
+      "de": "auf dem Tisch",
+      "en": "on the table",
+      "plural": "",
+      "category": "Food",
+      "example": "Das Brot ist auf dem Tisch.",
+      "translation": "The bread is on the table.",
+      "id": "l9-auf-dem-tisch"
+    },
+    {
+      "de": "trinken",
+      "en": "to drink",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Was möchtest du trinken?",
+      "translation": "What would you like to drink?",
+      "id": "l9-trinken"
+    },
+    {
+      "de": "das Abendessen",
+      "en": "dinner",
+      "plural": "die Abendessen",
+      "category": "Food",
+      "example": "Zum Abendessen esse ich Fisch.",
+      "translation": "I eat fish for dinner.",
+      "id": "l9-abendessen"
+    },
+    {
+      "de": "das Mittagessen",
+      "en": "lunch",
+      "plural": "die Mittagessen",
+      "category": "Food",
+      "example": "Zum Mittagessen esse ich Reis.",
+      "translation": "I eat rice for lunch.",
+      "id": "l9-mittagessen"
+    },
+    {
+      "de": "das Getränk",
+      "en": "drink",
+      "plural": "die Getränke",
+      "category": "Food",
+      "example": "Mein Lieblingsgetränk ist Tee.",
+      "translation": "My favourite drink is tea.",
+      "id": "l9-getraenk"
+    },
+    {
+      "de": "das Essen",
+      "en": "food / meal",
+      "plural": "die Essen",
+      "category": "Food",
+      "example": "Das Essen schmeckt gut.",
+      "translation": "The food tastes good.",
+      "id": "l9-essen-noun"
+    },
+    {
+      "de": "die Butter",
+      "en": "butter",
+      "plural": "",
+      "category": "Food",
+      "example": "Ich esse Brot mit Butter.",
+      "translation": "I eat bread with butter.",
+      "id": "l9-butter"
+    },
+    {
+      "de": "der Schinken",
+      "en": "ham",
+      "plural": "die Schinken",
+      "category": "Food",
+      "example": "Ich möchte ein Brötchen mit Schinken.",
+      "translation": "I would like a bread roll with ham.",
+      "id": "l9-schinken"
+    },
+    {
+      "de": "das Ei",
+      "en": "egg",
+      "plural": "die Eier",
+      "category": "Food",
+      "example": "Ich esse ein Ei zum Frühstück.",
+      "translation": "I eat an egg for breakfast.",
+      "id": "l9-ei"
+    },
+    {
+      "de": "das Müsli",
+      "en": "muesli",
+      "plural": "die Müslis",
+      "category": "Food",
+      "example": "Ich esse gern Müsli.",
+      "translation": "I like eating muesli.",
+      "id": "l9-muesli"
+    },
+    {
+      "de": "die Milch",
+      "en": "milk",
+      "plural": "",
+      "category": "Food",
+      "example": "Ich trinke Milch.",
+      "translation": "I drink milk.",
+      "id": "l9-milch"
+    },
+    {
+      "de": "wünschen",
+      "en": "to wish / want",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Sie wünschen?",
+      "translation": "What would you like?",
+      "id": "l9-wuenschen"
+    },
+    {
+      "de": "die Tasse",
+      "en": "cup",
+      "plural": "die Tassen",
+      "category": "Food",
+      "example": "Eine Tasse Kaffee, bitte.",
+      "translation": "A cup of coffee, please.",
+      "id": "l9-tasse"
+    },
+    {
+      "de": "möchten",
+      "en": "would like",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich möchte einen Kaffee.",
+      "translation": "I would like a coffee.",
+      "id": "l9-moechten"
+    },
+    {
+      "de": "der Nusskuchen",
+      "en": "nut cake",
+      "plural": "die Nusskuchen",
+      "category": "Food",
+      "example": "Ich mag keinen Nusskuchen.",
+      "translation": "I do not like nut cake.",
+      "id": "l9-nusskuchen"
+    },
+    {
+      "de": "der Apfelkuchen",
+      "en": "apple cake",
+      "plural": "die Apfelkuchen",
+      "category": "Food",
+      "example": "Ich nehme einen Apfelkuchen.",
+      "translation": "I will have an apple cake.",
+      "id": "l9-apfelkuchen"
+    },
+    {
+      "de": "der Schokoladenkuchen",
+      "en": "chocolate cake",
+      "plural": "die Schokoladenkuchen",
+      "category": "Food",
+      "example": "Ich möchte einen Schokoladenkuchen.",
+      "translation": "I would like a chocolate cake.",
+      "id": "l9-schokoladenkuchen"
+    },
+    {
+      "de": "schade",
+      "en": "what a pity",
+      "plural": "",
+      "category": "Conversation",
+      "example": "Schade, wir haben keinen Kuchen mehr.",
+      "translation": "What a pity, we have no cake left.",
+      "id": "l9-schade"
+    },
+    {
+      "de": "na gut",
+      "en": "all right then",
+      "plural": "",
+      "category": "Conversation",
+      "example": "Na gut, dann nehme ich einen Tee.",
+      "translation": "All right then, I will have a tea.",
+      "id": "l9-na-gut"
+    },
+    {
+      "de": "nehmen",
+      "en": "to take / have (when ordering)",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Was nimmst du?",
+      "translation": "What will you have?",
+      "id": "l9-nehmen"
+    },
+    {
+      "de": "unser",
+      "en": "our",
+      "plural": "",
+      "category": "Grammar",
+      "example": "Unser Nusskuchen ist sehr gut.",
+      "translation": "Our nut cake is very good.",
+      "id": "l9-unser"
+    },
+    {
+      "de": "der Gast",
+      "en": "guest",
+      "plural": "die Gäste",
+      "category": "People",
+      "example": "Der Gast möchte einen Kaffee.",
+      "translation": "The guest would like a coffee.",
+      "id": "l9-gast"
+    },
+    {
+      "de": "die Speisekarte",
+      "en": "menu (list of dishes)",
+      "plural": "die Speisekarten",
+      "category": "Food",
+      "example": "Die Speisekarte, bitte.",
+      "translation": "The menu, please.",
+      "id": "l9-speisekarte"
+    },
+    {
+      "de": "sorgenfrei",
+      "en": "free of worry",
+      "plural": "",
+      "category": "Adjectives",
+      "example": "Ich bin sorgenfrei.",
+      "translation": "I am free of worry.",
+      "id": "l9-sorgenfrei"
+    },
+    {
+      "de": "der Apfelsaft",
+      "en": "apple juice",
+      "plural": "die Apfelsäfte",
+      "category": "Food",
+      "example": "Ich trinke gern Apfelsaft.",
+      "translation": "I like drinking apple juice.",
+      "id": "l9-apfelsaft"
+    },
+    {
+      "de": "der Orangensaft",
+      "en": "orange juice",
+      "plural": "die Orangensäfte",
+      "category": "Food",
+      "example": "Einen Orangensaft, bitte.",
+      "translation": "An orange juice, please.",
+      "id": "l9-orangensaft"
+    },
+    {
+      "de": "das Wasser",
+      "en": "water",
+      "plural": "",
+      "category": "Food",
+      "example": "Ich möchte Wasser.",
+      "translation": "I would like water.",
+      "id": "l9-wasser"
+    },
+    {
+      "de": "die Speise",
+      "en": "dish / food",
+      "plural": "die Speisen",
+      "category": "Food",
+      "example": "Die Speisen sind lecker.",
+      "translation": "The dishes are delicious.",
+      "id": "l9-speise"
+    },
+    {
+      "de": "die Vorspeise",
+      "en": "starter",
+      "plural": "die Vorspeisen",
+      "category": "Food",
+      "example": "Ich nehme eine Vorspeise.",
+      "translation": "I will have a starter.",
+      "id": "l9-vorspeise"
+    },
+    {
+      "de": "der Tomatensalat",
+      "en": "tomato salad",
+      "plural": "die Tomatensalate",
+      "category": "Food",
+      "example": "Der Tomatensalat schmeckt gut.",
+      "translation": "The tomato salad tastes good.",
+      "id": "l9-tomatensalat"
+    },
+    {
+      "de": "die Kartoffel",
+      "en": "potato",
+      "plural": "die Kartoffeln",
+      "category": "Food",
+      "example": "Ich esse gern Kartoffeln.",
+      "translation": "I like eating potatoes.",
+      "id": "l9-kartoffel"
+    },
+    {
+      "de": "das Würstchen",
+      "en": "sausage",
+      "plural": "die Würstchen",
+      "category": "Food",
+      "example": "Ich nehme ein Würstchen.",
+      "translation": "I will have a sausage.",
+      "id": "l9-wuerstchen"
+    },
+    {
+      "de": "das Hauptgericht",
+      "en": "main course",
+      "plural": "die Hauptgerichte",
+      "category": "Food",
+      "example": "Als Hauptgericht nehme ich Fisch.",
+      "translation": "I will have fish as my main course.",
+      "id": "l9-hauptgericht"
+    },
+    {
+      "de": "die Pommes frites",
+      "en": "fries / chips",
+      "plural": "plural only",
+      "category": "Food",
+      "example": "Ich liebe Pommes frites.",
+      "translation": "I love fries.",
+      "id": "l9-pommes-frites"
+    },
+    {
+      "de": "die Nudel",
+      "en": "noodle / pasta",
+      "plural": "die Nudeln",
+      "category": "Food",
+      "example": "Ich esse gern Nudeln.",
+      "translation": "I like eating pasta.",
+      "id": "l9-nudel"
+    },
+    {
+      "de": "die Soße",
+      "en": "sauce",
+      "plural": "die Soßen",
+      "category": "Food",
+      "example": "Die Soße ist lecker.",
+      "translation": "The sauce is delicious.",
+      "id": "l9-sosse"
+    },
+    {
+      "de": "das Huhn",
+      "en": "chicken",
+      "plural": "die Hühner",
+      "category": "Food",
+      "example": "Ich möchte Huhn mit Reis.",
+      "translation": "I would like chicken with rice.",
+      "id": "l9-huhn"
+    },
+    {
+      "de": "der Reis",
+      "en": "rice",
+      "plural": "",
+      "category": "Food",
+      "example": "Ich esse gern Reis.",
+      "translation": "I like eating rice.",
+      "id": "l9-reis"
+    },
+    {
+      "de": "das Dessert",
+      "en": "dessert",
+      "plural": "die Desserts",
+      "category": "Food",
+      "example": "Möchtest du ein Dessert?",
+      "translation": "Would you like a dessert?",
+      "id": "l9-dessert"
+    },
+    {
+      "de": "das Eis",
+      "en": "ice cream",
+      "plural": "",
+      "category": "Food",
+      "example": "Ein Eis, bitte.",
+      "translation": "An ice cream, please.",
+      "id": "l9-eis"
+    },
+    {
+      "de": "die Vanille",
+      "en": "vanilla",
+      "plural": "",
+      "category": "Food",
+      "example": "Ich mag Vanille.",
+      "translation": "I like vanilla.",
+      "id": "l9-vanille"
+    },
+    {
+      "de": "die Erdbeere",
+      "en": "strawberry",
+      "plural": "die Erdbeeren",
+      "category": "Food",
+      "example": "Ich esse gern Erdbeeren.",
+      "translation": "I like eating strawberries.",
+      "id": "l9-erdbeere"
+    },
+    {
+      "de": "die Kugel",
+      "en": "scoop / ball",
+      "plural": "die Kugeln",
+      "category": "Food",
+      "example": "Eine Kugel Eis, bitte.",
+      "translation": "One scoop of ice cream, please.",
+      "id": "l9-kugel"
+    },
+    {
+      "de": "die Portion",
+      "en": "portion",
+      "plural": "die Portionen",
+      "category": "Food",
+      "example": "Eine Portion Pommes, bitte.",
+      "translation": "A portion of fries, please.",
+      "id": "l9-portion"
+    },
+    {
+      "de": "die Sahne",
+      "en": "cream",
+      "plural": "",
+      "category": "Food",
+      "example": "Ich nehme einen Kuchen mit Sahne.",
+      "translation": "I will have a cake with cream.",
+      "id": "l9-sahne"
+    },
+    {
+      "de": "das Obst",
+      "en": "fruit",
+      "plural": "",
+      "category": "Food",
+      "example": "Ich esse jeden Tag Obst.",
+      "translation": "I eat fruit every day.",
+      "id": "l9-obst"
+    },
+    {
+      "de": "das Stück",
+      "en": "piece",
+      "plural": "die Stücke",
+      "category": "Food",
+      "example": "Ein Stück Kuchen, bitte.",
+      "translation": "A piece of cake, please.",
+      "id": "l9-stueck"
+    },
+    {
+      "de": "die Zitrone",
+      "en": "lemon",
+      "plural": "die Zitronen",
+      "category": "Food",
+      "example": "Ich trinke Tee mit Zitrone.",
+      "translation": "I drink tea with lemon.",
+      "id": "l9-zitrone"
+    },
+    {
+      "de": "der Zitronenkuchen",
+      "en": "lemon cake",
+      "plural": "die Zitronenkuchen",
+      "category": "Food",
+      "example": "Ich mag Zitronenkuchen.",
+      "translation": "I like lemon cake.",
+      "id": "l9-zitronenkuchen"
+    },
+    {
+      "de": "der Nachtisch",
+      "en": "dessert",
+      "plural": "",
+      "category": "Food",
+      "example": "Was möchtest du zum Nachtisch?",
+      "translation": "What would you like for dessert?",
+      "id": "l9-nachtisch"
+    },
+    {
+      "de": "perfekt",
+      "en": "perfect",
+      "plural": "",
+      "category": "Adjectives",
+      "example": "Das Menü ist perfekt.",
+      "translation": "The set meal is perfect.",
+      "id": "l9-perfekt"
+    },
+    {
+      "de": "das Menü",
+      "en": "set meal / menu",
+      "plural": "die Menüs",
+      "category": "Food",
+      "example": "Ich nehme das Menü.",
+      "translation": "I will have the set meal.",
+      "id": "l9-menue"
+    },
+    {
+      "de": "schmecken",
+      "en": "to taste",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Das schmeckt gut.",
+      "translation": "That tastes good.",
+      "id": "l9-schmecken"
+    },
+    {
+      "de": "die Stadt",
+      "en": "city / town",
+      "plural": "die Städte",
+      "category": "Places",
+      "example": "Ich wohne in der Stadt.",
+      "translation": "I live in the city.",
+      "id": "l9-stadt"
+    },
+    {
+      "de": "der Kaffee",
+      "en": "coffee",
+      "plural": "die Kaffees",
+      "category": "Food",
+      "example": "Ich trinke gern Kaffee.",
+      "translation": "I like drinking coffee.",
+      "id": "l9-kaffee"
+    },
+    {
+      "de": "die Nuss",
+      "en": "nut",
+      "plural": "die Nüsse",
+      "category": "Food",
+      "example": "Ich mag keine Nüsse.",
+      "translation": "I do not like nuts.",
+      "id": "l9-nuss"
+    },
+    {
+      "de": "das Schinkenbrötchen",
+      "en": "ham roll",
+      "plural": "die Schinkenbrötchen",
+      "category": "Food",
+      "example": "Ich nehme ein Schinkenbrötchen.",
+      "translation": "I will have a ham roll.",
+      "id": "l9-schinkenbroetchen"
+    },
+    {
+      "de": "die Tomatensuppe",
+      "en": "tomato soup",
+      "plural": "die Tomatensuppen",
+      "category": "Food",
+      "example": "Eine Tomatensuppe, bitte.",
+      "translation": "A tomato soup, please.",
+      "id": "l9-tomatensuppe"
+    },
+    {
+      "de": "der Käsekuchen",
+      "en": "cheesecake",
+      "plural": "die Käsekuchen",
+      "category": "Food",
+      "example": "Ich möchte einen Käsekuchen.",
+      "translation": "I would like a cheesecake.",
+      "id": "l9-kaesekuchen"
+    },
+    {
+      "de": "das Schinkenbrot",
+      "en": "ham sandwich",
+      "plural": "die Schinkenbrote",
+      "category": "Food",
+      "example": "Ich esse ein Schinkenbrot.",
+      "translation": "I am eating a ham sandwich.",
+      "id": "l9-schinkenbrot"
+    },
+    {
+      "de": "Ich auch.",
+      "en": "Me too.",
+      "plural": "",
+      "category": "Conversation",
+      "example": "Ich mag Tee. – Ich auch.",
+      "translation": "I like tea. – Me too.",
+      "id": "l9-ich-auch"
+    },
+    {
+      "de": "Ich nicht.",
+      "en": "I do not.",
+      "plural": "",
+      "category": "Conversation",
+      "example": "Ich mag Käse. – Ich nicht.",
+      "translation": "I like cheese. – I do not.",
+      "id": "l9-ich-nicht"
+    },
+    {
+      "de": "Ich schon.",
+      "en": "I do (contrasting a negative statement).",
+      "plural": "",
+      "category": "Conversation",
+      "example": "Ich mag keinen Käse. – Ich schon.",
+      "translation": "I do not like cheese. – I do.",
+      "id": "l9-ich-schon"
+    },
+    {
+      "de": "Ich auch nicht.",
+      "en": "Me neither.",
+      "plural": "",
+      "category": "Conversation",
+      "example": "Ich mag keinen Fisch. – Ich auch nicht.",
+      "translation": "I do not like fish. – Me neither.",
+      "id": "l9-ich-auch-nicht"
+    },
+    {
+      "de": "der Hunger",
+      "en": "hunger",
+      "plural": "",
+      "category": "Food",
+      "example": "Ich habe Hunger.",
+      "translation": "I am hungry.",
+      "id": "l9-hunger"
+    },
+    {
+      "de": "das Gemüse",
+      "en": "vegetables",
+      "plural": "",
+      "category": "Food",
+      "example": "Ich esse gern Gemüse.",
+      "translation": "I like eating vegetables.",
+      "id": "l9-gemuese"
+    },
+    {
+      "de": "der Honig",
+      "en": "honey",
+      "plural": "",
+      "category": "Food",
+      "example": "Ich esse Brot mit Honig.",
+      "translation": "I eat bread with honey.",
+      "id": "l9-honig"
+    },
+    {
+      "de": "das Rezept",
+      "en": "recipe",
+      "plural": "die Rezepte",
+      "category": "Food",
+      "example": "Das Rezept ist einfach.",
+      "translation": "The recipe is simple.",
+      "id": "l9-rezept"
+    },
+    {
+      "de": "die Küche",
+      "en": "kitchen",
+      "plural": "die Küchen",
+      "category": "Food",
+      "example": "Ich koche in der Küche.",
+      "translation": "I cook in the kitchen.",
+      "id": "l9-kueche"
+    },
+    {
+      "de": "der Garten",
+      "en": "garden",
+      "plural": "die Gärten",
+      "category": "Places",
+      "example": "Ich habe einen Garten.",
+      "translation": "I have a garden.",
+      "id": "l9-garten"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "l9-like",
+      "title": "Like food; enjoy eating it",
+      "de": "Ich mag Käse. = Ich esse gern Käse.",
+      "en": "Mögen expresses liking. Essen or trinken + gern expresses enjoying the activity. For general food preferences, mass nouns and plural nouns often have no article: Käse, Brot, Tomaten.",
+      "examples": [
+        "Ich mag Schokolade.",
+        "Ich esse gern Schokolade.",
+        "Ich trinke gern Kaffee."
+      ],
+      "source": "KB55-56; AB54-55"
+    },
+    {
+      "id": "l9-negation",
+      "title": "Food after mögen takes the accusative",
+      "de": "keinen Käse · kein Fleisch · keine Suppe · keine Tomaten",
+      "en": "For these general negative food preferences, use kein. Masculine accusative is keinen; neuter kein; feminine and plural keine. With essen/trinken gern, negate the enjoyment with nicht gern.",
+      "examples": [
+        "Ich mag keinen Fisch.",
+        "Ich mag kein Fleisch.",
+        "Ich esse nicht gern Fisch."
+      ],
+      "source": "KB55-56; AB54-55"
+    },
+    {
+      "id": "l9-replies",
+      "title": "Four short replies, two different starting points",
+      "de": "Ich auch. · Ich nicht. · Ich schon. · Ich auch nicht.",
+      "en": "After a positive statement: Ich auch agrees; Ich nicht disagrees. After a negative statement: Ich auch nicht agrees; Ich schon disagrees. Schon here means that you do like it, despite the other speaker not liking it.",
+      "examples": [
+        "Ich mag Tee. – Ich auch.",
+        "Ich mag Käse. – Ich nicht.",
+        "Ich mag keinen Käse. – Ich schon.",
+        "Ich mag keinen Fisch. – Ich auch nicht."
+      ],
+      "source": "KB55,61; AB54"
+    },
+    {
+      "id": "l9-irregular",
+      "title": "Learn mögen, essen and nehmen as six forms",
+      "de": "mag / magst · esse / isst · nehme / nimmst",
+      "en": "Mögen changes ö to a in the singular: mag, magst, mag. Essen changes e to i in du and er/sie/es: both use isst. Nehmen changes to nimmst/nimmt and loses h in these forms. The plural returns to mögen, essen and nehmen patterns.",
+      "examples": [
+        "Magst du Salat?",
+        "Was isst du gern?",
+        "Was nimmst du?"
+      ],
+      "source": "KB56-57; AB55-56"
+    },
+    {
+      "id": "l9-order",
+      "title": "Möchte is a polite wish, not a preference",
+      "de": "Ich mag Kaffee. ≠ Ich möchte einen Kaffee.",
+      "en": "Ich mag Kaffee says that you like coffee. Ich möchte einen Kaffee requests a coffee now. Learn möchte, möchtest, möchte, möchten, möchtet, möchten. These are polite forms of mögen, commonly taught together as möchten. Ich nehme … means I will have … when ordering.",
+      "examples": [
+        "Ich möchte eine Suppe.",
+        "Möchten Sie einen Tee?",
+        "Dann nehme ich einen Salat."
+      ],
+      "source": "KB57; AB56-57"
+    },
+    {
+      "id": "l9-portion",
+      "title": "Order a serving with its own article",
+      "de": "eine Tasse Kaffee · ein Stück Kuchen · eine Portion Pommes",
+      "en": "The container or portion controls its article: die Tasse → eine Tasse, das Stück → ein Stück, die Portion → eine Portion. Coffee in general has no article in Ich mag Kaffee; einen Kaffee in an order means a serving of coffee.",
+      "examples": [
+        "Eine Tasse Kaffee, bitte.",
+        "Ich möchte ein Stück Kuchen.",
+        "Eine Portion Pommes, bitte."
+      ],
+      "source": "KB57,166"
+    },
+    {
+      "id": "l9-compounds",
+      "title": "The last noun chooses the gender",
+      "de": "die Nuss + der Kuchen → der Nusskuchen",
+      "en": "The final noun gives a compound its article and basic meaning. A Nusskuchen is a kind of Kuchen, so it is masculine. Learn the joining form too: Schokolade becomes Schokoladen-; Orange becomes Orangen-. The first part does not choose the final article.",
+      "examples": [
+        "der Apfel + der Saft → der Apfelsaft",
+        "die Tomate + die Suppe → die Tomatensuppe",
+        "der Schinken + das Brötchen → das Schinkenbrötchen"
+      ],
+      "source": "KB58; AB57"
+    },
+    {
+      "id": "l9-restaurant",
+      "title": "Keep a restaurant conversation going",
+      "de": "Sie wünschen? → Einen Salat, bitte. → Gern.",
+      "en": "State what you would like. If a dish is no longer available, you may hear Wir haben keinen … mehr. Answer Schade, dann nehme ich … with an alternative, or Nein, danke. Guten Appetit wishes someone enjoyment of their meal.",
+      "examples": [
+        "Sie wünschen?",
+        "Tut mir leid, wir haben keinen Apfelkuchen mehr.",
+        "Schade, dann nehme ich einen Nusskuchen.",
+        "Guten Appetit!"
+      ],
+      "source": "KB57,166; AB57,91"
+    }
+  ],
+  "verbs": [
+    {
+      "verb": "mögen",
+      "meaning": "to like",
+      "forms": [
+        "mag",
+        "magst",
+        "mag",
+        "mögen",
+        "mögt",
+        "mögen"
+      ],
+      "tip": "Singular ö → a. Ich and er/sie/es both use mag."
+    },
+    {
+      "verb": "essen",
+      "meaning": "to eat",
+      "forms": [
+        "esse",
+        "isst",
+        "isst",
+        "essen",
+        "esst",
+        "essen"
+      ],
+      "tip": "Du and er/sie/es share isst. Ihr uses esst."
+    },
+    {
+      "verb": "trinken",
+      "meaning": "to drink",
+      "forms": [
+        "trinke",
+        "trinkst",
+        "trinkt",
+        "trinken",
+        "trinkt",
+        "trinken"
+      ],
+      "tip": "Regular present tense. Ich trinke gern Tee."
+    },
+    {
+      "verb": "möchten",
+      "meaning": "would like",
+      "forms": [
+        "möchte",
+        "möchtest",
+        "möchte",
+        "möchten",
+        "möchtet",
+        "möchten"
+      ],
+      "tip": "Polite forms of mögen, taught as a pattern: ich möchte, er möchte (no final t)."
+    },
+    {
+      "verb": "nehmen",
+      "meaning": "to take / have when ordering",
+      "forms": [
+        "nehme",
+        "nimmst",
+        "nimmt",
+        "nehmen",
+        "nehmt",
+        "nehmen"
+      ],
+      "tip": "Du nimmst and er/sie/es nimmt change e to i and drop h."
+    },
+    {
+      "verb": "wünschen",
+      "meaning": "to wish / want",
+      "forms": [
+        "wünsche",
+        "wünschst",
+        "wünscht",
+        "wünschen",
+        "wünscht",
+        "wünschen"
+      ],
+      "tip": "Sie wünschen? is a polite restaurant prompt."
+    },
+    {
+      "verb": "schmecken",
+      "meaning": "to taste",
+      "forms": [
+        "schmecke",
+        "schmeckst",
+        "schmeckt",
+        "schmecken",
+        "schmeckt",
+        "schmecken"
+      ],
+      "tip": "Food is the subject: Der Kuchen schmeckt gut."
+    },
+    {
+      "verb": "lieben",
+      "meaning": "to love",
+      "forms": [
+        "liebe",
+        "liebst",
+        "liebt",
+        "lieben",
+        "liebt",
+        "lieben"
+      ],
+      "tip": "Ich liebe Schokolade expresses a strong preference."
+    },
+    {
+      "verb": "haben",
+      "meaning": "to have",
+      "forms": [
+        "habe",
+        "hast",
+        "hat",
+        "haben",
+        "habt",
+        "haben"
+      ],
+      "tip": "Wir haben keinen Kuchen mehr: we have no cake left."
+    },
+    {
+      "verb": "brauchen",
+      "meaning": "to need",
+      "forms": [
+        "brauche",
+        "brauchst",
+        "braucht",
+        "brauchen",
+        "braucht",
+        "brauchen"
+      ],
+      "tip": "Ich brauche keinen Salat uses accusative keinen."
+    }
+  ],
+  "phrases": [
+    {
+      "de": "Ich mag Hamburger.",
+      "en": "I like hamburgers."
+    },
+    {
+      "de": "Ich mag keinen Käse.",
+      "en": "I do not like cheese."
+    },
+    {
+      "de": "Ich esse gern Fisch.",
+      "en": "I like eating fish."
+    },
+    {
+      "de": "Ich trinke gern Tee.",
+      "en": "I like drinking tea."
+    },
+    {
+      "de": "Ich auch.",
+      "en": "Me too."
+    },
+    {
+      "de": "Ich nicht.",
+      "en": "I do not."
+    },
+    {
+      "de": "Ich schon.",
+      "en": "I do (contrasting a negative statement)."
+    },
+    {
+      "de": "Ich auch nicht.",
+      "en": "Me neither."
+    },
+    {
+      "de": "Was isst du gern zum Frühstück?",
+      "en": "What do you like eating for breakfast?"
+    },
+    {
+      "de": "Zum Frühstück esse ich gern Müsli.",
+      "en": "I like eating muesli for breakfast."
+    },
+    {
+      "de": "Guten Appetit!",
+      "en": "Enjoy your meal!"
+    },
+    {
+      "de": "Hier bitte.",
+      "en": "There you are."
+    },
+    {
+      "de": "Sie wünschen?",
+      "en": "What would you like?"
+    },
+    {
+      "de": "Eine Tasse Kaffee, bitte.",
+      "en": "A cup of coffee, please."
+    },
+    {
+      "de": "Ich möchte einen Salat.",
+      "en": "I would like a salad."
+    },
+    {
+      "de": "Was nimmst du?",
+      "en": "What will you have?"
+    },
+    {
+      "de": "Tut mir leid, wir haben keinen Apfelkuchen mehr.",
+      "en": "I am sorry, we have no apple cake left."
+    },
+    {
+      "de": "Schade, dann nehme ich einen Nusskuchen.",
+      "en": "What a pity, then I will have a nut cake."
+    },
+    {
+      "de": "Nein, danke.",
+      "en": "No, thank you."
+    },
+    {
+      "de": "Das schmeckt gut.",
+      "en": "That tastes good."
+    }
+  ],
+  "quiz": [
+    {
+      "q": "Du ___ gern Fisch.",
+      "options": [
+        "isst",
+        "esst",
+        "esse"
+      ],
+      "answer": "isst",
+      "why": "Essen changes its vowel with du and er/sie/es: isst."
+    },
+    {
+      "q": "Ich ___ Schokolade.",
+      "options": [
+        "mag",
+        "magst",
+        "mögt"
+      ],
+      "answer": "mag",
+      "why": "Ich and er/sie/es use mag."
+    },
+    {
+      "q": "Ich möchte ___ Salat.",
+      "options": [
+        "einen",
+        "ein",
+        "eine"
+      ],
+      "answer": "einen",
+      "why": "Der Salat becomes einen Salat in the accusative."
+    },
+    {
+      "q": "Ich mag ___ Fleisch.",
+      "options": [
+        "kein",
+        "keinen",
+        "keine"
+      ],
+      "answer": "kein",
+      "why": "Das Fleisch is neuter: kein Fleisch."
+    },
+    {
+      "q": "Ich mag ___ Tomaten.",
+      "options": [
+        "keine",
+        "kein",
+        "keinen"
+      ],
+      "answer": "keine",
+      "why": "Plural negative nouns take keine."
+    },
+    {
+      "q": "Ich mag Tee. You agree.",
+      "options": [
+        "Ich auch.",
+        "Ich schon.",
+        "Ich nicht."
+      ],
+      "answer": "Ich auch.",
+      "why": "Ich auch agrees with a positive statement."
+    },
+    {
+      "q": "Ich mag keinen Käse. You DO like cheese.",
+      "options": [
+        "Ich schon.",
+        "Ich auch.",
+        "Ich auch nicht."
+      ],
+      "answer": "Ich schon.",
+      "why": "Ich schon contrasts with the negative statement."
+    },
+    {
+      "q": "die Nuss + der Kuchen = …",
+      "options": [
+        "der Nusskuchen",
+        "die Nusskuchen",
+        "das Nusskuchen"
+      ],
+      "answer": "der Nusskuchen",
+      "why": "The last noun, Kuchen, supplies the article."
+    },
+    {
+      "q": "Was ___ du? (nehmen)",
+      "options": [
+        "nimmst",
+        "nehmst",
+        "nimmt"
+      ],
+      "answer": "nimmst",
+      "why": "Du nimmst changes the stem vowel and drops h."
+    },
+    {
+      "q": "A polite request for coffee now",
+      "options": [
+        "Ich möchte einen Kaffee.",
+        "Ich mag Kaffee.",
+        "Ich trinke gern Kaffee."
+      ],
+      "answer": "Ich möchte einen Kaffee.",
+      "why": "Möchte expresses the current request; mag expresses a preference."
+    }
+  ]
+}

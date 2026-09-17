@@ -1,0 +1,11 @@
+{
+  "base": "http://localhost:3210/german-learning-exam",
+  "checks": [
+    "coursebook-64: lesson selector and heading fit 320px",
+    "coursebook-55: lesson selector and heading fit 320px",
+    "workbook-60: lesson selector and heading fit 320px",
+    "coursebook-64: lesson selector and heading fit 390px",
+    "coursebook-55: lesson selector and heading fit 390px",
+    "workbook-60: lesson selector and heading fit 390px"
+  ]
+}

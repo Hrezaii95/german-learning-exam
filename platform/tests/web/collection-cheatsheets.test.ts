@@ -8,7 +8,7 @@ import {loadWordCards} from "../../apps/web/lib/content/word-cards";
 import {loadDictionary} from "../../apps/web/lib/study/catalog";
 import {lookupEntries} from "../../apps/web/lib/study/lookup";
 describe("four connected learning sheets",()=>{
-  it("provides eleven unique navigable sheets",()=>{expect(sheetLinks).toHaveLength(11);expect(new Set(sheetLinks.map(s=>s.href)).size).toBe(11);});
+  it("provides twelve unique navigable sheets",()=>{expect(sheetLinks).toHaveLength(12);expect(new Set(sheetLinks.map(s=>s.href)).size).toBe(12);});
   it("builds German numbers with the correct exceptions and place order",()=>{
     for(const [number,word] of [[0,"null"],[1,"eins"],[16,"sechzehn"],[17,"siebzehn"],[21,"einundzwanzig"],[30,"dreißig"],[60,"sechzig"],[70,"siebzig"],[101,"einhunderteins"],[452,"vierhundertzweiundfünfzig"],[1000,"eintausend"],[21000,"einundzwanzigtausend"],[1000000,"eine Million"]] as const)expect(germanNumber(number)).toBe(word);
     for(const number of [-1,1.5,1000001,NaN,Infinity])expect(()=>germanNumber(number)).toThrow(RangeError);

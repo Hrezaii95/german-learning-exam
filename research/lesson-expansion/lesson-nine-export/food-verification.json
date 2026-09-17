@@ -1,0 +1,23 @@
+{
+  "base": "http://localhost:3210/german-learning-exam",
+  "checks": [
+    "The complete food board, four article patterns and 100 word families render",
+    "Sentence selection opens its meaning and shares the phrase-deck review identity",
+    "A negative masculine order uses keinen",
+    "A serving of cheese takes the neuter article of Stück",
+    "The exact generated order plays file-backed speech",
+    "Changing to general preference restores the noun article",
+    "Plural fries use keine and the plural colour",
+    "Recall mode hides and reveals the translation",
+    "All four agreement and disagreement replies follow the preceding statement",
+    "The last noun passes its gender to the compound",
+    "Searching the phrase hub preserves the saved sentence identity",
+    "Saved selections survive navigation and can be deselected",
+    "Food tools fit a 390px phone",
+    "Food tools fit a 320px phone",
+    "The full vocabulary card includes both accepted articles",
+    "The question builder follows Lesson 9 food preferences",
+    "No browser exceptions"
+  ],
+  "errors": []
+}

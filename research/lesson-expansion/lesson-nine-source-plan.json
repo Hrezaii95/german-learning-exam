@@ -1,0 +1,76 @@
+{
+  "lesson": 9,
+  "title": "Ich mag Hamburger.",
+  "corePages": {
+    "coursebook": [
+      55,
+      56,
+      57,
+      58
+    ],
+    "workbook": [
+      54,
+      55,
+      56,
+      57
+    ]
+  },
+  "moduleThreePages": {
+    "coursebook": [
+      59,
+      60,
+      61,
+      62,
+      63,
+      64
+    ],
+    "workbook": [
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65
+    ]
+  },
+  "partnerPages": [
+    165,
+    166
+  ],
+  "extraWorkbookPage": {
+    "page": 91,
+    "lessons": [
+      9,
+      10
+    ]
+  },
+  "glossaryPdfPages": [
+    12,
+    13
+  ],
+  "concepts": [
+    "Food and drink with gender and plural",
+    "moegen versus essen/trinken gern",
+    "möchte forms for polite orders",
+    "nehmen and essen vowel changes",
+    "kein / keine / keinen with food",
+    "Ich auch / Ich nicht / Ich schon / Ich auch nicht",
+    "Compound nouns take the final nouns gender",
+    "Restaurant requests and alternatives"
+  ],
+  "cheatSheet": "Food, preferences and ordering: gender board, order builder, compound-noun builder and response contrast",
+  "sourceCautions": [
+    "Lesson 9 has exercise 10a: expand answer parser beyond one digit and parse full numeric prefix.",
+    "Coursebook Lesson 9 key is on PDF page 3.",
+    "Original base workbook CD2 filenames omit L before lesson number. Prefer a consistent edition without duplicates.",
+    "Module 3 original workbook recordings are disc 2 tracks 08-25, including exam practice 17-25; disc-aware module IDs and labels are needed.",
+    "Coursebook Module 3 listening uses tracks 2/14-2/16.",
+    "Glossary-source.txt ends after PDF12; glossary-later-source.txt supplies PDF13-17.",
+    "der/das Ketchup needs both valid genders represented. Do not silently force one article.",
+    "AB91 also contains Lesson10; preserve shared page lesson tags.",
+    "Check People sheet scope membership for Lesson8 Ruecken and Lesson9 Gast during navigation audit."
+  ],
+  "status": "Implemented and locally verified; deployment pending"
+}

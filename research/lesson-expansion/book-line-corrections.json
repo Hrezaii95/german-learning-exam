@@ -70,5 +70,49 @@
       "startsWith": "l\u001a",
       "text": ""
     }
+  ],
+  "coursebook-166": [
+    {
+      "startsWith": "Ha\u001cptgericht:",
+      "text": "Hauptgericht:"
+    },
+    {
+      "startsWith": "Nachtisch / Des\u0018ert:",
+      "text": "Nachtisch / Dessert:"
+    }
+  ],
+  "coursebook-165": [
+    {
+      "startsWith": "©g  das Frühstück",
+      "text": "das Frühstück"
+    },
+    {
+      "startsWith": "©g  das Mittagessen",
+      "text": "das Mittagessen"
+    },
+    {
+      "startsWith": "©g  das Abendessen",
+      "text": "das Abendessen"
+    }
+  ],
+  "coursebook-64": [
+    {
+      "startsWith": "©r  die Nuss\t",
+      "text": "  die Nuss\t"
+    },
+    {
+      "startsWith": "+  ©b  der Kuchen\t =  ©b  der Nusskuchen",
+      "text": "+    der Kuchen\t =    der Nusskuchen"
+    },
+    {
+      "startsWith": "!  ©r  die Schokolade\t +  ©b  der Kuchen\t =  ©b  der Schokoladenkuchen",
+      "text": "!    die Schokolade\t +    der Kuchen\t =    der Schokoladenkuchen"
+    }
+  ],
+  "workbook-54": [
+    {
+      "startsWith": "©r S U P P E",
+      "text": "Suppe"
+    }
   ]
 }

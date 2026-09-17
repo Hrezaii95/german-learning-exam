@@ -27,9 +27,9 @@ def add(page, exercise, text, source_page=1, model=False, source="coursebook-key
 
 doc = pymupdf.open(KEY)
 texts = [re.sub(r"[ \t]+\n", "\n", re.sub(r"(\w)-\n(\w)", r"\1\2", p.get_text())) for p in doc]
-starts = {1: (11, [1, 2, 4, 8]), 2: (15, [1, 2, 4, 6]), 3: (19, [1, 2, 5, 9]), 4: (29, [1, 3, 5, 8]), 5: (33, [1, 2, 5, 6]), 6: (37, [1, 2, 4, 9]), 7: (47, [1, 3, 8, 10]), 8: (51, [1, 2, 5, 7])}
+starts = {1: (11, [1, 2, 4, 8]), 2: (15, [1, 2, 4, 6]), 3: (19, [1, 2, 5, 9]), 4: (29, [1, 3, 5, 8]), 5: (33, [1, 2, 5, 6]), 6: (37, [1, 2, 4, 9]), 7: (47, [1, 3, 8, 10]), 8: (51, [1, 2, 5, 7]), 9: (55, [1, 3, 8, 10])}
 for lesson, (first, boundaries) in starts.items():
-    source_page = 1 if lesson < 4 else 2
+    source_page = 1 if lesson < 4 else 2 if lesson<=8 else 3
     text = texts[source_page-1].split(f"Lektion {lesson}\n", 1)[1]
     text = text.split(f"Lektion {lesson+1}\n", 1)[0].split("Magazin Lektionen", 1)[0]
     if lesson==8:
@@ -38,12 +38,15 @@ for lesson, (first, boundaries) in starts.items():
     if lesson==7:
         # These are the second and third speakers within 9b, not new exercises.
         text=re.sub(r"\n([23]) (?=Versicherungskaufmann|ein Start-up)",r" \1 ",text)
-    entries = list(re.finditer(r"^([1-9](?:[a-z](?:/[a-z])?)?|Schon fertig\?)\s+", text, re.M))
+    if lesson==2:
+        # Wrapped partner-table item 14 belongs to exercise 8a/b.
+        text=re.sub(r"\n14 (?=falsch:)", " 14 ", text)
+    entries = list(re.finditer(r"^([1-9]\d*(?:[a-z](?:/[a-z])?)?|Schon fertig\?)\s+", text, re.M))
     previous = 1
     for index, match in enumerate(entries):
         label = match[1]
         model = label == "Schon fertig?"
-        exercise = previous if model else int(label[0])
+        exercise = previous if model else int(re.match(r"\d+",label)[0])
         previous = exercise
         page = first + max(i for i, boundary in enumerate(boundaries) if exercise >= boundary)
         if lesson==8 and label=="4b":
@@ -98,6 +101,20 @@ add("workbook-48","Exercise 6a","1 c · 2 d · 3 a · 4 b",10,source="workbook-t
 
 add("workbook-90","Extra practice · Challenge 9","a 08:30 (example) · b 00:35 / 12:35 · c 06:30 / 18:30 · d 15:45 · e 01:45 / 13:45 · f 03:15 / 15:15",19,source="workbook-transcript",note="Track 2/56 gives these clock times. Alternatives retain the morning/evening ambiguity in colloquial times; item d explicitly says fifteen forty-five.")
 
+add("coursebook-60","Reading 1","Gartenprojekte in der Stadt",3)
+add("coursebook-60","Reading 2","Stadt: Großstadt, Geschäfte, Autos, Parkplätze.\nNatur: Pflanzen, Garten, Obst, Gemüse.",3)
+add("coursebook-61","Film","Anton: Kaffee. Sofia: Orangensaft, Kaffee, Tee.",3)
+add("coursebook-62","Listening","A: Sofia · B: Antonio · C: Maria",3)
+add("coursebook-62","Film","C · A · A · A · B · A",3)
+add("workbook-60","Skills test · Exercise 1","1b richtig · 2a falsch · 2b richtig · 2c falsch · 3a falsch · 3b richtig",118,source="workbook-key",note="The worked example is already marked on the exercise page.")
+add("workbook-60","Skills test · Exercise 2","1b oft · 1c gern · 2a günstig · 2b Apfelkuchen · 3a viel · 3b Gitarre",118,source="workbook-key")
+add("workbook-61","Skills test · Exercise 3","Hallo Hannes,\ndanke für deine E-Mail. Ich liebe Pommes. Aber ich mag keine Hamburger. Ich esse kein Fleisch. Ich trinke besonders gern Apfelsaft. Mein Hobby ist Fußball. Ich kann auch gut Basketball spielen.\nLiebe Grüße\nLucia",118,True,"workbook-key")
+add("workbook-61","Skills test · Exercise 4","1 Hallo, hier ist Julia.\n2 Gut, danke.\n3 Gute Idee! Wann denn?\n4 Nein, da kann ich leider nicht.\n5 Ja, da kann ich.\n6 Bis dann. Tschüs.",118,True,"workbook-key")
+add("workbook-58","Review · Exercise 3","Du kannst wirklich super Gitarre spielen!\nWow! – Du kannst ja super tanzen!\nDu kannst wirklich toll Fußball spielen!\nSie können ja super Tennis spielen.\nSie können aber gut malen!\nWow! – Du kannst wirklich super fotografieren!",11,source="workbook-transcript",note="Spoken responses after the example in track 2/08.")
+add("workbook-58","Review · Exercise 5","Gehen wir ins Theater?\nVielleicht können wir ins Schwimmbad gehen?\nGehen wir ins Café?\nVielleicht können wir in eine Ausstellung gehen?\nGehen wir ins Museum?\nVielleicht können wir in eine Bar gehen?\nGehen wir ins Restaurant?\nVielleicht können wir ins Konzert gehen?",11,source="workbook-transcript",note="Spoken responses after the examples in track 2/09; transcript spans PDF pages 11–12.")
+add("workbook-59","Review · Exercise 10","Salat mit Schinken · Tomatensuppe · Orangensaft · Schokoladenkuchen · eine Tasse Kaffee",12,source="workbook-transcript",note="Items explicitly ordered in track 2/10. Translate into your own language for this mediation exercise.")
+add("workbook-62","Work & careers · Exercise 1b","1 Praxis Dr. Müller: Mittwoch, 9 Uhr.\n2 Benjamin Kleuber, Kiri AG: Montag, 10 Uhr, telefonieren.\n3 Felix: Freitag, 11:30 Uhr, Julias Büro.\n4 Johanna Mai: Donnerstag, 13 Uhr, ihr Büro; Angebot für die ÖkoBank planen.",12,source="workbook-transcript",note="Appointment facts explicitly confirmed in tracks 2/13–2/16; transcript PDF pages 12–13.")
+
 quick = json.loads((ROOT / "research/book-answers/coursebook-quick-test-keys.json").read_text(encoding="utf-8"))
 for lesson, (first, _) in starts.items():
     for label, text in zip(["Vocabulary", "Grammar", "Communication"], quick["lessons"][str(lesson)]):
@@ -108,6 +125,6 @@ book = json.loads((GEN / "interactive-book.json").read_text(encoding="utf-8"))
 assert all(a["pageId"] in {p["id"] for p in book["pages"]} for a in answers)
 assert all(a["text"] and a["exercise"] for a in answers)
 (GEN / "book-answers.json").write_text(json.dumps(answers, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
-audit = {"answers": len(answers), "pagesWithAnswers": len({a["pageId"] for a in answers}), "bySource": {s: sum(a["source"] == s for a in answers) for s in sorted({a["source"] for a in answers})}, "sources": [{"file": p.relative_to(ROOT).as_posix(), "sha256": hashlib.sha256(p.read_bytes()).hexdigest()} for p in [KEY, AB, TRANSCRIPT, ROOT / quick["source"]]], "scope": "All entries in the supplied coursebook key for Lessons 1–8 and Magazines 1–2; coursebook quick-test answers in the appendix, p. 203; all Module 1–2 workbook skills-test answers; explicit responses in available Module 1–2 review and Lesson 7–8 and extra-practice transcripts."}
+audit = {"answers": len(answers), "pagesWithAnswers": len({a["pageId"] for a in answers}), "bySource": {s: sum(a["source"] == s for a in answers) for s in sorted({a["source"] for a in answers})}, "sources": [{"file": p.relative_to(ROOT).as_posix(), "sha256": hashlib.sha256(p.read_bytes()).hexdigest()} for p in [KEY, AB, TRANSCRIPT, ROOT / quick["source"]]], "scope": "All entries in the supplied coursebook key for Lessons 1–9 and Magazines 1–3; coursebook quick-test answers in the appendix, p. 203; all Module 1–3 workbook skills-test answers; explicit responses in available Module 1–3 review and Lesson 7–9 and extra-practice transcripts."}
 (ROOT / "research/book-answers/answer-source-audit.json").write_text(json.dumps(audit, indent=2)+"\n", encoding="utf-8")
 print(json.dumps(audit))

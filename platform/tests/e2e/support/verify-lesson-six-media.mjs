@@ -3,15 +3,15 @@ import {readFile,mkdir,writeFile} from 'node:fs/promises';
 import {resolve} from 'node:path';
 const base=(process.env.STUDY_TEST_BASE??'http://localhost:3210/german-learning-exam').replace(/\/$/,'');
 const lesson=Number(process.env.STUDY_TEST_LESSON??6);
-const name=({5:'five',6:'six',7:'seven',8:'eight'})[lesson];
-if(!name)throw Error('Choose an integrated lesson: 5, 6, 7 or 8');
+const name=({5:'five',6:'six',7:'seven',8:'eight',9:'nine'})[lesson];
+if(!name)throw Error('Choose an integrated lesson: 5, 6, 7, 8 or 9');
 const output=resolve('../research/lesson-expansion',process.env.STUDY_TEST_LABEL??'lesson-six-export');
 const book=JSON.parse(await readFile('apps/web/generated/interactive-book.json','utf8'));
 const speech=JSON.parse(await readFile('apps/web/generated/study-speech.json','utf8'));
 const unit=JSON.parse(await readFile(`apps/web/generated/lesson-${name}-study.json`,'utf8'));
 const hash=bytes=>createHash('sha256').update(bytes).digest('hex');
 const media=book.audio.filter(a=>a.lesson===lesson).map(a=>({path:a.src,sha256:a.sha256,kind:'original'}));
-const examples=lesson===8?['Es ist halb vier.','Es ist fünfzehn Uhr fünfunddreißig.','Am Sonntag gehen wir in einen Klub.']:lesson===7?['Ich kann sehr gut schwimmen.','Können Sie gar nicht Rad fahren?','Ich fahre nie Rad.']:lesson===6?['Ich brauche einen Kalender.','Ich brauche keine Mäuse.','Ich habe Passwörter.']:[];
+const examples=lesson===9?['Ich möchte ein Stück Käse.','Ich mag keine Pommes frites.','das Ketchup']:lesson===8?['Es ist halb vier.','Es ist fünfzehn Uhr fünfunddreißig.','Am Sonntag gehen wir in einen Klub.']:lesson===7?['Ich kann sehr gut schwimmen.','Können Sie gar nicht Rad fahren?','Ich fahre nie Rad.']:lesson===6?['Ich brauche einen Kalender.','Ich brauche keine Mäuse.','Ich habe Passwörter.']:[];
 for(const text of [...unit.phrases.map(p=>p.de),...examples]){
  const path=speech[text];if(!path)throw Error(`Missing speech: ${text}`);
  media.push({path,sha256:hash(await readFile(resolve('apps/web/public',path.slice(1)))),kind:'speech'});

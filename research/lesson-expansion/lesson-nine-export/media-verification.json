@@ -1,0 +1,307 @@
+{
+  "base": "http://localhost:3210/german-learning-exam",
+  "lesson": 9,
+  "passed": 50,
+  "checks": [
+    {
+      "path": "/book/audio/coursebook-l9-ex4-ca3bd6d3.mp3",
+      "sha256": "ca3bd6d3afe6581767a3dd7e3a14d3009f9f6bac6d296ff76b1a9978c31a1cc3",
+      "kind": "original",
+      "bytes": 935194
+    },
+    {
+      "path": "/book/audio/coursebook-l9-ex5-5e147ada.mp3",
+      "sha256": "5e147adaca26e035d23d2600c4be832d7dc79187c75cc8c62b2e61ff8a76504f",
+      "kind": "original",
+      "bytes": 659761
+    },
+    {
+      "path": "/book/audio/coursebook-l9-ex6-e9a3738b.mp3",
+      "sha256": "e9a3738b6008ba6198b7ea2c98a7fffb57c8a8d636b89c3e44e97174335eda34",
+      "kind": "original",
+      "bytes": 607516
+    },
+    {
+      "path": "/book/audio/coursebook-l9-ex7-28caf0ef.mp3",
+      "sha256": "28caf0ef0665a1b4a84a2502b3632a16a1bff1052ab1e126b80cc752bf35b9ad",
+      "kind": "original",
+      "bytes": 556943
+    },
+    {
+      "path": "/book/audio/coursebook-l9-ex9-d20c8018.mp3",
+      "sha256": "d20c80180f67082fdb4628c4a718fe062cf0880ec42401b3c516a400b54e2344",
+      "kind": "original",
+      "bytes": 1347305
+    },
+    {
+      "path": "/book/audio/coursebook-m3-track14-8ebd3179.mp3",
+      "sha256": "8ebd31791f6b28656f25d917d9d0cf32c72d9c9222928000e65bc5143517c29a",
+      "kind": "original",
+      "bytes": 553192
+    },
+    {
+      "path": "/book/audio/coursebook-m3-track15-d58ae56e.mp3",
+      "sha256": "d58ae56eb715f430e4f48cbf3534c171ce35b8cdadaebd6490f5d3bc62e3063e",
+      "kind": "original",
+      "bytes": 538563
+    },
+    {
+      "path": "/book/audio/coursebook-m3-track16-059530ba.mp3",
+      "sha256": "059530ba53367fa743c1293900c1a06e4d083730acd0b873db8ccf165822a572",
+      "kind": "original",
+      "bytes": 458733
+    },
+    {
+      "path": "/book/audio/workbook-l9-ex14-f92d6f02.mp3",
+      "sha256": "f92d6f02f380296d94de131a958a641ce34c261f0d4663ea701fe02821242108",
+      "kind": "original",
+      "bytes": 784172
+    },
+    {
+      "path": "/book/audio/workbook-m3-track10-8ae978b4.mp3",
+      "sha256": "8ae978b48488f715751123a14a2cf6345320e4d85c9f11d41a3ac07ecc135abd",
+      "kind": "original",
+      "bytes": 551214
+    },
+    {
+      "path": "/book/audio/workbook-m3-track11-afe02063.mp3",
+      "sha256": "afe02063286ab43ee94caef6b762c8cfe24dcae6e6341b7356eac1a651b176e1",
+      "kind": "original",
+      "bytes": 2296359
+    },
+    {
+      "path": "/book/audio/workbook-m3-track12-57fd7bfe.mp3",
+      "sha256": "57fd7bfeb1f27be8a604d3ef2e8cf1a50c7f30268e0d41be7884a901049473b3",
+      "kind": "original",
+      "bytes": 740532
+    },
+    {
+      "path": "/book/audio/workbook-m3-track13-a6269c6d.mp3",
+      "sha256": "a6269c6df588b17f08f0ac96a5ed9d6d9fc5f26ac70e3e0ce1b7e3fec5d7465a",
+      "kind": "original",
+      "bytes": 375239
+    },
+    {
+      "path": "/book/audio/workbook-m3-track14-5a54225d.mp3",
+      "sha256": "5a54225d2494083c00c8f9170415762100237305d0e04e29d9d0744238446d7f",
+      "kind": "original",
+      "bytes": 295592
+    },
+    {
+      "path": "/book/audio/workbook-m3-track15-a5fef9cc.mp3",
+      "sha256": "a5fef9cc435e998ea104841973b974d3bc3920b80c365ad03be122d3d68bd6bc",
+      "kind": "original",
+      "bytes": 215528
+    },
+    {
+      "path": "/book/audio/workbook-m3-track16-e719a098.mp3",
+      "sha256": "e719a098efcbe08ac7fd9afc0df5a0b59578c7c326affce2c2bd60729f7c0cd5",
+      "kind": "original",
+      "bytes": 343130
+    },
+    {
+      "path": "/book/audio/workbook-m3-track17-348d0727.mp3",
+      "sha256": "348d0727e43fd05321c1b01cff330aece96bd337c30af741041d90526e529b87",
+      "kind": "original",
+      "bytes": 516185
+    },
+    {
+      "path": "/book/audio/workbook-m3-track18-e9f53483.mp3",
+      "sha256": "e9f534837e008f72cd6bc437910b5b3db4958e6f5ca0199c610dadcad1a021d5",
+      "kind": "original",
+      "bytes": 471149
+    },
+    {
+      "path": "/book/audio/workbook-m3-track19-2ec48e1e.mp3",
+      "sha256": "2ec48e1e89f151e4a2370dd75d840a1c64738df37ccfd1123f09ebbbda383c55",
+      "kind": "original",
+      "bytes": 1122921
+    },
+    {
+      "path": "/book/audio/workbook-m3-track20-35eeb61c.mp3",
+      "sha256": "35eeb61cf5a91d0ccc3229d9496175e81344fc0e735691b10995f33df3b33dea",
+      "kind": "original",
+      "bytes": 1427748
+    },
+    {
+      "path": "/book/audio/workbook-m3-track21-ffd354cb.mp3",
+      "sha256": "ffd354cb8ff0e5a516ebd011446f92ba861ece15d5a4af02685cc06b5fa05eb9",
+      "kind": "original",
+      "bytes": 1907715
+    },
+    {
+      "path": "/book/audio/workbook-m3-track22-d7a37241.mp3",
+      "sha256": "d7a37241b87b7f1680151e9d3a852ebebadd8813ba7f714cf47ecab8cfa8e281",
+      "kind": "original",
+      "bytes": 1093731
+    },
+    {
+      "path": "/book/audio/workbook-m3-track23-1fecaddc.mp3",
+      "sha256": "1fecaddceb081acba4618d45b5f43e6e57bb7f8177278f9030e55fc190d674e3",
+      "kind": "original",
+      "bytes": 1093731
+    },
+    {
+      "path": "/book/audio/workbook-m3-track24-5478996d.mp3",
+      "sha256": "5478996d97cb764f4872a959a563f095b8319ceb5bdd98ec5cb9c3196549aae1",
+      "kind": "original",
+      "bytes": 1508646
+    },
+    {
+      "path": "/book/audio/workbook-m3-track25-e8a1255f.mp3",
+      "sha256": "e8a1255f95d7a54d38e1154e8483f85e975a37eebc7e270a4ef0d3006cc64ef3",
+      "kind": "original",
+      "bytes": 1337259
+    },
+    {
+      "path": "/book/audio/workbook-m3-track8-794f374d.mp3",
+      "sha256": "794f374dbf6793912f437e70a043a2f54988c9bcf1612e3c5d04764f7d6d1aa8",
+      "kind": "original",
+      "bytes": 1241766
+    },
+    {
+      "path": "/book/audio/workbook-m3-track9-ddb76b1a.mp3",
+      "sha256": "ddb76b1abcc0559a94514d2a62c1920d85e435f78901d6038bcb671641d05ca4",
+      "kind": "original",
+      "bytes": 1872687
+    },
+    {
+      "path": "/book/speech/16c0b5e555bcf7bd68b7.mp3",
+      "sha256": "b0ebbed6079449c7ae41b3bbf270e9a7bccd81f6124188b48ba541c7ac7d4201",
+      "kind": "speech",
+      "bytes": 13968
+    },
+    {
+      "path": "/book/speech/26eee4a3a06cbee39158.mp3",
+      "sha256": "b542b09a31c18d1cb7dbe1372d858fc34a7d9b4d88bf7e220e85cfece2df91dc",
+      "kind": "speech",
+      "bytes": 16272
+    },
+    {
+      "path": "/book/speech/2fe660f9aca53a6e9b15.mp3",
+      "sha256": "9f975e0faa69944b5dfd97d6bca4152bda4d24f7a4d249292fb7acc3e88c8e98",
+      "kind": "speech",
+      "bytes": 15120
+    },
+    {
+      "path": "/book/speech/308f0c04db013cbc8e0e.mp3",
+      "sha256": "6c269ba62618cd323ff11de1a04cb8d3c04ec13f10d86a333be693ff6e69faad",
+      "kind": "speech",
+      "bytes": 13248
+    },
+    {
+      "path": "/book/speech/391b1e572704cb58f5bd.mp3",
+      "sha256": "5d0af49567ca92ae0b2a3ce7c4d34c8a7923bcbb4dd66cc378b6884fc06c5154",
+      "kind": "speech",
+      "bytes": 11088
+    },
+    {
+      "path": "/book/speech/58c51a45a8d1100a0505.mp3",
+      "sha256": "b3c0dfb28604d91f67d51ec76079fc011aea99110b064dc99ad31066f4de4c6b",
+      "kind": "speech",
+      "bytes": 11664
+    },
+    {
+      "path": "/book/speech/5bcc8f39d698de191fb7.mp3",
+      "sha256": "cf36cfd326e795c0bc31ad8791afc8bbcbe3f226ee122433ba8cecd59e616a27",
+      "kind": "speech",
+      "bytes": 13392
+    },
+    {
+      "path": "/book/speech/9813bb45812b8b0c32af.mp3",
+      "sha256": "a7d0520c666052747107fd911833b28638ce184c13c980c67c7cea1d3a6a1cc2",
+      "kind": "speech",
+      "bytes": 13680
+    },
+    {
+      "path": "/book/speech/9b57f9caf3da2e7293cc.mp3",
+      "sha256": "d4c374009e8c3f5db9c1445e6e16862feb59a4a7da05e8d81bf41fdd13c1e163",
+      "kind": "speech",
+      "bytes": 12816
+    },
+    {
+      "path": "/book/speech/9f794b5d477f0a7bddc5.mp3",
+      "sha256": "62b79f06427e52b11044989f0e8cf930b56f8dfdc324e7f09997d9fbdd499b8b",
+      "kind": "speech",
+      "bytes": 17136
+    },
+    {
+      "path": "/book/speech/a52511f8a4619d730a07.mp3",
+      "sha256": "9f5083be79889e78998fad8c54e5525736b10f5b503ac82979560beaffeed991",
+      "kind": "speech",
+      "bytes": 11232
+    },
+    {
+      "path": "/book/speech/aa0857a6376deb3a4e8b.mp3",
+      "sha256": "5a38e2f6b0c669da26c9e1bdb4d40045cf6c6e3bf3399ca9177a200d1c5339a5",
+      "kind": "speech",
+      "bytes": 15840
+    },
+    {
+      "path": "/book/speech/b041f0f899400a177762.mp3",
+      "sha256": "fc4c440791b98382abe8cbc4114a50ff916b57eedf65697537285c06cb990843",
+      "kind": "speech",
+      "bytes": 10368
+    },
+    {
+      "path": "/book/speech/b8cd147f6bca1205402c.mp3",
+      "sha256": "2a0e9d4fb445ebbf9f8f22d4773b7cbd959ec9258515d49d7570ddcaea6bc8c2",
+      "kind": "speech",
+      "bytes": 11232
+    },
+    {
+      "path": "/book/speech/bb6c496a6f05efabcf46.mp3",
+      "sha256": "b75424e9b68691f415ca319d1655986884e3f3c67f4745b03b6f215f19d33363",
+      "kind": "speech",
+      "bytes": 23760
+    },
+    {
+      "path": "/book/speech/c49c9b0fb9ca39c89fea.mp3",
+      "sha256": "5c0fea7d24e60a4cef1d84644c9680e20aba1b15ebeca52b7769e55959ad0c32",
+      "kind": "speech",
+      "bytes": 11232
+    },
+    {
+      "path": "/book/speech/c79ed5e1e0b8536c5bf9.mp3",
+      "sha256": "70136a8e9eee804d54d6bf4a501efc5ba603ad596f207b17219b28a84a7e117f",
+      "kind": "speech",
+      "bytes": 10080
+    },
+    {
+      "path": "/book/speech/e1b4d32f34a7c1722140.mp3",
+      "sha256": "c4b1a43eba04409b586acb205839c6d785e399eccfbb0b751e12fe4c792e24b8",
+      "kind": "speech",
+      "bytes": 12384
+    },
+    {
+      "path": "/book/speech/e950af0b533a939f2614.mp3",
+      "sha256": "d05badae754b32e47bfca0f8c15dc477190f3b79ed1d0bff1e77acce25ce2605",
+      "kind": "speech",
+      "bytes": 15552
+    },
+    {
+      "path": "/book/speech/ed12e5a3787b06921716.mp3",
+      "sha256": "f53d08921f6cd7418a3f9e2836cae06c986fd4f3f32e7f8fc8fd60350b39efca",
+      "kind": "speech",
+      "bytes": 11232
+    },
+    {
+      "path": "/book/speech/f592154a3da782fe40ee.mp3",
+      "sha256": "fc63b0c2ab9dd84f5d82f3750d5c713a8dc87c99fc4d4abae2da4610207e8289",
+      "kind": "speech",
+      "bytes": 18432
+    },
+    {
+      "path": "/book/speech/f638f6a29525ba90b504.mp3",
+      "sha256": "30228116ad32e5d8d503539e8229809f0fa104d8e48921385d06d069af9509b8",
+      "kind": "speech",
+      "bytes": 13104
+    },
+    {
+      "path": "/book/speech/f8190df2d3228fa360f5.mp3",
+      "sha256": "118b9c48391efe30ce9f65fb22a68caaa061a0b3fcaef1c8426b0d4363f865aa",
+      "kind": "speech",
+      "bytes": 21024
+    }
+  ]
+}

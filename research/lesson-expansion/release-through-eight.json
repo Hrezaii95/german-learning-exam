@@ -1,0 +1,39 @@
+{
+  "milestone": "Lessons 1-8 ready for live review",
+  "commit": "4b1ebc8dbac1c24d9ebe12be0c6db5ee282b1e6a",
+  "deploymentRun": 35222342304,
+  "deployment": "success",
+  "url": "https://hrezaii95.github.io/german-learning-exam/lessons/08/",
+  "cheatSheet": "https://hrezaii95.github.io/german-learning-exam/cheat-sheets/time/",
+  "liveBrowserChecks": {
+    "bookAnswers": 455,
+    "collections": 59,
+    "bookReader": 19,
+    "dictionary": 14,
+    "timeSheet": 16,
+    "questions": 42,
+    "studyScope": 18,
+    "lessonEight": 13
+  },
+  "liveBrowserTotal": 736,
+  "liveMediaByteChecks": 37,
+  "browserErrors": 0,
+  "phoneScreens": "inspected",
+  "localValidation": "lesson-eight-local-validation.json",
+  "evidence": [
+    "lesson-eight-live/verification.json",
+    "lesson-eight-live/time-verification.json",
+    "lesson-eight-live/dictionary-loading.json",
+    "lesson-eight-live/checks.json",
+    "lesson-eight-live/media-verification.json",
+    "../book-answers/lesson-eight-live/checks.json",
+    "../book-reader-update/lesson-eight-live/verification.json",
+    "../collection-cheatsheet/lesson-eight-live/checks.json",
+    "../question-cheatsheet/lesson-eight-live/checks.json"
+  ],
+  "remaining": [
+    "Lessons 9-12 under the full A1.1 expansion objective",
+    "Complete ordinary workbook answer key was not supplied"
+  ],
+  "nextSourcePlan": "lesson-nine-source-plan.json"
+}

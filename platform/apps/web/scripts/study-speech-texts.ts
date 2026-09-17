@@ -12,6 +12,7 @@ import { loadBook, loadBookAnswers,loadDictionary } from "../lib/study/catalog";
 import {studyUnits} from "../lib/study/course-lessons";
 import {objectSheetSpeech} from "../lib/study/object-sheet";
 import {officeSheetSpeech} from "../lib/study/office-sheet";
+import {foodSpeech} from "../lib/study/food-sheet";
 import {timeSpeech} from "../lib/study/time-sheet";
 import {hobbiesSpeech} from "../lib/study/hobbies-sheet";
 import {questionSpeechTexts} from "../lib/study/questions";
@@ -27,8 +28,9 @@ const texts = [
     ...officeSheetSpeech,
     ...hobbiesSpeech,
     ...timeSpeech,
+    ...foodSpeech,
     ...questionSpeechTexts(),
-    ...studyUnits.flatMap(u=>[...(u.words?.flatMap(w=>[w.de,w.plural,w.example]).filter(t=>Boolean(t)&&t!=="plural only")??[]),...u.concepts.flatMap(c=>[c.de,...c.examples]),...u.phrases.map(p=>p.de),...u.verbs.flatMap(v=>v.forms.map((f,i)=>`${["ich","du","er","wir","ihr","sie"][i]} ${f}`))]),
+    ...studyUnits.flatMap(u=>[...(u.words?.flatMap(w=>[w.de,w.plural,w.example,...(w.variants??[])]).filter(t=>Boolean(t)&&t!=="plural only")??[]),...u.concepts.flatMap(c=>[c.de,...c.examples]),...u.phrases.map(p=>p.de),...u.verbs.flatMap(v=>v.forms.map((f,i)=>`${["ich","du","er","wir","ihr","sie"][i]} ${f}`))]),
     ...loadBook().pages.flatMap((page) => page.lines.map((line) => line.text)),
     ...loadBookAnswers().flatMap(answer=>answer.text.split(/\n+/)),
     ...lessonFourWords.flatMap((word) => [

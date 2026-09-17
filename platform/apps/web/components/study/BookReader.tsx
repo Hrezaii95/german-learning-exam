@@ -418,13 +418,13 @@ export function BookReader({
       )}
       <section className="book-chapter-title">
         <div>
-          <span className="book-chapter-number">{page.section?.startsWith("Getting")?"A1":page.section?.startsWith("Module")?"M1":`0${page.lesson}`}</span>
+          <span className="book-chapter-number">{page.section?.startsWith("Getting")?"A1":page.section?.startsWith("Module")?`M${page.section.match(/^Module (\d+)/)?.[1]??1}`:String(page.lesson).padStart(2,"0")}</span>
           <div>
             <p className="study-eyebrow">{page.section??chapter.topic}</p>
             <h2 lang={page.section?.startsWith("Lesson")?"de":"en"}>{page.section?.startsWith("Lesson")?chapter.title:page.section??chapter.title}</h2>
           </div>
         </div>
-        <Link href={page.section?.startsWith("Lesson")?`/lessons/0${page.lesson}`:"/lessons"}>{page.section?.startsWith("Lesson")?"Study lesson":"Explore lessons"} →</Link>
+        <Link href={page.section?.startsWith("Lesson")?`/lessons/${String(page.lesson).padStart(2,"0")}`:"/lessons"}>{page.section?.startsWith("Lesson")?"Study lesson":"Explore lessons"} →</Link>
       </section>
       <div className="book-reading-tools">
         <label className="study-inline-field book-page-picker">Go to page<select aria-label="Go to page" value={page.id} onChange={event=>go(event.target.value)}>{allKindPages.map(p=><option value={p.id} key={p.id}>{p.pageLabel??`Page ${p.printedPage}`} · {p.section??`Lesson ${p.lesson}`}</option>)}</select></label>

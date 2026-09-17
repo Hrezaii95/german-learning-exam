@@ -39,7 +39,7 @@ describe('Lesson 8 time, plans and source coverage',()=>{
   for(const id of ['wann','wie-spaet'])expect(questionWords.find(w=>w.id===id)?.lesson).toBe(8);
  });
  it('includes partner and extra pages and all original recordings, including the oddly named second dialogue',()=>{
-  const book=loadBook();expect(book.pages).toHaveLength(130);
+  const book=loadBook();expect(book.pages).toHaveLength(155);
   for(const [kind,start] of [['coursebook',51],['workbook',50]] as const)expect(book.pages.filter(p=>p.kind===kind&&p.section==='Lesson 8').map(p=>p.printedPage)).toEqual([start,start+1,start+2,start+3]);
   for(const id of ['coursebook-163','coursebook-164','workbook-89','workbook-90'])expect(book.pages.find(p=>p.id===id)?.lessons).toContain(8);
   const tracks=book.audio.filter(a=>a.lesson===8);expect(tracks).toHaveLength(14);expect(tracks.filter(a=>a.pageId==='workbook-90')).toHaveLength(7);

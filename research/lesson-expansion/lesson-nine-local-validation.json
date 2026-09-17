@@ -1,0 +1,42 @@
+{
+  "milestone": "Lessons 1-9",
+  "status": "local validation passed; deployment pending",
+  "repositoryTests": 885,
+  "webSuiteTests": 546,
+  "additionalRegressionTests": 1,
+  "targetedFinalTests": 21,
+  "staticPages": 1318,
+  "browserChecks": {
+    "foodSheet": 17,
+    "bookAnswers": 581,
+    "questions": 42,
+    "bookReader": 19,
+    "studyScope": 18,
+    "dictionary": 14,
+    "lessonNine": 13,
+    "collectionSheets": 59,
+    "smallPhoneBook": 6
+  },
+  "browserTotal": 769,
+  "bookPages": 155,
+  "originalRecordings": 169,
+  "answerGroups": 146,
+  "requiredSpeechTexts": 9435,
+  "lessonNineSourceWords": 100,
+  "lessonNineWordFamilies": 100,
+  "totalWordFamilies": 993,
+  "byteVerifiedMedia": 50,
+  "manualReview": "Source glossary and original pages, transcript bindings, code changes, desktop food board and 320/390px phone reader and compound builder inspected",
+  "regressionsFixed": [
+    "Search preserves phrase review identity",
+    "Book lesson selector and heading fit narrow phones",
+    "Module badges match their source section",
+    "Atomic restoration of temporary build route files on Windows"
+  ],
+  "priorContent": "All 130 earlier pages, 142 recordings and 124 answer groups compared by ID and content; unchanged",
+  "limitations": [
+    "Complete ordinary workbook exercise keys were not supplied; only available official keys and explicit source answers are shown.",
+    "Technical audio checks are not a full listening-language review."
+  ],
+  "fullGoal": "All 12 lessons; Lessons 10-12 remain"
+}

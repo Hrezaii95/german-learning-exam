@@ -1,0 +1,36 @@
+import {chromium,expect} from '@playwright/test';
+import {mkdir,writeFile} from 'node:fs/promises';
+import {resolve} from 'node:path';
+const base=(process.env.STUDY_TEST_BASE??'http://localhost:3210/german-learning-exam').replace(/\/$/,'');
+const output=resolve('../research/lesson-expansion',process.env.STUDY_TEST_LABEL??'lesson-nine-export');
+await mkdir(output,{recursive:true});
+const browser=await chromium.launch({args:['--autoplay-policy=no-user-gesture-required']});
+const page=await browser.newPage({viewport:{width:1440,height:1000},serviceWorkers:'block'});
+const checks=[],errors=[];page.on('pageerror',e=>errors.push(e.message));const check=label=>checks.push(label);
+try{
+ await page.goto(base+'/cheat-sheets/food/',{waitUntil:'networkidle'});
+ const scope=page.locator('details.study-scope');await scope.locator('summary').click();await scope.getByRole('button',{name:'One lesson',exact:true}).click();await scope.getByLabel('Selected lesson',{exact:true}).selectOption('9');await scope.locator('summary').click();
+ await expect(page.locator('.food-board button')).toHaveCount(12);await expect(page.locator('.food-case-map article')).toHaveCount(4);await expect(page.locator('#food-words [data-word-family]')).toHaveCount(100);check('The complete food board, four article patterns and 100 word families render');
+ await page.locator('#food-board').screenshot({path:resolve(output,'food-board-desktop.png')});
+ await expect(page.locator('.food-output')).toContainText('Ich möchte einen Salat.');
+ await page.locator('.food-output [lang="de"]').first().evaluate(el=>{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);document.dispatchEvent(new Event('selectionchange'));});
+ await page.getByRole('button',{name:'Meaning of selection',exact:true}).click();const dialog=page.getByRole('dialog',{name:'Quick dictionary',exact:true});await expect(dialog.locator('article').first()).toContainText('I would like a salad.');
+ await dialog.locator('article').first().getByRole('button',{name:'Save to review: Ich möchte einen Salat.',exact:true}).click();await dialog.getByRole('button',{name:'Close dictionary',exact:true}).click();await expect(page.locator('.food-output').getByRole('button',{name:'Remove from review: Ich möchte einen Salat.',exact:true})).toBeVisible();check('Sentence selection opens its meaning and shares the phrase-deck review identity');
+ await page.getByLabel('Make it negative',{exact:true}).check();await expect(page.locator('.food-output')).toContainText('Ich möchte keinen Salat.');check('A negative masculine order uses keinen');
+ await page.locator('.food-board').getByRole('button',{name:/der Käse/}).click();await page.getByLabel('Make it negative',{exact:true}).uncheck();await expect(page.locator('.food-output')).toContainText('Ich möchte ein Stück Käse.');await expect(page.locator('.food-output')).toHaveAttribute('data-gender','neuter');check('A serving of cheese takes the neuter article of Stück');
+ const response=page.waitForResponse(r=>r.url().endsWith('.mp3'));await page.locator('.food-output').getByRole('button',{name:'Listen: Ich möchte ein Stück Käse.',exact:true}).click();if(!(await response).ok())throw Error('Food speech failed');check('The exact generated order plays file-backed speech');
+ await page.locator('.food-mode').getByRole('button',{name:'I like · mögen',exact:true}).click();await page.getByLabel('Make it negative',{exact:true}).check();await expect(page.locator('.food-output')).toContainText('Ich mag keinen Käse.');await expect(page.locator('.food-output')).toHaveAttribute('data-gender','male');check('Changing to general preference restores the noun article');
+ await page.locator('.food-board').getByRole('button',{name:/die Pommes frites/}).click();await expect(page.locator('.food-output')).toContainText('Ich mag keine Pommes frites.');await expect(page.locator('.food-output')).toHaveAttribute('data-gender','plural');check('Plural fries use keine and the plural colour');
+ await page.getByLabel('Show English',{exact:true}).uncheck();await expect(page.locator('.food-output')).not.toContainText('I do not like fries.');await page.getByLabel('Show English',{exact:true}).check();check('Recall mode hides and reveals the translation');
+ for(const [other,you,answer] of [['true','true','Ich auch.'],['true','false','Ich nicht.'],['false','true','Ich schon.'],['false','false','Ich auch nicht.']]){await page.getByLabel("Other person's preference",{exact:true}).selectOption(other);await page.getByLabel('Your preference',{exact:true}).selectOption(you);await expect(page.locator('.food-dialogue p').nth(1)).toContainText(answer);}check('All four agreement and disagreement replies follow the preceding statement');
+ await page.getByLabel('Choose a compound',{exact:true}).selectOption('4');await expect(page.locator('.food-compound')).toContainText('das Schinkenbrötchen');await expect(page.locator('.food-compound [data-gender="neuter"]')).toHaveCount(2);check('The last noun passes its gender to the compound');
+ await page.locator('#food-lab').screenshot({path:resolve(output,'food-builder-desktop.png')});
+ await page.goto(base+'/phrases/?q=Ich%20m%C3%B6chte%20einen%20Salat.',{waitUntil:'networkidle'});await expect(page.locator('.course-patterns').getByRole('button',{name:'Remove from review: Ich möchte einen Salat.',exact:true})).toBeVisible();check('Searching the phrase hub preserves the saved sentence identity');
+ await page.goto(base+'/cheat-sheets/food/',{waitUntil:'networkidle'});await expect(page.locator('.food-output').getByRole('button',{name:'Remove from review: Ich möchte einen Salat.',exact:true})).toBeVisible();await page.locator('.food-output').getByRole('button',{name:'Remove from review: Ich möchte einen Salat.',exact:true}).click();check('Saved selections survive navigation and can be deselected');
+ await page.setViewportSize({width:390,height:844});await page.locator('#food-lab').scrollIntoViewIfNeeded();await page.screenshot({path:resolve(output,'food-builder-phone.png')});await page.locator('#food-compounds').screenshot({path:resolve(output,'food-compound-phone.png')});
+ for(const width of [390,320]){await page.setViewportSize({width,height:844});if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1))throw Error(`Overflow at ${width}px`);check(`Food tools fit a ${width}px phone`);}
+ await page.goto(base+'/vocabulary/l9-ketchup/',{waitUntil:'networkidle'});await expect(page.locator('main')).toContainText('der Ketchup');await expect(page.locator('main')).toContainText('das Ketchup');check('The full vocabulary card includes both accepted articles');
+ await page.goto(base+'/cheat-sheets/questions/',{waitUntil:'networkidle'});await expect(page.getByLabel('Practice topic',{exact:true})).toHaveValue('preferences');check('The question builder follows Lesson 9 food preferences');
+ if(errors.length)throw Error(errors.join('; '));check('No browser exceptions');
+ await writeFile(resolve(output,'food-verification.json'),JSON.stringify({base,checks,errors},null,2));console.log(JSON.stringify({base,passed:checks.length}));
+}catch(e){await page.screenshot({path:resolve(output,'food-failure.png')});throw e;}finally{await browser.close();}

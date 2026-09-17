@@ -37,8 +37,8 @@ describe("personal study persistence", () => {
 describe("Lesson 4 source and exercise integration", () => {
   const book = JSON.parse(readFileSync(resolve("apps/web/generated/interactive-book.json"), "utf8")) as BookManifest;
   it("has all four original coursebook and workbook pages for each lesson", () => {
-    expect(book.pages).toHaveLength(130);
-    for (const lesson of [1, 2, 3, 4, 5, 6, 7, 8]) for (const kind of ["coursebook", "workbook"]) expect(book.pages.filter(p => p.lesson === lesson && p.kind === kind && p.section===`Lesson ${lesson}`)).toHaveLength(4);
+    expect(book.pages).toHaveLength(155);
+    for (const lesson of [1, 2, 3, 4, 5, 6, 7, 8, 9]) for (const kind of ["coursebook", "workbook"]) expect(book.pages.filter(p => p.lesson === lesson && p.kind === kind && p.section===`Lesson ${lesson}`)).toHaveLength(4);
     expect(book.pages.filter(p => p.lesson === 4 && p.kind === "coursebook" && p.section === "Lesson 4").map(p => p.printedPage)).toEqual([29, 30, 31, 32]);
   });
   it("maps all original tracks to an existing page with a matching lesson and book", () => {

@@ -18,11 +18,11 @@ GENERATED = ROOT / "platform/apps/web/generated"
 DIGITS = str.maketrans(dict(zip("", "0123456789")))
 
 # Printed page starts; PDF page = printed page + 2 for these source files.
-LESSONS = [(1, 11, 6), (2, 15, 10), (3, 19, 14), (4, 29, 26), (5, 33, 30), (6, 37, 34), (7, 47, 46), (8, 51, 50)]
+LESSONS = [(1, 11, 6), (2, 15, 10), (3, 19, 14), (4, 29, 26), (5, 33, 30), (6, 37, 34), (7, 47, 46), (8, 51, 50), (9, 55, 54)]
 # Each page's exercise starts, checked against the source pages.
 EXERCISES = {
-    "coursebook": {1: [1, 2, 4, 8], 2: [1, 2, 4, 6], 3: [1, 2, 5, 9], 4: [1, 3, 5, 8], 5: [1, 2, 5, 6], 6: [1, 2, 4, 9], 7: [1, 3, 8, 10], 8: [1, 2, 5, 7]},
-    "workbook": {1: [1, 5, 10, 13], 2: [1, 4, 8, 12], 3: [1, 5, 9, 12], 4: [1, 4, 9, 14], 5: [1, 5, 9, 15], 6: [1, 4, 7, 10], 7: [1, 4, 6, 10], 8: [1, 6, 9, 12]},
+    "coursebook": {1: [1, 2, 4, 8], 2: [1, 2, 4, 6], 3: [1, 2, 5, 9], 4: [1, 3, 5, 8], 5: [1, 2, 5, 6], 6: [1, 2, 4, 9], 7: [1, 3, 8, 10], 8: [1, 2, 5, 7], 9: [1, 3, 8, 10]},
+    "workbook": {1: [1, 5, 10, 13], 2: [1, 4, 8, 12], 3: [1, 5, 9, 12], 4: [1, 4, 9, 14], 5: [1, 5, 9, 15], 6: [1, 4, 7, 10], 7: [1, 4, 6, 10], 8: [1, 6, 9, 12], 9: [1, 4, 8, 12]},
 }
 
 
@@ -35,7 +35,7 @@ def clean(text):
 
 def main():
     parser=argparse.ArgumentParser()
-    parser.add_argument("--through",type=int,choices=[4,5,6,7,8],default=8)
+    parser.add_argument("--through",type=int,choices=[4,5,6,7,8,9],default=9)
     through=parser.parse_args().through
     PUBLIC.mkdir(parents=True, exist_ok=True)
     (PUBLIC / "audio").mkdir(exist_ok=True)
@@ -50,11 +50,14 @@ def main():
         sources.append({"kind": kind, "path": path.relative_to(ROOT).as_posix(), "sha256": hashlib.sha256(path.read_bytes()).hexdigest()})
         last=next((kb,ab) for lesson,kb,ab in LESSONS if lesson==through)
         end = (46 if kind=="coursebook" else 45) if through==6 else last[0 if kind=="coursebook" else 1]+3
+        if through==9:end=64 if kind=="coursebook" else 65
         action_lessons={155:[1],156:[1],157:[2],158:[2],159:[3,4],160:[5],161:[6]} if kind=="coursebook" else {}
         if through>=7:
             action_lessons.update({162:[7],163:[7,8],191:[1],192:[2],193:[4,5],194:[5,7]} if kind=="coursebook" else {86:[1,2],87:[3,4],88:[5,6],89:[6,7,8]})
         if through>=8:
             action_lessons.update({164:[8]} if kind=="coursebook" else {90:[8]})
+        if through>=9:
+            action_lessons.update({165:[9],166:[9]} if kind=="coursebook" else {91:[9,10]})
         printed_pages=list(range(-1,end+1))+(list(action_lessons) if through>=6 else [])
         corrections=json.loads((ROOT/'research/lesson-expansion/book-line-corrections.json').read_text(encoding='utf8'))
         for printed in printed_pages:
@@ -73,6 +76,10 @@ def main():
                 section = "Module 2 · " + ("Magazine" if printed <= 44 else "Grammar" if printed == 45 else "Communication")
             elif kind == "workbook" and 38 <= printed <= 45:
                 section = "Module 2 · " + ("Review" if printed <= 39 else "Skills test" if printed <= 41 else "Work & careers" if printed <= 43 else "Exam practice")
+            elif kind=="coursebook" and 59<=printed<=64:
+                section="Module 3 · "+("Magazine" if printed<=62 else "Grammar" if printed==63 else "Communication")
+            elif kind=="workbook" and 58<=printed<=65:
+                section="Module 3 · "+("Review" if printed<=59 else "Skills test" if printed<=61 else "Work & careers" if printed<=63 else "Exam practice")
             else:
                 section = f"Lesson {lesson}"
             page = doc[printed + 1]
@@ -163,17 +170,32 @@ def main():
             exercise=int(re.search(r"Modul 2_(\d+)",name)[1])
             group="Review" if "Wiederholung" in name else "Skills test" if "Test" in name else "Work & careers"
             printed=(38 if exercise<=5 else 39) if group=="Review" else (40 if exercise<=2 else 41) if group=="Skills test" else (42 if exercise<=3 else 43)
+        elif through>=9 and "Magazin 3_" in name and "_KB_" in name:
+            module=3
+            kind,printed,exercise,group="coursebook",62,1,"Magazine · Listening"
+        elif through>=9 and "Momente_A1_1_AB_CD2" in str(file) and ("Modul 3" in name or "Prüfungstraining" in name and 17<=int(name.split("_")[1])<=25):
+            module=3
+            kind="workbook"
+            track=int(name.split("_")[1])
+            if track>=17:
+                exercise=1 if track<=18 else 2
+                group="Exam practice"
+                printed=64 if track<=18 else 65
+            else:
+                exercise=int(re.search(r"Modul 3_(\d+)",name)[1])
+                group="Review" if "Wiederholung" in name else "Skills test" if "Test" in name else "Work & careers"
+                printed=(58 if exercise<=6 else 59) if group=="Review" else (60 if exercise<=2 else 61) if group=="Skills test" else 62
         else:
             continue
         digest = hashlib.sha256(file.read_bytes()).hexdigest()
         if any(a["sha256"] == digest for a in audio):
             continue
-        number = int(re.match(r"1_(\d+)", name)[1])
+        disc,number=map(int,re.match(r"([12])_(\d+)",name).groups())
         audio_id = f"{kind}-m{module}-track{number}-{digest[:8]}"
         dest = f"/book/audio/{audio_id}.mp3"
         shutil.copyfile(file, PUBLIC / "audio" / f"{audio_id}.mp3")
         page = next(p for p in pages if p["id"] == f"{kind}-{printed}")
-        audio.append({"id": audio_id, "lesson": module*3, "kind": kind, "exercise": exercise, "label": f"{group} · Exercise {exercise} · Track 1/{number:02}", "src": dest, "source": file.relative_to(ROOT).as_posix(), "sha256": digest, "pageId": page["id"]})
+        audio.append({"id": audio_id, "lesson": module*3, "kind": kind, "exercise": exercise, "label": f"{group} · Exercise {exercise} · Track {disc}/{number:02}", "src": dest, "source": file.relative_to(ROOT).as_posix(), "sha256": digest, "pageId": page["id"]})
         page["audioIds"].append(audio_id)
     result = {"version": 2, "credit": "Momente A1 · © Hueber Verlag. Coursebook and workbook pages and original recordings used with the owner's distribution authorization.", "sources": sources, "pages": pages, "audio": audio}
     (GENERATED / "interactive-book.json").write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

@@ -23,6 +23,7 @@ try{
     for(const p of expected){
       await select(p.id);
       assert(await page.locator('.book-original img').evaluate(img=>img.naturalWidth>=1900),`${p.id}: original page loads at readable resolution`);
+      if(p.section?.startsWith('Module '))assert((await page.locator('.book-chapter-number').innerText())===`M${p.section.match(/^Module (\d+)/)[1]}`,`${p.id}: module badge matches its section`);
       const available=answers.filter(a=>a.pageId===p.id);
       if(available.length){
         assert(await page.locator('.book-answer-content').count()===0,`${p.id}: answers start hidden`);
