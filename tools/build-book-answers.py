@@ -27,11 +27,14 @@ def add(page, exercise, text, source_page=1, model=False, source="coursebook-key
 
 doc = pymupdf.open(KEY)
 texts = [re.sub(r"[ \t]+\n", "\n", re.sub(r"(\w)-\n(\w)", r"\1\2", p.get_text())) for p in doc]
-starts = {1: (11, [1, 2, 4, 8]), 2: (15, [1, 2, 4, 6]), 3: (19, [1, 2, 5, 9]), 4: (29, [1, 3, 5, 8]), 5: (33, [1, 2, 5, 6]), 6: (37, [1, 2, 4, 9]), 7: (47, [1, 3, 8, 10])}
+starts = {1: (11, [1, 2, 4, 8]), 2: (15, [1, 2, 4, 6]), 3: (19, [1, 2, 5, 9]), 4: (29, [1, 3, 5, 8]), 5: (33, [1, 2, 5, 6]), 6: (37, [1, 2, 4, 9]), 7: (47, [1, 3, 8, 10]), 8: (51, [1, 2, 5, 7])}
 for lesson, (first, boundaries) in starts.items():
     source_page = 1 if lesson < 4 else 2
     text = texts[source_page-1].split(f"Lektion {lesson}\n", 1)[1]
     text = text.split(f"Lektion {lesson+1}\n", 1)[0].split("Magazin Lektionen", 1)[0]
+    if lesson==8:
+        text += "\n" + texts[2][texts[2].index("4b 2 der Vormittag"):].split("Lektion 9",1)[0]
+        text=re.sub(r"\n([5-7]) (?=der Abend|Viertel vor|zehn vor|fünf vor)",r" \1 ",text)
     if lesson==7:
         # These are the second and third speakers within 9b, not new exercises.
         text=re.sub(r"\n([23]) (?=Versicherungskaufmann|ein Start-up)",r" \1 ",text)
@@ -43,10 +46,14 @@ for lesson, (first, boundaries) in starts.items():
         exercise = previous if model else int(label[0])
         previous = exercise
         page = first + max(i for i, boundary in enumerate(boundaries) if exercise >= boundary)
+        if lesson==8 and label=="4b":
+            page=53
         body = " ".join(text[match.end():entries[index+1].start() if index+1 < len(entries) else len(text)].split())
+        if lesson==8:
+            body=body.replace("\uf04a","(Zustimmung)").replace("\uf04b","(Vielleicht)").replace("\uf04c","(Absage)")
         if model:
             body = body.removeprefix("(mögliche Antworten) ")
-        add(f"coursebook-{page}", f"Exercise {previous} · Schon fertig?" if model else f"Exercise {label}", body, source_page, model)
+        add(f"coursebook-{page}", f"Exercise {previous} · Schon fertig?" if model else f"Exercise {label}", body, 3 if lesson==8 and label in ("4b","6a","7a") else source_page, model)
         if lesson==7 and label=='8c':
             add('coursebook-162','Exercise 8c · Partner answers',body,source_page,note='Publisher key includes the missing information for both partner tables.')
             add('coursebook-194','Exercise 8c · Partner answers',body,source_page,note='Publisher key includes the missing information for both partner tables.')
@@ -89,6 +96,8 @@ add("workbook-39","Review · Exercise 11a","Tisch: aus Holz, braun, 56 Euro.\nSt
 add("workbook-43","Work & careers · Exercise 4","25 Bleistifte · 50 Kugelschreiber · 15 rote Notizbücher · 20 schwarze Mappen",10,source="workbook-transcript",note="Corrected order stated in track 1/62; not the caller's initial misread quantities.")
 add("workbook-48","Exercise 6a","1 c · 2 d · 3 a · 4 b",10,source="workbook-transcript",note="Compliments and responses explicitly paired in track 2/01.")
 
+add("workbook-90","Extra practice · Challenge 9","a 08:30 (example) · b 00:35 / 12:35 · c 06:30 / 18:30 · d 15:45 · e 01:45 / 13:45 · f 03:15 / 15:15",19,source="workbook-transcript",note="Track 2/56 gives these clock times. Alternatives retain the morning/evening ambiguity in colloquial times; item d explicitly says fifteen forty-five.")
+
 quick = json.loads((ROOT / "research/book-answers/coursebook-quick-test-keys.json").read_text(encoding="utf-8"))
 for lesson, (first, _) in starts.items():
     for label, text in zip(["Vocabulary", "Grammar", "Communication"], quick["lessons"][str(lesson)]):
@@ -99,6 +108,6 @@ book = json.loads((GEN / "interactive-book.json").read_text(encoding="utf-8"))
 assert all(a["pageId"] in {p["id"] for p in book["pages"]} for a in answers)
 assert all(a["text"] and a["exercise"] for a in answers)
 (GEN / "book-answers.json").write_text(json.dumps(answers, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
-audit = {"answers": len(answers), "pagesWithAnswers": len({a["pageId"] for a in answers}), "bySource": {s: sum(a["source"] == s for a in answers) for s in sorted({a["source"] for a in answers})}, "sources": [{"file": p.relative_to(ROOT).as_posix(), "sha256": hashlib.sha256(p.read_bytes()).hexdigest()} for p in [KEY, AB, TRANSCRIPT, ROOT / quick["source"]]], "scope": "All entries in the supplied coursebook key for Lessons 1–7 and Magazines 1–2; coursebook quick-test answers in the appendix, p. 203; all Module 1–2 workbook skills-test answers; explicit responses in available Module 1–2 review and Lesson 7 transcripts."}
+audit = {"answers": len(answers), "pagesWithAnswers": len({a["pageId"] for a in answers}), "bySource": {s: sum(a["source"] == s for a in answers) for s in sorted({a["source"] for a in answers})}, "sources": [{"file": p.relative_to(ROOT).as_posix(), "sha256": hashlib.sha256(p.read_bytes()).hexdigest()} for p in [KEY, AB, TRANSCRIPT, ROOT / quick["source"]]], "scope": "All entries in the supplied coursebook key for Lessons 1–8 and Magazines 1–2; coursebook quick-test answers in the appendix, p. 203; all Module 1–2 workbook skills-test answers; explicit responses in available Module 1–2 review and Lesson 7–8 and extra-practice transcripts."}
 (ROOT / "research/book-answers/answer-source-audit.json").write_text(json.dumps(audit, indent=2)+"\n", encoding="utf-8")
 print(json.dumps(audit))

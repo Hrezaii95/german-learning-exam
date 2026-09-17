@@ -31,6 +31,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (lessonSegment === "03") return { title: "Lesson 3 · Das ist meine Schwester." };
   if (lessonSegment === "05") return {title:"Lesson 5 · Ist das ein Tisch?"};
   if (lessonSegment === "06") return {title:"Lesson 6 · Wir haben einen Termin."};
+  if (lessonSegment === "08") return {title:"Lesson 8 · Ich habe leider keine Zeit."};
   if (lessonSegment === "07") return {title:"Lesson 7 · Sie können super tanzen!"};
   const lesson = loadLearnerProjection().lessons.find(
     (item) => item.routeSegment === lessonSegment,

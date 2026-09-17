@@ -1,0 +1,22 @@
+{
+  "base": "http://localhost:3210/german-learning-exam",
+  "checks": [
+    "am, um and the night exception are visible together",
+    "The default clock teaches half past three, not half past four",
+    "Changing mode preserves the actual time",
+    "The exact official time plays file-backed speech",
+    "Recall mode hides and reveals the answer",
+    "Dictionary saving matches the displayed afternoon clock",
+    "Morning and afternoon share one review entry for the same spoken time",
+    "The clock wraps correctly through midnight",
+    "Weekday and masculine destination produce the correct plan",
+    "Moving the time leaves the verb in position 2",
+    "The chosen plan survives a page reload in saved review",
+    "The clock and plan fit a 390px phone",
+    "The clock and plan fit a 320px phone",
+    "Both time questions follow the Lesson 8 selection",
+    "The extra listening page is reachable within Lesson 8",
+    "No browser exceptions"
+  ],
+  "errors": []
+}

@@ -671,6 +671,83 @@
     "note": ""
   },
   {
+    "id": "coursebook-51-answer-exercise-1a",
+    "pageId": "coursebook-51",
+    "exercise": "Exercise 1a",
+    "text": "A Gehen wir ins Kino? Gehen wir ins Schwimmbad? Heute Nachmittag um vier? B Gehen wir ins Kino? Heute Nachmittag um vier?",
+    "kind": "solution",
+    "source": "coursebook-key",
+    "sourceTitle": "Kursbuch Lösungen · Lessons 1–12",
+    "sourcePage": 2,
+    "note": ""
+  },
+  {
+    "id": "coursebook-52-answer-exercise-2",
+    "pageId": "coursebook-52",
+    "exercise": "Exercise 2",
+    "text": "b",
+    "kind": "solution",
+    "source": "coursebook-key",
+    "sourceTitle": "Kursbuch Lösungen · Lessons 1–12",
+    "sourcePage": 2,
+    "note": ""
+  },
+  {
+    "id": "coursebook-52-answer-exercise-3a",
+    "pageId": "coursebook-52",
+    "exercise": "Exercise 3a",
+    "text": "3, 7, 2, 5, 1, 6, 4",
+    "kind": "solution",
+    "source": "coursebook-key",
+    "sourceTitle": "Kursbuch Lösungen · Lessons 1–12",
+    "sourcePage": 2,
+    "note": ""
+  },
+  {
+    "id": "coursebook-52-answer-exercise-4a",
+    "pageId": "coursebook-52",
+    "exercise": "Exercise 4a",
+    "text": "Nachmittag, Kino",
+    "kind": "solution",
+    "source": "coursebook-key",
+    "sourceTitle": "Kursbuch Lösungen · Lessons 1–12",
+    "sourcePage": 2,
+    "note": ""
+  },
+  {
+    "id": "coursebook-53-answer-exercise-4b",
+    "pageId": "coursebook-53",
+    "exercise": "Exercise 4b",
+    "text": "2 der Vormittag 3 der Mittag 4 der Nachmittag 5 der Abend 6 die Nacht",
+    "kind": "solution",
+    "source": "coursebook-key",
+    "sourceTitle": "Kursbuch Lösungen · Lessons 1–12",
+    "sourcePage": 3,
+    "note": ""
+  },
+  {
+    "id": "coursebook-53-answer-exercise-6a",
+    "pageId": "coursebook-53",
+    "exercise": "Exercise 6a",
+    "text": "2 Viertel nach drei 4 fünf nach halb vier 5 Viertel vor vier 6 zehn vor vier 7 fünf vor vier",
+    "kind": "solution",
+    "source": "coursebook-key",
+    "sourceTitle": "Kursbuch Lösungen · Lessons 1–12",
+    "sourcePage": 3,
+    "note": ""
+  },
+  {
+    "id": "coursebook-54-answer-exercise-7a",
+    "pageId": "coursebook-54",
+    "exercise": "Exercise 7a",
+    "text": "Vorschlag/Frage Vielleicht können wir mal wieder / heute Abend ins Theater gehen? Lust auf …? Gehen wir ins Kino? Kannst du heute Abend / am … / um …? Antwort (Zustimmung) Gute Idee! Ja, klar. Ja, da kann ich. Okay. (Vielleicht) Das weiß ich noch nicht. (Absage) Tut mir leid, ich kann leider nicht. Ich … (Nein,) heute Abend habe ich (leider) keine Zeit.",
+    "kind": "solution",
+    "source": "coursebook-key",
+    "sourceTitle": "Kursbuch Lösungen · Lessons 1–12",
+    "sourcePage": 3,
+    "note": ""
+  },
+  {
     "id": "coursebook-23-answer-reading-1",
     "pageId": "coursebook-23",
     "exercise": "Reading 1",
@@ -1012,6 +1089,17 @@
     "note": "Compliments and responses explicitly paired in track 2/01."
   },
   {
+    "id": "workbook-90-answer-extra-practice-challenge-9",
+    "pageId": "workbook-90",
+    "exercise": "Extra practice · Challenge 9",
+    "text": "a 08:30 (example) · b 00:35 / 12:35 · c 06:30 / 18:30 · d 15:45 · e 01:45 / 13:45 · f 03:15 / 15:15",
+    "kind": "solution",
+    "source": "workbook-transcript",
+    "sourceTitle": "Arbeitsbuch · Publisher transcript",
+    "sourcePage": 19,
+    "note": "Track 2/56 gives these clock times. Alternatives retain the morning/evening ambiguity in colloquial times; item d explicitly says fifteen forty-five."
+  },
+  {
     "id": "coursebook-14-answer-quick-test-vocabulary",
     "pageId": "coursebook-14",
     "exercise": "Quick test · Vocabulary",
@@ -1236,6 +1324,39 @@
     "pageId": "coursebook-50",
     "exercise": "Quick test · Communication",
     "text": "a kannst; Dank, Vielen, Danke\nb Freizeit\nc Hobbys, gern, Spaß",
+    "kind": "solution",
+    "source": "coursebook-key",
+    "sourceTitle": "Kursbuch · Lösungen zu den Schnelltests",
+    "sourcePage": 203,
+    "note": "Answers in printed order; worked examples may already be filled on the page."
+  },
+  {
+    "id": "coursebook-54-answer-quick-test-vocabulary",
+    "pageId": "coursebook-54",
+    "exercise": "Quick test · Vocabulary",
+    "text": "1a Klub (Disco is already given); b Kino; c Schwimmbad; d Fitnessstudio. 2a Donnerstag – Freitag – Samstag – Sonntag. 2b der Mittag – der Nachmittag – der Abend – die Nacht.",
+    "kind": "solution",
+    "source": "coursebook-key",
+    "sourceTitle": "Kursbuch · Lösungen zu den Schnelltests",
+    "sourcePage": 203,
+    "note": "Answers in printed order; worked examples may already be filled on the page."
+  },
+  {
+    "id": "coursebook-54-answer-quick-test-grammar",
+    "pageId": "coursebook-54",
+    "exercise": "Quick test · Grammar",
+    "text": "um, am, am. Leider haben wir keine Zeit. Um 15 Uhr treffe ich Nina. Am Abend gehen wir ins Kino. Vielleicht können wir am Sonntag Tennis spielen?",
+    "kind": "solution",
+    "source": "coursebook-key",
+    "sourceTitle": "Kursbuch · Lösungen zu den Schnelltests",
+    "sourcePage": 203,
+    "note": "Answers in printed order; worked examples may already be filled on the page."
+  },
+  {
+    "id": "coursebook-54-answer-quick-test-communication",
+    "pageId": "coursebook-54",
+    "exercise": "Quick test · Communication",
+    "text": "1 spät ist; Es ist. 2 Lust; Idee; mir leid; habe keine.",
     "kind": "solution",
     "source": "coursebook-key",
     "sourceTitle": "Kursbuch · Lösungen zu den Schnelltests",

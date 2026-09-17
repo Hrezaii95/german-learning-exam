@@ -24,7 +24,7 @@ describe("Lesson 7 source coverage and modal sentence learning",()=>{
   expect(cardsForSheet(loadWordCards().cards,'people').some(c=>c.aliases.includes('/vocabulary/l7-dj')||c.path==='/vocabulary/l7-dj')).toBe(true);
  });
  it("includes the core pages, both partner roles, bingo continuation and workbook extras",()=>{
-  const book=loadBook();expect(book.pages).toHaveLength(120);
+  const book=loadBook();expect(book.pages).toHaveLength(130);
   for(const [kind,start] of [['coursebook',47],['workbook',46]] as const)expect(book.pages.filter(p=>p.kind===kind&&p.section==='Lesson 7').map(p=>p.printedPage)).toEqual([start,start+1,start+2,start+3]);
   for(const n of [162,163,194])expect(book.pages.find(p=>p.id===`coursebook-${n}`)?.lessons).toContain(7);
   expect(book.pages.find(p=>p.id==='coursebook-193')?.lessons).toEqual([4,5]);

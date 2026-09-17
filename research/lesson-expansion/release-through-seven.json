@@ -1,0 +1,25 @@
+{
+  "milestone": "Lessons 1-7 ready for live review",
+  "commit": "628797f3f16b15eefdb54a65daf42f2e3f731636",
+  "deploymentRun": 35219563413,
+  "deployment": "success",
+  "url": "https://hrezaii95.github.io/german-learning-exam/lessons/07/",
+  "cheatSheet": "https://hrezaii95.github.io/german-learning-exam/cheat-sheets/hobbies/",
+  "liveBrowserChecks": {
+    "bookAnswers": 419,
+    "studyScope": 18,
+    "hobbies": 14,
+    "bookReader": 19,
+    "lessonSeven": 13,
+    "questions": 42,
+    "dictionary": 14,
+    "collections": 59
+  },
+  "liveMediaByteChecks": 30,
+  "browserErrors": 0,
+  "localValidation": "lesson-seven-local-validation.json",
+  "remaining": [
+    "Lessons 8-12 under the full A1.1 objective",
+    "Complete ordinary workbook answer key was not supplied"
+  ]
+}

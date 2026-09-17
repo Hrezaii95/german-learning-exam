@@ -1,0 +1,1037 @@
+{
+  "number": 8,
+  "summary": "Tell the time, arrange a meeting and put time phrases first. Practise weekdays, am and um, wissen and going to places.",
+  "words": [
+    {
+      "de": "das Schwimmbad",
+      "en": "swimming pool",
+      "plural": "die Schwimmbäder",
+      "category": "Places",
+      "example": "Wir gehen ins Schwimmbad.",
+      "translation": "We are going to the swimming pool.",
+      "id": "l8-schwimmbad"
+    },
+    {
+      "de": "das Kino",
+      "en": "cinema",
+      "plural": "die Kinos",
+      "category": "Places",
+      "example": "Gehen wir ins Kino?",
+      "translation": "Shall we go to the cinema?",
+      "id": "l8-kino"
+    },
+    {
+      "de": "heute",
+      "en": "today",
+      "plural": "",
+      "category": "Time",
+      "example": "Heute habe ich Zeit.",
+      "translation": "I have time today.",
+      "id": "l8-heute"
+    },
+    {
+      "de": "der Nachmittag",
+      "en": "afternoon",
+      "plural": "die Nachmittage",
+      "category": "Time",
+      "example": "Am Nachmittag gehe ich ins Kino.",
+      "translation": "I am going to the cinema in the afternoon.",
+      "id": "l8-nachmittag"
+    },
+    {
+      "de": "um",
+      "en": "at (a clock time)",
+      "plural": "",
+      "category": "Grammar",
+      "example": "Wir treffen uns um vier.",
+      "translation": "We are meeting at four.",
+      "id": "l8-um"
+    },
+    {
+      "de": "am",
+      "en": "on / in / at (with days and most parts of the day)",
+      "plural": "",
+      "category": "Grammar",
+      "example": "Am Montag habe ich Zeit.",
+      "translation": "I have time on Monday.",
+      "id": "l8-am"
+    },
+    {
+      "de": "der Wochentag",
+      "en": "day of the week",
+      "plural": "die Wochentage",
+      "category": "Time",
+      "example": "Montag ist ein Wochentag.",
+      "translation": "Monday is a day of the week.",
+      "id": "l8-wochentag"
+    },
+    {
+      "de": "die Woche",
+      "en": "week",
+      "plural": "die Wochen",
+      "category": "Time",
+      "example": "Ich habe eine Woche frei.",
+      "translation": "I have a week off.",
+      "id": "l8-woche"
+    },
+    {
+      "de": "der Montag",
+      "en": "Monday",
+      "plural": "die Montage",
+      "category": "Time",
+      "example": "Am Montag arbeite ich.",
+      "translation": "I work on Monday.",
+      "id": "l8-montag"
+    },
+    {
+      "de": "der Dienstag",
+      "en": "Tuesday",
+      "plural": "die Dienstage",
+      "category": "Time",
+      "example": "Am Dienstag spiele ich Tennis.",
+      "translation": "I play tennis on Tuesday.",
+      "id": "l8-dienstag"
+    },
+    {
+      "de": "der Mittwoch",
+      "en": "Wednesday",
+      "plural": "die Mittwoche",
+      "category": "Time",
+      "example": "Am Mittwoch gehe ich ins Café.",
+      "translation": "I am going to the cafe on Wednesday.",
+      "id": "l8-mittwoch"
+    },
+    {
+      "de": "der Donnerstag",
+      "en": "Thursday",
+      "plural": "die Donnerstage",
+      "category": "Time",
+      "example": "Am Donnerstag habe ich Zeit.",
+      "translation": "I have time on Thursday.",
+      "id": "l8-donnerstag"
+    },
+    {
+      "de": "der Freitag",
+      "en": "Friday",
+      "plural": "die Freitage",
+      "category": "Time",
+      "example": "Am Freitag gehe ich ins Kino.",
+      "translation": "I am going to the cinema on Friday.",
+      "id": "l8-freitag"
+    },
+    {
+      "de": "der Samstag",
+      "en": "Saturday",
+      "plural": "die Samstage",
+      "category": "Time",
+      "example": "Am Samstag treffe ich Anna.",
+      "translation": "I am meeting Anna on Saturday.",
+      "id": "l8-samstag"
+    },
+    {
+      "de": "der Sonntag",
+      "en": "Sunday",
+      "plural": "die Sonntage",
+      "category": "Time",
+      "example": "Am Sonntag koche ich.",
+      "translation": "I cook on Sunday.",
+      "id": "l8-sonntag"
+    },
+    {
+      "de": "Wann?",
+      "en": "When?",
+      "plural": "",
+      "category": "Questions",
+      "example": "Wann hast du Zeit?",
+      "translation": "When do you have time?",
+      "id": "l8-wann"
+    },
+    {
+      "de": "das Wochenende",
+      "en": "weekend",
+      "plural": "die Wochenenden",
+      "category": "Time",
+      "example": "Am Wochenende habe ich Zeit.",
+      "translation": "I have time at the weekend.",
+      "id": "l8-wochenende"
+    },
+    {
+      "de": "am Wochenende",
+      "en": "at the weekend",
+      "plural": "",
+      "category": "Time",
+      "example": "Was machst du am Wochenende?",
+      "translation": "What are you doing at the weekend?",
+      "id": "l8-am-wochenende"
+    },
+    {
+      "de": "frei",
+      "en": "off / free",
+      "plural": "",
+      "category": "Descriptions",
+      "example": "Ich habe am Montag frei.",
+      "translation": "I have Monday off.",
+      "id": "l8-frei"
+    },
+    {
+      "de": "der Chat",
+      "en": "chat",
+      "plural": "die Chats",
+      "category": "Communication",
+      "example": "Ich lese den Chat.",
+      "translation": "I am reading the chat.",
+      "id": "l8-chat"
+    },
+    {
+      "de": "die Nacht",
+      "en": "night",
+      "plural": "die Nächte",
+      "category": "Time",
+      "example": "In der Nacht schlafe ich.",
+      "translation": "I sleep at night.",
+      "id": "l8-nacht"
+    },
+    {
+      "de": "in der Nacht",
+      "en": "at night",
+      "plural": "",
+      "category": "Time",
+      "example": "Er arbeitet in der Nacht.",
+      "translation": "He works at night.",
+      "id": "l8-in-der-nacht"
+    },
+    {
+      "de": "Das weiß ich noch nicht.",
+      "en": "I do not know yet.",
+      "plural": "",
+      "category": "Conversation",
+      "example": "Das weiß ich noch nicht.",
+      "translation": "I do not know yet.",
+      "id": "l8-das-weiss-ich-noch-nicht"
+    },
+    {
+      "de": "wissen",
+      "en": "to know (a fact)",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Weißt du das?",
+      "translation": "Do you know that?",
+      "id": "l8-wissen"
+    },
+    {
+      "de": "Lust auf …",
+      "en": "in the mood for …",
+      "plural": "",
+      "category": "Conversation",
+      "example": "Hast du Lust auf Kino?",
+      "translation": "Do you feel like going to the cinema?",
+      "id": "l8-lust-auf"
+    },
+    {
+      "de": "Keine Lust.",
+      "en": "I do not feel like it.",
+      "plural": "",
+      "category": "Conversation",
+      "example": "Nein, keine Lust.",
+      "translation": "No, I do not feel like it.",
+      "id": "l8-keine-lust"
+    },
+    {
+      "de": "die Lust",
+      "en": "desire / inclination",
+      "plural": "",
+      "category": "Conversation",
+      "example": "Ich habe Lust auf Kino.",
+      "translation": "I feel like going to the cinema.",
+      "id": "l8-lust"
+    },
+    {
+      "de": "die Idee",
+      "en": "idea",
+      "plural": "die Ideen",
+      "category": "Conversation",
+      "example": "Das ist eine gute Idee.",
+      "translation": "That is a good idea.",
+      "id": "l8-idee"
+    },
+    {
+      "de": "Gute Idee!",
+      "en": "Good idea!",
+      "plural": "",
+      "category": "Conversation",
+      "example": "Oh ja! Gute Idee!",
+      "translation": "Oh yes! Good idea!",
+      "id": "l8-gute-idee"
+    },
+    {
+      "de": "um Viertel nach",
+      "en": "at quarter past",
+      "plural": "",
+      "category": "Time",
+      "example": "Wir gehen um Viertel nach drei ins Kino.",
+      "translation": "We are going to the cinema at quarter past three.",
+      "id": "l8-um-viertel-nach"
+    },
+    {
+      "de": "um halb",
+      "en": "at half past (the previous hour)",
+      "plural": "",
+      "category": "Time",
+      "example": "Ich habe um halb vier Zeit.",
+      "translation": "I have time at half past three.",
+      "id": "l8-um-halb"
+    },
+    {
+      "de": "spät",
+      "en": "late",
+      "plural": "",
+      "category": "Time",
+      "example": "Das ist zu spät.",
+      "translation": "That is too late.",
+      "id": "l8-spaet"
+    },
+    {
+      "de": "oder",
+      "en": "or",
+      "plural": "",
+      "category": "Grammar",
+      "example": "Am Montag oder am Dienstag?",
+      "translation": "On Monday or on Tuesday?",
+      "id": "l8-oder"
+    },
+    {
+      "de": "okay",
+      "en": "okay",
+      "plural": "",
+      "category": "Conversation",
+      "example": "Ja, okay. Bis dann!",
+      "translation": "Yes, okay. See you then!",
+      "id": "l8-okay"
+    },
+    {
+      "de": "Bis dann!",
+      "en": "See you then!",
+      "plural": "",
+      "category": "Conversation",
+      "example": "Um vier? Gut, bis dann!",
+      "translation": "At four? Good, see you then!",
+      "id": "l8-bis-dann"
+    },
+    {
+      "de": "der Morgen",
+      "en": "morning",
+      "plural": "die Morgen",
+      "category": "Time",
+      "example": "Am Morgen schwimme ich.",
+      "translation": "I swim in the morning.",
+      "id": "l8-morgen"
+    },
+    {
+      "de": "der Vormittag",
+      "en": "morning (before noon)",
+      "plural": "die Vormittage",
+      "category": "Time",
+      "example": "Am Vormittag arbeite ich.",
+      "translation": "I work in the morning.",
+      "id": "l8-vormittag"
+    },
+    {
+      "de": "der Mittag",
+      "en": "noon / midday",
+      "plural": "die Mittage",
+      "category": "Time",
+      "example": "Am Mittag habe ich Zeit.",
+      "translation": "I have time at midday.",
+      "id": "l8-mittag"
+    },
+    {
+      "de": "der Abend",
+      "en": "evening",
+      "plural": "die Abende",
+      "category": "Time",
+      "example": "Am Abend gehe ich ins Theater.",
+      "translation": "I am going to the theatre in the evening.",
+      "id": "l8-abend"
+    },
+    {
+      "de": "das Museum",
+      "en": "museum",
+      "plural": "die Museen",
+      "category": "Places",
+      "example": "Wir gehen ins Museum.",
+      "translation": "We are going to the museum.",
+      "id": "l8-museum"
+    },
+    {
+      "de": "das Theater",
+      "en": "theatre",
+      "plural": "die Theater",
+      "category": "Places",
+      "example": "Gehen wir ins Theater?",
+      "translation": "Shall we go to the theatre?",
+      "id": "l8-theater"
+    },
+    {
+      "de": "das Café",
+      "en": "cafe",
+      "plural": "die Cafés",
+      "category": "Places",
+      "example": "Wir gehen ins Café.",
+      "translation": "We are going to the cafe.",
+      "id": "l8-caf"
+    },
+    {
+      "de": "die Ausstellung",
+      "en": "exhibition",
+      "plural": "die Ausstellungen",
+      "category": "Places",
+      "example": "Ich gehe in eine Ausstellung.",
+      "translation": "I am going to an exhibition.",
+      "id": "l8-ausstellung"
+    },
+    {
+      "de": "die Disco",
+      "en": "disco",
+      "plural": "die Discos",
+      "category": "Places",
+      "example": "Sie geht in eine Disco.",
+      "translation": "She is going to a disco.",
+      "id": "l8-disco"
+    },
+    {
+      "de": "das Restaurant",
+      "en": "restaurant",
+      "plural": "die Restaurants",
+      "category": "Places",
+      "example": "Wir gehen ins Restaurant.",
+      "translation": "We are going to the restaurant.",
+      "id": "l8-restaurant"
+    },
+    {
+      "de": "die Bar",
+      "en": "bar",
+      "plural": "die Bars",
+      "category": "Places",
+      "example": "Ich gehe in eine Bar.",
+      "translation": "I am going to a bar.",
+      "id": "l8-bar"
+    },
+    {
+      "de": "in",
+      "en": "to / into (a destination here)",
+      "plural": "",
+      "category": "Grammar",
+      "example": "Wir gehen in einen Klub.",
+      "translation": "We are going to a club.",
+      "id": "l8-in"
+    },
+    {
+      "de": "nach",
+      "en": "past (a clock time)",
+      "plural": "",
+      "category": "Time",
+      "example": "Es ist zehn nach drei.",
+      "translation": "It is ten past three.",
+      "id": "l8-nach"
+    },
+    {
+      "de": "Viertel nach",
+      "en": "quarter past",
+      "plural": "",
+      "category": "Time",
+      "example": "Es ist Viertel nach drei.",
+      "translation": "It is quarter past three.",
+      "id": "l8-viertel-nach"
+    },
+    {
+      "de": "vor",
+      "en": "to / before (a clock time)",
+      "plural": "",
+      "category": "Time",
+      "example": "Es ist zehn vor vier.",
+      "translation": "It is ten to four.",
+      "id": "l8-vor"
+    },
+    {
+      "de": "halb",
+      "en": "halfway to the next hour",
+      "plural": "",
+      "category": "Time",
+      "example": "Es ist halb vier.",
+      "translation": "It is half past three.",
+      "id": "l8-halb"
+    },
+    {
+      "de": "Viertel vor",
+      "en": "quarter to",
+      "plural": "",
+      "category": "Time",
+      "example": "Es ist Viertel vor vier.",
+      "translation": "It is quarter to four.",
+      "id": "l8-viertel-vor"
+    },
+    {
+      "de": "Wie viel Uhr ist es?",
+      "en": "What time is it?",
+      "plural": "",
+      "category": "Questions",
+      "example": "Wie viel Uhr ist es?",
+      "translation": "What time is it?",
+      "id": "l8-wie-viel-uhr-ist-es"
+    },
+    {
+      "de": "Wie spät ist es?",
+      "en": "What time is it?",
+      "plural": "",
+      "category": "Questions",
+      "example": "Wie spät ist es?",
+      "translation": "What time is it?",
+      "id": "l8-wie-spaet-ist-es"
+    },
+    {
+      "de": "Es ist …",
+      "en": "It is … (a clock time here)",
+      "plural": "",
+      "category": "Time",
+      "example": "Es ist drei Uhr.",
+      "translation": "It is three o'clock.",
+      "id": "l8-es-ist"
+    },
+    {
+      "de": "der Rücken",
+      "en": "back",
+      "plural": "die Rücken",
+      "category": "People",
+      "example": "Schreiben Sie eine Uhrzeit auf den Rücken.",
+      "translation": "Write a time on the person's back.",
+      "id": "l8-ruecken"
+    },
+    {
+      "de": "Ja, genau.",
+      "en": "Yes, exactly.",
+      "plural": "",
+      "category": "Conversation",
+      "example": "Halb vier? Ja, genau.",
+      "translation": "Half past three? Yes, exactly.",
+      "id": "l8-ja-genau"
+    },
+    {
+      "de": "der Vorschlag",
+      "en": "suggestion",
+      "plural": "die Vorschläge",
+      "category": "Conversation",
+      "example": "Das ist ein guter Vorschlag.",
+      "translation": "That is a good suggestion.",
+      "id": "l8-vorschlag"
+    },
+    {
+      "de": "die Frage",
+      "en": "question",
+      "plural": "die Fragen",
+      "category": "Questions",
+      "example": "Ich habe eine Frage.",
+      "translation": "I have a question.",
+      "id": "l8-frage"
+    },
+    {
+      "de": "die Antwort",
+      "en": "answer",
+      "plural": "die Antworten",
+      "category": "Questions",
+      "example": "Ich weiß die Antwort.",
+      "translation": "I know the answer.",
+      "id": "l8-antwort"
+    },
+    {
+      "de": "tut mir leid",
+      "en": "I am sorry",
+      "plural": "",
+      "category": "Conversation",
+      "example": "Tut mir leid, ich habe keine Zeit.",
+      "translation": "I am sorry, I have no time.",
+      "id": "l8-tut-mir-leid"
+    },
+    {
+      "de": "der Klub",
+      "en": "club",
+      "plural": "die Klubs",
+      "category": "Places",
+      "example": "Wir gehen in einen Klub.",
+      "translation": "We are going to a club.",
+      "id": "l8-klub"
+    },
+    {
+      "de": "das Konzert",
+      "en": "concert",
+      "plural": "die Konzerte",
+      "category": "Places",
+      "example": "Am Abend gehe ich ins Konzert.",
+      "translation": "I am going to the concert in the evening.",
+      "id": "l8-konzert"
+    },
+    {
+      "de": "das Fitnessstudio",
+      "en": "gym",
+      "plural": "die Fitnessstudios",
+      "category": "Places",
+      "example": "Sie geht ins Fitnessstudio.",
+      "translation": "She is going to the gym.",
+      "id": "l8-fitnessstudio"
+    },
+    {
+      "de": "die Uhrzeit",
+      "en": "time (on a clock)",
+      "plural": "die Uhrzeiten",
+      "category": "Time",
+      "example": "Notieren Sie die Uhrzeit.",
+      "translation": "Write down the time.",
+      "id": "l8-uhrzeit"
+    },
+    {
+      "de": "der Termin",
+      "en": "appointment",
+      "plural": "die Termine",
+      "category": "Time",
+      "example": "Ich habe am Montag einen Termin.",
+      "translation": "I have an appointment on Monday.",
+      "id": "l8-termin"
+    },
+    {
+      "de": "der Traumtag",
+      "en": "dream day",
+      "plural": "die Traumtage",
+      "category": "Time",
+      "example": "Wir planen einen Traumtag.",
+      "translation": "We are planning a dream day.",
+      "id": "l8-traumtag"
+    },
+    {
+      "de": "leider",
+      "en": "unfortunately",
+      "plural": "",
+      "category": "Conversation",
+      "example": "Ich habe leider keine Zeit.",
+      "translation": "Unfortunately, I have no time.",
+      "id": "l8-leider"
+    },
+    {
+      "de": "die Zeit",
+      "en": "time",
+      "plural": "",
+      "category": "Time",
+      "example": "Hast du heute Zeit?",
+      "translation": "Do you have time today?",
+      "id": "l8-zeit"
+    },
+    {
+      "de": "gehen",
+      "en": "to go",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Am Abend gehen wir ins Kino.",
+      "translation": "We are going to the cinema in the evening.",
+      "id": "l8-gehen"
+    },
+    {
+      "de": "haben",
+      "en": "to have",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Hast du am Samstag Zeit?",
+      "translation": "Do you have time on Saturday?",
+      "id": "l8-haben"
+    },
+    {
+      "de": "können",
+      "en": "can / to be able to",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Können wir am Sonntag Tennis spielen?",
+      "translation": "Can we play tennis on Sunday?",
+      "id": "l8-koennen"
+    },
+    {
+      "de": "treffen",
+      "en": "to meet",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Um drei treffe ich Nina.",
+      "translation": "I am meeting Nina at three.",
+      "id": "l8-treffen"
+    },
+    {
+      "de": "planen",
+      "en": "to plan",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Wir planen einen Tag in Berlin.",
+      "translation": "We are planning a day in Berlin.",
+      "id": "l8-planen"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "l8-am-um",
+      "title": "Days take am; clock times take um",
+      "de": "am Montag · am Abend · um vier",
+      "en": "Use am with a weekday, the weekend and most parts of the day. Use um with a clock time. The exception to remember is in der Nacht. Heute needs no preposition: heute Abend, not am heute Abend.",
+      "examples": [
+        "Am Montag habe ich Zeit.",
+        "Wir gehen um vier ins Kino.",
+        "Heute Abend habe ich keine Zeit.",
+        "In der Nacht arbeite ich."
+      ],
+      "source": "KB 52-54; AB 50-52"
+    },
+    {
+      "id": "l8-days",
+      "title": "Seven days, all masculine",
+      "de": "der Montag → der Sonntag · das Wochenende",
+      "en": "All seven weekday names are masculine nouns and start with a capital letter. Saturday and Sunday make das Wochenende. Combine day and part of day into one noun: am Samstagnachmittag.",
+      "examples": [
+        "Am Mittwoch arbeite ich.",
+        "Am Wochenende habe ich frei.",
+        "Am Samstagnachmittag gehe ich ins Museum."
+      ],
+      "source": "KB 52-53; AB 50-51"
+    },
+    {
+      "id": "l8-time-first",
+      "title": "Time first? The verb stays second",
+      "de": "Ich habe am Montag Zeit. → Am Montag habe ich Zeit.",
+      "en": "A complete time phrase counts as one block. When it comes first, the subject follows the conjugated verb. Do not leave ich before habe after Am Montag. A modal keeps its infinitive at the end.",
+      "examples": [
+        "Am Abend gehen wir ins Kino.",
+        "Um drei treffe ich Nina.",
+        "Vielleicht können wir am Sonntag Tennis spielen."
+      ],
+      "source": "KB 52, 54; AB 50"
+    },
+    {
+      "id": "l8-half",
+      "title": "Halb points to the next hour",
+      "de": "halb vier = 3:30 / 15:30",
+      "en": "Think halfway to four, not half past four. Viertel nach drei is 3:15; Viertel vor vier is 3:45. Fünf vor halb vier is 3:25; fünf nach halb vier is 3:35. The spoken 12-hour form needs context to distinguish morning and afternoon.",
+      "examples": [
+        "Es ist halb vier.",
+        "Es ist fünf vor halb vier.",
+        "Es ist fünf nach halb vier."
+      ],
+      "source": "KB 53; AB 52"
+    },
+    {
+      "id": "l8-clock",
+      "title": "Read official and everyday time",
+      "de": "fünfzehn Uhr fünfzehn = Viertel nach drei",
+      "en": "The official form reads hours, Uhr, then minutes using the 24-hour clock. The everyday form uses the 12-hour clock, nach, vor and halb. Say ein Uhr, but eins without Uhr: Viertel nach eins. Regional variants also exist; use the book patterns here.",
+      "examples": [
+        "Es ist dreizehn Uhr.",
+        "Es ist ein Uhr.",
+        "Es ist Viertel nach eins.",
+        "Wie spät ist es?"
+      ],
+      "source": "KB 53-54; AB 52"
+    },
+    {
+      "id": "l8-know",
+      "title": "Wissen: a fact you know",
+      "de": "weiß · weißt · weiß · wissen · wisst · wissen",
+      "en": "Wissen describes knowing information. The singular uses weiß; the plural uses wiss-. Ich and er/sie/es have the same form. Kennen describes familiarity with a person, place or thing.",
+      "examples": [
+        "Das weiß ich noch nicht.",
+        "Weißt du die Antwort?",
+        "Wisst ihr das schon?"
+      ],
+      "source": "KB 52; AB 51"
+    },
+    {
+      "id": "l8-destinations",
+      "title": "Choose a destination phrase",
+      "de": "ins Kino · in eine Bar · in einen Klub",
+      "en": "For going to an indoor destination, these book phrases use in + accusative. Ins is in das. Neuter: ins Kino / Museum / Theater. Feminine: in eine Ausstellung / Disco / Bar. Masculine: in einen Klub. Keep each place and its article together.",
+      "examples": [
+        "Gehen wir ins Kino?",
+        "Wir gehen in eine Ausstellung.",
+        "Am Abend gehe ich in einen Klub."
+      ],
+      "source": "KB 52-53; AB 51"
+    },
+    {
+      "id": "l8-arrange",
+      "title": "Suggest, agree, decline, or leave it open",
+      "de": "Lust auf Kino? → Gute Idee! / Tut mir leid. / Vielleicht.",
+      "en": "Gehen wir ins Kino? proposes an activity. Hast du am Abend Zeit? checks availability. Accept with Ja, gern or Gute Idee. Decline politely with Tut mir leid, ich habe leider keine Zeit. Das weiß ich noch nicht leaves the answer open.",
+      "examples": [
+        "Hast du am Samstag Zeit?",
+        "Ja, da kann ich.",
+        "Tut mir leid, ich kann leider nicht.",
+        "Das weiß ich noch nicht."
+      ],
+      "source": "KB 54; AB 53"
+    }
+  ],
+  "verbs": [
+    {
+      "verb": "wissen",
+      "meaning": "to know (a fact)",
+      "forms": [
+        "weiß",
+        "weißt",
+        "weiß",
+        "wissen",
+        "wisst",
+        "wissen"
+      ],
+      "tip": "Singular weiß-, plural wiss-. Ich and er/sie/es take weiß."
+    },
+    {
+      "verb": "gehen",
+      "meaning": "to go",
+      "forms": [
+        "gehe",
+        "gehst",
+        "geht",
+        "gehen",
+        "geht",
+        "gehen"
+      ],
+      "tip": "Time first: Am Abend gehe ich ins Kino."
+    },
+    {
+      "verb": "haben",
+      "meaning": "to have",
+      "forms": [
+        "habe",
+        "hast",
+        "hat",
+        "haben",
+        "habt",
+        "haben"
+      ],
+      "tip": "Zeit haben means to have time; frei haben means to have time off."
+    },
+    {
+      "verb": "können",
+      "meaning": "can / to be able to",
+      "forms": [
+        "kann",
+        "kannst",
+        "kann",
+        "können",
+        "könnt",
+        "können"
+      ],
+      "tip": "The infinitive closes the frame: Wir können ins Kino gehen."
+    },
+    {
+      "verb": "treffen",
+      "meaning": "to meet",
+      "forms": [
+        "treffe",
+        "triffst",
+        "trifft",
+        "treffen",
+        "trefft",
+        "treffen"
+      ],
+      "tip": "e → i in du and er/sie/es. Um drei treffe ich Nina."
+    },
+    {
+      "verb": "planen",
+      "meaning": "to plan",
+      "forms": [
+        "plane",
+        "planst",
+        "plant",
+        "planen",
+        "plant",
+        "planen"
+      ],
+      "tip": "Regular endings. Wir planen einen Traumtag."
+    }
+  ],
+  "phrases": [
+    {
+      "de": "Ich habe leider keine Zeit.",
+      "en": "Unfortunately, I have no time."
+    },
+    {
+      "de": "Hast du am Samstag Zeit?",
+      "en": "Do you have time on Saturday?"
+    },
+    {
+      "de": "Gehen wir ins Kino?",
+      "en": "Shall we go to the cinema?"
+    },
+    {
+      "de": "Lust auf Schwimmbad?",
+      "en": "Feel like going to the swimming pool?"
+    },
+    {
+      "de": "Gute Idee!",
+      "en": "Good idea!"
+    },
+    {
+      "de": "Ja, gern.",
+      "en": "Yes, gladly."
+    },
+    {
+      "de": "Ja, da kann ich.",
+      "en": "Yes, I am available then."
+    },
+    {
+      "de": "Tut mir leid, ich kann leider nicht.",
+      "en": "I am sorry, unfortunately I cannot."
+    },
+    {
+      "de": "Das weiß ich noch nicht.",
+      "en": "I do not know yet."
+    },
+    {
+      "de": "Nein, keine Lust.",
+      "en": "No, I do not feel like it."
+    },
+    {
+      "de": "Wann denn?",
+      "en": "When, then?"
+    },
+    {
+      "de": "Wie spät ist es?",
+      "en": "What time is it?"
+    },
+    {
+      "de": "Wie viel Uhr ist es?",
+      "en": "What time is it?"
+    },
+    {
+      "de": "Es ist halb vier.",
+      "en": "It is half past three."
+    },
+    {
+      "de": "Es ist fünfzehn Uhr fünfzehn.",
+      "en": "It is fifteen fifteen."
+    },
+    {
+      "de": "Um Viertel nach sieben?",
+      "en": "At quarter past seven?"
+    },
+    {
+      "de": "Nein, das ist zu spät.",
+      "en": "No, that is too late."
+    },
+    {
+      "de": "Am Abend habe ich keine Zeit.",
+      "en": "I have no time in the evening."
+    },
+    {
+      "de": "Bis dann!",
+      "en": "See you then!"
+    },
+    {
+      "de": "Vielleicht können wir am Sonntag Tennis spielen.",
+      "en": "Maybe we can play tennis on Sunday."
+    }
+  ],
+  "quiz": [
+    {
+      "q": "___ Montag habe ich Zeit.",
+      "options": [
+        "Am",
+        "Um",
+        "In"
+      ],
+      "answer": "Am",
+      "why": "Weekdays take am."
+    },
+    {
+      "q": "Wir gehen ___ vier ins Kino.",
+      "options": [
+        "am",
+        "um",
+        "in der"
+      ],
+      "answer": "um",
+      "why": "Clock times take um."
+    },
+    {
+      "q": "___ Nacht arbeite ich.",
+      "options": [
+        "Am",
+        "Um",
+        "In der"
+      ],
+      "answer": "In der",
+      "why": "Remember the exception: in der Nacht."
+    },
+    {
+      "q": "Which sentence keeps the verb in position 2?",
+      "options": [
+        "Am Montag habe ich Zeit.",
+        "Am Montag ich habe Zeit.",
+        "Am Montag Zeit ich habe."
+      ],
+      "answer": "Am Montag habe ich Zeit.",
+      "why": "Am Montag is one block. Habe stays second and ich follows."
+    },
+    {
+      "q": "halb vier means …",
+      "options": [
+        "3:30",
+        "4:30",
+        "4:00"
+      ],
+      "answer": "3:30",
+      "why": "Halb points to the next hour: halfway to four."
+    },
+    {
+      "q": "fünf nach halb vier means …",
+      "options": [
+        "3:25",
+        "3:35",
+        "4:35"
+      ],
+      "answer": "3:35",
+      "why": "Five minutes after 3:30 is 3:35."
+    },
+    {
+      "q": "15:45 in the book’s everyday pattern",
+      "options": [
+        "Viertel nach vier",
+        "Viertel vor vier",
+        "halb vier"
+      ],
+      "answer": "Viertel vor vier",
+      "why": "A quarter of an hour before four."
+    },
+    {
+      "q": "Ich ___ das noch nicht.",
+      "options": [
+        "weiß",
+        "weiße",
+        "wisst"
+      ],
+      "answer": "weiß",
+      "why": "Ich and er/sie/es use weiß."
+    },
+    {
+      "q": "Wir gehen ___ Klub.",
+      "options": [
+        "in einen",
+        "in eine",
+        "ins"
+      ],
+      "answer": "in einen",
+      "why": "Der Klub is masculine; the destination phrase uses accusative einen."
+    },
+    {
+      "q": "Which answer politely declines an invitation?",
+      "options": [
+        "Tut mir leid, ich habe keine Zeit.",
+        "Gute Idee!",
+        "Ja, gern."
+      ],
+      "answer": "Tut mir leid, ich habe keine Zeit.",
+      "why": "This apologizes and explains that you have no time."
+    }
+  ]
+}

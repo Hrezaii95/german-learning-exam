@@ -37,7 +37,8 @@ export function wordStudyTags(card:WordCard):StudyTags{
     if(["Forms","Office"].includes(word.category))concepts.add("office");
     if(word.category==="People")concepts.add("people");
     if(["Hobbies","Frequency"].includes(word.category)||(unit.number===7&&word.category==="Verbs"))concepts.add("hobbies");
-    if(word.category==="Time")concepts.add("numbers");
+    if(word.category==="Time"){concepts.add("numbers");if(unit.number>=8)concepts.add("time");}
+    if(unit.number===8&&["Places","Grammar","Verbs","Conversation","Questions"].includes(word.category))concepts.add("time");
     if(word.category==="Classroom")concepts.add("classroom");
     if(word.category==="Grammar")concepts.add("grammar");
   }

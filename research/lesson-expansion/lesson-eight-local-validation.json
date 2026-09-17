@@ -1,0 +1,30 @@
+{
+  "milestone": "Lessons 1-8",
+  "status": "local validation passed; deployment pending",
+  "repositoryTests": 879,
+  "webSuiteTests": 540,
+  "staticPages": 1216,
+  "browserChecks": {
+    "timeSheet": 16,
+    "bookAnswers": 455,
+    "questions": 42,
+    "bookReader": 19,
+    "studyScope": 18,
+    "dictionary": 14,
+    "lessonEight": 13,
+    "collectionSheets": 59
+  },
+  "bookPages": 130,
+  "originalRecordings": 142,
+  "answerGroups": 124,
+  "requiredSpeechTexts": 8483,
+  "lessonEightSourceWords": 74,
+  "lessonEightWordFamilies": 74,
+  "byteVerifiedMedia": 37,
+  "manualReview": "Source pages, source transcript mappings, code changes, desktop clock and phone destination/word-order builder inspected",
+  "limitations": [
+    "Complete ordinary workbook exercise keys were not supplied; only available official keys and explicit source answers are shown.",
+    "Technical audio checks are not a full listening-language review."
+  ],
+  "fullGoal": "All 12 lessons; Lessons 9-12 remain"
+}

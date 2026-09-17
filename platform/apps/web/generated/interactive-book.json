@@ -44546,6 +44546,2152 @@
       "pageLabel": "Page 50"
     },
     {
+      "id": "coursebook-51",
+      "kind": "coursebook",
+      "lesson": 8,
+      "printedPage": 51,
+      "pdfPage": 53,
+      "image": "/book/pages/coursebook-51.webp",
+      "width": 1905,
+      "height": 2695,
+      "lines": [
+        {
+          "id": "coursebook-51-line-1",
+          "text": "Ich habe leider",
+          "box": [
+            10.768,
+            5.726,
+            48.655,
+            6.376
+          ]
+        },
+        {
+          "id": "coursebook-51-line-2",
+          "text": "keine Zeit. 08",
+          "box": [
+            10.768,
+            2.246,
+            84.919,
+            16.051
+          ]
+        },
+        {
+          "id": "coursebook-51-line-3",
+          "text": "K O M M U N I K AT I O N : sich verabreden: Gehen wir ins Kino? nach der Uhrzeit fragen: Wie spät ist es?",
+          "box": [
+            14.293,
+            89.551,
+            66.448,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-51-line-4",
+          "text": "L E S E N : Kurznachrichten W Ö R T E R : Wochentage, Tageszeiten, Uhrzeiten, Freizeitaktivitäten G R A M M AT I K :",
+          "box": [
+            14.294,
+            91.012,
+            71.908,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-51-line-5",
+          "text": "Verbposition im Satz: Am Montag hat Julia keine Zeit. temporale Präpositionen: am, um Konjugation: wissen",
+          "box": [
+            14.286,
+            92.473,
+            73.783,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-51-line-6",
+          "text": "1 Felix oder Daniel?",
+          "box": [
+            11.292,
+            61.025,
+            19.83,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-51-line-7",
+          "text": "a Sehen Sie das Bild an. Wer sagt was?",
+          "box": [
+            11.313,
+            62.981,
+            31.542,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-51-line-8",
+          "text": "Hören Sie und verbinden Sie.",
+          "box": [
+            14.286,
+            64.949,
+            22.898,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-51-line-9",
+          "text": "Gehen wir ins Schwimmbad?",
+          "box": [
+            34.286,
+            68.913,
+            21.724,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-51-line-10",
+          "text": "Gehen wir ins Kino?",
+          "box": [
+            34.286,
+            71.586,
+            14.924,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-51-line-11",
+          "text": "Heute Nachmittag um vier?",
+          "box": [
+            34.286,
+            74.259,
+            21.173,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-51-line-12",
+          "text": "b Julia hat ein Problem. Was macht sie jetzt? Was meinen Sie?",
+          "box": [
+            11.275,
+            79.383,
+            50.08,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-51-line-13",
+          "text": "Ich glaube, sie geht mit Felix ins Schwimmbad.",
+          "box": [
+            16.429,
+            81.847,
+            35.315,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-51-line-14",
+          "text": "Nein, das glaube ich nicht. Ich glaube, …",
+          "box": [
+            16.429,
+            83.629,
+            30.349,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-51-line-15",
+          "text": "Felix",
+          "box": [
+            18.899,
+            76.719,
+            3.183,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-51-line-16",
+          "text": "Daniel",
+          "box": [
+            67.969,
+            76.779,
+            4.329,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-51-line-17",
+          "text": "einundfünfzig",
+          "box": [
+            94.254,
+            75.539,
+            2.216,
+            6.34
+          ]
+        }
+      ],
+      "audioIds": [
+        "coursebook-l8-ex1-fc457211"
+      ],
+      "section": "Lesson 8",
+      "pageLabel": "Page 51"
+    },
+    {
+      "id": "coursebook-52",
+      "kind": "coursebook",
+      "lesson": 8,
+      "printedPage": 52,
+      "pdfPage": 54,
+      "image": "/book/pages/coursebook-52.webp",
+      "width": 1905,
+      "height": 2695,
+      "lines": [
+        {
+          "id": "coursebook-52-line-1",
+          "text": "2 Hallo Felix!",
+          "box": [
+            11.23,
+            4.796,
+            14.17,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-52-line-2",
+          "text": "Was ist richtig? Lesen Sie die Nachricht und kreuzen Sie an.",
+          "box": [
+            14.286,
+            7.033,
+            46.195,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-52-line-3",
+          "text": "a Am Montag hat Julia keine Zeit.",
+          "box": [
+            14.286,
+            17.873,
+            28.187,
+            2.162
+          ]
+        },
+        {
+          "id": "coursebook-52-line-4",
+          "text": "b Julia geht nicht mit Felix ins Schwimmbad.",
+          "box": [
+            14.286,
+            19.655,
+            36.05,
+            2.162
+          ]
+        },
+        {
+          "id": "coursebook-52-line-5",
+          "text": "3 Wochentage AB 1 – 4",
+          "box": [
+            11.224,
+            23.436,
+            19.522,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-52-line-6",
+          "text": "a Sortieren Sie die Wochentage.",
+          "box": [
+            11.313,
+            25.392,
+            26.515,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-52-line-7",
+          "text": "Hören Sie dann und vergleichen Sie.",
+          "box": [
+            14.286,
+            27.36,
+            27.945,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-52-line-8",
+          "text": "der Mittwoch | der Montag",
+          "box": [
+            14.286,
+            29.517,
+            27.571,
+            3.243
+          ]
+        },
+        {
+          "id": "coursebook-52-line-9",
+          "text": "der Sonntag | der Samstag",
+          "box": [
+            14.285,
+            31.905,
+            27.139,
+            3.243
+          ]
+        },
+        {
+          "id": "coursebook-52-line-10",
+          "text": "der Dienstag | der Donnerstag",
+          "box": [
+            14.285,
+            34.293,
+            29.896,
+            3.243
+          ]
+        },
+        {
+          "id": "coursebook-52-line-11",
+          "text": "der Freitag",
+          "box": [
+            14.285,
+            37.179,
+            12.053,
+            2.162
+          ]
+        },
+        {
+          "id": "coursebook-52-line-12",
+          "text": "b Eine Woche frei! Arbeiten Sie zu zweit. → S. 163",
+          "box": [
+            11.275,
+            40.336,
+            39.744,
+            2.054
+          ]
+        },
+        {
+          "id": "coursebook-52-line-13",
+          "text": "4 Was macht Felix heute? AB 5 – 7",
+          "box": [
+            11.211,
+            44.043,
+            30.201,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-52-line-14",
+          "text": "a Lesen Sie den Chat. Ergänzen Sie den Satz.",
+          "box": [
+            11.313,
+            45.999,
+            36.143,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-52-line-15",
+          "text": "Anabel und Felix gehen am",
+          "box": [
+            14.286,
+            48.464,
+            20.592,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-52-line-16",
+          "text": "ins",
+          "box": [
+            48.646,
+            48.464,
+            2.866,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-52-line-17",
+          "text": "Anabel",
+          "box": [
+            38.643,
+            58.013,
+            4.704,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-52-line-18",
+          "text": "Felix",
+          "box": [
+            19.218,
+            58.022,
+            3.183,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-52-line-19",
+          "text": "das Kino",
+          "box": [
+            6.896,
+            95.257,
+            7.737,
+            1.729
+          ]
+        },
+        {
+          "id": "coursebook-52-line-20",
+          "text": "das Museum",
+          "box": [
+            25.035,
+            95.257,
+            10.434,
+            1.729
+          ]
+        },
+        {
+          "id": "coursebook-52-line-21",
+          "text": "das Theater",
+          "box": [
+            45.128,
+            95.257,
+            9.893,
+            1.729
+          ]
+        },
+        {
+          "id": "coursebook-52-line-22",
+          "text": "das Café",
+          "box": [
+            66.268,
+            95.257,
+            7.93,
+            1.729
+          ]
+        },
+        {
+          "id": "coursebook-52-line-23",
+          "text": "die Ausstellung",
+          "box": [
+            84.338,
+            95.257,
+            12.443,
+            1.729
+          ]
+        },
+        {
+          "id": "coursebook-52-line-24",
+          "text": "Hallo Felix! Jetzt habe ich ein Problem:",
+          "box": [
+            28.067,
+            10.287,
+            26.878,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-52-line-25",
+          "text": "Leider habe ich doch keine Zeit. Tut mir sehr leid.",
+          "box": [
+            28.067,
+            11.749,
+            33.586,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-52-line-26",
+          "text": "Vielleicht am Montag oder am Dienstag?",
+          "box": [
+            28.067,
+            13.21,
+            27.736,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-52-line-27",
+          "text": "Liebe Grüße, Julia",
+          "box": [
+            28.067,
+            14.671,
+            12.203,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-52-line-28",
+          "text": "Wann?",
+          "box": [
+            55.132,
+            31.014,
+            4.504,
+            1.428
+          ]
+        },
+        {
+          "id": "coursebook-52-line-29",
+          "text": "am Montag / Dienstag / …",
+          "box": [
+            55.132,
+            32.479,
+            17.564,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-52-line-30",
+          "text": "am Samstag und am Sonntag = am Wochenende",
+          "box": [
+            55.132,
+            33.94,
+            32.705,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-52-line-31",
+          "text": "Position 2",
+          "box": [
+            64.38,
+            20.984,
+            6.795,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-52-line-32",
+          "text": "Julia",
+          "box": [
+            54.607,
+            22.877,
+            3.051,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-52-line-33",
+          "text": "hat",
+          "box": [
+            64.38,
+            22.877,
+            2.176,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-52-line-34",
+          "text": "am Montag keine Zeit.",
+          "box": [
+            72.774,
+            22.877,
+            15.152,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-52-line-35",
+          "text": "Am Montag",
+          "box": [
+            54.607,
+            24.77,
+            7.974,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-52-line-36",
+          "text": "hat",
+          "box": [
+            64.38,
+            24.77,
+            2.538,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-52-line-37",
+          "text": "Julia keine Zeit.",
+          "box": [
+            72.774,
+            24.77,
+            10.523,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-52-line-38",
+          "text": "Wann?",
+          "box": [
+            68.804,
+            46.839,
+            4.867,
+            1.428
+          ]
+        },
+        {
+          "id": "coursebook-52-line-39",
+          "text": "am Nachmittag",
+          "box": [
+            68.804,
+            48.304,
+            10.479,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-52-line-40",
+          "text": "am Abend",
+          "box": [
+            68.804,
+            53.328,
+            6.856,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-52-line-41",
+          "text": "! in der Nacht",
+          "box": [
+            68.804,
+            58.13,
+            10.502,
+            1.729
+          ]
+        },
+        {
+          "id": "coursebook-52-line-42",
+          "text": "wissen",
+          "box": [
+            80.774,
+            64.384,
+            4.451,
+            1.428
+          ]
+        },
+        {
+          "id": "coursebook-52-line-43",
+          "text": "ich",
+          "box": [
+            72.68,
+            66.281,
+            2.357,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-52-line-44",
+          "text": "weiß",
+          "box": [
+            80.774,
+            66.281,
+            3.183,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-52-line-45",
+          "text": "du",
+          "box": [
+            72.68,
+            68.174,
+            2.023,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-52-line-46",
+          "text": "weißt",
+          "box": [
+            80.774,
+            68.174,
+            3.778,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-52-line-47",
+          "text": "er / es / sie",
+          "box": [
+            72.68,
+            70.067,
+            6.751,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-52-line-48",
+          "text": "weiß",
+          "box": [
+            80.774,
+            70.067,
+            3.183,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-52-line-49",
+          "text": "Extra",
+          "box": [
+            76.756,
+            75.569,
+            3.886,
+            1.41
+          ]
+        },
+        {
+          "id": "coursebook-52-line-50",
+          "text": "Film",
+          "box": [
+            85.0,
+            82.973,
+            3.234,
+            1.41
+          ]
+        },
+        {
+          "id": "coursebook-52-line-51",
+          "text": "Was machst du",
+          "box": [
+            15.619,
+            60.618,
+            10.467,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-52-line-52",
+          "text": "heute Nachmittag?",
+          "box": [
+            15.619,
+            62.08,
+            13.101,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-52-line-53",
+          "text": "Gehen wir ins Kino?",
+          "box": [
+            15.619,
+            70.541,
+            13.365,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-52-line-54",
+          "text": "Lust auf Schwimmbad?",
+          "box": [
+            15.619,
+            66.254,
+            15.539,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-52-line-55",
+          "text": "Um Viertel nach sieben?",
+          "box": [
+            15.619,
+            74.835,
+            16.584,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-52-line-56",
+          "text": "Na, dann um halb vier?",
+          "box": [
+            15.619,
+            79.028,
+            15.827,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-52-line-57",
+          "text": "Oder um vier?",
+          "box": [
+            15.619,
+            80.49,
+            9.747,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-52-line-58",
+          "text": "Das weiß ich noch nicht.",
+          "box": [
+            33.667,
+            62.115,
+            16.569,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-52-line-59",
+          "text": "Ja, okay. Um vier. Bis dann!",
+          "box": [
+            36.071,
+            80.45,
+            18.345,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-52-line-60",
+          "text": "Nöö. Keine Lust.",
+          "box": [
+            35.682,
+            66.314,
+            11.543,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-52-line-61",
+          "text": "Oh ja! Gute Idee.",
+          "box": [
+            33.508,
+            70.716,
+            11.967,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-52-line-62",
+          "text": "Wann denn?",
+          "box": [
+            47.389,
+            70.716,
+            8.627,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-52-line-63",
+          "text": "Nein, das ist zu spät. Am",
+          "box": [
+            36.499,
+            74.695,
+            16.902,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-52-line-64",
+          "text": "Abend habe ich keine Zeit.",
+          "box": [
+            36.499,
+            76.156,
+            17.948,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-52-line-65",
+          "text": "zweiundfünfzig",
+          "box": [
+            3.383,
+            74.961,
+            2.216,
+            6.918
+          ]
+        }
+      ],
+      "audioIds": [
+        "coursebook-l8-ex3-bad85ddb"
+      ],
+      "section": "Lesson 8",
+      "pageLabel": "Page 52"
+    },
+    {
+      "id": "coursebook-53",
+      "kind": "coursebook",
+      "lesson": 8,
+      "printedPage": 53,
+      "pdfPage": 55,
+      "image": "/book/pages/coursebook-53.webp",
+      "width": 1905,
+      "height": 2695,
+      "lines": [
+        {
+          "id": "coursebook-53-line-1",
+          "text": "b Ordnen Sie die Tageszeiten zu. Hören Sie dann und vergleichen Sie.",
+          "box": [
+            11.275,
+            4.796,
+            55.563,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-53-line-2",
+          "text": "der Mittag | die Nacht | der Morgen",
+          "box": [
+            14.286,
+            7.235,
+            37.433,
+            3.243
+          ]
+        },
+        {
+          "id": "coursebook-53-line-3",
+          "text": "der Vormittag | der Nachmittag | der Abend",
+          "box": [
+            14.285,
+            9.32,
+            43.041,
+            3.243
+          ]
+        },
+        {
+          "id": "coursebook-53-line-4",
+          "text": "5 Kursspaziergang: Was machst du am Wochenende? AB 8",
+          "box": [
+            11.215,
+            20.144,
+            53.651,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-53-line-5",
+          "text": "Sehen Sie das Bildlexikon an und notieren Sie: Was möchten Sie",
+          "box": [
+            14.286,
+            22.381,
+            49.762,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-53-line-6",
+          "text": "am Wochenende wann machen? Fragen Sie dann: Wer macht das auch?",
+          "box": [
+            14.286,
+            24.068,
+            55.167,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-53-line-7",
+          "text": "Finden Sie zwei Personen und ergänzen Sie die Namen.",
+          "box": [
+            14.286,
+            25.755,
+            42.619,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-53-line-8",
+          "text": "Maria, gehst du am",
+          "box": [
+            16.429,
+            27.938,
+            14.912,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-53-line-9",
+          "text": "Samstagnachmittag ins Museum?",
+          "box": [
+            16.429,
+            29.719,
+            25.801,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-53-line-10",
+          "text": "Nein. Am Samstagnachmittag",
+          "box": [
+            16.429,
+            31.501,
+            23.051,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-53-line-11",
+          "text": "gehe ich ins Kino.",
+          "box": [
+            16.429,
+            33.283,
+            13.705,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-53-line-12",
+          "text": "Pedro, gehst du am Samstag",
+          "box": [
+            16.429,
+            35.065,
+            22.151,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-53-line-13",
+          "text": "ins Museum?",
+          "box": [
+            16.429,
+            36.846,
+            9.765,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-53-line-14",
+          "text": "Ja. Am Nachmittag.",
+          "box": [
+            16.429,
+            38.628,
+            15.373,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-53-line-15",
+          "text": "6 Dann um halb vier? AB 9 – 11",
+          "box": [
+            11.215,
+            42.157,
+            27.152,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-53-line-16",
+          "text": "a Sehen Sie die Uhr an. Was sagt man auch?",
+          "box": [
+            11.313,
+            44.113,
+            35.445,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-53-line-17",
+          "text": "fünfzehn Uhr",
+          "box": [
+            22.479,
+            46.578,
+            10.941,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-53-line-18",
+          "text": "fünfzehn Uhr fünfzehn",
+          "box": [
+            22.479,
+            53.468,
+            18.143,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-53-line-19",
+          "text": "fünfzehn Uhr fünfundzwanzig",
+          "box": [
+            22.479,
+            56.26,
+            23.337,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-53-line-20",
+          "text": "fünfzehn Uhr fünfunddreißig",
+          "box": [
+            22.479,
+            63.15,
+            22.801,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-53-line-21",
+          "text": "fünfzehn Uhr fünfundvierzig",
+          "box": [
+            22.479,
+            65.942,
+            22.437,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-53-line-22",
+          "text": "fünzehn Uhr fünfzig",
+          "box": [
+            22.479,
+            68.733,
+            16.033,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-53-line-23",
+          "text": "fünzehn Uhr fünfundfünfzig",
+          "box": [
+            22.479,
+            71.525,
+            22.117,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-53-line-24",
+          "text": "b Wie spät ist es? Arbeiten Sie zu zweit. > S. 164",
+          "box": [
+            11.275,
+            82.529,
+            39.104,
+            2.054
+          ]
+        },
+        {
+          "id": "coursebook-53-line-25",
+          "text": "Morgen",
+          "box": [
+            61.827,
+            29.504,
+            5.512,
+            1.615
+          ]
+        },
+        {
+          "id": "coursebook-53-line-26",
+          "text": "Nachmittag",
+          "box": [
+            71.283,
+            29.504,
+            8.279,
+            1.615
+          ]
+        },
+        {
+          "id": "coursebook-53-line-27",
+          "text": "Abend",
+          "box": [
+            82.044,
+            29.504,
+            4.644,
+            1.615
+          ]
+        },
+        {
+          "id": "coursebook-53-line-28",
+          "text": "Samstag",
+          "box": [
+            52.481,
+            32.416,
+            6.42,
+            1.615
+          ]
+        },
+        {
+          "id": "coursebook-53-line-29",
+          "text": "Café",
+          "box": [
+            61.827,
+            32.416,
+            3.53,
+            1.615
+          ]
+        },
+        {
+          "id": "coursebook-53-line-30",
+          "text": "Museum",
+          "box": [
+            71.283,
+            31.585,
+            6.661,
+            1.615
+          ]
+        },
+        {
+          "id": "coursebook-53-line-31",
+          "text": "Pedro",
+          "box": [
+            71.283,
+            33.248,
+            4.218,
+            1.615
+          ]
+        },
+        {
+          "id": "coursebook-53-line-32",
+          "text": "Bar",
+          "box": [
+            82.044,
+            32.416,
+            2.911,
+            1.615
+          ]
+        },
+        {
+          "id": "coursebook-53-line-33",
+          "text": "Sonntag",
+          "box": [
+            52.481,
+            35.98,
+            6.292,
+            1.615
+          ]
+        },
+        {
+          "id": "coursebook-53-line-34",
+          "text": "Fitness-",
+          "box": [
+            61.827,
+            35.121,
+            6.098,
+            1.615
+          ]
+        },
+        {
+          "id": "coursebook-53-line-35",
+          "text": "studio",
+          "box": [
+            61.827,
+            36.665,
+            4.174,
+            1.615
+          ]
+        },
+        {
+          "id": "coursebook-53-line-36",
+          "text": "Kino",
+          "box": [
+            71.283,
+            35.98,
+            3.11,
+            1.615
+          ]
+        },
+        {
+          "id": "coursebook-53-line-37",
+          "text": "Konzert",
+          "box": [
+            82.044,
+            35.98,
+            5.698,
+            1.615
+          ]
+        },
+        {
+          "id": "coursebook-53-line-38",
+          "text": "in einen Klub",
+          "box": [
+            66.964,
+            40.866,
+            10.437,
+            1.729
+          ]
+        },
+        {
+          "id": "coursebook-53-line-39",
+          "text": "ins Konzert / Museum / …",
+          "box": [
+            66.964,
+            42.327,
+            17.602,
+            1.729
+          ]
+        },
+        {
+          "id": "coursebook-53-line-40",
+          "text": "in eine Ausstellung / Disco / …",
+          "box": [
+            66.964,
+            43.788,
+            20.948,
+            1.729
+          ]
+        },
+        {
+          "id": "coursebook-53-line-41",
+          "text": "oder: drei Uhr",
+          "box": [
+            17.917,
+            50.366,
+            9.617,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-53-line-42",
+          "text": "oder: fünf vor halb vier",
+          "box": [
+            17.917,
+            59.911,
+            15.706,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-53-line-43",
+          "text": "Wann?",
+          "box": [
+            15.756,
+            75.185,
+            4.504,
+            1.428
+          ]
+        },
+        {
+          "id": "coursebook-53-line-44",
+          "text": "um",
+          "box": [
+            15.756,
+            78.028,
+            2.083,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-53-line-45",
+          "text": "ein Uhr / eins / zwei …",
+          "box": [
+            19.884,
+            77.082,
+            14.847,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-53-line-46",
+          "text": "ein Uhr fünfzehn / Viertel nach eins / zwei …",
+          "box": [
+            19.884,
+            78.975,
+            30.066,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-53-line-47",
+          "text": "der Klub / die Disco",
+          "box": [
+            2.498,
+            95.257,
+            17.112,
+            1.729
+          ]
+        },
+        {
+          "id": "coursebook-53-line-48",
+          "text": "das Schwimmbad",
+          "box": [
+            21.852,
+            95.257,
+            13.683,
+            1.729
+          ]
+        },
+        {
+          "id": "coursebook-53-line-49",
+          "text": "das Konzert",
+          "box": [
+            38.635,
+            95.257,
+            10.02,
+            1.729
+          ]
+        },
+        {
+          "id": "coursebook-53-line-50",
+          "text": "das Restaurant",
+          "box": [
+            52.186,
+            95.257,
+            12.147,
+            1.729
+          ]
+        },
+        {
+          "id": "coursebook-53-line-51",
+          "text": "die Bar",
+          "box": [
+            70.99,
+            95.257,
+            6.793,
+            1.729
+          ]
+        },
+        {
+          "id": "coursebook-53-line-52",
+          "text": "das Fitnessstudio",
+          "box": [
+            84.995,
+            95.257,
+            13.725,
+            1.729
+          ]
+        },
+        {
+          "id": "coursebook-53-line-53",
+          "text": "Wie viel Uhr ist es? / Wie spät ist es?",
+          "box": [
+            62.941,
+            80.71,
+            24.872,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-53-line-54",
+          "text": "Es ist halb vier.",
+          "box": [
+            62.941,
+            82.171,
+            10.18,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-53-line-55",
+          "text": "vor …",
+          "box": [
+            58.356,
+            52.306,
+            3.394,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-53-line-56",
+          "text": "Viertel",
+          "box": [
+            51.427,
+            57.667,
+            5.047,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-53-line-57",
+          "text": "vor …",
+          "box": [
+            51.427,
+            59.128,
+            3.394,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-53-line-58",
+          "text": "Viertel",
+          "box": [
+            84.904,
+            57.667,
+            5.047,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-53-line-59",
+          "text": "nach …",
+          "box": [
+            84.904,
+            59.128,
+            4.41,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-53-line-60",
+          "text": "nach …",
+          "box": [
+            78.823,
+            52.578,
+            4.41,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-53-line-61",
+          "text": "halb …",
+          "box": [
+            70.494,
+            69.619,
+            4.028,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-53-line-62",
+          "text": "nach …",
+          "box": [
+            57.404,
+            66.381,
+            4.41,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-53-line-63",
+          "text": "vor …",
+          "box": [
+            80.25,
+            66.215,
+            3.394,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-53-line-64",
+          "text": "dreiundfünfzig",
+          "box": [
+            94.254,
+            75.155,
+            2.216,
+            6.724
+          ]
+        }
+      ],
+      "audioIds": [
+        "coursebook-l8-ex4-dbce1110"
+      ],
+      "section": "Lesson 8",
+      "pageLabel": "Page 53"
+    },
+    {
+      "id": "coursebook-54",
+      "kind": "coursebook",
+      "lesson": 8,
+      "printedPage": 54,
+      "pdfPage": 56,
+      "image": "/book/pages/coursebook-54.webp",
+      "width": 1905,
+      "height": 2695,
+      "lines": [
+        {
+          "id": "coursebook-54-line-1",
+          "text": "1 Wo kann man …? Ergänzen Sie.",
+          "box": [
+            14.286,
+            50.475,
+            24.219,
+            1.382
+          ]
+        },
+        {
+          "id": "coursebook-54-line-2",
+          "text": "a tanzen: Disco",
+          "box": [
+            14.286,
+            52.43,
+            12.115,
+            1.858
+          ]
+        },
+        {
+          "id": "coursebook-54-line-3",
+          "text": "c schwimmen:",
+          "box": [
+            50.571,
+            52.837,
+            11.15,
+            1.428
+          ]
+        },
+        {
+          "id": "coursebook-54-line-4",
+          "text": "b einen Film sehen:",
+          "box": [
+            14.286,
+            54.619,
+            14.397,
+            1.428
+          ]
+        },
+        {
+          "id": "coursebook-54-line-5",
+          "text": "d Sport machen:",
+          "box": [
+            50.571,
+            54.619,
+            12.81,
+            1.428
+          ]
+        },
+        {
+          "id": "coursebook-54-line-6",
+          "text": "2 Wie geht es weiter? Notieren Sie.",
+          "box": [
+            14.286,
+            58.18,
+            25.673,
+            1.382
+          ]
+        },
+        {
+          "id": "coursebook-54-line-7",
+          "text": "a Montag, Dienstag, …",
+          "box": [
+            14.286,
+            60.542,
+            16.766,
+            1.428
+          ]
+        },
+        {
+          "id": "coursebook-54-line-8",
+          "text": "b der Morgen, der Vormittag, …",
+          "box": [
+            14.286,
+            62.003,
+            22.576,
+            1.428
+          ]
+        },
+        {
+          "id": "coursebook-54-line-9",
+          "text": "Ergänzen Sie am oder um und schreiben Sie dann die Nachricht neu.",
+          "box": [
+            14.286,
+            65.82,
+            48.859,
+            1.382
+          ]
+        },
+        {
+          "id": "coursebook-54-line-10",
+          "text": "1 Ergänzen Sie.",
+          "box": [
+            14.286,
+            83.579,
+            11.107,
+            1.382
+          ]
+        },
+        {
+          "id": "coursebook-54-line-11",
+          "text": "Wie",
+          "box": [
+            14.286,
+            85.667,
+            5.063,
+            1.783
+          ]
+        },
+        {
+          "id": "coursebook-54-line-12",
+          "text": "es?",
+          "box": [
+            34.385,
+            85.949,
+            2.563,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-54-line-13",
+          "text": "14:30 Uhr.",
+          "box": [
+            28.316,
+            87.731,
+            7.431,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-54-line-14",
+          "text": "LÖSUNGEN → S. 203",
+          "box": [
+            10.913,
+            94.947,
+            14.469,
+            2.054
+          ]
+        },
+        {
+          "id": "coursebook-54-line-15",
+          "text": "a Mittwoch,",
+          "box": [
+            47.137,
+            60.293,
+            8.414,
+            1.719
+          ]
+        },
+        {
+          "id": "coursebook-54-line-16",
+          "text": "Hallo Carla,",
+          "box": [
+            15.765,
+            70.225,
+            7.939,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-54-line-17",
+          "text": "wir haben leider keine Zeit.",
+          "box": [
+            15.765,
+            72.007,
+            18.574,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-54-line-18",
+          "text": "Ich treffe",
+          "box": [
+            15.765,
+            73.789,
+            6.899,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-54-line-19",
+          "text": "15 Uhr",
+          "box": [
+            27.994,
+            73.789,
+            5.089,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-54-line-20",
+          "text": "Nina. Wir gehen",
+          "box": [
+            15.765,
+            75.571,
+            11.235,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-54-line-21",
+          "text": "Abend",
+          "box": [
+            32.263,
+            75.571,
+            5.178,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-54-line-22",
+          "text": "ins Kino. Können wir vielleicht",
+          "box": [
+            15.765,
+            77.353,
+            20.562,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-54-line-23",
+          "text": "Sonntag Tennis spielen?",
+          "box": [
+            20.99,
+            79.135,
+            17.015,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-54-line-24",
+          "text": "Hallo Carla,",
+          "box": [
+            45.117,
+            70.225,
+            7.939,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-54-line-25",
+          "text": "Leider",
+          "box": [
+            45.117,
+            72.007,
+            4.619,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-54-line-26",
+          "text": "Uhr",
+          "box": [
+            50.41,
+            73.789,
+            3.281,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-54-line-27",
+          "text": "Abend",
+          "box": [
+            50.41,
+            75.571,
+            5.216,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-54-line-28",
+          "text": "Vielleicht",
+          "box": [
+            45.117,
+            77.353,
+            6.779,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-54-line-29",
+          "text": "2 Ergänzen Sie.",
+          "box": [
+            43.929,
+            83.191,
+            11.598,
+            1.382
+          ]
+        },
+        {
+          "id": "coursebook-54-line-30",
+          "text": "auf Kino?",
+          "box": [
+            55.128,
+            85.561,
+            7.008,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-54-line-31",
+          "text": "Gute",
+          "box": [
+            48.76,
+            87.343,
+            3.771,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-54-line-32",
+          "text": "Tut",
+          "box": [
+            48.754,
+            89.125,
+            2.461,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-54-line-33",
+          "text": "ich",
+          "box": [
+            48.754,
+            90.907,
+            2.393,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-54-line-34",
+          "text": "Zeit.",
+          "box": [
+            67.819,
+            90.907,
+            3.317,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-54-line-35",
+          "text": "c Wie spät ist es an Ihrem Lieblingsort?",
+          "box": [
+            11.401,
+            4.796,
+            32.568,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-54-line-36",
+          "text": "Suchen Sie den Ort in Ihrem Handy und sprechen Sie im Kurs.",
+          "box": [
+            14.286,
+            6.859,
+            48.558,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-54-line-37",
+          "text": "Mein Lieblingsort ist Perth in Australien.",
+          "box": [
+            14.286,
+            8.881,
+            32.72,
+            1.783
+          ]
+        },
+        {
+          "id": "coursebook-54-line-38",
+          "text": "Und wie spät ist es jetzt in Perth?",
+          "box": [
+            14.286,
+            10.663,
+            27.085,
+            1.783
+          ]
+        },
+        {
+          "id": "coursebook-54-line-39",
+          "text": "Es ist zwanzig Uhr fünfzehn. Was ist dein Lieblingsort?",
+          "box": [
+            14.286,
+            12.445,
+            42.823,
+            1.783
+          ]
+        },
+        {
+          "id": "coursebook-54-line-40",
+          "text": "7 Gehen wir ins Kino? AB 12 – 15",
+          "box": [
+            11.222,
+            16.134,
+            28.514,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-54-line-41",
+          "text": "a Machen Sie eine Tabelle und ordnen Sie zu.",
+          "box": [
+            11.313,
+            18.186,
+            36.76,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-54-line-42",
+          "text": "Hast du um vier / am Abend / … Zeit? | Ja (gern). | Vielleicht. | Gute Idee! | Tut mir leid.",
+          "box": [
+            14.286,
+            20.625,
+            60.74,
+            3.243
+          ]
+        },
+        {
+          "id": "coursebook-54-line-43",
+          "text": "Ja, klar. | Vielleicht können wir mal wieder / heute Abend ins Theater gehen?",
+          "box": [
+            14.285,
+            22.692,
+            53.013,
+            3.243
+          ]
+        },
+        {
+          "id": "coursebook-54-line-44",
+          "text": "Tut mir leid, ich kann leider nicht. Ich … | Das weiß ich noch nicht. | Ja, da kann ich.",
+          "box": [
+            14.286,
+            24.759,
+            57.632,
+            3.243
+          ]
+        },
+        {
+          "id": "coursebook-54-line-45",
+          "text": "Okay. | Lust auf …? | (Nein,) heute Abend habe ich (leider) keine Zeit.",
+          "box": [
+            14.286,
+            26.826,
+            48.587,
+            3.243
+          ]
+        },
+        {
+          "id": "coursebook-54-line-46",
+          "text": "Gehen wir ins Kino? | Kannst du heute Abend / am … / um …?",
+          "box": [
+            14.285,
+            28.893,
+            42.449,
+            3.243
+          ]
+        },
+        {
+          "id": "coursebook-54-line-47",
+          "text": "b Ihr Traumtag! Arbeiten Sie zu zweit. > S. 164",
+          "box": [
+            11.275,
+            42.06,
+            37.892,
+            2.054
+          ]
+        },
+        {
+          "id": "coursebook-54-line-48",
+          "text": "Vorschlag / Frage",
+          "box": [
+            15.776,
+            34.03,
+            12.789,
+            1.772
+          ]
+        },
+        {
+          "id": "coursebook-54-line-49",
+          "text": "Hast du um vier /",
+          "box": [
+            15.834,
+            36.361,
+            13.205,
+            1.778
+          ]
+        },
+        {
+          "id": "coursebook-54-line-50",
+          "text": "am Abend / … Zeit?",
+          "box": [
+            15.875,
+            38.01,
+            14.272,
+            1.791
+          ]
+        },
+        {
+          "id": "coursebook-54-line-51",
+          "text": "Antwort",
+          "box": [
+            32.241,
+            33.818,
+            6.468,
+            1.694
+          ]
+        },
+        {
+          "id": "coursebook-54-line-52",
+          "text": "Ja (gern). ⌣ Vielleicht. Tut mir leid. ⌢",
+          "box": [
+            32.323,
+            36.429,
+            34.992,
+            2.497
+          ]
+        },
+        {
+          "id": "coursebook-54-line-53",
+          "text": "/ 12 Punkte",
+          "box": [
+            81.528,
+            59.692,
+            6.852,
+            1.151
+          ]
+        },
+        {
+          "id": "coursebook-54-line-54",
+          "text": "7 – 12 Punkte",
+          "box": [
+            80.61,
+            61.408,
+            7.79,
+            1.151
+          ]
+        },
+        {
+          "id": "coursebook-54-line-55",
+          "text": "0 – 6 Punkte",
+          "box": [
+            80.639,
+            63.073,
+            7.76,
+            1.151
+          ]
+        },
+        {
+          "id": "coursebook-54-line-56",
+          "text": "/ 7 Punkte",
+          "box": [
+            81.528,
+            77.453,
+            6.852,
+            1.151
+          ]
+        },
+        {
+          "id": "coursebook-54-line-57",
+          "text": "4 – 7 Punkte",
+          "box": [
+            80.61,
+            79.169,
+            7.79,
+            1.151
+          ]
+        },
+        {
+          "id": "coursebook-54-line-58",
+          "text": "0 – 3 Punkte",
+          "box": [
+            80.639,
+            80.834,
+            7.76,
+            1.151
+          ]
+        },
+        {
+          "id": "coursebook-54-line-59",
+          "text": "/ 6 Punkte",
+          "box": [
+            81.528,
+            88.345,
+            6.852,
+            1.151
+          ]
+        },
+        {
+          "id": "coursebook-54-line-60",
+          "text": "4 – 6 Punkte",
+          "box": [
+            80.61,
+            90.061,
+            7.79,
+            1.151
+          ]
+        },
+        {
+          "id": "coursebook-54-line-61",
+          "text": "0 – 3 Punkte",
+          "box": [
+            80.639,
+            91.726,
+            7.76,
+            1.151
+          ]
+        },
+        {
+          "id": "coursebook-54-line-62",
+          "text": "vierundfünfzig",
+          "box": [
+            3.3,
+            75.24,
+            2.216,
+            6.639
+          ]
+        }
+      ],
+      "audioIds": [],
+      "section": "Lesson 8",
+      "pageLabel": "Page 54"
+    },
+    {
       "id": "coursebook-155",
       "kind": "coursebook",
       "lesson": 1,
@@ -47573,7 +49719,7 @@
     {
       "id": "coursebook-163",
       "kind": "coursebook",
-      "lesson": 7,
+      "lesson": 8,
       "printedPage": 163,
       "pdfPage": 165,
       "image": "/book/pages/coursebook-163.webp",
@@ -49371,6 +51517,324 @@
       "lessons": [
         5,
         7
+      ]
+    },
+    {
+      "id": "coursebook-164",
+      "kind": "coursebook",
+      "lesson": 8,
+      "printedPage": 164,
+      "pdfPage": 166,
+      "image": "/book/pages/coursebook-164.webp",
+      "width": 1905,
+      "height": 2695,
+      "lines": [
+        {
+          "id": "coursebook-164-line-1",
+          "text": "einhundertvierundsechzig",
+          "box": [
+            3.383,
+            69.911,
+            2.216,
+            11.967
+          ]
+        },
+        {
+          "id": "coursebook-164-line-2",
+          "text": "Wie spät ist es?",
+          "box": [
+            14.524,
+            12.795,
+            14.872,
+            1.607
+          ]
+        },
+        {
+          "id": "coursebook-164-line-3",
+          "text": "Wählen Sie eine Aufgabe.",
+          "box": [
+            14.524,
+            15.032,
+            19.494,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-164-line-4",
+          "text": "Zeichnen Sie drei Uhrzeiten und",
+          "box": [
+            14.524,
+            18.116,
+            24.765,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-164-line-5",
+          "text": "sprechen Sie.",
+          "box": [
+            14.524,
+            19.898,
+            10.19,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-164-line-6",
+          "text": "oder",
+          "box": [
+            50.738,
+            18.726,
+            2.43,
+            1.012
+          ]
+        },
+        {
+          "id": "coursebook-164-line-7",
+          "text": "Malen Sie oder schreiben Sie Uhrzeiten",
+          "box": [
+            55.444,
+            18.116,
+            30.425,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-164-line-8",
+          "text": "auf den Rücken. Sprechen Sie dann.",
+          "box": [
+            55.444,
+            19.898,
+            27.339,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-164-line-9",
+          "text": "a Wie spät ist es? / Wie viel Uhr ist es?",
+          "box": [
+            31.19,
+            40.418,
+            29.832,
+            1.783
+          ]
+        },
+        {
+          "id": "coursebook-164-line-10",
+          "text": "b Es ist Viertel vor drei / vierzehn Uhr fünfundvierzig.",
+          "box": [
+            31.19,
+            42.188,
+            41.397,
+            1.783
+          ]
+        },
+        {
+          "id": "coursebook-164-line-11",
+          "text": "a Ja, genau.",
+          "box": [
+            31.19,
+            43.981,
+            9.714,
+            1.783
+          ]
+        },
+        {
+          "id": "coursebook-164-line-12",
+          "text": "Ihr Traumtag!",
+          "box": [
+            14.524,
+            50.688,
+            13.545,
+            1.607
+          ]
+        },
+        {
+          "id": "coursebook-164-line-13",
+          "text": "a Planen Sie zu zweit einen Traumtag. Wann wollen",
+          "box": [
+            14.524,
+            52.643,
+            40.979,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-164-line-14",
+          "text": "Sie was machen? Sprechen Sie.",
+          "box": [
+            16.524,
+            54.611,
+            23.653,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-164-line-15",
+          "text": "Gehen wir ins Schwimmbad?",
+          "box": [
+            16.905,
+            56.794,
+            21.724,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-164-line-16",
+          "text": "Tut mir leid. Ich gehe nicht so gern ins Schwimmbad.",
+          "box": [
+            16.905,
+            58.576,
+            40.02,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-164-line-17",
+          "text": "Okay. Vielleicht können wir ins Café „Amadeus“ gehen?",
+          "box": [
+            16.905,
+            60.357,
+            42.723,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-164-line-18",
+          "text": "Ja, gern. Am Morgen? Um neun?",
+          "box": [
+            16.905,
+            62.139,
+            25.264,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-164-line-19",
+          "text": "b Präsentieren Sie Ihren Traumtag.",
+          "box": [
+            14.524,
+            66.373,
+            28.096,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-164-line-20",
+          "text": "c Welchen Tag finden Sie besonders schön? Stimmen Sie im Kurs ab.",
+          "box": [
+            14.524,
+            75.743,
+            53.574,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-164-line-21",
+          "text": "Am Morgen um neun gehen",
+          "box": [
+            16.036,
+            70.095,
+            19.268,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-164-line-22",
+          "text": "wir ins Café „Amadeus“. Um …",
+          "box": [
+            16.036,
+            71.556,
+            20.29,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-164-line-23",
+          "text": "Anna und Maria",
+          "box": [
+            18.048,
+            80.776,
+            14.828,
+            1.858
+          ]
+        },
+        {
+          "id": "coursebook-164-line-24",
+          "text": "Lea und Simon",
+          "box": [
+            18.048,
+            82.953,
+            13.668,
+            1.858
+          ]
+        },
+        {
+          "id": "coursebook-164-line-25",
+          "text": "Diego und Pekka",
+          "box": [
+            18.048,
+            85.13,
+            14.984,
+            1.858
+          ]
+        },
+        {
+          "id": "coursebook-164-line-26",
+          "text": "<Monat",
+          "box": [
+            67.686,
+            49.71,
+            5.092,
+            1.585
+          ]
+        },
+        {
+          "id": "coursebook-164-line-27",
+          "text": "9:00 Uhr",
+          "box": [
+            70.055,
+            56.382,
+            8.077,
+            2.126
+          ]
+        },
+        {
+          "id": "coursebook-164-line-28",
+          "text": "Café „Amadeus“",
+          "box": [
+            69.91,
+            58.517,
+            13.813,
+            2.32
+          ]
+        },
+        {
+          "id": "coursebook-164-line-29",
+          "text": "Ich finde, Annas",
+          "box": [
+            54.013,
+            79.615,
+            11.226,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-164-line-30",
+          "text": "und Marias Tag toll.",
+          "box": [
+            54.013,
+            81.077,
+            13.114,
+            1.394
+          ]
+        }
+      ],
+      "audioIds": [],
+      "section": "Partner activities · Lesson 8",
+      "pageLabel": "Page 164",
+      "lessons": [
+        8
       ]
     },
     {
@@ -75056,6 +77520,1991 @@
       "pageLabel": "Page 49"
     },
     {
+      "id": "workbook-50",
+      "kind": "workbook",
+      "lesson": 8,
+      "printedPage": 50,
+      "pdfPage": 52,
+      "image": "/book/pages/workbook-50.webp",
+      "width": 1905,
+      "height": 2695,
+      "lines": [
+        {
+          "id": "workbook-50-line-1",
+          "text": "fünfzig",
+          "box": [
+            3.881,
+            78.702,
+            1.627,
+            3.177
+          ]
+        },
+        {
+          "id": "workbook-50-line-2",
+          "text": "Ich habe leider keine Zeit.",
+          "box": [
+            20.333,
+            3.611,
+            64.157,
+            3.783
+          ]
+        },
+        {
+          "id": "workbook-50-line-3",
+          "text": "1 Wochentage: Ergänzen Sie den Kalender. W KB 3",
+          "box": [
+            10.476,
+            20.187,
+            47.815,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-50-line-4",
+          "text": "2 Was macht Max wann? Ergänzen Sie aus 1. G KB 3",
+          "box": [
+            10.476,
+            24.164,
+            49.049,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-50-line-5",
+          "text": "a Wann geht er ins Schwimmbad? – Am Montag.",
+          "box": [
+            14.286,
+            26.1,
+            38.981,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-50-line-6",
+          "text": "b Wann singt er? –",
+          "box": [
+            14.286,
+            27.882,
+            15.846,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-50-line-7",
+          "text": "c Wann trifft er Julia? –",
+          "box": [
+            14.286,
+            29.664,
+            19.605,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-50-line-8",
+          "text": "d Wann spielt er Tennis? –",
+          "box": [
+            14.286,
+            31.445,
+            21.381,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-50-line-9",
+          "text": "e Wann spielt er Fußball? –",
+          "box": [
+            14.286,
+            33.227,
+            22.254,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-50-line-10",
+          "text": "3 Wortstellung: Lesen Sie und ergänzen Sie. G l KB 3",
+          "box": [
+            10.476,
+            37.048,
+            51.421,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-50-line-11",
+          "text": "Position 2",
+          "box": [
+            35.994,
+            46.489,
+            7.633,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-50-line-12",
+          "text": "Ich",
+          "box": [
+            15.042,
+            48.844,
+            2.034,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-50-line-13",
+          "text": "habe",
+          "box": [
+            35.994,
+            48.844,
+            3.26,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-50-line-14",
+          "text": "am Wochenende keine Zeit.",
+          "box": [
+            45.676,
+            48.844,
+            18.794,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-50-line-15",
+          "text": "ich keine Zeit.",
+          "box": [
+            45.676,
+            50.936,
+            9.597,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-50-line-16",
+          "text": "4 Was macht Max am Freitag und am Wochenende? G KB 3",
+          "box": [
+            10.476,
+            55.054,
+            55.137,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-50-line-17",
+          "text": "a Schauen Sie noch einmal den Kalender in 1 an und ergänzen Sie.",
+          "box": [
+            10.476,
+            57.01,
+            53.532,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-50-line-18",
+          "text": "1 Am Freitag",
+          "box": [
+            14.286,
+            59.533,
+            10.998,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-50-line-19",
+          "text": "geht Max ins",
+          "box": [
+            28.619,
+            59.182,
+            10.967,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-50-line-20",
+          "text": "2 Am Samstag",
+          "box": [
+            14.286,
+            61.315,
+            12.078,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-50-line-21",
+          "text": "3 Am Sonntag",
+          "box": [
+            14.286,
+            63.096,
+            11.946,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-50-line-22",
+          "text": "b Und was machen Sie am Wochenende? Schreiben Sie zwei Sätze.",
+          "box": [
+            10.476,
+            65.49,
+            53.328,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-50-line-23",
+          "text": "5 Nikis Tag G KB 4",
+          "box": [
+            10.476,
+            69.196,
+            18.462,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-50-line-24",
+          "text": "a Ordnen Sie die Tageszeiten zu.",
+          "box": [
+            10.476,
+            71.153,
+            27.941,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-50-line-25",
+          "text": "Abend | Morgen | Nachmittag | Nacht | Vormittag",
+          "box": [
+            14.286,
+            73.813,
+            35.974,
+            1.782
+          ]
+        },
+        {
+          "id": "workbook-50-line-26",
+          "text": "Morgen",
+          "box": [
+            14.286,
+            85.797,
+            14.185,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-50-line-27",
+          "text": "b Was macht Niki wann? Schreiben Sie.",
+          "box": [
+            10.476,
+            88.541,
+            32.755,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-50-line-28",
+          "text": "arbeiten | Gitarre spielen | schwimmen",
+          "box": [
+            14.286,
+            90.697,
+            27.706,
+            1.782
+          ]
+        },
+        {
+          "id": "workbook-50-line-29",
+          "text": "singen | telefonieren",
+          "box": [
+            14.286,
+            92.764,
+            15.09,
+            1.782
+          ]
+        },
+        {
+          "id": "workbook-50-line-30",
+          "text": "Nein, tut mir sehr leid. Am",
+          "box": [
+            43.404,
+            40.772,
+            18.734,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-50-line-31",
+          "text": "Wochenende habe ich keine Zeit.",
+          "box": [
+            43.404,
+            42.233,
+            22.414,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-50-line-32",
+          "text": "Hey Max, hast du am",
+          "box": [
+            18.729,
+            40.878,
+            14.439,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-50-line-33",
+          "text": "Wochenende Zeit?",
+          "box": [
+            18.729,
+            42.339,
+            12.64,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-50-line-34",
+          "text": "Kalenderwoche",
+          "box": [
+            72.553,
+            15.385,
+            8.67,
+            1.149
+          ]
+        },
+        {
+          "id": "workbook-50-line-35",
+          "text": "Mo ntag",
+          "box": [
+            63.959,
+            16.586,
+            6.821,
+            1.724
+          ]
+        },
+        {
+          "id": "workbook-50-line-36",
+          "text": "Schwimmbad",
+          "box": [
+            75.841,
+            17.175,
+            9.721,
+            1.718
+          ]
+        },
+        {
+          "id": "workbook-50-line-37",
+          "text": "Di",
+          "box": [
+            63.827,
+            18.341,
+            2.37,
+            1.585
+          ]
+        },
+        {
+          "id": "workbook-50-line-38",
+          "text": "Julia treﬀen",
+          "box": [
+            75.709,
+            18.955,
+            9.511,
+            1.71
+          ]
+        },
+        {
+          "id": "workbook-50-line-39",
+          "text": "Mi",
+          "box": [
+            63.695,
+            20.127,
+            2.555,
+            1.585
+          ]
+        },
+        {
+          "id": "workbook-50-line-40",
+          "text": "Tennis mit Tom",
+          "box": [
+            75.577,
+            20.734,
+            11.899,
+            1.799
+          ]
+        },
+        {
+          "id": "workbook-50-line-41",
+          "text": "Do",
+          "box": [
+            63.563,
+            21.919,
+            2.874,
+            1.585
+          ]
+        },
+        {
+          "id": "workbook-50-line-42",
+          "text": "singen",
+          "box": [
+            75.445,
+            22.514,
+            4.921,
+            1.54
+          ]
+        },
+        {
+          "id": "workbook-50-line-43",
+          "text": "Fr",
+          "box": [
+            63.431,
+            23.675,
+            2.255,
+            1.585
+          ]
+        },
+        {
+          "id": "workbook-50-line-44",
+          "text": "Kino",
+          "box": [
+            75.313,
+            24.293,
+            3.207,
+            1.477
+          ]
+        },
+        {
+          "id": "workbook-50-line-45",
+          "text": "Sa",
+          "box": [
+            63.299,
+            25.461,
+            2.43,
+            1.585
+          ]
+        },
+        {
+          "id": "workbook-50-line-46",
+          "text": "Fußball",
+          "box": [
+            75.181,
+            26.073,
+            5.394,
+            1.558
+          ]
+        },
+        {
+          "id": "workbook-50-line-47",
+          "text": "So",
+          "box": [
+            63.167,
+            27.246,
+            2.564,
+            1.585
+          ]
+        },
+        {
+          "id": "workbook-50-line-48",
+          "text": "kochen mit Anna",
+          "box": [
+            75.049,
+            27.853,
+            12.778,
+            1.832
+          ]
+        },
+        {
+          "id": "workbook-50-line-49",
+          "text": "Sa + So = das Wochenende",
+          "box": [
+            69.466,
+            32.47,
+            18.362,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-50-line-50",
+          "text": "1. Am Morgen schwimmt Niki.",
+          "box": [
+            47.609,
+            90.799,
+            21.885,
+            1.557
+          ]
+        }
+      ],
+      "audioIds": [],
+      "section": "Lesson 8",
+      "pageLabel": "Page 50"
+    },
+    {
+      "id": "workbook-51",
+      "kind": "workbook",
+      "lesson": 8,
+      "printedPage": 51,
+      "pdfPage": 53,
+      "image": "/book/pages/workbook-51.webp",
+      "width": 1905,
+      "height": 2695,
+      "lines": [
+        {
+          "id": "workbook-51-line-1",
+          "text": "Übungen",
+          "box": [
+            75.395,
+            1.975,
+            12.579,
+            2.149
+          ]
+        },
+        {
+          "id": "workbook-51-line-2",
+          "text": "einundfünfzig",
+          "box": [
+            94.753,
+            75.539,
+            1.627,
+            6.34
+          ]
+        },
+        {
+          "id": "workbook-51-line-3",
+          "text": "6 Ergänzen Sie und vergleichen Sie. G KB 4",
+          "box": [
+            10.476,
+            5.036,
+            41.318,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-51-line-4",
+          "text": "Deutsch",
+          "box": [
+            15.28,
+            8.608,
+            6.388,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-51-line-5",
+          "text": "Englisch",
+          "box": [
+            34.335,
+            8.608,
+            6.345,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-51-line-6",
+          "text": "Andere Sprachen",
+          "box": [
+            53.381,
+            8.608,
+            13.221,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-51-line-7",
+          "text": "Montag /",
+          "box": [
+            19.269,
+            11.067,
+            7.455,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-51-line-8",
+          "text": "am Dienstag / …",
+          "box": [
+            15.518,
+            12.086,
+            12.597,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-51-line-9",
+          "text": "on Monday /",
+          "box": [
+            34.566,
+            11.067,
+            9.333,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-51-line-10",
+          "text": "on Tuesday / …",
+          "box": [
+            34.566,
+            12.528,
+            9.796,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-51-line-11",
+          "text": "am Morgen /",
+          "box": [
+            15.518,
+            14.457,
+            11.289,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-51-line-12",
+          "text": "Nachmittag /",
+          "box": [
+            19.27,
+            16.361,
+            10.251,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-51-line-13",
+          "text": "Abend",
+          "box": [
+            19.27,
+            17.822,
+            4.818,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-51-line-14",
+          "text": "in the morning /",
+          "box": [
+            34.566,
+            14.624,
+            11.861,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-51-line-15",
+          "text": "in the afternoon /",
+          "box": [
+            34.566,
+            16.085,
+            12.997,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-51-line-16",
+          "text": "in the evening",
+          "box": [
+            34.566,
+            17.547,
+            9.67,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-51-line-17",
+          "text": "Mittag",
+          "box": [
+            19.269,
+            19.917,
+            4.917,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-51-line-18",
+          "text": "at noon",
+          "box": [
+            34.565,
+            19.917,
+            5.209,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-51-line-19",
+          "text": "! in der Nacht",
+          "box": [
+            15.518,
+            21.845,
+            12.114,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-51-line-20",
+          "text": "at night",
+          "box": [
+            34.566,
+            22.012,
+            5.293,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-51-line-21",
+          "text": "7 Ergänzen Sie wissen in der richtigen Form. G l KB 4",
+          "box": [
+            10.476,
+            26.37,
+            52.072,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-51-line-22",
+          "text": "a Was macht ihr heute Abend?",
+          "box": [
+            14.286,
+            28.64,
+            24.483,
+            1.205
+          ]
+        },
+        {
+          "id": "workbook-51-line-23",
+          "text": "ihr das schon?",
+          "box": [
+            16.428,
+            30.439,
+            10.79,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-51-line-24",
+          "text": "b Nein, das",
+          "box": [
+            14.286,
+            32.191,
+            9.619,
+            1.217
+          ]
+        },
+        {
+          "id": "workbook-51-line-25",
+          "text": "(2) wir noch nicht.",
+          "box": [
+            37.06,
+            32.221,
+            14.383,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-51-line-26",
+          "text": "a Lena und ich gehen ins Kino.",
+          "box": [
+            14.286,
+            33.985,
+            23.778,
+            1.205
+          ]
+        },
+        {
+          "id": "workbook-51-line-27",
+          "text": "b Ah schön!",
+          "box": [
+            14.286,
+            35.755,
+            10.148,
+            1.217
+          ]
+        },
+        {
+          "id": "workbook-51-line-28",
+          "text": "(3) Lena das schon?",
+          "box": [
+            37.589,
+            35.784,
+            15.512,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-51-line-29",
+          "text": "a Nein, das",
+          "box": [
+            14.286,
+            37.548,
+            9.618,
+            1.205
+          ]
+        },
+        {
+          "id": "workbook-51-line-30",
+          "text": "(4) sie noch nicht.",
+          "box": [
+            37.059,
+            37.566,
+            14.607,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-51-line-31",
+          "text": "b Und wann geht ihr ins Kino?",
+          "box": [
+            14.286,
+            39.318,
+            23.685,
+            1.217
+          ]
+        },
+        {
+          "id": "workbook-51-line-32",
+          "text": "a Das",
+          "box": [
+            14.286,
+            41.112,
+            5.415,
+            1.205
+          ]
+        },
+        {
+          "id": "workbook-51-line-33",
+          "text": "(5) wir noch nicht.",
+          "box": [
+            32.856,
+            41.129,
+            14.385,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-51-line-34",
+          "text": "8 Was macht Laura diese Woche? W KB 5",
+          "box": [
+            10.476,
+            53.508,
+            38.435,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-51-line-35",
+          "text": "Schreiben Sie.",
+          "box": [
+            14.286,
+            55.662,
+            10.81,
+            1.283
+          ]
+        },
+        {
+          "id": "workbook-51-line-36",
+          "text": "1. Am Dienstagnachmittag geht sie ins Kino.",
+          "box": [
+            14.286,
+            84.362,
+            43.201,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-51-line-37",
+          "text": "ich",
+          "box": [
+            15.798,
+            45.187,
+            1.994,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-51-line-38",
+          "text": "weiß",
+          "box": [
+            21.513,
+            45.187,
+            3.183,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-51-line-39",
+          "text": "wir",
+          "box": [
+            26.752,
+            45.187,
+            2.068,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-51-line-40",
+          "text": "wissen",
+          "box": [
+            31.002,
+            45.187,
+            4.434,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-51-line-41",
+          "text": "du",
+          "box": [
+            15.798,
+            47.08,
+            1.66,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-51-line-42",
+          "text": "weißt",
+          "box": [
+            21.513,
+            47.08,
+            3.778,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-51-line-43",
+          "text": "ihr",
+          "box": [
+            26.752,
+            47.08,
+            1.822,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-51-line-44",
+          "text": "wisst",
+          "box": [
+            31.002,
+            47.08,
+            3.361,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-51-line-45",
+          "text": "er / sie",
+          "box": [
+            15.798,
+            48.974,
+            4.094,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-51-line-46",
+          "text": "weiß",
+          "box": [
+            21.513,
+            48.974,
+            3.183,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-51-line-47",
+          "text": "sie",
+          "box": [
+            26.752,
+            48.974,
+            1.831,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-51-line-48",
+          "text": "wissen",
+          "box": [
+            31.002,
+            48.974,
+            4.434,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-51-line-49",
+          "text": "Dienstag,",
+          "box": [
+            19.726,
+            62.467,
+            6.589,
+            1.635
+          ]
+        },
+        {
+          "id": "workbook-51-line-50",
+          "text": "16 Uhr",
+          "box": [
+            21.94,
+            63.791,
+            4.325,
+            1.41
+          ]
+        },
+        {
+          "id": "workbook-51-line-51",
+          "text": "Samstag, 20 Uhr",
+          "box": [
+            46.081,
+            63.913,
+            11.228,
+            1.625
+          ]
+        },
+        {
+          "id": "workbook-51-line-52",
+          "text": "Mittwoch,",
+          "box": [
+            71.106,
+            63.124,
+            7.38,
+            1.367
+          ]
+        },
+        {
+          "id": "workbook-51-line-53",
+          "text": "11 Uhr",
+          "box": [
+            70.978,
+            64.427,
+            3.907,
+            1.195
+          ]
+        },
+        {
+          "id": "workbook-51-line-54",
+          "text": "Freitag,",
+          "box": [
+            23.005,
+            76.382,
+            5.74,
+            1.149
+          ]
+        },
+        {
+          "id": "workbook-51-line-55",
+          "text": "21 Uhr",
+          "box": [
+            23.07,
+            77.726,
+            4.171,
+            1.111
+          ]
+        },
+        {
+          "id": "workbook-51-line-56",
+          "text": "Donnerstag,",
+          "box": [
+            45.76,
+            75.728,
+            8.898,
+            1.864
+          ]
+        },
+        {
+          "id": "workbook-51-line-57",
+          "text": "14 Uhr",
+          "box": [
+            46.018,
+            77.471,
+            4.38,
+            1.415
+          ]
+        }
+      ],
+      "audioIds": [],
+      "section": "Lesson 8",
+      "pageLabel": "Page 51"
+    },
+    {
+      "id": "workbook-52",
+      "kind": "workbook",
+      "lesson": 8,
+      "printedPage": 52,
+      "pdfPage": 54,
+      "image": "/book/pages/workbook-52.webp",
+      "width": 1905,
+      "height": 2695,
+      "lines": [
+        {
+          "id": "workbook-52-line-1",
+          "text": "zweiundfünfzig",
+          "box": [
+            3.881,
+            74.961,
+            1.627,
+            6.918
+          ]
+        },
+        {
+          "id": "workbook-52-line-2",
+          "text": "9 Wann? – Um … G KB 6",
+          "box": [
+            10.476,
+            5.036,
+            23.426,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-52-line-3",
+          "text": "a Was passt zusammen? Verbinden Sie.",
+          "box": [
+            10.476,
+            6.992,
+            32.737,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-52-line-4",
+          "text": "b Markieren Sie in a: Welche Uhrzeiten sind offiziell (fünfzehn Uhr fünfzig),",
+          "box": [
+            10.476,
+            35.07,
+            62.385,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-52-line-5",
+          "text": "welche sind inoffiziell (zehn vor vier)?",
+          "box": [
+            14.286,
+            37.05,
+            29.99,
+            1.283
+          ]
+        },
+        {
+          "id": "workbook-52-line-6",
+          "text": "c Wann macht Lara was? Schreiben Sie.",
+          "box": [
+            10.476,
+            39.481,
+            32.87,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-52-line-7",
+          "text": "Um Viertel",
+          "box": [
+            14.286,
+            51.167,
+            8.948,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-52-line-8",
+          "text": "10 Partneraufgabe: Was machen Sie am nächsten Sonntag? G KB 6",
+          "box": [
+            10.476,
+            56.77,
+            61.965,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-52-line-9",
+          "text": "Zeichnen Sie vier Aktivitäten und Uhren",
+          "box": [
+            14.286,
+            58.924,
+            32.212,
+            1.283
+          ]
+        },
+        {
+          "id": "workbook-52-line-10",
+          "text": "wie in 9. Tauschen Sie mit Ihrer Partnerin /",
+          "box": [
+            14.286,
+            60.606,
+            34.451,
+            1.288
+          ]
+        },
+        {
+          "id": "workbook-52-line-11",
+          "text": "Ihrem Partner. Schreiben Sie Sätze zu",
+          "box": [
+            14.286,
+            62.298,
+            29.964,
+            1.283
+          ]
+        },
+        {
+          "id": "workbook-52-line-12",
+          "text": "den Bildern.",
+          "box": [
+            14.286,
+            63.984,
+            9.477,
+            1.283
+          ]
+        },
+        {
+          "id": "workbook-52-line-13",
+          "text": "11 Ergänzen Sie. K KB 6",
+          "box": [
+            10.476,
+            67.998,
+            22.517,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-52-line-14",
+          "text": "a Wie spät ist es?",
+          "box": [
+            23.809,
+            71.709,
+            14.78,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-52-line-15",
+          "text": "b Es ist",
+          "box": [
+            23.809,
+            73.812,
+            6.582,
+            1.217
+          ]
+        },
+        {
+          "id": "workbook-52-line-16",
+          "text": "vor zwei.",
+          "box": [
+            41.756,
+            73.842,
+            7.069,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-52-line-17",
+          "text": "a Wie",
+          "box": [
+            61.905,
+            72.043,
+            5.413,
+            1.205
+          ]
+        },
+        {
+          "id": "workbook-52-line-18",
+          "text": "Uhr ist es?",
+          "box": [
+            73.562,
+            72.06,
+            8.415,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-52-line-19",
+          "text": "b Halb neun .",
+          "box": [
+            61.905,
+            73.491,
+            11.709,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-52-line-20",
+          "text": "drei Uhr",
+          "box": [
+            15.252,
+            21.864,
+            6.231,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-52-line-21",
+          "text": "zehn vor vier",
+          "box": [
+            30.026,
+            21.891,
+            9.816,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-52-line-22",
+          "text": "fünf nach halb vier",
+          "box": [
+            48.679,
+            21.891,
+            14.306,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-52-line-23",
+          "text": "Viertel vor vier",
+          "box": [
+            43.306,
+            26.781,
+            11.412,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-52-line-24",
+          "text": "fünfzehn Uhr",
+          "box": [
+            70.659,
+            21.84,
+            10.069,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-52-line-25",
+          "text": "Viertel nach drei",
+          "box": [
+            61.844,
+            26.802,
+            12.695,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-52-line-26",
+          "text": "halb vier",
+          "box": [
+            43.306,
+            31.395,
+            6.495,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-52-line-27",
+          "text": "drei Uhr fünfunddreißig",
+          "box": [
+            18.014,
+            26.781,
+            18.091,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-52-line-28",
+          "text": "fünfzehn Uhr fünfzig",
+          "box": [
+            15.252,
+            31.395,
+            15.816,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-52-line-29",
+          "text": "fünfzehn Uhr fünfundvierzig",
+          "box": [
+            59.125,
+            31.404,
+            21.565,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-52-line-30",
+          "text": "Um neun Uhr",
+          "box": [
+            68.71,
+            60.895,
+            11.248,
+            1.364
+          ]
+        },
+        {
+          "id": "workbook-52-line-31",
+          "text": "fährst du Rad.",
+          "box": [
+            68.71,
+            62.558,
+            10.626,
+            1.364
+          ]
+        }
+      ],
+      "audioIds": [],
+      "section": "Lesson 8",
+      "pageLabel": "Page 52"
+    },
+    {
+      "id": "workbook-53",
+      "kind": "workbook",
+      "lesson": 8,
+      "printedPage": 53,
+      "pdfPage": 55,
+      "image": "/book/pages/workbook-53.webp",
+      "width": 1905,
+      "height": 2695,
+      "lines": [
+        {
+          "id": "workbook-53-line-1",
+          "text": "Übungen",
+          "box": [
+            75.395,
+            1.975,
+            12.579,
+            2.149
+          ]
+        },
+        {
+          "id": "workbook-53-line-2",
+          "text": "dreiundfünfzig",
+          "box": [
+            94.753,
+            75.154,
+            1.627,
+            6.725
+          ]
+        },
+        {
+          "id": "workbook-53-line-3",
+          "text": "12 Was passt? Kreuzen Sie an. K KB 7",
+          "box": [
+            10.476,
+            5.036,
+            34.997,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-53-line-4",
+          "text": "a Vielleicht können wir mal wieder",
+          "box": [
+            14.286,
+            7.215,
+            27.74,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-53-line-5",
+          "text": "ins Theater gehen?",
+          "box": [
+            16.429,
+            8.996,
+            14.748,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-53-line-6",
+          "text": "Ù Gute Idee!",
+          "box": [
+            16.429,
+            10.749,
+            10.143,
+            1.217
+          ]
+        },
+        {
+          "id": "workbook-53-line-7",
+          "text": "Ja, da kann ich.",
+          "box": [
+            16.429,
+            12.531,
+            13.188,
+            1.217
+          ]
+        },
+        {
+          "id": "workbook-53-line-8",
+          "text": "b Hast du Lust auf Kino?",
+          "box": [
+            14.286,
+            15.232,
+            19.571,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-53-line-9",
+          "text": "Nein, das ist zu spät.",
+          "box": [
+            16.429,
+            16.985,
+            17.66,
+            1.217
+          ]
+        },
+        {
+          "id": "workbook-53-line-10",
+          "text": "Ja, klar.",
+          "box": [
+            16.429,
+            18.767,
+            7.276,
+            1.217
+          ]
+        },
+        {
+          "id": "workbook-53-line-11",
+          "text": "c Kannst du heute um 19 Uhr?",
+          "box": [
+            49.048,
+            7.215,
+            23.979,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-53-line-12",
+          "text": "Nein, heute Abend habe ich",
+          "box": [
+            51.191,
+            8.967,
+            23.864,
+            1.217
+          ]
+        },
+        {
+          "id": "workbook-53-line-13",
+          "text": "leider keine Zeit.",
+          "box": [
+            52.915,
+            10.778,
+            12.52,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-53-line-14",
+          "text": "Gute Idee!",
+          "box": [
+            51.191,
+            12.531,
+            9.715,
+            1.217
+          ]
+        },
+        {
+          "id": "workbook-53-line-15",
+          "text": "d Wann gehen wir heute ins Fitnessstudio?",
+          "box": [
+            49.048,
+            15.232,
+            33.524,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-53-line-16",
+          "text": "Das weiß ich noch nicht.",
+          "box": [
+            51.191,
+            16.985,
+            20.769,
+            1.217
+          ]
+        },
+        {
+          "id": "workbook-53-line-17",
+          "text": "Das geht leider nicht.",
+          "box": [
+            51.191,
+            18.767,
+            18.05,
+            1.217
+          ]
+        },
+        {
+          "id": "workbook-53-line-18",
+          "text": "13 Unbetontes e KB 7",
+          "box": [
+            10.476,
+            22.266,
+            21.169,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-53-line-19",
+          "text": "Aussprache",
+          "box": [
+            79.638,
+            22.592,
+            9.55,
+            0.831
+          ]
+        },
+        {
+          "id": "workbook-53-line-20",
+          "text": "a Hören Sie und markieren Sie den Wortakzent.",
+          "box": [
+            10.476,
+            24.223,
+            39.404,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-53-line-21",
+          "text": "Abend, Idee, können, Museum, Konzert, Morgen,",
+          "box": [
+            14.286,
+            26.746,
+            38.007,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-53-line-22",
+          "text": "Café, Ausstellung, Woche, Problem",
+          "box": [
+            14.286,
+            28.527,
+            26.909,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-53-line-23",
+          "text": "b Hören Sie noch einmal und umkreisen Sie: Wo hören Sie e?",
+          "box": [
+            10.476,
+            30.92,
+            49.283,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-53-line-24",
+          "text": "14 Satzmelodie: Hören Sie und sprechen Sie nach. KB 7",
+          "box": [
+            10.476,
+            34.627,
+            51.072,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-53-line-25",
+          "text": "Gespräch 1:",
+          "box": [
+            14.286,
+            36.915,
+            9.254,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-53-line-26",
+          "text": "a Hast du am Samstag Zeit?",
+          "box": [
+            14.286,
+            38.679,
+            22.256,
+            1.205
+          ]
+        },
+        {
+          "id": "workbook-53-line-27",
+          "text": "b Wann?",
+          "box": [
+            14.286,
+            40.449,
+            7.511,
+            1.217
+          ]
+        },
+        {
+          "id": "workbook-53-line-28",
+          "text": "a Um sieben?",
+          "box": [
+            14.286,
+            42.242,
+            11.352,
+            1.205
+          ]
+        },
+        {
+          "id": "workbook-53-line-29",
+          "text": "b Ja, um sieben habe ich Zeit.",
+          "box": [
+            14.286,
+            44.012,
+            23.51,
+            1.217
+          ]
+        },
+        {
+          "id": "workbook-53-line-30",
+          "text": "Gespräch 2:",
+          "box": [
+            54.313,
+            36.915,
+            9.254,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-53-line-31",
+          "text": "a Wie spät ist es?",
+          "box": [
+            54.313,
+            38.679,
+            14.243,
+            1.205
+          ]
+        },
+        {
+          "id": "workbook-53-line-32",
+          "text": "b Viertel vor acht.",
+          "box": [
+            54.313,
+            40.449,
+            14.867,
+            1.217
+          ]
+        },
+        {
+          "id": "workbook-53-line-33",
+          "text": "a Gehen wir ins Kino?",
+          "box": [
+            54.313,
+            42.242,
+            17.47,
+            1.205
+          ]
+        },
+        {
+          "id": "workbook-53-line-34",
+          "text": "b Nein, keine Lust.",
+          "box": [
+            54.313,
+            44.012,
+            15.092,
+            1.217
+          ]
+        },
+        {
+          "id": "workbook-53-line-35",
+          "text": "15 Wann hat Nina Zeit? KB 7",
+          "box": [
+            10.476,
+            48.819,
+            28.067,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-53-line-36",
+          "text": "Schreiben",
+          "box": [
+            80.799,
+            49.144,
+            8.388,
+            0.831
+          ]
+        },
+        {
+          "id": "workbook-53-line-37",
+          "text": "Michael telefoniert mit Nina. Hören Sie und lesen Sie mit.",
+          "box": [
+            14.286,
+            50.972,
+            45.859,
+            1.283
+          ]
+        },
+        {
+          "id": "workbook-53-line-38",
+          "text": "Was schreibt Michael an Niklas? Notieren Sie.",
+          "box": [
+            14.286,
+            52.659,
+            35.507,
+            1.283
+          ]
+        },
+        {
+          "id": "workbook-53-line-39",
+          "text": "> Nina … Nina .. Nina …",
+          "box": [
+            52.455,
+            87.379,
+            17.131,
+            1.523
+          ]
+        },
+        {
+          "id": "workbook-53-line-40",
+          "text": "> Leider … Sie … Vielleicht …",
+          "box": [
+            52.418,
+            89.176,
+            20.16,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-53-line-41",
+          "text": "Wir können vielleicht",
+          "box": [
+            73.1,
+            71.92,
+            14.658,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-53-line-42",
+          "text": "ins Kino gehen.",
+          "box": [
+            73.1,
+            73.382,
+            10.688,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-53-line-43",
+          "text": "Nein. Ich habe heute leider keine",
+          "box": [
+            40.165,
+            57.134,
+            22.688,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-53-line-44",
+          "text": "Zeit. Ich gehe ins Schwimmbad.",
+          "box": [
+            40.165,
+            58.595,
+            21.652,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-53-line-45",
+          "text": "Ja. Ich habe am Freitag Zeit.",
+          "box": [
+            43.431,
+            62.381,
+            19.058,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-53-line-46",
+          "text": "Tut mir leid, da kann",
+          "box": [
+            50.277,
+            67.95,
+            13.964,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-53-line-47",
+          "text": "ich nicht. Ich habe",
+          "box": [
+            50.322,
+            69.412,
+            12.768,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-53-line-48",
+          "text": "aber um sieben Zeit.",
+          "box": [
+            50.322,
+            70.873,
+            13.715,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-53-line-49",
+          "text": "Hallo Niklas.",
+          "box": [
+            15.714,
+            71.361,
+            10.036,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-53-line-50",
+          "text": "Leider hat Nina heute",
+          "box": [
+            15.714,
+            73.142,
+            17.957,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-53-line-51",
+          "text": "Sie geht",
+          "box": [
+            15.714,
+            76.704,
+            7.212,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-53-line-52",
+          "text": "Sie hat am",
+          "box": [
+            15.714,
+            80.267,
+            10.32,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-53-line-53",
+          "text": "Um",
+          "box": [
+            15.714,
+            83.829,
+            4.575,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-53-line-54",
+          "text": "Vielleicht können",
+          "box": [
+            15.714,
+            87.392,
+            13.818,
+            1.568
+          ]
+        }
+      ],
+      "audioIds": [
+        "workbook-l8-ex13-1b683917",
+        "workbook-l8-ex14-8187ef14",
+        "workbook-l8-ex14-83d29e85",
+        "workbook-l8-ex15-a6f47d5c"
+      ],
+      "section": "Lesson 8",
+      "pageLabel": "Page 53"
+    },
+    {
       "id": "workbook-86",
       "kind": "workbook",
       "lesson": 2,
@@ -76235,7 +80684,7 @@
     {
       "id": "workbook-89",
       "kind": "workbook",
-      "lesson": 7,
+      "lesson": 8,
       "printedPage": 89,
       "pdfPage": 91,
       "image": "/book/pages/workbook-89.webp",
@@ -76489,6 +80938,212 @@
       "lessons": [
         6,
         7,
+        8
+      ]
+    },
+    {
+      "id": "workbook-90",
+      "kind": "workbook",
+      "lesson": 8,
+      "printedPage": 90,
+      "pdfPage": 92,
+      "image": "/book/pages/workbook-90.webp",
+      "width": 1905,
+      "height": 2695,
+      "lines": [
+        {
+          "id": "workbook-90-line-1",
+          "text": "neunzig",
+          "box": [
+            3.881,
+            78.32,
+            1.627,
+            3.559
+          ]
+        },
+        {
+          "id": "workbook-90-line-2",
+          "text": "Was machen Sie am Wochenende?",
+          "box": [
+            14.524,
+            10.089,
+            32.496,
+            1.283
+          ]
+        },
+        {
+          "id": "workbook-90-line-3",
+          "text": "Schreiben",
+          "box": [
+            80.799,
+            10.219,
+            8.388,
+            0.831
+          ]
+        },
+        {
+          "id": "workbook-90-line-4",
+          "text": "Schreiben Sie einen Forumsbeitrag.",
+          "box": [
+            14.286,
+            12.283,
+            27.371,
+            1.283
+          ]
+        },
+        {
+          "id": "workbook-90-line-5",
+          "text": "Wann ist das? Hören Sie und kreuzen Sie die richtige Uhrzeit an. G",
+          "box": [
+            14.524,
+            42.315,
+            62.912,
+            1.414
+          ]
+        },
+        {
+          "id": "workbook-90-line-6",
+          "text": "Wann ist das? Hören Sie und notieren Sie. G",
+          "box": [
+            14.524,
+            87.659,
+            41.513,
+            1.414
+          ]
+        },
+        {
+          "id": "workbook-90-line-7",
+          "text": "a um 08:30",
+          "box": [
+            14.286,
+            89.852,
+            11.109,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-90-line-8",
+          "text": "Hase-1872",
+          "box": [
+            17.032,
+            17.167,
+            7.553,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-90-line-9",
+          "text": "08.47 Uhr",
+          "box": [
+            81.184,
+            17.351,
+            5.313,
+            0.831
+          ]
+        },
+        {
+          "id": "workbook-90-line-10",
+          "text": "Hallo! Was macht ihr am Wochenende? Ich gehe immer nur ins Fitnessstudio.",
+          "box": [
+            17.032,
+            18.628,
+            53.092,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-90-line-11",
+          "text": "Das ist doof.",
+          "box": [
+            17.032,
+            20.09,
+            8.892,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-90-line-12",
+          "text": "Habt ihr Tipps?",
+          "box": [
+            27.856,
+            20.089,
+            10.55,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-90-line-13",
+          "text": "Scorpio59",
+          "box": [
+            17.032,
+            22.858,
+            7.44,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-90-line-14",
+          "text": "22.03 Uhr",
+          "box": [
+            81.253,
+            23.042,
+            5.245,
+            0.831
+          ]
+        },
+        {
+          "id": "workbook-90-line-15",
+          "text": "Ich gehe am Samstagvormittag immer ins Schwimmbad. Am Abend gehe ich oft ins Kino.",
+          "box": [
+            17.032,
+            24.319,
+            60.357,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-90-line-16",
+          "text": "Ich",
+          "box": [
+            17.032,
+            27.087,
+            2.481,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-90-line-17",
+          "text": "22.12 Uhr",
+          "box": [
+            81.662,
+            27.271,
+            4.835,
+            0.831
+          ]
+        },
+        {
+          "id": "workbook-90-line-18",
+          "text": "www.freizeit-freizeit.de",
+          "box": [
+            38.762,
+            15.057,
+            12.465,
+            0.831
+          ]
+        }
+      ],
+      "audioIds": [
+        "workbook-l8-extra9-track50-301c410a",
+        "workbook-l8-extra9-track51-2137dead",
+        "workbook-l8-extra9-track52-089a8905",
+        "workbook-l8-extra9-track53-6c6f8fb6",
+        "workbook-l8-extra9-track54-62d9ca17",
+        "workbook-l8-extra9-track55-90419537",
+        "workbook-l8-extra9-track56-19c211a3"
+      ],
+      "section": "Extra practice · Lesson 8",
+      "pageLabel": "Page 90",
+      "lessons": [
         8
       ]
     }
@@ -76891,6 +81546,50 @@
       "pageId": "workbook-48"
     },
     {
+      "id": "workbook-l8-ex13-1b683917",
+      "lesson": 8,
+      "kind": "workbook",
+      "exercise": 13,
+      "label": "Exercise 13",
+      "src": "/book/audio/workbook-l8-ex13-1b683917.mp3",
+      "source": "resources/original/audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_AB_CD2/2_03_AB_Momente_A11_8_13.mp3",
+      "sha256": "1b68391709cc55a0167e53b3274a21276739f390e37fe66bddffe001e6fc29b4",
+      "pageId": "workbook-53"
+    },
+    {
+      "id": "workbook-l8-ex14-8187ef14",
+      "lesson": 8,
+      "kind": "workbook",
+      "exercise": 14,
+      "label": "Exercise 14",
+      "src": "/book/audio/workbook-l8-ex14-8187ef14.mp3",
+      "source": "resources/original/audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_AB_CD2/2_04_AB_Momente_A11_8_14.mp3",
+      "sha256": "8187ef14ea78b9424c440eb6e9e21c9c4bec32929926736b3431755a86a0bdae",
+      "pageId": "workbook-53"
+    },
+    {
+      "id": "workbook-l8-ex14-83d29e85",
+      "lesson": 8,
+      "kind": "workbook",
+      "exercise": 14,
+      "label": "Exercise 14",
+      "src": "/book/audio/workbook-l8-ex14-83d29e85.mp3",
+      "source": "resources/original/audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_AB_CD2/2_05_AB_Momente_A11_8_14.mp3",
+      "sha256": "83d29e85c46d7794853e2da86e8f22971bb2f2b3586c397e1965e5409d8fd040",
+      "pageId": "workbook-53"
+    },
+    {
+      "id": "workbook-l8-ex15-a6f47d5c",
+      "lesson": 8,
+      "kind": "workbook",
+      "exercise": 15,
+      "label": "Exercise 15",
+      "src": "/book/audio/workbook-l8-ex15-a6f47d5c.mp3",
+      "source": "resources/original/audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_AB_CD2/2_06_AB_Momente_A11_8_15.mp3",
+      "sha256": "a6f47d5cadaa537d28883616efb11fba7cc5349f535a95d66a177320b74ffc08",
+      "pageId": "workbook-53"
+    },
+    {
       "id": "coursebook-l7-ex1-3ef29d61",
       "lesson": 7,
       "kind": "coursebook",
@@ -76944,6 +81643,39 @@
       "source": "resources/original/audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_05_KB_Momente_A11_L7_9b_3.mp3",
       "sha256": "1995b49cf10f213ee04789495c4cf0a78a49dcdcb4dad85b907e7c22f31d7390",
       "pageId": "coursebook-49"
+    },
+    {
+      "id": "coursebook-l8-ex1-fc457211",
+      "lesson": 8,
+      "kind": "coursebook",
+      "exercise": 1,
+      "label": "Exercise 1 · a",
+      "src": "/book/audio/coursebook-l8-ex1-fc457211.mp3",
+      "source": "resources/original/audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_06_KB_Momente_A11_L8_1a.mp3",
+      "sha256": "fc457211d4ec544c1ed88778a7a4afb27913b0a3ba248f71b6ca4d1991fecf1b",
+      "pageId": "coursebook-51"
+    },
+    {
+      "id": "coursebook-l8-ex3-bad85ddb",
+      "lesson": 8,
+      "kind": "coursebook",
+      "exercise": 3,
+      "label": "Exercise 3 · a",
+      "src": "/book/audio/coursebook-l8-ex3-bad85ddb.mp3",
+      "source": "resources/original/audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_07_KB_Momente_A11_L8_3a.mp3",
+      "sha256": "bad85ddba162c31a4d5aecc99d7a101f756c1d2941df585cdc99c781fb7c5d47",
+      "pageId": "coursebook-52"
+    },
+    {
+      "id": "coursebook-l8-ex4-dbce1110",
+      "lesson": 8,
+      "kind": "coursebook",
+      "exercise": 4,
+      "label": "Exercise 4 · b",
+      "src": "/book/audio/coursebook-l8-ex4-dbce1110.mp3",
+      "source": "resources/original/audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_08_KB_Momente_A11_L8_4b.mp3",
+      "sha256": "dbce1110399cd75a0e9faee700832cd1c24bbd7952bfc32a5f482f00dd728026",
+      "pageId": "coursebook-53"
     },
     {
       "id": "coursebook-l1-ex1-74059a9c",
@@ -77483,6 +82215,83 @@
       "source": "resources/original/audio/Kursbuch-20260813T121208Z-1-001/Kursbuch/CD1/1_54_KB_Momente_A11_L6_9a.mp3",
       "sha256": "19b420fbf8f46b74130513f5b348c8a5a1410e8d62bdebfecf5fe2c6bb524b99",
       "pageId": "coursebook-40"
+    },
+    {
+      "id": "workbook-l8-extra9-track50-301c410a",
+      "lesson": 8,
+      "kind": "workbook",
+      "exercise": 9,
+      "label": "Extra practice · Guided · Track 2/50",
+      "src": "/book/audio/workbook-l8-extra9-track50-301c410a.mp3",
+      "source": "resources/original/audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_AB_CD2/2_50_AB_Momente_A11_8_noch_mehr_9_leicht.mp3",
+      "sha256": "301c410aa83351b414c69ecdaa2c2254510ea7b6a3ec9ff490ce0a12fbd07342",
+      "pageId": "workbook-90"
+    },
+    {
+      "id": "workbook-l8-extra9-track51-2137dead",
+      "lesson": 8,
+      "kind": "workbook",
+      "exercise": 9,
+      "label": "Extra practice · Guided · Track 2/51",
+      "src": "/book/audio/workbook-l8-extra9-track51-2137dead.mp3",
+      "source": "resources/original/audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_AB_CD2/2_51_AB_Momente_A11_8_noch_mehr_9_leicht.mp3",
+      "sha256": "2137deadf352b783c030f016b562fb74645a0638398daebb16506c6ecd0332f0",
+      "pageId": "workbook-90"
+    },
+    {
+      "id": "workbook-l8-extra9-track52-089a8905",
+      "lesson": 8,
+      "kind": "workbook",
+      "exercise": 9,
+      "label": "Extra practice · Guided · Track 2/52",
+      "src": "/book/audio/workbook-l8-extra9-track52-089a8905.mp3",
+      "source": "resources/original/audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_AB_CD2/2_52_AB_Momente_A11_8_noch_mehr_9_leicht.mp3",
+      "sha256": "089a890535081b9263ca7947fcc129588ac727b75493d19387b79472d4171adf",
+      "pageId": "workbook-90"
+    },
+    {
+      "id": "workbook-l8-extra9-track53-6c6f8fb6",
+      "lesson": 8,
+      "kind": "workbook",
+      "exercise": 9,
+      "label": "Extra practice · Guided · Track 2/53",
+      "src": "/book/audio/workbook-l8-extra9-track53-6c6f8fb6.mp3",
+      "source": "resources/original/audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_AB_CD2/2_53_AB_Momente_A11_8_noch_mehr_9_leicht.mp3",
+      "sha256": "6c6f8fb6098957c38763631820b3bc0d605ec65c1e2b7e5614eaae897219f6f4",
+      "pageId": "workbook-90"
+    },
+    {
+      "id": "workbook-l8-extra9-track54-62d9ca17",
+      "lesson": 8,
+      "kind": "workbook",
+      "exercise": 9,
+      "label": "Extra practice · Guided · Track 2/54",
+      "src": "/book/audio/workbook-l8-extra9-track54-62d9ca17.mp3",
+      "source": "resources/original/audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_AB_CD2/2_54_AB_Momente_A11_8_noch_mehr_9_leicht.mp3",
+      "sha256": "62d9ca17bf1b7c4050cbf4a66bf1286c21ae36dca30622a8eced5124ebce6b10",
+      "pageId": "workbook-90"
+    },
+    {
+      "id": "workbook-l8-extra9-track55-90419537",
+      "lesson": 8,
+      "kind": "workbook",
+      "exercise": 9,
+      "label": "Extra practice · Guided · Track 2/55",
+      "src": "/book/audio/workbook-l8-extra9-track55-90419537.mp3",
+      "source": "resources/original/audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_AB_CD2/2_55_AB_Momente_A11_8_noch_mehr_9_leicht.mp3",
+      "sha256": "904195373815b58ca567347019c69d30f40eabc4d88a04366ff96571142f9bef",
+      "pageId": "workbook-90"
+    },
+    {
+      "id": "workbook-l8-extra9-track56-19c211a3",
+      "lesson": 8,
+      "kind": "workbook",
+      "exercise": 9,
+      "label": "Extra practice · Challenge · Track 2/56",
+      "src": "/book/audio/workbook-l8-extra9-track56-19c211a3.mp3",
+      "source": "resources/original/audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_AB_CD2/2_56_AB_Momente_A11_8_noch_mehr_9_schwer.mp3",
+      "sha256": "19c211a35e11488ae19872c49203880f522890bbd4a207bc653fb77a0883c792",
+      "pageId": "workbook-90"
     },
     {
       "id": "workbook-m1-track19-32d13392",

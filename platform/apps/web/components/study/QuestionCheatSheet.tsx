@@ -37,7 +37,7 @@ export function QuestionCheatSheet({speech}:{speech:Record<string,string>}){
   const say=(text:string)=><span className="sheet-spoken"><GermanText text={text}/><LineAudio compact text={text} src={speech[text]}/></span>;
   const save=(id:string,title:string,meaning:string,lesson?:number)=>{
     const questionWord=questionWords.find(w=>w.id===id);
-    return <SaveButton item={{id:`question-${id}`,title,meaning,kind:"concept",href:`/cheat-sheets/questions#${id.startsWith("builder-")?"question-builder":id.startsWith("reply-")?"question-replies":id.startsWith("quiz-")?"question-practice":`question-${id}`}`,audio:speech[title]??null,...(lesson?{lesson}:{}),studyTags:{lessons:questionWord?questionWordLessons(questionWord):lesson?[lesson]:[1,2,3,4,5,6,7],concepts:["questions","grammar"],source:questionWord?questionWord.lesson?"course":"study-extra":lesson?"course":"study-extra"}}}/>;
+    return <SaveButton item={{id:`question-${id}`,title,meaning,kind:"concept",href:`/cheat-sheets/questions#${id.startsWith("builder-")?"question-builder":id.startsWith("reply-")?"question-replies":id.startsWith("quiz-")?"question-practice":`question-${id}`}`,audio:speech[title]??null,...(lesson?{lesson}:{}),studyTags:{lessons:questionWord?questionWordLessons(questionWord):lesson?[lesson]:[1,2,3,4,5,6,7,8],concepts:["questions","grammar"],source:questionWord?questionWord.lesson?"course":"study-extra":lesson?"course":"study-extra"}}}/>;
   };
   return <div className="collection-sheet questions-sheet">
     <CheatSheetNav current="questions"/>

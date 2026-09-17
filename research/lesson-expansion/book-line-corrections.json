@@ -44,5 +44,31 @@
       "startsWith": " tol\u001e",
       "text": "toll"
     }
+  ],
+  "coursebook-164": [
+    {
+      "startsWith": "An\u001ba und Maria",
+      "text": "Anna und Maria"
+    },
+    {
+      "startsWith": "Lea und Si\u001don",
+      "text": "Lea und Simon"
+    },
+    {
+      "startsWith": "Diego und Pek\u0019a",
+      "text": "Diego und Pekka"
+    },
+    {
+      "startsWith": "Café „Amade\u001cs“",
+      "text": "Café „Amadeus“"
+    },
+    {
+      "startsWith": "l\u001al\u001a",
+      "text": ""
+    },
+    {
+      "startsWith": "l\u001a",
+      "text": ""
+    }
   ]
 }

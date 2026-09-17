@@ -3,7 +3,7 @@ export type QuestionWord = {
   question:string;translation:string;answer:string;answerMeaning:string;
   lesson:number|null;sourceLabel?:string;family:"person"|"place"|"detail"|"time"|"reason";
 };
-/** Core membership follows the first four Momente lessons; extension items are labelled separately. */
+/** Core membership advances with source-checked lessons; extension items remain labelled separately. */
 export const questionWords:QuestionWord[]=[
   {id:"wer",word:"Wer?",meaning:"Who?",cue:"A person: put a face in the answer.",icon:"☺",question:"Wer ist das?",translation:"Who is that?",answer:"Das ist meine Schwester.",answerMeaning:"That is my sister.",lesson:1,family:"person"},
   {id:"was",word:"Was?",meaning:"What?",cue:"A thing, an activity or a role. Learn Was … von Beruf? as a whole question.",icon:"◇",question:"Was bist du von Beruf?",translation:"What do you do for a living?",answer:"Ich bin Ingenieur.",answerMeaning:"I am an engineer.",lesson:2,family:"detail"},
@@ -15,7 +15,8 @@ export const questionWords:QuestionWord[]=[
   {id:"wie-viele",word:"Wie viele?",meaning:"How many?",cue:"Count plural things: wie viele Kinder? Notice the final -e. The workbook uses wie viele in the Module 1 review.",icon:"•••",question:"Wie viele Kinder hast du?",translation:"How many children do you have?",answer:"Ich habe zwei Kinder.",answerMeaning:"I have two children.",lesson:3,sourceLabel:"Module 1 review",family:"detail"},
   {id:"welche",word:"Welche?",meaning:"Which?",cue:"Choose from a set. Welche Sprachen? uses the plural form welche.",icon:"☷",question:"Welche Sprachen sprichst du?",translation:"Which languages do you speak?",answer:"Ich spreche Deutsch und Persisch.",answerMeaning:"I speak German and Persian.",lesson:3,family:"detail"},
   {id:"wohin",word:"Wohin?",meaning:"Where to?",cue:"Destination: draw an arrow TO the finish. nach Berlin, not aus Berlin.",icon:"→",question:"Wohin gehst du?",translation:"Where are you going?",answer:"Ich gehe nach Hause.",answerMeaning:"I am going home.",lesson:null,family:"place"},
-  {id:"wann",word:"Wann?",meaning:"When?",cue:"A point in time: put a dot on a calendar.",icon:"◷",question:"Wann kommst du?",translation:"When are you coming?",answer:"Ich komme morgen.",answerMeaning:"I am coming tomorrow.",lesson:null,family:"time"},
+  {id:"wie-spaet",word:"Wie spät?",meaning:"What time?",cue:"Read a clock. Also ask Wie viel Uhr ist es?",icon:"◷",question:"Wie spät ist es?",translation:"What time is it?",answer:"Es ist halb vier.",answerMeaning:"It is half past three.",lesson:8,family:"time"},
+  {id:"wann",word:"Wann?",meaning:"When?",cue:"A point in time: put a dot on a calendar.",icon:"◷",question:"Wann hast du Zeit?",translation:"When do you have time?",answer:"Am Montag habe ich Zeit.",answerMeaning:"I have time on Monday.",lesson:8,family:"time"},
   {id:"wie-lange",word:"Wie lange?",meaning:"How long?",cue:"Duration: draw a line between a start and an end.",icon:"↔",question:"Wie lange bleibst du?",translation:"How long are you staying?",answer:"Ich bleibe drei Tage.",answerMeaning:"I am staying for three days.",lesson:null,family:"time"},
   {id:"wie-oft",word:"Wie oft?",meaning:"How often?",cue:"Frequency: immer → oft → manchmal → nie. Keep frequency separate from ability.",icon:"↻",question:"Wie oft spielst du Tennis?",translation:"How often do you play tennis?",answer:"Ich spiele manchmal Tennis.",answerMeaning:"I sometimes play tennis.",lesson:7,family:"time"},
   {id:"warum",word:"Warum?",meaning:"Why?",cue:"Ask for a reason. A short reason is enough while you learn longer clauses.",icon:"?",question:"Warum lernst du Deutsch?",translation:"Why are you learning German?",answer:"Für meine Arbeit.",answerMeaning:"For my work.",lesson:null,family:"reason"},
@@ -24,6 +25,7 @@ export const questionWords:QuestionWord[]=[
   {id:"wessen",word:"Wessen?",meaning:"Whose?",cue:"Ownership: attach a name label to the object.",icon:"⌑",question:"Wessen Buch ist das?",translation:"Whose book is that?",answer:"Das ist Saras Buch.",answerMeaning:"That is Sara’s book.",lesson:null,family:"person"},
 ];
 export const questionBuilders=[
+  {id:"availability",title:"Make a plan",lesson:8,w:["Wann","hast","du Zeit?"],formal:["Wann","haben","Sie Zeit?"],yes:["Hast","du","am Samstag Zeit?"],yesFormal:["Haben","Sie","am Samstag Zeit?"],meaning:"When do you have time?",yesMeaning:"Do you have time on Saturday?",answer:"Am Samstag habe ich Zeit.",answerMeaning:"I have time on Saturday."},
   {id:"ability",title:"What you can do",lesson:7,w:["Was","kannst","du gut?"],formal:["Was","können","Sie gut?"],yes:["Kannst","du","gut schwimmen?"],yesFormal:["Können","Sie","gut schwimmen?"],meaning:"What can you do well?",yesMeaning:"Can you swim well?",answer:"Ich kann gut schwimmen.",answerMeaning:"I can swim well."},
   {id:"objects",title:"Name an object",lesson:5,w:["Was","ist","das?"],formal:["Was","ist","das?"],yes:["Ist","das","ein Buch?"],yesFormal:["Ist","das","ein Buch?"],meaning:"What is that?",yesMeaning:"Is that a book?",answer:"Das ist ein Buch.",answerMeaning:"That is a book."},
   {id:"office",title:"What you need",lesson:6,w:["Was","brauchst","du?"],formal:["Was","brauchen","Sie?"],yes:["Brauchst","du","einen Stift?"],yesFormal:["Brauchen","Sie","einen Stift?"],meaning:"What do you need?",yesMeaning:"Do you need a pen?",answer:"Ich brauche einen Stift.",answerMeaning:"I need a pen."},
@@ -34,7 +36,7 @@ export const questionBuilders=[
 ];
 export function questionWordLessons(word:QuestionWord):number[]{
   const membership:Record<string,number[]>={wer:[1,3,7],was:[2,4,5,6,7],wie:[1,2,3,4,5],wo:[2,6],woher:[1,2,3],"wie-alt":[2,3],"wie-viel":[4,5,6],"wie-viele":[3,6],welche:[3,5,6]};
-  return membership[word.id]??(word.lesson?[word.lesson]:[1,2,3,4,5,6,7]);
+  return membership[word.id]??(word.lesson?[word.lesson]:[1,2,3,4,5,6,7,8]);
 }
 export const questionReplyCases=[
   {question:"Kommst du aus dem Iran?",translation:"Are you from Iran?",yes:"Ja, ich komme aus dem Iran.",no:"Nein, ich komme aus Deutschland.",yesMeaning:"Yes, I come from Iran.",noMeaning:"No, I come from Germany.",cue:"An ordinary yes/no question: ja confirms it; nein rejects it."},

@@ -18,11 +18,11 @@ GENERATED = ROOT / "platform/apps/web/generated"
 DIGITS = str.maketrans(dict(zip("", "0123456789")))
 
 # Printed page starts; PDF page = printed page + 2 for these source files.
-LESSONS = [(1, 11, 6), (2, 15, 10), (3, 19, 14), (4, 29, 26), (5, 33, 30), (6, 37, 34), (7, 47, 46)]
+LESSONS = [(1, 11, 6), (2, 15, 10), (3, 19, 14), (4, 29, 26), (5, 33, 30), (6, 37, 34), (7, 47, 46), (8, 51, 50)]
 # Each page's exercise starts, checked against the source pages.
 EXERCISES = {
-    "coursebook": {1: [1, 2, 4, 8], 2: [1, 2, 4, 6], 3: [1, 2, 5, 9], 4: [1, 3, 5, 8], 5: [1, 2, 5, 6], 6: [1, 2, 4, 9], 7: [1, 3, 8, 10]},
-    "workbook": {1: [1, 5, 10, 13], 2: [1, 4, 8, 12], 3: [1, 5, 9, 12], 4: [1, 4, 9, 14], 5: [1, 5, 9, 15], 6: [1, 4, 7, 10], 7: [1, 4, 6, 10]},
+    "coursebook": {1: [1, 2, 4, 8], 2: [1, 2, 4, 6], 3: [1, 2, 5, 9], 4: [1, 3, 5, 8], 5: [1, 2, 5, 6], 6: [1, 2, 4, 9], 7: [1, 3, 8, 10], 8: [1, 2, 5, 7]},
+    "workbook": {1: [1, 5, 10, 13], 2: [1, 4, 8, 12], 3: [1, 5, 9, 12], 4: [1, 4, 9, 14], 5: [1, 5, 9, 15], 6: [1, 4, 7, 10], 7: [1, 4, 6, 10], 8: [1, 6, 9, 12]},
 }
 
 
@@ -35,7 +35,7 @@ def clean(text):
 
 def main():
     parser=argparse.ArgumentParser()
-    parser.add_argument("--through",type=int,choices=[4,5,6,7],default=7)
+    parser.add_argument("--through",type=int,choices=[4,5,6,7,8],default=8)
     through=parser.parse_args().through
     PUBLIC.mkdir(parents=True, exist_ok=True)
     (PUBLIC / "audio").mkdir(exist_ok=True)
@@ -53,6 +53,8 @@ def main():
         action_lessons={155:[1],156:[1],157:[2],158:[2],159:[3,4],160:[5],161:[6]} if kind=="coursebook" else {}
         if through>=7:
             action_lessons.update({162:[7],163:[7,8],191:[1],192:[2],193:[4,5],194:[5,7]} if kind=="coursebook" else {86:[1,2],87:[3,4],88:[5,6],89:[6,7,8]})
+        if through>=8:
+            action_lessons.update({164:[8]} if kind=="coursebook" else {90:[8]})
         printed_pages=list(range(-1,end+1))+(list(action_lessons) if through>=6 else [])
         corrections=json.loads((ROOT/'research/lesson-expansion/book-line-corrections.json').read_text(encoding='utf8'))
         for printed in printed_pages:
@@ -97,6 +99,8 @@ def main():
     for file in sorted((ROOT / "resources/original/audio").rglob("*.mp3")):
         match = re.search(r"_(KB|AB)_(?:Momente_A11_)?L(\d+)_(\d+)(.*)\.mp3$", file.name)
         if not match:
+            match=re.search(r"_(AB)_Momente_A11_(8)_(\d+)(.*)\.mp3$",file.name)
+        if not match:
             continue
         label, lesson, exercise, suffix = match.groups()
         lesson, exercise = int(lesson), int(exercise)
@@ -106,6 +110,8 @@ def main():
             # Use one supplied edition of each recording, not duplicate regional copies.
             continue
         kind = "coursebook" if label == "KB" else "workbook"
+        if kind=="workbook" and lesson==8 and "Momente_A1_1_AB_CD2" not in str(file):
+            continue
         # AB names carry Momente before AB; the regex supports both source naming schemes.
         digest = hashlib.sha256(file.read_bytes()).hexdigest()
         if any(a["sha256"] == digest for a in audio):
@@ -113,6 +119,8 @@ def main():
         starts = EXERCISES[kind][lesson]
         offset = max(i for i, n in enumerate(starts) if exercise >= n)
         start = next(kb if kind == "coursebook" else ab for number, kb, ab in LESSONS if number == lesson)
+        if kind=="coursebook" and lesson==8 and exercise==4 and suffix.startswith("b"):
+            offset=2
         # Exercise 14b/c continues onto the next workbook page.
         if kind=="workbook" and lesson==5 and exercise==14 and suffix.startswith("b"):
             offset=3
@@ -124,6 +132,17 @@ def main():
         track = {"id": audio_id, "lesson": lesson, "kind": kind, "exercise": exercise, "label": f"Exercise {exercise}" + (f" · {detail}" if detail else ""), "src": dest, "source": file.relative_to(ROOT).as_posix(), "sha256": digest, "pageId": page["id"]}
         audio.append(track)
         page["audioIds"].append(audio_id)
+    if through>=8:
+        for file in sorted((ROOT/"resources/original/audio").rglob("*_AB_Momente_A11_8_noch_mehr_9_*.mp3")):
+            digest=hashlib.sha256(file.read_bytes()).hexdigest()
+            number=int(file.name.split("_")[1])
+            level="Guided" if number<56 else "Challenge"
+            audio_id=f"workbook-l8-extra9-track{number}-{digest[:8]}"
+            dest=f"/book/audio/{audio_id}.mp3"
+            shutil.copyfile(file,PUBLIC/"audio"/f"{audio_id}.mp3")
+            page=next(p for p in pages if p["id"]=="workbook-90")
+            audio.append({"id":audio_id,"lesson":8,"kind":"workbook","exercise":9,"label":f"Extra practice · {level} · Track 2/{number}","src":dest,"source":file.relative_to(ROOT).as_posix(),"sha256":digest,"pageId":page["id"]})
+            page["audioIds"].append(audio_id)
     # Module 1 recordings belong to the review/magazine pages between Lessons 3 and 4.
     for file in sorted((ROOT / "resources/original/audio").rglob("*.mp3")):
         name = file.name
