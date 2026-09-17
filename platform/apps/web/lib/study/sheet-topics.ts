@@ -6,9 +6,10 @@ export const sheetLinks = [
   {id:"numbers",number:"05",title:"Numbers & prices",href:"/cheat-sheets/numbers"},
   {id:"conversation",number:"06",title:"Conversation & spelling",href:"/cheat-sheets/conversation"},
   {id:"questions",number:"07",title:"Questions & answers",href:"/cheat-sheets/questions"},
+  {id:"objects",number:"08",title:"Objects, colours & articles",href:"/cheat-sheets/objects"},
 ] as const;
 export type SheetId = typeof sheetLinks[number]["id"];
-export type ExtendedSheetId = Exclude<SheetId,"countries"|"home"|"questions">;
+export type ExtendedSheetId = Exclude<SheetId,"countries"|"home"|"questions"|"objects">;
 export type SheetQuiz = {q:string;options:string[];answer:string;why:string};
 export const sheetTitles:Record<ExtendedSheetId,{title:string;subtitle:string;eyebrow:string}>={
   people:{title:"Put a face to the word.",subtitle:"Family connections, work roles, and the words that describe you.",eyebrow:"The people around you · Lessons 2–3"},

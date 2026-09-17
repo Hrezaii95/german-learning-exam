@@ -628,4 +628,5 @@ export const courseChapters = [
     kb: 29,
     ab: 26,
   },
+  {number:5,title:"Ist das ein Tisch?",topic:"Objects, colours, materials & forms",kb:33,ab:30},
 ];

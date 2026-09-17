@@ -1,8 +1,11 @@
 import type { WordCard } from "../content/word-card-types";
-import { lessonFourWords } from "./lesson-four";
+import { lessonFourWords,type StudyWord } from "./lesson-four";
 
 export function lessonFourCards(): WordCard[] {
-  return lessonFourWords.map((word) => {
+  return studyWordCards(lessonFourWords,4,"Momente A1.1 Deutsch–Englisch glossary, pp. 5–6; coursebook pp. 29–32. © Hueber Verlag.");
+}
+export function studyWordCards(words:StudyWord[],lesson:number,source:string):WordCard[]{
+  return words.map((word) => {
     const noun = /^(der|die|das) /.test(word.de);
     const tone = word.de.startsWith("der ")
       ? "male"
@@ -17,17 +20,17 @@ export function lessonFourCards(): WordCard[] {
       id: word.id,
       path: `/vocabulary/${word.id}`,
       aliases: [],
-      sourceIds: ["momente-glossary-l04"],
+      sourceIds: [`momente-glossary-l${String(lesson).padStart(2,"0")}`],
       teacherRows: [],
       title: word.en,
       category: noun
         ? "Noun"
         : word.category === "Verbs"
           ? "Verb"
-          : word.category === "Adjectives"
+          : ["Adjectives","Colours"].includes(word.category)
             ? "Adjective"
             : "Expression",
-      lessons: ["4"],
+      lessons: [String(lesson)],
       priorities: ["Core"],
       rows: [
         {
@@ -68,9 +71,9 @@ export function lessonFourCards(): WordCard[] {
         ? "Recall the article together with the noun."
         : "Say the whole expression aloud.",
       examples: [{ de: word.example, en: word.translation, audio: null }],
-      note: "Vocabulary follows the Lesson 4 glossary; examples and English explanations are study aids.",
+      note: `Vocabulary follows the Lesson ${lesson} glossary and exercises; examples and English explanations are study aids.`,
       sources: [
-        "Momente A1.1 Deutsch–Englisch glossary, pp. 5–6; coursebook pp. 29–32. © Hueber Verlag.",
+        source,
       ],
       image: null,
       visual: "word",
@@ -90,7 +93,7 @@ export function lessonFourCards(): WordCard[] {
             ]
           : []),
       ],
-      searchText: `${word.de} ${word.en} ${word.plural} Lesson 4`,
+      searchText: `${word.de} ${word.en} ${word.plural} Lesson ${lesson}`,
     };
   });
 }

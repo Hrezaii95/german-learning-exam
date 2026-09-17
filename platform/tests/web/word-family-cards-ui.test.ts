@@ -8,11 +8,10 @@ import { WordFamilyCard } from "../../apps/web/components/word-cards/WordFamilyC
 import type { WordCardCatalog } from "../../apps/web/lib/content/word-card-types";
 import { isSafeNavigationPath } from "../../apps/web/lib/content/navigation-context";
 import { buildHubNavigationContext, resolveBackHref } from "../../apps/web/lib/content/navigation-context";
-import { withWordCardHub } from "../../apps/web/lib/content/word-cards";
+import { withWordCardHub,loadWordCards } from "../../apps/web/lib/content/word-cards";
 import type { LearnerHubProjection } from "../../apps/web/lib/content/hub-types";
 import { HubListView } from "../../apps/web/components/hubs/HubViews";
 import { filterHubRecords, parseHubSearchParams } from "../../apps/web/lib/content/hub-query";
-import { lessonFourCards } from "../../apps/web/lib/study/word-cards";
 
 const catalog = JSON.parse(readFileSync(resolve("apps/web/generated/word-cards.json"), "utf8")) as WordCardCatalog;
 const engineer = catalog.cards.find(c => c.id === "W126")!;
@@ -22,7 +21,7 @@ afterEach(cleanup);
 describe("original vocabulary browsing with complete cards", () => {
   it("keeps every complete family reachable through the original grid inventory", () => {
     const hub = withWordCardHub(originalHub);
-    const complete = [...catalog.cards, ...lessonFourCards()];
+    const complete = loadWordCards().cards;
     expect(hub.items).toHaveLength(complete.length);
     expect(new Set(hub.items.map(i => i.hubDestination.path))).toEqual(new Set(complete.map(c => c.path)));
     expect(hub.title).toBe(originalHub.title);

@@ -1,0 +1,28 @@
+{
+  "lesson": 5,
+  "sourceWords": 98,
+  "newWordFamilies": 77,
+  "totalWordFamilies": 713,
+  "pages": 73,
+  "originalRecordings": 92,
+  "knownAnswerGroups": 77,
+  "speechTexts": 4560,
+  "tests": {
+    "core": 860,
+    "web": 521,
+    "bookBrowser": 269,
+    "scopeBrowser": 18,
+    "expandedLessonBrowser": 14,
+    "collectionBrowser": 59
+  },
+  "pagesGate": "pass",
+  "renderedInspection": [
+    "objects-desktop.png",
+    "sheet-mobile.png"
+  ],
+  "storage": "Regenerable .next cache moved to F:/codex-build-cache/german-learning-20260917; source workspace unchanged.",
+  "limits": [
+    "Ordinary workbook exercise key was not supplied; absent official answers remain labelled.",
+    "Examples, explanations and quizzes are authored learning aids."
+  ]
+}

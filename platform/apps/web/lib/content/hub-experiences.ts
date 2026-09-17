@@ -485,7 +485,7 @@ function matchesQuery(haystack: readonly string[], query: string): boolean {
 
 function matchesLesson(lessonIds: readonly LessonId[], lesson: HubQueryState["lesson"]): boolean {
   if (lesson === "all") return true;
-  if (lesson === "03" || lesson === "04") return false; // Later lessons use the linked interactive book.
+  if (lesson !== "01" && lesson !== "02") return false; // Later lessons use the course study collection.
   return lessonIds.includes(`lesson:${lesson}`);
 }
 

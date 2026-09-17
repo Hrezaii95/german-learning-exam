@@ -1,5 +1,6 @@
 import type {WordCard} from "../content/word-card-types";
 import type {LearnerHubRecord} from "../content/hub-types";
+import {studyUnits} from "./course-lessons";
 import {homeWords} from "./home";
 import {lessonFourWords} from "./lesson-four";
 import {numericLessons,type StudyConcept,type StudyTags} from "./scope";
@@ -30,6 +31,13 @@ export function wordStudyTags(card:WordCard):StudyTags{
   if(lessonFour?.category==="Furniture")concepts.add("home");
   if(lessonFour?.category==="Adjectives")concepts.add("descriptions");
   if(lessonFour?.category==="Verbs")concepts.add("verbs");
+  for(const unit of studyUnits){const word=unit.words?.find(w=>w.id===card.id||card.aliases.includes(`/vocabulary/${w.id}`));if(!word)continue;
+    if(word.category==="Objects"||word.category==="Shopping")concepts.add("objects");
+    if(["Materials","Colours"].includes(word.category))concepts.add("colours-materials");
+    if(word.category==="Forms")concepts.add("office");
+    if(word.category==="Classroom")concepts.add("classroom");
+    if(word.category==="Grammar")concepts.add("grammar");
+  }
   if(!concepts.size)concepts.add("everyday");
   const teacher=card.teacherRows.length>0||card.priorities.includes("Teacher extra");
   const core=numbered.length>0;

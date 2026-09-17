@@ -4,6 +4,7 @@ Run locally with pymupdf and Pillow. CI consumes the checked-in output. The
 source PDFs/audio remain private; exported lesson pages carry Hueber attribution.
 """
 from pathlib import Path
+import argparse
 import hashlib
 import json
 import re
@@ -17,11 +18,11 @@ GENERATED = ROOT / "platform/apps/web/generated"
 DIGITS = str.maketrans({chr(0xF630 + i): str(i) for i in range(10)})
 
 # Printed page starts; PDF page = printed page + 2 for these source files.
-LESSONS = [(1, 11, 6), (2, 15, 10), (3, 19, 14), (4, 29, 26)]
+LESSONS = [(1, 11, 6), (2, 15, 10), (3, 19, 14), (4, 29, 26), (5, 33, 30)]
 # Each page's exercise starts, checked against the source pages.
 EXERCISES = {
-    "coursebook": {1: [1, 2, 4, 6], 2: [1, 2, 4, 6], 3: [1, 2, 5, 8], 4: [1, 3, 5, 8]},
-    "workbook": {1: [1, 5, 10, 13], 2: [1, 4, 8, 12], 3: [1, 5, 9, 12], 4: [1, 4, 9, 14]},
+    "coursebook": {1: [1, 2, 4, 6], 2: [1, 2, 4, 6], 3: [1, 2, 5, 8], 4: [1, 3, 5, 8], 5: [1, 2, 5, 6]},
+    "workbook": {1: [1, 5, 10, 13], 2: [1, 4, 8, 12], 3: [1, 5, 9, 12], 4: [1, 4, 9, 14], 5: [1, 5, 9, 15]},
 }
 
 
@@ -32,6 +33,9 @@ def clean(text):
 
 
 def main():
+    parser=argparse.ArgumentParser()
+    parser.add_argument("--through",type=int,choices=[4,5],default=5)
+    through=parser.parse_args().through
     PUBLIC.mkdir(parents=True, exist_ok=True)
     (PUBLIC / "audio").mkdir(exist_ok=True)
     (PUBLIC / "pages").mkdir(exist_ok=True)
@@ -43,9 +47,10 @@ def main():
     for kind, path in docs.items():
         doc = pymupdf.open(path)
         sources.append({"kind": kind, "path": path.relative_to(ROOT).as_posix(), "sha256": hashlib.sha256(path.read_bytes()).hexdigest()})
-        end = 32 if kind == "coursebook" else 29
+        last=next((kb,ab) for lesson,kb,ab in LESSONS if lesson==through)
+        end = last[0 if kind=="coursebook" else 1]+3
         for printed in range(-1, end + 1):
-            starts = [(lesson, kb if kind == "coursebook" else ab) for lesson, kb, ab in LESSONS]
+            starts = [(lesson, kb if kind == "coursebook" else ab) for lesson, kb, ab in LESSONS if lesson<=through]
             lesson = max((lesson for lesson, start in starts if printed >= start), default=1)
             if printed < starts[0][1]:
                 section = "Getting started"
@@ -74,11 +79,13 @@ def main():
                     lines.append({"id": f"{page_id}-line-{len(lines)+1}", "text": text, "box": [round(x0 / page.rect.width * 100, 3), round(y0 / page.rect.height * 100, 3), round((x1-x0) / page.rect.width * 100, 3), round((y1-y0) / page.rect.height * 100, 3)]})
             pages.append({"id": page_id, "kind": kind, "lesson": lesson, "printedPage": printed, "pdfPage": printed + 2, "image": f"/book/pages/{page_id}.webp", "width": pix.width, "height": pix.height, "lines": lines, "audioIds": [], "section": section, "pageLabel": "Cover" if printed == -1 else "Inside cover · map" if printed == 0 else f"Page {printed}"})
     for file in sorted((ROOT / "resources/original/audio").rglob("*.mp3")):
-        match = re.search(r"_(KB|AB)_(?:Momente_A11_)?L([1-4])_(\d+)(.*)\.mp3$", file.name)
+        match = re.search(r"_(KB|AB)_(?:Momente_A11_)?L(\d+)_(\d+)(.*)\.mp3$", file.name)
         if not match:
             continue
         label, lesson, exercise, suffix = match.groups()
         lesson, exercise = int(lesson), int(exercise)
+        if lesson>through:
+            continue
         kind = "coursebook" if label == "KB" else "workbook"
         # AB names carry Momente before AB; the regex supports both source naming schemes.
         digest = hashlib.sha256(file.read_bytes()).hexdigest()
@@ -87,6 +94,9 @@ def main():
         starts = EXERCISES[kind][lesson]
         offset = max(i for i, n in enumerate(starts) if exercise >= n)
         start = next(kb if kind == "coursebook" else ab for number, kb, ab in LESSONS if number == lesson)
+        # Exercise 14b/c continues onto the next workbook page.
+        if kind=="workbook" and lesson==5 and exercise==14 and suffix.startswith("b"):
+            offset=3
         page = next(p for p in pages if p["id"] == f"{kind}-{start + offset}")
         audio_id = f"{kind}-l{lesson}-ex{exercise}-{digest[:8]}"
         dest = f"/book/audio/{audio_id}.mp3"

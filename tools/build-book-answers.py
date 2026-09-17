@@ -27,7 +27,7 @@ def add(page, exercise, text, source_page=1, model=False, source="coursebook-key
 
 doc = pymupdf.open(KEY)
 texts = [re.sub(r"[ \t]+\n", "\n", re.sub(r"(\w)-\n(\w)", r"\1\2", p.get_text())) for p in doc]
-starts = {1: (11, [1, 2, 4, 6]), 2: (15, [1, 2, 4, 6]), 3: (19, [1, 2, 5, 8]), 4: (29, [1, 3, 5, 8])}
+starts = {1: (11, [1, 2, 4, 6]), 2: (15, [1, 2, 4, 6]), 3: (19, [1, 2, 5, 8]), 4: (29, [1, 3, 5, 8]), 5: (33, [1, 2, 5, 6])}
 for lesson, (first, boundaries) in starts.items():
     source_page = 1 if lesson < 4 else 2
     text = texts[source_page-1].split(f"Lektion {lesson}\n", 1)[1]
@@ -78,6 +78,6 @@ book = json.loads((GEN / "interactive-book.json").read_text(encoding="utf-8"))
 assert all(a["pageId"] in {p["id"] for p in book["pages"]} for a in answers)
 assert all(a["text"] and a["exercise"] for a in answers)
 (GEN / "book-answers.json").write_text(json.dumps(answers, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
-audit = {"answers": len(answers), "pagesWithAnswers": len({a["pageId"] for a in answers}), "bySource": {s: sum(a["source"] == s for a in answers) for s in sorted({a["source"] for a in answers})}, "sources": [{"file": p.relative_to(ROOT).as_posix(), "sha256": hashlib.sha256(p.read_bytes()).hexdigest()} for p in [KEY, AB, TRANSCRIPT, ROOT / quick["source"]]], "scope": "All entries in the supplied coursebook key for Lessons 1–4 and Magazine 1–3; coursebook quick-test answers in the appendix, p. 203; all Module 1 workbook skills-test answers; explicit responses in available Module 1 review transcripts."}
+audit = {"answers": len(answers), "pagesWithAnswers": len({a["pageId"] for a in answers}), "bySource": {s: sum(a["source"] == s for a in answers) for s in sorted({a["source"] for a in answers})}, "sources": [{"file": p.relative_to(ROOT).as_posix(), "sha256": hashlib.sha256(p.read_bytes()).hexdigest()} for p in [KEY, AB, TRANSCRIPT, ROOT / quick["source"]]], "scope": "All entries in the supplied coursebook key for Lessons 1–5 and Magazine 1–3; coursebook quick-test answers in the appendix, p. 203; all Module 1 workbook skills-test answers; explicit responses in available Module 1 review transcripts."}
 (ROOT / "research/book-answers/answer-source-audit.json").write_text(json.dumps(audit, indent=2)+"\n", encoding="utf-8")
 print(json.dumps(audit))

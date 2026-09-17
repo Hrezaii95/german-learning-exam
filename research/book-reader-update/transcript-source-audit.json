@@ -1,6 +1,6 @@
 {
-  "tracks": 82,
-  "workbookTracks": 27,
+  "tracks": 92,
+  "workbookTracks": 31,
   "coursebookSourceUrl": "https://www.hueber.de/media/36/Momente_A1_1_KB_Transkriptionen.pdf",
   "sources": [
     {
@@ -12,5 +12,5 @@
       "sha256": "fc9f4727625f521d07d10bb6a0c394ce8d97b0bcbff65becc0b48584a4504097"
     }
   ],
-  "mappingNote": "AB Lesson 4 source transcript numbers are one greater than the supplied audio filenames; exercise and subpart were checked visually."
+  "mappingNote": "AB Lessons 4-6 source transcript numbers are one greater than the supplied audio filenames; exercise and subpart were checked visually."
 }

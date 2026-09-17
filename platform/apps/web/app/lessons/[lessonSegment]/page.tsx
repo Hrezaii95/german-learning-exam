@@ -22,13 +22,14 @@ export const dynamicParams = false;
 export function generateStaticParams() {
   return [...loadLearnerProjection().lessons.map((lesson) => ({
     lessonSegment: lesson.routeSegment,
-  })), { lessonSegment: "03" }, { lessonSegment: "04" }];
+  })), ...studyUnits.map(u=>({lessonSegment:String(u.number).padStart(2,"0")}))];
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { lessonSegment } = await params;
   if (lessonSegment === "04") return { title: "Lesson 4 · Das Bild ist so schön.", description: "Furniture, prices and opinions: learn with original audio, an interactive book and personal review." };
   if (lessonSegment === "03") return { title: "Lesson 3 · Das ist meine Schwester." };
+  if (lessonSegment === "05") return {title:"Lesson 5 · Ist das ein Tisch?"};
   const lesson = loadLearnerProjection().lessons.find(
     (item) => item.routeSegment === lessonSegment,
   );
@@ -38,7 +39,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default async function LessonPage({ params }: PageProps) {
   const { lessonSegment } = await params;
   if (lessonSegment === "04") return <ShellLayout current="lessons"><LessonFour speech={loadStudySpeech()} /></ShellLayout>;
-  if (lessonSegment === "03") return <ShellLayout current="lessons"><CourseStudy unit={studyUnits.find(u=>u.number===3)!} cards={loadWordCards().cards.filter(c=>c.studyTags?.lessons.includes(3))} speech={loadStudySpeech()}/></ShellLayout>;
+  const unit=studyUnits.find(u=>String(u.number).padStart(2,"0")===lessonSegment);
+  if (unit) return <ShellLayout current="lessons"><CourseStudy unit={unit} cards={loadWordCards().cards.filter(c=>c.studyTags?.lessons.includes(unit.number))} speech={loadStudySpeech()}/></ShellLayout>;
   const projection = loadLearnerProjection();
   const resolved = resolveLearnerRoute(`/lessons/${lessonSegment}`, projection);
   if (resolved.kind !== "lesson") {

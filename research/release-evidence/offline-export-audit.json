@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
   "gate": "pass",
-  "version": "e12a591c94ef6927",
+  "version": "073962ed429701d1",
   "basePath": "/german-learning-exam",
-  "shellCache": "german-learning-os-shell-ve12a591c94ef6927",
-  "runtimeCache": "german-learning-os-runtime-ve12a591c94ef6927",
-  "precacheCount": 120,
-  "precacheBytes": 30135142,
-  "precachedNavigationRoutes": 24,
-  "exportedFiles": 13010,
+  "shellCache": "german-learning-os-shell-v073962ed429701d1",
+  "runtimeCache": "german-learning-os-runtime-v073962ed429701d1",
+  "precacheCount": 124,
+  "precacheBytes": 34483376,
+  "precachedNavigationRoutes": 25,
+  "exportedFiles": 14328,
   "manifestStartUrl": "/german-learning-exam/",
   "failures": []
 }

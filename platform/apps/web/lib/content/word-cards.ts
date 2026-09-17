@@ -9,7 +9,8 @@ import type {
 } from "./search-types";
 import { germanMatchKeys } from "./match-keys";
 import type { LearnerHubDefinition, LearnerHubRecord } from "./hub-types";
-import { lessonFourCards } from "../study/word-cards";
+import { lessonFourCards,studyWordCards } from "../study/word-cards";
+import {studyUnits} from "../study/course-lessons";
 import { wordStudyTags } from "../study/tags";
 
 let cached: WordCardCatalog | undefined;
@@ -25,22 +26,38 @@ export function loadWordCards(): WordCardCatalog {
     const speech = JSON.parse(
       readFileSync(join(dirname(catalogPath), "study-speech.json"), "utf8"),
     ) as Record<string, string>;
-    const additions = lessonFourCards().map((card) => ({
+    const families=[...original.cards,...lessonFourCards()];
+    for(const unit of studyUnits.filter(u=>u.words)){
+      const source=`Momente A1.1 German–English glossary, Lesson ${unit.number}; coursebook and workbook exercises. © Hueber Verlag.`;
+      for(const addition of studyWordCards(unit.words!,unit.number,source)){
+        const existing=families.find(c=>c.rows.some(r=>r.singular.text===addition.rows[0]?.singular.text));
+        if(existing){
+          existing.lessons=[...new Set([...existing.lessons,...addition.lessons])];
+          existing.aliases=[...new Set([...existing.aliases,addition.path])];
+          existing.sourceIds=[...new Set([...existing.sourceIds,...addition.sourceIds])];
+          existing.sources=[...new Set([...existing.sources,...addition.sources])];
+          existing.priorities=[...new Set([...existing.priorities,...addition.priorities])];
+          existing.examples=[...existing.examples,...addition.examples.filter(e=>!existing.examples.some(old=>old.de===e.de))];
+          existing.searchText+=` ${addition.searchText}`;
+        }else families.push(addition);
+      }
+    }
+    const additions = families.map((card) => ({
       ...card,
       rows: card.rows.map((row) => ({
         ...row,
-        singular: { ...row.singular, audio: speech[row.singular.text] ?? null },
+        singular: { ...row.singular, audio: row.singular.audio ?? speech[row.singular.text] ?? null },
         plurals: row.plurals.map((form) => ({
           ...form,
-          audio: speech[form.text] ?? null,
+          audio: form.audio ?? speech[form.text] ?? null,
         })),
       })),
       examples: card.examples.map((example) => ({
         ...example,
-        audio: speech[example.de] ?? null,
+        audio: example.audio ?? speech[example.de] ?? null,
       })),
     }));
-    cached = { ...original, cards: [...original.cards, ...additions].map(card=>({...card,studyTags:wordStudyTags(card)})) };
+    cached = { ...original, vocabularyCount:original.vocabularyCount+families.length-original.cards.length, cards: additions.map(card=>({...card,studyTags:wordStudyTags(card)})) };
   }
   return cached;
 }

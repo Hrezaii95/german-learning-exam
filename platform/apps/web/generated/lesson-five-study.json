@@ -1,0 +1,1283 @@
+{
+  "number": 5,
+  "summary": "Identify everyday objects, describe colours and materials, ask for words and fill in a form.",
+  "words": [
+    {
+      "de": "die Uhr",
+      "en": "clock / watch",
+      "plural": "die Uhren",
+      "category": "Objects",
+      "id": "l5-uhr",
+      "example": "Das ist eine Uhr.",
+      "translation": "This is a clock."
+    },
+    {
+      "de": "das Auto",
+      "en": "car",
+      "plural": "die Autos",
+      "category": "Objects",
+      "id": "l5-auto",
+      "example": "Das ist ein Auto.",
+      "translation": "This is a car."
+    },
+    {
+      "de": "das Handy",
+      "en": "mobile phone",
+      "plural": "die Handys",
+      "category": "Objects",
+      "id": "l5-handy",
+      "example": "Das ist ein Handy.",
+      "translation": "This is a mobile phone."
+    },
+    {
+      "de": "zeichnen",
+      "en": "to draw",
+      "plural": "",
+      "category": "Verbs",
+      "id": "l5-zeichnen",
+      "example": "Ich zeichne.",
+      "translation": "I am drawing."
+    },
+    {
+      "de": "ein / eine",
+      "en": "a / an",
+      "plural": "",
+      "category": "Grammar",
+      "id": "l5-ein-eine",
+      "example": "Das ist ein Buch. Das ist eine Tasche.",
+      "translation": "This is a book. This is a bag."
+    },
+    {
+      "de": "das Buch",
+      "en": "book",
+      "plural": "die Bücher",
+      "category": "Objects",
+      "id": "l5-buch",
+      "example": "Das ist ein Buch.",
+      "translation": "This is a book."
+    },
+    {
+      "de": "der Bleistift",
+      "en": "pencil",
+      "plural": "die Bleistifte",
+      "category": "Objects",
+      "id": "l5-bleistift",
+      "example": "Das ist ein Bleistift.",
+      "translation": "This is a pencil."
+    },
+    {
+      "de": "die Brille",
+      "en": "glasses",
+      "plural": "die Brillen",
+      "category": "Objects",
+      "id": "l5-brille",
+      "example": "Das ist eine Brille.",
+      "translation": "This is a pair of glasses."
+    },
+    {
+      "de": "die Flasche",
+      "en": "bottle",
+      "plural": "die Flaschen",
+      "category": "Objects",
+      "id": "l5-flasche",
+      "example": "Das ist eine Flasche.",
+      "translation": "This is a bottle."
+    },
+    {
+      "de": "die Kamera",
+      "en": "camera",
+      "plural": "die Kameras",
+      "category": "Objects",
+      "id": "l5-kamera",
+      "example": "Das ist eine Kamera.",
+      "translation": "This is a camera."
+    },
+    {
+      "de": "die Kette",
+      "en": "necklace",
+      "plural": "die Ketten",
+      "category": "Objects",
+      "id": "l5-kette",
+      "example": "Das ist eine Kette.",
+      "translation": "This is a necklace."
+    },
+    {
+      "de": "der Kugelschreiber",
+      "en": "ballpoint pen",
+      "plural": "die Kugelschreiber",
+      "category": "Objects",
+      "id": "l5-kugelschreiber",
+      "example": "Das ist ein Kugelschreiber.",
+      "translation": "This is a ballpoint pen."
+    },
+    {
+      "de": "der Schlüssel",
+      "en": "key",
+      "plural": "die Schlüssel",
+      "category": "Objects",
+      "id": "l5-schluessel",
+      "example": "Das ist ein Schlüssel.",
+      "translation": "This is a key."
+    },
+    {
+      "de": "die Tasche",
+      "en": "bag",
+      "plural": "die Taschen",
+      "category": "Objects",
+      "id": "l5-tasche",
+      "example": "Das ist eine Tasche.",
+      "translation": "This is a bag."
+    },
+    {
+      "de": "das Material",
+      "en": "material",
+      "plural": "die Materialien",
+      "category": "Materials",
+      "id": "l5-material",
+      "example": "Das ist ein Material.",
+      "translation": "This is a material."
+    },
+    {
+      "de": "das Holz",
+      "en": "wood",
+      "plural": "",
+      "category": "Materials",
+      "id": "l5-holz",
+      "example": "Der Tisch ist aus Holz.",
+      "translation": "The table is made of wood."
+    },
+    {
+      "de": "das Papier",
+      "en": "paper",
+      "plural": "",
+      "category": "Materials",
+      "id": "l5-papier",
+      "example": "Das Buch ist aus Papier.",
+      "translation": "The book is made of paper."
+    },
+    {
+      "de": "das Metall",
+      "en": "metal",
+      "plural": "",
+      "category": "Materials",
+      "id": "l5-metall",
+      "example": "Die Uhr ist aus Metall.",
+      "translation": "The watch is made of metal."
+    },
+    {
+      "de": "das Plastik",
+      "en": "plastic",
+      "plural": "",
+      "category": "Materials",
+      "id": "l5-plastik",
+      "example": "Die Flasche ist aus Plastik.",
+      "translation": "The bottle is made of plastic."
+    },
+    {
+      "de": "das Glas",
+      "en": "glass (material)",
+      "plural": "",
+      "category": "Materials",
+      "id": "l5-glas",
+      "example": "Die Flasche ist aus Glas.",
+      "translation": "The bottle is made of glass."
+    },
+    {
+      "de": "die Farbe",
+      "en": "colour / color",
+      "plural": "die Farben",
+      "category": "Colours",
+      "id": "l5-farbe",
+      "example": "Das ist eine Farbe.",
+      "translation": "This is a colour."
+    },
+    {
+      "de": "weiß",
+      "en": "white",
+      "plural": "",
+      "category": "Colours",
+      "id": "l5-weiss",
+      "example": "Die Tasche ist weiß.",
+      "translation": "The bag is white."
+    },
+    {
+      "de": "gelb",
+      "en": "yellow",
+      "plural": "",
+      "category": "Colours",
+      "id": "l5-gelb",
+      "example": "Die Tasche ist gelb.",
+      "translation": "The bag is yellow."
+    },
+    {
+      "de": "orange",
+      "en": "orange",
+      "plural": "",
+      "category": "Colours",
+      "id": "l5-orange",
+      "example": "Die Tasche ist orange.",
+      "translation": "The bag is orange."
+    },
+    {
+      "de": "rot",
+      "en": "red",
+      "plural": "",
+      "category": "Colours",
+      "id": "l5-rot",
+      "example": "Die Tasche ist rot.",
+      "translation": "The bag is red."
+    },
+    {
+      "de": "grün",
+      "en": "green",
+      "plural": "",
+      "category": "Colours",
+      "id": "l5-gruen",
+      "example": "Die Tasche ist grün.",
+      "translation": "The bag is green."
+    },
+    {
+      "de": "blau",
+      "en": "blue",
+      "plural": "",
+      "category": "Colours",
+      "id": "l5-blau",
+      "example": "Die Tasche ist blau.",
+      "translation": "The bag is blue."
+    },
+    {
+      "de": "braun",
+      "en": "brown",
+      "plural": "",
+      "category": "Colours",
+      "id": "l5-braun",
+      "example": "Die Tasche ist braun.",
+      "translation": "The bag is brown."
+    },
+    {
+      "de": "schwarz",
+      "en": "black",
+      "plural": "",
+      "category": "Colours",
+      "id": "l5-schwarz",
+      "example": "Die Tasche ist schwarz.",
+      "translation": "The bag is black."
+    },
+    {
+      "de": "sehen",
+      "en": "to see",
+      "plural": "",
+      "category": "Verbs",
+      "id": "l5-sehen",
+      "example": "Ich sehe etwas. Siehst du es auch?",
+      "translation": "I see something. Do you see it too?"
+    },
+    {
+      "de": "etwas",
+      "en": "something",
+      "plural": "",
+      "category": "Expressions",
+      "id": "l5-etwas",
+      "example": "Ich sehe etwas.",
+      "translation": "I see something."
+    },
+    {
+      "de": "viele",
+      "en": "many",
+      "plural": "",
+      "category": "Expressions",
+      "id": "l5-viele",
+      "example": "Im Zimmer sind viele Dinge.",
+      "translation": "There are many things in the room."
+    },
+    {
+      "de": "das Ding",
+      "en": "thing",
+      "plural": "die Dinge",
+      "category": "Objects",
+      "id": "l5-ding",
+      "example": "Das ist ein Ding.",
+      "translation": "This is a thing."
+    },
+    {
+      "de": "und so weiter",
+      "en": "and so on",
+      "plural": "",
+      "category": "Expressions",
+      "id": "l5-und-so-weiter",
+      "example": "Ein Buch, eine Tasche und so weiter.",
+      "translation": "A book, a bag and so on."
+    },
+    {
+      "de": "sagen",
+      "en": "to say",
+      "plural": "",
+      "category": "Verbs",
+      "id": "l5-sagen",
+      "example": "Tom sagt: Ja!",
+      "translation": "Tom says: Yes!"
+    },
+    {
+      "de": "fragen",
+      "en": "to ask",
+      "plural": "",
+      "category": "Verbs",
+      "id": "l5-fragen",
+      "example": "Maja fragt: Ist es grün?",
+      "translation": "Maja asks: Is it green?"
+    },
+    {
+      "de": "antworten",
+      "en": "to answer",
+      "plural": "",
+      "category": "Verbs",
+      "id": "l5-antworten",
+      "example": "Tom antwortet: Nein!",
+      "translation": "Tom answers: No!"
+    },
+    {
+      "de": "weiterfragen",
+      "en": "to keep asking",
+      "plural": "",
+      "category": "Verbs",
+      "id": "l5-weiterfragen",
+      "example": "Maja fragt weiter: Ist es blau?",
+      "translation": "Maja keeps asking: Is it blue?"
+    },
+    {
+      "de": "aha",
+      "en": "aha / I see",
+      "plural": "",
+      "category": "Expressions",
+      "id": "l5-aha",
+      "example": "Aha! Das ist ein Buch.",
+      "translation": "Aha! That is a book."
+    },
+    {
+      "de": "das Feuerzeug",
+      "en": "lighter",
+      "plural": "die Feuerzeuge",
+      "category": "Objects",
+      "id": "l5-feuerzeug",
+      "example": "Das ist ein Feuerzeug.",
+      "translation": "This is a lighter."
+    },
+    {
+      "de": "der Geldbeutel",
+      "en": "wallet",
+      "plural": "die Geldbeutel",
+      "category": "Objects",
+      "id": "l5-geldbeutel",
+      "example": "Das ist ein Geldbeutel.",
+      "translation": "This is a wallet."
+    },
+    {
+      "de": "das Taschentuch",
+      "en": "tissue",
+      "plural": "die Taschentücher",
+      "category": "Objects",
+      "id": "l5-taschentuch",
+      "example": "Das ist ein Taschentuch.",
+      "translation": "This is a tissue."
+    },
+    {
+      "de": "der Regenschirm",
+      "en": "umbrella",
+      "plural": "die Regenschirme",
+      "category": "Objects",
+      "id": "l5-regenschirm",
+      "example": "Das ist ein Regenschirm.",
+      "translation": "This is an umbrella."
+    },
+    {
+      "de": "der Regen",
+      "en": "rain",
+      "plural": "",
+      "category": "Objects",
+      "id": "l5-regen",
+      "example": "Das ist Regen.",
+      "translation": "That is rain."
+    },
+    {
+      "de": "auf Deutsch",
+      "en": "in German",
+      "plural": "",
+      "category": "Classroom",
+      "id": "l5-auf-deutsch",
+      "example": "Wie heißt das auf Deutsch?",
+      "translation": "What is that called in German?"
+    },
+    {
+      "de": "das Wort",
+      "en": "word",
+      "plural": "die Wörter",
+      "category": "Classroom",
+      "id": "l5-wort",
+      "example": "Das ist ein Wort.",
+      "translation": "This is a word."
+    },
+    {
+      "de": "nennen",
+      "en": "to name",
+      "plural": "",
+      "category": "Verbs",
+      "id": "l5-nennen",
+      "example": "Nennen Sie ein Wort.",
+      "translation": "Name a word."
+    },
+    {
+      "de": "bitten",
+      "en": "to ask for / request",
+      "plural": "",
+      "category": "Verbs",
+      "id": "l5-bitten",
+      "example": "Ich bitte um Wiederholung.",
+      "translation": "I ask for a repetition."
+    },
+    {
+      "de": "bitte",
+      "en": "please",
+      "plural": "",
+      "category": "Expressions",
+      "id": "l5-bitte",
+      "example": "Noch einmal, bitte.",
+      "translation": "Once again, please."
+    },
+    {
+      "de": "Noch einmal, bitte.",
+      "en": "Once again, please.",
+      "plural": "",
+      "category": "Classroom",
+      "id": "l5-noch-einmal-bitte",
+      "example": "Noch einmal, bitte.",
+      "translation": "Once again, please."
+    },
+    {
+      "de": "Wie schreibt man …?",
+      "en": "How do you spell …?",
+      "plural": "",
+      "category": "Classroom",
+      "id": "l5-wie-schreibt-man",
+      "example": "Wie schreibt man Buch?",
+      "translation": "How do you spell Buch?"
+    },
+    {
+      "de": "schreiben",
+      "en": "to write / spell",
+      "plural": "",
+      "category": "Verbs",
+      "id": "l5-schreiben",
+      "example": "Wie schreibt man das?",
+      "translation": "How do you spell that?"
+    },
+    {
+      "de": "man",
+      "en": "one / you (people in general)",
+      "plural": "",
+      "category": "Grammar",
+      "id": "l5-man",
+      "example": "Wie schreibt man das?",
+      "translation": "How does one spell that?"
+    },
+    {
+      "de": "sich bedanken",
+      "en": "to thank / say thank you",
+      "plural": "",
+      "category": "Verbs",
+      "id": "l5-sich-bedanken",
+      "example": "Ich bedanke mich.",
+      "translation": "I say thank you."
+    },
+    {
+      "de": "danke schön",
+      "en": "thank you",
+      "plural": "",
+      "category": "Expressions",
+      "id": "l5-danke-schoen",
+      "example": "Danke schön!",
+      "translation": "Thank you!"
+    },
+    {
+      "de": "das Problem",
+      "en": "problem",
+      "plural": "die Probleme",
+      "category": "Expressions",
+      "id": "l5-problem",
+      "example": "Das ist ein Problem.",
+      "translation": "This is a problem."
+    },
+    {
+      "de": "Bitte schön.",
+      "en": "You are welcome.",
+      "plural": "",
+      "category": "Expressions",
+      "id": "l5-bitte-schoen",
+      "example": "Bitte schön.",
+      "translation": "You are welcome."
+    },
+    {
+      "de": "Kein Problem.",
+      "en": "No problem.",
+      "plural": "",
+      "category": "Expressions",
+      "id": "l5-kein-problem",
+      "example": "Kein Problem.",
+      "translation": "No problem."
+    },
+    {
+      "de": "die Wiederholung",
+      "en": "repetition",
+      "plural": "die Wiederholungen",
+      "category": "Classroom",
+      "id": "l5-wiederholung",
+      "example": "Das ist eine Wiederholung.",
+      "translation": "This is a repetition."
+    },
+    {
+      "de": "reagieren auf",
+      "en": "to react to",
+      "plural": "",
+      "category": "Verbs",
+      "id": "l5-reagieren-auf",
+      "example": "Wie reagieren Sie auf die Frage?",
+      "translation": "How do you respond to the question?"
+    },
+    {
+      "de": "das Wörterbuch",
+      "en": "dictionary",
+      "plural": "die Wörterbücher",
+      "category": "Classroom",
+      "id": "l5-woerterbuch",
+      "example": "Das ist ein Wörterbuch.",
+      "translation": "This is a dictionary."
+    },
+    {
+      "de": "das Online-Wörterbuch",
+      "en": "online dictionary",
+      "plural": "die Online-Wörterbücher",
+      "category": "Classroom",
+      "id": "l5-online-woerterbuch",
+      "example": "Das ist ein Online-Wörterbuch.",
+      "translation": "This is an online dictionary."
+    },
+    {
+      "de": "die Jacke",
+      "en": "jacket",
+      "plural": "die Jacken",
+      "category": "Objects",
+      "id": "l5-jacke",
+      "example": "Das ist eine Jacke.",
+      "translation": "This is a jacket."
+    },
+    {
+      "de": "das Streichholz",
+      "en": "match",
+      "plural": "die Streichhölzer",
+      "category": "Objects",
+      "id": "l5-streichholz",
+      "example": "Das ist ein Streichholz.",
+      "translation": "This is a match."
+    },
+    {
+      "de": "die Bürste",
+      "en": "brush",
+      "plural": "die Bürsten",
+      "category": "Objects",
+      "id": "l5-buerste",
+      "example": "Das ist eine Bürste.",
+      "translation": "This is a brush."
+    },
+    {
+      "de": "die Seife",
+      "en": "soap",
+      "plural": "die Seifen",
+      "category": "Objects",
+      "id": "l5-seife",
+      "example": "Das ist die Seife.",
+      "translation": "This is the soap."
+    },
+    {
+      "de": "das Handtuch",
+      "en": "towel",
+      "plural": "die Handtücher",
+      "category": "Objects",
+      "id": "l5-handtuch",
+      "example": "Das ist ein Handtuch.",
+      "translation": "This is a towel."
+    },
+    {
+      "de": "der Föhn",
+      "en": "hairdryer",
+      "plural": "die Föhne",
+      "category": "Objects",
+      "id": "l5-foehn",
+      "example": "Das ist ein Föhn.",
+      "translation": "This is a hairdryer."
+    },
+    {
+      "de": "Ich weiß nicht.",
+      "en": "I do not know.",
+      "plural": "",
+      "category": "Classroom",
+      "id": "l5-ich-weiss-nicht",
+      "example": "Ich weiß nicht.",
+      "translation": "I do not know."
+    },
+    {
+      "de": "die Klasse",
+      "en": "class",
+      "plural": "die Klassen",
+      "category": "Classroom",
+      "id": "l5-klasse",
+      "example": "Das ist eine Klasse.",
+      "translation": "This is a class."
+    },
+    {
+      "de": "online",
+      "en": "online",
+      "plural": "",
+      "category": "Shopping",
+      "id": "l5-online",
+      "example": "Ich bestelle online.",
+      "translation": "I order online."
+    },
+    {
+      "de": "bestellen",
+      "en": "to order",
+      "plural": "",
+      "category": "Verbs",
+      "id": "l5-bestellen",
+      "example": "Was bestellst du?",
+      "translation": "What are you ordering?"
+    },
+    {
+      "de": "die Ware",
+      "en": "goods / merchandise",
+      "plural": "die Waren",
+      "category": "Shopping",
+      "id": "l5-ware",
+      "example": "Die Ware ist hier.",
+      "translation": "The goods are here."
+    },
+    {
+      "de": "der Warenkorb",
+      "en": "shopping cart",
+      "plural": "die Warenkörbe",
+      "category": "Shopping",
+      "id": "l5-warenkorb",
+      "example": "Das ist ein Warenkorb.",
+      "translation": "This is a shopping cart."
+    },
+    {
+      "de": "die Sonne",
+      "en": "sun",
+      "plural": "",
+      "category": "Objects",
+      "id": "l5-sonne",
+      "example": "Da ist die Sonne.",
+      "translation": "There is the sun."
+    },
+    {
+      "de": "die Sonnenbrille",
+      "en": "sunglasses",
+      "plural": "die Sonnenbrillen",
+      "category": "Objects",
+      "id": "l5-sonnenbrille",
+      "example": "Das ist eine Sonnenbrille.",
+      "translation": "This is a pair of sunglasses."
+    },
+    {
+      "de": "dunkel-",
+      "en": "dark",
+      "plural": "",
+      "category": "Colours",
+      "id": "l5-dunkel",
+      "example": "Meine Jacke ist dunkelgrün.",
+      "translation": "My jacket is dark green."
+    },
+    {
+      "de": "hell-",
+      "en": "light",
+      "plural": "",
+      "category": "Colours",
+      "id": "l5-hell",
+      "example": "Die Bürste ist hellbraun.",
+      "translation": "The brush is light brown."
+    },
+    {
+      "de": "die Nummer",
+      "en": "number",
+      "plural": "die Nummern",
+      "category": "Forms",
+      "id": "l5-nummer",
+      "example": "Das ist eine Nummer.",
+      "translation": "This is a number."
+    },
+    {
+      "de": "der Kunststoff",
+      "en": "plastic / synthetic material",
+      "plural": "",
+      "category": "Materials",
+      "id": "l5-kunststoff",
+      "example": "Die Brille ist aus Kunststoff.",
+      "translation": "The glasses are made of plastic."
+    },
+    {
+      "de": "das Produkt",
+      "en": "product",
+      "plural": "die Produkte",
+      "category": "Shopping",
+      "id": "l5-produkt",
+      "example": "Das ist ein Produkt.",
+      "translation": "This is a product."
+    },
+    {
+      "de": "der Produktname",
+      "en": "product name",
+      "plural": "die Produktnamen",
+      "category": "Forms",
+      "id": "l5-produktname",
+      "example": "Das ist ein Produktname.",
+      "translation": "This is a product name."
+    },
+    {
+      "de": "die Menge",
+      "en": "amount / quantity",
+      "plural": "die Mengen",
+      "category": "Forms",
+      "id": "l5-menge",
+      "example": "Das ist eine Menge.",
+      "translation": "This is an amount."
+    },
+    {
+      "de": "das Formular",
+      "en": "form",
+      "plural": "die Formulare",
+      "category": "Forms",
+      "id": "l5-formular",
+      "example": "Das ist ein Formular.",
+      "translation": "This is a form."
+    },
+    {
+      "de": "die Anrede",
+      "en": "form of address",
+      "plural": "die Anreden",
+      "category": "Forms",
+      "id": "l5-anrede",
+      "example": "Das ist eine Anrede.",
+      "translation": "This is a form of address."
+    },
+    {
+      "de": "die E-Mail",
+      "en": "email",
+      "plural": "die E-Mails",
+      "category": "Forms",
+      "id": "l5-e-mail",
+      "example": "Das ist eine E-Mail.",
+      "translation": "This is an email."
+    },
+    {
+      "de": "das Telefon",
+      "en": "telephone",
+      "plural": "die Telefone",
+      "category": "Objects",
+      "id": "l5-telefon",
+      "example": "Das ist ein Telefon.",
+      "translation": "This is a telephone."
+    },
+    {
+      "de": "das Haus",
+      "en": "house",
+      "plural": "die Häuser",
+      "category": "Objects",
+      "id": "l5-haus",
+      "example": "Das ist ein Haus.",
+      "translation": "This is a house."
+    },
+    {
+      "de": "die Adresse",
+      "en": "address",
+      "plural": "die Adressen",
+      "category": "Forms",
+      "id": "l5-adresse",
+      "example": "Das ist eine Adresse.",
+      "translation": "This is an address."
+    },
+    {
+      "de": "der Unterstrich",
+      "en": "underscore",
+      "plural": "die Unterstriche",
+      "category": "Forms",
+      "id": "l5-unterstrich",
+      "example": "Das ist ein Unterstrich.",
+      "translation": "This is an underscore."
+    },
+    {
+      "de": "ät",
+      "en": "at sign (@)",
+      "plural": "",
+      "category": "Forms",
+      "id": "l5-aet",
+      "example": "ät",
+      "translation": "at sign (@)"
+    },
+    {
+      "de": "die Straße",
+      "en": "street",
+      "plural": "die Straßen",
+      "category": "Forms",
+      "id": "l5-strasse",
+      "example": "Das ist eine Straße.",
+      "translation": "This is a street."
+    },
+    {
+      "de": "die Postleitzahl",
+      "en": "postcode / ZIP code",
+      "plural": "die Postleitzahlen",
+      "category": "Forms",
+      "id": "l5-postleitzahl",
+      "example": "Das ist eine Postleitzahl.",
+      "translation": "This is a postcode."
+    },
+    {
+      "de": "die E-Mail-Adresse",
+      "en": "email address",
+      "plural": "die E-Mail-Adressen",
+      "category": "Forms",
+      "id": "l5-e-mail-adresse",
+      "example": "Das ist eine E-Mail-Adresse.",
+      "translation": "This is an email address."
+    },
+    {
+      "de": "die Hausnummer",
+      "en": "house number",
+      "plural": "die Hausnummern",
+      "category": "Forms",
+      "id": "l5-hausnummer",
+      "example": "Das ist eine Hausnummer.",
+      "translation": "This is a house number."
+    },
+    {
+      "de": "der Ort",
+      "en": "place / town",
+      "plural": "die Orte",
+      "category": "Forms",
+      "id": "l5-ort",
+      "example": "Das ist ein Ort.",
+      "translation": "This is a place."
+    },
+    {
+      "de": "die Telefonnummer",
+      "en": "telephone number",
+      "plural": "die Telefonnummern",
+      "category": "Forms",
+      "id": "l5-telefonnummer",
+      "example": "Das ist eine Telefonnummer.",
+      "translation": "This is a telephone number."
+    },
+    {
+      "id": "l5-kein-keine",
+      "de": "kein / keine",
+      "en": "no / not a",
+      "plural": "",
+      "category": "Grammar",
+      "example": "Das ist keine Uhr.",
+      "translation": "That is not a clock."
+    }
+  ],
+  "concepts": [
+    {
+      "id": "l5-ein",
+      "title": "Introduce something: ein / eine",
+      "de": "der → ein · das → ein · die → eine",
+      "en": "Use ein with masculine and neuter singular nouns and eine with feminine singular nouns when identifying something. These are nominative forms after Das ist … .",
+      "examples": [
+        "Das ist ein Tisch.",
+        "Das ist ein Buch.",
+        "Das ist eine Uhr."
+      ],
+      "source": "KB 34; AB 30, exercises 1–3"
+    },
+    {
+      "id": "l5-kein",
+      "title": "Correct the guess: kein / keine",
+      "de": "Ist das ein Tisch? Nein, das ist kein Tisch.",
+      "en": "Kein follows the ein pattern: kein Tisch, kein Buch, keine Uhr. Use nicht for an adjective or other negated statement: Das Bild ist nicht schön. Plural nouns use keine: keine Kinder.",
+      "examples": [
+        "Das ist keine Tasche.",
+        "Das ist kein Handy.",
+        "Das Sofa ist nicht günstig."
+      ],
+      "source": "KB 34; AB 30–31, exercises 4–6"
+    },
+    {
+      "id": "l5-reference",
+      "title": "A new object → the same object",
+      "de": "Das ist eine Uhr. Die Uhr ist schön.",
+      "en": "Ein/eine introduces an object. Der/das/die refers to an identified or specific object. Then er/es/sie can replace it. Keep the noun's grammatical gender through the whole chain.",
+      "examples": [
+        "Das ist ein Buch. Das Buch ist gut.",
+        "Das ist eine Tasche. Sie ist rot."
+      ],
+      "source": "AB 30, exercises 2–3"
+    },
+    {
+      "id": "l5-material",
+      "title": "Made of: aus + material",
+      "de": "Die Flasche ist aus Glas. Sie ist grün.",
+      "en": "Use aus with the material name: aus Holz, aus Papier, aus Metall, aus Plastik, aus Glas. These material names normally have no article in this construction. Describe the colour after ist without changing its ending.",
+      "examples": [
+        "Der Tisch ist aus Holz.",
+        "Die Uhr ist aus Metall.",
+        "Die Tasche ist schwarz."
+      ],
+      "source": "KB 34–35; AB 31–32"
+    },
+    {
+      "id": "l5-sehen",
+      "title": "sehen: the vowel grows to ie",
+      "de": "ich sehe · du siehst · er / es / sie sieht",
+      "en": "Only du and er/es/sie change e to ie. The other present-tense forms keep seh-: wir sehen, ihr seht, sie/Sie sehen.",
+      "examples": [
+        "Siehst du es auch?",
+        "Ich sehe etwas.",
+        "Sie sieht eine Flasche."
+      ],
+      "source": "KB 35, exercise 4"
+    },
+    {
+      "id": "l5-help",
+      "title": "Ask, repeat, spell, thank",
+      "de": "Wie heißt das auf Deutsch? Wie schreibt man das?",
+      "en": "Learn the requests as complete phrases. Man means people in general and uses a third-person singular verb: man schreibt. It is different from der Mann (the man).",
+      "examples": [
+        "Noch einmal, bitte.",
+        "Wie bitte?",
+        "Danke schön. — Bitte schön."
+      ],
+      "source": "KB 35; AB 32–33"
+    },
+    {
+      "id": "l5-form",
+      "title": "Read a form and spell your email",
+      "de": "Vorname · Name · Straße · Hausnummer · Postleitzahl · Ort",
+      "en": "Anrede asks for the form of address. Say Punkt for a dot, Unterstrich for an underscore and ät for @ when spelling an email address. Product forms also ask for Farbe, Menge and Preis.",
+      "examples": [
+        "Wie ist deine E-Mail-Adresse?",
+        "Die Jacke ist dunkelgrün.",
+        "Die Bürste ist hellbraun."
+      ],
+      "source": "KB 36; AB 33"
+    }
+  ],
+  "verbs": [
+    {
+      "verb": "sehen",
+      "meaning": "to see",
+      "forms": [
+        "sehe",
+        "siehst",
+        "sieht",
+        "sehen",
+        "seht",
+        "sehen"
+      ],
+      "tip": "e → ie only in du and er/es/sie.",
+      "priority": "core"
+    },
+    {
+      "verb": "zeichnen",
+      "meaning": "to draw",
+      "forms": [
+        "zeichne",
+        "zeichnest",
+        "zeichnet",
+        "zeichnen",
+        "zeichnet",
+        "zeichnen"
+      ],
+      "tip": "Keep the extra e: du zeichnest, er zeichnet.",
+      "priority": "classroom"
+    },
+    {
+      "verb": "fragen",
+      "meaning": "to ask",
+      "forms": [
+        "frage",
+        "fragst",
+        "fragt",
+        "fragen",
+        "fragt",
+        "fragen"
+      ],
+      "tip": "Regular present endings.",
+      "priority": "core"
+    },
+    {
+      "verb": "antworten",
+      "meaning": "to answer",
+      "forms": [
+        "antworte",
+        "antwortest",
+        "antwortet",
+        "antworten",
+        "antwortet",
+        "antworten"
+      ],
+      "tip": "The -t stem needs e before -st and -t.",
+      "priority": "core"
+    },
+    {
+      "verb": "sagen",
+      "meaning": "to say",
+      "forms": [
+        "sage",
+        "sagst",
+        "sagt",
+        "sagen",
+        "sagt",
+        "sagen"
+      ],
+      "tip": "Regular present endings.",
+      "priority": "core"
+    },
+    {
+      "verb": "schreiben",
+      "meaning": "to write / spell",
+      "forms": [
+        "schreibe",
+        "schreibst",
+        "schreibt",
+        "schreiben",
+        "schreibt",
+        "schreiben"
+      ],
+      "tip": "Man uses the third-person singular: man schreibt.",
+      "priority": "core"
+    },
+    {
+      "verb": "nennen",
+      "meaning": "to name",
+      "forms": [
+        "nenne",
+        "nennst",
+        "nennt",
+        "nennen",
+        "nennt",
+        "nennen"
+      ],
+      "tip": "Keep the double n in the stem.",
+      "priority": "classroom"
+    },
+    {
+      "verb": "bitten",
+      "meaning": "to request",
+      "forms": [
+        "bitte",
+        "bittest",
+        "bittet",
+        "bitten",
+        "bittet",
+        "bitten"
+      ],
+      "tip": "Use the fixed expression um Wiederholung bitten. Do not confuse bitten with bieten.",
+      "priority": "phrase"
+    },
+    {
+      "verb": "bestellen",
+      "meaning": "to order",
+      "forms": [
+        "bestelle",
+        "bestellst",
+        "bestellt",
+        "bestellen",
+        "bestellt",
+        "bestellen"
+      ],
+      "tip": "The prefix be- stays attached: ich bestelle.",
+      "priority": "core"
+    },
+    {
+      "verb": "weiterfragen",
+      "meaning": "to keep asking",
+      "forms": [
+        "frage weiter",
+        "fragst weiter",
+        "fragt weiter",
+        "fragen weiter",
+        "fragt weiter",
+        "fragen weiter"
+      ],
+      "tip": "Reference forms for weiter (fragen) in the glossary. In a main clause, weiter goes at the end.",
+      "priority": "phrase"
+    },
+    {
+      "verb": "sich bedanken",
+      "meaning": "to say thank you",
+      "forms": [
+        "bedanke mich",
+        "bedankst dich",
+        "bedankt sich",
+        "bedanken uns",
+        "bedankt euch",
+        "bedanken sich"
+      ],
+      "tip": "Learn Danke schön as the core phrase; this full reflexive pattern is reference support.",
+      "priority": "phrase"
+    },
+    {
+      "verb": "reagieren",
+      "meaning": "to react",
+      "forms": [
+        "reagiere",
+        "reagierst",
+        "reagiert",
+        "reagieren",
+        "reagiert",
+        "reagieren"
+      ],
+      "tip": "Reference forms for the instruction reagieren auf.",
+      "priority": "classroom"
+    }
+  ],
+  "phrases": [
+    {
+      "de": "Was ist das?",
+      "en": "What is that?"
+    },
+    {
+      "de": "Ist das ein Tisch?",
+      "en": "Is that a table?"
+    },
+    {
+      "de": "Nein, das ist kein Tisch.",
+      "en": "No, that is not a table."
+    },
+    {
+      "de": "Es ist aus Glas und es ist grün.",
+      "en": "It is made of glass and it is green."
+    },
+    {
+      "de": "Siehst du es auch?",
+      "en": "Do you see it too?"
+    },
+    {
+      "de": "Entschuldigung, wie heißt das auf Deutsch?",
+      "en": "Excuse me, what is that called in German?"
+    },
+    {
+      "de": "Wie schreibt man das?",
+      "en": "How do you spell that?"
+    },
+    {
+      "de": "Noch einmal, bitte.",
+      "en": "Once again, please."
+    },
+    {
+      "de": "Wie bitte?",
+      "en": "Pardon?"
+    },
+    {
+      "de": "Danke schön.",
+      "en": "Thank you."
+    },
+    {
+      "de": "Bitte schön.",
+      "en": "You are welcome."
+    },
+    {
+      "de": "Kein Problem.",
+      "en": "No problem."
+    },
+    {
+      "de": "Was bestellst du?",
+      "en": "What are you ordering?"
+    },
+    {
+      "de": "Wie ist deine E-Mail-Adresse?",
+      "en": "What is your email address?"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "Das ist ___ Uhr.",
+      "options": [
+        "ein",
+        "eine",
+        "einen"
+      ],
+      "answer": "eine",
+      "why": "Die Uhr is feminine; after Das ist use eine."
+    },
+    {
+      "q": "Das ist ___ Buch.",
+      "options": [
+        "eine",
+        "ein",
+        "einen"
+      ],
+      "answer": "ein",
+      "why": "Das Buch is neuter: ein Buch."
+    },
+    {
+      "q": "Ist das eine Tasche? Nein, das ist ___ Tasche.",
+      "options": [
+        "kein",
+        "keine",
+        "nicht"
+      ],
+      "answer": "keine",
+      "why": "Negate a feminine noun with keine."
+    },
+    {
+      "q": "Das Sofa ist ___ günstig.",
+      "options": [
+        "kein",
+        "keine",
+        "nicht"
+      ],
+      "answer": "nicht",
+      "why": "Nicht negates the adjective günstig."
+    },
+    {
+      "q": "Die Flasche ist ___ Glas.",
+      "options": [
+        "aus",
+        "von",
+        "mit"
+      ],
+      "answer": "aus",
+      "why": "Aus + material means made of."
+    },
+    {
+      "q": "___ du es auch?",
+      "options": [
+        "Sehst",
+        "Siehst",
+        "Seht"
+      ],
+      "answer": "Siehst",
+      "why": "Du siehst changes e to ie."
+    },
+    {
+      "q": "How do you ask someone to repeat?",
+      "options": [
+        "Noch einmal, bitte.",
+        "Kein Problem.",
+        "Ich bin grün."
+      ],
+      "answer": "Noch einmal, bitte.",
+      "why": "This polite phrase means once again, please."
+    },
+    {
+      "q": "The symbol _ in an email address is …",
+      "options": [
+        "Punkt",
+        "Unterstrich",
+        "ät"
+      ],
+      "answer": "Unterstrich",
+      "why": "Unterstrich = underscore; Punkt = dot; ät = @."
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "1_41": {"sourcePages":[6],"lines":[
+    {"speaker":"Junge Frau","text":"Was ist das?"},
+    {"speaker":"Junger Mann","text":"Das ist eine Jacke."},
+    {"speaker":"Junge Frau","text":"Wie schreibt man das?"},
+    {"speaker":"Junger Mann","text":"Mit c - k."}
+  ]},
+  "1_42": {"sourcePages":[6],"lines":[
+    {"speaker":"Junge Frau","text":"Und was ist das? Ist das ein Geldbeutel?"},
+    {"speaker":"Junger Mann","text":"Nein. Das ist kein Geldbeutel, das ist eine Tasche."}
+  ]},
+  "1_43": {"sourcePages":[6,7],"lines":[
+    {"speaker":"Junger Mann","text":"Was ist das?"},
+    {"speaker":"Junge Frau","text":"Das ist eine Uhr."},
+    {"speaker":"Junge Frau","text":"Sie ist aus Plastik."},
+    {"speaker":"Junger Mann","text":"Ist das ein Streichholz?"},
+    {"speaker":"Junge Frau","text":"Das ist kein Streichholz, das ist ein Feuerzeug."}
+  ]},
+  "1_44": {"sourcePages":[7],"lines":[
+    {"speaker":null,"text":"Hallo! Du, Frieda hat doch bald Geburtstag. Sie möchte gern eine schöne Haarbürste haben. Da gibt es eine schöne im Internet. Sie heißt SuperHaar und ist ganz aus Metall. Und die Farbe ist auch super: Sie ist ganz orange. Die Bürste kostet nur 30 Euro. Was sagst du dazu?"}
+  ]},
+  "1_45": {"sourcePages":[7],"lines":[
+    {"speaker":null,"text":"1 viele · 2 Grüße · 3 Drucker · 4 Schlüssel · 5 Bildschirm · 6 Hunger · 7 Stift · 8 fünf · 9 Stühle"}
+  ]},
+  "1_46": {"sourcePages":[7],"lines":[
+    {"speaker":null,"text":"Grüße · Schlüssel · Stühle · Fünf · Grün · tschüs"}
+  ]},
+  "1_47": {"sourcePages":[7],"lines":[
+    {"speaker":"Klara Stolley","text":"Firma Hansetec, hier ist Klara Stolley, guten Tag."},
+    {"speaker":"Florian Stöckl","text":"Guten Tag. Mein Name ist Florian Stöckl. Ist Frau Thomsen da?"},
+    {"speaker":"Klara Stolley","text":"Einen Moment bitte. …"},
+    {"speaker":"Frau Thomsen","text":"Thomsen."},
+    {"speaker":"Florian Stöckl","text":"Guten Tag, Florian Stöckl hier. Ich möchte eine Bestellung für die Firma Grünfeld aufgeben."},
+    {"speaker":"Frau Thomsen","text":"Sehr gern. Was brauchen Sie?"},
+    {"speaker":"Florian Stöckl","text":"Wir brauchen einen Laptop, eine Laptoptasche, eine Tastatur, einen Bildschirm, ein Tablet, zehn Computer-Mäuse, zwölf Bleistifte, fünfzehn Kugelschreiber und einen Kalender."},
+    {"speaker":"Frau Thomsen","text":"Vielen Dank. Wie ist Ihre Adresse?"}
+  ]}
+}

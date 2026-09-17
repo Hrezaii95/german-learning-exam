@@ -1,0 +1,21 @@
+{
+  "base": "http://localhost:3210/german-learning-exam",
+  "lesson": 5,
+  "checks": [
+    "All lesson grammar concepts render",
+    "All verb paradigms render",
+    "All phrases render",
+    "Every source entry has a word card",
+    "Every quiz question advances and scores correctly",
+    "grammar hub follows Lesson 5",
+    "verbs hub follows Lesson 5",
+    "phrases hub follows Lesson 5",
+    "Selected lesson has original audio players",
+    "Listening transcripts are available",
+    "Article builder switches gender and negation correctly",
+    "Lesson fits phone width",
+    "Cheat sheet fits phone width",
+    "No browser exceptions: "
+  ],
+  "errors": []
+}

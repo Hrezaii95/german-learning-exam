@@ -1,5 +1,5 @@
 /** Shared course selection. The available ceiling advances only after each lesson is integrated. */
-export const LAST_AVAILABLE_LESSON = 4;
+export const LAST_AVAILABLE_LESSON = 5;
 export const A1_LESSON_COUNT = 12;
 export const STUDY_SCOPE_KEY = "german-study-scope-v1";
 

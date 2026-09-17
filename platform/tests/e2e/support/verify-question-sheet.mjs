@@ -13,7 +13,7 @@ const assert=(value,label)=>{if(!value)throw Error(label);checks.push(label);};
 try{
   await page.goto(`${base}/cheat-sheets/questions/`,{waitUntil:'networkidle'});
   assert(await page.getByRole('heading',{name:'Ask for the missing piece.'}).isVisible(),'Question sheet is reachable');
-  assert(await page.getByRole('navigation',{name:'Choose a cheat sheet',exact:true}).getByRole('link').count()===7,'All seven sheets are connected');
+  assert(await page.getByRole('navigation',{name:'Choose a cheat sheet',exact:true}).getByRole('link').count()===8,'All eight sheets are connected');
   const map=page.locator('#question-map .question-map').first();
   assert(await map.getByRole('button').count()===9,'Overview contains nine core question patterns');
   await page.screenshot({caret:'initial',path:`${output}/overview-desktop.png`});
@@ -67,7 +67,7 @@ try{
   assert(await page.locator('.question-extras .question-map button').count()===8,'Eight optional question-family previews are available');
   await page.setViewportSize({width:390,height:844});
   await page.locator('.sheet-mobile-switcher summary').click();
-  assert(await page.getByRole('navigation',{name:'Choose a cheat sheet on phone'}).getByRole('link').count()===7,'Phone navigation reaches all seven sheets');
+  assert(await page.getByRole('navigation',{name:'Choose a cheat sheet on phone'}).getByRole('link').count()===8,'Phone navigation reaches all eight sheets');
   await page.locator('.sheet-mobile-switcher summary').click();
   await builder.scrollIntoViewIfNeeded();await page.screenshot({caret:'initial',path:`${output}/word-order-mobile.png`});
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'Phone layout has no horizontal overflow');

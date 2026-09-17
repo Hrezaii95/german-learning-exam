@@ -16,8 +16,6 @@ def main():
     catalog = json.loads((GEN / 'interactive-book.json').read_text(encoding='utf8'))
     kb, current = {}, None
     for page_number, page in enumerate(pymupdf.open(KB), 1):
-        if page_number > 5:
-            break
         for block in page.get_text('blocks'):
             if not 90 < block[1] < 800:
                 continue
@@ -25,7 +23,7 @@ def main():
                 text = re.sub(r'\s+', ' ', raw).strip().replace('β', 'ß')
                 if not text:
                     continue
-                if re.fullmatch(r'1/\d{2}', text):
+                if re.fullmatch(r'[12]/\d{2}', text):
                     current = kb.setdefault(text, {'lines': [], 'sourcePages': []})
                     continue
                 if re.match(r'^(Lektion |Aufgabe |Modul )', text) or current is None:
@@ -47,11 +45,12 @@ def main():
     ab = {t['trackId']: {'lines': t['lines'], 'sourcePages': [t['sourcePage']]} for t in old['tracks']}
     manual = json.loads((ROOT / 'research/book-reader-update/ab-lesson3-4-transcripts.json').read_text(encoding='utf8'))
     ab.update(manual)
+    ab.update(json.loads((ROOT / "research/lesson-expansion/ab-lesson5-6-transcripts.json").read_text(encoding="utf8")))
     ab.update(json.loads((ROOT / 'research/book-answers/module1-workbook-transcripts.json').read_text(encoding='utf8')))
     tracks, legacy = {}, {}
     for audio in catalog['audio']:
         number = int(re.match(r'1_(\d+)', Path(audio['source']).name)[1])
-        source_number = number + (1 if audio['kind'] == 'workbook' and audio['lesson'] == 4 else 0)
+        source_number = number + (1 if audio['kind'] == 'workbook' and 4 <= audio['lesson'] <= 6 and '-m' not in audio['id'] else 0)
         source_id = f'1/{source_number:02}' if audio['kind'] == 'coursebook' else f'1_{source_number:02}'
         transcript = (kb if audio['kind'] == 'coursebook' else ab)[source_id]
         assert transcript['lines'], audio['id']
@@ -61,7 +60,7 @@ def main():
             legacy[f'1_{number:02}'] = item
     output = {'tracks': tracks, 'workbook': legacy}
     (GEN / 'audio/listening-transcripts.json').write_text(json.dumps(output, ensure_ascii=False, indent=2)+'\n', encoding='utf8')
-    audit = {'tracks': len(tracks), 'workbookTracks': len(legacy), 'coursebookSourceUrl': URL, 'sources': [{'file': str(p.relative_to(ROOT)), 'sha256': hashlib.sha256(p.read_bytes()).hexdigest()} for p in [KB, AB]], 'mappingNote': 'AB Lesson 4 source transcript numbers are one greater than the supplied audio filenames; exercise and subpart were checked visually.'}
+    audit = {'tracks': len(tracks), 'workbookTracks': len(legacy), 'coursebookSourceUrl': URL, 'sources': [{'file': str(p.relative_to(ROOT)), 'sha256': hashlib.sha256(p.read_bytes()).hexdigest()} for p in [KB, AB]], 'mappingNote': 'AB Lessons 4-6 source transcript numbers are one greater than the supplied audio filenames; exercise and subpart were checked visually.'}
     (ROOT / 'research/book-reader-update/transcript-source-audit.json').write_text(json.dumps(audit, indent=2)+'\n', encoding='utf8')
     print(json.dumps(audit))
 

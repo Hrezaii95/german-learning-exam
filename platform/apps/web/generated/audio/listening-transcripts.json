@@ -703,6 +703,95 @@
       "credit": "Momente A1.1 · © Hueber Verlag",
       "sourceTitle": "Arbeitsbuch Transkriptionen"
     },
+    "workbook-l5-ex14-55374493": {
+      "sourcePages": [
+        6
+      ],
+      "lines": [
+        {
+          "speaker": "Junge Frau",
+          "text": "Was ist das?"
+        },
+        {
+          "speaker": "Junger Mann",
+          "text": "Das ist eine Jacke."
+        },
+        {
+          "speaker": "Junge Frau",
+          "text": "Wie schreibt man das?"
+        },
+        {
+          "speaker": "Junger Mann",
+          "text": "Mit c - k."
+        }
+      ],
+      "sourceTrack": "1_41",
+      "credit": "Momente A1.1 · © Hueber Verlag",
+      "sourceTitle": "Arbeitsbuch Transkriptionen"
+    },
+    "workbook-l5-ex14-add99b66": {
+      "sourcePages": [
+        6
+      ],
+      "lines": [
+        {
+          "speaker": "Junge Frau",
+          "text": "Und was ist das? Ist das ein Geldbeutel?"
+        },
+        {
+          "speaker": "Junger Mann",
+          "text": "Nein. Das ist kein Geldbeutel, das ist eine Tasche."
+        }
+      ],
+      "sourceTrack": "1_42",
+      "credit": "Momente A1.1 · © Hueber Verlag",
+      "sourceTitle": "Arbeitsbuch Transkriptionen"
+    },
+    "workbook-l5-ex14-e6a3e518": {
+      "sourcePages": [
+        6,
+        7
+      ],
+      "lines": [
+        {
+          "speaker": "Junger Mann",
+          "text": "Was ist das?"
+        },
+        {
+          "speaker": "Junge Frau",
+          "text": "Das ist eine Uhr."
+        },
+        {
+          "speaker": "Junge Frau",
+          "text": "Sie ist aus Plastik."
+        },
+        {
+          "speaker": "Junger Mann",
+          "text": "Ist das ein Streichholz?"
+        },
+        {
+          "speaker": "Junge Frau",
+          "text": "Das ist kein Streichholz, das ist ein Feuerzeug."
+        }
+      ],
+      "sourceTrack": "1_43",
+      "credit": "Momente A1.1 · © Hueber Verlag",
+      "sourceTitle": "Arbeitsbuch Transkriptionen"
+    },
+    "workbook-l5-ex16-984d6d22": {
+      "sourcePages": [
+        7
+      ],
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Hallo! Du, Frieda hat doch bald Geburtstag. Sie möchte gern eine schöne Haarbürste haben. Da gibt es eine schöne im Internet. Sie heißt SuperHaar und ist ganz aus Metall. Und die Farbe ist auch super: Sie ist ganz orange. Die Bürste kostet nur 30 Euro. Was sagst du dazu?"
+        }
+      ],
+      "sourceTrack": "1_44",
+      "credit": "Momente A1.1 · © Hueber Verlag",
+      "sourceTitle": "Arbeitsbuch Transkriptionen"
+    },
     "coursebook-l1-ex1-74059a9c": {
       "lines": [
         {
@@ -1822,6 +1911,328 @@
         5
       ],
       "sourceTrack": "1/42",
+      "credit": "Momente A1.1 · © Hueber Verlag",
+      "sourceTitle": "Kursbuch Transkriptionen"
+    },
+    "coursebook-l5-ex1-13f024c8": {
+      "lines": [
+        {
+          "speaker": "Lara",
+          "text": "Opa, schau mal!"
+        },
+        {
+          "speaker": "Opa",
+          "text": "Oh, wie schön, Lara! … Was ist denn das? Ist das ein Tisch?"
+        },
+        {
+          "speaker": "Lara",
+          "text": "Ein Tisch? Nein, Opa! … Das ist kein Tisch."
+        },
+        {
+          "speaker": "Opa",
+          "text": "Kein Tisch. … Hmm … Ist das eine Uhr?"
+        },
+        {
+          "speaker": "Lara",
+          "text": "Nein, das ist keine Uhr."
+        },
+        {
+          "speaker": "Opa",
+          "text": "Auch keine Uhr? … Hmm … Ja, was ist es denn?"
+        },
+        {
+          "speaker": "Lara",
+          "text": "Siehst du das nicht? … Das ist …"
+        },
+        {
+          "speaker": "Opa",
+          "text": "Aahh! … Warte, jetzt weiß ich es: Das ist ein Handy, richtig?"
+        },
+        {
+          "speaker": "Lara",
+          "text": "Hahaha! … Nein. Das ist kein Handy, Opa."
+        },
+        {
+          "speaker": "Opa",
+          "text": "Also was ist es denn, Lara?"
+        },
+        {
+          "speaker": "Lara",
+          "text": "Das ist ein Auto. … Das sieht man doch!"
+        },
+        {
+          "speaker": "Opa",
+          "text": "Ach? Ein Auto ist das? … Ja, natürlich! Jetzt"
+        },
+        {
+          "speaker": "sehe ich es auch",
+          "text": "Das ist ein Auto."
+        },
+        {
+          "speaker": "Opa",
+          "text": "So, Lara. Jetzt ich! Schau mal. Was ist das?"
+        }
+      ],
+      "sourcePages": [
+        5,
+        6
+      ],
+      "sourceTrack": "1/43",
+      "credit": "Momente A1.1 · © Hueber Verlag",
+      "sourceTitle": "Kursbuch Transkriptionen"
+    },
+    "coursebook-l5-ex2-59540a08": {
+      "lines": [
+        {
+          "speaker": null,
+          "text": "A"
+        },
+        {
+          "speaker": "Lara",
+          "text": "Ist das ein Buch?"
+        },
+        {
+          "speaker": "Opa",
+          "text": "Nein, das ist kein Buch."
+        },
+        {
+          "speaker": null,
+          "text": "B"
+        },
+        {
+          "speaker": "Lara",
+          "text": "Ist das ein Tisch?"
+        },
+        {
+          "speaker": "Opa",
+          "text": "Nein, das ist kein Tisch."
+        },
+        {
+          "speaker": null,
+          "text": "C"
+        },
+        {
+          "speaker": "Lara",
+          "text": "Ist das ein Stuhl?"
+        },
+        {
+          "speaker": "Opa",
+          "text": "Ja. Das ist ein Stuhl."
+        },
+        {
+          "speaker": "Lara",
+          "text": "Toll, das hat so viel Spaß gemacht."
+        }
+      ],
+      "sourcePages": [
+        6
+      ],
+      "sourceTrack": "1/44",
+      "credit": "Momente A1.1 · © Hueber Verlag",
+      "sourceTitle": "Kursbuch Transkriptionen"
+    },
+    "coursebook-l5-ex5-16a260a3": {
+      "lines": [
+        {
+          "speaker": null,
+          "text": "A"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Ha! Na endlich!"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Entschuldigung, das ist ein Feuerzeug, oder?"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Ja, genau. … Das ist ein Feuerzeug."
+        },
+        {
+          "speaker": "Mann",
+          "text": "Ähm … Und wie schreibt man ‚Feuerzeug’?"
+        },
+        {
+          "speaker": "Frau",
+          "text": "F-E-U-E-R-Z-E-U-G. ... Mist, jetzt ist es wieder aus!"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Feuerzeug. F-E-U-E-R-Z-E-U-G, richtig?"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Ja …"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Danke!"
+        }
+      ],
+      "sourcePages": [
+        6
+      ],
+      "sourceTrack": "1/45",
+      "credit": "Momente A1.1 · © Hueber Verlag",
+      "sourceTitle": "Kursbuch Transkriptionen"
+    },
+    "coursebook-l5-ex5-02f796b5": {
+      "lines": [
+        {
+          "speaker": null,
+          "text": "B"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Ähh … Entschuldigung, wie heißt das auf Deutsch?"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Was? … Na ja, das ist Geld …"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Nein nein, nicht das. … Das da. … Wie heißt das?"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Ach, das! … Na, das ist ein Geldbeutel."
+        },
+        {
+          "speaker": "Mann",
+          "text": "Wie bitte? Ein Geld … ein Geld … Noch einmal bitte."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Ein Geldbeutel."
+        },
+        {
+          "speaker": "Mann",
+          "text": "Aha. … Und wie schreibt man das?"
+        },
+        {
+          "speaker": "Frau",
+          "text": "G-E-L-D-B-E-U-T-E-L. … Der Geldbeutel."
+        },
+        {
+          "speaker": "Mann",
+          "text": "Aha. Vielen Dank!"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Kein Problem!"
+        }
+      ],
+      "sourcePages": [
+        6
+      ],
+      "sourceTrack": "1/46",
+      "credit": "Momente A1.1 · © Hueber Verlag",
+      "sourceTitle": "Kursbuch Transkriptionen"
+    },
+    "coursebook-l5-ex5-f6afcc20": {
+      "lines": [
+        {
+          "speaker": null,
+          "text": "C"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Oje! Entschuldigung!"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Gesundheit! Brauchen Sie ein ...äh ... ein …Ta-..., Tasch-…??"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Taschentuch? Meinen Sie ‚Taschentuch‘? – Ja, sehr gern!"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Ja, richtig. ‘Taschentuch’. Hier: Ein Taschentuch."
+        },
+        {
+          "speaker": "Mann",
+          "text": "Super, vielen Dank!"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Ähm ... wie schreibt man ‚Taschentuch‘? T-A-S-C-H-E-N-T-U-C-H?"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Ja, genau. Perfekt! Taschentuch. T-A-S-C- H-E-N-T-U-C-H. Taschentuch. Das Taschentuch."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Aha. Danke schön."
+        },
+        {
+          "speaker": "Mann",
+          "text": "Bitte. Sehr gern!"
+        }
+      ],
+      "sourcePages": [
+        6,
+        7
+      ],
+      "sourceTrack": "1/47",
+      "credit": "Momente A1.1 · © Hueber Verlag",
+      "sourceTitle": "Kursbuch Transkriptionen"
+    },
+    "coursebook-l5-ex5-8070c07b": {
+      "lines": [
+        {
+          "speaker": null,
+          "text": "D"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Oh!"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Oh! Danke! Sehr praktisch, der …, das … oder die …? … Ähh … wie sagt man auf Deutsch?"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Der Schirm."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Aha. … Der Schirm. … Das ist ein Schirm."
+        },
+        {
+          "speaker": "Mann",
+          "text": "Richtig."
+        },
+        {
+          "speaker": "Frau",
+          "text": "Bitte, wie schreibt man ‚Schirm’?"
+        },
+        {
+          "speaker": "Mann",
+          "text": "S-C-H-I-R-M. …"
+        },
+        {
+          "speaker": "Frau",
+          "text": "S-C-H-I-R-M … Schirm. … Danke!"
+        },
+        {
+          "speaker": "Mann",
+          "text": "Bitte schön. … Gehen wir?"
+        },
+        {
+          "speaker": "Frau",
+          "text": "Ja …"
+        }
+      ],
+      "sourcePages": [
+        7
+      ],
+      "sourceTrack": "1/48",
       "credit": "Momente A1.1 · © Hueber Verlag",
       "sourceTitle": "Kursbuch Transkriptionen"
     },
@@ -3133,6 +3544,95 @@
         }
       ],
       "sourceTrack": "1_40",
+      "credit": "Momente A1.1 · © Hueber Verlag",
+      "sourceTitle": "Arbeitsbuch Transkriptionen"
+    },
+    "1_40": {
+      "sourcePages": [
+        6
+      ],
+      "lines": [
+        {
+          "speaker": "Junge Frau",
+          "text": "Was ist das?"
+        },
+        {
+          "speaker": "Junger Mann",
+          "text": "Das ist eine Jacke."
+        },
+        {
+          "speaker": "Junge Frau",
+          "text": "Wie schreibt man das?"
+        },
+        {
+          "speaker": "Junger Mann",
+          "text": "Mit c - k."
+        }
+      ],
+      "sourceTrack": "1_41",
+      "credit": "Momente A1.1 · © Hueber Verlag",
+      "sourceTitle": "Arbeitsbuch Transkriptionen"
+    },
+    "1_41": {
+      "sourcePages": [
+        6
+      ],
+      "lines": [
+        {
+          "speaker": "Junge Frau",
+          "text": "Und was ist das? Ist das ein Geldbeutel?"
+        },
+        {
+          "speaker": "Junger Mann",
+          "text": "Nein. Das ist kein Geldbeutel, das ist eine Tasche."
+        }
+      ],
+      "sourceTrack": "1_42",
+      "credit": "Momente A1.1 · © Hueber Verlag",
+      "sourceTitle": "Arbeitsbuch Transkriptionen"
+    },
+    "1_42": {
+      "sourcePages": [
+        6,
+        7
+      ],
+      "lines": [
+        {
+          "speaker": "Junger Mann",
+          "text": "Was ist das?"
+        },
+        {
+          "speaker": "Junge Frau",
+          "text": "Das ist eine Uhr."
+        },
+        {
+          "speaker": "Junge Frau",
+          "text": "Sie ist aus Plastik."
+        },
+        {
+          "speaker": "Junger Mann",
+          "text": "Ist das ein Streichholz?"
+        },
+        {
+          "speaker": "Junge Frau",
+          "text": "Das ist kein Streichholz, das ist ein Feuerzeug."
+        }
+      ],
+      "sourceTrack": "1_43",
+      "credit": "Momente A1.1 · © Hueber Verlag",
+      "sourceTitle": "Arbeitsbuch Transkriptionen"
+    },
+    "1_43": {
+      "sourcePages": [
+        7
+      ],
+      "lines": [
+        {
+          "speaker": null,
+          "text": "Hallo! Du, Frieda hat doch bald Geburtstag. Sie möchte gern eine schöne Haarbürste haben. Da gibt es eine schöne im Internet. Sie heißt SuperHaar und ist ganz aus Metall. Und die Farbe ist auch super: Sie ist ganz orange. Die Bürste kostet nur 30 Euro. Was sagst du dazu?"
+        }
+      ],
+      "sourceTrack": "1_44",
       "credit": "Momente A1.1 · © Hueber Verlag",
       "sourceTitle": "Arbeitsbuch Transkriptionen"
     }
