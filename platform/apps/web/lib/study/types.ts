@@ -36,6 +36,17 @@ export type DictionaryEntry = {
   }[];
 };
 export type BookLine = { id: string; text: string; box: number[] };
+export type BookAnswer = {
+  id: string;
+  pageId: string;
+  exercise: string;
+  text: string;
+  kind: "solution" | "sample";
+  source: "coursebook-key" | "workbook-key" | "workbook-transcript";
+  sourceTitle: string;
+  sourcePage: number;
+  note: string;
+};
 export type ListeningTranscript = {
   lines: { speaker: string | null; text: string }[];
   sourceTrack: string;
@@ -54,6 +65,9 @@ export type BookPage = {
   height: number;
   lines: BookLine[];
   audioIds: string[];
+  section?: string;
+  pageLabel?: string;
+  answers?: BookAnswer[];
 };
 export type BookTrack = {
   id: string;

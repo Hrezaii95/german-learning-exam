@@ -8,10 +8,11 @@ import {
   lessonFourPhrases,
   lessonFourVerbs,
 } from "../lib/study/lesson-four";
-import { loadBook } from "../lib/study/catalog";
+import { loadBook, loadBookAnswers } from "../lib/study/catalog";
 const texts = [
   ...new Set([
     ...loadBook().pages.flatMap((page) => page.lines.map((line) => line.text)),
+    ...loadBookAnswers().flatMap(answer=>answer.text.split(/\n+/)),
     ...lessonFourWords.flatMap((word) => [
       word.de,
       word.example,

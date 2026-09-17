@@ -1,0 +1,499 @@
+{
+  "1_19": {
+    "sourcePages": [
+      2
+    ],
+    "lines": [
+      {
+        "speaker": null,
+        "text": "Und jetzt: die Lottozahlen."
+      },
+      {
+        "speaker": null,
+        "text": "zwölf · achtundvierzig · neunundzwanzig · sieben · fünfunddreißig · sechzehn"
+      }
+    ]
+  },
+  "1_20": {
+    "sourcePages": [
+      2,
+      3
+    ],
+    "lines": [
+      {
+        "speaker": "Mann",
+        "text": "Variieren Sie. Beispiel:"
+      },
+      {
+        "speaker": "Frau",
+        "text": "Was machst du beruflich? (Student)"
+      },
+      {
+        "speaker": "Mann",
+        "text": "Ich bin Student."
+      },
+      {
+        "speaker": "Mann",
+        "text": "Und jetzt Sie:"
+      },
+      {
+        "speaker": "Frau",
+        "text": "Was machst du beruflich? (Schülerin)"
+      },
+      {
+        "speaker": "Mann",
+        "text": "Ich bin Schülerin."
+      },
+      {
+        "speaker": "Frau",
+        "text": "Was bist du von Beruf? (Architektin)"
+      },
+      {
+        "speaker": "Mann",
+        "text": "Ich bin Architektin."
+      },
+      {
+        "speaker": "Frau",
+        "text": "Was sind Sie von Beruf? (Job als Verkäufer)"
+      },
+      {
+        "speaker": "Mann",
+        "text": "Ich habe einen Job als Verkäufer."
+      },
+      {
+        "speaker": "Frau",
+        "text": "Was machst du beruflich? (Ausbildung als Friseurin)"
+      },
+      {
+        "speaker": "Mann",
+        "text": "Ich mache eine Ausbildung als Friseurin."
+      },
+      {
+        "speaker": "Frau",
+        "text": "Was machen Sie beruflich? (Praktikum bei Hotsped)"
+      },
+      {
+        "speaker": "Mann",
+        "text": "Ich mache ein Praktikum bei Hotsped."
+      },
+      {
+        "speaker": "Frau",
+        "text": "Was sind Sie von Beruf? – Lehrer"
+      },
+      {
+        "speaker": "Mann",
+        "text": "Ich bin Lehrer."
+      }
+    ]
+  },
+  "1_21": {
+    "sourcePages": [
+      3
+    ],
+    "lines": [
+      {
+        "speaker": "Mann",
+        "text": "Hören Sie die Sätze und fragen Sie. Beispiel:"
+      },
+      {
+        "speaker": "Frau",
+        "text": "Ich komme aus Spanien. (du?)"
+      },
+      {
+        "speaker": "Mann",
+        "text": "Woher kommst du?"
+      },
+      {
+        "speaker": "Mann",
+        "text": "Und jetzt Sie:"
+      },
+      {
+        "speaker": "Frau",
+        "text": "Ich komme aus Spanien. (du?)"
+      },
+      {
+        "speaker": "Mann",
+        "text": "Woher kommst du?"
+      },
+      {
+        "speaker": "Frau",
+        "text": "Ich heiße Jan. (du?)"
+      },
+      {
+        "speaker": "Mann",
+        "text": "Wie heißt du?"
+      },
+      {
+        "speaker": "Frau",
+        "text": "Ich bin Susanne. (du?)"
+      },
+      {
+        "speaker": "Mann",
+        "text": "Wer bist du?"
+      },
+      {
+        "speaker": "Frau",
+        "text": "Ich heiße Veronika Müller. (Sie?)"
+      },
+      {
+        "speaker": "Mann",
+        "text": "Wie heißen Sie?"
+      },
+      {
+        "speaker": "Frau",
+        "text": "Das ist Paul. (das?)"
+      },
+      {
+        "speaker": "Mann",
+        "text": "Wer ist das?"
+      },
+      {
+        "speaker": "Frau",
+        "text": "Ich heiße Monika Rühmann. (Sie?)"
+      },
+      {
+        "speaker": "Mann",
+        "text": "Wie heißen Sie?"
+      },
+      {
+        "speaker": "Frau",
+        "text": "Hallo, ich heiße Marion. (du?)"
+      },
+      {
+        "speaker": "Mann",
+        "text": "Wie heißt du?"
+      },
+      {
+        "speaker": "Frau",
+        "text": "Ich komme aus Österreich. (Sie?)"
+      },
+      {
+        "speaker": "Mann",
+        "text": "Woher kommen Sie?"
+      }
+    ]
+  },
+  "1_22": {
+    "sourcePages": [
+      3,
+      4
+    ],
+    "lines": [
+      {
+        "speaker": "Mann",
+        "text": "Sagen Sie „nein“ und variieren Sie. Beispiel:"
+      },
+      {
+        "speaker": "Frau",
+        "text": "Sabine ist Friseurin. (Lehrerin)"
+      },
+      {
+        "speaker": "Mann",
+        "text": "Nein, Sabine ist nicht Friseurin. Sie ist Lehrerin."
+      },
+      {
+        "speaker": "Mann",
+        "text": "Und jetzt Sie."
+      },
+      {
+        "speaker": "Frau",
+        "text": "Astrid und Norbert sind verheiratet. (geschieden)"
+      },
+      {
+        "speaker": "Mann",
+        "text": "Nein, Astrid und Norbert sind nicht verheiratet. Sie sind geschieden."
+      },
+      {
+        "speaker": "Frau",
+        "text": "Carla lebt allein. (zusammen mit Peter)"
+      },
+      {
+        "speaker": "Mann",
+        "text": "Nein, Carla lebt nicht allein. Sie lebt zusammen mit Peter."
+      },
+      {
+        "speaker": "Frau",
+        "text": "Sie wohnen in Zürich. (Bern)"
+      },
+      {
+        "speaker": "Mann",
+        "text": "Nein, sie wohnen nicht in Zürich. Sie wohnen in Bern."
+      },
+      {
+        "speaker": "Frau",
+        "text": "Sie ist 19 Jahre alt. (21)"
+      },
+      {
+        "speaker": "Mann",
+        "text": "Nein, sie ist nicht 19 Jahre alt. Sie ist 21."
+      },
+      {
+        "speaker": "Frau",
+        "text": "Frau Wachter ist Lehrerin. (Journalistin)"
+      },
+      {
+        "speaker": "Mann",
+        "text": "Nein, Frau Wachter ist nicht Lehrerin. Sie ist Journalistin."
+      }
+    ]
+  },
+  "1_23": {
+    "sourcePages": [
+      4
+    ],
+    "lines": [
+      {
+        "speaker": "Mann 1",
+        "text": "Hallo Richard, wie geht es dir?"
+      },
+      {
+        "speaker": "Mann 2",
+        "text": "Sehr gut. Ich bin jetzt Lehrer. Das ist super. Und wie geht es dir?"
+      },
+      {
+        "speaker": "Mann 1",
+        "text": "Nicht so gut. Ich bin im Moment arbeitslos."
+      },
+      {
+        "speaker": "Mann 2",
+        "text": "Oh …"
+      }
+    ]
+  },
+  "1_24": {
+    "sourcePages": [
+      4
+    ],
+    "lines": [
+      {
+        "speaker": "Frau",
+        "text": "Guten Morgen, ich heiße Emma Cindik."
+      },
+      {
+        "speaker": "Mann",
+        "text": "Hallo Frau Cindik. Cindik? Kommen Sie aus der Türkei?"
+      },
+      {
+        "speaker": "Frau",
+        "text": "Ich nicht, aber mein Mann."
+      },
+      {
+        "speaker": "Mann",
+        "text": "Und sprechen Sie auch Türkisch?"
+      },
+      {
+        "speaker": "Frau",
+        "text": "Nur ein bisschen. Aber ich spreche sehr gut Englisch und Französisch."
+      }
+    ]
+  },
+  "1_25": {
+    "sourcePages": [
+      4
+    ],
+    "lines": [
+      {
+        "speaker": "Frau",
+        "text": "Und wer bist du?"
+      },
+      {
+        "speaker": "Junge",
+        "text": "Simon Jonas."
+      },
+      {
+        "speaker": "Frau",
+        "text": "Wie alt bist du, Jonas?"
+      },
+      {
+        "speaker": "Junge",
+        "text": "Mein Vorname ist Simon, und mein Familienname ist Jonas. Ich bin 15."
+      },
+      {
+        "speaker": "Frau",
+        "text": "Oh Entschuldigung, Simon."
+      }
+    ]
+  },
+  "1_26": {
+    "sourcePages": [
+      4
+    ],
+    "lines": [
+      {
+        "speaker": "Frau 1",
+        "text": "Karin, wie alt bist du? 34 oder 35?"
+      },
+      {
+        "speaker": "Frau 2",
+        "text": "Ich bin 34."
+      },
+      {
+        "speaker": "Frau 1",
+        "text": "Und deine Schwester?"
+      },
+      {
+        "speaker": "Frau 2",
+        "text": "Sie ist 43."
+      }
+    ]
+  },
+  "1_27": {
+    "sourcePages": [
+      4
+    ],
+    "lines": [
+      {
+        "speaker": "Mann 1",
+        "text": "Was machst du beruflich, Henning?"
+      },
+      {
+        "speaker": "Mann 2",
+        "text": "Ich habe einen Job als Verkäufer bei AB-Media."
+      },
+      {
+        "speaker": "Mann 1",
+        "text": "AB-Media ist eine Elektronikfirma, oder?"
+      },
+      {
+        "speaker": "Mann 2",
+        "text": "Richtig!"
+      }
+    ]
+  },
+  "1_28": {
+    "sourcePages": [
+      4
+    ],
+    "lines": [
+      {
+        "speaker": "Frau",
+        "text": "Und wie heißen Sie?"
+      },
+      {
+        "speaker": "Mann",
+        "text": "Ich bin Tim Schmidt."
+      },
+      {
+        "speaker": "Frau",
+        "text": "Entschuldigung. Können Sie das bitte buchstabieren?"
+      },
+      {
+        "speaker": "Mann",
+        "text": "Ja, gern. S – C – H – M – I – D – T"
+      },
+      {
+        "speaker": "Frau",
+        "text": "Ähm … D … T, oder T … T?"
+      },
+      {
+        "speaker": "Mann",
+        "text": "D … T."
+      },
+      {
+        "speaker": "Frau",
+        "text": "Ah, jetzt verstehe ich. Danke."
+      }
+    ]
+  },
+  "1_29": {
+    "sourcePages": [
+      4
+    ],
+    "lines": [
+      {
+        "speaker": "Frau",
+        "text": "Herr Freudenthaler, wie ist die Nummer von Frau Speh?"
+      },
+      {
+        "speaker": "Mann",
+        "text": "Von Frau Speh? 0176 / 24 78 86"
+      },
+      {
+        "speaker": "Frau",
+        "text": "0176 / 24 87 86?"
+      },
+      {
+        "speaker": "Mann",
+        "text": "Nein … 24 78 86."
+      }
+    ]
+  },
+  "1_30": {
+    "sourcePages": [
+      5
+    ],
+    "lines": [
+      {
+        "speaker": null,
+        "text": "1 Hallo. Ich bin Miriam. Und wie heißt du?"
+      },
+      {
+        "speaker": null,
+        "text": "2 Ich komme aus Österreich. Woher kommst du?"
+      },
+      {
+        "speaker": null,
+        "text": "3 Ich wohne in Wien. Wo wohnst du?"
+      },
+      {
+        "speaker": null,
+        "text": "4 Ich bin Ärztin. Was bist du von Beruf?"
+      },
+      {
+        "speaker": null,
+        "text": "5 Ich bin verheiratet, aber ich habe keine Kinder. Und du?"
+      },
+      {
+        "speaker": null,
+        "text": "6 Ich spreche Deutsch und Englisch. Und du?"
+      }
+    ]
+  },
+  "1_31": {
+    "sourcePages": [
+      5
+    ],
+    "lines": [
+      {
+        "speaker": "Andrea",
+        "text": "Guten Tag, Herr Meindl."
+      },
+      {
+        "speaker": "Herr M.",
+        "text": "Frau Noll, guten Tag! Wie geht’s Ihnen?"
+      },
+      {
+        "speaker": "Andrea",
+        "text": "Danke, gut. Und Ihnen?"
+      },
+      {
+        "speaker": "Herr M.",
+        "text": "Auch gut, danke. Ah ja, also das ist Herr Eschenbach. Er arbeitet bei Gruber."
+      },
+      {
+        "speaker": "Herr E.",
+        "text": "Guten Tag, Frau Noll. Freut mich."
+      },
+      {
+        "speaker": "Herr M.",
+        "text": "Frau Noll ist IT-Trainerin bei SAB."
+      },
+      {
+        "speaker": "Andrea",
+        "text": "Nein, nein. Ich arbeite nicht bei SAB. Ich arbeite jetzt bei X-Net."
+      },
+      {
+        "speaker": "Herr E.",
+        "text": "Ah, das ist ja interessant."
+      },
+      {
+        "speaker": "Andrea",
+        "text": "Hier, bitte! Meine Visitenkarte."
+      },
+      {
+        "speaker": "Herr E.",
+        "text": "Vielen Dank! Und das ist meine Visitenkarte."
+      }
+    ]
+  }
+}

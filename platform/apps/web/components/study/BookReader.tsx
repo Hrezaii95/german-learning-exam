@@ -14,6 +14,7 @@ import type {
 import { ListeningTranscript } from "@/components/audio/ListeningTranscript";
 import { GermanText, MeaningButton, SaveButton, useStudy } from "./StudyProvider";
 import { LineAudio, stopStudyAudio } from "./StudyAudio";
+import { BookAnswers } from "./BookAnswers";
 
 function OriginalTrack({ track, rate }: { track: BookTrack; rate: number }) {
   const ref = useRef<HTMLAudioElement>(null);
@@ -81,10 +82,10 @@ function OriginalPage({
   return (
     <section
       className="book-original"
-      aria-label={`Original ${page.kind} page ${page.printedPage}`}
+      aria-label={`Original ${page.kind} ${page.pageLabel??`page ${page.printedPage}`}`}
     >
       <div className="book-page-toolbar">
-        <span>Printed page {page.printedPage}</span>
+        <span>{page.printedPage>0?`Printed page ${page.printedPage}`:page.pageLabel}</span>
         <label>
           Zoom{" "}
           <select
@@ -120,7 +121,7 @@ function OriginalPage({
             src={withPagesBaseAssetPath(page.image)}
             width={page.width}
             height={page.height}
-            alt={`Momente A1 ${page.kind}, Lesson ${page.lesson}, printed page ${page.printedPage}`}
+            alt={`Momente A1 ${page.kind}, ${page.section??`Lesson ${page.lesson}`}, ${page.pageLabel??`printed page ${page.printedPage}`}`}
           />
           {page.lines.map((value) => (
             <button
@@ -183,11 +184,9 @@ export function BookReader({
     book.pages.find((p) => p.id === pageId) ??
     book.pages.find((p) => p.id === "coursebook-29")!;
   const chapter = courseChapters.find((c) => c.number === page.lesson)!;
-  const chapterPages = book.pages.filter(
-    (p) => p.kind === page.kind && p.lesson === page.lesson,
-  );
   const allKindPages = book.pages.filter((p) => p.kind === page.kind);
   const index = allKindPages.findIndex((p) => p.id === page.id);
+  const nearbyPages = allKindPages.slice(Math.max(0,index-2),Math.min(allKindPages.length,index+3));
   const tracks = book.audio.filter((track) => page.audioIds.includes(track.id));
   const line = page.lines.find((l) => l.id === selected);
   const marked = study?.state.bookmarks.includes(page.id) ?? false;
@@ -331,7 +330,7 @@ export function BookReader({
               <input
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                placeholder="Search the 32 pages…"
+                placeholder={`Search all ${book.pages.length} pages…`}
               />
             </label>
             {search.trim().length >= 2 ? (
@@ -357,6 +356,7 @@ export function BookReader({
               </div>
             ) : (
               <div className="book-chapters">
+                <button type="button" onClick={()=>{go(`${page.kind}-cover`);setShowContents(false);}}><b>↖</b><span><strong>Start of the book</strong><small>Cover, map, contents & introduction</small></span></button>
                 {courseChapters.map((c) => (
                   <button
                     type="button"
@@ -395,7 +395,7 @@ export function BookReader({
                     onClick={() => go(id)}
                   >
                     {p.kind === "coursebook" ? "Coursebook" : "Workbook"} ·{" "}
-                    {p.printedPage}
+                    {p.pageLabel??p.printedPage}
                   </button>
                 )
               );
@@ -409,15 +409,16 @@ export function BookReader({
       )}
       <section className="book-chapter-title">
         <div>
-          <span className="book-chapter-number">0{page.lesson}</span>
+          <span className="book-chapter-number">{page.section?.startsWith("Getting")?"A1":page.section?.startsWith("Module")?"M1":`0${page.lesson}`}</span>
           <div>
-            <p className="study-eyebrow">{chapter.topic}</p>
-            <h2 lang="de">{chapter.title}</h2>
+            <p className="study-eyebrow">{page.section??chapter.topic}</p>
+            <h2 lang={page.section?.startsWith("Lesson")?"de":"en"}>{page.section?.startsWith("Lesson")?chapter.title:page.section??chapter.title}</h2>
           </div>
         </div>
-        <Link href={`/lessons/0${page.lesson}`}>Study lesson →</Link>
+        <Link href={page.section?.startsWith("Lesson")?`/lessons/0${page.lesson}`:"/lessons"}>{page.section?.startsWith("Lesson")?"Study lesson":"Explore lessons"} →</Link>
       </section>
       <div className="book-reading-tools">
+        <label className="study-inline-field book-page-picker">Go to page<select aria-label="Go to page" value={page.id} onChange={event=>go(event.target.value)}>{allKindPages.map(p=><option value={p.id} key={p.id}>{p.pageLabel??`Page ${p.printedPage}`} · {p.section??`Lesson ${p.lesson}`}</option>)}</select></label>
         <div className="study-segmented" role="group" aria-label="Reading view">
           {(["split", "page", "read"] as const).map((mode) => (
             <button
@@ -469,6 +470,7 @@ export function BookReader({
           {marked ? "★ Bookmarked" : "☆ Bookmark"}
         </button>
       </div>
+      <BookAnswers key={page.id} page={page} speech={speech} rate={rate}/>
       <div className={`book-reading-grid book-view-${view}`}>
         {view !== "read" && (
           <OriginalPage
@@ -540,16 +542,16 @@ export function BookReader({
         >
           ← Previous
         </button>
-        <div className="book-page-dots" aria-label="Lesson pages">
-          {chapterPages.map((p) => (
+        <div className="book-page-dots" aria-label="Nearby pages">
+          {nearbyPages.map((p) => (
             <button
               type="button"
               key={p.id}
-              aria-label={`Page ${p.printedPage}`}
+              aria-label={p.pageLabel??`Page ${p.printedPage}`}
               aria-current={p.id === page.id ? "page" : undefined}
               onClick={() => go(p.id)}
             >
-              {p.printedPage}
+              {p.printedPage>0?p.printedPage:p.printedPage===-1?"Cover":"Map"}
               {study?.state.completedPages.includes(p.id) && (
                 <span aria-hidden="true"> ✓</span>
               )}
@@ -596,8 +598,7 @@ export function BookReader({
           <>
             <div className="book-fullscreen-header">
               <h2 id="fullscreen-book-title">
-                {page.kind === "coursebook" ? "Coursebook" : "Workbook"} · Page{" "}
-                {page.printedPage}
+                {page.kind === "coursebook" ? "Coursebook" : "Workbook"} · {page.pageLabel??`Page ${page.printedPage}`}
               </h2>
               <button
                 className="study-secondary"
@@ -607,6 +608,7 @@ export function BookReader({
                 Close full screen
               </button>
             </div>
+            <BookAnswers key={`fullscreen-${page.id}`} page={page} speech={speech} rate={rate}/>
             {line && (
               <div className="book-selected-line">{renderLine(line)}</div>
             )}

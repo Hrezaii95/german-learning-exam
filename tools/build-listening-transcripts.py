@@ -47,6 +47,7 @@ def main():
     ab = {t['trackId']: {'lines': t['lines'], 'sourcePages': [t['sourcePage']]} for t in old['tracks']}
     manual = json.loads((ROOT / 'research/book-reader-update/ab-lesson3-4-transcripts.json').read_text(encoding='utf8'))
     ab.update(manual)
+    ab.update(json.loads((ROOT / 'research/book-answers/module1-workbook-transcripts.json').read_text(encoding='utf8')))
     tracks, legacy = {}, {}
     for audio in catalog['audio']:
         number = int(re.match(r'1_(\d+)', Path(audio['source']).name)[1])
@@ -56,7 +57,7 @@ def main():
         assert transcript['lines'], audio['id']
         item = {**transcript, 'sourceTrack': source_id, 'credit': 'Momente A1.1 · © Hueber Verlag', 'sourceTitle': 'Kursbuch Transkriptionen' if audio['kind'] == 'coursebook' else 'Arbeitsbuch Transkriptionen'}
         tracks[audio['id']] = item
-        if audio['kind'] == 'workbook':
+        if audio['kind'] == 'workbook' and '-m1-' not in audio['id']:
             legacy[f'1_{number:02}'] = item
     output = {'tracks': tracks, 'workbook': legacy}
     (GEN / 'audio/listening-transcripts.json').write_text(json.dumps(output, ensure_ascii=False, indent=2)+'\n', encoding='utf8')

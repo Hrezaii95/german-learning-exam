@@ -1794,3 +1794,22 @@
   .sheet-overview-dialog { padding:16px; }
 }
 @media print { .sheet-mobile-switcher,.sheet-desktop-switcher,.mobile-menu,.sheet-overview button.study-secondary { display:none!important; } .sheet-overview { break-inside:avoid; } }
+.book-answers { margin:16px 0 20px; border:1px solid #c9d4c2; border-radius:16px; overflow:hidden; background:#fffdf8; }
+.book-answer-toggle { width:100%; display:flex; align-items:center; gap:14px; min-height:56px; padding:14px 20px; background:#edf3e8; border:0; color:#294c39; text-align:left; font:inherit; font-weight:600; line-height:1.4; cursor:pointer; }
+.book-answer-toggle span:first-child { font-size:1.05rem; font-weight:750; }
+.book-answer-toggle span:nth-child(2) { flex:1; font-size:.8rem; font-weight:400; }
+.book-answer-toggle span:last-child { font-size:1.4rem; }
+.book-answer-list { padding:0 20px 16px; }
+.book-answer-intro,.book-answer-note,.book-answer-empty { font-size:.85rem; line-height:1.6; color:#605e66; }
+.book-answer-empty { margin:0 0 16px; }
+.book-answer-list article { padding:18px 0; border-top:1px solid #ddd8ca; }
+.book-answer-list article > header { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.book-answer-list h3 { margin:0 0 8px; font-size:1rem; }
+.book-answer-content > div[lang] { font-size:1.05rem; line-height:1.9; color:#283f33; margin-top:18px; }
+.book-answer-content > div[lang] p { margin:8px 0; }
+.book-answer-content .study-speak { margin-left:8px; }
+.book-answer-footer { display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+.book-answer-footer small { font-size:.72rem; color:#6a6769; }
+.book-page-picker select { max-width:320px; }
+.book-fullscreen > .book-answers { margin:12px 0; flex-shrink:0; }
+@media(max-width:699px){ .book-answer-toggle { padding:12px; gap:8px; flex-wrap:wrap; }.book-answer-toggle span:nth-child(2) { flex-basis:55%; }.book-answer-list { padding:0 14px 14px; }.book-answer-list article > header { align-items:start; }.book-answer-list header .study-secondary { min-width:90px; padding:10px; }.book-answer-list .study-tag { font-size:.68rem; white-space:normal; }.book-page-picker { width:100%; }.book-page-picker select { flex:1; max-width:100%; min-width:0; }.book-answer-content > div[lang] { overflow-wrap:anywhere; }.book-page-nav .book-page-dots { gap:4px; }.book-page-dots button { min-width:42px; } }

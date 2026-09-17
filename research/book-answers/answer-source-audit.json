@@ -1,0 +1,24 @@
+{
+  "answers": 54,
+  "pagesWithAnswers": 25,
+  "bySource": {
+    "coursebook-key": 45,
+    "workbook-key": 4,
+    "workbook-transcript": 5
+  },
+  "sources": [
+    {
+      "file": "resources/original/answer-keys/Momente_A1_1_KB_Loesungen.pdf",
+      "sha256": "170dbb774a6b89c7c93973b4c222b8787ace17e525f45d0af0504e653319d329"
+    },
+    {
+      "file": "resources/original/workbook/Momente A1.1 AB_7.pdf",
+      "sha256": "11708c7b58ae76d1a324a9c670e9b74a8c641395584e99ce869a61d8a2e02c07"
+    },
+    {
+      "file": "resources/original/transcripts/Momente_AB_A1_1_Transskriptionen_2.pdf",
+      "sha256": "fc9f4727625f521d07d10bb6a0c394ce8d97b0bcbff65becc0b48584a4504097"
+    }
+  ],
+  "scope": "All entries in the supplied coursebook key for Lessons 1\u20134 and Magazine 1\u20133; all Module 1 workbook skills-test answers; explicit responses in available Module 1 review transcripts."
+}

@@ -80,7 +80,7 @@ export function parseStudy(raw: string | null): StudyState {
           ...new Set(
             v.filter(
               (p): p is string =>
-                typeof p === "string" && /^(coursebook|workbook)-\d+$/.test(p),
+                typeof p === "string" && /^(coursebook|workbook)-(?:\d+|cover|map)$/.test(p),
             ),
           ),
         ]
@@ -92,7 +92,7 @@ export function parseStudy(raw: string | null): StudyState {
     completedPages: pages(data.completedPages),
     resume:
       typeof data.resume === "string" &&
-      /^(coursebook|workbook)-\d+$/.test(data.resume)
+      /^(coursebook|workbook)-(?:\d+|cover|map)$/.test(data.resume)
         ? data.resume
         : null,
   };

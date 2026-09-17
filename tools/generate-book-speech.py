@@ -15,6 +15,8 @@ async def main():
     OUT.mkdir(parents=True, exist_ok=True)
     texts = json.loads((WEB / "generated/study-speech-texts.json").read_text(encoding="utf-8"))
     mapping = json.loads(MAPPING.read_text(encoding="utf-8"))
+    for name in ["country", "home", "collection"]:
+        mapping.update(json.loads((WEB / f"generated/{name}-speech.json").read_text(encoding="utf-8")))
     # Existing exact speech is reused, preserving the approved files.
     cards = json.loads((WEB / "generated/word-cards.json").read_text(encoding="utf-8"))["cards"]
     for card in cards:

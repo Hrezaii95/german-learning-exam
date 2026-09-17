@@ -3,7 +3,7 @@ import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import { loadWordCards } from "../content/word-cards";
 import { lessonFourWords, lessonFourVerbs, lessonFourPhrases } from "./lesson-four";
-import type { BookManifest, DictionaryEntry } from "./types";
+import type { BookManifest, BookAnswer, DictionaryEntry } from "./types";
 import type { LearnerQaDetail } from "../content/detail-types";
 import { phraseMeanings, bookPhraseMeanings } from "./phrase-meanings";
 import { phraseKey } from "./lookup";
@@ -20,12 +20,13 @@ export function loadBook(): BookManifest {
   const raw = JSON.parse(
     readFileSync(join(generated, "interactive-book.json"), "utf8"),
   ) as BookManifest;
+  const answers = loadBookAnswers();
   // Only reading data crosses the server/client boundary. Source paths and
   // checksums stay in the build manifest for release verification.
   return {
     version: raw.version,
     credit: "Momente A1 · © Hueber Verlag.",
-    pages: raw.pages,
+    pages: raw.pages.map(page=>({...page,answers:answers.filter(answer=>answer.pageId===page.id)})),
     audio: raw.audio.map(
       ({ id, lesson, kind, exercise, label, src, pageId }) => ({
         id,
@@ -39,6 +40,9 @@ export function loadBook(): BookManifest {
       }),
     ),
   };
+}
+export function loadBookAnswers(): BookAnswer[] {
+  return JSON.parse(readFileSync(join(generated,"book-answers.json"),"utf8")) as BookAnswer[];
 }
 export function loadStudySpeech(): Record<string, string> {
   return JSON.parse(
