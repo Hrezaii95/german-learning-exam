@@ -114,5 +114,197 @@
       "startsWith": "©r S U P P E",
       "text": "Suppe"
     }
+  ],
+  "coursebook-71": [
+    {
+      "startsWith": " Nach\u001eit\u001dag",
+      "text": "Nachmittag"
+    },
+    {
+      "startsWith": "©b  letzten Mittwoch",
+      "text": "  letzten Mittwoch"
+    },
+    {
+      "startsWith": "©g  letztes Wochenende / Jahr",
+      "text": "  letztes Wochenende / Jahr"
+    },
+    {
+      "startsWith": "©r  letzte Woche",
+      "text": "  letzte Woche"
+    }
+  ],
+  "coursebook-72": [
+    {
+      "startsWith": "eine Pa\u001cse machen",
+      "text": "eine Pause machen"
+    },
+    {
+      "startsWith": "13:00 – 17:00 F\u001cßbal\u001b ",
+      "text": "13:00 – 17:00 Fußball"
+    },
+    {
+      "startsWith": "spielen \u001eit Johan\u001a",
+      "text": "spielen mit Johann"
+    },
+    {
+      "startsWith": "19:00 Film \u001eit ",
+      "text": "19:00 Film mit"
+    },
+    {
+      "startsWith": "am Morgen: la\u0019ge geschlafen und spät gefrühstückt",
+      "text": "am Morgen: lange geschlafen und spät gefrühstückt"
+    },
+    {
+      "startsWith": "Liebe S\u001csa",
+      "text": "Liebe Susa"
+    },
+    {
+      "startsWith": "Son\u001atag! Ein s\u001cper Tag! ",
+      "text": "Sonntag! Ein super Tag!"
+    },
+    {
+      "startsWith": "la\u0019ge geschlafen … ",
+      "text": "lange geschlafen …"
+    }
+  ],
+  "coursebook-168": [
+    {
+      "startsWith": " Te\u0017 gekocht  ",
+      "text": "Tee gekocht"
+    }
+  ],
+  "coursebook-169": [
+    {
+      "startsWith": "Wir haben im Aug\u001cst Urlaub! ",
+      "text": "Wir haben im August Urlaub!"
+    },
+    {
+      "startsWith": "Der Film begin\u001bt ",
+      "text": "Der Film beginnt"
+    },
+    {
+      "startsWith": "©b  (Blumen)Laden ",
+      "text": "  (Blumen)Laden "
+    },
+    {
+      "startsWith": "©r  Boutique ",
+      "text": "  Boutique "
+    },
+    {
+      "startsWith": "©g  Eiscafé",
+      "text": "  Eiscafé"
+    },
+    {
+      "startsWith": "©r  Praxis",
+      "text": "  Praxis"
+    },
+    {
+      "startsWith": "©b  Kiosk",
+      "text": "  Kiosk"
+    },
+    {
+      "startsWith": "©b  Kurs",
+      "text": "  Kurs"
+    },
+    {
+      "startsWith": "Das Konzert begin\u001bt ",
+      "text": "Das Konzert beginnt"
+    },
+    {
+      "startsWith": "Ta\u001csendschön ",
+      "text": "Tausendschön"
+    },
+    {
+      "startsWith": "geschlos\u0018en.",
+      "text": "geschlossen."
+    },
+    {
+      "startsWith": "Kiosk Istanb\u001cl",
+      "text": "Kiosk Istanbul"
+    }
+  ],
+  "coursebook-196": [
+    {
+      "startsWith": " la\u001dge g\u001fschlafen ",
+      "text": "lange geschlafen"
+    }
+  ],
+  "coursebook-197": [
+    {
+      "startsWith": "©b  (Blumen)Laden ",
+      "text": "  (Blumen)Laden "
+    },
+    {
+      "startsWith": "©r  Boutique ",
+      "text": "  Boutique "
+    },
+    {
+      "startsWith": "©g  Eiscafé",
+      "text": "  Eiscafé"
+    },
+    {
+      "startsWith": "©r  Praxis",
+      "text": "  Praxis"
+    },
+    {
+      "startsWith": "©b  Kiosk",
+      "text": "  Kiosk"
+    },
+    {
+      "startsWith": "©b  Kurs",
+      "text": "  Kurs"
+    },
+    {
+      "startsWith": "Achtu\u001dg! ",
+      "text": "Achtung!"
+    },
+    {
+      "startsWith": "Das Ko\u001dzert begin\u001ct ",
+      "text": "Das Konzert beginnt"
+    },
+    {
+      "startsWith": "Der Film begin\u001ct ",
+      "text": "Der Film beginnt"
+    },
+    {
+      "startsWith": "Wir haben im Aug\u001bst Urlaub! ",
+      "text": "Wir haben im August Urlaub!"
+    },
+    {
+      "startsWith": "Ab S\u001fptember ist die Boutique ",
+      "text": "Ab September ist die Boutique"
+    },
+    {
+      "startsWith": "wieder g\u001föﬀ net!",
+      "text": "wieder geöffnet!"
+    },
+    {
+      "startsWith": "Blume\u001dladen ",
+      "text": "Blumenladen"
+    },
+    {
+      "startsWith": "Ta\u001bsendschön ",
+      "text": "Tausendschön"
+    },
+    {
+      "startsWith": "Laden l\u001fider ab 16:00 ",
+      "text": "Laden leider ab 16:00"
+    },
+    {
+      "startsWith": "Uhr g\u001fschlos\u0019en.",
+      "text": "Uhr geschlossen."
+    },
+    {
+      "startsWith": "Kiosk Istanb\u001bl",
+      "text": "Kiosk Istanbul"
+    },
+    {
+      "startsWith": "heute l\u001fider nur ",
+      "text": "heute leider nur"
+    },
+    {
+      "startsWith": " g\u001föﬀ net.",
+      "text": "geöffnet."
+    }
   ]
 }

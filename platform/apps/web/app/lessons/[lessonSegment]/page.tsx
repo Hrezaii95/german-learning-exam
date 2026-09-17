@@ -31,6 +31,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (lessonSegment === "03") return { title: "Lesson 3 · Das ist meine Schwester." };
   if (lessonSegment === "05") return {title:"Lesson 5 · Ist das ein Tisch?"};
   if (lessonSegment === "06") return {title:"Lesson 6 · Wir haben einen Termin."};
+  if (lessonSegment === "11") return {title:"Lesson 11 · Was haben Sie gestern gemacht?"};
   if (lessonSegment === "10") return {title:"Lesson 10 · Wann kommst du denn an?"};
   if (lessonSegment === "09") return {title:"Lesson 9 · Ich mag Hamburger."};
   if (lessonSegment === "08") return {title:"Lesson 8 · Ich habe leider keine Zeit."};

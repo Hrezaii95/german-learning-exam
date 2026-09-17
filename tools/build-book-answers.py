@@ -27,7 +27,7 @@ def add(page, exercise, text, source_page=1, model=False, source="coursebook-key
 
 doc = pymupdf.open(KEY)
 texts = [re.sub(r"[ \t]+\n", "\n", re.sub(r"(\w)-\n(\w)", r"\1\2", p.get_text())) for p in doc]
-starts = {1: (11, [1, 2, 4, 8]), 2: (15, [1, 2, 4, 6]), 3: (19, [1, 2, 5, 9]), 4: (29, [1, 3, 5, 8]), 5: (33, [1, 2, 5, 6]), 6: (37, [1, 2, 4, 9]), 7: (47, [1, 3, 8, 10]), 8: (51, [1, 2, 5, 7]), 9: (55, [1, 3, 8, 10]), 10: (65, [1, 3, 6, 10])}
+starts = {1: (11, [1, 2, 4, 8]), 2: (15, [1, 2, 4, 6]), 3: (19, [1, 2, 5, 9]), 4: (29, [1, 3, 5, 8]), 5: (33, [1, 2, 5, 6]), 6: (37, [1, 2, 4, 9]), 7: (47, [1, 3, 8, 10]), 8: (51, [1, 2, 5, 7]), 9: (55, [1, 3, 8, 10]), 10: (65, [1, 3, 6, 10]), 11: (69, [1, 2, 5, 8])}
 for lesson, (first, boundaries) in starts.items():
     source_page = 1 if lesson < 4 else 2 if lesson<=8 else 3
     text = texts[source_page-1].split(f"Lektion {lesson}\n", 1)[1]
@@ -59,6 +59,9 @@ for lesson, (first, boundaries) in starts.items():
         if model:
             body = body.removeprefix("(mögliche Antworten) ")
         add(f"coursebook-{page}", f"Exercise {previous} · Schon fertig?" if extension else f"Exercise {label}", body, 3 if lesson==8 and label in ("4b","6a","7a") else source_page, model)
+        if lesson==11 and label in ('4a','4b','4c','6a','6b'):
+            for partner in {'4a':[168,196],'4b':[196],'4c':[168],'6a':[169],'6b':[197]}[label]:
+                add(f'coursebook-{partner}',f'Exercise {label} · Partner answers',body,source_page,note='Official partner-activity key. Match the Partner A or B label to your page.')
         if lesson==10 and label in ('9a','9b'):
             add('coursebook-'+('167' if label=='9a' else '195'),f'Exercise {label} · Partner answers',body,source_page,note='Publisher key for this partner table; worked item 1 is already printed in the book.')
         if lesson==7 and label=='8c':
@@ -133,6 +136,6 @@ book = json.loads((GEN / "interactive-book.json").read_text(encoding="utf-8"))
 assert all(a["pageId"] in {p["id"] for p in book["pages"]} for a in answers)
 assert all(a["text"] and a["exercise"] for a in answers)
 (GEN / "book-answers.json").write_text(json.dumps(answers, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
-audit = {"answers": len(answers), "pagesWithAnswers": len({a["pageId"] for a in answers}), "bySource": {s: sum(a["source"] == s for a in answers) for s in sorted({a["source"] for a in answers})}, "sources": [{"file": p.relative_to(ROOT).as_posix(), "sha256": hashlib.sha256(p.read_bytes()).hexdigest()} for p in [KEY, AB, TRANSCRIPT, ROOT / quick["source"]]], "scope": "All entries in the supplied coursebook key for Lessons 1–10 and Magazines 1–3; coursebook quick-test answers in the appendix, p. 203; all Module 1–3 workbook skills-test answers; explicit responses in available Module 1–3 review and Lesson 7–10 and extra-practice transcripts."}
+audit = {"answers": len(answers), "pagesWithAnswers": len({a["pageId"] for a in answers}), "bySource": {s: sum(a["source"] == s for a in answers) for s in sorted({a["source"] for a in answers})}, "sources": [{"file": p.relative_to(ROOT).as_posix(), "sha256": hashlib.sha256(p.read_bytes()).hexdigest()} for p in [KEY, AB, TRANSCRIPT, ROOT / quick["source"]]], "scope": "All entries in the supplied coursebook key for Lessons 1–11 and Magazines 1–3; coursebook quick-test answers in the appendix, p. 203; all Module 1–3 workbook skills-test answers; explicit responses in available Module 1–3 review and Lesson 7–10 and extra-practice transcripts."}
 (ROOT / "research/book-answers/answer-source-audit.json").write_text(json.dumps(audit, indent=2)+"\n", encoding="utf-8")
 print(json.dumps(audit))

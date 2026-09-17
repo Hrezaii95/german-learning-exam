@@ -1,0 +1,25 @@
+{
+  "lesson": 11,
+  "status": "local-export-verified",
+  "unitTests": 900,
+  "webTestSuite": 561,
+  "staticPages": 1491,
+  "browserChecks": 882,
+  "mediaByteChecks": 31,
+  "bookPages": 178,
+  "originalTracks": 188,
+  "answerGroups": 184,
+  "requiredSpeech": 11459,
+  "speechFailures": 0,
+  "wordFamilies": 1124,
+  "newLessonEntries": 82,
+  "newLessonFamilies": 81,
+  "manualReview": [
+    "Past tense forms and all four participle patterns",
+    "Shared original recordings accessible on both KB69/70",
+    "Official partner keys and absence of unprovided workbook solutions",
+    "Source font corrections on45 lines",
+    "Desktop pattern board and revised stacked320px controls",
+    "Dictionary and phrase save identity; vocabulary participle prompts"
+  ]
+}

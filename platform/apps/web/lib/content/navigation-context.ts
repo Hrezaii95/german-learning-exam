@@ -32,7 +32,7 @@ export type NavigationContext = {
   /** Hub id when entryContext is hub. */
   hubId?: LearnerHubId;
   /** Hub lesson filter. */
-  lesson?: "all" | "01" | "02" | "03" | "04" | "05" | "06" | "07" | "08" | "09" | "10";
+  lesson?: "all" | "01" | "02" | "03" | "04" | "05" | "06" | "07" | "08" | "09" | "10" | "11";
   /** Hub category filter. */
   category?: string;
   /** Optional safe result id that was opened (entity id, not assertion). */
@@ -132,7 +132,7 @@ export function isSafeNavigationPath(pathname: string): boolean {
   const hubMatch = pathname.match(/^\/(vocabulary|verbs|grammar|phrases|listening|concepts)$/);
   if (hubMatch) return true;
 
-  const lessonMatch = pathname.match(/^\/lessons\/(01|02|03|04|05|06|07|08|09|10)$/);
+  const lessonMatch = pathname.match(/^\/lessons\/(01|02|03|04|05|06|07|08|09|10|11)$/);
   if (lessonMatch) return true;
 
   const activityMatch = pathname.match(
@@ -234,7 +234,7 @@ function normalizeContext(raw: unknown): NavigationContext | null {
         ctx.returnPath = `/${obj.hubId}`;
       }
     }
-    if (obj.lesson === "01" || obj.lesson === "02" || obj.lesson === "03" || obj.lesson === "04" || obj.lesson === "05" || obj.lesson === "06" || obj.lesson === "07" || obj.lesson === "08" || obj.lesson === "09" || obj.lesson === "10" || obj.lesson === "all") {
+    if (obj.lesson === "01" || obj.lesson === "02" || obj.lesson === "03" || obj.lesson === "04" || obj.lesson === "05" || obj.lesson === "06" || obj.lesson === "07" || obj.lesson === "08" || obj.lesson === "09" || obj.lesson === "10" || obj.lesson === "11" || obj.lesson === "all") {
       ctx.lesson = obj.lesson;
     }
     if (typeof obj.category === "string") {
@@ -397,7 +397,7 @@ export function buildSearchNavigationContext(
 export function buildHubNavigationContext(input: {
   hubId: LearnerHubId;
   q?: string;
-  lesson?: "all" | "01" | "02" | "03" | "04" | "05" | "06" | "07" | "08" | "09" | "10";
+  lesson?: "all" | "01" | "02" | "03" | "04" | "05" | "06" | "07" | "08" | "09" | "10" | "11";
   category?: string;
   resultId?: string;
 }): NavigationContext {
@@ -408,7 +408,7 @@ export function buildHubNavigationContext(input: {
   };
   const q = input.q != null ? sanitizeSearchQueryText(input.q).trim() : "";
   if (q.length > 0) ctx.q = q;
-  if (input.lesson === "01" || input.lesson === "02" || input.lesson === "03" || input.lesson === "04" || input.lesson === "05" || input.lesson === "06" || input.lesson === "07" || input.lesson === "08" || input.lesson === "09" || input.lesson === "10") ctx.lesson = input.lesson;
+  if (input.lesson === "01" || input.lesson === "02" || input.lesson === "03" || input.lesson === "04" || input.lesson === "05" || input.lesson === "06" || input.lesson === "07" || input.lesson === "08" || input.lesson === "09" || input.lesson === "10" || input.lesson === "11") ctx.lesson = input.lesson;
   if (input.category) {
     const category = sanitizeHubQueryText(input.category).trim();
     if (category.length > 0 && category !== "all") ctx.category = category;

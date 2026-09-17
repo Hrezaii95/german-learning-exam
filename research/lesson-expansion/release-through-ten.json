@@ -1,0 +1,14 @@
+{
+  "status": "live-verified",
+  "commit": "f2a07056e84fb6c3e367997b759aa98b15b05854",
+  "githubRun": 35233277595,
+  "browserChecks": 826,
+  "mediaByteChecks": 34,
+  "lessonsPublished": 10,
+  "remainingLessons": [
+    11,
+    12
+  ],
+  "live": "https://hrezaii95.github.io/german-learning-exam/lessons/10/",
+  "goalComplete": false
+}

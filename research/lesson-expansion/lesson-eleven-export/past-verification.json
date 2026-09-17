@@ -1,0 +1,27 @@
+{
+  "base": "http://localhost:3210/german-learning-exam",
+  "checks": [
+    "All 81 word families and 31 participles in four pattern groups render",
+    "Dictionary selection shares the past sentence review identity",
+    "Yesterday first keeps the auxiliary second and the strong participle last",
+    "Formal questions preserve Sie and the complete separable participle",
+    "The exact generated past question plays German audio",
+    "Recall hides the translation and final participle, then restores the sentence",
+    "All four pattern groups support recall, with no ge on -ieren verbs",
+    "Last-time endings follow the noun gender colours",
+    "um selects its matching opening-time explanation",
+    "von … bis selects its matching opening-time explanation",
+    "ab selects its matching opening-time explanation",
+    "Phrase search preserves the builder selection",
+    "The saved sentence survives navigation and can be deselected",
+    "The Perfekt sheet fits a 390px phone",
+    "The Perfekt sheet fits a 320px phone",
+    "The full vocabulary card includes the correct Perfekt pattern",
+    "Verb search accepts a past participle and renders its model",
+    "Question practice follows Lesson 11",
+    "coursebook-69 exposes all six shared recordings",
+    "coursebook-70 exposes all six shared recordings",
+    "No browser exceptions"
+  ],
+  "errors": []
+}

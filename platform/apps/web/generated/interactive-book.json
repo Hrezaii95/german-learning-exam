@@ -55471,6 +55471,2270 @@
       "pageLabel": "Page 68"
     },
     {
+      "id": "coursebook-69",
+      "kind": "coursebook",
+      "lesson": 11,
+      "printedPage": 69,
+      "pdfPage": 71,
+      "image": "/book/pages/coursebook-69.webp",
+      "width": 1905,
+      "height": 2695,
+      "lines": [
+        {
+          "id": "coursebook-69-line-1",
+          "text": "K O M M U N I K AT I O N : über Vergangenes sprechen: Was hast du gestern gemacht? nach Öffnungszeiten fragen:",
+          "box": [
+            14.293,
+            89.551,
+            74.387,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-69-line-2",
+          "text": "Wann ist die Praxis geöffnet? L E S E N : E-Mail W Ö R T E R : Alltagsaktivitäten G R A M M AT I K : Perfekt mit haben",
+          "box": [
+            14.285,
+            91.012,
+            72.085,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-69-line-3",
+          "text": "temporale Präpositionen: von … bis, ab Adjektiv: letzt-",
+          "box": [
+            14.286,
+            92.473,
+            37.25,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-69-line-4",
+          "text": "Was haben Sie",
+          "box": [
+            8.149,
+            5.726,
+            48.349,
+            6.376
+          ]
+        },
+        {
+          "id": "coursebook-69-line-5",
+          "text": "gestern gemacht?",
+          "box": [
+            8.149,
+            9.873,
+            61.246,
+            6.376
+          ]
+        },
+        {
+          "id": "coursebook-69-line-6",
+          "text": "Ich habe gestern … AB 1",
+          "box": [
+            11.292,
+            61.025,
+            24.111,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-69-line-7",
+          "text": "a Sehen Sie die Bilder an. Welches Bild passt?",
+          "box": [
+            11.313,
+            62.981,
+            36.99,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-69-line-8",
+          "text": "Ordnen Sie zu. Hören Sie dann und vergleichen Sie.",
+          "box": [
+            14.286,
+            64.949,
+            39.823,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-69-line-9",
+          "text": "Ich habe gestern …",
+          "box": [
+            14.286,
+            67.132,
+            14.309,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-69-line-10",
+          "text": "… einen Spaziergang im Wald gemacht. E",
+          "box": [
+            14.286,
+            68.855,
+            32.78,
+            2.162
+          ]
+        },
+        {
+          "id": "coursebook-69-line-11",
+          "text": "… Zeitung gelesen.",
+          "box": [
+            14.286,
+            70.888,
+            14.012,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-69-line-12",
+          "text": "… eingekauft.",
+          "box": [
+            14.286,
+            72.67,
+            10.476,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-69-line-13",
+          "text": "… gearbeitet.",
+          "box": [
+            54.005,
+            68.973,
+            10.803,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-69-line-14",
+          "text": "… Kaffee getrunken.",
+          "box": [
+            54.005,
+            70.755,
+            15.648,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-69-line-15",
+          "text": "… den Schreibtisch aufgeräumt.",
+          "box": [
+            54.005,
+            72.285,
+            27.236,
+            2.162
+          ]
+        },
+        {
+          "id": "coursebook-69-line-16",
+          "text": "b Was haben Sie gestern auch gemacht?",
+          "box": [
+            11.275,
+            75.724,
+            32.565,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-69-line-17",
+          "text": "Markieren Sie in a und sprechen Sie.",
+          "box": [
+            14.286,
+            77.673,
+            28.201,
+            1.542
+          ]
+        },
+        {
+          "id": "coursebook-69-line-18",
+          "text": "Ich habe gestern auch Zeitung gelesen.",
+          "box": [
+            15.806,
+            81.26,
+            26.587,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-69-line-19",
+          "text": "Petra Feibel",
+          "box": [
+            11.857,
+            36.581,
+            8.229,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-69-line-20",
+          "text": "Mark Franke",
+          "box": [
+            39.233,
+            34.527,
+            8.489,
+            1.498
+          ]
+        },
+        {
+          "id": "coursebook-69-line-21",
+          "text": "Carlo Benini",
+          "box": [
+            66.376,
+            39.544,
+            8.435,
+            1.497
+          ]
+        },
+        {
+          "id": "coursebook-69-line-22",
+          "text": "Jan Urbanski",
+          "box": [
+            12.115,
+            57.148,
+            8.696,
+            1.501
+          ]
+        },
+        {
+          "id": "coursebook-69-line-23",
+          "text": "Anja Mathisen",
+          "box": [
+            67.821,
+            60.874,
+            9.718,
+            1.573
+          ]
+        },
+        {
+          "id": "coursebook-69-line-24",
+          "text": "Lisa",
+          "box": [
+            40.054,
+            54.056,
+            2.601,
+            1.456
+          ]
+        },
+        {
+          "id": "coursebook-69-line-25",
+          "text": "gestern",
+          "box": [
+            57.69,
+            77.204,
+            5.627,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-69-line-26",
+          "text": "heute",
+          "box": [
+            66.426,
+            77.204,
+            4.323,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-69-line-27",
+          "text": "morgen",
+          "box": [
+            73.818,
+            77.204,
+            5.283,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-69-line-28",
+          "text": "Dienstag",
+          "box": [
+            57.776,
+            80.864,
+            5.082,
+            1.128
+          ]
+        },
+        {
+          "id": "coursebook-69-line-29",
+          "text": "Mittwoch",
+          "box": [
+            65.854,
+            80.864,
+            5.105,
+            1.128
+          ]
+        },
+        {
+          "id": "coursebook-69-line-30",
+          "text": "Donnerstag",
+          "box": [
+            73.498,
+            80.864,
+            6.273,
+            1.128
+          ]
+        },
+        {
+          "id": "coursebook-69-line-31",
+          "text": "neunundsechzig",
+          "box": [
+            94.254,
+            74.406,
+            2.216,
+            7.472
+          ]
+        }
+      ],
+      "audioIds": [
+        "coursebook-l11-ex1-a732cb05",
+        "coursebook-l11-ex1-e6add0d0",
+        "coursebook-l11-ex1-cb9dce06",
+        "coursebook-l11-ex1-83de739d",
+        "coursebook-l11-ex1-24d0c93b",
+        "coursebook-l11-ex1-cfe6314a"
+      ],
+      "section": "Lesson 11",
+      "pageLabel": "Page 69"
+    },
+    {
+      "id": "coursebook-70",
+      "kind": "coursebook",
+      "lesson": 11,
+      "printedPage": 70,
+      "pdfPage": 72,
+      "image": "/book/pages/coursebook-70.webp",
+      "width": 1905,
+      "height": 2695,
+      "lines": [
+        {
+          "id": "coursebook-70-line-1",
+          "text": "2 Ich habe gestern … AB 2 – 5",
+          "box": [
+            10.476,
+            4.796,
+            26.517,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-70-line-2",
+          "text": "a Hören Sie noch einmal und verbinden Sie.",
+          "box": [
+            10.476,
+            6.752,
+            36.26,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-70-line-3",
+          "text": "A Ich habe Zeitung gelesen und",
+          "box": [
+            14.286,
+            9.405,
+            24.97,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-70-line-4",
+          "text": "B Ich habe meinen Schreibtisch",
+          "box": [
+            14.286,
+            11.187,
+            25.531,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-70-line-5",
+          "text": "aufgeräumt und",
+          "box": [
+            16.429,
+            12.978,
+            12.567,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-70-line-6",
+          "text": "C Ich habe gearbeitet, eingekauft,",
+          "box": [
+            14.286,
+            14.75,
+            26.542,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-70-line-7",
+          "text": "D Ich habe gearbeitet und",
+          "box": [
+            14.287,
+            16.532,
+            20.804,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-70-line-8",
+          "text": "E Ich habe einen Spaziergang",
+          "box": [
+            14.287,
+            18.313,
+            23.396,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-70-line-9",
+          "text": "gemacht,",
+          "box": [
+            16.431,
+            20.105,
+            7.114,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-70-line-10",
+          "text": "F Ich habe an meiner Doktorarbeit",
+          "box": [
+            14.287,
+            21.877,
+            27.449,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-70-line-11",
+          "text": "geschrieben und",
+          "box": [
+            16.431,
+            23.668,
+            12.703,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-70-line-12",
+          "text": "1 habe zu wenig gegessen und zu viel",
+          "box": [
+            51.717,
+            9.405,
+            29.531,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-70-line-13",
+          "text": "Kaffee getrunken.",
+          "box": [
+            53.861,
+            11.196,
+            13.688,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-70-line-14",
+          "text": "2 einen Vogel",
+          "box": [
+            51.717,
+            12.968,
+            12.033,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-70-line-15",
+          "text": "gehört und gesungen.",
+          "box": [
+            53.861,
+            14.759,
+            16.78,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-70-line-16",
+          "text": "3 telefoniert.",
+          "box": [
+            51.717,
+            16.532,
+            10.748,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-70-line-17",
+          "text": "4 einen Film gemacht.",
+          "box": [
+            51.717,
+            18.313,
+            17.61,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-70-line-18",
+          "text": "5 keine Pause gemacht.",
+          "box": [
+            51.717,
+            20.095,
+            18.68,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-70-line-19",
+          "text": "6 Nudeln gekocht, aufgeräumt",
+          "box": [
+            51.717,
+            21.877,
+            25.014,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-70-line-20",
+          "text": "und abgewaschen.",
+          "box": [
+            53.861,
+            23.668,
+            14.418,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-70-line-21",
+          "text": "b Markieren Sie die Verben in a und ordnen Sie zu.",
+          "box": [
+            10.476,
+            37.285,
+            41.968,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-70-line-22",
+          "text": "3 Habt ihr gestern Abend …? AB 6 – 8",
+          "box": [
+            10.476,
+            55.751,
+            33.916,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-70-line-23",
+          "text": "Sehen Sie das Bildlexikon an. Schließen Sie dann Ihr Buch.",
+          "box": [
+            14.286,
+            57.988,
+            46.098,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-70-line-24",
+          "text": "Ihre Kursleiterin / Ihr Kursleiter fragt: Haben Sie das gestern",
+          "box": [
+            14.286,
+            59.675,
+            48.279,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-70-line-25",
+          "text": "Abend gemacht? Dann stehen Sie auf.",
+          "box": [
+            14.286,
+            61.362,
+            29.142,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-70-line-26",
+          "text": "4 Was haben Anna und Leo gestern gemacht? AB 9",
+          "box": [
+            10.476,
+            80.634,
+            47.54,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-70-line-27",
+          "text": "Arbeiten Sie zu zweit. PARTNER/IN A → S. 168 PARTNER/IN B → S. 196",
+          "box": [
+            14.286,
+            82.59,
+            52.652,
+            2.054
+          ]
+        },
+        {
+          "id": "coursebook-70-line-28",
+          "text": "Position 2",
+          "box": [
+            20.143,
+            27.729,
+            6.802,
+            1.428
+          ]
+        },
+        {
+          "id": "coursebook-70-line-29",
+          "text": "Ende",
+          "box": [
+            37.714,
+            27.729,
+            3.414,
+            1.428
+          ]
+        },
+        {
+          "id": "coursebook-70-line-30",
+          "text": "Was",
+          "box": [
+            15.798,
+            29.625,
+            2.694,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-70-line-31",
+          "text": "haben",
+          "box": [
+            20.143,
+            29.625,
+            4.112,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-70-line-32",
+          "text": "Sie gestern",
+          "box": [
+            28.428,
+            29.625,
+            7.679,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-70-line-33",
+          "text": "gemacht?",
+          "box": [
+            37.714,
+            29.625,
+            6.69,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-70-line-34",
+          "text": "Ich",
+          "box": [
+            15.798,
+            31.518,
+            2.034,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-70-line-35",
+          "text": "habe",
+          "box": [
+            20.143,
+            31.518,
+            3.26,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-70-line-36",
+          "text": "Zeitung",
+          "box": [
+            28.428,
+            31.518,
+            5.142,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-70-line-37",
+          "text": "gelesen.",
+          "box": [
+            37.714,
+            31.518,
+            5.632,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-70-line-38",
+          "text": "Perfekt mit haben",
+          "box": [
+            15.798,
+            40.517,
+            12.263,
+            1.443
+          ]
+        },
+        {
+          "id": "coursebook-70-line-39",
+          "text": "gemacht",
+          "box": [
+            15.798,
+            42.416,
+            5.946,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-70-line-40",
+          "text": "getrunken",
+          "box": [
+            30.512,
+            42.416,
+            6.996,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-70-line-41",
+          "text": "eingekauft",
+          "box": [
+            45.226,
+            42.416,
+            7.287,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-70-line-42",
+          "text": "ferngesehen",
+          "box": [
+            59.94,
+            42.416,
+            8.566,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-70-line-43",
+          "text": "fotografiert",
+          "box": [
+            74.654,
+            42.416,
+            8.19,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-70-line-44",
+          "text": "gelesen",
+          "box": [
+            30.513,
+            44.175,
+            6.423,
+            1.858
+          ]
+        },
+        {
+          "id": "coursebook-70-line-45",
+          "text": "Zeitung lesen",
+          "box": [
+            4.342,
+            95.713,
+            9.511,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-70-line-46",
+          "text": "arbeiten",
+          "box": [
+            22.002,
+            95.713,
+            6.11,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-70-line-47",
+          "text": "aufräumen",
+          "box": [
+            37.326,
+            95.713,
+            7.718,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-70-line-48",
+          "text": "Kaffee trinken",
+          "box": [
+            52.228,
+            95.713,
+            10.168,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-70-line-49",
+          "text": "eine Pause machen",
+          "box": [
+            68.578,
+            95.713,
+            13.418,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-70-line-50",
+          "text": "einen Spaziergang",
+          "box": [
+            84.858,
+            95.713,
+            12.776,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-70-line-51",
+          "text": "Habt ihr gestern Abend aufgeräumt?",
+          "box": [
+            15.798,
+            64.207,
+            25.103,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-70-line-52",
+          "text": "Extra",
+          "box": [
+            62.568,
+            29.778,
+            3.886,
+            1.41
+          ]
+        },
+        {
+          "id": "coursebook-70-line-53",
+          "text": "Film",
+          "box": [
+            70.812,
+            37.182,
+            3.234,
+            1.41
+          ]
+        },
+        {
+          "id": "coursebook-70-line-54",
+          "text": "Habt",
+          "box": [
+            63.655,
+            73.804,
+            3.334,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-70-line-55",
+          "text": "ihr gestern",
+          "box": [
+            69.738,
+            73.804,
+            7.454,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-70-line-56",
+          "text": "aufgeräumt?",
+          "box": [
+            79.024,
+            73.804,
+            8.656,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-70-line-57",
+          "text": "siebzig",
+          "box": [
+            3.383,
+            78.802,
+            2.216,
+            3.077
+          ]
+        }
+      ],
+      "audioIds": [
+        "coursebook-l11-ex1-a732cb05",
+        "coursebook-l11-ex1-e6add0d0",
+        "coursebook-l11-ex1-cb9dce06",
+        "coursebook-l11-ex1-83de739d",
+        "coursebook-l11-ex1-24d0c93b",
+        "coursebook-l11-ex1-cfe6314a"
+      ],
+      "section": "Lesson 11",
+      "pageLabel": "Page 70"
+    },
+    {
+      "id": "coursebook-71",
+      "kind": "coursebook",
+      "lesson": 11,
+      "printedPage": 71,
+      "pdfPage": 73,
+      "image": "/book/pages/coursebook-71.webp",
+      "width": 1905,
+      "height": 2695,
+      "lines": [
+        {
+          "id": "coursebook-71-line-1",
+          "text": "Ich habe Basketball gespielt. AB 10",
+          "box": [
+            11.215,
+            4.796,
+            34.044,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-71-line-2",
+          "text": "Lesen Sie die E-Mail von Mark und korrigieren Sie.",
+          "box": [
+            14.286,
+            7.033,
+            39.687,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-71-line-3",
+          "text": "a Mark und Ulf haben von halb zwei bis drei",
+          "box": [
+            14.286,
+            28.805,
+            34.268,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-71-line-4",
+          "text": "Basketball gespielt.",
+          "box": [
+            16.429,
+            30.597,
+            15.101,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-71-line-5",
+          "text": "b Sie haben am Vormittag ein Eis gegessen.",
+          "box": [
+            14.286,
+            32.369,
+            34.367,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-71-line-6",
+          "text": "Nachmittag",
+          "box": [
+            56.505,
+            32.085,
+            9.244,
+            1.858
+          ]
+        },
+        {
+          "id": "coursebook-71-line-7",
+          "text": "c Ulf hat eine Sonnenbrille und ein T-Shirt gekauft.",
+          "box": [
+            14.286,
+            34.15,
+            39.933,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-71-line-8",
+          "text": "d Sie haben bis halb sechs Fußball geschaut.",
+          "box": [
+            14.286,
+            35.932,
+            34.876,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-71-line-9",
+          "text": "Wann ist … geöffnet? AB 11",
+          "box": [
+            11.215,
+            39.471,
+            27.17,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-71-line-10",
+          "text": "Arbeiten Sie zu zweit. PARTNER/IN → S. 169",
+          "box": [
+            14.286,
+            41.426,
+            32.979,
+            2.054
+          ]
+        },
+        {
+          "id": "coursebook-71-line-11",
+          "text": "PARTNER/IN B → S. 197",
+          "box": [
+            48.334,
+            41.426,
+            16.949,
+            2.054
+          ]
+        },
+        {
+          "id": "coursebook-71-line-12",
+          "text": "Kursspaziergang AB 12",
+          "box": [
+            11.222,
+            45.639,
+            22.967,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-71-line-13",
+          "text": "a Lesen Sie den Fragebogen in b und notieren Sie",
+          "box": [
+            11.313,
+            47.595,
+            40.02,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-71-line-14",
+          "text": "die Partizipien wie im Beispiel.",
+          "box": [
+            14.286,
+            49.563,
+            23.807,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-71-line-15",
+          "text": "b Wer hat was wann gemacht? Suchen Sie Personen im Kurs und notieren Sie die Namen.",
+          "box": [
+            11.275,
+            52.416,
+            70.713,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-71-line-16",
+          "text": "Wer hat zuerst fünf Personen?",
+          "box": [
+            14.286,
+            54.384,
+            23.54,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-71-line-17",
+          "text": "gestern",
+          "box": [
+            15.042,
+            56.994,
+            5.274,
+            1.428
+          ]
+        },
+        {
+          "id": "coursebook-71-line-18",
+          "text": "letzten Freitag",
+          "box": [
+            30.057,
+            56.994,
+            10.171,
+            1.428
+          ]
+        },
+        {
+          "id": "coursebook-71-line-19",
+          "text": "letzten Samstag",
+          "box": [
+            45.071,
+            56.994,
+            11.079,
+            1.428
+          ]
+        },
+        {
+          "id": "coursebook-71-line-20",
+          "text": "letzten Sonntag",
+          "box": [
+            60.086,
+            56.994,
+            10.972,
+            1.428
+          ]
+        },
+        {
+          "id": "coursebook-71-line-21",
+          "text": "letzte Woche",
+          "box": [
+            75.101,
+            56.994,
+            9.046,
+            1.428
+          ]
+        },
+        {
+          "id": "coursebook-71-line-22",
+          "text": "lange frühstücken",
+          "box": [
+            15.042,
+            59.117,
+            12.351,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-71-line-23",
+          "text": "lange telefonieren",
+          "box": [
+            30.056,
+            59.117,
+            12.605,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-71-line-24",
+          "text": "Zeitung lesen",
+          "box": [
+            45.07,
+            59.117,
+            9.161,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-71-line-25",
+          "text": "Lena",
+          "box": [
+            45.486,
+            60.484,
+            4.637,
+            1.858
+          ]
+        },
+        {
+          "id": "coursebook-71-line-26",
+          "text": "fern|sehen",
+          "box": [
+            60.084,
+            59.117,
+            7.271,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-71-line-27",
+          "text": "Kuchen backen",
+          "box": [
+            75.098,
+            59.117,
+            10.364,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-71-line-28",
+          "text": "lange schlafen",
+          "box": [
+            15.042,
+            63.836,
+            9.889,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-71-line-29",
+          "text": "Sport machen",
+          "box": [
+            30.056,
+            63.836,
+            10.028,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-71-line-30",
+          "text": "Essen kochen",
+          "box": [
+            45.07,
+            63.836,
+            9.34,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-71-line-31",
+          "text": "Musik hören",
+          "box": [
+            60.084,
+            63.836,
+            8.371,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-71-line-32",
+          "text": "ein|kaufen",
+          "box": [
+            75.098,
+            63.836,
+            6.999,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-71-line-33",
+          "text": "Freunde ein|laden",
+          "box": [
+            15.042,
+            68.554,
+            12.21,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-71-line-34",
+          "text": "auf|räumen",
+          "box": [
+            30.056,
+            68.554,
+            7.732,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-71-line-35",
+          "text": "Freunde treffen",
+          "box": [
+            45.07,
+            68.554,
+            10.949,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-71-line-36",
+          "text": "eine Freundin",
+          "box": [
+            60.084,
+            68.554,
+            9.717,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-71-line-37",
+          "text": "an|rufen",
+          "box": [
+            60.084,
+            69.98,
+            5.662,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-71-line-38",
+          "text": "Deutsch lernen",
+          "box": [
+            75.098,
+            68.554,
+            10.561,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-71-line-39",
+          "text": "Hast du letzten Samstag Zeitung gelesen, Lena?",
+          "box": [
+            16.429,
+            75.55,
+            36.447,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-71-line-40",
+          "text": "Ja, ich habe letzten Samstag Zeitung gelesen. / Ja, habe ich.",
+          "box": [
+            16.429,
+            77.332,
+            45.643,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-71-line-41",
+          "text": "Hast du gestern lange geschlafen, Pedro?",
+          "box": [
+            16.429,
+            79.114,
+            31.841,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-71-line-42",
+          "text": "Nein, ich habe gestern nicht lange geschlafen. /",
+          "box": [
+            16.429,
+            80.895,
+            36.946,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-71-line-43",
+          "text": "Nein, habe ich nicht.",
+          "box": [
+            16.429,
+            82.677,
+            15.66,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-71-line-44",
+          "text": "frühstücken –",
+          "box": [
+            55.75,
+            46.774,
+            10.929,
+            1.615
+          ]
+        },
+        {
+          "id": "coursebook-71-line-45",
+          "text": "gefrühstückt",
+          "box": [
+            55.75,
+            48.437,
+            9.336,
+            1.615
+          ]
+        },
+        {
+          "id": "coursebook-71-line-46",
+          "text": "letzten Mittwoch",
+          "box": [
+            68.421,
+            79.115,
+            13.362,
+            1.729
+          ]
+        },
+        {
+          "id": "coursebook-71-line-47",
+          "text": "letztes Wochenende / Jahr",
+          "box": [
+            68.421,
+            80.576,
+            19.274,
+            1.729
+          ]
+        },
+        {
+          "id": "coursebook-71-line-48",
+          "text": "letzte Woche",
+          "box": [
+            68.421,
+            82.037,
+            10.638,
+            1.729
+          ]
+        },
+        {
+          "id": "coursebook-71-line-49",
+          "text": "Nachrichten",
+          "box": [
+            3.944,
+            95.713,
+            8.872,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-71-line-50",
+          "text": "schlafen",
+          "box": [
+            25.333,
+            95.713,
+            6.072,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-71-line-51",
+          "text": "Hausaufgaben machen",
+          "box": [
+            41.778,
+            95.713,
+            15.851,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-71-line-52",
+          "text": "eine Serie / einen Film schauen",
+          "box": [
+            59.535,
+            95.713,
+            21.663,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-71-line-53",
+          "text": "einkaufen",
+          "box": [
+            87.863,
+            95.713,
+            6.643,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-71-line-54",
+          "text": "von 13:30 Uhr bis 14:30 Uhr",
+          "box": [
+            65.862,
+            20.546,
+            22.183,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-71-line-55",
+          "text": "ab 17:30 Uhr",
+          "box": [
+            65.862,
+            24.359,
+            8.625,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-71-line-56",
+          "text": "Hallo Schatz,",
+          "box": [
+            15.765,
+            13.998,
+            9.298,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-71-line-57",
+          "text": "wie geht’s dir? Habt ihr Spaß in Wien? Ich habe heute von",
+          "box": [
+            15.765,
+            15.46,
+            39.853,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-71-line-58",
+          "text": "halb zwei bis halb drei mit Ulf Basketball gespielt. Danach",
+          "box": [
+            15.765,
+            16.921,
+            39.731,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-71-line-59",
+          "text": "haben wir ein Eis gegessen",
+          "box": [
+            15.765,
+            18.382,
+            18.781,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-71-line-60",
+          "text": ". Dann haben wir einen",
+          "box": [
+            38.148,
+            18.381,
+            15.993,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-71-line-61",
+          "text": "Einkaufsbummel gemacht. Ich habe eine Sonnenbrille und",
+          "box": [
+            15.764,
+            19.843,
+            40.121,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-71-line-62",
+          "text": "ein T-Shirt gekauft",
+          "box": [
+            15.764,
+            21.304,
+            13.167,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-71-line-63",
+          "text": ". Ab halb sechs haben wir die ganze",
+          "box": [
+            30.889,
+            21.303,
+            24.816,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-71-line-64",
+          "text": "Nacht bei Ulf Fußball geschaut. Wann kommst du morgen",
+          "box": [
+            15.764,
+            22.765,
+            40.047,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-71-line-65",
+          "text": "zurück? Ich hole dich am Bahnhof ab.",
+          "box": [
+            15.764,
+            24.226,
+            26.012,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-71-line-66",
+          "text": "Viele Küsse von Mark",
+          "box": [
+            15.765,
+            25.686,
+            14.535,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-71-line-67",
+          "text": "An: Emilia@t-online.com",
+          "box": [
+            16.214,
+            11.327,
+            12.751,
+            1.074
+          ]
+        },
+        {
+          "id": "coursebook-71-line-68",
+          "text": "einundsiebzig",
+          "box": [
+            94.254,
+            75.639,
+            2.216,
+            6.24
+          ]
+        }
+      ],
+      "audioIds": [],
+      "section": "Lesson 11",
+      "pageLabel": "Page 71"
+    },
+    {
+      "id": "coursebook-72",
+      "kind": "coursebook",
+      "lesson": 11,
+      "printedPage": 72,
+      "pdfPage": 74,
+      "image": "/book/pages/coursebook-72.webp",
+      "width": 1905,
+      "height": 2695,
+      "lines": [
+        {
+          "id": "coursebook-72-line-1",
+          "text": "Was passt? Notieren Sie.",
+          "box": [
+            14.286,
+            48.586,
+            17.232,
+            1.382
+          ]
+        },
+        {
+          "id": "coursebook-72-line-2",
+          "text": "Hausaufgaben | einen Kaffee | eine Serie | Nachrichten | eine Pause | den Schreibtisch",
+          "box": [
+            14.286,
+            50.132,
+            61.338,
+            3.599
+          ]
+        },
+        {
+          "id": "coursebook-72-line-3",
+          "text": "schauen | aufräumen | schreiben | machen | trinken | machen",
+          "box": [
+            14.286,
+            52.555,
+            43.736,
+            3.243
+          ]
+        },
+        {
+          "id": "coursebook-72-line-4",
+          "text": "1 Ergänzen Sie.",
+          "box": [
+            14.286,
+            58.578,
+            12.001,
+            1.382
+          ]
+        },
+        {
+          "id": "coursebook-72-line-5",
+          "text": "17:00 Uhr",
+          "box": [
+            51.974,
+            60.948,
+            7.41,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-72-line-6",
+          "text": "17:00 Uhr",
+          "box": [
+            38.999,
+            62.73,
+            7.082,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-72-line-7",
+          "text": "2 Ergänzen Sie in der richtigen Form.",
+          "box": [
+            14.286,
+            65.392,
+            27.102,
+            1.382
+          ]
+        },
+        {
+          "id": "coursebook-72-line-8",
+          "text": "a Hast du schon",
+          "box": [
+            14.286,
+            67.48,
+            12.276,
+            1.783
+          ]
+        },
+        {
+          "id": "coursebook-72-line-9",
+          "text": "? (einkaufen)",
+          "box": [
+            45.047,
+            67.762,
+            9.025,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-72-line-10",
+          "text": "b Nein, ich habe Deutsch",
+          "box": [
+            14.286,
+            69.273,
+            18.423,
+            1.783
+          ]
+        },
+        {
+          "id": "coursebook-72-line-11",
+          "text": "(lernen),",
+          "box": [
+            51.195,
+            69.544,
+            6.161,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-72-line-12",
+          "text": "E-Mails",
+          "box": [
+            16.428,
+            71.326,
+            5.405,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-72-line-13",
+          "text": "(schreiben)",
+          "box": [
+            40.32,
+            71.326,
+            8.444,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-72-line-14",
+          "text": "und dann ein bisschen",
+          "box": [
+            16.428,
+            73.108,
+            15.434,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-72-line-15",
+          "text": "(schlafen).",
+          "box": [
+            50.348,
+            73.108,
+            7.505,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-72-line-16",
+          "text": "Sehen Sie den Kalender an. Ergänzen Sie dann die E-Mail.",
+          "box": [
+            14.286,
+            76.916,
+            40.527,
+            1.382
+          ]
+        },
+        {
+          "id": "coursebook-72-line-17",
+          "text": "LÖSUNGEN → S. 203",
+          "box": [
+            10.913,
+            94.947,
+            14.469,
+            2.054
+          ]
+        },
+        {
+          "id": "coursebook-72-line-18",
+          "text": "eine Pause machen",
+          "box": [
+            59.974,
+            54.262,
+            15.011,
+            1.754
+          ]
+        },
+        {
+          "id": "coursebook-72-line-19",
+          "text": "Sonntag! Ein super Tag!",
+          "box": [
+            11.219,
+            4.796,
+            25.239,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-72-line-20",
+          "text": "Lesen Sie die Nachricht und planen Sie eine Antwort:",
+          "box": [
+            14.286,
+            7.033,
+            41.569,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-72-line-21",
+          "text": "Was haben Sie letzten Sonntag gemacht?",
+          "box": [
+            14.286,
+            8.72,
+            31.991,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-72-line-22",
+          "text": "Markieren Sie und machen Sie dann Notizen.",
+          "box": [
+            14.286,
+            10.407,
+            34.974,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-72-line-23",
+          "text": "ein|kaufen | fern|sehen| eine Freundin an|rufen | ab|holen | kochen | im Chor singen | fotografieren",
+          "box": [
+            14.286,
+            12.244,
+            69.735,
+            3.243
+          ]
+        },
+        {
+          "id": "coursebook-72-line-24",
+          "text": "Schach spielen | malen | backen | Fußball / Tennis/Basketball / Handball / … spielen | tanzen | Gitarre spielen",
+          "box": [
+            14.286,
+            14.311,
+            73.777,
+            3.243
+          ]
+        },
+        {
+          "id": "coursebook-72-line-25",
+          "text": "Freunde treffen | Musik / Radio hören | einen Ausflug machen | (Zeitung) lesen | E-Mails schreiben | arbeiten",
+          "box": [
+            14.286,
+            16.378,
+            75.396,
+            3.243
+          ]
+        },
+        {
+          "id": "coursebook-72-line-26",
+          "text": "im Internet surfen | telefonieren | essen | trinken | spät frühstücken | Hausaufgaben machen | auf|räumen",
+          "box": [
+            14.286,
+            18.445,
+            74.803,
+            3.243
+          ]
+        },
+        {
+          "id": "coursebook-72-line-27",
+          "text": "Deutsch lernen | Nachrichten schreiben | lange schlafen | eine Pause machen | einen Spaziergang machen",
+          "box": [
+            14.286,
+            20.512,
+            74.093,
+            3.243
+          ]
+        },
+        {
+          "id": "coursebook-72-line-28",
+          "text": "Wäsche waschen | chatten | ein Geschenk kaufen | Freunde ein|laden",
+          "box": [
+            14.285,
+            22.579,
+            59.652,
+            3.243
+          ]
+        },
+        {
+          "id": "coursebook-72-line-29",
+          "text": "b Schreiben Sie die Antwort.",
+          "box": [
+            11.275,
+            32.318,
+            23.596,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-72-line-30",
+          "text": "am Morgen/Nachmittag … | dann | danach | von … bis | um | ab | …",
+          "box": [
+            14.286,
+            33.932,
+            47.423,
+            3.243
+          ]
+        },
+        {
+          "id": "coursebook-72-line-31",
+          "text": "c Tauschen Sie mit Ihrer Partnerin / Ihrem Partner.",
+          "box": [
+            11.401,
+            38.092,
+            41.739,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-72-line-32",
+          "text": "Korrigieren Sie.",
+          "box": [
+            14.286,
+            40.061,
+            12.181,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-72-line-33",
+          "text": "Hallo …,",
+          "box": [
+            61.726,
+            4.985,
+            5.674,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-72-line-34",
+          "text": "Wie geht’s dir?",
+          "box": [
+            61.726,
+            6.447,
+            10.112,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-72-line-35",
+          "text": "Was hast du letzten Sonntag gemacht?",
+          "box": [
+            61.726,
+            7.908,
+            26.349,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-72-line-36",
+          "text": "Liebe Grüße, Susa",
+          "box": [
+            61.726,
+            9.369,
+            12.228,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-72-line-37",
+          "text": "So | 02. September",
+          "box": [
+            62.391,
+            79.504,
+            10.63,
+            1.144
+          ]
+        },
+        {
+          "id": "coursebook-72-line-38",
+          "text": "10:00 Mara anrufen",
+          "box": [
+            59.738,
+            81.596,
+            15.168,
+            1.633
+          ]
+        },
+        {
+          "id": "coursebook-72-line-39",
+          "text": "13:00 – 17:00 Fußball",
+          "box": [
+            59.738,
+            84.04,
+            15.817,
+            1.633
+          ]
+        },
+        {
+          "id": "coursebook-72-line-40",
+          "text": "spielen mit Johann",
+          "box": [
+            59.738,
+            85.721,
+            14.187,
+            1.615
+          ]
+        },
+        {
+          "id": "coursebook-72-line-41",
+          "text": "19:00 Film mit",
+          "box": [
+            59.738,
+            88.147,
+            10.884,
+            1.633
+          ]
+        },
+        {
+          "id": "coursebook-72-line-42",
+          "text": "Tobi schauen",
+          "box": [
+            59.738,
+            89.828,
+            9.696,
+            1.615
+          ]
+        },
+        {
+          "id": "coursebook-72-line-43",
+          "text": "/ 5 Punkte",
+          "box": [
+            81.528,
+            52.436,
+            6.852,
+            1.151
+          ]
+        },
+        {
+          "id": "coursebook-72-line-44",
+          "text": "3 – 5 Punkte",
+          "box": [
+            80.61,
+            54.152,
+            7.79,
+            1.151
+          ]
+        },
+        {
+          "id": "coursebook-72-line-45",
+          "text": "0 – 2 Punkte",
+          "box": [
+            80.639,
+            55.817,
+            7.76,
+            1.151
+          ]
+        },
+        {
+          "id": "coursebook-72-line-46",
+          "text": "/ 7 Punkte",
+          "box": [
+            81.528,
+            70.752,
+            6.852,
+            1.151
+          ]
+        },
+        {
+          "id": "coursebook-72-line-47",
+          "text": "4 – 7 Punkte",
+          "box": [
+            80.61,
+            72.468,
+            7.79,
+            1.151
+          ]
+        },
+        {
+          "id": "coursebook-72-line-48",
+          "text": "0 – 3 Punkte",
+          "box": [
+            80.639,
+            74.134,
+            7.76,
+            1.151
+          ]
+        },
+        {
+          "id": "coursebook-72-line-49",
+          "text": "/ 6 Punkte",
+          "box": [
+            81.528,
+            88.328,
+            6.852,
+            1.151
+          ]
+        },
+        {
+          "id": "coursebook-72-line-50",
+          "text": "4 – 6 Punkte",
+          "box": [
+            80.61,
+            90.044,
+            7.79,
+            1.151
+          ]
+        },
+        {
+          "id": "coursebook-72-line-51",
+          "text": "0 – 3 Punkte",
+          "box": [
+            80.639,
+            91.709,
+            7.76,
+            1.151
+          ]
+        },
+        {
+          "id": "coursebook-72-line-52",
+          "text": "am Morgen: lange geschlafen und spät gefrühstückt",
+          "box": [
+            15.945,
+            28.274,
+            37.911,
+            1.615
+          ]
+        },
+        {
+          "id": "coursebook-72-line-53",
+          "text": "Liebe Susa",
+          "box": [
+            69.057,
+            32.063,
+            8.028,
+            1.615
+          ]
+        },
+        {
+          "id": "coursebook-72-line-54",
+          "text": "Sonntag! Ein super Tag!",
+          "box": [
+            69.057,
+            33.726,
+            18.256,
+            1.615
+          ]
+        },
+        {
+          "id": "coursebook-72-line-55",
+          "text": "Am Morgen habe ich",
+          "box": [
+            69.057,
+            35.389,
+            15.498,
+            1.615
+          ]
+        },
+        {
+          "id": "coursebook-72-line-56",
+          "text": "lange geschlafen …",
+          "box": [
+            69.057,
+            37.052,
+            13.917,
+            1.615
+          ]
+        },
+        {
+          "id": "coursebook-72-line-57",
+          "text": "Lieber Toni,",
+          "box": [
+            15.765,
+            81.524,
+            8.116,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-72-line-58",
+          "text": "mir geht’s gut. Was ich gestern gemacht habe?",
+          "box": [
+            15.765,
+            82.986,
+            31.874,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-72-line-59",
+          "text": "Am Vormittag",
+          "box": [
+            15.765,
+            84.768,
+            9.951,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-72-line-60",
+          "text": "Am Nachmittag",
+          "box": [
+            15.765,
+            86.55,
+            11.155,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-72-line-61",
+          "text": "Ab",
+          "box": [
+            15.765,
+            88.332,
+            2.254,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-72-line-62",
+          "text": "Und du? Was …",
+          "box": [
+            15.765,
+            89.793,
+            10.065,
+            1.381
+          ]
+        },
+        {
+          "id": "coursebook-72-line-63",
+          "text": "zweiundsiebzig",
+          "box": [
+            3.3,
+            75.061,
+            2.216,
+            6.818
+          ]
+        }
+      ],
+      "audioIds": [],
+      "section": "Lesson 11",
+      "pageLabel": "Page 72"
+    },
+    {
       "id": "coursebook-155",
       "kind": "coursebook",
       "lesson": 1,
@@ -62296,6 +64560,2158 @@
       "pageLabel": "Page 195",
       "lessons": [
         10
+      ]
+    },
+    {
+      "id": "coursebook-168",
+      "kind": "coursebook",
+      "lesson": 11,
+      "printedPage": 168,
+      "pdfPage": 170,
+      "image": "/book/pages/coursebook-168.webp",
+      "width": 1905,
+      "height": 2695,
+      "lines": [
+        {
+          "id": "coursebook-168-line-1",
+          "text": "einhundertachtundsechzig",
+          "box": [
+            3.383,
+            69.552,
+            2.216,
+            12.327
+          ]
+        },
+        {
+          "id": "coursebook-168-line-2",
+          "text": "PARTNER/IN A",
+          "box": [
+            23.985,
+            10.337,
+            10.844,
+            1.19
+          ]
+        },
+        {
+          "id": "coursebook-168-line-3",
+          "text": "Was haben Anna und Leo gestern gemacht?",
+          "box": [
+            14.524,
+            12.795,
+            40.391,
+            1.607
+          ]
+        },
+        {
+          "id": "coursebook-168-line-4",
+          "text": "a Was hat Anna gestern gemacht? Notieren Sie die Partizipien. Suchen Sie auch im",
+          "box": [
+            14.524,
+            14.75,
+            64.326,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-168-line-5",
+          "text": "Online-Wörterbuch.",
+          "box": [
+            16.143,
+            16.719,
+            15.637,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-168-line-6",
+          "text": "Tee kochen",
+          "box": [
+            14.524,
+            31.799,
+            7.673,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-168-line-7",
+          "text": "Deutsch lernen",
+          "box": [
+            33.252,
+            31.799,
+            10.479,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-168-line-8",
+          "text": "Freunde treffen",
+          "box": [
+            51.98,
+            31.799,
+            10.89,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-168-line-9",
+          "text": "einen Spaziergang machen",
+          "box": [
+            70.708,
+            31.799,
+            18.318,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-168-line-10",
+          "text": "Tee gekocht",
+          "box": [
+            14.524,
+            33.36,
+            9.97,
+            1.858
+          ]
+        },
+        {
+          "id": "coursebook-168-line-11",
+          "text": "fotografieren",
+          "box": [
+            14.524,
+            45.248,
+            9.241,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-168-line-12",
+          "text": "arbeiten",
+          "box": [
+            33.252,
+            45.248,
+            5.709,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-168-line-13",
+          "text": "Zeitung lesen",
+          "box": [
+            51.98,
+            45.248,
+            9.111,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-168-line-14",
+          "text": "fernsehen",
+          "box": [
+            70.708,
+            45.248,
+            6.87,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-168-line-15",
+          "text": "b Erzählen Sie Ihrer Partnerin / Ihrem Partner von Annas Tag.",
+          "box": [
+            14.524,
+            49.981,
+            48.746,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-168-line-16",
+          "text": "c Was hat Leo gestern gemacht? Ihre Partnerin / Ihr Partner erzählt. Sortieren Sie.",
+          "box": [
+            14.524,
+            60.243,
+            64.633,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-168-line-17",
+          "text": "Kaffee trinken",
+          "box": [
+            14.524,
+            71.525,
+            9.767,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-168-line-18",
+          "text": "einkaufen",
+          "box": [
+            33.252,
+            71.525,
+            6.643,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-168-line-19",
+          "text": "aufräumen",
+          "box": [
+            51.98,
+            71.525,
+            7.318,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-168-line-20",
+          "text": "lange schlafen",
+          "box": [
+            70.708,
+            71.525,
+            9.771,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-168-line-21",
+          "text": "Musik hören",
+          "box": [
+            14.524,
+            84.844,
+            8.352,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-168-line-22",
+          "text": "im Internet surfen",
+          "box": [
+            33.252,
+            84.844,
+            12.449,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-168-line-23",
+          "text": "Fußball spielen",
+          "box": [
+            51.98,
+            84.844,
+            10.175,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-168-line-24",
+          "text": "Nudeln kochen",
+          "box": [
+            70.708,
+            84.844,
+            10.273,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-168-line-25",
+          "text": "Gestern Morgen hat",
+          "box": [
+            15.68,
+            53.832,
+            14.207,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-168-line-26",
+          "text": "Anna Tee gekocht.",
+          "box": [
+            15.68,
+            55.294,
+            12.874,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-168-line-27",
+          "text": "Gestern Morgen …",
+          "box": [
+            35.918,
+            53.832,
+            12.64,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-168-line-28",
+          "text": "Dann / Danach …",
+          "box": [
+            35.918,
+            55.294,
+            10.892,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-168-line-29",
+          "text": "Am Vormittag / Nachmittag / Abend …",
+          "box": [
+            35.918,
+            56.755,
+            25.175,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-168-line-30",
+          "text": "A I. ko. ·chen <kochst, kochte, hat gekocht>",
+          "box": [
+            17.202,
+            18.742,
+            30.796,
+            2.162
+          ]
+        }
+      ],
+      "audioIds": [],
+      "section": "Partner activities · Lesson 11",
+      "pageLabel": "Page 168",
+      "lessons": [
+        11
+      ]
+    },
+    {
+      "id": "coursebook-169",
+      "kind": "coursebook",
+      "lesson": 11,
+      "printedPage": 169,
+      "pdfPage": 171,
+      "image": "/book/pages/coursebook-169.webp",
+      "width": 1905,
+      "height": 2695,
+      "lines": [
+        {
+          "id": "coursebook-169-line-1",
+          "text": "einhundertneunundsechzig",
+          "box": [
+            94.254,
+            69.288,
+            2.216,
+            12.591
+          ]
+        },
+        {
+          "id": "coursebook-169-line-2",
+          "text": "PARTNER/IN A",
+          "box": [
+            23.617,
+            10.322,
+            10.844,
+            1.19
+          ]
+        },
+        {
+          "id": "coursebook-169-line-3",
+          "text": "Wann ist … geöffnet?",
+          "box": [
+            14.524,
+            12.78,
+            20.427,
+            1.607
+          ]
+        },
+        {
+          "id": "coursebook-169-line-4",
+          "text": "a Sehen Sie die Schilder an. Fragen Sie Ihre Partnerin / Ihren Partner",
+          "box": [
+            14.524,
+            14.735,
+            54.338,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-169-line-5",
+          "text": "und ergänzen Sie die fehlenden Informationen.",
+          "box": [
+            16.524,
+            16.703,
+            36.944,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-169-line-6",
+          "text": "Partner/in A: Wann ist die Praxis",
+          "box": [
+            16.905,
+            46.502,
+            24.93,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-169-line-7",
+          "text": "von Montag bis Freitag geöffnet?",
+          "box": [
+            16.905,
+            48.284,
+            26.033,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-169-line-8",
+          "text": "Partner/in B: Von 8 bis 13 Uhr.",
+          "box": [
+            16.905,
+            50.066,
+            23.416,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-169-line-9",
+          "text": "Partner/in A: Und am Dienstag",
+          "box": [
+            16.905,
+            51.847,
+            23.831,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-169-line-10",
+          "text": "und Donnerstag?",
+          "box": [
+            16.905,
+            53.629,
+            13.503,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-169-line-11",
+          "text": "Partner/in B: Am Nachmittag,",
+          "box": [
+            16.905,
+            55.411,
+            23.124,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-169-line-12",
+          "text": "von 15 bis 18 Uhr.",
+          "box": [
+            16.905,
+            57.192,
+            13.577,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-169-line-13",
+          "text": "b Sehen Sie die Schilder an. Ihre Partnerin / Ihr Partner fragt,",
+          "box": [
+            14.524,
+            59.644,
+            48.721,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-169-line-14",
+          "text": "Sie antworten.",
+          "box": [
+            16.524,
+            61.613,
+            11.305,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-169-line-15",
+          "text": "Boutique – Paris Moden",
+          "box": [
+            44.301,
+            21.02,
+            22.763,
+            2.043
+          ]
+        },
+        {
+          "id": "coursebook-169-line-16",
+          "text": "Wir haben im August Urlaub!",
+          "box": [
+            44.301,
+            23.098,
+            22.994,
+            1.696
+          ]
+        },
+        {
+          "id": "coursebook-169-line-17",
+          "text": "ist die Boutique",
+          "box": [
+            55.443,
+            24.938,
+            12.921,
+            1.696
+          ]
+        },
+        {
+          "id": "coursebook-169-line-18",
+          "text": "wieder geöﬀ net!",
+          "box": [
+            44.301,
+            26.779,
+            12.413,
+            1.696
+          ]
+        },
+        {
+          "id": "coursebook-169-line-19",
+          "text": "Praxis Johanna Kalteis",
+          "box": [
+            18.278,
+            20.843,
+            18.133,
+            1.634
+          ]
+        },
+        {
+          "id": "coursebook-169-line-20",
+          "text": "– Kinderarzt –",
+          "box": [
+            21.749,
+            22.649,
+            10.79,
+            1.549
+          ]
+        },
+        {
+          "id": "coursebook-169-line-21",
+          "text": "Montag bis Freitag:",
+          "box": [
+            19.703,
+            24.767,
+            15.283,
+            1.549
+          ]
+        },
+        {
+          "id": "coursebook-169-line-22",
+          "text": "Uhr",
+          "box": [
+            34.756,
+            26.549,
+            3.644,
+            1.549
+          ]
+        },
+        {
+          "id": "coursebook-169-line-23",
+          "text": "Dienstag und Donnerstag:",
+          "box": [
+            17.089,
+            28.331,
+            20.51,
+            1.549
+          ]
+        },
+        {
+          "id": "coursebook-169-line-24",
+          "text": "Uhr",
+          "box": [
+            34.756,
+            30.112,
+            3.277,
+            1.549
+          ]
+        },
+        {
+          "id": "coursebook-169-line-25",
+          "text": "Deutschkurs mit",
+          "box": [
+            44.363,
+            35.056,
+            14.21,
+            1.538
+          ]
+        },
+        {
+          "id": "coursebook-169-line-26",
+          "text": "Momente A1.1",
+          "box": [
+            45.149,
+            36.838,
+            12.638,
+            1.538
+          ]
+        },
+        {
+          "id": "coursebook-169-line-27",
+          "text": "Kursleiterin: Dörte Buchner",
+          "box": [
+            39.635,
+            38.956,
+            23.263,
+            1.538
+          ]
+        },
+        {
+          "id": "coursebook-169-line-28",
+          "text": "Montag bis Freitag:",
+          "box": [
+            43.147,
+            40.738,
+            16.64,
+            1.538
+          ]
+        },
+        {
+          "id": "coursebook-169-line-29",
+          "text": "Achtung!",
+          "box": [
+            16.067,
+            36.393,
+            10.386,
+            2.423
+          ]
+        },
+        {
+          "id": "coursebook-169-line-30",
+          "text": "Der Film beginnt",
+          "box": [
+            16.067,
+            38.959,
+            15.062,
+            1.858
+          ]
+        },
+        {
+          "id": "coursebook-169-line-31",
+          "text": "heute",
+          "box": [
+            16.067,
+            40.8,
+            5.354,
+            1.858
+          ]
+        },
+        {
+          "id": "coursebook-169-line-32",
+          "text": "Uhr.",
+          "box": [
+            30.933,
+            40.8,
+            4.526,
+            1.858
+          ]
+        },
+        {
+          "id": "coursebook-169-line-33",
+          "text": "(Blumen)Laden",
+          "box": [
+            76.475,
+            47.641,
+            11.899,
+            1.729
+          ]
+        },
+        {
+          "id": "coursebook-169-line-34",
+          "text": "Boutique",
+          "box": [
+            76.475,
+            49.102,
+            7.782,
+            1.729
+          ]
+        },
+        {
+          "id": "coursebook-169-line-35",
+          "text": "Eiscafé",
+          "box": [
+            76.475,
+            50.563,
+            6.104,
+            1.729
+          ]
+        },
+        {
+          "id": "coursebook-169-line-36",
+          "text": "Praxis",
+          "box": [
+            76.475,
+            52.024,
+            5.286,
+            1.729
+          ]
+        },
+        {
+          "id": "coursebook-169-line-37",
+          "text": "Kiosk",
+          "box": [
+            76.475,
+            53.485,
+            4.844,
+            1.729
+          ]
+        },
+        {
+          "id": "coursebook-169-line-38",
+          "text": "Kurs",
+          "box": [
+            76.475,
+            54.946,
+            4.221,
+            1.729
+          ]
+        },
+        {
+          "id": "coursebook-169-line-39",
+          "text": "Wann ist …",
+          "box": [
+            50.798,
+            47.774,
+            7.532,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-169-line-40",
+          "text": "geöffnet?",
+          "box": [
+            50.798,
+            49.236,
+            7.569,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-169-line-41",
+          "text": "Wann ist …",
+          "box": [
+            50.798,
+            50.697,
+            7.532,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-169-line-42",
+          "text": "geschlossen?",
+          "box": [
+            50.798,
+            52.158,
+            9.767,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-169-line-43",
+          "text": "Wann beginnt …?",
+          "box": [
+            50.798,
+            53.62,
+            11.882,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-169-line-44",
+          "text": "Wann ist …?",
+          "box": [
+            50.798,
+            55.081,
+            7.913,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-169-line-45",
+          "text": "gt,",
+          "box": [
+            60.774,
+            59.926,
+            2.072,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-169-line-46",
+          "text": "Eiscafe",
+          "box": [
+            71.63,
+            61.825,
+            7.902,
+            1.602
+          ]
+        },
+        {
+          "id": "coursebook-169-line-47",
+          "text": "Dolomiti",
+          "box": [
+            70.778,
+            63.488,
+            9.18,
+            1.602
+          ]
+        },
+        {
+          "id": "coursebook-169-line-48",
+          "text": "Wir haben Urlaub!",
+          "box": [
+            67.072,
+            65.451,
+            14.15,
+            1.549
+          ]
+        },
+        {
+          "id": "coursebook-169-line-49",
+          "text": "Das Eiscafé ist",
+          "box": [
+            70.18,
+            67.232,
+            10.782,
+            1.549
+          ]
+        },
+        {
+          "id": "coursebook-169-line-50",
+          "text": "von November",
+          "box": [
+            70.014,
+            69.014,
+            10.717,
+            1.549
+          ]
+        },
+        {
+          "id": "coursebook-169-line-51",
+          "text": "bis März geschlossen!",
+          "box": [
+            67.101,
+            70.796,
+            16.947,
+            1.549
+          ]
+        },
+        {
+          "id": "coursebook-169-line-52",
+          "text": "Ab April ist das Café",
+          "box": [
+            67.531,
+            72.578,
+            16.085,
+            1.549
+          ]
+        },
+        {
+          "id": "coursebook-169-line-53",
+          "text": "wieder geöffnet!",
+          "box": [
+            68.941,
+            74.359,
+            13.266,
+            1.549
+          ]
+        },
+        {
+          "id": "coursebook-169-line-54",
+          "text": "Ihr Giovanni",
+          "box": [
+            70.715,
+            76.474,
+            9.315,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-169-line-55",
+          "text": "Praxis Erwin Bohrer",
+          "box": [
+            17.639,
+            65.876,
+            15.583,
+            1.594
+          ]
+        },
+        {
+          "id": "coursebook-169-line-56",
+          "text": "– Zahnarzt –",
+          "box": [
+            17.783,
+            67.682,
+            9.189,
+            1.51
+          ]
+        },
+        {
+          "id": "coursebook-169-line-57",
+          "text": "Montag – Donnerstag:",
+          "box": [
+            16.964,
+            70.572,
+            16.934,
+            1.51
+          ]
+        },
+        {
+          "id": "coursebook-169-line-58",
+          "text": "Freitag:",
+          "box": [
+            22.407,
+            73.997,
+            5.657,
+            1.51
+          ]
+        },
+        {
+          "id": "coursebook-169-line-59",
+          "text": "Museumblauereiter",
+          "box": [
+            39.046,
+            64.866,
+            19.076,
+            1.285
+          ]
+        },
+        {
+          "id": "coursebook-169-line-60",
+          "text": "Dienstag – Sonntag:",
+          "box": [
+            41.688,
+            66.622,
+            14.137,
+            1.321
+          ]
+        },
+        {
+          "id": "coursebook-169-line-61",
+          "text": "8:00 bis 17:00",
+          "box": [
+            43.616,
+            68.404,
+            9.934,
+            1.321
+          ]
+        },
+        {
+          "id": "coursebook-169-line-62",
+          "text": "Montag:",
+          "box": [
+            45.759,
+            70.186,
+            5.992,
+            1.321
+          ]
+        },
+        {
+          "id": "coursebook-169-line-63",
+          "text": "geschlossen",
+          "box": [
+            44.647,
+            71.504,
+            7.874,
+            1.321
+          ]
+        },
+        {
+          "id": "coursebook-169-line-64",
+          "text": "Achtung!",
+          "box": [
+            47.423,
+            81.303,
+            7.997,
+            1.858
+          ]
+        },
+        {
+          "id": "coursebook-169-line-65",
+          "text": "Das Konzert beginnt",
+          "box": [
+            47.423,
+            83.144,
+            17.95,
+            1.858
+          ]
+        },
+        {
+          "id": "coursebook-169-line-66",
+          "text": "um 21 Uhr!",
+          "box": [
+            47.423,
+            84.986,
+            9.316,
+            1.858
+          ]
+        },
+        {
+          "id": "coursebook-169-line-67",
+          "text": "Blumenladen",
+          "box": [
+            68.755,
+            33.518,
+            12.776,
+            1.938
+          ]
+        },
+        {
+          "id": "coursebook-169-line-68",
+          "text": "Tausendschön",
+          "box": [
+            68.503,
+            35.656,
+            13.278,
+            1.938
+          ]
+        },
+        {
+          "id": "coursebook-169-line-69",
+          "text": "Heute ist der",
+          "box": [
+            72.392,
+            37.794,
+            11.692,
+            1.938
+          ]
+        },
+        {
+          "id": "coursebook-169-line-70",
+          "text": "Laden leider",
+          "box": [
+            67.737,
+            39.932,
+            11.139,
+            1.938
+          ]
+        },
+        {
+          "id": "coursebook-169-line-71",
+          "text": "geschlossen.",
+          "box": [
+            72.779,
+            42.07,
+            10.391,
+            1.938
+          ]
+        },
+        {
+          "id": "coursebook-169-line-72",
+          "text": "Kiosk Istanbul",
+          "box": [
+            16.153,
+            81.557,
+            13.618,
+            2.262
+          ]
+        },
+        {
+          "id": "coursebook-169-line-73",
+          "text": "Der Kiosk ist",
+          "box": [
+            16.153,
+            84.012,
+            11.073,
+            1.858
+          ]
+        },
+        {
+          "id": "coursebook-169-line-74",
+          "text": "heute leider nur bis",
+          "box": [
+            16.153,
+            85.854,
+            16.389,
+            1.858
+          ]
+        },
+        {
+          "id": "coursebook-169-line-75",
+          "text": "14:00 Uhr geöﬀ net.",
+          "box": [
+            16.153,
+            87.695,
+            16.125,
+            1.858
+          ]
+        },
+        {
+          "id": "coursebook-169-line-76",
+          "text": "Ihr Murat",
+          "box": [
+            16.153,
+            89.536,
+            8.068,
+            1.858
+          ]
+        }
+      ],
+      "audioIds": [],
+      "section": "Partner activities · Lesson 11",
+      "pageLabel": "Page 169",
+      "lessons": [
+        11
+      ]
+    },
+    {
+      "id": "coursebook-196",
+      "kind": "coursebook",
+      "lesson": 11,
+      "printedPage": 196,
+      "pdfPage": 198,
+      "image": "/book/pages/coursebook-196.webp",
+      "width": 1905,
+      "height": 2695,
+      "lines": [
+        {
+          "id": "coursebook-196-line-1",
+          "text": "einhundertsechsundneunzig",
+          "box": [
+            3.383,
+            68.837,
+            2.216,
+            13.042
+          ]
+        },
+        {
+          "id": "coursebook-196-line-2",
+          "text": "PARTNER/IN B",
+          "box": [
+            23.557,
+            10.337,
+            10.785,
+            1.19
+          ]
+        },
+        {
+          "id": "coursebook-196-line-3",
+          "text": "Was haben Anna und Leo gestern gemacht?",
+          "box": [
+            14.524,
+            12.795,
+            40.391,
+            1.607
+          ]
+        },
+        {
+          "id": "coursebook-196-line-4",
+          "text": "a Was hat Leo gestern gemacht? Notieren Sie die Partizipien. Suchen Sie auch im",
+          "box": [
+            14.524,
+            14.75,
+            63.422,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-196-line-5",
+          "text": "Online-Wörterbuch.",
+          "box": [
+            16.524,
+            16.719,
+            15.637,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-196-line-6",
+          "text": "lange schlafen",
+          "box": [
+            14.524,
+            31.799,
+            9.771,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-196-line-7",
+          "text": "Kaffee trinken",
+          "box": [
+            33.252,
+            31.799,
+            9.767,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-196-line-8",
+          "text": "im Internet surfen",
+          "box": [
+            51.98,
+            31.799,
+            12.449,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-196-line-9",
+          "text": "aufräumen",
+          "box": [
+            70.708,
+            31.799,
+            7.378,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-196-line-10",
+          "text": "lange geschlafen",
+          "box": [
+            14.524,
+            33.36,
+            13.473,
+            1.858
+          ]
+        },
+        {
+          "id": "coursebook-196-line-11",
+          "text": "einkaufen",
+          "box": [
+            14.524,
+            45.248,
+            6.643,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-196-line-12",
+          "text": "Nudeln kochen",
+          "box": [
+            33.252,
+            45.248,
+            10.273,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-196-line-13",
+          "text": "Musik hören",
+          "box": [
+            51.98,
+            45.248,
+            8.352,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-196-line-14",
+          "text": "Fußball spielen",
+          "box": [
+            70.708,
+            45.248,
+            10.175,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-196-line-15",
+          "text": "b Was hat Anna gestern gemacht? Ihre Partnerin / Ihr Partner erzählt. Sortieren Sie.",
+          "box": [
+            14.524,
+            50.033,
+            65.916,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-196-line-16",
+          "text": "fotografieren",
+          "box": [
+            14.524,
+            61.315,
+            9.241,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-196-line-17",
+          "text": "arbeiten",
+          "box": [
+            33.252,
+            61.315,
+            5.709,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-196-line-18",
+          "text": "Zeitung lesen",
+          "box": [
+            51.98,
+            61.315,
+            9.111,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-196-line-19",
+          "text": "Tee kochen",
+          "box": [
+            70.708,
+            61.315,
+            7.673,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-196-line-20",
+          "text": "fernsehen",
+          "box": [
+            14.524,
+            74.635,
+            6.87,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-196-line-21",
+          "text": "einen Spaziergang machen Deutsch lernen",
+          "box": [
+            33.252,
+            74.635,
+            29.208,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-196-line-22",
+          "text": "Freunde treffen",
+          "box": [
+            70.709,
+            74.635,
+            10.89,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-196-line-23",
+          "text": "c Erzählen Sie Ihrer Partnerin / Ihrem Partner von Leos Tag.",
+          "box": [
+            14.524,
+            79.286,
+            47.462,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-196-line-24",
+          "text": "A I. ko. ·chen <kochst, kochte, hat gekocht>",
+          "box": [
+            17.659,
+            19.226,
+            30.796,
+            2.162
+          ]
+        },
+        {
+          "id": "coursebook-196-line-25",
+          "text": "Gestern Morgen hat Leo lange",
+          "box": [
+            16.013,
+            83.053,
+            21.152,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-196-line-26",
+          "text": "geschlafen. Dann hat er …",
+          "box": [
+            16.013,
+            84.514,
+            17.509,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-196-line-27",
+          "text": "Gestern Morgen …",
+          "box": [
+            42.441,
+            83.053,
+            12.64,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-196-line-28",
+          "text": "Dann … / Danach",
+          "box": [
+            42.441,
+            84.514,
+            10.892,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-196-line-29",
+          "text": "Am Vormittag / Nachmittag / Abend …",
+          "box": [
+            42.441,
+            85.976,
+            25.175,
+            1.394
+          ]
+        }
+      ],
+      "audioIds": [],
+      "section": "Partner activities · Lesson 11",
+      "pageLabel": "Page 196",
+      "lessons": [
+        11
+      ]
+    },
+    {
+      "id": "coursebook-197",
+      "kind": "coursebook",
+      "lesson": 11,
+      "printedPage": 197,
+      "pdfPage": 199,
+      "image": "/book/pages/coursebook-197.webp",
+      "width": 1905,
+      "height": 2695,
+      "lines": [
+        {
+          "id": "coursebook-197-line-1",
+          "text": "einhundertsiebenundneunzig",
+          "box": [
+            94.254,
+            68.444,
+            2.216,
+            13.435
+          ]
+        },
+        {
+          "id": "coursebook-197-line-2",
+          "text": "PARTNER/IN B",
+          "box": [
+            23.617,
+            10.337,
+            10.785,
+            1.19
+          ]
+        },
+        {
+          "id": "coursebook-197-line-3",
+          "text": "Wann ist … geöffnet?",
+          "box": [
+            14.524,
+            12.795,
+            20.427,
+            1.607
+          ]
+        },
+        {
+          "id": "coursebook-197-line-4",
+          "text": "a Sehen Sie die Schilder an. Ihre Partnerin / Ihr Partner fragt, Sie antworten.",
+          "box": [
+            14.524,
+            14.75,
+            60.098,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-197-line-5",
+          "text": "Partner/in A: Wann ist die Praxis",
+          "box": [
+            16.905,
+            44.831,
+            24.93,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-197-line-6",
+          "text": "von Montag bis Freitag geöffnet?",
+          "box": [
+            16.905,
+            46.613,
+            26.033,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-197-line-7",
+          "text": "Partner/in B: Von 8 bis 13 Uhr.",
+          "box": [
+            16.905,
+            48.394,
+            23.416,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-197-line-8",
+          "text": "Partner/in A: Und am Dienstag",
+          "box": [
+            16.905,
+            50.176,
+            23.831,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-197-line-9",
+          "text": "und Donnerstag?",
+          "box": [
+            16.905,
+            51.958,
+            13.503,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-197-line-10",
+          "text": "Partner/in B: Am Nachmittag,",
+          "box": [
+            16.905,
+            53.74,
+            23.124,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-197-line-11",
+          "text": "von 15 bis 18 Uhr.",
+          "box": [
+            16.905,
+            55.521,
+            13.577,
+            1.535
+          ]
+        },
+        {
+          "id": "coursebook-197-line-12",
+          "text": "b Sehen Sie die Schilder an. Fragen Sie Ihre Partnerin / Ihren Partner",
+          "box": [
+            14.524,
+            57.973,
+            54.338,
+            1.935
+          ]
+        },
+        {
+          "id": "coursebook-197-line-13",
+          "text": "und ergänzen Sie die fehlenden Informationen.",
+          "box": [
+            16.524,
+            59.941,
+            36.944,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-197-line-14",
+          "text": "(Blumen)Laden",
+          "box": [
+            76.475,
+            45.553,
+            11.899,
+            1.729
+          ]
+        },
+        {
+          "id": "coursebook-197-line-15",
+          "text": "Boutique",
+          "box": [
+            76.475,
+            47.014,
+            7.782,
+            1.729
+          ]
+        },
+        {
+          "id": "coursebook-197-line-16",
+          "text": "Eiscafé",
+          "box": [
+            76.475,
+            48.475,
+            6.104,
+            1.729
+          ]
+        },
+        {
+          "id": "coursebook-197-line-17",
+          "text": "Praxis",
+          "box": [
+            76.475,
+            49.936,
+            5.286,
+            1.729
+          ]
+        },
+        {
+          "id": "coursebook-197-line-18",
+          "text": "Kiosk",
+          "box": [
+            76.475,
+            51.397,
+            4.844,
+            1.729
+          ]
+        },
+        {
+          "id": "coursebook-197-line-19",
+          "text": "Kurs",
+          "box": [
+            76.475,
+            52.858,
+            4.221,
+            1.729
+          ]
+        },
+        {
+          "id": "coursebook-197-line-20",
+          "text": "Wann ist …",
+          "box": [
+            50.798,
+            45.687,
+            7.532,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-197-line-21",
+          "text": "geöffnet?",
+          "box": [
+            50.798,
+            47.148,
+            7.931,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-197-line-22",
+          "text": "Wann ist …",
+          "box": [
+            50.798,
+            48.609,
+            7.532,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-197-line-23",
+          "text": "geschlossen?",
+          "box": [
+            50.798,
+            50.071,
+            9.767,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-197-line-24",
+          "text": "Wann beginnt …?",
+          "box": [
+            50.798,
+            51.532,
+            11.882,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-197-line-25",
+          "text": "Wann ist …?",
+          "box": [
+            50.798,
+            52.993,
+            7.913,
+            1.394
+          ]
+        },
+        {
+          "id": "coursebook-197-line-26",
+          "text": "Museumblauereiter",
+          "box": [
+            38.827,
+            63.118,
+            19.076,
+            1.285
+          ]
+        },
+        {
+          "id": "coursebook-197-line-27",
+          "text": "Dienstag – Sonntag:",
+          "box": [
+            41.468,
+            64.874,
+            14.137,
+            1.321
+          ]
+        },
+        {
+          "id": "coursebook-197-line-28",
+          "text": "Montag:",
+          "box": [
+            45.541,
+            68.437,
+            5.992,
+            1.321
+          ]
+        },
+        {
+          "id": "coursebook-197-line-29",
+          "text": "Achtung!",
+          "box": [
+            49.627,
+            81.556,
+            7.997,
+            1.858
+          ]
+        },
+        {
+          "id": "coursebook-197-line-30",
+          "text": "Das Konzert beginnt",
+          "box": [
+            49.627,
+            83.397,
+            17.95,
+            1.858
+          ]
+        },
+        {
+          "id": "coursebook-197-line-31",
+          "text": "Praxis Johanna Kalteis",
+          "box": [
+            18.397,
+            18.758,
+            18.133,
+            1.634
+          ]
+        },
+        {
+          "id": "coursebook-197-line-32",
+          "text": "– Kinderarzt –",
+          "box": [
+            21.868,
+            20.564,
+            10.79,
+            1.549
+          ]
+        },
+        {
+          "id": "coursebook-197-line-33",
+          "text": "Montag bis Freitag:",
+          "box": [
+            19.822,
+            22.682,
+            15.283,
+            1.549
+          ]
+        },
+        {
+          "id": "coursebook-197-line-34",
+          "text": "8:00 bis 13:00 Uhr",
+          "box": [
+            19.916,
+            24.464,
+            15.097,
+            1.549
+          ]
+        },
+        {
+          "id": "coursebook-197-line-35",
+          "text": "Dienstag und Donnerstag:",
+          "box": [
+            17.209,
+            26.246,
+            20.51,
+            1.549
+          ]
+        },
+        {
+          "id": "coursebook-197-line-36",
+          "text": "15:00 bis 18:00 Uhr",
+          "box": [
+            19.387,
+            28.027,
+            15.789,
+            1.549
+          ]
+        },
+        {
+          "id": "coursebook-197-line-37",
+          "text": "Deutschkurs mit",
+          "box": [
+            44.585,
+            33.377,
+            14.21,
+            1.538
+          ]
+        },
+        {
+          "id": "coursebook-197-line-38",
+          "text": "Momente A1.1",
+          "box": [
+            45.371,
+            35.159,
+            12.638,
+            1.538
+          ]
+        },
+        {
+          "id": "coursebook-197-line-39",
+          "text": "Kursleiterin: Dörte Buchner",
+          "box": [
+            39.857,
+            37.277,
+            23.263,
+            1.538
+          ]
+        },
+        {
+          "id": "coursebook-197-line-40",
+          "text": "Montag bis Freitag:",
+          "box": [
+            43.369,
+            39.059,
+            16.64,
+            1.538
+          ]
+        },
+        {
+          "id": "coursebook-197-line-41",
+          "text": "8:00 bis 13:00 Uhr",
+          "box": [
+            43.706,
+            40.841,
+            15.968,
+            1.538
+          ]
+        },
+        {
+          "id": "coursebook-197-line-42",
+          "text": "Achtung!",
+          "box": [
+            16.394,
+            34.713,
+            10.386,
+            2.423
+          ]
+        },
+        {
+          "id": "coursebook-197-line-43",
+          "text": "Der Film beginnt",
+          "box": [
+            16.394,
+            37.279,
+            15.062,
+            1.858
+          ]
+        },
+        {
+          "id": "coursebook-197-line-44",
+          "text": "heute um 20:15 Uhr.",
+          "box": [
+            16.394,
+            39.121,
+            17.8,
+            1.858
+          ]
+        },
+        {
+          "id": "coursebook-197-line-45",
+          "text": "Boutique – Paris Moden",
+          "box": [
+            45.615,
+            18.935,
+            22.763,
+            2.043
+          ]
+        },
+        {
+          "id": "coursebook-197-line-46",
+          "text": "Wir haben im August Urlaub!",
+          "box": [
+            45.615,
+            21.012,
+            22.994,
+            1.696
+          ]
+        },
+        {
+          "id": "coursebook-197-line-47",
+          "text": "Ab September ist die Boutique",
+          "box": [
+            45.615,
+            22.853,
+            23.684,
+            1.696
+          ]
+        },
+        {
+          "id": "coursebook-197-line-48",
+          "text": "wieder geöffnet!",
+          "box": [
+            45.615,
+            24.694,
+            11.954,
+            1.696
+          ]
+        },
+        {
+          "id": "coursebook-197-line-49",
+          "text": "en Partner",
+          "box": [
+            60.296,
+            58.254,
+            8.565,
+            1.523
+          ]
+        },
+        {
+          "id": "coursebook-197-line-50",
+          "text": "Eiscafe",
+          "box": [
+            71.669,
+            60.793,
+            7.902,
+            1.602
+          ]
+        },
+        {
+          "id": "coursebook-197-line-51",
+          "text": "Dolomiti",
+          "box": [
+            70.818,
+            62.456,
+            9.18,
+            1.602
+          ]
+        },
+        {
+          "id": "coursebook-197-line-52",
+          "text": "Wir haben Urlaub!",
+          "box": [
+            67.112,
+            64.419,
+            14.15,
+            1.549
+          ]
+        },
+        {
+          "id": "coursebook-197-line-53",
+          "text": "Das Eiscafé ist",
+          "box": [
+            70.22,
+            66.201,
+            10.782,
+            1.549
+          ]
+        },
+        {
+          "id": "coursebook-197-line-54",
+          "text": "geschlossen!",
+          "box": [
+            76.037,
+            69.764,
+            10.572,
+            1.549
+          ]
+        },
+        {
+          "id": "coursebook-197-line-55",
+          "text": "ist das Café",
+          "box": [
+            76.437,
+            71.546,
+            9.772,
+            1.549
+          ]
+        },
+        {
+          "id": "coursebook-197-line-56",
+          "text": "wieder geöffnet!",
+          "box": [
+            68.982,
+            73.327,
+            13.266,
+            1.549
+          ]
+        },
+        {
+          "id": "coursebook-197-line-57",
+          "text": "Ihr Giovanni",
+          "box": [
+            70.756,
+            75.442,
+            9.315,
+            1.587
+          ]
+        },
+        {
+          "id": "coursebook-197-line-58",
+          "text": "Praxis Erwin Bohrer",
+          "box": [
+            17.762,
+            64.136,
+            15.583,
+            1.594
+          ]
+        },
+        {
+          "id": "coursebook-197-line-59",
+          "text": "– Zahnarzt –",
+          "box": [
+            17.906,
+            65.942,
+            9.189,
+            1.51
+          ]
+        },
+        {
+          "id": "coursebook-197-line-60",
+          "text": "Montag – Donnerstag:",
+          "box": [
+            17.087,
+            68.832,
+            16.934,
+            1.51
+          ]
+        },
+        {
+          "id": "coursebook-197-line-61",
+          "text": "Uhr",
+          "box": [
+            30.302,
+            70.613,
+            3.196,
+            1.51
+          ]
+        },
+        {
+          "id": "coursebook-197-line-62",
+          "text": "Freitag:",
+          "box": [
+            22.529,
+            72.494,
+            5.657,
+            1.51
+          ]
+        },
+        {
+          "id": "coursebook-197-line-63",
+          "text": "Uhr",
+          "box": [
+            30.302,
+            74.275,
+            3.196,
+            1.51
+          ]
+        },
+        {
+          "id": "coursebook-197-line-64",
+          "text": "Blumenladen",
+          "box": [
+            68.795,
+            31.838,
+            12.776,
+            1.938
+          ]
+        },
+        {
+          "id": "coursebook-197-line-65",
+          "text": "Tausendschön",
+          "box": [
+            68.543,
+            33.976,
+            13.278,
+            1.938
+          ]
+        },
+        {
+          "id": "coursebook-197-line-66",
+          "text": "Heute ist der",
+          "box": [
+            72.431,
+            36.114,
+            11.692,
+            1.938
+          ]
+        },
+        {
+          "id": "coursebook-197-line-67",
+          "text": "Laden leider ab 16:00",
+          "box": [
+            68.825,
+            38.253,
+            18.906,
+            1.938
+          ]
+        },
+        {
+          "id": "coursebook-197-line-68",
+          "text": "Uhr geschlossen.",
+          "box": [
+            70.823,
+            40.391,
+            14.385,
+            1.938
+          ]
+        },
+        {
+          "id": "coursebook-197-line-69",
+          "text": "Kiosk Istanbul",
+          "box": [
+            16.375,
+            79.34,
+            13.618,
+            2.262
+          ]
+        },
+        {
+          "id": "coursebook-197-line-70",
+          "text": "Der Kiosk ist",
+          "box": [
+            16.375,
+            81.796,
+            11.073,
+            1.858
+          ]
+        },
+        {
+          "id": "coursebook-197-line-71",
+          "text": "heute leider nur",
+          "box": [
+            16.375,
+            83.637,
+            13.845,
+            1.858
+          ]
+        },
+        {
+          "id": "coursebook-197-line-72",
+          "text": "geöffnet.",
+          "box": [
+            27.782,
+            85.478,
+            7.557,
+            1.858
+          ]
+        },
+        {
+          "id": "coursebook-197-line-73",
+          "text": "Ihr Murat",
+          "box": [
+            16.375,
+            87.32,
+            8.068,
+            1.858
+          ]
+        }
+      ],
+      "audioIds": [],
+      "section": "Partner activities · Lesson 11",
+      "pageLabel": "Page 197",
+      "lessons": [
+        11
       ]
     },
     {
@@ -97781,6 +102197,2529 @@
       "pageLabel": "Page 69"
     },
     {
+      "id": "workbook-70",
+      "kind": "workbook",
+      "lesson": 11,
+      "printedPage": 70,
+      "pdfPage": 72,
+      "image": "/book/pages/workbook-70.webp",
+      "width": 1905,
+      "height": 2695,
+      "lines": [
+        {
+          "id": "workbook-70-line-1",
+          "text": "siebzig",
+          "box": [
+            3.881,
+            78.802,
+            1.627,
+            3.077
+          ]
+        },
+        {
+          "id": "workbook-70-line-2",
+          "text": "Was haben Sie gestern",
+          "box": [
+            20.333,
+            3.611,
+            57.522,
+            3.783
+          ]
+        },
+        {
+          "id": "workbook-70-line-3",
+          "text": "gemacht?",
+          "box": [
+            20.333,
+            6.509,
+            28.664,
+            3.783
+          ]
+        },
+        {
+          "id": "workbook-70-line-4",
+          "text": "1 Gestern, heute oder morgen? W KB 1",
+          "box": [
+            10.476,
+            20.187,
+            36.149,
+            1.545
+          ]
+        },
+        {
+          "id": "workbook-70-line-5",
+          "text": "Ordnen Sie zu.",
+          "box": [
+            14.286,
+            22.341,
+            11.406,
+            1.283
+          ]
+        },
+        {
+          "id": "workbook-70-line-6",
+          "text": "a Heute trinke ich Kaffee.",
+          "box": [
+            14.286,
+            24.316,
+            21.102,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-70-line-7",
+          "text": "lese ich ein Buch.",
+          "box": [
+            28.411,
+            26.448,
+            13.703,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-70-line-8",
+          "text": "habe ich gearbeitet.",
+          "box": [
+            28.411,
+            28.23,
+            15.756,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-70-line-9",
+          "text": "2 Was ist Fridolins Problem? Ordnen Sie zu. W KB 2",
+          "box": [
+            10.476,
+            31.7,
+            49.058,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-70-line-10",
+          "text": "zu lange | zu viel | zu wenig",
+          "box": [
+            14.286,
+            34.125,
+            19.354,
+            1.782
+          ]
+        },
+        {
+          "id": "workbook-70-line-11",
+          "text": "3 Was passt zusammen? Verbinden Sie. W KB 2",
+          "box": [
+            10.476,
+            49.931,
+            44.381,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-70-line-12",
+          "text": "4 Was habt ihr heute gemacht? G l KB 2",
+          "box": [
+            10.476,
+            76.178,
+            39.147,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-70-line-13",
+          "text": "a Ergänzen Sie haben in der richtigen Form.",
+          "box": [
+            10.476,
+            78.135,
+            36.197,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-70-line-14",
+          "text": "Habt ihr kurz Zeit für ein Interview?",
+          "box": [
+            16.151,
+            82.005,
+            23.444,
+            1.115
+          ]
+        },
+        {
+          "id": "workbook-70-line-15",
+          "text": "Ja klar, wir haben (1) ein bisschen Zeit.",
+          "box": [
+            17.579,
+            83.304,
+            27.729,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-70-line-16",
+          "text": "Was",
+          "box": [
+            16.151,
+            85.983,
+            3.075,
+            1.145
+          ]
+        },
+        {
+          "id": "workbook-70-line-17",
+          "text": "(2) ihr heute gemacht?",
+          "box": [
+            28.592,
+            85.983,
+            15.913,
+            1.145
+          ]
+        },
+        {
+          "id": "workbook-70-line-18",
+          "text": "Ich",
+          "box": [
+            17.579,
+            87.51,
+            2.366,
+            1.099
+          ]
+        },
+        {
+          "id": "workbook-70-line-19",
+          "text": "(3) aufgeräumt,",
+          "box": [
+            29.311,
+            87.51,
+            11.396,
+            1.099
+          ]
+        },
+        {
+          "id": "workbook-70-line-20",
+          "text": "abgewaschen und gekocht.",
+          "box": [
+            17.579,
+            89.054,
+            17.479,
+            1.099
+          ]
+        },
+        {
+          "id": "workbook-70-line-21",
+          "text": "Und ich",
+          "box": [
+            17.579,
+            90.598,
+            5.499,
+            1.099
+          ]
+        },
+        {
+          "id": "workbook-70-line-22",
+          "text": "(4) gearbeitet und",
+          "box": [
+            32.444,
+            90.598,
+            12.96,
+            1.099
+          ]
+        },
+        {
+          "id": "workbook-70-line-23",
+          "text": "dann mit Martin eingekauft.",
+          "box": [
+            17.579,
+            92.141,
+            18.841,
+            1.099
+          ]
+        },
+        {
+          "id": "workbook-70-line-24",
+          "text": "(5) du heute auch Musik gehört",
+          "box": [
+            63.15,
+            82.005,
+            21.865,
+            1.115
+          ]
+        },
+        {
+          "id": "workbook-70-line-25",
+          "text": "oder ferngesehen?",
+          "box": [
+            53.833,
+            83.549,
+            11.963,
+            1.115
+          ]
+        },
+        {
+          "id": "workbook-70-line-26",
+          "text": "Nein. Ich",
+          "box": [
+            55.261,
+            85.054,
+            6.34,
+            1.099
+          ]
+        },
+        {
+          "id": "workbook-70-line-27",
+          "text": "(6) telefoniert, E-Mails",
+          "box": [
+            70.963,
+            85.054,
+            15.803,
+            1.099
+          ]
+        },
+        {
+          "id": "workbook-70-line-28",
+          "text": "gelesen und E-Mails geschrieben.",
+          "box": [
+            55.261,
+            86.598,
+            21.807,
+            1.099
+          ]
+        },
+        {
+          "id": "workbook-70-line-29",
+          "text": "Wir",
+          "box": [
+            55.261,
+            88.142,
+            2.785,
+            1.099
+          ]
+        },
+        {
+          "id": "workbook-70-line-30",
+          "text": "(7) im Park einen Spazier-",
+          "box": [
+            67.412,
+            88.142,
+            17.383,
+            1.099
+          ]
+        },
+        {
+          "id": "workbook-70-line-31",
+          "text": "gang gemacht, Vögel fotografiert und Lieder",
+          "box": [
+            55.261,
+            89.685,
+            29.358,
+            1.099
+          ]
+        },
+        {
+          "id": "workbook-70-line-32",
+          "text": "gesungen. Die Kinder",
+          "box": [
+            55.261,
+            91.229,
+            14.469,
+            1.099
+          ]
+        },
+        {
+          "id": "workbook-70-line-33",
+          "text": "(8) auch",
+          "box": [
+            79.096,
+            91.229,
+            6.056,
+            1.099
+          ]
+        },
+        {
+          "id": "workbook-70-line-34",
+          "text": "Eis gegessen und Saft getrunken.",
+          "box": [
+            55.261,
+            92.773,
+            21.751,
+            1.099
+          ]
+        },
+        {
+          "id": "workbook-70-line-35",
+          "text": "Kaffee",
+          "box": [
+            70.009,
+            69.679,
+            5.924,
+            1.26
+          ]
+        },
+        {
+          "id": "workbook-70-line-36",
+          "text": "trinken",
+          "box": [
+            69.875,
+            71.232,
+            5.365,
+            1.253
+          ]
+        },
+        {
+          "id": "workbook-70-line-37",
+          "text": "einen",
+          "box": [
+            44.355,
+            69.014,
+            4.956,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-70-line-38",
+          "text": "Spaziergang",
+          "box": [
+            41.861,
+            70.558,
+            9.475,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-70-line-39",
+          "text": "machen",
+          "box": [
+            43.43,
+            72.102,
+            5.933,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-70-line-40",
+          "text": "Zeitung",
+          "box": [
+            69.516,
+            53.141,
+            6.12,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-70-line-41",
+          "text": "lesen",
+          "box": [
+            70.394,
+            54.686,
+            3.958,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-70-line-42",
+          "text": "abwaschen",
+          "box": [
+            41.965,
+            63.005,
+            8.409,
+            1.393
+          ]
+        },
+        {
+          "id": "workbook-70-line-43",
+          "text": "aufräumen",
+          "box": [
+            68.24,
+            61.954,
+            8.26,
+            1.39
+          ]
+        },
+        {
+          "id": "workbook-70-line-44",
+          "text": "fernsehen",
+          "box": [
+            15.84,
+            55.128,
+            7.748,
+            1.377
+          ]
+        },
+        {
+          "id": "workbook-70-line-45",
+          "text": "arbeiten",
+          "box": [
+            43.309,
+            55.223,
+            6.415,
+            1.344
+          ]
+        },
+        {
+          "id": "workbook-70-line-46",
+          "text": "kochen",
+          "box": [
+            16.921,
+            70.124,
+            5.569,
+            1.323
+          ]
+        },
+        {
+          "id": "workbook-70-line-47",
+          "text": "einkaufen",
+          "box": [
+            15.889,
+            62.708,
+            7.393,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-70-line-48",
+          "text": "Fridolin, du",
+          "box": [
+            28.711,
+            39.254,
+            6.766,
+            0.891
+          ]
+        },
+        {
+          "id": "workbook-70-line-49",
+          "text": "hast",
+          "box": [
+            28.711,
+            40.561,
+            2.645,
+            0.891
+          ]
+        },
+        {
+          "id": "workbook-70-line-50",
+          "text": "gegessen!",
+          "box": [
+            28.711,
+            43.175,
+            5.215,
+            0.891
+          ]
+        },
+        {
+          "id": "workbook-70-line-51",
+          "text": "Fridolin, du",
+          "box": [
+            41.334,
+            35.531,
+            6.416,
+            0.891
+          ]
+        },
+        {
+          "id": "workbook-70-line-52",
+          "text": "hast",
+          "box": [
+            41.334,
+            36.838,
+            2.645,
+            0.891
+          ]
+        },
+        {
+          "id": "workbook-70-line-53",
+          "text": "Kaffee",
+          "box": [
+            41.334,
+            39.214,
+            4.177,
+            0.891
+          ]
+        },
+        {
+          "id": "workbook-70-line-54",
+          "text": "getrunken!",
+          "box": [
+            41.334,
+            40.283,
+            5.774,
+            0.891
+          ]
+        },
+        {
+          "id": "workbook-70-line-55",
+          "text": "Fridolin, du",
+          "box": [
+            78.622,
+            35.667,
+            6.766,
+            0.891
+          ]
+        },
+        {
+          "id": "workbook-70-line-56",
+          "text": "hast",
+          "box": [
+            78.622,
+            36.974,
+            2.645,
+            0.891
+          ]
+        },
+        {
+          "id": "workbook-70-line-57",
+          "text": "ferngesehen!",
+          "box": [
+            78.622,
+            39.35,
+            6.946,
+            0.891
+          ]
+        }
+      ],
+      "audioIds": [],
+      "section": "Lesson 11",
+      "pageLabel": "Page 70"
+    },
+    {
+      "id": "workbook-71",
+      "kind": "workbook",
+      "lesson": 11,
+      "printedPage": 71,
+      "pdfPage": 73,
+      "image": "/book/pages/workbook-71.webp",
+      "width": 1905,
+      "height": 2695,
+      "lines": [
+        {
+          "id": "workbook-71-line-1",
+          "text": "Übungen",
+          "box": [
+            75.395,
+            1.975,
+            12.579,
+            2.149
+          ]
+        },
+        {
+          "id": "workbook-71-line-2",
+          "text": "einundsiebzig",
+          "box": [
+            94.753,
+            75.639,
+            1.627,
+            6.24
+          ]
+        },
+        {
+          "id": "workbook-71-line-3",
+          "text": "b Unterstreichen Sie die Partizipformen in a (Sätze 2 – 8). Ergänzen Sie dann.",
+          "box": [
+            10.476,
+            5.036,
+            61.964,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-71-line-4",
+          "text": "ge",
+          "box": [
+            15.042,
+            8.086,
+            6.916,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-71-line-5",
+          "text": "ge",
+          "box": [
+            40.093,
+            8.086,
+            6.916,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-71-line-6",
+          "text": "en",
+          "box": [
+            55.091,
+            8.086,
+            2.102,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-71-line-7",
+          "text": "iert",
+          "box": [
+            73.37,
+            8.086,
+            2.972,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-71-line-8",
+          "text": "gemacht",
+          "box": [
+            15.042,
+            10.364,
+            7.227,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-71-line-9",
+          "text": "geschrieben",
+          "box": [
+            40.093,
+            10.364,
+            9.592,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-71-line-10",
+          "text": "fotografiert",
+          "box": [
+            65.143,
+            10.364,
+            8.832,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-71-line-11",
+          "text": "ge",
+          "box": [
+            19.746,
+            16.001,
+            2.565,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-71-line-12",
+          "text": "ge",
+          "box": [
+            44.797,
+            16.001,
+            2.565,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-71-line-13",
+          "text": "en",
+          "box": [
+            55.444,
+            16.001,
+            2.102,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-71-line-14",
+          "text": "aufgeräumt",
+          "box": [
+            15.042,
+            18.457,
+            9.984,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-71-line-15",
+          "text": "5 Setzen Sie Häkchen (",
+          "box": [
+            10.476,
+            26.258,
+            23.319,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-71-line-16",
+          "text": ") und ergänzen Sie in der richtigen Form. G KB 2",
+          "box": [
+            35.476,
+            26.417,
+            44.863,
+            1.319
+          ]
+        },
+        {
+          "id": "workbook-71-line-17",
+          "text": "6 Wortstellung: Perfekt mit haben G l KB 3",
+          "box": [
+            10.476,
+            72.995,
+            42.369,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-71-line-18",
+          "text": "Ergänzen Sie passende Sätze aus 5.",
+          "box": [
+            14.286,
+            75.144,
+            27.095,
+            1.288
+          ]
+        },
+        {
+          "id": "workbook-71-line-19",
+          "text": "Position 2",
+          "box": [
+            35.518,
+            77.972,
+            7.633,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-71-line-20",
+          "text": "Ende",
+          "box": [
+            55.519,
+            77.972,
+            3.818,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-71-line-21",
+          "text": "W-Frage",
+          "box": [
+            15.042,
+            80.465,
+            5.831,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-71-line-22",
+          "text": "Was",
+          "box": [
+            26.947,
+            80.398,
+            3.529,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-71-line-23",
+          "text": "hast",
+          "box": [
+            35.519,
+            80.398,
+            3.632,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-71-line-24",
+          "text": "du gestern",
+          "box": [
+            45.043,
+            80.398,
+            8.69,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-71-line-25",
+          "text": "gemacht?",
+          "box": [
+            55.519,
+            80.398,
+            7.987,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-71-line-26",
+          "text": "Ja/Nein-Frage",
+          "box": [
+            15.042,
+            82.362,
+            9.783,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-71-line-27",
+          "text": "Hast",
+          "box": [
+            35.518,
+            82.433,
+            3.964,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-71-line-28",
+          "text": "du",
+          "box": [
+            45.042,
+            82.433,
+            2.013,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-71-line-29",
+          "text": "Aussage",
+          "box": [
+            15.042,
+            85.552,
+            5.574,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-71-line-30",
+          "text": "Ich",
+          "box": [
+            26.947,
+            84.468,
+            2.389,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-71-line-31",
+          "text": "Saft",
+          "box": [
+            45.043,
+            84.468,
+            3.785,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-71-line-32",
+          "text": "Dann",
+          "box": [
+            26.947,
+            86.501,
+            5.317,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-71-line-33",
+          "text": "ich Suppe",
+          "box": [
+            45.043,
+            86.501,
+            7.879,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-71-line-34",
+          "text": "Hallo!",
+          "box": [
+            15.714,
+            29.673,
+            4.769,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-71-line-35",
+          "text": "Was hast du gestern gemacht?",
+          "box": [
+            15.714,
+            31.135,
+            20.781,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-71-line-36",
+          "text": "Super!",
+          "box": [
+            15.714,
+            43.155,
+            4.776,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-71-line-37",
+          "text": "Hast du auch",
+          "box": [
+            22.405,
+            43.155,
+            9.607,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-71-line-38",
+          "text": "Gestern habe ich",
+          "box": [
+            15.714,
+            59.732,
+            12.005,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-71-line-39",
+          "text": "(8). Ich",
+          "box": [
+            44.011,
+            59.732,
+            5.574,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-71-line-40",
+          "text": "habe viel",
+          "box": [
+            15.714,
+            61.514,
+            6.437,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-71-line-41",
+          "text": "(9) und",
+          "box": [
+            38.443,
+            61.514,
+            6.039,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-71-line-42",
+          "text": "E-Mails",
+          "box": [
+            15.714,
+            63.296,
+            5.417,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-71-line-43",
+          "text": "(10). Am Abend",
+          "box": [
+            37.424,
+            63.296,
+            11.704,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-71-line-44",
+          "text": "habe ich eine Serie",
+          "box": [
+            15.714,
+            65.078,
+            13.253,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-71-line-45",
+          "text": "ein Buch",
+          "box": [
+            15.714,
+            66.86,
+            6.256,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-71-line-46",
+          "text": "(12) und Musik",
+          "box": [
+            38.263,
+            66.86,
+            10.514,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-71-line-47",
+          "text": "Gestern habe ich mein Zimmer aufgeräumt (1)",
+          "box": [
+            17.675,
+            35.702,
+            33.544,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-71-line-48",
+          "text": "und ich habe",
+          "box": [
+            17.675,
+            37.927,
+            9.008,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-71-line-49",
+          "text": "Ja! Dann habe ich Suppe",
+          "box": [
+            17.675,
+            47.884,
+            16.945,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-71-line-50",
+          "text": "und",
+          "box": [
+            17.677,
+            49.666,
+            2.913,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-71-line-51",
+          "text": "(5). Ich habe Saft",
+          "box": [
+            36.882,
+            49.666,
+            12.405,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-71-line-52",
+          "text": "Danach habe ich",
+          "box": [
+            38.94,
+            51.447,
+            11.947,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-71-line-53",
+          "text": "(7). Und du? Was hast du",
+          "box": [
+            33.948,
+            53.229,
+            17.859,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-71-line-54",
+          "text": "gestern gemacht?",
+          "box": [
+            17.675,
+            54.691,
+            12.338,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-71-line-55",
+          "text": "aufräumen",
+          "box": [
+            65.355,
+            33.619,
+            10.341,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-71-line-56",
+          "text": "fotografieren",
+          "box": [
+            65.354,
+            35.46,
+            10.298,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-71-line-57",
+          "text": "einkaufen",
+          "box": [
+            65.354,
+            37.301,
+            8.358,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-71-line-58",
+          "text": "kochen",
+          "box": [
+            65.354,
+            39.143,
+            6.307,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-71-line-59",
+          "text": "essen",
+          "box": [
+            65.354,
+            40.984,
+            4.761,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-71-line-60",
+          "text": "trinken",
+          "box": [
+            65.354,
+            42.825,
+            5.943,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-71-line-61",
+          "text": "abwaschen",
+          "box": [
+            65.354,
+            44.667,
+            9.231,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-71-line-62",
+          "text": "arbeiten",
+          "box": [
+            65.355,
+            57.244,
+            6.631,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-71-line-63",
+          "text": "telefonieren",
+          "box": [
+            65.355,
+            59.085,
+            9.826,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-71-line-64",
+          "text": "schreiben",
+          "box": [
+            65.355,
+            60.926,
+            7.749,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-71-line-65",
+          "text": "schauen",
+          "box": [
+            65.355,
+            62.768,
+            7.315,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-71-line-66",
+          "text": "lesen",
+          "box": [
+            65.355,
+            64.609,
+            4.391,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-71-line-67",
+          "text": "hören",
+          "box": [
+            65.355,
+            66.45,
+            4.805,
+            1.568
+          ]
+        }
+      ],
+      "audioIds": [],
+      "section": "Lesson 11",
+      "pageLabel": "Page 71"
+    },
+    {
+      "id": "workbook-72",
+      "kind": "workbook",
+      "lesson": 11,
+      "printedPage": 72,
+      "pdfPage": 74,
+      "image": "/book/pages/workbook-72.webp",
+      "width": 1905,
+      "height": 2695,
+      "lines": [
+        {
+          "id": "workbook-72-line-1",
+          "text": "zweiundsiebzig",
+          "box": [
+            3.881,
+            75.061,
+            1.627,
+            6.818
+          ]
+        },
+        {
+          "id": "workbook-72-line-2",
+          "text": "7 Schreiben Sie das Gespräch richtig. G KB 3",
+          "box": [
+            10.476,
+            5.036,
+            42.753,
+            1.547
+          ]
+        },
+        {
+          "id": "workbook-72-line-3",
+          "text": "a Abend | Was | du | gestern | gemacht | hast | ?",
+          "box": [
+            14.286,
+            6.997,
+            41.422,
+            1.514
+          ]
+        },
+        {
+          "id": "workbook-72-line-4",
+          "text": "Was hast du gestern Abend gemacht?",
+          "box": [
+            16.429,
+            8.754,
+            29.853,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-72-line-5",
+          "text": "b gekocht | habe | ich | Spaghetti | gegessen | Gestern | und | .",
+          "box": [
+            14.286,
+            10.56,
+            53.243,
+            1.514
+          ]
+        },
+        {
+          "id": "workbook-72-line-6",
+          "text": "a getrunken | du | Hast | auch | etwas | ?",
+          "box": [
+            14.286,
+            15.906,
+            34.852,
+            1.514
+          ]
+        },
+        {
+          "id": "workbook-72-line-7",
+          "text": "b Ja, | ich | habe | getrunken | Cola | . | habe | ich | ferngesehen | Dann | .",
+          "box": [
+            14.286,
+            19.469,
+            63.241,
+            1.514
+          ]
+        },
+        {
+          "id": "workbook-72-line-8",
+          "text": "a hast | du | geschaut | Was | ?",
+          "box": [
+            14.286,
+            23.032,
+            26.555,
+            1.514
+          ]
+        },
+        {
+          "id": "workbook-72-line-9",
+          "text": "b habe | eine Serie | geschaut | Ich | .",
+          "box": [
+            14.286,
+            26.596,
+            31.627,
+            1.514
+          ]
+        },
+        {
+          "id": "workbook-72-line-10",
+          "text": "8 Das habe ich gestern gemacht. W G K KB 3",
+          "box": [
+            10.476,
+            32.174,
+            42.775,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-72-line-11",
+          "text": "a Was passt? Verbinden Sie.",
+          "box": [
+            10.476,
+            34.13,
+            23.908,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-72-line-12",
+          "text": "b Lesen Sie. Was passt? Ergänzen Sie Verben aus a in der richtigen Form.",
+          "box": [
+            10.476,
+            56.864,
+            59.579,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-72-line-13",
+          "text": "Manche Wörter können Sie mehrfach verwenden.",
+          "box": [
+            14.286,
+            58.748,
+            38.411,
+            1.283
+          ]
+        },
+        {
+          "id": "workbook-72-line-14",
+          "text": "c Partneraufgabe: Was haben Sie gestern gemacht? Schreiben Sie einen",
+          "box": [
+            10.476,
+            87.519,
+            58.122,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-72-line-15",
+          "text": "Blogeintrag und tauschen Sie dann mit Ihrer Partnerin / Ihrem Partner.",
+          "box": [
+            14.286,
+            89.369,
+            55.639,
+            1.318
+          ]
+        },
+        {
+          "id": "workbook-72-line-16",
+          "text": "Sie / er erzählt: Was haben Sie gestern gemacht?",
+          "box": [
+            14.286,
+            91.055,
+            36.741,
+            1.318
+          ]
+        },
+        {
+          "id": "workbook-72-line-17",
+          "text": "www.Hikos-Blog.de",
+          "box": [
+            38.643,
+            62.009,
+            10.323,
+            0.831
+          ]
+        },
+        {
+          "id": "workbook-72-line-18",
+          "text": "Gestern habe ich meine Hausaufgaben gemacht (1) und dann",
+          "box": [
+            40.167,
+            70.991,
+            43.373,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-72-line-19",
+          "text": "meinen Schreibtisch",
+          "box": [
+            40.167,
+            72.978,
+            14.385,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-72-line-20",
+          "text": "(2). Danach habe ich",
+          "box": [
+            66.828,
+            72.978,
+            15.396,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-72-line-21",
+          "text": "eine Pause",
+          "box": [
+            40.167,
+            74.521,
+            7.739,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-72-line-22",
+          "text": "(3), Kaffee",
+          "box": [
+            60.183,
+            74.521,
+            8.094,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-72-line-23",
+          "text": "und Zeitung",
+          "box": [
+            40.167,
+            76.07,
+            8.457,
+            1.064
+          ]
+        },
+        {
+          "id": "workbook-72-line-24",
+          "text": "Ich habe auch Nachrichten",
+          "box": [
+            40.167,
+            77.602,
+            19.114,
+            1.08
+          ]
+        },
+        {
+          "id": "workbook-72-line-25",
+          "text": "Später habe ich einen Spaziergang",
+          "box": [
+            40.167,
+            79.146,
+            24.279,
+            1.08
+          ]
+        },
+        {
+          "id": "workbook-72-line-26",
+          "text": "(7) und",
+          "box": [
+            76.722,
+            79.154,
+            5.623,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-72-line-27",
+          "text": "dann Brot und Käse",
+          "box": [
+            40.166,
+            80.69,
+            13.852,
+            1.08
+          ]
+        },
+        {
+          "id": "workbook-72-line-28",
+          "text": "Am Abend habe ich eine Serie",
+          "box": [
+            40.167,
+            82.234,
+            21.496,
+            1.08
+          ]
+        },
+        {
+          "id": "workbook-72-line-29",
+          "text": "den Schreibtisch",
+          "box": [
+            15.238,
+            37.384,
+            12.756,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-72-line-30",
+          "text": "eine Pause",
+          "box": [
+            31.524,
+            40.299,
+            8.147,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-72-line-31",
+          "text": "eine Serie",
+          "box": [
+            42.489,
+            36.666,
+            7.568,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-72-line-32",
+          "text": "einen Film",
+          "box": [
+            43.442,
+            43.329,
+            7.865,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-72-line-33",
+          "text": "einen Spaziergang",
+          "box": [
+            54.866,
+            39.067,
+            13.893,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-72-line-34",
+          "text": "Hausaufgaben",
+          "box": [
+            61.282,
+            42.656,
+            10.896,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-72-line-35",
+          "text": "Kaffee",
+          "box": [
+            62.154,
+            34.017,
+            4.989,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-72-line-36",
+          "text": "Brot und Käse",
+          "box": [
+            74.366,
+            35.364,
+            10.661,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-72-line-37",
+          "text": "lesen",
+          "box": [
+            15.238,
+            51.481,
+            3.958,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-72-line-38",
+          "text": "aufräumen",
+          "box": [
+            25.035,
+            53.838,
+            8.609,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-72-line-39",
+          "text": "schauen",
+          "box": [
+            33.329,
+            49.461,
+            6.259,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-72-line-40",
+          "text": "einkaufen",
+          "box": [
+            47.225,
+            51.481,
+            7.393,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-72-line-41",
+          "text": "machen",
+          "box": [
+            59.896,
+            49.124,
+            6.017,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-72-line-42",
+          "text": "schreiben",
+          "box": [
+            68.987,
+            53.165,
+            7.434,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-72-line-43",
+          "text": "trinken",
+          "box": [
+            80.927,
+            50.134,
+            5.337,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-72-line-44",
+          "text": "Nachrichten",
+          "box": [
+            78.62,
+            40.636,
+            10.355,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-72-line-45",
+          "text": "Zeitung",
+          "box": [
+            21.323,
+            42.656,
+            5.717,
+            1.188
+          ]
+        }
+      ],
+      "audioIds": [],
+      "section": "Lesson 11",
+      "pageLabel": "Page 72"
+    },
+    {
+      "id": "workbook-73",
+      "kind": "workbook",
+      "lesson": 11,
+      "printedPage": 73,
+      "pdfPage": 75,
+      "image": "/book/pages/workbook-73.webp",
+      "width": 1905,
+      "height": 2695,
+      "lines": [
+        {
+          "id": "workbook-73-line-1",
+          "text": "Übungen",
+          "box": [
+            75.395,
+            1.975,
+            12.579,
+            2.149
+          ]
+        },
+        {
+          "id": "workbook-73-line-2",
+          "text": "dreiundsiebzig",
+          "box": [
+            94.753,
+            75.254,
+            1.627,
+            6.624
+          ]
+        },
+        {
+          "id": "workbook-73-line-3",
+          "text": "9 Satzakzent KB 4",
+          "box": [
+            10.476,
+            5.036,
+            18.973,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-73-line-4",
+          "text": "Aussprache",
+          "box": [
+            75.495,
+            5.362,
+            9.55,
+            0.831
+          ]
+        },
+        {
+          "id": "workbook-73-line-5",
+          "text": "a Hören Sie und sprechen Sie nach.",
+          "box": [
+            10.476,
+            6.992,
+            29.579,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-73-line-6",
+          "text": "a Was hast du heute gemacht?",
+          "box": [
+            14.286,
+            9.49,
+            24.485,
+            1.205
+          ]
+        },
+        {
+          "id": "workbook-73-line-7",
+          "text": "b Heute?",
+          "box": [
+            14.286,
+            11.26,
+            8.081,
+            1.217
+          ]
+        },
+        {
+          "id": "workbook-73-line-8",
+          "text": "Nicht viel.",
+          "box": [
+            25.503,
+            11.289,
+            8.606,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-73-line-9",
+          "text": "Ich habe gelesen.",
+          "box": [
+            37.246,
+            11.289,
+            14.095,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-73-line-10",
+          "text": "a Gelesen?",
+          "box": [
+            14.286,
+            13.053,
+            9.563,
+            1.205
+          ]
+        },
+        {
+          "id": "workbook-73-line-11",
+          "text": "Was denn?",
+          "box": [
+            26.985,
+            13.071,
+            8.934,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-73-line-12",
+          "text": "b Ich habe ein Buch gelesen.",
+          "box": [
+            14.286,
+            14.823,
+            22.941,
+            1.217
+          ]
+        },
+        {
+          "id": "workbook-73-line-13",
+          "text": "Und ich habe",
+          "box": [
+            40.363,
+            14.853,
+            11.381,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-73-line-14",
+          "text": "ein bisschen gelernt.",
+          "box": [
+            16.429,
+            16.634,
+            16.186,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-73-line-15",
+          "text": "a Gelernt?",
+          "box": [
+            56.667,
+            9.49,
+            9.24,
+            1.205
+          ]
+        },
+        {
+          "id": "workbook-73-line-16",
+          "text": "Was denn?",
+          "box": [
+            69.043,
+            9.507,
+            8.934,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-73-line-17",
+          "text": "b Ich habe natürlich Deutsch gelernt.",
+          "box": [
+            56.667,
+            11.26,
+            29.571,
+            1.217
+          ]
+        },
+        {
+          "id": "workbook-73-line-18",
+          "text": "Und meine Hausaufgabe gemacht.",
+          "box": [
+            58.81,
+            13.071,
+            26.687,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-73-line-19",
+          "text": "a Das ist gut.",
+          "box": [
+            56.667,
+            14.835,
+            11.069,
+            1.205
+          ]
+        },
+        {
+          "id": "workbook-73-line-20",
+          "text": "b Partneraufgabe: Schreiben Sie das Gespräch in a neu. Ersetzen Sie die markierten Wörter.",
+          "box": [
+            10.476,
+            19.028,
+            74.04,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-73-line-21",
+          "text": "Lesen Sie das Gespräch mit Ihrer Partnerin / Ihrem Partner.",
+          "box": [
+            14.286,
+            20.912,
+            46.361,
+            1.283
+          ]
+        },
+        {
+          "id": "workbook-73-line-22",
+          "text": "10 Wann haben Sie …? G KB 5",
+          "box": [
+            10.476,
+            25.757,
+            27.831,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-73-line-23",
+          "text": "a Verbinden Sie.",
+          "box": [
+            10.476,
+            27.714,
+            14.997,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-73-line-24",
+          "text": "b Ordnen Sie passende Wörter aus a zu. Notieren Sie dann Ihre Antworten.",
+          "box": [
+            10.476,
+            45.102,
+            60.545,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-73-line-25",
+          "text": "1 a Wann haben Sie gestern gefrühstückt? b",
+          "box": [
+            14.286,
+            47.596,
+            36.446,
+            1.217
+          ]
+        },
+        {
+          "id": "workbook-73-line-26",
+          "text": "6:30 Uhr.",
+          "box": [
+            57.033,
+            47.625,
+            8.116,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-73-line-27",
+          "text": "wann ist Ihr Supermarkt geöffnet? b",
+          "box": [
+            21.786,
+            49.377,
+            28.945,
+            1.217
+          ]
+        },
+        {
+          "id": "workbook-73-line-28",
+          "text": "7 Uhr.",
+          "box": [
+            57.033,
+            49.406,
+            5.376,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-73-line-29",
+          "text": "3 a Wann machen Sie Ihre Hausaufgaben.",
+          "box": [
+            14.286,
+            51.171,
+            32.992,
+            1.205
+          ]
+        },
+        {
+          "id": "workbook-73-line-30",
+          "text": "Abend.",
+          "box": [
+            57.033,
+            51.188,
+            6.258,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-73-line-31",
+          "text": "4 a Wie lange haben Sie Deutschkurs?",
+          "box": [
+            14.286,
+            52.953,
+            30.436,
+            1.205
+          ]
+        },
+        {
+          "id": "workbook-73-line-32",
+          "text": "19:30 Uhr.",
+          "box": [
+            57.034,
+            54.752,
+            8.73,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-73-line-33",
+          "text": "11 Öffnungszeiten W KB 6",
+          "box": [
+            10.476,
+            58.222,
+            24.326,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-73-line-34",
+          "text": "a Bilden Sie Wörter und ordnen Sie zu.",
+          "box": [
+            10.476,
+            60.178,
+            32.394,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-73-line-35",
+          "text": "sib | öffnetge | xisPra | laubUr | nov",
+          "box": [
+            14.286,
+            62.839,
+            25.754,
+            1.782
+          ]
+        },
+        {
+          "id": "workbook-73-line-36",
+          "text": "b Lesen Sie in a und hören Sie die Sprachnachricht von Frau Heinrich. Antworten Sie.",
+          "box": [
+            10.476,
+            76.676,
+            68.911,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-73-line-37",
+          "text": "12 Markieren Sie: der =",
+          "box": [
+            10.476,
+            80.383,
+            23.812,
+            1.544
+          ]
+        },
+        {
+          "id": "workbook-73-line-38",
+          "text": ", das =",
+          "box": [
+            35.812,
+            80.579,
+            7.955,
+            1.283
+          ]
+        },
+        {
+          "id": "workbook-73-line-39",
+          "text": ", die =",
+          "box": [
+            45.291,
+            80.579,
+            7.68,
+            1.283
+          ]
+        },
+        {
+          "id": "workbook-73-line-40",
+          "text": ". G KB 7",
+          "box": [
+            54.495,
+            80.542,
+            7.617,
+            1.319
+          ]
+        },
+        {
+          "id": "workbook-73-line-41",
+          "text": "Ergänzen Sie dann die Endungen.",
+          "box": [
+            14.286,
+            82.537,
+            25.965,
+            1.283
+          ]
+        },
+        {
+          "id": "workbook-73-line-42",
+          "text": "a Letzt en Samstag",
+          "box": [
+            14.286,
+            84.697,
+            17.659,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-73-line-43",
+          "text": "b Letzt",
+          "box": [
+            14.285,
+            86.829,
+            5.954,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-73-line-44",
+          "text": "Woche",
+          "box": [
+            24.993,
+            86.829,
+            5.691,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-73-line-45",
+          "text": "c Letzt",
+          "box": [
+            14.285,
+            88.611,
+            5.954,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-73-line-46",
+          "text": "Jahr",
+          "box": [
+            24.993,
+            88.611,
+            3.65,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-73-line-47",
+          "text": "d Letzt",
+          "box": [
+            14.285,
+            90.393,
+            5.954,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-73-line-48",
+          "text": "Wochenende",
+          "box": [
+            24.993,
+            90.393,
+            10.459,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-73-line-49",
+          "text": "e Letzt",
+          "box": [
+            14.285,
+            92.174,
+            5.952,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-73-line-50",
+          "text": "Donnerstag",
+          "box": [
+            24.991,
+            92.174,
+            9.457,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-73-line-51",
+          "text": "habe ich einen Film geschaut.",
+          "box": [
+            38.763,
+            85.023,
+            22.632,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-73-line-52",
+          "text": "habe ich Freunde eingeladen und gekocht.",
+          "box": [
+            38.763,
+            86.804,
+            32.43,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-73-line-53",
+          "text": "habe ich viel Sport gemacht.",
+          "box": [
+            38.763,
+            88.586,
+            21.821,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-73-line-54",
+          "text": "habe ich lange gefrühstückt.",
+          "box": [
+            38.763,
+            90.368,
+            21.783,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-73-line-55",
+          "text": "habe ich eingekauft.",
+          "box": [
+            38.763,
+            92.149,
+            15.431,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-73-line-56",
+          "text": "Wirmachen",
+          "box": [
+            29.13,
+            68.891,
+            11.805,
+            1.094
+          ]
+        },
+        {
+          "id": "workbook-73-line-57",
+          "text": "Ab September ist die",
+          "box": [
+            24.253,
+            70.58,
+            16.611,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-73-line-58",
+          "text": "wieder",
+          "box": [
+            59.057,
+            70.58,
+            6.478,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-73-line-59",
+          "text": "Mo bis Fr von 8",
+          "box": [
+            19.543,
+            72.011,
+            13.157,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-73-line-60",
+          "text": "18 Uhr",
+          "box": [
+            44.845,
+            72.362,
+            5.875,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-73-line-61",
+          "text": "16 Uhr",
+          "box": [
+            15.281,
+            38.687,
+            5.266,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-73-line-62",
+          "text": "Viertel vor drei",
+          "box": [
+            15.281,
+            40.469,
+            11.899,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-73-line-63",
+          "text": "halb sechs",
+          "box": [
+            15.281,
+            42.251,
+            7.921,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-73-line-64",
+          "text": "Montag",
+          "box": [
+            53.089,
+            38.687,
+            6.775,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-73-line-65",
+          "text": "Abend",
+          "box": [
+            53.089,
+            40.469,
+            5.846,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-73-line-66",
+          "text": "Morgen",
+          "box": [
+            53.089,
+            42.251,
+            5.949,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-73-line-67",
+          "text": "16 Uhr",
+          "box": [
+            70.295,
+            38.687,
+            5.317,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-73-line-68",
+          "text": "17 Uhr",
+          "box": [
+            79.284,
+            38.687,
+            5.214,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-73-line-69",
+          "text": "Morgen",
+          "box": [
+            70.295,
+            40.469,
+            6.402,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-73-line-70",
+          "text": "Mittag",
+          "box": [
+            80.369,
+            40.469,
+            5.844,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-73-line-71",
+          "text": "16 Uhr",
+          "box": [
+            32.221,
+            38.628,
+            7.937,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-73-line-72",
+          "text": "Viertel vor drei",
+          "box": [
+            32.221,
+            40.41,
+            14.57,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-73-line-73",
+          "text": "halb sechs",
+          "box": [
+            32.221,
+            42.192,
+            10.995,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-73-line-74",
+          "text": "ab",
+          "box": [
+            32.951,
+            31.06,
+            1.779,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-73-line-75",
+          "text": "am",
+          "box": [
+            42.647,
+            31.06,
+            2.246,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-73-line-76",
+          "text": "um",
+          "box": [
+            52.535,
+            31.06,
+            2.328,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-73-line-77",
+          "text": "von … bis",
+          "box": [
+            63.439,
+            31.06,
+            6.842,
+            1.188
+          ]
+        }
+      ],
+      "audioIds": [
+        "workbook-l11-ex9-a5e88055",
+        "workbook-l11-ex11-25662426"
+      ],
+      "section": "Lesson 11",
+      "pageLabel": "Page 73"
+    },
+    {
       "id": "workbook-86",
       "kind": "workbook",
       "lesson": 2,
@@ -99751,6 +106690,605 @@
         9,
         10
       ]
+    },
+    {
+      "id": "workbook-92",
+      "kind": "workbook",
+      "lesson": 11,
+      "printedPage": 92,
+      "pdfPage": 94,
+      "image": "/book/pages/workbook-92.webp",
+      "width": 1905,
+      "height": 2695,
+      "lines": [
+        {
+          "id": "workbook-92-line-1",
+          "text": "zweiundneunzig",
+          "box": [
+            3.881,
+            74.579,
+            1.627,
+            7.3
+          ]
+        },
+        {
+          "id": "workbook-92-line-2",
+          "text": "Was haben Sie gestern gemacht? G",
+          "box": [
+            14.524,
+            12.848,
+            32.623,
+            1.414
+          ]
+        },
+        {
+          "id": "workbook-92-line-3",
+          "text": "Ergänzen Sie den Fragebogen und kreuzen Sie an.",
+          "box": [
+            14.286,
+            15.173,
+            38.406,
+            1.283
+          ]
+        },
+        {
+          "id": "workbook-92-line-4",
+          "text": "Antworten Sie auf die Fragen.",
+          "box": [
+            14.524,
+            37.08,
+            29.401,
+            1.283
+          ]
+        },
+        {
+          "id": "workbook-92-line-5",
+          "text": "Schreiben",
+          "box": [
+            80.799,
+            37.21,
+            8.388,
+            0.831
+          ]
+        },
+        {
+          "id": "workbook-92-line-6",
+          "text": "Schreiben Sie vier Aktivitäten.",
+          "box": [
+            14.286,
+            39.274,
+            23.498,
+            1.283
+          ]
+        },
+        {
+          "id": "workbook-92-line-7",
+          "text": "Perfekt mit sein. Ergänzen Sie und finden Sie das Lösungswort. G",
+          "box": [
+            14.524,
+            51.609,
+            61.742,
+            1.414
+          ]
+        },
+        {
+          "id": "workbook-92-line-8",
+          "text": "1 laufen",
+          "box": [
+            14.524,
+            54.414,
+            6.841,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-92-line-9",
+          "text": "2 kommen",
+          "box": [
+            14.524,
+            56.098,
+            8.665,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-92-line-10",
+          "text": "3 fahren",
+          "box": [
+            14.524,
+            57.781,
+            7.101,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-92-line-11",
+          "text": "4 bleiben",
+          "box": [
+            14.524,
+            59.464,
+            7.711,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-92-line-12",
+          "text": "5 ankommen",
+          "box": [
+            14.524,
+            61.147,
+            10.477,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-92-line-13",
+          "text": "6 gehen",
+          "box": [
+            14.524,
+            62.83,
+            6.861,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-92-line-14",
+          "text": "7 passieren",
+          "box": [
+            14.524,
+            64.513,
+            9.305,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-92-line-15",
+          "text": "8 sein",
+          "box": [
+            14.524,
+            66.196,
+            5.142,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-92-line-16",
+          "text": "Ergänzen Sie die Verben im Perfekt. G",
+          "box": [
+            14.524,
+            69.179,
+            36.145,
+            1.414
+          ]
+        },
+        {
+          "id": "workbook-92-line-17",
+          "text": "1 telefonieren: Hast du telefoniert?",
+          "box": [
+            15.595,
+            20.097,
+            28.336,
+            1.595
+          ]
+        },
+        {
+          "id": "workbook-92-line-18",
+          "text": "2 fernsehen:",
+          "box": [
+            15.595,
+            21.878,
+            11.291,
+            1.595
+          ]
+        },
+        {
+          "id": "workbook-92-line-19",
+          "text": "3 Musik hören:",
+          "box": [
+            15.595,
+            25.442,
+            12.899,
+            1.595
+          ]
+        },
+        {
+          "id": "workbook-92-line-20",
+          "text": "4 einkaufen:",
+          "box": [
+            15.595,
+            29.005,
+            10.989,
+            1.595
+          ]
+        },
+        {
+          "id": "workbook-92-line-21",
+          "text": "ja",
+          "box": [
+            45.444,
+            18.666,
+            1.255,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-92-line-22",
+          "text": "nein",
+          "box": [
+            47.771,
+            18.666,
+            3.266,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-92-line-23",
+          "text": "5 kochen:",
+          "box": [
+            53.691,
+            20.097,
+            9.111,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-92-line-24",
+          "text": "6 aufräumen:",
+          "box": [
+            53.69,
+            23.66,
+            11.804,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-92-line-25",
+          "text": "7 abwaschen:",
+          "box": [
+            53.69,
+            27.224,
+            11.953,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-92-line-26",
+          "text": "8 arbeiten:",
+          "box": [
+            53.69,
+            30.787,
+            9.958,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-92-line-27",
+          "text": "ja",
+          "box": [
+            82.349,
+            18.666,
+            1.255,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-92-line-28",
+          "text": "nein",
+          "box": [
+            84.795,
+            18.666,
+            3.266,
+            1.188
+          ]
+        },
+        {
+          "id": "workbook-92-line-29",
+          "text": "Lösungswort:",
+          "box": [
+            61.619,
+            66.041,
+            11.253,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-92-line-30",
+          "text": "Lieber Patrick,",
+          "box": [
+            16.003,
+            74.293,
+            10.14,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-92-line-31",
+          "text": "ich habe deinen Segelschiff-Blog gelesen (1: lesen). Du",
+          "box": [
+            16.003,
+            75.311,
+            40.034,
+            1.568
+          ]
+        },
+        {
+          "id": "workbook-92-line-32",
+          "text": "super Fotos",
+          "box": [
+            64.741,
+            75.754,
+            8.784,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-92-line-33",
+          "text": "(2: machen), toll! Ich möchte auch einmal nach Lübeck fahren",
+          "box": [
+            35.372,
+            77.215,
+            43.051,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-92-line-34",
+          "text": "und die Schiffe sehen.",
+          "box": [
+            16.003,
+            78.677,
+            15.104,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-92-line-35",
+          "text": "Ich",
+          "box": [
+            16.003,
+            80.138,
+            2.451,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-92-line-36",
+          "text": "im Sommer mit Felix in die Berge",
+          "box": [
+            27.158,
+            80.138,
+            23.389,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-92-line-37",
+          "text": "(3: fahren), nach",
+          "box": [
+            69.954,
+            80.138,
+            11.906,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-92-line-38",
+          "text": "Garmisch-Partenkirchen in Bayern. Dort",
+          "box": [
+            16.003,
+            81.599,
+            27.911,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-92-line-39",
+          "text": "wir viel",
+          "box": [
+            52.618,
+            81.599,
+            5.523,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-92-line-40",
+          "text": "(4: laufen).",
+          "box": [
+            77.549,
+            81.599,
+            7.981,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-92-line-41",
+          "text": "Wir",
+          "box": [
+            16.003,
+            83.061,
+            2.652,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-92-line-42",
+          "text": "auch gut",
+          "box": [
+            27.359,
+            83.061,
+            6.728,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-92-line-43",
+          "text": "(5: essen) und ich",
+          "box": [
+            53.494,
+            83.061,
+            12.523,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-92-line-44",
+          "text": "viel Bier",
+          "box": [
+            74.72,
+            83.061,
+            6.194,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-92-line-45",
+          "text": "(6: trinken)",
+          "box": [
+            31.233,
+            84.522,
+            8.045,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-92-line-46",
+          "text": ". Eine Woche",
+          "box": [
+            41.211,
+            84.52,
+            9.439,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-92-line-47",
+          "text": "wir dort",
+          "box": [
+            59.354,
+            84.52,
+            6.141,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-92-line-48",
+          "text": "(7: bleiben) und wir",
+          "box": [
+            16.003,
+            85.981,
+            13.129,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-92-line-49",
+          "text": "viel",
+          "box": [
+            37.836,
+            85.981,
+            3.103,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-92-line-50",
+          "text": "(8: sehen). Ich",
+          "box": [
+            60.345,
+            85.981,
+            10.172,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-92-line-51",
+          "text": "auch",
+          "box": [
+            79.222,
+            85.981,
+            3.996,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-92-line-52",
+          "text": "ganz viel",
+          "box": [
+            16.001,
+            87.443,
+            6.257,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-92-line-53",
+          "text": "(9: fotografieren). Möchtest du Fotos sehen?",
+          "box": [
+            41.665,
+            87.443,
+            30.815,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-92-line-54",
+          "text": "Viele Grüße",
+          "box": [
+            16.001,
+            90.364,
+            8.142,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-92-line-55",
+          "text": "Linda",
+          "box": [
+            16.001,
+            91.826,
+            3.591,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-92-line-56",
+          "text": "Wie geht’s? Was hast du",
+          "box": [
+            15.952,
+            42.849,
+            17.081,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-92-line-57",
+          "text": "am Wochenende gemacht?",
+          "box": [
+            15.952,
+            44.31,
+            18.417,
+            1.069
+          ]
+        },
+        {
+          "id": "workbook-92-line-58",
+          "text": "Hallo!",
+          "box": [
+            44.048,
+            42.602,
+            3.991,
+            1.4
+          ]
+        }
+      ],
+      "audioIds": [],
+      "section": "Extra practice · Lesson 11 / 12",
+      "pageLabel": "Page 92",
+      "lessons": [
+        11,
+        12
+      ]
     }
   ],
   "audio": [
@@ -100261,6 +107799,28 @@
       "pageId": "workbook-69"
     },
     {
+      "id": "workbook-l11-ex9-a5e88055",
+      "lesson": 11,
+      "kind": "workbook",
+      "exercise": 9,
+      "label": "Exercise 9 · a",
+      "src": "/book/audio/workbook-l11-ex9-a5e88055.mp3",
+      "source": "resources/original/audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_AB_CD2/2_31_AB_Momente_A11_11_9a.mp3",
+      "sha256": "a5e88055c010689cb984e4be18f1f96f8c06d6db30b88dd7c86bf57af17ba2a4",
+      "pageId": "workbook-73"
+    },
+    {
+      "id": "workbook-l11-ex11-25662426",
+      "lesson": 11,
+      "kind": "workbook",
+      "exercise": 11,
+      "label": "Exercise 11 · b",
+      "src": "/book/audio/workbook-l11-ex11-25662426.mp3",
+      "source": "resources/original/audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_AB_CD2/2_32_AB_Momente_A11_11_11b.mp3",
+      "sha256": "256624268344203d427a7b6b783c1f2b207d13e711f1cf3359f4ba548ebd6615",
+      "pageId": "workbook-73"
+    },
+    {
       "id": "coursebook-l7-ex1-3ef29d61",
       "lesson": 7,
       "kind": "coursebook",
@@ -100468,6 +108028,72 @@
       "source": "resources/original/audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_22_KB_Momente_A11_L10_10_Durchsage_5.mp3",
       "sha256": "1bb6b202e98f54ac41dcc85fc5215c1c4509132d024e038773e4410ceb4e025b",
       "pageId": "coursebook-68"
+    },
+    {
+      "id": "coursebook-l11-ex1-a732cb05",
+      "lesson": 11,
+      "kind": "coursebook",
+      "exercise": 1,
+      "label": "Exercises 1a & 2a · Speaker A",
+      "src": "/book/audio/coursebook-l11-ex1-a732cb05.mp3",
+      "source": "resources/original/audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_23_KB_Momente_A11_L11_1a_2a_A.mp3",
+      "sha256": "a732cb05dca81b4abd8b2ed00098bf9a56fa3b16052e96aa55ca493a1b8de24c",
+      "pageId": "coursebook-69"
+    },
+    {
+      "id": "coursebook-l11-ex1-e6add0d0",
+      "lesson": 11,
+      "kind": "coursebook",
+      "exercise": 1,
+      "label": "Exercises 1a & 2a · Speaker B",
+      "src": "/book/audio/coursebook-l11-ex1-e6add0d0.mp3",
+      "source": "resources/original/audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_24_KB_Momente_A11_L11_1a_2a_B.mp3",
+      "sha256": "e6add0d0fc1ed88f96559e6131d711ea1c70b16f8c8e72c1e768e09a0b80b353",
+      "pageId": "coursebook-69"
+    },
+    {
+      "id": "coursebook-l11-ex1-cb9dce06",
+      "lesson": 11,
+      "kind": "coursebook",
+      "exercise": 1,
+      "label": "Exercises 1a & 2a · Speaker C",
+      "src": "/book/audio/coursebook-l11-ex1-cb9dce06.mp3",
+      "source": "resources/original/audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_25_KB_Momente_A11_L11_1a_2a_C.mp3",
+      "sha256": "cb9dce06a54e116e362096d43a4da6a78d156ffaa8fc0798372fd9af56a033d7",
+      "pageId": "coursebook-69"
+    },
+    {
+      "id": "coursebook-l11-ex1-83de739d",
+      "lesson": 11,
+      "kind": "coursebook",
+      "exercise": 1,
+      "label": "Exercises 1a & 2a · Speaker D",
+      "src": "/book/audio/coursebook-l11-ex1-83de739d.mp3",
+      "source": "resources/original/audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_26_KB_Momente_A11_L11_1a_2a_D.mp3",
+      "sha256": "83de739d5dc26591c28ecddce7ad9a5025879378ba5287ac757c450f3dcb11cb",
+      "pageId": "coursebook-69"
+    },
+    {
+      "id": "coursebook-l11-ex1-24d0c93b",
+      "lesson": 11,
+      "kind": "coursebook",
+      "exercise": 1,
+      "label": "Exercises 1a & 2a · Speaker E",
+      "src": "/book/audio/coursebook-l11-ex1-24d0c93b.mp3",
+      "source": "resources/original/audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_27_KB_Momente_A11_L11_1a_2a_E.mp3",
+      "sha256": "24d0c93b3d390e419554ae2a54baed37297b124ca3ecfdaeaa03f55c37cfef56",
+      "pageId": "coursebook-69"
+    },
+    {
+      "id": "coursebook-l11-ex1-cfe6314a",
+      "lesson": 11,
+      "kind": "coursebook",
+      "exercise": 1,
+      "label": "Exercises 1a & 2a · Speaker F",
+      "src": "/book/audio/coursebook-l11-ex1-cfe6314a.mp3",
+      "source": "resources/original/audio/Audio-20260730T043413Z-1-001/Audio/Momente_A1_1_KB_CD2/2_28_KB_Momente_A11_L11_1a_2a_F.mp3",
+      "sha256": "cfe6314a46667d52ce6ba18bc3f95c122e087ee930803c6e00595eb6c462c8d8",
+      "pageId": "coursebook-69"
     },
     {
       "id": "coursebook-l1-ex1-74059a9c",

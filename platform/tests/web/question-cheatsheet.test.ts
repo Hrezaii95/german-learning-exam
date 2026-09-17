@@ -7,8 +7,8 @@ import {lookupEntries} from "../../apps/web/lib/study/lookup";
 
 describe("question patterns and learning support",()=>{
   it("separates released course patterns from the wider case and time family",()=>{
-    expect(questionWords.filter(w=>w.lesson!==null).map(w=>w.id)).toEqual(["wer","was","wie","wo","woher","wie-alt","wie-viel","wie-viele","welche","wie-spaet","wann","wie-oft"]);
-    for(const id of ["wohin","wie-lange","warum","wen","wem","wessen"])expect(questionWords.find(w=>w.id===id)?.lesson).toBeNull();
+    expect(questionWords.filter(w=>w.lesson!==null).map(w=>w.id)).toEqual(["wer","was","wie","wo","woher","wie-alt","wie-viel","wie-viele","welche","wie-spaet","wann","wie-lange","ab-wann","wie-oft"]);
+    for(const id of ["wohin","warum","wen","wem","wessen"])expect(questionWords.find(w=>w.id===id)?.lesson).toBeNull();
     expect(new Set(questionWords.map(w=>w.id)).size).toBe(questionWords.length);
   });
   it("changes conjugation and verb position without changing the requested fact",()=>{
@@ -32,7 +32,7 @@ describe("question patterns and learning support",()=>{
   });
   it("makes the new whole-question and reply meanings available in the dictionary",()=>{
     const dictionary=loadDictionary();
-    for(const text of ["Wessen Buch ist das?","Wem hilfst du?","Wie lange bleibst du?","Wohnen Sie in Berlin?","Doch, ich komme aus dem Iran."]){expect(lookupEntries(dictionary,text).entries.length,text).toBeGreaterThan(0);}
+    for(const text of ["Wessen Buch ist das?","Wem hilfst du?","Wie lange haben Sie Deutschkurs?","Wohnen Sie in Berlin?","Doch, ich komme aus dem Iran."]){expect(lookupEntries(dictionary,text).entries.length,text).toBeGreaterThan(0);}
   });
   it("ships a real exact-text clip for every question and builder combination",()=>{
     const speech={...JSON.parse(readFileSync(resolve("apps/web/generated/study-speech.json"),"utf8")),...JSON.parse(readFileSync(resolve("apps/web/generated/collection-speech.json"),"utf8"))} as Record<string,string>;

@@ -12,9 +12,10 @@ export const sheetLinks = [
   {id:"time",number:"11",title:"Time, weekdays & plans",href:"/cheat-sheets/time"},
   {id:"food",number:"12",title:"Food, preferences & ordering",href:"/cheat-sheets/food"},
   {id:"travel",number:"13",title:"Travel & separable verbs",href:"/cheat-sheets/travel"},
+  {id:"past",number:"14",title:"Yesterday, Perfekt & opening hours",href:"/cheat-sheets/past"},
 ] as const;
 export type SheetId = typeof sheetLinks[number]["id"];
-export type ExtendedSheetId = Exclude<SheetId,"countries"|"home"|"questions"|"objects"|"office"|"hobbies"|"time"|"food"|"travel">;
+export type ExtendedSheetId = Exclude<SheetId,"countries"|"home"|"questions"|"objects"|"office"|"hobbies"|"time"|"food"|"travel"|"past">;
 export type SheetQuiz = {q:string;options:string[];answer:string;why:string};
 export const sheetTitles:Record<ExtendedSheetId,{title:string;subtitle:string;eyebrow:string}>={
   people:{title:"Put a face to the word.",subtitle:"Family connections, work roles, and the words that describe you.",eyebrow:"The people around you · Course vocabulary"},

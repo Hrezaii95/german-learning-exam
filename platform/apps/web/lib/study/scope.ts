@@ -1,5 +1,5 @@
 /** Shared course selection. The available ceiling advances only after each lesson is integrated. */
-export const LAST_AVAILABLE_LESSON = 10;
+export const LAST_AVAILABLE_LESSON = 11;
 export const A1_LESSON_COUNT = 12;
 export const STUDY_SCOPE_KEY = "german-study-scope-v1";
 
@@ -12,6 +12,7 @@ export const studyConcepts = [
   {id:"objects",label:"Everyday objects"},
   {id:"colours-materials",label:"Colours, shapes & materials"},
   {id:"office",label:"Office & communication"},
+  {id:"past",label:"Past actions & participles"},
   {id:"travel",label:"Travel & separable verbs"},
   {id:"food",label:"Food, preferences & ordering"},
   {id:"time",label:"Time, weekdays & plans"},
@@ -84,6 +85,7 @@ export const lessonConcepts:Record<number,StudyConcept[]> = {
   4:["home","numbers","grammar","conversation","questions","descriptions"],
   5:["objects","colours-materials","grammar","conversation","verbs","questions","classroom"],
   6:["office","objects","numbers","verbs","grammar","conversation","questions"],
+  11:["past","time","people","hobbies","verbs","grammar","questions","conversation","classroom"],
   10:["travel","time","people","verbs","grammar","questions","conversation"],
   9:["food","people","verbs","grammar","questions","conversation"],
   8:["time","verbs","grammar","conversation","questions"],

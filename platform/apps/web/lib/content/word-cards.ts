@@ -52,6 +52,18 @@ export function loadWordCards(): WordCardCatalog {
         }else families.push(addition);
       }
     }
+    for(const unit of studyUnits)for(const verb of unit.verbs){
+      if(!verb.participle)continue;
+      const card=families.find(c=>c.rows.some(r=>r.singular.text===verb.verb));
+      if(!card)continue;
+      const past=`${verb.auxiliary==="sein"?"ist":"hat"} ${verb.participle}`;
+      card.pattern=[...new Set([...card.pattern,past])];
+      const row=card.rows.find(r=>r.singular.text===verb.verb)!;
+      if(!row.usage.includes(past))row.usage=[row.usage,`Perfekt: ${past}.`].filter(Boolean).join(' ');
+      const question=`What is the past participle of ${verb.verb}?`;
+      if(!card.prompts.some(p=>p.question===question))card.prompts.push({question,answers:[verb.participle],hint:`Use ${verb.auxiliary??"haben"} with this participle.`});
+      card.searchText+=` ${past}`;
+    }
     const additions = families.map((card) => ({
       ...card,
       rows: card.rows.map((row) => ({

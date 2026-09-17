@@ -1,0 +1,1569 @@
+{
+  "number": 11,
+  "summary": "Talk about yesterday with Perfekt, remember participle patterns and ask about opening hours.",
+  "words": [
+    {
+      "de": "gestern",
+      "en": "yesterday",
+      "plural": "",
+      "category": "Time",
+      "example": "Was hast du gestern gemacht?",
+      "translation": "What did you do yesterday?",
+      "id": "l11-gestern"
+    },
+    {
+      "de": "der Spaziergang",
+      "en": "walk / stroll",
+      "plural": "die Spaziergänge",
+      "category": "Hobbies",
+      "example": "Ich habe einen Spaziergang gemacht.",
+      "translation": "I went for a walk.",
+      "id": "l11-spaziergang"
+    },
+    {
+      "de": "der Wald",
+      "en": "forest",
+      "plural": "die Wälder",
+      "category": "Places",
+      "example": "Ich habe einen Spaziergang im Wald gemacht.",
+      "translation": "I went for a walk in the forest.",
+      "id": "l11-wald"
+    },
+    {
+      "de": "die Zeitung",
+      "en": "newspaper",
+      "plural": "die Zeitungen",
+      "category": "Objects",
+      "example": "Ich habe Zeitung gelesen.",
+      "translation": "I read the newspaper.",
+      "id": "l11-zeitung"
+    },
+    {
+      "de": "aufräumen",
+      "en": "to tidy up",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich habe den Schreibtisch aufgeräumt.",
+      "translation": "I tidied the desk.",
+      "id": "l11-aufraeumen"
+    },
+    {
+      "de": "zu wenig",
+      "en": "too little",
+      "plural": "",
+      "category": "Grammar",
+      "example": "Ich habe zu wenig gegessen.",
+      "translation": "I ate too little.",
+      "id": "l11-zu-wenig"
+    },
+    {
+      "de": "zu viel",
+      "en": "too much",
+      "plural": "",
+      "category": "Grammar",
+      "example": "Ich habe zu viel Kaffee getrunken.",
+      "translation": "I drank too much coffee.",
+      "id": "l11-zu-viel"
+    },
+    {
+      "de": "der Vogel",
+      "en": "bird",
+      "plural": "die Vögel",
+      "category": "Everyday",
+      "example": "Ich habe einen Vogel gehört.",
+      "translation": "I heard a bird.",
+      "id": "l11-vogel"
+    },
+    {
+      "de": "der Film",
+      "en": "film",
+      "plural": "die Filme",
+      "category": "Hobbies",
+      "example": "Wir haben einen Film geschaut.",
+      "translation": "We watched a film.",
+      "id": "l11-film"
+    },
+    {
+      "de": "die Pause",
+      "en": "break",
+      "plural": "die Pausen",
+      "category": "Everyday",
+      "example": "Ich habe eine Pause gemacht.",
+      "translation": "I took a break.",
+      "id": "l11-pause"
+    },
+    {
+      "de": "der Doktor",
+      "en": "doctor / holder of a doctorate",
+      "plural": "die Doktoren",
+      "category": "People",
+      "example": "Er ist Doktor.",
+      "translation": "He holds a doctorate.",
+      "id": "l11-doktor"
+    },
+    {
+      "de": "die Doktorarbeit",
+      "en": "doctoral dissertation",
+      "plural": "die Doktorarbeiten",
+      "category": "Classroom",
+      "example": "Ich habe an meiner Doktorarbeit geschrieben.",
+      "translation": "I worked on my doctoral dissertation.",
+      "id": "l11-doktorarbeit"
+    },
+    {
+      "de": "abwaschen",
+      "en": "to wash the dishes",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich habe gekocht und abgewaschen.",
+      "translation": "I cooked and washed the dishes.",
+      "id": "l11-abwaschen"
+    },
+    {
+      "de": "schlafen",
+      "en": "to sleep",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Hast du lange geschlafen?",
+      "translation": "Did you sleep for a long time?",
+      "id": "l11-schlafen"
+    },
+    {
+      "de": "die Hausaufgabe",
+      "en": "homework task",
+      "plural": "die Hausaufgaben",
+      "category": "Classroom",
+      "example": "Ich habe meine Hausaufgaben gemacht.",
+      "translation": "I did my homework.",
+      "id": "l11-hausaufgabe"
+    },
+    {
+      "de": "die Serie",
+      "en": "series",
+      "plural": "die Serien",
+      "category": "Hobbies",
+      "example": "Wir haben eine Serie geschaut.",
+      "translation": "We watched a series.",
+      "id": "l11-serie"
+    },
+    {
+      "de": "Hallo Schatz!",
+      "en": "Hello, darling!",
+      "plural": "",
+      "category": "Conversation",
+      "example": "Hallo Schatz! Wie geht es dir?",
+      "translation": "Hello, darling! How are you?",
+      "id": "l11-hallo-schatz"
+    },
+    {
+      "de": "von … bis",
+      "en": "from … to / until",
+      "plural": "",
+      "category": "Time",
+      "example": "Wir haben von eins bis drei gespielt.",
+      "translation": "We played from one until three.",
+      "id": "l11-von-bis"
+    },
+    {
+      "de": "der Basketball",
+      "en": "basketball",
+      "plural": "",
+      "category": "Hobbies",
+      "example": "Ich spiele Basketball.",
+      "translation": "I play basketball.",
+      "id": "l11-basketball"
+    },
+    {
+      "de": "danach",
+      "en": "afterwards",
+      "plural": "",
+      "category": "Time",
+      "example": "Danach habe ich ein Eis gegessen.",
+      "translation": "Afterwards I ate an ice cream.",
+      "id": "l11-danach"
+    },
+    {
+      "de": "der Einkaufsbummel",
+      "en": "shopping trip",
+      "plural": "die Einkaufsbummel",
+      "category": "Shopping",
+      "example": "Wir haben einen Einkaufsbummel gemacht.",
+      "translation": "We went on a shopping trip.",
+      "id": "l11-einkaufsbummel"
+    },
+    {
+      "de": "kaufen",
+      "en": "to buy",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich habe ein T-Shirt gekauft.",
+      "translation": "I bought a T-shirt.",
+      "id": "l11-kaufen"
+    },
+    {
+      "de": "das T-Shirt",
+      "en": "T-shirt",
+      "plural": "die T-Shirts",
+      "category": "Objects",
+      "example": "Das T-Shirt ist schön.",
+      "translation": "The T-shirt is nice.",
+      "id": "l11-t-shirt"
+    },
+    {
+      "de": "ab",
+      "en": "from … onward",
+      "plural": "",
+      "category": "Time",
+      "example": "Die Praxis ist ab acht Uhr geöffnet.",
+      "translation": "The practice is open from eight onward.",
+      "id": "l11-ab"
+    },
+    {
+      "de": "ganz",
+      "en": "whole / all",
+      "plural": "",
+      "category": "Grammar",
+      "example": "Wir haben die ganze Nacht Fußball geschaut.",
+      "translation": "We watched football all night.",
+      "id": "l11-ganz"
+    },
+    {
+      "de": "zurückkommen",
+      "en": "to come back",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Wann kommst du morgen zurück?",
+      "translation": "When are you coming back tomorrow?",
+      "id": "l11-zurueckkommen"
+    },
+    {
+      "de": "der Kuss",
+      "en": "kiss",
+      "plural": "die Küsse",
+      "category": "Everyday",
+      "example": "Viele Küsse von Mark!",
+      "translation": "Lots of kisses from Mark!",
+      "id": "l11-kuss"
+    },
+    {
+      "de": "geöffnet",
+      "en": "open",
+      "plural": "",
+      "category": "Adjectives",
+      "example": "Wann ist die Praxis geöffnet?",
+      "translation": "When is the practice open?",
+      "id": "l11-geoeffnet"
+    },
+    {
+      "de": "das Schild",
+      "en": "sign",
+      "plural": "die Schilder",
+      "category": "Objects",
+      "example": "Lesen Sie das Schild.",
+      "translation": "Read the sign.",
+      "id": "l11-schild"
+    },
+    {
+      "de": "der Kinderarzt",
+      "en": "male pediatrician",
+      "plural": "die Kinderärzte",
+      "category": "People",
+      "example": "Der Kinderarzt hat heute geöffnet.",
+      "translation": "The pediatrician is open today.",
+      "id": "l11-kinderarzt"
+    },
+    {
+      "de": "die Kinderärztin",
+      "en": "female pediatrician",
+      "plural": "die Kinderärztinnen",
+      "category": "People",
+      "example": "Die Kinderärztin hat heute geöffnet.",
+      "translation": "The pediatrician is open today.",
+      "id": "l11-kinderaerztin"
+    },
+    {
+      "de": "die Boutique",
+      "en": "boutique",
+      "plural": "die Boutiquen",
+      "category": "Places",
+      "example": "Die Boutique ist ab September geöffnet.",
+      "translation": "The boutique is open from September onward.",
+      "id": "l11-boutique"
+    },
+    {
+      "de": "die Mode",
+      "en": "fashion",
+      "plural": "die Moden",
+      "category": "Everyday",
+      "example": "Ich interessiere mich für Mode.",
+      "translation": "I am interested in fashion.",
+      "id": "l11-mode"
+    },
+    {
+      "de": "der Urlaub",
+      "en": "holiday / vacation",
+      "plural": "die Urlaube",
+      "category": "Time",
+      "example": "Wir haben im August Urlaub.",
+      "translation": "We are on holiday in August.",
+      "id": "l11-urlaub"
+    },
+    {
+      "de": "der Unterricht",
+      "en": "teaching / class",
+      "plural": "",
+      "category": "Classroom",
+      "example": "Der Unterricht beginnt um acht Uhr.",
+      "translation": "Class starts at eight.",
+      "id": "l11-unterricht"
+    },
+    {
+      "de": "der Kursleiter",
+      "en": "male course instructor",
+      "plural": "die Kursleiter",
+      "category": "People",
+      "example": "Der Kursleiter fragt.",
+      "translation": "The course instructor asks.",
+      "id": "l11-kursleiter"
+    },
+    {
+      "de": "die Kursleiterin",
+      "en": "female course instructor",
+      "plural": "die Kursleiterinnen",
+      "category": "People",
+      "example": "Die Kursleiterin fragt.",
+      "translation": "The course instructor asks.",
+      "id": "l11-kursleiterin"
+    },
+    {
+      "de": "der Kurs",
+      "en": "course",
+      "plural": "die Kurse",
+      "category": "Classroom",
+      "example": "Der Kurs beginnt ab September.",
+      "translation": "The course starts from September.",
+      "id": "l11-kurs"
+    },
+    {
+      "de": "die Blume",
+      "en": "flower",
+      "plural": "die Blumen",
+      "category": "Everyday",
+      "example": "Ich habe Blumen fotografiert.",
+      "translation": "I photographed flowers.",
+      "id": "l11-blume"
+    },
+    {
+      "de": "der Laden",
+      "en": "shop",
+      "plural": "die Läden",
+      "category": "Places",
+      "example": "Der Laden ist geschlossen.",
+      "translation": "The shop is closed.",
+      "id": "l11-laden"
+    },
+    {
+      "de": "geschlossen",
+      "en": "closed",
+      "plural": "",
+      "category": "Adjectives",
+      "example": "Heute ist die Praxis geschlossen.",
+      "translation": "The practice is closed today.",
+      "id": "l11-geschlossen"
+    },
+    {
+      "de": "das Eiscafé",
+      "en": "ice cream parlor",
+      "plural": "die Eiscafés",
+      "category": "Places",
+      "example": "Das Eiscafé ist bis sechs geöffnet.",
+      "translation": "The ice cream parlor is open until six.",
+      "id": "l11-eiscaf"
+    },
+    {
+      "de": "die Praxis",
+      "en": "medical practice",
+      "plural": "die Praxen",
+      "category": "Places",
+      "example": "Die Praxis ist von acht bis eins geöffnet.",
+      "translation": "The practice is open from eight until one.",
+      "id": "l11-praxis"
+    },
+    {
+      "de": "der Kiosk",
+      "en": "kiosk",
+      "plural": "die Kioske",
+      "category": "Places",
+      "example": "Der Kiosk ist bis acht Uhr geöffnet.",
+      "translation": "The kiosk is open until eight.",
+      "id": "l11-kiosk"
+    },
+    {
+      "de": "der Zahn",
+      "en": "tooth",
+      "plural": "die Zähne",
+      "category": "Everyday",
+      "example": "Mein Zahn tut weh.",
+      "translation": "My tooth hurts.",
+      "id": "l11-zahn"
+    },
+    {
+      "de": "der Fragebogen",
+      "en": "questionnaire",
+      "plural": "die Fragebögen",
+      "category": "Classroom",
+      "example": "Lesen Sie den Fragebogen.",
+      "translation": "Read the questionnaire.",
+      "id": "l11-fragebogen"
+    },
+    {
+      "de": "letzt-",
+      "en": "last / previous",
+      "plural": "",
+      "category": "Time",
+      "example": "Letzte Woche habe ich viel gearbeitet.",
+      "translation": "Last week I worked a lot.",
+      "id": "l11-letzt"
+    },
+    {
+      "de": "lange",
+      "en": "for a long time",
+      "plural": "",
+      "category": "Time",
+      "example": "Ich habe lange geschlafen.",
+      "translation": "I slept for a long time.",
+      "id": "l11-lange"
+    },
+    {
+      "de": "der Sport",
+      "en": "sport",
+      "plural": "",
+      "category": "Hobbies",
+      "example": "Ich habe Sport gemacht.",
+      "translation": "I exercised.",
+      "id": "l11-sport"
+    },
+    {
+      "de": "einladen",
+      "en": "to invite",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Wir haben Freunde eingeladen.",
+      "translation": "We invited friends.",
+      "id": "l11-einladen"
+    },
+    {
+      "de": "Ja, habe ich.",
+      "en": "Yes, I did.",
+      "plural": "",
+      "category": "Conversation",
+      "example": "Hast du gelernt? Ja, habe ich.",
+      "translation": "Did you study? Yes, I did.",
+      "id": "l11-ja-habe-ich"
+    },
+    {
+      "de": "Nein, habe ich nicht.",
+      "en": "No, I did not.",
+      "plural": "",
+      "category": "Conversation",
+      "example": "Hast du gekocht? Nein, habe ich nicht.",
+      "translation": "Did you cook? No, I did not.",
+      "id": "l11-nein-habe-ich-nicht"
+    },
+    {
+      "de": "der Chor",
+      "en": "choir",
+      "plural": "die Chöre",
+      "category": "Hobbies",
+      "example": "Ich habe im Chor gesungen.",
+      "translation": "I sang in the choir.",
+      "id": "l11-chor"
+    },
+    {
+      "de": "der Handball",
+      "en": "handball",
+      "plural": "",
+      "category": "Hobbies",
+      "example": "Wir haben Handball gespielt.",
+      "translation": "We played handball.",
+      "id": "l11-handball"
+    },
+    {
+      "de": "die Wäsche",
+      "en": "laundry",
+      "plural": "",
+      "category": "Everyday",
+      "example": "Ich habe Wäsche gewaschen.",
+      "translation": "I did the laundry.",
+      "id": "l11-waesche"
+    },
+    {
+      "de": "waschen",
+      "en": "to wash",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich habe die Wäsche gewaschen.",
+      "translation": "I washed the laundry.",
+      "id": "l11-waschen"
+    },
+    {
+      "de": "das Geschenk",
+      "en": "gift",
+      "plural": "die Geschenke",
+      "category": "Objects",
+      "example": "Ich habe ein Geschenk gekauft.",
+      "translation": "I bought a gift.",
+      "id": "l11-geschenk"
+    },
+    {
+      "de": "machen",
+      "en": "to do / make",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Was hast du gemacht?",
+      "translation": "What did you do?",
+      "id": "l11-machen"
+    },
+    {
+      "de": "arbeiten",
+      "en": "to work",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich habe gestern gearbeitet.",
+      "translation": "I worked yesterday.",
+      "id": "l11-arbeiten"
+    },
+    {
+      "de": "hören",
+      "en": "to hear / listen",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich habe Musik gehört.",
+      "translation": "I listened to music.",
+      "id": "l11-hoeren"
+    },
+    {
+      "de": "kochen",
+      "en": "to cook",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich habe Nudeln gekocht.",
+      "translation": "I cooked noodles.",
+      "id": "l11-kochen"
+    },
+    {
+      "de": "trinken",
+      "en": "to drink",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich habe Kaffee getrunken.",
+      "translation": "I drank coffee.",
+      "id": "l11-trinken"
+    },
+    {
+      "de": "lesen",
+      "en": "to read",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich habe ein Buch gelesen.",
+      "translation": "I read a book.",
+      "id": "l11-lesen"
+    },
+    {
+      "de": "schreiben",
+      "en": "to write",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich habe Nachrichten geschrieben.",
+      "translation": "I wrote messages.",
+      "id": "l11-schreiben"
+    },
+    {
+      "de": "essen",
+      "en": "to eat",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich habe ein Eis gegessen.",
+      "translation": "I ate an ice cream.",
+      "id": "l11-essen"
+    },
+    {
+      "de": "singen",
+      "en": "to sing",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich habe im Chor gesungen.",
+      "translation": "I sang in the choir.",
+      "id": "l11-singen"
+    },
+    {
+      "de": "einkaufen",
+      "en": "to shop",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich habe Brot eingekauft.",
+      "translation": "I bought bread.",
+      "id": "l11-einkaufen"
+    },
+    {
+      "de": "fernsehen",
+      "en": "to watch television",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich habe gestern ferngesehen.",
+      "translation": "I watched television yesterday.",
+      "id": "l11-fernsehen"
+    },
+    {
+      "de": "fotografieren",
+      "en": "to photograph",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich habe Vögel fotografiert.",
+      "translation": "I photographed birds.",
+      "id": "l11-fotografieren"
+    },
+    {
+      "de": "telefonieren",
+      "en": "to speak on the phone",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich habe lange telefoniert.",
+      "translation": "I talked on the phone for a long time.",
+      "id": "l11-telefonieren"
+    },
+    {
+      "de": "spielen",
+      "en": "to play",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich habe Basketball gespielt.",
+      "translation": "I played basketball.",
+      "id": "l11-spielen"
+    },
+    {
+      "de": "schauen",
+      "en": "to watch",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich habe einen Film geschaut.",
+      "translation": "I watched a film.",
+      "id": "l11-schauen"
+    },
+    {
+      "de": "frühstücken",
+      "en": "to have breakfast",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich habe spät gefrühstückt.",
+      "translation": "I had breakfast late.",
+      "id": "l11-fruehstuecken"
+    },
+    {
+      "de": "backen",
+      "en": "to bake",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich habe Kuchen gebacken.",
+      "translation": "I baked cake.",
+      "id": "l11-backen"
+    },
+    {
+      "de": "treffen",
+      "en": "to meet",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich habe Freunde getroffen.",
+      "translation": "I met friends.",
+      "id": "l11-treffen"
+    },
+    {
+      "de": "anrufen",
+      "en": "to call by phone",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich habe meine Freundin angerufen.",
+      "translation": "I called my friend.",
+      "id": "l11-anrufen"
+    },
+    {
+      "de": "lernen",
+      "en": "to learn / study",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich habe Deutsch gelernt.",
+      "translation": "I studied German.",
+      "id": "l11-lernen"
+    },
+    {
+      "de": "abholen",
+      "en": "to pick up",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich habe Anna abgeholt.",
+      "translation": "I picked Anna up.",
+      "id": "l11-abholen"
+    },
+    {
+      "de": "malen",
+      "en": "to paint",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich habe gestern gemalt.",
+      "translation": "I painted yesterday.",
+      "id": "l11-malen"
+    },
+    {
+      "de": "tanzen",
+      "en": "to dance",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich habe lange getanzt.",
+      "translation": "I danced for a long time.",
+      "id": "l11-tanzen"
+    },
+    {
+      "de": "surfen",
+      "en": "to surf",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich habe im Internet gesurft.",
+      "translation": "I surfed the internet.",
+      "id": "l11-surfen"
+    },
+    {
+      "de": "chatten",
+      "en": "to chat online",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich habe mit Anna gechattet.",
+      "translation": "I chatted with Anna.",
+      "id": "l11-chatten"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "l11-perfekt",
+      "title": "One past action, two verb parts",
+      "de": "Ich habe gestern gearbeitet.",
+      "en": "Perfekt is a common way to talk about completed actions in conversation. Conjugate haben for the person and place the past participle at the end. Yesterday is gestern.",
+      "examples": [
+        "Ich habe gestern gearbeitet.",
+        "Wir haben Kaffee getrunken.",
+        "Gestern habe ich Zeitung gelesen."
+      ],
+      "source": "KB69–70; AB70–72"
+    },
+    {
+      "id": "l11-regular",
+      "title": "Regular participles: ge- … -t",
+      "de": "machen → gemacht · arbeiten → gearbeitet",
+      "en": "For many regular verbs, add ge- before the stem and -t after it. Some stems need -et: gearbeitet, gechattet. The participle does not change with the person.",
+      "examples": [
+        "Ich habe gelernt.",
+        "Du hast gelernt.",
+        "Wir haben gearbeitet."
+      ],
+      "source": "KB70; AB71"
+    },
+    {
+      "id": "l11-strong",
+      "title": "Strong participles: learn the whole word",
+      "de": "trinken → getrunken · schreiben → geschrieben",
+      "en": "Many strong verbs end in -en in the participle. Their vowel may change: trinken/getrunken, singen/gesungen, treffen/getroffen. Do not build every participle with -t.",
+      "examples": [
+        "Ich habe ein Buch gelesen.",
+        "Sie hat einen Kuchen gebacken.",
+        "Wir haben Freunde getroffen."
+      ],
+      "source": "KB70–72; AB71"
+    },
+    {
+      "id": "l11-separable",
+      "title": "The prefix stays attached to the participle",
+      "de": "aufräumen → aufgeräumt · einladen → eingeladen",
+      "en": "Put ge between the separable prefix and the rest of the verb. Present: Ich räume auf. Perfekt: Ich habe aufgeräumt. The complete participle is last.",
+      "examples": [
+        "Ich habe eingekauft.",
+        "Wir haben abgewaschen.",
+        "Hast du ferngesehen?"
+      ],
+      "source": "KB70–72; AB71"
+    },
+    {
+      "id": "l11-ieren",
+      "title": "-ieren: skip ge-",
+      "de": "telefonieren → telefoniert",
+      "en": "Verbs ending in -ieren take -t without ge-. In this lesson: telefoniert and fotografiert. Keep the same complete participle for every person.",
+      "examples": [
+        "Ich habe telefoniert.",
+        "Wir haben Vögel fotografiert."
+      ],
+      "source": "KB70; AB71"
+    },
+    {
+      "id": "l11-questions",
+      "title": "Ask about the past, then answer briefly",
+      "de": "Was hast du gemacht? / Hast du gelernt?",
+      "en": "A W-question puts haben after the question word. A yes/no question starts with haben. The participle stays last. A short answer can leave out the action already mentioned.",
+      "examples": [
+        "Was habt ihr gestern gemacht?",
+        "Hast du gelernt?",
+        "Ja, habe ich.",
+        "Nein, habe ich nicht."
+      ],
+      "source": "KB70–71; AB71–73"
+    },
+    {
+      "id": "l11-opening",
+      "title": "Opening hours: a point, an interval or a starting point",
+      "de": "um acht · von acht bis eins · ab September",
+      "en": "Um identifies a clock time. Von … bis gives a start and an end. Ab gives a starting point with no stated end. Ask Wann ist die Praxis geöffnet? or Ab wann ist sie wieder geöffnet?",
+      "examples": [
+        "Die Praxis ist von acht bis eins geöffnet.",
+        "Der Kurs beginnt um acht Uhr.",
+        "Ab September ist die Boutique wieder geöffnet."
+      ],
+      "source": "KB71 partner pages169/197; AB73"
+    },
+    {
+      "id": "l11-last",
+      "title": "Last: follow the time noun",
+      "de": "letzten Freitag · letztes Wochenende · letzte Woche",
+      "en": "These time expressions have no preposition: letzten with masculine weekdays, letztes with neuter Wochenende or Jahr, letzte with feminine Woche. Learn each colour-coded chunk together.",
+      "examples": [
+        "Letzten Samstag habe ich gelernt.",
+        "Letztes Wochenende habe ich Freunde getroffen.",
+        "Letzte Woche habe ich gearbeitet."
+      ],
+      "source": "KB71; AB73"
+    }
+  ],
+  "verbs": [
+    {
+      "verb": "machen",
+      "meaning": "to do / make",
+      "forms": [
+        "mache",
+        "machst",
+        "macht",
+        "machen",
+        "macht",
+        "machen"
+      ],
+      "participle": "gemacht",
+      "auxiliary": "haben",
+      "pastGroup": "regular",
+      "tip": "Perfekt: hat gemacht. Usually ge- + stem + -t. Arbeiten and chatten need -et: gearbeitet, gechattet.",
+      "source": "KB69–72; AB70–73"
+    },
+    {
+      "verb": "arbeiten",
+      "meaning": "to work",
+      "forms": [
+        "arbeite",
+        "arbeitest",
+        "arbeitet",
+        "arbeiten",
+        "arbeitet",
+        "arbeiten"
+      ],
+      "participle": "gearbeitet",
+      "auxiliary": "haben",
+      "pastGroup": "regular",
+      "tip": "Perfekt: hat gearbeitet. Usually ge- + stem + -t. Arbeiten and chatten need -et: gearbeitet, gechattet.",
+      "source": "KB69–72; AB70–73"
+    },
+    {
+      "verb": "hören",
+      "meaning": "to hear / listen",
+      "forms": [
+        "höre",
+        "hörst",
+        "hört",
+        "hören",
+        "hört",
+        "hören"
+      ],
+      "participle": "gehört",
+      "auxiliary": "haben",
+      "pastGroup": "regular",
+      "tip": "Perfekt: hat gehört. Usually ge- + stem + -t. Arbeiten and chatten need -et: gearbeitet, gechattet.",
+      "source": "KB69–72; AB70–73"
+    },
+    {
+      "verb": "kochen",
+      "meaning": "to cook",
+      "forms": [
+        "koche",
+        "kochst",
+        "kocht",
+        "kochen",
+        "kocht",
+        "kochen"
+      ],
+      "participle": "gekocht",
+      "auxiliary": "haben",
+      "pastGroup": "regular",
+      "tip": "Perfekt: hat gekocht. Usually ge- + stem + -t. Arbeiten and chatten need -et: gearbeitet, gechattet.",
+      "source": "KB69–72; AB70–73"
+    },
+    {
+      "verb": "kaufen",
+      "meaning": "to buy",
+      "forms": [
+        "kaufe",
+        "kaufst",
+        "kauft",
+        "kaufen",
+        "kauft",
+        "kaufen"
+      ],
+      "participle": "gekauft",
+      "auxiliary": "haben",
+      "pastGroup": "regular",
+      "tip": "Perfekt: hat gekauft. Usually ge- + stem + -t. Arbeiten and chatten need -et: gearbeitet, gechattet.",
+      "source": "KB69–72; AB70–73"
+    },
+    {
+      "verb": "spielen",
+      "meaning": "to play",
+      "forms": [
+        "spiele",
+        "spielst",
+        "spielt",
+        "spielen",
+        "spielt",
+        "spielen"
+      ],
+      "participle": "gespielt",
+      "auxiliary": "haben",
+      "pastGroup": "regular",
+      "tip": "Perfekt: hat gespielt. Usually ge- + stem + -t. Arbeiten and chatten need -et: gearbeitet, gechattet.",
+      "source": "KB69–72; AB70–73"
+    },
+    {
+      "verb": "schauen",
+      "meaning": "to watch",
+      "forms": [
+        "schaue",
+        "schaust",
+        "schaut",
+        "schauen",
+        "schaut",
+        "schauen"
+      ],
+      "participle": "geschaut",
+      "auxiliary": "haben",
+      "pastGroup": "regular",
+      "tip": "Perfekt: hat geschaut. Usually ge- + stem + -t. Arbeiten and chatten need -et: gearbeitet, gechattet.",
+      "source": "KB69–72; AB70–73"
+    },
+    {
+      "verb": "frühstücken",
+      "meaning": "to have breakfast",
+      "forms": [
+        "frühstücke",
+        "frühstückst",
+        "frühstückt",
+        "frühstücken",
+        "frühstückt",
+        "frühstücken"
+      ],
+      "participle": "gefrühstückt",
+      "auxiliary": "haben",
+      "pastGroup": "regular",
+      "tip": "Perfekt: hat gefrühstückt. Usually ge- + stem + -t. Arbeiten and chatten need -et: gearbeitet, gechattet.",
+      "source": "KB69–72; AB70–73"
+    },
+    {
+      "verb": "lernen",
+      "meaning": "to learn / study",
+      "forms": [
+        "lerne",
+        "lernst",
+        "lernt",
+        "lernen",
+        "lernt",
+        "lernen"
+      ],
+      "participle": "gelernt",
+      "auxiliary": "haben",
+      "pastGroup": "regular",
+      "tip": "Perfekt: hat gelernt. Usually ge- + stem + -t. Arbeiten and chatten need -et: gearbeitet, gechattet.",
+      "source": "KB69–72; AB70–73"
+    },
+    {
+      "verb": "malen",
+      "meaning": "to paint",
+      "forms": [
+        "male",
+        "malst",
+        "malt",
+        "malen",
+        "malt",
+        "malen"
+      ],
+      "participle": "gemalt",
+      "auxiliary": "haben",
+      "pastGroup": "regular",
+      "tip": "Perfekt: hat gemalt. Usually ge- + stem + -t. Arbeiten and chatten need -et: gearbeitet, gechattet.",
+      "source": "KB69–72; AB70–73"
+    },
+    {
+      "verb": "tanzen",
+      "meaning": "to dance",
+      "forms": [
+        "tanze",
+        "tanzt",
+        "tanzt",
+        "tanzen",
+        "tanzt",
+        "tanzen"
+      ],
+      "participle": "getanzt",
+      "auxiliary": "haben",
+      "pastGroup": "regular",
+      "tip": "Perfekt: hat getanzt. Usually ge- + stem + -t. Arbeiten and chatten need -et: gearbeitet, gechattet.",
+      "source": "KB69–72; AB70–73"
+    },
+    {
+      "verb": "surfen",
+      "meaning": "to surf",
+      "forms": [
+        "surfe",
+        "surfst",
+        "surft",
+        "surfen",
+        "surft",
+        "surfen"
+      ],
+      "participle": "gesurft",
+      "auxiliary": "haben",
+      "pastGroup": "regular",
+      "tip": "Perfekt: hat gesurft. Usually ge- + stem + -t. Arbeiten and chatten need -et: gearbeitet, gechattet.",
+      "source": "KB69–72; AB70–73"
+    },
+    {
+      "verb": "chatten",
+      "meaning": "to chat online",
+      "forms": [
+        "chatte",
+        "chattest",
+        "chattet",
+        "chatten",
+        "chattet",
+        "chatten"
+      ],
+      "participle": "gechattet",
+      "auxiliary": "haben",
+      "pastGroup": "regular",
+      "tip": "Perfekt: hat gechattet. Usually ge- + stem + -t. Arbeiten and chatten need -et: gearbeitet, gechattet.",
+      "source": "KB69–72; AB70–73"
+    },
+    {
+      "verb": "trinken",
+      "meaning": "to drink",
+      "forms": [
+        "trinke",
+        "trinkst",
+        "trinkt",
+        "trinken",
+        "trinkt",
+        "trinken"
+      ],
+      "participle": "getrunken",
+      "auxiliary": "haben",
+      "pastGroup": "strong",
+      "tip": "Perfekt: hat getrunken. Learn the participle as a whole: strong verbs usually end in -en and may change their stem vowel.",
+      "source": "KB69–72; AB70–73"
+    },
+    {
+      "verb": "lesen",
+      "meaning": "to read",
+      "forms": [
+        "lese",
+        "liest",
+        "liest",
+        "lesen",
+        "lest",
+        "lesen"
+      ],
+      "participle": "gelesen",
+      "auxiliary": "haben",
+      "pastGroup": "strong",
+      "tip": "Perfekt: hat gelesen. Learn the participle as a whole: strong verbs usually end in -en and may change their stem vowel.",
+      "source": "KB69–72; AB70–73"
+    },
+    {
+      "verb": "schreiben",
+      "meaning": "to write",
+      "forms": [
+        "schreibe",
+        "schreibst",
+        "schreibt",
+        "schreiben",
+        "schreibt",
+        "schreiben"
+      ],
+      "participle": "geschrieben",
+      "auxiliary": "haben",
+      "pastGroup": "strong",
+      "tip": "Perfekt: hat geschrieben. Learn the participle as a whole: strong verbs usually end in -en and may change their stem vowel.",
+      "source": "KB69–72; AB70–73"
+    },
+    {
+      "verb": "essen",
+      "meaning": "to eat",
+      "forms": [
+        "esse",
+        "isst",
+        "isst",
+        "essen",
+        "esst",
+        "essen"
+      ],
+      "participle": "gegessen",
+      "auxiliary": "haben",
+      "pastGroup": "strong",
+      "tip": "Perfekt: hat gegessen. Learn the participle as a whole: strong verbs usually end in -en and may change their stem vowel.",
+      "source": "KB69–72; AB70–73"
+    },
+    {
+      "verb": "singen",
+      "meaning": "to sing",
+      "forms": [
+        "singe",
+        "singst",
+        "singt",
+        "singen",
+        "singt",
+        "singen"
+      ],
+      "participle": "gesungen",
+      "auxiliary": "haben",
+      "pastGroup": "strong",
+      "tip": "Perfekt: hat gesungen. Learn the participle as a whole: strong verbs usually end in -en and may change their stem vowel.",
+      "source": "KB69–72; AB70–73"
+    },
+    {
+      "verb": "schlafen",
+      "meaning": "to sleep",
+      "forms": [
+        "schlafe",
+        "schläfst",
+        "schläft",
+        "schlafen",
+        "schlaft",
+        "schlafen"
+      ],
+      "participle": "geschlafen",
+      "auxiliary": "haben",
+      "pastGroup": "strong",
+      "tip": "Perfekt: hat geschlafen. Learn the participle as a whole: strong verbs usually end in -en and may change their stem vowel.",
+      "source": "KB69–72; AB70–73"
+    },
+    {
+      "verb": "backen",
+      "meaning": "to bake",
+      "forms": [
+        "backe",
+        "backst",
+        "backt",
+        "backen",
+        "backt",
+        "backen"
+      ],
+      "participle": "gebacken",
+      "auxiliary": "haben",
+      "pastGroup": "strong",
+      "tip": "Perfekt: hat gebacken. Learn the participle as a whole: strong verbs usually end in -en and may change their stem vowel.",
+      "source": "KB69–72; AB70–73"
+    },
+    {
+      "verb": "treffen",
+      "meaning": "to meet",
+      "forms": [
+        "treffe",
+        "triffst",
+        "trifft",
+        "treffen",
+        "trefft",
+        "treffen"
+      ],
+      "participle": "getroffen",
+      "auxiliary": "haben",
+      "pastGroup": "strong",
+      "tip": "Perfekt: hat getroffen. Learn the participle as a whole: strong verbs usually end in -en and may change their stem vowel.",
+      "source": "KB69–72; AB70–73"
+    },
+    {
+      "verb": "waschen",
+      "meaning": "to wash",
+      "forms": [
+        "wasche",
+        "wäschst",
+        "wäscht",
+        "waschen",
+        "wascht",
+        "waschen"
+      ],
+      "participle": "gewaschen",
+      "auxiliary": "haben",
+      "pastGroup": "strong",
+      "tip": "Perfekt: hat gewaschen. Learn the participle as a whole: strong verbs usually end in -en and may change their stem vowel.",
+      "source": "KB69–72; AB70–73"
+    },
+    {
+      "verb": "aufräumen",
+      "meaning": "to tidy up",
+      "forms": [
+        "räume auf",
+        "räumst auf",
+        "räumt auf",
+        "räumen auf",
+        "räumt auf",
+        "räumen auf"
+      ],
+      "participle": "aufgeräumt",
+      "auxiliary": "haben",
+      "pastGroup": "separable",
+      "tip": "Perfekt: hat aufgeräumt. Put ge inside the separable verb, after its prefix. The complete participle stays at the sentence end.",
+      "source": "KB69–72; AB70–73"
+    },
+    {
+      "verb": "abwaschen",
+      "meaning": "to wash the dishes",
+      "forms": [
+        "wasche ab",
+        "wäschst ab",
+        "wäscht ab",
+        "waschen ab",
+        "wascht ab",
+        "waschen ab"
+      ],
+      "participle": "abgewaschen",
+      "auxiliary": "haben",
+      "pastGroup": "separable",
+      "tip": "Perfekt: hat abgewaschen. Put ge inside the separable verb, after its prefix. The complete participle stays at the sentence end.",
+      "source": "KB69–72; AB70–73"
+    },
+    {
+      "verb": "einladen",
+      "meaning": "to invite",
+      "forms": [
+        "lade ein",
+        "lädst ein",
+        "lädt ein",
+        "laden ein",
+        "ladet ein",
+        "laden ein"
+      ],
+      "participle": "eingeladen",
+      "auxiliary": "haben",
+      "pastGroup": "separable",
+      "tip": "Perfekt: hat eingeladen. Put ge inside the separable verb, after its prefix. The complete participle stays at the sentence end.",
+      "source": "KB69–72; AB70–73"
+    },
+    {
+      "verb": "einkaufen",
+      "meaning": "to shop",
+      "forms": [
+        "kaufe ein",
+        "kaufst ein",
+        "kauft ein",
+        "kaufen ein",
+        "kauft ein",
+        "kaufen ein"
+      ],
+      "participle": "eingekauft",
+      "auxiliary": "haben",
+      "pastGroup": "separable",
+      "tip": "Perfekt: hat eingekauft. Put ge inside the separable verb, after its prefix. The complete participle stays at the sentence end.",
+      "source": "KB69–72; AB70–73"
+    },
+    {
+      "verb": "fernsehen",
+      "meaning": "to watch television",
+      "forms": [
+        "sehe fern",
+        "siehst fern",
+        "sieht fern",
+        "sehen fern",
+        "seht fern",
+        "sehen fern"
+      ],
+      "participle": "ferngesehen",
+      "auxiliary": "haben",
+      "pastGroup": "separable",
+      "tip": "Perfekt: hat ferngesehen. Put ge inside the separable verb, after its prefix. The complete participle stays at the sentence end.",
+      "source": "KB69–72; AB70–73"
+    },
+    {
+      "verb": "anrufen",
+      "meaning": "to call by phone",
+      "forms": [
+        "rufe an",
+        "rufst an",
+        "ruft an",
+        "rufen an",
+        "ruft an",
+        "rufen an"
+      ],
+      "participle": "angerufen",
+      "auxiliary": "haben",
+      "pastGroup": "separable",
+      "tip": "Perfekt: hat angerufen. Put ge inside the separable verb, after its prefix. The complete participle stays at the sentence end.",
+      "source": "KB69–72; AB70–73"
+    },
+    {
+      "verb": "abholen",
+      "meaning": "to pick up",
+      "forms": [
+        "hole ab",
+        "holst ab",
+        "holt ab",
+        "holen ab",
+        "holt ab",
+        "holen ab"
+      ],
+      "participle": "abgeholt",
+      "auxiliary": "haben",
+      "pastGroup": "separable",
+      "tip": "Perfekt: hat abgeholt. Put ge inside the separable verb, after its prefix. The complete participle stays at the sentence end.",
+      "source": "KB69–72; AB70–73"
+    },
+    {
+      "verb": "fotografieren",
+      "meaning": "to photograph",
+      "forms": [
+        "fotografiere",
+        "fotografierst",
+        "fotografiert",
+        "fotografieren",
+        "fotografiert",
+        "fotografieren"
+      ],
+      "participle": "fotografiert",
+      "auxiliary": "haben",
+      "pastGroup": "ieren",
+      "tip": "Perfekt: hat fotografiert. Verbs ending in -ieren form their participle with -t and no ge-.",
+      "source": "KB69–72; AB70–73"
+    },
+    {
+      "verb": "telefonieren",
+      "meaning": "to speak on the phone",
+      "forms": [
+        "telefoniere",
+        "telefonierst",
+        "telefoniert",
+        "telefonieren",
+        "telefoniert",
+        "telefonieren"
+      ],
+      "participle": "telefoniert",
+      "auxiliary": "haben",
+      "pastGroup": "ieren",
+      "tip": "Perfekt: hat telefoniert. Verbs ending in -ieren form their participle with -t and no ge-.",
+      "source": "KB69–72; AB70–73"
+    },
+    {
+      "verb": "zurückkommen",
+      "meaning": "to come back",
+      "forms": [
+        "komme zurück",
+        "kommst zurück",
+        "kommt zurück",
+        "kommen zurück",
+        "kommt zurück",
+        "kommen zurück"
+      ],
+      "tip": "Source question: Wann kommst du morgen zurück? This is present tense for a future plan. Its Perfekt uses sein, introduced in Lesson 12.",
+      "source": "KB71"
+    }
+  ],
+  "phrases": [
+    {
+      "de": "Was hast du gestern gemacht?",
+      "en": "What did you do yesterday?"
+    },
+    {
+      "de": "Ich habe gestern gearbeitet.",
+      "en": "I worked yesterday."
+    },
+    {
+      "de": "Ich habe Zeitung gelesen.",
+      "en": "I read the newspaper."
+    },
+    {
+      "de": "Ich habe meinen Schreibtisch aufgeräumt.",
+      "en": "I tidied my desk."
+    },
+    {
+      "de": "Ich habe einen Spaziergang gemacht.",
+      "en": "I went for a walk."
+    },
+    {
+      "de": "Ich habe zu wenig gegessen.",
+      "en": "I ate too little."
+    },
+    {
+      "de": "Ich habe zu viel Kaffee getrunken.",
+      "en": "I drank too much coffee."
+    },
+    {
+      "de": "Habt ihr gestern Abend aufgeräumt?",
+      "en": "Did you tidy up yesterday evening?"
+    },
+    {
+      "de": "Wir haben Freunde eingeladen.",
+      "en": "We invited friends."
+    },
+    {
+      "de": "Ich habe Wäsche gewaschen.",
+      "en": "I did the laundry."
+    },
+    {
+      "de": "Hast du gestern lange geschlafen?",
+      "en": "Did you sleep for a long time yesterday?"
+    },
+    {
+      "de": "Ja, habe ich.",
+      "en": "Yes, I did."
+    },
+    {
+      "de": "Nein, habe ich nicht.",
+      "en": "No, I did not."
+    },
+    {
+      "de": "Wann ist die Praxis geöffnet?",
+      "en": "When is the practice open?"
+    },
+    {
+      "de": "Von acht bis dreizehn Uhr.",
+      "en": "From eight until one p.m."
+    },
+    {
+      "de": "Ab wann ist die Praxis wieder geöffnet?",
+      "en": "From when is the practice open again?"
+    },
+    {
+      "de": "Ab September.",
+      "en": "From September onward."
+    },
+    {
+      "de": "Heute ist der Laden geschlossen.",
+      "en": "The shop is closed today."
+    },
+    {
+      "de": "Letzte Woche habe ich viel gearbeitet.",
+      "en": "Last week I worked a lot."
+    },
+    {
+      "de": "Danach haben wir ein Eis gegessen.",
+      "en": "Afterwards we ate an ice cream."
+    }
+  ],
+  "quiz": [
+    {
+      "q": "Ich ___ gestern gearbeitet.",
+      "options": [
+        "habe",
+        "bin",
+        "hat"
+      ],
+      "answer": "habe",
+      "why": "This action uses haben: ich habe gearbeitet."
+    },
+    {
+      "q": "Wir ___ Kaffee getrunken.",
+      "options": [
+        "haben",
+        "hat",
+        "hast"
+      ],
+      "answer": "haben",
+      "why": "Wir takes haben; getrunken stays unchanged."
+    },
+    {
+      "q": "The participle of arbeiten",
+      "options": [
+        "gearbeitet",
+        "gearbeitetet",
+        "gearbeitt"
+      ],
+      "answer": "gearbeitet",
+      "why": "The stem needs -et after ge-."
+    },
+    {
+      "q": "The participle of trinken",
+      "options": [
+        "getrunken",
+        "getrinkt",
+        "getrinken"
+      ],
+      "answer": "getrunken",
+      "why": "Strong verb: trinken → getrunken."
+    },
+    {
+      "q": "The participle of aufräumen",
+      "options": [
+        "aufgeräumt",
+        "geaufräumt",
+        "aufräumt"
+      ],
+      "answer": "aufgeräumt",
+      "why": "Ge goes after the separable prefix auf."
+    },
+    {
+      "q": "Ich habe ___. (telefonieren)",
+      "options": [
+        "telefoniert",
+        "getelefoniert",
+        "telefonieren"
+      ],
+      "answer": "telefoniert",
+      "why": "-ieren verbs form the participle without ge-."
+    },
+    {
+      "q": "Choose the standard past question.",
+      "options": [
+        "Was hast du gestern gemacht?",
+        "Was du hast gestern gemacht?",
+        "Was hast gemacht du gestern?"
+      ],
+      "answer": "Was hast du gestern gemacht?",
+      "why": "Question word, auxiliary, subject, time, participle."
+    },
+    {
+      "q": "___ Woche habe ich gelernt.",
+      "options": [
+        "Letzte",
+        "Letzten",
+        "Letztes"
+      ],
+      "answer": "Letzte",
+      "why": "Die Woche → letzte Woche."
+    },
+    {
+      "q": "A complete opening interval",
+      "options": [
+        "von acht bis eins",
+        "ab acht",
+        "um acht"
+      ],
+      "answer": "von acht bis eins",
+      "why": "Von … bis names the start and end."
+    },
+    {
+      "q": "A starting date with no stated end",
+      "options": [
+        "ab September",
+        "um September",
+        "von September"
+      ],
+      "answer": "ab September",
+      "why": "Ab marks the beginning of a period."
+    }
+  ]
+}

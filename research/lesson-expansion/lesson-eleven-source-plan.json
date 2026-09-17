@@ -1,0 +1,51 @@
+{
+  "lesson": 11,
+  "title": "Was haben Sie gestern gemacht?",
+  "corePages": {
+    "coursebook": [
+      69,
+      70,
+      71,
+      72
+    ],
+    "workbook": [
+      70,
+      71,
+      72,
+      73
+    ]
+  },
+  "partnerPages": [
+    168,
+    169,
+    196,
+    197
+  ],
+  "sharedExtraWorkbookPage": 92,
+  "glossaryPdfPages": [
+    15,
+    16
+  ],
+  "originalTracks": {
+    "coursebook": [
+      "2_23",
+      "2_24",
+      "2_25",
+      "2_26",
+      "2_27",
+      "2_28"
+    ],
+    "workbook": [
+      "2_31",
+      "2_32"
+    ]
+  },
+  "sourceCautions": [
+    "AB73 contains both Lesson11 recordings. Prefer base CD2 numbers31/32 over regional22/23.",
+    "The six coursebook recordings cover both exercises1a and2a; their players must be accessible from both KB69 and70.",
+    "Use the original key for partner tables and opening hours.",
+    "Source glossary whole is normalized as ganz; time adjective letzt- keeps its stem label.",
+    "Handwritten PDF glyphs on KB71/72/168/169/196/197 require explicit text corrections."
+  ],
+  "status": "Implemented and locally validated; deployment pending"
+}

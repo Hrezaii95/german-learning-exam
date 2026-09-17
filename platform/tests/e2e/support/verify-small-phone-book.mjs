@@ -6,7 +6,7 @@ const output=resolve('../research/lesson-expansion',process.env.STUDY_TEST_LABEL
 await mkdir(output,{recursive:true});
 const browser=await chromium.launch(),page=await browser.newPage({serviceWorkers:'block'}),checks=[];
 try{
- for(const width of [320,390])for(const id of ['coursebook-64','coursebook-55','workbook-60','coursebook-65','workbook-69']){
+ for(const width of [320,390])for(const id of ['coursebook-64','coursebook-55','workbook-60','coursebook-65','workbook-69','coursebook-71','workbook-73']){
   await page.setViewportSize({width,height:844});await page.goto(`${base}/book/?page=${id}`,{waitUntil:'networkidle'});
   if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1))throw Error(`${id} overflows ${width}px`);
   checks.push(`${id}: lesson selector and heading fit ${width}px`);

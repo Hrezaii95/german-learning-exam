@@ -18,11 +18,11 @@ GENERATED = ROOT / "platform/apps/web/generated"
 DIGITS = str.maketrans(dict(zip("", "0123456789")))
 
 # Printed page starts; PDF page = printed page + 2 for these source files.
-LESSONS = [(1, 11, 6), (2, 15, 10), (3, 19, 14), (4, 29, 26), (5, 33, 30), (6, 37, 34), (7, 47, 46), (8, 51, 50), (9, 55, 54), (10, 65, 66)]
+LESSONS = [(1, 11, 6), (2, 15, 10), (3, 19, 14), (4, 29, 26), (5, 33, 30), (6, 37, 34), (7, 47, 46), (8, 51, 50), (9, 55, 54), (10, 65, 66), (11, 69, 70)]
 # Each page's exercise starts, checked against the source pages.
 EXERCISES = {
-    "coursebook": {1: [1, 2, 4, 8], 2: [1, 2, 4, 6], 3: [1, 2, 5, 9], 4: [1, 3, 5, 8], 5: [1, 2, 5, 6], 6: [1, 2, 4, 9], 7: [1, 3, 8, 10], 8: [1, 2, 5, 7], 9: [1, 3, 8, 10], 10: [1, 3, 6, 10]},
-    "workbook": {1: [1, 5, 10, 13], 2: [1, 4, 8, 12], 3: [1, 5, 9, 12], 4: [1, 4, 9, 14], 5: [1, 5, 9, 15], 6: [1, 4, 7, 10], 7: [1, 4, 6, 10], 8: [1, 6, 9, 12], 9: [1, 4, 8, 12], 10: [1, 5, 8, 11]},
+    "coursebook": {1: [1, 2, 4, 8], 2: [1, 2, 4, 6], 3: [1, 2, 5, 9], 4: [1, 3, 5, 8], 5: [1, 2, 5, 6], 6: [1, 2, 4, 9], 7: [1, 3, 8, 10], 8: [1, 2, 5, 7], 9: [1, 3, 8, 10], 10: [1, 3, 6, 10], 11: [1, 2, 5, 8]},
+    "workbook": {1: [1, 5, 10, 13], 2: [1, 4, 8, 12], 3: [1, 5, 9, 12], 4: [1, 4, 9, 14], 5: [1, 5, 9, 15], 6: [1, 4, 7, 10], 7: [1, 4, 6, 10], 8: [1, 6, 9, 12], 9: [1, 4, 8, 12], 10: [1, 5, 8, 11], 11: [1, 5, 7, 9]},
 }
 
 
@@ -35,7 +35,7 @@ def clean(text):
 
 def main():
     parser=argparse.ArgumentParser()
-    parser.add_argument("--through",type=int,choices=[4,5,6,7,8,9,10],default=10)
+    parser.add_argument("--through",type=int,choices=[4,5,6,7,8,9,10,11],default=11)
     through=parser.parse_args().through
     PUBLIC.mkdir(parents=True, exist_ok=True)
     (PUBLIC / "audio").mkdir(exist_ok=True)
@@ -59,6 +59,7 @@ def main():
         if through>=9:
             action_lessons.update({165:[9],166:[9]} if kind=="coursebook" else {91:[9,10]})
         if through>=10 and kind=="coursebook":action_lessons.update({167:[10],195:[10]})
+        if through>=11:action_lessons.update({168:[11],169:[11],196:[11],197:[11]} if kind=="coursebook" else {92:[11,12]})
         printed_pages=list(range(-1,end+1))+(list(action_lessons) if through>=6 else [])
         corrections=json.loads((ROOT/'research/lesson-expansion/book-line-corrections.json').read_text(encoding='utf8'))
         for printed in printed_pages:
@@ -107,7 +108,7 @@ def main():
     for file in sorted((ROOT / "resources/original/audio").rglob("*.mp3")):
         match = re.search(r"_(KB|AB)_(?:Momente_A11_)?L(\d+)_(\d+)(.*)\.mp3$", file.name)
         if not match:
-            match=re.search(r"_(AB)_Momente_A11_(8|10)_(\d+)(.*)\.mp3$",file.name)
+            match=re.search(r"_(AB)_Momente_A11_(8|10|11)_(\d+)(.*)\.mp3$",file.name)
         if not match:
             continue
         label, lesson, exercise, suffix = match.groups()
@@ -118,7 +119,7 @@ def main():
             # Use one supplied edition of each recording, not duplicate regional copies.
             continue
         kind = "coursebook" if label == "KB" else "workbook"
-        if kind=="workbook" and lesson in (8,10) and "Momente_A1_1_AB_CD2" not in str(file):
+        if kind=="workbook" and lesson in (8,10,11) and "Momente_A1_1_AB_CD2" not in str(file):
             continue
         # AB names carry Momente before AB; the regex supports both source naming schemes.
         digest = hashlib.sha256(file.read_bytes()).hexdigest()
@@ -140,6 +141,9 @@ def main():
         track = {"id": audio_id, "lesson": lesson, "kind": kind, "exercise": exercise, "label": f"Exercise {exercise}" + (f" · {detail}" if detail else ""), "src": dest, "source": file.relative_to(ROOT).as_posix(), "sha256": digest, "pageId": page["id"]}
         audio.append(track)
         page["audioIds"].append(audio_id)
+        if kind=="coursebook" and lesson==11 and exercise==1:
+            track['label']=f'Exercises 1a & 2a · Speaker {suffix.rsplit("_",1)[-1]}'
+            next(p for p in pages if p['id']=='coursebook-70')['audioIds'].append(audio_id)
     if through>=8:
         for file in sorted((ROOT/"resources/original/audio").rglob("*_AB_Momente_A11_8_noch_mehr_9_*.mp3")):
             digest=hashlib.sha256(file.read_bytes()).hexdigest()

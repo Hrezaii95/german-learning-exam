@@ -1,0 +1,48 @@
+{
+  "2_31": {
+    "sourcePages": [
+      15
+    ],
+    "lines": [
+      {
+        "speaker": "Frau",
+        "text": "Was hast du heute gemacht? ↘"
+      },
+      {
+        "speaker": "Mann",
+        "text": "Heute? ↗ Nicht viel. ↘ Ich habe gelesen. ↘"
+      },
+      {
+        "speaker": "Frau",
+        "text": "Gelesen? ↗ Was denn? ↗"
+      },
+      {
+        "speaker": "Mann",
+        "text": "Ich habe ein Buch gelesen. ↘ Und ich habe ein bisschen gelernt. ↘"
+      },
+      {
+        "speaker": "Frau",
+        "text": "Gelernt? ↗ Was denn? ↗"
+      },
+      {
+        "speaker": "Mann",
+        "text": "Ich habe natürlich Deutsch gelernt. ↘ Und meine Hausaufgabe gemacht. ↘"
+      },
+      {
+        "speaker": "Frau",
+        "text": "Das ist gut. ↘"
+      }
+    ]
+  },
+  "2_32": {
+    "sourcePages": [
+      16
+    ],
+    "lines": [
+      {
+        "speaker": null,
+        "text": "Mein Zahn tut weh. Ich weiß nicht, wann Dr. Simons Praxis wieder geöffnet ist. Können Sie im Internet schauen? Ab wann ist die Praxis wieder geöffnet?"
+      }
+    ]
+  }
+}
