@@ -11,6 +11,7 @@ import { countries, countryName, countryFrom, countryOriginMeaning, countryGroup
 import { bookTranscript } from "../audio/listening-transcripts";
 import { homeWords, homeLabels, homePhrases } from "./home";
 import {grammarPatterns,conversationFrames,verbModels,spokenVerb} from "./sheet-topics";
+import {questionWords,questionBuilders,questionReplyCases} from "./questions";
 const generated = join(
   dirname(fileURLToPath(import.meta.url)),
   "../../generated",
@@ -182,6 +183,14 @@ export function loadDictionary(): DictionaryEntry[] {
     entries.push({id:`home-phrase-${index}`,saveId:`home-phrase-${index}`,de:phrase.de,en:phrase.en,forms:[],example:"",translation:"",kind:"phrase",href:"/cheat-sheets/home#home-describe",audio:homeSpeech[phrase.de]??null});
   });
   const collectionSpeech=loadCollectionSpeech();
+  const addQuestion=(id:string,de:string,en:string)=>{
+    if(entries.some(entry=>entry.de===de))return;
+    entries.push({id:`question-${id}`,de,en,forms:[],example:"",translation:"",href:"/cheat-sheets/questions",audio:collectionSpeech[de]??null,kind:"phrase"});
+  };
+  for(const word of questionWords){addQuestion(word.id,word.word,word.meaning);addQuestion(`${word.id}-ask`,word.question,word.translation);addQuestion(`${word.id}-answer`,word.answer,word.answerMeaning);}
+  for(const builder of questionBuilders){for(const [i,parts] of [builder.w,builder.formal,builder.yes,builder.yesFormal].entries())addQuestion(`${builder.id}-${i}`,parts.join(" "),i<2?builder.meaning:builder.yesMeaning);}
+  for(const [i,reply] of questionReplyCases.entries()){addQuestion(`reply-${i}`,reply.question,reply.translation);addQuestion(`reply-${i}-yes`,reply.yes,reply.yesMeaning);addQuestion(`reply-${i}-no`,reply.no,reply.noMeaning);}
+  for(const [i,[de,en]] of [["Wer kommt aus dem Iran?","Who comes from Iran?"],["Welche Sprache sprichst du?","Which language do you speak?"],["Welcher Tisch ist schön?","Which table is beautiful?"],["Welches Buch ist das?","Which book is that?"]].entries())addQuestion(`example-${i}`,de!,en!);
   for(const p of grammarPatterns) entries.push({id:`sheet-pattern-${p.id}`,de:p.de,en:p.en,forms:[p.de],example:p.de,translation:p.en,href:`/cheat-sheets/verbs#pattern-${p.id}`,audio:collectionSpeech[p.de]??null,kind:"sentence",saveId:`sheet-pattern-${p.id}`});
   for(const f of conversationFrames){for(const [i,de] of [f.casual,f.formal,f.answer,...(f.formalAnswer?[f.formalAnswer]:[])].entries()){if(entries.some(e=>e.de===de))continue;const en=i<2?f.en:f.answerEn;entries.push({id:`sheet-conversation-${f.id}-${i}`,de,en,forms:[de],example:de,translation:en,href:"/cheat-sheets/conversation#sheet-workshop",audio:collectionSpeech[de]??null,kind:"phrase"});}}
   for(const v of verbModels){const entry=entries.find(e=>e.forms.includes(v.verb));if(entry)entry.forms.push(...v.forms,...v.forms.map((f,i)=>spokenVerb(i,f)));}

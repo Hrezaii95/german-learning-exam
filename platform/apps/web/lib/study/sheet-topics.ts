@@ -5,9 +5,10 @@ export const sheetLinks = [
   {id:"verbs",number:"04",title:"Verbs & sentences",href:"/cheat-sheets/verbs"},
   {id:"numbers",number:"05",title:"Numbers & prices",href:"/cheat-sheets/numbers"},
   {id:"conversation",number:"06",title:"Conversation & spelling",href:"/cheat-sheets/conversation"},
+  {id:"questions",number:"07",title:"Questions & answers",href:"/cheat-sheets/questions"},
 ] as const;
 export type SheetId = typeof sheetLinks[number]["id"];
-export type ExtendedSheetId = Exclude<SheetId,"countries"|"home">;
+export type ExtendedSheetId = Exclude<SheetId,"countries"|"home"|"questions">;
 export type SheetQuiz = {q:string;options:string[];answer:string;why:string};
 export const sheetTitles:Record<ExtendedSheetId,{title:string;subtitle:string;eyebrow:string}>={
   people:{title:"Put a face to the word.",subtitle:"Family connections, work roles, and the words that describe you.",eyebrow:"The people around you · Lessons 2–3"},

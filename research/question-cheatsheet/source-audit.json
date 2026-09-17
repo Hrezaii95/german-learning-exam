@@ -1,0 +1,65 @@
+{
+  "corePatterns": {
+    "wer": {
+      "lesson": 1,
+      "source": "Glossary Lesson 1; Wer ist das?"
+    },
+    "was": {
+      "lesson": 2,
+      "source": "Glossary Lesson 2; profession and identification questions"
+    },
+    "wie": {
+      "lesson": 1,
+      "source": "Glossary Lesson 1; Wie heißt du?"
+    },
+    "wo": {
+      "lesson": 2,
+      "source": "Glossary Lesson 2; residence"
+    },
+    "woher": {
+      "lesson": 1,
+      "source": "Glossary Lesson 1; Woher kommst du?"
+    },
+    "wie-alt": {
+      "lesson": 2,
+      "source": "Glossary Lesson 2; Wie alt seid ihr?"
+    },
+    "wie-viel": {
+      "lesson": 4,
+      "source": "Glossary Lesson 4; Wie viel kostet er denn?"
+    },
+    "wie-viele": {
+      "lesson": 3,
+      "source": "Workbook p. 18, Module 1 review: Wie viele Richtige haben Sie?"
+    },
+    "welche": {
+      "lesson": 3,
+      "source": "Glossary Lesson 3; Welche Sprachen sprichst du?"
+    }
+  },
+  "studyExtras": [
+    "wohin",
+    "wann",
+    "wie-lange",
+    "wie-oft",
+    "warum",
+    "wen",
+    "wem",
+    "wessen"
+  ],
+  "authorship": "Example combinations, fictional personal details, explanations, infographics and quiz questions are authored study aids. Wider question-family items are labelled Study extra. Core labels identify the source pattern, not a quotation of every new example.",
+  "sources": [
+    {
+      "path": "resources/original/coursebook/A1-KB-momente.pdf",
+      "sha256": "335bea7212f88574e05beaa3a96e269f41f2cd1cb7a27cfa00ffdb8ae3dd7a4e"
+    },
+    {
+      "path": "resources/original/workbook/Momente A1.1 AB_7.pdf",
+      "sha256": "11708c7b58ae76d1a324a9c670e9b74a8c641395584e99ce869a61d8a2e02c07"
+    },
+    {
+      "path": "resources/original/glossaries/Momente_A1_1_KB_Glossar_Deutsch_Englisch.pdf",
+      "sha256": "9e35984302ede16909067a3dc1cafa174943c046e4264421d195e7cd2d647ee1"
+    }
+  ]
+}

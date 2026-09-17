@@ -100,6 +100,7 @@ const HUB_PATHS = [
   "/cheat-sheets/verbs",
   "/cheat-sheets/numbers",
   "/cheat-sheets/conversation",
+  "/cheat-sheets/questions",
 ];
 
 const PRACTICE_GAMES = [

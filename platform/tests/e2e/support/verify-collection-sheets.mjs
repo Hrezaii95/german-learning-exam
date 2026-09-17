@@ -70,7 +70,7 @@ try{
   }
   await page.setViewportSize({width:390,height:844});
   await page.locator('.sheet-mobile-switcher summary').click();
-  assert(await page.getByRole('navigation',{name:'Choose a cheat sheet on phone'}).getByRole('link').count()===6,'Phone selector exposes all six sheets');
+  assert(await page.getByRole('navigation',{name:'Choose a cheat sheet on phone'}).getByRole('link').count()===7,'Phone selector exposes all seven sheets');
   await page.getByRole('navigation',{name:'Choose a cheat sheet on phone'}).getByRole('link',{name:/Conversation/}).click();
   await page.waitForURL('**/cheat-sheets/conversation/');
   assert(await page.getByRole('heading',{name:'Keep the conversation moving.'}).isVisible(),'Phone sheet navigation reaches conversation');
