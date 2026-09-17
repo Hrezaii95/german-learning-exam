@@ -41,7 +41,7 @@ describe('Lesson 10 travel and separable verbs',()=>{
   expect(lookupEntries(dictionary,'fährst').entries.some(e=>e.de==='fahren')).toBe(true);
  });
  it('uses base edition workbook recordings with the correct source transcript numbers',()=>{
-  const b=loadBook();expect(b.pages).toHaveLength(178);expect(b.audio).toHaveLength(188);
+  const b=loadBook();expect(b.pages).toHaveLength(202);expect(b.audio).toHaveLength(208);
   expect(b.pages.find(p=>p.id==='coursebook-167')?.lessons).toEqual([10]);expect(b.pages.find(p=>p.id==='coursebook-195')?.lessons).toEqual([10]);expect(b.pages.find(p=>p.id==='workbook-91')?.lessons).toEqual([9,10]);
   const tracks=b.audio.filter(t=>t.lesson===10);expect(tracks).toHaveLength(11);
   expect(tracks.filter(t=>t.kind==='workbook').map(t=>t.transcript?.sourceTrack).sort()).toEqual(['2_26','2_27','2_28','2_29','2_30']);
@@ -51,7 +51,7 @@ describe('Lesson 10 travel and separable verbs',()=>{
   expect(tracks.find(t=>t.transcript?.sourceTrack==='2_30')?.transcript?.lines[0]?.text).toContain('nicht auf Gleis 5, sondern auf Gleis 15');
  });
  it('keeps model answers labelled and the announcement facts distinct from a writing solution',()=>{
-  const a=loadBookAnswers();expect(a).toHaveLength(184);expect(a.find(a=>a.pageId==='coursebook-67'&&a.exercise==='Exercise 7a/b')?.kind).toBe('sample');
+  const a=loadBookAnswers();expect(a).toHaveLength(206);expect(a.find(a=>a.pageId==='coursebook-67'&&a.exercise==='Exercise 7a/b')?.kind).toBe('sample');
   expect(a.find(a=>a.pageId==='coursebook-68'&&a.exercise==='Exercise 10b')?.text).toContain('B48');
   expect(a.filter(a=>a.pageId==='coursebook-68'&&a.exercise.startsWith('Quick test'))).toHaveLength(3);
   expect(a.find(a=>a.pageId==='workbook-69')?.note).toContain('no supplied complete model message');

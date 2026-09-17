@@ -2,7 +2,7 @@ import { lessonLabel } from "./lesson-label";
 import { queryMatchKeys } from "./match-keys";
 import type { LearnerHubRecord } from "./hub-types";
 
-export type HubLessonFilter = "all" | "01" | "02" | "03" | "04" | "05" | "06" | "07" | "08" | "09" | "10" | "11";
+export type HubLessonFilter = "all" | "01" | "02" | "03" | "04" | "05" | "06" | "07" | "08" | "09" | "10" | "11" | "12";
 
 export type HubQueryState = {
   q: string;
@@ -33,6 +33,7 @@ const LESSON_FILTER_TO_ID: Readonly<Record<Exclude<HubLessonFilter, "all">, stri
     "09": "lesson:09",
     "10": "lesson:10",
     "11": "lesson:11",
+    "12": "lesson:12",
   });
 
 function firstParam(
@@ -67,7 +68,7 @@ export function sanitizeHubQueryText(raw: string): string {
 }
 
 function parseLesson(raw: string | undefined): HubLessonFilter {
-  if (raw === "01" || raw === "02" || raw === "03" || raw === "04" || raw === "05" || raw === "06" || raw === "07" || raw === "08" || raw === "09" || raw === "10" || raw === "11") return raw;
+  if (raw === "01" || raw === "02" || raw === "03" || raw === "04" || raw === "05" || raw === "06" || raw === "07" || raw === "08" || raw === "09" || raw === "10" || raw === "11" || raw === "12") return raw;
   return "all";
 }
 

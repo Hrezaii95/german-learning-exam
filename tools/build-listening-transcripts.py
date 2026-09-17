@@ -59,6 +59,7 @@ def main():
     ab.update(json.loads((ROOT / 'research/lesson-expansion/ab-lesson9-module3-transcripts.json').read_text(encoding='utf8')))
     ab.update(json.loads((ROOT / 'research/lesson-expansion/ab-lesson10-transcripts.json').read_text(encoding='utf8')))
     ab.update(json.loads((ROOT / 'research/lesson-expansion/ab-lesson11-transcripts.json').read_text(encoding='utf8')))
+    ab.update(json.loads((ROOT / 'research/lesson-expansion/ab-lesson12-module4-transcripts.json').read_text(encoding='utf8')))
     tracks, legacy = {}, {}
     for audio in catalog['audio']:
         disc, number = map(int, re.match(r'([12])_(\d+)', Path(audio['source']).name).groups())

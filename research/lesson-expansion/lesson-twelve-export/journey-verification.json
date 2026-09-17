@@ -1,0 +1,23 @@
+{
+  "base": "http://localhost:3210/german-learning-exam",
+  "checks": [
+    "All 102 source word families and twelve month choices render",
+    "The month calendar updates the complete sentence and translation",
+    "Selected sentence meaning and builder share one review identity",
+    "Bleiben uses sein despite staying in one place",
+    "Formal questions keep Sie and use haben with abholen",
+    "Exact question audio plays",
+    "Recall hides the auxiliary and translation, then restores the sentence",
+    "All six auxiliary contrasts score correctly and clear previous feedback",
+    "Year pronunciation handles century boundaries and invalid input",
+    "Phrase hub preserves the builder selection",
+    "Saved sentence survives navigation and can be deselected",
+    "Calendar, builder and year reader fit a 390px phone",
+    "Calendar, builder and year reader fit a 320px phone",
+    "Verb search accepts and displays the past background form",
+    "Question practice follows the final lesson",
+    "All six exam tracks appear on the correct page",
+    "No browser exceptions"
+  ],
+  "errors": []
+}

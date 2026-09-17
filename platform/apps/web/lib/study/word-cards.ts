@@ -56,10 +56,10 @@ export function studyWordCards(words:StudyWord[],lesson:number,source:string):Wo
                     audio: null,
                   }))
               : [],
-          usage:
+          usage: word.usage??(
             word.plural === "plural only"
               ? "Used in the plural in German."
-              : "",
+              : ""),
         },
         ...(word.variants??[]).map(text=>({label:text.startsWith('das ')?'Neuter alternative':text.startsWith('der ')?'Masculine alternative':'Feminine alternative',meaning:word.en,singular:{text,label:'German alternative',tone:text.startsWith('das ')?'neuter' as const:text.startsWith('der ')?'male' as const:'female' as const,audio:null},plurals:[],usage:'Both articles are accepted; learn both forms.'})),
       ],

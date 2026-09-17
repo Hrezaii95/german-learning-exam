@@ -1,0 +1,12 @@
+{
+  "status": "live-verified",
+  "commit": "c1216a2cdb0479b453e83cfec0277edf1168a31b",
+  "githubRun": 35236973989,
+  "browserChecks": 882,
+  "mediaByteChecks": 31,
+  "lessonsPublished": 11,
+  "remainingLessons": [
+    12
+  ],
+  "goalComplete": false
+}

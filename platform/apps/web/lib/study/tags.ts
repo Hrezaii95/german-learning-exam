@@ -35,8 +35,10 @@ export function wordStudyTags(card:WordCard):StudyTags{
     if(word.category==="Objects"||word.category==="Shopping")concepts.add("objects");
     if(["Materials","Colours"].includes(word.category))concepts.add("colours-materials");
     if(["Forms","Office"].includes(word.category))concepts.add("office");
-    if(unit.number===11)concepts.add("past");
-    if(word.category==="Travel"||(unit.number===10&&word.category==="Verbs"))concepts.add("travel");
+    if(unit.number>=11)concepts.add("past");
+    if(unit.number===12&&["Time","Hobbies"].includes(word.category))concepts.add("seasons");
+    if(["Country","Geography"].includes(word.category))concepts.add("countries");
+    if(word.category==="Travel"||(unit.number>=10&&unit.number!==11&&word.category==="Verbs"))concepts.add("travel");
     if(word.category==="Food"||(unit.number===9&&word.category==="Verbs"))concepts.add("food");
     if(word.category==="People")concepts.add("people");
     if(["Hobbies","Frequency"].includes(word.category)||(unit.number===7&&word.category==="Verbs"))concepts.add("hobbies");

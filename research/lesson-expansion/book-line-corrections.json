@@ -306,5 +306,51 @@
       "startsWith": " g\u001föﬀ net.",
       "text": "geöffnet."
     }
+  ],
+  "coursebook-82": [
+    {
+      "startsWith": "©b  letzten Mittwoch",
+      "text": "letzten Mittwoch"
+    },
+    {
+      "startsWith": "©g  letztes Wochenende",
+      "text": "letztes Wochenende"
+    },
+    {
+      "startsWith": "©r  letzte Woche",
+      "text": "letzte Woche"
+    }
+  ],
+  "coursebook-170": [
+    {
+      "startsWith": "Im Som\u0015er",
+      "text": "Im Sommer"
+    },
+    {
+      "startsWith": "A\u001csflüge machen",
+      "text": "Ausflüge machen"
+    },
+    {
+      "startsWith": "Erdbe\u0017ren ",
+      "text": "Erdbeeren"
+    },
+    {
+      "startsWith": "es\u0018en",
+      "text": "essen"
+    }
+  ],
+  "workbook-78": [
+    {
+      "startsWith": "der ©b",
+      "text": "der"
+    },
+    {
+      "startsWith": "das ©g",
+      "text": "das"
+    },
+    {
+      "startsWith": "die ©r",
+      "text": "die"
+    }
   ]
 }

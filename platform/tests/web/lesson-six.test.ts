@@ -13,7 +13,7 @@ describe("Lesson 6 and Module 2 integration",()=>{
   expect(wordCardForPath('/vocabulary/l6-sehen')?.id).toBe(wordCardForPath('/vocabulary/l5-sehen')?.id);
  });
  it("includes both complete modules and every partner-activity page",()=>{
-  const book=loadBook();expect(book.pages).toHaveLength(178);
+  const book=loadBook();expect(book.pages).toHaveLength(202);
   for(const n of [155,156,157,158,159,160,161])expect(book.pages.find(p=>p.id===`coursebook-${n}`)?.section).toContain('Partner activities');
   expect(book.pages.find(p=>p.id==='coursebook-45')?.section).toBe('Module 2 · Grammar');
   expect(book.pages.find(p=>p.id==='coursebook-46')?.section).toBe('Module 2 · Communication');
@@ -32,7 +32,7 @@ describe("Lesson 6 and Module 2 integration",()=>{
   const song=tracks.find(a=>a.id.includes('coursebook-m2-track59-'))!;expect(song.transcript?.sourceTitle).toContain('song text');expect(song.pageId).toBe('coursebook-44');
  });
  it("keeps official keys and model answers distinct and exposes irregular verbs",()=>{
-  const answers=loadBookAnswers();expect(answers).toHaveLength(184);expect(answers.filter(a=>a.pageId==='workbook-40'&&a.kind==='sample')).toHaveLength(1);expect(answers.find(a=>a.pageId==='workbook-43')?.text).toContain('15 rote Notizbücher');
+  const answers=loadBookAnswers();expect(answers).toHaveLength(206);expect(answers.filter(a=>a.pageId==='workbook-40'&&a.kind==='sample')).toHaveLength(1);expect(answers.find(a=>a.pageId==='workbook-43')?.text).toContain('15 rote Notizbücher');
   const dictionary=loadDictionary();for(const text of ['brauchst','telefoniert','reagierst','die Passwörter'])expect(lookupEntries(dictionary,text).entries.length,text).toBeGreaterThan(0);
   for(const q of unit.quiz)expect(q.options.filter(o=>o===q.answer)).toHaveLength(1);
  });

@@ -8,6 +8,7 @@ export type StudyWord = {
   translation: string;
   variants?: string[];
   pluralVariants?: string[];
+  usage?: string;
 };
 const rows = [
   [
@@ -637,4 +638,5 @@ export const courseChapters = [
   {number:9,title:"Ich mag Hamburger.",topic:"Food, preferences, ordering & compound nouns",kb:55,ab:54},
   {number:10,title:"Wann kommst du denn an?",topic:"Travel, announcements & separable verbs",kb:65,ab:66},
   {number:11,title:"Was haben Sie gestern gemacht?",topic:"Past actions, participles & opening hours",kb:69,ab:70},
+  {number:12,title:"Im Frühling bin ich nach Hamburg gefahren.",topic:"Seasons, journeys, Perfekt with sein & past background",kb:73,ab:74},
 ];

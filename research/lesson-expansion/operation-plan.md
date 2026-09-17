@@ -39,3 +39,7 @@ The full scope is all twelve A1.1 lessons. The first owner review milestone is a
 ## Evidence and release gates
 
 Use source-page and source-item inventories for each lesson, independent counts and ID comparisons, meaningful filter/state tests, existing regression suites, `npm run check`, `npm run gates:pages`, desktop/mobile browser journeys, byte-checked media and successful GitHub Pages deployment. Confirm the same behavior on the live URL. Missing source answers must stay explicitly unavailable; sample answers and study explanations must remain labelled.
+
+## Final expansion release
+
+Lessons 1–11 have been deployed and live verified in sequence. Lesson 12 and Module 4 are integrated and locally verified: 202 book pages, 208 original recordings with transcripts, 206 sourced answer groups, 1,194 word families and 15 interactive cheat sheets. The final selection audit passes for each of the twelve lessons, multiple non-adjacent lessons, through-lesson selection, concept filters, teacher extras and phone navigation. Deployment and the matching live verification are the remaining release steps; see `lesson-twelve-audit.json`.

@@ -4,20 +4,21 @@ import type {DictionaryEntry} from "./types";
 import type {HomeWord} from "./home";
 import {countryName,type Country} from "./countries";
 export const sheetTags:Record<SheetId,StudyTags>={
-  countries:{lessons:[1,3],concepts:["countries","grammar"],source:"course",sources:["course","study-extra"]},
+  countries:{lessons:[1,3,12],concepts:["countries","grammar"],source:"course",sources:["course","study-extra"]},
   home:{lessons:[2,3,4,5,6],concepts:["home","objects","grammar","descriptions"],source:"course",sources:["course","study-extra"]},
-  people:{lessons:[2,3,6,7,8,9,10,11],concepts:["people","grammar"],source:"course",sources:["course","teacher-extra"]},
-  verbs:{lessons:[1,2,3,4,5,6,7,8,9,10,11],concepts:["verbs","grammar","questions"],source:"course"},
-  numbers:{lessons:[1,2,3,4,5,6,7,8,9,10,11],concepts:["numbers"],source:"course"},
-  conversation:{lessons:[1,2,3,4,5,6,7,8,9,10,11],concepts:["conversation","introductions","classroom"],source:"course"},
-  questions:{lessons:[1,2,3,4,5,6,7,8,9,10,11],concepts:["questions","grammar"],source:"course",sources:["course","study-extra"]},
+  people:{lessons:[2,3,6,7,8,9,10,11,12],concepts:["people","grammar"],source:"course",sources:["course","teacher-extra"]},
+  verbs:{lessons:[1,2,3,4,5,6,7,8,9,10,11,12],concepts:["verbs","grammar","questions"],source:"course"},
+  numbers:{lessons:[1,2,3,4,5,6,7,8,9,10,11,12],concepts:["numbers"],source:"course"},
+  conversation:{lessons:[1,2,3,4,5,6,7,8,9,10,11,12],concepts:["conversation","introductions","classroom"],source:"course"},
+  questions:{lessons:[1,2,3,4,5,6,7,8,9,10,11,12],concepts:["questions","grammar"],source:"course",sources:["course","study-extra"]},
   objects:{lessons:[5],concepts:["objects","colours-materials","grammar","classroom"],source:"course"},
   office:{lessons:[6],concepts:["office","objects","grammar","conversation","verbs"],source:"course"},
-  past:{lessons:[11],concepts:["past","time","verbs","grammar","questions","conversation"],source:"course"},
-  travel:{lessons:[10],concepts:["travel","time","verbs","grammar","questions","conversation"],source:"course"},
+  journeys:{lessons:[12],concepts:["seasons","past","travel","countries","time","verbs","grammar","questions","conversation"],source:"course"},
+  past:{lessons:[11,12],concepts:["past","time","verbs","grammar","questions","conversation"],source:"course"},
+  travel:{lessons:[10,12],concepts:["travel","time","verbs","grammar","questions","conversation"],source:"course"},
   food:{lessons:[9],concepts:["food","verbs","grammar","questions","conversation"],source:"course"},
-  time:{lessons:[8],concepts:["time","verbs","grammar","questions","conversation"],source:"course"},
-  hobbies:{lessons:[7],concepts:["hobbies","verbs","grammar","conversation","questions"],source:"course"},
+  time:{lessons:[8,10,11,12],concepts:["time","verbs","grammar","questions","conversation"],source:"course"},
+  hobbies:{lessons:[7,11,12],concepts:["hobbies","verbs","grammar","conversation","questions"],source:"course"},
 };
 export function countryStudyTags(country:Country,dictionary:DictionaryEntry[]=[]):StudyTags{
   const found=dictionary.find(e=>e.de===countryName(country));

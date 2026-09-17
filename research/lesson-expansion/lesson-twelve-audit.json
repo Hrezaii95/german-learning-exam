@@ -1,0 +1,97 @@
+{
+  "lesson": 12,
+  "scope": "Complete A1.1 Lessons 1–12 and Modules 1–4",
+  "sourceEntries": 102,
+  "wordFamiliesTotal": 1194,
+  "sourcePages": 202,
+  "originalRecordings": 208,
+  "answerGroups": 206,
+  "requiredStudyUtterances": 13297,
+  "previousAnswerGroupsCompared": 184,
+  "previousAnswersChanged": 0,
+  "checks": {
+    "rootTests": 908,
+    "webTests": 569,
+    "typecheck": "passed",
+    "eslint": "passed",
+    "publication": "passed",
+    "staticPages": 1595,
+    "pagesGate": "All stages passed. Final CSS build succeeded; offline report write hit transient Windows UNKNOWN once, then audit:offline and audit:word-cards -- --export both passed on immediate rerun.",
+    "phoneLayout": "Calendar month choices stack below440px; month-only button styling prevents dictionary word buttons inheriting tile styles."
+  },
+  "sourceReview": [
+    "Glossary PDF16–17 compared with Lesson12 source entry inventory, including Magazine04",
+    "Workbook audio uses base edition tracks2_33–2_49; exam recordings44–49 mapped to printed84",
+    "Coursebook answer key continuation on PDF4 included for6a and7a",
+    "All12 months and4 seasons masculine; article-free ordinary use of Weihnachten and Silvester explained",
+    "Previous184 answer records compared by ID and full record equality; unchanged",
+    "Lesson12 participles, auxiliaries and Präteritum forms reviewed alongside source pages",
+    "180 journey sentence combinations checked for word order, dictionary presence and saved-review identity"
+  ],
+  "limitations": [
+    "Ordinary workbook exercises without supplied publisher keys remain explicitly unavailable.",
+    "Study explanations, diagrams, quizzes and composed examples are authored learning aids.",
+    "Automated media checks verify availability, exact file identity and browser playback, not a native-speaker listening review."
+  ],
+  "releaseStatus": "Ready for deployment; local source, unit, export, browser and media checks passed",
+  "visualReview": {
+    "status": "rendered-inspected",
+    "views": [
+      "season-calendar-320.png",
+      "journey-lab-320.png",
+      "journey-seasons-desktop.png"
+    ],
+    "result": "Readable month labels, scoped dictionary button styles, stacked narrow-phone controls, no viewport overflow."
+  },
+  "exportBrowserEvidence": [
+    {
+      "file": "research/book-answers/lesson-twelve-export/checks.json",
+      "checks": 777
+    },
+    {
+      "file": "research/book-reader-update/lesson-twelve-export/verification.json",
+      "checks": 19
+    },
+    {
+      "file": "research/collection-cheatsheet/lesson-twelve-export/checks.json",
+      "checks": 59
+    },
+    {
+      "file": "research/lesson-expansion/lesson-twelve-export/all-lessons-scope.json",
+      "checks": 80
+    },
+    {
+      "file": "research/lesson-expansion/lesson-twelve-export/checks.json",
+      "checks": 18
+    },
+    {
+      "file": "research/lesson-expansion/lesson-twelve-export/dictionary-loading.json",
+      "checks": 14
+    },
+    {
+      "file": "research/lesson-expansion/lesson-twelve-export/journey-verification.json",
+      "checks": 17
+    },
+    {
+      "file": "research/lesson-expansion/lesson-twelve-export/media-verification.json",
+      "checks": 43
+    },
+    {
+      "file": "research/lesson-expansion/lesson-twelve-export/small-phone-book.json",
+      "checks": 18
+    },
+    {
+      "file": "research/lesson-expansion/lesson-twelve-export/verification.json",
+      "checks": 13
+    },
+    {
+      "file": "research/question-cheatsheet/lesson-twelve-export/checks.json",
+      "checks": 42
+    },
+    {
+      "file": "research/selection-meaning/lesson-twelve-export/verification.json",
+      "checks": 24
+    }
+  ],
+  "exportChecksIncludingMedia": 1124
+}

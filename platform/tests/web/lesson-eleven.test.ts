@@ -27,13 +27,13 @@ describe('Lesson 11 source and Perfekt integration',()=>{
   const card=wordCardForPath('/vocabulary/l11-telefonieren')!;expect(card.pattern).toContain('hat telefoniert');expect(card.prompts.find(p=>p.question==='What is the past participle of telefonieren?')?.answers).toEqual(['telefoniert']);
  });
  it('maps the shared six recordings to both coursebook pages and the base workbook edition',()=>{
-  const b=loadBook();expect(b.pages).toHaveLength(178);expect(b.audio).toHaveLength(188);const tracks=b.audio.filter(t=>t.lesson===11);expect(tracks).toHaveLength(8);
+  const b=loadBook();expect(b.pages).toHaveLength(202);expect(b.audio).toHaveLength(208);const tracks=b.audio.filter(t=>t.lesson===11);expect(tracks).toHaveLength(8);
   const a=b.pages.find(p=>p.id==='coursebook-69')!,c=b.pages.find(p=>p.id==='coursebook-70')!;expect(a.audioIds).toHaveLength(6);expect(c.audioIds).toEqual(a.audioIds);
   expect(tracks.filter(t=>t.kind==='workbook').map(t=>t.transcript?.sourceTrack).sort()).toEqual(['2_31','2_32']);expect(tracks.filter(t=>t.kind==='workbook').every(t=>t.pageId==='workbook-73')).toBe(true);
   for(const id of ['coursebook-168','coursebook-169','coursebook-196','coursebook-197'])expect(b.pages.find(p=>p.id===id)?.lessons).toEqual([11]);expect(b.pages.find(p=>p.id==='workbook-92')?.lessons).toEqual([11,12]);
   expect(b.pages.find(p=>p.id==='coursebook-72')?.lines.some(l=>l.text==='Sonntag! Ein super Tag!')).toBe(true);
  });
- it('adds official partner keys without guessing missing workbook solutions',()=>{const a=loadBookAnswers();expect(a).toHaveLength(184);expect(a.filter(a=>a.pageId==='coursebook-72')).toHaveLength(3);expect(a.find(a=>a.pageId==='coursebook-169')?.text).toContain('Ab September');expect(a.filter(a=>a.pageId==='workbook-73')).toHaveLength(0);});
+ it('adds official partner keys without guessing missing workbook solutions',()=>{const a=loadBookAnswers();expect(a).toHaveLength(206);expect(a.filter(a=>a.pageId==='coursebook-72')).toHaveLength(3);expect(a.find(a=>a.pageId==='coursebook-169')?.text).toContain('Ab September');expect(a.filter(a=>a.pageId==='workbook-73')).toHaveLength(0);});
  it('promotes source-covered duration and starting-point questions',()=>{for(const id of ['wie-lange','ab-wann']){const q=questionWords.find(w=>w.id===id)!;expect(q.lesson).toBe(11);expect(questionWordLessons(q)).toContain(11);}});
  it('ships exact speech for every builder sentence and participle model',()=>{const speech=loadStudySpeech();for(const text of [...pastSpeech,...unit.verbs.filter(v=>v.participle).map(v=>`hat ${v.participle}`)]){expect(speech[text],text).toBeTruthy();expect(statSync(resolve('apps/web/public'+speech[text])).size).toBeGreaterThan(1000);}});
 });

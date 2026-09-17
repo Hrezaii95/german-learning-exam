@@ -18,11 +18,11 @@ GENERATED = ROOT / "platform/apps/web/generated"
 DIGITS = str.maketrans(dict(zip("", "0123456789")))
 
 # Printed page starts; PDF page = printed page + 2 for these source files.
-LESSONS = [(1, 11, 6), (2, 15, 10), (3, 19, 14), (4, 29, 26), (5, 33, 30), (6, 37, 34), (7, 47, 46), (8, 51, 50), (9, 55, 54), (10, 65, 66), (11, 69, 70)]
+LESSONS = [(1, 11, 6), (2, 15, 10), (3, 19, 14), (4, 29, 26), (5, 33, 30), (6, 37, 34), (7, 47, 46), (8, 51, 50), (9, 55, 54), (10, 65, 66), (11, 69, 70), (12, 73, 74)]
 # Each page's exercise starts, checked against the source pages.
 EXERCISES = {
-    "coursebook": {1: [1, 2, 4, 8], 2: [1, 2, 4, 6], 3: [1, 2, 5, 9], 4: [1, 3, 5, 8], 5: [1, 2, 5, 6], 6: [1, 2, 4, 9], 7: [1, 3, 8, 10], 8: [1, 2, 5, 7], 9: [1, 3, 8, 10], 10: [1, 3, 6, 10], 11: [1, 2, 5, 8]},
-    "workbook": {1: [1, 5, 10, 13], 2: [1, 4, 8, 12], 3: [1, 5, 9, 12], 4: [1, 4, 9, 14], 5: [1, 5, 9, 15], 6: [1, 4, 7, 10], 7: [1, 4, 6, 10], 8: [1, 6, 9, 12], 9: [1, 4, 8, 12], 10: [1, 5, 8, 11], 11: [1, 5, 7, 9]},
+    "coursebook": {1: [1, 2, 4, 8], 2: [1, 2, 4, 6], 3: [1, 2, 5, 9], 4: [1, 3, 5, 8], 5: [1, 2, 5, 6], 6: [1, 2, 4, 9], 7: [1, 3, 8, 10], 8: [1, 2, 5, 7], 9: [1, 3, 8, 10], 10: [1, 3, 6, 10], 11: [1, 2, 5, 8], 12: [1, 3, 5, 7]},
+    "workbook": {1: [1, 5, 10, 13], 2: [1, 4, 8, 12], 3: [1, 5, 9, 12], 4: [1, 4, 9, 14], 5: [1, 5, 9, 15], 6: [1, 4, 7, 10], 7: [1, 4, 6, 10], 8: [1, 6, 9, 12], 9: [1, 4, 8, 12], 10: [1, 5, 8, 11], 11: [1, 5, 7, 9], 12: [1, 4, 7, 9]},
 }
 
 
@@ -35,7 +35,7 @@ def clean(text):
 
 def main():
     parser=argparse.ArgumentParser()
-    parser.add_argument("--through",type=int,choices=[4,5,6,7,8,9,10,11],default=11)
+    parser.add_argument("--through",type=int,choices=[4,5,6,7,8,9,10,11,12],default=12)
     through=parser.parse_args().through
     PUBLIC.mkdir(parents=True, exist_ok=True)
     (PUBLIC / "audio").mkdir(exist_ok=True)
@@ -51,6 +51,7 @@ def main():
         last=next((kb,ab) for lesson,kb,ab in LESSONS if lesson==through)
         end = (46 if kind=="coursebook" else 45) if through==6 else last[0 if kind=="coursebook" else 1]+3
         if through==9:end=64 if kind=="coursebook" else 65
+        if through==12:end=82 if kind=="coursebook" else 85
         action_lessons={155:[1],156:[1],157:[2],158:[2],159:[3,4],160:[5],161:[6]} if kind=="coursebook" else {}
         if through>=7:
             action_lessons.update({162:[7],163:[7,8],191:[1],192:[2],193:[4,5],194:[5,7]} if kind=="coursebook" else {86:[1,2],87:[3,4],88:[5,6],89:[6,7,8]})
@@ -60,6 +61,7 @@ def main():
             action_lessons.update({165:[9],166:[9]} if kind=="coursebook" else {91:[9,10]})
         if through>=10 and kind=="coursebook":action_lessons.update({167:[10],195:[10]})
         if through>=11:action_lessons.update({168:[11],169:[11],196:[11],197:[11]} if kind=="coursebook" else {92:[11,12]})
+        if through>=12 and kind=="coursebook":action_lessons.update({170:[12],171:[12]})
         printed_pages=list(range(-1,end+1))+(list(action_lessons) if through>=6 else [])
         corrections=json.loads((ROOT/'research/lesson-expansion/book-line-corrections.json').read_text(encoding='utf8'))
         for printed in printed_pages:
@@ -82,6 +84,10 @@ def main():
                 section="Module 3 · "+("Magazine" if printed<=62 else "Grammar" if printed==63 else "Communication")
             elif kind=="workbook" and 58<=printed<=65:
                 section="Module 3 · "+("Review" if printed<=59 else "Skills test" if printed<=61 else "Work & careers" if printed<=63 else "Exam practice")
+            elif kind=="coursebook" and 77<=printed<=82:
+                section="Module 4 · "+("Magazine" if printed<=80 else "Grammar" if printed==81 else "Communication")
+            elif kind=="workbook" and 78<=printed<=85:
+                section="Module 4 · "+("Review" if printed<=79 else "Skills test" if printed<=81 else "Work & careers" if printed<=83 else "Exam practice")
             else:
                 section = f"Lesson {lesson}"
             page = doc[printed + 1]
@@ -108,7 +114,7 @@ def main():
     for file in sorted((ROOT / "resources/original/audio").rglob("*.mp3")):
         match = re.search(r"_(KB|AB)_(?:Momente_A11_)?L(\d+)_(\d+)(.*)\.mp3$", file.name)
         if not match:
-            match=re.search(r"_(AB)_Momente_A11_(8|10|11)_(\d+)(.*)\.mp3$",file.name)
+            match=re.search(r"_(AB)_Momente_A11_(8|10|11|12)_(\d+)(.*)\.mp3$",file.name)
         if not match:
             continue
         label, lesson, exercise, suffix = match.groups()
@@ -119,7 +125,7 @@ def main():
             # Use one supplied edition of each recording, not duplicate regional copies.
             continue
         kind = "coursebook" if label == "KB" else "workbook"
-        if kind=="workbook" and lesson in (8,10,11) and "Momente_A1_1_AB_CD2" not in str(file):
+        if kind=="workbook" and lesson in (8,10,11,12) and "Momente_A1_1_AB_CD2" not in str(file):
             continue
         # AB names carry Momente before AB; the regex supports both source naming schemes.
         digest = hashlib.sha256(file.read_bytes()).hexdigest()
@@ -190,6 +196,21 @@ def main():
                 exercise=int(re.search(r"Modul 3_(\d+)",name)[1])
                 group="Review" if "Wiederholung" in name else "Skills test" if "Test" in name else "Work & careers"
                 printed=(58 if exercise<=6 else 59) if group=="Review" else (60 if exercise<=2 else 61) if group=="Skills test" else 62
+        elif through>=12 and "Magazin 4_" in name and "_KB_" in name:
+            module=4
+            kind,printed,exercise,group="coursebook",80,1,"Magazine · Listening"
+        elif through>=12 and "Momente_A1_1_AB_CD2" in str(file) and ("Modul 4" in name or "Prüfungstraining" in name and 44<=int(name.split("_")[1])<=49):
+            module=4
+            kind="workbook"
+            track=int(name.split("_")[1])
+            if track>=44:
+                exercise=1 if track==44 else 2
+                group="Exam practice"
+                printed=84
+            else:
+                exercise=int(re.search(r"Modul 4_(\d+)",name)[1])
+                group="Review" if "Wiederholung" in name else "Skills test"
+                printed=(78 if exercise<=4 else 79) if group=="Review" else (80 if exercise<=2 else 81)
         else:
             continue
         digest = hashlib.sha256(file.read_bytes()).hexdigest()

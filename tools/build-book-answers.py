@@ -27,11 +27,13 @@ def add(page, exercise, text, source_page=1, model=False, source="coursebook-key
 
 doc = pymupdf.open(KEY)
 texts = [re.sub(r"[ \t]+\n", "\n", re.sub(r"(\w)-\n(\w)", r"\1\2", p.get_text())) for p in doc]
-starts = {1: (11, [1, 2, 4, 8]), 2: (15, [1, 2, 4, 6]), 3: (19, [1, 2, 5, 9]), 4: (29, [1, 3, 5, 8]), 5: (33, [1, 2, 5, 6]), 6: (37, [1, 2, 4, 9]), 7: (47, [1, 3, 8, 10]), 8: (51, [1, 2, 5, 7]), 9: (55, [1, 3, 8, 10]), 10: (65, [1, 3, 6, 10]), 11: (69, [1, 2, 5, 8])}
+starts = {1: (11, [1, 2, 4, 8]), 2: (15, [1, 2, 4, 6]), 3: (19, [1, 2, 5, 9]), 4: (29, [1, 3, 5, 8]), 5: (33, [1, 2, 5, 6]), 6: (37, [1, 2, 4, 9]), 7: (47, [1, 3, 8, 10]), 8: (51, [1, 2, 5, 7]), 9: (55, [1, 3, 8, 10]), 10: (65, [1, 3, 6, 10]), 11: (69, [1, 2, 5, 8]), 12: (73, [1, 3, 5, 7])}
 for lesson, (first, boundaries) in starts.items():
     source_page = 1 if lesson < 4 else 2 if lesson<=8 else 3
     text = texts[source_page-1].split(f"Lektion {lesson}\n", 1)[1]
     text = text.split(f"Lektion {lesson+1}\n", 1)[0].split("Magazin Lektionen", 1)[0]
+    if lesson==12:
+        text += "\n6a " + texts[3].split("6a ",1)[1].split("Magazin Lektionen",1)[0]
     if lesson==8:
         text += "\n" + texts[2][texts[2].index("4b 2 der Vormittag"):].split("Lektion 9",1)[0]
         text=re.sub(r"\n([5-7]) (?=der Abend|Viertel vor|zehn vor|fünf vor)",r" \1 ",text)
@@ -58,7 +60,7 @@ for lesson, (first, boundaries) in starts.items():
         model = model or body.startswith("(mögliche Antworten)")
         if model:
             body = body.removeprefix("(mögliche Antworten) ")
-        add(f"coursebook-{page}", f"Exercise {previous} · Schon fertig?" if extension else f"Exercise {label}", body, 3 if lesson==8 and label in ("4b","6a","7a") else source_page, model)
+        add(f"coursebook-{page}", f"Exercise {previous} · Schon fertig?" if extension else f"Exercise {label}", body, 3 if lesson==8 and label in ("4b","6a","7a") else 4 if lesson==12 and label in ("6a","7a") else source_page, model)
         if lesson==11 and label in ('4a','4b','4c','6a','6b'):
             for partner in {'4a':[168,196],'4b':[196],'4c':[168],'6a':[169],'6b':[197]}[label]:
                 add(f'coursebook-{partner}',f'Exercise {label} · Partner answers',body,source_page,note='Official partner-activity key. Match the Partner A or B label to your page.')
@@ -126,6 +128,19 @@ add("workbook-58","Review · Exercise 5","Gehen wir ins Theater?\nVielleicht kö
 add("workbook-59","Review · Exercise 10","Salat mit Schinken · Tomatensuppe · Orangensaft · Schokoladenkuchen · eine Tasse Kaffee",12,source="workbook-transcript",note="Items explicitly ordered in track 2/10. Translate into your own language for this mediation exercise.")
 add("workbook-62","Work & careers · Exercise 1b","1 Praxis Dr. Müller: Mittwoch, 9 Uhr.\n2 Benjamin Kleuber, Kiri AG: Montag, 10 Uhr, telefonieren.\n3 Felix: Freitag, 11:30 Uhr, Julias Büro.\n4 Johanna Mai: Donnerstag, 13 Uhr, ihr Büro; Angebot für die ÖkoBank planen.",12,source="workbook-transcript",note="Appointment facts explicitly confirmed in tracks 2/13–2/16; transcript PDF pages 12–13.")
 
+add("coursebook-77","Reading 1","2 · 4 · 5 · 3 · 1",4)
+add("coursebook-77","Reading 2","Davids Mutter: mit Freunden zur Mauer am Brandenburger Tor gegangen.\nChrista: mit ihrem Mann gestritten, eine Schlaftablette genommen und fest geschlafen.\nArno: Urlaub in Süditalien gemacht, nichts vom Mauerfall gehört.",4,True)
+add("coursebook-80","Listening","Autos · Müsli · zwei Milliarden Menschen",4)
+add("coursebook-80","Film","bis 9:30 Uhr geschlafen · Croissants gebacken · die Zeitung geholt · Kaffee gemacht · von zehn bis elf gefrühstückt und Zeitung gelesen · von elf bis eins die Wohnung aufgeräumt und sauber gemacht · um eins Silvia angerufen · um zwei Silvia im Rosengarten getroffen · von zwei bis halb fünf einen Spaziergang gemacht · mit Silvia geredet · am Kiosk ein Glas Wasser getrunken · fürs Abendessen eingekauft · von sechs bis halb sieben gekocht · um halb sieben zu Abend gegessen · zwei Stunden Jenga gespielt",4)
+add("workbook-80","Skills test · Exercise 1","Antonia: Wäsche waschen · aufräumen · ins Café gehen · in eine Bar gehen · tanzen · fotografieren.\nHennig: einkaufen · arbeiten · Zeitung lesen · einen Spaziergang machen.",118,source="workbook-key")
+add("workbook-80","Skills test · Exercise 2","b In Weeze.\nc Seit 2015.\nd Drei Tage.\ne Über 210 000.\nf Peter und Marie.\ng Sie nehmen den Zug und den Bus.",118,source="workbook-key",note="The worked example is already on the exercise page.")
+add("workbook-81","Skills test · Exercise 3","Hi Felix!\nIch habe am Wochenende nicht gelernt. Aber ich hatte Spaß! Am Samstagvormittag habe ich einen Spaziergang im Wald gemacht. Am Sonntag habe ich eine Freundin getroffen. Wir haben Kaffee getrunken. Dann sind wir ins Kino gegangen. Der Film war sehr gut.\nViele Grüße\nMona",118,True,"workbook-key",note="Publisher model. Write about your own weekend when practising.")
+add("workbook-81","Skills test · Exercise 4","1 Ich fahre / Der Zug fährt um neun Uhr vier ab.\n2 Ich steige in Mannheim um.\n3 Ja, ich rufe dich (aus Mannheim) an.\n4 Der ICE 595 / Der Zug fährt um halb eins ab.\n5 Ich komme um fünfzehn Uhr achtundzwanzig in München am Hauptbahnhof an.\n6 Ja. Du kannst mich gern abholen! / Ja, bitte abholen!",118,True,"workbook-key")
+add("workbook-74","Exercise 1a · Spoken years","1 1578 · 2 2021 · 3 1518 · 4 441 · 5 1716 · 6 2005",16,source="workbook-transcript",note="The years stated in track 2/33, to compare with the alternatives in the book.")
+add("workbook-78","Review · Exercise 3","Ach! Du kommst um 12 Uhr an.\nAch! Ihr fahrt um 11:48 Uhr ab.\nAch! Du rufst mich morgen an.\nAch! Ihr steigt jetzt in die U-Bahn ein.\nAch! Vielleicht siehst du noch etwas fern.\nAch! Du kommst um 15:24 Uhr in Wien an.\nAch! Ihr kauft jetzt noch etwas ein.",16,source="workbook-transcript",note="Spoken response models from track 2/36, including the two worked examples.")
+add("workbook-79","Review · Exercise 8","Im Juli bin ich in die Schweiz gefahren.\nIm Sommer bin ich nach Österreich geflogen.\nIm Oktober bin ich nach München geflogen.\nIm Frühling bin ich in den Iran geflogen.\nIm März bin ich nach Spanien gefahren.",17,source="workbook-transcript",note="Spoken responses after the example, track 2/38.")
+add("workbook-79","Review · Exercise 9 · Announcement facts","1 Hamburger mit Käse und Salat: 4,99 Euro.\n2 Nächster Halt: Augsburg. Umsteigen nach Memmingen: Regionalexpress 57530, Gleis 10.\n3 20 Minuten Verspätung. Ankunft in München: 16:15 Uhr, Gleis 25 statt Gleis 16.",17,source="workbook-transcript",note="Facts explicitly stated in tracks 2/39–2/41. Use the relevant arrival information to compose your own message; no complete publisher model message was supplied.")
+
 quick = json.loads((ROOT / "research/book-answers/coursebook-quick-test-keys.json").read_text(encoding="utf-8"))
 for lesson, (first, _) in starts.items():
     for label, text in zip(["Vocabulary", "Grammar", "Communication"], quick["lessons"][str(lesson)]):
@@ -136,6 +151,6 @@ book = json.loads((GEN / "interactive-book.json").read_text(encoding="utf-8"))
 assert all(a["pageId"] in {p["id"] for p in book["pages"]} for a in answers)
 assert all(a["text"] and a["exercise"] for a in answers)
 (GEN / "book-answers.json").write_text(json.dumps(answers, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
-audit = {"answers": len(answers), "pagesWithAnswers": len({a["pageId"] for a in answers}), "bySource": {s: sum(a["source"] == s for a in answers) for s in sorted({a["source"] for a in answers})}, "sources": [{"file": p.relative_to(ROOT).as_posix(), "sha256": hashlib.sha256(p.read_bytes()).hexdigest()} for p in [KEY, AB, TRANSCRIPT, ROOT / quick["source"]]], "scope": "All entries in the supplied coursebook key for Lessons 1–11 and Magazines 1–3; coursebook quick-test answers in the appendix, p. 203; all Module 1–3 workbook skills-test answers; explicit responses in available Module 1–3 review and Lesson 7–10 and extra-practice transcripts."}
+audit = {"answers": len(answers), "pagesWithAnswers": len({a["pageId"] for a in answers}), "bySource": {s: sum(a["source"] == s for a in answers) for s in sorted({a["source"] for a in answers})}, "sources": [{"file": p.relative_to(ROOT).as_posix(), "sha256": hashlib.sha256(p.read_bytes()).hexdigest()} for p in [KEY, AB, TRANSCRIPT, ROOT / quick["source"]]], "scope": "All entries in the supplied coursebook key for Lessons 1–12 and Magazines 1–4; coursebook quick-test answers in the appendix, p. 203; all Module 1–4 workbook skills-test answers; explicit responses in available Module 1–4 review and Lesson 7–12 and extra-practice transcripts."}
 (ROOT / "research/book-answers/answer-source-audit.json").write_text(json.dumps(audit, indent=2)+"\n", encoding="utf-8")
 print(json.dumps(audit))

@@ -1,0 +1,1742 @@
+{
+  "number": 12,
+  "summary": "Tell travel stories, choose haben or sein, remember months and seasons, and describe festivals with war, hatte and seit.",
+  "words": [
+    {
+      "de": "der Marathon",
+      "en": "marathon",
+      "plural": "die Marathons",
+      "category": "Hobbies",
+      "example": "Lea ist einen Marathon gelaufen.",
+      "translation": "Lea ran a marathon.",
+      "id": "l12-marathon"
+    },
+    {
+      "de": "laufen",
+      "en": "to run / walk",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich bin zum Hafen gelaufen.",
+      "translation": "I walked to the harbor.",
+      "id": "l12-laufen"
+    },
+    {
+      "de": "es gibt",
+      "en": "there is / there are",
+      "plural": "",
+      "category": "Grammar",
+      "example": "Das Fest gibt es seit 1977.",
+      "translation": "The festival has existed since 1977.",
+      "id": "l12-es-gibt"
+    },
+    {
+      "de": "seit",
+      "en": "since / for an ongoing period",
+      "plural": "",
+      "category": "Time",
+      "example": "Das Fest gibt es seit 1977.",
+      "translation": "The festival has existed since 1977.",
+      "id": "l12-seit"
+    },
+    {
+      "de": "der Kilometer",
+      "en": "kilometer",
+      "plural": "die Kilometer",
+      "category": "Travel",
+      "example": "Wir sind zehn Kilometer gefahren.",
+      "translation": "We traveled ten kilometers.",
+      "id": "l12-kilometer"
+    },
+    {
+      "de": "die Jahreszahl",
+      "en": "year number",
+      "plural": "die Jahreszahlen",
+      "category": "Time",
+      "example": "Welche Jahreszahl hören Sie?",
+      "translation": "Which year do you hear?",
+      "id": "l12-jahreszahl"
+    },
+    {
+      "de": "unterwegs",
+      "en": "on the road / traveling",
+      "plural": "",
+      "category": "Travel",
+      "example": "Wir waren mit Freunden unterwegs.",
+      "translation": "We were traveling with friends.",
+      "id": "l12-unterwegs"
+    },
+    {
+      "de": "der August",
+      "en": "August",
+      "plural": "",
+      "category": "Time",
+      "example": "Im August bin ich nach Hamburg gefahren.",
+      "translation": "I traveled to Hamburg in August.",
+      "id": "l12-august"
+    },
+    {
+      "de": "die Radtour",
+      "en": "cycling tour",
+      "plural": "die Radtouren",
+      "category": "Hobbies",
+      "example": "Wir haben eine Radtour gemacht.",
+      "translation": "We went on a cycling tour.",
+      "id": "l12-radtour"
+    },
+    {
+      "de": "nach",
+      "en": "to a city or an article-free country",
+      "plural": "",
+      "category": "Travel",
+      "example": "Ich bin nach Österreich gefahren.",
+      "translation": "I traveled to Austria.",
+      "id": "l12-nach"
+    },
+    {
+      "de": "bis",
+      "en": "as far as / until",
+      "plural": "",
+      "category": "Grammar",
+      "example": "Wir sind bis Romanshorn gefahren.",
+      "translation": "We traveled as far as Romanshorn.",
+      "id": "l12-bis"
+    },
+    {
+      "de": "weiterfahren",
+      "en": "to continue the journey",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Wir sind nach Bregenz weitergefahren.",
+      "translation": "We continued to Bregenz.",
+      "id": "l12-weiterfahren"
+    },
+    {
+      "de": "die Tour",
+      "en": "tour",
+      "plural": "die Touren",
+      "category": "Travel",
+      "example": "Die Tour war sehr schön.",
+      "translation": "The tour was lovely.",
+      "id": "l12-tour"
+    },
+    {
+      "de": "das Wetter",
+      "en": "weather",
+      "plural": "",
+      "category": "Everyday",
+      "example": "Wir hatten Glück mit dem Wetter.",
+      "translation": "We were lucky with the weather.",
+      "id": "l12-wetter"
+    },
+    {
+      "de": "der Herbst",
+      "en": "autumn / fall",
+      "plural": "",
+      "category": "Time",
+      "example": "Im Herbst habe ich Freunde besucht.",
+      "translation": "I visited friends in autumn.",
+      "id": "l12-herbst"
+    },
+    {
+      "de": "ein paar",
+      "en": "a few",
+      "plural": "",
+      "category": "Grammar",
+      "example": "Ich bin ein paar Tage geblieben.",
+      "translation": "I stayed for a few days.",
+      "id": "l12-ein-paar"
+    },
+    {
+      "de": "besuchen",
+      "en": "to visit",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich habe meine Eltern besucht.",
+      "translation": "I visited my parents.",
+      "id": "l12-besuchen"
+    },
+    {
+      "de": "bleiben",
+      "en": "to stay",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Wir sind lange dort geblieben.",
+      "translation": "We stayed there for a long time.",
+      "id": "l12-bleiben"
+    },
+    {
+      "de": "das Riesenrad",
+      "en": "Ferris wheel",
+      "plural": "die Riesenräder",
+      "category": "Objects",
+      "example": "Wir sind mit dem Riesenrad gefahren.",
+      "translation": "We rode the Ferris wheel.",
+      "id": "l12-riesenrad"
+    },
+    {
+      "de": "das Volksfest",
+      "en": "public festival / fair",
+      "plural": "die Volksfeste",
+      "category": "Everyday",
+      "example": "Wir haben ein Volksfest besucht.",
+      "translation": "We visited a public festival.",
+      "id": "l12-volksfest"
+    },
+    {
+      "de": "also",
+      "en": "so / therefore",
+      "plural": "",
+      "category": "Grammar",
+      "example": "Das Fest gibt es also schon lange.",
+      "translation": "So the festival has existed for a long time.",
+      "id": "l12-also"
+    },
+    {
+      "de": "fast",
+      "en": "almost",
+      "plural": "",
+      "category": "Grammar",
+      "example": "Das Fest ist fast tausend Jahre alt.",
+      "translation": "The festival is almost a thousand years old.",
+      "id": "l12-fast"
+    },
+    {
+      "de": "die Mitte",
+      "en": "middle",
+      "plural": "",
+      "category": "Time",
+      "example": "Das Fest beginnt Mitte Oktober.",
+      "translation": "The festival starts in mid-October.",
+      "id": "l12-mitte"
+    },
+    {
+      "de": "der Oktober",
+      "en": "October",
+      "plural": "",
+      "category": "Time",
+      "example": "Das Fest ist im Oktober.",
+      "translation": "The festival is in October.",
+      "id": "l12-oktober"
+    },
+    {
+      "de": "der Anfang",
+      "en": "beginning",
+      "plural": "die Anfänge",
+      "category": "Time",
+      "example": "Das Fest endet Anfang November.",
+      "translation": "The festival ends in early November.",
+      "id": "l12-anfang"
+    },
+    {
+      "de": "der November",
+      "en": "November",
+      "plural": "",
+      "category": "Time",
+      "example": "Im November habe ich Urlaub gemacht.",
+      "translation": "I went on holiday in November.",
+      "id": "l12-november"
+    },
+    {
+      "de": "dieser / dieses / diese",
+      "en": "this / these",
+      "plural": "",
+      "category": "Grammar",
+      "example": "In diesem Jahr sind viele Besucher gekommen.",
+      "translation": "Many visitors came this year.",
+      "id": "l12-dieser-dieses-diese"
+    },
+    {
+      "de": "etwa",
+      "en": "about / approximately",
+      "plural": "",
+      "category": "Grammar",
+      "example": "Das Fest hat etwa eine Million Besucher.",
+      "translation": "The festival has about a million visitors.",
+      "id": "l12-etwa"
+    },
+    {
+      "de": "der Besucher",
+      "en": "male visitor",
+      "plural": "die Besucher",
+      "category": "People",
+      "example": "Viele Besucher sind gekommen.",
+      "translation": "Many visitors came.",
+      "id": "l12-besucher"
+    },
+    {
+      "de": "die Besucherin",
+      "en": "female visitor",
+      "plural": "die Besucherinnen",
+      "category": "People",
+      "example": "Viele Besucherinnen sind gekommen.",
+      "translation": "Many visitors came.",
+      "id": "l12-besucherin"
+    },
+    {
+      "de": "der Winter",
+      "en": "winter",
+      "plural": "die Winter",
+      "category": "Time",
+      "example": "Im Winter habe ich Geburtstag.",
+      "translation": "My birthday is in winter.",
+      "id": "l12-winter"
+    },
+    {
+      "de": "der Dezember",
+      "en": "December",
+      "plural": "",
+      "category": "Time",
+      "example": "Im Dezember haben wir Weihnachten gefeiert.",
+      "translation": "We celebrated Christmas in December.",
+      "id": "l12-dezember"
+    },
+    {
+      "de": "das Weihnachten",
+      "en": "Christmas",
+      "plural": "",
+      "category": "Everyday",
+      "example": "Wir haben Weihnachten gefeiert.",
+      "translation": "We celebrated Christmas.",
+      "id": "l12-weihnachten",
+      "usage": "Neuter, but normally used without an article: Weihnachten feiern / Silvester feiern."
+    },
+    {
+      "de": "feiern",
+      "en": "to celebrate",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Wir haben zusammen gefeiert.",
+      "translation": "We celebrated together.",
+      "id": "l12-feiern"
+    },
+    {
+      "de": "zurückfahren",
+      "en": "to travel back",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich bin nach Berlin zurückgefahren.",
+      "translation": "I traveled back to Berlin.",
+      "id": "l12-zurueckfahren"
+    },
+    {
+      "de": "das Tor",
+      "en": "gate",
+      "plural": "die Tore",
+      "category": "Objects",
+      "example": "Wir waren am Brandenburger Tor.",
+      "translation": "We were at the Brandenburg Gate.",
+      "id": "l12-tor"
+    },
+    {
+      "de": "das Silvester",
+      "en": "New Year's Eve",
+      "plural": "",
+      "category": "Everyday",
+      "example": "Wir haben Silvester in Berlin gefeiert.",
+      "translation": "We celebrated New Year's Eve in Berlin.",
+      "id": "l12-silvester",
+      "usage": "Neuter, but normally used without an article: Weihnachten feiern / Silvester feiern."
+    },
+    {
+      "de": "ziemlich",
+      "en": "quite / pretty",
+      "plural": "",
+      "category": "Adjectives",
+      "example": "Die Reise war ziemlich schön.",
+      "translation": "The trip was quite lovely.",
+      "id": "l12-ziemlich"
+    },
+    {
+      "de": "cool",
+      "en": "cool",
+      "plural": "",
+      "category": "Adjectives",
+      "example": "Das war ziemlich cool.",
+      "translation": "That was pretty cool.",
+      "id": "l12-cool"
+    },
+    {
+      "de": "der Sommer",
+      "en": "summer",
+      "plural": "die Sommer",
+      "category": "Time",
+      "example": "Im Sommer sind wir in die Schweiz gefahren.",
+      "translation": "We traveled to Switzerland in summer.",
+      "id": "l12-sommer"
+    },
+    {
+      "de": "durch",
+      "en": "through",
+      "plural": "",
+      "category": "Travel",
+      "example": "Wir sind durch drei Länder gefahren.",
+      "translation": "We traveled through three countries.",
+      "id": "l12-durch"
+    },
+    {
+      "de": "die Jahreszeit",
+      "en": "season",
+      "plural": "die Jahreszeiten",
+      "category": "Time",
+      "example": "Welche Jahreszeit magst du?",
+      "translation": "Which season do you like?",
+      "id": "l12-jahreszeit"
+    },
+    {
+      "de": "der Monat",
+      "en": "month",
+      "plural": "die Monate",
+      "category": "Time",
+      "example": "In welchem Monat hast du Geburtstag?",
+      "translation": "In which month is your birthday?",
+      "id": "l12-monat"
+    },
+    {
+      "de": "der Geburtstag",
+      "en": "birthday",
+      "plural": "die Geburtstage",
+      "category": "Everyday",
+      "example": "Ich habe im März Geburtstag.",
+      "translation": "My birthday is in March.",
+      "id": "l12-geburtstag"
+    },
+    {
+      "de": "der Frühling",
+      "en": "spring",
+      "plural": "die Frühlinge",
+      "category": "Time",
+      "example": "Im Frühling bin ich nach Hamburg gefahren.",
+      "translation": "I traveled to Hamburg in spring.",
+      "id": "l12-fruehling"
+    },
+    {
+      "de": "der März",
+      "en": "March",
+      "plural": "",
+      "category": "Time",
+      "example": "Ich habe im März Geburtstag.",
+      "translation": "My birthday is in March.",
+      "id": "l12-maerz"
+    },
+    {
+      "de": "der April",
+      "en": "April",
+      "plural": "",
+      "category": "Time",
+      "example": "Im April habe ich meine Eltern besucht.",
+      "translation": "I visited my parents in April.",
+      "id": "l12-april"
+    },
+    {
+      "de": "der Mai",
+      "en": "May",
+      "plural": "",
+      "category": "Time",
+      "example": "Das Fest ist im Mai.",
+      "translation": "The festival is in May.",
+      "id": "l12-mai"
+    },
+    {
+      "de": "der Juni",
+      "en": "June",
+      "plural": "",
+      "category": "Time",
+      "example": "Wir sind im Juni angekommen.",
+      "translation": "We arrived in June.",
+      "id": "l12-juni"
+    },
+    {
+      "de": "der Juli",
+      "en": "July",
+      "plural": "",
+      "category": "Time",
+      "example": "Im Juli bin ich in die Schweiz gefahren.",
+      "translation": "I traveled to Switzerland in July.",
+      "id": "l12-juli"
+    },
+    {
+      "de": "der September",
+      "en": "September",
+      "plural": "",
+      "category": "Time",
+      "example": "Im September beginnt der Kurs.",
+      "translation": "The course starts in September.",
+      "id": "l12-september"
+    },
+    {
+      "de": "der Januar",
+      "en": "January",
+      "plural": "",
+      "category": "Time",
+      "example": "Ich habe im Januar Geburtstag.",
+      "translation": "My birthday is in January.",
+      "id": "l12-januar"
+    },
+    {
+      "de": "der Februar",
+      "en": "February",
+      "plural": "",
+      "category": "Time",
+      "example": "Sie hat im Februar Geburtstag.",
+      "translation": "Her birthday is in February.",
+      "id": "l12-februar"
+    },
+    {
+      "de": "die Erdbeere",
+      "en": "strawberry",
+      "plural": "die Erdbeeren",
+      "category": "Food",
+      "example": "Im Frühling essen wir Erdbeeren.",
+      "translation": "We eat strawberries in spring.",
+      "id": "l12-erdbeere"
+    },
+    {
+      "de": "passieren",
+      "en": "to happen",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Was ist passiert?",
+      "translation": "What happened?",
+      "id": "l12-passieren"
+    },
+    {
+      "de": "wandern",
+      "en": "to hike",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Wir sind in den Alpen gewandert.",
+      "translation": "We hiked in the Alps.",
+      "id": "l12-wandern"
+    },
+    {
+      "de": "segeln",
+      "en": "to sail",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Wir sind gesegelt.",
+      "translation": "We went sailing.",
+      "id": "l12-segeln"
+    },
+    {
+      "de": "springen",
+      "en": "to jump",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich bin vom Zehn-Meter-Brett gesprungen.",
+      "translation": "I jumped from the ten-meter diving board.",
+      "id": "l12-springen"
+    },
+    {
+      "de": "die Alpen",
+      "en": "the Alps",
+      "plural": "plural only",
+      "category": "Geography",
+      "example": "Wir waren in den Alpen.",
+      "translation": "We were in the Alps.",
+      "id": "l12-alpen"
+    },
+    {
+      "de": "der Hubschrauber",
+      "en": "helicopter",
+      "plural": "die Hubschrauber",
+      "category": "Travel",
+      "example": "Ich bin mit dem Hubschrauber geflogen.",
+      "translation": "I flew in a helicopter.",
+      "id": "l12-hubschrauber"
+    },
+    {
+      "de": "das Zehn-Meter-Brett",
+      "en": "ten-meter diving board",
+      "plural": "die Zehn-Meter-Bretter",
+      "category": "Objects",
+      "example": "Ich bin vom Zehn-Meter-Brett gesprungen.",
+      "translation": "I jumped from the ten-meter diving board.",
+      "id": "l12-zehn-meter-brett"
+    },
+    {
+      "de": "nachts",
+      "en": "at night",
+      "plural": "",
+      "category": "Time",
+      "example": "Wir sind nachts angekommen.",
+      "translation": "We arrived at night.",
+      "id": "l12-nachts"
+    },
+    {
+      "de": "Ja, das stimmt.",
+      "en": "Yes, that is right.",
+      "plural": "",
+      "category": "Conversation",
+      "example": "Ja, das stimmt. Das Wetter war toll.",
+      "translation": "Yes, that is right. The weather was great.",
+      "id": "l12-ja-das-stimmt"
+    },
+    {
+      "de": "der Hafen",
+      "en": "harbor",
+      "plural": "die Häfen",
+      "category": "Travel",
+      "example": "Wir sind zum Hafen gelaufen.",
+      "translation": "We walked to the harbor.",
+      "id": "l12-hafen"
+    },
+    {
+      "de": "jeder / jedes / jede",
+      "en": "each / every",
+      "plural": "",
+      "category": "Grammar",
+      "example": "Jedes Jahr kommen viele Besucher.",
+      "translation": "Many visitors come every year.",
+      "id": "l12-jeder-jedes-jede"
+    },
+    {
+      "de": "wie lange",
+      "en": "how long",
+      "plural": "",
+      "category": "Questions",
+      "example": "Wie lange dauert das Fest?",
+      "translation": "How long does the festival last?",
+      "id": "l12-wie-lange"
+    },
+    {
+      "de": "dauern",
+      "en": "to last",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Das Fest dauert drei Tage.",
+      "translation": "The festival lasts three days.",
+      "id": "l12-dauern"
+    },
+    {
+      "de": "das Schiff",
+      "en": "ship",
+      "plural": "die Schiffe",
+      "category": "Travel",
+      "example": "Im Hafen gibt es viele Schiffe.",
+      "translation": "There are many ships in the harbor.",
+      "id": "l12-schiff"
+    },
+    {
+      "de": "die Insel",
+      "en": "island",
+      "plural": "die Inseln",
+      "category": "Geography",
+      "example": "Wir haben die Insel besucht.",
+      "translation": "We visited the island.",
+      "id": "l12-insel"
+    },
+    {
+      "de": "nichts",
+      "en": "nothing / not anything",
+      "plural": "",
+      "category": "Grammar",
+      "example": "Ich habe nichts gehört.",
+      "translation": "I did not hear anything.",
+      "id": "l12-nichts"
+    },
+    {
+      "de": "geboren",
+      "en": "born",
+      "plural": "",
+      "category": "Everyday",
+      "example": "Ich bin 1991 geboren.",
+      "translation": "I was born in 1991.",
+      "id": "l12-geboren"
+    },
+    {
+      "de": "die Stunde",
+      "en": "hour",
+      "plural": "die Stunden",
+      "category": "Time",
+      "example": "Ich habe eine Stunde gewartet.",
+      "translation": "I waited for an hour.",
+      "id": "l12-stunde"
+    },
+    {
+      "de": "warten",
+      "en": "to wait",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich habe am Bahnhof gewartet.",
+      "translation": "I waited at the station.",
+      "id": "l12-warten"
+    },
+    {
+      "de": "der Durst",
+      "en": "thirst",
+      "plural": "",
+      "category": "Everyday",
+      "example": "Ich habe Durst.",
+      "translation": "I am thirsty.",
+      "id": "l12-durst"
+    },
+    {
+      "de": "legen",
+      "en": "to lay / put",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich lege das Buch auf den Tisch.",
+      "translation": "I put the book on the table.",
+      "id": "l12-legen"
+    },
+    {
+      "de": "willkommen",
+      "en": "welcome",
+      "plural": "",
+      "category": "Conversation",
+      "example": "Willkommen in Hamburg!",
+      "translation": "Welcome to Hamburg!",
+      "id": "l12-willkommen"
+    },
+    {
+      "de": "fahren",
+      "en": "to travel by vehicle",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich bin mit dem Zug gefahren.",
+      "translation": "I traveled by train.",
+      "id": "l12-fahren"
+    },
+    {
+      "de": "fliegen",
+      "en": "to fly",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich bin nach Österreich geflogen.",
+      "translation": "I flew to Austria.",
+      "id": "l12-fliegen"
+    },
+    {
+      "de": "gehen",
+      "en": "to go on foot",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Wir sind ins Café gegangen.",
+      "translation": "We went to the café.",
+      "id": "l12-gehen"
+    },
+    {
+      "de": "kommen",
+      "en": "to come",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Meine Freundin ist gekommen.",
+      "translation": "My friend came.",
+      "id": "l12-kommen"
+    },
+    {
+      "de": "ankommen",
+      "en": "to arrive",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Wir sind am Montag angekommen.",
+      "translation": "We arrived on Monday.",
+      "id": "l12-ankommen"
+    },
+    {
+      "de": "abfahren",
+      "en": "to depart",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Der Zug ist schon abgefahren.",
+      "translation": "The train has already departed.",
+      "id": "l12-abfahren"
+    },
+    {
+      "de": "einsteigen",
+      "en": "to get on / in",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Wir sind in den Zug eingestiegen.",
+      "translation": "We boarded the train.",
+      "id": "l12-einsteigen"
+    },
+    {
+      "de": "sein",
+      "en": "to be",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Die Reise war schön.",
+      "translation": "The trip was lovely.",
+      "id": "l12-sein"
+    },
+    {
+      "de": "haben",
+      "en": "to have",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Wir hatten viel Spaß.",
+      "translation": "We had a lot of fun.",
+      "id": "l12-haben"
+    },
+    {
+      "de": "sehen",
+      "en": "to see",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich habe tolle Schiffe gesehen.",
+      "translation": "I saw wonderful ships.",
+      "id": "l12-sehen"
+    },
+    {
+      "de": "abholen",
+      "en": "to pick up",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Markus hat mich abgeholt.",
+      "translation": "Markus picked me up.",
+      "id": "l12-abholen"
+    },
+    {
+      "de": "schwimmen",
+      "en": "to swim",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Bist du schon einmal nachts geschwommen?",
+      "translation": "Have you ever swum at night?",
+      "id": "l12-schwimmen"
+    },
+    {
+      "de": "reiten",
+      "en": "to ride a horse",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich bin schon einmal geritten.",
+      "translation": "I have ridden a horse before.",
+      "id": "l12-reiten"
+    },
+    {
+      "de": "Deutschland",
+      "en": "Germany",
+      "plural": "",
+      "category": "Country",
+      "example": "Wir sind nach Deutschland gefahren.",
+      "translation": "We traveled to Germany.",
+      "id": "l12-deutschland"
+    },
+    {
+      "de": "Österreich",
+      "en": "Austria",
+      "plural": "",
+      "category": "Country",
+      "example": "Ich bin nach Österreich geflogen.",
+      "translation": "I flew to Austria.",
+      "id": "l12-oesterreich"
+    },
+    {
+      "de": "die Schweiz",
+      "en": "Switzerland",
+      "plural": "",
+      "category": "Country",
+      "example": "Im Sommer bin ich in die Schweiz gefahren.",
+      "translation": "I traveled to Switzerland in summer.",
+      "id": "l12-schweiz"
+    },
+    {
+      "de": "die Türkei",
+      "en": "Turkey",
+      "plural": "",
+      "category": "Country",
+      "example": "Er fliegt in die Türkei.",
+      "translation": "He is flying to Turkey.",
+      "id": "l12-tuerkei"
+    },
+    {
+      "de": "Frankreich",
+      "en": "France",
+      "plural": "",
+      "category": "Country",
+      "example": "Tanja fährt nach Frankreich.",
+      "translation": "Tanja is traveling to France.",
+      "id": "l12-frankreich"
+    },
+    {
+      "de": "der Iran",
+      "en": "Iran",
+      "plural": "",
+      "category": "Country",
+      "example": "Im Frühling bin ich in den Iran geflogen.",
+      "translation": "I flew to Iran in spring.",
+      "id": "l12-iran"
+    },
+    {
+      "de": "Spanien",
+      "en": "Spain",
+      "plural": "",
+      "category": "Country",
+      "example": "Im März bin ich nach Spanien gefahren.",
+      "translation": "I traveled to Spain in March.",
+      "id": "l12-spanien"
+    },
+    {
+      "de": "machen",
+      "en": "to do / make",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Wir haben eine Radtour gemacht.",
+      "translation": "We went on a cycling tour.",
+      "id": "l12-machen"
+    },
+    {
+      "de": "lesen",
+      "en": "to read",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Hast du meinen Blog gelesen?",
+      "translation": "Have you read my blog?",
+      "id": "l12-lesen"
+    },
+    {
+      "de": "fotografieren",
+      "en": "to photograph",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Ich habe Schiffe fotografiert.",
+      "translation": "I photographed ships.",
+      "id": "l12-fotografieren"
+    },
+    {
+      "de": "essen",
+      "en": "to eat",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Wir haben im Restaurant gegessen.",
+      "translation": "We ate in the restaurant.",
+      "id": "l12-essen"
+    },
+    {
+      "de": "trinken",
+      "en": "to drink",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Wir haben Kaffee getrunken.",
+      "translation": "We drank coffee.",
+      "id": "l12-trinken"
+    },
+    {
+      "de": "treffen",
+      "en": "to meet",
+      "plural": "",
+      "category": "Verbs",
+      "example": "Wir haben Freunde getroffen.",
+      "translation": "We met friends.",
+      "id": "l12-treffen"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "l12-sein",
+      "title": "Journeys often use sein in the Perfekt",
+      "de": "Ich bin nach Hamburg gefahren.",
+      "en": "For the movement uses in this lesson, conjugate sein and put the participle last: bin gefahren, bist gelaufen, ist gekommen. The participle stays the same for every person.",
+      "examples": [
+        "Wir sind nach Wien geflogen.",
+        "Sie ist am Montag angekommen.",
+        "Bist du schon einmal einen Marathon gelaufen?"
+      ],
+      "source": "KB73–75; AB76"
+    },
+    {
+      "id": "l12-choice",
+      "title": "Choose the auxiliary for the action, not the holiday",
+      "de": "Ich bin gefahren. Ich habe meine Eltern besucht.",
+      "en": "Being on a trip does not make every verb use sein. Going or arriving uses sein in these examples; visiting, celebrating, photographing and eating use haben.",
+      "examples": [
+        "Ich bin nach Berlin gefahren.",
+        "Ich habe meine Eltern besucht.",
+        "Wir sind ins Café gegangen.",
+        "Wir haben Kaffee getrunken."
+      ],
+      "source": "KB74; AB76"
+    },
+    {
+      "id": "l12-exceptions",
+      "title": "Keep bleiben, passieren and sein in the sein group",
+      "de": "ist geblieben · ist passiert · ist gewesen",
+      "en": "These verbs use sein although they do not describe a normal journey from place to place. Passieren meaning happen is normally used with es or etwas: Was ist passiert?",
+      "examples": [
+        "Wir sind drei Tage geblieben.",
+        "Was ist passiert?",
+        "Ich bin in Hamburg gewesen."
+      ],
+      "source": "KB75"
+    },
+    {
+      "id": "l12-war-hatte",
+      "title": "War and hatte tell the background",
+      "de": "Die Reise war schön. Wir hatten viel Spaß.",
+      "en": "These are Präteritum forms of sein and haben, very common in spoken German. War means was or were; hatte means had. They can stand alone without a second verb. Compare ich bin gewesen with ich war.",
+      "examples": [
+        "Ich war in Spanien.",
+        "Du hattest Glück mit dem Wetter.",
+        "Wir waren mit Freunden unterwegs.",
+        "Wir hatten viel Spaß."
+      ],
+      "source": "KB75; AB77"
+    },
+    {
+      "id": "l12-seasons",
+      "title": "Months and seasons use im",
+      "de": "im Frühling · im März",
+      "en": "All twelve month names and all four season names in this lesson are masculine. Im combines in + dem. Use im with months and seasons, am with weekdays and um with a clock time.",
+      "examples": [
+        "Ich habe im Januar Geburtstag.",
+        "Im Sommer machen wir eine Radtour.",
+        "Am Samstag fahren wir um acht Uhr ab."
+      ],
+      "source": "KB74–75; AB75"
+    },
+    {
+      "id": "l12-destination",
+      "title": "Where to? Nach or in plus the article",
+      "de": "nach Österreich · in die Schweiz · in den Iran",
+      "en": "For destinations, use nach with cities and ordinary article-free country names. Countries with an article use in plus the accusative: die Schweiz → in die Schweiz; der Iran → in den Iran. For origin use aus: aus der Schweiz, aus dem Iran.",
+      "examples": [
+        "Ich bin nach Hamburg gefahren.",
+        "Wir sind in die Schweiz gefahren.",
+        "Ich bin in den Iran geflogen."
+      ],
+      "source": "KB74; AB74,79"
+    },
+    {
+      "id": "l12-since",
+      "title": "Seit connects the beginning to now",
+      "de": "Das Fest gibt es seit 1977.",
+      "en": "Seit gives the starting point of something that continues. German commonly uses the present tense here: Das Fest gibt es seit 1977. Ask Seit wann? Do not confuse seit with ab, which gives the start of availability or a plan.",
+      "examples": [
+        "Seit wann gibt es das Fest?",
+        "Das Fest gibt es seit 1977.",
+        "Wie lange dauert das Fest?"
+      ],
+      "source": "KB73,76"
+    },
+    {
+      "id": "l12-years",
+      "title": "Say the year in chunks",
+      "de": "1986 → neunzehnhundertsechsundachtzig",
+      "en": "For the years practiced here, 19xx is usually neunzehnhundert plus the remaining number. Years from 2000 use zweitausend plus the remaining number. No und between tausend and the rest: zweitausendeinundzwanzig.",
+      "examples": [
+        "neunzehnhundertsechsundachtzig",
+        "zweitausendneunzehn",
+        "zweitausendeinundzwanzig"
+      ],
+      "source": "KB73; AB74"
+    }
+  ],
+  "verbs": [
+    {
+      "verb": "laufen",
+      "meaning": "to run / walk",
+      "forms": [
+        "laufe",
+        "läufst",
+        "läuft",
+        "laufen",
+        "lauft",
+        "laufen"
+      ],
+      "participle": "gelaufen",
+      "auxiliary": "sein",
+      "tip": "Perfekt in this lesson: ist gelaufen. This source use describes movement or arrival. Keep the complete participle last.",
+      "source": "KB73–76,171; AB74–77; Magazine4"
+    },
+    {
+      "verb": "fahren",
+      "meaning": "to travel by vehicle",
+      "forms": [
+        "fahre",
+        "fährst",
+        "fährt",
+        "fahren",
+        "fahrt",
+        "fahren"
+      ],
+      "participle": "gefahren",
+      "auxiliary": "sein",
+      "tip": "Perfekt in this lesson: ist gefahren. This source use describes movement or arrival. Keep the complete participle last.",
+      "source": "KB73–76,171; AB74–77; Magazine4"
+    },
+    {
+      "verb": "fliegen",
+      "meaning": "to fly",
+      "forms": [
+        "fliege",
+        "fliegst",
+        "fliegt",
+        "fliegen",
+        "fliegt",
+        "fliegen"
+      ],
+      "participle": "geflogen",
+      "auxiliary": "sein",
+      "tip": "Perfekt in this lesson: ist geflogen. This source use describes movement or arrival. Keep the complete participle last.",
+      "source": "KB73–76,171; AB74–77; Magazine4"
+    },
+    {
+      "verb": "gehen",
+      "meaning": "to go on foot",
+      "forms": [
+        "gehe",
+        "gehst",
+        "geht",
+        "gehen",
+        "geht",
+        "gehen"
+      ],
+      "participle": "gegangen",
+      "auxiliary": "sein",
+      "tip": "Perfekt in this lesson: ist gegangen. This source use describes movement or arrival. Keep the complete participle last.",
+      "source": "KB73–76,171; AB74–77; Magazine4"
+    },
+    {
+      "verb": "kommen",
+      "meaning": "to come",
+      "forms": [
+        "komme",
+        "kommst",
+        "kommt",
+        "kommen",
+        "kommt",
+        "kommen"
+      ],
+      "participle": "gekommen",
+      "auxiliary": "sein",
+      "tip": "Perfekt in this lesson: ist gekommen. This source use describes movement or arrival. Keep the complete participle last.",
+      "source": "KB73–76,171; AB74–77; Magazine4"
+    },
+    {
+      "verb": "ankommen",
+      "meaning": "to arrive",
+      "forms": [
+        "komme an",
+        "kommst an",
+        "kommt an",
+        "kommen an",
+        "kommt an",
+        "kommen an"
+      ],
+      "participle": "angekommen",
+      "auxiliary": "sein",
+      "tip": "Perfekt in this lesson: ist angekommen. This source use describes movement or arrival. Keep the complete participle last.",
+      "source": "KB73–76,171; AB74–77; Magazine4"
+    },
+    {
+      "verb": "abfahren",
+      "meaning": "to depart",
+      "forms": [
+        "fahre ab",
+        "fährst ab",
+        "fährt ab",
+        "fahren ab",
+        "fahrt ab",
+        "fahren ab"
+      ],
+      "participle": "abgefahren",
+      "auxiliary": "sein",
+      "tip": "Perfekt in this lesson: ist abgefahren. This source use describes movement or arrival. Keep the complete participle last.",
+      "source": "KB73–76,171; AB74–77; Magazine4"
+    },
+    {
+      "verb": "einsteigen",
+      "meaning": "to get on / in",
+      "forms": [
+        "steige ein",
+        "steigst ein",
+        "steigt ein",
+        "steigen ein",
+        "steigt ein",
+        "steigen ein"
+      ],
+      "participle": "eingestiegen",
+      "auxiliary": "sein",
+      "tip": "Perfekt in this lesson: ist eingestiegen. This source use describes movement or arrival. Keep the complete participle last.",
+      "source": "KB73–76,171; AB74–77; Magazine4"
+    },
+    {
+      "verb": "weiterfahren",
+      "meaning": "to continue the journey",
+      "forms": [
+        "fahre weiter",
+        "fährst weiter",
+        "fährt weiter",
+        "fahren weiter",
+        "fahrt weiter",
+        "fahren weiter"
+      ],
+      "participle": "weitergefahren",
+      "auxiliary": "sein",
+      "tip": "Perfekt in this lesson: ist weitergefahren. This source use describes movement or arrival. Keep the complete participle last.",
+      "source": "KB73–76,171; AB74–77; Magazine4"
+    },
+    {
+      "verb": "zurückfahren",
+      "meaning": "to travel back",
+      "forms": [
+        "fahre zurück",
+        "fährst zurück",
+        "fährt zurück",
+        "fahren zurück",
+        "fahrt zurück",
+        "fahren zurück"
+      ],
+      "participle": "zurückgefahren",
+      "auxiliary": "sein",
+      "tip": "Perfekt in this lesson: ist zurückgefahren. This source use describes movement or arrival. Keep the complete participle last.",
+      "source": "KB73–76,171; AB74–77; Magazine4"
+    },
+    {
+      "verb": "bleiben",
+      "meaning": "to stay",
+      "forms": [
+        "bleibe",
+        "bleibst",
+        "bleibt",
+        "bleiben",
+        "bleibt",
+        "bleiben"
+      ],
+      "participle": "geblieben",
+      "auxiliary": "sein",
+      "tip": "Perfekt in this lesson: ist geblieben. Remember this sein verb separately; it is not a journey from one place to another.",
+      "source": "KB73–76,171; AB74–77; Magazine4"
+    },
+    {
+      "verb": "passieren",
+      "meaning": "to happen",
+      "forms": [
+        "passiere",
+        "passierst",
+        "passiert",
+        "passieren",
+        "passiert",
+        "passieren"
+      ],
+      "participle": "passiert",
+      "auxiliary": "sein",
+      "tip": "In the meaning happen, use es passiert / etwas ist passiert. First- and second-person forms belong to other meanings of passieren.",
+      "source": "KB73–76,171; AB74–77; Magazine4",
+      "priority": "phrase"
+    },
+    {
+      "verb": "wandern",
+      "meaning": "to hike",
+      "forms": [
+        "wandere",
+        "wanderst",
+        "wandert",
+        "wandern",
+        "wandert",
+        "wandern"
+      ],
+      "participle": "gewandert",
+      "auxiliary": "sein",
+      "tip": "Perfekt in this lesson: ist gewandert. This source use describes movement or arrival. Keep the complete participle last.",
+      "source": "KB73–76,171; AB74–77; Magazine4"
+    },
+    {
+      "verb": "segeln",
+      "meaning": "to sail",
+      "forms": [
+        "segle",
+        "segelst",
+        "segelt",
+        "segeln",
+        "segelt",
+        "segeln"
+      ],
+      "participle": "gesegelt",
+      "auxiliary": "sein",
+      "tip": "Perfekt in this lesson: ist gesegelt. This is the sein pattern used in the source activity. Other contexts may use haben.",
+      "source": "KB73–76,171; AB74–77; Magazine4"
+    },
+    {
+      "verb": "springen",
+      "meaning": "to jump",
+      "forms": [
+        "springe",
+        "springst",
+        "springt",
+        "springen",
+        "springt",
+        "springen"
+      ],
+      "participle": "gesprungen",
+      "auxiliary": "sein",
+      "tip": "Perfekt in this lesson: ist gesprungen. This source use describes movement or arrival. Keep the complete participle last.",
+      "source": "KB73–76,171; AB74–77; Magazine4"
+    },
+    {
+      "verb": "schwimmen",
+      "meaning": "to swim",
+      "forms": [
+        "schwimme",
+        "schwimmst",
+        "schwimmt",
+        "schwimmen",
+        "schwimmt",
+        "schwimmen"
+      ],
+      "participle": "geschwommen",
+      "auxiliary": "sein",
+      "tip": "Perfekt in this lesson: ist geschwommen. This is the sein pattern used in the source activity. Other contexts may use haben.",
+      "source": "KB73–76,171; AB74–77; Magazine4"
+    },
+    {
+      "verb": "reiten",
+      "meaning": "to ride a horse",
+      "forms": [
+        "reite",
+        "reitest",
+        "reitet",
+        "reiten",
+        "reitet",
+        "reiten"
+      ],
+      "participle": "geritten",
+      "auxiliary": "sein",
+      "tip": "Perfekt in this lesson: ist geritten. This is the sein pattern used in the source activity. Other contexts may use haben.",
+      "source": "KB73–76,171; AB74–77; Magazine4"
+    },
+    {
+      "verb": "besuchen",
+      "meaning": "to visit",
+      "forms": [
+        "besuche",
+        "besuchst",
+        "besucht",
+        "besuchen",
+        "besucht",
+        "besuchen"
+      ],
+      "participle": "besucht",
+      "auxiliary": "haben",
+      "tip": "Perfekt in this lesson: hat besucht. A visit uses haben; be- is not separated and the participle has no ge-.",
+      "source": "KB73–76,171; AB74–77; Magazine4"
+    },
+    {
+      "verb": "feiern",
+      "meaning": "to celebrate",
+      "forms": [
+        "feiere",
+        "feierst",
+        "feiert",
+        "feiern",
+        "feiert",
+        "feiern"
+      ],
+      "participle": "gefeiert",
+      "auxiliary": "haben",
+      "tip": "Perfekt in this lesson: hat gefeiert. This activity uses haben even when it happens during a trip.",
+      "source": "KB73–76,171; AB74–77; Magazine4"
+    },
+    {
+      "verb": "dauern",
+      "meaning": "to last",
+      "forms": [
+        "dauere",
+        "dauerst",
+        "dauert",
+        "dauern",
+        "dauert",
+        "dauern"
+      ],
+      "participle": "gedauert",
+      "auxiliary": "haben",
+      "tip": "For duration use es dauert / das Fest dauert; plural: die Ferien dauern. First- and second-person forms are rarely needed.",
+      "source": "KB73–76,171; AB74–77; Magazine4",
+      "priority": "phrase"
+    },
+    {
+      "verb": "warten",
+      "meaning": "to wait",
+      "forms": [
+        "warte",
+        "wartest",
+        "wartet",
+        "warten",
+        "wartet",
+        "warten"
+      ],
+      "participle": "gewartet",
+      "auxiliary": "haben",
+      "tip": "Perfekt in this lesson: hat gewartet. This activity uses haben even when it happens during a trip.",
+      "source": "KB73–76,171; AB74–77; Magazine4"
+    },
+    {
+      "verb": "legen",
+      "meaning": "to lay / put",
+      "forms": [
+        "lege",
+        "legst",
+        "legt",
+        "legen",
+        "legt",
+        "legen"
+      ],
+      "participle": "gelegt",
+      "auxiliary": "haben",
+      "tip": "Perfekt in this lesson: hat gelegt. This activity uses haben even when it happens during a trip.",
+      "source": "KB73–76,171; AB74–77; Magazine4"
+    },
+    {
+      "verb": "sehen",
+      "meaning": "to see",
+      "forms": [
+        "sehe",
+        "siehst",
+        "sieht",
+        "sehen",
+        "seht",
+        "sehen"
+      ],
+      "participle": "gesehen",
+      "auxiliary": "haben",
+      "tip": "Perfekt in this lesson: hat gesehen. This activity uses haben even when it happens during a trip.",
+      "source": "KB73–76,171; AB74–77; Magazine4"
+    },
+    {
+      "verb": "abholen",
+      "meaning": "to pick up",
+      "forms": [
+        "hole ab",
+        "holst ab",
+        "holt ab",
+        "holen ab",
+        "holt ab",
+        "holen ab"
+      ],
+      "participle": "abgeholt",
+      "auxiliary": "haben",
+      "tip": "Perfekt in this lesson: hat abgeholt. This activity uses haben even when it happens during a trip.",
+      "source": "KB73–76,171; AB74–77; Magazine4"
+    },
+    {
+      "verb": "machen",
+      "meaning": "to do / make",
+      "forms": [
+        "mache",
+        "machst",
+        "macht",
+        "machen",
+        "macht",
+        "machen"
+      ],
+      "participle": "gemacht",
+      "auxiliary": "haben",
+      "tip": "Perfekt in this lesson: hat gemacht. This activity uses haben even when it happens during a trip.",
+      "source": "KB73–76,171; AB74–77; Magazine4"
+    },
+    {
+      "verb": "lesen",
+      "meaning": "to read",
+      "forms": [
+        "lese",
+        "liest",
+        "liest",
+        "lesen",
+        "lest",
+        "lesen"
+      ],
+      "participle": "gelesen",
+      "auxiliary": "haben",
+      "tip": "Perfekt in this lesson: hat gelesen. This activity uses haben even when it happens during a trip.",
+      "source": "KB73–76,171; AB74–77; Magazine4"
+    },
+    {
+      "verb": "fotografieren",
+      "meaning": "to photograph",
+      "forms": [
+        "fotografiere",
+        "fotografierst",
+        "fotografiert",
+        "fotografieren",
+        "fotografiert",
+        "fotografieren"
+      ],
+      "participle": "fotografiert",
+      "auxiliary": "haben",
+      "tip": "Perfekt in this lesson: hat fotografiert. This activity uses haben even when it happens during a trip.",
+      "source": "KB73–76,171; AB74–77; Magazine4"
+    },
+    {
+      "verb": "essen",
+      "meaning": "to eat",
+      "forms": [
+        "esse",
+        "isst",
+        "isst",
+        "essen",
+        "esst",
+        "essen"
+      ],
+      "participle": "gegessen",
+      "auxiliary": "haben",
+      "tip": "Perfekt in this lesson: hat gegessen. This activity uses haben even when it happens during a trip.",
+      "source": "KB73–76,171; AB74–77; Magazine4"
+    },
+    {
+      "verb": "trinken",
+      "meaning": "to drink",
+      "forms": [
+        "trinke",
+        "trinkst",
+        "trinkt",
+        "trinken",
+        "trinkt",
+        "trinken"
+      ],
+      "participle": "getrunken",
+      "auxiliary": "haben",
+      "tip": "Perfekt in this lesson: hat getrunken. This activity uses haben even when it happens during a trip.",
+      "source": "KB73–76,171; AB74–77; Magazine4"
+    },
+    {
+      "verb": "treffen",
+      "meaning": "to meet",
+      "forms": [
+        "treffe",
+        "triffst",
+        "trifft",
+        "treffen",
+        "trefft",
+        "treffen"
+      ],
+      "participle": "getroffen",
+      "auxiliary": "haben",
+      "tip": "Perfekt in this lesson: hat getroffen. This activity uses haben even when it happens during a trip.",
+      "source": "KB73–76,171; AB74–77; Magazine4"
+    },
+    {
+      "verb": "sein",
+      "meaning": "to be",
+      "forms": [
+        "bin",
+        "bist",
+        "ist",
+        "sind",
+        "seid",
+        "sind"
+      ],
+      "participle": "gewesen",
+      "auxiliary": "sein",
+      "tip": "Perfekt in this lesson: ist gewesen. Remember this sein verb separately; it is not a journey from one place to another. In conversation, war / hatte are often simpler: Die Reise war schön. Wir hatten Spaß.",
+      "source": "KB73–76,171; AB74–77; Magazine4",
+      "preterite": [
+        "war",
+        "warst",
+        "war",
+        "waren",
+        "wart",
+        "waren"
+      ]
+    },
+    {
+      "verb": "haben",
+      "meaning": "to have",
+      "forms": [
+        "habe",
+        "hast",
+        "hat",
+        "haben",
+        "habt",
+        "haben"
+      ],
+      "participle": "gehabt",
+      "auxiliary": "haben",
+      "tip": "Perfekt in this lesson: hat gehabt. This activity uses haben even when it happens during a trip. In conversation, war / hatte are often simpler: Die Reise war schön. Wir hatten Spaß.",
+      "source": "KB73–76,171; AB74–77; Magazine4",
+      "preterite": [
+        "hatte",
+        "hattest",
+        "hatte",
+        "hatten",
+        "hattet",
+        "hatten"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "de": "Im Frühling bin ich nach Hamburg gefahren.",
+      "en": "I traveled to Hamburg in spring."
+    },
+    {
+      "de": "Ich bin mit dem Zug angekommen.",
+      "en": "I arrived by train."
+    },
+    {
+      "de": "Wir sind in die Schweiz gefahren.",
+      "en": "We traveled to Switzerland."
+    },
+    {
+      "de": "Ich bin nach Österreich geflogen.",
+      "en": "I flew to Austria."
+    },
+    {
+      "de": "Wir sind lange dort geblieben.",
+      "en": "We stayed there for a long time."
+    },
+    {
+      "de": "Ich habe meine Eltern besucht.",
+      "en": "I visited my parents."
+    },
+    {
+      "de": "Wir haben Weihnachten gefeiert.",
+      "en": "We celebrated Christmas."
+    },
+    {
+      "de": "Bist du schon einmal einen Marathon gelaufen?",
+      "en": "Have you ever run a marathon?"
+    },
+    {
+      "de": "Was ist passiert?",
+      "en": "What happened?"
+    },
+    {
+      "de": "Die Reise war sehr schön.",
+      "en": "The trip was lovely."
+    },
+    {
+      "de": "Ich hatte Glück mit dem Wetter.",
+      "en": "I was lucky with the weather."
+    },
+    {
+      "de": "Wir hatten viel Spaß.",
+      "en": "We had a lot of fun."
+    },
+    {
+      "de": "Wann hast du Geburtstag?",
+      "en": "When is your birthday?"
+    },
+    {
+      "de": "Ich habe im Januar Geburtstag.",
+      "en": "My birthday is in January."
+    },
+    {
+      "de": "Seit wann gibt es das Fest?",
+      "en": "Since when has the festival existed?"
+    },
+    {
+      "de": "Das Fest gibt es seit 1977.",
+      "en": "The festival has existed since 1977."
+    },
+    {
+      "de": "Wie lange dauert das Fest?",
+      "en": "How long does the festival last?"
+    },
+    {
+      "de": "Es dauert von Freitag bis Sonntag.",
+      "en": "It lasts from Friday until Sunday."
+    },
+    {
+      "de": "Wohin bist du gefahren?",
+      "en": "Where did you travel to?"
+    },
+    {
+      "de": "Im Frühling bin ich in den Iran geflogen.",
+      "en": "I flew to Iran in spring."
+    }
+  ],
+  "quiz": [
+    {
+      "q": "Ich ___ nach Berlin gefahren.",
+      "options": [
+        "bin",
+        "habe",
+        "hat"
+      ],
+      "answer": "bin",
+      "why": "This journey uses sein: ich bin gefahren."
+    },
+    {
+      "q": "Wir ___ unsere Eltern besucht.",
+      "options": [
+        "haben",
+        "sind",
+        "ist"
+      ],
+      "answer": "haben",
+      "why": "Besuchen uses haben, even during a trip."
+    },
+    {
+      "q": "Er ist drei Tage ___.",
+      "options": [
+        "geblieben",
+        "gebleibt",
+        "bleiben"
+      ],
+      "answer": "geblieben",
+      "why": "Bleiben is a sein verb with the participle geblieben."
+    },
+    {
+      "q": "Was ___ passiert?",
+      "options": [
+        "ist",
+        "hat",
+        "hast"
+      ],
+      "answer": "ist",
+      "why": "Passieren meaning happen uses sein."
+    },
+    {
+      "q": "___ Sommer habe ich Geburtstag.",
+      "options": [
+        "Im",
+        "Am",
+        "Um"
+      ],
+      "answer": "Im",
+      "why": "Months and seasons use im."
+    },
+    {
+      "q": "My birthday is in March.",
+      "options": [
+        "Ich habe im März Geburtstag.",
+        "Ich bin im März Geburtstag.",
+        "Ich habe am März Geburtstag."
+      ],
+      "answer": "Ich habe im März Geburtstag.",
+      "why": "Use haben Geburtstag and im with a month."
+    },
+    {
+      "q": "Destination: Switzerland",
+      "options": [
+        "in die Schweiz",
+        "nach die Schweiz",
+        "aus der Schweiz"
+      ],
+      "answer": "in die Schweiz",
+      "why": "A country with an article uses in plus the accusative for a destination."
+    },
+    {
+      "q": "Destination: Iran",
+      "options": [
+        "in den Iran",
+        "aus dem Iran",
+        "nach dem Iran"
+      ],
+      "answer": "in den Iran",
+      "why": "Der Iran becomes in den Iran for this destination."
+    },
+    {
+      "q": "Wir ___ viel Spaß.",
+      "options": [
+        "hatten",
+        "hatte",
+        "war"
+      ],
+      "answer": "hatten",
+      "why": "Wir uses hatten in the Präteritum of haben."
+    },
+    {
+      "q": "Something has existed from 1977 until now.",
+      "options": [
+        "seit 1977",
+        "ab 1977",
+        "um 1977"
+      ],
+      "answer": "seit 1977",
+      "why": "Seit links its starting point to the present."
+    }
+  ]
+}

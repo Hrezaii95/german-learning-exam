@@ -1,0 +1,82 @@
+{
+  "lesson": 12,
+  "title": "Im Frühling bin ich nach Hamburg gefahren.",
+  "corePages": {
+    "coursebook": [
+      73,
+      74,
+      75,
+      76
+    ],
+    "workbook": [
+      74,
+      75,
+      76,
+      77
+    ]
+  },
+  "modulePages": {
+    "coursebook": [
+      77,
+      78,
+      79,
+      80,
+      81,
+      82
+    ],
+    "workbook": [
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85
+    ]
+  },
+  "partnerPages": [
+    170,
+    171
+  ],
+  "sharedExtraWorkbookPage": 92,
+  "glossaryPdfPages": [
+    16,
+    17
+  ],
+  "originalTracks": {
+    "coursebook": [
+      "2_29",
+      "2_30",
+      "2_31"
+    ],
+    "workbook": [
+      "2_33",
+      "2_34",
+      "2_35",
+      "2_36",
+      "2_37",
+      "2_38",
+      "2_39",
+      "2_40",
+      "2_41",
+      "2_42",
+      "2_43",
+      "2_44",
+      "2_45",
+      "2_46",
+      "2_47",
+      "2_48",
+      "2_49"
+    ]
+  },
+  "sourceCautions": [
+    "Final coursebook key continues on PDF4 for6a/7a and Module4.",
+    "Workbook base tracks33–49 must not collide with regional tracks24–40.",
+    "All six exam clips44–49 belong on WB84; WB85 is speaking practice.",
+    "Partner171 adds reiten and schwimmen with source sein participles.",
+    "Module4 workbook test keys are on printed118; no full ordinary exercise workbook key was supplied.",
+    "All months and seasons are masculine; holidays Weihnachten/Silvester normally omit their article."
+  ],
+  "status": "Source and local browser verification complete; deployment and live verification pending"
+}

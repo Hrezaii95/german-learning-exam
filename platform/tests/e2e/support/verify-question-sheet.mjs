@@ -13,9 +13,9 @@ const assert=(value,label)=>{if(!value)throw Error(label);checks.push(label);};
 try{
   await page.goto(`${base}/cheat-sheets/questions/`,{waitUntil:'networkidle'});
   assert(await page.getByRole('heading',{name:'Ask for the missing piece.'}).isVisible(),'Question sheet is reachable');
-  assert(await page.getByRole('navigation',{name:'Choose a cheat sheet',exact:true}).getByRole('link').count()===14,'All fourteen sheets are connected');
+  assert(await page.getByRole('navigation',{name:'Choose a cheat sheet',exact:true}).getByRole('link').count()===15,'All fifteen sheets are connected');
   const map=page.locator('#question-map .question-map').first();
-  assert(await map.getByRole('button').count()===14,'Overview contains fourteen core question patterns');
+  assert(await map.getByRole('button').count()===16,'Overview contains sixteen core question patterns');
   await page.screenshot({caret:'initial',path:`${output}/overview-desktop.png`});
   await map.getByRole('button',{name:/Wer\?/}).click();
   const focus=page.locator('#question-word');
@@ -31,7 +31,7 @@ try{
   await focus.getByRole('button',{name:'Remove from review: Wer ist das?',exact:true}).click();
   await page.getByRole('button',{name:'Expand overview',exact:true}).click();
   const dialog=page.getByRole('dialog',{name:'One map for the missing information'});
-  assert(await dialog.getByRole('button').count()===15,'Expanded infographic includes all fourteen patterns and close control');
+  assert(await dialog.getByRole('button').count()===17,'Expanded infographic includes all sixteen patterns and close control');
   await page.keyboard.press('Escape');
   const builder=page.locator('#question-builder');
   const result=builder.locator('.question-builder-result');
@@ -64,10 +64,10 @@ try{
   await focus.getByRole('button',{name:'Listen: Wessen?',exact:true}).waitFor();
   assert(/study extra/i.test(await focus.innerText()),'Saved deep links restore the requested question and its source label');
   await page.getByRole('button',{name:'Explore the wider question family',exact:true}).click();
-  assert(await page.locator('.question-extras .question-map button').count()===5,'Five optional question-family previews are available');
+  assert(await page.locator('.question-extras .question-map button').count()===4,'Four optional question-family previews are available');
   await page.setViewportSize({width:390,height:844});
   await page.locator('.sheet-mobile-switcher summary').click();
-  assert(await page.getByRole('navigation',{name:'Choose a cheat sheet on phone'}).getByRole('link').count()===14,'Phone navigation reaches all fourteen sheets');
+  assert(await page.getByRole('navigation',{name:'Choose a cheat sheet on phone'}).getByRole('link').count()===15,'Phone navigation reaches all fifteen sheets');
   await page.locator('.sheet-mobile-switcher summary').click();
   await builder.scrollIntoViewIfNeeded();await page.screenshot({caret:'initial',path:`${output}/word-order-mobile.png`});
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'Phone layout has no horizontal overflow');
