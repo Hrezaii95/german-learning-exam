@@ -1,9 +1,8 @@
 {
   "milestone": "Lessons 1-9",
   "status": "local validation passed; deployment pending",
-  "repositoryTests": 885,
-  "webSuiteTests": 546,
-  "additionalRegressionTests": 1,
+  "repositoryTests": 886,
+  "webSuiteTests": 547,
   "targetedFinalTests": 21,
   "staticPages": 1318,
   "browserChecks": {
@@ -38,5 +37,6 @@
     "Complete ordinary workbook exercise keys were not supplied; only available official keys and explicit source answers are shown.",
     "Technical audio checks are not a full listening-language review."
   ],
-  "fullGoal": "All 12 lessons; Lessons 10-12 remain"
+  "fullGoal": "All 12 lessons; Lessons 10-12 remain",
+  "finalCheck": "npm run check passed after the UI-test compiler configuration fix"
 }

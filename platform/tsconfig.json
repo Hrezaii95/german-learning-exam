@@ -36,6 +36,7 @@
     "vitest.config.ts"
   ],
   "exclude": [
+    "tests/web/course-phrase-identity-ui.test.ts",
     "tests/web/word-family-cards-ui.test.ts",
     "node_modules",
     "**/dist",

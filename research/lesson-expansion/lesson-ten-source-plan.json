@@ -22,7 +22,8 @@
   "sharedExtraWorkbookPage": 91,
   "glossaryPdfPages": [
     13,
-    14
+    14,
+    15
   ],
   "originalTracks": {
     "coursebook": [
@@ -55,7 +56,8 @@
     "WB91 is shared with Lesson9; WB92 belongs to Lessons11/12.",
     "Base workbook CD2 filenames omit L and must be parsed. Regional CZ tracks17-21 correspond to base/publisher transcript tracks26-30; avoid duplicate media and module3 transcript collisions.",
     "KB exercise10a/b has a multi-digit exercise label.",
-    "Verify KB203 quick keys and all irregular separable forms against source."
+    "Verify KB203 quick keys and all irregular separable forms against source.",
+    "Glossary15 still contains five Lesson10 entries before Lektion11: naechst-, Halt, Hauptbahnhof, Vorsicht and Achtung."
   ],
   "status": "Source preparation only; not implemented or published"
 }
