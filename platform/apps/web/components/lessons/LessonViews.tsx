@@ -3,7 +3,8 @@ import type { LearnerWebProjection } from "@/lib/content/types";
 import { loadLearnerHubProjection } from "@/lib/content/access";
 import { HubToolDrawerGrid } from "@/components/hubs/HubViews";
 import { LearnerDashboard } from "@/components/learner-state/LearnerDashboard";
-import { NewChapterCards } from "@/components/study/LessonFour";
+import {CourseDashboard} from "@/components/study/CourseDashboard";
+import {LAST_AVAILABLE_LESSON} from "@/lib/study/scope";
 
 /**
  * Daily Learning Studio home. The first row (Continue + Today's mission), the
@@ -31,11 +32,11 @@ export function DashboardView({
           Continue the lesson you were on, then practise today’s review set.
         </p>
         <p className="dense">
-          4 lessons · {activityCount} guided activities · your interactive book.
+          {LAST_AVAILABLE_LESSON} lessons · {activityCount} guided activities · your interactive book.
         </p>
       </header>
 
-      <NewChapterCards />
+      <CourseDashboard/>
       <LearnerDashboard projection={projection} />
 
       <section aria-labelledby="hubs-heading">

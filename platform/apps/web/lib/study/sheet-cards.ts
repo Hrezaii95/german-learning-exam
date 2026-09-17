@@ -1,8 +1,9 @@
+import {wordStudyTags} from "./tags";
 import type {WordCard} from "../content/word-card-types";
 import {verbModels,type ExtendedSheetId} from "./sheet-topics";
 
 export function cardsForSheet(cards:WordCard[],sheet:ExtendedSheetId):WordCard[]{
-  const inLessons=(card:WordCard)=>card.lessons.some(l=>["1","2","3","4","1–3","Module 1"].includes(l));
+  const inLessons=(card:WordCard)=>wordStudyTags(card).lessons.some(n=>n>=1&&n<=4);
   const verbs=new Set(verbModels.map(v=>v.verb));
   return cards.filter(card=>{
     if(!inLessons(card))return false;

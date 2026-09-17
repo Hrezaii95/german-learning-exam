@@ -10,6 +10,7 @@ import type {
 import { germanMatchKeys } from "./match-keys";
 import type { LearnerHubDefinition, LearnerHubRecord } from "./hub-types";
 import { lessonFourCards } from "../study/word-cards";
+import { wordStudyTags } from "../study/tags";
 
 let cached: WordCardCatalog | undefined;
 const catalogPath = join(
@@ -39,7 +40,7 @@ export function loadWordCards(): WordCardCatalog {
         audio: speech[example.de] ?? null,
       })),
     }));
-    cached = { ...original, cards: [...original.cards, ...additions] };
+    cached = { ...original, cards: [...original.cards, ...additions].map(card=>({...card,studyTags:wordStudyTags(card)})) };
   }
   return cached;
 }
@@ -78,13 +79,7 @@ export function withWordCardHub(
         card.category.toLowerCase();
       const lessonIds = [
         ...new Set([
-          ...card.lessons.flatMap((l) =>
-            l === "1–3" || l === "Module 1"
-              ? ["lesson:01", "lesson:02", "lesson:03"]
-              : /^[1234]$/.test(l)
-                ? [`lesson:0${l}`]
-                : [],
-          ),
+          ...wordStudyTags(card).lessons.map(n=>`lesson:${String(n).padStart(2,"0")}`),
           ...(previous?.lessonIds ?? []),
           ...(card.teacherRows.length ? ["lesson:02"] : []),
         ]),
@@ -159,9 +154,7 @@ export function withWordCardSearch(
         : card.teacherRows.length
           ? 3
           : 2,
-      lessonIds: card.lessons
-        .filter((l) => /^[1234]$/.test(l))
-        .map((l) => `lesson:0${l}`),
+      lessonIds: wordStudyTags(card).lessons.map(n=>`lesson:${String(n).padStart(2,"0")}`),
       category: card.category,
       hubDestination: { hub: "vocabulary" },
       canonicalHref: card.path,

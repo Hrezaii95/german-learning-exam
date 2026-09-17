@@ -1,0 +1,24 @@
+{
+  "stage": "Lessons 1-4 audit and shared selection",
+  "fullTests": 855,
+  "webTests": 516,
+  "pagesGates": "passed",
+  "exportPages": 868,
+  "browser": {
+    "answers": 238,
+    "scopeAndPractice": 18,
+    "questions": 42,
+    "collections": 59,
+    "reader": 19
+  },
+  "visualInspection": [
+    "selection-mobile.png",
+    "vocabulary-mobile.png",
+    "lesson-three-desktop.png"
+  ],
+  "answers": 66,
+  "originalTracks": 82,
+  "speechTexts": 3913,
+  "newSpeechClips": 108,
+  "deployment": "pending"
+}

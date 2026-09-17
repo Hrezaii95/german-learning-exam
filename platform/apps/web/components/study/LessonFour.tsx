@@ -13,6 +13,9 @@ import {
 import { GermanText, SaveButton, useStudy } from "./StudyProvider";
 import { LineAudio } from "./StudyAudio";
 
+import {useStudyScope,StudyScopeNotice} from "./StudyScope";
+import {tagsForLesson} from "@/lib/study/scope";
+
 const tabs = ["Words", "Grammar", "Verbs", "Phrases", "Practice"] as const;
 export function LessonFour({ speech }: { speech: Record<string, string> }) {
   const [tab, setTab] = useState<(typeof tabs)[number]>("Words");
@@ -47,6 +50,7 @@ export function LessonFour({ speech }: { speech: Record<string, string> }) {
     ).length ?? 0;
   return (
     <div className="study-workspace">
+      <StudyScopeNotice tags={tagsForLesson(4)}/>
       <Link className="study-back" href="/lessons">
         ← All lessons
       </Link>
@@ -450,6 +454,7 @@ export function LessonFour({ speech }: { speech: Record<string, string> }) {
 }
 
 export function NewChapterCards() {
+  const {matches}=useStudyScope();
   return (
     <section
       className="study-new-chapters"
@@ -469,7 +474,7 @@ export function NewChapterCards() {
         </Link>
       </div>
       <div className="study-chapter-cards">
-        {courseChapters.slice(2).map((c) => (
+        {courseChapters.slice(2).filter(c=>matches(tagsForLesson(c.number))).map((c) => (
           <Link href={`/lessons/0${c.number}`} key={c.number}>
             <span className="study-chapter-badge">0{c.number}</span>
             <div>

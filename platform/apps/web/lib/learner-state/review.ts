@@ -15,6 +15,7 @@ import {
   reviewTemplateForId,
   stableCardIdForTemplate,
 } from "./registry";
+import {matchesStudyScope,tagsForLesson,numericLessons,type StudyScope} from "../study/scope";
 
 export const OLDER_MAINTENANCE_DAYS = 30 as const;
 export const DEFAULT_DAILY_CARD_LIMIT = 10 as const;
@@ -123,8 +124,10 @@ export function buildDailyReviewMission(input: {
   readonly targetCount?: number;
   readonly filters?: MissionFilters;
   readonly resumeCardIds?: readonly string[];
+  readonly studyScope?: StudyScope;
 }): ReviewMissionView {
   let candidates = buildReviewCandidates(input);
+  if(input.studyScope)candidates=candidates.filter(c=>matchesStudyScope({...tagsForLesson(numericLessons([c.lessonId??""])[0]??1),...(c.teacherAssignment?{sources:["course","teacher-extra"] as const}:{})},input.studyScope!));
   let generatorFilters = input.filters;
   if (input.filters?.lessonId !== undefined) {
     if (learnerPublishedContentResolver.entityKind(input.filters.lessonId) !== "Lesson") {

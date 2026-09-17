@@ -7,6 +7,7 @@ import { withPagesBaseAssetPath } from "@/lib/content/pages-base-path";
 import styles from "./word-cards.module.css";
 import { SaveButton } from "@/components/study/StudyProvider";
 import { LineAudio, stopStudyAudio } from "@/components/study/StudyAudio";
+import {StudyTagList} from "@/components/study/StudyScope";
 
 function Speaker() {
   return <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M11 5 6 9H3v6h3l5 4V5Zm4 3a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" /></svg>;
@@ -56,7 +57,7 @@ export function WordFamilyCard({ card }: { card: WordCard }) {
   const stem = card.rows[0]!.singular.text.replace(/^(der|die|das) /, "");
   const formCount = card.rows.reduce((total, row) => total + 1 + row.plurals.length, 0);
   const isProfession = card.category === "Profession";
-  const lessonText = card.lessons.includes("1–3") ? "Lessons 1–3" : card.lessons.filter(l => /^[1234]$/.test(l)).map(l => `Lesson ${l}`).join(" · ") || (card.lessons.includes("Teacher notes") ? "Teacher extra" : "Module 1");
+  const lessonText = card.studyTags?.lessons.length?card.studyTags.lessons.map(n=>`Lesson ${n}`).join(" · "):(card.lessons.includes("1–3")||card.lessons.includes("1-3")) ? "Lessons 1–3" : card.lessons.filter(l => /^[1234]$/.test(l)).map(l => `Lesson ${l}`).join(" · ") || (card.lessons.includes("Teacher notes") ? "Teacher extra" : "Module 1");
   const switchMode = (next: "learn" | "recall") => {
     audioRef.current?.pause(); audioRef.current = null; setPlaying(null); setAudioStatus("");
     setMode(next); setFeedback(null); setAnswer("");
@@ -85,7 +86,7 @@ export function WordFamilyCard({ card }: { card: WordCard }) {
     </header>
     <article className={styles.card} aria-labelledby={`${uid}-title`}>
       <header className={styles.hero}>
-        <div className={styles.identity}><div className={styles.eyebrow}>{lessonText}<span className={styles.dot} />{card.category === "Profession" ? "Professions" : card.category}</div><h1 id={`${uid}-title`}>{card.title}</h1><p className={styles.subline}>{formCount > 1 ? `One word family. ${formCount === 4 ? "Four" : formCount} useful forms.` : "One meaning. Learn it, hear it, use it."}</p></div>
+        <div className={styles.identity}><div className={styles.eyebrow}>{lessonText}<span className={styles.dot} />{card.category === "Profession" ? "Professions" : card.category}</div><h1 id={`${uid}-title`}>{card.title}</h1>{card.studyTags&&<StudyTagList tags={card.studyTags}/>}<p className={styles.subline}>{formCount > 1 ? `One word family. ${formCount === 4 ? "Four" : formCount} useful forms.` : "One meaning. Learn it, hear it, use it."}</p></div>
         {card.image ? <img className={styles.heroImage} src={withPagesBaseAssetPath(card.image.path)} alt={card.image.alt} width={265} height={204} /> : <div className={styles.meaningVisual} aria-hidden="true"><span>{card.category === "Number" || card.category === "Alphabet" ? card.visual : card.visual === "profession" ? "↔" : card.visual === "origin" ? "↗" : card.visual === "language" ? "“ ”" : card.visual === "family" ? "⌘" : card.visual === "action" ? "→" : "Aa"}</span><small>{card.category === "Number" ? "SAY THE NUMBER" : card.category === "Alphabet" ? "SPELL IT ALOUD" : card.category === "Profession" ? "ONE JOB · ALL FORMS" : card.category.toUpperCase()}</small></div>}
       </header>
       {mode === "learn" ? <div>

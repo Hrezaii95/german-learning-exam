@@ -6,6 +6,7 @@ export type WordForm = {
 };
 export type WordRow = { label: string; meaning: string; singular: WordForm; plurals: WordForm[]; usage: string };
 export type WordCard = {
+  studyTags?: import("../study/scope").StudyTags;
   id: string;
   path: string;
   aliases: string[];

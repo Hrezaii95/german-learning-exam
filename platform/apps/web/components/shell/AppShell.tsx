@@ -1,5 +1,6 @@
 import Link from "next/link";
 import {MobileNavigation} from "./MobileNavigation";
+import {StudyScopeControl} from "@/components/study/StudyScope";
 import type { ReactNode } from "react";
 import {
   shellCurrentMatches,
@@ -133,6 +134,7 @@ export function AppShell({
 
       <div className="shell-workspace">
         <main id="main-content" className="shell-main">
+          {current!=="settings"&&current!=="references"&&<StudyScopeControl/>}
           {children}
         </main>
         {/* The source credit is a condition of using this course material

@@ -5,6 +5,7 @@ export type SavedItem = {
   kind: "word" | "concept" | "line" | "phrase";
   href: string;
   lesson?: number;
+  studyTags?: import("./scope").StudyTags;
   savedAt?: string;
   due?: string;
   interval?: number;
@@ -19,6 +20,7 @@ export type StudyState = {
   resume: string | null;
 };
 export type DictionaryEntry = {
+  studyTags?: import("./scope").StudyTags;
   id: string;
   de: string;
   en: string;

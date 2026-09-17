@@ -9,8 +9,10 @@ import {
   lessonFourVerbs,
 } from "../lib/study/lesson-four";
 import { loadBook, loadBookAnswers } from "../lib/study/catalog";
+import {studyUnits} from "../lib/study/course-lessons";
 const texts = [
   ...new Set([
+    ...studyUnits.flatMap(u=>[...u.concepts.flatMap(c=>[c.de,...c.examples]),...u.phrases.map(p=>p.de),...u.verbs.flatMap(v=>v.forms.map((f,i)=>`${["ich","du","er","wir","ihr","sie"][i]} ${f}`))]),
     ...loadBook().pages.flatMap((page) => page.lines.map((line) => line.text)),
     ...loadBookAnswers().flatMap(answer=>answer.text.split(/\n+/)),
     ...lessonFourWords.flatMap((word) => [

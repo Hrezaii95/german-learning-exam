@@ -1,5 +1,7 @@
 "use client";
 
+import {useStudyScope} from "@/components/study/StudyScope";
+import {tagsForLesson} from "@/lib/study/scope";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import type { ActivityProgressRecord } from "@german-learning/learning";
@@ -311,6 +313,9 @@ export function LearnerDashboard({
 }: {
   projection: LearnerWebProjection;
 }) {
+  const {scope,matches}=useStudyScope();
+  const selectedLessons=projection.lessons.filter(l=>matches(tagsForLesson(Number(l.routeSegment))));
+  const selectedActivities=projection.activities.filter(a=>selectedLessons.some(l=>l.id===a.lessonId));
   const learnerState = useOptionalLearnerState();
   const snapshot = learnerState?.snapshot ?? null;
   const hydration = snapshot?.hydration ?? null;
@@ -339,19 +344,19 @@ export function LearnerDashboard({
   const progress = state?.activityProgress ?? [];
   const resumeActivity =
     mode === "ready" && state?.resume
-      ? (projection.activities.find(
+      ? (selectedActivities.find(
           (row) => row.id === state.resume!.activityId,
         ) ?? null)
       : null;
 
   const continueLessonId =
-    resumeActivity?.lessonId ?? projection.zeroState.continueLessonId;
+    resumeActivity?.lessonId ?? selectedLessons[0]?.id ?? projection.zeroState.continueLessonId;
   const continueLesson =
-    projection.lessons.find((lesson) => lesson.id === continueLessonId) ?? null;
+    selectedLessons.find((lesson) => lesson.id === continueLessonId) ?? null;
   const continueTitleDe =
     continueLesson?.titleDe ?? projection.zeroState.continueLessonTitleDe;
   const continuePath =
-    resumeActivity?.canonicalPath ?? projection.zeroState.continuePath;
+    resumeActivity?.canonicalPath ?? (continueLesson?orderedLessonActivities(continueLesson,selectedActivities)[0]?.canonicalPath:undefined) ?? continueLesson?.canonicalPath ?? projection.zeroState.continuePath;
   const continueIllustration =
     (resumeActivity ? illustrationForActivity(resumeActivity.id) : null) ??
     illustrationForLesson(continueLessonId);
@@ -368,6 +373,7 @@ export function LearnerDashboard({
         state,
         masteryByConcept: hydration.masteryByConcept,
         now: new Date(),
+        studyScope:scope,
       });
     } catch {
       mission = null;
@@ -413,19 +419,19 @@ export function LearnerDashboard({
   return (
     <div className="stack">
       <div className="studio-board">
-        <ContinueCard
+        {selectedLessons.length>0&&<ContinueCard
           eyebrow={resumeActivity ? "Continue" : "Start here"}
           titleDe={continueTitleDe}
           nextStep={
             resumeActivity
               ? resumeActivity.promptPlainText
-              : "Begin with the first Lesson 1 activity."
+              : `Begin the guided activities in Lesson ${continueLesson?.routeSegment.replace(/^0/,"")??"1"}.`
           }
           chips={continueChips}
           href={continuePath}
           actionLabel={resumeActivity ? "Continue learning" : "Start learning"}
           illustration={continueIllustration}
-        />
+        />}
 
         {mode === "ready" && mission && mission.candidateCount > 0 ? (
           <MissionCard>
@@ -485,8 +491,8 @@ export function LearnerDashboard({
       />
 
       <CourseCards
-        lessons={projection.lessons}
-        activities={projection.activities}
+        lessons={selectedLessons}
+        activities={selectedActivities}
         progress={progress}
         mode={mode}
       />

@@ -1,4 +1,11 @@
+"use client";
+
 import type { ReactNode } from "react";
+import type {StudyUnit} from "@/lib/study/course-lessons";
+import {CoursePatterns} from "@/components/study/CourseStudy";
+import {useStudyScope} from "@/components/study/StudyScope";
+import {hubStudyTags} from "@/lib/study/tags";
+import {numericLessons,tagsForLesson,availableLessons,scopeLabel,defaultStudyScope} from "@/lib/study/scope";
 import { SaveButton } from "@/components/study/StudyProvider";
 import Link from "next/link";
 import type {
@@ -877,6 +884,7 @@ function HubFilters({
   query: HubQueryState;
 }) {
   const summary = hubFilterSummary(query);
+  const {scope,setScope,connected}=useStudyScope();
   const searchId = `hub-search-${hub.id}`;
   const lessonId = `hub-lesson-${hub.id}`;
   const categoryId = `hub-category-${hub.id}`;
@@ -913,15 +921,14 @@ function HubFilters({
             <select
               id={lessonId}
               className="hub-input"
-              name="lesson"
-              defaultValue={query.lesson}
+              name={connected?undefined:"lesson"}
+              {...(connected?{value:scope.mode==="all"?"all":scope.mode==="one"?String(scope.lessons[0]).padStart(2,"0"):"selection"}:{defaultValue:query.lesson})}
+              onChange={e=>{if(connected)setScope({...scope,mode:e.target.value==="all"?"all":"one",lessons:e.target.value==="all"?[]:[Number(e.target.value)]});}}
               aria-label={`Filter ${hub.title} by lesson`}
             >
               <option value="all">All</option>
-              <option value="01">Lesson 1</option>
-              <option value="02">Lesson 2</option>
-              {hub.items.some(item => item.lessonIds.includes("lesson:03")) && <option value="03">Lesson 3</option>}
-              {hub.items.some(item => item.lessonIds.includes("lesson:04")) && <option value="04">Lesson 4</option>}
+              {connected&&["multiple","through"].includes(scope.mode)&&<option value="selection">{scopeLabel(scope)}</option>}
+              {availableLessons().map(n=><option value={String(n).padStart(2,"0")} key={n}>Lesson {n}</option>)}
             </select>
           </label>
           {hasCategories ? (
@@ -948,7 +955,7 @@ function HubFilters({
           <button className="btn btn-primary" type="submit">
             Apply filters
           </button>
-          <Link className="btn btn-secondary" href={hubClearHref(hub.path)}>
+          <Link className="btn btn-secondary" href={hubClearHref(hub.path)} onClick={()=>setScope(defaultStudyScope())}>
             Clear filters
           </Link>
         </div>
@@ -967,26 +974,34 @@ function HubFilters({
 export function HubListView({
   hub,
   searchParams,
+  units=[],speech={},
 }: {
   hub: LearnerHubDefinition;
   searchParams: Record<string, string | string[] | undefined>;
+  units?:StudyUnit[];speech?:Record<string,string>;
 }) {
+  const scope=useStudyScope();
   const query = parseHubSearchParams(searchParams, hub.categories);
-  const filtered = filterHubRecords(hub.items, query);
-  const visibleItemCount = hubVisibleItemCount(hub);
+  const selectedItems=hub.items.filter(item=>scope.matches(hubStudyTags(item)));
+  const filtered = filterHubRecords(selectedItems, query);
+  const unitRows=(unit:StudyUnit)=>hub.id==="verbs"?unit.verbs:hub.id==="phrases"?unit.phrases:unit.concepts;
+  const selectedUnits=units.filter(u=>scope.matches({...tagsForLesson(u.number),concepts:[hub.id==="verbs"?"verbs":hub.id==="phrases"?"conversation":"grammar"]}));
+  const extraCount=selectedUnits.reduce((sum,u)=>sum+unitRows(u).filter(r=>JSON.stringify(r).toLocaleLowerCase("de").includes(query.q.trim().toLocaleLowerCase("de"))).length,0);
+  const visibleItemCount = hubVisibleItemCount(hub)+units.reduce((sum,u)=>sum+unitRows(u).length,0);
   const listeningGroups =
     hub.experience?.kind === "listening"
-      ? filterListeningGroups(hub.experience, query)
+      ? filterListeningGroups(hub.experience, query).filter(group=>scope.matches(tagsForLesson(numericLessons([group.lessonId])[0]??1)))
       : null;
   const conceptTopics =
     hub.experience?.kind === "concepts"
-      ? filterConceptTopics(hub.experience, query)
+      ? filterConceptTopics(hub.experience, query).filter(topic=>scope.matches({lessons:numericLessons(topic.lessonIds),concepts:["grammar","conversation"],source:"course"}))
       : null;
-  const visibleResultCount = listeningGroups
+  const baseResultCount = listeningGroups
     ? listeningGroups.reduce((sum, group) => sum + group.tracks.length, 0)
     : conceptTopics
       ? conceptTopics.length
       : filtered.items.length;
+  const visibleResultCount=baseResultCount+extraCount;
   const showAfterFilters = visibleItemCount > 0 && filtered.hasActiveFilters;
 
   return (
@@ -1017,7 +1032,7 @@ export function HubListView({
         <HubEmptyPublished hub={hub} />
       ) : visibleResultCount === 0 ? (
         <HubNoMatches hub={hub} />
-      ) : listeningGroups ? (
+      ) : baseResultCount===0 ? null : listeningGroups ? (
         <section aria-labelledby="hub-results-heading">
           <h2 id="hub-results-heading" className="dense">
             Workbook exercises
@@ -1056,6 +1071,7 @@ export function HubListView({
           </div>
         </section>
       )}
+      {units.length>0&&<CoursePatterns units={units} section={hub.id} speech={speech} query={query.q}/>}
     </div>
   );
 }

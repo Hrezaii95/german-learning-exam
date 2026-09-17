@@ -1,7 +1,8 @@
 import { chromium } from '@playwright/test';
-import { mkdir, writeFile } from 'node:fs/promises';
+import { mkdir, writeFile, readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 const base = (process.env.STUDY_TEST_BASE ?? 'http://127.0.0.1:4331/german-learning-exam').replace(/\/$/, '');
+const expectedBook=JSON.parse(await readFile("apps/web/generated/interactive-book.json","utf8"));
 const output = resolve('../research/book-reader-update', process.env.STUDY_TEST_LABEL ?? 'export');
 await mkdir(output, {recursive:true});
 const browser = await chromium.launch({args:['--autoplay-policy=no-user-gesture-required']});
@@ -51,9 +52,9 @@ try {
   await page.screenshot({path:`${output}/transcript-mobile.png`});
   await page.goto(`${base}/listening/`,{waitUntil:'networkidle'});
   await page.locator('.listening-transcript').first().waitFor();
-  assert(await page.locator('.listening-transcript').count()===15,'Existing listening hub also has all 15 source transcripts');
+  assert(await page.locator('.listening-transcript').count()===expectedBook.audio.length,'Listening hub includes the complete released source transcript inventory');
   await page.locator('.listening-transcript summary').first().click();
-  assert(await page.locator('.listening-transcript-body').first().isVisible(),'Legacy listening transcript can be revealed');
+  assert(await page.locator('.listening-transcript-body').first().isVisible(),'Listening transcript can be revealed');
   assert(errors.length===0,`No browser runtime errors: ${errors.join('; ')}`);
   await writeFile(`${output}/verification.json`,JSON.stringify({base,passed:true,checks,errors},null,2));
   console.log(JSON.stringify({base,passed:checks.length,errors}));

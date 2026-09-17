@@ -1,0 +1,442 @@
+{
+  "number": 3,
+  "summary": "Introduce your family, ask yes/no questions, and describe the languages you speak.",
+  "concepts": [
+    {
+      "id": "l3-g22",
+      "title": "Possession with a person's name: Jans Mutter",
+      "de": "Das ist Jans Mutter.",
+      "en": "Put the person's name with -s before the family noun: Jan → Jans Mutter; Line → Lines Bruder. This says whose relative the person is. Normal German names do not take the English apostrophe before this s.",
+      "examples": [
+        "Das ist Jans Mutter.",
+        "Lara ist Toms Schwester.",
+        "Frank ist Jans und Lines Vater."
+      ],
+      "source": "KB pp19,27; AB p14 ex1; optional exception KB p26."
+    },
+    {
+      "id": "l3-g23",
+      "title": "mein/dein: choose the ending from the following noun",
+      "de": "mein Vater — dein Vater",
+      "en": "mein means my; dein means your when speaking to one person informally. In the L3 family patterns use mein/dein with masculine nouns, and meine/deine with feminine nouns and plural nouns. The ending follows the noun's grammatical gender/number, not the owner's gender. The neuter reference pattern is also mein/dein: mein Kind, dein Enkelkind; the printed L3 table itself focuses on masculine, feminine and plural.",
+      "examples": [
+        "mein Vater — dein Vater",
+        "meine Mutter — deine Mutter",
+        "meine Schwester — deine Schwester",
+        "meine Eltern — deine Eltern",
+        "meine Kinder — deine Kinder",
+        "mein Kind — dein Kind"
+      ],
+      "source": "KB pp20,22,27; AB pp14,16; neuter form is a clearly marked reference extension using already known Kind/Enkelkind."
+    },
+    {
+      "id": "l3-g24",
+      "title": "Family nouns, articles and plural forms",
+      "de": "Meine Eltern wohnen in Berlin.",
+      "en": "Learn a family noun together with its grammatical gender and its plural. Some family collectives are plural: Eltern, Geschwister, Großeltern. They take plural verbs. Examples of changing plurals include Vater → Väter, Mutter → Mütter, Bruder → Brüder, Tochter → Töchter; Schwester → Schwestern.",
+      "examples": [
+        "Meine Eltern wohnen in Berlin.",
+        "Mein Bruder wohnt in Köln.",
+        "Meine Geschwister sprechen Deutsch.",
+        "Das sind meine Großeltern."
+      ],
+      "source": "Glossary L3 ex1–4; KB p20; AB p15 and p87 upper L3 section."
+    },
+    {
+      "id": "l3-g25",
+      "title": "Das ist … and Das sind …",
+      "de": "Das ist meine Schwester. Sie heißt Lara.",
+      "en": "Use Das ist + one person and Das sind + more than one person. For example, Das ist meine Schwester, but Das sind meine Eltern. The introductory das itself stays the same. In the follow-up sentence use er/sie for one person, or sie + plural verb for several people.",
+      "examples": [
+        "Das ist meine Schwester. Sie heißt Lara.",
+        "Das sind meine Eltern. Sie wohnen in Wien.",
+        "Sind das deine Kinder?"
+      ],
+      "source": "KB pp16,20–21,28; AB pp10,14,16–17."
+    },
+    {
+      "id": "l3-g26",
+      "title": "Yes/no questions: put the finite verb first",
+      "de": "Ist das dein Vater?",
+      "en": "A yes/no question starts with the finite verb, followed by the subject and the rest of the sentence. It has no W-question word. Match the verb to the subject. Compare Du bist verheiratet → Bist du verheiratet?",
+      "examples": [
+        "Ist das dein Vater?",
+        "Hast du Kinder?",
+        "Wohnt deine Schwester in Berlin?",
+        "Sprechen Sie Englisch?",
+        "Lebt ihr zusammen?"
+      ],
+      "source": "KB pp20–22,27; AB pp14–15."
+    },
+    {
+      "id": "l3-g27",
+      "title": "ja, nein and doch: answer the actual question",
+      "de": "Ist das deine Schwester? — Ja, das ist meine Schwester.",
+      "en": "For a positive yes/no question, ja confirms the positive statement and nein rejects it. For a negative question/assumption, doch contradicts the negative and asserts the positive; nein agrees that the positive statement is false. Give a short full statement after the answer when clarity matters.",
+      "examples": [
+        "Ist das deine Schwester? — Ja, das ist meine Schwester.",
+        "Ist das deine Schwester? — Nein, das ist meine Mutter.",
+        "Ist das nicht deine Schwester? — Doch, das ist meine Schwester.",
+        "Ist das nicht deine Schwester? — Nein, das ist nicht meine Schwester.",
+        "Du wohnst nicht in Berlin, oder? — Doch, ich wohne in Berlin."
+      ],
+      "source": "KB pp21–22,28; AB p16."
+    },
+    {
+      "id": "l3-g28",
+      "title": "sprechen: e changes to i only in du and er/sie/es",
+      "de": "Welche Sprachen sprichst du?",
+      "en": "Learn ich spreche, du sprichst, er/sie/es spricht, wir sprechen, ihr sprecht, sie/Sie sprechen. Only du and er/sie/es have i. This is the main new irregular-verb pattern explicitly taught in Lesson 3.",
+      "examples": [
+        "Welche Sprachen sprichst du?",
+        "Meine Mutter spricht Polnisch.",
+        "Sprecht ihr Deutsch?",
+        "Wir sprechen Englisch."
+      ],
+      "source": "KB pp22,27–28; AB p17."
+    },
+    {
+      "id": "l3-g29",
+      "title": "Talking about language level",
+      "de": "Ich spreche sehr gut Englisch.",
+      "en": "Language names are capitalized and normally appear without an article in these patterns. Use sehr gut, gut or ein bisschen to describe ability. To express no ability, use gar nicht. Both Ich spreche gut Deutsch and Deutsch spreche ich gut keep the finite verb second; practise the simple subject-first pattern first.",
+      "examples": [
+        "Ich spreche sehr gut Englisch.",
+        "Ich spreche ein bisschen Deutsch.",
+        "Sprichst du Französisch? — Nein, gar nicht.",
+        "Französisch spreche ich gar nicht."
+      ],
+      "source": "KB pp22,28; AB pp16–17."
+    },
+    {
+      "id": "l3-g30",
+      "title": "Making a guess with Ich glaube, …",
+      "de": "Ich glaube, David ist Laras Bruder.",
+      "en": "Use Ich glaube, … followed by a normal statement with its own subject and verb. A comma separates the opening phrase from the statement. This is the taught family-picture guessing pattern.",
+      "examples": [
+        "Ich glaube, David ist Laras Bruder.",
+        "Ich glaube, sie ist 28 Jahre alt."
+      ],
+      "source": "KB pp19,28."
+    }
+  ],
+  "verbs": [
+    {
+      "verb": "sprechen",
+      "meaning": "to speak",
+      "forms": [
+        "spreche",
+        "sprichst",
+        "spricht",
+        "sprechen",
+        "sprecht",
+        "sprechen"
+      ],
+      "tip": "Only du and er/sie/es change the stem e to i: sprichst, spricht. ihr sprecht keeps e. Learn all six forms.",
+      "source": "KB pp22,27–28; AB p17.",
+      "priority": "core"
+    },
+    {
+      "verb": "glauben",
+      "meaning": "to think; to believe",
+      "forms": [
+        "glaube",
+        "glaubst",
+        "glaubt",
+        "glauben",
+        "glaubt",
+        "glauben"
+      ],
+      "tip": "Required now: Ich glaube, … as a short opinion/guessing frame followed by a normal statement. Learn the chunk; the other forms are reference. No dass-clause is needed.",
+      "source": "Glossary L3 ex1; KB pp19,28.",
+      "priority": "phrase"
+    },
+    {
+      "verb": "suchen",
+      "meaning": "to look for; to search",
+      "forms": [
+        "suche",
+        "suchst",
+        "sucht",
+        "suchen",
+        "sucht",
+        "suchen"
+      ],
+      "tip": "Classroom task vocabulary.",
+      "source": "KB p20 ex3; module KB p24.",
+      "priority": "classroom"
+    },
+    {
+      "verb": "planen",
+      "meaning": "to plan",
+      "forms": [
+        "plane",
+        "planst",
+        "plant",
+        "planen",
+        "plant",
+        "planen"
+      ],
+      "tip": "Only the optional Schon fertig? task requires recognizing this meaning. Do not add general future tense study.",
+      "source": "Glossary L3 ex4; KB p20.",
+      "priority": "classroom"
+    },
+    {
+      "verb": "korrigieren",
+      "meaning": "to correct",
+      "forms": [
+        "korrigiere",
+        "korrigierst",
+        "korrigiert",
+        "korrigieren",
+        "korrigiert",
+        "korrigieren"
+      ],
+      "tip": "Frequent instruction, not a separate active paradigm requirement.",
+      "source": "KB p21 ex7b; module KB p24.",
+      "priority": "classroom"
+    },
+    {
+      "verb": "geben",
+      "meaning": "to give",
+      "forms": [
+        "gebe",
+        "gibst",
+        "gibt",
+        "geben",
+        "gebt",
+        "geben"
+      ],
+      "tip": "Instruction on the L3 partner page. Strong present forms are reference only; dative objects are not a required grammar system yet.",
+      "source": "KB p159 upper L3 activity.",
+      "priority": "classroom"
+    },
+    {
+      "verb": "vermuten",
+      "meaning": "to suppose; to make a guess",
+      "forms": [
+        "vermute",
+        "vermutest",
+        "vermutet",
+        "vermuten",
+        "vermutet",
+        "vermuten"
+      ],
+      "tip": "Communication-summary label. The actual learner phrase is Ich glaube, … . Full forms are reference.",
+      "source": "KB p28 L3 communication heading.",
+      "priority": "classroom"
+    }
+  ],
+  "phrases": [
+    {
+      "de": "Das ist meine Familie.",
+      "en": "This is my family.",
+      "note": "Start a family introduction with this sentence.",
+      "source": "AB p. 87, L3 extra practice"
+    },
+    {
+      "de": "Wer ist dein Vater? / Wer ist deine Mutter?",
+      "en": "Who is your father / mother?",
+      "note": "dein/mein with Vater; deine/meine with Mutter.",
+      "source": "KB pp. 19–20; possessive model adapted"
+    },
+    {
+      "de": "Ist das dein Vater / Bruder / Onkel?",
+      "en": "Is that your father / brother / uncle?",
+      "note": "Masculine family nouns: dein/mein.",
+      "source": "KB pp. 20–21, 28"
+    },
+    {
+      "de": "Ist das deine Mutter / Schwester / Tante?",
+      "en": "Is that your mother / sister / aunt?",
+      "note": "Feminine family nouns: deine/meine.",
+      "source": "KB pp. 20–21; family nouns substituted"
+    },
+    {
+      "de": "Sind das deine Eltern / Großeltern / Kinder?",
+      "en": "Are those your parents / grandparents / children?",
+      "note": "Plural: sind plus deine/meine.",
+      "source": "KB pp. 20, 28; AB p. 16 ex. 9"
+    },
+    {
+      "de": "Nein, das ist nicht mein Vater. Das ist mein Onkel.",
+      "en": "No, that is not my father. That is my uncle.",
+      "note": "Correct the relationship with a full answer.",
+      "source": "AB p. 15, ex. 7b"
+    },
+    {
+      "de": "Wer ist Jans Mutter? / Das ist Jans Mutter.",
+      "en": "Who is Jan's mother? / That is Jan's mother.",
+      "note": "Attach -s directly to Jan; no apostrophe here.",
+      "source": "KB p. 19, ex. 1"
+    },
+    {
+      "de": "Ich glaube, …",
+      "en": "I think / believe …",
+      "note": "A guess; keep the following statement's normal word order.",
+      "source": "KB pp. 19, 28; example adapted"
+    },
+    {
+      "de": "Wie heißt dein Vater? / Wie heißt deine Schwester?",
+      "en": "What is your father's / sister's name?",
+      "note": "The family member is the subject of heißt.",
+      "source": "AB p. 15, ex. 5/7; sister variant adapted"
+    },
+    {
+      "de": "Woher kommt dein Vater? / Wo wohnt deine Schwester?",
+      "en": "Where is your father from? / Where does your sister live?",
+      "note": "Keep origin and residence separate.",
+      "source": "AB pp. 14–15, ex. 3/5"
+    },
+    {
+      "de": "Was ist sie von Beruf? / Wie alt ist sie? / Wo wohnt sie?",
+      "en": "What does she do? / How old is she? / Where does she live?",
+      "note": "Apply the same personal-profile questions to a family member.",
+      "source": "AB p. 15 ex. 7; KB p. 159"
+    },
+    {
+      "de": "Meine Eltern heißen … und … / Mein Bruder heißt …",
+      "en": "My parents are called … and … / My brother is called …",
+      "note": "Plural heißen versus singular heißt.",
+      "source": "AB pp. 14–17, 87; model sentences adapted"
+    },
+    {
+      "de": "Ist das deine Schwester? – Ja, das ist meine Schwester.",
+      "en": "Is that your sister? – Yes, that is my sister.",
+      "note": "Affirm a positive question with ja.",
+      "source": "KB p. 21, ex. 5"
+    },
+    {
+      "de": "Ist das deine Schwester? – Nein, das ist meine Tante.",
+      "en": "Is that your sister? – No, that is my aunt.",
+      "note": "Reject a positive question with nein.",
+      "source": "KB pp. 20–21; example adapted"
+    },
+    {
+      "de": "Ist das nicht deine Mutter? – Doch, das ist meine Mutter.",
+      "en": "Isn't that your mother? – Yes, it is my mother.",
+      "note": "doch contradicts the negative idea.",
+      "source": "KB p. 21, grammar box/ex. 5"
+    },
+    {
+      "de": "Ist das nicht deine Mutter? – Nein, das ist meine Oma.",
+      "en": "Isn't that your mother? – No, that is my grandmother.",
+      "note": "nein confirms that she is not your mother.",
+      "source": "KB p. 21, ex. 5"
+    },
+    {
+      "de": "Wohnst du nicht in Berlin? – Doch, ich wohne in Berlin.",
+      "en": "Don't you live in Berlin? – Yes, I do live in Berlin.",
+      "note": "Contradict a negative question using doch.",
+      "source": "KB p. 22, quick test"
+    },
+    {
+      "de": "Wohnst du nicht in Berlin? – Nein, ich wohne in Österreich.",
+      "en": "Don't you live in Berlin? – No, I live in Austria.",
+      "note": "Answer with a full correction to avoid ambiguity.",
+      "source": "KB p. 22, quick test"
+    },
+    {
+      "de": "Dein Mann heißt nicht Kjell, oder? – Doch, er heißt Kjell.",
+      "en": "Your husband's name isn't Kjell, is it? – Yes, it is Kjell.",
+      "note": "doch also corrects a negative statement with oder?.",
+      "source": "AB p. 16, ex. 10b"
+    },
+    {
+      "de": "Welche Sprachen sprichst du? / Welche Sprachen sprechen Sie?",
+      "en": "Which languages do you speak?",
+      "note": "Informal sprichst; formal sprechen.",
+      "source": "KB p. 22, ex. 9"
+    },
+    {
+      "de": "Welche Sprachen spricht deine Mutter?",
+      "en": "Which languages does your mother speak?",
+      "note": "Third-person singular: spricht.",
+      "source": "KB p. 22, ex. 9; question adapted"
+    },
+    {
+      "de": "Ich spreche sehr gut / gut / ein bisschen Deutsch.",
+      "en": "I speak German very well / well / a little.",
+      "note": "Replace Deutsch with a language from the vocabulary guide.",
+      "source": "KB p. 22, communication box; order expanded"
+    },
+    {
+      "de": "Sprichst du Englisch? / Sprechen Sie Englisch?",
+      "en": "Do you speak English?",
+      "note": "Yes/no question begins with the verb.",
+      "source": "KB p. 22, ex. 9b"
+    },
+    {
+      "de": "Französisch spreche ich gar nicht.",
+      "en": "I do not speak French at all.",
+      "note": "Französisch is first; spreche stays second, ich follows.",
+      "source": "KB p. 22 quick test; answer model completed"
+    },
+    {
+      "de": "Ich spreche Englisch und ein bisschen Deutsch.",
+      "en": "I speak English and a little German.",
+      "note": "State different skill levels for different languages.",
+      "source": "AB p. 19, ex. 8"
+    },
+    {
+      "de": "Mein Bruder spricht auch Französisch.",
+      "en": "My brother also speaks French.",
+      "note": "auch adds another language or fact.",
+      "source": "AB p. 17, ex. 12"
+    },
+    {
+      "de": "Ich lerne … / Ich spreche …",
+      "en": "I am learning … / I speak …",
+      "note": "Be able to distinguish learning a language from speaking it.",
+      "source": "AB p. 16, ex. 11b"
+    },
+    {
+      "de": "Sehr gern. / Ja, gern.",
+      "en": "You are very welcome. / Yes, gladly.",
+      "note": "Reply to thanks (Sehr gern) or a request (Ja, gern).",
+      "source": "AB transcript p. 2 track 1_18; p. 4 track 1_28"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "Das ist ___ Mutter. (my mother)",
+      "options": [
+        "mein",
+        "meine",
+        "meinen"
+      ],
+      "answer": "meine",
+      "why": "Mutter is feminine: meine Mutter."
+    },
+    {
+      "q": "___ du Englisch?",
+      "options": [
+        "Sprecht",
+        "Sprechen",
+        "Sprichst"
+      ],
+      "answer": "Sprichst",
+      "why": "Sprechen changes e to i for du: du sprichst."
+    },
+    {
+      "q": "Ist das nicht deine Schwester? Say that she IS your sister.",
+      "options": [
+        "Doch!",
+        "Nein!",
+        "Nicht!"
+      ],
+      "answer": "Doch!",
+      "why": "Doch contradicts the negative question."
+    },
+    {
+      "q": "Choose the correct introduction for your parents.",
+      "options": [
+        "Das ist meine Eltern.",
+        "Das sind meine Eltern.",
+        "Das sind mein Eltern."
+      ],
+      "answer": "Das sind meine Eltern.",
+      "why": "Eltern is plural: meine Eltern, and sind."
+    }
+  ]
+}

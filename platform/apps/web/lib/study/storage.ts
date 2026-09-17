@@ -1,4 +1,14 @@
 import type { SavedItem, StudyState } from "./types";
+import {A1_LESSON_COUNT,studyConcepts,type StudyTags} from "./scope";
+
+function validTags(value:unknown):value is StudyTags{
+  if(!value||typeof value!=="object")return false;
+  const t=value as StudyTags;
+  const sources=["course","teacher-extra","study-extra"];
+  return Array.isArray(t.lessons)&&t.lessons.every(n=>Number.isInteger(n)&&n>=1&&n<=A1_LESSON_COUNT)
+    &&Array.isArray(t.concepts)&&t.concepts.every(id=>studyConcepts.some(c=>c.id===id))
+    &&sources.includes(t.source)&&(t.sources===undefined||(Array.isArray(t.sources)&&t.sources.every(s=>sources.includes(s))));
+}
 
 export const STUDY_KEY = "german-learning-os:study-book:v1";
 export const emptyStudy = (): StudyState => ({
@@ -54,9 +64,10 @@ export function parseStudy(raw: string | null): StudyState {
       href: item.href,
       ...(typeof item.lesson === "number" &&
       item.lesson >= 1 &&
-      item.lesson <= 4
+      Number.isInteger(item.lesson) && item.lesson <= A1_LESSON_COUNT
         ? { lesson: item.lesson }
         : {}),
+      ...(validTags(item.studyTags)?{studyTags:item.studyTags}:{}),
       ...(typeof item.due === "string" && Number.isFinite(Date.parse(item.due))
         ? { due: item.due }
         : {}),

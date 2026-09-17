@@ -16,7 +16,7 @@ import { GermanText, MeaningButton, SaveButton, useStudy } from "./StudyProvider
 import { LineAudio, stopStudyAudio } from "./StudyAudio";
 import { BookAnswers } from "./BookAnswers";
 
-function OriginalTrack({ track, rate }: { track: BookTrack; rate: number }) {
+export function OriginalTrack({ track, rate }: { track: BookTrack; rate: number }) {
   const ref = useRef<HTMLAudioElement>(null);
   const [failed, setFailed] = useState(false);
   useEffect(() => {
@@ -149,6 +149,9 @@ function OriginalPage({
   );
 }
 
+import {useStudyScope,StudyScopeNotice} from "./StudyScope";
+import {tagsForLesson,matchesStudyScope,LAST_AVAILABLE_LESSON,defaultStudyScope} from "@/lib/study/scope";
+
 export function BookReader({
   book,
   speech,
@@ -157,6 +160,9 @@ export function BookReader({
   speech: Record<string, string>;
 }) {
   const study = useStudy();
+  const {scope,setScope}=useStudyScope();
+  const selectedPages=useMemo(()=>book.pages.filter(p=>matchesStudyScope(tagsForLesson(p.lesson),scope)),[book,scope]);
+  const chapters=courseChapters.filter(c=>matchesStudyScope(tagsForLesson(c.number),scope));
   const params = useSearchParams();
   const router = useRouter();
   const [view, setView] = useState<"read" | "page" | "split">("page");
@@ -181,10 +187,10 @@ export function BookReader({
   }, [expanded]);
   const pageId = params.get("page") ?? study?.state.resume ?? "coursebook-29";
   const page =
-    book.pages.find((p) => p.id === pageId) ??
+    (params.has("page")?book.pages:selectedPages).find((p) => p.id === pageId) ?? selectedPages[0] ??
     book.pages.find((p) => p.id === "coursebook-29")!;
   const chapter = courseChapters.find((c) => c.number === page.lesson)!;
-  const allKindPages = book.pages.filter((p) => p.kind === page.kind);
+  const allKindPages = selectedPages.filter((p) => p.kind === page.kind);
   const index = allKindPages.findIndex((p) => p.id === page.id);
   const nearbyPages = allKindPages.slice(Math.max(0,index-2),Math.min(allKindPages.length,index+3));
   const tracks = book.audio.filter((track) => page.audioIds.includes(track.id));
@@ -195,7 +201,7 @@ export function BookReader({
     () =>
       search.trim().length < 2
         ? []
-        : book.pages
+        : selectedPages
             .flatMap((p) =>
               p.lines
                 .filter((l) =>
@@ -207,7 +213,7 @@ export function BookReader({
                 .map((l) => ({ page: p, line: l })),
             )
             .slice(0, 18),
-    [search, book],
+    [search, selectedPages],
   );
   const update = study?.update;
   const ready = study?.ready;
@@ -223,6 +229,7 @@ export function BookReader({
     setSelected(null);
     router.replace(`/book?page=${encodeURIComponent(id)}`, { scroll: false });
   }
+  if(!selectedPages.length)return <div className="book-workspace"><h1>Your interactive book</h1><p role="status">No book pages match this selection. Book pages are course material, grouped by the concepts taught in each lesson.</p><button type="button" className="study-primary" onClick={()=>setScope(defaultStudyScope())}>Show all book pages</button></div>;
   function lineMeaning(value: BookLine) {
     const match = study?.dictionary.find(
       (entry) => entry.example === value.text || entry.de === value.text,
@@ -259,6 +266,7 @@ export function BookReader({
             kind: "line",
             href: `/book?page=${page.id}`,
             lesson: page.lesson,
+            studyTags:tagsForLesson(page.lesson),
             audio: speech[value.text] ?? null,
           }}
         />
@@ -267,9 +275,10 @@ export function BookReader({
   );
   return (
     <div className="book-workspace">
+      <StudyScopeNotice tags={tagsForLesson(page.lesson)}/>
       <header className="book-header">
         <div>
-          <p className="study-eyebrow">Momente A1 · Lessons 1–4</p>
+          <p className="study-eyebrow">Momente A1 · Lessons 1–{LAST_AVAILABLE_LESSON}</p>
           <h1>Your interactive book</h1>
           <p className="muted">Read it. Hear it. Make it yours.</p>
         </div>
@@ -314,7 +323,7 @@ export function BookReader({
               );
             }}
           >
-            {courseChapters.map((c) => (
+            {chapters.map((c) => (
               <option key={c.number} value={c.number}>
                 {c.number} · {c.topic}
               </option>
@@ -330,7 +339,7 @@ export function BookReader({
               <input
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                placeholder={`Search all ${book.pages.length} pages…`}
+                placeholder={`Search ${selectedPages.length} selected pages…`}
               />
             </label>
             {search.trim().length >= 2 ? (
@@ -357,7 +366,7 @@ export function BookReader({
             ) : (
               <div className="book-chapters">
                 <button type="button" onClick={()=>{go(`${page.kind}-cover`);setShowContents(false);}}><b>↖</b><span><strong>Start of the book</strong><small>Cover, map, contents & introduction</small></span></button>
-                {courseChapters.map((c) => (
+                {chapters.map((c) => (
                   <button
                     type="button"
                     key={c.number}
@@ -385,7 +394,7 @@ export function BookReader({
               <p className="muted">Use Bookmark on any page to keep it here.</p>
             )}
             {study?.state.bookmarks.map((id) => {
-              const p = book.pages.find((candidate) => candidate.id === id);
+              const p = selectedPages.find((candidate) => candidate.id === id);
               return (
                 p && (
                   <button
@@ -401,7 +410,7 @@ export function BookReader({
               );
             })}
             <p className="dense">
-              {study?.state.completedPages.length ?? 0} of {book.pages.length}{" "}
+              {selectedPages.filter(p=>study?.state.completedPages.includes(p.id)).length} of {selectedPages.length}{" "}
               pages marked studied
             </p>
           </div>

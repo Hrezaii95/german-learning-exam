@@ -12,6 +12,8 @@ import { bookTranscript } from "../audio/listening-transcripts";
 import { homeWords, homeLabels, homePhrases } from "./home";
 import {grammarPatterns,conversationFrames,verbModels,spokenVerb} from "./sheet-topics";
 import {questionWords,questionBuilders,questionReplyCases} from "./questions";
+import {studyUnits} from "./course-lessons";
+import {tagsForLesson} from "./scope";
 const generated = join(
   dirname(fileURLToPath(import.meta.url)),
   "../../generated",
@@ -56,6 +58,7 @@ export function loadCountrySpeech(): Record<string,string> {
 export function loadDictionary(): DictionaryEntry[] {
   const entries: DictionaryEntry[] = loadWordCards().cards.map((card) => ({
     id: card.id,
+    ...(card.studyTags?{studyTags:card.studyTags}:{}),
     de: card.rows.map((r) => r.singular.text).join(" / "),
     en: card.title,
     forms: card.rows.flatMap((r) => [
@@ -77,6 +80,11 @@ export function loadDictionary(): DictionaryEntry[] {
     const verb = lessonFourVerbs.find((v) => v.verb === word.de);
     const entry = entries.find((item) => item.id === word.id)!;
     entry.forms = [...entry.forms, ...(verb?.forms ?? [])];
+  }
+  const speech=loadStudySpeech();
+  for(const unit of studyUnits){
+    for(const verb of unit.verbs){const entry=entries.find(e=>e.de===verb.verb);if(entry)entry.forms=[...new Set([...entry.forms,...verb.forms])];}
+    for(const [index,phrase] of unit.phrases.entries())entries.push({id:`unit-${unit.number}-phrase-${index}`,saveId:`l${unit.number}-phrase-${index}`,de:phrase.de,en:phrase.en,forms:[phrase.de],example:"",translation:"",href:`/lessons/${String(unit.number).padStart(2,"0")}#phrases`,audio:speech[phrase.de]??null,kind:"phrase",studyTags:{...tagsForLesson(unit.number),concepts:["conversation"]}});
   }
   const instructions: [string, string, string[]][] = [
     ["lesen", "to read", ["Lesen", "lies", "liest"]],
@@ -120,7 +128,7 @@ export function loadDictionary(): DictionaryEntry[] {
       audio: null,
     }),
   );
-  const speech = loadStudySpeech();
+
   // Reuse every translated card example, not just the first example on a card.
   for (const card of loadWordCards().cards) {
     card.examples.forEach((example, index) => {

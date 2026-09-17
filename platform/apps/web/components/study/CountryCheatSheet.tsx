@@ -7,6 +7,8 @@ import { GermanText, SaveButton, useStudy } from "./StudyProvider";
 import { LineAudio } from "./StudyAudio";
 import { CheatSheetNav } from "./CheatSheetNav";
 import { CountryFlag } from "./CountryFlag";
+import {useStudyScope} from "./StudyScope";
+import {countryStudyTags} from "@/lib/study/sheet-scope";
 import { CountryOverview } from "./CountryOverview";
 
 const groups = Object.keys(countryGroups) as CountryGroup[];
@@ -38,8 +40,10 @@ export function CountryCheatSheet({ speech, cardLinks }: { speech: Record<string
     return ()=>window.removeEventListener("hashchange",openCountry);
   }, []);
   const study = useStudy();
+  const {matches}=useStudyScope();
+  const scopedCountries=countries.filter(c=>matches(countryStudyTags(c,study?.dictionary)));
   const current = countries.find(c => c.id === chosen)!;
-  const visible = countries.filter(c => (filter === "all" || (filter === "saved" ? study?.state.saved[`country-${c.id}`] : c.group === filter)) &&
+  const visible = scopedCountries.filter(c => (filter === "all" || (filter === "saved" ? study?.state.saved[`country-${c.id}`] : c.group === filter)) &&
     (scope === "all" || !c.extra) && `${c.name} ${c.en} ${c.languages.join(" ")}`.toLocaleLowerCase("de").includes(search.trim().toLocaleLowerCase("de")));
   const clip = (text: string) => <LineAudio text={text} src={speech[text]} compact />;
   const quizId = quiz[position];
@@ -62,7 +66,7 @@ export function CountryCheatSheet({ speech, cardLinks }: { speech: Record<string
       <a href="#country-overview">Map & flag overview</a>
       <a href="#country-patterns">The 4 patterns</a><a href="#country-passport">Build a sentence</a><a href="#country-index">All {countries.length} countries</a><a href="#country-practice">Test yourself</a>
     </nav>
-    <CountryOverview selected={chosen} onSelect={setChosen} speech={speech}/>
+    <CountryOverview countries={scopedCountries} selected={chosen} onSelect={setChosen} speech={speech}/>
     <section id="country-patterns" className="country-patterns" aria-labelledby="patterns-title">
       <div className="study-section-heading"><div><p className="study-eyebrow">One rule, four paths</p><h2 id="patterns-title">Pass through the AUS gate.</h2></div><span className="country-rule-stamp">AUS + DATIVE</span></div>
       <p>Imagine the article showing its passport at <b lang="de">aus</b>. It changes into the dative form. The country’s grammatical gender stays the same.</p>

@@ -1,3 +1,7 @@
+"use client";
+import {useStudyScope} from "@/components/study/StudyScope";
+import {useStudy} from "@/components/study/StudyProvider";
+import {numericLessons,tagsForLesson} from "@/lib/study/scope";
 import Link from "next/link";
 import type { NavigationContext } from "@/lib/content/navigation-context";
 import {
@@ -90,9 +94,11 @@ export function SearchView({
   searchParams: Record<string, string | string[] | undefined>;
   navigation?: NavigationContext | null;
 }) {
+  const {matches}=useStudyScope();
+  const study=useStudy();
   const query = parseSearchQueryParam(searchParams);
   const trimmed = query.trim();
-  const hits = trimmed.length > 0 ? searchLearnerContent(projection, trimmed) : [];
+  const hits = trimmed.length > 0 ? searchLearnerContent(projection, trimmed).filter(hit=>{const tags=study?.dictionary.find(e=>e.id===hit.id||e.href===hit.canonicalHref)?.studyTags;return tags?matches(tags):numericLessons(hit.lessonIds).some(n=>matches(tagsForLesson(n)));}) : [];
   const groups = groupSearchHits(hits);
   const backHref = navigation ? resolveBackHref(navigation, "hub") : null;
 

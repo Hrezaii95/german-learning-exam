@@ -1,13 +1,16 @@
 "use client";
 
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { parseStudy, rateSavedItem } from "@/lib/study/storage";
 import { GermanText, SaveButton, useStudy } from "./StudyProvider";
 import { LineAudio } from "./StudyAudio";
+import {useStudyScope} from "./StudyScope";
+import {savedStudyTags} from "@/lib/study/saved-tags";
 
 export function SavedReview() {
   const study = useStudy();
+  const {matches,scope}=useStudyScope();
   const [query, setQuery] = useState("");
   const [kind, setKind] = useState("all");
   const [onlyDue, setOnlyDue] = useState(false);
@@ -17,8 +20,9 @@ export function SavedReview() {
   const [notice, setNotice] = useState("");
   const [now] = useState(() => Date.now());
   const file = useRef<HTMLInputElement>(null);
+  useEffect(()=>{setSession(null);setPosition(0);setRevealed(false);},[scope]);
   if (!study?.ready) return <p role="status">Loading your saved review…</p>;
-  const items = Object.values(study.state.saved);
+  const items = Object.values(study.state.saved).filter(item=>matches(savedStudyTags(item,study.dictionary)));
   const due = items.filter((item) => !item.due || Date.parse(item.due) <= now);
   const visible = items
     .filter(

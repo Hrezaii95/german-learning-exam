@@ -1,3 +1,6 @@
+"use client";
+import {CoursePractice} from "@/components/study/CoursePractice";
+import {useStudyScope} from "@/components/study/StudyScope";
 import Link from "next/link";
 import {
   appendNavigationContext,
@@ -20,7 +23,8 @@ export function GameSelector({
   navigation?: NavigationContext | null;
   highlightConceptId?: string | null;
 }) {
-  const catalog = buildPracticeGameCatalog();
+  const {matches}=useStudyScope();
+  const catalog = buildPracticeGameCatalog().filter(g=>matches({lessons:g.id==="verb-builder"?[1,2]:[2],concepts:g.id==="verb-builder"?["verbs"]:g.id==="word-order"?["questions","conversation","grammar"]:["people","grammar"],source:"course"}));
   const conversationHref = navigation
     ? appendNavigationContext(conversationCanonicalPath(), navigation)
     : conversationCanonicalPath();
@@ -38,7 +42,8 @@ export function GameSelector({
         </p>
       </header>
 
-      <section className="panel" aria-labelledby="conversation-practice-heading">
+      <CoursePractice/>
+      {matches({lessons:[2],concepts:["people","conversation"],source:"course"})&&<section className="panel" aria-labelledby="conversation-practice-heading">
         <h2 id="conversation-practice-heading">Conversation practice</h2>
         <p className="muted">
           A five-level ladder for the informal profession question and answer,
@@ -62,7 +67,7 @@ export function GameSelector({
           </span>
           <span className="meta-chip">5 levels</span>
         </Link>
-      </section>
+      </section>}
 
       <ul className="game-selector__list">
         {catalog.map((game) => {

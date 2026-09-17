@@ -11,7 +11,7 @@ const checks=[],errors=[];
 const assert=(v,m)=>{if(!v)throw Error(m);checks.push(m);};
 page.on('pageerror',e=>errors.push(e.message));
 try{
-  for(const [sheet,count] of [['people',64],['verbs',99],['numbers',104],['conversation',47]]){
+  for(const [sheet,count] of [['people',100],['verbs',110],['numbers',104],['conversation',47]]){
     await page.goto(`${base}/cheat-sheets/${sheet}/`,{waitUntil:'networkidle'});
     assert(await page.locator('[data-sheet-card]').count()===count,`${sheet}: all ${count} canonical cards render`);
     await page.getByRole('button',{name:'Expand overview',exact:true}).click();
@@ -39,9 +39,9 @@ try{
   const audio=await requestPromise;
   assert((await page.request.get(audio.url())).ok(),'Conjugated phrase audio is served successfully');
   await page.getByRole('button',{name:'Hide answers & recall',exact:true}).click();
-  assert(await page.getByRole('button',{name:'Reveal German',exact:true}).count()===99,'Recall mode conceals all German cards');
+  assert(await page.getByRole('button',{name:'Reveal German',exact:true}).count()===110,'Recall mode conceals all German cards');
   await page.getByRole('button',{name:'Reveal German',exact:true}).first().click();
-  assert(await page.getByRole('button',{name:'Reveal German',exact:true}).count()===98,'Recall reveals one card at a time');
+  assert(await page.getByRole('button',{name:'Reveal German',exact:true}).count()===109,'Recall reveals one card at a time');
   await page.locator('#sheet-practice').getByRole('button',{name:'sprichst',exact:true}).click();
   assert((await page.locator('#sheet-practice [role=status]').innerText()).includes('Exactly.'),'Quiz gives correct feedback');
   await page.goto(`${base}/cheat-sheets/people/`,{waitUntil:'networkidle'});

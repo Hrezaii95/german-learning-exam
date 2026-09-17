@@ -1,5 +1,7 @@
 "use client";
 
+import {useStudyScope} from "@/components/study/StudyScope";
+import {SavedReview} from "@/components/study/SavedReview";
 import Link from "next/link";
 import { useMemo, useRef, useState } from "react";
 import type { LearnerEvent, MissionFilters, SelectedMissionCard } from "@german-learning/learning";
@@ -44,6 +46,7 @@ function readReviewConfig(): ReviewConfig {
 }
 
 export function ReviewSetup() {
+  const {scope}=useStudyScope();
   const { snapshot } = useLearnerState();
   const [size, setSize] = useState<5 | 10 | 15>(10);
   const [lesson, setLesson] = useState<"all" | "lesson:01" | "lesson:02">("all");
@@ -66,6 +69,7 @@ export function ReviewSetup() {
     dailyCardLimit: size,
     targetCount: size,
     filters,
+    studyScope:scope,
   });
 
   return (
@@ -73,8 +77,9 @@ export function ReviewSetup() {
       <header className="page-header">
         <p className="dense">Spaced review</p>
         <h1>Today’s mission</h1>
-        <p className="lede">A deterministic mix of due, difficult, form, recall and production cards.</p>
+        <p className="lede">Practise your selected saved items, or build a guided mission from the available exercise cards.</p>
       </header>
+      <SavedReview/>
       <section className="panel" aria-labelledby="review-setup-heading">
         <h2 id="review-setup-heading">Build mission</h2>
         <div className="hub-filter-grid">
@@ -84,7 +89,7 @@ export function ReviewSetup() {
             </select>
           </label>
           <label className="hub-field">Lesson
-            <select className="hub-input" value={lesson} onChange={(e) => setLesson(e.target.value as typeof lesson)}>
+            <select aria-label="Lesson" className="hub-input" value={lesson} onChange={(e) => setLesson(e.target.value as typeof lesson)}>
               <option value="all">All lessons</option><option value="lesson:01">Lesson 1</option><option value="lesson:02">Lesson 2</option>
             </select>
           </label>
@@ -117,6 +122,7 @@ export function ReviewSetup() {
 }
 
 export function ReviewSession() {
+  const {scope}=useStudyScope();
   const { snapshot, controller } = useLearnerState();
   const [index, setIndex] = useState(0);
   const [saving, setSaving] = useState(false);
@@ -144,6 +150,7 @@ export function ReviewSession() {
     dailyCardLimit: config.current.size,
     targetCount: config.current.size,
     filters,
+    studyScope:scope,
   });
   if (missionRows.current === null) missionRows.current = Object.freeze([...view.mission.selected]);
   const selected = missionRows.current;

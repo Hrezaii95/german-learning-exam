@@ -1,0 +1,104 @@
+{
+  "state": "audit-in-progress",
+  "book": {
+    "pages": 65,
+    "tracks": 82,
+    "lessons": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "baseWordCatalog": {
+    "cards": 591,
+    "lessonLabels": {
+      "1": 104,
+      "2": 186,
+      "Teacher notes": 37,
+      "3": 58,
+      "Module 1": 121,
+      "1-3": 86
+    },
+    "teacherLinkedCards": 48,
+    "teacherLinkedWithoutNumericLesson": [
+      "W230",
+      "W232",
+      "W234",
+      "W236",
+      "W238",
+      "W240",
+      "W242",
+      "W244",
+      "W248",
+      "W250",
+      "W252",
+      "W254",
+      "W256",
+      "W258",
+      "W260",
+      "W262",
+      "W264",
+      "W266",
+      "W268",
+      "W271",
+      "W273",
+      "W275",
+      "W279",
+      "W281",
+      "W283",
+      "W285",
+      "W287",
+      "W289",
+      "W293",
+      "W295",
+      "W297",
+      "W299",
+      "W301",
+      "W303",
+      "W305",
+      "W307"
+    ]
+  },
+  "requiredRepairs": [
+    {
+      "id": "scope-001",
+      "finding": "The base word catalog uses 1-3 on 86 cards, while several filters recognize only the en-dash variant 1\u20133. Normalize both representations in one function.",
+      "evidence": [
+        "platform/apps/web/generated/word-cards.json",
+        "platform/apps/web/lib/content/word-cards.ts",
+        "platform/apps/web/components/word-cards/WordCardLibrary.tsx"
+      ]
+    },
+    {
+      "id": "scope-002",
+      "finding": "Teacher professions can have only Teacher notes as lesson membership. Assign their documented Lesson 2 membership without removing core membership on overlapping cards.",
+      "evidence": [
+        "platform/apps/web/generated/word-cards.json",
+        "platform/apps/web/generated/learner-extra-professions.json"
+      ]
+    },
+    {
+      "id": "scope-003",
+      "finding": "The saved-item parser drops lesson numbers above 4. Expand with the released lesson registry before adding Lesson 5.",
+      "evidence": [
+        "platform/apps/web/lib/study/storage.ts"
+      ]
+    },
+    {
+      "id": "coverage-001",
+      "finding": "Lesson 3 has only a bridge with three concept summaries, while Lesson 4 has a full study component. Bring lesson sections into a common data-driven experience.",
+      "evidence": [
+        "platform/apps/web/components/study/LessonFour.tsx"
+      ]
+    },
+    {
+      "id": "coverage-002",
+      "finding": "Listening and concepts hubs still rely on the old Lesson 1\u20132 publication graph. The interactive book has the newer source media.",
+      "evidence": [
+        "platform/apps/web/lib/content/hub-experiences.ts",
+        "platform/apps/web/generated/interactive-book.json"
+      ]
+    }
+  ]
+}

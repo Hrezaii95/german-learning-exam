@@ -1,3 +1,6 @@
+"use client";
+import {useStudyScope} from "@/components/study/StudyScope";
+import {tagsForLesson} from "@/lib/study/scope";
 import { useMemo } from "react";
 import Link from "next/link";
 import { BackLink } from "@/components/nav/BackLink";
@@ -48,6 +51,7 @@ import {
 } from "@/lib/learner-state/activity-progress";
 
 export function LessonBrowser({ lessons }: { lessons: readonly LearnerLesson[] }) {
+  const {matches}=useStudyScope();
   return (
     <div className="stack">
       <header className="page-header">
@@ -57,7 +61,7 @@ export function LessonBrowser({ lessons }: { lessons: readonly LearnerLesson[] }
         </p>
       </header>
       <div className="card-grid lessons">
-        {lessons.map((lesson) => (
+        {lessons.filter(l=>matches(tagsForLesson(Number(l.routeSegment)))).map((lesson) => (
           <article key={lesson.id} className="panel">
             <p className="dense">{lessonLabel(lesson.routeSegment)}</p>
             <h2>

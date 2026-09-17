@@ -6,6 +6,8 @@ import { lessonLabel } from "@/lib/content/lesson-label";
 import styles from "./word-family-preview.module.css";
 import { SaveButton } from "@/components/study/StudyProvider";
 import { LineAudio } from "@/components/study/StudyAudio";
+import {StudyTagList} from "@/components/study/StudyScope";
+import {wordStudyTags} from "@/lib/study/tags";
 
 function Form({ form }: { form: WordForm }) {
   return <div className={styles.form}><span className={styles[form.tone]} lang="de">{form.text}</span>{form.audio ? <LemmaAudioButton audio={{ publicPath: form.audio, spokenText: form.text }} label={form.text} /> : <LineAudio text={form.text} compact />}</div>;
@@ -18,9 +20,9 @@ export function WordFamilyPreview({ card, href, lessonIds }: { card: WordCard; h
     <div className={styles.body}>
       <h2 className="hub-card__title"><Link className="hub-card__link" href={href} prefetch={false}>{card.title}</Link></h2>
       {card.rows.map((row, index) => <div className={styles.row} key={`${index}-${row.singular.text}`}><span className={styles.label}>{row.label}</span><Form form={row.singular} />{row.plurals.map(form => <div key={form.text}><span className={styles.label}>Plural</span><Form form={form} /></div>)}</div>)}
-      <p className="meta-row hub-card__meta">{lessonIds.map(id => <span key={id} className="meta-chip">{lessonLabel(id)}</span>)}</p>
+      <div className="hub-card__meta">{card.studyTags?<StudyTagList tags={card.studyTags}/>:<p className="meta-row">{lessonIds.map(id=><span key={id} className="meta-chip">{lessonLabel(id)}</span>)}</p>}</div>
       <Link className="btn btn-secondary" href={href} prefetch={false}>Study this word family</Link>
-      <SaveButton item={{ id: `card-${card.id}`, title: card.rows.map(r => r.singular.text).join(" / "), meaning: card.title, kind: "word", href: card.path, audio: card.rows[0]?.singular.audio ?? null }} />
+      <SaveButton item={{ id: `card-${card.id}`, title: card.rows.map(r => r.singular.text).join(" / "), meaning: card.title, kind: "word", href: card.path, studyTags:wordStudyTags(card), audio: card.rows[0]?.singular.audio ?? null }} />
     </div>
   </article>;
 }

@@ -1,0 +1,36 @@
+{
+  "source": "resources/original/coursebook/A1-KB-momente.pdf",
+  "printedPage": 203,
+  "lessons": {
+    "1": [
+      "Auf Wiedersehen · Guten Abend · Gute Nacht · Guten Tag",
+      "1a komme · b ist · c ist, Er · d Das, Sie, lernt\n2 Wer sind Sie? · Wie heißen Sie? · Woher kommst du?",
+      "a dir, dir, Es geht.\nb Ihnen, Sehr gut."
+    ],
+    "2": [
+      "Ingenieur – Ingenieurin · Architekt – Architektin · Journalist – Journalistin · Kellner – Kellnerin",
+      "Wir sind verheiratet.\nIhr seid nicht verheiratet.\nSie wohnen in Berlin.\nIch wohne nicht in Berlin.\nIhr seid 28 Jahre alt.\nWir sind nicht 28 Jahre alt.",
+      "a beruflich, Ich bin, bei\nb von Beruf, Ich arbeite, Job als"
+    ],
+    "3": [
+      "Bruder, Schwester = Geschwister\nGroßvater / Opa, Großmutter / Oma = Großeltern\nEnkel, Enkelin = Enkel(kinder)\nSohn, Tochter = Kinder",
+      "1 deine, meine, meine, mein, deine\n2b Wo wohnst du? · c Bist du verheiratet? · d Ist das dein Vater?\n3a Doch, Nein · b Nein, Ja",
+      "sprichst · spreche sehr gut · ein bisschen · gar nicht"
+    ],
+    "4": [
+      "1a der Schrank · b der Sessel · c der Teppich · d das Bett\n2a praktisch · b teuer · c modern",
+      "er · Er · das · Es · Die · sie",
+      "finde ich · Wie viel kostet · Er kostet · ein Sonderangebot · aber günstig"
+    ],
+    "5": [
+      "a Flasche, Glas, blau\nb ein Stuhl, Plastik, weiß",
+      "a ein, kein\nb eine, keine",
+      "a auf Deutsch, Wie bitte\nb Wie schreibt man, Danke schön"
+    ],
+    "6": [
+      "die Visitenkarte · der Bildschirm · die Nachricht · die Tastatur · der Computer",
+      "1 den, keinen, ein, das, das\n2 die E-Mails · die Tastaturen · die Bildschirme · die Kalender",
+      "5 · 6 · 3 · 2 · 7 · 1 · 4"
+    ]
+  }
+}

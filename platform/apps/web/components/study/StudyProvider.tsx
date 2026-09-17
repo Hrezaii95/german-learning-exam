@@ -1,4 +1,6 @@
 "use client";
+import {StudyTagList} from "./StudyScope";
+import {savedStudyTags} from "@/lib/study/saved-tags";
 
 import Link from "next/link";
 import {
@@ -221,6 +223,7 @@ export function StudyProvider({
                   <LineAudio text={entry.de} src={entry.audio} compact />
                 </div>
                 <p>{entry.en}</p>
+                {entry.studyTags&&<StudyTagList tags={entry.studyTags}/>}
                 {entry.displayForms?.length ? (
                   <div className="study-dictionary-forms">
                     {entry.displayForms.map((form, index) => <div key={index} className={`study-dictionary-form study-tone-${form.tone}`}>
@@ -247,6 +250,7 @@ export function StudyProvider({
                       kind: entry.kind === "phrase" ? "phrase" : entry.kind === "sentence" ? "line" : "word",
                       href: entry.href,
                       audio: entry.audio,
+                      ...(entry.studyTags?{studyTags:entry.studyTags}:{}),
                     }}
                   />
                   {entry.href.includes("#") ? <a href={withPagesBaseAssetPath(entry.href.replace(/\/?#/, "/#"))} onClick={() => setOpen(false)}>{entry.href.startsWith("/cheat-sheets") ? "Open cheat sheet →" : "Open phrase card →"}</a> : <Link href={entry.href} onClick={() => setOpen(false)}>
@@ -311,6 +315,7 @@ export function SaveButton({
           else
             next[item.id] = {
               ...item,
+              studyTags:savedStudyTags(item,study.dictionary),
               savedAt: new Date().toISOString(),
               due: new Date().toISOString(),
             };

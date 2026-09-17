@@ -67,10 +67,17 @@ add("workbook-19", "Review · Exercise 7", "Woher kommst du?\nWie heißt du?\nWe
 add("workbook-19", "Review · Exercise 9", "Nein, Astrid und Norbert sind nicht verheiratet. Sie sind geschieden.\nNein, Carla lebt nicht allein. Sie lebt zusammen mit Peter.\nNein, sie wohnen nicht in Zürich. Sie wohnen in Bern.\nNein, sie ist nicht 19 Jahre alt. Sie ist 21.\nNein, Frau Wachter ist nicht Lehrerin. Sie ist Journalistin.", 4, source="workbook-transcript", note="Responses after the example, track 1/22; transcript pages 3–4.")
 add("workbook-22", "Work & careers · Exercise 2b", "Danke, gut.\nFreut mich.\ndas ist ja interessant\nVielen Dank", 5, source="workbook-transcript", note="The four missing phrases in order, track 1/31. Wie geht’s Ihnen is already filled in.")
 
+# End-of-lesson quick tests have a separate official key in the book appendix.
+quick = json.loads((ROOT / "research/book-answers/coursebook-quick-test-keys.json").read_text(encoding="utf-8"))
+for lesson, (first, _) in starts.items():
+    for label, text in zip(["Vocabulary", "Grammar", "Communication"], quick["lessons"][str(lesson)]):
+        add(f"coursebook-{first+3}", f"Quick test · {label}", text, quick["printedPage"], note="Answers in printed order; worked examples may already be filled on the page.")
+        answers[-1]["sourceTitle"] = "Kursbuch · Lösungen zu den Schnelltests"
+
 book = json.loads((GEN / "interactive-book.json").read_text(encoding="utf-8"))
 assert all(a["pageId"] in {p["id"] for p in book["pages"]} for a in answers)
 assert all(a["text"] and a["exercise"] for a in answers)
 (GEN / "book-answers.json").write_text(json.dumps(answers, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
-audit = {"answers": len(answers), "pagesWithAnswers": len({a["pageId"] for a in answers}), "bySource": {s: sum(a["source"] == s for a in answers) for s in sorted({a["source"] for a in answers})}, "sources": [{"file": p.relative_to(ROOT).as_posix(), "sha256": hashlib.sha256(p.read_bytes()).hexdigest()} for p in [KEY, AB, TRANSCRIPT]], "scope": "All entries in the supplied coursebook key for Lessons 1–4 and Magazine 1–3; all Module 1 workbook skills-test answers; explicit responses in available Module 1 review transcripts."}
+audit = {"answers": len(answers), "pagesWithAnswers": len({a["pageId"] for a in answers}), "bySource": {s: sum(a["source"] == s for a in answers) for s in sorted({a["source"] for a in answers})}, "sources": [{"file": p.relative_to(ROOT).as_posix(), "sha256": hashlib.sha256(p.read_bytes()).hexdigest()} for p in [KEY, AB, TRANSCRIPT, ROOT / quick["source"]]], "scope": "All entries in the supplied coursebook key for Lessons 1–4 and Magazine 1–3; coursebook quick-test answers in the appendix, p. 203; all Module 1 workbook skills-test answers; explicit responses in available Module 1 review transcripts."}
 (ROOT / "research/book-answers/answer-source-audit.json").write_text(json.dumps(audit, indent=2)+"\n", encoding="utf-8")
 print(json.dumps(audit))

@@ -7,7 +7,10 @@ import { LessonOverviewWithNav } from "@/components/lessons/LessonNavViews";
 import { loadLearnerProjection } from "@/lib/content/access";
 import { lessonPageMetadata } from "@/lib/content/page-metadata";
 import { resolveLearnerRoute } from "@/lib/content/routes";
-import { LessonFour, LessonThreeBridge } from "@/components/study/LessonFour";
+import { LessonFour } from "@/components/study/LessonFour";
+import {CourseStudy} from "@/components/study/CourseStudy";
+import {studyUnits} from "@/lib/study/course-lessons";
+import {loadWordCards} from "@/lib/content/word-cards";
 import { loadStudySpeech } from "@/lib/study/catalog";
 
 type PageProps = {
@@ -35,7 +38,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default async function LessonPage({ params }: PageProps) {
   const { lessonSegment } = await params;
   if (lessonSegment === "04") return <ShellLayout current="lessons"><LessonFour speech={loadStudySpeech()} /></ShellLayout>;
-  if (lessonSegment === "03") return <ShellLayout current="lessons"><LessonThreeBridge /></ShellLayout>;
+  if (lessonSegment === "03") return <ShellLayout current="lessons"><CourseStudy unit={studyUnits.find(u=>u.number===3)!} cards={loadWordCards().cards.filter(c=>c.studyTags?.lessons.includes(3))} speech={loadStudySpeech()}/></ShellLayout>;
   const projection = loadLearnerProjection();
   const resolved = resolveLearnerRoute(`/lessons/${lessonSegment}`, projection);
   if (resolved.kind !== "lesson") {
