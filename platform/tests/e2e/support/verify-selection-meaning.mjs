@@ -99,7 +99,7 @@ try {
   await page.screenshot({path:`${output}/sentence-mobile.png`});
   await dictionary.getByLabel('German or English',{exact:true}).fill('Ein unbekannter Beispielsatz xyz.');
   assert((await dictionary.innerText()).includes('No local definition'),'Unknown sentence has an honest fallback');
-  const fallback=await dictionary.getByRole('link',{name:'Translate selection ↗'}).getAttribute('href');
+  const fallback=await dictionary.getByRole('link',{name:'Translate with Google ↗ (external)'}).getAttribute('href');
   assert(new URL(fallback).searchParams.get('text')==='Ein unbekannter Beispielsatz xyz.','Translation link carries the complete selected sentence');
   assert(errors.length===0,`No browser errors: ${errors.join('; ')}`);
   await writeFile(`${output}/verification.json`,JSON.stringify({base,passed:true,checks,errors},null,2));

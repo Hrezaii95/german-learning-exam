@@ -2,11 +2,12 @@
 
 import { useEffect, useRef, useState } from "react";
 import { withPagesBaseAssetPath } from "@/lib/content/pages-base-path";
+import { usePreferredAudioSpeed } from "@/components/audio/AudioSpeedControl";
 
 const STOP_EVENT = "study-stop-audio";
-export function stopStudyAudio() {
+export function stopStudyAudio(except?: HTMLAudioElement) {
   window.dispatchEvent(new Event(STOP_EVENT));
-  document.querySelectorAll("audio").forEach((audio) => audio.pause());
+  document.querySelectorAll("audio").forEach((audio) => { if (audio !== except) audio.pause(); });
   window.speechSynthesis?.cancel();
 }
 
@@ -14,18 +15,21 @@ export function LineAudio({
   text,
   src,
   compact = false,
-  rate = 1,
+  rate: overrideRate,
 }: {
   text: string;
   src?: string | null | undefined;
   compact?: boolean;
   rate?: number;
 }) {
+  const preferredRate = usePreferredAudioSpeed();
+  const rate = overrideRate ?? preferredRate;
   const [playing, setPlaying] = useState(false);
   const [error, setError] = useState("");
   const clip = useRef<HTMLAudioElement | null>(null);
   const utterance = useRef<SpeechSynthesisUtterance | null>(null);
   const active = useRef(false);
+  useEffect(() => { if (clip.current) clip.current.playbackRate = rate; }, [rate]);
   useEffect(() => {
     const stop = () => {
       active.current = false;
@@ -129,7 +133,7 @@ export function LineAudio({
         className="study-audio-button"
         aria-label={`${playing ? "Stop" : "Listen"}: ${text}`}
         aria-pressed={playing}
-        title="Synthesized German speech"
+        title={src ? "Generated German pronunciation" : "Device-generated German speech"}
         onClick={() => void speak()}
       >
         <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18">

@@ -182,6 +182,7 @@ export function StudyProvider({
       value={{ state, ready:ready&&dictionaryLoaded, error, update, lookup, dictionary }}
     >
       {dictionaryError&&<aside role="alert" className="study-storage-error">{dictionaryError} <button type="button" onClick={()=>setDictionaryAttempt(n=>n+1)}>Retry dictionary</button></aside>}
+      <p className="sr-only" id="german-lookup-help" lang="en">Use Left and Right to choose a word, Enter for its meaning, or Alt+Enter for the whole phrase.</p>
       {children}
       <SelectionMeaning lookup={lookup} />
       {error && (
@@ -283,7 +284,7 @@ export function StudyProvider({
         {key && (
           <div className="study-dictionary-footer">
             <a href={`https://translate.google.com/?sl=de&tl=en&text=${encodeURIComponent(query)}&op=translate`}
-              target="_blank" rel="noreferrer">Translate selection ↗</a>
+              target="_blank" rel="noreferrer">Translate with Google ↗ (external)</a>
             <a
               href={`https://dict.leo.org/german-english/${encodeURIComponent(query)}`}
               target="_blank"
@@ -352,13 +353,27 @@ export function GermanText({
   className?: string;
 }) {
   const study = useStudy();
+  const parts = text.split(/([\p{L}]+(?:[’'-][\p{L}]+)*)/u);
+  const firstWord = parts.findIndex(part => /\p{L}/u.test(part));
   return (
-    <span lang="de" className={`study-german ${className}`}>
-      {text.split(/([\p{L}]+(?:[’'-][\p{L}]+)*)/u).map((part, i) =>
+    <span lang="de" className={`study-german ${className}`} role="toolbar" aria-label={text} aria-describedby={study ? "german-lookup-help" : undefined}
+      onKeyDown={event => {
+        if (event.altKey && event.key === "Enter") { event.preventDefault(); study?.lookup(text); return; }
+        if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+        const words = Array.from(event.currentTarget.querySelectorAll<HTMLButtonElement>(".study-word"));
+        const index = words.indexOf(event.target as HTMLButtonElement);
+        if (index < 0) return;
+        event.preventDefault();
+        const next = event.key === "Home" ? 0 : event.key === "End" ? words.length - 1 : (index + (event.key === "ArrowRight" ? 1 : -1) + words.length) % words.length;
+        words.forEach((word, i) => { word.tabIndex = i === next ? 0 : -1; });
+        words[next]?.focus();
+      }}>
+      {parts.map((part, i) =>
         /\p{L}/u.test(part) ? (
           <button
             type="button"
             className="study-word"
+            tabIndex={i === firstWord ? 0 : -1}
             key={i}
             onClick={() => { if (!window.getSelection()?.toString().trim()) study?.lookup(part); }}
             aria-label={`Look up ${part}`}

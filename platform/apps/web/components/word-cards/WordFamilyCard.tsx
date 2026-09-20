@@ -8,6 +8,7 @@ import styles from "./word-cards.module.css";
 import { SaveButton } from "@/components/study/StudyProvider";
 import { LineAudio, stopStudyAudio } from "@/components/study/StudyAudio";
 import {StudyTagList} from "@/components/study/StudyScope";
+import { usePreferredAudioSpeed } from "@/components/audio/AudioSpeedControl";
 
 function Speaker() {
   return <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M11 5 6 9H3v6h3l5 4V5Zm4 3a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" /></svg>;
@@ -37,6 +38,7 @@ function Term({ form, stem, play, playing }: { form: WordForm; stem: string; pla
 
 /** The approved engineer card, with the same teaching anatomy for every word family. */
 export function WordFamilyCard({ card }: { card: WordCard }) {
+  const rate = usePreferredAudioSpeed();
   const uid = useId();
   const [mode, setMode] = useState<"learn" | "recall">("learn");
   const [promptIndex, setPromptIndex] = useState(0);
@@ -46,8 +48,9 @@ export function WordFamilyCard({ card }: { card: WordCard }) {
   const [audioStatus, setAudioStatus] = useState("");
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
+  useEffect(() => { if (audioRef.current) audioRef.current.playbackRate = rate; }, [rate]);
   useEffect(() => {
-    const stop = () => { audioRef.current?.pause(); setPlaying(null); setAudioStatus(""); };
+    const stop = () => { audioRef.current?.pause(); audioRef.current = null; setPlaying(null); setAudioStatus(""); };
     window.addEventListener("study-stop-audio", stop);
     return () => { audioRef.current?.pause(); window.removeEventListener("study-stop-audio", stop); };
   }, []);
@@ -63,9 +66,12 @@ export function WordFamilyCard({ card }: { card: WordCard }) {
     setMode(next); setFeedback(null); setAnswer("");
   };
   async function play(path: string, text: string) {
+    const wasPlaying = playing === text;
     stopStudyAudio();
-    audioRef.current?.pause();
+    if (wasPlaying) return;
     const clip = new Audio(withPagesBaseAssetPath(path));
+    clip.playbackRate = rate;
+    clip.preservesPitch = true;
     audioRef.current = clip; setPlaying(text); setAudioStatus(`Playing: ${text}`);
     clip.onended = () => { if (audioRef.current === clip) { setPlaying(null); setAudioStatus(""); } };
     try { await clip.play(); } catch { if (audioRef.current === clip) { setPlaying(null); setAudioStatus("Audio could not play. Please try again."); } }

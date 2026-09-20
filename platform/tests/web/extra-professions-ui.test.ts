@@ -2,6 +2,7 @@ import { createElement, type ReactNode } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { beforeAll, describe, expect, it, vi } from "vitest";
 import { projectPublishedExtraProfessions } from "../../apps/web/lib/content/extra-professions.js";
+import { wordCardForPath } from "../../apps/web/lib/content/word-cards.js";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -55,6 +56,20 @@ describe("extra professions learner UI", () => {
     expect(html).toContain("Feminine person form");
     expect(html).toContain("16 exact audio previews across 8 rows");
     expect(html).not.toMatch(/<img\b/i);
+  });
+
+  it("offers every electrician form inline from the actual word-card audio catalog", () => {
+    const projection = projectPublishedExtraProfessions(publishedDir);
+    const cardsByRow = Object.fromEntries(projection.rows.map(row => [row.id, wordCardForPath(row.detailPath)!]));
+    expect(Object.values(cardsByRow).every(Boolean)).toBe(true);
+    const html = renderToStaticMarkup(createElement(ProfessionCollectionClient, { projection, cardsByRow }));
+    expect(html).toContain("Listen: der Elektriker");
+    expect(html).toContain("Listen: die Elektriker");
+    expect(html).toContain("Listen: die Elektrikerin");
+    expect(html).toContain("Listen: die Elektrikerinnen");
+    expect(html).toContain("4 generated pronunciations");
+    expect(html).not.toContain("Audio not available yet");
+    expect(html).toContain("same files as the word cards");
   });
 
   it("renders every exact variant on an alternative-row detail without fake media controls", () => {

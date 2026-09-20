@@ -1,0 +1,23 @@
+
+ RUN  v3.2.7 E:/claude-cursor/side projects/German learning/platform
+
+ ✓ tests/web/extra-professions-ui.test.ts (3 tests) 1862ms
+ ✓ tests/web/study-book.test.ts (11 tests) 3101ms
+   ✓ Lesson 4 source and exercise integration > has unique stable line IDs and real page images  1314ms
+   ✓ Lesson 4 source and exercise integration > has exact file-backed speech for every readable line and new study utterance  1685ms
+ ✓ tests/web/p4c-learner-ui-behavior.test.ts (5 tests) 2298ms
+   ✓ P4C learner UI behavior > carries the chosen review filters into the session  1102ms
+   ✓ P4C learner UI behavior > advances across the frozen mission one card at a time without skipping  369ms
+   ✓ P4C learner UI behavior > keeps workbook speed controls grouped per track and updates playback  508ms
+ ✓ tests/web/word-family-cards-ui.test.ts (10 tests) 2572ms
+   ✓ original vocabulary browsing with complete cards > keeps every complete family reachable through the original grid inventory  523ms
+   ✓ original vocabulary browsing with complete cards > preserves the original filter form and grid, with one aggregated engineer result  958ms
+   ✓ complete word-family cards > hides study material during recall and checks all four answers  358ms
+ ✓ tests/web/shared-audio-preferences.test.ts (2 tests) 1158ms
+   ✓ shared pronunciation preference > uses the saved speed for line speech and word cards, stops the previous clip and retains it after remount  1151ms
+ ✓ tests/web/pronunciation-control-behavior.test.ts (2 tests) 410ms
+
+ Test Files  6 passed (6)
+      Tests  33 passed (33)
+   Start at  17:14:14
+   Duration  8.44s (transform 3.46s, setup 0ms, collect 7.26s, tests 11.40s, environment 8.81s, prepare 1.21s)

@@ -11,6 +11,9 @@ import {
   countRowPronunciationPreviews,
 } from "./ProfessionInfographic";
 import {useStudy} from "@/components/study/StudyProvider";
+import { useStudyScope } from "@/components/study/StudyScope";
+import { matchesStudyScope } from "@/lib/study/scope";
+import type { WordCard } from "@/lib/content/word-card-types";
 import styles from "./professions.module.css";
 
 function foldSearch(value: string): string {
@@ -22,7 +25,7 @@ function foldSearch(value: string): string {
     .replaceAll("ß", "ss");
 }
 
-function SourceBackedReview({ rows }: { rows: readonly ExtraProfessionRow[] }) {
+function SourceBackedReview({ rows, pronunciation }: { rows: readonly ExtraProfessionRow[]; pronunciation?: Record<string, string> }) {
   const [index, setIndex] = useState(0);
   const [revealed, setRevealed] = useState(false);
   const study = useStudy();
@@ -50,7 +53,7 @@ function SourceBackedReview({ rows }: { rows: readonly ExtraProfessionRow[] }) {
           <p className={styles.eyebrow}>Optional review</p>
           <h2 id="optional-review-heading">Source-backed visual flashcards</h2>
         </div>
-        <span className="meta-chip" aria-live="polite">{reviewed.size} marked reviewed</span>
+        <span className="meta-chip" aria-live="polite">{rows.filter(item => reviewed.has(item.id)).length} marked reviewed</span>
       </div>
       <p className="muted">Self-review only. It records no mastery and does not affect Lesson 2 completion.</p>
       <button
@@ -66,7 +69,7 @@ function SourceBackedReview({ rows }: { rows: readonly ExtraProfessionRow[] }) {
             : row.meaningEn}
         </strong>
       </button>
-      {revealed ? <ProfessionInfographic row={row} compact /> : null}
+      {revealed ? <ProfessionInfographic row={row} compact {...(pronunciation ? { pronunciation } : {})} /> : null}
       <div className={styles.actions}>
         <button className="btn btn-secondary" type="button" onClick={() => advance(false)}>Again</button>
         <button className="btn btn-primary" type="button" disabled={study !== null && !study.ready} onClick={() => advance(true)}>Mark reviewed</button>
@@ -76,19 +79,22 @@ function SourceBackedReview({ rows }: { rows: readonly ExtraProfessionRow[] }) {
   );
 }
 
-export function ProfessionCollectionClient({ projection }: { projection: ExtraProfessionsProjection }) {
+export function ProfessionCollectionClient({ projection, cardsByRow }: { projection: ExtraProfessionsProjection; cardsByRow?: Record<string, WordCard> }) {
+  const { scope } = useStudyScope();
+  const pronunciation = useMemo(() => cardsByRow ? Object.fromEntries(Object.values(cardsByRow).flatMap(card => card.rows.flatMap(row => [row.singular, ...row.plurals])).filter(form => form.audio).map(form => [form.text, form.audio!])) : undefined, [cardsByRow]);
   const [query, setQuery] = useState("");
   const [alternativesOnly, setAlternativesOnly] = useState(false);
   const filteredRows = useMemo(() => {
     const needle = foldSearch(query.trim());
     return projection.rows.filter(
       (row) =>
+        matchesStudyScope(cardsByRow?.[row.id]?.studyTags ?? { lessons: [2], concepts: ["people"], source: "teacher-extra" }, scope) &&
         (!alternativesOnly || row.hasAlternatives) &&
         (needle === "" || foldSearch(row.searchText).includes(needle)),
     );
-  }, [alternativesOnly, projection.rows, query]);
-  const audioRowCount = projection.collection.media.synthesizedPreviewRowCount;
-  const audioAssetCount = projection.collection.media.synthesizedPreviewAssetCount;
+  }, [alternativesOnly, projection.rows, query, cardsByRow, scope]);
+  const audioRowCount = projection.rows.filter(row => countRowPronunciationPreviews(row, pronunciation) > 0).length;
+  const audioAssetCount = projection.rows.reduce((total, row) => total + countRowPronunciationPreviews(row, pronunciation), 0);
 
   return (
     <div className="stack">
@@ -118,7 +124,7 @@ export function ProfessionCollectionClient({ projection }: { projection: ExtraPr
         <h2 id="collection-status-heading">What is ready here</h2>
         <p><strong>Text:</strong> exact source candidates; qualified German-language review pending.</p>
         <p><strong>Graphics:</strong> semantic diagrams built from those exact forms; no profession image was supplied.</p>
-        <p><strong>Audio:</strong> only approved computer-generated previews of the exact word are offered. Anything without an exact match is marked as not available yet.</p>
+        <p><strong>Audio:</strong> {pronunciation ? "Generated pronunciations use the same files as the word cards. A missing file uses clearly labelled device speech. Independent German listening review is pending." : "only approved computer-generated previews of the exact word are offered. Anything without an exact match is marked as not available yet."}</p>
       </aside>
 
       <section className={`panel ${styles.filters}`} aria-labelledby="filter-heading">
@@ -134,7 +140,7 @@ export function ProfessionCollectionClient({ projection }: { projection: ExtraPr
         <p className="dense" role="status" aria-live="polite">Showing {filteredRows.length} of {projection.rows.length} rows</p>
       </section>
 
-      <SourceBackedReview rows={filteredRows} />
+      <SourceBackedReview rows={filteredRows} {...(pronunciation ? { pronunciation } : {})} />
 
       <section aria-labelledby="profession-list-heading">
         <div className={styles.sectionHeading}>
@@ -142,24 +148,24 @@ export function ProfessionCollectionClient({ projection }: { projection: ExtraPr
           <span className="dense">Every card uses the same semantic grammar</span>
         </div>
         {filteredRows.length === 0 ? (
-          <div className="panel"><h3>No matching profession</h3><p className="muted">Clear the search or include rows without alternatives.</p></div>
+          <div className="panel"><h3>No matching profession</h3><p className="muted">Check your lesson, concept and source selection above, clear the search, or include rows without alternatives.</p></div>
         ) : (
           <ol className={styles.grid}>
             {filteredRows.map((row) => {
-              const audioCount = countRowPronunciationPreviews(row);
+              const audioCount = countRowPronunciationPreviews(row, pronunciation);
               return (
                 <li key={row.id} className={`panel ${styles.card}`} value={row.sourceRow}>
                   <div className={styles.cardTopline}>
                     <span className="dense">Source row {row.sourceRow}</span>
                     <span className={audioCount > 0 ? styles.readyBadge : styles.missingBadge}>
-                      {audioCount > 0 ? `${audioCount} audio previews` : "Audio not available yet"}
+                      {audioCount > 0 ? `${audioCount} generated pronunciations` : pronunciation ? "Device speech" : "Audio not available yet"}
                     </span>
                   </div>
                   <div>
                     <p className={styles.eyebrow}>English meaning</p>
                     <h3>{row.meaningEn}</h3>
                   </div>
-                  <ProfessionInfographic row={row} compact />
+                  <ProfessionInfographic row={row} compact {...(pronunciation ? { pronunciation } : {})} />
                   <div className={styles.cardFooter}>
                     {row.hasAlternatives ? <span className="meta-chip">Slash alternatives preserved</span> : <span className="dense">One masculine/feminine pair</span>}
                     <Link className="btn btn-secondary" href={row.detailPath}>Study forms and audio</Link>

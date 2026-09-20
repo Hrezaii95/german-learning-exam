@@ -1,6 +1,8 @@
 import type { ExtraProfessionRow } from "@/lib/content/extra-professions";
 import { resolvePublishedPronunciationExact } from "@/lib/content/media-availability";
 import styles from "./professions.module.css";
+import { GermanText } from "@/components/study/StudyProvider";
+import { LineAudio } from "@/components/study/StudyAudio";
 
 type Gender = "masculine" | "feminine";
 
@@ -9,12 +11,12 @@ function articleAndNoun(value: string): { article: string; noun: string } {
   return { article, noun: rest.join(" ") };
 }
 
-export function countRowPronunciationPreviews(row: ExtraProfessionRow): number {
+export function countRowPronunciationPreviews(row: ExtraProfessionRow, pronunciation: Record<string, string> = {}): number {
   return [...row.masculine, ...row.feminine].reduce(
     (count, form) =>
       count +
-      (resolvePublishedPronunciationExact(form.singular).state === "preview" ? 1 : 0) +
-      (resolvePublishedPronunciationExact(form.plural).state === "preview" ? 1 : 0),
+      (pronunciation[form.singular] || resolvePublishedPronunciationExact(form.singular).state === "preview" ? 1 : 0) +
+      (pronunciation[form.plural] || resolvePublishedPronunciationExact(form.plural).state === "preview" ? 1 : 0),
     0,
   );
 }
@@ -24,11 +26,13 @@ function FormLane({
   gender,
   forms,
   compact = false,
+  pronunciation,
 }: {
   label: string;
   gender: Gender;
   forms: ExtraProfessionRow["masculine"];
   compact?: boolean;
+  pronunciation?: Record<string, string>;
 }) {
   return (
     <section
@@ -61,12 +65,11 @@ function FormLane({
               <div className={styles.numberForm}>
                 <span className={styles.numberLabel}>one person · singular</span>
                 <span className={styles.germanForm} lang="de">
-                  <b className={styles.articleToken}>{singular.article}</b>
-                  <span>{singular.noun}</span>
+                  {pronunciation ? <GermanText text={form.singular}/> : <><b className={styles.articleToken}>{singular.article}</b><span>{singular.noun}</span></>}
                 </span>
-                <span className={styles.audioState} data-audio-state={singularAudio}>
+                {pronunciation ? <LineAudio text={form.singular} src={pronunciation[form.singular]} compact/> : <span className={styles.audioState} data-audio-state={singularAudio}>
                   {singularAudio === "preview" ? "Audio preview ready" : "Audio not available yet"}
-                </span>
+                </span>}
               </div>
               <span className={styles.numberArrow} aria-label="changes to plural">
                 →
@@ -74,12 +77,11 @@ function FormLane({
               <div className={`${styles.numberForm} ${styles.pluralForm}`}>
                 <span className={styles.numberLabel}>more than one · plural</span>
                 <span className={styles.germanForm} lang="de">
-                  <b className={styles.pluralArticle}>{plural.article}</b>
-                  <span>{plural.noun}</span>
+                  {pronunciation ? <GermanText text={form.plural}/> : <><b className={styles.pluralArticle}>{plural.article}</b><span>{plural.noun}</span></>}
                 </span>
-                <span className={styles.audioState} data-audio-state={pluralAudio}>
+                {pronunciation ? <LineAudio text={form.plural} src={pronunciation[form.plural]} compact/> : <span className={styles.audioState} data-audio-state={pluralAudio}>
                   {pluralAudio === "preview" ? "Audio preview ready" : "Audio not available yet"}
-                </span>
+                </span>}
               </div>
             </div>
           );
@@ -92,18 +94,20 @@ function FormLane({
 export function ProfessionInfographic({
   row,
   compact = false,
+  pronunciation,
 }: {
   row: ExtraProfessionRow;
   compact?: boolean;
+  pronunciation?: Record<string, string>;
 }) {
   return (
     <div className={`${styles.infographic} ${compact ? styles.compactGraphic : ""}`}>
-      <FormLane label="Masculine person form" gender="masculine" forms={row.masculine} compact={compact} />
+      <FormLane label="Masculine person form" gender="masculine" forms={row.masculine} compact={compact} {...(pronunciation ? { pronunciation } : {})} />
       <div className={styles.personRelationship} aria-label="Masculine and feminine person forms are paired">
         <span aria-hidden="true">↔</span>
         <small>paired person forms</small>
       </div>
-      <FormLane label="Feminine person form" gender="feminine" forms={row.feminine} compact={compact} />
+      <FormLane label="Feminine person form" gender="feminine" forms={row.feminine} compact={compact} {...(pronunciation ? { pronunciation } : {})} />
     </div>
   );
 }

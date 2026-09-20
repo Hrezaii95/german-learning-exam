@@ -1849,6 +1849,16 @@
 .study-backup-preview {
   margin-top: 20px;
 }
+.study-audio-speed {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+.study-audio-speed small {
+  font-size: 12px;
+  color: var(--ink-muted);
+}
 .study-backup select {
   min-width: 0;
   width: 100%;

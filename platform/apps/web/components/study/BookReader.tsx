@@ -15,6 +15,7 @@ import { ListeningTranscript } from "@/components/audio/ListeningTranscript";
 import { GermanText, MeaningButton, SaveButton, useStudy } from "./StudyProvider";
 import { LineAudio, stopStudyAudio } from "./StudyAudio";
 import { BookAnswers } from "./BookAnswers";
+import { AudioSpeedControl, useAudioSpeed } from "@/components/audio/AudioSpeedControl";
 
 export function OriginalTrack({ track, rate }: { track: BookTrack; rate: number }) {
   const ref = useRef<HTMLAudioElement>(null);
@@ -38,11 +39,7 @@ export function OriginalTrack({ track, rate }: { track: BookTrack; rate: number 
         aria-label={`${track.kind} ${track.label}, original recording`}
         onError={() => setFailed(true)}
         onPlay={(event) => {
-          window.dispatchEvent(new Event("study-stop-audio"));
-          window.speechSynthesis?.cancel();
-          document.querySelectorAll("audio").forEach((audio) => {
-            if (audio !== event.currentTarget) audio.pause();
-          });
+          stopStudyAudio(event.currentTarget);
           event.currentTarget.playbackRate = rate;
         }}
       />
@@ -168,7 +165,8 @@ export function BookReader({
   const [view, setView] = useState<"read" | "page" | "split">("page");
   const [expanded, setExpanded] = useState(false);
   const fullscreen = useRef<HTMLDialogElement>(null);
-  const [rate, setRate] = useState(1);
+  const audioSpeed = useAudioSpeed();
+  const rate = audioSpeed.speed;
   const [zoom, setZoom] = useState(100);
   const [selected, setSelected] = useState<string | null>(null);
   const [search, setSearch] = useState("");
@@ -451,18 +449,7 @@ export function BookReader({
         >
           Full screen ↗
         </button>
-        <label className="study-inline-field">
-          Speed
-          <select
-            value={rate}
-            onChange={(e) => setRate(Number(e.target.value))}
-          >
-            <option value={0.65}>0.65×</option>
-            <option value={0.8}>0.8×</option>
-            <option value={1}>1×</option>
-            <option value={1.15}>1.15×</option>
-          </select>
-        </label>
+        <AudioSpeedControl control={audioSpeed}/>
         <button
           type="button"
           className="study-secondary"

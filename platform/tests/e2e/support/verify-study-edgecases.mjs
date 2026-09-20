@@ -20,7 +20,7 @@ try {
   assert(await page.locator(".book-track audio").first().evaluate(a => a.paused), "Line speech stops original audio");
   await tts.click();
   assert(await tts.getAttribute("aria-pressed") === "false", "Line audio stops on second click");
-  await page.getByRole("combobox", { name: /Speed/ }).selectOption("0.8");
+  await page.getByRole("combobox", { name: /Audio speed/ }).selectOption("0.8");
   assert(await page.locator(".book-track audio").first().evaluate(a => a.playbackRate) === .8, "Audio speed control changes playback rate");
   await page.getByRole("button", { name: "Open dictionary", exact: true }).click();
   await page.getByLabel("German or English", { exact: true }).fill("xyznotaword123");

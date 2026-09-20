@@ -19,3 +19,7 @@
 @media (max-width: 920px) { .legend { grid-template-columns: repeat(2, minmax(0,1fr)); }.infographic { grid-template-columns: 1fr; }.personRelationship { grid-auto-flow: column; }.personRelationship span { transform: rotate(90deg); }.personRelationship small { max-width: none; }.compactGraphic .personRelationship span { transform: none; } }
 @media (max-width: 560px) { .legend { grid-template-columns: 1fr; }.grid { grid-template-columns: 1fr; }.formPair { grid-template-columns: 1fr; }.numberArrow { transform: rotate(90deg); justify-self: center; }.alternativeDivider { grid-column: 1; }.compactGraphic .formPair { grid-template-columns: 1fr; }.actions .btn, .cardFooter .btn, .review > .btn { width: 100%; }.genderHeader { align-items: flex-start; }.genderRule { max-width: 6rem; text-align: right; } }
 @media (prefers-color-scheme: dark) { .masculine { background: linear-gradient(145deg, rgba(33,104,213,.2), rgba(33,104,213,.08)); }.feminine { background: linear-gradient(145deg, rgba(214,61,134,.2), rgba(214,61,134,.08)); }.numberForm { background: rgba(9,17,31,.45); }.readyBadge { color: #b8f5cd; background: #173c29; }.missingBadge { color: #ffe09b; background: #44371f; } }
+
+.masculine .germanForm { color: var(--gender-m-ink); }
+.feminine .germanForm { color: var(--gender-f-ink); }
+.pluralForm .germanForm { color: var(--gender-pl); }

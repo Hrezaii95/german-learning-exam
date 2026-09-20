@@ -1,0 +1,15 @@
+
+ RUN  v3.2.7 E:/claude-cursor/side projects/German learning/platform
+
+ ✓ tests/web/study-scope.test.ts (8 tests) 463ms
+   ✓ shared study selection contract > gives every actual word family a lesson and concept, including legacy ranges  427ms
+ ✓ tests/web/extra-professions-ui.test.ts (4 tests) 4290ms
+   ✓ extra professions learner UI > renders a filterable, linkable optional hub with honest review and media labels  304ms
+   ✓ extra professions learner UI > offers every electrician form inline from the actual word-card audio catalog  673ms
+ ✓ tests/web/shared-audio-preferences.test.ts (2 tests) 1368ms
+   ✓ shared pronunciation preference > uses the saved speed for line speech and word cards, stops the previous clip and retains it after remount  1359ms
+
+ Test Files  3 passed (3)
+      Tests  14 passed (14)
+   Start at  17:19:42
+   Duration  7.47s (transform 4.06s, setup 0ms, collect 3.23s, tests 6.12s, environment 3.10s, prepare 652ms)

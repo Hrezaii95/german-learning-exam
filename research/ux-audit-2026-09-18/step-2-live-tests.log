@@ -1,0 +1,16 @@
+
+Running 7 tests using 2 workers
+
+(node:14528) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:34612) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 tests\e2e\40-ux-readability.spec.ts:6:3 › learning cards and country rows remain readable at 320px (29.1s)
+  ok 2 tests\e2e\41-complete-backup.spec.ts:4:1 › saved study, course progress and settings survive a complete backup round trip (32.1s)
+  ok 4 tests\e2e\41-complete-backup.spec.ts:115:1 › Lesson 4 also resumes its quiz and supports an explicit restart (7.6s)
+  ok 3 tests\e2e\40-ux-readability.spec.ts:6:3 › learning cards and country rows remain readable at 390px (19.8s)
+  ok 5 tests\e2e\40-ux-readability.spec.ts:6:3 › learning cards and country rows remain readable at 768px (17.9s)
+  ok 6 tests\e2e\40-ux-readability.spec.ts:6:3 › learning cards and country rows remain readable at 1440px (17.4s)
+  ok 7 tests\e2e\40-ux-readability.spec.ts:22:1 › phone diagrams expose readable steps and dictionary preserves keyboard focus (4.3s)
+
+  7 passed (1.5m)

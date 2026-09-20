@@ -7,6 +7,8 @@ import {
   PRONUNCIATION_PENDING_EXPLANATION,
 } from "@/lib/content/media-copy";
 import { withPagesBaseAssetPath } from "@/lib/content/pages-base-path";
+import { useAudioSpeed, AudioSpeedControl } from "./AudioSpeedControl";
+import { stopStudyAudio } from "@/components/study/StudyAudio";
 
 export type AudioControlState =
   | "idle"
@@ -63,7 +65,8 @@ export function PronunciationControl({
 }) {
   const control = resolveAudioControl(media);
   const audioRef = useRef<HTMLAudioElement>(null);
-  const [rate, setRate] = useState<0.8 | 1>(1);
+  const audioSpeed = useAudioSpeed();
+  const rate = audioSpeed.speed;
   const [playbackState, setPlaybackState] = useState<AudioControlState>(
     control.state,
   );
@@ -128,11 +131,7 @@ export function PronunciationControl({
   }
 
   function chooseRate(nextRate: 0.8 | 1) {
-    setRate(nextRate);
-    const audio = audioRef.current;
-    if (!audio) return;
-    audio.playbackRate = nextRate;
-    audio.preservesPitch = true;
+    void audioSpeed.change(nextRate);
   }
 
   const isPlaying = playbackState === "playing" || playbackState === "loading";
@@ -152,9 +151,7 @@ export function PronunciationControl({
         onLoadStart={() => setPlaybackState("loading")}
         onCanPlay={() => setPlaybackState((state) => (state === "playing" ? state : "idle"))}
         onPlay={(event) => {
-          for (const other of document.querySelectorAll<HTMLAudioElement>("audio")) {
-            if (other !== event.currentTarget) other.pause();
-          }
+          stopStudyAudio(event.currentTarget);
           setPlaybackState("playing");
         }}
         onPause={() => setPlaybackState((state) => (state === "error" ? state : "paused"))}
@@ -177,6 +174,7 @@ export function PronunciationControl({
           type="button"
           className="btn btn-secondary"
           aria-pressed={rate === 0.8}
+          disabled={audioSpeed.disabled}
           onClick={() => chooseRate(0.8)}
         >
           Study 0.8×
@@ -185,6 +183,7 @@ export function PronunciationControl({
           type="button"
           className="btn btn-secondary"
           aria-pressed={rate === 1}
+          disabled={audioSpeed.disabled}
           onClick={() => chooseRate(1)}
         >
           Normal 1×
@@ -193,6 +192,7 @@ export function PronunciationControl({
           Repeat
         </button>
       </div>
+      <AudioSpeedControl control={audioSpeed}/>
       <p className="dense audio-control__note">
         <strong>Synthesized German preview voice</strong> · independent German listening review pending · {media.voice} · generated at {media.generationRate}; playback {rate}×
       </p>
