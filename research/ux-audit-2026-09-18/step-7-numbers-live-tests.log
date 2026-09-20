@@ -1,0 +1,27 @@
+
+Running 18 tests using 2 workers
+
+(node:31128) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:36576) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 tests\e2e\46-cheat-sheet-summaries.spec.ts:5:5 › countries prints its complete summary without changing recall or filters at 320px (6.6s)
+  ok  3 tests\e2e\46-cheat-sheet-summaries.spec.ts:5:5 › home prints its complete summary without changing recall or filters at 320px (6.1s)
+  ok  2 tests\e2e\42-shared-learning-actions.spec.ts:5:1 › saved pronunciation speed follows word cards, original recordings and the reader (19.8s)
+  ok  4 tests\e2e\46-cheat-sheet-summaries.spec.ts:5:5 › countries prints its complete summary without changing recall or filters at 1440px (9.9s)
+  ok  6 tests\e2e\46-cheat-sheet-summaries.spec.ts:5:5 › home prints its complete summary without changing recall or filters at 1440px (6.6s)
+  ok  5 tests\e2e\42-shared-learning-actions.spec.ts:46:1 › saving a profession in its collection is reflected on its word card and can be removed there (9.6s)
+  ok  8 tests\e2e\42-shared-learning-actions.spec.ts:58:1 › profession filters control both the displayed cards and the review pool (6.6s)
+  ok  7 tests\e2e\46-cheat-sheet-summaries.spec.ts:51:1 › home overview keeps one set of objects and returns focus after Escape and selection (7.2s)
+  ok  9 tests\e2e\42-shared-learning-actions.spec.ts:86:1 › German text offers one keyboard stop per phrase and complete-phrase lookup (7.4s)
+  ok 10 tests\e2e\46-cheat-sheet-summaries.spec.ts:73:1 › home pronunciation follows the saved speed when its slow override is off (11.6s)
+  ok 11 tests\e2e\42-shared-learning-actions.spec.ts:103:1 › transcript lines share pronunciation, meaning and saved-review actions (10.1s)
+  ok 13 tests\e2e\42-shared-learning-actions.spec.ts:127:1 › a failed preview recording shows a useful error and can be retried (6.6s)
+  ok 12 tests\e2e\46-cheat-sheet-summaries.spec.ts:97:33 › shared overviews preserve verb, number and register selections at 390px (12.3s)
+  ok 15 tests\e2e\46-cheat-sheet-summaries.spec.ts:97:33 › shared overviews preserve verb, number and register selections at 1440px (8.6s)
+  ok 14 tests\e2e\50-numbers-learning.spec.ts:3:31 › number reading, listening and saved values at 320px (15.9s)
+  ok 16 tests\e2e\50-numbers-learning.spec.ts:3:31 › number reading, listening and saved values at 1440px (14.1s)
+  ok 17 tests\e2e\50-numbers-learning.spec.ts:34:1 › number filters control listening, recall and empty selections together (7.8s)
+  ok 18 tests\e2e\50-numbers-learning.spec.ts:54:1 › numbers prints common patterns without changing the chosen example (5.8s)
+
+  18 passed (1.8m)

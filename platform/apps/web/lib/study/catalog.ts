@@ -14,6 +14,7 @@ import {grammarPatterns,conversationFrames,spokenVerb} from "./sheet-topics";
 import {questionWords,questionBuilders,questionReplyCases,questionWordLessons} from "./questions";
 import {builderReply} from "./question-learning";
 import {learningVerbs,modelTags} from "./verb-learning";
+import {conversationBookmark,conversationTags} from "./conversation-learning";
 import {studyUnits} from "./course-lessons";
 import {tagsForLesson} from "./scope";
 import {objectModels,objectSentences,materialModels} from "./object-sheet";
@@ -235,7 +236,7 @@ export function loadDictionary(): DictionaryEntry[] {
   for(const [i,reply] of questionReplyCases.entries()){addQuestion(`reply-${i}`,reply.question,reply.translation);addQuestion(`reply-${i}-yes`,reply.yes,reply.yesMeaning);addQuestion(`reply-${i}-no`,reply.no,reply.noMeaning);}
   for(const [i,[de,en]] of [["Wer kommt aus dem Iran?","Who comes from Iran?"],["Welche Sprache sprichst du?","Which language do you speak?"],["Welcher Tisch ist schön?","Which table is beautiful?"],["Welches Buch ist das?","Which book is that?"]].entries())addQuestion(`example-${i}`,de!,en!);
   for(const p of grammarPatterns) entries.push({id:`sheet-pattern-${p.id}`,de:p.de,en:p.en,forms:[p.de],example:p.de,translation:p.en,href:`/cheat-sheets/verbs#pattern-${p.id}`,audio:collectionSpeech[p.de]??null,kind:"sentence",saveId:`sheet-pattern-${p.id}`});
-  for(const f of conversationFrames){for(const [i,de] of [f.casual,f.formal,f.answer,...(f.formalAnswer?[f.formalAnswer]:[])].entries()){if(entries.some(e=>e.de===de))continue;const en=i<2?f.en:f.answerEn;entries.push({id:`sheet-conversation-${f.id}-${i}`,de,en,forms:[de],example:de,translation:en,href:"/cheat-sheets/conversation#sheet-workshop",audio:collectionSpeech[de]??null,kind:"phrase"});}}
+  for(const f of conversationFrames){for(const [i,de] of [f.casual,f.formal,f.answer,...(f.formalAnswer?[f.formalAnswer]:[])].entries()){if(entries.some(e=>e.de===de))continue;const en=i<2?f.en:f.answerEn;entries.push({id:`sheet-conversation-${f.id}-${i}`,de,en,forms:[de],example:de,translation:en,href:`/cheat-sheets/conversation${conversationBookmark(f.id,i===1||i===3,i<2?"ask":"answer")}`,audio:collectionSpeech[de]??null,kind:"phrase",studyTags:conversationTags(f.id)});}}
   for(const model of learningVerbs){
     const forms=[...model.forms,...model.forms.map((form,index)=>spokenVerb(index,form))];
     const entry=entries.find(item=>item.forms.includes(model.verb));

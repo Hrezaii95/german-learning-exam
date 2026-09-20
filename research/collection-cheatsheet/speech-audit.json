@@ -1,6 +1,6 @@
 {
-  "required": 2462,
-  "mapped": 2462,
+  "required": 2464,
+  "mapped": 2464,
   "failures": [],
   "voice": "de-DE-KatjaNeural",
   "rate": "-5%",
@@ -239,6 +239,11 @@
       "path": "audio/collection-sheet/29cf011cf02c0b645496.mp3",
       "bytes": 9648,
       "sha256": "75859e618747e15efdffec33e3fc2355b9ae6e232ec3fb8fad05d0200b9d4052"
+    },
+    {
+      "path": "audio/collection-sheet/2afafe1a3e84b0205788.mp3",
+      "bytes": 16848,
+      "sha256": "bbfa3f23a0b09fe3759ec7d9a873712a4df27ff484755e240fbd4e1a946a08fc"
     },
     {
       "path": "audio/collection-sheet/2d7d7b3015c4e924b841.mp3",
@@ -699,6 +704,11 @@
       "path": "audio/collection-sheet/899c99dba1ca59593542.mp3",
       "bytes": 10944,
       "sha256": "702e12163bfe1d6cec16acb922ddceedaa5fdb33ecb6c566bf62d492e5df3431"
+    },
+    {
+      "path": "audio/collection-sheet/89a1391a0b097bd58c69.mp3",
+      "bytes": 10944,
+      "sha256": "a175852cc19d60d55400fed706143b3cf6d85235b4bebbf4e4dba7949626919d"
     },
     {
       "path": "audio/collection-sheet/8be09c89170ea7fa370c.mp3",

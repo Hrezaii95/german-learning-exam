@@ -6,19 +6,21 @@ Reference: [whole-app audit](UI-UX-AUDIT.md). Countries & languages and Home & f
 
 Use the checkboxes below as the completion record. Start at the first unchecked task; reuse anything already finished.
 
-**Current checkpoint:** Steps 1–6 have recorded live verification. Step 7 is in progress: Countries/Home, People and Verbs/Questions have passed local and live verification. Next: Numbers and the remaining sheet briefs. The complete Step 7 checkpoint and Steps 8–9 remain open. Earlier completion notes are historical evidence, not instructions to repeat work.
+**Current checkpoint:** Steps 1–6 have recorded live verification. Step 7 is in progress: Countries/Home, People, Verbs/Questions and Numbers have passed local and live verification. Next: Conversation and the remaining sheet briefs. The complete Step 7 checkpoint and Steps 8–9 remain open. Earlier completion notes are historical evidence, not instructions to repeat work.
 
-| Step | Main task | Checkpoint before marking complete |
-|---|---|---|
-| 1 | Repair readability | Cards and diagrams fit phone, tablet and desktop; approved sheets remain intact. |
-| 2 | Protect learning progress | Save/remove, reload, resume and a complete backup/restore round trip preserve the expected data. |
-| 3 | Unify styles and actions | Colors, audio, meaning, save and filters behave consistently across representative learning views. |
-| 4 | Simplify navigation | Continue and due review appear first; phone navigation and returning to prior content work. |
-| 5 | Finish Professions | Find a profession, understand and hear its four forms, save it, practise it and return. |
-| 6 | Improve lessons and libraries | Every lesson and library supports a clear learning path, compact browsing and accurate search. |
-| 7 | Complete the 15 cheat sheets | Each sheet has a useful visual overview, explanation, audio, saving and a short recall task. |
-| 8 | Connect book and listening | Read → listen → understand a phrase → save → review → return to the same book page. |
-| 9 | Verify the release | Live learning journeys, accessibility, data recovery and failure states pass; limitations are recorded. |
+| Step | Recorded status | Main task | Checkpoint before marking complete |
+|---|---|---|---|
+| 1 | Complete | Repair readability | Cards and diagrams fit phone, tablet and desktop; approved sheets remain intact. |
+| 2 | Complete | Protect learning progress | Save/remove, reload, resume and a complete backup/restore round trip preserve the expected data. |
+| 3 | Complete | Unify styles and actions | Colors, audio, meaning, save and filters behave consistently across representative learning views. |
+| 4 | Complete | Simplify navigation | Continue and due review appear first; phone navigation and returning to prior content work. |
+| 5 | Complete | Finish Professions | Find a profession, understand and hear its four forms, save it, practise it and return. |
+| 6 | Complete | Improve lessons and libraries | Every lesson and library supports a clear learning path, compact browsing and accurate search. |
+| 7 | In progress | Complete the 15 cheat sheets | Each sheet has a useful visual overview, explanation, audio, saving and a short recall task. |
+| 8 | Pending | Connect book and listening | Read → listen → understand a phrase → save → review → return to the same book page. |
+| 9 | Pending | Verify the release | Live learning journeys, accessibility, data recovery and failure states pass; limitations are recorded. |
+
+**Resume here:** Step 7 → Conversation. Finish and verify the existing batch, then continue through the unchecked sheet groups. The statuses above reflect the completion records below; they do not require rerunning finished work.
 
 ## Working rules
 
@@ -107,7 +109,7 @@ Use the existing tools wherever they already work. Add only the missing explanat
 - [x] **01 Countries / 02 Home:** preserve approved maps, illustrations and color trails; finish responsive, audio/save and compact-print refinements.
 - [x] **03 People:** relationship tree and clear family/work sections.
 - [x] **04 Verbs / 07 Questions:** person–stem–ending and sentence-position diagrams; question/answer contrasts.
-- [ ] **05 Numbers:** place value, reading direction, prices and listening recall.
+- [x] **05 Numbers:** place value, reading direction, prices and listening recall.
 - [ ] **06 Conversation:** dialogue flow, du/Sie contrasts and spelling audio.
 - [ ] **08 Objects / 09 Office:** illustrated objects and a desk scene connecting articles, plurals and accusative.
 - [ ] **10 Hobbies / 11 Time:** ability/frequency visuals, clock and weekly planner.
@@ -144,7 +146,9 @@ For each step, add one line here when its checkpoint passes:
 
 `Step — completed changes — checkpoint result — live verification/link`
 
-Step 7, Numbers batch — place-value reading order through one million, colored whole-word chunks with meaningful phone wrapping, price tags, saved number/price return links, range-based listening recall and filtered card practice. The course noun die Million is included with number tags while retaining the existing source-specific cards. Common traps and phone-digit reading are preserved. A concise one-page summary covers foundation words, tens, larger values, reading direction and prices. Local checkpoint passed on 20 September 2026: full check (959 tests and separate 620-test web run) before the final noun/word-wrap refinements; final 27 targeted tests, ten audio/dictionary inventory tests, E2E types, lint and Pages gates passed. Four final Numbers journeys and six shared-action journeys passed; the earlier eight approved-sheet/overview regressions also passed. A source-card-specific browser selector was corrected after it matched both existing Million source cards. Actual final phone/desktop views and A4/Letter PDFs inspected; both PDFs fit one page. Four new generated clips bring the collection mapping to 2,462 exact texts with existing files reused. Evidence: step-7-numbers-check.log, step-7-numbers-final-targeted.log, step-7-numbers-final-audio.log, step-7-numbers-final-gates.log, step-7-numbers-final-browser.log, step-7-numbers-source-selector.log, step-7-numbers-browser.log and step-7-numbers-local/. Live verification remains pending; Numbers is not yet checked off.
+Step 7, Conversation batch — eight dialogue topics with du/Sie contrasts, two speaker roles, hide/reveal self-check, contextual saving and dictionary links; thirty letter sounds, name spelling with German letter cues, scoped card recall and a one-page printable summary. Local checkpoint passed: full check (965 tests plus separate 626-test web run), E2E types, Pages gates and seventeen browser journeys. After the final phone layout refinement, Pages gates and all five Conversation journeys passed again. Final phone/desktop views and actual A4/Letter PDFs inspected; both summaries fit one page. Two new generated clips bring the collection mapping to 2,464 texts. Typed-name speech tests verify the German request and unavailable-browser handling, not audible device pronunciation quality. Evidence: step-7-conversation-check.log, step-7-conversation-e2e-types.log, step-7-conversation-browser.log, step-7-conversation-final-gates.log, step-7-conversation-final-browser.log and step-7-conversation-local/. Live verification pending; checkbox remains open.
+
+Step 7, Numbers batch — place-value reading order through one million, colored whole-word chunks with meaningful phone wrapping, price tags, saved number/price return links, range-based listening recall and filtered card practice. The course noun die Million is included with number tags while retaining the existing source-specific cards. Common traps and phone-digit reading are preserved. A concise one-page summary covers foundation words, tens, larger values, reading direction and prices. Local checkpoint passed on 20 September 2026: full check (959 tests and separate 620-test web run) before the final noun/word-wrap refinements; final 27 targeted tests, ten audio/dictionary inventory tests, E2E types, lint and Pages gates passed. Four final Numbers journeys and six shared-action journeys passed; the earlier eight approved-sheet/overview regressions also passed. A source-card-specific browser selector was corrected after it matched both existing Million source cards. Actual final phone/desktop views and A4/Letter PDFs inspected; both PDFs fit one page. Four new generated clips bring the collection mapping to 2,462 exact texts with existing files reused. Evidence: step-7-numbers-check.log, step-7-numbers-final-targeted.log, step-7-numbers-final-audio.log, step-7-numbers-final-gates.log, step-7-numbers-final-browser.log, step-7-numbers-source-selector.log, step-7-numbers-browser.log and step-7-numbers-local/. Live checkpoint passed: deployment 35531296120 (commit dcacc882), full CI checks and all 18 live browser journeys. Both actual live A4/Letter PDFs fit one page and match the local summary text. Evidence: step-7-numbers-deployment.json, step-7-numbers-live-tests.log and step-7-numbers-live/print-check.json. Numbers is complete; the remaining Step 7 groups and Steps 8–9 stay open.
 
 Step 7, Verbs/Questions batch — 111 published verb models with person/stem/ending explanations, labelled exceptions and separable/reflexive distinctions; sentence-position contrasts; full question-builder replies; filtered recall; exact saved-context restoration; expanded dictionary coverage and pronunciation; one-page printable summaries. Local checkpoint passed on 20 September 2026: full check (955 tests, plus the separate 616-test web run), E2E types, final Pages gates and all 13 final browser journeys, including shared dictionary/audio regressions. The preceding eight Countries/Home/overview journeys also passed. Actual A4 and Letter exports each fit one page; phone and desktop rendering inspected, with stacked verb parts refined for small phones. Collection speech maps 2,454 exact texts; 16 new clips were generated and existing clips reused. Evidence: step-7-grammar-check.log, step-7-grammar-final-gates.log, step-7-grammar-e2e-types.log, step-7-grammar-final-browser.log, step-7-grammar-browser.log and step-7-grammar-local/. Live checkpoint passed: deployment 35529952434 (commit 36b633af), full CI checks and all 21 live browser journeys. Live A4/Letter PDFs each retain one page and match the local summary text. Evidence: step-7-grammar-deployment.json, step-7-grammar-live-tests.log and step-7-grammar-live/print-check.json. Verbs/Questions are complete; the remaining Step 7 groups and Steps 8–9 stay open.
 

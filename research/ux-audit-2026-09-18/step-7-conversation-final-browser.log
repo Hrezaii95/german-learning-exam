@@ -1,0 +1,14 @@
+
+Running 5 tests using 2 workers
+
+(node:20132) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:35016) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 2 [chromium] › tests\e2e\51-conversation-learning.spec.ts:3:31 › dialogue roles, saved context and alphabet audio at 320px (6.6s)
+  ok 1 [chromium] › tests\e2e\51-conversation-learning.spec.ts:3:31 › dialogue roles, saved context and alphabet audio at 1440px (7.6s)
+  ok 3 [chromium] › tests\e2e\51-conversation-learning.spec.ts:24:1 › name spelling requests German letter cues and survives missing speech support (2.7s)
+  ok 4 [chromium] › tests\e2e\51-conversation-learning.spec.ts:32:1 › conversation card filters control recall and foundation scope is explicit (3.0s)
+  ok 5 [chromium] › tests\e2e\51-conversation-learning.spec.ts:39:1 › conversation prints dialogue contrasts and all thirty letter cues (2.1s)
+
+  5 passed (13.0s)

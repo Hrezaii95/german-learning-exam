@@ -286,6 +286,12 @@
       "exactText": "er geht"
     },
     {
+      "publicRelativePath": "audio/collection-sheet/2afafe1a3e84b0205788.mp3",
+      "sha256": "bbfa3f23a0b09fe3759ec7d9a873712a4df27ff484755e240fbd4e1a946a08fc",
+      "bytes": 16848,
+      "exactText": "Doch, ich wohne in Berlin."
+    },
+    {
       "publicRelativePath": "audio/collection-sheet/2d7d7b3015c4e924b841.mp3",
       "sha256": "1ce5766a3c7385ad7210fa8a3e8941e446a7f6a5679c9465ae3fe5af91860afc",
       "bytes": 10512,
@@ -836,6 +842,12 @@
       "sha256": "702e12163bfe1d6cec16acb922ddceedaa5fdb33ecb6c566bf62d492e5df3431",
       "bytes": 10944,
       "exactText": "du heißt"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/89a1391a0b097bd58c69.mp3",
+      "sha256": "a175852cc19d60d55400fed706143b3cf6d85235b4bebbf4e4dba7949626919d",
+      "bytes": 10944,
+      "exactText": "Und Ihnen?"
     },
     {
       "publicRelativePath": "audio/collection-sheet/8be09c89170ea7fa370c.mp3",

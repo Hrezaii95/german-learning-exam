@@ -22,7 +22,7 @@ export const sheetTitles:Record<ExtendedSheetId,{title:string;subtitle:string;ey
   people:{title:"Put a face to the word.",subtitle:"Family connections, work roles, and the words that describe you.",eyebrow:"The people around you · Course vocabulary"},
   verbs:{title:"Give every sentence a backbone.",subtitle:"Choose the person. Change the verb. Keep it in the right place.",eyebrow:"Your sentence workshop · Lessons 1–12"},
   numbers:{title:"Make numbers click.",subtitle:"Build the word, hear the number, and read the price with confidence.",eyebrow:"Small steps to a million · Lessons 1–4"},
-  conversation:{title:"Keep the conversation moving.",subtitle:"A friendly route from hello to a clear answer — and help when you need it.",eyebrow:"Your pocket conversation guide · Lessons 1–10"},
+  conversation:{title:"Keep the conversation moving.",subtitle:"A friendly route from hello to a clear answer — and help when you need it.",eyebrow:"Your pocket conversation guide · Lessons 1–12"},
 };
 export const grammarPatterns = [
   {id:"statement",title:"A statement: the verb is second",de:"Ich wohne in Berlin.",en:"I live in Berlin.",parts:["Ich","wohne","in Berlin."],cue:"One idea comes first, then the conjugated verb. Count sentence parts, not individual words."},

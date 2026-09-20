@@ -1,25 +1,16 @@
 "use client";
-import {useState} from "react";
 import type {WordCard} from "@/lib/content/word-card-types";
-import {conversationFrames,spellingLetters,type ExtendedSheetId} from "@/lib/study/sheet-topics";
-import {GermanText,SaveButton} from "./StudyProvider";
+import {GermanText} from "./StudyProvider";
 import {LineAudio} from "./StudyAudio";
-import {OverviewPanel} from "./OverviewPanel";
 import {PeopleFamily} from "./PeopleFamily";
 import {VerbWorkshop} from "./VerbWorkshop";
 
-export function SheetWorkshops({sheet,cards,speech}:{sheet:ExtendedSheetId;cards:WordCard[];speech:Record<string,string>}){
-  const [formal,setFormal]=useState(false),[topic,setTopic]=useState("name");
+export function SheetWorkshops({sheet,cards,speech}:{sheet:"people"|"verbs";cards:WordCard[];speech:Record<string,string>}){
   const audio=(text:string)=><LineAudio text={text} src={speech[text]} compact/>;
   const say=(text:string)=><span className="sheet-spoken"><GermanText text={text}/>{audio(text)}</span>;
   if(sheet==="people"){
     return <><PeopleFamily speech={speech}/>
       <section className="sheet-workshop" id="people-work"><h2>Work roles: a pattern worth keeping.</h2><div className="sheet-formula"><div className="study-tone-male"><small>Masculine</small>{say("der Lehrer")}</div><span aria-hidden="true">→</span><div className="study-tone-female"><small>Feminine · add -in</small>{say("die Lehrerin")}</div><span aria-hidden="true">→</span><div className="study-tone-plural"><small>Feminine plural · -innen</small>{say("die Lehrerinnen")}</div></div><p className="sheet-note">Learn the masculine plural separately. Some pairs change more: <b lang="de">Arzt → Ärztin</b>, <b lang="de">Koch → Köchin</b>. These are grammatical word forms; a person’s preferred description matters.</p><div className="sheet-rule-grid"><article><h3>Belonging: mein / meine</h3><p className="study-tone-male">{say("mein Vater")}</p><p className="study-tone-neuter">{say("mein Kind")}</p><p className="study-tone-female">{say("meine Mutter")}</p><p className="study-tone-plural">{say("meine Eltern")}</p><p>In these subject forms, feminine and plural add -e. dein / deine follows the same pattern.</p></article><article><h3>Say what you do</h3><p>{say("Ich bin Ärztin.")}</p><p>I am a doctor.</p><p>{say("Ich arbeite als Lehrer.")}</p><p>I work as a teacher.</p><p>No article in these ordinary statements of profession.</p></article><article id="people-descriptions"><h3>Describe your family</h3>{["ledig","verheiratet","geschieden","allein","zusammen"].map((s,i)=><p key={s}>{say(s)} <small>— {["single","married","divorced","alone","together"][i]}</small></p>)}</article></div></section></>;
   }
-  if(sheet==="verbs")return <VerbWorkshop cards={cards} speech={speech}/>;
-  const frame=conversationFrames.find(f=>f.id===topic)!;
-  const q=formal?frame.formal:frame.casual,a=formal&&frame.formalAnswer?frame.formalAnswer:frame.answer;
-  return <><section className="sheet-workshop"><div className="study-section-heading"><div><p className="study-eyebrow">Practice examples · change the details to your own</p><h2>A conversation in your pocket.</h2></div><div className="study-chips" role="group" aria-label="Conversation register"><button type="button" aria-pressed={!formal} onClick={()=>setFormal(false)}>Friendly · du</button><button type="button" aria-pressed={formal} onClick={()=>setFormal(true)}>Formal · Sie</button></div></div><div className="conversation-topics">{conversationFrames.map(f=><button type="button" key={f.id} aria-pressed={topic===f.id} onClick={()=>setTopic(f.id)}>{f.label}</button>)}</div><div className="conversation-bubbles" aria-live="polite"><article><small>ASK · {formal?"Sie":"du"}</small><h3>{say(q)}</h3><p>{frame.en}</p></article><article><small>ANSWER</small><h3>{say(a)}</h3><p>{frame.answerEn}</p><SaveButton compact item={{id:`sheet-conversation-${topic}-${formal?"formal":"casual"}`,title:`${q} ${a}`,meaning:`${frame.en} ${frame.answerEn}`,kind:"phrase",href:"/cheat-sheets/conversation#sheet-workshop",audio:speech[a]??null}}/></article></div><p className="sheet-note">{frame.cue}</p></section>
-    <OverviewPanel title="Everyday questions, at a glance"><div className="conversation-atlas">{conversationFrames.map(f=><article key={f.id}><small>{f.label}</small><h3 lang="de">{formal?f.formal:f.casual}</h3><p lang="de">{formal&&f.formalAnswer?f.formalAnswer:f.answer}</p><p>{f.en}</p></article>)}</div></OverviewPanel>
-    <section className="sheet-workshop"><h2>When you need a little help.</h2><div className="sheet-rule-grid">{[{de:"Wie bitte?",en:"Pardon? / Could you repeat that?"},{de:"Wie schreibt man das?",en:"How do you spell that?"},{de:"Noch einmal, bitte.",en:"Once more, please."},{de:"Ich verstehe das nicht.",en:"I do not understand that."},{de:"Was bedeutet das?",en:"What does that mean?"},{de:"Langsam, bitte.",en:"Slowly, please."}].map(p=><article key={p.de}><h3>{say(p.de)}</h3><p>{p.en}</p></article>)}</div><h2>Spell it out.</h2><p>Tap the speaker to hear a letter. German W sounds like “veh”; V like “fow”; J like “yot”. The spelling cards below include the original course audio.</p><div className="spelling-grid">{spellingLetters.map(l=><div key={l.de}><strong lang="de">{l.de}</strong>{audio(l.de)}<small>{l.en}</small></div>)}</div></section></>;
+  return <VerbWorkshop cards={cards} speech={speech}/>;
 }
