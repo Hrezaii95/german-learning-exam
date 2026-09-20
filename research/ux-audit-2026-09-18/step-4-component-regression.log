@@ -1,0 +1,13 @@
+
+ RUN  v3.2.7 E:/claude-cursor/side projects/German learning/platform
+
+ ✓ tests/web/p2a-studio-dashboard-ui.test.ts (8 tests) 4074ms
+ ✓ tests/web/p3b-hubs-ui.test.ts (7 tests) 6394ms
+   ✓ P3B hub UI shell contracts > renders one main and accurate aria-current for hub routes  1241ms
+   ✓ P3B hub UI shell contracts > exposes search and lesson filters on derived hubs without fabricating matches  763ms
+ ✓ tests/web/p3a-web-shell-ui.test.ts (6 tests) 7724ms
+
+ Test Files  3 passed (3)
+      Tests  21 passed (21)
+   Start at  18:43:22
+   Duration  11.08s (transform 9.02s, setup 0ms, collect 8.58s, tests 18.19s, environment 1ms, prepare 784ms)

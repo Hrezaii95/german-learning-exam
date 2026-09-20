@@ -24,6 +24,7 @@ export type StudyState = {
   bookmarks: string[];
   completedPages: string[];
   resume: string | null;
+  lastLesson?: number;
   lessonSessions?: Record<string, LessonSession>;
   reviewedProfessions?: string[];
 };

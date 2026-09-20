@@ -3,7 +3,10 @@
 import {useStudyScope} from "@/components/study/StudyScope";
 import {tagsForLesson} from "@/lib/study/scope";
 import Link from "next/link";
-import type { ReactNode } from "react";
+import {useEffect, useState, type ReactNode} from "react";
+import {useStudy} from "@/components/study/StudyProvider";
+import {courseChapters} from "@/lib/study/lesson-four";
+import {savedStudyTags} from "@/lib/study/saved-tags";
 import type { ActivityProgressRecord } from "@german-learning/learning";
 import type {
   LearnerActivity,
@@ -53,7 +56,7 @@ function StudioMedia({
         <span className="studio-media__word german" lang="de">
           {titleDe}
         </span>
-        <span className="studio-media__note">Illustration not available</span>
+        <span className="studio-media__note">Learn · listen · practise</span>
       </div>
     );
   }
@@ -95,7 +98,7 @@ function ContinueCard({
       className="panel studio-card studio-card--continue"
       aria-labelledby="continue-heading"
     >
-      <StudioMedia illustration={illustration} titleDe={titleDe} />
+      {illustration && <StudioMedia illustration={illustration} titleDe={titleDe} />}
       <div className="studio-card__body">
         <p className="studio-card__eyebrow">{eyebrow}</p>
         <h2 id="continue-heading" className="studio-card__title">
@@ -314,6 +317,13 @@ export function LearnerDashboard({
   projection: LearnerWebProjection;
 }) {
   const {scope,matches}=useStudyScope();
+  const study=useStudy();
+  const [now,setNow]=useState(()=>Date.now());
+  useEffect(()=>{const timer=window.setInterval(()=>setNow(Date.now()),60000);return()=>window.clearInterval(timer);},[]);
+  const selectedChapters=courseChapters.filter(chapter=>matches(tagsForLesson(chapter.number)));
+  const lastChapter=selectedChapters.find(chapter=>chapter.number===study?.state.lastLesson);
+  const saved=Object.values(study?.state.saved??{}).filter(item=>matches(savedStudyTags(item,study?.dictionary)));
+  const due=saved.filter(item=>!item.due||Date.parse(item.due)<=now);
   const selectedLessons=projection.lessons.filter(l=>matches(tagsForLesson(Number(l.routeSegment))));
   const selectedActivities=projection.activities.filter(a=>selectedLessons.some(l=>l.id===a.lessonId));
   const learnerState = useOptionalLearnerState();
@@ -345,12 +355,12 @@ export function LearnerDashboard({
   const resumeActivity =
     mode === "ready" && state?.resume
       ? (selectedActivities.find(
-          (row) => row.id === state.resume!.activityId,
+          (row) => row.id === state.resume!.activityId && (!lastChapter || Number(row.lessonRouteSegment)===lastChapter.number),
         ) ?? null)
       : null;
 
   const continueLessonId =
-    resumeActivity?.lessonId ?? selectedLessons[0]?.id ?? projection.zeroState.continueLessonId;
+    resumeActivity?.lessonId ?? selectedLessons.find(lesson=>Number(lesson.routeSegment)===lastChapter?.number)?.id ?? selectedLessons[0]?.id ?? projection.zeroState.continueLessonId;
   const continueLesson =
     selectedLessons.find((lesson) => lesson.id === continueLessonId) ?? null;
   const continueTitleDe =
@@ -365,6 +375,9 @@ export function LearnerDashboard({
     : continueLesson
       ? [lessonLabel(continueLesson.routeSegment), "First activity"]
       : [];
+  const studyChapter=lastChapter && lastChapter.number>2 ? lastChapter : selectedLessons.length ? undefined : selectedChapters[0];
+  const studySession=studyChapter ? study?.state.lessonSessions?.[studyChapter.number] : undefined;
+  const canContinue=Boolean(resumeActivity || (studyChapter && (study?.state.lastLesson===studyChapter.number || studySession)));
 
   let mission = null;
   if (mode === "ready" && state && hydration) {
@@ -419,21 +432,28 @@ export function LearnerDashboard({
   return (
     <div className="stack">
       <div className="studio-board">
-        {selectedLessons.length>0&&<ContinueCard
-          eyebrow={resumeActivity ? "Continue" : "Start here"}
-          titleDe={continueTitleDe}
+        {(selectedLessons.length>0||studyChapter)&&<ContinueCard
+          eyebrow={canContinue ? "Continue" : "Start here"}
+          titleDe={studyChapter?.title??continueTitleDe}
           nextStep={
-            resumeActivity
+            studyChapter ? studyChapter.topic : resumeActivity
               ? resumeActivity.promptPlainText
               : `Begin the guided activities in Lesson ${continueLesson?.routeSegment.replace(/^0/,"")??"1"}.`
           }
-          chips={continueChips}
-          href={continuePath}
-          actionLabel={resumeActivity ? "Continue learning" : "Start learning"}
-          illustration={continueIllustration}
+          chips={studyChapter ? [`Lesson ${studyChapter.number}`, studySession?.tab??"Learn"] : continueChips}
+          href={studyChapter ? `/lessons/${String(studyChapter.number).padStart(2,"0")}${studySession?`#${studySession.tab.toLowerCase()}`:""}` : continuePath}
+          actionLabel={canContinue ? "Continue learning" : "Start learning"}
+          illustration={studyChapter ? illustrationForLesson(`lesson:${String(studyChapter.number).padStart(2,"0")}`) : continueIllustration}
         />}
 
-        {mode === "ready" && mission && mission.candidateCount > 0 ? (
+        {study?.ready && saved.length>0 ? (
+          <MissionCard>
+            <p className="studio-card__next"><strong>{due.length} ready to review</strong> from {saved.length} saved items in your study selection.</p>
+            <p>Recall the meaning, then rate how well you remembered it. Your rating sets the next review date.</p>
+            <p className="studio-card__action"><Link className="btn btn-primary" href={due.length?"/saved?due=1":"/saved"}>{due.length?"Review due items":"Open my collection"}</Link></p>
+            <Link href="/review">Guided exercises{mission ? ` · ${mission.dueCount} due, ${mission.newCount} new` : ""} →</Link>
+          </MissionCard>
+        ) : mode === "ready" && mission && mission.candidateCount > 0 ? (
           <MissionCard>
             <p className="studio-card__next">{mission.mission.reasonText}</p>
             <MissionMix due={mission.dueCount} next={mission.newCount} />
@@ -454,8 +474,8 @@ export function LearnerDashboard({
         ) : mode === "ready" ? (
           <MissionCard>
             <p className="studio-card__next">
-              You have no review cards yet. Add one from a vocabulary, verb or
-              Q&amp;A page and it will appear here tomorrow.
+              You have no review cards yet. Save words, phrases or concepts to
+              build your collection, or choose a guided exercise.
             </p>
             <p className="studio-card__action">
               <Link className="btn btn-secondary" href="/hubs">
@@ -479,6 +499,14 @@ export function LearnerDashboard({
         )}
       </div>
 
+      <div className="study-row dashboard-shortcuts" aria-label="Other ways to study">
+        <Link href={study?.state.resume?`/book?page=${study.state.resume}`:"/book"}>{study?.state.resume?"Resume book":"Open book"}</Link>
+        <Link href="/saved">My saved collection</Link>
+        <Link href="/practice">Free practice</Link>
+      </div>
+
+      <details className="dashboard-progress">
+      <summary>Progress &amp; guided activities</summary>
       <EvidenceStrip
         items={evidenceItems}
         note={
@@ -518,6 +546,7 @@ export function LearnerDashboard({
           </ul>
         </section>
       ) : null}
+      </details>
     </div>
   );
 }

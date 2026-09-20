@@ -262,7 +262,14 @@ export function createPagesBuildController(
       // Track mutation immediately after backup write so finally always restores.
       writeFileSync(bak, text);
       mutatedParamRels.add(rel);
-      writeFileSync(src, text.replace(DYNAMIC_TRUE, DYNAMIC_FALSE));
+      const patched = `${src}.${process.pid}.pages-patched`;
+      try {
+        // Replacing avoids truncation failures when Windows has an open reader.
+        writeFileSync(patched, text.replace(DYNAMIC_TRUE, DYNAMIC_FALSE), { flag: "wx" });
+        renameSync(patched, src);
+      } finally {
+        if (existsSync(patched)) unlinkSync(patched);
+      }
     }
     log(
       `[build:pages] Patched dynamicParams=false on ${DYNAMIC_PARAM_PAGES.length} routes`,

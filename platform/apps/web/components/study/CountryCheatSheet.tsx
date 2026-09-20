@@ -63,8 +63,8 @@ export function CountryCheatSheet({ speech, cardLinks }: { speech: Record<string
       <button type="button" className="study-secondary country-print" onClick={() => {setRecall(false);setFilter("all");setScope("all");setSearch("");requestAnimationFrame(()=>window.print());}}>Print cheat sheet</button>
     </header>
     <nav className="country-jump" aria-label="Cheat sheet sections">
-      <a href="#country-overview">Map & flag overview</a>
-      <a href="#country-patterns">The 4 patterns</a><a href="#country-passport">Build a sentence</a><a href="#country-index">All {countries.length} countries</a><a href="#country-practice">Test yourself</a>
+      <Link href="#country-overview">Map & flag overview</Link>
+      <Link href="#country-patterns">The 4 patterns</Link><Link href="#country-passport">Build a sentence</Link><Link href="#country-index">All {countries.length} countries</Link><Link href="#country-practice">Test yourself</Link>
     </nav>
     <CountryOverview countries={scopedCountries} selected={chosen} onSelect={setChosen} speech={speech}/>
     <section id="country-patterns" className="country-patterns" aria-labelledby="patterns-title">

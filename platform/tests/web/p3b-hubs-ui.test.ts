@@ -66,8 +66,8 @@ describe("P3B hub UI shell contracts", () => {
     );
     expect(vocabulary.match(/<main\b/g)?.length).toBe(1);
     expect(vocabulary).toContain('href="#main-content"');
-    // Rail, topnav and the mobile menu highlight Vocabulary.
-    expect((vocabulary.match(/aria-current="page"/g) ?? []).length).toBe(3);
+    // The rail and grouped menu highlight Vocabulary; the compact tablet bar shows shortcuts.
+    expect((vocabulary.match(/aria-current="page"/g) ?? []).length).toBe(2);
     expect(vocabulary).toContain('href="/vocabulary"');
     expect(vocabulary).toContain('href="/hubs"');
 
@@ -108,7 +108,7 @@ describe("P3B hub UI shell contracts", () => {
       ),
     );
     expect(html).toContain('href="/hubs"');
-    expect(html).toContain("Review");
+    expect(html).toContain("Guided review");
     expect(html).toContain("Settings");
     expect(html).toContain('href="/review"');
     expect(html).toContain('href="/settings"');

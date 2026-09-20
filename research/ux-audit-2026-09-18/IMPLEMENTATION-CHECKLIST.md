@@ -6,6 +6,8 @@ Reference: [whole-app audit](UI-UX-AUDIT.md). Countries & languages and Home & f
 
 Use the checkboxes below as the completion record. Start at the first unchecked task; reuse anything already finished.
 
+**Current checkpoint:** Steps 1–3 have recorded live verification. Step 4 is in progress; its local changes must pass live verification before it is checked off. Steps 5–9 remain open. Earlier completion notes are historical evidence, not instructions to repeat work.
+
 | Step | Main task | Checkpoint before marking complete |
 |---|---|---|
 | 1 | Repair readability | Cards and diagrams fit phone, tablet and desktop; approved sheets remain intact. |
@@ -50,10 +52,10 @@ Audit coverage: A02, A03, A06, A22.
 
 ## 3. Standardize shared appearance and actions
 
-- [ ] Reuse the approved typography, spacing, card structure and control styles; enforce blue masculine, pink feminine, green neuter and purple plural with visible labels.
-- [ ] Standardize pronunciation controls and preferred speed. Use original audio when available and clearly labelled generated pronunciation otherwise; show truthful availability and useful retry states.
-- [ ] Standardize word/phrase lookup, opening existing cards, and save/remove across learning components.
-- [ ] Make lesson/concept filters, result counts and practice pools agree; clearly identify out-of-selection content.
+- [x] Reuse the approved typography, spacing, card structure and control styles; enforce blue masculine, pink feminine, green neuter and purple plural with visible labels.
+- [x] Standardize pronunciation controls and preferred speed. Use original audio when available and clearly labelled generated pronunciation otherwise; show truthful availability and useful retry states.
+- [x] Standardize word/phrase lookup, opening existing cards, and save/remove across learning components.
+- [x] Make lesson/concept filters, result counts and practice pools agree; clearly identify out-of-selection content.
 
 **Checkpoint:** On a representative sheet, word card, lesson and transcript, the same actions look and behave consistently. Test a word and a selected phrase; test one lesson, combined filters and zero results. Confirm actual audio playback at the saved speed and that starting a new clip stops the previous one.
 
@@ -135,10 +137,12 @@ For each step, add one line here when its checkpoint passes:
 
 `Step — completed changes — checkpoint result — live verification/link`
 
+Step 4 — local checkpoint passed on 20 September 2026: compact searchable mobile/tablet menu and sheet chooser; dashboard Continue follows the last visited lesson and restores its section/quiz; due saved review is prominent; guided review has a distinct purpose; section links preserve router history; keyboard skip and menu focus work. Final Pages gates, lint, E2E type check, 21 component regressions and 17 browser checks passed; full earlier check passed 923 tests plus 584 web tests. The Windows build artifact replacement fix also passed 14 recovery tests. Phone/tablet/desktop screenshots inspected. Evidence: step-4-gates.log, step-4-browser-tests.log, step-4-component-regression.log, step-4-build-recovery-tests.log and step-4-local/. Live verification pending; Step 4 stays unchecked until it passes.
+
 Step 1 — layout repairs, responsive diagram steps and toolbar dictionary implemented. Local checkpoint passed on 20 September 2026: Pages gates, 20 component tests, five browser tests across 320/390/768/1440px, and rendered screenshot inspection. Live checkpoint passed against deployment 35512028844 (commit 9a3c9c11): https://hrezaii95.github.io/german-learning-exam/. Evidence: step-1-live/verification.json. Steps 3–9 remain open.
 
 Step 2 — complete backup/restore with merge, replace and reset; persistent lesson quizzes and profession review marks; current-note conflict handling; responsive import preview. Local checkpoint passed on 20 September 2026: 27 targeted tests, seven browser checks including a fresh-profile backup round trip, review ratings/due dates, malformed import, removal, replacement, reset and Lesson 4/12 resume. Pages gates, type checks, lint and rendered phone/desktop inspection passed. Evidence: step-2-tests.log, step-2-browser-tests.log, step-2-gates.log and step-2-local/. Live checkpoint passed: deployment 35513901094 (commit fbad08ee), seven browser checks against https://hrezaii95.github.io/german-learning-exam/. Evidence: step-2-live-tests.log. Full local check: 916 tests and publication validation passed, followed by 577 web tests. Step 3 is in progress.
 
 Step 3, first batch — shared persisted audio speed across book/listening/word cards/generated speech, common stop behavior, truthful inline profession audio and shared filters, purple Food plurals, inherited control fonts, keyboard word/phrase lookup and explicit external translation labels. Local Pages gates and ten browser checks passed, including real generated/original playback, cross-page speed persistence, scope/search/review-pool agreement and keyboard focus return. Targeted component tests, type checks, lint and phone/desktop screenshot inspection passed. Evidence: step-3-gates.log, step-3-browser-tests.log, step-3-tests.log, step-3-shared-tests.log and step-3-local/. First-batch live checkpoint passed: deployment 35515047891 (commit 690f3adc), ten live browser checks; evidence: step-3-first-live-tests.log. The full Step 3 checkpoint remains open until the final batch is verified live.
 
-Step 3, final batch — light word-family cards, shared dictionary/save identity in previews and profession lists, transcript line pronunciation/meaning/save, preferred-speed preview playback and retry, and context-correct example colors. Local Pages gates, 13 browser checks, 15 targeted component tests, type checks, lint and rendered phone inspection passed. Evidence: step-3-final-gates.log, step-3-final-browser-tests.log, step-3-final-regression.log and step-3-final-local/. Final-batch live verification pending.
+Step 3, final batch — light word-family cards, shared dictionary/save identity in previews and profession lists, transcript line pronunciation/meaning/save, preferred-speed preview playback and retry, and context-correct example colors. Local Pages gates, 13 browser checks, 15 targeted component tests, type checks, lint and rendered phone inspection passed. Evidence: step-3-final-gates.log, step-3-final-browser-tests.log, step-3-final-regression.log and step-3-final-local/. Final-batch live checkpoint passed: deployment 35516537822 (commit 544c6a28), all 13 browser checks passed against https://hrezaii95.github.io/german-learning-exam/. Evidence: step-3-final-live-tests.log. Step 3 is complete; Step 4 is in progress.

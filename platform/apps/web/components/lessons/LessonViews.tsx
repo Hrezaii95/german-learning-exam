@@ -36,8 +36,8 @@ export function DashboardView({
         </p>
       </header>
 
-      <CourseDashboard/>
       <LearnerDashboard projection={projection} />
+      <CourseDashboard/>
 
       <section aria-labelledby="hubs-heading">
         <h2 id="hubs-heading">Browse by tool</h2>

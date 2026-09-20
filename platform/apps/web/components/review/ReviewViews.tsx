@@ -1,7 +1,6 @@
 "use client";
 
 import {useStudyScope} from "@/components/study/StudyScope";
-import {SavedReview} from "@/components/study/SavedReview";
 import Link from "next/link";
 import { useMemo, useRef, useState } from "react";
 import type { LearnerEvent, MissionFilters, SelectedMissionCard } from "@german-learning/learning";
@@ -75,11 +74,11 @@ export function ReviewSetup() {
   return (
     <div className="stack">
       <header className="page-header">
-        <p className="dense">Spaced review</p>
+        <p className="dense">Guided review · Lessons 1–2</p>
         <h1>Today’s mission</h1>
-        <p className="lede">Practise your selected saved items, or build a guided mission from the available exercise cards.</p>
+        <p className="lede">Build a short session of checked exercises. These guided cards cover Lessons 1–2; your saved words, phrases and concepts from all lessons live in My review.</p>
       </header>
-      <SavedReview/>
+      <div className="study-row review-paths"><Link className="study-secondary" href="/saved">My saved collection &amp; recall →</Link><Link href="/practice">Choose free practice →</Link></div>
       <section className="panel" aria-labelledby="review-setup-heading">
         <h2 id="review-setup-heading">Build mission</h2>
         <div className="hub-filter-grid">
@@ -90,7 +89,7 @@ export function ReviewSetup() {
           </label>
           <label className="hub-field">Lesson
             <select aria-label="Lesson" className="hub-input" value={lesson} onChange={(e) => setLesson(e.target.value as typeof lesson)}>
-              <option value="all">All lessons</option><option value="lesson:01">Lesson 1</option><option value="lesson:02">Lesson 2</option>
+              <option value="all">Both available lessons</option><option value="lesson:01">Lesson 1</option><option value="lesson:02">Lesson 2</option>
             </select>
           </label>
           <label className="qa-guided__option"><input type="checkbox" checked={onlyDifficult} onChange={(e) => setOnlyDifficult(e.target.checked)} /> Difficult or confusing only</label>

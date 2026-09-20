@@ -15,6 +15,7 @@ export function SavedReview() {
   const [query, setQuery] = useState("");
   const [kind, setKind] = useState("all");
   const [onlyDue, setOnlyDue] = useState(false);
+  useEffect(()=>{setOnlyDue(new URLSearchParams(window.location.search).get("due")==="1");},[]);
   const [session, setSession] = useState<string[] | null>(null);
   const [position, setPosition] = useState(0);
   const [revealed, setRevealed] = useState(false);
@@ -48,13 +49,14 @@ export function SavedReview() {
           <p className="study-eyebrow">Your personal collection</p>
           <h1>My review</h1>
           <p className="muted">
-            Choose what matters. Come back until it sticks.
+            Your saved collection and self-rated recall. Choose what matters, then review it when due.
           </p>
         </div>
         <Link className="study-secondary" href="/book">
           Back to the book →
         </Link>
       </header>
+      <p className="muted">Looking for exercises with checked answers? <Link href="/review">Open guided review</Link> or <Link href="/practice">choose free practice</Link>.</p>
       <div className="study-stats">
         <div>
           <strong>{items.length}</strong>

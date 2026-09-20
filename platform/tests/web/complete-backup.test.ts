@@ -11,11 +11,17 @@ function memoryStore(): BackupStore & { values: Map<string, string> } {
 }
 const study: StudyState = {
   ...emptyStudy(), saved: { electrician: { id: "electrician", title: "der Elektriker", meaning: "electrician", kind: "word", href: "/collections/professions/01", note: "four forms", interval: 3, due: "2026-09-24T10:00:00Z" } },
-  bookmarks: ["coursebook-74"], completedPages: ["coursebook-73"], resume: "coursebook-74",
+  bookmarks: ["coursebook-74"], completedPages: ["coursebook-73"], resume: "coursebook-74", lastLesson: 12,
   lessonSessions: { "12": { tab: "Practice", position: 1, answers: ["bin"], quizKey: "test-quiz" } }, reviewedProfessions: ["profession:01"],
 };
 
 describe("complete learning backup", () => {
+  it("preserves the current Continue lesson during merge and restores it on an older device", () => {
+    const current={...createCompleteBackup(memoryStore()),study};
+    expect(mergeBackup(current,{study:{...study,lastLesson:4}}).study?.lastLesson).toBe(12);
+    expect(mergeBackup({...current,study:emptyStudy()},{study}).study?.lastLesson).toBe(12);
+    expect(()=>parseStudy(JSON.stringify({...study,lastLesson:99}))).toThrow("Last lesson is invalid");
+  });
   it("restores saved items, notes, review dates, bookmarks, sessions, scope and preferences into an empty device", () => {
     const source = memoryStore(); const learner = emptyCompleteBackup().learner!;
     applyBackup(source, { learner: { ...learner, settings: { timezone: "Asia/Tehran", preferredAudioSpeed: 0.75 } }, study, scope: { ...defaultStudyScope(), mode: "one", lessons: [12] } });

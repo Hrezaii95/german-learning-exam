@@ -1866,3 +1866,53 @@
   width: 100%;
 }
 @media print { .study-toolbar { display:none; } }
+
+/* One compact chooser and one grouped menu at every learning breakpoint. */
+.menu-search { display:grid; gap:8px; font-weight:650; font-size:.9rem; }
+.menu-search input { width:100%; min-width:0; min-height:46px; padding:10px 12px; border:1px solid var(--border); border-radius:10px; background:white; color:var(--ink); font:inherit; }
+.mobile-menu nav { display:block; }
+.mobile-menu nav section { margin-top:20px; }
+.mobile-menu nav h3 { margin:0 0 8px; font-size:.9rem; color:var(--study-muted); }
+.mobile-menu nav section > div { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
+.mobile-menu nav a { padding:12px; min-height:68px; }
+.mobile-menu nav a[aria-current] { background:var(--study-tint); border-color:var(--study-green); }
+.sheet-chooser.sheet-mobile-switcher { display:block; margin-bottom:20px; border:1px solid var(--border); border-radius:14px; background:#fffdf8; }
+.sheet-chooser summary { padding:14px 16px; cursor:pointer; }
+.sheet-chooser summary small { display:block; font-size:.75rem; letter-spacing:.08em; color:var(--study-muted); margin-bottom:6px; }
+.sheet-chooser summary strong { display:flex; align-items:center; justify-content:space-between; gap:12px; font-size:1rem; }
+.sheet-chooser-action { flex-shrink:0; color:var(--study-green); font-size:.85rem; }
+.sheet-chooser-body { padding:0 16px 16px; }
+.sheet-chooser nav { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:4px; max-height:340px; overflow:auto; }
+.sheet-chooser nav a { padding:12px; min-height:48px; text-decoration:none; border-radius:8px; }
+.sheet-chooser nav a[aria-current] { background:var(--study-tint); font-weight:700; }
+@media(max-width:1099px) {
+  .shell-bottomnav.mobile-navigation { position:fixed; left:0; right:0; bottom:0; z-index:30; display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:2px; padding:6px 4px calc(6px + env(safe-area-inset-bottom,0px)); background:var(--nav); }
+  .mobile-navigation > a,.mobile-navigation > button { display:flex; flex-direction:column; justify-content:center; align-items:center; gap:5px; min-height:58px; padding:5px 0; color:var(--nav-ink); background:transparent; border:0; border-radius:12px; text-decoration:none; font:600 12px/1.3 var(--font-sans,system-ui); }
+  .mobile-navigation svg { width:23px; height:23px; }
+  .mobile-navigation > a[aria-current],.mobile-navigation > button[data-current] { background:#e9ddff; color:#2e1d51; }
+  .mobile-navigation > :focus-visible { outline:3px solid #ffd56b; outline-offset:-3px; }
+  .shell-main { padding-bottom:calc(88px + env(safe-area-inset-bottom,0px)); }
+  .shell-topnav { position:static; justify-content:space-between; }
+  .shell-topnav .nav-list { flex-wrap:nowrap; }
+}
+@media(max-width:520px) { .sheet-chooser nav { grid-template-columns:1fr; } }
+@media print { .sheet-chooser.sheet-mobile-switcher { display:none; } }
+.dashboard-shortcuts { gap:8px 20px; }
+.dashboard-shortcuts a { padding:10px 0; min-height:44px; }
+.dashboard-progress { border:1px solid var(--border); border-radius:14px; padding:16px; background:var(--surface); }
+.dashboard-progress > summary { cursor:pointer; font-weight:650; min-height:32px; }
+.dashboard-progress[open] > summary { margin-bottom:20px; }
+.course-map { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
+.course-map-card { padding:18px; background:var(--surface); border:1px solid var(--border); border-radius:16px; min-width:0; }
+.course-map-card[data-current] { border-color:var(--study-green); background:var(--study-tint); }
+.course-map-card h3 { margin:8px 0; font-size:1.15rem; line-height:1.4; }
+.course-map-card h3 a { color:var(--ink); text-underline-offset:4px; }
+.course-map-card > p:not(.study-eyebrow) { font-size:.9rem; color:var(--study-muted); }
+.course-map-card summary { min-height:44px; padding:10px 0; cursor:pointer; font-size:.85rem; }
+.course-map-card details p { font-size:.85rem; }
+@media(max-width:900px) { .course-map { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+.dashboard-header { margin-bottom:0; gap:8px; }
+.dashboard-header p { margin:0; }
+.studio-card--continue .studio-media { aspect-ratio:auto; height:160px; min-height:0; }
+.studio-card--continue .studio-media__image { height:160px; object-fit:cover; }
+@media(max-width:520px) { .course-map { grid-template-columns:1fr; }.studio-card--continue .studio-media,.studio-card--continue .studio-media__image { height:130px; } }

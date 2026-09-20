@@ -1,0 +1,22 @@
+
+Running 13 tests using 2 workers
+
+(node:29740) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:31048) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 tests\e2e\40-ux-readability.spec.ts:6:3 › learning cards and country rows remain readable at 320px (54.4s)
+  ok  2 tests\e2e\41-complete-backup.spec.ts:4:1 › saved study, course progress and settings survive a complete backup round trip (1.1m)
+  ok  4 tests\e2e\41-complete-backup.spec.ts:115:1 › Lesson 4 also resumes its quiz and supports an explicit restart (7.9s)
+  ok  3 tests\e2e\40-ux-readability.spec.ts:6:3 › learning cards and country rows remain readable at 390px (33.2s)
+  ok  5 tests\e2e\42-shared-learning-actions.spec.ts:5:1 › saved pronunciation speed follows word cards, original recordings and the reader (17.0s)
+  ok  7 tests\e2e\42-shared-learning-actions.spec.ts:46:1 › saving a profession in its collection is reflected on its word card and can be removed there (7.7s)
+  ok  8 tests\e2e\42-shared-learning-actions.spec.ts:58:1 › profession filters control both the displayed cards and the review pool (5.9s)
+  ok  6 tests\e2e\40-ux-readability.spec.ts:6:3 › learning cards and country rows remain readable at 768px (22.2s)
+  ok  9 tests\e2e\42-shared-learning-actions.spec.ts:83:1 › German text offers one keyboard stop per phrase and complete-phrase lookup (4.5s)
+  ok 11 tests\e2e\42-shared-learning-actions.spec.ts:100:1 › transcript lines share pronunciation, meaning and saved-review actions (9.5s)
+  ok 12 tests\e2e\42-shared-learning-actions.spec.ts:124:1 › a failed preview recording shows a useful error and can be retried (8.0s)
+  ok 10 tests\e2e\40-ux-readability.spec.ts:6:3 › learning cards and country rows remain readable at 1440px (17.8s)
+  ok 13 tests\e2e\40-ux-readability.spec.ts:22:1 › phone diagrams expose readable steps and dictionary preserves keyboard focus (4.2s)
+
+  13 passed (2.2m)

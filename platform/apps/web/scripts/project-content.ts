@@ -1,5 +1,5 @@
 import {loadDictionary} from "../lib/study/catalog";
-import { mkdirSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, renameSync, unlinkSync, writeFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { projectWordCards } from "./project-word-cards";
@@ -97,7 +97,15 @@ function main(): void {
     `Wrote optional professions: ${extraProfessions.collection.sourceRowCount} source rows, ${extraProfessions.collection.sourceFormLexemeCount} form lexemes → ${extraProfessionsOutPath}\n`,
   );
   projectWordCards();
-  writeFileSync(join(dirname(outPath),"study-dictionary.json"),JSON.stringify(loadDictionary())+"\n","utf8");
+  const dictionaryPath=join(dirname(outPath),"study-dictionary.json");
+  const temporaryPath=`${dictionaryPath}.${process.pid}.tmp`;
+  // Replace the complete artifact; Windows readers can prevent truncating an open JSON file.
+  try {
+    writeFileSync(temporaryPath,JSON.stringify(loadDictionary())+"\n",{encoding:"utf8",flag:"wx"});
+    renameSync(temporaryPath,dictionaryPath);
+  } finally {
+    if(existsSync(temporaryPath)) unlinkSync(temporaryPath);
+  }
 }
 
 try {

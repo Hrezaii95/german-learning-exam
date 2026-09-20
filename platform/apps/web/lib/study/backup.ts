@@ -56,7 +56,7 @@ export function mergeBackup(current: CompleteBackup, incoming: ImportedBackup): 
   const merged: ImportedBackup = {};
   if (incoming.study) {
     const a = incoming.study, b = current.study;
-    merged.study = { ...b, saved: { ...a.saved, ...b.saved }, bookmarks: [...new Set([...a.bookmarks, ...b.bookmarks])],
+    merged.study = { ...b, ...(b.lastLesson === undefined && a.lastLesson !== undefined ? { lastLesson: a.lastLesson } : {}), saved: { ...a.saved, ...b.saved }, bookmarks: [...new Set([...a.bookmarks, ...b.bookmarks])],
       completedPages: [...new Set([...a.completedPages, ...b.completedPages])], resume: b.resume ?? a.resume,
       lessonSessions: { ...a.lessonSessions, ...b.lessonSessions }, reviewedProfessions: [...new Set([...(a.reviewedProfessions ?? []), ...(b.reviewedProfessions ?? [])])] };
   }

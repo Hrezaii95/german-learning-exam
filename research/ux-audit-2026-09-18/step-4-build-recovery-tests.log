@@ -1,0 +1,9 @@
+
+ RUN  v3.2.7 E:/claude-cursor/side projects/German learning/platform
+
+ ✓ tests/web/deploy1r1-pages-hardening.test.ts (14 tests) 591ms
+
+ Test Files  1 passed (1)
+      Tests  14 passed (14)
+   Start at  18:19:51
+   Duration  1.32s (transform 147ms, setup 0ms, collect 187ms, tests 591ms, environment 0ms, prepare 164ms)

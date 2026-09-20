@@ -1,7 +1,8 @@
 import Link from "next/link";
-import {MobileNavigation} from "./MobileNavigation";
+import {MobileNavigation,SkipToMainContent} from "./MobileNavigation";
 import {StudyScopeControl} from "@/components/study/StudyScope";
 import {DictionaryLauncher} from "@/components/study/StudyProvider";
+import {LessonResumeTracker} from "@/components/study/LessonResumeTracker";
 import type { ReactNode } from "react";
 import {
   shellCurrentMatches,
@@ -28,7 +29,7 @@ const PRIMARY_NAV: NavItem[] = [
   { key: "listening", href: "/listening", label: "Listening", enabled: true },
   { key: "search", href: "/search", label: "Search", enabled: true },
   { key: "practice", href: "/practice", label: "Practice", enabled: true },
-  { key: "review", href: "/review", label: "Review", enabled: true },
+  { key: "review", href: "/review", label: "Guided review", enabled: true },
   // ADR-016: the course-material credit must stay reachable from every
   // ordinary learner page, so it lives in primary navigation rather than in a
   // footnote that only one route shows.
@@ -66,7 +67,9 @@ function NavItems({
   current: ShellNavCurrent;
   variant: "rail" | "top" | "bottom";
 }) {
-  const items = PRIMARY_NAV;
+  const items = variant === "top"
+    ? PRIMARY_NAV.filter(item => ["dashboard", "listening", "search"].includes(item.key))
+    : PRIMARY_NAV;
 
   return (
     <ul className="nav-list">
@@ -109,9 +112,8 @@ export function AppShell({
 }) {
   return (
     <div className="app-shell">
-      <a className="skip-link" href="#main-content">
-        Skip to main content
-      </a>
+      {current==="lessons"&&<LessonResumeTracker/>}
+      <SkipToMainContent/>
 
       <aside className="shell-rail" aria-label="Desktop navigation">
         <div className="shell-brand">
@@ -134,7 +136,7 @@ export function AppShell({
       </header>
 
       <div className="shell-workspace">
-        <main id="main-content" className="shell-main">
+        <main id="main-content" className="shell-main" tabIndex={-1}>
           <div className="study-toolbar">
             {current!=="settings"&&current!=="references"&&<StudyScopeControl/>}
             <DictionaryLauncher/>

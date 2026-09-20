@@ -98,6 +98,7 @@ export function parseStudy(raw: string | null): StudyState {
         ]
       : [];
   const lessonSessions: Record<string, LessonSession> = {};
+  if (data.lastLesson !== undefined && (!Number.isInteger(data.lastLesson) || data.lastLesson < 1 || data.lastLesson > 12)) throw new Error("Last lesson is invalid.");
   if (data.lessonSessions !== undefined) {
     if (!data.lessonSessions || typeof data.lessonSessions !== "object" || Array.isArray(data.lessonSessions)) throw new Error("Lesson progress is invalid.");
     for (const [lesson, session] of Object.entries(data.lessonSessions)) {
@@ -117,6 +118,7 @@ export function parseStudy(raw: string | null): StudyState {
     saved,
     bookmarks: pages(data.bookmarks),
     completedPages: pages(data.completedPages),
+    ...(data.lastLesson !== undefined ? { lastLesson: data.lastLesson } : {}),
     ...(data.lessonSessions !== undefined ? { lessonSessions } : {}),
     ...(data.reviewedProfessions !== undefined ? { reviewedProfessions: [...new Set(data.reviewedProfessions)] } : {}),
     resume:
