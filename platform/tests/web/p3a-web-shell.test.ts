@@ -402,8 +402,10 @@ describe("P3A shell accessibility and responsive contract", () => {
   const css = readFileSync(join(webRoot, "app/globals.css"), "utf8");
 
   it("includes skip link, landmarks, aria-current, and labelled navigation", () => {
-    expect(shell).toContain('className="skip-link"');
-    expect(shell).toContain('href="#main-content"');
+    const navigation = readFileSync(join(webRoot, "components/shell/MobileNavigation.tsx"), "utf8");
+    expect(shell).toContain("<SkipToMainContent/>");
+    expect(navigation).toContain('className="skip-link"');
+    expect(navigation).toContain('href="#main-content"');
     expect(shell).toContain('id="main-content"');
     expect(shell).toContain("<main");
     expect(shell).toContain('aria-current={isCurrent ? "page" : undefined}');
