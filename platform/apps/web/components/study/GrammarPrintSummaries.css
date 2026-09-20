@@ -1,0 +1,17 @@
+@media print {
+  :is(.collection-verbs,.questions-sheet) > :not(.sheet-print-summary) { display:none!important; }
+  .grammar-print-columns { display:grid; grid-template-columns:1fr 1fr; gap:5mm; margin:3mm 0; }
+  .grammar-print .grammar-print-columns section { break-inside:avoid; }
+  .grammar-print .grammar-print-columns p { margin:1.5mm 0; }
+  .print-verb-stem { color:#125f65; }
+  .print-verb-ending { color:#874900; background:#fff0d6; }
+  .grammar-print-rails { display:grid; grid-template-columns:1fr 1fr 1fr; gap:2mm; margin:2mm 0; }
+  .grammar-print-rails p { border:1px solid #c9c0d4; border-radius:2mm; padding:2mm; }
+  .grammar-print-rails small { display:block; font-size:8pt; margin-bottom:2mm; }
+  .grammar-print-rails b { color:#59358c; background:#eee5fa; }
+  .print-question-map { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.2mm 3mm; }
+  .print-question-map > div { display:grid; grid-template-columns:24mm 1fr; gap:.6mm 2mm; padding:1.2mm 2mm; border:1px solid #ccd4cb; border-radius:1.5mm; break-inside:avoid; font-size:8pt; }
+  .print-question-map strong { font-size:9pt; color:#874900; }
+  .print-question-map small { grid-column:1/-1; font-size:8pt; color:#40584a; }
+  .grammar-print footer { font-size:7.5pt; }
+}

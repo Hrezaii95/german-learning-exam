@@ -1,0 +1,22 @@
+.verb-anatomy { display:flex; flex-wrap:wrap; align-items:center; gap:10px; margin:24px 0 12px; }
+.verb-anatomy > div { display:grid; gap:8px; min-width:120px; padding:18px; border:1px solid #bacac2; border-radius:12px; background:#f3f5f0; }
+.verb-anatomy small,.verb-sentence-rail small { display:block; font-size:12px; line-height:1.4; }
+.verb-anatomy strong { font-size:clamp(24px,3vw,38px); line-height:1.25; }
+.verb-anatomy .verb-stem { color:#125f65; background:#e5f4f2; border-color:#73aaa7; }
+.verb-anatomy .verb-ending { color:#874900; background:#fff0d6; border-color:#cf9e56; }
+.verb-anatomy .verb-tail { color:#59358c; background:#f1eafb; }
+.verb-anatomy-note { max-width:800px; line-height:1.6; }
+.verb-sentence-rail { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin:20px 0; }
+.verb-sentence-rail > div { border:1px solid #c4cbc4; border-radius:12px; padding:18px; background:#f4f5ef; font-size:24px; }
+.verb-sentence-rail .is-verb { border-color:#9a83b7; background:#eee5fa; color:#59358c; }
+.verb-sentence-rail small { margin-bottom:10px; }
+@media screen and (max-width:600px) {
+  .verb-anatomy { display:grid; gap:8px; }
+  .verb-anatomy > span { display:none; }
+  .verb-anatomy > div { min-width:0; padding:12px; grid-template-columns:90px minmax(0,1fr); align-items:center; }
+  .verb-anatomy > div > span { grid-column:1/-1; }
+  .verb-anatomy strong { font-size:24px; }
+  .verb-sentence-rail { grid-template-columns:1fr; }
+  .verb-sentence-rail > div { display:grid; grid-template-columns:100px 1fr; align-items:center; gap:12px; padding:14px; font-size:21px; }
+  .verb-sentence-rail small { margin:0; }
+}

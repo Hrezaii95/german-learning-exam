@@ -22,16 +22,34 @@
       "exactText": "Ich lerne jeden Tag Deutsch."
     },
     {
+      "publicRelativePath": "audio/collection-sheet/0393303c4ffc5c488d88.mp3",
+      "sha256": "7ab8bc0dcbbf6c1d1265ca901df21e07820183907e60a1547324264bebdf653e",
+      "bytes": 15984,
+      "exactText": "Du arbeitest als Lehrer."
+    },
+    {
       "publicRelativePath": "audio/collection-sheet/0886563561d7d30d973e.mp3",
       "sha256": "163febf5502565d5b6006e0d238cdd6bce86b06ebf9753c280239c7fe6e4c28c",
       "bytes": 11376,
       "exactText": "ihr plant"
     },
     {
+      "publicRelativePath": "audio/collection-sheet/08e1c19de47afa9f614a.mp3",
+      "sha256": "42e1f14252b5872e872605349de27aca3b460159ece54b5c9305fe24686ad6c7",
+      "bytes": 13392,
+      "exactText": "Er hat zwei Kinder."
+    },
+    {
       "publicRelativePath": "audio/collection-sheet/08f271887ce94707da82.mp3",
       "sha256": "2ac650652245f932acad30da20e2dac5be29d35dba91d86de33f3c998e9b5975",
       "bytes": 7776,
       "exactText": "M"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/0b8bb0ae2a62b1b2140c.mp3",
+      "sha256": "47a99f16bd0ad69c23f4fdc52f3bbe90e934fe94aba4fc99af30819297fdd90c",
+      "bytes": 19440,
+      "exactText": "Ja, ich bin nach Hamburg gefahren."
     },
     {
       "publicRelativePath": "audio/collection-sheet/0c943625493e78ee73e7.mp3",
@@ -134,6 +152,12 @@
       "sha256": "700b883e2c500d21b995a53b9c8022f8eafbda23101aeea27f37b29567cffd6f",
       "bytes": 16128,
       "exactText": "Mia ist meine Enkelin."
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/1d08327fd8de2c657e46.mp3",
+      "sha256": "97b1c765e249fa013caedb214f5b402a5833b61072ab5c7feb9eab489caea1f1",
+      "bytes": 15264,
+      "exactText": "Ja, das ist ein Buch."
     },
     {
       "publicRelativePath": "audio/collection-sheet/1eaceba81ec0b2c7a5e1.mp3",
@@ -310,6 +334,12 @@
       "exactText": "er shoppt"
     },
     {
+      "publicRelativePath": "audio/collection-sheet/36de95b8ab057e02026e.mp3",
+      "sha256": "97e99250c5b8a5800e772574936fa68c35f9650fc1b64fddf6b04a67866c0b35",
+      "bytes": 25344,
+      "exactText": "Ja, der Stuhl kostet 59 Euro."
+    },
+    {
       "publicRelativePath": "audio/collection-sheet/384be15ce315128433c9.mp3",
       "sha256": "42d513b58eb095559909dea325adc15ab6e608c72d1a73da2928e18785a6c6e1",
       "bytes": 11232,
@@ -398,6 +428,12 @@
       "sha256": "46fd0f4d4be15a1ddd3dc8ae42b3aa097f750cc256e21abb74526f9eed733c9c",
       "bytes": 10656,
       "exactText": "mein Vater"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/47b24165b37282f9a892.mp3",
+      "sha256": "91c8d35f9b01914013618d782014efdab3511da4e3a5e22e7906aef47f71d5cd",
+      "bytes": 17280,
+      "exactText": "Ja, ich wohne in Berlin."
     },
     {
       "publicRelativePath": "audio/collection-sheet/47fb541d84de6710fe56.mp3",
@@ -520,6 +556,12 @@
       "exactText": "Kommen Sie aus dem Iran?"
     },
     {
+      "publicRelativePath": "audio/collection-sheet/59ee1b30703b567b127f.mp3",
+      "sha256": "fcbcbe7d83e9bd18d56c06a90340ecee5fd4d6bbedd73d69a30c17f853bf8036",
+      "bytes": 16992,
+      "exactText": "Ja, ich kann gut schwimmen."
+    },
+    {
       "publicRelativePath": "audio/collection-sheet/5c62e091b8c0565f1baf.mp3",
       "sha256": "cbde32c7cf16b34660dd5fb4257f291bb57086462f1c3820a28c0d0fee809c7d",
       "bytes": 8064,
@@ -562,6 +604,12 @@
       "exactText": "Wie viele?"
     },
     {
+      "publicRelativePath": "audio/collection-sheet/6521c5a86f0bae062fcd.mp3",
+      "sha256": "e8bae43796660b9da596b96f5c32f828eeb62ff0fb741023d8233f14ac6b8cf7",
+      "bytes": 12384,
+      "exactText": "Du sprichst Deutsch."
+    },
+    {
       "publicRelativePath": "audio/collection-sheet/659cdada059d7e74f538.mp3",
       "sha256": "4f90663368510c4e5def3548065b05e4e870c6b2847acaf97739451c504ece9c",
       "bytes": 11232,
@@ -590,6 +638,12 @@
       "sha256": "aaab10d90d05028d49faf0881bf5b2fd4062d7cc86af812d3f66235635f6a47f",
       "bytes": 20160,
       "exactText": "Ich spreche Persisch und ein bisschen Deutsch."
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/6add7faa42f6fc02d73c.mp3",
+      "sha256": "10aaeb72ec728d6775ef4010353a0830eb1abd2d79cc047b3f935d238a5de488",
+      "bytes": 20592,
+      "exactText": "Ja, ich habe gestern gearbeitet."
     },
     {
       "publicRelativePath": "audio/collection-sheet/6b23c0d5f35d1b11f9b6.mp3",
@@ -626,6 +680,12 @@
       "sha256": "83857e3071068b0d263c58425f10b8c1cb7766430b69c32ebc92dd0a021a55a1",
       "bytes": 15120,
       "exactText": "Martin ist mein Vater."
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/6fef6e8e6d33532eed19.mp3",
+      "sha256": "ab1536414bccd88d013ba59f8c2669d14bff317a2129c592a9809acefd34aa7b",
+      "bytes": 19728,
+      "exactText": "Ja, am Samstag habe ich Zeit."
     },
     {
       "publicRelativePath": "audio/collection-sheet/70ee61ac1afaed7a2889.mp3",
@@ -808,6 +868,12 @@
       "exactText": "sie planen"
     },
     {
+      "publicRelativePath": "audio/collection-sheet/90f56cace49649bcf776.mp3",
+      "sha256": "0f1e352067156a5fcd532aeefb7cb4fb674d545ad985f3bca91ae1f3ff3b1db9",
+      "bytes": 14112,
+      "exactText": "Wir leben zusammen."
+    },
+    {
       "publicRelativePath": "audio/collection-sheet/913d7314efae6e928bc4.mp3",
       "sha256": "338e26b5e3521a9d72d9f2cca89a831e885352af3dfcd7661ec9587e7ba1c0a7",
       "bytes": 7776,
@@ -892,6 +958,12 @@
       "exactText": "Wie?"
     },
     {
+      "publicRelativePath": "audio/collection-sheet/a47f56198dd760d41362.mp3",
+      "sha256": "186f39b1de59e98f7e73391acd975565ebd5fccd98746833982a97a8c71efa74",
+      "bytes": 18864,
+      "exactText": "Ja, ich brauche einen Stift."
+    },
+    {
       "publicRelativePath": "audio/collection-sheet/a6f82f5fb3cd79356acf.mp3",
       "sha256": "394c89bcecebe96427f06d42b7dd403019b2f68b920caf866690f85d27fbafee",
       "bytes": 15120,
@@ -950,6 +1022,12 @@
       "sha256": "54946e2a321d2dd8425a2d8c3953250e11a7303b2fb518055086975d999976f9",
       "bytes": 9648,
       "exactText": "er hat"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/b13195149fe55e7ea3a5.mp3",
+      "sha256": "e852e44d814b3da1b48adfb5991da0ea6ef39777b5975a9175a1d1f98720248d",
+      "bytes": 13680,
+      "exactText": "Ihr wohnt in Berlin."
     },
     {
       "publicRelativePath": "audio/collection-sheet/b180f3f24ba949b86af1.mp3",
@@ -1096,6 +1174,12 @@
       "exactText": "du sammelst"
     },
     {
+      "publicRelativePath": "audio/collection-sheet/d7cb2272d0930ca7d6be.mp3",
+      "sha256": "686f3b99e34e12daa62439536bc2f3901dbb2c0b2ef0d758e01f351cb039124f",
+      "bytes": 13968,
+      "exactText": "Ja, ich mag Tee."
+    },
+    {
       "publicRelativePath": "audio/collection-sheet/d9c5fd8c086dec2d8873.mp3",
       "sha256": "57d7f7e15101734118aceabf020c9d18042242a672140829b265706b0583a5ee",
       "bytes": 9936,
@@ -1240,6 +1324,12 @@
       "exactText": "du lebst zusammen"
     },
     {
+      "publicRelativePath": "audio/collection-sheet/ef383d97869bd613820a.mp3",
+      "sha256": "d517e305919f9dddd30e265798468c822249514626e31e8972fd614b35a8a28c",
+      "bytes": 13248,
+      "exactText": "Sie sind Ärztin."
+    },
+    {
       "publicRelativePath": "audio/collection-sheet/efb45ea1a0c33eadae8f.mp3",
       "sha256": "4c511705c63475fa2b171214cce12d3a0ef0240173c91c7fac8390be0860e5f6",
       "bytes": 15552,
@@ -1316,6 +1406,12 @@
       "sha256": "458b024fa19ee518ee9aa3ffb769b31030a587f74284a89a5ce18fd0e10d7098",
       "bytes": 14112,
       "exactText": "sie leben zusammen"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/fa72bf475dc55dcfe70b.mp3",
+      "sha256": "66b290c47673eca80b92b02434d20a84061347020df51f2b004b2525af8ec339",
+      "bytes": 19584,
+      "exactText": "Ja, ich komme um acht Uhr an."
     },
     {
       "publicRelativePath": "audio/collection-sheet/fa7c2c0588e3fb9ad5b9.mp3",

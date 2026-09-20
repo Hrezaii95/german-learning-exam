@@ -1,0 +1,38 @@
+[
+  {
+    "file": "countries-A4.pdf",
+    "pages": 2,
+    "characters": 4136,
+    "matchesLocalText": true
+  },
+  {
+    "file": "countries-Letter.pdf",
+    "pages": 2,
+    "characters": 4136,
+    "matchesLocalText": true
+  },
+  {
+    "file": "home-A4.pdf",
+    "pages": 1,
+    "characters": 1897,
+    "matchesLocalText": true
+  },
+  {
+    "file": "home-Letter.pdf",
+    "pages": 1,
+    "characters": 1897,
+    "matchesLocalText": true
+  },
+  {
+    "file": "people-A4.pdf",
+    "pages": 1,
+    "characters": 1320,
+    "matchesLocalText": true
+  },
+  {
+    "file": "people-Letter.pdf",
+    "pages": 1,
+    "characters": 1320,
+    "matchesLocalText": true
+  }
+]

@@ -1,0 +1,180 @@
+
+> german-learning-platform@0.0.0 gates:pages
+> npm run build:pages && npm run smoke:pages && npm run audit:learner-language && npm run audit:offline && npm run audit:word-cards -- --export
+
+
+> german-learning-platform@0.0.0 build:pages
+> npm run build:pages -w @german-learning/web
+
+
+> @german-learning/web@0.1.0 build:pages
+> tsx scripts/build-pages.ts
+
+[build:pages] Isolated proxy.ts → proxy.ts.pages-disabled
+[build:pages] Patched dynamicParams=false on 7 routes
+Wrote learner projection: 2 lessons, 23 activities → E:\claude-cursor\side projects\German learning\platform\apps\web\generated\learner-projection.json
+Wrote learner hubs: 6 hubs (vocabulary=83, verbs=10, grammar=11, phrases=71, listening=15, concepts=0) → E:\claude-cursor\side projects\German learning\platform\apps\web\generated\learner-hubs.json
+Wrote learner search: 215 documents → E:\claude-cursor\side projects\German learning\platform\apps\web\generated\learner-search.json
+Wrote learner details: 119 published records (3 rich representatives) → E:\claude-cursor\side projects\German learning\platform\apps\web\generated\learner-details.json
+Wrote learner enrichment: 23 activities, 26 profession cards → E:\claude-cursor\side projects\German learning\platform\apps\web\generated\enrichment\learner-content-enrichment.json
+Wrote optional professions: 48 source rows, 102 form lexemes → E:\claude-cursor\side projects\German learning\platform\apps\web\generated\learner-extra-professions.json
+Word families: 591 cards; 543 vocabulary entries, 101 numbers, 30 spelling cards, 48 teacher rows.
+▲ Next.js 16.3.4 (webpack)
+✓ Running next.config.ts took 49ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 7.3s
+  Running TypeScript ...
+  Finished TypeScript in 5.5s ...
+  Collecting page data using 7 workers ...
+  Generating static pages using 7 workers (0/1595) ...
+  Generating static pages using 7 workers (398/1595)
+  Generating static pages using 7 workers (797/1595)
+  Generating static pages using 7 workers (1196/1595)
+✓ Generating static pages using 7 workers (1595/1595) in 28.8s
+  Finalizing page optimization ...
+  Collecting build traces ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /book
+├ ○ /cheat-sheets
+├ ○ /cheat-sheets/conversation
+├ ○ /cheat-sheets/food
+├ ○ /cheat-sheets/hobbies
+├ ○ /cheat-sheets/home
+├ ○ /cheat-sheets/journeys
+├ ○ /cheat-sheets/numbers
+├ ○ /cheat-sheets/objects
+├ ○ /cheat-sheets/office
+├ ○ /cheat-sheets/past
+├ ○ /cheat-sheets/people
+├ ○ /cheat-sheets/questions
+├ ○ /cheat-sheets/time
+├ ○ /cheat-sheets/travel
+├ ○ /cheat-sheets/verbs
+├ ○ /collections/professions
+├   /collections/professions/[sourceRow]
+│ ├ ● /collections/professions/01
+│ ├ ● /collections/professions/02
+│ ├ ● /collections/professions/03
+│ └ ● [+45 more paths]
+├ ○ /concepts
+├ ○ /conversation
+├   /conversation/[entityId]
+│ └ ● /conversation/id-71613a70726f66657373696f6e2d63617375616c2d6d61696e
+├ ○ /grammar
+├   /grammar/[entityId]
+│ ├ ● /grammar/id-6772616d3a6175732d6f726967696e2d6c31
+│ ├ ● /grammar/id-6772616d3a64752d7369652d72656769737465722d6c31
+│ ├ ● /grammar/id-6772616d3a66756c6c2d70726573656e742d706572736f6e2d666f726d732d6c32
+│ └ ● [+8 more paths]
+├ ○ /hubs
+├ ○ /icon.svg
+├ ○ /lessons
+├   /lessons/[lessonSegment]
+│ ├ ● /lessons/01
+│ ├ ● /lessons/02
+│ ├ ● /lessons/03
+│ └ ● [+9 more paths]
+├   /lessons/[lessonSegment]/activity/[activityId]
+│ ├ ● /lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d616c7068616265742d6c697374656e2d7370656c6c
+│ ├ ● /lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d636865636b706f696e742d73756d6d617279
+│ ├ ● /lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d6772656574696e672d6661726577656c6c2d6d61746368
+│ └ ● [+20 more paths]
+├ ○ /listening
+├ ○ /phrases
+├   /phrases/[entityId]
+│ ├ ● /phrases/id-71613a6167652d63617375616c
+│ ├ ● /phrases/id-71613a6167652d666f726d616c
+│ ├ ● /phrases/id-71613a6964656e74697479
+│ └ ● [+12 more paths]
+├ ○ /practice
+├   /practice/[gameId]
+│ ├ ● /practice/flashcards
+│ ├ ● /practice/picture-word-match
+│ ├ ● /practice/article-choice
+│ └ ● [+4 more paths]
+├ ○ /references
+├ ○ /review
+├ ○ /review-audio
+├ ○ /review/session/today
+├ ○ /saved
+├ ○ /search
+├ ○ /settings
+├ ○ /verbs
+├   /verbs/[entityId]
+│ ├ ● /verbs/id-766572623a617262656974656e
+│ ├ ● /verbs/id-766572623a686162656e
+│ ├ ● /verbs/id-766572623a6865697373656e
+│ └ ● [+7 more paths]
+├ ○ /vocabulary
+└   /vocabulary/[entityId]
+  ├ ● /vocabulary/w001
+  ├ ● /vocabulary/w002
+  ├ ● /vocabulary/w003
+  └ ● [+1427 more paths]
+
+
+○  (Static)  prerendered as static content
+●  (SSG)     prerendered as static HTML (uses generateStaticParams)
+
+[build:pages] Normalized 1592 Windows RSC segment filenames
+[build:pages] Found Next-generated 404.html
+[offline] v578cdca05ca49204 precache 150 files, 36322 kB (html=33/30446 kB script=92/5303 kB style=19/214 kB font=1/344 kB icon=4/14 kB manifest=1/1 kB)
+[build:pages] OK → out/ with .nojekyll + 404.html
+[build:pages] Restored dynamicParams literals (7)
+[build:pages] Restored proxy.ts
+
+> german-learning-platform@0.0.0 smoke:pages
+> npm run smoke:pages -w @german-learning/web
+
+
+> @german-learning/web@0.1.0 smoke:pages
+> node scripts/smoke-pages.mjs
+
+[smoke:pages] Manifest OK: 105 routes (lessons=2, activities=23, details=3, games=7)
+[smoke:pages] Scanned 27807 out files for leaks
+[smoke:pages] HTTP OK on 15 routes + asset + 404 + game markers
+[smoke:pages] ALL CHECKS PASS
+
+> german-learning-platform@0.0.0 audit:learner-language
+> node ../tools/audit-learner-language.mjs
+
+{
+  "reportPath": "research\\release-evidence\\learner-language-audit.json",
+  "scannedFiles": 1595,
+  "distinctFindings": 0,
+  "gate": "pass"
+}
+
+> german-learning-platform@0.0.0 audit:offline
+> node ../tools/audit-offline-export.mjs
+
+{
+  "reportPath": "research\\release-evidence\\offline-export-audit.json",
+  "gate": "pass",
+  "version": "578cdca05ca49204",
+  "precacheCount": 150,
+  "precacheBytes": 37194113,
+  "precachedNavigationRoutes": 32
+}
+
+> german-learning-platform@0.0.0 audit:word-cards
+> node ../tools/audit-word-cards.mjs --audio --export
+
+{
+  "checkedAt": "2026-09-20T18:41:28.863Z",
+  "passed": true,
+  "cardCount": 591,
+  "vocabularyEntries": 543,
+  "numbers": 101,
+  "spellingCards": 30,
+  "teacherRows": 48,
+  "uniqueRoutes": 722,
+  "formCount": 989,
+  "formsWithAudio": 989,
+  "exportedRoutes": 722,
+  "failures": []
+}

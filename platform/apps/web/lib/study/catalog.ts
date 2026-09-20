@@ -10,8 +10,10 @@ import { phraseKey } from "./lookup";
 import { countries, countryName, countryFrom, countryOriginMeaning, countryGroups, languageMeanings } from "./countries";
 import { bookTranscript } from "../audio/listening-transcripts";
 import { homeWords, homeLabels, homePhrases } from "./home";
-import {grammarPatterns,conversationFrames,verbModels,spokenVerb} from "./sheet-topics";
+import {grammarPatterns,conversationFrames,spokenVerb} from "./sheet-topics";
 import {questionWords,questionBuilders,questionReplyCases,questionWordLessons} from "./questions";
+import {builderReply} from "./question-learning";
+import {learningVerbs,modelTags} from "./verb-learning";
 import {studyUnits} from "./course-lessons";
 import {tagsForLesson} from "./scope";
 import {objectModels,objectSentences,materialModels} from "./object-sheet";
@@ -64,7 +66,8 @@ export function loadCountrySpeech(): Record<string,string> {
   return JSON.parse(readFileSync(join(generated,"country-speech.json"),"utf8")) as Record<string,string>;
 }
 export function loadDictionary(): DictionaryEntry[] {
-  const entries: DictionaryEntry[] = loadWordCards().cards.map((card) => ({
+  const wordCards=loadWordCards().cards;
+  const entries: DictionaryEntry[] = wordCards.map((card) => ({
     id: card.id,
     ...(card.studyTags?{studyTags:card.studyTags}:{}),
     de: card.rows.map((r) => r.singular.text).join(" / "),
@@ -228,11 +231,17 @@ export function loadDictionary(): DictionaryEntry[] {
   };
   for(const word of questionWords){const tags:ReturnType<typeof tagsForLesson>={lessons:questionWordLessons(word),concepts:["questions","grammar"],source:word.lesson?"course":"study-extra"};addQuestion(word.id,word.word,word.meaning,tags);addQuestion(`${word.id}-ask`,word.question,word.translation,tags,`question-${word.id}`);addQuestion(`${word.id}-answer`,word.answer,word.answerMeaning,tags);}
   for(const builder of questionBuilders){for(const [i,parts] of [builder.w,builder.formal,builder.yes,builder.yesFormal].entries())addQuestion(`${builder.id}-${i}`,parts.join(" "),i<2?builder.meaning:builder.yesMeaning,tagsForLesson(builder.lesson),`question-builder-${builder.id}-${i===1||i===3}-${i>=2}`);}
+  for(const builder of questionBuilders)addQuestion(`${builder.id}-full-yes`,builderReply(builder.answer,true),`Yes. ${builder.answerMeaning}`,tagsForLesson(builder.lesson));
   for(const [i,reply] of questionReplyCases.entries()){addQuestion(`reply-${i}`,reply.question,reply.translation);addQuestion(`reply-${i}-yes`,reply.yes,reply.yesMeaning);addQuestion(`reply-${i}-no`,reply.no,reply.noMeaning);}
   for(const [i,[de,en]] of [["Wer kommt aus dem Iran?","Who comes from Iran?"],["Welche Sprache sprichst du?","Which language do you speak?"],["Welcher Tisch ist schön?","Which table is beautiful?"],["Welches Buch ist das?","Which book is that?"]].entries())addQuestion(`example-${i}`,de!,en!);
   for(const p of grammarPatterns) entries.push({id:`sheet-pattern-${p.id}`,de:p.de,en:p.en,forms:[p.de],example:p.de,translation:p.en,href:`/cheat-sheets/verbs#pattern-${p.id}`,audio:collectionSpeech[p.de]??null,kind:"sentence",saveId:`sheet-pattern-${p.id}`});
   for(const f of conversationFrames){for(const [i,de] of [f.casual,f.formal,f.answer,...(f.formalAnswer?[f.formalAnswer]:[])].entries()){if(entries.some(e=>e.de===de))continue;const en=i<2?f.en:f.answerEn;entries.push({id:`sheet-conversation-${f.id}-${i}`,de,en,forms:[de],example:de,translation:en,href:"/cheat-sheets/conversation#sheet-workshop",audio:collectionSpeech[de]??null,kind:"phrase"});}}
-  for(const v of verbModels){const entry=entries.find(e=>e.forms.includes(v.verb));if(entry)entry.forms.push(...v.forms,...v.forms.map((f,i)=>spokenVerb(i,f)));}
+  for(const model of learningVerbs){
+    const forms=[...model.forms,...model.forms.map((form,index)=>spokenVerb(index,form))];
+    const entry=entries.find(item=>item.forms.includes(model.verb));
+    if(entry)entry.forms=[...new Set([...entry.forms,...forms])];
+    else entries.push({id:`verb-model-${model.verb.replace(/\s+/gu,"-")}`,de:model.verb,en:model.meaning,forms,example:spokenVerb(0,model.forms[0]!),translation:"",href:`/cheat-sheets/verbs#verb-${encodeURIComponent(model.verb)}-0`,audio:collectionSpeech[spokenVerb(0,model.forms[0]!)]??null,kind:"word",studyTags:modelTags(model,wordCards)});
+  }
   return entries;
 }
 export function loadCollectionSpeech():Record<string,string>{return JSON.parse(readFileSync(join(generated,"collection-speech.json"),"utf8")) as Record<string,string>;}
