@@ -62,7 +62,7 @@ export function CountryCheatSheet({ speech, cardLinks }: { speech: Record<string
       <div className="country-gate-map">
         {groups.map(group => <div key={group} className={`country-gate study-tone-${group}`}>
           <small>{countryGroups[group].label}</small>
-          <div className="country-gate-path" aria-label={`${countryGroups[group].example} becomes aus ${countryGroups[group].after}`}>
+          <div role="group" className="country-gate-path" aria-label={`${countryGroups[group].example} becomes aus ${countryGroups[group].after}`}>
             <b>{group === "neuter" ? "∅" : group === "male" ? "der" : "die"}</b><span aria-hidden="true">→</span><strong>{countryGroups[group].from}</strong>
           </div>
           <p lang="de">{countryGroups[group].from} {group === "neuter" ? "Deutschland" : group === "female" ? "Schweiz" : group === "male" ? "Iran" : "USA"}</p>

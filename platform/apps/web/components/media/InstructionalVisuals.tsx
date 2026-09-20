@@ -139,7 +139,7 @@ function GreetingTimelineVisual() {
           </li>
         ))}
       </ol>
-      <div className="visual-legend" aria-label="Flexible greeting and farewell cues">
+      <div role="group" className="visual-legend" aria-label="Flexible greeting and farewell cues">
         <Cue tone="question"><German>Hallo</German> · flexible greeting</Cue>
         <Cue tone="answer"><German>Tschüs</German> · casual farewell</Cue>
         <Cue tone="neutral"><German>Auf Wiedersehen</German> · formal farewell</Cue>
@@ -351,7 +351,7 @@ export function NounSystemVisual({ detail }: { detail: LearnerVocabularyDetail }
 
 function RuleLegend() {
   return (
-    <div className="visual-legend" aria-label="Verb pattern colour key">
+    <div role="group" className="visual-legend" aria-label="Verb pattern colour key">
       <Cue tone="regular">REG · regular stem / ending</Cue>
       <Cue tone="special">SPELL · spelling-sensitive form</Cue>
       <Cue tone="irregular">IRR · learn the whole form</Cue>
@@ -387,7 +387,7 @@ export function VerbPatternVisual({ detail }: { detail: LearnerVerbDetail }) {
               {irregular ? (
                 <Cue tone="irregular"><German>{row.form}</German></Cue>
               ) : (
-                <span className="verb-build-map__word" aria-label={`${row.form}: stem ${split.stem}${split.ending ? `, ending ${split.ending}` : ""}`}>
+                <span role="group" className="verb-build-map__word" aria-label={`${row.form}: stem ${split.stem}${split.ending ? `, ending ${split.ending}` : ""}`}>
                   <Cue tone="regular"><German>{split.stem}</German></Cue>
                   {split.ending ? <Cue tone={special ? "special" : "regular"}><German>{split.ending}</German></Cue> : null}
                 </span>
@@ -411,7 +411,7 @@ export function QuestionAnswerFlowVisual({ detail }: { detail: LearnerQaDetail }
       summary="The question travels to the listener; an answer pattern returns. Switch roles after one complete exchange."
       kind={`qa-${detail.id.replace(":", "-")}`}
     >
-      <div className="question-build" aria-label={`Question structure for ${detail.question.realization}`}>
+      <div role="group" className="question-build" aria-label={`Question structure for ${detail.question.realization}`}>
         {questionTokens.map((token, index) => (
           <span key={`${token}-${index}`}>
             <small>{index === 0 ? "question opening" : finiteVerbForms.has(token.replace(/[?.,!]$/u, "")) ? "finite verb" : "question element"}</small>
@@ -423,7 +423,7 @@ export function QuestionAnswerFlowVisual({ detail }: { detail: LearnerQaDetail }
         <div className="dialogue-flow__speaker" aria-hidden="true">A</div>
         <div className="dialogue-flow__bubble" data-role="question"><span>ask</span><German>{detail.question.realization}</German></div>
         <span className="dialogue-flow__arrow" aria-hidden="true">→</span>
-        <div className="dialogue-flow__answers" aria-label="Answer patterns">
+        <div role="group" className="dialogue-flow__answers" aria-label="Answer patterns">
           {detail.answers.map((answer) => <div key={answer.id} className="dialogue-flow__bubble" data-role="answer"><span>answer</span><German>{answer.realization}</German></div>)}
         </div>
         <div className="dialogue-flow__speaker" aria-hidden="true">B</div>

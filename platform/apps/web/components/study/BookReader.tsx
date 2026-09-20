@@ -489,7 +489,7 @@ export function BookReader({
         >
           ← Previous
         </button>
-        <div className="book-page-dots" aria-label="Nearby pages">
+        <div role="group" className="book-page-dots" aria-label="Nearby pages">
           {nearbyPages.map((p) => (
             <button
               type="button"

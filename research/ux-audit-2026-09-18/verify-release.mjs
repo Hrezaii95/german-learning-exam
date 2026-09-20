@@ -54,7 +54,10 @@ try {
             result.reviewedExceptions.push({id:'target-size',selector:'.book-hotspot',basis:'Equivalent control: every source-page hotspot has the same line and a meaning button of at least 24 by 24 pixels in Read text.',verifiedLines:originals.length,reference:'https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html'});
           }
         }
-        result.unresolvedViolations=result.accessibility.violations.map(issue=>({...issue,nodes:issue.nodes.filter(node=>!(issue.id==='target-size' && result.reviewedExceptions.length && /class="book-hotspot/.test(node.html)))})).filter(issue=>issue.nodes.length);
+        // These label warnings need a real semantic role, even when the scanner
+        // classifies them as manual-review items instead of definite violations.
+        const roleWarnings=result.accessibility.incomplete.filter(issue=>issue.id==='aria-prohibited-attr');
+        result.unresolvedViolations=[...result.accessibility.violations,...roleWarnings].map(issue=>({...issue,nodes:issue.nodes.filter(node=>!(issue.id==='target-size' && result.reviewedExceptions.length && /class="book-hotspot/.test(node.html)))})).filter(issue=>issue.nodes.length);
       } catch(error) {result.errors.push(String(error));}
       finally {await page.close();}
       results.push(result);
@@ -65,6 +68,6 @@ try {
   }));
 } finally {await browser.close();}
 const failed=results.filter(result=>result.status!==200 || result.errors.length || result.layout.scrollWidth>result.width+1 || result.unresolvedViolations.length);
-await writeFile(new URL('summary.json',output),JSON.stringify({base,checkedAt:new Date().toISOString(),routes:inventory.routes.length,views:results.length,failed:failed.map(({route,width,status,errors,accessibility})=>({route,width,status,errors,violations:accessibility?.violations.map(item=>item.id)}))},null,2)+'\n');
+await writeFile(new URL('summary.json',output),JSON.stringify({base,checkedAt:new Date().toISOString(),routes:inventory.routes.length,views:results.length,failed:failed.map(({route,width,status,errors,unresolvedViolations})=>({route,width,status,errors,violations:unresolvedViolations?.map(item=>item.id)}))},null,2)+'\n');
 console.log(`${results.length} rendered views; ${failed.length} require follow-up.`);
 if(failed.length) process.exitCode=1;

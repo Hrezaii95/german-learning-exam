@@ -499,7 +499,7 @@ export function LearnerDashboard({
         )}
       </div>
 
-      <div className="study-row dashboard-shortcuts" aria-label="Other ways to study">
+      <div role="group" className="study-row dashboard-shortcuts" aria-label="Other ways to study">
         <Link href={study?.state.resume?`/book?page=${study.state.resume}`:"/book"}>{study?.state.resume?"Resume book":"Open book"}</Link>
         <Link href="/saved">My saved collection</Link>
         <Link href="/practice">Free practice</Link>

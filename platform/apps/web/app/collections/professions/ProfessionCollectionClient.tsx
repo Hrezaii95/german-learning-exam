@@ -155,7 +155,7 @@ export function ProfessionCollectionClient({ projection, cardsByRow }: { project
             Learn a job as a family: one man, one woman, and more than one. Hear each form, notice its ending, then try it from memory.
           </p>
         </div>
-        <div className={styles.legend} aria-label="Infographic legend">
+        <div role="group" className={styles.legend} aria-label="Infographic legend">
           <span className={styles.legendMasculine}><b>M</b> masculine · der</span>
           <span className={styles.legendFeminine}><b>F</b> feminine · die</span>
           <span className={styles.legendPlural}><b>∞</b> plural · die</span>

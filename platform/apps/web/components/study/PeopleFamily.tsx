@@ -15,7 +15,7 @@ function PersonLabel({person,view}:{person:FamilyPerson;view:FamilyView}){
   return <><span className="family-name"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="10" r="6"/><path d="M5 30v-4c0-10 22-10 22 0v4M13 11h.1M19 11h.1"/></svg><b>{person.name}</b></span><span lang="de">{relation?.de??"ich"}</span><small>{relation?.en??"your viewpoint"}</small></>;
 }
 function FamilyDiagram({view,selected,onSelect}:{view:FamilyView;selected?:string;onSelect?:(person:FamilyPerson)=>void}){
-  return <div className="family-tree-diagram" aria-label={`Family connections from ${view==="anna"?"Anna’s":"Martin’s"} viewpoint`}>
+  return <div role="group" className="family-tree-diagram" aria-label={`Family connections from ${view==="anna"?"Anna’s":"Martin’s"} viewpoint`}>
     <svg className="family-connectors" viewBox="0 0 900 580" aria-hidden="true"><path d="M380 52H430M405 52V125H115V170M405 125H720V170M320 125V170M380 207H430M405 207V285H320V325M405 285H570V325M320 405V440H220V480M320 440H420V480"/></svg>
     {familyPeople.map(person=>{
       const relation=person.relations[view],props={className:`family-member study-tone-${relation?.tone??"plain"}`,style:{left:`${person.x/9}%`,top:`${person.y/5.8}%`}};
@@ -46,7 +46,7 @@ export function PeopleFamily({speech}:{speech:Record<string,string>}){
     <StudyScopeNotice tags={familyTags} subject="This family example"/>
     <div className="family-viewpoints" role="group" aria-label="Family viewpoint">{(["anna","martin"] as const).map(value=><button type="button" key={value} aria-pressed={view===value} onClick={()=>setView(value)}>I am {value==="anna"?"Anna":"Martin"}</button>)}</div>
     <FamilyDiagram view={view} selected={selected} onSelect={select}/>
-    <div className="family-mobile-tree" aria-label="Family connections, step by step">
+    <div role="group" className="family-mobile-tree" aria-label="Family connections, step by step">
       {familyConnections.map((connection,index)=><section key={index}><h3>{connection.text}</h3><div>{connection.children.map(id=>{const member=familyPeople.find(p=>p.id===id)!;return <button type="button" key={id} className={`study-tone-${member.relations[view]?.tone??"plain"}`} aria-pressed={selected===id} onClick={()=>select(member)}><PersonLabel person={member} view={view}/></button>;})}</div></section>)}
       <label>Explore anyone in the family<select aria-label="Explore a family member" value={selected} onChange={e=>select(familyPeople.find(p=>p.id===e.target.value)!)}>{familyPeople.map(member=><option key={member.id} value={member.id}>{member.name} · {member.relations[view]?.de??"ich"}</option>)}</select></label>
     </div>

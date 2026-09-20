@@ -65,7 +65,7 @@ export function LessonFour({ speech }: { speech: Record<string, string> }) {
             naturally.
           </p>
         </div>
-        <div
+        <div role="group"
           className="lesson-room"
           aria-label="Furniture vocabulary illustration"
         >
