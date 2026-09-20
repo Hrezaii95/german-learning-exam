@@ -1,0 +1,21 @@
+
+Running 12 tests using 2 workers
+
+(node:8956) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:36472) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:46:1 › saving a profession in its collection is reflected on its word card and can be removed there (4.7s)
+  ok  3 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:58:1 › profession filters control both the displayed cards and the review pool (4.3s)
+  ok  4 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:86:1 › German text offers one keyboard stop per phrase and complete-phrase lookup (3.2s)
+  ok  2 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:5:1 › saved pronunciation speed follows word cards, original recordings and the reader (13.3s)
+  ok  6 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:127:1 › a failed preview recording shows a useful error and can be retried (4.0s)
+  ok  5 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:103:1 › transcript lines share pronunciation, meaning and saved-review actions (7.9s)
+  ok  7 [chromium] › tests\e2e\52-objects-office-learning.spec.ts:3:31 › object picture, description and saved settings at 320px (5.7s)
+  ok  8 [chromium] › tests\e2e\52-objects-office-learning.spec.ts:3:31 › object picture, description and saved settings at 1440px (6.5s)
+  ok  9 [chromium] › tests\e2e\52-objects-office-learning.spec.ts:14:31 › office roles, contextual return and phone listening at 320px (6.2s)
+  ok 10 [chromium] › tests\e2e\52-objects-office-learning.spec.ts:14:31 › office roles, contextual return and phone listening at 1440px (7.3s)
+  ok 11 [chromium] › tests\e2e\52-objects-office-learning.spec.ts:25:1 › bounded sheet cards, filters, full-card return and saved phone turn (5.9s)
+  ok 12 [chromium] › tests\e2e\52-objects-office-learning.spec.ts:32:1 › object and office summaries export to A4 and Letter (3.2s)
+
+  12 passed (38.9s)

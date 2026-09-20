@@ -1,0 +1,20 @@
+
+Running 11 tests using 2 workers
+
+(node:25356) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:29780) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 [chromium] › tests\e2e\51-conversation-learning.spec.ts:3:31 › dialogue roles, saved context and alphabet audio at 320px (11.9s)
+  ok  2 [chromium] › tests\e2e\51-conversation-learning.spec.ts:3:31 › dialogue roles, saved context and alphabet audio at 1440px (12.0s)
+  ok  3 [chromium] › tests\e2e\51-conversation-learning.spec.ts:24:1 › name spelling requests German letter cues and survives missing speech support (3.3s)
+  ok  4 [chromium] › tests\e2e\51-conversation-learning.spec.ts:32:1 › conversation card filters control recall and foundation scope is explicit (4.1s)
+  ok  5 [chromium] › tests\e2e\51-conversation-learning.spec.ts:39:1 › conversation prints dialogue contrasts and all thirty letter cues (2.8s)
+  ok  6 [chromium] › tests\e2e\52-objects-office-learning.spec.ts:3:31 › object picture, description and saved settings at 320px (6.5s)
+  ok  7 [chromium] › tests\e2e\52-objects-office-learning.spec.ts:3:31 › object picture, description and saved settings at 1440px (7.3s)
+  ok  8 [chromium] › tests\e2e\52-objects-office-learning.spec.ts:14:31 › office roles, contextual return and phone listening at 320px (6.4s)
+  ok  9 [chromium] › tests\e2e\52-objects-office-learning.spec.ts:14:31 › office roles, contextual return and phone listening at 1440px (8.2s)
+  ok 10 [chromium] › tests\e2e\52-objects-office-learning.spec.ts:24:1 › bounded sheet cards, filters, full-card return and saved phone turn (7.2s)
+  ok 11 [chromium] › tests\e2e\52-objects-office-learning.spec.ts:31:1 › object and office summaries export to A4 and Letter (4.4s)
+
+  11 passed (43.3s)

@@ -9,6 +9,17 @@ import {wordStudyTags} from "./tags";
 
 export type RecallQuestion = { id:string; prompt:string; options:string[]; answers:string[]; answerText:string; explanation:string; item:SavedItem };
 
+export function wordRecallQuestions(cards:WordCard[],allCards:WordCard[]):RecallQuestion[]{
+ return cards.slice(0,8).flatMap((card,index)=>{
+  const row=card.rows[0];if(!row)return [];
+  const correct=row.singular.text,article=correct.match(/^(der|die|das) /)?.[1];
+  const candidates=[...allCards.filter(other=>other.category===card.category),...allCards];
+  const options=article?["der","die","das"]:[...new Set([correct,...candidates.flatMap(other=>other.rows.map(row=>row.singular.text))])].slice(0,4);
+  options.push(...options.splice(0,index%options.length));
+  return [{id:`word-${card.id}`,prompt:article?`___ ${correct.slice(article.length+1)} · ${row.meaning}`:`Say it in German: ${row.meaning||card.title}`,options,answers:[article??correct],answerText:correct,explanation:card.tip||row.usage,item:savedWordCard(card)}];
+ });
+}
+
 export function savedCountry(country:Country,dictionary:DictionaryEntry[]=[],speech:Record<string,string>={}):SavedItem {
   const title=`Ich komme ${countryFrom(country)}.`;
   return {id:`country-${country.id}`,title,meaning:`${countryOriginMeaning(country)} ${countryGroups[country.group].label}. Language examples: ${country.languages.join(", ")}.`,kind:"concept",href:`/cheat-sheets#country-${country.id}`,studyTags:countryStudyTags(country,dictionary),audio:speech[title]??null};

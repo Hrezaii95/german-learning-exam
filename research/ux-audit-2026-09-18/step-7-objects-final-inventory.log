@@ -1,0 +1,17 @@
+
+ RUN  v3.2.7 E:/claude-cursor/side projects/German learning/platform
+
+ ✓ tests/web/object-learning.test.ts (6 tests) 1431ms
+   ✓ lesson sheet card recall > resolves exact description and phone clips, with extra shape words labelled honestly  1360ms
+ ✓ tests/web/question-cheatsheet.test.ts (6 tests) 1544ms
+   ✓ question patterns and learning support > makes the new whole-question and reply meanings available in the dictionary  1413ms
+ ✓ tests/web/collection-cheatsheets.test.ts (10 tests) 2682ms
+   ✓ four connected learning sheets > agrees with the canonical 0–100 vocabulary  329ms
+   ✓ four connected learning sheets > covers all first-four-lesson family entries and preserves source card identities  804ms
+   ✓ four connected learning sheets > resolves new full sentences and inflected verbs in the dictionary  955ms
+   ✓ four connected learning sheets > ships exact audio with verified manifest hashes  573ms
+
+ Test Files  3 passed (3)
+      Tests  22 passed (22)
+   Start at  23:29:26
+   Duration  4.33s (transform 1.07s, setup 0ms, collect 2.79s, tests 5.66s, environment 1ms, prepare 605ms)

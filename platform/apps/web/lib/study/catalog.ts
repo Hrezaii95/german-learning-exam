@@ -17,6 +17,8 @@ import {learningVerbs,modelTags} from "./verb-learning";
 import {conversationBookmark,conversationTags} from "./conversation-learning";
 import {studyUnits} from "./course-lessons";
 import {tagsForLesson} from "./scope";
+import {officeBookmark,defaultObjectSettings,objectBookmark,objectDescription,objectMaterials,objectShapes} from "./object-learning";
+import {colourSwatches} from "./object-sheet";
 import {objectModels,objectSentences,materialModels} from "./object-sheet";
 import {officeModels,officeSentence,officeMeaning,phoneSteps,type OfficeMode} from "./office-sheet";
 import {hobbyModels,hobbyPeople,abilityLevels,frequencyWords,abilitySentence,abilityMeaning,frequencySentence,frequencyMeaning} from "./hobbies-sheet";
@@ -93,18 +95,23 @@ export function loadDictionary(): DictionaryEntry[] {
     const entry = entries.find((item) => item.id === word.id)!;
     entry.forms = [...entry.forms, ...(verb?.forms ?? [])];
   }
-  const speech=loadStudySpeech();
-  const addStudySentence=(id:string,de:string,en:string,lesson:number,href:string,saveId?:string)=>entries.push({id,de,en,forms:[de],example:"",translation:"",href,audio:speech[de]??null,kind:"sentence",studyTags:tagsForLesson(lesson),...(saveId?{saveId}:{})});
+  const speech={...loadCollectionSpeech(),...loadStudySpeech()};
+  const addStudySentence=(id:string,de:string,en:string,lesson:number,href:string,saveId?:string,source:"course"|"study-extra"="course")=>entries.push({id,de,en,forms:[de],example:"",translation:"",href,audio:speech[de]??null,kind:"sentence",studyTags:{...tagsForLesson(lesson),source},...(saveId?{saveId}:{})});
   objectModels.forEach((m,i)=>{
     const material=materialModels.find(row=>row[0]===m.material)?.[1]??m.material;
     const colours:Record<string,string>={braun:"brown",blau:"blue",schwarz:"black",grün:"green",grau:"grey"};
     const meanings=[`This is a ${m.en}.`,`This is not a ${m.en}.`,`The ${m.en} is made of ${material}.`,`It is ${colours[m.colour]}.`];
-    objectSentences(i).forEach((de,n)=>addStudySentence(`objects-${i}-${n}`,de,meanings[n]!,5,"/cheat-sheets/objects#object-lab",n<2?`l5-description-${i}-${n===1}`:undefined));
+    objectSentences(i).forEach((de,n)=>addStudySentence(`objects-${i}-${n}`,de,meanings[n]!,5,`/cheat-sheets/objects${objectBookmark(n===1?{...defaultObjectSettings((i+1)%objectModels.length),negative:true,guess:i}:defaultObjectSettings(i))}`,n<2?`l5-description-${i}-${n===1}`:undefined));
+  });
+  objectModels.forEach((_,index)=>{
+    const base=defaultObjectSettings(index);
+    const examples=[...colourSwatches.map(row=>({...base,colour:row[0]})),...objectMaterials[index]!.map(material=>({...base,material})),...objectShapes[index]!.map(shape=>({...base,shape}))];
+    for(const state of examples)for(const [lineIndex,line] of objectDescription(state).entries())if(!entries.some(entry=>entry.de===line.de))addStudySentence(`object-description-${index}-${state.colour}-${state.material}-${state.shape}-${lineIndex}`,line.de,line.en,5,`/cheat-sheets/objects${objectBookmark(state)}`,undefined,state.shape!=="plain"&&line.de.endsWith(` ${state.shape}.`)?"study-extra":"course");
   });
   officeModels.forEach((_,i)=>{
-    for(const mode of ["identify","have","need","find"] as OfficeMode[])for(const negative of [false,true])for(const plural of [false,true])addStudySentence(`office-${i}-${mode}-${negative}-${plural}`,officeSentence(i,mode,negative,plural),officeMeaning(i,mode,negative,plural),6,"/cheat-sheets/office#office-lab",`l6-office-${i}-${mode}-${negative}-${plural}`);
+    for(const mode of ["identify","have","need","find"] as OfficeMode[])for(const negative of [false,true])for(const plural of [false,true])addStudySentence(`office-${i}-${mode}-${negative}-${plural}`,officeSentence(i,mode,negative,plural),officeMeaning(i,mode,negative,plural),6,`/cheat-sheets/office${officeBookmark({index:i,mode,negative,plural})}`,`l6-office-${i}-${mode}-${negative}-${plural}`);
   });
-  phoneSteps.forEach((p,i)=>addStudySentence(`office-phone-${i}`,p.de,p.en,6,"/cheat-sheets/office#phone-lab",`l6-phone-${i}`));
+  phoneSteps.forEach((p,i)=>addStudySentence(`office-phone-${i}`,p.de,p.en,6,`/cheat-sheets/office#phone-turn-${i}`,`l6-phone-${i}`));
   hobbyModels.forEach((_,h)=>{
     hobbyPeople.forEach((_,p)=>abilityLevels.forEach((_,a)=>[false,true].forEach(q=>addStudySentence(`hobby-${h}-${p}-${a}-${q}`,abilitySentence(h,p,a,q),abilityMeaning(h,p,a,q),7,"/cheat-sheets/hobbies#ability-lab",`l7-ability-${h}-${p}-${a}-${q}`))));
     frequencyWords.forEach((_,f)=>addStudySentence(`hobby-frequency-${h}-${f}`,frequencySentence(h,f),frequencyMeaning(h,f),7,"/cheat-sheets/hobbies#frequency-lab",`l7-frequency-${h}-${f}`));

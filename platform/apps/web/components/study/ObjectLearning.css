@@ -1,0 +1,26 @@
+.object-sheet select{display:block;width:100%;padding:.75rem;border:1px solid #b9c7bf;border-radius:.65rem;margin-top:.4rem;background:white;color:#24372f;font:inherit}
+.object-picture{margin:1rem 0;padding:1rem;background:#fffdf7;border:1px solid #d6dbd3;border-radius:1rem;text-align:center}
+.object-illustration{display:block;width:100%;max-width:320px;height:220px;margin:auto}
+.object-description{display:grid;gap:.65rem;margin:1rem 0}.object-description>div{padding:.6rem .8rem;border-radius:.5rem}.object-description p{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin:.25rem 0;font-weight:600}.object-description span{font-size:.9rem}
+.office-desk{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.8rem;background:#fbf7ef;padding:1rem;border:1px solid #d6cab9;border-radius:1rem 1rem 0 0}
+.office-desk button{display:flex;flex-direction:column;align-items:center;gap:.3rem;border:1px solid #bfc9c1;border-radius:.7rem;padding:.7rem;cursor:pointer;min-width:0;font:inherit}.office-desk button[aria-pressed=true]{outline:3px solid var(--trail);outline-offset:2px}.office-illustration{width:90px;height:90px;color:var(--trail,#315d47)}.office-desk button strong{font-size:1.05rem;overflow-wrap:anywhere}.office-desk button small{font-size:.9rem}.office-plural{color:var(--gender-pl,#765194);font-size:.95rem}.office-desk-edge{height:15px;background:#b69773;border-radius:0 0 .6rem .6rem;border-bottom:4px solid #806444}
+.office-sentence{padding:1.25rem;margin-top:1.25rem;border:1px solid #bccfc1;border-radius:1rem;background:#fcfdf9}.office-role-trail{display:grid;grid-template-columns:1fr 1fr 2fr;gap:.7rem;margin:1rem 0}.office-role-trail>div{display:grid;gap:.4rem;padding:.8rem;border:1px solid #b7c4ba;border-radius:.65rem}.office-role-trail small{font-size:.8rem}.office-role-trail strong{font-size:1.6rem}.office-role-trail>div:nth-child(2){border-bottom:4px solid #44544a}.office-role-trail>div[data-gender] strong{color:var(--trail)}
+@media(max-width:650px){.office-desk{grid-template-columns:repeat(2,minmax(0,1fr));padding:.7rem}.office-role-trail{grid-template-columns:1fr 1fr}.office-role-trail>div:last-child{grid-column:1/-1}.object-illustration{height:180px}.office-role-trail strong{font-size:1.3rem}}
+@media print{.object-sheet{display:block!important;width:auto!important;padding:0!important;margin:0!important}.object-sheet>:not(.sheet-print-summary){display:none!important}.object-sheet .sheet-print-summary section{margin:0;scroll-margin:0}.object-print-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:3mm}.object-print-grid article{border:1px solid #ccd5cf;border-top:3px solid var(--trail);border-radius:2mm;padding:2mm;break-inside:avoid}.object-print-grid .object-illustration,.object-print-grid .office-illustration{width:18mm;height:18mm;margin:auto}.object-print-grid strong{font-size:11pt}.object-print-grid small{display:block;font-size:8pt}.sheet-print-summary .object-print-rules{margin:3mm 0;padding:2mm;background:#eff5ef}.sheet-print-summary .object-print-table{margin-top:3mm}.sheet-print-summary .object-print-table td,.sheet-print-summary .object-print-table th{padding:1.4mm}.object-print-grid .office-plural{font-size:9pt}}
+
+.office-desk-overview{margin:1rem 0}.office-desk-overview>summary{min-height:44px;border:1px solid #b9c7bf;border-radius:.65rem;font-weight:600;background:#fffdf7}
+#phone-details label{display:block;margin:.8rem 0;font-weight:600}
+#phone-details input{display:block;width:100%;box-sizing:border-box;min-height:44px;margin-top:.45rem;padding:.7rem;border:1px solid #adbbb4;border-radius:.65rem;background:white;color:#253b32;font:inherit}
+#phone-details input:focus-visible{outline:3px solid #315f4a;outline-offset:2px}
+#phone-details .phone-lab>*{min-width:0}
+@media print{
+ .sheet-print-summary .object-print-grid{gap:2mm}
+ .sheet-print-summary .object-print-grid article{display:grid;grid-template-columns:13mm minmax(0,1fr);gap:1mm 2mm;align-items:center;padding:2mm}
+ .sheet-print-summary .object-print-grid svg{display:block;grid-row:span 2;width:13mm;height:13mm}
+ .sheet-print-summary .object-print-grid strong{font-size:10pt;line-height:1.15}
+ .sheet-print-summary .object-print-grid small{font-size:8pt}
+ .sheet-print-summary .object-print-grid p{grid-column:1/-1;margin:.8mm 0;font-size:8.5pt}
+ .sheet-print-summary .object-print-rules{margin:2mm 0;padding:1.5mm}
+ .sheet-print-summary .object-print-table{margin-top:2mm}
+ .sheet-print-summary .object-print-table td,.sheet-print-summary .object-print-table th{padding:.9mm 1.5mm}
+}
