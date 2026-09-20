@@ -1,0 +1,34 @@
+
+> german-learning-platform@0.0.0 gates:pages
+> npm run build:pages && npm run smoke:pages && npm run audit:learner-language && npm run audit:offline && npm run audit:word-cards -- --export
+
+
+> german-learning-platform@0.0.0 build:pages
+> npm run build:pages -w @german-learning/web
+
+
+> @german-learning/web@0.1.0 build:pages
+> tsx scripts/build-pages.ts
+
+[build:pages] Isolated proxy.ts → proxy.ts.pages-disabled
+[build:pages] Patched dynamicParams=false on 7 routes
+Wrote learner projection: 2 lessons, 23 activities → E:\claude-cursor\side projects\German learning\platform\apps\web\generated\learner-projection.json
+Wrote learner hubs: 6 hubs (vocabulary=83, verbs=10, grammar=11, phrases=71, listening=15, concepts=0) → E:\claude-cursor\side projects\German learning\platform\apps\web\generated\learner-hubs.json
+Wrote learner search: 215 documents → E:\claude-cursor\side projects\German learning\platform\apps\web\generated\learner-search.json
+Wrote learner details: 119 published records (3 rich representatives) → E:\claude-cursor\side projects\German learning\platform\apps\web\generated\learner-details.json
+Wrote learner enrichment: 23 activities, 26 profession cards → E:\claude-cursor\side projects\German learning\platform\apps\web\generated\enrichment\learner-content-enrichment.json
+Wrote optional professions: 48 source rows, 102 form lexemes → E:\claude-cursor\side projects\German learning\platform\apps\web\generated\learner-extra-professions.json
+CONTENT_PROJECTION_FAILED: EPERM: operation not permitted, rename 'E:\claude-cursor\side projects\German learning\media\manifests\word-cards-public-audio-v1.json.3f5eb785-b8ab-4ed1-9f4c-1004fe42f693.tmp' -> 'E:\claude-cursor\side projects\German learning\media\manifests\word-cards-public-audio-v1.json'
+[build:pages] Restored dynamicParams literals (7)
+[build:pages] FAILED Error: C:\Program Files\nodejs\node.exe E:\claude-cursor\side projects\German learning\platform\node_modules\tsx\dist\cli.mjs scripts/project-content.ts exited 1
+    at ChildProcess.<anonymous> (E:\claude-cursor\side projects\German learning\platform\apps\web\scripts\build-pages-lib.ts:323:21)
+    at ChildProcess.emit (node:events:509:28)
+    at ChildProcess._handle.onexit (node:internal/child_process:295:12)
+[build:pages] Restored proxy.ts
+npm error Lifecycle script `build:pages` failed with error:
+npm error code 1
+npm error path E:\claude-cursor\side projects\German learning\platform\apps\web
+npm error workspace @german-learning/web@0.1.0
+npm error location E:\claude-cursor\side projects\German learning\platform\apps\web
+npm error command failed
+npm error command C:\WINDOWS\system32\cmd.exe /d /s /c tsx scripts/build-pages.ts

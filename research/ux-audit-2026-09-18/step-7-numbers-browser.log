@@ -1,0 +1,21 @@
+
+Running 12 tests using 2 workers
+
+(node:19872) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:15968) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  2 [chromium] › tests\e2e\46-cheat-sheet-summaries.spec.ts:5:5 › home prints its complete summary without changing recall or filters at 320px (3.4s)
+  ok  1 [chromium] › tests\e2e\46-cheat-sheet-summaries.spec.ts:5:5 › countries prints its complete summary without changing recall or filters at 320px (3.8s)
+  ok  4 [chromium] › tests\e2e\46-cheat-sheet-summaries.spec.ts:5:5 › home prints its complete summary without changing recall or filters at 1440px (4.6s)
+  ok  3 [chromium] › tests\e2e\46-cheat-sheet-summaries.spec.ts:5:5 › countries prints its complete summary without changing recall or filters at 1440px (5.6s)
+  ok  5 [chromium] › tests\e2e\46-cheat-sheet-summaries.spec.ts:51:1 › home overview keeps one set of objects and returns focus after Escape and selection (4.2s)
+  ok  6 [chromium] › tests\e2e\46-cheat-sheet-summaries.spec.ts:73:1 › home pronunciation follows the saved speed when its slow override is off (6.8s)
+  ok  7 [chromium] › tests\e2e\46-cheat-sheet-summaries.spec.ts:97:33 › shared overviews preserve verb, number and register selections at 390px (4.9s)
+  ok  8 [chromium] › tests\e2e\46-cheat-sheet-summaries.spec.ts:97:33 › shared overviews preserve verb, number and register selections at 1440px (7.4s)
+  ok  9 [chromium] › tests\e2e\50-numbers-learning.spec.ts:3:31 › number reading, listening and saved values at 320px (8.1s)
+  ok 11 [chromium] › tests\e2e\50-numbers-learning.spec.ts:34:1 › number filters control listening, recall and empty selections together (3.0s)
+  ok 12 [chromium] › tests\e2e\50-numbers-learning.spec.ts:49:1 › numbers prints common patterns without changing the chosen example (3.1s)
+  ok 10 [chromium] › tests\e2e\50-numbers-learning.spec.ts:3:31 › number reading, listening and saved values at 1440px (9.6s)
+
+  12 passed (34.7s)

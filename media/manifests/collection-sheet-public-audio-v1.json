@@ -10,6 +10,12 @@
       "exactText": "Noch einmal, bitte."
     },
     {
+      "publicRelativePath": "audio/collection-sheet/028ead59e783244b657c.mp3",
+      "sha256": "71782129c8c1570b223d17480dd1551dccd9114ee94fcc80488c31d1da5e059f",
+      "bytes": 14256,
+      "exactText": "ein Euro ein Cent"
+    },
+    {
       "publicRelativePath": "audio/collection-sheet/02f61d32a880f6b2e523.mp3",
       "sha256": "1f9e685d74659c1ca33d0790f98e4293fc7dec96bdf0d31a960a9a9b0093b36b",
       "bytes": 11088,
@@ -556,6 +562,12 @@
       "exactText": "Kommen Sie aus dem Iran?"
     },
     {
+      "publicRelativePath": "audio/collection-sheet/58236508ee1a1a7f6738.mp3",
+      "sha256": "fdd8dfc887765ca4f4225ba014c281fb19f1ea80813b94a53f0cc50ccd78776e",
+      "bytes": 13104,
+      "exactText": "fünfzig Cent"
+    },
+    {
       "publicRelativePath": "audio/collection-sheet/59ee1b30703b567b127f.mp3",
       "sha256": "fcbcbe7d83e9bd18d56c06a90340ecee5fd4d6bbedd73d69a30c17f853bf8036",
       "bytes": 16992,
@@ -1012,6 +1024,12 @@
       "exactText": "Ö"
     },
     {
+      "publicRelativePath": "audio/collection-sheet/aed1b62687117748683c.mp3",
+      "sha256": "44d9e41d6cde751caae6435984059fae6145a404f9f7997f33c7afb58112dc4b",
+      "bytes": 12384,
+      "exactText": "null eins sieben"
+    },
+    {
       "publicRelativePath": "audio/collection-sheet/af5b8394d2a1026a864e.mp3",
       "sha256": "f674a00675d2333924c2ffce2ec00d6bc8ffcf1ef8b1ffeab7a40a302970ab1e",
       "bytes": 15264,
@@ -1142,6 +1160,12 @@
       "sha256": "7bebaa475b4e2d85b8e0f3d43e4fbc695060a94deee8165c04ef41762a4d9d40",
       "bytes": 9936,
       "exactText": "er wohnt"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/d214ef95c486c7825a39.mp3",
+      "sha256": "0f4a1e48b4c066eb1f46eaed59a75cbb8f26808b5c8604f528fe90c57610ad27",
+      "bytes": 10656,
+      "exactText": "ein Euro"
     },
     {
       "publicRelativePath": "audio/collection-sheet/d2909ebb9b7faee23b9a.mp3",

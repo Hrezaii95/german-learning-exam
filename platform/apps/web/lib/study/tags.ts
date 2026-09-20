@@ -7,7 +7,7 @@ import {numericLessons,type StudyConcept,type StudyTags} from "./scope";
 
 const homeTerms=new Set(homeWords.map(word=>word.de));
 const officeTerms=new Set(["die Arbeit","das Büro","der Computer","der Laptop","der Drucker","die Tastatur","die Maus","der Bildschirm","das Telefon","der Termin","die E-Mail","die Nachricht","der Arbeitsplatz","der Schreibtisch"]);
-const numberTerms=new Set(["der Euro","der Cent","der Preis","das Jahr","der Tag","die Zahl","die Nummer","die Telefonnummer","die Uhr"]);
+const numberTerms=new Set(["der Euro","der Cent","der Preis","die Million","das Jahr","der Tag","die Zahl","die Nummer","die Telefonnummer","die Uhr"]);
 const classroomTerms=new Set(["das Wort","der Satz","die Frage","die Antwort","das Buch","der Text","das Gespräch","das Interview","der Partner","die Partnerin","die Übung","der Kurs","die Klasse","der Unterricht","die Hausaufgabe","das Wörterbuch"]);
 const categoryConcepts:Record<string,StudyConcept[]>={
   "Question word":["questions","grammar"],Pronoun:["grammar"],Verb:["verbs"],

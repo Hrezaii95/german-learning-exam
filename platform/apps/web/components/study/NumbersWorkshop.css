@@ -1,0 +1,33 @@
+.number-reading-order { display:flex; flex-wrap:wrap; gap:10px; margin:20px 0; }
+.number-reading-order > div { display:grid; gap:8px; border:1px solid #b7c8bf; background:#f0f4ef; border-radius:12px; padding:16px; min-width:0; }
+.number-reading-order small { font-size:12px; line-height:1.4; }
+.number-reading-order b { font-size:24px; }
+.number-reading-order strong { font-size:20px; overflow-wrap:anywhere; }
+.number-reading-order [data-role="units"] { color:#125f65; background:#e5f4f2; border-color:#73aaa7; }
+.number-reading-order [data-role="tens"] { color:#874900; background:#fff0d6; border-color:#cf9e56; }
+.number-word [data-role="units"] { color:#125f65; background:#e5f4f2; }
+.number-word [data-role="tens"] { color:#874900; background:#fff0d6; }
+.number-listening-task { margin-top:20px; }
+.number-listening-task form { display:flex; flex-wrap:wrap; align-items:end; gap:12px; margin:20px 0; }
+.number-listening-task label { display:grid; gap:8px; }
+.number-price-tag { border:2px solid #91a788; border-radius:12px; background:#f1f6ed; padding:18px; margin:18px 0; }
+.number-price-tag > strong { font-size:32px; }
+@media screen and (max-width:600px) {
+  .number-reading-order { display:grid; grid-template-columns:1fr; }
+  .number-reading-order > div { grid-template-columns:1fr auto; padding:12px; }
+  .number-reading-order strong { grid-column:1/-1; }
+  .number-listening-task form,.number-listening-task label { width:100%; }
+}
+@media print {
+  .collection-numbers > :not(.sheet-print-summary) { display:none!important; }
+  .number-print-groups { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:3mm; margin:4mm 0; }
+  .number-print-groups section { border:1px solid #c7cfc9; padding:2mm; border-radius:2mm; }
+  .number-print-groups p { display:grid; grid-template-columns:1fr; gap:.5mm; margin:1.2mm 0; font-size:8pt; }
+  .number-print-groups section:not(:last-child) p { grid-template-columns:7mm minmax(0,1fr); }
+  .number-print-groups h3 { font-size:9pt; margin-bottom:2mm; }
+  .number-print .number-reading-order { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:2mm; margin:3mm 0; }
+  .number-print .number-reading-order > div { padding:2mm; gap:1mm; }
+  .number-print .number-reading-order strong { font-size:10pt; }
+  .number-print .number-reading-order b { font-size:14pt; }
+  .number-print .number-reading-order small { font-size:8pt; }
+}

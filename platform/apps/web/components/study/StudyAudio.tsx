@@ -16,11 +16,14 @@ export function LineAudio({
   src,
   compact = false,
   rate: overrideRate,
+  label,
 }: {
   text: string;
   src?: string | null | undefined;
   compact?: boolean;
   rate?: number;
+  /** A neutral label keeps listening-recall answers out of the accessible name. */
+  label?: string;
 }) {
   const preferredRate = usePreferredAudioSpeed();
   const rate = overrideRate ?? preferredRate;
@@ -133,7 +136,7 @@ export function LineAudio({
       <button
         type="button"
         className="study-audio-button"
-        aria-label={`${playing ? "Stop" : "Listen"}: ${text}`}
+        aria-label={`${playing ? "Stop" : "Listen"}: ${label ?? text}`}
         aria-pressed={playing}
         title={src ? "Generated German pronunciation" : "Device-generated German speech"}
         onClick={() => void speak()}

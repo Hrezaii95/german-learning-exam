@@ -1,0 +1,60 @@
+
+Running 10 tests using 2 workers
+
+(node:23992) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:34260) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:46:1 › saving a profession in its collection is reflected on its word card and can be removed there (6.4s)
+  ok  3 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:58:1 › profession filters control both the displayed cards and the review pool (4.0s)
+  ok  2 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:5:1 › saved pronunciation speed follows word cards, original recordings and the reader (12.9s)
+  ok  4 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:86:1 › German text offers one keyboard stop per phrase and complete-phrase lookup (3.2s)
+  ok  6 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:127:1 › a failed preview recording shows a useful error and can be retried (3.5s)
+  ok  5 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:103:1 › transcript lines share pronunciation, meaning and saved-review actions (5.5s)
+  ok  7 [chromium] › tests\e2e\50-numbers-learning.spec.ts:3:31 › number reading, listening and saved values at 320px (7.1s)
+  ok  8 [chromium] › tests\e2e\50-numbers-learning.spec.ts:3:31 › number reading, listening and saved values at 1440px (10.6s)
+  x   9 [chromium] › tests\e2e\50-numbers-learning.spec.ts:34:1 › number filters control listening, recall and empty selections together (3.4s)
+  ok 10 [chromium] › tests\e2e\50-numbers-learning.spec.ts:54:1 › numbers prints common patterns without changing the chosen example (3.0s)
+
+
+  1) [chromium] › tests\e2e\50-numbers-learning.spec.ts:34:1 › number filters control listening, recall and empty selections together
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('#sheet-cards .collection-word')
+    Expected substring: "die Million"
+    Error: strict mode violation: locator('#sheet-cards .collection-word') resolved to 2 elements:
+        1) <div class="collection-word">…</div> aka locator('#sheet-card-W343').getByText('die MillionPlural die')
+        2) <div class="collection-word">…</div> aka locator('#sheet-card-l4-million').getByText('die MillionPlural die')
+
+    Call log:
+      - Expect "toContainText" with timeout 10000ms
+      - waiting for locator('#sheet-cards .collection-word')
+
+
+      43 |   await page.getByRole("button",{name:"Showing saved cards",exact:true}).click();
+      44 |   await page.getByRole("textbox",{name:"Find a card",exact:true}).fill("Million");
+    > 45 |   await expect(page.locator("#sheet-cards .collection-word")).toContainText("die Million");
+         |                                                               ^
+      46 |   await expect(page.locator("#sheet-practice")).toContainText("___ Million");
+      47 |   await page.locator("#sheet-practice").getByRole("button",{name:"die",exact:true}).click();
+      48 |   await expect(page.locator("#sheet-practice")).toContainText("Exactly.");
+        at E:\claude-cursor\side projects\German learning\platform\tests\e2e\50-numbers-learning.spec.ts:45:63
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\50-numbers-learning-number-c747f-d-empty-selections-together-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\50-numbers-learning-number-c747f-d-empty-selections-together-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\50-numbers-learning-number-c747f-d-empty-selections-together-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\50-numbers-learning-number-c747f-d-empty-selections-together-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium] › tests\e2e\50-numbers-learning.spec.ts:34:1 › number filters control listening, recall and empty selections together
+  9 passed (34.4s)
