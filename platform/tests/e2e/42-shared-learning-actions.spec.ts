@@ -2,7 +2,7 @@ import { expect, test } from "@playwright/test";
 
 test.setTimeout(120_000);
 
-test("saved pronunciation speed follows word cards, original recordings and the reader", async ({ page }) => {
+test("saved pronunciation speed follows word cards, original recordings and the reader", async ({ page }, testInfo) => {
   await page.addInitScript(() => {
     const NativeAudio = window.Audio;
     (window as unknown as { observedAudio: HTMLAudioElement[] }).observedAudio = [];
@@ -23,6 +23,11 @@ test("saved pronunciation speed follows word cards, original recordings and the 
     const audio = (window as unknown as { observedAudio: HTMLAudioElement[] }).observedAudio.at(-1);
     return audio ? { rate: audio.playbackRate, advanced: audio.currentTime > 0 } : null;
   })).toEqual({ rate: 0.75, advanced: true });
+  for (const width of [390, 1440]) {
+    await page.setViewportSize({ width, height: 1000 });
+    await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth - innerWidth)).toBeLessThanOrEqual(1);
+    await page.screenshot({ path: testInfo.outputPath(`word-card-${width}.png`), fullPage: true });
+  }
 
   await page.goto("listening/");
   await expect(page.getByRole("combobox", { name: "Audio speed" })).toHaveValue("0.75");
@@ -36,6 +41,18 @@ test("saved pronunciation speed follows word cards, original recordings and the 
   await expect(page.getByRole("combobox", { name: "Audio speed" })).toHaveValue("1.25");
   await page.reload();
   await expect(page.getByRole("combobox", { name: "Audio speed" })).toHaveValue("1.25");
+});
+
+test("saving a profession in its collection is reflected on its word card and can be removed there", async ({ page }) => {
+  await page.goto("collections/professions/");
+  await page.getByRole("searchbox", { name: "Search English or German" }).fill("Elektriker");
+  const save = page.getByRole("button", { name: /^Save to review:/ });
+  await expect(save).toHaveCount(1);
+  await save.click();
+  await page.goto("collections/professions/01/");
+  await page.getByRole("button", { name: /^Remove from review:/ }).click();
+  await page.goto("saved/");
+  await expect(page.locator(".study-saved-card")).toHaveCount(0);
 });
 
 test("profession filters control both the displayed cards and the review pool", async ({ page }, testInfo) => {
@@ -78,4 +95,44 @@ test("German text offers one keyboard stop per phrase and complete-phrase lookup
   await expect(dictionary.locator("input")).toHaveValue(phrase!);
   await page.keyboard.press("Escape");
   await expect(german.locator("button").nth(1)).toBeFocused();
+});
+
+test("transcript lines share pronunciation, meaning and saved-review actions", async ({ page }, testInfo) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("listening/");
+  const track = page.locator(".book-track").first();
+  await expect(track.locator(".listening-transcript-lines > p")).toHaveCount(0);
+  await track.locator("summary").click();
+  const line = track.locator(".listening-transcript-lines > p").first();
+  await expect(line).toBeVisible();
+  const text = await line.locator(".study-german").getAttribute("aria-label");
+  await expect(line.getByRole("button", { name: /^Listen:/ })).toHaveAttribute("title", /generated/i);
+  await line.getByRole("button", { name: /^Meaning:/ }).click();
+  const dictionary = page.getByRole("dialog", { name: "Quick dictionary" });
+  await expect(dictionary.locator("input")).toHaveValue(text!);
+  await page.keyboard.press("Escape");
+  await line.getByRole("button", { name: /^Save to review:/ }).click();
+  await expect(line.getByRole("button", { name: /^Remove from review:/ })).toBeVisible();
+  await line.scrollIntoViewIfNeeded();
+  await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth - innerWidth)).toBeLessThanOrEqual(1);
+  await page.screenshot({ path: testInfo.outputPath("transcript-actions-phone.png") });
+  await page.goto("saved/");
+  await expect(page.locator(".study-saved-card")).toHaveCount(1);
+  await expect(page.locator(".study-saved-card")).toContainText(text!);
+});
+
+test("a failed preview recording shows a useful error and can be retried", async ({ page }) => {
+  await page.goto("vocabulary/?q=Elektriker");
+  const player = page.locator(".meaning-plate__audio").first();
+  const audio = player.locator("audio");
+  const src = await audio.getAttribute("src");
+  expect(src).toBeTruthy();
+  const pattern = `**/${src!.split("/").at(-1)}`;
+  await page.route(pattern, route => route.abort());
+  await player.getByRole("button").click();
+  await expect(player.getByRole("status")).toHaveText("Audio could not play. Press Listen to retry.");
+  await page.unroute(pattern);
+  await player.getByRole("button").click();
+  await expect.poll(() => audio.evaluate((element: HTMLAudioElement) => element.currentTime)).toBeGreaterThan(0);
+  await expect(player.getByRole("status")).toHaveCount(0);
 });

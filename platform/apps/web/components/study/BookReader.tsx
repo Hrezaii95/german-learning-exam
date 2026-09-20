@@ -43,7 +43,7 @@ export function OriginalTrack({ track, rate }: { track: BookTrack; rate: number 
           event.currentTarget.playbackRate = rate;
         }}
       />
-      <ListeningTranscript transcript={track.transcript} />
+      <ListeningTranscript transcript={track.transcript} href={`/book?page=${track.pageId}`} lesson={track.lesson}/>
       {failed && (
         <p role="alert">
           Recording could not load.{" "}

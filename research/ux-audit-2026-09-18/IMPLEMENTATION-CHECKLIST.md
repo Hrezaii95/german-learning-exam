@@ -2,6 +2,22 @@
 
 Reference: [whole-app audit](UI-UX-AUDIT.md). Countries & languages and Home & furniture remain the design standard. This is the single task list for all 23 findings; existing completion records are retained.
 
+## Steps at a glance
+
+Use the checkboxes below as the completion record. Start at the first unchecked task; reuse anything already finished.
+
+| Step | Main task | Checkpoint before marking complete |
+|---|---|---|
+| 1 | Repair readability | Cards and diagrams fit phone, tablet and desktop; approved sheets remain intact. |
+| 2 | Protect learning progress | Save/remove, reload, resume and a complete backup/restore round trip preserve the expected data. |
+| 3 | Unify styles and actions | Colors, audio, meaning, save and filters behave consistently across representative learning views. |
+| 4 | Simplify navigation | Continue and due review appear first; phone navigation and returning to prior content work. |
+| 5 | Finish Professions | Find a profession, understand and hear its four forms, save it, practise it and return. |
+| 6 | Improve lessons and libraries | Every lesson and library supports a clear learning path, compact browsing and accurate search. |
+| 7 | Complete the 15 cheat sheets | Each sheet has a useful visual overview, explanation, audio, saving and a short recall task. |
+| 8 | Connect book and listening | Read → listen → understand a phrase → save → review → return to the same book page. |
+| 9 | Verify the release | Live learning journeys, accessibility, data recovery and failure states pass; limitations are recorded. |
+
 ## Working rules
 
 - Follow the steps in order, starting with the first unfinished task. Keep existing content, working features, saved data and approved visuals.
@@ -123,4 +139,6 @@ Step 1 — layout repairs, responsive diagram steps and toolbar dictionary imple
 
 Step 2 — complete backup/restore with merge, replace and reset; persistent lesson quizzes and profession review marks; current-note conflict handling; responsive import preview. Local checkpoint passed on 20 September 2026: 27 targeted tests, seven browser checks including a fresh-profile backup round trip, review ratings/due dates, malformed import, removal, replacement, reset and Lesson 4/12 resume. Pages gates, type checks, lint and rendered phone/desktop inspection passed. Evidence: step-2-tests.log, step-2-browser-tests.log, step-2-gates.log and step-2-local/. Live checkpoint passed: deployment 35513901094 (commit fbad08ee), seven browser checks against https://hrezaii95.github.io/german-learning-exam/. Evidence: step-2-live-tests.log. Full local check: 916 tests and publication validation passed, followed by 577 web tests. Step 3 is in progress.
 
-Step 3, first batch — shared persisted audio speed across book/listening/word cards/generated speech, common stop behavior, truthful inline profession audio and shared filters, purple Food plurals, inherited control fonts, keyboard word/phrase lookup and explicit external translation labels. Local Pages gates and ten browser checks passed, including real generated/original playback, cross-page speed persistence, scope/search/review-pool agreement and keyboard focus return. Targeted component tests, type checks, lint and phone/desktop screenshot inspection passed. Evidence: step-3-gates.log, step-3-browser-tests.log, step-3-tests.log, step-3-shared-tests.log and step-3-local/. Live verification pending. The full Step 3 checkpoint remains open: finish appearance consistency, shared save identity/actions, and failure-state checks before proceeding to Step 4.
+Step 3, first batch — shared persisted audio speed across book/listening/word cards/generated speech, common stop behavior, truthful inline profession audio and shared filters, purple Food plurals, inherited control fonts, keyboard word/phrase lookup and explicit external translation labels. Local Pages gates and ten browser checks passed, including real generated/original playback, cross-page speed persistence, scope/search/review-pool agreement and keyboard focus return. Targeted component tests, type checks, lint and phone/desktop screenshot inspection passed. Evidence: step-3-gates.log, step-3-browser-tests.log, step-3-tests.log, step-3-shared-tests.log and step-3-local/. First-batch live checkpoint passed: deployment 35515047891 (commit 690f3adc), ten live browser checks; evidence: step-3-first-live-tests.log. The full Step 3 checkpoint remains open until the final batch is verified live.
+
+Step 3, final batch — light word-family cards, shared dictionary/save identity in previews and profession lists, transcript line pronunciation/meaning/save, preferred-speed preview playback and retry, and context-correct example colors. Local Pages gates, 13 browser checks, 15 targeted component tests, type checks, lint and rendered phone inspection passed. Evidence: step-3-final-gates.log, step-3-final-browser-tests.log, step-3-final-regression.log and step-3-final-local/. Final-batch live verification pending.

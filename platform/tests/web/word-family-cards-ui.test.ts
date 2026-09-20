@@ -59,6 +59,16 @@ describe("original vocabulary browsing with complete cards", () => {
 });
 
 describe("complete word-family cards", () => {
+  it("does not color a singular profession as plural when both spellings match", () => {
+    const electrician = catalog.cards.find(card => card.rows[0]?.singular.text === "der Elektriker")!;
+    const examples = ["Ich bin Elektriker.", "Wir sind Elektriker.", "der Elektriker", "die Elektriker", "Elektriker"];
+    render(createElement(WordFamilyCard, { card: { ...electrician, examples: examples.map(de => ({ de, en: "", audio: null })) } }));
+    for (const [text, tone] of [[examples[0], "male"], [examples[1], "plural"], [examples[2], "male"], [examples[3], "plural"]]) {
+      const word = screen.getAllByRole("button", { name: `Look up ${text}` }).at(-1)?.querySelector("span");
+      expect(word?.className).toContain(tone);
+    }
+    expect(screen.getByRole("button", { name: "Look up Elektriker" }).querySelector("span")).toBeNull();
+  });
   it("keeps both engineer entries and all four forms together", () => {
     expect(engineer.sourceIds).toEqual(["W126", "W127"]);
     expect(engineer.rows.flatMap(r => [r.singular.text, ...r.plurals.map(p => p.text)])).toEqual(["der Ingenieur", "die Ingenieure", "die Ingenieurin", "die Ingenieurinnen"]);

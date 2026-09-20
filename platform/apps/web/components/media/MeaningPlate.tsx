@@ -1,11 +1,12 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import type { LearnerGender } from "@/lib/content/detail-types";
 import { GenderBadge } from "@/components/details/GenderBadge";
 import { withPagesBaseAssetPath } from "@/lib/content/pages-base-path";
 import { stopStudyAudio } from "@/components/study/StudyAudio";
+import { usePreferredAudioSpeed } from "@/components/audio/AudioSpeedControl";
 
 /**
  * Meaning plate — the permanent media treatment for a learning object that has
@@ -70,6 +71,9 @@ export function LemmaAudioButton({
 }) {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [failed, setFailed] = useState(false);
+  const rate = usePreferredAudioSpeed();
+  useEffect(() => { if (audioRef.current) audioRef.current.playbackRate = rate; }, [rate]);
 
   function toggle() {
     const element = audioRef.current;
@@ -79,11 +83,15 @@ export function LemmaAudioButton({
       return;
     }
     stopStudyAudio();
-    for (const other of document.querySelectorAll<HTMLAudioElement>("audio")) {
-      if (other !== element) other.pause();
-    }
+    if (failed) element.load();
+    setFailed(false);
+    element.playbackRate = rate;
+    element.preservesPitch = true;
     if (element.ended) element.currentTime = 0;
-    void element.play().catch(() => setIsPlaying(false));
+    void element.play().catch(error => {
+      setIsPlaying(false);
+      if (!(error instanceof DOMException && error.name === "AbortError")) setFailed(true);
+    });
   }
 
   return (
@@ -100,6 +108,7 @@ export function LemmaAudioButton({
         onPlay={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}
         onEnded={() => setIsPlaying(false)}
+        onError={() => { setFailed(true); setIsPlaying(false); }}
       />
       <button
         type="button"
@@ -119,6 +128,7 @@ export function LemmaAudioButton({
           {isPlaying ? "Pause" : "Listen"}
         </span>
       </button>
+      {failed && <span role="status">Audio could not play. Press Listen to retry.</span>}
     </div>
   );
 }

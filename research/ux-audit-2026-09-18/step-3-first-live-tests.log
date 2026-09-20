@@ -1,0 +1,19 @@
+
+Running 10 tests using 2 workers
+
+(node:6784) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:31812) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 tests\e2e\40-ux-readability.spec.ts:6:3 › learning cards and country rows remain readable at 320px (18.5s)
+  ok  2 tests\e2e\41-complete-backup.spec.ts:4:1 › saved study, course progress and settings survive a complete backup round trip (31.2s)
+  ok  3 tests\e2e\40-ux-readability.spec.ts:6:3 › learning cards and country rows remain readable at 390px (17.1s)
+  ok  4 tests\e2e\41-complete-backup.spec.ts:115:1 › Lesson 4 also resumes its quiz and supports an explicit restart (7.1s)
+  ok  5 tests\e2e\40-ux-readability.spec.ts:6:3 › learning cards and country rows remain readable at 768px (18.1s)
+  ok  6 tests\e2e\42-shared-learning-actions.spec.ts:5:1 › saved pronunciation speed follows word cards, original recordings and the reader (21.4s)
+  ok  8 tests\e2e\42-shared-learning-actions.spec.ts:58:1 › profession filters control both the displayed cards and the review pool (6.0s)
+  ok  9 tests\e2e\42-shared-learning-actions.spec.ts:83:1 › German text offers one keyboard stop per phrase and complete-phrase lookup (4.9s)
+  ok  7 tests\e2e\40-ux-readability.spec.ts:6:3 › learning cards and country rows remain readable at 1440px (17.3s)
+  ok 10 tests\e2e\40-ux-readability.spec.ts:22:1 › phone diagrams expose readable steps and dictionary preserves keyboard focus (5.0s)
+
+  10 passed (1.3m)

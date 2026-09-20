@@ -104,6 +104,7 @@ export function LineAudio({
     const audio = new Audio(withPagesBaseAssetPath(src));
     clip.current = audio;
     audio.playbackRate = rate;
+    audio.preservesPitch = true;
     audio.onended = () => {
       if (clip.current === audio) {
         active.current = false;
@@ -116,15 +117,16 @@ export function LineAudio({
         setPlaying(false);
       }
     };
-    try {
-      await audio.play();
-    } catch {
-      if (active.current && clip.current === audio) {
+    const fallback = () => {
+      if (clip.current === audio) {
         clip.current = null;
+        active.current = true;
         setError("Audio file unavailable; using device speech.");
         speech();
       }
-    }
+    };
+    audio.onerror = fallback;
+    try { await audio.play(); } catch { fallback(); }
   }
   return (
     <span className="study-audio">

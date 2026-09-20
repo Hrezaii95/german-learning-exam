@@ -1,0 +1,30 @@
+[WebServer] (node:18468) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] [e2e:serve] serving E:\claude-cursor\side projects\German learning\platform\apps\web\out
+[WebServer] [e2e:serve] ready on http://127.0.0.1:4331/german-learning-exam/
+
+Running 13 tests using 4 workers
+
+(node:28540) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:1616) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:1564) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:29324) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  4 [chromium] › tests\e2e\40-ux-readability.spec.ts:6:3 › learning cards and country rows remain readable at 320px (22.7s)
+  ok  5 [chromium] › tests\e2e\40-ux-readability.spec.ts:22:1 › phone diagrams expose readable steps and dictionary preserves keyboard focus (2.4s)
+  ok  3 [chromium] › tests\e2e\40-ux-readability.spec.ts:6:3 › learning cards and country rows remain readable at 1440px (32.1s)
+  ok  1 [chromium] › tests\e2e\40-ux-readability.spec.ts:6:3 › learning cards and country rows remain readable at 768px (33.2s)
+  ok  2 [chromium] › tests\e2e\40-ux-readability.spec.ts:6:3 › learning cards and country rows remain readable at 390px (35.1s)
+  ok  7 [chromium] › tests\e2e\41-complete-backup.spec.ts:115:1 › Lesson 4 also resumes its quiz and supports an explicit restart (6.5s)
+  ok  9 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:46:1 › saving a profession in its collection is reflected on its word card and can be removed there (7.8s)
+  ok 10 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:58:1 › profession filters control both the displayed cards and the review pool (6.5s)
+  ok 11 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:83:1 › German text offers one keyboard stop per phrase and complete-phrase lookup (4.2s)
+  ok  8 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:5:1 › saved pronunciation speed follows word cards, original recordings and the reader (18.5s)
+  ok 12 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:100:1 › transcript lines share pronunciation, meaning and saved-review actions (10.7s)
+  ok 13 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:124:1 › a failed preview recording shows a useful error and can be retried (10.2s)
+  ok  6 [chromium] › tests\e2e\41-complete-backup.spec.ts:4:1 › saved study, course progress and settings survive a complete backup round trip (47.0s)
+
+  13 passed (1.3m)

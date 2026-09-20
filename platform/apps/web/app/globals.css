@@ -12,7 +12,7 @@
   --nav-ink: #f4f1fb;
   --nav-muted: #b7b0c9;
   --nav-active: #ffffff;
-  --brand: #6946e8;
+  --brand: #28634f;
   --brand-ink: #ffffff;
   --gender-m: #246bfd;
   --gender-f: #e64c86;
@@ -33,7 +33,7 @@
   --rule-regular: #1f9d8f;
   --rule-special: #d8901c;
   --rule-irregular: #c23b6e;
-  --focus: #6946e8;
+  --focus: #28634f;
   --danger: #b42318;
   --radius: 18px;
   --radius-sm: 12px;
@@ -51,8 +51,9 @@
   --content-max: var(--content-max-reading);
 
   /* Daily Learning Studio — Phase 1a token set (Option 1 contract).
-     Locked semantic tokens above (--gender-*, --rule-*, --brand, --nav,
-     --canvas) are unchanged. InterVariable is self-hosted; its @font-face
+     Gender and verb-rule tokens above retain their learning meanings.
+     Action and focus colors share the approved study palette.
+     InterVariable is self-hosted; its @font-face
      is declared in app/layout.tsx so the GitHub Pages basePath applies. */
   --font-weight-body: 450;
   --font-weight-medium: 600;
@@ -67,11 +68,11 @@
   --content-max-browse: 76rem;
   --surface-raised: #ffffff;
   --surface-tint: #f8f5f0;
-  --surface-brand-soft: #f0ecff;
+  --surface-brand-soft: #edf3eb;
   --border-soft: #ebe5dc;
   --shadow-raised: 0 1px 2px rgba(28, 26, 36, 0.06), 0 12px 32px rgba(28, 26, 36, 0.07);
   --shadow-interactive: 0 10px 24px rgba(47, 35, 91, 0.1);
-  --focus-ring: #4f2fcf;
+  --focus-ring: #28634f;
   --motion-fast: 140ms;
   --motion-base: 200ms;
   --ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);

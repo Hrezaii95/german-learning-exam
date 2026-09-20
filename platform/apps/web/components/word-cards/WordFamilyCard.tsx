@@ -5,14 +5,11 @@ import type { WordCard, WordForm } from "@/lib/content/word-card-types";
 import { normalizeCardAnswer } from "@/lib/content/word-card-types";
 import { withPagesBaseAssetPath } from "@/lib/content/pages-base-path";
 import styles from "./word-cards.module.css";
-import { SaveButton } from "@/components/study/StudyProvider";
+import { GermanLookup, SaveButton } from "@/components/study/StudyProvider";
 import { LineAudio, stopStudyAudio } from "@/components/study/StudyAudio";
 import {StudyTagList} from "@/components/study/StudyScope";
-import { usePreferredAudioSpeed } from "@/components/audio/AudioSpeedControl";
+import { savedWordCard } from "@/lib/study/saved-word-card";
 
-function Speaker() {
-  return <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M11 5 6 9H3v6h3l5 4V5Zm4 3a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" /></svg>;
-}
 function PatternToken({ text, card }: { text: string; card: WordCard }) {
   const forms = card.rows.flatMap(r => [r.singular, ...r.plurals]);
   const form = forms.find(f => f.text === text || f.text.replace(/^(der|die|das) /, "") === text);
@@ -23,37 +20,38 @@ function PatternToken({ text, card }: { text: string; card: WordCard }) {
   return <strong>{article && <span className={styles[form.tone]}>{article}</span>}{word.startsWith(stem) ? <>{stem}<span className={`${styles.ending} ${styles[form.tone]}`}>{word.slice(stem.length)}</span></> : <span className={styles[form.tone]}>{word}</span>}</strong>;
 }
 function ExampleText({ text, card }: { text: string; card: WordCard }) {
-  const words = new Map(card.rows.flatMap(r => [r.singular, ...r.plurals]).filter(f => f.tone !== "plain").map(f => [f.text.replace(/^(der|die|das) /, ""), f.tone]));
-  return <>{text.split(/([\p{L}]+(?:-[\p{L}]+)*)/u).map((part, index) => words.has(part) ? <span className={styles[words.get(part)!]} key={index}>{part}</span> : part)}</>;
+  const forms = card.rows.flatMap(row => [row.singular, ...row.plurals]);
+  const parts = text.split(/([\p{L}]+(?:-[\p{L}]+)*)/u);
+  return <GermanLookup text={text}>{parts.map((part, index) => {
+    let matches = forms.filter(form => form.text.replace(/^(der|die|das) /, "") === part);
+    const previous = parts[index - 2]?.toLocaleLowerCase("de-DE");
+    // Identical forms (der/die Elektriker) need sentence context, not map insertion order.
+    if (previous && ["der", "die", "das"].includes(previous)) matches = matches.filter(form => form.text.startsWith(`${previous} `));
+    else if (previous && ["bin", "bist", "ist"].includes(previous)) matches = matches.filter(form => form.tone !== "plural");
+    else if (previous && ["sind", "seid"].includes(previous)) matches = matches.filter(form => form.tone === "plural");
+    const tones = new Set(matches.map(form => form.tone));
+    const tone = tones.size === 1 ? matches[0]?.tone : undefined;
+    return tone && tone !== "plain" ? <span className={styles[tone]} key={index}>{part}</span> : part;
+  })}</GermanLookup>;
 }
-function Term({ form, stem, play, playing }: { form: WordForm; stem: string; play: (path: string, text: string) => void; playing: string | null }) {
+function Term({ form, stem }: { form: WordForm; stem: string }) {
   const match = /^(der|die|das) (.+)$/.exec(form.text);
   const word = match?.[2] ?? form.text;
   const hasEnding = stem && word.startsWith(stem) && word.length > stem.length;
   return <div className={`${styles.term} ${styles[form.tone]}`}>
-    <span className={styles.word} lang="de">{match && <><span className={styles.article}>{match[1]}</span>{" "}</>}<span className={styles.stem}>{hasEnding ? stem : word}</span>{hasEnding && <span className={styles.ending}>{word.slice(stem.length)}</span>}</span>
-    {!form.audio && <LineAudio text={form.text} compact />}{form.audio && <button className={styles.listen} type="button" aria-label={`Listen: ${form.text}`} aria-pressed={playing === form.text} onClick={() => play(form.audio!, form.text)}><Speaker /></button>}
+    <GermanLookup className={styles.word} text={form.text}>{match && <><span className={styles.article}>{match[1]}</span>{" "}</>}<span className={styles.stem}>{hasEnding ? stem : word}</span>{hasEnding && <span className={styles.ending}>{word.slice(stem.length)}</span>}</GermanLookup>
+    <LineAudio text={form.text} src={form.audio} compact/>
   </div>;
 }
 
 /** The approved engineer card, with the same teaching anatomy for every word family. */
 export function WordFamilyCard({ card }: { card: WordCard }) {
-  const rate = usePreferredAudioSpeed();
   const uid = useId();
   const [mode, setMode] = useState<"learn" | "recall">("learn");
   const [promptIndex, setPromptIndex] = useState(0);
   const [answer, setAnswer] = useState("");
   const [feedback, setFeedback] = useState<"correct" | "case" | "wrong" | "shown" | null>(null);
-  const [playing, setPlaying] = useState<string | null>(null);
-  const [audioStatus, setAudioStatus] = useState("");
-  const audioRef = useRef<HTMLAudioElement | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
-  useEffect(() => { if (audioRef.current) audioRef.current.playbackRate = rate; }, [rate]);
-  useEffect(() => {
-    const stop = () => { audioRef.current?.pause(); audioRef.current = null; setPlaying(null); setAudioStatus(""); };
-    window.addEventListener("study-stop-audio", stop);
-    return () => { audioRef.current?.pause(); window.removeEventListener("study-stop-audio", stop); };
-  }, []);
   useEffect(() => { if (mode === "recall") inputRef.current?.focus(); }, [mode]);
   const prompt = card.prompts[promptIndex]!;
   const hasPlural = card.rows.some(row => row.plurals.length > 0);
@@ -62,20 +60,9 @@ export function WordFamilyCard({ card }: { card: WordCard }) {
   const isProfession = card.category === "Profession";
   const lessonText = card.studyTags?.lessons.length?card.studyTags.lessons.map(n=>`Lesson ${n}`).join(" · "):(card.lessons.includes("1–3")||card.lessons.includes("1-3")) ? "Lessons 1–3" : card.lessons.filter(l => /^[1234]$/.test(l)).map(l => `Lesson ${l}`).join(" · ") || (card.lessons.includes("Teacher notes") ? "Teacher extra" : "Module 1");
   const switchMode = (next: "learn" | "recall") => {
-    audioRef.current?.pause(); audioRef.current = null; setPlaying(null); setAudioStatus("");
+    stopStudyAudio();
     setMode(next); setFeedback(null); setAnswer("");
   };
-  async function play(path: string, text: string) {
-    const wasPlaying = playing === text;
-    stopStudyAudio();
-    if (wasPlaying) return;
-    const clip = new Audio(withPagesBaseAssetPath(path));
-    clip.playbackRate = rate;
-    clip.preservesPitch = true;
-    audioRef.current = clip; setPlaying(text); setAudioStatus(`Playing: ${text}`);
-    clip.onended = () => { if (audioRef.current === clip) { setPlaying(null); setAudioStatus(""); } };
-    try { await clip.play(); } catch { if (audioRef.current === clip) { setPlaying(null); setAudioStatus("Audio could not play. Please try again."); } }
-  }
   function checkAnswer(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     if (!answer.trim()) { inputRef.current?.focus(); return; }
@@ -86,7 +73,7 @@ export function WordFamilyCard({ card }: { card: WordCard }) {
   }
   return <div className={styles.cardShell} data-word-card={card.id}>
     <header className={styles.toolbar}>
-      <SaveButton item={{ id: `card-${card.id}`, title: card.rows.map(r => r.singular.text).join(" / "), meaning: card.title, kind: "word", href: card.path, audio: card.rows[0]?.singular.audio ?? null }} />
+      <SaveButton item={savedWordCard(card)} />
       <div className={styles.brand}><span className={styles.brandSymbol} aria-hidden="true">w</span> WORD FAMILIES</div>
       <div className={styles.mode} role="group" aria-label="Study mode"><button type="button" aria-pressed={mode === "learn"} onClick={() => switchMode("learn")}>Learn</button><button type="button" aria-pressed={mode === "recall"} onClick={() => switchMode("recall")}>Recall</button></div>
     </header>
@@ -99,11 +86,11 @@ export function WordFamilyCard({ card }: { card: WordCard }) {
         <section className={styles.forms} aria-labelledby={`${uid}-forms`}>
           <h2 className={styles.sectionLabel} id={`${uid}-forms`}>{formCount > 1 ? "Learn the forms together" : "Learn the word"}</h2>
           <table className={`${styles.formTable} ${!hasPlural ? styles.singleColumn : ""}`}><thead><tr><th scope="col"><span className={styles.genderHead}>Form</span></th><th scope="col">{hasPlural ? "Singular" : "German"}{hasPlural && <small>{isProfession ? "one person" : "one"}</small>}</th>{hasPlural && <th scope="col" className={styles.plural}>Plural<small>{isProfession ? "several people" : "more than one"}</small></th>}</tr></thead><tbody>
-            {card.rows.map((row, index) => <tr key={`${row.singular.text}-${index}`}><th scope="row" className={`${styles.rowLabel} ${styles[row.singular.tone]}`}>{row.label}<small className={styles.rowMeaning}>{row.meaning}</small></th><td><span className={`${styles.mobileGender} ${styles[row.singular.tone]}`}>{row.label}</span><Term form={row.singular} stem={stem} play={play} playing={playing} />{!hasPlural && card.rows.length > 1 && <small className={styles.usage}>{row.meaning}</small>}{!hasPlural && row.usage && <small className={styles.usage}>{row.usage}</small>}</td>{hasPlural && <td><span className={`${styles.mobileGender} ${styles.plural}`}>{row.label} plural</span>{row.plurals.map(form => <Term key={form.text} form={form} stem={stem} play={play} playing={playing} />)}{!row.plurals.length && <small className={styles.usage}>{row.usage || "This expression has no plural form."}</small>}</td>}</tr>)}
+            {card.rows.map((row, index) => <tr key={`${row.singular.text}-${index}`}><th scope="row" className={`${styles.rowLabel} ${styles[row.singular.tone]}`}>{row.label}<small className={styles.rowMeaning}>{row.meaning}</small></th><td><span className={`${styles.mobileGender} ${styles[row.singular.tone]}`}>{row.label}</span><Term form={row.singular} stem={stem} />{!hasPlural && card.rows.length > 1 && <small className={styles.usage}>{row.meaning}</small>}{!hasPlural && row.usage && <small className={styles.usage}>{row.usage}</small>}</td>{hasPlural && <td><span className={`${styles.mobileGender} ${styles.plural}`}>{row.label} plural</span>{row.plurals.map(form => <Term key={form.text} form={form} stem={stem} />)}{!row.plurals.length && <small className={styles.usage}>{row.usage || "This expression has no plural form."}</small>}</td>}</tr>)}
           </tbody></table>
         </section>
         <section className={styles.pattern}><h2 className={styles.sectionLabel}>Notice<br />the pattern</h2><div><div className={styles.patternLine} lang="de">{card.pattern.map((part, i) => <span key={`${i}-${part}`}>{i > 0 && <span className={styles.arrow}>→</span>}<PatternToken text={part} card={card} /></span>)}</div><small>{card.tip}</small></div></section>
-        <section className={styles.example}><h2 className={styles.sectionLabel}>Use it</h2><div>{card.examples.map(ex => <div key={ex.de}><div className={styles.exampleLine}><p className={styles.germanExample} lang="de"><ExampleText text={ex.de} card={card} /></p>{!ex.audio && <LineAudio text={ex.de} compact />}{ex.audio && <button type="button" className={styles.listen} aria-label={`Listen to example: ${ex.de}`} aria-pressed={playing === ex.de} onClick={() => play(ex.audio!, ex.de)}><Speaker /></button>}</div><p className={styles.englishExample}>{ex.en}</p></div>)}<p className={styles.grammarTip}>{isProfession ? "✧ After “Ich bin”, a profession usually has no article." : card.note.split(/(?<=[.!?])\s/)[0]}</p></div></section>
+        <section className={styles.example}><h2 className={styles.sectionLabel}>Use it</h2><div>{card.examples.map(ex => <div key={ex.de}><div className={styles.exampleLine}><p className={styles.germanExample} lang="de"><ExampleText text={ex.de} card={card} /></p><LineAudio text={ex.de} src={ex.audio} compact/></div><p className={styles.englishExample}>{ex.en}</p></div>)}<p className={styles.grammarTip}>{isProfession ? "✧ After “Ich bin”, a profession usually has no article." : card.note.split(/(?<=[.!?])\s/)[0]}</p></div></section>
         <section className={styles.recallInvite}><div><h2>Ready to remember it?</h2><p>Hide the German. Say it from memory.</p></div><button type="button" className={styles.primary} onClick={() => switchMode("recall")}>Try recall <span aria-hidden="true">→</span></button></section>
       </div> : <section aria-labelledby={`${uid}-prompt`}>
         <div className={styles.practice}><div className={styles.practiceHeader}><h2 className={styles.sectionLabel}>Your turn</h2><span>{promptIndex + 1} / {card.prompts.length}</span></div><h3 className={styles.prompt} id={`${uid}-prompt`}>{prompt.question}</h3><p className={styles.promptHint}>Say it aloud, or type your answer. Include the article for a noun.</p>
@@ -114,6 +101,6 @@ export function WordFamilyCard({ card }: { card: WordCard }) {
       </section>}
       <footer className={styles.cardFooter}><span><span className={styles.male}>●</span> masculine &nbsp; <span className={styles.female}>●</span> feminine &nbsp; <span className={styles.neuter}>●</span> neuter &nbsp; <span className={styles.plural}>●</span> plural</span><span>Generated audio</span></footer>
       {mode === "learn" && <details className={styles.sourceDetail}><summary>Lesson notes &amp; sources</summary><p>Momente A1.1 · Kursbuch, Arbeitsbuch and German–English glossary, © Hueber Verlag. {card.teacherRows.length > 0 && `Also in your teacher’s professions list (row ${card.teacherRows.join(", ")}).`} </p>{card.sources.map(source => <p key={source}>{source.startsWith("https://") ? <a href={source} target="_blank" rel="noreferrer">Additional lexical source</a> : source}</p>)}<p>{card.priorities.join(" · ")}. Core: practise actively. Context and Classroom: recognise first. Teacher extra: follow your class assignment.</p>{card.note && <p>{card.note}</p>}<p>The word forms and meanings follow your vocabulary guide. Examples and memory cues were written for these cards; they are not quotations from the book. Audio is generated preview speech; independent German language and listening review is still pending.</p></details>}
-    </article><p className={styles.below}>Learn the meaning. Notice the endings. Recall the whole family.</p>{audioStatus && <p className={styles.status} role="status">{audioStatus}</p>}
+    </article><p className={styles.below}>Learn the meaning. Notice the endings. Recall the whole family.</p>
   </div>;
 }

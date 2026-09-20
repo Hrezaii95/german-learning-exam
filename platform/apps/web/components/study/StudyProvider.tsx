@@ -345,6 +345,12 @@ export function SaveButton({
   );
 }
 
+export function GermanLookup({ text, children, className = "", tabIndex = 0 }: { text: string; children?: ReactNode; className?: string | undefined; tabIndex?: number }) {
+  const study = useStudy();
+  return <button type="button" lang="de" className={`study-word ${className}`} tabIndex={tabIndex} aria-label={`Look up ${text}`}
+    onClick={() => { if (!window.getSelection()?.toString().trim()) study?.lookup(text); }}>{children ?? text}</button>;
+}
+
 export function GermanText({
   text,
   className = "",
@@ -370,16 +376,11 @@ export function GermanText({
       }}>
       {parts.map((part, i) =>
         /\p{L}/u.test(part) ? (
-          <button
-            type="button"
-            className="study-word"
+          <GermanLookup
+            text={part}
             tabIndex={i === firstWord ? 0 : -1}
             key={i}
-            onClick={() => { if (!window.getSelection()?.toString().trim()) study?.lookup(part); }}
-            aria-label={`Look up ${part}`}
-          >
-            {part}
-          </button>
+          />
         ) : (
           part
         ),

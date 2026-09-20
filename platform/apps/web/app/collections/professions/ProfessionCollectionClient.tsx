@@ -10,7 +10,8 @@ import {
   ProfessionInfographic,
   countRowPronunciationPreviews,
 } from "./ProfessionInfographic";
-import {useStudy} from "@/components/study/StudyProvider";
+import {SaveButton, useStudy} from "@/components/study/StudyProvider";
+import { savedWordCard } from "@/lib/study/saved-word-card";
 import { useStudyScope } from "@/components/study/StudyScope";
 import { matchesStudyScope } from "@/lib/study/scope";
 import type { WordCard } from "@/lib/content/word-card-types";
@@ -167,6 +168,7 @@ export function ProfessionCollectionClient({ projection, cardsByRow }: { project
                   </div>
                   <ProfessionInfographic row={row} compact {...(pronunciation ? { pronunciation } : {})} />
                   <div className={styles.cardFooter}>
+                    {cardsByRow?.[row.id] && <SaveButton item={savedWordCard(cardsByRow[row.id]!)}/>}
                     {row.hasAlternatives ? <span className="meta-chip">Slash alternatives preserved</span> : <span className="dense">One masculine/feminine pair</span>}
                     <Link className="btn btn-secondary" href={row.detailPath}>Study forms and audio</Link>
                   </div>
