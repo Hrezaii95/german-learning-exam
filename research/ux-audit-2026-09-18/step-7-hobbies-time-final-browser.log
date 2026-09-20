@@ -1,0 +1,57 @@
+
+Running 12 tests using 2 workers
+
+(node:34940) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:25292) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:46:1 › saving a profession in its collection is reflected on its word card and can be removed there (7.6s)
+  ok  3 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:58:1 › profession filters control both the displayed cards and the review pool (5.0s)
+  ok  4 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:86:1 › German text offers one keyboard stop per phrase and complete-phrase lookup (3.9s)
+  ok  2 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:5:1 › saved pronunciation speed follows word cards, original recordings and the reader (18.0s)
+  ok  6 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:127:1 › a failed preview recording shows a useful error and can be retried (4.6s)
+  ok  5 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:103:1 › transcript lines share pronunciation, meaning and saved-review actions (7.6s)
+  ok  7 [chromium] › tests\e2e\53-hobbies-time-learning.spec.ts:3:31 › hobby illustrations, contrasts and saved settings at 320px (5.9s)
+  ok  8 [chromium] › tests\e2e\53-hobbies-time-learning.spec.ts:3:31 › hobby illustrations, contrasts and saved settings at 1440px (7.0s)
+  ok 10 [chromium] › tests\e2e\53-hobbies-time-learning.spec.ts:12:31 › clock listening, weekly plans and reload at 1440px (14.1s)
+  ok 11 [chromium] › tests\e2e\53-hobbies-time-learning.spec.ts:19:1 › hobby and time card practice respects scope and saved filters (7.6s)
+  x   9 [chromium] › tests\e2e\53-hobbies-time-learning.spec.ts:12:31 › clock listening, weekly plans and reload at 320px (24.0s)
+  ok 12 [chromium] › tests\e2e\53-hobbies-time-learning.spec.ts:23:1 › hobbies and time print concise A4 and Letter summaries (4.4s)
+
+
+  1) [chromium] › tests\e2e\53-hobbies-time-learning.spec.ts:12:31 › clock listening, weekly plans and reload at 320px
+
+    Error: expect(received).toBeLessThanOrEqual(expected)
+
+    Expected: <= 1
+    Received:    5
+
+    Call Log:
+    - Timeout 10000ms exceeded while waiting on the predicate
+
+      14 |  const clock=page.locator("#clock-lab");await clock.getByRole("combobox",{name:"Clock hour",exact:true}).selectOption("0");await clock.getByRole("combobox",{name:"Clock minute",exact:true}).selectOption("30");await expect(clock.locator(".half-memory")).toContainText("halb eins → 12:30");await clock.getByRole("button",{name:/^Save to review:/}).click();await page.goto("saved/");await page.locator(".study-saved-card").filter({hasText:"Es ist halb eins."}).getByRole("link",{name:"Open in context →",exact:true}).click();await expect(clock.getByRole("combobox",{name:"Clock hour",exact:true})).toHaveValue("0");await clock.getByRole("button",{name:/^Remove from review:/}).click();await clock.screenshot({path:info.outputPath(`time-clock-${width}.png`)});
+      15 |  const plan=page.locator("#plan-lab");await plan.getByRole("combobox",{name:"Plan day",exact:true}).selectOption("2");await plan.getByRole("combobox",{name:"Plan destination",exact:true}).selectOption("0");await plan.getByRole("combobox",{name:"Plan hour",exact:true}).selectOption("15");await plan.getByRole("combobox",{name:"Plan minute",exact:true}).selectOption("30");await plan.getByRole("checkbox",{name:"Include the clock time in this plan",exact:true}).check();await expect(plan.locator(".plan-answer")).toContainText("Am Mittwoch um fünfzehn Uhr dreißig gehen wir ins Kino.");await expect(plan.locator(".time-word-order > div").nth(0)).toContainText("Am Mittwoch um fünfzehn Uhr dreißig");await expect(plan.locator(".time-word-order > div").nth(1)).toContainText("gehen");await plan.getByRole("button",{name:/^Save to review:/}).click();await page.reload();await expect(page.locator(".weekly-plan-grid")).toContainText("1 saved plan");await page.locator(".weekly-plan-grid article").filter({hasText:"Mittwoch"}).locator("summary").click();await page.getByRole("button",{name:"15:30 · ins Kino Open saved plan",exact:true}).click();await expect(plan.getByRole("combobox",{name:"Plan day",exact:true})).toHaveValue("2");await expect(plan.getByRole("checkbox",{name:"Include the clock time in this plan",exact:true})).toBeChecked();await page.reload();await expect(plan.getByRole("combobox",{name:"Plan day",exact:true})).toHaveValue("2");await expect(plan.getByRole("checkbox",{name:"Include the clock time in this plan",exact:true})).toBeChecked();await expect(plan.getByRole("combobox",{name:"Plan hour",exact:true})).toHaveValue("15");await expect(plan.getByRole("combobox",{name:"Plan minute",exact:true})).toHaveValue("30");await plan.screenshot({path:info.outputPath(`time-plan-${width}.png`)});await page.locator("#week-map").screenshot({path:info.outputPath(`time-week-${width}.png`)});
+    > 16 |  const listening=page.locator("#clock-listening");await expect(listening).not.toContainText("Es ist halb vier.");await listening.getByRole("button",{name:"Listen: time to identify",exact:true}).click();await expect.poll(()=>page.evaluate(()=>{const clip=(window as unknown as {clips:HTMLAudioElement[]}).clips.at(-1);return !!clip&&clip.currentTime>0;})).toBe(true);await listening.getByRole("button",{name:"Choose 3:30",exact:true}).click();await expect(listening.getByRole("status")).toContainText("Exactly.");await listening.screenshot({path:info.outputPath(`time-listening-${width}.png`)});await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);
+         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ^
+      17 | });
+      18 |
+      19 | test("hobby and time card practice respects scope and saved filters",async({page})=>{
+        at E:\claude-cursor\side projects\German learning\platform\tests\e2e\53-hobbies-time-learning.spec.ts:16:685
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\53-hobbies-time-learning-c-bc0f0-y-plans-and-reload-at-320px-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\53-hobbies-time-learning-c-bc0f0-y-plans-and-reload-at-320px-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\53-hobbies-time-learning-c-bc0f0-y-plans-and-reload-at-320px-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\53-hobbies-time-learning-c-bc0f0-y-plans-and-reload-at-320px-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium] › tests\e2e\53-hobbies-time-learning.spec.ts:12:31 › clock listening, weekly plans and reload at 320px
+  11 passed (1.0m)

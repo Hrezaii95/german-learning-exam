@@ -34,6 +34,12 @@
       "exactText": "Du arbeitest als Lehrer."
     },
     {
+      "publicRelativePath": "audio/collection-sheet/06d589d005b9d3d8ec2a.mp3",
+      "sha256": "68fa340cfa6837ebfc36f1286445a03841f572038fd13d895ccce7fed2e009e4",
+      "bytes": 26640,
+      "exactText": "Am Sonntag um fünfzehn Uhr dreißig gehen wir ins Kino."
+    },
+    {
       "publicRelativePath": "audio/collection-sheet/0886563561d7d30d973e.mp3",
       "sha256": "163febf5502565d5b6006e0d238cdd6bce86b06ebf9753c280239c7fe6e4c28c",
       "bytes": 11376,
@@ -130,10 +136,22 @@
       "exactText": "Mia ist meine Tochter."
     },
     {
+      "publicRelativePath": "audio/collection-sheet/14a63ba760bafaa56861.mp3",
+      "sha256": "83ba36b7c34cd51748b4c95983aa898b984b0f6b7a32b896ca81fc9c45b9364f",
+      "bytes": 26928,
+      "exactText": "Wir gehen am Sonntag um fünfzehn Uhr dreißig ins Kino."
+    },
+    {
       "publicRelativePath": "audio/collection-sheet/14fbd7e7dee5a7dd79d0.mp3",
       "sha256": "798ecfbc0d92f6a5ea3aa0b4e645f1487fe5f831e5c31f38b871f81afde18430",
       "bytes": 12384,
       "exactText": "sie arbeiten"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/16683d6deb227b34372e.mp3",
+      "sha256": "8d73c9de7b50d0d5ee34683e542065733bc7b2068792ca51d415f076f6839b27",
+      "bytes": 26352,
+      "exactText": "Wir gehen am Montag um fünfzehn Uhr dreißig ins Kino."
     },
     {
       "publicRelativePath": "audio/collection-sheet/16b36ea733151b5ec18f.mp3",
@@ -182,6 +200,12 @@
       "sha256": "97b1c765e249fa013caedb214f5b402a5833b61072ab5c7feb9eab489caea1f1",
       "bytes": 15264,
       "exactText": "Ja, das ist ein Buch."
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/1d088af921c068b90a89.mp3",
+      "sha256": "dec27cf9889a47ccff917083b3c0a45c23131f4a94b1c61f1b944d713bdb7fca",
+      "bytes": 11232,
+      "exactText": "um drei Uhr"
     },
     {
       "publicRelativePath": "audio/collection-sheet/1eaceba81ec0b2c7a5e1.mp3",
@@ -308,6 +332,12 @@
       "sha256": "75859e618747e15efdffec33e3fc2355b9ae6e232ec3fb8fad05d0200b9d4052",
       "bytes": 9648,
       "exactText": "er geht"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/2ae7ed6c516468ab9079.mp3",
+      "sha256": "050989e027f68706ff800c194aa5cd3a1f23192b744435c6daef86be5acf39a7",
+      "bytes": 27216,
+      "exactText": "Am Dienstag um fünfzehn Uhr dreißig gehen wir ins Kino."
     },
     {
       "publicRelativePath": "audio/collection-sheet/2afafe1a3e84b0205788.mp3",
@@ -556,6 +586,12 @@
       "exactText": "Julia ist meine Schwester."
     },
     {
+      "publicRelativePath": "audio/collection-sheet/4fa8080b107b34fdc6ae.mp3",
+      "sha256": "610cc05296727eb954191cf4c3f9c819da3ce8c81479ea97d9ec56ef9d97a0dd",
+      "bytes": 28224,
+      "exactText": "Wir gehen am Donnerstag um fünfzehn Uhr dreißig ins Kino."
+    },
+    {
       "publicRelativePath": "audio/collection-sheet/50d5e9f928c396ed003e.mp3",
       "sha256": "4235a032a2a8c310a7b1aef45967dfb1b1c0c43e39f1e1b410d67a4b1162c1e4",
       "bytes": 15264,
@@ -616,6 +652,12 @@
       "exactText": "Ja, ich kann gut schwimmen."
     },
     {
+      "publicRelativePath": "audio/collection-sheet/5ae1526a1d123a496fef.mp3",
+      "sha256": "941f98d988d59f73e513d73d21b7649f8dd71b8918eb65085b5e420c2d1b742b",
+      "bytes": 26928,
+      "exactText": "Am Samstag um fünfzehn Uhr dreißig gehen wir ins Kino."
+    },
+    {
       "publicRelativePath": "audio/collection-sheet/5c62e091b8c0565f1baf.mp3",
       "sha256": "cbde32c7cf16b34660dd5fb4257f291bb57086462f1c3820a28c0d0fee809c7d",
       "bytes": 8064,
@@ -674,6 +716,12 @@
       "sha256": "61c9484eaea34d725d1d929dcd2b9fe16a8e6e4e1a6d5ec3503c20a0dbdb9b93",
       "bytes": 9936,
       "exactText": "ihr kommt"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/6605bfc51569a19fc757.mp3",
+      "sha256": "5d6d13cec0f5cc630f5052176516fe5e94774a26029f99978d03c32b2dc07d4e",
+      "bytes": 27792,
+      "exactText": "Wir gehen am Dienstag um fünfzehn Uhr dreißig ins Kino."
     },
     {
       "publicRelativePath": "audio/collection-sheet/662c21f930ee4c5fd964.mp3",
@@ -832,6 +880,12 @@
       "exactText": "er studiert"
     },
     {
+      "publicRelativePath": "audio/collection-sheet/7d834039c956c76a73d4.mp3",
+      "sha256": "8fe8d1c4d11c9bdb2bddec3d9340bcd62d8522cdeba42d466f7ea8d9d71b3a09",
+      "bytes": 27792,
+      "exactText": "Am Donnerstag um fünfzehn Uhr dreißig gehen wir ins Kino."
+    },
+    {
       "publicRelativePath": "audio/collection-sheet/7dd5f1b0a6e63400768d.mp3",
       "sha256": "ea74abf1f62445b4ce238e3462c83dc87f06a0bbd6a03c89b23f94f373a7bc5a",
       "bytes": 14688,
@@ -982,6 +1036,18 @@
       "exactText": "sie planen"
     },
     {
+      "publicRelativePath": "audio/collection-sheet/8eccf9621e7afee7b5e7.mp3",
+      "sha256": "df074e37e00d522aae3359c4c91c0b207a7c22c7c84cb7a8ecaeb5d31f53d242",
+      "bytes": 25920,
+      "exactText": "Am Mittwoch um fünfzehn Uhr dreißig gehen wir ins Kino."
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/8f5793ad80c1364f413b.mp3",
+      "sha256": "78f6a7d6a0515b15fb3a5599a4e054bea16416abde1ad4d51a06c8ad8c50dd59",
+      "bytes": 27792,
+      "exactText": "Wir gehen am Samstag um fünfzehn Uhr dreißig ins Kino."
+    },
+    {
       "publicRelativePath": "audio/collection-sheet/90f56cace49649bcf776.mp3",
       "sha256": "0f1e352067156a5fcd532aeefb7cb4fb674d545ad985f3bca91ae1f3ff3b1db9",
       "bytes": 14112,
@@ -1010,6 +1076,12 @@
       "sha256": "c020df8866d6142d74a0df23f2dc67706a0cd7ab26031e20c3b56d629b7cf239",
       "bytes": 11952,
       "exactText": "Sie ist blau."
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/9646c2f5cd4a91a48a81.mp3",
+      "sha256": "e85a5013db3d8cf0844dc75042079f60e50b846f248f18600c7b1b8c5b67e0c2",
+      "bytes": 12384,
+      "exactText": "zwei Stunden"
     },
     {
       "publicRelativePath": "audio/collection-sheet/97d785a0494c493fe249.mp3",
@@ -1252,6 +1324,12 @@
       "exactText": "Z"
     },
     {
+      "publicRelativePath": "audio/collection-sheet/bc7d8515f34f40431fda.mp3",
+      "sha256": "af4d64c7e798cb1bf4f8142acd694521b0b63be2ba971587223fdb951ee0fbc1",
+      "bytes": 27072,
+      "exactText": "Am Freitag um fünfzehn Uhr dreißig gehen wir ins Kino."
+    },
+    {
       "publicRelativePath": "audio/collection-sheet/c150532a6e2ff844a304.mp3",
       "sha256": "f25345eb2ba2f0996e3748821e7d7166928600fc5cebd45a6f8a7b562bae1b79",
       "bytes": 13680,
@@ -1274,6 +1352,12 @@
       "sha256": "f5ca80a53e13b8fba8327df86ab2bd5125b1e949f2f8adc0fb5000fc7810536e",
       "bytes": 13248,
       "exactText": "Wie geht’s Ihnen?"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/c653673b336adc648211.mp3",
+      "sha256": "fe8a8a247d8b58229270faaddbd01af32232e204d599eba5ae5d6f51764ce921",
+      "bytes": 26352,
+      "exactText": "Wir gehen am Mittwoch um fünfzehn Uhr dreißig ins Kino."
     },
     {
       "publicRelativePath": "audio/collection-sheet/c79880f1227f1282ea8d.mp3",
@@ -1310,6 +1394,12 @@
       "sha256": "e7efa1c2d279352fc6f9c4c91bbac5cacf8cd0cca728160bd0196938d29a1a9f",
       "bytes": 9936,
       "exactText": "ihr habt"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/cf59c360ed8063904b6b.mp3",
+      "sha256": "94377f57b59dc58bd62d447081921a4d11d37147720be8ce746d466e0771cb32",
+      "bytes": 27216,
+      "exactText": "Wir gehen am Freitag um fünfzehn Uhr dreißig ins Kino."
     },
     {
       "publicRelativePath": "audio/collection-sheet/d0b439088b76217c30d3.mp3",
@@ -1370,6 +1460,12 @@
       "sha256": "374b7eb72e28b7bc2f90fe34eb45db624f6577df1fe505c05a8e443de2465a6d",
       "bytes": 11664,
       "exactText": "Sie ist weiß."
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/d78a6934ab03a687c75b.mp3",
+      "sha256": "f5bff601bd6d924f11447e95f592df099104b609d54d3d0db052f00f8b248b06",
+      "bytes": 26352,
+      "exactText": "Am Montag um fünfzehn Uhr dreißig gehen wir ins Kino."
     },
     {
       "publicRelativePath": "audio/collection-sheet/d7cb2272d0930ca7d6be.mp3",
@@ -1478,6 +1574,12 @@
       "sha256": "1700be280a5c95b375a6e985a3e1d901807f6a8b318a9a28006f834aad60f1d9",
       "bytes": 11232,
       "exactText": "Wie lange?"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/e481acdfd42e3ed4844a.mp3",
+      "sha256": "5363812740ddae7fffb09a64975ce854eedb432494401753bf764233b07ccedb",
+      "bytes": 11520,
+      "exactText": "eine Stunde"
     },
     {
       "publicRelativePath": "audio/collection-sheet/e55bff7f9626a0ac7b19.mp3",

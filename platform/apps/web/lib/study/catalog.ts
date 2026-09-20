@@ -21,6 +21,8 @@ import {officeBookmark,defaultObjectSettings,objectBookmark,objectDescription,ob
 import {colourSwatches} from "./object-sheet";
 import {objectModels,objectSentences,materialModels} from "./object-sheet";
 import {officeModels,officeSentence,officeMeaning,phoneSteps,type OfficeMode} from "./office-sheet";
+import {hobbyBookmark,hobbyContrasts,hobbyContrastSaveId} from "./hobby-learning";
+import {clockBookmark,planBookmark,timeTeachingPlans,timedPlanSentence,timedPlanMeaning,timedPlanSaveId} from "./time-learning";
 import {hobbyModels,hobbyPeople,abilityLevels,frequencyWords,abilitySentence,abilityMeaning,frequencySentence,frequencyMeaning} from "./hobbies-sheet";
 import {clockSaveId,clockHours,clockMinutes,clockSentence,clockMeaning,weekDays,timePlaces,planSentence,planMeaning} from "./time-sheet";
 import {journeyActivities,journeyPeople,journeySentence,journeyMeaning,journeySaveId,monthEnglish,seasonSentence} from "./journey-sheet";
@@ -113,11 +115,14 @@ export function loadDictionary(): DictionaryEntry[] {
   });
   phoneSteps.forEach((p,i)=>addStudySentence(`office-phone-${i}`,p.de,p.en,6,`/cheat-sheets/office#phone-turn-${i}`,`l6-phone-${i}`));
   hobbyModels.forEach((_,h)=>{
-    hobbyPeople.forEach((_,p)=>abilityLevels.forEach((_,a)=>[false,true].forEach(q=>addStudySentence(`hobby-${h}-${p}-${a}-${q}`,abilitySentence(h,p,a,q),abilityMeaning(h,p,a,q),7,"/cheat-sheets/hobbies#ability-lab",`l7-ability-${h}-${p}-${a}-${q}`))));
-    frequencyWords.forEach((_,f)=>addStudySentence(`hobby-frequency-${h}-${f}`,frequencySentence(h,f),frequencyMeaning(h,f),7,"/cheat-sheets/hobbies#frequency-lab",`l7-frequency-${h}-${f}`));
+    hobbyPeople.forEach((_,p)=>abilityLevels.forEach((_,a)=>[false,true].forEach(q=>addStudySentence(`hobby-${h}-${p}-${a}-${q}`,abilitySentence(h,p,a,q),abilityMeaning(h,p,a,q),7,`/cheat-sheets/hobbies${hobbyBookmark({hobby:h,person:p,level:a,question:q,frequency:1})}`,`l7-ability-${h}-${p}-${a}-${q}`))));
+    frequencyWords.forEach((_,f)=>addStudySentence(`hobby-frequency-${h}-${f}`,frequencySentence(h,f),frequencyMeaning(h,f),7,`/cheat-sheets/hobbies${hobbyBookmark({hobby:h,person:0,level:1,question:false,frequency:f},"frequency")}`,`l7-frequency-${h}-${f}`));
   });
-  clockHours.forEach(h=>clockMinutes.forEach(m=>(["official","everyday"] as const).filter(mode=>mode==='official'||h<12).forEach(mode=>addStudySentence(`clock-${h}-${m}-${mode}`,clockSentence(h,m,mode),clockMeaning(h,m,mode),8,"/cheat-sheets/time#clock-lab",clockSaveId(h,m,mode)))));
-  weekDays.forEach((_,d)=>timePlaces.forEach((_,p)=>[false,true].forEach(front=>addStudySentence(`plan-${d}-${p}-${front}`,planSentence(d,p,front),planMeaning(d,p),8,"/cheat-sheets/time#plan-lab",`l8-plan-${d}-${p}-${front}`))));
+  hobbyModels.forEach((_,hobby)=>hobbyContrasts(hobby).forEach((row,index)=>{if(!entries.some(entry=>entry.de===row.de))addStudySentence(`hobby-contrast-${hobby}-${row.kind}`,row.de,row.en,7,`/cheat-sheets/hobbies#hobby-contrast-${hobby}-${index}`,hobbyContrastSaveId(hobby,index));}));
+  timeTeachingPlans.forEach(state=>addStudySentence(`time-plan-${state.day}-${state.front}`,timedPlanSentence(state),timedPlanMeaning(state),8,`/cheat-sheets/time${planBookmark(state)}`,timedPlanSaveId(state)));
+  for(const [de,en] of [["eine Stunde","one hour (duration)"],["zwei Stunden","two hours (duration)"]])if(!entries.some(entry=>entry.de===de))addStudySentence(`time-duration-${de}`,de!,en!,8,"/cheat-sheets/time#time-map",undefined,"study-extra");
+  clockHours.forEach(h=>clockMinutes.forEach(m=>(["official","everyday"] as const).filter(mode=>mode==='official'||h<12).forEach(mode=>addStudySentence(`clock-${h}-${m}-${mode}`,clockSentence(h,m,mode),clockMeaning(h,m,mode),8,`/cheat-sheets/time${clockBookmark({hour:h,minute:m,mode})}`,clockSaveId(h,m,mode)))));
+  weekDays.forEach((_,d)=>timePlaces.forEach((_,p)=>[false,true].forEach(front=>addStudySentence(`plan-${d}-${p}-${front}`,planSentence(d,p,front),planMeaning(d,p),8,`/cheat-sheets/time${planBookmark({day:d,place:p,front,withTime:false,hour:15,minute:30})}`,`l8-plan-${d}-${p}-${front}`))));
   journeyActivities.forEach((_,a)=>journeyPeople.forEach((_,p)=>[false,true].forEach(q=>addStudySentence(`journey-${a}-${p}-${q}`,journeySentence(a,p,q),journeyMeaning(a,p,q),12,"/cheat-sheets/journeys#journey-lab",journeySaveId(a,p,q)))));
   Object.entries(monthEnglish).forEach(([m,en])=>addStudySentence(`season-${m}`,seasonSentence(m),`I traveled to Hamburg in ${en}.`,12,"/cheat-sheets/journeys#season-calendar",`l12-season-${m}`));
   pastActivities.forEach((_,a)=>pastPeople.forEach((_,p)=>pastModes.forEach(m=>addStudySentence(`past-${a}-${p}-${m.id}`,pastSentence(a,p,m.id),pastMeaning(a,p,m.id),11,"/cheat-sheets/past#past-lab",pastSaveId(a,p,m.id)))));

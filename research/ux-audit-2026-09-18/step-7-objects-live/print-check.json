@@ -1,0 +1,22 @@
+[
+  {
+    "file": "objects-A4.pdf",
+    "pages": 1,
+    "matchesLocalText": true
+  },
+  {
+    "file": "objects-Letter.pdf",
+    "pages": 1,
+    "matchesLocalText": true
+  },
+  {
+    "file": "office-A4.pdf",
+    "pages": 1,
+    "matchesLocalText": true
+  },
+  {
+    "file": "office-Letter.pdf",
+    "pages": 1,
+    "matchesLocalText": true
+  }
+]

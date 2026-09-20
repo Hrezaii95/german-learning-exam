@@ -1,0 +1,29 @@
+
+Running 20 tests using 2 workers
+
+(node:8064) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:2824) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  2 tests\e2e\46-cheat-sheet-summaries.spec.ts:5:5 › countries prints its complete summary without changing recall or filters at 320px (7.5s)
+  ok  3 tests\e2e\46-cheat-sheet-summaries.spec.ts:5:5 › home prints its complete summary without changing recall or filters at 320px (6.3s)
+  ok  1 tests\e2e\42-shared-learning-actions.spec.ts:5:1 › saved pronunciation speed follows word cards, original recordings and the reader (19.4s)
+  ok  4 tests\e2e\46-cheat-sheet-summaries.spec.ts:5:5 › countries prints its complete summary without changing recall or filters at 1440px (10.0s)
+  ok  5 tests\e2e\42-shared-learning-actions.spec.ts:46:1 › saving a profession in its collection is reflected on its word card and can be removed there (10.1s)
+  ok  6 tests\e2e\46-cheat-sheet-summaries.spec.ts:5:5 › home prints its complete summary without changing recall or filters at 1440px (6.3s)
+  ok  7 tests\e2e\42-shared-learning-actions.spec.ts:58:1 › profession filters control both the displayed cards and the review pool (7.6s)
+  ok  8 tests\e2e\46-cheat-sheet-summaries.spec.ts:51:1 › home overview keeps one set of objects and returns focus after Escape and selection (9.3s)
+  ok  9 tests\e2e\42-shared-learning-actions.spec.ts:86:1 › German text offers one keyboard stop per phrase and complete-phrase lookup (7.9s)
+  ok 10 tests\e2e\46-cheat-sheet-summaries.spec.ts:73:1 › home pronunciation follows the saved speed when its slow override is off (11.1s)
+  ok 11 tests\e2e\42-shared-learning-actions.spec.ts:103:1 › transcript lines share pronunciation, meaning and saved-review actions (12.9s)
+  ok 12 tests\e2e\46-cheat-sheet-summaries.spec.ts:97:33 › shared overviews preserve verb, number and register selections at 390px (15.4s)
+  ok 13 tests\e2e\42-shared-learning-actions.spec.ts:127:1 › a failed preview recording shows a useful error and can be retried (9.2s)
+  ok 14 tests\e2e\46-cheat-sheet-summaries.spec.ts:97:33 › shared overviews preserve verb, number and register selections at 1440px (11.9s)
+  ok 15 tests\e2e\52-objects-office-learning.spec.ts:3:31 › object picture, description and saved settings at 320px (11.8s)
+  ok 16 tests\e2e\52-objects-office-learning.spec.ts:3:31 › object picture, description and saved settings at 1440px (9.7s)
+  ok 17 tests\e2e\52-objects-office-learning.spec.ts:14:31 › office roles, contextual return and phone listening at 320px (14.4s)
+  ok 18 tests\e2e\52-objects-office-learning.spec.ts:14:31 › office roles, contextual return and phone listening at 1440px (12.9s)
+  ok 19 tests\e2e\52-objects-office-learning.spec.ts:25:1 › bounded sheet cards, filters, full-card return and saved phone turn (10.6s)
+  ok 20 tests\e2e\52-objects-office-learning.spec.ts:32:1 › object and office summaries export to A4 and Letter (8.6s)
+
+  20 passed (2.3m)

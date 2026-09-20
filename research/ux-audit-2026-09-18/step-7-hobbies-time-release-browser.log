@@ -1,0 +1,15 @@
+
+Running 6 tests using 2 workers
+
+(node:23768) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:37420) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 2 [chromium] › tests\e2e\53-hobbies-time-learning.spec.ts:3:31 › hobby illustrations, contrasts and saved settings at 320px (6.8s)
+  ok 1 [chromium] › tests\e2e\53-hobbies-time-learning.spec.ts:3:31 › hobby illustrations, contrasts and saved settings at 1440px (7.7s)
+  ok 3 [chromium] › tests\e2e\53-hobbies-time-learning.spec.ts:12:31 › clock listening, weekly plans and reload at 320px (11.8s)
+  ok 4 [chromium] › tests\e2e\53-hobbies-time-learning.spec.ts:12:31 › clock listening, weekly plans and reload at 1440px (12.5s)
+  ok 6 [chromium] › tests\e2e\53-hobbies-time-learning.spec.ts:23:1 › hobbies and time print concise A4 and Letter summaries (4.9s)
+  ok 5 [chromium] › tests\e2e\53-hobbies-time-learning.spec.ts:19:1 › hobby and time card practice respects scope and saved filters (7.5s)
+
+  6 passed (29.0s)

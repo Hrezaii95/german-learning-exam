@@ -1,0 +1,10 @@
+
+ RUN  v3.2.7 E:/claude-cursor/side projects/German learning/platform
+
+ ✓ tests/web/hobby-time-learning.test.ts (7 tests) 1187ms
+   ✓ time practice context > provides recorded teaching clips and contextual dictionary returns  1013ms
+
+ Test Files  1 passed (1)
+      Tests  7 passed (7)
+   Start at  00:12:56
+   Duration  4.75s (transform 1.33s, setup 0ms, collect 1.89s, tests 1.19s, environment 0ms, prepare 969ms)
