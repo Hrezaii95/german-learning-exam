@@ -1,0 +1,42 @@
+[
+  {
+    "width": 320,
+    "bounds": {
+      "x": 32,
+      "y": 848.828125,
+      "width": 24,
+      "height": 32
+    },
+    "violations": []
+  },
+  {
+    "width": 390,
+    "bounds": {
+      "x": 32,
+      "y": 780.921875,
+      "width": 24,
+      "height": 32
+    },
+    "violations": []
+  },
+  {
+    "width": 768,
+    "bounds": {
+      "x": 153,
+      "y": 716.90625,
+      "width": 24,
+      "height": 32
+    },
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "bounds": {
+      "x": 577,
+      "y": 671.890625,
+      "width": 24,
+      "height": 36.796875
+    },
+    "violations": []
+  }
+]
