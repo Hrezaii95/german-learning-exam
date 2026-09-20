@@ -1,0 +1,34 @@
+
+Running 25 tests using 2 workers
+
+(node:34948) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:23132) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  2 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:46:1 › saving a profession in its collection is reflected on its word card and can be removed there (5.6s)
+  ok  3 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:58:1 › profession filters control both the displayed cards and the review pool (4.3s)
+  ok  1 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:5:1 › saved pronunciation speed follows word cards, original recordings and the reader (12.4s)
+  ok  4 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:86:1 › German text offers one keyboard stop per phrase and complete-phrase lookup (3.5s)
+  ok  6 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:127:1 › a failed preview recording shows a useful error and can be retried (3.4s)
+  ok  5 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:103:1 › transcript lines share pronunciation, meaning and saved-review actions (5.3s)
+  ok  7 [chromium] › tests\e2e\46-cheat-sheet-summaries.spec.ts:5:5 › countries prints its complete summary without changing recall or filters at 320px (3.2s)
+  ok  8 [chromium] › tests\e2e\46-cheat-sheet-summaries.spec.ts:5:5 › home prints its complete summary without changing recall or filters at 320px (3.0s)
+  ok 10 [chromium] › tests\e2e\46-cheat-sheet-summaries.spec.ts:5:5 › home prints its complete summary without changing recall or filters at 1440px (4.0s)
+  ok  9 [chromium] › tests\e2e\46-cheat-sheet-summaries.spec.ts:5:5 › countries prints its complete summary without changing recall or filters at 1440px (4.9s)
+  ok 11 [chromium] › tests\e2e\46-cheat-sheet-summaries.spec.ts:51:1 › home overview keeps one set of objects and returns focus after Escape and selection (4.1s)
+  ok 12 [chromium] › tests\e2e\46-cheat-sheet-summaries.spec.ts:73:1 › home pronunciation follows the saved speed when its slow override is off (7.1s)
+  ok 13 [chromium] › tests\e2e\46-cheat-sheet-summaries.spec.ts:97:33 › shared overviews preserve verb, number and register selections at 390px (4.9s)
+  ok 15 [chromium] › tests\e2e\47-sheet-selection.spec.ts:3:31 › country and home word cards return to the selected item at 320px (5.1s)
+  ok 14 [chromium] › tests\e2e\46-cheat-sheet-summaries.spec.ts:97:33 › shared overviews preserve verb, number and register selections at 1440px (7.2s)
+  ok 16 [chromium] › tests\e2e\47-sheet-selection.spec.ts:3:31 › country and home word cards return to the selected item at 1440px (6.7s)
+  ok 17 [chromium] › tests\e2e\47-sheet-selection.spec.ts:21:32 › country and home recall follow selection, search and saved filters at 320px (9.3s)
+  ok 19 [chromium] › tests\e2e\48-people-learning.spec.ts:3:39 › people family viewpoint, saved sentence and card return at 320px (7.4s)
+  ok 18 [chromium] › tests\e2e\47-sheet-selection.spec.ts:21:32 › country and home recall follow selection, search and saved filters at 1440px (12.8s)
+  ok 20 [chromium] › tests\e2e\48-people-learning.spec.ts:3:39 › people family viewpoint, saved sentence and card return at 390px (7.2s)
+  ok 21 [chromium] › tests\e2e\48-people-learning.spec.ts:3:39 › people family viewpoint, saved sentence and card return at 768px (6.2s)
+  ok 23 [chromium] › tests\e2e\48-people-learning.spec.ts:40:31 › people bounded browsing, scoped recall and saved-filter return at 390px (4.5s)
+  ok 22 [chromium] › tests\e2e\48-people-learning.spec.ts:3:39 › people family viewpoint, saved sentence and card return at 1440px (8.8s)
+  ok 24 [chromium] › tests\e2e\48-people-learning.spec.ts:40:31 › people bounded browsing, scoped recall and saved-filter return at 1440px (4.7s)
+  ok 25 [chromium] › tests\e2e\48-people-learning.spec.ts:71:1 › people prints a complete family summary while preserving the learning view (3.9s)
+
+  25 passed (1.3m)

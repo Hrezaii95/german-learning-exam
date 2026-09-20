@@ -1,0 +1,15 @@
+
+Running 8 tests using 1 worker
+
+(node:29048) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 tests\e2e\46-cheat-sheet-summaries.spec.ts:5:5 › countries prints its complete summary without changing recall or filters at 320px (6.7s)
+  ok 2 tests\e2e\46-cheat-sheet-summaries.spec.ts:5:5 › home prints its complete summary without changing recall or filters at 320px (5.6s)
+  ok 3 tests\e2e\46-cheat-sheet-summaries.spec.ts:5:5 › countries prints its complete summary without changing recall or filters at 1440px (8.6s)
+  ok 4 tests\e2e\46-cheat-sheet-summaries.spec.ts:5:5 › home prints its complete summary without changing recall or filters at 1440px (5.0s)
+  ok 5 tests\e2e\46-cheat-sheet-summaries.spec.ts:51:1 › home overview keeps one set of objects and returns focus after Escape and selection (4.6s)
+  ok 6 tests\e2e\46-cheat-sheet-summaries.spec.ts:73:1 › home pronunciation follows the saved speed when its slow override is off (9.9s)
+  ok 7 tests\e2e\46-cheat-sheet-summaries.spec.ts:97:33 › shared overviews preserve family, verb, number and register selections at 390px (19.2s)
+  ok 8 tests\e2e\46-cheat-sheet-summaries.spec.ts:97:33 › shared overviews preserve family, verb, number and register selections at 1440px (15.6s)
+
+  8 passed (1.3m)

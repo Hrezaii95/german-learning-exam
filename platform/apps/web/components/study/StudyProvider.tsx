@@ -380,9 +380,9 @@ export function GermanText({
             text={part}
             tabIndex={i === firstWord ? 0 : -1}
             key={i}
-          />
+          >{part}{parts[i + 1]?.match(/^[.,!?;:…]+/u)?.[0] ?? ""}</GermanLookup>
         ) : (
-          part
+          i > 0 ? part.replace(/^[.,!?;:…]+/u, "") : part
         ),
       )}
     </span>

@@ -88,6 +88,12 @@
       "exactText": "er plant"
     },
     {
+      "publicRelativePath": "audio/collection-sheet/13b546b53bdbcdeeb0a7.mp3",
+      "sha256": "20e142d6f2cfd3933cd021b5fcb84f6db667053923201fad56af8d70d233a945",
+      "bytes": 14832,
+      "exactText": "Mia ist meine Tochter."
+    },
+    {
       "publicRelativePath": "audio/collection-sheet/14fbd7e7dee5a7dd79d0.mp3",
       "sha256": "798ecfbc0d92f6a5ea3aa0b4e645f1487fe5f831e5c31f38b871f81afde18430",
       "bytes": 12384,
@@ -124,6 +130,12 @@
       "exactText": "Nein, ich komme nicht aus dem Iran."
     },
     {
+      "publicRelativePath": "audio/collection-sheet/1b295ae82b8c023a0cc7.mp3",
+      "sha256": "700b883e2c500d21b995a53b9c8022f8eafbda23101aeea27f37b29567cffd6f",
+      "bytes": 16128,
+      "exactText": "Mia ist meine Enkelin."
+    },
+    {
       "publicRelativePath": "audio/collection-sheet/1eaceba81ec0b2c7a5e1.mp3",
       "sha256": "fd15a10579a2b27ca2fd4eb078ac3553b1c8ae41f299454717f8e1cb64da5d50",
       "bytes": 10368,
@@ -152,6 +164,12 @@
       "sha256": "3fb0b194890330142edd5c1565ac7f163ddddcaacb5ab349cacae5f740931d48",
       "bytes": 10656,
       "exactText": "du gehst"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/2172638150a16d21d64b.mp3",
+      "sha256": "720f539bdb7a8b0343cc18385af365339a0e56f01e7cfe5cab46283a84142226",
+      "bytes": 17280,
+      "exactText": "Nora ist meine Partnerin."
     },
     {
       "publicRelativePath": "audio/collection-sheet/226ac5ac1dd8fbf51f65.mp3",
@@ -400,6 +418,18 @@
       "exactText": "Wohin gehst du?"
     },
     {
+      "publicRelativePath": "audio/collection-sheet/49867fdc54caed2b8497.mp3",
+      "sha256": "780b13dd0fbe618cf448372b2ae8f65180d21c2762f90249ac83d192491dba3a",
+      "bytes": 16848,
+      "exactText": "Eva ist meine Großmutter."
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/4a89e161eb88c1182850.mp3",
+      "sha256": "19858c9d52792015889240de39dd585fbf293e59b5e28602f404ff1d5bad5069",
+      "bytes": 15408,
+      "exactText": "Anna ist meine Tochter."
+    },
+    {
       "publicRelativePath": "audio/collection-sheet/4acb8e52cc4278d46bfd.mp3",
       "sha256": "782efda358194888328f543d7fb30205c01108b6d88243e11c974b6b2a138ec6",
       "bytes": 9936,
@@ -440,6 +470,12 @@
       "sha256": "2270a7a54be3694ba687d550d5438bc27f03b25804442a4bf65a2409267214cd",
       "bytes": 11088,
       "exactText": "sie sammeln"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/4e2065b84e51ad87d3f0.mp3",
+      "sha256": "a6e7897a928be37e6c8a0f7e837774616ac6b53f6cec7065dc8a4ac561794f50",
+      "bytes": 16704,
+      "exactText": "Julia ist meine Schwester."
     },
     {
       "publicRelativePath": "audio/collection-sheet/50d5e9f928c396ed003e.mp3",
@@ -494,6 +530,12 @@
       "sha256": "274893040fc48342614dfeaae8c51776c533fc018f05fbdd8fbd0a6a77b611d8",
       "bytes": 12960,
       "exactText": "sie studieren"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/5fd43bb8d13d44548278.mp3",
+      "sha256": "7c437668fff19d552eb4644bafda41d06ac31659e257a749619519f51dd9f64e",
+      "bytes": 11376,
+      "exactText": "Ich bin Anna."
     },
     {
       "publicRelativePath": "audio/collection-sheet/5feafb622d1c73d16bb3.mp3",
@@ -578,6 +620,12 @@
       "sha256": "93a6e094331ab86a035d7b9cfefd718af408a8fee648f316dc49bff13b13a239",
       "bytes": 10224,
       "exactText": "du machst"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/6f871715b6a277a75bf5.mp3",
+      "sha256": "83857e3071068b0d263c58425f10b8c1cb7766430b69c32ebc92dd0a021a55a1",
+      "bytes": 15120,
+      "exactText": "Martin ist mein Vater."
     },
     {
       "publicRelativePath": "audio/collection-sheet/70ee61ac1afaed7a2889.mp3",
@@ -704,6 +752,12 @@
       "sha256": "45c767951b1a18b7ede3fa4c1a19b889be87d5b473e78e51acace93359580a4d",
       "bytes": 11808,
       "exactText": "sie glauben"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/88fba015f382caf6f5e4.mp3",
+      "sha256": "273df07c64c0d2da98d9d38047dc5b5455169fdc3e5b3a27e769cec24a889e5d",
+      "bytes": 13824,
+      "exactText": "Noah ist mein Sohn."
     },
     {
       "publicRelativePath": "audio/collection-sheet/899c99dba1ca59593542.mp3",
@@ -838,6 +892,18 @@
       "exactText": "Wie?"
     },
     {
+      "publicRelativePath": "audio/collection-sheet/a6f82f5fb3cd79356acf.mp3",
+      "sha256": "394c89bcecebe96427f06d42b7dd403019b2f68b920caf866690f85d27fbafee",
+      "bytes": 15120,
+      "exactText": "Eva ist meine Mutter."
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/a774d5b359cc5920376c.mp3",
+      "sha256": "4f1fc7c17c504369b4bf698587bcbe7dd6fb36b9b2d43bc84a48b5be43741947",
+      "bytes": 15264,
+      "exactText": "David ist mein Bruder."
+    },
+    {
       "publicRelativePath": "audio/collection-sheet/a83dd0ccbffe39d071cc.mp3",
       "sha256": "71eff457e5b8d3b7b226966afb89bd3b025d3a90f1e6765971c4a9c9a26dcad5",
       "bytes": 7344,
@@ -848,6 +914,12 @@
       "sha256": "dcc0b0de69e6ecb52d704b74f30c8e8bcca7aa640e2480c56954fc7d95f37cc0",
       "bytes": 7776,
       "exactText": "E"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/aa05be296823009e06e4.mp3",
+      "sha256": "90eea01dbaf0adc6dbef98123f60852fbe42b58527ca5ecb879c09018847ef9d",
+      "bytes": 15696,
+      "exactText": "Nora ist meine Mutter."
     },
     {
       "publicRelativePath": "audio/collection-sheet/ac322c2ce8afe91bedac.mp3",
@@ -866,6 +938,12 @@
       "sha256": "ad0312df7f1096b12fab2767d71af9e0b3f54ea30c9f7ca7be9719d689242e7b",
       "bytes": 7776,
       "exactText": "Ö"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/af5b8394d2a1026a864e.mp3",
+      "sha256": "f674a00675d2333924c2ffce2ec00d6bc8ffcf1ef8b1ffeab7a40a302970ab1e",
+      "bytes": 15264,
+      "exactText": "David ist mein Onkel."
     },
     {
       "publicRelativePath": "audio/collection-sheet/afacbd4b896d5ebe73bc.mp3",
@@ -892,10 +970,22 @@
       "exactText": "wir studieren"
     },
     {
+      "publicRelativePath": "audio/collection-sheet/b4746332a0ba8a2a2ce9.mp3",
+      "sha256": "076fdee3c7105899256f73605cac2b4a74cc3b4e01ab05d8ba4d3f4afd0b97b2",
+      "bytes": 15408,
+      "exactText": "Karl ist mein Großvater."
+    },
+    {
       "publicRelativePath": "audio/collection-sheet/b49428c8588c19e9726c.mp3",
       "sha256": "487226b9dcb1871270c43a4635643b768f48de79fc20360602549e7a5ad1d7d6",
       "bytes": 11808,
       "exactText": "wir glauben"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/b6e31e21416b4a5fd731.mp3",
+      "sha256": "b7480df8fe267c91434eea2b1829bfd5dfb7d08760acbc976117cfb65babac9f",
+      "bytes": 13104,
+      "exactText": "Ben ist mein Sohn."
     },
     {
       "publicRelativePath": "audio/collection-sheet/b7e06fe5587f7aca339b.mp3",
@@ -944,6 +1034,12 @@
       "sha256": "f5ca80a53e13b8fba8327df86ab2bd5125b1e949f2f8adc0fb5000fc7810536e",
       "bytes": 13248,
       "exactText": "Wie geht’s Ihnen?"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/c8ea5428ef517ac86587.mp3",
+      "sha256": "5e6de3c582308b68c3a480d04a052060535353709c889bbade0a59634ddf6dc3",
+      "bytes": 14400,
+      "exactText": "Noah ist mein Enkel."
     },
     {
       "publicRelativePath": "audio/collection-sheet/ca95a5015ddeb5a72d9d.mp3",
@@ -1072,6 +1168,12 @@
       "exactText": "B"
     },
     {
+      "publicRelativePath": "audio/collection-sheet/e071e5e551ed78953ca6.mp3",
+      "sha256": "5e4cacd33b2d361e5c546950232855e0527accc7608c1edf9f9ddd6157115bdb",
+      "bytes": 16416,
+      "exactText": "Julia ist meine Tante."
+    },
+    {
       "publicRelativePath": "audio/collection-sheet/e07e78dc8d0930d29cff.mp3",
       "sha256": "7d7256d8429872eafd09970a79572fc92aae0cd17d3d79642beefa0f4225cc40",
       "bytes": 12240,
@@ -1144,6 +1246,12 @@
       "exactText": "Wer kommt aus dem Iran?"
     },
     {
+      "publicRelativePath": "audio/collection-sheet/efd29d92a8c823648269.mp3",
+      "sha256": "1fceed38bcb451ca28f532ae882405221a1d9d12caaba71f6df011e6de5d27f2",
+      "bytes": 13680,
+      "exactText": "Karl ist mein Vater."
+    },
+    {
       "publicRelativePath": "audio/collection-sheet/f1f0f410b3ac9e954ada.mp3",
       "sha256": "1b901e666d43250b4113607059c94781890a38d01f654d25d8262093c843112a",
       "bytes": 11232,
@@ -1198,6 +1306,12 @@
       "exactText": "ich gehe"
     },
     {
+      "publicRelativePath": "audio/collection-sheet/f82b6a6480ca3d024ebe.mp3",
+      "sha256": "fa4be3928b888f4557f6ca2c4e2e3b62da95d6fddd9664482923c6ba92b77f2d",
+      "bytes": 12384,
+      "exactText": "Ich bin Martin."
+    },
+    {
       "publicRelativePath": "audio/collection-sheet/f99ecb0688a7c662ed34.mp3",
       "sha256": "458b024fa19ee518ee9aa3ffb769b31030a587f74284a89a5ce18fd0e10d7098",
       "bytes": 14112,
@@ -1244,6 +1358,12 @@
       "sha256": "0d93f8e822d7773b9d3e9bd299310394ab89cbd37be47e027f053e623a7c61ef",
       "bytes": 13248,
       "exactText": "Woher kommen Sie?"
+    },
+    {
+      "publicRelativePath": "audio/collection-sheet/ffe9a1b6ca6d0b8d8826.mp3",
+      "sha256": "58b9cc47f4f3f279abb78054c7b579c389734d8abe1af8f964e84cbdd40ff905",
+      "bytes": 13680,
+      "exactText": "Ben ist mein Bruder."
     }
   ]
 }

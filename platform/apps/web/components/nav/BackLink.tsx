@@ -9,7 +9,7 @@ export function BackLink({
   href: string;
   label?: string;
 }) {
-  const pathOnly = href.split("?")[0] ?? href;
+  const pathOnly = href.split(/[?#]/)[0] ?? href;
   if (!isSafeNavigationPath(pathOnly)) {
     // Fail closed: never render a hostile or off-allowlist href.
     return null;

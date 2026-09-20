@@ -17,6 +17,7 @@ import {professionPatterns,professionPatternIds,type ProfessionPattern} from "./
 import { useStudyScope } from "@/components/study/StudyScope";
 import { matchesStudyScope } from "@/lib/study/scope";
 import type { WordCard } from "@/lib/content/word-card-types";
+import {parseNavigationContextParam,resolveBackHref} from "@/lib/content/navigation-context";
 import styles from "./professions.module.css";
 
 function foldSearch(value: string): string {
@@ -103,7 +104,13 @@ function browseQuery(value:BrowseState) {
 
 export function ProfessionBackLink() {
   const [query,setQuery]=useState("");
-  useEffect(()=>setQuery(browseQuery(readBrowse())),[]);
+  const [origin,setOrigin]=useState<string|null>(null);
+  useEffect(()=>{
+    setQuery(browseQuery(readBrowse()));
+    const context=parseNavigationContextParam(new URLSearchParams(window.location.search).get("nav"));
+    if(context)setOrigin(resolveBackHref(context));
+  },[]);
+  if(origin)return <Link href={origin}>← Back to learning</Link>;
   return <Link href={`/collections/professions${query}#profession-list`}>← Professions</Link>;
 }
 

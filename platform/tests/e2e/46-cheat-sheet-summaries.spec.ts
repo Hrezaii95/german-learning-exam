@@ -94,9 +94,9 @@ test("home pronunciation follows the saved speed when its slow override is off",
   }
 });
 
-for (const width of [390,1440]) test(`shared overviews preserve family, verb, number and register selections at ${width}px`, async ({page}) => {
+for (const width of [390,1440]) test(`shared overviews preserve verb, number and register selections at ${width}px`, async ({page}) => {
   await page.setViewportSize({width,height:1000});
-  for (const [sheet,content] of [["people",".family-tree"],["verbs",".verb-atlas"],["numbers",".number-ladder"],["conversation",".conversation-atlas"]] as const) {
+  for (const [sheet,content] of [["verbs",".verb-atlas"],["numbers",".number-ladder"],["conversation",".conversation-atlas"]] as const) {
     await page.goto(`cheat-sheets/${sheet}/`);
     if(sheet==="conversation") await page.getByRole("button",{name:"Formal · Sie",exact:true}).click();
     const overview=page.locator(".sheet-overview");
@@ -106,7 +106,6 @@ for (const width of [390,1440]) test(`shared overviews preserve family, verb, nu
     const dialog=overview.getByRole("dialog");
     await expect(dialog).toBeVisible();
     await expect(overview.locator(content)).toHaveCount(1);
-    if(sheet==="people") await dialog.getByRole("button",{name:"die Tante",exact:true}).click();
     if(sheet==="verbs") await dialog.locator(".verb-atlas button").filter({has:page.locator("small",{hasText:/^sein$/})}).click();
     if(sheet==="numbers") await dialog.getByRole("button",{name:"200 zweihundert",exact:true}).click();
     if(sheet==="conversation") await expect(dialog).toContainText("Wie heißen Sie?");
@@ -114,7 +113,6 @@ for (const width of [390,1440]) test(`shared overviews preserve family, verb, nu
     await expect(dialog).toBeHidden();
     await expect(launch).toBeFocused();
     await expect(overview.locator(content)).toHaveCount(1);
-    if(sheet==="people") await expect(page.locator(".sheet-focus h2")).toContainText("die Tante");
     if(sheet==="verbs") await expect(page.getByRole("combobox",{name:"Choose a verb"})).toHaveValue("sein");
     if(sheet==="numbers") await expect(page.locator(".sheet-number-input input")).toHaveValue("200");
     if(sheet==="conversation") await expect(page.getByRole("button",{name:"Formal · Sie",exact:true})).toHaveAttribute("aria-pressed","true");

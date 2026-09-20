@@ -1,12 +1,18 @@
 import type {DictionaryEntry,SavedItem} from "./types";
 import {tagsForLesson,type StudyTags} from "./scope";
-import {sheetTags} from "./sheet-scope";
+import {countryStudyTags,homeStudyTags,sheetTags} from "./sheet-scope";
+import {countries} from "./countries";
+import {homeWords} from "./home";
 import type {SheetId} from "./sheet-topics";
 import {courseChapters} from "./lesson-four";
 
 /** Stable links also recover tags from backups created before study selection. */
 export function savedStudyTags(item:SavedItem,dictionary:DictionaryEntry[]=[]):StudyTags{
   if(item.studyTags)return item.studyTags;
+  const country=countries.find(country=>item.href===`/cheat-sheets#country-${country.id}`);
+  if(country)return countryStudyTags(country,dictionary);
+  const home=homeWords.find(word=>item.id===`home-${word.id}`||item.href===`/cheat-sheets/home#home-${word.id}`);
+  if(home)return homeStudyTags(home,dictionary);
   const entry=dictionary.find(e=>e.id===item.id.replace(/^card-/,"")||e.href===item.href);
   if(entry?.studyTags)return entry.studyTags;
   const explicit=item.lesson??Number(item.href.match(/^\/lessons\/(\d+)/)?.[1]);

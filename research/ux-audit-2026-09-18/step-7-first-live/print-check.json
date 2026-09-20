@@ -1,0 +1,48 @@
+[
+  {
+    "sheet": "countries",
+    "paper": "A4",
+    "pages": 2,
+    "textLengths": [
+      1709,
+      2427
+    ],
+    "deployment": 35524859647,
+    "url": "https://hrezaii95.github.io/german-learning-exam/cheat-sheets/",
+    "matchesLocalText": true
+  },
+  {
+    "sheet": "countries",
+    "paper": "Letter",
+    "pages": 2,
+    "textLengths": [
+      1709,
+      2427
+    ],
+    "deployment": 35524859647,
+    "url": "https://hrezaii95.github.io/german-learning-exam/cheat-sheets/",
+    "matchesLocalText": true
+  },
+  {
+    "sheet": "home",
+    "paper": "A4",
+    "pages": 1,
+    "textLengths": [
+      1897
+    ],
+    "deployment": 35524859647,
+    "url": "https://hrezaii95.github.io/german-learning-exam/cheat-sheets/home/",
+    "matchesLocalText": true
+  },
+  {
+    "sheet": "home",
+    "paper": "Letter",
+    "pages": 1,
+    "textLengths": [
+      1897
+    ],
+    "deployment": 35524859647,
+    "url": "https://hrezaii95.github.io/german-learning-exam/cheat-sheets/home/",
+    "matchesLocalText": true
+  }
+]

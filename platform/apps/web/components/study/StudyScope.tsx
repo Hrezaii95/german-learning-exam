@@ -36,10 +36,10 @@ export function useStudyScope(){
   return {scope,connected:context!==null,ready:context?.ready??true,setScope:context?.setScope??(()=>{}),error:context?.error??"",matches:(tags:StudyTags)=>matchesStudyScope(tags,scope)};
 }
 /** A direct link remains readable even when it is outside the current selection. */
-export function StudyScopeNotice({tags}:{tags:StudyTags}){
+export function StudyScopeNotice({tags,subject="This page"}:{tags:StudyTags;subject?:string}){
   const {matches,setScope,ready}=useStudyScope();
   if(!ready||matches(tags))return null;
-  return <aside className="study-scope-notice" role="status">This page is outside your study selection. <button type="button" className="study-secondary" onClick={()=>setScope({...defaultStudyScope(),mode:"multiple",lessons:tags.lessons})}>Study these lessons</button></aside>;
+  return <aside className="study-scope-notice" role="status">{subject} is outside your study selection. <button type="button" className="study-secondary" onClick={()=>setScope({...defaultStudyScope(),mode:"multiple",lessons:tags.lessons})}>Study these lessons</button></aside>;
 }
 export function StudyScopeControl(){
   const {scope,setScope,error}=useStudyScope();

@@ -14,6 +14,7 @@ import { sanitizeHubQueryText } from "./hub-query";
 import { sanitizeSearchQueryText } from "./search-query";
 import {studyUnits} from "../study/course-lessons";
 import { lessonFourWords } from "../study/lesson-four";
+import {sheetLinks} from "../study/sheet-topics";
 
 /**
  * Typed, bounded, serializable learner navigation context (UX-006 / P3C).
@@ -38,6 +39,7 @@ export type NavigationContext = {
   /** Optional safe result id that was opened (entity id, not assertion). */
   resultId?: string;
   page?: number;
+  onlySaved?: boolean;
 };
 
 export const NAVIGATION_CONTEXT_PARAM = "nav";
@@ -100,6 +102,7 @@ export function isSafeNavigationPath(pathname: string): boolean {
   }
   if (pathname === "/search") return true;
   if (pathname === "/book" || pathname === "/saved") return true;
+  if (sheetLinks.some(sheet=>sheet.href===pathname)) return true;
   if ([...lessonFourWords,...studyUnits.flatMap(u=>u.words??[])].some(word => pathname === `/vocabulary/${word.id}`)) return true;
   if (pathname === "/practice") return true;
   if (pathname === "/conversation") return true;
@@ -167,12 +170,14 @@ export function isSafeNavigationPath(pathname: string): boolean {
   return false;
 }
 
-function sanitizeResultId(raw: string | undefined): string | undefined {
+function sanitizeResultId(raw: string | undefined, returnPath?: string): string | undefined {
   if (raw == null) return undefined;
   const cleaned = sanitizeSearchQueryText(raw).trim();
   if (cleaned.length === 0) return undefined;
   if (cleaned.length > NAVIGATION_RESULT_ID_MAX_LENGTH) return undefined;
-  if (!/^[a-z][a-z0-9-]*:[a-z0-9][a-z0-9:_-]*$/i.test(cleaned)) return undefined;
+  const sheetResult = sheetLinks.some(sheet => sheet.href === returnPath)
+    && cleaned === raw.trim() && /^[a-z][a-z0-9:_-]*$/i.test(cleaned);
+  if (!sheetResult && !/^[a-z][a-z0-9-]*:[a-z0-9][a-z0-9:_-]*$/i.test(cleaned)) return undefined;
   return cleaned;
 }
 
@@ -231,6 +236,7 @@ function normalizeContext(raw: unknown): NavigationContext | null {
   const page=Number(obj.page);
   if((entryContext==="hub"||entryContext==="search")&&Number.isInteger(page)&&page>1&&page<=500) ctx.page=page;
   if (entryContext === "hub") {
+    if(obj.onlySaved===true)ctx.onlySaved=true;
     if (typeof obj.hubId === "string" && isLearnerHubId(obj.hubId)) {
       ctx.hubId = obj.hubId;
       if (ctx.returnPath === "/hubs" || !isSafeNavigationPath(ctx.returnPath)) {
@@ -252,6 +258,7 @@ function normalizeContext(raw: unknown): NavigationContext | null {
 
   const resultId = sanitizeResultId(
     typeof obj.resultId === "string" ? obj.resultId : undefined,
+    ctx.returnPath,
   );
   if (resultId) ctx.resultId = resultId;
 
@@ -311,7 +318,7 @@ export function serializeNavigationContext(ctx: NavigationContext): string {
   if (!normalized) {
     return JSON.stringify({ entryContext: "hub", returnPath: "/hubs" });
   }
-  const payload: Record<string, string> = {
+  const payload: Record<string, string | boolean> = {
     entryContext: normalized.entryContext,
     returnPath: normalized.returnPath,
   };
@@ -321,6 +328,7 @@ export function serializeNavigationContext(ctx: NavigationContext): string {
   if (normalized.category) payload.category = normalized.category;
   if (normalized.resultId) payload.resultId = normalized.resultId;
   if (normalized.page) payload.page = String(normalized.page);
+  if (normalized.onlySaved) payload.onlySaved = true;
 
   const json = JSON.stringify(payload);
   if (json.length > NAVIGATION_CONTEXT_MAX_LENGTH) {
@@ -366,8 +374,14 @@ export function backHrefFromContext(ctx: NavigationContext): string {
     if (safe.lesson && safe.lesson !== "all") params.set("lesson", safe.lesson);
     if (safe.category) params.set("category", safe.category);
     if (safe.page) params.set("page", String(safe.page));
+    if (safe.onlySaved) params.set("saved", "1");
     const qs = params.toString();
-    return qs.length > 0 ? `${path}?${qs}` : path;
+    const sheetAnchor=safe.resultId&&(
+      path==="/cheat-sheets"&&safe.resultId.startsWith("country-")||
+      path==="/cheat-sheets/home"&&safe.resultId.startsWith("home-")||
+      path==="/cheat-sheets/people"&&/^family-(anna|martin)-[a-z]+$/.test(safe.resultId));
+    const anchor=path.startsWith("/cheat-sheets")&&safe.resultId?`#${sheetAnchor?"":"sheet-card-"}${encodeURIComponent(safe.resultId)}`:"";
+    return `${path}${qs.length>0?`?${qs}`:""}${anchor}`;
   }
 
   if (safe.entryContext === "lesson") {
@@ -505,7 +519,7 @@ export function resolveBackHref(
 ): string {
   if (!ctx) return FALLBACK_PATH[fallback];
   const href = backHrefFromContext(ctx);
-  const pathOnly = href.split("?")[0] ?? href;
+  const pathOnly = href.split(/[?#]/)[0] ?? href;
   if (!isSafeNavigationPath(pathOnly)) return FALLBACK_PATH[fallback];
   return href;
 }

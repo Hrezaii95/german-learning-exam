@@ -2,24 +2,20 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { countries, countryGroups, countryName, countryFrom, countryWhere, countryTo, spokenLanguage, countryOriginMeaning, type Country, type CountryGroup } from "@/lib/study/countries";
+import { countries, countryGroups, countryName, countryFrom, countryWhere, countryTo, spokenLanguage, type Country, type CountryGroup } from "@/lib/study/countries";
 import { GermanText, SaveButton, useStudy } from "./StudyProvider";
 import { LineAudio } from "./StudyAudio";
 import { CheatSheetNav } from "./CheatSheetNav";
 import { CountryFlag } from "./CountryFlag";
-import {useStudyScope} from "./StudyScope";
+import {useStudyScope,StudyScopeNotice} from "./StudyScope";
 import {countryStudyTags} from "@/lib/study/sheet-scope";
 import { CountryOverview } from "./CountryOverview";
 import { CountryPrintSummary } from "./CheatSheetPrint";
+import {countryRecallQuestions,savedCountry as countryReviewItem} from "@/lib/study/sheet-recall";
+import {SheetRecall} from "./SheetRecall";
+import {appendNavigationContext} from "@/lib/content/navigation-context";
 
 const groups = Object.keys(countryGroups) as CountryGroup[];
-const quiz = ["IR", "CH", "US", "NL", "DE", "PL", "TR", "MV", "IR-language", "AT-language"];
-const savedCountry = (country: Country) => ({
-  id: `country-${country.id}`, title: `Ich komme ${countryFrom(country)}.`,
-  meaning: `${countryOriginMeaning(country)} ${countryGroups[country.group].label}. Languages: ${country.languages.join(", ")}.`,
-  kind: "concept" as const, href: `/cheat-sheets#country-${country.id}`,
-});
-
 export function CountryCheatSheet({ speech, cardLinks }: { speech: Record<string, string>; cardLinks: Record<string, string> }) {
   const [chosen, setChosen] = useState("IR");
   const [search, setSearch] = useState("");
@@ -27,9 +23,6 @@ export function CountryCheatSheet({ speech, cardLinks }: { speech: Record<string
   const [scope, setScope] = useState("all");
   const [recall, setRecall] = useState(false);
   const [revealed, setRevealed] = useState<string[]>([]);
-  const [position, setPosition] = useState(0);
-  const [answer, setAnswer] = useState<string | null>(null);
-  const [score, setScore] = useState(0);
   useEffect(() => {
     const openCountry = () => {
       const id = window.location.hash.replace(/^#country-/, "");
@@ -41,20 +34,15 @@ export function CountryCheatSheet({ speech, cardLinks }: { speech: Record<string
     return ()=>window.removeEventListener("hashchange",openCountry);
   }, []);
   const study = useStudy();
+  const savedCountry=(country:Country)=>countryReviewItem(country,study?.dictionary,speech);
+  const cardHref=(id:string)=>appendNavigationContext(cardLinks[id]!,{entryContext:"hub",returnPath:"/cheat-sheets",resultId:`country-${id}`});
   const {matches}=useStudyScope();
   const scopedCountries=countries.filter(c=>matches(countryStudyTags(c,study?.dictionary)));
   const current = countries.find(c => c.id === chosen)!;
   const visible = scopedCountries.filter(c => (filter === "all" || (filter === "saved" ? study?.state.saved[`country-${c.id}`] : c.group === filter)) &&
     (scope === "all" || !c.extra) && `${c.name} ${c.en} ${c.languages.join(" ")}`.toLocaleLowerCase("de").includes(search.trim().toLocaleLowerCase("de")));
   const clip = (text: string) => <LineAudio text={text} src={speech[text]} compact />;
-  const quizId = quiz[position];
-  const quizCountry = countries.find(c => c.id === quizId?.split("-")[0]);
-  const languageQuestion = quizId?.endsWith("language");
-  const correct = quizCountry ? languageQuestion ? spokenLanguage(quizCountry.languages[0]!) : countryFrom(quizCountry) : "";
-  const isCorrect = (value: string) => value === correct || (!languageQuestion && quizCountry?.id === "IR" && value === "aus Iran");
-  const choices = quizCountry ? languageQuestion ? [correct, quizCountry.id === "IR" ? "Iranisch" : "Österreichisch", "Spanisch"] :
-    quizCountry.id === "IR" ? ["aus der Iran", "aus dem Iran", "aus Iran", "aus den Iran"] :
-    [...new Set([`aus der ${quizCountry.name}`, `aus ${quizCountry.name}`, `aus den ${quizCountry.dative ?? quizCountry.name}`, `aus dem ${quizCountry.name}`])] : [];
+  const questions=countryRecallQuestions(visible,study?.dictionary,speech);
 
   return <div className="country-sheet">
     <CheatSheetNav current="countries"/>
@@ -86,8 +74,9 @@ export function CountryCheatSheet({ speech, cardLinks }: { speech: Record<string
 
     <section id="country-passport" className="country-passport-layout" aria-labelledby="passport-title">
       <div className={`country-passport study-tone-${current.group}`}>
+        <StudyScopeNotice tags={countryStudyTags(current,study?.dictionary)} subject="This country"/>
         <div className="country-passport-top"><span>MY LANGUAGE PASSPORT</span><svg width="42" height="42" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="20"/><ellipse cx="24" cy="24" rx="9" ry="20"/><path d="M4 24h40M8 12h32M8 36h32"/></svg></div>
-        <label className="study-field">Choose a country<select aria-label="Choose a country" value={chosen} onChange={event => setChosen(event.target.value)}>{countries.map(c => <option key={c.id} value={c.id}>{countryName(c)} · {c.en}</option>)}</select></label>
+        <label className="study-field">Choose a country<select aria-label="Choose a country" value={chosen} onChange={event => setChosen(event.target.value)}>{countries.map(c => <option key={c.id} value={c.id}>{countryName(c)} · {c.en}{matches(countryStudyTags(c,study?.dictionary))?"":" · outside selection"}</option>)}</select></label>
         <h2 id="passport-title" lang="de"><CountryFlag id={current.id} label={current.en}/>{countryName(current)}</h2><p className="country-passport-type">{countryGroups[current.group].label}</p>
         <div className="country-passport-line"><span>01 / WHERE FROM?</span><p><GermanText text={`Ich komme ${countryFrom(current)}.`}/>{clip(`Ich komme ${countryFrom(current)}.`)}</p></div>
         <div className="country-passport-line"><span>02 / A LANGUAGE EXAMPLE</span><p><GermanText text={`Ich spreche ${spokenLanguage(current.languages[0]!)}.`}/>{clip(`Ich spreche ${spokenLanguage(current.languages[0]!)}.`)}</p></div>
@@ -124,18 +113,15 @@ export function CountryCheatSheet({ speech, cardLinks }: { speech: Record<string
           <div className="country-answer">{hidden ? <button type="button" className="study-secondary" onClick={()=>setRevealed([...revealed,c.id])} aria-label={`Reveal ${c.name}`}>Reveal origin & language</button> : <><strong><GermanText text={countryFrom(c)}/></strong>{clip(`Ich komme ${countryFrom(c)}.`)}<small>Ich komme …</small></>}</div>
           <div className="country-languages">{hidden ? <span className="muted">Try saying it first.</span> : c.languages.map(language => <span key={language}><GermanText text={language}/>{clip(spokenLanguage(language))}</span>)}</div>
           <div className="country-row-save"><SaveButton compact item={{...savedCountry(c),audio:speech[`Ich komme ${countryFrom(c)}.`] ?? null}} /></div>
-          {!hidden && <details className="country-row-more"><summary>Memory cue & more</summary><p>{c.note ?? `No article in ordinary use: ${countryFrom(c)}. The country name is neuter, but you normally leave das out.`}</p><p lang="de">{countryWhere(c)} · {countryTo(c)}</p>{cardLinks[c.id] && <Link href={cardLinks[c.id]!}>Open vocabulary card →</Link>}</details>}
+          {!hidden && <details className="country-row-more"><summary>Memory cue & more</summary><p>{c.note ?? `No article in ordinary use: ${countryFrom(c)}. The country name is neuter, but you normally leave das out.`}</p><p lang="de">{countryWhere(c)} · {countryTo(c)}</p>{cardLinks[c.id] && <Link href={cardHref(c.id)}>Open vocabulary card →</Link>}</details>}
         </article>;})}
         {!visible.length && <p className="country-empty">No countries match. Try another search or choose All patterns.</p>}
       </div>
     </section>
 
     <section id="country-practice" className="country-practice" aria-labelledby="practice-title">
-      <div><p className="study-eyebrow">A two-minute check</p><h2 id="practice-title">Can you get through the gate?</h2><p>Choose an answer, read the reason, then save any country you want to practise again.</p></div>
-      {quizCountry ? <div className="country-quiz"><span>Question {position+1} / {quiz.length}</span><h3 lang="de">{languageQuestion ? `${quizCountry.name}: Ich spreche …` : `${countryName(quizCountry)}: Ich komme …`}</h3>
-        <div className="country-quiz-options">{choices.map(choice=><button type="button" key={choice} disabled={answer!==null} aria-pressed={answer===choice} data-answer={answer===null?undefined:isCorrect(choice)?"correct":answer===choice?"wrong":undefined} onClick={()=>{setAnswer(choice);if(isCorrect(choice))setScore(score+1);}} lang="de">{choice}</button>)}</div>
-        {answer!==null && <div className="country-quiz-feedback" role="status"><strong>{isCorrect(answer)?"Yes — that works.":"Almost. Keep this pattern:"}</strong><p lang="de">{languageQuestion?`Ich spreche ${correct}.`:`Ich komme ${correct}.`}</p><p>{languageQuestion ? quizCountry.note : `${countryGroups[quizCountry.group].label} → ${countryGroups[quizCountry.group].from}. ${quizCountry.note ?? "No article needs to be added."}`}</p><div className="study-row"><SaveButton item={savedCountry(quizCountry)}/><button type="button" className="study-primary" onClick={()=>{setPosition(position+1);setAnswer(null);}}>Next →</button></div></div>}
-      </div> : <div className="country-quiz" role="status"><h3>{score} / {quiz.length}</h3><p>{score===quiz.length?"Every pattern remembered. Try the hidden-answer country index next.":"Keep the tricky countries in My review and try again."}</p><button type="button" className="study-primary" onClick={()=>{setPosition(0);setAnswer(null);setScore(0);}}>Practise again</button></div>}
+      <div><p className="study-eyebrow">A two-minute check</p><h2 id="practice-title">Can you get through the gate?</h2><p>This short set follows your study selection and country-index filters. Choose an answer, hear it, then save any country you want to revisit.</p></div>
+      <SheetRecall key={questions.map(q=>q.id).join("|")} prefix="country" questions={questions} speech={speech}/>
     </section>
     <details className="country-sources"><summary>Coverage, sources & pronunciation</summary>
       <p>{countries.length} country names: all 28 country cards from the existing study collection, including Iran, plus 13 additional country names found in the supplied coursebook and workbook. Includes geographical names used in the book, such as England and Great Britain. Momente course material © Hueber Verlag. Grammar explanations, memory cues and English teaching translations were written for this sheet.</p>

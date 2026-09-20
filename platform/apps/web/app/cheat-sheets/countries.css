@@ -1,5 +1,7 @@
 .shell-main:has(.country-sheet) { width:100%; max-width:none; padding:24px clamp(16px,3vw,42px) 80px; }
 .country-sheet { --country-paper:#fffefa; --country-line:#d7dfd5; max-width:1240px; margin:auto; padding:24px 12px 72px; color:#20372f; }
+.country-map-selection > .study-scope-notice { grid-column:1/-1; color:#20372f; }
+@media(max-width:600px) { .country-map-selection:has(.study-scope-notice) > .country-flag { grid-row:2/4; } }
 .country-heading { display:flex; justify-content:space-between; align-items:flex-start; gap:24px; margin-bottom:24px; }
 .country-heading h1 { font-size:clamp(30px,3.4vw,46px); line-height:1.12; letter-spacing:-.045em; max-width:750px; margin:10px 0 14px; }
 .country-heading p:not(.study-eyebrow) { font-size:17px; color:#52625b; }
