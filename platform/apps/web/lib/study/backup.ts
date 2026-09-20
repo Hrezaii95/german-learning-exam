@@ -2,7 +2,7 @@ import {
   createEmptyLearnerState, defaultMigrationRegistry, hydrateLearnerState,
   LEARNER_STATE_STORAGE_KEY, type LearnerStateEnvelope,
 } from "@german-learning/learning";
-import { ALPHA_CONTENT_BUNDLE, learnerPublishedContentResolver } from "@/lib/learner-state/registry";
+import { ALPHA_CONTENT_BUNDLE, learnerPublishedContentResolver } from "../learner-state/registry";
 import { defaultStudyScope, parseStudyScope, STUDY_SCOPE_KEY, type StudyScope } from "./scope";
 import { emptyStudy, parseStudy, STUDY_KEY } from "./storage";
 import type { StudyState } from "./types";
