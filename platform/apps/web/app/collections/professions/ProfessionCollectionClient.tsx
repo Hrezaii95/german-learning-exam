@@ -10,6 +10,7 @@ import {
   ProfessionInfographic,
   countRowPronunciationPreviews,
 } from "./ProfessionInfographic";
+import {useStudy} from "@/components/study/StudyProvider";
 import styles from "./professions.module.css";
 
 function foldSearch(value: string): string {
@@ -24,14 +25,20 @@ function foldSearch(value: string): string {
 function SourceBackedReview({ rows }: { rows: readonly ExtraProfessionRow[] }) {
   const [index, setIndex] = useState(0);
   const [revealed, setRevealed] = useState(false);
-  const [reviewed, setReviewed] = useState<ReadonlySet<string>>(new Set());
+  const study = useStudy();
+  const [localReviewed, setLocalReviewed] = useState<ReadonlySet<string>>(new Set());
+  const reviewed = study ? new Set(study.state.reviewedProfessions ?? []) : localReviewed;
   const row = rows[index % Math.max(rows.length, 1)];
 
   if (!row) return <p className="muted">No rows match the current filters.</p>;
   const activeRow = row;
 
   function advance(markReviewed: boolean) {
-    if (markReviewed) setReviewed((current) => new Set([...current, activeRow.id]));
+    if (markReviewed) {
+      if (study) {
+        if (!study.update(old => ({...old, reviewedProfessions: [...new Set([...(old.reviewedProfessions ?? []), activeRow.id])]}))) return;
+      } else setLocalReviewed(current => new Set([...current, activeRow.id]));
+    }
     setRevealed(false);
     setIndex((current) => (current + 1) % rows.length);
   }
@@ -62,7 +69,7 @@ function SourceBackedReview({ rows }: { rows: readonly ExtraProfessionRow[] }) {
       {revealed ? <ProfessionInfographic row={row} compact /> : null}
       <div className={styles.actions}>
         <button className="btn btn-secondary" type="button" onClick={() => advance(false)}>Again</button>
-        <button className="btn btn-primary" type="button" onClick={() => advance(true)}>Mark reviewed</button>
+        <button className="btn btn-primary" type="button" disabled={study !== null && !study.ready} onClick={() => advance(true)}>Mark reviewed</button>
         <Link className="btn btn-secondary" href={row.detailPath}>Open row</Link>
       </div>
     </section>

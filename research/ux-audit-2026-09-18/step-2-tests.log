@@ -1,0 +1,17 @@
+
+ RUN  v3.2.7 E:/claude-cursor/side projects/German learning/platform
+
+ ✓ tests/web/complete-backup.test.ts (8 tests) 35ms
+ ✓ tests/web/lesson-five.test.ts (5 tests) 944ms
+   ✓ Lesson 5 source integration > has official keys, separate study quizzes and dictionary support  683ms
+ ✓ tests/web/study-book.test.ts (11 tests) 2474ms
+   ✓ Lesson 4 source and exercise integration > has unique stable line IDs and real page images  1173ms
+   ✓ Lesson 4 source and exercise integration > has exact file-backed speech for every readable line and new study utterance  1213ms
+ ✓ tests/web/lesson-label-ui.test.ts (3 tests) 1797ms
+   ✓ learner-visible lesson labels > renders no padded lesson label on lesson, hub, or detail surfaces  1791ms
+
+ Test Files  4 passed (4)
+      Tests  27 passed (27)
+   Start at  16:50:13
+   Duration  4.03s (transform 3.14s, setup 0ms, collect 4.32s, tests 5.25s, environment 1ms, prepare 733ms)
+

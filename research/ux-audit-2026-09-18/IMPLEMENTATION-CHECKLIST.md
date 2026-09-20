@@ -1,21 +1,22 @@
 # UI/UX improvement checklist
 
-Reference: [whole-app audit](UI-UX-AUDIT.md). Countries & languages and Home & furniture remain the design standard. All implementation tasks below are initially unchecked.
+Reference: [whole-app audit](UI-UX-AUDIT.md). Countries & languages and Home & furniture remain the design standard. This is the single task list for all 23 findings; existing completion records are retained.
 
 ## Working rules
 
-- Follow the steps in order. Keep existing content, working features, saved data and approved visuals.
+- Follow the steps in order, starting with the first unfinished task. Keep existing content, working features, saved data and approved visuals.
 - Fix shared components once, then reuse them. Improve existing diagrams and activities before creating replacements.
 - Use this checklist as the work tracker; use the audit for detail. No additional planning documents or approval rounds are needed.
 - Each checkpoint is a verification task for the implementer, not a request for user sign-off.
-- During implementation, publish each complete, tested batch and check its live behavior. Keep incomplete changes out of the release.
 - Run checks relevant to each change. Run the complete release checks at the end; repeat earlier checks only when later changes affect them.
+
+**Repeat this simple loop:** implement a small complete batch → run its relevant checkpoint checks → publish and verify live → tick the completed tasks and add one evidence line. If a check fails, fix that batch before moving on. Do not restart completed steps or create another tracker. Keep incomplete changes out of the release.
 
 ## 1. Restore readable layouts
 
-- [ ] Fix the narrow-column bug in lesson, grammar, verb and phrase cards.
-- [ ] Fix Countries' small-phone overflow and provide readable phone layouts for wide diagrams.
-- [ ] Remove content overlap from fixed navigation and dictionary controls.
+- [x] Fix the narrow-column bug in lesson, grammar, verb and phrase cards.
+- [x] Fix Countries' small-phone overflow and provide readable phone layouts for wide diagrams.
+- [x] Remove content overlap from fixed navigation and dictionary controls.
 
 **Checkpoint:** Affected pages are readable at 320, 390, 768 and 1440 pixels. No clipped controls, word-by-word paragraph wrapping or accidental horizontal page scrolling. Countries and Home still look and work as approved.
 
@@ -118,4 +119,6 @@ For each step, add one line here when its checkpoint passes:
 
 `Step — completed changes — checkpoint result — live verification/link`
 
-Step 1 — layout repairs, responsive diagram steps and toolbar dictionary implemented. Local checkpoint passed on 20 September 2026: Pages gates, 20 component tests, five browser tests across 320/390/768/1440px, and rendered screenshot inspection. Live verification pending deployment. Steps 2–9 remain open.
+Step 1 — layout repairs, responsive diagram steps and toolbar dictionary implemented. Local checkpoint passed on 20 September 2026: Pages gates, 20 component tests, five browser tests across 320/390/768/1440px, and rendered screenshot inspection. Live checkpoint passed against deployment 35512028844 (commit 9a3c9c11): https://hrezaii95.github.io/german-learning-exam/. Evidence: step-1-live/verification.json. Step 2 is in progress; Steps 3–9 remain open.
+
+Step 2 — complete backup/restore with merge, replace and reset; persistent lesson quizzes and profession review marks; current-note conflict handling; responsive import preview. Local checkpoint passed on 20 September 2026: 27 targeted tests, seven browser checks including a fresh-profile backup round trip, review ratings/due dates, malformed import, removal, replacement, reset and Lesson 4/12 resume. Pages gates, type checks, lint and rendered phone/desktop inspection passed. Evidence: step-2-tests.log, step-2-browser-tests.log, step-2-gates.log and step-2-local/. Live verification pending; tasks remain unchecked until it passes.

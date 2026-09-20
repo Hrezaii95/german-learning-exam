@@ -12,12 +12,20 @@ export type SavedItem = {
   note?: string;
   audio?: string | null;
 };
+export type LessonSession = {
+  tab: "Words" | "Grammar" | "Verbs" | "Phrases" | "Practice";
+  position: number;
+  answers: string[];
+  quizKey: string;
+};
 export type StudyState = {
   version: 1;
   saved: Record<string, SavedItem>;
   bookmarks: string[];
   completedPages: string[];
   resume: string | null;
+  lessonSessions?: Record<string, LessonSession>;
+  reviewedProfessions?: string[];
 };
 export type DictionaryEntry = {
   studyTags?: import("./scope").StudyTags;

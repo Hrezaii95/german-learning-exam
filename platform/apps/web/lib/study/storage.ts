@@ -1,4 +1,4 @@
-import type { SavedItem, StudyState } from "./types";
+import type { LessonSession, SavedItem, StudyState } from "./types";
 import {A1_LESSON_COUNT,studyConcepts,type StudyTags} from "./scope";
 
 function validTags(value:unknown):value is StudyTags{
@@ -37,7 +37,7 @@ export function parseStudy(raw: string | null): StudyState {
     Array.isArray(data.saved)
   )
     throw new Error("Saved items are missing.");
-  const saved: Record<string, SavedItem> = {};
+  const saved: Record<string, SavedItem> = Object.create(null);
   for (const [id, item] of Object.entries(data.saved)) {
     if (
       !item ||
@@ -97,11 +97,28 @@ export function parseStudy(raw: string | null): StudyState {
           ),
         ]
       : [];
+  const lessonSessions: Record<string, LessonSession> = {};
+  if (data.lessonSessions !== undefined) {
+    if (!data.lessonSessions || typeof data.lessonSessions !== "object" || Array.isArray(data.lessonSessions)) throw new Error("Lesson progress is invalid.");
+    for (const [lesson, session] of Object.entries(data.lessonSessions)) {
+      if (!/^([1-9]|1[0-2])$/.test(lesson) || !session ||
+        !["Words", "Grammar", "Verbs", "Phrases", "Practice"].includes(session.tab) ||
+        !Number.isInteger(session.position) || session.position < 0 || session.position > 100 ||
+        !Array.isArray(session.answers) || session.answers.length > 100 ||
+        !session.answers.every(answer => typeof answer === "string" && answer.length <= 3000) ||
+        typeof session.quizKey !== "string" || session.quizKey.length > 50000) throw new Error("Lesson progress is invalid.");
+      lessonSessions[lesson] = { tab: session.tab, position: session.position, answers: [...session.answers], quizKey: session.quizKey };
+    }
+  }
+  if (data.reviewedProfessions !== undefined && (!Array.isArray(data.reviewedProfessions) ||
+    data.reviewedProfessions.length > 200 || !data.reviewedProfessions.every(id => typeof id === "string" && id.length <= 200))) throw new Error("Profession review is invalid.");
   return {
     version: 1,
     saved,
     bookmarks: pages(data.bookmarks),
     completedPages: pages(data.completedPages),
+    ...(data.lessonSessions !== undefined ? { lessonSessions } : {}),
+    ...(data.reviewedProfessions !== undefined ? { reviewedProfessions: [...new Set(data.reviewedProfessions)] } : {}),
     resume:
       typeof data.resume === "string" &&
       /^(coursebook|workbook)-(?:\d+|cover|map)$/.test(data.resume)

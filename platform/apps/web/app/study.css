@@ -1846,4 +1846,11 @@
   .study-toolbar > .study-scope { flex-basis:100%; }
   .study-toolbar > .study-dictionary-launch { padding:6px 12px; }
 }
+.study-backup-preview {
+  margin-top: 20px;
+}
+.study-backup select {
+  min-width: 0;
+  width: 100%;
+}
 @media print { .study-toolbar { display:none; } }

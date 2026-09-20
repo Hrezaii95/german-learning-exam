@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {
   courseChapters,
   lessonFourConcepts,
@@ -12,29 +12,18 @@ import {
 } from "@/lib/study/lesson-four";
 import { GermanText, SaveButton, useStudy } from "./StudyProvider";
 import { LineAudio } from "./StudyAudio";
+import {useLessonSession} from "./useLessonSession";
 
 import {useStudyScope,StudyScopeNotice} from "./StudyScope";
 import {tagsForLesson} from "@/lib/study/scope";
 
 const tabs = ["Words", "Grammar", "Verbs", "Phrases", "Practice"] as const;
 export function LessonFour({ speech }: { speech: Record<string, string> }) {
-  const [tab, setTab] = useState<(typeof tabs)[number]>("Words");
-  useEffect(() => {
-    const selectSection = () => {
-      const section = window.location.hash.slice(1).toLowerCase();
-      const found = tabs.find((value) => value.toLowerCase() === section);
-      if (found) setTab(found);
-    };
-    selectSection();
-    window.addEventListener("hashchange", selectSection);
-    return () => window.removeEventListener("hashchange", selectSection);
-  }, []);
+  const session = useLessonSession({number:4,quiz:lessonFourQuiz}, "Words");
+  const {tab,position,answer:choice,score:correct} = session;
+  const finished = position >= lessonFourQuiz.length;
   const [category, setCategory] = useState("All");
   const [query, setQuery] = useState("");
-  const [position, setPosition] = useState(0);
-  const [choice, setChoice] = useState<string | null>(null);
-  const [correct, setCorrect] = useState(0);
-  const [finished, setFinished] = useState(false);
   const study = useStudy();
   const words = lessonFourWords.filter(
     (word) =>
@@ -108,7 +97,8 @@ export function LessonFour({ speech }: { speech: Record<string, string> }) {
             key={item}
             type="button"
             aria-current={tab === item ? "page" : undefined}
-            onClick={() => setTab(item)}
+            disabled={!session.ready}
+            onClick={() => session.chooseTab(item)}
           >
             {item}
             {item === "Words" && <span>{lessonFourWords.length}</span>}
@@ -359,6 +349,7 @@ export function LessonFour({ speech }: { speech: Record<string, string> }) {
               ? "You finished this practice round."
               : `Question ${position + 1} of ${lessonFourQuiz.length}`}
           </h2>
+          {!finished && (position > 0 || choice !== null) && <button type="button" className="study-secondary" onClick={() => session.restart()}>Restart quiz</button>}
           {finished ? (
             <>
               <p className="lesson-score">
@@ -373,12 +364,7 @@ export function LessonFour({ speech }: { speech: Record<string, string> }) {
               <button
                 className="study-primary"
                 type="button"
-                onClick={() => {
-                  setPosition(0);
-                  setChoice(null);
-                  setCorrect(0);
-                  setFinished(false);
-                }}
+                onClick={() => session.restart()}
               >
                 Practise again
               </button>
@@ -396,7 +382,7 @@ export function LessonFour({ speech }: { speech: Record<string, string> }) {
                   <button
                     type="button"
                     key={option}
-                    disabled={choice !== null}
+                    disabled={!session.ready || choice !== null}
                     data-result={
                       choice !== null && option === exercise.answer
                         ? "correct"
@@ -404,11 +390,7 @@ export function LessonFour({ speech }: { speech: Record<string, string> }) {
                           ? "wrong"
                           : undefined
                     }
-                    onClick={() => {
-                      setChoice(option);
-                      if (option === exercise.answer)
-                        setCorrect((old) => old + 1);
-                    }}
+                    onClick={() => session.chooseAnswer(option)}
                     lang="de"
                   >
                     {option}
@@ -426,12 +408,7 @@ export function LessonFour({ speech }: { speech: Record<string, string> }) {
                   <button
                     type="button"
                     className="study-primary"
-                    onClick={() => {
-                      if (position + 1 === lessonFourQuiz.length)
-                        setFinished(true);
-                      else setPosition((old) => old + 1);
-                      setChoice(null);
-                    }}
+                    onClick={() => session.next()}
                   >
                     {position + 1 === lessonFourQuiz.length
                       ? "See my result"

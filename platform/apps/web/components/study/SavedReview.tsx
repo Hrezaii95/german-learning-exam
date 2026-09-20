@@ -1,10 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { useRef, useState, useEffect } from "react";
-import { parseStudy, rateSavedItem } from "@/lib/study/storage";
+import { useState, useEffect } from "react";
+import { rateSavedItem } from "@/lib/study/storage";
 import { GermanText, SaveButton, useStudy } from "./StudyProvider";
 import { LineAudio } from "./StudyAudio";
+import {BackupPanel} from "../learner-state/BackupPanel";
 import {useStudyScope} from "./StudyScope";
 import {savedStudyTags} from "@/lib/study/saved-tags";
 
@@ -17,9 +18,8 @@ export function SavedReview() {
   const [session, setSession] = useState<string[] | null>(null);
   const [position, setPosition] = useState(0);
   const [revealed, setRevealed] = useState(false);
-  const [notice, setNotice] = useState("");
-  const [now] = useState(() => Date.now());
-  const file = useRef<HTMLInputElement>(null);
+  const [now, setNow] = useState(() => Date.now());
+  useEffect(() => { const timer = window.setInterval(() => setNow(Date.now()), 60000); return () => window.clearInterval(timer); }, []);
   useEffect(()=>{setSession(null);setPosition(0);setRevealed(false);},[scope]);
   if (!study?.ready) return <p role="status">Loading your saved review…</p>;
   const items = Object.values(study.state.saved).filter(item=>matches(savedStudyTags(item,study.dictionary)));
@@ -40,45 +40,6 @@ export function SavedReview() {
   function advance() {
     setPosition((old) => old + 1);
     setRevealed(false);
-  }
-  function exportBackup() {
-    const blob = new Blob([JSON.stringify(study!.state, null, 2)], {
-      type: "application/json",
-    });
-    const url = URL.createObjectURL(blob);
-    const anchor = document.createElement("a");
-    anchor.href = url;
-    anchor.download = `german-study-${new Date().toISOString().slice(0, 10)}.json`;
-    anchor.click();
-    setTimeout(() => URL.revokeObjectURL(url), 1000);
-  }
-  async function importBackup(input: File | undefined) {
-    if (!input) return;
-    try {
-      if (input.size > 5_000_000) throw new Error("This backup is too large.");
-      const imported = parseStudy(await input.text());
-      const saved = study!.update((old) => ({
-        ...old,
-        saved: { ...imported.saved, ...old.saved },
-        bookmarks: [...new Set([...old.bookmarks, ...imported.bookmarks])],
-        completedPages: [
-          ...new Set([...old.completedPages, ...imported.completedPages]),
-        ],
-        resume: old.resume ?? imported.resume,
-      }));
-      setNotice(
-        saved
-          ? "Backup merged. Your current saved items were kept."
-          : "Backup could not be saved. Your current collection was preserved.",
-      );
-    } catch (error) {
-      setNotice(
-        error instanceof Error
-          ? error.message
-          : "The backup could not be read.",
-      );
-    }
-    if (file.current) file.current.value = "";
   }
   return (
     <div className="study-workspace">
@@ -290,7 +251,7 @@ export function SavedReview() {
                   <label className="study-field">
                     My note
                     <textarea
-                      key={`${item.id}-${item.savedAt}`}
+                      key={`${item.id}-${item.savedAt}-${item.note ?? ""}`}
                       defaultValue={item.note ?? ""}
                       maxLength={3000}
                       placeholder="A translation, memory cue, or example…"
@@ -324,32 +285,7 @@ export function SavedReview() {
           )}
         </>
       )}
-      <details className="study-backup">
-        <summary>Backup & restore</summary>
-        <p>
-          Your collection is stored in this browser. Export it to keep a copy or
-          move to another device.
-        </p>
-        <div className="study-row">
-          <button
-            type="button"
-            className="study-secondary"
-            onClick={exportBackup}
-          >
-            Export study backup
-          </button>
-          <label className="study-secondary">
-            Import backup
-            <input
-              ref={file}
-              type="file"
-              accept=".json,application/json"
-              onChange={(e) => void importBackup(e.target.files?.[0])}
-            />
-          </label>
-        </div>
-        {notice && <p role="status">{notice}</p>}
-      </details>
+      <BackupPanel/>
     </div>
   );
 }

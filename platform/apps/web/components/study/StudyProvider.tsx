@@ -88,6 +88,8 @@ export function StudyProvider({
         const next = parseStudy(event.newValue);
         memory.current = next;
         setState(next);
+        writable.current = true;
+        setError("");
       } catch {
         setError(
           "Another tab saved unreadable study data. Reload before continuing.",
