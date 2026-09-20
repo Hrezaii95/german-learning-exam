@@ -1,0 +1,77 @@
+
+Running 26 tests using 2 workers
+
+(node:15552) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:24184) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 tests\e2e\40-ux-readability.spec.ts:6:3 › learning cards and country rows remain readable at 320px (16.1s)
+  ok  3 tests\e2e\40-ux-readability.spec.ts:6:3 › learning cards and country rows remain readable at 390px (13.1s)
+  ok  2 tests\e2e\41-complete-backup.spec.ts:4:1 › saved study, course progress and settings survive a complete backup round trip (31.2s)
+  ok  5 tests\e2e\41-complete-backup.spec.ts:118:1 › Lesson 4 also resumes its quiz and supports an explicit restart (5.8s)
+  ok  6 tests\e2e\42-shared-learning-actions.spec.ts:5:1 › saved pronunciation speed follows word cards, original recordings and the reader (14.3s)
+  ok  4 tests\e2e\40-ux-readability.spec.ts:6:3 › learning cards and country rows remain readable at 768px (26.3s)
+  ok  7 tests\e2e\42-shared-learning-actions.spec.ts:46:1 › saving a profession in its collection is reflected on its word card and can be removed there (6.4s)
+  ok  9 tests\e2e\42-shared-learning-actions.spec.ts:58:1 › profession filters control both the displayed cards and the review pool (5.7s)
+  ok 10 tests\e2e\42-shared-learning-actions.spec.ts:86:1 › German text offers one keyboard stop per phrase and complete-phrase lookup (5.3s)
+  ok  8 tests\e2e\40-ux-readability.spec.ts:6:3 › learning cards and country rows remain readable at 1440px (15.0s)
+  ok 12 tests\e2e\40-ux-readability.spec.ts:22:1 › phone diagrams expose readable steps and dictionary preserves keyboard focus (5.6s)
+  ok 11 tests\e2e\42-shared-learning-actions.spec.ts:103:1 › transcript lines share pronunciation, meaning and saved-review actions (9.3s)
+  ok 14 tests\e2e\42-shared-learning-actions.spec.ts:127:1 › a failed preview recording shows a useful error and can be retried (7.3s)
+  ok 13 tests\e2e\43-navigation-and-continue.spec.ts:4:3 › navigation stays compact and keyboard-safe at 320px (10.3s)
+  ok 16 tests\e2e\43-navigation-and-continue.spec.ts:4:3 › navigation stays compact and keyboard-safe at 768px (9.9s)
+  ok 15 tests\e2e\44-professions-learning.spec.ts:4:3 › professions connect patterns, pronunciation, saving and recall at 320px (15.2s)
+  ok 17 tests\e2e\43-navigation-and-continue.spec.ts:43:1 › the compact sheet chooser searches all fifteen sheets and preserves return links (8.7s)
+  ok 18 tests\e2e\44-professions-learning.spec.ts:4:3 › professions connect patterns, pronunciation, saving and recall at 390px (12.9s)
+  ok 19 tests\e2e\43-navigation-and-continue.spec.ts:63:1 › Continue follows the last visited lesson and due review precedes the course map (19.4s)
+  x  20 tests\e2e\44-professions-learning.spec.ts:4:3 › professions connect patterns, pronunciation, saving and recall at 768px (15.9s)
+(node:26692) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 21 tests\e2e\45-lessons-and-libraries.spec.ts:3:1 › all twelve lessons expose Learn, Listen, Practise and source books (20.3s)
+  ok 22 tests\e2e\44-professions-learning.spec.ts:4:3 › professions connect patterns, pronunciation, saving and recall at 1440px (16.0s)
+  ok 24 tests\e2e\44-professions-learning.spec.ts:48:1 › the bounded collection keeps every profession and alternative reachable (6.4s)
+  ok 23 tests\e2e\45-lessons-and-libraries.spec.ts:20:31 › compact libraries and search keep context at 320px (14.7s)
+  ok 25 tests\e2e\45-lessons-and-libraries.spec.ts:20:31 › compact libraries and search keep context at 1440px (17.3s)
+  ok 26 tests\e2e\45-lessons-and-libraries.spec.ts:55:1 › lesson words stay bounded and checked practice resumes (6.5s)
+
+
+  1) tests\e2e\44-professions-learning.spec.ts:4:3 › professions connect patterns, pronunciation, saving and recall at 768px
+
+    Error: expect(locator).toHaveValue(expected) failed
+
+    Locator: getByRole('searchbox', { name: 'Search English or German' })
+    Expected: "Elektriker"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveValue" with timeout 5000ms
+      - waiting for getByRole('searchbox', { name: 'Search English or German' })
+
+
+      28 |     await expect(page.getByRole("button",{name:/^Remove from review:/})).toBeVisible();
+      29 |     await page.getByRole("link",{name:"← Professions",exact:true}).click();
+    > 30 |     await expect(search).toHaveValue("Elektriker");
+         |                          ^
+      31 |     await expect(page.locator("[data-word-family]")).toHaveCount(1);
+      32 |     const practice=page.locator("#profession-practice");
+      33 |     await practice.locator("summary").click();
+        at E:\claude-cursor\side projects\German learning\platform\tests\e2e\44-professions-learning.spec.ts:30:26
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\research\ux-audit-2026-09-18\live-test-results\44-professions-learning-pr-6ea3a--saving-and-recall-at-768px\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\research\ux-audit-2026-09-18\live-test-results\44-professions-learning-pr-6ea3a--saving-and-recall-at-768px\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\research\ux-audit-2026-09-18\live-test-results\44-professions-learning-pr-6ea3a--saving-and-recall-at-768px\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\research\ux-audit-2026-09-18\live-test-results\44-professions-learning-pr-6ea3a--saving-and-recall-at-768px\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests\e2e\44-professions-learning.spec.ts:4:3 › professions connect patterns, pronunciation, saving and recall at 768px
+  25 passed (3.1m)

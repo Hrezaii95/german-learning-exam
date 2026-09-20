@@ -10,6 +10,7 @@ import { CountryFlag } from "./CountryFlag";
 import {useStudyScope} from "./StudyScope";
 import {countryStudyTags} from "@/lib/study/sheet-scope";
 import { CountryOverview } from "./CountryOverview";
+import { CountryPrintSummary } from "./CheatSheetPrint";
 
 const groups = Object.keys(countryGroups) as CountryGroup[];
 const quiz = ["IR", "CH", "US", "NL", "DE", "PL", "TR", "MV", "IR-language", "AT-language"];
@@ -60,7 +61,7 @@ export function CountryCheatSheet({ speech, cardLinks }: { speech: Record<string
     <header className="country-heading">
       <div><p className="study-eyebrow">Cheat sheets · 01 / Your language passport</p><h1>Countries, without the guesswork.</h1>
         <p>Learn the country. Keep its color. Let <b lang="de">aus</b> change the article.</p></div>
-      <button type="button" className="study-secondary country-print" onClick={() => {setRecall(false);setFilter("all");setScope("all");setSearch("");requestAnimationFrame(()=>window.print());}}>Print cheat sheet</button>
+      <button type="button" className="study-secondary country-print" onClick={() => window.print()}>Print cheat sheet</button>
     </header>
     <nav className="country-jump" aria-label="Cheat sheet sections">
       <Link href="#country-overview">Map & flag overview</Link>
@@ -143,5 +144,6 @@ export function CountryCheatSheet({ speech, cardLinks }: { speech: Record<string
       <Link href="/references">Course sources & credits →</Link>
     </details>
     <p className="country-credit">Country coverage: Momente coursebook, workbook and study collection · © Hueber Verlag. Explanations and memory cues created for your study sheet.</p>
+    <CountryPrintSummary/>
   </div>;
 }

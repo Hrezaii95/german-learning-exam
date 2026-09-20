@@ -1,0 +1,14 @@
+
+Running 3 tests using 1 worker
+
+(node:37332) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 platform\tests\e2e\44-professions-learning.spec.ts:4:3 › professions connect patterns, pronunciation, saving and recall at 768px (24.4s)
+(node:31104) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 2 platform\tests\e2e\44-professions-learning.spec.ts:4:3 › professions connect patterns, pronunciation, saving and recall at 768px (15.8s)
+(node:15332) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 3 platform\tests\e2e\44-professions-learning.spec.ts:4:3 › professions connect patterns, pronunciation, saving and recall at 768px (23.3s)
+
+  3 passed (1.1m)

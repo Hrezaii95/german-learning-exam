@@ -1,0 +1,44 @@
+[
+  {
+    "sheet": "countries",
+    "paper": "A4",
+    "pages": 2,
+    "textLengths": [
+      1709,
+      2427
+    ],
+    "path": "countries-A4.pdf",
+    "basis": "final local export; no injected styles or content"
+  },
+  {
+    "sheet": "countries",
+    "paper": "Letter",
+    "pages": 2,
+    "textLengths": [
+      1709,
+      2427
+    ],
+    "path": "countries-Letter.pdf",
+    "basis": "final local export; no injected styles or content"
+  },
+  {
+    "sheet": "home",
+    "paper": "A4",
+    "pages": 1,
+    "textLengths": [
+      1897
+    ],
+    "path": "home-A4.pdf",
+    "basis": "final local export; no injected styles or content"
+  },
+  {
+    "sheet": "home",
+    "paper": "Letter",
+    "pages": 1,
+    "textLengths": [
+      1897
+    ],
+    "path": "home-Letter.pdf",
+    "basis": "final local export; no injected styles or content"
+  }
+]

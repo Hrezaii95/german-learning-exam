@@ -6,7 +6,7 @@ Reference: [whole-app audit](UI-UX-AUDIT.md). Countries & languages and Home & f
 
 Use the checkboxes below as the completion record. Start at the first unchecked task; reuse anything already finished.
 
-**Current checkpoint:** Steps 1–5 have recorded live verification. Step 6 has work in progress, but its checkpoint has not passed; Steps 6–9 remain open. Earlier completion notes are historical evidence, not instructions to repeat work.
+**Current checkpoint:** Steps 1–6 have recorded live verification. Step 7 is in progress: the first Countries/Home print and shared-overview batch has passed local verification and is being released. The complete Step 7 checkpoint and Steps 8–9 remain open. Earlier completion notes are historical evidence, not instructions to repeat work.
 
 | Step | Main task | Checkpoint before marking complete |
 |---|---|---|
@@ -90,11 +90,11 @@ Audit coverage: profession-specific A04, A05, A19, A20. This is the first comple
 
 ## 6. Apply the shared approach to lessons and libraries
 
-- [ ] Give all 12 lessons a consistent overview, Learn/Listen/Practise sequence, source links, checkpoint and Continue action.
-- [ ] Replace huge expanded vocabulary/verb/grammar/phrase lists with compact results and progressive loading. Keep every existing item accessible.
-- [ ] Make Concepts a useful relationship view within Grammar rather than a duplicate catalog; preserve existing links.
-- [ ] Improve search with meaning, article, matching context and pronunciation; cover later lessons and preserve the query on return.
-- [ ] Unify practice prompts, reveal/answer feedback, explanations and next actions. Correct stale coverage labels and simplify technical learner-facing copy.
+- [x] Give all 12 lessons a consistent overview, Learn/Listen/Practise sequence, source links, checkpoint and Continue action.
+- [x] Replace huge expanded vocabulary/verb/grammar/phrase lists with compact results and progressive loading. Keep every existing item accessible.
+- [x] Make Concepts a useful relationship view within Grammar rather than a duplicate catalog; preserve existing links.
+- [x] Improve search with meaning, article, matching context and pronunciation; cover later lessons and preserve the query on return.
+- [x] Unify practice prompts, reveal/answer feedback, explanations and next actions. Correct stale coverage labels and simplify technical learner-facing copy.
 
 **Checkpoint:** Check each lesson landing page and each library family. Find an early-lesson and a Lesson 12 item, open it, hear it, practise/save it and return without losing context. Counts match results; reading, self-rating and checked answers have distinct labels.
 
@@ -144,7 +144,9 @@ For each step, add one line here when its checkpoint passes:
 
 `Step — completed changes — checkpoint result — live verification/link`
 
-Step 6 — shared Learn/Listen/Practise paths and source-book links across all 12 lessons; bounded word libraries and lesson word lists; compact later-lesson verb/grammar/phrase cards; grammar relationship explorer; complete later-lesson search with meaning, gender cues, matching forms, pronunciation and return context; explicit unscored recall versus checked practice. Local checkpoint passed on 20 September 2026: final Pages gates, type checks, lint, 40 targeted component tests, ten final browser journeys including all twelve lesson paths, and rendered phone/desktop inspection. The full suite passed 934 tests plus 595 web tests before the final search-snippet refinement; final targeted tests cover that refinement. Generated content and report writes now replace complete files to avoid the reproduced Windows truncation error. Live verification pending. Evidence: step-6-check.log, step-6-final-gates.log, step-6-final-components.log, step-6-final-browser.log and step-6-local/.
+Step 7, first batch — compact Countries summary (two pages with all 41 names, flags, AUS patterns and language examples) and Home summary (one page with all 30 illustrated words, plurals and memory notes); printing preserves filters and recall; Home uses the preferred pronunciation speed unless its explicit slow override is on; shared overviews mount one set of content and preserve parent selections and native keyboard focus. Local checkpoint passed on 20 September 2026: final Pages gates, web/E2E types and lint, 17 country/home data and audio tests, five responsive browser journeys, and eight final print/audio/overview journeys. Actual Chromium PDFs from the final export pass on both A4 and Letter with 12 mm margins; rendered output and the approved screen views were inspected. Evidence: step-7-first-final-gates.log, step-7-first-browser.log, step-7-first-final-browser.log, step-7-first-e2e-types.log and step-7-first-verified/. Live verification is pending. The Countries/Home group remains open for its remaining selection/save checks; the other sheet briefs and Steps 8–9 remain open.
+
+Step 6 — shared Learn/Listen/Practise paths and source-book links across all 12 lessons; bounded word libraries and lesson word lists; compact later-lesson verb/grammar/phrase cards; grammar relationship explorer; complete later-lesson search with meaning, gender cues, matching forms, pronunciation and return context; explicit unscored recall versus checked practice. Local checkpoint passed on 20 September 2026: final Pages gates, type checks, lint, 40 targeted component tests, ten final browser journeys including all twelve lesson paths, and rendered phone/desktop inspection. The full suite passed 934 tests plus 595 web tests before the final search-snippet refinement; final targeted tests cover that refinement. Generated content and report writes now replace complete files to avoid the reproduced Windows truncation error. Live checkpoint passed for deployment 35523076449 (commit ee0d7c82): the initial sweep passed 25 journeys; the remaining tablet return check exceeded five seconds with requests still pending, then passed three consecutive runs with a 15-second network allowance. All 26 distinct journeys are verified. The final deployed commit passed 935 tests plus 596 web tests in CI. Evidence: step-6-deployment.json, step-6-live-tests.log, step-6-live-return-checks.log, step-6-check.log, step-6-final-gates.log, step-6-final-components.log, step-6-final-browser.log and step-6-local/.
 
 Step 5 — illustrated masculine-plural groups and feminine ending trail, shared word-family previews and generated pronunciation, six initial results with access to all 48 professions and every alternative, query/filter-preserving return links, persistent optional recall, and expandable source notes. Local checkpoint passed on 20 September 2026: Pages gates, E2E types, 22 combined browser checks, and rendered 320/390/768/1440px inspection. Full check passed 924 tests plus 585 web tests; five targeted profession checks passed. Live checkpoint passed: deployment 35520145952 (commit a68d3e89), all 22 browser checks passed against https://hrezaii95.github.io/german-learning-exam/. Evidence: step-5-gates.log, step-5-check.log, step-5-browser-tests.log, step-5-live-tests.log, step-5-component-tests.log and step-5-local/.
 

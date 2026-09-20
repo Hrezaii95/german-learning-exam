@@ -1,0 +1,47 @@
+.sheet-print-summary { display: none; }
+
+@media print {
+  body:has(.sheet-print-summary) { background: white !important; }
+  body:has(.sheet-print-summary) :is(.shell-rail, .shell-topnav, .shell-bottomnav, .shell-credit, .study-toolbar, .study-scope, .study-dictionary-launch, .skip-link) { display: none !important; }
+  body:has(.sheet-print-summary) :is(.app-shell, .shell-workspace, .shell-main, .country-sheet, .home-sheet) { display: block !important; width: auto !important; min-height: 0 !important; max-width: none !important; margin: 0 !important; padding: 0 !important; background: white !important; }
+  :is(.country-sheet, .home-sheet) > :not(.sheet-print-summary) { display: none !important; }
+  .sheet-print-summary.sheet-print-summary { display: block; color: #20372f; font-size: 10pt; line-height: 1.3; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+  .sheet-print-summary .sheet-print-page { break-inside: auto; }
+  .sheet-print-summary .sheet-print-page + .sheet-print-page { break-before: page; }
+  .sheet-print-summary header { margin: 0 0 4mm; }
+  .sheet-print-summary header > span { font-size: 9pt; text-transform: uppercase; letter-spacing: .08em; }
+  .sheet-print-summary h2 { font-size: 22pt; line-height: 1.12; letter-spacing: -.03em; margin: 2mm 0; }
+  .sheet-print-summary h3 { font-size: 11pt; line-height: 1.25; margin: 0; }
+  .sheet-print-summary p { font-size: 9pt; line-height: 1.35; margin: 2mm 0; }
+  .sheet-print-summary footer { border-top: 1px solid #c7cfc9; padding-top: 2mm; margin-top: 3mm; font-size: 8pt; line-height: 1.3; color: #41534a; }
+  .print-country-groups { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 3mm; }
+  .print-country-group { border: 1px solid #c7cfc9; border-top: 3px solid currentColor; border-radius: 2mm; padding: 3mm; break-inside: avoid; }
+  .print-country-group:first-child { grid-column: 1 / -1; }
+  .print-country-group h3 strong { display: block; font-size: 17pt; margin-top: 1mm; }
+  .print-country-flags { display: grid; grid-template-columns: 1fr; gap: 1.5mm; }
+  .print-country-group:first-child .print-country-flags { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .print-country-flags > div { display: flex; align-items: center; gap: 2mm; min-width: 0; font-size: 9pt; }
+  .print-country-flags .country-flag { display: block; width: 6mm; height: 4.5mm; flex-shrink: 0; border: 1px solid #ccd3cf; border-radius: 1px; }
+  .print-memory-notes { border-left: 3px solid #607c64; background: #f0f4ec; padding: 1mm 3mm; margin: 3mm 0; }
+  .sheet-print-summary table { width: 100%; border-collapse: collapse; font-size: 9pt; line-height: 1.25; }
+  .sheet-print-summary caption { text-align: left; font-weight: 700; margin: 2mm 0; }
+  .sheet-print-summary th, .sheet-print-summary td { padding: 1.3mm 2mm; text-align: left; border-bottom: 1px solid #d3dad4; vertical-align: top; }
+  .sheet-print-summary tr { break-inside: avoid; }
+  .print-country-table tbody th { border-left: 3px solid currentColor; width: 28%; }
+  .print-country-table th, .print-country-table td { padding: .2mm 2mm; line-height: 1.2; }
+  .print-country-table td:nth-child(2) { width: 30%; }
+  .print-country-table td:last-child { color: #20372f; }
+  .print-home-trails { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2mm; margin-bottom: 3mm; }
+  .print-home-trails > div { border-top: 3px solid currentColor; padding-top: 1mm; }
+  .print-home-trails span { display: block; font-size: 8pt; }
+  .print-home-trails strong { font-size: 16pt; }
+  .print-home-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1.2mm; }
+  .print-home-grid article { border: 1px solid #c7cfc9; border-top: 3px solid currentColor; border-radius: 2mm; padding: 1.2mm; break-inside: avoid; font-size: 8pt; line-height: 1.2; }
+  .print-home-grid .home-illustration { width: 10mm; height: 10mm; margin: 0 auto 1mm; }
+  .print-home-grid h3 { font-size: 9pt; }
+  .print-home-grid article > span { font-size: 8pt; color: #41534a; }
+  .print-home-grid article > p { font-size: 8pt; margin: 1mm 0 0; }
+  .print-home-notes { margin-top: 3mm; }
+  .print-home-notes p { margin: 1mm 0; }
+  .sheet-print-summary .print-home-notes + footer { margin-top: 1mm; padding-top: 1mm; }
+}
