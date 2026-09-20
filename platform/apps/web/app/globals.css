@@ -2255,16 +2255,13 @@ a:hover {
 }
 
 .infographic-panel__viewport {
-  overflow-x: auto;
-  overscroll-behavior-inline: contain;
-  scrollbar-gutter: stable;
+  min-width: 0;
   border-radius: var(--radius-sm);
 }
 
 .infographic-panel__image {
   display: block;
   width: 100%;
-  min-width: 900px;
   height: auto;
   margin-top: 1rem;
   border: 1px solid var(--border);
@@ -2280,6 +2277,17 @@ a:hover {
 .infographic-panel__description {
   margin-top: 0.75rem;
   color: var(--ink-muted);
+}
+.infographic-panel__expand { display:inline-flex; flex-wrap:wrap; align-items:center; gap:6px; min-height:44px; margin-top:12px; }
+.infographic-panel__expand span { font-size:.8rem; }
+.infographic-panel__steps { display:none; }
+@media(max-width:699px) {
+  .infographic-panel__desktop { display:none; }
+  .infographic-panel__steps { display:grid; gap:12px; padding:0; list-style:none; }
+  .infographic-panel__steps li { display:grid; gap:8px; padding:16px; border:1px solid var(--border); border-left:4px solid #446e5b; border-radius:10px; background:#fffefa; }
+  .infographic-panel__steps small { font-weight:650; }
+  .infographic-panel__steps strong { font-size:1.1rem; line-height:1.6; }
+  .infographic-panel__steps p { margin:0; line-height:1.6; }
 }
 .activity-content-grid {
   display: grid;

@@ -35,6 +35,14 @@ type StudyContextValue = {
 const StudyContext = createContext<StudyContextValue | null>(null);
 export const useStudy = () => useContext(StudyContext);
 
+export function DictionaryLauncher() {
+  const study = useStudy();
+  if (!study) return null;
+  return <button type="button" className="study-dictionary-launch" onClick={() => study.lookup("")} aria-label="Open dictionary">
+    <span aria-hidden="true">Aa</span> Dictionary
+  </button>;
+}
+
 export function StudyProvider({
   dictionary: suppliedDictionary,
   children,
@@ -174,14 +182,6 @@ export function StudyProvider({
       {dictionaryError&&<aside role="alert" className="study-storage-error">{dictionaryError} <button type="button" onClick={()=>setDictionaryAttempt(n=>n+1)}>Retry dictionary</button></aside>}
       {children}
       <SelectionMeaning lookup={lookup} />
-      <button
-        type="button"
-        className="study-dictionary-launch"
-        onClick={() => lookup("")}
-        aria-label="Open dictionary"
-      >
-        <span aria-hidden="true">Aa</span> Dictionary
-      </button>
       {error && (
         <p className="study-storage-error" role="alert">
           {error}
