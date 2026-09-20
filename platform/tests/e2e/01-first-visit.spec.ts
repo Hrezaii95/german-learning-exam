@@ -29,7 +29,7 @@ test.describe("journey 1 · first visit to first activity", () => {
 
     const continueCard = page.locator("section.studio-card--continue");
     await expect(continueCard).toContainText("Start here");
-    await expect(continueCard).toContainText("Begin with the first Lesson 1 activity.");
+    await expect(continueCard).toContainText("Begin the guided activities in Lesson 1.");
     await expect(continueCard).toContainText("Lesson 1");
 
     const cta = continueCard.getByRole("link", { name: "Start learning" });

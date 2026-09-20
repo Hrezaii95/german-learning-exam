@@ -147,7 +147,7 @@ export async function playPracticeGame(
     case "flashcards": {
       // Self-rating is the whole interaction; the flip is what a learner does
       // first, and it is also what the game records as a hint.
-      await root.getByRole("button", { pressed: false }).first().click();
+      await root.locator("button.game-flashcard[aria-pressed=false]").click();
       await root.getByRole("button", { name: "good", exact: true }).click();
       return { kind: "self-rated", emits: true };
     }

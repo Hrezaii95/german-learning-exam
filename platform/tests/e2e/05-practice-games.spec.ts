@@ -19,7 +19,7 @@ import { playPracticeGame } from "./support/journeys";
 test.describe("journey 5 · every practice game reaches a scored outcome", () => {
   test("the selector lists all seven games with their availability", async ({ page }) => {
     await gotoApp(page, "/practice");
-    await expect(page.getByRole("heading", { level: 1 })).toHaveText("Seven game modes");
+    await expect(page.getByRole("heading", { level: 1 })).toHaveText("Practice");
 
     for (const gameId of PRACTICE_GAME_IDS) {
       await expect(page.locator(`[data-game-id="${gameId}"]`)).toHaveCount(1);

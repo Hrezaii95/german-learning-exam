@@ -1,0 +1,85 @@
+{
+  "base": "https://hrezaii95.github.io/german-learning-exam/",
+  "checkedAt": "2026-09-20T22:52:09.620Z",
+  "profile": {
+    "width": 390,
+    "height": 844,
+    "cpuSlowdown": 4,
+    "downloadBytesPerSecond": 200000,
+    "uploadBytesPerSecond": 93750,
+    "latencyMs": 150,
+    "httpCache": "disabled",
+    "serviceWorkers": "blocked"
+  },
+  "results": [
+    {
+      "route": "vocabulary/",
+      "errors": [],
+      "status": 200,
+      "loadMs": 9211,
+      "firstActionMs": 7534,
+      "metrics": {
+        "fcpMs": 1320,
+        "lcpMs": 1320,
+        "longTasks": [
+          167,
+          73,
+          152,
+          371,
+          323
+        ],
+        "domNodes": 419,
+        "scrollHeight": 1913,
+        "overflow": 0
+      },
+      "transferredBytes": 2477680
+    },
+    {
+      "route": "listening/",
+      "errors": [],
+      "status": 200,
+      "loadMs": 8811,
+      "firstActionMs": 931,
+      "metrics": {
+        "fcpMs": 2860,
+        "lcpMs": 7632,
+        "longTasks": [
+          348,
+          125,
+          95,
+          207,
+          135,
+          61,
+          223,
+          146
+        ],
+        "domNodes": 336,
+        "scrollHeight": 982,
+        "overflow": 0
+      },
+      "transferredBytes": 1408794
+    },
+    {
+      "route": "search/",
+      "errors": [],
+      "status": 200,
+      "loadMs": 7201,
+      "firstActionMs": 4953,
+      "metrics": {
+        "fcpMs": 1264,
+        "lcpMs": 1264,
+        "longTasks": [
+          53,
+          109,
+          124,
+          277,
+          222
+        ],
+        "domNodes": 418,
+        "scrollHeight": 2855,
+        "overflow": 0
+      },
+      "transferredBytes": 1581919
+    }
+  ]
+}

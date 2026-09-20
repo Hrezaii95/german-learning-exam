@@ -241,7 +241,7 @@ function loadWorker(
   options: {
     config?: OfflineServiceWorkerConfig;
     networkFails?: boolean;
-    responseFor?: (url: string) => Response;
+    responseFor?: (url: string, request: FakeRequest) => Response;
   } = {},
 ): WorkerHarness {
   const config = options.config ?? testConfig();
@@ -272,12 +272,13 @@ function loadWorker(
     caches: cacheStorage,
     console: { warn: () => {}, error: () => {}, log: () => {} },
     Response,
+    Request,
     Headers,
     URL,
     fetch: async (request: FakeRequest) => {
       fetchCalls.push(request.url);
       if (options.networkFails) throw new Error("offline");
-      return options.responseFor?.(request.url) ?? new Response("network", { status: 200 });
+      return options.responseFor?.(request.url, request) ?? new Response("network", { status: 200 });
     },
   });
 
@@ -295,15 +296,19 @@ function loadWorker(
 
   const respond = async (request: FakeRequest) => {
     let captured: Promise<Response> | undefined;
+    const background: Promise<unknown>[] = [];
     for (const handler of listeners.get("fetch") ?? []) {
       handler({
         request,
+        waitUntil: (promise: Promise<unknown>) => background.push(promise),
         respondWith: (promise: Promise<Response>) => {
           captured = promise;
         },
       });
     }
-    return captured ? await captured : undefined;
+    const response = captured ? await captured : undefined;
+    await Promise.all(background);
+    return response;
   };
 
   return {
@@ -445,6 +450,33 @@ describe("service worker fetch strategies", () => {
     await worker.respond(fakeRequest(url, { destination: "audio" }));
     const runtime = worker.caches.caches.get(worker.config.runtimeCache);
     expect(runtime?.store.has(url)).toBe(true);
+  });
+
+  it.each(["audio/source-workbook-approved-v1/1_01.mp3", "book/audio/example.mp3"])("stores a complete copy after native range playback: %s", async path => {
+    const url = `https://learner.example${PAGES_BASE}/${path}`;
+    const worker = loadWorker({responseFor: (_url, request) => request.headers.get("range")
+      ? new Response("part", {status:206})
+      : new Response("complete-recording", {status:200})});
+    const response = await worker.respond(fakeRequest(url, {headers:new Headers({Range:"bytes=0-3"}),destination:"audio"}));
+    expect(response?.status).toBe(206);
+    expect(await response?.text()).toBe("part");
+    expect(worker.fetchCalls).toEqual([url,url]);
+    const runtime = await worker.caches.open(worker.config.runtimeCache);
+    const saved = await runtime.match(url) as Response;
+    expect(saved.status).toBe(200);
+    expect(await saved.text()).toBe("complete-recording");
+  });
+
+  it("keeps playback working when the background complete download fails", async () => {
+    const url = `https://learner.example${PAGES_BASE}/book/audio/example.mp3`;
+    const worker = loadWorker({responseFor: (_url, request) => {
+      if(request.headers.get("range"))return new Response("part",{status:206});
+      throw new Error("connection lost");
+    }});
+    const response = await worker.respond(fakeRequest(url,{headers:new Headers({Range:"bytes=0-3"})}));
+    expect(response?.status).toBe(206);
+    expect(await response?.text()).toBe("part");
+    expect(await (await worker.caches.open(worker.config.runtimeCache)).match(url)).toBeUndefined();
   });
 
   it("reports a sound that was never saved instead of returning silence", async () => {
@@ -621,6 +653,10 @@ describe("request routing table", () => {
   it("serves media from the cache first, filled as the learner opens it", () => {
     for (const pathname of [
       `${PAGES_BASE}/audio/tts-de-de-v1/clip.mp3`,
+      `${PAGES_BASE}/book/audio/track.mp3`,
+      `${PAGES_BASE}/book/speech/clip.mp3`,
+      `${PAGES_BASE}/book/transcript-speech/line.mp3`,
+      `${PAGES_BASE}/book/pages/coursebook-30.webp`,
       `${PAGES_BASE}/illustrations/professions/arzt-wide-512.avif`,
       `${PAGES_BASE}/infographics/greetings.svg`,
     ]) {

@@ -1,0 +1,92 @@
+
+Running 31 tests using 2 workers
+
+(node:34380) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:26628) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 [chromium] › tests\e2e\01-first-visit.spec.ts:14:3 › journey 1 · first visit to first activity › a first-time learner is offered Lesson 1 and can start it (2.6s)
+  ok  2 [chromium] › tests\e2e\01-first-visit.spec.ts:69:3 › journey 1 · first visit to first activity › visiting an activity sets the resume point the dashboard offers next (4.0s)
+  ok  4 [chromium] › tests\e2e\05-practice-games.spec.ts:20:3 › journey 5 · every practice game reaches a scored outcome › the selector lists all seven games with their availability (2.0s)
+  ok  5 [chromium] › tests\e2e\05-practice-games.spec.ts:34:5 › journey 5 · every practice game reaches a scored outcome › flashcards grades an attempt and records it locally (1.8s)
+  ok  3 [chromium] › tests\e2e\04-review-session.spec.ts:42:3 › journey 4 · review cards created by practice, session run to the end › adds cards from detail pages and completes the whole mission (7.0s)
+  ok  6 [chromium] › tests\e2e\05-practice-games.spec.ts:34:5 › journey 5 · every practice game reaches a scored outcome › picture-word-match grades an attempt and records it locally (2.2s)
+  ok  7 [chromium] › tests\e2e\05-practice-games.spec.ts:34:5 › journey 5 · every practice game reaches a scored outcome › article-choice grades an attempt and records it locally (2.1s)
+  ok  8 [chromium] › tests\e2e\05-practice-games.spec.ts:34:5 › journey 5 · every practice game reaches a scored outcome › word-order grades an attempt and records it locally (2.5s)
+  ok  9 [chromium] › tests\e2e\05-practice-games.spec.ts:34:5 › journey 5 · every practice game reaches a scored outcome › verb-builder grades an attempt and records it locally (1.9s)
+  ok 10 [chromium] › tests\e2e\05-practice-games.spec.ts:34:5 › journey 5 · every practice game reaches a scored outcome › morphology-puzzle grades an attempt and records it locally (1.9s)
+  ok 11 [chromium] › tests\e2e\05-practice-games.spec.ts:68:3 › journey 5 · every practice game reaches a scored outcome › audio-match states it is unavailable instead of pretending to score (1.9s)
+  ok 12 [chromium] › tests\e2e\05-practice-games.spec.ts:99:3 › journey 5 · every practice game reaches a scored outcome › word order accepts the rebuilt sentence and rejects a wrong order (2.8s)
+  ok 14 [chromium] › tests\e2e\07-search-back-context.spec.ts:53:3 › journey 7 · search, open a result, come back › a query with no matches says so instead of showing stale results (1.9s)
+  ok 15 [chromium] › tests\e2e\07-search-back-context.spec.ts:66:3 › journey 7 · search, open a result, come back › a hostile back-context is refused rather than followed (1.8s)
+  ok 16 [chromium] › tests\e2e\08-listening-playback.spec.ts:14:3 › journey 8 · workbook listening plays for real › a published track loads, plays, and advances its clock (3.0s)
+  ok 17 [chromium] › tests\e2e\08-listening-playback.spec.ts:58:3 › journey 8 · workbook listening plays for real › the activity panel plays only one track at a time (1.9s)
+  x  13 [chromium] › tests\e2e\07-search-back-context.spec.ts:12:3 › journey 7 · search, open a result, come back › returns to the same query the learner ran (13.6s)
+(node:26492) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 18 [chromium] › tests\e2e\09-export-reset-import.spec.ts:37:3 › journey 9 · export, reset, import, recover › a reset learner recovers everything from their own export file (7.3s)
+  ok 20 [chromium] › tests\e2e\09-export-reset-import.spec.ts:145:3 › journey 9 · export, reset, import, recover › a corrupt import is rejected and the existing state is preserved (4.2s)
+  ok 19 [chromium] › tests\e2e\09-export-reset-import.spec.ts:131:3 › journey 9 · export, reset, import, recover › declining the reset confirmation changes nothing (4.8s)
+  ok 22 [chromium] › tests\e2e\10-settings-effects.spec.ts:93:3 › journey 10 · settings reach the surfaces that consume them › the chosen speed survives a reload (4.6s)
+  ok 21 [chromium] › tests\e2e\10-settings-effects.spec.ts:41:3 › journey 10 · settings reach the surfaces that consume them › audio speed changes the workbook player and the real playback rate (5.0s)
+  ok 24 [chromium] › tests\e2e\10-settings-effects.spec.ts:146:3 › journey 10 · settings reach the surfaces that consume them › an invalid timezone is refused and nothing is saved (1.8s)
+  ok 23 [chromium] › tests\e2e\10-settings-effects.spec.ts:108:3 › journey 10 · settings reach the surfaces that consume them › timezone changes the calendar day the dashboard reports a badge on (8.0s)
+  ok 25 [chromium] › tests\e2e\57-book-listening-journey.spec.ts:7:31 › book to transcript, meaning, review and exact return at 320px (7.8s)
+  ok 27 [chromium] › tests\e2e\57-book-listening-journey.spec.ts:58:1 › book line saves preserve source selection and answers stay deliberate (5.5s)
+  ok 26 [chromium] › tests\e2e\57-book-listening-journey.spec.ts:7:31 › book to transcript, meaning, review and exact return at 1440px (8.7s)
+  ok 29 [chromium] › tests\e2e\58-release-resilience.spec.ts:24:1 › empty recording search recovers without losing the library (1.6s)
+  ok 28 [chromium] › tests\e2e\58-release-resilience.spec.ts:3:1 › library filters and global search update locally and preserve Back (3.7s)
+200% text vocabulary/ {"overflow":0,"outside":[]}
+200% text lessons/12/ {"overflow":0,"outside":[{"tag":"BUTTON","class":"","text":"Phrases","width":102},{"tag":"BUTTON","class":"","text":"Practice","width":102}]}
+200% text cheat-sheets/ {"overflow":0,"outside":[]}
+200% text cheat-sheets/home/ {"overflow":0,"outside":[]}
+200% text collections/professions/ {"overflow":0,"outside":[]}
+200% text book/?page=coursebook-30 {"overflow":0,"outside":[]}
+  ok 31 [chromium] › tests\e2e\58-release-resilience.spec.ts:69:2 › real offline recovery › played audio and saved progress survive offline reload; unopened pages are honest (9.9s)
+200% text listening/ {"overflow":0,"outside":[]}
+200% text settings/ {"overflow":0,"outside":[]}
+  ok 30 [chromium] › tests\e2e\58-release-resilience.spec.ts:35:1 › learning views retain readable reflow when text is enlarged to 200 percent (11.5s)
+
+
+  1) [chromium] › tests\e2e\07-search-back-context.spec.ts:12:3 › journey 7 · search, open a result, come back › returns to the same query the learner ran
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('main')
+    Expected substring: "der Architekt / die Architektin"
+    Received string:    "Study selectionLessons 1–12All conceptsChangeChoose lessonsAll lessonsOne lessonChoose severalUp to a lessonConcepts — choose any; none means all conceptsIntroductions & greetingsPeople, family & jobsCountries & languagesNumbers, prices & timeHome & furnitureEveryday objectsColours, shapes & materialsOffice & communicationMonths, seasons & festivalsPast actions & participlesTravel & separable verbsFood, preferences & orderingTime, weekdays & plansHobbies, abilities & frequencyArticles & sentence patternsVerbs & conjugationUseful conversationsQuestions & answersLearning & classroomDescribing & comparingEveryday vocabularyMaterial sourceAll sourcesCourse materialTeacher extrasAdditional study aidsYour selection follows you between sections.Reset selectionAa Dictionary← Back+Savew WORD FAMILIESLearnRecallLesson 2ProfessionsarchitectLesson 2Teacher extraPeople, family & jobsOne word family. Four useful forms.Learn the forms togetherFormSingularone personPluralseveral peopleMasculinearchitect (male)Masculineder ArchitektMasculine pluraldie ArchitektenFemininearchitect (female)Femininedie ArchitektinFeminine pluraldie ArchitektinnenNoticethe patternArchitekt→Architektin→ArchitektinnenFeminine: add -in. Feminine plural: use -innen. Learn the masculine plural separately.Use itIch bin Architekt. / Ich bin Architektin.I am an architect.✧ After “Ich bin”, a profession usually has no article.Ready to remember it?Hide the German. Say it from memory.Try recall →● masculine   ● feminine   ● neuter   ● pluralGenerated audioLesson notes & sourcesMomente A1.1 · Kursbuch, Arbeitsbuch and German–English glossary, © Hueber Verlag. Also in your teacher’s professions list (row 12). Glossary pp.3-4, L2 ex.5/6/8; Teacher jobs handout Notes_260730_040559.txt, row 12Core. Core: practise actively. Context and Classroom: recognise first. Teacher extra: follow your class assignment.After “Ich bin”, a profession usually has no article. Also in teacher job list.The word forms and meanings follow your vocabulary guide. Examples and memory cues were written for these cards; they are not quotations from the book. Audio is generated preview speech; independent German language and listening review is still pending.Learn the meaning. Notice the endings. Recall the whole family.My learning toolsAdd to review (4)0/4 eligible cards saved locallyTagsFavoriteDifficultConfusingExamTeacherPersonal noteSave noteDelete note0/4000"
+    Timeout: 10000ms
+
+    Call log:
+      - Expect "toContainText" with timeout 10000ms
+      - waiting for locator('main')
+        23 × locator resolved to <main tabindex="-1" id="main-content" class="shell-main">…</main>
+           - unexpected value "Study selectionLessons 1–12All conceptsChangeChoose lessonsAll lessonsOne lessonChoose severalUp to a lessonConcepts — choose any; none means all conceptsIntroductions & greetingsPeople, family & jobsCountries & languagesNumbers, prices & timeHome & furnitureEveryday objectsColours, shapes & materialsOffice & communicationMonths, seasons & festivalsPast actions & participlesTravel & separable verbsFood, preferences & orderingTime, weekdays & plansHobbies, abilities & frequencyArticles & sentence patternsVerbs & conjugationUseful conversationsQuestions & answersLearning & classroomDescribing & comparingEveryday vocabularyMaterial sourceAll sourcesCourse materialTeacher extrasAdditional study aidsYour selection follows you between sections.Reset selectionAa Dictionary← Back+Savew WORD FAMILIESLearnRecallLesson 2ProfessionsarchitectLesson 2Teacher extraPeople, family & jobsOne word family. Four useful forms.Learn the forms togetherFormSingularone personPluralseveral peopleMasculinearchitect (male)Masculineder ArchitektMasculine pluraldie ArchitektenFemininearchitect (female)Femininedie ArchitektinFeminine pluraldie ArchitektinnenNoticethe patternArchitekt→Architektin→ArchitektinnenFeminine: add -in. Feminine plural: use -innen. Learn the masculine plural separately.Use itIch bin Architekt. / Ich bin Architektin.I am an architect.✧ After “Ich bin”, a profession usually has no article.Ready to remember it?Hide the German. Say it from memory.Try recall →● masculine   ● feminine   ● neuter   ● pluralGenerated audioLesson notes & sourcesMomente A1.1 · Kursbuch, Arbeitsbuch and German–English glossary, © Hueber Verlag. Also in your teacher’s professions list (row 12). Glossary pp.3-4, L2 ex.5/6/8; Teacher jobs handout Notes_260730_040559.txt, row 12Core. Core: practise actively. Context and Classroom: recognise first. Teacher extra: follow your class assignment.After “Ich bin”, a profession usually has no article. Also in teacher job list.The word forms and meanings follow your vocabulary guide. Examples and memory cues were written for these cards; they are not quotations from the book. Audio is generated preview speech; independent German language and listening review is still pending.Learn the meaning. Notice the endings. Recall the whole family.My learning toolsAdd to review (4)0/4 eligible cards saved locallyTagsFavoriteDifficultConfusingExamTeacherPersonal noteSave noteDelete note0/4000"
+
+
+      34 |     await expect(page).toHaveURL(destination);
+      35 |     await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+    > 36 |     await expect(page.locator("main")).toContainText(resultText);
+         |                                        ^
+      37 |
+      38 |     // The back affordance resolves from the carried context, not from history.
+      39 |     const back = page.getByRole("link",{name:/^← Back/}).first();
+        at E:\claude-cursor\side projects\German learning\platform\tests\e2e\07-search-back-context.spec.ts:36:40
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\07-search-back-context-jou-26786--same-query-the-learner-ran-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\07-search-back-context-jou-26786--same-query-the-learner-ran-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\07-search-back-context-jou-26786--same-query-the-learner-ran-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\07-search-back-context-jou-26786--same-query-the-learner-ran-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium] › tests\e2e\07-search-back-context.spec.ts:12:3 › journey 7 · search, open a result, come back › returns to the same query the learner ran
+  30 passed (1.2m)

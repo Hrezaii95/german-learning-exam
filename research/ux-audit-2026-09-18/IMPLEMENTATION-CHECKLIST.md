@@ -6,7 +6,7 @@ Reference: [whole-app audit](UI-UX-AUDIT.md). Countries & languages and Home & f
 
 Use the checkboxes below as the completion record. Start at the first unchecked task; reuse anything already finished.
 
-**Current checkpoint:** Steps 1–7 have recorded live verification, including all fifteen cheat sheets. Step 8 (book/listening integration) is in progress. Step 9 (final integrated verification) remains open. Earlier completion notes are historical evidence, not instructions to repeat work.
+**Current checkpoint:** Steps 1–8 have recorded live verification, including all fifteen cheat sheets and the book/listening journey. Step 9 (final integrated verification) is in progress. Earlier completion notes are historical evidence, not instructions to repeat work.
 
 | Step | Recorded status | Main task | Checkpoint before marking complete |
 |---|---|---|---|
@@ -17,17 +17,12 @@ Use the checkboxes below as the completion record. Start at the first unchecked 
 | 5 | Complete | Finish Professions | Find a profession, understand and hear its four forms, save it, practise it and return. |
 | 6 | Complete | Improve lessons and libraries | Every lesson and library supports a clear learning path, compact browsing and accurate search. |
 | 7 | Complete | Complete the 15 cheat sheets | Each sheet has a useful visual overview, explanation, audio, saving and a short recall task. |
-| 8 | In progress | Connect book and listening | Read → listen → understand a phrase → save → review → return to the same book page. |
-| 9 | Pending | Verify the release | Live learning journeys, accessibility, data recovery and failure states pass; limitations are recorded. |
+| 8 | Complete | Connect book and listening | Read → listen → understand a phrase → save → review → return to the same book page. |
+| 9 | In progress | Verify the release | Live learning journeys, accessibility, data recovery and failure states pass; limitations are recorded. |
 
-**Resume here:** Step 8 → book, listening and transcripts. Reuse the shared controls and completed sheet work.
+**Resume here:** Step 9 → final integrated verification. Keep the completed work and fix only demonstrated failures.
 
-The remaining work, in order:
-
-1. **Connect book and listening:** complete the four tasks in Step 8, then verify the entire book-to-review-and-back journey.
-2. **Close the release:** run Step 9 against the integrated result, fix failures, and report the verified live link with any remaining limitations.
-
-These are the next actions, not a second tracker. Update only the checkboxes in Steps 8–9 below.
+Complete the four checks in Step 9, publish any resulting fixes, and report the verified live link with remaining limitations. Update only the existing checkboxes and completion record.
 
 ## Working rules
 
@@ -131,10 +126,10 @@ Audit coverage: A07, A12, A20 and all fifteen visual briefs.
 
 ## 8. Connect the book, listening and transcripts
 
-- [ ] Compact the reader toolbar and preserve page, view and zoom; make phone reading, selection and panning understandable.
-- [ ] Create a focused recording/transcript view with speaker separation, repeat, phrase lookup/save and a return to the book exercise.
-- [ ] Provide line pronunciation fallback where original line audio is unavailable; add synchronized highlighting/loops only where original timing is verified.
-- [ ] Keep answer reveal deliberate and clearly distinguish official answers from study explanations.
+- [x] Compact the reader toolbar and preserve page, view and zoom; make phone reading, selection and panning understandable.
+- [x] Create a focused recording/transcript view with speaker separation, repeat, phrase lookup/save and a return to the book exercise.
+- [x] Provide line pronunciation fallback where original line audio is unavailable; add synchronized highlighting/loops only where original timing is verified.
+- [x] Keep answer reveal deliberate and clearly distinguish official answers from study explanations.
 
 **Checkpoint:** Complete book → recording → transcript → phrase meaning → save → review → return to the same page. Verify original playback and generated fallback separately. Reload and resume on phone and desktop.
 
@@ -160,7 +155,9 @@ For each step, add one line here when its checkpoint passes:
 
 The entries below describe their own release dates. Use the current checkpoint and task checkboxes above for today's status.
 
-Step 8 — compact book controls with visible pan/read guidance; saved view/zoom and recording positions included in complete backups; one focused original recording with repeat/resume and a bounded recording browser; speaker-separated transcripts; phrase selection and saved lines returning to the exact page/recording/line; deliberate official-answer reveal after reading. All 1,009 unique transcript lines now resolve to recorded generated pronunciation (839 new clips, existing exact audio reused), while original recordings remain separate. Source-line order, normalized source hash, exact-text clip identities and file presence are checked; the existing publication manifest verifies every new MP3 checksum. No unverified line synchronization is claimed. Local checkpoint passed: 993 full-suite tests and 654 separate web tests before final layout refinements; final 28 source/state tests, E2E types, lint, Pages gates, the final context export build and all eleven final browser journeys. The first export gate correctly rejected unregistered new audio; adding exact checksums to the existing audio manifest resolved it. Phone/desktop rendering inspected; the book image begins above 600 pixels on a 320-pixel-wide screen, approximately 300 pixels earlier than the first candidate. Evidence: step-8-check.log, step-8-final-source-state-tests.log, step-8-release-gates.log, step-8-context-build.log, step-8-release-browser.log, step-8-transcript-speech.json and step-8-local/. Live checkpoint pending; Step 8 remains open until deployed verification.
+Step 9, release candidate — improved measured text contrast and touch targets, 200% text reflow and navigation clearance; corrected later-lesson numbering and book coverage metadata; local filter/search updates preserve Back without another document download; listening no longer embeds unused book pages. Native range-request recordings now save a complete offline copy after playback, and book selection works offline without server navigation. Local checks passed: final Pages gates, E2E types, lint and 59 targeted source/offline tests; the preceding full check passed 996 tests plus 657 web tests. The complete 129-journey browser run passed 117 initially; obsolete labels/selectors were updated, two actual offline/navigation defects were fixed, and all affected journeys passed in focused reruns (30 passes plus three search-return passes). Enlarged phone views and offline playback screenshots inspected. Evidence: step-9-release-gates.log, step-9-release-types.log, step-9-release-lint.log, step-9-release-unit.log, step-9-final-check.log, step-9-all-browser.log, step-9-final-browser.log, step-9-search-return.log and step-9-local-verified/. Publication and final live route/accessibility/performance verification are pending; Step 9 remains open.
+
+Step 8 — compact book controls with visible pan/read guidance; saved view/zoom and recording positions included in complete backups; one focused original recording with repeat/resume and a bounded recording browser; speaker-separated transcripts; phrase selection and saved lines returning to the exact page/recording/line; deliberate official-answer reveal after reading. All 1,009 unique transcript lines now resolve to recorded generated pronunciation (839 new clips, existing exact audio reused), while original recordings remain separate. Source-line order, normalized source hash, exact-text clip identities and file presence are checked; the existing publication manifest verifies every new MP3 checksum. No unverified line synchronization is claimed. Local checkpoint passed: 993 full-suite tests and 654 separate web tests before final layout refinements; final 28 source/state tests, E2E types, lint, Pages gates, the final context export build and all eleven final browser journeys. The first export gate correctly rejected unregistered new audio; adding exact checksums to the existing audio manifest resolved it. Phone/desktop rendering inspected; the book image begins above 600 pixels on a 320-pixel-wide screen, approximately 300 pixels earlier than the first candidate. Evidence: step-8-check.log, step-8-final-source-state-tests.log, step-8-release-gates.log, step-8-context-build.log, step-8-release-browser.log, step-8-transcript-speech.json and step-8-local/. Live checkpoint passed: deployment 35542069886 (commit 32e76725), all eleven live browser journeys, actual original/generated playback and inspected phone/desktop rendering. Evidence: step-8-deployment.json, step-8-live-tests.log and step-8-live/. Step 8 is complete. Final integration checks remain in Step 9.
 
 Step 7, Yesterday/Seasons batch — illustrated sample-day and trip timelines; past sentence and auxiliary trails; optional participle references with saved concepts; opening-hour clocks and interpretation recall; an interactive seasonal wheel, month pronunciation and year chunks; exact saved sentence/month/year return settings; bounded scoped word cards and printable summaries. Existing source models, grammar qualifications, recall questions and source links are retained. All taught speech texts resolve to existing recorded pronunciation files. Local checkpoint passed: 989 full-suite tests and 651 separate web tests, final E2E types, lint and Pages gates; eight final browser journeys including Travel regression. Initial reload checks raced client navigation; waiting for the actual destination before reload resolved the test failures. After the final print-only spacing adjustment, Pages build and the focused print/card browser journey passed again. Actual A4 and Letter exports each fit one page for both sheets; phone/desktop and print rendering inspected. Evidence: step-7-past-journey-check.log, step-7-past-journey-final-gates.log, step-7-past-journey-final-browser.log, step-7-past-journey-print-build.log, step-7-past-journey-print-final-browser.log and step-7-past-journey-local/print-check.json. Live checkpoint passed: deployment 35540380532 (commit 752a8184), complete CI checks and all twenty-two live journeys covering the two sheets, Travel, shared actions and approved-sheet regressions. All four live A4/Letter PDFs fit one page and match local text; live phone/desktop views inspected. Evidence: step-7-past-journey-deployment.json, step-7-past-journey-live-tests.log and step-7-past-journey-live/print-check.json. All fifteen sheets have recorded live checkpoints; Step 7 is complete. Steps 8–9 remain open.
 

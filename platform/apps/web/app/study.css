@@ -1,7 +1,7 @@
 /* Shared study controls use the existing studio palette; book pages retain their source colors. */
 :root {
   --study-ink: #203536;
-  --study-muted: #617174;
+  --study-muted: #526164;
   --study-line: #dce4df;
   --study-green: #28634f;
   --study-paper: #fffefa;
@@ -11,6 +11,7 @@
 .study-workspace,
 .book-workspace {
   color: var(--study-ink);
+  overflow-wrap: anywhere;
   max-width: 1250px;
   margin: auto;
   padding-bottom: 48px;
@@ -205,6 +206,10 @@
 }
 .country-hub-link { display:flex; flex-wrap:wrap; gap:10px 20px; margin:0 0 24px; padding:20px; border:1px solid #c3d1bc; border-radius:12px; background:#edf2e7; color:#294e40; }
 .study-word {
+  min-width: 24px;
+  min-height: 24px;
+  max-width: 100%;
+  overflow-wrap: anywhere;
   user-select: text;
   -webkit-user-select: text;
   font: inherit;
@@ -505,7 +510,7 @@
   outline: 1px solid #a97b36;
 }
 .book-page-caption {
-  color: #6a6f60;
+  color: #59604f;
   font-size: 10px;
   line-height: 1.5;
   padding: 0 2px;
@@ -712,7 +717,7 @@
 .study-chapter-badge {
   font-family: Georgia, serif;
   font-size: 36px;
-  color: #8a9d70;
+  color: #687e50;
 }
 .study-back {
   display: inline-block;
@@ -1843,6 +1848,8 @@
 .study-toolbar:empty { display:none; }
 .study-toolbar > .study-scope { flex:1; min-width:0; margin:0; }
 .study-toolbar > .study-dictionary-launch { margin-left:auto; }
+.mobile-navigation > :is(a,button) { min-width:0; overflow-wrap:anywhere; }
+.mobile-navigation > :is(a,button) > span { max-width:100%; }
 @media(max-width:520px) {
   .study-toolbar { flex-wrap:wrap; gap:8px; margin-bottom:16px; }
   .study-toolbar > .study-scope { flex-basis:100%; }
@@ -1891,7 +1898,7 @@
   .mobile-navigation svg { width:23px; height:23px; }
   .mobile-navigation > a[aria-current],.mobile-navigation > button[data-current] { background:#e9ddff; color:#2e1d51; }
   .mobile-navigation > :focus-visible { outline:3px solid #ffd56b; outline-offset:-3px; }
-  .shell-main { padding-bottom:calc(88px + env(safe-area-inset-bottom,0px)); }
+  .shell-main,.shell-main:has(.book-workspace) { padding-bottom:calc(var(--measured-bottom-nav-height,72px) + 24px); }
   .shell-topnav { position:static; justify-content:space-between; }
   .shell-topnav .nav-list { flex-wrap:nowrap; }
 }

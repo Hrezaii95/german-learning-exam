@@ -1,0 +1,10 @@
+
+Running 3 tests using 1 worker
+
+(node:10616) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [chromium] › tests\e2e\07-search-back-context.spec.ts:12:3 › journey 7 · search, open a result, come back › returns to the same query the learner ran (1.9s)
+  ok 2 [chromium] › tests\e2e\07-search-back-context.spec.ts:56:3 › journey 7 · search, open a result, come back › a query with no matches says so instead of showing stale results (1.2s)
+  ok 3 [chromium] › tests\e2e\07-search-back-context.spec.ts:69:3 › journey 7 · search, open a result, come back › a hostile back-context is refused rather than followed (1.2s)
+
+  3 passed (5.2s)

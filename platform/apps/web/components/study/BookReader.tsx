@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { withPagesBaseAssetPath } from "@/lib/content/pages-base-path";
 import { courseChapters } from "@/lib/study/lesson-four";
 import type {
@@ -119,7 +119,11 @@ export function BookReader({
   const selectedPages=useMemo(()=>book.pages.filter(p=>matchesStudyScope({...tagsForLesson(p.lesson),lessons:p.lessons??[p.lesson]},scope)),[book,scope]);
   const chapters=courseChapters.filter(c=>matchesStudyScope(tagsForLesson(c.number),scope));
   const params = useSearchParams();
-  const router = useRouter();
+  function replaceContext(href: string) {
+    // All book pages and recordings are already loaded. Keep the current path
+    // (including the Pages base) so changing a selection also works offline.
+    window.history.replaceState(null, "", `${window.location.pathname}?${href.split("?")[1]}`);
+  }
   const [view, setView] = useState<"read" | "page" | "split">("page");
   const [expanded, setExpanded] = useState(false);
   const fullscreen = useRef<HTMLDialogElement>(null);
@@ -160,7 +164,7 @@ export function BookReader({
   useEffect(()=>{const lineId=params.get("line");setSelected(page.lines.some(line=>line.id===lineId)?lineId:null);},[page,params]);
   const line = page.lines.find((l) => l.id === selected);
   useEffect(()=>{if(line&&!expanded&&!showContents)selectedLineRef.current?.scrollIntoView({block:"center"});},[line,expanded,showContents]);
-  function selectLine(id:string){setSelected(id);router.replace(bookContextHref(page.id,{line:id,...(activeTrack?{track:activeTrack.id}:{})}),{scroll:false});}
+  function selectLine(id:string){setSelected(id);replaceContext(bookContextHref(page.id,{line:id,...(activeTrack?{track:activeTrack.id}:{})}));}
   const marked = study?.state.bookmarks.includes(page.id) ?? false;
   const done = study?.state.completedPages.includes(page.id) ?? false;
   const results = useMemo(
@@ -193,7 +197,7 @@ export function BookReader({
   function go(id: string,lineId?:string) {
     stopStudyAudio();
     setSelected(lineId??null);
-    router.replace(bookContextHref(id,lineId?{line:lineId}:{}), { scroll: false });
+    replaceContext(bookContextHref(id,lineId?{line:lineId}:{}));
   }
   if(!selectedPages.length)return <div className="book-workspace"><h1>Your interactive book</h1><p role="status">No book pages match this selection. Book pages are course material, grouped by the concepts taught in each lesson.</p><button type="button" className="study-primary" onClick={()=>setScope(defaultStudyScope())}>Show all book pages</button></div>;
   function lineMeaning(value: BookLine) {
@@ -432,7 +436,7 @@ export function BookReader({
           {tracks.length > 0 && (
             <div className="book-original-audio">
               <h3>Listen to the book</h3>
-              {tracks.length>1&&<label className="study-field">Recording<select aria-label="Page recording" value={activeTrack!.id} onChange={event=>router.replace(bookContextHref(page.id,{track:event.target.value}),{scroll:false})}>{tracks.map(track=><option key={track.id} value={track.id}>{track.label}</option>)}</select></label>}
+              {tracks.length>1&&<label className="study-field">Recording<select aria-label="Page recording" value={activeTrack!.id} onChange={event=>replaceContext(bookContextHref(page.id,{track:event.target.value}))}>{tracks.map(track=><option key={track.id} value={track.id}>{track.label}</option>)}</select></label>}
               {activeTrack&&<><OriginalTrack key={activeTrack.id} track={activeTrack} rate={rate} {...(transcriptLine!==undefined?{transcriptLine}:{})}/><Link href={`/listening?track=${encodeURIComponent(activeTrack.id)}`}>Open focused listening →</Link></>}
             </div>
           )}
@@ -444,7 +448,7 @@ export function BookReader({
                   className="study-icon-button"
                   type="button"
                   aria-label="Clear selected line"
-                  onClick={() => {setSelected(null);router.replace(bookContextHref(page.id),{scroll:false});}}
+                  onClick={() => {setSelected(null);replaceContext(bookContextHref(page.id));}}
                 >
                   ✕
                 </button>

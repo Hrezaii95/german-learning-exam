@@ -12,30 +12,18 @@ import { activityById } from "./support/content";
  */
 test.describe("journey 8 · workbook listening plays for real", () => {
   test("a published track loads, plays, and advances its clock", async ({ page }) => {
-    const audioResponse = page.waitForResponse(
-      (res) => res.url().includes("/audio/source-workbook-approved-v1/"),
-    );
-
-    await gotoApp(page, "/listening");
-    await expect(page.getByRole("heading", { level: 1 })).toHaveText("Listening");
-    await expect(page.locator("main")).toContainText("15 items");
-    await expect(page.getByRole("heading", { name: "Workbook exercises" })).toBeVisible();
-
-    const firstCard = page.locator('[data-hub-card="listening"]').first();
-    await expect(firstCard.getByRole("heading", { level: 2 })).toHaveText(
-      "Names and spelling",
-    );
-    await expect(firstCard).toContainText("AB 3 · Lesson 1");
-    await expect(firstCard).toContainText("4 tracks");
-
-    const track = firstCard.locator("audio").first();
-    await expect(track).toHaveAttribute(
-      "aria-label",
-      "AB 3, track 1.01, Names and spelling",
-    );
-
-    // The bytes really came from the server, under the base path.
-    const response = await audioResponse;
+    await gotoApp(page, "/listening/?kind=workbook");
+    await expect(page.getByRole("heading", { level: 1 })).toHaveText("Listen. Read. Listen again.");
+    await expect(page.locator(".book-track")).toHaveCount(1);
+    await expect(page.locator(".recording-browser>div>button")).toHaveCount(12);
+    const firstCard=page.locator(".book-track");
+    const track=firstCard.locator("audio");
+    await expect(track).toHaveAttribute("aria-label", /^workbook .*original recording$/);
+    const src=await track.getAttribute("src");
+    expect(src).toContain("/book/audio/");
+    const audioResponse=page.waitForResponse(res=>res.url()===new URL(src!,page.url()).href);
+    await firstCard.getByRole("button",{name:"Play from start",exact:true}).click();
+    const response=await audioResponse;
     expect(response.status()).toBeLessThan(400);
     expect(response.headers()["content-type"]).toContain("audio/mpeg");
 
@@ -50,12 +38,7 @@ test.describe("journey 8 · workbook listening plays for real", () => {
     const duration = await track.evaluate((el: HTMLAudioElement) => el.duration);
     expect(duration).toBeGreaterThan(1);
 
-    // Native <audio controls> has no app-owned play button; play it the way the
-    // browser's own control does.
-    await track.evaluate(async (el: HTMLAudioElement) => {
-      await el.play();
-    });
-
+    // The learner's Play from start action must advance the native player.
     await expect
       .poll(
         async () =>

@@ -1,0 +1,12 @@
+
+ RUN  v3.2.7 E:/claude-cursor/side projects/German learning/platform
+
+ ✓ tests/web/book-transcripts.test.ts (6 tests) 797ms
+   ✓ source transcript mapping > keeps recorded fallback aligned to every source line and ships each audio file  669ms
+ ✓ tests/web/p6-offline-first.test.ts (53 tests) 2104ms
+   ✓ app icons > regenerates byte-identically to the committed files  1871ms
+
+ Test Files  2 passed (2)
+      Tests  59 passed (59)
+   Start at  02:55:04
+   Duration  4.16s (transform 899ms, setup 0ms, collect 1.05s, tests 2.90s, environment 1ms, prepare 589ms)

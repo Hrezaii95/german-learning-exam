@@ -166,6 +166,10 @@ export function cacheFirstPrefixes(basePath: string): readonly CacheFirstPrefix[
     { prefix: `${base}/illustrations/`, cache: "runtime" },
     { prefix: `${base}/infographics/`, cache: "runtime" },
     { prefix: `${base}/audio/`, cache: "runtime" },
+    { prefix: `${base}/book/audio/`, cache: "runtime" },
+    { prefix: `${base}/book/speech/`, cache: "runtime" },
+    { prefix: `${base}/book/transcript-speech/`, cache: "runtime" },
+    { prefix: `${base}/book/pages/`, cache: "runtime" },
   ];
 }
 

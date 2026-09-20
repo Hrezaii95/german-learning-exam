@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { PAGES_BASE, gotoApp } from "./support/app";
+import { gotoApp } from "./support/app";
 
 /**
  * Journey 7 — search → result detail → back returns to the search you ran.
@@ -27,21 +27,25 @@ test.describe("journey 7 · search, open a result, come back", () => {
     const firstResult = page.locator("a.search-result-link").first();
     const resultText = (await firstResult.innerText()).trim();
     await expect(firstResult).toHaveAttribute("href", /nav=/);
+    const destination=new URL((await firstResult.getAttribute("href"))!,page.url()).href;
     await firstResult.click();
 
     // On the detail page for the thing that was clicked.
-    await expect(page).toHaveURL(new RegExp(`${PAGES_BASE}/vocabulary/id-`));
-    await expect(page.getByRole("heading", { level: 1 })).toContainText(resultText);
+    await expect(page).toHaveURL(destination);
+    await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+    // Family cards teach the matched forms in separate singular/plural cells.
+    for (const form of resultText.split(" / ")) {
+      await expect(page.locator("main")).toContainText(form);
+    }
 
     // The back affordance resolves from the carried context, not from history.
-    const back = page.locator("a.back-link");
+    const back = page.getByRole("link",{name:/^← Back/}).first();
     await expect(back).toBeVisible();
-    await expect(back).toHaveText("← Back");
     await expect(back).toHaveAttribute("href", /\/search\/?\?q=Architekt/);
 
     await back.click();
 
-    await expect(page).toHaveURL(/\/search\/\?q=Architekt$/);
+    await expect(page).toHaveURL(/\/search\/?\?q=Architekt(?:#.*)?$/);
     await expect(
       page.getByRole("searchbox", { name: "Search learning content" }),
     ).toHaveValue("Architekt");

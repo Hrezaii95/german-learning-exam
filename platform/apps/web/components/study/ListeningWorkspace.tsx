@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import {useEffect,useRef,useState} from "react";
-import {useRouter,useSearchParams} from "next/navigation";
+import {useSearchParams} from "next/navigation";
 import type {BookManifest} from "@/lib/study/types";
 import {availableLessons,tagsForLesson} from "@/lib/study/scope";
 import {bookContextHref} from "@/lib/study/book-reading";
@@ -10,8 +10,8 @@ import {useStudyScope,StudyScopeNotice} from "./StudyScope";
 import {OriginalTrack} from "./BookRecording";
 import "./BookLearning.css";
 
-export function CourseListening({book}:{book:BookManifest}){
- const speed=useAudioSpeed(),router=useRouter(),params=useSearchParams();
+export function CourseListening({book}:{book:Pick<BookManifest,"audio">}){
+ const speed=useAudioSpeed(),params=useSearchParams();
  const {scope,setScope,ready,matches}=useStudyScope(),applied=useRef(false);
  const [limit,setLimit]=useState(12);
  useEffect(()=>{if(!ready||applied.current)return;applied.current=true;const lesson=Number(params.get("lesson"));if(availableLessons().includes(lesson))setScope({...scope,mode:"one",lessons:[lesson]});},[params,ready,scope,setScope]);
@@ -21,7 +21,7 @@ export function CourseListening({book}:{book:BookManifest}){
  const outsideResults=active&&!tracks.some(track=>track.id===active.id);
  function navigate(nextQuery:string,nextKind:string,track?:string){
   const next=new URLSearchParams();if(nextQuery)next.set("q",nextQuery);if(nextKind!=="all")next.set("kind",nextKind);if(track)next.set("track",track);
-  router.replace(`/listening${next.size?`?${next}`:""}`,{scroll:false});
+  window.history.replaceState(null,"",`${window.location.pathname}${next.size?`?${next}`:""}`);
  }
  return <div className="study-workspace listening-workspace">
   <header className="study-page-header"><div><p className="study-eyebrow">Listening hub</p><h1>Listen. Read. Listen again.</h1><p>Choose one recording. Listen first, then explore its publisher transcript.</p></div></header>

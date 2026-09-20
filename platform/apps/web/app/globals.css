@@ -30,7 +30,7 @@
   --gender-n-ink: #1f744d;
   /* Plural needs no ink variant: `--gender-pl` is only ever used for text on
      `--surface-muted` (5.1:1 large, 4.6:1 small), which already clears AA. */
-  --rule-regular: #1f9d8f;
+  --rule-regular: #16796f;
   --rule-special: #d8901c;
   --rule-irregular: #c23b6e;
   --focus: #28634f;
@@ -1957,7 +1957,7 @@ a:hover {
 }
 
 .game-selector__card--unavailable {
-  opacity: 0.85;
+  border-style: dashed;
 }
 
 .game-selector__card--related {

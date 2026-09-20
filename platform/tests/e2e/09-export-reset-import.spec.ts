@@ -51,32 +51,33 @@ test.describe("journey 9 · export, reset, import, recover", () => {
     const downloadPromise = page.waitForEvent("download");
     await page.getByRole("button", { name: "Download JSON export" }).click();
     const download = await downloadPromise;
-    expect(download.suggestedFilename()).toBe("german-learning-state.json");
+    expect(download.suggestedFilename()).toMatch(/^german-learning-backup-\d{4}-\d{2}-\d{2}\.json$/);
 
     const exportPath = await download.path();
     expect(exportPath, "the export must produce a real file").toBeTruthy();
     const exported = await readFile(exportPath as string, "utf8");
     const parsed = JSON.parse(exported) as Record<string, unknown>;
-    expect(parsed["exportMeta"]).toMatchObject({ includesRawAudioBytes: false });
-    expect(parsed["reviewCards"]).toHaveLength(before?.reviewCards.length ?? -1);
+    expect(parsed).toMatchObject({format:"german-learning-complete",version:1});
+    expect((parsed["learner"] as {reviewCards:unknown[]}).reviewCards).toHaveLength(before?.reviewCards.length ?? -1);
+    expect(parsed["study"]).toBeTruthy();
+    expect(parsed["scope"]).toBeTruthy();
     expect(
       exported,
       "an export must never carry raw audio or derived reward figures",
     ).not.toMatch(/"(?:xp|streak|badges?|audioBytes|rawAudio|blob)"/i);
 
     await expect(page.locator("main")).toContainText(
-      "Export downloaded. Raw recording audio is not included.",
+      "Complete backup downloaded. Raw microphone recordings are not included.",
     );
 
     // --- reset (destructive, behind a confirm) ---
     page.once("dialog", (dialog) => {
-      expect(dialog.message()).toBe(
-        "Reset all local learner state on this device?",
-      );
+      expect(dialog.message()).toContain("Reset saved items, notes, bookmarks, lesson progress, review history and preferences");
       void dialog.accept();
     });
-    await page.getByRole("button", { name: "Reset local data" }).click();
-    await expect(page.locator("main")).toContainText("Local learner state reset.");
+    await page.getByText("Reset learning data",{exact:true}).click();
+    await page.getByRole("button", { name: "Reset learning progress",exact:true }).click();
+    await expect(page.locator("main")).toContainText("Learning progress and preferences reset. Downloaded media was kept.");
 
     await expect
       .poll(async () => (await readLearnerState(page))?.reviewCards.length ?? -1, {
@@ -94,17 +95,13 @@ test.describe("journey 9 · export, reset, import, recover", () => {
     await expect(page.getByLabel("IANA timezone")).toHaveValue("UTC");
     await expect(page.getByLabel("Audio speed")).toHaveValue("1");
 
-    // --- import the learner's own file back ---
-    page.once("dialog", (dialog) => {
-      expect(dialog.message()).toBe(
-        "Replace everything saved on this device with the contents of this file?",
-      );
-      void dialog.accept();
-    });
-    await page.locator('input[type="file"]').setInputFiles(exportPath as string);
-    await expect(page.locator("main")).toContainText(
-      "Learner state imported and replayed.",
-    );
+    // --- inspect and explicitly restore the learner's own complete backup ---
+    await page.getByLabel("Choose learning backup").setInputFiles(exportPath as string);
+    await expect(page.getByRole("heading",{name:"Ready to import"})).toBeVisible();
+    expect((await readLearnerState(page))?.reviewCards).toHaveLength(0);
+    await page.getByRole("combobox",{name:"Import method"}).selectOption("replace");
+    await page.getByRole("button",{name:"Replace included data",exact:true}).click();
+    await expect(page.locator("main")).toContainText("Backup restored. Only the sections included in the file were replaced.");
 
     // --- full recovery, asserted against state and against the UI ---
     await expect
@@ -138,7 +135,8 @@ test.describe("journey 9 · export, reset, import, recover", () => {
     page.once("dialog", (dialog) => {
       void dialog.dismiss();
     });
-    await page.getByRole("button", { name: "Reset local data" }).click();
+    await page.getByText("Reset learning data",{exact:true}).click();
+    await page.getByRole("button", { name: "Reset learning progress",exact:true }).click();
 
     await expect(page.getByLabel("Audio speed")).toHaveValue("1.25");
     expect(await readLearnerState(page)).toEqual(before);
@@ -153,13 +151,10 @@ test.describe("journey 9 · export, reset, import, recover", () => {
     const badFile = testInfo.outputPath("corrupt-export.json");
     await writeFile(badFile, "{ not json", "utf8");
 
-    page.once("dialog", (dialog) => {
-      void dialog.accept();
-    });
     await page.locator('input[type="file"]').setInputFiles(badFile);
 
     await expect(page.locator("main")).toContainText(
-      "Import rejected. Existing local state was preserved.",
+      "Import rejected. Existing data is unchanged.",
     );
     expect(await readLearnerState(page)).toEqual(before);
   });

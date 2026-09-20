@@ -454,7 +454,7 @@ export function NewChapterCards() {
       <div className="study-chapter-cards">
         {courseChapters.slice(2).filter(c=>matches(tagsForLesson(c.number))).map((c) => (
           <Link href={`/lessons/0${c.number}`} key={c.number}>
-            <span className="study-chapter-badge">0{c.number}</span>
+            <span className="study-chapter-badge">{String(c.number).padStart(2, "0")}</span>
             <div>
               <small>
                 {c.number === 4 ? "NEW LESSON" : "CONTINUE THE COURSE"}

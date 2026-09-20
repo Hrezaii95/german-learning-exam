@@ -37,10 +37,19 @@ const more=[
   {href:"/settings",label:"Settings",key:"settings",description:"Your preferences"},
 ];
 export function MobileNavigation({current}:{current:ShellNavCurrent}){
+  const navigation=useRef<HTMLElement>(null);
   const dialog=useRef<HTMLDialogElement>(null);
   const trigger=useRef<HTMLButtonElement>(null);
   const [open,setOpen]=useState(false);
   const [query,setQuery]=useState("");
+  useEffect(()=>{
+    const element=navigation.current;
+    if(!element || typeof ResizeObserver==="undefined")return;
+    const sync=()=>document.documentElement.style.setProperty("--measured-bottom-nav-height",`${Math.ceil(element.getBoundingClientRect().height)}px`);
+    const observer=new ResizeObserver(sync);
+    observer.observe(element);sync();
+    return()=>{observer.disconnect();document.documentElement.style.removeProperty("--measured-bottom-nav-height");};
+  },[]);
   const groups = [
     { title: "Learn", keys: ["dashboard", "lessons", "book", "cheat-sheets", "listening"] },
     { title: "Remember & practise", keys: ["saved", "review", "practice"] },
@@ -52,7 +61,7 @@ export function MobileNavigation({current}:{current:ShellNavCurrent}){
   useEffect(()=>{if(!open)return;const before=document.body.style.overflow;document.body.style.overflow="hidden";return()=>{document.body.style.overflow=before;};},[open]);
   const close=()=>{dialog.current?.close();setOpen(false);setQuery("");trigger.current?.focus();};
   return <>
-    <nav className="shell-bottomnav mobile-navigation" aria-label="Mobile">
+    <nav ref={navigation} className="shell-bottomnav mobile-navigation" aria-label="Mobile">
       {tabs.map(item=><Link key={item.key} href={item.href} aria-current={current===item.key?"page":undefined}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" aria-hidden="true"><path d={item.icon}/></svg><span>{item.label}</span></Link>)}
       <button type="button" ref={trigger} aria-label="Open navigation menu" aria-haspopup="dialog" aria-expanded={open} data-current={more.some(item=>item.key===current)||undefined} onClick={()=>{dialog.current?.showModal();setOpen(true);}}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><path d="M4 6h16 M4 12h16 M4 18h16"/></svg><span>Menu</span></button>
     </nav>

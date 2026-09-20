@@ -1,0 +1,786 @@
+
+Running 129 tests using 2 workers
+
+(node:12600) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:27392) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok   2 [chromium] › tests\e2e\00-serving.spec.ts:9:3 › serving contract › serves the export under the Pages base path, not the origin root (1.2s)
+  ok   3 [chromium] › tests\e2e\00-serving.spec.ts:52:3 › serving contract › unknown routes serve the honest 404 page (274ms)
+  ok   1 [chromium] › tests\e2e\00-serving.spec.ts:22:3 › serving contract › every document, script, style, font and image asset resolves (1.8s)
+  ok   5 [chromium] › tests\e2e\01-first-visit.spec.ts:69:3 › journey 1 · first visit to first activity › visiting an activity sets the resume point the dashboard offers next (2.4s)
+  ok   6 [chromium] › tests\e2e\02-progress-persistence.spec.ts:20:3 › journey 2 · completion survives a reload › completing an activity persists across a full page reload (4.4s)
+  ok   7 [chromium] › tests\e2e\02-progress-persistence.spec.ts:58:3 › journey 2 · completion survives a reload › mastery evidence from an activity survives a reload (4.0s)
+  x    4 [chromium] › tests\e2e\01-first-visit.spec.ts:14:3 › journey 1 · first visit to first activity › a first-time learner is offered Lesson 1 and can start it (12.2s)
+(node:12940) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok   9 [chromium] › tests\e2e\02-progress-persistence.spec.ts:116:3 › journey 2 · completion survives a reload › a hostile localStorage value fails closed instead of silently resetting (2.6s)
+  ok   8 [chromium] › tests\e2e\02-progress-persistence.spec.ts:91:3 › journey 2 · completion survives a reload › completed work is reflected on the lesson and the dashboard after reload (6.4s)
+  ok  10 [chromium] › tests\e2e\03-lesson-stage-checkpoint.spec.ts:15:3 › journey 3 · lesson structure through to the checkpoint › navigates lessons → lesson 1 → checkpoint stage → checkpoint activity (2.0s)
+  ok  11 [chromium] › tests\e2e\03-lesson-stage-checkpoint.spec.ts:60:3 › journey 3 · lesson structure through to the checkpoint › completing the checkpoint records it and offers the review handoff (2.5s)
+  x   13 [chromium] › tests\e2e\05-practice-games.spec.ts:20:3 › journey 5 · every practice game reaches a scored outcome › the selector lists all seven games with their availability (11.3s)
+(node:10104) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x   12 [chromium] › tests\e2e\04-review-session.spec.ts:42:3 › journey 4 · review cards created by practice, session run to the end › adds cards from detail pages and completes the whole mission (20.0s)
+(node:9652) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  15 [chromium] › tests\e2e\05-practice-games.spec.ts:34:5 › journey 5 · every practice game reaches a scored outcome › picture-word-match grades an attempt and records it locally (1.5s)
+  ok  16 [chromium] › tests\e2e\05-practice-games.spec.ts:34:5 › journey 5 · every practice game reaches a scored outcome › article-choice grades an attempt and records it locally (1.3s)
+  ok  17 [chromium] › tests\e2e\05-practice-games.spec.ts:34:5 › journey 5 · every practice game reaches a scored outcome › word-order grades an attempt and records it locally (1.5s)
+  ok  18 [chromium] › tests\e2e\05-practice-games.spec.ts:34:5 › journey 5 · every practice game reaches a scored outcome › verb-builder grades an attempt and records it locally (1.3s)
+  ok  19 [chromium] › tests\e2e\05-practice-games.spec.ts:34:5 › journey 5 · every practice game reaches a scored outcome › morphology-puzzle grades an attempt and records it locally (1.4s)
+  ok  20 [chromium] › tests\e2e\05-practice-games.spec.ts:68:3 › journey 5 · every practice game reaches a scored outcome › audio-match states it is unavailable instead of pretending to score (1.3s)
+  ok  21 [chromium] › tests\e2e\05-practice-games.spec.ts:99:3 › journey 5 · every practice game reaches a scored outcome › word order accepts the rebuilt sentence and rejects a wrong order (1.8s)
+  x   14 [chromium] › tests\e2e\05-practice-games.spec.ts:34:5 › journey 5 · every practice game reaches a scored outcome › flashcards grades an attempt and records it locally (17.0s)
+(node:25328) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  23 [chromium] › tests\e2e\06-conversation-ladder.spec.ts:126:3 › journey 6 · conversation ladder to level five › the speaking level refuses to complete without a real recording cycle (2.4s)
+  ok  22 [chromium] › tests\e2e\06-conversation-ladder.spec.ts:37:3 › journey 6 · conversation ladder to level five › climbs all five levels and completes the spoken role-play (5.9s)
+  ok  25 [chromium] › tests\e2e\07-search-back-context.spec.ts:52:3 › journey 7 · search, open a result, come back › a query with no matches says so instead of showing stale results (1.2s)
+  ok  26 [chromium] › tests\e2e\07-search-back-context.spec.ts:65:3 › journey 7 · search, open a result, come back › a hostile back-context is refused rather than followed (1.4s)
+  x   24 [chromium] › tests\e2e\07-search-back-context.spec.ts:12:3 › journey 7 · search, open a result, come back › returns to the same query the learner ran (12.2s)
+(node:27612) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  28 [chromium] › tests\e2e\08-listening-playback.spec.ts:75:3 › journey 8 · workbook listening plays for real › the activity panel plays only one track at a time (2.3s)
+  x   27 [chromium] › tests\e2e\08-listening-playback.spec.ts:14:3 › journey 8 · workbook listening plays for real › a published track loads, plays, and advances its clock (11.7s)
+(node:20752) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x   29 [chromium] › tests\e2e\09-export-reset-import.spec.ts:37:3 › journey 9 · export, reset, import, recover › a reset learner recovers everything from their own export file (4.0s)
+(node:24296) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x   31 [chromium] › tests\e2e\09-export-reset-import.spec.ts:147:3 › journey 9 · export, reset, import, recover › a corrupt import is rejected and the existing state is preserved (12.9s)
+(node:34336) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x   30 [chromium] › tests\e2e\09-export-reset-import.spec.ts:134:3 › journey 9 · export, reset, import, recover › declining the reset confirmation changes nothing (19.2s)
+(node:23504) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  32 [chromium] › tests\e2e\10-settings-effects.spec.ts:41:3 › journey 10 · settings reach the surfaces that consume them › audio speed changes the workbook player and the real playback rate (4.4s)
+  ok  33 [chromium] › tests\e2e\10-settings-effects.spec.ts:93:3 › journey 10 · settings reach the surfaces that consume them › the chosen speed survives a reload (3.5s)
+  ok  35 [chromium] › tests\e2e\10-settings-effects.spec.ts:145:3 › journey 10 · settings reach the surfaces that consume them › an invalid timezone is refused and nothing is saved (1.6s)
+  ok  36 [chromium] › tests\e2e\11-rsc-prefetch.spec.ts:34:3 › router prefetch payloads › prefetched route payloads resolve at the URL the router requests (2.0s)
+  x   34 [chromium] › tests\e2e\10-settings-effects.spec.ts:108:3 › journey 10 · settings reach the surfaces that consume them › timezone changes the calendar day the dashboard reports a badge on (4.9s)
+(node:37008) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  38 [chromium] › tests\e2e\12-pronunciation-review.spec.ts:199:3 › journey 12 · a pronunciation listening sitting › stays out of the learner's way (4.0s)
+  ok  37 [chromium] › tests\e2e\12-pronunciation-review.spec.ts:32:3 › journey 12 · a pronunciation listening sitting › filter a sound, judge a clip, resume after a reload, carry it out (7.6s)
+  ok  39 [chromium] › tests\e2e\40-ux-readability.spec.ts:6:3 › learning cards and country rows remain readable at 320px (10.2s)
+  ok  40 [chromium] › tests\e2e\40-ux-readability.spec.ts:6:3 › learning cards and country rows remain readable at 390px (9.9s)
+  ok  41 [chromium] › tests\e2e\40-ux-readability.spec.ts:6:3 › learning cards and country rows remain readable at 768px (11.2s)
+  ok  43 [chromium] › tests\e2e\40-ux-readability.spec.ts:22:1 › phone diagrams expose readable steps and dictionary preserves keyboard focus (1.4s)
+  ok  42 [chromium] › tests\e2e\40-ux-readability.spec.ts:6:3 › learning cards and country rows remain readable at 1440px (13.0s)
+  ok  45 [chromium] › tests\e2e\41-complete-backup.spec.ts:118:1 › Lesson 4 also resumes its quiz and supports an explicit restart (3.1s)
+  ok  46 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:5:1 › saved pronunciation speed follows word cards, original recordings and the reader (7.5s)
+  ok  47 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:46:1 › saving a profession in its collection is reflected on its word card and can be removed there (3.8s)
+  ok  48 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:58:1 › profession filters control both the displayed cards and the review pool (3.5s)
+  ok  49 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:86:1 › German text offers one keyboard stop per phrase and complete-phrase lookup (2.5s)
+  ok  50 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:103:1 › transcript lines share pronunciation, meaning and saved-review actions (3.2s)
+  ok  44 [chromium] › tests\e2e\41-complete-backup.spec.ts:4:1 › saved study, course progress and settings survive a complete backup round trip (27.9s)
+  ok  51 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:127:1 › a failed preview recording shows a useful error and can be retried (2.9s)
+  ok  52 [chromium] › tests\e2e\43-navigation-and-continue.spec.ts:4:3 › navigation stays compact and keyboard-safe at 320px (3.5s)
+  ok  53 [chromium] › tests\e2e\43-navigation-and-continue.spec.ts:4:3 › navigation stays compact and keyboard-safe at 768px (4.0s)
+  ok  54 [chromium] › tests\e2e\43-navigation-and-continue.spec.ts:43:1 › the compact sheet chooser searches all fifteen sheets and preserves return links (6.0s)
+  ok  56 [chromium] › tests\e2e\44-professions-learning.spec.ts:4:3 › professions connect patterns, pronunciation, saving and recall at 320px (5.9s)
+  ok  55 [chromium] › tests\e2e\43-navigation-and-continue.spec.ts:63:1 › Continue follows the last visited lesson and due review precedes the course map (11.4s)
+  ok  57 [chromium] › tests\e2e\44-professions-learning.spec.ts:4:3 › professions connect patterns, pronunciation, saving and recall at 390px (5.4s)
+  ok  58 [chromium] › tests\e2e\44-professions-learning.spec.ts:4:3 › professions connect patterns, pronunciation, saving and recall at 768px (6.1s)
+  ok  60 [chromium] › tests\e2e\44-professions-learning.spec.ts:48:1 › the bounded collection keeps every profession and alternative reachable (5.1s)
+  ok  59 [chromium] › tests\e2e\44-professions-learning.spec.ts:4:3 › professions connect patterns, pronunciation, saving and recall at 1440px (6.9s)
+  ok  62 [chromium] › tests\e2e\45-lessons-and-libraries.spec.ts:20:31 › compact libraries and search keep context at 320px (6.1s)
+  ok  61 [chromium] › tests\e2e\45-lessons-and-libraries.spec.ts:3:1 › all twelve lessons expose Learn, Listen, Practise and source books (12.6s)
+  ok  63 [chromium] › tests\e2e\45-lessons-and-libraries.spec.ts:20:31 › compact libraries and search keep context at 1440px (8.6s)
+  ok  64 [chromium] › tests\e2e\45-lessons-and-libraries.spec.ts:55:1 › lesson words stay bounded and checked practice resumes (3.4s)
+  ok  66 [chromium] › tests\e2e\46-cheat-sheet-summaries.spec.ts:5:5 › home prints its complete summary without changing recall or filters at 320px (1.7s)
+  ok  65 [chromium] › tests\e2e\46-cheat-sheet-summaries.spec.ts:5:5 › countries prints its complete summary without changing recall or filters at 320px (2.3s)
+  ok  68 [chromium] › tests\e2e\46-cheat-sheet-summaries.spec.ts:5:5 › home prints its complete summary without changing recall or filters at 1440px (3.0s)
+  ok  67 [chromium] › tests\e2e\46-cheat-sheet-summaries.spec.ts:5:5 › countries prints its complete summary without changing recall or filters at 1440px (3.5s)
+  ok  69 [chromium] › tests\e2e\46-cheat-sheet-summaries.spec.ts:51:1 › home overview keeps one set of objects and returns focus after Escape and selection (2.8s)
+  ok  70 [chromium] › tests\e2e\46-cheat-sheet-summaries.spec.ts:73:1 › home pronunciation follows the saved speed when its slow override is off (5.3s)
+  ok  71 [chromium] › tests\e2e\46-cheat-sheet-summaries.spec.ts:97:33 › shared overviews preserve verb, number and register selections at 390px (4.3s)
+  ok  73 [chromium] › tests\e2e\47-sheet-selection.spec.ts:3:31 › country and home word cards return to the selected item at 320px (3.9s)
+  ok  72 [chromium] › tests\e2e\46-cheat-sheet-summaries.spec.ts:97:33 › shared overviews preserve verb, number and register selections at 1440px (6.2s)
+  ok  74 [chromium] › tests\e2e\47-sheet-selection.spec.ts:3:31 › country and home word cards return to the selected item at 1440px (5.0s)
+  ok  75 [chromium] › tests\e2e\47-sheet-selection.spec.ts:21:32 › country and home recall follow selection, search and saved filters at 320px (6.9s)
+  ok  76 [chromium] › tests\e2e\47-sheet-selection.spec.ts:21:32 › country and home recall follow selection, search and saved filters at 1440px (8.4s)
+  ok  77 [chromium] › tests\e2e\48-people-learning.spec.ts:3:39 › people family viewpoint, saved sentence and card return at 320px (5.8s)
+  ok  79 [chromium] › tests\e2e\48-people-learning.spec.ts:3:39 › people family viewpoint, saved sentence and card return at 768px (5.6s)
+  ok  78 [chromium] › tests\e2e\48-people-learning.spec.ts:3:39 › people family viewpoint, saved sentence and card return at 390px (6.0s)
+  ok  81 [chromium] › tests\e2e\48-people-learning.spec.ts:40:31 › people bounded browsing, scoped recall and saved-filter return at 390px (3.4s)
+  ok  80 [chromium] › tests\e2e\48-people-learning.spec.ts:3:39 › people family viewpoint, saved sentence and card return at 1440px (7.5s)
+  ok  82 [chromium] › tests\e2e\48-people-learning.spec.ts:40:31 › people bounded browsing, scoped recall and saved-filter return at 1440px (4.4s)
+  ok  83 [chromium] › tests\e2e\48-people-learning.spec.ts:71:1 › people prints a complete family summary while preserving the learning view (2.9s)
+  ok  84 [chromium] › tests\e2e\49-grammar-sheets.spec.ts:6:31 › verb parts, exact audio and saved-person return at 320px (8.2s)
+  ok  85 [chromium] › tests\e2e\49-grammar-sheets.spec.ts:6:31 › verb parts, exact audio and saved-person return at 1440px (9.9s)
+  ok  86 [chromium] › tests\e2e\49-grammar-sheets.spec.ts:39:31 › question contrast, full reply, scope and saved-builder return at 320px (4.3s)
+  ok  88 [chromium] › tests\e2e\49-grammar-sheets.spec.ts:67:1 › saved sentence patterns and replies restore their exact teaching context (3.7s)
+  ok  87 [chromium] › tests\e2e\49-grammar-sheets.spec.ts:39:31 › question contrast, full reply, scope and saved-builder return at 1440px (5.6s)
+  ok  89 [chromium] › tests\e2e\49-grammar-sheets.spec.ts:85:42 › verbs prints a concise complete pattern summary (1.7s)
+  ok  90 [chromium] › tests\e2e\49-grammar-sheets.spec.ts:85:42 › questions prints a concise complete pattern summary (1.6s)
+  ok  91 [chromium] › tests\e2e\50-numbers-learning.spec.ts:3:31 › number reading, listening and saved values at 320px (7.2s)
+  ok  92 [chromium] › tests\e2e\50-numbers-learning.spec.ts:3:31 › number reading, listening and saved values at 1440px (8.9s)
+  ok  93 [chromium] › tests\e2e\50-numbers-learning.spec.ts:34:1 › number filters control listening, recall and empty selections together (3.2s)
+  ok  94 [chromium] › tests\e2e\50-numbers-learning.spec.ts:54:1 › numbers prints common patterns without changing the chosen example (3.6s)
+  ok  95 [chromium] › tests\e2e\51-conversation-learning.spec.ts:3:31 › dialogue roles, saved context and alphabet audio at 320px (5.9s)
+  ok  97 [chromium] › tests\e2e\51-conversation-learning.spec.ts:24:1 › name spelling requests German letter cues and survives missing speech support (2.3s)
+  ok  96 [chromium] › tests\e2e\51-conversation-learning.spec.ts:3:31 › dialogue roles, saved context and alphabet audio at 1440px (5.6s)
+  ok  98 [chromium] › tests\e2e\51-conversation-learning.spec.ts:32:1 › conversation card filters control recall and foundation scope is explicit (2.9s)
+  ok  99 [chromium] › tests\e2e\51-conversation-learning.spec.ts:39:1 › conversation prints dialogue contrasts and all thirty letter cues (2.1s)
+  ok 100 [chromium] › tests\e2e\52-objects-office-learning.spec.ts:3:31 › object picture, description and saved settings at 320px (3.8s)
+  ok 101 [chromium] › tests\e2e\52-objects-office-learning.spec.ts:3:31 › object picture, description and saved settings at 1440px (4.9s)
+  ok 102 [chromium] › tests\e2e\52-objects-office-learning.spec.ts:14:31 › office roles, contextual return and phone listening at 320px (4.9s)
+  ok 103 [chromium] › tests\e2e\52-objects-office-learning.spec.ts:14:31 › office roles, contextual return and phone listening at 1440px (5.9s)
+  ok 104 [chromium] › tests\e2e\52-objects-office-learning.spec.ts:25:1 › bounded sheet cards, filters, full-card return and saved phone turn (5.3s)
+  ok 105 [chromium] › tests\e2e\52-objects-office-learning.spec.ts:32:1 › object and office summaries export to A4 and Letter (3.3s)
+  ok 106 [chromium] › tests\e2e\53-hobbies-time-learning.spec.ts:3:31 › hobby illustrations, contrasts and saved settings at 320px (4.3s)
+  ok 107 [chromium] › tests\e2e\53-hobbies-time-learning.spec.ts:3:31 › hobby illustrations, contrasts and saved settings at 1440px (5.2s)
+  ok 108 [chromium] › tests\e2e\53-hobbies-time-learning.spec.ts:12:31 › clock listening, weekly plans and reload at 320px (8.3s)
+  ok 109 [chromium] › tests\e2e\53-hobbies-time-learning.spec.ts:12:31 › clock listening, weekly plans and reload at 1440px (10.0s)
+  ok 110 [chromium] › tests\e2e\53-hobbies-time-learning.spec.ts:19:1 › hobby and time card practice respects scope and saved filters (5.8s)
+  ok 111 [chromium] › tests\e2e\53-hobbies-time-learning.spec.ts:23:1 › hobbies and time print concise A4 and Letter summaries (3.4s)
+  ok 112 [chromium] › tests\e2e\54-food-learning.spec.ts:3:31 › food menu, portions and saved context at 320px (7.2s)
+  ok 113 [chromium] › tests\e2e\54-food-learning.spec.ts:3:31 › food menu, portions and saved context at 1440px (9.6s)
+  ok 114 [chromium] › tests\e2e\54-food-learning.spec.ts:14:1 › food groups, plurals, chosen practice and print (3.2s)
+  ok 115 [chromium] › tests\e2e\55-travel-learning.spec.ts:2:31 › travel scenes, sentence bracket and saved audio context at 320px (6.1s)
+  ok 116 [chromium] › tests\e2e\55-travel-learning.spec.ts:2:31 › travel scenes, sentence bracket and saved audio context at 1440px (7.3s)
+  ok 117 [chromium] › tests\e2e\55-travel-learning.spec.ts:7:1 › travel scoped cards and print summary (2.8s)
+  ok 118 [chromium] › tests\e2e\56-past-journey-learning.spec.ts:12:2 › yesterday timeline, opening-hours recall and saved context at 320px (6.8s)
+  ok 119 [chromium] › tests\e2e\56-past-journey-learning.spec.ts:48:2 › season wheel, trip auxiliary and year return at 320px (7.2s)
+  ok 120 [chromium] › tests\e2e\56-past-journey-learning.spec.ts:12:2 › yesterday timeline, opening-hours recall and saved context at 1440px (9.7s)
+  ok 121 [chromium] › tests\e2e\56-past-journey-learning.spec.ts:48:2 › season wheel, trip auxiliary and year return at 1440px (10.5s)
+  ok 122 [chromium] › tests\e2e\56-past-journey-learning.spec.ts:87:1 › past and journey cards remain scoped and their summaries export (4.7s)
+  ok 123 [chromium] › tests\e2e\57-book-listening-journey.spec.ts:7:31 › book to transcript, meaning, review and exact return at 320px (6.9s)
+  ok 124 [chromium] › tests\e2e\57-book-listening-journey.spec.ts:7:31 › book to transcript, meaning, review and exact return at 1440px (7.8s)
+  ok 125 [chromium] › tests\e2e\57-book-listening-journey.spec.ts:58:1 › book line saves preserve source selection and answers stay deliberate (4.9s)
+  ok 127 [chromium] › tests\e2e\58-release-resilience.spec.ts:24:1 › empty recording search recovers without losing the library (1.6s)
+  ok 126 [chromium] › tests\e2e\58-release-resilience.spec.ts:3:1 › library filters and global search update locally and preserve Back (3.5s)
+200% text vocabulary/ {"overflow":0,"outside":[]}
+200% text lessons/12/ {"overflow":0,"outside":[{"tag":"BUTTON","class":"","text":"Phrases","width":102},{"tag":"BUTTON","class":"","text":"Practice","width":102}]}
+200% text cheat-sheets/ {"overflow":0,"outside":[]}
+200% text cheat-sheets/home/ {"overflow":0,"outside":[]}
+200% text collections/professions/ {"overflow":0,"outside":[]}
+200% text book/?page=coursebook-30 {"overflow":0,"outside":[]}
+200% text listening/ {"overflow":0,"outside":[]}
+200% text settings/ {"overflow":0,"outside":[]}
+  x  128 [chromium] › tests\e2e\58-release-resilience.spec.ts:35:1 › learning views retain readable reflow when text is enlarged to 200 percent (11.8s)
+  x  129 [chromium] › tests\e2e\58-release-resilience.spec.ts:69:2 › real offline recovery › played audio and saved progress survive offline reload; unopened pages are honest (24.3s)
+
+
+  1) [chromium] › tests\e2e\01-first-visit.spec.ts:14:3 › journey 1 · first visit to first activity › a first-time learner is offered Lesson 1 and can start it
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('section.studio-card--continue')
+    Expected substring: "Begin with the first Lesson 1 activity."
+    Received string:    "Start hereIch heiße Miriam.Begin the guided activities in Lesson 1.Lesson 1First activityStart learning"
+    Timeout: 10000ms
+
+    Call log:
+      - Expect "toContainText" with timeout 10000ms
+      - waiting for locator('section.studio-card--continue')
+        23 × locator resolved to <section aria-labelledby="continue-heading" class="panel studio-card studio-card--continue">…</section>
+           - unexpected value "Start hereIch heiße Miriam.Begin the guided activities in Lesson 1.Lesson 1First activityStart learning"
+
+
+      30 |     const continueCard = page.locator("section.studio-card--continue");
+      31 |     await expect(continueCard).toContainText("Start here");
+    > 32 |     await expect(continueCard).toContainText("Begin with the first Lesson 1 activity.");
+         |                                ^
+      33 |     await expect(continueCard).toContainText("Lesson 1");
+      34 |
+      35 |     const cta = continueCard.getByRole("link", { name: "Start learning" });
+        at E:\claude-cursor\side projects\German learning\platform\tests\e2e\01-first-visit.spec.ts:32:32
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\01-first-visit-journey-1-·-9f9b1-d-Lesson-1-and-can-start-it-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\01-first-visit-journey-1-·-9f9b1-d-Lesson-1-and-can-start-it-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\01-first-visit-journey-1-·-9f9b1-d-Lesson-1-and-can-start-it-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\01-first-visit-journey-1-·-9f9b1-d-Lesson-1-and-can-start-it-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [chromium] › tests\e2e\04-review-session.spec.ts:42:3 › journey 4 · review cards created by practice, session run to the end › adds cards from detail pages and completes the whole mission
+
+    TimeoutError: locator.click: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'good', exact: true })
+        - locator resolved to <button type="button" class="btn btn-secondary game-rating__btn">good</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <dialog open="" class="study-dictionary" aria-labelledby="dictionary-title">…</dialog> intercepts pointer events
+        - retrying click action
+        - waiting 20ms
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - <input value="" autocomplete="off" aria-label="German or English" placeholder="Try Stuhl or Das finde ich auch."/> from <dialog open="" class="study-dictionary" aria-labelledby="dictionary-title">…</dialog> subtree intercepts pointer events
+      2 × retrying click action
+          - waiting 100ms
+          - waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <dialog open="" class="study-dictionary" aria-labelledby="dictionary-title">…</dialog> intercepts pointer events
+      6 × retrying click action
+          - waiting 500ms
+          - waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <dialog open="" class="study-dictionary" aria-labelledby="dictionary-title">…</dialog> intercepts pointer events
+        - retrying click action
+          - waiting 500ms
+          - waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <input value="" autocomplete="off" aria-label="German or English" placeholder="Try Stuhl or Das finde ich auch."/> from <dialog open="" class="study-dictionary" aria-labelledby="dictionary-title">…</dialog> subtree intercepts pointer events
+        - retrying click action
+          - waiting 500ms
+          - waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <dialog open="" class="study-dictionary" aria-labelledby="dictionary-title">…</dialog> intercepts pointer events
+        - retrying click action
+          - waiting 500ms
+          - waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <dialog open="" class="study-dictionary" aria-labelledby="dictionary-title">…</dialog> intercepts pointer events
+      - retrying click action
+        - waiting 500ms
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - <dialog open="" class="study-dictionary" aria-labelledby="dictionary-title">…</dialog> intercepts pointer events
+      - retrying click action
+        - waiting 500ms
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - <input value="" autocomplete="off" aria-label="German or English" placeholder="Try Stuhl or Das finde ich auch."/> from <dialog open="" class="study-dictionary" aria-labelledby="dictionary-title">…</dialog> subtree intercepts pointer events
+      - retrying click action
+        - waiting 500ms
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - <dialog open="" class="study-dictionary" aria-labelledby="dictionary-title">…</dialog> intercepts pointer events
+      - retrying click action
+        - waiting 500ms
+
+
+       at support\journeys.ts:151
+
+      149 |       // first, and it is also what the game records as a hint.
+      150 |       await root.getByRole("button", { pressed: false }).first().click();
+    > 151 |       await root.getByRole("button", { name: "good", exact: true }).click();
+          |                                                                     ^
+      152 |       return { kind: "self-rated", emits: true };
+      153 |     }
+      154 |     case "picture-word-match": {
+        at playPracticeGame (E:\claude-cursor\side projects\German learning\platform\tests\e2e\support\journeys.ts:151:69)
+        at E:\claude-cursor\side projects\German learning\platform\tests\e2e\04-review-session.spec.ts:98:7
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\04-review-session-journey--9c9df-completes-the-whole-mission-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\04-review-session-journey--9c9df-completes-the-whole-mission-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\04-review-session-journey--9c9df-completes-the-whole-mission-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\04-review-session-journey--9c9df-completes-the-whole-mission-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [chromium] › tests\e2e\05-practice-games.spec.ts:20:3 › journey 5 · every practice game reaches a scored outcome › the selector lists all seven games with their availability
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator:  getByRole('heading', { level: 1 })
+    Expected: "Seven game modes"
+    Received: "Practice"
+    Timeout:  10000ms
+
+    Call log:
+      - Expect "toHaveText" with timeout 10000ms
+      - waiting for getByRole('heading', { level: 1 })
+        23 × locator resolved to <h1>Practice</h1>
+           - unexpected value "Practice"
+
+
+      20 |   test("the selector lists all seven games with their availability", async ({ page }) => {
+      21 |     await gotoApp(page, "/practice");
+    > 22 |     await expect(page.getByRole("heading", { level: 1 })).toHaveText("Seven game modes");
+         |                                                           ^
+      23 |
+      24 |     for (const gameId of PRACTICE_GAME_IDS) {
+      25 |       await expect(page.locator(`[data-game-id="${gameId}"]`)).toHaveCount(1);
+        at E:\claude-cursor\side projects\German learning\platform\tests\e2e\05-practice-games.spec.ts:22:59
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\05-practice-games-journey--3a7dd-mes-with-their-availability-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\05-practice-games-journey--3a7dd-mes-with-their-availability-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\05-practice-games-journey--3a7dd-mes-with-their-availability-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\05-practice-games-journey--3a7dd-mes-with-their-availability-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [chromium] › tests\e2e\05-practice-games.spec.ts:34:5 › journey 5 · every practice game reaches a scored outcome › flashcards grades an attempt and records it locally
+
+    TimeoutError: locator.click: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'good', exact: true })
+        - locator resolved to <button type="button" class="btn btn-secondary game-rating__btn">good</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <dialog open="" class="study-dictionary" aria-labelledby="dictionary-title">…</dialog> intercepts pointer events
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <input value="" autocomplete="off" aria-label="German or English" placeholder="Try Stuhl or Das finde ich auch."/> from <dialog open="" class="study-dictionary" aria-labelledby="dictionary-title">…</dialog> subtree intercepts pointer events
+        - retrying click action
+          - waiting 100ms
+        7 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <input value="" autocomplete="off" aria-label="German or English" placeholder="Try Stuhl or Das finde ich auch."/> from <dialog open="" class="study-dictionary" aria-labelledby="dictionary-title">…</dialog> subtree intercepts pointer events
+        - retrying click action
+          - waiting 500ms
+          - waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <dialog open="" class="study-dictionary" aria-labelledby="dictionary-title">…</dialog> intercepts pointer events
+        - retrying click action
+          - waiting 500ms
+          - waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <input value="" autocomplete="off" aria-label="German or English" placeholder="Try Stuhl or Das finde ich auch."/> from <dialog open="" class="study-dictionary" aria-labelledby="dictionary-title">…</dialog> subtree intercepts pointer events
+        - retrying click action
+          - waiting 500ms
+          - waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <input value="" autocomplete="off" aria-label="German or English" placeholder="Try Stuhl or Das finde ich auch."/> from <dialog open="" class="study-dictionary" aria-labelledby="dictionary-title">…</dialog> subtree intercepts pointer events
+        - retrying click action
+          - waiting 500ms
+
+
+       at support\journeys.ts:151
+
+      149 |       // first, and it is also what the game records as a hint.
+      150 |       await root.getByRole("button", { pressed: false }).first().click();
+    > 151 |       await root.getByRole("button", { name: "good", exact: true }).click();
+          |                                                                     ^
+      152 |       return { kind: "self-rated", emits: true };
+      153 |     }
+      154 |     case "picture-word-match": {
+        at playPracticeGame (E:\claude-cursor\side projects\German learning\platform\tests\e2e\support\journeys.ts:151:69)
+        at E:\claude-cursor\side projects\German learning\platform\tests\e2e\05-practice-games.spec.ts:45:23
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\05-practice-games-journey--5124e-empt-and-records-it-locally-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\05-practice-games-journey--5124e-empt-and-records-it-locally-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\05-practice-games-journey--5124e-empt-and-records-it-locally-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\05-practice-games-journey--5124e-empt-and-records-it-locally-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) [chromium] › tests\e2e\07-search-back-context.spec.ts:12:3 › journey 7 · search, open a result, come back › returns to the same query the learner ran
+
+    Error: expect(page).toHaveURL(expected) failed
+
+    Expected pattern: /\/german-learning-exam\/vocabulary\/id-/
+    Received string:  "http://127.0.0.1:4331/german-learning-exam/vocabulary/w134/?nav=%7B%22entryContext%22%3A%22search%22%2C%22returnPath%22%3A%22%2Fsearch%22%2C%22q%22%3A%22Architekt%22%2C%22resultId%22%3A%22lex%3Astudy-w134%22%7D"
+    Timeout: 10000ms
+
+    Call log:
+      - Expect "toHaveURL" with timeout 10000ms
+        23 × locator resolved to <html lang="en">…</html>
+           - unexpected value "http://127.0.0.1:4331/german-learning-exam/vocabulary/w134/?nav=%7B%22entryContext%22%3A%22search%22%2C%22returnPath%22%3A%22%2Fsearch%22%2C%22q%22%3A%22Architekt%22%2C%22resultId%22%3A%22lex%3Astudy-w134%22%7D"
+
+
+      31 |
+      32 |     // On the detail page for the thing that was clicked.
+    > 33 |     await expect(page).toHaveURL(new RegExp(`${PAGES_BASE}/vocabulary/id-`));
+         |                        ^
+      34 |     await expect(page.getByRole("heading", { level: 1 })).toContainText(resultText);
+      35 |
+      36 |     // The back affordance resolves from the carried context, not from history.
+        at E:\claude-cursor\side projects\German learning\platform\tests\e2e\07-search-back-context.spec.ts:33:24
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\07-search-back-context-jou-26786--same-query-the-learner-ran-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\07-search-back-context-jou-26786--same-query-the-learner-ran-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\07-search-back-context-jou-26786--same-query-the-learner-ran-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\07-search-back-context-jou-26786--same-query-the-learner-ran-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6) [chromium] › tests\e2e\08-listening-playback.spec.ts:14:3 › journey 8 · workbook listening plays for real › a published track loads, plays, and advances its clock
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator:  getByRole('heading', { level: 1 })
+    Expected: "Listening"
+    Received: "Listen. Read. Listen again."
+    Timeout:  10000ms
+
+    Call log:
+      - Expect "toHaveText" with timeout 10000ms
+      - waiting for getByRole('heading', { level: 1 })
+        23 × locator resolved to <h1>Listen. Read. Listen again.</h1>
+           - unexpected value "Listen. Read. Listen again."
+
+
+      18 |
+      19 |     await gotoApp(page, "/listening");
+    > 20 |     await expect(page.getByRole("heading", { level: 1 })).toHaveText("Listening");
+         |                                                           ^
+      21 |     await expect(page.locator("main")).toContainText("15 items");
+      22 |     await expect(page.getByRole("heading", { name: "Workbook exercises" })).toBeVisible();
+      23 |
+        at E:\claude-cursor\side projects\German learning\platform\tests\e2e\08-listening-playback.spec.ts:20:59
+
+    Error: page.waitForResponse: Test ended.
+
+      13 | test.describe("journey 8 · workbook listening plays for real", () => {
+      14 |   test("a published track loads, plays, and advances its clock", async ({ page }) => {
+    > 15 |     const audioResponse = page.waitForResponse(
+         |                                ^
+      16 |       (res) => res.url().includes("/audio/source-workbook-approved-v1/"),
+      17 |     );
+      18 |
+        at E:\claude-cursor\side projects\German learning\platform\tests\e2e\08-listening-playback.spec.ts:15:32
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\08-listening-playback-jour-4b36e-lays-and-advances-its-clock-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\08-listening-playback-jour-4b36e-lays-and-advances-its-clock-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\08-listening-playback-jour-4b36e-lays-and-advances-its-clock-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\08-listening-playback-jour-4b36e-lays-and-advances-its-clock-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  7) [chromium] › tests\e2e\09-export-reset-import.spec.ts:37:3 › journey 9 · export, reset, import, recover › a reset learner recovers everything from their own export file
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: "german-learning-state.json"
+    Received: "german-learning-backup-2026-09-20.json"
+
+      52 |     await page.getByRole("button", { name: "Download JSON export" }).click();
+      53 |     const download = await downloadPromise;
+    > 54 |     expect(download.suggestedFilename()).toBe("german-learning-state.json");
+         |                                          ^
+      55 |
+      56 |     const exportPath = await download.path();
+      57 |     expect(exportPath, "the export must produce a real file").toBeTruthy();
+        at E:\claude-cursor\side projects\German learning\platform\tests\e2e\09-export-reset-import.spec.ts:54:42
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\09-export-reset-import-jou-cddc2--from-their-own-export-file-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\09-export-reset-import-jou-cddc2--from-their-own-export-file-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\09-export-reset-import-jou-cddc2--from-their-own-export-file-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\09-export-reset-import-jou-cddc2--from-their-own-export-file-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  8) [chromium] › tests\e2e\09-export-reset-import.spec.ts:134:3 › journey 9 · export, reset, import, recover › declining the reset confirmation changes nothing
+
+    TimeoutError: locator.click: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Reset local data' })
+
+
+      139 |       void dialog.dismiss();
+      140 |     });
+    > 141 |     await page.getByRole("button", { name: "Reset local data" }).click();
+          |                                                                  ^
+      142 |
+      143 |     await expect(page.getByLabel("Audio speed")).toHaveValue("1.25");
+      144 |     expect(await readLearnerState(page)).toEqual(before);
+        at E:\claude-cursor\side projects\German learning\platform\tests\e2e\09-export-reset-import.spec.ts:141:66
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\09-export-reset-import-jou-f1296-onfirmation-changes-nothing-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\09-export-reset-import-jou-f1296-onfirmation-changes-nothing-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\09-export-reset-import-jou-f1296-onfirmation-changes-nothing-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\09-export-reset-import-jou-f1296-onfirmation-changes-nothing-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  9) [chromium] › tests\e2e\09-export-reset-import.spec.ts:147:3 › journey 9 · export, reset, import, recover › a corrupt import is rejected and the existing state is preserved
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('main')
+    Expected substring: "Import rejected. Existing local state was preserved."
+    Received string:    "Aa DictionaryLocal-firstSettings & dataYour learning data stays in this browser unless you export it.PreferencesIANA timezoneAudio speed0.75×0.8×1×1.25×1.5×Save preferencesBackup & restoreOne backup includes your saved words, phrases, concepts, book lines, notes, bookmarks, reading progress, lesson and quiz progress, review history, study selection and preferences.Your data stays in this browser. Download a backup to move it to another device. Raw microphone recordings and downloaded course media are not included.Download JSON exportImport JSONImport rejected. Existing data is unchanged. Expected property name or '}' in JSON at position 2 (line 1 column 3)Reset learning dataThis resets learning progress and preferences on this device. Downloaded media and raw microphone files remain.Reset learning progressSettings saved."
+    Timeout: 10000ms
+
+    Call log:
+      - Expect "toContainText" with timeout 10000ms
+      - waiting for locator('main')
+        23 × locator resolved to <main tabindex="-1" id="main-content" class="shell-main">…</main>
+           - unexpected value "Aa DictionaryLocal-firstSettings & dataYour learning data stays in this browser unless you export it.PreferencesIANA timezoneAudio speed0.75×0.8×1×1.25×1.5×Save preferencesBackup & restoreOne backup includes your saved words, phrases, concepts, book lines, notes, bookmarks, reading progress, lesson and quiz progress, review history, study selection and preferences.Your data stays in this browser. Download a backup to move it to another device. Raw microphone recordings and downloaded course media are not included.Download JSON exportImport JSONImport rejected. Existing data is unchanged. Expected property name or '}' in JSON at position 2 (line 1 column 3)Reset learning dataThis resets learning progress and preferences on this device. Downloaded media and raw microphone files remain.Reset learning progressSettings saved."
+
+
+      159 |     await page.locator('input[type="file"]').setInputFiles(badFile);
+      160 |
+    > 161 |     await expect(page.locator("main")).toContainText(
+          |                                        ^
+      162 |       "Import rejected. Existing local state was preserved.",
+      163 |     );
+      164 |     expect(await readLearnerState(page)).toEqual(before);
+        at E:\claude-cursor\side projects\German learning\platform\tests\e2e\09-export-reset-import.spec.ts:161:40
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\09-export-reset-import-jou-6a3ae-existing-state-is-preserved-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\09-export-reset-import-jou-6a3ae-existing-state-is-preserved-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\09-export-reset-import-jou-6a3ae-existing-state-is-preserved-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\09-export-reset-import-jou-6a3ae-existing-state-is-preserved-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  10) [chromium] › tests\e2e\10-settings-effects.spec.ts:108:3 › journey 10 · settings reach the surfaces that consume them › timezone changes the calendar day the dashboard reports a badge on
+
+    Error: no earned date in badge text:
+
+    expect(received).not.toBeNull()
+
+    Received: null
+
+      126 |       const text = await badge.innerText();
+      127 |       const match = /Earned\s+(\d{4}-\d{2}-\d{2})/.exec(text);
+    > 128 |       expect(match, `no earned date in badge text: ${text}`).not.toBeNull();
+          |                                                                  ^
+      129 |       return match?.[1] ?? "";
+      130 |     };
+      131 |
+        at readBadgeDate (E:\claude-cursor\side projects\German learning\platform\tests\e2e\10-settings-effects.spec.ts:128:66)
+        at E:\claude-cursor\side projects\German learning\platform\tests\e2e\10-settings-effects.spec.ts:133:19
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\10-settings-effects-journe-071a1-ashboard-reports-a-badge-on-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\10-settings-effects-journe-071a1-ashboard-reports-a-badge-on-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\10-settings-effects-journe-071a1-ashboard-reports-a-badge-on-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\10-settings-effects-journe-071a1-ashboard-reports-a-badge-on-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  11) [chromium] › tests\e2e\58-release-resilience.spec.ts:35:1 › learning views retain readable reflow when text is enlarged to 200 percent
+
+    Error: vocabulary/ final control clears the navigation
+
+    expect(received).toBeGreaterThanOrEqual(expected)
+
+    Expected: >= 0
+    Received:    -5.890625
+
+      61 |    return document.querySelector('.mobile-navigation')!.getBoundingClientRect().top-(controls.at(-1)?.bottom??0);
+      62 |   });
+    > 63 |   expect.soft(bottomClearance,`${route} final control clears the navigation`).toBeGreaterThanOrEqual(0);
+         |                                                                               ^
+      64 |  }
+      65 | });
+      66 |
+        at E:\claude-cursor\side projects\German learning\platform\tests\e2e\58-release-resilience.spec.ts:63:79
+
+    Error: cheat-sheets/ final control clears the navigation
+
+    expect(received).toBeGreaterThanOrEqual(expected)
+
+    Expected: >= 0
+    Received:    -1403.21875
+
+      61 |    return document.querySelector('.mobile-navigation')!.getBoundingClientRect().top-(controls.at(-1)?.bottom??0);
+      62 |   });
+    > 63 |   expect.soft(bottomClearance,`${route} final control clears the navigation`).toBeGreaterThanOrEqual(0);
+         |                                                                               ^
+      64 |  }
+      65 | });
+      66 |
+        at E:\claude-cursor\side projects\German learning\platform\tests\e2e\58-release-resilience.spec.ts:63:79
+
+    Error: cheat-sheets/home/ final control clears the navigation
+
+    expect(received).toBeGreaterThanOrEqual(expected)
+
+    Expected: >= 0
+    Received:    -983.234375
+
+      61 |    return document.querySelector('.mobile-navigation')!.getBoundingClientRect().top-(controls.at(-1)?.bottom??0);
+      62 |   });
+    > 63 |   expect.soft(bottomClearance,`${route} final control clears the navigation`).toBeGreaterThanOrEqual(0);
+         |                                                                               ^
+      64 |  }
+      65 | });
+      66 |
+        at E:\claude-cursor\side projects\German learning\platform\tests\e2e\58-release-resilience.spec.ts:63:79
+
+    Error: collections/professions/ final control clears the navigation
+
+    expect(received).toBeGreaterThanOrEqual(expected)
+
+    Expected: >= 0
+    Received:    -0.078125
+
+      61 |    return document.querySelector('.mobile-navigation')!.getBoundingClientRect().top-(controls.at(-1)?.bottom??0);
+      62 |   });
+    > 63 |   expect.soft(bottomClearance,`${route} final control clears the navigation`).toBeGreaterThanOrEqual(0);
+         |                                                                               ^
+      64 |  }
+      65 | });
+      66 |
+        at E:\claude-cursor\side projects\German learning\platform\tests\e2e\58-release-resilience.spec.ts:63:79
+
+    Error: settings/ final control clears the navigation
+
+    expect(received).toBeGreaterThanOrEqual(expected)
+
+    Expected: >= 0
+    Received:    -382.859375
+
+      61 |    return document.querySelector('.mobile-navigation')!.getBoundingClientRect().top-(controls.at(-1)?.bottom??0);
+      62 |   });
+    > 63 |   expect.soft(bottomClearance,`${route} final control clears the navigation`).toBeGreaterThanOrEqual(0);
+         |                                                                               ^
+      64 |  }
+      65 | });
+      66 |
+        at E:\claude-cursor\side projects\German learning\platform\tests\e2e\58-release-resilience.spec.ts:63:79
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\58-release-resilience-lear-40643--is-enlarged-to-200-percent-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\58-release-resilience-lear-40643--is-enlarged-to-200-percent-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\58-release-resilience-lear-40643--is-enlarged-to-200-percent-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\58-release-resilience-lear-40643--is-enlarged-to-200-percent-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  12) [chromium] › tests\e2e\58-release-resilience.spec.ts:69:2 › real offline recovery › played audio and saved progress survive offline reload; unopened pages are honest
+
+    TimeoutError: locator.click: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for locator('.book-track').getByRole('button', { name: 'Play from start', exact: true })
+        - waiting for navigation to finish...
+        - navigated to "http://127.0.0.1:4331/german-learning-exam/book?page=coursebook-30&track=coursebook-l4-ex4-3d800b96"
+
+
+      104 |   expect(unplayed).toBeTruthy();
+      105 |   await page.getByRole("combobox",{name:"Page recording",exact:true}).selectOption(unplayed!);
+    > 106 |   await page.locator(".book-track").getByRole("button",{name:"Play from start",exact:true}).click();
+          |                                                                                             ^
+      107 |   await expect(page.locator(".book-track").getByRole("alert")).toContainText("Recording could not play.");
+      108 |   await expect(page.getByText("That sound is not saved on this device yet.",{exact:false})).toBeVisible();
+      109 |   await page.goto("not-previously-opened-release-check/");
+        at E:\claude-cursor\side projects\German learning\platform\tests\e2e\58-release-resilience.spec.ts:106:93
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\58-release-resilience-real-0705f-d-unopened-pages-are-honest-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\58-release-resilience-real-0705f-d-unopened-pages-are-honest-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\58-release-resilience-real-0705f-d-unopened-pages-are-honest-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\58-release-resilience-real-0705f-d-unopened-pages-are-honest-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  12 failed
+    [chromium] › tests\e2e\01-first-visit.spec.ts:14:3 › journey 1 · first visit to first activity › a first-time learner is offered Lesson 1 and can start it
+    [chromium] › tests\e2e\04-review-session.spec.ts:42:3 › journey 4 · review cards created by practice, session run to the end › adds cards from detail pages and completes the whole mission
+    [chromium] › tests\e2e\05-practice-games.spec.ts:20:3 › journey 5 · every practice game reaches a scored outcome › the selector lists all seven games with their availability
+    [chromium] › tests\e2e\05-practice-games.spec.ts:34:5 › journey 5 · every practice game reaches a scored outcome › flashcards grades an attempt and records it locally
+    [chromium] › tests\e2e\07-search-back-context.spec.ts:12:3 › journey 7 · search, open a result, come back › returns to the same query the learner ran
+    [chromium] › tests\e2e\08-listening-playback.spec.ts:14:3 › journey 8 · workbook listening plays for real › a published track loads, plays, and advances its clock
+    [chromium] › tests\e2e\09-export-reset-import.spec.ts:37:3 › journey 9 · export, reset, import, recover › a reset learner recovers everything from their own export file
+    [chromium] › tests\e2e\09-export-reset-import.spec.ts:134:3 › journey 9 · export, reset, import, recover › declining the reset confirmation changes nothing
+    [chromium] › tests\e2e\09-export-reset-import.spec.ts:147:3 › journey 9 · export, reset, import, recover › a corrupt import is rejected and the existing state is preserved
+    [chromium] › tests\e2e\10-settings-effects.spec.ts:108:3 › journey 10 · settings reach the surfaces that consume them › timezone changes the calendar day the dashboard reports a badge on
+    [chromium] › tests\e2e\58-release-resilience.spec.ts:35:1 › learning views retain readable reflow when text is enlarged to 200 percent
+    [chromium] › tests\e2e\58-release-resilience.spec.ts:69:2 › real offline recovery › played audio and saved progress survive offline reload; unopened pages are honest
+  117 passed (6.6m)

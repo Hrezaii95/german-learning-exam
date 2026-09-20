@@ -134,11 +134,11 @@ self.addEventListener("fetch", (event) => {
 
   const rule = matchCacheFirst(url.pathname);
   if (rule) {
-    event.respondWith(handleCacheFirst(request, cacheNameFor(rule.cache)));
+    event.respondWith(handleCacheFirst(request, cacheNameFor(rule.cache), event));
     return;
   }
 
-  event.respondWith(handleNetworkFirst(request, CONFIG.runtimeCache));
+  event.respondWith(handleNetworkFirst(request, CONFIG.runtimeCache, event));
 });
 
 function isNavigation(request) {
@@ -203,7 +203,7 @@ async function matchOwnCaches(request, options) {
  * touch the network the first time. Hashed `_next/static` files can never
  * change under a given URL, and the version-scoped cache name covers the rest.
  */
-async function handleCacheFirst(request, cacheName) {
+async function handleCacheFirst(request, cacheName, event) {
   const cached = await matchOwnCaches(request, { ignoreVary: true });
   if (cached) return serveMaybeRanged(request, cached);
 
@@ -211,6 +211,8 @@ async function handleCacheFirst(request, cacheName) {
     const response = await fetch(request);
     if (isStorable(response)) {
       await putInCache(cacheName, request, response.clone());
+    } else {
+      saveRangedRecording(request, response, cacheName, event);
     }
     return response;
   } catch {
@@ -220,11 +222,13 @@ async function handleCacheFirst(request, cacheName) {
   }
 }
 
-async function handleNetworkFirst(request, cacheName) {
+async function handleNetworkFirst(request, cacheName, event) {
   try {
     const response = await fetch(request);
     if (isStorable(response)) {
       await putInCache(cacheName, request, response.clone());
+    } else {
+      saveRangedRecording(request, response, cacheName, event);
     }
     return response;
   } catch {
@@ -232,6 +236,34 @@ async function handleNetworkFirst(request, cacheName) {
     if (cached) return serveMaybeRanged(request, cached);
     return unavailableResponse();
   }
+}
+
+// Native audio usually requests a 206 byte range, which Cache API cannot store.
+// Return that range immediately, then save one complete copy in the background.
+// Concurrent range requests for the same recording share that download.
+const fullRecordingRequests = new Map();
+function saveRangedRecording(request, response, cacheName, event) {
+  if (response.status !== 206 || !request.headers.get("range") ||
+      !/\.(mp3|m4a|ogg|wav)$/i.test(new URL(request.url).pathname)) return;
+  let pending = fullRecordingRequests.get(request.url);
+  if (!pending) {
+    const headers = new Headers(request.headers);
+    headers.delete("range");
+    headers.delete("if-range");
+    const complete = new Request(request.url, {headers, credentials: "same-origin"});
+    pending = (async () => {
+      try {
+        const recording = await fetch(complete);
+        if (isStorable(recording)) await putInCache(cacheName, complete, recording);
+      } catch (error) {
+        console.warn("[offline] recording could not be saved", request.url, error);
+      } finally {
+        fullRecordingRequests.delete(request.url);
+      }
+    })();
+    fullRecordingRequests.set(request.url, pending);
+  }
+  event.waitUntil(pending);
 }
 
 /**

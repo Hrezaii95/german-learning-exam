@@ -119,6 +119,7 @@ test.describe("journey 10 · settings reach the surfaces that consume them", () 
     const readBadgeDate = async (): Promise<string> => {
       await gotoApp(page, "/");
       await waitForLearnerState(page);
+      await page.locator(".dashboard-progress > summary").click();
       const badge = page
         .locator(".badge-card")
         .filter({ hasText: "First meaningful attempt" });

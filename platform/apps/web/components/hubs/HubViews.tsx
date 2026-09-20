@@ -1,6 +1,7 @@
 "use client";
 
 import type { ReactNode } from "react";
+import {submitLocalSearch} from "@/components/search/submit-local-search";
 import type {StudyUnit} from "@/lib/study/course-lessons";
 import {CoursePatternCard} from "@/components/study/CoursePatternCard";
 import {coursePatternEntries,coursePatternTags} from "@/lib/study/course-patterns";
@@ -904,6 +905,7 @@ function HubFilters({
         className="hub-filter-form"
         method="get"
         action={withPagesBasePath(hub.path)}
+        onSubmit={submitLocalSearch}
       >
         <div className="hub-filter-grid">
           <label className="hub-field" htmlFor={searchId}>

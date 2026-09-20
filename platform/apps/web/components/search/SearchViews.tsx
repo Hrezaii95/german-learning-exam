@@ -1,4 +1,5 @@
 "use client";
+import {submitLocalSearch} from "./submit-local-search";
 import {useStudyScope} from "@/components/study/StudyScope";
 import {useStudy} from "@/components/study/StudyProvider";
 import {LineAudio} from "@/components/study/StudyAudio";
@@ -123,6 +124,7 @@ export function SearchView({
           className="hub-filter-form"
           method="get"
           action={withPagesBasePath("/search")}
+          onSubmit={submitLocalSearch}
         >
           <label className="hub-field" htmlFor="global-search-q">
             <span className="hub-field__label">Query</span>
