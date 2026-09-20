@@ -14,8 +14,10 @@ test("saved study, course progress and settings survive a complete backup round 
   await expect(page.locator(".study-recall")).toContainText("Question 2 / 10");
 
   await page.goto("collections/professions/");
+  await page.locator("#profession-practice summary").click();
   await page.getByRole("button", { name: "Mark reviewed", exact: true }).click();
   await page.reload();
+  await page.locator("#profession-practice summary").click();
   await expect(page.getByText("1 marked reviewed", { exact: true })).toBeVisible();
   await page.goto("collections/professions/01/");
   await page.getByRole("button", { name: /^Save to review:/ }).first().click();
@@ -83,6 +85,7 @@ test("saved study, course progress and settings survive a complete backup round 
     await restored.reload();
     await expect(restored.locator(".study-recall")).toContainText("Question 1 / 10");
     await restored.goto("collections/professions/");
+    await restored.locator("#profession-practice summary").click();
     await expect(restored.getByText("1 marked reviewed", { exact: true })).toBeVisible();
 
     await restored.goto("settings/");

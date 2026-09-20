@@ -14,11 +14,12 @@ function Form({ form }: { form: WordForm }) {
 }
 
 /** Compact entry in the existing browse grid; opens the full approved card. */
-export function WordFamilyPreview({ card, href, lessonIds }: { card: WordCard; href: string; lessonIds: readonly string[] }) {
+export function WordFamilyPreview({ card, href, lessonIds, headingLevel=2 }: { card: WordCard; href: string; lessonIds: readonly string[]; headingLevel?:2|3 }) {
+  const Heading=headingLevel===3?"h3":"h2";
   return <article className={`hub-card hub-card--vocabulary ${styles.card}`} data-hub-card="vocabulary" data-word-family={card.id}>
     {card.image && <div className="hub-card__media"><img className="hub-card__image" src={withPagesBaseAssetPath(card.image.path)} alt={card.image.alt} width={400} height={400} loading="lazy" decoding="async" /></div>}
     <div className={styles.body}>
-      <h2 className="hub-card__title"><Link className="hub-card__link" href={href} prefetch={false}>{card.title}</Link></h2>
+      <Heading className="hub-card__title"><Link className="hub-card__link" href={href} prefetch={false}>{card.title}</Link></Heading>
       {card.rows.map((row, index) => <div className={styles.row} key={`${index}-${row.singular.text}`}><span className={styles.label}>{row.label}</span><Form form={row.singular} />{row.plurals.map(form => <div key={form.text}><span className={styles.label}>Plural</span><Form form={form} /></div>)}</div>)}
       <div className="hub-card__meta">{card.studyTags?<StudyTagList tags={card.studyTags}/>:<p className="meta-row">{lessonIds.map(id=><span key={id} className="meta-chip">{lessonLabel(id)}</span>)}</p>}</div>
       <Link className="btn btn-secondary" href={href} prefetch={false}>Study this word family</Link>

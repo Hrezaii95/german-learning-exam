@@ -1,0 +1,35 @@
+[WebServer] (node:23248) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] [e2e:serve] serving E:\claude-cursor\side projects\German learning\platform\apps\web\out
+[WebServer] [e2e:serve] ready on http://127.0.0.1:4331/german-learning-exam/
+
+Running 22 tests using 2 workers
+
+(node:5368) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:26724) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 [chromium] › tests\e2e\40-ux-readability.spec.ts:6:3 › learning cards and country rows remain readable at 320px (16.2s)
+  ok  2 [chromium] › tests\e2e\40-ux-readability.spec.ts:6:3 › learning cards and country rows remain readable at 390px (16.8s)
+  ok  3 [chromium] › tests\e2e\40-ux-readability.spec.ts:6:3 › learning cards and country rows remain readable at 768px (16.9s)
+  ok  5 [chromium] › tests\e2e\40-ux-readability.spec.ts:22:1 › phone diagrams expose readable steps and dictionary preserves keyboard focus (1.5s)
+  ok  4 [chromium] › tests\e2e\40-ux-readability.spec.ts:6:3 › learning cards and country rows remain readable at 1440px (19.2s)
+  ok  7 [chromium] › tests\e2e\41-complete-backup.spec.ts:118:1 › Lesson 4 also resumes its quiz and supports an explicit restart (4.0s)
+  ok  8 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:5:1 › saved pronunciation speed follows word cards, original recordings and the reader (9.7s)
+  ok  9 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:46:1 › saving a profession in its collection is reflected on its word card and can be removed there (4.5s)
+  ok 10 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:58:1 › profession filters control both the displayed cards and the review pool (3.7s)
+  ok 11 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:86:1 › German text offers one keyboard stop per phrase and complete-phrase lookup (2.7s)
+  ok  6 [chromium] › tests\e2e\41-complete-backup.spec.ts:4:1 › saved study, course progress and settings survive a complete backup round trip (29.6s)
+  ok 12 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:103:1 › transcript lines share pronunciation, meaning and saved-review actions (5.1s)
+  ok 13 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:127:1 › a failed preview recording shows a useful error and can be retried (4.6s)
+  ok 14 [chromium] › tests\e2e\43-navigation-and-continue.spec.ts:4:3 › navigation stays compact and keyboard-safe at 320px (5.1s)
+  ok 15 [chromium] › tests\e2e\43-navigation-and-continue.spec.ts:4:3 › navigation stays compact and keyboard-safe at 768px (5.4s)
+  ok 16 [chromium] › tests\e2e\43-navigation-and-continue.spec.ts:43:1 › the compact sheet chooser searches all fifteen sheets and preserves return links (5.8s)
+  ok 18 [chromium] › tests\e2e\44-professions-learning.spec.ts:4:3 › professions connect patterns, pronunciation, saving and recall at 320px (6.3s)
+  ok 17 [chromium] › tests\e2e\43-navigation-and-continue.spec.ts:63:1 › Continue follows the last visited lesson and due review precedes the course map (12.2s)
+  ok 19 [chromium] › tests\e2e\44-professions-learning.spec.ts:4:3 › professions connect patterns, pronunciation, saving and recall at 390px (6.2s)
+  ok 20 [chromium] › tests\e2e\44-professions-learning.spec.ts:4:3 › professions connect patterns, pronunciation, saving and recall at 768px (6.4s)
+  ok 21 [chromium] › tests\e2e\44-professions-learning.spec.ts:4:3 › professions connect patterns, pronunciation, saving and recall at 1440px (8.5s)
+  ok 22 [chromium] › tests\e2e\44-professions-learning.spec.ts:48:1 › the bounded collection keeps every profession and alternative reachable (5.7s)
+
+  22 passed (1.7m)

@@ -1,0 +1,7 @@
+
+> german-learning-platform@0.0.0 typecheck:web
+> npm run typecheck -w @german-learning/web
+
+
+> @german-learning/web@0.1.0 typecheck
+> tsc --noEmit -p tsconfig.json

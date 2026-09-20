@@ -57,6 +57,7 @@ test("saving a profession in its collection is reflected on its word card and ca
 
 test("profession filters control both the displayed cards and the review pool", async ({ page }, testInfo) => {
   await page.goto("collections/professions/");
+  await page.locator("#profession-practice summary").click();
   const scope = page.locator(".study-scope");
   await scope.locator("summary").click();
   await scope.getByRole("button", { name: "One lesson", exact: true }).click();
@@ -64,15 +65,17 @@ test("profession filters control both the displayed cards and the review pool", 
   await expect(page.getByRole("heading", { name: "No matching profession" })).toBeVisible();
   await expect(page.getByRole("button", { name: "Mark reviewed", exact: true })).toHaveCount(0);
   await scope.getByRole("combobox", { name: "Selected lesson" }).selectOption("2");
-  await expect(page.getByText("Showing 48 of 48 rows", { exact: true })).toBeVisible();
+  await expect(page.getByText("48 of 48 professions match · showing 6", { exact: true })).toBeVisible();
+  await expect(page.locator("#profession-practice summary")).toContainText("48 matching professions");
   await scope.getByRole("checkbox", { name: "Numbers, prices & time", exact: true }).check();
   await expect(page.getByRole("heading", { name: "No matching profession" })).toBeVisible();
   await scope.getByRole("checkbox", { name: "Numbers, prices & time", exact: true }).uncheck();
   await scope.getByRole("combobox", { name: "Material source" }).selectOption("teacher-extra");
   await scope.locator("summary").click();
   await page.getByRole("searchbox", { name: "Search English or German" }).fill("Elektriker");
-  await expect(page.getByText("Showing 1 of 48 rows", { exact: true })).toBeVisible();
-  await expect(page.getByRole("button", { name: "Listen: der Elektriker", exact: true })).toHaveCount(1);
+  await expect(page.getByText("1 of 48 professions match · showing 1", { exact: true })).toBeVisible();
+  await expect(page.locator("#profession-practice summary")).toContainText("1 matching profession");
+  await expect(page.getByRole("button", { name: "Listen — der Elektriker pronunciation", exact: true })).toHaveCount(1);
   for (const width of [390, 1440]) {
     await page.setViewportSize({ width, height: 1000 });
     await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth - innerWidth)).toBeLessThanOrEqual(1);

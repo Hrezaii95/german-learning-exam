@@ -23,3 +23,33 @@
 .masculine .germanForm { color: var(--gender-m-ink); }
 .feminine .germanForm { color: var(--gender-f-ink); }
 .pluralForm .germanForm { color: var(--gender-pl); }
+
+.patternOverview { scroll-margin-top:24px; }
+.patternOverview h2 { font-size:clamp(1.4rem,3vw,1.9rem); }
+.patternGrid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; }
+.patternCard { display:flex; flex-direction:column; align-items:center; gap:8px; padding:14px; border:1px solid var(--border); border-radius:16px; background:var(--surface); color:var(--ink); cursor:pointer; text-align:center; font:inherit; min-width:0; }
+.patternCard img { width:100%; height:120px; object-fit:contain; border-radius:10px; background:#fff; }
+.patternCard strong { font-size:1.1rem; }
+.patternCard > span { font-size:.95rem; overflow-wrap:anywhere; }
+.patternCard > span[lang] { font-size:1.05rem; font-weight:700; }
+.patternCard small { color:var(--study-muted); margin-top:auto; }
+.patternCard[aria-pressed=true] { border:2px solid var(--study-green); background:var(--study-tint); padding:13px; }
+.patternCard:focus-visible { outline:3px solid var(--study-green); outline-offset:3px; }
+.patternCard:disabled { cursor:default; opacity:.65; }
+.maleText { color:var(--gender-m-ink); }
+.femaleText { color:var(--gender-f-ink); }
+.pluralText { color:var(--gender-pl); }
+.feminineTrail { margin-top:16px; padding:20px; border:1px solid var(--border); border-radius:16px; background:#fffdf8; }
+.feminineTrail p[lang] { font-size:1.15rem; line-height:1.9; }
+.filters { scroll-margin-top:24px; }
+.previewGrid { grid-template-columns:repeat(2,minmax(0,1fr)); margin-bottom:16px; }
+.previewGrid > li { min-width:0; }
+.previewGrid :global(.hub-card) { height:100%; }
+.previewGrid :global(.hub-card__media) { height:150px; min-height:0; aspect-ratio:auto; }
+.previewGrid :global(.hub-card__image) { height:150px; object-fit:contain; }
+.practiceDetails { border:1px solid var(--border); border-radius:16px; padding:18px; scroll-margin-top:24px; }
+.practiceDetails > summary,.notice > summary { cursor:pointer; font-weight:700; min-height:44px; }
+.practiceDetails[open] > summary,.notice[open] > summary { margin-bottom:12px; }
+.hero :global(.meta-row) a { min-height:44px; display:inline-flex; align-items:center; }
+@media(max-width:850px) { .patternGrid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:560px) { .legend { grid-template-columns:repeat(2,minmax(0,1fr)); }.legend span { padding:8px; font-size:.75rem; }.legend b { width:1.3rem; height:1.3rem; }.patternCard { padding:10px; }.patternCard[aria-pressed=true] { padding:9px; }.patternCard img { height:90px; }.patternCard strong { font-size:1rem; }.patternCard > span[lang] { font-size:.95rem; }.previewGrid { grid-template-columns:1fr; }.feminineTrail { padding:14px; } }

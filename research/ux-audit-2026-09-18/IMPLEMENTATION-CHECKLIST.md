@@ -6,7 +6,7 @@ Reference: [whole-app audit](UI-UX-AUDIT.md). Countries & languages and Home & f
 
 Use the checkboxes below as the completion record. Start at the first unchecked task; reuse anything already finished.
 
-**Current checkpoint:** Steps 1–3 have recorded live verification. Step 4 is in progress; its local changes must pass live verification before it is checked off. Steps 5–9 remain open. Earlier completion notes are historical evidence, not instructions to repeat work.
+**Current checkpoint:** Steps 1–4 have recorded live verification. Step 5 is in progress locally; it must pass live verification before it is checked off. Steps 6–9 remain open. Earlier completion notes are historical evidence, not instructions to repeat work.
 
 | Step | Main task | Checkpoint before marking complete |
 |---|---|---|
@@ -63,9 +63,9 @@ Audit coverage: A04, A05, A08, A09, A13, A17.
 
 ## 4. Simplify navigation and the starting screen
 
-- [ ] Put Continue, current lesson and due review at the top of the dashboard.
-- [ ] Clarify saved collection versus scheduled review versus free practice; remove duplicate review sections and confusing entry points.
-- [ ] Compact the mobile/tablet navigation and cheat-sheet chooser; preserve useful bottom destinations, active states and return links.
+- [x] Put Continue, current lesson and due review at the top of the dashboard.
+- [x] Clarify saved collection versus scheduled review versus free practice; remove duplicate review sections and confusing entry points.
+- [x] Compact the mobile/tablet navigation and cheat-sheet chooser; preserve useful bottom destinations, active states and return links.
 
 **Checkpoint:** From a phone, reach the current lesson, book, cheat sheets, listening and saved review without hunting. Back returns to the prior context. Menu opens/closes correctly and returns keyboard focus. Main content appears early on phone and tablet.
 
@@ -137,7 +137,9 @@ For each step, add one line here when its checkpoint passes:
 
 `Step — completed changes — checkpoint result — live verification/link`
 
-Step 4 — local checkpoint passed on 20 September 2026: compact searchable mobile/tablet menu and sheet chooser; dashboard Continue follows the last visited lesson and restores its section/quiz; due saved review is prominent; guided review has a distinct purpose; section links preserve router history; keyboard skip and menu focus work. Final Pages gates, lint, E2E type check, 21 component regressions and 17 browser checks passed; full earlier check passed 923 tests plus 584 web tests. The Windows build artifact replacement fix also passed 14 recovery tests. Phone/tablet/desktop screenshots inspected. Evidence: step-4-gates.log, step-4-browser-tests.log, step-4-component-regression.log, step-4-build-recovery-tests.log and step-4-local/. Live verification pending; Step 4 stays unchecked until it passes.
+Step 5 — local checkpoint passed on 20 September 2026: illustrated masculine-plural groups and feminine ending trail, shared word-family previews and generated pronunciation, six initial results with access to all 48 professions and every alternative, query/filter-preserving return links, persistent optional recall, and expandable source notes. Final Pages gates, E2E types, 22 combined browser checks, and rendered 320/390/768/1440px inspection passed. Full check passed 924 tests plus 585 web tests; five targeted profession checks passed. Evidence: step-5-gates.log, step-5-check.log, step-5-browser-tests.log, step-5-component-tests.log and step-5-local/. Live verification pending; Step 5 remains unchecked.
+
+Step 4 — compact searchable mobile/tablet menu and sheet chooser; dashboard Continue follows the last visited lesson and restores its section/quiz; due saved review is prominent; guided review has a distinct purpose; section links preserve router history; keyboard skip and menu focus work. Local checkpoint passed on 20 September 2026: Pages gates, lint, E2E type check, 21 component regressions and 17 browser checks; full earlier check passed 923 tests plus 584 web tests. The Windows artifact replacement fix passed 14 recovery tests. Phone/tablet/desktop screenshots inspected. After correcting the source-location assertion for the extracted skip link, all 22 shell contract tests passed. Live checkpoint passed: deployment 35519327130 (commit f10bf5ba), all 17 browser checks passed against https://hrezaii95.github.io/german-learning-exam/. Evidence: step-4-gates.log, step-4-browser-tests.log, step-4-live-tests.log, step-4-component-regression.log, step-4-build-recovery-tests.log and step-4-local/.
 
 Step 1 — layout repairs, responsive diagram steps and toolbar dictionary implemented. Local checkpoint passed on 20 September 2026: Pages gates, 20 component tests, five browser tests across 320/390/768/1440px, and rendered screenshot inspection. Live checkpoint passed against deployment 35512028844 (commit 9a3c9c11): https://hrezaii95.github.io/german-learning-exam/. Evidence: step-1-live/verification.json. Steps 3–9 remain open.
 

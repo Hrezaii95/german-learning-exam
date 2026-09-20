@@ -1,0 +1,9 @@
+
+ RUN  v3.2.7 E:/claude-cursor/side projects/German learning/platform
+
+ ✓ tests/web/p3a-web-shell.test.ts (22 tests) 70ms
+
+ Test Files  1 passed (1)
+      Tests  22 passed (22)
+   Start at  18:51:20
+   Duration  1.56s (transform 537ms, setup 0ms, collect 940ms, tests 70ms, environment 0ms, prepare 147ms)

@@ -41,20 +41,21 @@ describe("extra professions learner UI", () => {
     const html = renderToStaticMarkup(
       createElement(ProfessionCollectionClient, { projection }),
     );
-    expect(html).toContain("All 48 rows from the learner note");
-    expect(html).toContain("102 form lexemes");
+    expect(html).toContain("48 entries and 102 forms from the learner note");
     expect(html).toContain("not core completion");
     expect(html).toContain("qualified German-language review");
-    expect(html).toContain("only approved computer-generated previews of the exact word are offered");
+    expect(html).toContain("Only exact existing computer-generated previews are offered");
     expect(html).toContain("marked as not available yet");
     expect(html).toContain('type="search"');
-    expect(html).toContain("Show only rows with slash alternatives");
-    expect(html).toContain("Source-backed visual flashcards");
+    expect(html).toContain("Show jobs with alternative words");
+    expect(html).toContain("Practise your 48 matching professions");
     expect(html).toContain('href="/collections/professions/01"');
-    expect(html).toContain('href="/collections/professions/48"');
+    expect(html).not.toContain('href="/collections/professions/48"');
+    expect(html).toContain("Show 6 more professions");
+    expect(html).toContain("48 of 48 professions match · showing 6");
     expect(html).toContain("Masculine person form");
     expect(html).toContain("Feminine person form");
-    expect(html).toContain("16 exact audio previews across 8 rows");
+    expect(html).toContain("16 exact audio previews across 8 entries");
     expect(html).not.toMatch(/<img\b/i);
   });
 
@@ -63,11 +64,14 @@ describe("extra professions learner UI", () => {
     const cardsByRow = Object.fromEntries(projection.rows.map(row => [row.id, wordCardForPath(row.detailPath)!]));
     expect(Object.values(cardsByRow).every(Boolean)).toBe(true);
     const html = renderToStaticMarkup(createElement(ProfessionCollectionClient, { projection, cardsByRow }));
-    expect(html).toContain("Listen: der Elektriker");
-    expect(html).toContain("Listen: die Elektriker");
-    expect(html).toContain("Listen: die Elektrikerin");
-    expect(html).toContain("Listen: die Elektrikerinnen");
-    expect(html).toContain("4 generated pronunciations");
+    expect(html).toContain("Listen — der Elektriker pronunciation");
+    expect(html).toContain("Listen — die Elektriker pronunciation");
+    expect(html).toContain("Listen — die Elektrikerin pronunciation");
+    expect(html).toContain("Listen — die Elektrikerinnen pronunciation");
+    expect(html.match(/data-word-family=/g)).toHaveLength(6);
+    expect(html).toContain("Remember the change, not four separate words");
+    expect(html.match(/<img\b/g)?.length).toBeGreaterThanOrEqual(4);
+    expect(html).not.toContain('id="optional-review-heading"');
     expect(html).not.toContain("Audio not available yet");
     expect(html).toContain("same files as the word cards");
   });
