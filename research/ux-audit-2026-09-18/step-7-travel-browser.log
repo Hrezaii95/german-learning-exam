@@ -1,0 +1,15 @@
+
+Running 6 tests using 2 workers
+
+(node:18320) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:32772) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 2 [chromium] › tests\e2e\54-food-learning.spec.ts:3:31 › food menu, portions and saved context at 320px (9.8s)
+  ok 1 [chromium] › tests\e2e\54-food-learning.spec.ts:3:31 › food menu, portions and saved context at 1440px (12.3s)
+  ok 3 [chromium] › tests\e2e\54-food-learning.spec.ts:14:1 › food groups, plurals, chosen practice and print (3.9s)
+  ok 4 [chromium] › tests\e2e\55-travel-learning.spec.ts:2:31 › travel scenes, sentence bracket and saved audio context at 320px (6.8s)
+  ok 6 [chromium] › tests\e2e\55-travel-learning.spec.ts:7:1 › travel scoped cards and print summary (3.1s)
+  ok 5 [chromium] › tests\e2e\55-travel-learning.spec.ts:2:31 › travel scenes, sentence bracket and saved audio context at 1440px (8.6s)
+
+  6 passed (25.8s)

@@ -1,0 +1,10 @@
+
+ RUN  v3.2.7 E:/claude-cursor/side projects/German learning/platform
+
+ ✓ tests/web/pronunciation-review.test.ts (28 tests) 4810ms
+   ✓ client boundary > keeps every Node builtin above the client boundary  4395ms
+
+ Test Files  1 passed (1)
+      Tests  28 passed (28)
+   Start at  00:52:02
+   Duration  6.55s (transform 703ms, setup 0ms, collect 1.18s, tests 4.81s, environment 0ms, prepare 165ms)

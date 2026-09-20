@@ -1,0 +1,12 @@
+
+Running 3 tests using 2 workers
+
+(node:9124) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:24696) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [chromium] › tests\e2e\55-travel-learning.spec.ts:2:31 › travel scenes, sentence bracket and saved audio context at 320px (11.9s)
+  ok 2 [chromium] › tests\e2e\55-travel-learning.spec.ts:2:31 › travel scenes, sentence bracket and saved audio context at 1440px (12.3s)
+  ok 3 [chromium] › tests\e2e\55-travel-learning.spec.ts:7:1 › travel scoped cards and print summary (3.4s)
+
+  3 passed (18.4s)

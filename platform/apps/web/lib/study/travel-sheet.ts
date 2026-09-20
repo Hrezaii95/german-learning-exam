@@ -45,5 +45,7 @@ export const announcementModels=[
  {de:'Das Flugzeug steht am Ausgang B48.',en:'The plane is at gate B48.',question:'Which airport gate?',choices:['B48','B84','B18'],answer:'B48'},
  {de:'Wir haben dreißig Minuten Verspätung.',en:'We are thirty minutes late.',question:'How long is the delay?',choices:['30 minutes','13 minutes','15 minutes'],answer:'30 minutes'},
  {de:'Der Zug kommt auf Gleis fünfzehn an, nicht auf Gleis fünf.',en:'The train arrives at track fifteen, not track five.',question:'Which is the correct arrival track?',choices:['Gleis 15','Gleis 5','Gleis 50'],answer:'Gleis 15'},
+ {de:'Ich komme um acht Uhr an.',en:'I arrive at eight.',question:'When does the speaker arrive?',choices:['08:00','09:00','10:00'],answer:'08:00'},
+ {de:'Wir steigen in Hamburg um.',en:'We change trains in Hamburg.',question:'Where do they change trains?',choices:['Hamburg','Berlin','München'],answer:'Hamburg'},
 ] as const;
 export const travelSpeech=[...travelVerbs.flatMap((v,i)=>[v.verb,...travelPeople.flatMap((_,p)=>travelModes.map(m=>travelSentence(i,p,m.id)))]),...travelBoard.map(w=>w.de),...announcementModels.map(a=>a.de),'einsteigen','umsteigen','aussteigen'];

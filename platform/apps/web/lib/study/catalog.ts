@@ -27,6 +27,7 @@ import {hobbyModels,hobbyPeople,abilityLevels,frequencyWords,abilitySentence,abi
 import {clockSaveId,clockHours,clockMinutes,clockSentence,clockMeaning,weekDays,timePlaces,planSentence,planMeaning} from "./time-sheet";
 import {journeyActivities,journeyPeople,journeySentence,journeyMeaning,journeySaveId,monthEnglish,seasonSentence} from "./journey-sheet";
 import {pastActivities,pastPeople,pastModes,pastSentence,pastMeaning,pastSaveId} from "./past-sheet";
+import {travelBookmark,travelAnnouncementSaveId} from "./travel-learning";
 import {travelVerbs,travelPeople,travelModes,travelSentence,travelMeaning,travelSaveId,announcementModels} from "./travel-sheet";
 import {foodBookmark} from "./food-learning";
 import {foodModels,foodModes,foodSentence,foodMeaning,foodSaveId} from "./food-sheet";
@@ -127,8 +128,8 @@ export function loadDictionary(): DictionaryEntry[] {
   journeyActivities.forEach((_,a)=>journeyPeople.forEach((_,p)=>[false,true].forEach(q=>addStudySentence(`journey-${a}-${p}-${q}`,journeySentence(a,p,q),journeyMeaning(a,p,q),12,"/cheat-sheets/journeys#journey-lab",journeySaveId(a,p,q)))));
   Object.entries(monthEnglish).forEach(([m,en])=>addStudySentence(`season-${m}`,seasonSentence(m),`I traveled to Hamburg in ${en}.`,12,"/cheat-sheets/journeys#season-calendar",`l12-season-${m}`));
   pastActivities.forEach((_,a)=>pastPeople.forEach((_,p)=>pastModes.forEach(m=>addStudySentence(`past-${a}-${p}-${m.id}`,pastSentence(a,p,m.id),pastMeaning(a,p,m.id),11,"/cheat-sheets/past#past-lab",pastSaveId(a,p,m.id)))));
-  travelVerbs.forEach((_,v)=>travelPeople.forEach((_,p)=>travelModes.forEach(m=>addStudySentence(`travel-${v}-${p}-${m.id}`,travelSentence(v,p,m.id),travelMeaning(v,p,m.id),10,"/cheat-sheets/travel#travel-bracket",travelSaveId(v,p,m.id)))));
-  announcementModels.forEach((a,i)=>addStudySentence(`announcement-${i}`,a.de,a.en,10,"/cheat-sheets/travel#travel-listening",`l10-announcement-${i}`));
+  travelVerbs.forEach((_,v)=>travelPeople.forEach((_,p)=>travelModes.forEach(m=>addStudySentence(`travel-${v}-${p}-${m.id}`,travelSentence(v,p,m.id),travelMeaning(v,p,m.id),10,`/cheat-sheets/travel${travelBookmark({verb:v,person:p,mode:m.id,announcement:0})}`,travelSaveId(v,p,m.id)))));
+  announcementModels.forEach((a,i)=>addStudySentence(`announcement-${i}`,a.de,a.en,10,`/cheat-sheets/travel${travelBookmark({verb:0,person:1,mode:"w-question",announcement:i},"listening")}`,travelAnnouncementSaveId(i)));
   foodModels.forEach((_,f)=>foodModes.forEach(mode=>[false,true].forEach(n=>addStudySentence(`food-${f}-${mode.id}-${n}`,foodSentence(f,mode.id,n),foodMeaning(f,mode.id,n),9,`/cheat-sheets/food${foodBookmark({food:f,mode:mode.id,negative:n,speakerLikes:true,youLike:true,compound:0})}`,foodSaveId(f,mode.id,n)))));
   for(const unit of studyUnits){
     for(const verb of unit.verbs){const entry=entries.find(e=>e.de===verb.verb||e.de.startsWith(verb.verb+" "));if(entry)entry.forms=[...new Set([...entry.forms,...verb.forms,...(verb.participle?[verb.participle]:[]),...(verb.preterite??[])])];}

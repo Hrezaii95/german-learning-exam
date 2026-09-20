@@ -1,0 +1,12 @@
+[
+  {
+    "file": "food-A4.pdf",
+    "pages": 1,
+    "matchesLocalText": true
+  },
+  {
+    "file": "food-Letter.pdf",
+    "pages": 1,
+    "matchesLocalText": true
+  }
+]

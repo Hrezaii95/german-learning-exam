@@ -1,0 +1,7 @@
+
+> german-learning-platform@0.0.0 validate:publication
+> tsx packages/content/src/cli/validate-publication.ts
+
+PUBLICATION_DIR	E:\claude-cursor\side projects\German learning\platform\content\published
+REQUIRED_FRAGMENTS	lesson-01.json,lesson-02.json,teacher-professions.json,activities.json,listening-assets.json
+VALIDATION_OK
