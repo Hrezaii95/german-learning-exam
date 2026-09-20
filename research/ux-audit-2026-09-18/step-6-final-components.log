@@ -1,0 +1,17 @@
+
+ RUN  v3.2.7 E:/claude-cursor/side projects/German learning/platform
+
+ ✓ tests/web/p3b-hubs-ui.test.ts (7 tests) 2701ms
+ ✓ tests/web/p3c-search-ui.test.ts (8 tests) 3062ms
+   ✓ P3C search UI + shell contracts > renders malicious nav payloads as safe Back hrefs on lesson and activity  342ms
+ ✓ tests/web/p3c-search.test.ts (14 tests) 4279ms
+   ✓ P3C typed global search projection > never includes review/draft/blocked/private/audio/secret material  3775ms
+ ✓ tests/web/course-library-navigation-behavior.test.ts (11 tests) 6982ms
+   ✓ bounded course libraries and return context > bounds vocabulary and preserves page context on every result  849ms
+   ✓ bounded course libraries and return context > offers consistent paths and progressively reveals every lesson word  4948ms
+   ✓ bounded course libraries and return context > filters all search matches before paging instead of dropping later lessons after fifty hits  442ms
+
+ Test Files  4 passed (4)
+      Tests  40 passed (40)
+   Start at  20:01:13
+   Duration  13.21s (transform 4.53s, setup 0ms, collect 8.29s, tests 17.02s, environment 2.35s, prepare 854ms)

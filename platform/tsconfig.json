@@ -36,6 +36,7 @@
     "vitest.config.ts"
   ],
   "exclude": [
+    "tests/web/course-library-navigation-behavior.test.ts",
     "tests/web/shared-audio-preferences-behavior.test.ts",
     "tests/web/course-phrase-identity-ui.test.ts",
     "tests/web/word-family-cards-ui.test.ts",

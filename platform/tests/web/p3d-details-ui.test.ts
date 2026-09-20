@@ -126,7 +126,7 @@ describe("P3D detail UI contracts", () => {
     expect(html).toContain("This paradigm is irregular and must be learned as forms.");
     expect(html).toContain('data-morph="IRR"');
     expect(html).toContain("Play pronunciation");
-    expect(html).toContain('href="/search?q=sein"');
+    expect(html).toContain('href="/search?q=sein#search-result-verb%3Asein"');
   });
 
   it("renders exact Q&A patterns and conversation practice entry", () => {

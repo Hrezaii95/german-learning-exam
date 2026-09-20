@@ -35,10 +35,10 @@ export function GameSelector({
     <div className="stack game-selector">
       <header className="page-header">
         <p className="dense">Practice</p>
-        <h1>Seven game modes</h1>
+        <h1>Practice</h1>
         <p className="lede">
-          Short practice rounds built from your lessons, with instant feedback
-          on every answer.
+          Recall words from your study selection, check answers in a lesson quiz,
+          or practise a focused skill. Revealing a word is separate from answering correctly.
         </p>
       </header>
 
@@ -69,6 +69,8 @@ export function GameSelector({
         </Link>
       </section>}
 
+      <h2>Focused games · Lessons 1–2</h2>
+      <p className="muted">{catalog.length} of {buildPracticeGameCatalog().length} games match your study selection. Lesson quizzes above cover the later lessons.</p>
       <ul className="game-selector__list">
         {catalog.map((game) => {
           const href = navigation

@@ -1,5 +1,6 @@
 import {loadDictionary} from "../lib/study/catalog";
-import { existsSync, mkdirSync, renameSync, unlinkSync, writeFileSync } from "node:fs";
+import { mkdirSync } from "node:fs";
+import {writeTextArtifact} from "./write-text-artifact";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { projectWordCards } from "./project-word-cards";
@@ -48,14 +49,14 @@ function main(): void {
   const projection = projectPublishedLearnerWeb(publishedDir);
   const json = serializeProjectionDeterministic(projection);
   mkdirSync(dirname(outPath), { recursive: true });
-  writeFileSync(outPath, json, "utf8");
+  writeTextArtifact(outPath, json, "utf8");
   process.stdout.write(
     `Wrote learner projection: ${projection.lessonCount} lessons, ${projection.activityCount} activities → ${outPath}\n`,
   );
 
   const hubs = projectPublishedLearnerHubs(publishedDir);
   const hubsJson = serializeHubProjectionDeterministic(hubs);
-  writeFileSync(hubsOutPath, hubsJson, "utf8");
+  writeTextArtifact(hubsOutPath, hubsJson, "utf8");
   const counts = hubs.hubs.map((hub) => `${hub.id}=${hub.itemCount}`).join(", ");
   process.stdout.write(
     `Wrote learner hubs: ${hubs.hubCount} hubs (${counts}) → ${hubsOutPath}\n`,
@@ -63,7 +64,7 @@ function main(): void {
 
   const search = projectPublishedLearnerSearch(publishedDir);
   const searchJson = serializeSearchProjectionDeterministic(search);
-  writeFileSync(searchOutPath, searchJson, "utf8");
+  writeTextArtifact(searchOutPath, searchJson, "utf8");
   process.stdout.write(
     `Wrote learner search: ${search.documentCount} documents → ${searchOutPath}\n`,
   );
@@ -71,14 +72,14 @@ function main(): void {
   const details = projectPublishedLearnerDetails(publishedDir);
   assertLearnerDetailProjection(details);
   const detailsJson = serializeDetailProjectionDeterministic(details);
-  writeFileSync(detailsOutPath, detailsJson, "utf8");
+  writeTextArtifact(detailsOutPath, detailsJson, "utf8");
   process.stdout.write(
     `Wrote learner details: ${details.detailCount} published records (${details.representativeCount} rich representatives) → ${detailsOutPath}\n`,
   );
 
   const enrichment = projectPublishedLearnerEnrichment(publishedDir);
   mkdirSync(dirname(GENERATED_ENRICHMENT_PATH), { recursive: true });
-  writeFileSync(
+  writeTextArtifact(
     GENERATED_ENRICHMENT_PATH,
     serializeEnrichmentProjectionDeterministic(enrichment),
     "utf8",
@@ -88,7 +89,7 @@ function main(): void {
   );
 
   const extraProfessions = projectPublishedExtraProfessions(publishedDir);
-  writeFileSync(
+  writeTextArtifact(
     extraProfessionsOutPath,
     serializeExtraProfessionsProjection(extraProfessions),
     "utf8",
@@ -98,14 +99,7 @@ function main(): void {
   );
   projectWordCards();
   const dictionaryPath=join(dirname(outPath),"study-dictionary.json");
-  const temporaryPath=`${dictionaryPath}.${process.pid}.tmp`;
-  // Replace the complete artifact; Windows readers can prevent truncating an open JSON file.
-  try {
-    writeFileSync(temporaryPath,JSON.stringify(loadDictionary())+"\n",{encoding:"utf8",flag:"wx"});
-    renameSync(temporaryPath,dictionaryPath);
-  } finally {
-    if(existsSync(temporaryPath)) unlinkSync(temporaryPath);
-  }
+  writeTextArtifact(dictionaryPath,JSON.stringify(loadDictionary())+"\n");
 }
 
 try {

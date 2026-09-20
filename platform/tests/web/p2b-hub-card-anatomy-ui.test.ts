@@ -234,7 +234,7 @@ describe("P2B hub card anatomies", () => {
   });
 
   it("previews phrases as a learner turn with its register, never a raw id", () => {
-    const html = render("phrases");
+    const html = Array.from({length:Math.ceil(hubs.hubsById.phrases.items.length/12)},(_,index)=>renderToStaticMarkup(createElement(HubListView,{hub:hubs.hubsById.phrases,searchParams:{page:String(index+1)}}))).join("");
     expect(html).toContain("Wie alt bist du?");
     expect(html).toContain('data-turn="question"');
     expect(html).toContain('data-turn="answer"');

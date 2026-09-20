@@ -126,6 +126,9 @@ test("transcript lines share pronunciation, meaning and saved-review actions", a
 
 test("a failed preview recording shows a useful error and can be retried", async ({ page }) => {
   await page.goto("vocabulary/?q=Elektriker");
+  // Wait for query hydration before capturing the clip URL from the selected family.
+  await expect(page.locator("[data-word-family]")).toHaveCount(1);
+  await expect(page.locator("[data-word-family]")).toContainText("der Elektriker");
   const player = page.locator(".meaning-plate__audio").first();
   const audio = player.locator("audio");
   const src = await audio.getAttribute("src");

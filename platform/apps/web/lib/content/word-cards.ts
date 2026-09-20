@@ -12,6 +12,7 @@ import type { LearnerHubDefinition, LearnerHubRecord } from "./hub-types";
 import { lessonFourCards,studyWordCards } from "../study/word-cards";
 import {studyUnits} from "../study/course-lessons";
 import { wordStudyTags } from "../study/tags";
+import {coursePatternEntries,coursePatternTags} from "../study/course-patterns";
 
 let cached: WordCardCatalog | undefined;
 function mergeMeaning(existing:string,addition:string):string{
@@ -185,6 +186,7 @@ export function withWordCardSearch(
     });
     documents.push({
       id: `lex:study-${card.id.toLowerCase()}`,
+      studyTags:wordStudyTags(card),
       kind: "Lexeme",
       publicationStatus: "published",
       displayLabel: card.rows.map((r) => r.singular.text).join(" / "),
@@ -206,6 +208,23 @@ export function withWordCardSearch(
         ]),
       ],
     });
+  }
+  for(const section of ["grammar","verbs","phrases"]) {
+    for(const entry of coursePatternEntries(studyUnits,section)) {
+      const de=entry.kind==="verbs"?entry.value.verb:entry.value.de;
+      const en=entry.kind==="verbs"?entry.value.meaning:entry.value.en;
+      const field=(field:LearnerSearchField["field"],displayText:string):LearnerSearchField=>({field,displayText,matchKeys:germanMatchKeys(displayText)});
+      const fields=[field("lemma",de),field("meaning",en)];
+      if(entry.kind==="grammar")fields.push(field("title",entry.value.title),...entry.value.examples.map(example=>field("realization",example)));
+      else if(entry.kind==="phrases") {if(entry.value.note)fields.push(field("realization",entry.value.note));}
+      else {
+        const persons=["ich","du","er / sie / es","wir","ihr","sie / Sie"];
+        fields.push(...entry.value.forms.map((form,index)=>field("form",`${persons[index]} ${form}`)),field("realization",entry.value.tip));
+        if(entry.value.participle)fields.push(field("form",`${entry.value.auxiliary==="sein"?"ist":"hat"} ${entry.value.participle}`));
+        if(entry.value.preterite)fields.push(...entry.value.preterite.map((form,index)=>field("form",`${persons[index]} ${form}`)));
+      }
+      documents.push({id:`course:${entry.key}`,studyTags:coursePatternTags(entry),kind:entry.kind==="verbs"?"Verb":entry.kind==="grammar"?"GrammarConcept":"PhrasePattern",publicationStatus:"published",displayLabel:de,sourcePriority:2,lessonIds:[`lesson:${String(entry.lesson).padStart(2,"0")}`],category:entry.kind,hubDestination:{hub:entry.kind},canonicalHref:`/lessons/${String(entry.lesson).padStart(2,"0")}`,fields});
+    }
   }
   return {
     ...projection,

@@ -1,0 +1,31 @@
+
+Running 22 tests using 2 workers
+
+(node:12984) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:36876) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  2 tests\e2e\40-ux-readability.spec.ts:6:3 › learning cards and country rows remain readable at 320px (19.4s)
+  ok  1 tests\e2e\41-complete-backup.spec.ts:4:1 › saved study, course progress and settings survive a complete backup round trip (36.7s)
+  ok  3 tests\e2e\40-ux-readability.spec.ts:6:3 › learning cards and country rows remain readable at 390px (17.7s)
+  ok  4 tests\e2e\41-complete-backup.spec.ts:118:1 › Lesson 4 also resumes its quiz and supports an explicit restart (7.0s)
+  ok  5 tests\e2e\40-ux-readability.spec.ts:6:3 › learning cards and country rows remain readable at 768px (18.9s)
+  ok  6 tests\e2e\42-shared-learning-actions.spec.ts:5:1 › saved pronunciation speed follows word cards, original recordings and the reader (14.5s)
+  ok  8 tests\e2e\42-shared-learning-actions.spec.ts:46:1 › saving a profession in its collection is reflected on its word card and can be removed there (6.4s)
+  ok  9 tests\e2e\42-shared-learning-actions.spec.ts:58:1 › profession filters control both the displayed cards and the review pool (5.0s)
+  ok 10 tests\e2e\42-shared-learning-actions.spec.ts:86:1 › German text offers one keyboard stop per phrase and complete-phrase lookup (5.3s)
+  ok  7 tests\e2e\40-ux-readability.spec.ts:6:3 › learning cards and country rows remain readable at 1440px (27.2s)
+  ok 11 tests\e2e\42-shared-learning-actions.spec.ts:103:1 › transcript lines share pronunciation, meaning and saved-review actions (9.7s)
+  ok 12 tests\e2e\40-ux-readability.spec.ts:22:1 › phone diagrams expose readable steps and dictionary preserves keyboard focus (4.5s)
+  ok 13 tests\e2e\42-shared-learning-actions.spec.ts:127:1 › a failed preview recording shows a useful error and can be retried (7.4s)
+  ok 14 tests\e2e\43-navigation-and-continue.spec.ts:4:3 › navigation stays compact and keyboard-safe at 320px (10.6s)
+  ok 15 tests\e2e\44-professions-learning.spec.ts:4:3 › professions connect patterns, pronunciation, saving and recall at 320px (13.4s)
+  ok 16 tests\e2e\43-navigation-and-continue.spec.ts:4:3 › navigation stays compact and keyboard-safe at 768px (10.0s)
+  ok 17 tests\e2e\44-professions-learning.spec.ts:4:3 › professions connect patterns, pronunciation, saving and recall at 390px (12.6s)
+  ok 18 tests\e2e\43-navigation-and-continue.spec.ts:43:1 › the compact sheet chooser searches all fifteen sheets and preserves return links (9.5s)
+  ok 19 tests\e2e\44-professions-learning.spec.ts:4:3 › professions connect patterns, pronunciation, saving and recall at 768px (14.0s)
+  ok 21 tests\e2e\44-professions-learning.spec.ts:4:3 › professions connect patterns, pronunciation, saving and recall at 1440px (13.4s)
+  ok 20 tests\e2e\43-navigation-and-continue.spec.ts:63:1 › Continue follows the last visited lesson and due review precedes the course map (27.5s)
+  ok 22 tests\e2e\44-professions-learning.spec.ts:48:1 › the bounded collection keeps every profession and alternative reachable (6.2s)
+
+  22 passed (2.6m)

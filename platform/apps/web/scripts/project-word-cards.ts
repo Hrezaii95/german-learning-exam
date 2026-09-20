@@ -1,4 +1,5 @@
-import { readFileSync, writeFileSync, existsSync, copyFileSync, mkdirSync, unlinkSync } from "node:fs";
+import { readFileSync, existsSync, copyFileSync, mkdirSync, unlinkSync } from "node:fs";
+import {writeTextArtifact} from "./write-text-artifact";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { createHash } from "node:crypto";
@@ -183,8 +184,8 @@ export function projectWordCards() {
     mkdirSync(dirname(resolve(web, `public${dest}`)), { recursive: true });
     copyFileSync(audioFiles.get(dest)!, resolve(web, `public${dest}`));
   }
-  writeFileSync(publicManifest, `${JSON.stringify({ version: 1, authorization: "Owner requested complete website cards on 2026-09-03; generated preview speech, not human-approved pronunciation.", assets: [...publicAudio.values()].filter(a => usedAudio.has(`/${a.publicRelativePath}`)).sort((a, b) => a.publicRelativePath.localeCompare(b.publicRelativePath)) }, null, 2)}\n`);
+  writeTextArtifact(publicManifest, `${JSON.stringify({ version: 1, authorization: "Owner requested complete website cards on 2026-09-03; generated preview speech, not human-approved pronunciation.", assets: [...publicAudio.values()].filter(a => usedAudio.has(`/${a.publicRelativePath}`)).sort((a, b) => a.publicRelativePath.localeCompare(b.publicRelativePath)) }, null, 2)}\n`);
   const catalog: WordCardCatalog = { version: 1, sourcePdfSha256: createHash("sha256").update(readFileSync(resolve(root, "study-guides/lessons-01-03/01-vocabulary.pdf"))).digest("hex"), vocabularyCount: source.entries.length, numberCount: source.numbers.length, spellingCount: letters.length, teacherRowCount: teachers.length, cards };
-  writeFileSync(resolve(web, "generated/word-cards.json"), `${JSON.stringify(catalog, null, 2)}\n`);
+  writeTextArtifact(resolve(web, "generated/word-cards.json"), `${JSON.stringify(catalog, null, 2)}\n`);
   console.log(`Word families: ${cards.length} cards; ${source.entries.length} vocabulary entries, ${source.numbers.length} numbers, ${letters.length} spelling cards, ${teachers.length} teacher rows.`);
 }

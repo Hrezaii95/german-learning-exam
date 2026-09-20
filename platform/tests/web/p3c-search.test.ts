@@ -456,7 +456,7 @@ describe("P3C navigation context", () => {
     }
 
     expect(backHrefFromContext(search)).toBe(
-      `/search?q=${encodeURIComponent("heißen")}`,
+      `/search?q=${encodeURIComponent("heißen")}#search-result-lex%3Aingenieur`,
     );
     expect(backHrefFromContext(hub)).toContain("/vocabulary?");
     expect(backHrefFromContext(hub)).toContain("q=Beruf");

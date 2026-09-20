@@ -1,5 +1,5 @@
 /** Independent inventory/route audit for the owner-requested Lesson 1–3 cards. */
-import { readFileSync, existsSync, mkdirSync, writeFileSync } from "node:fs";
+import { readFileSync, existsSync, mkdirSync, writeFileSync, renameSync, unlinkSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { createHash } from "node:crypto";
@@ -90,6 +90,14 @@ for (const card of catalog.cards) {
 for (const detail of old) check(paths.has(detail.canonicalPath), `Old vocabulary link missing: ${detail.canonicalPath}`);
 const report = { checkedAt: new Date().toISOString(), passed: failures.length === 0, cardCount: catalog.cards.length, vocabularyEntries: guide.entries.length, numbers: guide.numbers.length, spellingCards: 30, teacherRows: teacher.rows.length, uniqueRoutes: paths.size, formCount, formsWithAudio: audioCount, exportedRoutes, failures };
 mkdirSync(resolve(root, "research/word-cards"), { recursive: true });
-writeFileSync(resolve(root, "research/word-cards/coverage.json"), JSON.stringify(report, null, 2) + "\n");
+const reportPath=resolve(root,"research/word-cards/coverage.json");
+const temporaryPath=`${reportPath}.${process.pid}.${Date.now()}.tmp`;
+// Replacing a complete file avoids Windows errors when reopening a report for truncation.
+try {
+  writeFileSync(temporaryPath,JSON.stringify(report,null,2)+"\n",{flag:"wx"});
+  renameSync(temporaryPath,reportPath);
+} finally {
+  if(existsSync(temporaryPath))unlinkSync(temporaryPath);
+}
 console.log(JSON.stringify(report, null, 2));
 if (failures.length) process.exitCode = 1;

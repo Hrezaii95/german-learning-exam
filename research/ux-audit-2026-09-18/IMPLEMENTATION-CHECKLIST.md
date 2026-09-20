@@ -6,7 +6,7 @@ Reference: [whole-app audit](UI-UX-AUDIT.md). Countries & languages and Home & f
 
 Use the checkboxes below as the completion record. Start at the first unchecked task; reuse anything already finished.
 
-**Current checkpoint:** Steps 1–4 have recorded live verification. Step 5 is in progress locally; it must pass live verification before it is checked off. Steps 6–9 remain open. Earlier completion notes are historical evidence, not instructions to repeat work.
+**Current checkpoint:** Steps 1–5 have recorded live verification. Step 6 has work in progress, but its checkpoint has not passed; Steps 6–9 remain open. Earlier completion notes are historical evidence, not instructions to repeat work.
 
 | Step | Main task | Checkpoint before marking complete |
 |---|---|---|
@@ -28,7 +28,14 @@ Use the checkboxes below as the completion record. Start at the first unchecked 
 - Each checkpoint is a verification task for the implementer, not a request for user sign-off.
 - Run checks relevant to each change. Run the complete release checks at the end; repeat earlier checks only when later changes affect them.
 
-**Repeat this simple loop:** implement a small complete batch → run its relevant checkpoint checks → publish and verify live → tick the completed tasks and add one evidence line. If a check fails, fix that batch before moving on. Do not restart completed steps or create another tracker. Keep incomplete changes out of the release.
+**Use the same four actions for each step:**
+
+1. Pick the first unchecked task below; inspect what already works and change only what is missing or broken.
+2. Finish a small usable batch and run the relevant checkpoint checks.
+3. Publish the finished batch and verify the changed learning journey on the live site.
+4. Tick only the verified tasks and add one evidence line to the completion record. Move to the next step when all its tasks and its checkpoint pass.
+
+If a check fails, fix that batch before moving on. Keep incomplete changes out of the release. Do not restart completed steps, repeat unaffected checks, or create another tracker.
 
 ## 1. Restore readable layouts
 
@@ -73,9 +80,9 @@ Audit coverage: A10, A11, A15.
 
 ## 5. Bring Professions up to the approved standard
 
-- [ ] Add a compact illustrated overview and memorable groups for profession-form patterns.
-- [ ] Reuse the shared word cards, colors, pronunciation, filters and persistent review from Steps 2–3.
-- [ ] Put learning content first; move detailed source/readiness information into expandable material notes.
+- [x] Add a compact illustrated overview and memorable groups for profession-form patterns.
+- [x] Reuse the shared word cards, colors, pronunciation, filters and persistent review from Steps 2–3.
+- [x] Put learning content first; move detailed source/readiness information into expandable material notes.
 
 **Checkpoint:** Find a profession, understand its masculine/feminine singular and plural forms, hear them, save it, practise it and return. Verify on desktop and phone. No conflicting audio or review status.
 
@@ -137,7 +144,9 @@ For each step, add one line here when its checkpoint passes:
 
 `Step — completed changes — checkpoint result — live verification/link`
 
-Step 5 — local checkpoint passed on 20 September 2026: illustrated masculine-plural groups and feminine ending trail, shared word-family previews and generated pronunciation, six initial results with access to all 48 professions and every alternative, query/filter-preserving return links, persistent optional recall, and expandable source notes. Final Pages gates, E2E types, 22 combined browser checks, and rendered 320/390/768/1440px inspection passed. Full check passed 924 tests plus 585 web tests; five targeted profession checks passed. Evidence: step-5-gates.log, step-5-check.log, step-5-browser-tests.log, step-5-component-tests.log and step-5-local/. Live verification pending; Step 5 remains unchecked.
+Step 6 — shared Learn/Listen/Practise paths and source-book links across all 12 lessons; bounded word libraries and lesson word lists; compact later-lesson verb/grammar/phrase cards; grammar relationship explorer; complete later-lesson search with meaning, gender cues, matching forms, pronunciation and return context; explicit unscored recall versus checked practice. Local checkpoint passed on 20 September 2026: final Pages gates, type checks, lint, 40 targeted component tests, ten final browser journeys including all twelve lesson paths, and rendered phone/desktop inspection. The full suite passed 934 tests plus 595 web tests before the final search-snippet refinement; final targeted tests cover that refinement. Generated content and report writes now replace complete files to avoid the reproduced Windows truncation error. Live verification pending. Evidence: step-6-check.log, step-6-final-gates.log, step-6-final-components.log, step-6-final-browser.log and step-6-local/.
+
+Step 5 — illustrated masculine-plural groups and feminine ending trail, shared word-family previews and generated pronunciation, six initial results with access to all 48 professions and every alternative, query/filter-preserving return links, persistent optional recall, and expandable source notes. Local checkpoint passed on 20 September 2026: Pages gates, E2E types, 22 combined browser checks, and rendered 320/390/768/1440px inspection. Full check passed 924 tests plus 585 web tests; five targeted profession checks passed. Live checkpoint passed: deployment 35520145952 (commit a68d3e89), all 22 browser checks passed against https://hrezaii95.github.io/german-learning-exam/. Evidence: step-5-gates.log, step-5-check.log, step-5-browser-tests.log, step-5-live-tests.log, step-5-component-tests.log and step-5-local/.
 
 Step 4 — compact searchable mobile/tablet menu and sheet chooser; dashboard Continue follows the last visited lesson and restores its section/quiz; due saved review is prominent; guided review has a distinct purpose; section links preserve router history; keyboard skip and menu focus work. Local checkpoint passed on 20 September 2026: Pages gates, lint, E2E type check, 21 component regressions and 17 browser checks; full earlier check passed 923 tests plus 584 web tests. The Windows artifact replacement fix passed 14 recovery tests. Phone/tablet/desktop screenshots inspected. After correcting the source-location assertion for the extracted skip link, all 22 shell contract tests passed. Live checkpoint passed: deployment 35519327130 (commit f10bf5ba), all 17 browser checks passed against https://hrezaii95.github.io/german-learning-exam/. Evidence: step-4-gates.log, step-4-browser-tests.log, step-4-live-tests.log, step-4-component-regression.log, step-4-build-recovery-tests.log and step-4-local/.
 

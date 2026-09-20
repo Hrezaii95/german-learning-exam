@@ -54,6 +54,7 @@ export type LearnerSearchField = {
 };
 
 export type LearnerSearchDocument = {
+  studyTags?: import("../study/scope").StudyTags;
   id: string;
   kind: LearnerSearchableKind;
   displayLabel: string;

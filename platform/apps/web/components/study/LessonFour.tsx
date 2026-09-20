@@ -13,9 +13,11 @@ import {
 import { GermanText, SaveButton, useStudy } from "./StudyProvider";
 import { LineAudio } from "./StudyAudio";
 import {useLessonSession} from "./useLessonSession";
+import {LessonLearningPath} from "./LessonLearningPath";
 
 import {useStudyScope,StudyScopeNotice} from "./StudyScope";
 import {tagsForLesson} from "@/lib/study/scope";
+import {appendNavigationContext} from "@/lib/content/navigation-context";
 
 const tabs = ["Words", "Grammar", "Verbs", "Phrases", "Practice"] as const;
 export function LessonFour({ speech }: { speech: Record<string, string> }) {
@@ -24,6 +26,11 @@ export function LessonFour({ speech }: { speech: Record<string, string> }) {
   const finished = position >= lessonFourQuiz.length;
   const [category, setCategory] = useState("All");
   const [query, setQuery] = useState("");
+  const [wordLimit,setWordLimit]=useState(12);
+  function showSection(section:typeof tabs[number]) {
+    session.chooseTab(section);
+    requestAnimationFrame(()=>document.querySelector(".study-tabs")?.scrollIntoView({block:"start"}));
+  }
   const study = useStudy();
   const words = lessonFourWords.filter(
     (word) =>
@@ -57,14 +64,6 @@ export function LessonFour({ speech }: { speech: Record<string, string> }) {
             each noun with its article, then use <strong>er, es, sie</strong>{" "}
             naturally.
           </p>
-          <div className="study-row">
-            <Link className="study-primary" href="/book?page=coursebook-29">
-              Open interactive book →
-            </Link>
-            <Link className="study-secondary" href="/book?page=workbook-26">
-              Workbook
-            </Link>
-          </div>
         </div>
         <div
           className="lesson-room"
@@ -85,11 +84,12 @@ export function LessonFour({ speech }: { speech: Record<string, string> }) {
           </div>
         </div>
       </header>
+      <LessonLearningPath lesson={4} checkpoint="Describe an object with its article, pronoun and price." learnHref="#words" practiceHref="#practice" onLearn={()=>showSection("Words")} onPractice={()=>showSection("Practice")} onContinue={()=>showSection(tab)} ready={session.ready} section={tab.toLowerCase()}/>
       <div className="lesson-four-meta">
         <span>{lessonFourWords.length} words & expressions</span>
         <span>{lessonFourConcepts.length} grammar concepts</span>
-        <span>18 original recordings in the book</span>
-        <span>{complete}/4 coursebook pages studied</span>
+        <span>Original recordings & transcripts in Listen</span>
+        <span>{complete}/4 coursebook pages marked read</span>
       </div>
       <nav className="study-tabs" aria-label="Lesson 4 study sections">
         {tabs.map((item) => (
@@ -120,7 +120,7 @@ export function LessonFour({ speech }: { speech: Record<string, string> }) {
               <input
                 placeholder="German or English…"
                 value={query}
-                onChange={(e) => setQuery(e.target.value)}
+                onChange={(e) => {setQuery(e.target.value);setWordLimit(12);}}
               />
             </label>
           </div>
@@ -135,7 +135,7 @@ export function LessonFour({ speech }: { speech: Record<string, string> }) {
                   type="button"
                   key={c}
                   aria-pressed={category === c}
-                  onClick={() => setCategory(c)}
+                  onClick={() => {setCategory(c);setWordLimit(12);}}
                 >
                   {c}
                 </button>
@@ -143,7 +143,7 @@ export function LessonFour({ speech }: { speech: Record<string, string> }) {
             )}
           </div>
           <div className="lesson-word-grid">
-            {words.map((word) => (
+            {words.slice(0,wordLimit).map((word) => (
               <article
                 key={word.id}
                 className="lesson-word"
@@ -186,7 +186,7 @@ export function LessonFour({ speech }: { speech: Record<string, string> }) {
                 )}
                 <div className="study-row">
                   <LineAudio text={word.de} src={speech[word.de]} />
-                  <Link href={`/vocabulary/${word.id}`}>Study card →</Link>
+                  <Link href={appendNavigationContext(`/vocabulary/${word.id}`,{entryContext:"lesson",returnPath:"/lessons/04"})}>Study card →</Link>
                 </div>
                 <div className="lesson-word-example">
                   <GermanText text={word.example} />
@@ -200,6 +200,7 @@ export function LessonFour({ speech }: { speech: Record<string, string> }) {
               </article>
             ))}
           </div>
+          <div className="library-pagination"><p role="status">Showing {Math.min(wordLimit,words.length)} of {words.length} words & expressions</p>{wordLimit<words.length&&<button type="button" className="study-secondary" onClick={()=>setWordLimit(limit=>limit+12)}>Show more words</button>}</div>
           {!words.length && <p>No words match. Try another search.</p>}
         </section>
       )}

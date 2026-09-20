@@ -1,5 +1,6 @@
 "use client";
 import {useStudyScope} from "@/components/study/StudyScope";
+import {LessonLearningPath} from "@/components/study/LessonLearningPath";
 import {tagsForLesson} from "@/lib/study/scope";
 import { useMemo } from "react";
 import Link from "next/link";
@@ -130,6 +131,8 @@ export function LessonOverview({
   const percent = orderedActivities.length === 0 ? 0 : Math.round((completedCount / orderedActivities.length) * 100);
   const nextActivity = nextIncompleteActivity(orderedActivities, progress);
   const lessonIllustration = illustrationForLesson(lesson.id);
+  const firstActivity=orderedActivities[0];
+  const practiceActivity=orderedActivities.find(activity=>activity.mode==="check")??orderedActivities.find(activity=>activity.mode==="recall");
 
   return (
     <div className="stack">
@@ -169,6 +172,7 @@ export function LessonOverview({
         ) : null}
       </header>
 
+      <LessonLearningPath lesson={Number(lesson.routeSegment)} checkpoint={lesson.communicativeGoals[0]??lesson.titleEn} learnHref={firstActivity?appendNavigationContext(firstActivity.canonicalPath,outbound):"#stages-heading"} practiceHref={practiceActivity?appendNavigationContext(practiceActivity.canonicalPath,outbound):"#stages-heading"}/>
       {lessonIllustration ? <RichLessonVisual illustration={lessonIllustration} /> : null}
       <LessonJourneyVisual lesson={lesson} />
 

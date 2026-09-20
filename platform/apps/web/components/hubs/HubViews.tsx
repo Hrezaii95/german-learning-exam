@@ -2,7 +2,9 @@
 
 import type { ReactNode } from "react";
 import type {StudyUnit} from "@/lib/study/course-lessons";
-import {CoursePatterns} from "@/components/study/CourseStudy";
+import {CoursePatternCard} from "@/components/study/CoursePatternCard";
+import {coursePatternEntries,coursePatternTags} from "@/lib/study/course-patterns";
+import {GrammarConnections} from "@/components/study/GrammarConnections";
 import {useStudyScope} from "@/components/study/StudyScope";
 import {hubStudyTags} from "@/lib/study/tags";
 import {numericLessons,tagsForLesson,availableLessons,scopeLabel,defaultStudyScope} from "@/lib/study/scope";
@@ -455,13 +457,14 @@ function hubDetailHref(
     buildHubNavigationContext({
       hubId: hub.id,
       ...(query.q.trim().length > 0 ? { q: query.q } : {}),
-      ...(query.lesson === "01" || query.lesson === "02" || query.lesson === "03" || query.lesson === "04"
+      ...(query.lesson !== "all"
         ? { lesson: query.lesson }
         : {}),
       ...(query.category && query.category !== "all"
         ? { category: query.category }
         : {}),
       resultId: record.id,
+      ...(query.page?{page:query.page}:{}),
     }),
   );
 }
@@ -883,8 +886,8 @@ function HubFilters({
   hub: LearnerHubDefinition;
   query: HubQueryState;
 }) {
-  const summary = hubFilterSummary(query);
   const {scope,setScope,connected}=useStudyScope();
+  const summary = [...hubFilterSummary(query),...(connected&&(scope.mode!=="all"||scope.concepts.length>0||scope.source!=="all")?[scopeLabel(scope)]:[])];
   const searchId = `hub-search-${hub.id}`;
   const lessonId = `hub-lesson-${hub.id}`;
   const categoryId = `hub-category-${hub.id}`;
@@ -895,7 +898,7 @@ function HubFilters({
 
   return (
     <section className="panel hub-filters" aria-labelledby="hub-filters-heading">
-      <h2 id="hub-filters-heading">Filter items</h2>
+      <h2 id="hub-filters-heading" className="sr-only">Filter items</h2>
       <form
         key={JSON.stringify([query.q, query.lesson, query.category])}
         className="hub-filter-form"
@@ -911,7 +914,7 @@ function HubFilters({
               type="search"
               name="q"
               defaultValue={query.q}
-              placeholder="Canonical German text"
+              placeholder="German or English"
               autoComplete="off"
               aria-label={`Search ${hub.title}`}
             />
@@ -984,10 +987,9 @@ export function HubListView({
   const query = parseHubSearchParams(searchParams, hub.categories);
   const selectedItems=hub.items.filter(item=>scope.matches(hubStudyTags(item)));
   const filtered = filterHubRecords(selectedItems, query);
-  const unitRows=(unit:StudyUnit)=>hub.id==="verbs"?unit.verbs:hub.id==="phrases"?unit.phrases:unit.concepts;
-  const selectedUnits=units.filter(u=>scope.matches({...tagsForLesson(u.number),concepts:[hub.id==="verbs"?"verbs":hub.id==="phrases"?"conversation":"grammar"]}));
-  const extraCount=selectedUnits.reduce((sum,u)=>sum+unitRows(u).filter(r=>JSON.stringify(r).toLocaleLowerCase("de").includes(query.q.trim().toLocaleLowerCase("de"))).length,0);
-  const visibleItemCount = hubVisibleItemCount(hub)+units.reduce((sum,u)=>sum+unitRows(u).length,0);
+  const extraEntries=coursePatternEntries(units,hub.id,query.q).filter(entry=>scope.matches(coursePatternTags(entry))&&(query.lesson==="all"||entry.lesson===Number(query.lesson))&&query.category===null);
+  const extraCount=extraEntries.length;
+  const visibleItemCount = hubVisibleItemCount(hub)+coursePatternEntries(units,hub.id).length;
   const listeningGroups =
     hub.experience?.kind === "listening"
       ? filterListeningGroups(hub.experience, query).filter(group=>scope.matches(tagsForLesson(numericLessons([group.lessonId])[0]??1)))
@@ -1003,36 +1005,54 @@ export function HubListView({
       : filtered.items.length;
   const visibleResultCount=baseResultCount+extraCount;
   const showAfterFilters = visibleItemCount > 0 && filtered.hasActiveFilters;
+  const pageSize=12;
+  const pageCount=Math.max(1,Math.ceil(visibleResultCount/pageSize));
+  const page=Math.min(query.page??1,pageCount);
+  const pagedQuery={...query,page};
+  const start=(page-1)*pageSize;
+  const records=filtered.items.slice(start,start+pageSize);
+  const patterns=extraEntries.slice(Math.max(0,start-filtered.items.length),Math.max(0,start+pageSize-filtered.items.length));
+  const pageHref=(target:number)=>{
+    const params=new URLSearchParams();
+    if(query.q)params.set("q",query.q);
+    if(query.lesson!=="all")params.set("lesson",query.lesson);
+    if(query.category)params.set("category",query.category);
+    if(target>1)params.set("page",String(target));
+    return `${hub.path}${params.size?`?${params}`:""}#hub-results-heading`;
+  };
 
   return (
     <div className="stack">
       <header className="page-header">
-        <p className="dense">Hub</p>
-        <h1>{hub.title}</h1>
-        <p className="lede">{hub.description}</p>
+        <p className="dense">Study library · Lessons 1–12</p>
+        <h1>{hub.id==="concepts"?"Grammar connections":hub.title}</h1>
+        <p className="lede">{units.length?`Find ${hub.id==="verbs"?"verb forms":hub.id==="phrases"?"useful phrases":"grammar patterns"} from your lessons. Listen, save what matters, and practise in context.`:hub.description}</p>
         <p className="meta-row" style={{ marginTop: "0.5rem" }}>
           <span className="meta-chip">{visibleItemCount} items</span>
           <span className="meta-chip">
-            Showing {visibleResultCount}
+            {visibleResultCount} matches
             {showAfterFilters ? " after filters" : ""}
           </span>
         </p>
         {hub.id === "vocabulary" ? (
           <p style={{ marginTop: "1rem" }}>
             <Link className="btn btn-secondary" href="/collections/professions">
-              Open 48-row optional professions collection
+              Explore professions and their forms →
             </Link>
           </p>
         ) : null}
       </header>
 
       <HubFilters hub={hub} query={query} />
+      {units.length>0&&query.category!==null&&<p className="muted">Topic categories apply to the original guided lessons. Choose All categories to include the later lesson patterns.</p>}
+      {hub.id==="grammar"&&<p><Link href="/concepts">See how grammar connects to examples and practice →</Link></p>}
+      {hub.id==="concepts"&&<><p><Link href="/grammar">Browse the grammar library →</Link></p><GrammarConnections entries={extraEntries} speech={speech} navigation={buildHubNavigationContext({hubId:hub.id,q:query.q,lesson:query.lesson,...(query.category?{category:query.category}:{})})}/></>}
 
       {visibleItemCount === 0 ? (
         <HubEmptyPublished hub={hub} />
       ) : visibleResultCount === 0 ? (
         <HubNoMatches hub={hub} />
-      ) : baseResultCount===0 ? null : listeningGroups ? (
+      ) : listeningGroups ? (
         <section aria-labelledby="hub-results-heading">
           <h2 id="hub-results-heading" className="dense">
             Workbook exercises
@@ -1043,7 +1063,7 @@ export function HubListView({
             ))}
           </div>
         </section>
-      ) : conceptTopics ? (
+      ) : conceptTopics ? (conceptTopics.length>0&&
         <section aria-labelledby="hub-results-heading">
           <h2 id="hub-results-heading" className="dense">
             Connected learning paths
@@ -1060,18 +1080,19 @@ export function HubListView({
             Results
           </h2>
           <div className="card-grid hub-results">
-            {filtered.items.map((record) => (
+            {records.map((record) => (
               <HubRecordCard
                 key={record.id}
                 hub={hub}
                 record={record}
-                query={query}
+                query={pagedQuery}
               />
             ))}
+            {patterns.map(entry=><CoursePatternCard key={entry.key} entry={entry} speech={speech} compact navigation={buildHubNavigationContext({hubId:hub.id,q:query.q,lesson:query.lesson,...(query.category?{category:query.category}:{}),page})}/>)}
           </div>
         </section>
       )}
-      {units.length>0&&<CoursePatterns units={units} section={hub.id} speech={speech} query={query.q}/>}
+      {!listeningGroups&&!conceptTopics&&visibleResultCount>0&&<nav className="library-pagination" aria-label={`${hub.title} results pages`}><p role="status">Showing {start+1}–{Math.min(start+pageSize,visibleResultCount)} of {visibleResultCount} · Page {page} of {pageCount}</p><div className="study-row">{page>1&&<Link className="study-secondary" href={pageHref(page-1)}>← Previous page</Link>}{page<pageCount&&<Link className="study-primary" href={pageHref(page+1)}>Next page →</Link>}</div></nav>}
     </div>
   );
 }

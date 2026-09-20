@@ -37,6 +37,7 @@ export type NavigationContext = {
   category?: string;
   /** Optional safe result id that was opened (entity id, not assertion). */
   resultId?: string;
+  page?: number;
 };
 
 export const NAVIGATION_CONTEXT_PARAM = "nav";
@@ -227,6 +228,8 @@ function normalizeContext(raw: unknown): NavigationContext | null {
     if (q.length > 0) ctx.q = q;
   }
 
+  const page=Number(obj.page);
+  if((entryContext==="hub"||entryContext==="search")&&Number.isInteger(page)&&page>1&&page<=500) ctx.page=page;
   if (entryContext === "hub") {
     if (typeof obj.hubId === "string" && isLearnerHubId(obj.hubId)) {
       ctx.hubId = obj.hubId;
@@ -317,6 +320,7 @@ export function serializeNavigationContext(ctx: NavigationContext): string {
   if (normalized.lesson) payload.lesson = normalized.lesson;
   if (normalized.category) payload.category = normalized.category;
   if (normalized.resultId) payload.resultId = normalized.resultId;
+  if (normalized.page) payload.page = String(normalized.page);
 
   const json = JSON.stringify(payload);
   if (json.length > NAVIGATION_CONTEXT_MAX_LENGTH) {
@@ -337,7 +341,10 @@ export function backHrefFromContext(ctx: NavigationContext): string {
 
   if (safe.entryContext === "search") {
     const q = safe.q?.trim() ?? "";
-    return q.length > 0 ? `/search?q=${encodeURIComponent(q)}` : "/search";
+    const params=new URLSearchParams();
+    if(q)params.set("q",q);
+    if(safe.page)params.set("page",String(safe.page));
+    return `/search${params.size?`?${params.toString().replaceAll("+","%20")}`:""}${safe.resultId?`#search-result-${encodeURIComponent(safe.resultId)}`:""}`;
   }
 
   if (safe.entryContext === "hub") {
@@ -358,6 +365,7 @@ export function backHrefFromContext(ctx: NavigationContext): string {
     if (safe.q && safe.q.trim().length > 0) params.set("q", safe.q.trim());
     if (safe.lesson && safe.lesson !== "all") params.set("lesson", safe.lesson);
     if (safe.category) params.set("category", safe.category);
+    if (safe.page) params.set("page", String(safe.page));
     const qs = params.toString();
     return qs.length > 0 ? `${path}?${qs}` : path;
   }
@@ -382,6 +390,7 @@ export function fallbackNavigationContext(
 export function buildSearchNavigationContext(
   q: string,
   resultId?: string,
+  page?: number,
 ): NavigationContext {
   const cleaned = sanitizeSearchQueryText(q).trim();
   const ctx: NavigationContext = {
@@ -391,6 +400,7 @@ export function buildSearchNavigationContext(
   if (cleaned.length > 0) ctx.q = cleaned;
   const rid = sanitizeResultId(resultId);
   if (rid) ctx.resultId = rid;
+  if(page&&Number.isInteger(page)&&page>1&&page<=500)ctx.page=page;
   return Object.freeze(ctx);
 }
 
@@ -400,6 +410,7 @@ export function buildHubNavigationContext(input: {
   lesson?: "all" | "01" | "02" | "03" | "04" | "05" | "06" | "07" | "08" | "09" | "10" | "11" | "12";
   category?: string;
   resultId?: string;
+  page?: number;
 }): NavigationContext {
   const ctx: NavigationContext = {
     entryContext: "hub",
@@ -415,6 +426,7 @@ export function buildHubNavigationContext(input: {
   }
   const rid = sanitizeResultId(input.resultId);
   if (rid) ctx.resultId = rid;
+  if (input.page && Number.isInteger(input.page) && input.page>1 && input.page<=500) ctx.page=input.page;
   return Object.freeze(ctx);
 }
 

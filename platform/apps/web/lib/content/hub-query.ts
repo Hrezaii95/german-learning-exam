@@ -8,6 +8,7 @@ export type HubQueryState = {
   q: string;
   lesson: HubLessonFilter;
   category: string | null;
+  page?: number;
 };
 
 export type HubFilterResult = {
@@ -96,6 +97,7 @@ export function parseHubSearchParams(
     q,
     lesson: parseLesson(firstParam(params.lesson)),
     category: parseCategory(firstParam(params.category), allowed),
+    ...(Number.isInteger(Number(firstParam(params.page))) && Number(firstParam(params.page))>1 && Number(firstParam(params.page))<=500 ? {page:Number(firstParam(params.page))} : {}),
   };
 }
 
