@@ -1,0 +1,12 @@
+
+> german-learning-platform@0.0.0 audit:offline
+> node ../tools/audit-offline-export.mjs
+
+{
+  "reportPath": "research\\release-evidence\\offline-export-audit.json",
+  "gate": "pass",
+  "version": "2d96d4362d567c65",
+  "precacheCount": 154,
+  "precacheBytes": 37313696,
+  "precachedNavigationRoutes": 32
+}

@@ -1,0 +1,18 @@
+
+Running 9 tests using 2 workers
+
+(node:13132) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:10996) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [chromium] › tests\e2e\53-hobbies-time-learning.spec.ts:3:31 › hobby illustrations, contrasts and saved settings at 320px (6.5s)
+  ok 2 [chromium] › tests\e2e\53-hobbies-time-learning.spec.ts:3:31 › hobby illustrations, contrasts and saved settings at 1440px (7.8s)
+  ok 3 [chromium] › tests\e2e\53-hobbies-time-learning.spec.ts:12:31 › clock listening, weekly plans and reload at 320px (11.9s)
+  ok 4 [chromium] › tests\e2e\53-hobbies-time-learning.spec.ts:12:31 › clock listening, weekly plans and reload at 1440px (13.4s)
+  ok 5 [chromium] › tests\e2e\53-hobbies-time-learning.spec.ts:19:1 › hobby and time card practice respects scope and saved filters (7.8s)
+  ok 6 [chromium] › tests\e2e\53-hobbies-time-learning.spec.ts:23:1 › hobbies and time print concise A4 and Letter summaries (5.2s)
+  ok 7 [chromium] › tests\e2e\54-food-learning.spec.ts:3:31 › food menu, portions and saved context at 320px (10.1s)
+  ok 8 [chromium] › tests\e2e\54-food-learning.spec.ts:3:31 › food menu, portions and saved context at 1440px (13.1s)
+  ok 9 [chromium] › tests\e2e\54-food-learning.spec.ts:14:1 › food groups, plurals, chosen practice and print (4.3s)
+
+  9 passed (44.7s)

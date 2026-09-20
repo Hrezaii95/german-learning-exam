@@ -1,0 +1,22 @@
+[
+  {
+    "file": "hobbies-A4.pdf",
+    "pages": 1,
+    "matchesLocalText": true
+  },
+  {
+    "file": "hobbies-Letter.pdf",
+    "pages": 1,
+    "matchesLocalText": true
+  },
+  {
+    "file": "time-A4.pdf",
+    "pages": 1,
+    "matchesLocalText": true
+  },
+  {
+    "file": "time-Letter.pdf",
+    "pages": 1,
+    "matchesLocalText": true
+  }
+]

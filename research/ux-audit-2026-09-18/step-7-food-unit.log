@@ -1,0 +1,9 @@
+
+ RUN  v3.2.7 E:/claude-cursor/side projects/German learning/platform
+
+ ✓ tests/web/food-learning.test.ts (4 tests) 248ms
+
+ Test Files  1 passed (1)
+      Tests  4 passed (4)
+   Start at  00:27:54
+   Duration  2.69s (transform 576ms, setup 0ms, collect 909ms, tests 248ms, environment 0ms, prepare 814ms)

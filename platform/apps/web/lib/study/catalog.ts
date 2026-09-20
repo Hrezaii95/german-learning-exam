@@ -28,6 +28,7 @@ import {clockSaveId,clockHours,clockMinutes,clockSentence,clockMeaning,weekDays,
 import {journeyActivities,journeyPeople,journeySentence,journeyMeaning,journeySaveId,monthEnglish,seasonSentence} from "./journey-sheet";
 import {pastActivities,pastPeople,pastModes,pastSentence,pastMeaning,pastSaveId} from "./past-sheet";
 import {travelVerbs,travelPeople,travelModes,travelSentence,travelMeaning,travelSaveId,announcementModels} from "./travel-sheet";
+import {foodBookmark} from "./food-learning";
 import {foodModels,foodModes,foodSentence,foodMeaning,foodSaveId} from "./food-sheet";
 const generated = join(
   dirname(fileURLToPath(import.meta.url)),
@@ -128,7 +129,7 @@ export function loadDictionary(): DictionaryEntry[] {
   pastActivities.forEach((_,a)=>pastPeople.forEach((_,p)=>pastModes.forEach(m=>addStudySentence(`past-${a}-${p}-${m.id}`,pastSentence(a,p,m.id),pastMeaning(a,p,m.id),11,"/cheat-sheets/past#past-lab",pastSaveId(a,p,m.id)))));
   travelVerbs.forEach((_,v)=>travelPeople.forEach((_,p)=>travelModes.forEach(m=>addStudySentence(`travel-${v}-${p}-${m.id}`,travelSentence(v,p,m.id),travelMeaning(v,p,m.id),10,"/cheat-sheets/travel#travel-bracket",travelSaveId(v,p,m.id)))));
   announcementModels.forEach((a,i)=>addStudySentence(`announcement-${i}`,a.de,a.en,10,"/cheat-sheets/travel#travel-listening",`l10-announcement-${i}`));
-  foodModels.forEach((_,f)=>foodModes.forEach(mode=>[false,true].forEach(n=>addStudySentence(`food-${f}-${mode.id}-${n}`,foodSentence(f,mode.id,n),foodMeaning(f,mode.id,n),9,"/cheat-sheets/food#food-lab",foodSaveId(f,mode.id,n)))));
+  foodModels.forEach((_,f)=>foodModes.forEach(mode=>[false,true].forEach(n=>addStudySentence(`food-${f}-${mode.id}-${n}`,foodSentence(f,mode.id,n),foodMeaning(f,mode.id,n),9,`/cheat-sheets/food${foodBookmark({food:f,mode:mode.id,negative:n,speakerLikes:true,youLike:true,compound:0})}`,foodSaveId(f,mode.id,n)))));
   for(const unit of studyUnits){
     for(const verb of unit.verbs){const entry=entries.find(e=>e.de===verb.verb||e.de.startsWith(verb.verb+" "));if(entry)entry.forms=[...new Set([...entry.forms,...verb.forms,...(verb.participle?[verb.participle]:[]),...(verb.preterite??[])])];}
     for(const [index,phrase] of unit.phrases.entries())entries.push({id:`unit-${unit.number}-phrase-${index}`,saveId:`l${unit.number}-phrase-${index}`,de:phrase.de,en:phrase.en,forms:[phrase.de],example:"",translation:"",href:`/lessons/${String(unit.number).padStart(2,"0")}#phrases`,audio:speech[phrase.de]??null,kind:"phrase",studyTags:{...tagsForLesson(unit.number),concepts:["conversation"]}});
