@@ -113,6 +113,11 @@ export function parseStudy(raw: string | null): StudyState {
   }
   if (data.reviewedProfessions !== undefined && (!Array.isArray(data.reviewedProfessions) ||
     data.reviewedProfessions.length > 200 || !data.reviewedProfessions.every(id => typeof id === "string" && id.length <= 200))) throw new Error("Profession review is invalid.");
+  if (data.reader !== undefined && (!data.reader || !["read", "page", "split"].includes(data.reader.view) ||
+    ![0,100,125,150,200,250,300].includes(data.reader.zoom))) throw new Error("Reader preferences are invalid.");
+  if (data.audioProgress !== undefined && (!data.audioProgress || typeof data.audioProgress !== "object" || Array.isArray(data.audioProgress) ||
+    Object.keys(data.audioProgress).length > 500 || Object.entries(data.audioProgress).some(([id,position]) => !/^[a-zA-Z0-9_-]{1,120}$/.test(id) ||
+      !Number.isFinite(position) || position < 0 || position > 14400))) throw new Error("Recording progress is invalid.");
   return {
     version: 1,
     saved,
@@ -121,6 +126,8 @@ export function parseStudy(raw: string | null): StudyState {
     ...(data.lastLesson !== undefined ? { lastLesson: data.lastLesson } : {}),
     ...(data.lessonSessions !== undefined ? { lessonSessions } : {}),
     ...(data.reviewedProfessions !== undefined ? { reviewedProfessions: [...new Set(data.reviewedProfessions)] } : {}),
+    ...(data.reader !== undefined ? { reader: { view: data.reader.view, zoom: data.reader.zoom } } : {}),
+    ...(data.audioProgress !== undefined ? { audioProgress: { ...data.audioProgress } } : {}),
     resume:
       typeof data.resume === "string" &&
       /^(coursebook|workbook)-(?:\d+|cover|map)$/.test(data.resume)

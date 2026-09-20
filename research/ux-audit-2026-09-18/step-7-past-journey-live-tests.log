@@ -1,0 +1,31 @@
+
+Running 22 tests using 2 workers
+
+(node:23952) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:34128) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 platform\tests\e2e\46-cheat-sheet-summaries.spec.ts:5:5 › countries prints its complete summary without changing recall or filters at 320px (6.7s)
+  ok  3 platform\tests\e2e\46-cheat-sheet-summaries.spec.ts:5:5 › home prints its complete summary without changing recall or filters at 320px (5.7s)
+  ok  2 platform\tests\e2e\42-shared-learning-actions.spec.ts:5:1 › saved pronunciation speed follows word cards, original recordings and the reader (16.6s)
+  ok  4 platform\tests\e2e\46-cheat-sheet-summaries.spec.ts:5:5 › countries prints its complete summary without changing recall or filters at 1440px (8.5s)
+  ok  5 platform\tests\e2e\42-shared-learning-actions.spec.ts:46:1 › saving a profession in its collection is reflected on its word card and can be removed there (7.4s)
+  ok  6 platform\tests\e2e\46-cheat-sheet-summaries.spec.ts:5:5 › home prints its complete summary without changing recall or filters at 1440px (5.6s)
+  ok  7 platform\tests\e2e\42-shared-learning-actions.spec.ts:58:1 › profession filters control both the displayed cards and the review pool (5.3s)
+  ok  8 platform\tests\e2e\46-cheat-sheet-summaries.spec.ts:51:1 › home overview keeps one set of objects and returns focus after Escape and selection (5.2s)
+  ok  9 platform\tests\e2e\42-shared-learning-actions.spec.ts:86:1 › German text offers one keyboard stop per phrase and complete-phrase lookup (5.0s)
+  ok 10 platform\tests\e2e\46-cheat-sheet-summaries.spec.ts:73:1 › home pronunciation follows the saved speed when its slow override is off (9.5s)
+  ok 11 platform\tests\e2e\42-shared-learning-actions.spec.ts:103:1 › transcript lines share pronunciation, meaning and saved-review actions (8.8s)
+  ok 13 platform\tests\e2e\42-shared-learning-actions.spec.ts:127:1 › a failed preview recording shows a useful error and can be retried (6.4s)
+  ok 12 platform\tests\e2e\46-cheat-sheet-summaries.spec.ts:97:33 › shared overviews preserve verb, number and register selections at 390px (9.6s)
+  ok 15 platform\tests\e2e\46-cheat-sheet-summaries.spec.ts:97:33 › shared overviews preserve verb, number and register selections at 1440px (8.2s)
+  ok 14 platform\tests\e2e\55-travel-learning.spec.ts:2:31 › travel scenes, sentence bracket and saved audio context at 320px (13.7s)
+  ok 16 platform\tests\e2e\56-past-journey-learning.spec.ts:12:2 › yesterday timeline, opening-hours recall and saved context at 320px (13.4s)
+  ok 17 platform\tests\e2e\55-travel-learning.spec.ts:2:31 › travel scenes, sentence bracket and saved audio context at 1440px (11.5s)
+  ok 19 platform\tests\e2e\55-travel-learning.spec.ts:7:1 › travel scoped cards and print summary (5.5s)
+  ok 18 platform\tests\e2e\56-past-journey-learning.spec.ts:48:2 › season wheel, trip auxiliary and year return at 320px (15.3s)
+  ok 20 platform\tests\e2e\56-past-journey-learning.spec.ts:12:2 › yesterday timeline, opening-hours recall and saved context at 1440px (13.5s)
+  ok 21 platform\tests\e2e\56-past-journey-learning.spec.ts:48:2 › season wheel, trip auxiliary and year return at 1440px (12.6s)
+  ok 22 platform\tests\e2e\56-past-journey-learning.spec.ts:87:1 › past and journey cards remain scoped and their summaries export (8.7s)
+
+  22 passed (2.1m)

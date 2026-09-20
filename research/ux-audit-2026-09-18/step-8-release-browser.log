@@ -1,0 +1,20 @@
+
+Running 11 tests using 2 workers
+
+(node:18040) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:37816) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 [chromium] › tests\e2e\41-complete-backup.spec.ts:118:1 › Lesson 4 also resumes its quiz and supports an explicit restart (5.7s)
+  ok  3 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:5:1 › saved pronunciation speed follows word cards, original recordings and the reader (14.0s)
+  ok  4 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:46:1 › saving a profession in its collection is reflected on its word card and can be removed there (5.4s)
+  ok  5 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:58:1 › profession filters control both the displayed cards and the review pool (5.0s)
+  ok  6 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:86:1 › German text offers one keyboard stop per phrase and complete-phrase lookup (3.3s)
+  ok  7 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:103:1 › transcript lines share pronunciation, meaning and saved-review actions (4.4s)
+  ok  2 [chromium] › tests\e2e\41-complete-backup.spec.ts:4:1 › saved study, course progress and settings survive a complete backup round trip (40.7s)
+  ok  8 [chromium] › tests\e2e\42-shared-learning-actions.spec.ts:127:1 › a failed preview recording shows a useful error and can be retried (4.3s)
+  ok  9 [chromium] › tests\e2e\57-book-listening-journey.spec.ts:7:31 › book to transcript, meaning, review and exact return at 320px (9.1s)
+  ok 10 [chromium] › tests\e2e\57-book-listening-journey.spec.ts:7:31 › book to transcript, meaning, review and exact return at 1440px (11.9s)
+  ok 11 [chromium] › tests\e2e\57-book-listening-journey.spec.ts:58:1 › book line saves preserve source selection and answers stay deliberate (6.5s)
+
+  11 passed (59.5s)

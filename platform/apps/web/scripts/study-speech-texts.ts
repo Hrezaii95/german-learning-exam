@@ -61,7 +61,7 @@ console.log(`${texts.length} study utterances`);
 if (process.argv.includes("--manifest")) {
   writeSnapshot(new URL("../generated/study-dictionary.json",import.meta.url),JSON.stringify(loadDictionary())+"\n");
   const web = join(dirname(fileURLToPath(import.meta.url)), "..");
-  const assets = ["audio", "speech"].flatMap((kind) =>
+  const assets = ["audio", "speech", "transcript-speech"].flatMap((kind) =>
     readdirSync(join(web, "public/book", kind))
       .filter((name) => name.endsWith(".mp3"))
       .sort()

@@ -27,6 +27,8 @@ export type StudyState = {
   lastLesson?: number;
   lessonSessions?: Record<string, LessonSession>;
   reviewedProfessions?: string[];
+  reader?: { view: "read" | "page" | "split"; zoom: number };
+  audioProgress?: Record<string, number>;
 };
 export type DictionaryEntry = {
   studyTags?: import("./scope").StudyTags;
@@ -59,7 +61,7 @@ export type BookAnswer = {
   note: string;
 };
 export type ListeningTranscript = {
-  lines: { speaker: string | null; text: string }[];
+  lines: { speaker: string | null; text: string; audio?: string | null }[];
   sourceTrack: string;
   sourcePages: number[];
   sourceTitle: string;

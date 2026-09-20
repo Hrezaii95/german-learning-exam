@@ -6,7 +6,7 @@ Reference: [whole-app audit](UI-UX-AUDIT.md). Countries & languages and Home & f
 
 Use the checkboxes below as the completion record. Start at the first unchecked task; reuse anything already finished.
 
-**Current checkpoint:** Steps 1–6 have recorded live verification. Step 7 is in progress: Countries/Home, People, Verbs/Questions, Numbers, Conversation, Objects/Office, Hobbies/Time, Food and Travel have passed local and live verification. Next: Yesterday/Seasons. The complete Step 7 checkpoint and Steps 8–9 remain open. Earlier completion notes are historical evidence, not instructions to repeat work.
+**Current checkpoint:** Steps 1–7 have recorded live verification, including all fifteen cheat sheets. Step 8 (book/listening integration) is in progress. Step 9 (final integrated verification) remains open. Earlier completion notes are historical evidence, not instructions to repeat work.
 
 | Step | Recorded status | Main task | Checkpoint before marking complete |
 |---|---|---|---|
@@ -16,20 +16,18 @@ Use the checkboxes below as the completion record. Start at the first unchecked 
 | 4 | Complete | Simplify navigation | Continue and due review appear first; phone navigation and returning to prior content work. |
 | 5 | Complete | Finish Professions | Find a profession, understand and hear its four forms, save it, practise it and return. |
 | 6 | Complete | Improve lessons and libraries | Every lesson and library supports a clear learning path, compact browsing and accurate search. |
-| 7 | In progress | Complete the 15 cheat sheets | Each sheet has a useful visual overview, explanation, audio, saving and a short recall task. |
-| 8 | Pending | Connect book and listening | Read → listen → understand a phrase → save → review → return to the same book page. |
+| 7 | Complete | Complete the 15 cheat sheets | Each sheet has a useful visual overview, explanation, audio, saving and a short recall task. |
+| 8 | In progress | Connect book and listening | Read → listen → understand a phrase → save → review → return to the same book page. |
 | 9 | Pending | Verify the release | Live learning journeys, accessibility, data recovery and failure states pass; limitations are recorded. |
 
-**Resume here:** Step 7 → Yesterday/Seasons. Finish and verify the existing batch, then continue through the unchecked sheet groups. The statuses above reflect the completion records below; they do not require rerunning finished work.
+**Resume here:** Step 8 → book, listening and transcripts. Reuse the shared controls and completed sheet work.
 
 The remaining work, in order:
 
-1. **Finish Yesterday:** yesterday timeline, participle patterns and opening-hours practice. Use the same checkpoint; retain working sentence tools.
-2. **Finish Seasons:** season/month overview, journey timeline and qualified haben/sein cues. Use the same checkpoint; retain working calendar and year tools.
-3. **Connect book and listening:** complete the four tasks in Step 8, then verify the entire book-to-review-and-back journey.
-4. **Close the release:** run Step 9 once against the integrated result, fix failures, and report the verified live link with any remaining limitations.
+1. **Connect book and listening:** complete the four tasks in Step 8, then verify the entire book-to-review-and-back journey.
+2. **Close the release:** run Step 9 against the integrated result, fix failures, and report the verified live link with any remaining limitations.
 
-These are the next actions, not a second tracker. Update only the checkboxes in Steps 7–9 below.
+These are the next actions, not a second tracker. Update only the checkboxes in Steps 8–9 below.
 
 ## Working rules
 
@@ -124,8 +122,8 @@ Use the existing tools wherever they already work. Add only the missing explanat
 - [x] **10 Hobbies / 11 Time:** ability/frequency visuals, clock and weekly planner.
 - [x] **12 Food:** illustrated menu, consistent gender colors and ordering exchange.
 - [x] **13 Travel:** illustrated transport sequence, prefix/base-verb sentence bracket and announcement recall.
-- [ ] **14 Yesterday:** yesterday timeline, auxiliary/participle bracket, participle patterns and opening-hours mini-board.
-- [ ] **15 Seasons:** seasonal calendar, journey timeline, month/year examples and qualified haben/sein cues.
+- [x] **14 Yesterday:** yesterday timeline, auxiliary/participle bracket, participle patterns and opening-hours mini-board.
+- [x] **15 Seasons:** seasonal calendar, journey timeline, month/year examples and qualified haben/sein cues.
 
 **Checkpoint for each sheet:** A clear overview, readable explanation, useful example, pronunciation, save/remove and short recall task work on phone and desktop. The visual teaches a specific relationship. Detailed reference content is optional, and the printable summary is concise. Check off each group as it is completed; do not wait for all fifteen to publish a finished group.
 
@@ -162,7 +160,9 @@ For each step, add one line here when its checkpoint passes:
 
 The entries below describe their own release dates. Use the current checkpoint and task checkboxes above for today's status.
 
-Step 7, Yesterday/Seasons batch — illustrated sample-day and trip timelines; past sentence and auxiliary trails; optional participle references with saved concepts; opening-hour clocks and interpretation recall; an interactive seasonal wheel, month pronunciation and year chunks; exact saved sentence/month/year return settings; bounded scoped word cards and printable summaries. Existing source models, grammar qualifications, recall questions and source links are retained. All taught speech texts resolve to existing recorded pronunciation files. Local checkpoint passed: 989 full-suite tests and 651 separate web tests, final E2E types, lint and Pages gates; eight final browser journeys including Travel regression. Initial reload checks raced client navigation; waiting for the actual destination before reload resolved the test failures. After the final print-only spacing adjustment, Pages build and the focused print/card browser journey passed again. Actual A4 and Letter exports each fit one page for both sheets; phone/desktop and print rendering inspected. Evidence: step-7-past-journey-check.log, step-7-past-journey-final-gates.log, step-7-past-journey-final-browser.log, step-7-past-journey-print-build.log, step-7-past-journey-print-final-browser.log and step-7-past-journey-local/print-check.json. Live checkpoint pending; the two sheets remain unchecked until deployed verification.
+Step 8 — compact book controls with visible pan/read guidance; saved view/zoom and recording positions included in complete backups; one focused original recording with repeat/resume and a bounded recording browser; speaker-separated transcripts; phrase selection and saved lines returning to the exact page/recording/line; deliberate official-answer reveal after reading. All 1,009 unique transcript lines now resolve to recorded generated pronunciation (839 new clips, existing exact audio reused), while original recordings remain separate. Source-line order, normalized source hash, exact-text clip identities and file presence are checked; the existing publication manifest verifies every new MP3 checksum. No unverified line synchronization is claimed. Local checkpoint passed: 993 full-suite tests and 654 separate web tests before final layout refinements; final 28 source/state tests, E2E types, lint, Pages gates, the final context export build and all eleven final browser journeys. The first export gate correctly rejected unregistered new audio; adding exact checksums to the existing audio manifest resolved it. Phone/desktop rendering inspected; the book image begins above 600 pixels on a 320-pixel-wide screen, approximately 300 pixels earlier than the first candidate. Evidence: step-8-check.log, step-8-final-source-state-tests.log, step-8-release-gates.log, step-8-context-build.log, step-8-release-browser.log, step-8-transcript-speech.json and step-8-local/. Live checkpoint pending; Step 8 remains open until deployed verification.
+
+Step 7, Yesterday/Seasons batch — illustrated sample-day and trip timelines; past sentence and auxiliary trails; optional participle references with saved concepts; opening-hour clocks and interpretation recall; an interactive seasonal wheel, month pronunciation and year chunks; exact saved sentence/month/year return settings; bounded scoped word cards and printable summaries. Existing source models, grammar qualifications, recall questions and source links are retained. All taught speech texts resolve to existing recorded pronunciation files. Local checkpoint passed: 989 full-suite tests and 651 separate web tests, final E2E types, lint and Pages gates; eight final browser journeys including Travel regression. Initial reload checks raced client navigation; waiting for the actual destination before reload resolved the test failures. After the final print-only spacing adjustment, Pages build and the focused print/card browser journey passed again. Actual A4 and Letter exports each fit one page for both sheets; phone/desktop and print rendering inspected. Evidence: step-7-past-journey-check.log, step-7-past-journey-final-gates.log, step-7-past-journey-final-browser.log, step-7-past-journey-print-build.log, step-7-past-journey-print-final-browser.log and step-7-past-journey-local/print-check.json. Live checkpoint passed: deployment 35540380532 (commit 752a8184), complete CI checks and all twenty-two live journeys covering the two sheets, Travel, shared actions and approved-sheet regressions. All four live A4/Letter PDFs fit one page and match local text; live phone/desktop views inspected. Evidence: step-7-past-journey-deployment.json, step-7-past-journey-live-tests.log and step-7-past-journey-live/print-check.json. All fifteen sheets have recorded live checkpoints; Step 7 is complete. Steps 8–9 remain open.
 
 Step 7, Travel batch — illustrated boarding/change/alighting sequence, prefix-to-sentence diagram, compact verb chooser, contextual saved sentences and announcements, scoped vocabulary/recall and a one-page print summary. Existing verb models, original-track links and source references are retained. Local checkpoint passed: 984 of 985 tests passed in the first full run; the only failure was a 20-second Node-boundary test timeout under load. That unchanged suite passed all 28 tests on retry, publication validation passed, and all 646 separate web tests passed. Final E2E types, lint, Pages gates and three final Travel browser journeys passed; the preceding six-journey run also covered Food. Actual final A4/Letter exports each fit one page and phone/desktop renderings were inspected. Evidence: step-7-travel-check.log, step-7-travel-boundary-recheck.log, step-7-travel-web-tests.log, step-7-travel-print-final-gates.log, step-7-travel-print-final-browser.log and step-7-travel-local/print-check.json. Live checkpoint passed: deployment 35539506539 (commit 7daa6a13), complete CI checks and all twelve live browser journeys covering Travel, Food and shared audio/dictionary/review actions. Actual live A4/Letter summaries each fit one page and match the local text; live phone rendering inspected. Evidence: step-7-travel-deployment.json, step-7-travel-live-tests.log and step-7-travel-live/print-check.json. Travel is complete; Yesterday/Seasons and Steps 8–9 remain open.
 

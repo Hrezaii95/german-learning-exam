@@ -1,0 +1,22 @@
+[
+  {
+    "file": "journeys-A4.pdf",
+    "pages": 1,
+    "matchesLocalText": true
+  },
+  {
+    "file": "journeys-Letter.pdf",
+    "pages": 1,
+    "matchesLocalText": true
+  },
+  {
+    "file": "past-A4.pdf",
+    "pages": 1,
+    "matchesLocalText": true
+  },
+  {
+    "file": "past-Letter.pdf",
+    "pages": 1,
+    "matchesLocalText": true
+  }
+]

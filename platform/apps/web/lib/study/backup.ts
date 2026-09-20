@@ -58,7 +58,9 @@ export function mergeBackup(current: CompleteBackup, incoming: ImportedBackup): 
     const a = incoming.study, b = current.study;
     merged.study = { ...b, ...(b.lastLesson === undefined && a.lastLesson !== undefined ? { lastLesson: a.lastLesson } : {}), saved: { ...a.saved, ...b.saved }, bookmarks: [...new Set([...a.bookmarks, ...b.bookmarks])],
       completedPages: [...new Set([...a.completedPages, ...b.completedPages])], resume: b.resume ?? a.resume,
-      lessonSessions: { ...a.lessonSessions, ...b.lessonSessions }, reviewedProfessions: [...new Set([...(a.reviewedProfessions ?? []), ...(b.reviewedProfessions ?? [])])] };
+      lessonSessions: { ...a.lessonSessions, ...b.lessonSessions }, reviewedProfessions: [...new Set([...(a.reviewedProfessions ?? []), ...(b.reviewedProfessions ?? [])])],
+      ...(b.reader ?? a.reader ? { reader: b.reader ?? a.reader } : {}),
+      ...(a.audioProgress || b.audioProgress ? { audioProgress: { ...a.audioProgress, ...b.audioProgress } } : {}) };
   }
   if (incoming.learner) {
     const a = incoming.learner, b = current.learner;

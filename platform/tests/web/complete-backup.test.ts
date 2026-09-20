@@ -16,6 +16,24 @@ const study: StudyState = {
 };
 
 describe("complete learning backup", () => {
+  it("round-trips reader preferences and recording positions and preserves current merge choices",()=>{
+    const source=memoryStore(),target=memoryStore();
+    const reading={...study,reader:{view:"split" as const,zoom:150},audioProgress:{"track-1":18,"track-2":32}};
+    applyBackup(source,{study:reading});
+    applyBackup(target,parseBackup(JSON.stringify(createCompleteBackup(source))));
+    expect(createCompleteBackup(target).study).toEqual(reading);
+    const merged=mergeBackup(createCompleteBackup(target),{study:{...study,reader:{view:"read",zoom:100},audioProgress:{"track-1":50,"track-3":12}}});
+    expect(merged.study?.reader).toEqual(reading.reader);
+    expect(merged.study?.audioProgress).toEqual({"track-1":18,"track-2":32,"track-3":12});
+    expect(mergeBackup(createCompleteBackup(memoryStore()),{study:reading}).study?.reader).toEqual(reading.reader);
+  });
+  it("rejects unsupported reader and recording state without changing existing data",()=>{
+    const store=memoryStore();applyBackup(store,{study});const before=[...store.values];
+    for(const invalid of [{reader:{view:"page",zoom:900}},{reader:{view:"unknown",zoom:100}},{audioProgress:{"track-1":-3}},{audioProgress:{"track-1":"20"}}]){
+      expect(()=>applyBackup(store,parseBackup(JSON.stringify({...study,...invalid})))).toThrow();
+      expect([...store.values]).toEqual(before);
+    }
+  });
   it("preserves the current Continue lesson during merge and restores it on an older device", () => {
     const current={...createCompleteBackup(memoryStore()),study};
     expect(mergeBackup(current,{study:{...study,lastLesson:4}}).study?.lastLesson).toBe(12);

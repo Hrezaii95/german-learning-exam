@@ -1,0 +1,14 @@
+
+ RUN  v3.2.7 E:/claude-cursor/side projects/German learning/platform
+
+ ✓ tests/web/book-transcripts.test.ts (6 tests) 418ms
+   ✓ source transcript mapping > keeps recorded fallback aligned to every source line and ships each audio file  325ms
+ ✓ tests/web/complete-backup.test.ts (11 tests) 40ms
+ ✓ tests/web/study-book.test.ts (11 tests) 2540ms
+   ✓ Lesson 4 source and exercise integration > has unique stable line IDs and real page images  1114ms
+   ✓ Lesson 4 source and exercise integration > has exact file-backed speech for every readable line and new study utterance  1302ms
+
+ Test Files  3 passed (3)
+      Tests  28 passed (28)
+   Start at  01:59:09
+   Duration  4.28s (transform 1.60s, setup 0ms, collect 2.69s, tests 3.00s, environment 1ms, prepare 749ms)

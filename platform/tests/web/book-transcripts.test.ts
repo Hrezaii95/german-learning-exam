@@ -1,11 +1,12 @@
 import { describe, expect, it } from "vitest";
-import { readFileSync } from "node:fs";
+import { readFileSync,statSync } from "node:fs";
+import {createHash} from "node:crypto";
 import { resolve } from "node:path";
 import { bookTranscript, workbookTranscript } from "../../apps/web/lib/audio/listening-transcripts";
 
 const book = JSON.parse(readFileSync(resolve("apps/web/generated/interactive-book.json"), "utf8")) as {audio: {id:string;kind:string;lesson:number;exercise:number}[];pages:{width:number}[]};
 describe("source transcript mapping", () => {
-  it("covers every original track in the seven-lesson book", () => {
+  it("covers every original track in the twelve-lesson book", () => {
     expect(book.audio).toHaveLength(208);
     for (const track of book.audio) {
       const transcript = bookTranscript(track.id)!;
@@ -14,6 +15,22 @@ describe("source transcript mapping", () => {
       expect(transcript.sourcePages.length).toBeGreaterThan(0);
       expect(transcript.credit).toContain("Hueber");
       for (const line of transcript.lines) expect(line.text).not.toMatch(/[\ue000-\uf8ff]/);
+    }
+  });
+  it("keeps recorded fallback aligned to every source line and ships each audio file",()=>{
+    const bytes=readFileSync(resolve("apps/web/generated/audio/listening-transcripts.json"));
+    const source=JSON.parse(bytes.toString()) as {tracks:Record<string,{lines:{text:string}[]}>;workbook:Record<string,{lines:{text:string}[]}>};
+    const speech=JSON.parse(readFileSync(resolve("apps/web/generated/audio/transcript-speech.json"),"utf8")) as {sourceSha256:string;tracks:Record<string,string[]>;workbook:Record<string,string[]>};
+    expect(speech.sourceSha256).toBe(createHash("sha256").update(bytes.toString().replace(/^\uFEFF/,"").replace(/\r\n/g,"\n")).digest("hex"));
+    for(const section of ["tracks","workbook"] as const)for(const [id,transcript] of Object.entries(source[section])){
+      const mapped=section==="tracks"?bookTranscript(id):workbookTranscript(id);
+      expect(speech[section][id]).toHaveLength(transcript.lines.length);
+      expect(mapped?.lines.map(line=>line.text)).toEqual(transcript.lines.map(line=>line.text));
+      for(const line of mapped!.lines){
+        expect(line.audio).toMatch(/^\/(?:book|audio|word-cards)\//);
+        expect(statSync(resolve("apps/web/public",line.audio!.slice(1))).size).toBeGreaterThan(1000);
+        if(line.audio!.startsWith("/book/transcript-speech/"))expect(line.audio).toBe(`/book/transcript-speech/${createHash("sha256").update(line.text).digest("hex").slice(0,20)}.mp3`);
+      }
     }
   });
   it("maps the workbook's shifted Lesson 4 numbering by exercise", () => {

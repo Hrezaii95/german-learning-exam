@@ -8,59 +8,17 @@ import { courseChapters } from "@/lib/study/lesson-four";
 import type {
   BookLine,
   BookManifest,
-  BookTrack,
   BookPage,
 } from "@/lib/study/types";
-import { ListeningTranscript } from "@/components/audio/ListeningTranscript";
+import {OriginalTrack} from "./BookRecording";
+import {bookContextHref} from "@/lib/study/book-reading";
+import "./BookLearning.css";
 import { GermanText, MeaningButton, SaveButton, useStudy } from "./StudyProvider";
 import { LineAudio, stopStudyAudio } from "./StudyAudio";
 import { BookAnswers } from "./BookAnswers";
 import { AudioSpeedControl, useAudioSpeed } from "@/components/audio/AudioSpeedControl";
 
-export function OriginalTrack({ track, rate }: { track: BookTrack; rate: number }) {
-  const ref = useRef<HTMLAudioElement>(null);
-  const [failed, setFailed] = useState(false);
-  useEffect(() => {
-    if (ref.current) ref.current.playbackRate = rate;
-  }, [rate]);
-  return (
-    <div className="book-track">
-      <div className="study-row">
-        <strong>{track.label}</strong>
-        <span className="study-tag">Original audio</span>
-      </div>
-      {/* The transcript is available on demand alongside the original recording. */}
-      {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
-      <audio
-        ref={ref}
-        src={withPagesBaseAssetPath(track.src)}
-        controls
-        preload="none"
-        aria-label={`${track.kind} ${track.label}, original recording`}
-        onError={() => setFailed(true)}
-        onPlay={(event) => {
-          stopStudyAudio(event.currentTarget);
-          event.currentTarget.playbackRate = rate;
-        }}
-      />
-      <ListeningTranscript transcript={track.transcript} href={`/book?page=${track.pageId}`} lesson={track.lesson}/>
-      {failed && (
-        <p role="alert">
-          Recording could not load.{" "}
-          <button
-            type="button"
-            onClick={() => {
-              setFailed(false);
-              ref.current?.load();
-            }}
-          >
-            Retry audio
-          </button>
-        </p>
-      )}
-    </div>
-  );
-}
+export {OriginalTrack} from "./BookRecording";
 
 function OriginalPage({
   page,
@@ -100,6 +58,7 @@ function OriginalPage({
           </select>
         </label>
       </div>
+      <p className="book-gesture-hint">{zoom?"Swipe within the page to pan. Choose Read text to select words and phrases.":"Whole page overview. Increase zoom to read, or choose Read text."}</p>
       <div
         className="book-page-scroll"
         tabIndex={0}
@@ -139,8 +98,7 @@ function OriginalPage({
         </div>
       </div>
       <p className="book-page-caption">
-        © Hueber Verlag · Tap a line for its meaning. Scroll across on a small
-        screen, or choose Fit width.
+        © Hueber Verlag · Tap a line for its meaning.
       </p>
     </section>
   );
@@ -169,8 +127,12 @@ export function BookReader({
   const rate = audioSpeed.speed;
   const [zoom, setZoom] = useState(100);
   const [selected, setSelected] = useState<string | null>(null);
+  const selectedLineRef=useRef<HTMLDivElement>(null);
   const [search, setSearch] = useState("");
   const [showContents, setShowContents] = useState(false);
+  useEffect(()=>{if(study?.ready){setView(study.state.reader?.view??"page");setZoom(study.state.reader?.zoom??100);}},[study?.ready,study?.state.reader]);
+  function changeView(next:"read"|"page"|"split"){setView(next);study?.update(old=>({...old,reader:{view:next,zoom}}));}
+  function changeZoom(next:number){setZoom(next);study?.update(old=>({...old,reader:{view,zoom:next}}));}
   useEffect(() => {
     if (!expanded) {
       fullscreen.current?.close();
@@ -192,7 +154,13 @@ export function BookReader({
   const index = allKindPages.findIndex((p) => p.id === page.id);
   const nearbyPages = allKindPages.slice(Math.max(0,index-2),Math.min(allKindPages.length,index+3));
   const tracks = book.audio.filter((track) => page.audioIds.includes(track.id));
+  const activeTrack=tracks.find(track=>track.id===params.get("track"))??tracks[0];
+  const requestedTranscriptLine=Number(params.get("transcriptLine"));
+  const transcriptLine=params.has("transcriptLine")&&Number.isInteger(requestedTranscriptLine)&&requestedTranscriptLine>=0&&requestedTranscriptLine<(activeTrack?.transcript?.lines.length??0)?requestedTranscriptLine:undefined;
+  useEffect(()=>{const lineId=params.get("line");setSelected(page.lines.some(line=>line.id===lineId)?lineId:null);},[page,params]);
   const line = page.lines.find((l) => l.id === selected);
+  useEffect(()=>{if(line&&!expanded&&!showContents)selectedLineRef.current?.scrollIntoView({block:"center"});},[line,expanded,showContents]);
+  function selectLine(id:string){setSelected(id);router.replace(bookContextHref(page.id,{line:id,...(activeTrack?{track:activeTrack.id}:{})}),{scroll:false});}
   const marked = study?.state.bookmarks.includes(page.id) ?? false;
   const done = study?.state.completedPages.includes(page.id) ?? false;
   const results = useMemo(
@@ -222,10 +190,10 @@ export function BookReader({
       );
     return () => stopStudyAudio();
   }, [page.id, ready, update]);
-  function go(id: string) {
+  function go(id: string,lineId?:string) {
     stopStudyAudio();
-    setSelected(null);
-    router.replace(`/book?page=${encodeURIComponent(id)}`, { scroll: false });
+    setSelected(lineId??null);
+    router.replace(bookContextHref(id,lineId?{line:lineId}:{}), { scroll: false });
   }
   if(!selectedPages.length)return <div className="book-workspace"><h1>Your interactive book</h1><p role="status">No book pages match this selection. Book pages are course material, grouped by the concepts taught in each lesson.</p><button type="button" className="study-primary" onClick={()=>setScope(defaultStudyScope())}>Show all book pages</button></div>;
   function lineMeaning(value: BookLine) {
@@ -262,7 +230,7 @@ export function BookReader({
             title: value.text,
             meaning: lineMeaning(value),
             kind: "line",
-            href: `/book?page=${page.id}`,
+            href: bookContextHref(page.id,{line:value.id}),
             lesson: page.lesson,
             studyTags:{...tagsForLesson(page.lesson),lessons:page.lessons??[page.lesson]},
             audio: speech[value.text] ?? null,
@@ -277,15 +245,9 @@ export function BookReader({
       <header className="book-header">
         <div>
           <p className="study-eyebrow">Momente A1 · Lessons 1–{LAST_AVAILABLE_LESSON}</p>
-          <h1>Your interactive book</h1>
-          <p className="muted">Read it. Hear it. Make it yours.</p>
+          <h1>{page.kind==="coursebook"?"Coursebook":"Workbook"} · {page.pageLabel??`Page ${page.printedPage}`}</h1>
+          <p className="book-current-topic" lang="de">{chapter.title}</p>
         </div>
-        <Link className="study-secondary" href="/saved">
-          My review <span>{Object.keys(study?.state.saved ?? {}).length}</span>
-        </Link>
-      </header>
-      <div className="book-top-tools">
-        <Link href="/cheat-sheets" className="study-secondary">Cheat sheets →</Link>
         <button
           type="button"
           className="study-secondary"
@@ -294,6 +256,8 @@ export function BookReader({
         >
           ☷ Contents & search
         </button>
+      </header>
+      {showContents&&<div className="book-source-picker"><Link className="study-secondary" href="/saved">My review</Link><Link className="study-secondary" href="/cheat-sheets">Cheat sheets →</Link>
         <div className="study-segmented" role="group" aria-label="Book type">
           {["coursebook", "workbook"].map((kind) => (
             <button
@@ -328,7 +292,7 @@ export function BookReader({
             ))}
           </select>
         </label>
-      </div>
+      </div>}
       {showContents && (
         <aside className="book-contents" aria-label="Book contents">
           <div>
@@ -348,8 +312,7 @@ export function BookReader({
                     type="button"
                     key={result.line.id}
                     onClick={() => {
-                      go(result.page.id);
-                      setSelected(result.line.id);
+                      go(result.page.id,result.line.id);
                       setSearch("");
                       setShowContents(false);
                     }}
@@ -376,7 +339,7 @@ export function BookReader({
                       setShowContents(false);
                     }}
                   >
-                    <b>0{c.number}</b>
+                    <b>{String(c.number).padStart(2,"0")}</b>
                     <span>
                       <strong lang="de">{c.title}</strong>
                       <small>{c.topic}</small>
@@ -414,7 +377,7 @@ export function BookReader({
           </div>
         </aside>
       )}
-      <section className="book-chapter-title">
+      {showContents&&<section className="book-chapter-title">
         <div>
           <span className="book-chapter-number">{page.section?.startsWith("Getting")?"A1":page.section?.startsWith("Module")?`M${page.section.match(/^Module (\d+)/)?.[1]??1}`:String(page.lesson).padStart(2,"0")}</span>
           <div>
@@ -423,25 +386,10 @@ export function BookReader({
           </div>
         </div>
         <Link href={page.section?.startsWith("Lesson")?`/lessons/${String(page.lesson).padStart(2,"0")}`:"/lessons"}>{page.section?.startsWith("Lesson")?"Study lesson":"Explore lessons"} →</Link>
-      </section>
+      </section>}
       <div className="book-reading-tools">
         <label className="study-inline-field book-page-picker">Go to page<select aria-label="Go to page" value={page.id} onChange={event=>go(event.target.value)}>{allKindPages.map(p=><option value={p.id} key={p.id}>{p.pageLabel??`Page ${p.printedPage}`} · {p.section??`Lesson ${p.lesson}`}</option>)}</select></label>
-        <div className="study-segmented" role="group" aria-label="Reading view">
-          {(["split", "page", "read"] as const).map((mode) => (
-            <button
-              type="button"
-              key={mode}
-              aria-pressed={view === mode}
-              onClick={() => setView(mode)}
-            >
-              {mode === "split"
-                ? "Page + text"
-                : mode === "page"
-                  ? "Original page"
-                  : "Reading mode"}
-            </button>
-          ))}
-        </div>
+        <label className="study-inline-field">View<select aria-label="Reading view" value={view} onChange={event=>changeView(event.target.value as "read"|"page"|"split")}><option value="page">Page</option><option value="read">Read text</option><option value="split">Both</option></select></label>
         <button
           type="button"
           className="study-secondary"
@@ -466,15 +414,14 @@ export function BookReader({
           {marked ? "★ Bookmarked" : "☆ Bookmark"}
         </button>
       </div>
-      <BookAnswers key={page.id} page={page} speech={speech} rate={rate}/>
       <div className={`book-reading-grid book-view-${view}`}>
         {view !== "read" && (
           <OriginalPage
             page={page}
             zoom={zoom}
-            setZoom={setZoom}
+            setZoom={changeZoom}
             selected={selected}
-            select={setSelected}
+            select={selectLine}
           />
         )}
         <section
@@ -485,20 +432,19 @@ export function BookReader({
           {tracks.length > 0 && (
             <div className="book-original-audio">
               <h3>Listen to the book</h3>
-              {tracks.map((track) => (
-                <OriginalTrack key={track.id} track={track} rate={rate} />
-              ))}
+              {tracks.length>1&&<label className="study-field">Recording<select aria-label="Page recording" value={activeTrack!.id} onChange={event=>router.replace(bookContextHref(page.id,{track:event.target.value}),{scroll:false})}>{tracks.map(track=><option key={track.id} value={track.id}>{track.label}</option>)}</select></label>}
+              {activeTrack&&<><OriginalTrack key={activeTrack.id} track={activeTrack} rate={rate} {...(transcriptLine!==undefined?{transcriptLine}:{})}/><Link href={`/listening?track=${encodeURIComponent(activeTrack.id)}`}>Open focused listening →</Link></>}
             </div>
           )}
           {line && (
-            <div className="book-selected-line">
+            <div className="book-selected-line" ref={selectedLineRef}>
               <div className="study-row">
                 <strong>Selected line</strong>
                 <button
                   className="study-icon-button"
                   type="button"
                   aria-label="Clear selected line"
-                  onClick={() => setSelected(null)}
+                  onClick={() => {setSelected(null);router.replace(bookContextHref(page.id),{scroll:false});}}
                 >
                   ✕
                 </button>
@@ -529,6 +475,7 @@ export function BookReader({
           )}
         </section>
       </div>
+      <BookAnswers key={page.id} page={page} speech={speech} rate={rate}/>
       <footer className="book-page-nav">
         <button
           type="button"
@@ -611,9 +558,9 @@ export function BookReader({
             <OriginalPage
               page={page}
               zoom={zoom}
-              setZoom={setZoom}
+              setZoom={changeZoom}
               selected={selected}
-              select={setSelected}
+              select={selectLine}
             />
           </>
         )}
