@@ -1,0 +1,400 @@
+
+> german-learning-platform@0.0.0 check
+> npm run typecheck && npm run typecheck:web && npm run typecheck:web-tests && npm run lint:web && npm test && npm run validate:publication && npm run test:web
+
+
+> german-learning-platform@0.0.0 typecheck
+> tsc --noEmit -p tsconfig.json
+
+
+> german-learning-platform@0.0.0 typecheck:web
+> npm run typecheck -w @german-learning/web
+
+
+> @german-learning/web@0.1.0 typecheck
+> tsc --noEmit -p tsconfig.json
+
+
+> german-learning-platform@0.0.0 typecheck:web-tests
+> npm run typecheck:tests -w @german-learning/web
+
+
+> @german-learning/web@0.1.0 typecheck:tests
+> tsc --noEmit -p tsconfig.tests.json
+
+
+> german-learning-platform@0.0.0 lint:web
+> eslint apps/web --max-warnings=0
+
+
+> german-learning-platform@0.0.0 test
+> vitest run --config vitest.config.ts
+
+
+ RUN  v3.2.7 E:/claude-cursor/side projects/German learning/platform
+
+ ✓ tests/web/activity-content-behavior.test.ts (7 tests) 3333ms
+   ✓ lesson activity interaction behavior > requires a real listening note and media confirmation before completing an ungraded workbook activity  773ms
+   ✓ lesson activity interaction behavior > checks matching answers with native radios and advances only on correctness  352ms
+   ✓ lesson activity interaction behavior > supports a keyboard-operable phrase builder and exact source-backed checking  620ms
+   ✓ lesson activity interaction behavior > persists the registered attempt owner for activity:lesson-02-profession-qa-builder  451ms
+ ✓ tests/web/p4b-conversation-behavior.test.ts (3 tests) 3979ms
+   ✓ P4B conversation behavioral interactions > locks later levels until prior completion; construction feedback works  1942ms
+   ✓ P4B conversation behavioral interactions > hint/reveal prevents correct strong evidence on construction  1329ms
+   ✓ P4B conversation behavioral interactions > correct submit without Continue does not unlock next level  333ms
+ ✓ tests/web/pronunciation-review-ui.test.ts (18 tests) 6755ms
+   ✓ the list > puts all 110 clips on the page at once  1156ms
+   ✓ choosing what to listen to > counts each sound on its own control  506ms
+   ✓ choosing what to listen to > narrows the page to one sound and back again  470ms
+   ✓ recording a verdict > keeps a free-text note beside the verdict  673ms
+   ✓ recording a verdict > reads an earlier sitting back off this device  614ms
+   ✓ resuming a sitting > hides what is already done so the next sitting starts where it stopped  365ms
+   ✓ the download > hands over a JSON file bound to the audio that was judged  1046ms
+   ✓ accessible names and targets > starts every control's spoken name with the words on screen  326ms
+ ✓ tests/web/word-family-cards-ui.test.ts (11 tests) 3027ms
+   ✓ original vocabulary browsing with complete cards > keeps every complete family reachable through the original grid inventory  499ms
+   ✓ original vocabulary browsing with complete cards > preserves the original filter form and grid, with one aggregated engineer result  1031ms
+   ✓ original vocabulary browsing with complete cards > clears edited form values when navigation clears the active filters  308ms
+   ✓ complete word-family cards > hides study material during recall and checks all four answers  328ms
+ ✓ tests/web/j2-resume-pointer-behavior.test.ts (4 tests) 2004ms
+   ✓ J2 resume pointer > seeds the pointer when the learner has none, so a direct URL still offers Continue  402ms
+ ✓ tests/web/course-library-navigation-behavior.test.ts (11 tests) 10185ms
+   ✓ bounded course libraries and return context > bounds vocabulary and preserves page context on every result  899ms
+   ✓ bounded course libraries and return context > offers consistent paths and progressively reveals every lesson word  7830ms
+   ✓ bounded course libraries and return context > filters all search matches before paging instead of dropping later lessons after fifty hits  607ms
+ ✓ tests/web/shared-audio-preferences-behavior.test.ts (4 tests) 1700ms
+   ✓ shared pronunciation preference > uses the saved speed for line speech and word cards, stops the previous clip and retains it after remount  1179ms
+ ✓ tests/web/p4a-games-behavior.test.ts (7 tests) 1722ms
+   ✓ P4A practice behavioral interactions > article-choice: empty submit does not emit; selection+submit emits correct  515ms
+   ✓ P4A practice behavioral interactions > morphology-puzzle: incorrect submit emits incorrect; hint path stays non-strong  374ms
+ ✓ tests/web/p6-a11y-remediation-behavior.test.ts (13 tests) 1618ms
+   ✓ P6 status messages (WCAG 4.1.3) > announces a second identical wrong answer instead of falling silent  449ms
+ ✓ tests/web/p2a-studio-dashboard-behavior.test.ts (5 tests) 1336ms
+   ✓ P2A studio dashboard behavior > shows the due/new mix and a single primary mission action once cards exist  480ms
+ ✓ tests/web/p4c-learner-ui-behavior.test.ts (5 tests) 1530ms
+   ✓ P4C learner UI behavior > carries the chosen review filters into the session  822ms
+ ✓ tests/web/p4b-spoken-behavior.test.ts (2 tests) 1006ms
+   ✓ P4B spoken role-play behavioral gate > disables mic actions while controller is initializing  369ms
+   ✓ P4B spoken role-play behavioral gate > does not complete until record+playback+self-check; one recordingCycle only  621ms
+ ✓ tests/web/pronunciation-control-behavior.test.ts (2 tests) 535ms
+   ✓ pronunciation control behavior > plays immediately at normal speed and exposes the exact synthesized text  313ms
+ ✓ tests/web/p4b-recorder-lifecycle-behavior.test.ts (14 tests) 29ms
+ ✓ tests/web/german-text-ui.test.ts (2 tests) 415ms
+   ✓ preserves punctuation and spaces while keeping sentence endings attached to their words  358ms
+ ✓ tests/web/lesson-twelve.test.ts (8 tests) 6225ms
+   ✓ Lesson 12 and complete A1.1 source integration > shares dictionary and review identities without collisions  5833ms
+ ✓ tests/web/lesson-ten.test.ts (7 tests) 7985ms
+   ✓ Lesson 10 travel and separable verbs > shares dictionary and review identity across all builder combinations  7567ms
+ ✓ tests/web/lesson-eleven.test.ts (7 tests) 9773ms
+   ✓ Lesson 11 source and Perfekt integration > shares dictionary, phrase and vocabulary-card review information  9339ms
+ ✓ tests/content/schema-contract.test.ts (48 tests) 2416ms
+   ✓ C0R1 CLI negative contracts > missing argument exits nonzero without credentials  781ms
+   ✓ C0R1 CLI negative contracts > invalid JSON exits nonzero with INVALID_JSON  697ms
+   ✓ C0R1 CLI negative contracts > structurally valid but rejected fixture exits nonzero with stable codes  741ms
+ ✓ tests/web/pronunciation-review.test.ts (28 tests) 10792ms
+   ✓ client boundary > keeps every Node builtin above the client boundary  9268ms
+   ✓ client boundary > finds the client components this page is actually made of  558ms
+   ✓ the route's place > is absent from learner navigation  765ms
+ ✓ tests/web/p3c-search.test.ts (14 tests) 5639ms
+   ✓ P3C typed global search projection > never includes review/draft/blocked/private/audio/secret material  5056ms
+ ✓ tests/web/vocabulary-examples-ui.test.ts (13 tests) 4657ms
+   ✓ vocabulary example rendering > renders the review line on every app-authored sentence, and only those  1147ms
+   ✓ vocabulary example rendering > keeps the example wording clear of the learner-language rules  972ms
+   ✓ vocabulary example rendering > never renders an example section without both languages and its label  959ms
+ ✓ tests/web/study-book.test.ts (11 tests) 3704ms
+   ✓ Lesson 4 source and exercise integration > has unique stable line IDs and real page images  1449ms
+   ✓ Lesson 4 source and exercise integration > has exact file-backed speech for every readable line and new study utterance  2133ms
+ ✓ tests/web/lesson-nine.test.ts (6 tests) 4102ms
+   ✓ Lesson 9 food and Module 3 source coverage > covers all source entries and preserves both accepted Ketchup articles  309ms
+   ✓ Lesson 9 food and Module 3 source coverage > distinguishes general food preferences from countable servings  3694ms
+ ✓ tests/content/indexes-search.test.ts (31 tests) 1955ms
+   ✓ C2A typed indexes and search (real publication) > hub filter primitives: lesson, learned/all-ready, priority, kind, relationship, mastery/due projections  397ms
+ ✓ tests/web/lesson-six.test.ts (5 tests) 1690ms
+   ✓ Lesson 6 and Module 2 integration > includes both complete modules and every partner-activity page  493ms
+   ✓ Lesson 6 and Module 2 integration > keeps official keys and model answers distinct and exposes irregular verbs  946ms
+ ✓ tests/web/lesson-eight.test.ts (7 tests) 2666ms
+   ✓ Lesson 8 time, plans and source coverage > keeps shared save identity for the same everyday time in morning and afternoon  1447ms
+   ✓ Lesson 8 time, plans and source coverage > keeps the verb second and chooses the destination article  814ms
+ ✓ tests/web/home-cheatsheet.test.ts (6 tests) 2664ms
+   ✓ home and furniture cheat sheet > makes new nouns and plurals available in the in-app dictionary  2581ms
+ ✓ tests/content/publication-package.test.ts (27 tests) 892ms
+ ✓ tests/web/collection-cheatsheets.test.ts (10 tests) 2534ms
+   ✓ four connected learning sheets > covers all first-four-lesson family entries and preserves source card identities  730ms
+   ✓ four connected learning sheets > resolves new full sentences and inflected verbs in the dictionary  868ms
+   ✓ four connected learning sheets > ships exact audio with verified manifest hashes  634ms
+ ✓ tests/web/p3c-search-ui.test.ts (8 tests) 2297ms
+   ✓ P3C search UI + shell contracts > renders malicious nav payloads as safe Back hrefs on lesson and activity  385ms
+ ✓ tests/web/p5-content-enrichment.test.ts (5 tests) 2174ms
+   ✓ P5 learner content enrichment > is deterministically generated and contains no source, private, media, HTML, or assertion leaks  1257ms
+ ✓ tests/web/p2b-hub-card-anatomy-ui.test.ts (10 tests) 1652ms
+ ✓ tests/web/hobby-time-learning.test.ts (7 tests) 1267ms
+   ✓ time practice context > provides recorded teaching clips and contextual dictionary returns  1089ms
+ ✓ tests/web/lesson-five.test.ts (5 tests) 1244ms
+   ✓ Lesson 5 source integration > has official keys, separate study quizzes and dictionary support  965ms
+ ✓ tests/web/p6-offline-first.test.ts (50 tests) 1708ms
+   ✓ app icons > regenerates byte-identically to the committed files  1602ms
+ ✓ tests/web/lesson-seven.test.ts (7 tests) 1632ms
+   ✓ Lesson 7 source coverage and modal sentence learning > covers every source vocabulary row with an accessible tagged word card  398ms
+   ✓ Lesson 7 source coverage and modal sentence learning > shares saved IDs with the dictionary and includes the new question in Lesson 7  1016ms
+ ✓ tests/web/p3a-web-shell-ui.test.ts (6 tests) 1182ms
+ ✓ tests/web/p3b-hubs-ui.test.ts (7 tests) 1154ms
+ ✓ tests/web/question-cheatsheet.test.ts (6 tests) 1152ms
+   ✓ question patterns and learning support > makes the new whole-question and reply meanings available in the dictionary  1068ms
+ ✓ tests/web/p3d-details.test.ts (10 tests) 1233ms
+   ✓ P3D learner detail projection > requires deterministic disk artifact and rejects leaks  649ms
+ ✓ tests/web/lesson-label-ui.test.ts (3 tests) 897ms
+   ✓ learner-visible lesson labels > renders no padded lesson label on lesson, hub, or detail surfaces  889ms
+ ✓ tests/web/p4a-games-ui.test.ts (5 tests) 929ms
+ ✓ tests/web/object-learning.test.ts (6 tests) 1121ms
+   ✓ lesson sheet card recall > resolves exact description and phone clips, with extra shape words labelled honestly  1065ms
+stderr | tests/web/extra-professions-ui.test.ts > extra professions learner UI > offers every electrician form inline from the actual word-card audio catalog
+Received `false` for a non-boolean attribute `prefetch`.
+
+If you want to write it to the DOM, pass a string instead: prefetch="false" or prefetch={value.toString()}.
+
+If you used to conditionally omit it with prefetch={condition && value}, pass prefetch={condition ? value : undefined} instead.
+
+ ✓ tests/web/extra-professions-ui.test.ts (4 tests) 948ms
+ ✓ tests/web/p2a-studio-dashboard-ui.test.ts (8 tests) 845ms
+ ✓ tests/web/deploy1r1-pages-hardening.test.ts (14 tests) 1219ms
+ ✓ tests/web/p3d-details-ui.test.ts (6 tests) 901ms
+ ✓ tests/web/listening-concepts-hubs.test.ts (7 tests) 761ms
+ ✓ tests/learning/persistence.test.ts (81 tests) 269ms
+ ✓ tests/web/grammar-sheet-learning.test.ts (7 tests) 510ms
+   ✓ published verb forms explained without generating new forms > builds recall only from the visible source cards  452ms
+ ✓ tests/web/people-sheet.test.ts (3 tests) 420ms
+   ✓ family teaching and scoped recall > retains the eight pattern checks and offers recall only for matching cards  405ms
+ ✓ tests/web/p3b-hubs.test.ts (13 tests) 571ms
+ ✓ tests/web/study-lookup.test.ts (7 tests) 639ms
+ ✓ tests/content/lexeme-examples.test.ts (21 tests) 168ms
+ ✓ tests/web/study-scope.test.ts (8 tests) 580ms
+   ✓ shared study selection contract > gives every actual word family a lesson and concept, including legacy ranges  543ms
+ ✓ tests/web/number-learning.test.ts (5 tests) 514ms
+   ✓ number reading order > recombines every number through 9999 and larger boundary examples exactly  468ms
+ ✓ tests/learning/review.test.ts (40 tests) 102ms
+ ✓ tests/web/country-cheatsheet.test.ts (6 tests) 271ms
+ ✓ tests/web/food-learning.test.ts (4 tests) 378ms
+   ✓ food learning > uses the actual course noun forms and existing recorded speech  341ms
+ ✓ tests/learning/mastery.test.ts (62 tests) 152ms
+ ✓ tests/web/p6-page-titles.test.ts (6 tests) 367ms
+ ✓ tests/web/conversation-learning.test.ts (5 tests) 261ms
+ ✓ tests/web/p5-instructional-visual-system.test.ts (5 tests) 254ms
+ ✓ tests/web/past-journey-learning.test.ts (4 tests) 249ms
+ ✓ tests/web/p6-vocabulary-concept-illustrations.test.ts (9 tests) 151ms
+ ✓ tests/web/p5-media-integration.test.ts (4 tests) 241ms
+ ✓ tests/web/travel-learning.test.ts (3 tests) 142ms
+ ✓ tests/web/p3a-web-shell.test.ts (22 tests) 107ms
+ ✓ tests/web/activity-content-plans.test.ts (4 tests) 146ms
+ ✓ tests/web/book-answer-coverage.test.ts (8 tests) 127ms
+ ✓ tests/learning/rewards.test.ts (13 tests) 98ms
+ ✓ tests/web/p5-profession-concept-illustrations.test.ts (14 tests) 139ms
+ ✓ tests/web/extra-professions-projection.test.ts (5 tests) 117ms
+ ✓ tests/web/p4c-state-core.test.ts (8 tests) 85ms
+ ✓ tests/web/j1-activity-runtime.test.ts (2 tests) 133ms
+ ✓ tests/content/lesson-01-02-source-gap-closure.test.ts (16 tests) 32ms
+ ✓ tests/web/pronunciation-live.test.ts (3 tests) 117ms
+ ✓ tests/web/book-transcripts.test.ts (5 tests) 121ms
+ ✓ tests/web/p3ar2-proxy.test.ts (5 tests) 173ms
+ ✓ tests/web/p5-rapid-content.test.ts (4 tests) 70ms
+ ✓ tests/web/sheet-recall.test.ts (4 tests) 81ms
+ ✓ tests/web/complete-backup.test.ts (9 tests) 35ms
+ ✓ tests/web/p5-rich-visuals.test.ts (3 tests) 29ms
+ ✓ tests/web/p4b-conversation-ui.test.ts (3 tests) 35ms
+ ✓ tests/web/p4a-games.test.ts (14 tests) 36ms
+ ✓ tests/web/country-overview.test.ts (5 tests) 44ms
+ ✓ tests/web/p4b-conversation.test.ts (13 tests) 28ms
+ ✓ tests/web/sheet-navigation.test.ts (4 tests) 15ms
+ ✓ tests/web/detail1-generic-details.test.ts (3 tests) 12ms
+ ✓ tests/web/course-phrase-identity-ui.test.ts (1 test) 22ms
+ ✓ tests/web/p6-gender-badge-contrast.test.ts (8 tests) 10ms
+ ✓ tests/web/deploy1r2-pages-smoke-hydration.test.ts (6 tests) 9ms
+ ✓ tests/web/profession-patterns.test.ts (1 test) 6ms
+ ✓ tests/web/export-path-leaks.test.ts (3 tests) 6ms
+
+ Test Files  95 passed (95)
+      Tests  989 passed (989)
+   Start at  01:14:46
+   Duration  90.33s (transform 11.39s, setup 0ms, collect 67.81s, tests 139.25s, environment 100.14s, prepare 18.81s)
+
+
+> german-learning-platform@0.0.0 validate:publication
+> tsx packages/content/src/cli/validate-publication.ts
+
+PUBLICATION_DIR	E:\claude-cursor\side projects\German learning\platform\content\published
+REQUIRED_FRAGMENTS	lesson-01.json,lesson-02.json,teacher-professions.json,activities.json,listening-assets.json
+VALIDATION_OK
+
+> german-learning-platform@0.0.0 test:web
+> vitest run --config vitest.config.ts tests/web
+
+
+ RUN  v3.2.7 E:/claude-cursor/side projects/German learning/platform
+
+ ✓ tests/web/lesson-twelve.test.ts (8 tests) 7541ms
+   ✓ Lesson 12 and complete A1.1 source integration > covers every glossary entry with cards and twelve selectable lessons  432ms
+   ✓ Lesson 12 and complete A1.1 source integration > shares dictionary and review identities without collisions  6931ms
+ ✓ tests/web/lesson-ten.test.ts (7 tests) 9462ms
+   ✓ Lesson 10 travel and separable verbs > covers every source entry with family grouping and accepts both taxi plurals  358ms
+   ✓ Lesson 10 travel and separable verbs > shares dictionary and review identity across all builder combinations  8847ms
+ ✓ tests/web/lesson-eleven.test.ts (7 tests) 10785ms
+   ✓ Lesson 11 source and Perfekt integration > covers the glossary and source activity verbs with correct past forms  348ms
+   ✓ Lesson 11 source and Perfekt integration > shares dictionary, phrase and vocabulary-card review information  10245ms
+ ✓ tests/web/pronunciation-review.test.ts (28 tests) 13611ms
+   ✓ client boundary > keeps every Node builtin above the client boundary  12971ms
+ ✓ tests/web/p3c-search.test.ts (14 tests) 5131ms
+   ✓ P3C typed global search projection > never includes review/draft/blocked/private/audio/secret material  4606ms
+ ✓ tests/web/vocabulary-examples-ui.test.ts (13 tests) 4320ms
+   ✓ vocabulary example rendering > renders the review line on every app-authored sentence, and only those  953ms
+   ✓ vocabulary example rendering > keeps the example wording clear of the learner-language rules  861ms
+   ✓ vocabulary example rendering > never renders an example section without both languages and its label  937ms
+ ✓ tests/web/lesson-nine.test.ts (6 tests) 3919ms
+   ✓ Lesson 9 food and Module 3 source coverage > covers all source entries and preserves both accepted Ketchup articles  461ms
+   ✓ Lesson 9 food and Module 3 source coverage > distinguishes general food preferences from countable servings  3375ms
+ ✓ tests/web/study-book.test.ts (11 tests) 2702ms
+   ✓ Lesson 4 source and exercise integration > has unique stable line IDs and real page images  1181ms
+   ✓ Lesson 4 source and exercise integration > has exact file-backed speech for every readable line and new study utterance  1430ms
+ ✓ tests/web/collection-cheatsheets.test.ts (10 tests) 1901ms
+   ✓ four connected learning sheets > covers all first-four-lesson family entries and preserves source card identities  596ms
+   ✓ four connected learning sheets > resolves new full sentences and inflected verbs in the dictionary  643ms
+   ✓ four connected learning sheets > ships exact audio with verified manifest hashes  450ms
+ ✓ tests/web/home-cheatsheet.test.ts (6 tests) 2278ms
+   ✓ home and furniture cheat sheet > makes new nouns and plurals available in the in-app dictionary  2211ms
+ ✓ tests/web/lesson-eight.test.ts (7 tests) 2295ms
+   ✓ Lesson 8 time, plans and source coverage > keeps shared save identity for the same everyday time in morning and afternoon  1286ms
+   ✓ Lesson 8 time, plans and source coverage > keeps the verb second and chooses the destination article  624ms
+ ✓ tests/web/p6-offline-first.test.ts (50 tests) 1579ms
+   ✓ app icons > regenerates byte-identically to the committed files  1464ms
+ ✓ tests/web/lesson-six.test.ts (5 tests) 1573ms
+   ✓ Lesson 6 and Module 2 integration > includes both complete modules and every partner-activity page  644ms
+   ✓ Lesson 6 and Module 2 integration > keeps official keys and model answers distinct and exposes irregular verbs  670ms
+ ✓ tests/web/p5-content-enrichment.test.ts (5 tests) 2076ms
+   ✓ P5 learner content enrichment > is deterministically generated and contains no source, private, media, HTML, or assertion leaks  1314ms
+ ✓ tests/web/p3c-search-ui.test.ts (8 tests) 2282ms
+ ✓ tests/web/p2b-hub-card-anatomy-ui.test.ts (10 tests) 1246ms
+ ✓ tests/web/hobby-time-learning.test.ts (7 tests) 932ms
+   ✓ time practice context > provides recorded teaching clips and contextual dictionary returns  797ms
+ ✓ tests/web/lesson-seven.test.ts (7 tests) 1254ms
+   ✓ Lesson 7 source coverage and modal sentence learning > covers every source vocabulary row with an accessible tagged word card  315ms
+   ✓ Lesson 7 source coverage and modal sentence learning > shares saved IDs with the dictionary and includes the new question in Lesson 7  770ms
+ ✓ tests/web/lesson-five.test.ts (5 tests) 927ms
+   ✓ Lesson 5 source integration > has official keys, separate study quizzes and dictionary support  695ms
+ ✓ tests/web/deploy1r1-pages-hardening.test.ts (14 tests) 740ms
+ ✓ tests/web/p3a-web-shell-ui.test.ts (6 tests) 1079ms
+ ✓ tests/web/p3d-details.test.ts (10 tests) 1106ms
+   ✓ P3D learner detail projection > requires deterministic disk artifact and rejects leaks  580ms
+ ✓ tests/web/p3b-hubs-ui.test.ts (7 tests) 1190ms
+ ✓ tests/web/question-cheatsheet.test.ts (6 tests) 1272ms
+   ✓ question patterns and learning support > makes the new whole-question and reply meanings available in the dictionary  1154ms
+stderr | tests/web/extra-professions-ui.test.ts > extra professions learner UI > offers every electrician form inline from the actual word-card audio catalog
+Received `false` for a non-boolean attribute `prefetch`.
+
+If you want to write it to the DOM, pass a string instead: prefetch="false" or prefetch={value.toString()}.
+
+If you used to conditionally omit it with prefetch={condition && value}, pass prefetch={condition ? value : undefined} instead.
+
+ ✓ tests/web/object-learning.test.ts (6 tests) 1172ms
+   ✓ lesson sheet card recall > resolves exact description and phone clips, with extra shape words labelled honestly  1102ms
+ ✓ tests/web/extra-professions-ui.test.ts (4 tests) 919ms
+   ✓ extra professions learner UI > offers every electrician form inline from the actual word-card audio catalog  308ms
+ ✓ tests/web/p4a-games-ui.test.ts (5 tests) 1044ms
+ ✓ tests/web/p3d-details-ui.test.ts (6 tests) 762ms
+ ✓ tests/web/p2a-studio-dashboard-ui.test.ts (8 tests) 791ms
+ ✓ tests/web/lesson-label-ui.test.ts (3 tests) 950ms
+   ✓ learner-visible lesson labels > renders no padded lesson label on lesson, hub, or detail surfaces  941ms
+ ✓ tests/web/listening-concepts-hubs.test.ts (7 tests) 601ms
+ ✓ tests/web/study-scope.test.ts (8 tests) 360ms
+   ✓ shared study selection contract > gives every actual word family a lesson and concept, including legacy ranges  334ms
+ ✓ tests/web/study-lookup.test.ts (7 tests) 490ms
+ ✓ tests/web/number-learning.test.ts (5 tests) 405ms
+   ✓ number reading order > recombines every number through 9999 and larger boundary examples exactly  379ms
+ ✓ tests/web/p3b-hubs.test.ts (13 tests) 466ms
+ ✓ tests/web/grammar-sheet-learning.test.ts (7 tests) 376ms
+   ✓ published verb forms explained without generating new forms > builds recall only from the visible source cards  334ms
+ ✓ tests/web/people-sheet.test.ts (3 tests) 368ms
+   ✓ family teaching and scoped recall > retains the eight pattern checks and offers recall only for matching cards  356ms
+ ✓ tests/web/food-learning.test.ts (4 tests) 286ms
+ ✓ tests/web/p6-page-titles.test.ts (6 tests) 220ms
+ ✓ tests/web/country-cheatsheet.test.ts (6 tests) 300ms
+ ✓ tests/web/conversation-learning.test.ts (5 tests) 214ms
+ ✓ tests/web/past-journey-learning.test.ts (5 tests) 371ms
+ ✓ tests/web/p5-instructional-visual-system.test.ts (5 tests) 203ms
+ ✓ tests/web/p5-media-integration.test.ts (4 tests) 214ms
+ ✓ tests/web/p6-vocabulary-concept-illustrations.test.ts (9 tests) 161ms
+ ✓ tests/web/activity-content-plans.test.ts (4 tests) 141ms
+ ✓ tests/web/p3ar2-proxy.test.ts (5 tests) 112ms
+ ✓ tests/web/travel-learning.test.ts (3 tests) 158ms
+ ✓ tests/web/p5-profession-concept-illustrations.test.ts (14 tests) 115ms
+ ✓ tests/web/book-answer-coverage.test.ts (8 tests) 219ms
+ ✓ tests/web/j1-activity-runtime.test.ts (2 tests) 121ms
+ ✓ tests/web/book-transcripts.test.ts (5 tests) 104ms
+ ✓ tests/web/extra-professions-projection.test.ts (5 tests) 77ms
+ ✓ tests/web/pronunciation-live.test.ts (3 tests) 65ms
+ ✓ tests/web/p4c-state-core.test.ts (8 tests) 79ms
+ ✓ tests/web/p3a-web-shell.test.ts (22 tests) 100ms
+ ✓ tests/web/p5-rapid-content.test.ts (4 tests) 49ms
+ ✓ tests/web/country-overview.test.ts (5 tests) 29ms
+ ✓ tests/web/sheet-recall.test.ts (4 tests) 73ms
+ ✓ tests/web/complete-backup.test.ts (9 tests) 34ms
+ ✓ tests/web/p4a-games.test.ts (14 tests) 34ms
+ ✓ tests/web/p4b-conversation-ui.test.ts (3 tests) 37ms
+ ✓ tests/web/p5-rich-visuals.test.ts (3 tests) 25ms
+ ✓ tests/web/sheet-navigation.test.ts (4 tests) 15ms
+ ✓ tests/web/p4b-conversation.test.ts (13 tests) 22ms
+ ✓ tests/web/course-phrase-identity-ui.test.ts (1 test) 17ms
+ ✓ tests/web/detail1-generic-details.test.ts (3 tests) 14ms
+ ✓ tests/web/p6-gender-badge-contrast.test.ts (8 tests) 10ms
+ ✓ tests/web/deploy1r2-pages-smoke-hydration.test.ts (6 tests) 10ms
+ ✓ tests/web/profession-patterns.test.ts (1 test) 4ms
+ ✓ tests/web/export-path-leaks.test.ts (3 tests) 5ms
+ ✓ tests/web/activity-content-behavior.test.ts (7 tests) 3555ms
+   ✓ lesson activity interaction behavior > requires a real listening note and media confirmation before completing an ungraded workbook activity  630ms
+   ✓ lesson activity interaction behavior > checks matching answers with native radios and advances only on correctness  335ms
+   ✓ lesson activity interaction behavior > supports a keyboard-operable phrase builder and exact source-backed checking  512ms
+   ✓ lesson activity interaction behavior > persists the registered attempt owner for activity:lesson-02-profession-qa-builder  504ms
+ ✓ tests/web/p4b-conversation-behavior.test.ts (3 tests) 3683ms
+   ✓ P4B conversation behavioral interactions > locks later levels until prior completion; construction feedback works  1789ms
+   ✓ P4B conversation behavioral interactions > hint/reveal prevents correct strong evidence on construction  1231ms
+   ✓ P4B conversation behavioral interactions > correct submit without Continue does not unlock next level  326ms
+ ✓ tests/web/pronunciation-review-ui.test.ts (18 tests) 5440ms
+   ✓ the list > puts all 110 clips on the page at once  928ms
+   ✓ choosing what to listen to > counts each sound on its own control  444ms
+   ✓ choosing what to listen to > narrows the page to one sound and back again  458ms
+   ✓ recording a verdict > keeps a free-text note beside the verdict  604ms
+   ✓ recording a verdict > reads an earlier sitting back off this device  562ms
+   ✓ resuming a sitting > hides what is already done so the next sitting starts where it stopped  314ms
+   ✓ the download > hands over a JSON file bound to the audio that was judged  664ms
+ ✓ tests/web/word-family-cards-ui.test.ts (11 tests) 2535ms
+   ✓ original vocabulary browsing with complete cards > keeps every complete family reachable through the original grid inventory  372ms
+   ✓ original vocabulary browsing with complete cards > preserves the original filter form and grid, with one aggregated engineer result  769ms
+   ✓ complete word-family cards > hides study material during recall and checks all four answers  404ms
+ ✓ tests/web/j2-resume-pointer-behavior.test.ts (4 tests) 2024ms
+   ✓ J2 resume pointer > seeds the pointer when the learner has none, so a direct URL still offers Continue  415ms
+ ✓ tests/web/course-library-navigation-behavior.test.ts (11 tests) 8846ms
+   ✓ bounded course libraries and return context > bounds vocabulary and preserves page context on every result  817ms
+   ✓ bounded course libraries and return context > offers consistent paths and progressively reveals every lesson word  6652ms
+   ✓ bounded course libraries and return context > filters all search matches before paging instead of dropping later lessons after fifty hits  646ms
+ ✓ tests/web/p4a-games-behavior.test.ts (7 tests) 1700ms
+   ✓ P4A practice behavioral interactions > article-choice: empty submit does not emit; selection+submit emits correct  515ms
+   ✓ P4A practice behavioral interactions > morphology-puzzle: incorrect submit emits incorrect; hint path stays non-strong  376ms
+ ✓ tests/web/shared-audio-preferences-behavior.test.ts (4 tests) 1860ms
+   ✓ shared pronunciation preference > uses the saved speed for line speech and word cards, stops the previous clip and retains it after remount  1298ms
+ ✓ tests/web/p6-a11y-remediation-behavior.test.ts (13 tests) 1726ms
+   ✓ P6 status messages (WCAG 4.1.3) > announces a second identical wrong answer instead of falling silent  494ms
+ ✓ tests/web/p2a-studio-dashboard-behavior.test.ts (5 tests) 1603ms
+   ✓ P2A studio dashboard behavior > shows the due/new mix and a single primary mission action once cards exist  567ms
+ ✓ tests/web/p4c-learner-ui-behavior.test.ts (5 tests) 1767ms
+   ✓ P4C learner UI behavior > carries the chosen review filters into the session  755ms
+   ✓ P4C learner UI behavior > advances across the frozen mission one card at a time without skipping  381ms
+   ✓ P4C learner UI behavior > keeps workbook speed controls grouped per track and updates playback  332ms
+ ✓ tests/web/p4b-recorder-lifecycle-behavior.test.ts (14 tests) 24ms
+ ✓ tests/web/pronunciation-control-behavior.test.ts (2 tests) 647ms
+   ✓ pronunciation control behavior > plays immediately at normal speed and exposes the exact synthesized text  415ms
+ ✓ tests/web/p4b-spoken-behavior.test.ts (2 tests) 1055ms
+   ✓ P4B spoken role-play behavioral gate > disables mic actions while controller is initializing  428ms
+   ✓ P4B spoken role-play behavioral gate > does not complete until record+playback+self-check; one recordingCycle only  611ms
+ ✓ tests/web/german-text-ui.test.ts (2 tests) 304ms
+
+ Test Files  86 passed (86)
+      Tests  651 passed (651)
+   Start at  01:16:20
+   Duration  62.66s (transform 11.92s, setup 0ms, collect 46.51s, tests 130.31s, environment 28.54s, prepare 15.28s)

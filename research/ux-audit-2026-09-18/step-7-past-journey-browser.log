@@ -1,0 +1,174 @@
+
+Running 5 tests using 2 workers
+
+(node:17156) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:30504) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  1 [chromium] › tests\e2e\56-past-journey-learning.spec.ts:12:2 › yesterday timeline, opening-hours recall and saved context at 320px (20.2s)
+(node:27420) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  2 [chromium] › tests\e2e\56-past-journey-learning.spec.ts:43:2 › season wheel, trip auxiliary and year return at 320px (28.5s)
+(node:23876) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  3 [chromium] › tests\e2e\56-past-journey-learning.spec.ts:12:2 › yesterday timeline, opening-hours recall and saved context at 1440px (19.2s)
+(node:3792) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 5 [chromium] › tests\e2e\56-past-journey-learning.spec.ts:81:1 › past and journey cards remain scoped and their summaries export (7.7s)
+  x  4 [chromium] › tests\e2e\56-past-journey-learning.spec.ts:43:2 › season wheel, trip auxiliary and year return at 1440px (25.8s)
+
+
+  1) [chromium] › tests\e2e\56-past-journey-learning.spec.ts:12:2 › yesterday timeline, opening-hours recall and saved context at 320px
+
+    Error: expect(locator).toHaveValue(expected) failed
+
+    Locator: locator('#past-lab').getByRole('combobox', { name: 'Past activity', exact: true })
+    Expected: "5"
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveValue" with timeout 10000ms
+      - waiting for locator('#past-lab').getByRole('combobox', { name: 'Past activity', exact: true })
+
+
+      24 |   await page.locator(".study-saved-card").filter({hasText:"Hast du gestern Kaffee getrunken?"}).getByRole("link",{name:"Open in context →",exact:true}).click();
+      25 |   await page.reload();
+    > 26 |   await expect(lab.getByRole("combobox",{name:"Past activity",exact:true})).toHaveValue("5");
+         |                                                                             ^
+      27 |   await expect(lab.getByRole("combobox",{name:"Past sentence type",exact:true})).toHaveValue("question");
+      28 |   await lab.getByRole("button",{name:/^Remove from review:/}).click();
+      29 |   await lab.screenshot({path:info.outputPath(`past-timeline-${width}.png`)});
+        at E:\claude-cursor\side projects\German learning\platform\tests\e2e\56-past-journey-learning.spec.ts:26:77
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\56-past-journey-learning-y-46fdf--and-saved-context-at-320px-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\56-past-journey-learning-y-46fdf--and-saved-context-at-320px-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\56-past-journey-learning-y-46fdf--and-saved-context-at-320px-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\56-past-journey-learning-y-46fdf--and-saved-context-at-320px-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [chromium] › tests\e2e\56-past-journey-learning.spec.ts:43:2 › season wheel, trip auxiliary and year return at 320px
+
+    Error: expect(locator).toHaveValue(expected) failed
+
+    Locator: locator('#journey-years').getByRole('textbox', { name: 'Year to pronounce', exact: true })
+    Expected: "2007"
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveValue" with timeout 10000ms
+      - waiting for locator('#journey-years').getByRole('textbox', { name: 'Year to pronounce', exact: true })
+
+
+      74 |   await page.locator(".study-saved-card").filter({hasText:"zweitausendsieben"}).getByRole("link",{name:"Open in context →",exact:true}).click();
+      75 |   await page.reload();
+    > 76 |   await expect(years.getByRole("textbox",{name:"Year to pronounce",exact:true})).toHaveValue("2007");
+         |                                                                                  ^
+      77 |   await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);
+      78 |  });
+      79 | }
+        at E:\claude-cursor\side projects\German learning\platform\tests\e2e\56-past-journey-learning.spec.ts:76:82
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\56-past-journey-learning-s-7ffdb-ry-and-year-return-at-320px-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\56-past-journey-learning-s-7ffdb-ry-and-year-return-at-320px-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\56-past-journey-learning-s-7ffdb-ry-and-year-return-at-320px-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\56-past-journey-learning-s-7ffdb-ry-and-year-return-at-320px-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [chromium] › tests\e2e\56-past-journey-learning.spec.ts:12:2 › yesterday timeline, opening-hours recall and saved context at 1440px
+
+    Error: expect(locator).toHaveValue(expected) failed
+
+    Locator: locator('#past-lab').getByRole('combobox', { name: 'Past activity', exact: true })
+    Expected: "5"
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveValue" with timeout 10000ms
+      - waiting for locator('#past-lab').getByRole('combobox', { name: 'Past activity', exact: true })
+
+
+      24 |   await page.locator(".study-saved-card").filter({hasText:"Hast du gestern Kaffee getrunken?"}).getByRole("link",{name:"Open in context →",exact:true}).click();
+      25 |   await page.reload();
+    > 26 |   await expect(lab.getByRole("combobox",{name:"Past activity",exact:true})).toHaveValue("5");
+         |                                                                             ^
+      27 |   await expect(lab.getByRole("combobox",{name:"Past sentence type",exact:true})).toHaveValue("question");
+      28 |   await lab.getByRole("button",{name:/^Remove from review:/}).click();
+      29 |   await lab.screenshot({path:info.outputPath(`past-timeline-${width}.png`)});
+        at E:\claude-cursor\side projects\German learning\platform\tests\e2e\56-past-journey-learning.spec.ts:26:77
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\56-past-journey-learning-y-89d3e-and-saved-context-at-1440px-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\56-past-journey-learning-y-89d3e-and-saved-context-at-1440px-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\56-past-journey-learning-y-89d3e-and-saved-context-at-1440px-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\56-past-journey-learning-y-89d3e-and-saved-context-at-1440px-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [chromium] › tests\e2e\56-past-journey-learning.spec.ts:43:2 › season wheel, trip auxiliary and year return at 1440px
+
+    Error: expect(locator).toHaveValue(expected) failed
+
+    Locator: locator('#journey-years').getByRole('textbox', { name: 'Year to pronounce', exact: true })
+    Expected: "2007"
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveValue" with timeout 10000ms
+      - waiting for locator('#journey-years').getByRole('textbox', { name: 'Year to pronounce', exact: true })
+
+
+      74 |   await page.locator(".study-saved-card").filter({hasText:"zweitausendsieben"}).getByRole("link",{name:"Open in context →",exact:true}).click();
+      75 |   await page.reload();
+    > 76 |   await expect(years.getByRole("textbox",{name:"Year to pronounce",exact:true})).toHaveValue("2007");
+         |                                                                                  ^
+      77 |   await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);
+      78 |  });
+      79 | }
+        at E:\claude-cursor\side projects\German learning\platform\tests\e2e\56-past-journey-learning.spec.ts:76:82
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\56-past-journey-learning-s-072a5-y-and-year-return-at-1440px-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\56-past-journey-learning-s-072a5-y-and-year-return-at-1440px-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\56-past-journey-learning-s-072a5-y-and-year-return-at-1440px-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\56-past-journey-learning-s-072a5-y-and-year-return-at-1440px-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    [chromium] › tests\e2e\56-past-journey-learning.spec.ts:12:2 › yesterday timeline, opening-hours recall and saved context at 320px
+    [chromium] › tests\e2e\56-past-journey-learning.spec.ts:43:2 › season wheel, trip auxiliary and year return at 320px
+    [chromium] › tests\e2e\56-past-journey-learning.spec.ts:12:2 › yesterday timeline, opening-hours recall and saved context at 1440px
+    [chromium] › tests\e2e\56-past-journey-learning.spec.ts:43:2 › season wheel, trip auxiliary and year return at 1440px
+  1 passed (1.2m)
