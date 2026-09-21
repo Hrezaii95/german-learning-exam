@@ -1,0 +1,742 @@
+[
+  {
+    "path": "step-9-live-journeys/41-complete-backup-saved-s-fb431--complete-backup-round-trip/backup-preview-desktop.png",
+    "bytes": 84552,
+    "sha256": "c6f929fae9b871a2bc044eafdf100211e716847acfdc5b2d1e20b07c053ed5fe"
+  },
+  {
+    "path": "step-9-live-journeys/41-complete-backup-saved-s-fb431--complete-backup-round-trip/backup-preview-phone.png",
+    "bytes": 56253,
+    "sha256": "d88d7ac3ecc8b98a8f2cd510d1fe9ed223bf0e3b1df605b6fa139fd14c28ec20"
+  },
+  {
+    "path": "step-9-live-journeys/42-shared-learning-actions-2a262-d-cards-and-the-review-pool/profession-actions-1440.png",
+    "bytes": 268555,
+    "sha256": "94ae1ddab63ed332f2b1ffa19985c0a5a57ac9e7d4ef1f54f7f2fc55666e8727"
+  },
+  {
+    "path": "step-9-live-journeys/42-shared-learning-actions-2a262-d-cards-and-the-review-pool/profession-actions-390.png",
+    "bytes": 175440,
+    "sha256": "0a99c3d7807f135348a4fffcca0d531613464a64c357cb22400cba9f30d46403"
+  },
+  {
+    "path": "step-9-live-journeys/42-shared-learning-actions-9b92d-l-recordings-and-the-reader/word-card-1440.png",
+    "bytes": 87279,
+    "sha256": "0071fc6762b3a0d8f02d6261d106fa200f74fe3c5c9501f06e532bf6ee068a7c"
+  },
+  {
+    "path": "step-9-live-journeys/42-shared-learning-actions-9b92d-l-recordings-and-the-reader/word-card-390.png",
+    "bytes": 51057,
+    "sha256": "242d531f8adc085b9fea56e85ec78f8d9b6218c78e5be35cceab3a5fcd89c6e5"
+  },
+  {
+    "path": "step-9-live-journeys/42-shared-learning-actions-b50f4-ng-and-saved-review-actions/transcript-actions-phone.png",
+    "bytes": 20735,
+    "sha256": "d16ec5dd2e292b476f875f83c1a0fc971016e1065e79e7f4fba6eec06b73c361"
+  },
+  {
+    "path": "step-9-live-journeys/43-navigation-and-continue-0c888--and-preserves-return-links/chooser-1440.png",
+    "bytes": 60598,
+    "sha256": "afe32fdc62c946944f0dde3644a7fbada10b896f753c347a0550bba2e6a11b72"
+  },
+  {
+    "path": "step-9-live-journeys/43-navigation-and-continue-0c888--and-preserves-return-links/chooser-390.png",
+    "bytes": 30691,
+    "sha256": "67220462452a0747b879b2c597f391d7c2034a6a300179c010b2fc5700ebd11d"
+  },
+  {
+    "path": "step-9-live-journeys/43-navigation-and-continue-43459--and-keyboard-safe-at-320px/menu-320.png",
+    "bytes": 59057,
+    "sha256": "21560fc5d849c5c1e20fc890c79b9145751cfa9d338bb230846650d0d16e99f0"
+  },
+  {
+    "path": "step-9-live-journeys/43-navigation-and-continue-61562-iew-precedes-the-course-map/dashboard-1440.png",
+    "bytes": 133375,
+    "sha256": "f7ab6f30c707c0e7980f1179d0a5567a902fe782d4369cfa85fbc50807de8de7"
+  },
+  {
+    "path": "step-9-live-journeys/43-navigation-and-continue-61562-iew-precedes-the-course-map/dashboard-390.png",
+    "bytes": 128813,
+    "sha256": "cbfe09bdcdaeb742f26d1e13856f6fb399c3a4da07a27c0d0e948c7068b71dcd"
+  },
+  {
+    "path": "step-9-live-journeys/43-navigation-and-continue-61562-iew-precedes-the-course-map/dashboard-768.png",
+    "bytes": 109263,
+    "sha256": "cb7244e9dd379a416d0424fd003a78db41747703395747fe4e19a5bc5a98d0db"
+  },
+  {
+    "path": "step-9-live-journeys/43-navigation-and-continue-61562-iew-precedes-the-course-map/dashboard-top-1440.png",
+    "bytes": 72463,
+    "sha256": "90c466a0d59f0e3503705325f11760c38d0c0cec03d1cc22514157b2b70bf96f"
+  },
+  {
+    "path": "step-9-live-journeys/43-navigation-and-continue-61562-iew-precedes-the-course-map/dashboard-top-390.png",
+    "bytes": 34536,
+    "sha256": "42f776010aa1c9440f5db7060455e4a7ecdb8a4fc12224231d53adad18bbdf9f"
+  },
+  {
+    "path": "step-9-live-journeys/43-navigation-and-continue-61562-iew-precedes-the-course-map/dashboard-top-768.png",
+    "bytes": 36655,
+    "sha256": "5b6d612d6f5455a3ff1c7894275f8877e5df52d8800199bdda07e5747ef35686"
+  },
+  {
+    "path": "step-9-live-journeys/43-navigation-and-continue-8d44b--and-keyboard-safe-at-768px/menu-768.png",
+    "bytes": 123071,
+    "sha256": "65144f63df779d1cc83deaa66305910f83f25202f094155df436a8c528e4e325"
+  },
+  {
+    "path": "step-9-live-journeys/44-professions-learning-pr-0bc20--saving-and-recall-at-390px/professions-focused-390.png",
+    "bytes": 173924,
+    "sha256": "ea23787db7a0053ca3553b9e62c123ff0a87a1344c78610df66ceb8785aa766b"
+  },
+  {
+    "path": "step-9-live-journeys/44-professions-learning-pr-0bc20--saving-and-recall-at-390px/professions-overview-390.png",
+    "bytes": 228792,
+    "sha256": "a89803e44b9420b24b4ac3016120518ae76cdcf2a9e2483d1e334499c085b30b"
+  },
+  {
+    "path": "step-9-live-journeys/44-professions-learning-pr-6ea3a--saving-and-recall-at-768px/professions-focused-768.png",
+    "bytes": 235436,
+    "sha256": "84a58685da54ee44b5d35a6d1f0be2d185430cdaaf7bb56a1dad8c593df63601"
+  },
+  {
+    "path": "step-9-live-journeys/44-professions-learning-pr-6ea3a--saving-and-recall-at-768px/professions-overview-768.png",
+    "bytes": 316623,
+    "sha256": "24daf4cb9a07e074124e2f0c65b4be395b076b807623fe9a082c1f42a9adcbc1"
+  },
+  {
+    "path": "step-9-live-journeys/44-professions-learning-pr-89680-saving-and-recall-at-1440px/professions-focused-1440.png",
+    "bytes": 267582,
+    "sha256": "9a2d8a867f2e44e58401747353d69e09611689b13122927fb7c08cdf81928109"
+  },
+  {
+    "path": "step-9-live-journeys/44-professions-learning-pr-89680-saving-and-recall-at-1440px/professions-overview-1440.png",
+    "bytes": 353313,
+    "sha256": "5da6d25241548d9c035a6c629783989abeee84e680614b8c5f69c0e029afd4ad"
+  },
+  {
+    "path": "step-9-live-journeys/44-professions-learning-pr-cc00b--saving-and-recall-at-320px/professions-focused-320.png",
+    "bytes": 161870,
+    "sha256": "ac2ca8eaf1b3aa22dfd1d315f38c024ebd7bd865eb60cf502480c08b10405ab5"
+  },
+  {
+    "path": "step-9-live-journeys/44-professions-learning-pr-cc00b--saving-and-recall-at-320px/professions-overview-320.png",
+    "bytes": 194280,
+    "sha256": "4b6e1b252b4b07b991dc4d401c765e6b01a2e553b5cacaa513808918692ca258"
+  },
+  {
+    "path": "step-9-live-journeys/45-lessons-and-libraries-c-7788f-earch-keep-context-at-320px/grammar-connections-320.png",
+    "bytes": 54362,
+    "sha256": "5b24683f8df8dfa5edbd18dd17f035ad9e1346ef6273b38a45fa8f4d61695e41"
+  },
+  {
+    "path": "step-9-live-journeys/45-lessons-and-libraries-c-7788f-earch-keep-context-at-320px/grammar-connections-viewport-320.png",
+    "bytes": 31647,
+    "sha256": "2654608628500ea38105849cf49c0e858c214f99860eb77e695e552152010cfd"
+  },
+  {
+    "path": "step-9-live-journeys/45-lessons-and-libraries-c-7788f-earch-keep-context-at-320px/search-results-320.png",
+    "bytes": 95674,
+    "sha256": "6b21268bf3b860ca00827d8d6c186a775118034c0cdebdb438322dc69722304e"
+  },
+  {
+    "path": "step-9-live-journeys/45-lessons-and-libraries-c-7788f-earch-keep-context-at-320px/search-results-viewport-320.png",
+    "bytes": 17575,
+    "sha256": "fa52d5b0d0a06e1eb0899c545f7eecd09c0331e309898b6945aca52a833f4e1c"
+  },
+  {
+    "path": "step-9-live-journeys/45-lessons-and-libraries-c-7788f-earch-keep-context-at-320px/verb-library-320.png",
+    "bytes": 119208,
+    "sha256": "bf1c2f4f7357d9a7ce747939e81530a61ce09cda8ffd157c5c97ce50e7e6fc1b"
+  },
+  {
+    "path": "step-9-live-journeys/45-lessons-and-libraries-c-7788f-earch-keep-context-at-320px/verb-library-viewport-320.png",
+    "bytes": 17616,
+    "sha256": "e8b2dc21413d65ae108b3a6b5100a738528aaf74e0ff07e2b4febe6f7718809a"
+  },
+  {
+    "path": "step-9-live-journeys/45-lessons-and-libraries-c-9b944-arch-keep-context-at-1440px/grammar-connections-1440.png",
+    "bytes": 88362,
+    "sha256": "e90306234f9e653b4acfcd5b425ab8aadbb0a0a3ec7bb6659a8852c4893a6e8b"
+  },
+  {
+    "path": "step-9-live-journeys/45-lessons-and-libraries-c-9b944-arch-keep-context-at-1440px/grammar-connections-viewport-1440.png",
+    "bytes": 77170,
+    "sha256": "d7e8f9ca8e4d33c14e20196bf59bc7209c465e2e6b440d16f0ea5d29f4eabb5f"
+  },
+  {
+    "path": "step-9-live-journeys/45-lessons-and-libraries-c-9b944-arch-keep-context-at-1440px/search-results-1440.png",
+    "bytes": 115762,
+    "sha256": "f2c1c98ed75757c2c820038540c37cb429e8c5a6d1edbc51e530d18fcb909039"
+  },
+  {
+    "path": "step-9-live-journeys/45-lessons-and-libraries-c-9b944-arch-keep-context-at-1440px/search-results-viewport-1440.png",
+    "bytes": 51885,
+    "sha256": "e3bdc64ee3e1a22bf3fdbfb9bd687b56f2055b0ca645a8aa776a4ad3db5640f3"
+  },
+  {
+    "path": "step-9-live-journeys/45-lessons-and-libraries-c-9b944-arch-keep-context-at-1440px/verb-library-1440.png",
+    "bytes": 124508,
+    "sha256": "7ce06591543c3af42bf864fedaff701bc36693311bb160f2acbf9991b6e18b26"
+  },
+  {
+    "path": "step-9-live-journeys/45-lessons-and-libraries-c-9b944-arch-keep-context-at-1440px/verb-library-viewport-1440.png",
+    "bytes": 69899,
+    "sha256": "1286e591ac40c23e3e5d0ff00badc75273c0c693a209c9b9805a117217523458"
+  },
+  {
+    "path": "step-9-live-journeys/45-lessons-and-libraries-l-49dc8-nd-checked-practice-resumes/lesson-checkpoint.png",
+    "bytes": 85328,
+    "sha256": "37f2775a2514efedec8f73a3103d949f4e49fd65db8f07b286870e1036e1e292"
+  },
+  {
+    "path": "step-9-live-journeys/46-cheat-sheet-summaries-c-f5a69-recall-or-filters-at-1440px/countries-A4.pdf",
+    "bytes": 440055,
+    "sha256": "9e426d7d9eb8474f58b82cb0c74ede434bb890d90ec3e0f278a4a2ec4bd2551e"
+  },
+  {
+    "path": "step-9-live-journeys/46-cheat-sheet-summaries-c-f5a69-recall-or-filters-at-1440px/countries-Letter.pdf",
+    "bytes": 440127,
+    "sha256": "b3028eafc911a209f2b09fe4e0419cae5845a25d5f98e788a98b1ebd488b4247"
+  },
+  {
+    "path": "step-9-live-journeys/46-cheat-sheet-summaries-c-f5a69-recall-or-filters-at-1440px/attachments/countries-A4-a8cc73ea5e59456b5a445f382056f60029d51dca.pdf",
+    "bytes": 440055,
+    "sha256": "9e426d7d9eb8474f58b82cb0c74ede434bb890d90ec3e0f278a4a2ec4bd2551e"
+  },
+  {
+    "path": "step-9-live-journeys/46-cheat-sheet-summaries-c-f5a69-recall-or-filters-at-1440px/attachments/countries-Letter-9aa33156ecd7690857161b536e46859dc35d2ebd.pdf",
+    "bytes": 440127,
+    "sha256": "b3028eafc911a209f2b09fe4e0419cae5845a25d5f98e788a98b1ebd488b4247"
+  },
+  {
+    "path": "step-9-live-journeys/46-cheat-sheet-summaries-h-efabf-recall-or-filters-at-1440px/home-A4.pdf",
+    "bytes": 235288,
+    "sha256": "f08d26fc241dd9dce0a6bfd89055b97c9e0db6cdf5daad737c6bd5e6ceed6423"
+  },
+  {
+    "path": "step-9-live-journeys/46-cheat-sheet-summaries-h-efabf-recall-or-filters-at-1440px/home-Letter.pdf",
+    "bytes": 235357,
+    "sha256": "73e1863b06980e2c0ed435b3fc9c6e0fcc39400b3059530df68c383e97eceae4"
+  },
+  {
+    "path": "step-9-live-journeys/46-cheat-sheet-summaries-h-efabf-recall-or-filters-at-1440px/attachments/home-A4-1175b28a9e704bd14b750cdb3dc5a8cfc94bf905.pdf",
+    "bytes": 235288,
+    "sha256": "f08d26fc241dd9dce0a6bfd89055b97c9e0db6cdf5daad737c6bd5e6ceed6423"
+  },
+  {
+    "path": "step-9-live-journeys/46-cheat-sheet-summaries-h-efabf-recall-or-filters-at-1440px/attachments/home-Letter-4cb959c8bd8ec3fbd84329ab60f197dc167525f4.pdf",
+    "bytes": 235357,
+    "sha256": "73e1863b06980e2c0ed435b3fc9c6e0fcc39400b3059530df68c383e97eceae4"
+  },
+  {
+    "path": "step-9-live-journeys/48-people-learning-people--32f83-ce-and-card-return-at-320px/people-family-320.png",
+    "bytes": 33738,
+    "sha256": "c4e19a9dfe59fc9d89f78c74c2982f7dbbf4f5ddfaf24766de939401bb6d3508"
+  },
+  {
+    "path": "step-9-live-journeys/48-people-learning-people--44327-reserving-the-learning-view/people-A4.pdf",
+    "bytes": 151081,
+    "sha256": "130fa20c6ee6e623bd9f2afcf0c601d8db5e9526884a51f593603ee55a84c2de"
+  },
+  {
+    "path": "step-9-live-journeys/48-people-learning-people--44327-reserving-the-learning-view/people-Letter.pdf",
+    "bytes": 149923,
+    "sha256": "8fe468dacb0a7dcd023ecd8249c9dc9a5fb1392ee4904a4b94eee3f4486361a8"
+  },
+  {
+    "path": "step-9-live-journeys/48-people-learning-people--44327-reserving-the-learning-view/attachments/people-A4-4e5ac0e952ae486c7464692012b268a5d9af25c8.pdf",
+    "bytes": 151081,
+    "sha256": "130fa20c6ee6e623bd9f2afcf0c601d8db5e9526884a51f593603ee55a84c2de"
+  },
+  {
+    "path": "step-9-live-journeys/48-people-learning-people--44327-reserving-the-learning-view/attachments/people-Letter-e195fe9a7cdf5c92405bb329cb7bac89c6fd301d.pdf",
+    "bytes": 149923,
+    "sha256": "8fe468dacb0a7dcd023ecd8249c9dc9a5fb1392ee4904a4b94eee3f4486361a8"
+  },
+  {
+    "path": "step-9-live-journeys/48-people-learning-people--67862-ce-and-card-return-at-390px/people-family-390.png",
+    "bytes": 34028,
+    "sha256": "9eba46e3e0ea13833e79d0abc6d9a69180eecd827702dd92377be1fb856256d7"
+  },
+  {
+    "path": "step-9-live-journeys/48-people-learning-people--6f871-e-and-card-return-at-1440px/people-family-1440.png",
+    "bytes": 37827,
+    "sha256": "545018a27594facbe232ed5a2e6e7e87b232f6d49711ea38018f0672edcd8589"
+  },
+  {
+    "path": "step-9-live-journeys/48-people-learning-people--d52b1-ce-and-card-return-at-768px/people-family-768.png",
+    "bytes": 35833,
+    "sha256": "4a99d40933456347184263af9f63b3e020176cab3dec6aa865de311d95dc43d6"
+  },
+  {
+    "path": "step-9-live-journeys/49-grammar-sheets-question-450ff-ved-builder-return-at-320px/question-builder-320.png",
+    "bytes": 39016,
+    "sha256": "4cf488ee64e54db9075e5d6e7a72a16114e343e28c95e244ca8049eda14c6972"
+  },
+  {
+    "path": "step-9-live-journeys/49-grammar-sheets-question-48dcd-ed-builder-return-at-1440px/question-builder-1440.png",
+    "bytes": 35421,
+    "sha256": "7df72a9bc656fc037ff0279865381a5bbe226dc0ced503dbb08cedf836e3638d"
+  },
+  {
+    "path": "step-9-live-journeys/49-grammar-sheets-question-4b65b-se-complete-pattern-summary/questions-A4.pdf",
+    "bytes": 207854,
+    "sha256": "5ad3bf8a20979d88cb417d0a4378fe7ea65f9a9de3452fc689e837717a0297b7"
+  },
+  {
+    "path": "step-9-live-journeys/49-grammar-sheets-question-4b65b-se-complete-pattern-summary/questions-Letter.pdf",
+    "bytes": 207853,
+    "sha256": "4f0b1c3d8d808e6ad0e2d83e440af7daed09176e9a9a3691474ce18be7784f28"
+  },
+  {
+    "path": "step-9-live-journeys/49-grammar-sheets-question-4b65b-se-complete-pattern-summary/attachments/questions-A4-4e68e66be96ae90a9b96b78cc846b0201926e408.pdf",
+    "bytes": 207854,
+    "sha256": "5ad3bf8a20979d88cb417d0a4378fe7ea65f9a9de3452fc689e837717a0297b7"
+  },
+  {
+    "path": "step-9-live-journeys/49-grammar-sheets-question-4b65b-se-complete-pattern-summary/attachments/questions-Letter-c430e7dceae32e662cfdc22113e5601425778e78.pdf",
+    "bytes": 207853,
+    "sha256": "4f0b1c3d8d808e6ad0e2d83e440af7daed09176e9a9a3691474ce18be7784f28"
+  },
+  {
+    "path": "step-9-live-journeys/49-grammar-sheets-verb-par-1ce5a-ved-person-return-at-1440px/verb-explorer-1440.png",
+    "bytes": 23181,
+    "sha256": "f9a213e196e538dfdd2b69cf7902a756c964dfc5322b926b919d0052c6c77cf7"
+  },
+  {
+    "path": "step-9-live-journeys/49-grammar-sheets-verb-par-5f37b-aved-person-return-at-320px/verb-explorer-320.png",
+    "bytes": 25553,
+    "sha256": "39a8caa83156155ca66c8fdca688e903cb02546a7c40e69f6efde143c11544a8"
+  },
+  {
+    "path": "step-9-live-journeys/49-grammar-sheets-verbs-pr-34ec0-se-complete-pattern-summary/verbs-A4.pdf",
+    "bytes": 184952,
+    "sha256": "9f2b74677ecc48289eaba4fd564b3c17cbc9134c674a230d0ac1fc0ba8034114"
+  },
+  {
+    "path": "step-9-live-journeys/49-grammar-sheets-verbs-pr-34ec0-se-complete-pattern-summary/verbs-Letter.pdf",
+    "bytes": 184935,
+    "sha256": "6ac1db859c587ae477f28ee7ce3d49b320ff553410ca2e137b40008ee3008079"
+  },
+  {
+    "path": "step-9-live-journeys/49-grammar-sheets-verbs-pr-34ec0-se-complete-pattern-summary/attachments/verbs-A4-7a98ab29aac3a1d0312e95f264fb06dba0a24d5e.pdf",
+    "bytes": 184952,
+    "sha256": "9f2b74677ecc48289eaba4fd564b3c17cbc9134c674a230d0ac1fc0ba8034114"
+  },
+  {
+    "path": "step-9-live-journeys/49-grammar-sheets-verbs-pr-34ec0-se-complete-pattern-summary/attachments/verbs-Letter-56f9157337a0db5ce7e6623dd3dd8a7ab0ee0676.pdf",
+    "bytes": 184935,
+    "sha256": "6ac1db859c587ae477f28ee7ce3d49b320ff553410ca2e137b40008ee3008079"
+  },
+  {
+    "path": "step-9-live-journeys/50-numbers-learning-number-44caf--and-saved-values-at-1440px/number-builder-1440.png",
+    "bytes": 24479,
+    "sha256": "451cf69e48cc843cca115bbfca13d48c8fa9d38751b9a3a68bb2c966336fc690"
+  },
+  {
+    "path": "step-9-live-journeys/50-numbers-learning-number-44caf--and-saved-values-at-1440px/number-price-1440.png",
+    "bytes": 12698,
+    "sha256": "80307f7843aedc1857866380d9506e6a7197f4cf27535960a0bf87910131fcfd"
+  },
+  {
+    "path": "step-9-live-journeys/50-numbers-learning-number-761dc-changing-the-chosen-example/numbers-A4.pdf",
+    "bytes": 207767,
+    "sha256": "01d72a8beb3c35023a17ac8b9c072efdec3447c188768bc9f351fc73f788944b"
+  },
+  {
+    "path": "step-9-live-journeys/50-numbers-learning-number-761dc-changing-the-chosen-example/numbers-Letter.pdf",
+    "bytes": 207699,
+    "sha256": "dbf982d6de8e127383f43b86271f5231a9422f4b6f322742e40836c4fdd01a23"
+  },
+  {
+    "path": "step-9-live-journeys/50-numbers-learning-number-761dc-changing-the-chosen-example/attachments/numbers-A4-5dfd8e8486fb606b55ca7dcf4ef7ad60152901fd.pdf",
+    "bytes": 207767,
+    "sha256": "01d72a8beb3c35023a17ac8b9c072efdec3447c188768bc9f351fc73f788944b"
+  },
+  {
+    "path": "step-9-live-journeys/50-numbers-learning-number-761dc-changing-the-chosen-example/attachments/numbers-Letter-cf9e9b225e985a6df192e85622aafec6faa91534.pdf",
+    "bytes": 207699,
+    "sha256": "dbf982d6de8e127383f43b86271f5231a9422f4b6f322742e40836c4fdd01a23"
+  },
+  {
+    "path": "step-9-live-journeys/50-numbers-learning-number-919a5-g-and-saved-values-at-320px/number-builder-320.png",
+    "bytes": 27737,
+    "sha256": "41f299172eec48ea95ad46d144827fd70976e360c96e4cd3be8f47e6207596fd"
+  },
+  {
+    "path": "step-9-live-journeys/50-numbers-learning-number-919a5-g-and-saved-values-at-320px/number-price-320.png",
+    "bytes": 12251,
+    "sha256": "39a9855957e2bea884f49bc74220691b813607030e975c336f2b7a249d2a1702"
+  },
+  {
+    "path": "step-9-live-journeys/51-conversation-learning-c-36662--and-all-thirty-letter-cues/conversation-A4.pdf",
+    "bytes": 193817,
+    "sha256": "10afc00793d74f55745e87ba70c73208b008bdd701a13a9c42419e470926804a"
+  },
+  {
+    "path": "step-9-live-journeys/51-conversation-learning-c-36662--and-all-thirty-letter-cues/conversation-Letter.pdf",
+    "bytes": 193749,
+    "sha256": "63ff0e562e31f904d6ce70c98beff05f35a87d623cc891f775c92f60b3198049"
+  },
+  {
+    "path": "step-9-live-journeys/51-conversation-learning-c-36662--and-all-thirty-letter-cues/attachments/conversation-A4-ad841887503a4e36d4781bc980b12f10c069a884.pdf",
+    "bytes": 193817,
+    "sha256": "10afc00793d74f55745e87ba70c73208b008bdd701a13a9c42419e470926804a"
+  },
+  {
+    "path": "step-9-live-journeys/51-conversation-learning-c-36662--and-all-thirty-letter-cues/attachments/conversation-Letter-81cf9ed20f5d156ac17e4bfdff5bbf22b2916ca1.pdf",
+    "bytes": 193749,
+    "sha256": "63ff0e562e31f904d6ce70c98beff05f35a87d623cc891f775c92f60b3198049"
+  },
+  {
+    "path": "step-9-live-journeys/51-conversation-learning-d-14f62-and-alphabet-audio-at-320px/conversation-flow-320.png",
+    "bytes": 26864,
+    "sha256": "f8a1262e7960553ba242fae2b4d12d53258bb3cf0faabbcf2a6897d4ccec2471"
+  },
+  {
+    "path": "step-9-live-journeys/51-conversation-learning-d-14f62-and-alphabet-audio-at-320px/conversation-spelling-320.png",
+    "bytes": 44422,
+    "sha256": "96c4f0df2f4ca5523ebb525a3731e6fe8eda85bbf2c2ed0a0b8761ab66bd9e02"
+  },
+  {
+    "path": "step-9-live-journeys/51-conversation-learning-d-a3a32-nd-alphabet-audio-at-1440px/conversation-flow-1440.png",
+    "bytes": 24309,
+    "sha256": "e49c7cab863aa2ff44404a0eda60abf160556bcf49d579bf1c79180405396a40"
+  },
+  {
+    "path": "step-9-live-journeys/51-conversation-learning-d-a3a32-nd-alphabet-audio-at-1440px/conversation-spelling-1440.png",
+    "bytes": 34906,
+    "sha256": "82224894c2176e645de93c5ed1ba7e8071a12f4d87a7669e39fc3c5efc47208c"
+  },
+  {
+    "path": "step-9-live-journeys/52-objects-office-learning-4e11c-ies-export-to-A4-and-Letter/objects-A4.pdf",
+    "bytes": 220660,
+    "sha256": "b644ace9146cd5ab09d45e3feef0362361d46adf1955ccd96cc66cb2ec4b8836"
+  },
+  {
+    "path": "step-9-live-journeys/52-objects-office-learning-4e11c-ies-export-to-A4-and-Letter/objects-Letter.pdf",
+    "bytes": 220624,
+    "sha256": "f12f103558a4f1a3dc629385c8f1c000068dc0db84f8718b5006df03c9cc4d24"
+  },
+  {
+    "path": "step-9-live-journeys/52-objects-office-learning-4e11c-ies-export-to-A4-and-Letter/office-A4.pdf",
+    "bytes": 207790,
+    "sha256": "3bc7c58ef426c426e6df985a92199176139029b3205e543672244c50f0bb90c9"
+  },
+  {
+    "path": "step-9-live-journeys/52-objects-office-learning-4e11c-ies-export-to-A4-and-Letter/office-Letter.pdf",
+    "bytes": 207755,
+    "sha256": "2674bbe92399a5493994e42225db0cd1b16ef571c17044dda4de865d79af9e91"
+  },
+  {
+    "path": "step-9-live-journeys/52-objects-office-learning-6fef7-d-phone-listening-at-1440px/office-1440.png",
+    "bytes": 45746,
+    "sha256": "7adf2347c2357656a272aab487747029982cef22a9e67b64bbce1b5c6c956681"
+  },
+  {
+    "path": "step-9-live-journeys/52-objects-office-learning-6fef7-d-phone-listening-at-1440px/office-phone-1440.png",
+    "bytes": 17630,
+    "sha256": "b160a16d45e3f98a0b6bab64e36f7fc6bb3fae0d4b1b318ed26374bb7306d265"
+  },
+  {
+    "path": "step-9-live-journeys/52-objects-office-learning-9dc7b-and-saved-settings-at-320px/objects-320.png",
+    "bytes": 42948,
+    "sha256": "30a31345b118a23b0148256125fe320f7ca91749fcefb8e62284e57adae098aa"
+  },
+  {
+    "path": "step-9-live-journeys/52-objects-office-learning-b94de-nd-phone-listening-at-320px/office-320.png",
+    "bytes": 21916,
+    "sha256": "455968b3e8eda569616f521279b4b9d36fa0196ca4dac20dd20a842c3d2b9703"
+  },
+  {
+    "path": "step-9-live-journeys/52-objects-office-learning-b94de-nd-phone-listening-at-320px/office-overview-320.png",
+    "bytes": 30547,
+    "sha256": "99e0fe2a6fa83031e96809d16a97b0f49bd3f520e9811c2b14457eabca92e66a"
+  },
+  {
+    "path": "step-9-live-journeys/52-objects-office-learning-b94de-nd-phone-listening-at-320px/office-phone-320.png",
+    "bytes": 18106,
+    "sha256": "9adef830fa787315896f8c1668231bbca9e9b0fecc248dff1fdab62e4de33870"
+  },
+  {
+    "path": "step-9-live-journeys/52-objects-office-learning-e843a-nd-saved-settings-at-1440px/objects-1440.png",
+    "bytes": 42080,
+    "sha256": "e31d9260f1c92721da3667e5a04e7bd6f9a9dcd6e5e765c05598524558a0df4f"
+  },
+  {
+    "path": "step-9-live-journeys/53-hobbies-time-learning-c-935b6--plans-and-reload-at-1440px/time-clock-1440.png",
+    "bytes": 39303,
+    "sha256": "f1088e5eb2e26de334b16b6058d03cbfa00db82a0deec9efd27d132d87a88848"
+  },
+  {
+    "path": "step-9-live-journeys/53-hobbies-time-learning-c-935b6--plans-and-reload-at-1440px/time-listening-1440.png",
+    "bytes": 28479,
+    "sha256": "7218d47b7e9fd119fbe12914ba55f55493265fdd24e3f2f26610bc44999ab595"
+  },
+  {
+    "path": "step-9-live-journeys/53-hobbies-time-learning-c-935b6--plans-and-reload-at-1440px/time-plan-1440.png",
+    "bytes": 23152,
+    "sha256": "f7f0a55ad7b98b6e521897a96f9cfecd836e3673b9dab9fda51a832b04622f8e"
+  },
+  {
+    "path": "step-9-live-journeys/53-hobbies-time-learning-c-935b6--plans-and-reload-at-1440px/time-week-1440.png",
+    "bytes": 25889,
+    "sha256": "6641124f5459536825b675e122b7bb32c82c3399b41e63c53f370d190168d86c"
+  },
+  {
+    "path": "step-9-live-journeys/53-hobbies-time-learning-c-bc0f0-y-plans-and-reload-at-320px/time-clock-320.png",
+    "bytes": 36066,
+    "sha256": "fccd4bdd3a1b5e7d4a880e373fccc9f4482d4ca3a653c1736b94db38c673c9fc"
+  },
+  {
+    "path": "step-9-live-journeys/53-hobbies-time-learning-c-bc0f0-y-plans-and-reload-at-320px/time-listening-320.png",
+    "bytes": 34455,
+    "sha256": "ff93d15e883be6c7f3fe52219884ba462fb65ca94dc1758b56ae0557c6ca8481"
+  },
+  {
+    "path": "step-9-live-journeys/53-hobbies-time-learning-c-bc0f0-y-plans-and-reload-at-320px/time-plan-320.png",
+    "bytes": 27913,
+    "sha256": "d5568ba05198c7f70b82ea772bd0a2ee41148c42c1758a7c9651c89fc4c3e7b4"
+  },
+  {
+    "path": "step-9-live-journeys/53-hobbies-time-learning-c-bc0f0-y-plans-and-reload-at-320px/time-week-320.png",
+    "bytes": 32905,
+    "sha256": "5faaf25024b1f2d3e1e40557a51ed3ac5317f2cad0b3a6eb7255a70bb27a139e"
+  },
+  {
+    "path": "step-9-live-journeys/53-hobbies-time-learning-h-00782-and-saved-settings-at-320px/hobby-frequency-320.png",
+    "bytes": 18182,
+    "sha256": "507fde591dabe75a6f1fcf09281c50b85aa246605c18aec45cbffaf3688f2ff6"
+  },
+  {
+    "path": "step-9-live-journeys/53-hobbies-time-learning-h-00782-and-saved-settings-at-320px/hobby-map-320.png",
+    "bytes": 25493,
+    "sha256": "709c380ab47b031e31aa9c2277ad1f04b18224db873686701c67e10f11e3732b"
+  },
+  {
+    "path": "step-9-live-journeys/53-hobbies-time-learning-h-079cb-ise-A4-and-Letter-summaries/hobbies-A4.pdf",
+    "bytes": 239146,
+    "sha256": "e38c3b3a7b6af5a9c7876763420e443a654908fce54d322e806f14c667824ce8"
+  },
+  {
+    "path": "step-9-live-journeys/53-hobbies-time-learning-h-079cb-ise-A4-and-Letter-summaries/hobbies-Letter.pdf",
+    "bytes": 239068,
+    "sha256": "ee9e3f17f1c19aaff7ecbfd78a0c31a6633cecc5d817df994725f79cc16be5c0"
+  },
+  {
+    "path": "step-9-live-journeys/53-hobbies-time-learning-h-079cb-ise-A4-and-Letter-summaries/time-A4.pdf",
+    "bytes": 194934,
+    "sha256": "5de2d92cb422b9ea778abd3fabd383bdd99df9306d02feae6c3d28f3fb3325e1"
+  },
+  {
+    "path": "step-9-live-journeys/53-hobbies-time-learning-h-079cb-ise-A4-and-Letter-summaries/time-Letter.pdf",
+    "bytes": 194849,
+    "sha256": "2324c9abbf18629716bbdbf798100f2647703530ec48afdad76694934267c9ca"
+  },
+  {
+    "path": "step-9-live-journeys/53-hobbies-time-learning-h-9c5cf-nd-saved-settings-at-1440px/hobby-frequency-1440.png",
+    "bytes": 15911,
+    "sha256": "d50141283e5b7d8d841fbc06a12d231a7da87b71fd956edf57e4a400a9cd638f"
+  },
+  {
+    "path": "step-9-live-journeys/53-hobbies-time-learning-h-9c5cf-nd-saved-settings-at-1440px/hobby-map-1440.png",
+    "bytes": 23180,
+    "sha256": "76f875cce992feeca15b450649dfaef787694c76ec3a97a1f62835d013fbdb74"
+  },
+  {
+    "path": "step-9-live-journeys/54-food-learning-food-grou-64177-s-chosen-practice-and-print/food-A4.pdf",
+    "bytes": 229513,
+    "sha256": "665f46f455c195a56f1f31a4fb0400afb385b101db8e394f28b36549ff218ba4"
+  },
+  {
+    "path": "step-9-live-journeys/54-food-learning-food-grou-64177-s-chosen-practice-and-print/food-Letter.pdf",
+    "bytes": 229409,
+    "sha256": "623c6cbacfb76f704370b954711bc0c62d9d981810688f0138e7dc2d891d312a"
+  },
+  {
+    "path": "step-9-live-journeys/54-food-learning-food-menu-39a05-and-saved-context-at-1440px/food-menu-1440.png",
+    "bytes": 74644,
+    "sha256": "741862fecd4b0ea6c5359e0de9b67026920ae5dca62914601661cd53ddd1a639"
+  },
+  {
+    "path": "step-9-live-journeys/54-food-learning-food-menu-39a05-and-saved-context-at-1440px/food-order-1440.png",
+    "bytes": 27295,
+    "sha256": "fee6f85af7353aa011ede5bae28c4569ec84fd22ceba057c0b6a22784bbd9c48"
+  },
+  {
+    "path": "step-9-live-journeys/54-food-learning-food-menu-4de36--and-saved-context-at-320px/food-menu-320.png",
+    "bytes": 73901,
+    "sha256": "2040fc585c6ce0199b14ee1797f0fa0995646efbfeb4b5245f1aaff3c7ce54e6"
+  },
+  {
+    "path": "step-9-live-journeys/54-food-learning-food-menu-4de36--and-saved-context-at-320px/food-order-320.png",
+    "bytes": 31501,
+    "sha256": "309b74d85130220b0b70b41c3ba0d9df707989bb4a835c6413b7a14ca7402476"
+  },
+  {
+    "path": "step-9-live-journeys/55-travel-learning-travel--ab461-aved-audio-context-at-320px/travel-bracket-320.png",
+    "bytes": 28917,
+    "sha256": "423d08dea23f706accd20387e33de60556c462e2590dab89480020d966b2a009"
+  },
+  {
+    "path": "step-9-live-journeys/55-travel-learning-travel--ab461-aved-audio-context-at-320px/travel-listening-320.png",
+    "bytes": 17229,
+    "sha256": "b6f648c7a3c184192d4351c452ad72114ae81a4c836648faed767c5da092b0fe"
+  },
+  {
+    "path": "step-9-live-journeys/55-travel-learning-travel--ab461-aved-audio-context-at-320px/travel-route-320.png",
+    "bytes": 15101,
+    "sha256": "4afed5fa33452bb32cd12f49ac42e2c98f0d07d7082fccac7fcdd2f113e8e4cc"
+  },
+  {
+    "path": "step-9-live-journeys/55-travel-learning-travel--dc816-ved-audio-context-at-1440px/travel-bracket-1440.png",
+    "bytes": 26603,
+    "sha256": "6d73dd725fec39e7b9f77c6867b6edd23c1e336a4bbb4710fa09983a4e8ba755"
+  },
+  {
+    "path": "step-9-live-journeys/55-travel-learning-travel--dc816-ved-audio-context-at-1440px/travel-listening-1440.png",
+    "bytes": 15109,
+    "sha256": "850ebf1a757937e61283ea0223a111fd9ea128155af75965877f5c63b829afa5"
+  },
+  {
+    "path": "step-9-live-journeys/55-travel-learning-travel--dc816-ved-audio-context-at-1440px/travel-route-1440.png",
+    "bytes": 18201,
+    "sha256": "2ab5cb409d6abecc80dd369a4e44ea964a1188a30dddba3c4d80c031154bc293"
+  },
+  {
+    "path": "step-9-live-journeys/55-travel-learning-travel-scoped-cards-and-print-summary/travel-A4.pdf",
+    "bytes": 177061,
+    "sha256": "a845870baf35c17b147a75221e09364f1b6b86c8f6f7f28fc51166dbdd13924d"
+  },
+  {
+    "path": "step-9-live-journeys/55-travel-learning-travel-scoped-cards-and-print-summary/travel-Letter.pdf",
+    "bytes": 177014,
+    "sha256": "5a9cac74fabd9159ceff244153d7e1aa732ad7804efb8c1dd6e3a149f6ff3a97"
+  },
+  {
+    "path": "step-9-live-journeys/56-past-journey-learning-p-59897--and-their-summaries-export/journeys-A4.pdf",
+    "bytes": 217090,
+    "sha256": "8b3262a64550bac577fd03e7dffad977e567e44ff2e0f73fa8aad4b5216c7a5c"
+  },
+  {
+    "path": "step-9-live-journeys/56-past-journey-learning-p-59897--and-their-summaries-export/journeys-Letter.pdf",
+    "bytes": 216989,
+    "sha256": "b46421b3425fcdd15c91f762e4924b6fedfff346f8edd8695ff42880226b86cd"
+  },
+  {
+    "path": "step-9-live-journeys/56-past-journey-learning-p-59897--and-their-summaries-export/past-A4.pdf",
+    "bytes": 201293,
+    "sha256": "090dd04e45d8c4f657e5a92e59e369a9420367bcf628c192ffa14190f1c43256"
+  },
+  {
+    "path": "step-9-live-journeys/56-past-journey-learning-p-59897--and-their-summaries-export/past-Letter.pdf",
+    "bytes": 201228,
+    "sha256": "e1c8e791881bfa181bbcb8ab597f3ae9af942d4355b74c94d9b4c824a7d2cdda"
+  },
+  {
+    "path": "step-9-live-journeys/56-past-journey-learning-s-072a5-y-and-year-return-at-1440px/journey-calendar-1440.png",
+    "bytes": 40021,
+    "sha256": "7494d05884c3b7b754ee8fbbde79cedd7ac9cd98f0c95a8c431fdcc26afc8554"
+  },
+  {
+    "path": "step-9-live-journeys/56-past-journey-learning-s-072a5-y-and-year-return-at-1440px/journey-lab-1440.png",
+    "bytes": 34863,
+    "sha256": "f01f531a5c8e0a654735c5a7e1e66b52ffe134aaec215b61f5cc77503a847937"
+  },
+  {
+    "path": "step-9-live-journeys/56-past-journey-learning-s-7ffdb-ry-and-year-return-at-320px/journey-calendar-320.png",
+    "bytes": 37926,
+    "sha256": "ea1438831120e955831ad29508b9fcee6960a2943732271217b594dfd7642bd1"
+  },
+  {
+    "path": "step-9-live-journeys/56-past-journey-learning-s-7ffdb-ry-and-year-return-at-320px/journey-lab-320.png",
+    "bytes": 38709,
+    "sha256": "47699571a552106daa7b78d775c95fa73f3232e099c65863785b2e8390ff22fe"
+  },
+  {
+    "path": "step-9-live-journeys/56-past-journey-learning-y-46fdf--and-saved-context-at-320px/past-hours-320.png",
+    "bytes": 31769,
+    "sha256": "45c35e714d8e3f9c0d551cf2fca7597ef5b1a04e7a969736040e4115dde189ce"
+  },
+  {
+    "path": "step-9-live-journeys/56-past-journey-learning-y-46fdf--and-saved-context-at-320px/past-timeline-320.png",
+    "bytes": 36627,
+    "sha256": "d69c9840b9881e06f1df159e2aaec389a552b1f98693ec369b0117f24ad58ceb"
+  },
+  {
+    "path": "step-9-live-journeys/56-past-journey-learning-y-89d3e-and-saved-context-at-1440px/past-hours-1440.png",
+    "bytes": 30725,
+    "sha256": "7f49ab4d4a6852d78d533b431aaec299bd47bac3fd83dcf2d58abebcdd362e21"
+  },
+  {
+    "path": "step-9-live-journeys/56-past-journey-learning-y-89d3e-and-saved-context-at-1440px/past-timeline-1440.png",
+    "bytes": 32682,
+    "sha256": "d7349a3069a439073f9b8561de4fba28ec8fb135e93aad042b04f3012ba9d1df"
+  },
+  {
+    "path": "step-9-live-journeys/57-book-listening-journey--adc86--and-exact-return-at-1440px/reader-first-screen-1440.png",
+    "bytes": 346939,
+    "sha256": "0b94abcbcc7958cbeb31afd57ef769bbf05a16bafe1f45605653e680f901b4e2"
+  },
+  {
+    "path": "step-9-live-journeys/57-book-listening-journey--adc86--and-exact-return-at-1440px/reader-transcript-1440.png",
+    "bytes": 36744,
+    "sha256": "e0643be1fafbf67e82709ced8d52f88e80b005f05d5f25fceb8ffe0316a35220"
+  },
+  {
+    "path": "step-9-live-journeys/57-book-listening-journey--f3b6d-w-and-exact-return-at-320px/reader-first-screen-320.png",
+    "bytes": 79247,
+    "sha256": "88cedeb0da5c744b3c2c757269675a282317570fe87b1211a3b8e2f93b234dd0"
+  },
+  {
+    "path": "step-9-live-journeys/57-book-listening-journey--f3b6d-w-and-exact-return-at-320px/reader-transcript-320.png",
+    "bytes": 31037,
+    "sha256": "8ea7b3cf7c28ce5096da6eb159421c75384b5d9fb038898f31671eed838ec19d"
+  },
+  {
+    "path": "step-9-live-journeys/58-release-resilience-lear-40643--is-enlarged-to-200-percent/text-200-book.png",
+    "bytes": 28362,
+    "sha256": "1964299f5b24664b21970b0215117f1a0c891251af0bf98021da5a9a7bcf7a6c"
+  },
+  {
+    "path": "step-9-live-journeys/58-release-resilience-lear-40643--is-enlarged-to-200-percent/text-200-cheat-sheets-home.png",
+    "bytes": 23685,
+    "sha256": "7a5866d0accb060c303274b188642a9605b96c709dc9bd0aeb4d349bd7f8df9e"
+  },
+  {
+    "path": "step-9-live-journeys/58-release-resilience-lear-40643--is-enlarged-to-200-percent/text-200-cheat-sheets.png",
+    "bytes": 24133,
+    "sha256": "7b28fc383a709f01aee793d24629f0a74c924a1b094e3079e86ce43e42163f99"
+  },
+  {
+    "path": "step-9-live-journeys/58-release-resilience-lear-40643--is-enlarged-to-200-percent/text-200-collections.png",
+    "bytes": 68504,
+    "sha256": "20a124b6d2a99aebeffa61f81ea65c9863f3a2c48f491cae12e9887a8076dc99"
+  },
+  {
+    "path": "step-9-live-journeys/58-release-resilience-lear-40643--is-enlarged-to-200-percent/text-200-lessons.png",
+    "bytes": 23176,
+    "sha256": "cd45050299c92c2ea652190e55c11297cc662d43c8baf8fd375a67d001740623"
+  },
+  {
+    "path": "step-9-live-journeys/58-release-resilience-lear-40643--is-enlarged-to-200-percent/text-200-listening.png",
+    "bytes": 24045,
+    "sha256": "baa1f63b85ef5f43f8d0c282091d53c2ae6e0e8c7e62e538537cf5348d3b766d"
+  },
+  {
+    "path": "step-9-live-journeys/58-release-resilience-lear-40643--is-enlarged-to-200-percent/text-200-settings.png",
+    "bytes": 32231,
+    "sha256": "a297a8933e505b2c276e09e2ca4b1ff8dcd88d2dd4206932f4ec0fa73d8d7d21"
+  },
+  {
+    "path": "step-9-live-journeys/58-release-resilience-lear-40643--is-enlarged-to-200-percent/text-200-vocabulary.png",
+    "bytes": 25047,
+    "sha256": "d55e4228c94a92e39da5cf06d202ba71c825262f86b5bb8f3847f9815bcfc025"
+  },
+  {
+    "path": "step-9-live-journeys/58-release-resilience-real-0705f-d-unopened-pages-are-honest/offline-book.png",
+    "bytes": 46283,
+    "sha256": "3d30ffd6fd9c60096a58440571290d5e9ade68cc2eae0c2020f83928c873a49d"
+  }
+]

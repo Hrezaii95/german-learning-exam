@@ -1,0 +1,26 @@
+[
+  {
+    "width": 320,
+    "status": 200,
+    "text": "View",
+    "lines": 1,
+    "overflow": 0,
+    "overflowWrap": "normal"
+  },
+  {
+    "width": 390,
+    "status": 200,
+    "text": "View",
+    "lines": 1,
+    "overflow": 0,
+    "overflowWrap": "normal"
+  },
+  {
+    "width": 1440,
+    "status": 200,
+    "text": "View",
+    "lines": 1,
+    "overflow": 0,
+    "overflowWrap": "normal"
+  }
+]

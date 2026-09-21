@@ -1,0 +1,24 @@
+
+Running 7 tests using 2 workers
+
+(node:37324) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:14236) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 2 platform\tests\e2e\58-release-resilience.spec.ts:3:1 › library filters and global search update locally and preserve Back (5.0s)
+  ok 3 platform\tests\e2e\58-release-resilience.spec.ts:24:1 › empty recording search recovers without losing the library (2.9s)
+200% text vocabulary/ {"overflow":0,"outside":[]}
+  ok 1 platform\tests\e2e\57-book-listening-journey.spec.ts:7:31 › book to transcript, meaning, review and exact return at 320px (12.8s)
+200% text lessons/12/ {"overflow":0,"outside":[{"tag":"BUTTON","class":"","text":"Phrases","width":102},{"tag":"BUTTON","class":"","text":"Practice","width":102}]}
+200% text cheat-sheets/ {"overflow":0,"outside":[]}
+200% text cheat-sheets/home/ {"overflow":0,"outside":[]}
+200% text collections/professions/ {"overflow":0,"outside":[]}
+200% text book/?page=coursebook-30 {"overflow":0,"outside":[]}
+200% text listening/ {"overflow":0,"outside":[]}
+  ok 5 platform\tests\e2e\57-book-listening-journey.spec.ts:7:31 › book to transcript, meaning, review and exact return at 1440px (11.9s)
+200% text settings/ {"overflow":0,"outside":[]}
+  ok 4 platform\tests\e2e\58-release-resilience.spec.ts:35:1 › learning views retain readable reflow when text is enlarged to 200 percent (17.2s)
+  ok 6 platform\tests\e2e\57-book-listening-journey.spec.ts:58:1 › book line saves preserve source selection and answers stay deliberate (7.2s)
+  ok 7 platform\tests\e2e\58-release-resilience.spec.ts:69:2 › real offline recovery › played audio and saved progress survive offline reload; unopened pages are honest (33.3s)
+
+  7 passed (59.6s)
