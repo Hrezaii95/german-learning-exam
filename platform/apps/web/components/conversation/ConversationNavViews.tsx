@@ -1,4 +1,6 @@
 "use client";
+import { LDiv, LH1, LHeader, LLi, LP, LSpan, LUl } from "@/components/i18n/LocalizedElements";
+
 
 import { useSearchParams } from "next/navigation";
 import {
@@ -11,7 +13,7 @@ import {
   CONVERSATION_ENTITY_ID,
   conversationCanonicalPath,
 } from "@/lib/conversation";
-import Link from "next/link";
+import Link from "@/components/i18n/LocalizedLink";
 import {
   appendNavigationContext,
   type NavigationContext,
@@ -23,10 +25,10 @@ export function ConversationWithNav() {
   const backHref = resolveBackHref(navigation, "hub");
 
   return (
-    <div className="stack">
+    <LDiv className="stack">
       <BackLink href={backHref} />
       <ConversationLadder navigation={navigation} />
-    </div>
+    </LDiv>
   );
 }
 
@@ -40,33 +42,33 @@ export function ConversationSelector({
     : conversationCanonicalPath();
 
   return (
-    <div className="stack">
-      <header className="page-header">
-        <p className="dense">Conversation</p>
-        <h1>Conversation practice</h1>
-        <p className="lede">
+    <LDiv className="stack">
+      <LHeader className="page-header">
+        <LP className="dense">Conversation</LP>
+        <LH1>Conversation practice</LH1>
+        <LP className="lede">
           A five-level ladder for the informal profession question and answer.
-        </p>
-      </header>
-      <ul className="game-selector__list">
-        <li>
+        </LP>
+      </LHeader>
+      <LUl className="game-selector__list">
+        <LLi>
           <Link
             href={href}
             className="game-selector__card"
             data-conversation-entity={CONVERSATION_ENTITY_ID}
           >
-            <span className="game-selector__title">
+            <LSpan className="game-selector__title">
               Was bist du von Beruf?
-            </span>
-            <span className="game-selector__desc">
+            </LSpan>
+            <LSpan className="game-selector__desc">
               Model → recognition → substitution → construction → spoken
               role-play
-            </span>
-            <span className="meta-chip">5 levels</span>
+            </LSpan>
+            <LSpan className="meta-chip">5 levels</LSpan>
           </Link>
-        </li>
-      </ul>
-    </div>
+        </LLi>
+      </LUl>
+    </LDiv>
   );
 }
 
@@ -75,9 +77,9 @@ export function ConversationSelectorWithNav() {
   const navigation = parseNavigationContextParam(searchParams.get("nav"));
   const backHref = resolveBackHref(navigation, "hub");
   return (
-    <div className="stack">
+    <LDiv className="stack">
       <BackLink href={backHref} />
       <ConversationSelector navigation={navigation} />
-    </div>
+    </LDiv>
   );
 }

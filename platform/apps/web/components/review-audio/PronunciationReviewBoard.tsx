@@ -1,4 +1,6 @@
 "use client";
+import { LButton, LDd, LDetails, LDiv, LDl, LDt, LFieldset, LH2, LInput, LLabel, LLegend, LOl, LP, LSection, LSpan, LStrong, LSummary } from "@/components/i18n/LocalizedElements";
+
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
@@ -245,22 +247,22 @@ export function PronunciationReviewBoard({
   ];
 
   return (
-    <div className="review-board">
+    <LDiv className="review-board">
       {/* Two real columns on a wide screen: the controls and the running count
           on the left, the clips on the right. The wrapper is what makes the
           left column sticky correctly — a sticky grid item whose row is only
           as tall as itself has no range to travel, so without this the panel
           would scroll away with the first clip. */}
-      <div className="review-board__aside">
-        <section
+      <LDiv className="review-board__aside">
+        <LSection
           className="panel review-board__controls"
           aria-labelledby="review-controls-heading"
         >
-          <h2 id="review-controls-heading">Choose what to listen to</h2>
+          <LH2 id="review-controls-heading">Choose what to listen to</LH2>
 
-          <div className="review-board__reviewer">
-            <label htmlFor="review-listener">Who is listening?</label>
-            <input
+          <LDiv className="review-board__reviewer">
+            <LLabel htmlFor="review-listener">Who is listening?</LLabel>
+            <LInput
               id="review-listener"
               type="text"
               autoComplete="name"
@@ -270,19 +272,19 @@ export function PronunciationReviewBoard({
                 setBook(withReviewer(bookRef.current, event.target.value))
               }
             />
-          </div>
+          </LDiv>
 
-          <fieldset className="review-board__filters">
-            <legend>Sound to focus on</legend>
-            <p className="dense">
+          <LFieldset className="review-board__filters">
+            <LLegend>Sound to focus on</LLegend>
+            <LP className="dense">
               Pick one or more. With none picked you get every clip, hardest sound
               first.
-            </p>
-            <div className="review-board__chips">
+            </LP>
+            <LDiv className="review-board__chips">
               {filterButtons.map((filter) => {
                 const on = activeFilters.includes(filter.key);
                 return (
-                  <button
+                  <LButton
                     key={filter.key}
                     type="button"
                     className="review-board__chip"
@@ -294,132 +296,132 @@ export function PronunciationReviewBoard({
                     {/* Two spans with a real space between them: the count is
                         pushed to the right edge for scanning, while the spoken
                         name stays "German r (72)" instead of running together. */}
-                    <span className="review-board__chip-label">
+                    <LSpan className="review-board__chip-label">
                       {filter.label}
-                    </span>{" "}
-                    <span className="review-board__chip-count">
+                    </LSpan>{" "}
+                    <LSpan className="review-board__chip-count">
                       ({filter.count})
-                    </span>
-                  </button>
+                    </LSpan>
+                  </LButton>
                 );
               })}
-              <button
+              <LButton
                 type="button"
                 className="btn btn-secondary review-board__reset"
                 onClick={() => setActiveFilters([])}
                 disabled={activeFilters.length === 0}
               >
                 Show every sound
-              </button>
-            </div>
-          </fieldset>
+              </LButton>
+            </LDiv>
+          </LFieldset>
 
-          <div className="review-board__switches">
-            <label className="review-board__switch">
-              <input
+          <LDiv className="review-board__switches">
+            <LLabel className="review-board__switch">
+              <LInput
                 type="checkbox"
                 checked={onlyUnreviewed}
                 data-filter="unreviewed"
                 onChange={(event) => setOnlyUnreviewed(event.target.checked)}
               />
-              <span>Only the ones I have not reviewed yet</span>
-            </label>
-            <label className="review-board__switch">
-              <input
+              <LSpan>Only the ones I have not reviewed yet</LSpan>
+            </LLabel>
+            <LLabel className="review-board__switch">
+              <LInput
                 type="checkbox"
                 checked={grouped}
                 data-filter="grouped"
                 onChange={(event) => setGrouped(event.target.checked)}
               />
-              <span>Group by sound</span>
-            </label>
-          </div>
+              <LSpan>Group by sound</LSpan>
+            </LLabel>
+          </LDiv>
 
-          <details className="review-board__glossary">
-            <summary>What each sound name means</summary>
-            <dl>
+          <LDetails className="review-board__glossary">
+            <LSummary>What each sound name means</LSummary>
+            <LDl>
               {PRONUNCIATION_RISK_TAGS.map((tag) => (
-                <div key={tag.id}>
-                  <dt>{tag.label}</dt>
-                  <dd>{tag.listenFor}</dd>
-                </div>
+                <LDiv key={tag.id}>
+                  <LDt>{tag.label}</LDt>
+                  <LDd>{tag.listenFor}</LDd>
+                </LDiv>
               ))}
-              <div>
-                <dt>{NO_TAG_LABEL}</dt>
-                <dd>
+              <LDiv>
+                <LDt>{NO_TAG_LABEL}</LDt>
+                <LDd>
                   The technical pass did not write down a sound to watch for on
                   these, so listen to the whole clip.
-                </dd>
-              </div>
-            </dl>
-          </details>
-        </section>
+                </LDd>
+              </LDiv>
+            </LDl>
+          </LDetails>
+        </LSection>
 
-        <section
+        <LSection
           className="panel review-board__progress"
           aria-labelledby="review-progress-heading"
         >
-          <h2 id="review-progress-heading">Where you are</h2>
-          <p className="review-board__count" data-reviewed-count={reviewed}>
-            <strong>
+          <LH2 id="review-progress-heading">Where you are</LH2>
+          <LP className="review-board__count" data-reviewed-count={reviewed}>
+            <LStrong>
               {restored ? reviewed : 0} of {clips.length}
-            </strong>{" "}
+            </LStrong>{" "}
             reviewed
             {restored ? "" : " — reading your earlier notes from this device"}
-          </p>
+          </LP>
           <progress
             className="review-board__bar"
             max={clips.length}
             value={restored ? reviewed : 0}
             aria-label={`Reviewed so far: ${restored ? reviewed : 0} of ${clips.length} clips`}
           />
-          <p className="dense" data-visible-count={visible.length}>
+          <LP className="dense" data-visible-count={visible.length}>
             Showing {visible.length} of {clips.length} clips.
-          </p>
-          <div className="review-board__actions">
-            <button
+          </LP>
+          <LDiv className="review-board__actions">
+            <LButton
               type="button"
               className="btn btn-primary"
               onClick={downloadNotes}
             >
               Download my notes
-            </button>
-          </div>
-          <p className="dense">
+            </LButton>
+          </LDiv>
+          <LP className="dense">
             The download is one file holding every clip you judged, the German it
             says, and the fingerprint of the exact recording you heard.
-          </p>
+          </LP>
           {storageProblem ? (
-            <p className="review-board__warning" role="alert">
+            <LP className="review-board__warning" role="alert">
               {storageProblem}
-            </p>
+            </LP>
           ) : null}
           <StatusMessage
             announcement={announcement}
             className="review-board__spoken"
           />
-        </section>
-      </div>
+        </LSection>
+      </LDiv>
 
-      <div className="review-board__stream">
+      <LDiv className="review-board__stream">
         {visible.length === 0 ? (
-          <p className="panel review-board__empty">
+          <LP className="panel review-board__empty">
             Nothing matches those choices. Clear a filter to bring clips back.
-          </p>
+          </LP>
         ) : grouped ? (
           groups.map((group) => (
-            <section
+            <LSection
               key={group.key}
               className="review-board__group"
               aria-labelledby={`group-${group.key}`}
               data-group={group.key}
             >
-              <h2 id={`group-${group.key}`}>
+              <LH2 id={`group-${group.key}`}>
                 {group.heading}{" "}
-                <span className="dense">({group.clips.length})</span>
-              </h2>
-              {group.listenFor ? <p className="lede">{group.listenFor}</p> : null}
-              <ol className="review-board__list">
+                <LSpan className="dense">({group.clips.length})</LSpan>
+              </LH2>
+              {group.listenFor ? <LP className="lede">{group.listenFor}</LP> : null}
+              <LOl className="review-board__list">
                 {group.clips.map((clip) => (
                   <ReviewClipRow
                     key={clip.id}
@@ -431,15 +433,15 @@ export function PronunciationReviewBoard({
                     onClear={handleClear}
                   />
                 ))}
-              </ol>
-            </section>
+              </LOl>
+            </LSection>
           ))
         ) : (
-          <section className="review-board__group" aria-labelledby="group-all">
-            <h2 id="group-all">
-              Every clip <span className="dense">({visible.length})</span>
-            </h2>
-            <ol className="review-board__list">
+          <LSection className="review-board__group" aria-labelledby="group-all">
+            <LH2 id="group-all">
+              Every clip <LSpan className="dense">({visible.length})</LSpan>
+            </LH2>
+            <LOl className="review-board__list">
               {visible.map((clip) => (
                 <ReviewClipRow
                   key={clip.id}
@@ -451,10 +453,10 @@ export function PronunciationReviewBoard({
                   onClear={handleClear}
                 />
               ))}
-            </ol>
-          </section>
+            </LOl>
+          </LSection>
         )}
-      </div>
-    </div>
+      </LDiv>
+    </LDiv>
   );
 }

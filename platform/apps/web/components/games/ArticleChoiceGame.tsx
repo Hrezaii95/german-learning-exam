@@ -1,4 +1,6 @@
 "use client";
+import { LFieldset, LH2, LInput, LLabel, LLegend, LP, LSection, LSpan } from "@/components/i18n/LocalizedElements";
+
 
 import { useMemo, useRef, useState } from "react";
 import { useFeedbackChannel } from "@/components/a11y/StatusMessage";
@@ -65,20 +67,20 @@ export function ArticleChoiceGame({
   }
 
   return (
-    <section className="panel game-panel" aria-labelledby="article-choice-heading">
-      <h2 id="article-choice-heading">Article choice</h2>
-      <p className="muted">
+    <LSection className="panel game-panel" aria-labelledby="article-choice-heading">
+      <LH2 id="article-choice-heading">Article choice</LH2>
+      <LP className="muted">
         Choose the correct article for{" "}
-        <span className="german" lang="de">
+        <LSpan className="german" lang="de">
           {prompt.lemma}
-        </span>
+        </LSpan>
         .
-      </p>
-      <fieldset className="game-choice">
-        <legend className="hub-field__label">Article</legend>
+      </LP>
+      <LFieldset className="game-choice">
+        <LLegend className="hub-field__label">Article</LLegend>
         {prompt.choices.map((article) => (
-          <label key={article} className="game-choice__option">
-            <input
+          <LLabel key={article} className="game-choice__option">
+            <LInput
               type="radio"
               name="article-choice"
               value={article}
@@ -88,12 +90,12 @@ export function ArticleChoiceGame({
                 setMessage(null);
               }}
             />
-            <span className="german" lang="de">
+            <LSpan className="german" lang="de">
               {article}
-            </span>
-          </label>
+            </LSpan>
+          </LLabel>
         ))}
-      </fieldset>
+      </LFieldset>
       <GameActionBar
         onSubmit={submit}
         onRetry={retry}
@@ -106,6 +108,6 @@ export function ArticleChoiceGame({
         revealDisabled={revealed}
       />
       <GameFeedback kind={feedbackKind} message={message} seq={seq} />
-    </section>
+    </LSection>
   );
 }

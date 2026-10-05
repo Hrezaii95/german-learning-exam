@@ -1,11 +1,13 @@
 "use client";
+import { LArticle, LButton, LDetails, LDiv, LForm, LH1, LH2, LH3, LH4, LHeader, LInput, LLabel, LNav, LP, LSection, LSpan, LSummary } from "@/components/i18n/LocalizedElements";
+
 import {submitLocalSearch} from "./submit-local-search";
 import {useStudyScope} from "@/components/study/StudyScope";
 import {useStudy} from "@/components/study/StudyProvider";
 import {LineAudio} from "@/components/study/StudyAudio";
 import {wordCardSearchKey} from "@/lib/content/word-card-types";
 import {numericLessons,tagsForLesson} from "@/lib/study/scope";
-import Link from "next/link";
+import Link from "@/components/i18n/LocalizedLink";
 import type { NavigationContext } from "@/lib/content/navigation-context";
 import {
   appendNavigationContext,
@@ -61,28 +63,28 @@ function SearchResultCard({
   const spoken=entry?.de??doc.fields.find(field=>field.field==="lemma"||field.field==="infinitive")?.displayText;
   const matchesQuery=(text:string)=>wordCardSearchKey(text).includes(wordCardSearchKey(query));
   const context=(doc.fields.find(field=>field.field==="form"&&matchesQuery(field.displayText))??doc.fields.find(field=>field.field===hit.match.field&&matchesQuery(field.displayText)))?.displayText;
-  const label=<span className="german" lang="de">{hit.displayLabel.split(" / ").map((form,index)=><span key={`${index}-${form}`}>{index>0?" / ":""}<span className={`study-tone-${entry?.displayForms?.find(display=>display.text===form)?.tone??"plain"}`}>{form}</span></span>)}</span>;
+  const label=<LSpan className="german" lang="de">{hit.displayLabel.split(" / ").map((form,index)=><LSpan key={`${index}-${form}`}>{index>0?" / ":""}<LSpan className={`study-tone-${entry?.displayForms?.find(display=>display.text===form)?.tone??"plain"}`}>{form}</LSpan></LSpan>)}</LSpan>;
   const names:Record<string,string>={Lexeme:"Word",Verb:"Verb",GrammarConcept:"Grammar",PhrasePattern:"Phrase",QAPair:"Question & answer",LearningActivity:"Activity",ListeningAsset:"Recording",Lesson:"Lesson",Dialogue:"Dialogue",Collection:"Collection"};
   const meta = (
     <>
-      <div className="meta-row">
-        <span className="meta-chip">{hit.kind}</span>
-        <span className="meta-chip">{lessonMembershipLabel(hit.lessonIds)}</span>
-        <span className="meta-chip">{hit.id.startsWith("course:")?"Lesson study aid":sourcePriorityLabel(hit.sourcePriority)}</span>
-        <span className="meta-chip">{matchMetaLabel(hit.match)}</span>
-      </div>
+      <LDiv className="meta-row">
+        <LSpan className="meta-chip">{hit.kind}</LSpan>
+        <LSpan className="meta-chip">{lessonMembershipLabel(hit.lessonIds)}</LSpan>
+        <LSpan className="meta-chip">{hit.id.startsWith("course:")?"Lesson study aid":sourcePriorityLabel(hit.sourcePriority)}</LSpan>
+        <LSpan className="meta-chip">{matchMetaLabel(hit.match)}</LSpan>
+      </LDiv>
     </>
   );
 
   const href = linkableResultHref(hit, query,page);
-  return <article className="hub-card panel search-learning-result" id={`search-result-${hit.id}`}>
-    <p className="study-eyebrow">{names[hit.kind]??hit.kind} · {lessonMembershipLabel(hit.lessonIds)}</p>
-    <h4 className="hub-card__title">{href?<Link href={href} className="search-result-link">{label}</Link>:label}</h4>
-    {(meaning||entry?.en)&&<p>{meaning??entry?.en}</p>}
-    {context&&context!==hit.displayLabel&&context!==meaning&&(context.length>240?<details><summary>Show matching context</summary><p className="search-match-context">{context}</p></details>:<p className="search-match-context">Matched text: {context}</p>)}
+  return <LArticle className="hub-card panel search-learning-result" id={`search-result-${hit.id}`}>
+    <LP className="study-eyebrow">{names[hit.kind]??hit.kind} · {lessonMembershipLabel(hit.lessonIds)}</LP>
+    <LH4 className="hub-card__title">{href?<Link href={href} className="search-result-link">{label}</Link>:label}</LH4>
+    {(meaning||entry?.en)&&<LP>{meaning??entry?.en}</LP>}
+    {context&&context!==hit.displayLabel&&context!==meaning&&(context.length>240?<LDetails><LSummary>Show matching context</LSummary><LP className="search-match-context">{context}</LP></LDetails>:<LP className="search-match-context">Matched text: {context}</LP>)}
     {spoken&&<LineAudio text={spoken} src={entry?.audio} compact/>}
-    <details><summary>About this result</summary>{meta}</details>
-  </article>;
+    <LDetails><LSummary>About this result</LSummary>{meta}</LDetails>
+  </LArticle>;
 }
 
 export function SearchView({
@@ -106,29 +108,29 @@ export function SearchView({
   const backHref = navigation ? resolveBackHref(navigation, "hub") : null;
 
   return (
-    <div className="stack">
-      <header className="page-header">
+    <LDiv className="stack">
+      <LHeader className="page-header">
         {backHref ? <BackLink href={backHref} /> : null}
-        <p className="dense">Global search</p>
-        <h1>Search</h1>
-        <p className="lede">
+        <LP className="dense">Global search</LP>
+        <LH1>Search</LH1>
+        <LP className="lede">
           Search everything you are learning by German form, meaning, or label.
           Umlaut-free spellings match quietly; results always show correct
           German spelling.
-        </p>
-      </header>
+        </LP>
+      </LHeader>
 
-      <section className="panel hub-filters" aria-labelledby="search-form-heading">
-        <h2 id="search-form-heading">Find content</h2>
-        <form
+      <LSection className="panel hub-filters" aria-labelledby="search-form-heading">
+        <LH2 id="search-form-heading">Find content</LH2>
+        <LForm
           className="hub-filter-form"
           method="get"
           action={withPagesBasePath("/search")}
           onSubmit={submitLocalSearch}
         >
-          <label className="hub-field" htmlFor="global-search-q">
-            <span className="hub-field__label">Query</span>
-            <input
+          <LLabel className="hub-field" htmlFor="global-search-q">
+            <LSpan className="hub-field__label">Query</LSpan>
+            <LInput
               id="global-search-q"
               className="hub-input"
               type="search"
@@ -139,60 +141,60 @@ export function SearchView({
               autoComplete="off"
               aria-label="Search learning content"
             />
-          </label>
-          <div className="hub-filter-actions">
-            <button className="btn btn-primary" type="submit">
+          </LLabel>
+          <LDiv className="hub-filter-actions">
+            <LButton className="btn btn-primary" type="submit">
               Search
-            </button>
+            </LButton>
             <Link className="btn btn-secondary" href="/search">
               Clear
             </Link>
-          </div>
-        </form>
-      </section>
+          </LDiv>
+        </LForm>
+      </LSection>
 
       {trimmed.length === 0 ? (
-        <div className="panel hub-empty" role="status">
-          <h2>Enter a search</h2>
-          <p className="muted">
+        <LDiv className="panel hub-empty" role="status">
+          <LH2>Enter a search</LH2>
+          <LP className="muted">
             Type a German word, meaning, or label to see grouped results.
-          </p>
-        </div>
+          </LP>
+        </LDiv>
       ) : hits.length === 0 ? (
-        <div className="panel hub-empty" role="status">
-          <h2>No matches</h2>
-          <p className="muted">
+        <LDiv className="panel hub-empty" role="status">
+          <LH2>No matches</LH2>
+          <LP className="muted">
             Nothing matches “{trimmed}”. Try another spelling or clear the
             query.
-          </p>
-        </div>
+          </LP>
+        </LDiv>
       ) : (
-        <section aria-labelledby="search-results-heading">
-          <h2 id="search-results-heading" className="dense">
+        <LSection aria-labelledby="search-results-heading">
+          <LH2 id="search-results-heading" className="dense">
             Results ({hits.length})
-          </h2>
-          <div className="search-groups">
+          </LH2>
+          <LDiv className="search-groups">
             {groups.map((group) => (
-              <section
+              <LSection
                 key={group.kind}
                 className="search-group"
                 aria-labelledby={`search-group-${group.kind}`}
               >
-                <h3 id={`search-group-${group.kind}`} className="search-group__title">
+                <LH3 id={`search-group-${group.kind}`} className="search-group__title">
                   {group.label}
-                  <span className="dense"> ({group.hits.length})</span>
-                </h3>
-                <div className="card-grid hub-results">
+                  <LSpan className="dense"> ({group.hits.length})</LSpan>
+                </LH3>
+                <LDiv className="card-grid hub-results">
                   {group.hits.map((hit) => (
                     <SearchResultCard key={hit.id} hit={hit} query={trimmed} document={projection.documentsById[hit.id]!} page={page}/>
                   ))}
-                </div>
-              </section>
+                </LDiv>
+              </LSection>
             ))}
-          </div>
-          <nav className="library-pagination" aria-label="Search results pages"><p role="status">Showing {(page-1)*20+1}–{Math.min(page*20,hits.length)} of {hits.length} · Page {page} of {pageCount}</p><div className="study-row">{page>1&&<Link className="study-secondary" href={`/search?q=${encodeURIComponent(trimmed)}&page=${page-1}#search-results-heading`}>← Previous page</Link>}{page<pageCount&&<Link className="study-primary" href={`/search?q=${encodeURIComponent(trimmed)}&page=${page+1}#search-results-heading`}>Next page →</Link>}</div></nav>
-        </section>
+          </LDiv>
+          <LNav className="library-pagination" aria-label="Search results pages"><LP role="status">Showing {(page-1)*20+1}–{Math.min(page*20,hits.length)} of {hits.length} · Page {page} of {pageCount}</LP><LDiv className="study-row">{page>1&&<Link className="study-secondary" href={`/search?q=${encodeURIComponent(trimmed)}&page=${page-1}#search-results-heading`}>← Previous page</Link>}{page<pageCount&&<Link className="study-primary" href={`/search?q=${encodeURIComponent(trimmed)}&page=${page+1}#search-results-heading`}>Next page →</Link>}</LDiv></LNav>
+        </LSection>
       )}
-    </div>
+    </LDiv>
   );
 }

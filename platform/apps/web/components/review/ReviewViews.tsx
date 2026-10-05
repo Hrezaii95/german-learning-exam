@@ -1,7 +1,9 @@
 "use client";
+import { LDiv, LH1, LH2, LHeader, LInput, LLabel, LOption, LP, LSection, LSelect, LSpan } from "@/components/i18n/LocalizedElements";
+
 
 import {useStudyScope} from "@/components/study/StudyScope";
-import Link from "next/link";
+import Link from "@/components/i18n/LocalizedLink";
 import { useMemo, useRef, useState } from "react";
 import type { LearnerEvent, MissionFilters, SelectedMissionCard } from "@german-learning/learning";
 import { useLearnerState } from "@/components/learner-state/LearnerStateProvider";
@@ -53,8 +55,8 @@ export function ReviewSetup() {
   const [teacherAssignment, setTeacherAssignment] = useState(false);
   const hydration = snapshot.hydration;
 
-  if (snapshot.status === "loading") return <p role="status">Loading review state…</p>;
-  if (!hydration) return <p className="placeholder-banner" role="alert">{snapshot.statusMessage}</p>;
+  if (snapshot.status === "loading") return <LP role="status">Loading review state…</LP>;
+  if (!hydration) return <LP className="placeholder-banner" role="alert">{snapshot.statusMessage}</LP>;
 
   const filters: MissionFilters = {
     ...(lesson === "all" ? {} : { lessonId: lesson }),
@@ -72,40 +74,40 @@ export function ReviewSetup() {
   });
 
   return (
-    <div className="stack">
-      <header className="page-header">
-        <p className="dense">Guided review · Lessons 1–2</p>
-        <h1>Today’s mission</h1>
-        <p className="lede">Build a short session of checked exercises. These guided cards cover Lessons 1–2; your saved words, phrases and concepts from all lessons live in My review.</p>
-      </header>
-      <div className="study-row review-paths"><Link className="study-secondary" href="/saved">My saved collection &amp; recall →</Link><Link href="/practice">Choose free practice →</Link></div>
-      <section className="panel" aria-labelledby="review-setup-heading">
-        <h2 id="review-setup-heading">Build mission</h2>
-        <div className="hub-filter-grid">
-          <label className="hub-field">Mission size
-            <select className="hub-input" value={size} onChange={(e) => setSize(Number(e.target.value) as 5 | 10 | 15)}>
-              <option value={5}>5 cards</option><option value={10}>10 cards</option><option value={15}>15 cards</option>
-            </select>
-          </label>
-          <label className="hub-field">Lesson
-            <select aria-label="Lesson" className="hub-input" value={lesson} onChange={(e) => setLesson(e.target.value as typeof lesson)}>
-              <option value="all">Both available lessons</option><option value="lesson:01">Lesson 1</option><option value="lesson:02">Lesson 2</option>
-            </select>
-          </label>
-          <label className="qa-guided__option"><input type="checkbox" checked={onlyDifficult} onChange={(e) => setOnlyDifficult(e.target.checked)} /> Difficult or confusing only</label>
-          <label className="qa-guided__option"><input type="checkbox" checked={teacherAssignment} onChange={(e) => setTeacherAssignment(e.target.checked)} /> Teacher-tagged only</label>
-        </div>
-      </section>
-      <section className="panel" aria-labelledby="review-summary-heading">
-        <h2 id="review-summary-heading">Mission summary</h2>
-        <p>{view.mission.reasonText}</p>
-        <div className="meta-row">
-          <span className="meta-chip">{view.candidateCount} eligible</span>
-          <span className="meta-chip">{view.dueCount} due</span>
-          <span className="meta-chip">{view.newCount} new</span>
-          <span className="meta-chip">{view.mission.selected.length} selected</span>
-        </div>
-        <p className="dense">{view.availabilityNote}</p>
+    <LDiv className="stack">
+      <LHeader className="page-header">
+        <LP className="dense">Guided review · Lessons 1–2</LP>
+        <LH1>Today’s mission</LH1>
+        <LP className="lede">Build a short session of checked exercises. These guided cards cover Lessons 1–2; your saved words, phrases and concepts from all lessons live in My review.</LP>
+      </LHeader>
+      <LDiv className="study-row review-paths"><Link className="study-secondary" href="/saved">My saved collection &amp; recall →</Link><Link href="/practice">Choose free practice →</Link></LDiv>
+      <LSection className="panel" aria-labelledby="review-setup-heading">
+        <LH2 id="review-setup-heading">Build mission</LH2>
+        <LDiv className="hub-filter-grid">
+          <LLabel className="hub-field">Mission size
+            <LSelect className="hub-input" value={size} onChange={(e) => setSize(Number(e.target.value) as 5 | 10 | 15)}>
+              <LOption value={5}>5 cards</LOption><LOption value={10}>10 cards</LOption><LOption value={15}>15 cards</LOption>
+            </LSelect>
+          </LLabel>
+          <LLabel className="hub-field">Lesson
+            <LSelect aria-label="Lesson" className="hub-input" value={lesson} onChange={(e) => setLesson(e.target.value as typeof lesson)}>
+              <LOption value="all">Both available lessons</LOption><LOption value="lesson:01">Lesson 1</LOption><LOption value="lesson:02">Lesson 2</LOption>
+            </LSelect>
+          </LLabel>
+          <LLabel className="qa-guided__option"><LInput type="checkbox" checked={onlyDifficult} onChange={(e) => setOnlyDifficult(e.target.checked)} /> Difficult or confusing only</LLabel>
+          <LLabel className="qa-guided__option"><LInput type="checkbox" checked={teacherAssignment} onChange={(e) => setTeacherAssignment(e.target.checked)} /> Teacher-tagged only</LLabel>
+        </LDiv>
+      </LSection>
+      <LSection className="panel" aria-labelledby="review-summary-heading">
+        <LH2 id="review-summary-heading">Mission summary</LH2>
+        <LP>{view.mission.reasonText}</LP>
+        <LDiv className="meta-row">
+          <LSpan className="meta-chip">{view.candidateCount} eligible</LSpan>
+          <LSpan className="meta-chip">{view.dueCount} due</LSpan>
+          <LSpan className="meta-chip">{view.newCount} new</LSpan>
+          <LSpan className="meta-chip">{view.mission.selected.length} selected</LSpan>
+        </LDiv>
+        <LP className="dense">{view.availabilityNote}</LP>
         {view.mission.selected.length > 0 ? (
           <Link
             className="btn btn-primary"
@@ -113,10 +115,10 @@ export function ReviewSetup() {
             onClick={() => window.sessionStorage.setItem(REVIEW_CONFIG_KEY, JSON.stringify({ size, lesson, onlyDifficult, teacherAssignment }))}
           >Start mission</Link>
         ) : (
-          <p className="placeholder-banner">No cards match. Add review cards from a detail page or clear filters.</p>
+          <LP className="placeholder-banner">No cards match. Add review cards from a detail page or clear filters.</LP>
         )}
-      </section>
-    </div>
+      </LSection>
+    </LDiv>
   );
 }
 
@@ -133,8 +135,8 @@ export function ReviewSession() {
   const sessionId = useMemo(() => createPracticeUuid(), []);
   const hydration = snapshot.hydration;
 
-  if (snapshot.status === "loading") return <p role="status">Loading today’s mission…</p>;
-  if (!hydration || !controller) return <p className="placeholder-banner" role="alert">{snapshot.statusMessage}</p>;
+  if (snapshot.status === "loading") return <LP role="status">Loading today’s mission…</LP>;
+  if (!hydration || !controller) return <LP className="placeholder-banner" role="alert">{snapshot.statusMessage}</LP>;
 
   if (config.current === null) config.current = readReviewConfig();
   const filters: MissionFilters = {
@@ -156,15 +158,15 @@ export function ReviewSession() {
   const row = selected[index];
   if (!row) {
     return (
-      <div className="stack">
-        <header className="page-header"><p className="dense">Review complete</p><h1>Mission finished</h1><p className="lede">Your progress and next review dates are saved on this device.</p></header>
+      <LDiv className="stack">
+        <LHeader className="page-header"><LP className="dense">Review complete</LP><LH1>Mission finished</LH1><LP className="lede">Your progress and next review dates are saved on this device.</LP></LHeader>
         <Link className="btn btn-primary" href="/review">Back to review</Link>
         <Link className="btn btn-secondary" href="/">Dashboard</Link>
-      </div>
+      </LDiv>
     );
   }
   const template = reviewTemplateForId(row.candidate.templateId);
-  if (!template) return <p role="alert">This review card is no longer available.</p>;
+  if (!template) return <LP role="alert">This review card is no longer available.</LP>;
 
   async function persist(event: LearnerEvent) {
     if (saving || handled.current.has(event.eventId)) return;
@@ -189,12 +191,12 @@ export function ReviewSession() {
   }
 
   return (
-    <div className="stack review-session">
-      <header className="page-header">
-        <p className="dense">Today’s mission · {index + 1}/{selected.length}</p>
-        <h1>{row.candidate.conceptLabel}</h1>
-        <div className="meta-row"><span className="meta-chip">{row.category}</span><span className="meta-chip">{row.candidate.modality}</span></div>
-      </header>
+    <LDiv className="stack review-session">
+      <LHeader className="page-header">
+        <LP className="dense">Today’s mission · {index + 1}/{selected.length}</LP>
+        <LH1>{row.candidate.conceptLabel}</LH1>
+        <LDiv className="meta-row"><LSpan className="meta-chip">{row.category}</LSpan><LSpan className="meta-chip">{row.candidate.modality}</LSpan></LDiv>
+      </LHeader>
       {template.gameId ? (
         <PracticeGameBody gameId={template.gameId as ReviewGameId} sessionId={sessionId} onEvent={(event) => void persist(event)} />
       ) : (
@@ -203,6 +205,6 @@ export function ReviewSession() {
       <StatusMessage announcement={savingAnnouncement} />
       <StatusMessage announcement={message} className="detail-feedback" />
       <Link className="btn btn-secondary" href="/review">Exit mission</Link>
-    </div>
+    </LDiv>
   );
 }

@@ -39,7 +39,7 @@ import { normalizeExportSegments } from "./normalize-export-segments.js";
 
 const require = createRequire(import.meta.url);
 
-export const PAGES_BASE_PATH = "/german-learning-exam";
+export const PAGES_BASE_PATH = process.env.GL_CLOUDFLARE_EXPORT === "1" ? "" : "/german-learning-exam";
 export const PROXY_PARKED_NAME = "proxy.ts.pages-disabled";
 export const BAK_SUFFIX = ".pages-bak";
 
@@ -326,8 +326,7 @@ export function createPagesBuildController(
   }
 
   async function runProject(): Promise<void> {
-    const tsxCli = require.resolve("tsx/cli");
-    await run(process.execPath, [tsxCli, "scripts/project-content.ts"], {});
+    await run(process.execPath, ["--import", "tsx", "scripts/project-content.ts"], {});
   }
 
   async function runNextPagesBuild(): Promise<void> {

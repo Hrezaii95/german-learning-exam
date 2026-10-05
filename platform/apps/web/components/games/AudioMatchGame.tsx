@@ -1,4 +1,6 @@
 "use client";
+import { LButton, LH2, LP, LSection } from "@/components/i18n/LocalizedElements";
+
 
 import { useMemo } from "react";
 import {
@@ -22,12 +24,12 @@ export function AudioMatchGame({
   const prompt = useMemo(() => buildAudioMatchPrompt(), []);
 
   return (
-    <section className="panel game-panel" aria-labelledby="audio-match-heading">
-      <h2 id="audio-match-heading">Audio match</h2>
-      <p className="placeholder-banner" role="status" data-availability="unavailable">
+    <LSection className="panel game-panel" aria-labelledby="audio-match-heading">
+      <LH2 id="audio-match-heading">Audio match</LH2>
+      <LP className="placeholder-banner" role="status" data-availability="unavailable">
         {prompt.unavailableReason}
-      </p>
-      <button
+      </LP>
+      <LButton
         type="button"
         className="btn btn-secondary"
         disabled
@@ -38,11 +40,11 @@ export function AudioMatchGame({
         aria-label={`Match audio (unavailable) — ${AUDIO_MATCH_UNAVAILABLE_REASON}`}
       >
         Match audio (unavailable)
-      </button>
+      </LButton>
       <GameFeedback
         kind="unavailable"
         message={prompt.unavailableReason}
       />
-    </section>
+    </LSection>
   );
 }

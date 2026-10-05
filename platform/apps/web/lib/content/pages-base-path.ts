@@ -25,5 +25,7 @@ export function withPagesBasePath(appPath: string): string {
 /** Prefix an app-relative static asset without adding a route trailing slash. */
 export function withPagesBaseAssetPath(assetPath: string): string {
   const normalized = assetPath.startsWith("/") ? assetPath : `/${assetPath}`;
+  const audioOrigin = process.env.NEXT_PUBLIC_GL_AUDIO_ORIGIN;
+  if (audioOrigin && normalized.endsWith(".mp3")) return `${audioOrigin}${normalized}`;
   return `${pagesBasePath()}${normalized}`;
 }

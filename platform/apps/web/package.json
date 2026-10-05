@@ -4,25 +4,27 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "project": "tsx scripts/project-content.ts",
+    "project": "node --import tsx scripts/project-content.ts",
     "icons:app": "tsx scripts/generate-app-icons.ts",
-    "prebuild": "npm run project",
+    "prebuild": "npm run build -w @lingovo/c1 && npm run project",
     "dev": "npm run project && next dev --webpack",
     "build": "next build --webpack",
-    "build:pages": "tsx scripts/build-pages.ts",
+    "build:pages": "node --import tsx scripts/build-pages.ts",
     "start": "next start",
     "typecheck": "tsc --noEmit -p tsconfig.json",
     "typecheck:tests": "tsc --noEmit -p tsconfig.tests.json",
     "smoke:routes": "node scripts/smoke-canonical-routes.mjs",
     "smoke:dev": "node scripts/smoke-dev-practice.mjs",
-    "smoke:pages": "node scripts/smoke-pages.mjs"
+    "smoke:pages": "node scripts/smoke-pages.mjs",
+    "predev": "npm run build -w @lingovo/c1"
   },
   "dependencies": {
     "@german-learning/content": "*",
     "@german-learning/learning": "*",
     "next": "16.3.4",
     "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "react-dom": "19.2.8",
+    "@lingovo/c1": "*"
   },
   "devDependencies": {
     "@types/react": "19.2.8",

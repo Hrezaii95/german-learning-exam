@@ -1,4 +1,6 @@
 "use client";
+import { LButton, LFieldset, LH2, LLegend, LP, LSection, LSpan } from "@/components/i18n/LocalizedElements";
+
 
 import { useMemo, useRef, useState } from "react";
 import { useFeedbackChannel } from "@/components/a11y/StatusMessage";
@@ -53,12 +55,12 @@ export function FlashcardsGame({
   }
 
   return (
-    <section className="panel game-panel" aria-labelledby="flashcards-heading">
-      <h2 id="flashcards-heading">Flashcards</h2>
-      <p className="muted">
+    <LSection className="panel game-panel" aria-labelledby="flashcards-heading">
+      <LH2 id="flashcards-heading">Flashcards</LH2>
+      <LP className="muted">
         Self-rate only. This mode never claims objective correctness or mastery.
-      </p>
-      <button
+      </LP>
+      <LButton
         type="button"
         className="game-flashcard"
         aria-pressed={flipped}
@@ -74,26 +76,26 @@ export function FlashcardsGame({
           }
         }}
       >
-        <span className="dense">{flipped ? "English gloss" : "German form"}</span>
-        <span className="german game-flashcard__text" lang={flipped ? "en" : "de"}>
+        <LSpan className="dense">{flipped ? "English gloss" : "German form"}</LSpan>
+        <LSpan className="german game-flashcard__text" lang={flipped ? "en" : "de"}>
           {flipped ? prompt.backEn : prompt.frontDe}
-        </span>
-      </button>
-      <fieldset className="game-rating">
-        <legend className="hub-field__label">Self rating</legend>
+        </LSpan>
+      </LButton>
+      <LFieldset className="game-rating">
+        <LLegend className="hub-field__label">Self rating</LLegend>
         {RATINGS.map((rating) => (
-          <button
+          <LButton
             key={rating}
             type="button"
             className="btn btn-secondary game-rating__btn"
             onClick={() => rate(rating)}
           >
             {rating}
-          </button>
+          </LButton>
         ))}
-      </fieldset>
+      </LFieldset>
       <GameActionBar onRetry={retry} />
       <GameFeedback kind={feedbackKind} message={message} seq={seq} />
-    </section>
+    </LSection>
   );
 }

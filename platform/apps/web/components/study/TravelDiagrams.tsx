@@ -1,3 +1,5 @@
+
+import { LAside, LB, LDiv, LH3, LP, LSmall, LStrong } from "@/components/i18n/LocalizedElements";
 import {travelVerbs,travelParts,type TravelMode} from "@/lib/study/travel-sheet";
 import "./TravelLearning.css";
 
@@ -9,5 +11,5 @@ export function TravelScene({step}:{step:number}){
 
 export function PrefixBridge({verb,person,mode}:{verb:number;person:number;mode:TravelMode}){
  const word=travelVerbs[verb]!,parts=travelParts(verb,person,mode),finite=parts.find(part=>part.role==="stem")!.text;
- return <aside className="travel-prefix-bridge"><h3>One verb, two possible shapes.</h3><div className="travel-whole-verb" lang="de"><b>{word.prefix}</b><b>{word.verb.slice(word.prefix.length)}</b><small>The dictionary form: {word.verb}</small></div><div className="travel-bridge-parts"><div><small>{mode==="modal"?"KÖNNEN CHANGES":"CONJUGATED VERB"}</small><strong lang="de">{finite}</strong></div><div><small>{mode==="modal"?"WHOLE INFINITIVE · END":"PREFIX · END"}</small><strong lang="de">{mode==="modal"?word.verb:word.prefix}</strong></div></div><p>{mode==="modal"?"After können, keep the activity infinitive together at the end.":"The purple line connects the two parts around the sentence details. In a statement the conjugated verb is second; in a yes/no question it comes first."}</p></aside>;
+ return <LAside className="travel-prefix-bridge"><LH3>One verb, two possible shapes.</LH3><LDiv className="travel-whole-verb" lang="de"><LB>{word.prefix}</LB><LB>{word.verb.slice(word.prefix.length)}</LB><LSmall>The dictionary form: {word.verb}</LSmall></LDiv><LDiv className="travel-bridge-parts"><LDiv><LSmall>{mode==="modal"?"KÖNNEN CHANGES":"CONJUGATED VERB"}</LSmall><LStrong lang="de">{finite}</LStrong></LDiv><LDiv><LSmall>{mode==="modal"?"WHOLE INFINITIVE · END":"PREFIX · END"}</LSmall><LStrong lang="de">{mode==="modal"?word.verb:word.prefix}</LStrong></LDiv></LDiv><LP>{mode==="modal"?"After können, keep the activity infinitive together at the end.":"The purple line connects the two parts around the sentence details. In a statement the conjugated verb is second; in a yes/no question it comes first."}</LP></LAside>;
 }

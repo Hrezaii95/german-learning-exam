@@ -1,4 +1,6 @@
 "use client";
+import { LAside, LButton, LDetails, LDiv, LFieldset, LInput, LLabel, LLegend, LOption, LP, LSelect, LSmall, LSpan, LStrong, LSummary } from "@/components/i18n/LocalizedElements";
+
 
 import {createContext,useContext,useEffect,useState,useCallback,type ReactNode} from "react";
 import {availableLessons,defaultStudyScope,matchesStudyScope,parseStudyScope,scopeLabel,selectedLessons,STUDY_SCOPE_KEY,studyConcepts,type StudyScope,type StudyTags} from "@/lib/study/scope";
@@ -39,25 +41,25 @@ export function useStudyScope(){
 export function StudyScopeNotice({tags,subject="This page"}:{tags:StudyTags;subject?:string}){
   const {matches,setScope,ready}=useStudyScope();
   if(!ready||matches(tags))return null;
-  return <aside className="study-scope-notice" role="status">{subject} is outside your study selection. <button type="button" className="study-secondary" onClick={()=>setScope({...defaultStudyScope(),mode:"multiple",lessons:tags.lessons})}>Study these lessons</button></aside>;
+  return <LAside className="study-scope-notice" role="status">{subject} is outside your study selection. <LButton type="button" className="study-secondary" onClick={()=>setScope({...defaultStudyScope(),mode:"multiple",lessons:tags.lessons})}>Study these lessons</LButton></LAside>;
 }
 export function StudyScopeControl(){
   const {scope,setScope,error}=useStudyScope();
   const lessons=availableLessons();
-  return <details className="study-scope" aria-label="Study selection">
-    <summary><span>Study selection</span><strong>{scopeLabel(scope)}</strong><span>{scope.concepts.length?`${scope.concepts.length} concepts`:"All concepts"}{scope.source==="teacher-extra"?" · Teacher extras":scope.source==="study-extra"?" · Study extras":scope.source==="course"?" · Course material":""}</span><span className="study-scope-edit">Change</span></summary>
-    <div className="study-scope-body">
-      <fieldset><legend>Choose lessons</legend><div className="study-scope-modes">{([['all','All lessons'],['one','One lesson'],['multiple','Choose several'],['through','Up to a lesson']] as const).map(([mode,label])=><button key={mode} type="button" aria-pressed={scope.mode===mode} onClick={()=>setScope({...scope,mode,lessons:mode==="all"?[]:mode==="multiple"?selectedLessons(scope):[selectedLessons(scope).at(-1)??1]})}>{label}</button>)}</div>
-        {(scope.mode==="one"||scope.mode==="through")&&<label>{scope.mode==="through"?"Include through":"Selected lesson"}<select aria-label={scope.mode==="through"?"Include through":"Selected lesson"} value={scope.lessons[0]} onChange={e=>setScope({...scope,lessons:[Number(e.target.value)]})}>{lessons.map(n=><option key={n} value={n}>Lesson {n}</option>)}</select></label>}
-        {scope.mode==="multiple"&&<div className="study-scope-options">{lessons.map(n=><label key={n}><input type="checkbox" checked={scope.lessons.includes(n)} onChange={e=>setScope({...scope,lessons:e.target.checked?[...scope.lessons,n]:scope.lessons.filter(l=>l!==n)})}/>Lesson {n}</label>)}</div>}
-      </fieldset>
-      <fieldset><legend>Concepts <small>— choose any; none means all concepts</small></legend><div className="study-scope-options">{studyConcepts.map(c=><label key={c.id}><input type="checkbox" checked={scope.concepts.includes(c.id)} onChange={e=>setScope({...scope,concepts:e.target.checked?[...scope.concepts,c.id]:scope.concepts.filter(id=>id!==c.id)})}/>{c.label}</label>)}</div></fieldset>
-      <label>Material source<select aria-label="Material source" value={scope.source} onChange={e=>setScope({...scope,source:e.target.value as StudyScope['source']})}><option value="all">All sources</option><option value="course">Course material</option><option value="teacher-extra">Teacher extras</option><option value="study-extra">Additional study aids</option></select></label>
-      <div className="study-scope-footer"><p>Your selection follows you between sections.</p><button type="button" className="study-secondary" onClick={()=>setScope(defaultStudyScope())}>Reset selection</button></div>
-      {error&&<p role="status">{error}</p>}
-    </div>
-  </details>;
+  return <LDetails className="study-scope" aria-label="Study selection">
+    <LSummary><LSpan>Study selection</LSpan><LStrong>{scopeLabel(scope)}</LStrong><LSpan>{scope.concepts.length?`${scope.concepts.length} concepts`:"All concepts"}{scope.source==="teacher-extra"?" · Teacher extras":scope.source==="study-extra"?" · Study extras":scope.source==="course"?" · Course material":""}</LSpan><LSpan className="study-scope-edit">Change</LSpan></LSummary>
+    <LDiv className="study-scope-body">
+      <LFieldset><LLegend>Choose lessons</LLegend><LDiv className="study-scope-modes">{([['all','All lessons'],['one','One lesson'],['multiple','Choose several'],['through','Up to a lesson']] as const).map(([mode,label])=><LButton key={mode} type="button" aria-pressed={scope.mode===mode} onClick={()=>setScope({...scope,mode,lessons:mode==="all"?[]:mode==="multiple"?selectedLessons(scope):[selectedLessons(scope).at(-1)??1]})}>{label}</LButton>)}</LDiv>
+        {(scope.mode==="one"||scope.mode==="through")&&<LLabel>{scope.mode==="through"?"Include through":"Selected lesson"}<LSelect aria-label={scope.mode==="through"?"Include through":"Selected lesson"} value={scope.lessons[0]} onChange={e=>setScope({...scope,lessons:[Number(e.target.value)]})}>{lessons.map(n=><LOption key={n} value={n}>Lesson {n}</LOption>)}</LSelect></LLabel>}
+        {scope.mode==="multiple"&&<LDiv className="study-scope-options">{lessons.map(n=><LLabel key={n}><LInput type="checkbox" checked={scope.lessons.includes(n)} onChange={e=>setScope({...scope,lessons:e.target.checked?[...scope.lessons,n]:scope.lessons.filter(l=>l!==n)})}/>Lesson {n}</LLabel>)}</LDiv>}
+      </LFieldset>
+      <LFieldset><LLegend>Concepts <LSmall>— choose any; none means all concepts</LSmall></LLegend><LDiv className="study-scope-options">{studyConcepts.map(c=><LLabel key={c.id}><LInput type="checkbox" checked={scope.concepts.includes(c.id)} onChange={e=>setScope({...scope,concepts:e.target.checked?[...scope.concepts,c.id]:scope.concepts.filter(id=>id!==c.id)})}/>{c.label}</LLabel>)}</LDiv></LFieldset>
+      <LLabel>Material source<LSelect aria-label="Material source" value={scope.source} onChange={e=>setScope({...scope,source:e.target.value as StudyScope['source']})}><LOption value="all">All sources</LOption><LOption value="course">Course material</LOption><LOption value="teacher-extra">Teacher extras</LOption><LOption value="study-extra">Additional study aids</LOption></LSelect></LLabel>
+      <LDiv className="study-scope-footer"><LP>Your selection follows you between sections.</LP><LButton type="button" className="study-secondary" onClick={()=>setScope(defaultStudyScope())}>Reset selection</LButton></LDiv>
+      {error&&<LP role="status">{error}</LP>}
+    </LDiv>
+  </LDetails>;
 }
 export function StudyTagList({tags}:{tags:StudyTags}){
-  return <div className="study-tag-list">{tags.lessons.map(n=><span key={n}>Lesson {n}</span>)}{(tags.sources??[tags.source]).filter(s=>s!=="course").map(source=><span className="study-source-tag" key={source}>{source==="teacher-extra"?"Teacher extra":"Study extra"}</span>)}{tags.concepts.map(id=><span key={id}>{studyConcepts.find(c=>c.id===id)?.label}</span>)}</div>;
+  return <LDiv className="study-tag-list">{tags.lessons.map(n=><LSpan key={n}>Lesson {n}</LSpan>)}{(tags.sources??[tags.source]).filter(s=>s!=="course").map(source=><LSpan className="study-source-tag" key={source}>{source==="teacher-extra"?"Teacher extra":"Study extra"}</LSpan>)}{tags.concepts.map(id=><LSpan key={id}>{studyConcepts.find(c=>c.id===id)?.label}</LSpan>)}</LDiv>;
 }

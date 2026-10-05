@@ -26,6 +26,7 @@ const here = path.dirname(fileURLToPath(import.meta.url));
  */
 assertPagesExportEnv({
   GL_PAGES_EXPORT: process.env.GL_PAGES_EXPORT,
+  GL_CLOUDFLARE_EXPORT: process.env.GL_CLOUDFLARE_EXPORT,
   NEXT_PUBLIC_GL_PAGES_BASE_PATH: process.env.NEXT_PUBLIC_GL_PAGES_BASE_PATH,
 });
 const isPagesExport = process.env.GL_PAGES_EXPORT === "1";

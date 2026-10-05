@@ -1,6 +1,8 @@
 "use client";
+import { LAside, LB, LButton, LDialog, LDiv, LFooter, LH1, LH2, LH3, LHeader, LInput, LLabel, LOption, LP, LSection, LSelect, LSmall, LSpan, LStrong } from "@/components/i18n/LocalizedElements";
 
-import Link from "next/link";
+
+import Link from "@/components/i18n/LocalizedLink";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { withPagesBaseAssetPath } from "@/lib/content/pages-base-path";
@@ -35,37 +37,37 @@ function OriginalPage({
 }) {
   const study = useStudy();
   return (
-    <section
+    <LSection
       className="book-original"
       aria-label={`Original ${page.kind} ${page.pageLabel??`page ${page.printedPage}`}`}
     >
-      <div className="book-page-toolbar">
-        <span>{page.printedPage>0?`Printed page ${page.printedPage}`:page.pageLabel}</span>
-        <label>
+      <LDiv className="book-page-toolbar">
+        <LSpan>{page.printedPage>0?`Printed page ${page.printedPage}`:page.pageLabel}</LSpan>
+        <LLabel>
           Zoom{" "}
-          <select
+          <LSelect
             aria-label="Page zoom"
             value={zoom}
             onChange={(event) => setZoom(Number(event.target.value))}
           >
-            <option value={0}>Fit width</option>
-            <option value={100}>100% · Readable</option>
-            <option value={125}>125%</option>
-            <option value={150}>150%</option>
-            <option value={200}>200%</option>
-            <option value={250}>250%</option>
-            <option value={300}>300%</option>
-          </select>
-        </label>
-      </div>
-      <p className="book-gesture-hint">{zoom?"Swipe within the page to pan. Choose Read text to select words and phrases.":"Whole page overview. Increase zoom to read, or choose Read text."}</p>
-      <div
+            <LOption value={0}>Fit width</LOption>
+            <LOption value={100}>100% · Readable</LOption>
+            <LOption value={125}>125%</LOption>
+            <LOption value={150}>150%</LOption>
+            <LOption value={200}>200%</LOption>
+            <LOption value={250}>250%</LOption>
+            <LOption value={300}>300%</LOption>
+          </LSelect>
+        </LLabel>
+      </LDiv>
+      <LP className="book-gesture-hint">{zoom?"Swipe within the page to pan. Choose Read text to select words and phrases.":"Whole page overview. Increase zoom to read, or choose Read text."}</LP>
+      <LDiv
         className="book-page-scroll"
         tabIndex={0}
         role="region"
         aria-label="Book page. Scroll to read the enlarged page."
       >
-        <div
+        <LDiv
           className="book-paper"
           style={{
             width: zoom ? `${zoom}%` : "100%",
@@ -80,7 +82,7 @@ function OriginalPage({
             alt={`Momente A1 ${page.kind}, ${page.section??`Lesson ${page.lesson}`}, ${page.pageLabel??`printed page ${page.printedPage}`}`}
           />
           {page.lines.map((value) => (
-            <button
+            <LButton
               key={value.id}
               type="button"
               className={`book-hotspot${selected === value.id ? " is-selected" : ""}`}
@@ -95,12 +97,12 @@ function OriginalPage({
               onClick={() => { select(value.id); study?.lookup(value.text); }}
             />
           ))}
-        </div>
-      </div>
-      <p className="book-page-caption">
+        </LDiv>
+      </LDiv>
+      <LP className="book-page-caption">
         © Hueber Verlag · Tap a line for its meaning.
-      </p>
-    </section>
+      </LP>
+    </LSection>
   );
 }
 
@@ -199,7 +201,7 @@ export function BookReader({
     setSelected(lineId??null);
     replaceContext(bookContextHref(id,lineId?{line:lineId}:{}));
   }
-  if(!selectedPages.length)return <div className="book-workspace"><h1>Your interactive book</h1><p role="status">No book pages match this selection. Book pages are course material, grouped by the concepts taught in each lesson.</p><button type="button" className="study-primary" onClick={()=>setScope(defaultStudyScope())}>Show all book pages</button></div>;
+  if(!selectedPages.length)return <LDiv className="book-workspace"><LH1>Your interactive book</LH1><LP role="status">No book pages match this selection. Book pages are course material, grouped by the concepts taught in each lesson.</LP><LButton type="button" className="study-primary" onClick={()=>setScope(defaultStudyScope())}>Show all book pages</LButton></LDiv>;
   function lineMeaning(value: BookLine) {
     const match = study?.dictionary.find(
       (entry) => entry.example === value.text || entry.de === value.text,
@@ -211,15 +213,15 @@ export function BookReader({
       : `${page.kind === "coursebook" ? "Coursebook" : "Workbook"}, page ${page.printedPage}. Recall the meaning; add your own translation in My review.`;
   }
   const renderLine = (value: BookLine) => (
-    <div
+    <LDiv
       key={value.id}
       data-line-id={value.id}
       className={`book-line${selected === value.id ? " is-active" : ""}`}
     >
-      <p>
+      <LP>
         <GermanText text={value.text} />
-      </p>
-      <div className="book-line-actions">
+      </LP>
+      <LDiv className="book-line-actions">
         <MeaningButton text={value.text} />
         <LineAudio
           text={value.text}
@@ -240,31 +242,31 @@ export function BookReader({
             audio: speech[value.text] ?? null,
           }}
         />
-      </div>
-    </div>
+      </LDiv>
+    </LDiv>
   );
   return (
-    <div className="book-workspace">
+    <LDiv className="book-workspace">
       <StudyScopeNotice tags={{...tagsForLesson(page.lesson),lessons:page.lessons??[page.lesson]}}/>
-      <header className="book-header">
-        <div>
-          <p className="study-eyebrow">Momente A1 · Lessons 1–{LAST_AVAILABLE_LESSON}</p>
-          <h1>{page.kind==="coursebook"?"Coursebook":"Workbook"} · {page.pageLabel??`Page ${page.printedPage}`}</h1>
-          <p className="book-current-topic" lang="de">{chapter.title}</p>
-        </div>
-        <button
+      <LHeader className="book-header">
+        <LDiv>
+          <LP className="study-eyebrow">Momente A1 · Lessons 1–{LAST_AVAILABLE_LESSON}</LP>
+          <LH1>{page.kind==="coursebook"?"Coursebook":"Workbook"} · {page.pageLabel??`Page ${page.printedPage}`}</LH1>
+          <LP className="book-current-topic" lang="de">{chapter.title}</LP>
+        </LDiv>
+        <LButton
           type="button"
           className="study-secondary"
           aria-expanded={showContents}
           onClick={() => setShowContents(!showContents)}
         >
           ☷ Contents & search
-        </button>
-      </header>
-      {showContents&&<div className="book-source-picker"><Link className="study-secondary" href="/saved">My review</Link><Link className="study-secondary" href="/cheat-sheets">Cheat sheets →</Link>
-        <div className="study-segmented" role="group" aria-label="Book type">
+        </LButton>
+      </LHeader>
+      {showContents&&<LDiv className="book-source-picker"><Link className="study-secondary" href="/saved">My review</Link><Link className="study-secondary" href="/cheat-sheets">Cheat sheets →</Link>
+        <LDiv className="study-segmented" role="group" aria-label="Book type">
           {["coursebook", "workbook"].map((kind) => (
-            <button
+            <LButton
               type="button"
               key={kind}
               aria-pressed={page.kind === kind}
@@ -273,12 +275,12 @@ export function BookReader({
               }
             >
               {kind === "coursebook" ? "Coursebook" : "Workbook"}
-            </button>
+            </LButton>
           ))}
-        </div>
-        <label className="study-inline-field">
+        </LDiv>
+        <LLabel className="study-inline-field">
           Lesson
-          <select
+          <LSelect
             value={page.lesson}
             onChange={(e) => {
               const next = courseChapters.find(
@@ -290,29 +292,29 @@ export function BookReader({
             }}
           >
             {chapters.map((c) => (
-              <option key={c.number} value={c.number}>
+              <LOption key={c.number} value={c.number}>
                 {c.number} · {c.topic}
-              </option>
+              </LOption>
             ))}
-          </select>
-        </label>
-      </div>}
+          </LSelect>
+        </LLabel>
+      </LDiv>}
       {showContents && (
-        <aside className="book-contents" aria-label="Book contents">
-          <div>
-            <label className="study-field">
+        <LAside className="book-contents" aria-label="Book contents">
+          <LDiv>
+            <LLabel className="study-field">
               Find text in the book
-              <input
+              <LInput
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder={`Search ${selectedPages.length} selected pages…`}
               />
-            </label>
+            </LLabel>
             {search.trim().length >= 2 ? (
-              <div className="book-search-results" aria-live="polite">
-                {!results.length && <p>No matching lines.</p>}
+              <LDiv className="book-search-results" aria-live="polite">
+                {!results.length && <LP>No matching lines.</LP>}
                 {results.map((result) => (
-                  <button
+                  <LButton
                     type="button"
                     key={result.line.id}
                     onClick={() => {
@@ -321,18 +323,18 @@ export function BookReader({
                       setShowContents(false);
                     }}
                   >
-                    <small>
+                    <LSmall>
                       {result.page.kind} · p. {result.page.printedPage}
-                    </small>
-                    <span lang="de">{result.line.text}</span>
-                  </button>
+                    </LSmall>
+                    <LSpan lang="de">{result.line.text}</LSpan>
+                  </LButton>
                 ))}
-              </div>
+              </LDiv>
             ) : (
-              <div className="book-chapters">
-                <button type="button" onClick={()=>{go(`${page.kind}-cover`);setShowContents(false);}}><b>↖</b><span><strong>Start of the book</strong><small>Cover, map, contents & introduction</small></span></button>
+              <LDiv className="book-chapters">
+                <LButton type="button" onClick={()=>{go(`${page.kind}-cover`);setShowContents(false);}}><LB>↖</LB><LSpan><LStrong>Start of the book</LStrong><LSmall>Cover, map, contents & introduction</LSmall></LSpan></LButton>
                 {chapters.map((c) => (
-                  <button
+                  <LButton
                     type="button"
                     key={c.number}
                     aria-pressed={c.number === page.lesson}
@@ -343,26 +345,26 @@ export function BookReader({
                       setShowContents(false);
                     }}
                   >
-                    <b>{String(c.number).padStart(2,"0")}</b>
-                    <span>
-                      <strong lang="de">{c.title}</strong>
-                      <small>{c.topic}</small>
-                    </span>
-                  </button>
+                    <LB>{String(c.number).padStart(2,"0")}</LB>
+                    <LSpan>
+                      <LStrong lang="de">{c.title}</LStrong>
+                      <LSmall>{c.topic}</LSmall>
+                    </LSpan>
+                  </LButton>
                 ))}
-              </div>
+              </LDiv>
             )}
-          </div>
-          <div>
-            <h3>Bookmarked pages</h3>
+          </LDiv>
+          <LDiv>
+            <LH3>Bookmarked pages</LH3>
             {!study?.state.bookmarks.length && (
-              <p className="muted">Use Bookmark on any page to keep it here.</p>
+              <LP className="muted">Use Bookmark on any page to keep it here.</LP>
             )}
             {study?.state.bookmarks.map((id) => {
               const p = selectedPages.find((candidate) => candidate.id === id);
               return (
                 p && (
-                  <button
+                  <LButton
                     type="button"
                     className="study-secondary"
                     key={id}
@@ -370,39 +372,39 @@ export function BookReader({
                   >
                     {p.kind === "coursebook" ? "Coursebook" : "Workbook"} ·{" "}
                     {p.pageLabel??p.printedPage}
-                  </button>
+                  </LButton>
                 )
               );
             })}
-            <p className="dense">
+            <LP className="dense">
               {selectedPages.filter(p=>study?.state.completedPages.includes(p.id)).length} of {selectedPages.length}{" "}
               pages marked studied
-            </p>
-          </div>
-        </aside>
+            </LP>
+          </LDiv>
+        </LAside>
       )}
-      {showContents&&<section className="book-chapter-title">
-        <div>
-          <span className="book-chapter-number">{page.section?.startsWith("Getting")?"A1":page.section?.startsWith("Module")?`M${page.section.match(/^Module (\d+)/)?.[1]??1}`:String(page.lesson).padStart(2,"0")}</span>
-          <div>
-            <p className="study-eyebrow">{page.section??chapter.topic}</p>
-            <h2 lang={page.section?.startsWith("Lesson")?"de":"en"}>{page.section?.startsWith("Lesson")?chapter.title:page.section??chapter.title}</h2>
-          </div>
-        </div>
+      {showContents&&<LSection className="book-chapter-title">
+        <LDiv>
+          <LSpan className="book-chapter-number">{page.section?.startsWith("Getting")?"A1":page.section?.startsWith("Module")?`M${page.section.match(/^Module (\d+)/)?.[1]??1}`:String(page.lesson).padStart(2,"0")}</LSpan>
+          <LDiv>
+            <LP className="study-eyebrow">{page.section??chapter.topic}</LP>
+            <LH2 lang={page.section?.startsWith("Lesson")?"de":"en"}>{page.section?.startsWith("Lesson")?chapter.title:page.section??chapter.title}</LH2>
+          </LDiv>
+        </LDiv>
         <Link href={page.section?.startsWith("Lesson")?`/lessons/${String(page.lesson).padStart(2,"0")}`:"/lessons"}>{page.section?.startsWith("Lesson")?"Study lesson":"Explore lessons"} →</Link>
-      </section>}
-      <div className="book-reading-tools">
-        <label className="study-inline-field book-page-picker">Go to page<select aria-label="Go to page" value={page.id} onChange={event=>go(event.target.value)}>{allKindPages.map(p=><option value={p.id} key={p.id}>{p.pageLabel??`Page ${p.printedPage}`} · {p.section??`Lesson ${p.lesson}`}</option>)}</select></label>
-        <label className="study-inline-field">View<select aria-label="Reading view" value={view} onChange={event=>changeView(event.target.value as "read"|"page"|"split")}><option value="page">Page</option><option value="read">Read text</option><option value="split">Both</option></select></label>
-        <button
+      </LSection>}
+      <LDiv className="book-reading-tools">
+        <LLabel className="study-inline-field book-page-picker">Go to page<LSelect aria-label="Go to page" value={page.id} onChange={event=>go(event.target.value)}>{allKindPages.map(p=><LOption value={p.id} key={p.id}>{p.pageLabel??`Page ${p.printedPage}`} · {p.section??`Lesson ${p.lesson}`}</LOption>)}</LSelect></LLabel>
+        <LLabel className="study-inline-field">View<LSelect aria-label="Reading view" value={view} onChange={event=>changeView(event.target.value as "read"|"page"|"split")}><LOption value="page">Page</LOption><LOption value="read">Read text</LOption><LOption value="split">Both</LOption></LSelect></LLabel>
+        <LButton
           type="button"
           className="study-secondary"
           onClick={() => setExpanded(true)}
         >
           Full screen ↗
-        </button>
+        </LButton>
         <AudioSpeedControl control={audioSpeed}/>
-        <button
+        <LButton
           type="button"
           className="study-secondary"
           aria-pressed={marked}
@@ -416,9 +418,9 @@ export function BookReader({
           }
         >
           {marked ? "★ Bookmarked" : "☆ Bookmark"}
-        </button>
-      </div>
-      <div className={`book-reading-grid book-view-${view}`}>
+        </LButton>
+      </LDiv>
+      <LDiv className={`book-reading-grid book-view-${view}`}>
         {view !== "read" && (
           <OriginalPage
             page={page}
@@ -428,70 +430,70 @@ export function BookReader({
             select={selectLine}
           />
         )}
-        <section
+        <LSection
           id="book-listening"
           className="book-text-panel"
           aria-label="Page study tools"
         >
           {tracks.length > 0 && (
-            <div className="book-original-audio">
-              <h3>Listen to the book</h3>
-              {tracks.length>1&&<label className="study-field">Recording<select aria-label="Page recording" value={activeTrack!.id} onChange={event=>replaceContext(bookContextHref(page.id,{track:event.target.value}))}>{tracks.map(track=><option key={track.id} value={track.id}>{track.label}</option>)}</select></label>}
+            <LDiv className="book-original-audio">
+              <LH3>Listen to the book</LH3>
+              {tracks.length>1&&<LLabel className="study-field">Recording<LSelect aria-label="Page recording" value={activeTrack!.id} onChange={event=>replaceContext(bookContextHref(page.id,{track:event.target.value}))}>{tracks.map(track=><LOption key={track.id} value={track.id}>{track.label}</LOption>)}</LSelect></LLabel>}
               {activeTrack&&<><OriginalTrack key={activeTrack.id} track={activeTrack} rate={rate} {...(transcriptLine!==undefined?{transcriptLine}:{})}/><Link href={`/listening?track=${encodeURIComponent(activeTrack.id)}`}>Open focused listening →</Link></>}
-            </div>
+            </LDiv>
           )}
           {line && (
-            <div className="book-selected-line" ref={selectedLineRef}>
-              <div className="study-row">
-                <strong>Selected line</strong>
-                <button
+            <LDiv className="book-selected-line" ref={selectedLineRef}>
+              <LDiv className="study-row">
+                <LStrong>Selected line</LStrong>
+                <LButton
                   className="study-icon-button"
                   type="button"
                   aria-label="Clear selected line"
                   onClick={() => {setSelected(null);replaceContext(bookContextHref(page.id));}}
                 >
                   ✕
-                </button>
-              </div>
+                </LButton>
+              </LDiv>
               {renderLine(line)}
-            </div>
+            </LDiv>
           )}
           {view !== "page" ? (
             <>
-              <div className="book-text-heading">
-                <h3>Read & explore</h3>
-                <p>
+              <LDiv className="book-text-heading">
+                <LH3>Read & explore</LH3>
+                <LP>
                   Tap a word, or highlight a phrase for its meaning.{" "}
-                  <span>Synthesized line audio</span>
-                </p>
-              </div>
-              <div className="book-readable-lines">
+                  <LSpan>Synthesized line audio</LSpan>
+                </LP>
+              </LDiv>
+              <LDiv className="book-readable-lines">
                 {page.lines.map(renderLine)}
-              </div>
+              </LDiv>
             </>
           ) : (
             !line && (
-              <p className="muted">
+              <LP className="muted">
                 Select a line on the original page to hear it, look up words, or
                 save it.
-              </p>
+              </LP>
             )
           )}
-        </section>
-      </div>
+        </LSection>
+      </LDiv>
       <BookAnswers key={page.id} page={page} speech={speech} rate={rate}/>
-      <footer className="book-page-nav">
-        <button
+      <LFooter className="book-page-nav">
+        <LButton
           type="button"
           className="study-secondary"
           disabled={index <= 0}
           onClick={() => go(allKindPages[index - 1]!.id)}
         >
           ← Previous
-        </button>
-        <div role="group" className="book-page-dots" aria-label="Nearby pages">
+        </LButton>
+        <LDiv role="group" className="book-page-dots" aria-label="Nearby pages">
           {nearbyPages.map((p) => (
-            <button
+            <LButton
               type="button"
               key={p.id}
               aria-label={p.pageLabel??`Page ${p.printedPage}`}
@@ -500,22 +502,22 @@ export function BookReader({
             >
               {p.printedPage>0?p.printedPage:p.printedPage===-1?"Cover":"Map"}
               {study?.state.completedPages.includes(p.id) && (
-                <span aria-hidden="true"> ✓</span>
+                <LSpan aria-hidden="true"> ✓</LSpan>
               )}
-            </button>
+            </LButton>
           ))}
-        </div>
-        <button
+        </LDiv>
+        <LButton
           type="button"
           className="study-primary"
           disabled={index === allKindPages.length - 1}
           onClick={() => go(allKindPages[index + 1]!.id)}
         >
           Next page →
-        </button>
-      </footer>
-      <div className="study-row book-complete">
-        <button
+        </LButton>
+      </LFooter>
+      <LDiv className="study-row book-complete">
+        <LButton
           type="button"
           className="study-secondary"
           aria-pressed={done}
@@ -529,12 +531,12 @@ export function BookReader({
           }
         >
           {done ? "✓ Page studied" : "Mark page studied"}
-        </button>
-        <p className="muted">
+        </LButton>
+        <LP className="muted">
           Your place, bookmarks, and review selections are saved on this device.
-        </p>
-      </div>
-      <dialog
+        </LP>
+      </LDiv>
+      <LDialog
         className="book-fullscreen"
         ref={fullscreen}
         aria-labelledby="fullscreen-book-title"
@@ -543,21 +545,21 @@ export function BookReader({
       >
         {expanded && (
           <>
-            <div className="book-fullscreen-header">
-              <h2 id="fullscreen-book-title">
+            <LDiv className="book-fullscreen-header">
+              <LH2 id="fullscreen-book-title">
                 {page.kind === "coursebook" ? "Coursebook" : "Workbook"} · {page.pageLabel??`Page ${page.printedPage}`}
-              </h2>
-              <button
+              </LH2>
+              <LButton
                 className="study-secondary"
                 type="button"
                 onClick={() => setExpanded(false)}
               >
                 Close full screen
-              </button>
-            </div>
+              </LButton>
+            </LDiv>
             <BookAnswers key={`fullscreen-${page.id}`} page={page} speech={speech} rate={rate}/>
             {line && (
-              <div className="book-selected-line">{renderLine(line)}</div>
+              <LDiv className="book-selected-line">{renderLine(line)}</LDiv>
             )}
             <OriginalPage
               page={page}
@@ -568,11 +570,11 @@ export function BookReader({
             />
           </>
         )}
-      </dialog>
-      <p className="book-credit">
+      </LDialog>
+      <LP className="book-credit">
         Momente A1 · © Hueber Verlag.{" "}
         <Link href="/references">Sources & credits</Link>
-      </p>
-    </div>
+      </LP>
+    </LDiv>
   );
 }

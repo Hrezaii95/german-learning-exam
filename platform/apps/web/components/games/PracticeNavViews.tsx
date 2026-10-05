@@ -1,4 +1,6 @@
 "use client";
+import { LDiv } from "@/components/i18n/LocalizedElements";
+
 
 import { useSearchParams } from "next/navigation";
 import { parseNavigationContextParam } from "@/lib/content/navigation-context";
@@ -15,10 +17,10 @@ export function PracticeSelectorWithNav() {
   const highlight = navigation?.resultId ?? null;
 
   return (
-    <div className="stack">
+    <LDiv className="stack">
       <BackLink href={backHref} />
       <GameSelector navigation={navigation} highlightConceptId={highlight} />
-    </div>
+    </LDiv>
   );
 }
 

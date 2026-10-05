@@ -1,4 +1,6 @@
 "use client";
+import { LButton, LDiv, LFieldset, LForm, LH2, LH3, LInput, LLabel, LLegend, LP, LSection, LSpan, LStrong, LTextarea } from "@/components/i18n/LocalizedElements";
+
 
 import { useRef, useState } from "react";
 import type {
@@ -88,14 +90,14 @@ function QuestionControl({
 
   if (question.kind === "builder") {
     return (
-      <div className="activity-builder">
-        <p className="activity-builder__answer" aria-live="polite">
-          <span className="dense">Your phrase</span>
-          <strong lang="de">{builtValue || "—"}</strong>
-        </p>
-        <div className="activity-token-bank" aria-label="Available words">
+      <LDiv className="activity-builder">
+        <LP className="activity-builder__answer" aria-live="polite">
+          <LSpan className="dense">Your phrase</LSpan>
+          <LStrong lang="de">{builtValue || "—"}</LStrong>
+        </LP>
+        <LDiv className="activity-token-bank" aria-label="Available words">
           {question.tokens.map((token, index) => (
-            <button
+            <LButton
               className="activity-token"
               type="button"
               // The token IS the German being taught: without `lang` a screen
@@ -109,11 +111,11 @@ function QuestionControl({
               }}
             >
               {token}
-            </button>
+            </LButton>
           ))}
-        </div>
-        <div className="activity-inline-actions">
-          <button
+        </LDiv>
+        <LDiv className="activity-inline-actions">
+          <LButton
             className="btn btn-secondary"
             type="button"
             disabled={builtTokens.length === 0}
@@ -124,8 +126,8 @@ function QuestionControl({
             }}
           >
             Undo last word
-          </button>
-          <button
+          </LButton>
+          <LButton
             className="btn btn-secondary"
             type="button"
             disabled={builtTokens.length === 0}
@@ -135,17 +137,17 @@ function QuestionControl({
             }}
           >
             Clear
-          </button>
-        </div>
-      </div>
+          </LButton>
+        </LDiv>
+      </LDiv>
     );
   }
 
   if (question.kind === "typing") {
     return (
-      <label className="activity-input-label">
-        <span>Your German answer</span>
-        <input
+      <LLabel className="activity-input-label">
+        <LSpan>Your German answer</LSpan>
+        <LInput
           className="activity-text-input"
           type="text"
           // What the learner types here is German, as in QaPractice.
@@ -156,26 +158,26 @@ function QuestionControl({
           spellCheck={false}
           onChange={(event) => onChange(event.currentTarget.value)}
         />
-      </label>
+      </LLabel>
     );
   }
 
   return (
-    <fieldset className="activity-choice-list">
-      <legend>{question.kind === "matching" ? "English meaning" : "German item"}</legend>
+    <LFieldset className="activity-choice-list">
+      <LLegend>{question.kind === "matching" ? "English meaning" : "German item"}</LLegend>
       {question.choices.map((choice) => (
-        <label key={choice} className="activity-choice">
-          <input
+        <LLabel key={choice} className="activity-choice">
+          <LInput
             type="radio"
             name={question.id}
             value={choice}
             checked={value === choice}
             onChange={(event) => onChange(event.currentTarget.value)}
           />
-          <span>{choice}</span>
-        </label>
+          <LSpan lang={question.kind === "matching" ? undefined : "de"}>{choice}</LSpan>
+        </LLabel>
       ))}
-    </fieldset>
+    </LFieldset>
   );
 }
 
@@ -219,12 +221,12 @@ export function ActivityInteraction({
 
   if (plan.mechanic === "listening-notes") {
     return (
-      <section className="panel activity-practice" aria-labelledby="activity-practice-heading">
-        <p className="dense">Interactive activity · ungraded</p>
-        <h2 id="activity-practice-heading">{plan.title}</h2>
-        <p>{plan.instructions}</p>
-        <p className="activity-source-note">{plan.missingReason}</p>
-        <form
+      <LSection className="panel activity-practice" aria-labelledby="activity-practice-heading">
+        <LP className="dense">Interactive activity · ungraded</LP>
+        <LH2 id="activity-practice-heading">{plan.title}</LH2>
+        <LP>{plan.instructions}</LP>
+        <LP className="activity-source-note">{plan.missingReason}</LP>
+        <LForm
           className="activity-listening-form"
           onSubmit={(event) => {
             event.preventDefault();
@@ -237,37 +239,37 @@ export function ActivityInteraction({
             finish();
           }}
         >
-          <label className="activity-input-label">
-            <span>What did you hear or practise?</span>
-            <textarea
+          <LLabel className="activity-input-label">
+            <LSpan>What did you hear or practise?</LSpan>
+            <LTextarea
               value={listeningNotes}
               maxLength={500}
               rows={4}
               onChange={(event) => setListeningNotes(event.currentTarget.value)}
             />
-          </label>
-          <label className="activity-confirmation">
-            <input
+          </LLabel>
+          <LLabel className="activity-confirmation">
+            <LInput
               type="checkbox"
               checked={listeningConfirmed}
               onChange={(event) => setListeningConfirmed(event.currentTarget.checked)}
             />
-            <span>I used the linked lesson audio or listening material.</span>
-          </label>
-          <button className="btn btn-primary" type="submit">Finish listening check</button>
-        </form>
+            <LSpan>I used the linked lesson audio or listening material.</LSpan>
+          </LLabel>
+          <LButton className="btn btn-primary" type="submit">Finish listening check</LButton>
+        </LForm>
         <StatusMessage announcement={feedback} className="activity-feedback" />
-      </section>
+      </LSection>
     );
   }
 
   const question = plan.questions[questionIndex];
   if (!question) {
     return (
-      <section className="panel activity-practice" aria-labelledby="activity-practice-heading">
-        <h2 id="activity-practice-heading">Practice unavailable</h2>
-        <p role="status">This activity has no practice questions yet.</p>
-      </section>
+      <LSection className="panel activity-practice" aria-labelledby="activity-practice-heading">
+        <LH2 id="activity-practice-heading">Practice unavailable</LH2>
+        <LP role="status">This activity has no practice questions yet.</LP>
+      </LSection>
     );
   }
   const pronunciation = resolvePublishedPronunciationExact(question.spokenText);
@@ -312,23 +314,23 @@ export function ActivityInteraction({
   };
 
   return (
-    <section className="panel activity-practice" aria-labelledby="activity-practice-heading">
-      <div className="workbook-audio__heading">
-        <div>
-          <p className="dense">Interactive activity · source-backed</p>
-          <h2 id="activity-practice-heading">{plan.title}</h2>
-        </div>
-        <span className="meta-chip">{questionIndex + 1} / {plan.questions.length}</span>
-      </div>
-      <p>{plan.instructions}</p>
-      <form
+    <LSection className="panel activity-practice" aria-labelledby="activity-practice-heading">
+      <LDiv className="workbook-audio__heading">
+        <LDiv>
+          <LP className="dense">Interactive activity · source-backed</LP>
+          <LH2 id="activity-practice-heading">{plan.title}</LH2>
+        </LDiv>
+        <LSpan className="meta-chip">{questionIndex + 1} / {plan.questions.length}</LSpan>
+      </LDiv>
+      <LP>{plan.instructions}</LP>
+      <LForm
         className="activity-question"
         onSubmit={(event) => {
           event.preventDefault();
           checkAnswer();
         }}
       >
-        <h3>{question.prompt}</h3>
+        <LH3>{question.prompt}</LH3>
         {pronunciation.state === "preview" ? (
           <PronunciationControl
             media={pronunciation}
@@ -341,10 +343,10 @@ export function ActivityInteraction({
           value={answer}
           onChange={setAnswer}
         />
-        <button className="btn btn-primary" type="submit">Check answer</button>
-      </form>
+        <LButton className="btn btn-primary" type="submit">Check answer</LButton>
+      </LForm>
       <StatusMessage announcement={feedback} className="activity-feedback" />
       <StatusMessage announcement={saveMessage} className="dense" />
-    </section>
+    </LSection>
   );
 }

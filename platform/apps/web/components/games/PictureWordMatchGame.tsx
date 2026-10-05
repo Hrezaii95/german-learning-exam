@@ -1,4 +1,6 @@
 "use client";
+import { LDiv, LFieldset, LH2, LInput, LLabel, LLegend, LP, LSection, LSpan } from "@/components/i18n/LocalizedElements";
+
 
 import { useMemo, useRef, useState } from "react";
 import { useFeedbackChannel } from "@/components/a11y/StatusMessage";
@@ -66,25 +68,25 @@ export function PictureWordMatchGame({
   }
 
   return (
-    <section
+    <LSection
       className="panel game-panel"
       aria-labelledby="picture-word-match-heading"
     >
-      <h2 id="picture-word-match-heading">Picture–word match</h2>
-      <p className="muted">{prompt.semanticNote}</p>
-      <div
+      <LH2 id="picture-word-match-heading">Picture–word match</LH2>
+      <LP className="muted">{prompt.semanticNote}</LP>
+      <LDiv
         className="game-semantic-visual"
         role="img"
         aria-label={`${prompt.promptLabel}: ${prompt.targetGender}`}
       >
         <GenderBadge gender={prompt.targetGender} />
-        <span className="dense">{prompt.promptLabel}</span>
-      </div>
-      <fieldset className="game-choice">
-        <legend className="hub-field__label">Person forms</legend>
+        <LSpan className="dense">{prompt.promptLabel}</LSpan>
+      </LDiv>
+      <LFieldset className="game-choice">
+        <LLegend className="hub-field__label">Person forms</LLegend>
         {prompt.choices.map((choice) => (
-          <label key={choice.id} className="game-choice__option">
-            <input
+          <LLabel key={choice.id} className="game-choice__option">
+            <LInput
               type="radio"
               name="picture-word-match"
               value={choice.displayText}
@@ -95,12 +97,12 @@ export function PictureWordMatchGame({
               }}
             />
             <GenderBadge gender={choice.gender} />
-            <span className="german" lang="de">
+            <LSpan className="german" lang="de">
               {choice.displayText}
-            </span>
-          </label>
+            </LSpan>
+          </LLabel>
         ))}
-      </fieldset>
+      </LFieldset>
       <GameActionBar
         onSubmit={submit}
         onRetry={retry}
@@ -113,6 +115,6 @@ export function PictureWordMatchGame({
         revealDisabled={revealed}
       />
       <GameFeedback kind={feedbackKind} message={message} seq={seq} />
-    </section>
+    </LSection>
   );
 }

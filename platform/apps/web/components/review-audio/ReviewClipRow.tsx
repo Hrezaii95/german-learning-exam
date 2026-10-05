@@ -1,6 +1,8 @@
 "use client";
+import { LButton, LDetails, LDiv, LFieldset, LInput, LLabel, LLegend, LLi, LP, LSpan, LSummary, LTextarea, LUl } from "@/components/i18n/LocalizedElements";
 
-import Link from "next/link";
+
+import Link from "@/components/i18n/LocalizedLink";
 import { memo } from "react";
 import type {
   PronunciationReviewClip,
@@ -48,31 +50,31 @@ function ReviewClipRowInner({
   const chosen = entry?.verdict ?? null;
 
   return (
-    <li
+    <LLi
       className="review-clip"
       data-clip-reference={clip.reference}
       data-verdict={chosen ?? "none"}
       data-reviewed={chosen === null ? "false" : "true"}
     >
-      <div className="review-clip__head">
+      <LDiv className="review-clip__head">
         {/* The exact German the voice was given. Large, selectable, and marked
             as German so a screen reader switches voice for it. */}
-        <p className="review-clip__german" lang="de">
+        <LP className="review-clip__german" lang="de">
           {clip.spokenText}
-        </p>
-        <p className="review-clip__meta">
-          <span className="meta-chip">{seconds}</span>
-          <span className="meta-chip">Clip {clip.reference}</span>
+        </LP>
+        <LP className="review-clip__meta">
+          <LSpan className="meta-chip">{seconds}</LSpan>
+          <LSpan className="meta-chip">Clip {clip.reference}</LSpan>
           {tags.map((tag) => (
-            <span key={tag.id} className="meta-chip review-clip__tag">
+            <LSpan key={tag.id} className="meta-chip review-clip__tag">
               {tag.label}
-            </span>
+            </LSpan>
           ))}
           {tags.length === 0 ? (
-            <span className="meta-chip">No sound flagged</span>
+            <LSpan className="meta-chip">No sound flagged</LSpan>
           ) : null}
-        </p>
-      </div>
+        </LP>
+      </LDiv>
 
       {/* The exact spoken German is printed directly above the player, so a
           separate caption track would repeat it word for word. */}
@@ -95,89 +97,89 @@ function ReviewClipRowInner({
         }}
       />
 
-      <fieldset className="review-clip__verdict">
-        <legend>
-          Your verdict on <span lang="de">{clip.spokenText}</span>
-        </legend>
-        <div className="review-clip__choices">
+      <LFieldset className="review-clip__verdict">
+        <LLegend>
+          Your verdict on <LSpan lang="de">{clip.spokenText}</LSpan>
+        </LLegend>
+        <LDiv className="review-clip__choices">
           {REVIEW_VERDICTS.map((verdict) => (
-            <label
+            <LLabel
               key={verdict}
               className="review-clip__choice"
               data-choice={verdict}
               data-selected={chosen === verdict ? "true" : "false"}
             >
-              <input
+              <LInput
                 type="radio"
                 name={`verdict-${clip.reference}`}
                 value={verdict}
                 checked={chosen === verdict}
                 onChange={() => onVerdict(clip, verdict)}
               />
-              <span className="review-clip__choice-label">
+              <LSpan className="review-clip__choice-label">
                 {REVIEW_VERDICT_LABELS[verdict]}
-              </span>
-              <span className="review-audio__quiet">
+              </LSpan>
+              <LSpan className="review-audio__quiet">
                 {" "}
-                <span lang="de">{clip.spokenText}</span>.{" "}
+                <LSpan lang="de">{clip.spokenText}</LSpan>.{" "}
                 {REVIEW_VERDICT_HINTS[verdict]}
-              </span>
-            </label>
+              </LSpan>
+            </LLabel>
           ))}
-          <button
+          <LButton
             type="button"
             className="btn btn-secondary review-clip__clear"
             onClick={() => onClear(clip)}
             disabled={entry === null}
           >
             Clear
-            <span className="review-audio__quiet">
+            <LSpan className="review-audio__quiet">
               {" "}
-              <span lang="de">{clip.spokenText}</span>
-            </span>
-          </button>
-        </div>
-      </fieldset>
+              <LSpan lang="de">{clip.spokenText}</LSpan>
+            </LSpan>
+          </LButton>
+        </LDiv>
+      </LFieldset>
 
-      <div className="review-clip__note">
-        <label htmlFor={noteId}>
+      <LDiv className="review-clip__note">
+        <LLabel htmlFor={noteId}>
           Note
-          <span className="review-audio__quiet">
+          <LSpan className="review-audio__quiet">
             {" on "}
-            <span lang="de">{clip.spokenText}</span>
-          </span>
-        </label>
-        <textarea
+            <LSpan lang="de">{clip.spokenText}</LSpan>
+          </LSpan>
+        </LLabel>
+        <LTextarea
           id={noteId}
           rows={2}
           value={entry?.note ?? ""}
           placeholder="What came out wrong — the vowel, the stress, the rhythm."
           onChange={(event) => onNote(clip, event.target.value)}
         />
-      </div>
+      </LDiv>
 
       {clip.usages.length > 0 ? (
-        <details className="review-clip__usage">
-          <summary>
+        <LDetails className="review-clip__usage">
+          <LSummary>
             Heard on {clip.usages.length}{" "}
             {clip.usages.length === 1 ? "page" : "pages"}
-          </summary>
-          <ul>
+          </LSummary>
+          <LUl>
             {clip.usages.map((usage) => (
-              <li key={usage.href}>
+              <LLi key={usage.href}>
                 <Link href={usage.href} target="_blank" rel="noopener noreferrer">
-                  <span lang={usage.language}>{usage.label}</span>
-                  <span className="review-clip__usage-context">
+                  <LSpan lang={usage.language}>{usage.label}</LSpan>
+                  <LSpan className="review-clip__usage-context">
                     {usage.context}
-                  </span>
-                  <span className="review-audio__quiet"> (opens a new tab)</span>
+                  </LSpan>
+                  <LSpan className="review-audio__quiet"> (opens a new tab)</LSpan>
                 </Link>
-              </li>
+              </LLi>
             ))}
-          </ul>
-        </details>
+          </LUl>
+        </LDetails>
       ) : null}
-    </li>
+    </LLi>
   );
 }
 

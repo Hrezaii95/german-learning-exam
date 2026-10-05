@@ -80,7 +80,13 @@ describe("P6 page titles", () => {
 
     // Routes that sit in the layout's own segment do not receive the template,
     // so they must carry the finished title themselves.
-    for (const name of ["page.tsx", "not-found.tsx"]) {
+    // The Armenian landing supplies its own complete, brand-first title.
+    const home = readFileSync(join(appRoot, "page.tsx"), "utf8");
+    const homeTitle = home.match(/absolute:\s*['"]([^'"]+)['"]/u)?.[1];
+    expect(homeTitle).toBeDefined();
+    expect(homeTitle!.split(SITE_NAME).length - 1).toBe(1);
+    expect(homeTitle).toMatch(/[\u0531-\u0587]/u);
+    for (const name of ["not-found.tsx"]) {
       expect(readFileSync(join(appRoot, name), "utf8")).toContain(
         `| ${"$"}{SITE_NAME}\` }`,
       );
@@ -92,7 +98,7 @@ describe("P6 page titles", () => {
       /web shell|publication|validated|projection|alpha/i,
     );
     expect(SITE_DESCRIPTION.length).toBeGreaterThan(60);
-    expect(SITE_NAME).toBe("German Learning OS");
+    expect(SITE_NAME).toBe("Lingovo");
   });
 
   it("gives every route family a title of its own", () => {

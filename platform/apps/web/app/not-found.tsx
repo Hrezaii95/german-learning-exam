@@ -1,5 +1,7 @@
+
+import { LDiv, LH1, LP } from "@/components/i18n/LocalizedElements";
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/i18n/LocalizedLink";
 import { ShellLayout } from "@/components/shell/ShellLayout";
 import { SITE_NAME } from "@/lib/content/page-metadata";
 
@@ -15,17 +17,17 @@ export const metadata: Metadata = {
 export default function NotFound() {
   return (
     <ShellLayout current={null}>
-      <div className="not-found panel">
-        <h1>Page not found</h1>
-        <p className="muted">
+      <LDiv className="not-found panel">
+        <LH1>Page not found</LH1>
+        <LP className="muted">
           This route is not part of the Lessons 1–2 Alpha shell. Unknown lessons,
           activities, unimplemented hub details, and future surfaces do not fall
           back to the dashboard.
-        </p>
+        </LP>
         <Link className="btn btn-primary" href="/">
           Back to dashboard
         </Link>
-      </div>
+      </LDiv>
     </ShellLayout>
   );
 }

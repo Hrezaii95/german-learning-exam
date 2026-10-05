@@ -1,4 +1,6 @@
 "use client";
+import { LDiv, LH1, LHeader, LP } from "@/components/i18n/LocalizedElements";
+
 
 import { useMemo, useState } from "react";
 import {
@@ -90,25 +92,25 @@ export function GameRenderer({
   }
 
   return (
-    <div className="stack game-page" data-game-id={gameId}>
+    <LDiv className="stack game-page" data-game-id={gameId}>
       <BackLink href={backHref} />
-      <header className="page-header">
-        <p className="dense">Practice</p>
-        <h1>{gameTitle(gameId)}</h1>
-        <p className="lede">
+      <LHeader className="page-header">
+        <LP className="dense">Practice</LP>
+        <LH1>{gameTitle(gameId)}</LH1>
+        <LP className="lede">
           Answer at your own pace — feedback is instant and your progress stays
           on this device.
-        </p>
-      </header>
+        </LP>
+      </LHeader>
       <PracticeGameBody
         gameId={gameId}
         sessionId={sessionId}
         onEvent={onEvent}
       />
-      <p className="dense" data-emitted-count={emitted.length}>
+      <LP className="dense" data-emitted-count={emitted.length}>
         Attempts this session: {emitted.length}
-      </p>
+      </LP>
       <StatusMessage announcement={saveMessage} className="detail-feedback" />
-    </div>
+    </LDiv>
   );
 }

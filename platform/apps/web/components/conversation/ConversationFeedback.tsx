@@ -1,4 +1,6 @@
 "use client";
+import { LButton, LDiv, LP, LSpan } from "@/components/i18n/LocalizedElements";
+
 
 import type { LearnerEvent } from "@german-learning/learning";
 import type { ConversationFeedbackKind } from "@/lib/conversation";
@@ -21,7 +23,7 @@ export function ConversationFeedback({
 }) {
   const speaking = Boolean(kind && message);
   return (
-    <p
+    <LP
       className={
         speaking
           ? `live-region conversation-feedback conversation-feedback--${kind}`
@@ -32,8 +34,8 @@ export function ConversationFeedback({
       data-announcement-seq={seq}
       {...(speaking ? { "data-feedback": kind as string } : {})}
     >
-      {speaking ? <span key={seq}>{message}</span> : null}
-    </p>
+      {speaking ? <LSpan key={seq}>{message}</LSpan> : null}
+    </LP>
   );
 }
 
@@ -59,35 +61,35 @@ export function ConversationActionBar({
   showHint?: boolean;
 }) {
   return (
-    <div className="conversation-actions game-actions">
-      <button type="button" className="btn btn-primary" onClick={onSubmit}>
+    <LDiv className="conversation-actions game-actions">
+      <LButton type="button" className="btn btn-primary" onClick={onSubmit}>
         {submitLabel}
-      </button>
+      </LButton>
       {onRetry ? (
-        <button type="button" className="btn btn-secondary" onClick={onRetry}>
+        <LButton type="button" className="btn btn-secondary" onClick={onRetry}>
           Retry
-        </button>
+        </LButton>
       ) : null}
       {showHint && onHint ? (
-        <button
+        <LButton
           type="button"
           className="btn btn-secondary"
           onClick={onHint}
           disabled={hintDisabled}
         >
           Hint
-        </button>
+        </LButton>
       ) : null}
       {showReveal && onReveal ? (
-        <button
+        <LButton
           type="button"
           className="btn btn-secondary"
           onClick={onReveal}
           disabled={revealDisabled}
         >
           Reveal
-        </button>
+        </LButton>
       ) : null}
-    </div>
+    </LDiv>
   );
 }

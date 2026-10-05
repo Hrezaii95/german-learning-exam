@@ -1,4 +1,6 @@
 "use client";
+import { LButton, LDiv, LFieldset, LH2, LInput, LLabel, LLegend, LP, LSection, LSpan } from "@/components/i18n/LocalizedElements";
+
 
 import { useState } from "react";
 import {
@@ -25,15 +27,15 @@ export function QaConstruction({ detail }: { detail: LearnerQaDetail }) {
   }
 
   return (
-    <section className="panel" aria-labelledby="qa-construction-heading">
-      <h2 id="qa-construction-heading">Construction</h2>
-      <p className="muted">
+    <LSection className="panel" aria-labelledby="qa-construction-heading">
+      <LH2 id="qa-construction-heading">Construction</LH2>
+      <LP className="muted">
         Type one of the answer patterns exactly as you learned it (the ellipsis
         is fine to keep).
-      </p>
-      <label className="hub-field" htmlFor="qa-construction-input">
-        <span className="hub-field__label">Your answer pattern</span>
-        <input
+      </LP>
+      <LLabel className="hub-field" htmlFor="qa-construction-input">
+        <LSpan className="hub-field__label">Your answer pattern</LSpan>
+        <LInput
           id="qa-construction-input"
           className="hub-input"
           type="text"
@@ -46,14 +48,14 @@ export function QaConstruction({ detail }: { detail: LearnerQaDetail }) {
           // wording in the accessible name (WCAG 2.5.3 Label in Name), so
           // "click Your answer pattern" would match nothing by voice.
         />
-      </label>
-      <div className="detail-actions">
-        <button type="button" className="btn btn-primary" onClick={onCheck}>
+      </LLabel>
+      <LDiv className="detail-actions">
+        <LButton type="button" className="btn btn-primary" onClick={onCheck}>
           Check pattern
-        </button>
-      </div>
+        </LButton>
+      </LDiv>
       <StatusMessage announcement={message} className="detail-feedback" />
-    </section>
+    </LSection>
   );
 }
 
@@ -62,14 +64,14 @@ export function QaGuidedChoice({ detail }: { detail: LearnerQaDetail }) {
   const [message, setMessage] = useAnnouncement();
 
   return (
-    <section className="panel" aria-labelledby="qa-guided-heading">
-      <h2 id="qa-guided-heading">Guided choice</h2>
-      <p className="muted">Choose one of the answer patterns.</p>
-      <fieldset className="qa-guided">
-        <legend className="hub-field__label">Answer choices</legend>
+    <LSection className="panel" aria-labelledby="qa-guided-heading">
+      <LH2 id="qa-guided-heading">Guided choice</LH2>
+      <LP className="muted">Choose one of the answer patterns.</LP>
+      <LFieldset className="qa-guided">
+        <LLegend className="hub-field__label">Answer choices</LLegend>
         {detail.answers.map((answer) => (
-          <label key={answer.id} className="qa-guided__option">
-            <input
+          <LLabel key={answer.id} className="qa-guided__option">
+            <LInput
               type="radio"
               name="qa-guided-answer"
               value={answer.id}
@@ -79,14 +81,14 @@ export function QaGuidedChoice({ detail }: { detail: LearnerQaDetail }) {
                 setMessage(null);
               }}
             />
-            <span className="german" lang="de">
+            <LSpan className="german" lang="de">
               {answer.realization}
-            </span>
-          </label>
+            </LSpan>
+          </LLabel>
         ))}
-      </fieldset>
-      <div className="detail-actions">
-        <button
+      </LFieldset>
+      <LDiv className="detail-actions">
+        <LButton
           type="button"
           className="btn btn-primary"
           onClick={() => {
@@ -98,9 +100,9 @@ export function QaGuidedChoice({ detail }: { detail: LearnerQaDetail }) {
           }}
         >
           Confirm choice
-        </button>
-      </div>
+        </LButton>
+      </LDiv>
       <StatusMessage announcement={message} className="detail-feedback" />
-    </section>
+    </LSection>
   );
 }

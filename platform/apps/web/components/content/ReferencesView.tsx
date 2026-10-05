@@ -1,4 +1,6 @@
-import Link from "next/link";
+
+import { LDiv, LH1, LH2, LHeader, LLi, LP, LSection, LSpan, LStrong, LUl } from "@/components/i18n/LocalizedElements";
+import Link from "@/components/i18n/LocalizedLink";
 import {
   REFERENCES_PUBLISHER,
   REFERENCE_GROUPS,
@@ -18,102 +20,102 @@ import {
 function ReferenceGroupSection({ group }: { group: ReferenceGroup }) {
   const headingId = `references-${group.id}`;
   return (
-    <section className="panel reference-group" aria-labelledby={headingId}>
-      <h2 id={headingId}>{group.title}</h2>
-      <p className="lede reference-group__intro">{group.intro}</p>
-      <ul className="reference-list">
+    <LSection className="panel reference-group" aria-labelledby={headingId}>
+      <LH2 id={headingId}>{group.title}</LH2>
+      <LP className="lede reference-group__intro">{group.intro}</LP>
+      <LUl className="reference-list">
         {group.works.map((work) => (
-          <li key={work.id} className="reference-item">
-            <p className="reference-item__title german" lang="de">
+          <LLi key={work.id} className="reference-item">
+            <LP className="reference-item__title german" lang="de">
               {work.title}
-            </p>
-            <p className="meta-row">
-              <span className="meta-chip">{work.role}</span>
-              <span className="meta-chip">{REFERENCES_PUBLISHER}</span>
-            </p>
-            <p className="reference-item__note">{work.contribution}</p>
-          </li>
+            </LP>
+            <LP className="meta-row">
+              <LSpan className="meta-chip">{work.role}</LSpan>
+              <LSpan className="meta-chip">{REFERENCES_PUBLISHER}</LSpan>
+            </LP>
+            <LP className="reference-item__note">{work.contribution}</LP>
+          </LLi>
         ))}
-      </ul>
-    </section>
+      </LUl>
+    </LSection>
   );
 }
 
 export function ReferencesView() {
   return (
-    <div className="stack references-page">
-      <header className="page-header">
-        <p className="dense">Credits</p>
-        <h1>References</h1>
-        <p className="lede">
-          This app teaches from the <span lang="de">Momente</span> A1.1 and A1.2
+    <LDiv className="stack references-page">
+      <LHeader className="page-header">
+        <LP className="dense">Credits</LP>
+        <LH1>References</LH1>
+        <LP className="lede">
+          This app teaches from the <LSpan lang="de">Momente</LSpan> A1.1 and A1.2
           course by {REFERENCES_PUBLISHER}. The owner of this app holds the
           rights to use that material here, on the condition that the books and
           the recordings are credited as its sources. This page is that credit.
-        </p>
-      </header>
+        </LP>
+      </LHeader>
 
       {REFERENCE_GROUPS.map((group) => (
         <ReferenceGroupSection key={group.id} group={group} />
       ))}
 
-      <section className="panel reference-note" aria-labelledby="references-scope">
-        <h2 id="references-scope">What this release covers</h2>
-        <p>
+      <LSection className="panel reference-note" aria-labelledby="references-scope">
+        <LH2 id="references-scope">What this release covers</LH2>
+        <LP>
           The interactive book covers Lessons 1–4: 32 original coursebook and
           workbook pages with 64 original exercise recordings. Lesson 4 adds
           furniture, prices and opinions, with authored explanations and practice.
-        </p>
-      </section>
+        </LP>
+      </LSection>
 
-      <section
+      <LSection
         className="panel reference-note reference-note--artwork"
         aria-labelledby="references-artwork"
       >
-        <h2 id="references-artwork">
+        <LH2 id="references-artwork">
           Course pages and app illustrations
-        </h2>
-        <p>
+        </LH2>
+        <LP>
           The original pages and the pictures inside the interactive book come
-          from <span lang="de">Momente</span> and are credited to {REFERENCES_PUBLISHER}.
+          from <LSpan lang="de">Momente</LSpan> and are credited to {REFERENCES_PUBLISHER}.
           The profession illustrations on the vocabulary cards and the Lesson 4
           room diagram were created for this app.
-        </p>
-        <p>
+        </LP>
+        <LP>
           The job pictures deliberately show the work being done — hands and
           tools, never a face. That is what lets one drawing stand for both the{" "}
-          <span lang="de">der</span> word and the <span lang="de">die</span>{" "}
+          <LSpan lang="de">der</LSpan> word and the <LSpan lang="de">die</LSpan>{" "}
           word. The article, the word ending and the colour badge are what tell
           those two forms apart; the picture never does.
-        </p>
-      </section>
+        </LP>
+      </LSection>
 
-      <section
+      <LSection
         className="panel reference-note reference-note--synthetic"
         aria-labelledby="references-synthetic"
       >
-        <h2 id="references-synthetic">
+        <LH2 id="references-synthetic">
           Computer-generated pronunciation is not course audio
-        </h2>
-        <p>
+        </LH2>
+        <LP>
           Some single words and short phrases have a small{" "}
-          <strong>pronunciation preview</strong> you can play. Those previews do
+          <LStrong>pronunciation preview</LStrong> you can play. Those previews do
           not come from the course. A computer voice reads them, and they are
           still waiting to be checked by a qualified German speaker, so they may
           not be a reliable model for how a word really sounds. They are labelled
           as previews everywhere they appear.
-        </p>
-        <p>
+        </LP>
+        <LP>
           The workbook listening tracks are a different thing entirely: those are
           the original {REFERENCES_PUBLISHER} recordings described above, and
           nothing on this page credits the course for a computer-made voice.
-        </p>
-        <p className="reference-note__action">
+        </LP>
+        <LP className="reference-note__action">
           <Link className="btn btn-secondary" href="/listening">
             Go to the workbook listening tracks
           </Link>
-        </p>
-      </section>
-    </div>
+        </LP>
+      </LSection>
+    </LDiv>
   );
 }

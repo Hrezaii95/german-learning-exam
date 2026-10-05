@@ -1,5 +1,7 @@
+
+import { LA, LDiv, LH1, LH2, LHeader, LLi, LMain, LP, LSection, LStrong, LUl } from "@/components/i18n/LocalizedElements";
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/i18n/LocalizedLink";
 import { PronunciationReviewBoard } from "@/components/review-audio/PronunciationReviewBoard";
 import { summarisePronunciationReview } from "@/lib/audio/pronunciation-review";
 import { listPronunciationReviewClips } from "@/lib/audio/pronunciation-review.server";
@@ -29,71 +31,71 @@ export default function ReviewAudioPage() {
   const summary = summarisePronunciationReview(clips);
 
   return (
-    <div className="review-audio">
-      <a className="skip-link" href="#main-content">
+    <LDiv className="review-audio">
+      <LA className="skip-link" href="#main-content">
         Skip to the clips
-      </a>
+      </LA>
 
-      <main id="main-content" className="review-audio__main">
-        <header className="page-header review-audio__header">
-          <p className="review-audio__eyebrow">Listening tool</p>
-          <h1>Pronunciation listening check</h1>
-          <p className="lede">
+      <LMain id="main-content" className="review-audio__main">
+        <LHeader className="page-header review-audio__header">
+          <LP className="review-audio__eyebrow">Listening tool</LP>
+          <LH1>Pronunciation listening check</LH1>
+          <LP className="lede">
             Every German clip the app can currently play, on one page, so one
             person can listen straight through and write down what they hear.
-          </p>
-        </header>
+          </LP>
+        </LHeader>
 
-        <section
+        <LSection
           className="panel review-audio__truth"
           aria-labelledby="review-truth-heading"
         >
-          <h2 id="review-truth-heading">Read this before you start</h2>
-          <ul>
-            <li>
-              <strong>The voice is a computer.</strong> Every clip here was
+          <LH2 id="review-truth-heading">Read this before you start</LH2>
+          <LUl>
+            <LLi>
+              <LStrong>The voice is a computer.</LStrong> Every clip here was
               produced by Microsoft speech software — the {summary.voice} voice
               driven through edge-tts, generated at {summary.rate}. None of it
               is a recording of a person.
-            </li>
-            <li>
-              <strong>Nothing here has been agreed to be good yet.</strong> No
+            </LLi>
+            <LLi>
+              <LStrong>Nothing here has been agreed to be good yet.</LStrong> No
               one has said any of these clips is right for teaching, and this
               page does not say so either. It only collects what a listener
               hears.
-            </li>
-            <li>
-              <strong>Only a qualified German speaker can decide.</strong>{" "}
+            </LLi>
+            <LLi>
+              <LStrong>Only a qualified German speaker can decide.</LStrong>{" "}
               Software cannot tell you whether a vowel, a stress or a rhythm is
               right, so no automatic check stands in for the ear.
-            </li>
-            <li>
-              <strong>This is not part of the course.</strong> It is not in the
+            </LLi>
+            <LLi>
+              <LStrong>This is not part of the course.</LStrong> It is not in the
               menu and no learner page links to it — you got here by typing the
               address, which is the only way in.
-            </li>
-            <li>
-              <strong>Your notes stay on this device</strong>, kept apart from
+            </LLi>
+            <LLi>
+              <LStrong>Your notes stay on this device</LStrong>, kept apart from
               anything about a learner{"'"}s progress. Download them when you
               are done; that file is the thing that can be shared.
-            </li>
-          </ul>
-          <p className="dense">
+            </LLi>
+          </LUl>
+          <LP className="dense">
             Scope: these {summary.clipCount} clips are the ones a learner can
             hear inside the app today. The whole generated batch holds{" "}
             {summary.fullSetSize}; the other{" "}
             {summary.fullSetSize - summary.clipCount} are not wired into any
             page, so listening to them would say nothing about what a learner
             actually hears.
-          </p>
-          <p className="dense">
+          </LP>
+          <LP className="dense">
             Where the recordings and the course material come from is set out on
             the <Link href="/references">References</Link> page.
-          </p>
-        </section>
+          </LP>
+        </LSection>
 
         <PronunciationReviewBoard clips={clips} summary={summary} />
-      </main>
-    </div>
+      </LMain>
+    </LDiv>
   );
 }

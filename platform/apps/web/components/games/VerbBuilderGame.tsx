@@ -1,4 +1,6 @@
 "use client";
+import { LH2, LInput, LLabel, LP, LSection, LSpan } from "@/components/i18n/LocalizedElements";
+
 
 import { useMemo, useRef, useState } from "react";
 import { useFeedbackChannel } from "@/components/a11y/StatusMessage";
@@ -60,18 +62,18 @@ export function VerbBuilderGame({
   }
 
   return (
-    <section className="panel game-panel" aria-labelledby="verb-builder-heading">
-      <h2 id="verb-builder-heading">Verb builder</h2>
-      <p className="muted">
+    <LSection className="panel game-panel" aria-labelledby="verb-builder-heading">
+      <LH2 id="verb-builder-heading">Verb builder</LH2>
+      <LP className="muted">
         Build the present form of{" "}
-        <span className="german" lang="de">
+        <LSpan className="german" lang="de">
           {prompt.infinitive}
-        </span>{" "}
-        for <span lang="de">{prompt.personLabel}</span>.
-      </p>
-      <label className="hub-field" htmlFor="verb-builder-input">
-        <span className="hub-field__label">Present form</span>
-        <input
+        </LSpan>{" "}
+        for <LSpan lang="de">{prompt.personLabel}</LSpan>.
+      </LP>
+      <LLabel className="hub-field" htmlFor="verb-builder-input">
+        <LSpan className="hub-field__label">Present form</LSpan>
+        <LInput
           id="verb-builder-input"
           className="hub-input"
           type="text"
@@ -88,7 +90,7 @@ export function VerbBuilderGame({
           }}
           aria-label={`Type the present form for ${prompt.personLabel}`}
         />
-      </label>
+      </LLabel>
       <GameActionBar
         onSubmit={submit}
         onRetry={retry}
@@ -102,6 +104,6 @@ export function VerbBuilderGame({
         revealDisabled={revealed}
       />
       <GameFeedback kind={feedbackKind} message={message} seq={seq} />
-    </section>
+    </LSection>
   );
 }

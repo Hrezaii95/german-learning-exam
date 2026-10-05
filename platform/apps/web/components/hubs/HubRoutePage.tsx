@@ -1,3 +1,5 @@
+
+import { LP } from "@/components/i18n/LocalizedElements";
 import { Suspense } from "react";
 import { ShellLayout } from "@/components/shell/ShellLayout";
 import { HubListView } from "@/components/hubs/HubViews";
@@ -17,7 +19,7 @@ import {loadBook,loadStudySpeech} from "@/lib/study/catalog";
 export function HubRoutePage({ hubId }: { hubId: LearnerHubId }) {
   const hubs = loadLearnerHubProjection();
   const hub = hubId === "vocabulary" ? withWordCardHub(hubs.hubsById[hubId]) : hubs.hubsById[hubId];
-  if(hubId==="listening")return <ShellLayout current="listening"><Suspense fallback={<p>Loading recordings…</p>}><CourseListening book={{audio:loadBook().audio}}/></Suspense></ShellLayout>;
+  if(hubId==="listening")return <ShellLayout current="listening"><Suspense fallback={<LP>Loading recordings…</LP>}><CourseListening book={{audio:loadBook().audio}}/></Suspense></ShellLayout>;
   const units=["grammar","verbs","phrases","concepts"].includes(hubId)?studyUnits:[];
   const speech=units.length?loadStudySpeech():{};
   return (

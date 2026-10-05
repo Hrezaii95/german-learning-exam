@@ -1,3 +1,5 @@
+
+import { LDiv, LFigcaption, LFigure, LH2, LLi, LP, LSpan, LStrong, LUl } from "@/components/i18n/LocalizedElements";
 import { withPagesBaseAssetPath } from "@/lib/content/pages-base-path";
 import type { LearnerIllustration } from "@/lib/content/illustrations";
 import { IllustrationPicture } from "@/components/media/IllustrationPicture";
@@ -21,11 +23,11 @@ export function RichLessonVisual({
   const responsive = illustration.responsive;
 
   return (
-    <figure
+    <LFigure
       className={`rich-visual${responsive ? " rich-visual--concept" : ""}`}
       aria-labelledby={headingId}
     >
-      <div className="rich-visual__media">
+      <LDiv className="rich-visual__media">
         {responsive ? (
           <IllustrationPicture
             variant={responsive.detail}
@@ -48,32 +50,32 @@ export function RichLessonVisual({
             decoding="async"
           />
         )}
-        <span className="rich-visual__eyebrow">{illustration.eyebrow}</span>
-      </div>
-      <figcaption className="rich-visual__caption">
-        <div>
-          <h2 id={headingId}>
+        <LSpan className="rich-visual__eyebrow">{illustration.eyebrow}</LSpan>
+      </LDiv>
+      <LFigcaption className="rich-visual__caption">
+        <LDiv>
+          <LH2 id={headingId}>
             {illustration.titleLang === "de" ? (
-              <span className="german" lang="de">
+              <LSpan className="german" lang="de">
                 {illustration.title}
-              </span>
+              </LSpan>
             ) : (
-              <span>{illustration.title}</span>
+              <LSpan>{illustration.title}</LSpan>
             )}
-          </h2>
-          <p className="muted">{illustration.caption}</p>
-        </div>
-        <ul className="rich-visual__labels" aria-label="Illustrated vocabulary">
+          </LH2>
+          <LP className="muted">{illustration.caption}</LP>
+        </LDiv>
+        <LUl className="rich-visual__labels" aria-label="Illustrated vocabulary">
           {illustration.labels.map((label) => (
-            <li key={label.de} data-gender={label.gender}>
-              <strong className="german" lang="de">
+            <LLi key={label.de} data-gender={label.gender}>
+              <LStrong className="german" lang="de">
                 {label.de}
-              </strong>
-              <span>{label.en}</span>
-            </li>
+              </LStrong>
+              <LSpan>{label.en}</LSpan>
+            </LLi>
           ))}
-        </ul>
-      </figcaption>
-    </figure>
+        </LUl>
+      </LFigcaption>
+    </LFigure>
   );
 }

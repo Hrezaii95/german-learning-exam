@@ -1,7 +1,9 @@
 "use client";
+import { LButton, LDiv, LP, LSpan } from "@/components/i18n/LocalizedElements";
+
 
 import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
+import Link from "@/components/i18n/LocalizedLink";
 import type { LearnerGender } from "@/lib/content/detail-types";
 import { GenderBadge } from "@/components/details/GenderBadge";
 import { withPagesBaseAssetPath } from "@/lib/content/pages-base-path";
@@ -95,7 +97,7 @@ export function LemmaAudioButton({
   }
 
   return (
-    <div className="meaning-plate__audio">
+    <LDiv className="meaning-plate__audio">
       {/* A short pronunciation model, not a timed passage: the exact spoken
           German is already visible and selectable on the plate itself. */}
       {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
@@ -110,7 +112,7 @@ export function LemmaAudioButton({
         onEnded={() => setIsPlaying(false)}
         onError={() => { setFailed(true); setIsPlaying(false); }}
       />
-      <button
+      <LButton
         type="button"
         className="meaning-plate__audio-btn"
         data-audio-state={isPlaying ? "playing" : "idle"}
@@ -121,15 +123,15 @@ export function LemmaAudioButton({
         // Name). The lemma follows so the name still says which word it plays.
         aria-label={`${isPlaying ? "Pause" : "Listen"} — ${label} pronunciation`}
       >
-        <span className="meaning-plate__audio-glyph" aria-hidden="true">
+        <LSpan className="meaning-plate__audio-glyph" aria-hidden="true">
           {isPlaying ? "❚❚" : "▶"}
-        </span>
-        <span className="meaning-plate__audio-text">
+        </LSpan>
+        <LSpan className="meaning-plate__audio-text">
           {isPlaying ? "Pause" : "Listen"}
-        </span>
-      </button>
-      {failed && <span role="status">Audio could not play. Press Listen to retry.</span>}
-    </div>
+        </LSpan>
+      </LButton>
+      {failed && <LSpan role="status">Audio could not play. Press Listen to retry.</LSpan>}
+    </LDiv>
   );
 }
 
@@ -147,12 +149,12 @@ export function MeaningPlate({
 }: MeaningPlateProps) {
   const spokenLemma = article ? `${article} ${lemma}` : lemma;
   const lemmaText = (
-    <span className="german meaning-plate__lemma-text" lang="de">
+    <LSpan className="german meaning-plate__lemma-text" lang="de">
       {article ? (
-        <span className="meaning-plate__article">{article} </span>
+        <LSpan className="meaning-plate__article">{article} </LSpan>
       ) : null}
       {lemma}
-    </span>
+    </LSpan>
   );
   const lemmaBody = href ? (
     <Link className="meaning-plate__link" href={href}>
@@ -164,31 +166,31 @@ export function MeaningPlate({
   const LemmaTag = headingLevel === 2 ? "h2" : headingLevel === 3 ? "h3" : "p";
 
   return (
-    <div
+    <LDiv
       className={`meaning-plate meaning-plate--${variant}`}
       data-meaning-plate={variant}
       data-gender={gender ?? "none"}
     >
       <LemmaTag className="meaning-plate__lemma">{lemmaBody}</LemmaTag>
-      {gloss ? <p className="meaning-plate__gloss">{gloss}</p> : null}
+      {gloss ? <LP className="meaning-plate__gloss">{gloss}</LP> : null}
       {gender ? (
-        <p className="meaning-plate__cue">
+        <LP className="meaning-plate__cue">
           <GenderBadge gender={gender} />
-        </p>
+        </LP>
       ) : null}
       {morphology ? (
-        <p className="meaning-plate__morph">
+        <LP className="meaning-plate__morph">
           {morphologyLabel ? (
-            <span className="meaning-plate__morph-label">
+            <LSpan className="meaning-plate__morph-label">
               {morphologyLabel}
-            </span>
+            </LSpan>
           ) : null}
-          <span className="german" lang="de">
+          <LSpan className="german" lang="de">
             {morphology}
-          </span>
-        </p>
+          </LSpan>
+        </LP>
       ) : null}
       {audio ? <LemmaAudioButton audio={audio} label={spokenLemma} /> : null}
-    </div>
+    </LDiv>
   );
 }

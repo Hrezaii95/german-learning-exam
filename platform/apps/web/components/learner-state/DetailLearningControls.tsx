@@ -1,4 +1,6 @@
 "use client";
+import { LButton, LDiv, LFieldset, LH2, LLabel, LLegend, LP, LSection, LSpan, LTextarea } from "@/components/i18n/LocalizedElements";
+
 
 import { useEffect, useState } from "react";
 import {
@@ -29,10 +31,10 @@ export function DetailLearningControls({ contentId }: { contentId: string }) {
 
   if (!snapshot) {
     return (
-      <section className="panel learner-controls" aria-labelledby="learner-controls-heading">
-        <h2 id="learner-controls-heading">My learning tools</h2>
-        <p className="dense">Review cards, tags, and notes become available when local learning state loads in the browser.</p>
-      </section>
+      <LSection className="panel learner-controls" aria-labelledby="learner-controls-heading">
+        <LH2 id="learner-controls-heading">My learning tools</LH2>
+        <LP className="dense">Review cards, tags, and notes become available when local learning state loads in the browser.</LP>
+      </LSection>
     );
   }
 
@@ -51,17 +53,17 @@ export function DetailLearningControls({ contentId }: { contentId: string }) {
   }
 
   if (snapshot.status === "loading") {
-    return <p className="dense" role="status">Loading local learning controls…</p>;
+    return <LP className="dense" role="status">Loading local learning controls…</LP>;
   }
   if (!state || !controller) {
-    return <p className="placeholder-banner" role="status">{snapshot.statusMessage}</p>;
+    return <LP className="placeholder-banner" role="status">{snapshot.statusMessage}</LP>;
   }
 
   return (
-    <section className="panel learner-controls" aria-labelledby="learner-controls-heading">
-      <h2 id="learner-controls-heading">My learning tools</h2>
-      <div className="detail-actions">
-        <button
+    <LSection className="panel learner-controls" aria-labelledby="learner-controls-heading">
+      <LH2 id="learner-controls-heading">My learning tools</LH2>
+      <LDiv className="detail-actions">
+        <LButton
           type="button"
           className="btn btn-primary"
           disabled={busy || eligibleCount === 0 || addedCount === eligibleCount}
@@ -75,16 +77,16 @@ export function DetailLearningControls({ contentId }: { contentId: string }) {
             : addedCount === eligibleCount
               ? `Added to review (${addedCount})`
               : `Add to review (${eligibleCount})`}
-        </button>
-        <span className="dense">{addedCount}/{eligibleCount} eligible cards saved locally</span>
-      </div>
+        </LButton>
+        <LSpan className="dense">{addedCount}/{eligibleCount} eligible cards saved locally</LSpan>
+      </LDiv>
 
-      <fieldset className="learner-tag-grid">
-        <legend>Tags</legend>
+      <LFieldset className="learner-tag-grid">
+        <LLegend>Tags</LLegend>
         {LEARNER_BUILT_IN_TAGS.map((tag) => {
           const active = state.tags.some((row) => row.contentId === contentId && row.tag === tag);
           return (
-            <button
+            <LButton
               key={tag}
               type="button"
               className={active ? "btn btn-primary" : "btn btn-secondary"}
@@ -96,14 +98,14 @@ export function DetailLearningControls({ contentId }: { contentId: string }) {
               )}
             >
               {tag}
-            </button>
+            </LButton>
           );
         })}
-      </fieldset>
+      </LFieldset>
 
-      <label className="hub-field" htmlFor={`learner-note-${contentId.replace(/[^a-z0-9]/gi, "-")}`}>
-        <span className="hub-field__label">Personal note</span>
-        <textarea
+      <LLabel className="hub-field" htmlFor={`learner-note-${contentId.replace(/[^a-z0-9]/gi, "-")}`}>
+        <LSpan className="hub-field__label">Personal note</LSpan>
+        <LTextarea
           id={`learner-note-${contentId.replace(/[^a-z0-9]/gi, "-")}`}
           className="hub-input learner-note"
           value={note}
@@ -111,27 +113,27 @@ export function DetailLearningControls({ contentId }: { contentId: string }) {
           onChange={(event) => setNote(event.target.value)}
           placeholder="Plain text only"
         />
-      </label>
-      <div className="detail-actions">
-        <button
+      </LLabel>
+      <LDiv className="detail-actions">
+        <LButton
           type="button"
           className="btn btn-secondary"
           disabled={busy || note.length === 0}
           onClick={() => run(() => controller.saveNote(contentId, note), "Note saved locally.")}
         >
           Save note
-        </button>
-        <button
+        </LButton>
+        <LButton
           type="button"
           className="btn btn-secondary"
           disabled={busy || savedNote.length === 0}
           onClick={() => run(() => controller.deleteNote(contentId), "Note deleted.")}
         >
           Delete note
-        </button>
-        <span className="dense">{note.length}/{PERSISTENCE_LIMITS.maxNoteTextLength}</span>
-      </div>
+        </LButton>
+        <LSpan className="dense">{note.length}/{PERSISTENCE_LIMITS.maxNoteTextLength}</LSpan>
+      </LDiv>
       <StatusMessage announcement={message} className="detail-feedback" />
-    </section>
+    </LSection>
   );
 }

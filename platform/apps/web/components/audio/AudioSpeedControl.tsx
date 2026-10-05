@@ -1,4 +1,6 @@
 "use client";
+import { LDiv, LLabel, LOption, LP, LSelect, LSmall } from "@/components/i18n/LocalizedElements";
+
 
 import { useState } from "react";
 import { useOptionalLearnerState } from "@/components/learner-state/LearnerStateProvider";
@@ -34,9 +36,9 @@ export function useAudioSpeed() {
 export function AudioSpeedControl({ control }: { control: ReturnType<typeof useAudioSpeed> }) {
   const { speed, change, error, disabled } = control;
   const speeds = audioSpeedOptions(speed);
-  return <div className="study-audio-speed">
-    <label className="study-inline-field">Audio speed<select aria-label="Audio speed" value={speed} disabled={disabled} onChange={event => void change(Number(event.target.value))}>{speeds.map(value => <option key={value} value={value}>{value}×</option>)}</select></label>
-    <small>Applies across the app</small>
-    {error && <p role="status">{error}</p>}
-  </div>;
+  return <LDiv className="study-audio-speed">
+    <LLabel className="study-inline-field">Audio speed<LSelect aria-label="Audio speed" value={speed} disabled={disabled} onChange={event => void change(Number(event.target.value))}>{speeds.map(value => <LOption key={value} value={value}>{value}×</LOption>)}</LSelect></LLabel>
+    <LSmall>Applies across the app</LSmall>
+    {error && <LP role="status">{error}</LP>}
+  </LDiv>;
 }

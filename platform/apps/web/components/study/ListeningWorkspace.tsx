@@ -1,5 +1,7 @@
 "use client";
-import Link from "next/link";
+import { LArticle, LAside, LButton, LDiv, LH1, LH2, LHeader, LInput, LLabel, LOption, LP, LSelect, LSmall, LSpan, LStrong } from "@/components/i18n/LocalizedElements";
+
+import Link from "@/components/i18n/LocalizedLink";
 import {useEffect,useRef,useState} from "react";
 import {useSearchParams} from "next/navigation";
 import type {BookManifest} from "@/lib/study/types";
@@ -23,13 +25,13 @@ export function CourseListening({book}:{book:Pick<BookManifest,"audio">}){
   const next=new URLSearchParams();if(nextQuery)next.set("q",nextQuery);if(nextKind!=="all")next.set("kind",nextKind);if(track)next.set("track",track);
   window.history.replaceState(null,"",`${window.location.pathname}${next.size?`?${next}`:""}`);
  }
- return <div className="study-workspace listening-workspace">
-  <header className="study-page-header"><div><p className="study-eyebrow">Listening hub</p><h1>Listen. Read. Listen again.</h1><p>Choose one recording. Listen first, then explore its publisher transcript.</p></div></header>
-  <div className="sheet-controls"><label>Find a recording<input value={query} onChange={event=>{setLimit(12);navigate(event.target.value,kind);}} placeholder="Exercise or transcript text…"/></label><label>Book<select value={kind} onChange={event=>{setLimit(12);navigate(query,event.target.value);}}><option value="all">Both books</option><option value="coursebook">Coursebook</option><option value="workbook">Workbook</option></select></label><AudioSpeedControl control={speed}/></div>
-  <p role="status">{tracks.length} recordings in your selection.</p>
-  <div className="listening-focus-layout">
-   {active?<article className="panel listening-focus" data-course-track={active.id}><p className="study-eyebrow">{active.kind==="coursebook"?"Coursebook":"Workbook"} · Lesson {active.lesson}</p><h2>{active.label}</h2><StudyScopeNotice tags={tagsForLesson(active.lesson)} subject="This selected recording"/>{outsideResults&&<p>This recording is outside the current results. <button type="button" className="study-secondary" onClick={()=>navigate(query,kind)}>Return to matching recordings</button></p>}<OriginalTrack key={active.id} track={active} rate={speed.speed}/><Link href={bookContextHref(active.pageId,{track:active.id})}>Open this exercise in the book →</Link></article>:<p>No recordings match. Change the study selection or search.</p>}
-   <aside className="recording-browser" aria-label="Choose a recording"><h2>Recordings</h2><div>{tracks.slice(0,limit).map(track=><button type="button" key={track.id} aria-pressed={active?.id===track.id} onClick={()=>navigate(query,kind,track.id)}><small>{track.kind==="coursebook"?"Coursebook":"Workbook"} · Lesson {track.lesson}</small><strong>{track.label}</strong><span>{track.transcript?"Transcript available":"Original recording"}</span></button>)}</div>{limit<tracks.length&&<button type="button" className="study-secondary" onClick={()=>setLimit(limit+12)}>Show 12 more recordings</button>}</aside>
-  </div>
- </div>;
+ return <LDiv className="study-workspace listening-workspace">
+  <LHeader className="study-page-header"><LDiv><LP className="study-eyebrow">Listening hub</LP><LH1>Listen. Read. Listen again.</LH1><LP>Choose one recording. Listen first, then explore its publisher transcript.</LP></LDiv></LHeader>
+  <LDiv className="sheet-controls"><LLabel>Find a recording<LInput value={query} onChange={event=>{setLimit(12);navigate(event.target.value,kind);}} placeholder="Exercise or transcript text…"/></LLabel><LLabel>Book<LSelect value={kind} onChange={event=>{setLimit(12);navigate(query,event.target.value);}}><LOption value="all">Both books</LOption><LOption value="coursebook">Coursebook</LOption><LOption value="workbook">Workbook</LOption></LSelect></LLabel><AudioSpeedControl control={speed}/></LDiv>
+  <LP role="status">{tracks.length} recordings in your selection.</LP>
+  <LDiv className="listening-focus-layout">
+   {active?<LArticle className="panel listening-focus" data-course-track={active.id}><LP className="study-eyebrow">{active.kind==="coursebook"?"Coursebook":"Workbook"} · Lesson {active.lesson}</LP><LH2>{active.label}</LH2><StudyScopeNotice tags={tagsForLesson(active.lesson)} subject="This selected recording"/>{outsideResults&&<LP>This recording is outside the current results. <LButton type="button" className="study-secondary" onClick={()=>navigate(query,kind)}>Return to matching recordings</LButton></LP>}<OriginalTrack key={active.id} track={active} rate={speed.speed}/><Link href={bookContextHref(active.pageId,{track:active.id})}>Open this exercise in the book →</Link></LArticle>:<LP>No recordings match. Change the study selection or search.</LP>}
+   <LAside className="recording-browser" aria-label="Choose a recording"><LH2>Recordings</LH2><LDiv>{tracks.slice(0,limit).map(track=><LButton type="button" key={track.id} aria-pressed={active?.id===track.id} onClick={()=>navigate(query,kind,track.id)}><LSmall>{track.kind==="coursebook"?"Coursebook":"Workbook"} · Lesson {track.lesson}</LSmall><LStrong>{track.label}</LStrong><LSpan>{track.transcript?"Transcript available":"Original recording"}</LSpan></LButton>)}</LDiv>{limit<tracks.length&&<LButton type="button" className="study-secondary" onClick={()=>setLimit(limit+12)}>Show 12 more recordings</LButton>}</LAside>
+  </LDiv>
+ </LDiv>;
 }

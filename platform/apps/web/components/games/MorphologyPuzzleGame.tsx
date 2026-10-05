@@ -1,4 +1,6 @@
 "use client";
+import { LDiv, LH2, LInput, LLabel, LP, LSection, LSpan } from "@/components/i18n/LocalizedElements";
+
 
 import { useMemo, useRef, useState } from "react";
 import { useFeedbackChannel } from "@/components/a11y/StatusMessage";
@@ -60,30 +62,30 @@ export function MorphologyPuzzleGame({
   }
 
   return (
-    <section
+    <LSection
       className="panel game-panel"
       aria-labelledby="morphology-puzzle-heading"
     >
-      <h2 id="morphology-puzzle-heading">Morphology puzzle</h2>
-      <p className="muted">{prompt.operationLabel}</p>
-      <div
+      <LH2 id="morphology-puzzle-heading">Morphology puzzle</LH2>
+      <LP className="muted">{prompt.operationLabel}</LP>
+      <LDiv
         className="person-form-infographic"
         role="img"
         aria-label={`Shared stem ${prompt.sharedStem} plus feminine suffix -${prompt.feminineSuffix}`}
       >
-        <span className="morph-token morph-token--stem" lang="de">
+        <LSpan className="morph-token morph-token--stem" lang="de">
           {prompt.sharedStem}
-        </span>
-        <span className="morph-token morph-token--op" aria-hidden="true">
+        </LSpan>
+        <LSpan className="morph-token morph-token--op" aria-hidden="true">
           +
-        </span>
-        <span className="morph-token morph-token--suffix" lang="de">
+        </LSpan>
+        <LSpan className="morph-token morph-token--suffix" lang="de">
           -{prompt.feminineSuffix}
-        </span>
-      </div>
-      <label className="hub-field" htmlFor="morphology-puzzle-input">
-        <span className="hub-field__label">Resulting lemma</span>
-        <input
+        </LSpan>
+      </LDiv>
+      <LLabel className="hub-field" htmlFor="morphology-puzzle-input">
+        <LSpan className="hub-field__label">Resulting lemma</LSpan>
+        <LInput
           id="morphology-puzzle-input"
           className="hub-input"
           type="text"
@@ -100,7 +102,7 @@ export function MorphologyPuzzleGame({
           }}
           aria-label="Type the feminine form"
         />
-      </label>
+      </LLabel>
       <GameActionBar
         onSubmit={submit}
         onRetry={retry}
@@ -114,6 +116,6 @@ export function MorphologyPuzzleGame({
         revealDisabled={revealed}
       />
       <GameFeedback kind={feedbackKind} message={message} seq={seq} />
-    </section>
+    </LSection>
   );
 }

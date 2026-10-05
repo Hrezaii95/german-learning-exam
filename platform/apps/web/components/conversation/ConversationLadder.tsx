@@ -1,4 +1,6 @@
 "use client";
+import { LButton, LDiv, LH1, LHeader, LLi, LNav, LOl, LP, LSpan, LStrong } from "@/components/i18n/LocalizedElements";
+
 
 import { useMemo, useState } from "react";
 import {
@@ -70,29 +72,29 @@ export function ConversationLadder({
   }
 
   return (
-    <div className="stack conversation-ladder" data-conversation="true">
-      <header className="page-header">
-        <p className="dense">Conversation</p>
-        <h1>Five-level ladder</h1>
-        <p className="lede">
+    <LDiv className="stack conversation-ladder" data-conversation="true">
+      <LHeader className="page-header">
+        <LP className="dense">Conversation</LP>
+        <LH1>Five-level ladder</LH1>
+        <LP className="lede">
           Practise the informal question and answer step by step. Your progress
           stays on this device.
-        </p>
-      </header>
+        </LP>
+      </LHeader>
 
-      <nav aria-label="Conversation levels" className="conversation-progress">
-        <p className="dense" aria-live="polite">
-          Current level: <strong>{current.label}</strong> ({current.progressLabel}
+      <LNav aria-label="Conversation levels" className="conversation-progress">
+        <LP className="dense" aria-live="polite">
+          Current level: <LStrong>{current.label}</LStrong> ({current.progressLabel}
           )
-        </p>
-        <ol className="conversation-progress__list">
+        </LP>
+        <LOl className="conversation-progress__list">
           {catalog.map((level) => {
             const accessible = canAccessConversationLevel(progress, level.id);
             const completed = isLevelCompleted(progress, level.id);
             const currentLevel = progress.currentLevelId === level.id;
             return (
-              <li key={level.id}>
-                <button
+              <LLi key={level.id}>
+                <LButton
                   type="button"
                   className="conversation-progress__btn"
                   data-level-id={level.id}
@@ -107,18 +109,18 @@ export function ConversationLadder({
                     )
                   }
                 >
-                  <span>
+                  <LSpan>
                     {level.index + 1}. {level.shortLabel}
-                  </span>
-                  <span className="meta-chip">
+                  </LSpan>
+                  <LSpan className="meta-chip">
                     {completed ? "Done" : currentLevel ? "Current" : accessible ? "Open" : "Locked"}
-                  </span>
-                </button>
-              </li>
+                  </LSpan>
+                </LButton>
+              </LLi>
             );
           })}
-        </ol>
-      </nav>
+        </LOl>
+      </LNav>
 
       {progress.currentLevelId === "model" ? (
         <ModelLevel
@@ -156,14 +158,14 @@ export function ConversationLadder({
         />
       ) : null}
 
-      <p className="dense" data-session-events={String(events.length)}>
+      <LP className="dense" data-session-events={String(events.length)}>
         In-session events: {events.length}
-      </p>
+      </LP>
       <StatusMessage announcement={saveMessage} className="detail-feedback" />
       {/* Keep exact ordered IDs discoverable for tests */}
-      <span hidden data-level-order={CONVERSATION_LEVEL_IDS.join(",")}>
+      <LSpan hidden data-level-order={CONVERSATION_LEVEL_IDS.join(",")}>
         {CONVERSATION_LEVEL_IDS.join(",")}
-      </span>
-    </div>
+      </LSpan>
+    </LDiv>
   );
 }

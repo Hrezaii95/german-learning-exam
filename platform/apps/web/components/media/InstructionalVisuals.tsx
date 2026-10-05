@@ -1,3 +1,5 @@
+
+import { LArticle, LDiv, LH2, LH3, LHeader, LI, LLi, LOl, LP, LSection, LSmall, LSpan, LStrong } from "@/components/i18n/LocalizedElements";
 import type {
   LearnerGrammarDetail,
   LearnerQaDetail,
@@ -22,9 +24,9 @@ type VisualTone =
 
 function German({ children }: { children: string }) {
   return (
-    <span className="german" lang="de">
+    <LSpan className="german" lang="de">
       {children}
-    </span>
+    </LSpan>
   );
 }
 
@@ -43,18 +45,18 @@ function VisualFrame({
 }) {
   const headingId = `instructional-${kind}-heading`;
   return (
-    <section
+    <LSection
       className="instructional-visual"
       data-instructional-visual={kind}
       aria-labelledby={headingId}
     >
-      <header className="instructional-visual__header">
-        <p className="dense">{eyebrow}</p>
-        <h2 id={headingId}>{title}</h2>
-        <p className="muted">{summary}</p>
-      </header>
-      <div className="instructional-visual__body">{children}</div>
-    </section>
+      <LHeader className="instructional-visual__header">
+        <LP className="dense">{eyebrow}</LP>
+        <LH2 id={headingId}>{title}</LH2>
+        <LP className="muted">{summary}</LP>
+      </LHeader>
+      <LDiv className="instructional-visual__body">{children}</LDiv>
+    </LSection>
   );
 }
 
@@ -68,9 +70,9 @@ function Cue({
   label?: string;
 }) {
   return (
-    <span className="visual-cue" data-tone={tone} aria-label={label}>
+    <LSpan className="visual-cue" data-tone={tone} aria-label={label}>
       {children}
-    </span>
+    </LSpan>
   );
 }
 
@@ -102,15 +104,15 @@ export function LessonJourneyVisual({ lesson }: { lesson: LearnerLesson }) {
       summary="Move left to right. Each stop prepares language that returns in later practice and the checkpoint."
       kind={`lesson-${lesson.routeSegment}-journey`}
     >
-      <ol className="visual-journey" aria-label={`${lessonLabel(lesson.routeSegment)} learning sequence`}>
+      <LOl className="visual-journey" aria-label={`${lessonLabel(lesson.routeSegment)} learning sequence`}>
         {journey.map((step, index) => (
-          <li key={step.de} className="visual-journey__step">
-            <span className="visual-journey__index" aria-hidden="true">{index + 1}</span>
+          <LLi key={step.de} className="visual-journey__step">
+            <LSpan className="visual-journey__index" aria-hidden="true">{index + 1}</LSpan>
             <Cue tone={step.tone}><German>{step.de}</German></Cue>
-            <span>{step.en}</span>
-          </li>
+            <LSpan>{step.en}</LSpan>
+          </LLi>
         ))}
-      </ol>
+      </LOl>
     </VisualFrame>
   );
 }
@@ -129,21 +131,21 @@ function GreetingTimelineVisual() {
       summary="Hallo is flexible. The four phrases below carry a time cue; Gute Nacht functions as a farewell in this lesson."
       kind="greetings-dayparts"
     >
-      <ol className="daypart-track">
+      <LOl className="daypart-track">
         {greetings.map((item, index) => (
-          <li key={item.de} data-sky={item.sky}>
-            <span className="daypart-track__sky" aria-hidden="true"><i /></span>
-            <strong><German>{item.de}</German></strong>
-            <span>{item.en}</span>
-            {index < greetings.length - 1 ? <span className="daypart-track__connector" aria-hidden="true">→</span> : null}
-          </li>
+          <LLi key={item.de} data-sky={item.sky}>
+            <LSpan className="daypart-track__sky" aria-hidden="true"><LI /></LSpan>
+            <LStrong><German>{item.de}</German></LStrong>
+            <LSpan>{item.en}</LSpan>
+            {index < greetings.length - 1 ? <LSpan className="daypart-track__connector" aria-hidden="true">→</LSpan> : null}
+          </LLi>
         ))}
-      </ol>
-      <div role="group" className="visual-legend" aria-label="Flexible greeting and farewell cues">
+      </LOl>
+      <LDiv role="group" className="visual-legend" aria-label="Flexible greeting and farewell cues">
         <Cue tone="question"><German>Hallo</German> · flexible greeting</Cue>
         <Cue tone="answer"><German>Tschüs</German> · casual farewell</Cue>
         <Cue tone="neutral"><German>Auf Wiedersehen</German> · formal farewell</Cue>
-      </div>
+      </LDiv>
     </VisualFrame>
   );
 }
@@ -156,18 +158,18 @@ function NumberRangeVisual() {
       summary="This activity covers 0–100. This map shows the numeric territory one band at a time."
       kind="numbers-0-100"
     >
-      <div className="number-map" aria-label="Number range zero through one hundred">
-        <div className="number-map__digits" aria-label="Single digits">
+      <LDiv className="number-map" aria-label="Number range zero through one hundred">
+        <LDiv className="number-map__digits" aria-label="Single digits">
           {Array.from({ length: 10 }, (_, number) => <Cue key={number} tone="regular">{number}</Cue>)}
-        </div>
-        <div className="number-map__bands">
-          <div><strong>10–19</strong><span>teen range</span></div>
-          <div><strong>20 · 30 · 40 · 50</strong><span>decade anchors</span></div>
-          <div><strong>60 · 70 · 80 · 90</strong><span>decade anchors</span></div>
-          <div className="number-map__hundred"><strong>100</strong><span>range endpoint</span></div>
-        </div>
-      </div>
-      <p className="visual-note">Listen for one number at a time, then type only what the recording supports.</p>
+        </LDiv>
+        <LDiv className="number-map__bands">
+          <LDiv><LStrong>10–19</LStrong><LSpan>teen range</LSpan></LDiv>
+          <LDiv><LStrong>20 · 30 · 40 · 50</LStrong><LSpan>decade anchors</LSpan></LDiv>
+          <LDiv><LStrong>60 · 70 · 80 · 90</LStrong><LSpan>decade anchors</LSpan></LDiv>
+          <LDiv className="number-map__hundred"><LStrong>100</LStrong><LSpan>range endpoint</LSpan></LDiv>
+        </LDiv>
+      </LDiv>
+      <LP className="visual-note">Listen for one number at a time, then type only what the recording supports.</LP>
     </VisualFrame>
   );
 }
@@ -181,17 +183,17 @@ function ProfessionPairsVisual({ limit = 6 }: { limit?: number }) {
       summary="Blue square marks masculine der; pink circle marks feminine die. Amber marks the visible change between the two forms."
       kind="profession-pairs"
     >
-      <div className="profession-pair-grid">
+      <LDiv className="profession-pair-grid">
         {pairs.map((pair) => (
-          <article className="profession-pair" key={pair.id}>
-            <div data-gender="masculine"><GenderBadge gender="masculine" /><strong><German>{pair.masculine}</German></strong></div>
-            <span className="profession-pair__arrow" aria-hidden="true">→</span>
-            <div data-gender="feminine"><GenderBadge gender="feminine" /><strong><German>{pair.feminine}</German></strong></div>
+          <LArticle className="profession-pair" key={pair.id}>
+            <LDiv data-gender="masculine"><GenderBadge gender="masculine" /><LStrong><German>{pair.masculine}</German></LStrong></LDiv>
+            <LSpan className="profession-pair__arrow" aria-hidden="true">→</LSpan>
+            <LDiv data-gender="feminine"><GenderBadge gender="feminine" /><LStrong><German>{pair.feminine}</German></LStrong></LDiv>
             <Cue tone={pair.id === "profession:arzt" ? "irregular" : "special"}><German>{pair.operation}</German></Cue>
-          </article>
+          </LArticle>
         ))}
-      </div>
-      <p className="visual-note">Plural forms are deliberately absent here — these lessons focus on the singular pair.</p>
+      </LDiv>
+      <LP className="visual-note">Plural forms are deliberately absent here — these lessons focus on the singular pair.</LP>
     </VisualFrame>
   );
 }
@@ -205,24 +207,24 @@ function CoreVerbVisual() {
       summary="Teal keeps the stem visible, amber calls out a spelling-sensitive ending, and magenta marks a whole irregular form."
       kind="core-verb-patterns"
     >
-      <div className="verb-visual-grid">
+      <LDiv className="verb-visual-grid">
         {verbs.map((verb) => (
-          <article key={verb.id} data-pattern={verb.pattern}>
-            <h3><German>{verb.infinitive}</German></h3>
-            <p>{verb.meaningEn}</p>
-            <div className="verb-visual-grid__forms">
+          <LArticle key={verb.id} data-pattern={verb.pattern}>
+            <LH3><German>{verb.infinitive}</German></LH3>
+            <LP>{verb.meaningEn}</LP>
+            <LDiv className="verb-visual-grid__forms">
               {verb.forms.map((form) => (
-                <span key={form.person}>
-                  <small><German>{form.person}</German></small>
+                <LSpan key={form.person}>
+                  <LSmall><German>{form.person}</German></LSmall>
                   <Cue tone={verb.pattern === "irregular" ? "irregular" : verb.id === "verb:heissen" && form.form === "heißt" ? "special" : "regular"}>
                     <German>{form.form}</German>
                   </Cue>
-                </span>
+                </LSpan>
               ))}
-            </div>
-          </article>
+            </LDiv>
+          </LArticle>
         ))}
-      </div>
+      </LDiv>
       <RuleLegend />
     </VisualFrame>
   );
@@ -236,11 +238,11 @@ function ProfessionExpressionVisual() {
       summary="Each lane below is a complete model sentence. Keep the connector with the expression that follows it."
       kind="profession-expressions"
     >
-      <div className="expression-lanes">
-        <div><Cue tone="irregular"><German>sein</German></Cue><span aria-hidden="true">→</span><German>Ich bin Architekt.</German><small>profession identity</small></div>
-        <div><Cue tone="regular"><German>arbeiten als</German></Cue><span aria-hidden="true">→</span><German>Ich arbeite als Architekt.</German><small>work as a profession</small></div>
-        <div><Cue tone="special"><German>arbeiten bei</German></Cue><span aria-hidden="true">→</span><German>Ich arbeite bei einer Firma.</German><small>workplace pattern</small></div>
-      </div>
+      <LDiv className="expression-lanes">
+        <LDiv><Cue tone="irregular"><German>sein</German></Cue><LSpan aria-hidden="true">→</LSpan><German>Ich bin Architekt.</German><LSmall>profession identity</LSmall></LDiv>
+        <LDiv><Cue tone="regular"><German>arbeiten als</German></Cue><LSpan aria-hidden="true">→</LSpan><German>Ich arbeite als Architekt.</German><LSmall>work as a profession</LSmall></LDiv>
+        <LDiv><Cue tone="special"><German>arbeiten bei</German></Cue><LSpan aria-hidden="true">→</LSpan><German>Ich arbeite bei einer Firma.</German><LSmall>workplace pattern</LSmall></LDiv>
+      </LDiv>
     </VisualFrame>
   );
 }
@@ -255,14 +257,14 @@ function ActivityDialogueVisual({ profession = false }: { profession?: boolean }
       summary="Follow the direction once as the listener, then switch roles and travel back through the same pattern."
       kind={profession ? "profession-dialogue" : "introduction-dialogue"}
     >
-      <div className="dialogue-flow" data-register="informal">
-        <div className="dialogue-flow__speaker" aria-hidden="true">A</div>
-        <div className="dialogue-flow__bubble" data-role="question"><span>question</span><German>{question}</German></div>
-        <span className="dialogue-flow__arrow" aria-hidden="true">→</span>
-        <div className="dialogue-flow__bubble" data-role="answer"><span>answer</span><German>{answer}</German></div>
-        <div className="dialogue-flow__speaker" aria-hidden="true">B</div>
-      </div>
-      <div className="visual-legend"><Cue tone="question">Question</Cue><Cue tone="answer">Answer</Cue><Cue tone="neutral">informal · du</Cue></div>
+      <LDiv className="dialogue-flow" data-register="informal">
+        <LDiv className="dialogue-flow__speaker" aria-hidden="true">A</LDiv>
+        <LDiv className="dialogue-flow__bubble" data-role="question"><LSpan>question</LSpan><German>{question}</German></LDiv>
+        <LSpan className="dialogue-flow__arrow" aria-hidden="true">→</LSpan>
+        <LDiv className="dialogue-flow__bubble" data-role="answer"><LSpan>answer</LSpan><German>{answer}</German></LDiv>
+        <LDiv className="dialogue-flow__speaker" aria-hidden="true">B</LDiv>
+      </LDiv>
+      <LDiv className="visual-legend"><Cue tone="question">Question</Cue><Cue tone="answer">Answer</Cue><Cue tone="neutral">informal · du</Cue></LDiv>
     </VisualFrame>
   );
 }
@@ -295,26 +297,26 @@ export function ActivityConceptVisual({ activityId }: { activityId: string }) {
 function PluralLane({ detail }: { detail: LearnerVocabularyDetail }) {
   if (detail.plurals.length === 0) {
     return (
-      <div className="noun-system__plural" data-status="not-published">
-        <Cue tone="plural"><span aria-hidden="true">◫</span> die · plural</Cue>
-        <strong>No plural</strong>
-        <span>{detail.pluralGapMessage ?? "Plural does not apply to this item."}</span>
-      </div>
+      <LDiv className="noun-system__plural" data-status="not-published">
+        <Cue tone="plural"><LSpan aria-hidden="true">◫</LSpan> die · plural</Cue>
+        <LStrong>No plural</LStrong>
+        <LSpan>{detail.pluralGapMessage ?? "Plural does not apply to this item."}</LSpan>
+      </LDiv>
     );
   }
   return (
-    <div className="noun-system__plural" data-status="published">
-      <Cue tone="plural"><span aria-hidden="true">◫</span> die · plural</Cue>
-      <div className="noun-system__forms">
+    <LDiv className="noun-system__plural" data-status="published">
+      <Cue tone="plural"><LSpan aria-hidden="true">◫</LSpan> die · plural</Cue>
+      <LDiv className="noun-system__forms">
         {detail.plurals.map((plural) => {
           const visibleChange = plural.startsWith(detail.lemma)
             ? `+${plural.slice(detail.lemma.length)}`
             : "whole stored form";
-          return <strong key={plural}><German>{`die ${plural}`}</German><small>{visibleChange}</small></strong>;
+          return <LStrong key={plural}><German>{`die ${plural}`}</German><LSmall>{visibleChange}</LSmall></LStrong>;
         })}
-      </div>
-      <span>Exact stored plural {detail.plurals.length === 1 ? "form" : "forms"}</span>
-    </div>
+      </LDiv>
+      <LSpan>Exact stored plural {detail.plurals.length === 1 ? "form" : "forms"}</LSpan>
+    </LDiv>
   );
 }
 
@@ -327,23 +329,23 @@ export function NounSystemVisual({ detail }: { detail: LearnerVocabularyDetail }
       summary="Article, shape, colour, and label repeat the same cue. The purple plural lane appears only when an exact stored form exists."
       kind={`noun-${detail.id.replace(":", "-")}`}
     >
-      <div className="noun-system">
-        <div className="noun-system__singular" data-gender={detail.gender}>
+      <LDiv className="noun-system">
+        <LDiv className="noun-system__singular" data-gender={detail.gender}>
           <GenderBadge gender={detail.gender} />
-          <strong><German>{detail.displayText}</German></strong>
-          <span>singular</span>
-        </div>
-        <span className="noun-system__arrow" aria-hidden="true">→</span>
+          <LStrong><German>{detail.displayText}</German></LStrong>
+          <LSpan>singular</LSpan>
+        </LDiv>
+        <LSpan className="noun-system__arrow" aria-hidden="true">→</LSpan>
         <PluralLane detail={detail} />
-      </div>
+      </LDiv>
       {detail.personForm ? (
-        <div className="noun-system__person-pair" aria-label={`Related person form ${detail.personForm.relatedDisplayText}`}>
-          <div><GenderBadge gender={detail.gender} /><German>{detail.displayText}</German></div>
-          <span aria-hidden="true">+</span>
+        <LDiv className="noun-system__person-pair" aria-label={`Related person form ${detail.personForm.relatedDisplayText}`}>
+          <LDiv><GenderBadge gender={detail.gender} /><German>{detail.displayText}</German></LDiv>
+          <LSpan aria-hidden="true">+</LSpan>
           <Cue tone={detail.personForm.sharedStem === detail.lemma ? "special" : "irregular"}><German>{detail.personForm.operationLabel}</German></Cue>
-          <span aria-hidden="true">→</span>
-          <div><GenderBadge gender={detail.personForm.relatedGender} /><German>{detail.personForm.relatedDisplayText}</German></div>
-        </div>
+          <LSpan aria-hidden="true">→</LSpan>
+          <LDiv><GenderBadge gender={detail.personForm.relatedGender} /><German>{detail.personForm.relatedDisplayText}</German></LDiv>
+        </LDiv>
       ) : null}
     </VisualFrame>
   );
@@ -351,11 +353,11 @@ export function NounSystemVisual({ detail }: { detail: LearnerVocabularyDetail }
 
 function RuleLegend() {
   return (
-    <div role="group" className="visual-legend" aria-label="Verb pattern colour key">
+    <LDiv role="group" className="visual-legend" aria-label="Verb pattern colour key">
       <Cue tone="regular">REG · regular stem / ending</Cue>
       <Cue tone="special">SPELL · spelling-sensitive form</Cue>
       <Cue tone="irregular">IRR · learn the whole form</Cue>
-    </div>
+    </LDiv>
   );
 }
 
@@ -376,26 +378,26 @@ export function VerbPatternVisual({ detail }: { detail: LearnerVerbDetail }) {
       summary={irregular ? "Magenta means no pretend stem rule: recall each form as a whole." : spellingSensitive ? "Amber highlights heißt, where the taught spelling does not show an extra s before t." : "Teal separates the stable stem from each exact ending."}
       kind={`verb-${detail.id.replace(":", "-")}`}
     >
-      <div className="verb-build-map">
+      <LDiv className="verb-build-map">
         {detail.present.map((row) => {
           const split = splitVerbForm(detail, row.form);
           const special = spellingSensitive && row.form === "heißt";
           return (
-            <div key={row.person} className="verb-build-map__row">
+            <LDiv key={row.person} className="verb-build-map__row">
               <Cue><German>{row.personLabel}</German></Cue>
-              <span aria-hidden="true">→</span>
+              <LSpan aria-hidden="true">→</LSpan>
               {irregular ? (
                 <Cue tone="irregular"><German>{row.form}</German></Cue>
               ) : (
-                <span role="group" className="verb-build-map__word" aria-label={`${row.form}: stem ${split.stem}${split.ending ? `, ending ${split.ending}` : ""}`}>
+                <LSpan role="group" className="verb-build-map__word" aria-label={`${row.form}: stem ${split.stem}${split.ending ? `, ending ${split.ending}` : ""}`}>
                   <Cue tone="regular"><German>{split.stem}</German></Cue>
                   {split.ending ? <Cue tone={special ? "special" : "regular"}><German>{split.ending}</German></Cue> : null}
-                </span>
+                </LSpan>
               )}
-            </div>
+            </LDiv>
           );
         })}
-      </div>
+      </LDiv>
       <RuleLegend />
     </VisualFrame>
   );
@@ -411,24 +413,24 @@ export function QuestionAnswerFlowVisual({ detail }: { detail: LearnerQaDetail }
       summary="The question travels to the listener; an answer pattern returns. Switch roles after one complete exchange."
       kind={`qa-${detail.id.replace(":", "-")}`}
     >
-      <div role="group" className="question-build" aria-label={`Question structure for ${detail.question.realization}`}>
+      <LDiv role="group" className="question-build" aria-label={`Question structure for ${detail.question.realization}`}>
         {questionTokens.map((token, index) => (
-          <span key={`${token}-${index}`}>
-            <small>{index === 0 ? "question opening" : finiteVerbForms.has(token.replace(/[?.,!]$/u, "")) ? "finite verb" : "question element"}</small>
+          <LSpan key={`${token}-${index}`}>
+            <LSmall>{index === 0 ? "question opening" : finiteVerbForms.has(token.replace(/[?.,!]$/u, "")) ? "finite verb" : "question element"}</LSmall>
             <Cue tone={finiteVerbForms.has(token.replace(/[?.,!]$/u, "")) ? "special" : "question"}><German>{token}</German></Cue>
-          </span>
+          </LSpan>
         ))}
-      </div>
-      <div className="dialogue-flow" data-register={detail.register}>
-        <div className="dialogue-flow__speaker" aria-hidden="true">A</div>
-        <div className="dialogue-flow__bubble" data-role="question"><span>ask</span><German>{detail.question.realization}</German></div>
-        <span className="dialogue-flow__arrow" aria-hidden="true">→</span>
-        <div role="group" className="dialogue-flow__answers" aria-label="Answer patterns">
-          {detail.answers.map((answer) => <div key={answer.id} className="dialogue-flow__bubble" data-role="answer"><span>answer</span><German>{answer.realization}</German></div>)}
-        </div>
-        <div className="dialogue-flow__speaker" aria-hidden="true">B</div>
-      </div>
-      <div className="visual-legend"><Cue tone="question">Question</Cue><Cue tone="answer">Answer</Cue><Cue tone="neutral">{detail.register} register</Cue></div>
+      </LDiv>
+      <LDiv className="dialogue-flow" data-register={detail.register}>
+        <LDiv className="dialogue-flow__speaker" aria-hidden="true">A</LDiv>
+        <LDiv className="dialogue-flow__bubble" data-role="question"><LSpan>ask</LSpan><German>{detail.question.realization}</German></LDiv>
+        <LSpan className="dialogue-flow__arrow" aria-hidden="true">→</LSpan>
+        <LDiv role="group" className="dialogue-flow__answers" aria-label="Answer patterns">
+          {detail.answers.map((answer) => <LDiv key={answer.id} className="dialogue-flow__bubble" data-role="answer"><LSpan>answer</LSpan><German>{answer.realization}</German></LDiv>)}
+        </LDiv>
+        <LDiv className="dialogue-flow__speaker" aria-hidden="true">B</LDiv>
+      </LDiv>
+      <LDiv className="visual-legend"><Cue tone="question">Question</Cue><Cue tone="answer">Answer</Cue><Cue tone="neutral">{detail.register} register</Cue></LDiv>
     </VisualFrame>
   );
 }
@@ -449,16 +451,16 @@ export function GrammarConceptVisual({ detail }: { detail: LearnerGrammarDetail 
       summary={detail.notice}
       kind={`grammar-${detail.id.replace(":", "-")}`}
     >
-      <ol className="grammar-visual-flow">
+      <LOl className="grammar-visual-flow">
         {detail.ruleSteps.map((step, index) => (
-          <li key={step.id}>
-            <span className="grammar-visual-flow__index" aria-hidden="true">{index + 1}</span>
-            <p>{step.notice}</p>
-            {step.model ? <div className="grammar-visual-flow__models">{step.model.split(" · ").map((model) => <Cue key={model} tone={modelTone(detail.id)}><German>{model}</German></Cue>)}</div> : null}
-          </li>
+          <LLi key={step.id}>
+            <LSpan className="grammar-visual-flow__index" aria-hidden="true">{index + 1}</LSpan>
+            <LP>{step.notice}</LP>
+            {step.model ? <LDiv className="grammar-visual-flow__models">{step.model.split(" · ").map((model) => <Cue key={model} tone={modelTone(detail.id)}><German>{model}</German></Cue>)}</LDiv> : null}
+          </LLi>
         ))}
-      </ol>
-      {models.length > 0 ? <p className="visual-note">All examples shown here are the exact model sentences for this grammar topic.</p> : null}
+      </LOl>
+      {models.length > 0 ? <LP className="visual-note">All examples shown here are the exact model sentences for this grammar topic.</LP> : null}
       {detail.id === "gram:present-conjugation-l1" || detail.id === "gram:full-present-person-forms-l2" ? <RuleLegend /> : null}
     </VisualFrame>
   );

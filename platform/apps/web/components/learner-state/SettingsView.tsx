@@ -1,4 +1,6 @@
 "use client";
+import { LButton, LDiv, LH1, LH2, LHeader, LInput, LLabel, LOption, LP, LSection, LSelect } from "@/components/i18n/LocalizedElements";
+
 
 import { useEffect, useState } from "react";
 import {
@@ -22,22 +24,22 @@ export function SettingsView() {
     setSpeed(state.settings.preferredAudioSpeed);
   }, [state?.settings.preferredAudioSpeed, state?.settings.timezone]);
 
-  if (snapshot.status === "loading") return <p role="status">Loading local settings…</p>;
-  if (!state || !controller) return <p className="placeholder-banner" role="alert">{snapshot.statusMessage}</p>;
+  if (snapshot.status === "loading") return <LP role="status">Loading local settings…</LP>;
+  if (!state || !controller) return <LP className="placeholder-banner" role="alert">{snapshot.statusMessage}</LP>;
 
   return (
-    <div className="stack">
-      <header className="page-header"><p className="dense">Local-first</p><h1>Settings &amp; data</h1><p className="lede">Your learning data stays in this browser unless you export it.</p></header>
-      <section className="panel" aria-labelledby="preferences-heading">
-        <h2 id="preferences-heading">Preferences</h2>
-        <div className="hub-filter-grid">
-          <label className="hub-field">IANA timezone<input className="hub-input" value={timezone} onChange={(e) => setTimezone(e.target.value)} /></label>
-          <label className="hub-field">Audio speed<select className="hub-input" value={speed} onChange={(e) => setSpeed(Number(e.target.value))}>{audioSpeedOptions(speed).map(value => <option key={value} value={value}>{value}×</option>)}</select></label>
-        </div>
-        <button className="btn btn-primary" type="button" onClick={() => void controller.updateSettings({ timezone, preferredAudioSpeed: speed }).then(() => setMessage("Settings saved."), () => setMessage("Settings were rejected; check the timezone."))}>Save preferences</button>
-      </section>
+    <LDiv className="stack">
+      <LHeader className="page-header"><LP className="dense">Local-first</LP><LH1>Settings &amp; data</LH1><LP className="lede">Your learning data stays in this browser unless you export it.</LP></LHeader>
+      <LSection className="panel" aria-labelledby="preferences-heading">
+        <LH2 id="preferences-heading">Preferences</LH2>
+        <LDiv className="hub-filter-grid">
+          <LLabel className="hub-field">IANA timezone<LInput className="hub-input" value={timezone} onChange={(e) => setTimezone(e.target.value)} /></LLabel>
+          <LLabel className="hub-field">Audio speed<LSelect className="hub-input" value={speed} onChange={(e) => setSpeed(Number(e.target.value))}>{audioSpeedOptions(speed).map(value => <LOption key={value} value={value}>{value}×</LOption>)}</LSelect></LLabel>
+        </LDiv>
+        <LButton className="btn btn-primary" type="button" onClick={() => void controller.updateSettings({ timezone, preferredAudioSpeed: speed }).then(() => setMessage("Settings saved."), () => setMessage("Settings were rejected; check the timezone."))}>Save preferences</LButton>
+      </LSection>
       <BackupPanel/>
       <StatusMessage announcement={message} className="detail-feedback" />
-    </div>
+    </LDiv>
   );
 }

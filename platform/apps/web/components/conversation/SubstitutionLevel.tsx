@@ -1,4 +1,6 @@
 "use client";
+import { LButton, LDiv, LFieldset, LH2, LLegend, LP, LSection, LSpan } from "@/components/i18n/LocalizedElements";
+
 
 import { useMemo, useRef, useState } from "react";
 import { useFeedbackChannel } from "@/components/a11y/StatusMessage";
@@ -66,22 +68,22 @@ export function SubstitutionLevel({
   }
 
   return (
-    <section
+    <LSection
       className="panel conversation-panel"
       aria-labelledby="conversation-substitution-heading"
       data-level="substitution"
     >
-      <h2 id="conversation-substitution-heading">Substitution</h2>
-      <p className="muted">
+      <LH2 id="conversation-substitution-heading">Substitution</LH2>
+      <LP className="muted">
         Choose fragments to rebuild one exact answer.
-      </p>
-      <div className="game-tokens" aria-label="Selected fragments">
-        <div className="game-tokens__row" data-role="built">
+      </LP>
+      <LDiv className="game-tokens" aria-label="Selected fragments">
+        <LDiv className="game-tokens__row" data-role="built">
           {built.length === 0 ? (
-            <span className="dense">No fragments selected yet.</span>
+            <LSpan className="dense">No fragments selected yet.</LSpan>
           ) : (
             built.map((token, index) => (
-              <button
+              <LButton
                 key={`${token}-${index}`}
                 type="button"
                 className="game-token"
@@ -90,31 +92,31 @@ export function SubstitutionLevel({
                 }
                 aria-label={`Remove ${token}`}
               >
-                <span className="german" lang="de">
+                <LSpan className="german" lang="de">
                   {token}
-                </span>
-              </button>
+                </LSpan>
+              </LButton>
             ))
           )}
-        </div>
-      </div>
-      <fieldset className="game-tokens">
-        <legend className="hub-field__label">Fragments</legend>
-        <div className="game-tokens__row" data-role="pool">
+        </LDiv>
+      </LDiv>
+      <LFieldset className="game-tokens">
+        <LLegend className="hub-field__label">Fragments</LLegend>
+        <LDiv className="game-tokens__row" data-role="pool">
           {fragments.map((token) => (
-            <button
+            <LButton
               key={token}
               type="button"
               className="game-token"
               onClick={() => setBuilt((prev) => [...prev, token])}
             >
-              <span className="german" lang="de">
+              <LSpan className="german" lang="de">
                 {token}
-              </span>
-            </button>
+              </LSpan>
+            </LButton>
           ))}
-        </div>
-      </fieldset>
+        </LDiv>
+      </LFieldset>
       <ConversationActionBar
         onSubmit={submit}
         onRetry={retry}
@@ -129,16 +131,16 @@ export function SubstitutionLevel({
         revealDisabled={revealed}
       />
       {feedbackKind === "correct" || feedbackKind === "partial" ? (
-        <button
+        <LButton
           type="button"
           className="btn btn-primary"
           onClick={continueAfterSuccess}
           data-continue-level="true"
         >
           Continue
-        </button>
+        </LButton>
       ) : null}
       <ConversationFeedback kind={feedbackKind} message={message} seq={seq} />
-    </section>
+    </LSection>
   );
 }

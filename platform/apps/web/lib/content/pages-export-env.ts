@@ -8,6 +8,7 @@ import { PAGES_BASE_PATH } from "./pages-base-path";
 /** Minimal env shape for Pages export validation (tests + process.env). */
 export type PagesExportEnvLike = {
   readonly GL_PAGES_EXPORT?: string | undefined;
+  readonly GL_CLOUDFLARE_EXPORT?: string | undefined;
   readonly NEXT_PUBLIC_GL_PAGES_BASE_PATH?: string | undefined;
 };
 
@@ -23,6 +24,8 @@ export function assertPagesExportEnv(
 
   const raw = env.NEXT_PUBLIC_GL_PAGES_BASE_PATH;
   const base = typeof raw === "string" ? raw.trim() : "";
+
+  if (env.GL_CLOUDFLARE_EXPORT === "1" && raw === "") return;
 
   if (!base) {
     throw new Error(

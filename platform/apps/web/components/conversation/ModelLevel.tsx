@@ -1,4 +1,6 @@
 "use client";
+import { LDiv, LH2, LLi, LP, LSection, LUl } from "@/components/i18n/LocalizedElements";
+
 
 import { useRef } from "react";
 import { useFeedbackChannel } from "@/components/a11y/StatusMessage";
@@ -47,37 +49,37 @@ export function ModelLevel({
   }
 
   return (
-    <section
+    <LSection
       className="panel conversation-panel"
       aria-labelledby="conversation-model-heading"
       data-level="model"
     >
-      <h2 id="conversation-model-heading">Model</h2>
-      <p className="muted">
+      <LH2 id="conversation-model-heading">Model</LH2>
+      <LP className="muted">
         Study the model informal exchange before you practise it.
-      </p>
-      <div className="qa-bubble qa-bubble--question">
-        <p className="dense">Question</p>
-        <p className="german" lang="de">
+      </LP>
+      <LDiv className="qa-bubble qa-bubble--question">
+        <LP className="dense">Question</LP>
+        <LP className="german" lang="de">
           {CONVERSATION_QUESTION}
-        </p>
-      </div>
-      <ul className="qa-answer-list">
+        </LP>
+      </LDiv>
+      <LUl className="qa-answer-list">
         {CONVERSATION_ANSWER_REALIZATIONS.map((realization) => (
-          <li key={realization} className="qa-bubble qa-bubble--answer">
-            <p className="dense">Answer pattern</p>
-            <p className="german" lang="de">
+          <LLi key={realization} className="qa-bubble qa-bubble--answer">
+            <LP className="dense">Answer pattern</LP>
+            <LP className="german" lang="de">
               {realization}
-            </p>
-          </li>
+            </LP>
+          </LLi>
         ))}
-      </ul>
+      </LUl>
       <ConversationActionBar
         submitLabel="Mark studied / continue"
         onSubmit={markStudied}
         showReveal={false}
       />
       <ConversationFeedback kind={feedbackKind} message={message} seq={seq} />
-    </section>
+    </LSection>
   );
 }

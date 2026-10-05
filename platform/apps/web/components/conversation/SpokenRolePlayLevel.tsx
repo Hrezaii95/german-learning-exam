@@ -1,4 +1,6 @@
 "use client";
+import { LButton, LDiv, LFieldset, LH2, LLegend, LP, LSection } from "@/components/i18n/LocalizedElements";
+
 
 import { useRef, useState } from "react";
 import { useFeedbackChannel } from "@/components/a11y/StatusMessage";
@@ -68,29 +70,29 @@ export function SpokenRolePlayLevel({
   const recorderReady = controller != null;
 
   return (
-    <section
+    <LSection
       className="panel conversation-panel"
       aria-labelledby="conversation-spoken-heading"
       data-level="spoken-role-play"
       data-recorder-phase={recorderReady ? phase : "initializing"}
       data-recorder-ready={recorderReady ? "true" : "false"}
     >
-      <h2 id="conversation-spoken-heading">Spoken role-play</h2>
-      <p className="muted">
+      <LH2 id="conversation-spoken-heading">Spoken role-play</LH2>
+      <LP className="muted">
         Respond to the prompt. Recording is optional for earlier
         levels and stays local — never uploaded. Self-rating is reflection
         only, not pronunciation accuracy.
-      </p>
+      </LP>
 
-      <div className="qa-bubble qa-bubble--question">
-        <p className="dense">Prompt</p>
-        <p className="german" lang="de">
+      <LDiv className="qa-bubble qa-bubble--question">
+        <LP className="dense">Prompt</LP>
+        <LP className="german" lang="de">
           {CONVERSATION_QUESTION}
-        </p>
-      </div>
+        </LP>
+      </LDiv>
 
-      <div className="conversation-actions">
-        <button
+      <LDiv className="conversation-actions">
+        <LButton
           type="button"
           className="btn btn-secondary"
           onClick={() => setPromptReviewed(true)}
@@ -98,18 +100,18 @@ export function SpokenRolePlayLevel({
           data-prompt-reviewed={promptReviewed ? "true" : "false"}
         >
           {promptReviewed ? "Prompt reviewed" : "Review the prompt"}
-        </button>
-      </div>
+        </LButton>
+      </LDiv>
 
-      <fieldset className="conversation-recorder">
-        <legend className="hub-field__label">Local recorder</legend>
-        <div className="conversation-actions">
+      <LFieldset className="conversation-recorder">
+        <LLegend className="hub-field__label">Local recorder</LLegend>
+        <LDiv className="conversation-actions">
           {phase === "idle" ||
           phase === "denied" ||
           phase === "no-device" ||
           phase === "error" ||
           !recorderReady ? (
-            <button
+            <LButton
               type="button"
               className="btn btn-primary"
               onClick={() => void controller?.requestPermission()}
@@ -117,37 +119,37 @@ export function SpokenRolePlayLevel({
               data-mic-enable="true"
             >
               Enable microphone
-            </button>
+            </LButton>
           ) : null}
           {recorderReady && (phase === "ready" || phase === "finalized") ? (
-            <button
+            <LButton
               type="button"
               className="btn btn-primary"
               onClick={() => void controller?.startRecording()}
             >
               Start recording
-            </button>
+            </LButton>
           ) : null}
           {recorderReady && phase === "recording" ? (
-            <button
+            <LButton
               type="button"
               className="btn btn-primary"
               onClick={() => void controller?.stopRecording()}
             >
               Stop recording
-            </button>
+            </LButton>
           ) : null}
           {recorderReady && (phase === "finalized" || phase === "playback") ? (
-            <button
+            <LButton
               type="button"
               className="btn btn-secondary"
               onClick={() => void controller?.playRecording()}
               disabled={phase === "playback"}
             >
               Play recording
-            </button>
+            </LButton>
           ) : null}
-          <button
+          <LButton
             type="button"
             className="btn btn-secondary"
             disabled={!recorderReady}
@@ -161,34 +163,34 @@ export function SpokenRolePlayLevel({
             }}
           >
             Retry / discard
-          </button>
-        </div>
+          </LButton>
+        </LDiv>
         {!recorderReady ? (
-          <p
+          <LP
             className="dense"
             role="status"
             data-recorder-initializing="true"
           >
             Initializing microphone controls…
-          </p>
+          </LP>
         ) : snapshot.guidance ? (
-          <p className="dense" role="status" data-recorder-guidance="true">
+          <LP className="dense" role="status" data-recorder-guidance="true">
             {snapshot.guidance}
-          </p>
+          </LP>
         ) : null}
-      </fieldset>
+      </LFieldset>
 
-      <fieldset className="conversation-selfcheck">
-        <legend className="hub-field__label">
+      <LFieldset className="conversation-selfcheck">
+        <LLegend className="hub-field__label">
           Self-compare (reflection only)
-        </legend>
-        <p className="dense">
+        </LLegend>
+        <LP className="dense">
           Compare your recording to the model answers. This is not a
           pronunciation score.
-        </p>
-        <div className="game-rating" role="group" aria-label="Self-rating">
+        </LP>
+        <LDiv className="game-rating" role="group" aria-label="Self-rating">
           {SELF_RATINGS.map((rating) => (
-            <button
+            <LButton
               key={rating}
               type="button"
               className="game-rating__btn"
@@ -199,31 +201,31 @@ export function SpokenRolePlayLevel({
               }}
             >
               {rating}
-            </button>
+            </LButton>
           ))}
-        </div>
-        <button
+        </LDiv>
+        <LButton
           type="button"
           className="btn btn-secondary"
           onClick={() => setSelfCheckCompleted(true)}
           data-self-check="true"
         >
           Mark self-check complete
-        </button>
-      </fieldset>
+        </LButton>
+      </LFieldset>
 
-      <div className="conversation-actions">
-        <button
+      <LDiv className="conversation-actions">
+        <LButton
           type="button"
           className="btn btn-primary"
           onClick={finishCycle}
           data-finish-cycle="true"
         >
           Complete speaking level
-        </button>
-      </div>
+        </LButton>
+      </LDiv>
 
       <ConversationFeedback kind={feedbackKind} message={message} seq={seq} />
-    </section>
+    </LSection>
   );
 }

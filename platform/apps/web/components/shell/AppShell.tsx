@@ -1,4 +1,7 @@
-import Link from "next/link";
+import { LanguageSelector } from "@/components/i18n/LocaleProvider";
+
+import { LAside, LButton, LDiv, LFooter, LHeader, LLi, LNav, LP, LSpan, LUl } from "@/components/i18n/LocalizedElements";
+import Link from "@/components/i18n/LocalizedLink";
 import {MobileNavigation,SkipToMainContent} from "./MobileNavigation";
 import {StudyScopeControl} from "@/components/study/StudyScope";
 import {DictionaryLauncher} from "@/components/study/StudyProvider";
@@ -17,7 +20,7 @@ type NavItem =
   | { key: string; label: string; enabled: false };
 
 const PRIMARY_NAV: NavItem[] = [
-  { key: "dashboard", href: "/", label: "Dashboard", enabled: true },
+  { key: "dashboard", href: "/dashboard", label: "Dashboard", enabled: true },
   { key: "lessons", href: "/lessons", label: "Lessons", enabled: true },
   { key: "book", href: "/book", label: "Interactive book", enabled: true },
   { key: "cheat-sheets", href: "/cheat-sheets", label: "Cheat sheets", enabled: true },
@@ -45,18 +48,18 @@ const PRIMARY_NAV: NavItem[] = [
  */
 function MorphologyStrip({ tone = "nav" }: { tone?: "nav" | "light" }) {
   return (
-    <span
+    <LSpan
       className="morph-strip"
       aria-hidden="true"
       data-tone={tone}
       data-motif="lernen-regular"
     >
-      <span className="morph-strip__stem">lern</span>
-      <span className="morph-strip__ending">
-        <span className="morph-strip__ending-text">en</span>
-        <span className="morph-strip__cue">REG</span>
-      </span>
-    </span>
+      <LSpan className="morph-strip__stem">lern</LSpan>
+      <LSpan className="morph-strip__ending">
+        <LSpan className="morph-strip__ending-text">en</LSpan>
+        <LSpan className="morph-strip__cue">REG</LSpan>
+      </LSpan>
+    </LSpan>
   );
 }
 
@@ -72,34 +75,34 @@ function NavItems({
     : PRIMARY_NAV;
 
   return (
-    <ul className="nav-list">
+    <LUl className="nav-list">
       {items.map((item) => {
         if (!item.enabled) {
           return (
-            <li key={item.key}>
-              <button className="nav-disabled" type="button" disabled>
-                <span>{item.label}</span>
-                <span className="nav-disabled__badge">Coming soon</span>
-              </button>
-            </li>
+            <LLi key={item.key}>
+              <LButton className="nav-disabled" type="button" disabled>
+                <LSpan>{item.label}</LSpan>
+                <LSpan className="nav-disabled__badge">Coming soon</LSpan>
+              </LButton>
+            </LLi>
           );
         }
 
         const navKey = item.key as NavKey;
         const isCurrent = shellCurrentMatches(current, navKey, variant);
         return (
-          <li key={item.key}>
+          <LLi key={item.key}>
             <Link
               href={item.href}
               className="nav-link"
               aria-current={isCurrent ? "page" : undefined}
             >
-              <span>{item.label}</span>
+              <LSpan>{item.label}</LSpan>
             </Link>
-          </li>
+          </LLi>
         );
       })}
-    </ul>
+    </LUl>
   );
 }
 
@@ -111,53 +114,53 @@ export function AppShell({
   children: ReactNode;
 }) {
   return (
-    <div className="app-shell">
+    <LDiv className="app-shell lingovo-learning">
       {current==="lessons"&&<LessonResumeTracker/>}
       <SkipToMainContent/>
 
-      <aside className="shell-rail" aria-label="Desktop navigation">
-        <div className="shell-brand">
-          <div className="shell-brand__name">German Learning OS</div>
-          <div className="shell-brand__tag">Your daily German studio</div>
+      <LAside className="shell-rail" aria-label="Desktop navigation">
+        <LDiv className="shell-brand">
+          <Link href="/" className="shell-brand__name">lingovo.</Link>
+          <LDiv className="shell-brand__tag">Your daily German studio</LDiv>
           <MorphologyStrip />
-        </div>
-        <nav aria-label="Primary">
+        </LDiv>
+        <LNav aria-label="Primary">
           <NavItems current={current} variant="rail" />
-        </nav>
-      </aside>
+        </LNav>
+      </LAside>
 
-      <header className="shell-topnav" aria-label="Tablet navigation">
-        <div className="shell-brand">
-          <div className="shell-brand__name">German Learning OS</div>
-        </div>
-        <nav aria-label="Primary">
+      <LHeader className="shell-topnav" aria-label="Tablet navigation">
+        <LDiv className="shell-brand">
+          <Link href="/" className="shell-brand__name">lingovo.</Link>
+        </LDiv>
+        <LNav aria-label="Primary">
           <NavItems current={current} variant="top" />
-        </nav>
-      </header>
+        </LNav>
+      </LHeader>
 
-      <div className="shell-workspace">
+      <LDiv className="shell-workspace">
         <main id="main-content" className="shell-main" tabIndex={-1}>
-          <div className="study-toolbar">
+          <LDiv className="study-toolbar"><Link className="lingovo-level-switch" href="/learn">A1 ↔ C1</Link>
             {current!=="settings"&&current!=="references"&&<StudyScopeControl/>}
-            <DictionaryLauncher/>
-          </div>
+            <DictionaryLauncher/><LanguageSelector/>
+          </LDiv>
           {children}
         </main>
         {/* The source credit is a condition of using this course material
             (ADR-016), so it rides with every page rather than depending on a
             navigation surface a phone learner never sees. */}
-        <footer className="shell-credit">
-          <p>
-            Course material from <span lang="de">Momente</span> A1.1 / A1.2 by
+        <LFooter className="shell-credit">
+          <LP>
+            Course material from <LSpan lang="de">Momente</LSpan> A1.1 / A1.2 by
             Hueber Verlag.{" "}
             <Link href="/references" className="shell-credit__link">
               References
             </Link>
-          </p>
-        </footer>
-      </div>
+          </LP>
+        </LFooter>
+      </LDiv>
 
       <MobileNavigation current={current}/>
-    </div>
+    </LDiv>
   );
 }

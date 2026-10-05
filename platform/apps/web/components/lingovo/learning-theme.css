@@ -1,0 +1,4 @@
+.lingovo-learning{--canvas:#FEFAEE;--surface:#fffdf8;--surface-muted:#f3f0e8;--ink:#01113B;--ink-muted:#515b70;--ink-subtle:#626b7d;--border:#deded6;--border-strong:#bdc5d3;--nav:#01113B;--nav-ink:#FEFAEE;--nav-muted:#bdcee8;--brand:#0259CF;--focus:#0259CF;--font:AtlasSans,Arial,sans-serif;background:var(--canvas);font-family:var(--font);}
+.lingovo-learning .shell-brand__name{font-family:AtlasSerif,Georgia,serif;font-size:30px;text-decoration:none;color:inherit;letter-spacing:-1px;}
+.lingovo-learning h1,.lingovo-learning h2{font-family:AtlasSerif,Georgia,serif;letter-spacing:-.025em;}
+.lingovo-learning .lingovo-level-switch{color:#0259CF;border:1px solid #bdc5d3;border-radius:24px;padding:9px 14px;text-decoration:none;font-weight:700;white-space:nowrap;}

@@ -1,3 +1,5 @@
+
+import { LSpan } from "@/components/i18n/LocalizedElements";
 import type { LearnerGender } from "@/lib/content/detail-types";
 
 const GENDER_META: Readonly<
@@ -28,7 +30,7 @@ export function GenderBadge({
 }) {
   const meta = GENDER_META[gender];
   return (
-    <span
+    <LSpan
       className={`gender-badge gender-badge--${gender} gender-badge--shape-${meta.shape}`}
       data-gender={gender}
       data-gender-token={meta.token}
@@ -36,11 +38,11 @@ export function GenderBadge({
       data-gender-shape={meta.shape}
       aria-label={`Gender: ${meta.label}`}
     >
-      <span className="gender-badge__shape" aria-hidden="true" />
-      <span className="gender-badge__token" aria-hidden="true">
+      <LSpan className="gender-badge__shape" aria-hidden="true" />
+      <LSpan className="gender-badge__token" aria-hidden="true">
         {meta.token}
-      </span>
-      <span className="gender-badge__label">{meta.label}</span>
-    </span>
+      </LSpan>
+      <LSpan className="gender-badge__label">{meta.label}</LSpan>
+    </LSpan>
   );
 }

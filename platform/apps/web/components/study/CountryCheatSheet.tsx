@@ -1,6 +1,8 @@
 "use client";
+import { LA, LArticle, LB, LButton, LDetails, LDiv, LH1, LH2, LH3, LHeader, LInput, LLabel, LLi, LNav, LOption, LP, LSection, LSelect, LSmall, LSpan, LStrong, LSummary, LUl } from "@/components/i18n/LocalizedElements";
 
-import Link from "next/link";
+
+import Link from "@/components/i18n/LocalizedLink";
 import { useEffect, useState } from "react";
 import { countries, countryGroups, countryName, countryFrom, countryWhere, countryTo, spokenLanguage, type Country, type CountryGroup } from "@/lib/study/countries";
 import { GermanText, SaveButton, useStudy } from "./StudyProvider";
@@ -44,92 +46,92 @@ export function CountryCheatSheet({ speech, cardLinks }: { speech: Record<string
   const clip = (text: string) => <LineAudio text={text} src={speech[text]} compact />;
   const questions=countryRecallQuestions(visible,study?.dictionary,speech);
 
-  return <div className="country-sheet">
+  return <LDiv className="country-sheet">
     <CheatSheetNav current="countries"/>
-    <header className="country-heading">
-      <div><p className="study-eyebrow">Cheat sheets · 01 / Your language passport</p><h1>Countries, without the guesswork.</h1>
-        <p>Learn the country. Keep its color. Let <b lang="de">aus</b> change the article.</p></div>
-      <button type="button" className="study-secondary country-print" onClick={() => window.print()}>Print cheat sheet</button>
-    </header>
-    <nav className="country-jump" aria-label="Cheat sheet sections">
+    <LHeader className="country-heading">
+      <LDiv><LP className="study-eyebrow">Cheat sheets · 01 / Your language passport</LP><LH1>Countries, without the guesswork.</LH1>
+        <LP>Learn the country. Keep its color. Let <LB lang="de">aus</LB> change the article.</LP></LDiv>
+      <LButton type="button" className="study-secondary country-print" onClick={() => window.print()}>Print cheat sheet</LButton>
+    </LHeader>
+    <LNav className="country-jump" aria-label="Cheat sheet sections">
       <Link href="#country-overview">Map & flag overview</Link>
       <Link href="#country-patterns">The 4 patterns</Link><Link href="#country-passport">Build a sentence</Link><Link href="#country-index">All {countries.length} countries</Link><Link href="#country-practice">Test yourself</Link>
-    </nav>
+    </LNav>
     <CountryOverview countries={scopedCountries} selected={chosen} onSelect={setChosen} speech={speech}/>
-    <section id="country-patterns" className="country-patterns" aria-labelledby="patterns-title">
-      <div className="study-section-heading"><div><p className="study-eyebrow">One rule, four paths</p><h2 id="patterns-title">Pass through the AUS gate.</h2></div><span className="country-rule-stamp">AUS + DATIVE</span></div>
-      <p>Imagine the article showing its passport at <b lang="de">aus</b>. It changes into the dative form. The country’s grammatical gender stays the same.</p>
-      <div className="country-gate-map">
-        {groups.map(group => <div key={group} className={`country-gate study-tone-${group}`}>
-          <small>{countryGroups[group].label}</small>
-          <div role="group" className="country-gate-path" aria-label={`${countryGroups[group].example} becomes aus ${countryGroups[group].after}`}>
-            <b>{group === "neuter" ? "∅" : group === "male" ? "der" : "die"}</b><span aria-hidden="true">→</span><strong>{countryGroups[group].from}</strong>
-          </div>
-          <p lang="de">{countryGroups[group].from} {group === "neuter" ? "Deutschland" : group === "female" ? "Schweiz" : group === "male" ? "Iran" : "USA"}</p>
-          <span>{countryGroups[group].memory}</span>
-        </div>)}
-      </div>
-      <p className="country-trap"><b>Don’t let “der” trick you.</b> <span className="study-tone-female" lang="de">aus der Schweiz</span> is still feminine. Pink follows the country, not the letters of its article. Purple marks plural, which is a number category, not a fourth gender.</p>
-    </section>
+    <LSection id="country-patterns" className="country-patterns" aria-labelledby="patterns-title">
+      <LDiv className="study-section-heading"><LDiv><LP className="study-eyebrow">One rule, four paths</LP><LH2 id="patterns-title">Pass through the AUS gate.</LH2></LDiv><LSpan className="country-rule-stamp">AUS + DATIVE</LSpan></LDiv>
+      <LP>Imagine the article showing its passport at <LB lang="de">aus</LB>. It changes into the dative form. The country’s grammatical gender stays the same.</LP>
+      <LDiv className="country-gate-map">
+        {groups.map(group => <LDiv key={group} className={`country-gate study-tone-${group}`}>
+          <LSmall>{countryGroups[group].label}</LSmall>
+          <LDiv role="group" className="country-gate-path" aria-label={`${countryGroups[group].example} becomes aus ${countryGroups[group].after}`}>
+            <LB>{group === "neuter" ? "∅" : group === "male" ? "der" : "die"}</LB><LSpan aria-hidden="true">→</LSpan><LStrong>{countryGroups[group].from}</LStrong>
+          </LDiv>
+          <LP lang="de">{countryGroups[group].from} {group === "neuter" ? "Deutschland" : group === "female" ? "Schweiz" : group === "male" ? "Iran" : "USA"}</LP>
+          <LSpan>{countryGroups[group].memory}</LSpan>
+        </LDiv>)}
+      </LDiv>
+      <LP className="country-trap"><LB>Don’t let “der” trick you.</LB> <LSpan className="study-tone-female" lang="de">aus der Schweiz</LSpan> is still feminine. Pink follows the country, not the letters of its article. Purple marks plural, which is a number category, not a fourth gender.</LP>
+    </LSection>
 
-    <section id="country-passport" className="country-passport-layout" aria-labelledby="passport-title">
-      <div className={`country-passport study-tone-${current.group}`}>
+    <LSection id="country-passport" className="country-passport-layout" aria-labelledby="passport-title">
+      <LDiv className={`country-passport study-tone-${current.group}`}>
         <StudyScopeNotice tags={countryStudyTags(current,study?.dictionary)} subject="This country"/>
-        <div className="country-passport-top"><span>MY LANGUAGE PASSPORT</span><svg width="42" height="42" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="20"/><ellipse cx="24" cy="24" rx="9" ry="20"/><path d="M4 24h40M8 12h32M8 36h32"/></svg></div>
-        <label className="study-field">Choose a country<select aria-label="Choose a country" value={chosen} onChange={event => setChosen(event.target.value)}>{countries.map(c => <option key={c.id} value={c.id}>{countryName(c)} · {c.en}{matches(countryStudyTags(c,study?.dictionary))?"":" · outside selection"}</option>)}</select></label>
-        <h2 id="passport-title" lang="de"><CountryFlag id={current.id} label={current.en}/>{countryName(current)}</h2><p className="country-passport-type">{countryGroups[current.group].label}</p>
-        <div className="country-passport-line"><span>01 / WHERE FROM?</span><p><GermanText text={`Ich komme ${countryFrom(current)}.`}/>{clip(`Ich komme ${countryFrom(current)}.`)}</p></div>
-        <div className="country-passport-line"><span>02 / A LANGUAGE EXAMPLE</span><p><GermanText text={`Ich spreche ${spokenLanguage(current.languages[0]!)}.`}/>{clip(`Ich spreche ${spokenLanguage(current.languages[0]!)}.`)}</p></div>
+        <LDiv className="country-passport-top"><LSpan>MY LANGUAGE PASSPORT</LSpan><svg width="42" height="42" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="20"/><ellipse cx="24" cy="24" rx="9" ry="20"/><path d="M4 24h40M8 12h32M8 36h32"/></svg></LDiv>
+        <LLabel className="study-field">Choose a country<LSelect aria-label="Choose a country" value={chosen} onChange={event => setChosen(event.target.value)}>{countries.map(c => <LOption key={c.id} value={c.id}>{countryName(c)} · {c.en}{matches(countryStudyTags(c,study?.dictionary))?"":" · outside selection"}</LOption>)}</LSelect></LLabel>
+        <LH2 id="passport-title" lang="de"><CountryFlag id={current.id} label={current.en}/>{countryName(current)}</LH2><LP className="country-passport-type">{countryGroups[current.group].label}</LP>
+        <LDiv className="country-passport-line"><LSpan>01 / WHERE FROM?</LSpan><LP><GermanText text={`Ich komme ${countryFrom(current)}.`}/>{clip(`Ich komme ${countryFrom(current)}.`)}</LP></LDiv>
+        <LDiv className="country-passport-line"><LSpan>02 / A LANGUAGE EXAMPLE</LSpan><LP><GermanText text={`Ich spreche ${spokenLanguage(current.languages[0]!)}.`}/>{clip(`Ich spreche ${spokenLanguage(current.languages[0]!)}.`)}</LP></LDiv>
         <SaveButton item={{...savedCountry(current), audio:speech[`Ich komme ${countryFrom(current)}.`] ?? null}} />
-      </div>
-      <div className="country-memory-notes">
-        <p className="study-eyebrow">Make it stick</p><h2>Three questions. Three directions.</h2>
-        <div className="country-direction"><b>↗</b><div><h3>Woher? <span>Where from?</span></h3><p><GermanText text={`Ich komme ${countryFrom(current)}.`}/></p><small>Origin → aus + dative</small></div></div>
-        <div className="country-direction"><b>●</b><div><h3>Wo? <span>Where?</span></h3><p><GermanText text={`Ich wohne ${countryWhere(current)}.`}/>{clip(`Ich wohne ${countryWhere(current)}.`)}</p><small>Location → in + dative</small></div></div>
-        <div className="country-direction"><b>↘</b><div><h3>Wohin? <span>Where to?</span></h3><p><GermanText text={`Ich fahre ${countryTo(current)}.`}/>{clip(`Ich fahre ${countryTo(current)}.`)}</p><small>No article → nach. With an article → in + accusative.</small></div></div>
-        {current.note && <p className="country-note">{current.note}</p>}
-        {current.id === "IR" && <p className="country-source-note">Iran also works without an article: <b lang="de">aus Iran · in Iran · nach Iran</b>. <a href="https://www.duden.de/rechtschreibung/Iran" target="_blank" rel="noreferrer">Duden ↗</a></p>}
-      </div>
-    </section>
+      </LDiv>
+      <LDiv className="country-memory-notes">
+        <LP className="study-eyebrow">Make it stick</LP><LH2>Three questions. Three directions.</LH2>
+        <LDiv className="country-direction"><LB>↗</LB><LDiv><LH3>Woher? <LSpan>Where from?</LSpan></LH3><LP><GermanText text={`Ich komme ${countryFrom(current)}.`}/></LP><LSmall>Origin → aus + dative</LSmall></LDiv></LDiv>
+        <LDiv className="country-direction"><LB>●</LB><LDiv><LH3>Wo? <LSpan>Where?</LSpan></LH3><LP><GermanText text={`Ich wohne ${countryWhere(current)}.`}/>{clip(`Ich wohne ${countryWhere(current)}.`)}</LP><LSmall>Location → in + dative</LSmall></LDiv></LDiv>
+        <LDiv className="country-direction"><LB>↘</LB><LDiv><LH3>Wohin? <LSpan>Where to?</LSpan></LH3><LP><GermanText text={`Ich fahre ${countryTo(current)}.`}/>{clip(`Ich fahre ${countryTo(current)}.`)}</LP><LSmall>No article → nach. With an article → in + accusative.</LSmall></LDiv></LDiv>
+        {current.note && <LP className="country-note">{current.note}</LP>}
+        {current.id === "IR" && <LP className="country-source-note">Iran also works without an article: <LB lang="de">aus Iran · in Iran · nach Iran</LB>. <LA href="https://www.duden.de/rechtschreibung/Iran" target="_blank" rel="noreferrer">Duden ↗</LA></LP>}
+      </LDiv>
+    </LSection>
 
-    <section className="country-language-rule" aria-labelledby="languages-title">
-      <div><p className="study-eyebrow">Your mouth speaks a language, not a passport</p><h2 id="languages-title">Country ≠ language.</h2><p>After <b lang="de">sprechen</b>, use the language name with a capital letter and normally no article.</p></div>
-      <div className="country-language-examples"><p><span lang="de">Iran</span><span aria-hidden="true">→</span><strong lang="de">Ich spreche Persisch.</strong></p><p><span lang="de">Österreich</span><span aria-hidden="true">→</span><strong lang="de">Ich spreche Deutsch.</strong></p><p><span lang="de">Brasilien</span><span aria-hidden="true">→</span><strong lang="de">Ich spreche Portugiesisch.</strong></p></div>
-      <p className="country-wide-note">Language names such as <b lang="de">Deutsch</b> are neuter nouns, but we usually say <b lang="de">Ich spreche Deutsch</b>, not <s lang="de">Ich spreche das Deutsch</s>. A country can have many languages; the lists below give useful examples, not everyone’s personal language.</p>
-      <p className="country-wide-note">Also in your book: <GermanText text="Russisch"/> — Russian. {clip("Russisch")}</p>
-    </section>
+    <LSection className="country-language-rule" aria-labelledby="languages-title">
+      <LDiv><LP className="study-eyebrow">Your mouth speaks a language, not a passport</LP><LH2 id="languages-title">Country ≠ language.</LH2><LP>After <LB lang="de">sprechen</LB>, use the language name with a capital letter and normally no article.</LP></LDiv>
+      <LDiv className="country-language-examples"><LP><LSpan lang="de">Iran</LSpan><LSpan aria-hidden="true">→</LSpan><LStrong lang="de">Ich spreche Persisch.</LStrong></LP><LP><LSpan lang="de">Österreich</LSpan><LSpan aria-hidden="true">→</LSpan><LStrong lang="de">Ich spreche Deutsch.</LStrong></LP><LP><LSpan lang="de">Brasilien</LSpan><LSpan aria-hidden="true">→</LSpan><LStrong lang="de">Ich spreche Portugiesisch.</LStrong></LP></LDiv>
+      <LP className="country-wide-note">Language names such as <LB lang="de">Deutsch</LB> are neuter nouns, but we usually say <LB lang="de">Ich spreche Deutsch</LB>, not <s lang="de">Ich spreche das Deutsch</s>. A country can have many languages; the lists below give useful examples, not everyone’s personal language.</LP>
+      <LP className="country-wide-note">Also in your book: <GermanText text="Russisch"/> — Russian. {clip("Russisch")}</LP>
+    </LSection>
 
-    <section id="country-index" aria-labelledby="index-title">
-      <div className="study-section-heading"><div><p className="study-eyebrow">Keep this close while you practise</p><h2 id="index-title">Your country index</h2></div><button type="button" className="study-secondary" aria-pressed={recall} onClick={() => {setRecall(!recall);setRevealed([]);}}>{recall ? "Show all answers" : "Hide answers & recall"}</button></div>
-      <div className="country-controls"><label className="study-field">Find a country or language<input value={search} onChange={e => setSearch(e.target.value)} placeholder="Iran, Switzerland, Deutsch…" /></label><label className="study-field">Book coverage<select aria-label="Book coverage" value={scope} onChange={e=>setScope(e.target.value)}><option value="all">All {countries.length} country names</option><option value="core">28 study-card countries</option></select></label></div>
-      <div className="study-chips" role="group" aria-label="Country article filter">
-        {(["all",...groups,"saved"] as const).map(group => <button type="button" key={group} aria-pressed={filter===group} onClick={()=>setFilter(group)}>{group==="all" ? "All patterns" : group==="saved" ? "Saved for review" : countryGroups[group].label}</button>)}
-      </div>
-      <p className="muted" role="status">{visible.length} {visible.length===1?"country":"countries"} · Tap a word for meaning; save the patterns you want to revisit.</p>
-      <div className="country-ledger-head" aria-hidden="true"><span>COUNTRY / GENDER</span><span>WHERE FROM? · AUS</span><span>LANGUAGE EXAMPLES</span><span>REVIEW</span></div>
-      <div className="country-ledger">
-        {visible.map(c => {const hidden = recall && !revealed.includes(c.id); return <article key={c.id} id={`country-${c.id}`} data-country={c.id} className={`country-row study-tone-${c.group}`}>
-          <div><CountryFlag id={c.id} label={c.en}/><h3><GermanText text={countryName(c)}/></h3><p>{c.en}</p><small>{countryGroups[c.group].label}{c.extra ? " · Other book mention" : ""}</small></div>
-          <div className="country-answer">{hidden ? <button type="button" className="study-secondary" onClick={()=>setRevealed([...revealed,c.id])} aria-label={`Reveal ${c.name}`}>Reveal origin & language</button> : <><strong><GermanText text={countryFrom(c)}/></strong>{clip(`Ich komme ${countryFrom(c)}.`)}<small>Ich komme …</small></>}</div>
-          <div className="country-languages">{hidden ? <span className="muted">Try saying it first.</span> : c.languages.map(language => <span key={language}><GermanText text={language}/>{clip(spokenLanguage(language))}</span>)}</div>
-          <div className="country-row-save"><SaveButton compact item={{...savedCountry(c),audio:speech[`Ich komme ${countryFrom(c)}.`] ?? null}} /></div>
-          {!hidden && <details className="country-row-more"><summary>Memory cue & more</summary><p>{c.note ?? `No article in ordinary use: ${countryFrom(c)}. The country name is neuter, but you normally leave das out.`}</p><p lang="de">{countryWhere(c)} · {countryTo(c)}</p>{cardLinks[c.id] && <Link href={cardHref(c.id)}>Open vocabulary card →</Link>}</details>}
-        </article>;})}
-        {!visible.length && <p className="country-empty">No countries match. Try another search or choose All patterns.</p>}
-      </div>
-    </section>
+    <LSection id="country-index" aria-labelledby="index-title">
+      <LDiv className="study-section-heading"><LDiv><LP className="study-eyebrow">Keep this close while you practise</LP><LH2 id="index-title">Your country index</LH2></LDiv><LButton type="button" className="study-secondary" aria-pressed={recall} onClick={() => {setRecall(!recall);setRevealed([]);}}>{recall ? "Show all answers" : "Hide answers & recall"}</LButton></LDiv>
+      <LDiv className="country-controls"><LLabel className="study-field">Find a country or language<LInput value={search} onChange={e => setSearch(e.target.value)} placeholder="Iran, Switzerland, Deutsch…" /></LLabel><LLabel className="study-field">Book coverage<LSelect aria-label="Book coverage" value={scope} onChange={e=>setScope(e.target.value)}><LOption value="all">All {countries.length} country names</LOption><LOption value="core">28 study-card countries</LOption></LSelect></LLabel></LDiv>
+      <LDiv className="study-chips" role="group" aria-label="Country article filter">
+        {(["all",...groups,"saved"] as const).map(group => <LButton type="button" key={group} aria-pressed={filter===group} onClick={()=>setFilter(group)}>{group==="all" ? "All patterns" : group==="saved" ? "Saved for review" : countryGroups[group].label}</LButton>)}
+      </LDiv>
+      <LP className="muted" role="status">{visible.length} {visible.length===1?"country":"countries"} · Tap a word for meaning; save the patterns you want to revisit.</LP>
+      <LDiv className="country-ledger-head" aria-hidden="true"><LSpan>COUNTRY / GENDER</LSpan><LSpan>WHERE FROM? · AUS</LSpan><LSpan>LANGUAGE EXAMPLES</LSpan><LSpan>REVIEW</LSpan></LDiv>
+      <LDiv className="country-ledger">
+        {visible.map(c => {const hidden = recall && !revealed.includes(c.id); return <LArticle key={c.id} id={`country-${c.id}`} data-country={c.id} className={`country-row study-tone-${c.group}`}>
+          <LDiv><CountryFlag id={c.id} label={c.en}/><LH3><GermanText text={countryName(c)}/></LH3><LP>{c.en}</LP><LSmall>{countryGroups[c.group].label}{c.extra ? " · Other book mention" : ""}</LSmall></LDiv>
+          <LDiv className="country-answer">{hidden ? <LButton type="button" className="study-secondary" onClick={()=>setRevealed([...revealed,c.id])} aria-label={`Reveal ${c.name}`}>Reveal origin & language</LButton> : <><LStrong><GermanText text={countryFrom(c)}/></LStrong>{clip(`Ich komme ${countryFrom(c)}.`)}<LSmall>Ich komme …</LSmall></>}</LDiv>
+          <LDiv className="country-languages">{hidden ? <LSpan className="muted">Try saying it first.</LSpan> : c.languages.map(language => <LSpan key={language}><GermanText text={language}/>{clip(spokenLanguage(language))}</LSpan>)}</LDiv>
+          <LDiv className="country-row-save"><SaveButton compact item={{...savedCountry(c),audio:speech[`Ich komme ${countryFrom(c)}.`] ?? null}} /></LDiv>
+          {!hidden && <LDetails className="country-row-more"><LSummary>Memory cue & more</LSummary><LP>{c.note ?? `No article in ordinary use: ${countryFrom(c)}. The country name is neuter, but you normally leave das out.`}</LP><LP lang="de">{countryWhere(c)} · {countryTo(c)}</LP>{cardLinks[c.id] && <Link href={cardHref(c.id)}>Open vocabulary card →</Link>}</LDetails>}
+        </LArticle>;})}
+        {!visible.length && <LP className="country-empty">No countries match. Try another search or choose All patterns.</LP>}
+      </LDiv>
+    </LSection>
 
-    <section id="country-practice" className="country-practice" aria-labelledby="practice-title">
-      <div><p className="study-eyebrow">A two-minute check</p><h2 id="practice-title">Can you get through the gate?</h2><p>This short set follows your study selection and country-index filters. Choose an answer, hear it, then save any country you want to revisit.</p></div>
+    <LSection id="country-practice" className="country-practice" aria-labelledby="practice-title">
+      <LDiv><LP className="study-eyebrow">A two-minute check</LP><LH2 id="practice-title">Can you get through the gate?</LH2><LP>This short set follows your study selection and country-index filters. Choose an answer, hear it, then save any country you want to revisit.</LP></LDiv>
       <SheetRecall key={questions.map(q=>q.id).join("|")} prefix="country" questions={questions} speech={speech}/>
-    </section>
-    <details className="country-sources"><summary>Coverage, sources & pronunciation</summary>
-      <p>{countries.length} country names: all 28 country cards from the existing study collection, including Iran, plus 13 additional country names found in the supplied coursebook and workbook. Includes geographical names used in the book, such as England and Great Britain. Momente course material © Hueber Verlag. Grammar explanations, memory cues and English teaching translations were written for this sheet.</p>
-      <p>The language lists are learning examples, not exhaustive official-language lists. Audio is synthesized German speech.</p>
-      <ul><li><a href="https://grammis.ids-mannheim.de/fragen/5" target="_blank" rel="noreferrer">Leibniz Institute for the German Language: country names and grammatical gender</a></li><li><a href="https://www.duden.de/rechtschreibung/Iran" target="_blank" rel="noreferrer">Duden: Iran with and without an article</a></li><li><a href="https://gfds.de/heisst-es-im-iran-oder-in-iran/" target="_blank" rel="noreferrer">GfdS: im Iran / in Iran</a></li><li><a href="https://www.plurilingua.admin.ch/dam/en/sd-web/wgN8O5waA2LA/20240717_Swiss%20plurilingulism%20%E2%80%93%20a%20brief%20guide.pdf" target="_blank" rel="noreferrer">Swiss Confederation: four national languages</a></li><li><a href="https://home.eritreaembassy.ch/discover-eritrea/fact-and-figures" target="_blank" rel="noreferrer">Eritrean Embassy: multilingualism and working languages</a></li><li><a href="https://www.statssa.gov.za/publications/03-00-22/03-00-222024.pdf" target="_blank" rel="noreferrer">Statistics South Africa: languages</a></li></ul>
+    </LSection>
+    <LDetails className="country-sources"><LSummary>Coverage, sources & pronunciation</LSummary>
+      <LP>{countries.length} country names: all 28 country cards from the existing study collection, including Iran, plus 13 additional country names found in the supplied coursebook and workbook. Includes geographical names used in the book, such as England and Great Britain. Momente course material © Hueber Verlag. Grammar explanations, memory cues and English teaching translations were written for this sheet.</LP>
+      <LP>The language lists are learning examples, not exhaustive official-language lists. Audio is synthesized German speech.</LP>
+      <LUl><LLi><LA href="https://grammis.ids-mannheim.de/fragen/5" target="_blank" rel="noreferrer">Leibniz Institute for the German Language: country names and grammatical gender</LA></LLi><LLi><LA href="https://www.duden.de/rechtschreibung/Iran" target="_blank" rel="noreferrer">Duden: Iran with and without an article</LA></LLi><LLi><LA href="https://gfds.de/heisst-es-im-iran-oder-in-iran/" target="_blank" rel="noreferrer">GfdS: im Iran / in Iran</LA></LLi><LLi><LA href="https://www.plurilingua.admin.ch/dam/en/sd-web/wgN8O5waA2LA/20240717_Swiss%20plurilingulism%20%E2%80%93%20a%20brief%20guide.pdf" target="_blank" rel="noreferrer">Swiss Confederation: four national languages</LA></LLi><LLi><LA href="https://home.eritreaembassy.ch/discover-eritrea/fact-and-figures" target="_blank" rel="noreferrer">Eritrean Embassy: multilingualism and working languages</LA></LLi><LLi><LA href="https://www.statssa.gov.za/publications/03-00-22/03-00-222024.pdf" target="_blank" rel="noreferrer">Statistics South Africa: languages</LA></LLi></LUl>
       <Link href="/references">Course sources & credits →</Link>
-    </details>
-    <p className="country-credit">Country coverage: Momente coursebook, workbook and study collection · © Hueber Verlag. Explanations and memory cues created for your study sheet.</p>
+    </LDetails>
+    <LP className="country-credit">Country coverage: Momente coursebook, workbook and study collection · © Hueber Verlag. Explanations and memory cues created for your study sheet.</LP>
     <CountryPrintSummary/>
-  </div>;
+  </LDiv>;
 }

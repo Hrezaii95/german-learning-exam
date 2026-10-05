@@ -1,4 +1,6 @@
 "use client";
+import { LButton, LDetails, LDiv, LH2, LH3, LInput, LLabel, LOption, LP, LSection, LSelect, LSummary } from "@/components/i18n/LocalizedElements";
+
 
 import { useRef, useState } from "react";
 import { applyBackup, BACKUP_KEYS, createCompleteBackup, emptyCompleteBackup, mergeBackup, parseBackup, type ImportedBackup } from "@/lib/study/backup";
@@ -50,25 +52,25 @@ export function BackupPanel() {
     catch (error) { setMessage(error instanceof Error ? error.message : "Reset failed."); }
   }
 
-  return <section className="panel study-backup" aria-label="Backup and restore">
-    <h2>Backup &amp; restore</h2>
-    <p>One backup includes your saved words, phrases, concepts, book lines, notes, bookmarks, reading progress, lesson and quiz progress, review history, study selection and preferences.</p>
-    <p className="muted">Your data stays in this browser. Download a backup to move it to another device. Raw microphone recordings and downloaded course media are not included.</p>
-    <div className="detail-actions">
-      <button className="study-secondary" type="button" onClick={download} disabled={busy}>Download JSON export</button>
-      <button className="study-secondary" type="button" onClick={() => fileInput.current?.click()} disabled={busy}>Import JSON</button>
-      <input ref={fileInput} type="file" hidden accept="application/json,.json" aria-label="Choose learning backup" onChange={e => void inspect(e.target.files?.[0])}/>
-    </div>
-    {busy && <p role="status">Checking backup…</p>}
-    {incoming && <div className="study-backup-preview">
-      <h3>Ready to import</h3>
-      <p>{incoming.study ? `${Object.keys(incoming.study.saved).length} saved items · ${incoming.study.bookmarks.length} bookmarks · ${Object.keys(incoming.study.lessonSessions ?? {}).length} lesson sessions. ` : ""}{incoming.learner ? `${incoming.learner.reviewCards.length} course review cards · ${incoming.learner.events.length} practice events.` : ""}</p>
-      <p>{incoming.study && incoming.learner && incoming.scope ? "Complete learning backup." : "Older partial backup. Sections missing from this file will be kept on this device."}</p>
-      <label className="study-field">Import method<select value={mode} onChange={e => setMode(e.target.value)}><option value="merge">Merge with this device</option><option value="replace">Replace included data</option></select></label>
-      <p>{mode === "merge" ? "Adds missing items. Keeps this device’s settings and current version of conflicting items." : "Replaces only the sections included in this file. Other learning data stays on this device."}</p>
-      <div className="detail-actions"><button className="study-primary" type="button" onClick={restore}>{mode === "merge" ? "Merge backup" : "Replace included data"}</button><button className="study-secondary" type="button" onClick={() => setIncoming(null)}>Cancel</button></div>
-    </div>}
-    {message && <p role="status">{message}</p>}
-    <details><summary>Reset learning data</summary><p>This resets learning progress and preferences on this device. Downloaded media and raw microphone files remain.</p><button className="study-secondary" type="button" onClick={reset}>Reset learning progress</button></details>
-  </section>;
+  return <LSection className="panel study-backup" aria-label="Backup and restore">
+    <LH2>Backup &amp; restore</LH2>
+    <LP>One backup includes your saved words, phrases, concepts, book lines, notes, bookmarks, reading progress, lesson and quiz progress, review history, study selection and preferences.</LP>
+    <LP className="muted">Your data stays in this browser. Download a backup to move it to another device. Raw microphone recordings and downloaded course media are not included.</LP>
+    <LDiv className="detail-actions">
+      <LButton className="study-secondary" type="button" onClick={download} disabled={busy}>Download JSON export</LButton>
+      <LButton className="study-secondary" type="button" onClick={() => fileInput.current?.click()} disabled={busy}>Import JSON</LButton>
+      <LInput ref={fileInput} type="file" hidden accept="application/json,.json" aria-label="Choose learning backup" onChange={e => void inspect(e.target.files?.[0])}/>
+    </LDiv>
+    {busy && <LP role="status">Checking backup…</LP>}
+    {incoming && <LDiv className="study-backup-preview">
+      <LH3>Ready to import</LH3>
+      <LP>{incoming.study ? `${Object.keys(incoming.study.saved).length} saved items · ${incoming.study.bookmarks.length} bookmarks · ${Object.keys(incoming.study.lessonSessions ?? {}).length} lesson sessions. ` : ""}{incoming.learner ? `${incoming.learner.reviewCards.length} course review cards · ${incoming.learner.events.length} practice events.` : ""}</LP>
+      <LP>{incoming.study && incoming.learner && incoming.scope ? "Complete learning backup." : "Older partial backup. Sections missing from this file will be kept on this device."}</LP>
+      <LLabel className="study-field">Import method<LSelect value={mode} onChange={e => setMode(e.target.value)}><LOption value="merge">Merge with this device</LOption><LOption value="replace">Replace included data</LOption></LSelect></LLabel>
+      <LP>{mode === "merge" ? "Adds missing items. Keeps this device’s settings and current version of conflicting items." : "Replaces only the sections included in this file. Other learning data stays on this device."}</LP>
+      <LDiv className="detail-actions"><LButton className="study-primary" type="button" onClick={restore}>{mode === "merge" ? "Merge backup" : "Replace included data"}</LButton><LButton className="study-secondary" type="button" onClick={() => setIncoming(null)}>Cancel</LButton></LDiv>
+    </LDiv>}
+    {message && <LP role="status">{message}</LP>}
+    <LDetails><LSummary>Reset learning data</LSummary><LP>This resets learning progress and preferences on this device. Downloaded media and raw microphone files remain.</LP><LButton className="study-secondary" type="button" onClick={reset}>Reset learning progress</LButton></LDetails>
+  </LSection>;
 }

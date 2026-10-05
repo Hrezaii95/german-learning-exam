@@ -1,6 +1,8 @@
 "use client";
+import { LArticle, LButton, LDiv, LH1, LH2, LH3, LHeader, LInput, LLabel, LNav, LP, LSection, LSmall, LSpan, LStrong, LTable, LTbody, LTd, LTh, LThead, LTr } from "@/components/i18n/LocalizedElements";
 
-import Link from "next/link";
+
+import Link from "@/components/i18n/LocalizedLink";
 import { useState } from "react";
 import {
   courseChapters,
@@ -45,55 +47,55 @@ export function LessonFour({ speech }: { speech: Record<string, string> }) {
       [29, 30, 31, 32].some((n) => id === `coursebook-${n}`),
     ).length ?? 0;
   return (
-    <div className="study-workspace">
+    <LDiv className="study-workspace">
       <StudyScopeNotice tags={tagsForLesson(4)}/>
       <Link className="study-back" href="/lessons">
         ← All lessons
       </Link>
-      <header className="lesson-four-hero">
-        <div>
-          <p className="study-eyebrow">Lesson 4 · Momente A1</p>
-          <h1 lang="de">
+      <LHeader className="lesson-four-hero">
+        <LDiv>
+          <LP className="study-eyebrow">Lesson 4 · Momente A1</LP>
+          <LH1 lang="de">
             Das Bild
             <br />
             ist so schön.
-          </h1>
-          <p>Find the words for your space.</p>
-          <p className="lesson-four-summary">
+          </LH1>
+          <LP>Find the words for your space.</LP>
+          <LP className="lesson-four-summary">
             Describe furniture, share your opinion, and ask the price. Learn
-            each noun with its article, then use <strong>er, es, sie</strong>{" "}
+            each noun with its article, then use <LStrong>er, es, sie</LStrong>{" "}
             naturally.
-          </p>
-        </div>
-        <div role="group"
+          </LP>
+        </LDiv>
+        <LDiv role="group"
           className="lesson-room"
           aria-label="Furniture vocabulary illustration"
         >
-          <div className="room-picture">
-            <span>das Bild</span>
-          </div>
-          <div className="room-lamp">
-            <span>die Lampe</span>
-          </div>
-          <div className="room-sofa">
-            <span>das Sofa</span>
-          </div>
-          <div className="room-rug" />
-          <div className="room-price">
-            59 €<small>das Sofa → es</small>
-          </div>
-        </div>
-      </header>
+          <LDiv className="room-picture">
+            <LSpan>das Bild</LSpan>
+          </LDiv>
+          <LDiv className="room-lamp">
+            <LSpan>die Lampe</LSpan>
+          </LDiv>
+          <LDiv className="room-sofa">
+            <LSpan>das Sofa</LSpan>
+          </LDiv>
+          <LDiv className="room-rug" />
+          <LDiv className="room-price">
+            59 €<LSmall>das Sofa → es</LSmall>
+          </LDiv>
+        </LDiv>
+      </LHeader>
       <LessonLearningPath lesson={4} checkpoint="Describe an object with its article, pronoun and price." learnHref="#words" practiceHref="#practice" onLearn={()=>showSection("Words")} onPractice={()=>showSection("Practice")} onContinue={()=>showSection(tab)} ready={session.ready} section={tab.toLowerCase()}/>
-      <div className="lesson-four-meta">
-        <span>{lessonFourWords.length} words & expressions</span>
-        <span>{lessonFourConcepts.length} grammar concepts</span>
-        <span>Original recordings & transcripts in Listen</span>
-        <span>{complete}/4 coursebook pages marked read</span>
-      </div>
-      <nav className="study-tabs" aria-label="Lesson 4 study sections">
+      <LDiv className="lesson-four-meta">
+        <LSpan>{lessonFourWords.length} words & expressions</LSpan>
+        <LSpan>{lessonFourConcepts.length} grammar concepts</LSpan>
+        <LSpan>Original recordings & transcripts in Listen</LSpan>
+        <LSpan>{complete}/4 coursebook pages marked read</LSpan>
+      </LDiv>
+      <LNav className="study-tabs" aria-label="Lesson 4 study sections">
         {tabs.map((item) => (
-          <button
+          <LButton
             key={item}
             type="button"
             aria-current={tab === item ? "page" : undefined}
@@ -101,50 +103,50 @@ export function LessonFour({ speech }: { speech: Record<string, string> }) {
             onClick={() => session.chooseTab(item)}
           >
             {item}
-            {item === "Words" && <span>{lessonFourWords.length}</span>}
-          </button>
+            {item === "Words" && <LSpan>{lessonFourWords.length}</LSpan>}
+          </LButton>
         ))}
-      </nav>
+      </LNav>
       {tab === "Words" && (
-        <section aria-labelledby="l4-words">
-          <div className="study-section-heading">
-            <div>
-              <h2 id="l4-words">A room full of new words</h2>
-              <p className="muted">
+        <LSection aria-labelledby="l4-words">
+          <LDiv className="study-section-heading">
+            <LDiv>
+              <LH2 id="l4-words">A room full of new words</LH2>
+              <LP className="muted">
                 Keep the article and the noun together. Save the ones you want
                 to revisit.
-              </p>
-            </div>
-            <label className="study-field">
+              </LP>
+            </LDiv>
+            <LLabel className="study-field">
               Find a word
-              <input
+              <LInput
                 placeholder="German or English…"
                 value={query}
                 onChange={(e) => {setQuery(e.target.value);setWordLimit(12);}}
               />
-            </label>
-          </div>
-          <div
+            </LLabel>
+          </LDiv>
+          <LDiv
             className="study-chips"
             role="group"
             aria-label="Vocabulary categories"
           >
             {["All", ...new Set(lessonFourWords.map((w) => w.category))].map(
               (c) => (
-                <button
+                <LButton
                   type="button"
                   key={c}
                   aria-pressed={category === c}
                   onClick={() => {setCategory(c);setWordLimit(12);}}
                 >
                   {c}
-                </button>
+                </LButton>
               ),
             )}
-          </div>
-          <div className="lesson-word-grid">
+          </LDiv>
+          <LDiv className="lesson-word-grid">
             {words.slice(0,wordLimit).map((word) => (
-              <article
+              <LArticle
                 key={word.id}
                 className="lesson-word"
                 data-gender={
@@ -157,8 +159,8 @@ export function LessonFour({ speech }: { speech: Record<string, string> }) {
                         : "plain"
                 }
               >
-                <div className="study-row">
-                  <span className="study-tag">{word.category}</span>
+                <LDiv className="study-row">
+                  <LSpan className="study-tag">{word.category}</LSpan>
                   <SaveButton
                     compact
                     item={{
@@ -171,48 +173,48 @@ export function LessonFour({ speech }: { speech: Record<string, string> }) {
                       audio: speech[word.de] ?? null,
                     }}
                   />
-                </div>
-                <h3>
+                </LDiv>
+                <LH3>
                   <GermanText text={word.de} />
-                </h3>
-                <p>{word.en}</p>
+                </LH3>
+                <LP>{word.en}</LP>
                 {word.plural && (
-                  <p
+                  <LP
                     className="lesson-word-plural"
                     lang={word.plural === "plural only" ? "en" : "de"}
                   >
                     {word.plural}
-                  </p>
+                  </LP>
                 )}
-                <div className="study-row">
+                <LDiv className="study-row">
                   <LineAudio text={word.de} src={speech[word.de]} />
                   <Link href={appendNavigationContext(`/vocabulary/${word.id}`,{entryContext:"lesson",returnPath:"/lessons/04"})}>Study card →</Link>
-                </div>
-                <div className="lesson-word-example">
+                </LDiv>
+                <LDiv className="lesson-word-example">
                   <GermanText text={word.example} />
                   <LineAudio
                     text={word.example}
                     src={speech[word.example]}
                     compact
                   />
-                  <p>{word.translation}</p>
-                </div>
-              </article>
+                  <LP>{word.translation}</LP>
+                </LDiv>
+              </LArticle>
             ))}
-          </div>
-          <div className="library-pagination"><p role="status">Showing {Math.min(wordLimit,words.length)} of {words.length} words & expressions</p>{wordLimit<words.length&&<button type="button" className="study-secondary" onClick={()=>setWordLimit(limit=>limit+12)}>Show more words</button>}</div>
-          {!words.length && <p>No words match. Try another search.</p>}
-        </section>
+          </LDiv>
+          <LDiv className="library-pagination"><LP role="status">Showing {Math.min(wordLimit,words.length)} of {words.length} words & expressions</LP>{wordLimit<words.length&&<LButton type="button" className="study-secondary" onClick={()=>setWordLimit(limit=>limit+12)}>Show more words</LButton>}</LDiv>
+          {!words.length && <LP>No words match. Try another search.</LP>}
+        </LSection>
       )}
       {tab === "Grammar" && (
-        <section className="lesson-concepts">
-          <h2>Five patterns you can use today</h2>
+        <LSection className="lesson-concepts">
+          <LH2>Five patterns you can use today</LH2>
           {lessonFourConcepts.map((concept, i) => (
-            <article className="lesson-concept" key={concept.id}>
-              <span className="lesson-concept-number">0{i + 1}</span>
-              <div>
-                <div className="study-row">
-                  <h3>{concept.title}</h3>
+            <LArticle className="lesson-concept" key={concept.id}>
+              <LSpan className="lesson-concept-number">0{i + 1}</LSpan>
+              <LDiv>
+                <LDiv className="study-row">
+                  <LH3>{concept.title}</LH3>
                   <SaveButton
                     item={{
                       id: concept.id,
@@ -223,40 +225,40 @@ export function LessonFour({ speech }: { speech: Record<string, string> }) {
                       lesson: 4,
                     }}
                   />
-                </div>
-                <p className="lesson-concept-model">
+                </LDiv>
+                <LP className="lesson-concept-model">
                   <GermanText text={concept.de} />
                   <LineAudio
                     text={concept.de}
                     src={speech[concept.de]}
                     compact
                   />
-                </p>
-                <p>{concept.en}</p>
-                <div className="lesson-examples">
+                </LP>
+                <LP>{concept.en}</LP>
+                <LDiv className="lesson-examples">
                   {concept.examples.map((example) => (
-                    <div key={example}>
+                    <LDiv key={example}>
                       <GermanText text={example} />
                       <LineAudio text={example} src={speech[example]} compact />
-                    </div>
+                    </LDiv>
                   ))}
-                </div>
-              </div>
-            </article>
+                </LDiv>
+              </LDiv>
+            </LArticle>
           ))}
-        </section>
+        </LSection>
       )}
       {tab === "Verbs" && (
-        <section>
-          <h2>Small changes, useful sentences</h2>
-          <p className="muted">
+        <LSection>
+          <LH2>Small changes, useful sentences</LH2>
+          <LP className="muted">
             Tap any form to hear it. Notice the extra e in kostet and findet.
-          </p>
-          <div className="lesson-verbs">
+          </LP>
+          <LDiv className="lesson-verbs">
             {lessonFourVerbs.map((verb) => (
-              <article key={verb.verb}>
-                <div className="study-row">
-                  <h3 lang="de">{verb.verb}</h3>
+              <LArticle key={verb.verb}>
+                <LDiv className="study-row">
+                  <LH3 lang="de">{verb.verb}</LH3>
                   <SaveButton
                     item={{
                       id: `verb-l4-${verb.verb}`,
@@ -267,19 +269,19 @@ export function LessonFour({ speech }: { speech: Record<string, string> }) {
                       lesson: 4,
                     }}
                   />
-                </div>
-                <p>{verb.meaning}</p>
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Pronoun</th>
-                      <th>Form</th>
-                    </tr>
-                  </thead>
-                  <tbody>
+                </LDiv>
+                <LP>{verb.meaning}</LP>
+                <LTable>
+                  <LThead>
+                    <LTr>
+                      <LTh>Pronoun</LTh>
+                      <LTh>Form</LTh>
+                    </LTr>
+                  </LThead>
+                  <LTbody>
                     {verb.forms.map((form, i) => (
-                      <tr key={i}>
-                        <td lang="de">
+                      <LTr key={i}>
+                        <LTd lang="de">
                           {
                             [
                               "ich",
@@ -290,40 +292,40 @@ export function LessonFour({ speech }: { speech: Record<string, string> }) {
                               "sie / Sie",
                             ][i]
                           }
-                        </td>
-                        <td>
+                        </LTd>
+                        <LTd>
                           <GermanText text={form} />
                           <LineAudio
                             text={`${["ich", "du", "er", "wir", "ihr", "sie"][i]} ${form}`}
                             compact
                           />
-                        </td>
-                      </tr>
+                        </LTd>
+                      </LTr>
                     ))}
-                  </tbody>
-                </table>
-                <p className="muted">{verb.tip}</p>
-              </article>
+                  </LTbody>
+                </LTable>
+                <LP className="muted">{verb.tip}</LP>
+              </LArticle>
             ))}
-          </div>
-        </section>
+          </LDiv>
+        </LSection>
       )}
       {tab === "Phrases" && (
-        <section>
-          <h2>A conversation in a furniture shop</h2>
-          <p className="muted">
+        <LSection>
+          <LH2>A conversation in a furniture shop</LH2>
+          <LP className="muted">
             Listen, repeat, then try saying it without the English.
-          </p>
-          <div className="lesson-phrases">
+          </LP>
+          <LDiv className="lesson-phrases">
             {lessonFourPhrases.map(([de, en], i) => (
-              <article key={de}>
-                <div>
-                  <h3>
+              <LArticle key={de}>
+                <LDiv>
+                  <LH3>
                     <GermanText text={de} />
-                  </h3>
-                  <p>{en}</p>
-                </div>
-                <div className="study-row">
+                  </LH3>
+                  <LP>{en}</LP>
+                </LDiv>
+                <LDiv className="study-row">
                   <LineAudio text={de} src={speech[de]} compact />
                   <SaveButton
                     item={{
@@ -336,39 +338,39 @@ export function LessonFour({ speech }: { speech: Record<string, string> }) {
                       audio: speech[de] ?? null,
                     }}
                   />
-                </div>
-              </article>
+                </LDiv>
+              </LArticle>
             ))}
-          </div>
-        </section>
+          </LDiv>
+        </LSection>
       )}
       {tab === "Practice" && (
-        <section className="lesson-quiz" aria-labelledby="l4-practice">
-          <p className="study-eyebrow">Put it into practice</p>
-          <h2 id="l4-practice">
+        <LSection className="lesson-quiz" aria-labelledby="l4-practice">
+          <LP className="study-eyebrow">Put it into practice</LP>
+          <LH2 id="l4-practice">
             {finished
               ? "You finished this practice round."
               : `Question ${position + 1} of ${lessonFourQuiz.length}`}
-          </h2>
-          {!finished && (position > 0 || choice !== null) && <button type="button" className="study-secondary" onClick={() => session.restart()}>Restart quiz</button>}
+          </LH2>
+          {!finished && (position > 0 || choice !== null) && <LButton type="button" className="study-secondary" onClick={() => session.restart()}>Restart quiz</LButton>}
           {finished ? (
             <>
-              <p className="lesson-score">
+              <LP className="lesson-score">
                 {correct}
-                <span> / {lessonFourQuiz.length}</span>
-              </p>
-              <p>
+                <LSpan> / {lessonFourQuiz.length}</LSpan>
+              </LP>
+              <LP>
                 {correct === lessonFourQuiz.length
                   ? "You recalled every answer. Come back tomorrow and try again."
                   : "Use the explanations to revisit the tricky patterns, then try another round."}
-              </p>
-              <button
+              </LP>
+              <LButton
                 className="study-primary"
                 type="button"
                 onClick={() => session.restart()}
               >
                 Practise again
-              </button>
+              </LButton>
             </>
           ) : (
             <>
@@ -377,10 +379,10 @@ export function LessonFour({ speech }: { speech: Record<string, string> }) {
                 value={position}
                 aria-label="Practice progress"
               />
-              <h3 lang="de">{exercise.q}</h3>
-              <div className="lesson-quiz-options">
+              <LH3 lang="de">{exercise.q}</LH3>
+              <LDiv className="lesson-quiz-options">
                 {exercise.options.map((option) => (
-                  <button
+                  <LButton
                     type="button"
                     key={option}
                     disabled={!session.ready || choice !== null}
@@ -395,18 +397,18 @@ export function LessonFour({ speech }: { speech: Record<string, string> }) {
                     lang="de"
                   >
                     {option}
-                  </button>
+                  </LButton>
                 ))}
-              </div>
+              </LDiv>
               {choice !== null && (
-                <div className="lesson-quiz-feedback" role="status">
-                  <strong>
+                <LDiv className="lesson-quiz-feedback" role="status">
+                  <LStrong>
                     {choice === exercise.answer
                       ? "That’s right."
                       : `The answer is ${exercise.answer}.`}
-                  </strong>
-                  <p>{exercise.why}</p>
-                  <button
+                  </LStrong>
+                  <LP>{exercise.why}</LP>
+                  <LButton
                     type="button"
                     className="study-primary"
                     onClick={() => session.next()}
@@ -414,76 +416,76 @@ export function LessonFour({ speech }: { speech: Record<string, string> }) {
                     {position + 1 === lessonFourQuiz.length
                       ? "See my result"
                       : "Next question →"}
-                  </button>
-                </div>
+                  </LButton>
+                </LDiv>
               )}
             </>
           )}
-        </section>
+        </LSection>
       )}
-      <p className="book-credit">
+      <LP className="book-credit">
         Vocabulary and lesson scope: Momente A1.1, coursebook pp. 29–32 and
         Deutsch–Englisch glossary pp. 5–6, © Hueber Verlag. Explanations and
         practice are authored study aids. Audio buttons use synthesized speech;
         original recordings are in the book.
-      </p>
-    </div>
+      </LP>
+    </LDiv>
   );
 }
 
 export function NewChapterCards() {
   const {matches}=useStudyScope();
   return (
-    <section
+    <LSection
       className="study-new-chapters"
       aria-labelledby="new-chapters-title"
     >
-      <div className="study-section-heading">
-        <div>
-          <p className="study-eyebrow">Keep your German growing</p>
-          <h2 id="new-chapters-title">Your book, brought to life.</h2>
-          <p className="muted">
+      <LDiv className="study-section-heading">
+        <LDiv>
+          <LP className="study-eyebrow">Keep your German growing</LP>
+          <LH2 id="new-chapters-title">Your book, brought to life.</LH2>
+          <LP className="muted">
             Original pages and audio. Words you can tap. A review list you
             choose.
-          </p>
-        </div>
+          </LP>
+        </LDiv>
         <Link className="study-primary" href="/book">
           Open my book →
         </Link>
-      </div>
-      <div className="study-chapter-cards">
+      </LDiv>
+      <LDiv className="study-chapter-cards">
         {courseChapters.slice(2).filter(c=>matches(tagsForLesson(c.number))).map((c) => (
           <Link href={`/lessons/0${c.number}`} key={c.number}>
-            <span className="study-chapter-badge">{String(c.number).padStart(2, "0")}</span>
-            <div>
-              <small>
+            <LSpan className="study-chapter-badge">{String(c.number).padStart(2, "0")}</LSpan>
+            <LDiv>
+              <LSmall>
                 {c.number === 4 ? "NEW LESSON" : "CONTINUE THE COURSE"}
-              </small>
-              <h3 lang="de">{c.title}</h3>
-              <p>{c.topic}</p>
-            </div>
-            <span aria-hidden="true">↗</span>
+              </LSmall>
+              <LH3 lang="de">{c.title}</LH3>
+              <LP>{c.topic}</LP>
+            </LDiv>
+            <LSpan aria-hidden="true">↗</LSpan>
           </Link>
         ))}
-      </div>
-    </section>
+      </LDiv>
+    </LSection>
   );
 }
 
 export function LessonThreeBridge() {
   return (
-    <div className="study-workspace">
+    <LDiv className="study-workspace">
       <Link className="study-back" href="/lessons">
         ← All lessons
       </Link>
-      <header className="study-page-header">
-        <div>
-          <p className="study-eyebrow">Lesson 3 · Family & languages</p>
-          <h1 lang="de">Das ist meine Schwester.</h1>
-          <p>Talk about your family and the languages you speak.</p>
-        </div>
-      </header>
-      <div className="study-row">
+      <LHeader className="study-page-header">
+        <LDiv>
+          <LP className="study-eyebrow">Lesson 3 · Family & languages</LP>
+          <LH1 lang="de">Das ist meine Schwester.</LH1>
+          <LP>Talk about your family and the languages you speak.</LP>
+        </LDiv>
+      </LHeader>
+      <LDiv className="study-row">
         <Link className="study-primary" href="/book?page=coursebook-19">
           Open interactive book →
         </Link>
@@ -493,8 +495,8 @@ export function LessonThreeBridge() {
         <Link className="study-secondary" href="/vocabulary?lesson=03">
           Vocabulary cards
         </Link>
-      </div>
-      <div className="lesson-concepts">
+      </LDiv>
+      <LDiv className="lesson-concepts">
         {[
           [
             "Family & possession",
@@ -512,15 +514,15 @@ export function LessonThreeBridge() {
             "Sprechen changes e to i in du sprichst and er/sie spricht.",
           ],
         ].map(([title, de, en], i) => (
-          <article className="lesson-concept" key={title}>
-            <span className="lesson-concept-number">0{i + 1}</span>
-            <div>
-              <h2>{title}</h2>
-              <p>
+          <LArticle className="lesson-concept" key={title}>
+            <LSpan className="lesson-concept-number">0{i + 1}</LSpan>
+            <LDiv>
+              <LH2>{title}</LH2>
+              <LP>
                 <GermanText text={de!} />
-              </p>
-              <p>{en}</p>
-              <div className="study-row">
+              </LP>
+              <LP>{en}</LP>
+              <LDiv className="study-row">
                 <LineAudio text={de!} />
                 <SaveButton
                   item={{
@@ -532,12 +534,12 @@ export function LessonThreeBridge() {
                     lesson: 3,
                   }}
                 />
-              </div>
-            </div>
-          </article>
+              </LDiv>
+            </LDiv>
+          </LArticle>
         ))}
-      </div>
+      </LDiv>
       <NewChapterCards />
-    </div>
+    </LDiv>
   );
 }

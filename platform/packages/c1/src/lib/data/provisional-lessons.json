@@ -1,0 +1,582 @@
+[
+  {
+    "id": "source-lecture-cancelled",
+    "section": "testdaf.course.audio.transcript.001",
+    "skill": "hoeren",
+    "title": {
+      "de": "Die ausgefallene Vorlesung",
+      "en": "The cancelled lecture"
+    },
+    "objective": {
+      "de": "Den Grund einer Absage von Nebendetails unterscheiden.",
+      "en": "Distinguish the reason for a cancellation from background details."
+    },
+    "support": "Marisa is rushing to a lecture. Sebastian explains that it has been cancelled because the professor has travelled to Berlin to seek funding for a laboratory. The broken heating is a separate detail. The next lecture is scheduled for the following week, with preparation on aneurysms.",
+    "exercises": [
+      {
+        "id": "src-lc-1",
+        "kind": "choice",
+        "prompt": {
+          "de": "Warum fällt die Vorlesung aus?",
+          "en": "Why is the lecture cancelled?"
+        },
+        "options": [
+          "Der Professor wirbt in Berlin Forschungsgelder ein.",
+          "Die Heizung ist kaputt.",
+          "Die Studierenden haben keine Literatur."
+        ],
+        "answer": [
+          "0"
+        ],
+        "hint": {
+          "de": "Was erklärt Sebastian zur Reise?",
+          "en": "What does Sebastian say about the trip?"
+        },
+        "explanation": {
+          "de": "Der Professor ist zur Einwerbung von Forschungsgeldern in Berlin. Die Heizung wird erst danach erwähnt.",
+          "en": "The professor is seeking research funding in Berlin. The heating is mentioned separately."
+        }
+      },
+      {
+        "id": "src-lc-2",
+        "kind": "multi",
+        "prompt": {
+          "de": "Welche ZWEI Informationen stehen im Text?",
+          "en": "Which TWO details are in the text?"
+        },
+        "options": [
+          "Die nächste Vorlesung findet planmäßig nächste Woche statt.",
+          "Die Studierenden sollen sich auf das Thema Aneurysma vorbereiten.",
+          "Die nächste Vorlesung beginnt heute um zwölf.",
+          "Das neue Labor ist bereits eröffnet."
+        ],
+        "answer": [
+          "0",
+          "1"
+        ],
+        "hint": {
+          "de": "Lies das Ende des Gesprächs.",
+          "en": "Read the end of the conversation."
+        },
+        "explanation": {
+          "de": "Vorbereitung und Termin werden am Gesprächsende genannt.",
+          "en": "The preparation topic and date appear at the end."
+        }
+      },
+      {
+        "id": "src-lc-3",
+        "kind": "write",
+        "prompt": {
+          "de": "Schreibe einem Mitstudierenden eine kurze Nachricht mit Absagegrund, nächstem Termin und Vorbereitung.",
+          "en": "Write a short message to a fellow student giving the cancellation reason, next date and preparation."
+        },
+        "minWords": 60,
+        "hint": {
+          "de": "Ordne deine Gedanken: Thema, Beleg, Schluss.",
+          "en": "Organise your ideas: topic, evidence, conclusion."
+        },
+        "explanation": {
+          "de": "Vergleiche deine Antwort mit der Quelle. Andere Formulierungen sind möglich.",
+          "en": "Compare your response with the source. Other wordings are possible."
+        },
+        "model": "Hallo! Die Vorlesung fällt heute aus, weil Professor Schmied in Berlin Forschungsgelder für das neue Labor einwirbt. Nächste Woche findet sie wieder planmäßig statt. Wir sollen uns auf das Thema Aneurysma vorbereiten. Die Literatur steht in der Rundmail. Lies sie am besten vor der nächsten Veranstaltung.",
+        "checklist": [
+          {
+            "de": "Ich nenne das Thema klar.",
+            "en": "I state the topic clearly."
+          },
+          {
+            "de": "Meine Details stimmen mit der Quelle überein.",
+            "en": "My details agree with the source."
+          },
+          {
+            "de": "Ich trenne Fakten und eigene Meinung.",
+            "en": "I distinguish facts from my opinion."
+          }
+        ]
+      }
+    ],
+    "sectionId": "testdaf.course.audio.transcript.001",
+    "origin": "provisional-source",
+    "revision": "wortweg-source-1-f6caac41556b",
+    "minutes": 20,
+    "bookPage": 0,
+    "passage": "Übung 1 / Track 1\nSebastian: Hallo Marisa, warum hast du es so eilig?\nMarisa: Hallo Sebastian, ich muss zur Vorlesung von Profes -\nsor Schmied. Die fängt doch gleich um halb zwölf an, und \njetzt ist es zwanzig nach elf! Du solltest dich auch lieber \nbeeilen. Du weißt doch, dass er es nicht mag, wenn man zu \nspät kommt.\nSebastian: Aber da kam doch eine Rundmail vom medizi -\nnischen Institut, dass die Vorlesung heute ausfällt. Hast du \ndie nicht gelesen?\nMarisa: Nö. Was stand denn drin? Warum fällt sie aus?\nSebastian: Professor Schmied ist nach Berlin gefahren, um \nForschungsgelder für das neue Labor einzuwerben. Es tut \nihm leid, dass er so kurzfristig absagen musste, aber die Ein-\nladung von dem Pharmakonzern kam ganz überraschend.\nMarisa: Ist vielleicht auch besser so, im Hörsaal 8 ist näm -\nlich die Heizung kaputt. Zumindest war sie es gestern, und \nwir haben alle mit Mänteln dagesessen und trotzdem noch \ngefroren.\nSebastian: Na, umso besser. Ach übrigens … in der Mail \nsteht auch, dass wir uns für die nächste Vorlesung auf das \nThema Aneurysma vorbereiten sollen. Literatur ist angege -\nben.\nMarisa: Wann findet denn die nächste Vorlesung statt? \nWann ist er wieder da?\nSebastian: In der Mail steht, dass sie planmäßig nächste \nWoche stattfindet. Wollen wir zusammen in die Mensa ge -\nhen? Wir haben doch jetzt Zeit …",
+    "audio": true,
+    "audioUrl": "/c1/media/000556e07ef01438a1aef8e52d96529cf0690d93605491edee4d34337069217d.mp3",
+    "strategy": {
+      "de": "Trenne sichere Textbelege von Vermutungen. Höre oder lies ein zweites Mal und prüfe deine erste Antwort.",
+      "en": "Separate clear evidence from assumptions. Listen or read again and check your first response."
+    },
+    "provenance": {
+      "sourceId": "sha256:77bfff40d5957a652079bce9b3c120727378ff692eff2a072f7dcb1ceb0218b1",
+      "sourceSha256": "77bfff40d5957a652079bce9b3c120727378ff692eff2a072f7dcb1ceb0218b1",
+      "unitId": "testdaf.physical.77bfff40d5957a65.pdf.000",
+      "revision": "f6caac41556bf3c21f06e4f0f84e3353a32de32bfd3d038e7866f48bec784b45",
+      "status": "provisional-app-enrichment",
+      "semanticApproved": false,
+      "relationshipsReviewed": false,
+      "sectionId": "testdaf.course.audio.transcript.001",
+      "textSha256": "f6caac41556bf3c21f06e4f0f84e3353a32de32bfd3d038e7866f48bec784b45",
+      "bundleManifest": "b6c77d6741be90c9de612e0e203d552aa14b3523fb1be0967dc64c9e1ec880a0",
+      "sourcePath": "originals/77bfff40d5957a652079bce9b3c120727378ff692eff2a072f7dcb1ceb0218b1/MEz_digitalen_TestDaF_Transkriptionen_Audios_Pruefungsteile.pdf"
+    },
+    "teacher": {
+      "warmup": {
+        "de": "Titel zeigen und Vorwissen sammeln. Zwei Vermutungen formulieren lassen.",
+        "en": "Show the title and activate prior knowledge. Ask for two predictions."
+      },
+      "teach": {
+        "de": "Nach jedem Versuch einen Textbeleg verlangen. Vorschlag, Tatsache und Schlussfolgerung unterscheiden.",
+        "en": "Ask for textual evidence after each attempt. Distinguish proposals, facts and conclusions."
+      },
+      "support": {
+        "de": "Text abschnittsweise lesen; Schlüsselwörter markieren. Englische Zusammenfassung bei Bedarf nutzen.",
+        "en": "Read in sections and highlight key words. Use the English summary when needed."
+      },
+      "challenge": {
+        "de": "Eine eigene plausible, aber falsche Antwort formulieren und am Text widerlegen.",
+        "en": "Invent a plausible but incorrect answer and disprove it using the text."
+      },
+      "exit": {
+        "de": "Eine gesicherte Information und eine offene Frage nennen.",
+        "en": "Name one supported fact and one unanswered question."
+      }
+    }
+  },
+  {
+    "id": "source-group-project",
+    "section": "testdaf.course.audio.transcript.003",
+    "skill": "sprechen",
+    "title": {
+      "de": "Ein Referat gemeinsam planen",
+      "en": "Plan a presentation together"
+    },
+    "objective": {
+      "de": "Aufgabenverteilung verstehen und einen eigenen Vorschlag formulieren.",
+      "en": "Understand task allocation and formulate a proposal."
+    },
+    "support": "The group is preparing a presentation on climate change and glaciers. Julia will request information; Arne will build the presentation; Jennifer will find images. Hanne will review information with Julia and is asked to deliver the talk. Distinguish initial suggestions from the final allocation.",
+    "exercises": [
+      {
+        "id": "src-gp-1",
+        "kind": "choice",
+        "prompt": {
+          "de": "Wer übernimmt schließlich die Bildersuche?",
+          "en": "Who ultimately takes responsibility for finding images?"
+        },
+        "options": [
+          "Hanne",
+          "Jennifer",
+          "Arne"
+        ],
+        "answer": [
+          "1"
+        ],
+        "hint": {
+          "de": "Achte auf „abgemacht“.",
+          "en": "Look for “abgemacht”."
+        },
+        "explanation": {
+          "de": "Zuerst wird Hanne gefragt, später wird Jennifer ausdrücklich für die Bilder zuständig.",
+          "en": "Hanne is asked first, but Jennifer is ultimately assigned the images."
+        }
+      },
+      {
+        "id": "src-gp-2",
+        "kind": "gap",
+        "prompt": {
+          "de": "Wer erstellt die Präsentation am Computer?",
+          "en": "Who creates the presentation on the computer?"
+        },
+        "options": [],
+        "answer": [
+          "Arne"
+        ],
+        "hint": {
+          "de": "Wer wird „Computerexperte“ genannt?",
+          "en": "Who is called the computer expert?"
+        },
+        "explanation": {
+          "de": "Julia bittet Arne um die Gestaltung, und er sagt zu.",
+          "en": "Julia asks Arne to create it, and he agrees."
+        }
+      },
+      {
+        "id": "src-gp-3",
+        "kind": "speak",
+        "prompt": {
+          "de": "Fasse die endgültige Aufgabenverteilung zusammen. Schlage danach vor, wie die Gruppe Hanne beim Vortrag unterstützen kann.",
+          "en": "Summarise the final allocation. Then suggest how the group could support Hanne with the talk."
+        },
+        "minWords": 60,
+        "hint": {
+          "de": "Ordne deine Gedanken: Thema, Beleg, Schluss.",
+          "en": "Organise your ideas: topic, evidence, conclusion."
+        },
+        "explanation": {
+          "de": "Vergleiche deine Antwort mit der Quelle. Andere Formulierungen sind möglich.",
+          "en": "Compare your response with the source. Other wordings are possible."
+        },
+        "model": "Julia besorgt Informationsmaterial. Arne gestaltet die Präsentation und Jennifer sucht Bilder. Hanne sichtet das Material mit Julia und soll den Vortrag halten. Ich schlage vor, dass die Gruppe vorher gemeinsam probt. So kann Hanne sicherer werden und Rückmeldungen bekommen.",
+        "checklist": [
+          {
+            "de": "Ich nenne das Thema klar.",
+            "en": "I state the topic clearly."
+          },
+          {
+            "de": "Meine Details stimmen mit der Quelle überein.",
+            "en": "My details agree with the source."
+          },
+          {
+            "de": "Ich trenne Fakten und eigene Meinung.",
+            "en": "I distinguish facts from my opinion."
+          }
+        ]
+      }
+    ],
+    "sectionId": "testdaf.course.audio.transcript.003",
+    "origin": "provisional-source",
+    "revision": "wortweg-source-1-ae336cdafcb4",
+    "minutes": 20,
+    "bookPage": 0,
+    "passage": "Übung 3 / Track 3\nJulia:  Jetzt lasst uns mal zur Sache kommen, sonst werden \nwir nie fertig. Also … die Auswirkungen des Klimawandels \nauf die Gletscher.\nJennifer: Ein aktuelles Thema, gefällt mir gut. Nun, wer \nmacht was?\nJulia:  Ich kenne jemanden beim Bundesumweltamt. Wie \nwäre es, wenn ich mal frage, ob die Informationsmaterial \nherausrücken?\nArne: Das ist super. Dann mach das doch direkt heute noch. \nEs wird ja etwas dauern, bis wir das haben.\nJulia:  Ja, ich schreibe gleich nachher eine Mail. Du bist doch \nunser Computerexperte, Arne. Könntest du die Präsentation \nam Computer erstellen und alles schön gestalten?\nArne: Ja, kann ich machen. Aber wir sollten nicht nur Text \npräsentieren, sondern auch ein paar Bilder zeigen. Kannst \ndu die vielleicht raussuchen, Hanne?\nHanne: Naja, ich bin in Computerdingen nicht so gut, aber \nwenn ihr meint … An was habt ihr denn gedacht? Fotos von \nEisbären oder so?\nJennifer: Das könnte man machen, aber ich habe neulich die \nBilder von Atacama gesehen, ihr wisst doch, diese Wüste in \nSüdamerika. Die haben da ganz schön Probleme, weil die \nGletscher für sie die Wasserversorgung darstellen. Ich könn -\nte die Bilder nochmal suchen.\nJulia:  Ok, dann ist das abgemacht: Jennifer ist für die Bilder \nzuständig.\nHanne: Und was soll ich machen? \nJulia:  Du könntest mit mir das Infomaterial sichten, Hanne.\nArne: Und du könntest dann den Vortrag halten.\nHanne: Oh je, ausgerechnet ich. Ich bin bei sowas immer so \naufgeregt.\nJennifer: Ich denke, das trifft auf jeden von uns zu. Aber je \nöfter du das machst, desto mehr gewöhnst du dich daran …",
+    "audio": true,
+    "audioUrl": "/c1/study-media/a369e49ead88166aa72b48923ddd18d199cc51b574a2cb0b03dfd4378d79c425.mp3",
+    "strategy": {
+      "de": "Trenne sichere Textbelege von Vermutungen. Höre oder lies ein zweites Mal und prüfe deine erste Antwort.",
+      "en": "Separate clear evidence from assumptions. Listen or read again and check your first response."
+    },
+    "provenance": {
+      "sourceId": "sha256:77bfff40d5957a652079bce9b3c120727378ff692eff2a072f7dcb1ceb0218b1",
+      "sourceSha256": "77bfff40d5957a652079bce9b3c120727378ff692eff2a072f7dcb1ceb0218b1",
+      "unitId": "testdaf.physical.77bfff40d5957a65.pdf.001",
+      "revision": "ae336cdafcb4627095809187071297f4acd98f3d44ea87c804e612dd9f21ebc2",
+      "status": "provisional-app-enrichment",
+      "semanticApproved": false,
+      "relationshipsReviewed": false,
+      "sectionId": "testdaf.course.audio.transcript.003",
+      "textSha256": "ae336cdafcb4627095809187071297f4acd98f3d44ea87c804e612dd9f21ebc2",
+      "bundleManifest": "b6c77d6741be90c9de612e0e203d552aa14b3523fb1be0967dc64c9e1ec880a0",
+      "sourcePath": "originals/77bfff40d5957a652079bce9b3c120727378ff692eff2a072f7dcb1ceb0218b1/MEz_digitalen_TestDaF_Transkriptionen_Audios_Pruefungsteile.pdf"
+    },
+    "teacher": {
+      "warmup": {
+        "de": "Titel zeigen und Vorwissen sammeln. Zwei Vermutungen formulieren lassen.",
+        "en": "Show the title and activate prior knowledge. Ask for two predictions."
+      },
+      "teach": {
+        "de": "Nach jedem Versuch einen Textbeleg verlangen. Vorschlag, Tatsache und Schlussfolgerung unterscheiden.",
+        "en": "Ask for textual evidence after each attempt. Distinguish proposals, facts and conclusions."
+      },
+      "support": {
+        "de": "Text abschnittsweise lesen; Schlüsselwörter markieren. Englische Zusammenfassung bei Bedarf nutzen.",
+        "en": "Read in sections and highlight key words. Use the English summary when needed."
+      },
+      "challenge": {
+        "de": "Eine eigene plausible, aber falsche Antwort formulieren und am Text widerlegen.",
+        "en": "Invent a plausible but incorrect answer and disprove it using the text."
+      },
+      "exit": {
+        "de": "Eine gesicherte Information und eine offene Frage nennen.",
+        "en": "Name one supported fact and one unanswered question."
+      }
+    }
+  },
+  {
+    "id": "source-winter-wildlife",
+    "section": "testdaf.course.audio.transcript.013",
+    "skill": "lesen",
+    "title": {
+      "de": "Wildtiere im Winter",
+      "en": "Wildlife in winter"
+    },
+    "objective": {
+      "de": "Eine Ursache-Wirkungs-Kette aus einem Sachtext erschließen.",
+      "en": "Identify a cause-and-effect chain in an informational text."
+    },
+    "support": "Some regions provide deer with supplementary feed during winter. The feed is easy to digest and rich in energy but differs from natural winter food. The described study reports negative effects on gut bacteria and further adverse health consequences. This exercise checks reading comprehension, not wildlife-care advice.",
+    "exercises": [
+      {
+        "id": "src-ww-1",
+        "kind": "choice",
+        "prompt": {
+          "de": "Was wird über das Zusatzfutter berichtet?",
+          "en": "What does the text report about supplementary feed?"
+        },
+        "options": [
+          "Es entspricht genau dem natürlichen Winterfutter.",
+          "Es kann die Darmbakterien der Rehe negativ beeinflussen.",
+          "Es wird in allen europäischen Regionen verboten."
+        ],
+        "answer": [
+          "1"
+        ],
+        "hint": {
+          "de": "Lies die letzten beiden Sätze.",
+          "en": "Read the final two sentences."
+        },
+        "explanation": {
+          "de": "Der Text berichtet negative Auswirkungen auf Bakterien im Magen-Darm-System.",
+          "en": "The text reports negative effects on bacteria in the digestive system."
+        }
+      },
+      {
+        "id": "src-ww-2",
+        "kind": "order",
+        "prompt": {
+          "de": "Ordne die Aussagen zur beschriebenen Wirkungskette.",
+          "en": "Order the statements in the described chain."
+        },
+        "options": [
+          "Weitere negative Folgen für die Gesundheit",
+          "Zusatzfutter weicht vom natürlichen Winterangebot ab",
+          "Negative Auswirkungen auf Darmbakterien"
+        ],
+        "answer": [
+          "1",
+          "2",
+          "0"
+        ],
+        "hint": {
+          "de": "Beginne mit der Veränderung des Futters.",
+          "en": "Start with the change in food."
+        },
+        "explanation": {
+          "de": "Die Abweichung des Futters geht den beschriebenen Bakterien- und Gesundheitsfolgen voraus.",
+          "en": "The food difference precedes the described bacterial and health consequences."
+        }
+      },
+      {
+        "id": "src-ww-3",
+        "kind": "write",
+        "prompt": {
+          "de": "Fasse die Untersuchung neutral zusammen. Trenne den berichteten Befund von Fragen, die der Text offenlässt.",
+          "en": "Summarise the study neutrally. Separate the reported finding from questions left unanswered."
+        },
+        "minWords": 60,
+        "hint": {
+          "de": "Ordne deine Gedanken: Thema, Beleg, Schluss.",
+          "en": "Organise your ideas: topic, evidence, conclusion."
+        },
+        "explanation": {
+          "de": "Vergleiche deine Antwort mit der Quelle. Andere Formulierungen sind möglich.",
+          "en": "Compare your response with the source. Other wordings are possible."
+        },
+        "model": "Der Text beschreibt eine Untersuchung zu Zusatzfutter für Rehe im Winter. Dieses Futter unterscheidet sich von der natürlichen Winternahrung. Laut Text wirkt es sich negativ auf die Darmbakterien und damit auf die Gesundheit aus. Angaben zur Anzahl der untersuchten Tiere und zur Dauer der Untersuchung fehlen.",
+        "checklist": [
+          {
+            "de": "Ich nenne das Thema klar.",
+            "en": "I state the topic clearly."
+          },
+          {
+            "de": "Meine Details stimmen mit der Quelle überein.",
+            "en": "My details agree with the source."
+          },
+          {
+            "de": "Ich trenne Fakten und eigene Meinung.",
+            "en": "I distinguish facts from my opinion."
+          }
+        ]
+      }
+    ],
+    "sectionId": "testdaf.course.audio.transcript.013",
+    "origin": "provisional-source",
+    "revision": "wortweg-source-1-5825280cf6f9",
+    "minutes": 20,
+    "bookPage": 0,
+    "passage": "Übung 1 / Track 13 \nDas Winterhalbjahr ist eine eher magere Zeit für viele \nWildtiere in Europa. Auch Rehe haben manchmal Schwie -\nrigkeiten, mit dem geringen Nahrungsangebot im Winter \nzurechtzukommen. In manchen Regionen ist es deshalb üb -\nlich, die Tiere mit Zusatznahrung zu versorgen. Dabei wer -\nden im Allgemeinen Futtermittel gegeben, die leicht zu ver -\ndauen sind und viel Energie liefern. Dieses Futter entspricht \naber nicht dem natürlichen Nahrungsangebot im Winter. \nForscher haben nun untersucht, welchen Effekt dieses Zu -\nsatzfutter auf die Rehe hat. Sie haben festgestellt, dass es \nsich negativ auf die Bakterien im Magen-Darm-System der \nTiere auswirkt, was dann weitere schlechte Folgen für ihren \nGesundheitszustand nach sich zieht.",
+    "audio": false,
+    "audioUrl": "/c1/study-media/2a705c0284ff3dbf426280860e548abbc1ac719449b3323b8f8ec32966220a33.mp3",
+    "strategy": {
+      "de": "Trenne sichere Textbelege von Vermutungen. Höre oder lies ein zweites Mal und prüfe deine erste Antwort.",
+      "en": "Separate clear evidence from assumptions. Listen or read again and check your first response."
+    },
+    "provenance": {
+      "sourceId": "sha256:77bfff40d5957a652079bce9b3c120727378ff692eff2a072f7dcb1ceb0218b1",
+      "sourceSha256": "77bfff40d5957a652079bce9b3c120727378ff692eff2a072f7dcb1ceb0218b1",
+      "unitId": "testdaf.physical.77bfff40d5957a65.pdf.005",
+      "revision": "5825280cf6f950b7472dfe3d8057b502ed3410d9dcb4ca088dc3e48f40543d7c",
+      "status": "provisional-app-enrichment",
+      "semanticApproved": false,
+      "relationshipsReviewed": false,
+      "sectionId": "testdaf.course.audio.transcript.013",
+      "textSha256": "5825280cf6f950b7472dfe3d8057b502ed3410d9dcb4ca088dc3e48f40543d7c",
+      "bundleManifest": "b6c77d6741be90c9de612e0e203d552aa14b3523fb1be0967dc64c9e1ec880a0",
+      "sourcePath": "originals/77bfff40d5957a652079bce9b3c120727378ff692eff2a072f7dcb1ceb0218b1/MEz_digitalen_TestDaF_Transkriptionen_Audios_Pruefungsteile.pdf"
+    },
+    "teacher": {
+      "warmup": {
+        "de": "Titel zeigen und Vorwissen sammeln. Zwei Vermutungen formulieren lassen.",
+        "en": "Show the title and activate prior knowledge. Ask for two predictions."
+      },
+      "teach": {
+        "de": "Nach jedem Versuch einen Textbeleg verlangen. Vorschlag, Tatsache und Schlussfolgerung unterscheiden.",
+        "en": "Ask for textual evidence after each attempt. Distinguish proposals, facts and conclusions."
+      },
+      "support": {
+        "de": "Text abschnittsweise lesen; Schlüsselwörter markieren. Englische Zusammenfassung bei Bedarf nutzen.",
+        "en": "Read in sections and highlight key words. Use the English summary when needed."
+      },
+      "challenge": {
+        "de": "Eine eigene plausible, aber falsche Antwort formulieren und am Text widerlegen.",
+        "en": "Invent a plausible but incorrect answer and disprove it using the text."
+      },
+      "exit": {
+        "de": "Eine gesicherte Information und eine offene Frage nennen.",
+        "en": "Name one supported fact and one unanswered question."
+      }
+    }
+  },
+  {
+    "id": "source-computer-crisis",
+    "section": "testdaf.mock-exam-1.audio.transcript.002",
+    "skill": "schreiben",
+    "title": {
+      "de": "Eine Fristverlängerung begründen",
+      "en": "Explain a request for more time"
+    },
+    "objective": {
+      "de": "Gesprächsinformationen in eine höfliche Anfrage übertragen.",
+      "en": "Turn information from a conversation into a polite request."
+    },
+    "support": "Julius must submit his paper the next afternoon, but his computer has crashed and the files are inaccessible. Sandra suggests a computer help service. The normal office hour is Tuesday afternoon. Julius also has an ancient history exam on Thursday. Use only the facts in the conversation; do not invent an approved extension.",
+    "exercises": [
+      {
+        "id": "src-cc-1",
+        "kind": "choice",
+        "prompt": {
+          "de": "Was ist Julius’ dringendes Problem?",
+          "en": "What is Julius’s urgent problem?"
+        },
+        "options": [
+          "Sein Computer ist abgestürzt, und seine Arbeit ist nicht verfügbar.",
+          "Sein Professor hat seine Arbeit abgelehnt.",
+          "Seine Prüfung wurde auf morgen verschoben."
+        ],
+        "answer": [
+          "0"
+        ],
+        "hint": {
+          "de": "Lies Julius’ Erklärung der „Katastrophe“.",
+          "en": "Read Julius’s explanation of the catastrophe."
+        },
+        "explanation": {
+          "de": "Julius nennt den Computerabsturz und den Verlust des Zugriffs auf seine Arbeit.",
+          "en": "Julius describes the crash and loss of access to his work."
+        }
+      },
+      {
+        "id": "src-cc-2",
+        "kind": "write",
+        "prompt": {
+          "de": "Schreibe als Julius eine höfliche E-Mail an Professor Kruse. Erkläre das Problem, nenne die Abgabefrist und bitte um eine Lösung.",
+          "en": "Write a polite email from Julius to Professor Kruse. Explain the problem, mention the deadline and request a solution."
+        },
+        "minWords": 60,
+        "hint": {
+          "de": "Ordne deine Gedanken: Thema, Beleg, Schluss.",
+          "en": "Organise your ideas: topic, evidence, conclusion."
+        },
+        "explanation": {
+          "de": "Vergleiche deine Antwort mit der Quelle. Andere Formulierungen sind möglich.",
+          "en": "Compare your response with the source. Other wordings are possible."
+        },
+        "model": "Sehr geehrter Professor Kruse, ich muss meine Seminararbeit morgen Nachmittag abgeben. Leider ist mein Computer abgestürzt, und ich habe derzeit keinen Zugriff auf den Text und das Literaturverzeichnis. Ich werde mich an die Computerberatung wenden. Wäre eine kurze Fristverlängerung möglich? Über einen Gesprächstermin würde ich mich freuen. Mit freundlichen Grüßen, Julius",
+        "checklist": [
+          {
+            "de": "Ich nenne das Thema klar.",
+            "en": "I state the topic clearly."
+          },
+          {
+            "de": "Meine Details stimmen mit der Quelle überein.",
+            "en": "My details agree with the source."
+          },
+          {
+            "de": "Ich trenne Fakten und eigene Meinung.",
+            "en": "I distinguish facts from my opinion."
+          }
+        ]
+      },
+      {
+        "id": "src-cc-3",
+        "kind": "speak",
+        "prompt": {
+          "de": "Erkläre einem Lernpartner das Problem und vergleiche zwei mögliche nächste Schritte.",
+          "en": "Explain the problem to a partner and compare two possible next steps."
+        },
+        "minWords": 60,
+        "hint": {
+          "de": "Ordne deine Gedanken: Thema, Beleg, Schluss.",
+          "en": "Organise your ideas: topic, evidence, conclusion."
+        },
+        "explanation": {
+          "de": "Vergleiche deine Antwort mit der Quelle. Andere Formulierungen sind möglich.",
+          "en": "Compare your response with the source. Other wordings are possible."
+        },
+        "model": "Julius sollte zuerst mit Professor Kruse sprechen und die Situation erklären. Gleichzeitig kann er die Computerberatung aufsuchen. Das Gespräch klärt die Abgabefrist; die Beratung könnte helfen, die Dateien wiederherzustellen. Im Text ist noch keine Fristverlängerung zugesagt.",
+        "checklist": [
+          {
+            "de": "Ich nenne das Thema klar.",
+            "en": "I state the topic clearly."
+          },
+          {
+            "de": "Meine Details stimmen mit der Quelle überein.",
+            "en": "My details agree with the source."
+          },
+          {
+            "de": "Ich trenne Fakten und eigene Meinung.",
+            "en": "I distinguish facts from my opinion."
+          }
+        ]
+      }
+    ],
+    "sectionId": "testdaf.mock-exam-1.audio.transcript.002",
+    "origin": "provisional-source",
+    "revision": "wortweg-source-1-df98b8c2099d",
+    "minutes": 20,
+    "bookPage": 0,
+    "passage": "Hören 1, Hörtext / Track 2\nSandra: Hallo Julius, um Gottes Willen, was ist dir denn pas -\nsiert? Du siehst ja völlig fertig aus.\nJulius:  Bin ich auch, ich muss unbedingt mit Professor Kruse \nsprechen. Ist er da?\nSandra: Ja, aber er hat jetzt eigentlich keine Sprechstunde. \nDie ist Dienstagnachmittag. Ich hatte einen Extra-Termin, \nich promoviere doch bei ihm. An der Arbeit muss ich leider \nnoch einiges ändern, vor allem mit der Gliederung war er \nnicht einverstanden. Aber sag, was ist denn los mit dir?\nJulius:  Große Katastrophe! Stell‘ dir vor, ich muss eigentlich \nmorgen Nachmittag meine Seminararbeit abgeben, aber \nmein Computer ist abgestürzt  und jetzt ist alles weg. Text, \nLiteraturverzeichnis, alles! Ich habe die ganze Nacht damit \nverbracht zu versuchen, ihn wieder zum Laufen zu kriegen.\nSandra: Hattet ihr denn im Wohnheim nicht einen, der In -\nformatik studiert?\nJulius:  Jetzt nicht mehr. Früher war da der Joel. Der kannte \nsich echt gut aus und hat uns oft geholfen, aber der hat \nim letzten Semester seinen Bachelor gemacht und ist jetzt \nweg. Ich weiß auch nicht, ob es nur ein Software-Fehler ist \noder ob die Hardware nicht mehr mitmacht. Schließlich ist \ndas Ding schon fünf Jahre alt.\nSandra: Da fällt mir was ein: Geh doch morgen früh mal zu \nden Informatikern rüber, die haben da so eine Art Sprech -\nstunde, wo sie dich beraten, wenn man dringende Compu -\nterprobleme hat.\nJulius:  Ach ja, daran habe ich gar nicht gedacht, aber diens -\ntagmorgens habe ich immer die Vorlesung in Praktischer \nPhilosophie , obwohl … in diesem Fall könnte ich sie viel -\nleicht mal schwänzen.\nSandra: Sicher kannst du das, das ist doch ein Notfall. Du \narbeitest doch in der Buchhandlung hier auf dem Campus. \nGibt es da keinen, der sich auskennt? Ihr arbeitet da doch \nauch mit dem Computer.\nJulius:  Ja klar, für die Bestellungen und so. Aber wenn’s da \nProbleme gibt, dann rufen die immer eine Firma an, die ha -\nben so einen Notdienst, aber den kann ich mir nicht leisten. \nUnd eigentlich müsste ich jetzt schon für die Klausur am \nDonnerstag lernen.\nSandra: Ja, da wird man echt nervös. Was für eine Klausur \nschreibst du denn?\nJulius:  In alter Geschichte , zum Glück kenne ich mich da gut \naus, weil ich Geschichte als Leistungskurs hatte, und unser \nGeschichtslehrer hatte auch Latein und Griechisch als Fä -\ncher, das war so ein richtiger Altertums-Freak. Karneval kam \nder immer als Julius Cäsar verkleidet in die Schule.\n1\n2\nSandra: Das ist ja witzig. Aber du solltest jetzt mit Professor \nKruse sprechen. Ich denke, er wird Verständnis haben, wenn \ndu ihm erzählst, was passiert ist.\nJulius:  Das hoffe ich, sonst bin ich in der Uhr.\nSandra: Sehen wir uns am Freitag beim kreativen Schrei -\nben?\nJulius:  Ich werd‘s versuchen, aber die Seminararbeit ist mir \nim Zweifelsfall wichtiger.\nSandra: Kann ich verstehen. Dann geh jetzt mal in die Höhle \ndes Löwen. Viel Glück!\nJulius:  Kann ich brauchen, danke! ",
+    "audio": false,
+    "audioUrl": "/c1/media/2b456f4ad36c00b68b7e9a2e8d4c5091d908d65458ed13587bc84357f0eca02e.mp3",
+    "strategy": {
+      "de": "Trenne sichere Textbelege von Vermutungen. Höre oder lies ein zweites Mal und prüfe deine erste Antwort.",
+      "en": "Separate clear evidence from assumptions. Listen or read again and check your first response."
+    },
+    "provenance": {
+      "sourceId": "sha256:ecaf7cd56febaf2700d63652d4a76419150631f7e8e64edc7a2345313674a962",
+      "sourceSha256": "ecaf7cd56febaf2700d63652d4a76419150631f7e8e64edc7a2345313674a962",
+      "unitId": "testdaf.physical.ecaf7cd56febaf27.pdf.000",
+      "revision": "df98b8c2099d3b87d7c23d4fd336d2a75fdd1cdeebf7680314bb69f4357b8990",
+      "status": "provisional-app-enrichment",
+      "semanticApproved": false,
+      "relationshipsReviewed": false,
+      "sectionId": "testdaf.mock-exam-1.audio.transcript.002",
+      "textSha256": "df98b8c2099d3b87d7c23d4fd336d2a75fdd1cdeebf7680314bb69f4357b8990",
+      "bundleManifest": "b6c77d6741be90c9de612e0e203d552aa14b3523fb1be0967dc64c9e1ec880a0",
+      "sourcePath": "originals/ecaf7cd56febaf2700d63652d4a76419150631f7e8e64edc7a2345313674a962/MEz_digitalen_TestDaF_Transkriptionen_Audios_Modellpruefung_1.pdf"
+    },
+    "teacher": {
+      "warmup": {
+        "de": "Titel zeigen und Vorwissen sammeln. Zwei Vermutungen formulieren lassen.",
+        "en": "Show the title and activate prior knowledge. Ask for two predictions."
+      },
+      "teach": {
+        "de": "Nach jedem Versuch einen Textbeleg verlangen. Vorschlag, Tatsache und Schlussfolgerung unterscheiden.",
+        "en": "Ask for textual evidence after each attempt. Distinguish proposals, facts and conclusions."
+      },
+      "support": {
+        "de": "Text abschnittsweise lesen; Schlüsselwörter markieren. Englische Zusammenfassung bei Bedarf nutzen.",
+        "en": "Read in sections and highlight key words. Use the English summary when needed."
+      },
+      "challenge": {
+        "de": "Eine eigene plausible, aber falsche Antwort formulieren und am Text widerlegen.",
+        "en": "Invent a plausible but incorrect answer and disprove it using the text."
+      },
+      "exit": {
+        "de": "Eine gesicherte Information und eine offene Frage nennen.",
+        "en": "Name one supported fact and one unanswered question."
+      }
+    }
+  }
+]

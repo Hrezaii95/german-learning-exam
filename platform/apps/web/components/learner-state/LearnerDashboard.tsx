@@ -1,8 +1,10 @@
 "use client";
+import { LArticle, LDetails, LDiv, LH2, LH3, LLi, LP, LSection, LSpan, LStrong, LSummary, LUl } from "@/components/i18n/LocalizedElements";
+
 
 import {useStudyScope} from "@/components/study/StudyScope";
 import {tagsForLesson} from "@/lib/study/scope";
-import Link from "next/link";
+import Link from "@/components/i18n/LocalizedLink";
 import {useEffect, useState, type ReactNode} from "react";
 import {useStudy} from "@/components/study/StudyProvider";
 import {courseChapters} from "@/lib/study/lesson-four";
@@ -52,16 +54,16 @@ function StudioMedia({
 }) {
   if (!illustration) {
     return (
-      <div className="studio-media studio-media--plate">
-        <span className="studio-media__word german" lang="de">
+      <LDiv className="studio-media studio-media--plate">
+        <LSpan className="studio-media__word german" lang="de">
           {titleDe}
-        </span>
-        <span className="studio-media__note">Learn · listen · practise</span>
-      </div>
+        </LSpan>
+        <LSpan className="studio-media__note">Learn · listen · practise</LSpan>
+      </LDiv>
     );
   }
   return (
-    <div className="studio-media">
+    <LDiv className="studio-media">
       <img
         className="studio-media__image"
         src={withPagesBaseAssetPath(`/illustrations/${illustration.filename}`)}
@@ -72,7 +74,7 @@ function StudioMedia({
         loading="eager"
         decoding="async"
       />
-    </div>
+    </LDiv>
   );
 }
 
@@ -94,35 +96,35 @@ function ContinueCard({
   illustration: LearnerIllustration | null;
 }) {
   return (
-    <section
+    <LSection
       className="panel studio-card studio-card--continue"
       aria-labelledby="continue-heading"
     >
       {illustration && <StudioMedia illustration={illustration} titleDe={titleDe} />}
-      <div className="studio-card__body">
-        <p className="studio-card__eyebrow">{eyebrow}</p>
-        <h2 id="continue-heading" className="studio-card__title">
-          <span className="german" lang="de">
+      <LDiv className="studio-card__body">
+        <LP className="studio-card__eyebrow">{eyebrow}</LP>
+        <LH2 id="continue-heading" className="studio-card__title">
+          <LSpan className="german" lang="de">
             {titleDe}
-          </span>
-        </h2>
-        <p className="studio-card__next">{nextStep}</p>
+          </LSpan>
+        </LH2>
+        <LP className="studio-card__next">{nextStep}</LP>
         {chips.length > 0 ? (
-          <div className="meta-row">
+          <LDiv className="meta-row">
             {chips.map((chip) => (
-              <span key={chip} className="meta-chip">
+              <LSpan key={chip} className="meta-chip">
                 {chip}
-              </span>
+              </LSpan>
             ))}
-          </div>
+          </LDiv>
         ) : null}
-        <p className="studio-card__action">
+        <LP className="studio-card__action">
           <Link className="btn btn-primary" href={href}>
             {actionLabel}
           </Link>
-        </p>
-      </div>
-    </section>
+        </LP>
+      </LDiv>
+    </LSection>
   );
 }
 
@@ -134,16 +136,16 @@ function MissionCard({
   children: ReactNode;
 }) {
   return (
-    <section
+    <LSection
       className="panel studio-card studio-card--mission"
       aria-labelledby="mission-heading"
       {...(status ? { role: "status" } : {})}
     >
-      <h2 id="mission-heading" className="studio-card__title">
+      <LH2 id="mission-heading" className="studio-card__title">
         Today’s mission
-      </h2>
+      </LH2>
       {children}
-    </section>
+    </LSection>
   );
 }
 
@@ -153,16 +155,16 @@ function MissionMix({ due, next }: { due: number; next: number }) {
   if (total === 0) return null;
   const duePercent = Math.round((due / total) * 100);
   return (
-    <div className="mission-mix" aria-hidden="true">
-      <span
+    <LDiv className="mission-mix" aria-hidden="true">
+      <LSpan
         className="mission-mix__segment mission-mix__segment--due"
         style={{ width: `${duePercent}%` }}
       />
-      <span
+      <LSpan
         className="mission-mix__segment mission-mix__segment--new"
         style={{ width: `${100 - duePercent}%` }}
       />
-    </div>
+    </LDiv>
   );
 }
 
@@ -182,27 +184,27 @@ function EvidenceStrip({
   note: string | null;
 }) {
   return (
-    <section className="evidence-strip" aria-labelledby="evidence-heading">
-      <h2 id="evidence-heading" className="evidence-strip__heading">
+    <LSection className="evidence-strip" aria-labelledby="evidence-heading">
+      <LH2 id="evidence-heading" className="evidence-strip__heading">
         My progress
-      </h2>
+      </LH2>
       {note ? (
-        <p className="evidence-strip__note" role="status">
+        <LP className="evidence-strip__note" role="status">
           {note}
-        </p>
+        </LP>
       ) : (
-        <ul className="evidence-strip__list">
+        <LUl className="evidence-strip__list">
           {items.map((item) => (
-            <li key={item.id} className="evidence-item">
-              <span className="evidence-item__label">{item.label}</span>
-              <span className="evidence-item__value">{item.value}</span>
+            <LLi key={item.id} className="evidence-item">
+              <LSpan className="evidence-item__label">{item.label}</LSpan>
+              <LSpan className="evidence-item__value">{item.value}</LSpan>
               {item.mark ? (
-                <span
+                <LSpan
                   className="evidence-item__mark"
                   role="img"
                   aria-label={item.mark.text}
                 >
-                  <span
+                  <LSpan
                     className="evidence-item__mark-fill"
                     style={{
                       width: `${
@@ -212,13 +214,13 @@ function EvidenceStrip({
                       }%`,
                     }}
                   />
-                </span>
+                </LSpan>
               ) : null}
-            </li>
+            </LLi>
           ))}
-        </ul>
+        </LUl>
       )}
-    </section>
+    </LSection>
   );
 }
 
@@ -240,45 +242,45 @@ function CourseCard({
   const illustration = illustrationForLesson(lesson.id);
 
   return (
-    <article className="panel course-card">
+    <LArticle className="panel course-card">
       <StudioMedia illustration={illustration} titleDe={lesson.titleDe} />
-      <div className="course-card__body">
-        <p className="studio-card__eyebrow">{lessonLabel(lesson.routeSegment)}</p>
-        <h3 className="course-card__title">
-          <span className="german" lang="de">
+      <LDiv className="course-card__body">
+        <LP className="studio-card__eyebrow">{lessonLabel(lesson.routeSegment)}</LP>
+        <LH3 className="course-card__title">
+          <LSpan className="german" lang="de">
             {lesson.titleDe}
-          </span>
-        </h3>
-        <p className="muted">{lesson.titleEn}</p>
-        <div className="meta-row">
-          <span className="meta-chip">{lesson.activityCount} activities</span>
-          <span className="meta-chip">{lesson.estimatedMinutesTotal} min</span>
-        </div>
+          </LSpan>
+        </LH3>
+        <LP className="muted">{lesson.titleEn}</LP>
+        <LDiv className="meta-row">
+          <LSpan className="meta-chip">{lesson.activityCount} activities</LSpan>
+          <LSpan className="meta-chip">{lesson.estimatedMinutesTotal} min</LSpan>
+        </LDiv>
         {mode === "ready" ? (
-          <div className="course-card__progress">
-            <strong>
+          <LDiv className="course-card__progress">
+            <LStrong>
               {completed} of {ordered.length} done · {percent}%
-            </strong>
+            </LStrong>
             <progress
               value={completed}
               max={ordered.length || 1}
               aria-label={`${lessonLabel(lesson.routeSegment)} progress`}
             />
-          </div>
+          </LDiv>
         ) : (
-          <p className="dense course-card__progress-note">
+          <LP className="dense course-card__progress-note">
             {mode === "loading"
               ? "Loading saved progress…"
               : "Your saved progress loads in this browser."}
-          </p>
+          </LP>
         )}
-        <p className="studio-card__action">
+        <LP className="studio-card__action">
           <Link className="btn btn-secondary" href={lesson.canonicalPath}>
             Open lesson {lesson.routeSegment}
           </Link>
-        </p>
-      </div>
-    </article>
+        </LP>
+      </LDiv>
+    </LArticle>
   );
 }
 
@@ -294,9 +296,9 @@ function CourseCards({
   mode: StudioMode;
 }) {
   return (
-    <section aria-labelledby="lessons-heading">
-      <h2 id="lessons-heading">Your lessons</h2>
-      <div className="course-cards">
+    <LSection aria-labelledby="lessons-heading">
+      <LH2 id="lessons-heading">Your lessons</LH2>
+      <LDiv className="course-cards">
         {lessons.map((lesson) => (
           <CourseCard
             key={lesson.id}
@@ -306,8 +308,8 @@ function CourseCards({
             mode={mode}
           />
         ))}
-      </div>
-    </section>
+      </LDiv>
+    </LSection>
   );
 }
 
@@ -333,13 +335,13 @@ export function LearnerDashboard({
   // Storage exists but could not be read — never guess at progress here.
   if (snapshot && snapshot.status !== "loading" && !hydration) {
     return (
-      <section className="panel" role="alert">
-        <h2>Local progress needs attention</h2>
-        <p>{snapshot.statusMessage}</p>
+      <LSection className="panel" role="alert">
+        <LH2>Local progress needs attention</LH2>
+        <LP>{snapshot.statusMessage}</LP>
         <Link className="btn btn-secondary" href="/settings">
           Open recovery settings
         </Link>
-      </section>
+      </LSection>
     );
   }
 
@@ -430,8 +432,8 @@ export function LearnerDashboard({
       : [];
 
   return (
-    <div className="stack">
-      <div className="studio-board">
+    <LDiv className="stack">
+      <LDiv className="studio-board">
         {(selectedLessons.length>0||studyChapter)&&<ContinueCard
           eyebrow={canContinue ? "Continue" : "Start here"}
           titleDe={studyChapter?.title??continueTitleDe}
@@ -448,65 +450,65 @@ export function LearnerDashboard({
 
         {study?.ready && saved.length>0 ? (
           <MissionCard>
-            <p className="studio-card__next"><strong>{due.length} ready to review</strong> from {saved.length} saved items in your study selection.</p>
-            <p>Recall the meaning, then rate how well you remembered it. Your rating sets the next review date.</p>
-            <p className="studio-card__action"><Link className="btn btn-primary" href={due.length?"/saved?due=1":"/saved"}>{due.length?"Review due items":"Open my collection"}</Link></p>
+            <LP className="studio-card__next"><LStrong>{due.length} ready to review</LStrong> from {saved.length} saved items in your study selection.</LP>
+            <LP>Recall the meaning, then rate how well you remembered it. Your rating sets the next review date.</LP>
+            <LP className="studio-card__action"><Link className="btn btn-primary" href={due.length?"/saved?due=1":"/saved"}>{due.length?"Review due items":"Open my collection"}</Link></LP>
             <Link href="/review">Guided exercises{mission ? ` · ${mission.dueCount} due, ${mission.newCount} new` : ""} →</Link>
           </MissionCard>
         ) : mode === "ready" && mission && mission.candidateCount > 0 ? (
           <MissionCard>
-            <p className="studio-card__next">{mission.mission.reasonText}</p>
+            <LP className="studio-card__next">{mission.mission.reasonText}</LP>
             <MissionMix due={mission.dueCount} next={mission.newCount} />
-            <div className="meta-row">
-              <span className="meta-chip">{mission.dueCount} due</span>
-              <span className="meta-chip">{mission.newCount} new</span>
-              <span className="meta-chip">
+            <LDiv className="meta-row">
+              <LSpan className="meta-chip">{mission.dueCount} due</LSpan>
+              <LSpan className="meta-chip">{mission.newCount} new</LSpan>
+              <LSpan className="meta-chip">
                 {mission.mission.selected.length} in today’s set
-              </span>
-            </div>
-            <p className="dense">{mission.availabilityNote}</p>
-            <p className="studio-card__action">
+              </LSpan>
+            </LDiv>
+            <LP className="dense">{mission.availabilityNote}</LP>
+            <LP className="studio-card__action">
               <Link className="btn btn-primary" href="/review">
                 Start today’s mission
               </Link>
-            </p>
+            </LP>
           </MissionCard>
         ) : mode === "ready" ? (
           <MissionCard>
-            <p className="studio-card__next">
+            <LP className="studio-card__next">
               You have no review cards yet. Save words, phrases or concepts to
               build your collection, or choose a guided exercise.
-            </p>
-            <p className="studio-card__action">
+            </LP>
+            <LP className="studio-card__action">
               <Link className="btn btn-secondary" href="/hubs">
                 Browse learning hubs
               </Link>
-            </p>
+            </LP>
           </MissionCard>
         ) : (
           <MissionCard status="status">
-            <p className="studio-card__next">
+            <LP className="studio-card__next">
               {mode === "loading"
                 ? "Loading local progress…"
                 : "Your review mission is stored on this device and loads in the browser."}
-            </p>
-            <p className="studio-card__action">
+            </LP>
+            <LP className="studio-card__action">
               <Link className="btn btn-secondary" href="/hubs">
                 Browse learning hubs
               </Link>
-            </p>
+            </LP>
           </MissionCard>
         )}
-      </div>
+      </LDiv>
 
-      <div role="group" className="study-row dashboard-shortcuts" aria-label="Other ways to study">
+      <LDiv role="group" className="study-row dashboard-shortcuts" aria-label="Other ways to study">
         <Link href={study?.state.resume?`/book?page=${study.state.resume}`:"/book"}>{study?.state.resume?"Resume book":"Open book"}</Link>
         <Link href="/saved">My saved collection</Link>
         <Link href="/practice">Free practice</Link>
-      </div>
+      </LDiv>
 
-      <details className="dashboard-progress">
-      <summary>Progress &amp; guided activities</summary>
+      <LDetails className="dashboard-progress">
+      <LSummary>Progress &amp; guided activities</LSummary>
       <EvidenceStrip
         items={evidenceItems}
         note={
@@ -526,27 +528,27 @@ export function LearnerDashboard({
       />
 
       {mode === "ready" && rewards ? (
-        <section className="panel" aria-labelledby="badges-heading">
-          <h2 id="badges-heading">Badges</h2>
-          <ul className="badge-grid">
+        <LSection className="panel" aria-labelledby="badges-heading">
+          <LH2 id="badges-heading">Badges</LH2>
+          <LUl className="badge-grid">
             {rewards.badges.map((badge) => (
-              <li
+              <LLi
                 key={badge.id}
                 className="badge-card"
                 data-earned={badge.earned ? "true" : "false"}
               >
-                <strong>{BADGE_LABELS[badge.id] ?? badge.id}</strong>
-                <span className="dense">
+                <LStrong>{BADGE_LABELS[badge.id] ?? badge.id}</LStrong>
+                <LSpan className="dense">
                   {badge.earned
                     ? `Earned ${badge.earnedLocalDate}`
                     : `${badge.evidenceCount}/${badge.targetCount}`}
-                </span>
-              </li>
+                </LSpan>
+              </LLi>
             ))}
-          </ul>
-        </section>
+          </LUl>
+        </LSection>
       ) : null}
-      </details>
-    </div>
+      </LDetails>
+    </LDiv>
   );
 }

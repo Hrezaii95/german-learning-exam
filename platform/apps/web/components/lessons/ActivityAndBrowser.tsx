@@ -1,9 +1,11 @@
 "use client";
+import { LArticle, LAside, LButton, LDiv, LH1, LH2, LH3, LHeader, LLi, LP, LSection, LSpan, LStrong, LUl } from "@/components/i18n/LocalizedElements";
+
 import {useStudyScope} from "@/components/study/StudyScope";
 import {LessonLearningPath} from "@/components/study/LessonLearningPath";
 import {tagsForLesson} from "@/lib/study/scope";
 import { useMemo } from "react";
-import Link from "next/link";
+import Link from "@/components/i18n/LocalizedLink";
 import { BackLink } from "@/components/nav/BackLink";
 import {
   appendNavigationContext,
@@ -54,41 +56,41 @@ import {
 export function LessonBrowser({ lessons }: { lessons: readonly LearnerLesson[] }) {
   const {matches}=useStudyScope();
   return (
-    <div className="stack">
-      <header className="page-header">
-        <h1>Lessons</h1>
-        <p className="lede">
+    <LDiv className="stack">
+      <LHeader className="page-header">
+        <LH1>Lessons</LH1>
+        <LP className="lede">
           Start with the guided lessons, then continue with your interactive book.
-        </p>
-      </header>
-      <div className="card-grid lessons">
+        </LP>
+      </LHeader>
+      <LDiv className="card-grid lessons">
         {lessons.filter(l=>matches(tagsForLesson(Number(l.routeSegment)))).map((lesson) => (
-          <article key={lesson.id} className="panel">
-            <p className="dense">{lessonLabel(lesson.routeSegment)}</p>
-            <h2>
-              <span className="german" lang="de">
+          <LArticle key={lesson.id} className="panel">
+            <LP className="dense">{lessonLabel(lesson.routeSegment)}</LP>
+            <LH2>
+              <LSpan className="german" lang="de">
                 {lesson.titleDe}
-              </span>
-            </h2>
-            <p className="muted">{lesson.titleEn}</p>
-            <ul className="dense">
+              </LSpan>
+            </LH2>
+            <LP className="muted">{lesson.titleEn}</LP>
+            <LUl className="dense">
               {lesson.communicativeGoals.slice(0, 3).map((goal) => (
-                <li key={goal}>{goal}</li>
+                <LLi key={goal}>{goal}</LLi>
               ))}
-            </ul>
-            <div className="meta-row" style={{ marginTop: "1rem" }}>
-              <span className="meta-chip">{lesson.activityCount} activities</span>
-              <span className="meta-chip">{lesson.estimatedMinutesTotal} min</span>
-            </div>
-            <p style={{ marginTop: "1rem" }}>
+            </LUl>
+            <LDiv className="meta-row" style={{ marginTop: "1rem" }}>
+              <LSpan className="meta-chip">{lesson.activityCount} activities</LSpan>
+              <LSpan className="meta-chip">{lesson.estimatedMinutesTotal} min</LSpan>
+            </LDiv>
+            <LP style={{ marginTop: "1rem" }}>
               <Link className="btn btn-primary" href={lesson.canonicalPath}>
                 Open overview
               </Link>
-            </p>
-          </article>
+            </LP>
+          </LArticle>
         ))}
-      </div>
-    </div>
+      </LDiv>
+    </LDiv>
   );
 }
 
@@ -135,102 +137,102 @@ export function LessonOverview({
   const practiceActivity=orderedActivities.find(activity=>activity.mode==="check")??orderedActivities.find(activity=>activity.mode==="recall");
 
   return (
-    <div className="stack">
-      <header className="page-header">
+    <LDiv className="stack">
+      <LHeader className="page-header">
         {backHref ? <BackLink href={backHref} /> : null}
-        <p className="dense">{lessonLabel(lesson.routeSegment)}</p>
-        <h1>
-          <span className="german" lang="de">
+        <LP className="dense">{lessonLabel(lesson.routeSegment)}</LP>
+        <LH1>
+          <LSpan className="german" lang="de">
             {lesson.titleDe}
-          </span>
-        </h1>
-        <p className="lede">{lesson.titleEn}</p>
-        <div className="meta-row">
-          <span className="meta-chip">{lesson.estimatedMinutesTotal} minutes</span>
-          <span className="meta-chip">{lesson.activityCount} activities</span>
-        </div>
-        <div className="lesson-progress" aria-live="polite">
-          <strong>{completedCount} of {orderedActivities.length} completed · {percent}%</strong>
+          </LSpan>
+        </LH1>
+        <LP className="lede">{lesson.titleEn}</LP>
+        <LDiv className="meta-row">
+          <LSpan className="meta-chip">{lesson.estimatedMinutesTotal} minutes</LSpan>
+          <LSpan className="meta-chip">{lesson.activityCount} activities</LSpan>
+        </LDiv>
+        <LDiv className="lesson-progress" aria-live="polite">
+          <LStrong>{completedCount} of {orderedActivities.length} completed · {percent}%</LStrong>
           <progress value={completedCount} max={orderedActivities.length || 1} aria-label={`${lessonLabel(lesson.routeSegment)} progress`} />
-          {progressState === "loading" ? <span className="dense">Loading saved progress…</span> : null}
-          {progressState === "error" ? <span role="alert">Saved progress is unavailable. No stored work was changed.</span> : null}
-        </div>
+          {progressState === "loading" ? <LSpan className="dense">Loading saved progress…</LSpan> : null}
+          {progressState === "error" ? <LSpan role="alert">Saved progress is unavailable. No stored work was changed.</LSpan> : null}
+        </LDiv>
         {recommendLessonOne ? (
-          <aside className="recommendation" aria-label="Lesson recommendation">
+          <LAside className="recommendation" aria-label="Lesson recommendation">
             We recommend completing Lesson 1 first. Lesson 2 remains available.
             {" "}<Link href="/lessons/01">Open Lesson 1</Link>
-          </aside>
+          </LAside>
         ) : null}
         {progressState === "ready" ? (
-          <p>
+          <LP>
             {nextActivity ? (
               <Link className="btn btn-primary" href={appendNavigationContext(nextActivity.canonicalPath, outbound)}>
                 {activityDisplayStatus(nextActivity.id, progress) === "In progress" ? "Continue activity" : "Start next activity"}
               </Link>
-            ) : <strong>All activities in this lesson are completed.</strong>}
-          </p>
+            ) : <LStrong>All activities in this lesson are completed.</LStrong>}
+          </LP>
         ) : null}
-      </header>
+      </LHeader>
 
       <LessonLearningPath lesson={Number(lesson.routeSegment)} checkpoint={lesson.communicativeGoals[0]??lesson.titleEn} learnHref={firstActivity?appendNavigationContext(firstActivity.canonicalPath,outbound):"#stages-heading"} practiceHref={practiceActivity?appendNavigationContext(practiceActivity.canonicalPath,outbound):"#stages-heading"}/>
       {lessonIllustration ? <RichLessonVisual illustration={lessonIllustration} /> : null}
       <LessonJourneyVisual lesson={lesson} />
 
-      <section className="panel" aria-labelledby="goals-heading">
-        <h2 id="goals-heading">Communicative outcome</h2>
-        <ul>
+      <LSection className="panel" aria-labelledby="goals-heading">
+        <LH2 id="goals-heading">Communicative outcome</LH2>
+        <LUl>
           {lesson.communicativeGoals.map((goal) => (
-            <li key={goal}>{goal}</li>
+            <LLi key={goal}>{goal}</LLi>
           ))}
-        </ul>
-      </section>
+        </LUl>
+      </LSection>
 
-      <section aria-labelledby="stages-heading">
-        <h2 id="stages-heading">Stages</h2>
-        <div className="stage-list">
+      <LSection aria-labelledby="stages-heading">
+        <LH2 id="stages-heading">Stages</LH2>
+        <LDiv className="stage-list">
           {lesson.stages.map((stage) => (
-            <article key={stage.id} className="stage-card">
-              <h3>{stage.titleEn}</h3>
-              <p className="dense">
+            <LArticle key={stage.id} className="stage-card">
+              <LH3>{stage.titleEn}</LH3>
+              <LP className="dense">
                 {stage.activityIds.filter((id) => activityDisplayStatus(id, progress) === "Completed").length} of {stage.activityIds.length} completed
-              </p>
-              <div className="meta-row">
-                <span className="meta-chip">{stage.estimatedMinutes} min</span>
-                <span className="meta-chip">
+              </LP>
+              <LDiv className="meta-row">
+                <LSpan className="meta-chip">{stage.estimatedMinutes} min</LSpan>
+                <LSpan className="meta-chip">
                   {stage.required ? "Required" : "Optional"}
-                </span>
+                </LSpan>
                 {stage.skillTargets.map((skill) => (
-                  <span key={skill} className="meta-chip">
+                  <LSpan key={skill} className="meta-chip">
                     {skill}
-                  </span>
+                  </LSpan>
                 ))}
-              </div>
+              </LDiv>
               {stage.activityIds.length > 0 ? (
-                <ul className="activity-links">
+                <LUl className="activity-links">
                   {stage.activityIds.map((activityId) => {
                     const target = activityCanonicalPath(lesson.number, activityId);
                     return (
-                      <li key={activityId}>
+                      <LLi key={activityId}>
                         <Link
                           href={appendNavigationContext(target, outbound)}
                         >
                           {activityLabel(activityId, activitiesById)}
                         </Link>
-                        <span className="activity-status">{activityDisplayStatus(activityId, progress)}</span>
-                      </li>
+                        <LSpan className="activity-status">{activityDisplayStatus(activityId, progress)}</LSpan>
+                      </LLi>
                     );
                   })}
-                </ul>
+                </LUl>
               ) : (
-                <p className="dense" style={{ marginTop: "0.75rem" }}>
+                <LP className="dense" style={{ marginTop: "0.75rem" }}>
                   No activities in this stage.
-                </p>
+                </LP>
               )}
-            </article>
+            </LArticle>
           ))}
-        </div>
-      </section>
-    </div>
+        </LDiv>
+      </LSection>
+    </LDiv>
   );
 }
 
@@ -282,44 +284,44 @@ export function ActivityScreen({
   const next = position >= 0 ? orderedActivities[position + 1] ?? null : null;
 
   return (
-    <div className="stack">
-      <header className="page-header">
+    <LDiv className="stack">
+      <LHeader className="page-header">
         <BackLink href={backHref} />
-        <p className="dense">
+        <LP className="dense">
           <Link href={lessonHref}>{lessonLabel(lesson.routeSegment)}</Link>
           {" · "}
           {activity.stageTitleEn}
-        </p>
-        <p className="dense">Activity {position + 1} of {orderedActivities.length}</p>
-        <h1>{activity.promptPlainText}</h1>
-        <p className="lede">Learn the new material, then practise it with the matching interactive tools.</p>
-        <div className="journey-status" aria-live="polite">
-          <strong>Status: {status}</strong>
-          {progressState === "loading" ? <span>Loading saved progress…</span> : null}
-          {progressState === "error" ? <span role="alert">Saved progress is unavailable. Controls are disabled.</span> : null}
-        </div>
+        </LP>
+        <LP className="dense">Activity {position + 1} of {orderedActivities.length}</LP>
+        <LH1>{activity.promptPlainText}</LH1>
+        <LP className="lede">Learn the new material, then practise it with the matching interactive tools.</LP>
+        <LDiv className="journey-status" aria-live="polite">
+          <LStrong>Status: {status}</LStrong>
+          {progressState === "loading" ? <LSpan>Loading saved progress…</LSpan> : null}
+          {progressState === "error" ? <LSpan role="alert">Saved progress is unavailable. Controls are disabled.</LSpan> : null}
+        </LDiv>
         {recommendLessonOne ? (
-          <aside className="recommendation" aria-label="Lesson recommendation">
+          <LAside className="recommendation" aria-label="Lesson recommendation">
             We recommend completing Lesson 1 first. Lesson 2 remains available.
-          </aside>
+          </LAside>
         ) : null}
-        <div className="journey-actions">
-          {status === "Not started" ? <button className="btn btn-primary" type="button" onClick={onStart} disabled={busy || progressState !== "ready"}>Start activity</button> : null}
-          {status === "In progress" ? <button className="btn btn-primary" type="button" disabled aria-describedby="practice-completion-note">Complete activity</button> : null}
+        <LDiv className="journey-actions">
+          {status === "Not started" ? <LButton className="btn btn-primary" type="button" onClick={onStart} disabled={busy || progressState !== "ready"}>Start activity</LButton> : null}
+          {status === "In progress" ? <LButton className="btn btn-primary" type="button" disabled aria-describedby="practice-completion-note">Complete activity</LButton> : null}
           {previous ? <Link className="btn btn-secondary" href={appendNavigationContext(previous.canonicalPath, outbound)}>Previous activity</Link> : null}
           {next ? <Link className="btn btn-secondary" href={appendNavigationContext(next.canonicalPath, outbound)}>Next activity</Link> : null}
           <Link className="btn btn-secondary" href={lessonHref}>Return to lesson</Link>
-        </div>
+        </LDiv>
         {status === "Completed" && showRapidPractice ? (
-          <div className="checkpoint-handoff">
-            <strong>Checkpoint recorded.</strong> Continue with <Link href="/review">Review</Link> or <Link href={lessonHref}>the lesson overview</Link>. Review is a separate stage.
-          </div>
+          <LDiv className="checkpoint-handoff">
+            <LStrong>Checkpoint recorded.</LStrong> Continue with <Link href="/review">Review</Link> or <Link href={lessonHref}>the lesson overview</Link>. Review is a separate stage.
+          </LDiv>
         ) : null}
-      </header>
+      </LHeader>
 
       {illustration ? <RichLessonVisual illustration={illustration} /> : null}
       <ActivityConceptVisual activityId={activity.id} />
-      <p className="dense" id="practice-completion-note">Complete the interactive practice below to finish this activity.</p>
+      <LP className="dense" id="practice-completion-note">Complete the interactive practice below to finish this activity.</LP>
       <ActivityInteraction
         activity={activity}
         enrichment={enrichment}
@@ -332,62 +334,62 @@ export function ActivityScreen({
       {showProfessions ? <RapidProfessionMorphologySection /> : null}
       {showRapidPractice ? <RapidPracticeSection /> : null}
 
-      <section className="panel" aria-labelledby="prompt-heading">
-        <h2 id="prompt-heading">Your task</h2>
-        <p>
+      <LSection className="panel" aria-labelledby="prompt-heading">
+        <LH2 id="prompt-heading">Your task</LH2>
+        <LP>
           {activity.prompt.instruction.tokens.map((token, index) => {
             if (token.type === "gap") {
-              return <span key={`${token.label}-${index}`}>[{token.label}]</span>;
+              return <LSpan key={`${token.label}-${index}`}>[{token.label}]</LSpan>;
             }
-            return <span key={`${token.text}-${index}`}>{token.text}</span>;
+            return <LSpan key={`${token.text}-${index}`}>{token.text}</LSpan>;
           })}
-        </p>
-      </section>
+        </LP>
+      </LSection>
 
       {enrichment ? (
-        <section className="panel" aria-labelledby="activity-content-heading">
-          <div className="workbook-audio__heading">
-            <div>
-              <p className="dense">From this lesson</p>
-              <h2 id="activity-content-heading">Words and patterns in this activity</h2>
-            </div>
-            <span className="meta-chip">{enrichment.contentTargets.length} items</span>
-          </div>
+        <LSection className="panel" aria-labelledby="activity-content-heading">
+          <LDiv className="workbook-audio__heading">
+            <LDiv>
+              <LP className="dense">From this lesson</LP>
+              <LH2 id="activity-content-heading">Words and patterns in this activity</LH2>
+            </LDiv>
+            <LSpan className="meta-chip">{enrichment.contentTargets.length} items</LSpan>
+          </LDiv>
           {enrichment.contentTargets.length > 0 ? (
-            <ul className="activity-content-grid">
+            <LUl className="activity-content-grid">
               {enrichment.contentTargets.map((target) => (
-                <li key={target.id} className="activity-content-card">
-                  <strong className="german" lang="de">{target.displayTextDe}</strong>
-                  <span className="dense">{target.glossEn ?? target.kind}</span>
-                </li>
+                <LLi key={target.id} className="activity-content-card">
+                  <LStrong className="german" lang="de">{target.displayTextDe}</LStrong>
+                  <LSpan className="dense">{target.glossEn ?? target.kind}</LSpan>
+                </LLi>
               ))}
-            </ul>
+            </LUl>
           ) : (
-            <p className="placeholder-banner">This listening activity has no separate word list — focus on the audio.</p>
+            <LP className="placeholder-banner">This listening activity has no separate word list — focus on the audio.</LP>
           )}
-        </section>
+        </LSection>
       ) : null}
 
       {infographic ? <InfographicPanel infographic={infographic} /> : null}
 
       {workbookAudio.length > 0 ? <WorkbookAudioPanel tracks={workbookAudio} /> : null}
 
-      <section className="panel" aria-labelledby="meta-heading">
-        <h2 id="meta-heading">About this activity</h2>
-        <div className="meta-row">
-          <span className="meta-chip">Stage: {activity.stageTitleEn}</span>
-          <span className="meta-chip">Practice type: {activity.mode}</span>
+      <LSection className="panel" aria-labelledby="meta-heading">
+        <LH2 id="meta-heading">About this activity</LH2>
+        <LDiv className="meta-row">
+          <LSpan className="meta-chip">Stage: {activity.stageTitleEn}</LSpan>
+          <LSpan className="meta-chip">Practice type: {activity.mode}</LSpan>
           {activity.skillDimensions.map((skill) => (
-            <span key={skill} className="meta-chip">
+            <LSpan key={skill} className="meta-chip">
               {skill}
-            </span>
+            </LSpan>
           ))}
-        </div>
-      </section>
+        </LDiv>
+      </LSection>
 
       {enrichment ? (
-        <section className="panel" aria-labelledby="activity-tools-heading">
-          <h2 id="activity-tools-heading">More practice</h2>
+        <LSection className="panel" aria-labelledby="activity-tools-heading">
+          <LH2 id="activity-tools-heading">More practice</LH2>
           {(() => {
             const practiceLinks = enrichment.gameEligibility.filter(
               (game) =>
@@ -395,7 +397,7 @@ export function ActivityScreen({
                 (game.state === "ready" || game.state === "partial"),
             );
             return practiceLinks.length > 0 ? (
-              <div className="meta-row">
+              <LDiv className="meta-row">
                 {practiceLinks.map((game) => (
                   <Link
                     key={game.gameId}
@@ -405,12 +407,12 @@ export function ActivityScreen({
                     {gameTitle(game.gameId as PracticeGameId)}
                   </Link>
                 ))}
-              </div>
+              </LDiv>
             ) : null;
           })()}
-          <p style={{ marginTop: "1rem" }}><Link className="btn btn-primary" href="/practice">Open practice games</Link></p>
-        </section>
+          <LP style={{ marginTop: "1rem" }}><Link className="btn btn-primary" href="/practice">Open practice games</Link></LP>
+        </LSection>
       ) : null}
-    </div>
+    </LDiv>
   );
 }

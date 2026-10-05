@@ -1,4 +1,6 @@
 "use client";
+import { LButton, LFieldset, LH2, LInput, LLabel, LLegend, LP, LSection, LSpan } from "@/components/i18n/LocalizedElements";
+
 
 import { useRef, useState } from "react";
 import { useFeedbackChannel } from "@/components/a11y/StatusMessage";
@@ -68,23 +70,23 @@ export function GuidedRecognitionLevel({
   }
 
   return (
-    <section
+    <LSection
       className="panel conversation-panel"
       aria-labelledby="conversation-recognition-heading"
       data-level="guided-recognition"
     >
-      <h2 id="conversation-recognition-heading">Guided recognition</h2>
-      <p className="muted">
+      <LH2 id="conversation-recognition-heading">Guided recognition</LH2>
+      <LP className="muted">
         Question:{" "}
-        <span className="german" lang="de">
+        <LSpan className="german" lang="de">
           {CONVERSATION_QUESTION}
-        </span>
-      </p>
-      <fieldset className="qa-guided">
-        <legend className="hub-field__label">Answer choices</legend>
+        </LSpan>
+      </LP>
+      <LFieldset className="qa-guided">
+        <LLegend className="hub-field__label">Answer choices</LLegend>
         {CONVERSATION_ANSWER_REALIZATIONS.map((realization) => (
-          <label key={realization} className="qa-guided__option">
-            <input
+          <LLabel key={realization} className="qa-guided__option">
+            <LInput
               type="radio"
               name="conversation-guided-answer"
               value={realization}
@@ -94,12 +96,12 @@ export function GuidedRecognitionLevel({
                 setMessage(null);
               }}
             />
-            <span className="german" lang="de">
+            <LSpan className="german" lang="de">
               {realization}
-            </span>
-          </label>
+            </LSpan>
+          </LLabel>
         ))}
-      </fieldset>
+      </LFieldset>
       <ConversationActionBar
         onSubmit={submit}
         onRetry={retry}
@@ -114,16 +116,16 @@ export function GuidedRecognitionLevel({
         revealDisabled={revealed}
       />
       {feedbackKind === "correct" || feedbackKind === "partial" ? (
-        <button
+        <LButton
           type="button"
           className="btn btn-primary"
           onClick={continueAfterSuccess}
           data-continue-level="true"
         >
           Continue
-        </button>
+        </LButton>
       ) : null}
       <ConversationFeedback kind={feedbackKind} message={message} seq={seq} />
-    </section>
+    </LSection>
   );
 }

@@ -1,3 +1,5 @@
+
+import { LArticle, LCaption, LDetails, LDiv, LH2, LH3, LLi, LOl, LP, LSection, LSpan, LStrong, LSummary, LTable, LTbody, LTd, LTh, LTr, LUl } from "@/components/i18n/LocalizedElements";
 import type {
   RapidGenderLegendItem,
   RapidLearnerContent,
@@ -6,160 +8,160 @@ import type {
 import { getRapidLearnerContent } from "@/lib/content/rapid-content";
 
 function German({ children }: { children: string }) {
-  return <span className="german" lang="de">{children}</span>;
+  return <LSpan className="german" lang="de">{children}</LSpan>;
 }
 
 function GenderKey({ item }: { item: RapidGenderLegendItem }) {
   return (
-    <li className={`gender-badge gender-badge--${item.gender}`} data-color-token={item.colorToken}>
-      <span className="gender-badge__shape" aria-hidden="true" data-shape={item.shape} />
+    <LLi className={`gender-badge gender-badge--${item.gender}`} data-color-token={item.colorToken}>
+      <LSpan className="gender-badge__shape" aria-hidden="true" data-shape={item.shape} />
       <German>{item.article}</German> · {item.learnerLabel}
-    </li>
+    </LLi>
   );
 }
 
 export function RapidGreetingsSection({ content = getRapidLearnerContent() }: { content?: RapidLearnerContent }) {
   return (
-    <section className="panel" aria-labelledby="rapid-greetings-heading">
-      <p className="dense">Lesson 1 · greeting map</p>
-      <h2 id="rapid-greetings-heading">Meet, greet, and say goodbye</h2>
-      <ul className="activity-content-grid">
+    <LSection className="panel" aria-labelledby="rapid-greetings-heading">
+      <LP className="dense">Lesson 1 · greeting map</LP>
+      <LH2 id="rapid-greetings-heading">Meet, greet, and say goodbye</LH2>
+      <LUl className="activity-content-grid">
         {content.greetings.map((item) => (
-          <li key={item.id} className="activity-content-card" data-function={item.function}>
-            <strong><German>{item.de}</German></strong>
-            <span>{item.en}</span>
-            <span className="meta-chip">{item.function}</span>
-          </li>
+          <LLi key={item.id} className="activity-content-card" data-function={item.function}>
+            <LStrong><German>{item.de}</German></LStrong>
+            <LSpan>{item.en}</LSpan>
+            <LSpan className="meta-chip">{item.function}</LSpan>
+          </LLi>
         ))}
-      </ul>
-    </section>
+      </LUl>
+    </LSection>
   );
 }
 
 export function RapidQaSection({ content = getRapidLearnerContent() }: { content?: RapidLearnerContent }) {
   return (
-    <section className="panel qa-dialogue" aria-labelledby="rapid-qa-heading">
-      <p className="dense">Lessons 1–2 · conversation patterns</p>
-      <h2 id="rapid-qa-heading">Ask, then answer</h2>
+    <LSection className="panel qa-dialogue" aria-labelledby="rapid-qa-heading">
+      <LP className="dense">Lessons 1–2 · conversation patterns</LP>
+      <LH2 id="rapid-qa-heading">Ask, then answer</LH2>
       {content.qaGroups.map((group) => (
-        <article key={group.id} className="qa-bubble" data-register={group.register}>
-          <h3>{group.title}</h3>
-          <p className="qa-bubble qa-bubble--question"><German>{group.question}</German></p>
-          <ul className="qa-answer-list">
+        <LArticle key={group.id} className="qa-bubble" data-register={group.register}>
+          <LH3>{group.title}</LH3>
+          <LP className="qa-bubble qa-bubble--question"><German>{group.question}</German></LP>
+          <LUl className="qa-answer-list">
             {group.answers.map((answer) => (
-              <li key={answer} className="qa-bubble qa-bubble--answer"><German>{answer}</German></li>
+              <LLi key={answer} className="qa-bubble qa-bubble--answer"><German>{answer}</German></LLi>
             ))}
-          </ul>
-        </article>
+          </LUl>
+        </LArticle>
       ))}
-    </section>
+    </LSection>
   );
 }
 
 export function RapidVerbSection({ content = getRapidLearnerContent() }: { content?: RapidLearnerContent }) {
   return (
-    <section className="panel" aria-labelledby="rapid-verbs-heading">
-      <p className="dense">Lesson 1 verb patterns</p>
-      <h2 id="rapid-verbs-heading">Core verb patterns</h2>
-      <div className="card-grid">
+    <LSection className="panel" aria-labelledby="rapid-verbs-heading">
+      <LP className="dense">Lesson 1 verb patterns</LP>
+      <LH2 id="rapid-verbs-heading">Core verb patterns</LH2>
+      <LDiv className="card-grid">
         {content.verbs.map((verb) => (
-          <article key={verb.id} className="card" data-pattern={verb.pattern}>
-            <h3><German>{verb.infinitive}</German></h3>
-            <p>{verb.meaningEn}</p>
-            <table className="verb-paradigm">
-              <caption className="dense">{verb.pattern === "irregular" ? "Irregular pattern" : "Lesson 1 forms"}</caption>
-              <tbody>
+          <LArticle key={verb.id} className="card" data-pattern={verb.pattern}>
+            <LH3><German>{verb.infinitive}</German></LH3>
+            <LP>{verb.meaningEn}</LP>
+            <LTable className="verb-paradigm">
+              <LCaption className="dense">{verb.pattern === "irregular" ? "Irregular pattern" : "Lesson 1 forms"}</LCaption>
+              <LTbody>
                 {verb.forms.map((row) => (
-                  <tr key={row.person}>
-                    <th scope="row"><German>{row.person}</German></th>
-                    <td>
-                      <span className={`morph-token ${verb.pattern === "irregular" ? "morph-token--irr" : "morph-token--stem"}`}>
+                  <LTr key={row.person}>
+                    <LTh scope="row"><German>{row.person}</German></LTh>
+                    <LTd>
+                      <LSpan className={`morph-token ${verb.pattern === "irregular" ? "morph-token--irr" : "morph-token--stem"}`}>
                         <German>{row.form}</German>
-                      </span>
-                    </td>
-                  </tr>
+                      </LSpan>
+                    </LTd>
+                  </LTr>
                 ))}
-              </tbody>
-            </table>
-          </article>
+              </LTbody>
+            </LTable>
+          </LArticle>
         ))}
-      </div>
-      <p className="placeholder-banner" role="status">{content.verbGap.learnerMessage}</p>
-    </section>
+      </LDiv>
+      <LP className="placeholder-banner" role="status">{content.verbGap.learnerMessage}</LP>
+    </LSection>
   );
 }
 
 export function RapidProfessionMorphologySection({ content = getRapidLearnerContent() }: { content?: RapidLearnerContent }) {
   return (
-    <section className="panel" aria-labelledby="rapid-professions-heading">
-      <p className="dense">Lesson 2 · 13 person-form pairs</p>
-      <h2 id="rapid-professions-heading">Article, gender, and person form</h2>
-      <ul className="meta-row" aria-label="Article and gender legend">
+    <LSection className="panel" aria-labelledby="rapid-professions-heading">
+      <LP className="dense">Lesson 2 · 13 person-form pairs</LP>
+      <LH2 id="rapid-professions-heading">Article, gender, and person form</LH2>
+      <LUl className="meta-row" aria-label="Article and gender legend">
         {content.genderLegend.map((item) => <GenderKey key={`${item.gender}-${item.article}`} item={item} />)}
-      </ul>
-      <div className="card-grid">
+      </LUl>
+      <LDiv className="card-grid">
         {content.professionPairs.map((pair) => (
-          <article key={pair.id} className="card">
-            <p className="detail-form-card__lemma"><German>{pair.masculine}</German></p>
-            <p className="detail-form-card__lemma"><German>{pair.feminine}</German></p>
-            <p>{pair.glossEn}</p>
-            <div className="person-form-infographic" role="note" aria-label={`Person-form change: ${pair.operation}`}>
-              <span className={pair.id === "profession:arzt" ? "morph-token morph-token--irr" : "morph-token morph-token--suffix"}>
+          <LArticle key={pair.id} className="card">
+            <LP className="detail-form-card__lemma"><German>{pair.masculine}</German></LP>
+            <LP className="detail-form-card__lemma"><German>{pair.feminine}</German></LP>
+            <LP>{pair.glossEn}</LP>
+            <LDiv className="person-form-infographic" role="note" aria-label={`Person-form change: ${pair.operation}`}>
+              <LSpan className={pair.id === "profession:arzt" ? "morph-token morph-token--irr" : "morph-token morph-token--suffix"}>
                 <German>{pair.operation}</German>
-              </span>
-            </div>
-          </article>
+              </LSpan>
+            </LDiv>
+          </LArticle>
         ))}
-      </div>
-      <p className="placeholder-banner" role="status">{content.pluralGap.learnerMessage}</p>
-    </section>
+      </LDiv>
+      <LP className="placeholder-banner" role="status">{content.pluralGap.learnerMessage}</LP>
+    </LSection>
   );
 }
 
 function PromptAnswer({ prompt }: { prompt: RapidPracticePrompt }) {
   const answer = prompt.answer ?? prompt.accepted?.join(" · ") ?? prompt.tokens?.join(" ") ?? "";
   return (
-    <details>
-      <summary>Check the model answer</summary>
-      <p><German>{answer}</German></p>
-    </details>
+    <LDetails>
+      <LSummary>Check the model answer</LSummary>
+      <LP><German>{answer}</German></LP>
+    </LDetails>
   );
 }
 
 export function RapidPracticeSection({ content = getRapidLearnerContent() }: { content?: RapidLearnerContent }) {
   return (
-    <section className="panel" aria-labelledby="rapid-practice-heading">
-      <p className="dense">Low-risk retrieval prompts</p>
-      <h2 id="rapid-practice-heading">Try it</h2>
-      <ol className="qa-levels">
+    <LSection className="panel" aria-labelledby="rapid-practice-heading">
+      <LP className="dense">Low-risk retrieval prompts</LP>
+      <LH2 id="rapid-practice-heading">Try it</LH2>
+      <LOl className="qa-levels">
         {content.practicePrompts.map((prompt) => (
-          <li key={prompt.id} className="qa-level" data-kind={prompt.kind}>
-            <strong>{prompt.prompt}</strong>
-            {prompt.options ? <p className="dense"><German>{prompt.options.join(" · ")}</German></p> : null}
-            {prompt.tokens ? <p className="dense"><German>{prompt.tokens.join(" · ")}</German></p> : null}
+          <LLi key={prompt.id} className="qa-level" data-kind={prompt.kind}>
+            <LStrong>{prompt.prompt}</LStrong>
+            {prompt.options ? <LP className="dense"><German>{prompt.options.join(" · ")}</German></LP> : null}
+            {prompt.tokens ? <LP className="dense"><German>{prompt.tokens.join(" · ")}</German></LP> : null}
             <PromptAnswer prompt={prompt} />
-          </li>
+          </LLi>
         ))}
-      </ol>
-    </section>
+      </LOl>
+    </LSection>
   );
 }
 
 export function RapidContentSections({ content = getRapidLearnerContent() }: { content?: RapidLearnerContent }) {
   return (
-    <div className="stack" data-rapid-content-version={content.schemaVersion}>
+    <LDiv className="stack" data-rapid-content-version={content.schemaVersion}>
       <RapidGreetingsSection content={content} />
       <RapidQaSection content={content} />
       <RapidVerbSection content={content} />
       <RapidProfessionMorphologySection content={content} />
       <RapidPracticeSection content={content} />
-      <section className="panel" aria-labelledby="rapid-gaps-heading">
-        <h2 id="rapid-gaps-heading">Known content gaps</h2>
-        <ul className="gap-list">
-          {content.gaps.map((gap) => <li key={gap.code} data-state={gap.state}>{gap.learnerMessage}</li>)}
-        </ul>
-      </section>
-    </div>
+      <LSection className="panel" aria-labelledby="rapid-gaps-heading">
+        <LH2 id="rapid-gaps-heading">Known content gaps</LH2>
+        <LUl className="gap-list">
+          {content.gaps.map((gap) => <LLi key={gap.code} data-state={gap.state}>{gap.learnerMessage}</LLi>)}
+        </LUl>
+      </LSection>
+    </LDiv>
   );
 }
 

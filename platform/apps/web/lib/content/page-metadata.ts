@@ -21,7 +21,7 @@ import { lessonLabel } from "./lesson-label";
 import type { LearnerActivity, LearnerLesson } from "./types";
 
 /** Product name. Appended to every page title by the root layout template. */
-export const SITE_NAME = "German Learning OS";
+export const SITE_NAME = "Lingovo";
 
 /**
  * The root description. It reaches search results and link previews, so it is

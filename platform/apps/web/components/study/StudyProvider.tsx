@@ -1,8 +1,10 @@
 "use client";
+import { LA, LArticle, LAside, LButton, LDialog, LDiv, LH2, LH3, LInput, LLabel, LP, LSmall, LSpan, LStrong } from "@/components/i18n/LocalizedElements";
+
 import {StudyTagList} from "./StudyScope";
 import {savedStudyTags} from "@/lib/study/saved-tags";
 
-import Link from "next/link";
+import Link from "@/components/i18n/LocalizedLink";
 import {
   createContext,
   useCallback,
@@ -38,9 +40,9 @@ export const useStudy = () => useContext(StudyContext);
 export function DictionaryLauncher() {
   const study = useStudy();
   if (!study) return null;
-  return <button type="button" className="study-dictionary-launch" onClick={() => study.lookup("")} aria-label="Open dictionary">
-    <span aria-hidden="true">Aa</span> Dictionary
-  </button>;
+  return <LButton type="button" className="study-dictionary-launch" onClick={() => study.lookup("")} aria-label="Open dictionary">
+    <LSpan aria-hidden="true">Aa</LSpan> Dictionary
+  </LButton>;
 }
 
 export function StudyProvider({
@@ -181,39 +183,39 @@ export function StudyProvider({
     <StudyContext.Provider
       value={{ state, ready:ready&&dictionaryLoaded, error, update, lookup, dictionary }}
     >
-      {dictionaryError&&<aside role="alert" className="study-storage-error">{dictionaryError} <button type="button" onClick={()=>setDictionaryAttempt(n=>n+1)}>Retry dictionary</button></aside>}
-      <p className="sr-only" id="german-lookup-help" lang="en">Use Left and Right to choose a word, Enter for its meaning, or Alt+Enter for the whole phrase.</p>
+      {dictionaryError&&<LAside role="alert" className="study-storage-error">{dictionaryError} <LButton type="button" onClick={()=>setDictionaryAttempt(n=>n+1)}>Retry dictionary</LButton></LAside>}
+      <LP className="sr-only" id="german-lookup-help" lang="en">Use Left and Right to choose a word, Enter for its meaning, or Alt+Enter for the whole phrase.</LP>
       {children}
       <SelectionMeaning lookup={lookup} />
       {error && (
-        <p className="study-storage-error" role="alert">
+        <LP className="study-storage-error" role="alert">
           {error}
-        </p>
+        </LP>
       )}
-      <dialog
+      <LDialog
         ref={dialog}
         className="study-dictionary"
         aria-labelledby="dictionary-title"
         onCancel={() => setOpen(false)}
         onClose={() => setOpen(false)}
       >
-        <div className="study-dialog-head">
-          <div>
-            <p className="study-eyebrow">Keep your place</p>
-            <h2 id="dictionary-title">Quick dictionary</h2>
-          </div>
-          <button
+        <LDiv className="study-dialog-head">
+          <LDiv>
+            <LP className="study-eyebrow">Keep your place</LP>
+            <LH2 id="dictionary-title">Quick dictionary</LH2>
+          </LDiv>
+          <LButton
             type="button"
             className="study-icon-button"
             onClick={() => setOpen(false)}
             aria-label="Close dictionary"
           >
             ✕
-          </button>
-        </div>
-        <label className="study-field">
+          </LButton>
+        </LDiv>
+        <LLabel className="study-field">
           German or English · word, phrase, or sentence
-          <input
+          <LInput
             ref={input}
             aria-label="German or English"
             value={query}
@@ -221,43 +223,43 @@ export function StudyProvider({
             placeholder="Try Stuhl or Das finde ich auch."
             autoComplete="off"
           />
-        </label>
-        <div aria-live="polite" className="study-dictionary-results">
-          {!dictionaryLoaded&&<p role="status">{dictionaryError||"Loading your dictionary…"}{dictionaryError&&<button type="button" onClick={()=>setDictionaryAttempt(n=>n+1)}>Try again</button>}</p>}
+        </LLabel>
+        <LDiv aria-live="polite" className="study-dictionary-results">
+          {!dictionaryLoaded&&<LP role="status">{dictionaryError||"Loading your dictionary…"}{dictionaryError&&<LButton type="button" onClick={()=>setDictionaryAttempt(n=>n+1)}>Try again</LButton>}</LP>}
           {!dictionaryLoaded ? null : !key ? (
-            <p className="muted">
+            <LP className="muted">
               Tap a German word, or highlight a phrase or sentence and choose Meaning of selection.
-            </p>
+            </LP>
           ) : matches.length ? (
             <>
-            {!result.exact && <p className="muted">Related study cards — choose the phrase that matches your meaning.</p>}
+            {!result.exact && <LP className="muted">Related study cards — choose the phrase that matches your meaning.</LP>}
             {matches.map((entry) => (
-              <article key={entry.id} data-lookup-kind={entry.kind ?? "word"}>
-                <p className="study-eyebrow">{entry.kind === "phrase" ? "Phrase card" : entry.kind === "sentence" ? "Sentence meaning" : "Vocabulary"}</p>
-                <div className="study-row">
-                  <h3 lang="de" className={entry.displayForms?.[0] && !entry.de.includes(" / ") ? `study-tone-${entry.displayForms[0].tone}` : undefined}>{entry.de}</h3>
+              <LArticle key={entry.id} data-lookup-kind={entry.kind ?? "word"}>
+                <LP className="study-eyebrow">{entry.kind === "phrase" ? "Phrase card" : entry.kind === "sentence" ? "Sentence meaning" : "Vocabulary"}</LP>
+                <LDiv className="study-row">
+                  <LH3 lang="de" className={entry.displayForms?.[0] && !entry.de.includes(" / ") ? `study-tone-${entry.displayForms[0].tone}` : undefined}>{entry.de}</LH3>
                   <LineAudio text={entry.de} src={entry.audio} compact />
-                </div>
-                <p>{entry.en}</p>
+                </LDiv>
+                <LP>{entry.en}</LP>
                 {entry.studyTags&&<StudyTagList tags={entry.studyTags}/>}
                 {entry.displayForms?.length ? (
-                  <div className="study-dictionary-forms">
-                    {entry.displayForms.map((form, index) => <div key={index} className={`study-dictionary-form study-tone-${form.tone}`}>
-                      <small>{form.label}</small><strong lang="de">{form.text}</strong>
-                    </div>)}
-                  </div>
+                  <LDiv className="study-dictionary-forms">
+                    {entry.displayForms.map((form, index) => <LDiv key={index} className={`study-dictionary-form study-tone-${form.tone}`}>
+                      <LSmall>{form.label}</LSmall><LStrong lang="de">{form.text}</LStrong>
+                    </LDiv>)}
+                  </LDiv>
                 ) : entry.forms.length > 0 && (
-                  <p className="dense" lang="de">
+                  <LP className="dense" lang="de">
                     {[...new Set(entry.forms)].join(" · ")}
-                  </p>
+                  </LP>
                 )}
                 {entry.example && (
                   <>
-                    <p lang="de">{entry.example}</p>
-                    <p className="muted">{entry.translation}</p>
+                    <LP lang="de">{entry.example}</LP>
+                    <LP className="muted">{entry.translation}</LP>
                   </>
                 )}
-                <div className="study-row">
+                <LDiv className="study-row">
                   <SaveButton
                     item={{
                       id: entry.saveId ?? `card-${entry.id}`,
@@ -269,39 +271,39 @@ export function StudyProvider({
                       ...(entry.studyTags?{studyTags:entry.studyTags}:{}),
                     }}
                   />
-                  {entry.href.includes("#") ? <a href={withPagesBaseAssetPath(entry.href.replace(/\/?#/, "/#"))} onClick={() => setOpen(false)}>{entry.href.startsWith("/cheat-sheets") ? "Open cheat sheet →" : "Open phrase card →"}</a> : <Link href={entry.href} onClick={() => setOpen(false)}>
+                  {entry.href.includes("#") ? <LA href={withPagesBaseAssetPath(entry.href.replace(/\/?#/, "/#"))} onClick={() => setOpen(false)}>{entry.href.startsWith("/cheat-sheets") ? "Open cheat sheet →" : "Open phrase card →"}</LA> : <Link href={entry.href} onClick={() => setOpen(false)}>
                     {entry.kind === "phrase" ? "Open phrase card →" : entry.href.startsWith("/book") ? "Open book page →" : entry.href.startsWith("/cheat-sheets") ? "Open cheat sheet →" : "Open study card →"}
                   </Link>}
-                </div>
-              </article>
+                </LDiv>
+              </LArticle>
             ))}</>
           ) : (
-            <p>
+            <LP>
               No local definition for “{query}” yet. You can translate this selection below.
-            </p>
+            </LP>
           )}
-        </div>
+        </LDiv>
         {key && (
-          <div className="study-dictionary-footer">
-            <a href={`https://translate.google.com/?sl=de&tl=en&text=${encodeURIComponent(query)}&op=translate`}
-              target="_blank" rel="noreferrer">Translate with Google ↗ (external)</a>
-            <a
+          <LDiv className="study-dictionary-footer">
+            <LA href={`https://translate.google.com/?sl=de&tl=en&text=${encodeURIComponent(query)}&op=translate`}
+              target="_blank" rel="noreferrer">Translate with Google ↗ (external)</LA>
+            <LA
               href={`https://dict.leo.org/german-english/${encodeURIComponent(query)}`}
               target="_blank"
               rel="noreferrer"
             >
               Look up in LEO ↗
-            </a>
-            <a
+            </LA>
+            <LA
               href={`https://en.wiktionary.org/wiki/${encodeURIComponent(query)}`}
               target="_blank"
               rel="noreferrer"
             >
               Wiktionary ↗
-            </a>
-          </div>
+            </LA>
+          </LDiv>
         )}
-      </dialog>
+      </LDialog>
     </StudyContext.Provider>
   );
 }
@@ -317,7 +319,7 @@ export function SaveButton({
   if (!study) return null;
   const saved = Boolean(study.state.saved[item.id]);
   return (
-    <button
+    <LButton
       className={`study-save${saved ? " is-saved" : ""}`}
       type="button"
       disabled={!study.ready}
@@ -339,16 +341,16 @@ export function SaveButton({
         })
       }
     >
-      <span aria-hidden="true">{saved ? "✓" : "+"}</span>
+      <LSpan aria-hidden="true">{saved ? "✓" : "+"}</LSpan>
       {!compact && (saved ? "Saved" : "Save")}
-    </button>
+    </LButton>
   );
 }
 
 export function GermanLookup({ text, children, className = "", tabIndex = 0 }: { text: string; children?: ReactNode; className?: string | undefined; tabIndex?: number }) {
   const study = useStudy();
-  return <button type="button" lang="de" className={`study-word ${className}`} tabIndex={tabIndex} aria-label={`Look up ${text}`}
-    onClick={() => { if (!window.getSelection()?.toString().trim()) study?.lookup(text); }}>{children ?? text}</button>;
+  return <LButton type="button" lang="de" className={`study-word ${className}`} tabIndex={tabIndex} aria-label={`Look up ${text}`}
+    onClick={() => { if (!window.getSelection()?.toString().trim()) study?.lookup(text); }}>{children ?? text}</LButton>;
 }
 
 export function GermanText({
@@ -362,7 +364,7 @@ export function GermanText({
   const parts = text.split(/([\p{L}]+(?:[’'-][\p{L}]+)*)/u);
   const firstWord = parts.findIndex(part => /\p{L}/u.test(part));
   return (
-    <span lang="de" className={`study-german ${className}`} role="toolbar" aria-label={text} aria-describedby={study ? "german-lookup-help" : undefined}
+    <LSpan lang="de" className={`study-german ${className}`} role="toolbar" aria-label={text} aria-describedby={study ? "german-lookup-help" : undefined}
       onKeyDown={event => {
         if (event.altKey && event.key === "Enter") { event.preventDefault(); study?.lookup(text); return; }
         if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
@@ -385,13 +387,13 @@ export function GermanText({
           i > 0 ? part.replace(/^[.,!?;:…]+/u, "") : part
         ),
       )}
-    </span>
+    </LSpan>
   );
 }
 
 export function MeaningButton({ text }: { text: string }) {
   const study = useStudy();
   if (!study) return null;
-  return <button type="button" className="study-meaning-button" aria-label={`Meaning: ${text}`}
-    onClick={() => study.lookup(text)}>Meaning</button>;
+  return <LButton type="button" className="study-meaning-button" aria-label={`Meaning: ${text}`}
+    onClick={() => study.lookup(text)}>Meaning</LButton>;
 }

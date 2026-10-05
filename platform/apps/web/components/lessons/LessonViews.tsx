@@ -1,3 +1,5 @@
+
+import { LDiv, LH1, LH2, LHeader, LP, LSection } from "@/components/i18n/LocalizedElements";
 import type { LearnerHubProjection } from "@/lib/content/hub-types";
 import type { LearnerWebProjection } from "@/lib/content/types";
 import { loadLearnerHubProjection } from "@/lib/content/access";
@@ -24,25 +26,25 @@ export function DashboardView({
   const hubProjection = hubs ?? loadLearnerHubProjection();
 
   return (
-    <div className="stack browse-shell">
-      <header className="page-header dashboard-header">
-        <p className="dense">Welcome back</p>
-        <h1>Your learning studio</h1>
-        <p className="lede">
+    <LDiv className="stack browse-shell">
+      <LHeader className="page-header dashboard-header">
+        <LP className="dense">Welcome back</LP>
+        <LH1>Your learning studio</LH1>
+        <LP className="lede">
           Continue the lesson you were on, then practise today’s review set.
-        </p>
-        <p className="dense">
+        </LP>
+        <LP className="dense">
           {LAST_AVAILABLE_LESSON} lessons · {activityCount} guided activities · your interactive book.
-        </p>
-      </header>
+        </LP>
+      </LHeader>
 
       <LearnerDashboard projection={projection} />
       <CourseDashboard/>
 
-      <section aria-labelledby="hubs-heading">
-        <h2 id="hubs-heading">Browse by tool</h2>
+      <LSection aria-labelledby="hubs-heading">
+        <LH2 id="hubs-heading">Browse by tool</LH2>
         <HubToolDrawerGrid hubs={hubProjection.hubs} />
-      </section>
-    </div>
+      </LSection>
+    </LDiv>
   );
 }

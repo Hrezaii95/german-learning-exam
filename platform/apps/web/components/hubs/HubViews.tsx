@@ -1,4 +1,6 @@
 "use client";
+import { LArticle, LButton, LDd, LDiv, LDl, LDt, LForm, LH1, LH2, LH3, LHeader, LInput, LLabel, LLi, LNav, LOl, LOption, LP, LSection, LSelect, LSpan, LStrong, LUl } from "@/components/i18n/LocalizedElements";
+
 
 import type { ReactNode } from "react";
 import {submitLocalSearch} from "@/components/search/submit-local-search";
@@ -10,7 +12,7 @@ import {useStudyScope} from "@/components/study/StudyScope";
 import {hubStudyTags} from "@/lib/study/tags";
 import {numericLessons,tagsForLesson,availableLessons,scopeLabel,defaultStudyScope} from "@/lib/study/scope";
 import { SaveButton } from "@/components/study/StudyProvider";
-import Link from "next/link";
+import Link from "@/components/i18n/LocalizedLink";
 import type {
   LearnerConceptTopic,
   LearnerHubDefinition,
@@ -172,13 +174,13 @@ function HubCardLessons({ lessonIds }: { lessonIds: readonly string[] }) {
   const labels = lessonLabels(lessonIds);
   if (labels.length === 0) return null;
   return (
-    <p className="meta-row hub-card__meta">
+    <LP className="meta-row hub-card__meta">
       {labels.map((label) => (
-        <span key={label} className="meta-chip">
+        <LSpan key={label} className="meta-chip">
           {label}
-        </span>
+        </LSpan>
       ))}
-    </p>
+    </LP>
   );
 }
 
@@ -190,7 +192,7 @@ function HubCardTitle({
   children: ReactNode;
 }) {
   return (
-    <h2 className="hub-card__title">
+    <LH2 className="hub-card__title">
       {href ? (
         <Link href={href} className="hub-card__link">
           {children}
@@ -198,7 +200,7 @@ function HubCardTitle({
       ) : (
         children
       )}
-    </h2>
+    </LH2>
   );
 }
 
@@ -228,13 +230,13 @@ function VocabularyHubCard({
   const illustration = illustrationForDetail(record.id);
 
   return (
-    <article
+    <LArticle
       className="hub-card hub-card--vocabulary"
       data-hub-card="vocabulary"
       data-media={illustration ? "illustration" : "plate"}
     >
       {illustration ? (
-        <div className="hub-card__media">
+        <LDiv className="hub-card__media">
           {illustration.responsive ? (
             <IllustrationPicture
               variant={illustration.responsive.card}
@@ -259,7 +261,7 @@ function VocabularyHubCard({
               decoding="async"
             />
           )}
-        </div>
+        </LDiv>
       ) : null}
       <MeaningPlate
         variant={illustration ? "body" : "card"}
@@ -275,7 +277,7 @@ function VocabularyHubCard({
       />
       <HubCardLessons lessonIds={record.lessonIds} />
       {href && <SaveButton item={{ id: `concept-${record.id}`, title: record.model || record.displayLabel, meaning: record.searchFields.filter(field => /meaning|title|english/.test(field.field)).map(field => field.displayText).filter(text => text !== record.displayLabel).join(" · ") || record.displayLabel, kind: hub.id === "phrases" ? "phrase" : "concept", href }} />}
-    </article>
+    </LArticle>
   );
 }
 
@@ -303,43 +305,43 @@ function VerbHubCard({
   const audio = plateAudioFor(record.displayLabel);
 
   return (
-    <article
+    <LArticle
       className="hub-card hub-card--verb"
       data-hub-card="verbs"
       data-verb-rule={rule ? rule.code : "none"}
     >
       <HubCardTitle href={href}>
-        <span className="german" lang="de">
+        <LSpan className="german" lang="de">
           {infinitive}
-        </span>
+        </LSpan>
       </HubCardTitle>
-      {gloss ? <p className="hub-card__gloss">{gloss}</p> : null}
+      {gloss ? <LP className="hub-card__gloss">{gloss}</LP> : null}
       {rule ? (
-        <p className="hub-card__cue">
-          <span className="visual-cue" data-tone={rule.tone} data-morph={rule.code}>
+        <LP className="hub-card__cue">
+          <LSpan className="visual-cue" data-tone={rule.tone} data-morph={rule.code}>
             {rule.code}
-          </span>
-          <span className="hub-card__cue-text">{rule.label}</span>
-        </p>
+          </LSpan>
+          <LSpan className="hub-card__cue-text">{rule.label}</LSpan>
+        </LP>
       ) : null}
       {usefulForms.length > 0 ? (
-        <dl className="hub-card__forms">
+        <LDl className="hub-card__forms">
           {usefulForms.map((entry) => (
-            <div key={entry.person} className="hub-card__form">
-              <dt className="german" lang="de">
+            <LDiv key={entry.person} className="hub-card__form">
+              <LDt className="german" lang="de">
                 {entry.person}
-              </dt>
-              <dd className="german" lang="de">
+              </LDt>
+              <LDd className="german" lang="de">
                 {entry.form}
-              </dd>
-            </div>
+              </LDd>
+            </LDiv>
           ))}
-        </dl>
+        </LDl>
       ) : null}
       {audio ? <LemmaAudioButton audio={audio} label={infinitive} /> : null}
       <HubCardLessons lessonIds={record.lessonIds} />
       {href && <SaveButton item={{ id: `concept-${record.id}`, title: record.model || record.displayLabel, meaning: record.searchFields.filter(field => /meaning|title|english/.test(field.field)).map(field => field.displayText).filter(text => text !== record.displayLabel).join(" · ") || record.displayLabel, kind: hub.id === "phrases" ? "phrase" : "concept", href }} />}
-    </article>
+    </LArticle>
   );
 }
 
@@ -367,29 +369,29 @@ function GrammarHubCard({
   const audio = plateAudioFor(record.displayLabel);
 
   return (
-    <article className="hub-card hub-card--grammar" data-hub-card="grammar">
+    <LArticle className="hub-card hub-card--grammar" data-hub-card="grammar">
       <HubCardTitle href={href}>
-        <span className="german" lang="de">
+        <LSpan className="german" lang="de">
           {record.displayLabel}
-        </span>
+        </LSpan>
       </HubCardTitle>
-      {ruleName ? <p className="hub-card__gloss">{ruleName}</p> : null}
+      {ruleName ? <LP className="hub-card__gloss">{ruleName}</LP> : null}
       {model.length > 0 ? (
-        <dl className="hub-card__forms">
-          <div className="hub-card__form">
-            <dt>Model</dt>
-            <dd className="german" lang="de">
+        <LDl className="hub-card__forms">
+          <LDiv className="hub-card__form">
+            <LDt>Model</LDt>
+            <LDd className="german" lang="de">
               {model}
-            </dd>
-          </div>
-        </dl>
+            </LDd>
+          </LDiv>
+        </LDl>
       ) : null}
       {audio ? (
         <LemmaAudioButton audio={audio} label={record.displayLabel} />
       ) : null}
       <HubCardLessons lessonIds={record.lessonIds} />
       {href && <SaveButton item={{ id: `concept-${record.id}`, title: record.model || record.displayLabel, meaning: record.searchFields.filter(field => /meaning|title|english/.test(field.field)).map(field => field.displayText).filter(text => text !== record.displayLabel).join(" · ") || record.displayLabel, kind: hub.id === "phrases" ? "phrase" : "concept", href }} />}
-    </article>
+    </LArticle>
   );
 }
 
@@ -411,36 +413,36 @@ function PhraseHubCard({
   const audio = plateAudioFor(record.displayLabel);
 
   return (
-    <article
+    <LArticle
       className="hub-card hub-card--phrase"
       data-hub-card="phrases"
       data-turn={turn.toLowerCase()}
     >
-      <p className="hub-card__turn">
-        <span
+      <LP className="hub-card__turn">
+        <LSpan
           className="visual-cue"
           data-tone={turn === "Question" ? "question" : "answer"}
         >
           {turn}
-        </span>
+        </LSpan>
         {record.kind === "QAPair" ? (
-          <span className="hub-card__cue-text">
+          <LSpan className="hub-card__cue-text">
             Opens the whole exchange with its answers
-          </span>
+          </LSpan>
         ) : null}
-      </p>
+      </LP>
       <HubCardTitle href={href}>
-        <span className="german" lang="de">
+        <LSpan className="german" lang="de">
           {record.displayLabel}
-        </span>
+        </LSpan>
       </HubCardTitle>
-      {register ? <p className="hub-card__gloss">{register}</p> : null}
+      {register ? <LP className="hub-card__gloss">{register}</LP> : null}
       {audio ? (
         <LemmaAudioButton audio={audio} label={record.displayLabel} />
       ) : null}
       <HubCardLessons lessonIds={record.lessonIds} />
       {href && <SaveButton item={{ id: `concept-${record.id}`, title: record.model || record.displayLabel, meaning: record.searchFields.filter(field => /meaning|title|english/.test(field.field)).map(field => field.displayText).filter(text => text !== record.displayLabel).join(" · ") || record.displayLabel, kind: hub.id === "phrases" ? "phrase" : "concept", href }} />}
-    </article>
+    </LArticle>
   );
 }
 
@@ -600,8 +602,8 @@ function HubToolDrawer({ hub }: { hub: LearnerHubDefinition }) {
   const nameId = `tool-drawer-${hub.id}`;
 
   return (
-    <li className="tool-drawer">
-      <span className="tool-drawer__icon" aria-hidden="true">
+    <LLi className="tool-drawer">
+      <LSpan className="tool-drawer__icon" aria-hidden="true">
         <svg
           viewBox="0 0 24 24"
           width="24"
@@ -615,8 +617,8 @@ function HubToolDrawer({ hub }: { hub: LearnerHubDefinition }) {
         >
           {HUB_TOOL_GLYPHS[hub.id]}
         </svg>
-      </span>
-      <h3 className="tool-drawer__name" id={nameId}>
+      </LSpan>
+      <LH3 className="tool-drawer__name" id={nameId}>
         <Link
           className="tool-drawer__link"
           href={hub.path}
@@ -624,40 +626,40 @@ function HubToolDrawer({ hub }: { hub: LearnerHubDefinition }) {
         >
           {hub.title}
         </Link>
-      </h3>
-      <p className="tool-drawer__count">{copy.countNoun(count)}</p>
-      <p className="tool-drawer__benefit">{copy.benefit}</p>
+      </LH3>
+      <LP className="tool-drawer__count">{copy.countNoun(count)}</LP>
+      <LP className="tool-drawer__benefit">{copy.benefit}</LP>
       {preview.length > 0 ? (
-        <div className="tool-drawer__preview">
-          <p className="tool-drawer__preview-label" id={`${nameId}-preview`}>
+        <LDiv className="tool-drawer__preview">
+          <LP className="tool-drawer__preview-label" id={`${nameId}-preview`}>
             {copy.previewLabel}
-          </p>
-          <ul
+          </LP>
+          <LUl
             className="tool-drawer__preview-list"
             aria-labelledby={`${nameId}-preview`}
           >
             {preview.map((label) => (
-              <li key={label}>
+              <LLi key={label}>
                 {copy.previewLang === "de" ? (
-                  <span className="german" lang="de">
+                  <LSpan className="german" lang="de">
                     {label}
-                  </span>
+                  </LSpan>
                 ) : (
                   label
                 )}
-              </li>
+              </LLi>
             ))}
-          </ul>
-        </div>
+          </LUl>
+        </LDiv>
       ) : (
-        <p className="tool-drawer__preview tool-drawer__preview--empty">
+        <LP className="tool-drawer__preview tool-drawer__preview--empty">
           Nothing here yet — this hub fills up as the course grows.
-        </p>
+        </LP>
       )}
-      <span className="tool-drawer__arrow" aria-hidden="true">
+      <LSpan className="tool-drawer__arrow" aria-hidden="true">
         →
-      </span>
-    </li>
+      </LSpan>
+    </LLi>
   );
 }
 
@@ -667,11 +669,11 @@ export function HubToolDrawerGrid({
   hubs: readonly LearnerHubDefinition[];
 }) {
   return (
-    <ul className="tool-drawers">
+    <LUl className="tool-drawers">
       {hubs.map((hub) => (
         <HubToolDrawer key={hub.id} hub={hub} />
       ))}
-    </ul>
+    </LUl>
   );
 }
 
@@ -681,17 +683,17 @@ export function HubDirectoryView({
   projection: LearnerHubProjection;
 }) {
   return (
-    <div className="stack browse-shell">
-      <header className="page-header">
-        <p className="dense">Learner hubs</p>
-        <h1>Hubs</h1>
-        <p className="lede">
+    <LDiv className="stack browse-shell">
+      <LHeader className="page-header">
+        <LP className="dense">Learner hubs</LP>
+        <LH1>Hubs</LH1>
+        <LP className="lede">
           Six content hubs cover everything you are learning. Open a hub to
           browse its items with search and filters.
-        </p>
-      </header>
+        </LP>
+      </LHeader>
 
-      <p className="hub-mobile-search">
+      <LP className="hub-mobile-search">
         <Link
           className="btn btn-secondary hub-mobile-search__link"
           href="/search"
@@ -701,43 +703,43 @@ export function HubDirectoryView({
         >
           Search all content
         </Link>
-      </p>
+      </LP>
 
-      <section aria-labelledby="hub-directory-heading">
-        <h2 id="hub-directory-heading">Open a hub</h2>
+      <LSection aria-labelledby="hub-directory-heading">
+        <LH2 id="hub-directory-heading">Open a hub</LH2>
         <HubToolDrawerGrid hubs={projection.hubs} />
-      </section>
-    </div>
+      </LSection>
+    </LDiv>
   );
 }
 
 function HubEmptyPublished({ hub }: { hub: LearnerHubDefinition }) {
   return (
-    <div className="panel hub-empty" role="status">
-      <h2>Nothing here yet</h2>
-      <p className="muted">
+    <LDiv className="panel hub-empty" role="status">
+      <LH2>Nothing here yet</LH2>
+      <LP className="muted">
         {hub.title} has no items yet. New content will appear here as the
         course grows.
-      </p>
-    </div>
+      </LP>
+    </LDiv>
   );
 }
 
 function HubNoMatches({ hub }: { hub: LearnerHubDefinition }) {
   const visibleItemCount = hubVisibleItemCount(hub);
   return (
-    <div className="panel hub-empty" role="status">
-      <h2>No matches</h2>
-      <p className="muted">
+    <LDiv className="panel hub-empty" role="status">
+      <LH2>No matches</LH2>
+      <LP className="muted">
         Nothing in {hub.title} matches the current search and filters. Clear
         filters to see all {visibleItemCount} items.
-      </p>
-      <p style={{ marginTop: "1rem" }}>
+      </LP>
+      <LP style={{ marginTop: "1rem" }}>
         <Link className="btn btn-secondary" href={hubClearHref(hub.path)}>
           Clear filters
         </Link>
-      </p>
-    </div>
+      </LP>
+    </LDiv>
   );
 }
 
@@ -760,29 +762,29 @@ function ListeningGroupCard({ group }: { group: LearnerListeningGroup }) {
     0,
   );
   return (
-    <article className="hub-card hub-card--listening" data-hub-card="listening">
-      <h2 className="hub-card__title">{group.purpose}</h2>
-      <p className="hub-card__gloss">
+    <LArticle className="hub-card hub-card--listening" data-hub-card="listening">
+      <LH2 className="hub-card__title">{group.purpose}</LH2>
+      <LP className="hub-card__gloss">
         {group.exercise} · {group.lessonLabel}
-      </p>
-      <p className="meta-row hub-card__meta">
-        <span className="meta-chip">{durationLabel(totalSeconds)}</span>
-        <span className="meta-chip">
+      </LP>
+      <LP className="meta-row hub-card__meta">
+        <LSpan className="meta-chip">{durationLabel(totalSeconds)}</LSpan>
+        <LSpan className="meta-chip">
           {group.tracks.length} track{group.tracks.length === 1 ? "" : "s"}
-        </span>
-      </p>
-      <ol className="workbook-audio__list">
+        </LSpan>
+      </LP>
+      <LOl className="workbook-audio__list">
         {group.tracks.map((track) => {
           const media = publicWorkbookTrackForId(track.trackId);
           if (!media) return null;
           return (
-            <li key={track.id} className="workbook-audio__track">
-              <div>
-                <strong>
+            <LLi key={track.id} className="workbook-audio__track">
+              <LDiv>
+                <LStrong>
                   {track.exercise} · Track {track.trackId.replace("_", ".")}
-                </strong>
-                <p className="dense">{Math.round(track.durationSeconds)} sec</p>
-              </div>
+                </LStrong>
+                <LP className="dense">{Math.round(track.durationSeconds)} sec</LP>
+              </LDiv>
               {/* Reveal the source transcript when the learner wants to read along. */}
               {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
               <audio
@@ -794,16 +796,16 @@ function ListeningGroupCard({ group }: { group: LearnerListeningGroup }) {
                 aria-label={`${track.exercise}, track ${track.trackId.replace("_", ".")}, ${track.purpose}`}
               />
               <ListeningTranscript transcript={workbookTranscript(track.trackId)} />
-            </li>
+            </LLi>
           );
         })}
-      </ol>
-      <p style={{ marginTop: "1rem" }}>
+      </LOl>
+      <LP style={{ marginTop: "1rem" }}>
         <Link className="btn btn-primary" href={group.activity.path}>
           {group.activity.label}
         </Link>
-      </p>
-    </article>
+      </LP>
+    </LArticle>
   );
 }
 
@@ -815,43 +817,43 @@ function ListeningGroupCard({ group }: { group: LearnerListeningGroup }) {
 function ConceptTopicCard({ topic }: { topic: LearnerConceptTopic }) {
   const mapId = `concept-map-${topic.id.replaceAll(":", "-")}`;
   return (
-    <article className="hub-card hub-card--concept" data-hub-card="concepts">
-      <h2 className="hub-card__title">{topic.displayLabel}</h2>
-      <p className="hub-card__gloss">{topic.summary}</p>
+    <LArticle className="hub-card hub-card--concept" data-hub-card="concepts">
+      <LH2 className="hub-card__title">{topic.displayLabel}</LH2>
+      <LP className="hub-card__gloss">{topic.summary}</LP>
       {topic.hubActions.length > 0 ? (
-        <nav className="concept-map" aria-labelledby={mapId}>
-          <p className="concept-map__label" id={mapId}>
+        <LNav className="concept-map" aria-labelledby={mapId}>
+          <LP className="concept-map__label" id={mapId}>
             Where this topic goes
-          </p>
-          <ul className="concept-map__spokes">
+          </LP>
+          <LUl className="concept-map__spokes">
             {topic.hubActions.map((action) => (
-              <li key={`${action.label}:${action.path}`}>
+              <LLi key={`${action.label}:${action.path}`}>
                 <Link className="concept-map__spoke" href={action.path}>
                   {action.label}
                 </Link>
-              </li>
+              </LLi>
             ))}
-          </ul>
-        </nav>
+          </LUl>
+        </LNav>
       ) : null}
-      <div className="hub-filter-actions">
+      <LDiv className="hub-filter-actions">
         {topic.activities.map((activity) => (
           <Link key={activity.activityId} className="btn btn-primary" href={activity.path}>
             {activity.label}
           </Link>
         ))}
-      </div>
-      <p className="meta-row hub-card__meta">
+      </LDiv>
+      <LP className="meta-row hub-card__meta">
         {lessonLabels(topic.lessonIds).map((label) => (
-          <span key={label} className="meta-chip">
+          <LSpan key={label} className="meta-chip">
             {label}
-          </span>
+          </LSpan>
         ))}
-        <span className="meta-chip">
+        <LSpan className="meta-chip">
           {topic.sourceEntityIds.length} connected items
-        </span>
-      </p>
-    </article>
+        </LSpan>
+      </LP>
+    </LArticle>
   );
 }
 
@@ -898,19 +900,19 @@ function HubFilters({
   const hasCategories = hub.experience == null && hub.categories.length > 0;
 
   return (
-    <section className="panel hub-filters" aria-labelledby="hub-filters-heading">
-      <h2 id="hub-filters-heading" className="sr-only">Filter items</h2>
-      <form
+    <LSection className="panel hub-filters" aria-labelledby="hub-filters-heading">
+      <LH2 id="hub-filters-heading" className="sr-only">Filter items</LH2>
+      <LForm
         key={JSON.stringify([query.q, query.lesson, query.category])}
         className="hub-filter-form"
         method="get"
         action={withPagesBasePath(hub.path)}
         onSubmit={submitLocalSearch}
       >
-        <div className="hub-filter-grid">
-          <label className="hub-field" htmlFor={searchId}>
-            <span className="hub-field__label">Search</span>
-            <input
+        <LDiv className="hub-filter-grid">
+          <LLabel className="hub-field" htmlFor={searchId}>
+            <LSpan className="hub-field__label">Search</LSpan>
+            <LInput
               id={searchId}
               className="hub-input"
               type="search"
@@ -920,10 +922,10 @@ function HubFilters({
               autoComplete="off"
               aria-label={`Search ${hub.title}`}
             />
-          </label>
-          <label className="hub-field" htmlFor={lessonId}>
-            <span className="hub-field__label">Lesson</span>
-            <select
+          </LLabel>
+          <LLabel className="hub-field" htmlFor={lessonId}>
+            <LSpan className="hub-field__label">Lesson</LSpan>
+            <LSelect
               id={lessonId}
               className="hub-input"
               name={connected?undefined:"lesson"}
@@ -931,48 +933,48 @@ function HubFilters({
               onChange={e=>{if(connected)setScope({...scope,mode:e.target.value==="all"?"all":"one",lessons:e.target.value==="all"?[]:[Number(e.target.value)]});}}
               aria-label={`Filter ${hub.title} by lesson`}
             >
-              <option value="all">All</option>
-              {connected&&["multiple","through"].includes(scope.mode)&&<option value="selection">{scopeLabel(scope)}</option>}
-              {availableLessons().map(n=><option value={String(n).padStart(2,"0")} key={n}>Lesson {n}</option>)}
-            </select>
-          </label>
+              <LOption value="all">All</LOption>
+              {connected&&["multiple","through"].includes(scope.mode)&&<LOption value="selection">{scopeLabel(scope)}</LOption>}
+              {availableLessons().map(n=><LOption value={String(n).padStart(2,"0")} key={n}>Lesson {n}</LOption>)}
+            </LSelect>
+          </LLabel>
           {hasCategories ? (
-            <label className="hub-field" htmlFor={categoryId}>
-              <span className="hub-field__label">Category</span>
-              <select
+            <LLabel className="hub-field" htmlFor={categoryId}>
+              <LSpan className="hub-field__label">Category</LSpan>
+              <LSelect
                 id={categoryId}
                 className="hub-input"
                 name="category"
                 defaultValue={query.category ?? "all"}
                 aria-label={`Filter ${hub.title} by category`}
               >
-                <option value="all">All</option>
+                <LOption value="all">All</LOption>
                 {hub.categories.map((category) => (
-                  <option key={category} value={category}>
+                  <LOption key={category} value={category}>
                     {category}
-                  </option>
+                  </LOption>
                 ))}
-              </select>
-            </label>
+              </LSelect>
+            </LLabel>
           ) : null}
-        </div>
-        <div className="hub-filter-actions">
-          <button className="btn btn-primary" type="submit">
+        </LDiv>
+        <LDiv className="hub-filter-actions">
+          <LButton className="btn btn-primary" type="submit">
             Apply filters
-          </button>
+          </LButton>
           <Link className="btn btn-secondary" href={hubClearHref(hub.path)} onClick={()=>setScope(defaultStudyScope())}>
             Clear filters
           </Link>
-        </div>
-      </form>
+        </LDiv>
+      </LForm>
       {summary.length > 0 ? (
-        <p className="dense hub-filter-summary" aria-live="polite">
+        <LP className="dense hub-filter-summary" aria-live="polite">
           Active filters: {summary.join(" · ")}
-        </p>
+        </LP>
       ) : (
-        <p className="dense hub-filter-summary">No active filters</p>
+        <LP className="dense hub-filter-summary">No active filters</LP>
       )}
-    </section>
+    </LSection>
   );
 }
 
@@ -1024,64 +1026,64 @@ export function HubListView({
   };
 
   return (
-    <div className="stack">
-      <header className="page-header">
-        <p className="dense">Study library · Lessons 1–12</p>
-        <h1>{hub.id==="concepts"?"Grammar connections":hub.title}</h1>
-        <p className="lede">{units.length?`Find ${hub.id==="verbs"?"verb forms":hub.id==="phrases"?"useful phrases":"grammar patterns"} from your lessons. Listen, save what matters, and practise in context.`:hub.description}</p>
-        <p className="meta-row" style={{ marginTop: "0.5rem" }}>
-          <span className="meta-chip">{visibleItemCount} items</span>
-          <span className="meta-chip">
+    <LDiv className="stack">
+      <LHeader className="page-header">
+        <LP className="dense">Study library · Lessons 1–12</LP>
+        <LH1>{hub.id==="concepts"?"Grammar connections":hub.title}</LH1>
+        <LP className="lede">{units.length?`Find ${hub.id==="verbs"?"verb forms":hub.id==="phrases"?"useful phrases":"grammar patterns"} from your lessons. Listen, save what matters, and practise in context.`:hub.description}</LP>
+        <LP className="meta-row" style={{ marginTop: "0.5rem" }}>
+          <LSpan className="meta-chip">{visibleItemCount} items</LSpan>
+          <LSpan className="meta-chip">
             {visibleResultCount} matches
             {showAfterFilters ? " after filters" : ""}
-          </span>
-        </p>
+          </LSpan>
+        </LP>
         {hub.id === "vocabulary" ? (
-          <p style={{ marginTop: "1rem" }}>
+          <LP style={{ marginTop: "1rem" }}>
             <Link className="btn btn-secondary" href="/collections/professions">
               Explore professions and their forms →
             </Link>
-          </p>
+          </LP>
         ) : null}
-      </header>
+      </LHeader>
 
       <HubFilters hub={hub} query={query} />
-      {units.length>0&&query.category!==null&&<p className="muted">Topic categories apply to the original guided lessons. Choose All categories to include the later lesson patterns.</p>}
-      {hub.id==="grammar"&&<p><Link href="/concepts">See how grammar connects to examples and practice →</Link></p>}
-      {hub.id==="concepts"&&<><p><Link href="/grammar">Browse the grammar library →</Link></p><GrammarConnections entries={extraEntries} speech={speech} navigation={buildHubNavigationContext({hubId:hub.id,q:query.q,lesson:query.lesson,...(query.category?{category:query.category}:{})})}/></>}
+      {units.length>0&&query.category!==null&&<LP className="muted">Topic categories apply to the original guided lessons. Choose All categories to include the later lesson patterns.</LP>}
+      {hub.id==="grammar"&&<LP><Link href="/concepts">See how grammar connects to examples and practice →</Link></LP>}
+      {hub.id==="concepts"&&<><LP><Link href="/grammar">Browse the grammar library →</Link></LP><GrammarConnections entries={extraEntries} speech={speech} navigation={buildHubNavigationContext({hubId:hub.id,q:query.q,lesson:query.lesson,...(query.category?{category:query.category}:{})})}/></>}
 
       {visibleItemCount === 0 ? (
         <HubEmptyPublished hub={hub} />
       ) : visibleResultCount === 0 ? (
         <HubNoMatches hub={hub} />
       ) : listeningGroups ? (
-        <section aria-labelledby="hub-results-heading">
-          <h2 id="hub-results-heading" className="dense">
+        <LSection aria-labelledby="hub-results-heading">
+          <LH2 id="hub-results-heading" className="dense">
             Workbook exercises
-          </h2>
-          <div className="card-grid hub-results">
+          </LH2>
+          <LDiv className="card-grid hub-results">
             {listeningGroups.map((group) => (
               <ListeningGroupCard key={group.id} group={group} />
             ))}
-          </div>
-        </section>
+          </LDiv>
+        </LSection>
       ) : conceptTopics ? (conceptTopics.length>0&&
-        <section aria-labelledby="hub-results-heading">
-          <h2 id="hub-results-heading" className="dense">
+        <LSection aria-labelledby="hub-results-heading">
+          <LH2 id="hub-results-heading" className="dense">
             Connected learning paths
-          </h2>
-          <div className="card-grid hub-results">
+          </LH2>
+          <LDiv className="card-grid hub-results">
             {conceptTopics.map((topic) => (
               <ConceptTopicCard key={topic.id} topic={topic} />
             ))}
-          </div>
-        </section>
+          </LDiv>
+        </LSection>
       ) : (
-        <section aria-labelledby="hub-results-heading">
-          <h2 id="hub-results-heading" className="dense">
+        <LSection aria-labelledby="hub-results-heading">
+          <LH2 id="hub-results-heading" className="dense">
             Results
-          </h2>
-          <div className="card-grid hub-results">
+          </LH2>
+          <LDiv className="card-grid hub-results">
             {records.map((record) => (
               <HubRecordCard
                 key={record.id}
@@ -1091,10 +1093,10 @@ export function HubListView({
               />
             ))}
             {patterns.map(entry=><CoursePatternCard key={entry.key} entry={entry} speech={speech} compact navigation={buildHubNavigationContext({hubId:hub.id,q:query.q,lesson:query.lesson,...(query.category?{category:query.category}:{}),page})}/>)}
-          </div>
-        </section>
+          </LDiv>
+        </LSection>
       )}
-      {!listeningGroups&&!conceptTopics&&visibleResultCount>0&&<nav className="library-pagination" aria-label={`${hub.title} results pages`}><p role="status">Showing {start+1}–{Math.min(start+pageSize,visibleResultCount)} of {visibleResultCount} · Page {page} of {pageCount}</p><div className="study-row">{page>1&&<Link className="study-secondary" href={pageHref(page-1)}>← Previous page</Link>}{page<pageCount&&<Link className="study-primary" href={pageHref(page+1)}>Next page →</Link>}</div></nav>}
-    </div>
+      {!listeningGroups&&!conceptTopics&&visibleResultCount>0&&<LNav className="library-pagination" aria-label={`${hub.title} results pages`}><LP role="status">Showing {start+1}–{Math.min(start+pageSize,visibleResultCount)} of {visibleResultCount} · Page {page} of {pageCount}</LP><LDiv className="study-row">{page>1&&<Link className="study-secondary" href={pageHref(page-1)}>← Previous page</Link>}{page<pageCount&&<Link className="study-primary" href={pageHref(page+1)}>Next page →</Link>}</LDiv></LNav>}
+    </LDiv>
   );
 }

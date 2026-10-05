@@ -1,6 +1,8 @@
 "use client";
+import { LAside, LButton, LDd, LDiv, LDl, LDt, LH1, LH2, LH3, LHeader, LInput, LLabel, LLi, LOl, LP, LSection, LSpan, LStrong } from "@/components/i18n/LocalizedElements";
 
-import Link from "next/link";
+
+import Link from "@/components/i18n/LocalizedLink";
 import { useMemo, useState } from "react";
 import type {
   ExtraProfessionRow,
@@ -19,16 +21,16 @@ function foldSearch(value: string): string {
 
 function FormsSummary({ row }: { row: ExtraProfessionRow }) {
   return (
-    <dl className={styles.formsSummary}>
-      <div>
-        <dt>Masculine</dt>
-        <dd lang="de">{row.masculine.map((form) => form.singular).join(" · ")}</dd>
-      </div>
-      <div>
-        <dt>Feminine</dt>
-        <dd lang="de">{row.feminine.map((form) => form.singular).join(" · ")}</dd>
-      </div>
-    </dl>
+    <LDl className={styles.formsSummary}>
+      <LDiv>
+        <LDt>Masculine</LDt>
+        <LDd lang="de">{row.masculine.map((form) => form.singular).join(" · ")}</LDd>
+      </LDiv>
+      <LDiv>
+        <LDt>Feminine</LDt>
+        <LDd lang="de">{row.feminine.map((form) => form.singular).join(" · ")}</LDd>
+      </LDiv>
+    </LDl>
   );
 }
 
@@ -39,7 +41,7 @@ function SourceBackedReview({ rows }: { rows: readonly ExtraProfessionRow[] }) {
   const row = rows[index % Math.max(rows.length, 1)];
 
   if (!row) {
-    return <p className="muted">No rows match the current filters.</p>;
+    return <LP className="muted">No rows match the current filters.</LP>;
   }
 
   function advance(markReviewed: boolean) {
@@ -51,46 +53,46 @@ function SourceBackedReview({ rows }: { rows: readonly ExtraProfessionRow[] }) {
   }
 
   return (
-    <section className={`panel ${styles.review}`} aria-labelledby="optional-review-heading">
-      <div className={styles.sectionHeading}>
-        <div>
-          <p className={styles.eyebrow}>Optional review</p>
-          <h2 id="optional-review-heading">Source-backed flashcards</h2>
-        </div>
-        <span className="meta-chip" aria-live="polite">
+    <LSection className={`panel ${styles.review}`} aria-labelledby="optional-review-heading">
+      <LDiv className={styles.sectionHeading}>
+        <LDiv>
+          <LP className={styles.eyebrow}>Optional review</LP>
+          <LH2 id="optional-review-heading">Source-backed flashcards</LH2>
+        </LDiv>
+        <LSpan className="meta-chip" aria-live="polite">
           {reviewed.size} marked reviewed
-        </span>
-      </div>
-      <p className="muted">
+        </LSpan>
+      </LDiv>
+      <LP className="muted">
         Self-review only. It records no mastery and does not affect Lesson 2 completion.
-      </p>
-      <button
+      </LP>
+      <LButton
         type="button"
         className={styles.flashcard}
         aria-pressed={revealed}
         onClick={() => setRevealed((current) => !current)}
       >
-        <span className="dense">Row {row.sourceRow} · tap to flip</span>
-        <strong lang={revealed ? "de" : "en"}>
+        <LSpan className="dense">Row {row.sourceRow} · tap to flip</LSpan>
+        <LStrong lang={revealed ? "de" : "en"}>
           {revealed
             ? [...row.masculine, ...row.feminine]
                 .map((form) => `${form.singular} → ${form.plural}`)
                 .join(" · ")
             : row.meaningEn}
-        </strong>
-      </button>
-      <div className={styles.actions}>
-        <button className="btn btn-secondary" type="button" onClick={() => advance(false)}>
+        </LStrong>
+      </LButton>
+      <LDiv className={styles.actions}>
+        <LButton className="btn btn-secondary" type="button" onClick={() => advance(false)}>
           Again
-        </button>
-        <button className="btn btn-primary" type="button" onClick={() => advance(true)}>
+        </LButton>
+        <LButton className="btn btn-primary" type="button" onClick={() => advance(true)}>
           Mark reviewed
-        </button>
+        </LButton>
         <Link className="btn btn-secondary" href={row.detailPath}>
           Open row
         </Link>
-      </div>
-    </section>
+      </LDiv>
+    </LSection>
   );
 }
 
@@ -111,85 +113,85 @@ export function ExtraProfessionsHub({
   }, [alternativesOnly, projection.rows, query]);
 
   return (
-    <div className="stack">
-      <header className="page-header">
-        <p className={styles.eyebrow}>Optional collection · Lesson 2 companion</p>
-        <h1>{projection.collection.titleDe}</h1>
-        <p className="lede">
+    <LDiv className="stack">
+      <LHeader className="page-header">
+        <LP className={styles.eyebrow}>Optional collection · Lesson 2 companion</LP>
+        <LH1>{projection.collection.titleDe}</LH1>
+        <LP className="lede">
           All {projection.collection.sourceRowCount} rows from the learner note, preserved as
           written for study and review. This collection is separate from the core lesson path.
-        </p>
-        <div className="meta-row">
-          <span className="meta-chip">48 source rows</span>
-          <span className="meta-chip">{projection.collection.sourceFormLexemeCount} form lexemes</span>
-          <span className="meta-chip">Optional — not core completion</span>
-        </div>
-      </header>
+        </LP>
+        <LDiv className="meta-row">
+          <LSpan className="meta-chip">48 source rows</LSpan>
+          <LSpan className="meta-chip">{projection.collection.sourceFormLexemeCount} form lexemes</LSpan>
+          <LSpan className="meta-chip">Optional — not core completion</LSpan>
+        </LDiv>
+      </LHeader>
 
-      <aside className={`panel ${styles.notice}`} aria-labelledby="collection-status-heading">
-        <h2 id="collection-status-heading">Source and media status</h2>
-        <p>
+      <LAside className={`panel ${styles.notice}`} aria-labelledby="collection-status-heading">
+        <LH2 id="collection-status-heading">Source and media status</LH2>
+        <LP>
           These forms are source-backed candidates and still need qualified German-language
           review. They are not presented as editorially approved course vocabulary.
-        </p>
-        <p>{projection.collection.media.message}</p>
-      </aside>
+        </LP>
+        <LP>{projection.collection.media.message}</LP>
+      </LAside>
 
-      <section className={`panel ${styles.filters}`} aria-labelledby="filter-heading">
-        <h2 id="filter-heading">Find a profession</h2>
-        <label>
-          <span>Search English or German</span>
-          <input
+      <LSection className={`panel ${styles.filters}`} aria-labelledby="filter-heading">
+        <LH2 id="filter-heading">Find a profession</LH2>
+        <LLabel>
+          <LSpan>Search English or German</LSpan>
+          <LInput
             className="hub-input"
             type="search"
             value={query}
             onChange={(event) => setQuery(event.target.value)}
             placeholder="e.g. gardener, Gärtner, Gaertner"
           />
-        </label>
-        <label className={styles.checkbox}>
-          <input
+        </LLabel>
+        <LLabel className={styles.checkbox}>
+          <LInput
             type="checkbox"
             checked={alternativesOnly}
             onChange={(event) => setAlternativesOnly(event.target.checked)}
           />
           Show only rows with slash alternatives
-        </label>
-        <p className="dense" role="status" aria-live="polite">
+        </LLabel>
+        <LP className="dense" role="status" aria-live="polite">
           Showing {filteredRows.length} of {projection.rows.length} rows
-        </p>
-      </section>
+        </LP>
+      </LSection>
 
       <SourceBackedReview rows={filteredRows} />
 
-      <section aria-labelledby="profession-list-heading">
-        <div className={styles.sectionHeading}>
-          <h2 id="profession-list-heading">Complete source list</h2>
-          <span className="dense">Each row has a stable link</span>
-        </div>
+      <LSection aria-labelledby="profession-list-heading">
+        <LDiv className={styles.sectionHeading}>
+          <LH2 id="profession-list-heading">Complete source list</LH2>
+          <LSpan className="dense">Each row has a stable link</LSpan>
+        </LDiv>
         {filteredRows.length === 0 ? (
-          <div className="panel">
-            <h3>No matching profession</h3>
-            <p className="muted">Clear the search or include rows without alternatives.</p>
-          </div>
+          <LDiv className="panel">
+            <LH3>No matching profession</LH3>
+            <LP className="muted">Clear the search or include rows without alternatives.</LP>
+          </LDiv>
         ) : (
-          <ol className={styles.grid}>
+          <LOl className={styles.grid}>
             {filteredRows.map((row) => (
-              <li key={row.id} className={`panel ${styles.card}`} value={row.sourceRow}>
-                <div className={styles.cardTopline}>
-                  <span className="dense">Source row {row.sourceRow}</span>
-                  {row.hasAlternatives ? <span className="meta-chip">Alternatives</span> : null}
-                </div>
-                <h3>{row.meaningEn}</h3>
+              <LLi key={row.id} className={`panel ${styles.card}`} value={row.sourceRow}>
+                <LDiv className={styles.cardTopline}>
+                  <LSpan className="dense">Source row {row.sourceRow}</LSpan>
+                  {row.hasAlternatives ? <LSpan className="meta-chip">Alternatives</LSpan> : null}
+                </LDiv>
+                <LH3>{row.meaningEn}</LH3>
                 <FormsSummary row={row} />
                 <Link className="btn btn-secondary" href={row.detailPath}>
                   Open all forms
                 </Link>
-              </li>
+              </LLi>
             ))}
-          </ol>
+          </LOl>
         )}
-      </section>
-    </div>
+      </LSection>
+    </LDiv>
   );
 }

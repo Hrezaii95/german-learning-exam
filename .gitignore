@@ -54,3 +54,6 @@ npm-debug.log*
 
 # Local Claude Code session state (skills cache, agent worktrees) — machine-specific
 .claude/
+
+# C1 immutable source media; restored and hash-verified by platform/scripts/c1-assets.mjs
+platform/apps/web/public/c1/

@@ -1,4 +1,6 @@
 "use client";
+import { LButton, LSpan } from "@/components/i18n/LocalizedElements";
+
 
 import { useEffect, useRef, useState } from "react";
 import { withPagesBaseAssetPath } from "@/lib/content/pages-base-path";
@@ -132,8 +134,8 @@ export function LineAudio({
     try { await audio.play(); } catch { fallback(); }
   }
   return (
-    <span className="study-audio">
-      <button
+    <LSpan className="study-audio">
+      <LButton
         type="button"
         className="study-audio-button"
         aria-label={`${playing ? "Stop" : "Listen"}: ${label ?? text}`}
@@ -155,12 +157,12 @@ export function LineAudio({
           />
         </svg>
         {!compact && (playing ? "Stop" : "Listen")}
-      </button>
+      </LButton>
       {error && (
-        <span className="study-audio-error" role="status">
+        <LSpan className="study-audio-error" role="status">
           {error}
-        </span>
+        </LSpan>
       )}
-    </span>
+    </LSpan>
   );
 }

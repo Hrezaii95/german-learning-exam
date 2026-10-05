@@ -1,4 +1,6 @@
 "use client";
+import { LP, LSpan } from "@/components/i18n/LocalizedElements";
+
 
 import { useCallback, useState, type ReactNode } from "react";
 
@@ -108,7 +110,7 @@ export function StatusMessage({
 }) {
   const speaking = announcement.text.length > 0;
   return (
-    <p
+    <LP
       className={
         speaking
           ? `live-region ${className}`.trim()
@@ -119,8 +121,8 @@ export function StatusMessage({
       data-announcement-seq={announcement.seq}
     >
       {speaking ? (
-        <span key={announcement.seq}>{children ?? announcement.text}</span>
+        <LSpan key={announcement.seq}>{children ?? announcement.text}</LSpan>
       ) : null}
-    </p>
+    </LP>
   );
 }

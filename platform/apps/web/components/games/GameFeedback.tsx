@@ -1,4 +1,6 @@
 "use client";
+import { LButton, LDiv, LP, LSpan } from "@/components/i18n/LocalizedElements";
+
 
 import type { LearnerEvent } from "@german-learning/learning";
 import type { GameFeedbackKind } from "@/lib/games/game-types";
@@ -25,7 +27,7 @@ export function GameFeedback({
 }) {
   const speaking = Boolean(kind && message);
   return (
-    <p
+    <LP
       className={
         speaking
           ? `live-region game-feedback game-feedback--${kind}`
@@ -37,8 +39,8 @@ export function GameFeedback({
       tabIndex={-1}
       {...(speaking ? { "data-feedback": kind as string } : {})}
     >
-      {speaking ? <span key={seq}>{message}</span> : null}
-    </p>
+      {speaking ? <LSpan key={seq}>{message}</LSpan> : null}
+    </LP>
   );
 }
 
@@ -58,9 +60,9 @@ export function GameActionBar({
   submitDisabled?: boolean;
 }) {
   return (
-    <div className="detail-actions game-actions">
+    <LDiv className="detail-actions game-actions">
       {onSubmit ? (
-        <button
+        <LButton
           type="button"
           className="btn btn-primary"
           onClick={onSubmit}
@@ -68,24 +70,24 @@ export function GameActionBar({
           aria-disabled={submitDisabled ? "true" : undefined}
         >
           {submitLabel}
-        </button>
+        </LButton>
       ) : null}
       {onReveal ? (
-        <button
+        <LButton
           type="button"
           className="btn btn-secondary"
           onClick={onReveal}
           disabled={revealDisabled}
         >
           Reveal
-        </button>
+        </LButton>
       ) : null}
       {onRetry ? (
-        <button type="button" className="btn btn-secondary" onClick={onRetry}>
+        <LButton type="button" className="btn btn-secondary" onClick={onRetry}>
           Retry
-        </button>
+        </LButton>
       ) : null}
-    </div>
+    </LDiv>
   );
 }
 

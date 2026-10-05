@@ -1,3 +1,4 @@
+import { LocaleProvider } from "@/components/i18n/LocaleProvider";
 import type { Metadata, Viewport } from "next";
 import { LearnerStateProvider } from "@/components/learner-state/LearnerStateProvider";
 import { OfflineRuntime } from "@/components/offline/OfflineRuntime";
@@ -10,6 +11,7 @@ import {
 } from "@/lib/offline/policy";
 import "./globals.css";
 import "./study.css";
+import "@/components/lingovo/learning-theme.css";
 import { StudyProvider } from "@/components/study/StudyProvider";
 import { StudyScopeProvider } from "@/components/study/StudyScope";
 
@@ -33,7 +35,7 @@ export const metadata: Metadata = {
   applicationName: SITE_NAME,
   appleWebApp: {
     capable: true,
-    title: "German OS",
+    title: "Lingovo",
     statusBarStyle: "black-translucent",
   },
   icons: {
@@ -69,7 +71,8 @@ const INTER_VARIABLE_WOFF2 = withPagesBaseAssetPath(
   "/fonts/InterVariable.woff2",
 );
 
-const interFontFace = `@font-face {
+const interFontFace = `@font-face{font-family:AtlasSans;src:url("${withPagesBaseAssetPath("/lingovo/sans.ttf")}");font-display:swap;}@font-face{font-family:AtlasSans;src:url("${withPagesBaseAssetPath("/lingovo/sans-bold.ttf")}");font-weight:700;font-display:swap;}@font-face{font-family:AtlasSerif;src:url("${withPagesBaseAssetPath("/lingovo/serif.ttf")}");font-display:swap;}
+@font-face {
   font-family: "InterVariable";
   src: url("${INTER_VARIABLE_WOFF2}") format("woff2");
   font-weight: 100 900;
@@ -82,7 +85,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="hy">
       <body>
         <link
           rel="preload"
@@ -94,11 +97,11 @@ export default function RootLayout({
         {/* Static build-time string; React would entity-escape quotes in a
             text child of <style>, so raw injection is required. */}
         <style dangerouslySetInnerHTML={{ __html: interFontFace }} />
-        <LearnerStateProvider><StudyScopeProvider><StudyProvider>{children}</StudyProvider></StudyScopeProvider></LearnerStateProvider>
+        <LocaleProvider><LearnerStateProvider><StudyScopeProvider><StudyProvider>{children}</StudyProvider></StudyScopeProvider></LearnerStateProvider>
         {/* Installs the offline worker and owns every sentence the app says
             about being offline or about a waiting update. Renders nothing
             until it has something true to report. */}
-        <OfflineRuntime />
+        <OfflineRuntime /></LocaleProvider>
       </body>
     </html>
   );

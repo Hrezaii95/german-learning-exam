@@ -4013,3 +4013,12 @@ a:hover {
     transition: none;
   }
 }
+
+/* Armenian and Russian interface typography and mobile language control. */
+html:lang(hy) body { font-family: "Noto Sans Armenian", "DejaVu Sans", Arial, sans-serif; }
+html:lang(ru) body { font-family: "InterVariable", "Noto Sans", Arial, sans-serif; }
+.language-selector { display:flex; gap:.5rem; align-items:center; flex-wrap:wrap; margin-left:auto; font-size:.8rem; }
+.language-selector select { min-height:44px; max-width:100%; padding:.5rem .7rem; border:1px solid #c9c5d8; border-radius:12px; background:#fff; color:#27223d; font:inherit; }
+.study-toolbar { flex-wrap:wrap; }
+html:lang(hy) .nav-link, html:lang(ru) .nav-link { overflow-wrap:anywhere; }
+@media(max-width:600px) { .language-selector { margin-left:0; width:100%; justify-content:flex-end; } .mobile-navigation span { font-size:.65rem; line-height:1.35; } }

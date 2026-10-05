@@ -1,6 +1,8 @@
 "use client";
+import { LArticle, LButton, LDiv, LH1, LH2, LHeader, LInput, LLabel, LOption, LP, LSection, LSelect, LSmall, LSpan, LStrong, LTextarea } from "@/components/i18n/LocalizedElements";
 
-import Link from "next/link";
+
+import Link from "@/components/i18n/LocalizedLink";
 import { useState, useEffect } from "react";
 import { rateSavedItem } from "@/lib/study/storage";
 import { GermanText, SaveButton, useStudy } from "./StudyProvider";
@@ -22,7 +24,7 @@ export function SavedReview() {
   const [now, setNow] = useState(() => Date.now());
   useEffect(() => { const timer = window.setInterval(() => setNow(Date.now()), 60000); return () => window.clearInterval(timer); }, []);
   useEffect(()=>{setSession(null);setPosition(0);setRevealed(false);},[scope]);
-  if (!study?.ready) return <p role="status">Loading your saved review…</p>;
+  if (!study?.ready) return <LP role="status">Loading your saved review…</LP>;
   const items = Object.values(study.state.saved).filter(item=>matches(savedStudyTags(item,study.dictionary)));
   const due = items.filter((item) => !item.due || Date.parse(item.due) <= now);
   const visible = items
@@ -43,88 +45,88 @@ export function SavedReview() {
     setRevealed(false);
   }
   return (
-    <div className="study-workspace">
-      <header className="study-page-header">
-        <div>
-          <p className="study-eyebrow">Your personal collection</p>
-          <h1>My review</h1>
-          <p className="muted">
+    <LDiv className="study-workspace">
+      <LHeader className="study-page-header">
+        <LDiv>
+          <LP className="study-eyebrow">Your personal collection</LP>
+          <LH1>My review</LH1>
+          <LP className="muted">
             Your saved collection and self-rated recall. Choose what matters, then review it when due.
-          </p>
-        </div>
+          </LP>
+        </LDiv>
         <Link className="study-secondary" href="/book">
           Back to the book →
         </Link>
-      </header>
-      <p className="muted">Looking for exercises with checked answers? <Link href="/review">Open guided review</Link> or <Link href="/practice">choose free practice</Link>.</p>
-      <div className="study-stats">
-        <div>
-          <strong>{items.length}</strong>
-          <span>saved items</span>
-        </div>
-        <div>
-          <strong>{due.length}</strong>
-          <span>ready to review</span>
-        </div>
-        <div>
-          <strong>{study.state.bookmarks.length}</strong>
-          <span>bookmarked pages</span>
-        </div>
-      </div>
+      </LHeader>
+      <LP className="muted">Looking for exercises with checked answers? <Link href="/review">Open guided review</Link> or <Link href="/practice">choose free practice</Link>.</LP>
+      <LDiv className="study-stats">
+        <LDiv>
+          <LStrong>{items.length}</LStrong>
+          <LSpan>saved items</LSpan>
+        </LDiv>
+        <LDiv>
+          <LStrong>{due.length}</LStrong>
+          <LSpan>ready to review</LSpan>
+        </LDiv>
+        <LDiv>
+          <LStrong>{study.state.bookmarks.length}</LStrong>
+          <LSpan>bookmarked pages</LSpan>
+        </LDiv>
+      </LDiv>
       {session ? (
-        <section className="study-recall">
-          <div className="study-row">
-            <p className="study-eyebrow">
+        <LSection className="study-recall">
+          <LDiv className="study-row">
+            <LP className="study-eyebrow">
               Recall · {Math.min(position + 1, session.length)} /{" "}
               {session.length}
-            </p>
-            <button
+            </LP>
+            <LButton
               type="button"
               className="study-secondary"
               onClick={() => setSession(null)}
             >
               End session
-            </button>
-          </div>
+            </LButton>
+          </LDiv>
           {position >= session.length ? (
-            <div className="study-recall-finish">
-              <h2>A little practice, a stronger memory.</h2>
-              <p>
+            <LDiv className="study-recall-finish">
+              <LH2>A little practice, a stronger memory.</LH2>
+              <LP>
                 You worked through {session.length} items. Again brings an item
                 back in 10 minutes; Remembered and Easy schedule it for a later
                 day.
-              </p>
-              <button
+              </LP>
+              <LButton
                 className="study-primary"
                 type="button"
                 onClick={() => setSession(null)}
               >
                 Back to my collection
-              </button>
-            </div>
+              </LButton>
+            </LDiv>
           ) : current ? (
             <>
-              <p>Say the meaning before revealing it.</p>
-              <h2>
+              <LP>Say the meaning before revealing it.</LP>
+              <LH2>
                 <GermanText text={current.title} />
-              </h2>
+              </LH2>
               <LineAudio text={current.title} src={current.audio} />
               {!revealed ? (
-                <button
+                <LButton
                   className="study-primary"
                   type="button"
                   onClick={() => setRevealed(true)}
                 >
                   Reveal meaning
-                </button>
+                </LButton>
               ) : (
-                <div className="study-recall-answer">
-                  <p>{current.meaning}</p>
-                  {current.note && <p>{current.note}</p>}
-                  <p className="muted">How did that feel?</p>
-                  <div className="study-row">
+                <LDiv className="study-recall-answer">
+                  <LP>{current.meaning}</LP>
+                  {current.note && <LP>{current.note}</LP>}
+                  <LP className="muted">How did that feel?</LP>
+                  <LDiv className="study-row">
                     {(["again", "good", "easy"] as const).map((rating) => (
-                      <button
+                      <LButton
                         className={
                           rating === "good"
                             ? "study-primary"
@@ -155,51 +157,51 @@ export function SavedReview() {
                           : rating === "good"
                             ? "Remembered"
                             : "Easy"}
-                      </button>
+                      </LButton>
                     ))}
-                  </div>
-                </div>
+                  </LDiv>
+                </LDiv>
               )}
             </>
           ) : (
             <>
-              <p>This item was removed from your collection.</p>
-              <button type="button" onClick={advance}>
+              <LP>This item was removed from your collection.</LP>
+              <LButton type="button" onClick={advance}>
                 Next item
-              </button>
+              </LButton>
             </>
           )}
-        </section>
+        </LSection>
       ) : (
         <>
-          <div className="study-review-tools">
-            <label className="study-field">
+          <LDiv className="study-review-tools">
+            <LLabel className="study-field">
               Find saved items
-              <input
+              <LInput
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Search your collection…"
               />
-            </label>
-            <label className="study-field">
+            </LLabel>
+            <LLabel className="study-field">
               Type
-              <select value={kind} onChange={(e) => setKind(e.target.value)}>
-                <option value="all">Everything</option>
-                <option value="word">Words</option>
-                <option value="concept">Concepts</option>
-                <option value="phrase">Phrases</option>
-                <option value="line">Book lines</option>
-              </select>
-            </label>
-            <label className="study-check">
-              <input
+              <LSelect value={kind} onChange={(e) => setKind(e.target.value)}>
+                <LOption value="all">Everything</LOption>
+                <LOption value="word">Words</LOption>
+                <LOption value="concept">Concepts</LOption>
+                <LOption value="phrase">Phrases</LOption>
+                <LOption value="line">Book lines</LOption>
+              </LSelect>
+            </LLabel>
+            <LLabel className="study-check">
+              <LInput
                 type="checkbox"
                 checked={onlyDue}
                 onChange={(e) => setOnlyDue(e.target.checked)}
               />{" "}
               Due only
-            </label>
-            <button
+            </LLabel>
+            <LButton
               className="study-primary"
               type="button"
               disabled={!visible.length}
@@ -210,49 +212,49 @@ export function SavedReview() {
               }}
             >
               Review {visible.length} items →
-            </button>
-          </div>
+            </LButton>
+          </LDiv>
           {!items.length ? (
-            <section className="study-empty">
-              <span aria-hidden="true">＋</span>
-              <h2>Build a collection that is yours.</h2>
-              <p>
+            <LSection className="study-empty">
+              <LSpan aria-hidden="true">＋</LSpan>
+              <LH2>Build a collection that is yours.</LH2>
+              <LP>
                 Save a word, a book line, or a grammar concept. Everything you
                 choose appears here.
-              </p>
-              <div className="study-row">
+              </LP>
+              <LDiv className="study-row">
                 <Link className="study-primary" href="/lessons/04">
                   Explore Lesson 4
                 </Link>
                 <Link className="study-secondary" href="/vocabulary">
                   Browse word cards
                 </Link>
-              </div>
-            </section>
+              </LDiv>
+            </LSection>
           ) : !visible.length ? (
-            <p className="study-empty">
+            <LP className="study-empty">
               No items match these filters. Try another search or turn off Due
               only.
-            </p>
+            </LP>
           ) : (
-            <div className="study-saved-grid">
+            <LDiv className="study-saved-grid">
               {visible.map((item) => (
-                <article className="study-saved-card" key={item.id}>
-                  <div className="study-row">
-                    <span className="study-tag">
+                <LArticle className="study-saved-card" key={item.id}>
+                  <LDiv className="study-row">
+                    <LSpan className="study-tag">
                       {item.kind}
                       {item.lesson ? ` · Lesson ${item.lesson}` : ""}
-                    </span>
+                    </LSpan>
                     <SaveButton item={item} />
-                  </div>
-                  <h2>
+                  </LDiv>
+                  <LH2>
                     <GermanText text={item.title} />
-                  </h2>
-                  <p>{item.meaning}</p>
+                  </LH2>
+                  <LP>{item.meaning}</LP>
                   <LineAudio text={item.title} src={item.audio} />
-                  <label className="study-field">
+                  <LLabel className="study-field">
                     My note
-                    <textarea
+                    <LTextarea
                       key={`${item.id}-${item.savedAt}-${item.note ?? ""}`}
                       defaultValue={item.note ?? ""}
                       maxLength={3000}
@@ -272,22 +274,22 @@ export function SavedReview() {
                         );
                       }}
                     />
-                  </label>
-                  <div className="study-row">
+                  </LLabel>
+                  <LDiv className="study-row">
                     <Link href={item.href}>Open in context →</Link>
-                    <small>
+                    <LSmall>
                       {!item.due || Date.parse(item.due) <= now
                         ? "Ready to review"
                         : `Next: ${new Date(item.due).toLocaleDateString()}`}
-                    </small>
-                  </div>
-                </article>
+                    </LSmall>
+                  </LDiv>
+                </LArticle>
               ))}
-            </div>
+            </LDiv>
           )}
         </>
       )}
       <BackupPanel/>
-    </div>
+    </LDiv>
   );
 }

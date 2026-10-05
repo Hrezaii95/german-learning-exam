@@ -1,4 +1,6 @@
-import Link from "next/link";
+
+import { LP } from "@/components/i18n/LocalizedElements";
+import Link from "@/components/i18n/LocalizedLink";
 import { isSafeNavigationPath } from "@/lib/content/navigation-context";
 
 /** Canonical Back control — never relies only on browser history. */
@@ -16,10 +18,10 @@ export function BackLink({
   }
 
   return (
-    <p className="back-link-row">
+    <LP className="back-link-row">
       <Link className="back-link" href={href}>
         ← {label}
       </Link>
-    </p>
+    </LP>
   );
 }

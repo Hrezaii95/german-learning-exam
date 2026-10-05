@@ -1,7 +1,9 @@
 "use client";
+import { LDiv, LH1, LH2, LHeader, LLi, LP, LSection, LSpan, LUl } from "@/components/i18n/LocalizedElements";
+
 import {CoursePractice} from "@/components/study/CoursePractice";
 import {useStudyScope} from "@/components/study/StudyScope";
-import Link from "next/link";
+import Link from "@/components/i18n/LocalizedLink";
 import {
   appendNavigationContext,
   type NavigationContext,
@@ -32,23 +34,23 @@ export function GameSelector({
     highlightConceptId != null && highlightConceptId === CONVERSATION_ENTITY_ID;
 
   return (
-    <div className="stack game-selector">
-      <header className="page-header">
-        <p className="dense">Practice</p>
-        <h1>Practice</h1>
-        <p className="lede">
+    <LDiv className="stack game-selector">
+      <LHeader className="page-header">
+        <LP className="dense">Practice</LP>
+        <LH1>Practice</LH1>
+        <LP className="lede">
           Recall words from your study selection, check answers in a lesson quiz,
           or practise a focused skill. Revealing a word is separate from answering correctly.
-        </p>
-      </header>
+        </LP>
+      </LHeader>
 
       <CoursePractice/>
-      {matches({lessons:[2],concepts:["people","conversation"],source:"course"})&&<section className="panel" aria-labelledby="conversation-practice-heading">
-        <h2 id="conversation-practice-heading">Conversation practice</h2>
-        <p className="muted">
+      {matches({lessons:[2],concepts:["people","conversation"],source:"course"})&&<LSection className="panel" aria-labelledby="conversation-practice-heading">
+        <LH2 id="conversation-practice-heading">Conversation practice</LH2>
+        <LP className="muted">
           A five-level ladder for the informal profession question and answer,
           including an optional voice recorder that stays on your device.
-        </p>
+        </LP>
         <Link
           href={conversationHref}
           className={`game-selector__card${
@@ -61,17 +63,17 @@ export function GameSelector({
           // count were dropped from the accessible name (WCAG 2.5.3). The
           // visible spans below now compute the name in full.
         >
-          <span className="game-selector__title">Conversation ladder</span>
-          <span className="game-selector__desc">
+          <LSpan className="game-selector__title">Conversation ladder</LSpan>
+          <LSpan className="game-selector__desc">
             Model → recognition → substitution → construction → spoken role-play
-          </span>
-          <span className="meta-chip">5 levels</span>
+          </LSpan>
+          <LSpan className="meta-chip">5 levels</LSpan>
         </Link>
-      </section>}
+      </LSection>}
 
-      <h2>Focused games · Lessons 1–2</h2>
-      <p className="muted">{catalog.length} of {buildPracticeGameCatalog().length} games match your study selection. Lesson quizzes above cover the later lessons.</p>
-      <ul className="game-selector__list">
+      <LH2>Focused games · Lessons 1–2</LH2>
+      <LP className="muted">{catalog.length} of {buildPracticeGameCatalog().length} games match your study selection. Lesson quizzes above cover the later lessons.</LP>
+      <LUl className="game-selector__list">
         {catalog.map((game) => {
           const href = navigation
             ? appendNavigationContext(practiceCanonicalPath(game.id), navigation)
@@ -79,7 +81,7 @@ export function GameSelector({
           const related =
             highlightConceptId != null && game.conceptId === highlightConceptId;
           return (
-            <li key={game.id}>
+            <LLi key={game.id}>
               <Link
                 href={href}
                 className={`game-selector__card${
@@ -95,21 +97,21 @@ export function GameSelector({
                 // them did or which were ready. The visible spans below carry
                 // all of that, so they are left to compute the name.
               >
-                <span className="game-selector__title">{game.title}</span>
-                <span className="game-selector__desc">{game.description}</span>
+                <LSpan className="game-selector__title">{game.title}</LSpan>
+                <LSpan className="game-selector__desc">{game.description}</LSpan>
                 {game.availability === "unavailable" ? (
-                  <span className="meta-chip" data-status="unavailable">
+                  <LSpan className="meta-chip" data-status="unavailable">
                     Unavailable
-                  </span>
+                  </LSpan>
                 ) : (
-                  <span className="meta-chip">Enabled</span>
+                  <LSpan className="meta-chip">Enabled</LSpan>
                 )}
               </Link>
-            </li>
+            </LLi>
           );
         })}
-      </ul>
-    </div>
+      </LUl>
+    </LDiv>
   );
 }
 

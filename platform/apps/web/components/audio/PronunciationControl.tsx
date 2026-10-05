@@ -1,4 +1,6 @@
 "use client";
+import { LButton, LDiv, LP, LStrong } from "@/components/i18n/LocalizedElements";
+
 
 import { useEffect, useRef, useState } from "react";
 import type { LearnerMediaAvailability } from "@/lib/content/detail-types";
@@ -80,8 +82,8 @@ export function PronunciationControl({
 
   if (media.state !== "preview") {
     return (
-      <div className="audio-control" data-audio-state={control.state}>
-        <button
+      <LDiv className="audio-control" data-audio-state={control.state}>
+        <LButton
           type="button"
           className="btn btn-secondary audio-control__btn"
           disabled
@@ -93,13 +95,13 @@ export function PronunciationControl({
           aria-label={`Pronunciation unavailable — ${label}`}
         >
           Pronunciation unavailable
-        </button>
+        </LButton>
         {control.explanation ? (
-          <p className="dense audio-control__note" role="status">
+          <LP className="dense audio-control__note" role="status">
             {control.explanation}
-          </p>
+          </LP>
         ) : null}
-      </div>
+      </LDiv>
     );
   }
 
@@ -138,7 +140,7 @@ export function PronunciationControl({
   const source = withPagesBaseAssetPath(media.publicPath);
 
   return (
-    <div className="audio-control" data-audio-state={playbackState}>
+    <LDiv className="audio-control" data-audio-state={playbackState}>
       {/* The exact spoken German is visible beside the player; this is a short
           pronunciation model, not a timed listening passage requiring captions. */}
       {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
@@ -158,8 +160,8 @@ export function PronunciationControl({
         onEnded={() => setPlaybackState("idle")}
         onError={() => setPlaybackState("error")}
       />
-      <div className="workbook-audio__actions" role="group" aria-label={`Pronunciation controls for ${label}`}>
-        <button
+      <LDiv className="workbook-audio__actions" role="group" aria-label={`Pronunciation controls for ${label}`}>
+        <LButton
           type="button"
           className="btn btn-primary audio-control__btn"
           onClick={togglePlayback}
@@ -169,8 +171,8 @@ export function PronunciationControl({
           aria-label={`${isPlaying ? "Pause" : "Play pronunciation"} — ${label}`}
         >
           {isPlaying ? "Pause" : "Play pronunciation"}
-        </button>
-        <button
+        </LButton>
+        <LButton
           type="button"
           className="btn btn-secondary"
           aria-pressed={rate === 0.8}
@@ -178,8 +180,8 @@ export function PronunciationControl({
           onClick={() => chooseRate(0.8)}
         >
           Study 0.8×
-        </button>
-        <button
+        </LButton>
+        <LButton
           type="button"
           className="btn btn-secondary"
           aria-pressed={rate === 1}
@@ -187,23 +189,23 @@ export function PronunciationControl({
           onClick={() => chooseRate(1)}
         >
           Normal 1×
-        </button>
-        <button type="button" className="btn btn-secondary" onClick={repeat}>
+        </LButton>
+        <LButton type="button" className="btn btn-secondary" onClick={repeat}>
           Repeat
-        </button>
-      </div>
+        </LButton>
+      </LDiv>
       <AudioSpeedControl control={audioSpeed}/>
-      <p className="dense audio-control__note">
-        <strong>Synthesized German preview voice</strong> · independent German listening review pending · {media.voice} · generated at {media.generationRate}; playback {rate}×
-      </p>
-      <p className="dense german" lang="de">
+      <LP className="dense audio-control__note">
+        <LStrong>Synthesized German preview voice</LStrong> · independent German listening review pending · {media.voice} · generated at {media.generationRate}; playback {rate}×
+      </LP>
+      <LP className="dense german" lang="de">
         {media.spokenText}
-      </p>
+      </LP>
       {playbackState === "error" ? (
-        <p className="dense audio-control__note" role="alert">
+        <LP className="dense audio-control__note" role="alert">
           Audio could not be played. Retry or check the connection.
-        </p>
+        </LP>
       ) : null}
-    </div>
+    </LDiv>
   );
 }

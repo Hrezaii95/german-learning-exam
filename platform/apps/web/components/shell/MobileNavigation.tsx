@@ -1,5 +1,7 @@
 "use client";
-import Link from "next/link";
+import { LButton, LDialog, LDiv, LH2, LH3, LHeader, LInput, LLabel, LNav, LP, LSection, LSmall, LSpan, LStrong } from "@/components/i18n/LocalizedElements";
+
+import Link from "@/components/i18n/LocalizedLink";
 import {useEffect,useRef,useState} from "react";
 import type {ShellNavCurrent} from "@/lib/content/nav";
 
@@ -22,7 +24,7 @@ const tabs=[
   {key:"saved",href:"/saved",label:"My review",icon:"M6 3h12v18l-6-4-6 4z"},
 ] as const;
 const more=[
-  {href:"/",label:"Dashboard",key:"dashboard",description:"Your daily starting point"},
+  {href:"/dashboard",label:"Dashboard",key:"dashboard",description:"Your daily starting point"},
   {href:"/vocabulary",label:"Vocabulary",key:"vocabulary",description:"Words, articles & plurals"},
   {href:"/verbs",label:"Verbs",key:"verbs",description:"Conjugations & examples"},
   {href:"/grammar",label:"Grammar",key:"grammar",description:"Patterns made clear"},
@@ -61,18 +63,18 @@ export function MobileNavigation({current}:{current:ShellNavCurrent}){
   useEffect(()=>{if(!open)return;const before=document.body.style.overflow;document.body.style.overflow="hidden";return()=>{document.body.style.overflow=before;};},[open]);
   const close=()=>{dialog.current?.close();setOpen(false);setQuery("");trigger.current?.focus();};
   return <>
-    <nav ref={navigation} className="shell-bottomnav mobile-navigation" aria-label="Mobile">
-      {tabs.map(item=><Link key={item.key} href={item.href} aria-current={current===item.key?"page":undefined}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" aria-hidden="true"><path d={item.icon}/></svg><span>{item.label}</span></Link>)}
-      <button type="button" ref={trigger} aria-label="Open navigation menu" aria-haspopup="dialog" aria-expanded={open} data-current={more.some(item=>item.key===current)||undefined} onClick={()=>{dialog.current?.showModal();setOpen(true);}}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><path d="M4 6h16 M4 12h16 M4 18h16"/></svg><span>Menu</span></button>
-    </nav>
-    <dialog ref={dialog} className="mobile-menu" aria-labelledby="mobile-menu-title" onClose={()=>setOpen(false)} onCancel={event=>{event.preventDefault();close();}} onKeyDown={event=>{if(event.key==="Escape"){event.preventDefault();event.stopPropagation();close();}}}>
-      <header><div><small>German Learning OS</small><h2 id="mobile-menu-title">Where to next?</h2></div><button type="button" onClick={close} aria-label="Close navigation menu">✕</button></header>
-      <label className="menu-search">Find a study area<input type="search" value={query} onChange={event=>setQuery(event.target.value)} placeholder="Listening, vocabulary, settings…"/></label>
-      <nav aria-label="All study areas">{groups.map(group=>{
+    <LNav ref={navigation} className="shell-bottomnav mobile-navigation" aria-label="Mobile">
+      {tabs.map(item=><Link key={item.key} href={item.href} aria-current={current===item.key?"page":undefined}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" aria-hidden="true"><path d={item.icon}/></svg><LSpan>{item.label}</LSpan></Link>)}
+      <LButton type="button" ref={trigger} aria-label="Open navigation menu" aria-haspopup="dialog" aria-expanded={open} data-current={more.some(item=>item.key===current)||undefined} onClick={()=>{dialog.current?.showModal();setOpen(true);}}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><path d="M4 6h16 M4 12h16 M4 18h16"/></svg><LSpan>Menu</LSpan></LButton>
+    </LNav>
+    <LDialog ref={dialog} className="mobile-menu" aria-labelledby="mobile-menu-title" onClose={()=>setOpen(false)} onCancel={event=>{event.preventDefault();close();}} onKeyDown={event=>{if(event.key==="Escape"){event.preventDefault();event.stopPropagation();close();}}}>
+      <LHeader><LDiv><LSmall>Lingovo</LSmall><LH2 id="mobile-menu-title">Where to next?</LH2></LDiv><LButton type="button" onClick={close} aria-label="Close navigation menu">✕</LButton></LHeader>
+      <LLabel className="menu-search">Find a study area<LInput type="search" value={query} onChange={event=>setQuery(event.target.value)} placeholder="Listening, vocabulary, settings…"/></LLabel>
+      <LNav aria-label="All study areas">{groups.map(group=>{
         const items = group.keys.flatMap(key => visible.filter(item=>item.key===key));
-        return items.length ? <section key={group.title} aria-label={group.title}><h3>{group.title}</h3><div>{items.map(item=><Link key={item.key} href={item.href} aria-current={current===item.key?"page":undefined} onClick={close}><strong>{item.label}</strong><span>{item.description}</span></Link>)}</div></section> : null;
-      })}</nav>
-      {!visible.length && <p role="status">No study area matches. Try “book” or “listening”.</p>}
-    </dialog>
+        return items.length ? <LSection key={group.title} aria-label={group.title}><LH3>{group.title}</LH3><LDiv>{items.map(item=><Link key={item.key} href={item.href} aria-current={current===item.key?"page":undefined} onClick={close}><LStrong>{item.label}</LStrong><LSpan>{item.description}</LSpan></Link>)}</LDiv></LSection> : null;
+      })}</LNav>
+      {!visible.length && <LP role="status">No study area matches. Try “book” or “listening”.</LP>}
+    </LDialog>
   </>;
 }

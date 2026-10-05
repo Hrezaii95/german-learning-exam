@@ -1,6 +1,8 @@
 "use client";
+import { LAside, LButton, LDiv, LH1, LH2, LHeader, LP, LSection, LSpan, LStrong, LTable, LTbody, LTd, LTh, LThead, LTr } from "@/components/i18n/LocalizedElements";
 
-import Link from "next/link";
+
+import Link from "@/components/i18n/LocalizedLink";
 import { useState } from "react";
 import type { ExtraProfessionRow } from "@/lib/content/extra-professions";
 import styles from "./extra-professions.module.css";
@@ -13,72 +15,72 @@ export function ExtraProfessionDetail({ row }: { row: ExtraProfessionRow }) {
   ];
 
   return (
-    <div className="stack">
-      <p>
+    <LDiv className="stack">
+      <LP>
         <Link className="back-link" href="/collections/professions">
           ← All optional professions
         </Link>
-      </p>
-      <header className="page-header">
-        <p className={styles.eyebrow}>Optional source row {row.sourceRow}</p>
-        <h1>{row.meaningEn}</h1>
-        <div className="meta-row">
-          <span className="meta-chip">Candidate — German review pending</span>
-          <span className="meta-chip">Does not affect Lesson 2 completion</span>
-        </div>
-      </header>
+      </LP>
+      <LHeader className="page-header">
+        <LP className={styles.eyebrow}>Optional source row {row.sourceRow}</LP>
+        <LH1>{row.meaningEn}</LH1>
+        <LDiv className="meta-row">
+          <LSpan className="meta-chip">Candidate — German review pending</LSpan>
+          <LSpan className="meta-chip">Does not affect Lesson 2 completion</LSpan>
+        </LDiv>
+      </LHeader>
 
-      <section className="panel" aria-labelledby="forms-heading">
-        <h2 id="forms-heading">Forms exactly as supplied</h2>
-        <div className={styles.tableWrap} tabIndex={0} role="region" aria-label="Profession forms table">
-          <table className={styles.formsTable}>
-            <thead>
-              <tr>
-                <th scope="col">Form</th>
-                <th scope="col">Singular</th>
-                <th scope="col">Plural</th>
-              </tr>
-            </thead>
-            <tbody>
+      <LSection className="panel" aria-labelledby="forms-heading">
+        <LH2 id="forms-heading">Forms exactly as supplied</LH2>
+        <LDiv className={styles.tableWrap} tabIndex={0} role="region" aria-label="Profession forms table">
+          <LTable className={styles.formsTable}>
+            <LThead>
+              <LTr>
+                <LTh scope="col">Form</LTh>
+                <LTh scope="col">Singular</LTh>
+                <LTh scope="col">Plural</LTh>
+              </LTr>
+            </LThead>
+            <LTbody>
               {pairs.map((form, index) => (
-                <tr key={`${form.label}-${form.singular}`}>
-                  <th scope="row">
+                <LTr key={`${form.label}-${form.singular}`}>
+                  <LTh scope="row">
                     {form.label}{index > 0 && pairs[index - 1]?.label === form.label ? " alternative" : ""}
-                  </th>
-                  <td lang="de">{form.singular}</td>
-                  <td lang="de">{form.plural}</td>
-                </tr>
+                  </LTh>
+                  <LTd lang="de">{form.singular}</LTd>
+                  <LTd lang="de">{form.plural}</LTd>
+                </LTr>
               ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
+            </LTbody>
+          </LTable>
+        </LDiv>
+      </LSection>
 
-      <section className={`panel ${styles.review}`} aria-labelledby="row-review-heading">
-        <h2 id="row-review-heading">Quick self-review</h2>
-        <p className="muted">Recall every German singular and plural, then reveal the source forms.</p>
-        <button
+      <LSection className={`panel ${styles.review}`} aria-labelledby="row-review-heading">
+        <LH2 id="row-review-heading">Quick self-review</LH2>
+        <LP className="muted">Recall every German singular and plural, then reveal the source forms.</LP>
+        <LButton
           type="button"
           className={styles.flashcard}
           aria-pressed={revealed}
           onClick={() => setRevealed((current) => !current)}
         >
-          <span className="dense">{revealed ? "Source forms" : "English prompt"}</span>
-          <strong lang={revealed ? "de" : "en"}>
+          <LSpan className="dense">{revealed ? "Source forms" : "English prompt"}</LSpan>
+          <LStrong lang={revealed ? "de" : "en"}>
             {revealed
               ? pairs.map((form) => `${form.singular} → ${form.plural}`).join(" · ")
               : row.meaningEn}
-          </strong>
-        </button>
-        <button className="btn btn-secondary" type="button" onClick={() => setRevealed(false)}>
+          </LStrong>
+        </LButton>
+        <LButton className="btn btn-secondary" type="button" onClick={() => setRevealed(false)}>
           Try again
-        </button>
-      </section>
+        </LButton>
+      </LSection>
 
-      <aside className={`panel ${styles.notice}`}>
-        <h2>Audio and images</h2>
-        <p>This word does not have audio or an image yet.</p>
-      </aside>
-    </div>
+      <LAside className={`panel ${styles.notice}`}>
+        <LH2>Audio and images</LH2>
+        <LP>This word does not have audio or an image yet.</LP>
+      </LAside>
+    </LDiv>
   );
 }

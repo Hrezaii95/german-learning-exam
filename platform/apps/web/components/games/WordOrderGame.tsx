@@ -1,4 +1,6 @@
 "use client";
+import { LButton, LDiv, LFieldset, LH2, LLegend, LP, LSection, LSpan } from "@/components/i18n/LocalizedElements";
+
 
 import { useMemo, useRef, useState } from "react";
 import { useFeedbackChannel } from "@/components/a11y/StatusMessage";
@@ -78,49 +80,49 @@ export function WordOrderGame({
   }
 
   return (
-    <section className="panel game-panel" aria-labelledby="word-order-heading">
-      <h2 id="word-order-heading">Word order</h2>
-      <p className="muted">
+    <LSection className="panel game-panel" aria-labelledby="word-order-heading">
+      <LH2 id="word-order-heading">Word order</LH2>
+      <LP className="muted">
         Rebuild the informal question using the word tiles below.
-      </p>
-      <fieldset className="game-tokens">
-        <legend className="hub-field__label">Your order</legend>
-        <div className="game-tokens__row" data-role="ordered">
+      </LP>
+      <LFieldset className="game-tokens">
+        <LLegend className="hub-field__label">Your order</LLegend>
+        <LDiv className="game-tokens__row" data-role="ordered">
           {ordered.length === 0 ? (
-            <span className="dense">Tap tokens below to build the sentence.</span>
+            <LSpan className="dense">Tap tokens below to build the sentence.</LSpan>
           ) : (
             ordered.map((token, index) => (
-              <button
+              <LButton
                 key={`o-${token}-${index}`}
                 type="button"
                 className="game-token"
                 onClick={() => unpick(token, index)}
               >
-                <span className="german" lang="de">
+                <LSpan className="german" lang="de">
                   {token}
-                </span>
-              </button>
+                </LSpan>
+              </LButton>
             ))
           )}
-        </div>
-      </fieldset>
-      <fieldset className="game-tokens">
-        <legend className="hub-field__label">Available tokens</legend>
-        <div className="game-tokens__row" data-role="pool">
+        </LDiv>
+      </LFieldset>
+      <LFieldset className="game-tokens">
+        <LLegend className="hub-field__label">Available tokens</LLegend>
+        <LDiv className="game-tokens__row" data-role="pool">
           {pool.map((token, index) => (
-            <button
+            <LButton
               key={`p-${token}-${index}`}
               type="button"
               className="game-token"
               onClick={() => pick(token, index)}
             >
-              <span className="german" lang="de">
+              <LSpan className="german" lang="de">
                 {token}
-              </span>
-            </button>
+              </LSpan>
+            </LButton>
           ))}
-        </div>
-      </fieldset>
+        </LDiv>
+      </LFieldset>
       <GameActionBar
         onSubmit={submit}
         onRetry={retry}
@@ -135,6 +137,6 @@ export function WordOrderGame({
         revealDisabled={revealed}
       />
       <GameFeedback kind={feedbackKind} message={message} seq={seq} />
-    </section>
+    </LSection>
   );
 }

@@ -1,4 +1,6 @@
 "use client";
+import { LButton, LH2, LInput, LLabel, LP, LSection, LSpan } from "@/components/i18n/LocalizedElements";
+
 
 import { useRef, useState } from "react";
 import { useFeedbackChannel } from "@/components/a11y/StatusMessage";
@@ -63,22 +65,22 @@ export function IndependentConstructionLevel({
   }
 
   return (
-    <section
+    <LSection
       className="panel conversation-panel"
       aria-labelledby="conversation-construction-heading"
       data-level="independent-construction"
     >
-      <h2 id="conversation-construction-heading">Independent construction</h2>
-      <p className="muted">
+      <LH2 id="conversation-construction-heading">Independent construction</LH2>
+      <LP className="muted">
         Type one of the three accepted answers for{" "}
-        <span className="german" lang="de">
+        <LSpan className="german" lang="de">
           {CONVERSATION_QUESTION}
-        </span>
+        </LSpan>
         . Ellipsis-safe; do not invent filled profession sentences.
-      </p>
-      <label className="hub-field" htmlFor="conversation-construction-input">
-        <span className="hub-field__label">Your answer pattern</span>
-        <input
+      </LP>
+      <LLabel className="hub-field" htmlFor="conversation-construction-input">
+        <LSpan className="hub-field__label">Your answer pattern</LSpan>
+        <LInput
           id="conversation-construction-input"
           className="hub-input"
           type="text"
@@ -88,7 +90,7 @@ export function IndependentConstructionLevel({
           onChange={(event) => setValue(event.target.value)}
           aria-label="Type your answer"
         />
-      </label>
+      </LLabel>
       <ConversationActionBar
         onSubmit={submit}
         onRetry={retry}
@@ -109,16 +111,16 @@ export function IndependentConstructionLevel({
         revealDisabled={revealed}
       />
       {feedbackKind === "correct" || feedbackKind === "partial" ? (
-        <button
+        <LButton
           type="button"
           className="btn btn-primary"
           onClick={continueAfterSuccess}
           data-continue-level="true"
         >
           Continue
-        </button>
+        </LButton>
       ) : null}
       <ConversationFeedback kind={feedbackKind} message={message} seq={seq} />
-    </section>
+    </LSection>
   );
 }

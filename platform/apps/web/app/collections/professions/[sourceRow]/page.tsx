@@ -1,8 +1,10 @@
+
+import { LDiv, LNav } from "@/components/i18n/LocalizedElements";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ShellLayout } from "@/components/shell/ShellLayout";
 import { loadExtraProfessionsProjection } from "@/lib/content/extra-professions";
-import Link from "next/link";
+import Link from "@/components/i18n/LocalizedLink";
 import { WordFamilyCard } from "@/components/word-cards/WordFamilyCard";
 import { wordCardForPath } from "@/lib/content/word-cards";
 import styles from "@/components/word-cards/word-cards.module.css";
@@ -39,7 +41,7 @@ export default async function ExtraProfessionDetailPage({ params }: PageProps) {
 
   return (
     <ShellLayout current="vocabulary">
-      <div className={styles.detailFrame}><nav className={styles.cardNavigation} aria-label="Vocabulary cards"><ProfessionBackLink/><Link href="/vocabulary">All vocabulary</Link></nav><WordFamilyCard key={card.id} card={card} /></div>
+      <LDiv className={styles.detailFrame}><LNav className={styles.cardNavigation} aria-label="Vocabulary cards"><ProfessionBackLink/><Link href="/vocabulary">All vocabulary</Link></LNav><WordFamilyCard key={card.id} card={card} /></LDiv>
     </ShellLayout>
   );
 }

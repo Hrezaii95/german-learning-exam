@@ -1,4 +1,6 @@
 "use client";
+import { LButton, LDiv, LSpan } from "@/components/i18n/LocalizedElements";
+
 
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
@@ -33,14 +35,14 @@ export function SelectionMeaning({ lookup }: { lookup: (text: string) => void })
     if (text) popover.current?.showPopover();
     else popover.current?.hidePopover();
   }, [text, host]);
-  const toolbar = <div ref={popover} popover="manual" className="study-selection-meaning" aria-label="Selected text tools">
-    <span lang="de">{text}</span>
-    <button type="button" className="study-primary" onPointerDown={event => event.preventDefault()}
+  const toolbar = <LDiv ref={popover} popover="manual" className="study-selection-meaning" aria-label="Selected text tools">
+    <LSpan lang="de">{text}</LSpan>
+    <LButton type="button" className="study-primary" onPointerDown={event => event.preventDefault()}
       onClick={() => { const value = text; window.getSelection()?.removeAllRanges(); setText(""); lookup(value); }}>
       Meaning of selection
-    </button>
-    <button type="button" className="study-icon-button" aria-label="Dismiss selection"
-      onClick={() => { window.getSelection()?.removeAllRanges(); setText(""); }}>✕</button>
-  </div>;
+    </LButton>
+    <LButton type="button" className="study-icon-button" aria-label="Dismiss selection"
+      onClick={() => { window.getSelection()?.removeAllRanges(); setText(""); }}>✕</LButton>
+  </LDiv>;
   return host ? createPortal(toolbar, host) : toolbar;
 }

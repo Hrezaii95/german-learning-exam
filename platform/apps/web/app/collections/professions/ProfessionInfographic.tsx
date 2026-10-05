@@ -1,3 +1,5 @@
+
+import { LB, LDiv, LSection, LSmall, LSpan, LStrong } from "@/components/i18n/LocalizedElements";
 import type { ExtraProfessionRow } from "@/lib/content/extra-professions";
 import { resolvePublishedPronunciationExact } from "@/lib/content/media-availability";
 import styles from "./professions.module.css";
@@ -35,59 +37,59 @@ function FormLane({
   pronunciation?: Record<string, string>;
 }) {
   return (
-    <section
+    <LSection
       className={`${styles.formLane} ${styles[gender]} ${compact ? styles.compactLane : ""}`}
       aria-label={`${label} forms`}
     >
-      <div className={styles.genderHeader}>
-        <span className={styles.genderGlyph} aria-hidden="true">
+      <LDiv className={styles.genderHeader}>
+        <LSpan className={styles.genderGlyph} aria-hidden="true">
           {gender === "masculine" ? "M" : "F"}
-        </span>
-        <strong>{label}</strong>
-        <span className={styles.genderRule}>
+        </LSpan>
+        <LStrong>{label}</LStrong>
+        <LSpan className={styles.genderRule}>
           {gender === "masculine" ? "der · blue" : "die · pink"}
-        </span>
-      </div>
+        </LSpan>
+      </LDiv>
 
-      <div className={styles.alternativeStack}>
+      <LDiv className={styles.alternativeStack}>
         {forms.map((form, index) => {
           const singular = articleAndNoun(form.singular);
           const plural = articleAndNoun(form.plural);
           const singularAudio = resolvePublishedPronunciationExact(form.singular).state;
           const pluralAudio = resolvePublishedPronunciationExact(form.plural).state;
           return (
-            <div className={styles.formPair} key={`${gender}-${form.singular}`}>
+            <LDiv className={styles.formPair} key={`${gender}-${form.singular}`}>
               {index > 0 ? (
-                <div className={styles.alternativeDivider} aria-label="Slash alternative">
-                  <span aria-hidden="true">／</span> source alternative
-                </div>
+                <LDiv className={styles.alternativeDivider} aria-label="Slash alternative">
+                  <LSpan aria-hidden="true">／</LSpan> source alternative
+                </LDiv>
               ) : null}
-              <div className={styles.numberForm}>
-                <span className={styles.numberLabel}>one person · singular</span>
-                <span className={styles.germanForm} lang="de">
-                  {pronunciation ? <GermanText text={form.singular}/> : <><b className={styles.articleToken}>{singular.article}</b><span>{singular.noun}</span></>}
-                </span>
-                {pronunciation ? <LineAudio text={form.singular} src={pronunciation[form.singular]} compact/> : <span className={styles.audioState} data-audio-state={singularAudio}>
+              <LDiv className={styles.numberForm}>
+                <LSpan className={styles.numberLabel}>one person · singular</LSpan>
+                <LSpan className={styles.germanForm} lang="de">
+                  {pronunciation ? <GermanText text={form.singular}/> : <><LB className={styles.articleToken}>{singular.article}</LB><LSpan>{singular.noun}</LSpan></>}
+                </LSpan>
+                {pronunciation ? <LineAudio text={form.singular} src={pronunciation[form.singular]} compact/> : <LSpan className={styles.audioState} data-audio-state={singularAudio}>
                   {singularAudio === "preview" ? "Audio preview ready" : "Audio not available yet"}
-                </span>}
-              </div>
-              <span className={styles.numberArrow} aria-label="changes to plural">
+                </LSpan>}
+              </LDiv>
+              <LSpan className={styles.numberArrow} aria-label="changes to plural">
                 →
-              </span>
-              <div className={`${styles.numberForm} ${styles.pluralForm}`}>
-                <span className={styles.numberLabel}>more than one · plural</span>
-                <span className={styles.germanForm} lang="de">
-                  {pronunciation ? <GermanText text={form.plural}/> : <><b className={styles.pluralArticle}>{plural.article}</b><span>{plural.noun}</span></>}
-                </span>
-                {pronunciation ? <LineAudio text={form.plural} src={pronunciation[form.plural]} compact/> : <span className={styles.audioState} data-audio-state={pluralAudio}>
+              </LSpan>
+              <LDiv className={`${styles.numberForm} ${styles.pluralForm}`}>
+                <LSpan className={styles.numberLabel}>more than one · plural</LSpan>
+                <LSpan className={styles.germanForm} lang="de">
+                  {pronunciation ? <GermanText text={form.plural}/> : <><LB className={styles.pluralArticle}>{plural.article}</LB><LSpan>{plural.noun}</LSpan></>}
+                </LSpan>
+                {pronunciation ? <LineAudio text={form.plural} src={pronunciation[form.plural]} compact/> : <LSpan className={styles.audioState} data-audio-state={pluralAudio}>
                   {pluralAudio === "preview" ? "Audio preview ready" : "Audio not available yet"}
-                </span>}
-              </div>
-            </div>
+                </LSpan>}
+              </LDiv>
+            </LDiv>
           );
         })}
-      </div>
-    </section>
+      </LDiv>
+    </LSection>
   );
 }
 
@@ -101,13 +103,13 @@ export function ProfessionInfographic({
   pronunciation?: Record<string, string>;
 }) {
   return (
-    <div className={`${styles.infographic} ${compact ? styles.compactGraphic : ""}`}>
+    <LDiv className={`${styles.infographic} ${compact ? styles.compactGraphic : ""}`}>
       <FormLane label="Masculine person form" gender="masculine" forms={row.masculine} compact={compact} {...(pronunciation ? { pronunciation } : {})} />
-      <div className={styles.personRelationship} aria-label="Masculine and feminine person forms are paired">
-        <span aria-hidden="true">↔</span>
-        <small>paired person forms</small>
-      </div>
+      <LDiv className={styles.personRelationship} aria-label="Masculine and feminine person forms are paired">
+        <LSpan aria-hidden="true">↔</LSpan>
+        <LSmall>paired person forms</LSmall>
+      </LDiv>
       <FormLane label="Feminine person form" gender="feminine" forms={row.feminine} compact={compact} {...(pronunciation ? { pronunciation } : {})} />
-    </div>
+    </LDiv>
   );
 }

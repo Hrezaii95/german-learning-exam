@@ -1,4 +1,6 @@
 "use client";
+import { LButton, LDiv, LH2, LInput, LLabel, LOption, LP, LSection, LSelect, LSpan } from "@/components/i18n/LocalizedElements";
+
 
 import { useState } from "react";
 import {
@@ -39,16 +41,16 @@ export function VerbSelfCheck({ detail }: { detail: LearnerVerbDetail }) {
   }
 
   return (
-    <section className="panel detail-selfcheck" aria-labelledby="verb-selfcheck-heading">
-      <h2 id="verb-selfcheck-heading">Self-check</h2>
-      <p className="muted">
+    <LSection className="panel detail-selfcheck" aria-labelledby="verb-selfcheck-heading">
+      <LH2 id="verb-selfcheck-heading">Self-check</LH2>
+      <LP className="muted">
         Practise the present forms. Feedback is instant and stays on this
         device.
-      </p>
-      <div className="detail-selfcheck__controls">
-        <label className="hub-field" htmlFor="verb-selfcheck-person">
-          <span className="hub-field__label">Person</span>
-          <select
+      </LP>
+      <LDiv className="detail-selfcheck__controls">
+        <LLabel className="hub-field" htmlFor="verb-selfcheck-person">
+          <LSpan className="hub-field__label">Person</LSpan>
+          <LSelect
             id="verb-selfcheck-person"
             className="hub-input"
             // The options ARE the German pronouns being taught; the options
@@ -64,15 +66,15 @@ export function VerbSelfCheck({ detail }: { detail: LearnerVerbDetail }) {
             }}
           >
             {detail.present.map((item) => (
-              <option key={item.person} value={item.person}>
+              <LOption key={item.person} value={item.person}>
                 {item.personLabel}
-              </option>
+              </LOption>
             ))}
-          </select>
-        </label>
-        <label className="hub-field" htmlFor="verb-selfcheck-form">
-          <span className="hub-field__label">Form</span>
-          <input
+          </LSelect>
+        </LLabel>
+        <LLabel className="hub-field" htmlFor="verb-selfcheck-form">
+          <LSpan className="hub-field__label">Form</LSpan>
+          <LInput
             id="verb-selfcheck-form"
             className="hub-input"
             type="text"
@@ -82,28 +84,28 @@ export function VerbSelfCheck({ detail }: { detail: LearnerVerbDetail }) {
             onChange={(event) => setTyped(event.target.value)}
             aria-label={`Type the present form for ${row.personLabel}`}
           />
-        </label>
-      </div>
-      <div className="detail-actions">
-        <button type="button" className="btn btn-primary" onClick={check}>
+        </LLabel>
+      </LDiv>
+      <LDiv className="detail-actions">
+        <LButton type="button" className="btn btn-primary" onClick={check}>
           Check
-        </button>
-        <button type="button" className="btn btn-secondary" onClick={reveal}>
+        </LButton>
+        <LButton type="button" className="btn btn-secondary" onClick={reveal}>
           Reveal
-        </button>
-      </div>
+        </LButton>
+      </LDiv>
       <StatusMessage announcement={feedback} className="detail-feedback">
         {revealed ? (
           <>
             Correct form:{" "}
-            <span className="german" lang="de">
+            <LSpan className="german" lang="de">
               {row.form}
-            </span>
+            </LSpan>
           </>
         ) : (
           feedback.text
         )}
       </StatusMessage>
-    </section>
+    </LSection>
   );
 }

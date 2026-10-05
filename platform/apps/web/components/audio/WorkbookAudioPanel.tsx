@@ -1,4 +1,6 @@
 "use client";
+import { LButton, LDiv, LH2, LLi, LOl, LP, LSection, LSpan, LStrong } from "@/components/i18n/LocalizedElements";
+
 
 import { useEffect, useRef, useState } from "react";
 import { withPagesBaseAssetPath } from "@/lib/content/pages-base-path";
@@ -43,29 +45,29 @@ export function WorkbookAudioPanel({ tracks }: { tracks: readonly WorkbookAudioT
   }
 
   return (
-    <section className="panel workbook-audio" aria-labelledby="workbook-audio-heading">
-      <div className="workbook-audio__heading">
-        <div>
-          <p className="dense">Original workbook audio</p>
-          <h2 id="workbook-audio-heading">Listen, slow down, repeat</h2>
-        </div>
-        <span className="meta-chip">{tracks.length} approved track{tracks.length === 1 ? "" : "s"}</span>
-      </div>
+    <LSection className="panel workbook-audio" aria-labelledby="workbook-audio-heading">
+      <LDiv className="workbook-audio__heading">
+        <LDiv>
+          <LP className="dense">Original workbook audio</LP>
+          <LH2 id="workbook-audio-heading">Listen, slow down, repeat</LH2>
+        </LDiv>
+        <LSpan className="meta-chip">{tracks.length} approved track{tracks.length === 1 ? "" : "s"}</LSpan>
+      </LDiv>
       {/* ADR-016 asks for the source credit to travel with the media itself,
           not only with a page elsewhere in the app. */}
-      <p className="muted">
-        Original exercise recordings from the <span lang="de">Momente</span> A1.1{" "}
-        <span lang="de">Arbeitsbuch</span> CD (Hueber Verlag), mapped to this
+      <LP className="muted">
+        Original exercise recordings from the <LSpan lang="de">Momente</LSpan> A1.1{" "}
+        <LSpan lang="de">Arbeitsbuch</LSpan> CD (Hueber Verlag), mapped to this
         lesson activity. Study speed preserves pitch.
-      </p>
+      </LP>
       <AudioSpeedControl control={audioSpeed}/>
-      <ol className="workbook-audio__list">
+      <LOl className="workbook-audio__list">
         {tracks.map((track) => (
-          <li key={track.id} className="workbook-audio__track">
-            <div>
-              <strong>{track.exercise} · Track {track.id.replace("_", ".")}</strong>
-              <p className="dense">{track.purpose} · {Math.round(track.durationSeconds)} sec</p>
-            </div>
+          <LLi key={track.id} className="workbook-audio__track">
+            <LDiv>
+              <LStrong>{track.exercise} · Track {track.id.replace("_", ".")}</LStrong>
+              <LP className="dense">{track.purpose} · {Math.round(track.durationSeconds)} sec</LP>
+            </LDiv>
             {/* Learners choose when to reveal the transcript. */}
             {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
             <audio
@@ -87,17 +89,17 @@ export function WorkbookAudioPanel({ tracks }: { tracks: readonly WorkbookAudioT
               }}
               onError={() => setErrors(current => ({ ...current, [track.id]: true }))}
             />
-            {errors[track.id] && <p role="alert">Recording could not play. <button type="button" className="btn btn-secondary" onClick={() => { players.current.get(track.id)?.load(); replay(track.id); }}>Retry audio</button></p>}
+            {errors[track.id] && <LP role="alert">Recording could not play. <LButton type="button" className="btn btn-secondary" onClick={() => { players.current.get(track.id)?.load(); replay(track.id); }}>Retry audio</LButton></LP>}
             <ListeningTranscript transcript={workbookTranscript(track.id)} />
-            <div className="workbook-audio__actions" role="group" aria-label={`Playback speed for ${track.id}`}>
-              <button type="button" className="btn btn-secondary" aria-pressed={(selectedSpeeds[track.id] ?? preferredSpeed) === preferredSpeed} onClick={() => setSpeed(track.id, preferredSpeed)}>Preferred {preferredSpeed}×</button>
-              <button type="button" className="btn btn-secondary" aria-pressed={selectedSpeeds[track.id] === 0.8} onClick={() => setSpeed(track.id, 0.8)}>Study 0.8×</button>
-              <button type="button" className="btn btn-secondary" aria-pressed={selectedSpeeds[track.id] === 1} onClick={() => setSpeed(track.id, 1)}>Normal 1×</button>
-              <button type="button" className="btn btn-secondary" onClick={() => replay(track.id)}>Repeat</button>
-            </div>
-          </li>
+            <LDiv className="workbook-audio__actions" role="group" aria-label={`Playback speed for ${track.id}`}>
+              <LButton type="button" className="btn btn-secondary" aria-pressed={(selectedSpeeds[track.id] ?? preferredSpeed) === preferredSpeed} onClick={() => setSpeed(track.id, preferredSpeed)}>Preferred {preferredSpeed}×</LButton>
+              <LButton type="button" className="btn btn-secondary" aria-pressed={selectedSpeeds[track.id] === 0.8} onClick={() => setSpeed(track.id, 0.8)}>Study 0.8×</LButton>
+              <LButton type="button" className="btn btn-secondary" aria-pressed={selectedSpeeds[track.id] === 1} onClick={() => setSpeed(track.id, 1)}>Normal 1×</LButton>
+              <LButton type="button" className="btn btn-secondary" onClick={() => replay(track.id)}>Repeat</LButton>
+            </LDiv>
+          </LLi>
         ))}
-      </ol>
-    </section>
+      </LOl>
+    </LSection>
   );
 }

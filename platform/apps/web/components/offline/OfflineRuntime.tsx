@@ -1,4 +1,6 @@
 "use client";
+import { LButton, LDiv, LP, LSpan } from "@/components/i18n/LocalizedElements";
+
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import {
@@ -147,45 +149,45 @@ export function OfflineRuntime() {
   const showUpdate = updateReady && !updateDismissed;
 
   return (
-    <div className="offline-runtime">
+    <LDiv className="offline-runtime">
       {/* Rendered from first paint so assistive technology is already
           watching it when the first message arrives (WCAG 4.1.3). */}
-      <div
+      <LDiv
         role="status"
         aria-live="polite"
         className={mediaNotice ? "offline-runtime__notice" : "live-region--idle"}
       >
         {mediaNotice}
-      </div>
+      </LDiv>
 
       {isOffline ? (
-        <div className="offline-runtime__card" data-variant="offline">
-          <p className="offline-runtime__title">
-            <span className="offline-runtime__dot" aria-hidden="true" />
+        <LDiv className="offline-runtime__card" data-variant="offline">
+          <LP className="offline-runtime__title">
+            <LSpan className="offline-runtime__dot" aria-hidden="true" />
             {OFFLINE_COPY.offlineTitle}
-          </p>
-          <p className="offline-runtime__body">{OFFLINE_COPY.offlineBody}</p>
-        </div>
+          </LP>
+          <LP className="offline-runtime__body">{OFFLINE_COPY.offlineBody}</LP>
+        </LDiv>
       ) : null}
 
       {showUpdate ? (
-        <div className="offline-runtime__card" data-variant="update">
-          <p className="offline-runtime__title">{OFFLINE_COPY.updateTitle}</p>
-          <p className="offline-runtime__body">{OFFLINE_COPY.updateBody}</p>
-          <div className="offline-runtime__actions">
-            <button type="button" className="btn btn-primary" onClick={applyUpdate}>
+        <LDiv className="offline-runtime__card" data-variant="update">
+          <LP className="offline-runtime__title">{OFFLINE_COPY.updateTitle}</LP>
+          <LP className="offline-runtime__body">{OFFLINE_COPY.updateBody}</LP>
+          <LDiv className="offline-runtime__actions">
+            <LButton type="button" className="btn btn-primary" onClick={applyUpdate}>
               {OFFLINE_COPY.updateAction}
-            </button>
-            <button
+            </LButton>
+            <LButton
               type="button"
               className="btn btn-secondary"
               onClick={() => setUpdateDismissed(true)}
             >
               {OFFLINE_COPY.updateDismiss}
-            </button>
-          </div>
-        </div>
+            </LButton>
+          </LDiv>
+        </LDiv>
       ) : null}
-    </div>
+    </LDiv>
   );
 }
