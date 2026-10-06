@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "videos": [
+    {"locale": "en", "file": "Lingovo-Launch-English.mp4", "bytes": 20684923, "sha256": "cc3231a2f9b49a21be2cd6dc4e24abdc783ffc17560236497f1ada3b44c23889", "libraryFileId": "libfile_095e701178588191ad44f71ff33b8797"},
+    {"locale": "hy", "file": "Lingovo-Launch-Armenian.mp4", "bytes": 20589308, "sha256": "61ed1647cc97f1931e3d3db632dbffff00f2445030db18f38cfa21589d6e6b7b", "libraryFileId": "libfile_ba2cdf14332481919ec1eef48dcdcdcf"}
+  ],
+  "interfaceMapping": {"hy": "hy", "ru": "hy", "en": "en", "de": "en"}
+}

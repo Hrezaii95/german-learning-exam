@@ -38,8 +38,9 @@
     "validate": "tsx packages/content/src/cli/validate.ts",
     "build:cloudflare": "GL_CLOUDFLARE_EXPORT=1 NEXT_PUBLIC_GL_AUDIO_ORIGIN=https://german-learning-audio.pages.dev npm run build:pages",
     "prepare:c1": "node scripts/c1-assets.mjs && npm run build -w @lingovo/c1 && node packages/c1/build-css.mjs",
-    "prebuild:pages": "npm run prepare:c1",
-    "prebuild:web": "npm run prepare:c1"
+    "prebuild:pages": "npm run prepare:launch-videos && npm run prepare:c1",
+    "prebuild:web": "npm run prepare:launch-videos && npm run prepare:c1",
+    "prepare:launch-videos": "node scripts/prepare-launch-videos.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.62.1",

@@ -57,3 +57,5 @@ npm-debug.log*
 
 # C1 immutable source media; restored and hash-verified by platform/scripts/c1-assets.mjs
 platform/apps/web/public/c1/
+# Supplied films are hash-verified from their durable file attachments before builds.
+/platform/apps/web/public/lingovo/launch/*.mp4
