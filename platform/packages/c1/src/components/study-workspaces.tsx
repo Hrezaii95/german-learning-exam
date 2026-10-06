@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import Link from './site-link.js';
 import { studySources } from '../lib/study-sources.js';
 import bookIndex from '../lib/data/book-index.json';
+import sourceCourseIndex from '../lib/data/source-course-index.json';
 import {
   ArrowRight,
   ArrowUp,
@@ -445,6 +446,10 @@ export function ProgressRoom({ lang, store }: Props) {
       )
       .map((a) => a.exerciseId),
   );
+  for (const group of sourceCourseIndex.groups) {
+    const work=state.bookWork['activity:'+group.id];
+    if(work?.reviewed && work.revision===group.revision && work.reviewedAt && new Date(work.reviewedAt).toDateString()===today) todayIds.add('activity:'+group.id);
+  }
   const needs = lessons.flatMap((l) => {
     const last = latestAttempts(state.attempts, l);
     return l.exercises
@@ -481,6 +486,7 @@ export function ProgressRoom({ lang, store }: Props) {
         </Button>
       </div>
       <div className="progress-stats">
+        <div className="panel"><strong>{sourceCourseIndex.groups.filter(g=>state.bookWork['activity:'+g.id]?.reviewed && state.bookWork['activity:'+g.id]?.revision===g.revision).length} / {sourceCourseIndex.groups.length}</strong><p>{t('Buchaufgabengruppen selbst verglichen','Book activity groups self-reviewed')}</p><Link className="text-link" href="/course">{t('Buchkurs öffnen','Open book course')}</Link></div>
         <div className="panel">
           <strong>
             {
@@ -598,10 +604,10 @@ export function ProgressRoom({ lang, store }: Props) {
           <h2>{t('Deine Fertigkeiten', 'Your skills')}</h2>
           {Object.entries(skillNames).map(([id, label]) => {
             const count = lessons
-              .filter((l) => l.skill === id)
+              .filter((l) => l.skill === id && (id !== 'hoeren' || Boolean(l.audioUrl)))
               .reduce((n, l) => n + lessonProgress(state.attempts, l), 0);
             const total = lessons
-              .filter((l) => l.skill === id)
+              .filter((l) => l.skill === id && (id !== 'hoeren' || Boolean(l.audioUrl)))
               .reduce((n, l) => n + l.exercises.length, 0);
             return (
               <div className="skill-progress" key={id}>
@@ -612,7 +618,7 @@ export function ProgressRoom({ lang, store }: Props) {
                   </span>
                 </div>
                 <Progress
-                  value={(count / total) * 100}
+                  value={total ? (count / total) * 100 : 0}
                   aria-label={localize(label, lang)}
                 />
               </div>
@@ -624,6 +630,7 @@ export function ProgressRoom({ lang, store }: Props) {
               'Progress measures completed activities. It is not a TestDaF prediction.',
             )}
           </p>
+          <p className="caption">{t('Reine Transkriptübungen zählen zu den bearbeiteten Aufgaben, nicht zum Hörfortschritt.', 'Transcript-only practice counts toward activity totals, not listening progress.')}</p>
         </section>
         <section className="panel">
           <h2>{t('Noch einmal ansehen', 'Worth another look')}</h2>
@@ -700,7 +707,7 @@ export function ProgressRoom({ lang, store }: Props) {
           )}
         </p>
         <label className="study-field">
-          {t('Wortweg-Sicherungsdatei', 'Wortweg backup file')}
+          {t('Lingovo-Sicherungsdatei', 'Lingovo backup file')}
           <Input
             type="file"
             accept=".json,application/json"
@@ -725,8 +732,8 @@ export function ProgressRoom({ lang, store }: Props) {
         {error && (
           <p role="alert">
             {t(
-              'Diese Datei ist keine gültige Wortweg-Sicherung (max. 5 MB).',
-              'This is not a valid Wortweg backup (maximum 5 MB).',
+              'Diese Datei ist keine gültige Lingovo-Sicherung (max. 5 MB).',
+              'This is not a valid Lingovo backup (maximum 5 MB).',
             )}
           </p>
         )}
@@ -925,8 +932,8 @@ export function TeacherRoom({ lang, store }: Props) {
               <p className="study-disclosure">
                 {lesson.origin === 'provisional-source'
                   ? t(
-                      'Vorläufige Quellenanreicherung · Aufgaben und Lösungshinweise von Wortweg.',
-                      'Provisional source enrichment · activities and answer guidance by Wortweg.',
+                      'Vorläufige Quellenanreicherung · Aufgaben und Lösungshinweise von Lingovo.',
+                      'Provisional source enrichment · activities and answer guidance by Lingovo.',
                     )
                   : t('Geprüfte Quellenlektion', 'Reviewed source lesson')}{' '}
                 <Link
@@ -1222,7 +1229,7 @@ export function TeacherRoom({ lang, store }: Props) {
             {t('Unterrichtsansicht', 'Classroom view')}
           </DialogTitle>
           <header>
-            <span>Wortweg · {localize(lesson.title, lang)}</span>
+            <span>Lingovo · {localize(lesson.title, lang)}</span>
             <Button variant="outline" onClick={() => setPresent(false)}>
               <X size={18} />
               {t('Schließen', 'Close')}

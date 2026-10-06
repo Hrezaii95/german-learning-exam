@@ -1,5 +1,5 @@
 "use client";
-import { LDiv, LH1, LH2, LHeader, LInput, LLabel, LOption, LP, LSection, LSelect, LSpan } from "@/components/i18n/LocalizedElements";
+import { LDiv, LH1, LH2, LH3, LHeader, LInput, LLabel, LOption, LP, LSection, LSelect, LSpan } from "@/components/i18n/LocalizedElements";
 
 
 import {useStudyScope} from "@/components/study/StudyScope";
@@ -9,6 +9,7 @@ import type { LearnerEvent, MissionFilters, SelectedMissionCard } from "@german-
 import { useLearnerState } from "@/components/learner-state/LearnerStateProvider";
 import {
   buildDailyReviewMission,
+  buildActivityReviewQueue,
   normalizeConversationEventForPersistence,
   normalizePracticeEventForPersistence,
   reviewTemplateForId,
@@ -72,17 +73,38 @@ export function ReviewSetup() {
     filters,
     studyScope:scope,
   });
+  const activityRetries = buildActivityReviewQueue({ state: hydration.state, studyScope: scope });
 
   return (
     <LDiv className="stack">
       <LHeader className="page-header">
-        <LP className="dense">Guided review · Lessons 1–2</LP>
-        <LH1>Today’s mission</LH1>
-        <LP className="lede">Build a short session of checked exercises. These guided cards cover Lessons 1–2; your saved words, phrases and concepts from all lessons live in My review.</LP>
+        <LP className="dense">Lesson practice</LP>
+        <LH1>Review your mistakes</LH1>
+        <LP className="lede">Return to a lesson question, read the explanation, and try again without a hint.</LP>
       </LHeader>
       <LDiv className="study-row review-paths"><Link className="study-secondary" href="/saved">My saved collection &amp; recall →</Link><Link href="/practice">Choose free practice →</Link></LDiv>
+      <LSection className="panel" aria-labelledby="lesson-retries-heading">
+        <LH2 id="lesson-retries-heading">Lesson practice</LH2>
+        <LP className="dense">Correct answers after a hint stay here until you try again without help.</LP>
+        {activityRetries.length > 0 ? (
+          <LDiv className="stack">
+            {activityRetries.map((item) => (
+              <LDiv className="panel" key={item.id}>
+                <LP className="dense">Lesson {item.lessonNumber}</LP>
+                <LH3 lang="de">{item.conceptLabel}</LH3>
+                <Link className="btn btn-secondary" href={item.href}>Practise this topic</Link>
+              </LDiv>
+            ))}
+          </LDiv>
+        ) : (
+          <LDiv>
+            <LP>No mistakes waiting for a retry.</LP>
+            <Link className="btn btn-primary" href="/lessons/01">Start Lesson 1</Link>
+          </LDiv>
+        )}
+      </LSection>
       <LSection className="panel" aria-labelledby="review-setup-heading">
-        <LH2 id="review-setup-heading">Build mission</LH2>
+        <LH2 id="review-setup-heading">Guided review cards</LH2>
         <LDiv className="hub-filter-grid">
           <LLabel className="hub-field">Mission size
             <LSelect className="hub-input" value={size} onChange={(e) => setSize(Number(e.target.value) as 5 | 10 | 15)}>

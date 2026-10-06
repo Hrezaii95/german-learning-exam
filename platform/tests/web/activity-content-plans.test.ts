@@ -23,6 +23,9 @@ describe("lesson activity content plans", () => {
       if (plan.mechanic === "listening-notes") {
         expect(plan.gradeable).toBe(false);
         expect(plan.missingReason).toMatch(/no (gradeable content targets|answer key)/i);
+      } else if (plan.mechanic === "speaking-review") {
+        expect(plan.gradeable).toBe(false);
+        expect(plan.questions).toEqual([]);
       } else {
         expect(plan.gradeable).toBe(true);
         expect(plan.questions.length).toBeGreaterThan(0);
@@ -45,6 +48,7 @@ describe("lesson activity content plans", () => {
       "builder",
       "checkpoint",
       "listening-notes",
+      "speaking-review",
     ]));
 
     const listeningOnlyIds = plans
@@ -55,6 +59,17 @@ describe("lesson activity content plans", () => {
       "activity:lesson-01-workbook-listening",
       "activity:lesson-02-workbook-listening",
     ]);
+  });
+
+  it("covers communicative outcomes in checkpoints and contextual name forms", () => {
+    const lessonOne = plans.find(({ activity }) => activity.id === "activity:lesson-01-checkpoint-summary")!.plan;
+    expect(lessonOne.questions.map((question) => question.targetId)).toEqual([
+      "lex:guten-morgen", "qa:name-formal", "verb:heissen", "qa:origin-formal", "qa:wellbeing-casual", null,
+    ]);
+    expect(new Set(lessonOne.questions.map((question) => question.kind))).toEqual(new Set(["selection", "typing", "builder"]));
+    const names = plans.find(({ activity }) => activity.id === "activity:lesson-01-heissen-sein-notice")!.plan;
+    expect(names.questions.map((question) => question.expected)).toEqual(["heiße", "heißen", "bin", "heißt"]);
+    expect(names.instructions).toContain("Both Ich heiße Anna and Ich bin Anna");
   });
 
   it("uses exact source-backed spelling and number practice instead of an empty listening note", () => {

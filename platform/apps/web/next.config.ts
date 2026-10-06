@@ -35,6 +35,8 @@ const pagesBase = isPagesExport
   : PAGES_BASE_PATH;
 
 const nextConfig: NextConfig = {
+  // Isolated browser checks can use their own build cache without disturbing a running preview.
+  ...(process.env.GL_QA_DIST_DIR ? { distDir: process.env.GL_QA_DIST_DIR } : {}),
   reactStrictMode: true,
   poweredByHeader: false,
   transpilePackages: ["@german-learning/learning"],

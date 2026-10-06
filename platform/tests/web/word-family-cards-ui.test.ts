@@ -12,11 +12,13 @@ import { withWordCardHub,loadWordCards } from "../../apps/web/lib/content/word-c
 import type { LearnerHubProjection } from "../../apps/web/lib/content/hub-types";
 import { HubListView } from "../../apps/web/components/hubs/HubViews";
 import { filterHubRecords, parseHubSearchParams } from "../../apps/web/lib/content/hub-query";
+import { LocaleProvider } from "../../apps/web/components/i18n/LocaleProvider";
+import { LOCALE_KEY, translate } from "../../apps/web/lib/i18n/catalog";
 
 const catalog = JSON.parse(readFileSync(resolve("apps/web/generated/word-cards.json"), "utf8")) as WordCardCatalog;
 const engineer = catalog.cards.find(c => c.id === "W126")!;
 const originalHub = (JSON.parse(readFileSync(resolve("apps/web/generated/learner-hubs.json"), "utf8")) as LearnerHubProjection).hubsById.vocabulary;
-afterEach(cleanup);
+afterEach(() => { cleanup(); window.localStorage.clear(); });
 
 describe("original vocabulary browsing with complete cards", () => {
   it("keeps every complete family reachable through the original grid inventory", () => {
@@ -59,6 +61,45 @@ describe("original vocabulary browsing with complete cards", () => {
 });
 
 describe("complete word-family cards", () => {
+  it("keeps occupation meanings and boarding glosses complete", () => {
+    const roadWorker = catalog.cards.find(card => card.id === "W238")!;
+    expect(roadWorker.title).toBe("road construction worker");
+    expect(roadWorker.examples[0]!.en).toBe("I am a road construction worker.");
+    const boarding = loadWordCards().cards.find(card => card.rows[0]?.singular.text === "einsteigen")!;
+    expect(boarding.title).toContain("get in");
+    expect(boarding.title).not.toContain(" / in");
+  });
+  it("uses a definition and hides the translated answer title during German recall", () => {
+    window.localStorage.setItem(LOCALE_KEY, "de");
+    render(createElement(LocaleProvider, null, createElement(WordFamilyCard, { card: engineer })));
+    fireEvent.click(screen.getByRole("button", { name: translate("Try recall", "de") }));
+    expect(screen.getByRole("heading", { level: 1 }).textContent).toBe(translate("Recall from memory", "de"));
+    expect(screen.getByRole("heading", { level: 3 }).textContent).toContain("technischer Hochschulausbildung");
+    expect(screen.getByRole("heading", { level: 3 }).textContent).not.toContain("Ingenieur");
+  });
+  it("does not call a copied revealed answer independent recall", () => {
+    render(createElement(WordFamilyCard, { card: engineer }));
+    fireEvent.click(screen.getByRole("button", { name: "Try recall" }));
+    fireEvent.click(screen.getByRole("button", { name: "Show answer" }));
+    fireEvent.change(screen.getByLabelText("German answer"), { target: { value: engineer.prompts[0]!.answers[0] } });
+    fireEvent.click(screen.getByRole("button", { name: "Check answer" }));
+    expect(screen.getByRole("status").textContent).toContain("Correct after help.");
+    expect(screen.getByRole("status").textContent).not.toContain("You remembered it.");
+  });
+  it("teaches hundert as a whole and accepts both standard forms of 100", () => {
+    const hundred = catalog.cards.find(card => card.id === "N100")!;
+    expect(hundred.pattern).toEqual(["hundert", "einhundert"]);
+    expect(hundred.prompts).toHaveLength(1);
+    expect(hundred.tip).not.toContain("units before the tens");
+    for (const answer of ["hundert", "einhundert"]) {
+      const view = render(createElement(WordFamilyCard, { card: hundred }));
+      fireEvent.click(screen.getByRole("button", { name: "Try recall" }));
+      fireEvent.change(screen.getByLabelText("German answer"), { target: { value: answer } });
+      fireEvent.click(screen.getByRole("button", { name: "Check answer" }));
+      expect(screen.getByRole("status").textContent).toContain("You remembered it.");
+      view.unmount();
+    }
+  });
   it("does not color a singular profession as plural when both spellings match", () => {
     const electrician = catalog.cards.find(card => card.rows[0]?.singular.text === "der Elektriker")!;
     const examples = ["Ich bin Elektriker.", "Wir sind Elektriker.", "der Elektriker", "die Elektriker", "Elektriker"];
@@ -107,7 +148,9 @@ describe("complete word-family cards", () => {
   });
   it("provides a recall answer for every displayed form, including old phrases", () => {
     for (const card of catalog.cards) for (const row of card.rows) for (const form of [row.singular, ...row.plurals]) {
-      expect(card.prompts.some(p => p.answers.includes(form.text)), `${card.id}: ${form.text}`).toBe(true);
+      for (const alternative of form.text.split(/\s+\/\s+/)) {
+        expect(card.prompts.some(p => p.answers.includes(alternative)), `${card.id}: ${alternative}`).toBe(true);
+      }
     }
   });
   it("allows every real card path while rejecting malformed or out-of-scope paths", () => {

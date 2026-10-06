@@ -1,4 +1,4 @@
-export const pastPeople=[{de:'ich',en:'I',have:'habe'},{de:'du',en:'you',have:'hast'},{de:'er',en:'he',have:'hat'},{de:'wir',en:'we',have:'haben'},{de:'ihr',en:'you',have:'habt'},{de:'Sie',en:'you',have:'haben'}] as const;
+export const pastPeople=[{de:'ich',en:'I',have:'habe'},{de:'du',en:'you',have:'hast'},{de:'er',en:'he',have:'hat'},{de:'wir',en:'we',have:'haben'},{de:'ihr',en:'you (plural)',have:'habt'},{de:'Sie',en:'you (formal)',have:'haben'}] as const;
 export const pastActivities=[
  {verb:'arbeiten',part:'gearbeitet',detail:'',past:'worked',base:'work',group:'regular'},
  {verb:'machen',part:'gemacht',detail:'einen Spaziergang',past:'went for a walk',base:'go for a walk',group:'regular'},

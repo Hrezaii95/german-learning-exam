@@ -1,4 +1,5 @@
 'use client';
+import { c1Path, updateC1History } from '../lib/navigation.js';
 import { translate } from '../lib/i18n.js';
 
 import { useEffect, useState } from 'react';
@@ -37,14 +38,15 @@ export default function BookWorkbook({ lang }: { lang: Locale }) {
       setPage(scope.from - 1);
   }, [scope.mode, scope.from, scope.to, page]);
   useEffect(() => {
-    const value = Number(new URLSearchParams(location.search).get('page'));
-    if (Number.isInteger(value) && value >= 1 && value <= 110)
-      setPage(value - 1);
+    const sync = () => { const value = Number(new URLSearchParams(location.search).get('page'));
+      if (Number.isInteger(value) && value >= 1 && value <= 110) setPage(value - 1); };
+    sync(); window.addEventListener('popstate', sync);
+    return () => window.removeEventListener('popstate', sync);
   }, []);
   useEffect(() => {
     const controller = new AbortController();
     setError(false);
-    fetch(index.url, { signal: controller.signal })
+    fetch(c1Path(index.url), { signal: controller.signal })
       .then((r) => {
         if (!r.ok) throw new Error('Book load failed');
         return r.json();
@@ -66,7 +68,7 @@ export default function BookWorkbook({ lang }: { lang: Locale }) {
   function select(n: number) {
     if ((scope.mode === 'pages' && (n + 1 < scope.from || n + 1 > scope.to)) || (scope.mode === 'skill' && !courseIndex.groups.some(g => sourceSkill(g.section) === scope.skill && g.pages.includes(n + 1)))) store.setState(s => ({...s,flow:{...s.flow,scope:{...s.flow.scope,mode:'all'}}}));
     setPage(n);
-    history.replaceState(null, '', '/book?page=' + (n + 1));
+    updateC1History('/book', {page: n + 1});
     window.scrollTo({ top: 0 });
   }
   if (error)
@@ -588,8 +590,8 @@ function BookPageSession({
               </h3>
               <p>
                 {t(
-                  'Ergänzende Lehrhilfe von Wortweg. Aufgabenwortlaut im Buch zuerst gemeinsam klären.',
-                  'Supplementary guidance by Wortweg. Begin by clarifying the book’s task instructions together.',
+                  'Ergänzende Lehrhilfe von Lingovo. Aufgabenwortlaut im Buch zuerst gemeinsam klären.',
+                  'Supplementary guidance by Lingovo. Begin by clarifying the book’s task instructions together.',
                 )}
               </p>
               <ol className="studio-teacher-steps">
@@ -651,7 +653,7 @@ function BookPageSession({
                 {t('Link für Lernende', 'Link for learners')}
                 <Input
                   readOnly
-                  value={`${location.origin}/book?page=${p.pageIndex + 1}`}
+                  value={`${location.origin}${c1Path('/book?page=' + (p.pageIndex + 1))}`}
                   onFocus={(e) => e.target.select()}
                 />
               </label>

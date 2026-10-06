@@ -26,7 +26,7 @@ verbs=[
  ('abfliegen','to depart by plane',['fliege ab','fliegst ab','fliegt ab','fliegen ab','fliegt ab','fliegen ab'],'Conjugate fliegen and place ab at the end.'),
  ('abholen','to pick up',['hole ab','holst ab','holt ab','holen ab','holt ab','holen ab'],'Ich hole dich ab; with können: Ich kann dich abholen.'),
  ('anrufen','to call by phone',['rufe an','rufst an','ruft an','rufen an','ruft an','rufen an'],'Rufst du mich an? The prefix is still last in a question.'),
- ('einsteigen','to get on / in',['steige ein','steigst ein','steigt ein','steigen ein','steigt ein','steigen ein'],'Ich steige in die U-Bahn ein.'),
+ ('einsteigen','to get on / get in',['steige ein','steigst ein','steigt ein','steigen ein','steigt ein','steigen ein'],'Ich steige in die U-Bahn ein.'),
  ('umsteigen','to change trains or buses',['steige um','steigst um','steigt um','steigen um','steigt um','steigen um'],'Wir steigen in Hamburg um.'),
  ('aussteigen','to get off / out',['steige aus','steigst aus','steigt aus','steigen aus','steigt aus','steigen aus'],'Ich steige am Hauptbahnhof aus.'),
  ('einkaufen','to shop / buy groceries',['kaufe ein','kaufst ein','kauft ein','kaufen ein','kauft ein','kaufen ein'],'Ich kaufe Brot ein.'),

@@ -1,50 +1,35 @@
 
-import { LDiv, LH1, LH2, LHeader, LP, LSection } from "@/components/i18n/LocalizedElements";
+import { LDiv, LH1, LHeader, LP } from "@/components/i18n/LocalizedElements";
 import type { LearnerHubProjection } from "@/lib/content/hub-types";
 import type { LearnerWebProjection } from "@/lib/content/types";
-import { loadLearnerHubProjection } from "@/lib/content/access";
-import { HubToolDrawerGrid } from "@/components/hubs/HubViews";
 import { LearnerDashboard } from "@/components/learner-state/LearnerDashboard";
 import {CourseDashboard} from "@/components/study/CourseDashboard";
-import {LAST_AVAILABLE_LESSON} from "@/lib/study/scope";
 
 /**
  * Daily Learning Studio home. The first row (Continue + Today's mission), the
  * evidence strip and the Lesson 1–2 course cards live in `LearnerDashboard`
- * because they read this device's saved progress; the hub tool drawers are
- * static projection data and stay server-rendered.
+ * because they read this device's saved progress. Reference tools are reached
+ * through the shared Resources navigation, rather than repeated here.
  */
 export function DashboardView({
   projection,
-  hubs,
 }: {
   projection: LearnerWebProjection;
   /** Injectable for tests; defaults to the build-time hub artifact. */
   hubs?: LearnerHubProjection;
 }) {
-  const { activityCount } = projection;
-  const hubProjection = hubs ?? loadLearnerHubProjection();
-
   return (
     <LDiv className="stack browse-shell">
       <LHeader className="page-header dashboard-header">
-        <LP className="dense">Welcome back</LP>
-        <LH1>Your learning studio</LH1>
+        <LP className="dense">A1 · your study plan</LP>
+        <LH1>Your A1 learning space</LH1>
         <LP className="lede">
           Continue the lesson you were on, then practise today’s review set.
-        </LP>
-        <LP className="dense">
-          {LAST_AVAILABLE_LESSON} lessons · {activityCount} guided activities · your interactive book.
         </LP>
       </LHeader>
 
       <LearnerDashboard projection={projection} />
       <CourseDashboard/>
-
-      <LSection aria-labelledby="hubs-heading">
-        <LH2 id="hubs-heading">Browse by tool</LH2>
-        <HubToolDrawerGrid hubs={hubProjection.hubs} />
-      </LSection>
     </LDiv>
   );
 }

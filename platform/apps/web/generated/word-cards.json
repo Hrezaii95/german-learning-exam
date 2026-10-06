@@ -15156,7 +15156,7 @@
       "teacherRows": [
         6
       ],
-      "title": "road / street construction worker",
+      "title": "road construction worker",
       "category": "Profession",
       "lessons": [
         "Teacher notes"
@@ -15167,7 +15167,7 @@
       "rows": [
         {
           "label": "Masculine",
-          "meaning": "road / street construction worker (male)",
+          "meaning": "road construction worker (male)",
           "singular": {
             "text": "der Straßenarbeiter",
             "label": "Masculine",
@@ -15186,7 +15186,7 @@
         },
         {
           "label": "Feminine",
-          "meaning": "road / street construction worker (female)",
+          "meaning": "road construction worker (female)",
           "singular": {
             "text": "die Straßenarbeiterin",
             "label": "Feminine",
@@ -15213,7 +15213,7 @@
       "examples": [
         {
           "de": "Ich bin Straßenarbeiter. / Ich bin Straßenarbeiterin.",
-          "en": "I am a road.",
+          "en": "I am a road construction worker.",
           "audio": "/audio/word-cards-v1/word-ffdb41307e58f6d5.mp3"
         }
       ],
@@ -15225,35 +15225,35 @@
       "visual": "profession",
       "prompts": [
         {
-          "question": "Say “road / street construction worker” — masculine, singular.",
+          "question": "Say “road construction worker” — masculine, singular.",
           "answers": [
             "der Straßenarbeiter"
           ],
           "hint": "After “Ich bin”, a profession usually has no article."
         },
         {
-          "question": "Give the plural of “road / street construction worker” — masculine.",
+          "question": "Give the plural of “road construction worker” — masculine.",
           "answers": [
             "die Straßenarbeiter"
           ],
           "hint": "Include die and pay attention to the ending and any umlaut."
         },
         {
-          "question": "Say “road / street construction worker” — feminine, singular.",
+          "question": "Say “road construction worker” — feminine, singular.",
           "answers": [
             "die Straßenarbeiterin"
           ],
           "hint": "After “Ich bin”, a profession usually has no article."
         },
         {
-          "question": "Give the plural of “road / street construction worker” — feminine.",
+          "question": "Give the plural of “road construction worker” — feminine.",
           "answers": [
             "die Straßenarbeiterinnen"
           ],
           "hint": "Include die and pay attention to the ending and any umlaut."
         }
       ],
-      "searchText": "road / street construction worker der strassenarbeiter die strassenarbeiter road / street construction worker (male) die strassenarbeiterin die strassenarbeiterinnen road / street construction worker (female) profession"
+      "searchText": "road construction worker der strassenarbeiter die strassenarbeiter road construction worker (male) die strassenarbeiterin die strassenarbeiterinnen road construction worker (female) profession"
     },
     {
       "id": "W240",
@@ -39495,11 +39495,10 @@
         }
       ],
       "pattern": [
-        "h",
-        "und",
-        "ert / einh"
+        "hundert",
+        "einhundert"
       ],
-      "tip": "h + und + ert / einh: say the units before the tens. Write the number as one word.",
+      "tip": "Learn 100 as a whole: hundert / einhundert.",
       "examples": [
         {
           "de": "Die Zahl ist hundert / einhundert.",
@@ -39517,10 +39516,10 @@
         {
           "question": "Write 100 in German.",
           "answers": [
-            "hundert / einhundert",
+            "hundert",
             "einhundert"
           ],
-          "hint": "h + und + ert / einh: say the units before the tens. Write the number as one word."
+          "hint": "Learn 100 as a whole: hundert / einhundert."
         }
       ],
       "searchText": "100 one hundred hundert / einhundert"
@@ -41232,13 +41231,6 @@
             "scharfes S"
           ],
           "hint": "These are German letter-name spellings, not English pronunciations."
-        },
-        {
-          "question": "How do you say “ß”?",
-          "answers": [
-            "Eszett / scharfes S"
-          ],
-          "hint": "Letter-name spelling cue, not phonetic transcription."
         }
       ],
       "searchText": "alphabet ss eszett / scharfes s"

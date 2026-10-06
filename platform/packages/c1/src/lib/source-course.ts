@@ -22,3 +22,9 @@ export function groupTitle(g: Pick<SourceGroup, 'section' | 'task' | 'phase' | '
 export function sourceSkill(section: string) {
   return ({ Lesen: 'lesen', Hören: 'hoeren', Schreiben: 'schreiben', Sprechen: 'sprechen' } as Record<string,string>)[section];
 }
+
+/** Preserve drafts made with the older per-anchor inputs when using one response. */
+export function sourceResponse(answers: Record<string, string>): string {
+  if (typeof answers.response === 'string') return answers.response;
+  return Object.entries(answers).filter(([, value]) => value.trim()).map(([key, value]) => `${key}\n${value}`).join('\n\n');
+}

@@ -56,7 +56,9 @@ for (const card of catalog.cards) {
   for (const ex of card.examples) check(ex.de.trim() && ex.en.trim(), `${card.id}: incomplete example`);
   for (const row of card.rows) for (const form of [row.singular, ...row.plurals]) {
     formCount++;
-    check(card.prompts.some(p => p.answers.includes(form.text)), `${card.id}: form cannot be recalled: ${form.text}`);
+    for (const alternative of form.text.split(/\s+\/\s+/)) {
+      check(card.prompts.some(p => p.answers.includes(alternative)), `${card.id}: form cannot be recalled: ${alternative}`);
+    }
     check(!/unconfirmed|not confirmed|TODO|placeholder/i.test(form.text), `${card.id}: placeholder in learning forms`);
     if (form.audio) audioCount++;
     if (wantAudio) check(!!form.audio, `${card.id}: missing audio ${form.text}`);

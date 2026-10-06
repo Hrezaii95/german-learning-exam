@@ -1,4 +1,5 @@
 'use client';
+import { c1Path, updateC1History } from '../lib/navigation.js';
 import { translate, localize, supportText } from '../lib/i18n.js';
 
 /* oxlint-disable jsx-a11y/prefer-tag-over-role -- Explicit status regions announce feedback and preserve block layout. */
@@ -39,6 +40,8 @@ import type { Locale } from '../lib/catalog.js';
 import { lessons, activityCount } from '../lib/course.js';
 import { studySources } from '../lib/study-sources.js';
 import bookIndex from '../lib/data/book-index.json';
+import sourceCourseIndex from '../lib/data/source-course-index.json';
+import {groupTitle,sourceResponse} from '../lib/source-course.js';
 import { parseAssignment, type Draft } from '../lib/study-state.js';
 import { useStudy, type StudyStore, downloadFile } from './study-store.js';
 import { ListeningPlayer, SpeakingRecorder } from './study-media.js';
@@ -75,10 +78,7 @@ export function HomeLearning({ lang }: { lang: Locale }) {
               )}
         </h2>
         <p>
-          {t(
-            `${lessons.length} geführte Lektionen · ${activityCount} Aufgaben · 119 Quellenübungen`,
-            `${lessons.length} guided lessons · ${activityCount} activities · 119 source units`,
-          )}
+          {lessons.length} {t('geführte Lektionen', 'guided lessons')} · {activityCount} {t('Aufgaben', 'activities')} · {studySources.length} {t('Quelleneinheiten', 'source units')}
         </p>
       </div>
       <div>
@@ -111,6 +111,7 @@ export function NotebookLearning({ lang }: { lang: Locale }) {
   return (
     <section className="panel study-notebook">
       <h2>{t('Meine Arbeit aus den Lektionen', 'My lesson work')}</h2>
+      {sourceCourseIndex.groups.filter(g=>state.bookWork['activity:'+g.id]).sort((a,b)=>(state.bookWork['activity:'+b.id].updatedAt||0)-(state.bookWork['activity:'+a.id].updatedAt||0)).map(g=>{const work=state.bookWork['activity:'+g.id];return <article className="note-entry" key={g.id}><h3 lang="de">{groupTitle(g)}</h3><p lang="de">{sourceResponse(work.answers)}</p>{work.notes&&<p>{work.notes}</p>}<p className="caption">{work.reviewed&&work.revision===g.revision?t('Selbst verglichen','Self-compared'):t('In Bearbeitung','In progress')}</p><Link className="text-link" href={'/course?activity='+encodeURIComponent(g.id)}>{t('Aufgabe fortsetzen','Continue activity')}<ArrowRight size={15}/></Link></article>;})}
       {bookIndex.units
         .filter((u) => state.bookWork[u.id])
         .map((u) => (
@@ -199,9 +200,10 @@ export default function LearningSpace({
   const [notice, setNotice] = useState('');
   const t = (de: string, en: string) => translate(de, en, lang);
   useEffect(() => {
+    const sync = () => { const query = new URLSearchParams(window.location.search);
+      const id = query.get('lesson'); setActive(lessons.some(l => l.id === id) ? id! : ''); };
+    sync(); window.addEventListener('popstate', sync);
     const query = new URLSearchParams(window.location.search);
-    const id = query.get('lesson');
-    if (lessons.some((l) => l.id === id)) setActive(id!);
     if (query.has('skill')) setFilter(initialSkill);
     const hash = new URLSearchParams(window.location.hash.slice(1));
     if (hash.has('assignment'))
@@ -210,19 +212,16 @@ export default function LearningSpace({
       } catch {
         setNotice('invalid-assignment');
       }
+    return () => window.removeEventListener('popstate', sync);
   }, [initialSkill]);
   function start(id: string) {
     setActive(id);
     store.setState((s) => ({ ...s, activeLesson: id }));
-    const url = new URL(window.location.href);
-    url.searchParams.set('lesson', id);
-    window.history.replaceState({}, '', url);
+    updateC1History('/practice', {lesson: id});
   }
   function back() {
     setActive('');
-    const url = new URL(window.location.href);
-    url.searchParams.delete('lesson');
-    window.history.replaceState({}, '', url);
+    updateC1History('/practice', {lesson: null});
   }
   if (!store.ready)
     return (
@@ -272,8 +271,8 @@ export default function LearningSpace({
         </div>
         <div className="study-disclosure">
           {t(
-            '8 eigenständige Demolektionen und 4 vorläufige Quellenlektionen. Aufgaben und Lösungen von Wortweg, keine offiziellen Buchlösungen oder Prüfungsbewertungen.',
-            '8 original demo lessons and 4 provisional source lessons. Activities and answers are by Wortweg, not official book answers or exam scores.',
+            '8 eigenständige Demolektionen und 4 vorläufige Quellenlektionen. Aufgaben und Lösungen von Lingovo, keine offiziellen Buchlösungen oder Prüfungsbewertungen.',
+            '8 original demo lessons and 4 provisional source lessons. Activities and answers are by Lingovo, not official book answers or exam scores.',
           )}
         </div>
         {notice && (
@@ -408,6 +407,7 @@ export default function LearningSpace({
                         : t('Eigene Demo', 'Original demo')}
                   </small>
                   <h2>{localize(l.title, lang)}</h2>
+                  {l.audio && !l.audioUrl && <p className="caption">{t('Transkriptübung · Audio fehlt','Transcript practice · audio unavailable')}</p>}
                   <p>{localize(l.objective, lang)}</p>
                   <div className="lesson-card-foot">
                     <span>
@@ -679,8 +679,8 @@ function LessonSession({
               {lesson.origin === 'provisional-source' && (
                 <p>
                   {t(
-                    'Aufgaben, Lernhilfen und Lösungen von Wortweg erstellt; noch nicht redaktionell geprüft. Keine offiziellen Buchlösungen.',
-                    'Activities, support and answers authored by Wortweg; not editorially reviewed. These are not official book answers.',
+                    'Aufgaben, Lernhilfen und Lösungen von Lingovo erstellt; noch nicht redaktionell geprüft. Keine offiziellen Buchlösungen.',
+                    'Activities, support and answers authored by Lingovo; not editorially reviewed. These are not official book answers.',
                   )}
                 </p>
               )}
@@ -1060,7 +1060,7 @@ export function ExerciseCard({
               )}
             </>
           ) : (
-            <SpeakingRecorder lang={lang} />
+            <SpeakingRecorder lang={lang} recordingId={'exercise:'+ex.id} />
           )}
           <div className="self-review">
             <h3>{t('Selbst überprüfen', 'Review your own work')}</h3>
@@ -1117,8 +1117,8 @@ export function ExerciseCard({
         <div className="model-answer">
           <strong>
             {t(
-              'Eine mögliche Antwort · Übungsbeispiel von Wortweg',
-              'One possible response · Wortweg practice example',
+              'Eine mögliche Antwort · Übungsbeispiel von Lingovo',
+              'One possible response · Lingovo practice example',
             )}
           </strong>
           <p lang="de">{ex.model}</p>
@@ -1232,7 +1232,7 @@ export function TeacherGuide({
                 lang,
               )}
             </h3>
-            <p>{localize(lesson.teacher[key], lang)}</p>
+            <p>{key==='teach'&&lesson.audio&&!lesson.audioUrl?translate('Lest das Transkript und sammelt wichtige Informationen. Für Hörübungen eine verfügbare Quellenaufnahme wählen. Diese Übung nicht als Hörprüfung verwenden.', 'Read the transcript and identify key information. Choose an available source recording for listening practice. Do not use this activity as a listening assessment.',lang):localize(lesson.teacher[key], lang)}</p>
           </div>
         ),
       )}

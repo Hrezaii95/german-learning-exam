@@ -2,31 +2,78 @@
 import {Children,createContext,createElement,cloneElement,isValidElement,useContext,type ReactNode,type ReactElement,type JSX} from 'react';
 import {useLocale} from './LocaleProvider';
 import {translate,type Locale} from '@/lib/i18n/catalog';
-const ProtectedText=createContext(false);
+export type TextProtection='none'|'german'|'verbatim';
+export const ProtectedText=createContext<TextProtection>('none');
+type TextProps={children?:ReactNode;lang?:string|undefined;translate?:string|undefined;className?:string|undefined};
+const translatedAttributes=['aria-label','aria-description','placeholder','title','alt'];
+export function isProtectedText(props:TextProps):boolean{
+ return /^de(?:-|$)/i.test(props.lang??'')||props.translate==='no'||/(?:^|\s)(?:no-translate|notranslate)(?:\s|$)/.test(props.className??'');
+}
+export function textProtection(props:TextProps,inherited:TextProtection='none'):TextProtection{
+ if(inherited==='verbatim'||props.translate==='no'||/(?:^|\s)(?:no-translate|notranslate)(?:\s|$)/.test(props.className??''))return 'verbatim';
+ return inherited==='german'||/^de(?:-|$)/i.test(props.lang??'')?'german':'none';
+}
+function localizedAttributes(props:Record<string,unknown>,locale:Locale):Record<string,string>{
+ const output:Record<string,string>={};
+ for(const attribute of translatedAttributes)if(typeof props[attribute]==='string')output[attribute]=translate(props[attribute] as string,locale);
+ return output;
+}
 export function localizeChildren(children:ReactNode,locale:Locale):ReactNode{
  if(typeof children==='string')return translate(children,locale);
- if(Array.isArray(children))return Children.map(children,child=>localizeChildren(child,locale));
+ if(Array.isArray(children)){
+  // JSX splits counts into separate text/number nodes. Translate a contiguous
+  // run together so "Activity {current} of {total}" can keep local word order.
+  const output:ReactNode[]=[];let parts:(string|number)[]=[];
+  const flush=()=>{
+   if(!parts.length)return;
+   const text=parts.join('');const translated=translate(text,locale);
+   // A sentence may also surround a dynamic German example. If there is no
+   // whole-message template, translate its known static fragments as before.
+   output.push(translated!==text?translated:parts.map(part=>typeof part==='string'?translate(part,locale):part).join(''));
+   parts=[];
+  };
+  for(const child of Children.toArray(children)){
+   if(typeof child==='string'||typeof child==='number')parts.push(child);
+   else{flush();output.push(localizeChildren(child,locale));}
+  }
+  flush();return Children.toArray(output);
+ }
  if(isValidElement(children)){
-  const element=children as ReactElement<{children?:ReactNode;lang?:string;translate?:string}>;
-  if(element.props.lang==='de'||element.props.translate==='no')return element;
+  const element=children as ReactElement<TextProps&Record<string,unknown>>;
+  // A raw <span lang="de"> may contain localized components. Carry its
+  // protection through context instead of only skipping the raw children.
+  if(isProtectedText(element.props)||element.type==='code'||element.type==='pre'){
+   const protection=element.type==='code'||element.type==='pre'?'verbatim':textProtection(element.props);
+   const control=element.type==='input'||element.type==='textarea';
+   const content=protection==='german'&&control?cloneElement(element,localizedAttributes(element.props,locale)):element;
+   return <ProtectedText.Provider key={element.key??undefined} value={protection}>{content}</ProtectedText.Provider>;
+  }
   // Component props may also be option values or grading inputs. Let each
   // localized component translate at its own render boundary.
-  if((typeof element.type==='string'||typeof element.type==='symbol') && element.props.children!==undefined)return cloneElement(element,{},localizeChildren(element.props.children,locale));
+  if(typeof element.type==='string'||typeof element.type==='symbol'){
+   const translated=typeof element.type==='string'?localizedAttributes(element.props,locale):{};
+   return element.props.children===undefined?cloneElement(element,translated):cloneElement(element,translated,localizeChildren(element.props.children,locale));
+  }
  }
  return children;
 }
 function localized<K extends keyof JSX.IntrinsicElements>(tag:K){
  function LocalizedElement(props:JSX.IntrinsicElements[K]){
   const {locale}=useLocale();const inherited=useContext(ProtectedText);
-  const input=props as Record<string,unknown> & {children?:ReactNode;lang?:string;translate?:string};
-  const protect=inherited||input.lang==='de'||input.translate==='no';
+  const input=props as Record<string,unknown> & TextProps;
+  const protection=textProtection(input,inherited);const protect=protection!=='none';
   const output:Record<string,unknown>={...input};
-  for(const attribute of ['aria-label','aria-description','placeholder','title','alt'])if(typeof output[attribute]==='string')output[attribute]=translate(output[attribute] as string,locale);
+  // lang="de" describes the answer's language. Controls still need localized
+  // instructions, while explicit translate="no" protects the entire field.
+  if(!protect||(protection==='german'&&['input','textarea'].includes(tag)))Object.assign(output,localizedAttributes(output,locale));
   if(!protect && !['input','textarea','code','pre'].includes(tag))output.children=localizeChildren(input.children,locale);
   // A translated option must keep the source value used by the application's filters.
-  if(tag==='option'&&output.value===undefined&&typeof input.children==='string')output.value=input.children;
+  if(tag==='option'&&output.value===undefined){
+   if(typeof input.children==='string')output.value=input.children;
+   else if(Array.isArray(input.children)&&input.children.every(child=>typeof child==='string'||typeof child==='number'))output.value=input.children.join('');
+  }
   const element=createElement(tag,output);
-  return protect!==inherited?<ProtectedText.Provider value={protect}>{element}</ProtectedText.Provider>:element;
+  return protection!==inherited?<ProtectedText.Provider value={protection}>{element}</ProtectedText.Provider>:element;
  }
  return LocalizedElement;
 }

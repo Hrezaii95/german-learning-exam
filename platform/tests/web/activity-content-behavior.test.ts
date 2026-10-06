@@ -9,6 +9,7 @@ import type { EnrichedActivity } from "../../apps/web/lib/content/enrichment-typ
 import type { LearnerActivity } from "../../apps/web/lib/content/types.js";
 import { getEnrichedActivity } from "../../apps/web/lib/content/enrichment-client.js";
 import { loadLearnerProjection } from "../../apps/web/lib/content/access.js";
+import { buildActivityPracticePlan } from "../../apps/web/components/activities/activity-content.js";
 
 describe("lesson activity interaction behavior", () => {
   const projection = loadLearnerProjection();
@@ -17,6 +18,9 @@ describe("lesson activity interaction behavior", () => {
     enrichment: EnrichedActivity | null;
     onAttempt?: (() => void) | undefined;
     onSolved?: (() => void) | undefined;
+    completionActions?: React.ReactNode;
+    reviewTarget?: string | null;
+    reviewFamily?: string | null;
   }) => React.ReactNode;
 
   beforeAll(async () => {
@@ -103,6 +107,71 @@ describe("lesson activity interaction behavior", () => {
     await user.click(screen.getByRole("button", { name: /check answer/i }));
     expect(answerFeedback().textContent).toMatch(/correct/i);
     expect(screen.getByText("2 / 3")).toBeTruthy();
+  });
+
+  it("explains a mistaken greeting and replaces the finished form with the next action", async () => {
+    const user = userEvent.setup();
+    const target = activity("activity:lesson-01-greeting-farewell-match");
+    const enrichment = getEnrichedActivity(target.id);
+    const plan = buildActivityPracticePlan(target, enrichment);
+    const onSolved = vi.fn();
+    render(createElement(ActivityInteraction, { activity: target, enrichment, onSolved, completionActions: createElement("a", { href: "/next" }, "Next activity") }));
+    await user.click(screen.getByRole("radio", { name: "Good evening" }));
+    await user.click(screen.getByRole("button", { name: "Check answer" }));
+    expect(answerFeedback().textContent).toContain("“Auf Wiedersehen” means “Goodbye”");
+    expect(answerFeedback().textContent).toContain("“Guten Abend” means “Good evening”");
+    for (const question of plan.questions) {
+      await user.click(screen.getByRole("radio", { name: question.expected }));
+      await user.click(screen.getByRole("button", { name: "Check answer" }));
+    }
+    expect(onSolved).toHaveBeenCalledTimes(1);
+    expect(screen.getByRole("heading", { name: "Activity complete" })).toBeTruthy();
+    expect(screen.getByRole("link", { name: "Next activity" })).toBeTruthy();
+    expect(screen.queryByRole("button", { name: "Check answer" })).toBeNull();
+    expect(document.body.textContent).not.toContain("source-backed");
+  });
+
+  it("never exposes a pronunciation answer during retrieval and limits review to the requested target", async () => {
+    const target = activity("activity:lesson-01-checkpoint-summary");
+    render(createElement(ActivityInteraction, {
+      activity: target, enrichment: getEnrichedActivity(target.id), reviewTarget: "verb:heissen", reviewFamily: "typedRecall",
+    }));
+    expect(screen.getByText("1 / 1")).toBeTruthy();
+    expect(screen.getByRole("textbox")).toBeTruthy();
+    expect(document.querySelector("audio")).toBeNull();
+    expect(document.body.textContent).not.toContain("de-DE-KatjaNeural");
+  });
+
+  it("requires speaking self-review without claiming a pronunciation assessment", async () => {
+    const user = userEvent.setup();
+    const target = activity("activity:lesson-01-guided-intro-recording");
+    const onSolved = vi.fn();
+    render(createElement(ActivityInteraction, { activity: target, enrichment: getEnrichedActivity(target.id), onSolved }));
+    expect(screen.getByRole("button", { name: "Record my introduction" })).toBeTruthy();
+    await user.click(screen.getByRole("button", { name: "Finish speaking practice" }));
+    expect(onSolved).not.toHaveBeenCalled();
+    for (const checkbox of screen.getAllByRole("checkbox")) await user.click(checkbox);
+    await user.click(screen.getByRole("button", { name: "Finish speaking practice" }));
+    expect(onSolved).toHaveBeenCalledTimes(1);
+    expect(answerFeedback().textContent).toContain("your own review, not a pronunciation score");
+  });
+
+  it("moves focus to the task from Start and does not mark targeted review as a completed activity", async () => {
+    const user = userEvent.setup();
+    const { ActivityScreen } = await import("../../apps/web/components/lessons/ActivityAndBrowser.tsx");
+    const target = activity("activity:lesson-01-checkpoint-summary");
+    const lesson = projection.lessons.find((item) => item.id === target.lessonId)!;
+    const onStart = vi.fn();
+    const onComplete = vi.fn();
+    render(createElement(ActivityScreen, { lesson, activity: target, activities: projection.activities.filter((item) => item.lessonId === lesson.id), progressState: "ready", onStart, onComplete, reviewTarget: "verb:heissen", reviewFamily: "typedRecall" }));
+    const heading = document.getElementById("activity-practice-heading")!;
+    heading.scrollIntoView = vi.fn();
+    await user.click(screen.getByRole("button", { name: "Start activity" }));
+    expect(document.activeElement).toBe(heading);
+    expect(onStart).not.toHaveBeenCalled();
+    await user.type(screen.getByRole("textbox"), "heiße");
+    await user.click(screen.getByRole("button", { name: "Check answer" }));
+    expect(onComplete).not.toHaveBeenCalled();
   });
 
   it.each([

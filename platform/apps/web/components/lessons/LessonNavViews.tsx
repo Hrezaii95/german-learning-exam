@@ -65,8 +65,12 @@ export function ActivityScreenWithNav({
   prerequisiteActivities?: readonly LearnerActivity[];
 }) {
   const navigation = useParsedNavigation();
+  const params = useSearchParams();
+  const reviewTarget = params.get("reviewTarget");
+  const reviewFamily = params.get("reviewFamily");
   const learnerState = useOptionalLearnerState();
   const [busy, setBusy] = useState(false);
+  const [saveError, setSaveError] = useState("");
   const progress = learnerState?.snapshot.hydration?.state.activityProgress ?? [];
   const ordered = orderedLessonActivities(lesson, activities);
   const index = ordered.findIndex((item) => item.id === activity.id);
@@ -97,6 +101,7 @@ export function ActivityScreenWithNav({
   useEffect(() => {
     const controller = learnerState?.controller;
     if (!controller || learnerState.snapshot.status !== "ready") return;
+    if (reviewTarget) return;
     if (hasStoredResume || status === "Completed") return;
     void controller.setResume({
       lessonId: lesson.id,
@@ -113,14 +118,17 @@ export function ActivityScreenWithNav({
     learnerState?.snapshot.status,
     lesson.id,
     status,
+    reviewTarget,
   ]);
   const run = (operation: (() => Promise<unknown>) | undefined) => {
     if (!operation) return;
     setBusy(true);
-    void operation().finally(() => setBusy(false));
+    setSaveError("");
+    void operation().catch(() => setSaveError("Progress could not be saved on this device.")).finally(() => setBusy(false));
   };
   return (
     <ActivityScreen
+      key={`${activity.id}:${reviewTarget ?? "lesson"}:${reviewFamily ?? "all"}`}
       lesson={lesson}
       activity={activity}
       navigation={navigation}
@@ -128,6 +136,9 @@ export function ActivityScreenWithNav({
       status={status}
       progressState={learnerState?.snapshot.status ?? "loading"}
       busy={busy}
+      saveError={saveError}
+      reviewTarget={reviewTarget}
+      reviewFamily={reviewFamily}
       recommendLessonOne={recommendLessonOne}
       onStart={() => run(() => learnerState!.controller!.startActivity({ lessonId: lesson.id, stageId: activity.stageId, activityId: activity.id }))}
       onComplete={() => run(() => learnerState!.controller!.completeActivity(

@@ -27,6 +27,8 @@ export type BookWork = {
   answers: Record<string, string>;
   notes: string;
   reviewed: boolean;
+  updatedAt?: number;
+  reviewedAt?: number;
 };
 export type StudyState = {
   flow: FlowState;
@@ -84,6 +86,8 @@ export function parseStudy(value: unknown): StudyState {
         revision: work.revision,
         notes: str(work.notes) ? work.notes.slice(0, 50000) : '',
         reviewed: work.reviewed === true,
+        updatedAt: num(work.updatedAt) ? work.updatedAt : undefined,
+        reviewedAt: num(work.reviewedAt) ? work.reviewedAt : undefined,
         answers: Object.fromEntries(
           Object.entries(work.answers)
             .filter(

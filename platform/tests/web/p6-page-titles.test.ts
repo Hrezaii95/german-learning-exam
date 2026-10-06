@@ -80,12 +80,12 @@ describe("P6 page titles", () => {
 
     // Routes that sit in the layout's own segment do not receive the template,
     // so they must carry the finished title themselves.
-    // The Armenian landing supplies its own complete, brand-first title.
+    // The static fallback is brand-first; the client entry localizes its title.
     const home = readFileSync(join(appRoot, "page.tsx"), "utf8");
     const homeTitle = home.match(/absolute:\s*['"]([^'"]+)['"]/u)?.[1];
     expect(homeTitle).toBeDefined();
     expect(homeTitle!.split(SITE_NAME).length - 1).toBe(1);
-    expect(homeTitle).toMatch(/[\u0531-\u0587]/u);
+    expect(homeTitle).toContain('German learning');
     for (const name of ["not-found.tsx"]) {
       expect(readFileSync(join(appRoot, name), "utf8")).toContain(
         `| ${"$"}{SITE_NAME}\` }`,

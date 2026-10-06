@@ -744,7 +744,7 @@
     },
     {
       "de": "einsteigen",
-      "en": "to get on / in",
+      "en": "to get on / get in",
       "plural": "",
       "category": "Verbs",
       "example": "Wir sind in den Zug eingestiegen.",
@@ -1138,7 +1138,7 @@
     },
     {
       "verb": "einsteigen",
-      "meaning": "to get on / in",
+      "meaning": "to get on / get in",
       "forms": [
         "steige ein",
         "steigst ein",

@@ -10,6 +10,8 @@ import {
 } from "@/lib/content/path-utils";
 import { loadLearnerProjection } from "@/lib/content/access";
 import { activityPageMetadata } from "@/lib/content/page-metadata";
+import { activityLearnerTitle } from "@/components/activities/activity-content";
+import { lessonLabel } from "@/lib/content/lesson-label";
 import { resolveLearnerRoute } from "@/lib/content/routes";
 
 type PageProps = {
@@ -47,7 +49,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const lesson = activity
     ? projection.lessons.find((item) => item.id === activity.lessonId)
     : undefined;
-  return activity && lesson ? activityPageMetadata(lesson, activity) : {};
+  return activity && lesson ? {
+    ...activityPageMetadata(lesson, activity),
+    title: `${activityLearnerTitle(activity)} · ${lessonLabel(lesson.routeSegment)}`,
+  } : {};
 }
 
 export default async function ActivityPage({ params }: PageProps) {

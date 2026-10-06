@@ -1,4 +1,5 @@
 'use client';
+import { c1Path, updateC1History } from '../lib/navigation.js';
 import { translate, localize } from '../lib/i18n.js';
 
 import { useEffect, useRef, useState } from 'react';
@@ -41,15 +42,13 @@ export default function SourceStudio({
   const [kind, setKind] = useState('all');
   const t = (de: string, en: string) => (translate(de, en, lang));
   useEffect(() => {
-    setSelected(new URLSearchParams(location.search).get('section') || '');
+    const sync = () => setSelected(new URLSearchParams(location.search).get('section') || '');
+    sync(); window.addEventListener('popstate', sync);
+    return () => window.removeEventListener('popstate', sync);
   }, []);
   function open(id: string) {
     setSelected(id);
-    history.replaceState(
-      null,
-      '',
-      id ? '/studio?section=' + encodeURIComponent(id) : '/studio',
-    );
+    updateC1History('/studio', {section: id || null});
     window.scrollTo({ top: 0 });
   }
   if (!store.ready)
@@ -115,8 +114,8 @@ export default function SourceStudio({
           </div>
           <p className="study-disclosure">
             {t(
-              'Vorläufige Transkripte und Medienzuordnungen. Die Lernaufgaben und Lehrhinweise sind von Wortweg ergänzt und bearbeitbar.',
-              'Provisional transcripts and media links. Study activities and teaching guidance are added by Wortweg and can be revised.',
+              'Vorläufige Transkripte und Medienzuordnungen. Die Lernaufgaben und Lehrhinweise sind von Lingovo ergänzt und bearbeitbar.',
+              'Provisional transcripts and media links. Study activities and teaching guidance are added by Lingovo and can be revised.',
             )}
           </p>
           <div className="studio-toolbar">
@@ -192,7 +191,7 @@ export default function SourceStudio({
                 </span>
                 <h2 lang="de">{s.heading_text}</h2>
                 <p className="studio-excerpt" lang="de">
-                  {s.studyText.split('\n').slice(1).join(' ')}
+                  {t('Zuerst hören. Das Transkript öffnest du in der Übung.', 'Listen first. Open the transcript inside the activity.')}
                 </p>
                 <div className="studio-card-bottom">
                   <span>
@@ -276,7 +275,7 @@ function SourceSession({
           section: s,
           work,
           guidance:
-            'Wortweg app-authored study activities; not publisher exercises or official assessment.',
+            'Lingovo app-authored study activities; not publisher exercises or official assessment.',
         },
         null,
         2,
@@ -587,7 +586,7 @@ function SourceSession({
                 {t('Schreiben', 'Write')}
               </TabsTrigger>
               <TabsTrigger value="speak">{t('Sprechen', 'Speak')}</TabsTrigger>
-              <TabsTrigger value="teach">{t('Lehren', 'Teach')}</TabsTrigger>
+              {role === 'teacher' && <TabsTrigger value="teach">{t('Lehren', 'Teach')}</TabsTrigger>}
             </TabsList>
             <TabsContent value="listen">
               <h2>
@@ -697,11 +696,11 @@ function SourceSession({
                   'Summarise the source aloud. Give one supporting detail, then ask your study group a question. Choose your own practice duration.',
                 )}
               </p>
-              <SpeakingRecorder lang={lang} />
+              <SpeakingRecorder lang={lang} recordingId={'studio:'+s.section_id} />
               <p>
                 {t(
-                  'Prüfe: klare Struktur, verständliche Aussprache, ein passender Beleg. Aufnahmen vor dem Verlassen herunterladen.',
-                  'Review: clear structure, understandable pronunciation, one relevant detail. Download recordings before leaving this page.',
+                  'Prüfe: klare Struktur, verständliche Aussprache, ein passender Beleg. Aufnahmen bleiben auf diesem Gerät.',
+                  'Review: clear structure, understandable pronunciation, one relevant detail. Recordings remain on this device.',
                 )}
               </p>
             </TabsContent>
@@ -711,8 +710,8 @@ function SourceSession({
               </h2>
               <p>
                 {t(
-                  'Wortweg-Unterrichtsvorschlag, frei anpassbar. Keine Verlagslehrerhandreichung.',
-                  'An adaptable Wortweg teaching suggestion, not a publisher teacher manual.',
+                  'Lingovo-Unterrichtsvorschlag, frei anpassbar. Keine Verlagslehrerhandreichung.',
+                  'An adaptable Lingovo teaching suggestion, not a publisher teacher manual.',
                 )}
               </p>
               <ol className="studio-teacher-steps">
@@ -771,7 +770,7 @@ function SourceSession({
                   onClick={() =>
                     downloadFile(
                       'wortweg-source-worksheet.md',
-                      `# ${s.heading_text}\n\n${t('Vorläufige Quelle. Aufgaben von Wortweg.', 'Provisional source. Activities by Wortweg.')}\n\n1. ${t('Thema und drei Details notieren.', 'Note the topic and three details.')}\n2. ${t('Zusammenfassung schreiben.', 'Write a summary.')}\n3. ${t('Mündlich zusammenfassen.', 'Summarise aloud.')}\n\n${work.teacherNotes}\n\nSource: ${s.section_id}\nRevision: ${s.studyRevision}\n${location.origin}/studio?section=${encodeURIComponent(s.section_id)}`,
+                      `# ${s.heading_text}\n\n${t('Vorläufige Quelle. Aufgaben von Lingovo.', 'Provisional source. Activities by Lingovo.')}\n\n1. ${t('Thema und drei Details notieren.', 'Note the topic and three details.')}\n2. ${t('Zusammenfassung schreiben.', 'Write a summary.')}\n3. ${t('Mündlich zusammenfassen.', 'Summarise aloud.')}\n\n${work.teacherNotes}\n\nSource: ${s.section_id}\nRevision: ${s.studyRevision}\n${location.origin}${c1Path('/studio?section=' + encodeURIComponent(s.section_id))}`,
                     )
                   }
                 >
@@ -785,7 +784,7 @@ function SourceSession({
                 {t('Link für die Lerngruppe', 'Link for learners')}
                 <Input
                   readOnly
-                  value={`${typeof location === 'undefined' ? '' : location.origin}/studio?section=${encodeURIComponent(s.section_id)}`}
+                  value={`${typeof location === 'undefined' ? '' : location.origin}${c1Path('/studio?section=' + encodeURIComponent(s.section_id))}`}
                   onFocus={(e) => e.target.select()}
                 />
               </label>

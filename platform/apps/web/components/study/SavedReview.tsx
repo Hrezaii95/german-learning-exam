@@ -7,7 +7,6 @@ import { useState, useEffect } from "react";
 import { rateSavedItem } from "@/lib/study/storage";
 import { GermanText, SaveButton, useStudy } from "./StudyProvider";
 import { LineAudio } from "./StudyAudio";
-import {BackupPanel} from "../learner-state/BackupPanel";
 import {useStudyScope} from "./StudyScope";
 import {savedStudyTags} from "@/lib/study/saved-tags";
 
@@ -25,7 +24,8 @@ export function SavedReview() {
   useEffect(() => { const timer = window.setInterval(() => setNow(Date.now()), 60000); return () => window.clearInterval(timer); }, []);
   useEffect(()=>{setSession(null);setPosition(0);setRevealed(false);},[scope]);
   if (!study?.ready) return <LP role="status">Loading your saved review…</LP>;
-  const items = Object.values(study.state.saved).filter(item=>matches(savedStudyTags(item,study.dictionary)));
+  const allItems = Object.values(study.state.saved);
+  const items = allItems.filter(item=>matches(savedStudyTags(item,study.dictionary)));
   const due = items.filter((item) => !item.due || Date.parse(item.due) <= now);
   const visible = items
     .filter(
@@ -49,17 +49,23 @@ export function SavedReview() {
       <LHeader className="study-page-header">
         <LDiv>
           <LP className="study-eyebrow">Your personal collection</LP>
-          <LH1>My review</LH1>
+          <LH1>Saved vocabulary</LH1>
           <LP className="muted">
             Your saved collection and self-rated recall. Choose what matters, then review it when due.
           </LP>
         </LDiv>
-        <Link className="study-secondary" href="/book">
-          Back to the book →
-        </Link>
       </LHeader>
-      <LP className="muted">Looking for exercises with checked answers? <Link href="/review">Open guided review</Link> or <Link href="/practice">choose free practice</Link>.</LP>
-      <LDiv className="study-stats">
+      {!session && !items.length && (
+        <LSection className="study-empty saved-review-empty">
+          <LH2>{allItems.length ? "No saved items in this study selection." : "Start with a few useful words."}</LH2>
+          <LP>{allItems.length ? "Choose a wider study selection above, or save a word from the course." : "Save a word, phrase or book line. Return here to practise recalling it."}</LP>
+          <LDiv className="study-row">
+            <Link className="study-primary" href="/vocabulary">Browse word cards</Link>
+            <Link className="study-secondary" href="/lessons/01">Open Lesson 1</Link>
+          </LDiv>
+        </LSection>
+      )}
+      {items.length > 0 && <LDiv className="study-stats">
         <LDiv>
           <LStrong>{items.length}</LStrong>
           <LSpan>saved items</LSpan>
@@ -68,11 +74,7 @@ export function SavedReview() {
           <LStrong>{due.length}</LStrong>
           <LSpan>ready to review</LSpan>
         </LDiv>
-        <LDiv>
-          <LStrong>{study.state.bookmarks.length}</LStrong>
-          <LSpan>bookmarked pages</LSpan>
-        </LDiv>
-      </LDiv>
+      </LDiv>}
       {session ? (
         <LSection className="study-recall">
           <LDiv className="study-row">
@@ -174,7 +176,7 @@ export function SavedReview() {
         </LSection>
       ) : (
         <>
-          <LDiv className="study-review-tools">
+          {items.length > 0 && <LDiv className="study-review-tools">
             <LLabel className="study-field">
               Find saved items
               <LInput
@@ -213,25 +215,8 @@ export function SavedReview() {
             >
               Review {visible.length} items →
             </LButton>
-          </LDiv>
-          {!items.length ? (
-            <LSection className="study-empty">
-              <LSpan aria-hidden="true">＋</LSpan>
-              <LH2>Build a collection that is yours.</LH2>
-              <LP>
-                Save a word, a book line, or a grammar concept. Everything you
-                choose appears here.
-              </LP>
-              <LDiv className="study-row">
-                <Link className="study-primary" href="/lessons/04">
-                  Explore Lesson 4
-                </Link>
-                <Link className="study-secondary" href="/vocabulary">
-                  Browse word cards
-                </Link>
-              </LDiv>
-            </LSection>
-          ) : !visible.length ? (
+          </LDiv>}
+          {!items.length ? null : !visible.length ? (
             <LP className="study-empty">
               No items match these filters. Try another search or turn off Due
               only.
@@ -289,7 +274,8 @@ export function SavedReview() {
           )}
         </>
       )}
-      <BackupPanel/>
+      {!session && <LP className="saved-review-help">Looking for exercises with checked answers? <Link href="/review">Open guided review</Link> or <Link href="/practice">choose free practice</Link>.</LP>}
+      <Link href="/settings" className="saved-review-data-link">Data &amp; backup</Link>
     </LDiv>
   );
 }

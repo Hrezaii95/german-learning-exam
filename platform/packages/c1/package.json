@@ -10,7 +10,9 @@
     }
   },
   "scripts": {
-    "build": "tsc -p tsconfig.json"
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run --config vitest.config.ts",
+    "test:recordings": "node tests/recordings.browser.mjs"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",

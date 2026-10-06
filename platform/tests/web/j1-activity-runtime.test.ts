@@ -87,7 +87,10 @@ describe("J1 activity runtime", () => {
     expect(html).toContain("Activity 1 of 11");
     expect(html).toContain("Status: In progress");
     expect(html).toContain("<button");
-    expect(html).toContain("Complete activity");
+    expect(html).not.toContain("Complete activity");
+    expect(html).toContain("Practice now");
+    expect(html).not.toContain("infographic");
+    expect(html).toContain("Words and examples");
     expect(html).toContain(activities[1]!.canonicalPath);
 
     const overview = renderToStaticMarkup(createElement(LessonOverview, {
@@ -101,5 +104,7 @@ describe("J1 activity runtime", () => {
     expect(overview).toContain("Lesson 2 progress");
     expect(overview).not.toContain("Lesson 02");
     expect(overview).toContain("remains available");
+    expect(overview.indexOf("Your next small step")).toBeLessThan(overview.indexOf("Lesson outline and goals"));
+    expect(overview).not.toContain("visual route");
   });
 });

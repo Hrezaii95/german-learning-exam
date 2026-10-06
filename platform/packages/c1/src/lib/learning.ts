@@ -602,7 +602,7 @@ export const lessons: Lesson[] = [
           'Compare structure and reasons with the example. Several answers are valid; a word count is not a quality score.',
         ),
         model:
-          'Meiner Ansicht nach sollten Hochschulen Vorlesungen zusätzlich aufzeichnen. So könnten Studierende, die neben dem Studium arbeiten, verpasste Inhalte nachholen. Außerdem lassen sich schwierige Erklärungen wiederholt anhören. Ein Einwand ist, dass Studierende dann seltener persönlich teilnehmen. Deshalb sollten Aufzeichnungen durch Seminare ergänzt werden, in denen Fragen und Diskussionen im Mittelpunkt stehen. Sie wären damit eine Ergänzung und kein Ersatz für gemeinsamen Unterricht.',
+          'Meiner Ansicht nach sollten Hochschulen Vorlesungen zusätzlich aufzeichnen. So könnten Studierende, die neben dem Studium arbeiten oder Angehörige betreuen, verpasste Inhalte nachholen. Beispielsweise könnte eine Studentin nach ihrer Arbeit die Erklärung einer schwierigen Formel noch einmal in Ruhe ansehen und gezielt Fragen für die nächste Sitzung vorbereiten. Auch internationale Studierende würden davon profitieren, weil sie unbekannte Fachbegriffe nachschlagen könnten. Ein Einwand ist allerdings, dass Studierende dann seltener persönlich teilnehmen und der direkte Austausch darunter leidet. Deshalb sollten Aufzeichnungen durch Seminare ergänzt werden, in denen Fragen und Diskussionen im Mittelpunkt stehen. Die Hochschule müsste außerdem die Zustimmung der Lehrenden einholen und den Zugang auf den jeweiligen Kurs beschränken. Insgesamt wären Aufzeichnungen damit eine sinnvolle Ergänzung, aber kein Ersatz für gemeinsamen Unterricht.',
         checklist: [
           bi('Meine Position ist klar.', 'My position is clear.'),
           bi(

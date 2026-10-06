@@ -10,6 +10,7 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { beforeAll, describe, expect, it, vi } from "vitest";
 import { projectPublishedLearnerWeb } from "../../apps/web/lib/content/project.js";
 import type { LearnerWebProjection } from "../../apps/web/lib/content/types.js";
+import { activityLearnerTitle } from "../../apps/web/components/activities/activity-content.js";
 
 vi.mock("next/link", () => ({
   default: function MockLink({
@@ -80,13 +81,14 @@ describe("P3A behavioral UI (server-rendered from generated projection)", () => 
     const lessons = renderToStaticMarkup(
       createElement(AppShell, { current: "lessons" }, createElement("div")),
     );
-    expect(dash).toContain("Dashboard");
+    expect(dash).toContain("Overview");
     expect(lessons).toContain("Lessons");
-    // Dashboard remains in the mobile menu; Lessons is a direct mobile tab.
-    expect((dash.match(/aria-current="page"/g) ?? []).length).toBe(3);
-    expect((lessons.match(/aria-current="page"/g) ?? []).length).toBe(3);
+    // One shared navigation works at every width; the course context marks
+    // the current page instead of duplicating desktop, tablet and phone menus.
+    expect((dash.match(/aria-current="page"/g) ?? []).length).toBe(1);
+    expect((lessons.match(/aria-current="page"/g) ?? []).length).toBe(1);
     const book = renderToStaticMarkup(createElement(AppShell, { current: "book" }, createElement("div", null, "book")));
-    expect((book.match(/aria-current="page"/g) ?? []).length).toBe(3);
+    expect((book.match(/aria-current="page"/g) ?? []).length).toBe(1);
     expect(dash).toContain('href="/"');
     expect(lessons).toContain('href="/lessons"');
   });
@@ -117,7 +119,7 @@ describe("P3A behavioral UI (server-rendered from generated projection)", () => 
     );
 
     for (const activity of lessonActivities) {
-      const escapedPrompt = activity.promptPlainText
+      const escapedPrompt = activityLearnerTitle(activity)
         .replace(/&/g, "&amp;")
         .replace(/</g, "&lt;")
         .replace(/>/g, "&gt;")
@@ -145,16 +147,13 @@ describe("P3A behavioral UI (server-rendered from generated projection)", () => 
     expect(html).toContain('href="/settings"');
   });
 
-  it("renders regular lernen motif without bridge, irregular star, or gender decoration", () => {
+  it("uses one shared brand and language control without decorative navigation motifs", () => {
     const html = renderToStaticMarkup(
       createElement(AppShell, { current: "dashboard" }, createElement("div")),
     );
-    expect(html).toContain('data-motif="lernen-regular"');
-    expect(html).toContain("lern");
-    expect(html).toContain("en");
-    expect(html).toContain("REG");
-    expect(html).not.toContain("morph-strip__bridge");
-    expect(html).not.toContain("morph-strip__star");
+    expect(html.match(/class="lingovo-app-brand"/g)?.length).toBe(1);
+    expect(html.match(/aria-label="Interface language"/g)?.length).toBe(1);
+    expect(html).not.toContain("morph-strip");
     expect(html).not.toContain("★");
     expect(html).not.toContain("--gender-m");
   });

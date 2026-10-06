@@ -1,4 +1,5 @@
 'use client';
+import { c1Path, updateC1History } from '../lib/navigation.js';
 import { translate, languages, isLocale } from '../lib/i18n.js';
 
 /* oxlint-disable next/no-img-element -- These immutable, pre-rendered source scans are served as static images without a runtime image transformer. */
@@ -101,13 +102,14 @@ const empty: DeviceState = {
   plan: '',
   goal: '',
 };
-export default function Wortweg({
+export default function Lingovo({
   locale,
   onLocaleChange,
   view = 'home',
   initialSource = '',
   initialSkill = 'lesen',
   initialCollection = 'all',
+  embedded = false,
 }: {
   locale?: Locale;
   onLocaleChange?: (locale: Locale) => void;
@@ -115,6 +117,7 @@ export default function Wortweg({
   initialSource?: string;
   initialSkill?: string;
   initialCollection?: string;
+  embedded?: boolean;
 }) {
   const [localLang, setLocalLang] = useState<Locale>('hy');
   const lang = locale ?? localLang;
@@ -165,7 +168,7 @@ export default function Wortweg({
       const l = localStorage.getItem('wortweg-language');
       if (!locale && isLocale(l)) setLocalLang(l);
       const r = localStorage.getItem('wortweg-role');
-      if (r === 'teacher' && view !== 'teacher') setRole(r);
+      if (!embedded && r === 'teacher' && view !== 'teacher') setRole(r);
     } catch {
       setStorageError(true);
     }
@@ -184,6 +187,11 @@ export default function Wortweg({
   useEffect(() => {
     document.documentElement.lang = lang;
   }, [lang]);
+  useEffect(() => {
+    const sync = () => setSelected(new URLSearchParams(location.search).get('source') || '');
+    window.addEventListener('popstate', sync);
+    return () => window.removeEventListener('popstate', sync);
+  }, []);
   const patch = (change: Partial<DeviceState>) =>
     setState((s) => ({ ...s, ...change }));
   const toggleBookmark = (id: string) =>
@@ -321,11 +329,7 @@ export default function Wortweg({
     setPage(0);
     setPreview('source');
     setZoom(false);
-    window.history.replaceState(
-      null,
-      '',
-      '/library?source=' + encodeURIComponent(s.source_id),
-    );
+    updateC1History('/library', {source: s.source_id});
   }
   function exportFile(name: string, value: unknown) {
     const blob = new Blob(
@@ -357,11 +361,11 @@ export default function Wortweg({
           ? t('Veraltet', 'Stale')
           : t('Ausstehend', 'Pending');
   return (
-    <div className="app-shell">
-      <a className="skip-link" href="#main">
+    <div className={'app-shell' + (embedded ? ' c1-embedded' : '')}>
+      {!embedded && <a className="skip-link" href="#main">
         {t('Zum Inhalt', 'Skip to content')}
-      </a>
-      <aside className="sidebar">
+      </a>}
+      {!embedded && <aside className="sidebar">
         <Link className="brand" href="/">
           <span className="brand-icon">L</span> Lingovo C1
           <span className="brand-dot">.</span>
@@ -398,9 +402,18 @@ export default function Wortweg({
         <span className="sidebar-footer">
           LINGOVO · {t('VORSCHAU', 'PREVIEW')}
         </span>
-      </aside>
+      </aside>}
       <div className="main-shell">
-        <header className="topbar">
+        {embedded && <nav className="c1-context-nav" aria-label={t('C1-Lernwerkzeuge', 'C1 study tools')}>
+          {[
+            {id:'home',href:'/',Icon:LayoutDashboard,label:t('Übersicht','Overview')},
+            {id:'today',href:'/today',Icon:Clock3,label:t('Heute','Today')},
+            {id:'course',href:'/course',Icon:GraduationCap,label:t('Buchkurs','Book course')},
+            {id:'notebook',href:'/notebook',Icon:NotebookPen,label:t('Notizbuch','Notebook')},
+          ].map(n => <Link key={n.id} href={n.href} aria-current={view === n.id ? 'page' : undefined}><n.Icon size={17}/>{n.label}</Link>)}
+          <details className="c1-resource-menu"><summary>{t('Weitere Lernwerkzeuge', 'More study tools')}</summary><div>{nav.filter(n => !['home', 'today', 'course', 'notebook', 'review'].includes(n.id)).map(n => <Link key={n.id} href={n.href} aria-current={view === n.id ? 'page' : undefined}>{n.label}</Link>)}<Link href="/about">{t('Über die Vorschau', 'About the preview')}</Link></div></details>
+        </nav>}
+        {!embedded && <header className="topbar">
           <div className="breadcrumb">
             {title}
             <span className="demo-dot">{t('Vorschau', 'Preview')}</span>
@@ -432,7 +445,7 @@ export default function Wortweg({
                 if (isLocale(e.target.value)) setLang(e.target.value);
               }}
             >
-              {languages.filter(language=>language.code==='hy'||language.code==='ru'||language.code==='en').map((language) => (
+              {languages.map((language) => (
                 <option
                   key={language.code}
                   value={language.code}
@@ -443,13 +456,13 @@ export default function Wortweg({
               ))}
             </select>
           </div>
-        </header>
+        </header>}
         {!ready && (
           <p className="local-note" role="status">
             {t('Lernwerkzeuge werden geladen …', 'Loading study tools…')}
           </p>
         )}
-        <main id="main" data-ready={ready} inert={!ready} aria-busy={!ready}>
+        <main id="main" tabIndex={-1} data-ready={ready} inert={!ready} aria-busy={!ready}>
           <ScopeControl lang={lang} />
           <DailyReturn lang={lang} view={view} />
           {view === 'today' && <TodayRoom lang={lang} />}
@@ -463,220 +476,12 @@ export default function Wortweg({
               )}
             </p>
           )}
-          {view === 'home' && (
-            <>
-              <div className="page-heading">
-                <div>
-                  <p className="eyebrow">
-                    {t(
-                      'SCHRITT FÜR SCHRITT WEITER',
-                      'A LITTLE FURTHER, EVERY DAY',
-                    )}
-                  </p>
-                  <h1>
-                    {role === 'teacher'
-                      ? t(
-                          'Raum für guten Unterricht.',
-                          'Space for great teaching.',
-                        )
-                      : t('Dein nächster Schritt.', 'Your next step.')}
-                  </h1>
-                  <p>
-                    {t(
-                      'Lernen, verstehen, anwenden. In deinem Tempo.',
-                      'Learn, understand, apply. At your own pace.',
-                    )}
-                  </p>
-                </div>
-                <span className="quiet-label">
-                  <span className="green-dot" />
-                  {t(
-                    'Deutsch lernen · DE / EN / HY / RU',
-                    'Learn German · DE / EN / HY / RU',
-                  )}
-                </span>
-              </div>
-              <DailyEntry lang={lang} />
-              <SourceCourseEntry lang={lang} teacher={role === 'teacher'} />
-              <HomeLearning lang={lang} />
-              <Link className="studio-entry" href="/studio">
-                <Headphones size={24} />
-                <span>
-                  <strong>
-                    {t(
-                      'Dein Buch wird zum Lernstudio',
-                      'Turn your book into a study studio',
-                    )}
-                  </strong>
-                  <span>
-                    {t(
-                      'Alle Aufnahmen anhören, Transkripte lesen und eigene Antworten erarbeiten.',
-                      'Play all recordings, read transcripts and develop your own responses.',
-                    )}
-                  </span>
-                </span>
-                <ArrowRight size={20} />
-              </Link>
-              <div className="home-top">
-                <section className="feature-card">
-                  <div>
-                    <span className="pill">
-                      {t('DEIN STUDIENBEGLEITER', 'YOUR STUDY COMPANION')}
-                    </span>
-                    <h2>
-                      {t('Vom Buch', 'From the book')}
-                      <br />
-                      {t('zum Können.', 'to confidence.')}
-                    </h2>
-                    <p>
-                      {t(
-                        'Vier Fertigkeiten. Ein persönlicher Lernraum.',
-                        'Four skills. A space to make them yours.',
-                      )}
-                      <br />
-                      {t(
-                        'Entdecke dein Material und finde deinen Fokus.',
-                        'Explore your materials and find your focus.',
-                      )}
-                    </p>
-                    <Link
-                      className="primary-link"
-                      href={role === 'teacher' ? '/teacher' : '/practice'}
-                    >
-                      {role === 'teacher'
-                        ? t('Unterricht vorbereiten', 'Plan a lesson')
-                        : t('Lernpfad öffnen', 'Open learning path')}{' '}
-                      <ArrowRight size={17} />
-                    </Link>
-                  </div>
-                  <img
-                    className="book-cover"
-                    src={book.pages[0]}
-                    alt="Mit Erfolg zum digitalen TestDaF — book cover"
-                  />
-                </section>
-                <section className="focus-panel">
-                  <span className="icon-box">
-                    <Lightbulb size={20} />
-                  </span>
-                  <p className="eyebrow">
-                    {t('DEIN FOKUS HEUTE', 'YOUR FOCUS TODAY')}
-                  </p>
-                  <h3>{t('Klein anfangen.', 'Start small.')}</h3>
-                  <p>
-                    {t(
-                      'Wähle eine Fertigkeit. Probiere eine Demoübung. Halte fest, was du gelernt hast.',
-                      'Choose a skill. Try a demo activity. Capture what you learned.',
-                    )}
-                  </p>
-                  <Link href="/practice">
-                    {t('Demoübung starten', 'Try a demo activity')}
-                    <MoveUpRight size={16} />
-                  </Link>
-                </section>
-              </div>
-              <section>
-                <div className="section-heading">
-                  <h2>
-                    {t(
-                      'Woran möchtest du arbeiten?',
-                      'What would you like to work on?',
-                    )}
-                  </h2>
-                  <span>{t('4 Fertigkeiten', '4 skills')}</span>
-                </div>
-                <div className="skill-grid">
-                  {skills.map(({ id, de, en, desc, Icon, page: p }, i) => (
-                    <Link
-                      key={id}
-                      href={'/practice?skill=' + id}
-                      className={'skill-card tone-' + i}
-                    >
-                      <Icon size={24} />
-                      <h3>{translate(de, en, lang)}</h3>
-                      <p>{t(desc[0], desc[1])}</p>
-                      <span className="skill-page">
-                        {t('Im Buch ab S.', 'Book starts at p.')} {p}
-                      </span>
-                      <ArrowUpRight size={17} />
-                    </Link>
-                  ))}
-                </div>
-              </section>
-              <div className="home-bottom">
-                <section>
-                  <div className="section-heading">
-                    <h2>
-                      {t(
-                        'Dein Material, an einem Ort',
-                        'Your materials, in one place',
-                      )}
-                    </h2>
-                    <Link href="/library" className="text-link">
-                      {t('Alle ansehen', 'View all')} <ArrowRight size={14} />
-                    </Link>
-                  </div>
-                  <div className="collection-list">
-                    {[
-                      { id: 'book', Icon: BookOpen, count: 1 },
-                      { id: 'course', Icon: Headphones, count: 84 },
-                      { id: 'mock-exam-1', Icon: FileText, count: 39 },
-                    ].map(({ id, Icon, count }) => (
-                      <Link
-                        key={id}
-                        href={'/library?collection=' + id}
-                        className="collection-row"
-                      >
-                        <span className="icon-box">
-                          <Icon size={20} />
-                        </span>
-                        <div>
-                          <h3>{coll(id)}</h3>
-                          <p>
-                            {count} {t('Quelldateien', 'source files')}
-                          </p>
-                        </div>
-                        <ChevronRight size={17} />
-                      </Link>
-                    ))}
-                  </div>
-                </section>
-                <section className="note-prompt">
-                  <NotebookPen size={21} />
-                  <h3>
-                    {t(
-                      'Was möchtest du erreichen?',
-                      'What would you like to achieve?',
-                    )}
-                  </h3>
-                  <p>
-                    {t(
-                      'Ein persönliches Lernziel gibt deinem nächsten Schritt eine Richtung.',
-                      'A personal learning goal gives your next step direction.',
-                    )}
-                  </p>
-                  <label className="sr-only" htmlFor="goal">
-                    {t('Mein Lernziel', 'My learning goal')}
-                  </label>
-                  <Textarea
-                    id="goal"
-                    value={state.goal}
-                    onChange={(e) => patch({ goal: e.target.value })}
-                    placeholder={t(
-                      'Heute möchte ich …',
-                      'Today I would like to …',
-                    )}
-                  />
-                  <small>
-                    {t(
-                      'Nur auf diesem Gerät gespeichert',
-                      'Saved only on this device',
-                    )}
-                  </small>
-                </section>
-              </div>
-            </>
-          )}
+          {view === 'home' && <>
+            <div className="page-heading"><div><p className="eyebrow">C1 · TestDaF</p><h1>{t('Dein nächster Schritt.', 'Your next step.')}</h1><p>{t('Begleitete Übung mit dem Buch. Antworten selbst vergleichen; keine Prüfungsbewertung.', 'Supported practice with the book. Compare your own responses; no exam scoring.')}</p></div></div>
+            <SourceCourseEntry lang={lang} teacher={role === 'teacher'}/>
+            <section><div className="section-heading"><h2>{t('Woran möchtest du arbeiten?', 'What would you like to work on?')}</h2></div><div className="skill-grid">{skills.map(({id, de, en, desc, Icon}, i) => <Link key={id} href={'/course?skill=' + id} className={'skill-card tone-' + i}><Icon size={24}/><h3>{t(de,en)}</h3><p>{t(desc[0],desc[1])}</p><ArrowRight size={17}/></Link>)}</div></section>
+            {!embedded && <details className="panel"><summary>{t('Weitere Lernwerkzeuge', 'More study tools')}</summary><div className="study-actions"><Link href="/studio">{t('Quellenstudio', 'Source studio')}</Link><Link href="/practice">{t('Lernpfad', 'Learning path')}</Link><Link href="/progress">{t('Fortschritt', 'Progress')}</Link><Link href="/library">{t('Materialbibliothek', 'Resource library')}</Link></div></details>}
+          </>}
           {view === 'library' && (
             <>
               <div className="page-heading">

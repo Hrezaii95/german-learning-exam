@@ -6,6 +6,7 @@ import { conversationActivityId } from "../conversation/conversation-content";
 import type { ConversationLevelId } from "../conversation/level-ids";
 import { practiceActivityId } from "../games/game-prompts";
 import type { PracticeGameId } from "../games/game-ids";
+import { persistentConceptForActivityTarget } from "./activity-evidence";
 import {
   learnerPublishedContentResolver,
   reviewTemplateForGame,
@@ -55,21 +56,14 @@ function rebuild(
   return parseLearnerEvent(raw);
 }
 
-const CURRENT_EVENT_OWNERS = Object.freeze(new Set([
-  "lex:architekt\0activity:lesson-02-core-professions",
-  "lex:architekt\0activity:lesson-02-person-form-morphology",
-  "verb:sein\0activity:lesson-02-sein-arbeiten-contrast",
-  "qa:profession-casual-main\0activity:lesson-02-profession-qa-builder",
-]));
-
-/** Current P4 persisted events must belong to an exact representative/activity pair. */
+/** Persist only an exact published target/activity pair, including Lesson 1. */
 export function assertCurrentPersistentEventLink(eventInput: LearnerEvent): LearnerEvent {
   const event = parseLearnerEvent(eventInput);
   if (
     event.activityId === undefined ||
     learnerPublishedContentResolver.entityKind(event.conceptId) !== "Concept" ||
     learnerPublishedContentResolver.entityKind(event.activityId) !== "LearningActivity" ||
-    !CURRENT_EVENT_OWNERS.has(`${event.conceptId}\0${event.activityId}`)
+    persistentConceptForActivityTarget(event.activityId, event.conceptId) === null
   ) {
     failEvent();
   }

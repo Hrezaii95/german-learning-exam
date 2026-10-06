@@ -6,8 +6,10 @@ import {
   type DailyMission,
   type LearnerStateEnvelope,
   type MissionFilters,
+  type ObjectiveTaskFamily,
   type ReviewCandidate,
 } from "@german-learning/learning";
+import { activityReviewMetadata, persistentConceptForActivityTarget } from "./activity-evidence";
 import {
   REVIEW_TEMPLATES,
   conceptReviewMetadata,
@@ -22,6 +24,87 @@ export const DEFAULT_DAILY_CARD_LIMIT = 10 as const;
 export const DEFAULT_NEW_CARD_LIMIT = 4 as const;
 
 const DAY_MS = 86_400_000;
+
+export type ActivityReviewItem = Readonly<{
+  id: string;
+  activityId: string;
+  conceptId: string;
+  conceptLabel: string;
+  lessonId: string;
+  lessonNumber: number;
+  activityTitle: string;
+  href: string;
+  taskFamily: ObjectiveTaskFamily;
+  lastIncorrectAt: string;
+  lastAttemptAt: string;
+  assistedRetry: boolean;
+}>;
+
+/**
+ * A retry queue, not a proficiency score or fabricated spaced-review card.
+ * Events remain in the existing v1 envelope. Old saves therefore need no
+ * migration, and the exact source activity is retained after a reload.
+ */
+export function buildActivityReviewQueue(input: {
+  readonly state: LearnerStateEnvelope;
+  readonly studyScope?: StudyScope;
+}): readonly ActivityReviewItem[] {
+  const pending = new Map<string, ActivityReviewItem>();
+  const events = [...input.state.events].sort((a, b) =>
+    Date.parse(a.timestamp) - Date.parse(b.timestamp),
+  );
+  for (const event of events) {
+    // Existing game/mission cards retain their own renderer and schedule.
+    if (
+      event.kind !== "objectiveAttempt" ||
+      event.activityId === undefined ||
+      event.sourceActivityMode === "review" ||
+      event.sourceActivityMode === "mission" ||
+      persistentConceptForActivityTarget(event.activityId, event.conceptId) === null
+    ) continue;
+
+    const id = `${event.activityId}\0${event.conceptId}\0${event.taskFamily}`;
+    const previous = pending.get(id);
+    if (event.graderOutcome === "correct") {
+      if (event.hintsUsed === 0) {
+        pending.delete(id);
+      } else if (previous) {
+        pending.set(id, Object.freeze({
+          ...previous,
+          lastAttemptAt: event.timestamp,
+          assistedRetry: true,
+        }));
+      }
+      continue;
+    }
+
+    const activity = activityReviewMetadata(event.activityId);
+    const concept = conceptReviewMetadata(event.conceptId);
+    if (!activity || !concept) continue;
+    const reviewQuery = new URLSearchParams({
+      reviewTarget: event.conceptId,
+      reviewFamily: event.taskFamily,
+    });
+    pending.set(id, Object.freeze({
+      id,
+      ...activity,
+      conceptId: event.conceptId,
+      conceptLabel: concept.displayLabel,
+      href: `${activity.href}?${reviewQuery.toString()}#activity-practice-heading`,
+      taskFamily: event.taskFamily,
+      lastIncorrectAt: event.timestamp,
+      lastAttemptAt: event.timestamp,
+      assistedRetry: false,
+    }));
+  }
+
+  const items = [...pending.values()].filter((item) =>
+    !input.studyScope || matchesStudyScope(tagsForLesson(item.lessonNumber), input.studyScope),
+  );
+  return Object.freeze(items.sort((a, b) =>
+    Date.parse(b.lastIncorrectAt) - Date.parse(a.lastIncorrectAt) || a.id.localeCompare(b.id),
+  ));
+}
 
 function failReviewJoin(): never {
   throw new Error("Stored review card does not match the learner-safe template registry");

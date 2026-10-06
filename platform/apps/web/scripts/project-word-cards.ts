@@ -131,9 +131,13 @@ export function projectWordCards() {
   }
   for (const n of source.numbers) {
     const spelling = n.german;
-    const parts = spelling.includes("und") ? spelling.split("und") : null;
+    // Only two-digit compound numbers use the units-und-tens construction.
+    // The letters "und" inside hundert are not that conjunction.
+    const parts = n.number > 20 && n.number < 100 && n.number % 10 !== 0
+      ? spelling.split("und") : null;
+    const variants = spelling.split(/\s*\/\s*/);
     const cue = parts ? `${parts[0]} + und + ${parts[1]}: say the units before the tens. Write the number as one word.` : `Learn ${n.number} as a whole: ${spelling}.`;
-    cards.push({ id: `N${String(n.number).padStart(3, "0")}`, path: `/vocabulary/number-${n.number}`, aliases: [], sourceIds: [], teacherRows: [], title: `${n.number} · ${n.english}`, category: "Number", lessons: ["2"], priorities: ["Core"], rows: [{ label: "Number", meaning: n.english, singular: { text: spelling, label: "German", tone: "plain", audio: audio.get(spelling) ?? null }, plurals: [], usage: "" }], pattern: parts ? [parts[0]!, "und", parts[1]!] : [spelling], tip: cue, examples: [{ de: `Die Zahl ist ${spelling}.`, en: `The number is ${n.english}.`, audio: audio.get(`Die Zahl ist ${spelling}.`) ?? null }], note: n.number === 1 ? "eins when counting on its own; ein before a masculine or neuter noun." : "Numbers are normally lowercase inside a sentence.", sources: [n.source], image: null, visual: String(n.number), prompts: [{ question: `Write ${n.number} in German.`, answers: n.number === 100 ? [spelling, "einhundert"] : [spelling], hint: cue }], searchText: `${n.number} ${wordCardSearchKey(`${n.english} ${spelling}`)}` });
+    cards.push({ id: `N${String(n.number).padStart(3, "0")}`, path: `/vocabulary/number-${n.number}`, aliases: [], sourceIds: [], teacherRows: [], title: `${n.number} · ${n.english}`, category: "Number", lessons: ["2"], priorities: ["Core"], rows: [{ label: "Number", meaning: n.english, singular: { text: spelling, label: "German", tone: "plain", audio: audio.get(spelling) ?? null }, plurals: [], usage: "" }], pattern: parts ? [parts[0]!, "und", parts[1]!] : variants, tip: cue, examples: [{ de: `Die Zahl ist ${spelling}.`, en: `The number is ${n.english}.`, audio: audio.get(`Die Zahl ist ${spelling}.`) ?? null }], note: n.number === 1 ? "eins when counting on its own; ein before a masculine or neuter noun." : "Numbers are normally lowercase inside a sentence.", sources: [n.source], image: null, visual: String(n.number), prompts: [{ question: `Write ${n.number} in German.`, answers: variants, hint: cue }], searchText: `${n.number} ${wordCardSearchKey(`${n.english} ${spelling}`)}` });
   }
   const letters = "A:a|B:be|C:ce|D:de|E:e|F:ef|G:ge|H:ha|I:i|J:jot|K:ka|L:el|M:em|N:en|O:o|P:pe|Q:ku|R:er|S:es|T:te|U:u|V:vau|W:we|X:iks|Y:ypsilon|Z:zett|Ä:A-Umlaut|Ö:O-Umlaut|Ü:U-Umlaut|ß:Eszett / scharfes S".split("|");
   for (const [index, pair] of letters.entries()) {
@@ -168,7 +172,12 @@ export function projectWordCards() {
       card.sources.push("KB Module 1 grammar summary, printed p.27; Lesson 2 negation and Lesson 3 possessives.");
       card.prompts.push({ question: `Say “${variant[1]}” — ${variant[2].toLowerCase()}, nominative.`, answers: [variant[0]], hint: card.tip });
     }
-    for (const row of card.rows) if (!card.prompts.some(p => p.answers.includes(row.singular.text))) card.prompts.push({ question: `How do you say “${row.meaning}”?`, answers: [row.singular.text], hint: row.usage });
+    for (const row of card.rows) {
+      const alternatives = row.singular.text.split(/\s+\/\s+/);
+      if (!alternatives.every(answer => card.prompts.some(prompt => prompt.answers.includes(answer)))) {
+        card.prompts.push({ question: `How do you say “${row.meaning}”?`, answers: alternatives, hint: row.usage });
+      }
+    }
   }
   const usedAudio = new Set(cards.flatMap(c => [...c.rows.flatMap(r => [r.singular.audio, ...r.plurals.map(p => p.audio)]), ...c.examples.map(e => e.audio)]).filter((p): p is string => p !== null));
   const publicManifest = resolve(root, "media/manifests/word-cards-public-audio-v1.json");

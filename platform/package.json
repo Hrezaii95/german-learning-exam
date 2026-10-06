@@ -26,6 +26,7 @@
     "smoke:web-routes": "npm run smoke:routes -w @german-learning/web",
     "smoke:dev": "npm run smoke:dev -w @german-learning/web",
     "smoke:pages": "npm run smoke:pages -w @german-learning/web",
+    "verify:lingovo-preview": "node scripts/verify-lingovo-preview.mjs",
     "audit:learner-language": "node ../tools/audit-learner-language.mjs",
     "audit:offline": "node ../tools/audit-offline-export.mjs",
     "icons:app": "npm run icons:app -w @german-learning/web",

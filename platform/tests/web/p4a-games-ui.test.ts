@@ -35,6 +35,7 @@ vi.mock("next/link", () => ({
 
 vi.mock("next/navigation", () => ({
   useSearchParams: () => new URLSearchParams(),
+  usePathname: () => "/practice",
 }));
 
 const platformRoot = join(dirname(fileURLToPath(import.meta.url)), "..", "..");

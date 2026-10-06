@@ -9,7 +9,7 @@ import { createElement, type ReactNode } from "react";
 import { cleanup, render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import { LEARNER_EVENT_SCHEMA_VERSION } from "@german-learning/learning";
+import { LEARNER_EVENT_SCHEMA_VERSION, parseLearnerEvent } from "@german-learning/learning";
 import { practiceActivityId, type PracticeGameId } from "../../apps/web/lib/games/index.js";
 
 vi.mock("next/link", () => ({
@@ -153,12 +153,32 @@ afterEach(() => {
 });
 
 describe("P4C learner UI behavior", () => {
+  it("shows a saved Lesson 1 mistake with a working source-activity retry link after reload", async () => {
+    const controller = createLearnerStateController({ store: window.localStorage });
+    await controller.initialize();
+    await controller.appendEvent(parseLearnerEvent({
+      schemaVersion: "1.0.0", kind: "objectiveAttempt",
+      eventId: "00000000-0000-4000-8000-000000000501",
+      sessionId: "aaaaaaaa-bbbb-4ccc-8ddd-eeeeeeeeeeee",
+      timestamp: new Date().toISOString(),
+      conceptId: "lex:guten-morgen",
+      activityId: "activity:lesson-01-greetings-by-context",
+      sourceActivityMode: "see", measuredDimensions: ["recognition"],
+      taskFamily: "multipleChoice", graderOutcome: "incorrect", latencyMs: 2000, hintsUsed: 0,
+    }));
+    renderWithLearnerState(createElement(ReviewSetup));
+    expect(await screen.findByRole("heading", { name: "Guten Morgen" })).toBeTruthy();
+    const retry = screen.getByRole("link", { name: "Practise this topic" });
+    expect(retry.getAttribute("href")).toMatch(/^\/lessons\/01\/activity\/id-[a-f0-9]+\?reviewTarget=lex%3Aguten-morgen&reviewFamily=multipleChoice#activity-practice-heading$/);
+    expect(screen.queryByText("No mistakes waiting for a retry.")).toBeNull();
+  });
+
   it("carries the chosen review filters into the session", async () => {
     await seedLearnerState({ review: true });
     const user = userEvent.setup();
     renderWithLearnerState(createElement(ReviewSetup));
 
-    await screen.findByRole("heading", { name: "Build mission" });
+    await screen.findByRole("heading", { name: "Guided review cards" });
     await user.selectOptions(screen.getByLabelText("Mission size"), "5");
     await user.selectOptions(screen.getByLabelText("Lesson"), "lesson:02");
     await user.click(screen.getByRole("checkbox", { name: /Difficult or confusing only/i }));

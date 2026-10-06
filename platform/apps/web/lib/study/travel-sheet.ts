@@ -1,4 +1,4 @@
-export const travelPeople=[{de:'ich',en:'I'},{de:'du',en:'you'},{de:'er',en:'he'},{de:'wir',en:'we'},{de:'ihr',en:'you'},{de:'Sie',en:'you'}] as const;
+export const travelPeople=[{de:'ich',en:'I'},{de:'du',en:'you'},{de:'er',en:'he'},{de:'wir',en:'we'},{de:'ihr',en:'you (plural)'},{de:'Sie',en:'you (formal)'}] as const;
 export const travelVerbs=[
  {verb:'ankommen',prefix:'an',stems:['komme','kommst','kommt','kommen','kommt','kommen'],detail:'um acht Uhr',en:'arrive at eight',third:'arrives at eight',question:'Wann',tail:'',questionEn:'When',askEn:'arrive',icon:'🛬'},
  {verb:'abfliegen',prefix:'ab',stems:['fliege','fliegst','fliegt','fliegen','fliegt','fliegen'],detail:'um neun Uhr',en:'depart by plane at nine',third:'departs by plane at nine',question:'Wann',tail:'',questionEn:'When',askEn:'depart by plane',icon:'🛫'},

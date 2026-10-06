@@ -168,11 +168,14 @@ describe("P6 status messages (WCAG 4.1.3)", () => {
     await user.click(screen.getByRole("button", { name: /check answer/iu }));
     const firstText = feedback().textContent ?? "";
     const firstSeq = seqOf(feedback());
-    expect(firstText).toMatch(/not yet/iu);
+    const firstNode = feedback().firstElementChild;
+    expect(firstText).toContain("“Auf Wiedersehen” means “Goodbye”");
+    expect(firstText).toMatch(/try again/iu);
 
     await user.click(screen.getByRole("button", { name: /check answer/iu }));
     expect(feedback().textContent).toBe(firstText);
     expect(seqOf(feedback())).toBe(firstSeq + 1);
+    expect(feedback().firstElementChild).not.toBe(firstNode);
   });
 });
 

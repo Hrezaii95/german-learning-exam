@@ -1,6 +1,7 @@
 import data from './data/study-sources.json' with { type: 'json' };
 import overrides from './data/source-overrides.json' with { type: 'json' };
 import catalog from './data/catalog.json' with { type: 'json' };
+import { readableSourceText } from './source-text.js';
 
 export type StudySource = (typeof data.sections)[number];
 export type SourceOverride = {
@@ -43,7 +44,8 @@ export const studySources = data.sections.map((section) => {
             unit.physical_index + 1,
           ),
         ) ?? [],
-    studyText: edit?.text ?? section.text,
+    studyText: readableSourceText(edit?.text ?? section.text),
+    originalStudyText: edit?.text ?? section.text,
     studyRevision: edit?.revision ?? section.revision,
     editorialStatus: edit?.status ?? 'provisional',
     editorialNote: edit?.note ?? '',

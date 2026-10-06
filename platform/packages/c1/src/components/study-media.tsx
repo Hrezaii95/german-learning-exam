@@ -1,5 +1,8 @@
 'use client';
 import { translate } from '../lib/i18n.js';
+import { loadRecording, saveRecording } from '../lib/recordings.js';
+import { studySources } from '../lib/study-sources.js';
+import Link from './site-link.js';
 
 /* oxlint-disable jsx-a11y/media-has-caption -- User recordings have no generated transcript; original media has separate, unaligned source transcripts in the library. Do not fabricate captions. */
 /* oxlint-disable jsx-a11y/prefer-tag-over-role -- Explicit status regions announce feedback and preserve block layout. */
@@ -8,6 +11,8 @@ import { useEffect, useRef, useState } from 'react';
 import { Play, Square, Mic, Pause, RotateCcw, Download } from 'lucide-react';
 import { Button } from './ui/button.js';
 import type { Locale } from '../lib/catalog.js';
+// A verified separate source task, never presented as audio for a demo passage.
+const originalListening = studySources.find(source => source.section_id === 'testdaf.mock-exam-1.audio.transcript.002');
 export function ListeningPlayer({
   text,
   lang,
@@ -18,10 +23,10 @@ export function ListeningPlayer({
   const message = lang === 'hy'
     ? 'Այս նյութի ձայնագրությունը դեռ հասանելի չէ։ Օգտագործիր տեքստը կամ գրադարանի բնօրինակ ձայնագրությունները։'
     : lang === 'ru' ? 'Озвучка этого материала пока недоступна. Используйте текст или оригинальные записи в библиотеке.'
-    : 'Audio for this material is not available yet. Use the text or the original recordings in the library.';
-  return <div className="listening-player"><p role="status">{message}</p><details><summary>{lang === 'hy' ? 'Բացել տեքստը' : lang === 'ru' ? 'Открыть текст' : 'Read transcript'}</summary><p>{text}</p></details></div>;
+    : lang === 'de' ? 'Für dieses Material ist noch keine Aufnahme verfügbar. Nutze den Text oder die Originalaufnahmen in der Bibliothek.' : 'Audio for this material is not available yet. Use the text or the original recordings in the library.';
+  return <div className="listening-player"><strong>{translate('Transkriptübung · Audio fehlt', 'Transcript practice · audio unavailable', lang)}</strong><p role="status">{message}</p><p>{translate('Diese Textübung ist kein Nachweis des Hörverstehens.', 'This text activity does not demonstrate listening comprehension.', lang)}</p><details><summary>{lang === 'hy' ? 'Բացել տեքստը' : lang === 'ru' ? 'Открыть текст' : lang === 'de' ? 'Transkript lesen' : 'Read transcript'}</summary><p>{text}</p></details>{originalListening?.media.length ? <div className="original-listening-next"><p>{translate('Für Hörpraxis öffne diese eigenständige Originalaufgabe. Sie ist keine Aufnahme des Demotextes.', 'For listening practice, open this separate original-source activity. It is not a recording of the demo text.',lang)}</p><p lang="de">{originalListening.heading_text}</p><Link className="primary-link" href={'/studio?section='+encodeURIComponent(originalListening.section_id)}>{translate('Mit Originalaudio üben','Practise with original audio',lang)}</Link></div> : null}</div>;
 }
-export function SpeakingRecorder({ lang }: { lang: Locale }) {
+export function SpeakingRecorder({ lang, recordingId }: { lang: Locale; recordingId: string }) {
   const t = (de: string, en: string) => (translate(de, en, lang));
   const [duration, setDuration] = useState(90);
   const [seconds, setSeconds] = useState(90);
@@ -32,7 +37,11 @@ export function SpeakingRecorder({ lang }: { lang: Locale }) {
   const [mime, setMime] = useState('audio/webm');
   const [error, setError] = useState('');
   const [supported, setSupported] = useState(false);
+  const [saved, setSaved] = useState(false);
+  const [saving, setSaving] = useState(false);
+  const [downloaded, setDownloaded] = useState(false);
   const recorder = useRef<MediaRecorder | null>(null);
+  const container = useRef<HTMLElement | null>(null);
   const stream = useRef<MediaStream | null>(null);
   const alive = useRef(true);
   const currentUrl = useRef('');
@@ -43,13 +52,32 @@ export function SpeakingRecorder({ lang }: { lang: Locale }) {
       !!navigator.mediaDevices?.getUserMedia &&
         typeof MediaRecorder !== 'undefined',
     );
+    loadRecording(recordingId).then(stored => {
+      if (!alive.current || recorder.current || !stored?.blob?.size) return;
+      currentUrl.current = URL.createObjectURL(stored.blob);
+      setUrl(currentUrl.current); setMime(stored.blob.type); setSaved(true);
+    }).catch(() => { /* A fresh recording can still be downloaded without device storage. */ });
     return () => {
       alive.current = false;
       if (recorder.current?.state === 'recording') recorder.current.stop();
       stream.current?.getTracks().forEach((track) => track.stop());
       if (currentUrl.current) URL.revokeObjectURL(currentUrl.current);
     };
-  }, []);
+  }, [recordingId]);
+  useEffect(() => {
+    if (!recording && !(url && !saved && !downloaded)) return;
+    const warn = (event: BeforeUnloadEvent) => { event.preventDefault(); event.returnValue = ''; };
+    const guardNavigation = (event: MouseEvent) => {
+      const control = event.target instanceof Element ? event.target.closest('a,button,[role="tab"]') : null;
+      if (!control || container.current?.contains(control)) return;
+      if (!window.confirm(t('Die Aufnahme läuft noch oder ist nicht gespeichert. Möchtest du diesen Bereich trotzdem verlassen?', 'The recording is still running or has not been saved. Leave this section anyway?'))) {
+        event.preventDefault(); event.stopPropagation();
+      }
+    };
+    window.addEventListener('beforeunload', warn);
+    document.addEventListener('click', guardNavigation, true);
+    return () => { window.removeEventListener('beforeunload', warn); document.removeEventListener('click', guardNavigation, true); };
+  }, [recording, url, saved, downloaded, lang]);
   function stop() {
     if (recorder.current?.state === 'recording') recorder.current.stop();
     stream.current?.getTracks().forEach((track) => track.stop());
@@ -90,19 +118,21 @@ export function SpeakingRecorder({ lang }: { lang: Locale }) {
           stop();
         }
       };
-      rec.onstop = () => {
+      rec.onstop = async () => {
         media.getTracks().forEach((t) => t.stop());
+        const blob = new Blob(chunks, { type: rec.mimeType || 'audio/webm' });
+        if (!blob.size) { if (alive.current) { setError('empty'); setRecording(false); setRunning(false); } return; }
         if (alive.current) {
           if (currentUrl.current) URL.revokeObjectURL(currentUrl.current);
-          const blob = new Blob(chunks, { type: rec.mimeType || 'audio/webm' });
-          if (blob.size) {
-            currentUrl.current = URL.createObjectURL(blob);
-            setUrl(currentUrl.current);
-            setMime(blob.type);
-          } else setError('empty');
-          setRecording(false);
-          setRunning(false);
+          currentUrl.current = URL.createObjectURL(blob);
+          setUrl(currentUrl.current); setMime(blob.type);
+          setSaved(false); setDownloaded(false); setSaving(true);
+          setRecording(false); setRunning(false);
         }
+        // Persist even when navigation just unmounted this recorder and stopped it.
+        try { await saveRecording(recordingId, blob); if (alive.current) setSaved(true); }
+        catch { /* The visible download action is the fallback. */ }
+        finally { if (alive.current) setSaving(false); }
       };
       rec.start();
       setSeconds(duration);
@@ -117,7 +147,7 @@ export function SpeakingRecorder({ lang }: { lang: Locale }) {
     }
   }
   return (
-    <section className="speaking-recorder">
+    <section className="speaking-recorder" ref={container}>
       <div className="recorder-top">
         <div>
           <span className="eyebrow">
@@ -161,7 +191,7 @@ export function SpeakingRecorder({ lang }: { lang: Locale }) {
             {t('Aufnahme beenden', 'Stop recording')}
           </Button>
         ) : (
-          <Button disabled={!supported || requesting} onClick={record}>
+          <Button disabled={!supported || requesting || saving} onClick={record}>
             <Mic size={16} />
             {requesting
               ? t('Mikrofon wird geöffnet …', 'Opening microphone…')
@@ -219,7 +249,7 @@ export function SpeakingRecorder({ lang }: { lang: Locale }) {
           />
           <a
             download={
-              'wortweg-speaking.' +
+              'lingovo-speaking.' +
               (mime.includes('mp4')
                 ? 'm4a'
                 : mime.includes('ogg')
@@ -227,16 +257,18 @@ export function SpeakingRecorder({ lang }: { lang: Locale }) {
                   : 'webm')
             }
             href={url}
+            onClick={() => setDownloaded(true)}
           >
             <Download size={15} />
             {t('Aufnahme herunterladen', 'Download recording')}
           </a>
         </div>
       )}
+      {url && <p role="status" className={saved ? 'caption' : 'notice'}>{saving ? t('Aufnahme wird gespeichert …', 'Saving recording…') : saved ? t('Letzte Aufnahme auf diesem Gerät gespeichert. Sie bleibt nach dem Verlassen verfügbar. Eine neue Aufnahme ersetzt sie.', 'Latest recording saved on this device. It remains available after leaving. A new recording replaces it.') : downloaded ? t('Download gestartet. Bewahre die Datei auf.', 'Download started. Keep the file.') : t('Aufnahme noch nicht dauerhaft gespeichert. Lade sie vor dem Verlassen herunter.', 'Recording is not saved permanently yet. Download it before leaving.')}</p>}
       <small>
         {t(
-          'Aufnahmen werden nicht hochgeladen und bleiben nur bis zum Verlassen der Lektion verfügbar. Lade sie bei Bedarf herunter.',
-          'Recordings are not uploaded and remain available only until you leave this lesson. Download any you want to keep.',
+          'Aufnahmen bleiben auf diesem Gerät und werden nicht hochgeladen. Lade wichtige Versuche zusätzlich herunter.',
+          'Recordings stay on this device and are not uploaded. Download important attempts as well.',
         )}
       </small>
     </section>

@@ -1,4 +1,5 @@
 'use client';
+import { c1Path, updateC1History } from '../lib/navigation.js';
 import { translate, localize, supportText } from '../lib/i18n.js';
 
 import { useEffect, useState } from 'react';
@@ -330,7 +331,7 @@ export function TodayRoom({ lang }: { lang: Locale }) {
             },
           },
         }));
-      history.replaceState(null, '', '/today');
+      updateC1History('/today', {start: null}, 'replace');
     }
   }, [store.ready]);
   const pending = session?.items.find((i) => !i.done && !i.skipped);
@@ -652,8 +653,10 @@ export function CheatSheetsRoom({ lang }: { lang: Locale }) {
   const [recall, setRecall] = useState(false);
   const [revealed, setRevealed] = useState<string[]>([]);
   useEffect(() => {
-    const id = new URLSearchParams(location.search).get('sheet');
-    if (cheatSheets.some((s) => s.id === id)) setActive(id!);
+    const sync = () => { const id = new URLSearchParams(location.search).get('sheet');
+      setActive(cheatSheets.some((s) => s.id === id) ? id! : ''); };
+    sync(); window.addEventListener('popstate', sync);
+    return () => window.removeEventListener('popstate', sync);
   }, []);
   const scope = state.flow.scope;
   const lesson = lessons.find((l) => l.id === scope.lessonId);
@@ -675,11 +678,7 @@ export function CheatSheetsRoom({ lang }: { lang: Locale }) {
   function open(id: string) {
     setActive(id);
     setRevealed([]);
-    history.replaceState(
-      null,
-      '',
-      '/cheat-sheets' + (id ? '?sheet=' + id : ''),
-    );
+    updateC1History('/cheat-sheets', {sheet: id || null});
   }
   return (
     <div className="flow-room cheat-room">
@@ -694,8 +693,8 @@ export function CheatSheetsRoom({ lang }: { lang: Locale }) {
           <h1>{t('TestDaF-Spickzettel', 'TestDaF cheat sheets')}</h1>
           <p>
             {t(
-              'Eigene Lernhilfen von Wortweg, keine offiziellen Prüfungsantworten.',
-              'Study aids authored by Wortweg, not official exam answers.',
+              'Eigene Lernhilfen von Lingovo, keine offiziellen Prüfungsantworten.',
+              'Study aids authored by Lingovo, not official exam answers.',
             )}
           </p>
         </div>
@@ -884,8 +883,8 @@ export function CheatSheetsRoom({ lang }: { lang: Locale }) {
           </section>
           <footer>
             {t(
-              'Wortweg · Eigene Lernhilfe · Fassung 1 · DE / EN / HY / RU',
-              'Wortweg · Original study aid · Revision 1 · DE / EN / HY / RU',
+              'Lingovo · Eigene Lernhilfe · Fassung 1 · DE / EN / HY / RU',
+              'Lingovo · Original study aid · Revision 1 · DE / EN / HY / RU',
             )}
           </footer>
         </section>

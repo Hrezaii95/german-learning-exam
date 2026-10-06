@@ -1,7 +1,8 @@
 /**
- * Phase 2a structural UI contracts for the Daily Learning Studio dashboard and
- * the hub tool-drawer directory. Server-rendered from the real projections so a
- * count or preview that drifts from published content fails here.
+ * @vitest-environment jsdom
+ *
+ * The A1 dashboard offers the next study action first. The separate hub directory
+ * retains its complete resource navigation and learner-safe published counts.
  */
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -11,208 +12,137 @@ import { beforeAll, describe, expect, it, vi } from "vitest";
 import { projectPublishedLearnerWeb } from "../../apps/web/lib/content/project.js";
 import { projectPublishedLearnerHubs } from "../../apps/web/lib/content/hub-project.js";
 import { hubVisibleItemCount } from "../../apps/web/lib/content/hub-experiences.js";
+import { courseChapters } from "../../apps/web/lib/study/lesson-four.js";
 import type { LearnerWebProjection } from "../../apps/web/lib/content/types.js";
 import type { LearnerHubProjection } from "../../apps/web/lib/content/hub-types.js";
 
 vi.mock("next/link", () => ({
-  default: function MockLink({
-    href,
-    children,
-    ...rest
-  }: {
-    href: string;
-    children?: ReactNode;
-    className?: string;
-    "aria-label"?: string;
-  }) {
+  default: function MockLink({ href, children, ...rest }: { href: string; children?: ReactNode }) {
     return createElement("a", { href, ...rest }, children);
   },
 }));
 
 const platformRoot = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
 const publishedDir = join(platformRoot, "content", "published");
-
-function escapeHtml(value: string): string {
-  return value
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
-}
-
-/** Words a learner must never see on a learner surface. */
 const FORBIDDEN_LEARNER_JARGON = [
-  "publicationStatus",
-  "projectionKind",
-  "itemCount",
-  "Lexeme",
-  "QAPair",
-  "PhrasePattern",
-  "GrammarConcept",
-  "evidence internals",
-  "sourcePriority",
+  "publicationStatus", "projectionKind", "itemCount", "Lexeme", "QAPair",
+  "PhrasePattern", "GrammarConcept", "evidence internals", "sourcePriority",
 ] as const;
 
-describe("P2A studio dashboard + hub tool drawers", () => {
+function parseMarkup(html: string): HTMLDivElement {
+  const container = document.createElement("div");
+  container.innerHTML = html;
+  return container;
+}
+
+describe("P2A task-first A1 dashboard and separate hub directory", () => {
   let projection: LearnerWebProjection;
   let hubs: LearnerHubProjection;
-  let DashboardView: (props: {
-    projection: LearnerWebProjection;
-    hubs?: LearnerHubProjection;
-  }) => ReactNode;
-  let HubDirectoryView: (props: {
-    projection: LearnerHubProjection;
-  }) => ReactNode;
-  let hubToolPreviewItems: (
-    hub: LearnerHubProjection["hubs"][number],
-  ) => readonly string[];
-  let dashboardHtml = "";
-  let directoryHtml = "";
+  let dashboard: HTMLDivElement;
+  let directory: HTMLDivElement;
+  let hubToolPreviewItems: (hub: LearnerHubProjection["hubs"][number]) => readonly string[];
 
   beforeAll(async () => {
     projection = projectPublishedLearnerWeb(publishedDir);
     hubs = projectPublishedLearnerHubs(publishedDir);
-    const lessonMod = await import(
-      "../../apps/web/components/lessons/LessonViews.tsx"
-    );
+    const { DashboardView } = await import("../../apps/web/components/lessons/LessonViews.tsx");
     const hubMod = await import("../../apps/web/components/hubs/HubViews.tsx");
-    DashboardView = lessonMod.DashboardView as typeof DashboardView;
-    HubDirectoryView = hubMod.HubDirectoryView as typeof HubDirectoryView;
-    hubToolPreviewItems = hubMod.hubToolPreviewItems as typeof hubToolPreviewItems;
-    dashboardHtml = renderToStaticMarkup(
-      createElement(DashboardView, { projection, hubs }),
-    );
-    directoryHtml = renderToStaticMarkup(
-      createElement(HubDirectoryView, { projection: hubs }),
-    );
+    hubToolPreviewItems = hubMod.hubToolPreviewItems;
+    dashboard = parseMarkup(renderToStaticMarkup(createElement(DashboardView, { projection, hubs })));
+    directory = parseMarkup(renderToStaticMarkup(createElement(hubMod.HubDirectoryView, { projection: hubs })));
   });
 
-  it("puts Continue and Today's mission on one studio board, Continue dominant", () => {
-    expect((dashboardHtml.match(/class="studio-board"/g) ?? []).length).toBe(1);
-    expect(
-      (dashboardHtml.match(/studio-card--continue/g) ?? []).length,
-    ).toBe(1);
-    expect((dashboardHtml.match(/studio-card--mission/g) ?? []).length).toBe(1);
-    expect(dashboardHtml).toContain('aria-labelledby="continue-heading"');
-    expect(dashboardHtml).toContain('aria-labelledby="mission-heading"');
-    expect(dashboardHtml).toContain("Today’s mission");
-    // One primary action per card, and Continue keeps a real destination.
-    expect(dashboardHtml).toContain(
-      `href="${projection.zeroState.continuePath}"`,
-    );
-    expect(dashboardHtml).toContain("Start learning");
+  it("puts a real first activity and mistake review ahead of optional browsing", () => {
+    const firstActivityId = projection.lessons[0]!.stages.flatMap(stage => stage.activityIds)[0];
+    const firstActivity = projection.activities.find(activity => activity.id === firstActivityId)!;
+    const continueCard = dashboard.querySelector('[aria-labelledby="continue-heading"]')!;
+    const reviewCard = dashboard.querySelector('[aria-labelledby="mission-heading"]')!;
+    const continueLink = continueCard.querySelector("a")!;
+    const reviewLink = reviewCard.querySelector("a")!;
+    expect(continueLink.textContent).toBe("Start learning");
+    expect(continueLink.getAttribute("href")).toBe(firstActivity.canonicalPath);
+    expect(continueCard.textContent).toContain(projection.lessons[0]!.titleDe);
+    expect(reviewCard.querySelector("h2")?.textContent).toBe("Review mistakes");
+    expect(reviewLink.textContent).toBe("Review mistakes");
+    expect(reviewLink.getAttribute("href")).toBe("/review");
+    const courseList = dashboard.querySelector(".course-dashboard")!;
+    expect(continueCard.compareDocumentPosition(courseList) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+    expect(reviewCard.compareDocumentPosition(courseList) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
   });
 
-  it("reuses an existing lesson illustration for the Continue card without adding assets", () => {
-    // The zero-state lesson maps to an already-published illustration file.
-    expect(dashboardHtml).toContain(
-      "/illustrations/lesson-01-name-origin-class.png",
-    );
-    const imgTags = dashboardHtml.match(/<img[^>]*>/g) ?? [];
-    expect(imgTags.length).toBeGreaterThan(0);
-    for (const tag of imgTags) {
-      expect(tag).toMatch(/alt="[^"]+"/);
-      expect(tag).toMatch(/width="\d+"/);
-      expect(tag).toMatch(/height="\d+"/);
+  it("keeps the initial dashboard free of decorative media and duplicate resource grids", () => {
+    expect(dashboard.querySelector("img, .studio-media, .course-cards, .tool-drawers")).toBeNull();
+    expect(dashboard.querySelectorAll('[aria-labelledby="continue-heading"]')).toHaveLength(1);
+    expect(dashboard.querySelectorAll('a[href="/review"]')).toHaveLength(1);
+  });
+
+  it("does not invent saved progress before browser state is available", () => {
+    const progress = dashboard.querySelector(".dashboard-progress")!;
+    expect(progress.tagName).toBe("DETAILS");
+    expect(progress.hasAttribute("open")).toBe(false);
+    expect(progress.querySelector("summary")?.textContent).toBe("A1 practice progress");
+    expect(progress.querySelector(".evidence-item__value, progress")).toBeNull();
+    expect(progress.textContent).toContain("Your progress is stored on this device and loads in the browser.");
+    expect(progress.textContent).toContain("Completion records work finished. Checked answers and self-review are counted separately.");
+    expect(progress.textContent).toContain("These practice records do not establish a language level.");
+  });
+
+  it("offers every available A1 lesson once in a collapsed text course list", () => {
+    const list = dashboard.querySelector(".course-dashboard")!;
+    expect(list.tagName).toBe("DETAILS");
+    expect(list.hasAttribute("open")).toBe(false);
+    expect(list.querySelector("summary")?.textContent).toBe("Browse A1 lessons");
+    expect(list.querySelectorAll("[data-dashboard-lesson]")).toHaveLength(courseChapters.length);
+    for (const chapter of courseChapters) {
+      const row = list.querySelector(`[data-dashboard-lesson="${chapter.number}"]`)!;
+      const lessonLink = row.querySelector("h3 a")!;
+      expect(lessonLink.textContent).toBe(chapter.title);
+      expect(lessonLink.getAttribute("href")).toBe(`/lessons/${String(chapter.number).padStart(2, "0")}`);
+      expect(row.querySelector(`a[href="/book?page=coursebook-${chapter.kb}"]`)).not.toBeNull();
+      expect(row.textContent).toContain("Loading book progress…");
     }
-    // Only the approved illustration directory is referenced.
-    for (const src of dashboardHtml.match(/src="[^"]+"/g) ?? []) {
-      expect(src).toContain("/illustrations/");
-    }
+    expect(list.querySelector("img, .course-map, progress")).toBeNull();
   });
 
-  it("replaces the four metric boxes with one evidence strip and no invented numbers", () => {
-    expect(dashboardHtml).not.toContain('class="metrics"');
-    expect(dashboardHtml).not.toContain("metric__value");
-    expect(dashboardHtml).not.toContain("metric__label");
-    expect(dashboardHtml).toContain("evidence-strip");
-    expect(dashboardHtml).toContain("My progress");
-    // Without a learner-state provider there is no real data — say so instead of
-    // rendering zeros for XP, streak or mastery.
-    expect(dashboardHtml).not.toContain("evidence-item__value");
-    expect(dashboardHtml).not.toContain(">XP<");
-    expect(dashboardHtml).toContain(
-      "Your progress is stored on this device and loads in the browser.",
-    );
-  });
-
-  it("shows Lessons 1-2 as visual course cards with honest progress state", () => {
-    expect((dashboardHtml.match(/class="panel course-card"/g) ?? []).length).toBe(
-      projection.lessons.length,
-    );
-    expect(projection.lessons.length).toBe(2);
-    for (const lesson of projection.lessons) {
-      expect(dashboardHtml).toContain(lesson.titleDe);
-      expect(dashboardHtml).toContain(`href="${lesson.canonicalPath}"`);
-      expect(dashboardHtml).toContain(`${lesson.activityCount} activities`);
+  it("preserves all hub-directory links, real counts and type-specific previews", () => {
+    expect(directory.querySelectorAll(".tool-drawer")).toHaveLength(hubs.hubs.length);
+    expect(directory.querySelector(".hub-shortcut")).toBeNull();
+    for (const hub of hubs.hubs) {
+      const link = [...directory.querySelectorAll("a")].find(item => item.getAttribute("href") === hub.path)!;
+      expect(link).toBeDefined();
+      expect(link.getAttribute("aria-label")).toBe(`Open ${hub.title}`);
+      const drawer = link.closest(".tool-drawer")!;
+      const count = hubVisibleItemCount(hub);
+      expect(count).toBeGreaterThan(0);
+      expect(drawer.textContent).toMatch(new RegExp(`${count} (words|verbs|rules|phrases|audio tracks|topics)`));
+      for (const preview of hubToolPreviewItems(hub)) expect(drawer.textContent).toContain(preview);
     }
-    expect(dashboardHtml).toContain(
-      "/illustrations/lesson-02-professions-ensemble.png",
-    );
-    // No progress bar is drawn until saved progress is actually available.
-    expect(dashboardHtml).not.toContain("<progress");
-    expect(dashboardHtml).toContain(
-      "Your saved progress loads in this browser.",
-    );
-  });
-
-  it("renders six tool drawers with real counts, benefits and type-specific previews", () => {
-    for (const html of [dashboardHtml, directoryHtml]) {
-      expect((html.match(/class="tool-drawer"/g) ?? []).length).toBe(6);
-      expect(html).not.toContain("hub-shortcut");
-      // Six identical "Open" rows are gone; each link names its destination.
-      expect(html).not.toContain('class="dense">Open<');
-
-      for (const hub of hubs.hubs) {
-        expect(html).toContain(`aria-label="Open ${escapeHtml(hub.title)}"`);
-        expect(html).toContain(`href="${hub.path}"`);
-        const count = hubVisibleItemCount(hub);
-        expect(count).toBeGreaterThan(0);
-        // The count string is derived from the projection, never hard-coded.
-        expect(html).toMatch(
-          new RegExp(`>${count} (words|verbs|rules|phrases|audio tracks|topics)<`),
-        );
-        for (const preview of hubToolPreviewItems(hub)) {
-          expect(html).toContain(escapeHtml(preview));
-        }
-      }
-    }
-    // Live published counts, read from the projection rather than assumed.
     expect(hubVisibleItemCount(hubs.hubsById.verbs)).toBe(10);
-    expect(hubs.hubs.length).toBe(6);
+    expect(hubs.hubs).toHaveLength(6);
   });
 
-  it("keeps hub icons decorative and free of gender or verb-rule semantics", () => {
-    for (const html of [dashboardHtml, directoryHtml]) {
-      expect(html).toContain('class="tool-drawer__icon" aria-hidden="true"');
-      expect((html.match(/<svg/g) ?? []).length).toBe(6);
-      expect(html).not.toContain("data-gender");
-      expect(html).not.toContain("gender-badge");
-      expect(html).not.toContain("--gender-");
-      expect(html).not.toContain("visual-cue");
-    }
+  it("keeps hub-directory icons decorative and free of instructional colour semantics", () => {
+    const icons = directory.querySelectorAll(".tool-drawer__icon");
+    expect(icons).toHaveLength(hubs.hubs.length);
+    for (const icon of icons) expect(icon.getAttribute("aria-hidden")).toBe("true");
+    expect(directory.querySelectorAll("svg")).toHaveLength(hubs.hubs.length);
+    expect(directory.querySelector("[data-gender], .gender-badge, .visual-cue")).toBeNull();
+    expect(directory.innerHTML).not.toContain("--gender-");
   });
 
-  it("keeps the hub directory search entry and lede while switching to drawers", () => {
-    // No aria-label may override the visible label: the accessible name has
-    // to contain the words a voice-control user says (WCAG 2.5.3).
-    expect(directoryHtml).not.toContain('aria-label="Open global search"');
-    expect(directoryHtml).toContain("Search all content");
-    expect(directoryHtml).toContain(
-      "Six content hubs cover everything you are learning",
-    );
-    expect(directoryHtml).toContain('id="hub-directory-heading"');
+  it("keeps an accessible search entry and introduction in the hub directory", () => {
+    const search = [...directory.querySelectorAll("a")].find(link => link.textContent?.includes("Search all content"))!;
+    expect(search).toBeDefined();
+    expect(search.hasAttribute("aria-label")).toBe(false);
+    expect(directory.textContent).toContain("Six content hubs cover everything you are learning");
+    expect(directory.querySelector("#hub-directory-heading")).not.toBeNull();
   });
 
-  it("widens both browse surfaces and stays in learner language", () => {
-    expect(dashboardHtml).toContain("browse-shell");
-    expect(directoryHtml).toContain("browse-shell");
-    for (const html of [dashboardHtml, directoryHtml]) {
-      for (const jargon of FORBIDDEN_LEARNER_JARGON) {
-        expect(html.includes(jargon)).toBe(false);
-      }
-      expect(html).not.toMatch(/>activity:[^<]+</);
-      expect(html).not.toMatch(/>lesson:[^<]+</);
+  it("keeps both surfaces in learner language without leaking content IDs", () => {
+    for (const surface of [dashboard, directory]) {
+      for (const jargon of FORBIDDEN_LEARNER_JARGON) expect(surface.textContent).not.toContain(jargon);
+      expect(surface.textContent).not.toMatch(/\bactivity:/);
+      expect(surface.textContent).not.toMatch(/\blesson:/);
     }
   });
 });

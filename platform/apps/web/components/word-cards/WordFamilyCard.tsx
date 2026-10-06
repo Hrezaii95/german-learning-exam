@@ -11,6 +11,8 @@ import { GermanLookup, SaveButton } from "@/components/study/StudyProvider";
 import { LineAudio, stopStudyAudio } from "@/components/study/StudyAudio";
 import {StudyTagList} from "@/components/study/StudyScope";
 import { savedWordCard } from "@/lib/study/saved-word-card";
+import { useLocale } from "@/components/i18n/LocaleProvider";
+import { germanWordCardCue } from "@/lib/i18n/word-card-cue";
 
 function PatternToken({ text, card }: { text: string; card: WordCard }) {
   const forms = card.rows.flatMap(r => [r.singular, ...r.plurals]);
@@ -46,13 +48,15 @@ function Term({ form, stem }: { form: WordForm; stem: string }) {
   </LDiv>;
 }
 
-/** The approved engineer card, with the same teaching anatomy for every word family. */
+/** Learn the related forms, then practise recalling them without the model. */
 export function WordFamilyCard({ card }: { card: WordCard }) {
   const uid = useId();
+  const { locale } = useLocale();
+  const helped = useRef(false);
   const [mode, setMode] = useState<"learn" | "recall">("learn");
   const [promptIndex, setPromptIndex] = useState(0);
   const [answer, setAnswer] = useState("");
-  const [feedback, setFeedback] = useState<"correct" | "case" | "wrong" | "shown" | null>(null);
+  const [feedback, setFeedback] = useState<"correct" | "case" | "wrong" | "shown" | "guided" | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
   useEffect(() => { if (mode === "recall") inputRef.current?.focus(); }, [mode]);
   const prompt = card.prompts[promptIndex]!;
@@ -63,7 +67,7 @@ export function WordFamilyCard({ card }: { card: WordCard }) {
   const lessonText = card.studyTags?.lessons.length?card.studyTags.lessons.map(n=>`Lesson ${n}`).join(" · "):(card.lessons.includes("1–3")||card.lessons.includes("1-3")) ? "Lessons 1–3" : card.lessons.filter(l => /^[1234]$/.test(l)).map(l => `Lesson ${l}`).join(" · ") || (card.lessons.includes("Teacher notes") ? "Teacher extra" : "Module 1");
   const switchMode = (next: "learn" | "recall") => {
     stopStudyAudio();
-    setMode(next); setFeedback(null); setAnswer("");
+    setMode(next); setFeedback(null); setAnswer(""); helped.current = false;
   };
   function checkAnswer(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -71,18 +75,20 @@ export function WordFamilyCard({ card }: { card: WordCard }) {
     const matched = prompt.answers.find(a => normalizeCardAnswer(a) === normalizeCardAnswer(answer));
     const exact = answer.trim().replace(/\s+/g, " ") === matched;
     const distinctPronoun = matched && ["sie", "Sie", "ihr", "Ihr"].includes(matched);
-    setFeedback(!matched || (distinctPronoun && !exact) ? "wrong" : exact ? "correct" : "case");
+    const next = !matched || (distinctPronoun && !exact) ? "wrong" : exact ? (helped.current ? "guided" : "correct") : "case";
+    setFeedback(next);
+    if (next === "wrong" || next === "case") helped.current = true;
   }
   return <LDiv className={styles.cardShell} data-word-card={card.id}>
     <LHeader className={styles.toolbar}>
       <SaveButton item={savedWordCard(card)} />
-      <LDiv className={styles.brand}><LSpan className={styles.brandSymbol} aria-hidden="true">w</LSpan> WORD FAMILIES</LDiv>
+      <LDiv className={styles.brand}>Word families</LDiv>
       <LDiv className={styles.mode} role="group" aria-label="Study mode"><LButton type="button" aria-pressed={mode === "learn"} onClick={() => switchMode("learn")}>Learn</LButton><LButton type="button" aria-pressed={mode === "recall"} onClick={() => switchMode("recall")}>Recall</LButton></LDiv>
     </LHeader>
     <LArticle className={styles.card} aria-labelledby={`${uid}-title`}>
       <LHeader className={styles.hero}>
-        <LDiv className={styles.identity}><LDiv className={styles.eyebrow}>{lessonText}<LSpan className={styles.dot} />{card.category === "Profession" ? "Professions" : card.category}</LDiv><LH1 id={`${uid}-title`}>{card.title}</LH1>{card.studyTags&&<StudyTagList tags={card.studyTags}/>}<LP className={styles.subline}>{formCount > 1 ? `One word family. ${formCount === 4 ? "Four" : formCount} useful forms.` : "One meaning. Learn it, hear it, use it."}</LP></LDiv>
-        {card.image ? <img className={styles.heroImage} src={withPagesBaseAssetPath(card.image.path)} alt={card.image.alt} width={265} height={204} /> : <LDiv className={styles.meaningVisual} aria-hidden="true"><LSpan>{card.category === "Number" || card.category === "Alphabet" ? card.visual : card.visual === "profession" ? "↔" : card.visual === "origin" ? "↗" : card.visual === "language" ? "“ ”" : card.visual === "family" ? "⌘" : card.visual === "action" ? "→" : "Aa"}</LSpan><LSmall>{card.category === "Number" ? "SAY THE NUMBER" : card.category === "Alphabet" ? "SPELL IT ALOUD" : card.category === "Profession" ? "ONE JOB · ALL FORMS" : card.category.toUpperCase()}</LSmall></LDiv>}
+        <LDiv className={styles.identity}><LDiv className={styles.eyebrow}>{lessonText}<LSpan className={styles.dot} />{card.category === "Profession" ? "Professions" : card.category}</LDiv><LH1 id={`${uid}-title`}>{mode === "recall" && locale === "de" ? "Recall from memory" : card.title}</LH1>{card.studyTags&&<StudyTagList tags={card.studyTags}/>}<LP className={styles.subline}>{formCount > 1 ? `One word family. ${formCount === 4 ? "Four" : formCount} useful forms.` : "One meaning. Learn it, hear it, use it."}</LP></LDiv>
+        {mode === "learn" && (card.image ? <img className={styles.heroImage} src={withPagesBaseAssetPath(card.image.path)} alt={card.image.alt} width={265} height={204} /> : <LDiv className={styles.meaningVisual} aria-hidden="true"><LSpan>{card.category === "Number" || card.category === "Alphabet" ? card.visual : card.visual === "profession" ? "↔" : card.visual === "origin" ? "↗" : card.visual === "language" ? "“ ”" : card.visual === "family" ? "⌘" : card.visual === "action" ? "→" : "Aa"}</LSpan><LSmall>{card.category === "Number" ? "SAY THE NUMBER" : card.category === "Alphabet" ? "SPELL IT ALOUD" : card.category === "Profession" ? "ONE JOB · ALL FORMS" : card.category.toUpperCase()}</LSmall></LDiv>)}
       </LHeader>
       {mode === "learn" ? <LDiv>
         <LSection className={styles.forms} aria-labelledby={`${uid}-forms`}>
@@ -95,10 +101,10 @@ export function WordFamilyCard({ card }: { card: WordCard }) {
         <LSection className={styles.example}><LH2 className={styles.sectionLabel}>Use it</LH2><LDiv>{card.examples.map(ex => <LDiv key={ex.de}><LDiv className={styles.exampleLine}><LP className={styles.germanExample} lang="de"><ExampleText text={ex.de} card={card} /></LP><LineAudio text={ex.de} src={ex.audio} compact/></LDiv><LP className={styles.englishExample}>{ex.en}</LP></LDiv>)}<LP className={styles.grammarTip}>{isProfession ? "✧ After “Ich bin”, a profession usually has no article." : card.note.split(/(?<=[.!?])\s/)[0]}</LP></LDiv></LSection>
         <LSection className={styles.recallInvite}><LDiv><LH2>Ready to remember it?</LH2><LP>Hide the German. Say it from memory.</LP></LDiv><LButton type="button" className={styles.primary} onClick={() => switchMode("recall")}>Try recall <LSpan aria-hidden="true">→</LSpan></LButton></LSection>
       </LDiv> : <LSection aria-labelledby={`${uid}-prompt`}>
-        <LDiv className={styles.practice}><LDiv className={styles.practiceHeader}><LH2 className={styles.sectionLabel}>Your turn</LH2><LSpan>{promptIndex + 1} / {card.prompts.length}</LSpan></LDiv><LH3 className={styles.prompt} id={`${uid}-prompt`}>{prompt.question}</LH3><LP className={styles.promptHint}>Say it aloud, or type your answer. Include the article for a noun.</LP>
+        <LDiv className={styles.practice}><LDiv className={styles.practiceHeader}><LH2 className={styles.sectionLabel}>Your turn</LH2><LSpan>{promptIndex + 1} / {card.prompts.length}</LSpan></LDiv><LH3 className={styles.prompt} id={`${uid}-prompt`}>{locale === "de" ? germanWordCardCue(card, promptIndex) : prompt.question}</LH3><LP className={styles.promptHint}>Say it aloud, or type your answer. Include the article for a noun.</LP>
           <LForm onSubmit={checkAnswer}><LDiv className={styles.answerRow}><LLabel htmlFor={`${uid}-answer`} className={styles.srOnly}>German answer</LLabel><LInput ref={inputRef} id={`${uid}-answer`} lang="de" value={answer} onChange={e => { setAnswer(e.target.value); setFeedback(null); }} placeholder="Your German answer…" autoComplete="off" autoCapitalize="off" spellCheck={false} aria-invalid={feedback === "wrong"} /><LButton className={styles.primary} type="submit">Check answer</LButton></LDiv></LForm>
-          <LDiv className={styles.practiceActions}>{!feedback ? <LButton type="button" className={styles.textButton} onClick={() => setFeedback("shown")}>Show answer</LButton> : <LButton type="button" className={styles.secondary} onClick={() => { setPromptIndex((promptIndex + 1) % card.prompts.length); setAnswer(""); setFeedback(null); inputRef.current?.focus(); }}>Next form →</LButton>}</LDiv>
-          {feedback && <LDiv className={styles.feedback} role="status"><LStrong lang="de">{prompt.answers.join(" / ")}</LStrong><LP>{feedback === "correct" ? "You remembered it." : feedback === "case" ? "The form is right. Check the capital letters in the answer above." : feedback === "wrong" ? "Compare your answer with the article, spelling and ending above." : "Read it once, then say it with your eyes closed."} {prompt.hint}</LP></LDiv>}
+          <LDiv className={styles.practiceActions}>{!feedback ? <LButton type="button" className={styles.textButton} onClick={() => { helped.current = true; setFeedback("shown"); }}>Show answer</LButton> : <LButton type="button" className={styles.secondary} onClick={() => { setPromptIndex((promptIndex + 1) % card.prompts.length); setAnswer(""); setFeedback(null); helped.current = false; inputRef.current?.focus(); }}>Next form →</LButton>}</LDiv>
+          {feedback && <LDiv className={styles.feedback} role="status"><LStrong lang="de">{prompt.answers.join(" / ")}</LStrong><LP>{feedback === "correct" ? "You remembered it." : feedback === "guided" ? "Correct after help. Try this form again from memory." : feedback === "case" ? "The form is right. Check the capital letters in the answer above." : feedback === "wrong" ? "Compare your answer with the article, spelling and ending above." : "Read it once, then say it with your eyes closed."} {prompt.hint}</LP></LDiv>}
         </LDiv><LP className={styles.practiceFooter}>Switch to <LStrong>Learn</LStrong> to see the forms and example together.</LP>
       </LSection>}
       <LFooter className={styles.cardFooter}><LSpan><LSpan className={styles.male}>●</LSpan> masculine &nbsp; <LSpan className={styles.female}>●</LSpan> feminine &nbsp; <LSpan className={styles.neuter}>●</LSpan> neuter &nbsp; <LSpan className={styles.plural}>●</LSpan> plural</LSpan><LSpan>Generated audio</LSpan></LFooter>

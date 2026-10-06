@@ -2,7 +2,7 @@ import twelve from '../../generated/lesson-twelve-study.json';
 import {germanNumber} from './sheet-topics';
 export const seasons=[{name:'Frühling',en:'spring',icon:'🌱',months:['März','April','Mai']},{name:'Sommer',en:'summer',icon:'☀️',months:['Juni','Juli','August']},{name:'Herbst',en:'autumn',icon:'🍂',months:['September','Oktober','November']},{name:'Winter',en:'winter',icon:'❄️',months:['Dezember','Januar','Februar']}] as const;
 export const monthEnglish:Record<string,string>={Januar:'January',Februar:'February',März:'March',April:'April',Mai:'May',Juni:'June',Juli:'July',August:'August',September:'September',Oktober:'October',November:'November',Dezember:'December'};
-export const journeyPeople=[{de:'ich',en:'I',have:'habe',be:'bin'},{de:'du',en:'you',have:'hast',be:'bist'},{de:'er',en:'he',have:'hat',be:'ist'},{de:'wir',en:'we',have:'haben',be:'sind'},{de:'ihr',en:'you',have:'habt',be:'seid'},{de:'Sie',en:'you',have:'haben',be:'sind'}] as const;
+export const journeyPeople=[{de:'ich',en:'I',have:'habe',be:'bin'},{de:'du',en:'you',have:'hast',be:'bist'},{de:'er',en:'he',have:'hat',be:'ist'},{de:'wir',en:'we',have:'haben',be:'sind'},{de:'ihr',en:'you (plural)',have:'habt',be:'seid'},{de:'Sie',en:'you (formal)',have:'haben',be:'sind'}] as const;
 export const journeyActivities=[
  {verb:'fahren',aux:'sein',part:'gefahren',detail:'nach Hamburg',past:'traveled to Hamburg',base:'travel to Hamburg'},
  {verb:'fliegen',aux:'sein',part:'geflogen',detail:'nach Österreich',past:'flew to Austria',base:'fly to Austria'},

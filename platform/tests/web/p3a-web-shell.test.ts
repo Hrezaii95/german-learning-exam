@@ -329,9 +329,41 @@ describe("P3A route resolution", () => {
   });
 });
 
-describe("P3A UI binds to projection (no second course object)", () => {  it("lesson views render projection fields rather than hard-coded titles", () => {
-    // The Lesson 1–2 course cards moved into the learner-state dashboard when
-    // Phase 2a gave them real progress; both files form the dashboard surface.
+describe("P3A UI binds to projection (no second course object)", () => {  it("lesson views render projection fields rather than hard-coded titles", async () => {
+    // Continue must follow supplied published data even when its title or route
+    // changes. Optional book browsing is a separate, existing course view.
+    const [{ createElement }, { renderToStaticMarkup }, { LearnerDashboard }, { ActivityScreen }, { activityLearnerTitle }] = await Promise.all([
+      import("react"),
+      import("react-dom/server"),
+      import("../../apps/web/components/learner-state/LearnerDashboard.tsx"),
+      import("../../apps/web/components/lessons/ActivityAndBrowser.tsx"),
+      import("../../apps/web/components/activities/activity-content.js"),
+    ]);
+    const projection = projectPublishedLearnerWeb(publishedDir);
+    const firstLesson = projection.lessons[0]!;
+    const firstActivityId = firstLesson.stages.flatMap(stage => stage.activityIds)[0];
+    const suppliedTitle = "Ein Titel aus der Projektion";
+    const suppliedPath = "/lessons/01/activity/projection-probe";
+    const suppliedProjection = {
+      ...projection,
+      lessons: projection.lessons.map(lesson => lesson.id === firstLesson.id ? { ...lesson, titleDe: suppliedTitle } : lesson),
+      activities: projection.activities.map(activity => activity.id === firstActivityId ? { ...activity, canonicalPath: suppliedPath } : activity),
+    };
+    const rendered = renderToStaticMarkup(createElement(LearnerDashboard, { projection: suppliedProjection }));
+    expect(rendered).toContain(suppliedTitle);
+    expect(rendered).toContain(`href="${suppliedPath}"`);
+    expect(rendered).not.toContain(firstLesson.titleDe);
+    // Activities may have a concise editorial heading. Where no override exists,
+    // the published prompt must still reach the learner-facing activity screen.
+    const sourceActivity = projection.activities.find(activity => activityLearnerTitle(activity) === activity.promptPlainText)!;
+    expect(sourceActivity).toBeDefined();
+    const suppliedPrompt = "A prompt from the published projection";
+    const activityMarkup = renderToStaticMarkup(createElement(ActivityScreen, {
+      lesson: projection.lessons.find(lesson => lesson.id === sourceActivity.lessonId)!,
+      activity: { ...sourceActivity, promptPlainText: suppliedPrompt },
+      activities: projection.activities.filter(activity => activity.lessonId === sourceActivity.lessonId),
+    }));
+    expect(activityMarkup).toContain(`<h1>${suppliedPrompt}</h1>`);
     const lessonViews = [
       readFileSync(join(webRoot, "components/lessons/LessonViews.tsx"), "utf8"),
       readFileSync(
@@ -359,12 +391,9 @@ describe("P3A UI binds to projection (no second course object)", () => {  it("le
       ),
     ].join("\n");
 
-    expect(lessonViews).toContain("lesson.titleDe");
     expect(lessonViews).toContain("projection");
     expect(lessonViews).not.toContain("Ich heiße Miriam");
     expect(lessonViews).not.toContain("Was macht ihr beruflich?");
-    expect(activityViews).toContain("activity.promptPlainText");
-    expect(activityViews).toContain("promptPlainText");
     expect(activityViews).not.toContain("Ich heiße Miriam");
     expect(pages).toContain("loadLearnerProjection");
     expect(pages).not.toContain("alpha-content.json");
@@ -401,21 +430,18 @@ describe("P3A shell accessibility and responsive contract", () => {
   );
   const css = readFileSync(join(webRoot, "app/globals.css"), "utf8");
 
-  it("includes skip link, landmarks, aria-current, and labelled navigation", () => {
-    const navigation = readFileSync(join(webRoot, "components/shell/MobileNavigation.tsx"), "utf8");
-    expect(shell).toContain("<SkipToMainContent/>");
-    expect(navigation).toContain('className="skip-link"');
-    expect(navigation).toContain('href="#main-content"');
+  it("includes one shared header, skip target and labelled contextual navigation", () => {
+    const navigation = readFileSync(join(webRoot, "components/shell/LingovoAppHeader.tsx"), "utf8");
+    expect(shell).toContain("<LingovoAppHeader");
+    expect(navigation).toContain('className="lingovo-skip-link"');
+    expect(navigation).toContain('href={`#${mainId}`}');
     expect(shell).toContain('id="main-content"');
     expect(shell).toContain("<main");
-    expect(shell).toContain('aria-current={isCurrent ? "page" : undefined}');
-    expect(shell).toContain('aria-label="Primary"');
-    expect(shell).toContain('aria-label="Desktop navigation"');
-    expect(shell).toContain('aria-label="Tablet navigation"');
-    expect(readFileSync(join(webRoot, "components/shell/MobileNavigation.tsx"), "utf8")).toContain('aria-label="Mobile"');
-    expect(shell).toContain("<MobileNavigation current={current}/>");
-    expect(shell).toContain('href: "/vocabulary"');
-    expect(shell).toContain("Coming soon");
+    expect(navigation).toContain('aria-current=');
+    expect(navigation).toContain('<LanguageSelector');
+    expect(navigation).toContain('href: "/vocabulary"');
+    expect(navigation).toContain('href: "/settings"');
+    expect(shell).not.toContain('<MobileNavigation');
   });
 
   it("defines deliberate desktop/tablet/mobile navigation breakpoints", () => {
@@ -434,23 +460,13 @@ describe("P3A shell accessibility and responsive contract", () => {
     expect(css).toContain("var(--bottom-nav-height)");
   });
 
-  it("regular lernen motif uses --rule-regular with REG cue, not gender/bridge/IRR star", () => {
-    expect(shell).toContain('data-motif="lernen-regular"');
-    expect(shell).toContain("morph-strip__stem");
-    expect(shell).toContain("morph-strip__ending");
-    expect(shell).toContain("REG");
-    expect(shell).not.toContain("morph-strip__bridge");
-    expect(shell).not.toContain("morph-strip__star");
-    expect(shell).not.toContain("★");
-
-    const endingBlock = css.slice(
-      css.indexOf(".morph-strip__ending {"),
-      css.indexOf(".morph-strip__cue {") + 80,
-    );
-    expect(endingBlock).toContain("var(--rule-regular)");
-    expect(endingBlock).not.toContain("var(--gender-m)");
-    expect(endingBlock).not.toContain("var(--gender-f)");
-    expect(endingBlock).not.toContain("var(--rule-irregular)");
-    expect(endingBlock).not.toContain("var(--rule-special)");
+  it("keeps the product brand separate from grammatical teaching cues", () => {
+    const navigation = readFileSync(join(webRoot, "components/shell/LingovoAppHeader.tsx"), "utf8");
+    expect(navigation).toContain('className="lingovo-app-brand"');
+    expect(navigation).toContain('lingovo');
+    expect(shell).not.toContain('data-motif="lernen-regular"');
+    expect(navigation).not.toContain('morph-strip');
+    expect(css).toContain('--gender-m');
+    expect(css).toContain('--rule-regular');
   });
 });
