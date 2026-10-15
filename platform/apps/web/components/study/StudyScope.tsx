@@ -1,6 +1,8 @@
 "use client";
 
 import {createContext,useContext,useEffect,useState,useCallback,type ReactNode} from "react";
+import Link from "next/link";
+import {subjectSheetHref} from "@/lib/study/subject-sheets";
 import {availableLessons,defaultStudyScope,matchesStudyScope,parseStudyScope,scopeLabel,selectedLessons,STUDY_SCOPE_KEY,studyConcepts,type StudyScope,type StudyTags} from "@/lib/study/scope";
 
 type ScopeContext = {scope:StudyScope;setScope:(scope:StudyScope)=>void;ready:boolean;error:string};
@@ -51,7 +53,7 @@ export function StudyScopeControl(){
         {(scope.mode==="one"||scope.mode==="through")&&<label>{scope.mode==="through"?"Include through":"Selected lesson"}<select aria-label={scope.mode==="through"?"Include through":"Selected lesson"} value={scope.lessons[0]} onChange={e=>setScope({...scope,lessons:[Number(e.target.value)]})}>{lessons.map(n=><option key={n} value={n}>Lesson {n}</option>)}</select></label>}
         {scope.mode==="multiple"&&<div className="study-scope-options">{lessons.map(n=><label key={n}><input type="checkbox" checked={scope.lessons.includes(n)} onChange={e=>setScope({...scope,lessons:e.target.checked?[...scope.lessons,n]:scope.lessons.filter(l=>l!==n)})}/>Lesson {n}</label>)}</div>}
       </fieldset>
-      <fieldset><legend>Concepts <small>— choose any; none means all concepts</small></legend><div className="study-scope-options">{studyConcepts.map(c=><label key={c.id}><input type="checkbox" checked={scope.concepts.includes(c.id)} onChange={e=>setScope({...scope,concepts:e.target.checked?[...scope.concepts,c.id]:scope.concepts.filter(id=>id!==c.id)})}/>{c.label}</label>)}</div></fieldset>
+      <fieldset><legend>Concepts <small>— choose any; none means all concepts</small></legend><div className="study-scope-options">{studyConcepts.map(c=><label key={c.id}><input type="checkbox" checked={scope.concepts.includes(c.id)} onChange={e=>setScope({...scope,concepts:e.target.checked?[...scope.concepts,c.id]:scope.concepts.filter(id=>id!==c.id)})}/>{c.label}</label>)}</div><Link href="/cheat-sheets/subjects">Explore all subject infographics →</Link></fieldset>
       <label>Material source<select aria-label="Material source" value={scope.source} onChange={e=>setScope({...scope,source:e.target.value as StudyScope['source']})}><option value="all">All sources</option><option value="course">Course material</option><option value="teacher-extra">Teacher extras</option><option value="study-extra">Additional study aids</option></select></label>
       <div className="study-scope-footer"><p>Your selection follows you between sections.</p><button type="button" className="study-secondary" onClick={()=>setScope(defaultStudyScope())}>Reset selection</button></div>
       {error&&<p role="status">{error}</p>}
@@ -59,5 +61,5 @@ export function StudyScopeControl(){
   </details>;
 }
 export function StudyTagList({tags}:{tags:StudyTags}){
-  return <div className="study-tag-list">{tags.lessons.map(n=><span key={n}>Lesson {n}</span>)}{(tags.sources??[tags.source]).filter(s=>s!=="course").map(source=><span className="study-source-tag" key={source}>{source==="teacher-extra"?"Teacher extra":"Study extra"}</span>)}{tags.concepts.map(id=><span key={id}>{studyConcepts.find(c=>c.id===id)?.label}</span>)}</div>;
+  return <div className="study-tag-list">{tags.lessons.map(n=><span key={n}>Lesson {n}</span>)}{(tags.sources??[tags.source]).filter(s=>s!=="course").map(source=><span className="study-source-tag" key={source}>{source==="teacher-extra"?"Teacher extra":"Study extra"}</span>)}{tags.concepts.map(id=><Link href={subjectSheetHref(id)} key={id} title={`Open ${studyConcepts.find(c=>c.id===id)?.label} infographic`}>{studyConcepts.find(c=>c.id===id)?.label}</Link>)}</div>;
 }

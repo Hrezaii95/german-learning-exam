@@ -15,6 +15,13 @@ import { sanitizeSearchQueryText } from "./search-query";
 import {studyUnits} from "../study/course-lessons";
 import { lessonFourWords } from "../study/lesson-four";
 import {sheetLinks} from "../study/sheet-topics";
+import {studyConcepts} from "../study/scope";
+
+const SHEET_PATHS=new Set([
+  ...sheetLinks.map(sheet=>sheet.href),
+  "/cheat-sheets/subjects",
+  ...studyConcepts.map(subject=>`/cheat-sheets/subjects/${subject.id}`),
+]);
 
 /**
  * Typed, bounded, serializable learner navigation context (UX-006 / P3C).
@@ -102,7 +109,7 @@ export function isSafeNavigationPath(pathname: string): boolean {
   }
   if (pathname === "/search") return true;
   if (pathname === "/book" || pathname === "/saved") return true;
-  if (sheetLinks.some(sheet=>sheet.href===pathname)) return true;
+  if (SHEET_PATHS.has(pathname)) return true;
   if ([...lessonFourWords,...studyUnits.flatMap(u=>u.words??[])].some(word => pathname === `/vocabulary/${word.id}`)) return true;
   if (pathname === "/practice") return true;
   if (pathname === "/conversation") return true;
@@ -175,7 +182,7 @@ function sanitizeResultId(raw: string | undefined, returnPath?: string): string 
   const cleaned = sanitizeSearchQueryText(raw).trim();
   if (cleaned.length === 0) return undefined;
   if (cleaned.length > NAVIGATION_RESULT_ID_MAX_LENGTH) return undefined;
-  const sheetResult = sheetLinks.some(sheet => sheet.href === returnPath)
+  const sheetResult = returnPath !== undefined && SHEET_PATHS.has(returnPath)
     && cleaned === raw.trim() && /^[a-z][a-z0-9:_-]*$/i.test(cleaned);
   if (!sheetResult && !/^[a-z][a-z0-9-]*:[a-z0-9][a-z0-9:_-]*$/i.test(cleaned)) return undefined;
   return cleaned;

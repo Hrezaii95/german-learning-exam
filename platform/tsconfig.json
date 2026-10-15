@@ -36,6 +36,8 @@
     "vitest.config.ts"
   ],
   "exclude": [
+    "tests/web/subject-infographic-behavior.test.ts",
+    "tests/web/subject-illustration-ui.test.ts",
     "tests/web/object-vocabulary-behavior.test.ts",
     "tests/web/german-text-ui.test.ts",
     "tests/web/course-library-navigation-behavior.test.ts",

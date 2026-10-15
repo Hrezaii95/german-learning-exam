@@ -101,7 +101,17 @@ const HUB_PATHS = [
   "/cheat-sheets/numbers",
   "/cheat-sheets/conversation",
   "/cheat-sheets/questions",
+  "/cheat-sheets/subjects",
 ];
+
+// Every published subject must have a physical page in the Pages artifact.
+const SUBJECT_IDS = [
+  "introductions", "people", "countries", "numbers", "home", "objects",
+  "colours-materials", "office", "seasons", "past", "travel", "food",
+  "time", "hobbies", "grammar", "verbs", "conversation", "questions",
+  "classroom", "descriptions", "everyday",
+];
+const SUBJECT_PATHS = SUBJECT_IDS.map(id => `/cheat-sheets/subjects/${id}`);
 
 const PRACTICE_GAMES = [
   "flashcards",
@@ -175,6 +185,7 @@ function listExpectedAppPaths() {
     "/book", "/saved", "/lessons/03", "/lessons/04",
     ...bookAudio.wordCardPaths,
     ...HUB_PATHS,
+    ...SUBJECT_PATHS,
   ]);
 
   assert(projection.lessons?.length === 2, "expected 2 lessons");
@@ -430,6 +441,8 @@ async function httpSmoke(expectedPaths) {
       `${PAGES_BASE}/conversation/`,
       `${PAGES_BASE}/conversation/${conversationSlug}/`,
       `${PAGES_BASE}${details.representatives[0].canonicalPath}/`,
+      `${PAGES_BASE}/cheat-sheets/subjects/`,
+      ...SUBJECT_PATHS.map(path => `${PAGES_BASE}${path}/`),
     ];
 
     for (const path of must200) {
@@ -437,6 +450,14 @@ async function httpSmoke(expectedPaths) {
       assert(status === 200, `${path} expected 200 got ${status}`);
       assert(text.length > 100, `${path} empty body`);
       assertBasePrefixedNextAssets(text, path);
+      const subjectId = SUBJECT_IDS.find(id => path === `${PAGES_BASE}/cheat-sheets/subjects/${id}/`);
+      if (subjectId) {
+        assert(text.includes(`data-subject-sheet="${subjectId}"`), `${path} missing its subject view`);
+        assert(text.includes("data-subject-entry="), `${path} has no vocabulary entries`);
+      }
+      if (path === `${PAGES_BASE}/cheat-sheets/subjects/`) {
+        for (const id of SUBJECT_IDS) assert(text.includes(`data-subject-tile="${id}"`), `subject directory missing ${id}`);
+      }
     }
 
     // Asset from index
@@ -451,6 +472,8 @@ async function httpSmoke(expectedPaths) {
     // 404
     const missing = await fetchStatus(`${PAGES_BASE}/no-such-alpha-route/`);
     assert(missing.status === 404, `404 path expected 404 got ${missing.status}`);
+    const unknownSubject = await fetchStatus(`${PAGES_BASE}/cheat-sheets/subjects/unknown-subject/`);
+    assert(unknownSubject.status === 404, `unknown subject expected 404 got ${unknownSubject.status}`);
     assert(
       /not found|Page not found/i.test(missing.text),
       "404 body not honest",

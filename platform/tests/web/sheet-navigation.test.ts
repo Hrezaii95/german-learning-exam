@@ -1,4 +1,5 @@
 import {describe,expect,it} from "vitest";
+import {studyConcepts} from "../../apps/web/lib/study/scope";
 import {sheetLinks} from "../../apps/web/lib/study/sheet-topics";
 import {readSheetBrowse,sheetBrowseQuery,sheetNavigationContext} from "../../apps/web/lib/study/sheet-browse";
 import {isSafeNavigationPath,serializeNavigationContext,parseNavigationContextParam,resolveBackHref} from "../../apps/web/lib/content/navigation-context";
@@ -7,6 +8,17 @@ describe("safe sheet return navigation",()=>{
   it("allows published sheets and rejects unrecognized or hostile return paths",()=>{
     for(const sheet of sheetLinks)expect(isSafeNavigationPath(sheet.href)).toBe(true);
     for(const path of ["/cheat-sheets/fake","/cheat-sheets/../settings","//evil.example","/cheat-sheets/%2e%2e/settings","/cheat-sheets/home#anything","/cheat-sheets/home?q=x"])expect(isSafeNavigationPath(path)).toBe(false);
+  });
+  it("allows every canonical subject infographic and preserves exact row return context",()=>{
+    expect(isSafeNavigationPath("/cheat-sheets/subjects")).toBe(true);
+    for(const subject of studyConcepts){
+      const path=`/cheat-sheets/subjects/${subject.id}`;
+      expect(isSafeNavigationPath(path),path).toBe(true);
+      const context=parseNavigationContextParam(serializeNavigationContext(sheetNavigationContext(path,{query:"Ketchup",category:"all",saved:false,page:1},"l9-ketchup:1")));
+      expect(resolveBackHref(context)).toBe(`${path}?q=Ketchup#sheet-card-l9-ketchup%3A1`);
+    }
+    for(const path of ["/cheat-sheets/subjects/fake","/cheat-sheets/subjects/food/extra","/cheat-sheets/subjects/%2e%2e","/cheat-sheets/subjects/food?q=x"])
+      expect(isSafeNavigationPath(path),path).toBe(false);
   });
   it("restores search, saved filter, category, loaded page and exact card",()=>{
     const browse={query:"teacher",category:"Profession",saved:true,page:3};
