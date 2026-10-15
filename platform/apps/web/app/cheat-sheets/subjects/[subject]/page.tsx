@@ -4,6 +4,7 @@ import {SubjectInfographic} from "@/components/study/SubjectInfographic";
 import {subjectSheets} from "@/lib/study/subject-sheets";
 import {loadSubjectSheets} from "@/lib/study/subject-sheets.server";
 import "../subjects.css";
+import "../plurals.css";
 
 export const dynamicParams=false;
 export function generateStaticParams(){return subjectSheets.map(sheet=>({subject:sheet.id}));}

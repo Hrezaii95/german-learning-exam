@@ -17,10 +17,12 @@ import { lessonFourWords } from "../study/lesson-four";
 import {sheetLinks} from "../study/sheet-topics";
 import {studyConcepts} from "../study/scope";
 
+const SUBJECT_SHEET_PATHS=new Set(studyConcepts.map(subject=>`/cheat-sheets/subjects/${subject.id}`));
 const SHEET_PATHS=new Set([
   ...sheetLinks.map(sheet=>sheet.href),
   "/cheat-sheets/subjects",
-  ...studyConcepts.map(subject=>`/cheat-sheets/subjects/${subject.id}`),
+  "/cheat-sheets/plurals",
+  ...SUBJECT_SHEET_PATHS,
 ]);
 
 /**
@@ -47,6 +49,7 @@ export type NavigationContext = {
   resultId?: string;
   page?: number;
   onlySaved?: boolean;
+  sheetView?: "illustrated" | "plurals";
 };
 
 export const NAVIGATION_CONTEXT_PARAM = "nav";
@@ -243,6 +246,7 @@ function normalizeContext(raw: unknown): NavigationContext | null {
   const page=Number(obj.page);
   if((entryContext==="hub"||entryContext==="search")&&Number.isInteger(page)&&page>1&&page<=500) ctx.page=page;
   if (entryContext === "hub") {
+    if((obj.sheetView==="plurals"||obj.sheetView==="illustrated")&&(SUBJECT_SHEET_PATHS.has(ctx.returnPath)||ctx.returnPath==="/cheat-sheets/plurals"))ctx.sheetView=obj.sheetView;
     if(obj.onlySaved===true)ctx.onlySaved=true;
     if (typeof obj.hubId === "string" && isLearnerHubId(obj.hubId)) {
       ctx.hubId = obj.hubId;
@@ -336,6 +340,7 @@ export function serializeNavigationContext(ctx: NavigationContext): string {
   if (normalized.resultId) payload.resultId = normalized.resultId;
   if (normalized.page) payload.page = String(normalized.page);
   if (normalized.onlySaved) payload.onlySaved = true;
+  if (normalized.sheetView) payload.sheetView = normalized.sheetView;
 
   const json = JSON.stringify(payload);
   if (json.length > NAVIGATION_CONTEXT_MAX_LENGTH) {
@@ -382,6 +387,7 @@ export function backHrefFromContext(ctx: NavigationContext): string {
     if (safe.category) params.set("category", safe.category);
     if (safe.page) params.set("page", String(safe.page));
     if (safe.onlySaved) params.set("saved", "1");
+    if (safe.sheetView) params.set("view", safe.sheetView);
     const qs = params.toString();
     const sheetAnchor=safe.resultId&&(
       path==="/cheat-sheets"&&safe.resultId.startsWith("country-")||

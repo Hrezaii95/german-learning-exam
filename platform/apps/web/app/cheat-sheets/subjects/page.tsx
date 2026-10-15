@@ -2,6 +2,7 @@ import {ShellLayout} from "@/components/shell/ShellLayout";
 import {SubjectDirectory} from "@/components/study/SubjectInfographic";
 import {loadSubjectSheets} from "@/lib/study/subject-sheets.server";
 import "./subjects.css";
+import "./plurals.css";
 
 export const metadata={title:"Subject infographics",description:"Illustrated German vocabulary cheat sheets for every subject, with articles, plurals and audio."};
 

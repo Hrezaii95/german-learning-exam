@@ -102,6 +102,7 @@ const HUB_PATHS = [
   "/cheat-sheets/conversation",
   "/cheat-sheets/questions",
   "/cheat-sheets/subjects",
+  "/cheat-sheets/plurals",
 ];
 
 // Every published subject must have a physical page in the Pages artifact.
@@ -442,6 +443,7 @@ async function httpSmoke(expectedPaths) {
       `${PAGES_BASE}/conversation/${conversationSlug}/`,
       `${PAGES_BASE}${details.representatives[0].canonicalPath}/`,
       `${PAGES_BASE}/cheat-sheets/subjects/`,
+      `${PAGES_BASE}/cheat-sheets/plurals/`,
       ...SUBJECT_PATHS.map(path => `${PAGES_BASE}${path}/`),
     ];
 
@@ -457,6 +459,12 @@ async function httpSmoke(expectedPaths) {
       }
       if (path === `${PAGES_BASE}/cheat-sheets/subjects/`) {
         for (const id of SUBJECT_IDS) assert(text.includes(`data-subject-tile="${id}"`), `subject directory missing ${id}`);
+      }
+      if (path === `${PAGES_BASE}/cheat-sheets/plurals/`) {
+        assert(text.includes('data-sheet-view="plurals"'), "all-nouns page must default to the plural grid");
+        for (const pattern of ["s", "e", "en-n", "unchanged", "er", "umlaut", "umlaut-e", "umlaut-er", "innen", "other"]) {
+          assert(text.includes(`data-plural-pattern="${pattern}"`), `plural grid missing ${pattern}`);
+        }
       }
     }
 

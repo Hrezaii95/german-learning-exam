@@ -21,7 +21,7 @@ export function CheatSheetNav({current}:{current:SheetId}) {
         {!visible.length && <p>No matching sheet. Try a topic such as “time” or clear your search.</p>}
       </div>
     </details>
-    <p className="sheet-subject-link"><Link href="/cheat-sheets/subjects">All subject infographics →</Link></p>
+    <p className="sheet-subject-link"><Link href="/cheat-sheets/subjects">All subject infographics →</Link><Link href="/cheat-sheets/plurals">Gender × plural patterns →</Link></p>
     <StudyScopeNotice tags={sheetTags[current]}/>
   </>;
 }
