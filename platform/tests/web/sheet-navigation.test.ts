@@ -2,9 +2,59 @@ import {describe,expect,it} from "vitest";
 import {studyConcepts} from "../../apps/web/lib/study/scope";
 import {sheetLinks} from "../../apps/web/lib/study/sheet-topics";
 import {readSheetBrowse,sheetBrowseQuery,sheetNavigationContext} from "../../apps/web/lib/study/sheet-browse";
-import {isSafeNavigationPath,serializeNavigationContext,parseNavigationContextParam,resolveBackHref} from "../../apps/web/lib/content/navigation-context";
+import {appendNavigationContext,isSafeNavigationPath,serializeNavigationContext,parseNavigationContextParam,resolveBackHref} from "../../apps/web/lib/content/navigation-context";
 
 describe("safe sheet return navigation",()=>{
+  it("independently restores both grouping toggles after opening a full word card",()=>{
+    const returnPaths=["/cheat-sheets/plurals",...studyConcepts.map(subject=>`/cheat-sheets/subjects/${subject.id}`)];
+    for(const returnPath of returnPaths)for(const gender of [true,false])for(const view of ["illustrated","plurals"] as const){
+      const browse={query:"Bücher",category:"neuter",saved:true,page:2,view,gender};
+      const cardHref=appendNavigationContext("/vocabulary/w466",sheetNavigationContext(returnPath,browse,"W466-0"));
+      const cardUrl=new URL(cardHref,"https://local.test");
+      expect(cardUrl.pathname).toBe("/vocabulary/w466");
+      const context=parseNavigationContextParam(cardUrl.searchParams.get("nav"));
+      expect(context?.sheetGender).toBe(gender);
+      expect(context?.sheetView).toBe(view);
+      const back=new URL(resolveBackHref(context),"https://local.test");
+      expect(back.pathname).toBe(returnPath);
+      expect(back.searchParams.get("gender")).toBe(gender?"1":"0");
+      expect(readSheetBrowse(back.searchParams)).toEqual(browse);
+      expect(back.hash).toBe("#sheet-card-W466-0");
+      expect(readSheetBrowse(new URLSearchParams(sheetBrowseQuery(browse)))).toEqual(browse);
+    }
+  });
+  it("keeps legacy URLs unchanged and ignores malformed grouping values",()=>{
+    const legacy={query:"Haus",category:"all",saved:false,page:1,view:"illustrated" as const};
+    expect(sheetBrowseQuery(legacy)).toBe("?q=Haus&view=illustrated");
+    expect(readSheetBrowse(new URLSearchParams(sheetBrowseQuery(legacy)))).toEqual(legacy);
+    const oldContext=parseNavigationContextParam(serializeNavigationContext(sheetNavigationContext("/cheat-sheets/subjects/home",legacy,"W353-0")));
+    expect(oldContext).not.toHaveProperty("sheetGender");
+    expect(resolveBackHref(oldContext)).toBe("/cheat-sheets/subjects/home?q=Haus&view=illustrated#sheet-card-W353-0");
+    for(const gender of ["","false","true","2","01","-1","null","undefined"]){
+      expect(readSheetBrowse(new URLSearchParams({gender}))).not.toHaveProperty("gender");
+    }
+    for(const sheetGender of ["0","1","false","true",0,1,null,[],{}]){
+      const context=parseNavigationContextParam(JSON.stringify({entryContext:"hub",returnPath:"/cheat-sheets/subjects/home",sheetGender}));
+      expect(context).not.toHaveProperty("sheetGender");
+      expect(resolveBackHref(context)).not.toContain("gender=");
+    }
+  });
+  it("does not carry sheet grouping state to unrelated or directory routes",()=>{
+    for(const returnPath of ["/settings","/vocabulary","/cheat-sheets/home","/cheat-sheets/subjects","/cheat-sheets/subjects/fake","/cheat-sheets/plurals/extra"]){
+      for(const sheetGender of [false,true]){
+        const context=parseNavigationContextParam(JSON.stringify({entryContext:"hub",returnPath,sheetView:"plurals",sheetGender}));
+        expect(context).not.toHaveProperty("sheetGender");
+        expect(context).not.toHaveProperty("sheetView");
+        expect(resolveBackHref(context)).not.toContain("gender=");
+      }
+    }
+    for(const entryContext of ["lesson","search","review"]){
+      const context=parseNavigationContextParam(JSON.stringify({entryContext,returnPath:"/cheat-sheets/subjects/home",sheetGender:false}));
+      expect(context).not.toHaveProperty("sheetGender");
+    }
+    const redirectedHub=parseNavigationContextParam(JSON.stringify({entryContext:"hub",returnPath:"/cheat-sheets/subjects/home",hubId:"vocabulary",sheetView:"plurals",sheetGender:false}));
+    expect(resolveBackHref(redirectedHub)).toBe("/vocabulary");
+  });
   it("restores the plural grid with its search, gender filter and exact row",()=>{
     const browse={query:"Bücher",category:"neuter",saved:false,page:1,view:"plurals" as const};
     expect(readSheetBrowse(new URLSearchParams(sheetBrowseQuery(browse)))).toEqual(browse);

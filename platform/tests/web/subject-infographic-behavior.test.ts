@@ -14,6 +14,7 @@ const sheets=loadSubjectSheets();
 const food=sheets.find(sheet=>sheet.id==="food")!;
 const directory=sheets.map(sheet=>({id:sheet.id,label:sheet.label,count:sheet.items.length,families:new Set(sheet.items.map(item=>item.cardId)).size}));
 const entries=()=>document.querySelectorAll<HTMLButtonElement>("[data-subject-entry]");
+const groupingSwitch=(name:"gender"|"plural pattern")=>screen.getByRole("switch",{name:`Group by ${name}`});
 
 beforeAll(()=>{
   Object.defineProperty(HTMLDialogElement.prototype,"showModal",{configurable:true,value:function(this:HTMLDialogElement){this.setAttribute("open","");}});
@@ -63,6 +64,73 @@ describe("subject infographic browsing",()=>{
     expect(document.activeElement).toBe(key);
   });
 
+  it("groups the same illustrated words in all four gender and plural combinations without losing their meanings or colours",()=>{
+    const objects=sheets.find(sheet=>sheet.id==="objects")!;
+    const items=[
+      objects.items.find(item=>item.de==="das Buch")!,
+      objects.items.find(item=>item.de==="der Schlüssel")!,
+      objects.items.find(item=>item.tone==="female")!,
+    ];
+    const expectedIds=new Set(items.map(item=>item.id));
+    render(createElement(SubjectInfographic,{allNouns:true,sheet:{...objects,items}}));
+    const checkEntries=(gender:boolean,plural:boolean)=>{
+      expect(groupingSwitch("gender").getAttribute("aria-checked")).toBe(String(gender));
+      expect(groupingSwitch("plural pattern").getAttribute("aria-checked")).toBe(String(plural));
+      expect(new Set(Array.from(entries(),entry=>entry.getAttribute("data-subject-entry")))).toEqual(expectedIds);
+      for(const item of items){
+        const entry=Array.from(entries()).find(entry=>entry.getAttribute("data-subject-entry")===item.id)!;
+        expect(entry.querySelector(".subject-vocabulary-visual")).toBeTruthy();
+        expect(entry.querySelector(".subject-entry-meaning, .subject-plural-meaning")?.textContent).toBe(item.meaning);
+        if(!gender)expect(entry.classList.contains(`subject-tone-${item.tone}`)||entry.parentElement?.classList.contains(`subject-tone-${item.tone}`)).toBe(true);
+      }
+      expect(screen.queryByRole("table")!==null).toBe(gender&&plural);
+      expect(document.querySelector('[aria-label="Nouns grouped by article"]')!==null).toBe(gender&&!plural);
+      if(plural)expect(document.querySelector('[data-plural-pattern="umlaut-er"]')).toBeTruthy();
+      else expect(document.querySelector("[data-plural-pattern]")).toBeNull();
+    };
+    checkEntries(true,true);
+    fireEvent.click(groupingSwitch("gender"));
+    checkEntries(false,true);
+    fireEvent.click(groupingSwitch("plural pattern"));
+    checkEntries(false,false);
+    fireEvent.click(groupingSwitch("gender"));
+    checkEntries(true,false);
+    fireEvent.click(groupingSwitch("plural pattern"));
+    checkEntries(true,true);
+  });
+
+  it("keeps an opened card while changing either grouping and restores both toggles in the full-card return link",()=>{
+    const objects=sheets.find(sheet=>sheet.id==="objects")!;
+    const book=objects.items.find(item=>item.de==="das Buch")!;
+    const key=objects.items.find(item=>item.de==="der Schlüssel")!;
+    render(createElement(SubjectInfographic,{allNouns:true,sheet:{...objects,items:[book,key]}}));
+    fireEvent.click(screen.getByRole("button",{name:"das Buch · → die Bücher"}));
+    fireEvent.click(groupingSwitch("gender"));
+    const expectedBack=`/cheat-sheets/plurals?view=plurals&gender=0#sheet-card-${book.id}`;
+    const href=within(screen.getByRole("article",{name:"Vocabulary card: das Buch"})).getByRole("link",{name:"Full vocabulary card →"}).getAttribute("href")!;
+    expect(resolveBackHref(parseNavigationContextParam(new URL(href,"https://example.test").searchParams.get("nav")))).toBe(expectedBack);
+    fireEvent.click(screen.getByRole("button",{name:"Expand overview"}));
+    const dialog=screen.getByRole("dialog");
+    expect(within(dialog).getByRole("switch",{name:"Group by gender"}).getAttribute("aria-checked")).toBe("false");
+    expect(within(dialog).getByRole("article",{name:"Vocabulary card: das Buch"})).toBeTruthy();
+    fireEvent.click(groupingSwitch("plural pattern"));
+    expect(screen.getAllByRole("article",{name:/^Vocabulary card:/})).toHaveLength(1);
+    expect(screen.getByRole("article",{name:"Vocabulary card: das Buch"})).toBeTruthy();
+    fireEvent.click(groupingSwitch("gender"));
+    expect(screen.getByRole("article",{name:"Vocabulary card: das Buch"})).toBeTruthy();
+    fireEvent.click(groupingSwitch("plural pattern"));
+    expect(screen.getByRole("article",{name:"Vocabulary card: das Buch"})).toBeTruthy();
+    fireEvent.click(within(dialog).getByRole("button",{name:"Close overview"}));
+    expect(screen.getAllByRole("article",{name:/^Vocabulary card:/})).toHaveLength(1);
+    cleanup();
+    window.history.replaceState(null,"",expectedBack);
+    render(createElement(SubjectInfographic,{allNouns:true,sheet:{...objects,items:[book,key]}}));
+    expect(groupingSwitch("gender").getAttribute("aria-checked")).toBe("false");
+    expect(groupingSwitch("plural pattern").getAttribute("aria-checked")).toBe("true");
+    expect(screen.queryByRole("table")).toBeNull();
+    expect(screen.getByRole("article",{name:"Vocabulary card: das Buch"})).toBeTruthy();
+  });
+
   it("filters the illustrated plural grid by lesson and tag even inside the expanded overview",()=>{
     const items=[...new Map(sheets.flatMap(sheet=>sheet.items).filter(item=>item.tone!=="plain").map(item=>[item.id,item])).values()];
     render(createElement(StudyScopeProvider,null,createElement(SubjectInfographic,{allNouns:true,sheet:{id:"objects",label:"Gender × plural patterns",items}})));
@@ -83,7 +151,7 @@ describe("subject infographic browsing",()=>{
   it("switches to a gender by plural pattern grid with exact ending and umlaut highlights",()=>{
     const objects=sheets.find(sheet=>sheet.id==="objects")!;
     render(createElement(SubjectInfographic,{sheet:objects}));
-    fireEvent.click(screen.getByRole("button",{name:"Gender × plural patterns"}));
+    fireEvent.click(screen.getByRole("switch",{name:"Group by plural pattern"}));
     expect(screen.getByRole("table")).toBeTruthy();
     expect(screen.getByRole("columnheader",{name:/der.*Masculine singular/})).toBeTruthy();
     const book=screen.getByRole("button",{name:"das Buch · → die Bücher"});
@@ -104,7 +172,7 @@ describe("subject infographic browsing",()=>{
     window.history.replaceState(null,"",`/cheat-sheets/subjects/objects?q=Buecher&view=plurals#sheet-card-${book.id}`);
     render(createElement(SubjectInfographic,{sheet:objects}));
     expect(entries()).toHaveLength(1);
-    expect(screen.getByRole("button",{name:"Gender × plural patterns"}).getAttribute("aria-pressed")).toBe("true");
+    expect(screen.getByRole("switch",{name:"Group by plural pattern"}).getAttribute("aria-checked")).toBe("true");
     fireEvent.click(screen.getByRole("button",{name:"Expand overview"}));
     const dialog=screen.getByRole("dialog",{name:"Gender × plural patterns"});
     expect(entries()).toHaveLength(1);
@@ -114,7 +182,7 @@ describe("subject infographic browsing",()=>{
     const context=parseNavigationContextParam(new URL(href,"https://example.test").searchParams.get("nav"));
     expect(resolveBackHref(context)).toBe(`/cheat-sheets/subjects/objects?q=Buecher&view=plurals#sheet-card-${book.id}`);
     fireEvent.click(within(dialog).getByRole("button",{name:"Close overview"}));
-    fireEvent.click(screen.getByRole("button",{name:"Illustrated view"}));
+    fireEvent.click(screen.getByRole("switch",{name:"Group by plural pattern"}));
     expect(screen.queryByRole("table")).toBeNull();
     expect(entries()).toHaveLength(1);
   });
@@ -141,7 +209,7 @@ describe("subject infographic browsing",()=>{
 
   it("explains a noun-free subject and keeps its real non-noun vocabulary available",()=>{
     render(createElement(SubjectInfographic,{sheet:sheets.find(sheet=>sheet.id==="verbs")!}));
-    fireEvent.click(screen.getByRole("button",{name:"Gender × plural patterns"}));
+    fireEvent.click(screen.getByRole("switch",{name:"Group by plural pattern"}));
     expect(screen.queryByRole("table")).toBeNull();
     expect(screen.getByText(/This selection has no singular nouns/)).toBeTruthy();
     expect(screen.getByRole("link",{name:"Open plural patterns for all nouns →"}).getAttribute("href")).toBe("/cheat-sheets/plurals");

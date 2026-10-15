@@ -50,6 +50,7 @@ export type NavigationContext = {
   page?: number;
   onlySaved?: boolean;
   sheetView?: "illustrated" | "plurals";
+  sheetGender?: boolean;
 };
 
 export const NAVIGATION_CONTEXT_PARAM = "nav";
@@ -246,7 +247,9 @@ function normalizeContext(raw: unknown): NavigationContext | null {
   const page=Number(obj.page);
   if((entryContext==="hub"||entryContext==="search")&&Number.isInteger(page)&&page>1&&page<=500) ctx.page=page;
   if (entryContext === "hub") {
-    if((obj.sheetView==="plurals"||obj.sheetView==="illustrated")&&(SUBJECT_SHEET_PATHS.has(ctx.returnPath)||ctx.returnPath==="/cheat-sheets/plurals"))ctx.sheetView=obj.sheetView;
+    const sheetGroupingPath=SUBJECT_SHEET_PATHS.has(ctx.returnPath)||ctx.returnPath==="/cheat-sheets/plurals";
+    if((obj.sheetView==="plurals"||obj.sheetView==="illustrated")&&sheetGroupingPath)ctx.sheetView=obj.sheetView;
+    if(typeof obj.sheetGender==="boolean"&&sheetGroupingPath)ctx.sheetGender=obj.sheetGender;
     if(obj.onlySaved===true)ctx.onlySaved=true;
     if (typeof obj.hubId === "string" && isLearnerHubId(obj.hubId)) {
       ctx.hubId = obj.hubId;
@@ -341,6 +344,7 @@ export function serializeNavigationContext(ctx: NavigationContext): string {
   if (normalized.page) payload.page = String(normalized.page);
   if (normalized.onlySaved) payload.onlySaved = true;
   if (normalized.sheetView) payload.sheetView = normalized.sheetView;
+  if (typeof normalized.sheetGender === "boolean") payload.sheetGender = normalized.sheetGender;
 
   const json = JSON.stringify(payload);
   if (json.length > NAVIGATION_CONTEXT_MAX_LENGTH) {
@@ -387,7 +391,9 @@ export function backHrefFromContext(ctx: NavigationContext): string {
     if (safe.category) params.set("category", safe.category);
     if (safe.page) params.set("page", String(safe.page));
     if (safe.onlySaved) params.set("saved", "1");
-    if (safe.sheetView) params.set("view", safe.sheetView);
+    const sheetGroupingPath=SUBJECT_SHEET_PATHS.has(path)||path==="/cheat-sheets/plurals";
+    if (safe.sheetView && sheetGroupingPath) params.set("view", safe.sheetView);
+    if (typeof safe.sheetGender === "boolean" && sheetGroupingPath) params.set("gender", safe.sheetGender ? "1" : "0");
     const qs = params.toString();
     const sheetAnchor=safe.resultId&&(
       path==="/cheat-sheets"&&safe.resultId.startsWith("country-")||

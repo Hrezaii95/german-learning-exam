@@ -1,10 +1,11 @@
 import type {NavigationContext} from "../content/navigation-context";
-export type SheetBrowse={query:string;category:string;saved:boolean;page:number;view?:"illustrated"|"plurals"};
+export type SheetBrowse={query:string;category:string;saved:boolean;page:number;view?:"illustrated"|"plurals";gender?:boolean};
 export const initialSheetBrowse:SheetBrowse={query:"",category:"all",saved:false,page:1};
 export function readSheetBrowse(params:URLSearchParams):SheetBrowse{
   const page=Number(params.get("page"));
   const view=params.get("view");
-  return {query:(params.get("q")??"").slice(0,120),category:(params.get("category")??"all").slice(0,80),saved:params.get("saved")==="1",page:Number.isInteger(page)&&page>0&&page<=500?page:1,...(view==="plurals"||view==="illustrated"?{view}:{})};
+  const gender=params.get("gender");
+  return {query:(params.get("q")??"").slice(0,120),category:(params.get("category")??"all").slice(0,80),saved:params.get("saved")==="1",page:Number.isInteger(page)&&page>0&&page<=500?page:1,...(view==="plurals"||view==="illustrated"?{view}:{}),...(gender==="0"||gender==="1"?{gender:gender==="1"}:{})};
 }
 export function sheetBrowseQuery(browse:SheetBrowse){
   const params=new URLSearchParams();
@@ -13,8 +14,9 @@ export function sheetBrowseQuery(browse:SheetBrowse){
   if(browse.saved)params.set("saved","1");
   if(browse.page>1)params.set("page",String(browse.page));
   if(browse.view)params.set("view",browse.view);
+  if(typeof browse.gender==="boolean")params.set("gender",browse.gender?"1":"0");
   return params.size?`?${params}`:"";
 }
 export function sheetNavigationContext(returnPath:string,browse:SheetBrowse,resultId?:string):NavigationContext{
-  return {entryContext:"hub",returnPath,q:browse.query,category:browse.category,page:browse.page,onlySaved:browse.saved,...(browse.view?{sheetView:browse.view}:{}),...(resultId?{resultId}:{})};
+  return {entryContext:"hub",returnPath,q:browse.query,category:browse.category,page:browse.page,onlySaved:browse.saved,...(browse.view?{sheetView:browse.view}:{}),...(typeof browse.gender==="boolean"?{sheetGender:browse.gender}:{}),...(resultId?{resultId}:{})};
 }
