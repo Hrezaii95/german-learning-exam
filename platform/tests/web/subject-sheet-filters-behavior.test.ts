@@ -1,6 +1,6 @@
 // @vitest-environment jsdom
-import {createElement,Fragment} from "react";
-import {afterEach,describe,expect,it} from "vitest";
+import {createElement,Fragment,useState} from "react";
+import {afterEach,describe,expect,it,vi} from "vitest";
 import {cleanup,fireEvent,render,screen} from "@testing-library/react";
 import {SubjectSheetFilters} from "../../apps/web/components/study/SubjectSheetFilters";
 import {StudyScopeProvider,useStudyScope} from "../../apps/web/components/study/StudyScope";
@@ -21,6 +21,14 @@ function ScopeReadout(){
   return createElement(Fragment,null,
     createElement("output",{"data-testid":"scope"},JSON.stringify(scope)),
     createElement("output",{"aria-label":"Matching entries"},items.filter(value=>matches(value.studyTags)).map(value=>value.id).join(",")),
+  );
+}
+function ControlledFilters({initialScope,onChange}:{initialScope:StudyScope;onChange:(scope:StudyScope)=>void}){
+  const [scope,setScope]=useState(initialScope);
+  return createElement(Fragment,null,
+    createElement(SubjectSheetFilters,{items,scope,onChange:next=>{onChange(next);setScope(next);}}),
+    createElement("output",{"data-testid":"effective-scope"},JSON.stringify(scope)),
+    createElement(ScopeReadout),
   );
 }
 function mount(scope?:StudyScope){
@@ -78,18 +86,18 @@ describe("direct cheat sheet lesson and subject filters",()=>{
     fireEvent.click(box("Everyday objects"));
     expect(scopeValue().concepts).toEqual(["office"]);
     expect(screen.getByLabelText("Matching entries").textContent).toBe("extra-5");
-    fireEvent.click(screen.getByRole("button",{name:"Reset lesson & tag filters"}));
-    expect(scopeValue()).toEqual({...defaultStudyScope(),source:"teacher-extra"});
-    expect(screen.getByLabelText("Matching entries").textContent).toBe("extra-5,shared-5-6");
+    fireEvent.click(screen.getByRole("button",{name:"Reset all filters"}));
+    expect(scopeValue()).toEqual(defaultStudyScope());
+    expect(screen.getByLabelText("Matching entries").textContent).toBe("home-4,object-5,extra-5,shared-5-6");
   });
 
-  it("shows a saved empty selection honestly and can reset it without discarding the source",()=>{
+  it("shows a saved empty selection honestly and can clear every restrictive filter",()=>{
     mount({...defaultStudyScope(),mode:"multiple",lessons:[],source:"course"});
     expect(screen.getByText(/No lessons are included in your saved selection/)).toBeTruthy();
     expect(screen.getByLabelText("Matching entries").textContent).toBe("");
-    fireEvent.click(screen.getByRole("button",{name:"Reset lesson & tag filters"}));
-    expect(scopeValue()).toEqual({...defaultStudyScope(),source:"course"});
-    expect(screen.getByLabelText("Matching entries").textContent).toBe("home-4,object-5,shared-5-6");
+    fireEvent.click(screen.getByRole("button",{name:"Reset all filters"}));
+    expect(scopeValue()).toEqual(defaultStudyScope());
+    expect(screen.getByLabelText("Matching entries").textContent).toBe("home-4,object-5,extra-5,shared-5-6");
   });
 
   it("stays synchronized when the global study selection changes in another tab",()=>{
@@ -99,5 +107,93 @@ describe("direct cheat sheet lesson and subject filters",()=>{
     expect(box("Lesson 4").checked).toBe(true);
     expect(box("Home & furniture").checked).toBe(true);
     expect(screen.getByLabelText("Matching entries").textContent).toBe("home-4");
+  });
+
+  it("uses an explicit subject selection and the full catalogue independently of a stale shared selection",()=>{
+    const stale={...defaultStudyScope(),mode:"one" as const,lessons:[4],concepts:["home" as const],source:"course" as const};
+    localStorage.setItem(STUDY_SCOPE_KEY,JSON.stringify(stale));
+    const onChange=vi.fn();
+    render(createElement(StudyScopeProvider,null,createElement(ControlledFilters,{initialScope:{...defaultStudyScope(),concepts:["objects"]},onChange})));
+    for(const summary of document.querySelectorAll(".subject-sheet-filter > summary"))fireEvent.click(summary);
+    expect(box("Everyday objects").checked).toBe(true);
+    expect(box("Home & furniture").checked).toBe(false);
+    expect(box("Lesson 4").checked).toBe(false);
+    expect(count("Lesson 5")).toBe("3");
+    expect(count("Lesson 6")).toBe("1");
+    expect(count("Home & furniture")).toBe("1");
+    expect(screen.getByText("3 of 4 entries in the vocabulary catalogue.")).toBeTruthy();
+    fireEvent.click(box("Home & furniture"));
+    expect(onChange).toHaveBeenLastCalledWith({...defaultStudyScope(),concepts:["objects","home"]});
+    expect(screen.getByText("4 of 4 entries in the vocabulary catalogue.")).toBeTruthy();
+    fireEvent.click(box("Everyday objects"));
+    expect(onChange).toHaveBeenLastCalledWith({...defaultStudyScope(),concepts:["home"]});
+    expect(screen.getByText("1 of 4 entries in the vocabulary catalogue.")).toBeTruthy();
+    fireEvent.click(box("Home & furniture"));
+    expect(onChange).toHaveBeenLastCalledWith(defaultStudyScope());
+    expect(screen.getByText("4 of 4 entries in the vocabulary catalogue.")).toBeTruthy();
+    expect(scopeValue()).toEqual(stale);
+    expect(JSON.parse(localStorage.getItem(STUDY_SCOPE_KEY)!)).toEqual(stale);
+  });
+
+  it("routes controlled lesson changes and reset through the callback",()=>{
+    const onChange=vi.fn();
+    const initialScope={...defaultStudyScope(),mode:"one" as const,lessons:[5],concepts:["objects" as const],source:"teacher-extra" as const};
+    render(createElement(StudyScopeProvider,null,createElement(ControlledFilters,{initialScope,onChange})));
+    for(const summary of document.querySelectorAll(".subject-sheet-filter > summary"))fireEvent.click(summary);
+    expect(count("Lesson 5")).toBe("1");
+    expect(count("Lesson 6")).toBe("1");
+    fireEvent.click(box("Lesson 6"));
+    expect(onChange).toHaveBeenLastCalledWith({...initialScope,mode:"multiple",lessons:[5,6]});
+    expect(screen.getByText("2 of 4 entries in the vocabulary catalogue.")).toBeTruthy();
+    fireEvent.click(screen.getByRole("button",{name:"Reset all filters"}));
+    expect(onChange).toHaveBeenLastCalledWith(defaultStudyScope());
+    expect(scopeValue()).toEqual(defaultStudyScope());
+  });
+
+  it("exposes a restrictive source-only selection and enables a reset that restores the whole catalogue",()=>{
+    mount({...defaultStudyScope(),source:"teacher-extra"});
+    const source=screen.getByRole("combobox",{name:"Filter vocabulary by source"}) as HTMLSelectElement;
+    expect(source.value).toBe("teacher-extra");
+    expect(screen.getByText("2 of 4 entries in the vocabulary catalogue.")).toBeTruthy();
+    const reset=screen.getByRole("button",{name:"Reset all filters"}) as HTMLButtonElement;
+    expect(reset.disabled).toBe(false);
+    fireEvent.click(reset);
+    expect(source.value).toBe("all");
+    expect(scopeValue()).toEqual(defaultStudyScope());
+    expect(screen.getByText("4 of 4 entries in the vocabulary catalogue.")).toBeTruthy();
+    expect(reset.disabled).toBe(true);
+    fireEvent.change(source,{target:{value:"study-extra"}});
+    expect(scopeValue().source).toBe("study-extra");
+    expect(screen.getByText("0 of 4 entries in the vocabulary catalogue.")).toBeTruthy();
+    expect(reset.disabled).toBe(false);
+    fireEvent.click(reset);
+    expect(scopeValue()).toEqual(defaultStudyScope());
+  });
+
+  it("uses the controlled source value and reports source edits through the callback",()=>{
+    localStorage.setItem(STUDY_SCOPE_KEY,JSON.stringify({...defaultStudyScope(),source:"course"}));
+    const onChange=vi.fn();
+    render(createElement(StudyScopeProvider,null,createElement(ControlledFilters,{initialScope:{...defaultStudyScope(),concepts:["objects"]},onChange})));
+    const source=screen.getByRole("combobox",{name:"Filter vocabulary by source"}) as HTMLSelectElement;
+    expect(source.value).toBe("all");
+    fireEvent.change(source,{target:{value:"teacher-extra"}});
+    expect(onChange).toHaveBeenLastCalledWith({...defaultStudyScope(),concepts:["objects"],source:"teacher-extra"});
+    expect(source.value).toBe("teacher-extra");
+    expect(screen.getByText("2 of 4 entries in the vocabulary catalogue.")).toBeTruthy();
+    expect(scopeValue().source).toBe("course");
+  });
+
+  it("enables the parent reset for local search or group filters even when the effective scope includes everything",()=>{
+    const onChange=vi.fn();
+    const onReset=vi.fn();
+    const scope=defaultStudyScope();
+    const view=render(createElement(StudyScopeProvider,null,createElement(SubjectSheetFilters,{items,scope,onChange,onReset})));
+    expect((screen.getByRole("button",{name:"Reset all filters"}) as HTMLButtonElement).disabled).toBe(true);
+    view.rerender(createElement(StudyScopeProvider,null,createElement(SubjectSheetFilters,{items,scope,onChange,onReset,hasLocalFilters:true})));
+    const reset=screen.getByRole("button",{name:"Reset all filters"}) as HTMLButtonElement;
+    expect(reset.disabled).toBe(false);
+    fireEvent.click(reset);
+    expect(onReset).toHaveBeenCalledTimes(1);
+    expect(onChange).not.toHaveBeenCalled();
   });
 });

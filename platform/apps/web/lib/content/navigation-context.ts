@@ -15,7 +15,8 @@ import { sanitizeSearchQueryText } from "./search-query";
 import {studyUnits} from "../study/course-lessons";
 import { lessonFourWords } from "../study/lesson-four";
 import {sheetLinks} from "../study/sheet-topics";
-import {studyConcepts} from "../study/scope";
+import {studyConcepts,type StudyConcept} from "../study/scope";
+import {normalizeSheetTags} from "../study/sheet-browse";
 
 const SUBJECT_SHEET_PATHS=new Set(studyConcepts.map(subject=>`/cheat-sheets/subjects/${subject.id}`));
 const SHEET_PATHS=new Set([
@@ -51,10 +52,12 @@ export type NavigationContext = {
   onlySaved?: boolean;
   sheetView?: "illustrated" | "plurals";
   sheetGender?: boolean;
+  sheetTags?: StudyConcept[];
 };
 
 export const NAVIGATION_CONTEXT_PARAM = "nav";
 export const NAVIGATION_CONTEXT_MAX_LENGTH = 512;
+const SHEET_NAVIGATION_CONTEXT_MAX_LENGTH = 1024;
 export const NAVIGATION_RESULT_ID_MAX_LENGTH = 120;
 
 const ENTRY_CONTEXTS = new Set<NavigationEntryContext>([
@@ -250,6 +253,8 @@ function normalizeContext(raw: unknown): NavigationContext | null {
     const sheetGroupingPath=SUBJECT_SHEET_PATHS.has(ctx.returnPath)||ctx.returnPath==="/cheat-sheets/plurals";
     if((obj.sheetView==="plurals"||obj.sheetView==="illustrated")&&sheetGroupingPath)ctx.sheetView=obj.sheetView;
     if(typeof obj.sheetGender==="boolean"&&sheetGroupingPath)ctx.sheetGender=obj.sheetGender;
+    const sheetTags=sheetGroupingPath?normalizeSheetTags(obj.sheetTags):undefined;
+    if(sheetTags!==undefined)ctx.sheetTags=sheetTags;
     if(obj.onlySaved===true)ctx.onlySaved=true;
     if (typeof obj.hubId === "string" && isLearnerHubId(obj.hubId)) {
       ctx.hubId = obj.hubId;
@@ -279,6 +284,13 @@ function normalizeContext(raw: unknown): NavigationContext | null {
   return Object.freeze(ctx);
 }
 
+/** Only explicit, validated infographic tags need a larger bounded payload. */
+function navigationContextMaxLength(ctx:NavigationContext|null):number{
+  return ctx?.entryContext==="hub"&&!ctx.hubId&&ctx.sheetTags!==undefined
+    &&(SUBJECT_SHEET_PATHS.has(ctx.returnPath)||ctx.returnPath==="/cheat-sheets/plurals")
+    ?SHEET_NAVIGATION_CONTEXT_MAX_LENGTH:NAVIGATION_CONTEXT_MAX_LENGTH;
+}
+
 /**
  * Decode a navigation context from the `nav` query parameter.
  * Malformed, excessive, double-encoded, or hostile payloads fail to null.
@@ -287,7 +299,7 @@ export function parseNavigationContextParam(
   raw: string | null | undefined,
 ): NavigationContext | null {
   if (raw == null || typeof raw !== "string") return null;
-  if (raw.length === 0 || raw.length > NAVIGATION_CONTEXT_MAX_LENGTH * 3) {
+  if (raw.length === 0 || raw.length > SHEET_NAVIGATION_CONTEXT_MAX_LENGTH * 3) {
     // Allow percent-encoding expansion headroom; JSON length checked after decode.
     return null;
   }
@@ -302,7 +314,7 @@ export function parseNavigationContextParam(
   } catch {
     return null;
   }
-  if (decoded.length > NAVIGATION_CONTEXT_MAX_LENGTH) return null;
+  if (decoded.length > SHEET_NAVIGATION_CONTEXT_MAX_LENGTH) return null;
   if (decoded.includes("\\") || decoded.includes("://")) return null;
   // Reject double-encoded path traversal leftovers inside the JSON text.
   if (/%2e/i.test(decoded) || /%2f/i.test(decoded) || /%5c/i.test(decoded)) {
@@ -316,7 +328,8 @@ export function parseNavigationContextParam(
     return null;
   }
 
-  return normalizeContext(parsed);
+  const normalized=normalizeContext(parsed);
+  return decoded.length>navigationContextMaxLength(normalized)?null:normalized;
 }
 
 /** Read `nav` from Next searchParams (arrays/duplicates → first scalar only). */
@@ -332,7 +345,7 @@ export function serializeNavigationContext(ctx: NavigationContext): string {
   if (!normalized) {
     return JSON.stringify({ entryContext: "hub", returnPath: "/hubs" });
   }
-  const payload: Record<string, string | boolean> = {
+  const payload: Record<string, string | boolean | StudyConcept[]> = {
     entryContext: normalized.entryContext,
     returnPath: normalized.returnPath,
   };
@@ -345,9 +358,10 @@ export function serializeNavigationContext(ctx: NavigationContext): string {
   if (normalized.onlySaved) payload.onlySaved = true;
   if (normalized.sheetView) payload.sheetView = normalized.sheetView;
   if (typeof normalized.sheetGender === "boolean") payload.sheetGender = normalized.sheetGender;
+  if (normalized.sheetTags !== undefined) payload.sheetTags = normalized.sheetTags;
 
   const json = JSON.stringify(payload);
-  if (json.length > NAVIGATION_CONTEXT_MAX_LENGTH) {
+  if (json.length > navigationContextMaxLength(normalized)) {
     return JSON.stringify({
       entryContext: normalized.entryContext,
       returnPath: defaultReturnPath(normalized.entryContext),
@@ -394,6 +408,7 @@ export function backHrefFromContext(ctx: NavigationContext): string {
     const sheetGroupingPath=SUBJECT_SHEET_PATHS.has(path)||path==="/cheat-sheets/plurals";
     if (safe.sheetView && sheetGroupingPath) params.set("view", safe.sheetView);
     if (typeof safe.sheetGender === "boolean" && sheetGroupingPath) params.set("gender", safe.sheetGender ? "1" : "0");
+    if (safe.sheetTags !== undefined && sheetGroupingPath) params.set("tags", safe.sheetTags.join(","));
     const qs = params.toString();
     const sheetAnchor=safe.resultId&&(
       path==="/cheat-sheets"&&safe.resultId.startsWith("country-")||

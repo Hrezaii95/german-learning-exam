@@ -7,7 +7,8 @@ import type { BookManifest, BookAnswer, DictionaryEntry } from "./types";
 import type { LearnerQaDetail } from "../content/detail-types";
 import { phraseMeanings, bookPhraseMeanings } from "./phrase-meanings";
 import { phraseKey } from "./lookup";
-import { countries, countryName, countryFrom, countryOriginMeaning, countryGroups, languageMeanings } from "./countries";
+import { countries, countryName, countryFrom, countryOriginMeaning, countryGroups, languageMeanings,spokenLanguage } from "./countries";
+import {countryStudyTags,homeStudyTags} from "./sheet-scope";
 import { bookTranscript } from "../audio/listening-transcripts";
 import { homeWords, homeLabels, homePhrases } from "./home";
 import {grammarPatterns,conversationFrames,spokenVerb} from "./sheet-topics";
@@ -222,7 +223,7 @@ export function loadDictionary(): DictionaryEntry[] {
     if (existing) {
       existing.displayForms = displayForms;
       if (country.dative) existing.forms.push(country.dative);
-    } else entries.push({id:`country-${country.id}`,de,en:country.en,forms:[country.name,country.dative??country.name],
+    } else entries.push({id:`country-${country.id}`,de,en:country.en,forms:[country.name,country.dative??country.name],studyTags:countryStudyTags(country,entries),
       example:`Ich komme ${countryFrom(country)}.`,translation:countryOriginMeaning(country),href:`/cheat-sheets#country-${country.id}`,
       audio:countrySpeech[de]??null,kind:"word",displayForms});
     entries.push({id:`country-origin-${country.id}`,de:`Ich komme ${countryFrom(country)}.`,en:countryOriginMeaning(country),forms:[],example:"",translation:"",
@@ -230,13 +231,14 @@ export function loadDictionary(): DictionaryEntry[] {
   }
   for (const [de,en] of Object.entries(languageMeanings)) {
     if (entries.some(entry=>entry.kind==="word"&&entry.de===de)) continue;
+    const lessons=[...new Set(countries.filter(country=>country.languages.some(language=>spokenLanguage(language)===de)).flatMap(country=>countryStudyTags(country,entries).lessons))].sort((a,b)=>a-b);
     entries.push({id:`language-${de}`,de,en,forms:de==="Persisch"?["Farsi"]:[],example:`Ich spreche ${de}.`,translation:`I speak ${en.split(" / ")[0]}.`,
-      href:"/cheat-sheets",kind:"word",audio:countrySpeech[de]??null,displayForms:[{text:de,tone:"neuter",label:"Language · normally no article"}]});
+      href:"/cheat-sheets",kind:"word",studyTags:{lessons,concepts:["countries"],source:"study-extra"},audio:countrySpeech[de]??null,displayForms:[{text:de,tone:"neuter",label:"Language · normally no article"}]});
   }
   const homeSpeech = loadHomeSpeech();
   for (const word of homeWords) {
     if (entries.some(entry=>entry.kind==="word"&&entry.de===word.de)) continue;
-    entries.push({id:`home-${word.id}`,saveId:`home-${word.id}`,de:word.de,en:word.en,forms:word.plural?[word.plural]:[],example:"",translation:"",kind:"word",href:`/cheat-sheets/home#home-${word.id}`,audio:homeSpeech[word.de]??null,displayForms:[{text:word.de,tone:word.tone,label:homeLabels[word.tone]},...(word.plural?[{text:word.plural,tone:"plural" as const,label:"Plural · die"}]:[])]});
+    entries.push({id:`home-${word.id}`,saveId:`home-${word.id}`,de:word.de,en:word.en,forms:word.plural?[word.plural]:[],example:"",translation:"",kind:"word",studyTags:homeStudyTags(word,entries),href:`/cheat-sheets/home#home-${word.id}`,audio:homeSpeech[word.de]??null,displayForms:[{text:word.de,tone:word.tone,label:homeLabels[word.tone]},...(word.plural?[{text:word.plural,tone:"plural" as const,label:"Plural · die"}]:[])]});
   }
   homePhrases.forEach((phrase,index)=>{
     if(entries.some(entry=>entry.de===phrase.de))return;
@@ -258,7 +260,7 @@ export function loadDictionary(): DictionaryEntry[] {
     const forms=[...model.forms,...model.forms.map((form,index)=>spokenVerb(index,form))];
     const entry=entries.find(item=>item.forms.includes(model.verb));
     if(entry)entry.forms=[...new Set([...entry.forms,...forms])];
-    else entries.push({id:`verb-model-${model.verb.replace(/\s+/gu,"-")}`,de:model.verb,en:model.meaning,forms,example:spokenVerb(0,model.forms[0]!),translation:"",href:`/cheat-sheets/verbs#verb-${encodeURIComponent(model.verb)}-0`,audio:collectionSpeech[spokenVerb(0,model.forms[0]!)]??null,kind:"word",studyTags:modelTags(model,wordCards)});
+    else entries.push({id:`verb-model-${model.verb.replace(/\s+/gu,"-")}`,de:model.verb,en:model.meaning,forms,example:spokenVerb(0,model.forms[0]!),translation:"",href:`/cheat-sheets/verbs#verb-${encodeURIComponent(model.verb)}-0`,audio:speech[model.verb]??collectionSpeech[model.verb]??null,kind:"word",studyTags:modelTags(model,wordCards)});
   }
   return entries;
 }

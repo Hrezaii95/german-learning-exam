@@ -2,7 +2,7 @@ import {notFound} from "next/navigation";
 import {ShellLayout} from "@/components/shell/ShellLayout";
 import {SubjectInfographic} from "@/components/study/SubjectInfographic";
 import {subjectSheets} from "@/lib/study/subject-sheets";
-import {loadSubjectSheets} from "@/lib/study/subject-sheets.server";
+import {loadSubjectSheets,loadSubjectVocabulary} from "@/lib/study/subject-sheets.server";
 import "../subjects.css";
 import "../plurals.css";
 
@@ -21,5 +21,5 @@ export default async function Page({params}:Props){
   const {subject}=await params;
   const sheet=loadSubjectSheets().find(item=>item.id===subject);
   if(!sheet)notFound();
-  return <ShellLayout current="cheat-sheets"><SubjectInfographic sheet={sheet}/></ShellLayout>;
+  return <ShellLayout current="cheat-sheets"><SubjectInfographic sheet={sheet} allItems={loadSubjectVocabulary()}/></ShellLayout>;
 }

@@ -1,11 +1,15 @@
 import {describe,expect,it} from "vitest";
 import {loadWordCards} from "../../apps/web/lib/content/word-cards";
+import {loadDictionary,loadHomeSpeech} from "../../apps/web/lib/study/catalog";
+import {homeWords} from "../../apps/web/lib/study/home";
 import {studyConcepts} from "../../apps/web/lib/study/scope";
 import {subjectSheetHref,subjectSheets,subjectVocabularyGroups} from "../../apps/web/lib/study/subject-sheets";
-import {buildSubjectSheets,loadSubjectSheets} from "../../apps/web/lib/study/subject-sheets.server";
+import {buildSubjectSheets,loadSubjectSheets,loadSubjectVocabulary} from "../../apps/web/lib/study/subject-sheets.server";
 
 const cards=loadWordCards().cards;
 const card=(id:string)=>cards.find(candidate=>candidate.id===id)!;
+const dictionary=loadDictionary();
+const extras=dictionary.filter(entry=>entry.kind==="word"&&!cards.some(card=>card.id===entry.id));
 
 describe("canonical subject vocabulary sheets",()=>{
   it("provides a populated route for every canonical subject without adding unrelated cards",()=>{
@@ -18,10 +22,55 @@ describe("canonical subject vocabulary sheets",()=>{
       expect(new Set(sheet.items.map(item=>item.id)).size,sheet.id).toBe(sheet.items.length);
       for(const item of sheet.items){
         expect(item.studyTags.concepts,sheet.id).toContain(sheet.id);
-        expect(cards.some(source=>source.id===item.cardId),item.id).toBe(true);
+        expect(cards.some(source=>source.id===item.cardId)||extras.some(source=>source.id===item.cardId),item.id).toBe(true);
         expect(item.examples.length,item.id).toBeLessThanOrEqual(2);
       }
     }
+  });
+
+  it("covers every canonical source row and authored dictionary word exactly once",()=>{
+    const vocabulary=loadSubjectVocabulary();
+    const canonicalIds=cards.flatMap(card=>card.rows.map((_,index)=>`${card.id}-${index}`));
+    expect(canonicalIds).toHaveLength(1290);
+    expect(extras).toHaveLength(48);
+    expect(vocabulary).toHaveLength(canonicalIds.length+extras.length);
+    expect(new Set(vocabulary.map(item=>item.id)).size).toBe(vocabulary.length);
+    expect(vocabulary.filter(item=>cards.some(card=>card.id===item.cardId)).map(item=>item.id)).toEqual(canonicalIds);
+    for(const entry of extras){
+      const item=vocabulary.find(item=>item.cardId===entry.id)!;
+      expect(item,entry.id).toBeDefined();
+      expect(item).toMatchObject({de:entry.de,meaning:entry.en,href:entry.href,savedItem:{id:entry.saveId??entry.id,href:entry.href}});
+      expect(item.id,entry.id).toMatch(/^[a-z][a-z0-9:_-]*$/iu);
+      expect(item.studyTags.concepts.length,entry.id).toBeGreaterThan(0);
+    }
+    const sheetIds=new Set(loadSubjectSheets().flatMap(sheet=>sheet.items.map(item=>item.id)));
+    expect(sheetIds).toEqual(new Set(vocabulary.map(item=>item.id)));
+    expect(loadSubjectVocabulary()).toBe(vocabulary);
+  });
+
+  it("restores all thirty Home meanings with exact supplied forms, audio and source tags",()=>{
+    const home=loadSubjectSheets().find(sheet=>sheet.id==="home")!.items;
+    for(const word of homeWords)expect(home.some(item=>item.de===word.de),word.de).toBe(true);
+    const window=home.find(item=>item.cardId==="home-fenster")!;
+    expect(window).toMatchObject({de:"das Fenster",tone:"neuter",plurals:[{text:"die Fenster",tone:"plural",audio:loadHomeSpeech()["die Fenster"]}],studyTags:{lessons:[4],concepts:["home"],source:"study-extra"},savedItem:{id:"home-fenster"}});
+    expect(home.find(item=>item.cardId==="home-zuhause")!.plurals).toEqual([]);
+    expect(home.find(item=>item.cardId==="home-moebelgeschaeft")!.studyTags.source).toBe("course");
+  });
+
+  it("keeps authored article-free countries and languages plain and records no invented plural",()=>{
+    const countries=loadSubjectSheets().find(sheet=>sheet.id==="countries")!.items;
+    expect(countries.find(item=>item.cardId==="country-BR")).toMatchObject({de:"Brasilien",category:"Country",tone:"plain",plurals:[],studyTags:{concepts:["countries","grammar"],source:"study-extra"}});
+    expect(countries.find(item=>item.cardId==="language-Persisch")).toMatchObject({de:"Persisch",category:"Language",tone:"plain",plurals:[],studyTags:{concepts:["countries"],source:"study-extra"}});
+    expect(countries.find(item=>item.cardId==="country-MV")).toMatchObject({de:"die Malediven",tone:"plural",plurals:[]});
+    expect(loadSubjectSheets().find(sheet=>sheet.id==="verbs")!.items.find(item=>item.cardId==="verb-model-vermuten")).toMatchObject({de:"vermuten",tone:"plain",category:"Verb",plurals:[]});
+  });
+
+  it("ignores sentence, phrase and repeated dictionary entries while preserving canonical save identities",()=>{
+    const word=extras.find(entry=>entry.id==="home-fenster")!;
+    const projected=buildSubjectSheets([card("W466")],[dictionary.find(entry=>entry.id==="W466")!,word,word,{...word,id:"not-a-word",kind:"sentence"},{...word,id:"not-a-phrase",kind:"phrase"}]);
+    const unique=[...new Map(projected.flatMap(sheet=>sheet.items).map(item=>[item.id,item])).values()];
+    expect(unique.map(item=>item.id).sort()).toEqual(["W466-0","home-fenster-0"]);
+    expect(unique.find(item=>item.cardId==="W466")!.savedItem.id).toBe("card-W466");
   });
 
   it("resolves merged cards by canonical tags and keeps one row when the input repeats a card",()=>{

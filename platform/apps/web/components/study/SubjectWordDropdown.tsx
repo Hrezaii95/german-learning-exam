@@ -64,7 +64,7 @@ export function SubjectWordDropdown({item,subject,href,panelId,onClose}:{
       {examples.length>0&&<div className="subject-detail-examples"><h4>In a sentence</h4>{examples.map((example,index)=><div key={`${example.de}-${index}`}><p><GermanText text={example.de}/><LineAudio text={example.de} src={example.audio} compact/></p><p>{example.en}</p></div>)}</div>}
       {item.patterns.length>0&&<div className="subject-detail-patterns"><h4>Useful patterns</h4><ul>{item.patterns.map((pattern,index)=><li key={`${pattern}-${index}`}><GermanText text={pattern}/></li>)}</ul></div>}
     </details>}
-    <div className="subject-detail-actions"><SaveButton item={item.savedItem}/><Link href={href}>Full vocabulary card →</Link></div>
+    <div className="subject-detail-actions"><SaveButton item={item.savedItem}/><Link href={href}>{item.href.startsWith("/vocabulary/")?"Full vocabulary card →":"Open word reference →"}</Link></div>
     <StudyTagList tags={item.studyTags}/>
     {item.note&&<details className="subject-source-note"><summary>Word notes & source context</summary>{item.note.split(/\n\n+/).map((paragraph,index)=><p key={index}>{paragraph}</p>)}</details>}
   </article>;

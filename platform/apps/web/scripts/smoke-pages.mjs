@@ -465,7 +465,8 @@ async function httpSmoke(expectedPaths) {
         for (const id of SUBJECT_IDS) assert(text.includes(`data-subject-tile="${id}"`), `subject directory missing ${id}`);
       }
       if (path === `${PAGES_BASE}/cheat-sheets/plurals/`) {
-        assert(text.includes('data-sheet-view="plurals"'), "all-nouns page must default to the plural grid");
+        assert(text.includes('data-sheet-view="plurals"'), "vocabulary page must default to plural grouping");
+        for (const id of ["W012-0", "W051-0", "language-Persisch-0", "home-fernseher-0"]) assert(text.includes(`data-subject-entry="${id}"`), `complete vocabulary infographic missing ${id}`);
         assert(text.includes('class="subject-vocabulary-visual"'), "plural grid missing infographic illustrations");
         assert(text.includes('class="subject-plural-meaning"'), "plural grid missing visible meanings");
         assert(text.includes('class="subject-plural-pattern-schema"'), "plural grid missing singular-to-plural diagrams");

@@ -5,16 +5,29 @@ import {cleanup,fireEvent,render,screen,within} from "@testing-library/react";
 import {SubjectDirectory,SubjectInfographic} from "../../apps/web/components/study/SubjectInfographic";
 import {StudyProvider} from "../../apps/web/components/study/StudyProvider";
 import {StudyScopeProvider,StudyTagList} from "../../apps/web/components/study/StudyScope";
-import {loadSubjectSheets} from "../../apps/web/lib/study/subject-sheets.server";
+import {loadSubjectSheets,loadSubjectVocabulary} from "../../apps/web/lib/study/subject-sheets.server";
 import {defaultStudyScope,STUDY_SCOPE_KEY,studyConcepts} from "../../apps/web/lib/study/scope";
 import {STUDY_KEY} from "../../apps/web/lib/study/storage";
 import {parseNavigationContextParam,resolveBackHref} from "../../apps/web/lib/content/navigation-context";
+import {loadWordCards} from "../../apps/web/lib/content/word-cards";
 
 const sheets=loadSubjectSheets();
+const catalogue=loadSubjectVocabulary();
+const canonicalCards=new Set(loadWordCards().cards.map(card=>card.id));
 const food=sheets.find(sheet=>sheet.id==="food")!;
 const directory=sheets.map(sheet=>({id:sheet.id,label:sheet.label,count:sheet.items.length,families:new Set(sheet.items.map(item=>item.cardId)).size}));
 const entries=()=>document.querySelectorAll<HTMLButtonElement>("[data-subject-entry]");
 const groupingSwitch=(name:"gender"|"plural pattern")=>screen.getByRole("switch",{name:`Group by ${name}`});
+const visibleIds=()=>new Set(Array.from(entries(),entry=>entry.getAttribute("data-subject-entry")));
+const subjectTags=()=>screen.getByText("Subject tags",{exact:true}).closest("details")!;
+const chooseSubjectTags=(ids:string[])=>{
+  const panel=subjectTags();
+  if(!panel.open)fireEvent.click(panel.querySelector("summary")!);
+  for(const subject of studyConcepts){
+    const checkbox=within(panel).getByRole("checkbox",{name:subject.label}) as HTMLInputElement;
+    if(checkbox.checked!==ids.includes(subject.id))fireEvent.click(checkbox);
+  }
+};
 
 beforeAll(()=>{
   Object.defineProperty(HTMLDialogElement.prototype,"showModal",{configurable:true,value:function(this:HTMLDialogElement){this.setAttribute("open","");}});
@@ -26,6 +39,101 @@ beforeAll(()=>{
 afterEach(()=>{cleanup();vi.unstubAllGlobals();localStorage.clear();window.history.replaceState(null,"","/");});
 
 describe("subject infographic browsing",()=>{
+  it("starts with the route subject and switches to every selected tag across the full catalogue",()=>{
+    const home=sheets.find(sheet=>sheet.id==="home")!;
+    const objects=sheets.find(sheet=>sheet.id==="objects")!;
+    render(createElement(StudyScopeProvider,null,createElement(SubjectInfographic,{sheet:home,allItems:catalogue})));
+    expect(visibleIds()).toEqual(new Set(home.items.map(item=>item.id)));
+    chooseSubjectTags(["objects"]);
+    expect(objects.items.filter(item=>canonicalCards.has(item.cardId))).toHaveLength(49);
+    expect(visibleIds()).toEqual(new Set(objects.items.map(item=>item.id)));
+    expect(screen.getByRole("heading",{level:1,name:"Everyday objects"})).toBeTruthy();
+    expect(JSON.parse(localStorage.getItem(STUDY_SCOPE_KEY)!).concepts).toEqual(["objects"]);
+    expect(new URLSearchParams(window.location.search).get("tags")).toBe("objects");
+    chooseSubjectTags(["objects","food"]);
+    const union=catalogue.filter(item=>item.studyTags.concepts.some(concept=>concept==="objects"||concept==="food"));
+    expect(visibleIds()).toEqual(new Set(union.map(item=>item.id)));
+    expect(entries()).toHaveLength(union.length);
+    expect(screen.getByRole("heading",{level:1,name:"Selected vocabulary"})).toBeTruthy();
+    chooseSubjectTags([]);
+    expect(visibleIds()).toEqual(new Set(catalogue.map(item=>item.id)));
+    expect(entries()).toHaveLength(catalogue.length);
+    expect(JSON.parse(localStorage.getItem(STUDY_SCOPE_KEY)!).concepts).toEqual([]);
+    expect(new URLSearchParams(window.location.search).get("tags")).toBe("");
+  });
+
+  it("restores explicit tag, search and grouping state instead of the route tag or saved global tags",()=>{
+    const home=sheets.find(sheet=>sheet.id==="home")!;
+    const handy=catalogue.find(item=>item.de==="das Handy")!;
+    localStorage.setItem(STUDY_SCOPE_KEY,JSON.stringify({...defaultStudyScope(),concepts:["food"]}));
+    window.history.replaceState(null,"",`/cheat-sheets/subjects/home?q=Handy&view=plurals&gender=0&tags=objects#sheet-card-${handy.id}`);
+    const content=()=>createElement(StudyScopeProvider,null,createElement(SubjectInfographic,{sheet:home,allItems:catalogue}));
+    render(content());
+    expect(visibleIds()).toEqual(new Set([handy.id]));
+    expect(screen.getByRole("heading",{level:1,name:"Everyday objects"})).toBeTruthy();
+    expect((screen.getByRole("searchbox",{name:"Find a word or form"}) as HTMLInputElement).value).toBe("Handy");
+    expect(groupingSwitch("gender").getAttribute("aria-checked")).toBe("false");
+    expect(groupingSwitch("plural pattern").getAttribute("aria-checked")).toBe("true");
+    const detail=screen.getByRole("article",{name:"Vocabulary card: das Handy"});
+    const href=within(detail).getByRole("link",{name:"Full vocabulary card →"}).getAttribute("href")!;
+    const context=parseNavigationContextParam(new URL(href,"https://example.test").searchParams.get("nav"));
+    const back=resolveBackHref(context);
+    const restored=new URL(back,"https://example.test");
+    expect(restored.pathname).toBe("/cheat-sheets/subjects/home");
+    expect(Object.fromEntries(restored.searchParams)).toEqual({q:"Handy",view:"plurals",gender:"0",tags:"objects"});
+    expect(restored.hash).toBe(`#sheet-card-${handy.id}`);
+    cleanup();
+    window.history.replaceState(null,"",back);
+    render(content());
+    expect(visibleIds()).toEqual(new Set([handy.id]));
+    const panel=subjectTags();
+    fireEvent.click(panel.querySelector("summary")!);
+    expect((within(panel).getByRole("checkbox",{name:"Everyday objects"}) as HTMLInputElement).checked).toBe(true);
+    expect((within(panel).getByRole("checkbox",{name:"Food, preferences & ordering"}) as HTMLInputElement).checked).toBe(false);
+    expect(screen.getByRole("article",{name:"Vocabulary card: das Handy"})).toBeTruthy();
+  });
+
+  it("treats an explicit empty tag query as all vocabulary despite the route and saved tag",()=>{
+    const home=sheets.find(sheet=>sheet.id==="home")!;
+    localStorage.setItem(STUDY_SCOPE_KEY,JSON.stringify({...defaultStudyScope(),concepts:["food"]}));
+    window.history.replaceState(null,"","/cheat-sheets/subjects/home?tags=");
+    render(createElement(StudyScopeProvider,null,createElement(SubjectInfographic,{sheet:home,allItems:catalogue})));
+    expect(visibleIds()).toEqual(new Set(catalogue.map(item=>item.id)));
+    expect(entries()).toHaveLength(catalogue.length);
+  });
+
+  it("clears a stale gender group when switching to a different subject",()=>{
+    const home=sheets.find(sheet=>sheet.id==="home")!;
+    window.history.replaceState(null,"","/cheat-sheets/subjects/home?category=neuter");
+    render(createElement(StudyScopeProvider,null,createElement(SubjectInfographic,{sheet:home,allItems:catalogue})));
+    expect(visibleIds()).toEqual(new Set(home.items.filter(item=>item.tone==="neuter").map(item=>item.id)));
+    chooseSubjectTags(["verbs"]);
+    const verbs=catalogue.filter(item=>item.studyTags.concepts.includes("verbs"));
+    expect(visibleIds()).toEqual(new Set(verbs.map(item=>item.id)));
+    expect(entries()).toHaveLength(verbs.length);
+    expect(new URLSearchParams(window.location.search).has("category")).toBe(false);
+  });
+
+  it("retains the whole catalogue, including article-free vocabulary, across all-nouns grouping switches",()=>{
+    const plain=catalogue.find(item=>item.tone==="plain"&&item.category==="Verb")!;
+    const language=catalogue.find(item=>item.id.startsWith("language-"))!;
+    expect(plain).toBeTruthy();
+    expect(language).toBeTruthy();
+    render(createElement(StudyScopeProvider,null,createElement(SubjectInfographic,{allNouns:true,sheet:{id:"objects",label:"All vocabulary",items:catalogue},allItems:catalogue})));
+    const expected=new Set(catalogue.map(item=>item.id));
+    expect(visibleIds()).toEqual(expected);
+    expect(entries()).toHaveLength(catalogue.length);
+    expect(Array.from(entries()).find(entry=>entry.getAttribute("data-subject-entry")===plain.id)?.querySelector(".subject-entry-meaning")?.textContent).toBe(plain.meaning);
+    expect(Array.from(entries()).find(entry=>entry.getAttribute("data-subject-entry")===language.id)?.textContent).toContain(language.de);
+    fireEvent.click(groupingSwitch("plural pattern"));
+    expect(visibleIds()).toEqual(expected);
+    expect(entries()).toHaveLength(catalogue.length);
+    fireEvent.click(groupingSwitch("gender"));
+    expect(visibleIds()).toEqual(expected);
+    expect(entries()).toHaveLength(catalogue.length);
+    expect(document.querySelector('.subject-vocabulary-flat [data-subject-entry="'+plain.id+'"]')).toBeTruthy();
+  });
+
   it("keeps icons and meanings visible and opens one local card with both pronunciation clips",()=>{
     const objects=sheets.find(sheet=>sheet.id==="objects")!;
     const bookItem=objects.items.find(item=>item.de==="das Buch")!;
@@ -212,7 +320,7 @@ describe("subject infographic browsing",()=>{
     fireEvent.click(screen.getByRole("switch",{name:"Group by plural pattern"}));
     expect(screen.queryByRole("table")).toBeNull();
     expect(screen.getByText(/This selection has no singular nouns/)).toBeTruthy();
-    expect(screen.getByRole("link",{name:"Open plural patterns for all nouns →"}).getAttribute("href")).toBe("/cheat-sheets/plurals");
+    expect(screen.getByRole("link",{name:"Open the full vocabulary cheat sheet →"}).getAttribute("href")).toBe("/cheat-sheets/plurals?tags=");
     expect(entries().length).toBeGreaterThan(100);
   });
   it("keeps all subjects discoverable and links every subject tag to its exact infographic",()=>{
@@ -264,6 +372,21 @@ describe("subject infographic browsing",()=>{
     expect(detail.querySelector('button[aria-label="Listen: das Buch"]')).toBeTruthy();
     expect(book.audio).toBeTruthy();
     expect(within(detail).getByRole("link",{name:"Full vocabulary card →"}).getAttribute("href")).toContain(book.href);
+  });
+
+  it("finds the same nouns with German umlauts, their transliterations or base vowels",()=>{
+    const objects=sheets.find(sheet=>sheet.id==="objects")!;
+    render(createElement(SubjectInfographic,{sheet:objects}));
+    const search=screen.getByRole("searchbox",{name:"Find a word or form"});
+    for(const queries of [["Bücher","Buecher","Bucher"],["Schlüssel","Schluessel","Schlussel"]]){
+      fireEvent.change(search,{target:{value:queries[0]}});
+      const expected=visibleIds();
+      expect(expected.size).toBeGreaterThan(0);
+      for(const query of queries.slice(1)){
+        fireEvent.change(search,{target:{value:query}});
+        expect(visibleIds()).toEqual(expected);
+      }
+    }
   });
 
   it("restores the exact row and filters when returning from a full card",()=>{
