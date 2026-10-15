@@ -456,12 +456,19 @@ async function httpSmoke(expectedPaths) {
       if (subjectId) {
         assert(text.includes(`data-subject-sheet="${subjectId}"`), `${path} missing its subject view`);
         assert(text.includes("data-subject-entry="), `${path} has no vocabulary entries`);
+        assert(text.includes('class="subject-vocabulary-visual"'), `${path} missing infographic illustrations`);
+        assert(text.includes('class="subject-entry-meaning"'), `${path} missing visible meanings`);
+        assert(text.includes('aria-label="Filter this cheat sheet"'), `${path} missing lesson and tag filters`);
       }
       if (path === `${PAGES_BASE}/cheat-sheets/subjects/`) {
         for (const id of SUBJECT_IDS) assert(text.includes(`data-subject-tile="${id}"`), `subject directory missing ${id}`);
       }
       if (path === `${PAGES_BASE}/cheat-sheets/plurals/`) {
         assert(text.includes('data-sheet-view="plurals"'), "all-nouns page must default to the plural grid");
+        assert(text.includes('class="subject-vocabulary-visual"'), "plural grid missing infographic illustrations");
+        assert(text.includes('class="subject-plural-meaning"'), "plural grid missing visible meanings");
+        assert(text.includes('class="subject-plural-pattern-schema"'), "plural grid missing singular-to-plural diagrams");
+        assert(text.includes('aria-label="Filter this cheat sheet"'), "plural grid missing lesson and tag filters");
         for (const pattern of ["s", "e", "en-n", "unchanged", "er", "umlaut", "umlaut-e", "umlaut-er", "innen", "other"]) {
           assert(text.includes(`data-plural-pattern="${pattern}"`), `plural grid missing ${pattern}`);
         }

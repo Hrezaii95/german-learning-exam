@@ -1,17 +1,17 @@
 "use client";
 
 import Link from "next/link";
-import {useEffect,useRef,useState,type CSSProperties,type RefObject} from "react";
+import {useEffect,useRef,useState,type CSSProperties} from "react";
 import {appendNavigationContext} from "@/lib/content/navigation-context";
 import {defaultStudyScope,scopeLabel,type StudyConcept} from "@/lib/study/scope";
 import {initialSheetBrowse,readSheetBrowse,sheetBrowseQuery,sheetNavigationContext,type SheetBrowse} from "@/lib/study/sheet-browse";
 import {subjectSheetHref,subjectSheets,subjectVocabularyGroups,type SubjectSheet,type SubjectVocabularyGroup,type SubjectVocabularyItem} from "@/lib/study/subject-sheets";
 import {OverviewPanel} from "./OverviewPanel";
-import {LineAudio} from "./StudyAudio";
-import {GermanText,SaveButton} from "./StudyProvider";
-import {StudyTagList,useStudyScope} from "./StudyScope";
+import {useStudyScope} from "./StudyScope";
 import {SubjectIcon,SubjectVocabularyVisual} from "./SubjectIllustration";
 import {SubjectPluralGrid} from "./SubjectPluralGrid";
+import {SubjectSheetFilters} from "./SubjectSheetFilters";
+import {SubjectWordDropdown} from "./SubjectWordDropdown";
 
 const articles:Record<string,string>={male:"der",female:"die",neuter:"das",plural:"die"};
 
@@ -37,28 +37,12 @@ function SubjectSwitcher({current,pluralView,allNouns}:{current:StudyConcept;plu
   </div>;
 }
 
-function SubjectWordDetail({item,subject,href,focus}:{item:SubjectVocabularyItem;subject:StudyConcept;href:string;focus:RefObject<HTMLElement|null>}){
-  return <article ref={focus} id="subject-word-detail" className={`subject-word-detail subject-tone-${item.tone}`} aria-live="polite" aria-label="Selected vocabulary">
-    <div className="subject-detail-heading">
-      <SubjectVocabularyVisual de={item.de} category={item.category} cardId={item.cardId} subject={subject}/>
-      <div><p className="subject-detail-category">{item.category}{sourceQualifier(item)&&<> · {sourceQualifier(item)}</>}</p><h3><GermanText text={item.de}/><LineAudio text={item.de} src={item.audio} compact/></h3><p className="subject-detail-meaning">{item.meaning}</p></div>
-    </div>
-    {item.plurals.length>0&&<div className="subject-detail-plurals"><h4>Plural {item.plurals.length===1?"form":"forms"}</h4>{item.plurals.map(form=><p key={form.text} className="subject-tone-plural"><GermanText text={form.text}/><LineAudio text={form.text} src={form.audio} compact/></p>)}</div>}
-    {!item.plurals.length&&item.tone!=="plain"&&item.tone!=="plural"&&<p className="subject-detail-form-note">No plural is taught on this card.</p>}
-    {item.tone==="plural"&&<p className="subject-detail-form-note">This entry is shown in its plural form.</p>}
-    {item.examples.length>0&&<div className="subject-detail-examples"><h4>In a sentence</h4>{item.examples.map((example,index)=><div key={`${example.de}-${index}`}><p><GermanText text={example.de}/><LineAudio text={example.de} src={example.audio} compact/></p><p>{example.en}</p></div>)}</div>}
-    {item.patterns.length>0&&<div className="subject-detail-patterns"><h4>Useful patterns</h4><ul>{item.patterns.map((pattern,index)=><li key={`${pattern}-${index}`}><GermanText text={pattern}/></li>)}</ul></div>}
-    <div className="subject-detail-actions"><SaveButton item={item.savedItem}/><Link href={href}>Full vocabulary card →</Link></div>
-    <StudyTagList tags={item.studyTags}/>
-    {item.note&&<details className="subject-source-note"><summary>Word notes & source context</summary>{item.note.split(/\n\n+/).map((paragraph,index)=><p key={index}>{paragraph}</p>)}</details>}
-  </article>;
-}
-
 export function SubjectInfographic({sheet,allNouns=false}:{sheet:SubjectSheet;allNouns?:boolean}){
   const {matches,scope,setScope,ready}=useStudyScope();
   const [browse,setBrowse]=useState<SheetBrowse>(()=>allNouns?{...initialSheetBrowse,view:"plurals"}:initialSheetBrowse);
   const [selected,setSelected]=useState("");
-  const focus=useRef<HTMLElement>(null);
+  const [openEntry,setOpenEntry]=useState("");
+  const triggers=useRef(new Map<string,HTMLButtonElement>());
   const entries=useRef(new Map<string,HTMLButtonElement>());
   const pendingHash=useRef<string|null>(null);
   useEffect(()=>{
@@ -68,6 +52,7 @@ export function SubjectInfographic({sheet,allNouns=false}:{sheet:SubjectSheet;al
         try{
           const id=decodeURIComponent(window.location.hash.slice("#sheet-card-".length));
           setSelected(id);
+          setOpenEntry(id);
           pendingHash.current=id;
         }catch{/* Malformed fragments have no matching vocabulary entry. */}
       }
@@ -102,32 +87,35 @@ export function SubjectInfographic({sheet,allNouns=false}:{sheet:SubjectSheet;al
     pendingHash.current=null;
     return()=>cancelAnimationFrame(frame);
   },[ready,browse,visible.length]);
-  const choose=(id:string)=>{
+  const choose=(id:string,key=id)=>{
     setSelected(id);
-    requestAnimationFrame(()=>focus.current?.scrollIntoView({block:"nearest",behavior:"smooth"}));
+    setOpenEntry(old=>old===key?"":key);
   };
+  const triggerRef=(key:string,node:HTMLButtonElement|null)=>{if(node)triggers.current.set(key,node);else triggers.current.delete(key);};
+  const closeDropdown=(key:string)=>{setOpenEntry("");triggers.current.get(key)?.focus();};
+  const renderDropdown=(item:SubjectVocabularyItem,key:string)=><SubjectWordDropdown item={item} subject={sheet.id} panelId={`subject-word-detail-${key}`} href={appendNavigationContext(item.href,sheetNavigationContext(returnPath,browse,item.id))} onClose={()=>closeDropdown(key)}/>;
   const renderGroup=(group:SubjectVocabularyGroup)=><section key={group.id} className={`subject-vocabulary-lane subject-tone-${group.tone}${group.tone==="plain"?" subject-lane-plain":""}`} aria-labelledby={`subject-lane-${group.id}`}>
     <h3 id={`subject-lane-${group.id}`}>{articles[group.tone]&&<span className="subject-lane-article" lang="de">{articles[group.tone]}</span>}<span>{group.label}<small>{group.items.length} {group.items.length===1?"entry":"entries"}</small></span></h3>
-    <div className="subject-lane-entries">{group.items.map(item=><button type="button" key={item.id} ref={node=>{if(node)entries.current.set(item.id,node);else entries.current.delete(item.id);}} id={`sheet-card-${item.id}`} data-subject-entry={item.id} className="subject-vocabulary-entry" aria-label={[item.de,...item.plurals.map(form=>form.text),sourceQualifier(item)].filter(Boolean).join(" · ")} aria-pressed={current?.id===item.id} aria-controls="subject-word-detail" onClick={()=>choose(item.id)}>
+    <div className="subject-lane-entries">{group.items.map(item=><div className="subject-entry-wrap" key={item.id}><button type="button" ref={node=>{triggerRef(item.id,node);if(node)entries.current.set(item.id,node);else entries.current.delete(item.id);}} id={`sheet-card-${item.id}`} data-subject-entry={item.id} className="subject-vocabulary-entry" aria-label={[item.de,...item.plurals.map(form=>form.text),sourceQualifier(item)].filter(Boolean).join(" · ")} aria-pressed={current?.id===item.id} aria-expanded={openEntry===item.id} aria-controls={openEntry===item.id?`subject-word-detail-${item.id}`:undefined} onClick={()=>choose(item.id)} onKeyDown={event=>{if(event.key==="Escape"&&openEntry===item.id){event.preventDefault();event.stopPropagation();closeDropdown(item.id);}}}>
       <SubjectVocabularyVisual de={item.de} category={item.category} cardId={item.cardId} subject={sheet.id}/>
-      <span className="subject-entry-text"><strong lang="de">{item.de}</strong><small lang={item.plurals.length?"de":undefined}>{item.plurals.length?item.plurals.map(form=>form.text).join(" · "):item.tone==="plain"?item.category:item.tone==="plural"?"Plural form":"No plural taught here"}</small>{sourceQualifier(item)&&<em>{sourceQualifier(item)}</em>}</span>
-    </button>)}</div>
+      <span className="subject-entry-text"><strong lang="de">{item.de}</strong><small lang={item.plurals.length?"de":undefined}>{item.plurals.length?item.plurals.map(form=>form.text).join(" · "):item.tone==="plain"?item.category:item.tone==="plural"?"Plural form":"No plural taught here"}</small><span className="subject-entry-meaning">{item.meaning}</span>{sourceQualifier(item)&&<em>{sourceQualifier(item)}</em>}</span><span className="subject-entry-chevron" aria-hidden="true">{openEntry===item.id?"⌃":"⌄"}</span>
+    </button>{openEntry===item.id&&renderDropdown(item,item.id)}</div>)}</div>
   </section>;
   return <div className="subject-sheet study-workspace" data-subject-sheet={allNouns?"plurals":sheet.id} data-sheet-view={pluralView?"plurals":"illustrated"}>
     <SubjectSwitcher current={sheet.id} pluralView={pluralView} allNouns={allNouns}/>
     <header className="subject-page-heading"><div className="subject-heading-copy"><p className="study-eyebrow">{allNouns?"Your noun plural reference":"Your illustrated vocabulary collection"}</p><h1>{sheet.label}</h1><p>{hasNouns?"Learn each noun with its article and plural. Compare the actual changes in the grid.":"Explore the expressions and word types in this subject."}</p></div><div className="subject-heading-mark"><SubjectIcon subject={sheet.id}/></div></header>
-    <div className="subject-view-switch subject-print-hide" role="group" aria-label="Cheat sheet view"><button type="button" aria-pressed={!pluralView} onClick={()=>changeBrowse({...browse,view:"illustrated"})}>Illustrated view</button><button type="button" aria-pressed={pluralView} onClick={()=>changeBrowse({...browse,view:"plurals"})}>Gender × plural patterns</button></div>
-    <div className="subject-page-actions subject-print-hide"><p>Tap an entry for its meaning and examples. The speaker plays German pronunciation.</p><button type="button" className="study-secondary" onClick={()=>window.print()}>Print / save as PDF</button></div>
+    <div className="subject-view-switch subject-print-hide" role="group" aria-label="Cheat sheet view"><button type="button" aria-pressed={!pluralView} onClick={()=>{if(openEntry)setOpenEntry(selected);changeBrowse({...browse,view:"illustrated"});}}>Illustrated view</button><button type="button" aria-pressed={pluralView} onClick={()=>{if(openEntry)setOpenEntry(selected);changeBrowse({...browse,view:"plurals"});}}>Gender × plural patterns</button></div>
+    <div className="subject-page-actions subject-print-hide"><p>Tap an illustrated word to open its card and play the singular or plural pronunciation.</p><button type="button" className="study-secondary" onClick={()=>window.print()}>Print / save as PDF</button></div>
     <div className="subject-controls subject-print-hide"><label>Find a word or form<input type="search" value={browse.query} onChange={event=>changeBrowse({...browse,query:event.target.value,page:1})} placeholder="Search German, English or a plural…"/></label><p><strong>{scopeLabel(scope)}</strong><span>{scoped.length} of {sheet.items.length} entries match your study selection.</span></p></div>
     {groups.length>1&&<div className="subject-group-filters subject-print-hide" role="group" aria-label="Vocabulary groups"><button type="button" aria-pressed={browse.category==="all"} onClick={()=>changeBrowse({...browse,category:"all",page:1})}>All groups <span>{scoped.length}</span></button>{groups.map(group=><button type="button" key={group.id} className={`subject-tone-${group.tone}`} aria-pressed={browse.category===group.id} onClick={()=>changeBrowse({...browse,category:group.id,page:1})}>{group.label} <span>{group.items.length}</span></button>)}</div>}
     <div id="subject-overview"><OverviewPanel title={pluralView?"Gender × plural patterns":`${visible.length} vocabulary ${visible.length===1?"entry":"entries"}`}>
+      <SubjectSheetFilters items={sheet.items}/>
       <div className="subject-overview-meta"><p role="status">{visible.length} {visible.length===1?"entry":"entries"} · {families} {families===1?"word card":"word cards"}{browse.query&&<> · matching “{browse.query}”</>}</p>{nounGroups.length>0&&<span>Article colours show grammatical gender.</span>}</div>
       {visible.length>0?<>
-        {pluralView?<SubjectPluralGrid items={visible} currentId={current?.id??""} onChoose={choose} entryRef={(id,node)=>{if(node)entries.current.set(id,node);else entries.current.delete(id);}}/>:nounGroups.length>0&&<div className="subject-vocabulary-lanes" style={{"--subject-lanes":Math.min(4,nounGroups.length)} as CSSProperties} aria-label="Nouns grouped by article">{nounGroups.map(renderGroup)}</div>}
+        {pluralView?<SubjectPluralGrid items={visible} subject={sheet.id} currentId={current?.id??""} openEntry={openEntry} onChoose={choose} onClose={closeDropdown} renderDropdown={renderDropdown} triggerRef={triggerRef} entryRef={(id,node)=>{if(node)entries.current.set(id,node);else entries.current.delete(id);}}/>:nounGroups.length>0&&<div className="subject-vocabulary-lanes" style={{"--subject-lanes":Math.min(4,nounGroups.length)} as CSSProperties} aria-label="Nouns grouped by article">{nounGroups.map(renderGroup)}</div>}
         {pluralView&&!nounGroups.length&&<p className="subject-plural-other-subject"><Link href="/cheat-sheets/plurals">Open plural patterns for all nouns →</Link></p>}
         {plainGroups.length>0&&<div className="subject-plain-groups" aria-label="Vocabulary grouped by word type">{plainGroups.map(renderGroup)}</div>}
         {nounGroups.length>0&&<p className="subject-gender-key"><b className="subject-tone-male" lang="de">der</b> masculine <b className="subject-tone-female" lang="de">die</b> feminine <b className="subject-tone-neuter" lang="de">das</b> neuter <b className="subject-tone-plural" lang="de">die</b> plural<span>Learn each noun with its own plural.</span></p>}
-        {current&&<SubjectWordDetail item={current} subject={sheet.id} focus={focus} href={appendNavigationContext(current.href,sheetNavigationContext(returnPath,browse,current.id))}/>}
       </>:<div className="subject-empty"><SubjectIcon subject={sheet.id}/><h3>No matching vocabulary</h3><p>{!scoped.length?`Your study selection (${scopeLabel(scope)}) does not include entries in this subject.`:"No entries match this search and group within your study selection."}</p><div>{(browse.query||browse.category!=="all")&&<button type="button" className="study-secondary" onClick={()=>changeBrowse({...initialSheetBrowse,...(browse.view?{view:browse.view}:{})})}>Clear search & group</button>}<button type="button" className="study-secondary" onClick={()=>setScope(defaultStudyScope())}>Reset study selection</button></div></div>}
     </OverviewPanel></div>
     {sheet.relatedHref&&<aside className="subject-related subject-print-hide"><div><p className="study-eyebrow">Put the words to work</p><h2>Explore the patterns.</h2><p>Open the related reference for diagrams, examples and practice.</p></div><Link href={sheet.relatedHref} className="study-secondary">Open related reference →</Link></aside>}
