@@ -1,0 +1,599 @@
+de,meaning,categories,subjects,sourceIds,reason
+wie,how,Question word,questions | grammar,W001-0,Three-letter text placeholder; no semantic illustration.
+wer,who,Question word,questions | grammar,W002-0,Three-letter text placeholder; no semantic illustration.
+woher,where from,Question word,questions | grammar,W003-0,Three-letter text placeholder; no semantic illustration.
+ich,I,Pronoun,grammar,W004-0,Three-letter text placeholder; no semantic illustration.
+du,"you (one person, informal)",Pronoun,grammar,W005-0,Three-letter text placeholder; no semantic illustration.
+er,he,Pronoun,grammar,W006-0,Three-letter text placeholder; no semantic illustration.
+sie,she / they,Pronoun,grammar,W007-0,Three-letter text placeholder; no semantic illustration.
+Sie,"you (formal, singular or plural)",Pronoun,grammar,W008-0,Three-letter text placeholder; no semantic illustration.
+dir,to you / for you (informal),Pronoun,grammar,W009-0,Three-letter text placeholder; no semantic illustration.
+Und dir?,and you? (informal),Pronoun,grammar,W009-1,Three-letter text placeholder; no semantic illustration.
+das,this / that,Pronoun,grammar,W010-0,Three-letter text placeholder; no semantic illustration.
+mein,my,Pronoun,grammar,W011-0,Three-letter text placeholder; no semantic illustration.
+meine,my,Pronoun,grammar,W011-1,Three-letter text placeholder; no semantic illustration.
+heißen,to be called / have the name,Verb,verbs,W012-0,Three-letter text placeholder; no semantic illustration.
+sein,to be,Verb,verbs | past | travel,W013-0,Three-letter text placeholder; no semantic illustration.
+kommen,to come,Verb,verbs | past | travel,W014-0,Three-letter text placeholder; no semantic illustration.
+lernen,to learn / study,Verb,verbs | past,W015-0,Three-letter text placeholder; no semantic illustration.
+das Alphabet,alphabet,Noun,everyday,W016-0,Three-letter text placeholder; no semantic illustration.
+die Information,information / piece of information,Noun,everyday,W022-0,Three-letter text placeholder; no semantic illustration.
+der Herr,Mr / gentleman,Noun,everyday,W023-0,Three-letter text placeholder; no semantic illustration.
+und,and,Function word,grammar,W035-0,Three-letter text placeholder; no semantic illustration.
+aus,from,Function word,grammar,W036-0,Three-letter text placeholder; no semantic illustration.
+auch,also / too,Function word,grammar,W037-0,Three-letter text placeholder; no semantic illustration.
+nicht,not,Function word,grammar,W038-0,Three-letter text placeholder; no semantic illustration.
+sehr,very,Function word,grammar,W039-0,Three-letter text placeholder; no semantic illustration.
+so,so / that / around / approximately,Function word,grammar | numbers | time,W040-0,Three-letter text placeholder; no semantic illustration.
+gut,good / well,Function word,grammar,W041-0,Three-letter text placeholder; no semantic illustration.
+"Gut, danke.","fine, thank you",Function word,grammar,W041-1,Three-letter text placeholder; no semantic illustration.
+Nicht so gut.,not so good,Function word,grammar,W041-2,Three-letter text placeholder; no semantic illustration.
+"Sehr gut, danke.","very well, thank you",Function word,grammar,W041-3,Three-letter text placeholder; no semantic illustration.
+super,great / excellent,Function word,grammar,W042-0,Three-letter text placeholder; no semantic illustration.
+Auch super.,also great,Function word,grammar,W042-1,Three-letter text placeholder; no semantic illustration.
+es,it,Function word,grammar,W043-0,Three-letter text placeholder; no semantic illustration.
+bitte,please / pardon,Function word,grammar,W044-0,Three-letter text placeholder; no semantic illustration.
+Ihnen,to you / for you (formal),Function word,grammar,W045-0,Three-letter text placeholder; no semantic illustration.
+der Abend,evening,Noun,numbers | time,W048-0,Three-letter text placeholder; no semantic illustration.
+ah,ah / I see,Interjection,conversation,W058-0,Three-letter text placeholder; no semantic illustration.
+die bekannte Persönlichkeit,well-known person / public figure,Noun,everyday,W059-0,Three-letter text placeholder; no semantic illustration.
+ankreuzen,to tick / mark with a cross,Verb,verbs,W061-0,Three-letter text placeholder; no semantic illustration.
+buchstabieren,to spell out,Verb,verbs,W062-0,Three-letter text placeholder; no semantic illustration.
+werfen,to throw / toss,Verb,verbs,W063-0,Three-letter text placeholder; no semantic illustration.
+die Münze,coin,Noun,everyday,W064-0,Three-letter text placeholder; no semantic illustration.
+haben,to have,Verb,verbs | time | past | travel,W067-0,Three-letter text placeholder; no semantic illustration.
+wohnen,to live / reside,Verb,verbs,W068-0,Three-letter text placeholder; no semantic illustration.
+leben,to live,Verb,verbs,W069-0,Three-letter text placeholder; no semantic illustration.
+zusammenleben,to live together,Verb,verbs,W070-0,Three-letter text placeholder; no semantic illustration.
+machen,to do / make,Verb,verbs | past | travel,W071-0,Three-letter text placeholder; no semantic illustration.
+arbeiten,to work,Verb,verbs | past,W072-0,Three-letter text placeholder; no semantic illustration.
+sammeln,to collect,Verb,verbs,W073-0,Three-letter text placeholder; no semantic illustration.
+studieren,to study at university,Verb,verbs,W074-0,Three-letter text placeholder; no semantic illustration.
+kein,no / not a / not any,Function word,grammar,W075-0,Three-letter text placeholder; no semantic illustration.
+keine,no / not any,Function word,grammar,W075-1,Three-letter text placeholder; no semantic illustration.
+in,to / into (a destination here),Function word,grammar | time,W076-0,Three-letter text placeholder; no semantic illustration.
+ihr,"you (plural, informal)",Function word,grammar,W077-0,Three-letter text placeholder; no semantic illustration.
+wir,we,Function word,grammar,W078-0,Three-letter text placeholder; no semantic illustration.
+ja,yes / really (emphasis in a compliment),Function word,grammar,W079-0,Three-letter text placeholder; no semantic illustration.
+aber,but; emphasis in a compliment,Function word,grammar,W080-0,Three-letter text placeholder; no semantic illustration.
+wo,where,Function word,grammar,W081-0,Three-letter text placeholder; no semantic illustration.
+was,what,Function word,grammar,W082-0,Three-letter text placeholder; no semantic illustration.
+als,as,Function word,grammar,W083-0,Three-letter text placeholder; no semantic illustration.
+bei,at / for,Function word,grammar,W084-0,Three-letter text placeholder; no semantic illustration.
+von,from / of,Function word,grammar,W085-0,Three-letter text placeholder; no semantic illustration.
+alt,old,Adjective / adverb,descriptions,W086-0,Three-letter text placeholder; no semantic illustration.
+verheiratet,married,Adjective / adverb,descriptions,W087-0,Three-letter text placeholder; no semantic illustration.
+zusammen,together,Adjective / adverb,descriptions,W088-0,Three-letter text placeholder; no semantic illustration.
+richtig,correct / right / properly / correctly,Adjective / adverb,descriptions,W089-0,Three-letter text placeholder; no semantic illustration.
+falsch,wrong / incorrect,Adjective / adverb,descriptions,W090-0,Three-letter text placeholder; no semantic illustration.
+geschieden,divorced,Adjective / adverb,descriptions,W091-0,Three-letter text placeholder; no semantic illustration.
+allein,alone / on one's own,Adjective / adverb,descriptions,W092-0,Three-letter text placeholder; no semantic illustration.
+beruflich,professionally / for a living,Adjective / adverb,descriptions,W093-0,Three-letter text placeholder; no semantic illustration.
+jetzt,now,Adjective / adverb,descriptions,W094-0,Three-letter text placeholder; no semantic illustration.
+minus,minus,Adjective / adverb,descriptions,W095-0,Three-letter text placeholder; no semantic illustration.
+plus,plus,Adjective / adverb,descriptions,W096-0,Three-letter text placeholder; no semantic illustration.
+der Punkt,point / full stop,Noun,everyday,W103-0,Three-letter text placeholder; no semantic illustration.
+die Zahl,number,Noun,numbers,W104-0,Three-letter text placeholder; no semantic illustration.
+das Rätsel,riddle / puzzle,Noun,everyday,W105-0,Three-letter text placeholder; no semantic illustration.
+der Single,single person,Noun,everyday,W106-0,Three-letter text placeholder; no semantic illustration.
+der Job,job,Noun,everyday,W108-0,Three-letter text placeholder; no semantic illustration.
+der Beruf,occupation / profession,Noun,everyday,W109-0,Three-letter text placeholder; no semantic illustration.
+die Stelle,job / position,Noun,everyday,W110-0,Three-letter text placeholder; no semantic illustration.
+das Praktikum,internship / work placement,Noun,everyday,W112-0,Three-letter text placeholder; no semantic illustration.
+die Herkunft,origin,Noun,everyday,W114-0,Three-letter text placeholder; no semantic illustration.
+das Alter,age,Noun,everyday,W116-0,Three-letter text placeholder; no semantic illustration.
+der Familienstand,marital status,Noun,everyday,W117-0,Three-letter text placeholder; no semantic illustration.
+das Tier,animal,Noun,everyday,W119-0,Three-letter text placeholder; no semantic illustration.
+der Tierarzt,veterinarian (male),Profession,people,W146-0,Three-letter text placeholder; no semantic illustration.
+die Tierärztin,veterinarian (female),Profession,people,W146-1,Three-letter text placeholder; no semantic illustration.
+der Dank,thanks / gratitude,Noun,everyday,W154-0,Three-letter text placeholder; no semantic illustration.
+oder,or / right?,Function word,grammar | time,W157-0,Three-letter text placeholder; no semantic illustration.
+für,for,Function word,grammar,W158-0,Three-letter text placeholder; no semantic illustration.
+mehr,more,Function word,grammar,W159-0,Three-letter text placeholder; no semantic illustration.
+fertig,finished / ready,Function word,grammar,W160-0,Three-letter text placeholder; no semantic illustration.
+schon,already,Function word,grammar,W161-0,Three-letter text placeholder; no semantic illustration.
+die Telefonnummer,telephone number,Noun,numbers | office,W166-0,Three-letter text placeholder; no semantic illustration.
+glauben,to think / believe,Verb,verbs,W169-0,Three-letter text placeholder; no semantic illustration.
+planen,to plan,Verb,verbs | hobbies | time,W170-0,Three-letter text placeholder; no semantic illustration.
+dein,"your (one person, informal)",Function word,grammar,W172-0,Three-letter text placeholder; no semantic illustration.
+deine,your (informal),Function word,grammar,W172-1,Three-letter text placeholder; no semantic illustration.
+nein,no,Function word,grammar,W173-0,Three-letter text placeholder; no semantic illustration.
+doch,yes (contradicting a negative question or claim),Function word,grammar,W174-0,Three-letter text placeholder; no semantic illustration.
+welche,which,Function word,grammar,W175-0,Three-letter text placeholder; no semantic illustration.
+ein bisschen,a little (bit),Function word,grammar,W176-0,Three-letter text placeholder; no semantic illustration.
+gar nicht,not at all,Function word,grammar,W177-0,Three-letter text placeholder; no semantic illustration.
+ein,a / an; one,Function word,grammar,W178-0,Three-letter text placeholder; no semantic illustration.
+eine,a / an,Function word,grammar,W178-1,Three-letter text placeholder; no semantic illustration.
+das Mitglied,member,Noun,everyday,W207-0,Three-letter text placeholder; no semantic illustration.
+der Elektriker,Electrician (male),Profession,people,W230-0,Three-letter text placeholder; no semantic illustration.
+die Elektrikerin,Electrician (female),Profession,people,W230-1,Three-letter text placeholder; no semantic illustration.
+der Straßenarbeiter,road / street construction worker (male),Profession,people,W238-0,Three-letter text placeholder; no semantic illustration.
+die Straßenarbeiterin,road / street construction worker (female),Profession,people,W238-1,Three-letter text placeholder; no semantic illustration.
+der Maurer,Bricklayer (male),Profession,people,W242-0,Three-letter text placeholder; no semantic illustration.
+die Maurerin,Bricklayer (female),Profession,people,W242-1,Three-letter text placeholder; no semantic illustration.
+der Koch,Cook/Chef (male),Profession,people,W252-0,Three-letter text placeholder; no semantic illustration.
+die Köchin,Cook/Chef (female),Profession,people,W252-1,Three-letter text placeholder; no semantic illustration.
+der Müllwerker,Refuse Collector (male),Profession,people,W254-0,Three-letter text placeholder; no semantic illustration.
+die Müllwerkerin,Refuse Collector (female),Profession,people,W254-1,Three-letter text placeholder; no semantic illustration.
+der Metzger,Butcher (male),Profession,people,W256-0,Three-letter text placeholder; no semantic illustration.
+die Metzgerin,Butcher (female),Profession,people,W256-1,Three-letter text placeholder; no semantic illustration.
+der Bauarbeiter,Construction Worker (male),Profession,people,W262-0,Three-letter text placeholder; no semantic illustration.
+die Bauarbeiterin,Construction Worker (female),Profession,people,W262-1,Three-letter text placeholder; no semantic illustration.
+der Feuerwehrmann,Firefighter (male),Profession,people,W264-0,Three-letter text placeholder; no semantic illustration.
+die Feuerwehrfrau,Firefighter (female),Profession,people,W264-1,Three-letter text placeholder; no semantic illustration.
+der Konditor,Confectioner (male),Profession,people,W266-0,Three-letter text placeholder; no semantic illustration.
+die Konditorin,Confectioner (female),Profession,people,W266-1,Three-letter text placeholder; no semantic illustration.
+der Hausmann,homemaker (male),Profession,people,W268-0,Three-letter text placeholder; no semantic illustration.
+die Hausfrau,homemaker (female),Profession,people,W268-1,Three-letter text placeholder; no semantic illustration.
+der Polizist,Police Officer (male),Profession,people,W273-0,Three-letter text placeholder; no semantic illustration.
+die Polizistin,Police Officer (female),Profession,people,W273-1,Three-letter text placeholder; no semantic illustration.
+der Soldat,Soldier (male),Profession,people,W281-0,Three-letter text placeholder; no semantic illustration.
+die Soldatin,Soldier (female),Profession,people,W281-1,Three-letter text placeholder; no semantic illustration.
+der Geschäftsmann,Businessperson (male),Profession,people,W285-0,Three-letter text placeholder; no semantic illustration.
+die Geschäftsfrau,Businessperson (female),Profession,people,W285-1,Three-letter text placeholder; no semantic illustration.
+der Tankwart,Gas Station Attendant (male),Profession,people,W297-0,Three-letter text placeholder; no semantic illustration.
+die Tankwartin,Gas Station Attendant (female),Profession,people,W297-1,Three-letter text placeholder; no semantic illustration.
+der Geheimagent,Secret Agent (male),Profession,people,W299-0,Three-letter text placeholder; no semantic illustration.
+die Geheimagentin,Secret Agent (female),Profession,people,W299-1,Three-letter text placeholder; no semantic illustration.
+der Norden,north,Geography,countries,W324-0,Three-letter text placeholder; no semantic illustration.
+der Osten,east,Geography,countries,W325-0,Three-letter text placeholder; no semantic illustration.
+der Süden,south,Geography,countries,W326-0,Three-letter text placeholder; no semantic illustration.
+der Westen,west,Geography,countries,W327-0,Three-letter text placeholder; no semantic illustration.
+der Nordosten,northeast,Geography,countries,W328-0,Three-letter text placeholder; no semantic illustration.
+der Südosten,southeast,Geography,countries,W329-0,Three-letter text placeholder; no semantic illustration.
+der Südwesten,southwest,Geography,countries,W330-0,Three-letter text placeholder; no semantic illustration.
+der Nordwesten,northwest,Geography,countries,W331-0,Three-letter text placeholder; no semantic illustration.
+das Foto,photo,Noun,everyday,W339-0,Three-letter text placeholder; no semantic illustration.
+die Million,million,Noun,numbers,W343-0 | l4-million-0,Three-letter text placeholder; no semantic illustration.
+supercool,really cool,Adjective / adverb,descriptions,W347-0,Three-letter text placeholder; no semantic illustration.
+noch,still / yet / more,Adjective / adverb,descriptions,W348-0,Three-letter text placeholder; no semantic illustration.
+viel,much / a lot,Adjective / adverb,descriptions,W349-0,Three-letter text placeholder; no semantic illustration.
+hier,here / speaking (on the phone),Adjective / adverb,descriptions,W350-0,Three-letter text placeholder; no semantic illustration.
+nur,only,Adjective / adverb | Expression,descriptions | conversation,W351-0 | l4-nur-0,Three-letter text placeholder; no semantic illustration.
+etwa,about / approximately,Adjective / adverb,descriptions | past | grammar,W352-0,Three-letter text placeholder; no semantic illustration.
+überall,anywhere / everywhere,Adjective / adverb,descriptions,W354-0,Three-letter text placeholder; no semantic illustration.
+deutschsprachig,German-speaking,Adjective / adverb,descriptions,W355-0,Three-letter text placeholder; no semantic illustration.
+warum,why,Adjective / adverb,descriptions,W356-0,Three-letter text placeholder; no semantic illustration.
+gern,gladly / like doing something,Adjective / adverb,descriptions,W357-0,Three-letter text placeholder; no semantic illustration.
+mal,just / once | just (softens a request),Adjective / adverb | Expression,descriptions | conversation,W358-0 | l4-mal-0,Three-letter text placeholder; no semantic illustration.
+der Übersetzer,translator (male),Profession,people,W360-0,Three-letter text placeholder; no semantic illustration.
+die Übersetzerin,translator (female),Profession,people,W360-1,Three-letter text placeholder; no semantic illustration.
+der Psychologe,psychologist (male),Profession,people,W362-0,Three-letter text placeholder; no semantic illustration.
+die Psychologin,psychologist (female),Profession,people,W362-1,Three-letter text placeholder; no semantic illustration.
+der Auszubildende,trainee / apprentice (male),Profession,people,W370-0,Three-letter text placeholder; no semantic illustration.
+die Auszubildende,trainee / apprentice (female),Profession,people,W370-1,Three-letter text placeholder; no semantic illustration.
+der Weber,weaver (male),Profession,people,W378-0,Three-letter text placeholder; no semantic illustration.
+die Weberin,weaver (female),Profession,people,W378-1,Three-letter text placeholder; no semantic illustration.
+der Wagner,wheelwright (male),Profession,people,W382-0,Three-letter text placeholder; no semantic illustration.
+die Wagnerin,wheelwright (female),Profession,people,W382-1,Three-letter text placeholder; no semantic illustration.
+der Chocolatier,chocolatier / chocolate maker (male),Profession,people,W386-0,Three-letter text placeholder; no semantic illustration.
+die Chocolatière,chocolatier / chocolate maker (female),Profession,people,W386-1,Three-letter text placeholder; no semantic illustration.
+der IT-Trainer,IT trainer (male),Profession,people,W388-0,Three-letter text placeholder; no semantic illustration.
+die IT-Trainerin,IT trainer (female),Profession,people,W388-1,Three-letter text placeholder; no semantic illustration.
+der Software-Trainer,software trainer (male),Profession,people,W390-0,Three-letter text placeholder; no semantic illustration.
+die Software-Trainerin,software trainer (female),Profession,people,W390-1,Three-letter text placeholder; no semantic illustration.
+die Konferenz,conference,Noun,everyday,W392-0,Three-letter text placeholder; no semantic illustration.
+die Homepage,homepage / website,Noun,everyday,W397-0,Three-letter text placeholder; no semantic illustration.
+die Stadt,city / town,Noun,everyday,W398-0,Three-letter text placeholder; no semantic illustration.
+die Straße,street,Noun,office,W399-0,Three-letter text placeholder; no semantic illustration.
+die Hausnummer,house number,Noun,office,W400-0,Three-letter text placeholder; no semantic illustration.
+das Marketing,marketing,Noun,everyday,W404-0,Three-letter text placeholder; no semantic illustration.
+die Adresse,address,Noun,office,W405-0,Three-letter text placeholder; no semantic illustration.
+das Hobby,hobby,Noun,hobbies,W406-0,Three-letter text placeholder; no semantic illustration.
+die Postleitzahl,postal code / postcode / ZIP code,Noun,office,W409-0,Three-letter text placeholder; no semantic illustration.
+der Ort,place / town,Noun,office,W410-0,Three-letter text placeholder; no semantic illustration.
+die Wohnung,flat / apartment,Noun,everyday,W411-0,Three-letter text placeholder; no semantic illustration.
+interessant,interesting,Adjective / adverb,descriptions,W413-0,Three-letter text placeholder; no semantic illustration.
+ledig,unmarried / never married,Adjective / adverb,descriptions,W414-0,Three-letter text placeholder; no semantic illustration.
+neu,new,Adjective / adverb | Adjective,descriptions,W415-0 | l4-neu-0,Three-letter text placeholder; no semantic illustration.
+also,so / well / then / so / therefore,Adjective / adverb,descriptions | past | grammar,W416-0,Three-letter text placeholder; no semantic illustration.
+mich,me,Pronoun,grammar,W417-0,Three-letter text placeholder; no semantic illustration.
+Ihr,your (formal),Pronoun,grammar,W418-0,Three-letter text placeholder; no semantic illustration.
+Ihre,your (formal),Pronoun,grammar,W418-1,Three-letter text placeholder; no semantic illustration.
+verbinden,to connect / match,Verb,verbs,W429-0,Three-letter text placeholder; no semantic illustration.
+ergänzen,to complete / fill in,Verb,verbs,W430-0,Three-letter text placeholder; no semantic illustration.
+zuordnen,to match / assign,Verb,verbs,W431-0,Three-letter text placeholder; no semantic illustration.
+markieren,to mark / highlight,Verb,verbs,W432-0,Three-letter text placeholder; no semantic illustration.
+schließen,to close,Verb,verbs,W439-0,Three-letter text placeholder; no semantic illustration.
+spielen,to play / act,Verb,verbs | hobbies | past,W440-0,Three-letter text placeholder; no semantic illustration.
+vorspielen,to act out / mime,Verb,verbs,W441-0,Three-letter text placeholder; no semantic illustration.
+raten,to guess,Verb,verbs,W442-0,Three-letter text placeholder; no semantic illustration.
+meinen,to think / mean,Verb,verbs,W443-0,Three-letter text placeholder; no semantic illustration.
+wissen,to know (a fact),Verb,verbs | time,W444-0,Three-letter text placeholder; no semantic illustration.
+verstehen,to understand,Verb,verbs | travel,W445-0,Three-letter text placeholder; no semantic illustration.
+vorlesen,to read aloud,Verb,verbs,W446-0,Three-letter text placeholder; no semantic illustration.
+vorstellen,to introduce,Verb,verbs,W447-0,Three-letter text placeholder; no semantic illustration.
+geben,to give,Verb,verbs,W448-0,Three-letter text placeholder; no semantic illustration.
+korrigieren,to correct,Verb,verbs,W449-0,Three-letter text placeholder; no semantic illustration.
+üben,to practise,Verb,verbs,W450-0,Three-letter text placeholder; no semantic illustration.
+fehlen,to be missing,Verb,verbs,W451-0,Three-letter text placeholder; no semantic illustration.
+wählen,to choose,Verb,verbs,W452-0,Three-letter text placeholder; no semantic illustration.
+würfeln,to roll a die / to roll dice,Verb,verbs,W453-0,Three-letter text placeholder; no semantic illustration.
+ziehen,to move / draw / pull,Verb,verbs,W454-0,Three-letter text placeholder; no semantic illustration.
+bekommen,to get / receive,Verb,verbs,W455-0,Three-letter text placeholder; no semantic illustration.
+tauschen,to exchange / swap,Verb,verbs,W456-0,Three-letter text placeholder; no semantic illustration.
+lösen,to solve,Verb,verbs,W457-0,Three-letter text placeholder; no semantic illustration.
+bilden,to form / build,Verb,verbs,W458-0,Three-letter text placeholder; no semantic illustration.
+klatschen,to clap,Verb,verbs,W459-0,Three-letter text placeholder; no semantic illustration.
+präsentieren,to present,Verb,verbs,W460-0,Three-letter text placeholder; no semantic illustration.
+das Wort,word,Noun,classroom,W463-0,Three-letter text placeholder; no semantic illustration.
+das Bildlexikon,picture vocabulary / picture dictionary,Noun,everyday,W465-0,Three-letter text placeholder; no semantic illustration.
+das Wörterbuch,dictionary,Noun,classroom,W467-0,Three-letter text placeholder; no semantic illustration.
+das Online-Wörterbuch,online dictionary,Noun,classroom,W468-0,Three-letter text placeholder; no semantic illustration.
+die Gruppe,group,Noun,everyday,W472-0,Three-letter text placeholder; no semantic illustration.
+die Frage,question,Noun,classroom | time,W474-0,Three-letter text placeholder; no semantic illustration.
+die Antwort,answer,Noun,classroom | time,W475-0,Three-letter text placeholder; no semantic illustration.
+die Lösung,solution / answer,Noun,everyday,W476-0,Three-letter text placeholder; no semantic illustration.
+der Sitzplan,seating plan,Noun,everyday,W477-0,Three-letter text placeholder; no semantic illustration.
+das Beispiel,example,Noun,everyday,W479-0,Three-letter text placeholder; no semantic illustration.
+die Nummer,number,Noun,numbers | office,W480-0,Three-letter text placeholder; no semantic illustration.
+das Spiel,game,Noun,everyday,W482-0,Three-letter text placeholder; no semantic illustration.
+das Würfelspiel,dice game,Noun,everyday,W483-0,Three-letter text placeholder; no semantic illustration.
+die Spielfigur,playing piece / game token,Noun,everyday,W484-0,Three-letter text placeholder; no semantic illustration.
+die Rechenaufgabe,arithmetic problem,Noun,everyday,W485-0,Three-letter text placeholder; no semantic illustration.
+die Lücke,gap / blank,Noun,everyday,W486-0,Three-letter text placeholder; no semantic illustration.
+die Angabe,detail / information item,Noun,everyday,W487-0,Three-letter text placeholder; no semantic illustration.
+der Wortakzent,word stress,Noun,everyday,W490-0,Three-letter text placeholder; no semantic illustration.
+die Silbe,syllable,Noun,everyday,W491-0,Three-letter text placeholder; no semantic illustration.
+die Satzmelodie,sentence intonation,Noun,everyday,W492-0,Three-letter text placeholder; no semantic illustration.
+dann,then,Function word,grammar,W497-0,Three-letter text placeholder; no semantic illustration.
+noch einmal,once again,Function word,grammar,W498-0,Three-letter text placeholder; no semantic illustration.
+weiter,further / continue,Function word,grammar,W499-0,Three-letter text placeholder; no semantic illustration.
+zu zweit,in pairs / two together,Function word,grammar,W500-0,Three-letter text placeholder; no semantic illustration.
+zu dritt,in threes / three together,Function word,grammar,W501-0,Three-letter text placeholder; no semantic illustration.
+selbst,oneself / yourself,Function word,grammar,W502-0,Three-letter text placeholder; no semantic illustration.
+mit,with,Function word,grammar,W503-0,Three-letter text placeholder; no semantic illustration.
+über,about,Function word,grammar,W504-0,Three-letter text placeholder; no semantic illustration.
+auf,on,Function word,grammar,W505-0,Three-letter text placeholder; no semantic illustration.
+nach,after / past (a clock time) / to a city or an article-free country,Function word,grammar | numbers | time | past | travel,W506-0,Three-letter text placeholder; no semantic illustration.
+Es geht.,so-so / not bad,Verb,verbs | hobbies | time | past | travel,W507-1,Three-letter text placeholder; no semantic illustration.
+freuen,to please / be glad,Verb,verbs,W508-0,Three-letter text placeholder; no semantic illustration.
+zeigen,to show,Verb,verbs,W509-0,Three-letter text placeholder; no semantic illustration.
+filmen,to film,Verb,verbs,W510-0,Three-letter text placeholder; no semantic illustration.
+bedeuten,to mean,Verb,verbs,W512-0,Three-letter text placeholder; no semantic illustration.
+aufhängen,to hang up / display,Verb,verbs,W513-0,Three-letter text placeholder; no semantic illustration.
+mischen,to mix / shuffle,Verb,verbs,W514-0,Three-letter text placeholder; no semantic illustration.
+helfen,to help,Verb,verbs,W515-0,Three-letter text placeholder; no semantic illustration.
+aufnehmen,to record,Verb,verbs,W516-0,Three-letter text placeholder; no semantic illustration.
+aktivieren,to activate / enable,Verb,verbs,W517-0,Three-letter text placeholder; no semantic illustration.
+achten,to pay attention,Verb,verbs,W518-0,Three-letter text placeholder; no semantic illustration.
+der Film,film / video,Noun,past | hobbies,W520-0,Three-letter text placeholder; no semantic illustration.
+die Flagge,flag,Noun,everyday,W521-0,Three-letter text placeholder; no semantic illustration.
+die Vorbereitung,preparation,Noun,everyday,W525-0,Three-letter text placeholder; no semantic illustration.
+das Mikrofon,microphone,Noun,everyday,W526-0,Three-letter text placeholder; no semantic illustration.
+arbeitslos,unemployed,Adjective / adverb,descriptions,W531-0,Three-letter text placeholder; no semantic illustration.
+können,can / to be able to / to be able to / can,Verb,verbs | hobbies | time,W533-0,Three-letter text placeholder; no semantic illustration.
+türkisch,Turkish (adjective),Adjective / adverb,descriptions,W534-0,Three-letter text placeholder; no semantic illustration.
+sortieren,to put in order / sort,Verb,verbs,W535-0,Three-letter text placeholder; no semantic illustration.
+passen,to fit / match,Verb,verbs,W536-0,Three-letter text placeholder; no semantic illustration.
+kennen,to know / be familiar with,Verb,verbs | hobbies,W537-0 | l4-kennen-0,Three-letter text placeholder; no semantic illustration.
+das Kettenspiel,chain game,Noun,everyday,W539-0,Three-letter text placeholder; no semantic illustration.
+die Rückfrage,follow-up / clarification question,Noun,everyday,W541-0,Three-letter text placeholder; no semantic illustration.
+das Glück,happiness / luck | luck,Noun,everyday,W542-0 | l4-glueck-0,Three-letter text placeholder; no semantic illustration.
+Achtung!,Attention! / Watch out!,Interjection,conversation,W543-0,Three-letter text placeholder; no semantic illustration.
+schön,beautiful / lovely,Adjective,descriptions,l4-schoen-0,Three-letter text placeholder; no semantic illustration.
+hässlich,ugly,Adjective,descriptions,l4-haesslich-0,Three-letter text placeholder; no semantic illustration.
+modern,modern,Adjective,descriptions,l4-modern-0,Three-letter text placeholder; no semantic illustration.
+praktisch,practical / handy,Adjective,descriptions,l4-praktisch-0,Three-letter text placeholder; no semantic illustration.
+kosten,to cost,Verb,verbs,l4-kosten-0,Three-letter text placeholder; no semantic illustration.
+shoppen,to shop,Verb,verbs,l4-shoppen-0,Three-letter text placeholder; no semantic illustration.
+der Stern,star,Noun,everyday,l4-stern-0,Three-letter text placeholder; no semantic illustration.
+zu Hause,at home,Expression,conversation,l4-zuhause-0,Three-letter text placeholder; no semantic illustration.
+wie viel,how much,Expression,conversation,l4-wieviel-0,Three-letter text placeholder; no semantic illustration.
+wirklich,really,Expression,conversation,l4-wirklich-0,Three-letter text placeholder; no semantic illustration.
+zu,too (before an adjective),Expression,conversation,l4-zu-0,Three-letter text placeholder; no semantic illustration.
+da,there / over there,Expression,conversation,l4-da-0,Three-letter text placeholder; no semantic illustration.
+denn,then (conversational question particle),Expression,conversation,l4-denn-0,Three-letter text placeholder; no semantic illustration.
+oh,oh,Expression,conversation,l4-oh-0,Three-letter text placeholder; no semantic illustration.
+ein / eine,a / an,Expression,conversation | grammar,l5-ein-eine-0,Three-letter text placeholder; no semantic illustration.
+die Farbe,colour / color,Noun,colours-materials,l5-farbe-0,Three-letter text placeholder; no semantic illustration.
+etwas,something,Expression,conversation,l5-etwas-0,Three-letter text placeholder; no semantic illustration.
+viele,many,Expression,conversation,l5-viele-0,Three-letter text placeholder; no semantic illustration.
+und so weiter,and so on,Expression,conversation,l5-und-so-weiter-0,Three-letter text placeholder; no semantic illustration.
+aha,aha / I see,Expression,conversation,l5-aha-0,Three-letter text placeholder; no semantic illustration.
+auf Deutsch,in German,Expression,conversation | classroom,l5-auf-deutsch-0,Three-letter text placeholder; no semantic illustration.
+nennen,to name,Verb,verbs,l5-nennen-0,Three-letter text placeholder; no semantic illustration.
+bitten,to ask for / request,Verb,verbs,l5-bitten-0,Three-letter text placeholder; no semantic illustration.
+man,one / you (people in general),Expression,conversation | grammar,l5-man-0,Three-letter text placeholder; no semantic illustration.
+sich bedanken,to thank / say thank you,Verb,verbs,l5-sich-bedanken-0,Three-letter text placeholder; no semantic illustration.
+danke schön,thank you,Expression,conversation,l5-danke-schoen-0,Three-letter text placeholder; no semantic illustration.
+das Problem,problem,Noun,everyday,l5-problem-0,Three-letter text placeholder; no semantic illustration.
+Bitte schön.,You are welcome.,Expression,conversation,l5-bitte-schoen-0,Three-letter text placeholder; no semantic illustration.
+Kein Problem.,No problem.,Expression,conversation,l5-kein-problem-0,Three-letter text placeholder; no semantic illustration.
+die Wiederholung,repetition,Noun,classroom,l5-wiederholung-0,Three-letter text placeholder; no semantic illustration.
+reagieren auf,to react to,Verb,verbs,l5-reagieren-auf-0,Three-letter text placeholder; no semantic illustration.
+Ich weiß nicht.,I do not know.,Expression,conversation | classroom,l5-ich-weiss-nicht-0,Three-letter text placeholder; no semantic illustration.
+online,online,Expression,conversation | objects,l5-online-0,Three-letter text placeholder; no semantic illustration.
+bestellen,to order,Verb,verbs | travel,l5-bestellen-0,Three-letter text placeholder; no semantic illustration.
+die Ware,goods / merchandise,Noun,objects,l5-ware-0,Three-letter text placeholder; no semantic illustration.
+das Produkt,product,Noun,objects,l5-produkt-0,Three-letter text placeholder; no semantic illustration.
+der Produktname,product name,Noun,office,l5-produktname-0,Three-letter text placeholder; no semantic illustration.
+die Menge,amount / quantity,Noun,office,l5-menge-0,Three-letter text placeholder; no semantic illustration.
+der Unterstrich,underscore,Noun,office,l5-unterstrich-0,Three-letter text placeholder; no semantic illustration.
+ät,at sign (@),Expression,conversation | office,l5-aet-0,Three-letter text placeholder; no semantic illustration.
+kein / keine,no / not a,Expression,conversation | grammar,l5-kein-keine-0,Three-letter text placeholder; no semantic illustration.
+Oh Gott!,Oh God!,Expression,conversation,l6-oh-gott-0,Three-letter text placeholder; no semantic illustration.
+der Gott,god,Noun,objects,l6-gott-0,Three-letter text placeholder; no semantic illustration.
+die Arbeit,work,Noun,office,l6-arbeit-0,Three-letter text placeholder; no semantic illustration.
+Hilfe!,Help!,Expression,conversation,l6-hilfe-0,Three-letter text placeholder; no semantic illustration.
+der Traum,dream,Noun,objects,l6-traum-0,Three-letter text placeholder; no semantic illustration.
+der Albtraum,nightmare,Noun,objects,l6-albtraum-0,Three-letter text placeholder; no semantic illustration.
+der Hunger,hunger,Noun,food,l6-hunger-0,Three-letter text placeholder; no semantic illustration.
+Hunger haben,to be hungry,Expression,conversation,l6-hunger-haben-0,Three-letter text placeholder; no semantic illustration.
+brauchen,to need,Verb,verbs,l6-brauchen-0,Three-letter text placeholder; no semantic illustration.
+der Kaffee,coffee,Noun,food,l6-kaffee-0,Three-letter text placeholder; no semantic illustration.
+Viele Grüße,kind regards,Expression,conversation,l6-viele-gruesse-0,Three-letter text placeholder; no semantic illustration.
+der Gruß,greeting,Noun,everyday,l6-gruss-0,Three-letter text placeholder; no semantic illustration.
+das Yoga,yoga,Noun,everyday,l6-yoga-0,Three-letter text placeholder; no semantic illustration.
+leider,unfortunately,Expression,conversation | time,l6-leider-0,Three-letter text placeholder; no semantic illustration.
+Zeit haben,to have time,Expression,conversation,l6-zeit-haben-0,Three-letter text placeholder; no semantic illustration.
+keine Zeit haben,to have no time,Expression,conversation,l6-keine-zeit-haben-0,Three-letter text placeholder; no semantic illustration.
+Liebe Grüße / LG,kind regards / love,Expression,conversation,l6-liebe-gruesse-lg-0,Three-letter text placeholder; no semantic illustration.
+in die Tasche packen,to put in the bag,Expression,conversation,l6-in-die-tasche-packen-0,Three-letter text placeholder; no semantic illustration.
+der Schreibtisch,desk,Noun,office,l6-schreibtisch-0,Three-letter text placeholder; no semantic illustration.
+der Arbeitsplatz,workspace,Noun,office,l6-arbeitsplatz-0,Three-letter text placeholder; no semantic illustration.
+"Ach, da ist er ja!","Oh, there it is!",Expression,conversation,l6-ach-da-ist-er-ja-0,Three-letter text placeholder; no semantic illustration.
+schon wieder,again,Expression,conversation,l6-schon-wieder-0,Three-letter text placeholder; no semantic illustration.
+vielleicht,maybe,Expression,conversation,l6-vielleicht-0,Three-letter text placeholder; no semantic illustration.
+das Quartett,quartets (card game),Noun,objects,l6-quartett-0,Three-letter text placeholder; no semantic illustration.
+"Hallo, … hier.","Hello, … speaking.",Expression,conversation,l6-hallo-hier-0,Three-letter text placeholder; no semantic illustration.
+Was kann ich für Sie tun?,How can I help you?,Expression,conversation,l6-was-kann-ich-fuer-sie-tun-0,Three-letter text placeholder; no semantic illustration.
+da sein,to be there,Expression,conversation,l6-da-sein-0,Three-letter text placeholder; no semantic illustration.
+Auf Wiederhören.,Goodbye (on the phone).,Expression,conversation,l6-auf-wiederhoeren-0,Three-letter text placeholder; no semantic illustration.
+schnell,quick / fast,Adjective,descriptions,l6-schnell-0,Three-letter text placeholder; no semantic illustration.
+schwer,heavy / difficult,Adjective,descriptions,l6-schwer-0,Three-letter text placeholder; no semantic illustration.
+packen,to pack,Verb,verbs,l6-packen-0,Three-letter text placeholder; no semantic illustration.
+die Handynummer,mobile phone number,Noun,office,l6-handynummer-0,Three-letter text placeholder; no semantic illustration.
+die Abkürzung,abbreviation,Noun,classroom,l6-abkuerzung-0,Three-letter text placeholder; no semantic illustration.
+die Idee,idea,Noun,time,l6-idee-0,Three-letter text placeholder; no semantic illustration.
+der Stress,stress,Noun,everyday,l6-stress-0,Three-letter text placeholder; no semantic illustration.
+die Liebe,love,Noun,everyday,l6-liebe-0,Three-letter text placeholder; no semantic illustration.
+der Würfel,die / dice,Noun,objects,l6-wuerfel-0,Three-letter text placeholder; no semantic illustration.
+toll,great,Adjective,descriptions,l7-toll-0,Three-letter text placeholder; no semantic illustration.
+normal,normal,Adjective,descriptions,l7-normal-0,Three-letter text placeholder; no semantic illustration.
+komisch,strange / funny,Adjective,descriptions,l7-komisch-0,Three-letter text placeholder; no semantic illustration.
+blöd,stupid / silly,Adjective,descriptions,l7-bloed-0,Three-letter text placeholder; no semantic illustration.
+lustig,funny,Adjective,descriptions,l7-lustig-0,Three-letter text placeholder; no semantic illustration.
+zurzeit,currently / at the moment,Expression,conversation,l7-zurzeit-0,Three-letter text placeholder; no semantic illustration.
+immer,always,Expression,conversation | hobbies,l7-immer-0,Three-letter text placeholder; no semantic illustration.
+backen,to bake,Verb,verbs | hobbies | past,l7-backen-0,Three-letter text placeholder; no semantic illustration.
+Ski fahren,to ski,Expression,conversation | hobbies,l7-ski-fahren-0,Three-letter text placeholder; no semantic illustration.
+Du kannst ja …,You really can … (surprised compliment),Expression,conversation,l7-du-kannst-ja-0,Three-letter text placeholder; no semantic illustration.
+Du kannst wirklich …,You really can …,Expression,conversation,l7-du-kannst-wirklich-0,Three-letter text placeholder; no semantic illustration.
+Du kannst aber …,You really can … (emphatic compliment),Expression,conversation,l7-du-kannst-aber-0,Three-letter text placeholder; no semantic illustration.
+wir alle,all of us,Expression,conversation | grammar,l7-wir-alle-0,Three-letter text placeholder; no semantic illustration.
+alle,all,Expression,conversation | grammar,l7-alle-0,Three-letter text placeholder; no semantic illustration.
+alle drei,all three,Expression,conversation | grammar,l7-alle-drei-0,Three-letter text placeholder; no semantic illustration.
+beide,both,Expression,conversation | grammar,l7-beide-0,Three-letter text placeholder; no semantic illustration.
+auch nicht,not either,Expression,conversation | grammar,l7-auch-nicht-0,Three-letter text placeholder; no semantic illustration.
+auflegen,to DJ / put on music,Verb,verbs | hobbies,l7-auflegen-0,Three-letter text placeholder; no semantic illustration.
+mixen,to mix music,Verb,verbs | hobbies,l7-mixen-0,Three-letter text placeholder; no semantic illustration.
+der DJ,DJ,Noun,people,l7-dj-0,Three-letter text placeholder; no semantic illustration.
+lieben,to love,Verb,verbs | hobbies,l7-lieben-0,Three-letter text placeholder; no semantic illustration.
+das Kickboxen,kickboxing,Noun,hobbies,l7-kickboxen-0,Three-letter text placeholder; no semantic illustration.
+das Seniorenheim,care home for older people,Noun,everyday,l7-seniorenheim-0,Three-letter text placeholder; no semantic illustration.
+die Versicherung,insurance / insurance company,Noun,everyday,l7-versicherung-0,Three-letter text placeholder; no semantic illustration.
+der Kaufmann,businessman / merchant,Noun,people,l7-kaufmann-0,Three-letter text placeholder; no semantic illustration.
+die Kauffrau,businesswoman / merchant,Noun,people,l7-kauffrau-0,Three-letter text placeholder; no semantic illustration.
+die Kaufleute,businesspeople / merchants,Noun,people,l7-kaufleute-0,Three-letter text placeholder; no semantic illustration.
+der Versicherungskaufmann,insurance clerk (male),Noun,people,l7-versicherungskaufmann-0,Three-letter text placeholder; no semantic illustration.
+die Versicherungskauffrau,insurance clerk (female),Noun,people,l7-versicherungskauffrau-0,Three-letter text placeholder; no semantic illustration.
+die Versicherungskaufleute,insurance clerks,Noun,people,l7-versicherungskaufleute-0,Three-letter text placeholder; no semantic illustration.
+in der Freizeit,in one's free time,Expression,conversation | hobbies,l7-in-der-freizeit-0,Three-letter text placeholder; no semantic illustration.
+die Freizeit,free time / leisure,Noun,hobbies,l7-freizeit-0,Three-letter text placeholder; no semantic illustration.
+oft,often,Expression,conversation | hobbies,l7-oft-0,Three-letter text placeholder; no semantic illustration.
+der Klub,club,Noun,time,l7-klub-0,Three-letter text placeholder; no semantic illustration.
+die Fitness,fitness,Noun,hobbies,l7-fitness-0,Three-letter text placeholder; no semantic illustration.
+das Studio,studio,Noun,everyday,l7-studio-0,Three-letter text placeholder; no semantic illustration.
+das Fitnessstudio,gym / fitness centre,Noun,time,l7-fitnessstudio-0,Three-letter text placeholder; no semantic illustration.
+nie,never,Expression,conversation | hobbies,l7-nie-0,Three-letter text placeholder; no semantic illustration.
+lange,for a long time / long,Expression,conversation | past | numbers | time,l7-lange-0,Three-letter text placeholder; no semantic illustration.
+manchmal,sometimes,Expression,conversation | hobbies,l7-manchmal-0,Three-letter text placeholder; no semantic illustration.
+vertikal,vertical,Expression,conversation | classroom,l7-vertikal-0,Three-letter text placeholder; no semantic illustration.
+horizontal,horizontal,Expression,conversation | classroom,l7-horizontal-0,Three-letter text placeholder; no semantic illustration.
+diagonal,diagonal,Expression,conversation | classroom,l7-diagonal-0,Three-letter text placeholder; no semantic illustration.
+Freunde treffen,to meet friends,Expression,conversation | hobbies,l7-freunde-treffen-0,Three-letter text placeholder; no semantic illustration.
+treffen,to meet,Verb,verbs | hobbies | time | past | travel,l7-treffen-0,Three-letter text placeholder; no semantic illustration.
+fahren,to drive / ride / travel / to go by vehicle / to travel by vehicle,Verb,verbs | hobbies | travel | past,l7-fahren-0,Three-letter text placeholder; no semantic illustration.
+surfen,to browse / surf / to surf,Verb,verbs | hobbies | past,l7-surfen-0,Three-letter text placeholder; no semantic illustration.
+Spaß machen,to be fun,Expression,conversation,l7-spass-machen-0,Three-letter text placeholder; no semantic illustration.
+der Spaß,fun,Noun,hobbies,l7-spass-0,Three-letter text placeholder; no semantic illustration.
+Lieblings-,favourite (word prefix),Expression,conversation | grammar,l7-lieblings-0,Three-letter text placeholder; no semantic illustration.
+Was machst du gern?,What do you like doing?,Expression,conversation,l7-was-machst-du-gern-0,Three-letter text placeholder; no semantic illustration.
+gern tun,to like doing,Expression,conversation,l7-gern-tun-0,Three-letter text placeholder; no semantic illustration.
+in deiner Freizeit,in your free time,Expression,conversation | hobbies,l7-in-deiner-freizeit-0,Three-letter text placeholder; no semantic illustration.
+schlecht,bad / badly,Adjective,descriptions,l7-schlecht-0,Three-letter text placeholder; no semantic illustration.
+das Schwimmbad,swimming pool,Noun,time,l8-schwimmbad-0,Three-letter text placeholder; no semantic illustration.
+das Kino,cinema,Noun,time,l8-kino-0,Three-letter text placeholder; no semantic illustration.
+der Nachmittag,afternoon,Noun,numbers | time,l8-nachmittag-0,Three-letter text placeholder; no semantic illustration.
+um,at (a clock time),Expression,conversation | time | grammar,l8-um-0,Three-letter text placeholder; no semantic illustration.
+am,on / in / at (with days and most parts of the day),Expression,conversation | time | grammar,l8-am-0,Three-letter text placeholder; no semantic illustration.
+Wann?,When?,Expression,conversation | time,l8-wann-0,Three-letter text placeholder; no semantic illustration.
+am Wochenende,at the weekend,Expression,conversation | numbers | time,l8-am-wochenende-0,Three-letter text placeholder; no semantic illustration.
+frei,off / free,Expression,conversation,l8-frei-0,Three-letter text placeholder; no semantic illustration.
+in der Nacht,at night,Expression,conversation | numbers | time,l8-in-der-nacht-0,Three-letter text placeholder; no semantic illustration.
+Das weiß ich noch nicht.,I do not know yet.,Expression,conversation | time,l8-das-weiss-ich-noch-nicht-0,Three-letter text placeholder; no semantic illustration.
+Lust auf …,in the mood for …,Expression,conversation | time,l8-lust-auf-0,Three-letter text placeholder; no semantic illustration.
+Keine Lust.,I do not feel like it.,Expression,conversation | time,l8-keine-lust-0,Three-letter text placeholder; no semantic illustration.
+die Lust,desire / inclination,Noun,time,l8-lust-0,Three-letter text placeholder; no semantic illustration.
+Gute Idee!,Good idea!,Expression,conversation | time,l8-gute-idee-0,Three-letter text placeholder; no semantic illustration.
+um Viertel nach,at quarter past,Expression,conversation | numbers | time,l8-um-viertel-nach-0,Three-letter text placeholder; no semantic illustration.
+um halb,at half past (the previous hour),Expression,conversation | numbers | time,l8-um-halb-0,Three-letter text placeholder; no semantic illustration.
+spät,late,Expression,conversation | numbers | time,l8-spaet-0,Three-letter text placeholder; no semantic illustration.
+okay,okay,Expression,conversation | time,l8-okay-0,Three-letter text placeholder; no semantic illustration.
+Bis dann!,See you then!,Expression,conversation | time,l8-bis-dann-0,Three-letter text placeholder; no semantic illustration.
+der Vormittag,morning (before noon),Noun,numbers | time,l8-vormittag-0,Three-letter text placeholder; no semantic illustration.
+der Mittag,noon / midday,Noun,numbers | time,l8-mittag-0,Three-letter text placeholder; no semantic illustration.
+das Museum,museum,Noun,time,l8-museum-0,Three-letter text placeholder; no semantic illustration.
+das Café,cafe,Noun,time,l8-caf-0,Three-letter text placeholder; no semantic illustration.
+die Ausstellung,exhibition,Noun,time,l8-ausstellung-0,Three-letter text placeholder; no semantic illustration.
+die Disco,disco,Noun,time,l8-disco-0,Three-letter text placeholder; no semantic illustration.
+die Bar,bar,Noun,time,l8-bar-0,Three-letter text placeholder; no semantic illustration.
+Viertel nach,quarter past,Expression,conversation | numbers | time,l8-viertel-nach-0,Three-letter text placeholder; no semantic illustration.
+vor,to / before (a clock time),Expression,conversation | numbers | time,l8-vor-0,Three-letter text placeholder; no semantic illustration.
+halb,halfway to the next hour,Expression,conversation | numbers | time,l8-halb-0,Three-letter text placeholder; no semantic illustration.
+Viertel vor,quarter to,Expression,conversation | numbers | time,l8-viertel-vor-0,Three-letter text placeholder; no semantic illustration.
+Wie viel Uhr ist es?,What time is it?,Expression,conversation | time,l8-wie-viel-uhr-ist-es-0,Three-letter text placeholder; no semantic illustration.
+Wie spät ist es?,What time is it?,Expression,conversation | time,l8-wie-spaet-ist-es-0,Three-letter text placeholder; no semantic illustration.
+Es ist …,It is … (a clock time here),Expression,conversation | numbers | time,l8-es-ist-0,Three-letter text placeholder; no semantic illustration.
+der Rücken,back,Noun,people,l8-ruecken-0,Three-letter text placeholder; no semantic illustration.
+"Ja, genau.","Yes, exactly.",Expression,conversation | time,l8-ja-genau-0,Three-letter text placeholder; no semantic illustration.
+der Vorschlag,suggestion,Noun,time,l8-vorschlag-0,Three-letter text placeholder; no semantic illustration.
+tut mir leid,I am sorry,Expression,conversation | time,l8-tut-mir-leid-0,Three-letter text placeholder; no semantic illustration.
+der Traumtag,dream day,Noun,numbers | time,l8-traumtag-0,Three-letter text placeholder; no semantic illustration.
+mögen,to like,Verb,verbs | food,l9-moegen-0,Three-letter text placeholder; no semantic illustration.
+zum Frühstück,for breakfast,Expression,conversation | food,l9-zum-fruehstueck-0,Three-letter text placeholder; no semantic illustration.
+besonders,especially,Adjective,descriptions,l9-besonders-0,Three-letter text placeholder; no semantic illustration.
+Guten Appetit!,Enjoy your meal!,Expression,conversation,l9-guten-appetit-0,Three-letter text placeholder; no semantic illustration.
+hier bitte,there you are,Expression,conversation,l9-hier-bitte-0,Three-letter text placeholder; no semantic illustration.
+lecker,delicious,Adjective,descriptions,l9-lecker-0,Three-letter text placeholder; no semantic illustration.
+der Ketchup,ketchup (also das Ketchup),Noun,food,l9-ketchup-0,Three-letter text placeholder; no semantic illustration.
+das Ketchup,ketchup (also das Ketchup),Noun,food,l9-ketchup-1,Three-letter text placeholder; no semantic illustration.
+der Witz,joke,Noun,everyday,l9-witz-0,Three-letter text placeholder; no semantic illustration.
+fit,fit,Adjective,descriptions,l9-fit-0,Three-letter text placeholder; no semantic illustration.
+intelligent,intelligent,Adjective,descriptions,l9-intelligent-0,Three-letter text placeholder; no semantic illustration.
+prima,great,Adjective,descriptions,l9-prima-0,Three-letter text placeholder; no semantic illustration.
+das Gedicht,poem,Noun,everyday,l9-gedicht-0,Three-letter text placeholder; no semantic illustration.
+auf dem Tisch,on the table,Expression,conversation | food,l9-auf-dem-tisch-0,Three-letter text placeholder; no semantic illustration.
+trinken,to drink,Verb,verbs | food | past | travel,l9-trinken-0,Three-letter text placeholder; no semantic illustration.
+die Butter,butter,Noun,food,l9-butter-0,Three-letter text placeholder; no semantic illustration.
+der Schinken,ham,Noun,food,l9-schinken-0,Three-letter text placeholder; no semantic illustration.
+wünschen,to wish / want,Verb,verbs | food,l9-wuenschen-0,Three-letter text placeholder; no semantic illustration.
+die Tasse,cup,Noun,food,l9-tasse-0,Three-letter text placeholder; no semantic illustration.
+möchten,would like,Verb,verbs | food,l9-moechten-0,Three-letter text placeholder; no semantic illustration.
+der Nusskuchen,nut cake,Noun,food,l9-nusskuchen-0,Three-letter text placeholder; no semantic illustration.
+der Apfelkuchen,apple cake,Noun,food,l9-apfelkuchen-0,Three-letter text placeholder; no semantic illustration.
+der Schokoladenkuchen,chocolate cake,Noun,food,l9-schokoladenkuchen-0,Three-letter text placeholder; no semantic illustration.
+schade,what a pity,Expression,conversation,l9-schade-0,Three-letter text placeholder; no semantic illustration.
+na gut,all right then,Expression,conversation,l9-na-gut-0,Three-letter text placeholder; no semantic illustration.
+nehmen,to take / have (when ordering),Verb,verbs | food,l9-nehmen-0,Three-letter text placeholder; no semantic illustration.
+unser,our,Expression,conversation | grammar,l9-unser-0,Three-letter text placeholder; no semantic illustration.
+die Speisekarte,menu (list of dishes),Noun,food,l9-speisekarte-0,Three-letter text placeholder; no semantic illustration.
+sorgenfrei,free of worry,Adjective,descriptions,l9-sorgenfrei-0,Three-letter text placeholder; no semantic illustration.
+der Tomatensalat,tomato salad,Noun,food,l9-tomatensalat-0,Three-letter text placeholder; no semantic illustration.
+die Kartoffel,potato,Noun,food,l9-kartoffel-0,Three-letter text placeholder; no semantic illustration.
+das Würstchen,sausage,Noun,food,l9-wuerstchen-0,Three-letter text placeholder; no semantic illustration.
+das Huhn,chicken,Noun,food,l9-huhn-0,Three-letter text placeholder; no semantic illustration.
+die Vanille,vanilla,Noun,food,l9-vanille-0,Three-letter text placeholder; no semantic illustration.
+die Kugel,scoop / ball,Noun,food,l9-kugel-0,Three-letter text placeholder; no semantic illustration.
+die Sahne,cream,Noun,food,l9-sahne-0,Three-letter text placeholder; no semantic illustration.
+das Stück,piece,Noun,food,l9-stueck-0,Three-letter text placeholder; no semantic illustration.
+der Zitronenkuchen,lemon cake,Noun,food,l9-zitronenkuchen-0,Three-letter text placeholder; no semantic illustration.
+perfekt,perfect,Adjective,descriptions,l9-perfekt-0,Three-letter text placeholder; no semantic illustration.
+schmecken,to taste,Verb,verbs | food,l9-schmecken-0,Three-letter text placeholder; no semantic illustration.
+die Nuss,nut,Noun,food,l9-nuss-0,Three-letter text placeholder; no semantic illustration.
+das Schinkenbrötchen,ham roll,Noun,food,l9-schinkenbroetchen-0,Three-letter text placeholder; no semantic illustration.
+die Tomatensuppe,tomato soup,Noun,food,l9-tomatensuppe-0,Three-letter text placeholder; no semantic illustration.
+der Käsekuchen,cheesecake,Noun,food,l9-kaesekuchen-0,Three-letter text placeholder; no semantic illustration.
+Ich auch.,Me too.,Expression,conversation,l9-ich-auch-0,Three-letter text placeholder; no semantic illustration.
+Ich nicht.,I do not.,Expression,conversation,l9-ich-nicht-0,Three-letter text placeholder; no semantic illustration.
+Ich schon.,I do (contrasting a negative statement).,Expression,conversation,l9-ich-schon-0,Three-letter text placeholder; no semantic illustration.
+Ich auch nicht.,Me neither.,Expression,conversation,l9-ich-auch-nicht-0,Three-letter text placeholder; no semantic illustration.
+das Gemüse,vegetables,Noun,food,l9-gemuese-0,Three-letter text placeholder; no semantic illustration.
+das Rezept,recipe,Noun,food,l9-rezept-0,Three-letter text placeholder; no semantic illustration.
+die Küche,kitchen,Noun,food,l9-kueche-0,Three-letter text placeholder; no semantic illustration.
+kurz,shortly / short,Expression,conversation | numbers | time,l10-kurz-0,Three-letter text placeholder; no semantic illustration.
+starten,to take off / start,Verb,verbs | travel,l10-starten-0,Three-letter text placeholder; no semantic illustration.
+ankommen,to arrive,Verb,verbs | travel | past,l10-ankommen-0,Three-letter text placeholder; no semantic illustration.
+dort,there,Expression,conversation,l10-dort-0,Three-letter text placeholder; no semantic illustration.
+noch mal,again,Expression,conversation,l10-noch-mal-0,Three-letter text placeholder; no semantic illustration.
+früh,early,Expression,conversation | numbers | time,l10-frueh-0,Three-letter text placeholder; no semantic illustration.
+sicher,sure / certain,Adjective,descriptions,l10-sicher-0,Three-letter text placeholder; no semantic illustration.
+die Stimme,voice,Noun,people,l10-stimme-0,Three-letter text placeholder; no semantic illustration.
+versuchen,to try,Verb,verbs | travel,l10-versuchen-0,Three-letter text placeholder; no semantic illustration.
+hoffentlich,hopefully,Expression,conversation,l10-hoffentlich-0,Three-letter text placeholder; no semantic illustration.
+die Verspätung,delay,Noun,travel,l10-verspaetung-0,Three-letter text placeholder; no semantic illustration.
+kaputt,broken,Adjective,descriptions,l10-kaputt-0,Three-letter text placeholder; no semantic illustration.
+die Maschine,plane / machine,Noun,travel,l10-maschine-0,Three-letter text placeholder; no semantic illustration.
+alles,everything,Expression,conversation,l10-alles-0,Three-letter text placeholder; no semantic illustration.
+alles klar,all clear / all right,Expression,conversation,l10-alles-klar-0,Three-letter text placeholder; no semantic illustration.
+lieber,rather / preferably,Expression,conversation,l10-lieber-0,Three-letter text placeholder; no semantic illustration.
+wenig,little / not much,Adjective,descriptions,l10-wenig-0,Three-letter text placeholder; no semantic illustration.
+der Akku,battery,Noun,objects,l10-akku-0,Three-letter text placeholder; no semantic illustration.
+abholen,to pick up,Verb,verbs | travel | past,l10-abholen-0,Three-letter text placeholder; no semantic illustration.
+was für,what a / what kind of,Expression,conversation,l10-was-fuer-0,Three-letter text placeholder; no semantic illustration.
+natürlich,of course,Expression,conversation,l10-natuerlich-0,Three-letter text placeholder; no semantic illustration.
+sich freuen,to be happy / look forward,Verb,verbs | travel,l10-sich-freuen-0,Three-letter text placeholder; no semantic illustration.
+Bis gleich!,See you in a moment!,Expression,conversation,l10-bis-gleich-0,Three-letter text placeholder; no semantic illustration.
+einsteigen,to get on / get in / to get on / in,Verb,verbs | travel | past,l10-einsteigen-0,Three-letter text placeholder; no semantic illustration.
+umsteigen,to change trains or buses,Verb,verbs | travel,l10-umsteigen-0,Three-letter text placeholder; no semantic illustration.
+aussteigen,to get off / get out,Verb,verbs | travel,l10-aussteigen-0,Three-letter text placeholder; no semantic illustration.
+der Verkehr,traffic,Noun,travel,l10-verkehr-0,Three-letter text placeholder; no semantic illustration.
+das Verkehrsmittel,means of transport,Noun,travel,l10-verkehrsmittel-0,Three-letter text placeholder; no semantic illustration.
+abfahren,to depart by train or road,Verb,verbs | travel | past,l10-abfahren-0,Three-letter text placeholder; no semantic illustration.
+fernsehen,to watch television,Verb,verbs | travel | past,l10-fernsehen-0,Three-letter text placeholder; no semantic illustration.
+von Bahnsteig …,from platform …,Expression,conversation | travel,l10-von-bahnsteig-0,Three-letter text placeholder; no semantic illustration.
+einfahren,to pull in / arrive at a station,Verb,verbs | travel,l10-einfahren-0,Three-letter text placeholder; no semantic illustration.
+an Gleis …,at track …,Expression,conversation | travel,l10-an-gleis-0,Three-letter text placeholder; no semantic illustration.
+enden,to end,Verb,verbs | travel,l10-enden-0,Three-letter text placeholder; no semantic illustration.
+beginnen,to begin,Verb,verbs | travel,l10-beginnen-0,Three-letter text placeholder; no semantic illustration.
+stehen,to stand / be situated,Verb,verbs | travel,l10-stehen-0,Three-letter text placeholder; no semantic illustration.
+nächst-,next (changes ending),Adjective,descriptions,l10-naechst-0,Three-letter text placeholder; no semantic illustration.
+der Halt,stop,Noun,travel,l10-halt-0,Three-letter text placeholder; no semantic illustration.
+die Vorsicht,caution,Noun,everyday,l10-vorsicht-0,Three-letter text placeholder; no semantic illustration.
+dich,you (informal singular object),Expression,conversation | grammar,l10-dich-0,Three-letter text placeholder; no semantic illustration.
+kurz vor,shortly before,Expression,conversation | numbers | time,l10-kurz-vor-0,Three-letter text placeholder; no semantic illustration.
+kurz nach,shortly after,Expression,conversation | numbers | time,l10-kurz-nach-0,Three-letter text placeholder; no semantic illustration.
+informieren,to inform,Verb,verbs | travel,l10-informieren-0,Three-letter text placeholder; no semantic illustration.
+besuchen,to visit,Verb,verbs | travel | past,l10-besuchen-0,Three-letter text placeholder; no semantic illustration.
+gerade,right now,Expression,conversation | numbers | time,l10-gerade-0,Three-letter text placeholder; no semantic illustration.
+der Wald,forest,Noun,past,l11-wald-0,Three-letter text placeholder; no semantic illustration.
+zu wenig,too little,Expression,conversation | past | grammar,l11-zu-wenig-0,Three-letter text placeholder; no semantic illustration.
+zu viel,too much,Expression,conversation | past | grammar,l11-zu-viel-0,Three-letter text placeholder; no semantic illustration.
+der Vogel,bird,Noun,past,l11-vogel-0,Three-letter text placeholder; no semantic illustration.
+die Pause,break,Noun,past,l11-pause-0,Three-letter text placeholder; no semantic illustration.
+die Serie,series,Noun,past | hobbies,l11-serie-0,Three-letter text placeholder; no semantic illustration.
+Hallo Schatz!,"Hello, darling!",Expression,conversation | past,l11-hallo-schatz-0,Three-letter text placeholder; no semantic illustration.
+von … bis,from … to / until,Expression,conversation | past | numbers | time,l11-von-bis-0,Three-letter text placeholder; no semantic illustration.
+danach,afterwards,Expression,conversation | past | numbers | time,l11-danach-0,Three-letter text placeholder; no semantic illustration.
+das T-Shirt,T-shirt,Noun,objects | past,l11-t-shirt-0,Three-letter text placeholder; no semantic illustration.
+ab,from … onward,Expression,conversation | past | numbers | time,l11-ab-0,Three-letter text placeholder; no semantic illustration.
+ganz,whole / all,Expression,conversation | past | grammar,l11-ganz-0,Three-letter text placeholder; no semantic illustration.
+zurückkommen,to come back,Verb,verbs | past,l11-zurueckkommen-0,Three-letter text placeholder; no semantic illustration.
+der Kuss,kiss,Noun,past,l11-kuss-0,Three-letter text placeholder; no semantic illustration.
+geöffnet,open,Adjective,descriptions | past,l11-geoeffnet-0,Three-letter text placeholder; no semantic illustration.
+die Boutique,boutique,Noun,past,l11-boutique-0,Three-letter text placeholder; no semantic illustration.
+die Mode,fashion,Noun,past,l11-mode-0,Three-letter text placeholder; no semantic illustration.
+der Laden,shop,Noun,past,l11-laden-0,Three-letter text placeholder; no semantic illustration.
+geschlossen,closed,Adjective,descriptions | past,l11-geschlossen-0,Three-letter text placeholder; no semantic illustration.
+das Eiscafé,ice cream parlor,Noun,past,l11-eiscaf-0,Three-letter text placeholder; no semantic illustration.
+der Kiosk,kiosk,Noun,past,l11-kiosk-0,Three-letter text placeholder; no semantic illustration.
+letzt-,last / previous,Expression,conversation | past | numbers | time,l11-letzt-0,Three-letter text placeholder; no semantic illustration.
+einladen,to invite,Verb,verbs | past,l11-einladen-0,Three-letter text placeholder; no semantic illustration.
+"Ja, habe ich.","Yes, I did.",Expression,conversation | past,l11-ja-habe-ich-0,Three-letter text placeholder; no semantic illustration.
+"Nein, habe ich nicht.","No, I did not.",Expression,conversation | past,l11-nein-habe-ich-nicht-0,Three-letter text placeholder; no semantic illustration.
+der Marathon,marathon,Noun,past | seasons | hobbies,l12-marathon-0,Three-letter text placeholder; no semantic illustration.
+es gibt,there is / there are,Expression,conversation | past | grammar,l12-es-gibt-0,Three-letter text placeholder; no semantic illustration.
+seit,since / for an ongoing period,Expression,conversation | past | seasons | numbers | time,l12-seit-0,Three-letter text placeholder; no semantic illustration.
+der Kilometer,kilometer,Noun,past | travel,l12-kilometer-0,Three-letter text placeholder; no semantic illustration.
+unterwegs,on the road / traveling,Expression,conversation | past | travel,l12-unterwegs-0,Three-letter text placeholder; no semantic illustration.
+die Radtour,cycling tour,Noun,past | seasons | hobbies,l12-radtour-0,Three-letter text placeholder; no semantic illustration.
+bis,as far as / until,Expression,conversation | past | grammar,l12-bis-0,Three-letter text placeholder; no semantic illustration.
+weiterfahren,to continue the journey,Verb,verbs | past | travel,l12-weiterfahren-0,Three-letter text placeholder; no semantic illustration.
+das Wetter,weather,Noun,past,l12-wetter-0,Three-letter text placeholder; no semantic illustration.
+ein paar,a few,Expression,conversation | past | grammar,l12-ein-paar-0,Three-letter text placeholder; no semantic illustration.
+bleiben,to stay,Verb,verbs | past | travel,l12-bleiben-0,Three-letter text placeholder; no semantic illustration.
+das Riesenrad,Ferris wheel,Noun,objects | past,l12-riesenrad-0,Three-letter text placeholder; no semantic illustration.
+fast,almost,Expression,conversation | past | grammar,l12-fast-0,Three-letter text placeholder; no semantic illustration.
+die Mitte,middle,Noun,past | seasons | numbers | time,l12-mitte-0,Three-letter text placeholder; no semantic illustration.
+der Anfang,beginning,Noun,past | seasons | numbers | time,l12-anfang-0,Three-letter text placeholder; no semantic illustration.
+dieser / dieses / diese,this / these,Expression,conversation | past | grammar,l12-dieser-dieses-diese-0,Three-letter text placeholder; no semantic illustration.
+zurückfahren,to travel back,Verb,verbs | past | travel,l12-zurueckfahren-0,Three-letter text placeholder; no semantic illustration.
+das Tor,gate,Noun,objects | past,l12-tor-0,Three-letter text placeholder; no semantic illustration.
+ziemlich,quite / pretty,Adjective,descriptions | past,l12-ziemlich-0,Three-letter text placeholder; no semantic illustration.
+cool,cool,Adjective,descriptions | past,l12-cool-0,Three-letter text placeholder; no semantic illustration.
+durch,through,Expression,conversation | past | travel,l12-durch-0,Three-letter text placeholder; no semantic illustration.
+die Jahreszeit,season,Noun,past | seasons | numbers | time,l12-jahreszeit-0,Three-letter text placeholder; no semantic illustration.
+passieren,to happen,Verb,verbs | past | travel,l12-passieren-0,Three-letter text placeholder; no semantic illustration.
+springen,to jump,Verb,verbs | past | travel,l12-springen-0,Three-letter text placeholder; no semantic illustration.
+der Hubschrauber,helicopter,Noun,past | travel,l12-hubschrauber-0,Three-letter text placeholder; no semantic illustration.
+das Zehn-Meter-Brett,ten-meter diving board,Noun,objects | past,l12-zehn-meter-brett-0,Three-letter text placeholder; no semantic illustration.
+"Ja, das stimmt.","Yes, that is right.",Expression,conversation | past,l12-ja-das-stimmt-0,Three-letter text placeholder; no semantic illustration.
+jeder / jedes / jede,each / every,Expression,conversation | past | grammar,l12-jeder-jedes-jede-0,Three-letter text placeholder; no semantic illustration.
+wie lange,how long,Expression,conversation | past,l12-wie-lange-0,Three-letter text placeholder; no semantic illustration.
+die Insel,island,Noun,past | countries,l12-insel-0,Three-letter text placeholder; no semantic illustration.
+nichts,nothing / not anything,Expression,conversation | past | grammar,l12-nichts-0,Three-letter text placeholder; no semantic illustration.
+geboren,born,Expression,conversation | past,l12-geboren-0,Three-letter text placeholder; no semantic illustration.
+der Durst,thirst,Noun,past,l12-durst-0,Three-letter text placeholder; no semantic illustration.
+legen,to lay / put,Verb,verbs | past | travel,l12-legen-0,Three-letter text placeholder; no semantic illustration.
+vermuten,to suppose; to make a guess,Verb,verbs,verb-model-vermuten-0,Three-letter text placeholder; no semantic illustration.

@@ -1,9 +1,15 @@
 import type {ReactNode} from "react";
 import type {StudyConcept} from "@/lib/study/scope";
 import type {ObjectVocabularyIcon} from "@/lib/study/object-vocabulary";
-import {countries,countryName,languageMeanings,spokenLanguage} from "@/lib/study/countries";
+import {countries,languageMeanings,spokenLanguage} from "@/lib/study/countries";
+import {countryForVocabularyIllustration,geographyIconPath} from "@/lib/study/geography-illustrations";
+import {refinedIllustrationPath} from "@/lib/study/refined-illustrations";
+import {verbIllustrationPath} from "@/lib/study/verb-illustrations";
+import {expressionIllustrationPath} from "@/lib/study/expression-illustrations";
+import {grammarIllustrationPath} from "@/lib/study/grammar-illustrations";
+import {nounIllustrationPath} from "@/lib/study/noun-illustrations";
 import {homeWords} from "@/lib/study/home";
-import {CountryFlag} from "./CountryFlag";
+import {CountryVocabularyIllustration} from "./CountryVocabularyIllustration";
 import {HomeIllustration} from "./HomeIllustration";
 import {ObjectVocabularyIllustration} from "./ObjectIllustration";
 
@@ -215,8 +221,8 @@ function SourceGlyph({text}:{text:string}){
 export function SubjectVocabularyVisual({de,category,cardId,subject}:{de:string;category:string;cardId:string;subject:StudyConcept}){
   const word=de.normalize("NFC").trim().replace(/\s+/g," ");
   const wrap=(kind:string,visual:ReactNode)=><span className="subject-vocabulary-visual" data-subject-visual={kind} data-subject={subject} aria-hidden="true">{visual}</span>;
-  const country=countries.find(item=>countryName(item)===word);
-  if(country)return wrap(`country:${country.id}`,<CountryFlag id={country.id} label={country.en}/>);
+  const country=countryForVocabularyIllustration(word,category);
+  if(country)return wrap(`country:${country.id}`,<CountryVocabularyIllustration id={country.id}/>);
   if(category==="Language"||languageTerms.has(word))return wrap("language",<LineDrawing path={semanticPaths.speech}/>);
   const colour=exactValue(colours,word);
   if(colour)return wrap(`colour:${word}`,<svg className="subject-vocabulary-illustration" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><circle cx="50" cy="50" r="33" fill={colour} stroke="currentColor" strokeWidth="2.6"/><path d="M29 39q5-10 16-12" fill="none" stroke={word==="weiß"?"#c5c7c0":"#fff"} strokeWidth="5" strokeLinecap="round" opacity=".65"/></svg>);
@@ -230,8 +236,20 @@ export function SubjectVocabularyVisual({de,category,cardId,subject}:{de:string;
   if(food!==undefined)return wrap(`food:${food}`,<LineDrawing path={foodPaths[food]!}/>);
   const hobby=exactValue(hobbyTerms,word);
   if(hobby!==undefined)return wrap(`hobby:${hobby}`,<LineDrawing path={hobbyPaths[hobby]!}/>);
+  const geography=geographyIconPath(word);
+  if(geography)return wrap("illustrated:geography",<LineDrawing path={geography}/>);
+  const refined=refinedIllustrationPath(word);
+  if(refined)return wrap("illustrated:refined",<LineDrawing path={refined}/>);
   const semantic=sourceVisuals.get(word);
   if(semantic)return wrap(`semantic:${semantic}`,<LineDrawing path={semanticPaths[semantic]}/>);
+  const noun=nounIllustrationPath(word);
+  if(noun)return wrap("illustrated:noun",<LineDrawing path={noun}/>);
+  const verb=verbIllustrationPath(word);
+  if(verb)return wrap("illustrated:verb",<LineDrawing path={verb}/>);
+  const expression=expressionIllustrationPath(word);
+  if(expression)return wrap("illustrated:expression",<LineDrawing path={expression}/>);
+  const grammar=grammarIllustrationPath(word);
+  if(grammar)return wrap("illustrated:grammar",<LineDrawing path={grammar}/>);
   const headword=word.replace(/^(?:der|die|das) /u,"");
   return wrap("source-glyph",<SourceGlyph text={[...headword].slice(0,3).join("")||"·"}/>);
 }

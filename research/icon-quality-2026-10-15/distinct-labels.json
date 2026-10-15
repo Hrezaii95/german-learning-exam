@@ -1,0 +1,9841 @@
+[
+  {
+    "de": "wie",
+    "meaning": [
+      "how"
+    ],
+    "categories": [
+      "Question word"
+    ],
+    "subjects": [
+      "questions",
+      "grammar"
+    ],
+    "sourceIds": [
+      "W001-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "wer",
+    "meaning": [
+      "who"
+    ],
+    "categories": [
+      "Question word"
+    ],
+    "subjects": [
+      "questions",
+      "grammar"
+    ],
+    "sourceIds": [
+      "W002-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "woher",
+    "meaning": [
+      "where from"
+    ],
+    "categories": [
+      "Question word"
+    ],
+    "subjects": [
+      "questions",
+      "grammar"
+    ],
+    "sourceIds": [
+      "W003-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "ich",
+    "meaning": [
+      "I"
+    ],
+    "categories": [
+      "Pronoun"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W004-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "du",
+    "meaning": [
+      "you (one person, informal)"
+    ],
+    "categories": [
+      "Pronoun"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W005-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "er",
+    "meaning": [
+      "he"
+    ],
+    "categories": [
+      "Pronoun"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W006-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "sie",
+    "meaning": [
+      "she / they"
+    ],
+    "categories": [
+      "Pronoun"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W007-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Sie",
+    "meaning": [
+      "you (formal, singular or plural)"
+    ],
+    "categories": [
+      "Pronoun"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W008-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "dir",
+    "meaning": [
+      "to you / for you (informal)"
+    ],
+    "categories": [
+      "Pronoun"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W009-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Und dir?",
+    "meaning": [
+      "and you? (informal)"
+    ],
+    "categories": [
+      "Pronoun"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W009-1"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das",
+    "meaning": [
+      "this / that"
+    ],
+    "categories": [
+      "Pronoun"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W010-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "mein",
+    "meaning": [
+      "my"
+    ],
+    "categories": [
+      "Pronoun"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W011-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "meine",
+    "meaning": [
+      "my"
+    ],
+    "categories": [
+      "Pronoun"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W011-1"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "heißen",
+    "meaning": [
+      "to be called / have the name"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "W012-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "sein",
+    "meaning": [
+      "to be"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "past",
+      "travel"
+    ],
+    "sourceIds": [
+      "W013-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "kommen",
+    "meaning": [
+      "to come"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "past",
+      "travel"
+    ],
+    "sourceIds": [
+      "W014-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "lernen",
+    "meaning": [
+      "to learn / study"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "past"
+    ],
+    "sourceIds": [
+      "W015-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das Alphabet",
+    "meaning": [
+      "alphabet"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "W016-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Information",
+    "meaning": [
+      "information / piece of information"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "W022-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Herr",
+    "meaning": [
+      "Mr / gentleman"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "W023-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "und",
+    "meaning": [
+      "and"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W035-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "aus",
+    "meaning": [
+      "from"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W036-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "auch",
+    "meaning": [
+      "also / too"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W037-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "nicht",
+    "meaning": [
+      "not"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W038-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "sehr",
+    "meaning": [
+      "very"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W039-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "so",
+    "meaning": [
+      "so / that / around / approximately"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar",
+      "numbers",
+      "time"
+    ],
+    "sourceIds": [
+      "W040-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "gut",
+    "meaning": [
+      "good / well"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W041-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Gut, danke.",
+    "meaning": [
+      "fine, thank you"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W041-1"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Nicht so gut.",
+    "meaning": [
+      "not so good"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W041-2"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Sehr gut, danke.",
+    "meaning": [
+      "very well, thank you"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W041-3"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "super",
+    "meaning": [
+      "great / excellent"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W042-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Auch super.",
+    "meaning": [
+      "also great"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W042-1"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "es",
+    "meaning": [
+      "it"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W043-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "bitte",
+    "meaning": [
+      "please / pardon"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W044-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Ihnen",
+    "meaning": [
+      "to you / for you (formal)"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W045-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Abend",
+    "meaning": [
+      "evening"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "numbers",
+      "time"
+    ],
+    "sourceIds": [
+      "W048-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "ah",
+    "meaning": [
+      "ah / I see"
+    ],
+    "categories": [
+      "Interjection"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "W058-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die bekannte Persönlichkeit",
+    "meaning": [
+      "well-known person / public figure"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "W059-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "ankreuzen",
+    "meaning": [
+      "to tick / mark with a cross"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "W061-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "buchstabieren",
+    "meaning": [
+      "to spell out"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "W062-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "werfen",
+    "meaning": [
+      "to throw / toss"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "W063-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Münze",
+    "meaning": [
+      "coin"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "W064-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "haben",
+    "meaning": [
+      "to have"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "time",
+      "past",
+      "travel"
+    ],
+    "sourceIds": [
+      "W067-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "wohnen",
+    "meaning": [
+      "to live / reside"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "W068-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "leben",
+    "meaning": [
+      "to live"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "W069-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "zusammenleben",
+    "meaning": [
+      "to live together"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "W070-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "machen",
+    "meaning": [
+      "to do / make"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "past",
+      "travel"
+    ],
+    "sourceIds": [
+      "W071-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "arbeiten",
+    "meaning": [
+      "to work"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "past"
+    ],
+    "sourceIds": [
+      "W072-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "sammeln",
+    "meaning": [
+      "to collect"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "W073-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "studieren",
+    "meaning": [
+      "to study at university"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "W074-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "kein",
+    "meaning": [
+      "no / not a / not any"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W075-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "keine",
+    "meaning": [
+      "no / not any"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W075-1"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "in",
+    "meaning": [
+      "to / into (a destination here)"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar",
+      "time"
+    ],
+    "sourceIds": [
+      "W076-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "ihr",
+    "meaning": [
+      "you (plural, informal)"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W077-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "wir",
+    "meaning": [
+      "we"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W078-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "ja",
+    "meaning": [
+      "yes / really (emphasis in a compliment)"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W079-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "aber",
+    "meaning": [
+      "but; emphasis in a compliment"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W080-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "wo",
+    "meaning": [
+      "where"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W081-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "was",
+    "meaning": [
+      "what"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W082-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "als",
+    "meaning": [
+      "as"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W083-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "bei",
+    "meaning": [
+      "at / for"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W084-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "von",
+    "meaning": [
+      "from / of"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W085-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "alt",
+    "meaning": [
+      "old"
+    ],
+    "categories": [
+      "Adjective / adverb"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "W086-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "verheiratet",
+    "meaning": [
+      "married"
+    ],
+    "categories": [
+      "Adjective / adverb"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "W087-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "zusammen",
+    "meaning": [
+      "together"
+    ],
+    "categories": [
+      "Adjective / adverb"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "W088-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "richtig",
+    "meaning": [
+      "correct / right / properly / correctly"
+    ],
+    "categories": [
+      "Adjective / adverb"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "W089-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "falsch",
+    "meaning": [
+      "wrong / incorrect"
+    ],
+    "categories": [
+      "Adjective / adverb"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "W090-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "geschieden",
+    "meaning": [
+      "divorced"
+    ],
+    "categories": [
+      "Adjective / adverb"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "W091-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "allein",
+    "meaning": [
+      "alone / on one's own"
+    ],
+    "categories": [
+      "Adjective / adverb"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "W092-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "beruflich",
+    "meaning": [
+      "professionally / for a living"
+    ],
+    "categories": [
+      "Adjective / adverb"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "W093-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "jetzt",
+    "meaning": [
+      "now"
+    ],
+    "categories": [
+      "Adjective / adverb"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "W094-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "minus",
+    "meaning": [
+      "minus"
+    ],
+    "categories": [
+      "Adjective / adverb"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "W095-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "plus",
+    "meaning": [
+      "plus"
+    ],
+    "categories": [
+      "Adjective / adverb"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "W096-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Punkt",
+    "meaning": [
+      "point / full stop"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "W103-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Zahl",
+    "meaning": [
+      "number"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "numbers"
+    ],
+    "sourceIds": [
+      "W104-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das Rätsel",
+    "meaning": [
+      "riddle / puzzle"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "W105-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Single",
+    "meaning": [
+      "single person"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "W106-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Job",
+    "meaning": [
+      "job"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "W108-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Beruf",
+    "meaning": [
+      "occupation / profession"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "W109-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Stelle",
+    "meaning": [
+      "job / position"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "W110-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das Praktikum",
+    "meaning": [
+      "internship / work placement"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "W112-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Herkunft",
+    "meaning": [
+      "origin"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "W114-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das Alter",
+    "meaning": [
+      "age"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "W116-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Familienstand",
+    "meaning": [
+      "marital status"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "W117-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das Tier",
+    "meaning": [
+      "animal"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "W119-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Tierarzt",
+    "meaning": [
+      "veterinarian (male)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W146-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Tierärztin",
+    "meaning": [
+      "veterinarian (female)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W146-1"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Dank",
+    "meaning": [
+      "thanks / gratitude"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "W154-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "oder",
+    "meaning": [
+      "or / right?"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar",
+      "time"
+    ],
+    "sourceIds": [
+      "W157-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "für",
+    "meaning": [
+      "for"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W158-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "mehr",
+    "meaning": [
+      "more"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W159-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "fertig",
+    "meaning": [
+      "finished / ready"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W160-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "schon",
+    "meaning": [
+      "already"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W161-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Telefonnummer",
+    "meaning": [
+      "telephone number"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "numbers",
+      "office"
+    ],
+    "sourceIds": [
+      "W166-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "glauben",
+    "meaning": [
+      "to think / believe"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "W169-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "planen",
+    "meaning": [
+      "to plan"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "hobbies",
+      "time"
+    ],
+    "sourceIds": [
+      "W170-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "dein",
+    "meaning": [
+      "your (one person, informal)"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W172-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "deine",
+    "meaning": [
+      "your (informal)"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W172-1"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "nein",
+    "meaning": [
+      "no"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W173-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "doch",
+    "meaning": [
+      "yes (contradicting a negative question or claim)"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W174-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "welche",
+    "meaning": [
+      "which"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W175-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "ein bisschen",
+    "meaning": [
+      "a little (bit)"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W176-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "gar nicht",
+    "meaning": [
+      "not at all"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W177-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "ein",
+    "meaning": [
+      "a / an; one"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W178-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "eine",
+    "meaning": [
+      "a / an"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W178-1"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das Mitglied",
+    "meaning": [
+      "member"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "W207-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Elektriker",
+    "meaning": [
+      "Electrician (male)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W230-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Elektrikerin",
+    "meaning": [
+      "Electrician (female)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W230-1"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Straßenarbeiter",
+    "meaning": [
+      "road / street construction worker (male)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W238-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Straßenarbeiterin",
+    "meaning": [
+      "road / street construction worker (female)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W238-1"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Maurer",
+    "meaning": [
+      "Bricklayer (male)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W242-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Maurerin",
+    "meaning": [
+      "Bricklayer (female)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W242-1"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Koch",
+    "meaning": [
+      "Cook/Chef (male)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W252-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Köchin",
+    "meaning": [
+      "Cook/Chef (female)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W252-1"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Müllwerker",
+    "meaning": [
+      "Refuse Collector (male)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W254-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Müllwerkerin",
+    "meaning": [
+      "Refuse Collector (female)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W254-1"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Metzger",
+    "meaning": [
+      "Butcher (male)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W256-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Metzgerin",
+    "meaning": [
+      "Butcher (female)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W256-1"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Bauarbeiter",
+    "meaning": [
+      "Construction Worker (male)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W262-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Bauarbeiterin",
+    "meaning": [
+      "Construction Worker (female)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W262-1"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Feuerwehrmann",
+    "meaning": [
+      "Firefighter (male)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W264-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Feuerwehrfrau",
+    "meaning": [
+      "Firefighter (female)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W264-1"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Konditor",
+    "meaning": [
+      "Confectioner (male)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W266-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Konditorin",
+    "meaning": [
+      "Confectioner (female)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W266-1"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Hausmann",
+    "meaning": [
+      "homemaker (male)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W268-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Hausfrau",
+    "meaning": [
+      "homemaker (female)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W268-1"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Polizist",
+    "meaning": [
+      "Police Officer (male)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W273-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Polizistin",
+    "meaning": [
+      "Police Officer (female)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W273-1"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Soldat",
+    "meaning": [
+      "Soldier (male)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W281-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Soldatin",
+    "meaning": [
+      "Soldier (female)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W281-1"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Geschäftsmann",
+    "meaning": [
+      "Businessperson (male)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W285-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Geschäftsfrau",
+    "meaning": [
+      "Businessperson (female)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W285-1"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Tankwart",
+    "meaning": [
+      "Gas Station Attendant (male)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W297-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Tankwartin",
+    "meaning": [
+      "Gas Station Attendant (female)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W297-1"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Geheimagent",
+    "meaning": [
+      "Secret Agent (male)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W299-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Geheimagentin",
+    "meaning": [
+      "Secret Agent (female)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W299-1"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Norden",
+    "meaning": [
+      "north"
+    ],
+    "categories": [
+      "Geography"
+    ],
+    "subjects": [
+      "countries"
+    ],
+    "sourceIds": [
+      "W324-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Osten",
+    "meaning": [
+      "east"
+    ],
+    "categories": [
+      "Geography"
+    ],
+    "subjects": [
+      "countries"
+    ],
+    "sourceIds": [
+      "W325-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Süden",
+    "meaning": [
+      "south"
+    ],
+    "categories": [
+      "Geography"
+    ],
+    "subjects": [
+      "countries"
+    ],
+    "sourceIds": [
+      "W326-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Westen",
+    "meaning": [
+      "west"
+    ],
+    "categories": [
+      "Geography"
+    ],
+    "subjects": [
+      "countries"
+    ],
+    "sourceIds": [
+      "W327-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Nordosten",
+    "meaning": [
+      "northeast"
+    ],
+    "categories": [
+      "Geography"
+    ],
+    "subjects": [
+      "countries"
+    ],
+    "sourceIds": [
+      "W328-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Südosten",
+    "meaning": [
+      "southeast"
+    ],
+    "categories": [
+      "Geography"
+    ],
+    "subjects": [
+      "countries"
+    ],
+    "sourceIds": [
+      "W329-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Südwesten",
+    "meaning": [
+      "southwest"
+    ],
+    "categories": [
+      "Geography"
+    ],
+    "subjects": [
+      "countries"
+    ],
+    "sourceIds": [
+      "W330-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Nordwesten",
+    "meaning": [
+      "northwest"
+    ],
+    "categories": [
+      "Geography"
+    ],
+    "subjects": [
+      "countries"
+    ],
+    "sourceIds": [
+      "W331-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das Foto",
+    "meaning": [
+      "photo"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "W339-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Million",
+    "meaning": [
+      "million"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "numbers"
+    ],
+    "sourceIds": [
+      "W343-0",
+      "l4-million-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "supercool",
+    "meaning": [
+      "really cool"
+    ],
+    "categories": [
+      "Adjective / adverb"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "W347-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "noch",
+    "meaning": [
+      "still / yet / more"
+    ],
+    "categories": [
+      "Adjective / adverb"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "W348-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "viel",
+    "meaning": [
+      "much / a lot"
+    ],
+    "categories": [
+      "Adjective / adverb"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "W349-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "hier",
+    "meaning": [
+      "here / speaking (on the phone)"
+    ],
+    "categories": [
+      "Adjective / adverb"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "W350-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "nur",
+    "meaning": [
+      "only"
+    ],
+    "categories": [
+      "Adjective / adverb",
+      "Expression"
+    ],
+    "subjects": [
+      "descriptions",
+      "conversation"
+    ],
+    "sourceIds": [
+      "W351-0",
+      "l4-nur-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "etwa",
+    "meaning": [
+      "about / approximately"
+    ],
+    "categories": [
+      "Adjective / adverb"
+    ],
+    "subjects": [
+      "descriptions",
+      "past",
+      "grammar"
+    ],
+    "sourceIds": [
+      "W352-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "überall",
+    "meaning": [
+      "anywhere / everywhere"
+    ],
+    "categories": [
+      "Adjective / adverb"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "W354-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "deutschsprachig",
+    "meaning": [
+      "German-speaking"
+    ],
+    "categories": [
+      "Adjective / adverb"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "W355-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "warum",
+    "meaning": [
+      "why"
+    ],
+    "categories": [
+      "Adjective / adverb"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "W356-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "gern",
+    "meaning": [
+      "gladly / like doing something"
+    ],
+    "categories": [
+      "Adjective / adverb"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "W357-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "mal",
+    "meaning": [
+      "just / once",
+      "just (softens a request)"
+    ],
+    "categories": [
+      "Adjective / adverb",
+      "Expression"
+    ],
+    "subjects": [
+      "descriptions",
+      "conversation"
+    ],
+    "sourceIds": [
+      "W358-0",
+      "l4-mal-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Übersetzer",
+    "meaning": [
+      "translator (male)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W360-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Übersetzerin",
+    "meaning": [
+      "translator (female)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W360-1"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Psychologe",
+    "meaning": [
+      "psychologist (male)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W362-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Psychologin",
+    "meaning": [
+      "psychologist (female)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W362-1"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Auszubildende",
+    "meaning": [
+      "trainee / apprentice (male)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W370-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Auszubildende",
+    "meaning": [
+      "trainee / apprentice (female)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W370-1"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Weber",
+    "meaning": [
+      "weaver (male)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W378-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Weberin",
+    "meaning": [
+      "weaver (female)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W378-1"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Wagner",
+    "meaning": [
+      "wheelwright (male)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W382-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Wagnerin",
+    "meaning": [
+      "wheelwright (female)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W382-1"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Chocolatier",
+    "meaning": [
+      "chocolatier / chocolate maker (male)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W386-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Chocolatière",
+    "meaning": [
+      "chocolatier / chocolate maker (female)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W386-1"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der IT-Trainer",
+    "meaning": [
+      "IT trainer (male)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W388-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die IT-Trainerin",
+    "meaning": [
+      "IT trainer (female)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W388-1"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Software-Trainer",
+    "meaning": [
+      "software trainer (male)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W390-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Software-Trainerin",
+    "meaning": [
+      "software trainer (female)"
+    ],
+    "categories": [
+      "Profession"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "W390-1"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Konferenz",
+    "meaning": [
+      "conference"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "W392-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Homepage",
+    "meaning": [
+      "homepage / website"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "W397-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Stadt",
+    "meaning": [
+      "city / town"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "W398-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Straße",
+    "meaning": [
+      "street"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "office"
+    ],
+    "sourceIds": [
+      "W399-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Hausnummer",
+    "meaning": [
+      "house number"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "office"
+    ],
+    "sourceIds": [
+      "W400-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das Marketing",
+    "meaning": [
+      "marketing"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "W404-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Adresse",
+    "meaning": [
+      "address"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "office"
+    ],
+    "sourceIds": [
+      "W405-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das Hobby",
+    "meaning": [
+      "hobby"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "hobbies"
+    ],
+    "sourceIds": [
+      "W406-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Postleitzahl",
+    "meaning": [
+      "postal code / postcode / ZIP code"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "office"
+    ],
+    "sourceIds": [
+      "W409-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Ort",
+    "meaning": [
+      "place / town"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "office"
+    ],
+    "sourceIds": [
+      "W410-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Wohnung",
+    "meaning": [
+      "flat / apartment"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "W411-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "interessant",
+    "meaning": [
+      "interesting"
+    ],
+    "categories": [
+      "Adjective / adverb"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "W413-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "ledig",
+    "meaning": [
+      "unmarried / never married"
+    ],
+    "categories": [
+      "Adjective / adverb"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "W414-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "neu",
+    "meaning": [
+      "new"
+    ],
+    "categories": [
+      "Adjective / adverb",
+      "Adjective"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "W415-0",
+      "l4-neu-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "also",
+    "meaning": [
+      "so / well / then / so / therefore"
+    ],
+    "categories": [
+      "Adjective / adverb"
+    ],
+    "subjects": [
+      "descriptions",
+      "past",
+      "grammar"
+    ],
+    "sourceIds": [
+      "W416-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "mich",
+    "meaning": [
+      "me"
+    ],
+    "categories": [
+      "Pronoun"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W417-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Ihr",
+    "meaning": [
+      "your (formal)"
+    ],
+    "categories": [
+      "Pronoun"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W418-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Ihre",
+    "meaning": [
+      "your (formal)"
+    ],
+    "categories": [
+      "Pronoun"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W418-1"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "verbinden",
+    "meaning": [
+      "to connect / match"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "W429-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "ergänzen",
+    "meaning": [
+      "to complete / fill in"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "W430-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "zuordnen",
+    "meaning": [
+      "to match / assign"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "W431-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "markieren",
+    "meaning": [
+      "to mark / highlight"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "W432-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "schließen",
+    "meaning": [
+      "to close"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "W439-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "spielen",
+    "meaning": [
+      "to play / act"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "hobbies",
+      "past"
+    ],
+    "sourceIds": [
+      "W440-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "vorspielen",
+    "meaning": [
+      "to act out / mime"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "W441-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "raten",
+    "meaning": [
+      "to guess"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "W442-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "meinen",
+    "meaning": [
+      "to think / mean"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "W443-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "wissen",
+    "meaning": [
+      "to know (a fact)"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "time"
+    ],
+    "sourceIds": [
+      "W444-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "verstehen",
+    "meaning": [
+      "to understand"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "travel"
+    ],
+    "sourceIds": [
+      "W445-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "vorlesen",
+    "meaning": [
+      "to read aloud"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "W446-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "vorstellen",
+    "meaning": [
+      "to introduce"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "W447-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "geben",
+    "meaning": [
+      "to give"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "W448-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "korrigieren",
+    "meaning": [
+      "to correct"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "W449-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "üben",
+    "meaning": [
+      "to practise"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "W450-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "fehlen",
+    "meaning": [
+      "to be missing"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "W451-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "wählen",
+    "meaning": [
+      "to choose"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "W452-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "würfeln",
+    "meaning": [
+      "to roll a die / to roll dice"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "W453-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "ziehen",
+    "meaning": [
+      "to move / draw / pull"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "W454-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "bekommen",
+    "meaning": [
+      "to get / receive"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "W455-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "tauschen",
+    "meaning": [
+      "to exchange / swap"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "W456-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "lösen",
+    "meaning": [
+      "to solve"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "W457-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "bilden",
+    "meaning": [
+      "to form / build"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "W458-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "klatschen",
+    "meaning": [
+      "to clap"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "W459-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "präsentieren",
+    "meaning": [
+      "to present"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "W460-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das Wort",
+    "meaning": [
+      "word"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "classroom"
+    ],
+    "sourceIds": [
+      "W463-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das Bildlexikon",
+    "meaning": [
+      "picture vocabulary / picture dictionary"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "W465-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das Wörterbuch",
+    "meaning": [
+      "dictionary"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "classroom"
+    ],
+    "sourceIds": [
+      "W467-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das Online-Wörterbuch",
+    "meaning": [
+      "online dictionary"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "classroom"
+    ],
+    "sourceIds": [
+      "W468-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Gruppe",
+    "meaning": [
+      "group"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "W472-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Frage",
+    "meaning": [
+      "question"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "classroom",
+      "time"
+    ],
+    "sourceIds": [
+      "W474-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Antwort",
+    "meaning": [
+      "answer"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "classroom",
+      "time"
+    ],
+    "sourceIds": [
+      "W475-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Lösung",
+    "meaning": [
+      "solution / answer"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "W476-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Sitzplan",
+    "meaning": [
+      "seating plan"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "W477-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das Beispiel",
+    "meaning": [
+      "example"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "W479-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Nummer",
+    "meaning": [
+      "number"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "numbers",
+      "office"
+    ],
+    "sourceIds": [
+      "W480-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das Spiel",
+    "meaning": [
+      "game"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "W482-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das Würfelspiel",
+    "meaning": [
+      "dice game"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "W483-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Spielfigur",
+    "meaning": [
+      "playing piece / game token"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "W484-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Rechenaufgabe",
+    "meaning": [
+      "arithmetic problem"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "W485-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Lücke",
+    "meaning": [
+      "gap / blank"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "W486-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Angabe",
+    "meaning": [
+      "detail / information item"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "W487-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Wortakzent",
+    "meaning": [
+      "word stress"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "W490-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Silbe",
+    "meaning": [
+      "syllable"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "W491-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Satzmelodie",
+    "meaning": [
+      "sentence intonation"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "W492-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "dann",
+    "meaning": [
+      "then"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W497-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "noch einmal",
+    "meaning": [
+      "once again"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W498-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "weiter",
+    "meaning": [
+      "further / continue"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W499-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "zu zweit",
+    "meaning": [
+      "in pairs / two together"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W500-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "zu dritt",
+    "meaning": [
+      "in threes / three together"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W501-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "selbst",
+    "meaning": [
+      "oneself / yourself"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W502-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "mit",
+    "meaning": [
+      "with"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W503-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "über",
+    "meaning": [
+      "about"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W504-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "auf",
+    "meaning": [
+      "on"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar"
+    ],
+    "sourceIds": [
+      "W505-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "nach",
+    "meaning": [
+      "after / past (a clock time) / to a city or an article-free country"
+    ],
+    "categories": [
+      "Function word"
+    ],
+    "subjects": [
+      "grammar",
+      "numbers",
+      "time",
+      "past",
+      "travel"
+    ],
+    "sourceIds": [
+      "W506-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Es geht.",
+    "meaning": [
+      "so-so / not bad"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "hobbies",
+      "time",
+      "past",
+      "travel"
+    ],
+    "sourceIds": [
+      "W507-1"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "freuen",
+    "meaning": [
+      "to please / be glad"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "W508-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "zeigen",
+    "meaning": [
+      "to show"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "W509-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "filmen",
+    "meaning": [
+      "to film"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "W510-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "bedeuten",
+    "meaning": [
+      "to mean"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "W512-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "aufhängen",
+    "meaning": [
+      "to hang up / display"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "W513-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "mischen",
+    "meaning": [
+      "to mix / shuffle"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "W514-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "helfen",
+    "meaning": [
+      "to help"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "W515-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "aufnehmen",
+    "meaning": [
+      "to record"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "W516-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "aktivieren",
+    "meaning": [
+      "to activate / enable"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "W517-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "achten",
+    "meaning": [
+      "to pay attention"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "W518-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Film",
+    "meaning": [
+      "film / video"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "past",
+      "hobbies"
+    ],
+    "sourceIds": [
+      "W520-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Flagge",
+    "meaning": [
+      "flag"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "W521-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Vorbereitung",
+    "meaning": [
+      "preparation"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "W525-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das Mikrofon",
+    "meaning": [
+      "microphone"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "W526-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "arbeitslos",
+    "meaning": [
+      "unemployed"
+    ],
+    "categories": [
+      "Adjective / adverb"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "W531-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "können",
+    "meaning": [
+      "can / to be able to / to be able to / can"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "hobbies",
+      "time"
+    ],
+    "sourceIds": [
+      "W533-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "türkisch",
+    "meaning": [
+      "Turkish (adjective)"
+    ],
+    "categories": [
+      "Adjective / adverb"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "W534-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "sortieren",
+    "meaning": [
+      "to put in order / sort"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "W535-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "passen",
+    "meaning": [
+      "to fit / match"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "W536-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "kennen",
+    "meaning": [
+      "to know / be familiar with"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "hobbies"
+    ],
+    "sourceIds": [
+      "W537-0",
+      "l4-kennen-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das Kettenspiel",
+    "meaning": [
+      "chain game"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "W539-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Rückfrage",
+    "meaning": [
+      "follow-up / clarification question"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "W541-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das Glück",
+    "meaning": [
+      "happiness / luck",
+      "luck"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "W542-0",
+      "l4-glueck-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Achtung!",
+    "meaning": [
+      "Attention! / Watch out!"
+    ],
+    "categories": [
+      "Interjection"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "W543-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "schön",
+    "meaning": [
+      "beautiful / lovely"
+    ],
+    "categories": [
+      "Adjective"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "l4-schoen-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "hässlich",
+    "meaning": [
+      "ugly"
+    ],
+    "categories": [
+      "Adjective"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "l4-haesslich-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "modern",
+    "meaning": [
+      "modern"
+    ],
+    "categories": [
+      "Adjective"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "l4-modern-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "praktisch",
+    "meaning": [
+      "practical / handy"
+    ],
+    "categories": [
+      "Adjective"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "l4-praktisch-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "kosten",
+    "meaning": [
+      "to cost"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "l4-kosten-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "shoppen",
+    "meaning": [
+      "to shop"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "l4-shoppen-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Stern",
+    "meaning": [
+      "star"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "l4-stern-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "zu Hause",
+    "meaning": [
+      "at home"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l4-zuhause-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "wie viel",
+    "meaning": [
+      "how much"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l4-wieviel-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "wirklich",
+    "meaning": [
+      "really"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l4-wirklich-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "zu",
+    "meaning": [
+      "too (before an adjective)"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l4-zu-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "da",
+    "meaning": [
+      "there / over there"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l4-da-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "denn",
+    "meaning": [
+      "then (conversational question particle)"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l4-denn-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "oh",
+    "meaning": [
+      "oh"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l4-oh-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "ein / eine",
+    "meaning": [
+      "a / an"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "grammar"
+    ],
+    "sourceIds": [
+      "l5-ein-eine-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Farbe",
+    "meaning": [
+      "colour / color"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "colours-materials"
+    ],
+    "sourceIds": [
+      "l5-farbe-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "etwas",
+    "meaning": [
+      "something"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l5-etwas-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "viele",
+    "meaning": [
+      "many"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l5-viele-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "und so weiter",
+    "meaning": [
+      "and so on"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l5-und-so-weiter-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "aha",
+    "meaning": [
+      "aha / I see"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l5-aha-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "auf Deutsch",
+    "meaning": [
+      "in German"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "classroom"
+    ],
+    "sourceIds": [
+      "l5-auf-deutsch-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "nennen",
+    "meaning": [
+      "to name"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "l5-nennen-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "bitten",
+    "meaning": [
+      "to ask for / request"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "l5-bitten-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "man",
+    "meaning": [
+      "one / you (people in general)"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "grammar"
+    ],
+    "sourceIds": [
+      "l5-man-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "sich bedanken",
+    "meaning": [
+      "to thank / say thank you"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "l5-sich-bedanken-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "danke schön",
+    "meaning": [
+      "thank you"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l5-danke-schoen-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das Problem",
+    "meaning": [
+      "problem"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "l5-problem-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Bitte schön.",
+    "meaning": [
+      "You are welcome."
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l5-bitte-schoen-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Kein Problem.",
+    "meaning": [
+      "No problem."
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l5-kein-problem-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Wiederholung",
+    "meaning": [
+      "repetition"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "classroom"
+    ],
+    "sourceIds": [
+      "l5-wiederholung-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "reagieren auf",
+    "meaning": [
+      "to react to"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "l5-reagieren-auf-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Ich weiß nicht.",
+    "meaning": [
+      "I do not know."
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "classroom"
+    ],
+    "sourceIds": [
+      "l5-ich-weiss-nicht-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "online",
+    "meaning": [
+      "online"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "objects"
+    ],
+    "sourceIds": [
+      "l5-online-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "bestellen",
+    "meaning": [
+      "to order"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "travel"
+    ],
+    "sourceIds": [
+      "l5-bestellen-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Ware",
+    "meaning": [
+      "goods / merchandise"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "objects"
+    ],
+    "sourceIds": [
+      "l5-ware-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das Produkt",
+    "meaning": [
+      "product"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "objects"
+    ],
+    "sourceIds": [
+      "l5-produkt-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Produktname",
+    "meaning": [
+      "product name"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "office"
+    ],
+    "sourceIds": [
+      "l5-produktname-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Menge",
+    "meaning": [
+      "amount / quantity"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "office"
+    ],
+    "sourceIds": [
+      "l5-menge-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Unterstrich",
+    "meaning": [
+      "underscore"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "office"
+    ],
+    "sourceIds": [
+      "l5-unterstrich-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "ät",
+    "meaning": [
+      "at sign (@)"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "office"
+    ],
+    "sourceIds": [
+      "l5-aet-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "kein / keine",
+    "meaning": [
+      "no / not a"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "grammar"
+    ],
+    "sourceIds": [
+      "l5-kein-keine-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Oh Gott!",
+    "meaning": [
+      "Oh God!"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l6-oh-gott-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Gott",
+    "meaning": [
+      "god"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "objects"
+    ],
+    "sourceIds": [
+      "l6-gott-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Arbeit",
+    "meaning": [
+      "work"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "office"
+    ],
+    "sourceIds": [
+      "l6-arbeit-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Hilfe!",
+    "meaning": [
+      "Help!"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l6-hilfe-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Traum",
+    "meaning": [
+      "dream"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "objects"
+    ],
+    "sourceIds": [
+      "l6-traum-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Albtraum",
+    "meaning": [
+      "nightmare"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "objects"
+    ],
+    "sourceIds": [
+      "l6-albtraum-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Hunger",
+    "meaning": [
+      "hunger"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "food"
+    ],
+    "sourceIds": [
+      "l6-hunger-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Hunger haben",
+    "meaning": [
+      "to be hungry"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l6-hunger-haben-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "brauchen",
+    "meaning": [
+      "to need"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "l6-brauchen-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Kaffee",
+    "meaning": [
+      "coffee"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "food"
+    ],
+    "sourceIds": [
+      "l6-kaffee-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Viele Grüße",
+    "meaning": [
+      "kind regards"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l6-viele-gruesse-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Gruß",
+    "meaning": [
+      "greeting"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "l6-gruss-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das Yoga",
+    "meaning": [
+      "yoga"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "l6-yoga-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "leider",
+    "meaning": [
+      "unfortunately"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "time"
+    ],
+    "sourceIds": [
+      "l6-leider-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Zeit haben",
+    "meaning": [
+      "to have time"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l6-zeit-haben-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "keine Zeit haben",
+    "meaning": [
+      "to have no time"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l6-keine-zeit-haben-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Liebe Grüße / LG",
+    "meaning": [
+      "kind regards / love"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l6-liebe-gruesse-lg-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "in die Tasche packen",
+    "meaning": [
+      "to put in the bag"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l6-in-die-tasche-packen-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Schreibtisch",
+    "meaning": [
+      "desk"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "office"
+    ],
+    "sourceIds": [
+      "l6-schreibtisch-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Arbeitsplatz",
+    "meaning": [
+      "workspace"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "office"
+    ],
+    "sourceIds": [
+      "l6-arbeitsplatz-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Ach, da ist er ja!",
+    "meaning": [
+      "Oh, there it is!"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l6-ach-da-ist-er-ja-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "schon wieder",
+    "meaning": [
+      "again"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l6-schon-wieder-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "vielleicht",
+    "meaning": [
+      "maybe"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l6-vielleicht-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das Quartett",
+    "meaning": [
+      "quartets (card game)"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "objects"
+    ],
+    "sourceIds": [
+      "l6-quartett-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Hallo, … hier.",
+    "meaning": [
+      "Hello, … speaking."
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l6-hallo-hier-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Was kann ich für Sie tun?",
+    "meaning": [
+      "How can I help you?"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l6-was-kann-ich-fuer-sie-tun-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "da sein",
+    "meaning": [
+      "to be there"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l6-da-sein-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Auf Wiederhören.",
+    "meaning": [
+      "Goodbye (on the phone)."
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l6-auf-wiederhoeren-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "schnell",
+    "meaning": [
+      "quick / fast"
+    ],
+    "categories": [
+      "Adjective"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "l6-schnell-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "schwer",
+    "meaning": [
+      "heavy / difficult"
+    ],
+    "categories": [
+      "Adjective"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "l6-schwer-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "packen",
+    "meaning": [
+      "to pack"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "l6-packen-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Handynummer",
+    "meaning": [
+      "mobile phone number"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "office"
+    ],
+    "sourceIds": [
+      "l6-handynummer-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Abkürzung",
+    "meaning": [
+      "abbreviation"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "classroom"
+    ],
+    "sourceIds": [
+      "l6-abkuerzung-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Idee",
+    "meaning": [
+      "idea"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "time"
+    ],
+    "sourceIds": [
+      "l6-idee-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Stress",
+    "meaning": [
+      "stress"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "l6-stress-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Liebe",
+    "meaning": [
+      "love"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "l6-liebe-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Würfel",
+    "meaning": [
+      "die / dice"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "objects"
+    ],
+    "sourceIds": [
+      "l6-wuerfel-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "toll",
+    "meaning": [
+      "great"
+    ],
+    "categories": [
+      "Adjective"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "l7-toll-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "normal",
+    "meaning": [
+      "normal"
+    ],
+    "categories": [
+      "Adjective"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "l7-normal-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "komisch",
+    "meaning": [
+      "strange / funny"
+    ],
+    "categories": [
+      "Adjective"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "l7-komisch-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "blöd",
+    "meaning": [
+      "stupid / silly"
+    ],
+    "categories": [
+      "Adjective"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "l7-bloed-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "lustig",
+    "meaning": [
+      "funny"
+    ],
+    "categories": [
+      "Adjective"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "l7-lustig-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "zurzeit",
+    "meaning": [
+      "currently / at the moment"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l7-zurzeit-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "immer",
+    "meaning": [
+      "always"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "hobbies"
+    ],
+    "sourceIds": [
+      "l7-immer-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "backen",
+    "meaning": [
+      "to bake"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "hobbies",
+      "past"
+    ],
+    "sourceIds": [
+      "l7-backen-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Ski fahren",
+    "meaning": [
+      "to ski"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "hobbies"
+    ],
+    "sourceIds": [
+      "l7-ski-fahren-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Du kannst ja …",
+    "meaning": [
+      "You really can … (surprised compliment)"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l7-du-kannst-ja-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Du kannst wirklich …",
+    "meaning": [
+      "You really can …"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l7-du-kannst-wirklich-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Du kannst aber …",
+    "meaning": [
+      "You really can … (emphatic compliment)"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l7-du-kannst-aber-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "wir alle",
+    "meaning": [
+      "all of us"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "grammar"
+    ],
+    "sourceIds": [
+      "l7-wir-alle-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "alle",
+    "meaning": [
+      "all"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "grammar"
+    ],
+    "sourceIds": [
+      "l7-alle-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "alle drei",
+    "meaning": [
+      "all three"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "grammar"
+    ],
+    "sourceIds": [
+      "l7-alle-drei-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "beide",
+    "meaning": [
+      "both"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "grammar"
+    ],
+    "sourceIds": [
+      "l7-beide-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "auch nicht",
+    "meaning": [
+      "not either"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "grammar"
+    ],
+    "sourceIds": [
+      "l7-auch-nicht-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "auflegen",
+    "meaning": [
+      "to DJ / put on music"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "hobbies"
+    ],
+    "sourceIds": [
+      "l7-auflegen-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "mixen",
+    "meaning": [
+      "to mix music"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "hobbies"
+    ],
+    "sourceIds": [
+      "l7-mixen-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der DJ",
+    "meaning": [
+      "DJ"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "l7-dj-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "lieben",
+    "meaning": [
+      "to love"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "hobbies"
+    ],
+    "sourceIds": [
+      "l7-lieben-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das Kickboxen",
+    "meaning": [
+      "kickboxing"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "hobbies"
+    ],
+    "sourceIds": [
+      "l7-kickboxen-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das Seniorenheim",
+    "meaning": [
+      "care home for older people"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "l7-seniorenheim-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Versicherung",
+    "meaning": [
+      "insurance / insurance company"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "l7-versicherung-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Kaufmann",
+    "meaning": [
+      "businessman / merchant"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "l7-kaufmann-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Kauffrau",
+    "meaning": [
+      "businesswoman / merchant"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "l7-kauffrau-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Kaufleute",
+    "meaning": [
+      "businesspeople / merchants"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "l7-kaufleute-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Versicherungskaufmann",
+    "meaning": [
+      "insurance clerk (male)"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "l7-versicherungskaufmann-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Versicherungskauffrau",
+    "meaning": [
+      "insurance clerk (female)"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "l7-versicherungskauffrau-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Versicherungskaufleute",
+    "meaning": [
+      "insurance clerks"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "l7-versicherungskaufleute-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "in der Freizeit",
+    "meaning": [
+      "in one's free time"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "hobbies"
+    ],
+    "sourceIds": [
+      "l7-in-der-freizeit-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Freizeit",
+    "meaning": [
+      "free time / leisure"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "hobbies"
+    ],
+    "sourceIds": [
+      "l7-freizeit-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "oft",
+    "meaning": [
+      "often"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "hobbies"
+    ],
+    "sourceIds": [
+      "l7-oft-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Klub",
+    "meaning": [
+      "club"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "time"
+    ],
+    "sourceIds": [
+      "l7-klub-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Fitness",
+    "meaning": [
+      "fitness"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "hobbies"
+    ],
+    "sourceIds": [
+      "l7-fitness-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das Studio",
+    "meaning": [
+      "studio"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "l7-studio-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das Fitnessstudio",
+    "meaning": [
+      "gym / fitness centre"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "time"
+    ],
+    "sourceIds": [
+      "l7-fitnessstudio-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "nie",
+    "meaning": [
+      "never"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "hobbies"
+    ],
+    "sourceIds": [
+      "l7-nie-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "lange",
+    "meaning": [
+      "for a long time / long"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "past",
+      "numbers",
+      "time"
+    ],
+    "sourceIds": [
+      "l7-lange-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "manchmal",
+    "meaning": [
+      "sometimes"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "hobbies"
+    ],
+    "sourceIds": [
+      "l7-manchmal-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "vertikal",
+    "meaning": [
+      "vertical"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "classroom"
+    ],
+    "sourceIds": [
+      "l7-vertikal-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "horizontal",
+    "meaning": [
+      "horizontal"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "classroom"
+    ],
+    "sourceIds": [
+      "l7-horizontal-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "diagonal",
+    "meaning": [
+      "diagonal"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "classroom"
+    ],
+    "sourceIds": [
+      "l7-diagonal-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Freunde treffen",
+    "meaning": [
+      "to meet friends"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "hobbies"
+    ],
+    "sourceIds": [
+      "l7-freunde-treffen-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "treffen",
+    "meaning": [
+      "to meet"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "hobbies",
+      "time",
+      "past",
+      "travel"
+    ],
+    "sourceIds": [
+      "l7-treffen-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "fahren",
+    "meaning": [
+      "to drive / ride / travel / to go by vehicle / to travel by vehicle"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "hobbies",
+      "travel",
+      "past"
+    ],
+    "sourceIds": [
+      "l7-fahren-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "surfen",
+    "meaning": [
+      "to browse / surf / to surf"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "hobbies",
+      "past"
+    ],
+    "sourceIds": [
+      "l7-surfen-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Spaß machen",
+    "meaning": [
+      "to be fun"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l7-spass-machen-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Spaß",
+    "meaning": [
+      "fun"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "hobbies"
+    ],
+    "sourceIds": [
+      "l7-spass-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Lieblings-",
+    "meaning": [
+      "favourite (word prefix)"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "grammar"
+    ],
+    "sourceIds": [
+      "l7-lieblings-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Was machst du gern?",
+    "meaning": [
+      "What do you like doing?"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l7-was-machst-du-gern-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "gern tun",
+    "meaning": [
+      "to like doing"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l7-gern-tun-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "in deiner Freizeit",
+    "meaning": [
+      "in your free time"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "hobbies"
+    ],
+    "sourceIds": [
+      "l7-in-deiner-freizeit-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "schlecht",
+    "meaning": [
+      "bad / badly"
+    ],
+    "categories": [
+      "Adjective"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "l7-schlecht-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das Schwimmbad",
+    "meaning": [
+      "swimming pool"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "time"
+    ],
+    "sourceIds": [
+      "l8-schwimmbad-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das Kino",
+    "meaning": [
+      "cinema"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "time"
+    ],
+    "sourceIds": [
+      "l8-kino-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Nachmittag",
+    "meaning": [
+      "afternoon"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "numbers",
+      "time"
+    ],
+    "sourceIds": [
+      "l8-nachmittag-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "um",
+    "meaning": [
+      "at (a clock time)"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "time",
+      "grammar"
+    ],
+    "sourceIds": [
+      "l8-um-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "am",
+    "meaning": [
+      "on / in / at (with days and most parts of the day)"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "time",
+      "grammar"
+    ],
+    "sourceIds": [
+      "l8-am-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Wann?",
+    "meaning": [
+      "When?"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "time"
+    ],
+    "sourceIds": [
+      "l8-wann-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "am Wochenende",
+    "meaning": [
+      "at the weekend"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "numbers",
+      "time"
+    ],
+    "sourceIds": [
+      "l8-am-wochenende-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "frei",
+    "meaning": [
+      "off / free"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l8-frei-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "in der Nacht",
+    "meaning": [
+      "at night"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "numbers",
+      "time"
+    ],
+    "sourceIds": [
+      "l8-in-der-nacht-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Das weiß ich noch nicht.",
+    "meaning": [
+      "I do not know yet."
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "time"
+    ],
+    "sourceIds": [
+      "l8-das-weiss-ich-noch-nicht-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Lust auf …",
+    "meaning": [
+      "in the mood for …"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "time"
+    ],
+    "sourceIds": [
+      "l8-lust-auf-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Keine Lust.",
+    "meaning": [
+      "I do not feel like it."
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "time"
+    ],
+    "sourceIds": [
+      "l8-keine-lust-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Lust",
+    "meaning": [
+      "desire / inclination"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "time"
+    ],
+    "sourceIds": [
+      "l8-lust-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Gute Idee!",
+    "meaning": [
+      "Good idea!"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "time"
+    ],
+    "sourceIds": [
+      "l8-gute-idee-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "um Viertel nach",
+    "meaning": [
+      "at quarter past"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "numbers",
+      "time"
+    ],
+    "sourceIds": [
+      "l8-um-viertel-nach-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "um halb",
+    "meaning": [
+      "at half past (the previous hour)"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "numbers",
+      "time"
+    ],
+    "sourceIds": [
+      "l8-um-halb-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "spät",
+    "meaning": [
+      "late"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "numbers",
+      "time"
+    ],
+    "sourceIds": [
+      "l8-spaet-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "okay",
+    "meaning": [
+      "okay"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "time"
+    ],
+    "sourceIds": [
+      "l8-okay-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Bis dann!",
+    "meaning": [
+      "See you then!"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "time"
+    ],
+    "sourceIds": [
+      "l8-bis-dann-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Vormittag",
+    "meaning": [
+      "morning (before noon)"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "numbers",
+      "time"
+    ],
+    "sourceIds": [
+      "l8-vormittag-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Mittag",
+    "meaning": [
+      "noon / midday"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "numbers",
+      "time"
+    ],
+    "sourceIds": [
+      "l8-mittag-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das Museum",
+    "meaning": [
+      "museum"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "time"
+    ],
+    "sourceIds": [
+      "l8-museum-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das Café",
+    "meaning": [
+      "cafe"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "time"
+    ],
+    "sourceIds": [
+      "l8-caf-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Ausstellung",
+    "meaning": [
+      "exhibition"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "time"
+    ],
+    "sourceIds": [
+      "l8-ausstellung-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Disco",
+    "meaning": [
+      "disco"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "time"
+    ],
+    "sourceIds": [
+      "l8-disco-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Bar",
+    "meaning": [
+      "bar"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "time"
+    ],
+    "sourceIds": [
+      "l8-bar-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Viertel nach",
+    "meaning": [
+      "quarter past"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "numbers",
+      "time"
+    ],
+    "sourceIds": [
+      "l8-viertel-nach-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "vor",
+    "meaning": [
+      "to / before (a clock time)"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "numbers",
+      "time"
+    ],
+    "sourceIds": [
+      "l8-vor-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "halb",
+    "meaning": [
+      "halfway to the next hour"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "numbers",
+      "time"
+    ],
+    "sourceIds": [
+      "l8-halb-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Viertel vor",
+    "meaning": [
+      "quarter to"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "numbers",
+      "time"
+    ],
+    "sourceIds": [
+      "l8-viertel-vor-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Wie viel Uhr ist es?",
+    "meaning": [
+      "What time is it?"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "time"
+    ],
+    "sourceIds": [
+      "l8-wie-viel-uhr-ist-es-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Wie spät ist es?",
+    "meaning": [
+      "What time is it?"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "time"
+    ],
+    "sourceIds": [
+      "l8-wie-spaet-ist-es-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Es ist …",
+    "meaning": [
+      "It is … (a clock time here)"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "numbers",
+      "time"
+    ],
+    "sourceIds": [
+      "l8-es-ist-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Rücken",
+    "meaning": [
+      "back"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "l8-ruecken-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Ja, genau.",
+    "meaning": [
+      "Yes, exactly."
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "time"
+    ],
+    "sourceIds": [
+      "l8-ja-genau-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Vorschlag",
+    "meaning": [
+      "suggestion"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "time"
+    ],
+    "sourceIds": [
+      "l8-vorschlag-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "tut mir leid",
+    "meaning": [
+      "I am sorry"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "time"
+    ],
+    "sourceIds": [
+      "l8-tut-mir-leid-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Traumtag",
+    "meaning": [
+      "dream day"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "numbers",
+      "time"
+    ],
+    "sourceIds": [
+      "l8-traumtag-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "mögen",
+    "meaning": [
+      "to like"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "food"
+    ],
+    "sourceIds": [
+      "l9-moegen-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "zum Frühstück",
+    "meaning": [
+      "for breakfast"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "food"
+    ],
+    "sourceIds": [
+      "l9-zum-fruehstueck-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "besonders",
+    "meaning": [
+      "especially"
+    ],
+    "categories": [
+      "Adjective"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "l9-besonders-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Guten Appetit!",
+    "meaning": [
+      "Enjoy your meal!"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l9-guten-appetit-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "hier bitte",
+    "meaning": [
+      "there you are"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l9-hier-bitte-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "lecker",
+    "meaning": [
+      "delicious"
+    ],
+    "categories": [
+      "Adjective"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "l9-lecker-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Ketchup",
+    "meaning": [
+      "ketchup (also das Ketchup)"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "food"
+    ],
+    "sourceIds": [
+      "l9-ketchup-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das Ketchup",
+    "meaning": [
+      "ketchup (also das Ketchup)"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "food"
+    ],
+    "sourceIds": [
+      "l9-ketchup-1"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Witz",
+    "meaning": [
+      "joke"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "l9-witz-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "fit",
+    "meaning": [
+      "fit"
+    ],
+    "categories": [
+      "Adjective"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "l9-fit-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "intelligent",
+    "meaning": [
+      "intelligent"
+    ],
+    "categories": [
+      "Adjective"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "l9-intelligent-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "prima",
+    "meaning": [
+      "great"
+    ],
+    "categories": [
+      "Adjective"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "l9-prima-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das Gedicht",
+    "meaning": [
+      "poem"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "l9-gedicht-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "auf dem Tisch",
+    "meaning": [
+      "on the table"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "food"
+    ],
+    "sourceIds": [
+      "l9-auf-dem-tisch-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "trinken",
+    "meaning": [
+      "to drink"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "food",
+      "past",
+      "travel"
+    ],
+    "sourceIds": [
+      "l9-trinken-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Butter",
+    "meaning": [
+      "butter"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "food"
+    ],
+    "sourceIds": [
+      "l9-butter-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Schinken",
+    "meaning": [
+      "ham"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "food"
+    ],
+    "sourceIds": [
+      "l9-schinken-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "wünschen",
+    "meaning": [
+      "to wish / want"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "food"
+    ],
+    "sourceIds": [
+      "l9-wuenschen-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Tasse",
+    "meaning": [
+      "cup"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "food"
+    ],
+    "sourceIds": [
+      "l9-tasse-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "möchten",
+    "meaning": [
+      "would like"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "food"
+    ],
+    "sourceIds": [
+      "l9-moechten-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Nusskuchen",
+    "meaning": [
+      "nut cake"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "food"
+    ],
+    "sourceIds": [
+      "l9-nusskuchen-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Apfelkuchen",
+    "meaning": [
+      "apple cake"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "food"
+    ],
+    "sourceIds": [
+      "l9-apfelkuchen-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Schokoladenkuchen",
+    "meaning": [
+      "chocolate cake"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "food"
+    ],
+    "sourceIds": [
+      "l9-schokoladenkuchen-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "schade",
+    "meaning": [
+      "what a pity"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l9-schade-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "na gut",
+    "meaning": [
+      "all right then"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l9-na-gut-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "nehmen",
+    "meaning": [
+      "to take / have (when ordering)"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "food"
+    ],
+    "sourceIds": [
+      "l9-nehmen-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "unser",
+    "meaning": [
+      "our"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "grammar"
+    ],
+    "sourceIds": [
+      "l9-unser-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Speisekarte",
+    "meaning": [
+      "menu (list of dishes)"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "food"
+    ],
+    "sourceIds": [
+      "l9-speisekarte-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "sorgenfrei",
+    "meaning": [
+      "free of worry"
+    ],
+    "categories": [
+      "Adjective"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "l9-sorgenfrei-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Tomatensalat",
+    "meaning": [
+      "tomato salad"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "food"
+    ],
+    "sourceIds": [
+      "l9-tomatensalat-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Kartoffel",
+    "meaning": [
+      "potato"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "food"
+    ],
+    "sourceIds": [
+      "l9-kartoffel-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das Würstchen",
+    "meaning": [
+      "sausage"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "food"
+    ],
+    "sourceIds": [
+      "l9-wuerstchen-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das Huhn",
+    "meaning": [
+      "chicken"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "food"
+    ],
+    "sourceIds": [
+      "l9-huhn-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Vanille",
+    "meaning": [
+      "vanilla"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "food"
+    ],
+    "sourceIds": [
+      "l9-vanille-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Kugel",
+    "meaning": [
+      "scoop / ball"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "food"
+    ],
+    "sourceIds": [
+      "l9-kugel-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Sahne",
+    "meaning": [
+      "cream"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "food"
+    ],
+    "sourceIds": [
+      "l9-sahne-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das Stück",
+    "meaning": [
+      "piece"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "food"
+    ],
+    "sourceIds": [
+      "l9-stueck-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Zitronenkuchen",
+    "meaning": [
+      "lemon cake"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "food"
+    ],
+    "sourceIds": [
+      "l9-zitronenkuchen-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "perfekt",
+    "meaning": [
+      "perfect"
+    ],
+    "categories": [
+      "Adjective"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "l9-perfekt-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "schmecken",
+    "meaning": [
+      "to taste"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "food"
+    ],
+    "sourceIds": [
+      "l9-schmecken-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Nuss",
+    "meaning": [
+      "nut"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "food"
+    ],
+    "sourceIds": [
+      "l9-nuss-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das Schinkenbrötchen",
+    "meaning": [
+      "ham roll"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "food"
+    ],
+    "sourceIds": [
+      "l9-schinkenbroetchen-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Tomatensuppe",
+    "meaning": [
+      "tomato soup"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "food"
+    ],
+    "sourceIds": [
+      "l9-tomatensuppe-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Käsekuchen",
+    "meaning": [
+      "cheesecake"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "food"
+    ],
+    "sourceIds": [
+      "l9-kaesekuchen-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Ich auch.",
+    "meaning": [
+      "Me too."
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l9-ich-auch-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Ich nicht.",
+    "meaning": [
+      "I do not."
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l9-ich-nicht-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Ich schon.",
+    "meaning": [
+      "I do (contrasting a negative statement)."
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l9-ich-schon-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Ich auch nicht.",
+    "meaning": [
+      "Me neither."
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l9-ich-auch-nicht-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das Gemüse",
+    "meaning": [
+      "vegetables"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "food"
+    ],
+    "sourceIds": [
+      "l9-gemuese-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das Rezept",
+    "meaning": [
+      "recipe"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "food"
+    ],
+    "sourceIds": [
+      "l9-rezept-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Küche",
+    "meaning": [
+      "kitchen"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "food"
+    ],
+    "sourceIds": [
+      "l9-kueche-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "kurz",
+    "meaning": [
+      "shortly / short"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "numbers",
+      "time"
+    ],
+    "sourceIds": [
+      "l10-kurz-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "starten",
+    "meaning": [
+      "to take off / start"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "travel"
+    ],
+    "sourceIds": [
+      "l10-starten-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "ankommen",
+    "meaning": [
+      "to arrive"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "travel",
+      "past"
+    ],
+    "sourceIds": [
+      "l10-ankommen-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "dort",
+    "meaning": [
+      "there"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l10-dort-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "noch mal",
+    "meaning": [
+      "again"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l10-noch-mal-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "früh",
+    "meaning": [
+      "early"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "numbers",
+      "time"
+    ],
+    "sourceIds": [
+      "l10-frueh-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "sicher",
+    "meaning": [
+      "sure / certain"
+    ],
+    "categories": [
+      "Adjective"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "l10-sicher-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Stimme",
+    "meaning": [
+      "voice"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "people"
+    ],
+    "sourceIds": [
+      "l10-stimme-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "versuchen",
+    "meaning": [
+      "to try"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "travel"
+    ],
+    "sourceIds": [
+      "l10-versuchen-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "hoffentlich",
+    "meaning": [
+      "hopefully"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l10-hoffentlich-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Verspätung",
+    "meaning": [
+      "delay"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "travel"
+    ],
+    "sourceIds": [
+      "l10-verspaetung-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "kaputt",
+    "meaning": [
+      "broken"
+    ],
+    "categories": [
+      "Adjective"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "l10-kaputt-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Maschine",
+    "meaning": [
+      "plane / machine"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "travel"
+    ],
+    "sourceIds": [
+      "l10-maschine-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "alles",
+    "meaning": [
+      "everything"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l10-alles-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "alles klar",
+    "meaning": [
+      "all clear / all right"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l10-alles-klar-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "lieber",
+    "meaning": [
+      "rather / preferably"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l10-lieber-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "wenig",
+    "meaning": [
+      "little / not much"
+    ],
+    "categories": [
+      "Adjective"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "l10-wenig-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Akku",
+    "meaning": [
+      "battery"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "objects"
+    ],
+    "sourceIds": [
+      "l10-akku-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "abholen",
+    "meaning": [
+      "to pick up"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "travel",
+      "past"
+    ],
+    "sourceIds": [
+      "l10-abholen-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "was für",
+    "meaning": [
+      "what a / what kind of"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l10-was-fuer-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "natürlich",
+    "meaning": [
+      "of course"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l10-natuerlich-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "sich freuen",
+    "meaning": [
+      "to be happy / look forward"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "travel"
+    ],
+    "sourceIds": [
+      "l10-sich-freuen-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Bis gleich!",
+    "meaning": [
+      "See you in a moment!"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation"
+    ],
+    "sourceIds": [
+      "l10-bis-gleich-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "einsteigen",
+    "meaning": [
+      "to get on / get in / to get on / in"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "travel",
+      "past"
+    ],
+    "sourceIds": [
+      "l10-einsteigen-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "umsteigen",
+    "meaning": [
+      "to change trains or buses"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "travel"
+    ],
+    "sourceIds": [
+      "l10-umsteigen-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "aussteigen",
+    "meaning": [
+      "to get off / get out"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "travel"
+    ],
+    "sourceIds": [
+      "l10-aussteigen-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Verkehr",
+    "meaning": [
+      "traffic"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "travel"
+    ],
+    "sourceIds": [
+      "l10-verkehr-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das Verkehrsmittel",
+    "meaning": [
+      "means of transport"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "travel"
+    ],
+    "sourceIds": [
+      "l10-verkehrsmittel-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "abfahren",
+    "meaning": [
+      "to depart by train or road"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "travel",
+      "past"
+    ],
+    "sourceIds": [
+      "l10-abfahren-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "fernsehen",
+    "meaning": [
+      "to watch television"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "travel",
+      "past"
+    ],
+    "sourceIds": [
+      "l10-fernsehen-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "von Bahnsteig …",
+    "meaning": [
+      "from platform …"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "travel"
+    ],
+    "sourceIds": [
+      "l10-von-bahnsteig-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "einfahren",
+    "meaning": [
+      "to pull in / arrive at a station"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "travel"
+    ],
+    "sourceIds": [
+      "l10-einfahren-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "an Gleis …",
+    "meaning": [
+      "at track …"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "travel"
+    ],
+    "sourceIds": [
+      "l10-an-gleis-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "enden",
+    "meaning": [
+      "to end"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "travel"
+    ],
+    "sourceIds": [
+      "l10-enden-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "beginnen",
+    "meaning": [
+      "to begin"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "travel"
+    ],
+    "sourceIds": [
+      "l10-beginnen-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "stehen",
+    "meaning": [
+      "to stand / be situated"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "travel"
+    ],
+    "sourceIds": [
+      "l10-stehen-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "nächst-",
+    "meaning": [
+      "next (changes ending)"
+    ],
+    "categories": [
+      "Adjective"
+    ],
+    "subjects": [
+      "descriptions"
+    ],
+    "sourceIds": [
+      "l10-naechst-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Halt",
+    "meaning": [
+      "stop"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "travel"
+    ],
+    "sourceIds": [
+      "l10-halt-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Vorsicht",
+    "meaning": [
+      "caution"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "everyday"
+    ],
+    "sourceIds": [
+      "l10-vorsicht-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "dich",
+    "meaning": [
+      "you (informal singular object)"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "grammar"
+    ],
+    "sourceIds": [
+      "l10-dich-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "kurz vor",
+    "meaning": [
+      "shortly before"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "numbers",
+      "time"
+    ],
+    "sourceIds": [
+      "l10-kurz-vor-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "kurz nach",
+    "meaning": [
+      "shortly after"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "numbers",
+      "time"
+    ],
+    "sourceIds": [
+      "l10-kurz-nach-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "informieren",
+    "meaning": [
+      "to inform"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "travel"
+    ],
+    "sourceIds": [
+      "l10-informieren-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "besuchen",
+    "meaning": [
+      "to visit"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "travel",
+      "past"
+    ],
+    "sourceIds": [
+      "l10-besuchen-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "gerade",
+    "meaning": [
+      "right now"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "numbers",
+      "time"
+    ],
+    "sourceIds": [
+      "l10-gerade-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Wald",
+    "meaning": [
+      "forest"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "past"
+    ],
+    "sourceIds": [
+      "l11-wald-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "zu wenig",
+    "meaning": [
+      "too little"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "past",
+      "grammar"
+    ],
+    "sourceIds": [
+      "l11-zu-wenig-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "zu viel",
+    "meaning": [
+      "too much"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "past",
+      "grammar"
+    ],
+    "sourceIds": [
+      "l11-zu-viel-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Vogel",
+    "meaning": [
+      "bird"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "past"
+    ],
+    "sourceIds": [
+      "l11-vogel-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Pause",
+    "meaning": [
+      "break"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "past"
+    ],
+    "sourceIds": [
+      "l11-pause-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Serie",
+    "meaning": [
+      "series"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "past",
+      "hobbies"
+    ],
+    "sourceIds": [
+      "l11-serie-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Hallo Schatz!",
+    "meaning": [
+      "Hello, darling!"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "past"
+    ],
+    "sourceIds": [
+      "l11-hallo-schatz-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "von … bis",
+    "meaning": [
+      "from … to / until"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "past",
+      "numbers",
+      "time"
+    ],
+    "sourceIds": [
+      "l11-von-bis-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "danach",
+    "meaning": [
+      "afterwards"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "past",
+      "numbers",
+      "time"
+    ],
+    "sourceIds": [
+      "l11-danach-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das T-Shirt",
+    "meaning": [
+      "T-shirt"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "objects",
+      "past"
+    ],
+    "sourceIds": [
+      "l11-t-shirt-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "ab",
+    "meaning": [
+      "from … onward"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "past",
+      "numbers",
+      "time"
+    ],
+    "sourceIds": [
+      "l11-ab-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "ganz",
+    "meaning": [
+      "whole / all"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "past",
+      "grammar"
+    ],
+    "sourceIds": [
+      "l11-ganz-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "zurückkommen",
+    "meaning": [
+      "to come back"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "past"
+    ],
+    "sourceIds": [
+      "l11-zurueckkommen-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Kuss",
+    "meaning": [
+      "kiss"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "past"
+    ],
+    "sourceIds": [
+      "l11-kuss-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "geöffnet",
+    "meaning": [
+      "open"
+    ],
+    "categories": [
+      "Adjective"
+    ],
+    "subjects": [
+      "descriptions",
+      "past"
+    ],
+    "sourceIds": [
+      "l11-geoeffnet-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Boutique",
+    "meaning": [
+      "boutique"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "past"
+    ],
+    "sourceIds": [
+      "l11-boutique-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Mode",
+    "meaning": [
+      "fashion"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "past"
+    ],
+    "sourceIds": [
+      "l11-mode-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Laden",
+    "meaning": [
+      "shop"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "past"
+    ],
+    "sourceIds": [
+      "l11-laden-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "geschlossen",
+    "meaning": [
+      "closed"
+    ],
+    "categories": [
+      "Adjective"
+    ],
+    "subjects": [
+      "descriptions",
+      "past"
+    ],
+    "sourceIds": [
+      "l11-geschlossen-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das Eiscafé",
+    "meaning": [
+      "ice cream parlor"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "past"
+    ],
+    "sourceIds": [
+      "l11-eiscaf-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Kiosk",
+    "meaning": [
+      "kiosk"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "past"
+    ],
+    "sourceIds": [
+      "l11-kiosk-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "letzt-",
+    "meaning": [
+      "last / previous"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "past",
+      "numbers",
+      "time"
+    ],
+    "sourceIds": [
+      "l11-letzt-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "einladen",
+    "meaning": [
+      "to invite"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "past"
+    ],
+    "sourceIds": [
+      "l11-einladen-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Ja, habe ich.",
+    "meaning": [
+      "Yes, I did."
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "past"
+    ],
+    "sourceIds": [
+      "l11-ja-habe-ich-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Nein, habe ich nicht.",
+    "meaning": [
+      "No, I did not."
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "past"
+    ],
+    "sourceIds": [
+      "l11-nein-habe-ich-nicht-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Marathon",
+    "meaning": [
+      "marathon"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "past",
+      "seasons",
+      "hobbies"
+    ],
+    "sourceIds": [
+      "l12-marathon-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "es gibt",
+    "meaning": [
+      "there is / there are"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "past",
+      "grammar"
+    ],
+    "sourceIds": [
+      "l12-es-gibt-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "seit",
+    "meaning": [
+      "since / for an ongoing period"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "past",
+      "seasons",
+      "numbers",
+      "time"
+    ],
+    "sourceIds": [
+      "l12-seit-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Kilometer",
+    "meaning": [
+      "kilometer"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "past",
+      "travel"
+    ],
+    "sourceIds": [
+      "l12-kilometer-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "unterwegs",
+    "meaning": [
+      "on the road / traveling"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "past",
+      "travel"
+    ],
+    "sourceIds": [
+      "l12-unterwegs-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Radtour",
+    "meaning": [
+      "cycling tour"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "past",
+      "seasons",
+      "hobbies"
+    ],
+    "sourceIds": [
+      "l12-radtour-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "bis",
+    "meaning": [
+      "as far as / until"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "past",
+      "grammar"
+    ],
+    "sourceIds": [
+      "l12-bis-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "weiterfahren",
+    "meaning": [
+      "to continue the journey"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "past",
+      "travel"
+    ],
+    "sourceIds": [
+      "l12-weiterfahren-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das Wetter",
+    "meaning": [
+      "weather"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "past"
+    ],
+    "sourceIds": [
+      "l12-wetter-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "ein paar",
+    "meaning": [
+      "a few"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "past",
+      "grammar"
+    ],
+    "sourceIds": [
+      "l12-ein-paar-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "bleiben",
+    "meaning": [
+      "to stay"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "past",
+      "travel"
+    ],
+    "sourceIds": [
+      "l12-bleiben-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das Riesenrad",
+    "meaning": [
+      "Ferris wheel"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "objects",
+      "past"
+    ],
+    "sourceIds": [
+      "l12-riesenrad-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "fast",
+    "meaning": [
+      "almost"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "past",
+      "grammar"
+    ],
+    "sourceIds": [
+      "l12-fast-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Mitte",
+    "meaning": [
+      "middle"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "past",
+      "seasons",
+      "numbers",
+      "time"
+    ],
+    "sourceIds": [
+      "l12-mitte-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Anfang",
+    "meaning": [
+      "beginning"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "past",
+      "seasons",
+      "numbers",
+      "time"
+    ],
+    "sourceIds": [
+      "l12-anfang-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "dieser / dieses / diese",
+    "meaning": [
+      "this / these"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "past",
+      "grammar"
+    ],
+    "sourceIds": [
+      "l12-dieser-dieses-diese-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "zurückfahren",
+    "meaning": [
+      "to travel back"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "past",
+      "travel"
+    ],
+    "sourceIds": [
+      "l12-zurueckfahren-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das Tor",
+    "meaning": [
+      "gate"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "objects",
+      "past"
+    ],
+    "sourceIds": [
+      "l12-tor-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "ziemlich",
+    "meaning": [
+      "quite / pretty"
+    ],
+    "categories": [
+      "Adjective"
+    ],
+    "subjects": [
+      "descriptions",
+      "past"
+    ],
+    "sourceIds": [
+      "l12-ziemlich-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "cool",
+    "meaning": [
+      "cool"
+    ],
+    "categories": [
+      "Adjective"
+    ],
+    "subjects": [
+      "descriptions",
+      "past"
+    ],
+    "sourceIds": [
+      "l12-cool-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "durch",
+    "meaning": [
+      "through"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "past",
+      "travel"
+    ],
+    "sourceIds": [
+      "l12-durch-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Jahreszeit",
+    "meaning": [
+      "season"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "past",
+      "seasons",
+      "numbers",
+      "time"
+    ],
+    "sourceIds": [
+      "l12-jahreszeit-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "passieren",
+    "meaning": [
+      "to happen"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "past",
+      "travel"
+    ],
+    "sourceIds": [
+      "l12-passieren-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "springen",
+    "meaning": [
+      "to jump"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "past",
+      "travel"
+    ],
+    "sourceIds": [
+      "l12-springen-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Hubschrauber",
+    "meaning": [
+      "helicopter"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "past",
+      "travel"
+    ],
+    "sourceIds": [
+      "l12-hubschrauber-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "das Zehn-Meter-Brett",
+    "meaning": [
+      "ten-meter diving board"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "objects",
+      "past"
+    ],
+    "sourceIds": [
+      "l12-zehn-meter-brett-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "Ja, das stimmt.",
+    "meaning": [
+      "Yes, that is right."
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "past"
+    ],
+    "sourceIds": [
+      "l12-ja-das-stimmt-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "jeder / jedes / jede",
+    "meaning": [
+      "each / every"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "past",
+      "grammar"
+    ],
+    "sourceIds": [
+      "l12-jeder-jedes-jede-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "wie lange",
+    "meaning": [
+      "how long"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "past"
+    ],
+    "sourceIds": [
+      "l12-wie-lange-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "die Insel",
+    "meaning": [
+      "island"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "past",
+      "countries"
+    ],
+    "sourceIds": [
+      "l12-insel-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "nichts",
+    "meaning": [
+      "nothing / not anything"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "past",
+      "grammar"
+    ],
+    "sourceIds": [
+      "l12-nichts-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "geboren",
+    "meaning": [
+      "born"
+    ],
+    "categories": [
+      "Expression"
+    ],
+    "subjects": [
+      "conversation",
+      "past"
+    ],
+    "sourceIds": [
+      "l12-geboren-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "der Durst",
+    "meaning": [
+      "thirst"
+    ],
+    "categories": [
+      "Noun"
+    ],
+    "subjects": [
+      "past"
+    ],
+    "sourceIds": [
+      "l12-durst-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "legen",
+    "meaning": [
+      "to lay / put"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs",
+      "past",
+      "travel"
+    ],
+    "sourceIds": [
+      "l12-legen-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  },
+  {
+    "de": "vermuten",
+    "meaning": [
+      "to suppose; to make a guess"
+    ],
+    "categories": [
+      "Verb"
+    ],
+    "subjects": [
+      "verbs"
+    ],
+    "sourceIds": [
+      "verb-model-vermuten-0"
+    ],
+    "reason": "Three-letter text placeholder; no semantic illustration."
+  }
+]

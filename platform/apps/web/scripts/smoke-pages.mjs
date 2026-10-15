@@ -467,6 +467,8 @@ async function httpSmoke(expectedPaths) {
       if (path === `${PAGES_BASE}/cheat-sheets/plurals/`) {
         assert(text.includes('data-sheet-view="plurals"'), "vocabulary page must default to plural grouping");
         for (const id of ["W012-0", "W051-0", "language-Persisch-0", "home-fernseher-0"]) assert(text.includes(`data-subject-entry="${id}"`), `complete vocabulary infographic missing ${id}`);
+        assert(!text.includes('data-subject-visual="source-glyph"'), "vocabulary infographic must not ship text placeholders instead of illustrations");
+        assert(text.includes('data-country-illustration="DE"'), "country flags must keep the shared outline illustration treatment");
         assert(text.includes('class="subject-vocabulary-visual"'), "plural grid missing infographic illustrations");
         assert(text.includes('class="subject-plural-meaning"'), "plural grid missing visible meanings");
         assert(text.includes('class="subject-plural-pattern-schema"'), "plural grid missing singular-to-plural diagrams");

@@ -1,0 +1,605 @@
+id,cardId,de,meaning,category,subjects,source,visual
+W001-0,W001,wie,how,Question word,questions|grammar,course,source-glyph
+W002-0,W002,wer,who,Question word,questions|grammar,course,source-glyph
+W003-0,W003,woher,where from,Question word,questions|grammar,course,source-glyph
+W004-0,W004,ich,I,Pronoun,grammar,course,source-glyph
+W005-0,W005,du,"you (one person, informal)",Pronoun,grammar,course,source-glyph
+W006-0,W006,er,he,Pronoun,grammar,course,source-glyph
+W007-0,W007,sie,she / they,Pronoun,grammar,course,source-glyph
+W008-0,W008,Sie,"you (formal, singular or plural)",Pronoun,grammar,course,source-glyph
+W009-0,W009,dir,to you / for you (informal),Pronoun,grammar,course,source-glyph
+W009-1,W009,Und dir?,and you? (informal),Pronoun,grammar,course,source-glyph
+W010-0,W010,das,this / that,Pronoun,grammar,course,source-glyph
+W011-0,W011,mein,my,Pronoun,grammar,course,source-glyph
+W011-1,W011,meine,my,Pronoun,grammar,course,source-glyph
+W012-0,W012,heißen,to be called / have the name,Verb,verbs,course,source-glyph
+W013-0,W013,sein,to be,Verb,verbs|past|travel,course,source-glyph
+W014-0,W014,kommen,to come,Verb,verbs|past|travel,course,source-glyph
+W015-0,W015,lernen,to learn / study,Verb,verbs|past,course,source-glyph
+W016-0,W016,das Alphabet,alphabet,Noun,everyday,course,source-glyph
+W022-0,W022,die Information,information / piece of information,Noun,everyday,course,source-glyph
+W023-0,W023,der Herr,Mr / gentleman,Noun,everyday,course,source-glyph
+W035-0,W035,und,and,Function word,grammar,course,source-glyph
+W036-0,W036,aus,from,Function word,grammar,course,source-glyph
+W037-0,W037,auch,also / too,Function word,grammar,course,source-glyph
+W038-0,W038,nicht,not,Function word,grammar,course,source-glyph
+W039-0,W039,sehr,very,Function word,grammar,course,source-glyph
+W040-0,W040,so,so / that / around / approximately,Function word,grammar|numbers|time,course,source-glyph
+W041-0,W041,gut,good / well,Function word,grammar,course,source-glyph
+W041-1,W041,"Gut, danke.","fine, thank you",Function word,grammar,course,source-glyph
+W041-2,W041,Nicht so gut.,not so good,Function word,grammar,course,source-glyph
+W041-3,W041,"Sehr gut, danke.","very well, thank you",Function word,grammar,course,source-glyph
+W042-0,W042,super,great / excellent,Function word,grammar,course,source-glyph
+W042-1,W042,Auch super.,also great,Function word,grammar,course,source-glyph
+W043-0,W043,es,it,Function word,grammar,course,source-glyph
+W044-0,W044,bitte,please / pardon,Function word,grammar,course,source-glyph
+W045-0,W045,Ihnen,to you / for you (formal),Function word,grammar,course,source-glyph
+W048-0,W048,der Abend,evening,Noun,numbers|time,course,source-glyph
+W058-0,W058,ah,ah / I see,Interjection,conversation,course,source-glyph
+W059-0,W059,die bekannte Persönlichkeit,well-known person / public figure,Noun,everyday,course,source-glyph
+W061-0,W061,ankreuzen,to tick / mark with a cross,Verb,verbs,course,source-glyph
+W062-0,W062,buchstabieren,to spell out,Verb,verbs,course,source-glyph
+W063-0,W063,werfen,to throw / toss,Verb,verbs,course,source-glyph
+W064-0,W064,die Münze,coin,Noun,everyday,course,source-glyph
+W067-0,W067,haben,to have,Verb,verbs|time|past|travel,course,source-glyph
+W068-0,W068,wohnen,to live / reside,Verb,verbs,course,source-glyph
+W069-0,W069,leben,to live,Verb,verbs,course,source-glyph
+W070-0,W070,zusammenleben,to live together,Verb,verbs,course,source-glyph
+W071-0,W071,machen,to do / make,Verb,verbs|past|travel,course,source-glyph
+W072-0,W072,arbeiten,to work,Verb,verbs|past,course,source-glyph
+W073-0,W073,sammeln,to collect,Verb,verbs,course,source-glyph
+W074-0,W074,studieren,to study at university,Verb,verbs,course,source-glyph
+W075-0,W075,kein,no / not a / not any,Function word,grammar,course,source-glyph
+W075-1,W075,keine,no / not any,Function word,grammar,course,source-glyph
+W076-0,W076,in,to / into (a destination here),Function word,grammar|time,course,source-glyph
+W077-0,W077,ihr,"you (plural, informal)",Function word,grammar,course,source-glyph
+W078-0,W078,wir,we,Function word,grammar,course,source-glyph
+W079-0,W079,ja,yes / really (emphasis in a compliment),Function word,grammar,course,source-glyph
+W080-0,W080,aber,but; emphasis in a compliment,Function word,grammar,course,source-glyph
+W081-0,W081,wo,where,Function word,grammar,course,source-glyph
+W082-0,W082,was,what,Function word,grammar,course,source-glyph
+W083-0,W083,als,as,Function word,grammar,course,source-glyph
+W084-0,W084,bei,at / for,Function word,grammar,course,source-glyph
+W085-0,W085,von,from / of,Function word,grammar,course,source-glyph
+W086-0,W086,alt,old,Adjective / adverb,descriptions,course,source-glyph
+W087-0,W087,verheiratet,married,Adjective / adverb,descriptions,course,source-glyph
+W088-0,W088,zusammen,together,Adjective / adverb,descriptions,course,source-glyph
+W089-0,W089,richtig,correct / right / properly / correctly,Adjective / adverb,descriptions,course,source-glyph
+W090-0,W090,falsch,wrong / incorrect,Adjective / adverb,descriptions,course,source-glyph
+W091-0,W091,geschieden,divorced,Adjective / adverb,descriptions,course,source-glyph
+W092-0,W092,allein,alone / on one's own,Adjective / adverb,descriptions,course,source-glyph
+W093-0,W093,beruflich,professionally / for a living,Adjective / adverb,descriptions,course,source-glyph
+W094-0,W094,jetzt,now,Adjective / adverb,descriptions,course,source-glyph
+W095-0,W095,minus,minus,Adjective / adverb,descriptions,course,source-glyph
+W096-0,W096,plus,plus,Adjective / adverb,descriptions,course,source-glyph
+W103-0,W103,der Punkt,point / full stop,Noun,everyday,course,source-glyph
+W104-0,W104,die Zahl,number,Noun,numbers,course,source-glyph
+W105-0,W105,das Rätsel,riddle / puzzle,Noun,everyday,course,source-glyph
+W106-0,W106,der Single,single person,Noun,everyday,course,source-glyph
+W108-0,W108,der Job,job,Noun,everyday,course,source-glyph
+W109-0,W109,der Beruf,occupation / profession,Noun,everyday,course,source-glyph
+W110-0,W110,die Stelle,job / position,Noun,everyday,course,source-glyph
+W112-0,W112,das Praktikum,internship / work placement,Noun,everyday,course,source-glyph
+W114-0,W114,die Herkunft,origin,Noun,everyday,course,source-glyph
+W116-0,W116,das Alter,age,Noun,everyday,course,source-glyph
+W117-0,W117,der Familienstand,marital status,Noun,everyday,course,source-glyph
+W119-0,W119,das Tier,animal,Noun,everyday,course,source-glyph
+W146-0,W146,der Tierarzt,veterinarian (male),Profession,people,course,source-glyph
+W146-1,W146,die Tierärztin,veterinarian (female),Profession,people,course,source-glyph
+W154-0,W154,der Dank,thanks / gratitude,Noun,everyday,course,source-glyph
+W157-0,W157,oder,or / right?,Function word,grammar|time,course,source-glyph
+W158-0,W158,für,for,Function word,grammar,course,source-glyph
+W159-0,W159,mehr,more,Function word,grammar,course,source-glyph
+W160-0,W160,fertig,finished / ready,Function word,grammar,course,source-glyph
+W161-0,W161,schon,already,Function word,grammar,course,source-glyph
+W166-0,W166,die Telefonnummer,telephone number,Noun,numbers|office,course,source-glyph
+W169-0,W169,glauben,to think / believe,Verb,verbs,course,source-glyph
+W170-0,W170,planen,to plan,Verb,verbs|hobbies|time,course,source-glyph
+W172-0,W172,dein,"your (one person, informal)",Function word,grammar,course,source-glyph
+W172-1,W172,deine,your (informal),Function word,grammar,course,source-glyph
+W173-0,W173,nein,no,Function word,grammar,course,source-glyph
+W174-0,W174,doch,yes (contradicting a negative question or claim),Function word,grammar,course,source-glyph
+W175-0,W175,welche,which,Function word,grammar,course,source-glyph
+W176-0,W176,ein bisschen,a little (bit),Function word,grammar,course,source-glyph
+W177-0,W177,gar nicht,not at all,Function word,grammar,course,source-glyph
+W178-0,W178,ein,a / an; one,Function word,grammar,course,source-glyph
+W178-1,W178,eine,a / an,Function word,grammar,course,source-glyph
+W207-0,W207,das Mitglied,member,Noun,everyday,course,source-glyph
+W230-0,W230,der Elektriker,Electrician (male),Profession,people,teacher-extra,source-glyph
+W230-1,W230,die Elektrikerin,Electrician (female),Profession,people,teacher-extra,source-glyph
+W238-0,W238,der Straßenarbeiter,road / street construction worker (male),Profession,people,teacher-extra,source-glyph
+W238-1,W238,die Straßenarbeiterin,road / street construction worker (female),Profession,people,teacher-extra,source-glyph
+W242-0,W242,der Maurer,Bricklayer (male),Profession,people,teacher-extra,source-glyph
+W242-1,W242,die Maurerin,Bricklayer (female),Profession,people,teacher-extra,source-glyph
+W252-0,W252,der Koch,Cook/Chef (male),Profession,people,teacher-extra,source-glyph
+W252-1,W252,die Köchin,Cook/Chef (female),Profession,people,teacher-extra,source-glyph
+W254-0,W254,der Müllwerker,Refuse Collector (male),Profession,people,teacher-extra,source-glyph
+W254-1,W254,die Müllwerkerin,Refuse Collector (female),Profession,people,teacher-extra,source-glyph
+W256-0,W256,der Metzger,Butcher (male),Profession,people,teacher-extra,source-glyph
+W256-1,W256,die Metzgerin,Butcher (female),Profession,people,teacher-extra,source-glyph
+W262-0,W262,der Bauarbeiter,Construction Worker (male),Profession,people,teacher-extra,source-glyph
+W262-1,W262,die Bauarbeiterin,Construction Worker (female),Profession,people,teacher-extra,source-glyph
+W264-0,W264,der Feuerwehrmann,Firefighter (male),Profession,people,teacher-extra,source-glyph
+W264-1,W264,die Feuerwehrfrau,Firefighter (female),Profession,people,teacher-extra,source-glyph
+W266-0,W266,der Konditor,Confectioner (male),Profession,people,teacher-extra,source-glyph
+W266-1,W266,die Konditorin,Confectioner (female),Profession,people,teacher-extra,source-glyph
+W268-0,W268,der Hausmann,homemaker (male),Profession,people,teacher-extra,source-glyph
+W268-1,W268,die Hausfrau,homemaker (female),Profession,people,teacher-extra,source-glyph
+W273-0,W273,der Polizist,Police Officer (male),Profession,people,teacher-extra,source-glyph
+W273-1,W273,die Polizistin,Police Officer (female),Profession,people,teacher-extra,source-glyph
+W281-0,W281,der Soldat,Soldier (male),Profession,people,teacher-extra,source-glyph
+W281-1,W281,die Soldatin,Soldier (female),Profession,people,teacher-extra,source-glyph
+W285-0,W285,der Geschäftsmann,Businessperson (male),Profession,people,teacher-extra,source-glyph
+W285-1,W285,die Geschäftsfrau,Businessperson (female),Profession,people,teacher-extra,source-glyph
+W297-0,W297,der Tankwart,Gas Station Attendant (male),Profession,people,teacher-extra,source-glyph
+W297-1,W297,die Tankwartin,Gas Station Attendant (female),Profession,people,teacher-extra,source-glyph
+W299-0,W299,der Geheimagent,Secret Agent (male),Profession,people,teacher-extra,source-glyph
+W299-1,W299,die Geheimagentin,Secret Agent (female),Profession,people,teacher-extra,source-glyph
+W324-0,W324,der Norden,north,Geography,countries,course,source-glyph
+W325-0,W325,der Osten,east,Geography,countries,course,source-glyph
+W326-0,W326,der Süden,south,Geography,countries,course,source-glyph
+W327-0,W327,der Westen,west,Geography,countries,course,source-glyph
+W328-0,W328,der Nordosten,northeast,Geography,countries,course,source-glyph
+W329-0,W329,der Südosten,southeast,Geography,countries,course,source-glyph
+W330-0,W330,der Südwesten,southwest,Geography,countries,course,source-glyph
+W331-0,W331,der Nordwesten,northwest,Geography,countries,course,source-glyph
+W339-0,W339,das Foto,photo,Noun,everyday,course,source-glyph
+W343-0,W343,die Million,million,Noun,numbers,course,source-glyph
+W347-0,W347,supercool,really cool,Adjective / adverb,descriptions,course,source-glyph
+W348-0,W348,noch,still / yet / more,Adjective / adverb,descriptions,course,source-glyph
+W349-0,W349,viel,much / a lot,Adjective / adverb,descriptions,course,source-glyph
+W350-0,W350,hier,here / speaking (on the phone),Adjective / adverb,descriptions,course,source-glyph
+W351-0,W351,nur,only,Adjective / adverb,descriptions,course,source-glyph
+W352-0,W352,etwa,about / approximately,Adjective / adverb,descriptions|past|grammar,course,source-glyph
+W354-0,W354,überall,anywhere / everywhere,Adjective / adverb,descriptions,course,source-glyph
+W355-0,W355,deutschsprachig,German-speaking,Adjective / adverb,descriptions,course,source-glyph
+W356-0,W356,warum,why,Adjective / adverb,descriptions,course,source-glyph
+W357-0,W357,gern,gladly / like doing something,Adjective / adverb,descriptions,course,source-glyph
+W358-0,W358,mal,just / once,Adjective / adverb,descriptions,course,source-glyph
+W360-0,W360,der Übersetzer,translator (male),Profession,people,course,source-glyph
+W360-1,W360,die Übersetzerin,translator (female),Profession,people,course,source-glyph
+W362-0,W362,der Psychologe,psychologist (male),Profession,people,course,source-glyph
+W362-1,W362,die Psychologin,psychologist (female),Profession,people,course,source-glyph
+W370-0,W370,der Auszubildende,trainee / apprentice (male),Profession,people,course,source-glyph
+W370-1,W370,die Auszubildende,trainee / apprentice (female),Profession,people,course,source-glyph
+W378-0,W378,der Weber,weaver (male),Profession,people,course,source-glyph
+W378-1,W378,die Weberin,weaver (female),Profession,people,course,source-glyph
+W382-0,W382,der Wagner,wheelwright (male),Profession,people,course,source-glyph
+W382-1,W382,die Wagnerin,wheelwright (female),Profession,people,course,source-glyph
+W386-0,W386,der Chocolatier,chocolatier / chocolate maker (male),Profession,people,course,source-glyph
+W386-1,W386,die Chocolatière,chocolatier / chocolate maker (female),Profession,people,course,source-glyph
+W388-0,W388,der IT-Trainer,IT trainer (male),Profession,people,course,source-glyph
+W388-1,W388,die IT-Trainerin,IT trainer (female),Profession,people,course,source-glyph
+W390-0,W390,der Software-Trainer,software trainer (male),Profession,people,course,source-glyph
+W390-1,W390,die Software-Trainerin,software trainer (female),Profession,people,course,source-glyph
+W392-0,W392,die Konferenz,conference,Noun,everyday,course,source-glyph
+W397-0,W397,die Homepage,homepage / website,Noun,everyday,course,source-glyph
+W398-0,W398,die Stadt,city / town,Noun,everyday,course,source-glyph
+W399-0,W399,die Straße,street,Noun,office,course,source-glyph
+W400-0,W400,die Hausnummer,house number,Noun,office,course,source-glyph
+W404-0,W404,das Marketing,marketing,Noun,everyday,course,source-glyph
+W405-0,W405,die Adresse,address,Noun,office,course,source-glyph
+W406-0,W406,das Hobby,hobby,Noun,hobbies,course,source-glyph
+W409-0,W409,die Postleitzahl,postal code / postcode / ZIP code,Noun,office,course,source-glyph
+W410-0,W410,der Ort,place / town,Noun,office,course,source-glyph
+W411-0,W411,die Wohnung,flat / apartment,Noun,everyday,course,source-glyph
+W413-0,W413,interessant,interesting,Adjective / adverb,descriptions,course,source-glyph
+W414-0,W414,ledig,unmarried / never married,Adjective / adverb,descriptions,course,source-glyph
+W415-0,W415,neu,new,Adjective / adverb,descriptions,course,source-glyph
+W416-0,W416,also,so / well / then / so / therefore,Adjective / adverb,descriptions|past|grammar,course,source-glyph
+W417-0,W417,mich,me,Pronoun,grammar,course,source-glyph
+W418-0,W418,Ihr,your (formal),Pronoun,grammar,course,source-glyph
+W418-1,W418,Ihre,your (formal),Pronoun,grammar,course,source-glyph
+W429-0,W429,verbinden,to connect / match,Verb,verbs,course,source-glyph
+W430-0,W430,ergänzen,to complete / fill in,Verb,verbs,course,source-glyph
+W431-0,W431,zuordnen,to match / assign,Verb,verbs,course,source-glyph
+W432-0,W432,markieren,to mark / highlight,Verb,verbs,course,source-glyph
+W439-0,W439,schließen,to close,Verb,verbs,course,source-glyph
+W440-0,W440,spielen,to play / act,Verb,verbs|hobbies|past,course,source-glyph
+W441-0,W441,vorspielen,to act out / mime,Verb,verbs,course,source-glyph
+W442-0,W442,raten,to guess,Verb,verbs,course,source-glyph
+W443-0,W443,meinen,to think / mean,Verb,verbs,course,source-glyph
+W444-0,W444,wissen,to know (a fact),Verb,verbs|time,course,source-glyph
+W445-0,W445,verstehen,to understand,Verb,verbs|travel,course,source-glyph
+W446-0,W446,vorlesen,to read aloud,Verb,verbs,course,source-glyph
+W447-0,W447,vorstellen,to introduce,Verb,verbs,course,source-glyph
+W448-0,W448,geben,to give,Verb,verbs,course,source-glyph
+W449-0,W449,korrigieren,to correct,Verb,verbs,course,source-glyph
+W450-0,W450,üben,to practise,Verb,verbs,course,source-glyph
+W451-0,W451,fehlen,to be missing,Verb,verbs,course,source-glyph
+W452-0,W452,wählen,to choose,Verb,verbs,course,source-glyph
+W453-0,W453,würfeln,to roll a die / to roll dice,Verb,verbs,course,source-glyph
+W454-0,W454,ziehen,to move / draw / pull,Verb,verbs,course,source-glyph
+W455-0,W455,bekommen,to get / receive,Verb,verbs,course,source-glyph
+W456-0,W456,tauschen,to exchange / swap,Verb,verbs,course,source-glyph
+W457-0,W457,lösen,to solve,Verb,verbs,course,source-glyph
+W458-0,W458,bilden,to form / build,Verb,verbs,course,source-glyph
+W459-0,W459,klatschen,to clap,Verb,verbs,course,source-glyph
+W460-0,W460,präsentieren,to present,Verb,verbs,course,source-glyph
+W463-0,W463,das Wort,word,Noun,classroom,course,source-glyph
+W465-0,W465,das Bildlexikon,picture vocabulary / picture dictionary,Noun,everyday,course,source-glyph
+W467-0,W467,das Wörterbuch,dictionary,Noun,classroom,course,source-glyph
+W468-0,W468,das Online-Wörterbuch,online dictionary,Noun,classroom,course,source-glyph
+W472-0,W472,die Gruppe,group,Noun,everyday,course,source-glyph
+W474-0,W474,die Frage,question,Noun,classroom|time,course,source-glyph
+W475-0,W475,die Antwort,answer,Noun,classroom|time,course,source-glyph
+W476-0,W476,die Lösung,solution / answer,Noun,everyday,course,source-glyph
+W477-0,W477,der Sitzplan,seating plan,Noun,everyday,course,source-glyph
+W479-0,W479,das Beispiel,example,Noun,everyday,course,source-glyph
+W480-0,W480,die Nummer,number,Noun,numbers|office,course,source-glyph
+W482-0,W482,das Spiel,game,Noun,everyday,course,source-glyph
+W483-0,W483,das Würfelspiel,dice game,Noun,everyday,course,source-glyph
+W484-0,W484,die Spielfigur,playing piece / game token,Noun,everyday,course,source-glyph
+W485-0,W485,die Rechenaufgabe,arithmetic problem,Noun,everyday,course,source-glyph
+W486-0,W486,die Lücke,gap / blank,Noun,everyday,course,source-glyph
+W487-0,W487,die Angabe,detail / information item,Noun,everyday,course,source-glyph
+W490-0,W490,der Wortakzent,word stress,Noun,everyday,course,source-glyph
+W491-0,W491,die Silbe,syllable,Noun,everyday,course,source-glyph
+W492-0,W492,die Satzmelodie,sentence intonation,Noun,everyday,course,source-glyph
+W497-0,W497,dann,then,Function word,grammar,course,source-glyph
+W498-0,W498,noch einmal,once again,Function word,grammar,course,source-glyph
+W499-0,W499,weiter,further / continue,Function word,grammar,course,source-glyph
+W500-0,W500,zu zweit,in pairs / two together,Function word,grammar,course,source-glyph
+W501-0,W501,zu dritt,in threes / three together,Function word,grammar,course,source-glyph
+W502-0,W502,selbst,oneself / yourself,Function word,grammar,course,source-glyph
+W503-0,W503,mit,with,Function word,grammar,course,source-glyph
+W504-0,W504,über,about,Function word,grammar,course,source-glyph
+W505-0,W505,auf,on,Function word,grammar,course,source-glyph
+W506-0,W506,nach,after / past (a clock time) / to a city or an article-free country,Function word,grammar|numbers|time|past|travel,course,source-glyph
+W507-1,W507,Es geht.,so-so / not bad,Verb,verbs|hobbies|time|past|travel,course,source-glyph
+W508-0,W508,freuen,to please / be glad,Verb,verbs,course,source-glyph
+W509-0,W509,zeigen,to show,Verb,verbs,course,source-glyph
+W510-0,W510,filmen,to film,Verb,verbs,course,source-glyph
+W512-0,W512,bedeuten,to mean,Verb,verbs,course,source-glyph
+W513-0,W513,aufhängen,to hang up / display,Verb,verbs,course,source-glyph
+W514-0,W514,mischen,to mix / shuffle,Verb,verbs,course,source-glyph
+W515-0,W515,helfen,to help,Verb,verbs,course,source-glyph
+W516-0,W516,aufnehmen,to record,Verb,verbs,course,source-glyph
+W517-0,W517,aktivieren,to activate / enable,Verb,verbs,course,source-glyph
+W518-0,W518,achten,to pay attention,Verb,verbs,course,source-glyph
+W520-0,W520,der Film,film / video,Noun,past|hobbies,course,source-glyph
+W521-0,W521,die Flagge,flag,Noun,everyday,course,source-glyph
+W525-0,W525,die Vorbereitung,preparation,Noun,everyday,course,source-glyph
+W526-0,W526,das Mikrofon,microphone,Noun,everyday,course,source-glyph
+W531-0,W531,arbeitslos,unemployed,Adjective / adverb,descriptions,course,source-glyph
+W533-0,W533,können,can / to be able to / to be able to / can,Verb,verbs|hobbies|time,course,source-glyph
+W534-0,W534,türkisch,Turkish (adjective),Adjective / adverb,descriptions,course,source-glyph
+W535-0,W535,sortieren,to put in order / sort,Verb,verbs,course,source-glyph
+W536-0,W536,passen,to fit / match,Verb,verbs,course,source-glyph
+W537-0,W537,kennen,to know / be familiar with,Verb,verbs|hobbies,course,source-glyph
+W539-0,W539,das Kettenspiel,chain game,Noun,everyday,course,source-glyph
+W541-0,W541,die Rückfrage,follow-up / clarification question,Noun,everyday,course,source-glyph
+W542-0,W542,das Glück,happiness / luck,Noun,everyday,course,source-glyph
+W543-0,W543,Achtung!,Attention! / Watch out!,Interjection,conversation,course,source-glyph
+l4-schoen-0,l4-schoen,schön,beautiful / lovely,Adjective,descriptions,course,source-glyph
+l4-haesslich-0,l4-haesslich,hässlich,ugly,Adjective,descriptions,course,source-glyph
+l4-modern-0,l4-modern,modern,modern,Adjective,descriptions,course,source-glyph
+l4-praktisch-0,l4-praktisch,praktisch,practical / handy,Adjective,descriptions,course,source-glyph
+l4-neu-0,l4-neu,neu,new,Adjective,descriptions,course,source-glyph
+l4-kosten-0,l4-kosten,kosten,to cost,Verb,verbs,course,source-glyph
+l4-kennen-0,l4-kennen,kennen,to know / be familiar with,Verb,verbs,course,source-glyph
+l4-shoppen-0,l4-shoppen,shoppen,to shop,Verb,verbs,course,source-glyph
+l4-million-0,l4-million,die Million,million,Noun,numbers,course,source-glyph
+l4-glueck-0,l4-glueck,das Glück,luck,Noun,everyday,course,source-glyph
+l4-stern-0,l4-stern,der Stern,star,Noun,everyday,course,source-glyph
+l4-zuhause-0,l4-zuhause,zu Hause,at home,Expression,conversation,course,source-glyph
+l4-wieviel-0,l4-wieviel,wie viel,how much,Expression,conversation,course,source-glyph
+l4-nur-0,l4-nur,nur,only,Expression,conversation,course,source-glyph
+l4-wirklich-0,l4-wirklich,wirklich,really,Expression,conversation,course,source-glyph
+l4-zu-0,l4-zu,zu,too (before an adjective),Expression,conversation,course,source-glyph
+l4-da-0,l4-da,da,there / over there,Expression,conversation,course,source-glyph
+l4-mal-0,l4-mal,mal,just (softens a request),Expression,conversation,course,source-glyph
+l4-denn-0,l4-denn,denn,then (conversational question particle),Expression,conversation,course,source-glyph
+l4-oh-0,l4-oh,oh,oh,Expression,conversation,course,source-glyph
+l5-ein-eine-0,l5-ein-eine,ein / eine,a / an,Expression,conversation|grammar,course,source-glyph
+l5-farbe-0,l5-farbe,die Farbe,colour / color,Noun,colours-materials,course,source-glyph
+l5-etwas-0,l5-etwas,etwas,something,Expression,conversation,course,source-glyph
+l5-viele-0,l5-viele,viele,many,Expression,conversation,course,source-glyph
+l5-und-so-weiter-0,l5-und-so-weiter,und so weiter,and so on,Expression,conversation,course,source-glyph
+l5-aha-0,l5-aha,aha,aha / I see,Expression,conversation,course,source-glyph
+l5-auf-deutsch-0,l5-auf-deutsch,auf Deutsch,in German,Expression,conversation|classroom,course,source-glyph
+l5-nennen-0,l5-nennen,nennen,to name,Verb,verbs,course,source-glyph
+l5-bitten-0,l5-bitten,bitten,to ask for / request,Verb,verbs,course,source-glyph
+l5-man-0,l5-man,man,one / you (people in general),Expression,conversation|grammar,course,source-glyph
+l5-sich-bedanken-0,l5-sich-bedanken,sich bedanken,to thank / say thank you,Verb,verbs,course,source-glyph
+l5-danke-schoen-0,l5-danke-schoen,danke schön,thank you,Expression,conversation,course,source-glyph
+l5-problem-0,l5-problem,das Problem,problem,Noun,everyday,course,source-glyph
+l5-bitte-schoen-0,l5-bitte-schoen,Bitte schön.,You are welcome.,Expression,conversation,course,source-glyph
+l5-kein-problem-0,l5-kein-problem,Kein Problem.,No problem.,Expression,conversation,course,source-glyph
+l5-wiederholung-0,l5-wiederholung,die Wiederholung,repetition,Noun,classroom,course,source-glyph
+l5-reagieren-auf-0,l5-reagieren-auf,reagieren auf,to react to,Verb,verbs,course,source-glyph
+l5-ich-weiss-nicht-0,l5-ich-weiss-nicht,Ich weiß nicht.,I do not know.,Expression,conversation|classroom,course,source-glyph
+l5-online-0,l5-online,online,online,Expression,conversation|objects,course,source-glyph
+l5-bestellen-0,l5-bestellen,bestellen,to order,Verb,verbs|travel,course,source-glyph
+l5-ware-0,l5-ware,die Ware,goods / merchandise,Noun,objects,course,source-glyph
+l5-produkt-0,l5-produkt,das Produkt,product,Noun,objects,course,source-glyph
+l5-produktname-0,l5-produktname,der Produktname,product name,Noun,office,course,source-glyph
+l5-menge-0,l5-menge,die Menge,amount / quantity,Noun,office,course,source-glyph
+l5-unterstrich-0,l5-unterstrich,der Unterstrich,underscore,Noun,office,course,source-glyph
+l5-aet-0,l5-aet,ät,at sign (@),Expression,conversation|office,course,source-glyph
+l5-kein-keine-0,l5-kein-keine,kein / keine,no / not a,Expression,conversation|grammar,course,source-glyph
+l6-oh-gott-0,l6-oh-gott,Oh Gott!,Oh God!,Expression,conversation,course,source-glyph
+l6-gott-0,l6-gott,der Gott,god,Noun,objects,course,source-glyph
+l6-arbeit-0,l6-arbeit,die Arbeit,work,Noun,office,course,source-glyph
+l6-hilfe-0,l6-hilfe,Hilfe!,Help!,Expression,conversation,course,source-glyph
+l6-traum-0,l6-traum,der Traum,dream,Noun,objects,course,source-glyph
+l6-albtraum-0,l6-albtraum,der Albtraum,nightmare,Noun,objects,course,source-glyph
+l6-hunger-0,l6-hunger,der Hunger,hunger,Noun,food,course,source-glyph
+l6-hunger-haben-0,l6-hunger-haben,Hunger haben,to be hungry,Expression,conversation,course,source-glyph
+l6-brauchen-0,l6-brauchen,brauchen,to need,Verb,verbs,course,source-glyph
+l6-kaffee-0,l6-kaffee,der Kaffee,coffee,Noun,food,course,source-glyph
+l6-viele-gruesse-0,l6-viele-gruesse,Viele Grüße,kind regards,Expression,conversation,course,source-glyph
+l6-gruss-0,l6-gruss,der Gruß,greeting,Noun,everyday,course,source-glyph
+l6-yoga-0,l6-yoga,das Yoga,yoga,Noun,everyday,course,source-glyph
+l6-leider-0,l6-leider,leider,unfortunately,Expression,conversation|time,course,source-glyph
+l6-zeit-haben-0,l6-zeit-haben,Zeit haben,to have time,Expression,conversation,course,source-glyph
+l6-keine-zeit-haben-0,l6-keine-zeit-haben,keine Zeit haben,to have no time,Expression,conversation,course,source-glyph
+l6-liebe-gruesse-lg-0,l6-liebe-gruesse-lg,Liebe Grüße / LG,kind regards / love,Expression,conversation,course,source-glyph
+l6-in-die-tasche-packen-0,l6-in-die-tasche-packen,in die Tasche packen,to put in the bag,Expression,conversation,course,source-glyph
+l6-schreibtisch-0,l6-schreibtisch,der Schreibtisch,desk,Noun,office,course,source-glyph
+l6-arbeitsplatz-0,l6-arbeitsplatz,der Arbeitsplatz,workspace,Noun,office,course,source-glyph
+l6-ach-da-ist-er-ja-0,l6-ach-da-ist-er-ja,"Ach, da ist er ja!","Oh, there it is!",Expression,conversation,course,source-glyph
+l6-schon-wieder-0,l6-schon-wieder,schon wieder,again,Expression,conversation,course,source-glyph
+l6-vielleicht-0,l6-vielleicht,vielleicht,maybe,Expression,conversation,course,source-glyph
+l6-quartett-0,l6-quartett,das Quartett,quartets (card game),Noun,objects,course,source-glyph
+l6-hallo-hier-0,l6-hallo-hier,"Hallo, … hier.","Hello, … speaking.",Expression,conversation,course,source-glyph
+l6-was-kann-ich-fuer-sie-tun-0,l6-was-kann-ich-fuer-sie-tun,Was kann ich für Sie tun?,How can I help you?,Expression,conversation,course,source-glyph
+l6-da-sein-0,l6-da-sein,da sein,to be there,Expression,conversation,course,source-glyph
+l6-auf-wiederhoeren-0,l6-auf-wiederhoeren,Auf Wiederhören.,Goodbye (on the phone).,Expression,conversation,course,source-glyph
+l6-schnell-0,l6-schnell,schnell,quick / fast,Adjective,descriptions,course,source-glyph
+l6-schwer-0,l6-schwer,schwer,heavy / difficult,Adjective,descriptions,course,source-glyph
+l6-packen-0,l6-packen,packen,to pack,Verb,verbs,course,source-glyph
+l6-handynummer-0,l6-handynummer,die Handynummer,mobile phone number,Noun,office,course,source-glyph
+l6-abkuerzung-0,l6-abkuerzung,die Abkürzung,abbreviation,Noun,classroom,course,source-glyph
+l6-idee-0,l6-idee,die Idee,idea,Noun,time,course,source-glyph
+l6-stress-0,l6-stress,der Stress,stress,Noun,everyday,course,source-glyph
+l6-liebe-0,l6-liebe,die Liebe,love,Noun,everyday,course,source-glyph
+l6-wuerfel-0,l6-wuerfel,der Würfel,die / dice,Noun,objects,course,source-glyph
+l7-toll-0,l7-toll,toll,great,Adjective,descriptions,course,source-glyph
+l7-normal-0,l7-normal,normal,normal,Adjective,descriptions,course,source-glyph
+l7-komisch-0,l7-komisch,komisch,strange / funny,Adjective,descriptions,course,source-glyph
+l7-bloed-0,l7-bloed,blöd,stupid / silly,Adjective,descriptions,course,source-glyph
+l7-lustig-0,l7-lustig,lustig,funny,Adjective,descriptions,course,source-glyph
+l7-zurzeit-0,l7-zurzeit,zurzeit,currently / at the moment,Expression,conversation,course,source-glyph
+l7-immer-0,l7-immer,immer,always,Expression,conversation|hobbies,course,source-glyph
+l7-backen-0,l7-backen,backen,to bake,Verb,verbs|hobbies|past,course,source-glyph
+l7-ski-fahren-0,l7-ski-fahren,Ski fahren,to ski,Expression,conversation|hobbies,course,source-glyph
+l7-du-kannst-ja-0,l7-du-kannst-ja,Du kannst ja …,You really can … (surprised compliment),Expression,conversation,course,source-glyph
+l7-du-kannst-wirklich-0,l7-du-kannst-wirklich,Du kannst wirklich …,You really can …,Expression,conversation,course,source-glyph
+l7-du-kannst-aber-0,l7-du-kannst-aber,Du kannst aber …,You really can … (emphatic compliment),Expression,conversation,course,source-glyph
+l7-wir-alle-0,l7-wir-alle,wir alle,all of us,Expression,conversation|grammar,course,source-glyph
+l7-alle-0,l7-alle,alle,all,Expression,conversation|grammar,course,source-glyph
+l7-alle-drei-0,l7-alle-drei,alle drei,all three,Expression,conversation|grammar,course,source-glyph
+l7-beide-0,l7-beide,beide,both,Expression,conversation|grammar,course,source-glyph
+l7-auch-nicht-0,l7-auch-nicht,auch nicht,not either,Expression,conversation|grammar,course,source-glyph
+l7-auflegen-0,l7-auflegen,auflegen,to DJ / put on music,Verb,verbs|hobbies,course,source-glyph
+l7-mixen-0,l7-mixen,mixen,to mix music,Verb,verbs|hobbies,course,source-glyph
+l7-dj-0,l7-dj,der DJ,DJ,Noun,people,course,source-glyph
+l7-lieben-0,l7-lieben,lieben,to love,Verb,verbs|hobbies,course,source-glyph
+l7-kickboxen-0,l7-kickboxen,das Kickboxen,kickboxing,Noun,hobbies,course,source-glyph
+l7-seniorenheim-0,l7-seniorenheim,das Seniorenheim,care home for older people,Noun,everyday,course,source-glyph
+l7-versicherung-0,l7-versicherung,die Versicherung,insurance / insurance company,Noun,everyday,course,source-glyph
+l7-kaufmann-0,l7-kaufmann,der Kaufmann,businessman / merchant,Noun,people,course,source-glyph
+l7-kauffrau-0,l7-kauffrau,die Kauffrau,businesswoman / merchant,Noun,people,course,source-glyph
+l7-kaufleute-0,l7-kaufleute,die Kaufleute,businesspeople / merchants,Noun,people,course,source-glyph
+l7-versicherungskaufmann-0,l7-versicherungskaufmann,der Versicherungskaufmann,insurance clerk (male),Noun,people,course,source-glyph
+l7-versicherungskauffrau-0,l7-versicherungskauffrau,die Versicherungskauffrau,insurance clerk (female),Noun,people,course,source-glyph
+l7-versicherungskaufleute-0,l7-versicherungskaufleute,die Versicherungskaufleute,insurance clerks,Noun,people,course,source-glyph
+l7-in-der-freizeit-0,l7-in-der-freizeit,in der Freizeit,in one's free time,Expression,conversation|hobbies,course,source-glyph
+l7-freizeit-0,l7-freizeit,die Freizeit,free time / leisure,Noun,hobbies,course,source-glyph
+l7-oft-0,l7-oft,oft,often,Expression,conversation|hobbies,course,source-glyph
+l7-klub-0,l7-klub,der Klub,club,Noun,time,course,source-glyph
+l7-fitness-0,l7-fitness,die Fitness,fitness,Noun,hobbies,course,source-glyph
+l7-studio-0,l7-studio,das Studio,studio,Noun,everyday,course,source-glyph
+l7-fitnessstudio-0,l7-fitnessstudio,das Fitnessstudio,gym / fitness centre,Noun,time,course,source-glyph
+l7-nie-0,l7-nie,nie,never,Expression,conversation|hobbies,course,source-glyph
+l7-lange-0,l7-lange,lange,for a long time / long,Expression,conversation|past|numbers|time,course,source-glyph
+l7-manchmal-0,l7-manchmal,manchmal,sometimes,Expression,conversation|hobbies,course,source-glyph
+l7-vertikal-0,l7-vertikal,vertikal,vertical,Expression,conversation|classroom,course,source-glyph
+l7-horizontal-0,l7-horizontal,horizontal,horizontal,Expression,conversation|classroom,course,source-glyph
+l7-diagonal-0,l7-diagonal,diagonal,diagonal,Expression,conversation|classroom,course,source-glyph
+l7-freunde-treffen-0,l7-freunde-treffen,Freunde treffen,to meet friends,Expression,conversation|hobbies,course,source-glyph
+l7-treffen-0,l7-treffen,treffen,to meet,Verb,verbs|hobbies|time|past|travel,course,source-glyph
+l7-fahren-0,l7-fahren,fahren,to drive / ride / travel / to go by vehicle / to travel by vehicle,Verb,verbs|hobbies|travel|past,course,source-glyph
+l7-surfen-0,l7-surfen,surfen,to browse / surf / to surf,Verb,verbs|hobbies|past,course,source-glyph
+l7-spass-machen-0,l7-spass-machen,Spaß machen,to be fun,Expression,conversation,course,source-glyph
+l7-spass-0,l7-spass,der Spaß,fun,Noun,hobbies,course,source-glyph
+l7-lieblings-0,l7-lieblings,Lieblings-,favourite (word prefix),Expression,conversation|grammar,course,source-glyph
+l7-was-machst-du-gern-0,l7-was-machst-du-gern,Was machst du gern?,What do you like doing?,Expression,conversation,course,source-glyph
+l7-gern-tun-0,l7-gern-tun,gern tun,to like doing,Expression,conversation,course,source-glyph
+l7-in-deiner-freizeit-0,l7-in-deiner-freizeit,in deiner Freizeit,in your free time,Expression,conversation|hobbies,course,source-glyph
+l7-schlecht-0,l7-schlecht,schlecht,bad / badly,Adjective,descriptions,course,source-glyph
+l8-schwimmbad-0,l8-schwimmbad,das Schwimmbad,swimming pool,Noun,time,course,source-glyph
+l8-kino-0,l8-kino,das Kino,cinema,Noun,time,course,source-glyph
+l8-nachmittag-0,l8-nachmittag,der Nachmittag,afternoon,Noun,numbers|time,course,source-glyph
+l8-um-0,l8-um,um,at (a clock time),Expression,conversation|time|grammar,course,source-glyph
+l8-am-0,l8-am,am,on / in / at (with days and most parts of the day),Expression,conversation|time|grammar,course,source-glyph
+l8-wann-0,l8-wann,Wann?,When?,Expression,conversation|time,course,source-glyph
+l8-am-wochenende-0,l8-am-wochenende,am Wochenende,at the weekend,Expression,conversation|numbers|time,course,source-glyph
+l8-frei-0,l8-frei,frei,off / free,Expression,conversation,course,source-glyph
+l8-in-der-nacht-0,l8-in-der-nacht,in der Nacht,at night,Expression,conversation|numbers|time,course,source-glyph
+l8-das-weiss-ich-noch-nicht-0,l8-das-weiss-ich-noch-nicht,Das weiß ich noch nicht.,I do not know yet.,Expression,conversation|time,course,source-glyph
+l8-lust-auf-0,l8-lust-auf,Lust auf …,in the mood for …,Expression,conversation|time,course,source-glyph
+l8-keine-lust-0,l8-keine-lust,Keine Lust.,I do not feel like it.,Expression,conversation|time,course,source-glyph
+l8-lust-0,l8-lust,die Lust,desire / inclination,Noun,time,course,source-glyph
+l8-gute-idee-0,l8-gute-idee,Gute Idee!,Good idea!,Expression,conversation|time,course,source-glyph
+l8-um-viertel-nach-0,l8-um-viertel-nach,um Viertel nach,at quarter past,Expression,conversation|numbers|time,course,source-glyph
+l8-um-halb-0,l8-um-halb,um halb,at half past (the previous hour),Expression,conversation|numbers|time,course,source-glyph
+l8-spaet-0,l8-spaet,spät,late,Expression,conversation|numbers|time,course,source-glyph
+l8-okay-0,l8-okay,okay,okay,Expression,conversation|time,course,source-glyph
+l8-bis-dann-0,l8-bis-dann,Bis dann!,See you then!,Expression,conversation|time,course,source-glyph
+l8-vormittag-0,l8-vormittag,der Vormittag,morning (before noon),Noun,numbers|time,course,source-glyph
+l8-mittag-0,l8-mittag,der Mittag,noon / midday,Noun,numbers|time,course,source-glyph
+l8-museum-0,l8-museum,das Museum,museum,Noun,time,course,source-glyph
+l8-caf-0,l8-caf,das Café,cafe,Noun,time,course,source-glyph
+l8-ausstellung-0,l8-ausstellung,die Ausstellung,exhibition,Noun,time,course,source-glyph
+l8-disco-0,l8-disco,die Disco,disco,Noun,time,course,source-glyph
+l8-bar-0,l8-bar,die Bar,bar,Noun,time,course,source-glyph
+l8-viertel-nach-0,l8-viertel-nach,Viertel nach,quarter past,Expression,conversation|numbers|time,course,source-glyph
+l8-vor-0,l8-vor,vor,to / before (a clock time),Expression,conversation|numbers|time,course,source-glyph
+l8-halb-0,l8-halb,halb,halfway to the next hour,Expression,conversation|numbers|time,course,source-glyph
+l8-viertel-vor-0,l8-viertel-vor,Viertel vor,quarter to,Expression,conversation|numbers|time,course,source-glyph
+l8-wie-viel-uhr-ist-es-0,l8-wie-viel-uhr-ist-es,Wie viel Uhr ist es?,What time is it?,Expression,conversation|time,course,source-glyph
+l8-wie-spaet-ist-es-0,l8-wie-spaet-ist-es,Wie spät ist es?,What time is it?,Expression,conversation|time,course,source-glyph
+l8-es-ist-0,l8-es-ist,Es ist …,It is … (a clock time here),Expression,conversation|numbers|time,course,source-glyph
+l8-ruecken-0,l8-ruecken,der Rücken,back,Noun,people,course,source-glyph
+l8-ja-genau-0,l8-ja-genau,"Ja, genau.","Yes, exactly.",Expression,conversation|time,course,source-glyph
+l8-vorschlag-0,l8-vorschlag,der Vorschlag,suggestion,Noun,time,course,source-glyph
+l8-tut-mir-leid-0,l8-tut-mir-leid,tut mir leid,I am sorry,Expression,conversation|time,course,source-glyph
+l8-traumtag-0,l8-traumtag,der Traumtag,dream day,Noun,numbers|time,course,source-glyph
+l9-moegen-0,l9-moegen,mögen,to like,Verb,verbs|food,course,source-glyph
+l9-zum-fruehstueck-0,l9-zum-fruehstueck,zum Frühstück,for breakfast,Expression,conversation|food,course,source-glyph
+l9-besonders-0,l9-besonders,besonders,especially,Adjective,descriptions,course,source-glyph
+l9-guten-appetit-0,l9-guten-appetit,Guten Appetit!,Enjoy your meal!,Expression,conversation,course,source-glyph
+l9-hier-bitte-0,l9-hier-bitte,hier bitte,there you are,Expression,conversation,course,source-glyph
+l9-lecker-0,l9-lecker,lecker,delicious,Adjective,descriptions,course,source-glyph
+l9-ketchup-0,l9-ketchup,der Ketchup,ketchup (also das Ketchup),Noun,food,course,source-glyph
+l9-ketchup-1,l9-ketchup,das Ketchup,ketchup (also das Ketchup),Noun,food,course,source-glyph
+l9-witz-0,l9-witz,der Witz,joke,Noun,everyday,course,source-glyph
+l9-fit-0,l9-fit,fit,fit,Adjective,descriptions,course,source-glyph
+l9-intelligent-0,l9-intelligent,intelligent,intelligent,Adjective,descriptions,course,source-glyph
+l9-prima-0,l9-prima,prima,great,Adjective,descriptions,course,source-glyph
+l9-gedicht-0,l9-gedicht,das Gedicht,poem,Noun,everyday,course,source-glyph
+l9-auf-dem-tisch-0,l9-auf-dem-tisch,auf dem Tisch,on the table,Expression,conversation|food,course,source-glyph
+l9-trinken-0,l9-trinken,trinken,to drink,Verb,verbs|food|past|travel,course,source-glyph
+l9-butter-0,l9-butter,die Butter,butter,Noun,food,course,source-glyph
+l9-schinken-0,l9-schinken,der Schinken,ham,Noun,food,course,source-glyph
+l9-wuenschen-0,l9-wuenschen,wünschen,to wish / want,Verb,verbs|food,course,source-glyph
+l9-tasse-0,l9-tasse,die Tasse,cup,Noun,food,course,source-glyph
+l9-moechten-0,l9-moechten,möchten,would like,Verb,verbs|food,course,source-glyph
+l9-nusskuchen-0,l9-nusskuchen,der Nusskuchen,nut cake,Noun,food,course,source-glyph
+l9-apfelkuchen-0,l9-apfelkuchen,der Apfelkuchen,apple cake,Noun,food,course,source-glyph
+l9-schokoladenkuchen-0,l9-schokoladenkuchen,der Schokoladenkuchen,chocolate cake,Noun,food,course,source-glyph
+l9-schade-0,l9-schade,schade,what a pity,Expression,conversation,course,source-glyph
+l9-na-gut-0,l9-na-gut,na gut,all right then,Expression,conversation,course,source-glyph
+l9-nehmen-0,l9-nehmen,nehmen,to take / have (when ordering),Verb,verbs|food,course,source-glyph
+l9-unser-0,l9-unser,unser,our,Expression,conversation|grammar,course,source-glyph
+l9-speisekarte-0,l9-speisekarte,die Speisekarte,menu (list of dishes),Noun,food,course,source-glyph
+l9-sorgenfrei-0,l9-sorgenfrei,sorgenfrei,free of worry,Adjective,descriptions,course,source-glyph
+l9-tomatensalat-0,l9-tomatensalat,der Tomatensalat,tomato salad,Noun,food,course,source-glyph
+l9-kartoffel-0,l9-kartoffel,die Kartoffel,potato,Noun,food,course,source-glyph
+l9-wuerstchen-0,l9-wuerstchen,das Würstchen,sausage,Noun,food,course,source-glyph
+l9-huhn-0,l9-huhn,das Huhn,chicken,Noun,food,course,source-glyph
+l9-vanille-0,l9-vanille,die Vanille,vanilla,Noun,food,course,source-glyph
+l9-kugel-0,l9-kugel,die Kugel,scoop / ball,Noun,food,course,source-glyph
+l9-sahne-0,l9-sahne,die Sahne,cream,Noun,food,course,source-glyph
+l9-stueck-0,l9-stueck,das Stück,piece,Noun,food,course,source-glyph
+l9-zitronenkuchen-0,l9-zitronenkuchen,der Zitronenkuchen,lemon cake,Noun,food,course,source-glyph
+l9-perfekt-0,l9-perfekt,perfekt,perfect,Adjective,descriptions,course,source-glyph
+l9-schmecken-0,l9-schmecken,schmecken,to taste,Verb,verbs|food,course,source-glyph
+l9-nuss-0,l9-nuss,die Nuss,nut,Noun,food,course,source-glyph
+l9-schinkenbroetchen-0,l9-schinkenbroetchen,das Schinkenbrötchen,ham roll,Noun,food,course,source-glyph
+l9-tomatensuppe-0,l9-tomatensuppe,die Tomatensuppe,tomato soup,Noun,food,course,source-glyph
+l9-kaesekuchen-0,l9-kaesekuchen,der Käsekuchen,cheesecake,Noun,food,course,source-glyph
+l9-ich-auch-0,l9-ich-auch,Ich auch.,Me too.,Expression,conversation,course,source-glyph
+l9-ich-nicht-0,l9-ich-nicht,Ich nicht.,I do not.,Expression,conversation,course,source-glyph
+l9-ich-schon-0,l9-ich-schon,Ich schon.,I do (contrasting a negative statement).,Expression,conversation,course,source-glyph
+l9-ich-auch-nicht-0,l9-ich-auch-nicht,Ich auch nicht.,Me neither.,Expression,conversation,course,source-glyph
+l9-gemuese-0,l9-gemuese,das Gemüse,vegetables,Noun,food,course,source-glyph
+l9-rezept-0,l9-rezept,das Rezept,recipe,Noun,food,course,source-glyph
+l9-kueche-0,l9-kueche,die Küche,kitchen,Noun,food,course,source-glyph
+l10-kurz-0,l10-kurz,kurz,shortly / short,Expression,conversation|numbers|time,course,source-glyph
+l10-starten-0,l10-starten,starten,to take off / start,Verb,verbs|travel,course,source-glyph
+l10-ankommen-0,l10-ankommen,ankommen,to arrive,Verb,verbs|travel|past,course,source-glyph
+l10-dort-0,l10-dort,dort,there,Expression,conversation,course,source-glyph
+l10-noch-mal-0,l10-noch-mal,noch mal,again,Expression,conversation,course,source-glyph
+l10-frueh-0,l10-frueh,früh,early,Expression,conversation|numbers|time,course,source-glyph
+l10-sicher-0,l10-sicher,sicher,sure / certain,Adjective,descriptions,course,source-glyph
+l10-stimme-0,l10-stimme,die Stimme,voice,Noun,people,course,source-glyph
+l10-versuchen-0,l10-versuchen,versuchen,to try,Verb,verbs|travel,course,source-glyph
+l10-hoffentlich-0,l10-hoffentlich,hoffentlich,hopefully,Expression,conversation,course,source-glyph
+l10-verspaetung-0,l10-verspaetung,die Verspätung,delay,Noun,travel,course,source-glyph
+l10-kaputt-0,l10-kaputt,kaputt,broken,Adjective,descriptions,course,source-glyph
+l10-maschine-0,l10-maschine,die Maschine,plane / machine,Noun,travel,course,source-glyph
+l10-alles-0,l10-alles,alles,everything,Expression,conversation,course,source-glyph
+l10-alles-klar-0,l10-alles-klar,alles klar,all clear / all right,Expression,conversation,course,source-glyph
+l10-lieber-0,l10-lieber,lieber,rather / preferably,Expression,conversation,course,source-glyph
+l10-wenig-0,l10-wenig,wenig,little / not much,Adjective,descriptions,course,source-glyph
+l10-akku-0,l10-akku,der Akku,battery,Noun,objects,course,source-glyph
+l10-abholen-0,l10-abholen,abholen,to pick up,Verb,verbs|travel|past,course,source-glyph
+l10-was-fuer-0,l10-was-fuer,was für,what a / what kind of,Expression,conversation,course,source-glyph
+l10-natuerlich-0,l10-natuerlich,natürlich,of course,Expression,conversation,course,source-glyph
+l10-sich-freuen-0,l10-sich-freuen,sich freuen,to be happy / look forward,Verb,verbs|travel,course,source-glyph
+l10-bis-gleich-0,l10-bis-gleich,Bis gleich!,See you in a moment!,Expression,conversation,course,source-glyph
+l10-einsteigen-0,l10-einsteigen,einsteigen,to get on / get in / to get on / in,Verb,verbs|travel|past,course,source-glyph
+l10-umsteigen-0,l10-umsteigen,umsteigen,to change trains or buses,Verb,verbs|travel,course,source-glyph
+l10-aussteigen-0,l10-aussteigen,aussteigen,to get off / get out,Verb,verbs|travel,course,source-glyph
+l10-verkehr-0,l10-verkehr,der Verkehr,traffic,Noun,travel,course,source-glyph
+l10-verkehrsmittel-0,l10-verkehrsmittel,das Verkehrsmittel,means of transport,Noun,travel,course,source-glyph
+l10-abfahren-0,l10-abfahren,abfahren,to depart by train or road,Verb,verbs|travel|past,course,source-glyph
+l10-fernsehen-0,l10-fernsehen,fernsehen,to watch television,Verb,verbs|travel|past,course,source-glyph
+l10-von-bahnsteig-0,l10-von-bahnsteig,von Bahnsteig …,from platform …,Expression,conversation|travel,course,source-glyph
+l10-einfahren-0,l10-einfahren,einfahren,to pull in / arrive at a station,Verb,verbs|travel,course,source-glyph
+l10-an-gleis-0,l10-an-gleis,an Gleis …,at track …,Expression,conversation|travel,course,source-glyph
+l10-enden-0,l10-enden,enden,to end,Verb,verbs|travel,course,source-glyph
+l10-beginnen-0,l10-beginnen,beginnen,to begin,Verb,verbs|travel,course,source-glyph
+l10-stehen-0,l10-stehen,stehen,to stand / be situated,Verb,verbs|travel,course,source-glyph
+l10-naechst-0,l10-naechst,nächst-,next (changes ending),Adjective,descriptions,course,source-glyph
+l10-halt-0,l10-halt,der Halt,stop,Noun,travel,course,source-glyph
+l10-vorsicht-0,l10-vorsicht,die Vorsicht,caution,Noun,everyday,course,source-glyph
+l10-dich-0,l10-dich,dich,you (informal singular object),Expression,conversation|grammar,course,source-glyph
+l10-kurz-vor-0,l10-kurz-vor,kurz vor,shortly before,Expression,conversation|numbers|time,course,source-glyph
+l10-kurz-nach-0,l10-kurz-nach,kurz nach,shortly after,Expression,conversation|numbers|time,course,source-glyph
+l10-informieren-0,l10-informieren,informieren,to inform,Verb,verbs|travel,course,source-glyph
+l10-besuchen-0,l10-besuchen,besuchen,to visit,Verb,verbs|travel|past,course,source-glyph
+l10-gerade-0,l10-gerade,gerade,right now,Expression,conversation|numbers|time,course,source-glyph
+l11-wald-0,l11-wald,der Wald,forest,Noun,past,course,source-glyph
+l11-zu-wenig-0,l11-zu-wenig,zu wenig,too little,Expression,conversation|past|grammar,course,source-glyph
+l11-zu-viel-0,l11-zu-viel,zu viel,too much,Expression,conversation|past|grammar,course,source-glyph
+l11-vogel-0,l11-vogel,der Vogel,bird,Noun,past,course,source-glyph
+l11-pause-0,l11-pause,die Pause,break,Noun,past,course,source-glyph
+l11-serie-0,l11-serie,die Serie,series,Noun,past|hobbies,course,source-glyph
+l11-hallo-schatz-0,l11-hallo-schatz,Hallo Schatz!,"Hello, darling!",Expression,conversation|past,course,source-glyph
+l11-von-bis-0,l11-von-bis,von … bis,from … to / until,Expression,conversation|past|numbers|time,course,source-glyph
+l11-danach-0,l11-danach,danach,afterwards,Expression,conversation|past|numbers|time,course,source-glyph
+l11-t-shirt-0,l11-t-shirt,das T-Shirt,T-shirt,Noun,objects|past,course,source-glyph
+l11-ab-0,l11-ab,ab,from … onward,Expression,conversation|past|numbers|time,course,source-glyph
+l11-ganz-0,l11-ganz,ganz,whole / all,Expression,conversation|past|grammar,course,source-glyph
+l11-zurueckkommen-0,l11-zurueckkommen,zurückkommen,to come back,Verb,verbs|past,course,source-glyph
+l11-kuss-0,l11-kuss,der Kuss,kiss,Noun,past,course,source-glyph
+l11-geoeffnet-0,l11-geoeffnet,geöffnet,open,Adjective,descriptions|past,course,source-glyph
+l11-boutique-0,l11-boutique,die Boutique,boutique,Noun,past,course,source-glyph
+l11-mode-0,l11-mode,die Mode,fashion,Noun,past,course,source-glyph
+l11-laden-0,l11-laden,der Laden,shop,Noun,past,course,source-glyph
+l11-geschlossen-0,l11-geschlossen,geschlossen,closed,Adjective,descriptions|past,course,source-glyph
+l11-eiscaf-0,l11-eiscaf,das Eiscafé,ice cream parlor,Noun,past,course,source-glyph
+l11-kiosk-0,l11-kiosk,der Kiosk,kiosk,Noun,past,course,source-glyph
+l11-letzt-0,l11-letzt,letzt-,last / previous,Expression,conversation|past|numbers|time,course,source-glyph
+l11-einladen-0,l11-einladen,einladen,to invite,Verb,verbs|past,course,source-glyph
+l11-ja-habe-ich-0,l11-ja-habe-ich,"Ja, habe ich.","Yes, I did.",Expression,conversation|past,course,source-glyph
+l11-nein-habe-ich-nicht-0,l11-nein-habe-ich-nicht,"Nein, habe ich nicht.","No, I did not.",Expression,conversation|past,course,source-glyph
+l12-marathon-0,l12-marathon,der Marathon,marathon,Noun,past|seasons|hobbies,course,source-glyph
+l12-es-gibt-0,l12-es-gibt,es gibt,there is / there are,Expression,conversation|past|grammar,course,source-glyph
+l12-seit-0,l12-seit,seit,since / for an ongoing period,Expression,conversation|past|seasons|numbers|time,course,source-glyph
+l12-kilometer-0,l12-kilometer,der Kilometer,kilometer,Noun,past|travel,course,source-glyph
+l12-unterwegs-0,l12-unterwegs,unterwegs,on the road / traveling,Expression,conversation|past|travel,course,source-glyph
+l12-radtour-0,l12-radtour,die Radtour,cycling tour,Noun,past|seasons|hobbies,course,source-glyph
+l12-bis-0,l12-bis,bis,as far as / until,Expression,conversation|past|grammar,course,source-glyph
+l12-weiterfahren-0,l12-weiterfahren,weiterfahren,to continue the journey,Verb,verbs|past|travel,course,source-glyph
+l12-wetter-0,l12-wetter,das Wetter,weather,Noun,past,course,source-glyph
+l12-ein-paar-0,l12-ein-paar,ein paar,a few,Expression,conversation|past|grammar,course,source-glyph
+l12-bleiben-0,l12-bleiben,bleiben,to stay,Verb,verbs|past|travel,course,source-glyph
+l12-riesenrad-0,l12-riesenrad,das Riesenrad,Ferris wheel,Noun,objects|past,course,source-glyph
+l12-fast-0,l12-fast,fast,almost,Expression,conversation|past|grammar,course,source-glyph
+l12-mitte-0,l12-mitte,die Mitte,middle,Noun,past|seasons|numbers|time,course,source-glyph
+l12-anfang-0,l12-anfang,der Anfang,beginning,Noun,past|seasons|numbers|time,course,source-glyph
+l12-dieser-dieses-diese-0,l12-dieser-dieses-diese,dieser / dieses / diese,this / these,Expression,conversation|past|grammar,course,source-glyph
+l12-zurueckfahren-0,l12-zurueckfahren,zurückfahren,to travel back,Verb,verbs|past|travel,course,source-glyph
+l12-tor-0,l12-tor,das Tor,gate,Noun,objects|past,course,source-glyph
+l12-ziemlich-0,l12-ziemlich,ziemlich,quite / pretty,Adjective,descriptions|past,course,source-glyph
+l12-cool-0,l12-cool,cool,cool,Adjective,descriptions|past,course,source-glyph
+l12-durch-0,l12-durch,durch,through,Expression,conversation|past|travel,course,source-glyph
+l12-jahreszeit-0,l12-jahreszeit,die Jahreszeit,season,Noun,past|seasons|numbers|time,course,source-glyph
+l12-passieren-0,l12-passieren,passieren,to happen,Verb,verbs|past|travel,course,source-glyph
+l12-springen-0,l12-springen,springen,to jump,Verb,verbs|past|travel,course,source-glyph
+l12-hubschrauber-0,l12-hubschrauber,der Hubschrauber,helicopter,Noun,past|travel,course,source-glyph
+l12-zehn-meter-brett-0,l12-zehn-meter-brett,das Zehn-Meter-Brett,ten-meter diving board,Noun,objects|past,course,source-glyph
+l12-ja-das-stimmt-0,l12-ja-das-stimmt,"Ja, das stimmt.","Yes, that is right.",Expression,conversation|past,course,source-glyph
+l12-jeder-jedes-jede-0,l12-jeder-jedes-jede,jeder / jedes / jede,each / every,Expression,conversation|past|grammar,course,source-glyph
+l12-wie-lange-0,l12-wie-lange,wie lange,how long,Expression,conversation|past,course,source-glyph
+l12-insel-0,l12-insel,die Insel,island,Noun,past|countries,course,source-glyph
+l12-nichts-0,l12-nichts,nichts,nothing / not anything,Expression,conversation|past|grammar,course,source-glyph
+l12-geboren-0,l12-geboren,geboren,born,Expression,conversation|past,course,source-glyph
+l12-durst-0,l12-durst,der Durst,thirst,Noun,past,course,source-glyph
+l12-legen-0,l12-legen,legen,to lay / put,Verb,verbs|past|travel,course,source-glyph
+verb-model-vermuten-0,verb-model-vermuten,vermuten,to suppose; to make a guess,Verb,verbs,course,source-glyph

@@ -39,6 +39,8 @@
     "tests/web/subject-sheet-filters-behavior.test.ts",
     "tests/web/subject-infographic-behavior.test.ts",
     "tests/web/subject-illustration-ui.test.ts",
+    "tests/web/subject-illustration-coverage-ui.test.ts",
+    "tests/web/country-vocabulary-illustration-ui.test.ts",
     "tests/web/object-vocabulary-behavior.test.ts",
     "tests/web/german-text-ui.test.ts",
     "tests/web/course-library-navigation-behavior.test.ts",
