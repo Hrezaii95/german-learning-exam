@@ -1,5 +1,5 @@
 import type {WordCard,WordRow} from "../content/word-card-types";
-import {studyUnits} from "./course-lessons";
+import lessonFive from "../../generated/lesson-five-study.json";
 
 export type ObjectVocabularyIcon = "watch" | "car" | "mobile" | "book" | "pencil" | "glasses" | "bottle" | "camera" | "necklace" | "pen" | "key" | "bag" | "thing" | "lighter" | "wallet" | "tissue" | "umbrella" | "rain" | "jacket" | "match" | "brush" | "soap" | "towel" | "hairdryer" | "sun" | "sunglasses" | "telephone" | "house";
 export type ObjectVocabularyTone = "male" | "female" | "neuter" | "plural";
@@ -20,7 +20,7 @@ const icons:Record<string,ObjectVocabularyIcon>={
 
 /** The Lesson 5 object collection, resolved against the supplied merged word cards. */
 export function objectVocabulary(cards:WordCard[]):ObjectVocabularyEntry[]{
-  const words=studyUnits.find(unit=>unit.number===5)?.words?.filter(word=>word.category==="Objects")??[];
+  const words=lessonFive.words.filter(word=>word.category==="Objects");
   return words.flatMap(word=>{
     const card=cards.find(candidate=>candidate.rows.some(row=>row.singular.text===word.de));
     const row=card?.rows.find(candidate=>candidate.singular.text===word.de);
