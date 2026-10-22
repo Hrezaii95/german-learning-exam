@@ -123,6 +123,31 @@ export function parseWortwerkEvidence(events: readonly SyncEvent[], now?: Date):
   return { answers, sessions: [...latestSessions.values()].map(row => row.session) };
 }
 
+/** Split cumulative effort across its actual study dates without moving earlier check-ins. */
+export function deriveHabitSessions(events: readonly SyncEvent[], now: Date): LearningSession[] {
+  const counts = new Map<string, { answered: number; correct: number }>();
+  const dated = new Map<string, LearningSession>();
+  const seen = new Set<string>();
+  const rows = events.filter(event => event && event.store === "wortwerk" && event.schemaVersion === 1
+    && event.type === "session" && nonempty(event.id) && timestamp(event.createdAt)
+    && Date.parse(event.createdAt) <= now.getTime()).sort(compareEvent);
+  for (const event of rows) {
+    if (seen.has(event.id)) continue;
+    seen.add(event.id);
+    const session = parseSession(event);
+    if (!session) continue;
+    const previous = counts.get(session.sessionId) ?? { answered: 0, correct: 0 };
+    const answered = Math.max(0, session.answered - previous.answered);
+    const correct = Math.min(answered, Math.max(0, session.correct - previous.correct));
+    counts.set(session.sessionId, { answered: Math.max(previous.answered, session.answered), correct: Math.max(previous.correct, session.correct) });
+    const key = JSON.stringify([session.sessionId, session.studyDate]);
+    const priorDate = dated.get(key);
+    dated.set(key, { ...session, sessionId: key, answered: (priorDate?.answered ?? 0) + answered,
+      correct: (priorDate?.correct ?? 0) + correct, completed: false });
+  }
+  return [...dated.values()];
+}
+
 export type WortwerkDerivationOptions = {
   now: Date; timeZone: string; capabilities?: readonly LearningCapability[];
 };
@@ -134,7 +159,7 @@ export function deriveWortwerkState(snapshot: WortwerkSnapshot, { now, timeZone,
   const progress = deriveProgress(capabilities, answers, now);
   return {
     snapshot, answers, sessions, progress, summary: summarizeProgress(progress),
-    habit: deriveHabit(sessions, now, zone), rewards: deriveRewards(answers, sessions, now),
+    habit: deriveHabit(sessions, now, zone, deriveHabitSessions(snapshot.events, now)), rewards: deriveRewards(answers, sessions, now),
     metrics: deriveLearningMetrics(answers, sessions, now),
   };
 }

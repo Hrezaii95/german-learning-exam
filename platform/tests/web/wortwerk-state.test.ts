@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { createWortwerkStore } from "../../apps/web/lib/wortwerk/store";
 import {
-  deriveWortwerkState, parseWortwerkEvidence, recordAnswer, recordAssignmentProgress,
+  deriveWortwerkState, deriveHabitSessions, parseWortwerkEvidence, recordAnswer, recordAssignmentProgress,
   recordSession, resolveWortwerkTimeZone,
 } from "../../apps/web/lib/wortwerk/learning-state";
 import type { GeneratedTask, GradeResult } from "../../packages/wortwerk/src/tasks.js";
@@ -25,6 +25,35 @@ const answerPayload = { packId: "fixture", itemId: "word-1", dimension: "meaning
   format: "recall", correct: true, hinted: false, studyDate: "2026-10-22", calendarDate: "2026-10-22", skill: "vocabulary" };
 
 describe("Wortwerk event adapters", () => {
+  it.each([
+    ["UTC", "2026-10-22T02:59:00.000Z", "2026-10-22T03:01:00.000Z"],
+    ["Europe/Berlin", "2026-03-29T00:59:00.000Z", "2026-03-29T01:01:00.000Z"],
+    ["Europe/Berlin", "2026-10-25T01:59:00.000Z", "2026-10-25T02:01:00.000Z"],
+    ["America/New_York", "2026-03-08T06:59:00.000Z", "2026-03-08T07:01:00.000Z"],
+    ["America/New_York", "2026-11-01T07:59:00.000Z", "2026-11-01T08:01:00.000Z"],
+  ])("keeps dated habit effort across the 03:00 cutoff in %s (%s)", (timeZone, beforeAt, afterAt) => {
+    let now = new Date(beforeAt);
+    const store = createWortwerkStore(undefined, { now: () => now, deviceId: "cutoff" });
+    const startedAt = new Date(now.getTime() - 300000).toISOString();
+    const input = { sessionId: "cross-cutoff", mode: "run" as const, startedAt, correct: 0, answered: 0, completed: false };
+    for (let answered = 1; answered <= 5; answered++) recordSession({ ...input, answered, correct: answered }, { store, now, timeZone });
+    const yesterday = parseWortwerkEvidence(store.getSnapshot().events).sessions[0]!.studyDate;
+    now = new Date(afterAt);
+    recordSession({ ...input, answered: 6, correct: 6 }, { store, now, timeZone });
+    const derive = () => deriveWortwerkState(store.getSnapshot(), { now, timeZone });
+    const first = derive();
+    expect(first.habit.checkInDays.find(day => day.date === yesterday)).toMatchObject({ studied: true });
+    expect(first.habit.checkInDays.find(day => day.today)).toMatchObject({ studied: false });
+    expect(first.habit).toMatchObject({ streak: 1, goalRuns: 0 });
+    const events = store.getSnapshot().events;
+    expect(deriveHabitSessions([...events].reverse().concat(events), now)).toEqual(deriveHabitSessions(events, now));
+    recordSession({ ...input, answered: 6, correct: 6, completed: true }, { store, now, timeZone });
+    expect(derive().habit).toMatchObject({ streak: 1, goalRuns: 1 });
+    expect(derive().habit.checkInDays.find(day => day.today)?.studied).toBe(false);
+    for (let answered = 7; answered <= 10; answered++) recordSession({ ...input, answered, correct: answered }, { store, now, timeZone });
+    expect(derive().habit.checkInDays.find(day => day.today)?.studied).toBe(true);
+    expect(derive().habit.streak).toBe(2);
+  });
   it("takes event identity and time from the envelope and ignores unrelated events", () => {
     const event = raw({ ...answerPayload, eventId: "spoof", createdAt: "1900-01-01", extra: "ignored" });
     const evidence = parseWortwerkEvidence([event, event, raw({}, { type: "unknown" }), raw(answerPayload, { schemaVersion: 2 })]);

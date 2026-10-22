@@ -140,7 +140,7 @@ export function deriveWeeklyRecap(answers: readonly LearningAnswer[], sessions: 
   const allXp = deriveRewards(answers, sessions, now).xp;
   const beforeXp = deriveRewards(answers, sessions, before).xp;
   return { startDate, endDate, answered: rows.length, correct: rows.filter(answer => answer.correct).length, activeDays: dates.size,
-    completedRuns: runs.filter(session => session.mode === "run" && isMeaningfulSession(session)).length,
+    completedRuns: runs.filter(session => session.mode === "run" && session.completed && isMeaningfulSession(session)).length,
     listeningTasks: rows.filter(answer => answer.skill === "listening").length, speakingCycles: rows.filter(answer => answer.skill === "speaking").length,
     writingSubmissions: rows.filter(answer => answer.skill === "writing").length, xp: Math.max(0, allXp - beforeXp),
     learningMetrics: deriveLearningMetrics(answers, sessions, now) };
@@ -150,7 +150,7 @@ export type Quest = { id: string; title: string; progress: number; target: numbe
 export function deriveQuests(answers: readonly LearningAnswer[], sessions: readonly LearningSession[], now: Date, timeZone: string): Quest[] {
   const date = studyDate(now, timeZone);
   const rows = orderedAnswers(answers, now).filter(answer => answer.studyDate === date);
-  const runs = orderedSessions(sessions, now).filter(session => session.studyDate === date && session.mode === "run" && isMeaningfulSession(session));
+  const runs = orderedSessions(sessions, now).filter(session => session.studyDate === date && session.mode === "run" && session.completed && isMeaningfulSession(session));
   const values: Array<Omit<Quest, "complete">> = [
     { id: "daily-run", title: "Complete one Daily Run", progress: Math.min(1, runs.length), target: 1 },
     { id: "recall", title: "Recall five answers without hints", progress: Math.min(5, rows.filter(answer => answer.correct && !answer.hinted && answer.format === "recall").length), target: 5 },
