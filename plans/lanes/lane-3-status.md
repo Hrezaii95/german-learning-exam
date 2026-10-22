@@ -6,7 +6,7 @@ Updated 2026-10-22 by Lane 3. Owner requests one draft per item into `codex/live
 |---|---|---|---|---|
 | L3-0 | Secret-free lane CI | draft PR | https://github.com/Hrezaii95/german-learning-exam/pull/6 | Orchestrator gate amendment applied: private originals remain a local owner gate. |
 | L3-1 | Cloudflare root hosting | draft PR | https://github.com/Hrezaii95/german-learning-exam/pull/3 | Local hosting verified; no live deployment. Exactly three lesson links may remain red on lane branches until Lane 1 integration. |
-| L3-2 | Database and auth | in progress | — | Argon2id unblocks auth; D1 schema/API/account UI implemented, security review and combined validation underway. |
+| L3-2 | Database and auth | draft PR | https://github.com/Hrezaii95/german-learning-exam/pull/18 | Argon2id unblocks auth; D1 schema/API/account UI implemented, security review and combined validation underway. |
 | L3-3 | Seed accounts | in progress | — | Idempotent CLI and real local D1 seeding/sign-in tests pass; publication pending review. |
 | L3-4 | Progress sync | in progress | — | Registry, durable queue, learner wrapper, consent/import and API implemented; cross-tab isolation review underway. |
 | L3-5 | Classes and assignments | in progress | — | Membership/position/assignments/progress/extras implemented; role-change transaction review underway. |

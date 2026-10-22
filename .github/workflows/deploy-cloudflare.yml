@@ -134,11 +134,8 @@ jobs:
         working-directory: platform
         run: npm run deploy:cloudflare -- --dry-run
 
-      # Private originals are deliberately outside Git. Keep their full audit
-      # fail-closed, after reproducible checks and before any live mutation.
-      - name: Validate source manifest
-        if: steps.cloudflare.outputs.ready == 'true'
-        run: node tools/validate-source-manifest.mjs
+      # Full source-manifest validation needs 454 private originals and stays
+      # a local owner-machine gate (orchestrator decision 2026-10-22).
 
       - name: Deploy Worker and custom domain
         if: steps.cloudflare.outputs.ready == 'true'
