@@ -53,7 +53,7 @@ These are the well-established principles the five ideas draw on, mapped to what
 
 ## Idea 2: Drei Türen (Three Doors), an article sprint with listening
 
-**What it is:** An illustrated noun card slides in, the word is spoken aloud, and three coloured doors wait at the bottom: **der** (blue), **die** (pink) and **das** (green). Swipe or tap the right door. Get it right and the card flips to show the plural, which is played as audio; the learner then taps the matching ending chip (**-e · -(e)n · -s · -er · — · -innen**).
+**What it is:** An illustrated noun card slides in, the word is spoken aloud, and three coloured doors wait at the bottom: **der** (blue), **die** (raspberry red) and **das** (green). Swipe or tap the right door. Get it right and the card flips to show the plural, which is played as audio; the learner then taps the matching ending chip (**-e · -(e)n · -s · -er · — · -innen**).
 
 **Loop:**
 - 12 cards per round, interleaved across genders and patterns.
@@ -125,7 +125,7 @@ A single "session" could chain all of them: **Detektiv (learn the rule) → Forg
 
 ## Prompts for ChatGPT image generation
 
-To get mockups that look like *this* app rather than a generic game, paste the **style block** and **one idea prompt** together in the same message. Each image is a mobile portrait screen (1024 × 1536). Image models often garble long text, so the prompts keep on-screen words few and exact; if letters come out wrong, ask GPT to "regenerate with exactly this spelling: …".
+The colours below are the ones the preferred cheat sheets actually use (`app/cheat-sheets/subjects/subjects.css:46-49` and `plurals.css`), not the brighter global tokens; see the design audit. To get mockups that look like *this* app rather than a generic game, paste the **style block** and **one idea prompt** together in the same message. Each image is a mobile portrait screen (1024 × 1536). Image models often garble long text, so the prompts keep on-screen words few and exact; if letters come out wrong, ask GPT to "regenerate with exactly this spelling: …".
 
 ### Style block (paste first, every time)
 
@@ -135,11 +135,11 @@ Create a high-fidelity mobile app UI mockup, portrait 1024x1536, shown flat (no 
 Visual style (follow exactly):
 - Background: warm cream paper #F3EFE8. Cards: off-white #FFFDF8 with a 1px warm-grey border #E4DDD2, 16px rounded corners, very soft shadow.
 - Text: deep green-black ink #203536. Headings in a bold, tight, modern grotesk sans-serif (like Inter Display Bold); body in a regular sans-serif.
-- Grammatical gender colours are the core system: der = blue #246BFD, die = pink #E64C86, das = green #2E9D68, plural = purple #7957D5. Articles and the nouns' line illustrations are drawn in their gender colour.
-- Changed plural endings are highlighted with a small butter-yellow chip #F6D77A behind the letters; changed umlaut vowels sit in a small lavender chip #E4DCFA.
+- Grammatical gender colours are the core system: der = blue #245FA7, die = raspberry red #B82E4C, das = green #237149, plural = purple #8C4DAA. Articles and the nouns' line illustrations are drawn in their gender colour.
+- Changed plural endings are highlighted with a small butter-yellow chip #F8E1A1 with a 2px amber underline #B27B19; changed umlaut vowels sit in a small lavender chip #DFD6F2 with a 2px violet underline #8760AF.
 - Illustrations: simple single-weight outline icons (2px line, rounded caps), one colour each, no fills, no gradients, no 3D, no cartoon faces, inside a soft pale circle.
 - Bottom tab bar in dark indigo #211A3D with five white line icons labelled: Book, Lessons, Cheat sheets, My review, Menu. "Cheat sheets" is active with a lavender pill.
-- Toggles and primary buttons: dark green #2F5D50 with white text, pill shaped.
+- Toggles and primary buttons: dark green #345D4C with white text, pill shaped.
 - Overall mood: editorial, uncluttered, generous white space, like a printed study sheet that became interactive. No confetti, no mascots, no neon, no dark mode.
 - All German text must be spelled exactly as given, including umlauts (ä, ö, ü).
 ```
@@ -149,7 +149,7 @@ Visual style (follow exactly):
 ```
 Screen: "Grid Quest" progress map.
 Top: small caps label "YOUR PLURAL MAP", big heading "Gender × plural", and a slim progress bar reading "214 / 660 nouns mastered".
-Main: a 3-column grid with column headers "der" (blue), "die" (pink), "das" (green) and row labels on the left: "-e", "-(e)n", "—", "Umlaut + -er". Each cell holds 3–4 small round noun tokens: mastered tokens show a coloured line illustration plus the word (e.g. "der Tisch", "die Lampe", "das Buch"); unmastered tokens are faded grey silhouettes. Each token has three tiny rings below it (meaning, article, plural), some filled.
+Main: a 3-column grid with column headers "der" (blue), "die" (raspberry red), "das" (green) and row labels on the left: "-e", "-(e)n", "—", "Umlaut + -er". Each cell holds 3–4 small round noun tokens: mastered tokens show a coloured line illustration plus the word (e.g. "der Tisch", "die Lampe", "das Buch"); unmastered tokens are faded grey silhouettes. Each token has three tiny rings below it (meaning, article, plural), some filled.
 One row ("Umlaut + -er") has a small gold-outline badge at the end reading "21/21".
 Bottom above the tab bar: a dark green pill button "Start mission · 2 min".
 ```
@@ -160,7 +160,7 @@ Bottom above the tab bar: a dark green pill button "Start mission · 2 min".
 Screen: "Drei Türen" article sprint, mid-round.
 Top: "Round 4 / 12" on the left, a small combo meter "×5" on the right, a thin progress line.
 Centre: one large off-white card with a blue line illustration of a chair in a pale circle, the word "Stuhl" below it, and a small speaker button "Listen".
-Below the card: three tall rounded door-shaped buttons side by side, filled softly in their colours with white bold labels: "der" (blue #246BFD), "die" (pink #E64C86), "das" (green #2E9D68). The "der" door glows slightly as if just tapped correctly.
+Below the card: three tall rounded door-shaped buttons side by side, filled softly in their colours with white bold labels: "der" (blue #245FA7), "die" (raspberry red #B82E4C), "das" (green #237149). The "der" door glows slightly as if just tapped correctly.
 Under the doors: a row of small ending chips "-e", "-(e)n", "-s", "-er", "—", "-innen", with a hint "Now pick the plural ending".
 A subtle toast at the top of the card: "der Stuhl → die Stühle" with the "ü" in a lavender chip and "e" in a yellow chip.
 ```
@@ -181,7 +181,7 @@ Bottom: dark green pill button "Check" and a small sentence preview "Ich habe dr
 ```
 Screen: "Muster-Detektiv" pattern discovery.
 Top: label "CASE 1 · FEMININE NOUNS", heading "What's the pattern?"
-Main: a 2×3 grid of six small cards, each with a pink line illustration and a pair: "die Lampe → die Lampen", "die Tasche → die Taschen", "die Uhr → die Uhren", "die Wohnung → die Wohnungen", "die Flasche → die Flaschen", "die Tür → die Türen". The added "-n"/"-en" endings sit in yellow chips.
+Main: a 2×3 grid of six small cards, each with a raspberry-red line illustration and a pair: "die Lampe → die Lampen", "die Tasche → die Taschen", "die Uhr → die Uhren", "die Wohnung → die Wohnungen", "die Flasche → die Flaschen", "die Tür → die Türen". The added "-n"/"-en" endings sit in yellow chips.
 Below: three answer cards (one selected with a dark green outline): "Most die nouns add -(e)n", "All nouns add -s", "die nouns never change".
 Bottom: a small case-file notebook icon with "Rule cards: 3" and a pill button "Predict 3 new words".
 Tone: a subtle magnifying-glass line icon in the header, still calm and editorial, not cartoonish.
