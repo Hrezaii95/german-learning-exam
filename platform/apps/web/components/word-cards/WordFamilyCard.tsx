@@ -4,6 +4,7 @@ import { Icon } from "@/components/media/Icon";
 import { useEffect, useId, useRef, useState } from "react";
 import type { WordCard, WordForm } from "@/lib/content/word-card-types";
 import { normalizeCardAnswer } from "@/lib/content/word-card-types";
+import { withPagesBaseAssetPath } from "@/lib/content/pages-base-path";
 import styles from "./word-cards.module.css";
 import { GermanLookup, SaveButton } from "@/components/study/StudyProvider";
 import { LineAudio, stopStudyAudio } from "@/components/study/StudyAudio";
@@ -81,7 +82,7 @@ export function WordFamilyCard({ card }: { card: WordCard }) {
     <article className={styles.card} aria-labelledby={`${uid}-title`}>
       <header className={styles.hero}>
         <div className={styles.identity}><div className={styles.eyebrow}>{lessonText}<span className={styles.dot} />{card.category === "Profession" ? "Professions" : card.category}</div><h1 id={`${uid}-title`}>{card.title}</h1>{card.studyTags&&<StudyTagList tags={card.studyTags}/>}<p className={styles.subline}>{formCount > 1 ? `One word family. ${formCount === 4 ? "Four" : formCount} useful forms.` : "One meaning. Learn it, hear it, use it."}</p></div>
-        <div className={styles.meaningVisual} data-tone={card.rows[0]?.singular.tone??"plain"} aria-hidden="true"><SubjectVocabularyVisual de={card.rows[0]?.singular.text??card.title} category={card.category} cardId={card.id} subject={card.studyTags?.concepts[0]??"everyday"} fallback="subject"/><small>{card.category === "Number" ? "SAY THE NUMBER" : card.category === "Alphabet" ? "SPELL IT ALOUD" : card.category === "Profession" ? "ONE JOB · ALL FORMS" : card.category.toUpperCase()}</small></div>
+        {card.image ? <img className={styles.heroImage} src={withPagesBaseAssetPath(card.image.path)} alt={card.image.alt} width={265} height={204} /> : <div className={styles.meaningVisual} data-tone={card.rows[0]?.singular.tone??"plain"} aria-hidden="true"><SubjectVocabularyVisual de={card.rows[0]?.singular.text??card.title} category={card.category} cardId={card.id} subject={card.studyTags?.concepts[0]??"everyday"} fallback="subject"/><small>{card.category === "Number" ? "SAY THE NUMBER" : card.category === "Alphabet" ? "SPELL IT ALOUD" : card.category === "Profession" ? "ONE JOB · ALL FORMS" : card.category.toUpperCase()}</small></div>}
       </header>
       {mode === "learn" ? <div>
         <section className={styles.forms} aria-labelledby={`${uid}-forms`}>

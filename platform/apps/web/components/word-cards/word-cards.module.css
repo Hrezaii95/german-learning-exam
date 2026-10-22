@@ -160,6 +160,15 @@
   margin: 0;
 }
 
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 52% center;
+  min-height: 204px;
+  filter: saturate(.78);
+}
+
 .meaningVisual {
   display: flex;
   align-items: center;
@@ -770,6 +779,9 @@
     grid-template-columns: minmax(0,1fr) 30%;
     min-height: 172px;
   }
+  .heroImage {
+    min-height: 172px;
+  }
   .identity {
     padding: 24px 23px;
   }
@@ -841,6 +853,9 @@
   }
   .hero {
     grid-template-columns: minmax(0,1fr) 92px;
+    min-height: 168px;
+  }
+  .heroImage {
     min-height: 168px;
   }
   .identity {
