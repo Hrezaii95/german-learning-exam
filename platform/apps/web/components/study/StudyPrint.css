@@ -63,6 +63,30 @@
     display: none !important;
   }
 
+  /* Omit inline settings while keeping their current teaching output. */
+  .app-shell .past-sheet #past-patterns > label,
+  .app-shell .object-sheet .object-lab > div:first-child > label,
+  .app-shell .office-sheet #office-lab > label,
+  .app-shell .office-sheet #phone-lab > div:first-child > label.object-toggle,
+  .app-shell .office-sheet #phone-details .phone-turn > label,
+  .app-shell .food-sheet #food-lab > label,
+  .app-shell .food-sheet #food-compounds > label,
+  .app-shell .food-sheet #food-order > label,
+  .app-shell .hobbies-sheet .hobby-selection > label,
+  .app-shell .time-sheet .clock-answer > label.time-recall,
+  .app-shell .time-sheet #plan-lab > label,
+  .app-shell .travel-sheet #travel-bracket > label,
+  .app-shell .journey-sheet #journey-years > label,
+  .app-shell .collection-conversation #conversation-spelling > label,
+  .app-shell .collection-conversation #conversation-spelling .spelling-name > label,
+  .app-shell .collection-numbers #number-builder > label.sheet-number-input,
+  .app-shell .collection-numbers #number-listening > label,
+  .app-shell .collection-numbers #number-listening form > label,
+  .app-shell .collection-numbers #number-price > label,
+  .app-shell .collection-numbers .sheet-rule-grid > article:not(#number-price) > label {
+    display: none !important;
+  }
+
   .app-shell :is(.study-workspace, .subject-sheet, .country-sheet, .collection-sheet, .book-workspace) :is(.subject-navigation, .subject-page-actions, .subject-controls, .subject-group-filters, .subject-word-detail, .subject-grouping-controls, .subject-sorting-controls, .subject-sheet-filters, .study-dictionary, .study-selection-popup, .sheet-jump, .country-jump, .sheet-controls, .country-controls, .home-controls, .book-top-tools, .book-reading-tools, .book-source-picker, .book-contents, .book-chapter-title, .book-page-toolbar, .book-gesture-hint, .book-line-actions, .book-hotspot, .book-original-audio, .book-page-nav, .book-complete, .book-answer-toggle, .book-selected-line .study-icon-button, .family-viewpoints, .study-primary, .study-secondary, .btn, .study-save, .study-audio, .study-audio-button, audio) {
     display: none !important;
   }
