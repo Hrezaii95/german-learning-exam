@@ -7,7 +7,7 @@ Updated 2026-10-22 by Lane 3. Owner requests one draft per item into `codex/live
 | L3-0 | Secret-free lane CI | draft PR | https://github.com/Hrezaii95/german-learning-exam/pull/6 | Orchestrator gate amendment applied: private originals remain a local owner gate. |
 | L3-1 | Cloudflare root hosting | draft PR | https://github.com/Hrezaii95/german-learning-exam/pull/3 | Local hosting verified; no live deployment. Exactly three lesson links may remain red on lane branches until Lane 1 integration. |
 | L3-2 | Database and auth | draft PR | https://github.com/Hrezaii95/german-learning-exam/pull/18 | Argon2id unblocks auth; D1 schema/API/account UI implemented, security review and combined validation underway. |
-| L3-3 | Seed accounts | in progress | — | Idempotent CLI and real local D1 seeding/sign-in tests pass; publication pending review. |
+| L3-3 | Seed accounts | draft PR | https://github.com/Hrezaii95/german-learning-exam/pull/19 | Idempotent private CLI; real local D1 seeding twice and all five API logins pass. |
 | L3-4 | Progress sync | in progress | — | Registry, durable queue, learner wrapper, consent/import and API implemented; cross-tab isolation review underway. |
 | L3-5 | Classes and assignments | in progress | — | Membership/position/assignments/progress/extras implemented; role-change transaction review underway. |
 | L3-6 | Dashboards | in progress | — | Student/teacher/admin API and static client screens implemented; combined type/browser validation underway. |
@@ -24,12 +24,12 @@ Read the decisions at the end of `origin/claude/german-webapp-audit-game-i0plj0:
 ## Current verification
 
 - Local workerd with precompiled Wasm: independent Argon2id output agrees across four successive hashes; sampled CPU averages 152.08 ms/hash, request wall averages 164.17 ms/hash, including memory wiping. Local target <300 ms passes. Production Paid hardware is not measured.
-- Auth: 19 tests pass, including concurrent login/reset, transactional password/deletion failures, bounded legacy upgrades, atomic rate limits and Wasm wiping. Middleware: two cookie rotation/sliding tests pass.
+- Combined platform suite: 111 tests pass, including auth, real Miniflare D1 seed/logins, sync/browser isolation, classes/admin transactions, UI runtime and release. The local host needs the documented temporary loopback-only adapter for workerd.
 - Seed: seven tests pass, including real Miniflare D1 seeding twice and all five temporary accounts signing in. Actual local Wrangler D1 rehearsal also passes. Random test credentials are memory-only and never printed or committed.
-- Sync: engine/SQLite/browser fixtures pass; cross-tab review is still in progress. Anonymous initial/repeated cleanup regression is fixed.
-- Classes/admin: 16 SQLite tests pass; independent role-mutation/metrics review is in progress.
+- Sync: 15 engine/SQLite/browser tests pass, including two independently loaded browser modules, cross-tab owner/epoch isolation, anonymous cleanup, forced-password storage isolation and offline/backoff/idempotence.
+- Classes/admin: 22 SQLite tests pass, including role-scoped access, concurrent role/password changes, audit rollback and bounded metrics.
 - Release: nine tests pass, including no-store/private response handling and cleanup of smoke-created sessions. Injected-runner workflow rehearsal passes twice (simulation, not a cloud deployment).
-- UI: 11 tests pass. Combined typechecks, full application/Pages/root gates and browser journeys are underway; no final green claim yet.
+- UI: 20 tests pass. Combined root export passes with 1,636 pages and 197 precache entries. Local browser journey has passed login/consent, teacher class/assignment creation and student joining; cross-device/offline checks and remaining full gates are underway.
 - Historical L3-1 baseline: 1,225 app tests, 886 web tests, normal/Pages exports, audits, local Worker routing/security, Chromium mobile hydration/CSP/offline and deploy dry-run passed. These precede the new auth/sync/dashboard code and are not a claim that the expanded candidate is verified yet.
 
 ## Working and integration boundaries

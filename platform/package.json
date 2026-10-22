@@ -41,7 +41,8 @@
     "test:edge": "npm test -w @german-learning/edge",
     "deploy:cloudflare": "wrangler deploy --config apps/edge/wrangler.jsonc --env \"\"",
     "smoke:cloudflare:browser": "node apps/edge/scripts/smoke-browser.mjs",
-    "measure:password": "node apps/edge/scripts/measure-argon2.mjs"
+    "measure:password": "node apps/edge/scripts/measure-argon2.mjs",
+    "test:sync": "node --import tsx --test packages/sync/tests/*.test.ts"
   },
   "devDependencies": {
     "@playwright/test": "^1.62.1",
