@@ -1,5 +1,7 @@
 # Wortwerk: one master game for the plurals cheat sheet
 
+> **Superseded in part by [wortwerk-v2-engine-and-engagement.md](wortwerk-v2-engine-and-engagement.md)**, which extends this design to every skill and to reusable content packs (A1–C2). Where they differ, v2 wins.
+
 This doc combines the five ideas in [plural-vocab-game-ideas.md](plural-vocab-game-ideas.md) into **one game**. It has one map, one daily session, and one shared drag gesture, and it borrows engagement mechanics from the best-known language and habit apps.
 
 Data source: the same 660 gendered nouns, meanings, illustrations and audio as `/cheat-sheets/plurals/` (`loadSubjectVocabulary()`, `plural-patterns.ts`).
