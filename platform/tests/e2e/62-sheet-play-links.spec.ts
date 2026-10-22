@@ -68,7 +68,7 @@ test("country query narrowing uses real card paths and no empty saved fallback",
   const row=page.locator("#country-DE");await expect(row).toBeVisible();
   await row.locator("summary").click();
   const cardHref=(await row.getByRole("link",{name:"Open vocabulary card",exact:true}).getAttribute("href"))!;
-  const canonicalPath=new URL(cardHref,page.url()).pathname.replace(new URL(page.url()).pathname.split("/cheat-sheets/")[0],"").replace(/\/$/,"");
+  const canonicalPath=new URL(cardHref,page.url()).pathname.replace(new URL(page.url()).pathname.split("/cheat-sheets/")[0]??"","").replace(/\/$/,"");
   const scope=scopeFromHref((await page.getByRole("link",{name:"Play this sheet",exact:true}).getAttribute("href"))!);
   expect(scope.items).toEqual(A1_PLAY_ITEMS.filter(item=>item.cardPath===canonicalPath).map(item=>item.id));
   await page.getByRole("button",{name:"Saved for review",exact:true}).click();
