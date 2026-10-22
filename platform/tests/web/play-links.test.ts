@@ -122,6 +122,39 @@ describe("Lane 1 practice-link scopes",()=>{
     expect(encodeScope(explicit).length).toBeLessThanOrEqual(30000);
   });
 
+  it("rejects an actual oversized explicit URL and keeps the accepted boundary exact",()=>{
+    const ids=actual.map(item=>item.id);
+    const active:StudyScope={...defaultStudyScope(),mode:"multiple",lessons:Array.from({length:12},(_,index)=>index+1)};
+    const broad=ids.slice(0,-1);
+    const oversized=vocabularyPlaySelection(active,broad);
+    expect(oversized.href).toBeNull();
+    expect(oversized.scope).toBeNull();
+    if(oversized.href===null)expect(oversized.reason).toBe("This selection is too large for a practice link. Choose fewer words.");
+    expect(broad).toEqual(ids.slice(0,-1));
+
+    let low=1,high=broad.length-1,accepted=0;
+    while(low<=high){
+      const count=Math.floor((low+high)/2);
+      if(vocabularyPlaySelection(active,ids.slice(0,count)).href===null)high=count-1;
+      else {accepted=count;low=count+1;}
+    }
+    expect(accepted).toBeGreaterThan(0);
+    expect(accepted).toBeLessThan(broad.length);
+    const selected=ids.slice(0,accepted);
+    const boundary=vocabularyPlaySelection(active,selected);
+    const scope=decoded(boundary);
+    expect(scope.items).toEqual(selected);
+    expect(scope.lessons).toEqual(active.lessons);
+    expect(boundary.itemCount).toBe(selected.length);
+    expect(boundary.unavailableItemCount).toBe(0);
+    if(boundary.href===null)throw new Error(boundary.reason);
+    expect(Buffer.byteLength(boundary.href,"utf8")).toBeLessThanOrEqual(8000);
+    expect(vocabularyPlaySelection(active,ids.slice(0,accepted+1)).href).toBeNull();
+    const all=vocabularyPlaySelection(defaultStudyScope(),ids);
+    expect(decoded(all).items).toBeUndefined();
+    expect(all.itemCount).toBe(1330);
+  });
+
   it("omits inactive All restrictions and preserves the real predicate's unassigned-row boundary with an explicit fixture",()=>{
     const all=decoded(vocabularyPlaySelection(defaultStudyScope(),actual.map(item=>item.id)));
     expect(all.lessons).toBeUndefined();expect(all.items).toBeUndefined();

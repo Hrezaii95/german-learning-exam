@@ -33,8 +33,11 @@ export function vocabularyPlaySelection(scope:StudyScope|null,itemIds:readonly s
   const exactPredicate=matching.length===selected.size&&matching.every(item=>selected.has(item.id));
   const playScope:PlayScope=exactPredicate?filter:{...filter,items};
   // Do not truncate IDs or drop filters to make an oversized URL appear usable.
-  if(items.length>2000||encodeScope(playScope).length>30000)return unavailablePlaySelection("This selection is too large for a practice link. Choose fewer words.",unavailableItemCount);
-  return {href:playHref(playScope,{pack:A1_PLAY_PACK_ID}),scope:playScope,itemCount:items.length,unavailableItemCount};
+  const fitsDecoder=items.length<=2000&&encodeScope(playScope).length<=30000;
+  const href=fitsDecoder?playHref(playScope,{pack:A1_PLAY_PACK_ID}):null;
+  // Bound the complete relative URL before exposing a link to an HTTP server.
+  if(href===null||new TextEncoder().encode(href).byteLength>8000)return unavailablePlaySelection("This selection is too large for a practice link. Choose fewer words.",unavailableItemCount);
+  return {href,scope:playScope,itemCount:items.length,unavailableItemCount};
 }
 
 /** A workshop topic AND the active global tags are retained by the explicit IDs. */
