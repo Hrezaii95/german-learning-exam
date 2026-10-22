@@ -18,7 +18,7 @@ function feedbackTone(token: string | undefined): CSSProperties | undefined {
 export function TaskFeedback({ feedback, result, lang }: TaskFeedbackProps) {
   const heading = useRef<HTMLHeadingElement>(null);
   useEffect(() => { heading.current?.focus(); }, []);
-  const outcome = result.outcome === "correct" ? "Correct" : result.outcome === "almost" ? "Almost — check the form" : "Let's practise this again";
+  const outcome = result.assessment === "self" ? "Self-check recorded" : result.outcome === "correct" ? "Correct" : result.outcome === "almost" ? "Almost — check the form" : "Let's practise this again";
   const sourceHref = feedback.sourceHref && /^\/(?!\/)[^\\\s]*$/u.test(feedback.sourceHref) ? feedback.sourceHref : undefined;
 
   return (
@@ -26,6 +26,7 @@ export function TaskFeedback({ feedback, result, lang }: TaskFeedbackProps) {
       <h3 ref={heading} tabIndex={-1}>{outcome}</h3>
       <p className="ww-feedback__answer" lang={lang} style={feedbackTone(feedback.toneToken)}>{feedback.answer}</p>
       <p>{feedback.summary}</p>
+      {feedback.modelAnswers?.length ? <div aria-label="Source models"><h4>Model responses</h4>{feedback.modelAnswers.map((model, index) => <p key={index} lang={lang}>{model}</p>)}</div> : null}
       {feedback.meaning ? <p>{feedback.meaning}</p> : null}
       {feedback.forms?.length ? <p lang={lang}>{feedback.forms.join(" · ")}</p> : null}
       {feedback.image ? <img className="ww-feedback__image" src={withPagesBaseAssetPath(feedback.image)} alt={feedback.answer} width={144} height={144} /> : null}

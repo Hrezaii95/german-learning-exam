@@ -68,12 +68,13 @@ function parseAnswer(event: SyncEvent): LearningAnswer | null {
     || (value.latencyMs !== undefined && (typeof value.latencyMs !== "number" || !Number.isFinite(value.latencyMs) || value.latencyMs < 0))) return null;
   if (!plausibleDates(event.createdAt, value.studyDate, value.calendarDate as string | undefined)) return null;
   // A stored self check is useful practice evidence, never an objective recall pass.
-  const selfAssessed = value.selfAssessed === true || value.skill === "speaking" || value.skill === "writing";
+  const selfAssessed = value.selfAssessed === true;
   return {
     eventId: event.id, createdAt: event.createdAt,
     packId: value.packId, itemId: value.itemId, dimension: value.dimension, templateId: value.templateId,
     format: value.format as LearningFormat, correct: value.correct, hinted: value.hinted || selfAssessed,
     studyDate: value.studyDate,
+    ...(selfAssessed ? { selfAssessed: true } : {}),
     ...(value.calendarDate !== undefined ? { calendarDate: value.calendarDate as string } : {}),
     ...(value.sessionId !== undefined ? { sessionId: value.sessionId } : {}),
     ...(value.skill !== undefined ? { skill: value.skill } : {}),
@@ -146,8 +147,7 @@ export function recordAnswer(task: GeneratedTask, result: GradeResult, options: 
   const timeZone = resolveWortwerkTimeZone(options.timeZone ?? wortwerkSettings(store.getSnapshot()).timeZone ?? wortwerkSettings(store.getSnapshot()).timezone, deviceTimeZone());
   if (!["correct", "almost", "incorrect"].includes(result.outcome) || typeof result.correct !== "boolean"
     || typeof result.hinted !== "boolean" || result.correct !== (result.outcome === "correct")) throw new Error("Invalid answer result");
-  const selfAssessed = options.selfAssessed === true || result.assessment === "self" || task.solution.selfCheck === true
-    || task.skill === "speaking" || task.skill === "writing";
+  const selfAssessed = options.selfAssessed === true || result.assessment === "self" || task.solution.selfCheck === true;
   const payload = {
     packId: task.packId, itemId: task.itemId, dimension: task.dimension, templateId: task.templateId,
     skill: task.skill, format: task.format, correct: result.correct,

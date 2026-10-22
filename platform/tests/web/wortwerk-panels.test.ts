@@ -69,7 +69,7 @@ describe("embeddable Wortwerk panels", () => {
     provider.unmount();
     render(panels());
     expect(screen.getByText("1 day in your streak")).toBeTruthy();
-    const heading = screen.getByText("Words complete");
+    const heading = screen.getByText("Items complete");
     expect(heading.parentElement?.querySelector("dd")?.textContent).toBe("1 / 8");
     expect(screen.getByText("8 eligible tasks · about 2 min · a shorter pack-sized run")).toBeTruthy();
     expect(screen.getByRole("link", { name: "Quick review · 1 min" }).getAttribute("href")).toContain(`pack=${pack.id}`);
@@ -81,7 +81,7 @@ describe("embeddable Wortwerk panels", () => {
   it("shows unavailable pack metrics honestly before a catalog exists and always offers Quick review", () => {
     render(panels());
     expect(screen.getByText(/Pack progress is unavailable here/u)).toBeTruthy();
-    expect(screen.queryByText("Words complete")).toBeNull();
+    expect(screen.queryByText("Items complete")).toBeNull();
     expect(screen.getByRole("link", { name: "Quick review · 1 min" }).getAttribute("href")).toContain("mode=quick");
     expect(screen.getByRole("link", { name: "Open today's practice" })).toBeTruthy();
   });
@@ -90,9 +90,9 @@ describe("embeddable Wortwerk panels", () => {
     store.setDoc("settings", { enabledPackIds: [pack.id] }); store.setDoc("study.pack", pack.id);
     cachePanelCatalog(store, buildPanelCatalog([source], { v: 1 }));
     render(panels());
-    expect(screen.getByText("Words complete")).toBeTruthy();
+    expect(screen.getByText("Items complete")).toBeTruthy();
     act(() => store.setDoc("study.scope", { v: 1, lessons: [] }));
-    expect(screen.queryByText("Words complete")).toBeNull();
+    expect(screen.queryByText("Items complete")).toBeNull();
     expect(screen.getByText(/Open practice to refresh the content/u)).toBeTruthy();
     expect(screen.getByRole("link", { name: "Quick review · 1 min" })).toBeTruthy();
   });

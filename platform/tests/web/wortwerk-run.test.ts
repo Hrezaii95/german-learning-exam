@@ -69,14 +69,24 @@ function enable() {
 async function answerCurrent(user: ReturnType<typeof userEvent.setup>, correct = true) {
   const task = testState.latestTask as GeneratedTask;
   if (!task) throw new Error("Expected materialized task");
-  if (task.question.input === "choice") {
+  if (task.mechanic === "match") {
+    const left = within(screen.getByRole("group", { name: "Left cards" })).getAllByRole("button");
+    const order = [...task.solution.order!];
+    if (!correct && order.length > 1) [order[0], order[1]] = [order[1]!, order[0]!];
+    for (let index = 0; index < left.length; index++) {
+      await user.click(left[index]!);
+      const right = within(screen.getByRole("group", { name: "Right cards" })).getAllByRole("button");
+      await user.click(right[task.question.options.findIndex(option => option.id === order[index])]!);
+    }
+    await user.click(screen.getByRole("button", { name: "Check pairs" }));
+  } else if (task.question.input === "choice") {
     const wanted = task.question.options.findIndex(option => task.solution.optionIds?.includes(option.id) === correct);
     const choices = within(screen.getByRole("group", { name: "Answer choices" })).getAllByRole("button");
     const target = choices[wanted];
     if (!target) throw new Error("Expected a valid choice");
     await user.click(target);
   } else {
-    await user.type(screen.getByRole("textbox", { name: "Your answer" }), correct ? task.solution.accepted?.[0] ?? "answer" : "intentionally incorrect");
+    await user.type(screen.getByRole("textbox", { name: /^Your (?:answer|response)$/u }), correct ? task.solution.accepted?.[0] ?? "answer" : "intentionally incorrect");
     await user.click(screen.getByRole("button", { name: "Check answer" }));
   }
   const next = screen.getByRole("button", { name: /^(?:Next task|See results)$/u });
@@ -108,7 +118,7 @@ describe("Wortwerk pack choice and panels", () => {
     expect(store.getDoc<{ enabledPackIds: string[] }>("settings")?.enabledPackIds).toEqual([pack.id]);
     view.rerender(createElement(PlayProvider, { content, children: createElement(PlayHome) }));
     expect(screen.getByRole("link", { name: "Preview Daily Run" })).not.toBeNull();
-    expect(screen.getByText(/15 eligible tasks/u)).not.toBeNull();
+    expect(screen.getByText(/18 eligible tasks/u)).not.toBeNull();
   });
 
   it("updates same-tab class overlays without enabling pending extras automatically", () => {

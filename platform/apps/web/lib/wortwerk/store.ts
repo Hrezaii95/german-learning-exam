@@ -258,10 +258,12 @@ export function createWortwerkStore(storage: WortwerkStorage | undefined = defau
       return event;
     },
     getDoc<T = unknown>(key: string): T | undefined { return docs.find(doc => doc.key === key)?.value as T | undefined; },
+    /** Future documents are read-only in this app; return the preserved record without a write. */
     setDoc(key: string, value: unknown): SyncDoc {
       refresh();
-      const observedMs = now().getTime();
       const existing = docs.find(doc => doc.key === key);
+      if (existing && existing.schemaVersion > 1) return existing;
+      const observedMs = now().getTime();
       // Local sequential writes win even within the same clock tick or after a clock rollback.
       lastDocMs = Math.max(observedMs, lastDocMs + 1, existing ? Date.parse(existing.updatedAt) + 1 : 0);
       const doc = parseDoc({ store: DOC_STORE, key, value, deviceId, updatedAt: new Date(lastDocMs).toISOString(), schemaVersion: 1 });

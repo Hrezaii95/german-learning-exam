@@ -73,8 +73,9 @@ export function answerXp(input: {
   const kind = input.kind ?? "retrieval";
   const cycle = kind === "speaking" || kind === "writing" || kind === "detective" || kind === "boss";
   if (!input.correct && !cycle) return 0;
-  const base = input.corrected ? 5 : input.hinted ? 5 : kind === "listening" || kind === "speaking" ? 3
-    : kind === "writing" ? 8 : kind === "detective" || kind === "boss" ? 30 : 10;
+  const base = kind === "speaking" ? 3 : kind === "writing" ? 8
+    : input.corrected ? 5 : input.hinted ? 5 : kind === "listening" ? 3
+    : kind === "detective" || kind === "boss" ? 30 : 10;
   const combo = input.combo ?? 0;
   const multiplier = combo >= 10 ? 3 : combo >= 5 ? 2 : 1;
   const runs = Math.max(0, Math.floor(input.completedRunsToday ?? 0));
@@ -99,8 +100,11 @@ export function deriveRewards(answers: readonly LearningAnswer[], sessions: read
     const corrected = event.correct && !event.hinted && (event.corrected === true || mistakes.has(mistakeKey));
     if (!event.correct) mistakes.add(mistakeKey);
     else if (corrected) mistakes.delete(mistakeKey);
-    const kind: RewardKind = event.skill === "listening" ? "listening" : event.skill === "speaking" ? "speaking"
-      : event.skill === "writing" ? "writing" : "retrieval";
+    const selfAssessed = event.selfAssessed === true || event.templateId === "write.prompt"
+      || event.templateId.startsWith("record.");
+    const kind: RewardKind = selfAssessed && event.skill === "speaking" ? "speaking"
+      : selfAssessed && event.skill === "writing" ? "writing"
+      : event.skill === "listening" ? "listening" : "retrieval";
     xp += answerXp({ kind, correct: event.correct, hinted: event.hinted, corrected, combo, completedRunsToday });
   }
   return { xp, bestCombo };

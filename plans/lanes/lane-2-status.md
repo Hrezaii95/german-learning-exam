@@ -1,6 +1,6 @@
 # Lane 2 status
 
-Updated by Lane 2 only. Lane worktree: `lane2/l2-4-grammar`. Base: `codex/live-alpha` with PR #1 documentation merged locally. Never merge to the live branch.
+Updated by Lane 2 only. Lane worktree: `lane2/l2-5-allskills`. Base: `codex/live-alpha` with PR #1 documentation merged locally. Never merge to the live branch.
 
 | PR | Title | State (planned / in progress / draft PR / merged / blocked) | Link | Notes |
 |---|---|---|---|---|
@@ -8,7 +8,7 @@ Updated by Lane 2 only. Lane worktree: `lane2/l2-4-grammar`. Base: `codex/live-a
 | L2-2 | Corners and Four Corners templates | draft PR | [PR #16](https://github.com/Hrezaii95/german-learning-exam/pull/16) | Implemented; production pack and release/browser gates remain open. |
 | L2-3 | Daily Run, event-derived progress and Today | draft PR | [PR #24](https://github.com/Hrezaii95/german-learning-exam/pull/24) | Implemented, including habit and dashboard embedding fixes; final release gates pending. |
 | L2-4 | Grammar and listening | draft PR | [PR #26](https://github.com/Hrezaii95/german-learning-exam/pull/26) | Six mechanics wired into Daily Run; 50 focused tests pass; final release gates pending. |
-| L2-5 | Speaking, reading and writing | in progress | — | Mechanics/templates implemented; self-assessment stays separate from objective mastery. |
+| L2-5 | Speaking, reading and writing | in progress | — | All ten mechanics integrated; self-check practice separated from mastery; 111 focused tests pass. |
 | L2-6 | Engagement, maps, story and exam | in progress | — | Pure helpers and fixed routes implemented; integration underway. |
 | L2-7 | Book companion | in progress | — | Scope/position/printing implemented; Lane 1 book-surface hooks remain an integration need. |
 | L2-8 | CSV authoring and preview | in progress | — | CSV tooling implemented; preview integration underway. |
@@ -129,3 +129,9 @@ The data-only A2 draft independently passes schema/resource validation and 318 g
 ## L2-4 integration verification
 
 Sort, Build, Order, Gap and Listen now render alongside Corners in Daily Run. Grammar/listening templates generate only from authored fields, include supported reduced-cue/recall variants and refuse coincidental answer clues. The shared fixture validates structured prompt tokens; the foundation token test preserves authored choice data. Focused pack, grammar engine/UI and Run lifecycle tests: 4 files / 50 tests pass. Type/lint and release gates are recorded after their actual completion; draft publication does not imply readiness.
+
+L2-4 full check: all three typechecks, lint, publication validation, 124 files / 1,400 tests and web rerun 109 files / 995 tests pass. The final pack check and standalone pack validation stop at the absent production manifest. Browser/export release gates will be rerun on the integrated stack with the data-only A2 pack.
+
+## L2-5 integration verification
+
+Speaking, reading, writing and matching use the same generated-task renderer. The actual DOM no-giveaway matrix covers every template across all ten mechanics and a second language. Self-check attempts remain separate from objective recall, strength, secured milestones and Gold; objective typed writing remains eligible for objective evidence. Tap-to-Learn appends raw deck events, with an explicit no-write preview callback. Self speaking/writing cycles retain their specified XP. Normal local edits preserve future-version synced documents unchanged. Focused final phase batch: 111 passing tests; root/scoped web TypeScript, source lint and hook pass. Browser coverage now includes both Daily Run and Quick review by tap, keyboard and drag at 390/1280 px; execution is pending the fresh integrated export.

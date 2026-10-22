@@ -11,6 +11,8 @@ function hash(value: string): number {
 }
 
 function priority(segment: DimensionProgress, now: Date): number {
+  // Self-check practice has no measured recall strength to become an overdue weakness.
+  if (segment.assessment === "self") return segment.attempts ? 5 : 25;
   if (segment.due && segment.dueAt) {
     const overdue = Math.max(0, now.getTime() - Date.parse(segment.dueAt)) / 86_400_000;
     return 1000 + Math.min(365, overdue) + (1 - segment.strength) * 100;

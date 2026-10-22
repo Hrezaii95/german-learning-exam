@@ -46,7 +46,7 @@ describe("Wortwerk event adapters", () => {
   });
 
   it("marks synced self assessment as hinted even if its claimed hint flag is false", () => {
-    for (const extra of [{ selfAssessed: true }, { skill: "speaking" }, { skill: "writing" }]) {
+    for (const extra of [{ selfAssessed: true }, { selfAssessed: true, skill: "speaking" }, { selfAssessed: true, skill: "writing" }]) {
       expect(parseWortwerkEvidence([raw({ ...answerPayload, ...extra })]).answers[0]?.hinted).toBe(true);
     }
   });
