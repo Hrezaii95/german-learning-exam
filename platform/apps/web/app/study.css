@@ -2294,8 +2294,8 @@
 
 @media screen and (width < 760px) {
   .shell-bottomnav.mobile-navigation {
-    display: grid;
-    grid-template-columns: repeat(5,minmax(0,1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 2px;
     padding: 6px 4px calc(6px + env(safe-area-inset-bottom,0px));
   }
@@ -2825,8 +2825,40 @@
   margin-left: auto;
 }
 
-.mobile-navigation > :is(a,button) {
+/* Keep the integrated account slot compact without styling its private modules. */
+.study-toolbar .shell-account {
   min-width: 0;
+  flex: 0 1 auto;
+}
+
+.study-toolbar .shell-account:empty {
+  display: none;
+}
+
+.study-toolbar .shell-account > div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  min-width: 0;
+}
+
+.study-toolbar .shell-account nav[aria-label="Account"] {
+  margin: 0;
+  gap: 4px 12px;
+}
+
+.study-toolbar .shell-account :is(a, button) {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.mobile-navigation > :is(a,button) {
+  flex: 1 0 max-content;
+  min-width: 44px;
   overflow-wrap: normal;
 }
 
@@ -2998,8 +3030,8 @@
     right: 0;
     bottom: 0;
     z-index: 30;
-    display: grid;
-    grid-template-columns: repeat(5,minmax(0,1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 2px;
     padding: 6px 4px calc(6px + env(safe-area-inset-bottom,0px));
     background: var(--nav);

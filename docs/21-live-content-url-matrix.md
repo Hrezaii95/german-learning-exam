@@ -1,25 +1,26 @@
 # Content Routes and Source Matrix
 
-Updated: 2026-10-22. This is the route/source map for the prepared Lane 1 candidate. Paths are app-relative examples or route families, not fresh production URL checks. The candidate has not been certified deployed by this document. See [the completion matrix](17-current-state-and-completion-matrix.md) for implementation, cross-lane and human-review limits.
+Updated: 2026-10-22. This is the route/source map for owner-authorized integrated alpha `c9c1e6fdefcf1f950ce5612158f6909e3525519c`, reconciled with locally checked Lane 1 repair candidate `3a129bcc5769a9441cedcdb0615b28bd8788f5a9`. Paths are app-relative examples or route families, not fresh deployed URL checks. Local screen/PDF evidence is accepted within scope; the original E2E gate remains red with twelve unchanged Lane 2 failures. See [the completion matrix](17-current-state-and-completion-matrix.md) for exact evidence and owner limits.
 
-The historical base URL is `https://hrezaii95.github.io/german-learning-exam/`. Helpers also support a root deployment. Earlier versions of this file recorded August 2026 HTTP sweeps and September vocabulary inventories; those dated counts and “LIVE 200” labels do not certify the current candidate. No new HTTP sweep, merge, export or deployment is asserted here.
+The historical base URL is `https://hrezaii95.github.io/german-learning-exam/`. Helpers also support a root deployment. Earlier versions of this file recorded August 2026 HTTP sweeps and September vocabulary inventories; those dated counts and “LIVE 200” labels do not certify the current candidate. The integration merge is recorded separately from HTTP/export/deployment evidence; no fresh deployed URL sweep is asserted here.
 
 ## Canonical app routes
 
-| Surface | Candidate route | Content / source of truth | Status limit |
+| Surface | Route | Content / source of truth | Status limit |
 |---|---|---|---|
-| Cheat-sheet directory | `/cheat-sheets` | `sheetDestinations` in `lib/study/sheet-navigation.ts`; vocabulary, subjects and workshops | Prepared L1-5 |
-| All vocabulary | `/cheat-sheets/vocabulary` | `loadSubjectVocabulary()` and canonical word families; illustrated/plural layouts | Prepared L1-5/6 with L1-2 compatibility |
-| Vocabulary by subject | `/cheat-sheets/subjects/:subject` | Registered `subjectSheets`, same shared entries/dropdowns and catalogue | Prepared; subject IDs listed below |
-| Full word card | `/vocabulary/:entityId` | `loadWordCards()`, source/alias membership, exact forms/prompts, Learn/Recall | Existing routes retained; candidate shared visual/audio system |
-| Book | `/book` | Generated interactive book, linked source audio and answer/lookup material | Existing route; source and publication rules still apply |
+| Cheat-sheet directory | `/cheat-sheets` | `sheetDestinations` in `lib/study/sheet-navigation.ts`; vocabulary, subjects and workshops | Integrated L1-5 baseline; pinned local suite/export and sampled QA recorded in docs/17 |
+| All vocabulary | `/cheat-sheets/vocabulary` | `loadSubjectVocabulary()` and canonical word families; illustrated/plural layouts | Integrated L1-5/6 baseline with L1-2 compatibility; pinned local evidence recorded in docs/17 |
+| Vocabulary by subject | `/cheat-sheets/subjects/:subject` | Registered `subjectSheets`, same shared entries/dropdowns and catalogue | Integrated baseline; subject IDs listed below; sampled local evidence does not visually certify every subject |
+| Full word card | `/vocabulary/:entityId` | `loadWordCards()`, source/alias membership, exact forms/prompts, Learn/Recall | Existing routes retained; ADR-020a shared line art/audio, sampled local review accepted |
+| Book | `/book` | Generated interactive book, linked source audio and answer/lookup material | Current original-page A4/Letter sample accepted; source and publication rules still apply |
 | Lessons | `/lessons`, `/lessons/01` through `/lessons/12` | Existing course lesson/study data and published activities | Two-digit links for 10–12; presence is not German-review approval |
 | Verbs / grammar / phrases | `/verbs`, `/grammar`, `/phrases` and their published detail paths | Existing typed projections and course pattern material | Specialist experiences retained |
 | Listening | `/listening` | Published listening groups, exact approved workbook track metadata/transcripts | Shared scrubbing transport retained |
-| Review | `/saved` | `ReviewHome`: saved items/notes/self-rated recall and guided exercise missions | Prepared L1-7; separate existing stores retained |
+| Review | `/saved` | `ReviewHome`: saved items/notes/self-rated recall and guided exercise missions | Integrated L1-7 baseline; separate stores retained; pinned local suite evidence recorded in docs/17 |
 | Guided session | `/review/session/today` | Existing guided exercise/session implementation | Retained; not a renamed saved-item store |
 | Search / settings / credits | `/search`, `/settings`, `/references` | Existing search projections, local preferences and attribution | Retained; no account/sync certification |
-| Practice | `/practice` and `/practice/:gameId` | Existing practice implementation | Retained until G3 dependency is satisfied |
+| Practice | `/practice` and `/practice/:gameId` | Existing practice implementation | G3 retirement remains pending; its Lane 2 dependency code is now integrated |
+| Play | `/play`, `/play/run` | Lane 2 route/Run player and v1 scope-link helpers | Integrated dependency; Lane 1’s scoped handoffs and practice retirement still need implementation/verification |
 | Audio review | `/review-audio` | Reviewer tool and asset-bound verdict export | QA surface; selective Pages exclusion remains externally blocked |
 
 Registered subject IDs are `introductions`, `people`, `countries`, `numbers`, `home`, `objects`, `colours-materials`, `office`, `seasons`, `past`, `travel`, `food`, `time`, `hobbies`, `grammar`, `verbs`, `conversation`, `questions`, `classroom`, `descriptions`, `everyday`. The page's “by subject” grouping and a tag filter are distinct from a separate duplicate word catalogue.
@@ -50,7 +51,7 @@ The Home handoff widens its lesson selection when an exact old target belongs to
 
 ## Compatibility route map
 
-| Existing URL | Prepared destination / resolution |
+| Existing URL | Destination / resolution |
 |---|---|
 | `/cheat-sheets/plurals?...#...` | `/cheat-sheets/vocabulary?...#...` |
 | `/cheat-sheets/subjects?...#...` | `/cheat-sheets?...#...` |
@@ -88,19 +89,19 @@ Opening a URL restores local lesson/source scope without rewriting global study 
 | Canonical vocabulary families | Generated `word-cards.json`, `lib/content/word-cards.ts`, lesson/source additions | IDs, source membership and supplied forms preserved; review status is independent of rendering |
 | Subject vocabulary | `lib/study/subject-sheets.ts`, `lib/study/subject-sheets.server.ts`, shared entry/dropdown components | No duplicate normalized German headword from merged Lesson 4 rows |
 | Teacher professions | Existing 48-row teacher source and family aliases; People sheet with `source=teacher-extra` | Candidate German-review/source labels remain visible |
-| Vocabulary art | `SubjectVocabularyVisual`; pure Food/Hobby/Home/Object path registries plus semantic/refined registries | `currentColor` line art; unknown cards use a subject symbol, existing source-glyph fallback remains compatible |
+| Vocabulary art | `SubjectVocabularyVisual`; pure Food/Hobby/Home/Object path registries plus semantic/refined registries | ADR-020a line-art detail/card heroes and reference surfaces; raster assets remain unused by cards. `currentColor`, subject-symbol and source-glyph fallbacks stay compatible |
 | Actual colors and flags | `colour-swatches.ts`, object paint/shape props and country flag assets | Semantic teaching colors retained; no alternate decorative article palette |
 | Synthesized pronunciation | Exact published preview metadata/assets; `LineAudio` reused by MeaningPlate/PronunciationControl | Technical availability and independent listening approval are different; exact-source previews retain retry/gating |
 | Device speech | Existing LineAudio fallback for appropriate line callers | Device-generated fallback is labeled; it does not create a published reviewed recording |
 | Workbook recordings | `public/audio/source-workbook-approved-v1/`, exact public track metadata, `WorkbookAudioTracks` | The published transport subset is `1_01`–`1_15`; scrubbing, speed, retry and transcript disclosure retained |
 | Contextual lesson/activity art | Existing illustration/infographic manifests and `RichLessonVisual` | Teaching scenes retained; optional shared vocabulary visual preserves captions/labels |
-| Print | Prepared L1-9 live-page `StudyPrint.css`; read-only scope/effective selection and visible credit footer | Final PDF must reflect current rendered filters/state and pass readability review; transient dropdowns/controls are omitted |
+| Print | Live-page `StudyPrint.css` with whole-book-page/practice pagination repair | Ten actual A4/Letter PDFs / 27 pages visually reviewed at the pinned state. Book image is proportional and at most 200mm high, with scope/caption/credits; practice uses break avoidance with an oversized-content fallback. Other states have no fixed page-count promise |
 
 The 15 workbook tracks cover names/spelling (`1_01`–`1_04`), sentence melody (`1_05`–`1_06`), telephone-number discrimination (`1_07`–`1_10`), telephone-number transcription (`1_11`–`1_14`) and profession stress/repetition (`1_15`). These are structured recordings, not single-line button replacements. ADR-016 records the owner’s full Momente A1.1/A1.2 coursebook, workbook, glossary, transcript and audio grant, conditional on visible attribution. These 15 tracks describe current publication scope; later-media exclusions are scope decisions. German and generated-audio quality review gates remain separate. Preview-file inventories must be derived from the current manifest; the older 83/110/354 counts in historical documents are not a new audit.
 
 ## Draft book references — G2, not learner publication
 
-The paths below belong to the separate `lane1/l1-g2-book-refs` draft candidate and are not integrated into this Lane 1 code stack.
+The G2 sidecar and pure projector are included in integration #20’s alpha tree. They remain draft owner-review material, not live catalogue/learner publication.
 
 | Item | Prepared evidence |
 |---|---|
@@ -115,8 +116,8 @@ The book-ref draft does not rewrite source words, IDs or order. See [the complet
 
 ## Release and unresolved dependencies
 
-The final candidate needs sequential engineering gates and rendered route, keyboard, mobile, zoom and PDF checks. No “LIVE 200” status should be added without a dated check of the specific deployed build; HTTP reachability alone cannot certify interaction or German/audio quality.
+The pinned current-target engineering run passed all gates except the original E2E suite: 170 of 182 cases passed and twelve unchanged Lane 2 cases failed, leaving the overall result blocked (exit 3). Local Pages QA accepted 28 screen captures, 15 additional mobile viewport captures and all 27 pages of ten PDFs; 36 plural DOM/geometry cases and a bounded 27-target scroll/hit/action probe had zero findings/errors. The contextual lesson scene was exercised live, while the mapped responsive RichLessonVisual picture branch remains unrouted/component-only. Historical raster QA stays pinned to its tested snapshots and does not certify current line-art cards. These are local Pages checks, not production-root browser or live-deployment acceptance. No “LIVE 200” status should be added without a dated check of the specific deployed build; HTTP reachability alone cannot certify interaction or German/audio quality.
 
-Both original smoke gates remain blocked on Lane 3’s shared expectation updates for the retired routes, as recorded in [the completion matrix](17-current-state-and-completion-matrix.md). Lane 1’s owned canonical compatibility helpers are supplementary and do not clear those original gates.
+The earlier original-smoke and word-card audit failures belong to the historical isolated Lane 1 checkpoints. Integration #20 changed the original retired-route/card-alias expectations; its PR records separate local gate evidence. Fresh pinned original production/dev/Pages/word-card gates all passed; the current original E2E owner failure remains red separately. Lane 1’s owned canonical compatibility helpers stay supplementary and do not replace those gates. See [the completion matrix](17-current-state-and-completion-matrix.md).
 
-Canonical USA plural typing and selective `/review-audio` Pages export exclusion remain external-owner blockers. G1 scoped play links and G3 practice retirement wait for Lane 2 integration. Account/session/sync work belongs to Lane 3. German, synthesized-audio and book-reference owner reviews stay open. This matrix does not close any of those gates.
+Canonical USA plural typing and selective `/review-audio` Pages export exclusion remain external-owner blockers. Lane 2’s `/play/run`, scope helpers and Phase 1 code are integrated; G1 actions across all 37 sheet destinations and word actions remain pending Lane 1 implementation/verification. G3 remains pending after G1 acceptance: its amended plan proposes an owned PracticeHub and seven known route stubs, while existing routes remain implemented; the future original dev-smoke expectation handoff stays with its owner. Account/session/sync acceptance belongs to Lane 3. ADR-020a’s model German review does not close qualified German, synthesized-audio listening or book-reference publication review. This matrix does not close those gates.

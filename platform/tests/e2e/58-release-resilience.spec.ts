@@ -59,6 +59,14 @@ test("learning views retain readable reflow when text is enlarged to 200 percent
   })).toBeLessThanOrEqual(1);
   const labelsFit=await page.locator('.mobile-navigation > :is(a,button) > span').evaluateAll(labels=>labels.every(label=>label.getBoundingClientRect().width<=label.parentElement!.getBoundingClientRect().width+1));
   expect.soft(labelsFit,`${route} enlarged navigation labels fit`).toBe(true);
+  const clippedTargets=await page.locator('.mobile-navigation > :is(a,button)').evaluateAll(targets=>targets.flatMap(target=>{
+   const rect=target.getBoundingClientRect(),label=target.querySelector('span');
+   if(!label)throw new Error('Missing navigation label');
+   const box=label.getBoundingClientRect(),line=parseFloat(getComputedStyle(label).lineHeight);
+   const geometry={label:label.textContent,width:rect.width,height:rect.height,left:rect.left,right:rect.right,labelOverflow:label.scrollWidth-label.clientWidth,labelHeight:box.height,lineHeight:line,centerOffset:Math.abs((box.left+box.right-rect.left-rect.right)/2)};
+   return rect.width<44||rect.height<44||rect.left < -1||rect.right>innerWidth+1||geometry.labelOverflow>1||box.height>line+1||geometry.centerOffset>1?[geometry]:[];
+  }));
+  expect.soft(clippedTargets,`${route} enlarged tabs retain visible labels and usable targets`).toEqual([]);
   await page.locator('main').evaluate(node=>node.scrollIntoView({block:'end',behavior:'instant'}));
   const bottomClearance=await page.evaluate(()=>{
    const controls=Array.from(document.querySelectorAll('main a,main button,main select,main input,main summary')).filter(node=>node.checkVisibility()).map(node=>node.getBoundingClientRect()).filter(rect=>rect.width&&rect.height);

@@ -1,6 +1,6 @@
 # Information Architecture and UX
 
-Updated: 2026-10-22. This describes the prepared Lane 1 candidate, including the L1-5 frame, L1-6 entries, L1-7 consolidation and L1-8 visual system. These are implementation and compatibility contracts, not a claim that the candidate is merged or deployed. L1-9 print, CSS and icon consolidation is prepared; its final PDF/rendered checks are identified separately below. See [the completion matrix](17-current-state-and-completion-matrix.md) and [route/source matrix](21-live-content-url-matrix.md) for evidence limits.
+Updated: 2026-10-22. This describes the Lane 1 IA and compatibility contract in owner-authorized integration `c9c1e6fdefcf1f950ce5612158f6909e3525519c` (PR #20), reconciled with the locally checked responsive/print repair candidate `3a129bcc5769a9441cedcdb0615b28bd8788f5a9`. Accepted local rendered/PDF evidence is recorded separately from the original E2E gate, which remains red with twelve unchanged Lane 2 failures. Neither integration nor local QA certifies deployed behavior. See [the completion matrix](17-current-state-and-completion-matrix.md) and [route/source matrix](21-live-content-url-matrix.md) for evidence limits.
 
 ## Entry points and navigation
 
@@ -15,7 +15,7 @@ A learner can start with the Book, follow Lessons, browse the reference sheets, 
 | Find and explore | Verbs `/verbs`, Grammar `/grammar`, Phrases & Q&A `/phrases`, Search `/search` |
 | Your app | References `/references`, Settings `/settings` |
 
-The retired vocabulary/library/concept indexes do not compete with these destinations. Lanes 2 and 3 own their additional play/account navigation entries. Their presence and release require the corresponding integration work.
+The retired vocabulary/library/concept indexes do not compete with these destinations. Lane 2/3 feature code is integrated, but this alpha navigation baseline has no Play entry. Lanes 2 and 3 retain responsibility for their additional play/account navigation entries and acceptance; this document does not add or imply a new entry.
 
 ## Canonical route contract
 
@@ -90,12 +90,12 @@ Filter counts, active state and empty states describe the effective selection. N
 
 German text uses `lang="de"`, natural wrapping and automatic hyphenation. Reflow must preserve the word, article, plural and meaning at 320px and 360px mobile widths and 200% zoom. Focus uses the shared ring token; state outlines and semantic article borders remain distinct. Choosers and disclosures support keyboard activation and Escape, with meaningful names and restored focus. Active filters expose `aria-pressed`, and controls retain adequate pointer targets.
 
-L1-9 prepares print from the live rendered page: current filters, selected vocabulary, on-page diagrams and recall state determine the teaching output. Duplicate print summaries are removed; there is no fixed page-count promise. Print hides shell, chooser and jump navigation, transient word dropdowns, audio/save controls and other interactive chrome. Directory content tiles and a rendered original book page remain printable; book contents, page controls and audio players are hidden. A read-only study-scope summary and effective vocabulary selection are printed, and the source credit remains a visible footer. A generated PDF and its readability must be checked after the final stack; a Print button alone is not that evidence.
+L1-9 prints from the live rendered page: current filters, selected vocabulary, on-page diagrams and recall state determine the teaching output. Duplicate print summaries are removed; there is no fixed page-count promise. Print hides shell, chooser and jump navigation, transient word dropdowns, audio/save controls and other interactive chrome. Directory content tiles and a rendered original book page remain printable; book contents, page controls and audio players are hidden. A read-only study-scope summary and effective vocabulary selection are printed, and the source credit remains a visible footer. The pinned current-target A4/Letter PDFs were generated and visually reviewed. The selected original book page prints proportionally within a 200mm height limit, with its caption, read-only scope and credits in normal flow. This is bounded local evidence for the tested states, not a fixed page-count promise for other content.
 
 ## External dependencies and publication limits
 
-- G1 “Play this sheet” and “Practise this word” depend on Lane 2's built `/play/run` scope contract. Do not show an action to an unavailable route.
-- G3 retirement of `/practice/:gameId` depends on Lane 2 Phase 1 integration and happens last. Existing practice routes remain in this candidate.
+- Lane 2’s `/play/run` and scope helpers are integrated. G1 “Play this sheet” across the 37 sheet destinations and “Practise this word” remain pending Lane 1 implementation/verification against that built scope contract. Do not show an action to an unavailable route.
+- Lane 2 Phase 1 code is integrated. G3 remains pending and happens after G1 acceptance. The [amended plan](https://github.com/Hrezaii95/german-learning-exam/pull/1#issuecomment-6349358229) proposes an owned `PracticeHub` on `/practice`, retaining CoursePractice, Conversation and bounded Back context with a truthful Play link, plus compatibility stubs for the seven known `/practice/:gameId` routes. The existing index and detail routes remain implemented until that work is verified. Protected game components stay under their owners; changes to the original dev-smoke expectations at retirement require the release owner handoff.
 - Canonical USA plural typing needs the content schema owner. Correct app presentation does not close that schema dependency.
 - Selective `/review-audio` exclusion from the Pages export needs the build owner; returning Not Found alone does not remove exported files.
 - German forms, synthesized pronunciation and candidate book references retain their owner review/publication gates. See [current limits](17-current-state-and-completion-matrix.md).
