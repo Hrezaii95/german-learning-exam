@@ -1,4 +1,4 @@
-import type { LearnerGender } from "@/lib/content/detail-types";
+import type { LearnerGender } from "../content/detail-types";
 
 /** Presentation values stay independent of the published content schema. */
 export type ArticleTone = "male" | "female" | "neuter" | "plural" | "plain";
