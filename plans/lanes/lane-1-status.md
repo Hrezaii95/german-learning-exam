@@ -5,11 +5,11 @@ Updated by Lane 1 only. Latest owner instruction: one draft PR per item into `co
 | PR | Title | State | Link | Notes |
 |---|---|---|---|---|
 | L1-1 | Foundation: tokens, shared navigation, account slot | draft PR | [PR #2](https://github.com/Hrezaii95/german-learning-exam/pull/2) · [Plan](https://github.com/Hrezaii95/german-learning-exam/pull/1#issuecomment-6341143533) | Exact contract tokens; one navigation source; preferred sheets reachable; role inputs; root uses `home` to reserve Lane 3's `dashboard`. Implementation verified; draft awaits owner review. Full results below. |
-| L1-2 | Live defects | in progress | [Plan](https://github.com/Hrezaii95/german-learning-exam/pull/2#issuecomment-6341400778) | Investigation found eight Lesson 4 duplicates. Canonical USA plural needs Lane 2's singular-only Gender schema; selective review-audio Pages exclusion needs Lane 3's build controller. |
+| L1-2 | Live defects | draft PR | [PR #5](https://github.com/Hrezaii95/german-learning-exam/pull/5) · [Plan](https://github.com/Hrezaii95/german-learning-exam/pull/2#issuecomment-6341400778) | Implemented duplicate/chapter/link/save fixes; independent review accepted; 207 focused tests passed. Full gates running. Canonical USA plural and selective review-audio export remain cross-lane blockers. |
 | L1-3 | One article-colour scheme | in progress | [Plan](https://github.com/Hrezaii95/german-learning-exam/pull/1#issuecomment-6341419141) | Isolated worktree; draft will follow L1-2. Depends on owner merging L1-1 tokens. |
 | L1-4 | Reference word wrapping and focus | in progress | [Plan](https://github.com/Hrezaii95/german-learning-exam/pull/1#issuecomment-6341419141) | Isolated worktree; draft will follow L1-3. |
-| L1-5 | Shared cheat-sheet frame and directory | planned | — | Preserve old query strings and hashes. |
-| L1-6 | Shared vocabulary entry and dropdown | planned | — | Keep illustrations backward-compatible. |
+| L1-5 | Shared cheat-sheet frame and directory | in progress | [Plan](https://github.com/Hrezaii95/german-learning-exam/pull/1#issuecomment-6341565819) | Implementation prepared in isolated worktree; 196 focused tests passed; publication follows L1-4. |
+| L1-6 | Shared vocabulary entry and dropdown | in progress | [Plan](https://github.com/Hrezaii95/german-learning-exam/pull/1#issuecomment-6341702639) | Implementation/tests active in isolated worktree; illustrations and workshop practice preserved. |
 | L1-7 | Consolidate hubs and review | planned | — | Preserve old URLs. |
 | L1-8 | Visual system | planned | — | Illustration, controls, audio, type and Studio. |
 | L1-9 | Hygiene | planned | — | Print, CSS, breakpoints, icons and dead code. |
