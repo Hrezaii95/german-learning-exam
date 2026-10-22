@@ -3,15 +3,16 @@
 import {DEFAULT_GROUP_ORDER,getActiveGroupOrder,type SheetGrouping} from "@/lib/study/sheet-grouping";
 import type {SheetBrowse} from "@/lib/study/sheet-browse";
 
-const labels:Record<SheetGrouping,string>={subject:"Subject tags",gender:"Gender",plural:"Plural pattern"};
-const switches:Record<SheetGrouping,string>={subject:"Group by subject tags",gender:"Group by gender",plural:"Group by plural pattern"};
+const labels:Record<SheetGrouping,string>={lesson:"Lesson",subject:"Subject tags",gender:"Gender",plural:"Plural pattern"};
+const switches:Record<SheetGrouping,string>={lesson:"Group by lesson",subject:"Group by subject tags",gender:"Group by gender",plural:"Group by plural pattern"};
 
 export function SubjectGroupingControls({browse,onChange}:{browse:SheetBrowse;onChange:(browse:SheetBrowse)=>void}){
   const order=browse.groupOrder??DEFAULT_GROUP_ORDER;
   const active=getActiveGroupOrder(browse);
   const enabled=(dimension:SheetGrouping)=>active.includes(dimension);
   const toggle=(dimension:SheetGrouping)=>{
-    if(dimension==="subject")onChange({...browse,subjects:!enabled(dimension)});
+    if(dimension==="lesson")onChange({...browse,lessons:!enabled(dimension)});
+    else if(dimension==="subject")onChange({...browse,subjects:!enabled(dimension)});
     else if(dimension==="gender")onChange({...browse,gender:!enabled(dimension)});
     else onChange({...browse,view:enabled(dimension)?"illustrated":"plurals"});
   };

@@ -459,8 +459,9 @@ async function httpSmoke(expectedPaths) {
         assert(text.includes('class="subject-vocabulary-visual"'), `${path} missing infographic illustrations`);
         assert(text.includes('class="subject-entry-meaning"'), `${path} missing visible meanings`);
         assert(text.includes('aria-label="Filter this cheat sheet"'), `${path} missing lesson and tag filters`);
-        for (const name of ["Group by subject tags", "Group by gender", "Group by plural pattern"]) assert(text.includes(`aria-label="${name}"`), `${path} missing independent ${name} switch`);
+        for (const name of ["Group by lesson", "Group by subject tags", "Group by gender", "Group by plural pattern"]) assert(text.includes(`aria-label="${name}"`), `${path} missing independent ${name} switch`);
         assert(text.includes('aria-label="Grouping priority"'), `${path} missing grouping order controls`);
+        assert(text.includes('aria-label="Word sorting"'), `${path} missing vocabulary sorting controls`);
       }
       if (path === `${PAGES_BASE}/cheat-sheets/subjects/`) {
         for (const id of SUBJECT_IDS) assert(text.includes(`data-subject-tile="${id}"`), `subject directory missing ${id}`);
@@ -474,8 +475,9 @@ async function httpSmoke(expectedPaths) {
         assert(text.includes('class="subject-plural-meaning"'), "plural grid missing visible meanings");
         assert(text.includes('class="subject-plural-pattern-schema"'), "plural grid missing singular-to-plural diagrams");
         assert(text.includes('aria-label="Filter this cheat sheet"'), "plural grid missing lesson and tag filters");
-        for (const name of ["Group by subject tags", "Group by gender", "Group by plural pattern"]) assert(text.includes(`aria-label="${name}"`), `plural grid missing independent ${name} switch`);
+        for (const name of ["Group by lesson", "Group by subject tags", "Group by gender", "Group by plural pattern"]) assert(text.includes(`aria-label="${name}"`), `plural grid missing independent ${name} switch`);
         assert(text.includes('aria-label="Move Plural pattern earlier"'), "plural grid missing accessible grouping order controls");
+        assert(text.includes('aria-label="Word sorting"'), "plural grid missing vocabulary sorting controls");
         for (const pattern of ["s", "e", "en-n", "unchanged", "er", "umlaut", "umlaut-e", "umlaut-er", "innen", "other"]) {
           assert(text.includes(`data-plural-pattern="${pattern}"`), `plural grid missing ${pattern}`);
         }

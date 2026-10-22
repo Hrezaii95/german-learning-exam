@@ -1,24 +1,89 @@
 import {describe,expect,it} from "vitest";
 import {studyConcepts,type StudyConcept} from "../../apps/web/lib/study/scope";
 import type {SheetGrouping} from "../../apps/web/lib/study/sheet-grouping";
+import type {SheetSort,SheetSortDirection} from "../../apps/web/lib/study/sheet-sorting";
 import {sheetLinks} from "../../apps/web/lib/study/sheet-topics";
 import {readSheetBrowse,sheetBrowseQuery,sheetNavigationContext} from "../../apps/web/lib/study/sheet-browse";
 import {appendNavigationContext,isSafeNavigationPath,serializeNavigationContext,parseNavigationContextParam,resolveBackHref,type NavigationContext} from "../../apps/web/lib/content/navigation-context";
 
 describe("safe sheet return navigation",()=>{
-  it("restores subject grouping and every priority order through URL and full-card Back navigation",()=>{
-    const orders:SheetGrouping[][]=[
-      ["subject","gender","plural"],["subject","plural","gender"],
-      ["gender","subject","plural"],["gender","plural","subject"],
-      ["plural","subject","gender"],["plural","gender","subject"],
-    ];
+  it("restores every word sorting choice and direction independently of grouping on all infographic routes",()=>{
+    const sorts:SheetSort[]=["german","meaning","lesson","source","original"];
+    const directions:SheetSortDirection[]=["asc","desc"];
     const returnPaths=["/cheat-sheets/plurals",...studyConcepts.map(subject=>`/cheat-sheets/subjects/${subject.id}`)];
-    for(const returnPath of returnPaths)for(const groupOrder of orders)for(const subjects of [false,true])for(const gender of [false,true])for(const view of ["illustrated","plurals"] as const){
-      const browse={query:"Bücher",category:"all",saved:false,page:1,view,gender,subjects,groupOrder,tags:["objects","home"] as StudyConcept[]};
+    for(const returnPath of returnPaths)for(const sort of sorts)for(const direction of directions){
+      const browse={query:"Bücher",category:"all",saved:false,page:1,view:"plurals" as const,gender:false,subjects:true,lessons:true,groupOrder:["subject","lesson","plural","gender"] as SheetGrouping[],sort,direction,tags:["objects","home"] as StudyConcept[]};
+      expect(readSheetBrowse(new URLSearchParams(sheetBrowseQuery(browse)))).toEqual(browse);
+      const card=new URL(appendNavigationContext("/vocabulary/w466",sheetNavigationContext(returnPath,browse,"W466-0")),"https://local.test");
+      const context=parseNavigationContextParam(card.searchParams.get("nav"));
+      expect(context?.sheetSort).toBe(sort);
+      expect(context?.sheetDirection).toBe(direction);
+      const back=new URL(resolveBackHref(context),"https://local.test");
+      expect(back.pathname).toBe(returnPath);
+      expect(back.hash).toBe("#sheet-card-W466-0");
+      expect(readSheetBrowse(back.searchParams)).toEqual(browse);
+    }
+    for(const browse of [
+      {query:"",category:"all",saved:false,page:1,sort:"meaning" as const},
+      {query:"",category:"all",saved:false,page:1,direction:"desc" as const},
+    ]){
+      const context=parseNavigationContextParam(serializeNavigationContext(sheetNavigationContext("/cheat-sheets/plurals",browse)));
+      expect(readSheetBrowse(new URL(resolveBackHref(context),"https://local.test").searchParams)).toEqual(browse);
+    }
+  });
+  it("ignores malformed sort and direction values and preserves absent defaults",()=>{
+    for(const sort of ["","German","alphabetical","lessons","asc","null"," german","german,meaning"]){
+      expect(readSheetBrowse(new URLSearchParams({sort}))).not.toHaveProperty("sort");
+    }
+    for(const direction of ["","ascending","descending","ASC","true","1","null"," asc","asc,desc"]){
+      expect(readSheetBrowse(new URLSearchParams({direction}))).not.toHaveProperty("direction");
+    }
+    for(const field of ["sheetSort","sheetDirection"])for(const value of [null,0,true,[],{},"unknown"]){
+      const context=parseNavigationContextParam(JSON.stringify({entryContext:"hub",returnPath:"/cheat-sheets/plurals",[field]:value}));
+      expect(context).not.toHaveProperty(field);
+      expect(resolveBackHref(context)).not.toMatch(/(?:sort|direction)=/);
+    }
+    const legacy=readSheetBrowse(new URLSearchParams({view:"plurals"}));
+    expect(legacy).not.toHaveProperty("sort");
+    expect(legacy).not.toHaveProperty("direction");
+    expect(sheetBrowseQuery(legacy)).toBe("?view=plurals");
+  });
+  it("restricts word-sort navigation state and its larger payload allowance to valid infographic hubs",()=>{
+    for(const payload of [
+      {entryContext:"hub",returnPath:"/vocabulary",sheetSort:"german",sheetDirection:"asc"},
+      {entryContext:"hub",returnPath:"/cheat-sheets/subjects",sheetSort:"german",sheetDirection:"asc"},
+      {entryContext:"hub",returnPath:"/cheat-sheets/subjects/fake",sheetSort:"german",sheetDirection:"asc"},
+      {entryContext:"search",returnPath:"/cheat-sheets/plurals",sheetSort:"german",sheetDirection:"asc"},
+      {entryContext:"lesson",returnPath:"/cheat-sheets/plurals",sheetSort:"german",sheetDirection:"asc"},
+    ]){
+      const context=parseNavigationContextParam(JSON.stringify(payload));
+      expect(context).not.toHaveProperty("sheetSort");
+      expect(context).not.toHaveProperty("sheetDirection");
+      expect(resolveBackHref(context)).not.toMatch(/(?:sort|direction)=/);
+      expect(parseNavigationContextParam(JSON.stringify({...payload,q:"x".repeat(600)}))).toBeNull();
+    }
+    for(const payload of [
+      {entryContext:"hub",returnPath:"/cheat-sheets/plurals",sheetSort:"wrong",sheetDirection:"wrong"},
+      {entryContext:"hub",returnPath:"/cheat-sheets/plurals",hubId:"vocabulary",sheetSort:"german"},
+    ])expect(parseNavigationContextParam(JSON.stringify({...payload,q:"x".repeat(600)}))).toBeNull();
+    for(const field of [{sheetSort:"original"},{sheetDirection:"desc"}]){
+      const context=parseNavigationContextParam(JSON.stringify({entryContext:"hub",returnPath:"/cheat-sheets/plurals",...field,q:"x".repeat(600)}));
+      expect(context).toMatchObject(field);
+      expect(parseNavigationContextParam(JSON.stringify({entryContext:"hub",returnPath:"/cheat-sheets/plurals",...field,q:"x".repeat(1100)}))).toBeNull();
+    }
+  });
+  it("restores lesson and subject grouping and every priority order through URL and full-card Back navigation",()=>{
+    const permutations=(values:SheetGrouping[]):SheetGrouping[][]=>values.length===0?[[]]:values.flatMap((value,index)=>permutations(values.filter((_,other)=>other!==index)).map(rest=>[value,...rest]));
+    const orders=permutations(["lesson","subject","gender","plural"]);
+    expect(orders).toHaveLength(24);
+    const returnPaths=["/cheat-sheets/plurals",...studyConcepts.map(subject=>`/cheat-sheets/subjects/${subject.id}`)];
+    for(const returnPath of returnPaths)for(const groupOrder of orders)for(const subjects of [false,true])for(const lessons of [false,true])for(const gender of [false,true])for(const view of ["illustrated","plurals"] as const){
+      const browse={query:"Bücher",category:"all",saved:false,page:1,view,gender,subjects,lessons,groupOrder,tags:["objects","home"] as StudyConcept[]};
       expect(readSheetBrowse(new URLSearchParams(sheetBrowseQuery(browse)))).toEqual(browse);
       const card=new URL(appendNavigationContext("/vocabulary/w466",sheetNavigationContext(returnPath,browse,"W466-0")),"https://local.test");
       const context=parseNavigationContextParam(card.searchParams.get("nav"));
       expect(context?.sheetSubjects).toBe(subjects);
+      expect(context?.sheetLessons).toBe(lessons);
       expect(context?.sheetGroupOrder).toEqual(groupOrder);
       const back=new URL(resolveBackHref(context),"https://local.test");
       expect(back.pathname).toBe(returnPath);
@@ -26,9 +91,23 @@ describe("safe sheet return navigation",()=>{
       expect(readSheetBrowse(back.searchParams)).toEqual(browse);
     }
   });
-  it("rejects malformed subject toggles and incomplete, repeated or unknown grouping priorities",()=>{
+  it("upgrades legacy three-group priorities by prepending disabled lesson grouping",()=>{
+    for(const legacyOrder of [["subject","gender","plural"],["subject","plural","gender"],["plural","subject","gender"],["plural","gender","subject"],["gender","plural","subject"],["gender","subject","plural"]]){
+      const expected=["lesson",...legacyOrder];
+      const browse=readSheetBrowse(new URLSearchParams({view:"plurals",subjects:"1",order:legacyOrder.join(",")}));
+      expect(browse.groupOrder).toEqual(expected);
+      expect(browse).not.toHaveProperty("lessons");
+      const oldContext=parseNavigationContextParam(JSON.stringify({entryContext:"hub",returnPath:"/cheat-sheets/plurals",sheetView:"plurals",sheetSubjects:true,sheetGroupOrder:legacyOrder}));
+      expect(oldContext?.sheetGroupOrder).toEqual(expected);
+      expect(oldContext).not.toHaveProperty("sheetLessons");
+      const back=new URL(resolveBackHref(oldContext),"https://local.test");
+      expect(readSheetBrowse(back.searchParams)).toEqual(browse);
+    }
+  });
+  it("rejects malformed lesson and subject toggles and incomplete, repeated or unknown grouping priorities",()=>{
     for(const subjects of ["","true","false","2","01","-1","null","undefined"]){
       expect(readSheetBrowse(new URLSearchParams({subjects}))).not.toHaveProperty("subjects");
+      expect(readSheetBrowse(new URLSearchParams({lessons:subjects}))).not.toHaveProperty("lessons");
     }
     for(const order of ["","subject","subject,gender","subject,gender,gender","subject,gender,plural,subject","subject,gender,unknown","subject, gender,plural","Subject,gender,plural"]){
       expect(readSheetBrowse(new URLSearchParams({order}))).not.toHaveProperty("groupOrder");
@@ -37,6 +116,9 @@ describe("safe sheet return navigation",()=>{
       const context=parseNavigationContextParam(JSON.stringify({entryContext:"hub",returnPath:"/cheat-sheets/plurals",sheetSubjects}));
       expect(context).not.toHaveProperty("sheetSubjects");
       expect(resolveBackHref(context)).not.toContain("subjects=");
+      const lessonContext=parseNavigationContextParam(JSON.stringify({entryContext:"hub",returnPath:"/cheat-sheets/plurals",sheetLessons:sheetSubjects}));
+      expect(lessonContext).not.toHaveProperty("sheetLessons");
+      expect(resolveBackHref(lessonContext)).not.toContain("lessons=");
     }
     for(const sheetGroupOrder of ["subject,gender,plural",null,{},[],["subject"],["subject","gender"],["subject","gender","gender"],["subject","gender","unknown"],["subject","gender","plural","subject"]]){
       const context=parseNavigationContextParam(JSON.stringify({entryContext:"hub",returnPath:"/cheat-sheets/plurals",sheetGroupOrder}));
@@ -44,11 +126,12 @@ describe("safe sheet return navigation",()=>{
       expect(resolveBackHref(context)).not.toContain("order=");
     }
     expect(readSheetBrowse(new URLSearchParams())).not.toHaveProperty("subjects");
+    expect(readSheetBrowse(new URLSearchParams())).not.toHaveProperty("lessons");
     expect(readSheetBrowse(new URLSearchParams())).not.toHaveProperty("groupOrder");
   });
   it("uses the larger bounded navigation budget only for validated grouping order on infographic routes",()=>{
-    const order:SheetGrouping[]=["plural","subject","gender"];
-    const browse={query:"a".repeat(120),category:"b".repeat(80),saved:true,page:500,view:"plurals" as const,gender:false,subjects:true,groupOrder:order};
+    const order:SheetGrouping[]=["plural","subject","lesson","gender"];
+    const browse={query:"a".repeat(120),category:"b".repeat(80),saved:true,page:500,view:"plurals" as const,gender:false,subjects:true,lessons:true,groupOrder:order};
     const context=parseNavigationContextParam(serializeNavigationContext(sheetNavigationContext("/cheat-sheets/subjects/colours-materials",browse,"W".repeat(120))));
     expect(context?.sheetGroupOrder).toEqual(order);
     const back=new URL(resolveBackHref(context),"https://local.test");
@@ -120,7 +203,7 @@ describe("safe sheet return navigation",()=>{
     expect(sheetBrowseQuery({query:"",category:"all",saved:false,page:1})).toBe("");
   });
   it("preserves all canonical tags together with bounded browse filters in full-card navigation",()=>{
-    const browse={query:"a".repeat(120),category:"b".repeat(80),saved:true,page:500,view:"illustrated" as const,gender:false,tags:studyConcepts.map(subject=>subject.id)};
+    const browse={query:"a".repeat(120),category:"b".repeat(80),saved:true,page:500,view:"illustrated" as const,gender:false,subjects:true,lessons:true,groupOrder:["plural","lesson","subject","gender"] as SheetGrouping[],sort:"original" as const,direction:"desc" as const,tags:studyConcepts.map(subject=>subject.id)};
     const context=parseNavigationContextParam(serializeNavigationContext(sheetNavigationContext("/cheat-sheets/subjects/colours-materials",browse,"W466-0")));
     expect(context?.sheetTags).toEqual(browse.tags);
     const back=new URL(resolveBackHref(context),"https://local.test");
@@ -164,26 +247,29 @@ describe("safe sheet return navigation",()=>{
   it("does not carry sheet grouping state to unrelated or directory routes",()=>{
     for(const returnPath of ["/settings","/vocabulary","/cheat-sheets/home","/cheat-sheets/subjects","/cheat-sheets/subjects/fake","/cheat-sheets/plurals/extra"]){
       for(const sheetGender of [false,true]){
-        const context=parseNavigationContextParam(JSON.stringify({entryContext:"hub",returnPath,sheetView:"plurals",sheetGender,sheetTags:[],sheetSubjects:true,sheetGroupOrder:["plural","subject","gender"]}));
+        const context=parseNavigationContextParam(JSON.stringify({entryContext:"hub",returnPath,sheetView:"plurals",sheetGender,sheetTags:[],sheetSubjects:true,sheetLessons:true,sheetGroupOrder:["plural","subject","lesson","gender"]}));
         expect(context).not.toHaveProperty("sheetGender");
         expect(context).not.toHaveProperty("sheetView");
         expect(context).not.toHaveProperty("sheetTags");
         expect(context).not.toHaveProperty("sheetSubjects");
+        expect(context).not.toHaveProperty("sheetLessons");
         expect(context).not.toHaveProperty("sheetGroupOrder");
         expect(resolveBackHref(context)).not.toContain("gender=");
         expect(resolveBackHref(context)).not.toContain("tags=");
         expect(resolveBackHref(context)).not.toContain("subjects=");
+        expect(resolveBackHref(context)).not.toContain("lessons=");
         expect(resolveBackHref(context)).not.toContain("order=");
       }
     }
     for(const entryContext of ["lesson","search","review"]){
-      const context=parseNavigationContextParam(JSON.stringify({entryContext,returnPath:"/cheat-sheets/subjects/home",sheetGender:false,sheetTags:["objects"],sheetSubjects:true,sheetGroupOrder:["plural","subject","gender"]}));
+      const context=parseNavigationContextParam(JSON.stringify({entryContext,returnPath:"/cheat-sheets/subjects/home",sheetGender:false,sheetTags:["objects"],sheetSubjects:true,sheetLessons:true,sheetGroupOrder:["plural","subject","lesson","gender"]}));
       expect(context).not.toHaveProperty("sheetGender");
       expect(context).not.toHaveProperty("sheetTags");
       expect(context).not.toHaveProperty("sheetSubjects");
+      expect(context).not.toHaveProperty("sheetLessons");
       expect(context).not.toHaveProperty("sheetGroupOrder");
     }
-    const redirectedHub=parseNavigationContextParam(JSON.stringify({entryContext:"hub",returnPath:"/cheat-sheets/subjects/home",hubId:"vocabulary",sheetView:"plurals",sheetGender:false,sheetTags:["objects"],sheetSubjects:true,sheetGroupOrder:["plural","subject","gender"]}));
+    const redirectedHub=parseNavigationContextParam(JSON.stringify({entryContext:"hub",returnPath:"/cheat-sheets/subjects/home",hubId:"vocabulary",sheetView:"plurals",sheetGender:false,sheetTags:["objects"],sheetSubjects:true,sheetLessons:true,sheetGroupOrder:["plural","subject","lesson","gender"]}));
     expect(resolveBackHref(redirectedHub)).toBe("/vocabulary");
   });
   it("restores the plural grid with its search, gender filter and exact row",()=>{

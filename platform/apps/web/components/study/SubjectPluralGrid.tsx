@@ -43,10 +43,12 @@ export function PatternSchema({item,subject}:{item:SubjectVocabularyItem;subject
 
 export function SubjectPluralGrid({items,groupByGender,currentId,subject,openEntry,onChoose,onClose,renderDropdown,triggerRef,entryRef}:SubjectPluralGridProps){
   const matrix=buildPluralMatrix(items);
+  const positions=new Map(items.map((item,index)=>[item.id,index]));
+  const sortedEntries=(entries:readonly PluralPatternEntry[])=>[...entries].sort((a,b)=>(positions.get(a.item.id)??0)-(positions.get(b.item.id)??0)||a.id.localeCompare(b.id));
   const rows=matrix.rows.filter(row=>row.id!=="not-taught"&&pluralGenders.some(gender=>row.cells[gender.id].length>0));
   const notTaught=matrix.rows.find(row=>row.id==="not-taught");
   const hasNotTaught=notTaught&&pluralGenders.some(gender=>notTaught.cells[gender.id].length>0);
-  const flattenedEntries=(row:PluralPatternRow)=>Object.values(row.cells).flat().sort((a,b)=>a.item.de.localeCompare(b.item.de,"de")||a.item.id.localeCompare(b.item.id)||a.id.localeCompare(b.id));
+  const flattenedEntries=(row:PluralPatternRow)=>sortedEntries(Object.values(row.cells).flat());
   const anchored=new Set<string>();
   const entryButton=(entry:PluralPatternEntry)=>{
     const {item}=entry;
@@ -82,7 +84,7 @@ export function SubjectPluralGrid({items,groupByGender,currentId,subject,openEnt
         <th scope="row" role="rowheader" id={`subject-plural-row-${row.id}`}><strong>{row.label}</strong><PatternSchema item={Object.values(row.cells).flat()[0]!.item} subject={subject}/><span>{row.explanation}</span></th>
         {pluralGenders.map(gender=><td key={gender.id} headers={`subject-plural-row-${row.id} subject-plural-col-${gender.id}`} className={`subject-tone-${gender.id}`}>
           <span className="subject-plural-mobile-label" aria-hidden="true"><b lang="de">{gender.article}</b> {gender.label}</span>
-          {row.cells[gender.id].length>0?<ul className="subject-plural-cell-entries">{row.cells[gender.id].map(entry=><li key={entry.id}>{entryButton(entry)}</li>)}</ul>:<span className="subject-plural-empty-cell">No examples in this selection.</span>}
+          {row.cells[gender.id].length>0?<ul className="subject-plural-cell-entries">{sortedEntries(row.cells[gender.id]).map(entry=><li key={entry.id}>{entryButton(entry)}</li>)}</ul>:<span className="subject-plural-empty-cell">No examples in this selection.</span>}
         </td>)}
       </tr>)}</tbody>
     </table></div>:<div className="subject-plural-patterns">
@@ -99,12 +101,12 @@ export function SubjectPluralGrid({items,groupByGender,currentId,subject,openEnt
       <div className="subject-plural-missing-heading"><h4 id="subject-plural-missing-heading">No plural taught on these cards</h4><p>A missing form here does not mean the noun has no plural. These entries stay separate from the recorded plural changes.</p></div>
       {groupByGender?<div className="subject-plural-missing-genders">{pluralGenders.map(gender=><section key={gender.id} className={`subject-plural-missing-lane subject-tone-${gender.id}`} aria-labelledby={`subject-plural-missing-${gender.id}`}>
         <h5 id={`subject-plural-missing-${gender.id}`}><span lang="de">{gender.article}</span> {gender.label}</h5>
-        {notTaught.cells[gender.id].length>0?<ul className="subject-plural-cell-entries">{notTaught.cells[gender.id].map(entry=><li key={entry.id}>{entryButton(entry)}</li>)}</ul>:<p className="subject-plural-empty-cell">No entries in this selection.</p>}
+        {notTaught.cells[gender.id].length>0?<ul className="subject-plural-cell-entries">{sortedEntries(notTaught.cells[gender.id]).map(entry=><li key={entry.id}>{entryButton(entry)}</li>)}</ul>:<p className="subject-plural-empty-cell">No entries in this selection.</p>}
       </section>)}</div>:<ul className="subject-plural-pattern-entries subject-plural-missing-flat">{flattenedEntries(notTaught).map(entry=><li key={entry.id} className={`subject-plural-card subject-tone-${entry.gender}`}>{entryButton(entry)}</li>)}</ul>}
     </section>}
     {matrix.pluralFormItems.length>0&&<section className="subject-plural-existing" aria-labelledby="subject-plural-existing-heading">
       <div><h4 id="subject-plural-existing-heading">Already shown as plural</h4><p>These cards give a plural form. A singular-to-plural change cannot be read from this entry.</p></div>
-      <ul>{matrix.pluralFormItems.map(item=>{
+      <ul>{[...matrix.pluralFormItems].sort((a,b)=>(positions.get(a.id)??0)-(positions.get(b.id)??0)).map(item=>{
         const qualifier=sourceQualifier(item);
         const expanded=openEntry===item.id;
         return <li key={item.id}><button type="button" className="subject-plural-entry subject-tone-plural" id={`sheet-card-${item.id}`} ref={node=>{triggerRef(item.id,node);entryRef?.(item.id,node);}} data-subject-entry={item.id} aria-label={[item.de,"Already shown as plural",qualifier].filter(Boolean).join(" · ")} aria-pressed={currentId===item.id} aria-expanded={expanded} aria-controls={expanded?`subject-word-detail-${item.id}`:undefined} onClick={()=>onChoose(item.id,item.id)} onKeyDown={event=>{if(event.key==="Escape"&&expanded){event.preventDefault();event.stopPropagation();onClose(item.id);}}}><SubjectVocabularyVisual de={item.de} category={item.category} cardId={item.cardId} subject={subject}/><span className="subject-plural-entry-copy"><span className="subject-plural-singular" lang="de">{item.de}</span><span className="subject-plural-unrecorded">Plural form on this card</span><span className="subject-plural-meaning">{item.meaning}</span>{qualifier&&<small className="subject-plural-source">{qualifier}</small>}</span><span className="subject-entry-chevron" aria-hidden="true">{expanded?"⌃":"⌄"}</span></button>{expanded&&renderDropdown(item,item.id)}</li>;
