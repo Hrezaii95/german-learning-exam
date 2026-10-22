@@ -2,6 +2,8 @@
 
 Everything else is built, tested and waiting in one pull request. These are the only steps that need you.
 
+> Before running step 4, check `plans/lanes/lane-3-status.md` to confirm that the account, seed and go-live items (L3-2 to L3-7) have shipped. Until they have, step 4 can deploy only the static site. Details of the static hosting are in [hosting.md](hosting.md).
+
 ## 1. Merge the integration PR (1 min)
 - Open the PR **"integration/all → codex/live-alpha"**. Its body lists what's inside and the gate results for the combined code.
 - Merge it. GitHub Pages redeploys automatically with all Lane 1 and Lane 2 work, and PR #1's docs are included.

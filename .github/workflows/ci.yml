@@ -1,0 +1,150 @@
+# L3-0: credential-free checks for every lane and the integration branch.
+# Keep one sequential job: the Pages wrapper temporarily parks proxy.ts and
+# changes dynamicParams, so builds and typechecks must never overlap.
+name: Repository gates
+
+on:
+  pull_request:
+  push:
+    branches:
+      - "lane*/main"
+      - "lane3/l3-*"
+      - integration/all
+
+permissions:
+  contents: read
+
+concurrency:
+  group: gates-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  gates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          # False makes checkout's inline cleanup traverse an archived gitlink
+          # without .gitmodules metadata. Strip credentials in the next step.
+          persist-credentials: true
+
+      - name: Remove checkout credentials and isolate archived gitlink
+        run: |
+          git config --local --unset-all http.https://github.com/.extraheader || {
+            checkout_auth_status=$?
+            if [ "$checkout_auth_status" -ne 5 ]; then exit "$checkout_auth_status"; fi
+          }
+          # Runner index only: preserve the archive and repository tree. This
+          # prevents checkout's post-job submodule traversal from failing.
+          git update-index --force-remove -- samples/german-learning-ui-samples
+
+      - name: Setup Node 22
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: platform/package-lock.json
+
+      - name: Install
+        working-directory: platform
+        run: npm ci
+
+      - name: Check application
+        working-directory: platform
+        run: npm run check
+
+      - name: Build web (normal)
+        working-directory: platform
+        run: npm run build:web
+
+      - name: Audit production dependencies
+        working-directory: platform
+        run: npm run audit:prod
+
+      - name: Smoke normal web routes
+        working-directory: platform
+        run: npm run smoke:web-routes
+
+      - name: Smoke default dev
+        working-directory: platform
+        run: npm run smoke:dev
+
+      - name: Audit pronunciation assets
+        run: node tools/audit-alpha-tts.mjs
+
+      - name: Verify GitHub Pages export and all release audits
+        working-directory: platform
+        run: npm run gates:pages
+
+      - name: Audit source attribution in exported Pages HTML
+        run: node tools/audit-attribution.mjs
+
+      # Lanes 1/2 can use this workflow before Lane 3's hosting item arrives.
+      # A partial edge installation fails rather than silently dropping checks.
+      - name: Detect optional edge gate scripts
+        id: edge
+        working-directory: platform
+        run: |
+          node --input-type=module <<'NODE'
+          import { appendFileSync, readFileSync } from 'node:fs';
+          const scripts = JSON.parse(readFileSync('package.json', 'utf8')).scripts ?? {};
+          const required = ['typecheck:edge', 'test:edge', 'build:cloudflare', 'smoke:cloudflare', 'deploy:cloudflare'];
+          const present = required.filter((name) => typeof scripts[name] === 'string' && scripts[name].length > 0);
+          if (present.length > 0 && present.length !== required.length) {
+            throw new Error(`Incomplete edge gates: missing ${required.filter((name) => !present.includes(name)).join(', ')}`);
+          }
+          const ready = present.length === required.length;
+          appendFileSync(process.env.GITHUB_OUTPUT, `ready=${ready}\n`);
+          if (!ready) console.log('::notice::Edge gates skipped: this lane has not incorporated L3-1 yet.');
+          NODE
+
+      - name: Typecheck edge
+        if: steps.edge.outputs.ready == 'true'
+        working-directory: platform
+        run: npm run typecheck:edge
+
+      - name: Test edge
+        if: steps.edge.outputs.ready == 'true'
+        working-directory: platform
+        run: npm run test:edge
+
+      - name: Build root-path Cloudflare export
+        if: steps.edge.outputs.ready == 'true'
+        working-directory: platform
+        run: npm run build:cloudflare
+
+      - name: Smoke root-path Cloudflare export
+        if: steps.edge.outputs.ready == 'true'
+        working-directory: platform
+        run: npm run smoke:cloudflare
+
+      - name: Dry-run Worker deploy without credentials
+        if: steps.edge.outputs.ready == 'true'
+        working-directory: platform
+        run: npm run deploy:cloudflare -- --dry-run
+
+      # Orchestrator decision, docs/lanes/lane-3-platform.md (2026-10-22):
+      # validate-source-manifest requires 454 deliberately untracked originals.
+      # It remains a local/owner-machine gate; hosted CI verifies the published
+      # content and exported media bytes through the gates above.
+
+      - name: Gate summary
+        if: always()
+        env:
+          GATE_STATUS: ${{ job.status }}
+          EDGE_READY: ${{ steps.edge.outputs.ready }}
+        run: |
+          {
+            echo "## Repository gates"
+            echo "- Result: $GATE_STATUS"
+            echo "- All application, content and GitHub Pages gates run sequentially."
+            if [ "$EDGE_READY" = "true" ]; then
+              echo "- Edge typecheck, tests, root export, smoke and credential-free deploy dry run included."
+            elif [ "$EDGE_READY" = "false" ]; then
+              echo "- Edge gates skipped: L3-1 has not reached this branch."
+            else
+              echo "- Edge gate detection was not reached or failed; inspect the preceding step results."
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
