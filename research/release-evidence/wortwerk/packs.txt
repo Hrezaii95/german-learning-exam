@@ -1,0 +1,6 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> german-learning-platform@0.0.0 packs:validate
+> node --import tsx packages/wortwerk/scripts/validate-packs.ts --write-index
+
+de-a2-everyday: 40 items; 39 playable templates; pending review (off by default)

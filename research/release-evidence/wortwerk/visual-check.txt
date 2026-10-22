@@ -1,0 +1,1 @@
+{"dailyRun":"complete","persistedStreak":1,"persistedGoalRuns":1,"noOverflow":[360,390,430,768],"screenshots":3}

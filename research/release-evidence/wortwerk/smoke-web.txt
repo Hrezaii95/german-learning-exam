@@ -1,0 +1,61 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> german-learning-platform@0.0.0 smoke:web-routes
+> npm run smoke:routes -w @german-learning/web
+
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> @german-learning/web@0.1.0 smoke:routes
+> node scripts/smoke-canonical-routes.mjs
+
+OK SSG prerender lessons=2 activities=23
+OK canonical 200 /lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d616c7068616265742d6c697374656e2d7370656c6c
+OK raw-colon 308 → /lessons/01/activity/id-61637469766974793a6c6573736f6e2d30312d616c7068616265742d6c697374656e2d7370656c6c → 200
+OK wrong-lesson 404 /lessons/02/activity/id-61637469766974793a6c6573736f6e2d30312d616c7068616265742d6c697374656e2d7370656c6c
+OK 404 /lessons/01/activity/id-61637469766974793a6d697373696e672d746f74616c6c79
+OK 404 /lessons/02/activity/id-61637469766974793a6c6573736f6e2d30322d746561636865722d70726f66657373696f6e732d6465636b
+OK hub/directory 200 /vocabulary
+OK hub/directory 200 /verbs
+OK hub/directory 200 /grammar
+OK hub/directory 200 /phrases
+OK hub/directory 200 /listening
+OK hub/directory 200 /concepts
+OK hub/directory 200 /hubs
+OK detail 200 /vocabulary/id-6c65783a617263686974656b74
+OK detail 200 /verbs/id-766572623a7365696e
+OK detail 200 /phrases/id-71613a70726f66657373696f6e2d63617375616c2d6d61696e
+OK detail legacy 308 /vocabulary/lex%3Aarchitekt → /vocabulary/id-6c65783a617263686974656b74 → 200
+OK detail legacy 308 /vocabulary/lex%3aarchitekt → /vocabulary/id-6c65783a617263686974656b74 → 200
+OK detail legacy 308 /verbs/verb%3Asein → /verbs/id-766572623a7365696e → 200
+OK detail legacy 308 /verbs/verb%3asein → /verbs/id-766572623a7365696e → 200
+OK detail legacy 308 /phrases/qa%3Aprofession-casual-main → /phrases/id-71613a70726f66657373696f6e2d63617375616c2d6d61696e → 200
+OK detail legacy 308 /phrases/qa%3aprofession-casual-main → /phrases/id-71613a70726f66657373696f6e2d63617375616c2d6d61696e → 200
+OK detail raw-colon 308 → /vocabulary/id-6c65783a617263686974656b74
+OK detail/future 404 /verbs/lex%3Aarchitekt
+OK detail/future 404 /vocabulary/verb%3Asein
+OK detail/future 404 /dashboard
+OK learner-state 200 /review
+OK learner-state 200 /review/session/today
+OK learner-state 200 /settings
+OK search 200 /search
+OK search 404 /search/extra
+OK practice 200 /practice
+OK practice game 200 /practice/flashcards
+OK practice game 200 /practice/picture-word-match
+OK practice game 200 /practice/article-choice
+OK practice game 200 /practice/audio-match
+OK practice game 200 /practice/word-order
+OK practice game 200 /practice/verb-builder
+OK practice game 200 /practice/morphology-puzzle
+OK practice 404 /practice/unknown-game
+OK practice 404 /practice/flashcards/extra
+OK practice 404 /practice/%3Cscript%3E
+OK conversation 200 /conversation
+OK conversation 200 /conversation/id-71613a70726f66657373696f6e2d63617375616c2d6d61696e
+OK conversation raw-colon 308 → /conversation/id-71613a70726f66657373696f6e2d63617375616c2d6d61696e
+OK conversation 404 /conversation/qa%3Aprofession-formal-main
+OK conversation 404 /conversation/lex%3Aarchitekt
+OK conversation 404 /conversation/unknown
+OK conversation 404 /conversation/qa%3Aprofession-casual-main/extra
+OK conversation 404 /conversation/%3Cscript%3E
+smoke:web-routes PASS (50 checks)

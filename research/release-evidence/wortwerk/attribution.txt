@@ -1,0 +1,5 @@
+{
+  "reportPath": "research/release-evidence/attribution-audit.json",
+  "gate": "pass",
+  "failureCount": 0
+}

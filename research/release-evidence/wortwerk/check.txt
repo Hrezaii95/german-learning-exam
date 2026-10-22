@@ -1,0 +1,554 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> german-learning-platform@0.0.0 check
+> npm run typecheck && npm run typecheck:web && npm run typecheck:web-tests && npm run lint:web && npm test && npm run validate:publication && npm run test:web && npm run packs:validate
+
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> german-learning-platform@0.0.0 typecheck
+> tsc --noEmit -p tsconfig.json
+
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> german-learning-platform@0.0.0 typecheck:web
+> npm run typecheck -w @german-learning/web
+
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> @german-learning/web@0.1.0 typecheck
+> tsc --noEmit -p tsconfig.json
+
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> german-learning-platform@0.0.0 typecheck:web-tests
+> npm run typecheck:tests -w @german-learning/web
+
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> @german-learning/web@0.1.0 typecheck:tests
+> tsc --noEmit -p tsconfig.tests.json
+
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> german-learning-platform@0.0.0 lint:web
+> eslint apps/web --max-warnings=0
+
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> german-learning-platform@0.0.0 test
+> vitest run --config vitest.config.ts
+
+
+ RUN  v3.2.7 /tmp/wortwerk-release/platform
+
+ ✓ tests/web/wortwerk-run.test.ts (14 tests) 5046ms
+   ✓ Daily Run > records five Quick review answers, keeps the streak, and leaves the full Run goal separate  890ms
+   ✓ Daily Run > returns a miss after other cards in a different format and records the corrected retrieval  957ms
+   ✓ Daily Run > offers a finite optional finisher for a late miss  823ms
+   ✓ Daily Run > keeps the streak after seven real answers and one audio skip while leaving the goal and assignment open  902ms
+   ✓ Daily Run > persists a meaningful streak after five answers even when the learner abandons the unfinished Run  582ms
+ ✓ tests/web/course-library-navigation-behavior.test.ts (20 tests) 6395ms
+   ✓ bounded course libraries and return context > shares canonical and legacy Lesson 4 saves in the lesson view  638ms
+   ✓ bounded course libraries and return context > shares canonical and legacy Lesson 4 saves in the lookup view  547ms
+   ✓ bounded course libraries and return context > shares canonical and legacy Lesson 4 saves in the practice view  330ms
+   ✓ bounded course libraries and return context > bounds vocabulary and preserves page context on every result  332ms
+   ✓ bounded course libraries and return context > offers consistent paths and progressively reveals every lesson word  2849ms
+ ✓ tests/web/wortwerk-no-giveaway.test.ts (2 tests) 3786ms
+   ✓ Wortwerk no-giveaway DOM matrix > renders every playable fixture item × template, across all ten actual mechanics  3779ms
+ ✓ tests/web/subject-grouping-behavior.test.ts (39 tests) 9772ms
+   ✓ subject grouping and priority > nests by lesson → subject → gender → plural while retaining illustrated vocabulary  301ms
+   ✓ subject grouping and priority > retains the complete catalogue once with lesson and subject grouping  1950ms
+   ✓ subject grouping and priority > retains words, illustrations and colours in every combination of the four switches  845ms
+   ✓ subject grouping and priority > restores an older three-group URL and upgrades its order when lesson grouping is enabled  310ms
+   ✓ subject grouping and priority > uses the selected lessons for shared words and keeps the same assignment after reload  316ms
+   ✓ subject grouping and priority > moves active groups with accessible buttons and remembers their positions when toggled  472ms
+   ✓ subject grouping and priority > keeps the open word card, both pronunciations and return context after reordering in the expanded overview  722ms
+ ✓ tests/web/wortwerk-challenge.test.ts (13 tests) 3558ms
+   ✓ Blitz and Boss reuse the practice loop > keeps a single-item Blitz playable past two answers until time or strikes end it  521ms
+   ✓ Blitz and Boss reuse the practice loop > stops Boss after three strikes and keeps the last answer reveal in the result  454ms
+   ✓ Blitz and Boss reuse the practice loop > shows no strikes in a Daily Run after repeated misses  443ms
+   ✓ Daily puzzle > uses exactly six fixed date/pack tasks independently of progress and scope, and copies only a share grid  725ms
+   ✓ bounded optional Run bonus > offers three extra tasks after an eligible full Run, never adds comebacks, and keeps the goal complete  888ms
+ ✓ tests/web/wortwerk-class-a-flow.test.ts (12 tests) 2148ms
+   ✓ Class A assignments and self-reported result codes > remembers an opened assignment for Today without starting practice, then creates a stable receipt on request  878ms
+   ✓ Class A assignments and self-reported result codes > does not offer a completion receipt after an audio skip or failed Boss  929ms
+ ✓ tests/web/pronunciation-review-ui.test.ts (18 tests) 2858ms
+   ✓ the list > puts all 110 clips on the page at once  603ms
+   ✓ choosing what to listen to > counts each sound on its own control  313ms
+ ✓ tests/web/subject-sheet-filters-behavior.test.ts (10 tests) 2031ms
+   ✓ direct cheat sheet lesson and subject filters > starts with all lessons, supports several choices, and restores all when the last is cleared  602ms
+   ✓ direct cheat sheet lesson and subject filters > reflects existing one and through lesson selections without losing their selected lessons  323ms
+   ✓ direct cheat sheet lesson and subject filters > intersects lessons with tag choices, preserves source membership, and shows source-specific counts  351ms
+   ✓ direct cheat sheet lesson and subject filters > uses an explicit subject selection and the full catalogue independently of a stale shared selection  338ms
+ ✓ tests/web/p4b-conversation-behavior.test.ts (3 tests) 1506ms
+   ✓ P4B conversation behavioral interactions > locks later levels until prior completion; construction feedback works  760ms
+   ✓ P4B conversation behavioral interactions > hint/reveal prevents correct strong evidence on construction  471ms
+ ✓ tests/web/j2-resume-pointer-behavior.test.ts (4 tests) 1279ms
+ ✓ tests/web/word-family-cards-ui.test.ts (11 tests) 1348ms
+   ✓ original vocabulary browsing with complete cards > preserves the original filter form and grid, with one aggregated engineer result  427ms
+ ✓ tests/web/wortwerk-explore.test.ts (19 tests) 1129ms
+ ✓ tests/web/activity-content-behavior.test.ts (7 tests) 1179ms
+ ✓ tests/web/wortwerk-student-integration.test.ts (7 tests) 804ms
+   ✓ Wortwerk student-side Class A integration > supports CSV import with installed profiles and no course pack, staying off until explicit opt-in  349ms
+ ✓ tests/web/subject-infographic-behavior.test.ts (23 tests) 19605ms
+   ✓ subject infographic browsing > restores the old expressions filter for merged nur  378ms
+   ✓ subject infographic browsing > restores a legacy Lesson 4 row fragment with plural view=false  383ms
+   ✓ subject infographic browsing > restores a legacy Lesson 4 row fragment with plural view=true  1061ms
+   ✓ subject infographic browsing > starts with the route subject and switches to every selected tag across the full catalogue  3541ms
+   ✓ subject infographic browsing > restores explicit tag, search and grouping state instead of the route tag or saved global tags  347ms
+   ✓ subject infographic browsing > treats an explicit empty tag query as all vocabulary despite the route and saved tag  916ms
+   ✓ subject infographic browsing > clears a stale gender group when switching to a different subject  1625ms
+   ✓ subject infographic browsing > retains the whole catalogue, including article-free vocabulary, across all-nouns grouping switches  3688ms
+   ✓ subject infographic browsing > keeps icons and meanings visible and opens one local card with both pronunciation clips  438ms
+   ✓ subject infographic browsing > groups the same illustrated words in all four gender and plural combinations without losing their meanings or colours  325ms
+   ✓ subject infographic browsing > keeps an opened card while changing either grouping and restores both toggles in the full-card return link  569ms
+   ✓ subject infographic browsing > filters the illustrated plural grid by lesson and tag even inside the expanded overview  2991ms
+   ✓ subject infographic browsing > switches to a gender by plural pattern grid with exact ending and umlaut highlights  439ms
+   ✓ subject infographic browsing > restores the plural view and exact word through expansion and full-card return context  340ms
+   ✓ subject infographic browsing > explains a noun-free subject and keeps its real non-noun vocabulary available  507ms
+   ✓ subject infographic browsing > keeps all subjects discoverable and links every subject tag to its exact infographic  353ms
+   ✓ subject infographic browsing > expands the same entries once and preserves both real articles on a shared card  403ms
+ ✓ tests/web/shared-audio-preferences-behavior.test.ts (4 tests) 945ms
+   ✓ shared pronunciation preference > uses the saved speed for line speech and word cards, stops the previous clip and retains it after remount  664ms
+ ✓ tests/web/wortwerk-book-position.test.ts (22 tests) 723ms
+ ✓ tests/web/p6-a11y-remediation-behavior.test.ts (13 tests) 956ms
+ ✓ tests/web/p4c-learner-ui-behavior.test.ts (5 tests) 706ms
+   ✓ P4C learner UI behavior > carries the chosen review filters into the session  402ms
+ ✓ tests/web/p2a-studio-dashboard-behavior.test.ts (5 tests) 681ms
+ ✓ tests/web/p3a-web-shell-ui.test.ts (8 tests) 665ms
+ ✓ tests/web/wortwerk-corners.test.ts (11 tests) 567ms
+ ✓ tests/web/wortwerk-preview.test.ts (4 tests) 795ms
+   ✓ isolated task authoring preview > renders and grades real task controls, resets an attempt, and never writes progress or deck events  630ms
+ ✓ tests/web/wortwerk-book-position-integration.test.ts (7 tests) 717ms
+   ✓ book companion integration > mounts the scope picker and defaults to the confirmed book position without changing authored pages  452ms
+ ✓ tests/web/wortwerk-investment.test.ts (11 tests) 630ms
+   ✓ Wortwerk personal investment > saves scoped source items and keeps notes, examples and Difficult across remounts  308ms
+ ✓ tests/web/object-vocabulary-behavior.test.ts (2 tests) 664ms
+   ✓ everyday objects overview interaction > moves the same vocabulary into the expanded overview and lets a learner explore an exact plural  641ms
+ ✓ tests/web/p4a-games-behavior.test.ts (7 tests) 643ms
+ ✓ tests/web/wortwerk-grammar-mechanics.test.ts (8 tests) 561ms
+ ✓ tests/web/p4b-spoken-behavior.test.ts (2 tests) 429ms
+ ✓ tests/web/wortwerk-panels.test.ts (6 tests) 461ms
+   ✓ embeddable Wortwerk panels > keeps real progress, preview, Quick review and the next milestone after the PlayProvider is removed  339ms
+ ✓ tests/web/wortwerk-illustration-hint.test.ts (6 tests) 339ms
+ ✓ tests/web/wortwerk-assessment.test.ts (2 tests) 319ms
+ ✓ tests/web/wortwerk-literacy.test.ts (6 tests) 410ms
+ ✓ tests/web/wortwerk-personal-import.test.ts (8 tests) 333ms
+ ✓ tests/web/wortwerk-record-audio.test.ts (4 tests) 327ms
+ ✓ tests/web/wortwerk-receipts-ui.test.ts (5 tests) 271ms
+ ✓ tests/web/pronunciation-control-behavior.test.ts (2 tests) 258ms
+ ✓ tests/web/wortwerk-hotspot-recall.test.ts (1 test) 198ms
+ ✓ tests/web/german-text-ui.test.ts (2 tests) 189ms
+ ✓ tests/web/wortwerk-l25-integration.test.ts (4 tests) 243ms
+ ✓ tests/web/wortwerk-state-hook.test.ts (3 tests) 82ms
+ ✓ tests/web/wortwerk-milestones.test.ts (4 tests) 272ms
+ ✓ tests/web/p4b-recorder-lifecycle-behavior.test.ts (14 tests) 17ms
+ ✓ tests/web/lesson-twelve.test.ts (8 tests) 2835ms
+   ✓ Lesson 12 and complete A1.1 source integration > shares dictionary and review identities without collisions  2598ms
+ ✓ tests/web/pronunciation-review.test.ts (28 tests) 2617ms
+   ✓ client boundary > keeps every Node builtin above the client boundary  2528ms
+ ✓ tests/web/lesson-ten.test.ts (7 tests) 3717ms
+   ✓ Lesson 10 travel and separable verbs > shares dictionary and review identity across all builder combinations  3464ms
+ ✓ tests/web/lesson-eleven.test.ts (7 tests) 4413ms
+   ✓ Lesson 11 source and Perfekt integration > shares dictionary, phrase and vocabulary-card review information  4187ms
+ ✓ tests/web/lesson-nine.test.ts (6 tests) 1721ms
+   ✓ Lesson 9 food and Module 3 source coverage > distinguishes general food preferences from countable servings  1541ms
+ ✓ tests/web/p3c-search.test.ts (14 tests) 1916ms
+   ✓ P3C typed global search projection > never includes review/draft/blocked/private/audio/secret material  1667ms
+ ✓ tests/web/sheet-grouping.test.ts (46 tests) 1298ms
+ ✓ tests/web/p3c-search-ui.test.ts (8 tests) 1389ms
+ ✓ tests/web/sheet-navigation.test.ts (20 tests) 1518ms
+   ✓ safe sheet return navigation > restores lesson and subject grouping and every priority order through URL and full-card Back navigation  1361ms
+ ✓ tests/web/lesson-eight.test.ts (7 tests) 1238ms
+   ✓ Lesson 8 time, plans and source coverage > keeps shared save identity for the same everyday time in morning and afternoon  676ms
+   ✓ Lesson 8 time, plans and source coverage > keeps the verb second and chooses the destination article  334ms
+ ✓ tests/web/study-book.test.ts (12 tests) 1117ms
+   ✓ Lesson 4 source and exercise integration > has unique stable line IDs and real page images  511ms
+   ✓ Lesson 4 source and exercise integration > has exact file-backed speech for every readable line and new study utterance  408ms
+ ✓ tests/web/home-cheatsheet.test.ts (6 tests) 1340ms
+   ✓ home and furniture cheat sheet > makes new nouns and plurals available in the in-app dictionary  1323ms
+ ✓ tests/web/collection-cheatsheets.test.ts (10 tests) 1032ms
+   ✓ four connected learning sheets > covers all first-four-lesson family entries and preserves source card identities  393ms
+   ✓ four connected learning sheets > resolves new full sentences and inflected verbs in the dictionary  381ms
+ ✓ tests/content/indexes-search.test.ts (31 tests) 1016ms
+ ✓ tests/content/schema-contract.test.ts (48 tests) 1132ms
+   ✓ C0R1 CLI negative contracts > missing argument exits nonzero without credentials  386ms
+   ✓ C0R1 CLI negative contracts > invalid JSON exits nonzero with INVALID_JSON  359ms
+   ✓ C0R1 CLI negative contracts > structurally valid but rejected fixture exits nonzero with stable codes  326ms
+ ✓ tests/web/vocabulary-examples-ui.test.ts (13 tests) 842ms
+ ✓ tests/web/p6-offline-first.test.ts (53 tests) 736ms
+   ✓ app icons > regenerates byte-identically to the committed files  673ms
+ ✓ tests/web/p5-content-enrichment.test.ts (5 tests) 944ms
+   ✓ P5 learner content enrichment > is deterministically generated and contains no source, private, media, HTML, or assertion leaks  539ms
+ ✓ tests/web/lesson-seven.test.ts (7 tests) 735ms
+   ✓ Lesson 7 source coverage and modal sentence learning > shares saved IDs with the dictionary and includes the new question in Lesson 7  451ms
+ ✓ tests/web/lesson-six.test.ts (5 tests) 768ms
+   ✓ Lesson 6 and Module 2 integration > keeps official keys and model answers distinct and exposes irregular verbs  437ms
+ ✓ tests/web/p2b-hub-card-anatomy-ui.test.ts (10 tests) 629ms
+ ✓ tests/web/p2a-studio-dashboard-ui.test.ts (8 tests) 423ms
+ ✓ tests/web/p3d-details.test.ts (10 tests) 570ms
+ ✓ tests/web/question-cheatsheet.test.ts (6 tests) 594ms
+   ✓ question patterns and learning support > makes the new whole-question and reply meanings available in the dictionary  559ms
+ ✓ tests/web/lesson-label-ui.test.ts (3 tests) 421ms
+   ✓ learner-visible lesson labels > renders no padded lesson label on lesson, hub, or detail surfaces  416ms
+stderr | tests/web/extra-professions-ui.test.ts > extra professions learner UI > offers every electrician form inline from the actual word-card audio catalog
+Received `false` for a non-boolean attribute `prefetch`.
+
+If you want to write it to the DOM, pass a string instead: prefetch="false" or prefetch={value.toString()}.
+
+If you used to conditionally omit it with prefetch={condition && value}, pass prefetch={condition ? value : undefined} instead.
+
+ ✓ tests/web/extra-professions-ui.test.ts (4 tests) 424ms
+ ✓ tests/web/plural-patterns.test.ts (45 tests) 620ms
+   ✓ observed German plural patterns > keeps missing source plurals and forms taught in plural distinct from gendered noun pairs  404ms
+ ✓ tests/web/object-learning.test.ts (6 tests) 529ms
+   ✓ lesson sheet card recall > resolves exact description and phone clips, with extra shape words labelled honestly  499ms
+ ✓ tests/web/lesson-five.test.ts (5 tests) 544ms
+   ✓ Lesson 5 source integration > has official keys, separate study quizzes and dictionary support  358ms
+ ✓ tests/web/hobby-time-learning.test.ts (7 tests) 509ms
+   ✓ time practice context > provides recorded teaching clips and contextual dictionary returns  444ms
+ ✓ tests/web/p3b-hubs-ui.test.ts (7 tests) 479ms
+ ✓ tests/web/subject-sheets.test.ts (11 tests) 547ms
+   ✓ canonical subject vocabulary sheets > provides a populated route for every canonical subject without adding unrelated cards  492ms
+ ✓ tests/web/p3d-details-ui.test.ts (6 tests) 331ms
+ ✓ tests/content/publication-package.test.ts (27 tests) 250ms
+ ✓ tests/web/p4a-games-ui.test.ts (5 tests) 457ms
+ ✓ tests/web/grammar-sheet-learning.test.ts (7 tests) 245ms
+ ✓ tests/web/listening-concepts-hubs.test.ts (7 tests) 290ms
+ ✓ tests/web/p3b-hubs.test.ts (13 tests) 258ms
+de-b2-sample: 21 items; 46 playable templates; pending review (off by default)
+ ✓ tests/learning/wortwerk-playable-index.test.ts (7 tests) 177ms
+ ✓ tests/web/study-scope.test.ts (8 tests) 218ms
+ ✓ tests/web/people-sheet.test.ts (3 tests) 174ms
+ ✓ tests/web/food-learning.test.ts (4 tests) 134ms
+ ✓ tests/web/past-journey-learning.test.ts (5 tests) 140ms
+ ✓ tests/web/book-transcripts.test.ts (6 tests) 124ms
+ ✓ tests/web/study-lookup.test.ts (7 tests) 195ms
+ ✓ tests/web/number-learning.test.ts (5 tests) 155ms
+ ✓ tests/web/country-cheatsheet.test.ts (6 tests) 145ms
+ ✓ tests/learning/persistence.test.ts (81 tests) 95ms
+ ✓ tests/web/p5-media-integration.test.ts (4 tests) 88ms
+ ✓ tests/web/conversation-learning.test.ts (5 tests) 114ms
+ ✓ tests/web/p6-page-titles.test.ts (6 tests) 100ms
+ ✓ tests/web/wortwerk-state.test.ts (15 tests) 107ms
+ ✓ tests/learning/wortwerk-depth.test.ts (20 tests) 82ms
+ ✓ tests/learning/wortwerk-corners.test.ts (12 tests) 84ms
+toy: 21 items; 43 playable templates; pending review (off by default)
+ ✓ tests/learning/wortwerk-packs.test.ts (16 tests) 84ms
+ ✓ tests/learning/wortwerk-milestones.test.ts (5 tests) 41ms
+ ✓ tests/web/j1-activity-runtime.test.ts (2 tests) 57ms
+ ✓ tests/web/p4c-state-core.test.ts (8 tests) 52ms
+ ✓ tests/web/p5-instructional-visual-system.test.ts (5 tests) 81ms
+ ✓ tests/web/sheet-sorting.test.ts (21 tests) 77ms
+ ✓ tests/learning/mastery.test.ts (62 tests) 71ms
+ ✓ tests/web/travel-learning.test.ts (3 tests) 67ms
+ ✓ tests/web/p3ar2-proxy.test.ts (5 tests) 57ms
+ ✓ tests/web/book-answer-coverage.test.ts (8 tests) 47ms
+ ✓ tests/learning/wortwerk-literacy.test.ts (12 tests) 37ms
+ ✓ tests/web/p6-vocabulary-concept-illustrations.test.ts (9 tests) 71ms
+ ✓ tests/web/wortwerk-assessment-events.test.ts (5 tests) 44ms
+ ✓ tests/learning/wortwerk-grammar-listening.test.ts (13 tests) 36ms
+ ✓ tests/web/country-vocabulary-illustration-ui.test.ts (5 tests) 36ms
+ ✓ tests/web/p3a-web-shell.test.ts (24 tests) 52ms
+ ✓ tests/learning/wortwerk-resources.test.ts (1 test) 42ms
+ ✓ tests/web/extra-professions-projection.test.ts (5 tests) 60ms
+ ✓ tests/web/wortwerk-store.test.ts (16 tests) 42ms
+ ✓ tests/learning/wortwerk-csv.test.ts (12 tests) 45ms
+ ✓ tests/web/activity-content-plans.test.ts (4 tests) 55ms
+ ✓ tests/web/wortwerk-receipts.test.ts (10 tests) 46ms
+ ✓ tests/learning/rewards.test.ts (13 tests) 33ms
+ ✓ tests/web/p5-profession-concept-illustrations.test.ts (14 tests) 43ms
+ ✓ tests/learning/wortwerk-engagement.test.ts (12 tests) 32ms
+ ✓ tests/learning/review.test.ts (40 tests) 47ms
+ ✓ tests/web/p5-rapid-content.test.ts (4 tests) 32ms
+ ✓ tests/web/sheet-recall.test.ts (4 tests) 32ms
+ ✓ tests/web/complete-backup.test.ts (11 tests) 23ms
+ ✓ tests/web/subject-illustration-ui.test.ts (5 tests) 20ms
+ ✓ tests/content/lexeme-examples.test.ts (21 tests) 38ms
+ ✓ tests/web/deploy1r1-pages-hardening.test.ts (14 tests) 41ms
+ ✓ tests/web/wortwerk-state-backup.test.ts (7 tests) 35ms
+ ✓ tests/learning/wortwerk-challenge-rewards.test.ts (5 tests) 32ms
+ ✓ tests/web/pronunciation-live.test.ts (3 tests) 29ms
+ ✓ tests/learning/wortwerk-narrow-run.test.ts (4 tests) 18ms
+ ✓ tests/web/p4b-conversation.test.ts (13 tests) 13ms
+ ✓ tests/web/p4b-conversation-ui.test.ts (3 tests) 20ms
+ ✓ tests/web/country-overview.test.ts (5 tests) 16ms
+ ✓ tests/learning/wortwerk-progress.test.ts (7 tests) 21ms
+ ✓ tests/web/wortwerk-migration.test.ts (11 tests) 9ms
+ ✓ tests/content/lesson-01-02-source-gap-closure.test.ts (16 tests) 15ms
+ ✓ tests/web/p5-rich-visuals.test.ts (3 tests) 14ms
+ ✓ tests/web/wortwerk-preview-export.test.ts (3 tests) 18ms
+ ✓ tests/learning/wortwerk-assessment.test.ts (7 tests) 19ms
+ ✓ tests/learning/wortwerk-daily-run.test.ts (6 tests) 16ms
+ ✓ tests/web/p4a-games.test.ts (14 tests) 28ms
+ ✓ tests/web/subject-illustration-coverage-ui.test.ts (3 tests) 16ms
+ ✓ tests/web/object-vocabulary.test.ts (3 tests) 13ms
+ ✓ tests/web/wortwerk-links.test.ts (4 tests) 9ms
+ ✓ tests/web/course-phrase-identity-ui.test.ts (1 test) 12ms
+ ✓ tests/web/wortwerk-future-doc.test.ts (4 tests) 11ms
+ ✓ tests/learning/wortwerk-assessment-rewards.test.ts (3 tests) 8ms
+ ✓ tests/web/deploy1r2-pages-smoke-hydration.test.ts (6 tests) 7ms
+ ✓ tests/web/detail1-generic-details.test.ts (3 tests) 11ms
+ ✓ tests/web/refined-illustrations.test.ts (5 tests) 4ms
+ ✓ tests/web/p6-gender-badge-contrast.test.ts (8 tests) 5ms
+ ✓ tests/web/export-path-leaks.test.ts (4 tests) 4ms
+ ✓ tests/web/profession-patterns.test.ts (1 test) 3ms
+
+ Test Files  156 passed (156)
+      Tests  1641 passed (1641)
+   Start at  10:19:15
+   Duration  54.52s (transform 8.29s, setup 0ms, collect 36.12s, tests 120.37s, environment 27.83s, prepare 9.64s)
+
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> german-learning-platform@0.0.0 validate:publication
+> tsx packages/content/src/cli/validate-publication.ts
+
+PUBLICATION_DIR	/tmp/wortwerk-release/platform/content/published
+REQUIRED_FRAGMENTS	lesson-01.json,lesson-02.json,teacher-professions.json,activities.json,listening-assets.json
+VALIDATION_OK
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> german-learning-platform@0.0.0 test:web
+> vitest run --config vitest.config.ts tests/web
+
+
+ RUN  v3.2.7 /tmp/wortwerk-release/platform
+
+ ✓ tests/web/wortwerk-run.test.ts (14 tests) 5432ms
+   ✓ Daily Run > records five Quick review answers, keeps the streak, and leaves the full Run goal separate  875ms
+   ✓ Daily Run > returns a miss after other cards in a different format and records the corrected retrieval  1114ms
+   ✓ Daily Run > offers a finite optional finisher for a late miss  847ms
+   ✓ Daily Run > keeps the streak after seven real answers and one audio skip while leaving the goal and assignment open  940ms
+   ✓ Daily Run > persists a meaningful streak after five answers even when the learner abandons the unfinished Run  696ms
+ ✓ tests/web/course-library-navigation-behavior.test.ts (20 tests) 7183ms
+   ✓ bounded course libraries and return context > shares canonical and legacy Lesson 4 saves in the lesson view  756ms
+   ✓ bounded course libraries and return context > shares canonical and legacy Lesson 4 saves in the lookup view  537ms
+   ✓ bounded course libraries and return context > shares canonical and legacy Lesson 4 saves in the practice view  352ms
+   ✓ bounded course libraries and return context > shares canonical and legacy Lesson 4 saves in the full view  342ms
+   ✓ bounded course libraries and return context > bounds vocabulary and preserves page context on every result  325ms
+   ✓ bounded course libraries and return context > offers consistent paths and progressively reveals every lesson word  3301ms
+   ✓ bounded course libraries and return context > filters all search matches before paging instead of dropping later lessons after fifty hits  349ms
+ ✓ tests/web/wortwerk-no-giveaway.test.ts (2 tests) 4305ms
+   ✓ Wortwerk no-giveaway DOM matrix > renders every playable fixture item × template, across all ten actual mechanics  4298ms
+ ✓ tests/web/subject-grouping-behavior.test.ts (39 tests) 11516ms
+   ✓ subject grouping and priority > nests by lesson → subject → gender → plural while retaining illustrated vocabulary  324ms
+   ✓ subject grouping and priority > retains the complete catalogue once with lesson and subject grouping  2376ms
+   ✓ subject grouping and priority > retains words, illustrations and colours in every combination of the four switches  1295ms
+   ✓ subject grouping and priority > restores an older three-group URL and upgrades its order when lesson grouping is enabled  342ms
+   ✓ subject grouping and priority > uses the selected lessons for shared words and keeps the same assignment after reload  367ms
+   ✓ subject grouping and priority > moves active groups with accessible buttons and remembers their positions when toggled  453ms
+   ✓ subject grouping and priority > keeps the open word card, both pronunciations and return context after reordering in the expanded overview  796ms
+ ✓ tests/web/wortwerk-challenge.test.ts (13 tests) 3466ms
+   ✓ Blitz and Boss reuse the practice loop > keeps a single-item Blitz playable past two answers until time or strikes end it  531ms
+   ✓ Blitz and Boss reuse the practice loop > stops Boss after three strikes and keeps the last answer reveal in the result  406ms
+   ✓ Blitz and Boss reuse the practice loop > shows no strikes in a Daily Run after repeated misses  398ms
+   ✓ Daily puzzle > uses exactly six fixed date/pack tasks independently of progress and scope, and copies only a share grid  779ms
+   ✓ bounded optional Run bonus > offers three extra tasks after an eligible full Run, never adds comebacks, and keeps the goal complete  857ms
+ ✓ tests/web/pronunciation-review-ui.test.ts (18 tests) 2591ms
+   ✓ the list > puts all 110 clips on the page at once  522ms
+ ✓ tests/web/wortwerk-class-a-flow.test.ts (12 tests) 2108ms
+   ✓ Class A assignments and self-reported result codes > remembers an opened assignment for Today without starting practice, then creates a stable receipt on request  773ms
+   ✓ Class A assignments and self-reported result codes > does not offer a completion receipt after an audio skip or failed Boss  951ms
+ ✓ tests/web/subject-sheet-filters-behavior.test.ts (10 tests) 1895ms
+   ✓ direct cheat sheet lesson and subject filters > starts with all lessons, supports several choices, and restores all when the last is cleared  586ms
+   ✓ direct cheat sheet lesson and subject filters > reflects existing one and through lesson selections without losing their selected lessons  305ms
+   ✓ direct cheat sheet lesson and subject filters > intersects lessons with tag choices, preserves source membership, and shows source-specific counts  339ms
+ ✓ tests/web/p4b-conversation-behavior.test.ts (3 tests) 1273ms
+   ✓ P4B conversation behavioral interactions > locks later levels until prior completion; construction feedback works  659ms
+   ✓ P4B conversation behavioral interactions > hint/reveal prevents correct strong evidence on construction  390ms
+ ✓ tests/web/word-family-cards-ui.test.ts (11 tests) 1354ms
+   ✓ original vocabulary browsing with complete cards > preserves the original filter form and grid, with one aggregated engineer result  421ms
+ ✓ tests/web/j2-resume-pointer-behavior.test.ts (4 tests) 1241ms
+ ✓ tests/web/activity-content-behavior.test.ts (7 tests) 1091ms
+ ✓ tests/web/p6-a11y-remediation-behavior.test.ts (13 tests) 808ms
+ ✓ tests/web/wortwerk-explore.test.ts (19 tests) 1021ms
+ ✓ tests/web/subject-infographic-behavior.test.ts (23 tests) 20337ms
+   ✓ subject infographic browsing > restores the old expressions filter for merged nur  438ms
+   ✓ subject infographic browsing > restores a legacy Lesson 4 row fragment with plural view=false  391ms
+   ✓ subject infographic browsing > restores a legacy Lesson 4 row fragment with plural view=true  1150ms
+   ✓ subject infographic browsing > starts with the route subject and switches to every selected tag across the full catalogue  4041ms
+   ✓ subject infographic browsing > restores explicit tag, search and grouping state instead of the route tag or saved global tags  340ms
+   ✓ subject infographic browsing > treats an explicit empty tag query as all vocabulary despite the route and saved tag  1052ms
+   ✓ subject infographic browsing > clears a stale gender group when switching to a different subject  1692ms
+   ✓ subject infographic browsing > retains the whole catalogue, including article-free vocabulary, across all-nouns grouping switches  4054ms
+   ✓ subject infographic browsing > keeps icons and meanings visible and opens one local card with both pronunciation clips  370ms
+   ✓ subject infographic browsing > groups the same illustrated words in all four gender and plural combinations without losing their meanings or colours  375ms
+   ✓ subject infographic browsing > keeps an opened card while changing either grouping and restores both toggles in the full-card return link  544ms
+   ✓ subject infographic browsing > filters the illustrated plural grid by lesson and tag even inside the expanded overview  2892ms
+   ✓ subject infographic browsing > switches to a gender by plural pattern grid with exact ending and umlaut highlights  381ms
+   ✓ subject infographic browsing > restores the plural view and exact word through expansion and full-card return context  308ms
+   ✓ subject infographic browsing > explains a noun-free subject and keeps its real non-noun vocabulary available  469ms
+   ✓ subject infographic browsing > keeps all subjects discoverable and links every subject tag to its exact infographic  361ms
+   ✓ subject infographic browsing > expands the same entries once and preserves both real articles on a shared card  363ms
+ ✓ tests/web/shared-audio-preferences-behavior.test.ts (4 tests) 852ms
+   ✓ shared pronunciation preference > uses the saved speed for line speech and word cards, stops the previous clip and retains it after remount  659ms
+ ✓ tests/web/wortwerk-student-integration.test.ts (7 tests) 771ms
+   ✓ Wortwerk student-side Class A integration > supports CSV import with installed profiles and no course pack, staying off until explicit opt-in  353ms
+ ✓ tests/web/wortwerk-preview.test.ts (4 tests) 738ms
+   ✓ isolated task authoring preview > renders and grades real task controls, resets an attempt, and never writes progress or deck events  590ms
+ ✓ tests/web/wortwerk-book-position.test.ts (22 tests) 670ms
+ ✓ tests/web/wortwerk-book-position-integration.test.ts (7 tests) 708ms
+   ✓ book companion integration > mounts the scope picker and defaults to the confirmed book position without changing authored pages  437ms
+ ✓ tests/web/p4c-learner-ui-behavior.test.ts (5 tests) 673ms
+   ✓ P4C learner UI behavior > carries the chosen review filters into the session  343ms
+ ✓ tests/web/p2a-studio-dashboard-behavior.test.ts (5 tests) 705ms
+ ✓ tests/web/p3a-web-shell-ui.test.ts (8 tests) 736ms
+ ✓ tests/web/object-vocabulary-behavior.test.ts (2 tests) 890ms
+   ✓ everyday objects overview interaction > moves the same vocabulary into the expanded overview and lets a learner explore an exact plural  859ms
+ ✓ tests/web/wortwerk-investment.test.ts (11 tests) 647ms
+ ✓ tests/web/p4a-games-behavior.test.ts (7 tests) 662ms
+ ✓ tests/web/wortwerk-corners.test.ts (11 tests) 566ms
+ ✓ tests/web/wortwerk-panels.test.ts (6 tests) 494ms
+   ✓ embeddable Wortwerk panels > keeps real progress, preview, Quick review and the next milestone after the PlayProvider is removed  358ms
+ ✓ tests/web/wortwerk-grammar-mechanics.test.ts (8 tests) 759ms
+ ✓ tests/web/p4b-spoken-behavior.test.ts (2 tests) 520ms
+ ✓ tests/web/wortwerk-literacy.test.ts (6 tests) 471ms
+ ✓ tests/web/wortwerk-personal-import.test.ts (8 tests) 405ms
+   ✓ student personal words > offers a real preview and explicit test opt-in before a single save  311ms
+ ✓ tests/web/wortwerk-record-audio.test.ts (4 tests) 520ms
+   ✓ pauses the source before microphone capture, blocks busy phases, and permits source playback after recording  351ms
+ ✓ tests/web/wortwerk-illustration-hint.test.ts (6 tests) 608ms
+   ✓ optional meaning illustration hints > keeps the initial image absent, then reveals a neutral hint and records its use with the answer  311ms
+ ✓ tests/web/wortwerk-assessment.test.ts (2 tests) 479ms
+   ✓ shows self-check practice without an impossible secured milestone inside and outside the provider  430ms
+ ✓ tests/web/wortwerk-milestones.test.ts (4 tests) 259ms
+ ✓ tests/web/wortwerk-receipts-ui.test.ts (5 tests) 330ms
+ ✓ tests/web/wortwerk-l25-integration.test.ts (4 tests) 210ms
+ ✓ tests/web/pronunciation-control-behavior.test.ts (2 tests) 295ms
+ ✓ tests/web/wortwerk-hotspot-recall.test.ts (1 test) 229ms
+ ✓ tests/web/p4b-recorder-lifecycle-behavior.test.ts (14 tests) 20ms
+ ✓ tests/web/wortwerk-state-hook.test.ts (3 tests) 76ms
+ ✓ tests/web/german-text-ui.test.ts (2 tests) 277ms
+ ✓ tests/web/lesson-twelve.test.ts (8 tests) 2194ms
+   ✓ Lesson 12 and complete A1.1 source integration > shares dictionary and review identities without collisions  1994ms
+ ✓ tests/web/pronunciation-review.test.ts (28 tests) 1961ms
+   ✓ client boundary > keeps every Node builtin above the client boundary  1902ms
+ ✓ tests/web/lesson-eleven.test.ts (7 tests) 3062ms
+   ✓ Lesson 11 source and Perfekt integration > shares dictionary, phrase and vocabulary-card review information  2862ms
+ ✓ tests/web/lesson-ten.test.ts (7 tests) 2924ms
+   ✓ Lesson 10 travel and separable verbs > shares dictionary and review identity across all builder combinations  2697ms
+ ✓ tests/web/lesson-nine.test.ts (6 tests) 1547ms
+   ✓ Lesson 9 food and Module 3 source coverage > distinguishes general food preferences from countable servings  1381ms
+ ✓ tests/web/sheet-navigation.test.ts (20 tests) 1339ms
+   ✓ safe sheet return navigation > restores lesson and subject grouping and every priority order through URL and full-card Back navigation  1228ms
+ ✓ tests/web/p3c-search-ui.test.ts (8 tests) 1224ms
+ ✓ tests/web/p3c-search.test.ts (14 tests) 1910ms
+   ✓ P3C typed global search projection > never includes review/draft/blocked/private/audio/secret material  1635ms
+ ✓ tests/web/home-cheatsheet.test.ts (6 tests) 1265ms
+   ✓ home and furniture cheat sheet > makes new nouns and plurals available in the in-app dictionary  1242ms
+ ✓ tests/web/lesson-eight.test.ts (7 tests) 1282ms
+   ✓ Lesson 8 time, plans and source coverage > keeps shared save identity for the same everyday time in morning and afternoon  694ms
+   ✓ Lesson 8 time, plans and source coverage > keeps the verb second and chooses the destination article  347ms
+ ✓ tests/web/study-book.test.ts (12 tests) 1062ms
+   ✓ Lesson 4 source and exercise integration > has unique stable line IDs and real page images  517ms
+   ✓ Lesson 4 source and exercise integration > has exact file-backed speech for every readable line and new study utterance  379ms
+ ✓ tests/web/sheet-grouping.test.ts (46 tests) 1474ms
+ ✓ tests/web/collection-cheatsheets.test.ts (10 tests) 988ms
+   ✓ four connected learning sheets > covers all first-four-lesson family entries and preserves source card identities  352ms
+   ✓ four connected learning sheets > resolves new full sentences and inflected verbs in the dictionary  384ms
+ ✓ tests/web/p5-content-enrichment.test.ts (5 tests) 860ms
+   ✓ P5 learner content enrichment > is deterministically generated and contains no source, private, media, HTML, or assertion leaks  448ms
+ ✓ tests/web/vocabulary-examples-ui.test.ts (13 tests) 903ms
+ ✓ tests/web/p6-offline-first.test.ts (53 tests) 708ms
+   ✓ app icons > regenerates byte-identically to the committed files  639ms
+ ✓ tests/web/lesson-six.test.ts (5 tests) 803ms
+   ✓ Lesson 6 and Module 2 integration > keeps official keys and model answers distinct and exposes irregular verbs  425ms
+ ✓ tests/web/lesson-seven.test.ts (7 tests) 794ms
+   ✓ Lesson 7 source coverage and modal sentence learning > shares saved IDs with the dictionary and includes the new question in Lesson 7  479ms
+ ✓ tests/web/p2b-hub-card-anatomy-ui.test.ts (10 tests) 650ms
+ ✓ tests/web/plural-patterns.test.ts (45 tests) 717ms
+   ✓ observed German plural patterns > keeps missing source plurals and forms taught in plural distinct from gendered noun pairs  495ms
+ ✓ tests/web/question-cheatsheet.test.ts (6 tests) 637ms
+   ✓ question patterns and learning support > makes the new whole-question and reply meanings available in the dictionary  605ms
+ ✓ tests/web/p3d-details.test.ts (10 tests) 557ms
+ ✓ tests/web/object-learning.test.ts (6 tests) 438ms
+   ✓ lesson sheet card recall > resolves exact description and phone clips, with extra shape words labelled honestly  414ms
+ ✓ tests/web/lesson-five.test.ts (5 tests) 494ms
+   ✓ Lesson 5 source integration > has official keys, separate study quizzes and dictionary support  333ms
+ ✓ tests/web/subject-sheets.test.ts (11 tests) 515ms
+   ✓ canonical subject vocabulary sheets > provides a populated route for every canonical subject without adding unrelated cards  452ms
+ ✓ tests/web/hobby-time-learning.test.ts (7 tests) 542ms
+   ✓ time practice context > provides recorded teaching clips and contextual dictionary returns  476ms
+ ✓ tests/web/p3b-hubs-ui.test.ts (7 tests) 460ms
+ ✓ tests/web/p4a-games-ui.test.ts (5 tests) 425ms
+stderr | tests/web/extra-professions-ui.test.ts > extra professions learner UI > offers every electrician form inline from the actual word-card audio catalog
+Received `false` for a non-boolean attribute `prefetch`.
+
+If you want to write it to the DOM, pass a string instead: prefetch="false" or prefetch={value.toString()}.
+
+If you used to conditionally omit it with prefetch={condition && value}, pass prefetch={condition ? value : undefined} instead.
+
+ ✓ tests/web/extra-professions-ui.test.ts (4 tests) 394ms
+ ✓ tests/web/p2a-studio-dashboard-ui.test.ts (8 tests) 344ms
+ ✓ tests/web/p3d-details-ui.test.ts (6 tests) 338ms
+ ✓ tests/web/lesson-label-ui.test.ts (3 tests) 411ms
+   ✓ learner-visible lesson labels > renders no padded lesson label on lesson, hub, or detail surfaces  408ms
+ ✓ tests/web/listening-concepts-hubs.test.ts (7 tests) 277ms
+ ✓ tests/web/study-scope.test.ts (8 tests) 183ms
+ ✓ tests/web/grammar-sheet-learning.test.ts (7 tests) 228ms
+ ✓ tests/web/p3b-hubs.test.ts (13 tests) 251ms
+ ✓ tests/web/people-sheet.test.ts (3 tests) 244ms
+ ✓ tests/web/country-cheatsheet.test.ts (6 tests) 141ms
+ ✓ tests/web/study-lookup.test.ts (7 tests) 240ms
+ ✓ tests/web/number-learning.test.ts (5 tests) 167ms
+ ✓ tests/web/past-journey-learning.test.ts (5 tests) 150ms
+ ✓ tests/web/book-transcripts.test.ts (6 tests) 123ms
+ ✓ tests/web/food-learning.test.ts (4 tests) 163ms
+ ✓ tests/web/conversation-learning.test.ts (5 tests) 97ms
+ ✓ tests/web/p6-page-titles.test.ts (6 tests) 102ms
+ ✓ tests/web/wortwerk-state.test.ts (15 tests) 104ms
+ ✓ tests/web/p5-media-integration.test.ts (4 tests) 107ms
+ ✓ tests/web/p5-instructional-visual-system.test.ts (5 tests) 93ms
+ ✓ tests/web/p6-vocabulary-concept-illustrations.test.ts (9 tests) 50ms
+ ✓ tests/web/extra-professions-projection.test.ts (5 tests) 50ms
+ ✓ tests/web/travel-learning.test.ts (3 tests) 87ms
+ ✓ tests/web/j1-activity-runtime.test.ts (2 tests) 50ms
+ ✓ tests/web/sheet-sorting.test.ts (21 tests) 62ms
+ ✓ tests/web/activity-content-plans.test.ts (4 tests) 57ms
+ ✓ tests/web/p4c-state-core.test.ts (8 tests) 48ms
+ ✓ tests/web/p3ar2-proxy.test.ts (5 tests) 56ms
+ ✓ tests/web/p3a-web-shell.test.ts (24 tests) 52ms
+ ✓ tests/web/wortwerk-receipts.test.ts (10 tests) 34ms
+ ✓ tests/web/book-answer-coverage.test.ts (8 tests) 48ms
+ ✓ tests/web/wortwerk-assessment-events.test.ts (5 tests) 33ms
+ ✓ tests/web/wortwerk-store.test.ts (16 tests) 41ms
+ ✓ tests/web/p5-profession-concept-illustrations.test.ts (14 tests) 37ms
+ ✓ tests/web/deploy1r1-pages-hardening.test.ts (14 tests) 38ms
+ ✓ tests/web/country-vocabulary-illustration-ui.test.ts (5 tests) 26ms
+ ✓ tests/web/wortwerk-state-backup.test.ts (7 tests) 28ms
+ ✓ tests/web/p5-rapid-content.test.ts (4 tests) 26ms
+ ✓ tests/web/pronunciation-live.test.ts (3 tests) 25ms
+ ✓ tests/web/complete-backup.test.ts (11 tests) 26ms
+ ✓ tests/web/subject-illustration-ui.test.ts (5 tests) 27ms
+ ✓ tests/web/p4a-games.test.ts (14 tests) 21ms
+ ✓ tests/web/sheet-recall.test.ts (4 tests) 34ms
+ ✓ tests/web/wortwerk-preview-export.test.ts (3 tests) 20ms
+ ✓ tests/web/country-overview.test.ts (5 tests) 16ms
+ ✓ tests/web/p4b-conversation-ui.test.ts (3 tests) 19ms
+ ✓ tests/web/p5-rich-visuals.test.ts (3 tests) 12ms
+ ✓ tests/web/object-vocabulary.test.ts (3 tests) 11ms
+ ✓ tests/web/p4b-conversation.test.ts (13 tests) 17ms
+ ✓ tests/web/wortwerk-future-doc.test.ts (4 tests) 7ms
+ ✓ tests/web/course-phrase-identity-ui.test.ts (1 test) 12ms
+ ✓ tests/web/subject-illustration-coverage-ui.test.ts (3 tests) 20ms
+ ✓ tests/web/wortwerk-migration.test.ts (11 tests) 13ms
+ ✓ tests/web/wortwerk-links.test.ts (4 tests) 5ms
+ ✓ tests/web/detail1-generic-details.test.ts (3 tests) 9ms
+ ✓ tests/web/deploy1r2-pages-smoke-hydration.test.ts (6 tests) 6ms
+ ✓ tests/web/p6-gender-badge-contrast.test.ts (8 tests) 6ms
+ ✓ tests/web/refined-illustrations.test.ts (5 tests) 4ms
+ ✓ tests/web/export-path-leaks.test.ts (4 tests) 4ms
+ ✓ tests/web/profession-patterns.test.ts (1 test) 3ms
+
+ Test Files  131 passed (131)
+      Tests  1160 passed (1160)
+   Start at  10:20:11
+   Duration  53.45s (transform 8.54s, setup 0ms, collect 37.09s, tests 117.22s, environment 29.43s, prepare 8.40s)
+
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> german-learning-platform@0.0.0 packs:validate
+> node --import tsx packages/wortwerk/scripts/validate-packs.ts --write-index
+
+de-a2-everyday: 40 items; 39 playable templates; pending review (off by default)
