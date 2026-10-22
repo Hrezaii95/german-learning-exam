@@ -6,6 +6,7 @@ import type {WordCard} from "../content/word-card-types";
 import {sheetQuizzes} from "./sheet-topics";
 import {savedWordCard} from "./saved-word-card";
 import {wordStudyTags} from "./tags";
+import {countrySheetHref} from "./sheet-routes";
 
 export type RecallQuestion = { id:string; prompt:string; options:string[]; answers:string[]; answerText:string; explanation:string; item:SavedItem };
 
@@ -22,7 +23,7 @@ export function wordRecallQuestions(cards:WordCard[],allCards:WordCard[]):Recall
 
 export function savedCountry(country:Country,dictionary:DictionaryEntry[]=[],speech:Record<string,string>={}):SavedItem {
   const title=`Ich komme ${countryFrom(country)}.`;
-  return {id:`country-${country.id}`,title,meaning:`${countryOriginMeaning(country)} ${countryGroups[country.group].label}. Language examples: ${country.languages.join(", ")}.`,kind:"concept",href:`/cheat-sheets#country-${country.id}`,studyTags:countryStudyTags(country,dictionary),audio:speech[title]??null};
+  return {id:`country-${country.id}`,title,meaning:`${countryOriginMeaning(country)} ${countryGroups[country.group].label}. Language examples: ${country.languages.join(", ")}.`,kind:"concept",href:countrySheetHref(country.id),studyTags:countryStudyTags(country,dictionary),audio:speech[title]??null};
 }
 
 export function countryRecallQuestions(countries:Country[],dictionary:DictionaryEntry[]=[],speech:Record<string,string>={}):RecallQuestion[] {

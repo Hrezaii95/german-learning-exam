@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { countries, countryGroups, countryName, countryFrom, countryWhere, countryTo, spokenLanguage, type Country, type CountryGroup } from "@/lib/study/countries";
 import { GermanText, SaveButton, useStudy } from "./StudyProvider";
 import { LineAudio } from "./StudyAudio";
-import { CheatSheetNav } from "./CheatSheetNav";
+import { CheatSheetFrame } from "./CheatSheetFrame";
 import { CountryFlag } from "./CountryFlag";
 import {useStudyScope,StudyScopeNotice} from "./StudyScope";
 import {countryStudyTags} from "@/lib/study/sheet-scope";
@@ -35,7 +35,7 @@ export function CountryCheatSheet({ speech, cardLinks }: { speech: Record<string
   }, []);
   const study = useStudy();
   const savedCountry=(country:Country)=>countryReviewItem(country,study?.dictionary,speech);
-  const cardHref=(id:string)=>appendNavigationContext(cardLinks[id]!,{entryContext:"hub",returnPath:"/cheat-sheets",resultId:`country-${id}`});
+  const cardHref=(id:string)=>appendNavigationContext(cardLinks[id]!,{entryContext:"hub",returnPath:"/cheat-sheets/countries",resultId:`country-${id}`});
   const {matches}=useStudyScope();
   const scopedCountries=countries.filter(c=>matches(countryStudyTags(c,study?.dictionary)));
   const current = countries.find(c => c.id === chosen)!;
@@ -44,13 +44,7 @@ export function CountryCheatSheet({ speech, cardLinks }: { speech: Record<string
   const clip = (text: string) => <LineAudio text={text} src={speech[text]} compact />;
   const questions=countryRecallQuestions(visible,study?.dictionary,speech);
 
-  return <div className="country-sheet">
-    <CheatSheetNav current="countries"/>
-    <header className="country-heading">
-      <div><p className="study-eyebrow">Cheat sheets · 01 / Your language passport</p><h1>Countries, without the guesswork.</h1>
-        <p>Learn the country. Keep its color. Let <b lang="de">aus</b> change the article.</p></div>
-      <button type="button" className="study-secondary country-print" onClick={() => window.print()}>Print cheat sheet</button>
-    </header>
+  return <CheatSheetFrame current="countries" className="country-sheet" eyebrow="Your language passport" title="Countries, without the guesswork." lead={<>Learn the country. Keep its color. Let <b lang="de">aus</b> change the article.</>}>
     <nav className="country-jump" aria-label="Cheat sheet sections">
       <Link href="#country-overview">Map & flag overview</Link>
       <Link href="#country-patterns">The 4 patterns</Link><Link href="#country-passport">Build a sentence</Link><Link href="#country-index">All {countries.length} countries</Link><Link href="#country-practice">Test yourself</Link>
@@ -131,5 +125,5 @@ export function CountryCheatSheet({ speech, cardLinks }: { speech: Record<string
     </details>
     <p className="country-credit">Country coverage: Momente coursebook, workbook and study collection · © Hueber Verlag. Explanations and memory cues created for your study sheet.</p>
     <CountryPrintSummary/>
-  </div>;
+  </CheatSheetFrame>;
 }

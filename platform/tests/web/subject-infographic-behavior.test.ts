@@ -1,12 +1,15 @@
 // @vitest-environment jsdom
 import {createElement} from "react";
 import {afterEach,beforeAll,describe,expect,it,vi} from "vitest";
-import {cleanup,fireEvent,render,screen,within} from "@testing-library/react";
+import {cleanup,fireEvent,render,screen,within,waitFor} from "@testing-library/react";
 import {SubjectDirectory,SubjectInfographic} from "../../apps/web/components/study/SubjectInfographic";
+import {CheatSheetFrame} from "../../apps/web/components/study/CheatSheetFrame";
+import {sheetDestinations} from "../../apps/web/lib/study/sheet-navigation";
+import {initialSheetBrowse} from "../../apps/web/lib/study/sheet-browse";
 import {StudyProvider} from "../../apps/web/components/study/StudyProvider";
 import {StudyScopeProvider,StudyTagList} from "../../apps/web/components/study/StudyScope";
 import {loadSubjectSheets,loadSubjectVocabulary} from "../../apps/web/lib/study/subject-sheets.server";
-import {defaultStudyScope,STUDY_SCOPE_KEY,studyConcepts} from "../../apps/web/lib/study/scope";
+import {defaultStudyScope,matchesStudyScope,STUDY_SCOPE_KEY,studyConcepts} from "../../apps/web/lib/study/scope";
 import {STUDY_KEY} from "../../apps/web/lib/study/storage";
 import {parseNavigationContextParam,resolveBackHref} from "../../apps/web/lib/content/navigation-context";
 import {loadWordCards} from "../../apps/web/lib/content/word-cards";
@@ -36,9 +39,172 @@ beforeAll(()=>{
   Object.defineProperty(HTMLElement.prototype,"showPopover",{configurable:true,value:()=>{}});
   Object.defineProperty(HTMLElement.prototype,"hidePopover",{configurable:true,value:()=>{}});
 });
-afterEach(()=>{cleanup();vi.unstubAllGlobals();localStorage.clear();window.history.replaceState(null,"","/");});
+afterEach(()=>{cleanup();vi.restoreAllMocks();vi.unstubAllGlobals();localStorage.clear();window.history.replaceState(null,"","/");});
 
 describe("subject infographic browsing",()=>{
+  it("combines local lesson and source scope through the named chooser and full-card Back without replacing saved scope",()=>{
+    const people=sheets.find(sheet=>sheet.id==="people")!;
+    const shared={...defaultStudyScope(),mode:"one",lessons:[1],concepts:["food"],source:"course"};
+    localStorage.setItem(STUDY_SCOPE_KEY,JSON.stringify(shared));
+    window.history.replaceState(null,"","/cheat-sheets/subjects/people?lesson=2,4&source=teacher-extra&view=plurals&gender=0");
+    render(createElement(StudyScopeProvider,null,createElement(SubjectInfographic,{sheet:people,allItems:catalogue})));
+    const expected=catalogue.filter(item=>matchesStudyScope(item.studyTags,{...defaultStudyScope(),mode:"multiple",lessons:[2,4],concepts:["people"],source:"teacher-extra"}));
+    expect(expected.length).toBeGreaterThan(0);
+    expect(visibleIds()).toEqual(new Set(expected.map(item=>item.id)));
+    expect(JSON.parse(localStorage.getItem(STUDY_SCOPE_KEY)!)).toEqual(shared);
+    const chooser=document.querySelector(".sheet-switcher") as HTMLDetailsElement;
+    fireEvent.click(chooser.querySelector("summary")!);
+    const navigation=within(chooser).getByRole("navigation",{name:"Choose a study sheet"});
+    expect(within(navigation).getAllByRole("link")).toHaveLength(37);
+    for(const path of ["/cheat-sheets/vocabulary","/cheat-sheets/subjects/home"]){
+      const link=navigation.querySelector(`a[href^="${path}?"]`)!;
+      const target=new URL(link.getAttribute("href")!,"https://example.test");
+      expect(target.searchParams.get("lesson")).toBe("2,4");
+      expect(target.searchParams.get("source")).toBe("teacher-extra");
+      expect(target.searchParams.get("view")).toBe("plurals");
+    }
+    expect(navigation.querySelector('a[href="/cheat-sheets/countries"]')).toBeTruthy();
+    const entry=entries()[0]!;
+    fireEvent.click(entry);
+    const detail=screen.getByRole("article",{name:/^Vocabulary card:/});
+    const href=within(detail).getByRole("link",{name:"Full vocabulary card →"}).getAttribute("href")!;
+    const context=parseNavigationContextParam(new URL(href,"https://example.test").searchParams.get("nav"));
+    expect(context?.sheetLessonFilter).toEqual([2,4]);
+    expect(context?.sheetSource).toBe("teacher-extra");
+    const back=new URL(resolveBackHref(context),"https://example.test");
+    expect(back.pathname).toBe("/cheat-sheets/subjects/people");
+    expect(back.searchParams.get("lesson")).toBe("2,4");
+    expect(back.searchParams.get("source")).toBe("teacher-extra");
+    expect(back.hash).toBe(`#sheet-card-${entry.dataset.subjectEntry}`);
+  });
+  it("clears local lesson and source scope independently and omits both fields on reset",()=>{
+    const people=sheets.find(sheet=>sheet.id==="people")!;
+    window.history.replaceState(null,"","/cheat-sheets/subjects/people?lesson=2,4&source=teacher-extra");
+    render(createElement(StudyScopeProvider,null,createElement(SubjectInfographic,{sheet:people,allItems:catalogue})));
+    const source=screen.getByRole("combobox",{name:"Filter vocabulary by source"});
+    fireEvent.change(source,{target:{value:"all"}});
+    expect(new URLSearchParams(window.location.search).get("lesson")).toBe("2,4");
+    expect(new URLSearchParams(window.location.search).has("source")).toBe(false);
+    fireEvent.change(source,{target:{value:"teacher-extra"}});
+    const lessons=screen.getByText("Lessons",{exact:true}).closest("details")!;
+    fireEvent.click(lessons.querySelector("summary")!);
+    fireEvent.click(within(lessons).getByRole("checkbox",{name:"Lesson 2"}));
+    fireEvent.click(within(lessons).getByRole("checkbox",{name:"Lesson 4"}));
+    expect(new URLSearchParams(window.location.search).has("lesson")).toBe(false);
+    expect(new URLSearchParams(window.location.search).get("source")).toBe("teacher-extra");
+    window.history.replaceState(null,"","/cheat-sheets/subjects/people?lesson=2,4&source=teacher-extra");
+    fireEvent(window,new PopStateEvent("popstate"));
+    fireEvent.click(screen.getByRole("button",{name:"Reset all filters"}));
+    const query=new URLSearchParams(window.location.search);
+    expect(query.has("lesson")).toBe(false);
+    expect(query.has("source")).toBe(false);
+    expect(visibleIds()).toEqual(new Set(catalogue.map(item=>item.id)));
+    expect(JSON.parse(localStorage.getItem(STUDY_SCOPE_KEY)!)).toEqual(defaultStudyScope());
+  });
+  it("restores a local profession source without changing the shared selection and preserves it through Back and the chooser",()=>{
+    const people=sheets.find(sheet=>sheet.id==="people")!;
+    const shared={...defaultStudyScope(),concepts:["food"],source:"course"};
+    localStorage.setItem(STUDY_SCOPE_KEY,JSON.stringify(shared));
+    window.history.replaceState(null,"","/cheat-sheets/subjects/people?source=teacher-extra");
+    render(createElement(StudyScopeProvider,null,createElement(SubjectInfographic,{sheet:people,allItems:catalogue})));
+    const expected=catalogue.filter(item=>matchesStudyScope(item.studyTags,{...defaultStudyScope(),concepts:["people"],source:"teacher-extra"}));
+    expect(expected.length).toBeGreaterThan(0);
+    expect(visibleIds()).toEqual(new Set(expected.map(item=>item.id)));
+    expect(JSON.parse(localStorage.getItem(STUDY_SCOPE_KEY)!)).toEqual(shared);
+    expect((screen.getByRole("combobox",{name:"Filter vocabulary by source"}) as HTMLSelectElement).value).toBe("teacher-extra");
+    const chooser=document.querySelector(".subject-switcher") as HTMLDetailsElement;
+    fireEvent.click(chooser.querySelector("summary")!);
+    expect(new URL(chooser.querySelector('a[href^="/cheat-sheets/subjects/home?"]')!.getAttribute("href")!,"https://example.test").searchParams.get("source")).toBe("teacher-extra");
+    fireEvent.click(entries()[0]!);
+    const href=within(screen.getByRole("article",{name:/^Vocabulary card:/})).getByRole("link",{name:"Full vocabulary card →"}).getAttribute("href")!;
+    const context=parseNavigationContextParam(new URL(href,"https://example.test").searchParams.get("nav"));
+    const back=new URL(resolveBackHref(context),"https://example.test");
+    expect(back.pathname).toBe("/cheat-sheets/subjects/people");
+    expect(back.searchParams.get("source")).toBe("teacher-extra");
+    expect(back.hash).toBe(`#sheet-card-${entries()[0]!.getAttribute("data-subject-entry")}`);
+  });
+  it("drops a local source filter when choosing all sources or resetting the study selection",()=>{
+    const people=sheets.find(sheet=>sheet.id==="people")!;
+    window.history.replaceState(null,"","/cheat-sheets/subjects/people?source=teacher-extra");
+    render(createElement(StudyScopeProvider,null,createElement(SubjectInfographic,{sheet:people,allItems:catalogue})));
+    const source=screen.getByRole("combobox",{name:"Filter vocabulary by source"});
+    fireEvent.change(source,{target:{value:"all"}});
+    expect(new URLSearchParams(window.location.search).has("source")).toBe(false);
+    expect(visibleIds()).toEqual(new Set(people.items.map(item=>item.id)));
+    fireEvent.change(source,{target:{value:"teacher-extra"}});
+    expect(new URLSearchParams(window.location.search).get("source")).toBe("teacher-extra");
+    fireEvent.click(screen.getByRole("button",{name:"Reset all filters"}));
+    expect(new URLSearchParams(window.location.search).has("source")).toBe(false);
+    expect(visibleIds()).toEqual(new Set(catalogue.map(item=>item.id)));
+    expect(JSON.parse(localStorage.getItem(STUDY_SCOPE_KEY)!)).toEqual(defaultStudyScope());
+  });
+  it.each([["nur","W351"],["mal","W358"]])("restores the old expressions filter for merged %s",(word,cardId)=>{
+    const conversation=sheets.find(sheet=>sheet.id==="conversation")!;
+    const oldHref=`/cheat-sheets/subjects/conversation?category=expressions&q=${word}#sheet-card-l4-${word}-0`;
+    window.history.replaceState(null,"",oldHref);
+    render(createElement(StudyScopeProvider,null,createElement(SubjectInfographic,{sheet:conversation,allItems:catalogue})));
+    expect(visibleIds()).toEqual(new Set([`${cardId}-0`]));
+    expect(document.querySelector(`[data-subject-entry="${cardId}-0"]`)?.getAttribute("aria-expanded")).toBe("true");
+    expect(window.location.pathname+window.location.search+window.location.hash).toBe(oldHref);
+  });
+  it.each([false,true])("restores a legacy Lesson 4 row fragment with plural view=%s",async(allNouns)=>{
+    const home=sheets.find(sheet=>sheet.id==="home")!;
+    const path=allNouns?"/cheat-sheets/plurals":"/cheat-sheets/subjects/home";
+    const query=`?q=Bild${allNouns?"&view=plurals&tags=home":""}`;
+    window.history.replaceState(null,"",`${path}${query}#sheet-card-l4-bild-0`);
+    const scroll=vi.spyOn(HTMLElement.prototype,"scrollIntoView");
+    try{
+      render(createElement(StudyScopeProvider,null,createElement(SubjectInfographic,{sheet:home,allNouns,allItems:catalogue})));
+      expect(visibleIds()).toEqual(new Set(["W464-0"]));
+      const detail=screen.getByRole("article",{name:"Vocabulary card: das Bild"});
+      const canonical=document.getElementById("sheet-card-W464-0");
+      await waitFor(()=>expect(scroll.mock.contexts).toContain(canonical));
+      const href=within(detail).getByRole("link",{name:"Full vocabulary card →"}).getAttribute("href")!;
+      const context=parseNavigationContextParam(new URL(href,"https://example.test").searchParams.get("nav"));
+      expect(resolveBackHref(context)).toBe(`${allNouns?"/cheat-sheets/vocabulary":path}${query}#sheet-card-W464-0`);
+      expect(window.location.hash).toBe("#sheet-card-l4-bild-0");
+    }finally{scroll.mockRestore();}
+  });
+  it("resets an explicit lesson filter together with the shared study selection",()=>{
+    const objects=sheets.find(sheet=>sheet.id==="objects")!;
+    localStorage.setItem(STUDY_SCOPE_KEY,JSON.stringify({...defaultStudyScope(),mode:"one",lessons:[1],concepts:["food"]}));
+    window.history.replaceState(null,"","/cheat-sheets/subjects/objects?lesson=5");
+    render(createElement(StudyScopeProvider,null,createElement(SubjectInfographic,{sheet:objects,allItems:catalogue})));
+    expect(visibleIds()).toEqual(new Set(objects.items.filter(item=>item.studyTags.lessons.includes(5)).map(item=>item.id)));
+    fireEvent.click(screen.getByRole("button",{name:"Reset all filters"}));
+    expect(visibleIds()).toEqual(new Set(catalogue.map(item=>item.id)));
+    expect(entries()).toHaveLength(catalogue.length);
+    expect(new URLSearchParams(window.location.search).has("lesson")).toBe(false);
+    expect(JSON.parse(localStorage.getItem(STUDY_SCOPE_KEY)!)).toEqual(defaultStudyScope());
+  });
+  it("opens topic lesson links independently of saved lessons and preserves the filter through full-card Back",()=>{
+    const objects=sheets.find(sheet=>sheet.id==="objects")!;
+    localStorage.setItem(STUDY_SCOPE_KEY,JSON.stringify({...defaultStudyScope(),mode:"one",lessons:[1],concepts:["food"]}));
+    window.history.replaceState(null,"","/cheat-sheets/subjects/objects?lesson=5");
+    render(createElement(StudyScopeProvider,null,createElement(SubjectInfographic,{sheet:objects,allItems:catalogue})));
+    const expected=objects.items.filter(item=>item.studyTags.lessons.includes(5));
+    expect(expected.length).toBeGreaterThan(0);
+    expect(visibleIds()).toEqual(new Set(expected.map(item=>item.id)));
+    const entry=entries()[0]!;
+    fireEvent.click(entry);
+    const detail=screen.getByRole("article",{name:`Vocabulary card: ${expected.find(item=>item.id===entry.dataset.subjectEntry)!.de}`});
+    const href=within(detail).getByRole("link",{name:"Full vocabulary card →"}).getAttribute("href")!;
+    const context=parseNavigationContextParam(new URL(href,"https://example.test").searchParams.get("nav"));
+    expect(new URL(resolveBackHref(context),"https://example.test").searchParams.get("lesson")).toBe("5");
+    expect(JSON.parse(localStorage.getItem(STUDY_SCOPE_KEY)!).lessons).toEqual([1]);
+    const switcher=screen.getByRole("navigation",{name:"Choose a study sheet"});
+    expect(within(switcher).getAllByRole("link")).toHaveLength(37);
+    const subjects=within(switcher).getByRole("region",{name:"Vocabulary by subject"});
+    expect(within(subjects).getByRole("link",{name:/^Home & furniture/}).getAttribute("href")).toContain("lesson=5");
+    expect(within(switcher).getByRole("link",{name:/^All vocabularyCatalogue$/}).getAttribute("href")).toContain("/cheat-sheets/vocabulary?");
+    expect(within(switcher).getByRole("link",{name:/^All vocabularyCatalogue$/}).getAttribute("href")).toContain("lesson=5");
+    const lessons=screen.getByText("Lessons",{exact:true}).closest("details")!;
+    fireEvent.click(lessons.querySelector("summary")!);
+    fireEvent.click(within(lessons).getByRole("checkbox",{name:"Lesson 5"}));
+    expect(visibleIds()).toEqual(new Set(objects.items.map(item=>item.id)));
+    expect([...lessons.querySelectorAll<HTMLInputElement>("input")].every(input=>!input.checked)).toBe(true);
+    expect(new URLSearchParams(window.location.search).has("lesson")).toBe(false);
+  });
   it("starts with the route subject and switches to every selected tag across the full catalogue",()=>{
     const home=sheets.find(sheet=>sheet.id==="home")!;
     const objects=sheets.find(sheet=>sheet.id==="objects")!;
@@ -214,7 +380,7 @@ describe("subject infographic browsing",()=>{
     render(createElement(SubjectInfographic,{allNouns:true,sheet:{...objects,items:[book,key]}}));
     fireEvent.click(screen.getByRole("button",{name:"das Buch · → die Bücher"}));
     fireEvent.click(groupingSwitch("gender"));
-    const expectedBack=`/cheat-sheets/plurals?view=plurals&gender=0#sheet-card-${book.id}`;
+    const expectedBack=`/cheat-sheets/vocabulary?view=plurals&gender=0#sheet-card-${book.id}`;
     const href=within(screen.getByRole("article",{name:"Vocabulary card: das Buch"})).getByRole("link",{name:"Full vocabulary card →"}).getAttribute("href")!;
     expect(resolveBackHref(parseNavigationContextParam(new URL(href,"https://example.test").searchParams.get("nav")))).toBe(expectedBack);
     fireEvent.click(screen.getByRole("button",{name:"Expand overview"}));
@@ -312,7 +478,7 @@ describe("subject infographic browsing",()=>{
     const ketchup=screen.getByRole("button",{name:/^das Ketchup · No plural taught here/});
     fireEvent.click(ketchup);
     const href=within(screen.getByRole("article",{name:/^Vocabulary card:/})).getByRole("link",{name:"Full vocabulary card →"}).getAttribute("href")!;
-    expect(resolveBackHref(parseNavigationContextParam(new URL(href,"https://example.test").searchParams.get("nav")))).toBe("/cheat-sheets/plurals?view=plurals#sheet-card-l9-ketchup-1");
+    expect(resolveBackHref(parseNavigationContextParam(new URL(href,"https://example.test").searchParams.get("nav")))).toBe("/cheat-sheets/vocabulary?view=plurals#sheet-card-l9-ketchup-1");
   });
 
   it("explains a noun-free subject and keeps its real non-noun vocabulary available",()=>{
@@ -320,7 +486,7 @@ describe("subject infographic browsing",()=>{
     fireEvent.click(screen.getByRole("switch",{name:"Group by plural pattern"}));
     expect(screen.queryByRole("table")).toBeNull();
     expect(screen.getByText(/This selection has no singular nouns/)).toBeTruthy();
-    expect(screen.getByRole("link",{name:"Open the full vocabulary cheat sheet →"}).getAttribute("href")).toBe("/cheat-sheets/plurals?tags=");
+    expect(screen.getByRole("link",{name:"Open the full vocabulary cheat sheet →"}).getAttribute("href")).toBe("/cheat-sheets/vocabulary?tags=");
     expect(entries().length).toBeGreaterThan(100);
   });
   it("keeps all subjects discoverable and links every subject tag to its exact infographic",()=>{
@@ -409,5 +575,65 @@ describe("subject infographic browsing",()=>{
     expect(entries()).toHaveLength(verbs.items.length);
     expect(document.querySelector('[aria-label="Nouns grouped by article"]')).toBeNull();
     expect(screen.getByRole("heading",{name:/Verbs & actions/})).toBeTruthy();
+  });
+});
+
+describe("shared sheet frame and directory",()=>{
+  it("finds every named vocabulary and workshop destination without numbering",()=>{
+    render(createElement(CheatSheetFrame,{current:"countries",eyebrow:"Your language passport",title:"Countries",lead:"Country examples",children:createElement("p",{id:"country-index"},"Existing country content")}));
+    const chooser=document.querySelector(".sheet-switcher") as HTMLDetailsElement;
+    fireEvent.click(chooser.querySelector("summary")!);
+    const navigation=within(chooser).getByRole("navigation",{name:"Choose a study sheet"});
+    const links=within(navigation).getAllByRole("link");
+    expect(links).toHaveLength(37);
+    expect(new Set(links.map(link=>link.getAttribute("href"))).size).toBe(37);
+    expect(sheetDestinations.filter(destination=>destination.kind==="subject")).toHaveLength(studyConcepts.length);
+    expect(chooser.textContent).not.toContain("01 / 15");
+    fireEvent.change(within(chooser).getByRole("searchbox",{name:"Find a study sheet"}),{target:{value:"furniture"}});
+    expect(within(navigation).getAllByRole("link")).toHaveLength(2);
+    const workshop=navigation.querySelector('section[aria-label="Topic workshops"]')!;
+    expect(within(workshop as HTMLElement).getByRole("link").getAttribute("href")).toBe("/cheat-sheets/home");
+    fireEvent.change(within(chooser).getByRole("searchbox"),{target:{value:"no-such-study-area"}});
+    expect(within(navigation).queryAllByRole("link")).toHaveLength(0);
+    expect(within(chooser).getByText(/No matching study sheet/)).toBeTruthy();
+    fireEvent.keyDown(chooser,{key:"Escape"});
+    expect(chooser.open).toBe(false);
+    expect(document.activeElement).toBe(chooser.querySelector("summary"));
+  });
+
+  it("retains vocabulary layout choices when moving between named subject sheets",()=>{
+    render(createElement(CheatSheetFrame,{current:"vocabulary",eyebrow:"Vocabulary",title:"All vocabulary",lead:"All words",browse:{...initialSheetBrowse,view:"plurals",gender:false,subjects:true,lessons:true,sort:"meaning",direction:"desc",groupOrder:["subject","lesson","gender","plural"]},children:createElement("p",null,"Words")}));
+    const chooser=document.querySelector(".sheet-switcher") as HTMLDetailsElement;
+    fireEvent.click(chooser.querySelector("summary")!);
+    const subject=chooser.querySelector('a[href^="/cheat-sheets/subjects/home?"]')!;
+    const target=new URL(subject.getAttribute("href")!,"https://example.test");
+    expect(Object.fromEntries(target.searchParams)).toMatchObject({view:"plurals",gender:"0",subjects:"1",lessons:"1",sort:"meaning",direction:"desc",order:"subject,lesson,gender,plural"});
+    expect(chooser.querySelector('a[href="/cheat-sheets/home"]')).toBeTruthy();
+  });
+
+  it("keeps the existing content and requests printing from the common action row",()=>{
+    const print=vi.spyOn(window,"print").mockImplementation(()=>{});
+    render(createElement(CheatSheetFrame,{current:"home",eyebrow:"Home",title:"A home for every word",lead:"Explore the room",className:"home-sheet",children:createElement("section",{id:"home-index"},"Existing word list")}));
+    expect(screen.getAllByRole("heading",{level:1})).toHaveLength(1);
+    expect(document.querySelector(".home-sheet #home-index")?.textContent).toBe("Existing word list");
+    fireEvent.click(screen.getByRole("button",{name:"Print / save as PDF"}));
+    expect(print).toHaveBeenCalledOnce();
+  });
+
+  it("offers the full catalogue, every subject and every workshop from the directory",()=>{
+    const subjects=studyConcepts.map(subject=>({...subject,count:4,families:3}));
+    render(createElement(SubjectDirectory,{subjects,workshops:true}));
+    expect(document.querySelectorAll("[data-catalogue-tile]")).toHaveLength(1);
+    expect(document.querySelectorAll("[data-subject-tile]")).toHaveLength(21);
+    expect(document.querySelectorAll("[data-workshop-tile]")).toHaveLength(15);
+    expect(document.querySelector("#subjects")).toBeTruthy();
+    expect(document.querySelector('[data-workshop-tile="countries"]')?.getAttribute("href")).toBe("/cheat-sheets/countries");
+    expect(document.querySelector('[data-catalogue-tile]')?.getAttribute("href")).toBe("/cheat-sheets/vocabulary");
+    fireEvent.change(screen.getByRole("searchbox",{name:"Find a study sheet"}),{target:{value:"furniture"}});
+    expect(document.querySelectorAll("[data-subject-tile]")).toHaveLength(1);
+    expect(document.querySelectorAll("[data-workshop-tile]")).toHaveLength(1);
+    fireEvent.change(screen.getByRole("searchbox"),{target:{value:"no-such-study-area"}});
+    fireEvent.click(screen.getByRole("button",{name:"Clear search"}));
+    expect(document.querySelectorAll("[data-subject-tile]")).toHaveLength(21);
   });
 });

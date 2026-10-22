@@ -120,22 +120,21 @@ describe("P3B six canonical hubs projection", () => {
   const indexes = buildContentIndexes(publication.bundle);
   const author = openAuthorIndexes(indexes);
 
-  it("represents exactly six hub routes plus /hubs directory", () => {
+  it("keeps six projected content kinds while consolidating their canonical destinations", () => {
     expect(hubs.hubCount).toBe(6);
     expect(hubs.hubs.map((hub) => hub.id)).toEqual([...LEARNER_HUB_IDS]);
     expect(listCanonicalHubPaths()).toEqual([
-      "/vocabulary",
+      "/cheat-sheets/vocabulary",
       "/verbs",
       "/grammar",
       "/phrases",
       "/listening",
-      "/concepts",
-      "/hubs",
+      "/cheat-sheets",
     ]);
     for (const path of listCanonicalHubPaths()) {
       const resolved = resolveLearnerRoute(path, lessonProjection);
-      if (path === "/hubs") {
-        expect(resolved.kind).toBe("hubs-directory");
+      if (path.startsWith("/cheat-sheets")) {
+        expect(resolved.kind).toBe("sheet");
       } else {
         expect(resolved.kind).toBe("hub");
       }

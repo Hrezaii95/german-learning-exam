@@ -1,4 +1,5 @@
 import {chromium,expect} from '@playwright/test';
+import {readCoursePatternPages} from './canonical-libraries.mjs';
 import {readFile,mkdir,writeFile} from 'node:fs/promises';
 import {resolve} from 'node:path';
 const lesson=Number(process.env.STUDY_TEST_LESSON??5),segment=String(lesson).padStart(2,'0');
@@ -20,7 +21,7 @@ try{
  await tabs.getByRole('button',{name:'Practice',exact:true}).click();
  for(const q of unit.quiz){await page.getByRole('button',{name:q.answer,exact:true}).click();await expect(page.getByRole('heading',{name:'Correct!',exact:true})).toBeVisible();await page.getByRole('button',{name:'Next question →',exact:true}).click();}
  await expect(page.getByRole('heading',{name:`${unit.quiz.length} / ${unit.quiz.length}`,exact:true})).toBeVisible();check(true,'Every quiz question advances and scores correctly');
- for(const [path,count] of [['grammar',unit.concepts.length],['verbs',unit.verbs.length],['phrases',unit.phrases.length]]){await visit(`/${path}/`);await expect(page.locator('.course-patterns .lesson-concept')).toHaveCount(count);check(true,`${path} hub follows Lesson ${lesson}`);}
+ for(const [path,count] of [['grammar',unit.concepts.length],['verbs',unit.verbs.length],['phrases',unit.phrases.length]]){await visit(`/${path}/`);const patterns=await readCoursePatternPages(page);check(patterns.length===count&&patterns.every(entry=>entry.lesson===lesson),'All selected lesson patterns remain available across library pages');check(true,`${path} hub follows Lesson ${lesson}`);}
  await visit('/listening/');check(await page.locator('audio').count()>0,'Selected lesson has original audio players');await page.locator('.listening-transcript summary').first().click();check(await page.locator('.listening-transcript-body').first().isVisible(),'Listening transcripts are available');
  await visit('/cheat-sheets/objects/');await expect(page.getByRole('heading',{name:'One object. One colour trail.',exact:true})).toBeVisible();
  if(lesson===5){await page.getByRole('button',{name:'die Uhr watch',exact:true}).click();await expect(page.locator('.object-result')).toContainText('Das ist eine Uhr.');await page.getByLabel('Correct a guess with kein / keine').check();await expect(page.locator('.object-result')).toContainText('Das ist keine Uhr.');check(true,'Article builder switches gender and negation correctly');await page.screenshot({path:resolve(output,'objects-desktop.png')});}

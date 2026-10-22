@@ -92,11 +92,11 @@ describe("P3D detail UI contracts", () => {
     expect(html).toContain('lang="de"');
     expect(html).toContain("der Architekt");
     expect(html).toContain("die Architektin");
-    expect(html).toContain('data-gender="masculine"');
-    expect(html).toContain('data-gender-token="M"');
+    expect(html).toContain('data-tone="male"');
+    expect(html).toContain('data-gender-token="der"');
     expect(html).toContain('data-gender-label="Masculine"');
-    expect(html).toContain('data-gender="feminine"');
-    expect(html).toContain('data-gender-token="F"');
+    expect(html).toContain('data-tone="female"');
+    expect(html).toContain('data-gender-token="die"');
     expect(html).toContain("die Architekten");
     expect(html).toContain("Play pronunciation");
     expect(html).toContain("Synthesized German preview voice");
@@ -104,7 +104,7 @@ describe("P3D detail UI contracts", () => {
     expect(html).toContain("tts-62dc09ce76149784.mp3");
     expect(html).toContain("Architekt");
     expect(html).toContain("-in");
-    expect(html).toContain('href="/vocabulary?lesson=02"');
+    expect(html).toContain('href="/cheat-sheets/vocabulary?lesson=02"');
     for (const bad of FORBIDDEN_RENDER) {
       expect(html).not.toContain(bad);
     }

@@ -1,5 +1,7 @@
+import {COUNTRIES_SHEET_PATH} from "./sheet-routes";
+
 export const sheetLinks = [
-  {id:"countries",number:"01",title:"Countries & languages",href:"/cheat-sheets"},
+  {id:"countries",number:"01",title:"Countries & languages",href:COUNTRIES_SHEET_PATH},
   {id:"home",number:"02",title:"Home & furniture",href:"/cheat-sheets/home"},
   {id:"people",number:"03",title:"People, family & work",href:"/cheat-sheets/people"},
   {id:"verbs",number:"04",title:"Verbs & sentences",href:"/cheat-sheets/verbs"},

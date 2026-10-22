@@ -387,7 +387,7 @@ describe("P3C typed global search projection", () => {
 
   it("preserves prior activity, hub, and detail-404 route boundaries", () => {
     expect(listCanonicalActivityPaths(lessonProjection)).toHaveLength(23);
-    expect(listCanonicalHubPaths()).toHaveLength(7);
+    expect(listCanonicalHubPaths()).toHaveLength(6);
     expect(resolveLearnerRoute("/search", lessonProjection).kind).toBe("search");
     expect(resolveLearnerRoute("/search/extra", lessonProjection).kind).toBe(
       "not-found",
@@ -458,7 +458,7 @@ describe("P3C navigation context", () => {
     expect(backHrefFromContext(search)).toBe(
       `/search?q=${encodeURIComponent("heißen")}#search-result-lex%3Aingenieur`,
     );
-    expect(backHrefFromContext(hub)).toContain("/vocabulary?");
+    expect(backHrefFromContext(hub)).toContain("/cheat-sheets/vocabulary?");
     expect(backHrefFromContext(hub)).toContain("q=Beruf");
     expect(backHrefFromContext(hub)).toContain("lesson=02");
     expect(backHrefFromContext(lesson)).toBe("/lessons/01");

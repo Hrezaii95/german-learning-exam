@@ -20,13 +20,19 @@ test("all twelve lessons expose Learn, Listen, Practise and source books",async(
 for(const width of [320,1440])test(`compact libraries and search keep context at ${width}px`,async({page},testInfo)=>{
   test.setTimeout(120_000);
   await page.setViewportSize({width,height:1000});
-  await page.goto("vocabulary/?page=2");
-  await expect(page.locator("[data-word-family]")).toHaveCount(12);
-  await expect(page.getByRole("navigation",{name:"Vocabulary results pages"})).toContainText("Showing 13–24");
-  await page.getByRole("link",{name:"Study this word family"}).first().click();
-  await page.getByRole("link",{name:/Back/}).first().click();
-  await expect(page).toHaveURL(/vocabulary\/?\?page=2$/);
-  await expect(page.locator("[data-word-family]")).toHaveCount(12);
+  await page.goto("vocabulary/?q=Bücher&view=plurals&gender=0&tags=objects&page=2");
+  await expect(page).toHaveURL(/\/cheat-sheets\/vocabulary\/?\?/);
+  const vocabularySearch=page.getByRole("searchbox",{name:"Find a word or form",exact:true});
+  await expect(vocabularySearch).toHaveValue("Bücher");
+  await page.locator("[data-subject-entry]").filter({hasText:"das Buch"}).first().click();
+  await page.locator(".subject-word-dropdown").getByRole("link",{name:"Full vocabulary card →",exact:true}).click();
+  await page.getByRole("link",{name:/^← Back/}).first().click();
+  await expect(vocabularySearch).toHaveValue("Bücher");
+  const restored=new URL(page.url()).searchParams;
+  expect(restored.get("view")).toBe("plurals");
+  expect(restored.get("gender")).toBe("0");
+  expect(restored.get("tags")).toBe("objects");
+  expect(restored.get("page")).toBe("2");
   await page.goto("verbs/?lesson=12");
   await expect(page.locator("[data-course-pattern]").first()).toBeVisible();
   await expect(page.locator(".verb-person-grid")).toHaveCount(0);
@@ -45,6 +51,7 @@ for(const width of [320,1440])test(`compact libraries and search keep context at
   await page.screenshot({path:testInfo.outputPath(`search-results-${width}.png`),fullPage:true});
   await page.screenshot({path:testInfo.outputPath(`search-results-viewport-${width}.png`)});
   await page.goto("concepts/?lesson=12");
+  await expect(page).toHaveURL(/\/grammar\/?\?lesson=12$/);
   await expect(page.getByRole("heading",{name:"From a rule to a sentence"})).toBeVisible();
   await expect(page.getByRole("heading",{name:"Connected learning paths"})).toHaveCount(0);
   await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);

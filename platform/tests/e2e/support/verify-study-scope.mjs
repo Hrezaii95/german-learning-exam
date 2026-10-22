@@ -1,4 +1,5 @@
 import {chromium,expect} from '@playwright/test';
+import {expectVocabularyTags,readCoursePatternPages} from './canonical-libraries.mjs';
 import {mkdir,writeFile} from 'node:fs/promises';
 import {resolve} from 'node:path';
 const base=(process.env.STUDY_TEST_BASE??'http://localhost:3210/german-learning-exam').replace(/\/$/,'');
@@ -16,12 +17,11 @@ const open=async()=>{if(!await scope.evaluate(el=>el.open))await scope.locator('
 const one=async(n)=>{await open();await scope.getByRole('button',{name:'One lesson',exact:true}).click();await scope.getByLabel('Selected lesson',{exact:true}).selectOption(String(n));};
 try{
   await visit('/vocabulary/');await one(3);
-  await expect(page.locator('[data-word-family]').first()).toBeVisible();
-  check(await page.locator('[data-word-family]').count()>0,'Lesson 3 vocabulary appears');
+  check(await expectVocabularyTags(page,['Lesson 3'])>0,'Every visible vocabulary entry includes Lesson 3');
   await visit('/grammar/');
   await expect(scope.locator('summary')).toContainText('Lesson 3');
-  await expect(page.getByRole('heading',{name:'Lesson 3 · grammar',exact:true})).toBeVisible();
-  check(await page.locator('.course-patterns .lesson-concept').count()===9,'All nine Lesson 3 grammar concepts are in the hub');
+  const grammar=await readCoursePatternPages(page);
+  check(grammar.length===9&&grammar.every(entry=>entry.lesson===3),'All nine Lesson 3 grammar patterns remain available across library pages');
   await visit('/');
   await expect(page.locator('[data-dashboard-lesson]')).toHaveCount(1);
   check(await page.locator('[data-dashboard-lesson]').getAttribute('data-dashboard-lesson')==='3','Dashboard follows the same lesson');
@@ -41,9 +41,8 @@ try{
   await one(1);await expect(page.locator('main')).not.toContainText('der Stuhl');
   check(true,'Changing lessons excludes the saved Lesson 4 card');
   await visit('/vocabulary/');await one(2);await scope.getByLabel('Material source').selectOption('teacher-extra');
-  await expect(page.locator('[data-word-family]').first()).toBeVisible();
-  check((await page.locator('[data-word-family]').allTextContents()).every(t=>t.includes('Teacher extra')),'Every teacher result is explicitly labelled');
-  await one(3);await expect(page.locator('[data-word-family]')).toHaveCount(0);check(true,'Teacher extras do not leak into unrelated lessons');
+  check(await expectVocabularyTags(page,['Teacher extra','Lesson 2'])>0,'Every teacher vocabulary entry carries its source and Lesson 2 labels');
+  await one(3);await expect(page.locator('[data-subject-entry]')).toHaveCount(0);check(true,'Teacher extras do not leak into unrelated lessons');
   await scope.getByRole('button',{name:'Reset selection',exact:true}).click();
   await scope.getByRole('button',{name:'Up to a lesson',exact:true}).click();await scope.getByLabel('Include through',{exact:true}).selectOption('2');
   await visit('/');await expect(page.locator('[data-dashboard-lesson]')).toHaveCount(2);check(true,'Up to Lesson 2 includes both lessons');

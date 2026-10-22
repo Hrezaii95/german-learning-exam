@@ -71,6 +71,16 @@ export async function readStorageJson<T = unknown>(
   }, key) as Promise<T | null>;
 }
 
+/** Restore a pre-existing storage fixture, then let the real providers read it. */
+export async function seedStorageJson(page: Page, key: string, value: unknown): Promise<void> {
+  await page.evaluate(({ key, value }) => localStorage.setItem(key, JSON.stringify(value)), { key, value });
+  await page.reload();
+  await waitForHydration(page);
+}
+
+/** Existing study-book state, including compatibility data from retired screens. */
+export const STUDY_STATE_KEY = "german-learning-os:study-book:v1";
+
 /**
  * Read one sessionStorage key and JSON.parse it (null when absent/unparseable).
  *

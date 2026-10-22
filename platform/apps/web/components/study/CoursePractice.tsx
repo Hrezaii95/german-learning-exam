@@ -7,6 +7,7 @@ import {LineAudio} from "./StudyAudio";
 import type {DictionaryEntry} from "@/lib/study/types";
 import {courseChapters} from "@/lib/study/lesson-four";
 import {tagsForLesson} from "@/lib/study/scope";
+import {savedDictionaryEntry} from "@/lib/study/saved-word-card";
 
 export function CoursePractice(){
   const study=useStudy();const {scope,matches}=useStudyScope();
@@ -35,7 +36,7 @@ function Recall({entries}:{entries:DictionaryEntry[]}){
         <p className={current.displayForms?.[0]?`study-tone-${current.displayForms[0].tone}`:undefined}><GermanText text={current.de}/><LineAudio text={current.de} src={current.audio} compact/></p>
         {current.example&&<details><summary>See an example</summary><p><GermanText text={current.example}/><LineAudio text={current.example} compact/></p><p>{current.translation}</p></details>}
         {current.studyTags&&<StudyTagList tags={current.studyTags}/>}
-        <div className="study-row"><SaveButton item={{id:current.saveId??`card-${current.id}`,title:current.de,meaning:current.en,kind:"word",href:current.href,...(current.studyTags?{studyTags:current.studyTags}:{}),audio:current.audio}}/><Link href={current.href}>Open full card →</Link><button type="button" className="study-primary" onClick={()=>{setIndex(index+1);setRevealed(false);setAnswer(null);}}>{index+1===pool.length?"See my result":"Next card →"}</button></div>
+        <div className="study-row"><SaveButton item={savedDictionaryEntry(current)}/><Link href={current.href}>Open full card →</Link><button type="button" className="study-primary" onClick={()=>{setIndex(index+1);setRevealed(false);setAnswer(null);}}>{index+1===pool.length?"See my result":"Next card →"}</button></div>
       </div>}
     </>:<div role="status"><h3>Practice round complete</h3><p>{mode==="article"?`${correct} of ${pool.length} answers correct.`:`You revealed ${pool.length} word families. This is recall practice, not a checked score.`}</p><div className="study-row"><button className="study-primary" type="button" onClick={restart}>Practise again</button><Link href="/saved">Review saved words →</Link></div></div>}
   </div>;

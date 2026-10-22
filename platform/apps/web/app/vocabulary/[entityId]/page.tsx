@@ -27,5 +27,5 @@ export default async function VocabularyDetailPage({ params }: PageProps) {
   const oldPath = card.aliases.find(p => p.startsWith("/vocabulary/id-"));
   const requestedLearningId = tryDecodeEntityRouteSegment(entityId);
   const learningId = requestedLearningId?.startsWith("lex:") ? requestedLearningId : oldPath ? tryDecodeEntityRouteSegment(oldPath.split("/").at(-1)!) : null;
-  return <ShellLayout current="vocabulary"><div className="stack"><Suspense fallback={<BackLink href="/vocabulary" />}><WordCardBackLink /></Suspense><div className={styles.detailFrame}><WordFamilyCard key={card.id} card={card} /></div>{learningId && <DetailLearningControls key={learningId} contentId={learningId} />}</div></ShellLayout>;
+  return <ShellLayout current="vocabulary"><div className="stack"><Suspense fallback={<BackLink href="/cheat-sheets/vocabulary" />}><WordCardBackLink /></Suspense><div className={styles.detailFrame}><WordFamilyCard key={card.id} card={card} /></div>{learningId && <DetailLearningControls key={learningId} contentId={learningId} />}</div></ShellLayout>;
 }
