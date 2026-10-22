@@ -71,6 +71,10 @@ function textIssues(value: unknown, path = "$", depth = 0): PackValidationIssue[
   if (isRecord(value)) return Object.entries(value).flatMap(([key, item]) => textIssues(item, `${path}.${key}`, depth + 1));
   return [];
 }
+/** Source-card navigation always stays inside this app. */
+export function isAppRelativeHref(value: string): boolean {
+  return /^\/(?!\/)[^\\\s\u0000-\u001f\u007f-\u009f]*$/u.test(value);
+}
 function mediaPathIssues(path: string, location: string, relativeOnly = false): PackValidationIssue[] {
   const invalid = path.includes("\\") || path.split(/[/?#]/u).includes("..") ||
     /^(?:[a-z][a-z0-9+.-]*:|\/\/)/iu.test(path) && (relativeOnly || !/^https?:\/\//iu.test(path)) ||
@@ -98,13 +102,18 @@ export function validatePack(value: unknown, language?: LanguageProfile): PackVa
   const issues = [
     ...textIssues(value), ...reviewIssues(pack.review, "$.review"),
     ...duplicateIds(pack.units, "$.units"), ...duplicateIds(pack.maps, "$.maps"),
-    ...duplicateIds(pack.items, "$.items"),
+    ...duplicateIds(pack.items, "$.items"), ...duplicateIds(pack.badges ?? [], "$.badges"),
   ];
   if (language) issues.push(...languageTokenIssues(value, new Set(language.genders.map(gender => gender.id))));
   const units = new Set(pack.units.map(unit => unit.id));
   const items = new Map(pack.items.map(item => [item.id, item]));
   const lemmas = new Map<string, string>();
   if (language && pack.language !== language.id) issues.push(diagnostic("LANGUAGE_MISMATCH", "$.language", `Pack language ${pack.language} does not match profile ${language.id}`));
+  pack.badges?.forEach((badge, index) => {
+    if (badge.requirement.type === "secured") badge.requirement.filters?.forEach((filter, filterIndex) => {
+      if (!/^[A-Za-z][A-Za-z0-9]*(?:\.[A-Za-z][A-Za-z0-9]*)*$/u.test(filter.field)) issues.push(diagnostic("BADGE_FILTER", `$.badges[${index}].requirement.filters[${filterIndex}].field`, "Expected a plain item field path"));
+    });
+  });
   pack.units.forEach((unit, index) => {
     if (unit.bookRef?.pageStart !== undefined && unit.bookRef.pageEnd !== undefined && unit.bookRef.pageStart > unit.bookRef.pageEnd) {
       issues.push(diagnostic("PAGE_RANGE", `$.units[${index}].bookRef`, "pageEnd must not precede pageStart"));
@@ -115,6 +124,7 @@ export function validatePack(value: unknown, language?: LanguageProfile): PackVa
     if (!units.has(item.unitId)) issues.push(diagnostic("UNRESOLVED_UNIT", `${path}.unitId`, `Unknown unit ${item.unitId}`));
     if (item.review) issues.push(...reviewIssues(item.review, `${path}.review`));
     if (pack.review.status === "reviewed" && item.review?.status === "pending-german-review") issues.push(diagnostic("REVIEW_PENDING", `${path}.review`, "A reviewed pack cannot contain pending content"));
+    if (item.sourceRef && !isAppRelativeHref(item.sourceRef.href)) issues.push(diagnostic("UNSAFE_SOURCE_HREF", `${path}.sourceRef.href`, "Source cards must use an app-relative path without an authority, backslash, whitespace or control characters"));
     if (item.audio) issues.push(...mediaPathIssues(item.audio.src, `${path}.audio.src`));
     if (item.image) issues.push(...mediaPathIssues(item.image, `${path}.image`));
     for (const [form, audio] of Object.entries(item.pluralAudio ?? {})) issues.push(...mediaPathIssues(audio.src, `${path}.pluralAudio.${form}.src`));

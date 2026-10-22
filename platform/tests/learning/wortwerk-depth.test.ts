@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import type { ContentPack, DifficultyProfile, PackLexeme } from "../../packages/content/src/types/packs.js";
 import type { DimensionProgress, ItemProgress, LearningAnswer, LearningCapability, LearningSession } from "../../packages/learning/src/wortwerk/types.js";
 import { advanceChallenge, answerChallenge, boundedRunBonus, challengeRemainingSeconds, createChallenge, derivePersonalBest, puzzleShareGrid, selectDailyPuzzle } from "../../packages/learning/src/wortwerk/challenges.js";
-import { createDailyReminderIcs, deriveCollection, deriveQuests, deriveReadiness, deriveSkillStrength, deriveUnitProgress, deriveWeeklyRecap } from "../../packages/learning/src/wortwerk/engagement-depth.js";
+import { createDailyReminderIcs, deriveBadges, deriveCollection, deriveQuests, deriveReadiness, deriveSkillStrength, deriveUnitProgress, deriveWeeklyRecap } from "../../packages/learning/src/wortwerk/engagement-depth.js";
 const now = new Date("2026-10-22T12:00:00Z");
 const difficulty: DifficultyProfile = { schemaVersion: 1, id: "fixture", optionsCount: 4, timerSeconds: 60, audioSpeedRange: [0.7, 1], hintsAllowed: true, maxPassageLength: 200, distractorCloseness: 1, typedAnswerRatio: 0.5 };
 const word: PackLexeme = { type: "lexeme", id: "w", lemma: "Fixture", pos: "noun", meaning: "Fixture meaning", unitId: "u1", source: "course", tags: [], bookRef: { book: "fixture", lesson: 1 }, frequencyRank: 100 };
@@ -40,6 +40,17 @@ describe("Wortwerk engagement depth", () => {
     const cards = deriveCollection(pack, [answer(), answer({ eventId: "hinted", itemId: "w2", hinted: true })], progress, difficulty, now);
     expect(cards.map(card => [card.item.id, card.collected, card.rarity])).toEqual([["w", true, "common"], ["w2", false, "legendary"]]);
     expect(cards[0]).toMatchObject({ complete: true, gold: false });
+  });
+  it("derives authored badges and titles from evidence without hardcoded names", () => {
+    const authored: ContentPack = { ...pack, badges: [
+      { id: "one", title: "Fixture badge", titleAward: "Fixture title", requirement: { type: "secured", count: 1, dimension: "meaning", filters: [{ field: "unitId", value: "u1" }] } },
+      { id: "practice", title: "Fixture practice", requirement: { type: "practice", count: 2, outcome: "unhinted-recall", skill: "vocabulary" } },
+      { id: "habit", title: "Fixture habit", requirement: { type: "streak", days: 7 } },
+    ] };
+    const badges = deriveBadges(authored, [answer(), answer({ eventId: "hinted", hinted: true })], progress, { now, streak: 7 });
+    expect(badges.map(badge => [badge.badge.title, badge.current, badge.earned, badge.titleAward])).toEqual([
+      ["Fixture badge", 1, true, "Fixture title"], ["Fixture practice", 1, false, undefined], ["Fixture habit", 7, true, undefined],
+    ]);
   });
   it("recap uses seven local calendar days and reuses private learning metrics", () => {
     const rows = [answer({ eventId: "old", createdAt: "2026-10-15T21:59:00Z", studyDate: "2026-10-15" }), answer({ eventId: "start", createdAt: "2026-10-15T22:01:00Z", studyDate: "2026-10-15", skill: "listening" }), answer({ eventId: "today", skill: "writing", templateId: "write.prompt", hinted: true, selfAssessed: true })];

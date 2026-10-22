@@ -1,4 +1,5 @@
 import { calendarDaysBetween, isCalendarDate, shiftCalendarDate, studyDate } from "./dates.js";
+import { boundedRunBonus } from "./bonuses.js";
 import { orderedAnswers } from "./progress.js";
 import type { LearningAnswer, LearningSession } from "./types.js";
 
@@ -85,7 +86,10 @@ export function answerXp(input: {
 
 export function deriveRewards(answers: readonly LearningAnswer[], sessions: readonly LearningSession[], now: Date): { xp: number; bestCombo: number } {
   const events = orderedAnswers(answers, now);
-  const runs = orderedSessions(sessions, now).filter(s => s.mode === "run" && s.completed && isMeaningfulSession(s));
+  const completedSessions = orderedSessions(sessions, now);
+  const runs = completedSessions.filter(s => s.mode === "run" && s.completed && isMeaningfulSession(s));
+  const bonusSessions = new Map(completedSessions.filter(s => s.mode === "free" && s.bonusOf && s.answered <= 3).map(s => [s.sessionId, s]));
+  const bonusSpent = new Map<string, { answers: number; xp: number }>();
   const combos = new Map<string, number>();
   const mistakes = new Set<string>();
   let xp = 0;
@@ -104,9 +108,26 @@ export function deriveRewards(answers: readonly LearningAnswer[], sessions: read
       || event.templateId.startsWith("record.");
     const kind: RewardKind = selfAssessed && event.skill === "speaking" ? "speaking"
       : selfAssessed && event.skill === "writing" ? "writing"
+      : event.templateId === "listen.dialogue" ? "detective"
       : event.skill === "listening" ? "listening" : "retrieval";
-    xp += answerXp({ kind, correct: event.correct, hinted: event.hinted, corrected, combo, completedRunsToday });
+    const earned = answerXp({ kind, correct: event.correct, hinted: event.hinted, corrected, combo, completedRunsToday });
+    xp += earned;
+    const bonusSession = event.sessionId ? bonusSessions.get(event.sessionId) : undefined;
+    const parent = bonusSession && runs.find(run => run.sessionId === bonusSession.bonusOf);
+    if (parent && parent.scopeKey && parent.difficultyId && boundedRunBonus(parent.sessionId).eligible
+      && Date.parse(bonusSession!.startedAt) >= Date.parse(parent.completedAt)
+      && Date.parse(event.createdAt) >= Date.parse(bonusSession!.startedAt)
+      && Date.parse(event.createdAt) <= Date.parse(bonusSession!.completedAt)
+      && bonusSession!.scopeKey === parent.scopeKey && bonusSession!.difficultyId === parent.difficultyId) {
+      const spent = bonusSpent.get(parent.sessionId) ?? { answers: 0, xp: 0 };
+      const extra = spent.answers < 3 ? Math.min(earned, Math.max(0, 30 - spent.xp)) : 0;
+      xp += extra;
+      bonusSpent.set(parent.sessionId, { answers: spent.answers + 1, xp: spent.xp + extra });
+    }
   }
+  // A Boss reward is a completion reward, independent of per-answer retrieval
+  // XP. Cumulative snapshots and synced duplicates cannot grant it twice.
+  xp += completedSessions.filter(s => s.mode === "boss" && s.completed && s.answered > 0 && s.answered - s.correct < 3).length * 30;
   return { xp, bestCombo };
 }
 

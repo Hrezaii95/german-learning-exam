@@ -1,4 +1,4 @@
-import type { ContentPack, DifficultyProfile, PackLexeme } from "../../../content/src/types/packs.js";
+import type { ContentPack, DifficultyProfile, PackBadge, PackItem, PackLexeme } from "../../../content/src/types/packs.js";
 import { calendarDate, isCalendarDate, shiftCalendarDate, studyDate } from "./dates.js";
 import { deriveLearningMetrics, deriveRewards, isMeaningfulSession, orderedSessions } from "./engagement.js";
 import { isObjectiveDimension, objectiveDimensions, orderedAnswers } from "./progress.js";
@@ -226,4 +226,33 @@ export function createDailyReminderIcs(options: DailyReminderOptions): string {
     "BEGIN:VEVENT", `UID:${uid}`, `DTSTAMP:${compactUtc(now)}`, `DTSTART;TZID=${options.timeZone}:${options.startDate.replace(/-/gu, "")}T${options.time.replace(":", "")}00`,
     "DURATION:PT5M", `RRULE:FREQ=DAILY;COUNT=${occurrences}`, "SUMMARY:Daily practice", `DESCRIPTION:${escapeIcs("A few minutes of practice. Open your current review: " + url.href)}`, `URL:${url.href}`, "BEGIN:VALARM", "TRIGGER:PT0S", "ACTION:DISPLAY", "DESCRIPTION:Time for daily practice", "END:VALARM", "END:VEVENT", "END:VCALENDAR"];
   return lines.map(foldIcs).join("\r\n") + "\r\n";
+}
+
+export type BadgeProgress = { badge: PackBadge; current: number; target: number; earned: boolean; titleAward?: string };
+function badgeField(item: PackItem, path: string): string[] {
+  let value: unknown = item;
+  for (const part of path.split(".")) {
+    if (!value || typeof value !== "object" || !Object.hasOwn(value, part)) return [];
+    value = (value as Record<string, unknown>)[part];
+  }
+  return (Array.isArray(value) ? value : [value]).filter((entry): entry is string => typeof entry === "string");
+}
+export function deriveBadges(pack: ContentPack, answers: readonly LearningAnswer[], progress: readonly ItemProgress[], input: { now: Date; streak: number }): BadgeProgress[] {
+  const rows = orderedAnswers(answers, input.now).filter(answer => answer.packId === pack.id);
+  const index = new Map(progress.filter(item => item.packId === pack.id).map(item => [item.itemId, item]));
+  return (pack.badges ?? []).map(badge => {
+    const requirement = badge.requirement;
+    let current = 0;
+    const target = requirement.type === "streak" ? requirement.days : requirement.count;
+    if (requirement.type === "streak") current = Math.max(0, Math.floor(input.streak));
+    else if (requirement.type === "practice") current = rows.filter(answer => (!requirement.skill || answer.skill === requirement.skill)
+      && (!requirement.templateId || answer.templateId === requirement.templateId)
+      && (requirement.outcome === "completed" || answer.correct && !answer.hinted && answer.format === "recall")).length;
+    else current = pack.items.filter(item => (requirement.filters ?? []).every(filter => badgeField(item, filter.field).includes(filter.value))).filter(item => {
+      const learned = index.get(item.id);
+      return requirement.dimension ? learned?.segments[requirement.dimension]?.state === "secured" : learned?.complete;
+    }).length;
+    const earned = current >= target;
+    return { badge, current: Math.min(target, current), target, earned, ...(earned && badge.titleAward ? { titleAward: badge.titleAward } : {}) };
+  });
 }

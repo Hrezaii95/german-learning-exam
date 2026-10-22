@@ -2,6 +2,7 @@ import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { join, resolve } from "node:path";
 import type { ContentPack, DifficultyProfile, LanguageProfile, PackItem } from "../../../../packages/content/src/types/packs.js";
 import { assertContentPack, validateDifficultyProfile } from "../../../../packages/content/src/validation/packs.js";
+import { assertPackResource } from "../../../../packages/content/src/validation/pack-resources.js";
 import { loadPackRegistry, packFile } from "../../../../packages/wortwerk/src/loader.server.js";
 export type PlayPack = {pack:ContentPack;language:LanguageProfile;difficulty:DifficultyProfile;fixture:boolean;resources:Partial<Record<"story"|"exam",Record<string,unknown>>>};
 export type WortwerkContent = {packs:PlayPack[];languages?:LanguageProfile[];difficulties?:DifficultyProfile[]};
@@ -34,7 +35,9 @@ export function loadWortwerkContent():WortwerkContent{
   const items=(manifest.itemFiles??[]).flatMap(file=>json(packFile(directory,file)) as PackItem[]).map(item=>fixtureMedia(item,root));
   const pack={...manifest,items};assertContentPack(pack,language);
   const resources:PlayPack["resources"]={};
-  for(const key of ["story","exam"] as const)if(manifest[key])resources[key]=json(packFile(directory,manifest[key])) as Record<string,unknown>;
+  for(const key of ["story","exam"] as const)if(manifest[key]){
+   const resource=json(packFile(directory,manifest[key]));assertPackResource(resource,key,pack);resources[key]=resource as Record<string,unknown>;
+  }
   packs.push({pack,language,difficulty,fixture:true,resources});
  }
  return {packs,languages:[...registry.languages.values()],difficulties:[...new Map([...registry.difficulties.values(),...packs.map(entry=>entry.difficulty)].map(profile=>[profile.id,profile])).values()]};

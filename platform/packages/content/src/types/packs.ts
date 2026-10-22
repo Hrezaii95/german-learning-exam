@@ -109,6 +109,14 @@ export type PackExamTask = PackItemBase & {
 };
 export type PackItem = PackLexeme | PackGrammarPoint | PackDrill | PackSentence |
   PackDialogue | PackText | PackProductionPrompt | PackExamTask;
+/** Declarative rewards: every visible badge name and earned title is authored data. */
+export type PackBadge = {
+  id: string; title: string; description?: string; titleAward?: string;
+  requirement:
+    | { type: "secured"; count: number; dimension?: string; filters?: Array<{ field: string; value: string }> }
+    | { type: "practice"; count: number; outcome: "completed" | "unhinted-recall"; skill?: string; templateId?: string }
+    | { type: "streak"; days: number };
+};
 export type PackManifest = {
   schemaVersion: 1;
   id: string;
@@ -123,6 +131,7 @@ export type PackManifest = {
   }>;
   maps: Array<{ id: string; title: string; rows: string; cols: string }>;
   difficulty: string;
+  badges?: PackBadge[];
   review: PackReview;
   itemFiles?: string[];
   story?: string;

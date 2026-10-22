@@ -1,6 +1,6 @@
 # Lane 2 status
 
-Updated by Lane 2 only. Lane worktree: `lane2/l2-5-allskills`. Base: `codex/live-alpha` with PR #1 documentation merged locally. Never merge to the live branch.
+Updated by Lane 2 only. Lane worktree: `lane2/l2-6-engagement`. Base: `codex/live-alpha` with PR #1 documentation merged locally. Never merge to the live branch.
 
 | PR | Title | State (planned / in progress / draft PR / merged / blocked) | Link | Notes |
 |---|---|---|---|---|
@@ -9,7 +9,7 @@ Updated by Lane 2 only. Lane worktree: `lane2/l2-5-allskills`. Base: `codex/live
 | L2-3 | Daily Run, event-derived progress and Today | draft PR | [PR #24](https://github.com/Hrezaii95/german-learning-exam/pull/24) | Implemented, including habit and dashboard embedding fixes; final release gates pending. |
 | L2-4 | Grammar and listening | draft PR | [PR #26](https://github.com/Hrezaii95/german-learning-exam/pull/26) | Six mechanics wired into Daily Run; 50 focused tests pass; final release gates pending. |
 | L2-5 | Speaking, reading and writing | draft PR | [PR #27](https://github.com/Hrezaii95/german-learning-exam/pull/27) | All ten mechanics integrated; self-check practice separated from mastery; 111 focused tests pass. |
-| L2-6 | Engagement, maps, story and exam | in progress | — | Pure helpers and fixed routes implemented; integration underway. |
+| L2-6 | Engagement, maps, story and exam | in progress | — | Journeys, maps, timed challenges, story/exam, private deck and practice backup integrated; 98 focused tests pass. |
 | L2-7 | Book companion | in progress | — | Scope/position/printing implemented; Lane 1 book-surface hooks remain an integration need. |
 | L2-8 | CSV authoring and preview | in progress | — | CSV tooling implemented; preview integration underway. |
 | L2-8b | Data-only A2 everyday pack | draft PR | [PR #17](https://github.com/Hrezaii95/german-learning-exam/pull/17) | Exactly ten content files, no code; all content pending review. |
@@ -135,3 +135,9 @@ L2-4 full check: all three typechecks, lint, publication validation, 124 files /
 ## L2-5 integration verification
 
 Speaking, reading, writing and matching use the same generated-task renderer. The actual DOM no-giveaway matrix covers every template across all ten mechanics and a second language. Self-check attempts remain separate from objective recall, strength, secured milestones and Gold; objective typed writing remains eligible for objective evidence. Tap-to-Learn appends raw deck events, with an explicit no-write preview callback. Self speaking/writing cycles retain their specified XP. Normal local edits preserve future-version synced documents unchanged. Focused final phase batch: 111 passing tests; root/scoped web TypeScript, source lint and hook pass. Browser coverage now includes both Daily Run and Quick review by tap, keyboard and drag at 390/1280 px; execution is pending the fresh integrated export.
+
+L2-5 full check: all typechecks/lint, publication validation, 134 files / 1,461 tests and web rerun 115 files / 1,017 tests pass. The final empty-production-pack check remains blocked until the already-published data-only A2 pack is included.
+
+## L2-6 integration verification
+
+Added fixed exploration/story/exam/challenge routes, validated authored story/exam resources, capability-derived maps and skill/readiness views, recap/quests/calendar reminder, personal deck/notes/examples/Difficult and validated raw practice backup. Boss/Blitz alone have strikes; foreground time counts; puzzle selection excludes self-check tasks and is independent of saved progress/scope. Boss completion awards once; bonus rounds are finite three-task children with a per-parent 30-extra-XP cap. Exact typed writing remains objectively assessed in exams; open production stays self-check. Meaning illustration hints require an explicit gesture and mark persisted answers hinted; exams disable hints. Focused phase suites: 98 tests pass; hint follow-up: 24 passing tests, including the complete no-giveaway matrix. Final root integration/gates continue below.

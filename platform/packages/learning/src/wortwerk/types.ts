@@ -10,7 +10,7 @@ export type LearningAnswer = {
 export type LearningSession = {
   sessionId: string; mode: "run" | "quick" | "blitz" | "boss" | "free";
   startedAt: string; completedAt: string; answered: number; correct: number;
-  completed: boolean; studyDate: string; scopeKey?: string; difficultyId?: string;
+  completed: boolean; studyDate: string; scopeKey?: string; difficultyId?: string; bonusOf?: string;
 };
 export type LearningAssessment = "objective" | "self";
 export type LearningTemplate = { id: string; dimension: string; skill: string; format: LearningFormat; assessment?: LearningAssessment };

@@ -90,7 +90,8 @@ function parseSession(event: SyncEvent): LearningSession | null {
     || Date.parse(value.completedAt) > Date.parse(event.createdAt)
     || !count(value.answered) || !count(value.correct) || value.correct > value.answered
     || typeof value.completed !== "boolean" || !isCalendarDate(value.studyDate)
-    || !optionalString(value.scopeKey) || !optionalString(value.difficultyId)) return null;
+    || !optionalString(value.scopeKey) || !optionalString(value.difficultyId) || !optionalString(value.bonusOf)
+    || (value.bonusOf !== undefined && (value.mode !== "free" || value.bonusOf === value.sessionId || value.answered > 3))) return null;
   if (!plausibleDates(value.completedAt, value.studyDate)) return null;
   return {
     sessionId: value.sessionId, mode: value.mode as LearningSession["mode"],
@@ -98,6 +99,7 @@ function parseSession(event: SyncEvent): LearningSession | null {
     answered: value.answered, correct: value.correct, completed: value.completed, studyDate: value.studyDate,
     ...(value.scopeKey !== undefined ? { scopeKey: value.scopeKey } : {}),
     ...(value.difficultyId !== undefined ? { difficultyId: value.difficultyId } : {}),
+    ...(value.bonusOf !== undefined ? { bonusOf: value.bonusOf } : {}),
   };
 }
 
@@ -182,7 +184,7 @@ export function recordAssignmentProgress(assignmentId: string, progress: Assignm
 export type RecordSessionInput = {
   sessionId: string; mode: LearningSession["mode"]; startedAt: string;
   answered: number; correct: number; completed: boolean;
-  completedAt?: string; scopeKey?: string; difficultyId?: string;
+  completedAt?: string; scopeKey?: string; difficultyId?: string; bonusOf?: string;
 };
 export type RecordSessionOptions = { store?: WortwerkStore; now?: Date; timeZone?: string; assignmentId?: string };
 export function recordSession(input: RecordSessionInput, options: RecordSessionOptions = {}): SyncEvent {

@@ -7,7 +7,7 @@ export type RandomSource = () => number;
 export type TaskOption = { id: string; text?: string; image?: string; audio?: PackAudio };
 /** Only this projection is rendered while the learner is answering. */
 export type TaskQuestion = {
-  instruction: string; text?: string; audio?: PackAudio; options: TaskOption[];
+  instruction: string; text?: string; audio?: PackAudio; options: TaskOption[]; hintsAllowed?: boolean;
   input: "choice" | "text" | "sequence" | "self-check"; passage?: string; checklist?: string[]; tokens?: TaskOption[]; audioSequence?: PackAudio[]; audioRates?: number[]; lang: string; helperKeys: string[];
 };
 export type TaskFeedback = {

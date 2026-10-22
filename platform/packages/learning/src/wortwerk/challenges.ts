@@ -79,8 +79,4 @@ export function derivePersonalBest(sessions: readonly LearningSession[], input: 
   return best ? { score: best.correct, answered: best.answered, accuracy: best.correct / best.answered, sessionId: best.sessionId, completedAt: best.completedAt } : null;
 }
 
-/** Eligibility is deterministic; accepting it is always optional, and rewards are capped. */
-export function boundedRunBonus(sessionId: string): { eligible: boolean; extraTasks: 0 | 3; xpCap: 0 | 30 } {
-  const eligible = !!sessionId && hash(`bonus:${sessionId}`) % 5 === 0;
-  return { eligible, extraTasks: eligible ? 3 : 0, xpCap: eligible ? 30 : 0 };
-}
+export { boundedRunBonus } from "./bonuses.js";

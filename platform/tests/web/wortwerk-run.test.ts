@@ -17,7 +17,7 @@ import { parseWortwerkEvidence, deriveWortwerkState } from "../../apps/web/lib/w
 import { encodeScope } from "../../apps/web/lib/wortwerk/links.js";
 import { clearOverlayPacks, registerOverlayPacks } from "../../packages/wortwerk/src/registry.js";
 
-const testState = vi.hoisted(() => ({ query: "", store: undefined as unknown, latestTask: null as unknown, forceAudio: false }));
+const testState = vi.hoisted(() => ({ query: "", store: undefined as unknown, latestTask: null as unknown, forceAudio: false, meaningOnly: false }));
 vi.mock("next/navigation", () => ({ useSearchParams: () => new URLSearchParams(testState.query) }));
 vi.mock("../../apps/web/lib/wortwerk/store.js", async importOriginal => {
   const actual = await importOriginal<typeof import("../../apps/web/lib/wortwerk/store.js")>();
@@ -25,7 +25,7 @@ vi.mock("../../apps/web/lib/wortwerk/store.js", async importOriginal => {
 });
 vi.mock("../../apps/web/lib/wortwerk/runtime.js", async importOriginal => {
   const actual = await importOriginal<typeof import("../../apps/web/lib/wortwerk/runtime.js")>();
-  return { ...actual, materializeTask: (...args: Parameters<typeof actual.materializeTask>) => {
+  return { ...actual, playableCapabilities: (...args: Parameters<typeof actual.playableCapabilities>) => actual.playableCapabilities(args[0], args[1], args[2], args[3], testState.meaningOnly ? actual.PLAY_TEMPLATES.filter(template => template.id === "corners.meaning") : actual.PLAY_TEMPLATES), materializeTask: (...args: Parameters<typeof actual.materializeTask>) => {
     const task = actual.materializeTask(...args);
     if (task && testState.forceAudio) task.question.audio = { src: "/missing-test-clip.mp3", review: "preview" };
     testState.latestTask = task;
@@ -54,6 +54,7 @@ beforeEach(() => {
   testState.query = "";
   testState.latestTask = null;
   testState.forceAudio = false;
+  testState.meaningOnly = false;
   clearOverlayPacks();
   vi.spyOn(HTMLMediaElement.prototype, "pause").mockImplementation(() => undefined);
 });
@@ -137,6 +138,19 @@ describe("Wortwerk pack choice and panels", () => {
 });
 
 describe("Daily Run", () => {
+  it("persists an explicitly requested illustration as hinted evidence", async () => {
+    const user = userEvent.setup(); enable(); testState.meaningOnly = true;
+    testState.query = `pack=${pack.id}&scope=${encodeScope({ v: 1, skills: ["meaning"], count: 1 })}`;
+    mount(RunPlayer);
+    await user.click(screen.getByRole("button", { name: "Start Daily Run" }));
+    expect(screen.queryByAltText("Illustration hint")).toBeNull();
+    await user.click(screen.getByRole("button", { name: "Show illustration hint" }));
+    expect(screen.getByAltText("Illustration hint")).not.toBeNull();
+    await answerCurrent(user);
+    expect(parseWortwerkEvidence(store.getSnapshot().events).answers[0]).toMatchObject({ correct: true, hinted: true });
+    expect(deriveWortwerkState(store.getSnapshot(), { now: new Date(), timeZone: "UTC" }).summary.secured).toBe(0);
+  });
+
   it("does not open a disabled fixture through a direct practice link", () => {
     testState.query = `pack=${pack.id}`;
     mount(RunPlayer);
