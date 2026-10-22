@@ -136,6 +136,7 @@ Visual style (follow exactly):
 - Background: warm cream paper #F3EFE8. Cards: off-white #FFFDF8 with a 1px warm-grey border #E4DDD2, 16px rounded corners, very soft shadow.
 - Text: deep green-black ink #203536. Headings in a bold, tight, modern grotesk sans-serif (like Inter Display Bold); body in a regular sans-serif.
 - Grammatical gender colours are the core system: der = blue #245FA7, die = raspberry red #B82E4C, das = green #237149, plural = purple #8C4DAA. Articles and the nouns' line illustrations are drawn in their gender colour.
+- EXCEPTION, no giveaways: on a question screen, the picture being asked about is drawn in neutral dark ink #203536, gender questions show the bare noun without its article, and answer options all look identical with no highlight. Colours, articles and highlights appear only after the learner answers.
 - Changed plural endings are highlighted with a small butter-yellow chip #F8E1A1 with a 2px amber underline #B27B19; changed umlaut vowels sit in a small lavender chip #DFD6F2 with a 2px violet underline #8760AF.
 - Illustrations: simple single-weight outline icons (2px line, rounded caps), one colour each, no fills, no gradients, no 3D, no cartoon faces, inside a soft pale circle.
 - Bottom tab bar in dark indigo #211A3D with five white line icons labelled: Book, Lessons, Cheat sheets, My review, Menu. "Cheat sheets" is active with a lavender pill.

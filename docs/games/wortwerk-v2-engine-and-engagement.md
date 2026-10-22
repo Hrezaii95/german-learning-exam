@@ -62,6 +62,16 @@ All games are built from **10 reusable mechanics**. Each mechanic is a gesture o
 | **Record** | record, compare with the model, self-rate | echo, answer back, picture talk, read aloud |
 | **Write** | free text + checklist + model answers | message reply, sentence writing, summary (C1+) |
 
+### 2.0 No-giveaway rule (applies to every game)
+A question screen must never reveal what it tests:
+- Pictures on the prompt are drawn in neutral ink, never in a gender colour. A blue chair answers "der" before the learner thinks.
+- Gender questions show the bare noun, without its article.
+- Meaning questions show the word and audio, but not its picture; pictures can only be answer options.
+- Plural, listening and word-order questions show no highlight chips, labels or glowing slots.
+- All options look identical.
+
+Gender colour, articles, highlights and labels are the **reward** shown in feedback. The build spec makes this a tested rule (§1.6b).
+
 ### 2.1 Game catalogue by skill
 
 | Skill | Game | Mechanic | Example (level) |
