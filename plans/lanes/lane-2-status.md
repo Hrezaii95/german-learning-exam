@@ -1,12 +1,19 @@
 # Lane 2 status
 
-Updated by Lane 2 only. Lane worktree: `lane2/l2-1-packs`. Base: `codex/live-alpha` with PR #1 documentation merged locally. Never merge to the live branch.
+Updated by Lane 2 only. Lane worktree: `lane2/l2-8-authoring`. Base: `codex/live-alpha` with PR #1 documentation merged locally. Never merge to the live branch.
 
 | PR | Title | State (planned / in progress / draft PR / merged / blocked) | Link | Notes |
 |---|---|---|---|---|
-| L2-1 | Pack content foundation and A1 migration | draft PR | [PR #4](https://github.com/Hrezaii95/german-learning-exam/pull/4) | Code implemented; A1 pack creation blocked by 19 source headword collisions. |
-| L2-2 | Corners and Four Corners templates | planned | — | Separate draft PR per owner's instruction. |
-| L2-3 | Daily Run, event-derived progress and Today | planned | — | Separate draft PR per owner's instruction. |
+| L2-1 | Pack content foundation and A1 migration | draft PR | [PR #4](https://github.com/Hrezaii95/german-learning-exam/pull/4) | Code implemented; after Lane 1 merge, A1 pack remains blocked by 11 source groups. |
+| L2-2 | Corners and Four Corners templates | draft PR | [PR #16](https://github.com/Hrezaii95/german-learning-exam/pull/16) | Implemented; production pack and release/browser gates remain open. |
+| L2-3 | Daily Run, event-derived progress and Today | draft PR | [PR #24](https://github.com/Hrezaii95/german-learning-exam/pull/24) | Implemented, including habit and dashboard embedding fixes; final release gates pending. |
+| L2-4 | Grammar and listening | draft PR | [PR #26](https://github.com/Hrezaii95/german-learning-exam/pull/26) | Six mechanics wired into Daily Run; 50 focused tests pass; final release gates pending. |
+| L2-5 | Speaking, reading and writing | draft PR | [PR #27](https://github.com/Hrezaii95/german-learning-exam/pull/27) | All ten mechanics integrated; self-check practice separated from mastery; 111 focused tests pass. |
+| L2-6 | Engagement, maps, story and exam | draft PR | [PR #28](https://github.com/Hrezaii95/german-learning-exam/pull/28) | Journeys, maps, timed challenges, story/exam, private deck and practice backup integrated; 98 focused tests pass. |
+| L2-7 | Book companion | draft PR | [PR #29](https://github.com/Hrezaii95/german-learning-exam/pull/29) | Book controls, confirmed position/default scope, smart filters and printing integrated; Lane 1 surface hooks remain. |
+| L2-8 | CSV authoring and preview | draft PR | [PR #30](https://github.com/Hrezaii95/german-learning-exam/pull/30) | CSV CLI, opt-in preview and shared generation-checked capability index integrated; A2 data pack included. |
+| L2-8b | Data-only A2 everyday pack | draft PR | [PR #17](https://github.com/Hrezaii95/german-learning-exam/pull/17) | Exactly ten content files, no code; all content pending review. |
+| L2-9 | Student Class A tools | in progress | — | Receipts, challenges, assignment card and personal import implemented; integration underway. |
 
 ## L2-1 implementation plan
 
@@ -70,8 +77,81 @@ No screenshots apply to this data-only slice. No PR merge, deploy, new TTS, lang
 
 ## Source dependency and next action
 
-`platform/content/packs/a1-migration-status.json` records the current 1,338 source rows, 19 duplicate headword groups and zero missing-lesson errors. The script checks all rows before any output and reports the exact source IDs. The groups include both known duplicate families and intentional-looking homographs/case distinctions; Lane 2 does not silently merge or choose meanings for them.
+The original L2-1 checkpoint recorded 1,338 source rows and 19 duplicate groups. After the authorized Lane 1 merge, `platform/content/packs/a1-migration-status.json` records 1,330 rows, 11 duplicate groups and zero missing-lesson errors. The script checks all rows before any output and reports the exact source IDs. The groups include both known duplicate families and intentional-looking homographs/case distinctions; Lane 2 does not silently merge or choose meanings for them.
 
-After Lane 1 resolves the canonical source families, run `npm run packs:migrate-a1 -- --write`, then `npm run packs:validate`. The resulting pack remains pending German review and off by default. L2-2 and later slices remain planned behind this explicit Phase 0 dependency. Integration must retain the draft state while source, browser or composite release gates remain blocked.
+After Lane 1 resolves the canonical source families, run `npm run packs:migrate-a1 -- --write`, then `npm run packs:validate`. The resulting pack remains pending German review and off by default. Owner instruction (2026-10-22): continue L2-2, L2-3 and later phases against fixture packs without waiting for the production pack. Integration must retain the draft state while source, browser or composite release gates remain blocked.
 
 Lane 2 checkpoint saved for L2-1. The shared orchestrator baton/register and `codex/live-alpha` were not written. Resume from this file and the draft PR, preserving the owner's one-PR-per-slice rule.
+
+## Needs Lane 1
+
+After merging `origin/lane1/l1-2-live-defects` (`5a557fc`), migration sees 1330 rows and 11 unresolved groups. The pack is not written; fixture development continues.
+
+| Headword | Source IDs |
+|---|---|
+| Auszubildende | `W370-0`, `W370-1` |
+| er | `W006-0`, `A18-0` |
+| es | `W043-0`, `A19-0` |
+| essen | `l9-essen-0`, `l9-essen-noun-0` |
+| ihr | `W077-0`, `W418-0` |
+| Ketchup | `l9-ketchup-0`, `l9-ketchup-1` |
+| Morgen | `W047-0`, `l6-morgen-0` |
+| orange | `l5-orange-0`, `l9-orange-0` |
+| sie | `W007-0`, `W008-0` |
+| Türkisch | `W217-0`, `W534-0` |
+| Verwandte | `W198-0`, `W198-1` |
+
+## Continuation plan
+
+L2-2: seeded Corners templates and separate no-giveaway projections, accessible controls and fixture-wide tests. L2-3: event-derived learning, Daily Run, contract links/sync stores, TodayPanel and fixed /play routes. Plans posted before coding: PR #4 comment 6344285730. One draft per slice; no PR merging. Remaining source groups and browser/export gate problems do not block independent implementation.
+
+## L2-2 verification and implementation
+
+Seeded Corners templates cover meaning, reverse meaning, gender, plural form/pattern, word-to-picture and source-audio-to-picture where supported, with recognition/reduced-cue/recall variants. Distractors prefer the same map cell, unit and tags, exclude accepted variants, and use opaque IDs assigned after shuffling. Question/feedback projections are separate. Corners supports pointer drop, tap, arrow keys and typed recall; feedback manages focus and source-only audio has explicit gesture, failure and cleanup handling. Fixtures use eight explicitly selected existing source rows with their actual media; this is test data, not an A1 migration or content review.
+
+Focused engine/UI tests: 23 passing, including 1,000-seed position distribution and question DOM checks. Independent review covered answer metadata, audio lifecycle, source links and variant distractors; fixes applied. Full `npm run check`: all typechecks, lint, publication validation, full suite and web rerun pass; final `packs:validate` remains blocked by the absent production manifest. Required release/browser gates remain open; this slice stays draft. The all-phase continuation plan is posted at PR #4 comment 6344476189.
+
+## L2-3 integration verification
+
+Implemented local UUIDv7 events and LWW docs, contract sync exports, validated evidence adapters and combined backup bridge; progress is rebuilt from raw answers/sessions. Daily Run includes adaptive preview, alternate-format comeback, finite optional finisher, real-answer persistence, meaningful-session streak and separate full-Run goal. Fixed routes, explicit pending-pack opt-in, contract links, standalone panels, live overlay updates and profile-only class extras are included.
+
+`npm run check` passed all typechecks/lint, publication validation, 121 files / 1,367 tests and web rerun 107 files / 977 tests, then failed at the expected empty production pack inventory. Final root scope/provider cases: 15 tests pass. The skip/abandon habit fix adds 25 focused passing tests: five genuine Run/Quick answers keep the streak, full completion is required for the goal and diminishing-Run counter. Production build passed (1,621 static pages); route smoke passed 50 checks. Browser runtime is now available (Chromium 152); export/browser verification will run on the integrated stack. No claim that every release gate has passed.
+
+The data-only A2 draft independently passes schema/resource validation and 318 generated/graded tasks; it does not resolve or replace the remaining A1 source issues. Later slices continue autonomously on owned files.
+
+### Lane 1 integration points
+
+- Call the exported book-position advance proposal/prompt from book and lesson completion surfaces. Lane 2 does not edit those pages.
+- Mount the combined Wortwerk backup bridge from the existing Settings backup flow. The owned bridge accepts legacy backups; the legacy Settings page is untouched.
+- Add the Play navigation entry when the CONTRACTS prerequisite for Lane 1 navigation integration is satisfied; the fixed routes and link contract work independently.
+- Normal build regenerates the Lane 1-owned study dictionary from the updated source. Lane 2 restores that generated file before staging its own slice.
+
+## L2-4 integration verification
+
+Sort, Build, Order, Gap and Listen now render alongside Corners in Daily Run. Grammar/listening templates generate only from authored fields, include supported reduced-cue/recall variants and refuse coincidental answer clues. The shared fixture validates structured prompt tokens; the foundation token test preserves authored choice data. Focused pack, grammar engine/UI and Run lifecycle tests: 4 files / 50 tests pass. Type/lint and release gates are recorded after their actual completion; draft publication does not imply readiness.
+
+L2-4 full check: all three typechecks, lint, publication validation, 124 files / 1,400 tests and web rerun 109 files / 995 tests pass. The final pack check and standalone pack validation stop at the absent production manifest. Browser/export release gates will be rerun on the integrated stack with the data-only A2 pack.
+
+## L2-5 integration verification
+
+Speaking, reading, writing and matching use the same generated-task renderer. The actual DOM no-giveaway matrix covers every template across all ten mechanics and a second language. Self-check attempts remain separate from objective recall, strength, secured milestones and Gold; objective typed writing remains eligible for objective evidence. Tap-to-Learn appends raw deck events, with an explicit no-write preview callback. Self speaking/writing cycles retain their specified XP. Normal local edits preserve future-version synced documents unchanged. Focused final phase batch: 111 passing tests; root/scoped web TypeScript, source lint and hook pass. Browser coverage now includes both Daily Run and Quick review by tap, keyboard and drag at 390/1280 px; execution is pending the fresh integrated export.
+
+L2-5 full check: all typechecks/lint, publication validation, 134 files / 1,461 tests and web rerun 115 files / 1,017 tests pass. The final empty-production-pack check remains blocked until the already-published data-only A2 pack is included.
+
+## L2-6 integration verification
+
+Added fixed exploration/story/exam/challenge routes, validated authored story/exam resources, capability-derived maps and skill/readiness views, recap/quests/calendar reminder, personal deck/notes/examples/Difficult and validated raw practice backup. Boss/Blitz alone have strikes; foreground time counts; puzzle selection excludes self-check tasks and is independent of saved progress/scope. Boss completion awards once; bonus rounds are finite three-task children with a per-parent 30-extra-XP cap. Exact typed writing remains objectively assessed in exams; open production stays self-check. Meaning illustration hints require an explicit gesture and mark persisted answers hinted; exams disable hints. Focused phase suites: 98 tests pass; hint follow-up: 24 passing tests, including the complete no-giveaway matrix. Final root integration/gates continue below.
+
+L2-6 root integration: all three typechecks and lint pass. Focused integrated suites: 63 tests pass; final Run/hint persistence and challenge reruns pass 14 and 12 cases respectively.
+
+## L2-7 integration verification
+
+Mounted the shared scope picker and lesson loop in Play. A confirmed matching book position supplies the default; without confirmation the initial authored-book scope is empty. Explicit saved scope selections remain intact. The page rule excludes unknown current-lesson pages until completion/whole-lesson opt-in. Future position/scope documents stay read-only and do not report a false save. Printing uses precisely the current shared selection. Tricky sets count objective misses, excluding self-rated practice. Book slice tests: 52 focused cases across agent verification; root integrated regression rerun: 6 files / 62 tests pass. All three root typechecks and lint pass. The initial combined run exposed old test assumptions about implicit whole-pack selection; tests now make that choice explicit.
+
+Needs Lane 1: mount the exported advance proposal/prompt on book/lesson surfaces and add reviewed page references for Lessons 3–12. No pages were guessed.
+
+## L2-8 integration verification
+
+CSV authoring validates and previews before create-only writes, preserves explicit book references, and marks imported content pending. The interactive authoring route requires WORTWERK_PREVIEW=1, resets real mechanics without progress/deck writes, and its export finalizer removes disabled preview artifacts before hashing. The build loader, CLI and browser now share the actual generated-template registry, formats, assessment and per-template minima. The prior static predicate index remains a compatible foundation API.
+
+Included the separately published, exactly-ten-content-file A2 reuse pack (PR #17); its generated capability index is refreshed for the shared registry. Pack validation passes: 40 items, 39 playable templates, pending/off by default. Root focused Wortwerk suite: 38 files / 324 tests pass; an additional installed-inventory test generates and grades every enabled task without pack/language branching. All three root typechecks and lint pass. Preview physical exclusion and browser proof remain to be verified against the final export. The unresolved A1 groups remain listed above; the A2 pack does not replace that migration.

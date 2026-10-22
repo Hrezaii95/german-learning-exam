@@ -1,0 +1,976 @@
+[
+  {
+    "id": "a2-termin",
+    "unitId": "appointments",
+    "bookRef": {
+      "book": "independent-a2",
+      "lesson": 1
+    },
+    "source": "study-extra",
+    "tags": [
+      "everyday-plans"
+    ],
+    "review": {
+      "status": "pending-german-review"
+    },
+    "type": "lexeme",
+    "lemma": "Termin",
+    "pos": "noun",
+    "meaning": "appointment",
+    "gender": "male",
+    "article": "der",
+    "forms": {
+      "singular": [
+        "Termin"
+      ],
+      "plural": [
+        "Termine"
+      ],
+      "pluralPattern": [
+        "e"
+      ]
+    },
+    "examples": [
+      {
+        "text": "Ich habe am Dienstag einen Termin beim Zahnarzt.",
+        "translation": "I have a dentist appointment on Tuesday."
+      }
+    ],
+    "revealFields": [
+      "article",
+      "gender",
+      "forms.plural",
+      "forms.pluralPattern",
+      "meaning"
+    ]
+  },
+  {
+    "id": "a2-verabredung",
+    "unitId": "appointments",
+    "bookRef": {
+      "book": "independent-a2",
+      "lesson": 1
+    },
+    "source": "study-extra",
+    "tags": [
+      "everyday-plans"
+    ],
+    "review": {
+      "status": "pending-german-review"
+    },
+    "type": "lexeme",
+    "lemma": "Verabredung",
+    "pos": "noun",
+    "meaning": "arrangement to meet",
+    "gender": "female",
+    "article": "die",
+    "forms": {
+      "singular": [
+        "Verabredung"
+      ],
+      "plural": [
+        "Verabredungen"
+      ],
+      "pluralPattern": [
+        "en-n"
+      ]
+    },
+    "examples": [
+      {
+        "text": "Unsere Verabredung ist am Freitag um sechs.",
+        "translation": "We have arranged to meet on Friday at six."
+      }
+    ],
+    "revealFields": [
+      "article",
+      "gender",
+      "forms.plural",
+      "forms.pluralPattern",
+      "meaning"
+    ]
+  },
+  {
+    "id": "a2-einladung",
+    "unitId": "appointments",
+    "bookRef": {
+      "book": "independent-a2",
+      "lesson": 1
+    },
+    "source": "study-extra",
+    "tags": [
+      "everyday-plans"
+    ],
+    "review": {
+      "status": "pending-german-review"
+    },
+    "type": "lexeme",
+    "lemma": "Einladung",
+    "pos": "noun",
+    "meaning": "invitation",
+    "gender": "female",
+    "article": "die",
+    "forms": {
+      "singular": [
+        "Einladung"
+      ],
+      "plural": [
+        "Einladungen"
+      ],
+      "pluralPattern": [
+        "en-n"
+      ]
+    },
+    "examples": [
+      {
+        "text": "Vielen Dank für die Einladung zum Essen.",
+        "translation": "Thank you very much for the invitation to dinner."
+      }
+    ],
+    "revealFields": [
+      "article",
+      "gender",
+      "forms.plural",
+      "forms.pluralPattern",
+      "meaning"
+    ]
+  },
+  {
+    "id": "a2-vorschlag",
+    "unitId": "appointments",
+    "bookRef": {
+      "book": "independent-a2",
+      "lesson": 1
+    },
+    "source": "study-extra",
+    "tags": [
+      "everyday-plans"
+    ],
+    "review": {
+      "status": "pending-german-review"
+    },
+    "type": "lexeme",
+    "lemma": "Vorschlag",
+    "pos": "noun",
+    "meaning": "suggestion",
+    "gender": "male",
+    "article": "der",
+    "forms": {
+      "singular": [
+        "Vorschlag"
+      ],
+      "plural": [
+        "Vorschläge"
+      ],
+      "pluralPattern": [
+        "umlaut-e"
+      ]
+    },
+    "examples": [
+      {
+        "text": "Dein Vorschlag passt gut zu unserem Plan.",
+        "translation": "Your suggestion fits our plan well."
+      }
+    ],
+    "revealFields": [
+      "article",
+      "gender",
+      "forms.plural",
+      "forms.pluralPattern",
+      "meaning"
+    ]
+  },
+  {
+    "id": "a2-nachricht",
+    "unitId": "appointments",
+    "bookRef": {
+      "book": "independent-a2",
+      "lesson": 1
+    },
+    "source": "study-extra",
+    "tags": [
+      "everyday-plans"
+    ],
+    "review": {
+      "status": "pending-german-review"
+    },
+    "type": "lexeme",
+    "lemma": "Nachricht",
+    "pos": "noun",
+    "meaning": "message",
+    "gender": "female",
+    "article": "die",
+    "forms": {
+      "singular": [
+        "Nachricht"
+      ],
+      "plural": [
+        "Nachrichten"
+      ],
+      "pluralPattern": [
+        "en-n"
+      ]
+    },
+    "examples": [
+      {
+        "text": "Schick mir bitte eine Nachricht, wenn du da bist.",
+        "translation": "Please send me a message when you arrive."
+      }
+    ],
+    "revealFields": [
+      "article",
+      "gender",
+      "forms.plural",
+      "forms.pluralPattern",
+      "meaning"
+    ]
+  },
+  {
+    "id": "a2-treffen",
+    "unitId": "appointments",
+    "bookRef": {
+      "book": "independent-a2",
+      "lesson": 1
+    },
+    "source": "study-extra",
+    "tags": [
+      "everyday-plans"
+    ],
+    "review": {
+      "status": "pending-german-review"
+    },
+    "type": "lexeme",
+    "lemma": "Treffen",
+    "pos": "noun",
+    "meaning": "get-together",
+    "gender": "neuter",
+    "article": "das",
+    "forms": {
+      "singular": [
+        "Treffen"
+      ],
+      "plural": [
+        "Treffen"
+      ],
+      "pluralPattern": [
+        "unchanged"
+      ]
+    },
+    "examples": [
+      {
+        "text": "Das Treffen beginnt um halb sieben.",
+        "translation": "The get-together starts at half past six."
+      }
+    ],
+    "revealFields": [
+      "article",
+      "gender",
+      "forms.plural",
+      "forms.pluralPattern",
+      "meaning"
+    ]
+  },
+  {
+    "id": "a2-kalender",
+    "unitId": "appointments",
+    "bookRef": {
+      "book": "independent-a2",
+      "lesson": 1
+    },
+    "source": "study-extra",
+    "tags": [
+      "everyday-plans"
+    ],
+    "review": {
+      "status": "pending-german-review"
+    },
+    "type": "lexeme",
+    "lemma": "Kalender",
+    "pos": "noun",
+    "meaning": "calendar",
+    "gender": "male",
+    "article": "der",
+    "forms": {
+      "singular": [
+        "Kalender"
+      ],
+      "plural": [
+        "Kalender"
+      ],
+      "pluralPattern": [
+        "unchanged"
+      ]
+    },
+    "examples": [
+      {
+        "text": "Ich trage den Termin in meinen Kalender ein.",
+        "translation": "I enter the appointment in my calendar."
+      }
+    ],
+    "revealFields": [
+      "article",
+      "gender",
+      "forms.plural",
+      "forms.pluralPattern",
+      "meaning"
+    ]
+  },
+  {
+    "id": "a2-besprechung",
+    "unitId": "appointments",
+    "bookRef": {
+      "book": "independent-a2",
+      "lesson": 1
+    },
+    "source": "study-extra",
+    "tags": [
+      "everyday-plans"
+    ],
+    "review": {
+      "status": "pending-german-review"
+    },
+    "type": "lexeme",
+    "lemma": "Besprechung",
+    "pos": "noun",
+    "meaning": "work meeting",
+    "gender": "female",
+    "article": "die",
+    "forms": {
+      "singular": [
+        "Besprechung"
+      ],
+      "plural": [
+        "Besprechungen"
+      ],
+      "pluralPattern": [
+        "en-n"
+      ]
+    },
+    "examples": [
+      {
+        "text": "Die Besprechung dauert eine Stunde.",
+        "translation": "The work meeting lasts an hour."
+      }
+    ],
+    "revealFields": [
+      "article",
+      "gender",
+      "forms.plural",
+      "forms.pluralPattern",
+      "meaning"
+    ]
+  },
+  {
+    "id": "a2-ausflug",
+    "unitId": "outings",
+    "bookRef": {
+      "book": "independent-a2",
+      "lesson": 2
+    },
+    "source": "study-extra",
+    "tags": [
+      "everyday-plans"
+    ],
+    "review": {
+      "status": "pending-german-review"
+    },
+    "type": "lexeme",
+    "lemma": "Ausflug",
+    "pos": "noun",
+    "meaning": "day trip",
+    "gender": "male",
+    "article": "der",
+    "forms": {
+      "singular": [
+        "Ausflug"
+      ],
+      "plural": [
+        "Ausflüge"
+      ],
+      "pluralPattern": [
+        "umlaut-e"
+      ]
+    },
+    "examples": [
+      {
+        "text": "Am Sonntag machen wir einen Ausflug an den See.",
+        "translation": "On Sunday we are taking a day trip to the lake."
+      }
+    ],
+    "revealFields": [
+      "article",
+      "gender",
+      "forms.plural",
+      "forms.pluralPattern",
+      "meaning"
+    ]
+  },
+  {
+    "id": "a2-haltestelle",
+    "unitId": "outings",
+    "bookRef": {
+      "book": "independent-a2",
+      "lesson": 2
+    },
+    "source": "study-extra",
+    "tags": [
+      "everyday-plans"
+    ],
+    "review": {
+      "status": "pending-german-review"
+    },
+    "type": "lexeme",
+    "lemma": "Haltestelle",
+    "pos": "noun",
+    "meaning": "bus or tram stop",
+    "gender": "female",
+    "article": "die",
+    "forms": {
+      "singular": [
+        "Haltestelle"
+      ],
+      "plural": [
+        "Haltestellen"
+      ],
+      "pluralPattern": [
+        "en-n"
+      ]
+    },
+    "examples": [
+      {
+        "text": "Wir treffen uns an der Haltestelle vor dem Bahnhof.",
+        "translation": "We are meeting at the stop in front of the station."
+      }
+    ],
+    "revealFields": [
+      "article",
+      "gender",
+      "forms.plural",
+      "forms.pluralPattern",
+      "meaning"
+    ]
+  },
+  {
+    "id": "a2-verbindung",
+    "unitId": "outings",
+    "bookRef": {
+      "book": "independent-a2",
+      "lesson": 2
+    },
+    "source": "study-extra",
+    "tags": [
+      "everyday-plans"
+    ],
+    "review": {
+      "status": "pending-german-review"
+    },
+    "type": "lexeme",
+    "lemma": "Verbindung",
+    "pos": "noun",
+    "meaning": "transport connection",
+    "gender": "female",
+    "article": "die",
+    "forms": {
+      "singular": [
+        "Verbindung"
+      ],
+      "plural": [
+        "Verbindungen"
+      ],
+      "pluralPattern": [
+        "en-n"
+      ]
+    },
+    "examples": [
+      {
+        "text": "Gibt es am Abend eine direkte Verbindung nach Bonn?",
+        "translation": "Is there a direct connection to Bonn in the evening?"
+      }
+    ],
+    "revealFields": [
+      "article",
+      "gender",
+      "forms.plural",
+      "forms.pluralPattern",
+      "meaning"
+    ]
+  },
+  {
+    "id": "a2-verspaetung",
+    "unitId": "outings",
+    "bookRef": {
+      "book": "independent-a2",
+      "lesson": 2
+    },
+    "source": "study-extra",
+    "tags": [
+      "everyday-plans"
+    ],
+    "review": {
+      "status": "pending-german-review"
+    },
+    "type": "lexeme",
+    "lemma": "Verspätung",
+    "pos": "noun",
+    "meaning": "delay",
+    "gender": "female",
+    "article": "die",
+    "forms": {
+      "singular": [
+        "Verspätung"
+      ],
+      "plural": [
+        "Verspätungen"
+      ],
+      "pluralPattern": [
+        "en-n"
+      ]
+    },
+    "examples": [
+      {
+        "text": "Unser Zug hat zwanzig Minuten Verspätung.",
+        "translation": "Our train is twenty minutes late."
+      }
+    ],
+    "revealFields": [
+      "article",
+      "gender",
+      "forms.plural",
+      "forms.pluralPattern",
+      "meaning"
+    ]
+  },
+  {
+    "id": "a2-fahrkarte",
+    "unitId": "outings",
+    "bookRef": {
+      "book": "independent-a2",
+      "lesson": 2
+    },
+    "source": "study-extra",
+    "tags": [
+      "everyday-plans"
+    ],
+    "review": {
+      "status": "pending-german-review"
+    },
+    "type": "lexeme",
+    "lemma": "Fahrkarte",
+    "pos": "noun",
+    "meaning": "travel ticket",
+    "gender": "female",
+    "article": "die",
+    "forms": {
+      "singular": [
+        "Fahrkarte"
+      ],
+      "plural": [
+        "Fahrkarten"
+      ],
+      "pluralPattern": [
+        "en-n"
+      ]
+    },
+    "examples": [
+      {
+        "text": "Die Fahrkarte gilt auch für den Bus.",
+        "translation": "The ticket is also valid on the bus."
+      }
+    ],
+    "revealFields": [
+      "article",
+      "gender",
+      "forms.plural",
+      "forms.pluralPattern",
+      "meaning"
+    ]
+  },
+  {
+    "id": "a2-wochenende",
+    "unitId": "outings",
+    "bookRef": {
+      "book": "independent-a2",
+      "lesson": 2
+    },
+    "source": "study-extra",
+    "tags": [
+      "everyday-plans"
+    ],
+    "review": {
+      "status": "pending-german-review"
+    },
+    "type": "lexeme",
+    "lemma": "Wochenende",
+    "pos": "noun",
+    "meaning": "weekend",
+    "gender": "neuter",
+    "article": "das",
+    "forms": {
+      "singular": [
+        "Wochenende"
+      ],
+      "plural": [
+        "Wochenenden"
+      ],
+      "pluralPattern": [
+        "en-n"
+      ]
+    },
+    "examples": [
+      {
+        "text": "Hast du am Wochenende schon etwas vor?",
+        "translation": "Do you already have plans for the weekend?"
+      }
+    ],
+    "revealFields": [
+      "article",
+      "gender",
+      "forms.plural",
+      "forms.pluralPattern",
+      "meaning"
+    ]
+  },
+  {
+    "id": "a2-vereinbaren",
+    "unitId": "appointments",
+    "bookRef": {
+      "book": "independent-a2",
+      "lesson": 1
+    },
+    "source": "study-extra",
+    "tags": [
+      "everyday-plans"
+    ],
+    "review": {
+      "status": "pending-german-review"
+    },
+    "type": "lexeme",
+    "lemma": "vereinbaren",
+    "pos": "verb",
+    "meaning": "to arrange",
+    "forms": {
+      "presentThirdPerson": [
+        "vereinbart"
+      ],
+      "preterite": [
+        "vereinbarte"
+      ],
+      "participle": [
+        "vereinbart"
+      ],
+      "perfect": [
+        "hat vereinbart"
+      ]
+    },
+    "examples": [
+      {
+        "text": "Wir vereinbaren einen neuen Termin.",
+        "translation": "We arrange a new appointment."
+      }
+    ],
+    "revealFields": [
+      "meaning",
+      "forms"
+    ]
+  },
+  {
+    "id": "a2-verschieben",
+    "unitId": "appointments",
+    "bookRef": {
+      "book": "independent-a2",
+      "lesson": 1
+    },
+    "source": "study-extra",
+    "tags": [
+      "everyday-plans"
+    ],
+    "review": {
+      "status": "pending-german-review"
+    },
+    "type": "lexeme",
+    "lemma": "verschieben",
+    "pos": "verb",
+    "meaning": "to postpone",
+    "forms": {
+      "presentThirdPerson": [
+        "verschiebt"
+      ],
+      "preterite": [
+        "verschob"
+      ],
+      "participle": [
+        "verschoben"
+      ],
+      "perfect": [
+        "hat verschoben"
+      ]
+    },
+    "examples": [
+      {
+        "text": "Können wir das Treffen auf Montag verschieben?",
+        "translation": "Can we postpone the get-together until Monday?"
+      }
+    ],
+    "revealFields": [
+      "meaning",
+      "forms"
+    ]
+  },
+  {
+    "id": "a2-absagen",
+    "unitId": "appointments",
+    "bookRef": {
+      "book": "independent-a2",
+      "lesson": 1
+    },
+    "source": "study-extra",
+    "tags": [
+      "everyday-plans"
+    ],
+    "review": {
+      "status": "pending-german-review"
+    },
+    "type": "lexeme",
+    "lemma": "absagen",
+    "pos": "verb",
+    "meaning": "to cancel",
+    "forms": {
+      "presentThirdPerson": [
+        "sagt ab"
+      ],
+      "preterite": [
+        "sagte ab"
+      ],
+      "participle": [
+        "abgesagt"
+      ],
+      "perfect": [
+        "hat abgesagt"
+      ]
+    },
+    "examples": [
+      {
+        "text": "Leider muss ich unsere Verabredung absagen.",
+        "translation": "Unfortunately, I have to cancel our arrangement to meet."
+      }
+    ],
+    "revealFields": [
+      "meaning",
+      "forms"
+    ]
+  },
+  {
+    "id": "a2-freuen",
+    "unitId": "appointments",
+    "bookRef": {
+      "book": "independent-a2",
+      "lesson": 1
+    },
+    "source": "study-extra",
+    "tags": [
+      "everyday-plans"
+    ],
+    "review": {
+      "status": "pending-german-review"
+    },
+    "type": "lexeme",
+    "lemma": "sich freuen",
+    "pos": "verb",
+    "meaning": "to look forward to",
+    "forms": {
+      "presentThirdPerson": [
+        "freut sich"
+      ],
+      "preterite": [
+        "freute sich"
+      ],
+      "participle": [
+        "gefreut"
+      ],
+      "perfect": [
+        "hat sich gefreut"
+      ]
+    },
+    "examples": [
+      {
+        "text": "Ich freue mich auf unseren Ausflug.",
+        "translation": "I am looking forward to our day trip."
+      }
+    ],
+    "revealFields": [
+      "meaning",
+      "forms"
+    ]
+  },
+  {
+    "id": "a2-umsteigen",
+    "unitId": "outings",
+    "bookRef": {
+      "book": "independent-a2",
+      "lesson": 2
+    },
+    "source": "study-extra",
+    "tags": [
+      "everyday-plans"
+    ],
+    "review": {
+      "status": "pending-german-review"
+    },
+    "type": "lexeme",
+    "lemma": "umsteigen",
+    "pos": "verb",
+    "meaning": "to change trains or buses",
+    "forms": {
+      "presentThirdPerson": [
+        "steigt um"
+      ],
+      "preterite": [
+        "stieg um"
+      ],
+      "participle": [
+        "umgestiegen"
+      ],
+      "perfect": [
+        "ist umgestiegen"
+      ]
+    },
+    "examples": [
+      {
+        "text": "In Köln müssen wir in einen anderen Zug umsteigen.",
+        "translation": "In Cologne we have to change to another train."
+      }
+    ],
+    "revealFields": [
+      "meaning",
+      "forms"
+    ]
+  },
+  {
+    "id": "a2-mitbringen",
+    "unitId": "outings",
+    "bookRef": {
+      "book": "independent-a2",
+      "lesson": 2
+    },
+    "source": "study-extra",
+    "tags": [
+      "everyday-plans"
+    ],
+    "review": {
+      "status": "pending-german-review"
+    },
+    "type": "lexeme",
+    "lemma": "mitbringen",
+    "pos": "verb",
+    "meaning": "to bring along",
+    "forms": {
+      "presentThirdPerson": [
+        "bringt mit"
+      ],
+      "preterite": [
+        "brachte mit"
+      ],
+      "participle": [
+        "mitgebracht"
+      ],
+      "perfect": [
+        "hat mitgebracht"
+      ]
+    },
+    "examples": [
+      {
+        "text": "Bring bitte etwas zu trinken mit.",
+        "translation": "Please bring something to drink."
+      }
+    ],
+    "revealFields": [
+      "meaning",
+      "forms"
+    ]
+  },
+  {
+    "id": "a2-reservieren",
+    "unitId": "outings",
+    "bookRef": {
+      "book": "independent-a2",
+      "lesson": 2
+    },
+    "source": "study-extra",
+    "tags": [
+      "everyday-plans"
+    ],
+    "review": {
+      "status": "pending-german-review"
+    },
+    "type": "lexeme",
+    "lemma": "reservieren",
+    "pos": "verb",
+    "meaning": "to reserve",
+    "forms": {
+      "presentThirdPerson": [
+        "reserviert"
+      ],
+      "preterite": [
+        "reservierte"
+      ],
+      "participle": [
+        "reserviert"
+      ],
+      "perfect": [
+        "hat reserviert"
+      ]
+    },
+    "examples": [
+      {
+        "text": "Ich reserviere einen Tisch für vier Personen.",
+        "translation": "I reserve a table for four people."
+      }
+    ],
+    "revealFields": [
+      "meaning",
+      "forms"
+    ]
+  },
+  {
+    "id": "a2-teilnehmen",
+    "unitId": "outings",
+    "bookRef": {
+      "book": "independent-a2",
+      "lesson": 2
+    },
+    "source": "study-extra",
+    "tags": [
+      "everyday-plans"
+    ],
+    "review": {
+      "status": "pending-german-review"
+    },
+    "type": "lexeme",
+    "lemma": "teilnehmen",
+    "pos": "verb",
+    "meaning": "to take part",
+    "forms": {
+      "presentThirdPerson": [
+        "nimmt teil"
+      ],
+      "preterite": [
+        "nahm teil"
+      ],
+      "participle": [
+        "teilgenommen"
+      ],
+      "perfect": [
+        "hat teilgenommen"
+      ]
+    },
+    "examples": [
+      {
+        "text": "Möchtest du an unserem Ausflug teilnehmen?",
+        "translation": "Would you like to take part in our day trip?"
+      }
+    ],
+    "revealFields": [
+      "meaning",
+      "forms"
+    ]
+  }
+]

@@ -14,7 +14,7 @@ export function validatePacks(args: readonly string[] = process.argv.slice(2)): 
     const json = `${JSON.stringify(entry.capabilities, null, 2)}\n`;
     const path = join(entry.directory, "capabilities.json");
     if (write && (!existsSync(path) || readFileSync(path, "utf8") !== json)) writeFileSync(path, json);
-    process.stdout.write(`${entry.pack.id}: ${entry.pack.items.length} items; ${Object.values(entry.capabilities.templates).filter(template => template.enabled).length} eligible templates; ${entry.enabledByDefault ? "reviewed" : "pending review (off by default)"}\n`);
+    process.stdout.write(`${entry.pack.id}: ${entry.pack.items.length} items; ${Object.values(entry.capabilities.templates).filter(template => template.enabled).length} playable templates; ${entry.enabledByDefault ? "reviewed" : "pending review (off by default)"}\n`);
   }
 }
 

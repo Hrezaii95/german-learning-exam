@@ -2,9 +2,10 @@ import { existsSync, readFileSync, readdirSync, realpathSync } from "node:fs";
 import { basename, isAbsolute, join, relative, resolve, sep } from "node:path";
 import type { ContentPack, DifficultyProfile, LanguageProfile } from "../../content/src/types/packs.js";
 import { assertContentPack, validateDifficultyProfile, validateLanguageProfile } from "../../content/src/validation/packs.js";
-import { buildCapabilityIndex, type CapabilityIndex } from "./capabilities.js";
+import { assertPackResource } from "../../content/src/validation/pack-resources.js";
+import { buildPlayableCapabilityIndex, type PlayableCapabilityIndex } from "./playable-capabilities.js";
 
-export type LoadedPack = { pack: ContentPack; language: LanguageProfile; difficulty: DifficultyProfile; capabilities: CapabilityIndex; directory: string; enabledByDefault: boolean; resources: Partial<Record<"story" | "exam", Record<string, unknown>>> };
+export type LoadedPack = { pack: ContentPack; language: LanguageProfile; difficulty: DifficultyProfile; capabilities: PlayableCapabilityIndex; directory: string; enabledByDefault: boolean; resources: Partial<Record<"story" | "exam", Record<string, unknown>>> };
 export type PackRegistry = { packs: LoadedPack[]; languages: Map<string, LanguageProfile>; difficulties: Map<string, DifficultyProfile> };
 function read(path: string): unknown {
   try { return JSON.parse(readFileSync(path, "utf8")) as unknown; }
@@ -71,10 +72,11 @@ export function loadPackRegistry(contentDirectory: string): PackRegistry {
       if (filename === undefined) continue;
       const resource = read(packFile(directory, filename));
       if (!object(resource)) throw new Error(`Pack ${kind} resource must be a JSON object: ${filename}`);
+      assertPackResource(resource, kind, value);
       resources[kind] = resource;
     }
     ids.add(value.id);
-    packs.push({ pack: value, language, difficulty, capabilities: buildCapabilityIndex(value), directory, enabledByDefault: value.review.status === "reviewed", resources });
+    packs.push({ pack: value, language, difficulty, capabilities: buildPlayableCapabilityIndex(value, language, difficulty), directory, enabledByDefault: value.review.status === "reviewed", resources });
   }
   return { packs, languages, difficulties };
 }
