@@ -10,7 +10,7 @@ Updated by Lane 2 only. Lane worktree: `lane2/l2-7-book-companion`. Base: `codex
 | L2-4 | Grammar and listening | draft PR | [PR #26](https://github.com/Hrezaii95/german-learning-exam/pull/26) | Six mechanics wired into Daily Run; 50 focused tests pass; final release gates pending. |
 | L2-5 | Speaking, reading and writing | draft PR | [PR #27](https://github.com/Hrezaii95/german-learning-exam/pull/27) | All ten mechanics integrated; self-check practice separated from mastery; 111 focused tests pass. |
 | L2-6 | Engagement, maps, story and exam | draft PR | [PR #28](https://github.com/Hrezaii95/german-learning-exam/pull/28) | Journeys, maps, timed challenges, story/exam, private deck and practice backup integrated; 98 focused tests pass. |
-| L2-7 | Book companion | in progress | — | Book controls, confirmed position/default scope, smart filters and printing integrated; Lane 1 surface hooks remain. |
+| L2-7 | Book companion | draft PR | [PR #29](https://github.com/Hrezaii95/german-learning-exam/pull/29) | Book controls, confirmed position/default scope, smart filters and printing integrated; Lane 1 surface hooks remain. |
 | L2-8 | CSV authoring and preview | in progress | — | CSV tooling implemented; preview integration underway. |
 | L2-8b | Data-only A2 everyday pack | draft PR | [PR #17](https://github.com/Hrezaii95/german-learning-exam/pull/17) | Exactly ten content files, no code; all content pending review. |
 | L2-9 | Student Class A tools | in progress | — | Receipts, challenges, assignment card and personal import implemented; integration underway. |
