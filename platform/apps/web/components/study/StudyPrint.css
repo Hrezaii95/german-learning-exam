@@ -52,6 +52,8 @@
     list-style: none;
   }
 
+  /* The current selection prints; account and dictionary actions stay on screen. */
+  .app-shell:has(:is(.study-workspace, .subject-sheet, .country-sheet, .collection-sheet, .book-workspace)) .study-toolbar > :not(.study-scope),
   .app-shell .study-toolbar .study-scope > :not(summary),
   .app-shell .study-scope-edit,
   .app-shell:has([data-subject-sheet]) .shell-main .study-toolbar {

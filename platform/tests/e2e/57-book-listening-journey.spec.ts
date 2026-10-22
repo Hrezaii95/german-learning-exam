@@ -9,6 +9,9 @@ test("book prints the current original page without shell, reading controls or a
   await page.setViewportSize({width:1440,height:1000});
   await page.goto("book/?page=coursebook-30");
   const workspace=page.locator(".book-workspace");
+  const account=page.locator(".study-toolbar .shell-account");
+  await expect(account.getByRole("link",{name:"Sign in",exact:true})).toBeVisible();
+  await expect(account.getByText("Learning on this device",{exact:true})).toBeVisible();
   const view=workspace.getByRole("combobox",{name:"Reading view",exact:true});
   const zoom=workspace.getByRole("combobox",{name:"Page zoom",exact:true});
   await view.selectOption("page");
@@ -30,6 +33,7 @@ test("book prints the current original page without shell, reading controls or a
     await expect(image).toBeVisible();
     await expect(image).toHaveAttribute("src",source!);
     await expect(page.locator(".study-toolbar .study-scope > summary")).toBeVisible();
+    for(const transient of await page.locator(".study-toolbar > :not(.study-scope)").all())await expect(transient).toBeHidden();
     await expect(workspace.locator(".book-page-caption")).toBeVisible();
     await expect(workspace.locator(".book-credit")).toBeVisible();
     await expect(page.locator(".shell-credit")).toBeVisible();
@@ -65,6 +69,8 @@ test("book prints the current original page without shell, reading controls or a
   await expect(workspace.locator(".book-contents")).toBeVisible();
   await expect(workspace.locator("audio").first()).toBeVisible();
   await expect(image).toHaveAttribute("src",source!);
+  await expect(account.getByRole("link",{name:"Sign in",exact:true})).toBeVisible();
+  await expect(account.getByText("Learning on this device",{exact:true})).toBeVisible();
 });
 
 for(const width of [320,1440])test(`book to transcript, meaning, review and exact return at ${width}px`,async({page},info)=>{
@@ -143,4 +149,43 @@ test("book line saves preserve source selection and answers stay deliberate",asy
  await expect(page.locator(".book-selected-line")).toBeInViewport();
  await page.reload();
  await expect(page.locator(".book-selected-line .study-german")).toHaveAttribute("aria-label",resultText);
+});
+
+async function assertBookToolbar(page: import("@playwright/test").Page) {
+ await page.goto("book/?page=coursebook-30");
+ const toolbar=page.locator(".study-toolbar");
+ await expect(toolbar.locator(".study-scope > summary")).toBeVisible();
+ const account=toolbar.locator(".shell-account");
+ const signIn=account.getByRole("link",{name:"Sign in",exact:true});
+ await expect(signIn).toBeVisible();
+ await expect(account.getByText("Learning on this device",{exact:true})).toBeVisible();
+ const target=await signIn.boundingBox();
+ expect(target).not.toBeNull();
+ expect(target!.height).toBeGreaterThanOrEqual(44);
+ expect(target!.width).toBeGreaterThanOrEqual(44);
+ const geometry=await toolbar.evaluate(element=>{
+  const toolbar=element.getBoundingClientRect();
+  const scope=element.querySelector(".study-scope")!.getBoundingClientRect();
+  const account=element.querySelector(".shell-account")!.getBoundingClientRect();
+  return {overflow:element.scrollWidth-element.clientWidth,pageOverflow:document.documentElement.scrollWidth-innerWidth,scopeBottom:scope.bottom,accountTop:account.top,left:toolbar.left,right:toolbar.right,width:innerWidth};
+ });
+ expect(geometry.overflow).toBeLessThanOrEqual(1);
+ expect(geometry.pageOverflow).toBeLessThanOrEqual(1);
+ expect(geometry.left).toBeGreaterThanOrEqual(0);
+ expect(geometry.right).toBeLessThanOrEqual(geometry.width+1);
+ // The mobile grid reserves a complete row for account status, below selection.
+ if((page.viewportSize()?.width??0)<=760)expect(geometry.accountTop).toBeGreaterThanOrEqual(geometry.scopeBottom);
+}
+
+for(const width of [320,390,768,1366])test(`book toolbar keeps account content and touch targets at ${width}px`,async({page})=>{
+ await page.setViewportSize({width,height:1000});
+ await assertBookToolbar(page);
+});
+
+test.describe("Book toolbar at 200% desktop-equivalent reflow",()=>{
+ // 1366 physical pixels at 200% gives a 683px CSS viewport.
+ test.use({viewport:{width:683,height:500},deviceScaleFactor:2});
+ test("account and selection remain readable without horizontal scrolling",async({page})=>{
+  await assertBookToolbar(page);
+ });
 });

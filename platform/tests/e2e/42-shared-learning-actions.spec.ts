@@ -182,13 +182,16 @@ test("a failed preview recording shows a useful error and can be retried", async
 
 const responsiveWordFamilyCards = ["W126", "W017"].map(id => {
   const catalog = JSON.parse(readFileSync(new URL("../../apps/web/generated/word-cards.json", import.meta.url), "utf8")) as {
-    cards: { id: string; path: string; rows: { singular: { tone: string } }[]; studyTags?: { concepts: string[] } }[];
+    cards: { id: string; path: string; rows: { singular: { tone: string } }[] }[];
   };
   const card = catalog.cards.find(candidate => candidate.id === id);
   if (!card?.rows[0]) throw new Error("Missing word-family line-art fixture: " + id);
   // ADR-020a: all word-card heroes share the source-specific line-art renderer.
   const visualKind = id === "W126" ? "semantic:gears" : "semantic:badge";
-  return { id: card.id, path: card.path, tone: card.rows[0].singular.tone, subject: card.studyTags?.concepts[0] ?? "everyday", visualKind };
+  // loadWordCards enriches tags: Profession starts with people; der Name uses everyday.
+  // The raw generated catalog has no studyTags, so use these canonical public fixtures.
+  const subject = id === "W126" ? "people" : "everyday";
+  return { id: card.id, path: card.path, tone: card.rows[0].singular.tone, subject, visualKind };
 });
 
 for (const card of responsiveWordFamilyCards) for (const width of [320, 390, 1366]) {
