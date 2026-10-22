@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import type { PackItem } from "../../../../packages/content/src/types/packs.js";
-import { objectiveDimensions } from "../../../../packages/learning/src/wortwerk/progress.js";
 import type { ItemProgress } from "../../../../packages/learning/src/wortwerk/types.js";
 import { calendarDate, calendarDaysBetween, isCalendarDate } from "../../../../packages/learning/src/wortwerk/dates.js";
 import { createDailyReminderIcs, deriveBadges, deriveCollection, deriveQuests, deriveReadiness, deriveSkillStrength, deriveUnitProgress, deriveWeeklyRecap, type SkillStrength } from "../../../../packages/learning/src/wortwerk/engagement-depth.js";
@@ -19,6 +18,7 @@ import { usePlayContent } from "./PlayProvider";
 import { ProgressSummary } from "./ProgressSummary";
 import { BackupPanel } from "./BackupPanel";
 import { PersonalDeck } from "./PersonalDeck";
+import { MilestonePanel } from "./MilestonePanel";
 
 export type ExploreView = "map" | "journey" | "skills" | "progress";
 const titles: Record<ExploreView, string> = { map: "Your map", journey: "Your journey", skills: "Practice by skill", progress: "Your learning" };
@@ -57,9 +57,8 @@ function ExploreContent({ view, selected, scope }: { view: ExploreView; selected
       if (!cell.items.some(entry => entry.id === item.id)) cell.items.push(item);
       groups.set(key, cell);
     }
-    return [...groups.values()].map(cell => { const goalItems = cell.items.filter(item => { const record = progress.get(item.id); return record && objectiveDimensions(record).length > 0; }); return { ...cell, goalItems, mapId: map.id, complete: goalItems.filter(item => progress.get(item.id)?.complete).length }; });
+    return [...groups.values()].map(cell => ({ ...cell, mapId: map.id }));
   });
-  const next = cells.filter(cell => cell.goalItems.length > 0 && cell.complete < cell.goalItems.length).sort((a, b) => (a.goalItems.length - a.complete) - (b.goalItems.length - b.complete) || b.complete - a.complete)[0];
   const units = deriveUnitProgress(selected.pack, state.progress);
   const skills = deriveSkillStrength(capabilities, state.progress);
   const cards = deriveCollection(selected.pack, state.answers, state.progress, selected.difficulty, state.now);
@@ -86,7 +85,7 @@ function ExploreContent({ view, selected, scope }: { view: ExploreView; selected
 
   return <div className="ww-page"><header className="ww-page-heading"><p className="ww-eyebrow">{selected.pack.cefr} · {selected.pack.title}</p><h1>{titles[view]}</h1><nav className="ww-actions" aria-label="Wortwerk views">{(["map", "journey", "skills", "progress"] as const).map(name => <Link key={name} className="ww-button" href={`/play/${name}`} aria-current={name === view ? "page" : undefined}>{titles[name]}</Link>)}<Link className="ww-button" href="/play">Today</Link></nav></header>
     {view === "map" ? <>
-      <section className="ww-panel"><h2>Next milestone</h2>{next ? <><h3>{next.title}</h3><p>{next.complete} / {next.goalItems.length} complete · {next.goalItems.length - next.complete} more to complete this cell.</p><Link className="ww-button" href={playHref({ ...scope, items: next.goalItems.filter(item => !progress.get(item.id)?.complete).map(item => item.id) }, { pack: selected.pack.id })}>Practise this pattern</Link></> : <p>{cells.length ? "Mapped objective milestones are complete. Self-check practice remains available on its tokens." : "Start one short session. Each supported dimension will appear on its token."}</p>}</section>
+      <section className="ww-panel"><MilestonePanel selected={selected} scope={scope} capabilities={capabilities} progress={state.progress} answers={state.answers} now={state.now} headingLevel={2} /></section>
       {selected.pack.maps.map(map => <section key={map.id} className="ww-panel"><h2>{map.title}</h2><p className="ww-muted">Each token shows its supported dimensions. Secured milestones stay filled; a due dot marks a review.</p><div className="ww-stats">{cells.filter(cell => cell.mapId === map.id).map(cell => <section key={cell.id}><h3>{cell.title}</h3>{cell.items.map(item => <MapToken key={item.id} item={item} progress={progress.get(item.id)} selected={selected} scope={scope} />)}</section>)}</div>{!cells.some(cell => cell.mapId === map.id) ? <p>No items in the current scope match this authored map.</p> : null}</section>)}
       {!selected.pack.maps.length ? <section className="ww-panel"><p>This pack has no authored map yet.</p></section> : null}
     </> : null}
