@@ -47,7 +47,7 @@ Verified 2026-10-22, with builds and typechecks run sequentially:
 | Wrangler production dry run | pass; no resources created |
 | Workflow YAML/preflight | pass; missing config skips, configured release ref proceeds; CI script detector validated |
 | Full original-source audit | **FAIL**: 454 originals absent from checkout; mandatory gate retained |
-| Hosted CI | initial run failed checkout on archived gitlink; fixture-verified workflow fix published; rerun pending, no green claim |
+| Hosted CI | run 39787162824: checkout, immediate credential cleanup and Node setup pass; remaining gates running, no green claim |
 | Live custom domain | pending owner merge/setup and release blockers; no live deployment claimed |
 
 The local host refuses the Unix IPC socket created by the `tsx` CLI, so literal
@@ -125,3 +125,8 @@ from the ephemeral runner index so post-job cleanup can traverse safely.
 The archive and committed repository tree stay unchanged. The fixture verifies
 credential removal, successful submodule traversal and preserved source/archive
 bytes. Unexpected credential-cleanup errors fail closed.
+
+Hosted rerun 39787162824 confirms Checkout, immediate credential cleanup and
+Node setup pass on the published L3-0 fix. Dependency installation and the
+remaining gates were still running at this checkpoint; no full-CI success is
+claimed. The retained private-source audit remains a known release blocker.
