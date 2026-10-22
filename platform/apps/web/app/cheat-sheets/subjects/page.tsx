@@ -8,5 +8,5 @@ export const metadata={title:"Subject infographics",description:"Illustrated Ger
 
 export default function Page(){
   const subjects=loadSubjectSheets().map(sheet=>({id:sheet.id,label:sheet.label,count:sheet.items.length,families:new Set(sheet.items.map(item=>item.cardId)).size}));
-  return <ShellLayout current="cheat-sheets"><SubjectDirectory subjects={subjects}/></ShellLayout>;
+  return <ShellLayout current="subjects"><SubjectDirectory subjects={subjects}/></ShellLayout>;
 }

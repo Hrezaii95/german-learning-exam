@@ -1,4 +1,5 @@
 import Link from "next/link";
+import {AccountSlot} from "@/components/account/AccountSlot";
 import {MobileNavigation,SkipToMainContent} from "./MobileNavigation";
 import {StudyScopeControl} from "@/components/study/StudyScope";
 import {DictionaryLauncher} from "@/components/study/StudyProvider";
@@ -6,37 +7,13 @@ import {LessonResumeTracker} from "@/components/study/LessonResumeTracker";
 import type { ReactNode } from "react";
 import {
   shellCurrentMatches,
+  navItemsFor,
   type NavKey,
+  type Role,
   type ShellNavCurrent,
 } from "@/lib/content/nav";
 
 export type { NavKey, ShellNavCurrent };
-
-type NavItem =
-  | { key: NavKey; href: string; label: string; enabled: true }
-  | { key: string; label: string; enabled: false };
-
-const PRIMARY_NAV: NavItem[] = [
-  { key: "dashboard", href: "/", label: "Dashboard", enabled: true },
-  { key: "lessons", href: "/lessons", label: "Lessons", enabled: true },
-  { key: "book", href: "/book", label: "Interactive book", enabled: true },
-  { key: "cheat-sheets", href: "/cheat-sheets", label: "Cheat sheets", enabled: true },
-  { key: "saved", href: "/saved", label: "My review", enabled: true },
-  { key: "vocabulary", href: "/vocabulary", label: "Vocabulary", enabled: true },
-  { key: "verbs", href: "/verbs", label: "Verbs", enabled: true },
-  { key: "grammar", href: "/grammar", label: "Grammar", enabled: true },
-  { key: "phrases", href: "/phrases", label: "Phrases & Q&A", enabled: true },
-  { key: "listening", href: "/listening", label: "Listening", enabled: true },
-  { key: "search", href: "/search", label: "Search", enabled: true },
-  { key: "practice", href: "/practice", label: "Practice", enabled: true },
-  { key: "review", href: "/review", label: "Guided review", enabled: true },
-  // ADR-016: the course-material credit must stay reachable from every
-  // ordinary learner page, so it lives in primary navigation rather than in a
-  // footnote that only one route shows.
-  { key: "references", href: "/references", label: "References", enabled: true },
-  { key: "settings", href: "/settings", label: "Settings", enabled: true },
-];
-
 
 /**
  * Regular `lernen` product motif: outlined stem + `en` ending in the regular
@@ -63,32 +40,20 @@ function MorphologyStrip({ tone = "nav" }: { tone?: "nav" | "light" }) {
 function NavItems({
   current,
   variant,
+  role,
 }: {
   current: ShellNavCurrent;
   variant: "rail" | "top" | "bottom";
+  role?: Role | undefined;
 }) {
-  const items = variant === "top"
-    ? PRIMARY_NAV.filter(item => ["dashboard", "listening", "search"].includes(item.key))
-    : PRIMARY_NAV;
+  const items = navItemsFor(variant === "top" ? "tabs" : "rail", role);
 
   return (
     <ul className="nav-list">
       {items.map((item) => {
-        if (!item.enabled) {
-          return (
-            <li key={item.key}>
-              <button className="nav-disabled" type="button" disabled>
-                <span>{item.label}</span>
-                <span className="nav-disabled__badge">Coming soon</span>
-              </button>
-            </li>
-          );
-        }
-
-        const navKey = item.key as NavKey;
-        const isCurrent = shellCurrentMatches(current, navKey, variant);
+        const isCurrent = shellCurrentMatches(current, item.id, variant);
         return (
-          <li key={item.key}>
+          <li key={item.id}>
             <Link
               href={item.href}
               className="nav-link"
@@ -106,9 +71,11 @@ function NavItems({
 export function AppShell({
   current,
   children,
+  role,
 }: {
   current: ShellNavCurrent;
   children: ReactNode;
+  role?: Role | undefined;
 }) {
   return (
     <div className="app-shell">
@@ -122,7 +89,7 @@ export function AppShell({
           <MorphologyStrip />
         </div>
         <nav aria-label="Primary">
-          <NavItems current={current} variant="rail" />
+          <NavItems current={current} variant="rail" role={role} />
         </nav>
       </aside>
 
@@ -131,16 +98,17 @@ export function AppShell({
           <div className="shell-brand__name">German Learning OS</div>
         </div>
         <nav aria-label="Primary">
-          <NavItems current={current} variant="top" />
+          <NavItems current={current} variant="top" role={role} />
         </nav>
       </header>
 
       <div className="shell-workspace">
         <main id="main-content" className="shell-main" tabIndex={-1}>
-          <div className="study-toolbar">
+          <header className="study-toolbar">
             {current!=="settings"&&current!=="references"&&<StudyScopeControl/>}
             <DictionaryLauncher/>
-          </div>
+            <AccountSlot/>
+          </header>
           {children}
         </main>
         {/* The source credit is a condition of using this course material
@@ -157,7 +125,7 @@ export function AppShell({
         </footer>
       </div>
 
-      <MobileNavigation current={current}/>
+      <MobileNavigation current={current} role={role}/>
     </div>
   );
 }
