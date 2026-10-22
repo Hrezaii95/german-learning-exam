@@ -51,6 +51,8 @@ The smoke ownership correction preserves the recorded type, unit, browser and bu
 
 The original production route smoke fails obsolete exact-200 expectations for `/vocabulary`, `/hubs` and `/concepts`. The original Pages smoke fails obsolete full-content expectations for `/cheat-sheets/subjects` and `/cheat-sheets/plurals`, blocking the smoke stage of `gates:pages`. Lane 1’s owned `platform/tests/e2e/support/lane1-canonical-routes-smoke.mjs` and `lane1-canonical-pages-smoke.mjs` provide supplementary compatibility checks; passing them does not make either original gate pass.
 
+The separate original word-card export audit (`node tools/audit-word-cards.mjs --audio --export`) remains failed on full-card identity/anatomy/form/example expectations at the 48 retired `/collections/professions/:row` compatibility stubs; see the L1-7 checkpoint/status evidence. The script is unchanged and outside Lane 1’s explicit ownership/shared-file exceptions; expectation and script-ownership resolution is a release/orchestrator handoff coordinated with Lane 3. The owned `platform/tests/e2e/support/lane1-word-cards-smoke.mjs` passed at L1-7: 591 cards, 722 exported routes (674 full-card pages and 48 real compatibility stubs), and 989 forms with audio, without changing the original coverage report. This is supplementary evidence; validation of later candidates remains pending and it does not clear the original audit.
+
 ## Cross-lane and source dependencies
 
 | Dependency | State / owner boundary | Completion condition |

@@ -119,4 +119,6 @@ The final candidate needs sequential engineering gates and rendered route, keybo
 
 Both original smoke gates remain blocked on Lane 3’s shared expectation updates for the retired routes, as recorded in [the completion matrix](17-current-state-and-completion-matrix.md). Lane 1’s owned canonical compatibility helpers are supplementary and do not clear those original gates.
 
+The original word-card export audit (`tools/audit-word-cards.mjs --audio --export`) remains failed at the 48 retired profession detail stubs; see the L1-7 checkpoint/status evidence. Lane 1 has no explicit edit exception for that script; expectation/ownership resolution is a release/orchestrator handoff coordinated with Lane 3. The owned canonical-card/stub helper passed at L1-7, preserving the original coverage report. Validation of later candidates remains pending; this supplementary result does not clear the original audit.
+
 Canonical USA plural typing and selective `/review-audio` Pages export exclusion remain external-owner blockers. G1 scoped play links and G3 practice retirement wait for Lane 2 integration. Account/session/sync work belongs to Lane 3. German, synthesized-audio and book-reference owner reviews stay open. This matrix does not close any of those gates.
