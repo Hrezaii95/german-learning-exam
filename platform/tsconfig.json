@@ -36,6 +36,7 @@
     "vitest.config.ts"
   ],
   "exclude": [
+    "tests/web/subject-grouping-behavior.test.ts",
     "tests/web/subject-sheet-filters-behavior.test.ts",
     "tests/web/subject-infographic-behavior.test.ts",
     "tests/web/subject-illustration-ui.test.ts",

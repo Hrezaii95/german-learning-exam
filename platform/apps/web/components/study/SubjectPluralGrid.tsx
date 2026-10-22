@@ -26,10 +26,9 @@ function sourceQualifier(item:SubjectVocabularyItem){
 }
 
 /** Highlight only exact, observed changes; keep every original source character. */
-function highlightedPlural(entry:PluralPatternEntry):ReactNode{
-  if(!entry.plural)return null;
-  const original=entry.plural.text;
-  const change=pluralDifference(entry.item.de,original);
+export function HighlightedPlural({singular,plural}:{singular:string;plural:string}):ReactNode{
+  const original=plural;
+  const change=pluralDifference(singular,original);
   if(!change||!change.plural||change.stem+change.ending!==change.plural||!original.endsWith(change.plural))return original;
   const prefix=original.slice(0,original.length-change.plural.length);
   const changed=new Set(change.umlautIndices);
@@ -38,7 +37,7 @@ function highlightedPlural(entry:PluralPatternEntry):ReactNode{
     :letter)}{change.ending&&<mark className="subject-plural-ending">{change.ending}</mark>}</>;
 }
 
-function PatternSchema({item,subject}:{item:SubjectVocabularyItem;subject:StudyConcept}){
+export function PatternSchema({item,subject}:{item:SubjectVocabularyItem;subject:StudyConcept}){
   return <span className="subject-plural-pattern-schema" aria-hidden="true"><SubjectVocabularyVisual de={item.de} category={item.category} cardId={item.cardId} subject={subject}/><span>→</span><span className="subject-plural-many">{[0,1,2].map(index=><SubjectVocabularyVisual key={index} de={item.de} category={item.category} cardId={item.cardId} subject={subject}/>)}</span></span>;
 }
 
@@ -64,7 +63,7 @@ export function SubjectPluralGrid({items,groupByGender,currentId,subject,openEnt
       aria-pressed={currentId===item.id} aria-expanded={expanded} aria-controls={expanded?`subject-word-detail-${entry.id}`:undefined} onClick={()=>onChoose(item.id,expanded?openEntry:entry.id)} onKeyDown={event=>{if(event.key==="Escape"&&expanded){event.preventDefault();event.stopPropagation();onClose(entry.id);}}}>
       <SubjectVocabularyVisual de={item.de} category={item.category} cardId={item.cardId} subject={subject}/>
       <span className="subject-plural-entry-copy"><span className="subject-plural-singular" lang="de">{item.de}</span>
-      {entry.plural?<span className="subject-plural-result" lang="de"><span className="subject-plural-arrow" aria-hidden="true">→</span><span>{highlightedPlural(entry)}</span></span>
+      {entry.plural?<span className="subject-plural-result" lang="de"><span className="subject-plural-arrow" aria-hidden="true">→</span><span><HighlightedPlural singular={item.de} plural={entry.plural.text}/></span></span>
         :<span className="subject-plural-unrecorded">No plural taught on this card.</span>}
       {qualifier&&<small className="subject-plural-source">{qualifier}</small>}
       <span className="subject-plural-meaning">{item.meaning}</span></span><span className="subject-entry-chevron" aria-hidden="true">{expanded?"⌃":"⌄"}</span>

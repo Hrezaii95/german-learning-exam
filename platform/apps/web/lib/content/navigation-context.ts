@@ -17,6 +17,7 @@ import { lessonFourWords } from "../study/lesson-four";
 import {sheetLinks} from "../study/sheet-topics";
 import {studyConcepts,type StudyConcept} from "../study/scope";
 import {normalizeSheetTags} from "../study/sheet-browse";
+import {normalizeGroupOrder,type SheetGrouping} from "../study/sheet-grouping";
 
 const SUBJECT_SHEET_PATHS=new Set(studyConcepts.map(subject=>`/cheat-sheets/subjects/${subject.id}`));
 const SHEET_PATHS=new Set([
@@ -52,6 +53,8 @@ export type NavigationContext = {
   onlySaved?: boolean;
   sheetView?: "illustrated" | "plurals";
   sheetGender?: boolean;
+  sheetSubjects?: boolean;
+  sheetGroupOrder?: SheetGrouping[];
   sheetTags?: StudyConcept[];
 };
 
@@ -253,6 +256,9 @@ function normalizeContext(raw: unknown): NavigationContext | null {
     const sheetGroupingPath=SUBJECT_SHEET_PATHS.has(ctx.returnPath)||ctx.returnPath==="/cheat-sheets/plurals";
     if((obj.sheetView==="plurals"||obj.sheetView==="illustrated")&&sheetGroupingPath)ctx.sheetView=obj.sheetView;
     if(typeof obj.sheetGender==="boolean"&&sheetGroupingPath)ctx.sheetGender=obj.sheetGender;
+    if(typeof obj.sheetSubjects==="boolean"&&sheetGroupingPath)ctx.sheetSubjects=obj.sheetSubjects;
+    const sheetGroupOrder=sheetGroupingPath?normalizeGroupOrder(obj.sheetGroupOrder):undefined;
+    if(sheetGroupOrder)ctx.sheetGroupOrder=sheetGroupOrder;
     const sheetTags=sheetGroupingPath?normalizeSheetTags(obj.sheetTags):undefined;
     if(sheetTags!==undefined)ctx.sheetTags=sheetTags;
     if(obj.onlySaved===true)ctx.onlySaved=true;
@@ -284,9 +290,9 @@ function normalizeContext(raw: unknown): NavigationContext | null {
   return Object.freeze(ctx);
 }
 
-/** Only explicit, validated infographic tags need a larger bounded payload. */
+/** Explicit, validated infographic tags or grouping order use a bounded larger payload. */
 function navigationContextMaxLength(ctx:NavigationContext|null):number{
-  return ctx?.entryContext==="hub"&&!ctx.hubId&&ctx.sheetTags!==undefined
+  return ctx?.entryContext==="hub"&&!ctx.hubId&&(ctx.sheetTags!==undefined||ctx.sheetGroupOrder!==undefined)
     &&(SUBJECT_SHEET_PATHS.has(ctx.returnPath)||ctx.returnPath==="/cheat-sheets/plurals")
     ?SHEET_NAVIGATION_CONTEXT_MAX_LENGTH:NAVIGATION_CONTEXT_MAX_LENGTH;
 }
@@ -345,7 +351,7 @@ export function serializeNavigationContext(ctx: NavigationContext): string {
   if (!normalized) {
     return JSON.stringify({ entryContext: "hub", returnPath: "/hubs" });
   }
-  const payload: Record<string, string | boolean | StudyConcept[]> = {
+  const payload: Record<string, string | boolean | StudyConcept[] | SheetGrouping[]> = {
     entryContext: normalized.entryContext,
     returnPath: normalized.returnPath,
   };
@@ -359,6 +365,8 @@ export function serializeNavigationContext(ctx: NavigationContext): string {
   if (normalized.sheetView) payload.sheetView = normalized.sheetView;
   if (typeof normalized.sheetGender === "boolean") payload.sheetGender = normalized.sheetGender;
   if (normalized.sheetTags !== undefined) payload.sheetTags = normalized.sheetTags;
+  if (typeof normalized.sheetSubjects === "boolean") payload.sheetSubjects = normalized.sheetSubjects;
+  if (normalized.sheetGroupOrder !== undefined) payload.sheetGroupOrder = normalized.sheetGroupOrder;
 
   const json = JSON.stringify(payload);
   if (json.length > navigationContextMaxLength(normalized)) {
@@ -408,6 +416,8 @@ export function backHrefFromContext(ctx: NavigationContext): string {
     const sheetGroupingPath=SUBJECT_SHEET_PATHS.has(path)||path==="/cheat-sheets/plurals";
     if (safe.sheetView && sheetGroupingPath) params.set("view", safe.sheetView);
     if (typeof safe.sheetGender === "boolean" && sheetGroupingPath) params.set("gender", safe.sheetGender ? "1" : "0");
+    if (typeof safe.sheetSubjects === "boolean" && sheetGroupingPath) params.set("subjects", safe.sheetSubjects ? "1" : "0");
+    if (safe.sheetGroupOrder !== undefined && sheetGroupingPath) params.set("order", safe.sheetGroupOrder.join(","));
     if (safe.sheetTags !== undefined && sheetGroupingPath) params.set("tags", safe.sheetTags.join(","));
     const qs = params.toString();
     const sheetAnchor=safe.resultId&&(
