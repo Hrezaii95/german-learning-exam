@@ -14,6 +14,7 @@ import {
 import { projectPublishedLearnerDetails } from "../../apps/web/lib/content/detail-project.js";
 import type { ShellNavCurrent } from "../../apps/web/lib/content/nav.js";
 import { PRACTICE_GAME_IDS } from "../../apps/web/lib/games/index.js";
+import { conversationCanonicalPath } from "../../apps/web/lib/conversation/index.js";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -276,7 +277,7 @@ describe("P4A practice UI contracts", () => {
     const html = renderToStaticMarkup(createElement(PracticeHubWithNav));
     expect(renderedLink(html, 'class="back-link"').pathname).toBe(detail.canonicalPath);
     const conversation = renderedLink(html, 'data-conversation-entry="true"');
-    expect(conversation.pathname).toBe("/conversation");
+    expect(conversation.pathname).toBe(conversationCanonicalPath());
     expect(parseNavigationContextParam(conversation.searchParams.get("nav"))).toEqual(context);
     expect(html).toContain("game-selector__card--related");
     const playHref = /href="([^"]*)"[^>]*>Open Play/.exec(html)?.[1];

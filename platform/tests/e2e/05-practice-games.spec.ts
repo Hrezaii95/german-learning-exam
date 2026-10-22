@@ -38,6 +38,12 @@ function matchesHandoff(url: URL, info: TestInfo) {
     && queryMatches && url.hash === rawHash;
 }
 
+// Use the same generated typed-ID detail convention as journey06.
+const CONVERSATION_PATH = detailPath("qa:profession-casual-main").replace(
+  "/phrases/",
+  "/conversation/",
+);
+
 const detailReturn = {
   entryContext: "hub",
   returnPath: detailPath("qa:profession-casual-main"),
@@ -48,7 +54,7 @@ const rawQuery = `?lesson=02&legacy=one&legacy=two&empty=&q=A%2BB+space&nav=${en
 const rawHash = "#legacy-card-%C3%84";
 
 test.describe("journey 5 · retained practice and legacy game handoffs", () => {
-  test("the practice hub retains course recall, checked articles, conversation and bounded Back", async ({ page }) => {
+  test("the practice hub retains course recall, checked articles, conversation and bounded Back", async ({ page }, info) => {
     await openApp(page, `/practice/?nav=${encodeURIComponent(JSON.stringify(detailReturn))}`);
     await waitForLearnerState(page);
     await expect(page.locator("main h1")).toHaveText("Practice");
@@ -70,12 +76,23 @@ test.describe("journey 5 · retained practice and legacy game handoffs", () => {
     const conversation = page.locator('[data-conversation-entry="true"]');
     await expect(conversation).toContainText("Conversation ladder");
     const conversationUrl = new URL((await conversation.getAttribute("href"))!, page.url());
-    expect(conversationUrl.pathname.replace(/\/$/, "").endsWith("/conversation")).toBe(true);
+    const { base } = configuredBase(info);
+    const expectedConversation = new URL(CONVERSATION_PATH.replace(/^\//, ""), base);
+    expect(conversationUrl.pathname.replace(/\/$/, "")).toBe(expectedConversation.pathname);
     expect(JSON.parse(conversationUrl.searchParams.get("nav")!)).toEqual(detailReturn);
     await conversation.click();
-    await expect(page.locator("main h1")).toHaveText("Conversation practice");
-    await expect(page.locator("main [data-conversation-entity]")).toHaveCount(1);
-    await expect(page.locator("main [data-conversation-entity]")).toContainText("5 levels");
+    await expect(page).toHaveURL(url => url.pathname.replace(/\/$/, "") === expectedConversation.pathname);
+    expect(JSON.parse(new URL(page.url()).searchParams.get("nav")!)).toEqual(detailReturn);
+    await expect(page.locator("main h1")).toHaveText("Five-level ladder");
+    const ladder = page.locator('main [data-conversation="true"]');
+    await expect(ladder).toBeVisible();
+    const levels = ladder.locator("button[data-level-id]");
+    await expect(levels).toHaveCount(5);
+    expect(await levels.evaluateAll(buttons => buttons.map(button => button.getAttribute("data-level-id")))).toEqual([
+      "model", "guided-recognition", "substitution", "independent-construction", "spoken-role-play",
+    ]);
+    await expect(ladder).toContainText("Current level: Model (1/5)");
+    await expect(ladder.locator('[data-level="model"] .qa-bubble--question .german')).toHaveText("Was bist du von Beruf?");
 
     await openApp(page, "/practice/");
     const play = page.getByRole("link", { name: "Open Play", exact: true });
