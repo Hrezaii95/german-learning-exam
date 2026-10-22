@@ -182,27 +182,34 @@ test("a failed preview recording shows a useful error and can be retried", async
 
 const responsiveWordFamilyCards = ["W126", "W017"].map(id => {
   const catalog = JSON.parse(readFileSync(new URL("../../apps/web/generated/word-cards.json", import.meta.url), "utf8")) as {
-    cards: { id: string; path: string; image: { path: string; alt: string } | null }[];
+    cards: { id: string; path: string; rows: { singular: { tone: string } }[] }[];
   };
   const card = catalog.cards.find(candidate => candidate.id === id);
-  if (!card?.image) throw new Error("Missing approved raster fixture: " + id);
-  return { id: card.id, path: card.path, image: card.image };
+  if (!card?.rows[0]) throw new Error("Missing word-family line-art fixture: " + id);
+  // ADR-020a: all word-card heroes share the source-specific line-art renderer.
+  const visualKind = id === "W126" ? "semantic:gears" : "semantic:badge";
+  // loadWordCards enriches tags: Profession starts with people; der Name uses everyday.
+  // The raw generated catalog has no studyTags, so use these canonical public fixtures.
+  const subject = id === "W126" ? "people" : "everyday";
+  return { id: card.id, path: card.path, tone: card.rows[0].singular.tone, subject, visualKind };
 });
 
 for (const card of responsiveWordFamilyCards) for (const width of [320, 390, 1366]) {
-  test(card.id + " keeps its raster and review controls usable at " + width + "px", async ({ page }) => {
+  test(card.id + " keeps its shared line art and review controls usable at " + width + "px", async ({ page }) => {
     await page.setViewportSize({ width, height: 1000 });
     await page.goto(card.path.slice(1) + "/");
     await page.evaluate(() => document.fonts.ready);
     const liveCard = page.locator('[data-word-card="' + card.id + '"]');
     await expect(liveCard).toHaveCount(1);
     await expect(liveCard).toBeVisible();
-    const image = liveCard.locator("img");
-    await expect(image).toHaveCount(1);
+    const hero = liveCard.locator(":scope > article > header");
+    const visual = hero.locator(".subject-vocabulary-visual");
+    const svg = visual.locator("svg");
+    await expect(visual).toHaveCount(1);
+    await expect(svg).toHaveCount(1);
+    await expect(liveCard.locator("img")).toHaveCount(0);
     const pathname = new URL(page.url()).pathname.replace(/\/$/, "");
     expect(pathname.endsWith(card.path)).toBe(true);
-    const basePath = pathname.slice(0, -card.path.length);
-    const expectedImage = basePath + card.image.path;
     const mode = liveCard.getByRole("group", { name: "Study mode", exact: true });
     const learn = mode.getByRole("button", { name: "Learn", exact: true });
     const recall = mode.getByRole("button", { name: "Recall", exact: true });
@@ -210,16 +217,21 @@ for (const card of responsiveWordFamilyCards) for (const width of [320, 390, 136
 
     async function expectResponsiveCard() {
       await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth - innerWidth)).toBeLessThanOrEqual(1);
-      await expect(image).toBeVisible();
-      await expect(image).toHaveAttribute("src", expectedImage);
-      await expect(image).toHaveAttribute("alt", card.image.alt);
-      await expect(image).toHaveAttribute("width", "265");
-      await expect(image).toHaveAttribute("height", "204");
-      await expect.poll(() => image.evaluate(node => {
-        const raster = node as HTMLImageElement;
-        return raster.complete && raster.naturalWidth > 0 && raster.naturalHeight > 0
-          && new URL(raster.currentSrc).pathname === new URL(raster.src).pathname;
-      })).toBe(true);
+      await expect(visual).toBeVisible();
+      await expect(visual).toHaveAttribute("data-subject-visual", card.visualKind);
+      await expect(visual).toHaveAttribute("data-subject", card.subject);
+      await expect(hero.locator("[data-tone]")).toHaveAttribute("data-tone", card.tone);
+      await expect(svg).toHaveAttribute("stroke", "currentColor");
+      await expect(svg).toHaveAttribute("aria-hidden", "true");
+      await expect(svg).toHaveAttribute("focusable", "false");
+      const drawing = await svg.evaluate(node => {
+        const rect = node.getBoundingClientRect(), style = getComputedStyle(node);
+        return { width: rect.width, height: rect.height, stroke: style.stroke, color: style.color, paths: node.querySelectorAll("path").length };
+      });
+      expect(drawing.width).toBeGreaterThan(0);
+      expect(drawing.height).toBeGreaterThan(0);
+      expect(drawing.paths).toBeGreaterThan(0);
+      expect(drawing.stroke).toBe(drawing.color);
       for (const target of [
         { name: "Study mode group", locator: mode, button: false },
         { name: "Save control", locator: save, button: true },

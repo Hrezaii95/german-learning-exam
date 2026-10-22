@@ -10,6 +10,12 @@ import {
   orderedLessonActivities,
 } from "../../apps/web/lib/learner-state/activity-progress.js";
 
+import {
+  buildSearchNavigationContext,
+  parseNavigationContextParam,
+  resolveBackHref,
+} from "../../apps/web/lib/content/navigation-context.js";
+
 class MemoryStore {
   value: string | null = null;
   writes = 0;
@@ -102,4 +108,41 @@ describe("J1 activity runtime", () => {
     expect(overview).not.toContain("Lesson 02");
     expect(overview).toContain("remains available");
   });
+
+  it("replaces individual-game promises with Play and course practice carrying the lesson context", () => {
+    const projection = loadLearnerProjection();
+    const lesson = projection.lessons.find(item => item.routeSegment === "02")!;
+    const activity = projection.activities.find(item => item.id === "activity:lesson-02-core-professions")!;
+    const html = renderToStaticMarkup(createElement(ActivityScreen, { lesson, activity }));
+    const anchor = html.match(/<a\b[^>]*>Open course practice<\/a>/)?.[0];
+    expect(anchor).toBeDefined();
+    const rawHref = /href="([^"]*)"/.exec(anchor!)?.[1];
+    if (rawHref === undefined) throw new Error("Course practice link has no href");
+    const href = rawHref.replaceAll("&amp;", "&");
+    const url = new URL(href, "https://test.local");
+    expect(url.pathname).toBe("/practice");
+    const context = parseNavigationContextParam(url.searchParams.get("nav"));
+    expect(context).toEqual({ entryContext: "lesson", returnPath: "/lessons/02", resultId: activity.id });
+    expect(resolveBackHref(context, "lesson")).toBe("/lessons/02");
+    expect(html).toContain('href="/play"');
+    expect(html).toContain(">Open Play</a>");
+    expect(html).not.toContain("Open practice games");
+    expect(html).not.toMatch(/href="\/practice\//);
+  });
+
+  it("preserves an existing bounded search return when opening course practice from an activity", () => {
+    const projection = loadLearnerProjection();
+    const lesson = projection.lessons.find(item => item.routeSegment === "02")!;
+    const activity = projection.activities.find(item => item.id === "activity:lesson-02-core-professions")!;
+    const navigation = buildSearchNavigationContext("Architekt", activity.id);
+    const html = renderToStaticMarkup(createElement(ActivityScreen, { lesson, activity, navigation }));
+    const anchor = html.match(/<a\b[^>]*>Open course practice<\/a>/)![0];
+    const rawHref = /href="([^"]*)"/.exec(anchor)?.[1];
+    if (rawHref === undefined) throw new Error("Course practice link has no href");
+    const href = rawHref.replaceAll("&amp;", "&");
+    const context = parseNavigationContextParam(new URL(href, "https://test.local").searchParams.get("nav"));
+    expect(context).toEqual(navigation);
+    expect(resolveBackHref(context)).toBe(resolveBackHref(navigation));
+  });
+
 });

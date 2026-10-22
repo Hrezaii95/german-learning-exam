@@ -45,13 +45,23 @@ test("object and office live maps export with the selected sentence",async({page
     const negate=lab.getByRole("checkbox",{name:sheet==="objects"?"Correct a guess with kein / keine":"Negate with kein",exact:true});
     await negate.check();
     const result=lab.locator(sheet==="objects"?".object-description":".office-role-trail");
+    if(sheet==="objects")await expect(result).toContainText("Das ist kein Buch.");
+    else await expect(result.locator(":scope > div > strong").last()).toContainText(/\bkein(?:e|en)?\b/,{useInnerText:true});
     const text=await result.innerText();
+    const teaching=result.locator(sheet==="objects"?":scope > div > p, :scope > div > span":":scope > div > small, :scope > div > strong");
+    await expect(teaching).toHaveCount(sheet==="objects"?8:6);
+    const teachingText=await teaching.allInnerTexts();
+    expect(teachingText.every(text=>text.trim().length>0)).toBe(true);
+    await expect(lab.locator(".study-save")).toHaveCount(1);
     const map=page.locator(sheet==="objects"?"#article-map":"#case-map");
     await printLiveSheet(page,info,sheet,async()=>{
       await expect(map).toBeVisible();
       await expect(map.locator(".article-trails > article")).toHaveCount(3);
       await expect(result).toBeVisible();
-      await expect(result).toContainText(text);
+      for(const leaf of await teaching.all())await expect(leaf).toBeVisible();
+      await expect(teaching).toHaveText(teachingText,{useInnerText:true});
+      await expect(negate).toBeHidden();
+      for(const control of await lab.locator(".study-save,.study-audio,.study-audio-button").all())await expect(control).toBeHidden();
     });
     await expect(negate).toBeChecked();
     await expect(result).toHaveText(text,{useInnerText:true});

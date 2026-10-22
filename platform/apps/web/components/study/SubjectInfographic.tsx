@@ -22,6 +22,7 @@ import {CheatSheetFrame} from "./CheatSheetFrame";
 import {sheetDestinations} from "@/lib/study/sheet-navigation";
 import {VOCABULARY_SHEET_PATH} from "@/lib/study/sheet-routes";
 import {WordDropdown} from "./WordDropdown";
+import {vocabularyPlaySelection} from "@/lib/study/play-links";
 import {VocabularyEntry} from "./VocabularyEntry";
 
 const articles:Record<string,string>={male:"der",female:"die",neuter:"das",plural:"die"};
@@ -34,6 +35,7 @@ export function SubjectInfographic({sheet,allNouns=false,allItems}:{sheet:Subjec
   const {scope,setScope,ready}=useStudyScope();
   const catalogue=allItems??sheet.items;
   const [browse,setBrowse]=useState<SheetBrowse>(()=>allNouns?{...initialSheetBrowse,view:"plurals"}:initialSheetBrowse);
+  const [browseReady,setBrowseReady]=useState(false);
   const [selected,setSelected]=useState("");
   const [openEntry,setOpenEntry]=useState("");
   const triggers=useRef(new Map<string,HTMLButtonElement>());
@@ -54,6 +56,7 @@ export function SubjectInfographic({sheet,allNouns=false,allItems}:{sheet:Subjec
         }catch{/* Malformed fragments have no matching vocabulary entry. */}
       }
       setBrowse(restored);
+      setBrowseReady(true);
     };
     restore();
     window.addEventListener("popstate",restore);
@@ -124,7 +127,7 @@ export function SubjectInfographic({sheet,allNouns=false,allItems}:{sheet:Subjec
   };
   const triggerRef=(key:string,node:HTMLButtonElement|null)=>{if(node)triggers.current.set(key,node);else triggers.current.delete(key);};
   const closeDropdown=(key:string)=>{setOpenEntry("");triggers.current.get(key)?.focus();};
-  const renderDropdown=(item:SubjectVocabularyItem,key:string)=><WordDropdown item={item} subject={sheet.id} panelId={`subject-word-detail-${key}`} href={appendNavigationContext(item.href,sheetNavigationContext(returnPath,browse,item.id))} onClose={()=>closeDropdown(key)}/>;
+  const renderDropdown=(item:SubjectVocabularyItem,key:string)=><WordDropdown item={item} subject={sheet.id} panelId={`subject-word-detail-${key}`} href={appendNavigationContext(item.href,sheetNavigationContext(returnPath,browse,item.id))} playScope={ready&&browseReady?sheetScope:null} onClose={()=>closeDropdown(key)}/>;
   const renderEntry=(item:SubjectVocabularyItem)=><div className={`subject-entry-wrap subject-tone-${item.tone}`} key={item.id}>
     <VocabularyEntry item={item} subject={sheet.id} selected={current?.id===item.id} expanded={openEntry===item.id} showPluralChanges={pluralView}
       buttonRef={node=>{triggerRef(item.id,node);if(node)entries.current.set(item.id,node);else entries.current.delete(item.id);}}
@@ -134,7 +137,7 @@ export function SubjectInfographic({sheet,allNouns=false,allItems}:{sheet:Subjec
     <h3 id={`subject-lane-${group.id}`}>{articles[group.tone]&&<span className="subject-lane-article" lang="de">{articles[group.tone]}</span>}<span>{group.label}<small>{group.items.length} {group.items.length===1?"entry":"entries"}</small></span></h3>
     <div className="subject-lane-entries">{sortItems(group.items).map(renderEntry)}</div>
   </section>;
-  return <CheatSheetFrame current={allNouns?"vocabulary":`subject:${activeSubject?.id??sheet.id}`} browse={browse} eyebrow="Your illustrated vocabulary catalogue" title={heading} lead={hasNouns?"Learn each noun with its article and plural. Compare the actual changes in the grid.":"Explore the expressions and word types in this subject."} printNote="Tap an illustrated word to open its card and play the singular or plural pronunciation." data-subject-sheet={allNouns?"plurals":sheet.id} data-sheet-view={pluralView?"plurals":"illustrated"} data-gender-grouping={groupByGender?"on":"off"} data-plural-grouping={pluralView?"on":"off"} data-subject-grouping={groupBySubject?"on":"off"} data-lesson-grouping={groupByLesson?"on":"off"} data-group-order={groupOrder.join(",")}>
+  return <CheatSheetFrame current={allNouns?"vocabulary":`subject:${activeSubject?.id??sheet.id}`} browse={browse} playSelection={vocabularyPlaySelection(ready&&browseReady?sheetScope:null,visible.map(item=>item.id))} eyebrow="Your illustrated vocabulary catalogue" title={heading} lead={hasNouns?"Learn each noun with its article and plural. Compare the actual changes in the grid.":"Explore the expressions and word types in this subject."} printNote="Tap an illustrated word to open its card and play the singular or plural pronunciation." data-subject-sheet={allNouns?"plurals":sheet.id} data-sheet-view={pluralView?"plurals":"illustrated"} data-gender-grouping={groupByGender?"on":"off"} data-plural-grouping={pluralView?"on":"off"} data-subject-grouping={groupBySubject?"on":"off"} data-lesson-grouping={groupByLesson?"on":"off"} data-group-order={groupOrder.join(",")}>
     <div className="subject-controls subject-print-hide"><label>Find a word or form<input type="search" value={browse.query} onChange={event=>changeBrowse({...browse,query:event.target.value,page:1})} placeholder="Search German, English or a plural…"/></label><p><strong>{scopeLabel(sheetScope)}</strong><span>{scoped.length} of {catalogue.length} entries match your study selection.</span></p></div>
     <p className="study-print-selection">Selection: {scopeLabel(sheetScope)} · {effectiveConcepts.length?effectiveConcepts.map(id=>studyConcepts.find(subject=>subject.id===id)?.label??id).join(", "):"All subjects"} · {sheetScope.source==="all"?"All sources":sheetScope.source==="course"?"Course material":sheetScope.source==="teacher-extra"?"Teacher extras":"Additional study aids"}{browse.query?` · Search: ${browse.query}`:""}{browse.category!=="all"?` · Group: ${browse.category}`:""}</p>
     {groups.length>1&&<div className="subject-group-filters subject-print-hide" role="group" aria-label="Vocabulary groups"><button type="button" aria-pressed={browse.category==="all"} onClick={()=>changeBrowse({...browse,category:"all",page:1})}>All groups <span>{scoped.length}</span></button>{groups.map(group=><button type="button" key={group.id} className={`subject-tone-${group.tone}`} aria-pressed={browse.category===group.id} onClick={()=>changeBrowse({...browse,category:group.id,page:1})}>{group.label} <span>{group.items.length}</span></button>)}</div>}

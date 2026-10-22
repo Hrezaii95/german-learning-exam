@@ -4,7 +4,8 @@ import { Icon } from "@/components/media/Icon";
 
 import Link from "next/link";
 import {useEffect,useRef} from "react";
-import type {StudyConcept} from "@/lib/study/scope";
+import type {StudyConcept,StudyScope} from "@/lib/study/scope";
+import {wordPlaySelection} from "@/lib/study/play-links";
 import type {SubjectVocabularyItem} from "@/lib/study/subject-sheets";
 import {LineAudio} from "./StudyAudio";
 import {GermanText,SaveButton} from "./StudyProvider";
@@ -13,13 +14,15 @@ import {SubjectVocabularyVisual} from "./SubjectIllustration";
 import {vocabularySourceQualifier} from "@/lib/study/vocabulary-entry";
 
 /** Mounted only for the open entry; its parent owns the disclosure and focus. */
-export function WordDropdown({item,subject,href,panelId,onClose}:{
+export function WordDropdown({item,subject,href,panelId,onClose,playScope}:{
   item:SubjectVocabularyItem;
   subject:StudyConcept;
   href:string;
   panelId:string;
   onClose:()=>void;
+  playScope?:StudyScope|null;
 }){
+  const practice=wordPlaySelection(item.id,playScope);
   const panel=useRef<HTMLElement>(null);
   useEffect(()=>{
     const element=panel.current;
@@ -62,6 +65,7 @@ export function WordDropdown({item,subject,href,panelId,onClose}:{
       {item.patterns.length>0&&<div className="subject-detail-patterns"><h4>Useful patterns</h4><ul>{item.patterns.map((pattern,index)=><li key={`${pattern}-${index}`}><GermanText text={pattern}/></li>)}</ul></div>}
     </details>}
     <div className="subject-detail-actions"><SaveButton item={item.savedItem}/><Link href={href}>{item.href.startsWith("/vocabulary/")?"Full vocabulary card":"Open word reference"} <Icon name="arrow"/></Link></div>
+    <div className="subject-detail-actions subject-print-hide">{practice.href===null?<span><button type="button" className="study-secondary" disabled>Practise this word</button><small role="status">{practice.reason}</small></span>:<Link prefetch={false} href={practice.href} className="study-secondary">Practise this word <Icon name="arrow"/></Link>}</div>
     <StudyTagList tags={item.studyTags}/>
     {item.note&&<details className="subject-source-note"><summary>Word notes & source context</summary>{item.note.split(/\n\n+/).map((paragraph,index)=><p key={index}>{paragraph}</p>)}</details>}
   </article>;

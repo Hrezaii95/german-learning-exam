@@ -1,6 +1,7 @@
 "use client";
 
 import { Icon } from "@/components/media/Icon";
+import Link from "next/link";
 import { useEffect, useId, useRef, useState } from "react";
 import type { WordCard, WordForm } from "@/lib/content/word-card-types";
 import { normalizeCardAnswer } from "@/lib/content/word-card-types";
@@ -10,6 +11,7 @@ import { LineAudio, stopStudyAudio } from "@/components/study/StudyAudio";
 import {StudyTagList} from "@/components/study/StudyScope";
 import { savedWordCard } from "@/lib/study/saved-word-card";
 import { SubjectVocabularyVisual } from "@/components/study/SubjectIllustration";
+import {wordFamilyPlaySelection} from "@/lib/study/play-links";
 
 function PatternToken({ text, card }: { text: string; card: WordCard }) {
   const forms = card.rows.flatMap(r => [r.singular, ...r.plurals]);
@@ -47,6 +49,7 @@ function Term({ form, stem }: { form: WordForm; stem: string }) {
 
 /** The approved engineer card, with the same teaching anatomy for every word family. */
 export function WordFamilyCard({ card }: { card: WordCard }) {
+  const practice=wordFamilyPlaySelection(card.id);
   const uid = useId();
   const [mode, setMode] = useState<"learn" | "recall">("learn");
   const [promptIndex, setPromptIndex] = useState(0);
@@ -102,6 +105,6 @@ export function WordFamilyCard({ card }: { card: WordCard }) {
       </section>}
       <footer className={styles.cardFooter}><span><span className={styles.male}>●</span> masculine &nbsp; <span className={styles.female}>●</span> feminine &nbsp; <span className={styles.neuter}>●</span> neuter &nbsp; <span className={styles.plural}>●</span> plural</span><span>Generated audio</span></footer>
       {mode === "learn" && <details className={styles.sourceDetail}><summary>Lesson notes &amp; sources</summary><p>Momente A1.1 · Kursbuch, Arbeitsbuch and German–English glossary, © Hueber Verlag. {card.teacherRows.length > 0 && `Also in your teacher’s professions list (row ${card.teacherRows.join(", ")}).`} </p>{card.sources.map(source => <p key={source}>{source.startsWith("https://") ? <a href={source} target="_blank" rel="noreferrer">Additional lexical source</a> : source}</p>)}<p>{card.priorities.join(" · ")}. Core: practise actively. Context and Classroom: recognise first. Teacher extra: follow your class assignment.</p>{card.note && <p>{card.note}</p>}<p>The word forms and meanings follow your vocabulary guide. Examples and memory cues were written for these cards; they are not quotations from the book. Audio is generated preview speech; independent German language and listening review is still pending.</p></details>}
-    </article><p className={styles.below}>Learn the meaning. Notice the endings. Recall the whole family.</p>
+    </article><div className={`${styles.below} subject-detail-actions`}>{practice.href===null?<span><button type="button" className="study-secondary" disabled>Practise this word</button><small role="status">{practice.reason}</small></span>:<Link prefetch={false} href={practice.href} className="study-secondary">Practise this word <Icon name="arrow"/></Link>}</div><p className={styles.below}>Learn the meaning. Notice the endings. Recall the whole family.</p>
   </div>;
 }

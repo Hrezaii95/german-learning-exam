@@ -52,6 +52,8 @@
     list-style: none;
   }
 
+  /* The current selection prints; account and dictionary actions stay on screen. */
+  .app-shell:has(:is(.study-workspace, .subject-sheet, .country-sheet, .collection-sheet, .book-workspace)) .study-toolbar > :not(.study-scope),
   .app-shell .study-toolbar .study-scope > :not(summary),
   .app-shell .study-scope-edit,
   .app-shell:has([data-subject-sheet]) .shell-main .study-toolbar {
@@ -170,8 +172,9 @@
     font-size: 8pt;
   }
 
-  .app-shell .book-page-scroll {
+  .app-shell .book-workspace .book-page-scroll {
     overflow: visible;
+    max-height: none;
   }
 
   .app-shell .book-paper {
@@ -180,15 +183,79 @@
     max-width: 100%;
   }
 
-  .app-shell .book-paper > img {
-    width: 100%;
+  /* Leave room for the current scope, page identity and credits on Letter. */
+  .app-shell .book-workspace .book-paper > img {
+    width: auto;
     height: auto;
     max-width: 100%;
+    max-height: 200mm;
+    margin-inline: auto;
   }
 
   .app-shell :is(.country-sheet, .subject-sheet, .home-sheet, .object-sheet, .collection-sheet, .book-workspace) :is(svg, img) {
     max-width: 100%;
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
+  }
+
+  .app-shell .sheet-practice {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .app-shell .book-workspace .book-header {
+    margin: 0 0 2mm;
+  }
+
+  .app-shell .book-workspace .book-header h1 {
+    margin: 0 0 1mm;
+    font-size: 18pt;
+  }
+
+  .app-shell .book-workspace .book-header .study-eyebrow,
+  .app-shell .book-workspace .book-current-topic {
+    margin: 0 0 1mm;
+  }
+
+  .app-shell .book-workspace .book-current-topic {
+    font-size: 9pt;
+  }
+
+  .app-shell .book-workspace .book-reading-grid.book-view-page {
+    display: block;
+  }
+
+  .app-shell .book-workspace .book-view-page > .book-text-panel:not(:has(.book-selected-line)) {
+    display: none;
+  }
+
+  .app-shell .book-workspace .book-answers:not(:has(.book-answer-list)) {
+    display: none;
+  }
+
+  .app-shell:has(.book-workspace) .shell-credit {
+    margin-top: 2mm;
+  }
+
+  .app-shell:has(.book-workspace) .shell-credit p {
+    padding-top: 1mm;
+  }
+
+  .app-shell .book-workspace .book-credit {
+    margin: 1mm 0 0;
+    font-size: 7pt;
+    line-height: 1.2;
+  }
+
+  .app-shell .book-workspace .book-original {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    break-inside: avoid;
+  }
+
+  .app-shell .book-workspace .book-page-caption {
+    margin: 1mm 0 0;
+    font-size: 7pt;
   }
 }

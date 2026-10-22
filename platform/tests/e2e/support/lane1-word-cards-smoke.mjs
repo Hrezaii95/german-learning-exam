@@ -1,8 +1,8 @@
 /**
- * Temporary Lane 1 export contract until the owner updates audit-word-cards.
+ * Supplementary Lane 1 export contract for canonical cards and retired aliases.
  * Preserves its content/audio/full-card checks and audits retired profession
- * aliases as real exported compatibility HTML. The original audit remains
- * unchanged and separately blocked. Read-only: emits stdout JSON only.
+ * aliases as real exported compatibility HTML. The original current audit runs
+ * separately and must pass. Read-only: emits stdout JSON only.
  * Run with --audio --export. WORD_CARDS_ROOT selects an immutable candidate;
  * otherwise the repository root is resolved from this owned support path.
  */

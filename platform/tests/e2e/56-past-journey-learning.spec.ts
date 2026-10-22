@@ -96,19 +96,27 @@ test("past and journey print the current sentence and reference diagrams",async(
   await expect(page.locator("#sheet-practice")).toContainText("Question 1 /");
 
     const lab=page.locator(sheet==="past"?"#past-lab":"#journey-lab");
-    const person=lab.getByRole("combobox",{name:sheet==="past"?"Past sentence person":"Journey sentence person",exact:true});
+    const person=lab.getByRole("combobox",{name:sheet==="past"?"Past sentence person":"Journey person",exact:true});
     await person.selectOption("1");
-    await lab.getByRole("checkbox",{name:sheet==="past"?"Reveal final participle":"Reveal the auxiliary",exact:true}).check();
+    const reveal=lab.getByRole("checkbox",{name:sheet==="past"?"Reveal final participle":"Reveal the auxiliary",exact:true});
+    await reveal.check();
     const result=lab.locator(sheet==="past"?".past-result":".journey-result");
     const text=await result.innerText();
+    expect(text.trim()).not.toBe("");
+    await expect(lab.locator(".study-save")).toHaveCount(1);
     await printLiveSheet(page,info,sheet,async()=>{
       await expect(lab).toBeVisible();
-      await expect(result).toContainText(text);
+      await expect(result).toBeVisible();
+      await expect(result).toHaveText(text,{useInnerText:true});
+      await expect(person).toBeHidden();
+      await expect(reveal).toBeHidden();
+      for(const control of await lab.locator(".study-save,.study-audio,.study-audio-button").all())await expect(control).toBeHidden();
       await expect(lab.locator(sheet==="past"?".past-parts":".journey-parts")).toBeVisible();
       if(sheet==="past")await expect(page.locator(".past-pattern-grid > article")).toHaveCount(4);
       else await expect(page.locator(".season-wheel")).toBeVisible();
     });
     await expect(person).toHaveValue("1");
+    await expect(reveal).toBeChecked();
     await expect(result).toHaveText(text,{useInnerText:true});
   }
 });
