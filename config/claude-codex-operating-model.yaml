@@ -183,6 +183,11 @@ scope:
         Codex usage rises to 3 concurrent long-running sessions. Cloudflare Workers Paid plan
         (about 5 USD per month) is recommended for password-hashing CPU time.
       files_affected: docs/lanes/README.md (ownership map)
+      amendment_2026-10-22: >-
+        Owner is away and wants about 5 minutes of work on return. Lanes work on lane branches and combine their
+        work into one integration branch (integration/all) with all gates green. The owner reviews and merges ONE PR
+        (integration/all -> codex/live-alpha), then adds 3 secrets and runs the "Go live (Cloudflare)" workflow
+        (docs/platform/GO-LIVE.md). Lanes still never merge into codex/live-alpha.
       preserved_limits:
         - no-merge-to-codex-live-alpha-without-owner-approval
         - do-not-claim-human-language-or-listening-approval

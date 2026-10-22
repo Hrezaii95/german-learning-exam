@@ -20,8 +20,5 @@ Generate one screen per reply, starting with 01, and wait for me to type "next".
 
 If ChatGPT can't open the link (browsing off), download the brief and attach it with: "Follow the attached brief exactly, starting with screen 01."
 
-## Prompt 2: build (Claude Code / Codex in this repo)
-
-```
-Implement Wortwerk in this repository by following docs/games/wortwerk-build-spec.md exactly (on branch claude/german-webapp-audit-game-i0plj0 until PR #1 merges into codex/live-alpha). Read everything its section 0 lists first, start with Phase 0, and post your plan before writing code. Ship one draft PR per phase into codex/live-alpha, and do not merge or start Class mode B without my approval.
-```
+## Prompt 2: build (Codex sessions)
+Building is now split across three parallel lanes. Use the three short prompts in [../lanes/README.md](../lanes/README.md#short-prompts-one-per-codex-session). The game lane (Lane 2) follows `docs/games/wortwerk-build-spec.md`.

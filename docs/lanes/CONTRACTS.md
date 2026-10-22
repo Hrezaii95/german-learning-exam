@@ -1,6 +1,6 @@
 # Lane contracts (shared interfaces)
 
-The three lanes (`docs/lanes/README.md`) build against these interfaces instead of against each other's code, so they can work at the same time. **Changing this file needs the owner's OK.** Do it in a separate tiny PR titled `contracts: …`, and the owner tells the other lanes.
+The three lanes (`docs/lanes/README.md`) build against these interfaces instead of against each other's code, so they can work at the same time. **Changing this file needs the owner's OK.** While the owner is away, only **additive, backward-compatible** changes are allowed. Commit them on your lane branch as `contracts: …` and add a line to the changelog at the end of this file.
 
 ---
 
@@ -136,3 +136,7 @@ These files may be touched by more than one lane, **append-only, inside the lane
 - `docs/INDEX.md`.
 
 On a conflict: rebase on `origin/codex/live-alpha` and keep both sides. Regenerate `package-lock.json` with `npm install`; never hand-merge it.
+
+## Changelog
+| Date | Lane | Change (additive only) |
+|---|---|---|

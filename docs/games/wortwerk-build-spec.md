@@ -255,20 +255,15 @@ Never bypass the pre-commit hook. If it fires, restore `proxy.ts` and clean the 
 - Pending packs can be enabled for testing but are off by default.
 
 ## 8 · Git, PRs and deployment
-- Branch per phase from fresh `codex/live-alpha`: `feat/wortwerk-v2-phase-N`. Commit in small steps.
-- Open a **draft PR into `codex/live-alpha`** listing:
-  - what shipped;
-  - mobile and desktop screenshots of each new screen;
-  - gate output;
-  - anything deferred.
-  Mark it ready only when all gates pass. Never push directly to `codex/live-alpha`, and never merge without the owner's approval.
-- **Deployment is automatic:** `.github/workflows/deploy-pages.yml` runs on every push to `codex/live-alpha` (`npm ci` → `check` → `build:web` → `audit:prod` → smokes → `build:pages` → `smoke:pages` → word-card audit → Pages deploy). Add `packs:validate` to that workflow in Phase 1.
-- After each deploy, verify https://hrezaii95.github.io/german-learning-exam/:
-  - `curl` every `/play/*` route and expect 200;
-  - run a Daily Run with Playwright at 390 px against the live URL and save screenshots;
-  - confirm the Play nav on desktop and mobile, and the cheat-sheet links.
-  Post the results on the PR.
-- **Rollback:** revert the merge commit on `codex/live-alpha` (this redeploys the previous version). Old builds must ignore `wortwerk.v2` data safely; test this.
+- **Branches and integration:** follow `docs/lanes/README.md` (rules 3–6). Work on `lane2/main`; push after every item; take part in the `integration/all` step. **Never merge into `codex/live-alpha`.** The owner merges the single integration PR.
+- **Deployment:**
+  - GitHub Pages deploys automatically when the owner merges the integration PR.
+  - Cloudflare goes live through Lane 3's one-click "Go live" workflow (`docs/platform/GO-LIVE.md`).
+  - Don't edit workflows. Make `packs:validate` part of `npm run check`, so every pipeline runs it.
+- **Verification:**
+  - Before pushing the integration branch, run one Daily Run with Playwright at 390 px against the **local export** and save the screenshots to `research/release-evidence/wortwerk/`.
+  - After go-live, the workflow's smoke test covers the live site.
+- **Rollback:** revert the integration merge on `codex/live-alpha`. Old builds must ignore `wortwerk.v2` data safely; test this.
 
 ## 9 · Out of scope
 - Purchases or currency.

@@ -44,6 +44,6 @@
 4. **L2-4 onward:** follow the build spec phases 2 → 3 → 4 → 4b → 5, one PR per coherent slice.
 
 ## Rules
-- **Branches and PRs:** branches `lane2/<topic>`; draft PRs into `codex/live-alpha`; **never merge**; rebase before each push.
+- **Branches and integration:** work on `lane2/main` and do the integration step exactly as in `docs/lanes/README.md` (rules 3–6). One commit series per plan item, with the item id in the message. **Never merge into `codex/live-alpha`**; the owner merges the single `integration/all` PR.
 - **Gates:** run the build spec §6 gates, one at a time.
 - **Status:** update only `plans/lanes/lane-2-status.md`.

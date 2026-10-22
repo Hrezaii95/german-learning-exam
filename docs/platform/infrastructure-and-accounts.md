@@ -57,7 +57,7 @@ Status: approved (ADR-018). Implemented by **Lane 3** (`docs/lanes/lane-3-platfo
 - **Password hashing:** PBKDF2-HMAC-SHA256 via WebCrypto, 600,000 iterations, 16-byte random salt, stored as `pbkdf2$sha256$600000$<salt>$<hash>` so it can be upgraded later. This needs more CPU than the Workers free tier allows, so the **Workers Paid plan** is required.
 - **Sessions:** cookie `__Host-gl_session`, 32 random bytes, `HttpOnly; Secure; SameSite=Lax; Path=/`. Only its SHA-256 is stored. Rotate it at login and on privilege change. Logout revokes it.
 - **CSRF:** every state-changing `/api/*` request must carry `Origin` = `https://german.learnilabs.com` (or the preview origin) and a JSON content type.
-- **Brute force:** rate-limit login per username and per IP (the Workers Rate Limiting binding or a D1 counter). After 5 failures, require Cloudflare Turnstile. Fail with a generic "wrong username or password".
+- **Brute force:** rate-limit login per username and per IP with a D1 counter (exponential lock-out after 5 failures). Turnstile comes later, behind a flag. Fail with a generic "wrong username or password".
 - **Authorisation:** every `/api/*` handler checks the session role and resource ownership on the server. The static dashboard pages contain no data; a non-admin who opens `/admin/` sees an "access denied" screen from the API response.
 
 ### 3.2 Later: email and Google (prepared now, switched on by feature flag)
@@ -106,8 +106,8 @@ Browser storage is tied to the site address, so progress made on `hrezaii95.gith
 | `student2` | student | Ben (Demo) | member of the demo class |
 | `student3` | student | Cem (Demo) | member of the demo class |
 
-- **Passwords are never committed.** The owner stores them as GitHub Actions secrets: `SEED_PW_ADMIN`, `SEED_PW_TEACHER1`, `SEED_PW_STUDENT1`, `SEED_PW_STUDENT2`, `SEED_PW_STUDENT3` (environment `production`).
-- **The seed workflow** (`seed-accounts.yml`) is run manually (`workflow_dispatch`). It:
+- **Passwords are never committed.** The owner stores them in one GitHub Actions secret, `SEED_ACCOUNTS_JSON` = `{"admin":"…","teacher1":"…","student1":"…","student2":"…","student3":"…"}`.
+- **Seeding is a step of the one-click "Go live" workflow** (`go-live.yml`, run manually). The step:
   1. hashes each password with the same hash module as the API;
   2. writes the users, password identities, the demo class and its memberships through `wrangler d1 execute`;
   3. is idempotent (creates or updates);
@@ -123,10 +123,10 @@ Browser storage is tied to the site address, so progress made on `hrezaii95.gith
 - **Metrics:** learning metrics stay on the device unless the user is signed in. Server-side aggregate analytics need explicit consent and a later decision.
 
 ## 7. Owner actions (Codex cannot do these)
-1. **Cloudflare plan:** upgrade to **Workers Paid** (≈ 5 USD per month) in the Cloudflare account that holds `learnilabs.com`.
-2. **API token:** create a token with these permissions:
-   - Account → Workers Scripts: Edit, D1: Edit, Account Settings: Read;
-   - Zone `learnilabs.com` → Workers Routes: Edit, DNS: Edit.
-3. **GitHub secrets:** add `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`.
-4. **Seed passwords:** add the five `SEED_PW_*` secrets to the GitHub `production` environment, then run "Seed accounts" once.
-5. **Later:** a Google OAuth client and an email provider API key (reserved names in §3.2).
+See **[GO-LIVE.md](GO-LIVE.md)** (about 5 minutes):
+1. Merge the integration PR.
+2. Cloudflare Workers Paid, plus an API token.
+3. Three GitHub secrets: `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`, `SEED_ACCOUNTS_JSON`.
+4. Run "Go live (Cloudflare)".
+
+Google and email sign-in come later.

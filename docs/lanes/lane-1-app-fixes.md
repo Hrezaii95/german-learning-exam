@@ -37,13 +37,13 @@
 ## Changes the game and the platform need from your lane
 | PR | Change | Depends on |
 |---|---|---|
-| **L1-G1 play links** | add **"Play this sheet"** to every cheat sheet (it uses the sheet's current filters as the scope) and **"Practise this word"** on word cards and dropdowns, both built with the CONTRACTS §6 format; keep the cheat-sheet filter fields identical to the scope fields (lessons, tags, sources) | Lane 2's `/play/run` route merged (hide the buttons until then) |
+| **L1-G1 play links** (do it once Lane 2's `/play/run` exists on `origin/lane2/main`; build against CONTRACTS §6 and verify on `integration/all`) | add **"Play this sheet"** to every cheat sheet (it uses the sheet's current filters as the scope) and **"Practise this word"** on word cards and dropdowns, both built with the CONTRACTS §6 format; keep the cheat-sheet filter fields identical to the scope fields (lessons, tags, sources) | Lane 2's `/play/run` (hide the buttons until it exists in the build) |
 | **L1-G2 page refs** | add `bookRef.page` (and the exercise, where known) to every vocabulary row for Lessons 3–12, **taken from the book sources in the repo**, never guessed: pages from `platform/apps/web/generated/interactive-book.json` and `archive/cursor-demo-2026-07-30/content/extracted/_pdf_raw/kursbuch_full.txt`; exercise numbers from `…/_pdf_raw/glossary_full.txt` (organised by lesson and exercise); mark rows you can't locate as `page: null` with a note; owner review before publication | none |
-| **L1-G3 retire the old practice games** | `/practice/[gameId]` → redirect stubs to `/play/` | Lane 2 Phase 1 live |
+| **L1-G3 retire the old practice games** | `/practice/[gameId]` → redirect stubs to `/play/` | Lane 2 Phase 1 present on `origin/lane2/main`; do this last |
 | **L1-G4 nav entries** | none; Lanes 2 and 3 add their own entries after L1-1 merges | n/a |
 
 ## Rules
-- **Branches and PRs:** branches `lane1/<topic>`. Draft PRs into `codex/live-alpha`, one per row above; **never merge** (the owner merges). Rebase on `origin/codex/live-alpha` before each push.
+- **Branches and integration:** work on `lane1/main` and do the integration step exactly as in `docs/lanes/README.md` (rules 3–6). One commit series per plan item, with the item id in the message. **Never merge into `codex/live-alpha`**; the owner merges the single `integration/all` PR.
 - **Gates (one at a time, never two builds at once):** `npm run check` → `npm run test:e2e` → `npm run build:web && npm run smoke:web-routes` → `npm run gates:pages` → `node tools/audit-attribution.mjs`. Put the outputs in the PR body.
 - **Old URLs keep working** (redirect stubs that preserve query and hash), because saved items in learners' browsers store them.
 - **Status:** after each PR, update only `plans/lanes/lane-1-status.md` (done / in progress / blocked, with links).

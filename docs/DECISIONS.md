@@ -152,3 +152,4 @@
 - Each lane writes only its own `plans/lanes/lane-N-status.md`. The plan baton and register are updated by the orchestrator (Claude) at integration time.
 - Changes to `docs/lanes/CONTRACTS.md` need the owner's OK.
 - No lane merges to `codex/live-alpha` without the owner's approval.
+- **Amended 2026-10-22 (owner away):** lanes commit to `lane1/main`, `lane2/main` and `lane3/main`, then combine their work into `integration/all` with all gates green. The owner merges that one PR, adds 3 secrets and runs "Go live" (`docs/platform/GO-LIVE.md`).
