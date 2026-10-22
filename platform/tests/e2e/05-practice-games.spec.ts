@@ -116,7 +116,7 @@ test.describe("journey 5 · retained practice and legacy game handoffs", () => {
       expect(html).toContain("window.location.search");
       expect(html).toContain("window.location.hash");
       expect(html).toMatch(/<noscript><meta http-equiv="refresh" content="0;url=[^"]*\/play\/"/);
-      expect(html).toContain(`href="${target.pathname}">Open Play`);
+      expect(html.replace(/<!--[\s\S]*?-->/g, "")).toContain(`href="${target.pathname}">Open Play`);
       expect(html).not.toMatch(/data-game-id=|data-emitted-count=/);
 
       const destination = await page.request.get(canonicalRequestPath("play", info), { maxRedirects: 0 });
