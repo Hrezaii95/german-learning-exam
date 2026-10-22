@@ -1,6 +1,6 @@
 # Wortwerk v2 prompts
 
-Two ready-to-paste prompts for the all-skills, content-pack version of the game ([wortwerk-v2-engine-and-engagement.md](wortwerk-v2-engine-and-engagement.md)). The earlier vocabulary-only prompts are in this file's git history.
+Two ready-to-paste prompts for the all-skills, content-pack version of the game ([wortwerk-v2-engine-and-engagement.md](wortwerk-v2-engine-and-engagement.md)), including the book-companion scope picker and Class mode from [competitive-analysis-book-companion.md](competitive-analysis-book-companion.md). The earlier vocabulary-only prompts are in this file's git history.
 
 1. **Screens prompt**: for ChatGPT image generation, one screenshot per view and state.
 2. **Spec, build and deploy prompt**: for a coding agent (Claude Code or Codex) working in this repository.
@@ -10,7 +10,7 @@ Two ready-to-paste prompts for the all-skills, content-pack version of the game 
 ## Prompt 1: every screen as a separate screenshot
 
 ````
-I'm designing "Wortwerk", a German learning game inside an app called "German Learning OS". It trains every skill (vocabulary, grammar, listening, speaking, reading, writing, exam practice) and works for every level from A1 to C2, because the content comes from swappable level packs. I need a SEPARATE mockup image for every screen below: 52 images in total.
+I'm designing "Wortwerk", a German learning game inside an app called "German Learning OS". It trains every skill (vocabulary, grammar, listening, speaking, reading, writing, exam practice) and works for every level from A1 to C2, because the content comes from swappable level packs. It is a companion to the coursebook the learner uses (here: Momente A1): learners choose content by lesson, by topic, up to a lesson, or up to a page, and teachers can assign work to a class. I need a SEPARATE mockup image for every screen below: 64 images in total.
 
 HOW TO WORK
 - Generate ONE image per reply, in the numbered order below. Put the number and name above it, e.g. "07 · Smart reminder".
@@ -106,6 +106,22 @@ K · Rewards and settings
 51 · Run results with bonus: "Daily Run complete · 18 / 20", "🔥 13 days", "4 words levelled up", and a gently highlighted card "Bonus round unlocked: rare card chance", with a revealed rare card "die Sehenswürdigkeit".
 52 · Pack settings: "Content packs", a list of installed packs with level badges and toggles, "Study scope: Lessons 1–6", a "German review status" label per pack ("Reviewed" or "Pending review"), and a button "Check for new packs".
 
+L · Book companion
+53 · Book position: heading "Where are you in Momente A1?", a lesson picker showing "Lektion 5" selected, a page stepper "Seite 62" with − and + buttons, a small book-cover outline, and a button "Save position".
+54 · Scope picker (bottom sheet): mode options "Up to my position (L5 · p. 62)" (selected), "This lesson", "Pick lessons", "Up to a lesson", "Topics", "Teacher assignment", "My tricky words"; below them combinable chips "Topics: Food · Numbers" and "Sources: Course · Teacher extra", and a live count "312 items in scope".
+55 · Position advance: a small card at the top of the interactive book "You opened page 64. Move your position to p. 64?" with buttons "Move" and "Not now".
+56 · Lesson loop on Today: three stacked cards "Before class · Preview Lektion 6 · 5 min", "After class · Practise p. 58–62", "Lesson boss · Lektion 5 (locked until 80% mastered)".
+57 · Play this sheet: the top of an illustrated cheat sheet "Food & ordering" with its filters ("Lessons 1–5", "Nouns") and a prominent button "Play this sheet · 48 items".
+
+M · Class mode
+58 · Teacher, create assignment: heading "New assignment", fields "Class: A1 Abendkurs", scope chips "Lektion 5 · p. 58–62", "Dativ", skills checkboxes "Vocabulary ✓ Grammar ✓ Listening ✓", "20 items", "Due: Fri 24 Oct", and a large QR code with a "Copy link" button.
+59 · Student, assignment on Today: a card "Homework from Frau Weber · due Fri", progress "8 / 20", and a button "Continue".
+60 · Completion receipt: "Assignment done", per-skill results "Vocabulary 18/20 · Grammar 7/8 · Listening 5/6", a short result code "K7Q-4M2-WX9" and buttons "Copy code" and "Share".
+61 · Teacher dashboard: a table of students × skills with soft colour cells, a "Tricky words this week" list ("der Schlüssel", "die Mütter", "das Café"), and "3 students behind position".
+62 · Live class game (projector, landscape 1536x1024 for this one only): a big Four Corners card "die Lampe" with corners "der / die / das / plural", a join code "Join: 482 913", team bars "Team Blau 12 · Team Grün 10", and a 15-second timer.
+63 · Student joins live game: a code entry "482 913", a name field, team choice "Blau / Grün", and a button "Join".
+64 · Teacher extras import: a pasted table preview with columns "German · English · Lesson · Page · Tags" and rows like "die Fachärztin · specialist (f) · 2 · 27 · people", validation ticks per row, and a button "Add 48 words as Teacher extra".
+
 Start with 01.
 ````
 
@@ -118,7 +134,7 @@ You are implementing Wortwerk v2 in the German Learning OS repository (Hrezaii95
 
 ## 0 · Read first, in this order
 1. `CLAUDE.md` and everything it lists (takeover handoff, operating model, org chart, PLAN-BATON, register, docs/INDEX.md). Acquire the plan baton before writing code; release it when done.
-2. `docs/games/wortwerk-v2-engine-and-engagement.md`: the AUTHORITATIVE design (engagement guard-rails, the 10 mechanics, the game catalogue, the content-pack architecture). Background: `docs/games/master-game-design.md` and `docs/games/plural-vocab-game-ideas.md`.
+2. `docs/games/competitive-analysis-book-companion.md` (book-aligned scope, page rule, lesson loop, Class mode, platform phases) and `docs/games/wortwerk-v2-engine-and-engagement.md`: together the AUTHORITATIVE design (engagement guard-rails, the 10 mechanics, the game catalogue, the content-pack architecture). Background: `docs/games/master-game-design.md` and `docs/games/plural-vocab-game-ideas.md`.
 3. `docs/audit/README.md`, `docs/audit/ux-design-consistency-audit.md` §1 (reference design rules) and `docs/audit/ia-and-codebase-audit.md` §4 (data duplicates).
 4. `docs/10-review-and-gamification.md`, `docs/07-content-model-and-schemas.md`, `docs/09-audio-and-pronunciation.md`.
 5. Existing code to build on, not duplicate:
@@ -179,6 +195,34 @@ Corners, Sort, Build, Order, Gap, Match, Hotspot, Listen (wrapper), Record, Writ
 - Writing: Message Reply (checklist + model answers + self-check), Sentence Builder → typed, Gap Writer.
 - Exam: Exam Simulation from `exam.json` (sections, timing, item refs).
 
+### 1.7 Book-aligned scope (core: the product is a companion to the learner's coursebook)
+- **bookRef on every item:** `{book, lesson, page?, exercise?}`. Pack units map to book lessons with page ranges.
+- **Book position:** `{book, lesson, page}` per learner. It is set once, then advances on a one-tap confirmation when the learner opens a later interactive-book page or finishes a lesson's activities. In a class, the class position is the default.
+- **One scope model for the whole app:** Daily Run, every game, maps, cheat sheets, review and printing all use it.
+  - Modes: up-to-position (default), one lesson, several lessons, up to a lesson, topics (tags), teacher assignment, smart sets (tricky, due, teacher extras).
+  - Filters combine (lessons × topics × sources).
+  - Extend the existing `apps/web/lib/study/scope.ts` (it already supports `one / multiple / through` lessons, concepts and sources); do not create a second scope system.
+  - Progress is stored per item, so changing the scope never loses data.
+- **Page rule:**
+  - Items in earlier lessons are in scope.
+  - Items in the current lesson are in scope if `page ≤ position.page`.
+  - Current-lesson items without a page ref are in scope only once the lesson is done, or with "include the whole current lesson" on.
+  - Teacher extras use the lesson and page the teacher attached.
+- **Lesson loop:** "Preview next lesson" (5 min), "Practise today's pages", a lesson boss that unlocks the lesson badge, and a Daily Run over everything up to the position.
+- **Cheat-sheet integration:** every result and token links to its cheat-sheet card; each sheet has "Play this sheet", which uses the sheet's filters as the scope; print the current scope.
+- **Data task:** page refs exist only for Lessons 1–2 and the interactive book. Add `bookRef.page` for Lessons 3–12 as a content task (owner-reviewed), never by guessing.
+
+### 1.8 Class mode, phase A (no backend; fits the static site)
+- **Assignment links:** the teacher builds a scope (lessons, pages, tags, skills, item count, due date) and gets a URL and QR code. The scope is encoded in the URL (versioned and compact). Opening it adds a task to the student's Today screen.
+- **Completion receipts:** a short result code with per-skill scores and a checksum (to catch typing mistakes, NOT a security feature; say so in the UI). The teacher pastes codes into a receipts page that tabulates them and exports CSV.
+- **Teacher and personal extras:** CSV or paste import (German, English, lesson, page, tags, optional gender/plural), validated, previewed, stored locally and exportable as a mini content pack file that the teacher can share with students.
+- **Asynchronous challenge links:** "Beat my Blitz score on Lektion 5".
+
+### 1.9 Class mode, phase B (needs a backend; BLOCKED until the owner approves)
+- Accounts and sync, class position, teacher dashboard, live class game (projector + join code), a feedback inbox for writing and speaking, class and friend streaks, web push.
+- These are listed as deferred in `docs/02-product-requirements.md`. Do not start them until the owner approves the change and it is recorded under `scope_overrides` in `config/claude-codex-operating-model.yaml`, together with the backend choice. The repo's unused Cloudflare worker stub (`apps/web/worker/index.ts`) suggests Workers + D1 + Durable Objects; Supabase is the alternative.
+- Privacy: teacher-owned classes, minimal data, GDPR-ready deletion, suitable for minors.
+
 ## 2 · Engagement spec (with guard-rails)
 - **Sessions:**
   - Daily Run: 5–7 min, built by extending `mission.ts`, interleaving skills, with at most 2 consecutive tasks of the same template.
@@ -233,10 +277,13 @@ Corners, Sort, Build, Order, Gap, Match, Hotspot, Listen (wrapper), Record, Writ
 - **Phase 2, grammar + listening:** the Sort, Build, Order and Gap mechanics and the grammar and listening games in §1.6.
 - **Phase 3, speaking, reading, writing:** the Record, Hotspot, Write and Match mechanics and their games.
 - **Phase 4, engagement depth:** journey, story, collection, boss, Blitz, Tagesrätsel, quests, recap, exam countdown, readiness, exam simulation.
+- **Phase 4b, book companion:** the scope picker and book position (§1.7), the page rule, auto-advance, the lesson loop, "Play this sheet", printing the current scope. Content task in parallel: `bookRef.page` for Lessons 3–12.
 - **Phase 5, reuse proof:**
   - Add a real second pack (A2 or B1) by data only.
   - Add the CSV → JSON authoring CLI and the preview route.
   - The PR for that pack must contain ZERO changes outside `content/`.
+- **Phase 6, Class mode A:** assignment links + QR, Today assignment card, completion receipts + teacher receipts page, the CSV importer for teacher and personal extras, challenge links (§1.8).
+- **Phase 7, Class mode B:** only after the owner's recorded approval and backend choice (§1.9).
 
 ## 5 · Tests
 - **Unit tests (vitest):**
@@ -250,7 +297,13 @@ Corners, Sort, Build, Order, Gap, Match, Hotspot, Listen (wrapper), Record, Writ
   - freezes;
   - puzzle determinism;
   - diminishing XP;
-  - persistence migration and the private-mode fallback.
+  - persistence migration and the private-mode fallback;
+  - the page rule (earlier lesson / same lesson before and after the page / no page ref / teacher extra);
+  - scope combinations (lessons × topics × sources) matching the cheat-sheet filters exactly;
+  - auto-advance of the position;
+  - assignment-link encode/decode round trip, including old link versions;
+  - receipt checksums;
+  - CSV import validation (missing fields, duplicates, umlauts).
 - **The zero-code reuse test:**
   - `tests/fixtures/packs/de-b2-sample` (~20 items covering every item type, with a fake `B2` difficulty) and `tests/fixtures/languages/xx.json` (a toy second language with two genders).
   - CI loads both and asserts that the expected games appear and are playable end to end.
@@ -304,7 +357,7 @@ Never bypass the pre-commit hook. If it fires, restore `proxy.ts` and clean the 
 - Public leaderboards.
 - Pronunciation scoring.
 - New TTS generation.
-- Accounts or a server backend (social features wait for one).
+- Accounts or a server backend (Class mode B waits for the owner's approval and backend choice).
 - Rewriting existing cheat-sheet pages beyond the links.
 - The wider design-system clean-up from the audit.
 
