@@ -29,6 +29,15 @@ assertPagesExportEnv({
   NEXT_PUBLIC_GL_PAGES_BASE_PATH: process.env.NEXT_PUBLIC_GL_PAGES_BASE_PATH,
 });
 const isPagesExport = process.env.GL_PAGES_EXPORT === "1";
+// Lane 3: an explicit empty value selects the Cloudflare root export. The
+// Pages wrapper and its fail-fast base-path guard remain unchanged.
+const isRootExport = process.env.GL_SITE_BASE_PATH !== undefined;
+if (isRootExport && (process.env.GL_SITE_BASE_PATH !== "" || isPagesExport)) {
+  throw new Error("GL_SITE_BASE_PATH must be empty and cannot be combined with GL_PAGES_EXPORT");
+}
+if (isRootExport && process.env.NEXT_PUBLIC_GL_PAGES_BASE_PATH !== "") {
+  throw new Error("The root export requires an explicitly empty public base path");
+}
 const pagesBase = isPagesExport
   ? (process.env.NEXT_PUBLIC_GL_PAGES_BASE_PATH as string).trim()
   : PAGES_BASE_PATH;
@@ -37,13 +46,13 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   transpilePackages: ["@german-learning/learning"],
-  ...(isPagesExport
+  ...(isPagesExport || isRootExport
     ? {
         output: "export" as const,
         trailingSlash: true,
         images: { unoptimized: true },
-        basePath: pagesBase,
-        assetPrefix: pagesBase,
+        basePath: isRootExport ? "" : pagesBase,
+        assetPrefix: isRootExport ? "" : pagesBase,
       }
     : {}),
   webpack: (config) => {
