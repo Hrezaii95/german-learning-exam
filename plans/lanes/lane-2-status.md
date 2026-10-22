@@ -4,7 +4,7 @@ Updated by Lane 2 only. Lane worktree: `lane2/l2-1-packs`. Base: `codex/live-alp
 
 | PR | Title | State (planned / in progress / draft PR / merged / blocked) | Link | Notes |
 |---|---|---|---|---|
-| L2-1 | Pack content foundation and A1 migration | draft PR | Pending publication | Code implemented; A1 pack creation blocked by 19 source headword collisions. |
+| L2-1 | Pack content foundation and A1 migration | draft PR | [PR #4](https://github.com/Hrezaii95/german-learning-exam/pull/4) | Code implemented; A1 pack creation blocked by 19 source headword collisions. |
 | L2-2 | Corners and Four Corners templates | planned | — | Separate draft PR per owner's instruction. |
 | L2-3 | Daily Run, event-derived progress and Today | planned | — | Separate draft PR per owner's instruction. |
 
@@ -17,11 +17,11 @@ Updated by Lane 2 only. Lane worktree: `lane2/l2-1-packs`. Base: `codex/live-alp
 - [x] Widen `CefrLevel`; add pack/item, language and difficulty types and JSON Schemas under owned content types/validation directories. Keep legacy article/gender exports compatible.
 - [x] Add fixture-driven tests for malformed payloads, cross-references, duplicate headwords, all item types, higher CEFR and a second language.
 - [x] Add deterministic auto-discovery, pack validation CLI, capability index and browser-safe idempotent overlay registration in `packages/wortwerk` / `lib/wortwerk`.
-- [x] Add German language and difficulty data; migrate exact existing vocabulary, preserving ids, forms, sources and honest book references. Stop on duplicate headwords; no invented page refs or German review approval.
+- [x] Add German language and difficulty data plus the exact vocabulary migration script, preserving ids, forms, sources and honest book references. Stop on duplicate headwords; no invented page refs or German review approval.
 - [x] Append validation/migration script entries and the pack check to `platform/package.json` only; add no dependencies.
 - [x] Run required gates sequentially and obtain independent review; exact outcomes below.
 - [ ] Create the A1 pack after Lane 1 reconciles source collisions, then rerun the pack/release gates.
-- [ ] Publish L2-1 draft into `codex/live-alpha` and record its link.
+- [x] Publish L2-1 draft into `codex/live-alpha` and record its link.
 
 ## Coordination and lane acquisition
 
@@ -59,7 +59,7 @@ This host denies the Unix IPC socket created by the existing `tsx` CLI. Existing
 
 Independent review found and verified fixes for incorrect import depth, expression article stripping, inherited schema-property bypass, unresolved choice answers, uppercase transliteration hints and country-case grading. The higher-level/second-language fixture also covers structured prompt gender tokens; old publication types and their Alpha firewall stay compatible.
 
-No screenshots apply to this data-only slice. No merge, deploy, new TTS, language-review promotion, auth or sync-transport change was made.
+No screenshots apply to this data-only slice. No PR merge, deploy, new TTS, language-review promotion, auth or sync-transport change was made.
 
 ## Owner / external dependencies
 
