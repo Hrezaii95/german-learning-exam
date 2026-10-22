@@ -79,5 +79,6 @@ export function sheetRedirectScript(href: string, basePath = ""): string {
 
 export function legacyCountryRedirectScript(basePath = ""): string {
   const target = scriptJson(sheetRedirectHref(COUNTRIES_SHEET_PATH, "", "", basePath));
-  return `(()=>{let anchor;try{anchor=decodeURIComponent(window.location.hash.slice(1));}catch{return;}if(${scriptJson(LEGACY_COUNTRY_ANCHORS)}.includes(anchor)){window.location.replace(${target}+window.location.search+window.location.hash);}})();`;
+  const pathname = scriptJson(sheetRedirectHref(SHEET_DIRECTORY_PATH, "", "", basePath).slice(0, -1));
+  return `(()=>{const pathname=${pathname},redirect=()=>{const current=window.location.pathname;if(current!==pathname&&current!==pathname+"/")return;let anchor;try{anchor=decodeURIComponent(window.location.hash.slice(1));}catch{return;}if(${scriptJson(LEGACY_COUNTRY_ANCHORS)}.includes(anchor)){window.location.replace(${target}+window.location.search+window.location.hash);}};window.addEventListener("hashchange",redirect);redirect();})();`;
 }
