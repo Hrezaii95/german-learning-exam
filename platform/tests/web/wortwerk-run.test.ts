@@ -51,6 +51,7 @@ beforeEach(() => {
   const values = new Map<string, string>();
   store = createWortwerkStore({ getItem: key => values.get(key) ?? null, setItem: (key, value) => { values.set(key, value); } });
   testState.store = store;
+  store.setDoc("study.scope", { v: 1 });
   testState.query = "";
   testState.latestTask = null;
   testState.forceAudio = false;

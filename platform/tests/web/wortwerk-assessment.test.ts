@@ -46,6 +46,7 @@ afterEach(() => { cleanup(); vi.restoreAllMocks(); });
 it("shows self-check practice without an impossible secured milestone inside and outside the provider", () => {
   store.setDoc("settings", { enabledPackIds: [pack.id] });
   store.setDoc("study.pack", pack.id);
+  store.setDoc("study.scope", { v: 1 });
   const view = render(createElement(PlayProvider, { content, children: createElement("div", null, createElement(TodayPanel), createElement(ProgressSummary)) }));
   const milestone = screen.getByRole("heading", { name: "Next milestone" }).parentElement!;
   expect(milestone.textContent).toContain("Self-check practice");

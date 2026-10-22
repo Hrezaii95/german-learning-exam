@@ -1,6 +1,6 @@
 # Lane 2 status
 
-Updated by Lane 2 only. Lane worktree: `lane2/l2-6-engagement`. Base: `codex/live-alpha` with PR #1 documentation merged locally. Never merge to the live branch.
+Updated by Lane 2 only. Lane worktree: `lane2/l2-7-book-companion`. Base: `codex/live-alpha` with PR #1 documentation merged locally. Never merge to the live branch.
 
 | PR | Title | State (planned / in progress / draft PR / merged / blocked) | Link | Notes |
 |---|---|---|---|---|
@@ -10,7 +10,7 @@ Updated by Lane 2 only. Lane worktree: `lane2/l2-6-engagement`. Base: `codex/liv
 | L2-4 | Grammar and listening | draft PR | [PR #26](https://github.com/Hrezaii95/german-learning-exam/pull/26) | Six mechanics wired into Daily Run; 50 focused tests pass; final release gates pending. |
 | L2-5 | Speaking, reading and writing | draft PR | [PR #27](https://github.com/Hrezaii95/german-learning-exam/pull/27) | All ten mechanics integrated; self-check practice separated from mastery; 111 focused tests pass. |
 | L2-6 | Engagement, maps, story and exam | draft PR | [PR #28](https://github.com/Hrezaii95/german-learning-exam/pull/28) | Journeys, maps, timed challenges, story/exam, private deck and practice backup integrated; 98 focused tests pass. |
-| L2-7 | Book companion | in progress | — | Scope/position/printing implemented; Lane 1 book-surface hooks remain an integration need. |
+| L2-7 | Book companion | in progress | — | Book controls, confirmed position/default scope, smart filters and printing integrated; Lane 1 surface hooks remain. |
 | L2-8 | CSV authoring and preview | in progress | — | CSV tooling implemented; preview integration underway. |
 | L2-8b | Data-only A2 everyday pack | draft PR | [PR #17](https://github.com/Hrezaii95/german-learning-exam/pull/17) | Exactly ten content files, no code; all content pending review. |
 | L2-9 | Student Class A tools | in progress | — | Receipts, challenges, assignment card and personal import implemented; integration underway. |
@@ -143,3 +143,9 @@ L2-5 full check: all typechecks/lint, publication validation, 134 files / 1,461 
 Added fixed exploration/story/exam/challenge routes, validated authored story/exam resources, capability-derived maps and skill/readiness views, recap/quests/calendar reminder, personal deck/notes/examples/Difficult and validated raw practice backup. Boss/Blitz alone have strikes; foreground time counts; puzzle selection excludes self-check tasks and is independent of saved progress/scope. Boss completion awards once; bonus rounds are finite three-task children with a per-parent 30-extra-XP cap. Exact typed writing remains objectively assessed in exams; open production stays self-check. Meaning illustration hints require an explicit gesture and mark persisted answers hinted; exams disable hints. Focused phase suites: 98 tests pass; hint follow-up: 24 passing tests, including the complete no-giveaway matrix. Final root integration/gates continue below.
 
 L2-6 root integration: all three typechecks and lint pass. Focused integrated suites: 63 tests pass; final Run/hint persistence and challenge reruns pass 14 and 12 cases respectively.
+
+## L2-7 integration verification
+
+Mounted the shared scope picker and lesson loop in Play. A confirmed matching book position supplies the default; without confirmation the initial authored-book scope is empty. Explicit saved scope selections remain intact. The page rule excludes unknown current-lesson pages until completion/whole-lesson opt-in. Future position/scope documents stay read-only and do not report a false save. Printing uses precisely the current shared selection. Tricky sets count objective misses, excluding self-rated practice. Book slice tests: 52 focused cases across agent verification; root integrated regression rerun: 6 files / 62 tests pass. All three root typechecks and lint pass. The initial combined run exposed old test assumptions about implicit whole-pack selection; tests now make that choice explicit.
+
+Needs Lane 1: mount the exported advance proposal/prompt on book/lesson surfaces and add reviewed page references for Lessons 3–12. No pages were guessed.

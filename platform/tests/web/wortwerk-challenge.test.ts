@@ -64,6 +64,7 @@ afterEach(() => { cleanup(); clearOverlayPacks(); vi.restoreAllMocks(); vi.useRe
 function enable() {
   store.setDoc("settings", { enabledPackIds: [pack.id], timeZone: "UTC" });
   store.setDoc("study.pack", pack.id);
+  store.setDoc("study.scope", { v: 1 });
 }
 function mountRun(modeOverride?: "blitz" | "puzzle", customContent = content) {
   return render(createElement(PlayProvider, { content: customContent, children: createElement(RunPlayer, modeOverride ? { modeOverride } : {}) }));

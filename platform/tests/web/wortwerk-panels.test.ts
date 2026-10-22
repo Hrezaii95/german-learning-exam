@@ -47,6 +47,7 @@ beforeEach(() => {
   const values = new Map<string, string>();
   store = createWortwerkStore({ getItem: key => values.get(key) ?? null, setItem: (key, value) => { values.set(key, value); } }, { now: () => clock.value, deviceId: "panel-device" });
   holder.store = store;
+  store.setDoc("study.scope", { v: 1 });
 });
 afterEach(() => { cleanup(); vi.restoreAllMocks(); });
 function panels() { return createElement(Fragment, null, createElement(TodayPanel), createElement(ProgressSummary)); }

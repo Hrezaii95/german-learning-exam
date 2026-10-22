@@ -7,6 +7,7 @@ import { wortwerkStore } from "@/lib/wortwerk/store";
 import { useWortwerkState } from "@/lib/wortwerk/use-wortwerk";
 import { parsePlayScope, type PlayScope } from "@/lib/wortwerk/links";
 import { buildPanelCatalog, cachePanelCatalog, PANEL_CATALOG_KEY } from "@/lib/wortwerk/panel-catalog";
+import { positionScope, readBookPosition } from "@/lib/study/book-position";
 
 type PlaySettings = { enabledPackIds?: string[]; [key: string]: unknown };
 export type PlayContextValue = {
@@ -52,11 +53,35 @@ export function PlayProvider({ content, children }: { content: WortwerkContent; 
   const enabledPacks = packs.filter(({ pack, fixture }) => explicitIds ? explicitIds.includes(pack.id) : !fixture && pack.review.status === "reviewed");
   const selectedId = state.snapshot.docs.find(doc => doc.key === "study.pack")?.value;
   const selectedPack = enabledPacks.find(pack => pack.pack.id === selectedId) ?? enabledPacks[0];
-  const savedScope = state.snapshot.docs.find(doc => doc.key === "study.scope")?.value;
+  const scopeDoc = state.snapshot.docs.find(doc => doc.key === "study.scope");
+  const savedScope = scopeDoc?.value;
+  const positionDoc = state.snapshot.docs.find(doc => doc.key === "study.position");
+  const savedPosition = positionDoc?.schemaVersion === 1 ? positionDoc.value : undefined;
+  const unconfirmedScope = useMemo<PlayScope>(() => {
+    const books = selectedPack ? [...new Set([...selectedPack.pack.items.map(item => item.bookRef.book),
+      ...selectedPack.pack.units.flatMap(unit => unit.bookRef ? [unit.bookRef.book] : [])])].sort() : [];
+    return books[0] ? { v: 1, book: books[0], lessons: [] } : { v: 1 };
+  }, [selectedPack]);
+  const defaultPosition = useMemo(() => {
+    const position = readBookPosition(savedPosition);
+    return position && selectedPack && (selectedPack.pack.items.some(item => item.bookRef.book === position.book)
+      || selectedPack.pack.units.some(unit => unit.bookRef?.book === position.book)) ? position : null;
+  }, [savedPosition, selectedPack]);
   const scope = useMemo<PlayScope>(() => {
-    try { if (savedScope) return parsePlayScope(savedScope); } catch { /* An invalid old scope never blocks a new run. */ }
-    return { v: 1 };
-  }, [savedScope]);
+    if (scopeDoc && scopeDoc.schemaVersion > 1) return unconfirmedScope;
+    if (savedScope !== undefined) {
+      try { return parsePlayScope(savedScope); } catch { return unconfirmedScope; }
+    }
+    return defaultPosition ? positionScope(defaultPosition) : unconfirmedScope;
+  }, [savedScope, defaultPosition, unconfirmedScope, scopeDoc]);
+  useEffect(() => {
+    // A confirmed position is a default, never a replacement for explicit filters.
+    // Persist it so dashboard panels and shared links read the very same scope.
+    if (!state.hydrated || savedScope !== undefined || !defaultPosition || wortwerkStore.getDoc("study.scope") !== undefined) return;
+    wortwerkStore.setDoc("study.scope", { ...positionScope(defaultPosition), selection: {
+      mode: "position", book: defaultPosition.book, lessons: [], tags: [], sources: [], skills: [], includeWholeCurrentLesson: false,
+    } });
+  }, [defaultPosition, savedScope, state.hydrated]);
   const catalog = useMemo(() => buildPanelCatalog(packs, scope), [packs, scope]);
   const savedCatalog = state.snapshot.docs.find(doc => doc.key === PANEL_CATALOG_KEY)?.value;
   useEffect(() => {
