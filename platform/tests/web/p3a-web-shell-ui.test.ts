@@ -214,13 +214,13 @@ describe("shared action icons", () => {
 
   it("keeps control names meaningful without announcing decorative symbols", () => {
     const { container } = render(createElement("button", { type: "button" }, "Next page ", createElement(Icon, { name: "arrow" })));
-    expect(screen.getByRole("button", { name: "Next page", exact: true })).toBeTruthy();
+    expect(screen.getByRole("button", { name: "Next page" })).toBeTruthy();
     expect(screen.queryByRole("img")).toBeNull();
     expect(container.querySelector("svg")?.getAttribute("focusable")).toBe("false");
   });
 
   it("exposes a label when an informational icon stands alone", () => {
     render(createElement(Icon, { name: "check", label: "Page studied" }));
-    expect(screen.getByRole("img", { name: "Page studied", exact: true })).toBeTruthy();
+    expect(screen.getByRole("img", { name: "Page studied" })).toBeTruthy();
   });
 });
