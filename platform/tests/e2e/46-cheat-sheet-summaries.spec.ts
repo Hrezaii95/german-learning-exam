@@ -4,7 +4,7 @@ for (const width of [320, 1440]) {
   for (const sheet of ["countries", "home"]) {
     test(`${sheet} prints its complete summary without changing recall or filters at ${width}px`, async ({page}, testInfo) => {
       await page.setViewportSize({width,height:1000});
-      await page.goto(sheet === "countries" ? "cheat-sheets/" : "cheat-sheets/home/");
+      await page.goto(sheet === "countries" ? "cheat-sheets/countries/" : "cheat-sheets/home/");
       const summary = page.locator(".sheet-print-summary");
       await expect(summary).toBeHidden();
       const input = page.getByRole("textbox", {name: sheet === "countries" ? "Find a country or language" : "Find a word"});
@@ -14,7 +14,7 @@ for (const width of [320, 1440]) {
       await expect(index.locator("article")).toHaveCount(1);
       await expect(index.getByRole("button", {name:/^Reveal/})).toBeVisible();
       await page.evaluate(() => { window.print = () => { document.documentElement.dataset.printRequested="true"; }; });
-      await page.getByRole("button", {name:"Print cheat sheet",exact:true}).click();
+      await page.getByRole("button", {name:"Print / save as PDF",exact:true}).click();
       await expect(page.locator("html")).toHaveAttribute("data-print-requested","true");
       await expect(input).toHaveValue(sheet === "countries" ? "Iran" : "Stuhl");
       await expect(index.getByRole("button", {name:"Show all answers"})).toHaveAttribute("aria-pressed","true");

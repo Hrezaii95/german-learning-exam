@@ -1,5 +1,7 @@
 "use client";
 
+import { articleTone } from "@/lib/study/article-tone";
+
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import type { LearnerGender } from "@/lib/content/detail-types";
@@ -167,7 +169,7 @@ export function MeaningPlate({
     <div
       className={`meaning-plate meaning-plate--${variant}`}
       data-meaning-plate={variant}
-      data-gender={gender ?? "none"}
+      data-tone={articleTone(gender)}
     >
       <LemmaTag className="meaning-plate__lemma">{lemmaBody}</LemmaTag>
       {gloss ? <p className="meaning-plate__gloss">{gloss}</p> : null}

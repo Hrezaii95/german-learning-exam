@@ -3,7 +3,7 @@ import {loadWordCards} from "../content/word-cards";
 import {loadDictionary,loadCountrySpeech,loadHomeSpeech} from "./catalog";
 import {countries} from "./countries";
 import {homeWords} from "./home";
-import {savedWordCard} from "./saved-word-card";
+import {legacyWordCardIds,savedWordCard} from "./saved-word-card";
 import type {DictionaryEntry} from "./types";
 import {subjectSheets,type SubjectSheet,type SubjectVocabularyItem} from "./subject-sheets";
 import {wordStudyTags} from "./tags";
@@ -20,7 +20,7 @@ function buildSubjectVocabulary(cards:readonly WordCard[],extras:readonly Dictio
       if(seen.has(id))return;
       seen.add(id);
       const item:SubjectVocabularyItem={
-        id,cardId:card.id,de:row.singular.text,meaning:row.meaning,
+        id,legacyIds:legacyWordCardIds(card).map(id=>`${id}-${index}`),cardId:card.id,de:row.singular.text,meaning:row.meaning,
         category:card.category,tone:row.singular.tone,audio:row.singular.audio,
         plurals:row.plurals.map(form=>({...form})),href:card.path,studyTags,savedItem,
         examples:card.examples.slice(0,2).map(example=>({...example})),

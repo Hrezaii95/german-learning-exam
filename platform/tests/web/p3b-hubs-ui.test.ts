@@ -91,8 +91,8 @@ describe("P3B hub UI shell contracts", () => {
         }),
       ),
     );
-    // Concepts is not in desktop primary nav; its mobile menu link is current.
-    expect((concepts.match(/aria-current="page"/g) ?? []).length).toBe(1);
+    // The shared navigation highlights Concepts in both the rail and Menu.
+    expect((concepts.match(/aria-current="page"/g) ?? []).length).toBe(2);
     expect(concepts).toContain('href="/hubs"');
   });
 
@@ -240,8 +240,8 @@ describe("P3B hub UI shell contracts", () => {
     expect(directory).toContain('href="/listening"');
     expect(directory).toContain('href="/concepts"');
     expect(directory).toContain("Six content hubs cover everything you are learning");
-    // The mobile Study library link is current; desktop has no dedicated Hubs item.
-    expect((directory.match(/aria-current="page"/g) ?? []).length).toBe(1);
+    // Study library is current in both the shared rail and Menu.
+    expect((directory.match(/aria-current="page"/g) ?? []).length).toBe(2);
   });
 
   it("renders populated hub results from real components without reflecting unsafe query markup", () => {

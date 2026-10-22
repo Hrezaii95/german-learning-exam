@@ -42,7 +42,7 @@ test("number filters control listening, recall and empty selections together",as
   await expect(page.getByRole("heading",{name:"No matching practice items",exact:true})).toBeVisible();
   await page.getByRole("button",{name:"Showing saved cards",exact:true}).click();
   await page.getByRole("textbox",{name:"Find a card",exact:true}).fill("Million");
-  await expect(page.locator("#sheet-card-l4-million .collection-word")).toContainText("die Million");
+  await expect(page.locator("#sheet-card-W343 .collection-word")).toContainText("die Million");
   await expect(page.locator("#sheet-practice")).toContainText("___ Million");
   await page.locator("#sheet-practice").getByRole("button",{name:"die",exact:true}).click();
   await expect(page.locator("#sheet-practice")).toContainText("Exactly.");

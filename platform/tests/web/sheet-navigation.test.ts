@@ -7,10 +7,22 @@ import {readSheetBrowse,sheetBrowseQuery,sheetNavigationContext} from "../../app
 import {appendNavigationContext,isSafeNavigationPath,serializeNavigationContext,parseNavigationContextParam,resolveBackHref,type NavigationContext} from "../../apps/web/lib/content/navigation-context";
 
 describe("safe sheet return navigation",()=>{
+  it("reads legacy sheet return contexts and emits canonical destinations without losing state",()=>{
+    for(const path of ["/cheat-sheets/plurals","/cheat-sheets/vocabulary"]){
+      const context=parseNavigationContextParam(serializeNavigationContext(sheetNavigationContext(path,{query:"Bücher",category:"neuter",saved:true,page:2,view:"plurals",gender:false,tags:[]},"W466-0")));
+      expect(isSafeNavigationPath(path)).toBe(true);
+      expect(resolveBackHref(context)).toBe("/cheat-sheets/vocabulary?q=B%C3%BCcher&category=neuter&page=2&saved=1&view=plurals&gender=0&tags=#sheet-card-W466-0");
+    }
+    const country=parseNavigationContextParam(serializeNavigationContext({entryContext:"hub",returnPath:"/cheat-sheets",resultId:"country-GB-ENG"}));
+    expect(resolveBackHref(country)).toBe("/cheat-sheets/countries#country-GB-ENG");
+    const directory=parseNavigationContextParam(serializeNavigationContext({entryContext:"hub",returnPath:"/cheat-sheets/subjects"}));
+    expect(resolveBackHref(directory)).toBe("/cheat-sheets");
+  });
+
   it("restores every word sorting choice and direction independently of grouping on all infographic routes",()=>{
     const sorts:SheetSort[]=["german","meaning","lesson","source","original"];
     const directions:SheetSortDirection[]=["asc","desc"];
-    const returnPaths=["/cheat-sheets/plurals",...studyConcepts.map(subject=>`/cheat-sheets/subjects/${subject.id}`)];
+    const returnPaths=["/cheat-sheets/vocabulary",...studyConcepts.map(subject=>`/cheat-sheets/subjects/${subject.id}`)];
     for(const returnPath of returnPaths)for(const sort of sorts)for(const direction of directions){
       const browse={query:"Bücher",category:"all",saved:false,page:1,view:"plurals" as const,gender:false,subjects:true,lessons:true,groupOrder:["subject","lesson","plural","gender"] as SheetGrouping[],sort,direction,tags:["objects","home"] as StudyConcept[]};
       expect(readSheetBrowse(new URLSearchParams(sheetBrowseQuery(browse)))).toEqual(browse);
@@ -27,7 +39,7 @@ describe("safe sheet return navigation",()=>{
       {query:"",category:"all",saved:false,page:1,sort:"meaning" as const},
       {query:"",category:"all",saved:false,page:1,direction:"desc" as const},
     ]){
-      const context=parseNavigationContextParam(serializeNavigationContext(sheetNavigationContext("/cheat-sheets/plurals",browse)));
+      const context=parseNavigationContextParam(serializeNavigationContext(sheetNavigationContext("/cheat-sheets/vocabulary",browse)));
       expect(readSheetBrowse(new URL(resolveBackHref(context),"https://local.test").searchParams)).toEqual(browse);
     }
   });
@@ -39,7 +51,7 @@ describe("safe sheet return navigation",()=>{
       expect(readSheetBrowse(new URLSearchParams({direction}))).not.toHaveProperty("direction");
     }
     for(const field of ["sheetSort","sheetDirection"])for(const value of [null,0,true,[],{},"unknown"]){
-      const context=parseNavigationContextParam(JSON.stringify({entryContext:"hub",returnPath:"/cheat-sheets/plurals",[field]:value}));
+      const context=parseNavigationContextParam(JSON.stringify({entryContext:"hub",returnPath:"/cheat-sheets/vocabulary",[field]:value}));
       expect(context).not.toHaveProperty(field);
       expect(resolveBackHref(context)).not.toMatch(/(?:sort|direction)=/);
     }
@@ -53,8 +65,8 @@ describe("safe sheet return navigation",()=>{
       {entryContext:"hub",returnPath:"/vocabulary",sheetSort:"german",sheetDirection:"asc"},
       {entryContext:"hub",returnPath:"/cheat-sheets/subjects",sheetSort:"german",sheetDirection:"asc"},
       {entryContext:"hub",returnPath:"/cheat-sheets/subjects/fake",sheetSort:"german",sheetDirection:"asc"},
-      {entryContext:"search",returnPath:"/cheat-sheets/plurals",sheetSort:"german",sheetDirection:"asc"},
-      {entryContext:"lesson",returnPath:"/cheat-sheets/plurals",sheetSort:"german",sheetDirection:"asc"},
+      {entryContext:"search",returnPath:"/cheat-sheets/vocabulary",sheetSort:"german",sheetDirection:"asc"},
+      {entryContext:"lesson",returnPath:"/cheat-sheets/vocabulary",sheetSort:"german",sheetDirection:"asc"},
     ]){
       const context=parseNavigationContextParam(JSON.stringify(payload));
       expect(context).not.toHaveProperty("sheetSort");
@@ -63,20 +75,20 @@ describe("safe sheet return navigation",()=>{
       expect(parseNavigationContextParam(JSON.stringify({...payload,q:"x".repeat(600)}))).toBeNull();
     }
     for(const payload of [
-      {entryContext:"hub",returnPath:"/cheat-sheets/plurals",sheetSort:"wrong",sheetDirection:"wrong"},
-      {entryContext:"hub",returnPath:"/cheat-sheets/plurals",hubId:"vocabulary",sheetSort:"german"},
+      {entryContext:"hub",returnPath:"/cheat-sheets/vocabulary",sheetSort:"wrong",sheetDirection:"wrong"},
+      {entryContext:"hub",returnPath:"/cheat-sheets/vocabulary",hubId:"vocabulary",sheetSort:"german"},
     ])expect(parseNavigationContextParam(JSON.stringify({...payload,q:"x".repeat(600)}))).toBeNull();
     for(const field of [{sheetSort:"original"},{sheetDirection:"desc"}]){
-      const context=parseNavigationContextParam(JSON.stringify({entryContext:"hub",returnPath:"/cheat-sheets/plurals",...field,q:"x".repeat(600)}));
+      const context=parseNavigationContextParam(JSON.stringify({entryContext:"hub",returnPath:"/cheat-sheets/vocabulary",...field,q:"x".repeat(600)}));
       expect(context).toMatchObject(field);
-      expect(parseNavigationContextParam(JSON.stringify({entryContext:"hub",returnPath:"/cheat-sheets/plurals",...field,q:"x".repeat(1100)}))).toBeNull();
+      expect(parseNavigationContextParam(JSON.stringify({entryContext:"hub",returnPath:"/cheat-sheets/vocabulary",...field,q:"x".repeat(1100)}))).toBeNull();
     }
   });
   it("restores lesson and subject grouping and every priority order through URL and full-card Back navigation",()=>{
     const permutations=(values:SheetGrouping[]):SheetGrouping[][]=>values.length===0?[[]]:values.flatMap((value,index)=>permutations(values.filter((_,other)=>other!==index)).map(rest=>[value,...rest]));
     const orders=permutations(["lesson","subject","gender","plural"]);
     expect(orders).toHaveLength(24);
-    const returnPaths=["/cheat-sheets/plurals",...studyConcepts.map(subject=>`/cheat-sheets/subjects/${subject.id}`)];
+    const returnPaths=["/cheat-sheets/vocabulary",...studyConcepts.map(subject=>`/cheat-sheets/subjects/${subject.id}`)];
     for(const returnPath of returnPaths)for(const groupOrder of orders)for(const subjects of [false,true])for(const lessons of [false,true])for(const gender of [false,true])for(const view of ["illustrated","plurals"] as const){
       const browse={query:"Bücher",category:"all",saved:false,page:1,view,gender,subjects,lessons,groupOrder,tags:["objects","home"] as StudyConcept[]};
       expect(readSheetBrowse(new URLSearchParams(sheetBrowseQuery(browse)))).toEqual(browse);
@@ -97,7 +109,7 @@ describe("safe sheet return navigation",()=>{
       const browse=readSheetBrowse(new URLSearchParams({view:"plurals",subjects:"1",order:legacyOrder.join(",")}));
       expect(browse.groupOrder).toEqual(expected);
       expect(browse).not.toHaveProperty("lessons");
-      const oldContext=parseNavigationContextParam(JSON.stringify({entryContext:"hub",returnPath:"/cheat-sheets/plurals",sheetView:"plurals",sheetSubjects:true,sheetGroupOrder:legacyOrder}));
+      const oldContext=parseNavigationContextParam(JSON.stringify({entryContext:"hub",returnPath:"/cheat-sheets/vocabulary",sheetView:"plurals",sheetSubjects:true,sheetGroupOrder:legacyOrder}));
       expect(oldContext?.sheetGroupOrder).toEqual(expected);
       expect(oldContext).not.toHaveProperty("sheetLessons");
       const back=new URL(resolveBackHref(oldContext),"https://local.test");
@@ -113,15 +125,15 @@ describe("safe sheet return navigation",()=>{
       expect(readSheetBrowse(new URLSearchParams({order}))).not.toHaveProperty("groupOrder");
     }
     for(const sheetSubjects of ["0","1","true",0,1,null,[],{}]){
-      const context=parseNavigationContextParam(JSON.stringify({entryContext:"hub",returnPath:"/cheat-sheets/plurals",sheetSubjects}));
+      const context=parseNavigationContextParam(JSON.stringify({entryContext:"hub",returnPath:"/cheat-sheets/vocabulary",sheetSubjects}));
       expect(context).not.toHaveProperty("sheetSubjects");
       expect(resolveBackHref(context)).not.toContain("subjects=");
-      const lessonContext=parseNavigationContextParam(JSON.stringify({entryContext:"hub",returnPath:"/cheat-sheets/plurals",sheetLessons:sheetSubjects}));
+      const lessonContext=parseNavigationContextParam(JSON.stringify({entryContext:"hub",returnPath:"/cheat-sheets/vocabulary",sheetLessons:sheetSubjects}));
       expect(lessonContext).not.toHaveProperty("sheetLessons");
       expect(resolveBackHref(lessonContext)).not.toContain("lessons=");
     }
     for(const sheetGroupOrder of ["subject,gender,plural",null,{},[],["subject"],["subject","gender"],["subject","gender","gender"],["subject","gender","unknown"],["subject","gender","plural","subject"]]){
-      const context=parseNavigationContextParam(JSON.stringify({entryContext:"hub",returnPath:"/cheat-sheets/plurals",sheetGroupOrder}));
+      const context=parseNavigationContextParam(JSON.stringify({entryContext:"hub",returnPath:"/cheat-sheets/vocabulary",sheetGroupOrder}));
       expect(context).not.toHaveProperty("sheetGroupOrder");
       expect(resolveBackHref(context)).not.toContain("order=");
     }
@@ -137,13 +149,13 @@ describe("safe sheet return navigation",()=>{
     const back=new URL(resolveBackHref(context),"https://local.test");
     expect(readSheetBrowse(back.searchParams)).toEqual(browse);
     for(const payload of [
-      {entryContext:"hub",returnPath:"/cheat-sheets/plurals",sheetSubjects:true},
-      {entryContext:"hub",returnPath:"/cheat-sheets/plurals",sheetGroupOrder:["subject","subject","gender"]},
+      {entryContext:"hub",returnPath:"/cheat-sheets/vocabulary",sheetSubjects:true},
+      {entryContext:"hub",returnPath:"/cheat-sheets/vocabulary",sheetGroupOrder:["subject","subject","gender"]},
       {entryContext:"hub",returnPath:"/vocabulary",sheetGroupOrder:order},
-      {entryContext:"hub",returnPath:"/cheat-sheets/plurals",hubId:"vocabulary",sheetGroupOrder:order},
-      {entryContext:"search",returnPath:"/cheat-sheets/plurals",sheetGroupOrder:order},
+      {entryContext:"hub",returnPath:"/cheat-sheets/vocabulary",hubId:"vocabulary",sheetGroupOrder:order},
+      {entryContext:"search",returnPath:"/cheat-sheets/vocabulary",sheetGroupOrder:order},
     ])expect(parseNavigationContextParam(JSON.stringify({...payload,q:"x".repeat(600)}))).toBeNull();
-    expect(parseNavigationContextParam(JSON.stringify({entryContext:"hub",returnPath:"/cheat-sheets/plurals",sheetGroupOrder:order,q:"x".repeat(1100)}))).toBeNull();
+    expect(parseNavigationContextParam(JSON.stringify({entryContext:"hub",returnPath:"/cheat-sheets/vocabulary",sheetGroupOrder:order,q:"x".repeat(1100)}))).toBeNull();
   });
   it("keeps the legacy payload bound unless a valid infographic tag selection needs the extra budget",()=>{
     const longQuery="x".repeat(600);
@@ -169,7 +181,7 @@ describe("safe sheet return navigation",()=>{
     }
   });
   it("restores explicit tag selections independently of the subject route, including an empty selection",()=>{
-    const returnPaths=["/cheat-sheets/plurals",...studyConcepts.map(subject=>`/cheat-sheets/subjects/${subject.id}`)];
+    const returnPaths=["/cheat-sheets/vocabulary",...studyConcepts.map(subject=>`/cheat-sheets/subjects/${subject.id}`)];
     const selections:StudyConcept[][]=[[],["home","objects"]];
     for(const returnPath of returnPaths)for(const tags of selections){
       const browse={query:"Bücher",category:"all",saved:false,page:1,view:"plurals" as const,gender:false,tags};
@@ -211,7 +223,7 @@ describe("safe sheet return navigation",()=>{
     expect(back.hash).toBe("#sheet-card-W466-0");
   });
   it("independently restores both grouping toggles after opening a full word card",()=>{
-    const returnPaths=["/cheat-sheets/plurals",...studyConcepts.map(subject=>`/cheat-sheets/subjects/${subject.id}`)];
+    const returnPaths=["/cheat-sheets/vocabulary",...studyConcepts.map(subject=>`/cheat-sheets/subjects/${subject.id}`)];
     for(const returnPath of returnPaths)for(const gender of [true,false])for(const view of ["illustrated","plurals"] as const){
       const browse={query:"Bücher",category:"neuter",saved:true,page:2,view,gender};
       const cardHref=appendNavigationContext("/vocabulary/w466",sheetNavigationContext(returnPath,browse,"W466-0"));
@@ -245,7 +257,7 @@ describe("safe sheet return navigation",()=>{
     }
   });
   it("does not carry sheet grouping state to unrelated or directory routes",()=>{
-    for(const returnPath of ["/settings","/vocabulary","/cheat-sheets/home","/cheat-sheets/subjects","/cheat-sheets/subjects/fake","/cheat-sheets/plurals/extra"]){
+    for(const returnPath of ["/settings","/vocabulary","/cheat-sheets/home","/cheat-sheets/subjects","/cheat-sheets/subjects/fake","/cheat-sheets/vocabulary/extra"]){
       for(const sheetGender of [false,true]){
         const context=parseNavigationContextParam(JSON.stringify({entryContext:"hub",returnPath,sheetView:"plurals",sheetGender,sheetTags:[],sheetSubjects:true,sheetLessons:true,sheetGroupOrder:["plural","subject","lesson","gender"]}));
         expect(context).not.toHaveProperty("sheetGender");
@@ -277,8 +289,8 @@ describe("safe sheet return navigation",()=>{
     expect(readSheetBrowse(new URLSearchParams(sheetBrowseQuery(browse)))).toEqual(browse);
     const context=parseNavigationContextParam(serializeNavigationContext(sheetNavigationContext("/cheat-sheets/subjects/objects",browse,"W466-0")));
     expect(resolveBackHref(context)).toBe("/cheat-sheets/subjects/objects?q=B%C3%BCcher&category=neuter&view=plurals#sheet-card-W466-0");
-    const allNouns=parseNavigationContextParam(serializeNavigationContext(sheetNavigationContext("/cheat-sheets/plurals",browse,"W466-0")));
-    expect(resolveBackHref(allNouns)).toBe("/cheat-sheets/plurals?q=B%C3%BCcher&category=neuter&view=plurals#sheet-card-W466-0");
+    const allNouns=parseNavigationContextParam(serializeNavigationContext(sheetNavigationContext("/cheat-sheets/vocabulary",browse,"W466-0")));
+    expect(resolveBackHref(allNouns)).toBe("/cheat-sheets/vocabulary?q=B%C3%BCcher&category=neuter&view=plurals#sheet-card-W466-0");
     expect(readSheetBrowse(new URLSearchParams({view:"unknown"}))).toEqual({query:"",category:"all",saved:false,page:1});
     for(const returnPath of ["/settings","/vocabulary","/cheat-sheets/home","/cheat-sheets/subjects"]){
       const unsafe=parseNavigationContextParam(JSON.stringify({entryContext:"hub",returnPath,sheetView:"plurals"}));
@@ -311,7 +323,7 @@ describe("safe sheet return navigation",()=>{
     expect(url.hash).toBe("#sheet-card-W230");
   });
   it("restores country, home and viewpoint anchors without needing a query",()=>{
-    for(const [path,id] of [["/cheat-sheets","country-GB-ENG"],["/cheat-sheets/home","home-stuhl"],["/cheat-sheets/people","family-martin-mia"]]){
+    for(const [path,id] of [["/cheat-sheets/countries","country-GB-ENG"],["/cheat-sheets/home","home-stuhl"],["/cheat-sheets/people","family-martin-mia"]]){
       const ctx=parseNavigationContextParam(serializeNavigationContext({entryContext:"hub",returnPath:path!,resultId:id!}));
       expect(resolveBackHref(ctx)).toBe(`${path}#${id}`);
     }

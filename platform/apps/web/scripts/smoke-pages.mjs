@@ -551,6 +551,28 @@ function isDirectRun() {
   }
 }
 
+// Lane 1: additive physical route-list coverage only.
+// Canonical content and real redirect checks run separately in tests/e2e/support/lane1-canonical-pages-smoke.mjs.
+HUB_PATHS.push(
+  "/cheat-sheets/vocabulary",
+  "/cheat-sheets/countries",
+  "/cheat-sheets/home",
+  "/cheat-sheets/people",
+  "/cheat-sheets/verbs",
+  "/cheat-sheets/numbers",
+  "/cheat-sheets/conversation",
+  "/cheat-sheets/questions",
+  "/cheat-sheets/objects",
+  "/cheat-sheets/office",
+  "/cheat-sheets/hobbies",
+  "/cheat-sheets/time",
+  "/cheat-sheets/food",
+  "/cheat-sheets/travel",
+  "/cheat-sheets/past",
+  "/cheat-sheets/journeys",
+);
+// End Lane 1.
+
 if (isDirectRun()) {
   main().catch((err) => {
     console.error("[smoke:pages] FAILED", err);

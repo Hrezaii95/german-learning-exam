@@ -1,3 +1,4 @@
+import { articleTone } from "@/lib/study/article-tone";
 import { withPagesBaseAssetPath } from "@/lib/content/pages-base-path";
 import type { LearnerIllustration } from "@/lib/content/illustrations";
 import { IllustrationPicture } from "@/components/media/IllustrationPicture";
@@ -65,7 +66,7 @@ export function RichLessonVisual({
         </div>
         <ul className="rich-visual__labels" aria-label="Illustrated vocabulary">
           {illustration.labels.map((label) => (
-            <li key={label.de} data-gender={label.gender}>
+            <li key={label.de} data-tone={articleTone(label.gender)}>
               <strong className="german" lang="de">
                 {label.de}
               </strong>
