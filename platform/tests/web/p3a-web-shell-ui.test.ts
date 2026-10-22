@@ -98,8 +98,8 @@ describe("P3A behavioral UI (server-rendered from generated projection)", () => 
 
   it("makes All vocabulary and Subjects reachable in the rail and mobile Menu", () => {
     for (const [current, href, label] of [
-      ["all-vocabulary", "/cheat-sheets/plurals", "All vocabulary"],
-      ["subjects", "/cheat-sheets/subjects", "Subjects"],
+      ["all-vocabulary", "/cheat-sheets/vocabulary", "All vocabulary"],
+      ["subjects", "/cheat-sheets#subjects", "Subjects"],
     ] as const) {
       const html = renderToStaticMarkup(createElement(AppShell, { current }, createElement("div")));
       const document = new DOMParser().parseFromString(html, "text/html");

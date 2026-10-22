@@ -10,6 +10,7 @@ import { phraseMeanings, bookPhraseMeanings } from "./phrase-meanings";
 import { phraseKey } from "./lookup";
 import { countries, countryName, countryFrom, countryOriginMeaning, countryGroups, languageMeanings,spokenLanguage } from "./countries";
 import {countryStudyTags,homeStudyTags} from "./sheet-scope";
+import {COUNTRIES_SHEET_PATH,countrySheetHref} from "./sheet-routes";
 import { bookTranscript } from "../audio/listening-transcripts";
 import { homeWords, homeLabels, homePhrases } from "./home";
 import {grammarPatterns,conversationFrames,spokenVerb} from "./sheet-topics";
@@ -227,16 +228,16 @@ export function loadDictionary(): DictionaryEntry[] {
       existing.displayForms = displayForms;
       if (country.dative) existing.forms.push(country.dative);
     } else entries.push({id:`country-${country.id}`,de,en:country.en,forms:[country.name,country.dative??country.name],studyTags:countryStudyTags(country,entries),
-      example:`Ich komme ${countryFrom(country)}.`,translation:countryOriginMeaning(country),href:`/cheat-sheets#country-${country.id}`,
+      example:`Ich komme ${countryFrom(country)}.`,translation:countryOriginMeaning(country),href:countrySheetHref(country.id),
       audio:countrySpeech[de]??null,kind:"word",displayForms});
     entries.push({id:`country-origin-${country.id}`,de:`Ich komme ${countryFrom(country)}.`,en:countryOriginMeaning(country),forms:[],example:"",translation:"",
-      href:`/cheat-sheets#country-${country.id}`,kind:"sentence",audio:countrySpeech[`Ich komme ${countryFrom(country)}.`]??null});
+      href:countrySheetHref(country.id),kind:"sentence",audio:countrySpeech[`Ich komme ${countryFrom(country)}.`]??null});
   }
   for (const [de,en] of Object.entries(languageMeanings)) {
     if (entries.some(entry=>entry.kind==="word"&&entry.de===de)) continue;
     const lessons=[...new Set(countries.filter(country=>country.languages.some(language=>spokenLanguage(language)===de)).flatMap(country=>countryStudyTags(country,entries).lessons))].sort((a,b)=>a-b);
     entries.push({id:`language-${de}`,de,en,forms:de==="Persisch"?["Farsi"]:[],example:`Ich spreche ${de}.`,translation:`I speak ${en.split(" / ")[0]}.`,
-      href:"/cheat-sheets",kind:"word",studyTags:{lessons,concepts:["countries"],source:"study-extra"},audio:countrySpeech[de]??null,displayForms:[{text:de,tone:"neuter",label:"Language · normally no article"}]});
+      href:COUNTRIES_SHEET_PATH,kind:"word",studyTags:{lessons,concepts:["countries"],source:"study-extra"},audio:countrySpeech[de]??null,displayForms:[{text:de,tone:"neuter",label:"Language · normally no article"}]});
   }
   const homeSpeech = loadHomeSpeech();
   for (const word of homeWords) {

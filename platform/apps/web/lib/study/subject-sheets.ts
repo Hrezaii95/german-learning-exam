@@ -1,6 +1,7 @@
 import type {WordForm} from "../content/word-card-types";
 import {studyConcepts,type StudyConcept,type StudyTags} from "./scope";
 import type {SavedItem} from "./types";
+import {COUNTRIES_SHEET_PATH} from "./sheet-routes";
 
 /** Serializable row data; catalog loading stays in subject-sheets.server.ts. */
 export type SubjectVocabularyItem={
@@ -32,7 +33,7 @@ export type SubjectSheetMetadata=Omit<SubjectSheet,"items">;
 const relatedSheets:Record<StudyConcept,string>={
   introductions:"/cheat-sheets/conversation#conversation-flow",
   people:"/cheat-sheets/people",
-  countries:"/cheat-sheets",
+  countries:COUNTRIES_SHEET_PATH,
   numbers:"/cheat-sheets/numbers",
   home:"/cheat-sheets/home",
   objects:"/cheat-sheets/objects",

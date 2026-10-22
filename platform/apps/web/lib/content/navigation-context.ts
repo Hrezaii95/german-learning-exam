@@ -19,14 +19,18 @@ import {studyConcepts,type StudyConcept} from "../study/scope";
 import {normalizeSheetTags} from "../study/sheet-browse";
 import {normalizeGroupOrder,type SheetGrouping} from "../study/sheet-grouping";
 import {normalizeSheetSort,normalizeSheetSortDirection,type SheetSort,type SheetSortDirection} from "../study/sheet-sorting";
+import {canonicalSheetPath,COUNTRIES_SHEET_PATH,SHEET_DIRECTORY_PATH,VOCABULARY_SHEET_PATH,LEGACY_VOCABULARY_SHEET_PATH} from "../study/sheet-routes";
 
 const SUBJECT_SHEET_PATHS=new Set(studyConcepts.map(subject=>`/cheat-sheets/subjects/${subject.id}`));
 const SHEET_PATHS=new Set([
   ...sheetLinks.map(sheet=>sheet.href),
+  SHEET_DIRECTORY_PATH,
+  VOCABULARY_SHEET_PATH,
   "/cheat-sheets/subjects",
   "/cheat-sheets/plurals",
   ...SUBJECT_SHEET_PATHS,
 ]);
+const isSheetGroupingPath=(path:string)=>SUBJECT_SHEET_PATHS.has(path)||path===VOCABULARY_SHEET_PATH||path===LEGACY_VOCABULARY_SHEET_PATH;
 
 /**
  * Typed, bounded, serializable learner navigation context (UX-006 / P3C).
@@ -257,7 +261,7 @@ function normalizeContext(raw: unknown): NavigationContext | null {
   const page=Number(obj.page);
   if((entryContext==="hub"||entryContext==="search")&&Number.isInteger(page)&&page>1&&page<=500) ctx.page=page;
   if (entryContext === "hub") {
-    const sheetGroupingPath=SUBJECT_SHEET_PATHS.has(ctx.returnPath)||ctx.returnPath==="/cheat-sheets/plurals";
+    const sheetGroupingPath=isSheetGroupingPath(ctx.returnPath);
     if((obj.sheetView==="plurals"||obj.sheetView==="illustrated")&&sheetGroupingPath)ctx.sheetView=obj.sheetView;
     if(typeof obj.sheetGender==="boolean"&&sheetGroupingPath)ctx.sheetGender=obj.sheetGender;
     if(typeof obj.sheetSubjects==="boolean"&&sheetGroupingPath)ctx.sheetSubjects=obj.sheetSubjects;
@@ -302,7 +306,7 @@ function normalizeContext(raw: unknown): NavigationContext | null {
 /** Explicit, validated infographic tags, grouping order or word sorting use a bounded larger payload. */
 function navigationContextMaxLength(ctx:NavigationContext|null):number{
   return ctx?.entryContext==="hub"&&!ctx.hubId&&(ctx.sheetTags!==undefined||ctx.sheetGroupOrder!==undefined||ctx.sheetSort!==undefined||ctx.sheetDirection!==undefined)
-    &&(SUBJECT_SHEET_PATHS.has(ctx.returnPath)||ctx.returnPath==="/cheat-sheets/plurals")
+    &&isSheetGroupingPath(ctx.returnPath)
     ?SHEET_NAVIGATION_CONTEXT_MAX_LENGTH:NAVIGATION_CONTEXT_MAX_LENGTH;
 }
 
@@ -417,7 +421,7 @@ export function backHrefFromContext(ctx: NavigationContext): string {
       safe.hubId && isSafeNavigationPath(`/${safe.hubId}`)
         ? `/${safe.hubId}`
         : isSafeNavigationPath(safe.returnPath)
-          ? safe.returnPath
+          ? canonicalSheetPath(safe.returnPath,safe.resultId)
           : "/hubs";
     const params = new URLSearchParams();
     if (safe.q && safe.q.trim().length > 0) params.set("q", safe.q.trim());
@@ -425,7 +429,7 @@ export function backHrefFromContext(ctx: NavigationContext): string {
     if (safe.category) params.set("category", safe.category);
     if (safe.page) params.set("page", String(safe.page));
     if (safe.onlySaved) params.set("saved", "1");
-    const sheetGroupingPath=SUBJECT_SHEET_PATHS.has(path)||path==="/cheat-sheets/plurals";
+    const sheetGroupingPath=isSheetGroupingPath(path);
     if (safe.sheetView && sheetGroupingPath) params.set("view", safe.sheetView);
     if (typeof safe.sheetGender === "boolean" && sheetGroupingPath) params.set("gender", safe.sheetGender ? "1" : "0");
     if (typeof safe.sheetSubjects === "boolean" && sheetGroupingPath) params.set("subjects", safe.sheetSubjects ? "1" : "0");
@@ -436,7 +440,7 @@ export function backHrefFromContext(ctx: NavigationContext): string {
     if (safe.sheetTags !== undefined && sheetGroupingPath) params.set("tags", safe.sheetTags.join(","));
     const qs = params.toString();
     const sheetAnchor=safe.resultId&&(
-      path==="/cheat-sheets"&&safe.resultId.startsWith("country-")||
+      (path===SHEET_DIRECTORY_PATH||path===COUNTRIES_SHEET_PATH)&&safe.resultId.startsWith("country-")||
       path==="/cheat-sheets/home"&&safe.resultId.startsWith("home-")||
       path==="/cheat-sheets/people"&&/^family-(anna|martin)-[a-z]+$/.test(safe.resultId));
     const anchor=path.startsWith("/cheat-sheets")&&safe.resultId?`#${sheetAnchor?"":"sheet-card-"}${encodeURIComponent(safe.resultId)}`:"";

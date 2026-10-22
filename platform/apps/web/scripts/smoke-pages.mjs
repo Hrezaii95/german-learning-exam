@@ -551,6 +551,78 @@ function isDirectRun() {
   }
 }
 
+// Lane 1 — retain the earlier manifest and content assertions at their canonical destinations.
+// Only these two exact legacy expectation paths are adapted. Real legacy pages
+// are requested separately below, so a missing or broken redirect cannot pass.
+const LANE1_WORKSHOP_IDS = [
+  "countries", "home", "people", "verbs", "numbers", "conversation", "questions",
+  "objects", "office", "hobbies", "time", "food", "travel", "past", "journeys",
+];
+const lane1WorkshopPaths = LANE1_WORKSHOP_IDS.map(id => `/cheat-sheets/${id}`);
+HUB_PATHS.push("/cheat-sheets/vocabulary", ...lane1WorkshopPaths);
+
+const lane1OriginalFetchStatus = fetchStatus;
+fetchStatus = async function lane1CanonicalExpectationFetch(path) {
+  const url = new URL(path, BASE);
+  const replacement = new Map([
+    [`${PAGES_BASE}/cheat-sheets/subjects/`, `${PAGES_BASE}/cheat-sheets/`],
+    [`${PAGES_BASE}/cheat-sheets/plurals/`, `${PAGES_BASE}/cheat-sheets/vocabulary/`],
+  ]).get(url.pathname);
+  return lane1OriginalFetchStatus(replacement ? `${replacement}${url.search}` : path);
+};
+
+const lane1OriginalHttpSmoke = httpSmoke;
+httpSmoke = async function lane1SheetHttpSmoke(expectedPaths) {
+  await lane1OriginalHttpSmoke(expectedPaths);
+  const server = await startStaticServer();
+  try {
+    const pages = new Map();
+    const canonicalPaths = [...new Set(["/cheat-sheets", "/cheat-sheets/vocabulary", ...lane1WorkshopPaths, ...SUBJECT_PATHS])];
+    for (const path of canonicalPaths) {
+      const requestPath = `${PAGES_BASE}${path}/`;
+      const response = await lane1OriginalFetchStatus(requestPath);
+      assert(response.status === 200, `Lane 1 canonical ${requestPath} expected 200 got ${response.status}`);
+      assertBasePrefixedNextAssets(response.text, requestPath);
+      assert(!/href="\/cheat-sheets(?:[/?#"])/.test(response.text), `${requestPath} contains a bare root sheet link`);
+      pages.set(path, response.text);
+    }
+
+    const directory = pages.get("/cheat-sheets");
+    assert(/class="[^"]*\bcheat-sheet-directory\b/.test(directory), "sheet root must render the directory");
+    assert((directory.match(/data-subject-tile="/g) ?? []).length === SUBJECT_IDS.length, "directory must expose every subject once");
+    assert((directory.match(/data-workshop-tile="/g) ?? []).length === LANE1_WORKSHOP_IDS.length, "directory must expose every workshop once");
+    for (const id of SUBJECT_IDS) {
+      const tile = directory.match(new RegExp(`<a\\b[^>]*data-subject-tile="${id}"[^>]*>`))?.[0];
+      assert(tile?.includes(`href="${PAGES_BASE}/cheat-sheets/subjects/${id}`), `directory subject ${id} must link to its base-prefixed sheet`);
+    }
+    for (const id of LANE1_WORKSHOP_IDS) {
+      const tile = directory.match(new RegExp(`<a\\b[^>]*data-workshop-tile="${id}"[^>]*>`))?.[0];
+      assert(tile?.includes(`href="${PAGES_BASE}/cheat-sheets/${id}`), `directory workshop ${id} must link to its base-prefixed sheet`);
+    }
+    assert(directory.includes(`href="${PAGES_BASE}/cheat-sheets/vocabulary`), "directory missing All vocabulary");
+    assert(directory.includes("window.location.hash") && directory.includes("country-DE"), "directory missing legacy country bookmark compatibility");
+    assert(/class="[^"]*\bcountry-sheet\b/.test(pages.get("/cheat-sheets/countries")), "canonical country sheet missing its content");
+    assert(pages.get("/cheat-sheets/vocabulary").includes('data-subject-sheet="plurals"'), "canonical vocabulary sheet missing its content");
+
+    for (const [legacy, destination] of [["subjects", ""], ["plurals", "vocabulary/"]]) {
+      const path = `${PAGES_BASE}/cheat-sheets/${legacy}/?q=B%C3%BCcher&tags=#sheet-card-W466-0`;
+      const response = await lane1OriginalFetchStatus(path);
+      assert(response.status === 200, `real legacy ${legacy} stub expected 200`);
+      assertBasePrefixedNextAssets(response.text, `legacy ${legacy}`);
+      const target = `${PAGES_BASE}/cheat-sheets/${destination}`;
+      assert(response.text.includes(`<link rel="canonical" href="${target}"`), `${legacy} stub missing canonical target`);
+      assert(response.text.includes(`window.location.replace("${target}"+window.location.search+window.location.hash)`), `${legacy} stub must preserve the original query and fragment synchronously`);
+      assert(response.text.includes(`<noscript><meta http-equiv="refresh" content="0;url=${target}"></noscript>`), `${legacy} stub missing no-script refresh`);
+      assert(response.text.includes(`<a href="${target}">Open `), `${legacy} stub missing usable fallback link`);
+      assert(response.text.indexOf("<script>window.location.replace(") < response.text.indexOf("<noscript>"), `${legacy} stub must preserve state before fallback refresh`);
+    }
+    console.log(`[smoke:pages] Lane 1 canonical sheet coverage OK: ${canonicalPaths.length} pages, ${SUBJECT_IDS.length} subjects, ${LANE1_WORKSHOP_IDS.length} workshops + 2 real legacy stubs`);
+  } finally {
+    await new Promise(resolve => server.close(resolve));
+  }
+};
+// End Lane 1.
+
 if (isDirectRun()) {
   main().catch((err) => {
     console.error("[smoke:pages] FAILED", err);

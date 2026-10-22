@@ -2,14 +2,14 @@ import {expect,test} from "@playwright/test";
 
 for(const width of [320,1440])test(`country and home word cards return to the selected item at ${width}px`,async({page})=>{
   await page.setViewportSize({width,height:1000});
-  await page.goto("cheat-sheets/");
+  await page.goto("cheat-sheets/countries/");
   await page.getByRole("textbox",{name:"Find a country or language",exact:true}).fill("Deutschland");
   const country=page.locator("#country-DE");
   await country.locator("summary").click();
   await country.getByRole("link",{name:"Open vocabulary card →",exact:true}).click();
   await page.getByRole("link",{name:/Back/}).first().click();
   await expect(page.getByRole("combobox",{name:"Choose a country",exact:true})).toHaveValue("DE");
-  await expect(page).toHaveURL(/cheat-sheets\/?#country-DE$/);
+  await expect(page).toHaveURL(/cheat-sheets\/countries\/?#country-DE$/);
   await page.goto("cheat-sheets/home/");
   await page.getByRole("combobox",{name:"Explore a word",exact:true}).selectOption("bett");
   await page.locator(".home-focus").getByRole("link",{name:"Full vocabulary card →",exact:true}).click();
@@ -20,7 +20,7 @@ for(const width of [320,1440])test(`country and home word cards return to the se
 
 for(const width of [320,1440]) test(`country and home recall follow selection, search and saved filters at ${width}px`,async({page})=>{
   await page.setViewportSize({width,height:1000});
-  await page.goto("cheat-sheets/");
+  await page.goto("cheat-sheets/countries/");
   const scope=page.locator(".study-scope");
   await scope.locator("summary").click();
   await scope.getByRole("button",{name:"One lesson",exact:true}).click();
@@ -40,7 +40,7 @@ for(const width of [320,1440]) test(`country and home recall follow selection, s
   await expect(page.locator(".study-saved-card")).toContainText("Ich komme aus Deutschland.");
   await page.reload();
   await expect(page.locator(".study-saved-card")).toHaveCount(1);
-  await page.goto("cheat-sheets/");
+  await page.goto("cheat-sheets/countries/");
   await page.getByRole("button",{name:"Saved for review",exact:true}).click();
   await expect(page.locator(".country-row")).toHaveCount(1);
   await expect(page.locator(".country-quiz")).toContainText("Deutschland");

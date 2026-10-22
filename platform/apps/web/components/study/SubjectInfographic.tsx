@@ -8,7 +8,7 @@ import {defaultStudyScope,matchesStudyScope,scopeLabel,selectedLessons,studyConc
 import {initialSheetBrowse,readSheetBrowse,sheetBrowseQuery,sheetNavigationContext,type SheetBrowse} from "@/lib/study/sheet-browse";
 import {getActiveGroupOrder} from "@/lib/study/sheet-grouping";
 import {sortSheetItems} from "@/lib/study/sheet-sorting";
-import {subjectSheetHref,subjectSheets,subjectVocabularyGroups,type SubjectSheet,type SubjectVocabularyGroup,type SubjectVocabularyItem} from "@/lib/study/subject-sheets";
+import {subjectSheetHref,subjectVocabularyGroups,type SubjectSheet,type SubjectVocabularyGroup,type SubjectVocabularyItem} from "@/lib/study/subject-sheets";
 import {OverviewPanel} from "./OverviewPanel";
 import {useStudyScope} from "./StudyScope";
 import {SubjectIcon,SubjectVocabularyVisual} from "./SubjectIllustration";
@@ -18,6 +18,9 @@ import {SubjectGroupingControls} from "./SubjectGroupingControls";
 import {SubjectSortingControls} from "./SubjectSortingControls";
 import {SubjectSheetFilters} from "./SubjectSheetFilters";
 import {SubjectWordDropdown} from "./SubjectWordDropdown";
+import {CheatSheetFrame} from "./CheatSheetFrame";
+import {sheetDestinations} from "@/lib/study/sheet-navigation";
+import {VOCABULARY_SHEET_PATH} from "@/lib/study/sheet-routes";
 
 const articles:Record<string,string>={male:"der",female:"die",neuter:"das",plural:"die"};
 
@@ -29,19 +32,6 @@ function sourceQualifier(item:SubjectVocabularyItem){
   return (item.studyTags.sources??[item.studyTags.source])
     .filter(source=>source!=="course")
     .map(source=>source==="teacher-extra"?"Teacher extra":"Study extra").join(" · ");
-}
-
-function SubjectSwitcher({current,browse,allNouns}:{current:StudyConcept;browse:SheetBrowse;allNouns:boolean}){
-  const chooser=useRef<HTMLDetailsElement>(null);
-  const selected=subjectSheets.find(subject=>subject.id===current)!;
-  const layoutQuery=sheetBrowseQuery({...initialSheetBrowse,view:browse.view??"illustrated",...(browse.gender!==undefined?{gender:browse.gender}:{}),...(browse.subjects!==undefined?{subjects:browse.subjects}:{}),...(browse.lessons!==undefined?{lessons:browse.lessons}:{}),...(browse.groupOrder?{groupOrder:browse.groupOrder}:{}),...(browse.sort?{sort:browse.sort}:{}),...(browse.direction?{direction:browse.direction}:{})});
-  return <div className="subject-navigation subject-print-hide">
-    <Link href="/cheat-sheets/subjects" className="subject-back">← All subjects</Link>
-    <details ref={chooser} className="subject-switcher">
-      <summary><span><small>Choose a subject · {subjectSheets.length} available</small><strong>{allNouns?"All vocabulary":selected.label}</strong></span><span aria-hidden="true">⌄</span></summary>
-      <nav aria-label="Choose a subject"><Link href={`/cheat-sheets/plurals${layoutQuery}`} aria-current={allNouns?"page":undefined}>All vocabulary · illustrated patterns</Link>{subjectSheets.map(subject=><Link key={subject.id} href={`${subjectSheetHref(subject.id)}${layoutQuery}`} aria-current={!allNouns&&current===subject.id?"page":undefined} onClick={()=>{if(chooser.current)chooser.current.open=false;}}><SubjectIcon subject={subject.id}/><span>{subject.label}</span></Link>)}</nav>
-    </details>
-  </div>;
 }
 
 export function SubjectInfographic({sheet,allNouns=false,allItems}:{sheet:SubjectSheet;allNouns?:boolean;allItems?:SubjectVocabularyItem[]}){
@@ -114,7 +104,7 @@ export function SubjectInfographic({sheet,allNouns=false,allItems}:{sheet:Subjec
   const hasNouns=scoped.some(item=>item.tone!=="plain");
   const activeSubject=effectiveConcepts.length===1?studyConcepts.find(subject=>subject.id===effectiveConcepts[0]):undefined;
   const heading=activeSubject?.label??(effectiveConcepts.length?"Selected vocabulary":"All vocabulary");
-  const returnPath=allNouns?"/cheat-sheets/plurals":subjectSheetHref(sheet.id);
+  const returnPath=allNouns?VOCABULARY_SHEET_PATH:subjectSheetHref(sheet.id);
   const families=new Set(visible.map(item=>item.cardId)).size;
   useEffect(()=>{
     if(!ready||!pendingHash.current)return;
@@ -139,10 +129,7 @@ export function SubjectInfographic({sheet,allNouns=false,allItems}:{sheet:Subjec
     <h3 id={`subject-lane-${group.id}`}>{articles[group.tone]&&<span className="subject-lane-article" lang="de">{articles[group.tone]}</span>}<span>{group.label}<small>{group.items.length} {group.items.length===1?"entry":"entries"}</small></span></h3>
     <div className="subject-lane-entries">{sortItems(group.items).map(renderEntry)}</div>
   </section>;
-  return <div className="subject-sheet study-workspace" data-subject-sheet={allNouns?"plurals":sheet.id} data-sheet-view={pluralView?"plurals":"illustrated"} data-gender-grouping={groupByGender?"on":"off"} data-plural-grouping={pluralView?"on":"off"} data-subject-grouping={groupBySubject?"on":"off"} data-lesson-grouping={groupByLesson?"on":"off"} data-group-order={groupOrder.join(",")}>
-    <SubjectSwitcher current={activeSubject?.id??sheet.id} browse={browse} allNouns={allNouns}/>
-    <header className="subject-page-heading"><div className="subject-heading-copy"><p className="study-eyebrow">Your illustrated vocabulary catalogue</p><h1>{heading}</h1><p>{hasNouns?"Learn each noun with its article and plural. Compare the actual changes in the grid.":"Explore the expressions and word types in this subject."}</p></div><div className="subject-heading-mark"><SubjectIcon subject={activeSubject?.id??"objects"}/></div></header>
-    <div className="subject-page-actions subject-print-hide"><p>Tap an illustrated word to open its card and play the singular or plural pronunciation.</p><button type="button" className="study-secondary" onClick={()=>window.print()}>Print / save as PDF</button></div>
+  return <CheatSheetFrame current={allNouns?"vocabulary":`subject:${activeSubject?.id??sheet.id}`} browse={browse} eyebrow="Your illustrated vocabulary catalogue" title={heading} lead={hasNouns?"Learn each noun with its article and plural. Compare the actual changes in the grid.":"Explore the expressions and word types in this subject."} printNote="Tap an illustrated word to open its card and play the singular or plural pronunciation." data-subject-sheet={allNouns?"plurals":sheet.id} data-sheet-view={pluralView?"plurals":"illustrated"} data-gender-grouping={groupByGender?"on":"off"} data-plural-grouping={pluralView?"on":"off"} data-subject-grouping={groupBySubject?"on":"off"} data-lesson-grouping={groupByLesson?"on":"off"} data-group-order={groupOrder.join(",")}>
     <div className="subject-controls subject-print-hide"><label>Find a word or form<input type="search" value={browse.query} onChange={event=>changeBrowse({...browse,query:event.target.value,page:1})} placeholder="Search German, English or a plural…"/></label><p><strong>{scopeLabel(sheetScope)}</strong><span>{scoped.length} of {catalogue.length} entries match your study selection.</span></p></div>
     {groups.length>1&&<div className="subject-group-filters subject-print-hide" role="group" aria-label="Vocabulary groups"><button type="button" aria-pressed={browse.category==="all"} onClick={()=>changeBrowse({...browse,category:"all",page:1})}>All groups <span>{scoped.length}</span></button>{groups.map(group=><button type="button" key={group.id} className={`subject-tone-${group.tone}`} aria-pressed={browse.category===group.id} onClick={()=>changeBrowse({...browse,category:group.id,page:1})}>{group.label} <span>{group.items.length}</span></button>)}</div>}
     <div id="subject-overview"><OverviewPanel title={layoutTitle}>
@@ -152,25 +139,27 @@ export function SubjectInfographic({sheet,allNouns=false,allItems}:{sheet:Subjec
       <div className="subject-overview-meta"><p role="status">{visible.length} {visible.length===1?"entry":"entries"} · {families} {families===1?"word card":"word cards"}{browse.query&&<> · matching “{browse.query}”</>}</p>{nounGroups.length>0&&<span>Article colours show grammatical gender.</span>}</div>
       {visible.length>0?<>
         {nestedGrouping?<SubjectGroupedVocabulary items={orderedItems} order={groupOrder} scope={sheetScope} subject={sheet.id} sortItems={sortItems} renderEntry={renderEntry}/>:pluralView?<SubjectPluralGrid groupByGender={groupByGender} items={orderedItems} subject={sheet.id} currentId={current?.id??""} openEntry={openEntry} onChoose={choose} onClose={closeDropdown} renderDropdown={renderDropdown} triggerRef={triggerRef} entryRef={(id,node)=>{if(node)entries.current.set(id,node);else entries.current.delete(id);}}/>:groupByGender?(nounGroups.length>0&&<div className="subject-vocabulary-lanes" style={{"--subject-lanes":Math.min(4,nounGroups.length)} as CSSProperties} aria-label="Nouns grouped by article">{nounGroups.map(renderGroup)}</div>):<div className="subject-vocabulary-flat" aria-label="Illustrated vocabulary">{orderedItems.map(renderEntry)}</div>}
-        {pluralView&&!nounGroups.length&&<p className="subject-plural-other-subject"><Link href="/cheat-sheets/plurals?tags=">Open the full vocabulary cheat sheet →</Link></p>}
+        {pluralView&&!nounGroups.length&&<p className="subject-plural-other-subject"><Link href={`${VOCABULARY_SHEET_PATH}?tags=`}>Open the full vocabulary cheat sheet →</Link></p>}
         {!nestedGrouping&&(pluralView||groupByGender)&&plainGroups.length>0&&<div className="subject-plain-groups" aria-label="Vocabulary grouped by word type">{plainGroups.map(renderGroup)}</div>}
         {nounGroups.length>0&&<p className="subject-gender-key"><b className="subject-tone-male" lang="de">der</b> masculine <b className="subject-tone-female" lang="de">die</b> feminine <b className="subject-tone-neuter" lang="de">das</b> neuter <b className="subject-tone-plural" lang="de">die</b> plural<span>Learn each noun with its own plural.</span></p>}
       </>:<div className="subject-empty"><SubjectIcon subject={sheet.id}/><h3>No matching vocabulary</h3><p>{!scoped.length?`Your study selection (${scopeLabel(scope)}) does not include entries in this subject.`:"No entries match this search and group within your study selection."}</p><div>{(browse.query||browse.category!=="all")&&<button type="button" className="study-secondary" onClick={()=>changeBrowse({...browse,query:"",category:"all",saved:false,page:1})}>Clear search & group</button>}<button type="button" className="study-secondary" onClick={resetFilters}>Reset study selection</button></div></div>}
     </OverviewPanel></div>
     {sheet.relatedHref&&<aside className="subject-related subject-print-hide"><div><p className="study-eyebrow">Put the words to work</p><h2>Explore the patterns.</h2><p>Open the related reference for diagrams, examples and practice.</p></div><Link href={sheet.relatedHref} className="study-secondary">Open related reference →</Link></aside>}
     <p className="subject-footer-note">The full vocabulary catalogue is available to these filters. A word can belong to more than one subject; changing grouping never removes word types.</p>
-  </div>;
+  </CheatSheetFrame>;
 }
 
-export function SubjectDirectory({subjects}:{subjects:{id:StudyConcept;label:string;count:number;families:number}[]}){
+export function SubjectDirectory({subjects,workshops=false}:{subjects:{id:StudyConcept;label:string;count:number;families:number}[];workshops?:boolean}){
   const [query,setQuery]=useState("");
   const visible=subjects.filter(subject=>searchKey(`${subject.label} ${subject.id}`).includes(searchKey(query)));
-  return <div className="subject-directory study-workspace">
-    <Link href="/cheat-sheets" className="subject-back subject-print-hide">← Learning cheat sheets</Link>
-    <header className="subject-page-heading"><div className="subject-heading-copy"><p className="study-eyebrow">All {subjects.length} subject tags</p><h1>A picture of every subject.</h1><p>Explore your German vocabulary by theme, with articles, plurals and pronunciation.</p></div></header>
-    <p className="subject-directory-plurals"><Link href="/cheat-sheets/plurals" className="study-secondary">All vocabulary · illustrated cheat sheet →</Link></p>
-    <div className="subject-directory-controls"><label>Find a subject<input type="search" value={query} onChange={event=>setQuery(event.target.value)} placeholder="Home, food, verbs…"/></label><p role="status">{visible.length} of {subjects.length} subjects<span>Counts cover the whole collection. Open a subject to apply your study selection.</span></p></div>
-    <nav className="subject-directory-grid" aria-label="Subject vocabulary overviews">{visible.map(subject=><Link key={subject.id} href={subjectSheetHref(subject.id)} className="subject-directory-tile" data-subject-tile={subject.id}><span className="subject-directory-icon"><SubjectIcon subject={subject.id}/></span><h2>{subject.label}</h2><p>{subject.count} {subject.count===1?"entry":"entries"} · {subject.families} {subject.families===1?"word card":"word cards"}</p><span className="subject-tile-action">Explore subject <span aria-hidden="true">↗</span></span></Link>)}</nav>
-    {!visible.length&&<div className="subject-empty"><h2>No matching subject</h2><p>Try another subject name, or see all {subjects.length} subjects.</p><button type="button" className="study-secondary" onClick={()=>setQuery("")}>Clear search</button></div>}
+  const visibleWorkshops=sheetDestinations.filter(destination=>destination.kind==="workshop"&&searchKey(destination.label).includes(searchKey(query)));
+  return <div className={`subject-directory study-workspace${workshops?" cheat-sheet-directory":""}`}>
+    {!workshops&&<Link href="/cheat-sheets" className="subject-back subject-print-hide">← All cheat sheets</Link>}
+    <header className="subject-page-heading"><div className="subject-heading-copy"><p className="study-eyebrow">{workshops?"Vocabulary and topic workshops":`All ${subjects.length} subject tags`}</p><h1>{workshops?"Cheat sheets":"A picture of every subject."}</h1><p>{workshops?"Browse all vocabulary, explore a subject, or practise with a topic workshop.":"Explore your German vocabulary by theme, with articles, plurals and pronunciation."}</p></div></header>
+    <div className="subject-directory-catalogue"><Link href={VOCABULARY_SHEET_PATH} className="subject-directory-tile" data-catalogue-tile="vocabulary"><span className="subject-directory-icon"><SubjectIcon subject="objects"/></span><h2>All vocabulary</h2><p>The complete illustrated catalogue, with article colours, plural patterns, pronunciation and study filters.</p><span className="subject-tile-action">Explore all vocabulary <span aria-hidden="true">↗</span></span></Link></div>
+    <div className="subject-directory-controls"><label>{workshops?"Find a study sheet":"Find a subject"}<input type="search" value={query} onChange={event=>setQuery(event.target.value)} placeholder="Home, food, verbs…"/></label><p role="status">{visible.length} of {subjects.length} subjects{workshops&&<> · {visibleWorkshops.length} workshops</>}<span>Counts cover the whole collection. Open a subject to apply your study selection.</span></p></div>
+    <section id="subjects" aria-label="Vocabulary by subject"><h2>Vocabulary by subject</h2><nav className="subject-directory-grid" aria-label="Subject vocabulary overviews">{visible.map(subject=><Link key={subject.id} href={subjectSheetHref(subject.id)} className="subject-directory-tile" data-subject-tile={subject.id}><span className="subject-directory-icon"><SubjectIcon subject={subject.id}/></span><h2>{subject.label}</h2><p>{subject.count} {subject.count===1?"entry":"entries"} · {subject.families} {subject.families===1?"word card":"word cards"}</p><span className="subject-tile-action">Explore subject <span aria-hidden="true">↗</span></span></Link>)}</nav></section>
+    {workshops&&<section id="workshops" aria-label="Topic workshops"><h2>Topic workshops</h2><nav className="subject-directory-grid" aria-label="Topic workshop sheets">{visibleWorkshops.map(destination=><Link key={destination.id} href={destination.href} className="subject-directory-tile" data-workshop-tile={destination.id}><span className="subject-directory-icon"><SubjectIcon subject={destination.subject}/></span><h2>{destination.label}</h2><p>Diagrams, examples and practice for this topic.</p><span className="subject-tile-action">Open workshop <span aria-hidden="true">↗</span></span></Link>)}</nav></section>}
+    {!visible.length&&(!workshops||!visibleWorkshops.length)&&<div className="subject-empty"><h2>No matching {workshops?"study sheet":"subject"}</h2><p>Try another topic or clear your search.</p><button type="button" className="study-secondary" onClick={()=>setQuery("")}>Clear search</button></div>}
   </div>;
 }

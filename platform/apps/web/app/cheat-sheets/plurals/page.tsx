@@ -1,12 +1,9 @@
 import {ShellLayout} from "@/components/shell/ShellLayout";
-import {SubjectInfographic} from "@/components/study/SubjectInfographic";
-import {loadSubjectVocabulary} from "@/lib/study/subject-sheets.server";
-import "../subjects/subjects.css";
-import "../subjects/plurals.css";
+import {StaticSheetRedirect} from "@/components/study/StaticSheetRedirect";
+import {VOCABULARY_SHEET_PATH} from "@/lib/study/sheet-routes";
 
-export const metadata={title:"All vocabulary · Illustrated cheat sheet",description:"The complete German vocabulary catalogue with lesson and subject filters, illustrations, article colours and optional gender and plural grouping."};
+export const metadata={title:"All vocabulary · Moved"};
 
 export default function Page(){
-  const items=loadSubjectVocabulary();
-  return <ShellLayout current="all-vocabulary"><SubjectInfographic allNouns sheet={{id:"objects",label:"All vocabulary",items}}/></ShellLayout>;
+  return <ShellLayout current="all-vocabulary"><StaticSheetRedirect href={VOCABULARY_SHEET_PATH} label="All vocabulary"/></ShellLayout>;
 }

@@ -3,6 +3,9 @@ import {createElement} from "react";
 import {afterEach,beforeAll,describe,expect,it,vi} from "vitest";
 import {cleanup,fireEvent,render,screen,within,waitFor} from "@testing-library/react";
 import {SubjectDirectory,SubjectInfographic} from "../../apps/web/components/study/SubjectInfographic";
+import {CheatSheetFrame} from "../../apps/web/components/study/CheatSheetFrame";
+import {sheetDestinations} from "../../apps/web/lib/study/sheet-navigation";
+import {initialSheetBrowse} from "../../apps/web/lib/study/sheet-browse";
 import {StudyProvider} from "../../apps/web/components/study/StudyProvider";
 import {StudyScopeProvider,StudyTagList} from "../../apps/web/components/study/StudyScope";
 import {loadSubjectSheets,loadSubjectVocabulary} from "../../apps/web/lib/study/subject-sheets.server";
@@ -36,7 +39,7 @@ beforeAll(()=>{
   Object.defineProperty(HTMLElement.prototype,"showPopover",{configurable:true,value:()=>{}});
   Object.defineProperty(HTMLElement.prototype,"hidePopover",{configurable:true,value:()=>{}});
 });
-afterEach(()=>{cleanup();vi.unstubAllGlobals();localStorage.clear();window.history.replaceState(null,"","/");});
+afterEach(()=>{cleanup();vi.restoreAllMocks();vi.unstubAllGlobals();localStorage.clear();window.history.replaceState(null,"","/");});
 
 describe("subject infographic browsing",()=>{
   it.each([["nur","W351"],["mal","W358"]])("restores the old expressions filter for merged %s",(word,cardId)=>{
@@ -62,7 +65,7 @@ describe("subject infographic browsing",()=>{
       await waitFor(()=>expect(scroll.mock.contexts).toContain(canonical));
       const href=within(detail).getByRole("link",{name:"Full vocabulary card →"}).getAttribute("href")!;
       const context=parseNavigationContextParam(new URL(href,"https://example.test").searchParams.get("nav"));
-      expect(resolveBackHref(context)).toBe(`${path}${query}#sheet-card-W464-0`);
+      expect(resolveBackHref(context)).toBe(`${allNouns?"/cheat-sheets/vocabulary":path}${query}#sheet-card-W464-0`);
       expect(window.location.hash).toBe("#sheet-card-l4-bild-0");
     }finally{scroll.mockRestore();}
   });
@@ -241,7 +244,7 @@ describe("subject infographic browsing",()=>{
     render(createElement(SubjectInfographic,{allNouns:true,sheet:{...objects,items:[book,key]}}));
     fireEvent.click(screen.getByRole("button",{name:"das Buch · → die Bücher"}));
     fireEvent.click(groupingSwitch("gender"));
-    const expectedBack=`/cheat-sheets/plurals?view=plurals&gender=0#sheet-card-${book.id}`;
+    const expectedBack=`/cheat-sheets/vocabulary?view=plurals&gender=0#sheet-card-${book.id}`;
     const href=within(screen.getByRole("article",{name:"Vocabulary card: das Buch"})).getByRole("link",{name:"Full vocabulary card →"}).getAttribute("href")!;
     expect(resolveBackHref(parseNavigationContextParam(new URL(href,"https://example.test").searchParams.get("nav")))).toBe(expectedBack);
     fireEvent.click(screen.getByRole("button",{name:"Expand overview"}));
@@ -339,7 +342,7 @@ describe("subject infographic browsing",()=>{
     const ketchup=screen.getByRole("button",{name:/^das Ketchup · No plural taught here/});
     fireEvent.click(ketchup);
     const href=within(screen.getByRole("article",{name:/^Vocabulary card:/})).getByRole("link",{name:"Full vocabulary card →"}).getAttribute("href")!;
-    expect(resolveBackHref(parseNavigationContextParam(new URL(href,"https://example.test").searchParams.get("nav")))).toBe("/cheat-sheets/plurals?view=plurals#sheet-card-l9-ketchup-1");
+    expect(resolveBackHref(parseNavigationContextParam(new URL(href,"https://example.test").searchParams.get("nav")))).toBe("/cheat-sheets/vocabulary?view=plurals#sheet-card-l9-ketchup-1");
   });
 
   it("explains a noun-free subject and keeps its real non-noun vocabulary available",()=>{
@@ -347,7 +350,7 @@ describe("subject infographic browsing",()=>{
     fireEvent.click(screen.getByRole("switch",{name:"Group by plural pattern"}));
     expect(screen.queryByRole("table")).toBeNull();
     expect(screen.getByText(/This selection has no singular nouns/)).toBeTruthy();
-    expect(screen.getByRole("link",{name:"Open the full vocabulary cheat sheet →"}).getAttribute("href")).toBe("/cheat-sheets/plurals?tags=");
+    expect(screen.getByRole("link",{name:"Open the full vocabulary cheat sheet →"}).getAttribute("href")).toBe("/cheat-sheets/vocabulary?tags=");
     expect(entries().length).toBeGreaterThan(100);
   });
   it("keeps all subjects discoverable and links every subject tag to its exact infographic",()=>{
@@ -436,5 +439,65 @@ describe("subject infographic browsing",()=>{
     expect(entries()).toHaveLength(verbs.items.length);
     expect(document.querySelector('[aria-label="Nouns grouped by article"]')).toBeNull();
     expect(screen.getByRole("heading",{name:/Verbs & actions/})).toBeTruthy();
+  });
+});
+
+describe("shared sheet frame and directory",()=>{
+  it("finds every named vocabulary and workshop destination without numbering",()=>{
+    render(createElement(CheatSheetFrame,{current:"countries",eyebrow:"Your language passport",title:"Countries",lead:"Country examples",children:createElement("p",{id:"country-index"},"Existing country content")}));
+    const chooser=document.querySelector(".sheet-switcher") as HTMLDetailsElement;
+    fireEvent.click(chooser.querySelector("summary")!);
+    const navigation=within(chooser).getByRole("navigation",{name:"Choose a study sheet"});
+    const links=within(navigation).getAllByRole("link");
+    expect(links).toHaveLength(37);
+    expect(new Set(links.map(link=>link.getAttribute("href"))).size).toBe(37);
+    expect(sheetDestinations.filter(destination=>destination.kind==="subject")).toHaveLength(studyConcepts.length);
+    expect(chooser.textContent).not.toContain("01 / 15");
+    fireEvent.change(within(chooser).getByRole("searchbox",{name:"Find a study sheet"}),{target:{value:"furniture"}});
+    expect(within(navigation).getAllByRole("link")).toHaveLength(2);
+    const workshop=navigation.querySelector('section[aria-label="Topic workshops"]')!;
+    expect(within(workshop as HTMLElement).getByRole("link").getAttribute("href")).toBe("/cheat-sheets/home");
+    fireEvent.change(within(chooser).getByRole("searchbox"),{target:{value:"no-such-study-area"}});
+    expect(within(navigation).queryAllByRole("link")).toHaveLength(0);
+    expect(within(chooser).getByText(/No matching study sheet/)).toBeTruthy();
+    fireEvent.keyDown(chooser,{key:"Escape"});
+    expect(chooser.open).toBe(false);
+    expect(document.activeElement).toBe(chooser.querySelector("summary"));
+  });
+
+  it("retains vocabulary layout choices when moving between named subject sheets",()=>{
+    render(createElement(CheatSheetFrame,{current:"vocabulary",eyebrow:"Vocabulary",title:"All vocabulary",lead:"All words",browse:{...initialSheetBrowse,view:"plurals",gender:false,subjects:true,lessons:true,sort:"meaning",direction:"desc",groupOrder:["subject","lesson","gender","plural"]},children:createElement("p",null,"Words")}));
+    const chooser=document.querySelector(".sheet-switcher") as HTMLDetailsElement;
+    fireEvent.click(chooser.querySelector("summary")!);
+    const subject=chooser.querySelector('a[href^="/cheat-sheets/subjects/home?"]')!;
+    const target=new URL(subject.getAttribute("href")!,"https://example.test");
+    expect(Object.fromEntries(target.searchParams)).toMatchObject({view:"plurals",gender:"0",subjects:"1",lessons:"1",sort:"meaning",direction:"desc",order:"subject,lesson,gender,plural"});
+    expect(chooser.querySelector('a[href="/cheat-sheets/home"]')).toBeTruthy();
+  });
+
+  it("keeps the existing content and requests printing from the common action row",()=>{
+    const print=vi.spyOn(window,"print").mockImplementation(()=>{});
+    render(createElement(CheatSheetFrame,{current:"home",eyebrow:"Home",title:"A home for every word",lead:"Explore the room",className:"home-sheet",children:createElement("section",{id:"home-index"},"Existing word list")}));
+    expect(screen.getAllByRole("heading",{level:1})).toHaveLength(1);
+    expect(document.querySelector(".home-sheet #home-index")?.textContent).toBe("Existing word list");
+    fireEvent.click(screen.getByRole("button",{name:"Print / save as PDF"}));
+    expect(print).toHaveBeenCalledOnce();
+  });
+
+  it("offers the full catalogue, every subject and every workshop from the directory",()=>{
+    const subjects=studyConcepts.map(subject=>({...subject,count:4,families:3}));
+    render(createElement(SubjectDirectory,{subjects,workshops:true}));
+    expect(document.querySelectorAll("[data-catalogue-tile]")).toHaveLength(1);
+    expect(document.querySelectorAll("[data-subject-tile]")).toHaveLength(21);
+    expect(document.querySelectorAll("[data-workshop-tile]")).toHaveLength(15);
+    expect(document.querySelector("#subjects")).toBeTruthy();
+    expect(document.querySelector('[data-workshop-tile="countries"]')?.getAttribute("href")).toBe("/cheat-sheets/countries");
+    expect(document.querySelector('[data-catalogue-tile]')?.getAttribute("href")).toBe("/cheat-sheets/vocabulary");
+    fireEvent.change(screen.getByRole("searchbox",{name:"Find a study sheet"}),{target:{value:"furniture"}});
+    expect(document.querySelectorAll("[data-subject-tile]")).toHaveLength(1);
+    expect(document.querySelectorAll("[data-workshop-tile]")).toHaveLength(1);
+    fireEvent.change(screen.getByRole("searchbox"),{target:{value:"no-such-study-area"}});
+    fireEvent.click(screen.getByRole("button",{name:"Clear search"}));
+    expect(document.querySelectorAll("[data-subject-tile]")).toHaveLength(21);
   });
 });

@@ -35,7 +35,7 @@ test("empty recording search recovers without losing the library",async({page})=
 test("learning views retain readable reflow when text is enlarged to 200 percent",async({page},info)=>{
  test.setTimeout(180000);
  await page.setViewportSize({width:390,height:844});
- for(const route of ["vocabulary/","lessons/12/","cheat-sheets/","cheat-sheets/home/","collections/professions/","book/?page=coursebook-30","listening/","settings/"]){
+ for(const route of ["vocabulary/","lessons/12/","cheat-sheets/", "cheat-sheets/countries/", "cheat-sheets/vocabulary/","cheat-sheets/home/","collections/professions/","book/?page=coursebook-30","listening/","settings/"]){
   await page.goto(route);
   await expect(page.locator("main h1").first()).toBeVisible();
   await page.evaluate(async()=>{
@@ -44,7 +44,7 @@ test("learning views retain readable reflow when text is enlarged to 200 percent
    const sizes=Array.from(document.querySelectorAll<HTMLElement>("body,body *")).filter(node=>node instanceof HTMLElement).map(node=>({node,size:parseFloat(getComputedStyle(node).fontSize),line:parseFloat(getComputedStyle(node).lineHeight)}));
    for(const {node,size,line} of sizes){node.style.fontSize=`${size*2}px`;if(Number.isFinite(line))node.style.lineHeight=`${line*2}px`;}
   });
-  await page.screenshot({path:info.outputPath(`text-200-${route.split("/")[0]}${route.includes("home")?"-home":""}.png`)});
+  await page.screenshot({path:info.outputPath(`text-200-${route.replace(/[^a-z0-9]+/gi,"-")}.png`)});
   const layout=await page.evaluate(()=>({overflow:document.documentElement.scrollWidth-innerWidth,outside:Array.from(document.querySelectorAll('main *')).filter(node=>{const rect=node.getBoundingClientRect();return rect.width>0&&rect.right>innerWidth+1&&!node.closest('.book-page-scroll,svg');}).slice(0,12).map(node=>({tag:node.tagName,class:node.className,text:node.textContent?.slice(0,60),width:node.getBoundingClientRect().width}))}));
   console.log("200% text",route,JSON.stringify(layout));
   expect.soft(layout.overflow,route).toBeLessThanOrEqual(1);

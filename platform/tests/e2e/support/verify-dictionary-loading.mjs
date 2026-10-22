@@ -51,8 +51,8 @@ try{
  await page.setViewportSize({width:1440,height:1000});
  await page.locator('#case-map').screenshot({path:resolve(output,'office-case-map.png')});
  await page.setViewportSize({width:390,height:844});
- await page.locator('.sheet-mobile-switcher summary').click();
- await page.getByRole('navigation',{name:'Choose a cheat sheet on phone'}).getByRole('link',{name:/Questions/}).click();
+ await page.locator('.sheet-switcher summary').click();
+ await page.locator('.sheet-switcher section[aria-label="Topic workshops"]').getByRole('link',{name:/Questions/}).click();
  await expect(page.getByRole('heading',{name:'Ask for the missing piece.',exact:true})).toBeVisible();
  if(attempts!==loadedAttempts)throw Error('Client navigation downloaded the dictionary again');check('Client navigation reuses the loaded dictionary');
  const scope=page.locator('details.study-scope');

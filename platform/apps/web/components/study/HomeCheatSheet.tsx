@@ -7,7 +7,7 @@ import {useStudyScope,StudyScopeNotice} from "./StudyScope";
 import {homeStudyTags} from "@/lib/study/sheet-scope";
 import {LineAudio} from "./StudyAudio";
 import {HomeIllustration} from "./HomeIllustration";
-import {CheatSheetNav} from "./CheatSheetNav";
+import {CheatSheetFrame} from "./CheatSheetFrame";
 import {OverviewPanel} from "./OverviewPanel";
 import {HomePrintSummary} from "./CheatSheetPrint";
 import {homeRecallQuestions} from "@/lib/study/sheet-recall";
@@ -34,9 +34,7 @@ export function HomeCheatSheet({speech,cardLinks,saveIds}:{speech:Record<string,
   const visible=scopedWords.filter(w=>(filter==="all"||(filter==="saved"?study?.state.saved[saveIds[w.id]??`home-${w.id}`]:w.tone===filter))&&(scope==="all"||(scope==="book"?w.book.length:w.image))&&`${w.de} ${w.en} ${w.plural??""}`.toLocaleLowerCase("de").includes(query.trim().toLocaleLowerCase("de")));
   useEffect(()=>{const followHash=()=>{const id=window.location.hash.replace(/^#home-/,"");if(!homeWords.some(w=>w.id===id))return;setChosen(id);setFilter("all");setScope("all");setQuery("");setRecall(false);requestAnimationFrame(()=>document.getElementById(`home-${id}`)?.scrollIntoView());};followHash();window.addEventListener("hashchange",followHash);return()=>window.removeEventListener("hashchange",followHash);},[]);
   const questions=homeRecallQuestions(visible,savedItem);
-  return <div className="home-sheet">
-    <CheatSheetNav current="home"/>
-    <header className="home-heading"><div><p className="study-eyebrow">Cheat sheets · 02 / The memory room</p><h1>A home for every word.</h1><p>See it. Say its article. Remember its plural.</p></div><button className="study-secondary" type="button" onClick={()=>window.print()}>Print cheat sheet</button></header>
+  return <CheatSheetFrame current="home" className="home-sheet" eyebrow="The memory room" title="A home for every word." lead="See it. Say its article. Remember its plural.">
     <nav className="home-jump" aria-label="Home cheat sheet sections"><Link href="#memory-room">Explore the room</Link><Link href="#home-patterns">Article → pronoun</Link><Link href="#home-index">All 30 words</Link><Link href="#home-describe">Describe & buy</Link><Link href="#home-practice">Test yourself</Link></nav>
     <section className="home-room-layout" id="memory-room" aria-labelledby="room-title">
       <div className="home-room"><div className="home-room-heading"><p className="study-eyebrow">Your visual anchor</p><h2 id="room-title">Step into the memory room.</h2><p>Tap an object. Keep its color when you say its name.</p></div><div className="home-room-objects">{roomIds.map(id=>{const w=homeWords.find(w=>w.id===id)!;return <button type="button" key={id} onClick={()=>setChosen(id)} aria-pressed={chosen===id} aria-label={`Explore ${w.de}`} className={`study-tone-${w.tone}`}><HomeIllustration id={id}/><span lang="de">{w.de}</span></button>;})}</div><p className="home-room-foot">Blue der · Pink die · Green das · Purple plural</p></div>
@@ -51,5 +49,5 @@ export function HomeCheatSheet({speech,cardLinks,saveIds}:{speech:Record<string,
     <section id="home-practice" className="home-practice"><div><p className="study-eyebrow">A quick room check</p><h2>Can you name it and use it?</h2><p>This short set follows your study selection and word-index filters. Save a difficult word and revisit it in My review.</p></div><SheetRecall key={questions.map(q=>q.id).join("|")} prefix="home" questions={questions} speech={speech} {...(slow?{rate:0.8}:{})}/></section>
     <details className="home-sources"><summary>Coverage & sources</summary><p>All 20 labelled objects and the Zuhause heading from your supplied easydeutsch image, plus related words from Momente A1.1 Lessons 1–4: Bild, Sessel, Möbel, Geschäft, Möbelgeschäft, Hotel, Hotelzimmer, Wohnort and Buch. Items from the image that occur later in the course are labelled as extra vocabulary here. The book additions include vocabulary from exercise instructions.</p><p>Book patterns: KB 15–18, 29–32; AB 26–29; German–English glossary pp. 5–6. Momente © Hueber Verlag. Illustrations, memory cues and example combinations were created for this sheet. Audio uses existing pronunciation clips where available, with synthesized speech for additions.</p><Link href="/references">Course sources & credits →</Link></details><p className="home-credit">Reference vocabulary: your easydeutsch image + Momente A1.1 Lessons 1–4, © Hueber Verlag. Original line illustrations and learning notes.</p>
     <HomePrintSummary/>
-  </div>;
+  </CheatSheetFrame>;
 }
