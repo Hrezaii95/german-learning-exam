@@ -2,6 +2,7 @@ import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import { loadWordCards } from "../content/word-cards";
+import {legacyWordCardIds} from "./saved-word-card";
 import { lessonFourWords, lessonFourVerbs, lessonFourPhrases } from "./lesson-four";
 import type { BookManifest, BookAnswer, DictionaryEntry } from "./types";
 import type { LearnerQaDetail } from "../content/detail-types";
@@ -79,6 +80,7 @@ export function loadDictionary(): DictionaryEntry[] {
   const wordCards=loadWordCards().cards;
   const entries: DictionaryEntry[] = wordCards.map((card) => ({
     id: card.id,
+    legacySaveIds:legacyWordCardIds(card).map(id=>`card-${id}`),
     ...(card.studyTags?{studyTags:card.studyTags}:{}),
     de: card.rows.map((r) => r.singular.text).join(" / "),
     en: card.title,
@@ -99,7 +101,8 @@ export function loadDictionary(): DictionaryEntry[] {
   }));
   for (const word of lessonFourWords) {
     const verb = lessonFourVerbs.find((v) => v.verb === word.de);
-    const entry = entries.find((item) => item.id === word.id)!;
+    const family = wordCards.find(card => card.id === word.id || card.aliases.includes(`/vocabulary/${word.id}`))!;
+    const entry = entries.find((item) => item.id === family.id)!;
     entry.forms = [...entry.forms, ...(verb?.forms ?? [])];
   }
   const speech={...loadCollectionSpeech(),...loadStudySpeech()};
