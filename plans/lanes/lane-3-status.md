@@ -1,49 +1,55 @@
 # Lane 3 status
 
-Updated 2026-10-22 by Lane 3. Owner requests one draft per item into `codex/live-alpha`; never merge. The continuation plan was posted before code on PR #1, comment 6344290752.
+Updated 2026-10-22 by Lane 3. The owner requested one draft per item into `codex/live-alpha`; this lane never merges. The continuation plan was posted before code on PR #1, comment 6344290752.
 
-| PR | Title | State | Link | Notes |
-|---|---|---|---|---|
-| L3-0 | Secret-free lane CI | draft PR | https://github.com/Hrezaii95/german-learning-exam/pull/6 | Orchestrator gate amendment applied: private originals remain a local owner gate. |
-| L3-1 | Cloudflare root hosting | draft PR | https://github.com/Hrezaii95/german-learning-exam/pull/3 | Local hosting verified; no live deployment. Exactly three lesson links may remain red on lane branches until Lane 1 integration. |
-| L3-2 | Database and auth | in progress | — | Argon2id unblocks auth; D1 schema/API/account UI implemented, security review and combined validation underway. |
-| L3-3 | Seed accounts | in progress | — | Idempotent CLI and real local D1 seeding/sign-in tests pass; publication pending review. |
-| L3-4 | Progress sync | in progress | — | Registry, durable queue, learner wrapper, consent/import and API implemented; cross-tab isolation review underway. |
-| L3-5 | Classes and assignments | in progress | — | Membership/position/assignments/progress/extras implemented; role-change transaction review underway. |
-| L3-6 | Dashboards | in progress | — | Student/teacher/admin API and static client screens implemented; combined type/browser validation underway. |
-| L3-7 | One-click go-live | in progress | — | Token-first EU D1/deploy/seed/live-smoke/rollback workflow and local rehearsal implemented; no external resource mutation. |
+| Item | State | Draft PR | Evidence / remaining dependency |
+|---|---|---|---|
+| L3-0 CI | Draft | https://github.com/Hrezaii95/german-learning-exam/pull/6 | Deploy-pages gate set plus edge/root; private originals remain an owner-local audit. |
+| L3-1 hosting | Draft | https://github.com/Hrezaii95/german-learning-exam/pull/3 | Local routing/security/offline and deploy dry run verified; no live deployment. |
+| L3-2 auth | Draft | https://github.com/Hrezaii95/german-learning-exam/pull/18 | Argon2id, schema, secure sessions, account controls and security regressions implemented. |
+| L3-3 seed | Draft | https://github.com/Hrezaii95/german-learning-exam/pull/19 | Real local D1 seed twice; all five accounts authenticate. |
+| L3-4 sync | Draft | https://github.com/Hrezaii95/german-learning-exam/pull/21 | Sixteen sync tests and real offline/cross-device mounted-view refresh pass. |
+| L3-5 classes | Draft | https://github.com/Hrezaii95/german-learning-exam/pull/22 | Scoped classes, assignments, derived progress, extras and transactional role checks pass. |
+| L3-6 dashboards | Draft | https://github.com/Hrezaii95/german-learning-exam/pull/23 | Student/teacher/admin UI/API implemented; Lane 1 must update the obsolete normal-smoke dashboard assertion. |
+| L3-7 go-live | Draft | https://github.com/Hrezaii95/german-learning-exam/pull/25 | Owner workflow, rollback, move banner and actual local release rehearsal twice pass; no remote mutation. |
 
 ## Orchestrator decisions applied
 
-Read the decisions at the end of `origin/claude/german-webapp-audit-game-i0plj0:docs/lanes/lane-3-platform.md` (b04660bf).
+Read `origin/claude/german-webapp-audit-game-i0plj0:docs/lanes/lane-3-platform.md` (b04660bf).
 
-- Use Argon2id PHC, m=19,456 KiB, t=2, p=1, fresh 16-byte salt, 32-byte digest. The PBKDF2 runtime conflict is resolved; no hashing downgrade or pepper fallback is used.
-- CI mirrors `deploy-pages.yml` plus edge/root checks. The full 454-private-original source audit remains a documented **local owner-machine gate**, not a failing fresh-checkout CI step.
-- Lane 1 fixes lesson links 010–012. Keep every assertion; exactly those three failures are allowed on Lane 3 branches, and must be green on the combined branch. No Lane 1 source edits or exemptions.
+- Argon2id PHC, m=19,456 KiB, t=2, p=1, fresh 16-byte salt and 32-byte digest. No PBKDF2 downgrade or pepper fallback.
+- CI mirrors `deploy-pages.yml` plus edge/root checks. The complete audit requiring 454 private originals remains a local owner-machine gate, not a failing fresh-checkout CI step.
+- Lane 1 owns lesson links 010–012. Every assertion is retained: exactly those three root-smoke failures are allowed on this lane, and must be green after integration.
 
-## Current verification
+## Verification
 
-- Local workerd with precompiled Wasm: independent Argon2id output agrees across four successive hashes; sampled CPU averages 152.08 ms/hash, request wall averages 164.17 ms/hash, including memory wiping. Local target <300 ms passes. Production Paid hardware is not measured.
-- Auth: 19 tests pass, including concurrent login/reset, transactional password/deletion failures, bounded legacy upgrades, atomic rate limits and Wasm wiping. Middleware: two cookie rotation/sliding tests pass.
-- Seed: seven tests pass, including real Miniflare D1 seeding twice and all five temporary accounts signing in. Actual local Wrangler D1 rehearsal also passes. Random test credentials are memory-only and never printed or committed.
-- Sync: engine/SQLite/browser fixtures pass; cross-tab review is still in progress. Anonymous initial/repeated cleanup regression is fixed.
-- Classes/admin: 16 SQLite tests pass; independent role-mutation/metrics review is in progress.
-- Release: nine tests pass, including no-store/private response handling and cleanup of smoke-created sessions. Injected-runner workflow rehearsal passes twice (simulation, not a cloud deployment).
-- UI: 11 tests pass. Combined typechecks, full application/Pages/root gates and browser journeys are underway; no final green claim yet.
-- Historical L3-1 baseline: 1,225 app tests, 886 web tests, normal/Pages exports, audits, local Worker routing/security, Chromium mobile hydration/CSP/offline and deploy dry-run passed. These precede the new auth/sync/dashboard code and are not a claim that the expanded candidate is verified yet.
+- **116 platform tests pass**: auth/session/middleware, Wasm wiping, real Miniflare D1 seed/logins, sync/SQLite/browser isolation, class/admin authorization and rollback, UI runtime/CSV, move banner and release control flow.
+- **1,225 application tests and 886 web tests pass**. Edge/platform/web/web-test typechecks, lint and publication validation pass. Normal production build and default-dev smoke pass. Production dependency audit reports zero vulnerabilities; pronunciation audit passes.
+- Root export builds 1,636 pages. Root smoke verifies 191 byte-hashed precache URLs, then real local Wrangler serves 1,634 page routes and 518 assets with security headers, API JSON and honest 404s. Its final result is red on **exactly** `/lessons/010/`, `/lessons/011/`, `/lessons/012/`.
+- Final Pages export builds 1,636 pages. Its manifest/HTTP smoke passes (128 manifest routes, 38 HTTP sample routes plus assets/404/game markers). Learner-language audit has zero findings; offline audit verifies 185 precache entries; all 591 Word Cards, 989 audio forms and 722 exported card routes pass; attribution audit has zero failures. Admin review copy was corrected to clear the language gate.
+- Actual local HTTPS/D1/Chromium passes all **11 phases**: teacher class/assignment creation; student joining and book position; role denial; existing-lesson global runtime; offline Save to a fresh device; offline note replay into the first device's already-mounted Saved view; logout restoring anonymous data and revoking its session; forced admin password change and cookie rotation; no private API caches, no-store policy and zero browser runtime errors.
+- Actual `release()` rehearsal passes **twice** against isolated real local D1: two migration/seed runs, four actual Wrangler deploy dry runs, local pages/headers/version/404 checks and four student/teacher sign-ins and revocations. Each run preserves five users, five identities, one class, three members and zero sessions. D1 registry discovery/create and EU metadata are explicit fixtures; actual EU placement, DNS/TLS and deployment are not claimed.
+- Independent Argon2id implementations agree across four successive local workerd hashes. Sampled CPU averages **152.08 ms/hash**, request wall time **164.17 ms/hash**, including memory wiping: local target <300 ms passes. Production Paid CPU is not measured.
+- Draft snapshots were independently checked for syntax, relative imports and declared dependencies; all publication omissions were corrected and reverified on the item refs.
+
+## Gates still requiring integration
+
+1. The unchanged Lane 1-owned `platform/apps/web/scripts/smoke-canonical-routes.mjs` places `/dashboard` in its future-route 404 list (around line 231). L3-6 now correctly returns 200. Move only that route into successful learner-route checks; preserve malformed/unknown 404 assertions. Latest inspected Lane 1 spec-docs commit 3ef71038 still has the old assertion. This failure is separate from the three permitted lesson links and blocks deployment until fixed.
+2. Integrate Lane 1's lesson 010–012 corrections and rerun every combined-branch gate.
+3. Run the full private-original source audit on the archive-bearing owner machine; its absence here is not reported as a pass.
 
 ## Working and integration boundaries
 
-No merges, real Cloudflare resources, secrets, publication changes, game internals or other lanes' source files are changed. Only the checkpoint branch `lane3/main` and separate item drafts are published. Optional Lane 2 stores/panels are integrated structurally with a practice-link fallback while their modules are absent. AccountSlot replaces Lane 1's already-created stub when the owner combines the foundation and platform slices; nav/shell remain Lane 1-owned.
+No merges, live Cloudflare resources, secrets, shell/nav edits, game internals or other lanes' source changes. Item branches carry prerequisite commits because all drafts target `codex/live-alpha`; review the item commit/series and integrate in dependency order. AccountSlot replaces Lane 1's already-created foundation stub when combined. Optional Lane 2 panels use the contract's practice-link fallback while absent; external game stores require an account-isolated bridge before registration.
 
-Builds and typechecks run sequentially. This host refuses the tsx CLI IPC socket, so previously documented direct `node --import tsx` equivalents are used where necessary. Current Wrangler port discovery also needs a temporary loopback-only network-interface adapter; Worker/Wasm/database code stays unchanged.
+Builds and typechecks run sequentially. This host refuses tsx CLI IPC, so direct `node --import tsx` equivalents are used. Wrangler port discovery needs a temporary loopback-only interface adapter. The host's export-copy race required cleaning ignored output and restamping it with the existing finalizer; final root/Pages byte and offline checks pass. These local adapters are not committed, and Worker/Wasm/database code is unchanged by them. Generated audits outside this lane are restored after reading their results.
 
 ## Owner-only steps
 
-1. Review and merge approved item PRs in dependency order; this lane never merges.
-2. Clear the combined-branch lesson-link checks with Lane 1 and run the full source-manifest audit on the archive-bearing owner machine.
-3. Verify active `learnilabs.com` zone and Workers Paid (the static export already exceeds the free asset count).
-4. Add only `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`, and `SEED_ACCOUNTS_JSON` as GitHub repository secrets. Never put credentials in PRs or files.
-5. Ensure Actions is available. The repo default branch is currently `master`; after integration, set the default to `codex/live-alpha` so GitHub exposes the new manual Go live workflow.
-6. Run Go live on `codex/live-alpha` as described in `docs/platform/GO-LIVE.md`. No live deployment is claimed by this lane.
-7. German-language approval remains human-owned. Optional `GERMAN_REVIEWER_IDS` server configuration grants qualified review; ordinary admin access never silently promotes content.
+1. Review and integrate approved drafts in order: CI #6, hosting #3, auth #18, seed #19, sync #21, classes #22, dashboards #23, go-live #25. This lane never merges.
+2. Complete the Lane 1 normal-smoke and lesson-link handoffs; resolve AccountSlot/nav with its foundation and optional Lane 2 contracts; require all combined gates green.
+3. Run the private-source audit with the archived originals. Qualified German approval remains human-owned; optional `GERMAN_REVIEWER_IDS` grants only qualified review, never ordinary-admin self-approval.
+4. Verify active `learnilabs.com` zone and Workers Paid (the export exceeds the free asset limit).
+5. Add exactly `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`, and `SEED_ACCOUNTS_JSON` as GitHub repository secrets. Never put credentials in files or PRs.
+6. After integration, expose the manual workflow on the default branch (currently `master`; documented setting is `codex/live-alpha`).
+7. Run Go live on `codex/live-alpha` per `docs/platform/GO-LIVE.md`. No live deployment is claimed by this lane.

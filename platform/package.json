@@ -42,7 +42,10 @@
     "typecheck:edge": "npm run typecheck -w @german-learning/edge",
     "test:edge": "npm test -w @german-learning/edge",
     "deploy:cloudflare": "wrangler deploy --config apps/edge/wrangler.jsonc --env \"\"",
-    "smoke:cloudflare:browser": "node apps/edge/scripts/smoke-browser.mjs"
+    "smoke:cloudflare:browser": "node apps/edge/scripts/smoke-browser.mjs",
+    "measure:password": "node apps/edge/scripts/measure-argon2.mjs",
+    "rehearse:go-live": "node apps/edge/scripts/rehearse-go-live.mjs",
+    "test:sync": "node --import tsx --test packages/sync/tests/*.test.ts"
   },
   "devDependencies": {
     "@playwright/test": "^1.62.1",
@@ -57,11 +60,13 @@
     "eslint-plugin-react-hooks": "^6.1.1",
     "globals": "^16.5.0",
     "jsdom": "^30.0.1",
+    "miniflare": "5.20261019.1-beta",
     "tsx": "^4.19.3",
     "typescript": "^5.8.2",
     "typescript-eslint": "^8.67.0",
     "vitest": "^3.0.8",
-    "wrangler": "4.151.3"
+    "wrangler": "4.151.3",
+    "ws": "8.21.0"
   },
   "engines": {
     "node": ">=20.9.0"

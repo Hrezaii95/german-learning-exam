@@ -1,13 +1,14 @@
 /** Root-path static export; no deployment, credentials or tracked web edits. */
 import { execFileSync } from "node:child_process";
 import { createRequire } from "node:module";
-import { existsSync, mkdirSync, rmSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { createPagesBuildController, type PagesBuildController } from "../../web/scripts/build-pages-lib.js";
 import { normalizeExportSegments } from "../../web/scripts/normalize-export-segments.js";
 import { finalizeOfflineExport, summarizeOfflineExport } from "../../web/scripts/offline-export.js";
 import { SECURITY_HEADERS } from "../src/security.js";
+import { protectPrivateResponses } from "./private-worker.js";
 
 /**
  * Restore only mutations this build owns. Failed recovery deliberately leaves
@@ -66,6 +67,8 @@ async function main(): Promise<void> {
       const headers = Object.entries(SECURITY_HEADERS).map(([key, value]) => `  ${key}: ${value}`).join("\n");
       writeFileSync(join(outDir, "_headers"), `/*\n${headers}\n\n/sw.js\n  Cache-Control: no-cache\n  Service-Worker-Allowed: /\n`);
       console.log(summarizeOfflineExport(finalizeOfflineExport(outDir, "")));
+      const workerPath = join(outDir, "sw.js");
+      writeFileSync(workerPath, protectPrivateResponses(readFileSync(workerPath, "utf8")));
       console.log("[build:cloudflare] Root export ready; no resources created");
     });
   } finally {
