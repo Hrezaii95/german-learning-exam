@@ -6,7 +6,7 @@ const output=resolve('../research/country-map',process.env.STUDY_TEST_LABEL??'de
 const browser=await chromium.launch();const page=await browser.newPage({viewport:{width:1440,height:1000},serviceWorkers:'block'});page.setDefaultTimeout(15000);page.setDefaultNavigationTimeout(45000);
 const checks=[],errors=[];const assert=(value,message)=>{if(!value)throw Error(message);checks.push(message);};page.on('pageerror',e=>errors.push(e.message));
 try{
- await page.goto(`${base}/cheat-sheets/`,{waitUntil:'networkidle'});
+ await page.goto(`${base}/cheat-sheets/countries/`,{waitUntil:'networkidle'});
  assert(await page.locator('[data-map-country]').count()===41,'Map has exactly 41 selectable study country names');
  assert(await page.locator('[data-chart-country]').count()===41,'Memory chart shows all 41 names');
  assert(await page.locator('.country-row .country-flag').count()===41,'All country index entries have flags');

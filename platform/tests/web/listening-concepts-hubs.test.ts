@@ -12,7 +12,8 @@ import {
   projectListeningHubExperience,
 } from "../../apps/web/lib/content/hub-experiences.js";
 import { projectPublishedLearnerHubs } from "../../apps/web/lib/content/hub-project.js";
-import type { LearnerHubProjection } from "../../apps/web/lib/content/hub-types.js";
+import type { LearnerConceptsHubExperience, LearnerHubProjection } from "../../apps/web/lib/content/hub-types.js";
+import {studyUnits,type StudyUnit} from "../../apps/web/lib/study/course-lessons";
 
 vi.mock("next/link", () => ({
   default: function MockLink({
@@ -142,6 +143,8 @@ describe("Listening and Concepts learner hub UI", () => {
   let HubListView: (props: {
     hub: LearnerHubProjection["hubs"][number];
     searchParams: Record<string, string | string[] | undefined>;
+    units?:StudyUnit[];
+    connections?:LearnerConceptsHubExperience;
   }) => ReactNode;
 
   beforeAll(async () => {
@@ -185,5 +188,22 @@ describe("Listening and Concepts learner hub UI", () => {
     expect(html).toContain('href="/listening?');
     expect(html).toMatch(/href="\/lessons\/02\/activity\/id-[0-9a-f]+"/);
     expect(html).not.toContain("Nothing here yet");
+  });
+
+  it("keeps the six published learning paths and rule explorer together on canonical Grammar",()=>{
+    const connections=hubs.hubsById.concepts.experience;
+    if(connections?.kind!=="concepts")throw new Error("published concepts experience is required");
+    const html=renderToStaticMarkup(createElement(HubListView,{hub:hubs.hubsById.grammar,units:studyUnits,connections,searchParams:{}}));
+    expect((html.match(/<h1\b/g)??[])).toHaveLength(1);
+    expect(html).toContain("From a rule to a sentence");
+    expect(html).toContain('id="connected-learning-paths"');
+    expect((html.match(/data-hub-card="concepts"/g)??[])).toHaveLength(6);
+    expect(html).toContain('data-hub-card="grammar"');
+    for(const topic of connections.topics)expect(html).toContain(topic.displayLabel.replace(/&/g,"&amp;"));
+    const filtered=renderToStaticMarkup(createElement(HubListView,{hub:hubs.hubsById.grammar,units:studyUnits,connections,searchParams:{q:"professions",lesson:"02"}}));
+    expect((filtered.match(/data-hub-card="concepts"/g)??[])).toHaveLength(1);
+    expect(filtered).toContain("Professions, person forms &amp; present tense");
+    expect(filtered).not.toContain("No matches");
+    expect(filtered).toMatch(/href="\/lessons\/02\/activity\/id-[0-9a-f]+"/);
   });
 });

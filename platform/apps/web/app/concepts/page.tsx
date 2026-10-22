@@ -1,11 +1,7 @@
-import type { Metadata } from "next";
-import { HubRoutePage } from "@/components/hubs/HubRoutePage";
-import { getHubById } from "@/lib/content/access";
-import { hubPageMetadata } from "@/lib/content/page-metadata";
+import { ShellLayout } from "@/components/shell/ShellLayout";
+import { StaticHubRedirect } from "@/components/hubs/StaticHubRedirect";
 
-/** Title and description come from the hub itself, so they cannot drift. */
-export const metadata: Metadata = hubPageMetadata(getHubById("concepts"));
-
-export default function ConceptsPage() {
-  return <HubRoutePage hubId="concepts" />;
+export const metadata = { title: "Grammar", description: "Grammar patterns and their connected vocabulary." };
+export default function Page() {
+  return <ShellLayout current="grammar"><StaticHubRedirect href="/grammar" label="Grammar"/></ShellLayout>;
 }

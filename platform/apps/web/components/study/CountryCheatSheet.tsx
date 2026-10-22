@@ -1,16 +1,16 @@
 "use client";
 
+import { Icon } from "@/components/media/Icon";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { countries, countryGroups, countryName, countryFrom, countryWhere, countryTo, spokenLanguage, type Country, type CountryGroup } from "@/lib/study/countries";
 import { GermanText, SaveButton, useStudy } from "./StudyProvider";
 import { LineAudio } from "./StudyAudio";
-import { CheatSheetNav } from "./CheatSheetNav";
+import { CheatSheetFrame } from "./CheatSheetFrame";
 import { CountryFlag } from "./CountryFlag";
 import {useStudyScope,StudyScopeNotice} from "./StudyScope";
 import {countryStudyTags} from "@/lib/study/sheet-scope";
 import { CountryOverview } from "./CountryOverview";
-import { CountryPrintSummary } from "./CheatSheetPrint";
 import {countryRecallQuestions,savedCountry as countryReviewItem} from "@/lib/study/sheet-recall";
 import {SheetRecall} from "./SheetRecall";
 import {appendNavigationContext} from "@/lib/content/navigation-context";
@@ -35,7 +35,7 @@ export function CountryCheatSheet({ speech, cardLinks }: { speech: Record<string
   }, []);
   const study = useStudy();
   const savedCountry=(country:Country)=>countryReviewItem(country,study?.dictionary,speech);
-  const cardHref=(id:string)=>appendNavigationContext(cardLinks[id]!,{entryContext:"hub",returnPath:"/cheat-sheets",resultId:`country-${id}`});
+  const cardHref=(id:string)=>appendNavigationContext(cardLinks[id]!,{entryContext:"hub",returnPath:"/cheat-sheets/countries",resultId:`country-${id}`});
   const {matches}=useStudyScope();
   const scopedCountries=countries.filter(c=>matches(countryStudyTags(c,study?.dictionary)));
   const current = countries.find(c => c.id === chosen)!;
@@ -44,13 +44,7 @@ export function CountryCheatSheet({ speech, cardLinks }: { speech: Record<string
   const clip = (text: string) => <LineAudio text={text} src={speech[text]} compact />;
   const questions=countryRecallQuestions(visible,study?.dictionary,speech);
 
-  return <div className="country-sheet">
-    <CheatSheetNav current="countries"/>
-    <header className="country-heading">
-      <div><p className="study-eyebrow">Cheat sheets · 01 / Your language passport</p><h1>Countries, without the guesswork.</h1>
-        <p>Learn the country. Keep its color. Let <b lang="de">aus</b> change the article.</p></div>
-      <button type="button" className="study-secondary country-print" onClick={() => window.print()}>Print cheat sheet</button>
-    </header>
+  return <CheatSheetFrame current="countries" className="country-sheet" eyebrow="Your language passport" title="Countries, without the guesswork." lead={<>Learn the country. Keep its color. Let <b lang="de">aus</b> change the article.</>}>
     <nav className="country-jump" aria-label="Cheat sheet sections">
       <Link href="#country-overview">Map & flag overview</Link>
       <Link href="#country-patterns">The 4 patterns</Link><Link href="#country-passport">Build a sentence</Link><Link href="#country-index">All {countries.length} countries</Link><Link href="#country-practice">Test yourself</Link>
@@ -88,7 +82,7 @@ export function CountryCheatSheet({ speech, cardLinks }: { speech: Record<string
         <div className="country-direction"><b>●</b><div><h3>Wo? <span>Where?</span></h3><p><GermanText text={`Ich wohne ${countryWhere(current)}.`}/>{clip(`Ich wohne ${countryWhere(current)}.`)}</p><small>Location → in + dative</small></div></div>
         <div className="country-direction"><b>↘</b><div><h3>Wohin? <span>Where to?</span></h3><p><GermanText text={`Ich fahre ${countryTo(current)}.`}/>{clip(`Ich fahre ${countryTo(current)}.`)}</p><small>No article → nach. With an article → in + accusative.</small></div></div>
         {current.note && <p className="country-note">{current.note}</p>}
-        {current.id === "IR" && <p className="country-source-note">Iran also works without an article: <b lang="de">aus Iran · in Iran · nach Iran</b>. <a href="https://www.duden.de/rechtschreibung/Iran" target="_blank" rel="noreferrer">Duden ↗</a></p>}
+        {current.id === "IR" && <p className="country-source-note">Iran also works without an article: <b lang="de">aus Iran · in Iran · nach Iran</b>. <a href="https://www.duden.de/rechtschreibung/Iran" target="_blank" rel="noreferrer">Duden <Icon name="external"/></a></p>}
       </div>
     </section>
 
@@ -113,7 +107,7 @@ export function CountryCheatSheet({ speech, cardLinks }: { speech: Record<string
           <div className="country-answer">{hidden ? <button type="button" className="study-secondary" onClick={()=>setRevealed([...revealed,c.id])} aria-label={`Reveal ${c.name}`}>Reveal origin & language</button> : <><strong><GermanText text={countryFrom(c)}/></strong>{clip(`Ich komme ${countryFrom(c)}.`)}<small>Ich komme …</small></>}</div>
           <div className="country-languages">{hidden ? <span className="muted">Try saying it first.</span> : c.languages.map(language => <span key={language}><GermanText text={language}/>{clip(spokenLanguage(language))}</span>)}</div>
           <div className="country-row-save"><SaveButton compact item={{...savedCountry(c),audio:speech[`Ich komme ${countryFrom(c)}.`] ?? null}} /></div>
-          {!hidden && <details className="country-row-more"><summary>Memory cue & more</summary><p>{c.note ?? `No article in ordinary use: ${countryFrom(c)}. The country name is neuter, but you normally leave das out.`}</p><p lang="de">{countryWhere(c)} · {countryTo(c)}</p>{cardLinks[c.id] && <Link href={cardHref(c.id)}>Open vocabulary card →</Link>}</details>}
+          {!hidden && <details className="country-row-more"><summary>Memory cue & more</summary><p>{c.note ?? `No article in ordinary use: ${countryFrom(c)}. The country name is neuter, but you normally leave das out.`}</p><p lang="de">{countryWhere(c)} · {countryTo(c)}</p>{cardLinks[c.id] && <Link href={cardHref(c.id)}>Open vocabulary card <Icon name="arrow"/></Link>}</details>}
         </article>;})}
         {!visible.length && <p className="country-empty">No countries match. Try another search or choose All patterns.</p>}
       </div>
@@ -127,9 +121,9 @@ export function CountryCheatSheet({ speech, cardLinks }: { speech: Record<string
       <p>{countries.length} country names: all 28 country cards from the existing study collection, including Iran, plus 13 additional country names found in the supplied coursebook and workbook. Includes geographical names used in the book, such as England and Great Britain. Momente course material © Hueber Verlag. Grammar explanations, memory cues and English teaching translations were written for this sheet.</p>
       <p>The language lists are learning examples, not exhaustive official-language lists. Audio is synthesized German speech.</p>
       <ul><li><a href="https://grammis.ids-mannheim.de/fragen/5" target="_blank" rel="noreferrer">Leibniz Institute for the German Language: country names and grammatical gender</a></li><li><a href="https://www.duden.de/rechtschreibung/Iran" target="_blank" rel="noreferrer">Duden: Iran with and without an article</a></li><li><a href="https://gfds.de/heisst-es-im-iran-oder-in-iran/" target="_blank" rel="noreferrer">GfdS: im Iran / in Iran</a></li><li><a href="https://www.plurilingua.admin.ch/dam/en/sd-web/wgN8O5waA2LA/20240717_Swiss%20plurilingulism%20%E2%80%93%20a%20brief%20guide.pdf" target="_blank" rel="noreferrer">Swiss Confederation: four national languages</a></li><li><a href="https://home.eritreaembassy.ch/discover-eritrea/fact-and-figures" target="_blank" rel="noreferrer">Eritrean Embassy: multilingualism and working languages</a></li><li><a href="https://www.statssa.gov.za/publications/03-00-22/03-00-222024.pdf" target="_blank" rel="noreferrer">Statistics South Africa: languages</a></li></ul>
-      <Link href="/references">Course sources & credits →</Link>
+      <Link href="/references">Course sources & credits <Icon name="arrow"/></Link>
     </details>
     <p className="country-credit">Country coverage: Momente coursebook, workbook and study collection · © Hueber Verlag. Explanations and memory cues created for your study sheet.</p>
-    <CountryPrintSummary/>
-  </div>;
+
+  </CheatSheetFrame>;
 }

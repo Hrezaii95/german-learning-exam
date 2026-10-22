@@ -1,4 +1,5 @@
 import { chromium } from "@playwright/test";
+import {expectVocabularyTags} from "./canonical-libraries.mjs";
 import { writeFile, mkdir } from "node:fs/promises";
 import { resolve } from "node:path";
 const base = (process.env.STUDY_TEST_BASE ?? "http://localhost:3210").replace(/\/$/, "");
@@ -27,12 +28,14 @@ try {
   assert((await page.getByRole("dialog").innerText()).includes("No local definition"), "Unknown dictionary word has an honest no-match state");
   await page.keyboard.press("Escape");
   await page.goto(`${base}/vocabulary/?lesson=04`, { waitUntil: "networkidle" });
-  await page.waitForFunction(() => document.querySelectorAll("[data-word-family]").length === 45);
-  assert(await page.locator("[data-word-family]").count() === 45, "Lesson 4 filter in the existing vocabulary hub returns all 45 cards");
-  await page.getByRole("link", { name: "Study this word family" }).first().click();
-  await page.waitForURL(/\/vocabulary\/l4-/);
+  assert(await expectVocabularyTags(page,["Lesson 4"])>0,"Every filtered vocabulary entry carries Lesson 4");
+  const chair=page.locator("[data-subject-entry]").filter({hasText:"der Stuhl"}).first();
+  if(await chair.getAttribute("aria-expanded")!=="true")await chair.click();
+  await page.locator(".subject-word-dropdown").getByRole("link",{name:"Full vocabulary card",exact:true}).click();
+  await page.waitForURL(/\/vocabulary\/[^/?]+\/?\?nav=/);
   await page.waitForLoadState("networkidle");
-  assert(new URL(page.url()).searchParams.get("nav")?.includes('"04"'), "Study-card navigation preserves Lesson 4 filter");
+  const navigation=JSON.parse(new URL(page.url()).searchParams.get("nav"));
+  assert(navigation.returnPath==="/cheat-sheets/vocabulary"&&JSON.stringify(navigation.sheetLessonFilter)==="[4]", "Study-card navigation preserves the canonical vocabulary return and Lesson 4 filter");
   await page.goto(`${base}/grammar/`, { waitUntil: "networkidle" });
   await page.locator("[data-hub-card=grammar] .study-save").first().click();
   await page.goto(`${base}/saved/`, { waitUntil: "networkidle" });

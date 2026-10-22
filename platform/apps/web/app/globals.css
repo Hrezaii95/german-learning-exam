@@ -1,10 +1,23 @@
 /* Design tokens — calm premium learning workspace (docs/06) */
 :root {
+  /* Lane contracts §1 — shared reference palette. */
+  --tone-masc: #245fa7;
+  --tone-fem: #b82e4c;
+  --tone-neut: #237149;
+  --tone-plural: #8c4daa;
+  --tone-plain: #3d5d55;
+  --paper: #fffdf8;
+  --line: #e4ddd2;
+  --action: #345d4c;
+  --chip-ending-bg: #f8e1a1;
+  --chip-ending-line: #b27b19;
+  --chip-umlaut-bg: #dfd6f2;
+  --chip-umlaut-line: #8760af;
   --canvas: #f3efe8;
   --surface: #ffffff;
   --surface-muted: #f7f4ef;
-  --ink: #1c1a24;
-  --ink-muted: #5c5868;
+  --ink: #203536;
+  --ink-muted: #596660;
   --ink-subtle: #7a7588;
   --border: #e4ddd2;
   --border-strong: #d2c9ba;
@@ -14,29 +27,27 @@
   --nav-active: #ffffff;
   --brand: #28634f;
   --brand-ink: #ffffff;
-  --gender-m: #246bfd;
-  --gender-f: #e64c86;
-  --gender-n: #2e9d68;
-  --gender-pl: #7957d5;
-  /* Ink variants of the gender hues, for TEXT on the tinted gender plates.
-     The identifying hue above is unchanged and still carries the swatch fill,
-     the border and the shape glyph; only the letterforms darken. Measured on
-     the 8% tints these badges use: masculine 7.0:1, feminine 5.9:1, neuter
-     5.3:1 — the raw hues measured 4.10 / 3.32 / 3.13 and failed WCAG 1.4.3 AA
-     on the product's most-repeated teaching cue. These are exactly the tones
-     `.visual-cue[data-tone]` already uses one level away. */
-  --gender-m-ink: #174dac;
-  --gender-f-ink: #a92f5d;
-  --gender-n-ink: #1f744d;
-  /* Plural needs no ink variant: `--gender-pl` is only ever used for text on
-     `--surface-muted` (5.1:1 large, 4.6:1 small), which already clears AA. */
+  /* Compatibility aliases: every article surface uses the reference palette. */
+  --gender-m: var(--tone-masc, #245fa7);
+  --gender-f: var(--tone-fem, #b82e4c);
+  --gender-n: var(--tone-neut, #237149);
+  --gender-pl: var(--tone-plural, #8c4daa);
+  --gender-m-ink: var(--gender-m);
+  --gender-f-ink: var(--gender-f);
+  --gender-n-ink: var(--gender-n);
   --rule-regular: #16796f;
   --rule-special: #d8901c;
   --rule-irregular: #c23b6e;
   --focus: #28634f;
   --danger: #b42318;
-  --radius: 18px;
-  --radius-sm: 12px;
+  --radius: 16px;
+  --radius-sm: 9px;
+  --control-radius: 9px;
+  --control-height: 44px;
+  --control-padding: 11px 16px;
+  --control-weight: 650;
+  --chip-radius: 7px;
+  --chip-height: 40px;
   --shadow: 0 1px 2px rgba(28, 26, 36, 0.06), 0 8px 24px rgba(28, 26, 36, 0.04);
   --font: InterVariable, "Segoe UI", "Noto Sans", Arial, sans-serif;
   --space-1: 4px;
@@ -58,12 +69,15 @@
   --font-weight-body: 450;
   --font-weight-medium: 600;
   --font-weight-strong: 720;
-  --text-meta: 0.8125rem;
+  --text-eyebrow: 11px;
+  --text-meta: 0.77rem;
   --text-ui: 0.875rem;
   --text-body: 1rem;
-  --text-german-card: 1.125rem;
-  --text-section: 1.375rem;
-  --text-page: clamp(2rem, 3vw, 2.5rem);
+  --text-entry: 1rem;
+  --text-german-card: var(--text-entry);
+  --text-section: 1.3rem;
+  --text-page: clamp(1.75rem, 3vw, 2.5rem);
+  --text-sheet-title: clamp(2.1rem, 4.5vw, 3.6rem);
   --content-max-reading: 52rem;
   --content-max-browse: 76rem;
   --surface-raised: #ffffff;
@@ -72,7 +86,7 @@
   --border-soft: #ebe5dc;
   --shadow-raised: 0 1px 2px rgba(28, 26, 36, 0.06), 0 12px 32px rgba(28, 26, 36, 0.07);
   --shadow-interactive: 0 10px 24px rgba(47, 35, 91, 0.1);
-  --focus-ring: #28634f;
+  --focus-ring: #345d4c;
   --motion-fast: 140ms;
   --motion-base: 200ms;
   --ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -217,11 +231,11 @@
   background: var(--surface-muted);
 }
 
-.rich-visual__labels li[data-gender="masculine"] {
+.rich-visual__labels li[data-tone="male"] {
   border-left-color: var(--gender-m);
 }
 
-.rich-visual__labels li[data-gender="feminine"] {
+.rich-visual__labels li[data-tone="female"] {
   border-left-color: var(--gender-f);
 }
 
@@ -235,14 +249,15 @@
   font-size: 0.78rem;
 }
 
-@media (min-width: 760px) {
+/* Reference responsive widths; range syntax keeps the shell bands adjacent. */
+@media screen and (min-width: 760px){
   .rich-visual__caption {
     grid-template-columns: minmax(14rem, 0.72fr) minmax(0, 1.28fr);
     align-items: start;
   }
 }
 
-@media (max-width: 560px) {
+@media screen and (max-width: 580px){
   .rich-visual__media {
     aspect-ratio: 4 / 3;
   }
@@ -265,7 +280,7 @@
   }
 }
 
-@media (max-width: 380px) {
+@media screen and (max-width: 420px){
   .rich-visual__labels {
     grid-template-columns: 1fr;
   }
@@ -320,22 +335,22 @@
   overflow-wrap: anywhere;
 }
 
-.visual-cue[data-tone="masculine"] {
+.visual-cue[data-tone="male"] {
   border-color: color-mix(in srgb, var(--gender-m) 45%, var(--border));
   background: color-mix(in srgb, var(--gender-m) 9%, white);
-  color: #174dac;
+  color: var(--gender-m);
 }
 
-.visual-cue[data-tone="feminine"] {
+.visual-cue[data-tone="female"] {
   border-color: color-mix(in srgb, var(--gender-f) 45%, var(--border));
   background: color-mix(in srgb, var(--gender-f) 9%, white);
-  color: #a92f5d;
+  color: var(--gender-f);
 }
 
 .visual-cue[data-tone="plural"] {
   border-color: color-mix(in srgb, var(--gender-pl) 45%, var(--border));
   background: color-mix(in srgb, var(--gender-pl) 9%, white);
-  color: #5c3dad;
+  color: var(--gender-pl);
 }
 
 .visual-cue[data-tone="regular"] {
@@ -357,15 +372,15 @@
 }
 
 .visual-cue[data-tone="question"] {
-  border-color: color-mix(in srgb, var(--brand) 45%, var(--border));
-  background: color-mix(in srgb, var(--brand) 9%, white);
-  color: #4f32b5;
+  border-color: color-mix(in srgb, var(--action) 45%, var(--line));
+  background: color-mix(in srgb, var(--action) 7%, var(--paper));
+  color: var(--action);
 }
 
 .visual-cue[data-tone="answer"] {
-  border-color: color-mix(in srgb, var(--gender-n) 45%, var(--border));
-  background: color-mix(in srgb, var(--gender-n) 9%, white);
-  color: #1f744d;
+  border-color: color-mix(in srgb, var(--action) 45%, var(--line));
+  background: color-mix(in srgb, var(--action) 7%, var(--paper));
+  color: var(--action);
 }
 
 .visual-legend {
@@ -549,14 +564,14 @@
   gap: 0.3rem;
   min-width: 0;
   padding: 0.85rem;
-  border: 1px solid color-mix(in srgb, var(--gender-pl) 35%, var(--border));
+  border: 1px solid color-mix(in srgb, var(--action) 35%, var(--border));
   border-radius: 10px;
-  background: color-mix(in srgb, var(--gender-pl) 6%, white);
+  background: color-mix(in srgb, var(--action) 6%, white);
 }
 
 .number-map__bands strong {
   overflow-wrap: anywhere;
-  color: #5336a4;
+  color: var(--action);
   font-variant-numeric: tabular-nums;
 }
 
@@ -566,8 +581,8 @@
 }
 
 .number-map__bands .number-map__hundred {
-  border-color: var(--gender-pl);
-  background: var(--gender-pl);
+  border-color: var(--action);
+  background: var(--action);
   color: white;
 }
 
@@ -713,8 +728,8 @@
 }
 
 .dialogue-flow__bubble[data-role="answer"] {
-  border-color: color-mix(in srgb, var(--gender-n) 42%, var(--border));
-  background: color-mix(in srgb, var(--gender-n) 7%, white);
+  border-color: color-mix(in srgb, var(--action) 42%, var(--border));
+  background: color-mix(in srgb, var(--action) 7%, white);
 }
 
 .dialogue-flow__bubble > span {
@@ -755,9 +770,9 @@
   background: var(--surface-muted);
 }
 
-.noun-system__singular[data-gender="masculine"] { border-left: 5px solid var(--gender-m); }
-.noun-system__singular[data-gender="feminine"] { border-left: 5px solid var(--gender-f); }
-.noun-system__singular[data-gender="neuter"] { border-left: 5px solid var(--gender-n); }
+.noun-system__singular[data-tone="male"] { border-left: 5px solid var(--gender-m); }
+.noun-system__singular[data-tone="female"] { border-left: 5px solid var(--gender-f); }
+.noun-system__singular[data-tone="neuter"] { border-left: 5px solid var(--gender-n); }
 .noun-system__plural { border-left: 5px solid var(--gender-pl); }
 .noun-system__plural[data-status="not-published"] { border-left-style: dashed; }
 
@@ -885,7 +900,7 @@
   gap: 0.4rem;
 }
 
-@media (max-width: 900px) {
+@media screen and (max-width: 1000px){
   .visual-journey {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 0.65rem;
@@ -930,7 +945,7 @@
   }
 }
 
-@media (max-width: 640px) {
+@media screen and (max-width: 580px){
   .instructional-visual__header,
   .instructional-visual__body {
     padding: 1rem;
@@ -1033,7 +1048,7 @@
   box-shadow: inset 0 0 0 1px rgba(47, 107, 79, 0.25);
 }
 
-@media (max-width: 520px) {
+@media screen and (max-width: 580px){
   .learner-tag-grid .btn,
   .review-session > .btn {
     width: 100%;
@@ -1084,6 +1099,13 @@ a:hover {
 :focus-visible {
   outline: 3px solid var(--focus-ring);
   outline-offset: 3px;
+}
+
+/* A light underlay keeps the shared ring visible against dark navigation. */
+.shell-rail .nav-link:focus-visible,
+.shell-topnav .nav-link:focus-visible,
+.mobile-navigation > :focus-visible {
+  box-shadow: 0 0 0 6px var(--nav-ink);
 }
 
 .sr-only {
@@ -1254,15 +1276,26 @@ a:hover {
 
 .page-header h1 {
   margin: 0;
-  font-size: clamp(1.75rem, 2.4vw, 2.25rem);
-  line-height: 1.2;
-  letter-spacing: -0.02em;
+  color: var(--ink);
+  font-size: var(--text-page);
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+}
+
+.page-header > .dense {
+  margin: 0;
+  font-size: var(--text-eyebrow);
+  font-weight: 750;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
 .lede {
   margin: 0;
   max-width: 42rem;
   color: var(--ink-muted);
+  font-size: var(--text-body);
+  line-height: 1.6;
 }
 
 .card-grid {
@@ -1271,10 +1304,10 @@ a:hover {
 }
 
 .panel {
-  background: var(--surface);
-  border: 1px solid var(--border);
+  background: var(--paper);
+  border: 1px solid var(--line);
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  box-shadow: none;
   padding: var(--space-5);
 }
 
@@ -1282,6 +1315,10 @@ a:hover {
 .panel h3 {
   margin: 0 0 var(--space-3);
   line-height: 1.25;
+}
+
+.panel h2 {
+  font-size: var(--text-section);
 }
 
 .meta-row {
@@ -1293,43 +1330,57 @@ a:hover {
 .meta-chip {
   display: inline-flex;
   align-items: center;
-  min-height: 28px;
-  padding: 0.2rem 0.65rem;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  background: var(--surface-muted);
+  min-height: var(--chip-height);
+  padding: 8px 12px;
+  border-radius: var(--chip-radius);
+  border: 1px solid var(--line);
+  background: var(--paper);
   color: var(--ink-muted);
-  font-size: 0.8125rem;
+  font-size: var(--text-meta);
 }
 
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 44px;
-  padding: 0.7rem 1.1rem;
-  border-radius: 12px;
-  border: 1px solid transparent;
+  min-height: var(--control-height);
+  padding: var(--control-padding);
+  border-radius: var(--control-radius);
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--action);
   font: inherit;
-  font-weight: 600;
+  font-size: var(--text-ui);
+  font-weight: var(--control-weight);
+  line-height: 1.25;
   text-decoration: none;
   cursor: pointer;
 }
 
 .btn-primary {
-  background: var(--brand);
-  color: var(--brand-ink);
+  background: var(--action);
+  border-color: var(--action);
+  color: var(--paper);
 }
 
 .btn-primary:hover {
-  color: var(--brand-ink);
-  filter: brightness(1.05);
+  color: var(--paper);
+  background: color-mix(in srgb, var(--action) 88%, var(--ink));
 }
 
 .btn-secondary {
-  background: var(--surface);
-  border-color: var(--border-strong);
-  color: var(--ink);
+  background: var(--paper);
+  border-color: var(--line);
+  color: var(--action);
+}
+
+.btn-secondary:hover {
+  background: color-mix(in srgb, var(--action) 7%, var(--paper));
+}
+
+.btn[aria-pressed="true"] {
+  border-color: var(--action);
+  box-shadow: inset 0 -2px currentColor;
 }
 
 .stack {
@@ -1343,7 +1394,7 @@ a:hover {
 }
 
 .dense {
-  font-size: 0.8125rem;
+  font-size: var(--text-meta);
   color: var(--ink-muted);
 }
 
@@ -1434,8 +1485,8 @@ a:hover {
 }
 
 .hub-input:focus-visible {
-  outline: 2px solid color-mix(in srgb, var(--brand) 70%, white);
-  outline-offset: 2px;
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
 }
 
 .hub-filter-actions {
@@ -1524,7 +1575,7 @@ a:hover {
 }
 
 /* Desktop: persistent dark indigo side rail */
-@media (min-width: 1100px) {
+@media screen and (min-width: 1050px){
   .app-shell {
     display: grid;
     grid-template-columns: var(--rail-width) minmax(0, 1fr);
@@ -1558,7 +1609,7 @@ a:hover {
 }
 
 /* Tablet: compact top navigation */
-@media (min-width: 700px) and (max-width: 1099px) {
+@media screen and (min-width: 760px) and (width < 1050px){
   .shell-rail,
   .shell-bottomnav {
     display: none;
@@ -1593,7 +1644,7 @@ a:hover {
 }
 
 /* Mobile: sticky bottom navigation that never covers content */
-@media (max-width: 699px) {
+@media screen and (width < 760px){
   .shell-rail,
   .shell-topnav {
     display: none;
@@ -1665,15 +1716,14 @@ a:hover {
   font-weight: 650;
 }
 
-/* Text uses the ink token; the plate, border and glyph keep the raw hue, so
-   the gender stays identifiable by colour + shape + label exactly as before. */
-.gender-badge--masculine {
+/* Article text, swatch and plate share one semantic tone. */
+.gender-badge--male {
   color: var(--gender-m-ink);
   border-color: color-mix(in srgb, var(--gender-m) 35%, var(--border));
   background: color-mix(in srgb, var(--gender-m) 8%, white);
 }
 
-.gender-badge--feminine {
+.gender-badge--female {
   color: var(--gender-f-ink);
   border-color: color-mix(in srgb, var(--gender-f) 35%, var(--border));
   background: color-mix(in srgb, var(--gender-f) 8%, white);
@@ -1691,12 +1741,12 @@ a:hover {
   background: currentColor;
 }
 
-/* The swatch keeps the identifying hue rather than following the darker ink. */
-.gender-badge--masculine .gender-badge__shape {
+/* Shapes repeat the same article cue without relying on colour alone. */
+.gender-badge--male .gender-badge__shape {
   background: var(--gender-m);
 }
 
-.gender-badge--feminine .gender-badge__shape {
+.gender-badge--female .gender-badge__shape {
   background: var(--gender-f);
 }
 
@@ -1952,8 +2002,8 @@ a:hover {
 }
 
 .game-selector__card:focus-visible {
-  outline: 2px solid var(--focus-ring, #1c4b82);
-  outline-offset: 2px;
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
 }
 
 .game-selector__card--unavailable {
@@ -1993,8 +2043,8 @@ a:hover {
 }
 
 .game-flashcard:focus-visible {
-  outline: 2px solid var(--focus-ring, #1c4b82);
-  outline-offset: 2px;
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
 }
 
 .game-flashcard__text {
@@ -2071,8 +2121,8 @@ a:hover {
 }
 
 .game-token:focus-visible {
-  outline: 2px solid var(--focus-ring, #1c4b82);
-  outline-offset: 2px;
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
 }
 
 .game-actions {
@@ -2135,8 +2185,8 @@ a:hover {
 }
 
 .conversation-progress__btn:focus-visible {
-  outline: 2px solid var(--focus-ring);
-  outline-offset: 2px;
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
 }
 
 .conversation-progress__btn:disabled {
@@ -2201,7 +2251,7 @@ a:hover {
   gap: 0.65rem;
 }
 
-@media (max-width: 400px) {
+@media screen and (max-width: 420px){
   .game-selector__card,
   .game-flashcard,
   .game-choice__option {
@@ -2219,11 +2269,6 @@ a:hover {
   }
 }
 
-@media (min-resolution: 2dppx) {
-  .panel {
-    box-shadow: 0 1px 1px rgba(28, 26, 36, 0.05);
-  }
-}
 .workbook-audio__heading {
   display: flex;
   align-items: flex-start;
@@ -2266,7 +2311,7 @@ a:hover {
   padding-inline: 0.75rem;
 }
 
-@media (max-width: 960px) {
+@media screen and (max-width: 1000px){
   .workbook-audio__track {
     grid-template-columns: 1fr;
   }
@@ -2302,7 +2347,7 @@ a:hover {
 .infographic-panel__expand { display:inline-flex; flex-wrap:wrap; align-items:center; gap:6px; min-height:44px; margin-top:12px; }
 .infographic-panel__expand span { font-size:.8rem; }
 .infographic-panel__steps { display:none; }
-@media(max-width:699px) {
+@media screen and (width < 760px){
   .infographic-panel__desktop { display:none; }
   .infographic-panel__steps { display:grid; gap:12px; padding:0; list-style:none; }
   .infographic-panel__steps li { display:grid; gap:8px; padding:16px; border:1px solid var(--border); border-left:4px solid #446e5b; border-radius:10px; background:#fffefa; }
@@ -2443,14 +2488,14 @@ a:hover {
 .activity-choice:focus-within,
 .activity-confirmation:focus-within {
   outline: 3px solid var(--focus-ring);
-  outline-offset: 2px;
+  outline-offset: 3px;
 }
 
 .activity-feedback {
   border-color: var(--accent);
 }
 
-@media (max-width: 520px) {
+@media screen and (max-width: 580px){
   .activity-inline-actions .btn,
   .activity-question > .btn,
   .activity-listening-form > .btn {
@@ -2496,9 +2541,9 @@ a:hover {
 
 .studio-card__eyebrow {
   margin: 0;
-  font-size: var(--text-meta);
-  font-weight: var(--font-weight-medium);
-  letter-spacing: 0.06em;
+  font-size: var(--text-eyebrow);
+  font-weight: 750;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--ink-muted);
 }
@@ -2592,8 +2637,8 @@ a:hover {
   padding: var(--space-4) var(--space-5);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  background: var(--surface-raised);
-  box-shadow: var(--shadow);
+  background: var(--paper);
+  box-shadow: none;
 }
 
 .evidence-strip__heading {
@@ -2723,16 +2768,13 @@ a:hover {
   padding: var(--space-4);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  background: var(--surface-raised);
-  box-shadow: var(--shadow);
-  transition:
-    border-color var(--motion-fast) var(--ease-standard),
-    box-shadow var(--motion-base) var(--ease-standard);
+  background: var(--paper);
+  box-shadow: none;
+  transition: border-color var(--motion-fast) var(--ease-standard);
 }
 
 .tool-drawer:hover {
-  border-color: var(--border-strong);
-  box-shadow: var(--shadow-interactive);
+  border-color: var(--action);
 }
 
 /* Fallback ring for engines without :has(); refined to keyboard-only below. */
@@ -2850,7 +2892,7 @@ a:hover {
 /* Tablet (820px): course cards and drawers pair up; the studio board stays
    stacked so Continue keeps its dominance and the mission sits compactly
    below it, clear of the bottom navigation. */
-@media (min-width: 700px) {
+@media screen and (min-width: 760px){
   .course-cards,
   .tool-drawers {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2862,20 +2904,20 @@ a:hover {
 }
 
 /* Desktop rail breakpoint: six drawers become a 3x2 grid. */
-@media (min-width: 1100px) {
+@media screen and (min-width: 1050px){
   .tool-drawers {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
 /* Wide (1440px): first row splits 7/5 — dominant Continue, compact mission. */
-@media (min-width: 1180px) {
+@media screen and (min-width: 1280px){
   .studio-board {
     grid-template-columns: 7fr 5fr;
   }
 }
 
-@media (max-width: 699px) {
+@media screen and (width < 760px){
   .evidence-strip__list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--space-3);
@@ -2887,7 +2929,7 @@ a:hover {
   }
 }
 
-@media (max-width: 420px) {
+@media screen and (max-width: 420px){
   .evidence-strip {
     padding: var(--space-4);
   }
@@ -2932,22 +2974,19 @@ a:hover {
   padding: var(--space-4);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  background: var(--surface-raised);
-  box-shadow: var(--shadow);
-  transition:
-    border-color var(--motion-fast) var(--ease-standard),
-    box-shadow var(--motion-base) var(--ease-standard);
+  background: var(--paper);
+  box-shadow: none;
+  transition: border-color var(--motion-fast) var(--ease-standard);
 }
 
 .hub-card:hover {
-  border-color: var(--border-strong);
-  box-shadow: var(--shadow-interactive);
+  border-color: var(--action);
 }
 
 .hub-card__title {
   margin: 0;
   font-size: var(--text-german-card);
-  font-weight: var(--font-weight-strong);
+  font-weight: 650;
   line-height: 1.3;
   overflow-wrap: anywhere;
 }
@@ -3051,6 +3090,39 @@ a:hover {
   height: 100%;
   object-fit: cover;
 }
+
+/* Vocabulary shares the subject sheets' tone-coloured line drawing. */
+.subject-vocabulary-visual {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  vertical-align: middle;
+}
+.subject-vocabulary-visual svg { display: block; width: 100%; height: 100%; }
+
+.hub-card__visual {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  padding: var(--space-4);
+  color: var(--tone-plain);
+  background: var(--paper);
+}
+
+.hub-card__visual[data-tone="male"] { color: var(--tone-masc); }
+.hub-card__visual[data-tone="female"] { color: var(--tone-fem); }
+.hub-card__visual[data-tone="neuter"] { color: var(--tone-neut); }
+.hub-card__visual[data-tone="plural"] { color: var(--tone-plural); }
+.hub-card__visual :is(.subject-vocabulary-visual, .subject-icon) {
+  display: block;
+  width: min(100%, 160px);
+  max-height: 100%;
+  aspect-ratio: 1;
+}
+.hub-card__visual svg { display: block; width: 100%; height: 100%; }
+.rich-visual__media > .hub-card__visual { position: absolute; inset: 0; }
 
 /* --- Meaning plate ------------------------------------------------------- */
 
@@ -3158,38 +3230,7 @@ a:hover {
 }
 
 .meaning-plate__audio-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-  min-height: 44px;
-  min-width: 44px;
-  padding: 0.5rem 0.9rem;
-  border: 1px solid var(--border-strong);
-  border-radius: 12px;
-  background: var(--surface);
-  color: var(--ink);
-  font: inherit;
-  font-size: var(--text-ui);
-  font-weight: var(--font-weight-medium);
-  cursor: pointer;
-  transition:
-    border-color var(--motion-fast) var(--ease-standard),
-    color var(--motion-fast) var(--ease-standard);
-}
-
-.meaning-plate__audio-btn:hover {
-  border-color: var(--brand);
-  color: var(--brand);
-}
-
-.meaning-plate__audio-btn[data-audio-state="playing"] {
-  border-color: var(--brand);
-  color: var(--brand);
-}
-
-.meaning-plate__audio-glyph {
-  font-size: 0.7rem;
-  line-height: 1;
+  transition: border-color var(--motion-fast) var(--ease-standard);
 }
 
 /* --- Concept relationship mini-map --------------------------------------- */
@@ -3250,7 +3291,7 @@ a:hover {
 
 /* Mobile (360/390): the 1:1 plate would eat the viewport, so it relaxes to a
    readable block while keeping one surface and one border. */
-@media (max-width: 480px) {
+@media screen and (max-width: 480px){
   .meaning-plate--card {
     aspect-ratio: auto;
     min-block-size: 9.5rem;
@@ -3258,7 +3299,7 @@ a:hover {
 }
 
 /* Wide (1440): three result columns keep line length inside the browse max. */
-@media (min-width: 1240px) {
+@media screen and (min-width: 1280px){
   .card-grid.hub-results {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -3354,7 +3395,7 @@ a:hover {
   margin-top: var(--space-4);
 }
 
-@media (min-width: 700px) {
+@media screen and (min-width: 760px){
   .reference-list {
     gap: var(--space-5);
   }
@@ -3402,7 +3443,7 @@ a:hover {
   pointer-events: none;
 }
 
-@media (min-width: 900px) {
+@media screen and (min-width: 1000px){
   .offline-runtime {
     left: calc(var(--rail-width) + var(--space-5));
     right: auto;
@@ -3599,7 +3640,7 @@ a:hover {
 /* Two columns once there is room for them: the instrument's controls on the
    left, the clips on the right. Below this the same markup stacks, which is
    the honest mobile reading order — decide what to listen to, then listen. */
-@media (min-width: 1080px) {
+@media screen and (min-width: 1050px){
   .review-board {
     grid-template-columns: 22rem minmax(0, 1fr);
     align-items: start;

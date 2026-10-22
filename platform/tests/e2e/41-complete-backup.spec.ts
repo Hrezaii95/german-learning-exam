@@ -1,5 +1,18 @@
 import { readFile } from "node:fs/promises";
-import { expect, test } from "@playwright/test";
+import { expect, type Page, test } from "@playwright/test";
+import { readStorageJson, seedStorageJson, STUDY_STATE_KEY } from "./support/app";
+
+type StudySnapshot = {
+  version: number;
+  saved: Record<string, unknown>;
+  lessonSessions?: Record<string, { position: number }>;
+  reviewedProfessions?: string[];
+};
+const legacyProfession = "teacher-job:elektriker";
+
+async function expectLegacyProfession(page: Page, expected: string[]) {
+  await expect.poll(async () => (await readStorageJson<StudySnapshot>(page, STUDY_STATE_KEY))?.reviewedProfessions ?? []).toEqual(expected);
+}
 
 test("saved study, course progress and settings survive a complete backup round trip", async ({ page, browser, baseURL }, testInfo) => {
   test.setTimeout(180_000);
@@ -8,24 +21,26 @@ test("saved study, course progress and settings survive a complete backup round 
   await page.getByRole("button", { name: /^Save to review:/ }).first().click();
   await page.getByRole("button", { name: "Practice", exact: true }).click();
   await page.getByRole("button", { name: "bin", exact: true }).click();
-  await page.getByRole("button", { name: "Next question →", exact: true }).click();
+  await page.getByRole("button", { name: "Next question", exact: true }).click();
   await page.reload();
   await expect(page.locator(".study-tabs [aria-current=page]")).toHaveText("Practice");
   await expect(page.locator(".study-recall")).toContainText("Question 2 / 10");
 
-  await page.goto("collections/professions/");
-  await page.locator("#profession-practice summary").click();
-  await page.getByRole("button", { name: "Mark reviewed", exact: true }).click();
-  await page.reload();
-  await page.locator("#profession-practice summary").click();
-  await expect(page.getByText("1 marked reviewed", { exact: true })).toBeVisible();
+  // The former profession practice UI is retired; existing progress must still
+  // survive the same complete backup, import, merge and reset contracts.
+  const previousStudy = await readStorageJson<StudySnapshot>(page, STUDY_STATE_KEY);
+  if (!previousStudy) throw new Error("Expected persisted lesson progress before seeding legacy data.");
+  expect(previousStudy.lessonSessions?.["12"]?.position).toBe(1);
+  await seedStorageJson(page, STUDY_STATE_KEY, { ...previousStudy, reviewedProfessions: [legacyProfession] });
+  await expectLegacyProfession(page, [legacyProfession]);
   await page.goto("collections/professions/01/");
+  await expect(page).toHaveURL(/\/vocabulary\/[^/?]+\/?\?nav=/);
   await page.getByRole("button", { name: /^Save to review:/ }).first().click();
   await page.goto("saved/");
   const electrician = page.locator(".study-saved-card").filter({ hasText: "Elektriker" });
   await electrician.getByRole("textbox", { name: "My note" }).fill("Remember all four profession forms.");
   await electrician.getByRole("textbox", { name: "My note" }).press("Tab");
-  await page.getByRole("button", { name: "Review 2 items →", exact: true }).click();
+  await page.getByRole("button", { name: "Review 2 items", exact: true }).click();
   await page.getByRole("button", { name: "Reveal meaning", exact: true }).click();
   await page.getByRole("button", { name: "Again · 10 min", exact: true }).click();
   await page.getByRole("button", { name: "Reveal meaning", exact: true }).click();
@@ -36,7 +51,7 @@ test("saved study, course progress and settings survive a complete backup round 
   await expect(page.locator(".study-saved-card")).toHaveCount(0);
 
   await page.goto("book/?page=coursebook-74");
-  await page.getByRole("button", { name: "☆ Bookmark", exact: true }).click();
+  await page.getByRole("button", { name: "Bookmark", exact: true }).click();
   await page.getByRole("button", { name: "Mark page studied", exact: true }).click();
   await page.goto("settings/");
   await page.getByRole("combobox", { name: /Audio speed/ }).selectOption("0.75");
@@ -50,7 +65,7 @@ test("saved study, course progress and settings survive a complete backup round 
   const backup = JSON.parse(await readFile(file, "utf8"));
   expect(Object.keys(backup.study.saved)).toHaveLength(2);
   expect(backup.study.lessonSessions["12"].position).toBe(1);
-  expect(backup.study.reviewedProfessions).toHaveLength(1);
+  expect(backup.study.reviewedProfessions).toEqual([legacyProfession]);
   expect(backup.study.completedPages).toContain("coursebook-74");
   expect(Object.values(backup.study.saved as Record<string, { interval: number }>).map(item => item.interval).sort()).toEqual([0, 3]);
 
@@ -77,22 +92,22 @@ test("saved study, course progress and settings survive a complete backup round 
     await restored.getByRole("checkbox", { name: "Due only", exact: true }).uncheck();
     await expect(restored.locator(".study-saved-card").filter({ hasText: "Elektriker" }).getByRole("textbox", { name: "My note" })).toHaveValue("Remember all four profession forms.");
     await restored.goto("book/?page=coursebook-74");
-    await expect(restored.getByRole("button", { name: "★ Bookmarked", exact: true })).toBeVisible();
-    await expect(restored.getByRole("button", { name: "✓ Page studied", exact: true })).toBeVisible();
+    await expect(restored.getByRole("button", { name: "Bookmarked", exact: true })).toBeVisible();
+    await expect(restored.getByRole("button", { name: "Page studied", exact: true })).toBeVisible();
     await restored.goto("lessons/12/");
     await expect(restored.locator(".study-recall")).toContainText("Question 2 / 10");
     await restored.getByRole("button", { name: "Restart quiz", exact: true }).click();
     await restored.reload();
     await expect(restored.locator(".study-recall")).toContainText("Question 1 / 10");
-    await restored.goto("collections/professions/");
-    await restored.locator("#profession-practice summary").click();
-    await expect(restored.getByText("1 marked reviewed", { exact: true })).toBeVisible();
+    await expectLegacyProfession(restored, [legacyProfession]);
 
     await restored.goto("settings/");
     await restored.getByLabel("Choose learning backup").setInputFiles({ name: "broken.json", mimeType: "application/json", buffer: Buffer.from('{"version":99}') });
     await expect(restored.getByRole("status").filter({ hasText: "Import rejected" })).toBeVisible();
+    await expectLegacyProfession(restored, [legacyProfession]);
     await restored.goto("saved/");
     await expect(restored.locator(".study-saved-card")).toHaveCount(2);
+    await expectLegacyProfession(restored, [legacyProfession]);
     await restored.locator(".study-saved-card").filter({ hasText: "Elektriker" }).getByRole("button", { name: /^Remove from review:/ }).click();
     await restored.reload();
     await expect(restored.locator(".study-saved-card")).toHaveCount(1);
@@ -101,15 +116,18 @@ test("saved study, course progress and settings survive a complete backup round 
     await restored.getByLabel("Choose learning backup").setInputFiles(file);
     await restored.getByRole("button", { name: "Merge backup", exact: true }).click();
     await expect(restored.locator(".study-saved-card")).toHaveCount(2);
+    await expectLegacyProfession(restored, [legacyProfession]);
     await expect(restored.locator(".study-saved-card").filter({ hasText: "Ich bin nach Hamburg gefahren." }).getByRole("textbox", { name: "My note" })).toHaveValue("Keep this newer note.");
     await restored.getByLabel("Choose learning backup").setInputFiles(file);
     await restored.getByRole("combobox", { name: "Import method" }).selectOption("replace");
     await restored.getByRole("button", { name: "Replace included data" }).click();
+    await expectLegacyProfession(restored, [legacyProfession]);
     await expect(restored.locator(".study-saved-card").filter({ hasText: "Ich bin nach Hamburg gefahren." }).getByRole("textbox", { name: "My note" })).toHaveValue("");
     await restored.getByText("Reset learning data", { exact: true }).click();
     restored.once("dialog", dialog => void dialog.accept());
     await restored.getByRole("button", { name: "Reset learning progress", exact: true }).click();
     await expect(restored.locator(".study-saved-card")).toHaveCount(0);
+    await expectLegacyProfession(restored, []);
     await restored.goto("settings/");
     await expect(restored.getByRole("combobox", { name: /Audio speed/ })).toHaveValue("1");
   } finally { await fresh.close(); }
@@ -119,7 +137,7 @@ test("Lesson 4 also resumes its quiz and supports an explicit restart", async ({
   await page.goto("lessons/04/");
   await page.getByRole("button", { name: "Practice", exact: true }).click();
   await page.locator(".lesson-quiz-options button").first().click();
-  await page.getByRole("button", { name: "Next question →", exact: true }).click();
+  await page.getByRole("button", { name: "Next question", exact: true }).click();
   await page.reload();
   await expect(page.locator("#l4-practice")).toContainText("Question 2");
   await page.getByRole("button", { name: "Restart quiz", exact: true }).click();

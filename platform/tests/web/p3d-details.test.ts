@@ -401,7 +401,7 @@ describe("P3D search links and QA normalize", () => {
         resultId: "lex:architekt",
       }),
     );
-    expect(resolveBackHref(hubNav, "hub")).toBe("/vocabulary?lesson=02");
+    expect(resolveBackHref(hubNav, "hub")).toBe("/cheat-sheets/vocabulary?lesson=02");
 
     const bad = parseNavigationContextParam(
       JSON.stringify({

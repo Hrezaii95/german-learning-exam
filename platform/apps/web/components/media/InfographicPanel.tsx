@@ -1,3 +1,4 @@
+import { Icon } from "@/components/media/Icon";
 import type { LearnerInfographic } from "@/lib/content/infographics";
 import { withPagesBaseAssetPath } from "@/lib/content/pages-base-path";
 
@@ -23,7 +24,7 @@ export function InfographicPanel({ infographic }: { infographic: LearnerInfograp
           <p>{step.explanation}</p>
         </li>)}
       </ol>}
-      <a className="infographic-panel__expand" href={withPagesBaseAssetPath(`/infographics/${infographic.filename}`)} target="_blank" rel="noopener noreferrer">Open full-size diagram ↗ <span>(new tab)</span></a>
+      <a className="infographic-panel__expand" href={withPagesBaseAssetPath(`/infographics/${infographic.filename}`)} target="_blank" rel="noopener noreferrer">Open full-size diagram <Icon name="external"/> <span>(new tab)</span></a>
       <details className="infographic-panel__description">
         <summary>Read the visual as text</summary>
         <p>{infographic.textAlternative}</p>

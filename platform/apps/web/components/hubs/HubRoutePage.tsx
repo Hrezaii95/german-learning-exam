@@ -20,10 +20,11 @@ export function HubRoutePage({ hubId }: { hubId: LearnerHubId }) {
   if(hubId==="listening")return <ShellLayout current="listening"><Suspense fallback={<p>Loading recordings…</p>}><CourseListening book={{audio:loadBook().audio}}/></Suspense></ShellLayout>;
   const units=["grammar","verbs","phrases","concepts"].includes(hubId)?studyUnits:[];
   const speech=units.length?loadStudySpeech():{};
+  const connections=hubId==="grammar"&&hubs.hubsById.concepts.experience?.kind==="concepts"?hubs.hubsById.concepts.experience:undefined;
   return (
     <ShellLayout current={navKeyForHub(hubId)}>
-      <Suspense fallback={<HubListView hub={hub} units={units} speech={speech} searchParams={{}} />}>
-        <HubListViewWithParams hub={hub} units={units} speech={speech} />
+      <Suspense fallback={<HubListView hub={hub} units={units} speech={speech} {...(connections?{connections}:{})} searchParams={{}} />}>
+        <HubListViewWithParams hub={hub} units={units} speech={speech} {...(connections?{connections}:{})} />
       </Suspense>
     </ShellLayout>
   );

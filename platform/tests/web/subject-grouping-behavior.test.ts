@@ -53,7 +53,7 @@ afterEach(()=>{cleanup();vi.unstubAllGlobals();localStorage.clear();window.histo
 
 describe("subject grouping and priority",()=>{
   it.each(permutations)("nests by %s → %s → %s → %s while retaining illustrated vocabulary",(...order)=>{
-    window.history.replaceState(null,"",`/cheat-sheets/plurals?lessons=1&subjects=1&order=${order.join(",")}`);
+    window.history.replaceState(null,"",`/cheat-sheets/vocabulary?lessons=1&subjects=1&order=${order.join(",")}`);
     const {container}=renderSheet();
     expect(container.querySelector("[data-group-order]")?.getAttribute("data-group-order")).toBe(order.join(","));
     expect(nestedDimensions(entry(book.id))).toEqual(order);
@@ -64,7 +64,7 @@ describe("subject grouping and priority",()=>{
   });
 
   it("retains the complete catalogue once with lesson and subject grouping",()=>{
-    window.history.replaceState(null,"","/cheat-sheets/plurals?lessons=1&subjects=1&gender=0&view=illustrated&tags=");
+    window.history.replaceState(null,"","/cheat-sheets/vocabulary?lessons=1&subjects=1&gender=0&view=illustrated&tags=");
     renderSheet(catalogue);
     expect(entries()).toHaveLength(catalogue.length);
     expect(new Set(entries().map(button=>button.dataset.subjectEntry))).toEqual(new Set(catalogue.map(item=>item.id)));
@@ -76,7 +76,7 @@ describe("subject grouping and priority",()=>{
   it("retains words, illustrations and colours in every combination of the four switches",()=>{
     renderSheet();
     for(const lesson of [false,true])for(const subject of [false,true])for(const gender of [false,true])for(const plural of [false,true]){
-      window.history.replaceState(null,"",`/cheat-sheets/plurals?lessons=${Number(lesson)}&subjects=${Number(subject)}&gender=${Number(gender)}&view=${plural?"plurals":"illustrated"}&order=lesson,subject,gender,plural`);
+      window.history.replaceState(null,"",`/cheat-sheets/vocabulary?lessons=${Number(lesson)}&subjects=${Number(subject)}&gender=${Number(gender)}&view=${plural?"plurals":"illustrated"}&order=lesson,subject,gender,plural`);
       fireEvent(window,new PopStateEvent("popstate"));
       assertConserved(fixture);
       expect(nestedDimensions(entry(book.id))).toEqual([
@@ -86,18 +86,18 @@ describe("subject grouping and priority",()=>{
   });
 
   it("puts an overlapping word under the first selected matching subject without duplicating it",()=>{
-    window.history.replaceState(null,"","/cheat-sheets/plurals?lessons=1&subjects=1&tags=objects,home");
+    window.history.replaceState(null,"","/cheat-sheets/vocabulary?lessons=1&subjects=1&tags=objects,home");
     renderSheet();
     expect(entry(book.id).closest('[data-sheet-group="subject"]')?.getAttribute("data-group-key")).toBe("objects");
     expect(document.querySelectorAll(`[data-subject-entry="${book.id}"]`)).toHaveLength(1);
-    window.history.replaceState(null,"","/cheat-sheets/plurals?subjects=1&tags=home,objects");
+    window.history.replaceState(null,"","/cheat-sheets/vocabulary?subjects=1&tags=home,objects");
     fireEvent(window,new PopStateEvent("popstate"));
     expect(entry(book.id).closest('[data-sheet-group="subject"]')?.getAttribute("data-group-key")).toBe("home");
     expect(document.querySelectorAll(`[data-subject-entry="${book.id}"]`)).toHaveLength(1);
   });
 
   it("restores an older three-group URL and upgrades its order when lesson grouping is enabled",()=>{
-    window.history.replaceState(null,"","/cheat-sheets/plurals?subjects=1&order=plural,subject,gender");
+    window.history.replaceState(null,"","/cheat-sheets/vocabulary?subjects=1&order=plural,subject,gender");
     renderSheet();
     expect(screen.getByRole("switch",{name:"Group by lesson"}).getAttribute("aria-checked")).toBe("false");
     expect(nestedDimensions(entry(book.id))).toEqual(["plural","subject","gender"]);
@@ -109,7 +109,7 @@ describe("subject grouping and priority",()=>{
 
   it("uses the selected lessons for shared words and keeps the same assignment after reload",()=>{
     localStorage.setItem(STUDY_SCOPE_KEY,JSON.stringify({...defaultStudyScope(),mode:"multiple",lessons:[4,5]}));
-    window.history.replaceState(null,"","/cheat-sheets/plurals?lessons=1&gender=0&view=illustrated");
+    window.history.replaceState(null,"","/cheat-sheets/vocabulary?lessons=1&gender=0&view=illustrated");
     const {container}=renderSheet();
     expect(container.querySelector("[data-lesson-grouping]")?.getAttribute("data-lesson-grouping")).toBe("on");
     expect(entry(book.id).closest('[data-sheet-group="lesson"]')?.getAttribute("data-group-key")).toBe("lesson-5");
@@ -130,7 +130,7 @@ describe("subject grouping and priority",()=>{
 
   it("keeps lesson groups aligned with the active vocabulary source",()=>{
     const friseur=catalogue.find(item=>item.de==="der Friseur")!;
-    window.history.replaceState(null,"","/cheat-sheets/plurals?lessons=1&gender=0&view=illustrated");
+    window.history.replaceState(null,"","/cheat-sheets/vocabulary?lessons=1&gender=0&view=illustrated");
     renderSheet([book,friseur]);
     const source=screen.getByRole("combobox",{name:"Filter vocabulary by source"});
     fireEvent.change(source,{target:{value:"teacher-extra"}});
@@ -142,7 +142,7 @@ describe("subject grouping and priority",()=>{
   });
 
   it("moves active groups with accessible buttons and remembers their positions when toggled",()=>{
-    window.history.replaceState(null,"","/cheat-sheets/plurals?lessons=1&subjects=1");
+    window.history.replaceState(null,"","/cheat-sheets/vocabulary?lessons=1&subjects=1");
     const {container}=renderSheet();
     const priority=screen.getByRole("group",{name:"Grouping priority"});
     const order=()=>within(priority).getAllByRole("listitem").map(item=>item.getAttribute("data-grouping-priority"));
@@ -171,7 +171,7 @@ describe("subject grouping and priority",()=>{
   });
 
   it("keeps grouping priority through reset while clearing the search and subject filter",()=>{
-    window.history.replaceState(null,"","/cheat-sheets/plurals?lessons=1&subjects=1&order=plural,subject,lesson,gender&tags=objects&q=Buch");
+    window.history.replaceState(null,"","/cheat-sheets/vocabulary?lessons=1&subjects=1&order=plural,subject,lesson,gender&tags=objects&q=Buch");
     const {container}=renderSheet();
     expect(entries()).toHaveLength(1);
     fireEvent.click(screen.getByRole("button",{name:"Reset all filters"}));
@@ -193,7 +193,7 @@ describe("subject grouping and priority",()=>{
       play(){played.push(this.src);return Promise.resolve();}
       pause(){this.onpause?.();}
     });
-    window.history.replaceState(null,"","/cheat-sheets/plurals?lessons=1&subjects=1&tags=objects,home");
+    window.history.replaceState(null,"","/cheat-sheets/vocabulary?lessons=1&subjects=1&tags=objects,home");
     renderSheet();
     fireEvent.click(entry(book.id));
     fireEvent.click(screen.getByRole("button",{name:"Expand overview"}));
@@ -208,11 +208,11 @@ describe("subject grouping and priority",()=>{
     fireEvent.click(within(card).getByRole("button",{name:"Listen: das Buch"}));
     fireEvent.click(within(card).getByRole("button",{name:"Listen: die Bücher"}));
     expect(played).toEqual([book.audio,book.plurals[0]!.audio]);
-    const href=within(card).getByRole("link",{name:"Full vocabulary card →"}).getAttribute("href")!;
+    const href=within(card).getByRole("link",{name:"Full vocabulary card"}).getAttribute("href")!;
     const context=parseNavigationContextParam(new URL(href,"https://example.test").searchParams.get("nav"));
     const back=resolveBackHref(context);
     const backUrl=new URL(back,"https://example.test");
-    expect(backUrl.pathname).toBe("/cheat-sheets/plurals");
+    expect(backUrl.pathname).toBe("/cheat-sheets/vocabulary");
     expect(backUrl.searchParams.get("subjects")).toBe("1");
     expect(backUrl.searchParams.get("lessons")).toBe("1");
     expect(backUrl.searchParams.get("order")).toBe("lesson,gender,subject,plural");
@@ -239,7 +239,7 @@ describe("subject grouping and priority",()=>{
     const laptop=catalogue.find(item=>item.de==="der Laptop")!;
     const papa=catalogue.find(item=>item.de==="der Papa")!;
     const opa=catalogue.find(item=>item.de==="der Opa")!;
-    window.history.replaceState(null,"",`/cheat-sheets/plurals${query}`);
+    window.history.replaceState(null,"",`/cheat-sheets/vocabulary${query}`);
     renderSheet([papa,laptop,job,opa]);
     const ids=()=>entries().map(button=>button.dataset.subjectEntry);
     const sort=screen.getByRole("combobox",{name:"Sort words by"});
@@ -255,7 +255,7 @@ describe("subject grouping and priority",()=>{
   it("offers German, English, lesson, source and original-order sorting with both directions",()=>{
     const teacher=catalogue.find(item=>item.de==="der Elektriker")!;
     const extra=catalogue.find(item=>item.de==="die Decke")!;
-    window.history.replaceState(null,"","/cheat-sheets/plurals?view=illustrated&gender=0");
+    window.history.replaceState(null,"","/cheat-sheets/vocabulary?view=illustrated&gender=0");
     renderSheet([teacher,extra,book]);
     const sort=screen.getByRole("combobox",{name:"Sort words by"});
     const direction=screen.getByRole("combobox",{name:"Sort direction"});
@@ -281,7 +281,7 @@ describe("subject grouping and priority",()=>{
   });
 
   it("shows an empty active order when all grouping switches are off without losing colours or words",()=>{
-    window.history.replaceState(null,"","/cheat-sheets/plurals?lessons=1&subjects=1");
+    window.history.replaceState(null,"","/cheat-sheets/vocabulary?lessons=1&subjects=1");
     renderSheet();
     for(const name of ["lesson","subject tags","gender","plural pattern"])fireEvent.click(screen.getByRole("switch",{name:`Group by ${name}`}));
     const priority=screen.getByRole("group",{name:"Grouping priority"});

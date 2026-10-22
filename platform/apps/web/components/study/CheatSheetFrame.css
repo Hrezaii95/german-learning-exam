@@ -1,0 +1,28 @@
+.subject-sheet.cheat-sheet-frame{display:block;max-width:1320px;margin:0;padding:0;color:var(--subject-ink,var(--ink))}
+.app-shell .shell-main:has(.cheat-sheet-frame),.app-shell .shell-main:has(.cheat-sheet-directory){width:100%;max-width:none;padding:24px clamp(16px,3vw,42px) 90px}
+.sheet-switcher-panel{position:absolute;top:100%;right:-1px;left:-1px;max-height:65dvh;overflow:auto;padding:12px;border:1px solid var(--subject-line,var(--line));border-radius:0 0 12px 12px;background:var(--subject-paper,var(--paper));box-shadow:0 12px 24px color-mix(in srgb,var(--ink) 10%,transparent)}
+.sheet-switcher-search{display:block;font-size:.8rem;font-weight:650}
+.sheet-switcher-search input{display:block;width:100%;min-height:44px;margin-top:8px;padding:10px 12px;border:1px solid var(--subject-line,var(--line));border-radius:9px;background:var(--subject-paper,var(--paper));color:inherit;font:inherit}
+.sheet-switcher-panel>p{margin:10px 0;font-size:.75rem;color:var(--subject-muted,var(--ink-muted))}
+.sheet-switcher .sheet-switcher-panel nav{position:static;display:block;max-height:none;overflow:visible;padding:0;border:0;border-radius:0;box-shadow:none;background:transparent}
+.sheet-switcher .sheet-switcher-panel nav section{margin:14px 0 0;scroll-margin:0}
+.sheet-switcher .sheet-switcher-panel nav h2{margin:0 0 6px;font-size:.75rem;font-weight:650;color:var(--subject-muted,var(--ink-muted))}
+.sheet-switcher .sheet-switcher-panel nav a{min-width:0}
+.sheet-switcher .sheet-switcher-panel nav a>span{min-width:0;flex:1}
+.sheet-switcher .sheet-switcher-panel nav a>small{font-size:.65rem;color:var(--subject-muted,var(--ink-muted))}
+.subject-directory.cheat-sheet-directory{max-width:1320px}
+.cheat-sheet-directory>section{margin-top:28px}
+.cheat-sheet-directory>section>h2{margin:0 0 12px;font-size:1.3rem}
+.cheat-sheet-directory .subject-directory-grid{margin-top:0}
+.cheat-sheet-directory .subject-directory-catalogue{margin-top:24px}
+.cheat-sheet-directory .subject-directory-catalogue .subject-directory-tile{min-height:0}
+.cheat-sheet-directory .subject-directory-catalogue .subject-directory-icon{margin-bottom:12px}
+.subject-sheet.cheat-sheet-frame .subject-page-heading h1{font-family:var(--font);font-weight:700}
+@media screen and (width < 1050px) {
+  .app-shell .shell-main:has(.cheat-sheet-frame),
+  .app-shell .shell-main:has(.cheat-sheet-directory) {
+    padding-bottom: calc(var(--measured-bottom-nav-height,72px) + 24px);
+  }
+}
+@media(max-width:580px){.sheet-switcher-panel{max-height:60dvh}.sheet-switcher .sheet-switcher-panel nav a{gap:8px}.sheet-switcher .sheet-switcher-panel nav a>small{max-width:70px;text-align:right}}
+@media print{.subject-sheet.cheat-sheet-frame>.subject-navigation,.subject-sheet.cheat-sheet-frame>.subject-page-actions{display:none!important}}

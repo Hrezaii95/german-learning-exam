@@ -2,11 +2,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ShellLayout } from "@/components/shell/ShellLayout";
 import { loadExtraProfessionsProjection } from "@/lib/content/extra-professions";
-import Link from "next/link";
-import { WordFamilyCard } from "@/components/word-cards/WordFamilyCard";
 import { wordCardForPath } from "@/lib/content/word-cards";
-import styles from "@/components/word-cards/word-cards.module.css";
-import {ProfessionBackLink} from "../ProfessionCollectionClient";
+import { StaticHubRedirect } from "@/components/hubs/StaticHubRedirect";
 
 type PageProps = {
   params: Promise<{ sourceRow: string }>;
@@ -39,7 +36,7 @@ export default async function ExtraProfessionDetailPage({ params }: PageProps) {
 
   return (
     <ShellLayout current="vocabulary">
-      <div className={styles.detailFrame}><nav className={styles.cardNavigation} aria-label="Vocabulary cards"><ProfessionBackLink/><Link href="/vocabulary">All vocabulary</Link></nav><WordFamilyCard key={card.id} card={card} /></div>
+      <StaticHubRedirect href={card.path} label={card.title} professionReturn/>
     </ShellLayout>
   );
 }

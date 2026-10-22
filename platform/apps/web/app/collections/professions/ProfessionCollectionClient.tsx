@@ -12,7 +12,7 @@ import {
 } from "./ProfessionInfographic";
 import {useStudy} from "@/components/study/StudyProvider";
 import {WordFamilyPreview} from "@/components/word-cards/WordFamilyPreview";
-import {withPagesBaseAssetPath} from "@/lib/content/pages-base-path";
+import {SubjectVocabularyVisual} from "@/components/study/SubjectIllustration";
 import {professionPatterns,professionPatternIds,type ProfessionPattern} from "./profession-patterns";
 import { useStudyScope } from "@/components/study/StudyScope";
 import { matchesStudyScope } from "@/lib/study/scope";
@@ -156,9 +156,9 @@ export function ProfessionCollectionClient({ projection, cardsByRow }: { project
           </p>
         </div>
         <div role="group" className={styles.legend} aria-label="Infographic legend">
-          <span className={styles.legendMasculine}><b>M</b> masculine · der</span>
-          <span className={styles.legendFeminine}><b>F</b> feminine · die</span>
-          <span className={styles.legendPlural}><b>∞</b> plural · die</span>
+          <span className={styles.legendMale}><b lang="de">der</b> masculine · der</span>
+          <span className={styles.legendFemale}><b lang="de">die</b> feminine · die</span>
+          <span className={styles.legendPlural}><b lang="de">die</b> plural · die</span>
           <span className={styles.legendAlternative}><b>／</b> another word</span>
         </div>
         <div className="meta-row">
@@ -174,15 +174,15 @@ export function ProfessionCollectionClient({ projection, cardsByRow }: { project
         <div className={styles.patternGrid}>{professionPatterns.filter(item=>item.id!=="other").map(item=>{
           const count=scopedRows.filter(row=>professionPatternIds(row).includes(item.id)).length;
           const example=projection.rowsBySegment[item.example]!;
-          const picture=cardsByRow?.[example.id]?.image;
+          const exampleCard=cardsByRow?.[example.id];
           return <button type="button" className={styles.patternCard} key={item.id} aria-label={`${item.title}: ${example.masculine[0]!.singular} → ${example.masculine[0]!.plural} · ${count} jobs`} aria-pressed={pattern===item.id} disabled={!count} onClick={()=>changeBrowse({pattern:pattern===item.id?"all":item.id})}>
-            {picture&&<img src={withPagesBaseAssetPath(picture.path)} alt={picture.alt} width={240} height={140} loading="lazy"/>}
+            <div className="profession-pattern-visual" data-tone={exampleCard?.rows[0]?.singular.tone??"male"}><SubjectVocabularyVisual de={example.masculine[0]!.singular} category="Profession" cardId={exampleCard?.id??example.id} subject="people" fallback="subject"/></div>
             <strong>{item.title}</strong><span>{item.cue}</span>
             <span className={styles.maleText} lang="de">{example.masculine[0]!.singular}</span><span aria-hidden="true">↓</span><span className={styles.pluralText} lang="de">{example.masculine[0]!.plural}</span>
             <small>{count} {count===1?"job":"jobs"} in your selection</small>
           </button>;
         })}</div>
-        <div className={styles.feminineTrail}><strong>A useful feminine pattern</strong><p lang="de"><span className={styles.maleText}>der Lehrer</span> → <span className={styles.femaleText}>die Lehrer<b>in</b></span> → <span className={styles.pluralText}>die Lehrer<b>innen</b></span></p>
+        <div className={styles.femaleTrail}><strong>A useful feminine pattern</strong><p lang="de"><span className={styles.maleText}>der Lehrer</span> → <span className={styles.femaleText}>die Lehrer<b>in</b></span> → <span className={styles.pluralText}>die Lehrer<b>innen</b></span></p>
           <p>Many forms here use <b>-in → -innen</b>. Some also change a vowel: Arzt → Ärztin. Other pairs use different words, such as Feuerwehrmann / Feuerwehrfrau. Learn those together.</p><button type="button" className="study-secondary" onClick={()=>changeBrowse({pattern:"other"})}>Explore other plural changes</button></div>
       </section>
 

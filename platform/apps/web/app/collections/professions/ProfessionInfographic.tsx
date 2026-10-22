@@ -4,7 +4,7 @@ import styles from "./professions.module.css";
 import { GermanText } from "@/components/study/StudyProvider";
 import { LineAudio } from "@/components/study/StudyAudio";
 
-type Gender = "masculine" | "feminine";
+type Gender = "male" | "female";
 
 function articleAndNoun(value: string): { article: string; noun: string } {
   const [article = "", ...rest] = value.split(" ");
@@ -37,15 +37,16 @@ function FormLane({
   return (
     <section
       className={`${styles.formLane} ${styles[gender]} ${compact ? styles.compactLane : ""}`}
+      data-tone={gender}
       aria-label={`${label} forms`}
     >
       <div className={styles.genderHeader}>
-        <span className={styles.genderGlyph} aria-hidden="true">
-          {gender === "masculine" ? "M" : "F"}
+        <span className={styles.genderGlyph} lang="de" aria-hidden="true">
+          {gender === "male" ? "der" : "die"}
         </span>
         <strong>{label}</strong>
         <span className={styles.genderRule}>
-          {gender === "masculine" ? "der · blue" : "die · pink"}
+          {gender === "male" ? "der · masculine" : "die · feminine"}
         </span>
       </div>
 
@@ -74,7 +75,7 @@ function FormLane({
               <span className={styles.numberArrow} aria-label="changes to plural">
                 →
               </span>
-              <div className={`${styles.numberForm} ${styles.pluralForm}`}>
+              <div className={`${styles.numberForm} ${styles.pluralForm}`} data-tone="plural">
                 <span className={styles.numberLabel}>more than one · plural</span>
                 <span className={styles.germanForm} lang="de">
                   {pronunciation ? <GermanText text={form.plural}/> : <><b className={styles.pluralArticle}>{plural.article}</b><span>{plural.noun}</span></>}
@@ -102,12 +103,12 @@ export function ProfessionInfographic({
 }) {
   return (
     <div className={`${styles.infographic} ${compact ? styles.compactGraphic : ""}`}>
-      <FormLane label="Masculine person form" gender="masculine" forms={row.masculine} compact={compact} {...(pronunciation ? { pronunciation } : {})} />
+      <FormLane label="Masculine person form" gender="male" forms={row.masculine} compact={compact} {...(pronunciation ? { pronunciation } : {})} />
       <div className={styles.personRelationship} aria-label="Masculine and feminine person forms are paired">
         <span aria-hidden="true">↔</span>
         <small>paired person forms</small>
       </div>
-      <FormLane label="Feminine person form" gender="feminine" forms={row.feminine} compact={compact} {...(pronunciation ? { pronunciation } : {})} />
+      <FormLane label="Feminine person form" gender="female" forms={row.feminine} compact={compact} {...(pronunciation ? { pronunciation } : {})} />
     </div>
   );
 }

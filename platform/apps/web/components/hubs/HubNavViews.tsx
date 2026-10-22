@@ -5,7 +5,7 @@ import {useEffect,useRef} from "react";
 import {useStudyScope} from "@/components/study/StudyScope";
 import {availableLessons} from "@/lib/study/scope";
 import type {StudyUnit} from "@/lib/study/course-lessons";
-import type { LearnerHubDefinition } from "@/lib/content/hub-types";
+import type { LearnerConceptsHubExperience, LearnerHubDefinition } from "@/lib/content/hub-types";
 import { searchParamsToRecord } from "@/lib/content/search-params-record";
 import { HubListView } from "./HubViews";
 
@@ -13,7 +13,7 @@ import { HubListView } from "./HubViews";
  * Client boundary for hub filters: reads `q`/`lesson`/`category` via
  * useSearchParams so the server page stays static-export compatible.
  */
-export function HubListViewWithParams({ hub,units,speech }: { hub: LearnerHubDefinition;units?:StudyUnit[];speech?:Record<string,string> }) {
+export function HubListViewWithParams({ hub,units,speech,connections }: { hub: LearnerHubDefinition;units?:StudyUnit[];speech?:Record<string,string>;connections?:LearnerConceptsHubExperience }) {
   const params = useSearchParams();
   const {scope,setScope,ready,connected}=useStudyScope();
   const applied=useRef<string|null>(null);
@@ -24,5 +24,5 @@ export function HubListViewWithParams({ hub,units,speech }: { hub: LearnerHubDef
     if(availableLessons().includes(Number(lesson)))setScope({...scope,mode:"one",lessons:[Number(lesson)]});
     else if(lesson==="all")setScope({...scope,mode:"all",lessons:[]});
   },[ready,connected,lesson,scope,setScope]);
-  return <HubListView hub={hub} {...(units?{units}:{})} {...(speech?{speech}:{})} searchParams={{...searchParamsToRecord(params),...(connected?{lesson:"all"}:{})}} />;
+  return <HubListView hub={hub} {...(units?{units}:{})} {...(speech?{speech}:{})} {...(connections?{connections}:{})} searchParams={{...searchParamsToRecord(params),...(connected?{lesson:"all"}:{})}} />;
 }

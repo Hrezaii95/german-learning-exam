@@ -1,5 +1,6 @@
 "use client";
 
+import { Icon } from "@/components/media/Icon";
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
@@ -261,7 +262,7 @@ export function BookReader({
           ☷ Contents & search
         </button>
       </header>
-      {showContents&&<div className="book-source-picker"><Link className="study-secondary" href="/saved">My review</Link><Link className="study-secondary" href="/cheat-sheets">Cheat sheets →</Link>
+      {showContents&&<div className="book-source-picker"><Link className="study-secondary" href="/saved">My review</Link><Link className="study-secondary" href="/cheat-sheets">Cheat sheets <Icon name="arrow"/></Link>
         <div className="study-segmented" role="group" aria-label="Book type">
           {["coursebook", "workbook"].map((kind) => (
             <button
@@ -389,7 +390,7 @@ export function BookReader({
             <h2 lang={page.section?.startsWith("Lesson")?"de":"en"}>{page.section?.startsWith("Lesson")?chapter.title:page.section??chapter.title}</h2>
           </div>
         </div>
-        <Link href={page.section?.startsWith("Lesson")?`/lessons/${String(page.lesson).padStart(2,"0")}`:"/lessons"}>{page.section?.startsWith("Lesson")?"Study lesson":"Explore lessons"} →</Link>
+        <Link href={page.section?.startsWith("Lesson")?`/lessons/${String(page.lesson).padStart(2,"0")}`:"/lessons"}>{page.section?.startsWith("Lesson")?"Study lesson":"Explore lessons"} <Icon name="arrow"/></Link>
       </section>}
       <div className="book-reading-tools">
         <label className="study-inline-field book-page-picker">Go to page<select aria-label="Go to page" value={page.id} onChange={event=>go(event.target.value)}>{allKindPages.map(p=><option value={p.id} key={p.id}>{p.pageLabel??`Page ${p.printedPage}`} · {p.section??`Lesson ${p.lesson}`}</option>)}</select></label>
@@ -399,7 +400,7 @@ export function BookReader({
           className="study-secondary"
           onClick={() => setExpanded(true)}
         >
-          Full screen ↗
+          Full screen <Icon name="external"/>
         </button>
         <AudioSpeedControl control={audioSpeed}/>
         <button
@@ -415,7 +416,7 @@ export function BookReader({
             }))
           }
         >
-          {marked ? "★ Bookmarked" : "☆ Bookmark"}
+          <Icon name="star" filled={marked}/> {marked ? "Bookmarked" : "Bookmark"}
         </button>
       </div>
       <div className={`book-reading-grid book-view-${view}`}>
@@ -437,7 +438,7 @@ export function BookReader({
             <div className="book-original-audio">
               <h3>Listen to the book</h3>
               {tracks.length>1&&<label className="study-field">Recording<select aria-label="Page recording" value={activeTrack!.id} onChange={event=>replaceContext(bookContextHref(page.id,{track:event.target.value}))}>{tracks.map(track=><option key={track.id} value={track.id}>{track.label}</option>)}</select></label>}
-              {activeTrack&&<><OriginalTrack key={activeTrack.id} track={activeTrack} rate={rate} {...(transcriptLine!==undefined?{transcriptLine}:{})}/><Link href={`/listening?track=${encodeURIComponent(activeTrack.id)}`}>Open focused listening →</Link></>}
+              {activeTrack&&<><OriginalTrack key={activeTrack.id} track={activeTrack} rate={rate} {...(transcriptLine!==undefined?{transcriptLine}:{})}/><Link href={`/listening?track=${encodeURIComponent(activeTrack.id)}`}>Open focused listening <Icon name="arrow"/></Link></>}
             </div>
           )}
           {line && (
@@ -450,7 +451,7 @@ export function BookReader({
                   aria-label="Clear selected line"
                   onClick={() => {setSelected(null);replaceContext(bookContextHref(page.id));}}
                 >
-                  ✕
+                  <Icon name="close"/>
                 </button>
               </div>
               {renderLine(line)}
@@ -487,7 +488,7 @@ export function BookReader({
           disabled={index <= 0}
           onClick={() => go(allKindPages[index - 1]!.id)}
         >
-          ← Previous
+          <Icon name="back"/> Previous
         </button>
         <div role="group" className="book-page-dots" aria-label="Nearby pages">
           {nearbyPages.map((p) => (
@@ -500,7 +501,7 @@ export function BookReader({
             >
               {p.printedPage>0?p.printedPage:p.printedPage===-1?"Cover":"Map"}
               {study?.state.completedPages.includes(p.id) && (
-                <span aria-hidden="true"> ✓</span>
+                <span aria-hidden="true"> <Icon name="check"/></span>
               )}
             </button>
           ))}
@@ -511,7 +512,7 @@ export function BookReader({
           disabled={index === allKindPages.length - 1}
           onClick={() => go(allKindPages[index + 1]!.id)}
         >
-          Next page →
+          Next page <Icon name="arrow"/>
         </button>
       </footer>
       <div className="study-row book-complete">
@@ -528,7 +529,7 @@ export function BookReader({
             }))
           }
         >
-          {done ? "✓ Page studied" : "Mark page studied"}
+          {done && <Icon name="check"/>} {done ? "Page studied" : "Mark page studied"}
         </button>
         <p className="muted">
           Your place, bookmarks, and review selections are saved on this device.

@@ -1,4 +1,5 @@
 "use client";
+import { Icon } from "@/components/media/Icon";
 import {Fragment,useEffect,useState} from "react";
 import type {WordCard} from "@/lib/content/word-card-types";
 import {germanNumber,germanPrice,sheetQuizzes} from "@/lib/study/sheet-topics";
@@ -10,7 +11,6 @@ import {StudyScopeNotice} from "./StudyScope";
 import {LineAudio} from "./StudyAudio";
 import {OverviewPanel} from "./OverviewPanel";
 import "./NumbersWorkshop.css";
-import "./CheatSheetPrint.css";
 
 const numberGroups=[{title:"Start here · 0–12",values:[0,1,2,3,4,5,6,7,8,9,10,11,12]},{title:"The teens · 13–19",values:[13,14,15,16,17,18,19]},{title:"The tens · 20–90",values:[20,30,40,50,60,70,80,90]},{title:"Go bigger",values:[100,200,1000,10000,100000,1000000]}];
 const extensionTags={lessons:[4],concepts:["numbers"] as const,source:"course" as const};
@@ -25,7 +25,7 @@ function NumberListening({cards,speech,range}:{cards:WordCard[];speech:Record<st
   const correct=/^\d+$/.test(typed.trim())&&Number(typed)===item.value;
   return <div className="number-listening-task"><p>Recording {position+1} / {pool.length}</p><LineAudio key={item.value} text={form.text} src={form.audio??speech[form.text]} label="practice number"/>
     <form onSubmit={event=>{event.preventDefault();if(!checked&&typed.trim()){setChecked(true);if(correct)setScore(score+1);}}}><label>What number did you hear?<input inputMode="numeric" autoComplete="off" value={typed} disabled={checked} onChange={event=>setTyped(event.target.value)} maxLength={6}/></label><button type="submit" className="study-primary" disabled={checked||!typed.trim()}>Check number</button></form>
-    {checked&&<div role="status"><h3>{correct?"Exactly.":"Listen once more, then compare."}</h3><p><b>{item.value}</b> · <GermanText text={form.text}/></p><p>{item.card.tip}</p><div className="study-row"><SaveButton item={savedWordCard(item.card)}/><button type="button" className="study-primary" onClick={()=>{setPosition(position+1);setTyped("");setChecked(false);}}>Next number →</button></div></div>}
+    {checked&&<div role="status"><h3>{correct?"Exactly.":"Listen once more, then compare."}</h3><p><b>{item.value}</b> · <GermanText text={form.text}/></p><p>{item.card.tip}</p><div className="study-row"><SaveButton item={savedWordCard(item.card)}/><button type="button" className="study-primary" onClick={()=>{setPosition(position+1);setTyped("");setChecked(false);}}>Next number <Icon name="arrow"/></button></div></div>}
   </div>;
 }
 
@@ -51,5 +51,3 @@ export function NumbersWorkshop({cards,allCards,speech}:{cards:WordCard[];allCar
     <details className="sheet-sources"><summary>Eight common number and price traps</summary><div className="sheet-rule-grid">{sheetQuizzes.numbers.map(quiz=><article key={quiz.q}><h3>{quiz.q}</h3><p>{spoken(quiz.answer)}</p><p>{quiz.why}</p></article>)}</div></details>
   </>;
 }
-
-export function NumbersPrintSummary(){return <div className="sheet-print-summary"><section className="sheet-print-page number-print"><header><span>05 · Numbers & prices</span><h2>Digits left to right. Units before tens.</h2><p>Common numbers, reading order and prices · complete builder and listening recall online.</p></header><div className="number-print-groups">{numberGroups.map(group=><section key={group.title}><h3>{group.title}</h3>{group.values.map(n=><p key={n}><b>{n.toLocaleString("de-DE")}</b><span lang="de">{germanNumber(n)}</span></p>)}</section>)}</div><h3>See 4–5–2. Say 400 → 2 → and → 50.</h3><div className="number-reading-order">{numberParts(452).map((part,index)=><div key={index} data-role={part.role}><small>{part.label}</small><b>{part.digits}</b><strong lang="de">{part.spoken}</strong></div>)}</div><p lang="de"><b>452 = vierhundertzweiundfünfzig</b></p><p>Thousands and hundreds come first. The units-before-tens pattern applies inside the remaining two-digit block. Write ordinary whole numbers below a million as one word.</p><h3>One changes with its job</h3><p lang="de">1 → <b>eins</b> · 21 → <b>ein</b>undzwanzig · 1,00 € → <b>ein</b> Euro · 1.000.000 → <b>eine</b> Million</p><h3>Read a price tag</h3><p lang="de">24,50 € → vierundzwanzig Euro fünfzig Cent<br/>0,50 € → fünfzig Cent · 1,01 € → ein Euro ein Cent</p><p>The comma separates euros and cents. In a clear price context, vierundzwanzig fünfzig is also common.</p><h3>Phone numbers keep their first zero</h3><p lang="de">0176 → null · eins · sieben · sechs</p><p><b>Recall:</b> cover the German column, say the number, then check. Compare 13/30, 16/60 and 17/70 using the listening activity.</p><footer>Based on Momente A1.1 number and price patterns, © Hueber Verlag. Diagrams and practice combinations are study aids. Teal/amber distinguish units/tens, separate from noun-gender colors.</footer></section></div>;}
