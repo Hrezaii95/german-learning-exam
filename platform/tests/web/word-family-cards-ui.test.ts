@@ -13,6 +13,9 @@ import { withWordCardHub,loadWordCards } from "../../apps/web/lib/content/word-c
 import type { LearnerHubProjection } from "../../apps/web/lib/content/hub-types";
 import { HubListView } from "../../apps/web/components/hubs/HubViews";
 import { filterHubRecords, parseHubSearchParams } from "../../apps/web/lib/content/hub-query";
+import {decodeScope} from "../../apps/web/lib/wortwerk/links";
+import {A1_PLAY_ITEMS} from "../../apps/web/lib/study/play-catalogue.generated";
+import {STUDY_SCOPE_KEY} from "../../apps/web/lib/study/scope";
 
 const catalog = JSON.parse(readFileSync(resolve("apps/web/generated/word-cards.json"), "utf8")) as WordCardCatalog;
 const engineer = catalog.cards.find(c => c.id === "W126")!;
@@ -60,6 +63,28 @@ describe("original vocabulary browsing with complete cards", () => {
 });
 
 describe("complete word-family cards", () => {
+  it("practises the explicit family even when global selection and legacy Back context describe different words", () => {
+    const previous=window.location.href;
+    localStorage.setItem(STUDY_SCOPE_KEY,JSON.stringify({mode:"one",lessons:[9],concepts:["food"],source:"study-extra"}));
+    window.history.replaceState(null,"","/vocabulary/w126?lesson=9&q=food&nav=legacy-return-only");
+    try{
+      render(createElement(WordFamilyCard,{card:engineer}));
+      const action=screen.getByRole("link",{name:"Practise this word"});
+      const url=new URL(action.getAttribute("href")!,"https://example.test");
+      const scope=decodeScope(url.searchParams.get("scope")!);
+      expect(scope.items).toEqual(A1_PLAY_ITEMS.filter(item=>item.cardId==="W126").map(item=>item.id));
+      expect(scope.lessons).toBeUndefined();
+      expect(scope.tags).toBeUndefined();
+      expect(scope.sources).toBeUndefined();
+      expect(url.searchParams.has("nav")).toBe(false);
+      expect(action.parentElement?.className).toContain("below");
+    }finally{localStorage.removeItem(STUDY_SCOPE_KEY);window.history.replaceState(null,"",previous);}
+  });
+  it("keeps an unknown family unavailable instead of linking to unrelated pack words",()=>{
+    render(createElement(WordFamilyCard,{card:{...engineer,id:"unmapped-family"}}));
+    expect(screen.queryByRole("link",{name:"Practise this word"})).toBeNull();
+    expect((screen.getByRole("button",{name:"Practise this word"}) as HTMLButtonElement).disabled).toBe(true);
+  });
   it("uses the same semantic line illustration in a preview without changing its full-card context", () => {
     const card=loadWordCards().cards.find(card=>card.rows[0]?.singular.text==="der Tisch")!;
     const href=`${card.path}?nav=preserved`;

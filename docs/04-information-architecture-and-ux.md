@@ -86,6 +86,14 @@ The shared study scope supports all lessons, one lesson, selected lessons or thr
 
 Filter counts, active state and empty states describe the effective selection. No match provides clear/reset actions. Group order changes presentation, not vocabulary membership; plural patterns do not suppress a word's other forms.
 
+## Scoped play handoffs — G1 implementation proposal
+
+The frozen G1 proposal adds “Play this sheet” to the 37 shared-frame sheet destinations and “Practise this word” to inline rows and full family cards. `lib/study/play-links.ts` resolves real A1 pack items through the existing v1 `playHref()` contract for `/play/run` with pack `de-a1-momente`. It uses actual pack tags, source membership, lesson membership, family IDs and country source paths rather than guessed item IDs.
+
+Sheet actions retain the effective lesson/tag/source scope, including local sheet overlays, and the filtered entry set. Search/category and applicable collection/country saved filters narrow that set before display pagination. The inline subject action targets its exact row under the effective sheet scope. A full-family action is an explicit choice of that family’s A1 rows, independent of unrelated global or legacy Back filters. Explicit IDs retain narrowed/intersected sets; they can be omitted only when the pack predicate produces exactly the same set.
+
+Unknown-only, empty, not-ready or over-budget selections disable the action instead of truncating IDs or dropping filters. Sheet actions report their available entry count and any unavailable selected entries. Links use `prefetch={false}` and are hidden for print. They do not enable a pack or approve its content: pending A1 material still requires the existing public opt-in in Play. Eight browser cases are prepared but unexecuted; G1 runtime verification remains pending. The recorded L1-9 results stay pinned to their tested source and do not validate this new proposal.
+
 ## Responsive, keyboard and print behavior
 
 German text uses `lang="de"`, natural wrapping and automatic hyphenation. Reflow must preserve the word, article, plural and meaning at 320px and 360px mobile widths and 200% zoom. Focus uses the shared ring token; state outlines and semantic article borders remain distinct. Choosers and disclosures support keyboard activation and Escape, with meaningful names and restored focus. Active filters expose `aria-pressed`, and controls retain adequate pointer targets.
@@ -94,7 +102,7 @@ L1-9 prints from the live rendered page: current filters, selected vocabulary, o
 
 ## External dependencies and publication limits
 
-- Lane 2’s `/play/run` and scope helpers are integrated. G1 “Play this sheet” across the 37 sheet destinations and “Practise this word” remain pending Lane 1 implementation/verification against that built scope contract. Do not show an action to an unavailable route.
+- Lane 2’s `/play/run` and scope helpers are integrated. The frozen G1 implementation proposal above covers the 37 sheet destinations and word actions; its runtime verification and release acceptance remain pending. Unavailable item selections stay disabled, and pending content still requires Play’s explicit pack opt-in.
 - Lane 2 Phase 1 code is integrated. G3 remains pending and happens after G1 acceptance. The [amended plan](https://github.com/Hrezaii95/german-learning-exam/pull/1#issuecomment-6349358229) proposes an owned `PracticeHub` on `/practice`, retaining CoursePractice, Conversation and bounded Back context with a truthful Play link, plus compatibility stubs for the seven known `/practice/:gameId` routes. The existing index and detail routes remain implemented until that work is verified. Protected game components stay under their owners; changes to the original dev-smoke expectations at retirement require the release owner handoff.
 - Canonical USA plural typing needs the content schema owner. Correct app presentation does not close that schema dependency.
 - Selective `/review-audio` exclusion from the Pages export needs the build owner; returning Not Found alone does not remove exported files.

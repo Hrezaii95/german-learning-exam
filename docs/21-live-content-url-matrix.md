@@ -20,7 +20,7 @@ The historical base URL is `https://hrezaii95.github.io/german-learning-exam/`. 
 | Guided session | `/review/session/today` | Existing guided exercise/session implementation | Retained; not a renamed saved-item store |
 | Search / settings / credits | `/search`, `/settings`, `/references` | Existing search projections, local preferences and attribution | Retained; no account/sync certification |
 | Practice | `/practice` and `/practice/:gameId` | Existing practice implementation | G3 retirement remains pending; its Lane 2 dependency code is now integrated |
-| Play | `/play`, `/play/run` | Lane 2 route/Run player and v1 scope-link helpers | Integrated dependency; Lane 1’s scoped handoffs and practice retirement still need implementation/verification |
+| Play | `/play`, `/play/run` | Lane 2 route/Run player; G1 proposal uses actual A1 items and existing v1 `playHref` | Sheet/inline-row/full-family implementation proposed; eight prepared browser cases unexecuted, G1 runtime verification pending; G3 retirement remains unimplemented |
 | Audio review | `/review-audio` | Reviewer tool and asset-bound verdict export | QA surface; selective Pages exclusion remains externally blocked |
 
 Registered subject IDs are `introductions`, `people`, `countries`, `numbers`, `home`, `objects`, `colours-materials`, `office`, `seasons`, `past`, `travel`, `food`, `time`, `hobbies`, `grammar`, `verbs`, `conversation`, `questions`, `classroom`, `descriptions`, `everyday`. The page's “by subject” grouping and a tag filter are distinct from a separate duplicate word catalogue.
@@ -82,6 +82,12 @@ The Home handoff widens its lesson selection when an exact old target belongs to
 
 Opening a URL restores local lesson/source scope without rewriting global study selection. Reset clears both local filters. Source membership can include course and teacher extras on the same canonical family; source-aware lesson grouping uses the matching membership. Filters and grouping reuse `VocabularyEntry` / `WordDropdown`, with the same audio, save and full-card behavior.
 
+## G1 play-source contract — implementation proposal
+
+`lib/study/play-catalogue.generated.ts` projects compact identity/filter facts from the actual 1,330-item `de-a1-momente` lexeme pack. `play-links.ts` matches pack IDs, tags, source/lesson membership, family identity and country source paths. Sheet/inline-row actions use the effective filtered sheet selection; full-family actions explicitly choose that family independently of unrelated global/Back filters. Narrowed selections keep explicit IDs unless the validated pack predicate has the identical result. Unknown-only, empty, not-ready or oversized selections disable the action without dropping constraints; partial sheet coverage exposes its unavailable count.
+
+The proposed 37 sheet and word handoffs use `prefetch={false}`, remain hidden for print and preserve Play’s public pending-pack opt-in. These source facts are not runtime acceptance. The eight prepared browser cases have not run; the accepted L1-9 counts remain pinned to `3a129bcc5769a9441cedcdb0615b28bd8788f5a9` and do not certify G1. The actual navigation groups are unchanged, with no new Play navigation entry.
+
 ## Source and media map
 
 | Material | Repository source / renderer | Publication limit |
@@ -120,4 +126,4 @@ The pinned current-target engineering run passed all gates except the original E
 
 The earlier original-smoke and word-card audit failures belong to the historical isolated Lane 1 checkpoints. Integration #20 changed the original retired-route/card-alias expectations; its PR records separate local gate evidence. Fresh pinned original production/dev/Pages/word-card gates all passed; the current original E2E owner failure remains red separately. Lane 1’s owned canonical compatibility helpers stay supplementary and do not replace those gates. See [the completion matrix](17-current-state-and-completion-matrix.md).
 
-Canonical USA plural typing and selective `/review-audio` Pages export exclusion remain external-owner blockers. Lane 2’s `/play/run`, scope helpers and Phase 1 code are integrated; G1 actions across all 37 sheet destinations and word actions remain pending Lane 1 implementation/verification. G3 remains pending after G1 acceptance: its amended plan proposes an owned PracticeHub and seven known route stubs, while existing routes remain implemented; the future original dev-smoke expectation handoff stays with its owner. Account/session/sync acceptance belongs to Lane 3. ADR-020a’s model German review does not close qualified German, synthesized-audio listening or book-reference publication review. This matrix does not close those gates.
+Canonical USA plural typing and selective `/review-audio` Pages export exclusion remain external-owner blockers. Lane 2’s `/play/run`, scope helpers and Phase 1 code are integrated; The frozen G1 proposal covers the 37 sheet destinations and word actions; runtime verification and release acceptance remain pending. G3 remains pending after G1 acceptance: its amended plan proposes an owned PracticeHub and seven known route stubs, while existing routes remain implemented; the future original dev-smoke expectation handoff stays with its owner. Account/session/sync acceptance belongs to Lane 3. ADR-020a’s model German review does not close qualified German, synthesized-audio listening or book-reference publication review. This matrix does not close those gates.

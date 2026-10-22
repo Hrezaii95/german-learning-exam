@@ -13,6 +13,10 @@ import {defaultStudyScope,matchesStudyScope,STUDY_SCOPE_KEY,studyConcepts} from 
 import {STUDY_KEY} from "../../apps/web/lib/study/storage";
 import {parseNavigationContextParam,resolveBackHref} from "../../apps/web/lib/content/navigation-context";
 import {loadWordCards} from "../../apps/web/lib/content/word-cards";
+import {decodeScope} from "../../apps/web/lib/wortwerk/links";
+import {A1_PLAY_ITEMS} from "../../apps/web/lib/study/play-catalogue.generated";
+import {CollectionCheatSheet} from "../../apps/web/components/study/CollectionCheatSheet";
+import {CountryCheatSheet} from "../../apps/web/components/study/CountryCheatSheet";
 
 const sheets=loadSubjectSheets();
 const catalogue=loadSubjectVocabulary();
@@ -42,6 +46,69 @@ beforeAll(()=>{
 afterEach(()=>{cleanup();vi.restoreAllMocks();vi.unstubAllGlobals();localStorage.clear();window.history.replaceState(null,"","/");});
 
 describe("subject infographic browsing",()=>{
+  it("plays exactly the active local lesson/source/tag/search rows and ignores legacy return/saved fields",()=>{
+    const people=sheets.find(sheet=>sheet.id==="people")!;
+    localStorage.setItem(STUDY_SCOPE_KEY,JSON.stringify({...defaultStudyScope(),mode:"one",lessons:[9],concepts:["food"],source:"study-extra"}));
+    window.history.replaceState(null,"","/cheat-sheets/subjects/people?lesson=2,4&source=teacher-extra&q=Ingenieur&saved=1&nav=legacy-return-only");
+    render(createElement(StudyScopeProvider,null,createElement(SubjectInfographic,{sheet:people,allItems:catalogue})));
+    const action=screen.getByRole("link",{name:"Play this sheet"});
+    const scope=decodeScope(new URL(action.getAttribute("href")!,"https://example.test").searchParams.get("scope")!);
+    expect(scope.lessons).toEqual([2,4]);expect(scope.sources).toEqual(["teacher-extra"]);expect(scope.tags).toEqual(["people"]);
+    const packed=new Set(A1_PLAY_ITEMS.map(item=>item.id));
+    expect(new Set(scope.items)).toEqual(new Set([...visibleIds()].filter((id):id is string=>id!==null&&packed.has(id))));
+    expect(scope.items!.length).toBeGreaterThan(0);
+    fireEvent.click(entries()[0]!);
+    const dropdown=screen.getByRole("article",{name:/^Vocabulary card:/});
+    const word=within(dropdown).getByRole("link",{name:"Practise this word"});
+    const wordScope=decodeScope(new URL(word.getAttribute("href")!,"https://example.test").searchParams.get("scope")!);
+    expect(wordScope.items).toEqual([entries()[0]!.dataset.subjectEntry]);
+    expect(wordScope.sources).toEqual(["teacher-extra"]);
+    expect(word.closest(".subject-print-hide")).not.toBeNull();
+  });
+  it("disables empty or explicitly unavailable sheet selections without broadening them",()=>{
+    window.history.replaceState(null,"","/cheat-sheets/subjects/food?q=no-such-vocabulary-zzzz");
+    const view=render(createElement(SubjectInfographic,{sheet:food,allItems:catalogue}));
+    expect(screen.queryByRole("link",{name:"Play this sheet"})).toBeNull();
+    expect((screen.getByRole("button",{name:"Play this sheet"}) as HTMLButtonElement).disabled).toBe(true);
+    view.unmount();
+    render(createElement(CheatSheetFrame,{current:"food",eyebrow:"Food",title:"Food",lead:"Food",playSelection:null,children:"Teaching content"}));
+    expect(screen.queryByRole("link",{name:"Play this sheet"})).toBeNull();
+    expect((screen.getByRole("button",{name:"Play this sheet"}) as HTMLButtonElement).disabled).toBe(true);
+  });
+  it("follows the collection's real query/category/saved family set before pagination",async()=>{
+    const cards=loadWordCards().cards;
+    const engineer=cards.find(card=>card.id==="W126")!;
+    const other=cards.find(card=>card.id!==engineer.id&&card.category!==engineer.category)!;
+    render(createElement(StudyProvider,{dictionary:[],children:createElement(CollectionCheatSheet,{sheet:"people",cards:[engineer,other],speech:{}})}));
+    await waitFor(()=>expect(screen.getByRole("link",{name:"Play this sheet"})).toBeTruthy());
+    fireEvent.change(screen.getByRole("textbox",{name:"Find a card"}),{target:{value:engineer.title}});
+    fireEvent.change(screen.getByRole("combobox",{name:"Category"}),{target:{value:engineer.category}});
+    const card=document.querySelector(`[data-sheet-card="${engineer.id}"]`)!;
+    fireEvent.click(within(card as HTMLElement).getByRole("button",{name:/^Save to review:/}));
+    fireEvent.click(screen.getByRole("button",{name:"Show saved cards"}));
+    const scope=decodeScope(new URL(screen.getByRole("link",{name:"Play this sheet"}).getAttribute("href")!,"https://example.test").searchParams.get("scope")!);
+    expect(scope.items).toEqual(A1_PLAY_ITEMS.filter(item=>item.cardId===engineer.id).map(item=>item.id));
+    fireEvent.click(within(card as HTMLElement).getByRole("button",{name:/^Remove from review:/}));
+    expect(screen.queryByRole("link",{name:"Play this sheet"})).toBeNull();
+    expect((screen.getByRole("button",{name:"Play this sheet"}) as HTMLButtonElement).disabled).toBe(true);
+  });
+  it("maps the visible country query and empty saved set through actual canonical card links",()=>{
+    const germany=loadWordCards().cards.find(card=>card.rows.some(row=>row.singular.text==="Deutschland"))!;
+    render(createElement(CountryCheatSheet,{speech:{},cardLinks:{DE:germany.path}}));
+    fireEvent.change(screen.getByRole("textbox",{name:"Find a country or language"}),{target:{value:"Deutschland"}});
+    const scope=decodeScope(new URL(screen.getByRole("link",{name:"Play this sheet"}).getAttribute("href")!,"https://example.test").searchParams.get("scope")!);
+    expect(scope.items).toEqual(A1_PLAY_ITEMS.filter(item=>item.cardPath===germany.path).map(item=>item.id));
+    fireEvent.click(screen.getByRole("button",{name:"Saved for review"}));
+    expect(screen.queryByRole("link",{name:"Play this sheet"})).toBeNull();
+  });
+  it("keeps a displayed dictionary-only country available without inventing a canonical family link",()=>{
+    localStorage.setItem(STUDY_SCOPE_KEY,JSON.stringify({...defaultStudyScope(),source:"study-extra"}));
+    render(createElement(StudyScopeProvider,null,createElement(StudyProvider,{dictionary:[],children:createElement(CountryCheatSheet,{speech:{},cardLinks:{}})})));
+    fireEvent.change(screen.getByRole("textbox",{name:"Find a country or language"}),{target:{value:"Brasilien"}});
+    const scope=decodeScope(new URL(screen.getByRole("link",{name:"Play this sheet"}).getAttribute("href")!,"https://example.test").searchParams.get("scope")!);
+    expect(scope.items).toEqual(A1_PLAY_ITEMS.filter(item=>item.cardPath==="/cheat-sheets/countries#country-BR").map(item=>item.id));
+    expect(scope.sources).toEqual(["study-extra"]);
+  });
   it("combines local lesson and source scope through the named chooser and full-card Back without replacing saved scope",()=>{
     const people=sheets.find(sheet=>sheet.id==="people")!;
     const shared={...defaultStudyScope(),mode:"one",lessons:[1],concepts:["food"],source:"course"};

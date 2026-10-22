@@ -26,3 +26,30 @@
 }
 @media(max-width:580px){.sheet-switcher-panel{max-height:60dvh}.sheet-switcher .sheet-switcher-panel nav a{gap:8px}.sheet-switcher .sheet-switcher-panel nav a>small{max-width:70px;text-align:right}}
 @media print{.subject-sheet.cheat-sheet-frame>.subject-navigation,.subject-sheet.cheat-sheet-frame>.subject-page-actions{display:none!important}}
+
+/* Give the practice action and its eligibility note separate, wrapping rows. */
+.subject-sheet.cheat-sheet-frame > .subject-page-actions {
+  flex-wrap: wrap;
+}
+
+.subject-sheet.cheat-sheet-frame > .subject-page-actions > p,
+.sheet-play-action {
+  flex: 1 1 0%;
+  min-width: 0;
+}
+
+.sheet-play-action {
+  display: grid;
+  justify-items: start;
+  gap: 8px;
+  max-width: 100%;
+}
+
+.sheet-play-action > :is(a, button) {
+  max-width: 100%;
+}
+
+.sheet-play-action > small {
+  line-height: 1.5;
+  overflow-wrap: break-word;
+}
