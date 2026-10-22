@@ -1,0 +1,568 @@
+[
+  {
+    "unitId": "u1",
+    "bookRef": {
+      "book": "fixture-book",
+      "lesson": 1
+    },
+    "source": "course",
+    "tags": [
+      "fixture"
+    ],
+    "type": "lexeme",
+    "id": "w0",
+    "lemma": "Probe0",
+    "pos": "noun",
+    "meaning": "Example 0",
+    "gender": "masculine",
+    "article": "der",
+    "forms": {
+      "plural": [
+        "Proben0"
+      ]
+    },
+    "audio": {
+      "src": "/audio/fixture-0.mp3",
+      "review": "preview"
+    },
+    "image": "/images/fixture-0.svg"
+  },
+  {
+    "unitId": "u1",
+    "bookRef": {
+      "book": "fixture-book",
+      "lesson": 1
+    },
+    "source": "course",
+    "tags": [
+      "fixture"
+    ],
+    "type": "lexeme",
+    "id": "w1",
+    "lemma": "Probe1",
+    "pos": "noun",
+    "meaning": "Example 1",
+    "gender": "masculine",
+    "article": "der",
+    "forms": {
+      "plural": [
+        "Proben1"
+      ]
+    },
+    "audio": {
+      "src": "/audio/fixture-1.mp3",
+      "review": "preview"
+    },
+    "image": "/images/fixture-1.svg"
+  },
+  {
+    "unitId": "u1",
+    "bookRef": {
+      "book": "fixture-book",
+      "lesson": 1
+    },
+    "source": "course",
+    "tags": [
+      "fixture"
+    ],
+    "type": "lexeme",
+    "id": "w2",
+    "lemma": "Probe2",
+    "pos": "noun",
+    "meaning": "Example 2",
+    "gender": "masculine",
+    "article": "der",
+    "forms": {
+      "plural": [
+        "Proben2"
+      ]
+    },
+    "audio": {
+      "src": "/audio/fixture-2.mp3",
+      "review": "preview"
+    },
+    "image": "/images/fixture-2.svg"
+  },
+  {
+    "unitId": "u1",
+    "bookRef": {
+      "book": "fixture-book",
+      "lesson": 1
+    },
+    "source": "course",
+    "tags": [
+      "fixture"
+    ],
+    "type": "lexeme",
+    "id": "w3",
+    "lemma": "Probe3",
+    "pos": "noun",
+    "meaning": "Example 3",
+    "gender": "masculine",
+    "article": "der",
+    "forms": {
+      "plural": [
+        "Proben3"
+      ]
+    },
+    "audio": {
+      "src": "/audio/fixture-3.mp3",
+      "review": "preview"
+    },
+    "image": "/images/fixture-3.svg"
+  },
+  {
+    "unitId": "u1",
+    "bookRef": {
+      "book": "fixture-book",
+      "lesson": 1
+    },
+    "source": "course",
+    "tags": [
+      "fixture"
+    ],
+    "type": "lexeme",
+    "id": "w4",
+    "lemma": "Probe4",
+    "pos": "noun",
+    "meaning": "Example 4",
+    "gender": "masculine",
+    "article": "der",
+    "forms": {
+      "plural": [
+        "Proben4"
+      ]
+    },
+    "audio": {
+      "src": "/audio/fixture-4.mp3",
+      "review": "preview"
+    },
+    "image": "/images/fixture-4.svg"
+  },
+  {
+    "unitId": "u1",
+    "bookRef": {
+      "book": "fixture-book",
+      "lesson": 1
+    },
+    "source": "course",
+    "tags": [
+      "fixture"
+    ],
+    "type": "lexeme",
+    "id": "w5",
+    "lemma": "Probe5",
+    "pos": "noun",
+    "meaning": "Example 5",
+    "gender": "masculine",
+    "article": "der",
+    "forms": {
+      "plural": [
+        "Proben5"
+      ]
+    },
+    "audio": {
+      "src": "/audio/fixture-5.mp3",
+      "review": "preview"
+    },
+    "image": "/images/fixture-5.svg"
+  },
+  {
+    "unitId": "u1",
+    "bookRef": {
+      "book": "fixture-book",
+      "lesson": 1
+    },
+    "source": "course",
+    "tags": [
+      "fixture"
+    ],
+    "type": "lexeme",
+    "id": "w6",
+    "lemma": "Probe6",
+    "pos": "noun",
+    "meaning": "Example 6",
+    "gender": "masculine",
+    "article": "der",
+    "forms": {
+      "plural": [
+        "Proben6"
+      ]
+    },
+    "audio": {
+      "src": "/audio/fixture-6.mp3",
+      "review": "preview"
+    },
+    "image": "/images/fixture-6.svg"
+  },
+  {
+    "unitId": "u1",
+    "bookRef": {
+      "book": "fixture-book",
+      "lesson": 1
+    },
+    "source": "course",
+    "tags": [
+      "fixture"
+    ],
+    "type": "lexeme",
+    "id": "w7",
+    "lemma": "Probe7",
+    "pos": "noun",
+    "meaning": "Example 7",
+    "gender": "masculine",
+    "article": "der",
+    "forms": {
+      "plural": [
+        "Proben7"
+      ]
+    },
+    "audio": {
+      "src": "/audio/fixture-7.mp3",
+      "review": "preview"
+    },
+    "image": "/images/fixture-7.svg"
+  },
+  {
+    "unitId": "u1",
+    "bookRef": {
+      "book": "fixture-book",
+      "lesson": 1
+    },
+    "source": "course",
+    "tags": [
+      "fixture"
+    ],
+    "type": "grammarPoint",
+    "id": "g1",
+    "title": "Fixture rule",
+    "explanation": "Fixture only",
+    "examples": []
+  },
+  {
+    "unitId": "u1",
+    "bookRef": {
+      "book": "fixture-book",
+      "lesson": 1
+    },
+    "source": "course",
+    "tags": [
+      "fixture"
+    ],
+    "type": "drill",
+    "id": "d-sort",
+    "grammarPoint": "g1",
+    "drillType": "sort",
+    "prompt": "Fixture task",
+    "answer": {
+      "type": "exact",
+      "accepted": [
+        "ok"
+      ]
+    },
+    "buckets": [
+      {
+        "id": "one",
+        "label": "One"
+      },
+      {
+        "id": "two",
+        "label": "Two"
+      }
+    ],
+    "distractors": [
+      "other"
+    ]
+  },
+  {
+    "unitId": "u1",
+    "bookRef": {
+      "book": "fixture-book",
+      "lesson": 1
+    },
+    "source": "course",
+    "tags": [
+      "fixture"
+    ],
+    "type": "drill",
+    "id": "d-gap",
+    "grammarPoint": "g1",
+    "drillType": "gap",
+    "prompt": "Fixture task",
+    "answer": {
+      "type": "exact",
+      "accepted": [
+        "ok"
+      ]
+    },
+    "buckets": [
+      {
+        "id": "one",
+        "label": "One"
+      },
+      {
+        "id": "two",
+        "label": "Two"
+      }
+    ],
+    "distractors": [
+      "other"
+    ]
+  },
+  {
+    "unitId": "u1",
+    "bookRef": {
+      "book": "fixture-book",
+      "lesson": 1
+    },
+    "source": "course",
+    "tags": [
+      "fixture"
+    ],
+    "type": "drill",
+    "id": "d-order",
+    "grammarPoint": "g1",
+    "drillType": "order",
+    "prompt": "Fixture task",
+    "answer": {
+      "type": "exact",
+      "accepted": [
+        "ok"
+      ]
+    },
+    "buckets": [
+      {
+        "id": "one",
+        "label": "One"
+      },
+      {
+        "id": "two",
+        "label": "Two"
+      }
+    ],
+    "distractors": [
+      "other"
+    ]
+  },
+  {
+    "unitId": "u1",
+    "bookRef": {
+      "book": "fixture-book",
+      "lesson": 1
+    },
+    "source": "course",
+    "tags": [
+      "fixture"
+    ],
+    "type": "drill",
+    "id": "d-transform",
+    "grammarPoint": "g1",
+    "drillType": "transform",
+    "prompt": "Fixture task",
+    "answer": {
+      "type": "exact",
+      "accepted": [
+        "ok"
+      ]
+    },
+    "buckets": [
+      {
+        "id": "one",
+        "label": "One"
+      },
+      {
+        "id": "two",
+        "label": "Two"
+      }
+    ],
+    "distractors": [
+      "other"
+    ]
+  },
+  {
+    "unitId": "u1",
+    "bookRef": {
+      "book": "fixture-book",
+      "lesson": 1
+    },
+    "source": "course",
+    "tags": [
+      "fixture"
+    ],
+    "type": "drill",
+    "id": "d-errorHunt",
+    "grammarPoint": "g1",
+    "drillType": "errorHunt",
+    "prompt": "Fixture task",
+    "answer": {
+      "type": "exact",
+      "accepted": [
+        "ok"
+      ]
+    },
+    "buckets": [
+      {
+        "id": "one",
+        "label": "One"
+      },
+      {
+        "id": "two",
+        "label": "Two"
+      }
+    ],
+    "distractors": [
+      "other"
+    ]
+  },
+  {
+    "unitId": "u1",
+    "bookRef": {
+      "book": "fixture-book",
+      "lesson": 1
+    },
+    "source": "course",
+    "tags": [
+      "fixture"
+    ],
+    "type": "drill",
+    "id": "d-build",
+    "grammarPoint": "g1",
+    "drillType": "build",
+    "prompt": "Fixture task",
+    "answer": {
+      "type": "exact",
+      "accepted": [
+        "ok"
+      ]
+    },
+    "buckets": [
+      {
+        "id": "one",
+        "label": "One"
+      },
+      {
+        "id": "two",
+        "label": "Two"
+      }
+    ],
+    "distractors": [
+      "other"
+    ]
+  },
+  {
+    "unitId": "u1",
+    "bookRef": {
+      "book": "fixture-book",
+      "lesson": 1
+    },
+    "source": "course",
+    "tags": [
+      "fixture"
+    ],
+    "type": "sentence",
+    "id": "s1",
+    "text": "A fixture sentence.",
+    "translation": "A fixture translation.",
+    "tokens": [
+      "A",
+      "fixture",
+      "sentence."
+    ]
+  },
+  {
+    "unitId": "u1",
+    "bookRef": {
+      "book": "fixture-book",
+      "lesson": 1
+    },
+    "source": "course",
+    "tags": [
+      "fixture"
+    ],
+    "type": "dialogue",
+    "id": "dialogue1",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "Hello",
+        "audio": {
+          "src": "/audio/fixture.mp3",
+          "review": "preview"
+        }
+      }
+    ]
+  },
+  {
+    "unitId": "u1",
+    "bookRef": {
+      "book": "fixture-book",
+      "lesson": 1
+    },
+    "source": "course",
+    "tags": [
+      "fixture"
+    ],
+    "type": "text",
+    "id": "text1",
+    "title": "Fixture text",
+    "body": "A short fixture text."
+  },
+  {
+    "unitId": "u1",
+    "bookRef": {
+      "book": "fixture-book",
+      "lesson": 1
+    },
+    "source": "course",
+    "tags": [
+      "fixture"
+    ],
+    "type": "speakingPrompt",
+    "id": "speak1",
+    "prompt": "Describe the fixture",
+    "checklist": [
+      "One detail"
+    ],
+    "modelAnswers": [
+      "A detail"
+    ]
+  },
+  {
+    "unitId": "u1",
+    "bookRef": {
+      "book": "fixture-book",
+      "lesson": 1
+    },
+    "source": "course",
+    "tags": [
+      "fixture"
+    ],
+    "type": "writingPrompt",
+    "id": "write1",
+    "prompt": "Write a fixture reply",
+    "checklist": [
+      "One detail"
+    ],
+    "modelAnswers": [
+      "A detail"
+    ]
+  },
+  {
+    "unitId": "u1",
+    "bookRef": {
+      "book": "fixture-book",
+      "lesson": 1
+    },
+    "source": "course",
+    "tags": [
+      "fixture"
+    ],
+    "type": "examTask",
+    "id": "exam1",
+    "section": "reading",
+    "timing": 30,
+    "itemRefs": [
+      "text1"
+    ]
+  }
+]

@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "xx",
+  "label": "Toy language",
+  "locale": "en",
+  "genders": [
+    {
+      "id": "left",
+      "label": "Left",
+      "article": "la",
+      "toneToken": "--tone-masc"
+    },
+    {
+      "id": "right",
+      "label": "Right",
+      "article": "lo",
+      "toneToken": "--tone-fem"
+    }
+  ],
+  "pluralPatterns": [
+    {
+      "id": "suffix",
+      "label": "Suffix"
+    }
+  ],
+  "cases": [],
+  "prepositionsByCase": {},
+  "separablePrefixes": [],
+  "helperKeys": [
+    "ø"
+  ],
+  "normalization": {
+    "caseSensitivePos": [
+      "noun"
+    ],
+    "equivalences": [
+      {
+        "from": "oe",
+        "to": "ø",
+        "match": "hint"
+      }
+    ]
+  },
+  "ttsVoices": [],
+  "grammarLabels": {
+    "gender": "Group"
+  }
+}

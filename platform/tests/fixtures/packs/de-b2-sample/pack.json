@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "de-b2-sample",
+  "language": "de",
+  "cefr": "B2",
+  "title": "Fixture only — pending review",
+  "units": [
+    {
+      "id": "u1",
+      "title": "Fixture unit",
+      "canDo": []
+    }
+  ],
+  "maps": [
+    {
+      "id": "forms",
+      "title": "Forms",
+      "rows": "gender",
+      "cols": "tags"
+    }
+  ],
+  "difficulty": "B2",
+  "review": {
+    "status": "pending-german-review"
+  },
+  "itemFiles": [
+    "items/all.json"
+  ]
+}

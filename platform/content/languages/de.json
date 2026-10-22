@@ -1,0 +1,199 @@
+{
+  "schemaVersion": 1,
+  "id": "de",
+  "label": "German",
+  "locale": "de-DE",
+  "genders": [
+    {
+      "id": "male",
+      "label": "Masculine",
+      "article": "der",
+      "toneToken": "--tone-masc"
+    },
+    {
+      "id": "female",
+      "label": "Feminine",
+      "article": "die",
+      "toneToken": "--tone-fem"
+    },
+    {
+      "id": "neuter",
+      "label": "Neuter",
+      "article": "das",
+      "toneToken": "--tone-neut"
+    },
+    {
+      "id": "plural",
+      "label": "Plural",
+      "article": "die",
+      "toneToken": "--tone-plural"
+    }
+  ],
+  "pluralPatterns": [
+    {
+      "id": "s",
+      "label": "-s"
+    },
+    {
+      "id": "e",
+      "label": "-e"
+    },
+    {
+      "id": "en-n",
+      "label": "-(e)n"
+    },
+    {
+      "id": "unchanged",
+      "label": "—"
+    },
+    {
+      "id": "er",
+      "label": "-er"
+    },
+    {
+      "id": "umlaut",
+      "label": "Umlaut only"
+    },
+    {
+      "id": "umlaut-e",
+      "label": "Umlaut + -e"
+    },
+    {
+      "id": "umlaut-er",
+      "label": "Umlaut + -er"
+    },
+    {
+      "id": "innen",
+      "label": "-in → -innen"
+    },
+    {
+      "id": "other",
+      "label": "Other changes"
+    },
+    {
+      "id": "not-taught",
+      "label": "No plural taught"
+    }
+  ],
+  "cases": [
+    "Nominativ",
+    "Akkusativ",
+    "Dativ",
+    "Genitiv"
+  ],
+  "prepositionsByCase": {
+    "Akkusativ": [
+      "durch",
+      "für",
+      "gegen",
+      "ohne",
+      "um"
+    ],
+    "Dativ": [
+      "aus",
+      "bei",
+      "mit",
+      "nach",
+      "seit",
+      "von",
+      "zu"
+    ],
+    "Genitiv": [
+      "statt",
+      "trotz",
+      "während",
+      "wegen"
+    ],
+    "Wechselpräpositionen": [
+      "an",
+      "auf",
+      "hinter",
+      "in",
+      "neben",
+      "über",
+      "unter",
+      "vor",
+      "zwischen"
+    ]
+  },
+  "separablePrefixes": [
+    "ab",
+    "an",
+    "auf",
+    "aus",
+    "ein",
+    "mit",
+    "nach",
+    "vor",
+    "weg",
+    "zu",
+    "zurück"
+  ],
+  "helperKeys": [
+    "ä",
+    "ö",
+    "ü",
+    "ß"
+  ],
+  "normalization": {
+    "caseSensitivePos": [
+      "noun",
+      "proper-noun",
+      "country",
+      "language",
+      "geography",
+      "name"
+    ],
+    "equivalences": [
+      {
+        "from": "ß",
+        "to": "ss",
+        "match": "hint"
+      },
+      {
+        "from": "ae",
+        "to": "ä",
+        "match": "hint"
+      },
+      {
+        "from": "oe",
+        "to": "ö",
+        "match": "hint"
+      },
+      {
+        "from": "ue",
+        "to": "ü",
+        "match": "hint"
+      },
+      {
+        "from": "Ae",
+        "to": "Ä",
+        "match": "hint"
+      },
+      {
+        "from": "Oe",
+        "to": "Ö",
+        "match": "hint"
+      },
+      {
+        "from": "Ue",
+        "to": "Ü",
+        "match": "hint"
+      }
+    ]
+  },
+  "ttsVoices": [
+    "de-DE-KatjaNeural"
+  ],
+  "grammarLabels": {
+    "gender": "Gender",
+    "plural": "Plural",
+    "case": "Case",
+    "meaning": "Meaning",
+    "forms": "Forms",
+    "order": "Word order",
+    "listening": "Listening",
+    "sourceCredit": "Momente A1 · © Hueber Verlag.",
+    "audioReview": "Preview voice"
+  }
+}

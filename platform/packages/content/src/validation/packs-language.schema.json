@@ -1,0 +1,206 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:wortwerk:language:1",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "label": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "locale": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "genders": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "article": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "toneToken": {
+            "type": "string",
+            "pattern": "^--[a-zA-Z][a-zA-Z0-9-]*$"
+          }
+        },
+        "required": [
+          "id",
+          "label",
+          "article",
+          "toneToken"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0
+    },
+    "pluralPatterns": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          }
+        },
+        "required": [
+          "id",
+          "label"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0
+    },
+    "cases": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      },
+      "uniqueItems": true
+    },
+    "prepositionsByCase": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "uniqueItems": true
+      }
+    },
+    "separablePrefixes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      },
+      "uniqueItems": true
+    },
+    "helperKeys": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      },
+      "uniqueItems": true
+    },
+    "normalization": {
+      "type": "object",
+      "properties": {
+        "caseSensitivePos": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "uniqueItems": true
+        },
+        "equivalences": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "from": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "to": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "match": {
+                "enum": [
+                  "accepted",
+                  "hint"
+                ]
+              }
+            },
+            "required": [
+              "from",
+              "to",
+              "match"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "caseSensitivePos",
+        "equivalences"
+      ],
+      "additionalProperties": false
+    },
+    "ttsVoices": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      },
+      "uniqueItems": true
+    },
+    "grammarLabels": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      }
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "id",
+    "label",
+    "locale",
+    "genders",
+    "pluralPatterns",
+    "cases",
+    "prepositionsByCase",
+    "separablePrefixes",
+    "helperKeys",
+    "normalization",
+    "ttsVoices",
+    "grammarLabels"
+  ],
+  "additionalProperties": false
+}
