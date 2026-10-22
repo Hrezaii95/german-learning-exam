@@ -58,9 +58,11 @@
 .subject-vocabulary-entry[aria-pressed=true]{box-shadow:inset 3px 0 var(--subject-tone)}
 .subject-vocabulary-entry>.subject-vocabulary-visual{width:43px;height:43px}
 .subject-entry-text{display:flex;flex-direction:column;gap:4px;min-width:0}
-.subject-entry-text strong{font-size:1.01rem;line-height:1.3;font-weight:650;overflow-wrap:anywhere}
-.subject-entry-text small{color:var(--subject-muted);font-size:.77rem;line-height:1.4;overflow-wrap:anywhere}
+.subject-entry-text strong{font-size:1.01rem;line-height:1.3;font-weight:650;overflow-wrap:break-word}
+.subject-entry-text small{color:var(--subject-muted);font-size:.77rem;line-height:1.4;overflow-wrap:break-word}
 .subject-entry-text em{color:#745b2c;font-size:.64rem;font-style:normal;line-height:1.3}
+/* Include inherited German spans and lookup buttons in the word-wrapping rule. */
+.subject-sheet :lang(de){overflow-wrap:break-word;word-break:normal;hyphens:auto}
 .subject-plain-groups{display:grid;gap:18px;margin-top:20px}
 .subject-lane-plain{padding:18px 16px 12px;border-top-width:2px;background:#f7f8f1}
 .subject-lane-plain h3{justify-content:space-between;margin-bottom:12px;font-size:.95rem}
@@ -111,7 +113,7 @@
 .subject-directory-tile h2{margin:0 0 10px;font-size:1.24rem;line-height:1.3;letter-spacing:-.025em}
 .subject-directory-tile p{margin:0 0 18px;color:var(--subject-muted);font-size:.77rem;line-height:1.5}
 .subject-tile-action{display:flex;justify-content:space-between;gap:12px;margin-top:auto;padding-top:14px;border-top:1px solid var(--subject-line);font-size:.78rem;font-weight:650;color:#345d4c}
-.subject-sheet button:focus-visible,.subject-sheet a:focus-visible,.subject-sheet summary:focus-visible,.subject-directory a:focus-visible,.subject-directory button:focus-visible,.subject-sheet input:focus-visible,.subject-directory input:focus-visible{outline:3px solid #9c671d;outline-offset:3px}
+.subject-sheet button:focus-visible,.subject-sheet a:focus-visible,.subject-sheet summary:focus-visible,.subject-directory a:focus-visible,.subject-directory button:focus-visible,.subject-sheet input:focus-visible,.subject-directory input:focus-visible{outline:3px solid var(--focus-ring);outline-offset:3px}
 @media(min-width:1280px){.subject-lane-plain .subject-lane-entries{grid-template-columns:repeat(4,minmax(0,1fr))}.subject-directory-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
 @media(max-width:1000px){.subject-vocabulary-lanes{gap:11px}.subject-vocabulary-lane{padding-inline:9px}.subject-vocabulary-entry{gap:8px}.subject-vocabulary-entry>.subject-vocabulary-visual{width:36px;height:36px}.subject-entry-text strong{font-size:.94rem}.subject-directory-tile{padding:20px}}
 @media(max-width:800px){.subject-navigation{margin-bottom:24px}.subject-vocabulary-lanes{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.subject-vocabulary-lane{padding:16px 12px 10px}.subject-vocabulary-entry>.subject-vocabulary-visual{width:43px;height:43px}.subject-entry-text strong{font-size:1rem}.subject-lane-plain .subject-lane-entries{grid-template-columns:repeat(2,minmax(0,1fr));gap:3px 14px}.subject-page-heading h1{font-size:2.6rem}.subject-heading-mark{width:84px;height:84px}.subject-heading-mark .subject-icon{width:53px;height:53px}.subject-controls,.subject-directory-controls{align-items:start;gap:18px}.subject-controls>p,.subject-directory-controls>p{max-width:230px;font-size:.74rem}.subject-controls label,.subject-directory-controls label{min-width:0}.subject-sheet .sheet-overview{padding:20px}.subject-word-detail{padding:20px;gap:20px}.subject-directory-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.subject-related{align-items:start;flex-direction:column;gap:18px}.subject-gender-key>span{width:100%;margin:4px 0 0}}

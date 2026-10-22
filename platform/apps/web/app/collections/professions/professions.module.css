@@ -35,7 +35,7 @@
 .patternCard > span[lang] { font-size:1.05rem; font-weight:700; }
 .patternCard small { color:var(--study-muted); margin-top:auto; }
 .patternCard[aria-pressed=true] { border:2px solid var(--study-green); background:var(--study-tint); padding:13px; }
-.patternCard:focus-visible { outline:3px solid var(--study-green); outline-offset:3px; }
+.patternCard:focus-visible { outline:3px solid var(--focus-ring); outline-offset:3px; }
 .patternCard:disabled { cursor:default; opacity:.65; }
 .maleText { color:var(--tone-masc); }
 .femaleText { color:var(--tone-fem); }

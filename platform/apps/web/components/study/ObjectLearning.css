@@ -11,7 +11,7 @@
 .office-desk-overview{margin:1rem 0}.office-desk-overview>summary{min-height:44px;border:1px solid #b9c7bf;border-radius:.65rem;font-weight:600;background:#fffdf7}
 #phone-details label{display:block;margin:.8rem 0;font-weight:600}
 #phone-details input{display:block;width:100%;box-sizing:border-box;min-height:44px;margin-top:.45rem;padding:.7rem;border:1px solid #adbbb4;border-radius:.65rem;background:white;color:#253b32;font:inherit}
-#phone-details input:focus-visible{outline:3px solid #315f4a;outline-offset:2px}
+#phone-details input:focus-visible{outline:3px solid var(--focus-ring);outline-offset:3px}
 #phone-details .phone-lab>*{min-width:0}
 @media print{
  .sheet-print-summary .object-print-grid{gap:2mm}

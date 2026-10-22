@@ -1091,6 +1091,13 @@ a:hover {
   outline-offset: 3px;
 }
 
+/* A light underlay keeps the shared ring visible against dark navigation. */
+.shell-rail .nav-link:focus-visible,
+.shell-topnav .nav-link:focus-visible,
+.mobile-navigation > :focus-visible {
+  box-shadow: 0 0 0 6px var(--nav-ink);
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -1439,8 +1446,8 @@ a:hover {
 }
 
 .hub-input:focus-visible {
-  outline: 2px solid color-mix(in srgb, var(--brand) 70%, white);
-  outline-offset: 2px;
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
 }
 
 .hub-filter-actions {
@@ -1956,8 +1963,8 @@ a:hover {
 }
 
 .game-selector__card:focus-visible {
-  outline: 2px solid var(--focus-ring, #1c4b82);
-  outline-offset: 2px;
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
 }
 
 .game-selector__card--unavailable {
@@ -1997,8 +2004,8 @@ a:hover {
 }
 
 .game-flashcard:focus-visible {
-  outline: 2px solid var(--focus-ring, #1c4b82);
-  outline-offset: 2px;
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
 }
 
 .game-flashcard__text {
@@ -2075,8 +2082,8 @@ a:hover {
 }
 
 .game-token:focus-visible {
-  outline: 2px solid var(--focus-ring, #1c4b82);
-  outline-offset: 2px;
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
 }
 
 .game-actions {
@@ -2139,8 +2146,8 @@ a:hover {
 }
 
 .conversation-progress__btn:focus-visible {
-  outline: 2px solid var(--focus-ring);
-  outline-offset: 2px;
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
 }
 
 .conversation-progress__btn:disabled {
@@ -2447,7 +2454,7 @@ a:hover {
 .activity-choice:focus-within,
 .activity-confirmation:focus-within {
   outline: 3px solid var(--focus-ring);
-  outline-offset: 2px;
+  outline-offset: 3px;
 }
 
 .activity-feedback {
