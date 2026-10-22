@@ -1,0 +1,138 @@
+[
+  {
+    "id": "a2-satz-verschieben",
+    "unitId": "appointments",
+    "bookRef": {
+      "book": "independent-a2",
+      "lesson": 1
+    },
+    "source": "study-extra",
+    "tags": [
+      "modal-verbs",
+      "appointments"
+    ],
+    "review": {
+      "status": "pending-german-review"
+    },
+    "type": "sentence",
+    "text": "Können wir das Treffen auf Montag verschieben?",
+    "translation": "Can we postpone the get-together until Monday?",
+    "tokens": [
+      "Können",
+      "wir",
+      "das Treffen",
+      "auf Montag",
+      "verschieben?"
+    ],
+    "grammarTags": [
+      "modal-verbs",
+      "appointments"
+    ],
+    "revealFields": [
+      "text"
+    ]
+  },
+  {
+    "id": "a2-satz-grund",
+    "unitId": "outings",
+    "bookRef": {
+      "book": "independent-a2",
+      "lesson": 2
+    },
+    "source": "study-extra",
+    "tags": [
+      "weil",
+      "word-order"
+    ],
+    "review": {
+      "status": "pending-german-review"
+    },
+    "type": "sentence",
+    "text": "Ich komme später, weil der Zug Verspätung hat.",
+    "translation": "I am arriving later because the train is delayed.",
+    "tokens": [
+      "Ich",
+      "komme",
+      "später,",
+      "weil",
+      "der Zug",
+      "Verspätung",
+      "hat."
+    ],
+    "grammarTags": [
+      "weil",
+      "word-order"
+    ],
+    "revealFields": [
+      "text"
+    ]
+  },
+  {
+    "id": "a2-satz-mitgebracht",
+    "unitId": "outings",
+    "bookRef": {
+      "book": "independent-a2",
+      "lesson": 2
+    },
+    "source": "study-extra",
+    "tags": [
+      "perfect",
+      "separable-verbs"
+    ],
+    "review": {
+      "status": "pending-german-review"
+    },
+    "type": "sentence",
+    "text": "Ich habe eine Fahrkarte und etwas zu essen mitgebracht.",
+    "translation": "I have brought a ticket and something to eat.",
+    "tokens": [
+      "Ich",
+      "habe",
+      "eine Fahrkarte",
+      "und",
+      "etwas zu essen",
+      "mitgebracht."
+    ],
+    "grammarTags": [
+      "perfect",
+      "separable-verbs"
+    ],
+    "revealFields": [
+      "text"
+    ]
+  },
+  {
+    "id": "a2-satz-verabreden",
+    "unitId": "appointments",
+    "bookRef": {
+      "book": "independent-a2",
+      "lesson": 1
+    },
+    "source": "study-extra",
+    "tags": [
+      "time-place",
+      "appointments"
+    ],
+    "review": {
+      "status": "pending-german-review"
+    },
+    "type": "sentence",
+    "text": "Wir treffen uns morgen um sechs vor dem Kino.",
+    "translation": "We are meeting tomorrow at six in front of the cinema.",
+    "tokens": [
+      "Wir",
+      "treffen",
+      "uns",
+      "morgen",
+      "um sechs",
+      "vor dem Kino."
+    ],
+    "grammarTags": [
+      "time-place",
+      "appointments"
+    ],
+    "revealFields": [
+      "text"
+    ]
+  }
+]
