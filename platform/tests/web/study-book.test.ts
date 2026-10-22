@@ -103,7 +103,7 @@ describe("Lesson 4 source and exercise integration", () => {
   it("accepts Lesson 4 in the existing vocabulary filters", () => {
     expect(parseHubSearchParams({ lesson: "04" }, []).lesson).toBe("04");
     const nav = buildHubNavigationContext({ hubId: "vocabulary", lesson: "04", q: "Stuhl" });
-    expect(resolveBackHref(nav, "hub")).toBe("/vocabulary?q=Stuhl&lesson=04");
+    expect(resolveBackHref(nav, "hub")).toBe("/cheat-sheets/vocabulary?q=Stuhl&lesson=04");
     expect(parseNavigationContextParam(JSON.stringify(nav))?.lesson).toBe("04");
     expect(isSafeNavigationPath("/vocabulary/l4-stuhl")).toBe(true);
     expect(isSafeNavigationPath("/vocabulary/l4-made-up")).toBe(false);
