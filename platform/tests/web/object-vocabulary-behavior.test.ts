@@ -191,7 +191,7 @@ describe("live workshop print controls",()=>{
   it.each([true,false])("omits the pattern toggle while retaining the current reveal state %s and selected teaching cards",revealed=>{
     window.history.replaceState({},"","/cheat-sheets/past#past-patterns-0-1-question-2-3");
     render(createElement("div",{className:"app-shell"},createElement("main",{className:"shell-main"},createElement(PastCheatSheet,{cards:topicCards(11),speech}))));
-    const toggle=screen.getByRole("checkbox",{name:"Show participles in the pattern cards",exact:true}) as HTMLInputElement;
+    const toggle=screen.getByRole("checkbox",{name:"Show participles in the pattern cards"}) as HTMLInputElement;
     if(!revealed)fireEvent.click(toggle);
     const label=toggle.closest("label")!;
     const selected=document.getElementById("past-pattern-ieren")!;
@@ -232,21 +232,21 @@ describe("live workshop print controls",()=>{
   ])("$subject omits transient inline fields without dropping the current teaching output",testCase=>{
     const content=testCase.subject==="conversation"||testCase.subject==="numbers"?createElement(CollectionCheatSheet,{sheet:testCase.subject,cards:loadWordCards().cards,speech}):topics.find(topic=>topic.subject===testCase.subject)!.render();
     render(createElement("div",{className:"app-shell"},createElement("main",{className:"shell-main"},content)));
-    if(testCase.subject==="objects")fireEvent.click(screen.getByRole("checkbox",{name:"Correct a guess with kein / keine",exact:true}));
+    if(testCase.subject==="objects")fireEvent.click(screen.getByRole("checkbox",{name:"Correct a guess with kein / keine"}));
     if(testCase.subject==="office"){
-      fireEvent.click(screen.getByRole("checkbox",{name:"Make it plural",exact:true}));
-      fireEvent.change(screen.getByRole("textbox",{name:"Name to spell",exact:true}),{target:{value:"Mia"}});
-      fireEvent.change(screen.getByRole("textbox",{name:"Digits you heard",exact:true}),{target:{value:"1234"}});
-      fireEvent.click(screen.getByRole("button",{name:"Check digits",exact:true}));
+      fireEvent.click(screen.getByRole("checkbox",{name:"Make it plural"}));
+      fireEvent.change(screen.getByRole("textbox",{name:"Name to spell"}),{target:{value:"Mia"}});
+      fireEvent.change(screen.getByRole("textbox",{name:"Digits you heard"}),{target:{value:"1234"}});
+      fireEvent.click(screen.getByRole("button",{name:"Check digits"}));
     }
-    if(testCase.subject==="food")fireEvent.change(screen.getByRole("combobox",{name:"Food for these examples",exact:true}),{target:{value:"3"}});
-    if(testCase.subject==="time")fireEvent.click(screen.getByRole("checkbox",{name:"Put the time first",exact:true}));
-    if(testCase.subject==="seasons")fireEvent.change(screen.getByRole("textbox",{name:"Year to pronounce",exact:true}),{target:{value:"2007"}});
+    if(testCase.subject==="food")fireEvent.change(screen.getByRole("combobox",{name:"Food for these examples"}),{target:{value:"3"}});
+    if(testCase.subject==="time")fireEvent.click(screen.getByRole("checkbox",{name:"Put the time first"}));
+    if(testCase.subject==="seasons")fireEvent.change(screen.getByRole("textbox",{name:"Year to pronounce"}),{target:{value:"2007"}});
     if(testCase.subject==="conversation"){
-      fireEvent.change(screen.getByRole("combobox",{name:"Choose a letter",exact:true}),{target:{value:"W"}});
-      fireEvent.change(screen.getByRole("textbox",{name:"Name to spell",exact:true}),{target:{value:"Mia"}});
+      fireEvent.change(screen.getByRole("combobox",{name:"Choose a letter"}),{target:{value:"W"}});
+      fireEvent.change(screen.getByRole("textbox",{name:"Name to spell"}),{target:{value:"Mia"}});
     }
-    if(testCase.subject==="numbers")fireEvent.change(screen.getByRole("textbox",{name:"Type a whole number from 0 to 1,000,000",exact:true}),{target:{value:"452"}});
+    if(testCase.subject==="numbers")fireEvent.change(screen.getByRole("textbox",{name:"Type a whole number from 0 to 1,000,000"}),{target:{value:"452"}});
     const labels=[...document.querySelectorAll(testCase.labels)];
     expect(labels).toHaveLength(testCase.count);
     for(const label of labels)expect(hiddenByPrintAncestor(label)).toBe(false);

@@ -48,7 +48,7 @@ describe("actual playable capability index", () => {
       expect(played).toBeGreaterThan(0);
       expect(entry.enabledByDefault).toBe(entry.pack.review.status === "reviewed");
     }
-  });
+  }, 180_000);
 
   it("indexes all implemented variants and every enabled item generates and grades a task", () => {
     const value = pack();

@@ -125,7 +125,7 @@ export function hasLiteralHeadword(text:string,de:string,continuesPreviousWord=f
   const value=literal(text),key=literal(needle);
   for(let index=value.indexOf(key);index>=0;index=value.indexOf(key,index+1)){
     if(index===0&&continuesPreviousWord)continue;
-    const before=index?value[index-1]:"",after=value[index+key.length]??"";
+    const before=index?value[index-1]??"":"",after=value[index+key.length]??"";
     if(!/[\p{L}\p{N}]/u.test(before)&&!/[\p{L}\p{N}]/u.test(after))return true;
   }
   return false;
