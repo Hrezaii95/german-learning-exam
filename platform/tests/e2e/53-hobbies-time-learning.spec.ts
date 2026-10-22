@@ -21,7 +21,7 @@ test("hobby and time keep lesson practice while linking to filtered subject voca
   await page.goto(`cheat-sheets/${sheet}/`);
   await expect(page.locator("[data-sheet-card]")).toHaveCount(0);
   const target=new URL((await page.getByRole("link",{name:`Open ${label} subject sheet →`,exact:true}).getAttribute("href"))!,page.url());
-  expect(target.pathname.endsWith(`/cheat-sheets/subjects/${sheet}`)).toBe(true);
+  expect(target.pathname.replace(/\/$/, "").endsWith(`/cheat-sheets/subjects/${sheet}`)).toBe(true);
   expect(target.searchParams.get("lesson")).toBe(String(lesson));
   await expect(page.locator("#sheet-practice")).toContainText("Question 1 /");
   const scope=page.locator(".study-scope");await scope.locator("summary").click();
