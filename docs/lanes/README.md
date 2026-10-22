@@ -22,6 +22,8 @@ Three Codex sessions work in parallel (ADR-019). Each lane owns a fixed set of f
    1. Fetch.
    2. Create or update `integration/all` from `origin/codex/live-alpha`.
    3. Merge whichever of `origin/lane1/main`, `origin/lane2/main` and `origin/lane3/main` exist, **in that order**.
+      - A lane may instead use one branch per item (`laneN/<topic>`, one draft PR each into `codex/live-alpha`), as Lane 1 started doing. In that case, merge that lane's open-PR head branches in plan order (L1-1, L1-2, …) at that lane's position.
+      - Never include a branch whose PR is closed without merging.
    4. Resolve conflicts only in the append-only files (CONTRACTS §11: keep both sides; regenerate the lockfile with `npm install`). For any other conflict, stop and record it in your status file.
    5. Run **all** gates on the result and push.
    6. Keep one PR **"integration/all → codex/live-alpha"** up to date: not a draft once all gates pass, with a body that lists every included item, the gate results and the go-live checklist link.
