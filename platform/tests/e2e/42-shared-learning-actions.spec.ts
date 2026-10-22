@@ -1,4 +1,5 @@
 import { expect, test } from "@playwright/test";
+import { readFileSync } from "node:fs";
 
 test.setTimeout(120_000);
 
@@ -178,3 +179,86 @@ test("a failed preview recording shows a useful error and can be retried", async
   await expect.poll(() => audio.evaluate((element: HTMLAudioElement) => element.currentTime)).toBeGreaterThan(0);
   await expect(player.getByRole("status")).toHaveCount(0);
 });
+
+const responsiveWordFamilyCards = ["W126", "W017"].map(id => {
+  const catalog = JSON.parse(readFileSync(new URL("../../apps/web/generated/word-cards.json", import.meta.url), "utf8")) as {
+    cards: { id: string; path: string; image: { path: string; alt: string } | null }[];
+  };
+  const card = catalog.cards.find(candidate => candidate.id === id);
+  if (!card?.image) throw new Error("Missing approved raster fixture: " + id);
+  return { id: card.id, path: card.path, image: card.image };
+});
+
+for (const card of responsiveWordFamilyCards) for (const width of [320, 390, 1366]) {
+  test(card.id + " keeps its raster and review controls usable at " + width + "px", async ({ page }) => {
+    await page.setViewportSize({ width, height: 1000 });
+    await page.goto(card.path.slice(1) + "/");
+    await page.evaluate(() => document.fonts.ready);
+    const liveCard = page.locator('[data-word-card="' + card.id + '"]');
+    await expect(liveCard).toHaveCount(1);
+    await expect(liveCard).toBeVisible();
+    const image = liveCard.locator("img");
+    await expect(image).toHaveCount(1);
+    const pathname = new URL(page.url()).pathname.replace(/\/$/, "");
+    expect(pathname.endsWith(card.path)).toBe(true);
+    const basePath = pathname.slice(0, -card.path.length);
+    const expectedImage = basePath + card.image.path;
+    const mode = liveCard.getByRole("group", { name: "Study mode", exact: true });
+    const learn = mode.getByRole("button", { name: "Learn", exact: true });
+    const recall = mode.getByRole("button", { name: "Recall", exact: true });
+    const save = liveCard.getByRole("button", { name: /^(?:Save to|Remove from) review:/ });
+
+    async function expectResponsiveCard() {
+      await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth - innerWidth)).toBeLessThanOrEqual(1);
+      await expect(image).toBeVisible();
+      await expect(image).toHaveAttribute("src", expectedImage);
+      await expect(image).toHaveAttribute("alt", card.image.alt);
+      await expect(image).toHaveAttribute("width", "265");
+      await expect(image).toHaveAttribute("height", "204");
+      await expect.poll(() => image.evaluate(node => {
+        const raster = node as HTMLImageElement;
+        return raster.complete && raster.naturalWidth > 0 && raster.naturalHeight > 0
+          && new URL(raster.currentSrc).pathname === new URL(raster.src).pathname;
+      })).toBe(true);
+      for (const target of [
+        { name: "Study mode group", locator: mode, button: false },
+        { name: "Save control", locator: save, button: true },
+        { name: "Learn control", locator: learn, button: true },
+        { name: "Recall control", locator: recall, button: true },
+      ]) {
+        await expect(target.locator).toBeVisible();
+        const box = await target.locator.evaluate(node => {
+          const rect = node.getBoundingClientRect();
+          return { left: rect.left, right: rect.right, width: rect.width, height: rect.height, viewport: innerWidth };
+        });
+        expect(box.left, target.name + " left edge").toBeGreaterThanOrEqual(-1);
+        expect(box.right, target.name + " right edge").toBeLessThanOrEqual(box.viewport + 1);
+        expect(box.width, target.name + " width").toBeGreaterThan(0);
+        if (target.button) expect(box.height, target.name + " touch height").toBeGreaterThanOrEqual(44);
+      }
+    }
+
+    await expect(learn).toHaveAttribute("aria-pressed", "true");
+    await expect(liveCard.getByRole("table")).toBeVisible();
+    await expect(save).toBeEnabled();
+    await expect(save).toHaveAttribute("aria-pressed", "false");
+    await expectResponsiveCard();
+    await save.click();
+    await expect(save).toHaveAttribute("aria-pressed", "true");
+    await expect(save).toContainText("Saved");
+    await expectResponsiveCard();
+
+    await recall.click();
+    await expect(recall).toHaveAttribute("aria-pressed", "true");
+    await expect(liveCard.getByRole("textbox", { name: "German answer", exact: true })).toBeVisible();
+    await expect(liveCard.getByRole("table")).toHaveCount(0);
+    await expectResponsiveCard();
+
+    await learn.click();
+    await expect(learn).toHaveAttribute("aria-pressed", "true");
+    await expect(liveCard.getByRole("table")).toBeVisible();
+    await expect(liveCard.getByRole("textbox", { name: "German answer", exact: true })).toHaveCount(0);
+    await expect(save).toHaveAttribute("aria-pressed", "true");
+    await expectResponsiveCard();
+  });
+}
