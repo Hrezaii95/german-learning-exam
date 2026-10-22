@@ -13,7 +13,7 @@ const visual=(de:string,category="Noun",cardId="source-test",subject:StudyConcep
 
 describe("subject overview illustrations",()=>{
   it("keeps workshop and vocabulary drawings identical while preserving physical paint and shape",()=>{
-    const pairs=[
+    const pairs:ReadonlyArray<readonly [string,string]>=[
       [renderToStaticMarkup(createElement(FoodIllustration,{index:3})),visual("der Tee")],
       [renderToStaticMarkup(createElement(HobbyIllustration,{index:0})),visual("schwimmen","Verb")],
       [renderToStaticMarkup(createElement(HomeIllustration,{id:"tisch"})),visual("der Tisch")],
