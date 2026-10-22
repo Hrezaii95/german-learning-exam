@@ -1,12 +1,19 @@
 # Lane 2 status
 
-Updated by Lane 2 only. Lane worktree: `lane2/l2-2-corners`. Base: `codex/live-alpha` with PR #1 documentation merged locally. Never merge to the live branch.
+Updated by Lane 2 only. Lane worktree: `lane2/l2-3-daily`. Base: `codex/live-alpha` with PR #1 documentation merged locally. Never merge to the live branch.
 
 | PR | Title | State (planned / in progress / draft PR / merged / blocked) | Link | Notes |
 |---|---|---|---|---|
 | L2-1 | Pack content foundation and A1 migration | draft PR | [PR #4](https://github.com/Hrezaii95/german-learning-exam/pull/4) | Code implemented; after Lane 1 merge, A1 pack remains blocked by 11 source groups. |
 | L2-2 | Corners and Four Corners templates | draft PR | [PR #16](https://github.com/Hrezaii95/german-learning-exam/pull/16) | Implemented; production pack and release/browser gates remain open. |
 | L2-3 | Daily Run, event-derived progress and Today | in progress | — | Engine/store focused tests pass; route integration underway. |
+| L2-4 | Grammar and listening | in progress | — | Mechanics/templates implemented; focused tests pass. |
+| L2-5 | Speaking, reading and writing | in progress | — | Mechanics/templates implemented; self-assessment stays separate from objective mastery. |
+| L2-6 | Engagement, maps, story and exam | in progress | — | Pure helpers and fixed routes implemented; integration underway. |
+| L2-7 | Book companion | in progress | — | Scope/position/printing implemented; Lane 1 book-surface hooks remain an integration need. |
+| L2-8 | CSV authoring and preview | in progress | — | CSV tooling implemented; preview integration underway. |
+| L2-8b | Data-only A2 everyday pack | draft PR | [PR #17](https://github.com/Hrezaii95/german-learning-exam/pull/17) | Exactly ten content files, no code; all content pending review. |
+| L2-9 | Student Class A tools | in progress | — | Receipts, challenges, assignment card and personal import implemented; integration underway. |
 
 ## L2-1 implementation plan
 
@@ -70,7 +77,7 @@ No screenshots apply to this data-only slice. No PR merge, deploy, new TTS, lang
 
 ## Source dependency and next action
 
-`platform/content/packs/a1-migration-status.json` records the current 1,338 source rows, 19 duplicate headword groups and zero missing-lesson errors. The script checks all rows before any output and reports the exact source IDs. The groups include both known duplicate families and intentional-looking homographs/case distinctions; Lane 2 does not silently merge or choose meanings for them.
+The original L2-1 checkpoint recorded 1,338 source rows and 19 duplicate groups. After the authorized Lane 1 merge, `platform/content/packs/a1-migration-status.json` records 1,330 rows, 11 duplicate groups and zero missing-lesson errors. The script checks all rows before any output and reports the exact source IDs. The groups include both known duplicate families and intentional-looking homographs/case distinctions; Lane 2 does not silently merge or choose meanings for them.
 
 After Lane 1 resolves the canonical source families, run `npm run packs:migrate-a1 -- --write`, then `npm run packs:validate`. The resulting pack remains pending German review and off by default. Owner instruction (2026-10-22): continue L2-2, L2-3 and later phases against fixture packs without waiting for the production pack. Integration must retain the draft state while source, browser or composite release gates remain blocked.
 
@@ -103,3 +110,18 @@ L2-2: seeded Corners templates and separate no-giveaway projections, accessible 
 Seeded Corners templates cover meaning, reverse meaning, gender, plural form/pattern, word-to-picture and source-audio-to-picture where supported, with recognition/reduced-cue/recall variants. Distractors prefer the same map cell, unit and tags, exclude accepted variants, and use opaque IDs assigned after shuffling. Question/feedback projections are separate. Corners supports pointer drop, tap, arrow keys and typed recall; feedback manages focus and source-only audio has explicit gesture, failure and cleanup handling. Fixtures use eight explicitly selected existing source rows with their actual media; this is test data, not an A1 migration or content review.
 
 Focused engine/UI tests: 23 passing, including 1,000-seed position distribution and question DOM checks. Independent review covered answer metadata, audio lifecycle, source links and variant distractors; fixes applied. Full `npm run check`: all typechecks, lint, publication validation, full suite and web rerun pass; final `packs:validate` remains blocked by the absent production manifest. Required release/browser gates remain open; this slice stays draft. The all-phase continuation plan is posted at PR #4 comment 6344476189.
+
+## L2-3 integration verification
+
+Implemented local UUIDv7 events and LWW docs, contract sync exports, validated evidence adapters and combined backup bridge; progress is rebuilt from raw answers/sessions. Daily Run includes adaptive preview, alternate-format comeback, finite optional finisher, real-answer persistence, meaningful-session streak and separate full-Run goal. Fixed routes, explicit pending-pack opt-in, contract links, standalone panels, live overlay updates and profile-only class extras are included.
+
+`npm run check` passed all typechecks/lint, publication validation, 121 files / 1,367 tests and web rerun 107 files / 977 tests, then failed at the expected empty production pack inventory. Final root scope/provider cases: 15 tests pass. The skip/abandon habit fix adds 25 focused passing tests: five genuine Run/Quick answers keep the streak, full completion is required for the goal and diminishing-Run counter. Production build passed (1,621 static pages); route smoke passed 50 checks. Browser runtime is now available (Chromium 152); export/browser verification will run on the integrated stack. No claim that every release gate has passed.
+
+The data-only A2 draft independently passes schema/resource validation and 318 generated/graded tasks; it does not resolve or replace the remaining A1 source issues. Later slices continue autonomously on owned files.
+
+### Lane 1 integration points
+
+- Call the exported book-position advance proposal/prompt from book and lesson completion surfaces. Lane 2 does not edit those pages.
+- Mount the combined Wortwerk backup bridge from the existing Settings backup flow. The owned bridge accepts legacy backups; the legacy Settings page is untouched.
+- Add the Play navigation entry when the CONTRACTS prerequisite for Lane 1 navigation integration is satisfied; the fixed routes and link contract work independently.
+- Normal build regenerates the Lane 1-owned study dictionary from the updated source. Lane 2 restores that generated file before staging its own slice.

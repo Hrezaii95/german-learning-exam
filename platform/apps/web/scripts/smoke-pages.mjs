@@ -180,6 +180,9 @@ function listExpectedAppPaths() {
     "/search",
     "/practice",
     "/conversation",
+    // Lane 2: fixed Wortwerk routes.
+    "/play", "/play/run", "/play/packs",
+    // End Lane 2.
     // The course-material credit is a release condition (ADR-016), so its route
     // is verified like any other learner route, not assumed to exist.
     "/references",
