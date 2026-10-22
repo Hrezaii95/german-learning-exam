@@ -1,3 +1,4 @@
+import { articleTone } from "@/lib/study/article-tone";
 import type {
   LearnerGrammarDetail,
   LearnerQaDetail,
@@ -11,8 +12,8 @@ import { GenderBadge } from "@/components/details/GenderBadge";
 
 type VisualTone =
   | "neutral"
-  | "masculine"
-  | "feminine"
+  | "male"
+  | "female"
   | "plural"
   | "regular"
   | "special"
@@ -87,8 +88,8 @@ const LESSON_JOURNEYS = Object.freeze({
     Object.freeze({ de: "Das bin ich", en: "Build a profile", tone: "answer" as const }),
     Object.freeze({ de: "ich · du · wir · ihr", en: "Match person and verb", tone: "regular" as const }),
     Object.freeze({ de: "nicht", en: "Express a negative", tone: "special" as const }),
-    Object.freeze({ de: "der ↔ die", en: "Learn profession pairs", tone: "masculine" as const }),
-    Object.freeze({ de: "0 → 100", en: "Hear and recognize numbers", tone: "plural" as const }),
+    Object.freeze({ de: "der ↔ die", en: "Learn profession pairs", tone: "male" as const }),
+    Object.freeze({ de: "0 → 100", en: "Hear and recognize numbers", tone: "neutral" as const }),
     Object.freeze({ de: "Was sind Sie von Beruf?", en: "Ask, answer, and write", tone: "question" as const }),
   ]),
 });
@@ -184,9 +185,9 @@ function ProfessionPairsVisual({ limit = 6 }: { limit?: number }) {
       <div className="profession-pair-grid">
         {pairs.map((pair) => (
           <article className="profession-pair" key={pair.id}>
-            <div data-gender="masculine"><GenderBadge gender="masculine" /><strong><German>{pair.masculine}</German></strong></div>
+            <div data-tone="male"><GenderBadge gender="masculine" /><strong><German>{pair.masculine}</German></strong></div>
             <span className="profession-pair__arrow" aria-hidden="true">→</span>
-            <div data-gender="feminine"><GenderBadge gender="feminine" /><strong><German>{pair.feminine}</German></strong></div>
+            <div data-tone="female"><GenderBadge gender="feminine" /><strong><German>{pair.feminine}</German></strong></div>
             <Cue tone={pair.id === "profession:arzt" ? "irregular" : "special"}><German>{pair.operation}</German></Cue>
           </article>
         ))}
@@ -328,7 +329,7 @@ export function NounSystemVisual({ detail }: { detail: LearnerVocabularyDetail }
       kind={`noun-${detail.id.replace(":", "-")}`}
     >
       <div className="noun-system">
-        <div className="noun-system__singular" data-gender={detail.gender}>
+        <div className="noun-system__singular" data-tone={articleTone(detail.gender)}>
           <GenderBadge gender={detail.gender} />
           <strong><German>{detail.displayText}</German></strong>
           <span>singular</span>

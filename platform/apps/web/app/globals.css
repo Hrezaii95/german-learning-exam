@@ -27,22 +27,14 @@
   --nav-active: #ffffff;
   --brand: #28634f;
   --brand-ink: #ffffff;
-  --gender-m: #246bfd;
-  --gender-f: #e64c86;
-  --gender-n: #2e9d68;
-  --gender-pl: #7957d5;
-  /* Ink variants of the gender hues, for TEXT on the tinted gender plates.
-     The identifying hue above is unchanged and still carries the swatch fill,
-     the border and the shape glyph; only the letterforms darken. Measured on
-     the 8% tints these badges use: masculine 7.0:1, feminine 5.9:1, neuter
-     5.3:1 — the raw hues measured 4.10 / 3.32 / 3.13 and failed WCAG 1.4.3 AA
-     on the product's most-repeated teaching cue. These are exactly the tones
-     `.visual-cue[data-tone]` already uses one level away. */
-  --gender-m-ink: #174dac;
-  --gender-f-ink: #a92f5d;
-  --gender-n-ink: #1f744d;
-  /* Plural needs no ink variant: `--gender-pl` is only ever used for text on
-     `--surface-muted` (5.1:1 large, 4.6:1 small), which already clears AA. */
+  /* Compatibility aliases: every article surface uses the reference palette. */
+  --gender-m: var(--tone-masc, #245fa7);
+  --gender-f: var(--tone-fem, #b82e4c);
+  --gender-n: var(--tone-neut, #237149);
+  --gender-pl: var(--tone-plural, #8c4daa);
+  --gender-m-ink: var(--gender-m);
+  --gender-f-ink: var(--gender-f);
+  --gender-n-ink: var(--gender-n);
   --rule-regular: #16796f;
   --rule-special: #d8901c;
   --rule-irregular: #c23b6e;
@@ -230,11 +222,11 @@
   background: var(--surface-muted);
 }
 
-.rich-visual__labels li[data-gender="masculine"] {
+.rich-visual__labels li[data-tone="male"] {
   border-left-color: var(--gender-m);
 }
 
-.rich-visual__labels li[data-gender="feminine"] {
+.rich-visual__labels li[data-tone="female"] {
   border-left-color: var(--gender-f);
 }
 
@@ -333,22 +325,22 @@
   overflow-wrap: anywhere;
 }
 
-.visual-cue[data-tone="masculine"] {
+.visual-cue[data-tone="male"] {
   border-color: color-mix(in srgb, var(--gender-m) 45%, var(--border));
   background: color-mix(in srgb, var(--gender-m) 9%, white);
-  color: #174dac;
+  color: var(--gender-m);
 }
 
-.visual-cue[data-tone="feminine"] {
+.visual-cue[data-tone="female"] {
   border-color: color-mix(in srgb, var(--gender-f) 45%, var(--border));
   background: color-mix(in srgb, var(--gender-f) 9%, white);
-  color: #a92f5d;
+  color: var(--gender-f);
 }
 
 .visual-cue[data-tone="plural"] {
   border-color: color-mix(in srgb, var(--gender-pl) 45%, var(--border));
   background: color-mix(in srgb, var(--gender-pl) 9%, white);
-  color: #5c3dad;
+  color: var(--gender-pl);
 }
 
 .visual-cue[data-tone="regular"] {
@@ -370,15 +362,15 @@
 }
 
 .visual-cue[data-tone="question"] {
-  border-color: color-mix(in srgb, var(--brand) 45%, var(--border));
-  background: color-mix(in srgb, var(--brand) 9%, white);
-  color: #4f32b5;
+  border-color: color-mix(in srgb, var(--action) 45%, var(--line));
+  background: color-mix(in srgb, var(--action) 7%, var(--paper));
+  color: var(--action);
 }
 
 .visual-cue[data-tone="answer"] {
-  border-color: color-mix(in srgb, var(--gender-n) 45%, var(--border));
-  background: color-mix(in srgb, var(--gender-n) 9%, white);
-  color: #1f744d;
+  border-color: color-mix(in srgb, var(--action) 45%, var(--line));
+  background: color-mix(in srgb, var(--action) 7%, var(--paper));
+  color: var(--action);
 }
 
 .visual-legend {
@@ -562,14 +554,14 @@
   gap: 0.3rem;
   min-width: 0;
   padding: 0.85rem;
-  border: 1px solid color-mix(in srgb, var(--gender-pl) 35%, var(--border));
+  border: 1px solid color-mix(in srgb, var(--action) 35%, var(--border));
   border-radius: 10px;
-  background: color-mix(in srgb, var(--gender-pl) 6%, white);
+  background: color-mix(in srgb, var(--action) 6%, white);
 }
 
 .number-map__bands strong {
   overflow-wrap: anywhere;
-  color: #5336a4;
+  color: var(--action);
   font-variant-numeric: tabular-nums;
 }
 
@@ -579,8 +571,8 @@
 }
 
 .number-map__bands .number-map__hundred {
-  border-color: var(--gender-pl);
-  background: var(--gender-pl);
+  border-color: var(--action);
+  background: var(--action);
   color: white;
 }
 
@@ -726,8 +718,8 @@
 }
 
 .dialogue-flow__bubble[data-role="answer"] {
-  border-color: color-mix(in srgb, var(--gender-n) 42%, var(--border));
-  background: color-mix(in srgb, var(--gender-n) 7%, white);
+  border-color: color-mix(in srgb, var(--action) 42%, var(--border));
+  background: color-mix(in srgb, var(--action) 7%, white);
 }
 
 .dialogue-flow__bubble > span {
@@ -768,9 +760,9 @@
   background: var(--surface-muted);
 }
 
-.noun-system__singular[data-gender="masculine"] { border-left: 5px solid var(--gender-m); }
-.noun-system__singular[data-gender="feminine"] { border-left: 5px solid var(--gender-f); }
-.noun-system__singular[data-gender="neuter"] { border-left: 5px solid var(--gender-n); }
+.noun-system__singular[data-tone="male"] { border-left: 5px solid var(--gender-m); }
+.noun-system__singular[data-tone="female"] { border-left: 5px solid var(--gender-f); }
+.noun-system__singular[data-tone="neuter"] { border-left: 5px solid var(--gender-n); }
 .noun-system__plural { border-left: 5px solid var(--gender-pl); }
 .noun-system__plural[data-status="not-published"] { border-left-style: dashed; }
 
@@ -1678,15 +1670,14 @@ a:hover {
   font-weight: 650;
 }
 
-/* Text uses the ink token; the plate, border and glyph keep the raw hue, so
-   the gender stays identifiable by colour + shape + label exactly as before. */
-.gender-badge--masculine {
+/* Article text, swatch and plate share one semantic tone. */
+.gender-badge--male {
   color: var(--gender-m-ink);
   border-color: color-mix(in srgb, var(--gender-m) 35%, var(--border));
   background: color-mix(in srgb, var(--gender-m) 8%, white);
 }
 
-.gender-badge--feminine {
+.gender-badge--female {
   color: var(--gender-f-ink);
   border-color: color-mix(in srgb, var(--gender-f) 35%, var(--border));
   background: color-mix(in srgb, var(--gender-f) 8%, white);
@@ -1704,12 +1695,12 @@ a:hover {
   background: currentColor;
 }
 
-/* The swatch keeps the identifying hue rather than following the darker ink. */
-.gender-badge--masculine .gender-badge__shape {
+/* Shapes repeat the same article cue without relying on colour alone. */
+.gender-badge--male .gender-badge__shape {
   background: var(--gender-m);
 }
 
-.gender-badge--feminine .gender-badge__shape {
+.gender-badge--female .gender-badge__shape {
   background: var(--gender-f);
 }
 

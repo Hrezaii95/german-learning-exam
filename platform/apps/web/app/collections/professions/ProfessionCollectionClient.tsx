@@ -156,9 +156,9 @@ export function ProfessionCollectionClient({ projection, cardsByRow }: { project
           </p>
         </div>
         <div role="group" className={styles.legend} aria-label="Infographic legend">
-          <span className={styles.legendMasculine}><b>M</b> masculine · der</span>
-          <span className={styles.legendFeminine}><b>F</b> feminine · die</span>
-          <span className={styles.legendPlural}><b>∞</b> plural · die</span>
+          <span className={styles.legendMale}><b lang="de">der</b> masculine · der</span>
+          <span className={styles.legendFemale}><b lang="de">die</b> feminine · die</span>
+          <span className={styles.legendPlural}><b lang="de">die</b> plural · die</span>
           <span className={styles.legendAlternative}><b>／</b> another word</span>
         </div>
         <div className="meta-row">
@@ -182,7 +182,7 @@ export function ProfessionCollectionClient({ projection, cardsByRow }: { project
             <small>{count} {count===1?"job":"jobs"} in your selection</small>
           </button>;
         })}</div>
-        <div className={styles.feminineTrail}><strong>A useful feminine pattern</strong><p lang="de"><span className={styles.maleText}>der Lehrer</span> → <span className={styles.femaleText}>die Lehrer<b>in</b></span> → <span className={styles.pluralText}>die Lehrer<b>innen</b></span></p>
+        <div className={styles.femaleTrail}><strong>A useful feminine pattern</strong><p lang="de"><span className={styles.maleText}>der Lehrer</span> → <span className={styles.femaleText}>die Lehrer<b>in</b></span> → <span className={styles.pluralText}>die Lehrer<b>innen</b></span></p>
           <p>Many forms here use <b>-in → -innen</b>. Some also change a vowel: Arzt → Ärztin. Other pairs use different words, such as Feuerwehrmann / Feuerwehrfrau. Learn those together.</p><button type="button" className="study-secondary" onClick={()=>changeBrowse({pattern:"other"})}>Explore other plural changes</button></div>
       </section>
 

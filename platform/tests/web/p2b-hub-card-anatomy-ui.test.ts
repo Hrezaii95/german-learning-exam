@@ -119,7 +119,7 @@ describe("P2B hub card anatomies", () => {
     expect(html).toContain("die Ärztin");
     expect(html).toContain("doctor");
     // Gender stays colour + shape + label, never colour alone.
-    expect(html).toContain('data-gender="feminine"');
+    expect(html).toContain('data-tone="female"');
     expect(html).toContain('data-gender-shape="circle"');
     expect(html).toContain("Feminine");
     // One concise morphology preview.
@@ -151,7 +151,7 @@ describe("P2B hub card anatomies", () => {
         gloss: "alone",
       }),
     );
-    expect(adjectiveOnly).toContain('data-gender="none"');
+    expect(adjectiveOnly).toContain('data-tone="plain"');
     expect(adjectiveOnly).not.toContain("gender-badge");
     expect(adjectiveOnly).not.toContain("meaning-plate__audio");
     expect(adjectiveOnly).not.toContain("meaning-plate__morph");

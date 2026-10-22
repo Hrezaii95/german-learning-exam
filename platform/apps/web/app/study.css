@@ -251,7 +251,7 @@
 .study-tone-female { color: var(--gender-f-ink); }
 .study-tone-neuter { color: var(--gender-n-ink); }
 .study-tone-plural { color: var(--gender-pl); }
-.study-tone-plain { color: var(--study-ink); }
+.study-tone-plain { color: var(--tone-plain); }
 @media (max-width: 520px) {
   .study-selection-meaning:popover-open { flex-wrap: wrap; gap: 8px; }
   .study-selection-meaning > span { flex-basis: 100%; }
@@ -934,14 +934,17 @@
   background: #fffefa;
   border-top: 3px solid #bac8b3;
 }
-.lesson-word[data-gender="m"] {
-  border-top-color: #418cac;
+.lesson-word[data-tone="male"] {
+  border-top-color: var(--tone-masc);
 }
-.lesson-word[data-gender="n"] {
-  border-top-color: #6a9d59;
+.lesson-word[data-tone="neuter"] {
+  border-top-color: var(--tone-neut);
 }
-.lesson-word[data-gender="f"] {
-  border-top-color: #c57486;
+.lesson-word[data-tone="female"] {
+  border-top-color: var(--tone-fem);
+}
+.lesson-word[data-tone="plural"] {
+  border-top-color: var(--tone-plural);
 }
 .lesson-word h3 {
   font-size: 24px;

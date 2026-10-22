@@ -156,13 +156,13 @@ export function LessonFour({ speech }: { speech: Record<string, string> }) {
               <article
                 key={word.id}
                 className="lesson-word"
-                data-gender={
+                data-tone={
                   word.de.startsWith("der ")
-                    ? "m"
+                    ? "male"
                     : word.de.startsWith("das ")
-                      ? "n"
+                      ? "neuter"
                       : word.de.startsWith("die ")
-                        ? "f"
+                        ? word.plural === "plural only" ? "plural" : "female"
                         : "plain"
                 }
               >

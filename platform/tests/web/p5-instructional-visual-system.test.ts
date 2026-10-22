@@ -36,7 +36,7 @@ describe("P5 instructional visual system", () => {
     expect(lessonOneHtml).toContain("Ich heiße …");
     expect(lessonOneHtml).toContain("du ↔ Sie");
     expect(lessonTwoHtml).toContain('data-instructional-visual="lesson-02-journey"');
-    expect(lessonTwoHtml).toContain("0 → 100");
+    expect(lessonTwoHtml).toContain('data-tone="neutral"><span class="german" lang="de">0 → 100</span>');
     expect(lessonTwoHtml).toContain("Was sind Sie von Beruf?");
   });
 
