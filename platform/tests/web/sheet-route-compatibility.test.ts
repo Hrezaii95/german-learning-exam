@@ -34,15 +34,52 @@ describe("static sheet URL compatibility", () => {
     }
     for (const hash of ["#country-overview", "#country-patterns", "#country-passport", "#country-index", "#country-practice", "#languages-title"]) {
       const replace = vi.fn();
-      runInNewContext(legacyCountryRedirectScript("/german-learning-exam"), { window: { location: { search, hash, replace } } });
+      runInNewContext(legacyCountryRedirectScript("/german-learning-exam"), { window: { location: { pathname: "/german-learning-exam/cheat-sheets/", search, hash, replace }, addEventListener: vi.fn() } });
       expect(replace).toHaveBeenCalledExactlyOnceWith(`/german-learning-exam${COUNTRIES_SHEET_PATH}/${search}${hash}`);
     }
     for (const hash of ["", "#subjects", "#vocabulary", "#country-UNKNOWN", "#country-DE-more", "#country-%ZZ"]) {
       expect(legacyCountryRedirectHref(search, hash)).toBeNull();
       const replace = vi.fn();
-      runInNewContext(legacyCountryRedirectScript(), { window: { location: { search, hash, replace } } });
+      runInNewContext(legacyCountryRedirectScript(), { window: { location: { pathname: "/cheat-sheets/", search, hash, replace }, addEventListener: vi.fn() } });
       expect(replace).not.toHaveBeenCalled();
     }
+  });
+
+  it.each(["", "/german-learning-exam"])("handles same-document country hash changes without hydration with base %s", base => {
+    const pathname = `${base}/cheat-sheets/`;
+    const location = { pathname, search, hash: "#subjects", replace: vi.fn() };
+    const listeners = new Map<string, () => void>();
+    runInNewContext(legacyCountryRedirectScript(base), {
+      window: {
+        location,
+        addEventListener: (event: string, listener: () => void) => listeners.set(event, listener),
+      },
+    });
+    expect(location.replace).not.toHaveBeenCalled();
+    const hashChange = listeners.get("hashchange");
+    expect(hashChange).toBeTypeOf("function");
+
+    for (const hash of ["#vocabulary", "#country-UNKNOWN", "#country-DE-more", "#country-%ZZ"]) {
+      location.hash = hash;
+      hashChange!();
+      expect(location.replace).not.toHaveBeenCalled();
+    }
+    for (const hash of ["#country%2DDE", "#country-passport"]) {
+      location.hash = hash;
+      hashChange!();
+      expect(location.replace).toHaveBeenLastCalledWith(`${base}${COUNTRIES_SHEET_PATH}/${search}${hash}`);
+    }
+    expect(location.replace).toHaveBeenCalledTimes(2);
+    location.replace.mockClear();
+    location.hash = "#country-DE";
+    for (const path of [`${base}/lessons/04/`, `${base}${COUNTRIES_SHEET_PATH}/`, "/other/cheat-sheets/"]) {
+      location.pathname = path;
+      hashChange!();
+      expect(location.replace).not.toHaveBeenCalled();
+    }
+    location.pathname = pathname.slice(0, -1);
+    hashChange!();
+    expect(location.replace).toHaveBeenCalledExactlyOnceWith(`${base}${COUNTRIES_SHEET_PATH}/${search}#country-DE`);
   });
 
   it("emits canonical country hrefs without changing saved identities or source tags", () => {
