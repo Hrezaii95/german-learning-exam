@@ -8,5 +8,5 @@ export const metadata={title:"All vocabulary · Illustrated cheat sheet",descrip
 
 export default function Page(){
   const items=loadSubjectVocabulary();
-  return <ShellLayout current="cheat-sheets"><SubjectInfographic allNouns sheet={{id:"objects",label:"All vocabulary",items}}/></ShellLayout>;
+  return <ShellLayout current="all-vocabulary"><SubjectInfographic allNouns sheet={{id:"objects",label:"All vocabulary",items}}/></ShellLayout>;
 }

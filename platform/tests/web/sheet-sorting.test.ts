@@ -12,7 +12,7 @@ describe("infographic word sorting",()=>{
     expect(normalizeSheetSort(sort)).toBe(sort);
     for(const direction of ["asc","desc"] as const){
       const sorted=sortSheetItems(vocabulary,{sort,direction});
-      expect(sorted).toHaveLength(1338);
+      expect(sorted).toHaveLength(1330);
       expect(new Set(sorted.map(item=>item.id))).toEqual(new Set(vocabulary.map(item=>item.id)));
       expect(sorted).not.toBe(vocabulary);
     }

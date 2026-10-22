@@ -55,21 +55,25 @@ export function SubjectInfographic({sheet,allNouns=false,allItems}:{sheet:Subjec
   const pendingHash=useRef<string|null>(null);
   useEffect(()=>{
     const restore=()=>{
-      setBrowse({...(allNouns?{view:"plurals" as const}:{}),...readSheetBrowse(new URLSearchParams(window.location.search))});
+      const restored={...(allNouns?{view:"plurals" as const}:{}),...readSheetBrowse(new URLSearchParams(window.location.search))};
       if(window.location.hash.startsWith("#sheet-card-")){
         try{
-          const id=decodeURIComponent(window.location.hash.slice("#sheet-card-".length));
+          const requested=decodeURIComponent(window.location.hash.slice("#sheet-card-".length));
+          const item=catalogue.find(item=>item.id===requested||item.legacyIds?.includes(requested));
+          const id=item?.id??requested;
+          if(item&&id!==requested&&restored.category!=="all")restored.category=subjectVocabularyGroups([item])[0]?.id??"all";
           setSelected(id);
           setOpenEntry(id);
           pendingHash.current=id;
         }catch{/* Malformed fragments have no matching vocabulary entry. */}
       }
+      setBrowse(restored);
     };
     restore();
     window.addEventListener("popstate",restore);
     window.addEventListener("hashchange",restore);
     return()=>{window.removeEventListener("popstate",restore);window.removeEventListener("hashchange",restore);};
-  },[sheet.id,allNouns]);
+  },[sheet.id,allNouns,catalogue]);
   const changeBrowse=(next:SheetBrowse)=>{
     setBrowse(next);
     window.history.replaceState(window.history.state,"",`${window.location.pathname}${sheetBrowseQuery(next)}`);

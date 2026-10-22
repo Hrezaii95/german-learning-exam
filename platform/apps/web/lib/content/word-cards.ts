@@ -20,6 +20,11 @@ function mergeMeaning(existing:string,addition:string):string{
   if(addition.toLocaleLowerCase('en').includes(existing.toLocaleLowerCase('en')))return addition;
   return `${existing} / ${addition}`;
 }
+function mergeStudyText(existing:string,addition:string):string{
+  if(!addition||existing.includes(addition))return existing;
+  if(!existing||addition.includes(existing))return addition;
+  return `${existing}\n\n${addition}`;
+}
 const catalogPath = join(
   dirname(fileURLToPath(import.meta.url)),
   "../../generated/word-cards.json",
@@ -32,26 +37,29 @@ export function loadWordCards(): WordCardCatalog {
     const speech = JSON.parse(
       readFileSync(join(dirname(catalogPath), "study-speech.json"), "utf8"),
     ) as Record<string, string>;
-    const families=[...original.cards,...lessonFourCards()];
-    for(const unit of studyUnits.filter(u=>u.words)){
-      const source=`Momente A1.1 German–English glossary, Lesson ${unit.number}; coursebook and workbook exercises. © Hueber Verlag.`;
-      for(const addition of studyWordCards(unit.words!,unit.number,source)){
-        const existing=families.find(c=>c.rows.some(r=>r.singular.text===addition.rows[0]?.singular.text));
-        if(existing){
-          existing.title=mergeMeaning(existing.title,addition.title);
-          for(const row of existing.rows){const added=addition.rows.find(r=>r.singular.text===row.singular.text);if(added){row.meaning=mergeMeaning(row.meaning,added.meaning);for(const plural of added.plurals)if(!row.plurals.some(p=>p.text===plural.text))row.plurals.push(plural);}}
-          for(const row of addition.rows)if(!existing.rows.some(r=>r.singular.text===row.singular.text))existing.rows.push(row);
-          existing.lessons=[...new Set([...existing.lessons,...addition.lessons])];
-          existing.aliases=[...new Set([...existing.aliases,addition.path])];
-          existing.sourceIds=[...new Set([...existing.sourceIds,...addition.sourceIds])];
-          existing.sources=[...new Set([...existing.sources,...addition.sources])];
-          existing.priorities=[...new Set([...existing.priorities,...addition.priorities])];
-          existing.examples=[...existing.examples,...addition.examples.filter(e=>!existing.examples.some(old=>old.de===e.de))];
-          existing.pattern=[...new Set([...existing.pattern,...addition.pattern])];
-          for(const prompt of addition.prompts){const same=existing.prompts.find(p=>p.question===prompt.question);if(same)same.answers=[...new Set([...same.answers,...prompt.answers])];}
-          existing.searchText+=` ${addition.searchText}`;
-        }else families.push(addition);
-      }
+    const families=[...original.cards];
+    const courseAdditions=[...lessonFourCards(),...studyUnits.flatMap(unit=>unit.words
+      ?studyWordCards(unit.words,unit.number,`Momente A1.1 German–English glossary, Lesson ${unit.number}; coursebook and workbook exercises. © Hueber Verlag.`)
+      :[])];
+    for(const addition of courseAdditions){
+      const existing=families.find(c=>c.rows.some(r=>r.singular.text===addition.rows[0]?.singular.text));
+      if(existing){
+        existing.title=mergeMeaning(existing.title,addition.title);
+        for(const row of existing.rows){const added=addition.rows.find(r=>r.singular.text===row.singular.text);if(added){row.meaning=mergeMeaning(row.meaning,added.meaning);row.usage=mergeStudyText(row.usage,added.usage);for(const plural of added.plurals)if(!row.plurals.some(p=>p.text===plural.text))row.plurals.push(plural);}}
+        for(const row of addition.rows)if(!existing.rows.some(r=>r.singular.text===row.singular.text))existing.rows.push(row);
+        existing.lessons=[...new Set([...existing.lessons,...addition.lessons])];
+        existing.aliases=[...new Set([...existing.aliases,addition.path,...addition.aliases])];
+        existing.sourceIds=[...new Set([...existing.sourceIds,...addition.sourceIds])];
+        existing.teacherRows=[...new Set([...existing.teacherRows,...addition.teacherRows])];
+        existing.sources=[...new Set([...existing.sources,...addition.sources])];
+        existing.priorities=[...new Set([...existing.priorities,...addition.priorities])];
+        existing.examples=[...existing.examples,...addition.examples.filter(e=>!existing.examples.some(old=>old.de===e.de))];
+        existing.pattern=[...new Set([...existing.pattern,...addition.pattern])];
+        existing.tip=mergeStudyText(existing.tip,addition.tip);
+        existing.note=mergeStudyText(existing.note,addition.note);
+        for(const prompt of addition.prompts){const same=existing.prompts.find(p=>p.question===prompt.question);if(same){same.answers=[...new Set([...same.answers,...prompt.answers])];same.hint=mergeStudyText(same.hint,prompt.hint);}else existing.prompts.push(prompt);}
+        existing.searchText+=` ${addition.searchText}`;
+      }else families.push(addition);
     }
     for(const unit of studyUnits)for(const verb of unit.verbs){
       if(!verb.participle)continue;

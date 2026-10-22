@@ -24,7 +24,7 @@ button.family-member { cursor:pointer; }
 .family-reading-guide { margin-top:18px; line-height:1.65; }
 .family-reading-guide summary { cursor:pointer; padding:12px 0; }
 .family-groups { display:flex; flex-wrap:wrap; gap:8px 24px; }
-.people-family :focus-visible { outline:3px solid #9d6719; outline-offset:3px; }
+.people-family :focus-visible { outline:3px solid var(--focus-ring); outline-offset:3px; }
 @media screen and (max-width:800px) {
   .people-family { padding:18px 14px; }
   .people-family .family-tree-diagram { display:none; }

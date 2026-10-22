@@ -1,7 +1,8 @@
 "use client";
 import Link from "next/link";
 import {useEffect,useRef,useState} from "react";
-import type {ShellNavCurrent} from "@/lib/content/nav";
+import {NAV_GROUPS,navItemsFor,shellCurrentMatches,type Role,type ShellNavCurrent} from "@/lib/content/nav";
+import {AccountSlot} from "@/components/account/AccountSlot";
 
 export function SkipToMainContent() {
   return <Link className="skip-link" href="#main-content" onClick={event=>{
@@ -15,28 +16,9 @@ export function SkipToMainContent() {
   }}>Skip to main content</Link>;
 }
 
-const tabs=[
-  {key:"book",href:"/book",label:"Book",icon:"M3 4h7l2 2 2-2h7v15h-7l-2 2-2-2H3z M12 6v15"},
-  {key:"lessons",href:"/lessons",label:"Lessons",icon:"M4 3h16v18H4z M8 7h8 M8 12h8 M8 17h5"},
-  {key:"cheat-sheets",href:"/cheat-sheets",label:"Cheat sheets",icon:"M12 3l2.8 5.8 6.4.9-4.6 4.5 1.1 6.3L12 17.5l-5.7 3 1.1-6.3L2.8 9.7l6.4-.9z"},
-  {key:"saved",href:"/saved",label:"My review",icon:"M6 3h12v18l-6-4-6 4z"},
-] as const;
-const more=[
-  {href:"/",label:"Dashboard",key:"dashboard",description:"Your daily starting point"},
-  {href:"/vocabulary",label:"Vocabulary",key:"vocabulary",description:"Words, articles & plurals"},
-  {href:"/verbs",label:"Verbs",key:"verbs",description:"Conjugations & examples"},
-  {href:"/grammar",label:"Grammar",key:"grammar",description:"Patterns made clear"},
-  {href:"/phrases",label:"Phrases & Q&A",key:"phrases",description:"Ready-to-use conversations"},
-  {href:"/listening",label:"Listening",key:"listening",description:"Audio & transcripts"},
-  {href:"/search",label:"Search",key:"search",description:"Find anything in the course"},
-  {href:"/concepts",label:"Concepts",key:"concepts",description:"Connect words and ideas"},
-  {href:"/hubs",label:"Study library",key:"hubs",description:"Browse every learning area"},
-  {href:"/practice",label:"Practice",key:"practice",description:"Exercise your memory"},
-  {href:"/review",label:"Guided review",key:"review",description:"Checked exercises from Lessons 1–2"},
-  {href:"/references",label:"References",key:"references",description:"Sources & credits"},
-  {href:"/settings",label:"Settings",key:"settings",description:"Your preferences"},
-];
-export function MobileNavigation({current}:{current:ShellNavCurrent}){
+export function MobileNavigation({current,role}:{current:ShellNavCurrent;role?:Role|undefined}){
+  const tabs=navItemsFor("tabs",role);
+  const destinations=navItemsFor("menu",role);
   const navigation=useRef<HTMLElement>(null);
   const dialog=useRef<HTMLDialogElement>(null);
   const trigger=useRef<HTMLButtonElement>(null);
@@ -50,27 +32,21 @@ export function MobileNavigation({current}:{current:ShellNavCurrent}){
     observer.observe(element);sync();
     return()=>{observer.disconnect();document.documentElement.style.removeProperty("--measured-bottom-nav-height");};
   },[]);
-  const groups = [
-    { title: "Learn", keys: ["dashboard", "lessons", "book", "cheat-sheets", "listening"] },
-    { title: "Remember & practise", keys: ["saved", "review", "practice"] },
-    { title: "Find & explore", keys: ["search", "vocabulary", "verbs", "grammar", "phrases", "concepts", "hubs"] },
-    { title: "Your app", keys: ["settings", "references"] },
-  ];
-  const destinations = [...more, ...tabs.map(item => ({ ...item, description: item.key === "saved" ? "Your saved collection & self-rated recall" : item.key === "book" ? "Read, listen & look up phrases" : item.key === "lessons" ? "Learn step by step" : "Visual memory guides" }))];
-  const visible = destinations.filter(item => `${item.label} ${item.description}`.toLocaleLowerCase().includes(query.trim().toLocaleLowerCase()));
+  const visible = destinations.filter(item => `${item.label} ${item.description??""}`.toLocaleLowerCase().includes(query.trim().toLocaleLowerCase()));
   useEffect(()=>{if(!open)return;const before=document.body.style.overflow;document.body.style.overflow="hidden";return()=>{document.body.style.overflow=before;};},[open]);
   const close=()=>{dialog.current?.close();setOpen(false);setQuery("");trigger.current?.focus();};
   return <>
     <nav ref={navigation} className="shell-bottomnav mobile-navigation" aria-label="Mobile">
-      {tabs.map(item=><Link key={item.key} href={item.href} aria-current={current===item.key?"page":undefined}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" aria-hidden="true"><path d={item.icon}/></svg><span>{item.label}</span></Link>)}
-      <button type="button" ref={trigger} aria-label="Open navigation menu" aria-haspopup="dialog" aria-expanded={open} data-current={more.some(item=>item.key===current)||undefined} onClick={()=>{dialog.current?.showModal();setOpen(true);}}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><path d="M4 6h16 M4 12h16 M4 18h16"/></svg><span>Menu</span></button>
+      {tabs.map(item=><Link key={item.id} href={item.href} aria-current={shellCurrentMatches(current,item.id,"rail")?"page":undefined}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" aria-hidden="true"><path d={item.icon}/></svg><span>{item.label}</span></Link>)}
+      <button type="button" ref={trigger} aria-label="Open navigation menu" aria-haspopup="dialog" aria-expanded={open} data-current={destinations.some(item=>item.id===current&&!tabs.some(tab=>tab.id===item.id))||undefined} onClick={()=>{dialog.current?.showModal();setOpen(true);}}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><path d="M4 6h16 M4 12h16 M4 18h16"/></svg><span>Menu</span></button>
     </nav>
     <dialog ref={dialog} className="mobile-menu" aria-labelledby="mobile-menu-title" onClose={()=>setOpen(false)} onCancel={event=>{event.preventDefault();close();}} onKeyDown={event=>{if(event.key==="Escape"){event.preventDefault();event.stopPropagation();close();}}}>
       <header><div><small>German Learning OS</small><h2 id="mobile-menu-title">Where to next?</h2></div><button type="button" onClick={close} aria-label="Close navigation menu">✕</button></header>
+      <AccountSlot/>
       <label className="menu-search">Find a study area<input type="search" value={query} onChange={event=>setQuery(event.target.value)} placeholder="Listening, vocabulary, settings…"/></label>
-      <nav aria-label="All study areas">{groups.map(group=>{
-        const items = group.keys.flatMap(key => visible.filter(item=>item.key===key));
-        return items.length ? <section key={group.title} aria-label={group.title}><h3>{group.title}</h3><div>{items.map(item=><Link key={item.key} href={item.href} aria-current={current===item.key?"page":undefined} onClick={close}><strong>{item.label}</strong><span>{item.description}</span></Link>)}</div></section> : null;
+      <nav aria-label="All study areas">{NAV_GROUPS.map(group=>{
+        const items = visible.filter(item=>(item.group??"explore")===group.id);
+        return items.length ? <section key={group.label} aria-label={group.label}><h3>{group.label}</h3><div>{items.map(item=><Link key={item.id} href={item.href} aria-current={shellCurrentMatches(current,item.id,"rail")?"page":undefined} onClick={close}><strong>{item.label}</strong><span>{item.description}</span></Link>)}</div></section> : null;
       })}</nav>
       {!visible.length && <p role="status">No study area matches. Try “book” or “listening”.</p>}
     </dialog>

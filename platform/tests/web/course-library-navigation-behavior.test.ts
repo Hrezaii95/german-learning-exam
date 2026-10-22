@@ -1,11 +1,12 @@
 // @vitest-environment jsdom
 import {createElement} from "react";
 import {readFileSync} from "node:fs";
-import {afterEach,beforeAll,describe,expect,it} from "vitest";
-import {cleanup,fireEvent,render,screen} from "@testing-library/react";
+import {afterEach,beforeAll,describe,expect,it,vi} from "vitest";
+import {cleanup,fireEvent,render,screen,waitFor} from "@testing-library/react";
 import {studyUnits} from "../../apps/web/lib/study/course-lessons";
 import {coursePatternEntries,coursePatternText} from "../../apps/web/lib/study/course-patterns";
 import {loadWordCards,withWordCardHub,withWordCardSearch} from "../../apps/web/lib/content/word-cards";
+import {loadDictionary} from "../../apps/web/lib/study/catalog";
 import {parseHubSearchParams} from "../../apps/web/lib/content/hub-query";
 import {buildHubNavigationContext,buildSearchNavigationContext,parseNavigationContextParam,serializeNavigationContext,resolveBackHref} from "../../apps/web/lib/content/navigation-context";
 import type {LearnerHubProjection} from "../../apps/web/lib/content/hub-types";
@@ -13,12 +14,16 @@ import type {LearnerSearchProjection} from "../../apps/web/lib/content/search-ty
 import {HubListView} from "../../apps/web/components/hubs/HubViews";
 import {SearchView} from "../../apps/web/components/search/SearchViews";
 import {CourseStudy} from "../../apps/web/components/study/CourseStudy";
-import {LessonFour} from "../../apps/web/components/study/LessonFour";
+import {LessonFour,NewChapterCards} from "../../apps/web/components/study/LessonFour";
+import {CollectionCheatSheet} from "../../apps/web/components/study/CollectionCheatSheet";
 import {CoursePractice} from "../../apps/web/components/study/CoursePractice";
-import {StudyProvider} from "../../apps/web/components/study/StudyProvider";
+import {DictionaryLauncher,StudyProvider} from "../../apps/web/components/study/StudyProvider";
+import {WordFamilyCard} from "../../apps/web/components/word-cards/WordFamilyCard";
 import {StudyScopeProvider} from "../../apps/web/components/study/StudyScope";
 import {STUDY_SCOPE_KEY,tagsForLesson} from "../../apps/web/lib/study/scope";
 import {searchLearnerContent} from "../../apps/web/lib/content/search-query";
+import {sheetNavigationContext} from "../../apps/web/lib/study/sheet-browse";
+import {emptyStudy,STUDY_KEY} from "../../apps/web/lib/study/storage";
 
 const hubs=JSON.parse(readFileSync("apps/web/generated/learner-hubs.json","utf8")) as LearnerHubProjection;
 const search=withWordCardSearch(JSON.parse(readFileSync("apps/web/generated/learner-search.json","utf8")) as LearnerSearchProjection);
@@ -26,10 +31,67 @@ const search=withWordCardSearch(JSON.parse(readFileSync("apps/web/generated/lear
 beforeAll(()=>{
   Object.defineProperty(HTMLElement.prototype,"hidePopover",{configurable:true,value:()=>{}});
   Object.defineProperty(HTMLDialogElement.prototype,"close",{configurable:true,value:()=>{}});
+  Object.defineProperty(HTMLDialogElement.prototype,"showModal",{configurable:true,value:function(this:HTMLDialogElement){this.setAttribute("open","");}});
+  Object.defineProperty(HTMLElement.prototype,"scrollIntoView",{configurable:true,value:()=>{}});
 });
 afterEach(()=>{cleanup();localStorage.clear();});
 
 describe("bounded course libraries and return context",()=>{
+  it.each(["lesson","lookup","practice","full"] as const)("shares canonical and legacy Lesson 4 saves in the %s view",view=>{
+    const card=loadWordCards().cards.find(card=>card.id==="W343")!;
+    const dictionary=loadDictionary().filter(entry=>entry.id==="W343");
+    for(const savedId of ["card-W343","card-l4-million"]){
+      localStorage.setItem(STUDY_KEY,JSON.stringify({...emptyStudy(),saved:{[savedId]:{id:savedId,title:"die Million",meaning:"million",kind:"word",href:savedId==="card-W343"?"/vocabulary/w343":"/vocabulary/l4-million"}}}));
+      const content=view==="lesson"?createElement(LessonFour,{speech:{}}):view==="lookup"?createElement(DictionaryLauncher):view==="practice"?createElement(CoursePractice):createElement(WordFamilyCard,{card});
+      render(createElement(StudyProvider,{dictionary,children:content}));
+      if(view==="lesson")fireEvent.change(screen.getByPlaceholderText("German or English…"),{target:{value:"Million"}});
+      if(view==="lookup"){
+        fireEvent.click(screen.getByRole("button",{name:"Open dictionary"}));
+        fireEvent.change(screen.getByRole("textbox",{name:"German or English"}),{target:{value:"Million"}});
+      }
+      if(view==="practice")fireEvent.click(screen.getByRole("button",{name:"Reveal German"}));
+      const save=document.querySelector<HTMLButtonElement>(view==="lesson"?".lesson-word .study-save":view==="lookup"?".study-dictionary-results .study-save":view==="practice"?".study-recall .study-save":".study-save")!;
+      expect(save?.getAttribute("aria-label"),`${view}: ${savedId}`).toBe("Remove from review: die Million");
+      fireEvent.click(save);
+      expect(JSON.parse(localStorage.getItem(STUDY_KEY)!).saved).toEqual({});
+      fireEvent.click(save);
+      expect(Object.keys(JSON.parse(localStorage.getItem(STUDY_KEY)!).saved),`${view}: ${savedId}`).toEqual(["card-W343"]);
+      cleanup();
+    }
+  });
+  it.each([["l4-million",false],["W343",false],["l4-million",true],["W343",true]] as const)("returns to the merged collection card through %s with saved=%s",async(fragmentId,saved)=>{
+    const previousHref=window.location.href;
+    const scroll=vi.spyOn(HTMLElement.prototype,"scrollIntoView");
+    try{
+      const context=sheetNavigationContext("/cheat-sheets/numbers",{query:"Million",category:"all",saved,page:1},fragmentId);
+      window.history.replaceState(null,"",resolveBackHref(context));
+      const savedId=`card-${fragmentId}`;
+      localStorage.setItem(STUDY_KEY,JSON.stringify({...emptyStudy(),saved:{[savedId]:{id:savedId,title:"die Million",meaning:"million",kind:"word",href:fragmentId==="W343"?"/vocabulary/w343":"/vocabulary/l4-million"}}}));
+      render(createElement(StudyProvider,{dictionary:[],children:createElement(CollectionCheatSheet,{sheet:"numbers",cards:loadWordCards().cards.filter(card=>card.id==="W343"),speech:{}})}));
+      const target=document.getElementById(`sheet-card-${fragmentId}`);
+      expect(target).not.toBeNull();
+      expect(target?.closest("[data-sheet-card]")?.id).toBe("sheet-card-W343");
+      await waitFor(()=>expect(scroll.mock.contexts).toContain(target));
+      const detail=screen.getByRole("link",{name:"Full card →"}).getAttribute("href")!;
+      const nextContext=parseNavigationContextParam(new URL(detail,"https://test.local").searchParams.get("nav"));
+      expect(resolveBackHref(nextContext)).toBe(`/cheat-sheets/numbers?q=Million${saved?"&saved=1":""}#sheet-card-W343`);
+      expect(window.location.hash).toBe(`#sheet-card-${fragmentId}`);
+      const save=target!.closest("[data-sheet-card]")!.querySelector<HTMLButtonElement>(".study-save")!;
+      expect(save.getAttribute("aria-label")).toBe("Remove from review: die Million");
+      fireEvent.click(save);
+      expect(JSON.parse(localStorage.getItem(STUDY_KEY)!).saved).toEqual({});
+    }finally{
+      scroll.mockRestore();
+      window.history.replaceState(null,"",previousHref);
+    }
+  });
+  it("links every chapter card to its two-digit lesson route",()=>{
+    render(createElement(NewChapterCards));
+    expect([...document.querySelectorAll(".study-chapter-cards a")].map(link=>link.getAttribute("href"))).toEqual([
+      "/lessons/03","/lessons/04","/lessons/05","/lessons/06","/lessons/07",
+      "/lessons/08","/lessons/09","/lessons/10","/lessons/11","/lessons/12",
+    ]);
+  });
   it("indexes every later grammar, verb and phrase with its actual lesson and useful meaning",()=>{
     expect(new Set(search.documents.map(doc=>doc.id)).size).toBe(search.documentCount);
     for(const section of ["grammar","verbs","phrases"])for(const entry of coursePatternEntries(studyUnits,section)) {
