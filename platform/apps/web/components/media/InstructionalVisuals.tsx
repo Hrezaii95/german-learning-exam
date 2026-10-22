@@ -435,7 +435,7 @@ export function QuestionAnswerFlowVisual({ detail }: { detail: LearnerQaDetail }
 }
 
 function modelTone(detailId: string): VisualTone {
-  if (detailId.includes("feminine")) return "feminine";
+  if (detailId.includes("feminine")) return "female";
   if (detailId.includes("nicht") || detailId.includes("register") || detailId.includes("aus")) return "special";
   if (detailId.includes("present") || detailId.includes("pronoun")) return "regular";
   return "question";

@@ -134,6 +134,10 @@ describe("P5 instructional visual system", () => {
     for (const detail of grammarDetails) {
       const html = renderToStaticMarkup(createElement(GrammarConceptVisual, { detail }));
       expect(html, detail.id).toContain(detail.titleEn);
+      if (detail.id.includes("feminine")) {
+        expect(html, detail.id).toContain('data-tone="female"');
+        expect(html, detail.id).not.toContain('data-tone="feminine"');
+      }
       for (const step of detail.ruleSteps) {
         expect(html, `${detail.id}/${step.id}`).toContain(step.notice);
       }
