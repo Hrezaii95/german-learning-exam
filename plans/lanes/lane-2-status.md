@@ -13,7 +13,7 @@ Updated by Lane 2 only. Lane worktree: `lane2/l2-9-student-class-a`. Base: `code
 | L2-7 | Book companion | draft PR | [PR #29](https://github.com/Hrezaii95/german-learning-exam/pull/29) | Book controls, confirmed position/default scope, smart filters and printing integrated; Lane 1 surface hooks remain. |
 | L2-8 | CSV authoring and preview | draft PR | [PR #30](https://github.com/Hrezaii95/german-learning-exam/pull/30) | CSV CLI, opt-in preview and shared generation-checked capability index integrated; A2 data pack included. |
 | L2-8b | Data-only A2 everyday pack | draft PR | [PR #17](https://github.com/Hrezaii95/german-learning-exam/pull/17) | Exactly ten content files, no code; all content pending review. |
-| L2-9 | Student Class A tools | in progress | — | Student assignment memory, explicit receipts/challenges and personal import integrated; final release verification running. |
+| L2-9 | Student Class A tools | draft PR | [PR #31](https://github.com/Hrezaii95/german-learning-exam/pull/31) | Student assignment memory, explicit receipts/challenges and personal import integrated; final release verification running. |
 
 ## L2-1 implementation plan
 
