@@ -1,4 +1,5 @@
 "use client";
+import { Icon } from "@/components/media/Icon";
 import Link from "next/link";
 import {useEffect,useRef,useState} from "react";
 import {NAV_GROUPS,navItemsFor,shellCurrentMatches,type Role,type ShellNavCurrent} from "@/lib/content/nav";
@@ -41,7 +42,7 @@ export function MobileNavigation({current,role}:{current:ShellNavCurrent;role?:R
       <button type="button" ref={trigger} aria-label="Open navigation menu" aria-haspopup="dialog" aria-expanded={open} data-current={destinations.some(item=>shellCurrentMatches(current,item.id,"rail")&&!tabs.some(tab=>tab.id===item.id))||undefined} onClick={()=>{dialog.current?.showModal();setOpen(true);}}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><path d="M4 6h16 M4 12h16 M4 18h16"/></svg><span>Menu</span></button>
     </nav>
     <dialog ref={dialog} className="mobile-menu" aria-labelledby="mobile-menu-title" onClose={()=>setOpen(false)} onCancel={event=>{event.preventDefault();close();}} onKeyDown={event=>{if(event.key==="Escape"){event.preventDefault();event.stopPropagation();close();}}}>
-      <header><div><small>German Learning OS</small><h2 id="mobile-menu-title">Where to next?</h2></div><button type="button" onClick={close} aria-label="Close navigation menu">✕</button></header>
+      <header><div><small>German Learning OS</small><h2 id="mobile-menu-title">Where to next?</h2></div><button type="button" onClick={close} aria-label="Close navigation menu"><Icon name="close"/></button></header>
       <AccountSlot/>
       <label className="menu-search">Find a study area<input type="search" value={query} onChange={event=>setQuery(event.target.value)} placeholder="Listening, vocabulary, settings…"/></label>
       <nav aria-label="All study areas">{NAV_GROUPS.map(group=>{

@@ -1,5 +1,6 @@
 "use client";
 
+import { Icon } from "@/components/media/Icon";
 import Link from "next/link";
 import { useState } from "react";
 import {
@@ -57,7 +58,7 @@ export function LessonFour({ speech }: { speech: Record<string, string> }) {
     <div className="study-workspace">
       <StudyScopeNotice tags={tagsForLesson(4)}/>
       <Link className="study-back" href="/lessons">
-        ← All lessons
+        <Icon name="back"/> All lessons
       </Link>
       <header className="lesson-four-hero">
         <div>
@@ -187,7 +188,7 @@ export function LessonFour({ speech }: { speech: Record<string, string> }) {
                 )}
                 <div className="study-row">
                   <LineAudio text={word.de} src={speech[word.de]} />
-                  <Link href={appendNavigationContext(`/vocabulary/${word.id}`,{entryContext:"lesson",returnPath:"/lessons/04"})}>Study card →</Link>
+                  <Link href={appendNavigationContext(`/vocabulary/${word.id}`,{entryContext:"lesson",returnPath:"/lessons/04"})}>Study card <Icon name="arrow"/></Link>
                 </div>
                 <div className="lesson-word-example">
                   <GermanText text={word.example} />
@@ -414,7 +415,7 @@ export function LessonFour({ speech }: { speech: Record<string, string> }) {
                   >
                     {position + 1 === lessonFourQuiz.length
                       ? "See my result"
-                      : "Next question →"}
+                      : <>Next question <Icon name="arrow"/></>}
                   </button>
                 </div>
               )}
@@ -449,7 +450,7 @@ export function NewChapterCards() {
           </p>
         </div>
         <Link className="study-primary" href="/book">
-          Open my book →
+          Open my book <Icon name="arrow"/>
         </Link>
       </div>
       <div className="study-chapter-cards">
@@ -463,7 +464,7 @@ export function NewChapterCards() {
               <h3 lang="de">{c.title}</h3>
               <p>{c.topic}</p>
             </div>
-            <span aria-hidden="true">↗</span>
+            <span aria-hidden="true"><Icon name="external"/></span>
           </Link>
         ))}
       </div>
@@ -475,7 +476,7 @@ export function LessonThreeBridge() {
   return (
     <div className="study-workspace">
       <Link className="study-back" href="/lessons">
-        ← All lessons
+        <Icon name="back"/> All lessons
       </Link>
       <header className="study-page-header">
         <div>
@@ -486,7 +487,7 @@ export function LessonThreeBridge() {
       </header>
       <div className="study-row">
         <Link className="study-primary" href="/book?page=coursebook-19">
-          Open interactive book →
+          Open interactive book <Icon name="arrow"/>
         </Link>
         <Link className="study-secondary" href="/book?page=workbook-14">
           Workbook

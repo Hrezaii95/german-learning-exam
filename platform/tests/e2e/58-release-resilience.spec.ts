@@ -10,7 +10,7 @@ test("library filters and global search update locally and preserve Back",async(
  await expect(entry).toBeVisible();
  await expect(page.locator("html")).toHaveAttribute("data-release-document","same");
  await entry.click();
- await page.locator(".subject-word-dropdown").getByRole("link",{name:"Full vocabulary card →",exact:true}).click();
+ await page.locator(".subject-word-dropdown").getByRole("link",{name:"Full vocabulary card",exact:true}).click();
  await page.getByRole("link",{name:/^← Back/}).first().click();
  await expect(vocabularySearch).toHaveValue("Stuhl");
  await vocabularySearch.fill("");

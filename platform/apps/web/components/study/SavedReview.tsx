@@ -1,5 +1,6 @@
 "use client";
 
+import { Icon } from "@/components/media/Icon";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { rateSavedItem } from "@/lib/study/storage";
@@ -53,7 +54,7 @@ export function SavedReview() {
           </p>
         </div>
         <Link className="study-secondary" href="/book">
-          Back to the book →
+          Back to the book <Icon name="arrow"/>
         </Link>
       </header>
       <p className="muted">Looking for exercises with checked answers? <Link href="#guided-review">Build a guided mission below</Link> or <Link href="/practice">choose free practice</Link>.</p>
@@ -209,7 +210,7 @@ export function SavedReview() {
                 setRevealed(false);
               }}
             >
-              Review {visible.length} items →
+              Review {visible.length} items <Icon name="arrow"/>
             </button>
           </div>
           {!items.length ? (
@@ -274,7 +275,7 @@ export function SavedReview() {
                     />
                   </label>
                   <div className="study-row">
-                    <Link href={item.href}>Open in context →</Link>
+                    <Link href={item.href}>Open in context <Icon name="arrow"/></Link>
                     <small>
                       {!item.due || Date.parse(item.due) <= now
                         ? "Ready to review"

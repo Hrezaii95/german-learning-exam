@@ -3,7 +3,8 @@ import {createElement} from "react";
 import {renderToStaticMarkup} from "react-dom/server";
 import {afterEach,beforeAll,describe,expect,it} from "vitest";
 import {cleanup,fireEvent,render,screen,within} from "@testing-library/react";
-import {ObjectVocabularyOverview} from "../../apps/web/components/study/ObjectVocabularyOverview";
+import {SubjectInfographic} from "../../apps/web/components/study/SubjectInfographic";
+import {loadSubjectSheets} from "../../apps/web/lib/study/subject-sheets.server";
 import {TopicVocabularyLink,TopicWordPractice} from "../../apps/web/components/study/TopicVocabularyLink";
 import {StudyScopeProvider} from "../../apps/web/components/study/StudyScope";
 import {loadWordCards} from "../../apps/web/lib/content/word-cards";
@@ -20,6 +21,8 @@ import {PastCheatSheet} from "../../apps/web/components/study/PastCheatSheet";
 import {JourneyCheatSheet} from "../../apps/web/components/study/JourneyCheatSheet";
 
 const cards=loadWordCards().cards.filter(card=>card.studyTags?.lessons.includes(5));
+const objectSheet=loadSubjectSheets().find(sheet=>sheet.id==="objects")!;
+const entries=()=>document.querySelectorAll("[data-subject-entry]");
 beforeAll(()=>{
   // jsdom does not implement the native dialog lifecycle or scrolling.
   Object.defineProperty(HTMLDialogElement.prototype,"showModal",{configurable:true,value:function(this:HTMLDialogElement){this.setAttribute("open","");}});
@@ -29,27 +32,28 @@ beforeAll(()=>{
 afterEach(()=>{cleanup();localStorage.clear();window.history.replaceState({},"","/");});
 
 describe("everyday objects overview interaction",()=>{
-  it("moves the same vocabulary into the expanded overview and lets a learner explore an exact plural",()=>{
-    render(createElement(ObjectVocabularyOverview,{cards}));
-    expect(document.querySelectorAll("[data-object-vocabulary]")).toHaveLength(28);
+  it("uses the shared illustrated catalogue in the expanded overview with the exact plural and full-card target",()=>{
+    render(createElement(SubjectInfographic,{sheet:objectSheet}));
+    const count=entries().length;
+    expect(count).toBeGreaterThan(0);
     fireEvent.click(screen.getByRole("button",{name:"Expand overview"}));
-    const dialog=screen.getByRole("dialog",{name:"28 everyday words, sorted by article"});
-    expect(document.querySelectorAll("[data-object-vocabulary]")).toHaveLength(28);
-    fireEvent.click(within(dialog).getByRole("button",{name:"der Schlüssel die Schlüssel"}));
-    const detail=dialog.querySelector("#object-overview-focus")!;
-    expect(detail.textContent).toContain("der Schlüssel");
+    const dialog=screen.getByRole("dialog");
+    expect(entries()).toHaveLength(count);
+    const item=objectSheet.items.find(item=>item.de==="der Schlüssel")!;
+    fireEvent.click(within(dialog).getByRole("button",{name:/^der Schlüssel/}));
+    const detail=within(dialog).getByRole("article",{name:"Vocabulary card: der Schlüssel"});
     expect(detail.textContent).toContain("die Schlüssel");
-    const link=within(detail as HTMLElement).getByRole("link",{name:"Full vocabulary card →"});
-    expect(link.getAttribute("href")).toContain(cards.find(card=>card.rows.some(row=>row.singular.text==="der Schlüssel"))!.path);
+    const link=within(detail).getByRole("link",{name:"Full vocabulary card"});
+    expect(link.getAttribute("href")).toContain(item.href);
     fireEvent.click(within(dialog).getByRole("button",{name:"Close overview"}));
     expect(screen.queryByRole("dialog")).toBeNull();
-    expect(document.querySelectorAll("[data-object-vocabulary]")).toHaveLength(28);
+    expect(entries()).toHaveLength(count);
   });
-  it("shows an honest empty state when the shared study selection has no lessons",()=>{
+  it("shows the shared catalogue empty state when the study selection has no lessons",()=>{
     localStorage.setItem(STUDY_SCOPE_KEY,JSON.stringify({...defaultStudyScope(),mode:"multiple",lessons:[]}));
-    render(createElement(StudyScopeProvider,null,createElement(ObjectVocabularyOverview,{cards})));
-    expect(document.querySelectorAll("[data-object-vocabulary]")).toHaveLength(0);
-    expect(screen.getByText(/No objects match your study selection/)).toBeTruthy();
+    render(createElement(StudyScopeProvider,null,createElement(SubjectInfographic,{sheet:objectSheet})));
+    expect(entries()).toHaveLength(0);
+    expect(screen.getByRole("heading",{name:"No matching vocabulary"})).toBeTruthy();
   });
   it("opens a saved word from the subject sheet without replacing its workshop context",()=>{
     const card=cards.find(card=>card.rows[0]?.singular.text==="der Schlüssel")!;
@@ -58,7 +62,7 @@ describe("everyday objects overview interaction",()=>{
     render(createElement(TopicVocabularyLink,{id:"object-overview",subject:"objects",label:"Objects",lessons:[5],cards:[aliased]}));
     expect(document.getElementById("sheet-card-old-key")).toBeTruthy();
     expect(document.getElementById(`sheet-card-${card.id}`)).toBeTruthy();
-    const link=screen.getByRole("link",{name:"Open der Schlüssel in objects vocabulary →"});
+    const link=screen.getByRole("link",{name:"Open der Schlüssel in objects vocabulary"});
     const target=new URL(link.getAttribute("href")!,window.location.origin);
     expect(target.pathname).toBe("/cheat-sheets/subjects/objects");
     expect(target.searchParams.get("lesson")).toBe("5");
@@ -80,7 +84,7 @@ describe("everyday objects overview interaction",()=>{
   ])("offers an exact home vocabulary link for a saved $word anchor",({word,text,cardLinks,saveIds,entry,lessons})=>{
     window.history.replaceState({},"",`/cheat-sheets/home?q=keep#home-${word}`);
     render(createElement(HomeCheatSheet,{speech:{},cardLinks,saveIds}));
-    const link=screen.getByRole("link",{name:`Open ${text} in home vocabulary →`});
+    const link=screen.getByRole("link",{name:`Open ${text} in home vocabulary`});
     const target=new URL(link.getAttribute("href")!,window.location.origin);
     expect(target.pathname).toBe("/cheat-sheets/subjects/home");
     expect(target.searchParams.get("lesson")).toBe(lessons);

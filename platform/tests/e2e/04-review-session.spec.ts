@@ -154,7 +154,7 @@ test.describe("journey 4 · review cards created by practice, session run to the
     await expect(page.getByRole("heading", { level: 1, name: "My review" })).toBeVisible();
     await expect(page.getByRole("checkbox", { name: "Due only", exact: true })).toBeChecked();
     await expect(page.getByRole("heading", { name: "Build mission" })).toBeVisible();
-    await expect(page.getByRole("link", { name: "My saved collection & recall →" })).toHaveAttribute("href", "#saved-collection");
+    await expect(page.getByRole("link", { name: "My saved collection & recall" })).toHaveAttribute("href", "#saved-collection");
   });
 });
 

@@ -2,6 +2,24 @@ import { expect, test } from "@playwright/test";
 
 const routes = ["lessons/03/", "lessons/04/", "lessons/12/", "grammar/", "verbs/", "phrases/", "cheat-sheets/", "cheat-sheets/countries/", "cheat-sheets/vocabulary/", "cheat-sheets/home/"];
 
+test("active Cheat sheets mobile tab stays centered on one line", async ({ page }) => {
+  for (const width of [320, 390]) {
+    await page.setViewportSize({ width, height: 844 });
+    await page.goto("cheat-sheets/");
+    const tab = page.locator(".mobile-navigation").getByRole("link", { name: "Cheat sheets", exact: true });
+    await expect(tab).toHaveAttribute("aria-current", "page");
+    const fit = await tab.locator("span").evaluate(element => {
+      const style = getComputedStyle(element);
+      const rect = element.getBoundingClientRect();
+      const parent = element.parentElement!.getBoundingClientRect();
+      return { height: rect.height, lineHeight: Number.parseFloat(style.lineHeight), overflow: element.scrollWidth - element.clientWidth, center: Math.abs((rect.left + rect.right) / 2 - (parent.left + parent.right) / 2) };
+    });
+    expect(fit.height).toBeLessThanOrEqual(fit.lineHeight + 1);
+    expect(fit.overflow).toBeLessThanOrEqual(1);
+    expect(fit.center).toBeLessThanOrEqual(1);
+  }
+});
+
 for (const width of [320, 390, 768, 1440]) {
   test(`learning cards and country rows remain readable at ${width}px`, async ({ page }) => {
     test.setTimeout(180_000);

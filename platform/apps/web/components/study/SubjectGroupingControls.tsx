@@ -1,5 +1,6 @@
 "use client";
 
+import { Icon } from "@/components/media/Icon";
 import {DEFAULT_GROUP_ORDER,getActiveGroupOrder,type SheetGrouping} from "@/lib/study/sheet-grouping";
 import type {SheetBrowse} from "@/lib/study/sheet-browse";
 
@@ -34,7 +35,7 @@ export function SubjectGroupingControls({browse,onChange}:{browse:SheetBrowse;on
       <div><strong>Grouping order</strong><p>First group outside, then split within it. Move a group earlier or later.</p></div>
       {active.length>0?<ol aria-label="Active grouping order">{active.map((dimension,index)=><li key={dimension} data-grouping-priority={dimension}>
         <span className="subject-priority-number" aria-hidden="true">{index+1}</span><strong>{labels[dimension]}</strong>
-        <span className="subject-priority-move"><button type="button" aria-label={`Move ${labels[dimension]} earlier`} disabled={index===0} onClick={()=>move(dimension,-1)}><span aria-hidden="true">←</span></button><button type="button" aria-label={`Move ${labels[dimension]} later`} disabled={index===active.length-1} onClick={()=>move(dimension,1)}><span aria-hidden="true">→</span></button></span>
+        <span className="subject-priority-move"><button type="button" aria-label={`Move ${labels[dimension]} earlier`} disabled={index===0} onClick={()=>move(dimension,-1)}><span aria-hidden="true"><Icon name="back"/></span></button><button type="button" aria-label={`Move ${labels[dimension]} later`} disabled={index===active.length-1} onClick={()=>move(dimension,1)}><span aria-hidden="true"><Icon name="arrow"/></span></button></span>
       </li>)}</ol>:<p className="subject-grouping-none">No grouping · one illustrated word collection.</p>}
       <p className="subject-priority-summary" role="status">{active.length?active.map(dimension=>labels[dimension]).join(" → "):"All grouping is off"}</p>
     </div>

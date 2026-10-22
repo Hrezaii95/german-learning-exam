@@ -10,7 +10,6 @@ import {LineAudio} from "./StudyAudio";
 import {StudyTagList,StudyScopeNotice} from "./StudyScope";
 import {TopicVocabularyLink,TopicWordPractice} from "./TopicVocabularyLink";
 import {ObjectBuilder} from "./ObjectBuilders";
-import {ObjectPrintSummary} from "./ObjectPrintSummaries";
 import {CoursePatterns} from "./CourseStudy";
 
 export function ObjectCheatSheet({cards,speech,unit}:{cards:WordCard[];speech:Record<string,string>;unit:StudyUnit}){
@@ -26,6 +25,6 @@ export function ObjectCheatSheet({cards,speech,unit}:{cards:WordCard[];speech:Re
     <details><summary>More Lesson 5 grammar and examples</summary><CoursePatterns units={[unit]} section="grammar" speech={speech}/></details>
     <TopicWordPractice cards={cards} speech={speech}/>
     <p className="muted">Based on Momente A1.1 KB 33–36, AB 30–33 and the Lesson 5 glossary. Descriptions, diagrams and quizzes are learning aids. Tap German words or select a phrase for meaning.</p>
-    <ObjectPrintSummary/>
+
   </CheatSheetFrame>;
 }

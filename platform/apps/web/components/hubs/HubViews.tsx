@@ -1,5 +1,6 @@
 "use client";
 
+import { Icon } from "@/components/media/Icon";
 import type { ReactNode } from "react";
 import {submitLocalSearch} from "@/components/search/submit-local-search";
 import type {StudyUnit} from "@/lib/study/course-lessons";
@@ -636,7 +637,7 @@ function HubToolDrawer({ hub }: { hub: LearnerHubDefinition }) {
         </p>
       )}
       <span className="tool-drawer__arrow" aria-hidden="true">
-        →
+        <Icon name="arrow"/>
       </span>
     </li>
   );
@@ -1006,7 +1007,7 @@ export function HubListView({
         {hub.id === "vocabulary" ? (
           <p style={{ marginTop: "1rem" }}>
             <Link className="btn btn-secondary" href="/collections/professions">
-              Explore professions and their forms →
+              Explore professions and their forms <Icon name="arrow"/>
             </Link>
           </p>
         ) : null}
@@ -1016,7 +1017,7 @@ export function HubListView({
       {units.length>0&&query.category!==null&&<p className="muted">Topic categories apply to the original guided lessons. Choose All categories to include the later lesson patterns.</p>}
       {hub.id==="grammar"&&<GrammarConnections entries={extraEntries} speech={speech} navigation={buildHubNavigationContext({hubId:"grammar",q:query.q,lesson:query.lesson,...(query.category?{category:query.category}:{})})}/> }
       {connectedTopics.length>0&&<section id="connected-learning-paths" aria-labelledby="connected-learning-paths-heading"><h2 id="connected-learning-paths-heading" className="dense">Connected learning paths</h2><div className="card-grid hub-results">{connectedTopics.map(topic=><ConceptTopicCard key={topic.id} topic={topic}/>)}</div></section>}
-      {hub.id==="concepts"&&<><p><Link href="/grammar">Browse the grammar library →</Link></p><GrammarConnections entries={extraEntries} speech={speech} navigation={buildHubNavigationContext({hubId:hub.id,q:query.q,lesson:query.lesson,...(query.category?{category:query.category}:{})})}/></>}
+      {hub.id==="concepts"&&<><p><Link href="/grammar">Browse the grammar library <Icon name="arrow"/></Link></p><GrammarConnections entries={extraEntries} speech={speech} navigation={buildHubNavigationContext({hubId:hub.id,q:query.q,lesson:query.lesson,...(query.category?{category:query.category}:{})})}/></>}
 
       {visibleItemCount === 0 ? (
         <HubEmptyPublished hub={hub} />
@@ -1063,7 +1064,7 @@ export function HubListView({
           </div>
         </section>
       )}
-      {!listeningGroups&&!conceptTopics&&visibleResultCount>0&&<nav className="library-pagination" aria-label={`${hub.title} results pages`}><p role="status">Showing {start+1}–{Math.min(start+pageSize,visibleResultCount)} of {visibleResultCount} · Page {page} of {pageCount}</p><div className="study-row">{page>1&&<Link className="study-secondary" href={pageHref(page-1)}>← Previous page</Link>}{page<pageCount&&<Link className="study-primary" href={pageHref(page+1)}>Next page →</Link>}</div></nav>}
+      {!listeningGroups&&!conceptTopics&&visibleResultCount>0&&<nav className="library-pagination" aria-label={`${hub.title} results pages`}><p role="status">Showing {start+1}–{Math.min(start+pageSize,visibleResultCount)} of {visibleResultCount} · Page {page} of {pageCount}</p><div className="study-row">{page>1&&<Link className="study-secondary" href={pageHref(page-1)}><Icon name="back"/> Previous page</Link>}{page<pageCount&&<Link className="study-primary" href={pageHref(page+1)}>Next page <Icon name="arrow"/></Link>}</div></nav>}
     </div>
   );
 }

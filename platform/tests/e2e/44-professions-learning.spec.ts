@@ -13,7 +13,7 @@ for(const width of [320,390,768,1440]) {
     const dropdown=page.locator(".subject-word-dropdown");
     await expect(dropdown).toContainText("die Elektriker");
     await dropdown.getByRole("button",{name:/^Save to review:/}).click();
-    await dropdown.getByRole("link",{name:"Full vocabulary card →",exact:true}).click();
+    await dropdown.getByRole("link",{name:"Full vocabulary card",exact:true}).click();
     await expect(page).toHaveURL(/\/vocabulary\/[^/?]+\/?\?nav=/);
     for(const text of ["der Elektriker","die Elektriker","die Elektrikerin","die Elektrikerinnen"]) await expect(page.locator("main")).toContainText(text);
     await expect(page.getByRole("button",{name:/^Remove from review:/})).toBeVisible();

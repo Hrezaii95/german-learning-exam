@@ -1,5 +1,7 @@
 "use client";
 
+import { Icon } from "@/components/media/Icon";
+
 import Link from "next/link";
 import {useEffect,useRef} from "react";
 import type {StudyConcept} from "@/lib/study/scope";
@@ -40,7 +42,7 @@ export function WordDropdown({item,subject,href,panelId,onClose}:{
     <div className="subject-detail-heading subject-word-dropdown-header">
       <SubjectVocabularyVisual de={item.de} category={item.category} cardId={item.cardId} subject={subject}/>
       <div className="subject-word-dropdown-identity"><p className="subject-detail-category">{item.category}{qualifier&&<> · {qualifier}</>}</p><h3><GermanText text={item.de}/></h3><p className="subject-detail-meaning">{item.meaning}</p></div>
-      <button type="button" className="subject-word-dropdown-close subject-print-hide" aria-label={`Close vocabulary card: ${item.de}`} onClick={onClose}><span aria-hidden="true">×</span><span>Close</span></button>
+      <button type="button" className="subject-word-dropdown-close subject-print-hide" aria-label={`Close vocabulary card: ${item.de}`} onClick={onClose}><span aria-hidden="true"><Icon name="close"/></span><span>Close</span></button>
     </div>
     <div className="subject-word-dropdown-forms" aria-label="Word forms and pronunciation">
       <div className={`subject-word-dropdown-form subject-tone-${item.tone}`}>
@@ -59,7 +61,7 @@ export function WordDropdown({item,subject,href,panelId,onClose}:{
       {examples.length>0&&<div className="subject-detail-examples"><h4>In a sentence</h4>{examples.map((example,index)=><div key={`${example.de}-${index}`}><p><GermanText text={example.de}/><LineAudio text={example.de} src={example.audio} compact/></p><p>{example.en}</p></div>)}</div>}
       {item.patterns.length>0&&<div className="subject-detail-patterns"><h4>Useful patterns</h4><ul>{item.patterns.map((pattern,index)=><li key={`${pattern}-${index}`}><GermanText text={pattern}/></li>)}</ul></div>}
     </details>}
-    <div className="subject-detail-actions"><SaveButton item={item.savedItem}/><Link href={href}>{item.href.startsWith("/vocabulary/")?"Full vocabulary card →":"Open word reference →"}</Link></div>
+    <div className="subject-detail-actions"><SaveButton item={item.savedItem}/><Link href={href}>{item.href.startsWith("/vocabulary/")?"Full vocabulary card":"Open word reference"} <Icon name="arrow"/></Link></div>
     <StudyTagList tags={item.studyTags}/>
     {item.note&&<details className="subject-source-note"><summary>Word notes & source context</summary>{item.note.split(/\n\n+/).map((paragraph,index)=><p key={index}>{paragraph}</p>)}</details>}
   </article>;

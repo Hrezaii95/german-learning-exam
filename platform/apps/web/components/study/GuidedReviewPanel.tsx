@@ -1,5 +1,6 @@
 "use client";
 
+import { Icon } from "@/components/media/Icon";
 import Link from "next/link";
 import { useState } from "react";
 import type { MissionFilters } from "@german-learning/learning";
@@ -45,8 +46,8 @@ export function GuidedReviewPanel() {
       <p className="lede">Build a short session of checked exercises from Lessons 1–2. Your saved collection above keeps words, phrases, concepts and book lines from all lessons for self-rated recall.</p>
     </header>
     <div className="study-row review-paths">
-      <Link className="study-secondary" href="#saved-collection">My saved collection &amp; recall →</Link>
-      <Link href="/practice">Choose free practice →</Link>
+      <Link className="study-secondary" href="#saved-collection">My saved collection &amp; recall <Icon name="arrow"/></Link>
+      <Link href="/practice">Choose free practice <Icon name="arrow"/></Link>
     </div>
     <section className="panel" aria-labelledby="review-setup-heading">
       <h3 id="review-setup-heading">Build mission</h3>

@@ -1,5 +1,7 @@
 "use client";
 
+import { Icon } from "@/components/media/Icon";
+
 import Link from "next/link";
 import {useEffect,useState} from "react";
 import type {WordCard} from "@/lib/content/word-card-types";
@@ -47,8 +49,8 @@ export function TopicVocabularyLink({id,subject,label,lessons,legacyIds=[],cards
     <p className="study-eyebrow">Vocabulary for this topic</p>
     <h2>{label} vocabulary</h2>
     <p>Explore the illustrated words, articles and plurals in the subject sheet, filtered to {lessons.length===1?`Lesson ${lessons[0]}`:`Lessons ${lessons.join(", ")}`}.</p>
-    {focusedWord&&<p data-topic-word-handoff={focusedCard?.id??focusedTarget?.anchor}><Link className="study-secondary" href={`${topicVocabularyHref(handoffSubject,handoffLessons,focusedWord)}${focusedEntryId?`#sheet-card-${focusedEntryId}`:""}`}>Open <span lang="de">{focusedWord}</span> in {handoffLabel.toLowerCase()} vocabulary →</Link></p>}
-    <Link className="study-secondary" href={topicVocabularyHref(subject,lessons)}>Open {label.toLowerCase()} subject sheet →</Link>
+    {focusedWord&&<p data-topic-word-handoff={focusedCard?.id??focusedTarget?.anchor}><Link className="study-secondary" href={`${topicVocabularyHref(handoffSubject,handoffLessons,focusedWord)}${focusedEntryId?`#sheet-card-${focusedEntryId}`:""}`}>Open <span lang="de">{focusedWord}</span> in {handoffLabel.toLowerCase()} vocabulary <Icon name="arrow"/></Link></p>}
+    <Link className="study-secondary" href={topicVocabularyHref(subject,lessons)}>Open {label.toLowerCase()} subject sheet <Icon name="arrow"/></Link>
   </section>;
 }
 

@@ -72,7 +72,7 @@ describe("bounded course libraries and return context",()=>{
       expect(target).not.toBeNull();
       expect(target?.closest("[data-sheet-card]")?.id).toBe("sheet-card-W343");
       await waitFor(()=>expect(scroll.mock.contexts).toContain(target));
-      const detail=screen.getByRole("link",{name:"Full card →"}).getAttribute("href")!;
+      const detail=screen.getByRole("link",{name:"Full card"}).getAttribute("href")!;
       const nextContext=parseNavigationContextParam(new URL(detail,"https://test.local").searchParams.get("nav"));
       expect(resolveBackHref(nextContext)).toBe(`/cheat-sheets/numbers?q=Million${saved?"&saved=1":""}#sheet-card-W343`);
       expect(window.location.hash).toBe(`#sheet-card-${fragmentId}`);
@@ -140,7 +140,7 @@ describe("bounded course libraries and return context",()=>{
     render(createElement(HubListView,{hub:hubs.hubsById.concepts,units:studyUnits,speech:{},searchParams:{lesson:"12"}}));
     expect(screen.getByRole("heading",{name:"From a rule to a sentence"})).toBeTruthy();
     expect(screen.queryByRole("heading",{name:"Connected learning paths"})).toBeNull();
-    const href=screen.getByRole("link",{name:"Open the lesson checkpoint →"}).getAttribute("href")!;
+    const href=screen.getByRole("link",{name:"Open the lesson checkpoint"}).getAttribute("href")!;
     expect(href).toMatch(/^\/lessons\/12\?nav=.*#practice$/);
     expect(resolveBackHref(parseNavigationContextParam(new URL(href,"https://test.local").searchParams.get("nav")),"hub")).toBe("/grammar?lesson=12");
   });

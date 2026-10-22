@@ -1,5 +1,7 @@
 "use client";
 
+import { Icon } from "@/components/media/Icon";
+
 import type {Ref} from "react";
 import type {WordForm} from "@/lib/content/word-card-types";
 import type {StudyConcept} from "@/lib/study/scope";
@@ -55,6 +57,6 @@ export function VocabularyEntry({item,subject,selected,expanded,onChoose,onClose
         :<small lang={item.plurals.length?"de":undefined}>{item.plurals.length?item.plurals.map(form=>form.text).join(" · "):item.tone==="plain"?item.category:item.tone==="plural"?"Plural form":"No plural taught here"}</small>}
       <span className="subject-entry-meaning">{item.meaning}</span>{qualifier&&<em>{qualifier}</em>}
     </span>}
-    <span className="subject-entry-chevron" aria-hidden="true">{expanded?"⌃":"⌄"}</span>
+    <span className="subject-entry-chevron" aria-hidden="true"><Icon name="chevron" direction={expanded?"up":"down"}/></span>
   </button>;
 }

@@ -1,3 +1,4 @@
+import { Icon } from "@/components/media/Icon";
 import { pagesBasePath } from "@/lib/content/pages-base-path";
 import { legacyCountryRedirectScript, sheetRedirectHref, sheetRedirectScript } from "@/lib/study/sheet-routes";
 import { SheetRedirectClient } from "./SheetRedirectClient";
@@ -13,7 +14,7 @@ export function StaticSheetRedirect({ href, label }: { href: string; label: stri
     <link rel="canonical" href={target}/>
     <script dangerouslySetInnerHTML={{ __html: sheetRedirectScript(href, pagesBasePath()) }}/>
     <noscript dangerouslySetInnerHTML={{ __html: `<meta http-equiv="refresh" content="0;url=${escapeAttribute(target)}">` }}/>
-    <p>This cheat sheet has moved. <a href={target}>Open {label} →</a></p>
+    <p>This cheat sheet has moved. <a href={target}>Open {label} <Icon name="arrow"/></a></p>
     <SheetRedirectClient href={href}/>
   </>;
 }

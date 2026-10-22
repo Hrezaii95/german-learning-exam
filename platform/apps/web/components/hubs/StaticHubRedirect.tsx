@@ -1,3 +1,4 @@
+import { Icon } from "@/components/media/Icon";
 import { pagesBasePath } from "@/lib/content/pages-base-path";
 import { hubRedirectHref, hubRedirectScript, type HubRedirectDefaults } from "@/lib/content/hub-redirects";
 import { HubRedirectClient } from "./HubRedirectClient";
@@ -11,7 +12,7 @@ export function StaticHubRedirect({ href, label, defaults = {}, professionReturn
     <link rel="canonical" href={canonical}/>
     <script dangerouslySetInnerHTML={{ __html: hubRedirectScript(href, pagesBasePath(), defaults, professionReturn) }}/>
     <noscript dangerouslySetInnerHTML={{ __html: `<meta http-equiv="refresh" content="0;url=${refresh}">` }}/>
-    <p>This study area has moved. <a href={target}>Open {label} →</a></p>
+    <p>This study area has moved. <a href={target}>Open {label} <Icon name="arrow"/></a></p>
     <HubRedirectClient href={href} defaults={defaults} professionReturn={professionReturn}/>
   </>;
 }

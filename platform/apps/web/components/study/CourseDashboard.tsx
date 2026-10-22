@@ -1,4 +1,5 @@
 "use client";
+import { Icon } from "@/components/media/Icon";
 import Link from "next/link";
 import {courseChapters} from "@/lib/study/lesson-four";
 import {tagsForLesson} from "@/lib/study/scope";
@@ -21,7 +22,7 @@ export function CourseDashboard(){
         <p>{chapter.topic}</p>
         <details><summary>Book progress{study?.ready?` · ${done}/8 pages`:""}</summary>
           <p>{study?.ready?`${done} of 8 pages marked studied. This records reading, not a tested skill.`:"Loading book progress…"}</p>
-          <Link href={`/book?page=coursebook-${chapter.kb}`}>Read Lesson {chapter.number} in the book →</Link>
+          <Link href={`/book?page=coursebook-${chapter.kb}`}>Read Lesson {chapter.number} in the book <Icon name="arrow"/></Link>
         </details>
       </article>;
     })}</div>

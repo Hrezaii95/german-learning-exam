@@ -1,3 +1,4 @@
+import {printLiveSheet} from "./helpers/print-live-sheet";
 import {expect,test,type Page} from "@playwright/test";
 
 async function observeAudio(page:Page){await page.addInitScript(()=>{const NativeAudio=window.Audio;(window as unknown as {observedAudio:HTMLAudioElement[]}).observedAudio=[];window.Audio=class extends NativeAudio{constructor(src?:string){super(src);(window as unknown as {observedAudio:HTMLAudioElement[]}).observedAudio.push(this);}};});}
@@ -21,7 +22,7 @@ for(const width of [320,1440])test(`verb parts, exact audio and saved-person ret
   await verb.selectOption("sich freuen");await expect(page.locator(".verb-tail")).toContainText("Reflexive pronoun");await expect(page.locator(".verb-tail strong")).toHaveText("dich");
   await verb.selectOption("ankommen");await expect(page.locator(".verb-tail")).toContainText("Separable prefix");await expect(page.locator(".verb-tail strong")).toHaveText("an");
   await page.locator(".verb-stage").getByRole("button",{name:/^Save to review:/}).click();
-  await page.goto("saved/");await page.locator(".study-saved-card").filter({hasText:"du kommst an"}).getByRole("link",{name:"Open in context →",exact:true}).click();
+  await page.goto("saved/");await page.locator(".study-saved-card").filter({hasText:"du kommst an"}).getByRole("link",{name:"Open in context",exact:true}).click();
   await expect(verb).toHaveValue("ankommen");await expect(person).toHaveValue("1");
   await page.reload();await expect(person).toHaveValue("1");
   await page.locator(".verb-stage").getByRole("button",{name:/^Remove from review:/}).click();
@@ -47,7 +48,7 @@ for(const width of [320,1440])test(`question contrast, full reply, scope and sav
   await expect(builder.locator(".question-builder-answer")).toContainText("Ja, ich komme aus dem Iran.");
   await builder.getByRole("button",{name:"Listen: Ja, ich komme aus dem Iran.",exact:true}).click();await playbackAdvanced(page);
   await builder.getByRole("button",{name:"Save to review: Kommen Sie aus dem Iran?",exact:true}).click();
-  await page.goto("saved/");await page.locator(".study-saved-card").filter({hasText:"Kommen Sie aus dem Iran?"}).getByRole("link",{name:"Open in context →",exact:true}).click();
+  await page.goto("saved/");await page.locator(".study-saved-card").filter({hasText:"Kommen Sie aus dem Iran?"}).getByRole("link",{name:"Open in context",exact:true}).click();
   await expect(builder.getByRole("combobox",{name:"Practice topic",exact:true})).toHaveValue("origin");
   await expect(builder.getByRole("button",{name:"Formal · Sie",exact:true})).toHaveAttribute("aria-pressed","true");
   await expect(builder.getByRole("button",{name:"Yes/no question",exact:true})).toHaveAttribute("aria-pressed","true");
@@ -82,12 +83,19 @@ test("saved sentence patterns and replies restore their exact teaching context",
   await expect(reply.locator(".question-reply")).toContainText("Nein, ich komme nicht aus dem Iran.");
 });
 
-for(const sheet of ["verbs","questions"])test(`${sheet} prints a concise complete pattern summary`,async({page},testInfo)=>{
+for(const sheet of ["verbs","questions"])test(`${sheet} prints its live pattern diagrams`,async({page},testInfo)=>{
   await page.goto(`cheat-sheets/${sheet}/`);
-  const summary=page.locator(".sheet-print-summary");await expect(summary).toBeHidden();
-  await page.emulateMedia({media:"print"});await expect(summary).toBeVisible();
-  if(sheet==="questions")await expect(summary.locator(".print-question-map > div")).toHaveCount(20);
-  else await expect(summary).toContainText("Reflexive model");
-  await page.evaluate(()=>document.fonts.ready);
-  for(const format of ["A4","Letter"] as const){const path=testInfo.outputPath(`${sheet}-${format}.pdf`);await page.pdf({path,format,printBackground:true,margin:{top:"12mm",bottom:"12mm",left:"12mm",right:"12mm"}});await testInfo.attach(`${sheet}-${format}`,{path,contentType:"application/pdf"});}
+  const region=page.locator(sheet==="verbs"?"#verb-explorer":"#question-builder");
+  if(sheet==="verbs")await page.getByRole("combobox",{name:"Choose a verb",exact:true}).selectOption("sein");
+  else await region.getByRole("button",{name:"W-question",exact:true}).click();
+  const result=region.locator(sheet==="verbs"?".verb-stage":".question-builder-result");
+  const text=await result.innerText();
+  await printLiveSheet(page,testInfo,sheet,async()=>{
+    await expect(region).toBeVisible();
+    await expect(result).toContainText(text);
+    await expect(region.locator(sheet==="verbs"?".verb-anatomy":".question-rail")).toBeVisible();
+    if(sheet==="verbs")await expect(region.locator(".verb-person-grid > button")).toHaveCount(7);
+  });
+  if(sheet==="verbs")await expect(page.getByRole("combobox",{name:"Choose a verb",exact:true})).toHaveValue("sein");
+  else await expect(region.getByRole("button",{name:"Yes/no question",exact:true})).toHaveAttribute("aria-pressed","true");
 });

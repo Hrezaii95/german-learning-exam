@@ -8,7 +8,9 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { createElement, type ReactNode } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
-import { beforeAll, describe, expect, it, vi } from "vitest";
+import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
+import { cleanup, render, screen } from "@testing-library/react";
+import { Icon } from "../../apps/web/components/media/Icon";
 import { projectPublishedLearnerWeb } from "../../apps/web/lib/content/project.js";
 import type { LearnerWebProjection } from "../../apps/web/lib/content/types.js";
 
@@ -203,5 +205,22 @@ describe("P3A behavioral UI (server-rendered from generated projection)", () => 
     expect(html).not.toContain("morph-strip__star");
     expect(html).not.toContain("★");
     expect(html).not.toContain("--gender-m");
+  });
+});
+
+describe("shared action icons", () => {
+  beforeEach(() => { document.body.innerHTML = ""; });
+  afterEach(cleanup);
+
+  it("keeps control names meaningful without announcing decorative symbols", () => {
+    const { container } = render(createElement("button", { type: "button" }, "Next page ", createElement(Icon, { name: "arrow" })));
+    expect(screen.getByRole("button", { name: "Next page", exact: true })).toBeTruthy();
+    expect(screen.queryByRole("img")).toBeNull();
+    expect(container.querySelector("svg")?.getAttribute("focusable")).toBe("false");
+  });
+
+  it("exposes a label when an informational icon stands alone", () => {
+    render(createElement(Icon, { name: "check", label: "Page studied" }));
+    expect(screen.getByRole("img", { name: "Page studied", exact: true })).toBeTruthy();
   });
 });

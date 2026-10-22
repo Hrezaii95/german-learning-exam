@@ -10,6 +10,7 @@ import {
 } from "@/lib/offline/policy";
 import "./globals.css";
 import "./study.css";
+import "@/components/study/StudyPrint.css";
 import { StudyProvider } from "@/components/study/StudyProvider";
 import { StudyScopeProvider } from "@/components/study/StudyScope";
 

@@ -8,7 +8,6 @@ import {GermanText,SaveButton} from "./StudyProvider";
 import {LineAudio} from "./StudyAudio";
 import {StudyScopeNotice} from "./StudyScope";
 import {ObjectIllustration,OfficeIllustration} from "./ObjectIllustration";
-import "./ObjectLearning.css";
 
 export function ObjectBuilder({speech}:{speech:Record<string,string>}){
  const [state,setState]=useState(()=>defaultObjectSettings()),[recall,setRecall]=useState(false);

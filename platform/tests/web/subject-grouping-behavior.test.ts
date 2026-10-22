@@ -208,7 +208,7 @@ describe("subject grouping and priority",()=>{
     fireEvent.click(within(card).getByRole("button",{name:"Listen: das Buch"}));
     fireEvent.click(within(card).getByRole("button",{name:"Listen: die Bücher"}));
     expect(played).toEqual([book.audio,book.plurals[0]!.audio]);
-    const href=within(card).getByRole("link",{name:"Full vocabulary card →"}).getAttribute("href")!;
+    const href=within(card).getByRole("link",{name:"Full vocabulary card"}).getAttribute("href")!;
     const context=parseNavigationContextParam(new URL(href,"https://example.test").searchParams.get("nav"));
     const back=resolveBackHref(context);
     const backUrl=new URL(back,"https://example.test");

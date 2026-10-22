@@ -8,7 +8,7 @@ test("saved study, course progress and settings survive a complete backup round 
   await page.getByRole("button", { name: /^Save to review:/ }).first().click();
   await page.getByRole("button", { name: "Practice", exact: true }).click();
   await page.getByRole("button", { name: "bin", exact: true }).click();
-  await page.getByRole("button", { name: "Next question →", exact: true }).click();
+  await page.getByRole("button", { name: "Next question", exact: true }).click();
   await page.reload();
   await expect(page.locator(".study-tabs [aria-current=page]")).toHaveText("Practice");
   await expect(page.locator(".study-recall")).toContainText("Question 2 / 10");
@@ -25,7 +25,7 @@ test("saved study, course progress and settings survive a complete backup round 
   const electrician = page.locator(".study-saved-card").filter({ hasText: "Elektriker" });
   await electrician.getByRole("textbox", { name: "My note" }).fill("Remember all four profession forms.");
   await electrician.getByRole("textbox", { name: "My note" }).press("Tab");
-  await page.getByRole("button", { name: "Review 2 items →", exact: true }).click();
+  await page.getByRole("button", { name: "Review 2 items", exact: true }).click();
   await page.getByRole("button", { name: "Reveal meaning", exact: true }).click();
   await page.getByRole("button", { name: "Again · 10 min", exact: true }).click();
   await page.getByRole("button", { name: "Reveal meaning", exact: true }).click();
@@ -36,7 +36,7 @@ test("saved study, course progress and settings survive a complete backup round 
   await expect(page.locator(".study-saved-card")).toHaveCount(0);
 
   await page.goto("book/?page=coursebook-74");
-  await page.getByRole("button", { name: "☆ Bookmark", exact: true }).click();
+  await page.getByRole("button", { name: "Bookmark", exact: true }).click();
   await page.getByRole("button", { name: "Mark page studied", exact: true }).click();
   await page.goto("settings/");
   await page.getByRole("combobox", { name: /Audio speed/ }).selectOption("0.75");
@@ -77,8 +77,8 @@ test("saved study, course progress and settings survive a complete backup round 
     await restored.getByRole("checkbox", { name: "Due only", exact: true }).uncheck();
     await expect(restored.locator(".study-saved-card").filter({ hasText: "Elektriker" }).getByRole("textbox", { name: "My note" })).toHaveValue("Remember all four profession forms.");
     await restored.goto("book/?page=coursebook-74");
-    await expect(restored.getByRole("button", { name: "★ Bookmarked", exact: true })).toBeVisible();
-    await expect(restored.getByRole("button", { name: "✓ Page studied", exact: true })).toBeVisible();
+    await expect(restored.getByRole("button", { name: "Bookmarked", exact: true })).toBeVisible();
+    await expect(restored.getByRole("button", { name: "Page studied", exact: true })).toBeVisible();
     await restored.goto("lessons/12/");
     await expect(restored.locator(".study-recall")).toContainText("Question 2 / 10");
     await restored.getByRole("button", { name: "Restart quiz", exact: true }).click();
@@ -119,7 +119,7 @@ test("Lesson 4 also resumes its quiz and supports an explicit restart", async ({
   await page.goto("lessons/04/");
   await page.getByRole("button", { name: "Practice", exact: true }).click();
   await page.locator(".lesson-quiz-options button").first().click();
-  await page.getByRole("button", { name: "Next question →", exact: true }).click();
+  await page.getByRole("button", { name: "Next question", exact: true }).click();
   await page.reload();
   await expect(page.locator("#l4-practice")).toContainText("Question 2");
   await page.getByRole("button", { name: "Restart quiz", exact: true }).click();

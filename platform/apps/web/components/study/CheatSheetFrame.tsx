@@ -1,5 +1,6 @@
 "use client";
 
+import { Icon } from "@/components/media/Icon";
 import Link from "next/link";
 import {useEffect,useRef,useState,type HTMLAttributes,type ReactNode} from "react";
 import {sheetDestination,sheetDestinations,type SheetDestinationId} from "@/lib/study/sheet-navigation";
@@ -29,9 +30,9 @@ export function CheatSheetNavigation({current,browse}:{current:SheetDestinationI
     return()=>element.removeEventListener("keydown",closeOnEscape);
   },[]);
   return <div className="subject-navigation subject-print-hide">
-    <Link href="/cheat-sheets" className="subject-back">← All cheat sheets</Link>
+    <Link href="/cheat-sheets" className="subject-back"><Icon name="back"/> All cheat sheets</Link>
     <details ref={chooser} className="subject-switcher sheet-switcher">
-      <summary><span><small>Choose a study sheet</small><strong>{selected.label}</strong></span><span aria-hidden="true">⌄</span></summary>
+      <summary><span><small>Choose a study sheet</small><strong>{selected.label}</strong></span><span aria-hidden="true"><Icon name="chevron"/></span></summary>
       <div className="sheet-switcher-panel">
         <label className="sheet-switcher-search">Find a study sheet<input type="search" value={query} onChange={event=>setQuery(event.target.value)} placeholder="Vocabulary, countries, verbs…"/></label>
         <p role="status">{visible.length} of {sheetDestinations.length} study sheets</p>

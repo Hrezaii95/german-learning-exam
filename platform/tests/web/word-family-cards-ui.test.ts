@@ -103,7 +103,7 @@ describe("complete word-family cards", () => {
       fireEvent.change(screen.getByLabelText("German answer"), { target: { value: prompt.answers[0] } });
       fireEvent.click(screen.getByRole("button", { name: "Check answer" }));
       expect(screen.getByRole("status").textContent).toContain("You remembered it.");
-      fireEvent.click(screen.getByRole("button", { name: "Next form →" }));
+      fireEvent.click(screen.getByRole("button", { name: "Next form" }));
     }
   });
   it("rejects a wrong article and does not call a revealed answer correct", () => {
@@ -113,7 +113,7 @@ describe("complete word-family cards", () => {
     fireEvent.click(screen.getByRole("button", { name: "Check answer" }));
     expect(screen.getByLabelText("German answer").getAttribute("aria-invalid")).toBe("true");
     expect(screen.getByRole("status").textContent).not.toContain("You remembered it.");
-    fireEvent.click(screen.getByRole("button", { name: "Next form →" }));
+    fireEvent.click(screen.getByRole("button", { name: "Next form" }));
     fireEvent.click(screen.getByRole("button", { name: "Show answer" }));
     expect(screen.getByRole("status").textContent).toContain("Read it once");
   });

@@ -67,7 +67,7 @@ describe("subject infographic browsing",()=>{
     const entry=entries()[0]!;
     fireEvent.click(entry);
     const detail=screen.getByRole("article",{name:/^Vocabulary card:/});
-    const href=within(detail).getByRole("link",{name:"Full vocabulary card →"}).getAttribute("href")!;
+    const href=within(detail).getByRole("link",{name:"Full vocabulary card"}).getAttribute("href")!;
     const context=parseNavigationContextParam(new URL(href,"https://example.test").searchParams.get("nav"));
     expect(context?.sheetLessonFilter).toEqual([2,4]);
     expect(context?.sheetSource).toBe("teacher-extra");
@@ -116,7 +116,7 @@ describe("subject infographic browsing",()=>{
     fireEvent.click(chooser.querySelector("summary")!);
     expect(new URL(chooser.querySelector('a[href^="/cheat-sheets/subjects/home?"]')!.getAttribute("href")!,"https://example.test").searchParams.get("source")).toBe("teacher-extra");
     fireEvent.click(entries()[0]!);
-    const href=within(screen.getByRole("article",{name:/^Vocabulary card:/})).getByRole("link",{name:"Full vocabulary card →"}).getAttribute("href")!;
+    const href=within(screen.getByRole("article",{name:/^Vocabulary card:/})).getByRole("link",{name:"Full vocabulary card"}).getAttribute("href")!;
     const context=parseNavigationContextParam(new URL(href,"https://example.test").searchParams.get("nav"));
     const back=new URL(resolveBackHref(context),"https://example.test");
     expect(back.pathname).toBe("/cheat-sheets/subjects/people");
@@ -159,7 +159,7 @@ describe("subject infographic browsing",()=>{
       const detail=screen.getByRole("article",{name:"Vocabulary card: das Bild"});
       const canonical=document.getElementById("sheet-card-W464-0");
       await waitFor(()=>expect(scroll.mock.contexts).toContain(canonical));
-      const href=within(detail).getByRole("link",{name:"Full vocabulary card →"}).getAttribute("href")!;
+      const href=within(detail).getByRole("link",{name:"Full vocabulary card"}).getAttribute("href")!;
       const context=parseNavigationContextParam(new URL(href,"https://example.test").searchParams.get("nav"));
       expect(resolveBackHref(context)).toBe(`${allNouns?"/cheat-sheets/vocabulary":path}${query}#sheet-card-W464-0`);
       expect(window.location.hash).toBe("#sheet-card-l4-bild-0");
@@ -188,7 +188,7 @@ describe("subject infographic browsing",()=>{
     const entry=entries()[0]!;
     fireEvent.click(entry);
     const detail=screen.getByRole("article",{name:`Vocabulary card: ${expected.find(item=>item.id===entry.dataset.subjectEntry)!.de}`});
-    const href=within(detail).getByRole("link",{name:"Full vocabulary card →"}).getAttribute("href")!;
+    const href=within(detail).getByRole("link",{name:"Full vocabulary card"}).getAttribute("href")!;
     const context=parseNavigationContextParam(new URL(href,"https://example.test").searchParams.get("nav"));
     expect(new URL(resolveBackHref(context),"https://example.test").searchParams.get("lesson")).toBe("5");
     expect(JSON.parse(localStorage.getItem(STUDY_SCOPE_KEY)!).lessons).toEqual([1]);
@@ -241,7 +241,7 @@ describe("subject infographic browsing",()=>{
     expect(groupingSwitch("gender").getAttribute("aria-checked")).toBe("false");
     expect(groupingSwitch("plural pattern").getAttribute("aria-checked")).toBe("true");
     const detail=screen.getByRole("article",{name:"Vocabulary card: das Handy"});
-    const href=within(detail).getByRole("link",{name:"Full vocabulary card →"}).getAttribute("href")!;
+    const href=within(detail).getByRole("link",{name:"Full vocabulary card"}).getAttribute("href")!;
     const context=parseNavigationContextParam(new URL(href,"https://example.test").searchParams.get("nav"));
     const back=resolveBackHref(context);
     const restored=new URL(back,"https://example.test");
@@ -324,7 +324,7 @@ describe("subject infographic browsing",()=>{
     fireEvent.click(within(card).getByRole("button",{name:"Listen: das Buch"}));
     fireEvent.click(within(card).getByRole("button",{name:"Listen: die Bücher"}));
     expect(played).toEqual([bookItem.audio,bookItem.plurals[0]!.audio]);
-    expect(within(card).getByRole("link",{name:"Full vocabulary card →"}).getAttribute("href")).toContain(bookItem.href);
+    expect(within(card).getByRole("link",{name:"Full vocabulary card"}).getAttribute("href")).toContain(bookItem.href);
     const key=screen.getByRole("button",{name:"der Schlüssel · → die Schlüssel"});
     fireEvent.click(key);
     expect(screen.queryByRole("article",{name:"Vocabulary card: das Buch"})).toBeNull();
@@ -381,7 +381,7 @@ describe("subject infographic browsing",()=>{
     fireEvent.click(screen.getByRole("button",{name:"das Buch · → die Bücher"}));
     fireEvent.click(groupingSwitch("gender"));
     const expectedBack=`/cheat-sheets/vocabulary?view=plurals&gender=0#sheet-card-${book.id}`;
-    const href=within(screen.getByRole("article",{name:"Vocabulary card: das Buch"})).getByRole("link",{name:"Full vocabulary card →"}).getAttribute("href")!;
+    const href=within(screen.getByRole("article",{name:"Vocabulary card: das Buch"})).getByRole("link",{name:"Full vocabulary card"}).getAttribute("href")!;
     expect(resolveBackHref(parseNavigationContextParam(new URL(href,"https://example.test").searchParams.get("nav")))).toBe(expectedBack);
     fireEvent.click(screen.getByRole("button",{name:"Expand overview"}));
     const dialog=screen.getByRole("dialog");
@@ -452,7 +452,7 @@ describe("subject infographic browsing",()=>{
     expect(entries()).toHaveLength(1);
     expect(document.querySelectorAll(`[id="sheet-card-${book.id}"]`)).toHaveLength(1);
     const detail=within(dialog).getByRole("article",{name:/^Vocabulary card:/});
-    const href=within(detail).getByRole("link",{name:"Full vocabulary card →"}).getAttribute("href")!;
+    const href=within(detail).getByRole("link",{name:"Full vocabulary card"}).getAttribute("href")!;
     const context=parseNavigationContextParam(new URL(href,"https://example.test").searchParams.get("nav"));
     expect(resolveBackHref(context)).toBe(`/cheat-sheets/subjects/objects?q=Buecher&view=plurals#sheet-card-${book.id}`);
     fireEvent.click(within(dialog).getByRole("button",{name:"Close overview"}));
@@ -477,7 +477,7 @@ describe("subject infographic browsing",()=>{
     expect(document.querySelector(".subject-plural-existing")?.textContent).toContain("die Eltern");
     const ketchup=screen.getByRole("button",{name:/^das Ketchup · No plural taught here/});
     fireEvent.click(ketchup);
-    const href=within(screen.getByRole("article",{name:/^Vocabulary card:/})).getByRole("link",{name:"Full vocabulary card →"}).getAttribute("href")!;
+    const href=within(screen.getByRole("article",{name:/^Vocabulary card:/})).getByRole("link",{name:"Full vocabulary card"}).getAttribute("href")!;
     expect(resolveBackHref(parseNavigationContextParam(new URL(href,"https://example.test").searchParams.get("nav")))).toBe("/cheat-sheets/vocabulary?view=plurals#sheet-card-l9-ketchup-1");
   });
 
@@ -486,7 +486,7 @@ describe("subject infographic browsing",()=>{
     fireEvent.click(screen.getByRole("switch",{name:"Group by plural pattern"}));
     expect(screen.queryByRole("table")).toBeNull();
     expect(screen.getByText(/This selection has no singular nouns/)).toBeTruthy();
-    expect(screen.getByRole("link",{name:"Open the full vocabulary cheat sheet →"}).getAttribute("href")).toBe("/cheat-sheets/vocabulary?tags=");
+    expect(screen.getByRole("link",{name:"Open the full vocabulary cheat sheet"}).getAttribute("href")).toBe("/cheat-sheets/vocabulary?tags=");
     expect(entries().length).toBeGreaterThan(100);
   });
   it("keeps all subjects discoverable and links every subject tag to its exact infographic",()=>{
@@ -518,7 +518,7 @@ describe("subject infographic browsing",()=>{
     fireEvent.click(within(detail).getByRole("button",{name:/Save to review:/}));
     const saved=JSON.parse(localStorage.getItem(STUDY_KEY)!);
     expect(Object.keys(saved.saved)).toEqual(["card-l9-ketchup"]);
-    const href=within(detail).getByRole("link",{name:"Full vocabulary card →"}).getAttribute("href")!;
+    const href=within(detail).getByRole("link",{name:"Full vocabulary card"}).getAttribute("href")!;
     const nav=parseNavigationContextParam(new URL(href,"https://example.test").searchParams.get("nav"));
     expect(resolveBackHref(nav)).toBe("/cheat-sheets/subjects/food?q=Ketchup#sheet-card-l9-ketchup-1");
     fireEvent.click(within(dialog).getByRole("button",{name:"Close overview"}));
@@ -537,7 +537,7 @@ describe("subject infographic browsing",()=>{
     const detail=screen.getByRole("article",{name:/^Vocabulary card:/});
     expect(detail.querySelector('button[aria-label="Listen: das Buch"]')).toBeTruthy();
     expect(book.audio).toBeTruthy();
-    expect(within(detail).getByRole("link",{name:"Full vocabulary card →"}).getAttribute("href")).toContain(book.href);
+    expect(within(detail).getByRole("link",{name:"Full vocabulary card"}).getAttribute("href")).toContain(book.href);
   });
 
   it("finds the same nouns with German umlauts, their transliterations or base vowels",()=>{

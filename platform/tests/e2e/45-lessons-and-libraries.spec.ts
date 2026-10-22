@@ -25,7 +25,7 @@ for(const width of [320,1440])test(`compact libraries and search keep context at
   const vocabularySearch=page.getByRole("searchbox",{name:"Find a word or form",exact:true});
   await expect(vocabularySearch).toHaveValue("Bücher");
   await page.locator("[data-subject-entry]").filter({hasText:"das Buch"}).first().click();
-  await page.locator(".subject-word-dropdown").getByRole("link",{name:"Full vocabulary card →",exact:true}).click();
+  await page.locator(".subject-word-dropdown").getByRole("link",{name:"Full vocabulary card",exact:true}).click();
   await page.getByRole("link",{name:/^← Back/}).first().click();
   await expect(vocabularySearch).toHaveValue("Bücher");
   const restored=new URL(page.url()).searchParams;
@@ -45,7 +45,7 @@ for(const width of [320,1440])test(`compact libraries and search keep context at
   await expect(result).toBeVisible();
   await result.getByRole("link").first().click();
   await expect(page.getByRole("region",{name:"Lesson 12 learning path"})).toBeVisible();
-  await page.getByRole("link",{name:"← Back to my results"}).click();
+  await page.getByRole("link",{name:"Back to my results"}).click();
   await expect(page.getByRole("searchbox",{name:"Search learning content"})).toHaveValue("gefahren");
   await expect(page).toHaveURL(/search\/?\?q=gefahren#search-result-/);
   await page.screenshot({path:testInfo.outputPath(`search-results-${width}.png`),fullPage:true});
@@ -70,7 +70,7 @@ test("lesson words stay bounded and checked practice resumes",async({page},testI
   await expect(quiz).toContainText("Checked lesson practice");
   await quiz.locator("button[aria-pressed]").first().click();
   await expect(quiz.getByRole("status")).toBeVisible();
-  await quiz.getByRole("button",{name:"Next question →"}).click();
+  await quiz.getByRole("button",{name:"Next question"}).click();
   await page.reload();
   await expect(quiz).toContainText("Question 2 /");
   await page.screenshot({path:testInfo.outputPath("lesson-checkpoint.png"),fullPage:true});

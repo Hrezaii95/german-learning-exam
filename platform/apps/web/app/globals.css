@@ -249,14 +249,15 @@
   font-size: 0.78rem;
 }
 
-@media (min-width: 760px) {
+/* Reference responsive widths; range syntax keeps the shell bands adjacent. */
+@media screen and (min-width: 760px){
   .rich-visual__caption {
     grid-template-columns: minmax(14rem, 0.72fr) minmax(0, 1.28fr);
     align-items: start;
   }
 }
 
-@media (max-width: 560px) {
+@media screen and (max-width: 580px){
   .rich-visual__media {
     aspect-ratio: 4 / 3;
   }
@@ -279,7 +280,7 @@
   }
 }
 
-@media (max-width: 380px) {
+@media screen and (max-width: 420px){
   .rich-visual__labels {
     grid-template-columns: 1fr;
   }
@@ -899,7 +900,7 @@
   gap: 0.4rem;
 }
 
-@media (max-width: 900px) {
+@media screen and (max-width: 1000px){
   .visual-journey {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 0.65rem;
@@ -944,7 +945,7 @@
   }
 }
 
-@media (max-width: 640px) {
+@media screen and (max-width: 580px){
   .instructional-visual__header,
   .instructional-visual__body {
     padding: 1rem;
@@ -1047,7 +1048,7 @@
   box-shadow: inset 0 0 0 1px rgba(47, 107, 79, 0.25);
 }
 
-@media (max-width: 520px) {
+@media screen and (max-width: 580px){
   .learner-tag-grid .btn,
   .review-session > .btn {
     width: 100%;
@@ -1574,7 +1575,7 @@ a:hover {
 }
 
 /* Desktop: persistent dark indigo side rail */
-@media (min-width: 1100px) {
+@media screen and (min-width: 1050px){
   .app-shell {
     display: grid;
     grid-template-columns: var(--rail-width) minmax(0, 1fr);
@@ -1608,7 +1609,7 @@ a:hover {
 }
 
 /* Tablet: compact top navigation */
-@media (min-width: 700px) and (max-width: 1099px) {
+@media screen and (min-width: 760px) and (width < 1050px){
   .shell-rail,
   .shell-bottomnav {
     display: none;
@@ -1643,7 +1644,7 @@ a:hover {
 }
 
 /* Mobile: sticky bottom navigation that never covers content */
-@media (max-width: 699px) {
+@media screen and (width < 760px){
   .shell-rail,
   .shell-topnav {
     display: none;
@@ -2250,7 +2251,7 @@ a:hover {
   gap: 0.65rem;
 }
 
-@media (max-width: 400px) {
+@media screen and (max-width: 420px){
   .game-selector__card,
   .game-flashcard,
   .game-choice__option {
@@ -2310,7 +2311,7 @@ a:hover {
   padding-inline: 0.75rem;
 }
 
-@media (max-width: 960px) {
+@media screen and (max-width: 1000px){
   .workbook-audio__track {
     grid-template-columns: 1fr;
   }
@@ -2346,7 +2347,7 @@ a:hover {
 .infographic-panel__expand { display:inline-flex; flex-wrap:wrap; align-items:center; gap:6px; min-height:44px; margin-top:12px; }
 .infographic-panel__expand span { font-size:.8rem; }
 .infographic-panel__steps { display:none; }
-@media(max-width:699px) {
+@media screen and (width < 760px){
   .infographic-panel__desktop { display:none; }
   .infographic-panel__steps { display:grid; gap:12px; padding:0; list-style:none; }
   .infographic-panel__steps li { display:grid; gap:8px; padding:16px; border:1px solid var(--border); border-left:4px solid #446e5b; border-radius:10px; background:#fffefa; }
@@ -2494,7 +2495,7 @@ a:hover {
   border-color: var(--accent);
 }
 
-@media (max-width: 520px) {
+@media screen and (max-width: 580px){
   .activity-inline-actions .btn,
   .activity-question > .btn,
   .activity-listening-form > .btn {
@@ -2891,7 +2892,7 @@ a:hover {
 /* Tablet (820px): course cards and drawers pair up; the studio board stays
    stacked so Continue keeps its dominance and the mission sits compactly
    below it, clear of the bottom navigation. */
-@media (min-width: 700px) {
+@media screen and (min-width: 760px){
   .course-cards,
   .tool-drawers {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2903,20 +2904,20 @@ a:hover {
 }
 
 /* Desktop rail breakpoint: six drawers become a 3x2 grid. */
-@media (min-width: 1100px) {
+@media screen and (min-width: 1050px){
   .tool-drawers {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
 /* Wide (1440px): first row splits 7/5 — dominant Continue, compact mission. */
-@media (min-width: 1180px) {
+@media screen and (min-width: 1280px){
   .studio-board {
     grid-template-columns: 7fr 5fr;
   }
 }
 
-@media (max-width: 699px) {
+@media screen and (width < 760px){
   .evidence-strip__list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--space-3);
@@ -2928,7 +2929,7 @@ a:hover {
   }
 }
 
-@media (max-width: 420px) {
+@media screen and (max-width: 420px){
   .evidence-strip {
     padding: var(--space-4);
   }
@@ -3290,7 +3291,7 @@ a:hover {
 
 /* Mobile (360/390): the 1:1 plate would eat the viewport, so it relaxes to a
    readable block while keeping one surface and one border. */
-@media (max-width: 480px) {
+@media screen and (max-width: 480px){
   .meaning-plate--card {
     aspect-ratio: auto;
     min-block-size: 9.5rem;
@@ -3298,7 +3299,7 @@ a:hover {
 }
 
 /* Wide (1440): three result columns keep line length inside the browse max. */
-@media (min-width: 1240px) {
+@media screen and (min-width: 1280px){
   .card-grid.hub-results {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -3394,7 +3395,7 @@ a:hover {
   margin-top: var(--space-4);
 }
 
-@media (min-width: 700px) {
+@media screen and (min-width: 760px){
   .reference-list {
     gap: var(--space-5);
   }
@@ -3442,7 +3443,7 @@ a:hover {
   pointer-events: none;
 }
 
-@media (min-width: 900px) {
+@media screen and (min-width: 1000px){
   .offline-runtime {
     left: calc(var(--rail-width) + var(--space-5));
     right: auto;
@@ -3639,7 +3640,7 @@ a:hover {
 /* Two columns once there is room for them: the instrument's controls on the
    left, the clips on the right. Below this the same markup stacks, which is
    the honest mobile reading order — decide what to listen to, then listen. */
-@media (min-width: 1080px) {
+@media screen and (min-width: 1050px){
   .review-board {
     grid-template-columns: 22rem minmax(0, 1fr);
     align-items: start;

@@ -1,5 +1,6 @@
 "use client";
 
+import { Icon } from "@/components/media/Icon";
 import Link from "next/link";
 import {useEffect,useState} from "react";
 import {questionBuilders,questionReplyCases,questionWords,questionWordLessons} from "@/lib/study/questions";
@@ -9,7 +10,6 @@ import {GermanText,SaveButton} from "./StudyProvider";
 import {useStudyScope,StudyScopeNotice} from "./StudyScope";
 import {questionTags,builderTags,builderReply,questionRecallQuestions} from "@/lib/study/question-learning";
 import {SheetRecall} from "./SheetRecall";
-import {QuestionPrintSummary} from "./GrammarPrintSummaries";
 import {LineAudio} from "./StudyAudio";
 
 export function QuestionCheatSheet({speech}:{speech:Record<string,string>}){
@@ -63,7 +63,7 @@ export function QuestionCheatSheet({speech}:{speech:Record<string,string>}){
     <section className="sheet-workshop"><h2>Keep these pairs apart.</h2><div className="sheet-rule-grid"><article><h3 lang="de">Wer ≠ wo</h3><p><b>Who?</b> = <b lang="de">Wer?</b> A person.<br/><b>Where?</b> = <b lang="de">Wo?</b> A place.</p></article><article><h3 lang="de">Wie viel ≠ wie viele</h3><p>An amount or price: <b lang="de">Wie viel?</b><br/>A countable plural: <b lang="de">Wie viele Kinder?</b></p></article><article><h3 lang="de">welcher · welche · welches</h3><p>“Which” changes with the noun and case. These are nominative forms:</p><p>{say("Welcher Tisch ist schön?")}</p><p>Which table is beautiful?</p><p>{say("Welches Buch ist das?")}</p><p>Which book is that?</p><p><b lang="de">welche Sprache / welche Sprachen</b> — which language / languages.</p></article></div></section>
     <section className="sheet-workshop question-extras"><button type="button" className="study-secondary" aria-expanded={extras} onClick={()=>setExtras(!extras)}>{extras?"Hide":"Explore"} the wider question family</button><p>Study extras: useful previews, not claimed as core vocabulary in the released lessons. <span lang="de">wen / wem / wessen</span> introduce case patterns you can revisit later.</p>{extras&&<div className="question-map">{scopedWords.filter(w=>w.lesson===null).map(w=><button type="button" key={w.id} data-family={w.family} onClick={()=>{setSelected(w.id);setReveal(true);document.getElementById("question-word")?.scrollIntoView({block:"start",behavior:"smooth"});}}><span className="question-symbol" aria-hidden="true">{w.icon}</span><strong lang="de">{w.word}</strong><span>{w.meaning}</span><small>Study extra</small></button>)}</div>}</section>
     <section id="question-practice" className="sheet-practice"><div><p className="study-eyebrow">Recall the pattern</p><h2>Practise your selected material.</h2><p>This short set follows your lesson, concept and material selection. Save a difficult pattern after checking its explanation.</p></div><SheetRecall key={questions.map(item=>item.id).join("|")} prefix="sheet" questions={questions} speech={speech}/></section>
-    <details className="sheet-sources"><summary>Coverage & sources</summary><p>Core patterns connect Momente A1.1 Lessons 1–12: introductions and W-questions; personal details and quantities; family, languages and ja/nein/doch; furniture and prices. Early-lesson references include coursebook pp. 11–50, the German–English glossary, Lessons 1–7, and workbook Module 1 review, p. 18. Later question words show their lesson or page cue in the overview. © Hueber Verlag.</p><p>This sheet’s explanations, diagrams, example personal details and quizzes are learning aids. The wider question family is explicitly marked as additional study material. Audio is synthesized German speech. Tap a German word or select a sentence for its meaning.</p><Link href="/references">Course sources & credits →</Link></details>
-    <QuestionPrintSummary/>
+    <details className="sheet-sources"><summary>Coverage & sources</summary><p>Core patterns connect Momente A1.1 Lessons 1–12: introductions and W-questions; personal details and quantities; family, languages and ja/nein/doch; furniture and prices. Early-lesson references include coursebook pp. 11–50, the German–English glossary, Lessons 1–7, and workbook Module 1 review, p. 18. Later question words show their lesson or page cue in the overview. © Hueber Verlag.</p><p>This sheet’s explanations, diagrams, example personal details and quizzes are learning aids. The wider question family is explicitly marked as additional study material. Audio is synthesized German speech. Tap a German word or select a sentence for its meaning.</p><Link href="/references">Course sources & credits <Icon name="arrow"/></Link></details>
+
   </CheatSheetFrame>;
 }

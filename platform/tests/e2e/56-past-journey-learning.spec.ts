@@ -1,3 +1,4 @@
+import {printLiveSheet} from "./helpers/print-live-sheet";
 import {expect,test} from "@playwright/test";
 
 test.beforeEach(async({page})=>{
@@ -21,7 +22,7 @@ for(const width of [320,1440]){
   await expect.poll(()=>page.evaluate(()=>(window as unknown as {clips:HTMLAudioElement[]}).clips.at(-1)?.currentTime??0)).toBeGreaterThan(0);
   await lab.getByRole("button",{name:/^Save to review:/}).click();
   await page.goto("saved/");
-  await page.locator(".study-saved-card").filter({hasText:"Hast du gestern Kaffee getrunken?"}).getByRole("link",{name:"Open in context →",exact:true}).click();
+  await page.locator(".study-saved-card").filter({hasText:"Hast du gestern Kaffee getrunken?"}).getByRole("link",{name:"Open in context",exact:true}).click();
   await expect(page).toHaveURL(/\/cheat-sheets\/past\/#past-lab-5-1-question/);
   await page.reload();
   await expect(lab.getByRole("combobox",{name:"Past activity",exact:true})).toHaveValue("5");
@@ -34,13 +35,13 @@ for(const width of [320,1440]){
   await expect(hours.getByRole("status")).toContainText("no closing time is stated");
   await hours.getByRole("button",{name:/^Save to review:/}).click();
   await page.goto("saved/");
-  await page.locator(".study-saved-card").filter({hasText:"Die Praxis ist ab acht Uhr geöffnet."}).getByRole("link",{name:"Open in context →",exact:true}).click();
+  await page.locator(".study-saved-card").filter({hasText:"Die Praxis ist ab acht Uhr geöffnet."}).getByRole("link",{name:"Open in context",exact:true}).click();
   await expect(hours.getByRole("button",{name:"ab Start; no end stated",exact:true})).toHaveAttribute("aria-pressed","true");
   await expect(hours.getByRole("status")).toHaveCount(0);
   await hours.screenshot({path:info.outputPath(`past-hours-${width}.png`)});
   await page.locator("#past-pattern-ieren").getByRole("button",{name:"Save to review: telefoniert",exact:true}).click();
   await page.goto("saved/");
-  await page.locator(".study-saved-card").filter({hasText:"telefoniert"}).getByRole("link",{name:"Open in context →",exact:true}).click();
+  await page.locator(".study-saved-card").filter({hasText:"telefoniert"}).getByRole("link",{name:"Open in context",exact:true}).click();
   await expect(page.locator("#past-pattern-ieren")).toHaveAttribute("data-selected","true");
   await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);
  });
@@ -54,7 +55,7 @@ for(const width of [320,1440]){
   await expect(calendar.locator(".season-output")).toContainText("Im Januar bin ich nach Hamburg gefahren.");
   await calendar.getByRole("button",{name:/^Save to review:/}).click();
   await page.goto("saved/");
-  await page.locator(".study-saved-card").filter({hasText:"Im Januar bin ich nach Hamburg gefahren."}).getByRole("link",{name:"Open in context →",exact:true}).click();
+  await page.locator(".study-saved-card").filter({hasText:"Im Januar bin ich nach Hamburg gefahren."}).getByRole("link",{name:"Open in context",exact:true}).click();
   await expect(calendar.getByRole("group",{name:"winter months"}).getByRole("button",{name:"der Januar January",exact:true})).toHaveAttribute("aria-pressed","true");
   await calendar.screenshot({path:info.outputPath(`journey-calendar-${width}.png`)});
   const lab=page.locator("#journey-lab");
@@ -65,7 +66,7 @@ for(const width of [320,1440]){
   await expect(lab.locator(".journey-aux-trail")).toContainText("haben");
   await lab.getByRole("button",{name:/^Save to review:/}).click();
   await page.goto("saved/");
-  await page.locator(".study-saved-card").filter({hasText:"Haben wir Anna besucht?"}).getByRole("link",{name:"Open in context →",exact:true}).click();
+  await page.locator(".study-saved-card").filter({hasText:"Haben wir Anna besucht?"}).getByRole("link",{name:"Open in context",exact:true}).click();
   await expect(lab.getByRole("combobox",{name:"Journey action",exact:true})).toHaveValue("10");
   await expect(lab.getByRole("checkbox",{name:"Make a yes/no question",exact:true})).toBeChecked();
   await lab.screenshot({path:info.outputPath(`journey-lab-${width}.png`)});
@@ -76,7 +77,7 @@ for(const width of [320,1440]){
   await expect.poll(()=>page.evaluate(()=>(window as unknown as {clips:HTMLAudioElement[]}).clips.at(-1)?.currentTime??0)).toBeGreaterThan(0);
   await years.getByRole("button",{name:/^Save to review:/}).click();
   await page.goto("saved/");
-  await page.locator(".study-saved-card").filter({hasText:"zweitausendsieben"}).getByRole("link",{name:"Open in context →",exact:true}).click();
+  await page.locator(".study-saved-card").filter({hasText:"zweitausendsieben"}).getByRole("link",{name:"Open in context",exact:true}).click();
   await expect(page).toHaveURL(/\/cheat-sheets\/journeys\/#journey-years-.*-2007$/);
   await page.reload();
   await expect(years.getByRole("textbox",{name:"Year to pronounce",exact:true})).toHaveValue("2007");
@@ -84,17 +85,30 @@ for(const width of [320,1440]){
  });
 }
 
-test("past and journey vocabulary links retain lesson practice and their summaries export",async({page},info)=>{
- for(const sheet of ["past","journeys"]){
-  await page.goto(`cheat-sheets/${sheet}/`);
+test("past and journey print the current sentence and reference diagrams",async({page},info)=>{
+  for(const sheet of ["past","journeys"]){
+    await page.goto(`cheat-sheets/${sheet}/`);
   const subject=sheet==="past"?"past":"seasons",lesson=sheet==="past"?11:12,label=sheet==="past"?"past tense":"seasons & journeys";
-  const target=new URL((await page.getByRole("link",{name:`Open ${label} subject sheet →`,exact:true}).getAttribute("href"))!,page.url());
+  const target=new URL((await page.getByRole("link",{name:`Open ${label} subject sheet`,exact:true}).getAttribute("href"))!,page.url());
   expect(target.pathname.endsWith(`/cheat-sheets/subjects/${subject}`)).toBe(true);
   expect(target.searchParams.get("lesson")).toBe(String(lesson));
   await expect(page.locator("[data-sheet-card]")).toHaveCount(0);
   await expect(page.locator("#sheet-practice")).toContainText("Question 1 /");
-  await page.emulateMedia({media:"print"});await page.evaluate(()=>document.fonts.ready);
-  for(const format of ["A4","Letter"] as const)await page.pdf({path:info.outputPath(`${sheet}-${format}.pdf`),format,printBackground:true,margin:{top:"12mm",bottom:"12mm",left:"12mm",right:"12mm"}});
-  await page.emulateMedia({media:"screen"});
- }
+
+    const lab=page.locator(sheet==="past"?"#past-lab":"#journey-lab");
+    const person=lab.getByRole("combobox",{name:sheet==="past"?"Past sentence person":"Journey sentence person",exact:true});
+    await person.selectOption("1");
+    await lab.getByRole("checkbox",{name:sheet==="past"?"Reveal final participle":"Reveal the auxiliary",exact:true}).check();
+    const result=lab.locator(sheet==="past"?".past-result":".journey-result");
+    const text=await result.innerText();
+    await printLiveSheet(page,info,sheet,async()=>{
+      await expect(lab).toBeVisible();
+      await expect(result).toContainText(text);
+      await expect(lab.locator(sheet==="past"?".past-parts":".journey-parts")).toBeVisible();
+      if(sheet==="past")await expect(page.locator(".past-pattern-grid > article")).toHaveCount(4);
+      else await expect(page.locator(".season-wheel")).toBeVisible();
+    });
+    await expect(person).toHaveValue("1");
+    await expect(result).toHaveText(text,{useInnerText:true});
+  }
 });
