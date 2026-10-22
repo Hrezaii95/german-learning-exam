@@ -47,7 +47,8 @@ Verified 2026-10-22, with builds and typechecks run sequentially:
 | Wrangler production dry run | pass; no resources created |
 | Workflow YAML/preflight | pass; missing config skips, configured release ref proceeds; CI script detector validated |
 | Full original-source audit | **FAIL**: 454 originals absent from checkout; mandatory gate retained |
-| Hosted CI/live custom domain | pending owner merge/setup and release blockers; no claim of live deployment |
+| Hosted CI | initial run failed checkout on archived gitlink; fixture-verified workflow fix published; rerun pending, no green claim |
+| Live custom domain | pending owner merge/setup and release blockers; no live deployment claimed |
 
 The local host refuses the Unix IPC socket created by the `tsx` CLI, so literal
 `npm run check` stopped at its publication CLI after the typechecks, lint and
@@ -112,3 +113,15 @@ silently lowering the iteration count is not an option.
 - Before full platform go-live, enable Workers Paid and add
   `SEED_ACCOUNTS_JSON` as documented in `docs/platform/GO-LIVE.md`.
 - Resolve the L3-2 hashing/runtime design conflict without weakening security.
+
+## Hosted checkout correction (L3-0 / L3-1)
+
+Run 39786214328 reached a hosted runner, then checkout failed because immediate
+credential cleanup traversed the archived gitlink without a `.gitmodules` URL.
+A minimal Git fixture reproduced this; sparse checkout alone also failed.
+Both new workflows now remove the authorization header immediately after
+checkout (before setup/install/build), then remove only that gitlink entry
+from the ephemeral runner index so post-job cleanup can traverse safely.
+The archive and committed repository tree stay unchanged. The fixture verifies
+credential removal, successful submodule traversal and preserved source/archive
+bytes. Unexpected credential-cleanup errors fail closed.
