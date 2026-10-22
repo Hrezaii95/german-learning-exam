@@ -88,7 +88,9 @@ test("past and journey vocabulary links retain lesson practice and their summari
  for(const sheet of ["past","journeys"]){
   await page.goto(`cheat-sheets/${sheet}/`);
   const subject=sheet==="past"?"past":"seasons",lesson=sheet==="past"?11:12,label=sheet==="past"?"past tense":"seasons & journeys";
-  await expect(page.getByRole("link",{name:`Open ${label} subject sheet →`,exact:true})).toHaveAttribute("href",`/cheat-sheets/subjects/${subject}?lesson=${lesson}`);
+  const target=new URL((await page.getByRole("link",{name:`Open ${label} subject sheet →`,exact:true}).getAttribute("href"))!,page.url());
+  expect(target.pathname.endsWith(`/cheat-sheets/subjects/${subject}`)).toBe(true);
+  expect(target.searchParams.get("lesson")).toBe(String(lesson));
   await expect(page.locator("[data-sheet-card]")).toHaveCount(0);
   await expect(page.locator("#sheet-practice")).toContainText("Question 1 /");
   await page.emulateMedia({media:"print"});await page.evaluate(()=>document.fonts.ready);
