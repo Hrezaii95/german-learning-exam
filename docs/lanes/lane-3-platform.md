@@ -54,3 +54,12 @@
 - **Gates (one at a time):** the repo gates, plus `wrangler` dry-run deploys and the API test suite (Miniflare/`wrangler dev` with a local D1).
 - **Owner-only steps:** you cannot create Cloudflare resources or secrets. Everything that needs them must run inside `go-live.yml`, so the owner's whole part is `docs/platform/GO-LIVE.md`. If you find an owner step that GO-LIVE.md doesn't list, add it there and to your status file.
 - **Status:** update only `plans/lanes/lane-3-status.md`.
+
+## Orchestrator decisions (2026-10-22, in answer to Lane 3)
+1. **Lesson 10–12 links (`/lessons/010–012/`):** don't exempt them and don't edit `LessonFour.tsx`. Lane 1's L1-2 fixes them. Lane 3's root-path smoke may stay red on exactly these three links on `lane3/*` branches; it must be green on the combined branch.
+2. **Source validation in CI:** CI (`ci.yml`, `deploy-cloudflare.yml`, `go-live.yml`) runs the **same gate set as today's `deploy-pages.yml`**, plus the new edge and root-path checks. The full source-manifest validation needs the 454 private originals, so it stays a **local/owner-machine gate**, as it is today. Document it in the workflow comments; don't block CI on files that aren't in the repo.
+3. **Password hashing:** PBKDF2 at 600k can't run in workerd (cap 100k), so the platform doc's PBKDF2 requirement is replaced:
+   - **Use Argon2id** (OWASP minimum: memory 19 MiB, iterations 2, parallelism 1) through a WASM implementation that runs in Workers (e.g. `hash-wasm`), stored as a PHC string (`$argon2id$v=19$m=19456,t=2,p=1$…`). Measure the CPU time per hash in workerd tests (target < 300 ms on Workers Paid).
+   - **Fallback, only if Argon2id is proven infeasible in workerd:** PBKDF2-SHA256 at 100,000 iterations plus a server-side pepper (HMAC key). The `go-live.yml` workflow generates the pepper randomly on its first run and stores it with `wrangler secret put AUTH_PEPPER`, so the owner has no extra step. Record which option shipped in ADR-020.
+   - Either way, the stored format carries its algorithm and parameters, so hashes can be upgraded on the next login.
+4. **Workers Paid** is a prerequisite already for L3-1 (≈ 27k static assets is over the free-tier file limit). GO-LIVE.md already lists it as step 2.1, so no change is needed.
