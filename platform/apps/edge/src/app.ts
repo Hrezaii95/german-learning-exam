@@ -4,6 +4,8 @@ import { getSession, sessionCookie, sessionToken } from "./auth/session.js";
 import { handleAuth } from "./routes/auth.js";
 import { handleSync } from "./routes/sync.js";
 import { handleClasses } from "./routes/classes.js";
+import { handleDashboards } from "./routes/dashboards.js";
+import { handleAdmin } from "./routes/admin.js";
 import type { PlatformEnv } from "./types.js";
 export type Env = PlatformEnv;
 
@@ -26,7 +28,7 @@ export default {
       try {
         if (["POST", "PUT", "PATCH", "DELETE"].includes(request.method)) assertWrite(request);
         const result = await handleAuth(request, env) ?? await handleSync(request, env)
-          ?? await handleClasses(request, env);
+          ?? await handleClasses(request, env) ?? await handleDashboards(request, env) ?? await handleAdmin(request, env);
         if (!result) return json(request, { error: "not_found" }, 404);
         const response = withSecurityHeaders(result, API_CONTENT_SECURITY_POLICY);
         response.headers.set("Cache-Control", "no-store, private");

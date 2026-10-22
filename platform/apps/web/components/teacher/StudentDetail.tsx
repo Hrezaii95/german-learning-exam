@@ -1,0 +1,12 @@
+"use client";
+import { useSession } from "../../lib/account/session";
+import { useSearchParams } from "next/navigation";
+import Link from "next/link";
+import { DataState, Panel, RolePage, styles, useApiData } from "../dashboard/PlatformTools";
+function StudentDetailContents() {
+  const params = useSearchParams(); const classId = params.get("class") ?? ""; const id = params.get("id") ?? ""; const skill = params.get("skill");
+  const state = useApiData<{ student: { id: string; displayName: string }; lessons: { lesson: number; answered: number; correct: number }[]; skills: Record<string, { answered: number; correct: number; percent: number }>; recentActivity: { days7: number; days30: number }; assignments: { id?: string; title?: string; progress?: { answered?: number; correct?: number; completed?: boolean } }[] }>(classId && id ? `/api/teacher/student?class=${encodeURIComponent(classId)}&id=${encodeURIComponent(id)}` : null);
+  return <RolePage title={state.data?.student.displayName ?? "Student progress"} roles={["teacher", "admin"]}><p><Link href={`/teacher/class/?id=${encodeURIComponent(classId)}`}>Back to class</Link></p>{!classId || !id ? <p>Choose a student from the class roster.</p> : <DataState loading={state.loading} error={state.error} />}{state.data && <div className={styles.grid}><Panel title="Recent activity"><p>{state.data.recentActivity.days7} events in 7 days</p><p>{state.data.recentActivity.days30} events in 30 days</p></Panel><Panel title="Lesson progress"><p className={styles.muted}>Observed accuracy in class learning events; this is not a mastery score.</p><ul className={styles.list}>{state.data.lessons.map(row => <li key={row.lesson}>Lektion {row.lesson}: {row.correct}/{row.answered} correct</li>)}</ul>{!state.data.lessons.length && <p>No lesson evidence yet.</p>}</Panel><Panel title={skill ? `${skill} detail` : "Skills & tricky words"}><ul className={styles.list}>{Object.entries(state.data.skills).filter(([key]) => !skill || key === skill).map(([key, value]) => <li key={key}>{key}: {Math.round(value.percent)}% ({value.correct}/{value.answered})</li>)}</ul></Panel><Panel title="Assignment history"><ul className={styles.list}>{state.data.assignments.map((a, i) => <li key={a.id ?? i}>{a.title ?? "Assignment"}: {a.progress?.completed ? "Completed" : "In progress"} · {a.progress?.correct ?? 0}/{a.progress?.answered ?? 0} correct</li>)}</ul></Panel></div>}</RolePage>;
+}
+
+export function StudentDetail() { const session = useSession(); return <StudentDetailContents key={session.user?.id ?? session.status} />; }

@@ -9,7 +9,7 @@ Updated 2026-10-22 by Lane 3. Owner requests one draft per item into `codex/live
 | L3-2 | Database and auth | draft PR | https://github.com/Hrezaii95/german-learning-exam/pull/18 | Argon2id unblocks auth; D1 schema/API/account UI implemented, security review and combined validation underway. |
 | L3-3 | Seed accounts | draft PR | https://github.com/Hrezaii95/german-learning-exam/pull/19 | Idempotent private CLI; real local D1 seeding twice and all five API logins pass. |
 | L3-4 | Progress sync | draft PR | https://github.com/Hrezaii95/german-learning-exam/pull/21 | Offline/event/LWW sync, consent/import and cross-tab account isolation; 15 sync tests pass. |
-| L3-5 | Classes and assignments | in progress | — | Membership/position/assignments/progress/extras implemented; role-change transaction review underway. |
+| L3-5 | Classes and assignments | draft PR | https://github.com/Hrezaii95/german-learning-exam/pull/22 | Class-scoped assignments, derived progress and reviewed extras; SQLite authorization/transaction checks pass. |
 | L3-6 | Dashboards | in progress | — | Student/teacher/admin API and static client screens implemented; combined type/browser validation underway. |
 | L3-7 | One-click go-live | in progress | — | Token-first EU D1/deploy/seed/live-smoke/rollback workflow and local rehearsal implemented; no external resource mutation. |
 
