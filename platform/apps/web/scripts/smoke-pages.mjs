@@ -442,8 +442,10 @@ async function httpSmoke(expectedPaths) {
       `${PAGES_BASE}/conversation/`,
       `${PAGES_BASE}/conversation/${conversationSlug}/`,
       `${PAGES_BASE}${details.representatives[0].canonicalPath}/`,
-      `${PAGES_BASE}/cheat-sheets/subjects/`,
-      `${PAGES_BASE}/cheat-sheets/plurals/`,
+      // L1-5/L1-7: the directory and the vocabulary catalogue moved; the old
+      // /cheat-sheets/subjects/ and /cheat-sheets/plurals/ remain as redirect stubs.
+      `${PAGES_BASE}/cheat-sheets/`,
+      `${PAGES_BASE}/cheat-sheets/vocabulary/`,
       ...SUBJECT_PATHS.map(path => `${PAGES_BASE}${path}/`),
     ];
 
@@ -463,10 +465,10 @@ async function httpSmoke(expectedPaths) {
         assert(text.includes('aria-label="Grouping priority"'), `${path} missing grouping order controls`);
         assert(text.includes('aria-label="Word sorting"'), `${path} missing vocabulary sorting controls`);
       }
-      if (path === `${PAGES_BASE}/cheat-sheets/subjects/`) {
+      if (path === `${PAGES_BASE}/cheat-sheets/`) {
         for (const id of SUBJECT_IDS) assert(text.includes(`data-subject-tile="${id}"`), `subject directory missing ${id}`);
       }
-      if (path === `${PAGES_BASE}/cheat-sheets/plurals/`) {
+      if (path === `${PAGES_BASE}/cheat-sheets/vocabulary/`) {
         assert(text.includes('data-sheet-view="plurals"'), "vocabulary page must default to plural grouping");
         for (const id of ["W012-0", "W051-0", "language-Persisch-0", "home-fernseher-0"]) assert(text.includes(`data-subject-entry="${id}"`), `complete vocabulary infographic missing ${id}`);
         assert(!text.includes('data-subject-visual="source-glyph"'), "vocabulary infographic must not ship text placeholders instead of illustrations");
