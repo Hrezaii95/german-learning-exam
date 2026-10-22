@@ -16,8 +16,23 @@ for(const width of [320,1440])test(`clock listening, weekly plans and reload at 
  const listening=page.locator("#clock-listening");await expect(listening).not.toContainText("Es ist halb vier.");await listening.getByRole("button",{name:"Listen: time to identify",exact:true}).click();await expect.poll(()=>page.evaluate(()=>{const clip=(window as unknown as {clips:HTMLAudioElement[]}).clips.at(-1);return !!clip&&clip.currentTime>0;})).toBe(true);await listening.getByRole("button",{name:"Choose 3:30",exact:true}).click();await expect(listening.getByRole("status")).toContainText("Exactly.");await listening.screenshot({path:info.outputPath(`time-listening-${width}.png`)});await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);
 });
 
-test("hobby and time card practice respects scope and saved filters",async({page})=>{
- for(const sheet of ["hobbies","time"]){await page.goto(`cheat-sheets/${sheet}/`);await page.getByRole("button",{name:"Show saved cards",exact:true}).click();await expect(page.locator("#sheet-practice")).toContainText("No matching practice items");await page.getByRole("button",{name:"Showing saved cards",exact:true}).click();await expect(page.locator("[data-sheet-card]")).toHaveCount(12);const scope=page.locator(".study-scope");await scope.locator("summary").click();await scope.getByRole("button",{name:"One lesson",exact:true}).click();await scope.getByRole("combobox",{name:"Selected lesson",exact:true}).selectOption("1");await scope.locator("summary").click();await expect(page.locator(sheet==="hobbies"?"#hobby-map":"#time-map")).toContainText("outside your study selection");await expect(page.locator(sheet==="hobbies"?"#hobby-words":"#time-words").getByRole("status")).toContainText(`${sheet==="hobbies"?14:9} cards`);await expect(page.locator("#sheet-practice")).toContainText("Question 1 /");await page.getByRole("button",{name:"Show saved cards",exact:true}).click();await expect(page.locator("#sheet-practice")).toContainText("No matching practice items");await page.getByRole("button",{name:"Showing saved cards",exact:true}).click();await scope.locator("summary").click();await scope.getByRole("button",{name:"All lessons",exact:true}).click();await scope.locator("summary").click();}
+test("hobby and time keep lesson practice while linking to filtered subject vocabulary",async({page})=>{
+ for(const [sheet,lesson,label] of [["hobbies",7,"hobbies"],["time",8,"time"]] as const){
+  await page.goto(`cheat-sheets/${sheet}/`);
+  await expect(page.locator("[data-sheet-card]")).toHaveCount(0);
+  const target=new URL((await page.getByRole("link",{name:`Open ${label} subject sheet →`,exact:true}).getAttribute("href"))!,page.url());
+  expect(target.pathname.replace(/\/$/, "").endsWith(`/cheat-sheets/subjects/${sheet}`)).toBe(true);
+  expect(target.searchParams.get("lesson")).toBe(String(lesson));
+  await expect(page.locator("#sheet-practice")).toContainText("Question 1 /");
+  const scope=page.locator(".study-scope");await scope.locator("summary").click();
+  await scope.getByRole("button",{name:"One lesson",exact:true}).click();
+  await scope.getByRole("combobox",{name:"Selected lesson",exact:true}).selectOption("1");
+  await scope.getByRole("button",{name:"Choose several",exact:true}).click();
+  await scope.getByRole("checkbox",{name:"Lesson 1",exact:true}).uncheck();await scope.locator("summary").click();
+  await expect(page.locator("#sheet-practice")).toContainText("No matching practice items");
+  await scope.locator("summary").click();await scope.getByRole("button",{name:"All lessons",exact:true}).click();await scope.locator("summary").click();
+  await expect(page.locator("#sheet-practice")).toContainText("Question 1 /");
+ }
 });
 
 test("hobbies and time print concise A4 and Letter summaries",async({page},info)=>{

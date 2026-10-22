@@ -13,7 +13,7 @@ await page.addInitScript(()=>{const original=HTMLMediaElement.prototype.play;HTM
 const assert=(condition,message)=>{if(!condition)throw Error(message);checks.push(message);};
 const rows=page.locator('[data-country]');
 try{
-  await page.goto(`${base}/cheat-sheets/`,{waitUntil:'networkidle'});
+  await page.goto(`${base}/cheat-sheets/countries/`,{waitUntil:'networkidle'});
   assert(await rows.count()===41,'All 41 country names render');
   assert(await page.locator('.country-gate').count()===4,'Four color-coded article paths are visible');
   assert((await page.locator('.country-passport').innerText()).includes('Ich komme aus dem Iran.'),'Sentence builder opens with Iran');
@@ -82,7 +82,7 @@ try{
   await page.screenshot({path:`${output}/index-mobile.png`});
   await page.getByRole('button',{name:'Hide answers & recall',exact:true}).click();
   await page.evaluate(()=>{window.print=()=>{window.__printed=true;};});
-  await page.getByRole('button',{name:'Print cheat sheet',exact:true}).click();
+  await page.getByRole('button',{name:'Print / save as PDF',exact:true}).click();
   await page.waitForFunction(()=>window.__printed);
   assert(await rows.count()===41,'Printing restores the complete country index');
   assert(await page.getByRole('button',{name:'Hide answers & recall',exact:true}).count()===1,'Printing reveals the answers');
@@ -91,7 +91,8 @@ try{
   await page.goto(`${base}/hubs/`,{waitUntil:'networkidle'});
   assert(await page.locator('.country-hub-link').count()===1,'Cheat sheet is reachable from mobile Hubs');
   await page.locator('.country-hub-link').click();await page.waitForURL(/\/cheat-sheets\/?$/);
-  assert(await rows.count()===41,'Hubs link opens the complete cheat sheet');
+  await page.locator('main').getByRole('link',{name:/Countries & languages/}).click();await page.waitForURL(/\/cheat-sheets\/countries\/?$/);
+  assert(await rows.count()===41,'Hubs directory link reaches the complete country sheet');
   assert(errors.length===0,`No browser errors: ${errors.join('; ')}`);
   await writeFile(`${output}/verification.json`,JSON.stringify({base,passed:true,checks,errors},null,2));
   console.log(JSON.stringify({base,passed:checks.length,errors}));

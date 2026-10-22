@@ -92,11 +92,11 @@ describe("P3D detail UI contracts", () => {
     expect(html).toContain('lang="de"');
     expect(html).toContain("der Architekt");
     expect(html).toContain("die Architektin");
-    expect(html).toContain('data-gender="masculine"');
-    expect(html).toContain('data-gender-token="M"');
+    expect(html).toContain('data-tone="male"');
+    expect(html).toContain('data-gender-token="der"');
     expect(html).toContain('data-gender-label="Masculine"');
-    expect(html).toContain('data-gender="feminine"');
-    expect(html).toContain('data-gender-token="F"');
+    expect(html).toContain('data-tone="female"');
+    expect(html).toContain('data-gender-token="die"');
     expect(html).toContain("die Architekten");
     expect(html).toContain("Play pronunciation");
     expect(html).toContain("Synthesized German preview voice");

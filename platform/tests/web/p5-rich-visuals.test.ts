@@ -35,7 +35,7 @@ describe("P5 rich lesson visuals", () => {
     expect(html).toContain("/illustrations/lesson-02-professions-ensemble.png");
     expect(html).toContain("Berufe in der Stadt");
     expect(html).toContain("die Ärztin");
-    expect(html).toContain("data-gender=\"feminine\"");
+    expect(html).toContain("data-tone=\"female\"");
     expect(html).toContain("alt=\"Six professionals standing in a city and workplace scene");
   });
 

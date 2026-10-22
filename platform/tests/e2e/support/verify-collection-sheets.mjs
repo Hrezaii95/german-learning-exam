@@ -69,9 +69,9 @@ try{
     assert(await page.getByRole('button',{name:'Open navigation menu'}).evaluate(el=>el===document.activeElement),`${width}px: Escape restores menu focus`);
   }
   await page.setViewportSize({width:390,height:844});
-  await page.locator('.sheet-mobile-switcher summary').click();
-  assert(await page.getByRole('navigation',{name:'Choose a cheat sheet on phone'}).getByRole('link').count()===15,'Phone selector exposes all fifteen sheets');
-  await page.getByRole('navigation',{name:'Choose a cheat sheet on phone'}).getByRole('link',{name:/Conversation/}).click();
+  await page.locator('.sheet-switcher summary').click();
+  assert(await page.getByRole('navigation',{name:'Choose a study sheet'}).getByRole('link').count()===37,'Phone selector exposes all thirty-seven study sheets');
+  await page.locator('.sheet-switcher section[aria-label="Topic workshops"]').getByRole('link',{name:/Conversation/}).click();
   await page.waitForURL('**/cheat-sheets/conversation/');
   assert(await page.getByRole('heading',{name:'Keep the conversation moving.'}).isVisible(),'Phone sheet navigation reaches conversation');
   await page.screenshot({path:`${output}/conversation-mobile.png`});

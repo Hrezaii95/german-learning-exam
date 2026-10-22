@@ -27,10 +27,11 @@ export function wordStudyTags(card:WordCard):StudyTags{
     if(numberTerms.has(word))concepts.add("numbers");
     if(classroomTerms.has(word))concepts.add("classroom");
   }
-  const lessonFour=lessonFourWords.find(word=>word.id===card.id);
+  const lessonFour=lessonFourWords.find(word=>word.id===card.id||card.aliases.includes(`/vocabulary/${word.id}`));
   if(lessonFour?.category==="Furniture")concepts.add("home");
   if(lessonFour?.category==="Adjectives")concepts.add("descriptions");
   if(lessonFour?.category==="Verbs")concepts.add("verbs");
+  if(lessonFour?.category==="Expressions")concepts.add("conversation");
   for(const unit of studyUnits){const word=unit.words?.find(w=>w.id===card.id||card.aliases.includes(`/vocabulary/${w.id}`));if(!word)continue;
     if(word.category==="Objects"||word.category==="Shopping")concepts.add("objects");
     if(["Materials","Colours"].includes(word.category))concepts.add("colours-materials");

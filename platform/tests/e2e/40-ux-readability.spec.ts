@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 
-const routes = ["lessons/03/", "lessons/04/", "lessons/12/", "grammar/", "verbs/", "phrases/", "cheat-sheets/", "cheat-sheets/home/"];
+const routes = ["lessons/03/", "lessons/04/", "lessons/12/", "grammar/", "verbs/", "phrases/", "cheat-sheets/", "cheat-sheets/countries/", "cheat-sheets/vocabulary/", "cheat-sheets/home/"];
 
 for (const width of [320, 390, 768, 1440]) {
   test(`learning cards and country rows remain readable at ${width}px`, async ({ page }) => {

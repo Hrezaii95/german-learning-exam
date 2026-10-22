@@ -5,11 +5,13 @@ import {countries} from "./countries";
 import {homeWords} from "./home";
 import type {SheetId} from "./sheet-topics";
 import {courseChapters} from "./lesson-four";
+import {countryIdFromSheetHref} from "./sheet-routes";
 
 /** Stable links also recover tags from backups created before study selection. */
 export function savedStudyTags(item:SavedItem,dictionary:DictionaryEntry[]=[]):StudyTags{
   if(item.studyTags)return item.studyTags;
-  const country=countries.find(country=>item.href===`/cheat-sheets#country-${country.id}`);
+  const countryId=countryIdFromSheetHref(item.href);
+  const country=countries.find(country=>country.id===countryId);
   if(country)return countryStudyTags(country,dictionary);
   const home=homeWords.find(word=>item.id===`home-${word.id}`||item.href===`/cheat-sheets/home#home-${word.id}`);
   if(home)return homeStudyTags(home,dictionary);
