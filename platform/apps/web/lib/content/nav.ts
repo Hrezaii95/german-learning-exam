@@ -29,17 +29,13 @@ export const NAV_ITEMS: NavItem[] = [
   { id: "cheat-sheets", label: "Cheat sheets", href: "/cheat-sheets", icon: "M12 3l2.8 5.8 6.4.9-4.6 4.5 1.1 6.3L12 17.5l-5.7 3 1.1-6.3L2.8 9.7l6.4-.9z", placement: ["rail", "tabs", "menu"], order: 40, group: "learn", description: "Visual memory guides" },
   { id: "all-vocabulary", label: "All vocabulary", href: "/cheat-sheets/vocabulary", icon: "M4 4h16v16H4z M4 10h16 M10 4v16", placement: ["rail", "menu"], order: 50, group: "learn", description: "Illustrated words, gender & plural patterns" },
   { id: "subjects", label: "Subjects", href: "/cheat-sheets#subjects", icon: "M3 3h7v7H3z M14 3h7v7h-7z M3 14h7v7H3z M14 14h7v7h-7z", placement: ["rail", "menu"], order: 60, group: "learn", description: "Browse vocabulary by subject" },
-  { id: "saved", label: "My review", href: "/saved", icon: "M6 3h12v18l-6-4-6 4z", placement: ["rail", "tabs", "menu"], order: 70, group: "remember", description: "Your saved collection & self-rated recall" },
-  { id: "vocabulary", label: "Vocabulary", href: "/vocabulary", icon: "M4 4h16v16H4z", placement: ["rail", "menu"], order: 80, group: "explore", description: "Words, articles & plurals" },
+  { id: "saved", label: "Review", href: "/saved", icon: "M6 3h12v18l-6-4-6 4z", placement: ["rail", "tabs", "menu"], order: 70, group: "remember", description: "Saved items, recall & guided missions" },
   { id: "verbs", label: "Verbs", href: "/verbs", icon: "M5 5h14 M12 5v14 M8 19h8", placement: ["rail", "menu"], order: 90, group: "explore", description: "Conjugations & examples" },
   { id: "grammar", label: "Grammar", href: "/grammar", icon: "M4 5h16 M4 12h16 M4 19h16", placement: ["rail", "menu"], order: 100, group: "explore", description: "Patterns made clear" },
   { id: "phrases", label: "Phrases & Q&A", href: "/phrases", icon: "M3 4h18v12H9l-6 5z", placement: ["rail", "menu"], order: 110, group: "explore", description: "Ready-to-use conversations" },
   { id: "listening", label: "Listening", href: "/listening", icon: "M4 13v-1a8 8 0 0116 0v1 M4 12h4v8H4z M16 12h4v8h-4z", placement: ["rail", "menu"], order: 120, group: "learn", description: "Audio & transcripts" },
   { id: "search", label: "Search", href: "/search", icon: "M16 16l5 5 M18 10a8 8 0 11-16 0 8 8 0 0116 0", placement: ["rail", "menu"], order: 130, group: "explore", description: "Find anything in the course" },
-  { id: "concepts", label: "Concepts", href: "/concepts", icon: "M4 4h6v6H4z M14 14h6v6h-6z M10 7h7v7", placement: ["rail", "menu"], order: 140, group: "explore", description: "Connect words and ideas" },
-  { id: "hubs", label: "Study library", href: "/hubs", icon: "M4 3h5v18H4z M14 3l5-1 3 18-5 1z", placement: ["rail", "menu"], order: 150, group: "explore", description: "Browse every learning area" },
   { id: "practice", label: "Practice", href: "/practice", icon: "M5 5h14v14H5z M9 12h6 M12 9v6", placement: ["rail", "menu"], order: 160, group: "remember", description: "Exercise your memory" },
-  { id: "review", label: "Guided review", href: "/review", icon: "M4 9a8 8 0 111 9 M4 3v6h6", placement: ["rail", "menu"], order: 170, group: "remember", description: "Checked exercises from Lessons 1–2" },
   // ADR-016: course-material attribution stays reachable on every surface.
   { id: "references", label: "References", href: "/references", icon: "M4 3h16v18H4z M8 7h8 M8 12h8", placement: ["rail", "menu"], order: 180, group: "app", description: "Sources & credits" },
   { id: "settings", label: "Settings", href: "/settings", icon: "M3 6h18 M3 18h18 M7 3v6 M17 15v6", placement: ["rail", "menu"], order: 190, group: "app", description: "Your preferences" },
@@ -102,8 +98,13 @@ export function isHubNavKey(key: ShellNavCurrent): boolean {
   return key != null && HUB_NAV_KEYS.has(key);
 }
 
+/** Retired entry states still highlight their single canonical destination. */
+export function canonicalNavKey(key: string): string {
+  return ({vocabulary:"all-vocabulary",concepts:"grammar",hubs:"cheat-sheets",review:"saved"} as Record<string,string>)[key]??key;
+}
+
 export function navKeyForHub(hubId: LearnerHubId): NavKey {
-  return hubId;
+  return canonicalNavKey(hubId) as NavKey;
 }
 
 export function shellCurrentMatches(
@@ -114,7 +115,7 @@ export function shellCurrentMatches(
   if (current == null) return false;
   if (variant === "bottom") {
     if (itemKey === "hubs") return isHubNavKey(current);
-    return current === itemKey;
+    return canonicalNavKey(current) === canonicalNavKey(itemKey);
   }
-  return current === itemKey;
+  return canonicalNavKey(current) === canonicalNavKey(itemKey);
 }

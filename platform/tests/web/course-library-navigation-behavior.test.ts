@@ -112,7 +112,7 @@ describe("bounded course libraries and return context",()=>{
   it("preserves page, lesson, query and category through a detail visit; rejects malformed page values",()=>{
     const context=buildHubNavigationContext({hubId:"vocabulary",q:"der",lesson:"12",category:"noun",page:3});
     const restored=parseNavigationContextParam(serializeNavigationContext(context));
-    expect(resolveBackHref(restored,"hub")).toBe("/vocabulary?q=der&lesson=12&category=noun&page=3");
+    expect(resolveBackHref(restored,"hub")).toBe("/cheat-sheets/vocabulary?q=der&lesson=12&category=noun&page=3");
     expect(resolveBackHref(buildSearchNavigationContext("heiß", "course:l12-phrase-0",2),"search")).toBe("/search?q=hei%C3%9F&page=2#search-result-course%3Al12-phrase-0");
     for(const page of ["-1","0","2.5","Infinity","9999","junk"])expect(parseHubSearchParams({page},[]).page).toBeUndefined();
   });
@@ -123,7 +123,7 @@ describe("bounded course libraries and return context",()=>{
     expect(screen.getByRole("status").textContent).toContain(`Showing 13–24 of ${hub.items.length}`);
     const detail=screen.getAllByRole("link",{name:"Study this word family"})[0]!;
     const context=parseNavigationContextParam(new URL(detail.getAttribute("href")!,"https://test.local").searchParams.get("nav"));
-    expect(resolveBackHref(context,"hub")).toBe("/vocabulary?page=2");
+    expect(resolveBackHref(context,"hub")).toBe("/cheat-sheets/vocabulary?page=2");
   });
   it("shows later patterns as compact results with exact counts and reachable expansion",()=>{
     const entries=coursePatternEntries(studyUnits,"verbs").filter(entry=>entry.lesson===12);
@@ -142,7 +142,7 @@ describe("bounded course libraries and return context",()=>{
     expect(screen.queryByRole("heading",{name:"Connected learning paths"})).toBeNull();
     const href=screen.getByRole("link",{name:"Open the lesson checkpoint →"}).getAttribute("href")!;
     expect(href).toMatch(/^\/lessons\/12\?nav=.*#practice$/);
-    expect(resolveBackHref(parseNavigationContextParam(new URL(href,"https://test.local").searchParams.get("nav")),"hub")).toBe("/concepts?lesson=12");
+    expect(resolveBackHref(parseNavigationContextParam(new URL(href,"https://test.local").searchParams.get("nav")),"hub")).toBe("/grammar?lesson=12");
   });
   it("search exposes later-lesson meaning and a returnable link to the correct section",()=>{
     const unit=studyUnits.find(unit=>unit.number===12)!;

@@ -350,6 +350,66 @@ async function runSmoke() {
   return results;
 }
 
+// Lane 1 L1-7 — preserve the earlier exact-index expectations through an
+// explicit canonical adapter. Only these retired index requests are adapted;
+// their real proxy responses are checked independently below. Detail, unknown,
+// lesson, practice, and review expectations continue to use the raw helper.
+const lane17RetiredIndexTargets = new Map([
+  ["/vocabulary", "/cheat-sheets/vocabulary"],
+  ["/hubs", "/cheat-sheets"],
+  ["/concepts", "/grammar"],
+]);
+const lane17RawRouteFetch = fetchStatus;
+fetchStatus = async function lane17CanonicalIndexExpectation(path, options = {}) {
+  const destination = lane17RetiredIndexTargets.get(path);
+  if (!destination || options.redirect !== "follow") return lane17RawRouteFetch(path, options);
+  const response = await lane17RawRouteFetch(destination);
+  assert(response.status === 200, `Lane 1 canonical ${destination} must be 200 without redirect, got ${response.status}`);
+  assert(new URL(response.url).pathname === destination && !response.location, `Lane 1 canonical ${destination} must remain at its exact destination`);
+  // Keep the original check's logical index name, after proving the physical
+  // destination above. The actual URL remains available for adapter diagnostics.
+  return { ...response, canonicalUrl: response.url, url: new URL(path, BASE).href };
+};
+
+const lane17OriginalRunSmoke = runSmoke;
+runSmoke = async function lane17MergedRoutesSmoke() {
+  const results = await lane17OriginalRunSmoke();
+  const search = "?q=Arzt%20oder+Lehrer&source=&lesson=02";
+  for (const [alias, destination] of lane17RetiredIndexTargets) {
+    const response = await lane17RawRouteFetch(`${alias}${search}`);
+    assert(response.status === 308, `${alias} real proxy alias expected 308, got ${response.status}`);
+    assert(response.location, `${alias} missing real proxy Location`);
+    const location = new URL(response.location, BASE);
+    assert(location.pathname === destination, `${alias} redirects to ${location.pathname} instead of ${destination}`);
+    assert(location.search === search, `${alias} proxy changed original query bytes`);
+    const followed = await lane17RawRouteFetch(`${location.pathname}${location.search}`);
+    assert(followed.status === 200 && !followed.location, `${alias} must reach canonical 200 in exactly one redirect`);
+    results.push(`OK Lane 1 real proxy 308 ${alias} → ${destination} → 200; query bytes preserved`);
+  }
+  for (const path of ["/cheat-sheets/subjects/people", "/saved", "/review/session/today"]) {
+    const response = await lane17RawRouteFetch(path);
+    assert(response.status === 200 && !response.location, `Lane 1 ${path} expected direct 200`);
+    results.push(`OK Lane 1 canonical 200 ${path}`);
+  }
+  // Professions are deliberately outside the existing proxy matcher. Their
+  // static 200 stubs are the compatibility mechanism in both deployment modes.
+  const professionAliases = require("../generated/word-cards.json").cards.flatMap(card =>
+    card.aliases.filter(alias => /^\/collections\/professions\/\d{2}$/.test(alias)).map(alias => [alias, card.path]),
+  );
+  assert(professionAliases.length === 48, "Lane 1 requires all 48 profession compatibility rows");
+  for (const [path, destination] of [["/collections/professions", "/cheat-sheets/subjects/people"], ...professionAliases]) {
+    const response = await fetch(`${BASE}${path}${search}`, { redirect: "manual" });
+    assert(response.status === 200 && !response.headers.get("location"), `${path} expected a real static 200 compatibility stub`);
+    const html = await response.text();
+    assert(html.includes(`<link rel="canonical" href="${destination}/`), `${path} missing canonical stub destination`);
+    assert(html.includes("window.location.search") && html.includes("window.location.hash") && html.includes("window.location.replace("), `${path} missing synchronous state-preserving script`);
+    assert(html.includes('<noscript><meta http-equiv="refresh"') && html.includes(`<a href="${destination}/`), `${path} missing no-script refresh or visible fallback`);
+  }
+  results.push(`OK Lane 1 real static 200 professions index + ${professionAliases.length} row stubs`);
+  return results;
+};
+// End Lane 1 L1-7.
+
 const child = spawn(
   process.execPath,
   [require.resolve("next/dist/bin/next"), "start", "-p", String(PORT), "-H", "127.0.0.1"],

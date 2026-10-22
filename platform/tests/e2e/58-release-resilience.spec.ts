@@ -2,15 +2,19 @@ import {expect,test} from "@playwright/test";
 
 test("library filters and global search update locally and preserve Back",async({page})=>{
  await page.goto("vocabulary/");
- await expect(page.locator("[data-word-family]")).toHaveCount(12);
+ await expect(page).toHaveURL(/\/cheat-sheets\/vocabulary\/?$/);
  await page.evaluate(()=>{document.documentElement.dataset.releaseDocument="same";});
- await page.locator('main input[type="search"]').fill("Elektriker");
- await page.getByRole("button",{name:"Apply filters",exact:true}).click();
- await expect(page.locator("[data-word-family]")).toHaveCount(1);
+ const vocabularySearch=page.getByRole("searchbox",{name:"Find a word or form",exact:true});
+ await vocabularySearch.fill("Stuhl");
+ const entry=page.locator("[data-subject-entry]").filter({hasText:"der Stuhl"}).first();
+ await expect(entry).toBeVisible();
  await expect(page.locator("html")).toHaveAttribute("data-release-document","same");
- await page.goBack();
- await expect(page.locator("[data-word-family]")).toHaveCount(12);
- await expect(page.locator('main input[type="search"]')).toHaveValue("");
+ await entry.click();
+ await page.locator(".subject-word-dropdown").getByRole("link",{name:"Full vocabulary card →",exact:true}).click();
+ await page.getByRole("link",{name:/^← Back/}).first().click();
+ await expect(vocabularySearch).toHaveValue("Stuhl");
+ await vocabularySearch.fill("");
+ await expect(vocabularySearch).toHaveValue("");
  await page.goto("search/");
  await page.evaluate(()=>{document.documentElement.dataset.releaseDocument="same";});
  await page.getByRole("searchbox",{name:"Search learning content"}).fill("Stuhl");

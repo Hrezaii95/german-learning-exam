@@ -249,8 +249,8 @@ describe("P3A route resolution", () => {
       expect(resolved.kind).toBe("not-found");
       expect(resolved.kind).not.toBe("dashboard");
     }
-    expect(resolveLearnerRoute("/vocabulary", projection).kind).toBe("hub");
-    expect(resolveLearnerRoute("/hubs", projection).kind).toBe("hubs-directory");
+    expect(resolveLearnerRoute("/vocabulary", projection)).toMatchObject({kind:"canonical-redirect",canonicalPath:"/cheat-sheets/vocabulary"});
+    expect(resolveLearnerRoute("/hubs", projection)).toMatchObject({kind:"canonical-redirect",canonicalPath:"/cheat-sheets"});
     expect(
       resolveLearnerRoute("/vocabulary/lex:ingenieur", projection).kind,
     ).toBe("not-found");
@@ -446,7 +446,7 @@ describe("P3A shell accessibility and responsive contract", () => {
     expect(readFileSync(join(webRoot, "components/shell/MobileNavigation.tsx"), "utf8")).toContain('aria-label="Mobile"');
     expect(shell).toContain("<MobileNavigation current={current} role={role}/>");
     const nav = readFileSync(join(webRoot, "lib/content/nav.ts"), "utf8");
-    expect(nav).toContain('href: "/vocabulary"');
+    expect(nav).toContain('href: "/cheat-sheets/vocabulary"');
     expect(shell).toContain("navItemsFor");
     expect(navigation).toContain("navItemsFor");
     expect(shell).toContain("<AccountSlot/>");

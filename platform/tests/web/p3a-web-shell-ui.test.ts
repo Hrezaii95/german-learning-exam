@@ -34,7 +34,7 @@ describe("P3A behavioral UI (server-rendered from generated projection)", () => 
   let projection: LearnerWebProjection;
   // Components are .tsx; load via dynamic import under vitest (esbuild jsx).
   let AppShell: (props: {
-    current: "home" | "dashboard" | "book" | "lessons" | "vocabulary" | "hubs" | "all-vocabulary" | "subjects" | null;
+    current: "home" | "dashboard" | "book" | "lessons" | "vocabulary" | "hubs" | "concepts" | "review" | "all-vocabulary" | "subjects" | null;
     children?: ReactNode;
   }) => ReactNode;
   let DashboardView: (props: {
@@ -121,6 +121,22 @@ describe("P3A behavioral UI (server-rendered from generated projection)", () => 
     expect(links(".mobile-navigation")).toHaveLength(4);
   });
 
+  it("keeps retired hub states current on their sole canonical rail and menu destinations",()=>{
+    for(const [current,href] of [["vocabulary","/cheat-sheets/vocabulary"],["concepts","/grammar"],["hubs","/cheat-sheets"],["review","/saved"]] as const){
+      const html=renderToStaticMarkup(createElement(AppShell,{current},createElement("div")));
+      const document=new DOMParser().parseFromString(html,"text/html");
+      for(const selector of [".shell-rail nav",".mobile-menu nav"]){
+        const nav=document.querySelector(selector)!;
+        expect(nav.querySelector(`a[href='${href}']`)?.getAttribute("aria-current")).toBe("page");
+        expect(nav.querySelectorAll('a[aria-current="page"]')).toHaveLength(1);
+      }
+      for(const href of ["/vocabulary","/concepts","/hubs","/review"]){
+        expect(document.querySelector(`.shell-rail nav a[href='${href}']`)).toBeNull();
+        expect(document.querySelector(`.mobile-menu nav a[href='${href}']`)).toBeNull();
+      }
+    }
+  });
+
   it("sets no aria-current on not-found shell state", () => {
     const html = renderToStaticMarkup(
       createElement(
@@ -168,10 +184,10 @@ describe("P3A behavioral UI (server-rendered from generated projection)", () => 
         createElement(DashboardView, { projection }),
       ),
     );
-    expect(html).toContain('href="/vocabulary"');
+    expect(html).toContain('href="/cheat-sheets/vocabulary"');
     expect(html).toContain('href="/verbs"');
-    expect(html).toContain('href="/concepts"');
-    expect(html).toContain('href="/review"');
+    expect(html).toContain('href="/grammar#connected-learning-paths"');
+    expect(html).toContain('href="/saved"');
     expect(html).toContain('href="/settings"');
   });
 

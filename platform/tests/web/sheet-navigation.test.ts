@@ -1,5 +1,5 @@
 import {describe,expect,it} from "vitest";
-import {studyConcepts,type StudyConcept} from "../../apps/web/lib/study/scope";
+import {studyConcepts,type StudyConcept,type StudySource} from "../../apps/web/lib/study/scope";
 import type {SheetGrouping} from "../../apps/web/lib/study/sheet-grouping";
 import type {SheetSort,SheetSortDirection} from "../../apps/web/lib/study/sheet-sorting";
 import {sheetLinks} from "../../apps/web/lib/study/sheet-topics";
@@ -7,6 +7,39 @@ import {readSheetBrowse,sheetBrowseQuery,sheetNavigationContext} from "../../app
 import {appendNavigationContext,isSafeNavigationPath,serializeNavigationContext,parseNavigationContextParam,resolveBackHref,type NavigationContext} from "../../apps/web/lib/content/navigation-context";
 
 describe("safe sheet return navigation",()=>{
+  it("restores a validated source filter through the catalogue, subject sheets and full-card Back",()=>{
+    const sources:StudySource[]=["course","teacher-extra","study-extra"];
+    for(const sourceFilter of sources)for(const returnPath of ["/cheat-sheets/vocabulary","/cheat-sheets/subjects/people"]){
+      const browse={query:"Beruf",category:"all",saved:false,page:1,sourceFilter};
+      expect(readSheetBrowse(new URLSearchParams(sheetBrowseQuery(browse)))).toEqual(browse);
+      const context=parseNavigationContextParam(serializeNavigationContext(sheetNavigationContext(returnPath,browse,"W123-0")));
+      expect(context?.sheetSource).toBe(sourceFilter);
+      const back=new URL(resolveBackHref(context),"https://local.test");
+      expect(back.pathname).toBe(returnPath);
+      expect(back.searchParams.get("source")).toBe(sourceFilter);
+      expect(back.hash).toBe("#sheet-card-W123-0");
+      expect(readSheetBrowse(back.searchParams)).toEqual(browse);
+    }
+  });
+  it("rejects unknown sources and restricts their payload allowance to infographic navigation",()=>{
+    for(const source of ["all","teacher","Teacher-extra","course,teacher-extra"," course",""]){
+      expect(readSheetBrowse(new URLSearchParams({source}))).not.toHaveProperty("sourceFilter");
+    }
+    for(const sheetSource of [null,true,[],{},"all","teacher"]){
+      const context=parseNavigationContextParam(JSON.stringify({entryContext:"hub",returnPath:"/cheat-sheets/subjects/people",sheetSource}));
+      expect(context).not.toHaveProperty("sheetSource");
+      expect(resolveBackHref(context)).not.toContain("source=");
+    }
+    for(const payload of [
+      {entryContext:"hub",returnPath:"/grammar",sheetSource:"teacher-extra"},
+      {entryContext:"hub",returnPath:"/cheat-sheets",sheetSource:"teacher-extra"},
+      {entryContext:"search",returnPath:"/cheat-sheets/subjects/people",sheetSource:"teacher-extra"},
+      {entryContext:"hub",returnPath:"/cheat-sheets/subjects/people",sheetSource:"all"},
+    ])expect(parseNavigationContextParam(JSON.stringify({...payload,q:"x".repeat(600)}))).toBeNull();
+    const valid={entryContext:"hub",returnPath:"/cheat-sheets/subjects/people",sheetSource:"teacher-extra"};
+    expect(parseNavigationContextParam(JSON.stringify({...valid,q:"x".repeat(600)}))?.sheetSource).toBe("teacher-extra");
+    expect(parseNavigationContextParam(JSON.stringify({...valid,q:"x".repeat(1100)}))).toBeNull();
+  });
   it("reads legacy sheet return contexts and emits canonical destinations without losing state",()=>{
     for(const path of ["/cheat-sheets/plurals","/cheat-sheets/vocabulary"]){
       const context=parseNavigationContextParam(serializeNavigationContext(sheetNavigationContext(path,{query:"Bücher",category:"neuter",saved:true,page:2,view:"plurals",gender:false,tags:[]},"W466-0")));
@@ -41,6 +74,78 @@ describe("safe sheet return navigation",()=>{
       const invalid=parseNavigationContextParam(JSON.stringify({entryContext:"hub",returnPath:"/cheat-sheets/subjects/home",sheetLessonFilter}));
       expect(invalid).not.toHaveProperty("sheetLessonFilter");
     }
+  });
+  it("preserves topic lessons and local source together across canonical and legacy infographic Back links",()=>{
+    const browse={query:"Bücher",category:"neuter",saved:true,page:3,view:"plurals" as const,gender:false,subjects:true,lessons:true,groupOrder:["lesson","subject","gender","plural"] as SheetGrouping[],sort:"meaning" as const,direction:"desc" as const,tags:["objects","home"] as StudyConcept[],lessonFilter:[2,4],sourceFilter:"teacher-extra" as const};
+    const paths=["/cheat-sheets/vocabulary","/cheat-sheets/plurals",...studyConcepts.map(subject=>`/cheat-sheets/subjects/${subject.id}`)];
+    for(const returnPath of paths){
+      expect(readSheetBrowse(new URLSearchParams(sheetBrowseQuery(browse)))).toEqual(browse);
+      const href=new URL(appendNavigationContext("/vocabulary/w466",sheetNavigationContext(returnPath,browse,"W466-0")),"https://local.test");
+      const context=parseNavigationContextParam(href.searchParams.get("nav"));
+      expect(context?.sheetLessonFilter).toEqual([2,4]);
+      expect(context?.sheetSource).toBe("teacher-extra");
+      const back=new URL(resolveBackHref(context),"https://local.test");
+      expect(back.pathname).toBe(returnPath==="/cheat-sheets/plurals"?"/cheat-sheets/vocabulary":returnPath);
+      expect(back.searchParams.get("lesson")).toBe("2,4");
+      expect(back.searchParams.get("lessons")).toBe("1");
+      expect(back.searchParams.get("source")).toBe("teacher-extra");
+      expect(back.hash).toBe("#sheet-card-W466-0");
+      expect(readSheetBrowse(back.searchParams)).toEqual(browse);
+    }
+    const legacyLesson=parseNavigationContextParam(JSON.stringify({entryContext:"hub",returnPath:"/cheat-sheets/plurals",lesson:"01",sheetLessonFilter:[4,2,4],sheetSource:"teacher-extra"}));
+    const back=new URL(resolveBackHref(legacyLesson),"https://local.test");
+    expect(back.searchParams.get("lesson")).toBe("2,4");
+    expect(back.searchParams.get("source")).toBe("teacher-extra");
+  });
+  it("allows the bounded infographic payload for either validated topic lessons or local source",()=>{
+    const fields:Array<{sheetLessonFilter?:number[];sheetSource?:StudySource}>=[
+      {sheetLessonFilter:[2,4]},
+      {sheetSource:"teacher-extra"},
+      {sheetLessonFilter:[2,4],sheetSource:"teacher-extra"},
+    ];
+    for(const returnPath of ["/cheat-sheets/vocabulary","/cheat-sheets/plurals","/cheat-sheets/subjects/people"]){
+      for(const field of fields){
+        const wide:NavigationContext={entryContext:"hub",returnPath,q:"a".repeat(200),category:"b".repeat(80),resultId:"W".repeat(120),page:500,onlySaved:true,sheetGender:false,sheetView:"plurals",...field};
+        const serialized=serializeNavigationContext(wide);
+        expect(serialized.length).toBeGreaterThan(512);
+        expect(serialized.length).toBeLessThanOrEqual(1024);
+        expect(parseNavigationContextParam(serialized)).toMatchObject({...field,q:wide.q});
+        expect(parseNavigationContextParam(JSON.stringify({entryContext:"hub",returnPath,...field,q:"x".repeat(600)}))).toMatchObject(field);
+        expect(parseNavigationContextParam(JSON.stringify({entryContext:"hub",returnPath,...field,q:"x".repeat(1100)}))).toBeNull();
+      }
+    }
+  });
+  it("never grants the infographic budget to invalid filters, foreign routes or redirected hub contexts",()=>{
+    const valid={sheetLessonFilter:[2,4],sheetSource:"teacher-extra"};
+    for(const field of [
+      {sheetLessonFilter:"2,4"},{sheetLessonFilter:["2","4"]},{sheetLessonFilter:[]},{sheetLessonFilter:[2,13]},
+      {sheetLessonFilter:[2,4.5]},{sheetLessonFilter:Array(13).fill(2)},
+      {sheetSource:"all"},{sheetSource:"teacher"},{sheetSource:["teacher-extra"]},
+      {sheetLessonFilter:[2,13],sheetSource:"Teacher-extra"},
+    ]){
+      const payload={entryContext:"hub",returnPath:"/cheat-sheets/subjects/people",...field};
+      const normalized=parseNavigationContextParam(JSON.stringify(payload));
+      expect(normalized).not.toHaveProperty("sheetLessonFilter");
+      expect(normalized).not.toHaveProperty("sheetSource");
+      expect(parseNavigationContextParam(JSON.stringify({...payload,q:"x".repeat(600)}))).toBeNull();
+    }
+    for(const returnPath of ["/grammar","/vocabulary","/cheat-sheets","/cheat-sheets/subjects","/cheat-sheets/countries","/cheat-sheets/subjects/fake","//evil.example","/cheat-sheets/%2e%2e/settings"]){
+      expect(parseNavigationContextParam(JSON.stringify({entryContext:"hub",returnPath,...valid,q:"x".repeat(600)}))).toBeNull();
+    }
+    for(const entryContext of ["search","lesson","review"]){
+      expect(parseNavigationContextParam(JSON.stringify({entryContext,returnPath:"/cheat-sheets/subjects/people",...valid,q:"x".repeat(600)}))).toBeNull();
+    }
+    for(const hubId of ["vocabulary","concepts"]){
+      const payload={entryContext:"hub",returnPath:"/cheat-sheets/subjects/home",hubId,...valid,resultId:"W466-0"};
+      expect(parseNavigationContextParam(JSON.stringify({...payload,q:"x".repeat(600)}))).toBeNull();
+      expect(resolveBackHref(parseNavigationContextParam(JSON.stringify(payload)))).toBe(hubId==="vocabulary"?"/cheat-sheets/vocabulary":"/grammar");
+    }
+    const onlyLessons=parseNavigationContextParam(JSON.stringify({entryContext:"hub",returnPath:"/cheat-sheets/subjects/people",sheetLessonFilter:[2,4],sheetSource:"unknown",q:"x".repeat(600)}));
+    expect(onlyLessons?.sheetLessonFilter).toEqual([2,4]);
+    expect(onlyLessons).not.toHaveProperty("sheetSource");
+    const onlySource=parseNavigationContextParam(JSON.stringify({entryContext:"hub",returnPath:"/cheat-sheets/subjects/people",sheetLessonFilter:[2,13],sheetSource:"teacher-extra",q:"x".repeat(600)}));
+    expect(onlySource?.sheetSource).toBe("teacher-extra");
+    expect(onlySource).not.toHaveProperty("sheetLessonFilter");
   });
   it("restores every word sorting choice and direction independently of grouping on all infographic routes",()=>{
     const sorts:SheetSort[]=["german","meaning","lesson","source","original"];
@@ -194,7 +299,7 @@ describe("safe sheet return navigation",()=>{
     const wideContext:NavigationContext={entryContext:"hub",returnPath:"/cheat-sheets/subjects/colours-materials",q:"a".repeat(200),category:"b".repeat(80),resultId:"W".repeat(120),page:500,onlySaved:true,sheetGender:false,sheetView:"plurals"};
     const legacySerialized=serializeNavigationContext(wideContext);
     expect(legacySerialized.length).toBeLessThanOrEqual(512);
-    expect(JSON.parse(legacySerialized)).toEqual({entryContext:"hub",returnPath:"/hubs"});
+    expect(JSON.parse(legacySerialized)).toEqual({entryContext:"hub",returnPath:"/cheat-sheets"});
     for(const sheetTags of [[],studyConcepts.map(subject=>subject.id)]){
       const serialized=serializeNavigationContext({...wideContext,sheetTags});
       expect(serialized.length).toBeGreaterThan(512);
@@ -305,7 +410,7 @@ describe("safe sheet return navigation",()=>{
       expect(context).not.toHaveProperty("sheetGroupOrder");
     }
     const redirectedHub=parseNavigationContextParam(JSON.stringify({entryContext:"hub",returnPath:"/cheat-sheets/subjects/home",hubId:"vocabulary",sheetView:"plurals",sheetGender:false,sheetTags:["objects"],sheetSubjects:true,sheetLessons:true,sheetGroupOrder:["plural","subject","lesson","gender"]}));
-    expect(resolveBackHref(redirectedHub)).toBe("/vocabulary");
+    expect(resolveBackHref(redirectedHub)).toBe("/cheat-sheets/vocabulary");
   });
   it("restores the plural grid with its search, gender filter and exact row",()=>{
     const browse={query:"Bücher",category:"neuter",saved:false,page:1,view:"plurals" as const};

@@ -491,7 +491,7 @@ export function LessonThreeBridge() {
         <Link className="study-secondary" href="/book?page=workbook-14">
           Workbook
         </Link>
-        <Link className="study-secondary" href="/vocabulary?lesson=03">
+        <Link className="study-secondary" href="/cheat-sheets/vocabulary?lesson=03">
           Vocabulary cards
         </Link>
       </div>

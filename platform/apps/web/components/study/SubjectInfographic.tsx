@@ -64,17 +64,21 @@ export function SubjectInfographic({sheet,allNouns=false,allItems}:{sheet:Subjec
     window.history.replaceState(window.history.state,"",`${window.location.pathname}${sheetBrowseQuery(next)}`);
   };
   const effectiveConcepts=browse.tags??(allNouns?scope.concepts:[sheet.id]);
-  const sheetScope:StudyScope={...scope,...(browse.lessonFilter?{mode:browse.lessonFilter.length===1?"one" as const:"multiple" as const,lessons:browse.lessonFilter}:{}),concepts:effectiveConcepts};
+  const sheetScope:StudyScope={...scope,...(browse.lessonFilter?{mode:browse.lessonFilter.length===1?"one" as const:"multiple" as const,lessons:browse.lessonFilter}:{}),concepts:effectiveConcepts,source:browse.sourceFilter??scope.source};
   const setSheetScope=(next:StudyScope)=>{
     setScope(next);
-    const {lessonFilter:previousLessonFilter,...otherBrowse}=browse;
-    const lessonFilter=previousLessonFilter&&next.mode!=="all"?selectedLessons(next):undefined;
-    changeBrowse({...otherBrowse,...(lessonFilter?{lessonFilter}:{}),tags:[...next.concepts],...(next.concepts.join(",")!==effectiveConcepts.join(",")?{category:"all"}:{}),page:1});
+    const nextBrowse:SheetBrowse={...browse,tags:[...next.concepts],...(next.concepts.join(",")!==effectiveConcepts.join(",")?{category:"all"}:{}),page:1};
+    if(browse.lessonFilter&&next.mode!=="all")nextBrowse.lessonFilter=selectedLessons(next);
+    else delete nextBrowse.lessonFilter;
+    if(next.source==="all")delete nextBrowse.sourceFilter;
+    else nextBrowse.sourceFilter=next.source;
+    changeBrowse(nextBrowse);
   };
   const resetFilters=()=>{
     setScope(defaultStudyScope());
     const resetBrowse:SheetBrowse={...browse,...initialSheetBrowse,tags:[]};
     delete resetBrowse.lessonFilter;
+    delete resetBrowse.sourceFilter;
     changeBrowse(resetBrowse);
   };
   const scoped=catalogue.filter(item=>matchesStudyScope(item.studyTags,sheetScope));
@@ -135,7 +139,7 @@ export function SubjectInfographic({sheet,allNouns=false,allItems}:{sheet:Subjec
     <div id="subject-overview"><OverviewPanel title={layoutTitle}>
       <SubjectGroupingControls browse={browse} onChange={changeGrouping}/>
       <SubjectSortingControls browse={browse} onChange={changeGrouping}/>
-      <SubjectSheetFilters items={catalogue} scope={sheetScope} onChange={setSheetScope} onReset={resetFilters} hasLocalFilters={Boolean(browse.query||browse.category!=="all")}/>
+      <SubjectSheetFilters items={catalogue} scope={sheetScope} onChange={setSheetScope} onReset={resetFilters} hasLocalFilters={Boolean(browse.query||browse.category!=="all"||browse.lessonFilter||browse.sourceFilter)}/>
       <div className="subject-overview-meta"><p role="status">{visible.length} {visible.length===1?"entry":"entries"} · {families} {families===1?"word card":"word cards"}{browse.query&&<> · matching “{browse.query}”</>}</p>{nounGroups.length>0&&<span>Article colours show grammatical gender.</span>}</div>
       {visible.length>0?<>
         {nestedGrouping?<SubjectGroupedVocabulary items={orderedItems} order={groupOrder} scope={sheetScope} subject={sheet.id} sortItems={sortItems} renderEntry={renderEntry}/>:pluralView?<SubjectPluralGrid groupByGender={groupByGender} items={orderedItems} subject={sheet.id} currentId={current?.id??""} openEntry={openEntry} onChoose={choose} onClose={closeDropdown} renderDropdown={renderDropdown} triggerRef={triggerRef} entryRef={(id,node)=>{if(node)entries.current.set(id,node);else entries.current.delete(id);}}/>:groupByGender?(nounGroups.length>0&&<div className="subject-vocabulary-lanes" style={{"--subject-lanes":Math.min(4,nounGroups.length)} as CSSProperties} aria-label="Nouns grouped by article">{nounGroups.map(renderGroup)}</div>):<div className="subject-vocabulary-flat" aria-label="Illustrated vocabulary">{orderedItems.map(renderEntry)}</div>}

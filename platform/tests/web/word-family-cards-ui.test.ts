@@ -46,7 +46,7 @@ describe("original vocabulary browsing with complete cards", () => {
     const numbers = filterHubRecords(hub.items, parseHubSearchParams({category:"number"},hub.categories));
     expect(numbers.items).toHaveLength(101);
     const navigation = buildHubNavigationContext({hubId:"vocabulary",lesson:"03",q:"meine",category:"pronoun"});
-    expect(resolveBackHref(navigation,"hub")).toBe("/vocabulary?q=meine&lesson=03&category=pronoun");
+    expect(resolveBackHref(navigation,"hub")).toBe("/cheat-sheets/vocabulary?q=meine&lesson=03&category=pronoun");
   });
   it("clears edited form values when navigation clears the active filters", () => {
     const complete = withWordCardHub(originalHub);

@@ -131,10 +131,10 @@ test("Continue follows the last visited lesson and due review precedes the cours
   await page.getByRole("link",{name:"Review due items"}).click();
   await expect(page.getByRole("checkbox",{name:"Due only",exact:true})).toBeChecked();
   await expect(page.locator(".study-saved-card")).toHaveCount(1);
-  await page.goto("review/");
+  await page.goto("saved/#guided-review");
   await expect(page.locator("main h1")).toHaveCount(1);
   await expect(page.getByRole("heading",{name:"Build mission"})).toBeVisible();
-  await expect(page.locator(".study-saved-grid")).toHaveCount(0);
+  await expect(page.locator(".study-saved-card")).toHaveCount(1);
   await expect(page.getByRole("link",{name:/My saved collection & recall/})).toBeVisible();
   await page.goto("./");
   const scope=page.locator(".study-scope");

@@ -104,7 +104,7 @@ describe("P3D detail UI contracts", () => {
     expect(html).toContain("tts-62dc09ce76149784.mp3");
     expect(html).toContain("Architekt");
     expect(html).toContain("-in");
-    expect(html).toContain('href="/vocabulary?lesson=02"');
+    expect(html).toContain('href="/cheat-sheets/vocabulary?lesson=02"');
     for (const bad of FORBIDDEN_RENDER) {
       expect(html).not.toContain(bad);
     }

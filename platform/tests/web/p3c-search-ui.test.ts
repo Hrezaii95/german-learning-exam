@@ -181,7 +181,7 @@ describe("P3C search UI + shell contracts", () => {
     expect(directory).not.toContain('aria-label="Open global search"');
     expect(directory).toContain('href="/search"');
     expect(directory).toContain("Search all content");
-    expect(directory).toContain('href="/hubs"');
+    expect(directory).toContain('href="/cheat-sheets"');
     const bottomNavSearchLinks = (
       directory.match(/shell-bottomnav(?:(?!<\/nav>)[\s\S])*?href="\/search"/) ?? []
     ).length;

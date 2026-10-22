@@ -68,8 +68,8 @@ describe("P3B hub UI shell contracts", () => {
     expect(vocabulary).toContain('href="#main-content"');
     // The rail and grouped menu highlight Vocabulary; the compact tablet bar shows shortcuts.
     expect((vocabulary.match(/aria-current="page"/g) ?? []).length).toBe(2);
-    expect(vocabulary).toContain('href="/vocabulary"');
-    expect(vocabulary).toContain('href="/hubs"');
+    expect(vocabulary).toContain('href="/cheat-sheets/vocabulary"');
+    expect(vocabulary).toContain('href="/cheat-sheets"');
 
     const directory = renderToStaticMarkup(
       createElement(
@@ -78,7 +78,8 @@ describe("P3B hub UI shell contracts", () => {
         createElement(HubDirectoryView, { projection: hubs }),
       ),
     );
-    expect(directory).toContain('href="/concepts"');
+    expect(directory).toContain('href="/grammar"');
+    expect(directory).toContain('href="/grammar#connected-learning-paths"');
     expect(directory).toContain("Hubs");
 
     const concepts = renderToStaticMarkup(
@@ -91,9 +92,9 @@ describe("P3B hub UI shell contracts", () => {
         }),
       ),
     );
-    // The shared navigation highlights Concepts in both the rail and Menu.
+    // The shared navigation maps the retired Concepts state to Grammar.
     expect((concepts.match(/aria-current="page"/g) ?? []).length).toBe(2);
-    expect(concepts).toContain('href="/hubs"');
+    expect(concepts).toContain('href="/cheat-sheets"');
   });
 
   it("keeps Review and Settings as real navigable destinations in the mobile menu", () => {
@@ -107,10 +108,11 @@ describe("P3B hub UI shell contracts", () => {
         }),
       ),
     );
-    expect(html).toContain('href="/hubs"');
-    expect(html).toContain("Guided review");
+    expect(html).toContain('href="/cheat-sheets"');
+    expect(html).toContain("Review");
     expect(html).toContain("Settings");
-    expect(html).toContain('href="/review"');
+    expect(html).toContain('href="/saved"');
+    expect(html).not.toContain('href="/review"');
     expect(html).toContain('href="/settings"');
     expect(html).not.toContain('href="/profile"');
   });
@@ -233,15 +235,17 @@ describe("P3B hub UI shell contracts", () => {
         createElement(HubDirectoryView, { projection: hubs }),
       ),
     );
-    expect(directory).toContain('href="/vocabulary"');
+    expect(directory).toContain('href="/cheat-sheets/vocabulary"');
     expect(directory).toContain('href="/verbs"');
     expect(directory).toContain('href="/grammar"');
+    expect(directory).toContain('href="/grammar#connected-learning-paths"');
     expect(directory).toContain('href="/phrases"');
     expect(directory).toContain('href="/listening"');
-    expect(directory).toContain('href="/concepts"');
+    expect(directory).toContain('href="/grammar"');
+    expect(directory).toContain('href="/grammar#connected-learning-paths"');
     expect(directory).toContain("Six content hubs cover everything you are learning");
-    // Study library is current in both the shared rail and Menu.
-    expect((directory.match(/aria-current="page"/g) ?? []).length).toBe(2);
+    // Retired directory states select Cheat sheets in rail, tablet, tabs and Menu.
+    expect((directory.match(/aria-current="page"/g) ?? []).length).toBe(4);
   });
 
   it("renders populated hub results from real components without reflecting unsafe query markup", () => {

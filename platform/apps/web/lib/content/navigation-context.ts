@@ -16,16 +16,19 @@ import { sanitizeSearchQueryText } from "./search-query";
 import {studyUnits} from "../study/course-lessons";
 import { lessonFourWords } from "../study/lesson-four";
 import {sheetLinks} from "../study/sheet-topics";
-import {studyConcepts,type StudyConcept} from "../study/scope";
+import {studyConcepts,type StudyConcept,type StudySource} from "../study/scope";
 import {normalizeSheetTags} from "../study/sheet-browse";
 import {normalizeGroupOrder,type SheetGrouping} from "../study/sheet-grouping";
 import {normalizeSheetSort,normalizeSheetSortDirection,type SheetSort,type SheetSortDirection} from "../study/sheet-sorting";
 import {canonicalSheetPath,COUNTRIES_SHEET_PATH,SHEET_DIRECTORY_PATH,VOCABULARY_SHEET_PATH,LEGACY_VOCABULARY_SHEET_PATH} from "../study/sheet-routes";
+import {canonicalHubPath,PROFESSIONS_SHEET_PATH,PROFESSIONS_REDIRECT_DEFAULTS,withMissingHubDefaults,type LegacyProfessionPattern} from "./hub-redirects";
+import {normalizeSheetSource} from "../study/sheet-source";
 
 const SUBJECT_SHEET_PATHS=new Set(studyConcepts.map(subject=>`/cheat-sheets/subjects/${subject.id}`));
 const SHEET_PATHS=new Set([
   ...sheetLinks.map(sheet=>sheet.href),
   SHEET_DIRECTORY_PATH,
+  COUNTRIES_SHEET_PATH,
   VOCABULARY_SHEET_PATH,
   "/cheat-sheets/subjects",
   "/cheat-sheets/plurals",
@@ -66,6 +69,10 @@ export type NavigationContext = {
   sheetDirection?: SheetSortDirection;
   sheetTags?: StudyConcept[];
   sheetLessonFilter?: number[];
+  sheetSource?: StudySource;
+  professionPattern?: LegacyProfessionPattern;
+  professionAlternatives?: boolean;
+  professionLimit?: number;
 };
 
 export const NAVIGATION_CONTEXT_PARAM = "nav";
@@ -85,7 +92,7 @@ const HUB_ID_SET = new Set<string>(LEARNER_HUB_IDS);
 export type NavigationFallbackKind = "hub" | "lesson" | "search";
 
 const FALLBACK_PATH: Record<NavigationFallbackKind, string> = {
-  hub: "/hubs",
+  hub: SHEET_DIRECTORY_PATH,
   lesson: "/lessons",
   search: "/search",
 };
@@ -129,6 +136,7 @@ export function isSafeNavigationPath(pathname: string): boolean {
   }
   if (pathname === "/search") return true;
   if (pathname === "/book" || pathname === "/saved") return true;
+  if (pathname === "/collections/professions") return true;
   if (SHEET_PATHS.has(pathname)) return true;
   if ([...lessonFourWords,...studyUnits.flatMap(u=>u.words??[])].some(word => pathname === `/vocabulary/${word.id}`)) return true;
   if (pathname === "/practice") return true;
@@ -213,7 +221,7 @@ function defaultReturnPath(entry: NavigationEntryContext): string {
     case "search":
       return "/search";
     case "hub":
-      return "/hubs";
+      return SHEET_DIRECTORY_PATH;
     case "lesson":
       return "/lessons";
     case "review":
@@ -264,6 +272,14 @@ function normalizeContext(raw: unknown): NavigationContext | null {
   if((entryContext==="hub"||entryContext==="search")&&Number.isInteger(page)&&page>1&&page<=500) ctx.page=page;
   if (entryContext === "hub") {
     const sheetGroupingPath=isSheetGroupingPath(ctx.returnPath);
+    const sheetSource=sheetGroupingPath?normalizeSheetSource(obj.sheetSource):undefined;
+    if(sheetSource)ctx.sheetSource=sheetSource;
+    if(ctx.returnPath===PROFESSIONS_SHEET_PATH||ctx.returnPath==="/collections/professions"){
+      if(typeof obj.professionPattern==="string"&&["same","e","en","umlaut","other"].includes(obj.professionPattern))ctx.professionPattern=obj.professionPattern as LegacyProfessionPattern;
+      if(obj.professionAlternatives===true)ctx.professionAlternatives=true;
+      const limit=Number(obj.professionLimit);
+      if(Number.isInteger(limit)&&limit>=6&&limit<=48)ctx.professionLimit=limit;
+    }
     if((obj.sheetView==="plurals"||obj.sheetView==="illustrated")&&sheetGroupingPath)ctx.sheetView=obj.sheetView;
     if(typeof obj.sheetGender==="boolean"&&sheetGroupingPath)ctx.sheetGender=obj.sheetGender;
     if(typeof obj.sheetSubjects==="boolean"&&sheetGroupingPath)ctx.sheetSubjects=obj.sheetSubjects;
@@ -309,7 +325,7 @@ function normalizeContext(raw: unknown): NavigationContext | null {
 
 /** Explicit, validated infographic filters, grouping or sorting use a bounded larger payload. */
 function navigationContextMaxLength(ctx:NavigationContext|null):number{
-  return ctx?.entryContext==="hub"&&!ctx.hubId&&(ctx.sheetTags!==undefined||ctx.sheetLessonFilter!==undefined||ctx.sheetGroupOrder!==undefined||ctx.sheetSort!==undefined||ctx.sheetDirection!==undefined)
+  return ctx?.entryContext==="hub"&&!ctx.hubId&&(ctx.sheetTags!==undefined||ctx.sheetLessonFilter!==undefined||ctx.sheetGroupOrder!==undefined||ctx.sheetSort!==undefined||ctx.sheetDirection!==undefined||ctx.sheetSource!==undefined)
     &&isSheetGroupingPath(ctx.returnPath)
     ?SHEET_NAVIGATION_CONTEXT_MAX_LENGTH:NAVIGATION_CONTEXT_MAX_LENGTH;
 }
@@ -366,7 +382,7 @@ export function parseNavigationSearchParams(
 export function serializeNavigationContext(ctx: NavigationContext): string {
   const normalized = normalizeContext(ctx);
   if (!normalized) {
-    return JSON.stringify({ entryContext: "hub", returnPath: "/hubs" });
+    return JSON.stringify({ entryContext: "hub", returnPath: SHEET_DIRECTORY_PATH });
   }
   const payload: Record<string, string | boolean | StudyConcept[] | SheetGrouping[] | number[]> = {
     entryContext: normalized.entryContext,
@@ -388,6 +404,10 @@ export function serializeNavigationContext(ctx: NavigationContext): string {
   if (normalized.sheetGroupOrder !== undefined) payload.sheetGroupOrder = normalized.sheetGroupOrder;
   if (normalized.sheetSort) payload.sheetSort = normalized.sheetSort;
   if (normalized.sheetDirection) payload.sheetDirection = normalized.sheetDirection;
+  if (normalized.sheetSource) payload.sheetSource = normalized.sheetSource;
+  if (normalized.professionPattern) payload.professionPattern = normalized.professionPattern;
+  if (normalized.professionAlternatives) payload.professionAlternatives = true;
+  if (normalized.professionLimit) payload.professionLimit = String(normalized.professionLimit);
 
   const json = JSON.stringify(payload);
   if (json.length > navigationContextMaxLength(normalized)) {
@@ -424,17 +444,23 @@ export function backHrefFromContext(ctx: NavigationContext): string {
     }
     const path =
       safe.hubId && isSafeNavigationPath(`/${safe.hubId}`)
-        ? `/${safe.hubId}`
+        ? canonicalHubPath(`/${safe.hubId}`)
         : isSafeNavigationPath(safe.returnPath)
-          ? canonicalSheetPath(safe.returnPath,safe.resultId)
-          : "/hubs";
+          ? canonicalSheetPath(canonicalHubPath(safe.returnPath),safe.resultId)
+          : SHEET_DIRECTORY_PATH;
     const params = new URLSearchParams();
     if (safe.q && safe.q.trim().length > 0) params.set("q", safe.q.trim());
     if (safe.lesson && safe.lesson !== "all") params.set("lesson", safe.lesson);
     if (safe.category) params.set("category", safe.category);
     if (safe.page) params.set("page", String(safe.page));
     if (safe.onlySaved) params.set("saved", "1");
-    const sheetGroupingPath=isSheetGroupingPath(path);
+    if(path===PROFESSIONS_SHEET_PATH){
+      if(safe.professionPattern)params.set("pattern",safe.professionPattern);
+      if(safe.professionAlternatives)params.set("alternatives","1");
+      if(safe.professionLimit)params.set("limit",String(safe.professionLimit));
+    }
+    const sheetGroupingPath=!safe.hubId&&isSheetGroupingPath(path);
+    if(safe.sheetSource&&sheetGroupingPath)params.set("source",safe.sheetSource);
     if (safe.sheetView && sheetGroupingPath) params.set("view", safe.sheetView);
     if (typeof safe.sheetGender === "boolean" && sheetGroupingPath) params.set("gender", safe.sheetGender ? "1" : "0");
     if (typeof safe.sheetSubjects === "boolean" && sheetGroupingPath) params.set("subjects", safe.sheetSubjects ? "1" : "0");
@@ -445,20 +471,23 @@ export function backHrefFromContext(ctx: NavigationContext): string {
     if (safe.sheetTags !== undefined && sheetGroupingPath) params.set("tags", safe.sheetTags.join(","));
     if (safe.sheetLessonFilter && sheetGroupingPath) params.set("lesson", safe.sheetLessonFilter.join(","));
     const qs = params.toString();
+    const query = safe.returnPath === "/collections/professions" && path === PROFESSIONS_SHEET_PATH
+      ? withMissingHubDefaults(qs ? `?${qs}` : "",PROFESSIONS_REDIRECT_DEFAULTS)
+      : qs ? `?${qs}` : "";
     const sheetAnchor=safe.resultId&&(
       (path===SHEET_DIRECTORY_PATH||path===COUNTRIES_SHEET_PATH)&&safe.resultId.startsWith("country-")||
       path==="/cheat-sheets/home"&&safe.resultId.startsWith("home-")||
       path==="/cheat-sheets/people"&&/^family-(anna|martin)-[a-z]+$/.test(safe.resultId));
-    const anchor=path.startsWith("/cheat-sheets")&&safe.resultId?`#${sheetAnchor?"":"sheet-card-"}${encodeURIComponent(safe.resultId)}`:"";
-    return `${path}${qs.length>0?`?${qs}`:""}${anchor}`;
+    const anchor=!safe.hubId&&path.startsWith("/cheat-sheets")&&SHEET_PATHS.has(safe.returnPath)&&safe.resultId?`#${sheetAnchor?"":"sheet-card-"}${encodeURIComponent(safe.resultId)}`:"";
+    return `${path}${query}${anchor}`;
   }
 
   if (safe.entryContext === "lesson") {
     return isSafeNavigationPath(safe.returnPath) ? safe.returnPath : "/lessons";
   }
 
-  // review → hubs
-  return "/hubs";
+  // Existing review contexts enter the guided section of the consolidated review page.
+  return "/saved#guided-review";
 }
 
 export function fallbackNavigationContext(
