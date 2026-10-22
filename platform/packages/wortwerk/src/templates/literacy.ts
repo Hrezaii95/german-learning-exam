@@ -138,7 +138,7 @@ export function generateLiteracyTask({ templateId: id, item, pack, profile, diff
         return generated;
     }
     if (id === "write.dictation") {
-        const text = textOf(item);
+        const text = item.audio?.text ?? textOf(item);
         if (!text || !item.audio)
             return null;
         generated.question = { ...generated.question, instruction: "Listen and type what you hear.", input: "text", audio: clip(item.audio)! };

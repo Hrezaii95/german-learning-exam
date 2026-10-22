@@ -4,6 +4,7 @@ import type { GeneratedTask, GradeResult, TaskAnswer } from "../../../../../pack
 import { createMediaRecorderController } from "@/lib/recorder/createMediaRecorderController";
 import type { RecorderController, RecorderSnapshot } from "@/lib/recorder/recorder-types";
 import { withPagesBaseAssetPath } from "@/lib/content/pages-base-path";
+import { stopStudyAudio } from "@/components/study/StudyAudio";
 import { QuestionAudio } from "../QuestionAudio";
 import { TaskFeedback } from "../TaskFeedback";
 export type RecordProps = {
@@ -32,12 +33,12 @@ function RecordTask({ task, onAnswer, result, disabled = false }: RecordProps) {
         return; guard.current = true; setSubmitted(true); controller.current?.stopPlayback(); onAnswer([complete ? "self:complete" : "self:practise", alternative]); }
     return <section className="ww-record"><h2 ref={heading} tabIndex={-1}>{task.question.instruction}</h2><p>Your recording stays on this device. Self-checking does not score pronunciation.</p>
  {task.question.passage && <p lang={task.question.lang} style={{ whiteSpace: "pre-wrap", overflowWrap: "break-word", hyphens: "auto" }}>{task.question.passage}</p>}
- {task.question.audio && <QuestionAudio audio={task.question.audio}/>}
+ {task.question.audio && <QuestionAudio audio={task.question.audio} disabled={locked || recording || busy}/>}
  {task.question.options.filter(option => option.image).map((option, index) => <img key={option.id} src={withPagesBaseAssetPath(option.image!)} alt={`Scene ${index + 1}`} width={240} height={180} style={{ maxWidth: "100%", objectFit: "contain" }}/>)}
  <div role="group" aria-label="Recording controls">
- <button className="ww-button" type="button" disabled={locked || compared || busy || recording || unsupported || !snapshot} onClick={() => { void controller.current?.startRecording(); }}>Start recording</button>
+ <button className="ww-button" type="button" disabled={locked || compared || busy || recording || unsupported || !snapshot} onClick={() => { stopStudyAudio(); void controller.current?.startRecording(); }}>Start recording</button>
  <button className="ww-button" type="button" disabled={locked || !recording} onClick={() => { void controller.current?.stopRecording(); }}>Stop recording</button>
- <button className="ww-button" type="button" disabled={locked || busy || recording || !snapshot?.hasRecording} onClick={() => { void controller.current?.playRecording(); }}>Play my recording</button>
+ <button className="ww-button" type="button" disabled={locked || busy || recording || !snapshot?.hasRecording} onClick={() => { stopStudyAudio(); void controller.current?.playRecording(); }}>Play my recording</button>
  {snapshot?.phase === "playback" && <button className="ww-button" type="button" onClick={() => controller.current?.stopPlayback()}>Stop playback</button>}
  <button className="ww-button" type="button" disabled={locked || recording || busy} onClick={() => { controller.current?.retry(); setCompared(false); setChecked([]); }}>Try recording again</button></div>
  <p role="status" aria-live="polite">{snapshot?.guidance ?? "Preparing recording controls."}</p>

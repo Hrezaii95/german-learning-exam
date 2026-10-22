@@ -17,6 +17,7 @@ import { wortwerkStore } from "@/lib/wortwerk/store";
 import { useWortwerkState } from "@/lib/wortwerk/use-wortwerk";
 import { usePlayContent } from "./PlayProvider";
 import { ProgressSummary } from "./ProgressSummary";
+import { BackupPanel } from "./BackupPanel";
 import { InvestmentPanel } from "./PersonalDeck";
 
 export type ExploreView = "map" | "journey" | "skills" | "progress";
@@ -36,7 +37,7 @@ function downloadText(value: string, name: string, type: string) {
 
 export function ExplorePanel({ view }: { view: ExploreView }) {
   const content = usePlayContent();
-  return content?.selectedPack ? <ExploreContent key={`${content.selectedPack.pack.id}:${view}`} view={view} selected={content.selectedPack} scope={content.scope} /> : <div className="ww-page"><section className="ww-panel"><h1>{titles[view]}</h1><p>Choose an enabled content pack to explore your practice.</p><Link className="ww-button" href="/play/packs">Choose a pack</Link></section></div>;
+  return content?.selectedPack ? <ExploreContent key={`${content.selectedPack.pack.id}:${view}`} view={view} selected={content.selectedPack} scope={content.scope} /> : <div className="ww-page"><section className="ww-panel"><h1>{titles[view]}</h1><p>Choose an enabled content pack to explore your practice.</p><Link className="ww-button" href="/play/packs">Choose a pack</Link></section>{view === "progress" ? <BackupPanel /> : null}</div>;
 }
 function ExploreContent({ view, selected, scope }: { view: ExploreView; selected: PlayPack; scope: PlayScope }) {
   const capabilities = useMemo(() => playableCapabilities(selected.pack, selected.language, selected.difficulty, scope), [selected, scope]);

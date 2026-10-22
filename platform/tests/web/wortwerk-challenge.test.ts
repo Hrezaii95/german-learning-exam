@@ -98,6 +98,20 @@ async function answerCurrent(user: ReturnType<typeof userEvent.setup>, correct =
 }
 
 describe("Blitz and Boss reuse the practice loop", () => {
+  it("keeps a single-item Blitz playable past two answers until time or strikes end it", async () => {
+    vi.useFakeTimers({ toFake: ["Date"] });
+    vi.setSystemTime(new Date("2026-10-22T12:00:00.000Z"));
+    const user = userEvent.setup(); enable();
+    testState.query = `scope=${encodeScope({ v: 1, items: [pack.items[0]!.id], skills: ["gender"] })}`;
+    mountRun("blitz");
+    await user.click(screen.getByRole("button", { name: "Start Blitz" }));
+    for (let index = 0; index < 3; index++) await answerCurrent(user);
+    expect(screen.queryByRole("heading", { name: "Blitz complete" })).toBeNull();
+    expect(screen.getByLabelText("Strikes: 0 of 3")).not.toBeNull();
+    expect(parseWortwerkEvidence(store.getSnapshot().events).answers).toHaveLength(3);
+    expect(parseWortwerkEvidence(store.getSnapshot().events).sessions[0]).toMatchObject({ mode: "blitz", completed: false });
+  });
+
   it("ends Blitz at the actual deadline after a background pause and saves the valid attempt", async () => {
     vi.useFakeTimers({ toFake: ["Date", "setInterval", "clearInterval"] });
     const started = new Date("2026-10-23T12:00:00Z");

@@ -223,3 +223,12 @@ describe("Wortwerk timed exam simulation", () => {
     expect(emitted.filter(event => event.type === "session").map(event => (event.payload as { mode: string }).mode)).toEqual(["free", "free"]);
   });
 });
+
+
+it("keeps practice restore available before any pending pack is enabled", () => {
+  context.current = { ...context.current!, enabledPacks: [], selectedPack: undefined };
+  render(createElement(ExplorePanel, { view: "progress" }));
+  expect(screen.getByRole("heading", { name: "Practice backup" })).not.toBeNull();
+  expect(screen.getByRole("button", { name: "Import practice JSON" })).not.toBeNull();
+  expect(screen.getByRole("button", { name: "Download practice JSON" })).not.toBeNull();
+});

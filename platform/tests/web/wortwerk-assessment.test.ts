@@ -7,6 +7,7 @@ import type { ContentPack, DifficultyProfile, LanguageProfile } from "../../pack
 import type { WortwerkContent } from "../../apps/web/lib/wortwerk/content.server.js";
 import { createWortwerkStore, type WortwerkStore } from "../../apps/web/lib/wortwerk/store.js";
 import { recordAnswer } from "../../apps/web/lib/wortwerk/learning-state.js";
+import { buildPanelCatalog, PANEL_CATALOG_KEY, parsePanelCatalog } from "../../apps/web/lib/wortwerk/panel-catalog.js";
 import { generateLiteracyTask, gradeLiteracyTask } from "../../packages/wortwerk/src/templates/literacy.js";
 import manifest from "../fixtures/packs/de-b2-sample/pack.json";
 import items from "../fixtures/packs/de-b2-sample/items/all.json";
@@ -64,4 +65,23 @@ it("shows self-check practice without an impossible secured milestone inside and
   const standaloneMilestone = screen.getByRole("heading", { name: "Next milestone" }).parentElement!;
   expect(standaloneMilestone.textContent).toContain("1 item practised");
   expect(standaloneMilestone.textContent).not.toContain("Recall it correctly");
+});
+
+it("requests a refresh for legacy cached assessment metadata instead of promising self-check mastery", () => {
+  store.setDoc("settings", { enabledPackIds: [pack.id] });
+  store.setDoc("study.pack", pack.id);
+  store.setDoc("study.scope", { v: 1 });
+  const catalog = buildPanelCatalog(content.packs, { v: 1 });
+  expect(catalog.packs[0]!.capabilities[0]!.templates.every(template => template.assessment === "self")).toBe(true);
+  expect(parsePanelCatalog(catalog)).not.toBeNull();
+  for (const capability of catalog.packs[0]!.capabilities) for (const template of capability.templates) delete template.assessment;
+  expect(parsePanelCatalog(catalog)).toBeNull();
+  store.setDoc(PANEL_CATALOG_KEY, catalog);
+  render(createElement("div", null, createElement(TodayPanel), createElement(ProgressSummary)));
+  expect(screen.getByText(/Pack progress is unavailable here/u)).toBeTruthy();
+  expect(screen.queryByText("Items complete")).toBeNull();
+  expect(screen.queryByRole("link", { name: "Preview Daily Run" })).toBeNull();
+  const milestone = screen.getByRole("heading", { name: "Next milestone" }).parentElement!;
+  expect(milestone.textContent).toContain("Open practice");
+  expect(milestone.textContent).not.toContain("Recall it correctly");
 });

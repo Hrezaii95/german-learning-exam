@@ -1,6 +1,6 @@
 # Lane 2 status
 
-Updated by Lane 2 only. Lane worktree: `lane2/l2-8-authoring`. Base: `codex/live-alpha` with PR #1 documentation merged locally. Never merge to the live branch.
+Updated by Lane 2 only. Lane worktree: `lane2/l2-9-student-class-a`. Base: `codex/live-alpha` with PR #1 documentation merged locally. Never merge to the live branch.
 
 | PR | Title | State (planned / in progress / draft PR / merged / blocked) | Link | Notes |
 |---|---|---|---|---|
@@ -13,7 +13,7 @@ Updated by Lane 2 only. Lane worktree: `lane2/l2-8-authoring`. Base: `codex/live
 | L2-7 | Book companion | draft PR | [PR #29](https://github.com/Hrezaii95/german-learning-exam/pull/29) | Book controls, confirmed position/default scope, smart filters and printing integrated; Lane 1 surface hooks remain. |
 | L2-8 | CSV authoring and preview | draft PR | [PR #30](https://github.com/Hrezaii95/german-learning-exam/pull/30) | CSV CLI, opt-in preview and shared generation-checked capability index integrated; A2 data pack included. |
 | L2-8b | Data-only A2 everyday pack | draft PR | [PR #17](https://github.com/Hrezaii95/german-learning-exam/pull/17) | Exactly ten content files, no code; all content pending review. |
-| L2-9 | Student Class A tools | in progress | — | Receipts, challenges, assignment card and personal import implemented; integration underway. |
+| L2-9 | Student Class A tools | in progress | — | Student assignment memory, explicit receipts/challenges and personal import integrated; final release verification running. |
 
 ## L2-1 implementation plan
 
@@ -155,3 +155,9 @@ Needs Lane 1: mount the exported advance proposal/prompt on book/lesson surfaces
 CSV authoring validates and previews before create-only writes, preserves explicit book references, and marks imported content pending. The interactive authoring route requires WORTWERK_PREVIEW=1, resets real mechanics without progress/deck writes, and its export finalizer removes disabled preview artifacts before hashing. The build loader, CLI and browser now share the actual generated-template registry, formats, assessment and per-template minima. The prior static predicate index remains a compatible foundation API.
 
 Included the separately published, exactly-ten-content-file A2 reuse pack (PR #17); its generated capability index is refreshed for the shared registry. Pack validation passes: 40 items, 39 playable templates, pending/off by default. Root focused Wortwerk suite: 38 files / 324 tests pass; an additional installed-inventory test generates and grades every enabled task without pack/language branching. All three root typechecks and lint pass. Preview physical exclusion and browser proof remain to be verified against the final export. The unresolved A1 groups remain listed above; the A2 pack does not replace that migration.
+
+## L2-9 integration verification
+
+Personal CSV packs restore through installed profiles, stay pending/off without explicit opt-in, retain teacher overlays and quarantine unsupported newer personal content. Same-timestamp LWW winners refresh the selected content. Valid opened assignment links add a Today task through an idempotent effect; raw answers and assignment completion remain event-derived. Completed, unskipped results offer a checksum receipt on request, explicitly self-reported rather than verified. Blitz challenge links validate exact pack/scope/difficulty and expose a target; sharing is explicit and base-path aware. Teacher creation/receipts dashboards remain Lane 3.
+
+Integrated Class A/exploration regressions: 35 tests pass after explicit scope setup; agent Class A flow/challenge/Run batch: 38 tests pass. Expanded browser tests cover all ten mechanics, both pack choices and fresh-device backup round trips. Review fixed typed Error Hunt, full-source dictation transcripts, stale assessment caches, personal-document revision identity and competing recorder/source audio. All focused regressions for those fixes pass. Single-item Blitz now continues until time/strikes or the documented finite 200-task cap, rather than stopping after two cards. Full release gates run next, one at a time; nothing is marked ready or merged.
