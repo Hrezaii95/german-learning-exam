@@ -119,7 +119,9 @@ export function validatePack(value: unknown, language?: LanguageProfile): PackVa
     if (item.image) issues.push(...mediaPathIssues(item.image, `${path}.image`));
     for (const [form, audio] of Object.entries(item.pluralAudio ?? {})) issues.push(...mediaPathIssues(audio.src, `${path}.pluralAudio.${form}.src`));
     if (item.type === "lexeme") {
-      const key = item.lemma.normalize("NFC").trim().replace(/\s+/gu, " ").toLowerCase();
+      // Exact form + article + part of speech: homographs (sie/Sie, essen/Essen) and gender variants
+      // (der/die Verwandte) are distinct items; only a repeated identical entry is a duplicate.
+      const key = [item.lemma.normalize("NFC").trim().replace(/\s+/gu, " "), item.article ?? "", item.pos].join("\u0000");
       const previous = lemmas.get(key);
       if (previous) issues.push(diagnostic("DUPLICATE_HEADWORD", `${path}.lemma`, `Duplicate headword ${item.lemma}: items ${previous} and ${item.id}; merge the source family before migration`));
       else lemmas.set(key, item.id);

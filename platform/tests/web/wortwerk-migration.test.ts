@@ -101,13 +101,23 @@ describe("Wortwerk legacy vocabulary migration", () => {
     expect(gradeTextAnswer("deutschland", [item.lemma], profile, item.pos).outcome).not.toBe("correct");
   });
 
-  it("fails on NFC-equivalent, article-free, case-folded duplicates without mutating or returning partial content", () => {
-    const rows = [sourceRow({ id: "one", de: "die Tür", tone: "female" }), sourceRow({ id: "two", de: "Tu\u0308r", tone: "female" })];
+  it("fails on NFC-equivalent duplicates of the same form and category without mutating or returning partial content", () => {
+    const rows = [sourceRow({ id: "one", de: "die Tür", tone: "female" }), sourceRow({ id: "two", de: "die Tu\u0308r", tone: "female" })];
     const before = JSON.stringify(rows);
     expect(() => migrateA1Vocabulary(rows)).toThrow(A1MigrationError);
     expect(inspectA1Vocabulary(rows)).toEqual([expect.objectContaining({ code: "duplicate-headword", headword: "Tür", ids: ["one", "two"] })]);
     expect(JSON.stringify(rows)).toBe(before);
-    expect(() => migrateA1Vocabulary([sourceRow({ id: "one", de: "das Essen" }), sourceRow({ id: "two", de: "essen" })])).toThrow(/duplicate-headword/);
+    expect(() => migrateA1Vocabulary([sourceRow({ id: "one", de: "das Bild" }), sourceRow({ id: "two", de: "das Bild", meaning: "image" })])).toThrow(/duplicate-headword/);
+  });
+
+  it("keeps homographs and gender variants of one card as distinct items", () => {
+    const rows = [
+      sourceRow({ id: "noun", de: "das Essen", category: "Noun" }), sourceRow({ id: "verb", de: "essen", category: "Verb", tone: "plain" }),
+      sourceRow({ id: "she", de: "sie", category: "Pronoun", tone: "plain" }), sourceRow({ id: "formal", de: "Sie", category: "Pronoun", tone: "plain" }),
+      sourceRow({ id: "pronoun", de: "er", category: "Pronoun", tone: "plain" }), sourceRow({ id: "letter", de: "er", category: "Alphabet", tone: "plain" }),
+      sourceRow({ id: "m", de: "der Verwandte", category: "Family", tone: "male" }), sourceRow({ id: "f", de: "die Verwandte", category: "Family", tone: "female" }),
+    ];
+    expect(inspectA1Vocabulary(rows).filter(problem => problem.code === "duplicate-headword")).toEqual([]);
   });
 
   it("reports source rows with no attached lesson instead of guessing one", () => {

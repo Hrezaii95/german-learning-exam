@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "id": "de-a1-momente",
+  "language": "de",
+  "cefr": "A1",
+  "title": "Momente A1",
+  "units": [
+    {
+      "id": "lesson-1",
+      "title": "Lesson 1",
+      "canDo": [],
+      "bookRef": {
+        "book": "momente-a1",
+        "lesson": 1
+      }
+    },
+    {
+      "id": "lesson-2",
+      "title": "Lesson 2",
+      "canDo": [],
+      "bookRef": {
+        "book": "momente-a1",
+        "lesson": 2
+      }
+    },
+    {
+      "id": "lesson-3",
+      "title": "Lesson 3",
+      "canDo": [],
+      "bookRef": {
+        "book": "momente-a1",
+        "lesson": 3
+      }
+    },
+    {
+      "id": "lesson-4",
+      "title": "Lesson 4",
+      "canDo": [],
+      "bookRef": {
+        "book": "momente-a1",
+        "lesson": 4
+      }
+    },
+    {
+      "id": "lesson-5",
+      "title": "Lesson 5",
+      "canDo": [],
+      "bookRef": {
+        "book": "momente-a1",
+        "lesson": 5
+      }
+    },
+    {
+      "id": "lesson-6",
+      "title": "Lesson 6",
+      "canDo": [],
+      "bookRef": {
+        "book": "momente-a1",
+        "lesson": 6
+      }
+    },
+    {
+      "id": "lesson-7",
+      "title": "Lesson 7",
+      "canDo": [],
+      "bookRef": {
+        "book": "momente-a1",
+        "lesson": 7
+      }
+    },
+    {
+      "id": "lesson-8",
+      "title": "Lesson 8",
+      "canDo": [],
+      "bookRef": {
+        "book": "momente-a1",
+        "lesson": 8
+      }
+    },
+    {
+      "id": "lesson-9",
+      "title": "Lesson 9",
+      "canDo": [],
+      "bookRef": {
+        "book": "momente-a1",
+        "lesson": 9
+      }
+    },
+    {
+      "id": "lesson-10",
+      "title": "Lesson 10",
+      "canDo": [],
+      "bookRef": {
+        "book": "momente-a1",
+        "lesson": 10
+      }
+    },
+    {
+      "id": "lesson-11",
+      "title": "Lesson 11",
+      "canDo": [],
+      "bookRef": {
+        "book": "momente-a1",
+        "lesson": 11
+      }
+    },
+    {
+      "id": "lesson-12",
+      "title": "Lesson 12",
+      "canDo": [],
+      "bookRef": {
+        "book": "momente-a1",
+        "lesson": 12
+      }
+    }
+  ],
+  "maps": [
+    {
+      "id": "gender-plural",
+      "title": "Gender × plural",
+      "rows": "forms.pluralPattern",
+      "cols": "gender"
+    }
+  ],
+  "difficulty": "A1",
+  "review": {
+    "status": "pending-german-review"
+  },
+  "itemFiles": [
+    "items/lexemes.json"
+  ]
+}

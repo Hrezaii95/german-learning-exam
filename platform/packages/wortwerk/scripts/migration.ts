@@ -45,7 +45,10 @@ export function inspectA1Vocabulary(items: readonly SubjectVocabularyItem[]): Mi
     if (!item.id.trim() || !headword || !item.meaning.trim()) {
       problems.push({ code: "invalid-row", headword, ids: [item.id], message: "A stable id, nonempty headword and meaning are required." });
     }
-    const key = headword.replace(/\s+/gu, " ").toLocaleLowerCase(profile.locale);
+    // A true duplicate repeats the exact display form (article and capitalisation included) within one
+    // category. Homographs (sie/Sie, essen/das Essen, er pronoun/letter) and gender variants of one card
+    // (der/die Verwandte) are distinct learnable items, not data errors.
+    const key = `${item.de.normalize("NFC").trim().replace(/\s+/gu, " ")}\u0000${item.category}`;
     const previous = headwords.get(key);
     if (previous) previous.ids.push(item.id);
     else headwords.set(key, { headword, ids: [item.id] });
@@ -54,7 +57,7 @@ export function inspectA1Vocabulary(items: readonly SubjectVocabularyItem[]): Mi
     }
   }
   for (const value of headwords.values()) {
-    if (value.ids.length > 1) problems.push({ code: "duplicate-headword", ...value, message: `${value.headword} occurs more than once (NFC, article-free, case-folded comparison). Merge or disambiguate its canonical source rows.` });
+    if (value.ids.length > 1) problems.push({ code: "duplicate-headword", ...value, message: `${value.headword} occurs more than once with the same spelling, article and category (NFC comparison). Merge or disambiguate its canonical source rows.` });
   }
   return problems.sort((a, b) => a.code.localeCompare(b.code) || a.headword.localeCompare(b.headword, profile.locale));
 }
