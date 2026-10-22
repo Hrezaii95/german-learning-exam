@@ -116,7 +116,9 @@ describe("J1 activity runtime", () => {
     const html = renderToStaticMarkup(createElement(ActivityScreen, { lesson, activity }));
     const anchor = html.match(/<a\b[^>]*>Open course practice<\/a>/)?.[0];
     expect(anchor).toBeDefined();
-    const href = /href="([^"]*)"/.exec(anchor!)![1].replaceAll("&amp;", "&");
+    const rawHref = /href="([^"]*)"/.exec(anchor!)?.[1];
+    if (rawHref === undefined) throw new Error("Course practice link has no href");
+    const href = rawHref.replaceAll("&amp;", "&");
     const url = new URL(href, "https://test.local");
     expect(url.pathname).toBe("/practice");
     const context = parseNavigationContextParam(url.searchParams.get("nav"));
@@ -135,7 +137,9 @@ describe("J1 activity runtime", () => {
     const navigation = buildSearchNavigationContext("Architekt", activity.id);
     const html = renderToStaticMarkup(createElement(ActivityScreen, { lesson, activity, navigation }));
     const anchor = html.match(/<a\b[^>]*>Open course practice<\/a>/)![0];
-    const href = /href="([^"]*)"/.exec(anchor)![1].replaceAll("&amp;", "&");
+    const rawHref = /href="([^"]*)"/.exec(anchor)?.[1];
+    if (rawHref === undefined) throw new Error("Course practice link has no href");
+    const href = rawHref.replaceAll("&amp;", "&");
     const context = parseNavigationContextParam(new URL(href, "https://test.local").searchParams.get("nav"));
     expect(context).toEqual(navigation);
     expect(resolveBackHref(context)).toBe(resolveBackHref(navigation));

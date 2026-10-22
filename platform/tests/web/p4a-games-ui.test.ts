@@ -279,7 +279,9 @@ describe("P4A practice UI contracts", () => {
     expect(conversation.pathname).toBe("/conversation");
     expect(parseNavigationContextParam(conversation.searchParams.get("nav"))).toEqual(context);
     expect(html).toContain("game-selector__card--related");
-    expect(new URL(/href="([^"]*)"[^>]*>Open Play/.exec(html)![1], "https://test.local").search).toBe("");
+    const playHref = /href="([^"]*)"[^>]*>Open Play/.exec(html)?.[1];
+    if (playHref === undefined) throw new Error("Play link has no href");
+    expect(new URL(playHref, "https://test.local").search).toBe("");
   });
 
   it.each([
