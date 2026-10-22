@@ -14,6 +14,8 @@ import { CountryOverview } from "./CountryOverview";
 import {countryRecallQuestions,savedCountry as countryReviewItem} from "@/lib/study/sheet-recall";
 import {SheetRecall} from "./SheetRecall";
 import {appendNavigationContext} from "@/lib/content/navigation-context";
+import {cardPathsPlaySelection} from "@/lib/study/play-links";
+import {COUNTRIES_SHEET_PATH} from "@/lib/study/sheet-routes";
 
 const groups = Object.keys(countryGroups) as CountryGroup[];
 export function CountryCheatSheet({ speech, cardLinks }: { speech: Record<string, string>; cardLinks: Record<string, string> }) {
@@ -36,7 +38,7 @@ export function CountryCheatSheet({ speech, cardLinks }: { speech: Record<string
   const study = useStudy();
   const savedCountry=(country:Country)=>countryReviewItem(country,study?.dictionary,speech);
   const cardHref=(id:string)=>appendNavigationContext(cardLinks[id]!,{entryContext:"hub",returnPath:"/cheat-sheets/countries",resultId:`country-${id}`});
-  const {matches}=useStudyScope();
+  const {scope:studyScope,ready,matches}=useStudyScope();
   const scopedCountries=countries.filter(c=>matches(countryStudyTags(c,study?.dictionary)));
   const current = countries.find(c => c.id === chosen)!;
   const visible = scopedCountries.filter(c => (filter === "all" || (filter === "saved" ? study?.state.saved[`country-${c.id}`] : c.group === filter)) &&
@@ -44,7 +46,7 @@ export function CountryCheatSheet({ speech, cardLinks }: { speech: Record<string
   const clip = (text: string) => <LineAudio text={text} src={speech[text]} compact />;
   const questions=countryRecallQuestions(visible,study?.dictionary,speech);
 
-  return <CheatSheetFrame current="countries" className="country-sheet" eyebrow="Your language passport" title="Countries, without the guesswork." lead={<>Learn the country. Keep its color. Let <b lang="de">aus</b> change the article.</>}>
+  return <CheatSheetFrame current="countries" playSelection={cardPathsPlaySelection(ready&&(!study||study.ready)?studyScope:null,visible.map(country=>[cardLinks[country.id],`${COUNTRIES_SHEET_PATH}#country-${country.id}`]))} className="country-sheet" eyebrow="Your language passport" title="Countries, without the guesswork." lead={<>Learn the country. Keep its color. Let <b lang="de">aus</b> change the article.</>}>
     <nav className="country-jump" aria-label="Cheat sheet sections">
       <Link href="#country-overview">Map & flag overview</Link>
       <Link href="#country-patterns">The 4 patterns</Link><Link href="#country-passport">Build a sentence</Link><Link href="#country-index">All {countries.length} countries</Link><Link href="#country-practice">Test yourself</Link>

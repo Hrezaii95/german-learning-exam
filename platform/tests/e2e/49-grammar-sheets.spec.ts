@@ -89,13 +89,27 @@ for(const sheet of ["verbs","questions"])test(`${sheet} prints its live pattern 
   if(sheet==="verbs")await page.getByRole("combobox",{name:"Choose a verb",exact:true}).selectOption("sein");
   else await region.getByRole("button",{name:"W-question",exact:true}).click();
   const result=region.locator(sheet==="verbs"?".verb-stage":".question-builder-result");
-  const text=await result.innerText();
+  const teaching=result.locator(sheet==="verbs"?":scope > small, :scope > p":":scope > p, .question-builder-answer > small, .question-builder-answer > p");
+  await expect(teaching).toHaveCount(sheet==="verbs"?3:6);
+  await expect(result.locator(":scope > p").nth(sheet==="verbs"?0:1)).toHaveText(sheet==="verbs"?"ich bin":"Wohnst du in Berlin?",{useInnerText:true});
+  const teachingText=await teaching.allInnerTexts();
+  expect(teachingText.every(text=>text.trim().length>0)).toBe(true);
+  await expect(result.locator(".study-save")).toHaveCount(sheet==="verbs"?1:2);
   await printLiveSheet(page,testInfo,sheet,async()=>{
     await expect(region).toBeVisible();
-    await expect(result).toContainText(text);
+    for(const leaf of await teaching.all())await expect(leaf).toBeVisible();
+    await expect(teaching).toHaveText(teachingText,{useInnerText:true});
+    for(const control of await region.locator(".sheet-controls,.study-save,.study-audio,.study-audio-button").all())await expect(control).toBeHidden();
     await expect(region.locator(sheet==="verbs"?".verb-anatomy":".question-rail")).toBeVisible();
-    if(sheet==="verbs")await expect(region.locator(".verb-person-grid > button")).toHaveCount(7);
+    if(sheet==="verbs"){
+      const people=region.locator(".verb-person-grid > button");
+      await expect(people).toHaveCount(6);
+      await expect(people.locator("small")).toHaveText(["ich","du","er / sie / es","wir","ihr","sie / Sie"],{useInnerText:true});
+      await expect(people.locator("strong")).toHaveText(["bin","bist","ist","sind","seid","sind"],{useInnerText:true});
+      for(const leaf of await people.locator("small,strong").all())await expect(leaf).toBeVisible();
+    }
   });
+  await expect(teaching).toHaveText(teachingText,{useInnerText:true});
   if(sheet==="verbs")await expect(page.getByRole("combobox",{name:"Choose a verb",exact:true})).toHaveValue("sein");
   else await expect(region.getByRole("button",{name:"Yes/no question",exact:true})).toHaveAttribute("aria-pressed","true");
 });

@@ -7,8 +7,9 @@ import {sheetDestination,sheetDestinations,type SheetDestinationId} from "@/lib/
 import {initialSheetBrowse,sheetBrowseQuery,type SheetBrowse} from "@/lib/study/sheet-browse";
 import {sheetTags} from "@/lib/study/sheet-scope";
 import type {SheetId} from "@/lib/study/sheet-topics";
+import {sheetPlaySelection,unavailablePlaySelection,type PlaySelection} from "@/lib/study/play-links";
 import {SubjectIcon} from "./SubjectIllustration";
-import {StudyScopeNotice} from "./StudyScope";
+import {StudyScopeNotice,useStudyScope} from "./StudyScope";
 import "../../app/cheat-sheets/subjects/subjects.css";
 import "./CheatSheetFrame.css";
 
@@ -54,14 +55,17 @@ type CheatSheetFrameProps=Omit<HTMLAttributes<HTMLDivElement>,"title">&{
   children:ReactNode;
   printNote?:ReactNode;
   browse?:SheetBrowse|undefined;
+  playSelection?:PlaySelection|null;
 };
 
-export function CheatSheetFrame({current,eyebrow,title,lead,className="",children,printNote,browse,...attributes}:CheatSheetFrameProps){
+export function CheatSheetFrame({current,eyebrow,title,lead,className="",children,printNote,browse,playSelection,...attributes}:CheatSheetFrameProps){
+  const {scope,ready}=useStudyScope();
+  const practice=!ready?unavailablePlaySelection("Loading your saved study selection…"):playSelection===undefined?sheetPlaySelection(current,scope):playSelection??unavailablePlaySelection();
   return <div {...attributes} className={`subject-sheet study-workspace cheat-sheet-frame ${className}`}>
     <CheatSheetNavigation current={current} browse={browse}/>
     {sheetDestination(current).kind==="workshop"&&<StudyScopeNotice tags={sheetTags[current as SheetId]}/>}
     <header className="subject-page-heading"><div className="subject-heading-copy"><p className="study-eyebrow">{eyebrow}</p><h1>{title}</h1><p>{lead}</p></div><div className="subject-heading-mark"><SubjectIcon subject={sheetDestination(current).subject}/></div></header>
-    <div className="subject-page-actions subject-print-hide"><p>{printNote??"Keep a copy of this sheet for your study notes."}</p><button type="button" className="study-secondary" onClick={()=>window.print()}>Print / save as PDF</button></div>
+    <div className="subject-page-actions subject-print-hide"><p>{printNote??"Keep a copy of this sheet for your study notes."}</p>{practice.href===null?<div className="sheet-play-action"><button type="button" className="study-primary" disabled>Play this sheet</button><small role="status">{practice.reason}</small></div>:<div className="sheet-play-action"><Link prefetch={false} href={practice.href} className="study-primary">Play this sheet</Link><small>{practice.itemCount} practice entries{practice.unavailableItemCount?` · ${practice.unavailableItemCount} selected entries are unavailable for this practice selection`:""}. Enable a content pack in Play before starting.</small></div>}<button type="button" className="study-secondary" onClick={()=>window.print()}>Print / save as PDF</button></div>
     {children}
   </div>;
 }
