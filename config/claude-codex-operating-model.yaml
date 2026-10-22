@@ -162,6 +162,43 @@ scope:
       execution_plan: plans/lesson-04-interactive-book-operation.md
       stop_condition: "Release passes technical checks and is verified at the live URL."
 
+    - id: SO-003
+      decided_at: "2026-10-22"
+      decided_by: owner (in Claude Code chat)
+      trigger: >-
+        Owner approved the scope change proposed in docs/games/competitive-analysis-book-companion.md
+        (teacher portal, multi-user sync, class mode), chose Cloudflare hosting at german.learnilabs.com,
+        asked for accounts (username/password now; email and Google later) with 5 seed users, and asked for
+        three parallel Codex implementation sessions.
+      change: expand
+      added_scope:
+        - codex-implementation-lane-1-app-consistency-and-audit-fixes
+        - codex-implementation-lane-2-wortwerk-game
+        - codex-implementation-lane-3-cloudflare-accounts-sync-dashboards
+        - cloudflare-workers-d1-infrastructure-and-deploy-workflow
+      quality_benefit: >-
+        Parallel delivery with fixed file ownership and shared contracts (docs/lanes/CONTRACTS.md);
+        each lane runs the full repo gates before every PR.
+      cost_impact: >-
+        Codex usage rises to 3 concurrent long-running sessions. Cloudflare Workers Paid plan
+        (about 5 USD per month) is recommended for password-hashing CPU time.
+      files_affected: docs/lanes/README.md (ownership map)
+      amendment_2026-10-22: >-
+        Owner is away and wants about 5 minutes of work on return. Lanes work on lane branches and combine their
+        work into one integration branch (integration/all) with all gates green. The owner reviews and merges ONE PR
+        (integration/all -> codex/live-alpha), then adds 3 secrets and runs the "Go live (Cloudflare)" workflow
+        (docs/platform/GO-LIVE.md). Lanes still never merge into codex/live-alpha.
+      preserved_limits:
+        - no-merge-to-codex-live-alpha-without-owner-approval
+        - do-not-claim-human-language-or-listening-approval
+        - canonical-german-content-promotion-stays-owner-gated
+        - no-secrets-or-passwords-in-the-repository
+        - plan-baton-and-register-written-only-by-the-orchestrator
+      execution_plan: docs/lanes/README.md
+      stop_condition: >-
+        All three lane plans are complete and verified live at german.learnilabs.com, or the owner
+        pauses a lane. Revert to the default split if lane output needs more rework than it saves.
+
 organization:
   orchestrator:
     id: CC-ORCH
