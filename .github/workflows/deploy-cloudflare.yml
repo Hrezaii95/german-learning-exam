@@ -1,0 +1,166 @@
+# L3-1: static hosting only. D1 lookup/migrations join this workflow with L3-2.
+# All gates and export variants run sequentially: build:pages temporarily parks
+# proxy.ts and rewrites dynamicParams, so no build/typecheck may overlap it.
+name: Deploy Cloudflare
+
+on:
+  push:
+    branches:
+      - codex/live-alpha
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: cloudflare-german-learning-exam
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      # Never use secrets directly in a job-level if. A missing owner setup is
+      # a successful, visible skip rather than a failed release.
+      - name: Check Cloudflare owner configuration
+        id: cloudflare
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          RELEASE_REF: ${{ github.ref }}
+        run: |
+          if [ "$RELEASE_REF" != "refs/heads/codex/live-alpha" ]; then
+            echo "::notice::Cloudflare deployment skipped: run this workflow on codex/live-alpha."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "Cloudflare deployment skipped: this run is not on codex/live-alpha." >> "$GITHUB_STEP_SUMMARY"
+          elif [ -z "$CLOUDFLARE_API_TOKEN" ] || [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
+            echo "::notice::Cloudflare deployment skipped: add CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID. See docs/platform/GO-LIVE.md."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "Cloudflare deployment skipped: owner configuration is incomplete. See docs/platform/GO-LIVE.md." >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Checkout
+        if: steps.cloudflare.outputs.ready == 'true'
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          persist-credentials: true
+
+      - name: Remove checkout credentials and isolate archived gitlink
+        if: steps.cloudflare.outputs.ready == 'true'
+        run: |
+          git config --local --unset-all http.https://github.com/.extraheader || {
+            checkout_auth_status=$?
+            if [ "$checkout_auth_status" -ne 5 ]; then exit "$checkout_auth_status"; fi
+          }
+          # Change only the ephemeral runner index; never commit this removal.
+          git update-index --force-remove -- samples/german-learning-ui-samples
+
+      - name: Setup Node 22
+        if: steps.cloudflare.outputs.ready == 'true'
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: platform/package-lock.json
+
+      - name: Install
+        if: steps.cloudflare.outputs.ready == 'true'
+        working-directory: platform
+        run: npm ci
+
+      - name: Check application
+        if: steps.cloudflare.outputs.ready == 'true'
+        working-directory: platform
+        run: npm run check
+
+      - name: Build web (normal)
+        if: steps.cloudflare.outputs.ready == 'true'
+        working-directory: platform
+        run: npm run build:web
+
+      - name: Audit production dependencies
+        if: steps.cloudflare.outputs.ready == 'true'
+        working-directory: platform
+        run: npm run audit:prod
+
+      - name: Smoke normal web routes
+        if: steps.cloudflare.outputs.ready == 'true'
+        working-directory: platform
+        run: npm run smoke:web-routes
+
+      - name: Smoke default dev
+        if: steps.cloudflare.outputs.ready == 'true'
+        working-directory: platform
+        run: npm run smoke:dev
+
+      - name: Audit pronunciation assets
+        if: steps.cloudflare.outputs.ready == 'true'
+        run: node tools/audit-alpha-tts.mjs
+
+      - name: Verify GitHub Pages export and all release audits
+        if: steps.cloudflare.outputs.ready == 'true'
+        working-directory: platform
+        run: npm run gates:pages
+
+      - name: Audit source attribution in exported Pages HTML
+        if: steps.cloudflare.outputs.ready == 'true'
+        run: node tools/audit-attribution.mjs
+
+      - name: Typecheck edge
+        if: steps.cloudflare.outputs.ready == 'true'
+        working-directory: platform
+        run: npm run typecheck:edge
+
+      - name: Test edge
+        if: steps.cloudflare.outputs.ready == 'true'
+        working-directory: platform
+        run: npm run test:edge
+
+      - name: Build root-path Cloudflare export
+        if: steps.cloudflare.outputs.ready == 'true'
+        working-directory: platform
+        run: npm run build:cloudflare
+
+      - name: Smoke root-path Cloudflare export
+        if: steps.cloudflare.outputs.ready == 'true'
+        working-directory: platform
+        run: npm run smoke:cloudflare
+
+      - name: Dry-run Worker deploy
+        if: steps.cloudflare.outputs.ready == 'true'
+        working-directory: platform
+        run: npm run deploy:cloudflare -- --dry-run
+
+      # Full source-manifest validation needs 454 private originals and stays
+      # a local owner-machine gate (orchestrator decision 2026-10-22).
+
+      - name: Deploy Worker and custom domain
+        if: steps.cloudflare.outputs.ready == 'true'
+        working-directory: platform
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: npm run deploy:cloudflare -- --var "BUILD_SHA:$GITHUB_SHA"
+
+      - name: Smoke live pages and API
+        if: steps.cloudflare.outputs.ready == 'true'
+        working-directory: platform
+        run: node apps/edge/scripts/smoke-live.mjs --origin https://german.learnilabs.com --version "$GITHUB_SHA"
+
+      - name: Release summary
+        if: always() && steps.cloudflare.outputs.ready == 'true'
+        env:
+          RELEASE_STATUS: ${{ job.status }}
+          RELEASE_SHA: ${{ github.sha }}
+        run: |
+          {
+            echo "## Cloudflare static hosting"
+            echo "- URL: https://german.learnilabs.com"
+            echo "- Commit: $RELEASE_SHA"
+            echo "- Result: $RELEASE_STATUS"
+            echo "- GitHub Pages remains a separate deployment."
+            echo "- Accounts, D1 migrations and seed accounts are later Lane 3 items."
+          } >> "$GITHUB_STEP_SUMMARY"

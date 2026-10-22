@@ -1,0 +1,13 @@
+{
+  "name": "@german-learning/edge",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "dev": "wrangler dev",
+    "dry-run": "wrangler deploy --dry-run",
+    "deploy": "wrangler deploy"
+  }
+}
