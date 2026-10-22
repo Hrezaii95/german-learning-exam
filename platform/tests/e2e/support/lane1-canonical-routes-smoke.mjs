@@ -49,6 +49,12 @@ function publicTypedIdSlug(id) {
     .join("")}`;
 }
 
+// Next normalizes production proxy URLs before user proxy code runs. Compare
+// query semantics: every key plus its ordered values, including empty/duplicates.
+function queryEntriesByKey(params) {
+  return [...new Set(params.keys())].sort().map(key => [key, params.getAll(key)]);
+}
+
 async function fetchStatus(path, { redirect = "manual" } = {}) {
   const res = await fetch(`${BASE}${path}`, { redirect });
   const location = res.headers.get("location");
@@ -368,7 +374,14 @@ async function runSmoke() {
     const location = new URL(response.location, BASE);
     assert(location.origin === origin.origin, `${alias} proxy escaped the production origin: ${response.location}`);
     assert(location.pathname === destination, `${alias} redirects to ${location.pathname} instead of ${destination}`);
-    assert(location.search === search && !location.hash, `${alias} proxy changed the original query bytes`);
+    assert(
+      JSON.stringify(queryEntriesByKey(location.searchParams)) === JSON.stringify(queryEntriesByKey(new URLSearchParams(search))),
+      `${alias} proxy changed query keys, values, multiplicity or per-key value order`,
+    );
+    assert(!location.hash, `${alias} proxy Location unexpectedly contains a hash`);
+    if (location.search !== search) {
+      results.push(`OK framework query normalization ${alias}: requested=${search} Location=${location.search}; all keys and ordered values retained`);
+    }
     const followed = await fetchStatus(`${location.pathname}${location.search}`);
     assert(followed.status === 200 && !followed.location, `${alias} must reach canonical 200 in exactly one redirect`);
     assert(followed.url === location.href, `${alias} did not reach its actual Location: ${followed.url}`);
