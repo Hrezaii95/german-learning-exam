@@ -96,6 +96,10 @@ jobs:
         working-directory: platform
         run: npm run smoke:dev
 
+      - name: Install ffprobe for the pronunciation audit
+        if: steps.cloudflare.outputs.ready == 'true'
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq --no-install-recommends ffmpeg
+
       - name: Audit pronunciation assets
         if: steps.cloudflare.outputs.ready == 'true'
         run: node tools/audit-alpha-tts.mjs
