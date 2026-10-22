@@ -43,10 +43,20 @@ test("hobbies and time print their current frame and clock",async({page},info)=>
     await input.selectOption(sheet==="hobbies"?"1":"3");
     if(sheet==="time")await page.getByRole("combobox",{name:"Clock minute",exact:true}).selectOption("30");
     const result=page.locator(sheet==="hobbies"?".hobby-result":".clock-digital");
+    const teaching=sheet==="hobbies"?result.locator(":scope > p"):result;
+    await expect(teaching).toHaveCount(sheet==="hobbies"?2:1);
+    await expect(teaching.first()).toHaveText(sheet==="hobbies"?"Du kannst sehr gut schwimmen.":"03:30",{useInnerText:true});
+    const teachingText=await teaching.allInnerTexts();
+    expect(teachingText.every(text=>text.trim().length>0)).toBe(true);
     const text=await result.innerText();
+    const lab=page.locator(sheet==="hobbies"?"#ability-lab":"#clock-lab");
+    await expect(lab.locator(".study-save")).toHaveCount(1);
     await printLiveSheet(page,info,sheet,async()=>{
       await expect(result).toBeVisible();
-      await expect(result).toContainText(text);
+      for(const leaf of await teaching.all())await expect(leaf).toBeVisible();
+      await expect(teaching).toHaveText(teachingText,{useInnerText:true});
+      await expect(input).toBeHidden();
+      for(const control of await lab.locator(".study-save,.study-audio,.study-audio-button").all())await expect(control).toBeHidden();
       await expect(page.locator(sheet==="hobbies"?".hobby-frame":".clock-layout svg").first()).toBeVisible();
     });
     await expect(input).toHaveValue(sheet==="hobbies"?"1":"3");

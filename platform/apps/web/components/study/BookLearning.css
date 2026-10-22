@@ -245,6 +245,14 @@
     align-items: center;
     margin-bottom: .6rem;
   }
+  .shell-main:has(.book-workspace) .study-toolbar > .shell-account {
+    grid-column: 1 / -1;
+  }
+  .book-workspace .book-header {
+    margin-top: 0;
+    margin-bottom: .25rem;
+  }
+
   .shell-main:has(.book-workspace) .study-dictionary-launch {
     position: static;
     width: auto;

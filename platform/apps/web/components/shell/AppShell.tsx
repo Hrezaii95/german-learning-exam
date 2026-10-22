@@ -107,7 +107,7 @@ export function AppShell({
           <header className="study-toolbar">
             {current!=="settings"&&current!=="references"&&<StudyScopeControl/>}
             <DictionaryLauncher/>
-            <AccountSlot/>
+            <div className="shell-account"><AccountSlot/></div>
           </header>
           {children}
         </main>
