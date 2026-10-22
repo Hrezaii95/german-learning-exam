@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import worker, { type Env } from "../src/index.js";
+import worker, { type Env } from "../src/app.js";
 import {
   API_CONTENT_SECURITY_POLICY,
   SECURITY_HEADERS,

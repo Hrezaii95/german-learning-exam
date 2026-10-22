@@ -1,5 +1,6 @@
 import type { NextConfig } from "next";
 import path from "node:path";
+import { existsSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { PAGES_BASE_PATH } from "./lib/content/pages-base-path";
 import { assertPagesExportEnv } from "./lib/content/pages-export-env";
@@ -55,7 +56,25 @@ const nextConfig: NextConfig = {
         assetPrefix: isRootExport ? "" : pagesBase,
       }
     : {}),
-  webpack: (config) => {
+  webpack: (config, { isServer }) => {
+    // Lane 3: persistent account/sync lifecycle on every client route, with a
+    // Pages-only readiness banner. Neither requires editing Lane 1's shell.
+    const accountRuntime = path.join(here, "lib/account/runtime.ts");
+    const moveBanner = path.join(here, "lib/account/move-banner.ts");
+    const platformEntries = [
+      ...(existsSync(accountRuntime) ? [accountRuntime] : []),
+      ...(isPagesExport && existsSync(moveBanner) ? [moveBanner] : []),
+    ];
+    if (!isServer && platformEntries.length) {
+      const entry = config.entry;
+      config.entry = async () => {
+        const entries = typeof entry === "function" ? await entry() : entry ?? {};
+        const main = entries["main-app"];
+        if (Array.isArray(main)) entries["main-app"] = [...main, ...platformEntries];
+        else throw new Error("Next client entry changed: recheck persistent account and migration bootstrap");
+        return entries;
+      };
+    }
     config.resolve = config.resolve ?? {};
     config.resolve.extensionAlias = {
       ...(config.resolve.extensionAlias ?? {}),

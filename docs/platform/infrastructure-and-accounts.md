@@ -53,8 +53,8 @@ Status: approved (ADR-018). Implemented by **Lane 3** (`docs/lanes/lane-3-platfo
 ## 3. Authentication
 
 ### 3.1 Now: username + password
-- **Library:** use an established library that runs on Workers + D1 and supports password, email-link and Google OAuth providers. Evaluate Better Auth first. If it can't meet the requirements below on Workers, implement the same contract by hand with WebCrypto. Record the choice as ADR-020.
-- **Password hashing:** PBKDF2-HMAC-SHA256 via WebCrypto, 600,000 iterations, 16-byte random salt, stored as `pbkdf2$sha256$600000$<salt>$<hash>` so it can be upgraded later. This needs more CPU than the Workers free tier allows, so the **Workers Paid plan** is required.
+- **Library:** use an established library that runs on Workers + D1 and supports password, email-link and Google OAuth providers. Evaluate Better Auth first. If it can't meet the requirements below on Workers, implement the same contract by hand with WebCrypto. The implementation choice is recorded in [ADR-020](ADR-020-auth.md).
+- **Password hashing:** **Argon2id** (memory 19 MiB, iterations 2, parallelism 1) via WASM in the Worker, stored as a PHC string so it can be upgraded later. WebCrypto PBKDF2 is capped at 100k iterations in Workers, so 600k is not possible there. The fallback is PBKDF2-SHA256 at 100k plus a server-side pepper; see Lane 3 orchestrator decision 3. The **Workers Paid plan** is required (CPU time, and about 27k static files).
 - **Sessions:** cookie `__Host-gl_session`, 32 random bytes, `HttpOnly; Secure; SameSite=Lax; Path=/`. Only its SHA-256 is stored. Rotate it at login and on privilege change. Logout revokes it.
 - **CSRF:** every state-changing `/api/*` request must carry `Origin` = `https://german.learnilabs.com` (or the preview origin) and a JSON content type.
 - **Brute force:** rate-limit login per username and per IP with a D1 counter (exponential lock-out after 5 failures). Turnstile comes later, behind a flag. Fail with a generic "wrong username or password".
