@@ -113,25 +113,45 @@ Corners, Sort, Build, Order, Gap, Match, Hotspot, Listen (wrapper), Record, Writ
 ## 2 · Engagement spec (with guard-rails)
 - **Sessions:**
   - Daily Run: 5–7 min, built by extending `mission.ts`, interleaving skills, with at most 2 consecutive tasks of the same template.
-  - Snack mode (1 min).
+    - **Adaptive task choice:** the scheduler picks the item, then the item's weakest or most overdue *dimension* (§ Progress) picks the template. Someone who knows *Buch* but forgets *Bücher* gets a plural task, not another meaning question.
+    - **Personal preview:** before starting, show what the run contains and why, e.g. "5 new · 8 reviews · 3 tricky plurals · finishes 'At home'".
+    - **Mistake comeback:** a missed task returns 3–6 cards later in a *different format* that tests the same dimension (a missed plural pattern comes back as Forge). Getting it right then shows a small "You fixed this" moment and counts as a corrected error.
+    - **Finite finisher:** if misses remain, offer an optional "Fix these N words · ~45 s" at the end.
+  - Quick review (1 min, at least 5 answers): the busy-day option. It is enough to keep the streak (see Habit).
   - Free Play by skill, map cell, unit or pack.
   - Boss battle at the end of each unit (mixed skills, 3 strikes).
-  - Blitz (60 s, 3 strikes, ghost of your personal best).
+  - Blitz (60 s, 3 strikes, ghost of your personal best). Personal bests are stored per scope + difficulty, so the ghost only compares like with like.
   - Tagesrätsel: 6 items chosen by a hash of the local date, the same for everyone; share grid 🟦🟥🟩⬜.
   - Strikes exist ONLY in Boss and Blitz.
 - **Progress:**
-  - Item levels 0–5. Reaching level 3+ requires correct recall on a later calendar day; a lapse drops one level, never below 1.
+  - **Per-dimension word progress** (replaces a single level per item):
+    - Each item has one segment per *dimension* it supports, derived from its capabilities (noun: Meaning · Gender · Plural · Listening; verb: Meaning · Forms · Listening; sentence: Order · Listening; and so on). This is data-driven, so new packs get the right segments automatically.
+    - Each segment goes New → Learning → **Secured**. Secured needs correct *recall* (not recognition) on at least 2 different calendar days.
+    - A secured milestone is **permanent**. When the scheduler says a segment is due, or a review is missed, the token shows a subtle "due" dot instead of taking progress away. The skills radar and readiness meters use current recall strength, so they stay honest.
+    - An item is **Complete** when all its segments are secured, and **Gold** when it is still recalled after 30+ days.
+  - **Format ladder per segment:** recognition (4 options) → reduced cues (2 options, the missing ending only, or a partial word) → free recall (typed, Forge, no options). The ladder moves up as the segment strengthens and down after a miss. The illustration is offered as a hint in meaning tasks, and a hinted answer counts as hinted.
+  - **Next milestone:** Today and the map always show the nearest achievable goal in the current scope, e.g. "die × -(e)n · 9 / 12 secured · 3 more to complete this pattern". Completing it unlocks the rule card and one short challenge with an unfamiliar word from the same pattern.
   - Per-skill levels and a skills radar.
   - CEFR journey with unit can-do statements.
   - Per-pack maps rendered from `pack.maps`.
   - "Words known" counter.
   - Weekly recap, plus a year-in-review stub.
 - **Habit:**
-  - Streak (goal met by local midnight, 03:00 grace).
+  - **Streak and daily goal are separate.** The streak is kept by any Quick review or Run (one meaningful session) by local midnight, with a 03:00 grace. The daily goal ring (e.g. 1 full Run) is tracked on its own. Duolingo's A/B test of this separation reported +3.3% day-14 retention (blog: "Improving the streak"); our own effect is unproven.
   - Earned freezes: 1 per 7 days, hold 2.
-  - 7-day check-in row; one optional reminder a day.
+  - 7-day check-in row; one optional reminder a day at a time the learner chooses.
+    - **Platform limit:** a static web app cannot reliably schedule a notification without a push server; Chrome's Notification Triggers API has not shipped.
+    - Phase A: offer "Add a daily reminder to my calendar" (a generated `.ics` file with a recurring event and the app link), plus in-app nudges.
+    - Phase B (backend): web push, with the text taken from a real due item, e.g. "Remember the plural of Buch? Your review is ready." Never put the answer in the notification.
   - Exam countdown + a readiness meter per exam section.
   - An explicit "Done for today" state, and diminishing XP after 3 Runs a day.
+- **Answer feedback (the reward happens at the moment of answering):**
+  - A correct card snaps into its corner. On gender tasks, the neutral illustration turns into its gender colour.
+  - In Forge, the umlaut dots settle and the ending tiles lock into the word.
+  - When a word advances, its segment fills and the token visibly returns to the map.
+  - An optional haptic tick uses `navigator.vibrate` where supported (Android browsers; iOS Safari does not support it), and optional sounds. Both are off when reduced motion is on, and every drag has a tap alternative.
+- **Results screen:** lead with personal change, not just a score. For example: "You remembered 8 words from last week · You fixed Bücher and Äpfel · 3 words left to finish 'At home'". Then show "Back to map" and ONE purposeful optional challenge.
+- **Learning metrics (private, on the device):** 7-day return, run completion and **1-week delayed recall** (accuracy on segments tested 7+ days after they were last seen). Show them to the learner in Progress. Aggregate A/B testing needs consent + a backend (Phase B) and is out of scope until approved.
 - **Rewards:**
   - XP: retrieval 10, hinted 5, corrected error 5, listening 3, speaking cycle 3, writing submission 8, detective/boss 30.
   - Combo ×2 from 5 in a row, ×3 from 10.
@@ -191,6 +211,14 @@ Corners, Sort, Build, Order, Gap, Match, Hotspot, Listen (wrapper), Record, Writ
   - assignment-link encode/decode round trip, including old link versions;
   - receipt checksums;
   - CSV import validation (missing fields, duplicates, umlauts);
+  - per-dimension progress: segments derived from capabilities, "secured" only after recall on 2 different days, milestones never removed, due dots set by the scheduler;
+  - adaptive selection: the weakest or most overdue dimension picks the template;
+  - format ladder up and down;
+  - mistake comeback uses a different template for the same dimension within 3–6 cards;
+  - streak kept by a Quick review while the goal ring stays incomplete;
+  - Blitz bests keyed by scope + difficulty;
+  - `.ics` reminder file validity (RFC 5545, recurring, local time zone);
+  - on-device metrics (7-day return, completion, 1-week delayed recall) computed from fixture histories;
   - **no-giveaway:** for every template and fixture item, render the `question` state and assert that the DOM (text, `aria-*`, `alt`, `title`, `class`, `data-*`) contains none of the item's `revealFields` values, no gender tone class or colour token when gender is tested, and no highlight-chip class when the plural is tested; plus an option-position distribution test across 1,000 seeded tasks.
 - **The zero-code reuse test:**
   - `tests/fixtures/packs/de-b2-sample` (~20 items covering every item type, with a fake `B2` difficulty) and `tests/fixtures/languages/xx.json` (a toy second language with two genders).

@@ -57,7 +57,7 @@ Wortwerk can be the one that does.
 | 14 | Import own content | LingQ, Quizlet, phase6 user sets | teacher-extra data only | adopt | a CSV / paste importer for teacher and personal word lists, tagged by lesson |
 | 15 | Short grammar clips | Hueber interaktiv | no (cheat sheets instead) | **link, don't copy** | deep links to the matching Hueber interaktiv page where the learner owns it; our cheat sheets stay the summary |
 | 16 | Duels / head-to-head | Duolingo, Gimkit | no | phase B | asynchronous "beat my score" challenge links with no backend; live duels later |
-| 17 | Push reminders | all of them | no | adopt | local notification in the installed app; real web push needs a backend |
+| 17 | Push reminders | all of them | no | adopt | without a backend, a web app cannot reliably schedule notifications (Chrome's Notification Triggers API never shipped), so phase A offers a calendar `.ics` reminder plus in-app nudges; phase B adds web push |
 | 18 | Exam simulation | Busuu (certificates), test-prep apps | planned | keep | Goethe/telc-style sections per level pack |
 
 ---

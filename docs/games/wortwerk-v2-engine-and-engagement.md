@@ -16,7 +16,7 @@ The aim is a habit people come back to every day. Every loop below is tied to ev
 
 | Stage | What the learner meets |
 |---|---|
-| **Trigger** | one smart reminder at their chosen time ("6 words are ready · exam in 23 days"); the streak flame; the word of the day; a story cliffhanger |
+| **Trigger** | one reminder at their chosen time (a calendar reminder at first; push notifications such as "6 words are ready · exam in 23 days" once there is a backend); the streak flame; the word of the day; a story cliffhanger |
 | **Action** | one tap on **Start Daily Run**: 5–7 min, with a 1-minute **Snack** mode for busy days |
 | **Variable reward** | level-ups on the map, a surprise **bonus round**, a collectible card (rarer for harder words), the next story chapter unlocking, a weekly recap |
 | **Investment** | words saved from reading, a personal deck, own example sentences, chosen goals, an exam date, story progress, the collection: things that would be lost by leaving |
@@ -25,7 +25,7 @@ The aim is a habit people come back to every day. Every loop below is tied to ev
 
 | Area | Features | Inspired by |
 |---|---|---|
-| **Habit** | daily streak; earned freezes (1 per 7 days, hold 2); 7-day check-in row; smart reminder; Snack mode; installable PWA that works offline | Duolingo, Headspace, Apple Fitness rings |
+| **Habit** | daily streak; earned freezes (1 per 7 days, hold 2); 7-day check-in row; one reminder (calendar `.ics` now, push with a backend); Snack mode; installable PWA that works offline | Duolingo, Headspace, Apple Fitness rings |
 | **Goal and urgency** | an exam countdown with a **readiness meter** for each exam section; a daily minutes goal; "can-do" statements unlocked by unit ("I can order in a café") | Goethe/telc preparation apps, Babbel |
 | **Visible progress** | the CEFR journey path A1 → C2; "You know 1,240 words"; a skills radar; per-pack maps; a weekly recap and year-in-review | Duolingo path, Strava, Spotify Wrapped |
 | **Collection** | illustrated word cards with rarity (common, uncommon, rare, legendary, set by frequency and difficulty); pattern badges; titles ("Umlaut Master", "Dativ Detective") | Pokédex, Drops |
@@ -44,6 +44,16 @@ The aim is a habit people come back to every day. Every loop below is tied to ev
 - **No public leaderboards** (repo spec). Competition is against your own ghost, or against friends later as an opt-in.
 
 ---
+
+### 1.4 Learning-quality upgrades (reviewed suggestions, adopted)
+- **Progress per word, per dimension.** Instead of one level, a noun has Meaning · Gender · Plural · Listening segments. A segment is *secured* after correct recall on 2 different days; milestones are permanent, and a due dot shows when a review is needed.
+- **Adaptive Daily Run.** The weakest dimension of each due item picks the game, and a personal preview explains the run.
+- **Format ladder.** Options → fewer cues → typed or built recall, as each segment strengthens.
+- **Mistake comeback.** A missed task returns later in another format; "You fixed this"; an optional "Fix these 2 words · 45 s".
+- **Next milestone.** "die × -(e)n · 9 / 12 secured · 3 more" keeps a goal close at hand.
+- **Streak ≠ daily goal.** A 1-minute Quick review keeps the streak (Duolingo reported +3.3% day-14 retention from this separation); the goal ring is separate.
+- **Feedback at the moment of answering** (snap, colour reveal, segment fill, optional haptics on Android) and **personal results** ("You fixed Bücher and Äpfel").
+- **Measure what matters**, privately on the device: 7-day return, run completion, 1-week delayed recall.
 
 ## 2. Games for every skill
 

@@ -4,7 +4,7 @@ The full instructions for rendering the Wortwerk screens with an image model. A 
 
 ---
 
-I'm designing "Wortwerk", a German learning game inside an app called "German Learning OS". It trains every skill (vocabulary, grammar, listening, speaking, reading, writing, exam practice) and works for every level from A1 to C2, because the content comes from swappable level packs. It is a companion to the coursebook the learner uses (here: Momente A1): learners choose content by lesson, by topic, up to a lesson, or up to a page, and teachers can assign work to a class. I need a SEPARATE mockup image for every screen below: 67 images in total (64 screens plus 3 feedback screens).
+I'm designing "Wortwerk", a German learning game inside an app called "German Learning OS". It trains every skill (vocabulary, grammar, listening, speaking, reading, writing, exam practice) and works for every level from A1 to C2, because the content comes from swappable level packs. It is a companion to the coursebook the learner uses (here: Momente A1): learners choose content by lesson, by topic, up to a lesson, or up to a page, and teachers can assign work to a class. I need a SEPARATE mockup image for every screen below: 70 images in total (64 screens plus 6 added screens).
 
 HOW TO WORK
 - Generate ONE image per reply, in the numbered order below. Put the number and name above it, e.g. "07 · Smart reminder".
@@ -47,18 +47,18 @@ A · Getting started
 04 · Level packs: heading "Your packs", cards "A1 · Momente" (active, 214 / 660 words), "A2 · Alltag", "B1 · Unterwegs", "B2 · Beruf und Gesellschaft", each with a level badge and progress, plus a card "More packs coming".
 
 B · Today (daily habit)
-05 · Today home: flame "🔥 12 days", a 7-dot week row, a goal ring "Daily Run 0 / 1", an exam card "Goethe A1 in 23 days · readiness 64%", a word of the day "die Brille → die Brillen" with a speaker, and a big button "Start Daily Run · 6 min" with a small link "Only 1 minute? Snack mode".
+05 · Today home: flame "🔥 12 days", a 7-dot week row, a goal ring "Daily Run 0 / 1", an exam card "Goethe A1 in 23 days · readiness 64%", a word of the day "die Brille → die Brillen" with a speaker, and a "Next milestone" card "die × -(e)n · 9 / 12 secured · 3 more to complete this pattern", a run preview card "Your run today · 6 min · 5 new · 8 reviews · 3 tricky plurals", a big button "Start Daily Run", and a secondary button "Quick review · 1 min (keeps your streak)".
 06 · Streak and freezes: a month calendar, "2 freezes saved", "Longest streak: 31 days", and the note "Earn a freeze every 7 days in a row".
-07 · Smart reminder: a time "19:30", a preview notification "6 words are ready · exam in 23 days", and a toggle "Skip when I've already practised".
+07 · Reminder: a time "19:30", a button "Add daily reminder to my calendar", a note "Phone notifications come later", and a preview of a future notification "Remember the plural of Buch? Your review is ready." (no answer in it).
 08 · Snack mode: a compact card "1-minute snack", 5 dots for progress, and one Four Corners card showing only the word "der Tisch" and a speaker icon (no picture), with corners "table", "chair", "door", "window" styled identically.
 09 · Done for today: a calm card "Done for today ✓", "You remembered 18 words and finished 2 listening tasks.", buttons "Keep going (optional)" and "See you tomorrow".
 
 C · Journey and progress
 10 · CEFR journey: a vertical path of level nodes "A1 · A2 · B1 · B2 · C1 · C2" with A1 in progress. Units on A1: "Kennenlernen ✓", "Familie ✓", "Wohnen (current)", "Essen (locked)", and a can-do card "I can describe my flat."
 11 · Skill hub: six skill tiles "Vocabulary", "Grammar", "Listening", "Speaking", "Reading", "Writing", each with a small level bar and "next game" text.
-12 · Map, A1 pack: heading "Gender × plural", a 3-column grid "der / die / das" × rows "-e", "-(e)n", "—", "Umlaut + -e", with round noun tokens at five fill levels.
+12 · Map, A1 pack: heading "Gender × plural", a 3-column grid "der / die / das" × rows "-e", "-(e)n", "—", "Umlaut + -e", with round noun tokens; each token has four tiny arc segments around it (Meaning, Gender, Plural, Listening), some filled, and a few tokens carry a small grey "due" dot.
 13 · Map, B2 pack (the same component with other data): heading "Collocations", rows "treffen", "stellen", "nehmen" × columns "Arbeit", "Alltag", with tokens such as "eine Entscheidung treffen", "eine Frage stellen", "Rücksicht nehmen".
-14 · Word detail: "der Stuhl → die Stühle" (ü lavender, e yellow), singular and plural speaker buttons, skill bars "Meaning · Gender · Plural · Listening", "Level 3 · Solid", "Next review: in 4 days".
+14 · Word detail: "der Stuhl → die Stühle" (ü lavender, e yellow), singular and plural speaker buttons, four segments "Meaning ✓ secured · Gender ✓ secured · Plural ○ learning · Listening ✓ secured", the note "Plural: secure it by recalling it on one more day", and "Next review: in 4 days".
 15 · Weekly recap: "Your week in German", big numbers "312 words reviewed", "48 min listened", "6 / 7 days", a best moment "First C-level word: die Nachhaltigkeit", and a "Share card" button.
 16 · Skills radar: a six-axis radar chart (Vocabulary, Grammar, Listening, Speaking, Reading, Writing) and the note "Separate skills, not one score".
 17 · Collection: a grid of illustrated word cards with small rarity labels "common", "uncommon", "rare", "legendary" (rarity shown by border style, not by bright colours), and "142 / 660 collected".
@@ -111,7 +111,7 @@ J · Story and challenges
 50 · Readiness report: "Exam readiness 64%", bars per section "Hören 70% · Lesen 72% · Schreiben 51% · Sprechen 48%", and a recommendation card "Focus this week: Schreiben · Message Reply ×3".
 
 K · Rewards and settings
-51 · Run results with bonus: "Daily Run complete · 18 / 20", "🔥 13 days", "4 words levelled up", and a gently highlighted card "Bonus round unlocked: rare card chance", with a revealed rare card "die Sehenswürdigkeit".
+51 · Run results: heading "Daily Run complete", three personal lines "You remembered 8 words from last week", "You fixed die Bücher and die Äpfel", "3 words left to finish 'At home'", a row of tokens whose plural segment just filled, "🔥 13 days", a small gently highlighted card "Bonus round unlocked", and two buttons "Back to map" and "Fix these 2 words · 45 s (optional)".
 52 · Pack settings: "Content packs", a list of installed packs with level badges and toggles, "Study scope: Lessons 1–6", a "German review status" label per pack ("Reviewed" or "Pending review"), and a button "Check for new packs".
 
 L · Book companion
@@ -130,9 +130,12 @@ M · Class mode
 63 · Student joins live game: a code entry "482 913", a name field, team choice "Blau / Grün", and a button "Join".
 64 · Teacher extras import: a pasted table preview with columns "German · English · Lesson · Page · Tags" and rows like "die Fachärztin · specialist (f) · 2 · 27 · people", validation ticks per row, and a button "Add 48 words as Teacher extra".
 
-ADDED FEEDBACK SCREENS (draw these after 64, to show the reveal that the question screens hold back)
+ADDED SCREENS (draw these after 64: the feedback reveal that question screens hold back, plus progress moments)
 65 · Gender feedback: the "Lampe" card now shows "die Lampe" with the lamp outline turned raspberry red, the "die" corner softly lit with a tick, and a strip "die Lampe → die Lampen" with the "n" in a yellow chip and a speaker playing.
 66 · Meaning feedback, wrong answer: the learner chose the table tile; it shows a thin grey cross, the chair tile is outlined in dark green, and the card now shows the chair picture with "der Stuhl = chair · This word comes back in a moment."
 67 · Word order feedback: the completed sentence "Ich bleibe zu Hause, weil ich keine Zeit habe." with "habe" underlined and a note "In a weil-clause the verb goes to the end."
+68 · You fixed this: a centre card "das Buch → die Bücher" shown as a Forge result (the "ü" lavender, the "er" yellow), a small calm label "You fixed this ✓ (missed 6 cards ago)", and the token's plural segment filling.
+69 · Format ladder, free recall: the prompt "der Apfel → plural?", no options, a text field with helper keys "ä ö ü ß", and a tiny progress label "Recall step 3 / 3".
+70 · Learning stats (private): "Your learning, on this device only", three numbers "7-day return: 6 / 7 days", "Runs finished: 92%", "Remembered after a week: 81%", and a small line chart.
 
 Start with 01.
