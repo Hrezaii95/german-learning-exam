@@ -29,9 +29,13 @@ import {
   type ConversationEntityId,
 } from "../conversation/conversation-paths";
 import type { LearnerWebProjection } from "./types";
+import { canonicalHubPath, retiredHubDestination, withMissingHubDefaults, withProfessionReturnContext, type HubRedirectDefaults } from "./hub-redirects";
+import { wordCardForPath } from "./word-cards";
+import { SHEET_DIRECTORY_PATH, VOCABULARY_SHEET_PATH } from "../study/sheet-routes";
 
 export type ResolvedRoute =
   | { kind: "dashboard"; pathname: string }
+  | { kind: "sheet"; pathname: string }
   | { kind: "lessons"; pathname: string }
   | {
       kind: "lesson";
@@ -91,6 +95,8 @@ export type ResolvedRoute =
       pathname: string;
       canonicalPath: string;
       status: 308;
+      defaults?: HubRedirectDefaults;
+      professionReturn?: boolean;
     }
   | { kind: "not-found"; pathname: string; reason: string };
 
@@ -264,6 +270,14 @@ export function resolveLearnerRoute(
   }
   if (pathname === "/lessons") {
     return { kind: "lessons", pathname };
+  }
+  const retired = retiredHubDestination(pathname);
+  if (retired) return { kind: "canonical-redirect", pathname, canonicalPath: retired.href, status: 308, ...(retired.defaults ? { defaults: retired.defaults } : {}) };
+  if (pathname === SHEET_DIRECTORY_PATH || pathname === VOCABULARY_SHEET_PATH || pathname === "/cheat-sheets/subjects/people") return { kind: "sheet", pathname };
+  if (/^\/collections\/professions\/\d{2}$/.test(pathname)) {
+    const card = wordCardForPath(pathname);
+    if (card) return { kind: "canonical-redirect", pathname, canonicalPath: card.path, status: 308, professionReturn: true };
+    return { kind: "not-found", pathname, reason: "unknown-profession-row" };
   }
   if (pathname === "/hubs") {
     return { kind: "hubs-directory", pathname };
@@ -536,7 +550,7 @@ export function decideLearnerPathRequest(
     if (afterStrip.kind === "canonical-redirect") {
       return {
         action: "redirect",
-        location: `${afterStrip.canonicalPath}${query}`,
+        location: `${afterStrip.canonicalPath}${afterStrip.professionReturn ? withProfessionReturnContext(query) : withMissingHubDefaults(query,afterStrip.defaults)}`,
         status: 308,
       };
     }
@@ -558,7 +572,7 @@ export function decideLearnerPathRequest(
   if (resolved.kind === "canonical-redirect") {
     return {
       action: "redirect",
-      location: `${resolved.canonicalPath}${query}`,
+      location: `${resolved.canonicalPath}${resolved.professionReturn ? withProfessionReturnContext(query) : withMissingHubDefaults(query,resolved.defaults)}`,
       status: 308,
     };
   }
@@ -601,7 +615,7 @@ export function rawColonActivityPath(
 }
 
 export function listCanonicalHubPaths(): string[] {
-  return [...LEARNER_HUB_IDS.map((id) => `/${id}`), "/hubs"];
+  return [...new Set([...LEARNER_HUB_IDS.map((id) => canonicalHubPath(`/${id}`)), canonicalHubPath("/hubs")])];
 }
 
 export function listCanonicalSearchPaths(): string[] {

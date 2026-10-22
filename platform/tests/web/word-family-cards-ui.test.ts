@@ -5,6 +5,7 @@ import { cleanup, fireEvent, render, screen } from "@testing-library/react";
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { WordFamilyCard } from "../../apps/web/components/word-cards/WordFamilyCard";
+import { WordFamilyPreview } from "../../apps/web/components/word-cards/WordFamilyPreview";
 import type { WordCardCatalog } from "../../apps/web/lib/content/word-card-types";
 import { isSafeNavigationPath } from "../../apps/web/lib/content/navigation-context";
 import { buildHubNavigationContext, resolveBackHref } from "../../apps/web/lib/content/navigation-context";
@@ -46,7 +47,7 @@ describe("original vocabulary browsing with complete cards", () => {
     const numbers = filterHubRecords(hub.items, parseHubSearchParams({category:"number"},hub.categories));
     expect(numbers.items).toHaveLength(101);
     const navigation = buildHubNavigationContext({hubId:"vocabulary",lesson:"03",q:"meine",category:"pronoun"});
-    expect(resolveBackHref(navigation,"hub")).toBe("/vocabulary?q=meine&lesson=03&category=pronoun");
+    expect(resolveBackHref(navigation,"hub")).toBe("/cheat-sheets/vocabulary?q=meine&lesson=03&category=pronoun");
   });
   it("clears edited form values when navigation clears the active filters", () => {
     const complete = withWordCardHub(originalHub);
@@ -59,6 +60,57 @@ describe("original vocabulary browsing with complete cards", () => {
 });
 
 describe("complete word-family cards", () => {
+  it.each([
+    { id: "W126", basePath: "" },
+    { id: "W126", basePath: "/german-learning-exam" },
+    { id: "W017", basePath: "" },
+    { id: "W017", basePath: "/german-learning-exam" },
+  ])("keeps the approved raster hero for $id with base path '$basePath'", ({ id, basePath }) => {
+    const card = catalog.cards.find(card => card.id === id)!;
+    const image = card.image!;
+    const previous = process.env.NEXT_PUBLIC_GL_PAGES_BASE_PATH;
+    process.env.NEXT_PUBLIC_GL_PAGES_BASE_PATH = basePath;
+    try {
+      render(createElement(WordFamilyCard, { card }));
+      const hero = screen.getByRole("img", { name: image.alt });
+      expect(hero.getAttribute("src")).toBe(`${basePath}${image.path}`);
+      expect(hero.getAttribute("width")).toBe("265");
+      expect(hero.getAttribute("height")).toBe("204");
+      expect(document.querySelector("[data-subject-visual]")).toBeNull();
+      expect(screen.getByRole("heading", { level: 1, name: card.title })).toBeTruthy();
+      expect(screen.getByRole("button", { name: "Try recall" })).toBeTruthy();
+    } finally {
+      if (previous === undefined) delete process.env.NEXT_PUBLIC_GL_PAGES_BASE_PATH;
+      else process.env.NEXT_PUBLIC_GL_PAGES_BASE_PATH = previous;
+    }
+  });
+  it("keeps an image-bearing family's preview as line art", () => {
+    const href = `${engineer.path}?nav=preserved`;
+    render(createElement(WordFamilyPreview, { card: engineer, href, lessonIds: engineer.lessons }));
+    expect(engineer.image).not.toBeNull();
+    expect(document.querySelector("[data-subject-visual]")).not.toBeNull();
+    expect(document.querySelector("img")).toBeNull();
+    expect(screen.getByRole("link", { name: "Study this word family" }).getAttribute("href")).toBe(href);
+  });
+  it("uses the same semantic line illustration in a preview without changing its full-card context", () => {
+    const card=loadWordCards().cards.find(card=>card.rows[0]?.singular.text==="der Tisch")!;
+    const href=`${card.path}?nav=preserved`;
+    render(createElement(WordFamilyPreview,{card,href,lessonIds:card.lessons}));
+    expect(document.querySelector('[data-subject-visual="home:tisch"]')).not.toBeNull();
+    expect(document.querySelector('.hub-card__visual')?.getAttribute("data-tone")).toBe("male");
+    expect(document.querySelector("img")).toBeNull();
+    expect(screen.getByRole("link",{name:"Study this word family"}).getAttribute("href")).toBe(href);
+    expect(document.querySelector(`[data-word-family="${card.id}"]`)).not.toBeNull();
+  });
+  it("keeps a subject fallback when the family has no approved raster", () => {
+    const card={...engineer,image:null,studyTags:{lessons:[2],concepts:["home" as const],source:"course" as const},rows:[{...engineer.rows[0]!,singular:{...engineer.rows[0]!.singular,text:"das unbekannte Objekt",tone:"neuter" as const}}]};
+    render(createElement(WordFamilyCard,{card}));
+    expect(document.querySelector('[data-subject-visual="subject:home"]')).not.toBeNull();
+    expect(document.querySelector('[data-tone="neuter"]')).not.toBeNull();
+    expect(document.querySelector("img")).toBeNull();
+    expect(screen.getByRole("heading",{level:1,name:card.title})).toBeTruthy();
+    expect(document.querySelector(`[data-word-card="${card.id}"]`)).not.toBeNull();
+  });
   it("does not color a singular profession as plural when both spellings match", () => {
     const electrician = catalog.cards.find(card => card.rows[0]?.singular.text === "der Elektriker")!;
     const examples = ["Ich bin Elektriker.", "Wir sind Elektriker.", "der Elektriker", "die Elektriker", "Elektriker"];

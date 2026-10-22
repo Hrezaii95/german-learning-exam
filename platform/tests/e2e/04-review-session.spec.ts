@@ -55,9 +55,11 @@ test.describe("journey 4 · review cards created by practice, session run to the
     const seeded = await readLearnerState(page);
     expect(seeded?.reviewCards).toHaveLength(expectedCards);
 
-    // --- start the mission from the review setup screen ---
-    await gotoApp(page, "/review");
+    // --- start the mission from the shared review home ---
+    await gotoApp(page, "/saved/#guided-review");
     await waitForLearnerState(page);
+    await expect(page.locator("main h1")).toHaveCount(1);
+    await expect(page.getByRole("heading", { level: 1, name: "My review" })).toBeVisible();
     await expect(page.getByRole("heading", { name: "Build mission" })).toBeVisible();
     await expect(page.locator("main")).toContainText(`${expectedCards} eligible`);
 
@@ -135,11 +137,24 @@ test.describe("journey 4 · review cards created by practice, session run to the
     ).toHaveLength(missionSize);
 
     // And it survives a reload — scheduling is not in-memory only.
-    await gotoApp(page, "/review");
+    await page.getByRole("link", { name: "Back to review", exact: true }).click();
+    await expect(page).toHaveURL(/\/saved\/$/);
+    await expect(page.getByRole("heading", { name: "Build mission" })).toBeVisible();
+    await gotoApp(page, "/saved");
     await waitForLearnerState(page);
     const reloaded = await readLearnerState(page);
     expect(reloaded?.reviewCards).toHaveLength(expectedCards);
     expect(reloaded?.events.length).toBe(missionSize);
+  });
+
+  test("old review links keep their due filter and fragment on the shared review home", async ({ page }) => {
+    await gotoApp(page, "/review/?due=1#guided-review");
+    await expect(page).toHaveURL(/\/saved\/\?due=1#guided-review$/);
+    await expect(page.locator("main h1")).toHaveCount(1);
+    await expect(page.getByRole("heading", { level: 1, name: "My review" })).toBeVisible();
+    await expect(page.getByRole("checkbox", { name: "Due only", exact: true })).toBeChecked();
+    await expect(page.getByRole("heading", { name: "Build mission" })).toBeVisible();
+    await expect(page.getByRole("link", { name: "My saved collection & recall →" })).toHaveAttribute("href", "#saved-collection");
   });
 });
 

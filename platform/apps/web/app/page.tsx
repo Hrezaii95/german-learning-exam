@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 export default function HomePage() {
   const projection = loadLearnerProjection();
   return (
-    <ShellLayout current="dashboard">
+    <ShellLayout current="home">
       <DashboardView projection={projection} />
     </ShellLayout>
   );

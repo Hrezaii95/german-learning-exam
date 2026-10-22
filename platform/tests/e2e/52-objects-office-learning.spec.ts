@@ -13,8 +13,8 @@ for(const width of [320,1440])test(`object picture, description and saved settin
 
 for(const width of [320,1440])test(`office roles, contextual return and phone listening at ${width}px`,async({page},info)=>{
  await page.setViewportSize({width,height:1000});await page.addInitScript(()=>{const NativeAudio=window.Audio;(window as unknown as {clips:HTMLAudioElement[]}).clips=[];window.Audio=class extends NativeAudio{constructor(src?:string){super(src);(window as unknown as {clips:HTMLAudioElement[]}).clips.push(this);}};});
- await page.goto("cheat-sheets/office/");const lab=page.locator("#office-lab");await lab.getByRole("combobox",{name:"Choose an office word",exact:true}).selectOption("3");await lab.getByRole("checkbox",{name:"Negate with kein",exact:true}).check();await expect(lab.locator(".office-role-trail")).toContainText("keinen Stift.");await expect(lab.locator(".office-role-trail [data-gender]")).toHaveAttribute("data-gender","male");
- await lab.getByRole("checkbox",{name:"Make it plural",exact:true}).check();await expect(lab.locator(".office-role-trail")).toContainText("keine Stifte.");await expect(lab.locator(".office-role-trail [data-gender]")).toHaveAttribute("data-gender","plural");
+ await page.goto("cheat-sheets/office/");const lab=page.locator("#office-lab");await lab.getByRole("combobox",{name:"Choose an office word",exact:true}).selectOption("3");await lab.getByRole("checkbox",{name:"Negate with kein",exact:true}).check();await expect(lab.locator(".office-role-trail")).toContainText("keinen Stift.");await expect(lab.locator(".office-role-trail [data-tone]")).toHaveAttribute("data-tone","male");
+ await lab.getByRole("checkbox",{name:"Make it plural",exact:true}).check();await expect(lab.locator(".office-role-trail")).toContainText("keine Stifte.");await expect(lab.locator(".office-role-trail [data-tone]")).toHaveAttribute("data-tone","plural");
  await lab.getByRole("button",{name:/^Save to review:/}).click();await page.goto("saved/");await page.locator(".study-saved-card").filter({hasText:"Ich brauche keine Stifte."}).getByRole("link",{name:"Open in context →",exact:true}).click();await expect(lab.getByRole("checkbox",{name:"Make it plural",exact:true})).toBeChecked();await expect(lab.locator(".office-role-trail")).toContainText("keine Stifte.");await lab.getByRole("button",{name:/^Remove from review:/}).click();await lab.screenshot({path:info.outputPath(`office-${width}.png`)});
  if(width===320){await expect(lab.locator(".office-desk")).toBeHidden();await lab.locator(".office-desk-overview > summary").click();await expect(lab.locator(".office-desk")).toBeVisible();await lab.locator(".office-desk-overview").screenshot({path:info.outputPath("office-overview-320.png")});await lab.locator(".office-desk-overview > summary").click();}
  const details=page.locator("#phone-details");await details.getByRole("button",{name:"Listen: practice digits",exact:true}).click();await expect.poll(()=>page.evaluate(()=>{const clip=(window as unknown as {clips:HTMLAudioElement[]}).clips.at(-1);return !!clip&&clip.currentTime>0&&clip.src.includes("/audio/");})).toBe(true);
@@ -22,10 +22,18 @@ for(const width of [320,1440])test(`office roles, contextual return and phone li
  await details.getByRole("textbox",{name:"Name to spell",exact:true}).fill("Groß");await expect(details).toContainText("G · R · O · ß");await details.screenshot({path:info.outputPath(`office-phone-${width}.png`)});for(const input of await details.locator("input").all()){const box=await input.boundingBox();expect(box?.height).toBeGreaterThanOrEqual(44);expect((box?.x??0)+(box?.width??0)).toBeLessThanOrEqual(width);}await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);
 });
 
-test("bounded sheet cards, filters, full-card return and saved phone turn",async({page})=>{
- await page.goto("cheat-sheets/office/");const words=page.locator("#office-words");await expect(words.locator("[data-sheet-card]")).toHaveCount(12);await words.getByRole("button",{name:"Show 12 more cards",exact:true}).click();await expect(words.locator("[data-sheet-card]")).toHaveCount(24);
- await words.getByRole("searchbox",{name:"Find a card",exact:true}).fill("Kalender");await expect(words.locator("[data-sheet-card]").first()).toBeVisible();const first=words.locator("[data-sheet-card]").first(),id=await first.getAttribute("data-sheet-card");await first.getByRole("link",{name:"Study this word family",exact:true}).click();await page.getByRole("link",{name:/Back/}).first().click();await expect(words.getByRole("searchbox",{name:"Find a card",exact:true})).toHaveValue("Kalender");await expect(page.locator(`[data-sheet-card="${id}"]`)).toBeVisible();
- await words.getByRole("button",{name:"Show saved cards",exact:true}).click();await expect(page.locator("#sheet-practice")).toContainText("No matching practice items");
+test("office vocabulary handoff, full-card return and saved phone turn",async({page})=>{
+ await page.goto("cheat-sheets/office/");const words=page.locator("#office-words");
+ await expect(page.locator("[data-sheet-card]")).toHaveCount(0);
+ await expect(page.locator("#sheet-practice")).toContainText("Question 1 /");
+ await words.getByRole("link",{name:"Open office subject sheet →",exact:true}).click();
+ await expect.poll(()=>page.evaluate(()=>new URLSearchParams(location.search).get("lesson"))).toBe("6");
+ const search=page.getByRole("searchbox",{name:"Find a word or form",exact:true});await search.fill("Kalender");
+ await page.locator("[data-subject-entry]").filter({hasText:"der Kalender"}).first().click();
+ await page.locator(".subject-word-dropdown").getByRole("link",{name:"Full vocabulary card →",exact:true}).click();
+ await page.getByRole("link",{name:/Back/}).first().click();await expect(search).toHaveValue("Kalender");
+ await expect.poll(()=>page.evaluate(()=>new URLSearchParams(location.search).get("lesson"))).toBe("6");
+ await page.goto("cheat-sheets/office/");
  const phone=page.locator("#phone-lab");await phone.getByRole("button",{name:"Next turn →",exact:true}).click();await phone.getByRole("button",{name:/^Save to review:/}).click();await page.goto("saved/");await page.locator(".study-saved-card").filter({hasText:"mein Name ist Tom Berger"}).getByRole("link",{name:"Open in context →",exact:true}).click();await expect(phone).toContainText("2 / 7 · Caller");
 });
 

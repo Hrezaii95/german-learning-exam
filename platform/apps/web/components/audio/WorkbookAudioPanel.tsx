@@ -3,15 +3,26 @@
 import { useEffect, useRef, useState } from "react";
 import { withPagesBaseAssetPath } from "@/lib/content/pages-base-path";
 import type { WorkbookAudioTrack } from "@/lib/audio/workbook-audio";
-import { AudioSpeedControl, useAudioSpeed } from "./AudioSpeedControl";
+import { AudioSpeedControl, useAudioSpeed, usePreferredAudioSpeed } from "./AudioSpeedControl";
 import { stopStudyAudio } from "@/components/study/StudyAudio";
 import { ListeningTranscript } from "./ListeningTranscript";
 import { workbookTranscript } from "@/lib/audio/listening-transcripts";
 
-export function WorkbookAudioPanel({ tracks }: { tracks: readonly WorkbookAudioTrack[] }) {
+/** Workbook passages retain seeking, source transcripts, retry and per-track speed. */
+export function WorkbookAudioTracks({
+  tracks,
+  preferredSpeed: overrideSpeed,
+  preload = "none",
+  trackLabels,
+}: {
+  tracks: readonly WorkbookAudioTrack[];
+  preferredSpeed?: number;
+  preload?: "none" | "metadata";
+  trackLabels?: Readonly<Record<string, string>>;
+}) {
   const players = useRef(new Map<string, HTMLAudioElement>());
-  const audioSpeed = useAudioSpeed();
-  const preferredSpeed = audioSpeed.speed;
+  const savedSpeed = usePreferredAudioSpeed();
+  const preferredSpeed = overrideSpeed ?? savedSpeed;
   const [errors, setErrors] = useState<Record<string, boolean>>({});
   const [selectedSpeeds, setSelectedSpeeds] = useState<Readonly<Record<string, number>>>({});
 
@@ -43,6 +54,51 @@ export function WorkbookAudioPanel({ tracks }: { tracks: readonly WorkbookAudioT
   }
 
   return (
+    <ol className="workbook-audio__list">
+      {tracks.map((track) => (
+        <li key={track.id} className="workbook-audio__track">
+          <div>
+            <strong>{track.exercise} · Track {track.id.replace("_", ".")}</strong>
+            <p className="dense">{track.purpose} · {Math.round(track.durationSeconds)} sec</p>
+          </div>
+          {/* Learners choose when to reveal the transcript. */}
+          {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
+          <audio
+            ref={(node) => {
+              if (node) players.current.set(track.id, node);
+              else players.current.delete(track.id);
+            }}
+            controls
+            preload={preload}
+            src={withPagesBaseAssetPath(`/audio/source-workbook-approved-v1/${track.filename}`)}
+            aria-label={trackLabels?.[track.id] ?? `${track.exercise}, ${track.purpose}`}
+            onLoadedMetadata={(event) => {
+              event.currentTarget.playbackRate = selectedSpeeds[track.id] ?? preferredSpeed;
+              event.currentTarget.preservesPitch = true;
+            }}
+            onPlay={(event) => {
+              stopStudyAudio(event.currentTarget);
+              setErrors(current => ({ ...current, [track.id]: false }));
+            }}
+            onError={() => setErrors(current => ({ ...current, [track.id]: true }))}
+          />
+          {errors[track.id] && <p role="alert">Recording could not play. <button type="button" className="btn btn-secondary" onClick={() => { players.current.get(track.id)?.load(); replay(track.id); }}>Retry audio</button></p>}
+          <ListeningTranscript transcript={workbookTranscript(track.id)} />
+          <div className="workbook-audio__actions" role="group" aria-label={`Playback speed for ${track.id}`}>
+            <button type="button" className="btn btn-secondary" aria-pressed={(selectedSpeeds[track.id] ?? preferredSpeed) === preferredSpeed} onClick={() => setSpeed(track.id, preferredSpeed)}>Preferred {preferredSpeed}×</button>
+            <button type="button" className="btn btn-secondary" aria-pressed={selectedSpeeds[track.id] === 0.8} onClick={() => setSpeed(track.id, 0.8)}>Study 0.8×</button>
+            <button type="button" className="btn btn-secondary" aria-pressed={selectedSpeeds[track.id] === 1} onClick={() => setSpeed(track.id, 1)}>Normal 1×</button>
+            <button type="button" className="btn btn-secondary" onClick={() => replay(track.id)}>Repeat</button>
+          </div>
+        </li>
+      ))}
+    </ol>
+  );
+}
+
+export function WorkbookAudioPanel({ tracks }: { tracks: readonly WorkbookAudioTrack[] }) {
+  const audioSpeed = useAudioSpeed();
+  return (
     <section className="panel workbook-audio" aria-labelledby="workbook-audio-heading">
       <div className="workbook-audio__heading">
         <div>
@@ -59,45 +115,7 @@ export function WorkbookAudioPanel({ tracks }: { tracks: readonly WorkbookAudioT
         lesson activity. Study speed preserves pitch.
       </p>
       <AudioSpeedControl control={audioSpeed}/>
-      <ol className="workbook-audio__list">
-        {tracks.map((track) => (
-          <li key={track.id} className="workbook-audio__track">
-            <div>
-              <strong>{track.exercise} · Track {track.id.replace("_", ".")}</strong>
-              <p className="dense">{track.purpose} · {Math.round(track.durationSeconds)} sec</p>
-            </div>
-            {/* Learners choose when to reveal the transcript. */}
-            {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
-            <audio
-              ref={(node) => {
-                if (node) players.current.set(track.id, node);
-                else players.current.delete(track.id);
-              }}
-              controls
-              preload="none"
-              src={withPagesBaseAssetPath(`/audio/source-workbook-approved-v1/${track.filename}`)}
-              aria-label={`${track.exercise}, ${track.purpose}`}
-              onLoadedMetadata={(event) => {
-                event.currentTarget.playbackRate = selectedSpeeds[track.id] ?? preferredSpeed;
-                event.currentTarget.preservesPitch = true;
-              }}
-              onPlay={(event) => {
-                stopStudyAudio(event.currentTarget);
-                setErrors(current => ({ ...current, [track.id]: false }));
-              }}
-              onError={() => setErrors(current => ({ ...current, [track.id]: true }))}
-            />
-            {errors[track.id] && <p role="alert">Recording could not play. <button type="button" className="btn btn-secondary" onClick={() => { players.current.get(track.id)?.load(); replay(track.id); }}>Retry audio</button></p>}
-            <ListeningTranscript transcript={workbookTranscript(track.id)} />
-            <div className="workbook-audio__actions" role="group" aria-label={`Playback speed for ${track.id}`}>
-              <button type="button" className="btn btn-secondary" aria-pressed={(selectedSpeeds[track.id] ?? preferredSpeed) === preferredSpeed} onClick={() => setSpeed(track.id, preferredSpeed)}>Preferred {preferredSpeed}×</button>
-              <button type="button" className="btn btn-secondary" aria-pressed={selectedSpeeds[track.id] === 0.8} onClick={() => setSpeed(track.id, 0.8)}>Study 0.8×</button>
-              <button type="button" className="btn btn-secondary" aria-pressed={selectedSpeeds[track.id] === 1} onClick={() => setSpeed(track.id, 1)}>Normal 1×</button>
-              <button type="button" className="btn btn-secondary" onClick={() => replay(track.id)}>Repeat</button>
-            </div>
-          </li>
-        ))}
-      </ol>
+      <WorkbookAudioTracks tracks={tracks} preferredSpeed={audioSpeed.speed} />
     </section>
   );
 }

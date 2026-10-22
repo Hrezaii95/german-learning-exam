@@ -231,7 +231,7 @@ describe("P6 label in name (WCAG 2.5.3)", () => {
     expect(accessibleName(button)).toContain("der Lehrer");
   });
 
-  it("names the pronunciation control after its visible Play pronunciation label", () => {
+  it("names the pronunciation control after its visible Listen label", () => {
     const media: LearnerMediaAvailability = {
       state: "preview",
       publicPath: "/audio/tts-de-de-v1/tts-62dc09ce76149784.mp3",
@@ -242,7 +242,7 @@ describe("P6 label in name (WCAG 2.5.3)", () => {
     render(createElement(PronunciationControl, { media, label: "der Friseur" }));
 
     const button = document.querySelector("button.audio-control__btn")!;
-    expect(visibleLabel(button)).toBe("Play pronunciation");
+    expect(visibleLabel(button)).toBe("Listen");
     expectNameStartsWithVisibleLabel(button);
     expect(accessibleName(button)).toContain("der Friseur");
   });

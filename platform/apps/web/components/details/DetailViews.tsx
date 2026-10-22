@@ -1,3 +1,4 @@
+import { articleTone } from "@/lib/study/article-tone";
 import type {
   LearnerDetailRecord,
   LearnerGrammarDetail,
@@ -148,7 +149,7 @@ function VocabularyDetail({ detail }: { detail: LearnerVocabularyDetail }) {
       <section className="panel" aria-labelledby="vocab-forms-heading">
         <h2 id="vocab-forms-heading">Forms</h2>
         <div className="detail-form-pair">
-          <article className="detail-form-card" data-person-form={detail.gender ?? "none"}>
+          <article className="detail-form-card" data-tone={articleTone(detail.gender)}>
             {detail.gender ? <GenderBadge gender={detail.gender} /> : null}
             <p className="detail-form-card__lemma">
               <span className="german" lang="de">
@@ -161,7 +162,7 @@ function VocabularyDetail({ detail }: { detail: LearnerVocabularyDetail }) {
             </p>
           </article>
           {pf ? (
-            <article className="detail-form-card" data-person-form="feminine">
+            <article className="detail-form-card" data-tone={articleTone(pf.relatedGender)}>
               <GenderBadge gender={pf.relatedGender} />
               <p className="detail-form-card__lemma">
                 <span className="german" lang="de">{pf.relatedDisplayText}</span>

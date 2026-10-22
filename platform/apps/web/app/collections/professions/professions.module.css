@@ -1,46 +1,46 @@
-.eyebrow { margin: 0 0 .25rem; color: var(--brand); font-size: .76rem; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
+.eyebrow { margin: 0 0 .25rem; color: var(--ink-muted); font-size: var(--text-eyebrow); font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
 .hero, .detailHero { display: grid; gap: 1.1rem; overflow: hidden; background: radial-gradient(circle at 92% 8%, color-mix(in srgb, var(--brand) 14%, transparent), transparent 34%), var(--surface); }
 .legend { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .6rem; }
-.legend span { display: flex; align-items: center; gap: .5rem; min-height: 2.8rem; padding: .55rem .7rem; border: 1px solid var(--border); border-radius: .8rem; font-size: .78rem; font-weight: 750; }
+.legend span { display: flex; align-items: center; gap: .5rem; min-height: var(--chip-height); padding: 8px 12px; border: 1px solid var(--line); border-radius: var(--chip-radius); font-size: var(--text-meta); font-weight: 650; background:var(--paper); }
 .legend b, .genderGlyph { display: grid; place-items: center; flex: 0 0 auto; width: 1.7rem; height: 1.7rem; border-radius: 50%; color: #fff; }
-.legendMasculine b { background: #2168d5; }.legendFeminine b { background: #c53174; }.legendPlural b { background: #7047c7; }.legendAlternative b { background: #536174; }
+.legendMale b { background: var(--tone-masc); }.legendFemale b { background: var(--tone-fem); }.legendPlural b { background: var(--tone-plural); }.legendAlternative b { background: #536174; }
 .notice { border-color: color-mix(in srgb, var(--rule-special) 45%, var(--border)); background: color-mix(in srgb, var(--rule-special) 7%, var(--surface)); }.notice p:last-child { margin-bottom: 0; }
 .filters, .filters label, .review { display: grid; gap: .75rem; }.checkbox { grid-template-columns: auto 1fr; align-items: center; min-height: 44px; }.checkbox input { width: 1.15rem; height: 1.15rem; accent-color: var(--brand); }
 .sectionHeading, .cardTopline, .actions, .cardFooter { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem; }.sectionHeading h2, .card h3 { margin: 0; }
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 26rem), 1fr)); gap: 1rem; margin: 1rem 0 0; padding: 0; list-style: none; }.card { display: grid; align-content: start; gap: 1rem; min-width: 0; }
 .readyBadge, .missingBadge { display: inline-flex; align-items: center; min-height: 1.7rem; padding: .25rem .55rem; border-radius: 999px; font-size: .7rem; font-weight: 800; }.readyBadge { color: #176338; background: #dff7e8; }.missingBadge { color: #715825; background: #fff1c9; }
-.infographic { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: stretch; gap: .65rem; }.formLane { display: grid; align-content: start; gap: .75rem; min-width: 0; padding: .8rem; border: 1px solid; border-radius: 1rem; }.masculine { border-color: #8cb9f5; background: linear-gradient(145deg, #f5f9ff, #e9f2ff); }.feminine { border-color: #eea4c7; background: linear-gradient(145deg, #fff8fb, #fdeaf3); }
-.genderHeader { display: flex; align-items: center; gap: .5rem; }.genderGlyph { font-size: .75rem; font-weight: 900; }.masculine .genderGlyph { background: #2168d5; }.feminine .genderGlyph { background: #c53174; }.genderRule { margin-left: auto; color: #536174; font-size: .75rem; font-weight: 750; }
-.alternativeStack { display: grid; gap: .7rem; }.formPair { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: stretch; gap: .35rem; }.numberForm { display: grid; align-content: center; gap: .3rem; min-width: 0; padding: .55rem; border: 1px solid color-mix(in srgb, currentColor 12%, transparent); border-radius: .7rem; background: rgba(255,255,255,.72); }.pluralForm { box-shadow: inset 0 3px #7047c7; }.numberLabel { color: #536174; font-size: .75rem; font-weight: 750; text-transform: uppercase; }.germanForm { display: flex; flex-wrap: wrap; gap: .28rem; align-items: baseline; overflow-wrap: anywhere; font-size: .88rem; font-weight: 760; }.articleToken, .pluralArticle { padding: .1rem .28rem; border-radius: .35rem; color: #fff; }.masculine .articleToken { background: #2168d5; }.feminine .articleToken { background: #c53174; }.pluralArticle { background: #7047c7; }.audioState { color: #715825; font-size: .75rem; font-weight: 760; }.audioState[data-audio-state="preview"] { color: #176338; }.numberArrow { align-self: center; color: #7047c7; font-weight: 900; }
+.infographic { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: stretch; gap: .65rem; }.formLane { display: grid; align-content: start; gap: .75rem; min-width: 0; padding: .8rem; border: 1px solid; border-radius: 1rem; }.male { border-color: color-mix(in srgb, var(--tone-masc) 28%, var(--paper)); background: color-mix(in srgb, var(--tone-masc) 3%, var(--paper)); }.female { border-color: color-mix(in srgb, var(--tone-fem) 28%, var(--paper)); background: color-mix(in srgb, var(--tone-fem) 3%, var(--paper)); }
+.genderHeader { display: flex; align-items: center; gap: .5rem; }.genderGlyph { font-size: .75rem; font-weight: 900; }.male .genderGlyph { background: var(--tone-masc); }.female .genderGlyph { background: var(--tone-fem); }.genderRule { margin-left: auto; color: #536174; font-size: .75rem; font-weight: 750; }
+.alternativeStack { display: grid; gap: .7rem; }.formPair { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: stretch; gap: .35rem; }.numberForm { display: grid; align-content: center; gap: .3rem; min-width: 0; padding: .55rem; border: 1px solid color-mix(in srgb, currentColor 12%, transparent); border-radius: .7rem; background: rgba(255,255,255,.72); }.pluralForm { box-shadow: inset 0 3px var(--tone-plural); }.numberLabel { color: #536174; font-size: .75rem; font-weight: 750; text-transform: uppercase; }.germanForm { display: flex; flex-wrap: wrap; gap: .28rem; align-items: baseline; overflow-wrap: anywhere; font-size: .88rem; font-weight: 760; }.articleToken, .pluralArticle { padding: .1rem .28rem; border-radius: .35rem; color: #fff; }.male .articleToken { background: var(--tone-masc); }.female .articleToken { background: var(--tone-fem); }.pluralArticle { background: var(--tone-plural); }.audioState { color: #715825; font-size: .75rem; font-weight: 760; }.audioState[data-audio-state="preview"] { color: #176338; }.numberArrow { align-self: center; color: var(--tone-plural); font-weight: 900; }
 .alternativeDivider { grid-column: 1 / -1; display: flex; align-items: center; gap: .35rem; color: #536174; font-size: .65rem; font-weight: 800; text-transform: uppercase; }.alternativeDivider::before, .alternativeDivider::after { content: ""; height: 1px; flex: 1; background: #aab4c2; }.alternativeDivider span { font-size: 1rem; }
 .personRelationship { display: grid; place-content: center; justify-items: center; gap: .15rem; color: #536174; }.personRelationship span { display: grid; place-items: center; width: 2rem; height: 2rem; border-radius: 50%; background: var(--surface-muted); font-weight: 900; }.personRelationship small { max-width: 4.5rem; text-align: center; font-size: .75rem; font-weight: 750; }
 .compactGraphic { grid-template-columns: 1fr; }.compactGraphic .personRelationship { grid-auto-flow: column; }.compactLane { padding: .65rem; }.compactLane .genderRule, .compactGraphic .audioState { display: none; }.compactGraphic .formPair { grid-template-columns: 1fr auto 1fr; }
 .visualPanel { display: grid; gap: 1rem; }.audioGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); gap: .8rem; margin-top: 1rem; }.audioCard { display: grid; align-content: start; gap: .55rem; min-width: 0; padding: .85rem; border: 1px solid var(--border); border-radius: .85rem; background: var(--surface-muted); }.audioCard h3 { margin: 0; overflow-wrap: anywhere; }.flashcard { display: grid; justify-items: start; gap: .75rem; width: 100%; min-height: 8rem; padding: 1rem; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); background: var(--surface-muted); color: var(--ink); text-align: left; cursor: pointer; }.flashcard strong { font-size: clamp(1.1rem, 3vw, 1.45rem); overflow-wrap: anywhere; }
 @media (max-width: 920px) { .legend { grid-template-columns: repeat(2, minmax(0,1fr)); }.infographic { grid-template-columns: 1fr; }.personRelationship { grid-auto-flow: column; }.personRelationship span { transform: rotate(90deg); }.personRelationship small { max-width: none; }.compactGraphic .personRelationship span { transform: none; } }
 @media (max-width: 560px) { .legend { grid-template-columns: 1fr; }.grid { grid-template-columns: 1fr; }.formPair { grid-template-columns: 1fr; }.numberArrow { transform: rotate(90deg); justify-self: center; }.alternativeDivider { grid-column: 1; }.compactGraphic .formPair { grid-template-columns: 1fr; }.actions .btn, .cardFooter .btn, .review > .btn { width: 100%; }.genderHeader { align-items: flex-start; }.genderRule { max-width: 6rem; text-align: right; } }
-@media (prefers-color-scheme: dark) { .masculine { background: linear-gradient(145deg, rgba(33,104,213,.2), rgba(33,104,213,.08)); }.feminine { background: linear-gradient(145deg, rgba(214,61,134,.2), rgba(214,61,134,.08)); }.numberForm { background: rgba(9,17,31,.45); }.readyBadge { color: #b8f5cd; background: #173c29; }.missingBadge { color: #ffe09b; background: #44371f; } }
 
-.masculine .germanForm { color: var(--gender-m-ink); }
-.feminine .germanForm { color: var(--gender-f-ink); }
-.pluralForm .germanForm { color: var(--gender-pl); }
+@media (prefers-color-scheme: dark) { .numberForm { background: rgba(9,17,31,.45); }.readyBadge { color: #b8f5cd; background: #173c29; }.missingBadge { color: #ffe09b; background: #44371f; } }
+
+.male .germanForm { color: var(--tone-masc); }
+.female .germanForm { color: var(--tone-fem); }
+.pluralForm .germanForm { color: var(--tone-plural); }
 
 .patternOverview { scroll-margin-top:24px; }
 .patternOverview h2 { font-size:clamp(1.4rem,3vw,1.9rem); }
 .patternGrid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; }
 .patternCard { display:flex; flex-direction:column; align-items:center; gap:8px; padding:14px; border:1px solid var(--border); border-radius:16px; background:var(--surface); color:var(--ink); cursor:pointer; text-align:center; font:inherit; min-width:0; }
-.patternCard img { width:100%; height:120px; object-fit:contain; border-radius:10px; background:#fff; }
 .patternCard strong { font-size:1.1rem; }
 .patternCard > span { font-size:.95rem; overflow-wrap:anywhere; }
 .patternCard > span[lang] { font-size:1.05rem; font-weight:700; }
 .patternCard small { color:var(--study-muted); margin-top:auto; }
 .patternCard[aria-pressed=true] { border:2px solid var(--study-green); background:var(--study-tint); padding:13px; }
-.patternCard:focus-visible { outline:3px solid var(--study-green); outline-offset:3px; }
+.patternCard:focus-visible { outline:3px solid var(--focus-ring); outline-offset:3px; }
 .patternCard:disabled { cursor:default; opacity:.65; }
-.maleText { color:var(--gender-m-ink); }
-.femaleText { color:var(--gender-f-ink); }
-.pluralText { color:var(--gender-pl); }
-.feminineTrail { margin-top:16px; padding:20px; border:1px solid var(--border); border-radius:16px; background:#fffdf8; }
-.feminineTrail p[lang] { font-size:1.15rem; line-height:1.9; }
+.maleText { color:var(--tone-masc); }
+.femaleText { color:var(--tone-fem); }
+.pluralText { color:var(--tone-plural); }
+.femaleTrail { margin-top:16px; padding:20px; border:1px solid var(--border); border-radius:16px; background:#fffdf8; }
+.femaleTrail p[lang] { font-size:1.15rem; line-height:1.9; }
 .filters { scroll-margin-top:24px; }
 .previewGrid { grid-template-columns:repeat(2,minmax(0,1fr)); margin-bottom:16px; }
 .previewGrid > li { min-width:0; }
@@ -52,4 +52,8 @@
 .practiceDetails[open] > summary,.notice[open] > summary { margin-bottom:12px; }
 .hero :global(.meta-row) a { min-height:44px; display:inline-flex; align-items:center; }
 @media(max-width:850px) { .patternGrid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
-@media(max-width:560px) { .legend { grid-template-columns:repeat(2,minmax(0,1fr)); }.legend span { padding:8px; font-size:.75rem; }.legend b { width:1.3rem; height:1.3rem; }.patternCard { padding:10px; }.patternCard[aria-pressed=true] { padding:9px; }.patternCard img { height:90px; }.patternCard strong { font-size:1rem; }.patternCard > span[lang] { font-size:.95rem; }.previewGrid { grid-template-columns:1fr; }.feminineTrail { padding:14px; } }
+@media(max-width:560px) { .legend { grid-template-columns:repeat(2,minmax(0,1fr)); }.legend span { padding:8px; font-size:.75rem; }.legend b { width:1.3rem; height:1.3rem; }.patternCard { padding:10px; }.patternCard[aria-pressed=true] { padding:9px; }.patternCard strong { font-size:1rem; }.patternCard > span[lang] { font-size:.95rem; }.previewGrid { grid-template-columns:1fr; }.femaleTrail { padding:14px; }.patternCard :global(.profession-pattern-visual) { height:90px; } }
+.patternCard :global(.profession-pattern-visual) { display:grid; place-items:center; width:100%; height:120px; border-radius:var(--radius-sm); background:var(--paper); color:var(--tone-plain); }
+.patternCard :global(.profession-pattern-visual[data-tone="male"]) { color:var(--tone-masc); }
+.patternCard :global(.profession-pattern-visual[data-tone="female"]) { color:var(--tone-fem); }
+.patternCard :global(.profession-pattern-visual) :global(.subject-vocabulary-visual) { display:block; width:100%; height:100%; }

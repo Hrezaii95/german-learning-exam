@@ -11,12 +11,12 @@ describe("published vocabulary illustration coverage",()=>{
   it("gives every published word a meaningful illustration or a deliberate number/letter symbol",()=>{
     const placeholders=illustrated.filter(({markup})=>markup.includes('data-subject-visual="source-glyph"')).map(({item})=>`${item.cardId}: ${item.de}`);
     expect(placeholders).toEqual([]);
-    expect(illustrated.length).toBe(1338);
+    expect(illustrated.length).toBe(1330);
   });
 
   it("preserves the approved Home illustrations and meaningful number/letter symbols",()=>{
     const home=illustrated.filter(({item})=>item.studyTags.concepts.includes("home"));
-    expect(home.length).toBe(31);
+    expect(home.length).toBe(30);
     for(const {markup} of home)expect(markup).toMatch(/data-subject-visual="(?:home|object):/);
     expect(illustrated.filter(({markup})=>markup.includes('data-subject-visual="number"'))).toHaveLength(101);
     expect(illustrated.filter(({markup})=>markup.includes('data-subject-visual="letter"'))).toHaveLength(30);

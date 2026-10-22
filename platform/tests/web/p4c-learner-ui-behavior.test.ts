@@ -8,7 +8,7 @@
 import { createElement, type ReactNode } from "react";
 import { cleanup, render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
 import { LEARNER_EVENT_SCHEMA_VERSION } from "@german-learning/learning";
 import { practiceActivityId, type PracticeGameId } from "../../apps/web/lib/games/index.js";
 
@@ -111,6 +111,10 @@ import { WorkbookAudioPanel } from "../../apps/web/components/audio/WorkbookAudi
 import { LearnerStateProvider } from "../../apps/web/components/learner-state/LearnerStateProvider.js";
 import { SettingsView } from "../../apps/web/components/learner-state/SettingsView.js";
 import { ReviewSession, ReviewSetup } from "../../apps/web/components/review/ReviewViews.js";
+import { ReviewHome } from "../../apps/web/components/study/ReviewHome.js";
+import { StudyProvider } from "../../apps/web/components/study/StudyProvider.js";
+import { StudyScopeProvider } from "../../apps/web/components/study/StudyScope.js";
+import { emptyStudy, parseStudy, STUDY_KEY } from "../../apps/web/lib/study/storage.js";
 import { createLearnerStateController } from "../../apps/web/lib/learner-state/index.js";
 import type { WorkbookAudioTrack } from "../../apps/web/lib/audio/workbook-audio.js";
 
@@ -142,6 +146,11 @@ function renderWithLearnerState(child: ReactNode) {
   return render(createElement(LearnerStateProvider, null, child));
 }
 
+beforeAll(() => {
+  Object.defineProperty(HTMLDialogElement.prototype, "close", { configurable: true, value: function(this: HTMLDialogElement) { this.removeAttribute("open"); } });
+  for (const method of ["showPopover", "hidePopover"]) Object.defineProperty(HTMLElement.prototype, method, { configurable: true, value: () => {} });
+});
+
 beforeEach(() => {
   window.localStorage.clear();
   window.sessionStorage.clear();
@@ -153,6 +162,43 @@ afterEach(() => {
 });
 
 describe("P4C learner UI behavior", () => {
+  it("keeps saved notes and self-rated recall alongside guided missions under one page title", async () => {
+    await seedLearnerState({ review: true });
+    const saved = { id: "personal-chair", title: "der Stuhl", meaning: "chair", kind: "word" as const, href: "/vocabulary/w466", note: "My chair note", savedAt: "2026-01-01T00:00:00.000Z", due: "2000-01-01T00:00:00.000Z" };
+    window.localStorage.setItem(STUDY_KEY, JSON.stringify({ ...emptyStudy(), saved: { [saved.id]: saved } }));
+    const user = userEvent.setup();
+    renderWithLearnerState(createElement(StudyScopeProvider, { children: createElement(StudyProvider, { dictionary: [], children: createElement(ReviewHome) }) }));
+
+    await screen.findByRole("heading", { level: 1, name: "My review" });
+    await screen.findByRole("heading", { name: "Build mission" });
+    expect(document.querySelectorAll("h1")).toHaveLength(1);
+    expect(screen.getByText(/checked exercises from Lessons 1–2/)).toBeTruthy();
+    expect(screen.getAllByText(/self-rated recall/).length).toBeGreaterThan(0);
+    expect(screen.getByRole("link", { name: "Build a guided mission below" }).getAttribute("href")).toBe("#guided-review");
+
+    const note = screen.getByLabelText("My note");
+    await user.clear(note);
+    await user.type(note, "A note I want to keep");
+    await user.tab();
+    expect(parseStudy(window.localStorage.getItem(STUDY_KEY)).saved[saved.id]?.note).toBe("A note I want to keep");
+
+    await user.click(screen.getByRole("button", { name: "Review 1 items →" }));
+    await user.click(screen.getByRole("button", { name: "Reveal meaning" }));
+    await user.click(screen.getByRole("button", { name: "Remembered" }));
+    const rated = parseStudy(window.localStorage.getItem(STUDY_KEY)).saved[saved.id];
+    expect(rated?.id).toBe(saved.id);
+    expect(rated?.note).toBe("A note I want to keep");
+    expect(rated?.due).not.toBe(saved.due);
+    await user.click(screen.getByRole("button", { name: "Back to my collection" }));
+
+    await user.selectOptions(screen.getByLabelText("Mission size"), "5");
+    await user.click(screen.getByRole("link", { name: "Start mission" }));
+    expect(JSON.parse(window.sessionStorage.getItem(REVIEW_CONFIG_KEY) ?? "null"))
+      .toEqual({ size: 5, lesson: "all", onlyDifficult: false, teacherAssignment: false });
+    expect(document.querySelectorAll("h1")).toHaveLength(1);
+    expect(parseStudy(window.localStorage.getItem(STUDY_KEY)).saved[saved.id]?.note).toBe("A note I want to keep");
+  });
+
   it("carries the chosen review filters into the session", async () => {
     await seedLearnerState({ review: true });
     const user = userEvent.setup();

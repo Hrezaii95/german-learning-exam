@@ -103,8 +103,8 @@ describe("profession concept illustrations", () => {
     const html = renderToStaticMarkup(createElement(RichLessonVisual, { illustration }));
     expect(html).toContain("der Arzt");
     expect(html).toContain("die Ärztin");
-    expect(html).toContain('data-gender="masculine"');
-    expect(html).toContain('data-gender="feminine"');
+    expect(html).toContain('data-tone="male"');
+    expect(html).toContain('data-tone="female"');
     // The picture is never titled with one of the two German words.
     expect(html).not.toContain('<span class="german" lang="de">der Arzt</span></h2>');
   });

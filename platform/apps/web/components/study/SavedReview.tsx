@@ -43,7 +43,7 @@ export function SavedReview() {
     setRevealed(false);
   }
   return (
-    <div className="study-workspace">
+    <div id="saved-collection" className="study-workspace">
       <header className="study-page-header">
         <div>
           <p className="study-eyebrow">Your personal collection</p>
@@ -56,7 +56,7 @@ export function SavedReview() {
           Back to the book →
         </Link>
       </header>
-      <p className="muted">Looking for exercises with checked answers? <Link href="/review">Open guided review</Link> or <Link href="/practice">choose free practice</Link>.</p>
+      <p className="muted">Looking for exercises with checked answers? <Link href="#guided-review">Build a guided mission below</Link> or <Link href="/practice">choose free practice</Link>.</p>
       <div className="study-stats">
         <div>
           <strong>{items.length}</strong>
@@ -224,7 +224,7 @@ export function SavedReview() {
                 <Link className="study-primary" href="/lessons/04">
                   Explore Lesson 4
                 </Link>
-                <Link className="study-secondary" href="/vocabulary">
+                <Link className="study-secondary" href="/cheat-sheets/vocabulary">
                   Browse word cards
                 </Link>
               </div>

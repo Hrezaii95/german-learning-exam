@@ -121,7 +121,7 @@ test.describe("journey 9 · export, reset, import, recover", () => {
     await expect(page.getByLabel("Audio speed")).toHaveValue("1.25");
 
     // The recovered cards are usable again, not just present in JSON.
-    await gotoApp(page, "/review");
+    await gotoApp(page, "/saved/#guided-review");
     await waitForLearnerState(page);
     await expect(page.locator("main")).toContainText(
       `${before?.reviewCards.length} eligible`,

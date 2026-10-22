@@ -4,6 +4,8 @@ import { resolve } from "node:path";
 import { dictionaryKey, emptyStudy, parseStudy, rateSavedItem } from "../../apps/web/lib/study/storage";
 import { lessonFourWords, lessonFourQuiz } from "../../apps/web/lib/study/lesson-four";
 import { lessonFourCards } from "../../apps/web/lib/study/word-cards";
+import { loadWordCards, wordCardForPath } from "../../apps/web/lib/content/word-cards";
+import { wordStudyTags } from "../../apps/web/lib/study/tags";
 import type { BookManifest, SavedItem } from "../../apps/web/lib/study/types";
 import { parseHubSearchParams } from "../../apps/web/lib/content/hub-query";
 import { buildHubNavigationContext, isSafeNavigationPath, resolveBackHref, parseNavigationContextParam } from "../../apps/web/lib/content/navigation-context";
@@ -62,10 +64,46 @@ describe("Lesson 4 source and exercise integration", () => {
     expect(cards.find(c => c.id === "l4-stuhl")?.rows[0]?.plurals[0]?.text).toBe("die Stühle");
     for (const q of lessonFourQuiz) expect(q.options.filter(o => o === q.answer)).toHaveLength(1);
   });
+  it("merges repeated Lesson 4 words into their original families without losing their old paths or study material", () => {
+    const originals = JSON.parse(readFileSync(resolve("apps/web/generated/word-cards.json"), "utf8")) as ReturnType<typeof loadWordCards>;
+    const additions = lessonFourCards();
+    for (const [id, canonicalId] of [
+      ["bild", "W464"], ["million", "W343"], ["glueck", "W542"], ["nur", "W351"],
+      ["mal", "W358"], ["neu", "W415"], ["finden", "W438"], ["kennen", "W537"],
+    ]) {
+      const addition = additions.find(card => card.id === `l4-${id}`)!;
+      const original = originals.cards.find(card => card.id === canonicalId)!;
+      const card = wordCardForPath(addition.path)!;
+      expect(card.id, addition.id).toBe(canonicalId);
+      expect(card).toBe(wordCardForPath(original.path));
+      expect(card.aliases).toContain(addition.path);
+      expect(card.studyTags?.lessons).toContain(4);
+      expect(card.sourceIds).toEqual(expect.arrayContaining([...original.sourceIds, ...addition.sourceIds]));
+      expect(card.sources).toEqual(expect.arrayContaining([...original.sources, ...addition.sources]));
+      expect(card.priorities).toEqual(expect.arrayContaining([...original.priorities, ...addition.priorities]));
+      expect(card.studyTags?.concepts).toEqual(expect.arrayContaining([...wordStudyTags(original).concepts, ...wordStudyTags(addition).concepts]));
+      expect(card.pattern).toEqual(expect.arrayContaining([...original.pattern, ...addition.pattern]));
+      for (const source of [original, addition]) {
+        expect(card.tip).toContain(source.tip);
+        expect(card.note).toContain(source.note);
+        for (const row of source.rows) {
+          const merged = card.rows.find(candidate => candidate.singular.text === row.singular.text)!;
+          expect(merged.plurals.map(form => form.text)).toEqual(expect.arrayContaining(row.plurals.map(form => form.text)));
+          expect(merged.usage).toContain(row.usage);
+        }
+        for (const example of source.examples) expect(card.examples).toEqual(expect.arrayContaining([expect.objectContaining({de: example.de, en: example.en})]));
+        for (const prompt of source.prompts) expect(card.prompts).toEqual(expect.arrayContaining([expect.objectContaining({question: prompt.question, answers: expect.arrayContaining(prompt.answers)})]));
+      }
+    }
+    const opinion = wordCardForPath("/vocabulary/l4-finden")!;
+    expect(opinion.title).toContain("to find");
+    expect(opinion.title).toContain("to think / have an opinion");
+    for (const word of lessonFourWords) expect(wordCardForPath(`/vocabulary/${word.id}`)?.rows.some(row => row.singular.text === word.de), word.id).toBe(true);
+  });
   it("accepts Lesson 4 in the existing vocabulary filters", () => {
     expect(parseHubSearchParams({ lesson: "04" }, []).lesson).toBe("04");
     const nav = buildHubNavigationContext({ hubId: "vocabulary", lesson: "04", q: "Stuhl" });
-    expect(resolveBackHref(nav, "hub")).toBe("/vocabulary?q=Stuhl&lesson=04");
+    expect(resolveBackHref(nav, "hub")).toBe("/cheat-sheets/vocabulary?q=Stuhl&lesson=04");
     expect(parseNavigationContextParam(JSON.stringify(nav))?.lesson).toBe("04");
     expect(isSafeNavigationPath("/vocabulary/l4-stuhl")).toBe(true);
     expect(isSafeNavigationPath("/vocabulary/l4-made-up")).toBe(false);

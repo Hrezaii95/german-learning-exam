@@ -164,8 +164,9 @@ describe("P2A studio dashboard + hub tool drawers", () => {
       expect(html).not.toContain('class="dense">Open<');
 
       for (const hub of hubs.hubs) {
-        expect(html).toContain(`aria-label="Open ${escapeHtml(hub.title)}"`);
-        expect(html).toContain(`href="${hub.path}"`);
+        const destination=hub.id==="vocabulary"?{title:"All vocabulary",href:"/cheat-sheets/vocabulary"}:hub.id==="concepts"?{title:"Grammar connections",href:"/grammar#connected-learning-paths"}:{title:hub.title,href:hub.path};
+        expect(html).toContain(`aria-label="Open ${escapeHtml(destination.title)}"`);
+        expect(html).toContain(`href="${destination.href}"`);
         const count = hubVisibleItemCount(hub);
         expect(count).toBeGreaterThan(0);
         // The count string is derived from the projection, never hard-coded.

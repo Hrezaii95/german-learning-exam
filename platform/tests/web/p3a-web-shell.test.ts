@@ -2,6 +2,7 @@ import { readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
+import { NAV_ITEMS, navItemsFor, type Role } from "../../apps/web/lib/content/nav.js";
 import {
   EXPECTED_LEARNER_PUBLISHED_ACTIVITY_COUNT,
   LEARNER_REVIEW_ONLY_ACTIVITY_IDS,
@@ -30,6 +31,36 @@ const publishedDir = join(platformRoot, "content", "published");
 const webRoot = join(platformRoot, "apps", "web");
 
 const TEACHER_DECK_ID = LEARNER_REVIEW_ONLY_ACTIVITY_IDS[0];
+
+describe("L1-1 shared navigation", () => {
+  it("keeps destinations unique and ordered on each surface", () => {
+    expect(new Set(NAV_ITEMS.map(item => item.id)).size).toBe(NAV_ITEMS.length);
+    for (const placement of ["rail", "tabs", "menu"] as const) {
+      const items = navItemsFor(placement);
+      expect(new Set(items.map(item => item.href)).size).toBe(items.length);
+      expect(items.map(item => item.order)).toEqual(items.map(item => item.order).sort((a, b) => a - b));
+      expect(items.every(item => item.href.startsWith("/") && !item.href.startsWith("/german-learning-exam"))).toBe(true);
+    }
+  });
+
+  it("hides role-only destinations unless a matching signed-in role is supplied", () => {
+    const originalLength = NAV_ITEMS.length;
+    try {
+      for (const role of ["student", "teacher", "admin"] as Role[]) {
+        const id = `role-${role}`;
+        NAV_ITEMS.push({ id, label: id, href: `/${id}`, icon: "", placement: ["rail", "tabs", "menu"], order: 999, roles: [role] });
+        for (const placement of ["rail", "tabs", "menu"] as const) {
+          expect(navItemsFor(placement).some(item => item.id === id)).toBe(false);
+          for (const viewer of ["student", "teacher", "admin"] as Role[]) {
+            expect(navItemsFor(placement, viewer).some(item => item.id === id)).toBe(viewer === role);
+          }
+        }
+      }
+    } finally {
+      NAV_ITEMS.splice(originalLength);
+    }
+  });
+});
 
 describe("P3A learner publication policy", () => {
   it("derives learner count from validated total minus the single review-only policy", () => {
@@ -218,8 +249,8 @@ describe("P3A route resolution", () => {
       expect(resolved.kind).toBe("not-found");
       expect(resolved.kind).not.toBe("dashboard");
     }
-    expect(resolveLearnerRoute("/vocabulary", projection).kind).toBe("hub");
-    expect(resolveLearnerRoute("/hubs", projection).kind).toBe("hubs-directory");
+    expect(resolveLearnerRoute("/vocabulary", projection)).toMatchObject({kind:"canonical-redirect",canonicalPath:"/cheat-sheets/vocabulary"});
+    expect(resolveLearnerRoute("/hubs", projection)).toMatchObject({kind:"canonical-redirect",canonicalPath:"/cheat-sheets"});
     expect(
       resolveLearnerRoute("/vocabulary/lex:ingenieur", projection).kind,
     ).toBe("not-found");
@@ -413,9 +444,13 @@ describe("P3A shell accessibility and responsive contract", () => {
     expect(shell).toContain('aria-label="Desktop navigation"');
     expect(shell).toContain('aria-label="Tablet navigation"');
     expect(readFileSync(join(webRoot, "components/shell/MobileNavigation.tsx"), "utf8")).toContain('aria-label="Mobile"');
-    expect(shell).toContain("<MobileNavigation current={current}/>");
-    expect(shell).toContain('href: "/vocabulary"');
-    expect(shell).toContain("Coming soon");
+    expect(shell).toContain("<MobileNavigation current={current} role={role}/>");
+    const nav = readFileSync(join(webRoot, "lib/content/nav.ts"), "utf8");
+    expect(nav).toContain('href: "/cheat-sheets/vocabulary"');
+    expect(shell).toContain("navItemsFor");
+    expect(navigation).toContain("navItemsFor");
+    expect(shell).toContain("<AccountSlot/>");
+    expect(navigation).toContain("<AccountSlot/>");
   });
 
   it("defines deliberate desktop/tablet/mobile navigation breakpoints", () => {

@@ -161,7 +161,7 @@ describe("P3C search UI + shell contracts", () => {
     );
     expect(html.match(/<main\b/g)?.length).toBe(1);
     expect(html).toContain('href="#main-content"');
-    expect((html.match(/aria-current="page"/g) ?? []).length).toBe(3);
+    expect((html.match(/aria-current="page"/g) ?? []).length).toBe(2);
     expect(html).toContain('href="/search"');
     expect(html).toContain('aria-label="Search learning content"');
     expect(html).toContain('type="search"');
@@ -181,7 +181,7 @@ describe("P3C search UI + shell contracts", () => {
     expect(directory).not.toContain('aria-label="Open global search"');
     expect(directory).toContain('href="/search"');
     expect(directory).toContain("Search all content");
-    expect(directory).toContain('href="/hubs"');
+    expect(directory).toContain('href="/cheat-sheets"');
     const bottomNavSearchLinks = (
       directory.match(/shell-bottomnav(?:(?!<\/nav>)[\s\S])*?href="\/search"/) ?? []
     ).length;
