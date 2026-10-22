@@ -64,4 +64,6 @@ L1-5 contract verification completed: fresh Pages build / manifest / leak scan p
 
 ## Owner
 
-The updated lane instruction at `b04660bf` retains the ADR-017 raster hero on word details and card views. Line art applies to grids, lists, thumbnails, dropdowns and sheets. A minimal L1-8 follow-up is restoring that explicit exception before full visual acceptance. Any future removal of the approved hero is deferred to the owner. G2 review, German/listening approval and external account/secret actions remain owner gates.
+The updated lane instruction at `b04660bf` retains the ADR-017 raster hero on word details and card views. Line art applies to grids, lists, thumbnails, dropdowns and sheets. The L1-8 raster-hero exception is restored and published through G2; eight- and nine-specific implementations preserve their respective icons/CSS. Regression run on L1-9 failed seven cases before repair and passed all 30 afterward; L1-8 syntax/CSS proof and independent review pass, with its full gate execution still pending. Any future removal of the approved hero is deferred to the owner. G2 review, German/listening approval and external account/secret actions remain owner gates.
+
+L1-7 full gate follow-up: unsupported Testing Library role option caught by TypeScript; removing the redundant `exact` option preserves exact string-name semantics. Targeted web-test typecheck passes and the correction is published through G2. Full ordered rerun is in progress. All pending full suites and PDF inspections remain unclaimed.
