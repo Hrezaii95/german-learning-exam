@@ -850,6 +850,7 @@
   }
   .toolbar {
     gap: 10px;
+    flex-wrap: wrap;
   }
   .hero {
     grid-template-columns: minmax(0,1fr) 92px;
