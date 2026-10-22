@@ -184,7 +184,7 @@ describe("P4C learner UI behavior", () => {
 
     await user.click(screen.getByRole("button", { name: "Review 1 items →" }));
     await user.click(screen.getByRole("button", { name: "Reveal meaning" }));
-    await user.click(screen.getByRole("button", { name: "Remembered", exact: true }));
+    await user.click(screen.getByRole("button", { name: "Remembered" }));
     const rated = parseStudy(window.localStorage.getItem(STUDY_KEY)).saved[saved.id];
     expect(rated?.id).toBe(saved.id);
     expect(rated?.note).toBe("A note I want to keep");
