@@ -82,6 +82,7 @@ Requirement keywords use MUST, SHOULD and MAY in their ordinary engineering sens
 
 - authoritative pronunciation scoring;
 - open-ended generative conversation;
-- teacher portal and source-upload UI;
-- multi-user sync, social leaderboards and certificates;
+- ~~teacher portal~~ and ~~multi-user sync~~: **approved 2026-10-22 (ADR-018)**; see `docs/platform/`;
+- source-upload UI;
+- public social leaderboards and certificates (an optional class leaderboard switched on by the teacher is allowed, off by default);
 - automatic whole-book publishing.

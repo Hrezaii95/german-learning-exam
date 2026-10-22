@@ -1,0 +1,1781 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:wortwerk:pack:1",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "language": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "cefr": {
+      "enum": [
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "units": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "canDo": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "uniqueItems": true
+          },
+          "bookRef": {
+            "$ref": "#/$defs/unitBookRef"
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "canDo"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "maps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "rows": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "cols": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "rows",
+          "cols"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0
+    },
+    "difficulty": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "review": {
+      "$ref": "#/$defs/review"
+    },
+    "itemFiles": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      },
+      "uniqueItems": true
+    },
+    "story": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "exam": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/item"
+      },
+      "minItems": 0
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "id",
+    "language",
+    "cefr",
+    "title",
+    "units",
+    "maps",
+    "difficulty",
+    "review",
+    "items"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "review": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "enum": [
+            "pending-german-review",
+            "reviewed"
+          ]
+        },
+        "reviewer": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "reviewedAt": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        }
+      },
+      "required": [
+        "status"
+      ],
+      "additionalProperties": false
+    },
+    "audio": {
+      "type": "object",
+      "properties": {
+        "src": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "review": {
+          "enum": [
+            "preview",
+            "reviewed"
+          ]
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        }
+      },
+      "required": [
+        "src",
+        "review"
+      ],
+      "additionalProperties": false
+    },
+    "example": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "translation": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "audio": {
+          "$ref": "#/$defs/audio"
+        }
+      },
+      "required": [
+        "text"
+      ],
+      "additionalProperties": false
+    },
+    "bookRef": {
+      "type": "object",
+      "properties": {
+        "book": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "lesson": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "page": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "exercise": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        }
+      },
+      "required": [
+        "book",
+        "lesson"
+      ],
+      "additionalProperties": false
+    },
+    "unitBookRef": {
+      "type": "object",
+      "properties": {
+        "book": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "lesson": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "pageStart": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "pageEnd": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "book",
+        "lesson"
+      ],
+      "additionalProperties": false
+    },
+    "token": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "plain"
+            },
+            "text": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            }
+          },
+          "required": [
+            "type",
+            "text"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "emphasis"
+            },
+            "text": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "reason": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            }
+          },
+          "required": [
+            "type",
+            "text"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "gender"
+            },
+            "text": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "gender": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            }
+          },
+          "required": [
+            "type",
+            "text",
+            "gender"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "morph"
+            },
+            "text": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "tag": {
+              "enum": [
+                "REG",
+                "SPELL",
+                "IRR",
+                "STEM",
+                "SUFFIX"
+              ]
+            }
+          },
+          "required": [
+            "type",
+            "text",
+            "tag"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "gap"
+            },
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            }
+          },
+          "required": [
+            "type",
+            "label"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "text": {
+      "type": "object",
+      "properties": {
+        "tokens": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/token"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "tokens"
+      ],
+      "additionalProperties": false
+    },
+    "structuredPrompt": {
+      "type": "object",
+      "properties": {
+        "instruction": {
+          "$ref": "#/$defs/text"
+        },
+        "stem": {
+          "$ref": "#/$defs/text"
+        },
+        "choices": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "label": {
+                "$ref": "#/$defs/text"
+              }
+            },
+            "required": [
+              "id",
+              "label"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "instruction"
+      ],
+      "additionalProperties": false
+    },
+    "prompt": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        {
+          "$ref": "#/$defs/structuredPrompt"
+        }
+      ]
+    },
+    "answer": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "exact"
+            },
+            "accepted": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "minItems": 1
+            },
+            "normalize": {
+              "const": "nfc-trim-casefold"
+            }
+          },
+          "required": [
+            "type",
+            "accepted"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "tokens"
+            },
+            "acceptedTokenSets": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "minItems": 1
+              },
+              "minItems": 1
+            }
+          },
+          "required": [
+            "type",
+            "acceptedTokenSets"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "choice"
+            },
+            "correctIds": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "minItems": 1
+            }
+          },
+          "required": [
+            "type",
+            "correctIds"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "order"
+            },
+            "correctOrder": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "minItems": 1
+            }
+          },
+          "required": [
+            "type",
+            "correctOrder"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "question": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "type": {
+          "enum": [
+            "trueFalseNotGiven",
+            "multipleChoice"
+          ]
+        },
+        "prompt": {
+          "$ref": "#/$defs/prompt"
+        },
+        "answer": {
+          "$ref": "#/$defs/answer"
+        },
+        "choices": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              }
+            },
+            "required": [
+              "id",
+              "label"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "prompt",
+        "answer"
+      ],
+      "additionalProperties": false
+    },
+    "sourceRef": {
+      "type": "object",
+      "properties": {
+        "cardId": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "href": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "lessons": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "minItems": 0
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "uniqueItems": true
+        },
+        "sourceLessons": {
+          "type": "object",
+          "properties": {
+            "course": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "minItems": 0
+            },
+            "teacher-extra": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "minItems": 0
+            },
+            "study-extra": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "minItems": 0
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "sourceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "uniqueItems": true
+        },
+        "citations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "uniqueItems": true
+        },
+        "teacherRows": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "cardId",
+        "href",
+        "lessons",
+        "sources"
+      ],
+      "additionalProperties": false
+    },
+    "display": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "category": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "tone": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "patterns": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "uniqueItems": true
+        },
+        "note": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "text",
+        "category",
+        "tone",
+        "patterns",
+        "note"
+      ],
+      "additionalProperties": false
+    },
+    "item": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "lexeme"
+            },
+            "id": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "unitId": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "bookRef": {
+              "$ref": "#/$defs/bookRef"
+            },
+            "source": {
+              "enum": [
+                "course",
+                "teacher-extra",
+                "study-extra"
+              ]
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "uniqueItems": true
+            },
+            "review": {
+              "$ref": "#/$defs/review"
+            },
+            "revealFields": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "uniqueItems": true
+            },
+            "audio": {
+              "$ref": "#/$defs/audio"
+            },
+            "image": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "sourceRef": {
+              "$ref": "#/$defs/sourceRef"
+            },
+            "display": {
+              "$ref": "#/$defs/display"
+            },
+            "pluralAudio": {
+              "type": "object",
+              "additionalProperties": {
+                "$ref": "#/$defs/audio"
+              }
+            },
+            "lemma": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "pos": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "meaning": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "gender": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "article": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "forms": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "minItems": 1
+              }
+            },
+            "examples": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/example"
+              },
+              "minItems": 0
+            },
+            "frequencyRank": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          "required": [
+            "type",
+            "id",
+            "unitId",
+            "bookRef",
+            "source",
+            "tags",
+            "lemma",
+            "pos",
+            "meaning"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "grammarPoint"
+            },
+            "id": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "unitId": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "bookRef": {
+              "$ref": "#/$defs/bookRef"
+            },
+            "source": {
+              "enum": [
+                "course",
+                "teacher-extra",
+                "study-extra"
+              ]
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "uniqueItems": true
+            },
+            "review": {
+              "$ref": "#/$defs/review"
+            },
+            "revealFields": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "uniqueItems": true
+            },
+            "audio": {
+              "$ref": "#/$defs/audio"
+            },
+            "image": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "sourceRef": {
+              "$ref": "#/$defs/sourceRef"
+            },
+            "display": {
+              "$ref": "#/$defs/display"
+            },
+            "pluralAudio": {
+              "type": "object",
+              "additionalProperties": {
+                "$ref": "#/$defs/audio"
+              }
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "explanation": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "examples": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/example"
+              },
+              "minItems": 0
+            },
+            "drills": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "type",
+            "id",
+            "unitId",
+            "bookRef",
+            "source",
+            "tags",
+            "title",
+            "explanation",
+            "examples"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "drill"
+            },
+            "id": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "unitId": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "bookRef": {
+              "$ref": "#/$defs/bookRef"
+            },
+            "source": {
+              "enum": [
+                "course",
+                "teacher-extra",
+                "study-extra"
+              ]
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "uniqueItems": true
+            },
+            "review": {
+              "$ref": "#/$defs/review"
+            },
+            "revealFields": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "uniqueItems": true
+            },
+            "audio": {
+              "$ref": "#/$defs/audio"
+            },
+            "image": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "sourceRef": {
+              "$ref": "#/$defs/sourceRef"
+            },
+            "display": {
+              "$ref": "#/$defs/display"
+            },
+            "pluralAudio": {
+              "type": "object",
+              "additionalProperties": {
+                "$ref": "#/$defs/audio"
+              }
+            },
+            "grammarPoint": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "drillType": {
+              "enum": [
+                "sort",
+                "gap",
+                "order",
+                "transform",
+                "errorHunt",
+                "build"
+              ]
+            },
+            "prompt": {
+              "$ref": "#/$defs/prompt"
+            },
+            "answer": {
+              "$ref": "#/$defs/answer"
+            },
+            "buckets": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  "label": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  }
+                },
+                "required": [
+                  "id",
+                  "label"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 1
+            },
+            "distractors": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "type",
+            "id",
+            "unitId",
+            "bookRef",
+            "source",
+            "tags",
+            "grammarPoint",
+            "drillType",
+            "prompt",
+            "answer"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "sentence"
+            },
+            "id": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "unitId": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "bookRef": {
+              "$ref": "#/$defs/bookRef"
+            },
+            "source": {
+              "enum": [
+                "course",
+                "teacher-extra",
+                "study-extra"
+              ]
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "uniqueItems": true
+            },
+            "review": {
+              "$ref": "#/$defs/review"
+            },
+            "revealFields": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "uniqueItems": true
+            },
+            "audio": {
+              "$ref": "#/$defs/audio"
+            },
+            "image": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "sourceRef": {
+              "$ref": "#/$defs/sourceRef"
+            },
+            "display": {
+              "$ref": "#/$defs/display"
+            },
+            "pluralAudio": {
+              "type": "object",
+              "additionalProperties": {
+                "$ref": "#/$defs/audio"
+              }
+            },
+            "text": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "translation": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "tokens": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "minItems": 1
+            },
+            "grammarTags": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "type",
+            "id",
+            "unitId",
+            "bookRef",
+            "source",
+            "tags",
+            "text",
+            "translation"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "dialogue"
+            },
+            "id": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "unitId": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "bookRef": {
+              "$ref": "#/$defs/bookRef"
+            },
+            "source": {
+              "enum": [
+                "course",
+                "teacher-extra",
+                "study-extra"
+              ]
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "uniqueItems": true
+            },
+            "review": {
+              "$ref": "#/$defs/review"
+            },
+            "revealFields": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "uniqueItems": true
+            },
+            "audio": {
+              "$ref": "#/$defs/audio"
+            },
+            "image": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "sourceRef": {
+              "$ref": "#/$defs/sourceRef"
+            },
+            "display": {
+              "$ref": "#/$defs/display"
+            },
+            "pluralAudio": {
+              "type": "object",
+              "additionalProperties": {
+                "$ref": "#/$defs/audio"
+              }
+            },
+            "turns": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "speaker": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  "text": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  "audio": {
+                    "$ref": "#/$defs/audio"
+                  }
+                },
+                "required": [
+                  "speaker",
+                  "text"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 1
+            },
+            "questions": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/question"
+              },
+              "minItems": 0
+            }
+          },
+          "required": [
+            "type",
+            "id",
+            "unitId",
+            "bookRef",
+            "source",
+            "tags",
+            "turns"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "text"
+            },
+            "id": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "unitId": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "bookRef": {
+              "$ref": "#/$defs/bookRef"
+            },
+            "source": {
+              "enum": [
+                "course",
+                "teacher-extra",
+                "study-extra"
+              ]
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "uniqueItems": true
+            },
+            "review": {
+              "$ref": "#/$defs/review"
+            },
+            "revealFields": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "uniqueItems": true
+            },
+            "audio": {
+              "$ref": "#/$defs/audio"
+            },
+            "image": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "sourceRef": {
+              "$ref": "#/$defs/sourceRef"
+            },
+            "display": {
+              "$ref": "#/$defs/display"
+            },
+            "pluralAudio": {
+              "type": "object",
+              "additionalProperties": {
+                "$ref": "#/$defs/audio"
+              }
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "body": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "questions": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/question"
+              },
+              "minItems": 0
+            },
+            "glossary": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              }
+            }
+          },
+          "required": [
+            "type",
+            "id",
+            "unitId",
+            "bookRef",
+            "source",
+            "tags",
+            "title",
+            "body"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "speakingPrompt"
+            },
+            "id": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "unitId": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "bookRef": {
+              "$ref": "#/$defs/bookRef"
+            },
+            "source": {
+              "enum": [
+                "course",
+                "teacher-extra",
+                "study-extra"
+              ]
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "uniqueItems": true
+            },
+            "review": {
+              "$ref": "#/$defs/review"
+            },
+            "revealFields": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "uniqueItems": true
+            },
+            "audio": {
+              "$ref": "#/$defs/audio"
+            },
+            "image": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "sourceRef": {
+              "$ref": "#/$defs/sourceRef"
+            },
+            "display": {
+              "$ref": "#/$defs/display"
+            },
+            "pluralAudio": {
+              "type": "object",
+              "additionalProperties": {
+                "$ref": "#/$defs/audio"
+              }
+            },
+            "prompt": {
+              "$ref": "#/$defs/prompt"
+            },
+            "checklist": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "uniqueItems": true
+            },
+            "modelAnswers": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "type",
+            "id",
+            "unitId",
+            "bookRef",
+            "source",
+            "tags",
+            "prompt"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "writingPrompt"
+            },
+            "id": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "unitId": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "bookRef": {
+              "$ref": "#/$defs/bookRef"
+            },
+            "source": {
+              "enum": [
+                "course",
+                "teacher-extra",
+                "study-extra"
+              ]
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "uniqueItems": true
+            },
+            "review": {
+              "$ref": "#/$defs/review"
+            },
+            "revealFields": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "uniqueItems": true
+            },
+            "audio": {
+              "$ref": "#/$defs/audio"
+            },
+            "image": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "sourceRef": {
+              "$ref": "#/$defs/sourceRef"
+            },
+            "display": {
+              "$ref": "#/$defs/display"
+            },
+            "pluralAudio": {
+              "type": "object",
+              "additionalProperties": {
+                "$ref": "#/$defs/audio"
+              }
+            },
+            "prompt": {
+              "$ref": "#/$defs/prompt"
+            },
+            "checklist": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "uniqueItems": true
+            },
+            "modelAnswers": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "type",
+            "id",
+            "unitId",
+            "bookRef",
+            "source",
+            "tags",
+            "prompt"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "examTask"
+            },
+            "id": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "unitId": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "bookRef": {
+              "$ref": "#/$defs/bookRef"
+            },
+            "source": {
+              "enum": [
+                "course",
+                "teacher-extra",
+                "study-extra"
+              ]
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "uniqueItems": true
+            },
+            "review": {
+              "$ref": "#/$defs/review"
+            },
+            "revealFields": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "uniqueItems": true
+            },
+            "audio": {
+              "$ref": "#/$defs/audio"
+            },
+            "image": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "sourceRef": {
+              "$ref": "#/$defs/sourceRef"
+            },
+            "display": {
+              "$ref": "#/$defs/display"
+            },
+            "pluralAudio": {
+              "type": "object",
+              "additionalProperties": {
+                "$ref": "#/$defs/audio"
+              }
+            },
+            "section": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "timing": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "itemRefs": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "minItems": 1
+            },
+            "instructions": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "scoring": {
+              "type": "object",
+              "properties": {
+                "maxScore": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "pointsPerItem": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "passRatio": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                }
+              },
+              "required": [
+                "maxScore"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "type",
+            "id",
+            "unitId",
+            "bookRef",
+            "source",
+            "tags",
+            "section",
+            "timing",
+            "itemRefs"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    }
+  }
+}

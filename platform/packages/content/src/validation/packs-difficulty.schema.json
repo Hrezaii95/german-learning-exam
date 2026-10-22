@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:wortwerk:difficulty:1",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "optionsCount": {
+      "type": "integer",
+      "minimum": 2,
+      "maximum": 6
+    },
+    "timerSeconds": {
+      "type": "number",
+      "minimum": 0
+    },
+    "audioSpeedRange": {
+      "type": "array",
+      "items": {
+        "type": "number",
+        "exclusiveMinimum": 0
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "hintsAllowed": {
+      "type": "boolean"
+    },
+    "maxPassageLength": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "distractorCloseness": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "typedAnswerRatio": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "id",
+    "optionsCount",
+    "timerSeconds",
+    "audioSpeedRange",
+    "hintsAllowed",
+    "maxPassageLength",
+    "distractorCloseness",
+    "typedAnswerRatio"
+  ],
+  "additionalProperties": false
+}
