@@ -1,5 +1,7 @@
 // @vitest-environment jsdom
 import {createElement} from "react";
+import {readFileSync} from "node:fs";
+import {parse} from "postcss";
 import {renderToStaticMarkup} from "react-dom/server";
 import {afterEach,beforeAll,describe,expect,it} from "vitest";
 import {cleanup,fireEvent,render,screen,within} from "@testing-library/react";
@@ -19,6 +21,7 @@ import {FoodCheatSheet} from "../../apps/web/components/study/FoodCheatSheet";
 import {TravelCheatSheet} from "../../apps/web/components/study/TravelCheatSheet";
 import {PastCheatSheet} from "../../apps/web/components/study/PastCheatSheet";
 import {JourneyCheatSheet} from "../../apps/web/components/study/JourneyCheatSheet";
+import {CollectionCheatSheet} from "../../apps/web/components/study/CollectionCheatSheet";
 
 const cards=loadWordCards().cards.filter(card=>card.studyTags?.lessons.includes(5));
 const objectSheet=loadSubjectSheets().find(sheet=>sheet.id==="objects")!;
@@ -28,6 +31,7 @@ beforeAll(()=>{
   Object.defineProperty(HTMLDialogElement.prototype,"showModal",{configurable:true,value:function(this:HTMLDialogElement){this.setAttribute("open","");}});
   Object.defineProperty(HTMLDialogElement.prototype,"close",{configurable:true,value:function(this:HTMLDialogElement){this.removeAttribute("open");this.dispatchEvent(new Event("close"));}});
   Object.defineProperty(HTMLElement.prototype,"scrollIntoView",{configurable:true,value:()=>{}});
+  Object.defineProperty(window,"matchMedia",{configurable:true,value:()=>({matches:true,addEventListener:()=>{},removeEventListener:()=>{}})});
 });
 afterEach(()=>{cleanup();localStorage.clear();window.history.replaceState({},"","/");});
 
@@ -153,5 +157,116 @@ describe("topic vocabulary handoff",()=>{
     const travel=renderToStaticMarkup(createElement(TravelCheatSheet,{cards,speech}));
     expect(travel).toContain('class="travel-place-map"');
     expect(travel).not.toContain('class="travel-nouns"');
+  });
+});
+
+/** jsdom does not render print media. Apply the real display/visibility rules
+ * for print to the real DOM; browser pagination and layout stay in E2E. */
+function applyLivePrintVisibility(routeStyles=["past/past.css"]){
+  const style=document.createElement("style");
+  const rules:string[]=[];
+  for(const path of ["app/globals.css","app/study.css","app/cheat-sheets/collection.css",...routeStyles.map(path=>path.startsWith("components/")?path:`app/cheat-sheets/${path}`),"components/study/StudyPrint.css"]){
+    parse(readFileSync(`apps/web/${path}`,"utf8")).walkRules(rule=>{
+      for(let parent=rule.parent;parent&&parent.type!=="root";parent=parent.parent){
+        if(parent.type==="atrule"&&parent.name==="media"&&!/^print(?:\s|$)/.test(parent.params))return;
+      }
+      const declarations=(rule.nodes??[]).filter(node=>node.type==="decl"&&["display","visibility"].includes(node.prop));
+      if(declarations.length)rules.push(`${rule.selector}{${declarations.map(node=>node.toString()).join(";")}}`);
+    });
+  }
+  style.textContent=rules.join("\n");
+  document.head.append(style);
+  return ()=>style.remove();
+}
+
+function hiddenByPrintAncestor(element:Element){
+  for(let node:Element|null=element;node;node=node.parentElement){
+    const style=getComputedStyle(node);
+    if(style.display==="none"||["hidden","collapse"].includes(style.visibility))return true;
+  }
+  return false;
+}
+
+describe("live workshop print controls",()=>{
+  it.each([true,false])("omits the pattern toggle while retaining the current reveal state %s and selected teaching cards",revealed=>{
+    window.history.replaceState({},"","/cheat-sheets/past#past-patterns-0-1-question-2-3");
+    render(createElement("div",{className:"app-shell"},createElement("main",{className:"shell-main"},createElement(PastCheatSheet,{cards:topicCards(11),speech}))));
+    const toggle=screen.getByRole("checkbox",{name:"Show participles in the pattern cards",exact:true}) as HTMLInputElement;
+    if(!revealed)fireEvent.click(toggle);
+    const label=toggle.closest("label")!;
+    const selected=document.getElementById("past-pattern-ieren")!;
+    const sentence=document.querySelector(".past-result")!;
+    const before=sentence.textContent;
+    expect(hiddenByPrintAncestor(label)).toBe(false);
+    expect(toggle.checked).toBe(revealed);
+    expect(selected.getAttribute("data-selected")).toBe("true");
+    const hiddenCount=document.querySelectorAll('[aria-label="Hidden participle"]').length;
+    expect(hiddenCount>0).toBe(!revealed);
+    const restore=applyLivePrintVisibility();
+    try{
+      expect(hiddenByPrintAncestor(label)).toBe(true);
+      expect(hiddenByPrintAncestor(toggle)).toBe(true);
+      expect(hiddenByPrintAncestor(screen.getByRole("heading",{name:"Four patterns to remember."}))).toBe(false);
+      expect(document.querySelectorAll(".past-pattern-grid > article")).toHaveLength(4);
+      for(const formula of document.querySelectorAll(".past-pattern-grid .past-formula"))expect(hiddenByPrintAncestor(formula)).toBe(false);
+      expect(hiddenByPrintAncestor(selected)).toBe(false);
+      expect(selected.getAttribute("data-selected")).toBe("true");
+      expect(sentence.textContent).toBe(before);
+      expect(hiddenByPrintAncestor(sentence)).toBe(false);
+      expect(document.querySelectorAll('[aria-label="Hidden participle"]')).toHaveLength(hiddenCount);
+    }finally{restore();}
+    expect(hiddenByPrintAncestor(label)).toBe(false);
+    expect(toggle.checked).toBe(revealed);
+  });
+
+  it.each([
+    {subject:"objects",styles:["objects/objects.css"],labels:".object-lab > div:first-child > label",count:2,keep:".object-result,.object-description,.object-picture,.object-pickers > button"},
+    {subject:"office",styles:["objects/objects.css","office/office.css"],labels:"#office-lab > label,#phone-details .phone-turn > label,#phone-lab > div:first-child > label",count:4,keep:".office-sentence,.office-role-trail,.office-desk > button,#phone-details .phone-turn > p,#phone-details [role=status]"},
+    {subject:"hobbies",styles:["hobbies/hobbies.css","hobby-time.css"],labels:".hobby-selection > label",count:1,keep:".hobby-meaning-map,.hobby-frame,.hobby-selection > .hobby-illustration"},
+    {subject:"food",styles:["food/food.css"],labels:"#food-lab > label,#food-compounds > label,#food-order > label",count:3,keep:".food-output,.food-compound,.food-order-turns,.food-intent-map"},
+    {subject:"travel",styles:["travel/travel.css"],labels:"#travel-bracket > label",count:1,keep:".travel-result,.travel-parts,.travel-bridge-parts,.travel-route > button"},
+    {subject:"time",styles:["time/time.css","hobby-time.css"],labels:".clock-answer > label.time-recall,#plan-lab > label",count:4,keep:".clock-answer > div[aria-live],.clock-layout svg.learning-clock,.time-word-order,.plan-answer"},
+    {subject:"seasons",styles:["journeys/journeys.css"],labels:"#journey-years > label",count:1,keep:".journey-year-output,.year-chunks,.journey-result,.journey-parts"},
+    {subject:"conversation",styles:["components/study/ConversationWorkshop.css"],labels:"#conversation-spelling > label,#conversation-spelling .spelling-name > label",count:2,keep:'.spelling-focus,.spelling-name-letters,.spelling-soundboard > div > button[aria-label^="Choose letter"]'},
+    {subject:"numbers",styles:["components/study/NumbersWorkshop.css"],labels:"#number-builder > label.sheet-number-input,#number-listening > label,#number-listening form > label,#number-price > label,.collection-numbers .sheet-rule-grid > article:not(#number-price) > label",count:5,keep:".number-stage,.number-reading-order,.number-price-tag"},
+  ])("$subject omits transient inline fields without dropping the current teaching output",testCase=>{
+    const content=testCase.subject==="conversation"||testCase.subject==="numbers"?createElement(CollectionCheatSheet,{sheet:testCase.subject,cards:loadWordCards().cards,speech}):topics.find(topic=>topic.subject===testCase.subject)!.render();
+    render(createElement("div",{className:"app-shell"},createElement("main",{className:"shell-main"},content)));
+    if(testCase.subject==="objects")fireEvent.click(screen.getByRole("checkbox",{name:"Correct a guess with kein / keine",exact:true}));
+    if(testCase.subject==="office"){
+      fireEvent.click(screen.getByRole("checkbox",{name:"Make it plural",exact:true}));
+      fireEvent.change(screen.getByRole("textbox",{name:"Name to spell",exact:true}),{target:{value:"Mia"}});
+      fireEvent.change(screen.getByRole("textbox",{name:"Digits you heard",exact:true}),{target:{value:"1234"}});
+      fireEvent.click(screen.getByRole("button",{name:"Check digits",exact:true}));
+    }
+    if(testCase.subject==="food")fireEvent.change(screen.getByRole("combobox",{name:"Food for these examples",exact:true}),{target:{value:"3"}});
+    if(testCase.subject==="time")fireEvent.click(screen.getByRole("checkbox",{name:"Put the time first",exact:true}));
+    if(testCase.subject==="seasons")fireEvent.change(screen.getByRole("textbox",{name:"Year to pronounce",exact:true}),{target:{value:"2007"}});
+    if(testCase.subject==="conversation"){
+      fireEvent.change(screen.getByRole("combobox",{name:"Choose a letter",exact:true}),{target:{value:"W"}});
+      fireEvent.change(screen.getByRole("textbox",{name:"Name to spell",exact:true}),{target:{value:"Mia"}});
+    }
+    if(testCase.subject==="numbers")fireEvent.change(screen.getByRole("textbox",{name:"Type a whole number from 0 to 1,000,000",exact:true}),{target:{value:"452"}});
+    const labels=[...document.querySelectorAll(testCase.labels)];
+    expect(labels).toHaveLength(testCase.count);
+    for(const label of labels)expect(hiddenByPrintAncestor(label)).toBe(false);
+    const fields=labels.flatMap(label=>[...label.querySelectorAll<HTMLInputElement|HTMLSelectElement>("input,select")]);
+    const values=fields.map(field=>({value:field.value,checked:field instanceof HTMLInputElement?field.checked:null}));
+    for(const selector of testCase.keep.split(","))expect(document.querySelectorAll(selector).length,selector).toBeGreaterThan(0);
+    const teaching=[...document.querySelectorAll(testCase.keep)].map(node=>({node,text:node.textContent,pressed:node.getAttribute("aria-pressed")}));
+    expect(teaching.length).toBeGreaterThan(0);
+    if(testCase.subject==="seasons")expect(document.querySelector(".year-chunks")?.textContent).toBe("zweitausendsieben");
+    const restore=applyLivePrintVisibility(testCase.styles);
+    try{
+      for(const label of labels)expect(hiddenByPrintAncestor(label)).toBe(true);
+      for(const field of fields)expect(hiddenByPrintAncestor(field)).toBe(true);
+      for(const {node,text,pressed}of teaching){
+        expect(hiddenByPrintAncestor(node),node.outerHTML.slice(0,200)).toBe(false);
+        expect(node.textContent).toBe(text);
+        expect(node.getAttribute("aria-pressed")).toBe(pressed);
+      }
+    }finally{restore();}
+    for(const [index,field]of fields.entries())expect({value:field.value,checked:field instanceof HTMLInputElement?field.checked:null}).toEqual(values[index]);
+    for(const label of labels)expect(hiddenByPrintAncestor(label)).toBe(false);
   });
 });

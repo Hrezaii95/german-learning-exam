@@ -947,6 +947,8 @@
 
 .subject-grouping-switch strong {
   display: block;
+  flex: 1;
+  min-width: 0;
   font-size: .85rem;
   line-height: 1.4;
   font-weight: 650;
@@ -954,6 +956,8 @@
 
 .subject-grouping-switch small {
   display: block;
+  flex: none;
+  white-space: nowrap;
   margin-top: 2px;
   font-size: .7rem;
   line-height: 1.4;

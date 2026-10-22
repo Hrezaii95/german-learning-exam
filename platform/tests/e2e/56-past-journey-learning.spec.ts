@@ -112,3 +112,58 @@ test("past and journey print the current sentence and reference diagrams",async(
     await expect(result).toHaveText(text,{useInnerText:true});
   }
 });
+
+const inlinePrintCases=[
+  {sheet:"past",labels:"#past-patterns > label",count:1,teaching:".past-pattern-grid > article,.past-pattern-grid .past-formula,.past-result"},
+  {sheet:"objects",labels:".object-lab > div:first-child > label",count:2,teaching:".object-result,.object-description,.object-picture,.object-pickers > button"},
+  {sheet:"office",labels:"#office-lab > label,#phone-details .phone-turn > label,#phone-lab > div:first-child > label.object-toggle",count:4,teaching:".office-sentence,.office-role-trail,.office-desk > button,#phone-details .phone-turn > p,#phone-details [role=status]"},
+  {sheet:"hobbies",labels:".hobby-selection > label",count:1,teaching:".hobby-meaning-map,.hobby-frame,.hobby-selection > .hobby-illustration"},
+  {sheet:"food",labels:"#food-lab > label,#food-compounds > label,#food-order > label",count:3,teaching:".food-output,.food-compound,.food-order-turns,.food-intent-map"},
+  {sheet:"time",labels:".clock-answer > label.time-recall,#plan-lab > label",count:4,teaching:".clock-answer > div[aria-live],.clock-layout svg.learning-clock,.time-word-order,.plan-answer"},
+  {sheet:"travel",labels:"#travel-bracket > label",count:1,teaching:".travel-result,.travel-parts,.travel-bridge-parts,.travel-route > button"},
+  {sheet:"journeys",labels:"#journey-years > label",count:1,teaching:".journey-year-output,.year-chunks,.journey-result,.journey-parts"},
+  {sheet:"conversation",labels:"#conversation-spelling > label,#conversation-spelling .spelling-name > label",count:2,teaching:'.spelling-focus,.spelling-name-letters,.spelling-soundboard > div > button[aria-label^="Choose letter"]'},
+  {sheet:"numbers",labels:"#number-builder > label.sheet-number-input,#number-listening > label,#number-listening form > label,#number-price > label,.collection-numbers .sheet-rule-grid > article:not(#number-price) > label",count:5,teaching:".number-stage,.number-reading-order,.number-price-tag"},
+];
+
+for(const printCase of inlinePrintCases)test(`${printCase.sheet} print omits inline settings and keeps the selected teaching state`,async({page},info)=>{
+  await page.goto(`cheat-sheets/${printCase.sheet}/${printCase.sheet==="past"?"#past-patterns-0-1-question-2-3":""}`);
+  if(printCase.sheet==="past")await page.getByRole("checkbox",{name:"Show participles in the pattern cards",exact:true}).uncheck();
+  if(printCase.sheet==="objects")await page.getByRole("checkbox",{name:"Correct a guess with kein / keine",exact:true}).check();
+  if(printCase.sheet==="office"){
+    await page.getByRole("checkbox",{name:"Make it plural",exact:true}).check();
+    await page.getByRole("textbox",{name:"Name to spell",exact:true}).fill("Mia");
+    await page.getByRole("textbox",{name:"Digits you heard",exact:true}).fill("1234");
+    await page.getByRole("button",{name:"Check digits",exact:true}).click();
+    const overview=page.locator(".office-desk-overview");
+    if(await overview.getAttribute("open")===null)await overview.locator("summary").click();
+  }
+  if(printCase.sheet==="food")await page.getByRole("combobox",{name:"Food for these examples",exact:true}).selectOption("3");
+  if(printCase.sheet==="time")await page.getByRole("checkbox",{name:"Put the time first",exact:true}).check();
+  if(printCase.sheet==="travel")await page.getByRole("combobox",{name:"Travel verb",exact:true}).selectOption("5");
+  if(printCase.sheet==="journeys")await page.getByRole("textbox",{name:"Year to pronounce",exact:true}).fill("2007");
+  if(printCase.sheet==="conversation"){
+    await page.getByRole("combobox",{name:"Choose a letter",exact:true}).selectOption("W");
+    await page.getByRole("textbox",{name:"Name to spell",exact:true}).fill("Mia");
+  }
+  if(printCase.sheet==="numbers")await page.getByRole("textbox",{name:"Type a whole number from 0 to 1,000,000",exact:true}).fill("452");
+  const labels=page.locator(printCase.labels),fields=labels.locator("input,select");
+  await expect(labels).toHaveCount(printCase.count);
+  for(const label of await labels.all())await expect(label).toBeVisible();
+  const beforeFields=await fields.evaluateAll(nodes=>nodes.map(node=>({value:(node as HTMLInputElement).value,checked:node instanceof HTMLInputElement?node.checked:null})));
+  for(const selector of printCase.teaching.split(","))await expect(page.locator(selector).first()).toBeAttached();
+  const teaching=page.locator(printCase.teaching);
+  expect(await teaching.count()).toBeGreaterThan(0);
+  const beforeTeaching=await teaching.evaluateAll(nodes=>nodes.map(node=>({text:node.textContent,pressed:node.getAttribute("aria-pressed"),selected:node.getAttribute("data-selected")})));
+  await printLiveSheet(page,info,`${printCase.sheet}-inline-settings`,async()=>{
+    for(const label of await labels.all())await expect(label).toBeHidden();
+    // Keep this global form-control assertion strict: every live route control
+    // must be hidden by its real print ancestors, including conditional fields.
+    for(const control of await page.locator("main input,main select,main textarea,main audio,main .study-primary,main .study-secondary,main .btn").all())await expect(control).toBeHidden();
+    for(const content of await teaching.all())await expect(content).toBeVisible();
+    expect(await teaching.evaluateAll(nodes=>nodes.map(node=>({text:node.textContent,pressed:node.getAttribute("aria-pressed"),selected:node.getAttribute("data-selected")})))).toEqual(beforeTeaching);
+    if(printCase.sheet==="past")await expect(page.locator("#past-pattern-ieren")).toHaveAttribute("data-selected","true");
+  });
+  expect(await fields.evaluateAll(nodes=>nodes.map(node=>({value:(node as HTMLInputElement).value,checked:node instanceof HTMLInputElement?node.checked:null})))).toEqual(beforeFields);
+  for(const label of await labels.all())await expect(label).toBeVisible();
+});
