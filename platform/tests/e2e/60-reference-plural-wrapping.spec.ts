@@ -40,7 +40,7 @@ async function expectAttachedEnding(result:Locator){
 for(const width of [320,1366])for(const gender of [true,false]){
   test(`plural endings stay with their stems in ${gender?"gender matrix":"pattern cards"} at ${width}px`,async({page},testInfo)=>{
     await page.setViewportSize({width,height:1000});
-    for(const [query,plural] of [["Familienmitglied","die Familienmitglieder"],["Automechaniker","die Automechanikerinnen"]]){
+    for(const [query,plural] of [["Familienmitglied","die Familienmitglieder"],["Automechaniker","die Automechanikerinnen"]] as const){
       await page.goto(`cheat-sheets/subjects/people/?q=${query}&view=plurals&tags=people&gender=${gender?1:0}`);
       await expect(page.getByRole("searchbox",{name:"Find a word or form"})).toHaveValue(query);
       const result=page.locator(".subject-plural-result > span:last-child").filter({hasText:plural}).first();
