@@ -60,6 +60,38 @@ describe("original vocabulary browsing with complete cards", () => {
 });
 
 describe("complete word-family cards", () => {
+  it.each([
+    { id: "W126", basePath: "" },
+    { id: "W126", basePath: "/german-learning-exam" },
+    { id: "W017", basePath: "" },
+    { id: "W017", basePath: "/german-learning-exam" },
+  ])("keeps the approved raster hero for $id with base path '$basePath'", ({ id, basePath }) => {
+    const card = catalog.cards.find(card => card.id === id)!;
+    const image = card.image!;
+    const previous = process.env.NEXT_PUBLIC_GL_PAGES_BASE_PATH;
+    process.env.NEXT_PUBLIC_GL_PAGES_BASE_PATH = basePath;
+    try {
+      render(createElement(WordFamilyCard, { card }));
+      const hero = screen.getByRole("img", { name: image.alt });
+      expect(hero.getAttribute("src")).toBe(`${basePath}${image.path}`);
+      expect(hero.getAttribute("width")).toBe("265");
+      expect(hero.getAttribute("height")).toBe("204");
+      expect(document.querySelector("[data-subject-visual]")).toBeNull();
+      expect(screen.getByRole("heading", { level: 1, name: card.title })).toBeTruthy();
+      expect(screen.getByRole("button", { name: "Try recall" })).toBeTruthy();
+    } finally {
+      if (previous === undefined) delete process.env.NEXT_PUBLIC_GL_PAGES_BASE_PATH;
+      else process.env.NEXT_PUBLIC_GL_PAGES_BASE_PATH = previous;
+    }
+  });
+  it("keeps an image-bearing family's preview as line art", () => {
+    const href = `${engineer.path}?nav=preserved`;
+    render(createElement(WordFamilyPreview, { card: engineer, href, lessonIds: engineer.lessons }));
+    expect(engineer.image).not.toBeNull();
+    expect(document.querySelector("[data-subject-visual]")).not.toBeNull();
+    expect(document.querySelector("img")).toBeNull();
+    expect(screen.getByRole("link", { name: "Study this word family" }).getAttribute("href")).toBe(href);
+  });
   it("uses the same semantic line illustration in a preview without changing its full-card context", () => {
     const card=loadWordCards().cards.find(card=>card.rows[0]?.singular.text==="der Tisch")!;
     const href=`${card.path}?nav=preserved`;
@@ -70,8 +102,8 @@ describe("complete word-family cards", () => {
     expect(screen.getByRole("link",{name:"Study this word family"}).getAttribute("href")).toBe(href);
     expect(document.querySelector(`[data-word-family="${card.id}"]`)).not.toBeNull();
   });
-  it("uses a deliberate subject fallback for an unknown word instead of its unrelated raster", () => {
-    const card={...engineer,studyTags:{lessons:[2],concepts:["home" as const],source:"course" as const},rows:[{...engineer.rows[0]!,singular:{...engineer.rows[0]!.singular,text:"das unbekannte Objekt",tone:"neuter" as const}}]};
+  it("keeps a subject fallback when the family has no approved raster", () => {
+    const card={...engineer,image:null,studyTags:{lessons:[2],concepts:["home" as const],source:"course" as const},rows:[{...engineer.rows[0]!,singular:{...engineer.rows[0]!.singular,text:"das unbekannte Objekt",tone:"neuter" as const}}]};
     render(createElement(WordFamilyCard,{card}));
     expect(document.querySelector('[data-subject-visual="subject:home"]')).not.toBeNull();
     expect(document.querySelector('[data-tone="neuter"]')).not.toBeNull();

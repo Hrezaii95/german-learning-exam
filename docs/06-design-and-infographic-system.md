@@ -1,10 +1,10 @@
 # Design and Infographic System
 
-Updated: 2026-10-22. This is the prepared Lane 1 reference contract, implemented across the L1-1–L1-8 candidate. L1-9 print/CSS/icon consolidation is prepared with focused checks; final rendered/PDF acceptance remains pending below. It supersedes the old violet-brand and raster-word-card direction; it does not certify a merged or deployed release.
+Updated: 2026-10-22. This is the prepared Lane 1 reference contract, implemented across the L1-1–L1-8 candidate. L1-9 print/CSS/icon consolidation is prepared with focused checks; final rendered/PDF acceptance remains pending below. It supersedes the old violet-brand direction and preserves ADR-017’s approved raster detail heroes; it does not certify a merged or deployed release.
 
 ## Reference surfaces
 
-The illustrated subject sheets are the reference: warm paper and canvas, ink text, fine borders, restrained action green and article-colored line drawings. Studio panels, hub cards, tool drawers and evidence strips use the same paper/border language without card shadows. Contextual lesson scenes and instructional diagrams may retain their teaching content; vocabulary thumbnails and heroes share the line-art renderer.
+The illustrated subject sheets are the reference: warm paper and canvas, ink text, fine borders, restrained action green and article-colored line drawings. Studio panels, hub cards, tool drawers and evidence strips use the same paper/border language without card shadows. Contextual lesson scenes and instructional diagrams retain their teaching content. Vocabulary grids, thumbnails, dropdowns and cheat sheets share the line-art renderer. Word-detail/card views retain the approved mapped raster hero, with its source path, alternative text and responsive sizing; cards without a mapped image use the shared line-art fallback.
 
 UI colors come from the shared tokens in `platform/apps/web/app/globals.css`. Do not introduce another decorative palette. Actual color vocabulary, selected object paint and country flags represent content rather than article categories.
 
@@ -74,7 +74,7 @@ Sheet-jump links, metadata chips, study chips and food category controls use thi
 
 `SubjectVocabularyVisual` is the common renderer. Its existing required props (`de`, `category`, `cardId`, `subject`) remain compatible; optional class/drawing/fallback props support existing callers. The renderer imports pure path data from `lib/study/food-illustrations.ts`, `hobby-illustrations.ts`, `home-illustrations.ts` and `object-illustrations.ts`, with the existing semantic/refined registries. It does not import interactive workshop components or their CSS.
 
-The normal drawing uses `currentColor`, rounded 2.6-unit strokes and a disc filled at 5.5% opacity. A wrapper supplies the article tone. Word-family previews/heroes, profession pattern thumbnails and older vocabulary media branches use the same system. Food, Hobby, Home, Office and Object compatibility wrappers keep their public exports and class hooks.
+The normal drawing uses `currentColor`, rounded 2.6-unit strokes and a disc filled at 5.5% opacity. A wrapper supplies the article tone. Word-family previews, profession pattern thumbnails, dropdowns and unmapped-image fallbacks use the same system. Approved raster images remain on word-detail/card heroes, including the existing responsive detail-image branches. Removing those heroes or their raster assets requires a future owner decision under ADR-017. Food, Hobby, Home, Office and Object compatibility wrappers keep their public exports and class hooks.
 
 A concrete drawing requires a registered semantic match. Unknown word cards use a subject symbol; existing subject-sheet callers retain their neutral source-glyph fallback. Home's established house fallback remains guarded. Number/alphabet glyphs preserve their actual source identifiers. Do not invent a person/object from an unrelated subject name.
 

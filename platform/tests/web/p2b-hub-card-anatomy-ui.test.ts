@@ -265,14 +265,38 @@ describe("P2B hub card anatomies", () => {
     expect(html).not.toMatch(/<img[^>]*concept/);
   });
 
+  it.each(["", "/german-learning-exam"])("uses the approved responsive raster on a vocabulary detail with base path '%s'", (basePath) => {
+    const previous = process.env.NEXT_PUBLIC_GL_PAGES_BASE_PATH;
+    process.env.NEXT_PUBLIC_GL_PAGES_BASE_PATH = basePath;
+    try {
+      const html = renderToStaticMarkup(createElement(DetailView, { detail: details.detailsById["lex:student"] }));
+      expect(html).toContain("rich-visual--concept");
+      expect(html).toContain('<picture class="rich-visual__picture"');
+      expect(html).toContain('type="image/avif"');
+      expect(html).toContain('type="image/webp"');
+      expect(html).toContain(`${basePath}/illustrations/professions/student-wide-1024.jpg`);
+      expect(html).toContain(`${basePath}/illustrations/professions/student-wide-512.webp 512w`);
+      expect(html).toContain('width="1024"');
+      expect(html).toContain('height="768"');
+      expect(html).toContain('loading="eager"');
+      expect(html).toContain("Adult hands study an open diagram book");
+      expect(html).not.toContain("data-subject-visual");
+      expect(html).not.toContain('data-meaning-plate="detail"');
+    } finally {
+      if (previous === undefined) delete process.env.NEXT_PUBLIC_GL_PAGES_BASE_PATH;
+      else process.env.NEXT_PUBLIC_GL_PAGES_BASE_PATH = previous;
+    }
+  });
+
   it("upgrades vocabulary detail pages individually with the 4:3 plate", () => {
     const withPicture = renderToStaticMarkup(
       createElement(DetailView, {
         detail: details.detailsById["lex:architekt"],
       }),
     );
-    expect(withPicture).toContain('data-subject-visual="illustrated:refined"');
-    expect(withPicture).not.toContain("vocabulary-architekt-studio.png");
+    expect(withPicture).toContain("vocabulary-architekt-studio.png");
+    expect(withPicture).toContain('<img class="rich-visual__image"');
+    expect(withPicture).not.toContain("data-subject-visual");
     expect(withPicture).toContain("An architect works with plans");
     expect(withPicture).toContain('aria-label="Illustrated vocabulary"');
     expect(withPicture).not.toContain('data-meaning-plate="detail"');
