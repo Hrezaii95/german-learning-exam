@@ -1,13 +1,13 @@
 # Lane 2 status
 
-Updated by Lane 2 only. Lane worktree: `lane2/l2-3-daily`. Base: `codex/live-alpha` with PR #1 documentation merged locally. Never merge to the live branch.
+Updated by Lane 2 only. Lane worktree: `lane2/l2-4-grammar`. Base: `codex/live-alpha` with PR #1 documentation merged locally. Never merge to the live branch.
 
 | PR | Title | State (planned / in progress / draft PR / merged / blocked) | Link | Notes |
 |---|---|---|---|---|
 | L2-1 | Pack content foundation and A1 migration | draft PR | [PR #4](https://github.com/Hrezaii95/german-learning-exam/pull/4) | Code implemented; after Lane 1 merge, A1 pack remains blocked by 11 source groups. |
 | L2-2 | Corners and Four Corners templates | draft PR | [PR #16](https://github.com/Hrezaii95/german-learning-exam/pull/16) | Implemented; production pack and release/browser gates remain open. |
 | L2-3 | Daily Run, event-derived progress and Today | draft PR | [PR #24](https://github.com/Hrezaii95/german-learning-exam/pull/24) | Implemented, including habit and dashboard embedding fixes; final release gates pending. |
-| L2-4 | Grammar and listening | in progress | — | Mechanics/templates implemented; focused tests pass. |
+| L2-4 | Grammar and listening | in progress | — | Six mechanics wired into Daily Run; 50 focused tests pass; final release gates pending. |
 | L2-5 | Speaking, reading and writing | in progress | — | Mechanics/templates implemented; self-assessment stays separate from objective mastery. |
 | L2-6 | Engagement, maps, story and exam | in progress | — | Pure helpers and fixed routes implemented; integration underway. |
 | L2-7 | Book companion | in progress | — | Scope/position/printing implemented; Lane 1 book-surface hooks remain an integration need. |
@@ -125,3 +125,7 @@ The data-only A2 draft independently passes schema/resource validation and 318 g
 - Mount the combined Wortwerk backup bridge from the existing Settings backup flow. The owned bridge accepts legacy backups; the legacy Settings page is untouched.
 - Add the Play navigation entry when the CONTRACTS prerequisite for Lane 1 navigation integration is satisfied; the fixed routes and link contract work independently.
 - Normal build regenerates the Lane 1-owned study dictionary from the updated source. Lane 2 restores that generated file before staging its own slice.
+
+## L2-4 integration verification
+
+Sort, Build, Order, Gap and Listen now render alongside Corners in Daily Run. Grammar/listening templates generate only from authored fields, include supported reduced-cue/recall variants and refuse coincidental answer clues. The shared fixture validates structured prompt tokens; the foundation token test preserves authored choice data. Focused pack, grammar engine/UI and Run lifecycle tests: 4 files / 50 tests pass. Type/lint and release gates are recorded after their actual completion; draft publication does not imply readiness.

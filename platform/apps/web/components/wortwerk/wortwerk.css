@@ -77,3 +77,9 @@
 @media (prefers-reduced-motion: reduce) {
   .ww-corners *, .ww-feedback * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
+
+.ww-task { max-width: 48rem; width: 100%; box-sizing: border-box; margin-inline: auto; padding: 1.25rem; background: var(--paper, #fffdf8); border: 1px solid var(--line, #e4ddd2); border-radius: 1rem; color: var(--ink, #203536); overflow-wrap: break-word; }
+.ww-options { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,12rem),1fr)); grid-auto-rows: 1fr; gap: .75rem; margin-block: 1rem; }
+.ww-option { min-height: 80px; min-width: 44px; padding: 1rem; border: 1px solid var(--line, #e4ddd2); border-radius: .75rem; color: var(--ink, #203536); background: var(--canvas, #f3efe8); font: inherit; overflow-wrap: break-word; hyphens: auto; }
+.ww-option:focus-visible { outline: 3px solid var(--focus-ring, #345d4c); outline-offset: 3px; }
+.ww-option img { max-width: 100%; height: auto; }

@@ -66,7 +66,7 @@ describe('Wortwerk pack foundation', () => {
     const toy = structuredClone(value);
     toy.id = 'xx-sample'; toy.language = profile.id; toy.cefr = 'C2';
     for (const item of toy.items) if (item.type === 'lexeme') { item.gender = 'left'; item.article = 'la'; }
-    const toyDrill = toy.items.find(item => item.type === 'drill');
+    const toyDrill = toy.items.find(item => item.type === 'drill' && item.answer.type !== 'choice');
     if (toyDrill?.type === 'drill') toyDrill.prompt = { instruction: { tokens: [{ type: 'gender', text: 'luma', gender: 'left' }] } };
     expect(validatePack(toy, profile)).toEqual([]);
     if (toyDrill?.type === 'drill') toyDrill.prompt = { instruction: { tokens: [{ type: 'gender', text: 'luma', gender: 'unknown' }] } };

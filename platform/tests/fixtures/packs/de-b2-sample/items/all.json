@@ -685,11 +685,52 @@
     "id": "d-sort",
     "grammarPoint": "g1",
     "drillType": "sort",
-    "prompt": "Fixture task",
+    "prompt": {
+      "instruction": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Sort this fixture token."
+          }
+        ]
+      },
+      "stem": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "A fixture token"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "one",
+          "label": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "One"
+              }
+            ]
+          }
+        },
+        {
+          "id": "two",
+          "label": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "Two"
+              }
+            ]
+          }
+        }
+      ]
+    },
     "answer": {
-      "type": "exact",
-      "accepted": [
-        "ok"
+      "type": "choice",
+      "correctIds": [
+        "one"
       ]
     },
     "buckets": [
@@ -720,11 +761,11 @@
     "id": "d-gap",
     "grammarPoint": "g1",
     "drillType": "gap",
-    "prompt": "Fixture task",
+    "prompt": "Complete the authored fixture: A ___ reply.",
     "answer": {
       "type": "exact",
       "accepted": [
-        "ok"
+        "short"
       ]
     },
     "buckets": [
@@ -738,7 +779,8 @@
       }
     ],
     "distractors": [
-      "other"
+      "example",
+      "token"
     ]
   },
   {
@@ -755,11 +797,57 @@
     "id": "d-order",
     "grammarPoint": "g1",
     "drillType": "order",
-    "prompt": "Fixture task",
+    "prompt": {
+      "instruction": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Put the tiles in order."
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "0",
+          "label": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "A"
+              }
+            ]
+          }
+        },
+        {
+          "id": "1",
+          "label": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "fixture"
+              }
+            ]
+          }
+        },
+        {
+          "id": "2",
+          "label": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "sentence."
+              }
+            ]
+          }
+        }
+      ]
+    },
     "answer": {
-      "type": "exact",
-      "accepted": [
-        "ok"
+      "type": "order",
+      "correctOrder": [
+        "0",
+        "1",
+        "2"
       ]
     },
     "buckets": [
@@ -790,11 +878,11 @@
     "id": "d-transform",
     "grammarPoint": "g1",
     "drillType": "transform",
-    "prompt": "Fixture task",
+    "prompt": "Complete the authored fixture: A ___ reply.",
     "answer": {
       "type": "exact",
       "accepted": [
-        "ok"
+        "short"
       ]
     },
     "buckets": [
@@ -808,7 +896,8 @@
       }
     ],
     "distractors": [
-      "other"
+      "example",
+      "token"
     ]
   },
   {
@@ -860,11 +949,11 @@
     "id": "d-build",
     "grammarPoint": "g1",
     "drillType": "build",
-    "prompt": "Fixture task",
+    "prompt": "Build the fixture word.",
     "answer": {
       "type": "exact",
       "accepted": [
-        "ok"
+        "fixture"
       ]
     },
     "buckets": [

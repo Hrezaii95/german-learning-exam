@@ -108,7 +108,7 @@ describe("Wortwerk pack choice and panels", () => {
     expect(store.getDoc<{ enabledPackIds: string[] }>("settings")?.enabledPackIds).toEqual([pack.id]);
     view.rerender(createElement(PlayProvider, { content, children: createElement(PlayHome) }));
     expect(screen.getByRole("link", { name: "Preview Daily Run" })).not.toBeNull();
-    expect(screen.getByText(/8 eligible tasks/u)).not.toBeNull();
+    expect(screen.getByText(/15 eligible tasks/u)).not.toBeNull();
   });
 
   it("updates same-tab class overlays without enabling pending extras automatically", () => {
@@ -143,7 +143,7 @@ describe("Daily Run", () => {
   it("records five Quick review answers, keeps the streak, and leaves the full Run goal separate", async () => {
     const user = userEvent.setup();
     enable();
-    testState.query = `mode=quick&pack=${pack.id}`;
+    testState.query = `mode=quick&pack=${pack.id}&scope=${encodeScope({v:1,skills:["meaning"]})}`;
     mount(RunPlayer);
     expect(screen.getByRole("heading", { name: "Your practice preview" })).not.toBeNull();
     expect(store.getSnapshot().events).toHaveLength(0);
@@ -161,7 +161,7 @@ describe("Daily Run", () => {
   it("returns a miss after other cards in a different format and records the corrected retrieval", async () => {
     const user = userEvent.setup();
     enable();
-    testState.query = `pack=${pack.id}&scope=${encodeScope({ v: 1, count: 8 })}`;
+    testState.query = `pack=${pack.id}&scope=${encodeScope({ v: 1, skills:["meaning"], count: 8 })}`;
     mount(RunPlayer);
     await user.click(screen.getByRole("button", { name: "Start Daily Run" }));
     const missed = await answerCurrent(user, false);
@@ -179,7 +179,7 @@ describe("Daily Run", () => {
   it("offers a finite optional finisher for a late miss", async () => {
     const user = userEvent.setup();
     enable();
-    testState.query = `pack=${pack.id}&scope=${encodeScope({ v: 1, count: 5 })}`;
+    testState.query = `pack=${pack.id}&scope=${encodeScope({ v: 1, skills:["meaning"], count: 5 })}`;
     mount(RunPlayer);
     await user.click(screen.getByRole("button", { name: "Start Daily Run" }));
     for (let index = 0; index < 4; index++) await answerCurrent(user);
@@ -199,7 +199,7 @@ describe("Daily Run", () => {
   it("emits assignment progress after the answer and after completion", async () => {
     const user = userEvent.setup();
     enable();
-    testState.query = `pack=${pack.id}&assignment=homework-1&scope=${encodeScope({ v: 1, count: 1 })}`;
+    testState.query = `pack=${pack.id}&assignment=homework-1&scope=${encodeScope({ v: 1, skills:["meaning"], count: 1 })}`;
     mount(RunPlayer);
     await user.click(screen.getByRole("button", { name: "Start Daily Run" }));
     await answerCurrent(user);
@@ -212,7 +212,7 @@ describe("Daily Run", () => {
 
   it("keeps the streak after seven real answers and one audio skip while leaving the goal and assignment open", async () => {
     const user=userEvent.setup();enable();testState.forceAudio=true;
-    testState.query=`pack=${pack.id}&assignment=skip-assignment&scope=${encodeScope({v:1,count:8})}`;
+    testState.query=`pack=${pack.id}&assignment=skip-assignment&scope=${encodeScope({v:1,skills:["meaning"],count:8})}`;
     mount(RunPlayer);await user.click(screen.getByRole("button",{name:"Start Daily Run"}));
     for(let index=0;index<7;index++)await answerCurrent(user);
     await user.click(screen.getByRole("button",{name:"Audio won't play? Skip this task"}));
@@ -226,7 +226,7 @@ describe("Daily Run", () => {
 
   it("persists a meaningful streak after five answers even when the learner abandons the unfinished Run", async () => {
     const user=userEvent.setup();enable();
-    testState.query=`pack=${pack.id}&scope=${encodeScope({v:1,count:8})}`;
+    testState.query=`pack=${pack.id}&scope=${encodeScope({v:1,skills:["meaning"],count:8})}`;
     const view=mount(RunPlayer);await user.click(screen.getByRole("button",{name:"Start Daily Run"}));
     for(let index=0;index<5;index++)await answerCurrent(user);
     expect(screen.queryByRole("heading",{name:"Daily Run complete"})).toBeNull();
@@ -242,7 +242,7 @@ describe("Daily Run", () => {
     const user = userEvent.setup();
     enable();
     testState.forceAudio = true;
-    testState.query = `pack=${pack.id}&assignment=homework-1&scope=${encodeScope({ v: 1, count: 1 })}`;
+    testState.query = `pack=${pack.id}&assignment=homework-1&scope=${encodeScope({ v: 1, skills:["meaning"], count: 1 })}`;
     mount(RunPlayer);
     await user.click(screen.getByRole("button", { name: "Start Daily Run" }));
     await user.click(screen.getByRole("button", { name: "Audio won't play? Skip this task" }));
