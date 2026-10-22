@@ -47,11 +47,34 @@ export function createDailyRun(input: {
     if (!template) return [];
     const reason: RunTask["reason"] = dimension.state === "new" ? "new" : dimension.lapses > 0 && dimension.strength < 0.5
       ? "tricky" : dimension.due ? "review" : "maintenance";
-    return [{ priority: priority(dimension, input.now), tie: hash(`${seed}:${capability.packId}:${capability.itemId}`),
+    return [{ templates: capability.templates, priority: priority(dimension, input.now), tie: hash(`${seed}:${capability.packId}:${capability.itemId}`),
       task: { packId: capability.packId, itemId: capability.itemId, dimension: dimension.dimension,
         templateId: template.id, skill: template.skill, format: template.format, reason } satisfies RunTask }];
   }).sort((a, b) => b.priority - a.priority || a.tie - b.tie || a.task.itemId.localeCompare(b.task.itemId));
-  const tasks = interleaveMissionTasks(ranked, row => row.task.templateId, count).map(row => row.task);
+  const tasks: RunTask[] = interleaveMissionTasks(ranked, row => row.task.templateId, count).map(row => row.task);
+  // Keep the existing interleaved prefix. A narrow scope can exhaust its
+  // preselected template before its items; use an authored variant of the same
+  // chosen dimension to bridge that limit, rather than dropping eligible items.
+  const itemKey = (task: RunTask) => JSON.stringify([task.packId, task.itemId]);
+  const selected = new Set(tasks.map(itemKey));
+  while (tasks.length < count) {
+    const previous = tasks.at(-1);
+    const blocked = previous && tasks.at(-2)?.templateId === previous.templateId ? previous.templateId : null;
+    let next: RunTask | undefined;
+    for (const row of ranked) {
+      if (selected.has(itemKey(row.task))) continue;
+      if (row.task.templateId !== blocked) { next = row.task; break; }
+      const template = templateFor(row.templates.filter(candidate => candidate.id !== blocked),
+        row.task.dimension, row.task.format, `${seed}:${row.task.itemId}`);
+      if (template) {
+        next = { ...row.task, templateId: template.id, skill: template.skill, format: template.format };
+        break;
+      }
+    }
+    if (!next) break;
+    selected.add(itemKey(next));
+    tasks.push(next);
+  }
   const preview: DailyRunPlan["preview"] = { new: 0, reviews: 0, tricky: 0, byDimension: Object.create(null) as Record<string, number> };
   for (const task of tasks) {
     if (task.reason === "new") preview.new += 1;

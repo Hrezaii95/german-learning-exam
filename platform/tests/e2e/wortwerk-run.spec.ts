@@ -10,6 +10,8 @@ for(const width of [390,1280])for(const interaction of ["tap","keyboard","drag"]
   await expect(fixture).not.toBeChecked();await fixture.check();
   await gotoApp(page,`/play/run?mode=${mode}&scope=${scope}`);
   await page.getByRole("button",{name:mode==="quick"?"Start Quick review":"Start Daily Run",exact:true}).click();
+  const releaseEvidence=width===390&&interaction==="tap"&&mode==="run";
+  if(releaseEvidence)await page.locator(".ww-page").screenshot({path:info.outputPath("daily-run-question-390.png")});
   for(let step=0;step<20;step++){
    if(await page.getByRole("heading",{name:mode==="quick"?"Quick review complete":"Daily Run complete",exact:true}).isVisible())break;
    const typed=page.getByRole("textbox",{name:"Your answer",exact:true});
@@ -26,9 +28,11 @@ for(const width of [390,1280])for(const interaction of ["tap","keyboard","drag"]
     }else await option.click();
    }
    await expect(page.getByRole("region",{name:"Answer feedback"})).toBeVisible();
+   if(releaseEvidence&&step===0)await page.locator(".ww-page").screenshot({path:info.outputPath("daily-run-feedback-390.png")});
    await page.getByRole("button",{name:/^(Next task|See results)$/}).click();
   }
   await expect(page.getByRole("heading",{name:mode==="quick"?"Quick review complete":"Daily Run complete",exact:true})).toBeVisible();
+  if(releaseEvidence)await page.locator(".ww-page").screenshot({path:info.outputPath("daily-run-results-390.png")});
   await gotoApp(page,"/play");await page.reload();
   await expect(page.getByText("1 day in your streak",{exact:true})).toBeVisible();
   await expect(page.getByRole("img",{name:`Daily Run goal: ${mode==="quick"?0:1} of 1`})).toBeVisible();
