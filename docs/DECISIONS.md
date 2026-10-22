@@ -153,3 +153,14 @@
 - Changes to `docs/lanes/CONTRACTS.md` need the owner's OK.
 - No lane merges to `codex/live-alpha` without the owner's approval.
 - **Amended 2026-10-22 (owner away):** lanes commit to `lane1/main`, `lane2/main` and `lane3/main`, then combine their work into `integration/all` with all gates green. The owner merges that one PR, adds 3 secrets and runs "Go live" (`docs/platform/GO-LIVE.md`).
+
+## ADR-020a — Line art replaces raster heroes on word cards; alpha release from the integration branch
+
+**Status:** Accepted (owner, 2026-10-22)
+**Decision:**
+- Word-detail and word-family cards use the shared `SubjectVocabularyVisual` line art for their hero, like every grid, list and cheat sheet. This reverses the ADR-017 raster-hero carve-out (Lane 1 commits "retain approved raster detail heroes…"). Raster files stay in the repo, unused by the cards.
+- The owner asked Claude to review the German content itself and to merge and deploy the combined integration as soon as possible for a closed alpha (owner plus selected testers), fixing issues after deployment.
+**Why:** The owner prefers one illustration language across the app; the alpha audience is small and known.
+**Consequence:**
+- Claude's German review is recorded in `docs/reviews/2026-10-22-claude-german-review.md`. It is a model review, not the qualified human review: pack review statuses stay `pending-german-review`, and generated audio stays "preview" (gate G5).
+- `codex/live-alpha` receives `integration/all` by merge; GitHub Pages redeploys from it. Cloudflare goes live when the owner completes `docs/platform/GO-LIVE.md`.

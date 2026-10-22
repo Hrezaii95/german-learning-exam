@@ -10,7 +10,18 @@ export function comparisonKey(value: string, profile: LanguageProfile): string {
 }
 
 /** Supports the authored field paths used by pack.maps; never evaluates code. */
+// Distractor ranking compares every candidate pair, so cache field reads per item.
+const fieldValueCache = new WeakMap<PackItem, Map<string, string[]>>();
+
 export function mapFieldValues(item: PackItem, path: string): string[] {
+  let cached = fieldValueCache.get(item);
+  if (!cached) fieldValueCache.set(item, cached = new Map());
+  let values = cached.get(path);
+  if (!values) cached.set(path, values = readFieldValues(item, path));
+  return values;
+}
+
+function readFieldValues(item: PackItem, path: string): string[] {
   let value: unknown = item;
   for (const part of path.split(".")) {
     if (!value || typeof value !== "object" || !Object.hasOwn(value, part)) return [];

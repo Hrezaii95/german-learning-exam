@@ -21,7 +21,15 @@ function fixtureMedia(item:PackItem,root:string):PackItem{
   if(turn.audio&&!existsSync(join(root,"apps/web/public",turn.audio.src)))delete turn.audio;
  return result;
 }
+// Integration: every /play route's layout calls this during static export, and
+// validating the installed packs takes seconds; load once per build worker.
+// Held on globalThis because each route bundle gets its own module instance.
+const contentCache=globalThis as typeof globalThis&{__wortwerkContent?:WortwerkContent};
 export function loadWortwerkContent():WortwerkContent{
+ if(process.env.NODE_ENV!=="production")return readWortwerkContent();
+ return contentCache.__wortwerkContent??=readWortwerkContent();
+}
+function readWortwerkContent():WortwerkContent{
  const root=platformRoot();const registry=loadPackRegistry(join(root,"content"));
  const packs:PlayPack[]=registry.packs.map(({pack,language,difficulty,resources})=>({pack,language,difficulty,resources,fixture:false}));
  const fixtures=join(root,"tests/fixtures/packs");

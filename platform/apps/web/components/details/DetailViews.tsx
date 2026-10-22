@@ -37,6 +37,7 @@ import { InfographicPanel } from "@/components/media/InfographicPanel";
 import { RichLessonVisual } from "@/components/media/RichLessonVisual";
 import { illustrationForDetail } from "@/lib/content/illustrations";
 import { MeaningPlate } from "@/components/media/MeaningPlate";
+import { SubjectVocabularyVisual } from "@/components/study/SubjectIllustration";
 import {
   GrammarConceptVisual,
   NounSystemVisual,
@@ -70,7 +71,11 @@ function MetaChips({
  */
 function VocabularyMediaSlot({ detail }: { detail: LearnerVocabularyDetail }) {
   const illustration = illustrationForDetail(detail.id);
-  if (illustration) return <RichLessonVisual illustration={illustration} />;
+  if (illustration) return <RichLessonVisual illustration={illustration} visual={
+    <div className="hub-card__visual" data-tone={detail.gender==="masculine"?"male":detail.gender==="feminine"?"female":detail.gender??"plain"}>
+      <SubjectVocabularyVisual de={detail.displayText} category="Vocabulary" cardId={detail.id} subject="everyday" fallback="subject"/>
+    </div>
+  }/>;
   const plural = detail.plurals[0] ?? null;
   return (
     <MeaningPlate

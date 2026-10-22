@@ -707,7 +707,7 @@
     "examples": [
       {
         "text": "Können wir das Treffen auf Montag verschieben?",
-        "translation": "Can we postpone the get-together until Monday?"
+        "translation": "Can we move the get-together to Monday?"
       }
     ],
     "revealFields": [
@@ -775,7 +775,7 @@
     "type": "lexeme",
     "lemma": "sich freuen",
     "pos": "verb",
-    "meaning": "to look forward to",
+    "meaning": "to be glad; sich freuen auf: to look forward to",
     "forms": {
       "presentThirdPerson": [
         "freut sich"

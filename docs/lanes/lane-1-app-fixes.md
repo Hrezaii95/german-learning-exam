@@ -49,7 +49,4 @@
 - **Status:** after each PR, update only `plans/lanes/lane-1-status.md` (done / in progress / blocked, with links).
 
 ## Orchestrator decisions (2026-10-22, in answer to Lane 1)
-1. **L1-8 illustrations vs ADR-017:**
-   - The owner-approved word-family card (`study-guides/card-sample/engineer.html`, ADR-017) includes a raster **hero image**. **Keep the hero image on word-detail cards** (`/vocabulary/[id]` and the card views).
-   - Switch to `SubjectVocabularyVisual` line art only in **grids, lists, thumbnails, dropdowns and cheat-sheet surfaces**, where the reference style applies.
-   - Don't remove raster assets. Removing the hero from the cards is an owner decision; it's listed for the owner in `plans/lanes/lane-1-status.md` under "Owner".
+1. **L1-8 illustrations — superseded 2026-10-22 by the owner (ADR-020a):** word-detail and word-family card heroes use `SubjectVocabularyVisual` line art too, like grids, lists, thumbnails, dropdowns and cheat sheets. The "retain approved raster detail heroes" commits are reverted on `integration/all`; carry the revert into later Lane 1 branches. Keep the raster files in the repo.

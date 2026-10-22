@@ -87,8 +87,13 @@ export function projectWordCards() {
     let example = authored.get(id);
     if (!example && isJob) {
       const forms = entries.filter(e => /^(der|die) /.test(e.german));
-      const firstMeaning = title.split(" / ")[0]!.toLowerCase();
-      example = { de: forms.map(e => `Ich bin ${stripArticle(e.german)}.`).join(" / "), en: `I am ${/^[aeiou]/i.test(firstMeaning) ? "an" : "a"} ${firstMeaning}.`, cue: "After “Ich bin”, a profession usually has no article." };
+      // "road / street construction worker" → "road worker"; keep German and acronyms capitalised.
+      const segments = title.split(" / ");
+      const head = segments[0]!, last = segments[segments.length - 1]!;
+      const phrase = !/\s/.test(head) && last.split(" ").length > 2 ? `${head} ${last.split(" ").pop()}` : head;
+      const firstMeaning = phrase.replace(/(?<=^|[/ ])\p{Lu}(?=\p{Ll})/gu, letter => letter.toLowerCase()).replace(/^german\b/, "German");
+      const article = /^(?:[aeio]|u(?!ni)|IT\b)/i.test(firstMeaning) ? "an" : "a";
+      example = { de: forms.map(e => `Ich bin ${stripArticle(e.german)}.`).join(" / "), en: `I am ${article} ${firstMeaning}.`, cue: "After “Ich bin”, a profession usually has no article." };
     }
     if (!example && isCountry) {
       const origin = first.german === "die USA" ? "den USA" : first.german === "die Niederlande" ? "den Niederlanden" : first.german.startsWith("die ") ? first.german.replace(/^die /, "der ") : first.german.startsWith("der ") ? first.german.replace(/^der /, "dem ") : first.german;

@@ -246,7 +246,7 @@ async function runSmoke() {
     for (const path of [
       "/verbs/lex%3Aarchitekt",
       "/vocabulary/verb%3Asein",
-      "/dashboard",
+      "/dashboard/extra",
     ]) {
       const { status, url } = await fetchStatus(path, { redirect: "follow" });
       assert(status === 404, `${path} expected 404, got ${status}`);
@@ -256,7 +256,8 @@ async function runSmoke() {
   }
 
   // 5b) Learner-state surfaces added in P4C are first-class routes.
-  for (const path of ["/review", "/review/session/today", "/settings"]) {
+  // Account dashboards (Lane 3) are shipped routes now; /dashboard/extra stays 404 above.
+  for (const path of ["/review", "/review/session/today", "/settings", "/dashboard"]) {
     const { status, url } = await fetchStatus(path, { redirect: "follow" });
     assert(status === 200, `${path} expected 200, got ${status}`);
     assert(new URL(url).pathname === path, `${path} must not redirect away`);
