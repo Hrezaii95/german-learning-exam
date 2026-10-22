@@ -38,6 +38,76 @@ function matchesHandoff(url: URL, info: TestInfo) {
     && queryMatches && url.hash === rawHash;
 }
 
+type WortwerkHistory = { schemaVersion: number; events: Array<{ type: string; payload: unknown }> };
+type HistorySnapshot = {
+  course: Awaited<ReturnType<typeof readLearnerState>>;
+  play: WortwerkHistory | null;
+};
+
+async function readHistorySnapshot(page: Page): Promise<HistorySnapshot> {
+  return page.evaluate(() => {
+    function readJson<T>(key: string): T | null {
+      const raw = window.localStorage.getItem(key);
+      if (raw === null) return null;
+      try { return JSON.parse(raw); }
+      catch { return null; }
+    }
+    return {
+      course: readJson<Awaited<ReturnType<typeof readLearnerState>>>("german-learning:learner-state:v1"),
+      play: readJson<WortwerkHistory>("wortwerk.v2"),
+    };
+  });
+}
+
+// Each native alias case creates its own real history in its standard fresh page.
+async function createHistoryBaseline(page: Page): Promise<HistorySnapshot> {
+  // Generate valid course evidence and cards through the existing public UI.
+  const activity = activityById("activity:lesson-02-core-professions");
+  await openApp(page, activity.canonicalPath);
+  await waitForLearnerState(page);
+  await startActivity(page);
+  await completeGradedActivity(page);
+  await expect.poll(async () => (await readLearnerState(page))?.events.some(event =>
+    event.kind === "objectiveAttempt" && event.activityId === activity.id && event.conceptId === "lex:architekt",
+  ) ?? false).toBe(true);
+  await openApp(page, detailPath("lex:architekt"));
+  await waitForLearnerState(page);
+  await addReviewCardsHere(page);
+
+  // Explicitly enable the existing test fixture, then record one real answer.
+  // This is history retention evidence, not a streak/session-completion claim.
+  await openApp(page, "/play/packs/");
+  const fixture = page.getByRole("checkbox", { name: /Enable Fixture only/ });
+  await expect(fixture).not.toBeChecked();
+  await fixture.check();
+  const scope = Buffer.from(JSON.stringify({ v: 1, skills: ["gender"], count: 5 })).toString("base64url");
+  await openApp(page, `/play/run/?mode=quick&scope=${scope}`);
+  await page.getByRole("button", { name: "Start Quick review", exact: true }).click();
+  await page.locator(".ww-corners__option").first().click();
+  await expect(page.getByRole("region", { name: "Answer feedback" })).toBeVisible();
+  await expect.poll(async () => (await readStorageJson<WortwerkHistory>(page, "wortwerk.v2"))?.events.some(event => event.type === "answer") ?? false).toBe(true);
+  await openApp(page, "/play/");
+  const { course: courseBefore, play: playBefore } = await readHistorySnapshot(page);
+  expect(courseBefore?.events.length).toBeGreaterThan(0);
+  expect(courseBefore?.reviewCards.length).toBeGreaterThan(0);
+  expect(playBefore?.schemaVersion).toBe(2);
+  expect(playBefore?.events.length).toBeGreaterThan(0);
+
+  return { course: courseBefore, play: playBefore };
+}
+
+async function expectHistoryRetained(
+  page: Page,
+  before: HistorySnapshot,
+  gameId: (typeof PRACTICE_GAME_IDS)[number],
+): Promise<void> {
+  const { course: courseBefore, play: playBefore } = before;
+  const { course: courseAfter, play: playAfter } = await readHistorySnapshot(page);
+  expect(courseAfter?.events, gameId).toEqual(courseBefore?.events);
+  expect(courseAfter?.reviewCards, gameId).toEqual(courseBefore?.reviewCards);
+  expect(playAfter?.events, gameId).toEqual(playBefore?.events);
+}
+
 // Use the same generated typed-ID detail convention as journey06.
 const CONVERSATION_PATH = detailPath("qa:profession-casual-main").replace(
   "/phrases/",
@@ -121,10 +191,15 @@ test.describe("journey 5 · retained practice and legacy game handoffs", () => {
 
       const destination = await page.request.get(canonicalRequestPath("play", info), { maxRedirects: 0 });
       expect(destination.status()).toBe(200);
+      const historyBefore = await createHistoryBaseline(page);
       await openApp(page, path);
       await expect(page).toHaveURL(url => matchesHandoff(url, info));
       await expect(page.locator("main h1")).toHaveText("Wortwerk");
       await expect(page.locator("main [data-game-id]")).toHaveCount(0);
+      await page.reload();
+      await expect(page).toHaveURL(url => matchesHandoff(url, info));
+      await expect(page.locator("main h1")).toHaveText("Wortwerk");
+      await expectHistoryRetained(page, historyBefore, gameId);
     });
   }
 
@@ -145,51 +220,4 @@ test.describe("journey 5 · retained practice and legacy game handoffs", () => {
     await expect(page.locator("main [data-game-id]")).toHaveCount(0);
   });
 
-  test("redirects and reloads preserve both independent event histories and existing course review cards", async ({ page }, info) => {
-    // Generate valid course evidence and cards through the existing public UI.
-    const activity = activityById("activity:lesson-02-core-professions");
-    await openApp(page, activity.canonicalPath);
-    await waitForLearnerState(page);
-    await startActivity(page);
-    await completeGradedActivity(page);
-    await expect.poll(async () => (await readLearnerState(page))?.events.some(event =>
-      event.kind === "objectiveAttempt" && event.activityId === activity.id && event.conceptId === "lex:architekt",
-    ) ?? false).toBe(true);
-    await openApp(page, detailPath("lex:architekt"));
-    await waitForLearnerState(page);
-    await addReviewCardsHere(page);
-
-    // Explicitly enable the existing test fixture, then record one real answer.
-    // This is history retention evidence, not a streak/session-completion claim.
-    await openApp(page, "/play/packs/");
-    const fixture = page.getByRole("checkbox", { name: /Enable Fixture only/ });
-    await expect(fixture).not.toBeChecked();
-    await fixture.check();
-    const scope = Buffer.from(JSON.stringify({ v: 1, skills: ["gender"], count: 5 })).toString("base64url");
-    await openApp(page, `/play/run/?mode=quick&scope=${scope}`);
-    await page.getByRole("button", { name: "Start Quick review", exact: true }).click();
-    await page.locator(".ww-corners__option").first().click();
-    await expect(page.getByRole("region", { name: "Answer feedback" })).toBeVisible();
-    type WortwerkHistory = { schemaVersion: number; events: Array<{ type: string; payload: unknown }> };
-    await expect.poll(async () => (await readStorageJson<WortwerkHistory>(page, "wortwerk.v2"))?.events.some(event => event.type === "answer") ?? false).toBe(true);
-    await openApp(page, "/play/");
-    const courseBefore = await readLearnerState(page);
-    const playBefore = await readStorageJson<WortwerkHistory>(page, "wortwerk.v2");
-    expect(courseBefore?.events.length).toBeGreaterThan(0);
-    expect(courseBefore?.reviewCards.length).toBeGreaterThan(0);
-    expect(playBefore?.schemaVersion).toBe(2);
-    expect(playBefore?.events.length).toBeGreaterThan(0);
-
-    for (const gameId of PRACTICE_GAME_IDS) {
-      await openApp(page, `${canonicalRequestPath(`practice/${gameId}`, info)}${rawQuery}${rawHash}`);
-      await expect(page).toHaveURL(url => matchesHandoff(url, info));
-      await page.reload();
-      await expect(page.locator("main h1")).toHaveText("Wortwerk");
-      const courseAfter = await readLearnerState(page);
-      const playAfter = await readStorageJson<WortwerkHistory>(page, "wortwerk.v2");
-      expect(courseAfter?.events, gameId).toEqual(courseBefore?.events);
-      expect(courseAfter?.reviewCards, gameId).toEqual(courseBefore?.reviewCards);
-      expect(playAfter?.events, gameId).toEqual(playBefore?.events);
-    }
-  });
 });
