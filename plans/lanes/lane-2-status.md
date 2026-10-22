@@ -7,7 +7,7 @@ Updated by Lane 2 only. Lane worktree: `lane2/l2-4-grammar`. Base: `codex/live-a
 | L2-1 | Pack content foundation and A1 migration | draft PR | [PR #4](https://github.com/Hrezaii95/german-learning-exam/pull/4) | Code implemented; after Lane 1 merge, A1 pack remains blocked by 11 source groups. |
 | L2-2 | Corners and Four Corners templates | draft PR | [PR #16](https://github.com/Hrezaii95/german-learning-exam/pull/16) | Implemented; production pack and release/browser gates remain open. |
 | L2-3 | Daily Run, event-derived progress and Today | draft PR | [PR #24](https://github.com/Hrezaii95/german-learning-exam/pull/24) | Implemented, including habit and dashboard embedding fixes; final release gates pending. |
-| L2-4 | Grammar and listening | in progress | — | Six mechanics wired into Daily Run; 50 focused tests pass; final release gates pending. |
+| L2-4 | Grammar and listening | draft PR | [PR #26](https://github.com/Hrezaii95/german-learning-exam/pull/26) | Six mechanics wired into Daily Run; 50 focused tests pass; final release gates pending. |
 | L2-5 | Speaking, reading and writing | in progress | — | Mechanics/templates implemented; self-assessment stays separate from objective mastery. |
 | L2-6 | Engagement, maps, story and exam | in progress | — | Pure helpers and fixed routes implemented; integration underway. |
 | L2-7 | Book companion | in progress | — | Scope/position/printing implemented; Lane 1 book-surface hooks remain an integration need. |
