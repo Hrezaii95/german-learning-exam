@@ -5,7 +5,7 @@ Updated by Lane 3 only. Format: one row per PR.
 | PR | Title | State (planned / in progress / draft PR / merged / blocked) | Link | Notes |
 |---|---|---|---|---|
 | L3-1 | Cloudflare static hosting at the root path | draft PR | https://github.com/Hrezaii95/german-learning-exam/pull/3 | Implementation verified locally; release blocked by three Lane 1 links and unavailable private-source audit. No live deployment claimed. |
-| L3-0 | Secret-free lane CI | in progress | Plan: PR #1 comment 6341259496 | Separate draft PR follows L3-1, per owner instruction. |
+| L3-0 | Secret-free lane CI | draft PR | https://github.com/Hrezaii95/german-learning-exam/pull/6 | Independent two-file CI PR; source-archive gate remains blocking. |
 | L3-2 | Database and auth | blocked | — | Approved 600,000-iteration WebCrypto PBKDF2 conflicts with the current Workers runtime limit; see below. No hashing requirement reduced. |
 | L3-3 | Seed accounts | planned | — | Depends on the approved auth hash module. |
 | L3-4 | Sync | planned | — | Depends on authenticated API; API service-worker exclusion must precede release. |
