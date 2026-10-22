@@ -18,5 +18,6 @@
 .cheat-sheet-directory .subject-directory-catalogue .subject-directory-tile{min-height:0}
 .cheat-sheet-directory .subject-directory-catalogue .subject-directory-icon{margin-bottom:12px}
 .subject-sheet.cheat-sheet-frame .subject-page-heading h1{font-family:var(--font);font-weight:700}
+@media screen and (max-width:1099px){.app-shell .shell-main:has(.cheat-sheet-frame),.app-shell .shell-main:has(.cheat-sheet-directory){padding-bottom:calc(var(--measured-bottom-nav-height,72px) + 24px)}}
 @media(max-width:580px){.sheet-switcher-panel{max-height:60dvh}.sheet-switcher .sheet-switcher-panel nav a{gap:8px}.sheet-switcher .sheet-switcher-panel nav a>small{max-width:70px;text-align:right}}
 @media print{.subject-sheet.cheat-sheet-frame>.subject-navigation,.subject-sheet.cheat-sheet-frame>.subject-page-actions{display:none!important}}
