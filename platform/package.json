@@ -42,6 +42,7 @@
     "deploy:cloudflare": "wrangler deploy --config apps/edge/wrangler.jsonc --env \"\"",
     "smoke:cloudflare:browser": "node apps/edge/scripts/smoke-browser.mjs",
     "measure:password": "node apps/edge/scripts/measure-argon2.mjs",
+    "rehearse:go-live": "node apps/edge/scripts/rehearse-go-live.mjs",
     "test:sync": "node --import tsx --test packages/sync/tests/*.test.ts"
   },
   "devDependencies": {

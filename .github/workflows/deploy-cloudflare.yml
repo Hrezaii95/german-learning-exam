@@ -1,4 +1,4 @@
-# L3-1: static hosting only. D1 lookup/migrations join this workflow with L3-2.
+# Existing deployments only. Resource creation and seeding belong to go-live.yml.
 # All gates and export variants run sequentially: build:pages temporarily parks
 # proxy.ts and rewrites dynamicParams, so no build/typecheck may overlap it.
 name: Deploy Cloudflare
@@ -134,21 +134,16 @@ jobs:
         working-directory: platform
         run: npm run deploy:cloudflare -- --dry-run
 
-      # Full source-manifest validation needs 454 private originals and stays
-      # a local owner-machine gate (orchestrator decision 2026-10-22).
-
-      - name: Deploy Worker and custom domain
+      # The full source-manifest audit requires 454 intentionally untracked
+      # originals. Per the 2026-10-22 orchestrator decision it remains a
+      # local/owner-machine gate, as for the existing deploy-pages workflow.
+      - name: Find existing EU database, migrate and deploy
         if: steps.cloudflare.outputs.ready == 'true'
         working-directory: platform
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        run: npm run deploy:cloudflare -- --var "BUILD_SHA:$GITHUB_SHA"
-
-      - name: Smoke live pages and API
-        if: steps.cloudflare.outputs.ready == 'true'
-        working-directory: platform
-        run: node apps/edge/scripts/smoke-live.mjs --origin https://german.learnilabs.com --version "$GITHUB_SHA"
+        run: node apps/edge/scripts/go-live.mjs --redeploy
 
       - name: Release summary
         if: always() && steps.cloudflare.outputs.ready == 'true'
@@ -157,10 +152,11 @@ jobs:
           RELEASE_SHA: ${{ github.sha }}
         run: |
           {
-            echo "## Cloudflare static hosting"
+            echo "## Cloudflare continuous deployment"
             echo "- URL: https://german.learnilabs.com"
             echo "- Commit: $RELEASE_SHA"
             echo "- Result: $RELEASE_STATUS"
             echo "- GitHub Pages remains a separate deployment."
-            echo "- Accounts, D1 migrations and seed accounts are later Lane 3 items."
+            echo "- No resources or accounts are created by this push workflow."
+            echo "- A missing german-db produces a notice; run Go live (Cloudflare) first."
           } >> "$GITHUB_STEP_SUMMARY"
