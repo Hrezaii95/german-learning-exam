@@ -1,131 +1,178 @@
-import { expect, test } from "@playwright/test";
-import { gotoApp, readLearnerState, waitForLearnerState } from "./support/app";
-import { PRACTICE_GAME_IDS } from "./support/content";
-import { playPracticeGame } from "./support/journeys";
+import { expect, test, type Page, type TestInfo } from "@playwright/test";
+import { readLearnerState, readStorageJson, waitForLearnerState } from "./support/app";
+import { activityById, detailPath, PRACTICE_GAME_IDS } from "./support/content";
+import { addReviewCardsHere, completeGradedActivity, startActivity } from "./support/journeys";
 
-/**
- * Journey 5 — play each of the seven practice games to a scored outcome.
- *
- * What "scored outcome" means here, stated plainly because the product differs
- * from what the audit assumed: no game has rounds or an end-of-session score
- * screen. A game's scored outcome is a graded attempt — the feedback region
- * reports a grade and the attempt counter and persisted event log both advance.
- * Asserting a score screen would be asserting a feature that does not exist.
- *
- * `audio-match` ships deliberately unavailable, so its honest outcome is the
- * unavailable contract: nothing to submit, nothing scored, nothing recorded.
- */
+/** Retained course practice and exact legacy URL compatibility, at root or Pages. */
+async function openApp(page: Page, path: string) {
+  // Playwright resolves these against the actual configured baseURL, including
+  // its Pages prefix. Do not rewrite the URL or use the Pages-only gotoApp helper.
+  return page.goto(path.replace(/^\//, ""));
+}
 
-test.describe("journey 5 · every practice game reaches a scored outcome", () => {
-  test("the selector lists all seven games with their availability", async ({ page }) => {
-    await gotoApp(page, "/practice");
-    await expect(page.getByRole("heading", { level: 1 })).toHaveText("Practice");
+function configuredBase(info: TestInfo) {
+  const baseURL = info.project.use.baseURL;
+  expect(typeof baseURL).toBe("string");
+  const base = new URL(baseURL!);
+  return { base, isPages: base.pathname.replace(/\/$/, "") !== "" };
+}
 
-    for (const gameId of PRACTICE_GAME_IDS) {
-      await expect(page.locator(`[data-game-id="${gameId}"]`)).toHaveCount(1);
-    }
-    await expect(page.locator('[data-game-id="audio-match"]')).toHaveAttribute(
-      "data-availability",
-      "unavailable",
-    );
+function canonicalRequestPath(path: string, info: TestInfo) {
+  const { isPages } = configuredBase(info);
+  return path.replace(/^\/+|\/+$/g, "") + (isPages ? "/" : "");
+}
+
+function matchesHandoff(url: URL, info: TestInfo) {
+  const { base, isPages } = configuredBase(info);
+  const target = new URL("play/", base);
+  const original = new URLSearchParams(rawQuery);
+  const keys = [...new Set(original.keys())].sort();
+  const actualKeys = [...new Set(url.searchParams.keys())].sort();
+  const semanticQueryMatches = JSON.stringify(actualKeys) === JSON.stringify(keys)
+    && keys.every(key => JSON.stringify(url.searchParams.getAll(key)) === JSON.stringify(original.getAll(key)));
+  const queryMatches = isPages ? url.search === rawQuery : semanticQueryMatches;
+  // The static stub emits /play/ in both builds. Production Next canonicalizes
+  // that to /play and may normalize query encoding; preserve ordered duplicate
+  // and empty values there. Pages retains the original query bytes exactly.
+  return url.pathname.replace(/\/$/, "") === target.pathname.replace(/\/$/, "")
+    && queryMatches && url.hash === rawHash;
+}
+
+const detailReturn = {
+  entryContext: "hub",
+  returnPath: detailPath("qa:profession-casual-main"),
+  hubId: "phrases",
+  resultId: "qa:profession-casual-main",
+};
+const rawQuery = `?lesson=02&legacy=one&legacy=two&empty=&q=A%2BB+space&nav=${encodeURIComponent(JSON.stringify(detailReturn))}`;
+const rawHash = "#legacy-card-%C3%84";
+
+test.describe("journey 5 · retained practice and legacy game handoffs", () => {
+  test("the practice hub retains course recall, checked articles, conversation and bounded Back", async ({ page }) => {
+    await openApp(page, `/practice/?nav=${encodeURIComponent(JSON.stringify(detailReturn))}`);
+    await waitForLearnerState(page);
+    await expect(page.locator("main h1")).toHaveText("Practice");
+    await expect(page.locator("[data-practice-hub]")).toHaveCount(1);
+    await expect(page.locator("main [data-game-id]")).toHaveCount(0);
+    await expect(page.locator("main")).not.toContainText("Focused games");
+
+    const recall = page.locator(".course-practice");
+    await expect(recall.getByRole("heading", { name: "Recall your selected words", exact: true })).toBeVisible();
+    await recall.getByRole("button", { name: "Reveal German", exact: true }).click();
+    await expect(recall.getByRole("status")).toContainText("Answer revealed");
+    await recall.getByRole("combobox", { name: "Practice mode", exact: true }).selectOption("article");
+    await recall.getByRole("button", { name: "der", exact: true }).click();
+    await expect(recall.getByRole("status")).toContainText(/Correct!|The article is/);
+    await expect(recall.getByRole("button", { name: "der", exact: true })).toBeDisabled();
+
+    const back = page.locator("main .back-link");
+    expect(new URL((await back.getAttribute("href"))!, page.url()).pathname.replace(/\/$/, "").endsWith(detailReturn.returnPath)).toBe(true);
+    const conversation = page.locator('[data-conversation-entry="true"]');
+    await expect(conversation).toContainText("Conversation ladder");
+    const conversationUrl = new URL((await conversation.getAttribute("href"))!, page.url());
+    expect(conversationUrl.pathname.replace(/\/$/, "").endsWith("/conversation")).toBe(true);
+    expect(JSON.parse(conversationUrl.searchParams.get("nav")!)).toEqual(detailReturn);
+    await conversation.click();
+    await expect(page.locator("main h1")).toHaveText("Conversation practice");
+    await expect(page.locator("main [data-conversation-entity]")).toHaveCount(1);
+    await expect(page.locator("main [data-conversation-entity]")).toContainText("5 levels");
+
+    await openApp(page, "/practice/");
+    const play = page.getByRole("link", { name: "Open Play", exact: true });
+    const playUrl = new URL((await play.getAttribute("href"))!, page.url());
+    expect(playUrl.pathname.replace(/\/$/, "").endsWith("/play")).toBe(true);
+    expect(playUrl.search).toBe("");
+    await play.click();
+    await expect(page.locator("main h1")).toHaveText("Wortwerk");
   });
 
-  for (const gameId of PRACTICE_GAME_IDS.filter((id) => id !== "audio-match")) {
-    test(`${gameId} grades an attempt and records it locally`, async ({ page }) => {
-      await gotoApp(page, `/practice/${gameId}`);
-      await waitForLearnerState(page);
+  for (const gameId of PRACTICE_GAME_IDS) {
+    test(`${gameId} is a static handoff preserving Pages raw and root semantic query state`, async ({ page }, info) => {
+      const { base } = configuredBase(info);
+      const target = new URL("play/", base);
+      const path = `${canonicalRequestPath(`practice/${gameId}`, info)}${rawQuery}${rawHash}`;
+      const response = await page.request.get(path);
+      expect(response.status()).toBe(200);
+      const html = await response.text();
+      expect(html).toContain(`<link rel="canonical" href="${target.pathname}"`);
+      expect(html).toMatch(/<script>[^<]*window\.location\.replace\([^<]*<\/script>/);
+      expect(html).toContain("window.location.search");
+      expect(html).toContain("window.location.hash");
+      expect(html).toMatch(/<noscript><meta http-equiv="refresh" content="0;url=[^"]*\/play\/"/);
+      expect(html).toContain(`href="${target.pathname}">Open Play`);
+      expect(html).not.toMatch(/data-game-id=|data-emitted-count=/);
 
-      const panel = page.locator(`[data-game-id="${gameId}"]`);
-      await expect(panel).toHaveCount(1);
-      await expect(page.locator("[data-emitted-count]")).toHaveAttribute(
-        "data-emitted-count",
-        "0",
-      );
-
-      const outcome = await playPracticeGame(page, gameId);
-
-      // Graded — the app says so in the region a screen reader would hear.
-      await expect(page.locator("[data-feedback]")).toHaveAttribute(
-        "data-feedback",
-        outcome.kind,
-      );
-      // Scored — the attempt counter a learner can see moved.
-      await expect(page.locator("[data-emitted-count]")).toHaveAttribute(
-        "data-emitted-count",
-        "1",
-      );
-      await expect(page.locator("main")).toContainText("Attempts this session: 1");
-
-      // Recorded — the attempt is in local state, not just on screen.
-      await expect
-        .poll(async () => (await readLearnerState(page))?.events.length ?? 0, {
-          message: "a graded attempt must persist a learner event",
-        })
-        .toBe(1);
+      const destination = await page.request.get(canonicalRequestPath("play", info), { maxRedirects: 0 });
+      expect(destination.status()).toBe(200);
+      await openApp(page, path);
+      await expect(page).toHaveURL(url => matchesHandoff(url, info));
+      await expect(page.locator("main h1")).toHaveText("Wortwerk");
+      await expect(page.locator("main [data-game-id]")).toHaveCount(0);
     });
   }
 
-  test("audio-match states it is unavailable instead of pretending to score", async ({
-    page,
-  }) => {
-    await gotoApp(page, "/practice/audio-match");
-    await waitForLearnerState(page);
-
-    await expect(
-      page.getByRole("heading", { level: 2, name: "Audio match" }),
-    ).toBeVisible();
-    await expect(page.locator('[data-availability="unavailable"]')).toContainText(
-      /not available yet/i,
-    );
-    await expect(page.getByRole("button", { name: "Submit" })).toHaveCount(0);
-    await expect(page.locator("[data-feedback]")).toHaveAttribute(
-      "data-feedback",
-      "unavailable",
-    );
-
-    const disabled = page.getByRole("button", { name: /Match audio \(unavailable\)/ });
-    await expect(disabled).toBeDisabled();
-
-    await expect(page.locator("[data-emitted-count]")).toHaveAttribute(
-      "data-emitted-count",
-      "0",
-    );
-    expect(
-      (await readLearnerState(page))?.events ?? [],
-      "an unavailable game must not record attempts",
-    ).toHaveLength(0);
+  test("unknown, extra and encoded malformed game paths stay honest 404s", async ({ page }, info) => {
+    for (const path of [
+      "practice/not-a-game/",
+      "practice/flashcards/extra/",
+      "practice/flashcards%2Fextra/",
+      "practice/%252F/",
+    ]) {
+      const response = await page.request.get(canonicalRequestPath(path, info), { maxRedirects: 0 });
+      expect(response.status(), path).toBe(404);
+      expect(await response.text(), path).not.toContain("This study area has moved.");
+    }
+    const response = await openApp(page, canonicalRequestPath("practice/not-a-game", info));
+    expect(response?.status()).toBe(404);
+    expect(new URL(page.url()).pathname.replace(/\/$/, "")).toContain("/practice/not-a-game");
+    await expect(page.locator("main [data-game-id]")).toHaveCount(0);
   });
 
-  test("word order accepts the rebuilt sentence and rejects a wrong order", async ({
-    page,
-  }) => {
-    // Called out by the audit as never played; graded both ways so a change in
-    // the ordering check cannot pass by always saying "correct".
-    await gotoApp(page, "/practice/word-order");
+  test("redirects and reloads preserve both independent event histories and existing course review cards", async ({ page }, info) => {
+    // Generate valid course evidence and cards through the existing public UI.
+    const activity = activityById("activity:lesson-02-core-professions");
+    await openApp(page, activity.canonicalPath);
     await waitForLearnerState(page);
+    await startActivity(page);
+    await completeGradedActivity(page);
+    await expect.poll(async () => (await readLearnerState(page))?.events.some(event =>
+      event.kind === "objectiveAttempt" && event.activityId === activity.id && event.conceptId === "lex:architekt",
+    ) ?? false).toBe(true);
+    await openApp(page, detailPath("lex:architekt"));
+    await waitForLearnerState(page);
+    await addReviewCardsHere(page);
 
-    const pool = page.locator('[data-role="pool"]');
-    const ordered = page.locator('[data-role="ordered"]');
+    // Explicitly enable the existing test fixture, then record one real answer.
+    // This is history retention evidence, not a streak/session-completion claim.
+    await openApp(page, "/play/packs/");
+    const fixture = page.getByRole("checkbox", { name: /Enable Fixture only/ });
+    await expect(fixture).not.toBeChecked();
+    await fixture.check();
+    const scope = Buffer.from(JSON.stringify({ v: 1, skills: ["gender"], count: 5 })).toString("base64url");
+    await openApp(page, `/play/run/?mode=quick&scope=${scope}`);
+    await page.getByRole("button", { name: "Start Quick review", exact: true }).click();
+    await page.locator(".ww-corners__option").first().click();
+    await expect(page.getByRole("region", { name: "Answer feedback" })).toBeVisible();
+    type WortwerkHistory = { schemaVersion: number; events: Array<{ type: string; payload: unknown }> };
+    await expect.poll(async () => (await readStorageJson<WortwerkHistory>(page, "wortwerk.v2"))?.events.some(event => event.type === "answer") ?? false).toBe(true);
+    await openApp(page, "/play/");
+    const courseBefore = await readLearnerState(page);
+    const playBefore = await readStorageJson<WortwerkHistory>(page, "wortwerk.v2");
+    expect(courseBefore?.events.length).toBeGreaterThan(0);
+    expect(courseBefore?.reviewCards.length).toBeGreaterThan(0);
+    expect(playBefore?.schemaVersion).toBe(2);
+    expect(playBefore?.events.length).toBeGreaterThan(0);
 
-    for (const token of ["bist", "Was", "du", "von", "Beruf?"]) {
-      await pool.getByRole("button", { name: token, exact: true }).click();
+    for (const gameId of PRACTICE_GAME_IDS) {
+      await openApp(page, `${canonicalRequestPath(`practice/${gameId}`, info)}${rawQuery}${rawHash}`);
+      await expect(page).toHaveURL(url => matchesHandoff(url, info));
+      await page.reload();
+      await expect(page.locator("main h1")).toHaveText("Wortwerk");
+      const courseAfter = await readLearnerState(page);
+      const playAfter = await readStorageJson<WortwerkHistory>(page, "wortwerk.v2");
+      expect(courseAfter?.events, gameId).toEqual(courseBefore?.events);
+      expect(courseAfter?.reviewCards, gameId).toEqual(courseBefore?.reviewCards);
+      expect(playAfter?.events, gameId).toEqual(playBefore?.events);
     }
-    await page.getByRole("button", { name: "Submit" }).click();
-    await expect(page.locator("[data-feedback]")).toHaveAttribute(
-      "data-feedback",
-      "incorrect",
-    );
-
-    await page.getByRole("button", { name: "Retry" }).click();
-    await expect(ordered).toContainText("Tap tokens below to build the sentence.");
-
-    for (const token of ["Was", "bist", "du", "von", "Beruf?"]) {
-      await pool.getByRole("button", { name: token, exact: true }).click();
-    }
-    await page.getByRole("button", { name: "Submit" }).click();
-    await expect(page.locator("[data-feedback]")).toHaveAttribute(
-      "data-feedback",
-      "correct",
-    );
   });
 });

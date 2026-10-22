@@ -3,10 +3,13 @@
  */
 import { createElement, type ReactNode } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
-import { beforeAll, describe, expect, it, vi } from "vitest";
+import { beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
 import {
   buildDetailPracticeNavigationContext,
   buildHubNavigationContext,
+  parseNavigationContextParam,
+  resolveBackHref,
+  serializeNavigationContext,
 } from "../../apps/web/lib/content/navigation-context.js";
 import { projectPublishedLearnerDetails } from "../../apps/web/lib/content/detail-project.js";
 import type { ShellNavCurrent } from "../../apps/web/lib/content/nav.js";
@@ -14,14 +17,34 @@ import { PRACTICE_GAME_IDS } from "../../apps/web/lib/games/index.js";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
+const practiceState = vi.hoisted(() => ({
+  query: "",
+  scope: null as import("../../apps/web/lib/study/scope.js").StudyScope | null,
+}));
+
+vi.mock("../../apps/web/components/study/StudyScope.tsx", async (importOriginal) => {
+  const actual = await importOriginal<typeof import("../../apps/web/components/study/StudyScope.tsx")>();
+  const pure = await import("../../apps/web/lib/study/scope.js");
+  return {
+    ...actual,
+    useStudyScope: () => {
+      const scope = practiceState.scope ?? pure.defaultStudyScope();
+      return { scope, connected: false, ready: true, error: "", setScope: () => {},
+        matches: (tags: Parameters<typeof pure.matchesStudyScope>[0]) => pure.matchesStudyScope(tags, scope) };
+    },
+  };
+});
+
 vi.mock("next/link", () => ({
   default: function MockLink({
     href,
     children,
+    prefetch,
     ...rest
   }: {
     href: string;
     children?: ReactNode;
+    prefetch?: boolean;
     className?: string;
     "aria-current"?: string;
     "aria-label"?: string;
@@ -29,12 +52,13 @@ vi.mock("next/link", () => ({
     "data-availability"?: string;
     "data-practise-link"?: string;
   }) {
+    void prefetch;
     return createElement("a", { href, ...rest }, children);
   },
 }));
 
 vi.mock("next/navigation", () => ({
-  useSearchParams: () => new URLSearchParams(),
+  useSearchParams: () => new URLSearchParams(practiceState.query),
 }));
 
 const platformRoot = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
@@ -47,6 +71,14 @@ const FORBIDDEN = [
   "media/generated",
   "candidate-needs-listening-review",
 ] as const;
+
+function renderedLink(html: string, attribute: string): URL {
+  const anchor = html.match(new RegExp(`<a\\b[^>]*${attribute}[^>]*>`))?.[0];
+  expect(anchor, attribute).toBeDefined();
+  const href = /href="([^"]*)"/.exec(anchor!)?.[1];
+  expect(href, attribute).toBeDefined();
+  return new URL(href!.replaceAll("&amp;", "&"), "https://test.local");
+}
 
 describe("P4A practice UI contracts", () => {
   let AppShell: (props: {
@@ -66,6 +98,9 @@ describe("P4A practice UI contracts", () => {
       typeof projectPublishedLearnerDetails
     >["representatives"][number];
   }) => ReactNode;
+  let PracticeHub: (props: { navigation?: ReturnType<typeof buildDetailPracticeNavigationContext> }) => ReactNode;
+  let PracticeHubWithNav: () => ReactNode;
+  let StudyProvider: (props: { dictionary: []; children: ReactNode }) => ReactNode;
   let details: ReturnType<typeof projectPublishedLearnerDetails>;
 
   beforeAll(async () => {
@@ -86,6 +121,16 @@ describe("P4A practice UI contracts", () => {
     GameSelector = selectorMod.GameSelector as typeof GameSelector;
     GameRenderer = rendererMod.GameRenderer as typeof GameRenderer;
     DetailView = detailMod.DetailView as typeof DetailView;
+    const hubMod = await import("../../apps/web/components/study/PracticeHub.tsx");
+    const studyMod = await import("../../apps/web/components/study/StudyProvider.tsx");
+    PracticeHub = hubMod.PracticeHub as typeof PracticeHub;
+    PracticeHubWithNav = hubMod.PracticeHubWithNav;
+    StudyProvider = studyMod.StudyProvider as typeof StudyProvider;
+  });
+
+  beforeEach(() => {
+    practiceState.query = "";
+    practiceState.scope = null;
   });
 
   it("renders selector with exact seven IDs and audio-match unavailable", () => {
@@ -171,7 +216,7 @@ describe("P4A practice UI contracts", () => {
     }
   });
 
-  it("links Practise from all three representative details with typed back context", () => {
+  it("links the owned practice hub from all three representative details with exact bounded Back context", () => {
     for (const id of [
       "lex:architekt",
       "verb:sein",
@@ -182,9 +227,16 @@ describe("P4A practice UI contracts", () => {
         createElement(DetailView, { detail }),
       );
       expect(html).toContain('data-practise-link="true"');
-      expect(html).toContain("/practice?");
-      expect(html).toContain("nav=");
-      expect(html).toContain("Practise");
+      const link = renderedLink(html, 'data-practise-link="true"');
+      expect(link.pathname).toBe("/practice");
+      const context = parseNavigationContextParam(link.searchParams.get("nav"));
+      expect(context).toEqual(buildDetailPracticeNavigationContext({
+        hubId: detail.hubSegment, detailPath: detail.canonicalPath, resultId: detail.id,
+      }));
+      expect(resolveBackHref(context)).toBe(detail.canonicalPath);
+      expect(html).toContain(`aria-label="Open practice hub for ${detail.displayText}"`);
+      expect(html).toContain(">Open practice hub</a>");
+      expect(html).not.toContain("games related to");
     }
   });
 
@@ -200,4 +252,57 @@ describe("P4A practice UI contracts", () => {
     expect(verb).toContain('type="text"');
     expect(verb).toContain("aria-label");
   });
+
+  it("composes retained CoursePractice with one heading and a plain Play entry", () => {
+    const html = renderToStaticMarkup(createElement(StudyProvider, {
+      dictionary: [], children: createElement(PracticeHub, {}),
+    }));
+    expect(html.match(/<h1\b/g)).toHaveLength(1);
+    expect(html).toContain("Loading your practice cards");
+    expect(html).toContain('data-practice-hub="true"');
+    expect(html).toContain('href="/play"');
+    expect(html).toContain(">Open Play</a>");
+    expect(html).not.toContain("Focused games");
+    expect(html).not.toContain("data-game-id=");
+    expect(html).not.toMatch(/href="\/practice\//);
+  });
+
+  it("keeps exact detail Back and conversation context below the URL boundary", () => {
+    const detail = details.representativesById["qa:profession-casual-main"];
+    const context = buildDetailPracticeNavigationContext({
+      hubId: detail.hubSegment, detailPath: detail.canonicalPath, resultId: detail.id,
+    })!;
+    practiceState.query = new URLSearchParams({ nav: serializeNavigationContext(context) }).toString();
+    const html = renderToStaticMarkup(createElement(PracticeHubWithNav));
+    expect(renderedLink(html, 'class="back-link"').pathname).toBe(detail.canonicalPath);
+    const conversation = renderedLink(html, 'data-conversation-entry="true"');
+    expect(conversation.pathname).toBe("/conversation");
+    expect(parseNavigationContextParam(conversation.searchParams.get("nav"))).toEqual(context);
+    expect(html).toContain("game-selector__card--related");
+    expect(new URL(/href="([^"]*)"[^>]*>Open Play/.exec(html)![1], "https://test.local").search).toBe("");
+  });
+
+  it.each([
+    JSON.stringify({ entryContext: "hub", returnPath: "https://evil.test" }),
+    "x".repeat(4000),
+  ])("rejects hostile or excessive public hub navigation (%#)", nav => {
+    practiceState.query = new URLSearchParams({ nav }).toString();
+    const html = renderToStaticMarkup(createElement(PracticeHubWithNav));
+    expect(renderedLink(html, 'class="back-link"').pathname).toBe("/cheat-sheets");
+    expect(renderedLink(html, 'data-conversation-entry="true"').search).toBe("");
+    expect(html).not.toContain("evil.test");
+  });
+
+  it.each([
+    { lessons: [2], concepts: ["people"], source: "course", visible: true },
+    { lessons: [1], concepts: ["people"], source: "course", visible: false },
+    { lessons: [2], concepts: ["food"], source: "course", visible: false },
+    { lessons: [2], concepts: ["people"], source: "teacher-extra", visible: false },
+  ] as const)("qualifies conversation by the actual lesson, concept and source predicate (%#)", selection => {
+    practiceState.scope = { mode: "one", lessons: [...selection.lessons], concepts: [...selection.concepts], source: selection.source };
+    const html = renderToStaticMarkup(createElement(PracticeHub, {}));
+    expect(html.includes('data-conversation-entry="true"')).toBe(selection.visible);
+    expect(html).toContain(">Open Play</a>");
+  });
+
 });

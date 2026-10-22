@@ -17,7 +17,6 @@ import { BackLink } from "@/components/nav/BackLink";
 import { GenderBadge } from "@/components/details/GenderBadge";
 import { VerbSelfCheck } from "@/components/details/VerbSelfCheck";
 import { QaConstruction, QaGuidedChoice } from "@/components/details/QaPractice";
-import { PractiseLink } from "@/components/games/PractiseLink";
 import { ConversationLink } from "@/components/conversation/ConversationLink";
 import {
   CONVERSATION_LEVEL_IDS,
@@ -44,6 +43,22 @@ import {
   QuestionAnswerFlowVisual,
   VerbPatternVisual,
 } from "@/components/media/InstructionalVisuals";
+
+/** Keep the same bounded detail return context without promising retired games. */
+function PracticeHubLink({ detail }: { detail: LearnerDetailRecord }) {
+  const navigation = buildDetailPracticeNavigationContext({
+    hubId: detail.hubSegment,
+    detailPath: detail.canonicalPath,
+    resultId: detail.id,
+  });
+  const href = navigation ? appendNavigationContext("/practice", navigation) : "/practice";
+  return (
+    <Link className="btn btn-primary" href={href} data-practise-link="true"
+      aria-label={`Open practice hub for ${detail.displayText}`}>
+      Open practice hub
+    </Link>
+  );
+}
 
 function MetaChips({
   lessonIds,
@@ -251,7 +266,7 @@ function VocabularyDetail({ detail }: { detail: LearnerVocabularyDetail }) {
       </section>
 
       <div className="detail-actions">
-        <PractiseLink detail={detail} />
+        <PracticeHubLink detail={detail} />
       </div>
       <DetailLearningControls key={detail.id} contentId={detail.id} />
     </div>
@@ -341,7 +356,7 @@ function VerbDetail({ detail }: { detail: LearnerVerbDetail }) {
       )}
 
       <div className="detail-actions">
-        <PractiseLink detail={detail} />
+        <PracticeHubLink detail={detail} />
       </div>
       <DetailLearningControls key={detail.id} contentId={detail.id} />
     </div>
@@ -479,7 +494,7 @@ function QaDetail({ detail }: { detail: LearnerQaDetail }) {
 
       <div className="detail-actions">
         <ConversationLink detail={detail} />
-        <PractiseLink detail={detail} />
+        <PracticeHubLink detail={detail} />
       </div>
       <DetailLearningControls key={detail.id} contentId={detail.id} />
     </div>

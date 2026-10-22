@@ -1,9 +1,7 @@
-import { Suspense } from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ShellLayout } from "@/components/shell/ShellLayout";
-import { GameRenderer } from "@/components/games/GameRenderer";
-import { PracticeGameWithNav } from "@/components/games/PracticeNavViews";
+import { StaticHubRedirect } from "@/components/hubs/StaticHubRedirect";
 import { pageMetadata } from "@/lib/content/page-metadata";
 import {
   buildPracticeGameCatalog,
@@ -31,8 +29,8 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { gameId: segment } = await params;
   const game = buildPracticeGameCatalog().find((item) => item.id === segment);
-  // The game's own title is the visible h1, so the two cannot drift apart.
-  return game ? pageMetadata(`${game.title} · Practice`, game.description) : {};
+  // Keep recognizable legacy metadata while the static page hands off to Play.
+  return game ? pageMetadata(`${game.title} · Practice`, "This practice area has moved to Play.") : {};
 }
 
 export default async function PracticeGamePage({ params }: PageProps) {
@@ -51,9 +49,7 @@ export default async function PracticeGamePage({ params }: PageProps) {
 
   return (
     <ShellLayout current="practice">
-      <Suspense fallback={<GameRenderer gameId={gameId} />}>
-        <PracticeGameWithNav gameId={gameId} />
-      </Suspense>
+      <StaticHubRedirect href="/play" label="Play" />
     </ShellLayout>
   );
 }
