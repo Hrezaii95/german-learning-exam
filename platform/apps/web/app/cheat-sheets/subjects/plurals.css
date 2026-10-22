@@ -530,6 +530,201 @@
   }
 }
 
+@media screen and (max-width:1280px) {
+  .subject-plural-intro {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+@media screen and (max-width:1280px) {
+  .subject-plural-rule {
+    padding: 14px 16px;
+  }
+}
+
+@media screen and (max-width:1280px) {
+  .subject-plural-rule>strong {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width:1280px) {
+  .subject-plural-table,.subject-plural-table caption,.subject-plural-table tbody,.subject-plural-table tbody tr,.subject-plural-table tbody th,.subject-plural-table tbody td {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:1280px) {
+  .subject-plural-table {
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+  }
+}
+
+@media screen and (max-width:1280px) {
+  .subject-plural-table caption {
+    padding-bottom: 12px;
+  }
+}
+
+@media screen and (max-width:1280px) {
+  .subject-plural-table thead {
+    position: absolute;
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
+
+@media screen and (max-width:1280px) {
+  .subject-plural-table tbody tr {
+    margin-bottom: 18px;
+    border: 1px solid var(--plural-line);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width:1280px) {
+  .subject-plural-table tbody th {
+    padding: 16px;
+    background: #edf1e6;
+    border-bottom: 1px solid var(--plural-line);
+  }
+}
+
+@media screen and (max-width:1280px) {
+  .subject-plural-table tbody th>strong {
+    margin-bottom: 5px;
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width:1280px) {
+  .subject-plural-table tbody th>span {
+    font-size: .76rem;
+  }
+}
+
+@media screen and (max-width:1280px) {
+  .subject-plural-table tbody td {
+    display: grid;
+    grid-template-columns: 95px minmax(0,1fr);
+    gap: 8px;
+    padding: 10px 12px;
+    border-left: 0;
+  }
+}
+
+@media screen and (max-width:1280px) {
+  .subject-plural-table tbody td+td {
+    border-top: 1px solid var(--plural-line);
+  }
+}
+
+@media screen and (max-width:1280px) {
+  .subject-plural-table tbody tr+tr>th,.subject-plural-table tbody tr+tr>td {
+    border-top: 0;
+  }
+}
+
+@media screen and (max-width:1280px) {
+  .subject-plural-table tbody tr+tr>td+td {
+    border-top: 1px solid var(--plural-line);
+  }
+}
+
+@media screen and (max-width:1280px) {
+  .subject-plural-mobile-label {
+    display: block;
+    align-self: start;
+    padding: 11px 2px;
+    font-size: .66rem;
+    line-height: 1.5;
+  }
+}
+
+@media screen and (max-width:1280px) {
+  .subject-plural-mobile-label>b {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 1.45rem;
+    line-height: 1;
+    font-weight: 650;
+    letter-spacing: -.035em;
+  }
+}
+
+@media screen and (max-width:1280px) {
+  .subject-plural-table tbody tr:last-child>th,.subject-plural-table tbody tr:last-child>td:last-child {
+    border-radius: 0;
+  }
+}
+
+@media screen and (max-width:1280px) {
+  .subject-plural-entry {
+    gap: 7px;
+    min-height: 78px;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width:1280px) {
+  .subject-plural-singular {
+    font-size: .96rem;
+  }
+}
+
+@media screen and (max-width:1280px) {
+  .subject-plural-result {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width:1280px) {
+  .subject-plural-empty-cell {
+    padding: 13px 10px;
+    font-size: .74rem;
+  }
+}
+
+@media screen and (max-width:1280px) {
+  .subject-plural-table .subject-plural-gap-row {
+    border: 1px dashed #bcc6b8;
+  }
+}
+
+@media screen and (max-width:1280px) {
+  .subject-plural-table .subject-plural-gap-row>th,.subject-plural-table .subject-plural-gap-row>td {
+    border-top: 0;
+  }
+}
+
+@media screen and (max-width:1280px) {
+  .subject-plural-table .subject-plural-gap-row>td+td {
+    border-top: 1px dashed #bcc6b8;
+  }
+}
+
+@media screen and (max-width:1280px) {
+  .subject-plural-existing {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 18px 14px;
+  }
+}
+
+@media screen and (max-width:1280px) {
+  .subject-plural-existing ul {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+}
+
 @media screen and (max-width:760px) {
   .subject-plural-entry {
     gap: 7px;
@@ -2086,201 +2281,6 @@
 .subject-plural-result>span:last-child {
   min-width: 0;
   max-width: 100%;
-}
-
-@media screen and (max-width:1280px) {
-  .subject-plural-intro {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-}
-
-@media screen and (max-width:1280px) {
-  .subject-plural-rule {
-    padding: 14px 16px;
-  }
-}
-
-@media screen and (max-width:1280px) {
-  .subject-plural-rule>strong {
-    font-size: 1.2rem;
-  }
-}
-
-@media screen and (max-width:1280px) {
-  .subject-plural-table,.subject-plural-table caption,.subject-plural-table tbody,.subject-plural-table tbody tr,.subject-plural-table tbody th,.subject-plural-table tbody td {
-    display: block;
-    width: 100%;
-  }
-}
-
-@media screen and (max-width:1280px) {
-  .subject-plural-table {
-    border: 0;
-    border-radius: 0;
-    background: transparent;
-  }
-}
-
-@media screen and (max-width:1280px) {
-  .subject-plural-table caption {
-    padding-bottom: 12px;
-  }
-}
-
-@media screen and (max-width:1280px) {
-  .subject-plural-table thead {
-    position: absolute;
-    clip-path: inset(50%);
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-}
-
-@media screen and (max-width:1280px) {
-  .subject-plural-table tbody tr {
-    margin-bottom: 18px;
-    border: 1px solid var(--plural-line);
-    border-radius: 10px;
-    overflow: hidden;
-  }
-}
-
-@media screen and (max-width:1280px) {
-  .subject-plural-table tbody th {
-    padding: 16px;
-    background: #edf1e6;
-    border-bottom: 1px solid var(--plural-line);
-  }
-}
-
-@media screen and (max-width:1280px) {
-  .subject-plural-table tbody th>strong {
-    margin-bottom: 5px;
-    font-size: 1.4rem;
-  }
-}
-
-@media screen and (max-width:1280px) {
-  .subject-plural-table tbody th>span {
-    font-size: .76rem;
-  }
-}
-
-@media screen and (max-width:1280px) {
-  .subject-plural-table tbody td {
-    display: grid;
-    grid-template-columns: 95px minmax(0,1fr);
-    gap: 8px;
-    padding: 10px 12px;
-    border-left: 0;
-  }
-}
-
-@media screen and (max-width:1280px) {
-  .subject-plural-table tbody td+td {
-    border-top: 1px solid var(--plural-line);
-  }
-}
-
-@media screen and (max-width:1280px) {
-  .subject-plural-table tbody tr+tr>th,.subject-plural-table tbody tr+tr>td {
-    border-top: 0;
-  }
-}
-
-@media screen and (max-width:1280px) {
-  .subject-plural-table tbody tr+tr>td+td {
-    border-top: 1px solid var(--plural-line);
-  }
-}
-
-@media screen and (max-width:1280px) {
-  .subject-plural-mobile-label {
-    display: block;
-    align-self: start;
-    padding: 11px 2px;
-    font-size: .66rem;
-    line-height: 1.5;
-  }
-}
-
-@media screen and (max-width:1280px) {
-  .subject-plural-mobile-label>b {
-    display: block;
-    margin-bottom: 4px;
-    font-size: 1.45rem;
-    line-height: 1;
-    font-weight: 650;
-    letter-spacing: -.035em;
-  }
-}
-
-@media screen and (max-width:1280px) {
-  .subject-plural-table tbody tr:last-child>th,.subject-plural-table tbody tr:last-child>td:last-child {
-    border-radius: 0;
-  }
-}
-
-@media screen and (max-width:1280px) {
-  .subject-plural-entry {
-    gap: 7px;
-    min-height: 78px;
-    padding: 10px;
-  }
-}
-
-@media screen and (max-width:1280px) {
-  .subject-plural-singular {
-    font-size: .96rem;
-  }
-}
-
-@media screen and (max-width:1280px) {
-  .subject-plural-result {
-    font-size: 1rem;
-  }
-}
-
-@media screen and (max-width:1280px) {
-  .subject-plural-empty-cell {
-    padding: 13px 10px;
-    font-size: .74rem;
-  }
-}
-
-@media screen and (max-width:1280px) {
-  .subject-plural-table .subject-plural-gap-row {
-    border: 1px dashed #bcc6b8;
-  }
-}
-
-@media screen and (max-width:1280px) {
-  .subject-plural-table .subject-plural-gap-row>th,.subject-plural-table .subject-plural-gap-row>td {
-    border-top: 0;
-  }
-}
-
-@media screen and (max-width:1280px) {
-  .subject-plural-table .subject-plural-gap-row>td+td {
-    border-top: 1px dashed #bcc6b8;
-  }
-}
-
-@media screen and (max-width:1280px) {
-  .subject-plural-existing {
-    grid-template-columns: 1fr;
-    gap: 14px;
-    padding: 18px 14px;
-  }
-}
-
-@media screen and (max-width:1280px) {
-  .subject-plural-existing ul {
-    grid-template-columns: repeat(2,minmax(0,1fr));
-  }
 }
 
 .subject-word-dropdown .study-german {

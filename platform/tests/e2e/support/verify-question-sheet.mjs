@@ -78,7 +78,7 @@ try{
   for(const [i,answer] of correct.entries()){
     await practice.getByRole('button',{name:answer,exact:true}).click();
     assert((await practice.getByRole('status').innerText()).includes('Exactly.'),`Quiz ${i+1} gives correct feedback`);
-    await practice.getByRole('button',{name:'Next question →',exact:true}).click();
+    await practice.getByRole('button',{name:'Next',exact:true}).click();
   }
   assert((await practice.getByRole('status').innerText()).includes('8 / 8'),'Quiz records the complete score');
   await practice.getByRole('button',{name:'Practise again',exact:true}).click();

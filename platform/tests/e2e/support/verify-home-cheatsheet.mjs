@@ -31,7 +31,7 @@ try{
   await page.locator('.home-pronoun-map').getByRole('button',{name:'Stop: Der Stuhl ist schön.',exact:true}).click();
   await page.getByRole('button',{name:'Slow audio on',exact:true}).click();
   await page.goto(`${base}/cheat-sheets/home/#home-kissen`,{waitUntil:'networkidle'});
-  await page.getByRole('link',{name:'Open das Kissen in home vocabulary →',exact:true}).click();
+  await page.getByRole('link',{name:'Open das Kissen in home vocabulary',exact:true}).click();
   await expect(page.getByRole('searchbox',{name:'Find a word or form',exact:true})).toHaveValue('das Kissen');
   await expect(entries).toHaveCount(1);await entries.first().click();
   const detail=page.locator('.subject-word-dropdown');
@@ -50,14 +50,14 @@ try{
   await expect(detail.getByRole('button',{name:'Save to review: das Kissen',exact:true})).toBeVisible();
   assert(true,'The saved word can be deselected in its shared dropdown');
   await page.goto(`${base}/cheat-sheets/home/#home-stuhl`,{waitUntil:'networkidle'});
-  await page.getByRole('link',{name:'Open der Stuhl in home vocabulary →',exact:true}).click();await entries.first().click();
-  await detail.getByRole('link',{name:'Full vocabulary card →',exact:true}).click();await page.waitForURL(/\/vocabulary\//);
+  await page.getByRole('link',{name:'Open der Stuhl in home vocabulary',exact:true}).click();await entries.first().click();
+  await detail.getByRole('link',{name:'Full vocabulary card',exact:true}).click();await page.waitForURL(/\/vocabulary\//);
   assert(page.url().includes('/vocabulary/'),'Existing furniture opens its full vocabulary card');
   await page.getByRole('link',{name:/Back/}).first().click();
   await expect(detail).toContainText('die Stühle');
   assert(new URL(page.url()).searchParams.get('lesson')==='1,2,3,4','Full-card Back retains the exact home word and lesson filter');
   await page.goto(`${base}/cheat-sheets/home/#home-fenster`,{waitUntil:'networkidle'});
-  await page.getByRole('link',{name:'Open das Fenster in home vocabulary →',exact:true}).click();
+  await page.getByRole('link',{name:'Open das Fenster in home vocabulary',exact:true}).click();
   await expect(page.getByRole('searchbox',{name:'Find a word or form',exact:true})).toHaveValue('das Fenster');
   assert(true,'An extra-word legacy anchor also offers its exact subject handoff');
   await page.goto(`${base}/cheat-sheets/home/`,{waitUntil:'networkidle'});
@@ -65,7 +65,7 @@ try{
   for(const [i,choice] of choices.entries()){
     await page.locator('.home-quiz-options').getByRole('button',{name:choice,exact:true}).click();
     if(i===0)assert((await page.locator('.home-feedback').innerText()).includes('Masculine'),'A wrong answer explains the correct gender');
-    await page.locator('.home-feedback').getByRole('button',{name:'Next →',exact:true}).click();
+    await page.locator('.home-feedback').getByRole('button',{name:'Next',exact:true}).click();
   }
   assert((await page.locator('.home-quiz').innerText()).includes('7 / 8'),'The retained quiz scores correct answers accurately');
   await page.getByRole('button',{name:'Practise again',exact:true}).click();
@@ -76,7 +76,7 @@ try{
   await page.locator('.home-room-objects').scrollIntoViewIfNeeded();await page.screenshot({path:`${output}/room-mobile.png`});
   await page.locator('#home-patterns').scrollIntoViewIfNeeded();await page.screenshot({path:`${output}/pronouns-mobile.png`});
   await page.goto(`${base}/cheat-sheets/home/#home-bett`,{waitUntil:'networkidle'});
-  await page.getByRole('link',{name:'Open das Bett in home vocabulary →',exact:true}).click();await entries.first().click();
+  await page.getByRole('link',{name:'Open das Bett in home vocabulary',exact:true}).click();await entries.first().click();
   await expect(detail).toContainText('die Betten');await detail.scrollIntoViewIfNeeded();
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'The mobile shared word keeps its plural readable without overflow');
   await page.screenshot({path:`${output}/word-mobile.png`});

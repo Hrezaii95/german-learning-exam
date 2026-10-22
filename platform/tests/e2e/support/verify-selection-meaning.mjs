@@ -37,7 +37,7 @@ try {
   assert((await dictionary.innerText()).includes('Masculine · der'),'Gender is labelled in text as well as color');
   assert(await dictionary.locator('.study-tone-plural').count()>0,'Plural has its distinct purple color');
   assert(await dictionary.locator('.study-tone-male').first().evaluate(el=>getComputedStyle(el).color)==='rgb(23, 77, 172)','Masculine uses the existing semantic ink token');
-  const cardLink=await dictionary.getByRole('link',{name:'Open study card →',exact:true}).first().getAttribute('href');
+  const cardLink=await dictionary.getByRole('link',{name:'Open study card',exact:true}).first().getAttribute('href');
   assert(cardLink.includes('/vocabulary/'),'Matching vocabulary card is directly linked');
   await dictionary.getByLabel('German or English',{exact:true}).fill('Lampe');
   assert(await dictionary.locator('.study-tone-female').count()>0,'Feminine forms carry the pink vocabulary color');
@@ -58,14 +58,14 @@ try {
   await page.getByRole('button',{name:'Meaning of selection',exact:true}).click();
   assert((await dictionary.innerText()).includes('I think so too.'),'Highlighted phrase shows its full meaning');
   const phraseCard=dictionary.locator('[data-lookup-kind=phrase]').first();
-  assert(/\/lessons\/04\/?#phrases$/.test(await phraseCard.getByRole('link',{name:'Open phrase card →'}).getAttribute('href')),'Phrase result links to the existing lesson phrase card');
+  assert(/\/lessons\/04\/?#phrases$/.test(await phraseCard.getByRole('link',{name:'Open phrase card'}).getAttribute('href')),'Phrase result links to the existing lesson phrase card');
   await phraseCard.getByRole('button',{name:'Save to review: Das finde ich auch.',exact:true}).click();
   await page.keyboard.press('Escape');
   assert(await page.getByRole('button',{name:'Remove from review: Das finde ich auch.',exact:true}).count()===1,'Saving through lookup selects the same existing phrase card');
   await page.getByRole('navigation',{name:'Lesson 4 study sections'}).getByRole('button',{name:/^Words/}).click();
   await page.getByRole('button',{name:'Open dictionary',exact:true}).click();
   await dictionary.getByLabel('German or English',{exact:true}).fill('Das finde ich auch.');
-  await dictionary.getByRole('link',{name:'Open phrase card →',exact:true}).first().click();
+  await dictionary.getByRole('link',{name:'Open phrase card',exact:true}).first().click();
   await page.locator('.lesson-phrases').waitFor();
   assert(await page.getByRole('button',{name:'Phrases',exact:true}).getAttribute('aria-current')==='page','Phrase link selects the phrase tab even from the same lesson');
   await page.goto(`${base}/book/?page=coursebook-30`,{waitUntil:'networkidle'});
@@ -84,7 +84,7 @@ try {
   assert((await dictionary.innerText()).includes('That is a special offer.'),'Line Meaning button works without text selection');
   await dictionary.getByLabel('German or English',{exact:true}).fill('Wie alt bist du?');
   assert((await dictionary.innerText()).includes('How old are you?'),'Earlier conversation sentence has an English meaning');
-  const oldPhrase=dictionary.getByRole('link',{name:'Open phrase card →'}).first();
+  const oldPhrase=dictionary.getByRole('link',{name:'Open phrase card'}).first();
   await oldPhrase.click();
   await page.waitForURL(/\/phrases\/id-/);
   assert((await page.locator('main').innerText()).includes('Wie alt bist du?'),'Existing phrase card opens successfully');
