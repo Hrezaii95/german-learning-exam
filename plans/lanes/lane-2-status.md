@@ -5,7 +5,7 @@ Updated by Lane 2 only. Lane worktree: `lane2/l2-2-corners`. Base: `codex/live-a
 | PR | Title | State (planned / in progress / draft PR / merged / blocked) | Link | Notes |
 |---|---|---|---|---|
 | L2-1 | Pack content foundation and A1 migration | draft PR | [PR #4](https://github.com/Hrezaii95/german-learning-exam/pull/4) | Code implemented; after Lane 1 merge, A1 pack remains blocked by 11 source groups. |
-| L2-2 | Corners and Four Corners templates | in progress | — | Implemented; draft publication next. |
+| L2-2 | Corners and Four Corners templates | draft PR | [PR #16](https://github.com/Hrezaii95/german-learning-exam/pull/16) | Implemented; production pack and release/browser gates remain open. |
 | L2-3 | Daily Run, event-derived progress and Today | in progress | — | Engine/store focused tests pass; route integration underway. |
 
 ## L2-1 implementation plan
