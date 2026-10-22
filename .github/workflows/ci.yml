@@ -125,10 +125,10 @@ jobs:
         working-directory: platform
         run: npm run deploy:cloudflare -- --dry-run
 
-      # Private originals are deliberately outside Git. Preserve this required
-      # audit as a blocking gate, after all reproducible repository checks.
-      - name: Validate source manifest
-        run: node tools/validate-source-manifest.mjs
+      # Orchestrator decision, docs/lanes/lane-3-platform.md (2026-10-22):
+      # validate-source-manifest requires 454 deliberately untracked originals.
+      # It remains a local/owner-machine gate; hosted CI verifies the published
+      # content and exported media bytes through the gates above.
 
       - name: Gate summary
         if: always()
