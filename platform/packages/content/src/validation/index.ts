@@ -5,3 +5,4 @@ export * from "./references.js";
 export * from "./provenance.js";
 export * from "./scope.js";
 export * from "./validate-bundle.js";
+export * from "./packs.js";

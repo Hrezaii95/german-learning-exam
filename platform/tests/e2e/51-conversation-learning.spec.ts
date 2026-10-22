@@ -1,3 +1,4 @@
+import {printLiveSheet} from "./helpers/print-live-sheet";
 import {expect,test} from "@playwright/test";
 
 for(const width of [320,1440])test(`dialogue roles, saved context and alphabet audio at ${width}px`,async({page},testInfo)=>{
@@ -9,7 +10,7 @@ for(const width of [320,1440])test(`dialogue roles, saved context and alphabet a
   await flow.getByRole("combobox",{name:"Your role",exact:true}).selectOption("ask");await flow.getByRole("button",{name:"Hide my line & practise",exact:true}).click();
   await expect(flow.locator('[data-turn="ask"]')).not.toContainText("Wie geht’s Ihnen?");await expect(flow.locator('[data-turn="answer"]')).toContainText("Gut, danke. Und Ihnen?");
   await flow.getByRole("button",{name:"Reveal my line",exact:true}).click();await expect(flow.locator('[data-turn="ask"]')).toContainText("Wie geht’s Ihnen?");
-  await flow.getByRole("button",{name:/^Save to review:/}).click();await page.goto("saved/");await page.locator(".study-saved-card").filter({hasText:"Wie geht’s Ihnen?"}).getByRole("link",{name:"Open in context →",exact:true}).click();
+  await flow.getByRole("button",{name:/^Save to review:/}).click();await page.goto("saved/");await page.locator(".study-saved-card").filter({hasText:"Wie geht’s Ihnen?"}).getByRole("link",{name:"Open in context",exact:true}).click();
   await expect(flow.getByRole("combobox",{name:"Conversation topic",exact:true})).toHaveValue("wellbeing");await expect(flow.getByRole("button",{name:"Formal · Sie",exact:true})).toHaveAttribute("aria-pressed","true");await expect(flow.getByRole("combobox",{name:"Your role",exact:true})).toHaveValue("ask");
   await expect(flow.locator('[data-turn="ask"]')).toContainText("Wie geht’s Ihnen?");await flow.getByRole("button",{name:/^Remove from review:/}).click();
   await flow.screenshot({path:testInfo.outputPath(`conversation-flow-${width}.png`)});
@@ -36,7 +37,18 @@ test("conversation card filters control recall and foundation scope is explicit"
   await expect(page.locator("#sheet-practice")).toContainText("Question 1 /");
 });
 
-test("conversation prints dialogue contrasts and all thirty letter cues",async({page},testInfo)=>{
-  await page.goto("cheat-sheets/conversation/");const summary=page.locator(".sheet-print-summary");await expect(summary).toBeHidden();await page.emulateMedia({media:"print"});await expect(summary).toBeVisible();await expect(summary.locator(".conversation-print-pairs section")).toHaveCount(8);await expect(summary.locator(".conversation-print-alphabet > div")).toHaveCount(30);await page.evaluate(()=>document.fonts.ready);
-  for(const format of ["A4","Letter"] as const){const path=testInfo.outputPath(`conversation-${format}.pdf`);await page.pdf({path,format,printBackground:true,margin:{top:"12mm",bottom:"12mm",left:"12mm",right:"12mm"}});await testInfo.attach(`conversation-${format}`,{path,contentType:"application/pdf"});}
+test("conversation prints the current register and live alphabet",async({page},testInfo)=>{
+  await page.goto("cheat-sheets/conversation/");
+  await page.getByRole("button",{name:"Formal · Sie",exact:true}).click();
+  const letter=page.getByRole("combobox",{name:"Choose a letter",exact:true});
+  await letter.selectOption("W");
+  await printLiveSheet(page,testInfo,"conversation",async()=>{
+    await expect(page.locator(".conversation-turns")).toBeVisible();
+    await expect(page.locator(".conversation-turns")).toContainText("Wie heißen Sie?");
+    await expect(page.locator(".spelling-focus")).toBeVisible();
+    await expect(page.locator(".spelling-focus > strong")).toHaveText("W");
+    await expect(page.locator(".spelling-soundboard > div")).toHaveCount(30);
+  });
+  await expect(page.getByRole("button",{name:"Formal · Sie",exact:true})).toHaveAttribute("aria-pressed","true");
+  await expect(letter).toHaveValue("W");
 });

@@ -26,7 +26,7 @@ export type ExtractionMethod =
   | "generated"
   | "fixture";
 
-export type CefrLevel = "A1";
+export type CefrLevel = "A1" | "A2" | "B1" | "B2" | "C1" | "C2";
 export type AlphaCefrBand = "A1.1" | "A1.2";
 
 export type Gender = "masculine" | "feminine" | "neuter";

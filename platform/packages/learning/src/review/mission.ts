@@ -612,3 +612,32 @@ export function generateDailyMission(input: GenerateMissionInput): DailyMission 
   }
   return mission;
 }
+
+/**
+ * Pack-driven missions use the same stable mission ordering layer without pretending
+ * that unreviewed fixture items are Alpha publication candidates. The caller ranks
+ * real eligible tasks; this helper interleaves them and never invents a modality.
+ * If fewer than three templates are available, a short mission is preferable to
+ * silently breaking the maximum consecutive-template rule.
+ */
+export function interleaveMissionTasks<T>(
+  ranked: readonly T[],
+  templateId: (task: T) => string,
+  count: number,
+  maxConsecutive = 2,
+): T[] {
+  if (!Number.isInteger(count) || count < 0 || !Number.isInteger(maxConsecutive) || maxConsecutive < 1) {
+    throw reviewError("INVALID_LIMIT", "Invalid mission interleaving limit");
+  }
+  const pending = [...ranked];
+  const selected: T[] = [];
+  while (pending.length && selected.length < count) {
+    const previous = selected.slice(-maxConsecutive);
+    const blocked = previous.length === maxConsecutive && previous.every(t => templateId(t) === templateId(previous[0]!))
+      ? templateId(previous[0]!) : null;
+    const index = pending.findIndex(task => templateId(task) !== blocked);
+    if (index < 0) break;
+    selected.push(pending.splice(index, 1)[0]!);
+  }
+  return selected;
+}

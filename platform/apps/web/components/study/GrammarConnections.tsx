@@ -1,4 +1,5 @@
 "use client";
+import { Icon } from "@/components/media/Icon";
 import {useState} from "react";
 import Link from "next/link";
 import type {CoursePatternEntry} from "@/lib/study/course-patterns";
@@ -22,7 +23,7 @@ export function GrammarConnections({entries,speech,navigation}:{entries:CoursePa
     <ol className="grammar-connection-flow">
       <li><span className="study-eyebrow">1 · Understand</span><h3>{concept.title}</h3><p>{concept.en}</p></li>
       <li><span className="study-eyebrow">2 · Hear it in context</span><p><GermanText text={concept.examples[0]??concept.de}/></p><LineAudio text={concept.examples[0]??concept.de} src={speech[concept.examples[0]??concept.de]} compact/><details><summary>See the model</summary><p><GermanText text={concept.de}/></p></details></li>
-      <li><span className="study-eyebrow">3 · Try it</span><p>Use the lesson’s examples and checked questions. A saved rule is ready for self-rated recall.</p><Link href={`${destination}#grammar`}>Learn in Lesson {current.lesson} →</Link><Link href={`${destination}#practice`}>Open the lesson checkpoint →</Link><SaveButton item={{id:current.key,title:concept.de,meaning:concept.en,kind:"concept",lesson:current.lesson,studyTags:coursePatternTags(current),href:`${href}#grammar`}}/></li>
+      <li><span className="study-eyebrow">3 · Try it</span><p>Use the lesson’s examples and checked questions. A saved rule is ready for self-rated recall.</p><Link href={`${destination}#grammar`}>Learn in Lesson {current.lesson} <Icon name="arrow"/></Link><Link href={`${destination}#practice`}>Open the lesson checkpoint <Icon name="arrow"/></Link><SaveButton item={{id:current.key,title:concept.de,meaning:concept.en,kind:"concept",lesson:current.lesson,studyTags:coursePatternTags(current),href:`${href}#grammar`}}/></li>
     </ol>
   </section>;
 }

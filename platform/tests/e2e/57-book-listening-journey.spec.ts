@@ -1,7 +1,52 @@
 import {expect,test} from "@playwright/test";
+import {printLiveSheet} from "./helpers/print-live-sheet";
 
 test.beforeEach(async({page})=>{
  await page.addInitScript(()=>{const NativeAudio=window.Audio;(window as unknown as {clips:HTMLAudioElement[]}).clips=[];window.Audio=class extends NativeAudio{constructor(src?:string){super(src);(window as unknown as {clips:HTMLAudioElement[]}).clips.push(this);}};});
+});
+
+test("book prints the current original page without shell, reading controls or audio players",async({page},info)=>{
+  await page.setViewportSize({width:1440,height:1000});
+  await page.goto("book/?page=coursebook-30");
+  const workspace=page.locator(".book-workspace");
+  const view=workspace.getByRole("combobox",{name:"Reading view",exact:true});
+  const zoom=workspace.getByRole("combobox",{name:"Page zoom",exact:true});
+  await view.selectOption("page");
+  await zoom.selectOption("150");
+  await workspace.getByRole("button",{name:/Contents & search/}).click();
+  await expect(workspace.locator(".book-contents")).toBeVisible();
+  await expect(workspace.locator(".book-original-audio")).toBeVisible();
+  await expect(workspace.locator("audio").first()).toBeVisible();
+  await expect(workspace.getByRole("combobox",{name:"Go to page",exact:true})).toHaveValue("coursebook-30");
+  const paper=workspace.locator(".book-paper");
+  const image=paper.locator(":scope > img");
+  await expect(image).toBeVisible();
+  await expect.poll(()=>image.evaluate((element:HTMLImageElement)=>element.complete&&element.naturalWidth>0)).toBe(true);
+  const source=await image.getAttribute("src");
+  expect(source).toBeTruthy();
+  await printLiveSheet(page,info,"book-coursebook-30",async()=>{
+    await expect(workspace.locator(".book-header h1")).toBeVisible();
+    await expect(workspace.locator(".book-original")).toBeVisible();
+    await expect(image).toBeVisible();
+    await expect(image).toHaveAttribute("src",source!);
+    await expect.poll(()=>paper.evaluate(element=>element.scrollWidth-element.clientWidth)).toBeLessThanOrEqual(1);
+    for(const selector of [".shell-rail",".shell-topnav",".shell-bottomnav",".study-dictionary-launch"]){
+      await expect(page.locator(selector)).toBeHidden();
+    }
+    for(const selector of [".book-contents",".book-source-picker",".book-reading-tools",".book-page-toolbar",".book-original-audio"]){
+      await expect(workspace.locator(selector)).toBeHidden();
+    }
+    // German lookup buttons carry the readable text and must remain printable.
+    const controls=workspace.locator("button:not(.study-word),input,select,textarea,audio");
+    expect(await controls.count()).toBeGreaterThan(0);
+    for(const control of await controls.all())await expect(control).toBeHidden();
+  });
+  await expect(view).toHaveValue("page");
+  await expect(zoom).toHaveValue("150");
+  await expect(workspace.getByRole("combobox",{name:"Go to page",exact:true})).toHaveValue("coursebook-30");
+  await expect(workspace.locator(".book-contents")).toBeVisible();
+  await expect(workspace.locator("audio").first()).toBeVisible();
+  await expect(image).toHaveAttribute("src",source!);
 });
 
 for(const width of [320,1440])test(`book to transcript, meaning, review and exact return at ${width}px`,async({page},info)=>{
@@ -18,7 +63,7 @@ for(const width of [320,1440])test(`book to transcript, meaning, review and exac
  await page.screenshot({path:info.outputPath(`reader-first-screen-${width}.png`)});
  await expect(page.locator(".book-track")).toHaveCount(1);
  await page.getByRole("combobox",{name:"Page recording",exact:true}).selectOption("coursebook-l4-ex3-c8a4e473");
- await page.getByRole("link",{name:"Open focused listening →",exact:true}).click();
+ await page.getByRole("link",{name:"Open focused listening",exact:true}).click();
  await expect(page.locator(".book-track")).toHaveAttribute("data-recording-id","coursebook-l4-ex3-c8a4e473");
  await expect(page.locator(".recording-browser>div>button")).toHaveCount(12);
  const track=page.locator(".book-track"),original=track.locator("audio");
@@ -41,11 +86,11 @@ for(const width of [320,1440])test(`book to transcript, meaning, review and exac
  await expect.poll(()=>original.evaluate((audio:HTMLAudioElement)=>audio.paused)).toBe(true);
  await line.getByRole("button",{name:/^Save to review:/}).click();
  await page.goto("saved/");
- await page.getByRole("button",{name:"Review 1 items →",exact:true}).click();
+ await page.getByRole("button",{name:"Review 1 items",exact:true}).click();
  await page.getByRole("button",{name:"Reveal meaning",exact:true}).click();
  await page.getByRole("button",{name:"Remembered",exact:true}).click();
  await page.getByRole("button",{name:"Back to my collection",exact:true}).click();
- await page.getByRole("link",{name:"Open in context →",exact:true}).click();
+ await page.getByRole("link",{name:"Open in context",exact:true}).click();
  await expect(page).toHaveURL(/page=coursebook-30&track=coursebook-l4-ex3-c8a4e473&transcriptLine=1/);
  await page.reload();
  await expect(page.locator('.listening-transcript-lines>p[data-active="true"]')).toContainText(phrase!);
@@ -63,7 +108,7 @@ test("book line saves preserve source selection and answers stay deliberate",asy
  const id=await line.getAttribute("data-line-id");
  await line.getByRole("button",{name:/^Save to review:/}).click();
  await page.goto("saved/");
- await page.getByRole("link",{name:"Open in context →",exact:true}).click();
+ await page.getByRole("link",{name:"Open in context",exact:true}).click();
  await expect(page).toHaveURL(new RegExp(`line=${encodeURIComponent(id!)}`));
  await expect(page.locator(".book-selected-line .book-line")).toHaveAttribute("data-line-id",id!);
  await expect(page.locator(".book-selected-line")).toBeInViewport();

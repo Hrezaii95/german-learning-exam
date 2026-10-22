@@ -1,0 +1,194 @@
+/* Print the current live page. No alternate catalogue or reset of learner state. */
+.study-print-selection {
+  display: none;
+}
+
+@media print {
+  @page {
+    margin: 12mm;
+  }
+
+  body:has(:is(.cheat-sheet-frame, .subject-sheet, .country-sheet, .home-sheet, .object-sheet, .collection-sheet, .food-sheet, .hobbies-sheet, .time-sheet, .travel-sheet, .past-sheet, .journey-sheet, .question-sheet, .book-workspace)) {
+    color: var(--ink);
+    background: var(--paper);
+    font-size: 9pt;
+    line-height: 1.4;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .app-shell:has(:is(.study-workspace, .subject-sheet, .country-sheet, .collection-sheet, .book-workspace)) :is(.shell-rail, .shell-topnav, .shell-bottomnav, .mobile-menu, .skip-link, .study-dictionary-launch) {
+    display: none !important;
+  }
+
+  .app-shell:has(:is(.study-workspace, .subject-sheet, .country-sheet, .collection-sheet, .book-workspace)),
+  .app-shell :is(.shell-workspace, .shell-main):has(:is(.study-workspace, .subject-sheet, .country-sheet, .collection-sheet, .book-workspace)),
+  .app-shell :is(.cheat-sheet-frame, .subject-sheet, .country-sheet, .home-sheet, .object-sheet, .collection-sheet, .food-sheet, .hobbies-sheet, .time-sheet, .travel-sheet, .past-sheet, .journey-sheet, .question-sheet, .book-workspace) {
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .app-shell .shell-main .study-toolbar,
+  .app-shell .shell-main .study-toolbar .study-scope {
+    display: block !important;
+    position: static;
+    margin: 0 0 4mm;
+    padding: 0;
+    border: 0;
+    background: transparent;
+  }
+
+  .app-shell .study-toolbar .study-scope > summary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2mm;
+    padding: 0;
+    font-size: 8pt;
+    list-style: none;
+  }
+
+  .app-shell .study-toolbar .study-scope > :not(summary),
+  .app-shell .study-scope-edit,
+  .app-shell:has([data-subject-sheet]) .shell-main .study-toolbar {
+    display: none !important;
+  }
+
+  .app-shell :is(.study-workspace, .country-sheet, .collection-sheet, .book-workspace) > nav:is(.sheet-jump, .country-jump, [aria-label="Object sheet sections"], [aria-label="Office sheet sections"]),
+  .app-shell :is(.country-map-zooms, .study-field, .study-check) {
+    display: none !important;
+  }
+
+  /* Omit inline settings while keeping their current teaching output. */
+  .app-shell .past-sheet #past-patterns > label,
+  .app-shell .object-sheet .object-lab > div:first-child > label,
+  .app-shell .office-sheet #office-lab > label,
+  .app-shell .office-sheet #phone-lab > div:first-child > label.object-toggle,
+  .app-shell .office-sheet #phone-details .phone-turn > label,
+  .app-shell .food-sheet #food-lab > label,
+  .app-shell .food-sheet #food-compounds > label,
+  .app-shell .food-sheet #food-order > label,
+  .app-shell .hobbies-sheet .hobby-selection > label,
+  .app-shell .time-sheet .clock-answer > label.time-recall,
+  .app-shell .time-sheet #plan-lab > label,
+  .app-shell .travel-sheet #travel-bracket > label,
+  .app-shell .journey-sheet #journey-years > label,
+  .app-shell .collection-conversation #conversation-spelling > label,
+  .app-shell .collection-conversation #conversation-spelling .spelling-name > label,
+  .app-shell .collection-numbers #number-builder > label.sheet-number-input,
+  .app-shell .collection-numbers #number-listening > label,
+  .app-shell .collection-numbers #number-listening form > label,
+  .app-shell .collection-numbers #number-price > label,
+  .app-shell .collection-numbers .sheet-rule-grid > article:not(#number-price) > label {
+    display: none !important;
+  }
+
+  .app-shell :is(.study-workspace, .subject-sheet, .country-sheet, .collection-sheet, .book-workspace) :is(.subject-navigation, .subject-page-actions, .subject-controls, .subject-group-filters, .subject-word-detail, .subject-grouping-controls, .subject-sorting-controls, .subject-sheet-filters, .study-dictionary, .study-selection-popup, .sheet-jump, .country-jump, .sheet-controls, .country-controls, .home-controls, .book-top-tools, .book-reading-tools, .book-source-picker, .book-contents, .book-chapter-title, .book-page-toolbar, .book-gesture-hint, .book-line-actions, .book-hotspot, .book-original-audio, .book-page-nav, .book-complete, .book-answer-toggle, .book-selected-line .study-icon-button, .family-viewpoints, .study-primary, .study-secondary, .btn, .study-save, .study-audio, .study-audio-button, audio) {
+    display: none !important;
+  }
+
+  .app-shell .study-print-selection {
+    display: block !important;
+    margin: 0 0 4mm;
+    font-size: 8pt;
+    color: var(--ink-muted);
+  }
+
+  .app-shell .shell-credit {
+    display: block !important;
+    width: 100%;
+    max-width: none;
+    margin: 4mm 0 0;
+    padding: 0;
+    font-size: 8pt;
+    break-inside: avoid;
+  }
+
+  .app-shell :is(.study-workspace, .subject-sheet, .country-sheet, .collection-sheet, .book-workspace) h1 {
+    font-size: 28pt;
+    line-height: 1.1;
+  }
+
+  .app-shell :is(.study-workspace, .subject-sheet, .country-sheet, .collection-sheet, .book-workspace) h2 {
+    font-size: 14pt;
+    break-after: avoid;
+  }
+
+  .app-shell :is(.study-workspace, .subject-sheet, .country-sheet, .collection-sheet, .book-workspace) h3 {
+    font-size: 11pt;
+    break-after: avoid;
+  }
+
+  .app-shell :is(.sheet-overview, .sheet-workshop, .people-family) {
+    break-inside: auto;
+    box-shadow: none;
+  }
+
+  .app-shell .sheet-overview-dialog[open] {
+    position: static;
+    display: block;
+    width: auto;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow: visible;
+  }
+
+  .app-shell .sheet-overview-dialog[open] > header,
+  .app-shell .sheet-overview-dialog::backdrop {
+    display: none;
+  }
+
+  .app-shell :is(.country-row, .home-row, .subject-entry-wrap, .subject-plural-card, .article-trails > article, .material-grid > article, .verb-person-grid > button, .verb-atlas > button, .conversation-turns > article, .number-reading-order > div, .season-calendar > article, .past-patterns > article, tr) {
+    break-inside: avoid;
+  }
+
+  .app-shell :is(.family-tree-diagram, .people-family .family-tree-diagram) {
+    display: block;
+    width: 100%;
+    margin: 3mm 0;
+    break-inside: avoid;
+  }
+
+  .app-shell .family-mobile-tree {
+    display: none;
+  }
+
+  .app-shell .family-member {
+    min-height: 0;
+    padding: 1.5mm 1mm;
+    font-size: 8pt;
+  }
+
+  .app-shell .family-member :is(small, span[lang]) {
+    font-size: 8pt;
+  }
+
+  .app-shell .book-page-scroll {
+    overflow: visible;
+  }
+
+  .app-shell .book-paper {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100%;
+  }
+
+  .app-shell .book-paper > img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+
+  .app-shell :is(.country-sheet, .subject-sheet, .home-sheet, .object-sheet, .collection-sheet, .book-workspace) :is(svg, img) {
+    max-width: 100%;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}

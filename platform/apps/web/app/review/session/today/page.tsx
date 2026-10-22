@@ -9,5 +9,5 @@ export const metadata: Metadata = pageMetadata(
 );
 
 export default function TodayReviewSessionPage() {
-  return <ShellLayout current="review"><ReviewSession /></ShellLayout>;
+  return <ShellLayout current="saved"><ReviewSession /></ShellLayout>;
 }

@@ -77,6 +77,14 @@ for (const card of catalog.cards) {
       check(existsSync(file), `Export missing ${path}`);
       if (existsSync(file)) {
         const html = readFileSync(file, "utf8");
+        // L1-7: alias routes (e.g. /collections/professions/NN) are static redirect stubs to the canonical
+        // card, which is itself fully checked at card.path. Accept an alias only if it redirects there.
+        const refresh = html.match(/http-equiv="refresh" content="0;url=([^"?#]+)/)?.[1];
+        if (path !== card.path && refresh) {
+          check(refresh.replace(/^\/german-learning-exam/, "").replace(/\/$/, "") === card.path, `Alias ${path} redirects to ${refresh} instead of ${card.path}`);
+          exportedRoutes++;
+          continue;
+        }
         const visible = html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, "").replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, "").replace(/<[^>]*>/g, "").replace(/&amp;/g, "&").replace(/&#x27;|&#39;/g, "'").replace(/\s+/g, " ");
         check(html.includes(`data-word-card="${card.id}"`), `Wrong card exported at ${path}`);
         check(html.includes("Notice") && html.includes("Try recall") && html.includes("Use it"), `Card anatomy missing at ${path}`);

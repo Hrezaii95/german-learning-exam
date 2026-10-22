@@ -166,18 +166,36 @@ async function runSmoke() {
   //    implemented representative details → 200; raw-colon → redirect
   {
     for (const path of [
-      "/vocabulary",
       "/verbs",
       "/grammar",
       "/phrases",
       "/listening",
-      "/concepts",
-      "/hubs",
+      "/cheat-sheets",
+      "/cheat-sheets/vocabulary",
     ]) {
       const { status, url } = await fetchStatus(path, { redirect: "follow" });
       assert(status === 200, `${path} expected 200, got ${status}`);
       assert(new URL(url).pathname === path, `${path} must not redirect away`);
       results.push(`OK hub/directory 200 ${path}`);
+    }
+    // L1-7 retired hubs: one permanent redirect to the canonical home, query kept.
+    // Next re-serialises proxy Location headers (%20 -> +), so compare decoded
+    // parameters; the static export's client stubs keep raw bytes (Pages smoke).
+    const retiredQuery = "?q=Arzt%20oder+Lehrer&source=&lesson=02";
+    for (const [retired, destination] of [
+      ["/vocabulary", "/cheat-sheets/vocabulary"],
+      ["/hubs", "/cheat-sheets"],
+      ["/concepts", "/grammar"],
+    ]) {
+      const { status, location } = await fetchStatus(`${retired}${retiredQuery}`, { redirect: "manual" });
+      assert(status === 308, `${retired} expected 308, got ${status}`);
+      const target = new URL(location ?? "", BASE);
+      assert(target.pathname === destination, `${retired} redirects to ${target.pathname} instead of ${destination}`);
+      assert(
+        JSON.stringify([...target.searchParams]) === JSON.stringify([...new URLSearchParams(retiredQuery)]),
+        `${retired} changed the original query parameters`,
+      );
+      results.push(`OK retired hub 308 ${retired} -> ${destination}`);
     }
 
     const detailPaths = details.representatives.map((rep) => rep.canonicalPath);
@@ -228,7 +246,7 @@ async function runSmoke() {
     for (const path of [
       "/verbs/lex%3Aarchitekt",
       "/vocabulary/verb%3Asein",
-      "/dashboard",
+      "/dashboard/extra",
     ]) {
       const { status, url } = await fetchStatus(path, { redirect: "follow" });
       assert(status === 404, `${path} expected 404, got ${status}`);
@@ -238,7 +256,8 @@ async function runSmoke() {
   }
 
   // 5b) Learner-state surfaces added in P4C are first-class routes.
-  for (const path of ["/review", "/review/session/today", "/settings"]) {
+  // Account dashboards (Lane 3) are shipped routes now; /dashboard/extra stays 404 above.
+  for (const path of ["/review", "/review/session/today", "/settings", "/dashboard"]) {
     const { status, url } = await fetchStatus(path, { redirect: "follow" });
     assert(status === 200, `${path} expected 200, got ${status}`);
     assert(new URL(url).pathname === path, `${path} must not redirect away`);

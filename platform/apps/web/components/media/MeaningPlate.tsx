@@ -1,12 +1,12 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
+import { articleTone } from "@/lib/study/article-tone";
 import Link from "next/link";
 import type { LearnerGender } from "@/lib/content/detail-types";
 import { GenderBadge } from "@/components/details/GenderBadge";
 import { withPagesBaseAssetPath } from "@/lib/content/pages-base-path";
-import { stopStudyAudio } from "@/components/study/StudyAudio";
-import { usePreferredAudioSpeed } from "@/components/audio/AudioSpeedControl";
+import { LineAudio } from "@/components/study/StudyAudio";
 
 /**
  * Meaning plate — the permanent media treatment for a learning object that has
@@ -70,30 +70,6 @@ export function LemmaAudioButton({
   label: string;
 }) {
   const audioRef = useRef<HTMLAudioElement>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [failed, setFailed] = useState(false);
-  const rate = usePreferredAudioSpeed();
-  useEffect(() => { if (audioRef.current) audioRef.current.playbackRate = rate; }, [rate]);
-
-  function toggle() {
-    const element = audioRef.current;
-    if (!element) return;
-    if (!element.paused) {
-      element.pause();
-      return;
-    }
-    stopStudyAudio();
-    if (failed) element.load();
-    setFailed(false);
-    element.playbackRate = rate;
-    element.preservesPitch = true;
-    if (element.ended) element.currentTime = 0;
-    void element.play().catch(error => {
-      setIsPlaying(false);
-      if (!(error instanceof DOMException && error.name === "AbortError")) setFailed(true);
-    });
-  }
-
   return (
     <div className="meaning-plate__audio">
       {/* A short pronunciation model, not a timed passage: the exact spoken
@@ -105,30 +81,16 @@ export function LemmaAudioButton({
         preload="none"
         src={withPagesBaseAssetPath(audio.publicPath)}
         aria-label={`${audio.spokenText}, synthesized German pronunciation`}
-        onPlay={() => setIsPlaying(true)}
-        onPause={() => setIsPlaying(false)}
-        onEnded={() => setIsPlaying(false)}
-        onError={() => { setFailed(true); setIsPlaying(false); }}
       />
-      <button
-        type="button"
-        className="meaning-plate__audio-btn"
-        data-audio-state={isPlaying ? "playing" : "idle"}
-        onClick={toggle}
-        // The accessible name must START with the words the learner can see
-        // ("Listen" / "Pause"), or speech control — Dragon, Voice Control,
-        // Voice Access — cannot match "click Listen" (WCAG 2.5.3 Label in
-        // Name). The lemma follows so the name still says which word it plays.
-        aria-label={`${isPlaying ? "Pause" : "Listen"} — ${label} pronunciation`}
-      >
-        <span className="meaning-plate__audio-glyph" aria-hidden="true">
-          {isPlaying ? "❚❚" : "▶"}
-        </span>
-        <span className="meaning-plate__audio-text">
-          {isPlaying ? "Pause" : "Listen"}
-        </span>
-      </button>
-      {failed && <span role="status">Audio could not play. Press Listen to retry.</span>}
+      <LineAudio
+        text={audio.spokenText}
+        src={audio.publicPath}
+        label={`${label} pronunciation`}
+        audioRef={audioRef}
+        buttonClassName="meaning-plate__audio-btn"
+        fallbackToSpeech={false}
+        fileErrorMessage="Audio could not play. Press Listen to retry."
+      />
     </div>
   );
 }
@@ -167,7 +129,7 @@ export function MeaningPlate({
     <div
       className={`meaning-plate meaning-plate--${variant}`}
       data-meaning-plate={variant}
-      data-gender={gender ?? "none"}
+      data-tone={articleTone(gender)}
     >
       <LemmaTag className="meaning-plate__lemma">{lemmaBody}</LemmaTag>
       {gloss ? <p className="meaning-plate__gloss">{gloss}</p> : null}

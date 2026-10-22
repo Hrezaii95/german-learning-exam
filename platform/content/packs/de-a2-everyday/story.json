@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "title": "Ein gemeinsamer Ausflug",
+  "chapters": [
+    {
+      "id": "a2-story-vorschlag",
+      "title": "Ein Vorschlag für das Wochenende",
+      "unitId": "appointments",
+      "itemRefs": [
+        "a2-dialog-verabredung",
+        "a2-satz-verabreden"
+      ],
+      "requires": {
+        "unitId": "appointments",
+        "securedRatio": 0
+      }
+    },
+    {
+      "id": "a2-story-planwechsel",
+      "title": "Ein neuer Tag, derselbe Treffpunkt",
+      "unitId": "outings",
+      "itemRefs": [
+        "a2-text-ausflug",
+        "a2-satz-grund",
+        "a2-satz-mitgebracht"
+      ],
+      "requires": {
+        "unitId": "appointments",
+        "securedRatio": 0.8
+      }
+    }
+  ]
+}

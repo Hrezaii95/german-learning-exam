@@ -59,6 +59,14 @@ The archived Cursor demo is never an authority. It may be inspected only as fail
 - Generated media: `../media/generated/`
 - Source-aligned derivatives: `../media/aligned/`
 
+## Product direction and parallel lanes (2026-10-22)
+
+- Audit of the live app: `audit/README.md`
+- Game design and positioning: `games/wortwerk-v2-engine-and-engagement.md`, `games/competitive-analysis-book-companion.md`
+- Game build spec and mockup brief: `games/wortwerk-build-spec.md`, `games/wortwerk-mockup-brief.md`
+- Platform (Cloudflare, accounts, sync, dashboards): `platform/infrastructure-and-accounts.md`, `platform/dashboards.md` (ADR-018)
+- Parallel implementation lanes and shared contracts: `lanes/README.md`, `lanes/CONTRACTS.md` (ADR-019)
+
 ## Change rule
 
 Any change that affects the learning loop, scope, content authority, gender system, audio authority, mastery, routing, or agent ownership requires an entry in `DECISIONS.md` before code changes.

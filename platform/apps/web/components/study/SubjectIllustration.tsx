@@ -9,9 +9,12 @@ import {expressionIllustrationPath} from "@/lib/study/expression-illustrations";
 import {grammarIllustrationPath} from "@/lib/study/grammar-illustrations";
 import {nounIllustrationPath} from "@/lib/study/noun-illustrations";
 import {homeWords} from "@/lib/study/home";
+import {homeIllustrationIds,homeIllustrationPath} from "@/lib/study/home-illustrations";
+import {objectVocabularyDrawings} from "@/lib/study/object-illustrations";
+import {foodIllustrationPaths} from "@/lib/study/food-illustrations";
+import {hobbyIllustrationPaths} from "@/lib/study/hobby-illustrations";
+import {colourSwatchFor} from "@/lib/study/colour-swatches";
 import {CountryVocabularyIllustration} from "./CountryVocabularyIllustration";
-import {HomeIllustration} from "./HomeIllustration";
-import {ObjectVocabularyIllustration} from "./ObjectIllustration";
 
 /** Topic symbols describe the subject, rather than pretending to depict every word in it. */
 const subjectPaths:Record<StudyConcept,string>={
@@ -38,8 +41,10 @@ const subjectPaths:Record<StudyConcept,string>={
   everyday:"M21 13h58v76H21ZM32 8v14m36-14v14M21 31h58M32 45l5 5 9-10M54 46h14M32 67l5 5 9-10M54 68h14",
 };
 
-function LineDrawing({path,className="subject-vocabulary-illustration"}:{path:string;className?:string}){
-  return <svg className={className} viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><circle cx="50" cy="50" r="46" fill="currentColor" opacity=".055" stroke="none"/><path d={path}/></svg>;
+type VocabularyDrawing={kind:string;path?:string|undefined;children?:ReactNode;viewBox?:string;disc?:{cx:number;cy:number;r:number}};
+
+function LineDrawing({path,children,className="subject-vocabulary-illustration",viewBox="0 0 100 100",disc={cx:50,cy:50,r:46}}:{path?:string|undefined;children?:ReactNode;className?:string;viewBox?:string|undefined;disc?:VocabularyDrawing["disc"]}){
+  return <svg className={className} viewBox={viewBox} fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><circle {...disc} fill="currentColor" opacity=".055" stroke="none"/>{path&&<path d={path}/>}{children}</svg>;
 }
 
 export function SubjectIcon({subject,className=""}:{subject:StudyConcept;className?:string}){
@@ -60,40 +65,12 @@ const relatedObjectTerms:Record<string,ObjectVocabularyIcon>={
   schreiben:"pen",notieren:"pen",fotografieren:"camera","der Fotograf":"camera","die Fotografin":"camera","der Modefotograf":"camera","die Modefotografin":"camera",
 };
 
-// HomeIllustration intentionally has a house fallback. Only these registered IDs may reach it.
-const homeIds=new Set(["haus","zimmer","tisch","stuhl","bett","schrank","lampe","sofa","teppich","fernseher","fenster","tuer","spiegel","kissen","decke","uhr","computer","regal","pflanze","radio","bild","sessel","buch","geschaeft","hotel","wohnort","zuhause","moebel","moebelgeschaeft","hotelzimmer"]);
-const homeTerms=new Map(homeWords.filter(word=>homeIds.has(word.id)).map(word=>[word.de,word.id]));
+// Only registered IDs may reach the home component's deliberately broader house fallback.
+const homeTerms=new Map(homeWords.filter(word=>homeIllustrationIds.has(word.id)).map(word=>[word.de,word.id]));
 const languageTerms=new Set([...Object.keys(languageMeanings),...countries.flatMap(country=>country.languages.map(spokenLanguage))]);
-const colours:Record<string,string>={weiß:"#fffdf4",gelb:"#e8be35",orange:"#e78937",rot:"#c64d4d",grün:"#4e855d",blau:"#417ba6",braun:"#865c41",schwarz:"#28313a"};
 function exactValue<T>(record:Readonly<Record<string,T>>,word:string):T|undefined{return Object.hasOwn(record,word)?record[word]:undefined;}
 
-// The small paths are shared with the existing food and hobby teaching drawings;
-// keeping the paths here avoids loading their interactive workshops and CSS.
-const foodPaths=[
-  "M16 43a34 27 0 0 1 68 0ZM17 50h66M16 56l14 7 13-7 14 7 14-7 13 7M17 70h66v7H17ZM31 28h3m16-5h3m16 5h3",
-  "M13 48h74q-3 36-37 36T13 48ZM22 44q-15-25 8-25l20 22M48 42q-7-34 14-29l-3 27M65 43q5-29 21-15l-6 17M23 39l17 6m26-13-7 13",
-  "M18 45 67 19l17 21-17 43H18ZM18 60h58M67 19v64M24 37q11-17 22-4M30 26q6-9 12-2",
-  "M20 39h51v27q0 16-25 16T20 66ZM71 43h10q19 16-10 21M14 89h64M33 13q-9 10 0 18m19-18q-9 10 0 18",
-  "M12 47h76q-3 36-38 36T12 47ZM17 42q33-16 66 0M29 14q-8 10 0 19m20-21q-8 10 0 19m20-17q-8 10 0 19",
-  "M50 33q-35-20-36 18-1 34 36 35 37-1 36-35-1-38-36-18ZM50 32l-9-18 14 9 14-8-10 16M50 25V11",
-  "M18 16h64v70H18ZM18 39h64M18 62h64M40 16v70M61 16v70",
-  "M16 49q-4-27 34-29 38 2 34 29v14q-7 22-34 22-27 0-34-22ZM38 32 27 55m31-25L45 55m28-16L63 58",
-  "M50 13C33 13 17 50 20 67c4 24 56 24 60 0C83 50 67 13 50 13ZM37 64a13 13 0 1 0 26 0 13 13 0 1 0-26 0",
-  "M38 25q29-20 42 5 16 29-17 42-21 5-37-16ZM32 51 17 71q-16-6-9 8 3 8 11 6 8 10 12 1 2-6-3-9l18-13M55 32q22-5 17 16",
-  "M15 49 61 16l24 28v39H15ZM15 49h70M36 63a5 5 0 1 0 .1 0M66 59a5 5 0 1 0 .1 0M52 75a3 3 0 1 0 .1 0M46 34l14 5",
-  "M20 38 13 14l9-3 12 31M36 42 32 9h10l5 33M50 42l5-29 10 2-5 31M67 41l9-24 10 4-9 26M14 40h73L77 87H25ZM42 63h19",
-] as const;
 const foodTerms:Record<string,number>={"der Hamburger":0,"der Salat":1,"der Kuchen":2,"der Tee":3,"die Suppe":4,"die Tomate":5,"die Schokolade":6,"das Brötchen":7,"das Ei":8,"das Fleisch":9,"der Käse":10,"die Pommes frites":11};
-const hobbyPaths=[
-  "M12 64q10-10 20 0t20 0t20 0t20 0M12 79q10-10 20 0t20 0t20 0t20 0M25 54l28-16 19 16M36 44 21 29l20-14M73 29a8 8 0 1 0 .1 0",
-  "M20 56h60v18q0 12-12 12H32q-12 0-12-12ZM20 61H9m71 0h11M15 49h70M50 40V29M33 22q-8 9 0 17M66 22q-8 9 0 17M35 49q15-20 30 0",
-  "M53 12a8 8 0 1 0 .1 0M49 30 40 50l-17-8M45 37l19 11 18-16M41 51 60 57 48 75 26 91M53 64l22 26M38 38l-12-16",
-  "M30 14a9 9 0 1 0 .1 0M30 33v31M30 43l24 5 9-12M30 64 15 91M30 64l17 27M67 18q12 0 12 12v14H59V30q0-12 8-12ZM55 40q0 19 13 19t13-19M68 59v28M56 90h24",
-  "M49 13a11 11 0 1 0 .1 0M33 35l-12 14v26M66 36l14 15v25M23 43q14-3 27 6 13-9 27-6v42q-13-5-27 4-13-9-27-4ZM50 49v40",
-  "M22 57a18 18 0 1 0 .1 0M78 57a18 18 0 1 0 .1 0M22 75 39 45l21 30H22M60 75l15-37M66 35h14M34 43h14M53 12a8 8 0 1 0 .1 0M51 30 37 41 52 52 46 65M50 31 66 39",
-  "M20 49h47l11-21 11 4-1 22-13 9-7 25M63 65H30l-5 23M30 51l-14 13-8-8M44 15a8 8 0 1 0 .1 0M45 33v19l14 10M44 36l28 8M39 66l-2 22",
-  "M72 13 85 22 63 56q10 17-3 29-15 13-34-1-17-13-5-28 9-11 25-4ZM72 21 44 65M77 25 49 69M31 61a9 9 0 1 0 .1 0M27 82l-7-7M71 13l5-7M83 20l6-6",
-] as const;
 const hobbyTerms:Record<string,number>={schwimmen:0,kochen:1,tanzen:2,singen:3,lesen:4,"Rad fahren":5,"Rad / Fahrrad fahren":5,reiten:6,"Gitarre spielen":7};
 
 const semanticPaths={
@@ -218,24 +195,25 @@ function SourceGlyph({text}:{text:string}){
 }
 
 /** Every concrete picture has an exact source-word match; unknown words keep a neutral source glyph. */
-export function SubjectVocabularyVisual({de,category,cardId,subject}:{de:string;category:string;cardId:string;subject:StudyConcept}){
+export function SubjectVocabularyVisual({de,category,cardId,subject,className="",drawing,fallback="source-glyph"}:{de:string;category:string;cardId:string;subject:StudyConcept;className?:string;drawing?:VocabularyDrawing;fallback?:"source-glyph"|"subject"}){
   const word=de.normalize("NFC").trim().replace(/\s+/g," ");
-  const wrap=(kind:string,visual:ReactNode)=><span className="subject-vocabulary-visual" data-subject-visual={kind} data-subject={subject} aria-hidden="true">{visual}</span>;
+  const wrap=(kind:string,visual:ReactNode)=><span className={`subject-vocabulary-visual${className?` ${className}`:""}`} data-subject-visual={kind} data-subject={subject} aria-hidden="true">{visual}</span>;
+  if(drawing)return wrap(drawing.kind,<LineDrawing path={drawing.path} viewBox={drawing.viewBox} disc={drawing.disc}>{drawing.children}</LineDrawing>);
   const country=countryForVocabularyIllustration(word,category);
   if(country)return wrap(`country:${country.id}`,<CountryVocabularyIllustration id={country.id}/>);
   if(category==="Language"||languageTerms.has(word))return wrap("language",<LineDrawing path={semanticPaths.speech}/>);
-  const colour=exactValue(colours,word);
-  if(colour)return wrap(`colour:${word}`,<svg className="subject-vocabulary-illustration" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><circle cx="50" cy="50" r="33" fill={colour} stroke="currentColor" strokeWidth="2.6"/><path d="M29 39q5-10 16-12" fill="none" stroke={word==="weiß"?"#c5c7c0":"#fff"} strokeWidth="5" strokeLinecap="round" opacity=".65"/></svg>);
+  const colour=colourSwatchFor(word);
+  if(colour)return wrap(`colour:${word}`,<svg className="subject-vocabulary-illustration" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><circle cx="50" cy="50" r="33" fill={colour} stroke="currentColor" strokeWidth="2.6"/><path d="M29 39q5-10 16-12" fill="none" stroke="currentColor" strokeWidth="5" strokeLinecap="round" opacity=".65"/></svg>);
   if(category==="Number"&&/^N\d{3}$/.test(cardId)&&Number(cardId.slice(1))<=100)return wrap("number",<SourceGlyph text={String(Number(cardId.slice(1)))}/>);
   if(category==="Alphabet"&&/^A(?:0[1-9]|[12]\d|30)$/.test(cardId))return wrap("letter",<SourceGlyph text={[..."ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜß"][Number(cardId.slice(1))-1]!}/>);
   const object=exactValue(objectTerms,word)??exactValue(relatedObjectTerms,word);
-  if(object)return wrap(`object:${object}`,<ObjectVocabularyIllustration icon={object}/>);
+  if(object)return wrap(`object:${object}`,<LineDrawing path={objectVocabularyDrawings[object]}/>);
   const home=homeTerms.get(word);
-  if(home)return wrap(`home:${home}`,<HomeIllustration id={home}/>);
+  if(home)return wrap(`home:${home}`,<LineDrawing path={homeIllustrationPath(home)}/>);
   const food=exactValue(foodTerms,word);
-  if(food!==undefined)return wrap(`food:${food}`,<LineDrawing path={foodPaths[food]!}/>);
+  if(food!==undefined)return wrap(`food:${food}`,<LineDrawing path={foodIllustrationPaths[food]!}/>);
   const hobby=exactValue(hobbyTerms,word);
-  if(hobby!==undefined)return wrap(`hobby:${hobby}`,<LineDrawing path={hobbyPaths[hobby]!}/>);
+  if(hobby!==undefined)return wrap(`hobby:${hobby}`,<LineDrawing path={hobbyIllustrationPaths[hobby]!}/>);
   const geography=geographyIconPath(word);
   if(geography)return wrap("illustrated:geography",<LineDrawing path={geography}/>);
   const refined=refinedIllustrationPath(word);
@@ -250,6 +228,7 @@ export function SubjectVocabularyVisual({de,category,cardId,subject}:{de:string;
   if(expression)return wrap("illustrated:expression",<LineDrawing path={expression}/>);
   const grammar=grammarIllustrationPath(word);
   if(grammar)return wrap("illustrated:grammar",<LineDrawing path={grammar}/>);
+  if(fallback==="subject")return wrap(`subject:${subject}`,<LineDrawing path={subjectPaths[subject]}/>);
   const headword=word.replace(/^(?:der|die|das) /u,"");
   return wrap("source-glyph",<SourceGlyph text={[...headword].slice(0,3).join("")||"·"}/>);
 }

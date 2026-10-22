@@ -1,95 +1,87 @@
 # Current State and Completion Matrix
 
-Status: authoritative gap audit for the active Lessons 1–2 goal  
-Audited: 2026-08-07  
-Authority: current files, manifests, executable tests and browser behavior—not prior agent completion language.
+Updated: 2026-10-22. Scope: the prepared Lane 1 app-consistency candidate. Evidence comes from the implementation trees and focused checks for each item. The final integrated commit, ordered release gates, rendered responsive/print review, owner merge and deployment verification are separate steps. This document does not mark game, account, sync, German review or deployment work complete.
 
-## How to read this matrix
+The 2026-08 sample-era matrix and its counts are historical evidence. `platform/` is now the application under review; the old sample path is not the production acceptance baseline. Product requirements remain in [docs/02](02-product-requirements.md), with [traceability](18-requirement-traceability.md), [acceptance rules](13-quality-and-acceptance.md) and [owner actions](OWNER-ACTIONS.md).
 
-- **Proven** — direct current-state evidence covers the full requirement.
-- **Partial** — a real slice exists, but at least one named behavior or content class is absent.
-- **Missing** — no implementation evidence covers the required behavior.
-- **Blocked** — implementation may exist, but a named external/human gate prevents acceptance.
+## Status vocabulary
 
-Documentation alone is specification evidence, not implementation evidence. The current application under `samples/german-learning-ui-samples/` is the approved visual baseline and a partial vertical slice. The intended clean production target remains `platform/`.
+| Status | Meaning |
+|---|---|
+| Prepared | Implementation exists in an item tree with the stated focused evidence; final stack/release acceptance is still required |
+| In progress | Work is underway; planned behavior must not be described as completed |
+| Blocked | A named external-owner dependency prevents completion |
+| Owner review | Candidate material exists but a human publication/review decision remains open |
+| Deployed | Requires a specific deployed commit/build and fresh URL/behavior evidence; no new deployment is asserted here |
 
-## Requirement-to-evidence matrix
+Documentation records a contract and evidence limits. It cannot substitute for implementation, source review, listening review or rendered verification.
 
-| Requirement | Status | Direct current evidence | What remains for completion |
+## Lane 1 implementation matrix
+
+| Item | Candidate state | Implemented behavior / direct evidence | Remaining acceptance |
 |---|---|---|---|
-| LRN-001 | Partial | `app/page.tsx` lesson cards, audio, recall and completion; review UI | Generic activities must implement every See→Hear→Notice→Repeat→Recall→Use→Feedback→Review→Master phase and emit evidence |
-| LRN-002 | Partial | stable `/lessons/01`, `/lessons/02` and hub routes | prerequisite recommendation, resumeable activities and learned-object hub scope |
-| LRN-003 | Missing | local state has only XP, heard, completed, reviews and difficult IDs | exposure, recognition, recall, listening, production and stability dimensions |
-| LRN-004 | Partial | docs forbid page/MCQ mastery; current app never claims Mastered | tested mastery reducer enforcing the rule |
-| LRN-005 | Proven | content bundle has only two lessons plus teacher collection; content-integrity test checks scope | keep firewall when canonical publishing replaces compact bundle |
-| LRN-006 | Partial | lesson records contain vocabulary, verbs and Q&A; teacher collection attaches to Lesson 2 | typed generic attachment model for every concept/activity type |
-| LES-001 | Partial | dashboard shows continue, mission-like counts, lessons and hubs | weak skills, recent items, real due state and non-hard-coded progress |
-| LES-002 | Partial | lesson rail has representative overview and topic stages | required Overview/Learn/Listen/Practise/Check/Review contract, 24 canonical activities and two-minute summaries |
-| LES-003 | Partial | overview shows goals and rough content descriptions | validated source-priority counts, estimated time, skill progress and required extras |
-| LES-004 | Missing | stage is component-local state | stable activity IDs, URLs and persisted resume pointer |
-| LES-005 | Partial | hub buttons and vocabulary Lesson 2 footer exist | every canonical object must expose all lesson/activity backlinks |
-| VOC-001 | Partial | profession detail has article, four forms, meaning and audio | generic typed nouns, pattern metadata, examples, assertions and review state |
-| VOC-002 | Proven | all 48 teacher rows store independent masculine/feminine singular/plural forms | German human review remains a publication gate, not a schema gap |
-| VOC-003 | Partial | detail and puzzle mention stem change/regular suffix; semantic styling exists | explicit machine-readable change operations and representative irregular plural renderers |
-| VOC-004 | Partial | cards, article choice and word puzzle exist | image→German, audio→word, plural formation, typing and spoken-repeat templates |
-| VOC-005 | Partial | 48 rows render and category/search filters exist | explicit Teacher extra filter, verified semantic grouping and canonical deduplication with core professions |
-| VER-001 | Partial | verb hub shows paradigms/patterns and audio | uses, separability/reflexivity fields, examples, source links and review templates |
-| VER-002 | Partial | regular/irregular/spelling labels and CSS exist | consistent ending/stem operation model across lesson, hub and games |
-| VER-003 | Proven | compact bundle contains the required ten unique verbs across Lessons 1–2 | assertion-level provenance and German review still apply |
-| GRM-001 | Partial | grammar hub has visual rule, examples and notes | guided manipulation, recall and contextual-use activity records |
-| GRM-002 | Partial | grammar list names the required Lesson 1–2 topics | full examples, constraints, relations, activities and acceptance coverage for each concept |
-| PQA-001 | Partial | Q&A records have stable IDs in lesson JSON and a separate hub | PhrasePattern and Dialogue records remain absent/incomplete |
-| PQA-002 | Partial | Q&A has register, question, answer arrays and audio resolution | intents, slots, accepted variants, grammar links and conversation-use relations |
-| PQA-003 | Partial | greetings, name, origin, wellbeing, age, residence and occupation exist | identity/family/relationship patterns need canonical first-class records and source assertions |
-| PQA-004 | Partial | sample page supports model, word construction, audio and recording | data-driven guided choice, substitutions and independent role-play progression for all patterns |
-| AUD-001 | Partial | 327/327 cached assets pass exact manifest/disk, SHA-256, codec, sample-rate, channel and duration checks in `media/qa/alpha-tts-technical-audit.json`; current compact content coverage includes all teacher-profession forms | canonical publication-manifest coverage diff plus qualified German listening approval for all candidate clips |
-| AUD-002 | Proven | shared audio controller supports prompt gesture playback, repeat, 0.8 study speed, pitch preservation and error state | preserve in production implementation |
-| AUD-003 | Proven | generated manifest and source workbook map are separate; UI labels rights-gated source lane | preserve metadata/UI distinction |
-| AUD-004 | Proven | 15 tracks mapped by filename/exercise/transcript, owner-approved for this project on 2026-08-13, byte-identical packaged, and hash-tested | keep scope locked to `1_01`–`1_15`; do not infer approval for other publisher media |
-| AUD-005 | Partial | recorder supports permission, record/stop/playback/retry and unmount cleanup | dedicated denial and permission/navigation race tests in the platform |
-| AUD-006 | Proven | UI does not claim AI scoring; docs and decisions explicitly defer it | preserve feature gate |
-| HUB-001 | Partial | Vocabulary, Verbs, Grammar, Phrases/Q&A and Listening exist; Review is separate | Concepts hub is missing and all hub routes must become canonical-data renderers |
-| HUB-002 | Partial | vocabulary has learned toggle, text search and category | shared lesson/priority/category/mastery/tag/due filters across all six hubs |
-| HUB-003 | Partial | Difficult flag exists | Favorite, Confusing, Teacher, Exam and personal note |
-| REV-001 | Partial | review copy describes a mixed mission and shows mix counts | actual deck contains teacher vocabulary only; must generate real mixed attempts |
-| REV-002 | Missing | only review count persists | event history, review-card state, scheduler contract and deterministic clock tests |
-| REV-003 | Partial | flashcards, article sort and word puzzle exist | picture/word match, audio match, word order and verb builder |
-| REV-004 | Partial | XP and streak UI/state exist | event-based reward policy proving mastery independence |
-| DAT-001 | Partial | lessons, verbs, Q&A and teacher rows have IDs | all teachable objects need typed IDs and validated relationship vocabulary |
-| DAT-002 | Missing | teacher rows carry only one source ID and candidate status; lesson fields use file/page summaries | field-level assertions with location, extraction method, confidence and validation state |
-| DAT-003 | Missing | core and teacher professions are duplicated in separate shapes | canonical deduplication and multi-source links |
-| DAT-004 | Partial | current bundle is scoped and tested | ingestion/publication firewall with invalid Lesson 3+/A1.2 fixtures |
-| DAT-005 | Partial | content/media integrity tests exist | schema validation and publication manifests must be CI build prerequisites |
-| UX-001 | Proven | browser smoke passes 1440×1000, 820×1080 and 390×844 with overflow assertions | add required 360×800 release baseline |
-| UX-002 | Partial | semantic controls, labels and reduced-motion CSS exist | automated axe-equivalent gate plus complete keyboard/screen-reader journeys |
-| UX-003 | Proven | gender colors include M/F/PL labels and text | preserve across generated infographic families |
-| UX-004 | Partial | generated audio is local static media; app is local-first | service-worker/cache/download policy and offline E2E |
-| UX-005 | Partial | vocabulary text search works | typed global search with lesson, priority, mastery and matched-field metadata |
-| UX-006 | Partial | history-backed hub/deep vocabulary URLs exist | back-context object across lesson, hub, review and search plus E2E |
+| L1-1 foundation | Prepared | Contract tokens in `app/globals.css`; one `lib/content/nav.ts` source; role/placement filtering; account-slot integration boundary | Preserve Lane 2/3 additions during integration; account behavior belongs to Lane 3 |
+| L1-2 live defects | Prepared app portion; external blockers remain | Lesson 4 duplicates resolve through canonical families with aliases/headwords/forms/prompts/concepts retained; old row/collection hashes and bidirectional saved toggles covered; lessons 10–12 use two-digit links | Canonical USA schema plural and selective review-audio Pages exclusion need their owners |
+| L1-3 article palette | Prepared | One contract tone palette; `articleTone()` maps presentation values; legacy gender CSS variables alias the shared tones; decorative selections use action/ink | Preserve source schema values; check final rendered contrast and any cross-lane consumers |
+| L1-4 reference wrapping/focus | Prepared | German natural wrapping/hyphenation and shared focus-ring token; state/semantic outlines retained | Complete final keyboard, narrow-width and zoom review after stacking |
+| L1-5 frame and route migration | Prepared | `CheatSheetFrame`, named/searchable chooser, common `sheetDestinations`, directory, canonical Countries/All vocabulary routes and query/hash-preserving static compatibility routes | Final integrated route/Back-context and export checks |
+| L1-6 entry consolidation | Prepared | `VocabularyEntry`, `WordDropdown`, shared plural highlighting/source qualifiers; topic vocabulary handoffs replace duplicate live lists while unique practice/builders remain | Final integrated browser acceptance; save aliases, frame and combined local-filter reset remain covered |
+| L1-7 hub/review consolidation | Prepared | Old vocabulary/library/concept/profession indexes redirect; source-aware People handoff; `/saved` combines saved recall and guided missions with separate stores; combined local lesson/source overlays, chooser/Back validation and reset | Final integrated browser acceptance; retain guided session routes and old profession return context |
+| L1-8 visual system | Prepared | Pure illustration registries/shared renderer, one actual-color palette, reference button/chip/type tokens, Studio paper/borders, shared single-line audio and reused workbook transport | Final stacked rendered review and ordered gates; intentional teaching-media exceptions remain |
+| L1-9 print/CSS/icons | Prepared | Live-DOM print with scope/selection context and visible attribution; 15 summary functions/ten print-only component/style files removed; six Learning stylesheets consolidated into five app sheets plus shared hobby/time styles, eight reference breakpoints, shared Icon and unused legacy lists/chooser removed; directory/book print fixes retained | Actual PDF readability/page-flow and responsive review; no fixed page count; final import review preserves live previews and unique teaching diagrams |
+| L1-10 specification docs | Prepared documentation candidate | Only docs/04, docs/06, docs/17 and docs/21 align with the prepared IA/design and explicit limits | Checked against the final L1-9 code tree; recheck the integrated release candidate and gate evidence |
 
-## Gate-level audit
+The L1-6 reset correction is a separate prepared fix after its first checkpoint: Reset all filters must remove `lessonFilter`, not retain it through a spread of default fields. L1-7 likewise removes `sourceFilter`. Neither URL restore may silently mutate the global scope.
 
-| Acceptance gate | Current verdict | Evidence weakness |
+## Evidence recorded for the prepared work
+
+| Area | Focused evidence | What it does not establish |
 |---|---|---|
-| Source/content | RED | compact tuples are not assertion-level canonical objects; many candidate German forms still need human review |
-| Media | PARTIAL | manifest and rights separation are strong; per-object coverage diff, visual assets and human audio QA are missing |
-| Learning behavior | RED | no mastery dimensions, scheduler, stable activity resume or real mixed mission |
-| Functional journeys | RED | current E2E covers a representative dashboard/vocabulary/listening/review slice, not the 12 required journeys |
-| Accessibility | PARTIAL | responsive/reduced-motion semantics exist; no full automated/manual accessibility evidence |
-| Responsive/visual | PARTIAL | current routes pass three sizes; 360×800 and every required screen family are not covered |
-| Engineering | PARTIAL | lint/build/render/content/E2E pass for the sample; clean `platform/`, schemas and production release bundle do not yet exist |
-| German/audio owner review | BLOCKED | no qualified German sign-off or two-pass audio QA record exists |
-| Publisher media rights | SCOPED APPROVAL | Project-owner redistribution approval is recorded for exactly 15 mapped Lesson 1–2 workbook tracks; all other publisher media remains private/blocked |
+| Alias/progress compatibility | Tests cover canonical/old Lesson 4 IDs across inline, dictionary, practice and family cards; old `nur`/`mal` expression links restore the canonical row | Canonical schema approval, all browser migrations or a deployed release |
+| Frame/route navigation | Static redirect, directory/frame and route-context tests; browser suites prepared for canonical/old entry points | Fresh production HTTP reachability |
+| Shared entries and topic handoffs | Subject grouping/filter/dropdown, navigation, topic/home/recall regressions; reset correction separately checked | Human language review or the final integrated PDF |
+| L1-8 audio | Eight focused files / 51 tests passed; final two audio behavior files / 10 tests passed | Independent German listening approval |
+| L1-8 illustrations | Four focused files / 25 tests passed, including wrapper/path identity, selected paint/shape, guarded fallback and nav/ID preservation | Every final viewport/rendered composition |
+| L1-8 integration | Four focused files / 31 tests; legacy hub/detail/profession run three files / 20 tests; RichLessonVisual compatibility two files / 17 tests; changed CSS parsed and diff checked | These overlapping runs are not an aggregate suite count or full release-gate result |
+| L1-9 | Final restack focused navigation, entry/filter, route, illustration and audio checks pass; changed app ESLint has zero warnings, syntax/CSS parsing and diff/guard checks pass, and independent source review found no blockers | No actual PDF readability or full integrated release-gate pass is asserted |
 
-## Immediate build order
+E2E expectations are updated where the intended UI changed, including profession pattern SVGs. A changed test file is not a record that its browser suite ran. The root/release lead owns sequential full checks: `npm run check` → `npm run test:e2e` → `npm run build:web && npm run smoke:web-routes` → `npm run gates:pages` → `node tools/audit-attribution.mjs`. Do not run competing builds or infer a final pass from a prior item build.
 
-1. Freeze this matrix and source inventory as G0 evidence.
-2. Publish typed canonical Lessons 1–2 content with assertions and explicit gaps.
-3. Build the generic content/learning engine and only then migrate the approved sample UI into `platform/`.
-4. Implement lesson activity routes, six hubs, search, seven games and multidimensional review.
-5. Have Codex generate missing visual/audio assets from manifests.
-6. Run the complete release matrix; do not rename the sample “finished Alpha” before it passes.
+The smoke ownership correction preserves the recorded type, unit, browser and build evidence. Shared `smoke-pages.mjs` changes are limited to Lane 1 route-list additions; `smoke-canonical-routes.mjs` retains its baseline expectations. Lane 3 owns changes to those shared expectations.
 
-## Change history
+The original production route smoke fails obsolete exact-200 expectations for `/vocabulary`, `/hubs` and `/concepts`. The original Pages smoke fails obsolete full-content expectations for `/cheat-sheets/subjects` and `/cheat-sheets/plurals`, blocking the smoke stage of `gates:pages`. Lane 1’s owned `platform/tests/e2e/support/lane1-canonical-routes-smoke.mjs` and `lane1-canonical-pages-smoke.mjs` provide supplementary compatibility checks; passing them does not make either original gate pass.
 
-- 2026-08-07: initial evidence-based matrix created from current docs, content JSON, application source and test suites.
+## Cross-lane and source dependencies
+
+| Dependency | State / owner boundary | Completion condition |
+|---|---|---|
+| USA canonical plural | Blocked on Lane 2 content types/validation; app country/subject presentation already knows plural | Canonical schema accepts the plural semantics and its owner validates the migration |
+| `/review-audio` Pages exclusion | Blocked on Lane 3 build/export controller | Selectively exclude its exported files while retaining the normal QA tool; a route-level Not Found result alone is insufficient |
+| Shared smoke expectations | Blocked on Lane 3 build/smoke owner; Lane 1 route-list changes are append-only | Migrate the retired-route expectations in the original production and Pages smoke scripts, then rerun those original gates |
+| G1 scoped play links | Blocked on Lane 2 `/play/run` build/integration | Verified v1 scope links from current lessons/tags/sources/items; hide unavailable actions |
+| G3 old practice retirement | Blocked on Lane 2 Phase 1 integration; done last | Compatible `/practice/:gameId` handoff to `/play/`, preserving required context |
+| G4 account/game navigation | Separate lane ownership | Lane 2/3 entries use the shared nav contract; their pages/session/sync require their own evidence |
+| G2 book references | Draft owner-review material, not live-wired or published | Review the literal-source candidates, null reasons and alignment before connecting approved refs to learner rows |
+
+G2 is a separate `lane1/l1-g2-book-refs` draft candidate, not part of this Lane 1 code stack. Its draft sidecar is `platform/content/study-cards/book-refs.draft.json`, with `book-refs.review.md` beside it and `platform/apps/web/lib/content/vocabulary-book-refs.server.ts` as the prepared projector. It records 1,046 stable per-lesson source-row occurrences: 304 non-null pages and 742 nulls (347 no literal match, 334 multiple-page matches, 57 broad Module 1 matches, four alignment cases). The Lesson 3 inventory has 63 exact lesson labels and 226 broad-range candidates, with 34 selected pages; “exact” here describes the lesson label, not a page assertion. These are occurrence counts, not unique canonical words or first-introduction claims.
+
+The draft uses exactly `generated/interactive-book.json` and the repository's extracted `kursbuch_full.txt` / `glossary_full.txt` under `archive/cursor-demo-2026-07-30/content/extracted/_pdf_raw/`. The glossary is Deutsch–Spanisch, ISBN 978-3-19-001791-1. Original rows, wording, IDs and order remain unchanged. Null pages retain a reason; exercise/page assertions must not be guessed. The focused checks recorded in that separate draft review are preparation evidence, not owner publication approval.
+
+## Human review and publication gates
+
+| Gate | Still required |
+|---|---|
+| German vocabulary/forms/examples | Qualified review of candidate forms, teacher material and app-authored German; preserve source/gap labels and recorded owner decisions |
+| Synthesized pronunciation | Exact text/asset/hash mapping, honest synthesized-preview label and qualified listening verdicts; regenerated bytes invalidate old asset-bound approval |
+| Voice/provider decisions | Follow the authorized generation/provider choice and verify current credentials before new generation; old credential snapshots do not establish current availability |
+| Publisher media | ADR-016 records full Momente A1.1/A1.2 coursebook, workbook, glossary, transcript and audio rights conditional on visible attribution. The 15 published workbook tracks are the current transport subset, not the permission boundary |
+| Book references | Owner review of the G2 draft before learner publication; unresolved pages remain null with notes |
+| Deployment | Owner-authorized integration/merge, successful target build and fresh route/behavior evidence for that deployed commit |
+
+The technical UI can expose a candidate safely without certifying its German or audio. `/references` stays reachable, source media and synthesized speech remain distinguishable, and self-rated recall is not an independent mastery claim.
+
+## Completion limits
+
+This app-consistency work does not re-audit or close every LRN/LES/VOC/VER/GRM/PQA/AUD/HUB/REV/DAT/UX product requirement. Multidimensional mastery, scheduler semantics, sync, teacher overlays, account roles, game behavior and offline/export guarantees retain their own implementations and acceptance evidence. Older green tests, media counts and historical HTTP checks must not be relabeled as proof of this candidate.
+
+[Information architecture](04-information-architecture-and-ux.md), [design rules](06-design-and-infographic-system.md) and [route/source matrix](21-live-content-url-matrix.md) describe the candidate contract. Lane status, integration records and release evidence remain the authority for merge/deployment progress.

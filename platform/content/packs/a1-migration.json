@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "book": "momente-a1",
+  "profileFile": "languages/de.json",
+  "difficultyFile": "difficulty/A1.json",
+  "unitIdPrefix": "lesson-",
+  "unitTitlePrefix": "Lesson ",
+  "nounPos": "noun",
+  "genderByTone": {
+    "male": "male",
+    "female": "female",
+    "neuter": "neuter",
+    "plural": "plural"
+  },
+  "manifest": {
+    "schemaVersion": 1,
+    "id": "de-a1-momente",
+    "language": "de",
+    "cefr": "A1",
+    "title": "Momente A1",
+    "units": [],
+    "maps": [{ "id": "gender-plural", "title": "Gender × plural", "rows": "forms.pluralPattern", "cols": "gender" }],
+    "difficulty": "A1",
+    "review": { "status": "pending-german-review" },
+    "itemFiles": ["items/lexemes.json"]
+  }
+}

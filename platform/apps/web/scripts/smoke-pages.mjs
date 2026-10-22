@@ -180,6 +180,13 @@ function listExpectedAppPaths() {
     "/search",
     "/practice",
     "/conversation",
+    // Lane 2: fixed Wortwerk routes.
+    "/play", "/play/run", "/play/packs",
+    // End Lane 2.
+    // Lane 2 L2-6: fixed exploration and challenge routes.
+    "/play/map", "/play/journey", "/play/skills", "/play/progress",
+    "/play/story", "/play/exam", "/play/blitz", "/play/puzzle",
+    // End Lane 2 L2-6.
     // The course-material credit is a release condition (ADR-016), so its route
     // is verified like any other learner route, not assumed to exist.
     "/references",
@@ -442,8 +449,10 @@ async function httpSmoke(expectedPaths) {
       `${PAGES_BASE}/conversation/`,
       `${PAGES_BASE}/conversation/${conversationSlug}/`,
       `${PAGES_BASE}${details.representatives[0].canonicalPath}/`,
-      `${PAGES_BASE}/cheat-sheets/subjects/`,
-      `${PAGES_BASE}/cheat-sheets/plurals/`,
+      // L1-5/L1-7: the directory and the vocabulary catalogue moved; the old
+      // /cheat-sheets/subjects/ and /cheat-sheets/plurals/ remain as redirect stubs.
+      `${PAGES_BASE}/cheat-sheets/`,
+      `${PAGES_BASE}/cheat-sheets/vocabulary/`,
       ...SUBJECT_PATHS.map(path => `${PAGES_BASE}${path}/`),
     ];
 
@@ -463,10 +472,10 @@ async function httpSmoke(expectedPaths) {
         assert(text.includes('aria-label="Grouping priority"'), `${path} missing grouping order controls`);
         assert(text.includes('aria-label="Word sorting"'), `${path} missing vocabulary sorting controls`);
       }
-      if (path === `${PAGES_BASE}/cheat-sheets/subjects/`) {
+      if (path === `${PAGES_BASE}/cheat-sheets/`) {
         for (const id of SUBJECT_IDS) assert(text.includes(`data-subject-tile="${id}"`), `subject directory missing ${id}`);
       }
-      if (path === `${PAGES_BASE}/cheat-sheets/plurals/`) {
+      if (path === `${PAGES_BASE}/cheat-sheets/vocabulary/`) {
         assert(text.includes('data-sheet-view="plurals"'), "vocabulary page must default to plural grouping");
         for (const id of ["W012-0", "W051-0", "language-Persisch-0", "home-fernseher-0"]) assert(text.includes(`data-subject-entry="${id}"`), `complete vocabulary infographic missing ${id}`);
         assert(!text.includes('data-subject-visual="source-glyph"'), "vocabulary infographic must not ship text placeholders instead of illustrations");
@@ -550,6 +559,79 @@ function isDirectRun() {
     return false;
   }
 }
+
+// Lane 1: additive physical route-list coverage only.
+// Canonical content and real redirect checks run separately in tests/e2e/support/lane1-canonical-pages-smoke.mjs.
+HUB_PATHS.push(
+  "/cheat-sheets/vocabulary",
+  "/cheat-sheets/countries",
+  "/cheat-sheets/home",
+  "/cheat-sheets/people",
+  "/cheat-sheets/verbs",
+  "/cheat-sheets/numbers",
+  "/cheat-sheets/conversation",
+  "/cheat-sheets/questions",
+  "/cheat-sheets/objects",
+  "/cheat-sheets/office",
+  "/cheat-sheets/hobbies",
+  "/cheat-sheets/time",
+  "/cheat-sheets/food",
+  "/cheat-sheets/travel",
+  "/cheat-sheets/past",
+  "/cheat-sheets/journeys",
+  "/collections/professions",
+  "/review",
+  "/review/session/today",
+  "/collections/professions/01",
+  "/collections/professions/02",
+  "/collections/professions/03",
+  "/collections/professions/04",
+  "/collections/professions/05",
+  "/collections/professions/06",
+  "/collections/professions/07",
+  "/collections/professions/08",
+  "/collections/professions/09",
+  "/collections/professions/10",
+  "/collections/professions/11",
+  "/collections/professions/12",
+  "/collections/professions/13",
+  "/collections/professions/14",
+  "/collections/professions/15",
+  "/collections/professions/16",
+  "/collections/professions/17",
+  "/collections/professions/18",
+  "/collections/professions/19",
+  "/collections/professions/20",
+  "/collections/professions/21",
+  "/collections/professions/22",
+  "/collections/professions/23",
+  "/collections/professions/24",
+  "/collections/professions/25",
+  "/collections/professions/26",
+  "/collections/professions/27",
+  "/collections/professions/28",
+  "/collections/professions/29",
+  "/collections/professions/30",
+  "/collections/professions/31",
+  "/collections/professions/32",
+  "/collections/professions/33",
+  "/collections/professions/34",
+  "/collections/professions/35",
+  "/collections/professions/36",
+  "/collections/professions/37",
+  "/collections/professions/38",
+  "/collections/professions/39",
+  "/collections/professions/40",
+  "/collections/professions/41",
+  "/collections/professions/42",
+  "/collections/professions/43",
+  "/collections/professions/44",
+  "/collections/professions/45",
+  "/collections/professions/46",
+  "/collections/professions/47",
+  "/collections/professions/48",
+);
+// End Lane 1.
 
 if (isDirectRun()) {
   main().catch((err) => {

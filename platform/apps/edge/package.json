@@ -1,0 +1,20 @@
+{
+  "name": "@german-learning/edge",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "node scripts/test-platform.mjs",
+    "dev": "wrangler dev --config wrangler.local.jsonc",
+    "dry-run": "wrangler deploy --dry-run",
+    "deploy": "wrangler deploy"
+  },
+  "dependencies": {
+    "argon2id": "1.0.1",
+    "hash-wasm": "4.12.0"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  }
+}

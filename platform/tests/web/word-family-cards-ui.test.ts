@@ -5,6 +5,7 @@ import { cleanup, fireEvent, render, screen } from "@testing-library/react";
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { WordFamilyCard } from "../../apps/web/components/word-cards/WordFamilyCard";
+import { WordFamilyPreview } from "../../apps/web/components/word-cards/WordFamilyPreview";
 import type { WordCardCatalog } from "../../apps/web/lib/content/word-card-types";
 import { isSafeNavigationPath } from "../../apps/web/lib/content/navigation-context";
 import { buildHubNavigationContext, resolveBackHref } from "../../apps/web/lib/content/navigation-context";
@@ -46,7 +47,7 @@ describe("original vocabulary browsing with complete cards", () => {
     const numbers = filterHubRecords(hub.items, parseHubSearchParams({category:"number"},hub.categories));
     expect(numbers.items).toHaveLength(101);
     const navigation = buildHubNavigationContext({hubId:"vocabulary",lesson:"03",q:"meine",category:"pronoun"});
-    expect(resolveBackHref(navigation,"hub")).toBe("/vocabulary?q=meine&lesson=03&category=pronoun");
+    expect(resolveBackHref(navigation,"hub")).toBe("/cheat-sheets/vocabulary?q=meine&lesson=03&category=pronoun");
   });
   it("clears edited form values when navigation clears the active filters", () => {
     const complete = withWordCardHub(originalHub);
@@ -59,6 +60,25 @@ describe("original vocabulary browsing with complete cards", () => {
 });
 
 describe("complete word-family cards", () => {
+  it("uses the same semantic line illustration in a preview without changing its full-card context", () => {
+    const card=loadWordCards().cards.find(card=>card.rows[0]?.singular.text==="der Tisch")!;
+    const href=`${card.path}?nav=preserved`;
+    render(createElement(WordFamilyPreview,{card,href,lessonIds:card.lessons}));
+    expect(document.querySelector('[data-subject-visual="home:tisch"]')).not.toBeNull();
+    expect(document.querySelector('.hub-card__visual')?.getAttribute("data-tone")).toBe("male");
+    expect(document.querySelector("img")).toBeNull();
+    expect(screen.getByRole("link",{name:"Study this word family"}).getAttribute("href")).toBe(href);
+    expect(document.querySelector(`[data-word-family="${card.id}"]`)).not.toBeNull();
+  });
+  it("uses a deliberate subject fallback for an unknown word instead of its unrelated raster", () => {
+    const card={...engineer,studyTags:{lessons:[2],concepts:["home" as const],source:"course" as const},rows:[{...engineer.rows[0]!,singular:{...engineer.rows[0]!.singular,text:"das unbekannte Objekt",tone:"neuter" as const}}]};
+    render(createElement(WordFamilyCard,{card}));
+    expect(document.querySelector('[data-subject-visual="subject:home"]')).not.toBeNull();
+    expect(document.querySelector('[data-tone="neuter"]')).not.toBeNull();
+    expect(document.querySelector("img")).toBeNull();
+    expect(screen.getByRole("heading",{level:1,name:card.title})).toBeTruthy();
+    expect(document.querySelector(`[data-word-card="${card.id}"]`)).not.toBeNull();
+  });
   it("does not color a singular profession as plural when both spellings match", () => {
     const electrician = catalog.cards.find(card => card.rows[0]?.singular.text === "der Elektriker")!;
     const examples = ["Ich bin Elektriker.", "Wir sind Elektriker.", "der Elektriker", "die Elektriker", "Elektriker"];
@@ -83,7 +103,7 @@ describe("complete word-family cards", () => {
       fireEvent.change(screen.getByLabelText("German answer"), { target: { value: prompt.answers[0] } });
       fireEvent.click(screen.getByRole("button", { name: "Check answer" }));
       expect(screen.getByRole("status").textContent).toContain("You remembered it.");
-      fireEvent.click(screen.getByRole("button", { name: "Next form →" }));
+      fireEvent.click(screen.getByRole("button", { name: "Next form" }));
     }
   });
   it("rejects a wrong article and does not call a revealed answer correct", () => {
@@ -93,7 +113,7 @@ describe("complete word-family cards", () => {
     fireEvent.click(screen.getByRole("button", { name: "Check answer" }));
     expect(screen.getByLabelText("German answer").getAttribute("aria-invalid")).toBe("true");
     expect(screen.getByRole("status").textContent).not.toContain("You remembered it.");
-    fireEvent.click(screen.getByRole("button", { name: "Next form →" }));
+    fireEvent.click(screen.getByRole("button", { name: "Next form" }));
     fireEvent.click(screen.getByRole("button", { name: "Show answer" }));
     expect(screen.getByRole("status").textContent).toContain("Read it once");
   });

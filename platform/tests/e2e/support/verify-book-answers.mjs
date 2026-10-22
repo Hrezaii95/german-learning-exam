@@ -35,9 +35,9 @@ try{
   }
   await page.getByRole('button',{name:'Coursebook',exact:true}).click();
   await select('coursebook-26');
-  await page.getByRole('button',{name:'Next page →',exact:true}).click();await page.waitForURL('**page=coursebook-27');
+  await page.getByRole('button',{name:'Next page',exact:true}).click();await page.waitForURL('**page=coursebook-27');
   assert((await page.locator('.book-chapter-title').innerText()).includes('Grammar'),'Next goes from magazine to grammar page 27');
-  await page.getByRole('button',{name:'Next page →',exact:true}).click();await page.waitForURL('**page=coursebook-28');
+  await page.getByRole('button',{name:'Next page',exact:true}).click();await page.waitForURL('**page=coursebook-28');
   assert((await page.locator('.book-chapter-title').innerText()).includes('Communication'),'Next reaches communication page 28');
   await page.screenshot({path:`${output}/coursebook-28-desktop.png`});
   await select('coursebook-31');

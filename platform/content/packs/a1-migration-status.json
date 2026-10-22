@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "sourceRowCount": 1330,
+  "missingLessonCount": 0,
+  "duplicateHeadwordCount": 11,
+  "state": "blocked-source-reconciliation",
+  "packWritten": false,
+  "problems": [
+    {
+      "code": "duplicate-headword",
+      "headword": "Auszubildende",
+      "ids": [
+        "W370-0",
+        "W370-1"
+      ],
+      "message": "Auszubildende occurs more than once (NFC, article-free, case-folded comparison). Merge or disambiguate its canonical source rows."
+    },
+    {
+      "code": "duplicate-headword",
+      "headword": "er",
+      "ids": [
+        "W006-0",
+        "A18-0"
+      ],
+      "message": "er occurs more than once (NFC, article-free, case-folded comparison). Merge or disambiguate its canonical source rows."
+    },
+    {
+      "code": "duplicate-headword",
+      "headword": "es",
+      "ids": [
+        "W043-0",
+        "A19-0"
+      ],
+      "message": "es occurs more than once (NFC, article-free, case-folded comparison). Merge or disambiguate its canonical source rows."
+    },
+    {
+      "code": "duplicate-headword",
+      "headword": "essen",
+      "ids": [
+        "l9-essen-0",
+        "l9-essen-noun-0"
+      ],
+      "message": "essen occurs more than once (NFC, article-free, case-folded comparison). Merge or disambiguate its canonical source rows."
+    },
+    {
+      "code": "duplicate-headword",
+      "headword": "ihr",
+      "ids": [
+        "W077-0",
+        "W418-0"
+      ],
+      "message": "ihr occurs more than once (NFC, article-free, case-folded comparison). Merge or disambiguate its canonical source rows."
+    },
+    {
+      "code": "duplicate-headword",
+      "headword": "Ketchup",
+      "ids": [
+        "l9-ketchup-0",
+        "l9-ketchup-1"
+      ],
+      "message": "Ketchup occurs more than once (NFC, article-free, case-folded comparison). Merge or disambiguate its canonical source rows."
+    },
+    {
+      "code": "duplicate-headword",
+      "headword": "Morgen",
+      "ids": [
+        "W047-0",
+        "l6-morgen-0"
+      ],
+      "message": "Morgen occurs more than once (NFC, article-free, case-folded comparison). Merge or disambiguate its canonical source rows."
+    },
+    {
+      "code": "duplicate-headword",
+      "headword": "orange",
+      "ids": [
+        "l5-orange-0",
+        "l9-orange-0"
+      ],
+      "message": "orange occurs more than once (NFC, article-free, case-folded comparison). Merge or disambiguate its canonical source rows."
+    },
+    {
+      "code": "duplicate-headword",
+      "headword": "sie",
+      "ids": [
+        "W007-0",
+        "W008-0"
+      ],
+      "message": "sie occurs more than once (NFC, article-free, case-folded comparison). Merge or disambiguate its canonical source rows."
+    },
+    {
+      "code": "duplicate-headword",
+      "headword": "Türkisch",
+      "ids": [
+        "W217-0",
+        "W534-0"
+      ],
+      "message": "Türkisch occurs more than once (NFC, article-free, case-folded comparison). Merge or disambiguate its canonical source rows."
+    },
+    {
+      "code": "duplicate-headword",
+      "headword": "Verwandte",
+      "ids": [
+        "W198-0",
+        "W198-1"
+      ],
+      "message": "Verwandte occurs more than once (NFC, article-free, case-folded comparison). Merge or disambiguate its canonical source rows."
+    }
+  ]
+}

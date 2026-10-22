@@ -1,4 +1,5 @@
 "use client";
+import { Icon } from "@/components/media/Icon";
 import Link from "next/link";
 import {useState} from "react";
 import type {CoursePatternEntry} from "@/lib/study/course-patterns";
@@ -34,7 +35,7 @@ export function CoursePatternCard({entry,speech,compact=false,navigation}:{entry
     {entry.kind!=="verbs"&&<p>{meaning}</p>}
     {compact&&entry.kind!=="phrases"?<details open={expanded} onToggle={event=>setExpanded(event.currentTarget.open)}><summary>{entry.kind==="verbs"?"Conjugation & usage":"Examples"}</summary>{expanded&&detail()}</details>:detail()}
     <SaveButton item={{id:entry.key,title:de,meaning:entry.kind==="verbs"?`${meaning}. ${entry.value.forms.join(" · ")}`:meaning,kind:entry.kind==="phrases"?"phrase":"concept",lesson:entry.lesson,studyTags:coursePatternTags(entry),href,...(entry.kind==="phrases"?{audio:speech[de]??null}:{})}}/>
-    {compact&&<div className="study-row"><Link href={`${returnableLesson}#${entry.kind}`}>Learn in Lesson {entry.lesson} →</Link><Link href={`${returnableLesson}#practice`}>Practise →</Link></div>}
+    {compact&&<div className="study-row"><Link href={`${returnableLesson}#${entry.kind}`}>Learn in Lesson {entry.lesson} <Icon name="arrow"/></Link><Link href={`${returnableLesson}#practice`}>Practise <Icon name="arrow"/></Link></div>}
     {entry.value.source&&<small>{entry.value.source}</small>}
   </div></article>;
 }

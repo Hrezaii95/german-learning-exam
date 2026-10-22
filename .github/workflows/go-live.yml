@@ -1,0 +1,170 @@
+# Owner's one-click setup. Never used for pull_request code.
+name: Go live (Cloudflare)
+
+on:
+  workflow_dispatch:
+    inputs:
+      rollback:
+        description: Restore the previous stable Worker version (D1 data/schema stay current)
+        type: boolean
+        required: false
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: cloudflare-german-learning-exam
+  cancel-in-progress: false
+
+jobs:
+  go-live:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Check owner configuration before any Cloudflare action
+        id: cloudflare
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          SEED_ACCOUNTS_JSON: ${{ secrets.SEED_ACCOUNTS_JSON }}
+          RELEASE_REF: ${{ github.ref }}
+          ROLLBACK_REQUESTED: ${{ inputs.rollback }}
+        run: |
+          if [ "$RELEASE_REF" != "refs/heads/codex/live-alpha" ]; then
+            echo "::notice::Go live skipped: select codex/live-alpha."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "Go live skipped: select codex/live-alpha." >> "$GITHUB_STEP_SUMMARY"
+          elif [ -z "$CLOUDFLARE_API_TOKEN" ] || [ -z "$CLOUDFLARE_ACCOUNT_ID" ] || { [ "$ROLLBACK_REQUESTED" != "true" ] && [ -z "$SEED_ACCOUNTS_JSON" ]; }; then
+            echo "::notice::Go live skipped: add the repository secrets in docs/platform/GO-LIVE.md."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "Go live skipped: owner configuration is incomplete. See docs/platform/GO-LIVE.md." >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Checkout
+        if: steps.cloudflare.outputs.ready == 'true'
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          persist-credentials: true
+
+      - name: Remove checkout credentials and isolate archived gitlink
+        if: steps.cloudflare.outputs.ready == 'true'
+        run: |
+          git config --local --unset-all http.https://github.com/.extraheader || {
+            checkout_auth_status=$?
+            if [ "$checkout_auth_status" -ne 5 ]; then exit "$checkout_auth_status"; fi
+          }
+          git update-index --force-remove -- samples/german-learning-ui-samples
+
+      - name: Setup Node 22
+        if: steps.cloudflare.outputs.ready == 'true'
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: platform/package-lock.json
+
+      - name: Install
+        if: steps.cloudflare.outputs.ready == 'true'
+        working-directory: platform
+        run: npm ci
+
+      - name: Check application
+        if: steps.cloudflare.outputs.ready == 'true' && !inputs.rollback
+        working-directory: platform
+        run: npm run check
+
+      - name: Build web (normal)
+        if: steps.cloudflare.outputs.ready == 'true' && !inputs.rollback
+        working-directory: platform
+        run: npm run build:web
+
+      - name: Audit production dependencies
+        if: steps.cloudflare.outputs.ready == 'true' && !inputs.rollback
+        working-directory: platform
+        run: npm run audit:prod
+
+      - name: Smoke normal web routes
+        if: steps.cloudflare.outputs.ready == 'true' && !inputs.rollback
+        working-directory: platform
+        run: npm run smoke:web-routes
+
+      - name: Smoke default dev
+        if: steps.cloudflare.outputs.ready == 'true' && !inputs.rollback
+        working-directory: platform
+        run: npm run smoke:dev
+
+      - name: Audit pronunciation assets
+        if: steps.cloudflare.outputs.ready == 'true' && !inputs.rollback
+        run: node tools/audit-alpha-tts.mjs
+
+      - name: Verify Pages export and release audits
+        if: steps.cloudflare.outputs.ready == 'true' && !inputs.rollback
+        working-directory: platform
+        run: npm run gates:pages
+
+      - name: Audit source attribution in exported Pages HTML
+        if: steps.cloudflare.outputs.ready == 'true' && !inputs.rollback
+        run: node tools/audit-attribution.mjs
+
+      - name: Typecheck edge
+        if: steps.cloudflare.outputs.ready == 'true' && !inputs.rollback
+        working-directory: platform
+        run: npm run typecheck:edge
+
+      - name: Test edge
+        if: steps.cloudflare.outputs.ready == 'true' && !inputs.rollback
+        working-directory: platform
+        run: npm run test:edge
+
+      - name: Rehearse release control flow without Cloudflare access
+        if: steps.cloudflare.outputs.ready == 'true' && !inputs.rollback
+        working-directory: platform
+        run: node apps/edge/scripts/rehearse-go-live.mjs
+
+      - name: Build root-path Cloudflare export
+        if: steps.cloudflare.outputs.ready == 'true' && !inputs.rollback
+        working-directory: platform
+        run: npm run build:cloudflare
+
+      - name: Smoke root-path Cloudflare export
+        if: steps.cloudflare.outputs.ready == 'true' && !inputs.rollback
+        working-directory: platform
+        run: npm run smoke:cloudflare
+
+      # The complete immutable-source audit needs 454 untracked originals.
+      # Per the orchestrator's 2026-10-22 decision it is a local/owner-machine
+      # gate, not a hosted CI input. Published content/audio gates remain above.
+      - name: Create EU database, migrate, deploy, seed and verify
+        if: steps.cloudflare.outputs.ready == 'true' && !inputs.rollback
+        working-directory: platform
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          SEED_ACCOUNTS_JSON: ${{ secrets.SEED_ACCOUNTS_JSON }}
+        run: node apps/edge/scripts/go-live.mjs
+
+      - name: Restore previous stable Worker version and verify
+        if: steps.cloudflare.outputs.ready == 'true' && inputs.rollback
+        working-directory: platform
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: node apps/edge/scripts/go-live.mjs --rollback
+
+      - name: Workflow outcome
+        if: always() && steps.cloudflare.outputs.ready == 'true'
+        env:
+          RELEASE_STATUS: ${{ job.status }}
+          RELEASE_SHA: ${{ github.sha }}
+        run: |
+          {
+            echo "## Go live workflow"
+            echo "- URL: https://german.learnilabs.com"
+            echo "- Workflow commit: $RELEASE_SHA"
+            echo "- Outcome: $RELEASE_STATUS"
+            echo "- The named steps and release summary above show exactly what passed."
+            echo "- Rollback changes Worker code/assets only; it never reverses D1 migrations or data."
+          } >> "$GITHUB_STEP_SUMMARY"

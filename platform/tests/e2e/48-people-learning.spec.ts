@@ -1,3 +1,4 @@
+import {printLiveSheet} from "./helpers/print-live-sheet";
 import {expect,test} from "@playwright/test";
 
 for(const width of [320,390,768,1440])test(`people family viewpoint, saved sentence and card return at ${width}px`,async({page},testInfo)=>{
@@ -23,7 +24,7 @@ for(const width of [320,390,768,1440])test(`people family viewpoint, saved sente
   })).toBe(true);
   await focus.getByRole("button",{name:/^Save to review:/}).click();
   await expect(focus.getByRole("button",{name:/^Remove from review:/})).toBeVisible();
-  await focus.getByRole("link",{name:"Open word card →",exact:true}).click();
+  await focus.getByRole("link",{name:"Open word card",exact:true}).click();
   await page.getByRole("link",{name:/Back/}).first().click();
   await expect(page).toHaveURL(/cheat-sheets\/people\/?#family-martin-mia$/);
   await expect(focus).toContainText("Mia ist meine Enkelin.");
@@ -46,7 +47,7 @@ for(const width of [390,1440])test(`people bounded browsing, scoped recall and s
   await expect(cards).toHaveCount(24);
   const last=cards.last();
   const cardId=await last.getAttribute("data-sheet-card");
-  await last.getByRole("link",{name:"Full card →",exact:true}).click();
+  await last.getByRole("link",{name:"Full card",exact:true}).click();
   await page.getByRole("link",{name:/Back/}).first().click();
   await expect(cards).toHaveCount(24);
   await expect(page).toHaveURL(new RegExp(`page=2#sheet-card-${cardId}$`));
@@ -58,7 +59,7 @@ for(const width of [390,1440])test(`people bounded browsing, scoped recall and s
   await expect(page.locator(".sheet-quiz")).toContainText("Exactly.");
   await cards.first().getByRole("button",{name:/^Save to review:/}).click();
   await page.getByRole("button",{name:"Show saved cards",exact:true}).click();
-  await cards.first().getByRole("link",{name:"Full card →",exact:true}).click();
+  await cards.first().getByRole("link",{name:"Full card",exact:true}).click();
   await page.getByRole("link",{name:/Back/}).first().click();
   await expect(search).toHaveValue("Tante");
   await expect(page.getByRole("button",{name:"Showing saved cards",exact:true})).toHaveAttribute("aria-pressed","true");
@@ -68,26 +69,21 @@ for(const width of [390,1440])test(`people bounded browsing, scoped recall and s
   await expect(page.getByRole("heading",{name:"No matching practice items",exact:true})).toBeVisible();
 });
 
-test("people prints a complete family summary while preserving the learning view",async({page},testInfo)=>{
+test("people prints the live family viewpoint without changing the selected person",async({page},testInfo)=>{
   await page.setViewportSize({width:1440,height:1000});
   await page.goto("cheat-sheets/people/");
   await page.getByRole("button",{name:"I am Martin",exact:true}).click();
-  await page.getByRole("textbox",{name:"Find a card",exact:true}).fill("Tante");
-  const summary=page.locator(".sheet-print-summary");
-  await expect(summary).toBeHidden();
-  await page.emulateMedia({media:"print"});
-  await expect(summary).toBeVisible();
-  await expect(summary.locator(".family-member")).toHaveCount(10);
-  await expect(page.locator(".people-family")).toBeHidden();
-  await expect(summary).toContainText("Mia ist meine Enkelin.");
-  await expect(summary).toContainText("die Lehrerinnen");
-  await page.evaluate(()=>document.fonts.ready);
-  for(const format of ["A4","Letter"] as const){
-    const path=testInfo.outputPath(`people-${format}.pdf`);
-    await page.pdf({path,format,printBackground:true,margin:{top:"12mm",bottom:"12mm",left:"12mm",right:"12mm"}});
-    await testInfo.attach(`people-${format}`,{path,contentType:"application/pdf"});
-  }
-  await page.emulateMedia({media:"screen"});
+  const diagram=page.locator(".family-tree-diagram");
+  await diagram.getByRole("button",{name:/^Explore Mia:/}).click();
+  const focus=page.locator(".family-focus");
+  await expect(focus).toHaveAttribute("id","family-martin-mia");
+  await expect(focus).toContainText("Mia ist meine Enkelin.");
+  await printLiveSheet(page,testInfo,"people",async()=>{
+    await expect(diagram).toBeVisible();
+    await expect(diagram.locator(".family-member")).toHaveCount(10);
+    await expect(focus).toBeVisible();
+    await expect(focus).toContainText("Mia ist meine Enkelin.");
+  });
   await expect(page.getByRole("button",{name:"I am Martin",exact:true})).toHaveAttribute("aria-pressed","true");
-  await expect(page.getByRole("textbox",{name:"Find a card",exact:true})).toHaveValue("Tante");
+  await expect(focus).toHaveAttribute("id","family-martin-mia");
 });

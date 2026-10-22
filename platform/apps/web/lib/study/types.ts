@@ -1,5 +1,6 @@
 export type SavedItem = {
   id: string;
+  legacyIds?: string[];
   title: string;
   meaning: string;
   kind: "word" | "concept" | "line" | "phrase";
@@ -42,6 +43,7 @@ export type DictionaryEntry = {
   audio: string | null;
   kind?: "word" | "phrase" | "sentence";
   saveId?: string;
+  legacySaveIds?: string[];
   displayForms?: {
     text: string;
     tone: "male" | "female" | "neuter" | "plural" | "plain";

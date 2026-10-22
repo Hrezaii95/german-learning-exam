@@ -1,1 +1,372 @@
-.travel-route,.travel-place-map{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}.travel-route button,.travel-place-map article{background:#fffdf8;border:1px solid #b9c0bc;border-top:5px solid #426e6b;border-radius:.8rem;padding:1.2rem;display:grid;gap:.7rem;text-align:left;font:inherit}.travel-route button{cursor:pointer}.travel-route strong{font-size:1.4rem}.travel-route small{color:#42635d;letter-spacing:.07em}.travel-verb-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.6rem}.travel-verb-grid button{background:#fff;border:1px solid #b9c0bc;border-radius:.6rem;padding:1rem .5rem;display:grid;gap:.6rem;font:inherit;cursor:pointer}.travel-verb-grid button>span{font-size:1.6rem}.travel-verb-grid button[aria-pressed=true]{outline:3px solid #614294;outline-offset:1px}.travel-verb-grid mark{background:#eee6fa;color:#4c2a7c;border-radius:.2rem}.travel-sheet select{display:block;width:100%;max-width:100%;padding:.7rem;margin-top:.4rem;border:1px solid #b9c0bc;border-radius:.5rem;font:inherit;background:#fff}.travel-sentence{padding:1.4rem;background:#fffdf8;border:1px solid #cfc1df;border-radius:.8rem;margin-block:1rem}.travel-cue{font-size:.9rem;color:#5c426f}.travel-parts{display:flex;flex-wrap:wrap;gap:.7rem;align-items:stretch}.travel-parts>span{padding:1rem;border:1px solid #c4cec8;border-radius:.5rem;background:#f3f6f2;flex:1 1 auto;min-width:0}.travel-parts small{display:block;font-size:.6rem;letter-spacing:.06em;margin-bottom:.6rem}.travel-parts strong{font-size:1.4rem;overflow-wrap:anywhere}.travel-parts [data-role=stem],.travel-parts [data-role=prefix],.travel-parts [data-role=infinitive]{background:#eee6fa;border-color:#70509b;border-bottom:5px solid #70509b}.travel-result{font-size:1.4rem;font-weight:700}.travel-nouns{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.7rem;margin-bottom:1.4rem}.travel-nouns article{padding:1rem;border:1px solid #b9c0bc;border-top:5px solid;border-radius:.7rem;display:grid;gap:.7rem}.travel-nouns article>span:first-child{font-size:2rem}.travel-nouns [data-gender=male]{border-top-color:#37649c;background:#eef5ff}.travel-nouns [data-gender=female]{border-top-color:#a53a5b;background:#fff0f4}.travel-nouns [data-gender=neuter]{border-top-color:#4d8655;background:#f1f8ed}.travel-place-map h3{margin:0}.travel-announcement{padding:1.4rem;border:1px solid #b9c0bc;background:#fffdf8;border-radius:.8rem;display:grid;gap:1rem}.travel-announcement>small{letter-spacing:.08em}.travel-announcement>button{justify-self:start}.travel-transcript{padding:1rem;background:#edf5ef;border-radius:.6rem}@media(max-width:700px){.travel-route,.travel-place-map{grid-template-columns:1fr}.travel-verb-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.travel-nouns{grid-template-columns:repeat(2,minmax(0,1fr))}.travel-parts strong{font-size:1.15rem}.travel-sentence{padding:1rem}.travel-result{font-size:1.2rem}}@media print{.travel-sheet .study-save,.travel-sheet .study-audio-button{display:none}.travel-route,.travel-place-map{grid-template-columns:repeat(3,1fr)}.travel-sheet article,.travel-sentence{break-inside:avoid}}
+/* Teaching tools; keep these before the sheet-specific rules below. */
+
+.travel-scene {
+  width: 100%;
+  max-width: 270px;
+  display: block;
+  margin: auto;
+}
+
+.travel-sheet .travel-route button {
+  display: grid;
+  gap: .5rem;
+  font: inherit;
+}
+
+.travel-sheet .travel-route button[aria-pressed=true] {
+  outline-offset: 2px;
+  outline: 3px solid var(--action);
+}
+
+.travel-sheet :is(select, button) {
+  font: inherit;
+}
+
+.travel-prefix-bridge {
+  padding: 1rem;
+  margin: 1.2rem 0;
+  border: 1px solid #b7bac5;
+  border-radius: .8rem;
+  background: #fffdf8;
+}
+
+.travel-prefix-bridge h3 {
+  margin: 0 0 1rem;
+}
+
+.travel-whole-verb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25rem;
+  align-items: center;
+  margin: .8rem 0;
+}
+
+.travel-whole-verb b {
+  padding: .5rem .8rem;
+  background: #edf4f0;
+  border: 1px solid #a6bcb0;
+  font-size: 1.25rem;
+}
+
+.travel-whole-verb b:first-child {
+  color: var(--action);
+  background: color-mix(in srgb,var(--action) 7%,var(--paper));
+  border-color: var(--line);
+}
+
+.travel-whole-verb small {
+  flex-basis: 100%;
+}
+
+.travel-bridge-parts {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+  gap: 1rem;
+  padding-bottom: .5rem;
+  border-bottom: 4px solid var(--action);
+}
+
+.travel-bridge-parts>div {
+  display: grid;
+  gap: .4rem;
+  border-radius: .6rem;
+  padding: .8rem;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb,var(--action) 7%,var(--paper));
+}
+
+.travel-bridge-parts small {
+  font-size: .75rem;
+}
+
+.travel-bridge-parts strong {
+  font-size: 1.3rem;
+  overflow-wrap: anywhere;
+}
+
+.travel-bridge-parts>div:last-child {
+  text-align: right;
+}
+
+.travel-sheet .travel-parts {
+  padding-bottom: 1rem;
+  border-bottom: 3px solid var(--action);
+}
+
+@media screen and (max-width:580px) {
+  .travel-sheet .travel-route {
+    grid-template-columns: 1fr;
+  }
+  .travel-sheet .travel-route button {
+    grid-template-columns: 100px minmax(0,1fr);
+    text-align: left;
+    align-items: center;
+  }
+  .travel-route .travel-scene {
+    grid-row: 1/4;
+  }
+  .travel-route button>span,
+  .travel-route button>strong,
+  .travel-route button>small {
+    grid-column: 2;
+  }
+  .travel-bridge-parts {
+    gap: .5rem;
+  }
+  .travel-bridge-parts>div {
+    padding: .6rem;
+  }
+}
+
+.travel-sheet #travel-bracket>details {
+  margin: 1rem 0;
+}
+
+.travel-sheet #travel-bracket>details>summary {
+  min-height: 44px;
+  padding: .6rem 0;
+  cursor: pointer;
+}
+
+@media screen and (max-width:580px) {
+  .travel-bridge-parts strong {
+    font-size: 1.05rem;
+    white-space: nowrap;
+    overflow-wrap: normal;
+  }
+}
+
+/* Sheet layout and responsive diagrams. */
+
+.travel-route,
+.travel-place-map {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 1rem;
+}
+
+.travel-route button,
+.travel-place-map article {
+  background: #fffdf8;
+  border: 1px solid #b9c0bc;
+  border-top: 5px solid #426e6b;
+  border-radius: .8rem;
+  padding: 1.2rem;
+  display: grid;
+  gap: .7rem;
+  text-align: left;
+  font: inherit;
+}
+
+.travel-route button {
+  cursor: pointer;
+}
+
+.travel-route strong {
+  font-size: 1.4rem;
+}
+
+.travel-route small {
+  color: #42635d;
+  letter-spacing: .07em;
+}
+
+.travel-verb-grid {
+  display: grid;
+  grid-template-columns: repeat(5,minmax(0,1fr));
+  gap: .6rem;
+}
+
+.travel-verb-grid button {
+  background: #fff;
+  border: 1px solid #b9c0bc;
+  border-radius: .6rem;
+  padding: 1rem .5rem;
+  display: grid;
+  gap: .6rem;
+  font: inherit;
+  cursor: pointer;
+}
+
+.travel-verb-grid button>span {
+  font-size: 1.6rem;
+}
+
+.travel-verb-grid button[aria-pressed=true] {
+  outline-offset: 1px;
+  outline: 3px solid var(--action);
+}
+
+.travel-verb-grid mark {
+  border-radius: .2rem;
+  background: color-mix(in srgb,var(--action) 7%,var(--paper));
+  color: var(--action);
+}
+
+.travel-sheet select {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  padding: .7rem;
+  margin-top: .4rem;
+  font: inherit;
+  min-height: 44px;
+  color: #253b32;
+  border: 1px solid #b6c4b9;
+  border-radius: .6rem;
+  background: white;
+}
+
+.travel-sentence {
+  padding: 1.4rem;
+  background: #fffdf8;
+  border-radius: .8rem;
+  margin-block: 1rem;
+  border: 1px solid var(--line);
+}
+
+.travel-cue {
+  font-size: .9rem;
+  color: var(--action);
+}
+
+.travel-parts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .7rem;
+  align-items: stretch;
+}
+
+.travel-parts>span {
+  padding: 1rem;
+  border: 1px solid #c4cec8;
+  border-radius: .5rem;
+  background: #f3f6f2;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.travel-parts small {
+  display: block;
+  font-size: .6rem;
+  letter-spacing: .06em;
+  margin-bottom: .6rem;
+}
+
+.travel-parts strong {
+  font-size: 1.4rem;
+  overflow-wrap: anywhere;
+}
+
+.travel-parts [data-role=stem],
+.travel-parts [data-role=prefix],
+.travel-parts [data-role=infinitive] {
+  background: color-mix(in srgb,var(--action) 7%,var(--paper));
+  border-color: var(--action);
+  border-bottom: 5px solid var(--action);
+}
+
+.travel-result {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.travel-nouns {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: .7rem;
+  margin-bottom: 1.4rem;
+}
+
+.travel-nouns article {
+  padding: 1rem;
+  border: 1px solid #b9c0bc;
+  border-top: 5px solid;
+  border-radius: .7rem;
+  display: grid;
+  gap: .7rem;
+}
+
+.travel-nouns article>span:first-child {
+  font-size: 2rem;
+}
+
+.travel-place-map h3 {
+  margin: 0;
+}
+
+.travel-announcement {
+  padding: 1.4rem;
+  border: 1px solid #b9c0bc;
+  background: #fffdf8;
+  border-radius: .8rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.travel-announcement>small {
+  letter-spacing: .08em;
+}
+
+.travel-announcement>button {
+  justify-self: start;
+}
+
+.travel-transcript {
+  padding: 1rem;
+  background: #edf5ef;
+  border-radius: .6rem;
+}
+
+@media screen and (max-width:760px) {
+  .travel-route,
+  .travel-place-map {
+    grid-template-columns: 1fr;
+  }
+  .travel-verb-grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+  .travel-nouns {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+  .travel-parts strong {
+    font-size: 1.15rem;
+  }
+  .travel-sentence {
+    padding: 1rem;
+  }
+  .travel-result {
+    font-size: 1.2rem;
+  }
+}
+
+@media print {
+  .travel-sheet .study-save,
+  .travel-sheet .study-audio-button {
+    display: none;
+  }
+  .travel-route,
+  .travel-place-map {
+    grid-template-columns: repeat(3,1fr);
+  }
+  .travel-sheet article,
+  .travel-sentence {
+    break-inside: avoid;
+  }
+}
+
+.travel-nouns [data-tone=male] {
+  border-top-color: var(--tone-masc);
+  background: color-mix(in srgb,var(--tone-masc) 3%,var(--paper));
+}
+
+.travel-nouns [data-tone=female] {
+  border-top-color: var(--tone-fem);
+  background: color-mix(in srgb,var(--tone-fem) 3%,var(--paper));
+}
+
+.travel-nouns [data-tone=neuter] {
+  border-top-color: var(--tone-neut);
+  background: color-mix(in srgb,var(--tone-neut) 3%,var(--paper));
+}

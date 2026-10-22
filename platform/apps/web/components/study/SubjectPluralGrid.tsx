@@ -1,10 +1,11 @@
 "use client";
 
 import type {ReactNode} from "react";
-import {buildPluralMatrix,pluralDifference,pluralGenders,type PluralPatternEntry,type PluralPatternRow} from "@/lib/study/plural-patterns";
+import {buildPluralMatrix,pluralGenders,type PluralPatternEntry,type PluralPatternRow} from "@/lib/study/plural-patterns";
 import type {SubjectVocabularyItem} from "@/lib/study/subject-sheets";
 import type {StudyConcept} from "@/lib/study/scope";
 import {SubjectVocabularyVisual} from "./SubjectIllustration";
+import {VocabularyEntry} from "./VocabularyEntry";
 
 type SubjectPluralGridProps={
   items:readonly SubjectVocabularyItem[];
@@ -19,23 +20,7 @@ type SubjectPluralGridProps={
   entryRef?:(id:string,node:HTMLButtonElement|null)=>void;
 };
 
-function sourceQualifier(item:SubjectVocabularyItem){
-  return (item.studyTags.sources??[item.studyTags.source])
-    .filter(source=>source!=="course")
-    .map(source=>source==="teacher-extra"?"Teacher extra":"Study extra").join(" · ");
-}
-
-/** Highlight only exact, observed changes; keep every original source character. */
-export function HighlightedPlural({singular,plural}:{singular:string;plural:string}):ReactNode{
-  const original=plural;
-  const change=pluralDifference(singular,original);
-  if(!change||!change.plural||change.stem+change.ending!==change.plural||!original.endsWith(change.plural))return original;
-  const prefix=original.slice(0,original.length-change.plural.length);
-  const changed=new Set(change.umlautIndices);
-  return <>{prefix}{Array.from(change.stem).map((letter,index)=>changed.has(index)
-    ?<mark key={index} className="subject-plural-umlaut">{letter}</mark>
-    :letter)}{change.ending&&<mark className="subject-plural-ending">{change.ending}</mark>}</>;
-}
+export {HighlightedPlural} from "./HighlightedPlural";
 
 export function PatternSchema({item,subject}:{item:SubjectVocabularyItem;subject:StudyConcept}){
   return <span className="subject-plural-pattern-schema" aria-hidden="true"><SubjectVocabularyVisual de={item.de} category={item.category} cardId={item.cardId} subject={subject}/><span>→</span><span className="subject-plural-many">{[0,1,2].map(index=><SubjectVocabularyVisual key={index} de={item.de} category={item.category} cardId={item.cardId} subject={subject}/>)}</span></span>;
@@ -54,22 +39,13 @@ export function SubjectPluralGrid({items,groupByGender,currentId,subject,openEnt
     const {item}=entry;
     const anchor=!anchored.has(item.id);
     anchored.add(item.id);
-    const qualifier=sourceQualifier(item);
     const expanded=openEntry===entry.id||(anchor&&openEntry===item.id);
-    return <><button type="button" id={anchor?`sheet-card-${item.id}`:undefined}
-      ref={node=>{triggerRef(entry.id,node);if(anchor)entryRef?.(item.id,node);}}
-      className={`subject-plural-entry subject-tone-${entry.gender}`}
-      data-subject-entry={anchor?item.id:undefined}
-      data-subject-plural-entry={entry.id}
-      aria-label={[item.de,entry.plural?`→ ${entry.plural.text}`:"No plural taught here",qualifier].filter(Boolean).join(" · ")}
-      aria-pressed={currentId===item.id} aria-expanded={expanded} aria-controls={expanded?`subject-word-detail-${entry.id}`:undefined} onClick={()=>onChoose(item.id,expanded?openEntry:entry.id)} onKeyDown={event=>{if(event.key==="Escape"&&expanded){event.preventDefault();event.stopPropagation();onClose(entry.id);}}}>
-      <SubjectVocabularyVisual de={item.de} category={item.category} cardId={item.cardId} subject={subject}/>
-      <span className="subject-plural-entry-copy"><span className="subject-plural-singular" lang="de">{item.de}</span>
-      {entry.plural?<span className="subject-plural-result" lang="de"><span className="subject-plural-arrow" aria-hidden="true">→</span><span><HighlightedPlural singular={item.de} plural={entry.plural.text}/></span></span>
-        :<span className="subject-plural-unrecorded">No plural taught on this card.</span>}
-      {qualifier&&<small className="subject-plural-source">{qualifier}</small>}
-      <span className="subject-plural-meaning">{item.meaning}</span></span><span className="subject-entry-chevron" aria-hidden="true">{expanded?"⌃":"⌄"}</span>
-    </button>{expanded&&renderDropdown(item,entry.id)}</>;
+    return <><VocabularyEntry item={item} subject={subject} variant="plural" tone={entry.gender}
+      entryKey={entry.id} anchor={anchor} plural={entry.plural}
+      selected={currentId===item.id} expanded={expanded}
+      buttonRef={node=>{triggerRef(entry.id,node);if(anchor)entryRef?.(item.id,node);}}
+      onChoose={()=>onChoose(item.id,expanded?openEntry:entry.id)} onClose={()=>onClose(entry.id)}/>
+      {expanded&&renderDropdown(item,entry.id)}</>;
   };
   return <section className="subject-plural-view" aria-labelledby="subject-plural-heading" data-plural-layout={groupByGender?"gender-matrix":"patterns"}>
     <div className="subject-plural-intro">
@@ -107,9 +83,12 @@ export function SubjectPluralGrid({items,groupByGender,currentId,subject,openEnt
     {matrix.pluralFormItems.length>0&&<section className="subject-plural-existing" aria-labelledby="subject-plural-existing-heading">
       <div><h4 id="subject-plural-existing-heading">Already shown as plural</h4><p>These cards give a plural form. A singular-to-plural change cannot be read from this entry.</p></div>
       <ul>{[...matrix.pluralFormItems].sort((a,b)=>(positions.get(a.id)??0)-(positions.get(b.id)??0)).map(item=>{
-        const qualifier=sourceQualifier(item);
         const expanded=openEntry===item.id;
-        return <li key={item.id}><button type="button" className="subject-plural-entry subject-tone-plural" id={`sheet-card-${item.id}`} ref={node=>{triggerRef(item.id,node);entryRef?.(item.id,node);}} data-subject-entry={item.id} aria-label={[item.de,"Already shown as plural",qualifier].filter(Boolean).join(" · ")} aria-pressed={currentId===item.id} aria-expanded={expanded} aria-controls={expanded?`subject-word-detail-${item.id}`:undefined} onClick={()=>onChoose(item.id,item.id)} onKeyDown={event=>{if(event.key==="Escape"&&expanded){event.preventDefault();event.stopPropagation();onClose(item.id);}}}><SubjectVocabularyVisual de={item.de} category={item.category} cardId={item.cardId} subject={subject}/><span className="subject-plural-entry-copy"><span className="subject-plural-singular" lang="de">{item.de}</span><span className="subject-plural-unrecorded">Plural form on this card</span><span className="subject-plural-meaning">{item.meaning}</span>{qualifier&&<small className="subject-plural-source">{qualifier}</small>}</span><span className="subject-entry-chevron" aria-hidden="true">{expanded?"⌃":"⌄"}</span></button>{expanded&&renderDropdown(item,item.id)}</li>;
+        return <li key={item.id}><VocabularyEntry item={item} subject={subject} variant="plural"
+          selected={currentId===item.id} expanded={expanded}
+          buttonRef={node=>{triggerRef(item.id,node);entryRef?.(item.id,node);}}
+          onChoose={()=>onChoose(item.id,item.id)} onClose={()=>onClose(item.id)}/>
+          {expanded&&renderDropdown(item,item.id)}</li>;
       })}</ul>
     </section>}
     <p className="subject-plural-footnote">The grid describes these recorded forms. It is a memory aid for your vocabulary, rather than a rule that predicts every German noun.</p>

@@ -1,4 +1,5 @@
 "use client";
+import { Icon } from "@/components/media/Icon";
 import {submitLocalSearch} from "./submit-local-search";
 import {useStudyScope} from "@/components/study/StudyScope";
 import {useStudy} from "@/components/study/StudyProvider";
@@ -190,7 +191,7 @@ export function SearchView({
               </section>
             ))}
           </div>
-          <nav className="library-pagination" aria-label="Search results pages"><p role="status">Showing {(page-1)*20+1}–{Math.min(page*20,hits.length)} of {hits.length} · Page {page} of {pageCount}</p><div className="study-row">{page>1&&<Link className="study-secondary" href={`/search?q=${encodeURIComponent(trimmed)}&page=${page-1}#search-results-heading`}>← Previous page</Link>}{page<pageCount&&<Link className="study-primary" href={`/search?q=${encodeURIComponent(trimmed)}&page=${page+1}#search-results-heading`}>Next page →</Link>}</div></nav>
+          <nav className="library-pagination" aria-label="Search results pages"><p role="status">Showing {(page-1)*20+1}–{Math.min(page*20,hits.length)} of {hits.length} · Page {page} of {pageCount}</p><div className="study-row">{page>1&&<Link className="study-secondary" href={`/search?q=${encodeURIComponent(trimmed)}&page=${page-1}#search-results-heading`}><Icon name="back"/> Previous page</Link>}{page<pageCount&&<Link className="study-primary" href={`/search?q=${encodeURIComponent(trimmed)}&page=${page+1}#search-results-heading`}>Next page <Icon name="arrow"/></Link>}</div></nav>
         </section>
       )}
     </div>

@@ -1,6 +1,6 @@
 /** @vitest-environment jsdom */
 import { createElement, Fragment } from "react";
-import { cleanup, render, screen, waitFor } from "@testing-library/react";
+import { act, cleanup, fireEvent, render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { LearnerStateProvider } from "../../apps/web/components/learner-state/LearnerStateProvider";
@@ -8,6 +8,7 @@ import { AudioSpeedControl, useAudioSpeed } from "../../apps/web/components/audi
 import { LineAudio, stopStudyAudio } from "../../apps/web/components/study/StudyAudio";
 import { WordFamilyCard } from "../../apps/web/components/word-cards/WordFamilyCard";
 import { wordCardForPath } from "../../apps/web/lib/content/word-cards";
+import { WorkbookAudioTracks } from "../../apps/web/components/audio/WorkbookAudioPanel";
 import { LemmaAudioButton } from "../../apps/web/components/media/MeaningPlate";
 
 function Controls() {
@@ -41,7 +42,7 @@ describe("shared pronunciation preference", () => {
     await user.click(screen.getByRole("button", { name: "Listen: der Elektriker" }));
     expect(played.at(-1)?.playbackRate).toBe(0.75);
     expect(screen.getByRole("button", { name: "Listen: Hallo!" }).getAttribute("aria-pressed")).toBe("false");
-    await user.click(screen.getByRole("button", { name: "Listen — die Lampe pronunciation" }));
+    await user.click(screen.getByRole("button", { name: "Listen: die Lampe pronunciation" }));
     expect(played.at(-1)?.playbackRate).toBe(0.75);
     await user.selectOptions(speed, "1.25");
     await waitFor(() => expect(played.at(-1)?.playbackRate).toBe(1.25));
@@ -54,9 +55,9 @@ describe("shared pronunciation preference", () => {
     const user = userEvent.setup();
     vi.mocked(HTMLMediaElement.prototype.play).mockRejectedValueOnce(new Error("network unavailable"));
     render(createElement(LearnerStateProvider, null, createElement(Controls)));
-    await user.click(screen.getByRole("button", { name: "Listen — die Lampe pronunciation" }));
+    await user.click(screen.getByRole("button", { name: "Listen: die Lampe pronunciation" }));
     expect(await screen.findByText("Audio could not play. Press Listen to retry.")).toBeTruthy();
-    await user.click(screen.getByRole("button", { name: "Listen — die Lampe pronunciation" }));
+    await user.click(screen.getByRole("button", { name: "Listen: die Lampe pronunciation" }));
     await waitFor(() => expect(screen.queryByText("Audio could not play. Press Listen to retry.")).toBeNull());
     expect(HTMLMediaElement.prototype.load).toHaveBeenCalledOnce();
   });
@@ -79,6 +80,32 @@ describe("shared pronunciation preference", () => {
     expect(await screen.findByText("Audio file unavailable; using device speech.")).toBeTruthy();
     expect(spoken).toHaveLength(1);
     expect(spoken[0]).toMatchObject({ text: "Hallo!", rate: 0.75, lang: "de-DE" });
+  });
+
+  it("shares playback exclusion with the scrubbing transport and retries the same recording", async () => {
+    const user = userEvent.setup();
+    const { container } = render(createElement(Fragment, null,
+      createElement(LemmaAudioButton, { audio: { publicPath: "/test-lampe.mp3", spokenText: "die Lampe" }, label: "die Lampe" }),
+      createElement(WorkbookAudioTracks, { tracks: [{ id: "1_01", filename: "one.mp3", exercise: "AB 3", purpose: "Names and spelling", durationSeconds: 36 }] }),
+    ));
+    const preview = container.querySelector("audio[data-meaning-plate-audio]")! as HTMLAudioElement;
+    const recording = screen.getByLabelText("AB 3, Names and spelling") as HTMLAudioElement;
+    expect(recording.controls).toBe(true);
+    await user.click(screen.getByRole("button", { name: "Listen: die Lampe pronunciation" }));
+    const previewPause = vi.spyOn(preview, "pause");
+    act(() => stopStudyAudio(preview));
+    expect(previewPause).not.toHaveBeenCalled();
+    expect(screen.getByRole("button", { name: "Stop: die Lampe pronunciation" }).getAttribute("aria-pressed")).toBe("true");
+    fireEvent.play(recording);
+    expect(previewPause).toHaveBeenCalled();
+    expect(screen.getByRole("button", { name: "Listen: die Lampe pronunciation" }).getAttribute("aria-pressed")).toBe("false");
+    fireEvent.error(recording);
+    expect(screen.getByRole("alert").textContent).toContain("Recording could not play.");
+    await user.click(screen.getByRole("button", { name: "Retry audio" }));
+    expect(HTMLMediaElement.prototype.load).toHaveBeenCalledOnce();
+    expect(played.at(-1)).toBe(recording);
+    fireEvent.play(recording);
+    expect(screen.queryByRole("alert")).toBeNull();
   });
 
   it("keeps the newly started native recording playing while stopping other players", () => {

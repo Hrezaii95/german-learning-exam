@@ -1,5 +1,6 @@
 "use client";
 
+import { Icon } from "@/components/media/Icon";
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
@@ -40,7 +41,7 @@ export function SelectionMeaning({ lookup }: { lookup: (text: string) => void })
       Meaning of selection
     </button>
     <button type="button" className="study-icon-button" aria-label="Dismiss selection"
-      onClick={() => { window.getSelection()?.removeAllRanges(); setText(""); }}>✕</button>
+      onClick={() => { window.getSelection()?.removeAllRanges(); setText(""); }}><Icon name="close"/></button>
   </div>;
   return host ? createPortal(toolbar, host) : toolbar;
 }

@@ -164,8 +164,9 @@ describe("P2A studio dashboard + hub tool drawers", () => {
       expect(html).not.toContain('class="dense">Open<');
 
       for (const hub of hubs.hubs) {
-        expect(html).toContain(`aria-label="Open ${escapeHtml(hub.title)}"`);
-        expect(html).toContain(`href="${hub.path}"`);
+        const destination=hub.id==="vocabulary"?{title:"All vocabulary",href:"/cheat-sheets/vocabulary"}:hub.id==="concepts"?{title:"Grammar connections",href:"/grammar#connected-learning-paths"}:{title:hub.title,href:hub.path};
+        expect(html).toContain(`aria-label="Open ${escapeHtml(destination.title)}"`);
+        expect(html).toContain(`href="${destination.href}"`);
         const count = hubVisibleItemCount(hub);
         expect(count).toBeGreaterThan(0);
         // The count string is derived from the projection, never hard-coded.
@@ -185,7 +186,8 @@ describe("P2A studio dashboard + hub tool drawers", () => {
   it("keeps hub icons decorative and free of gender or verb-rule semantics", () => {
     for (const html of [dashboardHtml, directoryHtml]) {
       expect(html).toContain('class="tool-drawer__icon" aria-hidden="true"');
-      expect((html.match(/<svg/g) ?? []).length).toBe(6);
+      // Six decorative hub icons; shared UI icons (L1-9 Icon API) may add other aria-hidden SVGs.
+      expect((html.match(/class="tool-drawer__icon" aria-hidden="true"/g) ?? []).length).toBe(6);
       expect(html).not.toContain("data-gender");
       expect(html).not.toContain("gender-badge");
       expect(html).not.toContain("--gender-");

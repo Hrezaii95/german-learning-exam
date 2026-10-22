@@ -1,60 +1,27 @@
 import type {ObjectShape} from "@/lib/study/object-learning";
 import type {ObjectVocabularyIcon} from "@/lib/study/object-vocabulary";
+import {objectDescriptionPaths as paths,objectVocabularyDrawings,officeIllustrationPaths} from "@/lib/study/object-illustrations";
+import {SubjectVocabularyVisual} from "./SubjectIllustration";
 
-/** Original SVG objects: physical paint color is separate from the surrounding article color. */
+// Keep the existing public export for source-bounded object callers.
+export {objectVocabularyDrawings} from "@/lib/study/object-illustrations";
+
+/** The outline follows article tone; selected paint and shape remain teaching cues. */
 export function ObjectIllustration({index,colour,shape="plain"}:{index:number;colour:string;shape?:ObjectShape}){
- return <svg className="object-illustration" viewBox="0 0 200 150" fill="none" stroke="#283740" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-  <ellipse cx="100" cy="136" rx="76" ry="7" fill="#283740" opacity=".08" stroke="none"/>
-  {index===0&&<><path d="M42 77v52h12V80M146 77v52h12V80" fill={colour}/>{shape==="rund"?<ellipse cx="100" cy="63" rx="78" ry="29" fill={colour}/>:<path d="M40 34h119l24 42H17Z" fill={colour}/>}<path d="M18 76v8h164v-8M54 51h90"/></>}
-  {index===1&&<><path d="M48 30h108v102H48Q35 126 35 117V42Q35 30 48 30Z" fill={colour}/><path d="M49 31v88h107M36 117h119M59 46h77M59 55h52"/><path d="M55 123h90" stroke="#fff"/></>}
-  {index===2&&<><path d="M80 9h40l7 39H73ZM73 99h54l-7 43H80Z" fill={colour}/>{shape==="eckig"?<rect x="66" y="42" width="68" height="65" rx="8" fill={colour}/>:<circle cx="100" cy="74" r="38" fill={colour}/>}<circle cx="100" cy="74" r="29" fill="#fffdf5"/><path d="M100 53v22l16 10M100 46v4M100 99v4M71 74h4M125 74h4M140 70v10"/></>}
-  {index===3&&<><path d="M85 15h30v32q22 13 22 33v50q0 8-8 8H71q-8 0-8-8V80q0-20 22-33Z" fill={colour}/><path d="M84 13h32v10H84Z" fill="#ddd"/><path d="M74 84h52v31H74Z" fill="#fffdf5"/><path d="M77 57q-7 7-7 21" stroke="#fffdf5"/></>}
-  {index===4&&<><path d="M45 32a31 31 0 1 0 36 48l49 46 14-14-10-10 9-9-12-12-9 9-21-20A31 31 0 0 0 45 32Z" fill={colour}/><circle cx="62" cy="53" r="9" fill="#fffdf5"/></>}
- </svg>;
+ return <SubjectVocabularyVisual className="object-illustration" de="" category="Object description" cardId={`object-${index}`} subject="objects" drawing={{kind:`object-description:${index}`,viewBox:"0 0 200 150",disc:{cx:100,cy:75,r:69},children:<>
+  {index===0&&<><path d={paths.tableLegs} fill={colour}/>{shape==="rund"?<ellipse cx="100" cy="63" rx="78" ry="29" fill={colour}/>:<path d={paths.tableTop} fill={colour}/>}<path d={paths.tableDetail}/></>}
+  {index===1&&<><path d={paths.book} fill={colour}/><path d={paths.bookDetail}/><path d={paths.bookPages} stroke="var(--paper)"/></>}
+  {index===2&&<><path d={paths.watchStrap} fill={colour}/>{shape==="eckig"?<rect x="66" y="42" width="68" height="65" rx="8" fill={colour}/>:<circle cx="100" cy="74" r="38" fill={colour}/>}<circle cx="100" cy="74" r="29" fill="var(--paper)"/><path d={paths.watchDetail}/></>}
+  {index===3&&<><path d={paths.bottle} fill={colour}/><path d={paths.bottleCap} fill="var(--ink-muted)"/><path d={paths.bottleLabel} fill="var(--paper)"/><path d={paths.bottleHighlight} stroke="var(--paper)"/></>}
+  {index===4&&<><path d={paths.key} fill={colour}/><circle cx="62" cy="53" r="9" fill="var(--paper)"/></>}
+ </>}}/>;
 }
 
-const officePaths=[
- "M22 23h56v63H22ZM22 38h56M35 16v15M65 16v15M33 49h7m12 0h7m-26 12h7m12 0h7m-26 12h7m12 0h7",
- "M24 12h53v78H24ZM30 20h41v58H30ZM48 84h6",
- "M50 20c-21 0-27 17-27 39s10 29 27 29 27-7 27-29-6-39-27-39ZM50 20v29M24 49h52M50 26v12M50 20V8",
- "M27 72 65 17l14 10-38 55-17 8ZM60 24l14 10M28 72l13 10M68 15l5-7 14 10-5 7",
- "M16 38h68v48H16ZM33 38V25a17 17 0 0 1 34 0v13M32 60h1m17 0h1m17 0h1M27 72h46",
- "M13 24h74v52H13ZM14 25l36 27 36-27M15 75l25-28M85 75 60 47",
- "M27 38V12h47v26M27 69H13V37h75v32H74M27 57h47v33H27ZM36 67h29M36 76h29M74 47h3",
-];
-export function OfficeIllustration({index}:{index:number}){return <svg className="office-illustration" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={officePaths[index]}/></svg>;}
+export function OfficeIllustration({index}:{index:number}){
+ return <SubjectVocabularyVisual className="office-illustration" de="" category="Office" cardId={`office-${index}`} subject="office" drawing={{kind:`office:${index}`,path:officeIllustrationPaths[index]}}/>;
+}
 
 /** Original line drawings for the existing Lesson 5 vocabulary. */
-export const objectVocabularyDrawings:Record<ObjectVocabularyIcon,string>={
- watch:"M38 11H62L66 30M34 70 38 89H62L66 70M50 23A27 27 0 1 1 49.9 23ZM50 32V50L63 59M77 44H83V56H77",
- car:"M16 46 26 25H73L84 46M11 46H89V76H11ZM28 76V85H17V76M72 76V85H83V76M18 46H82M30 31 24 46M69 31 76 46M21 57H31V65H21ZM69 57H79V65H69M40 66H60",
- mobile:"M31 10H69Q75 10 75 16V85Q75 91 69 91H31Q25 91 25 85V16Q25 10 31 10ZM32 22H68V76H32ZM43 16H57M47 83H53",
- book:"M14 24Q32 14 50 26Q69 14 86 24V82Q68 72 50 84Q32 72 14 82ZM50 26V84M23 34Q33 31 42 36M58 36Q68 31 77 34M23 46Q33 43 42 48M58 48Q68 43 77 46",
- pencil:"M24 67 65 15 81 28 40 80 18 88ZM24 67 40 80M60 22 76 35M18 88 24 75M65 15 71 8 87 21 81 28",
- glasses:"M12 46 18 34H31M88 46 82 34H69M13 48H40V68H13ZM60 48H87V68H60ZM40 53Q50 45 60 53M13 49 9 44M87 49 91 44",
- bottle:"M41 12H59V36Q72 44 72 57V84Q72 90 66 90H34Q28 90 28 84V57Q28 44 41 36ZM39 11H61V21H39ZM29 56H71V77H29M37 43 34 50",
- camera:"M15 30H32L38 20H62L68 30H85V79H15ZM50 38A16 16 0 1 1 49.9 38M50 44A10 10 0 1 1 49.9 44M73 39H78M20 23H31V30",
- necklace:"M24 18C12 61 30 78 50 78S88 61 76 18M23 27 30 30M22 41H29M27 55 33 52M36 66 40 60M50 70V63M64 66 60 60M73 55 67 52M78 41H71M77 27 70 30M42 78 50 91 58 78M45 11H55V18H45Z",
- pen:"M26 75 64 17 79 27 41 85 22 91ZM26 75 41 85M59 25 74 35M64 17 69 9 84 19 79 27M58 29 49 23 36 43M22 91 28 83",
- key:"M34 18A21 21 0 1 1 20 55L10 65V80H25V69H36L42 63A21 21 0 0 1 34 18ZM38 28A7 7 0 1 1 37.9 28M47 58 75 86 86 75 78 67 70 75M58 47 83 72",
- bag:"M20 37H80L87 86H13ZM34 37V27A16 16 0 0 1 66 27V37M28 38V48M72 38V48M36 64H64",
- thing:"M50 15 83 34V72L50 91 17 72V34ZM17 34 50 53 83 34M50 53V91M33 25 67 44M30 58 40 64",
- lighter:"M32 42H68V87H32ZM32 42V27H68V42M38 27V16H51V27M57 18H67V27M56 42V34M42 57H58M51 13Q44 3 50 0Q61 9 55 16",
- wallet:"M17 28H83V82H17ZM17 28 71 14V28M17 38H83M62 48H89V67H62ZM71 55H77M25 71H45",
- tissue:"M13 49H87V86H13ZM13 49 29 36H72L87 49M37 53H65M40 49 35 21Q48 28 51 12L66 26 60 49M43 32 56 38",
- umbrella:"M12 49Q50 0 88 49Q76 39 63 49Q50 39 37 49Q24 39 12 49ZM50 16V79Q50 91 62 91Q73 91 73 81M37 49Q38 24 50 16Q62 24 63 49",
- rain:"M28 24Q31 9 47 14Q61 4 73 20Q88 22 85 38H17Q8 26 21 22ZM29 51 23 63M49 51 43 63M69 51 63 63M36 73 30 85M56 73 50 85M76 73 70 85",
- jacket:"M34 17 21 24 9 59 23 65 31 44V88H69V44L77 65 91 59 79 24 66 17M34 17 42 12H58L66 17 57 34H43ZM50 34V88M36 65H44M56 65H64M31 79H69",
- match:"M29 78 65 34 73 41 37 85ZM64 33Q54 20 67 12Q79 6 86 18Q93 30 78 40ZM21 88 29 78M42 16 38 9M49 38 40 40M76 3V0",
- brush:"M53 16Q74 3 86 19Q99 36 77 51L60 61 39 36ZM39 36 60 61 31 87Q19 97 12 88Q7 80 18 70ZM57 21 71 39M66 16 81 34M45 35 60 52M31 65 23 74",
- soap:"M21 43Q15 34 25 29Q42 20 71 29Q83 32 83 43V69Q78 82 50 83Q24 82 17 69V48M21 43Q49 59 83 43M17 60Q50 75 83 60M34 38H61M21 17A6 6 0 1 1 20.9 17M77 13A8 8 0 1 1 76.9 13M46 10A4 4 0 1 1 45.9 10",
- towel:"M20 17H74V88H20ZM29 17V79H74M20 74H74M29 80H74M21 88V93M31 88V93M41 88V93M51 88V93M61 88V93M71 88V93M15 17H85M43 35H61M43 44H61",
- hairdryer:"M15 29 60 19Q79 17 81 35Q82 52 64 54L15 46ZM15 29H7V46H15M60 23V49M45 52 55 83H69L60 54M54 84Q45 94 70 95M28 25V48M84 27 95 23M85 36H98M84 45 95 49",
- sun:"M50 26A24 24 0 1 1 49.9 26M50 7V16M50 84V93M7 50H16M84 50H93M19 19 26 26M74 74 81 81M19 81 26 74M74 26 81 19",
- sunglasses:"M12 46 18 34H31M88 46 82 34H69M13 48H40V68H13ZM60 48H87V68H60ZM40 53Q50 45 60 53M18 61 29 50M23 67 39 51M65 61 76 50M70 67 86 51",
- telephone:"M26 14Q13 19 18 37Q30 73 63 86Q80 92 86 75L72 60 61 68Q44 61 34 43L41 33ZM26 14 41 33M72 60 86 75M57 16Q77 18 84 38M56 27Q68 28 73 40",
- house:"M12 46 50 15 88 46M22 40V87H78V40M42 87V60H58V87M29 47H38V57H29ZM63 47H72V57H63ZM66 27V13H77V37",
-};
 export function ObjectVocabularyIllustration({icon}:{icon:ObjectVocabularyIcon}){
- return <svg className="object-vocabulary-illustration" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="50" cy="51" r="46" fill="currentColor" opacity=".055" stroke="none"/><path d={objectVocabularyDrawings[icon]}/></svg>;
+ return <SubjectVocabularyVisual className="object-vocabulary-illustration" de="" category="Object" cardId={icon} subject="objects" drawing={{kind:`object:${icon}`,path:objectVocabularyDrawings[icon]}}/>;
 }

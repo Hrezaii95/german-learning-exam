@@ -1,4 +1,5 @@
 "use client";
+import { Icon } from "@/components/media/Icon";
 import Link from "next/link";
 import {useState} from "react";
 import {useStudyScope,StudyTagList} from "./StudyScope";
@@ -7,6 +8,7 @@ import {LineAudio} from "./StudyAudio";
 import type {DictionaryEntry} from "@/lib/study/types";
 import {courseChapters} from "@/lib/study/lesson-four";
 import {tagsForLesson} from "@/lib/study/scope";
+import {savedDictionaryEntry} from "@/lib/study/saved-word-card";
 
 export function CoursePractice(){
   const study=useStudy();const {scope,matches}=useStudyScope();
@@ -14,7 +16,7 @@ export function CoursePractice(){
   if(!study.ready)return <p role="status">Loading your practice cards…</p>;
   const entries=study.dictionary.filter(e=>e.kind==="word"&&e.studyTags&&matches(e.studyTags));
   const lessons=courseChapters.filter(c=>c.number>=3&&matches(tagsForLesson(c.number)));
-  return <section className="panel course-practice"><h2>Recall your selected words</h2><p>{entries.length} word families · Your study selection sets the practice pool.</p><Recall key={JSON.stringify(scope)} entries={entries}/><div className="study-row">{lessons.map(c=><Link key={c.number} href={`/lessons/${String(c.number).padStart(2,"0")}#practice`}>Lesson {c.number} quiz →</Link>)}</div><p><Link href="/saved">Review only the cards you saved →</Link></p></section>;
+  return <section className="panel course-practice"><h2>Recall your selected words</h2><p>{entries.length} word families · Your study selection sets the practice pool.</p><Recall key={JSON.stringify(scope)} entries={entries}/><div className="study-row">{lessons.map(c=><Link key={c.number} href={`/lessons/${String(c.number).padStart(2,"0")}#practice`}>Lesson {c.number} quiz <Icon name="arrow"/></Link>)}</div><p><Link href="/saved">Review only the cards you saved <Icon name="arrow"/></Link></p></section>;
 }
 function Recall({entries}:{entries:DictionaryEntry[]}){
   const [index,setIndex]=useState(0),[revealed,setRevealed]=useState(false),[mode,setMode]=useState("meaning"),[answer,setAnswer]=useState<string|null>(null),[correct,setCorrect]=useState(0);
@@ -35,8 +37,8 @@ function Recall({entries}:{entries:DictionaryEntry[]}){
         <p className={current.displayForms?.[0]?`study-tone-${current.displayForms[0].tone}`:undefined}><GermanText text={current.de}/><LineAudio text={current.de} src={current.audio} compact/></p>
         {current.example&&<details><summary>See an example</summary><p><GermanText text={current.example}/><LineAudio text={current.example} compact/></p><p>{current.translation}</p></details>}
         {current.studyTags&&<StudyTagList tags={current.studyTags}/>}
-        <div className="study-row"><SaveButton item={{id:current.saveId??`card-${current.id}`,title:current.de,meaning:current.en,kind:"word",href:current.href,...(current.studyTags?{studyTags:current.studyTags}:{}),audio:current.audio}}/><Link href={current.href}>Open full card →</Link><button type="button" className="study-primary" onClick={()=>{setIndex(index+1);setRevealed(false);setAnswer(null);}}>{index+1===pool.length?"See my result":"Next card →"}</button></div>
+        <div className="study-row"><SaveButton item={savedDictionaryEntry(current)}/><Link href={current.href}>Open full card <Icon name="arrow"/></Link><button type="button" className="study-primary" onClick={()=>{setIndex(index+1);setRevealed(false);setAnswer(null);}}>{index+1===pool.length?"See my result":<>Next card <Icon name="arrow"/></>}</button></div>
       </div>}
-    </>:<div role="status"><h3>Practice round complete</h3><p>{mode==="article"?`${correct} of ${pool.length} answers correct.`:`You revealed ${pool.length} word families. This is recall practice, not a checked score.`}</p><div className="study-row"><button className="study-primary" type="button" onClick={restart}>Practise again</button><Link href="/saved">Review saved words →</Link></div></div>}
+    </>:<div role="status"><h3>Practice round complete</h3><p>{mode==="article"?`${correct} of ${pool.length} answers correct.`:`You revealed ${pool.length} word families. This is recall practice, not a checked score.`}</p><div className="study-row"><button className="study-primary" type="button" onClick={restart}>Practise again</button><Link href="/saved">Review saved words <Icon name="arrow"/></Link></div></div>}
   </div>;
 }

@@ -4,7 +4,16 @@ export type WordForm = {
   tone: "male" | "female" | "neuter" | "plural" | "plain";
   audio: string | null;
 };
-export type WordRow = { label: string; meaning: string; singular: WordForm; plurals: WordForm[]; usage: string };
+export type VocabularyBookRef = {
+  lesson: number;
+  page: number | null;
+  exercise: string | null;
+  candidatePages: number[];
+  glossaryExercises: string[];
+  evidenceIds: string[];
+  note: string;
+};
+export type WordRow = { label: string; meaning: string; singular: WordForm; plurals: WordForm[]; usage: string; bookRef?: VocabularyBookRef };
 export type WordCard = {
   studyTags?: import("../study/scope").StudyTags;
   id: string;

@@ -1,14 +1,15 @@
 "use client";
 
+import { Icon } from "@/components/media/Icon";
 import { useEffect, useId, useRef, useState } from "react";
 import type { WordCard, WordForm } from "@/lib/content/word-card-types";
 import { normalizeCardAnswer } from "@/lib/content/word-card-types";
-import { withPagesBaseAssetPath } from "@/lib/content/pages-base-path";
 import styles from "./word-cards.module.css";
 import { GermanLookup, SaveButton } from "@/components/study/StudyProvider";
 import { LineAudio, stopStudyAudio } from "@/components/study/StudyAudio";
 import {StudyTagList} from "@/components/study/StudyScope";
 import { savedWordCard } from "@/lib/study/saved-word-card";
+import { SubjectVocabularyVisual } from "@/components/study/SubjectIllustration";
 
 function PatternToken({ text, card }: { text: string; card: WordCard }) {
   const forms = card.rows.flatMap(r => [r.singular, ...r.plurals]);
@@ -80,7 +81,7 @@ export function WordFamilyCard({ card }: { card: WordCard }) {
     <article className={styles.card} aria-labelledby={`${uid}-title`}>
       <header className={styles.hero}>
         <div className={styles.identity}><div className={styles.eyebrow}>{lessonText}<span className={styles.dot} />{card.category === "Profession" ? "Professions" : card.category}</div><h1 id={`${uid}-title`}>{card.title}</h1>{card.studyTags&&<StudyTagList tags={card.studyTags}/>}<p className={styles.subline}>{formCount > 1 ? `One word family. ${formCount === 4 ? "Four" : formCount} useful forms.` : "One meaning. Learn it, hear it, use it."}</p></div>
-        {card.image ? <img className={styles.heroImage} src={withPagesBaseAssetPath(card.image.path)} alt={card.image.alt} width={265} height={204} /> : <div className={styles.meaningVisual} aria-hidden="true"><span>{card.category === "Number" || card.category === "Alphabet" ? card.visual : card.visual === "profession" ? "↔" : card.visual === "origin" ? "↗" : card.visual === "language" ? "“ ”" : card.visual === "family" ? "⌘" : card.visual === "action" ? "→" : "Aa"}</span><small>{card.category === "Number" ? "SAY THE NUMBER" : card.category === "Alphabet" ? "SPELL IT ALOUD" : card.category === "Profession" ? "ONE JOB · ALL FORMS" : card.category.toUpperCase()}</small></div>}
+        <div className={styles.meaningVisual} data-tone={card.rows[0]?.singular.tone??"plain"} aria-hidden="true"><SubjectVocabularyVisual de={card.rows[0]?.singular.text??card.title} category={card.category} cardId={card.id} subject={card.studyTags?.concepts[0]??"everyday"} fallback="subject"/><small>{card.category === "Number" ? "SAY THE NUMBER" : card.category === "Alphabet" ? "SPELL IT ALOUD" : card.category === "Profession" ? "ONE JOB · ALL FORMS" : card.category.toUpperCase()}</small></div>
       </header>
       {mode === "learn" ? <div>
         <section className={styles.forms} aria-labelledby={`${uid}-forms`}>
@@ -91,11 +92,11 @@ export function WordFamilyCard({ card }: { card: WordCard }) {
         </section>
         <section className={styles.pattern}><h2 className={styles.sectionLabel}>Notice<br />the pattern</h2><div><div className={styles.patternLine} lang="de">{card.pattern.map((part, i) => <span key={`${i}-${part}`}>{i > 0 && <span className={styles.arrow}>→</span>}<PatternToken text={part} card={card} /></span>)}</div><small>{card.tip}</small></div></section>
         <section className={styles.example}><h2 className={styles.sectionLabel}>Use it</h2><div>{card.examples.map(ex => <div key={ex.de}><div className={styles.exampleLine}><p className={styles.germanExample} lang="de"><ExampleText text={ex.de} card={card} /></p><LineAudio text={ex.de} src={ex.audio} compact/></div><p className={styles.englishExample}>{ex.en}</p></div>)}<p className={styles.grammarTip}>{isProfession ? "✧ After “Ich bin”, a profession usually has no article." : card.note.split(/(?<=[.!?])\s/)[0]}</p></div></section>
-        <section className={styles.recallInvite}><div><h2>Ready to remember it?</h2><p>Hide the German. Say it from memory.</p></div><button type="button" className={styles.primary} onClick={() => switchMode("recall")}>Try recall <span aria-hidden="true">→</span></button></section>
+        <section className={styles.recallInvite}><div><h2>Ready to remember it?</h2><p>Hide the German. Say it from memory.</p></div><button type="button" className={styles.primary} onClick={() => switchMode("recall")}>Try recall <span aria-hidden="true"><Icon name="arrow"/></span></button></section>
       </div> : <section aria-labelledby={`${uid}-prompt`}>
         <div className={styles.practice}><div className={styles.practiceHeader}><h2 className={styles.sectionLabel}>Your turn</h2><span>{promptIndex + 1} / {card.prompts.length}</span></div><h3 className={styles.prompt} id={`${uid}-prompt`}>{prompt.question}</h3><p className={styles.promptHint}>Say it aloud, or type your answer. Include the article for a noun.</p>
           <form onSubmit={checkAnswer}><div className={styles.answerRow}><label htmlFor={`${uid}-answer`} className={styles.srOnly}>German answer</label><input ref={inputRef} id={`${uid}-answer`} lang="de" value={answer} onChange={e => { setAnswer(e.target.value); setFeedback(null); }} placeholder="Your German answer…" autoComplete="off" autoCapitalize="off" spellCheck={false} aria-invalid={feedback === "wrong"} /><button className={styles.primary} type="submit">Check answer</button></div></form>
-          <div className={styles.practiceActions}>{!feedback ? <button type="button" className={styles.textButton} onClick={() => setFeedback("shown")}>Show answer</button> : <button type="button" className={styles.secondary} onClick={() => { setPromptIndex((promptIndex + 1) % card.prompts.length); setAnswer(""); setFeedback(null); inputRef.current?.focus(); }}>Next form →</button>}</div>
+          <div className={styles.practiceActions}>{!feedback ? <button type="button" className={styles.textButton} onClick={() => setFeedback("shown")}>Show answer</button> : <button type="button" className={styles.secondary} onClick={() => { setPromptIndex((promptIndex + 1) % card.prompts.length); setAnswer(""); setFeedback(null); inputRef.current?.focus(); }}>Next form <Icon name="arrow"/></button>}</div>
           {feedback && <div className={styles.feedback} role="status"><strong lang="de">{prompt.answers.join(" / ")}</strong><p>{feedback === "correct" ? "You remembered it." : feedback === "case" ? "The form is right. Check the capital letters in the answer above." : feedback === "wrong" ? "Compare your answer with the article, spelling and ending above." : "Read it once, then say it with your eyes closed."} {prompt.hint}</p></div>}
         </div><p className={styles.practiceFooter}>Switch to <strong>Learn</strong> to see the forms and example together.</p>
       </section>}

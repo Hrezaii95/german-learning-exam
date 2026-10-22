@@ -3,7 +3,7 @@ import {expect,test} from "@playwright/test";
 for (const width of [320,768]) {
   test(`navigation stays compact and keyboard-safe at ${width}px`,async({page},testInfo)=>{
     await page.setViewportSize({width,height:900});
-    await page.goto("cheat-sheets/");
+    await page.goto("cheat-sheets/countries/");
     await expect(page.getByRole("navigation",{name:"Mobile",exact:true})).toBeVisible();
     await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);
     const heading=await page.locator("main h1").first().boundingBox();
@@ -32,7 +32,7 @@ for (const width of [320,768]) {
     await expect(page.getByRole("heading",{name:"Listen. Read. Listen again."})).toBeVisible();
     await expect(page.getByRole("combobox",{name:"Audio speed"})).toBeEnabled();
     await page.goBack();
-    await expect(page).toHaveURL(/cheat-sheets\/#country-overview$/);
+    await expect(page).toHaveURL(/cheat-sheets\/countries\/#country-overview$/);
     await expect(page.locator("#country-overview")).toBeInViewport();
     await trigger.click();
     await menu.getByRole("searchbox").fill("no-such-area");
@@ -40,23 +40,65 @@ for (const width of [320,768]) {
   });
 }
 
-test("the compact sheet chooser searches all fifteen sheets and preserves return links",async({page},testInfo)=>{
+test("the named sheet chooser searches all study sheets and preserves return links",async({page},testInfo)=>{
   for(const width of [390,1440]) {
     await page.setViewportSize({width,height:900});
-    await page.goto("cheat-sheets/#country-overview");
-    const chooser=page.locator(".sheet-chooser");
+    await page.goto("cheat-sheets/countries/#country-overview");
+    const chooser=page.locator(".sheet-switcher");
     await expect(chooser).not.toHaveAttribute("open");
     await chooser.locator("summary").click();
-    await expect(chooser.getByRole("link")).toHaveCount(15);
-    const search=chooser.getByRole("searchbox",{name:"Find a cheat sheet"});
+    await expect(chooser.getByRole("link")).toHaveCount(37);
+    await expect(chooser.locator('section[aria-label="All vocabulary"] a')).toHaveCount(1);
+    await expect(chooser.locator('section[aria-label="Vocabulary by subject"] a')).toHaveCount(21);
+    await expect(chooser.locator('section[aria-label="Topic workshops"] a')).toHaveCount(15);
+    const search=chooser.getByRole("searchbox",{name:"Find a study sheet"});
     await search.fill("furniture");
-    await expect(chooser.getByRole("link")).toHaveCount(1);
+    await expect(chooser.getByRole("link")).toHaveCount(2);
     await page.screenshot({path:testInfo.outputPath(`chooser-${width}.png`)});
-    await chooser.getByRole("link",{name:/Home & furniture/}).click();
+    await chooser.locator('section[aria-label="Topic workshops"]').getByRole("link",{name:/Home & furniture/}).click();
     await expect(page).toHaveURL(/\/cheat-sheets\/home\/?$/);
-    await expect(page.locator(".sheet-chooser summary")).toContainText("Home & furniture");
+    await expect(page.locator(".sheet-switcher summary")).toContainText("Home & furniture");
     await page.goBack();
     await expect(page).toHaveURL(/#country-overview$/);
+  }
+});
+
+test("the sheet directory stays available on plain visits and unrecognized country hashes",async({page},testInfo)=>{
+  for(const hash of ["", "#country-not-published", "#another-section"]) {
+    const suffix=`?source=teacher-extra${hash}`;
+    await page.goto(`cheat-sheets/${suffix}`);
+    const url=new URL(page.url());
+    expect(url.pathname).toMatch(/\/cheat-sheets\/$/);
+    expect(url.search).toBe("?source=teacher-extra");
+    expect(url.hash).toBe(hash);
+    await expect(page.locator("main").getByRole("link",{name:/All vocabulary/}).first()).toBeVisible();
+    await expect(page.locator("main").getByRole("link",{name:/Countries & languages/}).first()).toBeVisible();
+    await expect(page.locator(".country-sheet")).toHaveCount(0);
+  }
+  await page.screenshot({path:testInfo.outputPath("sheet-directory.png")});
+});
+
+test("static sheet moves retain query and hash before application hydration",async({page,baseURL})=>{
+  // The compatibility script must run even while Next's application bundles are unavailable.
+  await page.route(/\/_next\/.*\.js(?:\?|$)/,route=>route.abort());
+  const search="?q=B%C3%BCcher&source=teacher-extra&tags=objects%2Chome";
+  for(const [from,to,hash] of [
+    ["cheat-sheets/plurals/","cheat-sheets/vocabulary/","#sheet-card-W466-0"],
+    ["cheat-sheets/subjects/","cheat-sheets/","#subjects"],
+    ["cheat-sheets/","cheat-sheets/countries/","#country-DE"],
+    ["cheat-sheets/","cheat-sheets/countries/","#country-overview"],
+    ["cheat-sheets/","cheat-sheets/countries/","#country-patterns"],
+    ["cheat-sheets/","cheat-sheets/countries/","#country-passport"],
+    ["cheat-sheets/","cheat-sheets/countries/","#country-index"],
+    ["cheat-sheets/","cheat-sheets/countries/","#country-practice"],
+  ]) {
+    await page.goto(`${from}${search}${hash}`);
+    const target=new URL(to!,baseURL);
+    target.search=search;
+    target.hash=hash!;
+    await expect(page).toHaveURL(target.href);
+    expect(new URL(page.url()).search).toBe(search);
+    expect(new URL(page.url()).hash).toBe(hash);
   }
 });
 
@@ -89,10 +131,10 @@ test("Continue follows the last visited lesson and due review precedes the cours
   await page.getByRole("link",{name:"Review due items"}).click();
   await expect(page.getByRole("checkbox",{name:"Due only",exact:true})).toBeChecked();
   await expect(page.locator(".study-saved-card")).toHaveCount(1);
-  await page.goto("review/");
+  await page.goto("saved/#guided-review");
   await expect(page.locator("main h1")).toHaveCount(1);
   await expect(page.getByRole("heading",{name:"Build mission"})).toBeVisible();
-  await expect(page.locator(".study-saved-grid")).toHaveCount(0);
+  await expect(page.locator(".study-saved-card")).toHaveCount(1);
   await expect(page.getByRole("link",{name:/My saved collection & recall/})).toBeVisible();
   await page.goto("./");
   const scope=page.locator(".study-scope");

@@ -96,3 +96,34 @@ export const lessonConcepts:Record<number,StudyConcept[]> = {
 export function tagsForLesson(lesson:number):StudyTags{
   return {lessons:[lesson],concepts:lessonConcepts[lesson]??[],source:"course"};
 }
+
+/** Versioned game links extend the shared lesson × topic × source selection. */
+export type PlayScope = {
+  v: 1; book?: string; upTo?: { lesson: number; page?: number };
+  lessons?: number[]; tags?: string[]; sources?: StudySource[];
+  skills?: string[]; items?: string[]; count?: number;
+};
+export type ScopedBookItem = {
+  id: string; bookRef: {book:string;lesson:number;page?:number}; tags:string[];source:StudySource;
+  sourceRef?: {lessons:number[];sources:string[];sourceLessons?:Partial<Record<StudySource,number[]>>};
+};
+/** Same source-specific lesson semantics as the existing cheat-sheet filters. */
+export function matchesPlayScope(item:ScopedBookItem,scope:PlayScope,
+  options:{includeWholeCurrentLesson?:boolean;lessonDone?:boolean}={}):boolean {
+  if(scope.book&&item.bookRef.book!==scope.book)return false;
+  if(scope.items&&!scope.items.includes(item.id))return false;
+  const sources=item.sourceRef?.sources??[item.source];
+  const selectedSources=scope.sources?.length?scope.sources:sources;
+  if(!selectedSources.some(source=>sources.includes(source)))return false;
+  const lessons=selectedSources.flatMap(source=>item.sourceRef?.sourceLessons?.[source as StudySource]??item.sourceRef?.lessons??[item.bookRef.lesson]);
+  if(scope.lessons&&!lessons.some(lesson=>scope.lessons!.includes(lesson)))return false;
+  if(scope.tags?.length&&!item.tags.some(tag=>scope.tags!.includes(tag)))return false;
+  if(scope.upTo){
+    if(item.bookRef.lesson>scope.upTo.lesson)return false;
+    if(item.bookRef.lesson===scope.upTo.lesson&&!options.includeWholeCurrentLesson&&!options.lessonDone){
+      if(item.bookRef.page===undefined||scope.upTo.page===undefined)return false;
+      if(scope.upTo.page!==undefined&&item.bookRef.page>scope.upTo.page)return false;
+    }
+  }
+  return true;
+}

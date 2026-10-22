@@ -1,0 +1,234 @@
+[
+  {
+    "id": "a2-text-ausflug",
+    "unitId": "outings",
+    "bookRef": {
+      "book": "independent-a2",
+      "lesson": 2
+    },
+    "source": "study-extra",
+    "tags": [
+      "everyday-plans",
+      "reading",
+      "travel"
+    ],
+    "review": {
+      "status": "pending-german-review"
+    },
+    "type": "text",
+    "title": "Ein neuer Plan für das Wochenende",
+    "body": "Am Samstag möchte Lea mit Jonas an den See fahren. Ihr Zug fährt um neun Uhr ab. Sie treffen sich um Viertel vor neun vor dem Bahnhof. Lea kauft die Fahrkarten, und Jonas bringt Brot und Obst mit.\n\nAm Freitag schreibt Jonas eine Nachricht: Er muss am Samstagvormittag arbeiten. Deshalb verschieben sie den Ausflug auf Sonntag. Sie nehmen denselben Zug und treffen sich wieder um Viertel vor neun. Wenn es regnet, gehen sie statt an den See ins Museum.",
+    "glossary": {
+      "abfahren": "to depart",
+      "verschieben": "to postpone",
+      "statt": "instead of"
+    },
+    "questions": [
+      {
+        "id": "a2-lesen-tag",
+        "type": "multipleChoice",
+        "prompt": "An welchem Tag machen Lea und Jonas den Ausflug?",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Am Freitag."
+          },
+          {
+            "id": "b",
+            "label": "Am Samstag."
+          },
+          {
+            "id": "c",
+            "label": "Am Sonntag."
+          }
+        ],
+        "answer": {
+          "type": "choice",
+          "correctIds": [
+            "c"
+          ]
+        }
+      },
+      {
+        "id": "a2-lesen-grund",
+        "type": "multipleChoice",
+        "prompt": "Warum ändern sie ihren Plan?",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Jonas muss am Samstagvormittag arbeiten."
+          },
+          {
+            "id": "b",
+            "label": "Lea hat keine Fahrkarte."
+          },
+          {
+            "id": "c",
+            "label": "Der Zug fährt am Samstag nicht."
+          }
+        ],
+        "answer": {
+          "type": "choice",
+          "correctIds": [
+            "a"
+          ]
+        }
+      },
+      {
+        "id": "a2-lesen-ort",
+        "type": "multipleChoice",
+        "prompt": "Wo treffen sie sich?",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Am See."
+          },
+          {
+            "id": "b",
+            "label": "Vor dem Bahnhof."
+          },
+          {
+            "id": "c",
+            "label": "Im Museum."
+          }
+        ],
+        "answer": {
+          "type": "choice",
+          "correctIds": [
+            "b"
+          ]
+        }
+      }
+    ],
+    "revealFields": [
+      "questions.answer"
+    ]
+  },
+  {
+    "id": "a2-dialog-verabredung",
+    "unitId": "appointments",
+    "bookRef": {
+      "book": "independent-a2",
+      "lesson": 1
+    },
+    "source": "study-extra",
+    "tags": [
+      "everyday-plans"
+    ],
+    "review": {
+      "status": "pending-german-review"
+    },
+    "type": "dialogue",
+    "turns": [
+      {
+        "speaker": "Lea",
+        "text": "Hast du am Samstag Zeit für einen Ausflug?"
+      },
+      {
+        "speaker": "Jonas",
+        "text": "Am Vormittag muss ich arbeiten. Können wir am Sonntag fahren?"
+      },
+      {
+        "speaker": "Lea",
+        "text": "Gute Idee. Treffen wir uns um Viertel vor neun vor dem Bahnhof?"
+      },
+      {
+        "speaker": "Jonas",
+        "text": "Ja, das passt. Ich bringe Brot und Obst mit."
+      },
+      {
+        "speaker": "Lea",
+        "text": "Dann kaufe ich die Fahrkarten. Ich freue mich auf den Ausflug."
+      }
+    ],
+    "questions": [
+      {
+        "id": "a2-dialog-wer",
+        "type": "multipleChoice",
+        "prompt": "Wer kauft die Fahrkarten?",
+        "choices": [
+          {
+            "id": "lea",
+            "label": "Lea."
+          },
+          {
+            "id": "jonas",
+            "label": "Jonas."
+          },
+          {
+            "id": "beide",
+            "label": "Beide zusammen."
+          }
+        ],
+        "answer": {
+          "type": "choice",
+          "correctIds": [
+            "lea"
+          ]
+        }
+      }
+    ],
+    "revealFields": [
+      "questions.answer"
+    ]
+  },
+  {
+    "id": "a2-sprechen-vorschlag",
+    "unitId": "appointments",
+    "bookRef": {
+      "book": "independent-a2",
+      "lesson": 1
+    },
+    "source": "study-extra",
+    "tags": [
+      "everyday-plans"
+    ],
+    "review": {
+      "status": "pending-german-review"
+    },
+    "type": "speakingPrompt",
+    "prompt": "Du möchtest mit einer Freundin oder einem Freund etwas unternehmen. Mache einen Vorschlag, nenne einen Tag und eine Uhrzeit und vereinbare einen Treffpunkt. Sprich drei bis fünf Sätze.",
+    "checklist": [
+      "Ich mache einen verständlichen Vorschlag.",
+      "Ich nenne einen Tag und eine Uhrzeit.",
+      "Ich nenne einen Treffpunkt.",
+      "Ich frage, ob mein Vorschlag passt."
+    ],
+    "modelAnswers": [
+      "Hast du am Sonntag Zeit? Wir könnten einen Ausflug an den See machen. Treffen wir uns um neun Uhr vor dem Bahnhof? Passt dir das?"
+    ],
+    "revealFields": [
+      "modelAnswers"
+    ]
+  },
+  {
+    "id": "a2-schreiben-absage",
+    "unitId": "appointments",
+    "bookRef": {
+      "book": "independent-a2",
+      "lesson": 1
+    },
+    "source": "study-extra",
+    "tags": [
+      "everyday-plans"
+    ],
+    "review": {
+      "status": "pending-german-review"
+    },
+    "type": "writingPrompt",
+    "prompt": "Du kannst morgen nicht zu einer Verabredung kommen. Schreibe deiner Freundin oder deinem Freund eine kurze Nachricht mit 30 bis 50 Wörtern. Entschuldige dich, nenne einen Grund und schlage einen neuen Termin vor.",
+    "checklist": [
+      "Ich spreche die Person passend an.",
+      "Ich entschuldige mich und sage ab.",
+      "Ich nenne einen verständlichen Grund.",
+      "Ich schlage einen neuen Tag oder eine neue Uhrzeit vor.",
+      "Ich beende meine Nachricht passend."
+    ],
+    "modelAnswers": [
+      "Hallo Mia, leider kann ich morgen nicht zu unserem Treffen kommen, weil ich länger arbeiten muss. Das tut mir leid. Können wir uns am Freitag um sechs vor dem Kino treffen? Schreib mir bitte, ob das passt. Liebe Grüße, Lea"
+    ],
+    "revealFields": [
+      "modelAnswers"
+    ]
+  }
+]

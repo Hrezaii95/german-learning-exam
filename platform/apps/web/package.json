@@ -20,11 +20,13 @@
   "dependencies": {
     "@german-learning/content": "*",
     "@german-learning/learning": "*",
-    "next": "16.3.8",
+    "next": "16.4.2",
+    "qrcode": "1.5.4",
     "react": "19.2.8",
     "react-dom": "19.2.8"
   },
   "devDependencies": {
+    "@types/qrcode": "1.5.6",
     "@types/react": "19.2.8",
     "@types/react-dom": "19.2.3",
     "tsx": "^4.19.3",

@@ -1,3 +1,4 @@
+import { articleTone } from "@/lib/study/article-tone";
 import type {
   LearnerDetailRecord,
   LearnerGrammarDetail,
@@ -36,6 +37,7 @@ import { InfographicPanel } from "@/components/media/InfographicPanel";
 import { RichLessonVisual } from "@/components/media/RichLessonVisual";
 import { illustrationForDetail } from "@/lib/content/illustrations";
 import { MeaningPlate } from "@/components/media/MeaningPlate";
+import { SubjectVocabularyVisual } from "@/components/study/SubjectIllustration";
 import {
   GrammarConceptVisual,
   NounSystemVisual,
@@ -69,7 +71,11 @@ function MetaChips({
  */
 function VocabularyMediaSlot({ detail }: { detail: LearnerVocabularyDetail }) {
   const illustration = illustrationForDetail(detail.id);
-  if (illustration) return <RichLessonVisual illustration={illustration} />;
+  if (illustration) return <RichLessonVisual illustration={illustration} visual={
+    <div className="hub-card__visual" data-tone={detail.gender==="masculine"?"male":detail.gender==="feminine"?"female":detail.gender??"plain"}>
+      <SubjectVocabularyVisual de={detail.displayText} category="Vocabulary" cardId={detail.id} subject="everyday" fallback="subject"/>
+    </div>
+  }/>;
   const plural = detail.plurals[0] ?? null;
   return (
     <MeaningPlate
@@ -148,7 +154,7 @@ function VocabularyDetail({ detail }: { detail: LearnerVocabularyDetail }) {
       <section className="panel" aria-labelledby="vocab-forms-heading">
         <h2 id="vocab-forms-heading">Forms</h2>
         <div className="detail-form-pair">
-          <article className="detail-form-card" data-person-form={detail.gender ?? "none"}>
+          <article className="detail-form-card" data-tone={articleTone(detail.gender)}>
             {detail.gender ? <GenderBadge gender={detail.gender} /> : null}
             <p className="detail-form-card__lemma">
               <span className="german" lang="de">
@@ -161,7 +167,7 @@ function VocabularyDetail({ detail }: { detail: LearnerVocabularyDetail }) {
             </p>
           </article>
           {pf ? (
-            <article className="detail-form-card" data-person-form="feminine">
+            <article className="detail-form-card" data-tone={articleTone(pf.relatedGender)}>
               <GenderBadge gender={pf.relatedGender} />
               <p className="detail-form-card__lemma">
                 <span className="german" lang="de">{pf.relatedDisplayText}</span>

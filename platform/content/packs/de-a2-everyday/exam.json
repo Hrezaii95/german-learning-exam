@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "title": "Alltagspläne: persönliche Übungsrunde",
+  "taskRefs": [
+    "a2-exam-grammatik",
+    "a2-exam-lesen",
+    "a2-exam-schreiben"
+  ]
+}

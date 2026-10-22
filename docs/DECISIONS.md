@@ -124,3 +124,43 @@
 **Evidence:** A deterministic catalogue audit must map every PDF entry to exactly one family, verify every supplied form, example, recall answer and source, and check exported routes. Examples authored for the cards are identified in the source drawer. Existing verified media are reused; new generated speech retains candidate listening-review status. No later lesson activities are claimed complete by expanding this vocabulary catalogue.
 
 **Owner clarification, 2026-09-03:** Preserve the previous page, filtering and dashboard UI/UX; change cards only where necessary and push completed sections promptly. Baseline is `54e83a3`, immediately before the card integration. Restore the vocabulary hub's existing search/lesson/category form, Apply/Clear actions and grid, and restore the optional professions collection's existing search, alternatives checkbox and review controls. Feed the complete aggregated inventory into those surfaces. Lesson 3 is an additional value in the same lesson selector. Detail cards retain the approved Learn/Recall format; returning from a card preserves the original filters. The dashboard and shared layout remain byte-identical to the baseline.
+
+## ADR-018 — Accounts, sync, class mode and Cloudflare hosting at german.learnilabs.com
+
+**Status:** Accepted (owner, 2026-10-22, in Claude Code chat)
+**Decision:**
+- Host the app on Cloudflare at `https://german.learnilabs.com`: Workers with static assets, plus an API Worker on the same origin under `/api/*`, D1 for data, and Durable Objects later for live class games.
+- Add accounts with roles (student, teacher, admin). Username + password ships first. The data model and routes are prepared for email links and Google sign-in, which ship later.
+- Sync personal progress across devices, keeping offline-first local storage.
+- Add server-backed Class mode: classes, assignments, teacher and admin dashboards.
+- The GitHub Pages site stays live until the Cloudflare cutover is verified, then points learners to the new domain with a progress-export path.
+
+**Why:** Progress must survive device changes and be visible to teachers. The book-companion positioning (see `docs/games/competitive-analysis-book-companion.md`) needs class tools, and Duolingo for Schools ends in July 2027.
+**Consequence:**
+- This supersedes the "teacher portal" and "multi-user sync" items in `docs/02` §"Explicitly deferred".
+- Public social leaderboards and open-ended AI conversation remain deferred.
+- Authoritative pronunciation scoring remains deferred until gate G5.
+- Personal data handling must be GDPR-ready: EU data location, export and deletion, minimal data.
+- Design: `docs/platform/infrastructure-and-accounts.md`, `docs/platform/dashboards.md`.
+
+## ADR-019 — Three parallel implementation lanes
+
+**Status:** Accepted (owner, 2026-10-22)
+**Decision:** Implementation runs in three parallel Codex sessions with fixed file ownership: Lane 1 (app consistency and audit fixes), Lane 2 (Wortwerk game), Lane 3 (platform: Cloudflare, accounts, sync, dashboards). The rules are in `docs/lanes/README.md` and `docs/lanes/CONTRACTS.md`.
+**Why:** The owner wants the work done in parallel; the file ownership and shared contracts prevent collisions.
+**Consequence:**
+- Each lane writes only its own `plans/lanes/lane-N-status.md`. The plan baton and register are updated by the orchestrator (Claude) at integration time.
+- Changes to `docs/lanes/CONTRACTS.md` need the owner's OK.
+- No lane merges to `codex/live-alpha` without the owner's approval.
+- **Amended 2026-10-22 (owner away):** lanes commit to `lane1/main`, `lane2/main` and `lane3/main`, then combine their work into `integration/all` with all gates green. The owner merges that one PR, adds 3 secrets and runs "Go live" (`docs/platform/GO-LIVE.md`).
+
+## ADR-020a — Line art replaces raster heroes on word cards; alpha release from the integration branch
+
+**Status:** Accepted (owner, 2026-10-22)
+**Decision:**
+- Word-detail and word-family cards use the shared `SubjectVocabularyVisual` line art for their hero, like every grid, list and cheat sheet. This reverses the ADR-017 raster-hero carve-out (Lane 1 commits "retain approved raster detail heroes…"). Raster files stay in the repo, unused by the cards.
+- The owner asked Claude to review the German content itself and to merge and deploy the combined integration as soon as possible for a closed alpha (owner plus selected testers), fixing issues after deployment.
+**Why:** The owner prefers one illustration language across the app; the alpha audience is small and known.
+**Consequence:**
+- Claude's German review is recorded in `docs/reviews/2026-10-22-claude-german-review.md`. It is a model review, not the qualified human review: pack review statuses stay `pending-german-review`, and generated audio stays "preview" (gate G5).
+- `codex/live-alpha` receives `integration/all` by merge; GitHub Pages redeploys from it. Cloudflare goes live when the owner completes `docs/platform/GO-LIVE.md`.

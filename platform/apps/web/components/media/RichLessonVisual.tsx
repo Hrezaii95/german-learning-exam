@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+import { articleTone } from "@/lib/study/article-tone";
 import { withPagesBaseAssetPath } from "@/lib/content/pages-base-path";
 import type { LearnerIllustration } from "@/lib/content/illustrations";
 import { IllustrationPicture } from "@/components/media/IllustrationPicture";
@@ -14,8 +16,11 @@ import { IllustrationPicture } from "@/components/media/IllustrationPicture";
  */
 export function RichLessonVisual({
   illustration,
+  visual,
 }: {
   illustration: LearnerIllustration;
+  /** Vocabulary can share the line-art renderer while retaining its teaching caption. */
+  visual?: ReactNode;
 }) {
   const headingId = `${illustration.id.replaceAll(":", "-")}-heading`;
   const responsive = illustration.responsive;
@@ -26,7 +31,7 @@ export function RichLessonVisual({
       aria-labelledby={headingId}
     >
       <div className="rich-visual__media">
-        {responsive ? (
+        {visual ?? (responsive ? (
           <IllustrationPicture
             variant={responsive.detail}
             alt={illustration.alt}
@@ -47,7 +52,7 @@ export function RichLessonVisual({
             loading="eager"
             decoding="async"
           />
-        )}
+        ))}
         <span className="rich-visual__eyebrow">{illustration.eyebrow}</span>
       </div>
       <figcaption className="rich-visual__caption">
@@ -65,7 +70,7 @@ export function RichLessonVisual({
         </div>
         <ul className="rich-visual__labels" aria-label="Illustrated vocabulary">
           {illustration.labels.map((label) => (
-            <li key={label.de} data-gender={label.gender}>
+            <li key={label.de} data-tone={articleTone(label.gender)}>
               <strong className="german" lang="de">
                 {label.de}
               </strong>

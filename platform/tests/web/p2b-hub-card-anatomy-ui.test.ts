@@ -119,7 +119,7 @@ describe("P2B hub card anatomies", () => {
     expect(html).toContain("die Ärztin");
     expect(html).toContain("doctor");
     // Gender stays colour + shape + label, never colour alone.
-    expect(html).toContain('data-gender="feminine"');
+    expect(html).toContain('data-tone="female"');
     expect(html).toContain('data-gender-shape="circle"');
     expect(html).toContain("Feminine");
     // One concise morphology preview.
@@ -128,7 +128,8 @@ describe("P2B hub card anatomies", () => {
 
     // The one approved vocabulary illustration keeps the media slot.
     expect(html).toContain('data-media="illustration"');
-    expect(html).toContain("vocabulary-architekt-studio.png");
+    expect(html).toContain('data-subject-visual="illustrated:refined"');
+    expect(html).not.toContain("vocabulary-architekt-studio.png");
     // Illustrated cards still carry the same semantic anatomy.
     expect(html).toContain('data-meaning-plate="body"');
     expect(html).toContain("der Architekt");
@@ -137,7 +138,7 @@ describe("P2B hub card anatomies", () => {
   it("keeps the plate honest: audio only for real clips, no invented review state", () => {
     const html = render("vocabulary");
     expect(html).toContain('data-meaning-plate-audio="true"');
-    expect(html).toContain("Listen — die Ärztin pronunciation");
+    expect(html).toContain("Listen: die Ärztin pronunciation");
     for (const phrase of UNBACKED_STATE_COPY) {
       expect(html).not.toContain(phrase);
     }
@@ -151,7 +152,7 @@ describe("P2B hub card anatomies", () => {
         gloss: "alone",
       }),
     );
-    expect(adjectiveOnly).toContain('data-gender="none"');
+    expect(adjectiveOnly).toContain('data-tone="plain"');
     expect(adjectiveOnly).not.toContain("gender-badge");
     expect(adjectiveOnly).not.toContain("meaning-plate__audio");
     expect(adjectiveOnly).not.toContain("meaning-plate__morph");
@@ -196,8 +197,8 @@ describe("P2B hub card anatomies", () => {
     expect(html).toContain("du");
 
     // Four of ten verbs have an approved clip; the rest show no player.
-    expect(html).toContain("Listen — heißen pronunciation");
-    expect(html).not.toContain("Listen — arbeiten pronunciation");
+    expect(html).toContain("Listen: heißen pronunciation");
+    expect(html).not.toContain("Listen: arbeiten pronunciation");
     expect(html).not.toContain("Pronunciation unavailable");
   });
 
@@ -205,7 +206,7 @@ describe("P2B hub card anatomies", () => {
     const html = render("grammar");
     expect(html).toContain("Herkunft mit aus");
     expect(html).toContain("Origin with aus");
-    expect(html).toContain("Listen — Herkunft mit aus pronunciation");
+    expect(html).toContain("Listen: Herkunft mit aus pronunciation");
     expect(html).not.toMatch(/\bgram:[a-z0-9-]/);
 
     // The contract's grammar anatomy is rule title plus one HTML model.
@@ -270,7 +271,10 @@ describe("P2B hub card anatomies", () => {
         detail: details.detailsById["lex:architekt"],
       }),
     );
-    expect(withPicture).toContain("vocabulary-architekt-studio.png");
+    expect(withPicture).toContain('data-subject-visual="illustrated:refined"');
+    expect(withPicture).not.toContain("vocabulary-architekt-studio.png");
+    expect(withPicture).toContain("An architect works with plans");
+    expect(withPicture).toContain('aria-label="Illustrated vocabulary"');
     expect(withPicture).not.toContain('data-meaning-plate="detail"');
 
     // `lex:architektin` has no illustration, so it keeps the plate. (`lex:aerztin`
@@ -287,7 +291,7 @@ describe("P2B hub card anatomies", () => {
     expect(withPlate).toContain('data-meaning-plate="detail"');
     expect(withPlate).toContain("meaning-plate--detail");
     expect(withPlate).toContain("die Architektinnen");
-    expect(withPlate).toContain("Listen — die Architektin pronunciation");
+    expect(withPlate).toContain("Listen: die Architektin pronunciation");
 
     // A detail with no stored plural shows no morphology preview at all.
     // Every projected no-plural lexeme now carries an illustration, so this

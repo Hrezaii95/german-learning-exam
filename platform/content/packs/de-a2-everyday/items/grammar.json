@@ -1,0 +1,437 @@
+[
+  {
+    "id": "a2-grammatik-plaene",
+    "unitId": "appointments",
+    "bookRef": {
+      "book": "independent-a2",
+      "lesson": 1
+    },
+    "source": "study-extra",
+    "tags": [
+      "everyday-plans"
+    ],
+    "review": {
+      "status": "pending-german-review"
+    },
+    "type": "grammarPoint",
+    "title": "Pläne und Gründe: Verbposition",
+    "explanation": "Im Hauptsatz steht das konjugierte Verb an zweiter Position. Bei trennbaren Verben steht der abgetrennte Teil am Satzende. Nach weil steht das konjugierte Verb am Ende des Nebensatzes. Im Perfekt stehen haben oder sein an zweiter Position und das Partizip II am Satzende.",
+    "examples": [
+      {
+        "text": "Wir steigen in Berlin um.",
+        "translation": "We change trains in Berlin."
+      },
+      {
+        "text": "Ich komme später, weil der Zug Verspätung hat.",
+        "translation": "I am arriving later because the train is delayed."
+      },
+      {
+        "text": "Ich habe den Termin abgesagt.",
+        "translation": "I have cancelled the appointment."
+      }
+    ],
+    "drills": [
+      "a2-drill-sort",
+      "a2-drill-gap",
+      "a2-drill-order",
+      "a2-drill-build",
+      "a2-drill-transform",
+      "a2-drill-error"
+    ]
+  },
+  {
+    "id": "a2-drill-sort",
+    "unitId": "appointments",
+    "bookRef": {
+      "book": "independent-a2",
+      "lesson": 1
+    },
+    "source": "study-extra",
+    "tags": [
+      "everyday-plans",
+      "word-order"
+    ],
+    "review": {
+      "status": "pending-german-review"
+    },
+    "type": "drill",
+    "grammarPoint": "a2-grammatik-plaene",
+    "drillType": "sort",
+    "prompt": {
+      "instruction": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ordne den Ausdruck einer Gruppe zu."
+          }
+        ]
+      },
+      "stem": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "weil der Zug Verspätung hat"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "main",
+          "label": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "Hauptsatz"
+              }
+            ]
+          }
+        },
+        {
+          "id": "subordinate",
+          "label": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "Nebensatz"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "answer": {
+      "type": "choice",
+      "correctIds": [
+        "subordinate"
+      ]
+    },
+    "revealFields": [
+      "answer"
+    ],
+    "buckets": [
+      {
+        "id": "main",
+        "label": "Hauptsatz"
+      },
+      {
+        "id": "subordinate",
+        "label": "Nebensatz"
+      }
+    ]
+  },
+  {
+    "id": "a2-drill-gap",
+    "unitId": "outings",
+    "bookRef": {
+      "book": "independent-a2",
+      "lesson": 2
+    },
+    "source": "study-extra",
+    "tags": [
+      "everyday-plans",
+      "word-order"
+    ],
+    "review": {
+      "status": "pending-german-review"
+    },
+    "type": "drill",
+    "grammarPoint": "a2-grammatik-plaene",
+    "drillType": "gap",
+    "prompt": {
+      "instruction": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ergänze die passende Verbform."
+          }
+        ]
+      },
+      "stem": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Wir ____ morgen am Ausflug teil."
+          }
+        ]
+      }
+    },
+    "answer": {
+      "type": "exact",
+      "accepted": [
+        "nehmen"
+      ]
+    },
+    "revealFields": [
+      "answer"
+    ],
+    "distractors": [
+      "nimmt",
+      "nehme",
+      "nehmt"
+    ]
+  },
+  {
+    "id": "a2-drill-order",
+    "unitId": "outings",
+    "bookRef": {
+      "book": "independent-a2",
+      "lesson": 2
+    },
+    "source": "study-extra",
+    "tags": [
+      "everyday-plans",
+      "word-order"
+    ],
+    "review": {
+      "status": "pending-german-review"
+    },
+    "type": "drill",
+    "grammarPoint": "a2-grammatik-plaene",
+    "drillType": "order",
+    "prompt": {
+      "instruction": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Bilde einen Satz. Beginne mit „Wir“."
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "subject",
+          "label": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "Wir"
+              }
+            ]
+          }
+        },
+        {
+          "id": "verb",
+          "label": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "steigen"
+              }
+            ]
+          }
+        },
+        {
+          "id": "place",
+          "label": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "in Berlin"
+              }
+            ]
+          }
+        },
+        {
+          "id": "prefix",
+          "label": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "um."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "answer": {
+      "type": "order",
+      "correctOrder": [
+        "subject",
+        "verb",
+        "place",
+        "prefix"
+      ]
+    },
+    "revealFields": [
+      "answer"
+    ]
+  },
+  {
+    "id": "a2-drill-build",
+    "unitId": "outings",
+    "bookRef": {
+      "book": "independent-a2",
+      "lesson": 2
+    },
+    "source": "study-extra",
+    "tags": [
+      "everyday-plans",
+      "word-order"
+    ],
+    "review": {
+      "status": "pending-german-review"
+    },
+    "type": "drill",
+    "grammarPoint": "a2-grammatik-plaene",
+    "drillType": "build",
+    "prompt": {
+      "instruction": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Bilde das Partizip II von „mitbringen“."
+          }
+        ]
+      }
+    },
+    "answer": {
+      "type": "exact",
+      "accepted": [
+        "mitgebracht"
+      ]
+    },
+    "revealFields": [
+      "answer"
+    ]
+  },
+  {
+    "id": "a2-drill-transform",
+    "unitId": "appointments",
+    "bookRef": {
+      "book": "independent-a2",
+      "lesson": 1
+    },
+    "source": "study-extra",
+    "tags": [
+      "everyday-plans",
+      "word-order"
+    ],
+    "review": {
+      "status": "pending-german-review"
+    },
+    "type": "drill",
+    "grammarPoint": "a2-grammatik-plaene",
+    "drillType": "transform",
+    "prompt": {
+      "instruction": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Schreibe den Satz im Perfekt."
+          }
+        ]
+      },
+      "stem": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Ich sage den Termin ab."
+          }
+        ]
+      }
+    },
+    "answer": {
+      "type": "exact",
+      "accepted": [
+        "Ich habe den Termin abgesagt.",
+        "Ich habe den Termin abgesagt"
+      ]
+    },
+    "revealFields": [
+      "answer"
+    ]
+  },
+  {
+    "id": "a2-drill-error",
+    "unitId": "outings",
+    "bookRef": {
+      "book": "independent-a2",
+      "lesson": 2
+    },
+    "source": "study-extra",
+    "tags": [
+      "everyday-plans",
+      "word-order"
+    ],
+    "review": {
+      "status": "pending-german-review"
+    },
+    "type": "drill",
+    "grammarPoint": "a2-grammatik-plaene",
+    "drillType": "errorHunt",
+    "prompt": {
+      "instruction": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Korrigiere die Verbform im Satz."
+          }
+        ]
+      },
+      "stem": {
+        "tokens": [
+          {
+            "type": "plain",
+            "text": "Wir kommt morgen später."
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "label": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "kommen"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "label": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "kommt"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "label": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "komme"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "label": {
+            "tokens": [
+              {
+                "type": "plain",
+                "text": "kommst"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "answer": {
+      "type": "choice",
+      "correctIds": [
+        "a"
+      ]
+    },
+    "revealFields": [
+      "answer"
+    ]
+  }
+]
