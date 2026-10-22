@@ -2294,8 +2294,8 @@
 
 @media screen and (width < 760px) {
   .shell-bottomnav.mobile-navigation {
-    display: grid;
-    grid-template-columns: repeat(5,minmax(0,1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 2px;
     padding: 6px 4px calc(6px + env(safe-area-inset-bottom,0px));
   }
@@ -2826,7 +2826,8 @@
 }
 
 .mobile-navigation > :is(a,button) {
-  min-width: 0;
+  flex: 1 0 max-content;
+  min-width: 44px;
   overflow-wrap: normal;
 }
 
@@ -2998,8 +2999,8 @@
     right: 0;
     bottom: 0;
     z-index: 30;
-    display: grid;
-    grid-template-columns: repeat(5,minmax(0,1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 2px;
     padding: 6px 4px calc(6px + env(safe-area-inset-bottom,0px));
     background: var(--nav);

@@ -24,11 +24,27 @@ test("book prints the current original page without shell, reading controls or a
   await expect.poll(()=>image.evaluate((element:HTMLImageElement)=>element.complete&&element.naturalWidth>0)).toBe(true);
   const source=await image.getAttribute("src");
   expect(source).toBeTruthy();
-  await printLiveSheet(page,info,"book-coursebook-30",async()=>{
+  const pdfs=await printLiveSheet(page,info,"book-coursebook-30",async()=>{
     await expect(workspace.locator(".book-header h1")).toBeVisible();
     await expect(workspace.locator(".book-original")).toBeVisible();
     await expect(image).toBeVisible();
     await expect(image).toHaveAttribute("src",source!);
+    await expect(page.locator(".study-toolbar .study-scope > summary")).toBeVisible();
+    await expect(workspace.locator(".book-page-caption")).toBeVisible();
+    await expect(workspace.locator(".book-credit")).toBeVisible();
+    await expect(page.locator(".shell-credit")).toBeVisible();
+    const flow=await image.evaluate((element:HTMLImageElement)=>{
+      const workspace=element.closest(".book-workspace")!;
+      const image=element.getBoundingClientRect(),scroll=workspace.querySelector(".book-page-scroll")!.getBoundingClientRect();
+      const caption=workspace.querySelector(".book-page-caption")!.getBoundingClientRect(),bookCredit=workspace.querySelector(".book-credit")!.getBoundingClientRect(),credit=document.querySelector(".shell-credit")!.getBoundingClientRect();
+      return {width:image.width,height:image.height,aspectError:Math.abs(image.width/image.height-element.naturalWidth/element.naturalHeight),imageBeyondScroll:image.bottom-scroll.bottom,imageCaptionGap:caption.top-image.bottom,captionBookCreditGap:bookCredit.top-caption.bottom,creditGap:credit.top-bookCredit.bottom};
+    });
+    expect(flow.width).toBeGreaterThan(0);expect(flow.height).toBeGreaterThan(0);
+    expect(flow.aspectError).toBeLessThan(0.001);
+    expect(flow.imageBeyondScroll).toBeLessThanOrEqual(1);
+    expect(flow.imageCaptionGap).toBeGreaterThanOrEqual(-1);
+    expect(flow.captionBookCreditGap).toBeGreaterThanOrEqual(-1);
+    expect(flow.creditGap).toBeGreaterThanOrEqual(-1);
     await expect.poll(()=>paper.evaluate(element=>element.scrollWidth-element.clientWidth)).toBeLessThanOrEqual(1);
     for(const selector of [".shell-rail",".shell-topnav",".shell-bottomnav",".study-dictionary-launch"]){
       await expect(page.locator(selector)).toBeHidden();
@@ -41,6 +57,8 @@ test("book prints the current original page without shell, reading controls or a
     expect(await controls.count()).toBeGreaterThan(0);
     for(const control of await controls.all())await expect(control).toBeHidden();
   });
+  expect(pdfs.map(pdf=>pdf.format)).toEqual(["A4","Letter"]);
+  for(const pdf of pdfs)expect((pdf.bytes.toString("latin1").match(/\/Type\s*\/Page\b/g)??[]).length,`${pdf.format} keeps the current original page and credits on one sheet`).toBe(1);
   await expect(view).toHaveValue("page");
   await expect(zoom).toHaveValue("150");
   await expect(workspace.getByRole("combobox",{name:"Go to page",exact:true})).toHaveValue("coursebook-30");
