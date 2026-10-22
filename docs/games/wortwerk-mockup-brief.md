@@ -4,7 +4,7 @@ The full instructions for rendering the Wortwerk screens with an image model. A 
 
 ---
 
-I'm designing "Wortwerk", a German learning game inside an app called "German Learning OS". It trains every skill (vocabulary, grammar, listening, speaking, reading, writing, exam practice) and works for every level from A1 to C2, because the content comes from swappable level packs. It is a companion to the coursebook the learner uses (here: Momente A1): learners choose content by lesson, by topic, up to a lesson, or up to a page, and teachers can assign work to a class. I need a SEPARATE mockup image for every screen below: 70 images in total (64 screens plus 6 added screens).
+I'm designing "Wortwerk", a German learning game inside an app called "German Learning OS". It trains every skill (vocabulary, grammar, listening, speaking, reading, writing, exam practice) and works for every level from A1 to C2, because the content comes from swappable level packs. It is a companion to the coursebook the learner uses (here: Momente A1): learners choose content by lesson, by topic, up to a lesson, or up to a page, and teachers can assign work to a class. I need a SEPARATE mockup image for every screen below: 80 images in total (64 screens, 6 added screens and 10 dashboard screens).
 
 HOW TO WORK
 - Generate ONE image per reply, in the numbered order below. Put the number and name above it, e.g. "07 · Smart reminder".
@@ -137,5 +137,16 @@ ADDED SCREENS (draw these after 64: the feedback reveal that question screens ho
 68 · You fixed this: a centre card "das Buch → die Bücher" shown as a Forge result (the "ü" lavender, the "er" yellow), a small calm label "You fixed this ✓ (missed 6 cards ago)", and the token's plural segment filling.
 69 · Format ladder, free recall: the prompt "der Apfel → plural?", no options, a text field with helper keys "ä ö ü ß", and a tiny progress label "Recall step 3 / 3".
 70 · Learning stats (private): "Your learning, on this device only", three numbers "7-day return: 6 / 7 days", "Runs finished: 92%", "Remembered after a week: 81%", and a small line chart.
+DASHBOARDS (signed-in; reference screens, so gender colours are allowed)
+71 · Sign in: "Sign in to German Learning OS", fields "Username" and "Password", a button "Sign in", greyed buttons "Continue with email" and "Continue with Google" labelled "Coming soon", and a link "Use without an account".
+72 · Student dashboard: an embedded Today panel (streak, goal ring, run preview), an "Assignments" card "Homework from Frau Weber · due Fri · 8 / 20", a "My book" card "Momente A1 · Lektion 5 · Seite 62 · Your class is on p. 64 · Follow class", a sync status "Synced ✓", and an account avatar "Anna".
+73 · Teacher, classes home: two class cards "A1 Demo-Klasse · Lektion 5 · p. 62 · 12 / 15 active · 2 open assignments · ⚠ 3 behind" and "A1 Abendkurs", and a button "New class".
+74 · Teacher, class overview: a "Class position" card, a "This week" strip, a skills heat map (students × Meaning, Gender, Plural, Listening, Grammar, Reading, Writing, Speaking) with a number in every cell and colour-blind-safe shading, a "Tricky words" list with a button "Assign these", and a "Needs attention" list.
+75 · Teacher, student detail: "Ben (Demo)", per-lesson progress bars L1–L5, tricky words with their four segments, recent activity for 7 days, and assignment history.
+76 · Teacher extras import: a table preview "German · English · Lesson · Page · Tags", validation ticks, and the button "Publish to class".
+77 · Admin overview: tiles "Users 5 (1 admin · 1 teacher · 3 students)", "Weekly active 4", "Classes 1", "Sync errors 24 h: 0", "Version a1b2c3d".
+78 · Admin users: a searchable table with role chips, status, a "Demo" tag and row actions "Change role · Reset password · Disable"; a confirm dialog for "Reset password for student2?".
+79 · Admin content packs: rows "A1 · Momente · 660 items · Reviewed · Enabled", "B2 · Beruf (sample) · Pending review · Disabled", with a "Mark reviewed" action that names the reviewer.
+80 · Account and data: display name, sign-in methods "Password ✓ · Email (coming soon) · Google (coming soon)", devices list, buttons "Export my data", "Delete account", "Sign out".
 
 Start with 01.

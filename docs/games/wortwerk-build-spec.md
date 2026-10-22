@@ -2,6 +2,8 @@
 
 The full specification, build plan, tests, gates and deployment steps for Wortwerk. A short prompt that points here is in [wortwerk-prompts.md](wortwerk-prompts.md). The text below is addressed to the coding agent.
 
+> **Parallel lanes (ADR-019):** Lane 2 implements this spec. Phase 0 belongs to Lane 1. §1.9 Class mode B and Phase 7, plus the teacher side of §1.8, belong to Lane 3. Persistence must follow `docs/lanes/CONTRACTS.md` §4 (sync stores). See `docs/lanes/lane-2-game.md` for the exact split. Class mode B is **approved** (ADR-018) and built by Lane 3.
+
 ---
 
 You are implementing Wortwerk v2 in the German Learning OS repository (Hrezaii95/german-learning-exam). Wortwerk is an all-skills learning game (vocabulary, grammar, listening, speaking, reading, writing, exam practice) built as a DATA-DRIVEN ENGINE. New levels (A2–C2) or new languages must be addable as content packs with ZERO code changes. Work as the repository's orchestrator, under its own rules.
@@ -24,15 +26,15 @@ You are implementing Wortwerk v2 in the German Learning OS repository (Hrezaii95
 - DATA holds everything about a language or a level: items, grammar drills, maps, stories, exam definitions, difficulty knobs, UI labels for grammar terms, audio and illustrations.
 - No component, template or test may branch on a level id, pack id or German string. CI enforces this with a grep test over `components/wortwerk`, `lib/wortwerk` and `packages/wortwerk` for `"A1"|"B2"|"der"|"die"|"das"|"Akkusativ"` and similar literals outside fixtures.
 
-### 1.2 Content layout (repo root)
+### 1.2 Content layout (under `platform/content/`; the repo-root `content/` is a different, existing folder)
 ```
-content/languages/<lang>.json      # language profile
-content/difficulty/<CEFR>.json     # difficulty knobs per level
-content/packs/<pack-id>/pack.json  # manifest
-content/packs/<pack-id>/items/*.json|csv
-content/packs/<pack-id>/drills/*.json
-content/packs/<pack-id>/story.json, exam.json
-content/packs/<pack-id>/media/{audio,illustrations}/…
+platform/content/languages/<lang>.json      # language profile
+platform/content/difficulty/<CEFR>.json     # difficulty knobs per level
+platform/content/packs/<pack-id>/pack.json  # manifest
+platform/content/packs/<pack-id>/items/*.json|csv
+platform/content/packs/<pack-id>/drills/*.json
+platform/content/packs/<pack-id>/story.json, exam.json
+platform/content/packs/<pack-id>/media/{audio,illustrations}/…
 ```
 - **Language profile:** articles and genders mapped to design tokens, plural pattern ids and labels, cases, prepositions by case, separable prefixes, helper keys, normalisation rules (ß/ss, ae→ä as a hint-level match), TTS voice ids, grammar UI labels.
 - **Difficulty profile:** options count, timer seconds, audio speed range, hints allowed, max passage length, distractor closeness, typed-answer ratio.
@@ -105,9 +107,9 @@ Corners, Sort, Build, Order, Gap, Match, Hotspot, Listen (wrapper), Record, Writ
 - **Teacher and personal extras:** CSV or paste import (German, English, lesson, page, tags, optional gender/plural), validated, previewed, stored locally and exportable as a mini content pack file that the teacher can share with students.
 - **Asynchronous challenge links:** "Beat my Blitz score on Lektion 5".
 
-### 1.9 Class mode, phase B (needs a backend; BLOCKED until the owner approves)
+### 1.9 Class mode, phase B (needs a backend; APPROVED in ADR-018; built by Lane 3, not Lane 2)
 - Accounts and sync, class position, teacher dashboard, live class game (projector + join code), a feedback inbox for writing and speaking, class and friend streaks, web push.
-- These are listed as deferred in `docs/02-product-requirements.md`. Do not start them until the owner approves the change and it is recorded under `scope_overrides` in `config/claude-codex-operating-model.yaml`, together with the backend choice. The repo's unused Cloudflare worker stub (`apps/web/worker/index.ts`) suggests Workers + D1 + Durable Objects; Supabase is the alternative.
+- Approved by the owner on 2026-10-22 (ADR-018, SO-003). Backend: Cloudflare Workers + D1 (+ Durable Objects later) at german.learnilabs.com. Design: `docs/platform/infrastructure-and-accounts.md` and `docs/platform/dashboards.md`. Implementation: Lane 3.
 - Privacy: teacher-owned classes, minimal data, GDPR-ready deletion, suitable for minors.
 
 ## 2 · Engagement spec (with guard-rails)
@@ -178,8 +180,8 @@ Corners, Sort, Build, Order, Gap, Match, Hotspot, Listen (wrapper), Record, Writ
   - Add a test that `loadSubjectVocabulary()` has no duplicate headwords.
 - **Phase 1, engine core:**
   - Widen `CefrLevel` to A1–C2; move German-specific types into the language profile.
-  - Pack and language-profile JSON Schemas; pack loader, validator CLI (`npm run packs:validate`) and auto-registry (glob `content/packs/*/pack.json`); capability index.
-  - Migrate today's A1 content into `content/packs/de-a1-momente` with no visible change to existing pages.
+  - Pack and language-profile JSON Schemas; pack loader, validator CLI (`npm run packs:validate`) and auto-registry (glob `platform/content/packs/*/pack.json`); capability index.
+  - Migrate today's A1 content into `platform/content/packs/de-a1-momente` with no visible change to existing pages.
   - Corners mechanic + Four Corners templates, Daily Run, streak, check-in, map, results.
 - **Phase 2, grammar + listening:** the Sort, Build, Order and Gap mechanics and the grammar and listening games in §1.6.
 - **Phase 3, speaking, reading, writing:** the Record, Hotspot, Write and Match mechanics and their games.
@@ -188,7 +190,7 @@ Corners, Sort, Build, Order, Gap, Match, Hotspot, Listen (wrapper), Record, Writ
 - **Phase 5, reuse proof:**
   - Add a real second pack (A2 or B1) by data only.
   - Add the CSV → JSON authoring CLI and the preview route.
-  - The PR for that pack must contain ZERO changes outside `content/`.
+  - The PR for that pack must contain ZERO changes outside `platform/content/`.
 - **Phase 6, Class mode A:** assignment links + QR, Today assignment card, completion receipts + teacher receipts page, the CSV importer for teacher and personal extras, challenge links (§1.8).
 - **Phase 7, Class mode B:** only after the owner's recorded approval and backend choice (§1.9).
 
@@ -273,7 +275,7 @@ Never bypass the pre-commit hook. If it fires, restore `proxy.ts` and clean the 
 - Public leaderboards.
 - Pronunciation scoring.
 - New TTS generation.
-- Accounts or a server backend (Class mode B waits for the owner's approval and backend choice).
+- Accounts, `/api`, sync transport and dashboards: approved, but owned by Lane 3, not this spec's lane.
 - Rewriting existing cheat-sheet pages beyond the links.
 - The wider design-system clean-up from the audit.
 
