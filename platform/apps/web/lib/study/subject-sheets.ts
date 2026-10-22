@@ -5,6 +5,7 @@ import type {SavedItem} from "./types";
 /** Serializable row data; catalog loading stays in subject-sheets.server.ts. */
 export type SubjectVocabularyItem={
   id:string;
+  legacyIds?:string[];
   cardId:string;
   de:string;
   meaning:string;

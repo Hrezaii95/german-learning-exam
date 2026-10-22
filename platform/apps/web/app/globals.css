@@ -1,10 +1,23 @@
 /* Design tokens — calm premium learning workspace (docs/06) */
 :root {
+  /* Lane contracts §1 — shared reference palette. */
+  --tone-masc: #245fa7;
+  --tone-fem: #b82e4c;
+  --tone-neut: #237149;
+  --tone-plural: #8c4daa;
+  --tone-plain: #3d5d55;
+  --paper: #fffdf8;
+  --line: #e4ddd2;
+  --action: #345d4c;
+  --chip-ending-bg: #f8e1a1;
+  --chip-ending-line: #b27b19;
+  --chip-umlaut-bg: #dfd6f2;
+  --chip-umlaut-line: #8760af;
   --canvas: #f3efe8;
   --surface: #ffffff;
   --surface-muted: #f7f4ef;
-  --ink: #1c1a24;
-  --ink-muted: #5c5868;
+  --ink: #203536;
+  --ink-muted: #596660;
   --ink-subtle: #7a7588;
   --border: #e4ddd2;
   --border-strong: #d2c9ba;
@@ -72,7 +85,7 @@
   --border-soft: #ebe5dc;
   --shadow-raised: 0 1px 2px rgba(28, 26, 36, 0.06), 0 12px 32px rgba(28, 26, 36, 0.07);
   --shadow-interactive: 0 10px 24px rgba(47, 35, 91, 0.1);
-  --focus-ring: #28634f;
+  --focus-ring: #345d4c;
   --motion-fast: 140ms;
   --motion-base: 200ms;
   --ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);

@@ -1,227 +1,659 @@
 [
   {
-    "unitId": "u1",
-    "bookRef": {
-      "book": "fixture-book",
-      "lesson": 1
-    },
-    "source": "course",
-    "tags": [
-      "fixture"
-    ],
     "type": "lexeme",
     "id": "w0",
-    "lemma": "Probe0",
-    "pos": "noun",
-    "meaning": "Example 0",
-    "gender": "masculine",
-    "article": "der",
-    "forms": {
-      "plural": [
-        "Proben0"
-      ]
-    },
-    "audio": {
-      "src": "/audio/fixture-0.mp3",
-      "review": "preview"
-    },
-    "image": "/images/fixture-0.svg"
-  },
-  {
     "unitId": "u1",
     "bookRef": {
       "book": "fixture-book",
-      "lesson": 1
+      "lesson": 1,
+      "page": 10
     },
     "source": "course",
     "tags": [
-      "fixture"
+      "everyday"
     ],
+    "lemma": "Name",
+    "pos": "noun",
+    "meaning": "name",
+    "gender": "male",
+    "article": "der",
+    "forms": {
+      "singular": [
+        "der Name"
+      ],
+      "plural": [
+        "die Namen"
+      ],
+      "pluralPattern": [
+        "en-n"
+      ]
+    },
+    "examples": [
+      {
+        "text": "Mein Name ist Sara.",
+        "translation": "My name is Sara.",
+        "audio": {
+          "src": "/audio/word-cards-v1/word-d868c05b3cf5e4d4.mp3",
+          "text": "Mein Name ist Sara.",
+          "review": "preview"
+        }
+      }
+    ],
+    "audio": {
+      "src": "/audio/word-cards-v1/tts-dfbef7017aec5501.mp3",
+      "text": "der Name",
+      "review": "preview"
+    },
+    "pluralAudio": {
+      "die Namen": {
+        "src": "/audio/word-cards-v1/word-88dbabc006af81e0.mp3",
+        "text": "die Namen",
+        "review": "preview"
+      }
+    },
+    "sourceRef": {
+      "cardId": "W017",
+      "href": "/vocabulary/w017",
+      "lessons": [
+        1
+      ],
+      "sources": [
+        "course"
+      ],
+      "sourceLessons": {
+        "course": [
+          1
+        ]
+      }
+    },
+    "display": {
+      "text": "der Name",
+      "category": "Noun",
+      "tone": "male",
+      "patterns": [
+        "der Name",
+        "die Namen"
+      ],
+      "note": "Learn der Name together with die Namen. The plural article is die.\n\nName is the general word; Vorname is first name."
+    },
+    "review": {
+      "status": "pending-german-review"
+    },
+    "image": "/illustrations/vocabulary/name-wide-512.jpg"
+  },
+  {
     "type": "lexeme",
     "id": "w1",
-    "lemma": "Probe1",
-    "pos": "noun",
-    "meaning": "Example 1",
-    "gender": "masculine",
-    "article": "der",
-    "forms": {
-      "plural": [
-        "Proben1"
-      ]
-    },
-    "audio": {
-      "src": "/audio/fixture-1.mp3",
-      "review": "preview"
-    },
-    "image": "/images/fixture-1.svg"
-  },
-  {
     "unitId": "u1",
     "bookRef": {
       "book": "fixture-book",
-      "lesson": 1
+      "lesson": 1,
+      "page": 11
     },
     "source": "course",
     "tags": [
-      "fixture"
+      "everyday"
     ],
+    "lemma": "Vorname",
+    "pos": "noun",
+    "meaning": "first name",
+    "gender": "male",
+    "article": "der",
+    "forms": {
+      "singular": [
+        "der Vorname"
+      ],
+      "plural": [
+        "die Vornamen"
+      ],
+      "pluralPattern": [
+        "en-n"
+      ]
+    },
+    "examples": [
+      {
+        "text": "Mein Vorname ist Sara.",
+        "translation": "My first name is Sara.",
+        "audio": {
+          "src": "/audio/word-cards-v1/word-c8196bd7ff8497c5.mp3",
+          "text": "Mein Vorname ist Sara.",
+          "review": "preview"
+        }
+      }
+    ],
+    "audio": {
+      "src": "/audio/word-cards-v1/tts-ea30e996b5e54668.mp3",
+      "text": "der Vorname",
+      "review": "preview"
+    },
+    "pluralAudio": {
+      "die Vornamen": {
+        "src": "/audio/word-cards-v1/word-769e90acf8625636.mp3",
+        "text": "die Vornamen",
+        "review": "preview"
+      }
+    },
+    "sourceRef": {
+      "cardId": "W018",
+      "href": "/vocabulary/w018",
+      "lessons": [
+        1
+      ],
+      "sources": [
+        "course"
+      ],
+      "sourceLessons": {
+        "course": [
+          1
+        ]
+      }
+    },
+    "display": {
+      "text": "der Vorname",
+      "category": "Noun",
+      "tone": "male",
+      "patterns": [
+        "der Vorname",
+        "die Vornamen"
+      ],
+      "note": "Learn der Vorname together with die Vornamen. The plural article is die.\n\nVor- points to the first part of a full name."
+    },
+    "review": {
+      "status": "pending-german-review"
+    },
+    "image": "/illustrations/vocabulary/vorname-wide-512.jpg"
+  },
+  {
     "type": "lexeme",
     "id": "w2",
-    "lemma": "Probe2",
-    "pos": "noun",
-    "meaning": "Example 2",
-    "gender": "masculine",
-    "article": "der",
-    "forms": {
-      "plural": [
-        "Proben2"
-      ]
-    },
-    "audio": {
-      "src": "/audio/fixture-2.mp3",
-      "review": "preview"
-    },
-    "image": "/images/fixture-2.svg"
-  },
-  {
     "unitId": "u1",
     "bookRef": {
       "book": "fixture-book",
-      "lesson": 1
+      "lesson": 1,
+      "page": 12
     },
     "source": "course",
     "tags": [
-      "fixture"
+      "everyday"
     ],
+    "lemma": "Familienname",
+    "pos": "noun",
+    "meaning": "surname / family name",
+    "gender": "male",
+    "article": "der",
+    "forms": {
+      "singular": [
+        "der Familienname"
+      ],
+      "plural": [
+        "die Familiennamen"
+      ],
+      "pluralPattern": [
+        "en-n"
+      ]
+    },
+    "examples": [
+      {
+        "text": "Mein Familienname ist Müller.",
+        "translation": "My surname is Müller.",
+        "audio": {
+          "src": "/audio/word-cards-v1/word-b00d54e980e5562f.mp3",
+          "text": "Mein Familienname ist Müller.",
+          "review": "preview"
+        }
+      }
+    ],
+    "audio": {
+      "src": "/audio/word-cards-v1/tts-16e34b0c5aec84c4.mp3",
+      "text": "der Familienname",
+      "review": "preview"
+    },
+    "pluralAudio": {
+      "die Familiennamen": {
+        "src": "/audio/word-cards-v1/word-91588453a54355aa.mp3",
+        "text": "die Familiennamen",
+        "review": "preview"
+      }
+    },
+    "sourceRef": {
+      "cardId": "W019",
+      "href": "/vocabulary/w019",
+      "lessons": [
+        1
+      ],
+      "sources": [
+        "course"
+      ],
+      "sourceLessons": {
+        "course": [
+          1
+        ]
+      }
+    },
+    "display": {
+      "text": "der Familienname",
+      "category": "Noun",
+      "tone": "male",
+      "patterns": [
+        "der Familienname",
+        "die Familiennamen"
+      ],
+      "note": "Learn der Familienname together with die Familiennamen. The plural article is die.\n\nFamilienname and Nachname both mean surname."
+    },
+    "review": {
+      "status": "pending-german-review"
+    },
+    "image": "/illustrations/vocabulary/familienname-wide-512.jpg"
+  },
+  {
     "type": "lexeme",
     "id": "w3",
-    "lemma": "Probe3",
-    "pos": "noun",
-    "meaning": "Example 3",
-    "gender": "masculine",
-    "article": "der",
-    "forms": {
-      "plural": [
-        "Proben3"
-      ]
-    },
-    "audio": {
-      "src": "/audio/fixture-3.mp3",
-      "review": "preview"
-    },
-    "image": "/images/fixture-3.svg"
-  },
-  {
     "unitId": "u1",
     "bookRef": {
       "book": "fixture-book",
-      "lesson": 1
+      "lesson": 1,
+      "page": 13
     },
     "source": "course",
     "tags": [
-      "fixture"
+      "everyday"
     ],
+    "lemma": "Herr",
+    "pos": "noun",
+    "meaning": "Mr / gentleman",
+    "gender": "male",
+    "article": "der",
+    "forms": {
+      "singular": [
+        "der Herr"
+      ],
+      "plural": [
+        "die Herren"
+      ],
+      "pluralPattern": [
+        "en-n"
+      ]
+    },
+    "examples": [
+      {
+        "text": "Guten Tag, Herr Müller!",
+        "translation": "Hello, Mr Müller!",
+        "audio": {
+          "src": "/audio/word-cards-v1/word-241c03544341c752.mp3",
+          "text": "Guten Tag, Herr Müller!",
+          "review": "preview"
+        }
+      }
+    ],
+    "audio": {
+      "src": "/audio/word-cards-v1/tts-f85dfe36d5fdc12e.mp3",
+      "text": "der Herr",
+      "review": "preview"
+    },
+    "pluralAudio": {
+      "die Herren": {
+        "src": "/audio/word-cards-v1/word-593dd73c0459d5ed.mp3",
+        "text": "die Herren",
+        "review": "preview"
+      }
+    },
+    "sourceRef": {
+      "cardId": "W023",
+      "href": "/vocabulary/w023",
+      "lessons": [
+        1
+      ],
+      "sources": [
+        "course"
+      ],
+      "sourceLessons": {
+        "course": [
+          1
+        ]
+      }
+    },
+    "display": {
+      "text": "der Herr",
+      "category": "Noun",
+      "tone": "male",
+      "patterns": [
+        "der Herr",
+        "die Herren"
+      ],
+      "note": "Learn der Herr together with die Herren. The plural article is die.\n\nUse Herr before a man's surname when addressing him formally. Title: Herr + surname. Herrn is an inflected singular form."
+    },
+    "review": {
+      "status": "pending-german-review"
+    },
+    "image": "/illustrations/vocabulary/herr-wide-512.jpg"
+  },
+  {
     "type": "lexeme",
     "id": "w4",
-    "lemma": "Probe4",
-    "pos": "noun",
-    "meaning": "Example 4",
-    "gender": "masculine",
-    "article": "der",
-    "forms": {
-      "plural": [
-        "Proben4"
-      ]
-    },
-    "audio": {
-      "src": "/audio/fixture-4.mp3",
-      "review": "preview"
-    },
-    "image": "/images/fixture-4.svg"
-  },
-  {
     "unitId": "u1",
     "bookRef": {
       "book": "fixture-book",
-      "lesson": 1
+      "lesson": 1,
+      "page": 14
     },
     "source": "course",
     "tags": [
-      "fixture"
+      "everyday"
     ],
+    "lemma": "Frau",
+    "pos": "noun",
+    "meaning": "Ms / Mrs; woman / wife",
+    "gender": "female",
+    "article": "die",
+    "forms": {
+      "singular": [
+        "die Frau"
+      ],
+      "plural": [
+        "die Frauen"
+      ],
+      "pluralPattern": [
+        "en-n"
+      ]
+    },
+    "examples": [
+      {
+        "text": "Guten Tag, Frau Müller!",
+        "translation": "Hello, Ms Müller!",
+        "audio": {
+          "src": "/audio/word-cards-v1/word-18d68500ab068b4a.mp3",
+          "text": "Guten Tag, Frau Müller!",
+          "review": "preview"
+        }
+      }
+    ],
+    "audio": {
+      "src": "/audio/word-cards-v1/tts-86d4dc95732c901f.mp3",
+      "text": "die Frau",
+      "review": "preview"
+    },
+    "pluralAudio": {
+      "die Frauen": {
+        "src": "/audio/word-cards-v1/word-cba8af6393a7b19b.mp3",
+        "text": "die Frauen",
+        "review": "preview"
+      }
+    },
+    "sourceRef": {
+      "cardId": "W024",
+      "href": "/vocabulary/w024",
+      "lessons": [
+        1
+      ],
+      "sources": [
+        "course"
+      ],
+      "sourceLessons": {
+        "course": [
+          1
+        ]
+      }
+    },
+    "display": {
+      "text": "die Frau",
+      "category": "Noun",
+      "tone": "female",
+      "patterns": [
+        "die Frau",
+        "die Frauen"
+      ],
+      "note": "Learn die Frau together with die Frauen. The plural article is die.\n\nFrau is a title before a surname; it also means woman or wife. Title in L1; woman/wife in L3. Frau does not specify marital status."
+    },
+    "review": {
+      "status": "pending-german-review"
+    },
+    "image": "/illustrations/vocabulary/frau-wide-512.jpg"
+  },
+  {
     "type": "lexeme",
     "id": "w5",
-    "lemma": "Probe5",
-    "pos": "noun",
-    "meaning": "Example 5",
-    "gender": "masculine",
-    "article": "der",
-    "forms": {
-      "plural": [
-        "Proben5"
-      ]
-    },
-    "audio": {
-      "src": "/audio/fixture-5.mp3",
-      "review": "preview"
-    },
-    "image": "/images/fixture-5.svg"
-  },
-  {
     "unitId": "u1",
     "bookRef": {
       "book": "fixture-book",
-      "lesson": 1
+      "lesson": 1,
+      "page": 15
     },
     "source": "course",
     "tags": [
-      "fixture"
+      "numbers"
     ],
+    "lemma": "Jahr",
+    "pos": "noun",
+    "meaning": "year",
+    "gender": "neuter",
+    "article": "das",
+    "forms": {
+      "singular": [
+        "das Jahr"
+      ],
+      "plural": [
+        "die Jahre"
+      ],
+      "pluralPattern": [
+        "e"
+      ]
+    },
+    "examples": [
+      {
+        "text": "Ich bin 28 Jahre alt.",
+        "translation": "I am 28 years old.",
+        "audio": {
+          "src": "/audio/word-cards-v1/word-965cf4acecc710d6.mp3",
+          "text": "Ich bin 28 Jahre alt.",
+          "review": "preview"
+        }
+      }
+    ],
+    "audio": {
+      "src": "/audio/word-cards-v1/tts-3514df498a8fd952.mp3",
+      "text": "das Jahr",
+      "review": "preview"
+    },
+    "pluralAudio": {
+      "die Jahre": {
+        "src": "/audio/word-cards-v1/word-7569c642741b27bc.mp3",
+        "text": "die Jahre",
+        "review": "preview"
+      }
+    },
+    "sourceRef": {
+      "cardId": "W097",
+      "href": "/vocabulary/w097",
+      "lessons": [
+        2
+      ],
+      "sources": [
+        "course"
+      ],
+      "sourceLessons": {
+        "course": [
+          2
+        ]
+      }
+    },
+    "display": {
+      "text": "das Jahr",
+      "category": "Noun",
+      "tone": "neuter",
+      "patterns": [
+        "das Jahr",
+        "die Jahre"
+      ],
+      "note": "Learn das Jahr together with die Jahre. The plural article is die.\n\nIn the age phrase, use plural Jahre."
+    },
+    "review": {
+      "status": "pending-german-review"
+    },
+    "image": "/illustrations/vocabulary/jahr-wide-512.jpg"
+  },
+  {
     "type": "lexeme",
     "id": "w6",
-    "lemma": "Probe6",
-    "pos": "noun",
-    "meaning": "Example 6",
-    "gender": "masculine",
-    "article": "der",
-    "forms": {
-      "plural": [
-        "Proben6"
-      ]
-    },
-    "audio": {
-      "src": "/audio/fixture-6.mp3",
-      "review": "preview"
-    },
-    "image": "/images/fixture-6.svg"
-  },
-  {
     "unitId": "u1",
     "bookRef": {
       "book": "fixture-book",
-      "lesson": 1
+      "lesson": 1,
+      "page": 16
     },
     "source": "course",
     "tags": [
-      "fixture"
+      "everyday"
     ],
-    "type": "lexeme",
-    "id": "w7",
-    "lemma": "Probe7",
+    "lemma": "Kind",
     "pos": "noun",
-    "meaning": "Example 7",
-    "gender": "masculine",
-    "article": "der",
+    "meaning": "child",
+    "gender": "neuter",
+    "article": "das",
     "forms": {
+      "singular": [
+        "das Kind"
+      ],
       "plural": [
-        "Proben7"
+        "die Kinder"
+      ],
+      "pluralPattern": [
+        "er"
       ]
     },
+    "examples": [
+      {
+        "text": "Das Kind heißt Alex.",
+        "translation": "The child's name is Alex.",
+        "audio": {
+          "src": "/audio/word-cards-v1/word-cee575d315e7f184.mp3",
+          "text": "Das Kind heißt Alex.",
+          "review": "preview"
+        }
+      }
+    ],
     "audio": {
-      "src": "/audio/fixture-7.mp3",
+      "src": "/audio/word-cards-v1/tts-1bf9a16f327c342b.mp3",
+      "text": "das Kind",
       "review": "preview"
     },
-    "image": "/images/fixture-7.svg"
+    "pluralAudio": {
+      "die Kinder": {
+        "src": "/audio/word-cards-v1/word-09594b9df4c75a26.mp3",
+        "text": "die Kinder",
+        "review": "preview"
+      }
+    },
+    "sourceRef": {
+      "cardId": "W098",
+      "href": "/vocabulary/w098",
+      "lessons": [
+        2
+      ],
+      "sources": [
+        "course"
+      ],
+      "sourceLessons": {
+        "course": [
+          2
+        ]
+      }
+    },
+    "display": {
+      "text": "das Kind",
+      "category": "Noun",
+      "tone": "neuter",
+      "patterns": [
+        "das Kind",
+        "die Kinder"
+      ],
+      "note": "Learn das Kind together with die Kinder. The plural article is die.\n\nKind → Kinder; remember das even when the child is a boy or girl."
+    },
+    "review": {
+      "status": "pending-german-review"
+    },
+    "image": "/illustrations/vocabulary/kind-wide-512.jpg"
+  },
+  {
+    "type": "lexeme",
+    "id": "w7",
+    "unitId": "u1",
+    "bookRef": {
+      "book": "fixture-book",
+      "lesson": 1,
+      "page": 17
+    },
+    "source": "course",
+    "tags": [
+      "everyday"
+    ],
+    "lemma": "Single",
+    "pos": "noun",
+    "meaning": "single person",
+    "gender": "male",
+    "article": "der",
+    "forms": {
+      "singular": [
+        "der Single"
+      ],
+      "plural": [
+        "die Singles"
+      ],
+      "pluralPattern": [
+        "s"
+      ]
+    },
+    "examples": [
+      {
+        "text": "Ich bin Single.",
+        "translation": "I am single.",
+        "audio": {
+          "src": "/audio/word-cards-v1/word-747ca1f8e480b003.mp3",
+          "text": "Ich bin Single.",
+          "review": "preview"
+        }
+      }
+    ],
+    "audio": {
+      "src": "/audio/word-cards-v1/tts-179e27c03454d9db.mp3",
+      "text": "der Single",
+      "review": "preview"
+    },
+    "pluralAudio": {
+      "die Singles": {
+        "src": "/audio/word-cards-v1/word-e92e4d4cb787a0d2.mp3",
+        "text": "die Singles",
+        "review": "preview"
+      }
+    },
+    "sourceRef": {
+      "cardId": "W106",
+      "href": "/vocabulary/w106",
+      "lessons": [
+        2
+      ],
+      "sources": [
+        "course"
+      ],
+      "sourceLessons": {
+        "course": [
+          2
+        ]
+      }
+    },
+    "display": {
+      "text": "der Single",
+      "category": "Noun",
+      "tone": "male",
+      "patterns": [
+        "der Single",
+        "die Singles"
+      ],
+      "note": "Learn der Single together with die Singles. The plural article is die.\n\nIn this personal-status statement, say bin Single without an article."
+    },
+    "review": {
+      "status": "pending-german-review"
+    },
+    "image": "/illustrations/vocabulary/single-wide-512.jpg"
   },
   {
     "unitId": "u1",

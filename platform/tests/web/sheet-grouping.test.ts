@@ -43,7 +43,7 @@ describe("infographic grouping priority",()=>{
   it.each(["lesson","subject","gender","plural"] as const)("retains every catalogue row once when grouped by %s",dimension=>{
     const groups=groupSheetItems(vocabulary,dimension);
     const ids=groups.flatMap(group=>group.items.map(item=>item.id));
-    expect(vocabulary).toHaveLength(1338);
+    expect(vocabulary).toHaveLength(1330);
     expect(ids).toHaveLength(vocabulary.length);
     expect(new Set(ids)).toEqual(new Set(vocabulary.map(item=>item.id)));
     expect(groups.every(group=>group.items.length>0)).toBe(true);

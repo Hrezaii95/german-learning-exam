@@ -21,5 +21,5 @@ export default async function Page({params}:Props){
   const {subject}=await params;
   const sheet=loadSubjectSheets().find(item=>item.id===subject);
   if(!sheet)notFound();
-  return <ShellLayout current="cheat-sheets"><SubjectInfographic sheet={sheet} allItems={loadSubjectVocabulary()}/></ShellLayout>;
+  return <ShellLayout current="subjects"><SubjectInfographic sheet={sheet} allItems={loadSubjectVocabulary()}/></ShellLayout>;
 }

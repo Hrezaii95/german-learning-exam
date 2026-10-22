@@ -1,12 +1,12 @@
 # Lane 2 status
 
-Updated by Lane 2 only. Lane worktree: `lane2/l2-1-packs`. Base: `codex/live-alpha` with PR #1 documentation merged locally. Never merge to the live branch.
+Updated by Lane 2 only. Lane worktree: `lane2/l2-2-corners`. Base: `codex/live-alpha` with PR #1 documentation merged locally. Never merge to the live branch.
 
 | PR | Title | State (planned / in progress / draft PR / merged / blocked) | Link | Notes |
 |---|---|---|---|---|
-| L2-1 | Pack content foundation and A1 migration | draft PR | [PR #4](https://github.com/Hrezaii95/german-learning-exam/pull/4) | Code implemented; A1 pack creation blocked by 19 source headword collisions. |
-| L2-2 | Corners and Four Corners templates | planned | — | Separate draft PR per owner's instruction. |
-| L2-3 | Daily Run, event-derived progress and Today | planned | — | Separate draft PR per owner's instruction. |
+| L2-1 | Pack content foundation and A1 migration | draft PR | [PR #4](https://github.com/Hrezaii95/german-learning-exam/pull/4) | Code implemented; after Lane 1 merge, A1 pack remains blocked by 11 source groups. |
+| L2-2 | Corners and Four Corners templates | in progress | — | Implemented; draft publication next. |
+| L2-3 | Daily Run, event-derived progress and Today | in progress | — | Engine/store focused tests pass; route integration underway. |
 
 ## L2-1 implementation plan
 
@@ -72,6 +72,34 @@ No screenshots apply to this data-only slice. No PR merge, deploy, new TTS, lang
 
 `platform/content/packs/a1-migration-status.json` records the current 1,338 source rows, 19 duplicate headword groups and zero missing-lesson errors. The script checks all rows before any output and reports the exact source IDs. The groups include both known duplicate families and intentional-looking homographs/case distinctions; Lane 2 does not silently merge or choose meanings for them.
 
-After Lane 1 resolves the canonical source families, run `npm run packs:migrate-a1 -- --write`, then `npm run packs:validate`. The resulting pack remains pending German review and off by default. L2-2 and later slices remain planned behind this explicit Phase 0 dependency. Integration must retain the draft state while source, browser or composite release gates remain blocked.
+After Lane 1 resolves the canonical source families, run `npm run packs:migrate-a1 -- --write`, then `npm run packs:validate`. The resulting pack remains pending German review and off by default. Owner instruction (2026-10-22): continue L2-2, L2-3 and later phases against fixture packs without waiting for the production pack. Integration must retain the draft state while source, browser or composite release gates remain blocked.
 
 Lane 2 checkpoint saved for L2-1. The shared orchestrator baton/register and `codex/live-alpha` were not written. Resume from this file and the draft PR, preserving the owner's one-PR-per-slice rule.
+
+## Needs Lane 1
+
+After merging `origin/lane1/l1-2-live-defects` (`5a557fc`), migration sees 1330 rows and 11 unresolved groups. The pack is not written; fixture development continues.
+
+| Headword | Source IDs |
+|---|---|
+| Auszubildende | `W370-0`, `W370-1` |
+| er | `W006-0`, `A18-0` |
+| es | `W043-0`, `A19-0` |
+| essen | `l9-essen-0`, `l9-essen-noun-0` |
+| ihr | `W077-0`, `W418-0` |
+| Ketchup | `l9-ketchup-0`, `l9-ketchup-1` |
+| Morgen | `W047-0`, `l6-morgen-0` |
+| orange | `l5-orange-0`, `l9-orange-0` |
+| sie | `W007-0`, `W008-0` |
+| Türkisch | `W217-0`, `W534-0` |
+| Verwandte | `W198-0`, `W198-1` |
+
+## Continuation plan
+
+L2-2: seeded Corners templates and separate no-giveaway projections, accessible controls and fixture-wide tests. L2-3: event-derived learning, Daily Run, contract links/sync stores, TodayPanel and fixed /play routes. Plans posted before coding: PR #4 comment 6344285730. One draft per slice; no PR merging. Remaining source groups and browser/export gate problems do not block independent implementation.
+
+## L2-2 verification and implementation
+
+Seeded Corners templates cover meaning, reverse meaning, gender, plural form/pattern, word-to-picture and source-audio-to-picture where supported, with recognition/reduced-cue/recall variants. Distractors prefer the same map cell, unit and tags, exclude accepted variants, and use opaque IDs assigned after shuffling. Question/feedback projections are separate. Corners supports pointer drop, tap, arrow keys and typed recall; feedback manages focus and source-only audio has explicit gesture, failure and cleanup handling. Fixtures use eight explicitly selected existing source rows with their actual media; this is test data, not an A1 migration or content review.
+
+Focused engine/UI tests: 23 passing, including 1,000-seed position distribution and question DOM checks. Independent review covered answer metadata, audio lifecycle, source links and variant distractors; fixes applied. Full `npm run check`: all typechecks, lint, publication validation, full suite and web rerun pass; final `packs:validate` remains blocked by the absent production manifest. Required release/browser gates remain open; this slice stays draft. The all-phase continuation plan is posted at PR #4 comment 6344476189.

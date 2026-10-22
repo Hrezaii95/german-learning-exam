@@ -1,6 +1,7 @@
 "use client";
 import {StudyTagList} from "./StudyScope";
 import {savedStudyTags} from "@/lib/study/saved-tags";
+import {savedDictionaryEntry} from "@/lib/study/saved-word-card";
 
 import Link from "next/link";
 import {
@@ -259,15 +260,7 @@ export function StudyProvider({
                 )}
                 <div className="study-row">
                   <SaveButton
-                    item={{
-                      id: entry.saveId ?? `card-${entry.id}`,
-                      title: entry.de,
-                      meaning: entry.en,
-                      kind: entry.kind === "phrase" ? "phrase" : entry.kind === "sentence" ? "line" : "word",
-                      href: entry.href,
-                      audio: entry.audio,
-                      ...(entry.studyTags?{studyTags:entry.studyTags}:{}),
-                    }}
+                    item={savedDictionaryEntry(entry)}
                   />
                   {entry.href.includes("#") ? <a href={withPagesBaseAssetPath(entry.href.replace(/\/?#/, "/#"))} onClick={() => setOpen(false)}>{entry.href.startsWith("/cheat-sheets") ? "Open cheat sheet →" : "Open phrase card →"}</a> : <Link href={entry.href} onClick={() => setOpen(false)}>
                     {entry.kind === "phrase" ? "Open phrase card →" : entry.href.startsWith("/book") ? "Open book page →" : entry.href.startsWith("/cheat-sheets") ? "Open cheat sheet →" : "Open study card →"}
@@ -315,7 +308,8 @@ export function SaveButton({
 }) {
   const study = useStudy();
   if (!study) return null;
-  const saved = Boolean(study.state.saved[item.id]);
+  const savedIds=[item.id,...(item.legacyIds??[])];
+  const saved = savedIds.some(id=>Boolean(study.state.saved[id]));
   return (
     <button
       className={`study-save${saved ? " is-saved" : ""}`}
@@ -327,7 +321,7 @@ export function SaveButton({
       onClick={() =>
         study.update((old) => {
           const next = { ...old.saved };
-          if (next[item.id]) delete next[item.id];
+          if (savedIds.some(id=>Boolean(next[id]))) for(const id of savedIds)delete next[id];
           else
             next[item.id] = {
               ...item,

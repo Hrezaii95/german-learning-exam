@@ -9,6 +9,7 @@ import {
   lessonFourQuiz,
   lessonFourVerbs,
   lessonFourWords,
+  type StudyWord,
 } from "@/lib/study/lesson-four";
 import { GermanText, SaveButton, useStudy } from "./StudyProvider";
 import { LineAudio } from "./StudyAudio";
@@ -18,6 +19,7 @@ import {LessonLearningPath} from "./LessonLearningPath";
 import {useStudyScope,StudyScopeNotice} from "./StudyScope";
 import {tagsForLesson} from "@/lib/study/scope";
 import {appendNavigationContext} from "@/lib/content/navigation-context";
+import {savedDictionaryEntry} from "@/lib/study/saved-word-card";
 
 const tabs = ["Words", "Grammar", "Verbs", "Phrases", "Practice"] as const;
 export function LessonFour({ speech }: { speech: Record<string, string> }) {
@@ -32,6 +34,13 @@ export function LessonFour({ speech }: { speech: Record<string, string> }) {
     requestAnimationFrame(()=>document.querySelector(".study-tabs")?.scrollIntoView({block:"start"}));
   }
   const study = useStudy();
+  const savedLessonWord=(word:StudyWord)=>{
+    const entry=study?.dictionary.find(entry=>entry.kind==="word"&&entry.forms.includes(word.de));
+    return entry?savedDictionaryEntry(entry):{
+      id:`card-${word.id}`,title:word.de,meaning:word.en,kind:"word" as const,
+      href:`/vocabulary/${word.id}`,lesson:4,audio:speech[word.de]??null,
+    };
+  };
   const words = lessonFourWords.filter(
     (word) =>
       (category === "All" || word.category === category) &&
@@ -161,15 +170,7 @@ export function LessonFour({ speech }: { speech: Record<string, string> }) {
                   <span className="study-tag">{word.category}</span>
                   <SaveButton
                     compact
-                    item={{
-                      id: `card-${word.id}`,
-                      title: word.de,
-                      meaning: word.en,
-                      kind: "word",
-                      href: `/vocabulary/${word.id}`,
-                      lesson: 4,
-                      audio: speech[word.de] ?? null,
-                    }}
+                    item={savedLessonWord(word)}
                   />
                 </div>
                 <h3>
@@ -453,7 +454,7 @@ export function NewChapterCards() {
       </div>
       <div className="study-chapter-cards">
         {courseChapters.slice(2).filter(c=>matches(tagsForLesson(c.number))).map((c) => (
-          <Link href={`/lessons/0${c.number}`} key={c.number}>
+          <Link href={`/lessons/${String(c.number).padStart(2,"0")}`} key={c.number}>
             <span className="study-chapter-badge">{String(c.number).padStart(2, "0")}</span>
             <div>
               <small>
