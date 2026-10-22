@@ -37,10 +37,8 @@ import {
   detailHubForId,
 } from "@/lib/content/detail-types";
 import { lessonLabel } from "@/lib/content/lesson-label";
-import { ListeningTranscript } from "@/components/audio/ListeningTranscript";
-import { workbookTranscript } from "@/lib/audio/listening-transcripts";
+import { WorkbookAudioTracks } from "@/components/audio/WorkbookAudioPanel";
 import { withPagesBasePath } from "@/lib/content/pages-base-path";
-import { withPagesBaseAssetPath } from "@/lib/content/pages-base-path";
 import {
   filterConceptTopics,
   filterListeningGroups,
@@ -50,7 +48,7 @@ import {
 import type { LearnerGender } from "@/lib/content/detail-types";
 import { resolvePublishedPronunciationExact } from "@/lib/content/media-availability";
 import { illustrationForDetail } from "@/lib/content/illustrations";
-import { IllustrationPicture } from "@/components/media/IllustrationPicture";
+import { SubjectVocabularyVisual } from "@/components/study/SubjectIllustration";
 import { WordFamilyPreview } from "@/components/word-cards/WordFamilyPreview";
 import {canonicalHubPath} from "@/lib/content/hub-redirects";
 import {
@@ -237,30 +235,9 @@ function VocabularyHubCard({
     >
       {illustration ? (
         <div className="hub-card__media">
-          {illustration.responsive ? (
-            <IllustrationPicture
-              variant={illustration.responsive.card}
-              alt={illustration.alt}
-              imageClassName="hub-card__image"
-              pictureClassName="hub-card__picture"
-              /* Browse grids scroll; only the first rows are ever in view. */
-              loading="lazy"
-              objectPosition={illustration.objectPosition}
-            />
-          ) : (
-            <img
-              className="hub-card__image"
-              src={withPagesBaseAssetPath(
-                `/illustrations/${illustration.filename}`,
-              )}
-              alt={illustration.alt}
-              width={illustration.width}
-              height={illustration.height}
-              style={{ objectPosition: illustration.objectPosition }}
-              loading="lazy"
-              decoding="async"
-            />
-          )}
+          <div className="hub-card__visual" data-tone={gender==="masculine"?"male":gender==="feminine"?"female":gender??"plain"}>
+            <SubjectVocabularyVisual de={record.displayLabel} category={record.category??"Vocabulary"} cardId={record.id} subject="everyday" fallback="subject"/>
+          </div>
         </div>
       ) : null}
       <MeaningPlate
@@ -775,33 +752,17 @@ function ListeningGroupCard({ group }: { group: LearnerListeningGroup }) {
           {group.tracks.length} track{group.tracks.length === 1 ? "" : "s"}
         </span>
       </p>
-      <ol className="workbook-audio__list">
-        {group.tracks.map((track) => {
+      <WorkbookAudioTracks
+        tracks={group.tracks.flatMap((track) => {
           const media = publicWorkbookTrackForId(track.trackId);
-          if (!media) return null;
-          return (
-            <li key={track.id} className="workbook-audio__track">
-              <div>
-                <strong>
-                  {track.exercise} · Track {track.trackId.replace("_", ".")}
-                </strong>
-                <p className="dense">{Math.round(track.durationSeconds)} sec</p>
-              </div>
-              {/* Reveal the source transcript when the learner wants to read along. */}
-              {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
-              <audio
-                controls
-                preload="metadata"
-                src={withPagesBaseAssetPath(
-                  `/audio/source-workbook-approved-v1/${media.filename}`,
-                )}
-                aria-label={`${track.exercise}, track ${track.trackId.replace("_", ".")}, ${track.purpose}`}
-              />
-              <ListeningTranscript transcript={workbookTranscript(track.trackId)} />
-            </li>
-          );
+          return media ? [{ ...media, exercise: track.exercise, purpose: track.purpose, durationSeconds: track.durationSeconds }] : [];
         })}
-      </ol>
+        preload="metadata"
+        trackLabels={Object.fromEntries(group.tracks.map((track) => [
+          track.trackId,
+          `${track.exercise}, track ${track.trackId.replace("_", ".")}, ${track.purpose}`,
+        ]))}
+      />
       <p style={{ marginTop: "1rem" }}>
         <Link className="btn btn-primary" href={group.activity.path}>
           {group.activity.label}

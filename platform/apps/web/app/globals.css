@@ -40,8 +40,14 @@
   --rule-irregular: #c23b6e;
   --focus: #28634f;
   --danger: #b42318;
-  --radius: 18px;
-  --radius-sm: 12px;
+  --radius: 16px;
+  --radius-sm: 9px;
+  --control-radius: 9px;
+  --control-height: 44px;
+  --control-padding: 11px 16px;
+  --control-weight: 650;
+  --chip-radius: 7px;
+  --chip-height: 40px;
   --shadow: 0 1px 2px rgba(28, 26, 36, 0.06), 0 8px 24px rgba(28, 26, 36, 0.04);
   --font: InterVariable, "Segoe UI", "Noto Sans", Arial, sans-serif;
   --space-1: 4px;
@@ -63,12 +69,15 @@
   --font-weight-body: 450;
   --font-weight-medium: 600;
   --font-weight-strong: 720;
-  --text-meta: 0.8125rem;
+  --text-eyebrow: 11px;
+  --text-meta: 0.77rem;
   --text-ui: 0.875rem;
   --text-body: 1rem;
-  --text-german-card: 1.125rem;
-  --text-section: 1.375rem;
-  --text-page: clamp(2rem, 3vw, 2.5rem);
+  --text-entry: 1rem;
+  --text-german-card: var(--text-entry);
+  --text-section: 1.3rem;
+  --text-page: clamp(1.75rem, 3vw, 2.5rem);
+  --text-sheet-title: clamp(2.1rem, 4.5vw, 3.6rem);
   --content-max-reading: 52rem;
   --content-max-browse: 76rem;
   --surface-raised: #ffffff;
@@ -1266,15 +1275,26 @@ a:hover {
 
 .page-header h1 {
   margin: 0;
-  font-size: clamp(1.75rem, 2.4vw, 2.25rem);
-  line-height: 1.2;
-  letter-spacing: -0.02em;
+  color: var(--ink);
+  font-size: var(--text-page);
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+}
+
+.page-header > .dense {
+  margin: 0;
+  font-size: var(--text-eyebrow);
+  font-weight: 750;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
 .lede {
   margin: 0;
   max-width: 42rem;
   color: var(--ink-muted);
+  font-size: var(--text-body);
+  line-height: 1.6;
 }
 
 .card-grid {
@@ -1283,10 +1303,10 @@ a:hover {
 }
 
 .panel {
-  background: var(--surface);
-  border: 1px solid var(--border);
+  background: var(--paper);
+  border: 1px solid var(--line);
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  box-shadow: none;
   padding: var(--space-5);
 }
 
@@ -1294,6 +1314,10 @@ a:hover {
 .panel h3 {
   margin: 0 0 var(--space-3);
   line-height: 1.25;
+}
+
+.panel h2 {
+  font-size: var(--text-section);
 }
 
 .meta-row {
@@ -1305,43 +1329,57 @@ a:hover {
 .meta-chip {
   display: inline-flex;
   align-items: center;
-  min-height: 28px;
-  padding: 0.2rem 0.65rem;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  background: var(--surface-muted);
+  min-height: var(--chip-height);
+  padding: 8px 12px;
+  border-radius: var(--chip-radius);
+  border: 1px solid var(--line);
+  background: var(--paper);
   color: var(--ink-muted);
-  font-size: 0.8125rem;
+  font-size: var(--text-meta);
 }
 
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 44px;
-  padding: 0.7rem 1.1rem;
-  border-radius: 12px;
-  border: 1px solid transparent;
+  min-height: var(--control-height);
+  padding: var(--control-padding);
+  border-radius: var(--control-radius);
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--action);
   font: inherit;
-  font-weight: 600;
+  font-size: var(--text-ui);
+  font-weight: var(--control-weight);
+  line-height: 1.25;
   text-decoration: none;
   cursor: pointer;
 }
 
 .btn-primary {
-  background: var(--brand);
-  color: var(--brand-ink);
+  background: var(--action);
+  border-color: var(--action);
+  color: var(--paper);
 }
 
 .btn-primary:hover {
-  color: var(--brand-ink);
-  filter: brightness(1.05);
+  color: var(--paper);
+  background: color-mix(in srgb, var(--action) 88%, var(--ink));
 }
 
 .btn-secondary {
-  background: var(--surface);
-  border-color: var(--border-strong);
-  color: var(--ink);
+  background: var(--paper);
+  border-color: var(--line);
+  color: var(--action);
+}
+
+.btn-secondary:hover {
+  background: color-mix(in srgb, var(--action) 7%, var(--paper));
+}
+
+.btn[aria-pressed="true"] {
+  border-color: var(--action);
+  box-shadow: inset 0 -2px currentColor;
 }
 
 .stack {
@@ -1355,7 +1393,7 @@ a:hover {
 }
 
 .dense {
-  font-size: 0.8125rem;
+  font-size: var(--text-meta);
   color: var(--ink-muted);
 }
 
@@ -2230,11 +2268,6 @@ a:hover {
   }
 }
 
-@media (min-resolution: 2dppx) {
-  .panel {
-    box-shadow: 0 1px 1px rgba(28, 26, 36, 0.05);
-  }
-}
 .workbook-audio__heading {
   display: flex;
   align-items: flex-start;
@@ -2507,9 +2540,9 @@ a:hover {
 
 .studio-card__eyebrow {
   margin: 0;
-  font-size: var(--text-meta);
-  font-weight: var(--font-weight-medium);
-  letter-spacing: 0.06em;
+  font-size: var(--text-eyebrow);
+  font-weight: 750;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--ink-muted);
 }
@@ -2603,8 +2636,8 @@ a:hover {
   padding: var(--space-4) var(--space-5);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  background: var(--surface-raised);
-  box-shadow: var(--shadow);
+  background: var(--paper);
+  box-shadow: none;
 }
 
 .evidence-strip__heading {
@@ -2734,16 +2767,13 @@ a:hover {
   padding: var(--space-4);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  background: var(--surface-raised);
-  box-shadow: var(--shadow);
-  transition:
-    border-color var(--motion-fast) var(--ease-standard),
-    box-shadow var(--motion-base) var(--ease-standard);
+  background: var(--paper);
+  box-shadow: none;
+  transition: border-color var(--motion-fast) var(--ease-standard);
 }
 
 .tool-drawer:hover {
-  border-color: var(--border-strong);
-  box-shadow: var(--shadow-interactive);
+  border-color: var(--action);
 }
 
 /* Fallback ring for engines without :has(); refined to keyboard-only below. */
@@ -2943,22 +2973,19 @@ a:hover {
   padding: var(--space-4);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  background: var(--surface-raised);
-  box-shadow: var(--shadow);
-  transition:
-    border-color var(--motion-fast) var(--ease-standard),
-    box-shadow var(--motion-base) var(--ease-standard);
+  background: var(--paper);
+  box-shadow: none;
+  transition: border-color var(--motion-fast) var(--ease-standard);
 }
 
 .hub-card:hover {
-  border-color: var(--border-strong);
-  box-shadow: var(--shadow-interactive);
+  border-color: var(--action);
 }
 
 .hub-card__title {
   margin: 0;
   font-size: var(--text-german-card);
-  font-weight: var(--font-weight-strong);
+  font-weight: 650;
   line-height: 1.3;
   overflow-wrap: anywhere;
 }
@@ -3062,6 +3089,39 @@ a:hover {
   height: 100%;
   object-fit: cover;
 }
+
+/* Vocabulary shares the subject sheets' tone-coloured line drawing. */
+.subject-vocabulary-visual {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  vertical-align: middle;
+}
+.subject-vocabulary-visual svg { display: block; width: 100%; height: 100%; }
+
+.hub-card__visual {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  padding: var(--space-4);
+  color: var(--tone-plain);
+  background: var(--paper);
+}
+
+.hub-card__visual[data-tone="male"] { color: var(--tone-masc); }
+.hub-card__visual[data-tone="female"] { color: var(--tone-fem); }
+.hub-card__visual[data-tone="neuter"] { color: var(--tone-neut); }
+.hub-card__visual[data-tone="plural"] { color: var(--tone-plural); }
+.hub-card__visual :is(.subject-vocabulary-visual, .subject-icon) {
+  display: block;
+  width: min(100%, 160px);
+  max-height: 100%;
+  aspect-ratio: 1;
+}
+.hub-card__visual svg { display: block; width: 100%; height: 100%; }
+.rich-visual__media > .hub-card__visual { position: absolute; inset: 0; }
 
 /* --- Meaning plate ------------------------------------------------------- */
 
@@ -3169,38 +3229,7 @@ a:hover {
 }
 
 .meaning-plate__audio-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-  min-height: 44px;
-  min-width: 44px;
-  padding: 0.5rem 0.9rem;
-  border: 1px solid var(--border-strong);
-  border-radius: 12px;
-  background: var(--surface);
-  color: var(--ink);
-  font: inherit;
-  font-size: var(--text-ui);
-  font-weight: var(--font-weight-medium);
-  cursor: pointer;
-  transition:
-    border-color var(--motion-fast) var(--ease-standard),
-    color var(--motion-fast) var(--ease-standard);
-}
-
-.meaning-plate__audio-btn:hover {
-  border-color: var(--brand);
-  color: var(--brand);
-}
-
-.meaning-plate__audio-btn[data-audio-state="playing"] {
-  border-color: var(--brand);
-  color: var(--brand);
-}
-
-.meaning-plate__audio-glyph {
-  font-size: 0.7rem;
-  line-height: 1;
+  transition: border-color var(--motion-fast) var(--ease-standard);
 }
 
 /* --- Concept relationship mini-map --------------------------------------- */

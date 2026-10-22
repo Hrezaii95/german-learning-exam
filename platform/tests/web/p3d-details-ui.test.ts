@@ -98,7 +98,7 @@ describe("P3D detail UI contracts", () => {
     expect(html).toContain('data-tone="female"');
     expect(html).toContain('data-gender-token="die"');
     expect(html).toContain("die Architekten");
-    expect(html).toContain("Play pronunciation");
+    expect(html).toContain("study-audio-button");
     expect(html).toContain("Synthesized German preview voice");
     expect(html).toContain("Review cards, tags, and notes become available when local learning state loads in the browser.");
     expect(html).toContain("tts-62dc09ce76149784.mp3");
@@ -125,7 +125,7 @@ describe("P3D detail UI contracts", () => {
     expect(html).toContain("Sie (formal)");
     expect(html).toContain("This paradigm is irregular and must be learned as forms.");
     expect(html).toContain('data-morph="IRR"');
-    expect(html).toContain("Play pronunciation");
+    expect(html).toContain("study-audio-button");
     expect(html).toContain('href="/search?q=sein#search-result-verb%3Asein"');
   });
 
@@ -143,7 +143,7 @@ describe("P3D detail UI contracts", () => {
     expect(html).toContain("spoken-role-play");
     expect(html).toContain("Open spoken role-play");
     expect(html).not.toContain("Pending P4");
-    expect(html).toContain("Play pronunciation");
+    expect(html).toContain("study-audio-button");
     for (const bad of FORBIDDEN_RENDER) {
       expect(html).not.toContain(bad);
     }
@@ -193,7 +193,7 @@ describe("P3D detail UI contracts", () => {
         label: "Pronunciation",
       }),
     );
-    expect(html).toContain("Play pronunciation");
+    expect(html).toContain("study-audio-button");
     expect(html).toContain("Study 0.8×");
     expect(html).toContain("Normal 1×");
     expect(html).toContain("Repeat");

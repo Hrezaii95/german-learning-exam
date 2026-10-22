@@ -12,7 +12,7 @@ import {
 } from "./ProfessionInfographic";
 import {useStudy} from "@/components/study/StudyProvider";
 import {WordFamilyPreview} from "@/components/word-cards/WordFamilyPreview";
-import {withPagesBaseAssetPath} from "@/lib/content/pages-base-path";
+import {SubjectVocabularyVisual} from "@/components/study/SubjectIllustration";
 import {professionPatterns,professionPatternIds,type ProfessionPattern} from "./profession-patterns";
 import { useStudyScope } from "@/components/study/StudyScope";
 import { matchesStudyScope } from "@/lib/study/scope";
@@ -174,9 +174,9 @@ export function ProfessionCollectionClient({ projection, cardsByRow }: { project
         <div className={styles.patternGrid}>{professionPatterns.filter(item=>item.id!=="other").map(item=>{
           const count=scopedRows.filter(row=>professionPatternIds(row).includes(item.id)).length;
           const example=projection.rowsBySegment[item.example]!;
-          const picture=cardsByRow?.[example.id]?.image;
+          const exampleCard=cardsByRow?.[example.id];
           return <button type="button" className={styles.patternCard} key={item.id} aria-label={`${item.title}: ${example.masculine[0]!.singular} → ${example.masculine[0]!.plural} · ${count} jobs`} aria-pressed={pattern===item.id} disabled={!count} onClick={()=>changeBrowse({pattern:pattern===item.id?"all":item.id})}>
-            {picture&&<img src={withPagesBaseAssetPath(picture.path)} alt={picture.alt} width={240} height={140} loading="lazy"/>}
+            <div className="profession-pattern-visual" data-tone={exampleCard?.rows[0]?.singular.tone??"male"}><SubjectVocabularyVisual de={example.masculine[0]!.singular} category="Profession" cardId={exampleCard?.id??example.id} subject="people" fallback="subject"/></div>
             <strong>{item.title}</strong><span>{item.cue}</span>
             <span className={styles.maleText} lang="de">{example.masculine[0]!.singular}</span><span aria-hidden="true">↓</span><span className={styles.pluralText} lang="de">{example.masculine[0]!.plural}</span>
             <small>{count} {count===1?"job":"jobs"} in your selection</small>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import type { LearnerMediaAvailability } from "@/lib/content/detail-types";
 import {
   PRONUNCIATION_MISSING_EXPLANATION,
@@ -8,7 +8,7 @@ import {
 } from "@/lib/content/media-copy";
 import { withPagesBaseAssetPath } from "@/lib/content/pages-base-path";
 import { useAudioSpeed, AudioSpeedControl } from "./AudioSpeedControl";
-import { stopStudyAudio } from "@/components/study/StudyAudio";
+import { LineAudio, type LineAudioControl } from "@/components/study/StudyAudio";
 
 export type AudioControlState =
   | "idle"
@@ -65,18 +65,12 @@ export function PronunciationControl({
 }) {
   const control = resolveAudioControl(media);
   const audioRef = useRef<HTMLAudioElement>(null);
+  const lineControl = useRef<LineAudioControl>(null);
   const audioSpeed = useAudioSpeed();
   const rate = audioSpeed.speed;
   const [playbackState, setPlaybackState] = useState<AudioControlState>(
     control.state,
   );
-
-  useEffect(() => {
-    const audio = audioRef.current;
-    if (!audio) return;
-    audio.playbackRate = rate;
-    audio.preservesPitch = true;
-  }, [rate]);
 
   if (media.state !== "preview") {
     return (
@@ -103,38 +97,10 @@ export function PronunciationControl({
     );
   }
 
-  function playFromCurrent() {
-    const audio = audioRef.current;
-    if (!audio) return;
-    if (audio.ended) audio.currentTime = 0;
-    audio.playbackRate = rate;
-    audio.preservesPitch = true;
-    setPlaybackState("loading");
-    void audio.play().catch(() => setPlaybackState("error"));
-  }
-
-  function togglePlayback() {
-    const audio = audioRef.current;
-    if (!audio) return;
-    if (!audio.paused) {
-      audio.pause();
-      return;
-    }
-    playFromCurrent();
-  }
-
-  function repeat() {
-    const audio = audioRef.current;
-    if (!audio) return;
-    audio.currentTime = 0;
-    playFromCurrent();
-  }
-
   function chooseRate(nextRate: 0.8 | 1) {
     void audioSpeed.change(nextRate);
   }
 
-  const isPlaying = playbackState === "playing" || playbackState === "loading";
   const source = withPagesBaseAssetPath(media.publicPath);
 
   return (
@@ -148,28 +114,21 @@ export function PronunciationControl({
         preload="metadata"
         src={source}
         aria-label={`${label}, synthesized German pronunciation`}
-        onLoadStart={() => setPlaybackState("loading")}
-        onCanPlay={() => setPlaybackState((state) => (state === "playing" ? state : "idle"))}
-        onPlay={(event) => {
-          stopStudyAudio(event.currentTarget);
-          setPlaybackState("playing");
-        }}
-        onPause={() => setPlaybackState((state) => (state === "error" ? state : "paused"))}
-        onEnded={() => setPlaybackState("idle")}
-        onError={() => setPlaybackState("error")}
       />
       <div className="workbook-audio__actions" role="group" aria-label={`Pronunciation controls for ${label}`}>
-        <button
-          type="button"
-          className="btn btn-primary audio-control__btn"
-          onClick={togglePlayback}
-          // The visible string is "Play pronunciation"; the old name split it
-          // around the lemma ("Play der Friseur pronunciation") so it was not
-          // contained contiguously. Visible label first, lemma after.
-          aria-label={`${isPlaying ? "Pause" : "Play pronunciation"} — ${label}`}
-        >
-          {isPlaying ? "Pause" : "Play pronunciation"}
-        </button>
+        <LineAudio
+          text={media.spokenText}
+          src={media.publicPath}
+          label={label}
+          rate={rate}
+          audioRef={audioRef}
+          controlRef={lineControl}
+          onStateChange={setPlaybackState}
+          buttonClassName="audio-control__btn"
+          fallbackToSpeech={false}
+          fileErrorMessage="Audio could not be played. Retry or check the connection."
+          errorRole="alert"
+        />
         <button
           type="button"
           className="btn btn-secondary"
@@ -188,7 +147,7 @@ export function PronunciationControl({
         >
           Normal 1×
         </button>
-        <button type="button" className="btn btn-secondary" onClick={repeat}>
+        <button type="button" className="btn btn-secondary" onClick={() => lineControl.current?.repeat()}>
           Repeat
         </button>
       </div>
@@ -199,11 +158,6 @@ export function PronunciationControl({
       <p className="dense german" lang="de">
         {media.spokenText}
       </p>
-      {playbackState === "error" ? (
-        <p className="dense audio-control__note" role="alert">
-          Audio could not be played. Retry or check the connection.
-        </p>
-      ) : null}
     </div>
   );
 }

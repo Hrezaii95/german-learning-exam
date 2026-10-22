@@ -16,7 +16,7 @@
 @media print{
  .sheet-print-summary .object-print-grid{gap:2mm}
  .sheet-print-summary .object-print-grid article{display:grid;grid-template-columns:13mm minmax(0,1fr);gap:1mm 2mm;align-items:center;padding:2mm}
- .sheet-print-summary .object-print-grid svg{display:block;grid-row:span 2;width:13mm;height:13mm}
+ .sheet-print-summary .object-print-grid :is(svg,.subject-vocabulary-visual){display:block;grid-row:span 2;width:13mm;height:13mm}
  .sheet-print-summary .object-print-grid strong{font-size:10pt;line-height:1.15}
  .sheet-print-summary .object-print-grid small{font-size:8pt}
  .sheet-print-summary .object-print-grid p{grid-column:1/-1;margin:.8mm 0;font-size:8.5pt}
