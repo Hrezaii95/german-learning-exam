@@ -53,11 +53,11 @@
 .subject-plural-missing-lane h5>span{font-size:1.3rem;font-weight:650;letter-spacing:-.03em}
 .subject-plural-missing-lane .subject-plural-entry{min-height:68px}
 .subject-plural-missing-lane .subject-plural-empty-cell{margin:0}
-.subject-plural-existing{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,3fr);gap:22px;margin-top:22px;padding:20px 16px;border:1px dashed #bba5c8;border-radius:10px;background:#f8f5fa}
-.subject-plural-existing h4{margin:0 0 9px;color:#754493;font-size:.95rem;line-height:1.3;font-weight:650}
+.subject-plural-existing{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,3fr);gap:22px;margin-top:22px;padding:20px 16px;border:1px dashed color-mix(in srgb,var(--tone-plural) 28%,var(--paper));border-radius:10px;background:color-mix(in srgb,var(--tone-plural) 3%,var(--paper))}
+.subject-plural-existing h4{margin:0 0 9px;color:var(--tone-plural);font-size:.95rem;line-height:1.3;font-weight:650}
 .subject-plural-existing>div>p{margin:0;font-size:.74rem;line-height:1.7;color:var(--plural-muted)}
 .subject-plural-existing ul{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:start;gap:10px}
-.subject-plural-existing .subject-plural-entry{min-height:74px;border-color:#dfd3e6}
+.subject-plural-existing .subject-plural-entry{min-height:74px;border-color:color-mix(in srgb,var(--tone-plural) 28%,var(--paper))}
 .subject-plural-no-nouns{margin:20px 0;padding:22px;border:1px dashed #bcc6b8;border-radius:10px;background:#f7f8f1;color:var(--plural-muted);font-size:.85rem;line-height:1.7}
 .subject-plural-footnote{max-width:900px;margin:18px 0 0;color:var(--plural-muted);font-size:.73rem;line-height:1.7}
 @media(max-width:760px){.subject-plural-missing{padding:18px 14px}.subject-plural-missing-genders{grid-template-columns:1fr;gap:12px}.subject-plural-missing-lane h5{margin-bottom:8px}.subject-plural-missing-lane .subject-plural-cell-entries{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}.subject-plural-missing-lane .subject-plural-cell-entries>li+li{margin:0;padding:0;border:0}}

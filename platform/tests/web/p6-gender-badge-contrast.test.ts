@@ -1,17 +1,4 @@
-/**
- * P6-02 finding 4 — WCAG 1.4.3 Contrast (Minimum), AA.
- *
- * `.gender-badge--masculine/feminine/neuter` painted their text with the raw
- * `--gender-*` hue over an 8% tint of that same hue. Measured at 13px / 650 —
- * normal text, so the threshold is 4.5:1 — masculine came out at 4.10, feminine
- * 3.32 and neuter 3.13. The gender cue is the single most-repeated piece of
- * teaching in the product and it sat below AA on 53 routes.
- *
- * This test computes the ratio from the stylesheet itself rather than trusting
- * a comment: it resolves the custom properties, replays the `color-mix` the
- * badge uses for its plate, and measures. It also asserts the raw hues would
- * still fail, so the ink tokens cannot be quietly reverted.
- */
+/** The shared reference tones must remain readable on article plates. */
 import { readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -50,7 +37,12 @@ function hexToRgb(hex: string): Rgb {
 function token(name: string): string {
   const match = new RegExp(`--${name}:\\s*([^;]+);`).exec(css);
   if (!match) throw new Error(`missing custom property --${name}`);
-  return match[1]!.trim();
+  const value = match[1]!.trim();
+  const alias = /^var\(--([\w-]+)(?:,\s*([^)]*))?\)$/.exec(value);
+  if (!alias) return value;
+  // L1-3 can be reviewed before its L1-1 token dependency is merged.
+  if (!new RegExp(`--${alias[1]}:\\s*`).test(css) && alias[2]) return alias[2].trim();
+  return token(alias[1]!);
 }
 
 /** `color-mix(in srgb, <color> N%, white)` — the badge/plate recipe. */
@@ -92,8 +84,8 @@ function declaredColor(selector: string): string {
 }
 
 const GENDERS = [
-  { name: "masculine", hue: "gender-m", ink: "gender-m-ink" },
-  { name: "feminine", hue: "gender-f", ink: "gender-f-ink" },
+  { name: "male", hue: "gender-m", ink: "gender-m-ink" },
+  { name: "female", hue: "gender-f", ink: "gender-f-ink" },
   { name: "neuter", hue: "gender-n", ink: "gender-n-ink" },
 ] as const;
 
@@ -104,7 +96,7 @@ describe("P6 gender badge contrast", () => {
       const plate = mixWithWhite(hexToRgb(token(hue)), 8);
       const inkColor = hexToRgb(token(ink));
 
-      // The rule must actually use the ink token, not the raw hue.
+      // Compatibility ink names resolve to the same reference hue.
       expect(declaredColor(`.gender-badge--${name}`)).toBe(`var(--${ink})`);
 
       const ratio = contrast(inkColor, plate);
@@ -113,11 +105,13 @@ describe("P6 gender badge contrast", () => {
   );
 
   it.each(GENDERS)(
-    "$name would still fail AA with the raw hue as ink",
-    ({ hue }) => {
-      const hueColor = hexToRgb(token(hue));
-      const plate = mixWithWhite(hueColor, 8);
-      expect(contrast(hueColor, plate)).toBeLessThan(4.5);
+    "$name uses the same reference tone for its text and swatch",
+    ({ hue, ink }) => {
+      expect(token(ink)).toBe(token(hue));
+      for (const tint of [3, 7, 8]) {
+        expect(contrast(hexToRgb(token(ink)), mixWithWhite(hexToRgb(token(hue)), tint)))
+          .toBeGreaterThanOrEqual(4.5);
+      }
     },
   );
 

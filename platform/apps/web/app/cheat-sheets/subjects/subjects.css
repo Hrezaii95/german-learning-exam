@@ -43,11 +43,11 @@
 .subject-overview-meta{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 20px;margin-bottom:20px;font-size:.78rem;color:var(--subject-muted)}
 .subject-overview-meta p{margin:0}
 .subject-vocabulary-lanes{display:grid;grid-template-columns:repeat(var(--subject-lanes,3),minmax(0,1fr));align-items:start;gap:16px}
-.subject-tone-male{--subject-tone:#245fa7;color:var(--subject-tone)}
-.subject-tone-female{--subject-tone:#b82e4c;color:var(--subject-tone)}
-.subject-tone-neuter{--subject-tone:#237149;color:var(--subject-tone)}
-.subject-tone-plural{--subject-tone:#8c4daa;color:var(--subject-tone)}
-.subject-tone-plain{--subject-tone:#3d5d55;color:var(--subject-tone)}
+.subject-tone-male{--subject-tone:var(--tone-masc);color:var(--subject-tone)}
+.subject-tone-female{--subject-tone:var(--tone-fem);color:var(--subject-tone)}
+.subject-tone-neuter{--subject-tone:var(--tone-neut);color:var(--subject-tone)}
+.subject-tone-plural{--subject-tone:var(--tone-plural);color:var(--subject-tone)}
+.subject-tone-plain{--subject-tone:var(--tone-plain);color:var(--subject-tone)}
 .subject-vocabulary-lane{min-width:0;margin:0;padding:16px 12px 10px;border:1px solid color-mix(in srgb,var(--subject-tone) 28%,#fff);border-top:4px solid var(--subject-tone);border-radius:10px;background:color-mix(in srgb,var(--subject-tone) 3%,var(--subject-paper))}
 .subject-vocabulary-lane h3{display:flex;align-items:center;gap:12px;margin:0 4px 15px;font-size:.86rem;font-weight:650;line-height:1.3}
 .subject-lane-article{font-size:2rem;font-weight:650;letter-spacing:-.05em;line-height:1}

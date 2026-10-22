@@ -2,6 +2,7 @@ import {describe,expect,it} from "vitest";
 import {loadWordCards} from "../../apps/web/lib/content/word-cards";
 import {loadDictionary,loadHomeSpeech} from "../../apps/web/lib/study/catalog";
 import {homeWords} from "../../apps/web/lib/study/home";
+import {lessonFourVerbs} from "../../apps/web/lib/study/lesson-four";
 import {studyConcepts} from "../../apps/web/lib/study/scope";
 import {subjectSheetHref,subjectSheets,subjectVocabularyGroups} from "../../apps/web/lib/study/subject-sheets";
 import {buildSubjectSheets,loadSubjectSheets,loadSubjectVocabulary} from "../../apps/web/lib/study/subject-sheets.server";
@@ -31,7 +32,7 @@ describe("canonical subject vocabulary sheets",()=>{
   it("covers every canonical source row and authored dictionary word exactly once",()=>{
     const vocabulary=loadSubjectVocabulary();
     const canonicalIds=cards.flatMap(card=>card.rows.map((_,index)=>`${card.id}-${index}`));
-    expect(canonicalIds).toHaveLength(1290);
+    expect(canonicalIds).toHaveLength(1282);
     expect(extras).toHaveLength(48);
     expect(vocabulary).toHaveLength(canonicalIds.length+extras.length);
     expect(new Set(vocabulary.map(item=>item.id)).size).toBe(vocabulary.length);
@@ -46,6 +47,28 @@ describe("canonical subject vocabulary sheets",()=>{
     const sheetIds=new Set(loadSubjectSheets().flatMap(sheet=>sheet.items.map(item=>item.id)));
     expect(sheetIds).toEqual(new Set(vocabulary.map(item=>item.id)));
     expect(loadSubjectVocabulary()).toBe(vocabulary);
+  });
+
+  it("has no duplicate German vocabulary headwords while preserving letter-name homographs",()=>{
+    const vocabulary=loadSubjectVocabulary();
+    const words=vocabulary.filter(item=>item.category!=="Alphabet");
+    const duplicates=words.filter((item,index)=>words.findIndex(other=>other.de===item.de)!==index).map(item=>item.de);
+    expect(duplicates).toEqual([]);
+    for(const [de,cardId] of [
+      ["das Bild","W464"],["die Million","W343"],["das Glück","W542"],["nur","W351"],
+      ["mal","W358"],["neu","W415"],["finden","W438"],["kennen","W537"],
+      ["ein","W178"],["eine","W178"],["kein","W075"],["keine","W075"],
+    ])expect(words.filter(item=>item.de===de).map(item=>item.cardId),de).toEqual([cardId]);
+    expect(vocabulary.filter(item=>item.de==="er").map(item=>item.cardId)).toEqual(["W006","A18"]);
+    expect(vocabulary.filter(item=>item.de==="es").map(item=>item.cardId)).toEqual(["W043","A19"]);
+  });
+
+  it("keeps Lesson 4 conjugations in dictionary lookup under the merged family identities",()=>{
+    for(const [de,cardId] of [["finden","W438"],["kennen","W537"]]){
+      const verb=lessonFourVerbs.find(verb=>verb.verb===de)!;
+      expect(dictionary.find(entry=>entry.id===cardId)?.forms,de).toEqual(expect.arrayContaining(verb.forms));
+    }
+    expect(dictionary.some(entry=>entry.id==="l4-finden"||entry.id==="l4-kennen")).toBe(false);
   });
 
   it("restores all thirty Home meanings with exact supplied forms, audio and source tags",()=>{

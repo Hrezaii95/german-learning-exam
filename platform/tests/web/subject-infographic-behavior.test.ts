@@ -1,7 +1,7 @@
 // @vitest-environment jsdom
 import {createElement} from "react";
 import {afterEach,beforeAll,describe,expect,it,vi} from "vitest";
-import {cleanup,fireEvent,render,screen,within} from "@testing-library/react";
+import {cleanup,fireEvent,render,screen,within,waitFor} from "@testing-library/react";
 import {SubjectDirectory,SubjectInfographic} from "../../apps/web/components/study/SubjectInfographic";
 import {StudyProvider} from "../../apps/web/components/study/StudyProvider";
 import {StudyScopeProvider,StudyTagList} from "../../apps/web/components/study/StudyScope";
@@ -39,6 +39,33 @@ beforeAll(()=>{
 afterEach(()=>{cleanup();vi.unstubAllGlobals();localStorage.clear();window.history.replaceState(null,"","/");});
 
 describe("subject infographic browsing",()=>{
+  it.each([["nur","W351"],["mal","W358"]])("restores the old expressions filter for merged %s",(word,cardId)=>{
+    const conversation=sheets.find(sheet=>sheet.id==="conversation")!;
+    const oldHref=`/cheat-sheets/subjects/conversation?category=expressions&q=${word}#sheet-card-l4-${word}-0`;
+    window.history.replaceState(null,"",oldHref);
+    render(createElement(StudyScopeProvider,null,createElement(SubjectInfographic,{sheet:conversation,allItems:catalogue})));
+    expect(visibleIds()).toEqual(new Set([`${cardId}-0`]));
+    expect(document.querySelector(`[data-subject-entry="${cardId}-0"]`)?.getAttribute("aria-expanded")).toBe("true");
+    expect(window.location.pathname+window.location.search+window.location.hash).toBe(oldHref);
+  });
+  it.each([false,true])("restores a legacy Lesson 4 row fragment with plural view=%s",async(allNouns)=>{
+    const home=sheets.find(sheet=>sheet.id==="home")!;
+    const path=allNouns?"/cheat-sheets/plurals":"/cheat-sheets/subjects/home";
+    const query=`?q=Bild${allNouns?"&view=plurals&tags=home":""}`;
+    window.history.replaceState(null,"",`${path}${query}#sheet-card-l4-bild-0`);
+    const scroll=vi.spyOn(HTMLElement.prototype,"scrollIntoView");
+    try{
+      render(createElement(StudyScopeProvider,null,createElement(SubjectInfographic,{sheet:home,allNouns,allItems:catalogue})));
+      expect(visibleIds()).toEqual(new Set(["W464-0"]));
+      const detail=screen.getByRole("article",{name:"Vocabulary card: das Bild"});
+      const canonical=document.getElementById("sheet-card-W464-0");
+      await waitFor(()=>expect(scroll.mock.contexts).toContain(canonical));
+      const href=within(detail).getByRole("link",{name:"Full vocabulary card →"}).getAttribute("href")!;
+      const context=parseNavigationContextParam(new URL(href,"https://example.test").searchParams.get("nav"));
+      expect(resolveBackHref(context)).toBe(`${path}${query}#sheet-card-W464-0`);
+      expect(window.location.hash).toBe("#sheet-card-l4-bild-0");
+    }finally{scroll.mockRestore();}
+  });
   it("starts with the route subject and switches to every selected tag across the full catalogue",()=>{
     const home=sheets.find(sheet=>sheet.id==="home")!;
     const objects=sheets.find(sheet=>sheet.id==="objects")!;

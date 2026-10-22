@@ -122,7 +122,7 @@ describe("P4A practice UI contracts", () => {
     );
     // The cue must stay honestly labelled as a meaning cue rather than a photograph.
     expect(picture).toContain("not a photo");
-    expect(picture).toContain('data-gender="masculine"');
+    expect(picture).toContain('data-tone="male"');
     expect(picture).toContain("der Architekt");
     expect(picture).toContain("die Architektin");
     expect(picture).toContain("Submit");
