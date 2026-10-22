@@ -89,8 +89,8 @@ try{
   await page.setViewportSize({width:1440,height:1000});
   await page.pdf({path:`${output}/country-cheat-sheet.pdf`,format:'A4',printBackground:true,margin:{top:'10mm',bottom:'12mm',left:'10mm',right:'10mm'}});
   await page.goto(`${base}/hubs/`,{waitUntil:'networkidle'});
-  assert(await page.locator('.country-hub-link').count()===1,'Cheat sheet is reachable from mobile Hubs');
-  await page.locator('.country-hub-link').click();await page.waitForURL(/\/cheat-sheets\/?$/);
+  await page.waitForURL(/\/cheat-sheets\/?$/);
+  assert(await page.locator('main').getByRole('link',{name:/All vocabulary/}).count()===1,'The retired Hubs URL opens the canonical cheat-sheet directory');
   await page.locator('main').getByRole('link',{name:/Countries & languages/}).click();await page.waitForURL(/\/cheat-sheets\/countries\/?$/);
   assert(await rows.count()===41,'Hubs directory link reaches the complete country sheet');
   assert(errors.length===0,`No browser errors: ${errors.join('; ')}`);
