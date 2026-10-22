@@ -47,12 +47,17 @@ The L1-6 reset correction is a separate prepared fix after its first checkpoint:
 
 E2E expectations are updated where the intended UI changed, including profession pattern SVGs. A changed test file is not a record that its browser suite ran. The root/release lead owns sequential full checks: `npm run check` → `npm run test:e2e` → `npm run build:web && npm run smoke:web-routes` → `npm run gates:pages` → `node tools/audit-attribution.mjs`. Do not run competing builds or infer a final pass from a prior item build.
 
+The smoke ownership correction preserves the recorded type, unit, browser and build evidence. Shared `smoke-pages.mjs` changes are limited to Lane 1 route-list additions; `smoke-canonical-routes.mjs` retains its baseline expectations. Lane 3 owns changes to those shared expectations.
+
+The original production route smoke fails obsolete exact-200 expectations for `/vocabulary`, `/hubs` and `/concepts`. The original Pages smoke fails obsolete full-content expectations for `/cheat-sheets/subjects` and `/cheat-sheets/plurals`, blocking the smoke stage of `gates:pages`. Lane 1’s owned `platform/tests/e2e/support/lane1-canonical-routes-smoke.mjs` and `lane1-canonical-pages-smoke.mjs` provide supplementary compatibility checks; passing them does not make either original gate pass.
+
 ## Cross-lane and source dependencies
 
 | Dependency | State / owner boundary | Completion condition |
 |---|---|---|
 | USA canonical plural | Blocked on Lane 2 content types/validation; app country/subject presentation already knows plural | Canonical schema accepts the plural semantics and its owner validates the migration |
 | `/review-audio` Pages exclusion | Blocked on Lane 3 build/export controller | Selectively exclude its exported files while retaining the normal QA tool; a route-level Not Found result alone is insufficient |
+| Shared smoke expectations | Blocked on Lane 3 build/smoke owner; Lane 1 route-list changes are append-only | Migrate the retired-route expectations in the original production and Pages smoke scripts, then rerun those original gates |
 | G1 scoped play links | Blocked on Lane 2 `/play/run` build/integration | Verified v1 scope links from current lessons/tags/sources/items; hide unavailable actions |
 | G3 old practice retirement | Blocked on Lane 2 Phase 1 integration; done last | Compatible `/practice/:gameId` handoff to `/play/`, preserving required context |
 | G4 account/game navigation | Separate lane ownership | Lane 2/3 entries use the shared nav contract; their pages/session/sync require their own evidence |

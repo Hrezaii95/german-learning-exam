@@ -551,171 +551,78 @@ function isDirectRun() {
   }
 }
 
-// Lane 1 — retain the earlier manifest and content assertions at their canonical destinations.
-// Only these two exact legacy expectation paths are adapted. Real legacy pages
-// are requested separately below, so a missing or broken redirect cannot pass.
-const LANE1_WORKSHOP_IDS = [
-  "countries", "home", "people", "verbs", "numbers", "conversation", "questions",
-  "objects", "office", "hobbies", "time", "food", "travel", "past", "journeys",
-];
-const lane1WorkshopPaths = LANE1_WORKSHOP_IDS.map(id => `/cheat-sheets/${id}`);
-HUB_PATHS.push("/cheat-sheets/vocabulary", ...lane1WorkshopPaths);
-
-const lane1OriginalFetchStatus = fetchStatus;
-fetchStatus = async function lane1CanonicalExpectationFetch(path) {
-  const url = new URL(path, BASE);
-  const replacement = new Map([
-    [`${PAGES_BASE}/cheat-sheets/subjects/`, `${PAGES_BASE}/cheat-sheets/`],
-    [`${PAGES_BASE}/cheat-sheets/plurals/`, `${PAGES_BASE}/cheat-sheets/vocabulary/`],
-  ]).get(url.pathname);
-  return lane1OriginalFetchStatus(replacement ? `${replacement}${url.search}` : path);
-};
-
-const lane1OriginalHttpSmoke = httpSmoke;
-httpSmoke = async function lane1SheetHttpSmoke(expectedPaths) {
-  await lane1OriginalHttpSmoke(expectedPaths);
-  const server = await startStaticServer();
-  try {
-    const pages = new Map();
-    const canonicalPaths = [...new Set(["/cheat-sheets", "/cheat-sheets/vocabulary", ...lane1WorkshopPaths, ...SUBJECT_PATHS])];
-    for (const path of canonicalPaths) {
-      const requestPath = `${PAGES_BASE}${path}/`;
-      const response = await lane1OriginalFetchStatus(requestPath);
-      assert(response.status === 200, `Lane 1 canonical ${requestPath} expected 200 got ${response.status}`);
-      assertBasePrefixedNextAssets(response.text, requestPath);
-      assert(!/href="\/cheat-sheets(?:[/?#"])/.test(response.text), `${requestPath} contains a bare root sheet link`);
-      pages.set(path, response.text);
-    }
-
-    const directory = pages.get("/cheat-sheets");
-    assert(/class="[^"]*\bcheat-sheet-directory\b/.test(directory), "sheet root must render the directory");
-    assert((directory.match(/data-subject-tile="/g) ?? []).length === SUBJECT_IDS.length, "directory must expose every subject once");
-    assert((directory.match(/data-workshop-tile="/g) ?? []).length === LANE1_WORKSHOP_IDS.length, "directory must expose every workshop once");
-    for (const id of SUBJECT_IDS) {
-      const tile = directory.match(new RegExp(`<a\\b[^>]*data-subject-tile="${id}"[^>]*>`))?.[0];
-      assert(tile?.includes(`href="${PAGES_BASE}/cheat-sheets/subjects/${id}`), `directory subject ${id} must link to its base-prefixed sheet`);
-    }
-    for (const id of LANE1_WORKSHOP_IDS) {
-      const tile = directory.match(new RegExp(`<a\\b[^>]*data-workshop-tile="${id}"[^>]*>`))?.[0];
-      assert(tile?.includes(`href="${PAGES_BASE}/cheat-sheets/${id}`), `directory workshop ${id} must link to its base-prefixed sheet`);
-    }
-    assert(directory.includes(`href="${PAGES_BASE}/cheat-sheets/vocabulary`), "directory missing All vocabulary");
-    assert(directory.includes("window.location.hash") && directory.includes("country-DE"), "directory missing legacy country bookmark compatibility");
-    assert(/class="[^"]*\bcountry-sheet\b/.test(pages.get("/cheat-sheets/countries")), "canonical country sheet missing its content");
-    assert(pages.get("/cheat-sheets/vocabulary").includes('data-subject-sheet="plurals"'), "canonical vocabulary sheet missing its content");
-
-    for (const [legacy, destination] of [["subjects", ""], ["plurals", "vocabulary/"]]) {
-      const path = `${PAGES_BASE}/cheat-sheets/${legacy}/?q=B%C3%BCcher&tags=#sheet-card-W466-0`;
-      const response = await lane1OriginalFetchStatus(path);
-      assert(response.status === 200, `real legacy ${legacy} stub expected 200`);
-      assertBasePrefixedNextAssets(response.text, `legacy ${legacy}`);
-      const target = `${PAGES_BASE}/cheat-sheets/${destination}`;
-      assert(response.text.includes(`<link rel="canonical" href="${target}"`), `${legacy} stub missing canonical target`);
-      assert(response.text.includes(`window.location.replace("${target}"+window.location.search+window.location.hash)`), `${legacy} stub must preserve the original query and fragment synchronously`);
-      assert(response.text.includes(`<noscript><meta http-equiv="refresh" content="0;url=${target}"></noscript>`), `${legacy} stub missing no-script refresh`);
-      assert(response.text.includes(`<a href="${target}">Open `), `${legacy} stub missing usable fallback link`);
-      assert(response.text.indexOf("<script>window.location.replace(") < response.text.indexOf("<noscript>"), `${legacy} stub must preserve state before fallback refresh`);
-    }
-    console.log(`[smoke:pages] Lane 1 canonical sheet coverage OK: ${canonicalPaths.length} pages, ${SUBJECT_IDS.length} subjects, ${LANE1_WORKSHOP_IDS.length} workshops + 2 real legacy stubs`);
-  } finally {
-    await new Promise(resolve => server.close(resolve));
-  }
-};
-// End Lane 1.
-
-// Lane 1 L1-7 — append merged-area coverage; keep every earlier check intact.
-import { runInNewContext } from "node:vm";
-
-const lane17ProfessionAliases = require("../generated/word-cards.json").cards.flatMap(card =>
-  card.aliases.filter(alias => /^\/collections\/professions\/\d{2}$/.test(alias)).map(alias => [alias, card.path]),
+// Lane 1: additive physical route-list coverage only.
+// Canonical content and real redirect checks run separately in tests/e2e/support/lane1-canonical-pages-smoke.mjs.
+HUB_PATHS.push(
+  "/cheat-sheets/vocabulary",
+  "/cheat-sheets/countries",
+  "/cheat-sheets/home",
+  "/cheat-sheets/people",
+  "/cheat-sheets/verbs",
+  "/cheat-sheets/numbers",
+  "/cheat-sheets/conversation",
+  "/cheat-sheets/questions",
+  "/cheat-sheets/objects",
+  "/cheat-sheets/office",
+  "/cheat-sheets/hobbies",
+  "/cheat-sheets/time",
+  "/cheat-sheets/food",
+  "/cheat-sheets/travel",
+  "/cheat-sheets/past",
+  "/cheat-sheets/journeys",
+  "/collections/professions",
+  "/review",
+  "/review/session/today",
+  "/collections/professions/01",
+  "/collections/professions/02",
+  "/collections/professions/03",
+  "/collections/professions/04",
+  "/collections/professions/05",
+  "/collections/professions/06",
+  "/collections/professions/07",
+  "/collections/professions/08",
+  "/collections/professions/09",
+  "/collections/professions/10",
+  "/collections/professions/11",
+  "/collections/professions/12",
+  "/collections/professions/13",
+  "/collections/professions/14",
+  "/collections/professions/15",
+  "/collections/professions/16",
+  "/collections/professions/17",
+  "/collections/professions/18",
+  "/collections/professions/19",
+  "/collections/professions/20",
+  "/collections/professions/21",
+  "/collections/professions/22",
+  "/collections/professions/23",
+  "/collections/professions/24",
+  "/collections/professions/25",
+  "/collections/professions/26",
+  "/collections/professions/27",
+  "/collections/professions/28",
+  "/collections/professions/29",
+  "/collections/professions/30",
+  "/collections/professions/31",
+  "/collections/professions/32",
+  "/collections/professions/33",
+  "/collections/professions/34",
+  "/collections/professions/35",
+  "/collections/professions/36",
+  "/collections/professions/37",
+  "/collections/professions/38",
+  "/collections/professions/39",
+  "/collections/professions/40",
+  "/collections/professions/41",
+  "/collections/professions/42",
+  "/collections/professions/43",
+  "/collections/professions/44",
+  "/collections/professions/45",
+  "/collections/professions/46",
+  "/collections/professions/47",
+  "/collections/professions/48",
 );
-assert(lane17ProfessionAliases.length === 48, "L1-7 requires all 48 profession aliases");
-HUB_PATHS.push("/collections/professions", "/review", "/review/session/today", ...lane17ProfessionAliases.map(([alias]) => alias));
-
-function lane17RedirectScript(html, label) {
-  const match = [...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)]
-    .find(([, source]) => source.includes("window.location.replace(") && source.includes("window.location.search"));
-  assert(match, `${label} missing synchronous state-preserving redirect`);
-  assert(match.index < html.indexOf("<noscript>"), `${label} script must run before the no-script refresh`);
-  return match[1];
-}
-
-function lane17RunRedirect(source, search, hash) {
-  let destination;
-  runInNewContext(source, { URLSearchParams, window: { location: { search, hash, replace(value) { destination = value; } } } }, { timeout: 1000 });
-  assert(typeof destination === "string", "L1-7 redirect script did not replace the location");
-  return destination;
-}
-
-const lane17OriginalHttpSmoke = httpSmoke;
-httpSmoke = async function lane17MergedAreaHttpSmoke(expectedPaths) {
-  await lane17OriginalHttpSmoke(expectedPaths);
-  const server = await startStaticServer();
-  try {
-    const retired = [
-      ["/vocabulary", "/cheat-sheets/vocabulary", {}],
-      ["/hubs", "/cheat-sheets", {}],
-      ["/concepts", "/grammar", {}],
-      ["/collections/professions", "/cheat-sheets/subjects/people", { source: "teacher-extra" }],
-      ["/review", "/saved", {}],
-      ...lane17ProfessionAliases.map(([alias, path]) => [alias, path, {}, true]),
-    ];
-    const search = "?q=Arzt%20oder+Lehrer&pattern=umlaut&alternatives=1&limit=12";
-    const hash = "#saved-word%2Fdetail";
-    for (const [legacy, destination, defaults, professionReturn] of retired) {
-      const requestPath = `${PAGES_BASE}${legacy}/`;
-      const response = await lane1OriginalFetchStatus(`${requestPath}${search}${hash}`);
-      assert(response.status === 200, `${legacy} real static redirect stub expected 200`);
-      assertBasePrefixedNextAssets(response.text, legacy);
-      const canonical = `${PAGES_BASE}${destination}/`;
-      const canonicalQuery = new URLSearchParams(defaults).toString();
-      const expectedCanonical = `${canonical}${canonicalQuery ? `?${canonicalQuery}` : ""}`;
-      assert(response.text.includes(`<link rel="canonical" href="${expectedCanonical}"`), `${legacy} missing canonical target`);
-      assert(response.text.includes(`<a href="${canonical}`) && response.text.includes(">Open "), `${legacy} missing visible fallback`);
-      const source = lane17RedirectScript(response.text, legacy);
-      const fallback = lane17RunRedirect(source, "", "");
-      const escapedFallback = fallback.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
-      assert(response.text.includes(`<noscript><meta http-equiv="refresh" content="0;url=${escapedFallback}"></noscript>`), `${legacy} missing exact no-script destination`);
-      assert(response.text.includes(`<a href="${escapedFallback}">Open `), `${legacy} fallback must match its destination`);
-      const redirected = lane17RunRedirect(source, search, hash);
-      const url = new URL(redirected, BASE);
-      assert(url.pathname === canonical, `${legacy} script targets the wrong canonical route`);
-      assert(url.search.startsWith(search), `${legacy} script changed original query bytes`);
-      assert(url.hash === hash, `${legacy} script changed the original fragment`);
-      for (const [name, value] of Object.entries(defaults)) assert(url.searchParams.get(name) === value, `${legacy} missing absent ${name} default`);
-      if (professionReturn) {
-        const nav = JSON.parse(url.searchParams.get("nav") ?? "null");
-        assert(nav?.returnPath === "/cheat-sheets/subjects/people" && nav.sheetSource === "teacher-extra", `${legacy} missing canonical profession Back context`);
-        assert(nav.q === "Arzt oder Lehrer" && nav.professionPattern === "umlaut" && nav.professionAlternatives === true && nav.professionLimit === 12, `${legacy} lost bounded legacy list state`);
-      }
-      const existing = "?source=&nav=&q=Arzt%20oder+Lehrer";
-      const existingRedirect = lane17RunRedirect(source, existing, hash);
-      assert(existingRedirect === `${canonical}${existing}${hash}`, `${legacy} must preserve present empty source/nav values`);
-    }
-
-    const grammar = await lane1OriginalFetchStatus(`${PAGES_BASE}/grammar/`);
-    assert(grammar.status === 200, "canonical Grammar expected 200");
-    assertBasePrefixedNextAssets(grammar.text, "canonical Grammar");
-    assert(grammar.text.includes('id="connected-learning-paths"'), "Grammar missing connected learning paths");
-    assert((grammar.text.match(/data-hub-card="concepts"/g) ?? []).length === 6, "Grammar must retain all six published learning paths");
-    assert(grammar.text.includes('id="grammar-connections-heading"') && grammar.text.includes("Choose a grammar connection"), "Grammar missing its rule-to-sentence explorer");
-
-    const saved = await lane1OriginalFetchStatus(`${PAGES_BASE}/saved/`);
-    assert(saved.status === 200, "canonical Saved expected 200");
-    assertBasePrefixedNextAssets(saved.text, "canonical Saved");
-    assert(saved.text.includes('id="guided-review"') && saved.text.includes('aria-label="Guided exercise missions"'), "Saved missing guided builder mount");
-    assert(saved.text.includes("Loading your saved review") || saved.text.includes('id="saved-collection"'), "Saved missing personal recall mount");
-    assert(saved.text.includes("Loading review state") || saved.text.includes('id="review-setup-heading"'), "Saved missing mission builder");
-    assert((saved.text.match(/<h1\b/g) ?? []).length <= 1, "Saved SSR must not duplicate the page heading");
-    const runner = await lane1OriginalFetchStatus(`${PAGES_BASE}/review/session/today/`);
-    assert(runner.status === 200 && (runner.text.includes("Loading today’s mission") || runner.text.includes("Review session")), "existing guided review runner must remain reachable");
-    assertBasePrefixedNextAssets(runner.text, "review runner");
-    console.log(`[smoke:pages] Lane 1 L1-7 OK: ${retired.length} real redirect stubs, raw query/fragment preservation, Grammar 6 paths + explorer, Saved composition + runner`);
-  } finally {
-    await new Promise(resolve => server.close(resolve));
-  }
-};
-// End Lane 1 L1-7.
+// End Lane 1.
 
 if (isDirectRun()) {
   main().catch((err) => {

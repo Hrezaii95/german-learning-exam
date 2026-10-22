@@ -117,4 +117,6 @@ The book-ref draft does not rewrite source words, IDs or order. See [the complet
 
 The final candidate needs sequential engineering gates and rendered route, keyboard, mobile, zoom and PDF checks. No “LIVE 200” status should be added without a dated check of the specific deployed build; HTTP reachability alone cannot certify interaction or German/audio quality.
 
+Both original smoke gates remain blocked on Lane 3’s shared expectation updates for the retired routes, as recorded in [the completion matrix](17-current-state-and-completion-matrix.md). Lane 1’s owned canonical compatibility helpers are supplementary and do not clear those original gates.
+
 Canonical USA plural typing and selective `/review-audio` Pages export exclusion remain external-owner blockers. G1 scoped play links and G3 practice retirement wait for Lane 2 integration. Account/session/sync work belongs to Lane 3. German, synthesized-audio and book-reference owner reviews stay open. This matrix does not close any of those gates.
