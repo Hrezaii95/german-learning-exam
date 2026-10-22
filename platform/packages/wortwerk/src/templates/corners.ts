@@ -123,7 +123,7 @@ export const CORNERS_TEMPLATES: readonly TaskTemplate[] = definitions.flatMap(de
   const id = definition.id + (format === "recall" ? ".recall" : format === "reduced-cues" ? ".reduced" : "");
   return {
     id, skill: definition.kind === "listen" ? "listening" : "vocabulary", mechanic: definition.kind === "listen" ? "listen" as const : "corners" as const,
-    dimension: definition.dimension, format, requires: definition.requires,
+    dimension: definition.dimension, format, minItems: format === "recognition" ? 8 : 1, requires: definition.requires,
     params: (difficulty: DifficultyProfile) => ({ optionsCount: format === "recall" ? 0 : format === "reduced-cues" ? 2 : difficulty.optionsCount }),
     generate: (item: PackItem, pack: ContentPack, profile: LanguageProfile, difficulty: DifficultyProfile, random: RandomSource) => generateCornersTask({ templateId: id, item, pack, profile, difficulty, random, format }),
     grade: gradeCornersTask,

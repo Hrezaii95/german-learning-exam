@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "id": "A2",
+  "optionsCount": 4,
+  "timerSeconds": 0,
+  "audioSpeedRange": [
+    0.85,
+    1.0
+  ],
+  "hintsAllowed": true,
+  "maxPassageLength": 900,
+  "distractorCloseness": 0.5,
+  "typedAnswerRatio": 0.4
+}

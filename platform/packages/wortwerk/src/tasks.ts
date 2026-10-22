@@ -28,6 +28,8 @@ export type GradeResult = {
 };
 export type TaskTemplate = {
   id: string; skill: string; mechanic: Mechanic; dimension: string; format: TaskFormat;
+  /** Minimum generated items in the pack; an omitted value means one. */
+  minItems?: number;
   requires(item: PackItem): boolean;
   params(difficulty: DifficultyProfile): { optionsCount: number };
   generate(item: PackItem, pack: ContentPack, profile: LanguageProfile,

@@ -1,6 +1,6 @@
 # Lane 2 status
 
-Updated by Lane 2 only. Lane worktree: `lane2/l2-7-book-companion`. Base: `codex/live-alpha` with PR #1 documentation merged locally. Never merge to the live branch.
+Updated by Lane 2 only. Lane worktree: `lane2/l2-8-authoring`. Base: `codex/live-alpha` with PR #1 documentation merged locally. Never merge to the live branch.
 
 | PR | Title | State (planned / in progress / draft PR / merged / blocked) | Link | Notes |
 |---|---|---|---|---|
@@ -11,7 +11,7 @@ Updated by Lane 2 only. Lane worktree: `lane2/l2-7-book-companion`. Base: `codex
 | L2-5 | Speaking, reading and writing | draft PR | [PR #27](https://github.com/Hrezaii95/german-learning-exam/pull/27) | All ten mechanics integrated; self-check practice separated from mastery; 111 focused tests pass. |
 | L2-6 | Engagement, maps, story and exam | draft PR | [PR #28](https://github.com/Hrezaii95/german-learning-exam/pull/28) | Journeys, maps, timed challenges, story/exam, private deck and practice backup integrated; 98 focused tests pass. |
 | L2-7 | Book companion | draft PR | [PR #29](https://github.com/Hrezaii95/german-learning-exam/pull/29) | Book controls, confirmed position/default scope, smart filters and printing integrated; Lane 1 surface hooks remain. |
-| L2-8 | CSV authoring and preview | in progress | — | CSV tooling implemented; preview integration underway. |
+| L2-8 | CSV authoring and preview | in progress | — | CSV CLI, opt-in preview and shared generation-checked capability index integrated; A2 data pack included. |
 | L2-8b | Data-only A2 everyday pack | draft PR | [PR #17](https://github.com/Hrezaii95/german-learning-exam/pull/17) | Exactly ten content files, no code; all content pending review. |
 | L2-9 | Student Class A tools | in progress | — | Receipts, challenges, assignment card and personal import implemented; integration underway. |
 
@@ -149,3 +149,9 @@ L2-6 root integration: all three typechecks and lint pass. Focused integrated su
 Mounted the shared scope picker and lesson loop in Play. A confirmed matching book position supplies the default; without confirmation the initial authored-book scope is empty. Explicit saved scope selections remain intact. The page rule excludes unknown current-lesson pages until completion/whole-lesson opt-in. Future position/scope documents stay read-only and do not report a false save. Printing uses precisely the current shared selection. Tricky sets count objective misses, excluding self-rated practice. Book slice tests: 52 focused cases across agent verification; root integrated regression rerun: 6 files / 62 tests pass. All three root typechecks and lint pass. The initial combined run exposed old test assumptions about implicit whole-pack selection; tests now make that choice explicit.
 
 Needs Lane 1: mount the exported advance proposal/prompt on book/lesson surfaces and add reviewed page references for Lessons 3–12. No pages were guessed.
+
+## L2-8 integration verification
+
+CSV authoring validates and previews before create-only writes, preserves explicit book references, and marks imported content pending. The interactive authoring route requires WORTWERK_PREVIEW=1, resets real mechanics without progress/deck writes, and its export finalizer removes disabled preview artifacts before hashing. The build loader, CLI and browser now share the actual generated-template registry, formats, assessment and per-template minima. The prior static predicate index remains a compatible foundation API.
+
+Included the separately published, exactly-ten-content-file A2 reuse pack (PR #17); its generated capability index is refreshed for the shared registry. Pack validation passes: 40 items, 39 playable templates, pending/off by default. Root focused Wortwerk suite: 38 files / 324 tests pass; an additional installed-inventory test generates and grades every enabled task without pack/language branching. All three root typechecks and lint pass. Preview physical exclusion and browser proof remain to be verified against the final export. The unresolved A1 groups remain listed above; the A2 pack does not replace that migration.

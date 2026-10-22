@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "id": "de-a2-everyday",
+  "language": "de",
+  "cefr": "A2",
+  "title": "Alltagspläne: Termine und Ausflüge",
+  "units": [
+    {
+      "id": "appointments",
+      "title": "Termine und Verabredungen",
+      "canDo": [
+        "Ich kann eine Verabredung vorschlagen und einen Treffpunkt vereinbaren.",
+        "Ich kann einen Termin absagen oder verschieben und einen Grund nennen."
+      ],
+      "bookRef": {
+        "book": "independent-a2",
+        "lesson": 1
+      }
+    },
+    {
+      "id": "outings",
+      "title": "Unterwegs am Wochenende",
+      "canDo": [
+        "Ich kann einen einfachen Ausflug planen und eine Verbindung besprechen.",
+        "Ich kann eine kurze Nachricht über eine Planänderung verstehen."
+      ],
+      "bookRef": {
+        "book": "independent-a2",
+        "lesson": 2
+      }
+    }
+  ],
+  "maps": [
+    {
+      "id": "a2-word-groups",
+      "title": "Wörter für Alltagspläne",
+      "rows": "unitId",
+      "cols": "pos"
+    }
+  ],
+  "difficulty": "A2",
+  "review": {
+    "status": "pending-german-review"
+  },
+  "itemFiles": [
+    "items/lexemes.json",
+    "items/sentences.json",
+    "items/grammar.json",
+    "items/communication.json",
+    "items/exam-tasks.json"
+  ],
+  "story": "story.json",
+  "exam": "exam.json"
+}

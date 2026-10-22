@@ -1,0 +1,2990 @@
+{
+  "schemaVersion": 1,
+  "packId": "de-a2-everyday",
+  "items": {
+    "a2-absagen": {
+      "templateIds": [
+        "corners.meaning",
+        "corners.meaning.recall",
+        "corners.meaning.reduced",
+        "corners.reverse",
+        "corners.reverse.recall",
+        "corners.reverse.reduced",
+        "match.meaning"
+      ],
+      "dimensions": [
+        "meaning"
+      ],
+      "taskMetadata": {
+        "corners.meaning": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.meaning.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.meaning.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.reverse": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.reverse.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.reverse.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "match.meaning": {
+          "format": "recognition",
+          "assessment": "objective"
+        }
+      }
+    },
+    "a2-ausflug": {
+      "templateIds": [
+        "build.form",
+        "corners.gender",
+        "corners.gender.recall",
+        "corners.gender.reduced",
+        "corners.meaning",
+        "corners.meaning.recall",
+        "corners.meaning.reduced",
+        "corners.plural",
+        "corners.plural-pattern",
+        "corners.plural-pattern.recall",
+        "corners.plural-pattern.reduced",
+        "corners.plural.recall",
+        "corners.plural.reduced",
+        "corners.reverse",
+        "corners.reverse.recall",
+        "corners.reverse.reduced",
+        "match.meaning"
+      ],
+      "dimensions": [
+        "gender",
+        "meaning",
+        "plural"
+      ],
+      "taskMetadata": {
+        "build.form": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.gender": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.gender.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.gender.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.meaning": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.meaning.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.meaning.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.plural": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.plural-pattern": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.plural-pattern.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.plural-pattern.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.plural.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.plural.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.reverse": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.reverse.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.reverse.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "match.meaning": {
+          "format": "recognition",
+          "assessment": "objective"
+        }
+      }
+    },
+    "a2-besprechung": {
+      "templateIds": [
+        "build.form",
+        "corners.gender",
+        "corners.gender.recall",
+        "corners.gender.reduced",
+        "corners.meaning",
+        "corners.meaning.recall",
+        "corners.meaning.reduced",
+        "corners.plural",
+        "corners.plural-pattern",
+        "corners.plural-pattern.recall",
+        "corners.plural-pattern.reduced",
+        "corners.plural.recall",
+        "corners.plural.reduced",
+        "corners.reverse",
+        "corners.reverse.recall",
+        "corners.reverse.reduced",
+        "match.meaning"
+      ],
+      "dimensions": [
+        "gender",
+        "meaning",
+        "plural"
+      ],
+      "taskMetadata": {
+        "build.form": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.gender": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.gender.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.gender.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.meaning": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.meaning.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.meaning.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.plural": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.plural-pattern": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.plural-pattern.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.plural-pattern.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.plural.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.plural.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.reverse": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.reverse.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.reverse.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "match.meaning": {
+          "format": "recognition",
+          "assessment": "objective"
+        }
+      }
+    },
+    "a2-dialog-verabredung": {
+      "templateIds": [],
+      "dimensions": [],
+      "taskMetadata": {}
+    },
+    "a2-drill-build": {
+      "templateIds": [
+        "drill.build"
+      ],
+      "dimensions": [
+        "form"
+      ],
+      "taskMetadata": {
+        "drill.build": {
+          "format": "recall",
+          "assessment": "objective"
+        }
+      }
+    },
+    "a2-drill-error": {
+      "templateIds": [
+        "drill.errorHunt",
+        "drill.errorHunt.recall",
+        "drill.errorHunt.reduced"
+      ],
+      "dimensions": [
+        "form"
+      ],
+      "taskMetadata": {
+        "drill.errorHunt": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "drill.errorHunt.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "drill.errorHunt.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        }
+      }
+    },
+    "a2-drill-gap": {
+      "templateIds": [
+        "drill.gap",
+        "drill.gap.recall",
+        "drill.gap.reduced"
+      ],
+      "dimensions": [
+        "form"
+      ],
+      "taskMetadata": {
+        "drill.gap": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "drill.gap.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "drill.gap.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        }
+      }
+    },
+    "a2-drill-order": {
+      "templateIds": [
+        "drill.order"
+      ],
+      "dimensions": [
+        "order"
+      ],
+      "taskMetadata": {
+        "drill.order": {
+          "format": "recall",
+          "assessment": "objective"
+        }
+      }
+    },
+    "a2-drill-sort": {
+      "templateIds": [
+        "drill.sort",
+        "drill.sort.recall",
+        "drill.sort.reduced"
+      ],
+      "dimensions": [
+        "form"
+      ],
+      "taskMetadata": {
+        "drill.sort": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "drill.sort.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "drill.sort.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        }
+      }
+    },
+    "a2-drill-transform": {
+      "templateIds": [
+        "drill.transform.recall"
+      ],
+      "dimensions": [
+        "form"
+      ],
+      "taskMetadata": {
+        "drill.transform.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        }
+      }
+    },
+    "a2-einladung": {
+      "templateIds": [
+        "build.form",
+        "corners.gender",
+        "corners.gender.recall",
+        "corners.gender.reduced",
+        "corners.meaning",
+        "corners.meaning.recall",
+        "corners.meaning.reduced",
+        "corners.plural",
+        "corners.plural-pattern",
+        "corners.plural-pattern.recall",
+        "corners.plural-pattern.reduced",
+        "corners.plural.recall",
+        "corners.plural.reduced",
+        "corners.reverse",
+        "corners.reverse.recall",
+        "corners.reverse.reduced",
+        "match.meaning"
+      ],
+      "dimensions": [
+        "gender",
+        "meaning",
+        "plural"
+      ],
+      "taskMetadata": {
+        "build.form": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.gender": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.gender.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.gender.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.meaning": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.meaning.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.meaning.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.plural": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.plural-pattern": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.plural-pattern.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.plural-pattern.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.plural.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.plural.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.reverse": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.reverse.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.reverse.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "match.meaning": {
+          "format": "recognition",
+          "assessment": "objective"
+        }
+      }
+    },
+    "a2-exam-grammatik": {
+      "templateIds": [],
+      "dimensions": [],
+      "taskMetadata": {}
+    },
+    "a2-exam-lesen": {
+      "templateIds": [],
+      "dimensions": [],
+      "taskMetadata": {}
+    },
+    "a2-exam-schreiben": {
+      "templateIds": [],
+      "dimensions": [],
+      "taskMetadata": {}
+    },
+    "a2-fahrkarte": {
+      "templateIds": [
+        "build.form",
+        "corners.gender",
+        "corners.gender.recall",
+        "corners.gender.reduced",
+        "corners.meaning",
+        "corners.meaning.recall",
+        "corners.meaning.reduced",
+        "corners.plural",
+        "corners.plural-pattern",
+        "corners.plural-pattern.recall",
+        "corners.plural-pattern.reduced",
+        "corners.plural.recall",
+        "corners.plural.reduced",
+        "corners.reverse",
+        "corners.reverse.recall",
+        "corners.reverse.reduced",
+        "match.meaning"
+      ],
+      "dimensions": [
+        "gender",
+        "meaning",
+        "plural"
+      ],
+      "taskMetadata": {
+        "build.form": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.gender": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.gender.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.gender.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.meaning": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.meaning.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.meaning.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.plural": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.plural-pattern": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.plural-pattern.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.plural-pattern.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.plural.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.plural.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.reverse": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.reverse.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.reverse.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "match.meaning": {
+          "format": "recognition",
+          "assessment": "objective"
+        }
+      }
+    },
+    "a2-freuen": {
+      "templateIds": [
+        "corners.meaning",
+        "corners.meaning.recall",
+        "corners.meaning.reduced",
+        "corners.reverse",
+        "corners.reverse.recall",
+        "corners.reverse.reduced",
+        "match.meaning"
+      ],
+      "dimensions": [
+        "meaning"
+      ],
+      "taskMetadata": {
+        "corners.meaning": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.meaning.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.meaning.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.reverse": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.reverse.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.reverse.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "match.meaning": {
+          "format": "recognition",
+          "assessment": "objective"
+        }
+      }
+    },
+    "a2-grammatik-plaene": {
+      "templateIds": [],
+      "dimensions": [],
+      "taskMetadata": {}
+    },
+    "a2-haltestelle": {
+      "templateIds": [
+        "build.form",
+        "corners.gender",
+        "corners.gender.recall",
+        "corners.gender.reduced",
+        "corners.meaning",
+        "corners.meaning.recall",
+        "corners.meaning.reduced",
+        "corners.plural",
+        "corners.plural-pattern",
+        "corners.plural-pattern.recall",
+        "corners.plural-pattern.reduced",
+        "corners.plural.recall",
+        "corners.plural.reduced",
+        "corners.reverse",
+        "corners.reverse.recall",
+        "corners.reverse.reduced",
+        "match.meaning"
+      ],
+      "dimensions": [
+        "gender",
+        "meaning",
+        "plural"
+      ],
+      "taskMetadata": {
+        "build.form": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.gender": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.gender.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.gender.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.meaning": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.meaning.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.meaning.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.plural": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.plural-pattern": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.plural-pattern.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.plural-pattern.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.plural.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.plural.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.reverse": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.reverse.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.reverse.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "match.meaning": {
+          "format": "recognition",
+          "assessment": "objective"
+        }
+      }
+    },
+    "a2-kalender": {
+      "templateIds": [
+        "build.form",
+        "corners.gender",
+        "corners.gender.recall",
+        "corners.gender.reduced",
+        "corners.meaning",
+        "corners.meaning.recall",
+        "corners.meaning.reduced",
+        "corners.plural",
+        "corners.plural-pattern",
+        "corners.plural-pattern.recall",
+        "corners.plural-pattern.reduced",
+        "corners.plural.recall",
+        "corners.plural.reduced",
+        "corners.reverse",
+        "corners.reverse.recall",
+        "corners.reverse.reduced",
+        "match.meaning"
+      ],
+      "dimensions": [
+        "gender",
+        "meaning",
+        "plural"
+      ],
+      "taskMetadata": {
+        "build.form": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.gender": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.gender.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.gender.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.meaning": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.meaning.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.meaning.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.plural": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.plural-pattern": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.plural-pattern.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.plural-pattern.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.plural.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.plural.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.reverse": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.reverse.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.reverse.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "match.meaning": {
+          "format": "recognition",
+          "assessment": "objective"
+        }
+      }
+    },
+    "a2-mitbringen": {
+      "templateIds": [
+        "corners.meaning",
+        "corners.meaning.recall",
+        "corners.meaning.reduced",
+        "corners.reverse",
+        "corners.reverse.recall",
+        "corners.reverse.reduced",
+        "match.meaning"
+      ],
+      "dimensions": [
+        "meaning"
+      ],
+      "taskMetadata": {
+        "corners.meaning": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.meaning.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.meaning.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.reverse": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.reverse.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.reverse.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "match.meaning": {
+          "format": "recognition",
+          "assessment": "objective"
+        }
+      }
+    },
+    "a2-nachricht": {
+      "templateIds": [
+        "build.form",
+        "corners.gender",
+        "corners.gender.recall",
+        "corners.gender.reduced",
+        "corners.meaning",
+        "corners.meaning.recall",
+        "corners.meaning.reduced",
+        "corners.plural",
+        "corners.plural-pattern",
+        "corners.plural-pattern.recall",
+        "corners.plural-pattern.reduced",
+        "corners.plural.recall",
+        "corners.plural.reduced",
+        "corners.reverse",
+        "corners.reverse.recall",
+        "corners.reverse.reduced",
+        "match.meaning"
+      ],
+      "dimensions": [
+        "gender",
+        "meaning",
+        "plural"
+      ],
+      "taskMetadata": {
+        "build.form": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.gender": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.gender.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.gender.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.meaning": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.meaning.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.meaning.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.plural": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.plural-pattern": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.plural-pattern.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.plural-pattern.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.plural.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.plural.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.reverse": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.reverse.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.reverse.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "match.meaning": {
+          "format": "recognition",
+          "assessment": "objective"
+        }
+      }
+    },
+    "a2-reservieren": {
+      "templateIds": [
+        "corners.meaning",
+        "corners.meaning.recall",
+        "corners.meaning.reduced",
+        "corners.reverse",
+        "corners.reverse.recall",
+        "corners.reverse.reduced",
+        "match.meaning"
+      ],
+      "dimensions": [
+        "meaning"
+      ],
+      "taskMetadata": {
+        "corners.meaning": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.meaning.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.meaning.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.reverse": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.reverse.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.reverse.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "match.meaning": {
+          "format": "recognition",
+          "assessment": "objective"
+        }
+      }
+    },
+    "a2-satz-grund": {
+      "templateIds": [
+        "order.sentence",
+        "record.read",
+        "write.sentence"
+      ],
+      "dimensions": [
+        "order",
+        "speaking",
+        "writing"
+      ],
+      "taskMetadata": {
+        "order.sentence": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "record.read": {
+          "format": "recall",
+          "assessment": "self"
+        },
+        "write.sentence": {
+          "format": "recall",
+          "assessment": "objective"
+        }
+      }
+    },
+    "a2-satz-mitgebracht": {
+      "templateIds": [
+        "order.sentence",
+        "record.read",
+        "write.sentence"
+      ],
+      "dimensions": [
+        "order",
+        "speaking",
+        "writing"
+      ],
+      "taskMetadata": {
+        "order.sentence": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "record.read": {
+          "format": "recall",
+          "assessment": "self"
+        },
+        "write.sentence": {
+          "format": "recall",
+          "assessment": "objective"
+        }
+      }
+    },
+    "a2-satz-verabreden": {
+      "templateIds": [
+        "order.sentence",
+        "record.read",
+        "write.sentence"
+      ],
+      "dimensions": [
+        "order",
+        "speaking",
+        "writing"
+      ],
+      "taskMetadata": {
+        "order.sentence": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "record.read": {
+          "format": "recall",
+          "assessment": "self"
+        },
+        "write.sentence": {
+          "format": "recall",
+          "assessment": "objective"
+        }
+      }
+    },
+    "a2-satz-verschieben": {
+      "templateIds": [
+        "order.sentence",
+        "record.read",
+        "write.sentence"
+      ],
+      "dimensions": [
+        "order",
+        "speaking",
+        "writing"
+      ],
+      "taskMetadata": {
+        "order.sentence": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "record.read": {
+          "format": "recall",
+          "assessment": "self"
+        },
+        "write.sentence": {
+          "format": "recall",
+          "assessment": "objective"
+        }
+      }
+    },
+    "a2-schreiben-absage": {
+      "templateIds": [
+        "write.prompt"
+      ],
+      "dimensions": [
+        "writing"
+      ],
+      "taskMetadata": {
+        "write.prompt": {
+          "format": "recall",
+          "assessment": "self"
+        }
+      }
+    },
+    "a2-sprechen-vorschlag": {
+      "templateIds": [
+        "record.prompt"
+      ],
+      "dimensions": [
+        "speaking"
+      ],
+      "taskMetadata": {
+        "record.prompt": {
+          "format": "recall",
+          "assessment": "self"
+        }
+      }
+    },
+    "a2-teilnehmen": {
+      "templateIds": [
+        "corners.meaning",
+        "corners.meaning.recall",
+        "corners.meaning.reduced",
+        "corners.reverse",
+        "corners.reverse.recall",
+        "corners.reverse.reduced",
+        "match.meaning"
+      ],
+      "dimensions": [
+        "meaning"
+      ],
+      "taskMetadata": {
+        "corners.meaning": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.meaning.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.meaning.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.reverse": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.reverse.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.reverse.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "match.meaning": {
+          "format": "recognition",
+          "assessment": "objective"
+        }
+      }
+    },
+    "a2-termin": {
+      "templateIds": [
+        "build.form",
+        "corners.gender",
+        "corners.gender.recall",
+        "corners.gender.reduced",
+        "corners.meaning",
+        "corners.meaning.recall",
+        "corners.meaning.reduced",
+        "corners.plural",
+        "corners.plural-pattern",
+        "corners.plural-pattern.recall",
+        "corners.plural-pattern.reduced",
+        "corners.plural.recall",
+        "corners.plural.reduced",
+        "corners.reverse",
+        "corners.reverse.recall",
+        "corners.reverse.reduced",
+        "match.meaning"
+      ],
+      "dimensions": [
+        "gender",
+        "meaning",
+        "plural"
+      ],
+      "taskMetadata": {
+        "build.form": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.gender": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.gender.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.gender.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.meaning": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.meaning.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.meaning.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.plural": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.plural-pattern": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.plural-pattern.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.plural-pattern.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.plural.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.plural.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.reverse": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.reverse.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.reverse.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "match.meaning": {
+          "format": "recognition",
+          "assessment": "objective"
+        }
+      }
+    },
+    "a2-text-ausflug": {
+      "templateIds": [
+        "read.paragraph-order",
+        "read.quick",
+        "read.quick.recall",
+        "read.quick.reduced",
+        "read.tap",
+        "record.read"
+      ],
+      "dimensions": [
+        "order",
+        "reading",
+        "speaking"
+      ],
+      "taskMetadata": {
+        "read.paragraph-order": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "read.quick": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "read.quick.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "read.quick.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "read.tap": {
+          "format": "recognition",
+          "assessment": "self"
+        },
+        "record.read": {
+          "format": "recall",
+          "assessment": "self"
+        }
+      }
+    },
+    "a2-treffen": {
+      "templateIds": [
+        "build.form",
+        "corners.gender",
+        "corners.gender.recall",
+        "corners.gender.reduced",
+        "corners.meaning",
+        "corners.meaning.recall",
+        "corners.meaning.reduced",
+        "corners.plural",
+        "corners.plural-pattern",
+        "corners.plural-pattern.recall",
+        "corners.plural-pattern.reduced",
+        "corners.plural.recall",
+        "corners.plural.reduced",
+        "corners.reverse",
+        "corners.reverse.recall",
+        "corners.reverse.reduced",
+        "match.meaning"
+      ],
+      "dimensions": [
+        "gender",
+        "meaning",
+        "plural"
+      ],
+      "taskMetadata": {
+        "build.form": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.gender": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.gender.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.gender.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.meaning": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.meaning.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.meaning.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.plural": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.plural-pattern": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.plural-pattern.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.plural-pattern.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.plural.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.plural.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.reverse": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.reverse.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.reverse.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "match.meaning": {
+          "format": "recognition",
+          "assessment": "objective"
+        }
+      }
+    },
+    "a2-umsteigen": {
+      "templateIds": [
+        "corners.meaning",
+        "corners.meaning.recall",
+        "corners.meaning.reduced",
+        "corners.reverse",
+        "corners.reverse.recall",
+        "corners.reverse.reduced",
+        "match.meaning"
+      ],
+      "dimensions": [
+        "meaning"
+      ],
+      "taskMetadata": {
+        "corners.meaning": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.meaning.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.meaning.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.reverse": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.reverse.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.reverse.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "match.meaning": {
+          "format": "recognition",
+          "assessment": "objective"
+        }
+      }
+    },
+    "a2-verabredung": {
+      "templateIds": [
+        "build.form",
+        "corners.gender",
+        "corners.gender.recall",
+        "corners.gender.reduced",
+        "corners.meaning",
+        "corners.meaning.recall",
+        "corners.meaning.reduced",
+        "corners.plural",
+        "corners.plural-pattern",
+        "corners.plural-pattern.recall",
+        "corners.plural-pattern.reduced",
+        "corners.plural.recall",
+        "corners.plural.reduced",
+        "corners.reverse",
+        "corners.reverse.recall",
+        "corners.reverse.reduced",
+        "match.meaning"
+      ],
+      "dimensions": [
+        "gender",
+        "meaning",
+        "plural"
+      ],
+      "taskMetadata": {
+        "build.form": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.gender": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.gender.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.gender.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.meaning": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.meaning.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.meaning.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.plural": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.plural-pattern": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.plural-pattern.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.plural-pattern.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.plural.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.plural.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.reverse": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.reverse.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.reverse.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "match.meaning": {
+          "format": "recognition",
+          "assessment": "objective"
+        }
+      }
+    },
+    "a2-verbindung": {
+      "templateIds": [
+        "build.form",
+        "corners.gender",
+        "corners.gender.recall",
+        "corners.gender.reduced",
+        "corners.meaning",
+        "corners.meaning.recall",
+        "corners.meaning.reduced",
+        "corners.plural",
+        "corners.plural-pattern",
+        "corners.plural-pattern.recall",
+        "corners.plural-pattern.reduced",
+        "corners.plural.recall",
+        "corners.plural.reduced",
+        "corners.reverse",
+        "corners.reverse.recall",
+        "corners.reverse.reduced",
+        "match.meaning"
+      ],
+      "dimensions": [
+        "gender",
+        "meaning",
+        "plural"
+      ],
+      "taskMetadata": {
+        "build.form": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.gender": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.gender.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.gender.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.meaning": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.meaning.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.meaning.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.plural": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.plural-pattern": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.plural-pattern.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.plural-pattern.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.plural.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.plural.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.reverse": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.reverse.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.reverse.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "match.meaning": {
+          "format": "recognition",
+          "assessment": "objective"
+        }
+      }
+    },
+    "a2-vereinbaren": {
+      "templateIds": [
+        "corners.meaning",
+        "corners.meaning.recall",
+        "corners.meaning.reduced",
+        "corners.reverse",
+        "corners.reverse.recall",
+        "corners.reverse.reduced",
+        "match.meaning"
+      ],
+      "dimensions": [
+        "meaning"
+      ],
+      "taskMetadata": {
+        "corners.meaning": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.meaning.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.meaning.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.reverse": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.reverse.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.reverse.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "match.meaning": {
+          "format": "recognition",
+          "assessment": "objective"
+        }
+      }
+    },
+    "a2-verschieben": {
+      "templateIds": [
+        "corners.meaning",
+        "corners.meaning.recall",
+        "corners.meaning.reduced",
+        "corners.reverse",
+        "corners.reverse.recall",
+        "corners.reverse.reduced",
+        "match.meaning"
+      ],
+      "dimensions": [
+        "meaning"
+      ],
+      "taskMetadata": {
+        "corners.meaning": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.meaning.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.meaning.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.reverse": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.reverse.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.reverse.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "match.meaning": {
+          "format": "recognition",
+          "assessment": "objective"
+        }
+      }
+    },
+    "a2-verspaetung": {
+      "templateIds": [
+        "build.form",
+        "corners.gender",
+        "corners.gender.recall",
+        "corners.gender.reduced",
+        "corners.meaning",
+        "corners.meaning.recall",
+        "corners.meaning.reduced",
+        "corners.plural",
+        "corners.plural-pattern",
+        "corners.plural-pattern.recall",
+        "corners.plural-pattern.reduced",
+        "corners.plural.recall",
+        "corners.plural.reduced",
+        "corners.reverse",
+        "corners.reverse.recall",
+        "corners.reverse.reduced",
+        "match.meaning"
+      ],
+      "dimensions": [
+        "gender",
+        "meaning",
+        "plural"
+      ],
+      "taskMetadata": {
+        "build.form": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.gender": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.gender.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.gender.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.meaning": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.meaning.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.meaning.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.plural": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.plural-pattern": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.plural-pattern.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.plural-pattern.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.plural.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.plural.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.reverse": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.reverse.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.reverse.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "match.meaning": {
+          "format": "recognition",
+          "assessment": "objective"
+        }
+      }
+    },
+    "a2-vorschlag": {
+      "templateIds": [
+        "build.form",
+        "corners.gender",
+        "corners.gender.recall",
+        "corners.gender.reduced",
+        "corners.meaning",
+        "corners.meaning.recall",
+        "corners.meaning.reduced",
+        "corners.plural",
+        "corners.plural-pattern",
+        "corners.plural-pattern.recall",
+        "corners.plural-pattern.reduced",
+        "corners.plural.recall",
+        "corners.plural.reduced",
+        "corners.reverse",
+        "corners.reverse.recall",
+        "corners.reverse.reduced",
+        "match.meaning"
+      ],
+      "dimensions": [
+        "gender",
+        "meaning",
+        "plural"
+      ],
+      "taskMetadata": {
+        "build.form": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.gender": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.gender.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.gender.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.meaning": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.meaning.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.meaning.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.plural": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.plural-pattern": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.plural-pattern.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.plural-pattern.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.plural.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.plural.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.reverse": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.reverse.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.reverse.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "match.meaning": {
+          "format": "recognition",
+          "assessment": "objective"
+        }
+      }
+    },
+    "a2-wochenende": {
+      "templateIds": [
+        "build.form",
+        "corners.gender",
+        "corners.gender.recall",
+        "corners.gender.reduced",
+        "corners.meaning",
+        "corners.meaning.recall",
+        "corners.meaning.reduced",
+        "corners.plural",
+        "corners.plural-pattern",
+        "corners.plural-pattern.recall",
+        "corners.plural-pattern.reduced",
+        "corners.plural.recall",
+        "corners.plural.reduced",
+        "corners.reverse",
+        "corners.reverse.recall",
+        "corners.reverse.reduced",
+        "match.meaning"
+      ],
+      "dimensions": [
+        "gender",
+        "meaning",
+        "plural"
+      ],
+      "taskMetadata": {
+        "build.form": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.gender": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.gender.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.gender.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.meaning": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.meaning.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.meaning.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.plural": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.plural-pattern": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.plural-pattern.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.plural-pattern.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.plural.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.plural.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "corners.reverse": {
+          "format": "recognition",
+          "assessment": "objective"
+        },
+        "corners.reverse.recall": {
+          "format": "recall",
+          "assessment": "objective"
+        },
+        "corners.reverse.reduced": {
+          "format": "reduced-cues",
+          "assessment": "objective"
+        },
+        "match.meaning": {
+          "format": "recognition",
+          "assessment": "objective"
+        }
+      }
+    }
+  },
+  "templates": {
+    "build.form": {
+      "skill": "vocabulary",
+      "mechanic": "build",
+      "dimension": "plural",
+      "minItems": 1,
+      "itemIds": [
+        "a2-ausflug",
+        "a2-besprechung",
+        "a2-einladung",
+        "a2-fahrkarte",
+        "a2-haltestelle",
+        "a2-kalender",
+        "a2-nachricht",
+        "a2-termin",
+        "a2-treffen",
+        "a2-verabredung",
+        "a2-verbindung",
+        "a2-verspaetung",
+        "a2-vorschlag",
+        "a2-wochenende"
+      ],
+      "enabled": true,
+      "formats": [
+        "recall"
+      ]
+    },
+    "corners.gender": {
+      "skill": "vocabulary",
+      "mechanic": "corners",
+      "dimension": "gender",
+      "minItems": 8,
+      "itemIds": [
+        "a2-ausflug",
+        "a2-besprechung",
+        "a2-einladung",
+        "a2-fahrkarte",
+        "a2-haltestelle",
+        "a2-kalender",
+        "a2-nachricht",
+        "a2-termin",
+        "a2-treffen",
+        "a2-verabredung",
+        "a2-verbindung",
+        "a2-verspaetung",
+        "a2-vorschlag",
+        "a2-wochenende"
+      ],
+      "enabled": true,
+      "formats": [
+        "recognition"
+      ]
+    },
+    "corners.gender.recall": {
+      "skill": "vocabulary",
+      "mechanic": "corners",
+      "dimension": "gender",
+      "minItems": 1,
+      "itemIds": [
+        "a2-ausflug",
+        "a2-besprechung",
+        "a2-einladung",
+        "a2-fahrkarte",
+        "a2-haltestelle",
+        "a2-kalender",
+        "a2-nachricht",
+        "a2-termin",
+        "a2-treffen",
+        "a2-verabredung",
+        "a2-verbindung",
+        "a2-verspaetung",
+        "a2-vorschlag",
+        "a2-wochenende"
+      ],
+      "enabled": true,
+      "formats": [
+        "recall"
+      ]
+    },
+    "corners.gender.reduced": {
+      "skill": "vocabulary",
+      "mechanic": "corners",
+      "dimension": "gender",
+      "minItems": 1,
+      "itemIds": [
+        "a2-ausflug",
+        "a2-besprechung",
+        "a2-einladung",
+        "a2-fahrkarte",
+        "a2-haltestelle",
+        "a2-kalender",
+        "a2-nachricht",
+        "a2-termin",
+        "a2-treffen",
+        "a2-verabredung",
+        "a2-verbindung",
+        "a2-verspaetung",
+        "a2-vorschlag",
+        "a2-wochenende"
+      ],
+      "enabled": true,
+      "formats": [
+        "reduced-cues"
+      ]
+    },
+    "corners.meaning": {
+      "skill": "vocabulary",
+      "mechanic": "corners",
+      "dimension": "meaning",
+      "minItems": 8,
+      "itemIds": [
+        "a2-absagen",
+        "a2-ausflug",
+        "a2-besprechung",
+        "a2-einladung",
+        "a2-fahrkarte",
+        "a2-freuen",
+        "a2-haltestelle",
+        "a2-kalender",
+        "a2-mitbringen",
+        "a2-nachricht",
+        "a2-reservieren",
+        "a2-teilnehmen",
+        "a2-termin",
+        "a2-treffen",
+        "a2-umsteigen",
+        "a2-verabredung",
+        "a2-verbindung",
+        "a2-vereinbaren",
+        "a2-verschieben",
+        "a2-verspaetung",
+        "a2-vorschlag",
+        "a2-wochenende"
+      ],
+      "enabled": true,
+      "formats": [
+        "recognition"
+      ]
+    },
+    "corners.meaning.recall": {
+      "skill": "vocabulary",
+      "mechanic": "corners",
+      "dimension": "meaning",
+      "minItems": 1,
+      "itemIds": [
+        "a2-absagen",
+        "a2-ausflug",
+        "a2-besprechung",
+        "a2-einladung",
+        "a2-fahrkarte",
+        "a2-freuen",
+        "a2-haltestelle",
+        "a2-kalender",
+        "a2-mitbringen",
+        "a2-nachricht",
+        "a2-reservieren",
+        "a2-teilnehmen",
+        "a2-termin",
+        "a2-treffen",
+        "a2-umsteigen",
+        "a2-verabredung",
+        "a2-verbindung",
+        "a2-vereinbaren",
+        "a2-verschieben",
+        "a2-verspaetung",
+        "a2-vorschlag",
+        "a2-wochenende"
+      ],
+      "enabled": true,
+      "formats": [
+        "recall"
+      ]
+    },
+    "corners.meaning.reduced": {
+      "skill": "vocabulary",
+      "mechanic": "corners",
+      "dimension": "meaning",
+      "minItems": 1,
+      "itemIds": [
+        "a2-absagen",
+        "a2-ausflug",
+        "a2-besprechung",
+        "a2-einladung",
+        "a2-fahrkarte",
+        "a2-freuen",
+        "a2-haltestelle",
+        "a2-kalender",
+        "a2-mitbringen",
+        "a2-nachricht",
+        "a2-reservieren",
+        "a2-teilnehmen",
+        "a2-termin",
+        "a2-treffen",
+        "a2-umsteigen",
+        "a2-verabredung",
+        "a2-verbindung",
+        "a2-vereinbaren",
+        "a2-verschieben",
+        "a2-verspaetung",
+        "a2-vorschlag",
+        "a2-wochenende"
+      ],
+      "enabled": true,
+      "formats": [
+        "reduced-cues"
+      ]
+    },
+    "corners.picture": {
+      "skill": "vocabulary",
+      "mechanic": "corners",
+      "dimension": "meaning",
+      "minItems": 8,
+      "itemIds": [],
+      "enabled": false,
+      "formats": []
+    },
+    "corners.picture.reduced": {
+      "skill": "vocabulary",
+      "mechanic": "corners",
+      "dimension": "meaning",
+      "minItems": 1,
+      "itemIds": [],
+      "enabled": false,
+      "formats": []
+    },
+    "corners.plural": {
+      "skill": "vocabulary",
+      "mechanic": "corners",
+      "dimension": "plural",
+      "minItems": 8,
+      "itemIds": [
+        "a2-ausflug",
+        "a2-besprechung",
+        "a2-einladung",
+        "a2-fahrkarte",
+        "a2-haltestelle",
+        "a2-kalender",
+        "a2-nachricht",
+        "a2-termin",
+        "a2-treffen",
+        "a2-verabredung",
+        "a2-verbindung",
+        "a2-verspaetung",
+        "a2-vorschlag",
+        "a2-wochenende"
+      ],
+      "enabled": true,
+      "formats": [
+        "recognition"
+      ]
+    },
+    "corners.plural-pattern": {
+      "skill": "vocabulary",
+      "mechanic": "corners",
+      "dimension": "plural",
+      "minItems": 8,
+      "itemIds": [
+        "a2-ausflug",
+        "a2-besprechung",
+        "a2-einladung",
+        "a2-fahrkarte",
+        "a2-haltestelle",
+        "a2-kalender",
+        "a2-nachricht",
+        "a2-termin",
+        "a2-treffen",
+        "a2-verabredung",
+        "a2-verbindung",
+        "a2-verspaetung",
+        "a2-vorschlag",
+        "a2-wochenende"
+      ],
+      "enabled": true,
+      "formats": [
+        "recognition"
+      ]
+    },
+    "corners.plural-pattern.recall": {
+      "skill": "vocabulary",
+      "mechanic": "corners",
+      "dimension": "plural",
+      "minItems": 1,
+      "itemIds": [
+        "a2-ausflug",
+        "a2-besprechung",
+        "a2-einladung",
+        "a2-fahrkarte",
+        "a2-haltestelle",
+        "a2-kalender",
+        "a2-nachricht",
+        "a2-termin",
+        "a2-treffen",
+        "a2-verabredung",
+        "a2-verbindung",
+        "a2-verspaetung",
+        "a2-vorschlag",
+        "a2-wochenende"
+      ],
+      "enabled": true,
+      "formats": [
+        "recall"
+      ]
+    },
+    "corners.plural-pattern.reduced": {
+      "skill": "vocabulary",
+      "mechanic": "corners",
+      "dimension": "plural",
+      "minItems": 1,
+      "itemIds": [
+        "a2-ausflug",
+        "a2-besprechung",
+        "a2-einladung",
+        "a2-fahrkarte",
+        "a2-haltestelle",
+        "a2-kalender",
+        "a2-nachricht",
+        "a2-termin",
+        "a2-treffen",
+        "a2-verabredung",
+        "a2-verbindung",
+        "a2-verspaetung",
+        "a2-vorschlag",
+        "a2-wochenende"
+      ],
+      "enabled": true,
+      "formats": [
+        "reduced-cues"
+      ]
+    },
+    "corners.plural.recall": {
+      "skill": "vocabulary",
+      "mechanic": "corners",
+      "dimension": "plural",
+      "minItems": 1,
+      "itemIds": [
+        "a2-ausflug",
+        "a2-besprechung",
+        "a2-einladung",
+        "a2-fahrkarte",
+        "a2-haltestelle",
+        "a2-kalender",
+        "a2-nachricht",
+        "a2-termin",
+        "a2-treffen",
+        "a2-verabredung",
+        "a2-verbindung",
+        "a2-verspaetung",
+        "a2-vorschlag",
+        "a2-wochenende"
+      ],
+      "enabled": true,
+      "formats": [
+        "recall"
+      ]
+    },
+    "corners.plural.reduced": {
+      "skill": "vocabulary",
+      "mechanic": "corners",
+      "dimension": "plural",
+      "minItems": 1,
+      "itemIds": [
+        "a2-ausflug",
+        "a2-besprechung",
+        "a2-einladung",
+        "a2-fahrkarte",
+        "a2-haltestelle",
+        "a2-kalender",
+        "a2-nachricht",
+        "a2-termin",
+        "a2-treffen",
+        "a2-verabredung",
+        "a2-verbindung",
+        "a2-verspaetung",
+        "a2-vorschlag",
+        "a2-wochenende"
+      ],
+      "enabled": true,
+      "formats": [
+        "reduced-cues"
+      ]
+    },
+    "corners.reverse": {
+      "skill": "vocabulary",
+      "mechanic": "corners",
+      "dimension": "meaning",
+      "minItems": 8,
+      "itemIds": [
+        "a2-absagen",
+        "a2-ausflug",
+        "a2-besprechung",
+        "a2-einladung",
+        "a2-fahrkarte",
+        "a2-freuen",
+        "a2-haltestelle",
+        "a2-kalender",
+        "a2-mitbringen",
+        "a2-nachricht",
+        "a2-reservieren",
+        "a2-teilnehmen",
+        "a2-termin",
+        "a2-treffen",
+        "a2-umsteigen",
+        "a2-verabredung",
+        "a2-verbindung",
+        "a2-vereinbaren",
+        "a2-verschieben",
+        "a2-verspaetung",
+        "a2-vorschlag",
+        "a2-wochenende"
+      ],
+      "enabled": true,
+      "formats": [
+        "recognition"
+      ]
+    },
+    "corners.reverse.recall": {
+      "skill": "vocabulary",
+      "mechanic": "corners",
+      "dimension": "meaning",
+      "minItems": 1,
+      "itemIds": [
+        "a2-absagen",
+        "a2-ausflug",
+        "a2-besprechung",
+        "a2-einladung",
+        "a2-fahrkarte",
+        "a2-freuen",
+        "a2-haltestelle",
+        "a2-kalender",
+        "a2-mitbringen",
+        "a2-nachricht",
+        "a2-reservieren",
+        "a2-teilnehmen",
+        "a2-termin",
+        "a2-treffen",
+        "a2-umsteigen",
+        "a2-verabredung",
+        "a2-verbindung",
+        "a2-vereinbaren",
+        "a2-verschieben",
+        "a2-verspaetung",
+        "a2-vorschlag",
+        "a2-wochenende"
+      ],
+      "enabled": true,
+      "formats": [
+        "recall"
+      ]
+    },
+    "corners.reverse.reduced": {
+      "skill": "vocabulary",
+      "mechanic": "corners",
+      "dimension": "meaning",
+      "minItems": 1,
+      "itemIds": [
+        "a2-absagen",
+        "a2-ausflug",
+        "a2-besprechung",
+        "a2-einladung",
+        "a2-fahrkarte",
+        "a2-freuen",
+        "a2-haltestelle",
+        "a2-kalender",
+        "a2-mitbringen",
+        "a2-nachricht",
+        "a2-reservieren",
+        "a2-teilnehmen",
+        "a2-termin",
+        "a2-treffen",
+        "a2-umsteigen",
+        "a2-verabredung",
+        "a2-verbindung",
+        "a2-vereinbaren",
+        "a2-verschieben",
+        "a2-verspaetung",
+        "a2-vorschlag",
+        "a2-wochenende"
+      ],
+      "enabled": true,
+      "formats": [
+        "reduced-cues"
+      ]
+    },
+    "drill.build": {
+      "skill": "grammar",
+      "mechanic": "build",
+      "dimension": "form",
+      "minItems": 1,
+      "itemIds": [
+        "a2-drill-build"
+      ],
+      "enabled": true,
+      "formats": [
+        "recall"
+      ]
+    },
+    "drill.errorHunt": {
+      "skill": "grammar",
+      "mechanic": "hotspot",
+      "dimension": "form",
+      "minItems": 1,
+      "itemIds": [
+        "a2-drill-error"
+      ],
+      "enabled": true,
+      "formats": [
+        "recognition"
+      ]
+    },
+    "drill.errorHunt.recall": {
+      "skill": "grammar",
+      "mechanic": "hotspot",
+      "dimension": "form",
+      "minItems": 1,
+      "itemIds": [
+        "a2-drill-error"
+      ],
+      "enabled": true,
+      "formats": [
+        "recall"
+      ]
+    },
+    "drill.errorHunt.reduced": {
+      "skill": "grammar",
+      "mechanic": "hotspot",
+      "dimension": "form",
+      "minItems": 1,
+      "itemIds": [
+        "a2-drill-error"
+      ],
+      "enabled": true,
+      "formats": [
+        "reduced-cues"
+      ]
+    },
+    "drill.gap": {
+      "skill": "grammar",
+      "mechanic": "gap",
+      "dimension": "form",
+      "minItems": 1,
+      "itemIds": [
+        "a2-drill-gap"
+      ],
+      "enabled": true,
+      "formats": [
+        "recognition"
+      ]
+    },
+    "drill.gap.recall": {
+      "skill": "grammar",
+      "mechanic": "gap",
+      "dimension": "form",
+      "minItems": 1,
+      "itemIds": [
+        "a2-drill-gap"
+      ],
+      "enabled": true,
+      "formats": [
+        "recall"
+      ]
+    },
+    "drill.gap.reduced": {
+      "skill": "grammar",
+      "mechanic": "gap",
+      "dimension": "form",
+      "minItems": 1,
+      "itemIds": [
+        "a2-drill-gap"
+      ],
+      "enabled": true,
+      "formats": [
+        "reduced-cues"
+      ]
+    },
+    "drill.order": {
+      "skill": "grammar",
+      "mechanic": "order",
+      "dimension": "order",
+      "minItems": 1,
+      "itemIds": [
+        "a2-drill-order"
+      ],
+      "enabled": true,
+      "formats": [
+        "recall"
+      ]
+    },
+    "drill.sort": {
+      "skill": "grammar",
+      "mechanic": "sort",
+      "dimension": "form",
+      "minItems": 1,
+      "itemIds": [
+        "a2-drill-sort"
+      ],
+      "enabled": true,
+      "formats": [
+        "recognition"
+      ]
+    },
+    "drill.sort.recall": {
+      "skill": "grammar",
+      "mechanic": "sort",
+      "dimension": "form",
+      "minItems": 1,
+      "itemIds": [
+        "a2-drill-sort"
+      ],
+      "enabled": true,
+      "formats": [
+        "recall"
+      ]
+    },
+    "drill.sort.reduced": {
+      "skill": "grammar",
+      "mechanic": "sort",
+      "dimension": "form",
+      "minItems": 1,
+      "itemIds": [
+        "a2-drill-sort"
+      ],
+      "enabled": true,
+      "formats": [
+        "reduced-cues"
+      ]
+    },
+    "drill.transform": {
+      "skill": "grammar",
+      "mechanic": "gap",
+      "dimension": "form",
+      "minItems": 1,
+      "itemIds": [],
+      "enabled": false,
+      "formats": []
+    },
+    "drill.transform.recall": {
+      "skill": "grammar",
+      "mechanic": "gap",
+      "dimension": "form",
+      "minItems": 1,
+      "itemIds": [
+        "a2-drill-transform"
+      ],
+      "enabled": true,
+      "formats": [
+        "recall"
+      ]
+    },
+    "drill.transform.reduced": {
+      "skill": "grammar",
+      "mechanic": "gap",
+      "dimension": "form",
+      "minItems": 1,
+      "itemIds": [],
+      "enabled": false,
+      "formats": []
+    },
+    "listen.dialogue": {
+      "skill": "listening",
+      "mechanic": "listen",
+      "dimension": "listening",
+      "minItems": 1,
+      "itemIds": [],
+      "enabled": false,
+      "formats": []
+    },
+    "listen.dialogue.recall": {
+      "skill": "listening",
+      "mechanic": "listen",
+      "dimension": "listening",
+      "minItems": 1,
+      "itemIds": [],
+      "enabled": false,
+      "formats": []
+    },
+    "listen.dialogue.reduced": {
+      "skill": "listening",
+      "mechanic": "listen",
+      "dimension": "listening",
+      "minItems": 1,
+      "itemIds": [],
+      "enabled": false,
+      "formats": []
+    },
+    "listen.dictation": {
+      "skill": "listening",
+      "mechanic": "listen",
+      "dimension": "listening",
+      "minItems": 1,
+      "itemIds": [],
+      "enabled": false,
+      "formats": []
+    },
+    "listen.minimal-pairs": {
+      "skill": "listening",
+      "mechanic": "listen",
+      "dimension": "listening",
+      "minItems": 1,
+      "itemIds": [],
+      "enabled": false,
+      "formats": []
+    },
+    "listen.minimal-pairs.recall": {
+      "skill": "listening",
+      "mechanic": "listen",
+      "dimension": "listening",
+      "minItems": 1,
+      "itemIds": [],
+      "enabled": false,
+      "formats": []
+    },
+    "listen.minimal-pairs.reduced": {
+      "skill": "listening",
+      "mechanic": "listen",
+      "dimension": "listening",
+      "minItems": 1,
+      "itemIds": [],
+      "enabled": false,
+      "formats": []
+    },
+    "listen.pick": {
+      "skill": "listening",
+      "mechanic": "listen",
+      "dimension": "listening",
+      "minItems": 8,
+      "itemIds": [],
+      "enabled": false,
+      "formats": []
+    },
+    "listen.pick.recall": {
+      "skill": "listening",
+      "mechanic": "listen",
+      "dimension": "listening",
+      "minItems": 1,
+      "itemIds": [],
+      "enabled": false,
+      "formats": []
+    },
+    "listen.pick.reduced": {
+      "skill": "listening",
+      "mechanic": "listen",
+      "dimension": "listening",
+      "minItems": 1,
+      "itemIds": [],
+      "enabled": false,
+      "formats": []
+    },
+    "listen.speed": {
+      "skill": "listening",
+      "mechanic": "listen",
+      "dimension": "listening",
+      "minItems": 1,
+      "itemIds": [],
+      "enabled": false,
+      "formats": []
+    },
+    "match.headline": {
+      "skill": "reading",
+      "mechanic": "match",
+      "dimension": "reading",
+      "minItems": 6,
+      "itemIds": [],
+      "enabled": false,
+      "formats": []
+    },
+    "match.meaning": {
+      "skill": "vocabulary",
+      "mechanic": "match",
+      "dimension": "meaning",
+      "minItems": 6,
+      "itemIds": [
+        "a2-absagen",
+        "a2-ausflug",
+        "a2-besprechung",
+        "a2-einladung",
+        "a2-fahrkarte",
+        "a2-freuen",
+        "a2-haltestelle",
+        "a2-kalender",
+        "a2-mitbringen",
+        "a2-nachricht",
+        "a2-reservieren",
+        "a2-teilnehmen",
+        "a2-termin",
+        "a2-treffen",
+        "a2-umsteigen",
+        "a2-verabredung",
+        "a2-verbindung",
+        "a2-vereinbaren",
+        "a2-verschieben",
+        "a2-verspaetung",
+        "a2-vorschlag",
+        "a2-wochenende"
+      ],
+      "enabled": true,
+      "formats": [
+        "recognition"
+      ]
+    },
+    "order.sentence": {
+      "skill": "grammar",
+      "mechanic": "order",
+      "dimension": "order",
+      "minItems": 1,
+      "itemIds": [
+        "a2-satz-grund",
+        "a2-satz-mitgebracht",
+        "a2-satz-verabreden",
+        "a2-satz-verschieben"
+      ],
+      "enabled": true,
+      "formats": [
+        "recall"
+      ]
+    },
+    "read.paragraph-order": {
+      "skill": "reading",
+      "mechanic": "order",
+      "dimension": "order",
+      "minItems": 1,
+      "itemIds": [
+        "a2-text-ausflug"
+      ],
+      "enabled": true,
+      "formats": [
+        "recall"
+      ]
+    },
+    "read.quick": {
+      "skill": "reading",
+      "mechanic": "hotspot",
+      "dimension": "reading",
+      "minItems": 1,
+      "itemIds": [
+        "a2-text-ausflug"
+      ],
+      "enabled": true,
+      "formats": [
+        "recognition"
+      ]
+    },
+    "read.quick.recall": {
+      "skill": "reading",
+      "mechanic": "write",
+      "dimension": "reading",
+      "minItems": 1,
+      "itemIds": [
+        "a2-text-ausflug"
+      ],
+      "enabled": true,
+      "formats": [
+        "recall"
+      ]
+    },
+    "read.quick.reduced": {
+      "skill": "reading",
+      "mechanic": "hotspot",
+      "dimension": "reading",
+      "minItems": 1,
+      "itemIds": [
+        "a2-text-ausflug"
+      ],
+      "enabled": true,
+      "formats": [
+        "reduced-cues"
+      ]
+    },
+    "read.tap": {
+      "skill": "reading",
+      "mechanic": "hotspot",
+      "dimension": "reading",
+      "minItems": 1,
+      "itemIds": [
+        "a2-text-ausflug"
+      ],
+      "enabled": true,
+      "formats": [
+        "recognition"
+      ]
+    },
+    "record.answer": {
+      "skill": "speaking",
+      "mechanic": "record",
+      "dimension": "speaking",
+      "minItems": 1,
+      "itemIds": [],
+      "enabled": false,
+      "formats": []
+    },
+    "record.echo": {
+      "skill": "speaking",
+      "mechanic": "record",
+      "dimension": "speaking",
+      "minItems": 1,
+      "itemIds": [],
+      "enabled": false,
+      "formats": []
+    },
+    "record.picture": {
+      "skill": "speaking",
+      "mechanic": "record",
+      "dimension": "speaking",
+      "minItems": 1,
+      "itemIds": [],
+      "enabled": false,
+      "formats": []
+    },
+    "record.prompt": {
+      "skill": "speaking",
+      "mechanic": "record",
+      "dimension": "speaking",
+      "minItems": 1,
+      "itemIds": [
+        "a2-sprechen-vorschlag"
+      ],
+      "enabled": true,
+      "formats": [
+        "recall"
+      ]
+    },
+    "record.read": {
+      "skill": "speaking",
+      "mechanic": "record",
+      "dimension": "speaking",
+      "minItems": 1,
+      "itemIds": [
+        "a2-satz-grund",
+        "a2-satz-mitgebracht",
+        "a2-satz-verabreden",
+        "a2-satz-verschieben",
+        "a2-text-ausflug"
+      ],
+      "enabled": true,
+      "formats": [
+        "recall"
+      ]
+    },
+    "write.dictation": {
+      "skill": "listening",
+      "mechanic": "write",
+      "dimension": "listening",
+      "minItems": 1,
+      "itemIds": [],
+      "enabled": false,
+      "formats": []
+    },
+    "write.prompt": {
+      "skill": "writing",
+      "mechanic": "write",
+      "dimension": "writing",
+      "minItems": 1,
+      "itemIds": [
+        "a2-schreiben-absage"
+      ],
+      "enabled": true,
+      "formats": [
+        "recall"
+      ]
+    },
+    "write.sentence": {
+      "skill": "writing",
+      "mechanic": "write",
+      "dimension": "writing",
+      "minItems": 1,
+      "itemIds": [
+        "a2-satz-grund",
+        "a2-satz-mitgebracht",
+        "a2-satz-verabreden",
+        "a2-satz-verschieben"
+      ],
+      "enabled": true,
+      "formats": [
+        "recall"
+      ]
+    }
+  }
+}

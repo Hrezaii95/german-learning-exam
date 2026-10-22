@@ -201,7 +201,7 @@ export const LITERACY_TEMPLATES: readonly TaskTemplate[] = definitions.flatMap(d
         : [definition.mechanic === "record" || definition.mechanic === "write" || definition.id === "read.paragraph-order" ? "recall" : "recognition"] as const;
     return formats.map(format => {
         const id = definition.id + (definition.id === "read.quick" ? format === "recall" ? ".recall" : format === "reduced-cues" ? ".reduced" : "" : "");
-        return { ...definition, id, format, mechanic: definition.id === "read.quick" && format === "recall" ? "write" : definition.mechanic,
+        return { ...definition, id, format, minItems: definition.mechanic === "match" ? 6 : 1, mechanic: definition.id === "read.quick" && format === "recall" ? "write" : definition.mechanic,
             params: (difficulty: DifficultyProfile) => ({ optionsCount: format === "recall" ? 0 : format === "reduced-cues" ? 2 : difficulty.optionsCount }),
             generate: (item: PackItem, pack: ContentPack, profile: LanguageProfile, difficulty: DifficultyProfile, random: RandomSource) => generateLiteracyTask({ templateId: id, item, pack, profile, difficulty, random }), grade: gradeLiteracyTask };
     });

@@ -1,0 +1,88 @@
+[
+  {
+    "id": "a2-exam-grammatik",
+    "unitId": "appointments",
+    "bookRef": {
+      "book": "independent-a2",
+      "lesson": 1
+    },
+    "source": "study-extra",
+    "tags": [
+      "everyday-plans"
+    ],
+    "review": {
+      "status": "pending-german-review"
+    },
+    "type": "examTask",
+    "section": "grammar",
+    "timing": 180,
+    "itemRefs": [
+      "a2-drill-sort",
+      "a2-drill-gap",
+      "a2-drill-order",
+      "a2-drill-build",
+      "a2-drill-transform",
+      "a2-drill-error"
+    ],
+    "instructions": "Bearbeite die Aufgaben zu Verbformen und Satzstellung.",
+    "scoring": {
+      "maxScore": 6,
+      "pointsPerItem": 1,
+      "passRatio": 0.67
+    }
+  },
+  {
+    "id": "a2-exam-lesen",
+    "unitId": "outings",
+    "bookRef": {
+      "book": "independent-a2",
+      "lesson": 2
+    },
+    "source": "study-extra",
+    "tags": [
+      "everyday-plans"
+    ],
+    "review": {
+      "status": "pending-german-review"
+    },
+    "type": "examTask",
+    "section": "reading",
+    "timing": 120,
+    "itemRefs": [
+      "a2-text-ausflug"
+    ],
+    "instructions": "Lies den Text und beantworte die Frage.",
+    "scoring": {
+      "maxScore": 1,
+      "pointsPerItem": 1,
+      "passRatio": 1
+    }
+  },
+  {
+    "id": "a2-exam-schreiben",
+    "unitId": "appointments",
+    "bookRef": {
+      "book": "independent-a2",
+      "lesson": 1
+    },
+    "source": "study-extra",
+    "tags": [
+      "everyday-plans"
+    ],
+    "review": {
+      "status": "pending-german-review"
+    },
+    "type": "examTask",
+    "section": "writing",
+    "timing": 300,
+    "itemRefs": [
+      "a2-schreiben-absage"
+    ],
+    "instructions": "Schreibe eine kurze Nachricht. Vergleiche deinen Text danach mit der Checkliste. Die Selbsteinschätzung ersetzt keine Bewertung durch eine Lehrperson.",
+    "scoring": {
+      "maxScore": 1,
+      "pointsPerItem": 1,
+      "passRatio": 1
+    }
+  }
+]

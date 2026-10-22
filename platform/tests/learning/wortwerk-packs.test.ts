@@ -103,7 +103,7 @@ describe('Wortwerk pack foundation', () => {
     clearOverlayPacks();
   });
   it('keeps language and level literals out of production engine code', () => {
-    const paths = ['packages/wortwerk', 'apps/web/lib/wortwerk'];
+    const paths = ['packages/wortwerk', 'apps/web/lib/wortwerk', 'apps/web/components/wortwerk'];
     function sources(path: string): string[] {
       return readdirSync(path, { withFileTypes: true }).flatMap(entry => entry.isDirectory() ? sources(join(path, entry.name)) : /\.(?:ts|tsx|mjs)$/u.test(entry.name) ? [join(path, entry.name)] : []);
     }
