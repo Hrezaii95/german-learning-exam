@@ -16,7 +16,7 @@ export function CheatSheetNavigation({current,browse}:{current:SheetDestinationI
   const [query,setQuery]=useState("");
   const selected=sheetDestination(current);
   const visible=sheetDestinations.filter(destination=>`${destination.label} ${destination.kind}`.toLocaleLowerCase().includes(query.trim().toLocaleLowerCase()));
-  const layoutQuery=browse?sheetBrowseQuery({...initialSheetBrowse,view:browse.view??"illustrated",...(browse.gender!==undefined?{gender:browse.gender}:{}),...(browse.subjects!==undefined?{subjects:browse.subjects}:{}),...(browse.lessons!==undefined?{lessons:browse.lessons}:{}),...(browse.groupOrder?{groupOrder:browse.groupOrder}:{}),...(browse.sort?{sort:browse.sort}:{}),...(browse.direction?{direction:browse.direction}:{})}):"";
+  const layoutQuery=browse?sheetBrowseQuery({...initialSheetBrowse,view:browse.view??"illustrated",...(browse.lessonFilter?{lessonFilter:browse.lessonFilter}:{}),...(browse.gender!==undefined?{gender:browse.gender}:{}),...(browse.subjects!==undefined?{subjects:browse.subjects}:{}),...(browse.lessons!==undefined?{lessons:browse.lessons}:{}),...(browse.groupOrder?{groupOrder:browse.groupOrder}:{}),...(browse.sort?{sort:browse.sort}:{}),...(browse.direction?{direction:browse.direction}:{})}):"";
   const close=()=>{if(chooser.current)chooser.current.open=false;setQuery("");};
   useEffect(()=>{
     const element=chooser.current;

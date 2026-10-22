@@ -84,13 +84,13 @@ for(const width of [320,1440]){
  });
 }
 
-test("past and journey cards remain scoped and their summaries export",async({page},info)=>{
+test("past and journey vocabulary links retain lesson practice and their summaries export",async({page},info)=>{
  for(const sheet of ["past","journeys"]){
   await page.goto(`cheat-sheets/${sheet}/`);
-  await page.getByRole("button",{name:"Show saved cards",exact:true}).click();
-  await expect(page.locator("#sheet-practice")).toContainText("No matching practice items");
-  await page.getByRole("button",{name:"Showing saved cards",exact:true}).click();
-  await expect(page.locator("[data-sheet-card]")).toHaveCount(12);
+  const subject=sheet==="past"?"past":"seasons",lesson=sheet==="past"?11:12,label=sheet==="past"?"past tense":"seasons & journeys";
+  await expect(page.getByRole("link",{name:`Open ${label} subject sheet →`,exact:true})).toHaveAttribute("href",`/cheat-sheets/subjects/${subject}?lesson=${lesson}`);
+  await expect(page.locator("[data-sheet-card]")).toHaveCount(0);
+  await expect(page.locator("#sheet-practice")).toContainText("Question 1 /");
   await page.emulateMedia({media:"print"});await page.evaluate(()=>document.fonts.ready);
   for(const format of ["A4","Letter"] as const)await page.pdf({path:info.outputPath(`${sheet}-${format}.pdf`),format,printBackground:true,margin:{top:"12mm",bottom:"12mm",left:"12mm",right:"12mm"}});
   await page.emulateMedia({media:"screen"});

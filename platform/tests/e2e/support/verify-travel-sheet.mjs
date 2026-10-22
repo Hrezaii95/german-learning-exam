@@ -1,4 +1,5 @@
 import {chromium,expect} from '@playwright/test';
+import {verifyTopicVocabularyHandoff} from './topic-vocabulary-handoff.mjs';
 import {mkdir,writeFile} from 'node:fs/promises';
 import {resolve} from 'node:path';
 const base=(process.env.STUDY_TEST_BASE??'http://localhost:3210/german-learning-exam').replace(/\/$/,'');
@@ -10,7 +11,7 @@ const checks=[],errors=[];page.on('pageerror',e=>errors.push(e.message));const c
 try{
  await page.goto(base+'/cheat-sheets/travel/',{waitUntil:'networkidle'});
  const scope=page.locator('details.study-scope');await scope.locator('summary').click();await scope.getByRole('button',{name:'One lesson',exact:true}).click();await scope.getByLabel('Selected lesson',{exact:true}).selectOption('10');await scope.locator('summary').click();
- await expect(page.locator('.travel-verb-grid button')).toHaveCount(10);await expect(page.locator('.travel-nouns article')).toHaveCount(9);await expect(page.locator('#travel-words [data-word-family]')).toHaveCount(86);check('Ten verb builders, nine gender-coded transport words and all 86 families render');
+ await expect(page.locator('.travel-verb-grid button')).toHaveCount(10);await expect(page.locator('.travel-place-map article')).toHaveCount(3);await verifyTopicVocabularyHandoff(page,{subject:'travel',lessons:[10]});await expect(page.locator('#sheet-practice .home-quiz')).toContainText('Question 1 /');check('Ten verb builders, three place comparisons, retained practice and the Lesson 10 subject handoff render');
  const result=page.locator('.travel-result');await expect(result).toContainText('Wann kommst du an?');await expect(page.locator('.travel-parts [data-role="stem"]')).toContainText('kommst');await expect(page.locator('.travel-parts [data-role="prefix"]')).toContainText('an');check('The default W-question displays its separated stem and final prefix');
  await result.locator('[lang="de"]').first().evaluate(el=>{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);document.dispatchEvent(new Event('selectionchange'));});
  await page.getByRole('button',{name:'Meaning of selection',exact:true}).click();const dialog=page.getByRole('dialog',{name:'Quick dictionary',exact:true});await expect(dialog.locator('article').first()).toContainText('When do you arrive?');await dialog.locator('article').first().getByRole('button',{name:'Save to review: Wann kommst du an?',exact:true}).click();await dialog.getByRole('button',{name:'Close dictionary',exact:true}).click();await expect(page.locator('.travel-sentence').getByRole('button',{name:'Remove from review: Wann kommst du an?',exact:true})).toBeVisible();check('Selecting a sentence opens its dictionary meaning and shares the phrase review identity');

@@ -69,6 +69,46 @@ describe("subject infographic browsing",()=>{
       expect(window.location.hash).toBe("#sheet-card-l4-bild-0");
     }finally{scroll.mockRestore();}
   });
+  it("resets an explicit lesson filter together with the shared study selection",()=>{
+    const objects=sheets.find(sheet=>sheet.id==="objects")!;
+    localStorage.setItem(STUDY_SCOPE_KEY,JSON.stringify({...defaultStudyScope(),mode:"one",lessons:[1],concepts:["food"]}));
+    window.history.replaceState(null,"","/cheat-sheets/subjects/objects?lesson=5");
+    render(createElement(StudyScopeProvider,null,createElement(SubjectInfographic,{sheet:objects,allItems:catalogue})));
+    expect(visibleIds()).toEqual(new Set(objects.items.filter(item=>item.studyTags.lessons.includes(5)).map(item=>item.id)));
+    fireEvent.click(screen.getByRole("button",{name:"Reset all filters"}));
+    expect(visibleIds()).toEqual(new Set(catalogue.map(item=>item.id)));
+    expect(entries()).toHaveLength(catalogue.length);
+    expect(new URLSearchParams(window.location.search).has("lesson")).toBe(false);
+    expect(JSON.parse(localStorage.getItem(STUDY_SCOPE_KEY)!)).toEqual(defaultStudyScope());
+  });
+  it("opens topic lesson links independently of saved lessons and preserves the filter through full-card Back",()=>{
+    const objects=sheets.find(sheet=>sheet.id==="objects")!;
+    localStorage.setItem(STUDY_SCOPE_KEY,JSON.stringify({...defaultStudyScope(),mode:"one",lessons:[1],concepts:["food"]}));
+    window.history.replaceState(null,"","/cheat-sheets/subjects/objects?lesson=5");
+    render(createElement(StudyScopeProvider,null,createElement(SubjectInfographic,{sheet:objects,allItems:catalogue})));
+    const expected=objects.items.filter(item=>item.studyTags.lessons.includes(5));
+    expect(expected.length).toBeGreaterThan(0);
+    expect(visibleIds()).toEqual(new Set(expected.map(item=>item.id)));
+    const entry=entries()[0]!;
+    fireEvent.click(entry);
+    const detail=screen.getByRole("article",{name:`Vocabulary card: ${expected.find(item=>item.id===entry.dataset.subjectEntry)!.de}`});
+    const href=within(detail).getByRole("link",{name:"Full vocabulary card →"}).getAttribute("href")!;
+    const context=parseNavigationContextParam(new URL(href,"https://example.test").searchParams.get("nav"));
+    expect(new URL(resolveBackHref(context),"https://example.test").searchParams.get("lesson")).toBe("5");
+    expect(JSON.parse(localStorage.getItem(STUDY_SCOPE_KEY)!).lessons).toEqual([1]);
+    const switcher=screen.getByRole("navigation",{name:"Choose a study sheet"});
+    expect(within(switcher).getAllByRole("link")).toHaveLength(37);
+    const subjects=within(switcher).getByRole("region",{name:"Vocabulary by subject"});
+    expect(within(subjects).getByRole("link",{name:/^Home & furniture/}).getAttribute("href")).toContain("lesson=5");
+    expect(within(switcher).getByRole("link",{name:/^All vocabularyCatalogue$/}).getAttribute("href")).toContain("/cheat-sheets/vocabulary?");
+    expect(within(switcher).getByRole("link",{name:/^All vocabularyCatalogue$/}).getAttribute("href")).toContain("lesson=5");
+    const lessons=screen.getByText("Lessons",{exact:true}).closest("details")!;
+    fireEvent.click(lessons.querySelector("summary")!);
+    fireEvent.click(within(lessons).getByRole("checkbox",{name:"Lesson 5"}));
+    expect(visibleIds()).toEqual(new Set(objects.items.map(item=>item.id)));
+    expect([...lessons.querySelectorAll<HTMLInputElement>("input")].every(input=>!input.checked)).toBe(true);
+    expect(new URLSearchParams(window.location.search).has("lesson")).toBe(false);
+  });
   it("starts with the route subject and switches to every selected tag across the full catalogue",()=>{
     const home=sheets.find(sheet=>sheet.id==="home")!;
     const objects=sheets.find(sheet=>sheet.id==="objects")!;

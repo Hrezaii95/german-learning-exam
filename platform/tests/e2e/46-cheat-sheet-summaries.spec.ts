@@ -1,73 +1,61 @@
 import { expect, test } from "@playwright/test";
 
-for (const width of [320, 1440]) {
-  for (const sheet of ["countries", "home"]) {
-    test(`${sheet} prints its complete summary without changing recall or filters at ${width}px`, async ({page}, testInfo) => {
-      await page.setViewportSize({width,height:1000});
-      await page.goto(sheet === "countries" ? "cheat-sheets/countries/" : "cheat-sheets/home/");
-      const summary = page.locator(".sheet-print-summary");
-      await expect(summary).toBeHidden();
-      const input = page.getByRole("textbox", {name: sheet === "countries" ? "Find a country or language" : "Find a word"});
-      const index = page.locator(sheet === "countries" ? "#country-index" : "#home-index");
-      await input.fill(sheet === "countries" ? "Iran" : "Stuhl");
-      await index.getByRole("button", {name:"Hide answers & recall"}).click();
-      await expect(index.locator("article")).toHaveCount(1);
-      await expect(index.getByRole("button", {name:/^Reveal/})).toBeVisible();
-      await page.evaluate(() => { window.print = () => { document.documentElement.dataset.printRequested="true"; }; });
-      await page.getByRole("button", {name:"Print / save as PDF",exact:true}).click();
-      await expect(page.locator("html")).toHaveAttribute("data-print-requested","true");
-      await expect(input).toHaveValue(sheet === "countries" ? "Iran" : "Stuhl");
-      await expect(index.getByRole("button", {name:"Show all answers"})).toHaveAttribute("aria-pressed","true");
-      await page.emulateMedia({media:"print"});
-      await expect(summary).toBeVisible();
-      await expect(index).toBeHidden();
-      if (sheet === "countries") {
-        await expect(summary.locator(".print-country-table tbody tr")).toHaveCount(41);
-        await expect(summary.locator(".print-country-flags img")).toHaveCount(41);
-        await expect(summary).toContainText("aus den Niederlanden");
-        await expect(summary).toContainText("aus Iran");
-        await expect.poll(() => summary.locator("img").evaluateAll(images => images.every(image => (image as HTMLImageElement).complete && (image as HTMLImageElement).naturalWidth > 0))).toBe(true);
-      } else {
-        await expect(summary.locator("[data-print-home-word]")).toHaveCount(30);
-        await expect(summary).toContainText("die Stühle");
-        await expect(summary).toContainText("Plural only · sind");
-      }
-      if (width === 1440) {
-        await page.evaluate(() => document.fonts.ready);
-        for (const format of ["A4", "Letter"] as const) {
-          const path=testInfo.outputPath(`${sheet}-${format}.pdf`);
-          await page.pdf({path,format,printBackground:true,margin:{top:"12mm",bottom:"12mm",left:"12mm",right:"12mm"}});
-          await testInfo.attach(`${sheet}-${format}`,{path,contentType:"application/pdf"});
-        }
-      }
-      await page.emulateMedia({media:"screen"});
-      await expect(input).toHaveValue(sheet === "countries" ? "Iran" : "Stuhl");
-      await expect(index.getByRole("button", {name:/^Reveal/})).toBeVisible();
-      await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth - innerWidth)).toBeLessThanOrEqual(1);
-    });
-  }
-}
+for(const width of [320,1440]) test(`countries prints its complete summary without changing recall or filters at ${width}px`,async({page},testInfo)=>{
+  await page.setViewportSize({width,height:1000});
+  await page.goto("cheat-sheets/countries/");
+  const summary=page.locator(".sheet-print-summary");
+  await expect(summary).toBeHidden();
+  const input=page.getByRole("textbox",{name:"Find a country or language"}),index=page.locator("#country-index");
+  await input.fill("Iran");
+  await index.getByRole("button",{name:"Hide answers & recall"}).click();
+  await expect(index.locator("article")).toHaveCount(1);
+  await expect(index.getByRole("button",{name:/^Reveal/})).toBeVisible();
+  await page.evaluate(()=>{window.print=()=>{document.documentElement.dataset.printRequested="true";};});
+  await page.getByRole("button",{name:"Print / save as PDF",exact:true}).click();
+  await expect(page.locator("html")).toHaveAttribute("data-print-requested","true");
+  await expect(input).toHaveValue("Iran");
+  await expect(index.getByRole("button",{name:"Show all answers"})).toHaveAttribute("aria-pressed","true");
+  await page.emulateMedia({media:"print"});
+  await expect(summary).toBeVisible();await expect(index).toBeHidden();
+  await expect(summary.locator(".print-country-table tbody tr")).toHaveCount(41);
+  await expect(summary.locator(".print-country-flags img")).toHaveCount(41);
+  await expect(summary).toContainText("aus den Niederlanden");await expect(summary).toContainText("aus Iran");
+  await expect.poll(()=>summary.locator("img").evaluateAll(images=>images.every(image=>(image as HTMLImageElement).complete&&(image as HTMLImageElement).naturalWidth>0))).toBe(true);
+  if(width===1440){await page.evaluate(()=>document.fonts.ready);for(const format of ["A4","Letter"] as const){const path=testInfo.outputPath(`countries-${format}.pdf`);await page.pdf({path,format,printBackground:true,margin:{top:"12mm",bottom:"12mm",left:"12mm",right:"12mm"}});await testInfo.attach(`countries-${format}`,{path,contentType:"application/pdf"});}}
+  await page.emulateMedia({media:"screen"});await expect(input).toHaveValue("Iran");await expect(index.getByRole("button",{name:/^Reveal/})).toBeVisible();
+  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);
+});
 
-test("home overview keeps one set of objects and returns focus after Escape and selection", async ({page}) => {
+for(const width of [320,1440]) test(`home prints its full summary while preserving practice audio speed at ${width}px`,async({page},testInfo)=>{
+  await page.setViewportSize({width,height:1000});
   await page.goto("cheat-sheets/home/");
-  const overview=page.locator(".sheet-overview");
-  const launch=overview.getByRole("button",{name:"Expand overview"});
-  await expect(overview.locator(".home-memory-lanes button")).toHaveCount(30);
-  await launch.click();
-  const dialog=page.getByRole("dialog",{name:"All 30 words, sorted by article"});
-  await expect(dialog).toBeVisible();
-  await expect(overview.locator(".home-memory-lanes button")).toHaveCount(30);
-  await page.keyboard.press("Escape");
-  await expect(dialog).toBeHidden();
-  await expect(launch).toBeFocused();
-  await launch.click();
-  await dialog.getByRole("button",{name:/das Bett/}).click();
-  await expect(dialog).toBeHidden();
-  await expect(page.getByRole("combobox",{name:"Explore a word"})).toHaveValue("bett");
-  await expect(overview.locator(".home-memory-lanes button")).toHaveCount(30);
-  await launch.click();
-  await dialog.getByRole("button",{name:"Close overview"}).click();
-  await expect(launch).toBeFocused();
+  const summary=page.locator(".sheet-print-summary");
+  await expect(summary).toBeHidden();
+  await page.getByRole("button",{name:"Slow audio off",exact:true}).click();
+  await page.evaluate(()=>{window.print=()=>{document.documentElement.dataset.printRequested="true";};});
+  await page.getByRole("button",{name:"Print / save as PDF",exact:true}).click();
+  await expect(page.locator("html")).toHaveAttribute("data-print-requested","true");
+  await expect(page.getByRole("button",{name:"Slow audio on",exact:true})).toHaveAttribute("aria-pressed","true");
+  await page.emulateMedia({media:"print"});
+  await expect(summary).toBeVisible();
+  await expect(summary.locator("[data-print-home-word]")).toHaveCount(30);
+  await expect(summary).toContainText("die Stühle");
+  await expect(summary).toContainText("Plural only · sind");
+  await expect(page.locator("#home-index")).toBeHidden();
+  if(width===1440){await page.evaluate(()=>document.fonts.ready);for(const format of ["A4","Letter"] as const){const path=testInfo.outputPath(`home-${format}.pdf`);await page.pdf({path,format,printBackground:true,margin:{top:"12mm",bottom:"12mm",left:"12mm",right:"12mm"}});await testInfo.attach(`home-${format}`,{path,contentType:"application/pdf"});}}
+  await page.emulateMedia({media:"screen"});
+  await expect(page.getByRole("button",{name:"Slow audio on",exact:true})).toHaveAttribute("aria-pressed","true");
+  await expect(page.locator(".home-quiz")).toContainText("Question 1 /");
+  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);
+});
+
+test("home saved anchors lead to the shared subject vocabulary", async ({page}) => {
+  await page.goto("cheat-sheets/home/#home-bett");
+  await expect(page.locator("#home-bett")).toBeAttached();
+  await expect(page.locator(".home-word-card,.home-memory-lanes,.home-focus")).toHaveCount(0);
+  await page.getByRole("link",{name:"Open home subject sheet →",exact:true}).click();
+  await expect.poll(()=>page.evaluate(()=>new URLSearchParams(location.search).get("lesson"))).toBe("1,2,3,4");
+  await expect(page.getByRole("heading",{name:"Home & furniture",exact:true})).toBeVisible();
 });
 
 test("home pronunciation follows the saved speed when its slow override is off", async ({page}) => {
@@ -84,12 +72,12 @@ test("home pronunciation follows the saved speed when its slow override is off",
   for (const rate of [0.75,0.8,0.75]) {
     if (rate===0.8) await page.getByRole("button",{name:"Slow audio off",exact:true}).click();
     else if (await page.getByRole("button",{name:"Slow audio on",exact:true}).count()) await page.getByRole("button",{name:"Slow audio on",exact:true}).click();
-    await page.locator(".home-focus").getByRole("button",{name:"Listen: der Stuhl",exact:true}).click();
+    await page.locator(".home-pronoun-map").getByRole("button",{name:"Listen: Der Stuhl ist schön.",exact:true}).click();
     await expect.poll(() => page.evaluate(() => {
       const audio=(window as unknown as {observedAudio:HTMLAudioElement[]}).observedAudio.at(-1);
       return audio?{rate:audio.playbackRate,advanced:audio.currentTime>0}:null;
     })).toEqual({rate,advanced:true});
-    const stop=page.locator(".home-focus").getByRole("button",{name:"Stop: der Stuhl",exact:true});
+    const stop=page.locator(".home-pronoun-map").getByRole("button",{name:"Stop: Der Stuhl ist schön.",exact:true});
     if(await stop.count()) await stop.click();
   }
 });

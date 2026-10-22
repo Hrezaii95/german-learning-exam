@@ -1,3 +1,4 @@
+import {normalizeTopicLessons} from "../study/topic-lessons";
 import { LEARNER_HUB_IDS, type LearnerHubId } from "./hub-types";
 import {
   encodeActivityRouteSegment,
@@ -64,6 +65,7 @@ export type NavigationContext = {
   sheetSort?: SheetSort;
   sheetDirection?: SheetSortDirection;
   sheetTags?: StudyConcept[];
+  sheetLessonFilter?: number[];
 };
 
 export const NAVIGATION_CONTEXT_PARAM = "nav";
@@ -274,6 +276,8 @@ function normalizeContext(raw: unknown): NavigationContext | null {
     if(sheetDirection)ctx.sheetDirection=sheetDirection;
     const sheetTags=sheetGroupingPath?normalizeSheetTags(obj.sheetTags):undefined;
     if(sheetTags!==undefined)ctx.sheetTags=sheetTags;
+    const sheetLessonFilter=sheetGroupingPath&&Array.isArray(obj.sheetLessonFilter)?normalizeTopicLessons(obj.sheetLessonFilter):undefined;
+    if(sheetLessonFilter)ctx.sheetLessonFilter=sheetLessonFilter;
     if(obj.onlySaved===true)ctx.onlySaved=true;
     if (typeof obj.hubId === "string" && isLearnerHubId(obj.hubId)) {
       ctx.hubId = obj.hubId;
@@ -303,9 +307,9 @@ function normalizeContext(raw: unknown): NavigationContext | null {
   return Object.freeze(ctx);
 }
 
-/** Explicit, validated infographic tags, grouping order or word sorting use a bounded larger payload. */
+/** Explicit, validated infographic filters, grouping or sorting use a bounded larger payload. */
 function navigationContextMaxLength(ctx:NavigationContext|null):number{
-  return ctx?.entryContext==="hub"&&!ctx.hubId&&(ctx.sheetTags!==undefined||ctx.sheetGroupOrder!==undefined||ctx.sheetSort!==undefined||ctx.sheetDirection!==undefined)
+  return ctx?.entryContext==="hub"&&!ctx.hubId&&(ctx.sheetTags!==undefined||ctx.sheetLessonFilter!==undefined||ctx.sheetGroupOrder!==undefined||ctx.sheetSort!==undefined||ctx.sheetDirection!==undefined)
     &&isSheetGroupingPath(ctx.returnPath)
     ?SHEET_NAVIGATION_CONTEXT_MAX_LENGTH:NAVIGATION_CONTEXT_MAX_LENGTH;
 }
@@ -364,7 +368,7 @@ export function serializeNavigationContext(ctx: NavigationContext): string {
   if (!normalized) {
     return JSON.stringify({ entryContext: "hub", returnPath: "/hubs" });
   }
-  const payload: Record<string, string | boolean | StudyConcept[] | SheetGrouping[]> = {
+  const payload: Record<string, string | boolean | StudyConcept[] | SheetGrouping[] | number[]> = {
     entryContext: normalized.entryContext,
     returnPath: normalized.returnPath,
   };
@@ -378,6 +382,7 @@ export function serializeNavigationContext(ctx: NavigationContext): string {
   if (normalized.sheetView) payload.sheetView = normalized.sheetView;
   if (typeof normalized.sheetGender === "boolean") payload.sheetGender = normalized.sheetGender;
   if (normalized.sheetTags !== undefined) payload.sheetTags = normalized.sheetTags;
+  if (normalized.sheetLessonFilter) payload.sheetLessonFilter = normalized.sheetLessonFilter;
   if (typeof normalized.sheetSubjects === "boolean") payload.sheetSubjects = normalized.sheetSubjects;
   if (typeof normalized.sheetLessons === "boolean") payload.sheetLessons = normalized.sheetLessons;
   if (normalized.sheetGroupOrder !== undefined) payload.sheetGroupOrder = normalized.sheetGroupOrder;
@@ -438,6 +443,7 @@ export function backHrefFromContext(ctx: NavigationContext): string {
     if (safe.sheetSort && sheetGroupingPath) params.set("sort", safe.sheetSort);
     if (safe.sheetDirection && sheetGroupingPath) params.set("direction", safe.sheetDirection);
     if (safe.sheetTags !== undefined && sheetGroupingPath) params.set("tags", safe.sheetTags.join(","));
+    if (safe.sheetLessonFilter && sheetGroupingPath) params.set("lesson", safe.sheetLessonFilter.join(","));
     const qs = params.toString();
     const sheetAnchor=safe.resultId&&(
       (path===SHEET_DIRECTORY_PATH||path===COUNTRIES_SHEET_PATH)&&safe.resultId.startsWith("country-")||

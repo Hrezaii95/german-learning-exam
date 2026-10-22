@@ -11,27 +11,22 @@ import {sortSheetItems} from "@/lib/study/sheet-sorting";
 import {subjectSheetHref,subjectVocabularyGroups,type SubjectSheet,type SubjectVocabularyGroup,type SubjectVocabularyItem} from "@/lib/study/subject-sheets";
 import {OverviewPanel} from "./OverviewPanel";
 import {useStudyScope} from "./StudyScope";
-import {SubjectIcon,SubjectVocabularyVisual} from "./SubjectIllustration";
-import {HighlightedPlural,SubjectPluralGrid} from "./SubjectPluralGrid";
+import {SubjectIcon} from "./SubjectIllustration";
+import {SubjectPluralGrid} from "./SubjectPluralGrid";
 import {SubjectGroupedVocabulary} from "./SubjectGroupedVocabulary";
 import {SubjectGroupingControls} from "./SubjectGroupingControls";
 import {SubjectSortingControls} from "./SubjectSortingControls";
 import {SubjectSheetFilters} from "./SubjectSheetFilters";
-import {SubjectWordDropdown} from "./SubjectWordDropdown";
 import {CheatSheetFrame} from "./CheatSheetFrame";
 import {sheetDestinations} from "@/lib/study/sheet-navigation";
 import {VOCABULARY_SHEET_PATH} from "@/lib/study/sheet-routes";
+import {WordDropdown} from "./WordDropdown";
+import {VocabularyEntry} from "./VocabularyEntry";
 
 const articles:Record<string,string>={male:"der",female:"die",neuter:"das",plural:"die"};
 
 function searchKey(text:string){
   return text.toLocaleLowerCase("de").replace(/ä/g,"ae").replace(/ö/g,"oe").replace(/ü/g,"ue").replace(/ß/g,"ss").trim();
-}
-
-function sourceQualifier(item:SubjectVocabularyItem){
-  return (item.studyTags.sources??[item.studyTags.source])
-    .filter(source=>source!=="course")
-    .map(source=>source==="teacher-extra"?"Teacher extra":"Study extra").join(" · ");
 }
 
 export function SubjectInfographic({sheet,allNouns=false,allItems}:{sheet:SubjectSheet;allNouns?:boolean;allItems?:SubjectVocabularyItem[]}){
@@ -69,14 +64,18 @@ export function SubjectInfographic({sheet,allNouns=false,allItems}:{sheet:Subjec
     window.history.replaceState(window.history.state,"",`${window.location.pathname}${sheetBrowseQuery(next)}`);
   };
   const effectiveConcepts=browse.tags??(allNouns?scope.concepts:[sheet.id]);
-  const sheetScope:StudyScope={...scope,concepts:effectiveConcepts};
+  const sheetScope:StudyScope={...scope,...(browse.lessonFilter?{mode:browse.lessonFilter.length===1?"one" as const:"multiple" as const,lessons:browse.lessonFilter}:{}),concepts:effectiveConcepts};
   const setSheetScope=(next:StudyScope)=>{
     setScope(next);
-    changeBrowse({...browse,tags:[...next.concepts],...(next.concepts.join(",")!==effectiveConcepts.join(",")?{category:"all"}:{}),page:1});
+    const {lessonFilter:previousLessonFilter,...otherBrowse}=browse;
+    const lessonFilter=previousLessonFilter&&next.mode!=="all"?selectedLessons(next):undefined;
+    changeBrowse({...otherBrowse,...(lessonFilter?{lessonFilter}:{}),tags:[...next.concepts],...(next.concepts.join(",")!==effectiveConcepts.join(",")?{category:"all"}:{}),page:1});
   };
   const resetFilters=()=>{
     setScope(defaultStudyScope());
-    changeBrowse({...browse,...initialSheetBrowse,tags:[]});
+    const resetBrowse:SheetBrowse={...browse,...initialSheetBrowse,tags:[]};
+    delete resetBrowse.lessonFilter;
+    changeBrowse(resetBrowse);
   };
   const scoped=catalogue.filter(item=>matchesStudyScope(item.studyTags,sheetScope));
   const groups=subjectVocabularyGroups(scoped);
@@ -120,11 +119,12 @@ export function SubjectInfographic({sheet,allNouns=false,allItems}:{sheet:Subjec
   };
   const triggerRef=(key:string,node:HTMLButtonElement|null)=>{if(node)triggers.current.set(key,node);else triggers.current.delete(key);};
   const closeDropdown=(key:string)=>{setOpenEntry("");triggers.current.get(key)?.focus();};
-  const renderDropdown=(item:SubjectVocabularyItem,key:string)=><SubjectWordDropdown item={item} subject={sheet.id} panelId={`subject-word-detail-${key}`} href={appendNavigationContext(item.href,sheetNavigationContext(returnPath,browse,item.id))} onClose={()=>closeDropdown(key)}/>;
-  const renderEntry=(item:SubjectVocabularyItem)=><div className={`subject-entry-wrap subject-tone-${item.tone}`} key={item.id}><button type="button" ref={node=>{triggerRef(item.id,node);if(node)entries.current.set(item.id,node);else entries.current.delete(item.id);}} id={`sheet-card-${item.id}`} data-subject-entry={item.id} className={`subject-vocabulary-entry subject-tone-${item.tone}`} aria-label={[item.de,...item.plurals.map(form=>form.text),sourceQualifier(item)].filter(Boolean).join(" · ")} aria-pressed={current?.id===item.id} aria-expanded={openEntry===item.id} aria-controls={openEntry===item.id?`subject-word-detail-${item.id}`:undefined} onClick={()=>choose(item.id)} onKeyDown={event=>{if(event.key==="Escape"&&openEntry===item.id){event.preventDefault();event.stopPropagation();closeDropdown(item.id);}}}>
-    <SubjectVocabularyVisual de={item.de} category={item.category} cardId={item.cardId} subject={sheet.id}/>
-    <span className="subject-entry-text"><strong lang="de">{item.de}</strong>{pluralView&&item.plurals.length>0?<span className="subject-entry-plurals" lang="de">{item.plurals.map((form,index)=><span className="subject-plural-result" key={`${form.text}-${index}`}><span className="subject-plural-arrow" aria-hidden="true">→</span><span><HighlightedPlural singular={item.de} plural={form.text}/></span></span>)}</span>:<small lang={item.plurals.length?"de":undefined}>{item.plurals.length?item.plurals.map(form=>form.text).join(" · "):item.tone==="plain"?item.category:item.tone==="plural"?"Plural form":"No plural taught here"}</small>}<span className="subject-entry-meaning">{item.meaning}</span>{sourceQualifier(item)&&<em>{sourceQualifier(item)}</em>}</span><span className="subject-entry-chevron" aria-hidden="true">{openEntry===item.id?"⌃":"⌄"}</span>
-  </button>{openEntry===item.id&&renderDropdown(item,item.id)}</div>;
+  const renderDropdown=(item:SubjectVocabularyItem,key:string)=><WordDropdown item={item} subject={sheet.id} panelId={`subject-word-detail-${key}`} href={appendNavigationContext(item.href,sheetNavigationContext(returnPath,browse,item.id))} onClose={()=>closeDropdown(key)}/>;
+  const renderEntry=(item:SubjectVocabularyItem)=><div className={`subject-entry-wrap subject-tone-${item.tone}`} key={item.id}>
+    <VocabularyEntry item={item} subject={sheet.id} selected={current?.id===item.id} expanded={openEntry===item.id} showPluralChanges={pluralView}
+      buttonRef={node=>{triggerRef(item.id,node);if(node)entries.current.set(item.id,node);else entries.current.delete(item.id);}}
+      onChoose={()=>choose(item.id)} onClose={()=>closeDropdown(item.id)}/>
+    {openEntry===item.id&&renderDropdown(item,item.id)}</div>;
   const renderGroup=(group:SubjectVocabularyGroup)=><section key={group.id} className={`subject-vocabulary-lane subject-tone-${group.tone}${group.tone==="plain"?" subject-lane-plain":""}`} aria-labelledby={`subject-lane-${group.id}`}>
     <h3 id={`subject-lane-${group.id}`}>{articles[group.tone]&&<span className="subject-lane-article" lang="de">{articles[group.tone]}</span>}<span>{group.label}<small>{group.items.length} {group.items.length===1?"entry":"entries"}</small></span></h3>
     <div className="subject-lane-entries">{sortItems(group.items).map(renderEntry)}</div>

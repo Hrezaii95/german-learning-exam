@@ -19,6 +19,29 @@ describe("safe sheet return navigation",()=>{
     expect(resolveBackHref(directory)).toBe("/cheat-sheets");
   });
 
+  it("keeps explicit topic lessons separate from lesson grouping through card navigation",()=>{
+    for(const lessonFilter of [[5],[1,2,3,4]]){
+      const browse={query:"",category:"all",saved:false,page:1,lessons:true,lessonFilter};
+      expect(readSheetBrowse(new URLSearchParams(sheetBrowseQuery(browse)))).toEqual(browse);
+      for(const path of ["/cheat-sheets/subjects/home","/cheat-sheets/vocabulary","/cheat-sheets/plurals"]){
+        const context=parseNavigationContextParam(serializeNavigationContext(sheetNavigationContext(path,browse,"W464-0")));
+        const back=new URL(resolveBackHref(context),"https://local.test");
+        expect(back.pathname).toBe(path==="/cheat-sheets/plurals"?"/cheat-sheets/vocabulary":path);
+        expect(back.hash).toBe("#sheet-card-W464-0");
+        expect(readSheetBrowse(back.searchParams)).toEqual(browse);
+      }
+    }
+    for(const lesson of ["","0","13","1,13","1,invalid","1.5","1e1","0x5"," 5"]){
+      expect(readSheetBrowse(new URLSearchParams({lesson}))).not.toHaveProperty("lessonFilter");
+    }
+    expect(readSheetBrowse(new URLSearchParams({lesson:"4,2,4"})).lessonFilter).toEqual([2,4]);
+    const foreign=parseNavigationContextParam(JSON.stringify({entryContext:"hub",returnPath:"/vocabulary",sheetLessonFilter:[5]}));
+    expect(foreign).not.toHaveProperty("sheetLessonFilter");
+    for(const sheetLessonFilter of ["5",[13],[1,13],[],true]){
+      const invalid=parseNavigationContextParam(JSON.stringify({entryContext:"hub",returnPath:"/cheat-sheets/subjects/home",sheetLessonFilter}));
+      expect(invalid).not.toHaveProperty("sheetLessonFilter");
+    }
+  });
   it("restores every word sorting choice and direction independently of grouping on all infographic routes",()=>{
     const sorts:SheetSort[]=["german","meaning","lesson","source","original"];
     const directions:SheetSortDirection[]=["asc","desc"];

@@ -10,12 +10,17 @@ for(const width of [320,1440])test(`country and home word cards return to the se
   await page.getByRole("link",{name:/Back/}).first().click();
   await expect(page.getByRole("combobox",{name:"Choose a country",exact:true})).toHaveValue("DE");
   await expect(page).toHaveURL(/cheat-sheets\/countries\/?#country-DE$/);
-  await page.goto("cheat-sheets/home/");
-  await page.getByRole("combobox",{name:"Explore a word",exact:true}).selectOption("bett");
-  await page.locator(".home-focus").getByRole("link",{name:"Full vocabulary card →",exact:true}).click();
+  await page.goto("cheat-sheets/home/#home-bett");
+  await expect(page.locator("#home-bett")).toBeAttached();
+  await page.getByRole("link",{name:"Open home subject sheet →",exact:true}).click();
+  await expect(page).toHaveURL(/subjects\/home\/?\?lesson=1%2C2%2C3%2C4/);
+  const search=page.getByRole("searchbox",{name:"Find a word or form",exact:true});
+  await search.fill("Bett");
+  await page.locator("[data-subject-entry]").filter({hasText:"das Bett"}).first().click();
+  await page.locator(".subject-word-dropdown").getByRole("link",{name:"Full vocabulary card →",exact:true}).click();
   await page.getByRole("link",{name:/Back/}).first().click();
-  await expect(page).toHaveURL(/cheat-sheets\/home\/?#home-bett$/);
-  await expect(page.getByRole("combobox",{name:"Explore a word",exact:true})).toHaveValue("bett");
+  await expect(search).toHaveValue("Bett");
+  await expect.poll(()=>page.evaluate(()=>new URLSearchParams(location.search).get("lesson"))).toBe("1,2,3,4");
 });
 
 for(const width of [320,1440]) test(`country and home recall follow selection, search and saved filters at ${width}px`,async({page})=>{
@@ -49,19 +54,12 @@ for(const width of [320,1440]) test(`country and home recall follow selection, s
   await page.goto("cheat-sheets/home/");
   await expect(page.locator(".home-word-card")).toHaveCount(0);
   await expect(page.getByRole("heading",{name:"No matching practice items"})).toBeVisible();
-  await expect(page.locator(".home-focus .study-scope-notice")).toContainText("This word is outside your study selection.");
-  await page.locator(".home-focus").getByRole("button",{name:"Study these lessons",exact:true}).click();
-  await page.getByRole("textbox",{name:"Find a word",exact:true}).fill("Stuhl");
-  await expect(page.locator(".home-word-card")).toHaveCount(1);
-  await expect(page.locator(".home-quiz")).toContainText("Question 1 / 2");
+  await expect(page.getByRole("link",{name:"Open home subject sheet →",exact:true})).toHaveAttribute("href",/lesson=1%2C2%2C3%2C4/);
+  await scope.locator("summary").click();
+  await scope.getByRole("combobox",{name:"Selected lesson"}).selectOption("4");
+  await scope.locator("summary").click();
+  await expect(page.locator(".home-quiz")).toContainText("Question 1 /");
   await page.locator(".home-quiz").getByRole("button",{name:"der",exact:true}).click();
   await expect(page.locator(".home-quiz")).toContainText("Exactly.");
-  await page.getByRole("textbox",{name:"Find a word",exact:true}).fill("Tisch");
-  await expect(page.locator(".home-quiz")).toContainText("Question 1 / 1");
-  await expect(page.locator(".home-quiz")).toContainText("___ Tisch");
-  await page.locator(".home-quiz").getByRole("button",{name:"der",exact:true}).click();
-  await expect(page.locator(".home-quiz")).toContainText("Exactly.");
-  await page.getByRole("textbox",{name:"Find a word",exact:true}).fill("nothing-matches");
-  await expect(page.getByRole("heading",{name:"No matching practice items"})).toBeVisible();
   await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);
 });
