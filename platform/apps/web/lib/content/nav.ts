@@ -29,7 +29,7 @@ export const NAV_ITEMS: NavItem[] = [
   { id: "cheat-sheets", label: "Cheat sheets", href: "/cheat-sheets", icon: "M12 3l2.8 5.8 6.4.9-4.6 4.5 1.1 6.3L12 17.5l-5.7 3 1.1-6.3L2.8 9.7l6.4-.9z", placement: ["rail", "tabs", "menu"], order: 40, group: "learn", description: "Visual memory guides" },
   { id: "all-vocabulary", label: "All vocabulary", href: "/cheat-sheets/vocabulary", icon: "M4 4h16v16H4z M4 10h16 M10 4v16", placement: ["rail", "menu"], order: 50, group: "learn", description: "Illustrated words, gender & plural patterns" },
   { id: "subjects", label: "Subjects", href: "/cheat-sheets#subjects", icon: "M3 3h7v7H3z M14 3h7v7h-7z M3 14h7v7H3z M14 14h7v7h-7z", placement: ["rail", "menu"], order: 60, group: "learn", description: "Browse vocabulary by subject" },
-  { id: "saved", label: "Review", href: "/saved", icon: "M6 3h12v18l-6-4-6 4z", placement: ["rail", "tabs", "menu"], order: 70, group: "remember", description: "Saved items, recall & guided missions" },
+  { id: "saved", label: "Review", href: "/saved", icon: "M6 3h12v18l-6-4-6 4z", placement: ["rail", "menu"], order: 70, group: "remember", description: "Saved items, recall & guided missions" },
   { id: "verbs", label: "Verbs", href: "/verbs", icon: "M5 5h14 M12 5v14 M8 19h8", placement: ["rail", "menu"], order: 90, group: "explore", description: "Conjugations & examples" },
   { id: "grammar", label: "Grammar", href: "/grammar", icon: "M4 5h16 M4 12h16 M4 19h16", placement: ["rail", "menu"], order: 100, group: "explore", description: "Patterns made clear" },
   { id: "phrases", label: "Phrases & Q&A", href: "/phrases", icon: "M3 4h18v12H9l-6 5z", placement: ["rail", "menu"], order: 110, group: "explore", description: "Ready-to-use conversations" },
@@ -41,6 +41,7 @@ export const NAV_ITEMS: NavItem[] = [
   { id: "settings", label: "Settings", href: "/settings", icon: "M3 6h18 M3 18h18 M7 3v6 M17 15v6", placement: ["rail", "menu"], order: 190, group: "app", description: "Your preferences" },
   // End Lane 1.
   // Lane 2: append game navigation here.
+  { id: "play", label: "Game", href: "/play", icon: "M6 8h12a4 4 0 014 4v2a4 4 0 01-7 2.6L13.5 15h-3L9 16.6A4 4 0 012 14v-2a4 4 0 014-4z M7 11v3 M5.5 12.5h3 M16 12h.01 M18 14h.01", placement: ["rail", "tabs", "menu"], order: 35, group: "remember", description: "Wortwerk: play the words you are learning" },
   // End Lane 2.
   // Lane 3: append account and role navigation here.
   // End Lane 3.
