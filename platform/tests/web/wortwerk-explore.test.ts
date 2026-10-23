@@ -223,3 +223,53 @@ describe("Wortwerk timed exam simulation", () => {
     expect(emitted.filter(event => event.type === "session").map(event => (event.payload as { mode: string }).mode)).toEqual(["free", "free"]);
   });
 });
+
+
+it("keeps practice restore available before any pending pack is enabled", () => {
+  context.current = { ...context.current!, enabledPacks: [], selectedPack: undefined };
+  render(createElement(ExplorePanel, { view: "progress" }));
+  expect(screen.getByRole("heading", { name: "Practice backup" })).not.toBeNull();
+  expect(screen.getByRole("button", { name: "Import practice JSON" })).not.toBeNull();
+  expect(screen.getByRole("button", { name: "Download practice JSON" })).not.toBeNull();
+});
+
+it("retains a staged backup when restoring pack selection changes the progress subtree", async () => {
+  const incoming = createWortwerkStore({ getItem: () => null, setItem: () => undefined });
+  incoming.setDoc("settings", { enabledPackIds: [selected.pack.id] });
+  context.current = { ...context.current!, enabledPacks: [], selectedPack: undefined };
+  const view = render(createElement(ExplorePanel, { view: "progress" }));
+  const backup = screen.getByRole("region", { name: "Practice backup" });
+  const file = new File([JSON.stringify(incoming.exportBackup())], "practice.json", { type: "application/json" });
+  fireEvent.change(screen.getByLabelText("Choose practice backup"), { target: { files: [file] } });
+  expect(await screen.findByRole("heading", { name: "Ready to merge" })).toBeTruthy();
+  expect(screen.getByText("0 incoming events · 1 incoming documents.")).toBeTruthy();
+  context.current = { ...context.current!, enabledPacks: [selected], selectedPack: selected };
+  view.rerender(createElement(ExplorePanel, { view: "progress" }));
+  expect(screen.getByRole("region", { name: "Practice backup" })).toBe(backup);
+  expect(screen.getAllByRole("heading", { name: "Practice backup" })).toHaveLength(1);
+  expect(screen.getByRole("heading", { name: "Ready to merge" })).toBeTruthy();
+  expect((screen.getByRole("button", { name: "Merge practice backup" }) as HTMLButtonElement).disabled).toBe(false);
+});
+
+it("keeps the merge confirmation when an imported pack choice enables the selected content", async () => {
+  const incoming = createWortwerkStore({ getItem: () => null, setItem: () => undefined });
+  incoming.setDoc("settings", { enabledPackIds: [selected.pack.id] });
+  incoming.setDoc("study.pack", selected.pack.id);
+  context.current = { ...context.current!, enabledPacks: [], selectedPack: undefined };
+  const view = render(createElement(ExplorePanel, { view: "progress" }));
+  const backup = screen.getByRole("region", { name: "Practice backup" });
+  fireEvent.change(screen.getByLabelText("Choose practice backup"), { target: { files: [new File([JSON.stringify(incoming.exportBackup())], "practice.json", { type: "application/json" })] } });
+  expect(await screen.findByRole("heading", { name: "Ready to merge" })).toBeTruthy();
+  const restore = wortwerkStore.restoreBackup.bind(wortwerkStore);
+  const merge = vi.spyOn(wortwerkStore, "restoreBackup").mockImplementation(value => {
+    restore(value);
+    context.current = { ...context.current!, enabledPacks: [selected], selectedPack: selected };
+    view.rerender(createElement(ExplorePanel, { view: "progress" }));
+  });
+  fireEvent.click(screen.getByRole("button", { name: "Merge practice backup" }));
+  expect(merge).toHaveBeenCalledTimes(1);
+  expect(wortwerkStore.getDoc("study.pack")).toBe(selected.pack.id);
+  expect(screen.getByRole("region", { name: "Practice backup" })).toBe(backup);
+  expect(screen.getByText(/^Practice backup merged[. ]/u)).toBeTruthy();
+  expect(screen.queryByRole("heading", { name: "Ready to merge" })).toBeNull();
+});

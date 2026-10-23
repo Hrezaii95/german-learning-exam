@@ -8,6 +8,7 @@ import { createChallenge, advanceChallenge, answerChallenge, challengeRemainingS
 import { seededRng } from "../../../../packages/wortwerk/src/random.js";
 import type { GradeResult, TaskAnswer } from "../../../../packages/wortwerk/src/tasks.js";
 import type { PlayPack } from "@/lib/wortwerk/content.server";
+import { decodeChallenge, resolveChallengeTarget, type BlitzChallenge } from "@/lib/wortwerk/challenges";
 import { decodeScope, encodeScope, ScopeLinkError, type PlayScope } from "@/lib/wortwerk/links";
 import { materializeTask, playableCapabilities, templateFor } from "@/lib/wortwerk/runtime";
 import { createUuidV7Factory, wortwerkStore } from "@/lib/wortwerk/store";
@@ -17,6 +18,8 @@ import { usePlayContent } from "./PlayProvider";
 import { TaskRenderer, type TaskAnswerEvidence } from "./TaskRenderer";
 import { TaskFeedback } from "./TaskFeedback";
 import { PuzzleShare } from "./ChallengeLinks";
+import { AssignmentMemory, ReceiptButton } from "./ReceiptPanel";
+import { ChallengeShare } from "./ChallengeShare";
 
 const newSessionId = createUuidV7Factory();
 const dimensionKey = (task: RunTask) => JSON.stringify([task.packId, task.itemId, task.dimension]);
@@ -40,23 +43,16 @@ function puzzlePlan(capabilities: readonly LearningCapability[], packId: string,
 }
 
 function boundedBlitzQueue(tasks: readonly RunTask[]): RunTask[] {
-  if (!tasks.length) return [];
-  const queue: RunTask[] = [];
-  for (let index = 0; index < 200; index++) {
-    const previous = queue.slice(-2);
-    const blocked = previous.length === 2 && previous[0]?.templateId === previous[1]?.templateId ? previous[0]!.templateId : null;
-    const candidate = Array.from({ length: tasks.length }, (_, offset) => tasks[(index + offset) % tasks.length]!).find(task => task.templateId !== blocked);
-    if (!candidate) break;
-    queue.push(candidate);
-  }
-  return queue;
+  // Blitz may repeat a narrow scope until its clock/strikes end the round.
+  // The Daily Run interleaver owns the two-consecutive-template rule.
+  return tasks.length ? Array.from({ length: 200 }, (_, index) => tasks[index % tasks.length]!) : [];
 }
 
 type RunState = {
   id: string; kind: RunKind; challenge: ChallengeState | null; ghost: PersonalBest | null; puzzleDate: string | null; puzzleOutcomes: PuzzleOutcome[]; pack: PlayPack; scope: PlayScope; mode: LearningSession["mode"]; assignmentId?: string;
   startedAt: string; queue: RunTask[]; index: number; result: GradeResult | null;
   answers: LearningAnswer[]; history: LearningAnswer[]; unresolved: RunTask[]; scheduled: string[];
-  skipped: number; finisher: boolean; finished: boolean; bonusOf?: string;
+  skipped: number; finisher: boolean; finished: boolean; bonusOf?: string; finishedAt?: string; complete?: boolean; sharedTarget?: BlitzChallenge;
 };
 
 export function RunPlayer({ modeOverride }: RunPlayerProps = {}) {
@@ -68,11 +64,28 @@ function RunPractice({ query, modeOverride }: { query: string; modeOverride: "bl
   const content = usePlayContent();
   const params = useMemo(() => new URLSearchParams(query), [query]);
   const requestedMode = params.get("mode");
-  const kind: RunKind = modeOverride ?? (requestedMode === "boss" || requestedMode === "blitz" || requestedMode === "puzzle" || requestedMode === "quick" || requestedMode === "free" ? requestedMode : "run");
+  const shared = useMemo<{ challenge: BlitzChallenge | null; error: string | null }>(() => {
+    const code = params.get("challenge");
+    if (code === null) return { challenge: null, error: null };
+    try {
+      const challenge = decodeChallenge(code);
+      const scope = params.get("scope");
+      if ((params.has("pack") && params.get("pack") !== challenge.packId)
+        || (params.has("difficulty") && params.get("difficulty") !== challenge.difficultyId)
+        || (scope !== null && encodeScope(decodeScope(scope)) !== encodeScope(challenge.scope))
+        || (modeOverride !== undefined && modeOverride !== "blitz")
+        || (requestedMode !== null && requestedMode !== "blitz")) {
+        return { challenge: null, error: "This challenge link has a conflicting pack, practice selection or level. Use the original shared link." };
+      }
+      return { challenge, error: null };
+    } catch (error) { return { challenge: null, error: error instanceof Error ? error.message : "This challenge link is invalid." }; }
+  }, [params, modeOverride, requestedMode]);
+  const kind: RunKind = shared.challenge ? "blitz" : modeOverride ?? (requestedMode === "boss" || requestedMode === "blitz" || requestedMode === "puzzle" || requestedMode === "quick" || requestedMode === "free" ? requestedMode : "run");
   const mode: LearningSession["mode"] = kind === "puzzle" ? "free" : kind;
   const unitId = kind === "boss" ? params.get("unit") : null;
   const parsed = useMemo<{ scope: PlayScope; error: string | null }>(() => {
     try {
+      if (shared.challenge) return { scope: shared.challenge.scope, error: null };
       const encoded = params.get("scope");
       const scope = encoded ? decodeScope(encoded) : content?.scope ?? { v: 1 as const };
       const item = params.get("item");
@@ -80,8 +93,8 @@ function RunPractice({ query, modeOverride }: { query: string; modeOverride: "bl
     } catch (error) {
       return { scope: { v: 1 as const }, error: error instanceof ScopeLinkError ? error.message : "This practice link is invalid. Choose a scope to start again." };
     }
-  }, [params, content?.scope]);
-  const requestedPack = params.get("pack");
+  }, [params, content?.scope, shared.challenge]);
+  const requestedPack = shared.challenge?.packId ?? params.get("pack");
   const selected = requestedPack ? content?.enabledPacks.find(pack => pack.pack.id === requestedPack) : content?.selectedPack;
   const [session, setSession] = useState<RunState | null>(null);
   const liveSession = useRef<RunState | null>(null);
@@ -101,6 +114,8 @@ function RunPractice({ query, modeOverride }: { query: string; modeOverride: "bl
   const count = mode === "quick" ? 5 : parsed.scope.count ?? 20;
   const plan = useMemo(() => kind === "puzzle" ? puzzlePlan(capabilities, activePack?.pack.id ?? "unavailable", date) : createDailyRun({ capabilities, answers: state.answers, now: state.now, count, mode }), [kind, capabilities, activePack?.pack.id, date, state.answers, state.now, count, mode]);
   const ghost = activePack && (kind === "blitz" || kind === "boss") ? derivePersonalBest(state.sessions, { mode: kind, scopeKey: scopeKey(activePack.pack.id, activeScope), difficultyId: activePack.difficulty.id, now: state.now }) : null;
+  const target = activePack ? resolveChallengeTarget(params.get("challenge"), { packId: activePack.pack.id, scope: activeScope, difficultyId: activePack.difficulty.id }) : { challenge: null, error: null };
+  const sharedTarget = session?.sharedTarget ?? target.challenge;
   const unit = activePack?.pack.units.find(candidate => candidate.id === unitId);
   const handled = useRef<string | null>(null);
   const completed = useRef(new Set<string>());
@@ -133,6 +148,7 @@ function RunPractice({ query, modeOverride }: { query: string; modeOverride: "bl
       unresolved: finisher ? [...(session?.unresolved ?? [])] : [], scheduled: [], skipped: 0, finisher, finished: false,
       ...(assignment ? { assignmentId: assignment } : {}),
       ...(bonusOf ? { bonusOf } : {}),
+      ...(!extra && target.challenge ? { sharedTarget: target.challenge } : {}),
     };
     recordSession({ sessionId: id, mode: next.mode, startedAt, completedAt: startedAt, answered: 0, correct: 0, completed: false, scopeKey: scopeKey(next.pack.pack.id, next.scope), difficultyId: pack.difficulty.id, ...(bonusOf ? { bonusOf } : {}) }, { timeZone: state.timeZone });
     handled.current = null;
@@ -142,15 +158,16 @@ function RunPractice({ query, modeOverride }: { query: string; modeOverride: "bl
   }
 
   const finish = useCallback((next: RunState) => {
+    const finishedAt = next.finishedAt ?? new Date().toISOString();
+    const complete = next.challenge ? next.challenge.mode === "blitz" || (next.challenge.endReason === "complete" && next.skipped === 0) : next.skipped === 0;
     if (!completed.current.has(next.id)) {
       completed.current.add(next.id);
       const results = deriveRunResults(next.answers, next.history);
-      const complete = next.challenge ? next.challenge.mode === "blitz" || (next.challenge.endReason === "complete" && next.skipped === 0) : next.skipped === 0;
-      recordSession({ sessionId: next.id, mode: next.mode, startedAt: next.startedAt, answered: results.answered, correct: results.correct, completed: complete, scopeKey: scopeKey(next.pack.pack.id, next.scope), difficultyId: next.pack.difficulty.id, ...(next.bonusOf ? { bonusOf: next.bonusOf } : {}) }, { timeZone: state.timeZone });
+      recordSession({ sessionId: next.id, mode: next.mode, startedAt: next.startedAt, completedAt: finishedAt, answered: results.answered, correct: results.correct, completed: complete, scopeKey: scopeKey(next.pack.pack.id, next.scope), difficultyId: next.pack.difficulty.id, ...(next.bonusOf ? { bonusOf: next.bonusOf } : {}) }, { timeZone: state.timeZone });
       if (next.assignmentId) recordAssignmentProgress(next.assignmentId, { answered: results.answered, correct: results.correct, bySkill: results.bySkill, completed: complete && next.skipped === 0 && results.answered >= next.queue.length });
       if (next.kind === "blitz" || next.kind === "boss" || next.kind === "puzzle") wortwerkStore.appendEvent("challenge.completed", { sessionId: next.id, kind: next.kind, scopeKey: scopeKey(next.pack.pack.id, next.scope), difficultyId: next.pack.difficulty.id, endReason: next.challenge?.endReason ?? "complete", strikes: next.challenge?.strikes ?? 0, puzzleDate: next.puzzleDate, outcomes: next.kind === "puzzle" ? next.puzzleOutcomes : [], completed: complete });
     }
-    saveSession({ ...next, finished: true });
+    saveSession({ ...next, finished: true, finishedAt, complete });
   }, [state.timeZone, saveSession]);
 
   useEffect(() => {
@@ -231,12 +248,16 @@ function RunPractice({ query, modeOverride }: { query: string; modeOverride: "bl
     else { handled.current = null; stepStarted.current = Date.now(); saveSession(next); }
   }
 
-  if (parsed.error) return <div className="ww-page"><section className="ww-panel"><h1>Practice link</h1><p role="alert">{parsed.error}</p><Link className="ww-button" href="/play">Choose a new practice</Link></section></div>;
-  if (!activePack) return <div className="ww-page"><section className="ww-panel"><h1>Choose a content pack</h1><p>{requestedPack ? "This pack is unavailable or disabled. Enable it explicitly before starting." : "No content pack is enabled yet. Reviewed content will appear when available; test fixtures need an explicit choice."}</p><Link className="ww-button ww-button--primary" href="/play/packs">Open content packs</Link></section></div>;
-  if (!session) return <div className="ww-page"><section className="ww-panel">
+  if (shared.error || parsed.error || target.error) return <div className="ww-page"><section className="ww-panel"><h1>Practice link</h1><p role="alert">{shared.error ?? parsed.error ?? target.error}</p><Link className="ww-button" href="/play">Choose a new practice</Link></section></div>;
+  const assignmentId = params.get("assignment")?.trim();
+  const assignmentPackId = activePack?.pack.id ?? requestedPack;
+  const assignmentMemory = assignmentId ? <AssignmentMemory assignmentId={assignmentId} scope={parsed.scope} {...(assignmentPackId ? { packId: assignmentPackId } : {})} /> : null;
+  if (!activePack) return <div className="ww-page">{assignmentMemory}<section className="ww-panel"><h1>Choose a content pack</h1><p>{requestedPack ? "This pack is unavailable or disabled. Enable it explicitly before starting." : "No content pack is enabled yet. Reviewed content will appear when available; test fixtures need an explicit choice."}</p><Link className="ww-button ww-button--primary" href="/play/packs">Open content packs</Link></section></div>;
+  if (!session) return <div className="ww-page">{assignmentMemory}<section className="ww-panel">
     <p className="ww-eyebrow">{runName(kind)}{unit ? ` · ${unit.title}` : ""}</p><h1>Your practice preview</h1>
     <p>{plan.reasonText}</p><p>{plan.tasks.length} eligible task{plan.tasks.length === 1 ? "" : "s"}{kind === "blitz" ? " · 60 seconds · 3 strikes · up to 200 tasks, with repeats" : kind === "boss" ? " · 3 strikes" : kind === "puzzle" ? ` · ${date}` : ` · about ${Math.max(1, Math.ceil(plan.tasks.length / 4))} min`}</p>
     {kind === "puzzle" ? <p>This puzzle uses the whole pack and the local calendar date. Your study scope and progress do not change its six items.</p> : kind === "blitz" || kind === "boss" ? <p>The clock and strikes apply only to challenge modes. Every answer still contributes to your practice history.</p> : <p className="ww-muted">{plan.tasks.length < count ? "This scope has fewer eligible items, so this is a shorter run. " : ""}The weakest or most overdue dimension chooses each task. Missed forms can return in a different format after a few other cards.</p>}
+    {sharedTarget ? <p>Shared target: {sharedTarget.score} correct · 60 seconds. This target uses this exact pack, selection and difficulty and is self-reported.</p> : null}
     {ghost ? <p>Personal best in this scope: {ghost.score} correct from {ghost.answered} answers.</p> : kind === "blitz" ? <p>No personal best in this exact scope and difficulty yet.</p> : null}
     {kind === "quick" ? <p>Answer at least five tasks to keep your streak. Your full Run goal stays separate.</p> : null}
     {activePack.fixture || activePack.pack.review.status !== "reviewed" ? <p className="ww-muted">Explicitly enabled test content · pending German review.</p> : null}
@@ -250,11 +271,12 @@ function RunPractice({ query, modeOverride }: { query: string; modeOverride: "bl
     const bonusTasks = session.kind === "run" && !session.skipped && !finisher.length && results.answered >= 5 && offer.eligible
       ? createDailyRun({ capabilities, answers: state.answers, now: state.now, count: 3, mode: "free" }).tasks : [];
     const heading = session.bonusOf ? "Bonus round complete" : session.kind === "blitz" ? "Blitz complete" : session.kind === "boss" ? session.challenge?.endReason === "complete" && !session.skipped ? "Boss complete" : "Boss round finished" : session.skipped > 0 ? "Practice finished with skips" : session.kind === "puzzle" ? "Daily puzzle complete" : session.finisher ? "Finisher complete" : session.mode === "quick" ? "Quick review complete" : session.mode === "free" ? "Practice complete" : "Daily Run complete";
-    return <div className="ww-page"><section className="ww-panel"><p className="ww-eyebrow">Personal change</p><h1>{heading}</h1>
+    return <div className="ww-page">{assignmentMemory}<section className="ww-panel"><p className="ww-eyebrow">Personal change</p><h1>{heading}</h1>
       {session.challenge ? <p>{session.challenge.endReason === "time" ? "The 60-second round has ended." : session.challenge.endReason === "strikes" ? "Three strikes. Your answers are saved for later practice." : session.kind === "blitz" ? `The finite ${session.queue.length}-task cap was reached.` : "You finished the finite Boss set."}</p> : null}
       <p>You remembered {results.rememberedFromLastWeek} dimension{results.rememberedFromLastWeek === 1 ? "" : "s"} from last week.</p>
       <p>{names.length ? <>You fixed <span lang={session.pack.language.locale}>{names.join(" · ")}</span>.</> : "Every answer gives the next run a better starting point."}</p>
       <p>{results.correct} correct from {results.answered} answers{session.skipped ? ` · ${session.skipped} skipped without a grade` : ""}.</p>
+      {sharedTarget ? <p>Shared target: {sharedTarget.score} correct. Your round: {results.correct} correct in the same pack, selection and difficulty.</p> : null}
       {session.kind === "blitz" && session.ghost ? <p>Personal best before this round: {session.ghost.score} correct. {results.correct > session.ghost.score ? "You set a new best in this scope and difficulty." : "The comparison uses this exact scope and difficulty."}</p> : null}
       {session.kind === "puzzle" && session.puzzleDate ? <PuzzleShare date={session.puzzleDate} outcomes={session.puzzleOutcomes} /> : null}
       {session.bonusOf ? <p>Your optional three-task bonus is saved. Double earned answer XP adds up to 30 extra XP; your Daily Run goal stays complete.</p> : null}
@@ -263,13 +285,16 @@ function RunPractice({ query, modeOverride }: { query: string; modeOverride: "bl
       {session.mode === "quick" ? <p>{results.answered >= 5 ? "This meaningful review keeps your streak. The full Run goal is still separate." : "A streak session needs at least five answers. This shorter practice is still saved."}</p> : null}
       {session.challenge && session.result && task ? <TaskFeedback feedback={task.feedback} result={session.result} lang={task.question.lang} /> : null}
       <div className="ww-actions"><Link className="ww-button ww-button--primary" href="/play/map">Back to map</Link><Link className="ww-button" href="/play">Back to Today</Link>{bonusTasks.length === 3 ? <button type="button" className="ww-button" onClick={() => begin(bonusTasks, false, session.id)}>Optional bonus · 3 tasks · up to 30 extra XP</button> : null}{finisher.length ? <button type="button" className="ww-button" onClick={() => begin(finisher, true)}>Fix these {finisher.length} words · optional</button> : null}</div>
+      {session.complete && session.skipped === 0 && results.answered > 0 && session.finishedAt ? <ReceiptButton receipt={{ v: 1, ...(session.assignmentId ? { assignmentId: session.assignmentId } : {}), packId: session.pack.pack.id, completedAt: session.finishedAt, answered: results.answered, correct: results.correct, bySkill: results.bySkill }} /> : null}
+      {session.kind === "blitz" && session.complete && session.skipped === 0 && results.answered > 0 ? <ChallengeShare challenge={{ v: 1, packId: session.pack.pack.id, scope: session.scope, difficultyId: session.pack.difficulty.id, score: results.correct, durationSeconds: 60 }} /> : null}
       {session.unresolved.length && !finisher.length ? <p className="ww-muted">Unresolved forms stay in your review history for another day.</p> : null}
     </section></div>;
   }
   const remaining = session.challenge ? challengeRemainingSeconds(session.challenge, new Date(timerInstant || Date.now())) : null;
-  return <div className="ww-page"><header className="ww-page-heading"><div className="ww-run-progress"><span>{session.bonusOf ? "Optional bonus · 3 tasks" : session.finisher ? "Optional finisher" : runName(session.kind)}{unit ? ` · ${unit.title}` : ""}</span><span>{session.index + 1} / {session.queue.length}</span><progress aria-label="Practice progress" value={session.index} max={session.queue.length} /></div>
+  return <div className="ww-page">{assignmentMemory}<header className="ww-page-heading"><div className="ww-run-progress"><span>{session.bonusOf ? "Optional bonus · 3 tasks" : session.finisher ? "Optional finisher" : runName(session.kind)}{unit ? ` · ${unit.title}` : ""}</span><span>{session.index + 1} / {session.queue.length}</span><progress aria-label="Practice progress" value={session.index} max={session.queue.length} /></div>
     {remaining !== null ? <p role="timer" aria-label="Blitz time remaining">{remaining} seconds</p> : null}
     {session.challenge ? <p aria-label={`Strikes: ${session.challenge.strikes} of 3`}>Strikes {session.challenge.strikes} / 3</p> : null}
+    {sharedTarget ? <p className="ww-muted">Shared target: {sharedTarget.score} correct · 60 seconds.</p> : null}
     {session.ghost ? <p className="ww-muted">Ghost: {session.ghost.score} correct in this scope and difficulty.</p> : null}
     {currentRunTask?.reason === "comeback" ? <p className="ww-muted">A different way to recall the same dimension.</p> : null}
   </header>{task ? <TaskRenderer key={task.id} task={task} onAnswer={answer} result={session.result} /> : <section className="ww-panel"><p>This task is unavailable with the current source content.</p></section>}

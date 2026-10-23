@@ -58,9 +58,9 @@ export function parsePanelCatalog(value: unknown): PanelCatalog | null {
       for (const template of item.templates) {
         if (!record(template) || !text(template.id) || templateIds.has(template.id) || !text(template.dimension)
           || !item.dimensions.includes(template.dimension) || !text(template.skill) || !FORMATS.includes(template.format as LearningFormat)
-          || template.assessment !== undefined && template.assessment !== "objective" && template.assessment !== "self") return null;
+          || template.assessment !== "objective" && template.assessment !== "self") return null;
         templates.push({ id: template.id, dimension: template.dimension, skill: template.skill, format: template.format as LearningFormat,
-          ...(template.assessment === undefined ? {} : { assessment: template.assessment as "objective" | "self" }) });
+          assessment: template.assessment as "objective" | "self" });
         templateIds.add(template.id);
       }
       capabilities.push({ packId: source.packId, itemId: item.itemId, dimensions: [...new Set(item.dimensions)], templates });

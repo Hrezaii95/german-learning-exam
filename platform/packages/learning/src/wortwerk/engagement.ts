@@ -30,10 +30,11 @@ export type HabitSummary = {
 };
 
 /** Freeze earning/spending is replayed from dated evidence; no hidden balance cache. */
-export function deriveHabit(sessions: readonly LearningSession[], now: Date, timeZone: string): HabitSummary {
+export function deriveHabit(sessions: readonly LearningSession[], now: Date, timeZone: string,
+  habitSessions: readonly LearningSession[] = sessions): HabitSummary {
   const today = studyDate(now, timeZone);
   const rows = orderedSessions(sessions, now);
-  const dates = [...new Set(rows.filter(isMeaningfulSession).map(s => s.studyDate))].filter(d => d <= today).sort();
+  const dates = [...new Set(orderedSessions(habitSessions, now).filter(isMeaningfulSession).map(s => s.studyDate))].filter(d => d <= today).sort();
   const active = new Set(dates);
   const frozen = new Set<string>();
   let streak = 0;

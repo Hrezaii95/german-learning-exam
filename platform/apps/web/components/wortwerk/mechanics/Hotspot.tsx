@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import type { GeneratedTask, GradeResult, TaskAnswer } from "../../../../../packages/wortwerk/src/tasks.js";
 import { TaskFeedback } from "../TaskFeedback";
+import { ResponseTask } from "./Gap";
 export type HotspotProps = {
     task: GeneratedTask;
     onAnswer: (answer: TaskAnswer) => void;
@@ -9,7 +10,7 @@ export type HotspotProps = {
     disabled?: boolean;
     onLearn?: (word: string) => void;
 };
-export function Hotspot(props: HotspotProps) { return <HotspotTask key={props.task.id} {...props}/>; }
+export function Hotspot(props: HotspotProps) { return props.task.question.input === "text" ? <ResponseTask key={props.task.id} {...props}/> : <HotspotTask key={props.task.id} {...props}/>; }
 function HotspotTask({ task, onAnswer, result, disabled = false, onLearn }: HotspotProps) {
     const heading = useRef<HTMLHeadingElement>(null);
     useEffect(() => { heading.current?.focus(); }, []);

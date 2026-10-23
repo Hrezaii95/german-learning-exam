@@ -64,6 +64,14 @@ describe("Wortwerk engagement depth", () => {
     const quests = deriveQuests(rows, [session({ mode: "quick", answered: 5, correct: 5 })], now, "Europe/Berlin");
     expect(quests.map(quest => [quest.id, quest.progress, quest.complete])).toEqual([["daily-run", 0, false], ["recall", 1, false], ["repair", 1, true]]);
   });
+  it("keeps abandoned and skipped Runs out of completed recap counts and the full-Run quest", () => {
+    const unfinished = session({ answered: 7, correct: 6, completed: false });
+    expect(deriveWeeklyRecap([], [unfinished], now, "UTC").completedRuns).toBe(0);
+    expect(deriveQuests([], [unfinished], now, "UTC")[0]).toMatchObject({ progress: 0, complete: false });
+    const finished = { ...unfinished, completed: true };
+    expect(deriveWeeklyRecap([], [finished], now, "UTC").completedRuns).toBe(1);
+    expect(deriveQuests([], [finished], now, "UTC")[0]).toMatchObject({ progress: 1, complete: true });
+  });
 });
 
 describe("Wortwerk finite challenges", () => {

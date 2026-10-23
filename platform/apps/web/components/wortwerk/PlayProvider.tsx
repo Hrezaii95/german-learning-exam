@@ -1,6 +1,8 @@
 "use client";
 
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
+import type { DifficultyProfile, LanguageProfile } from "../../../../packages/content/src/types/packs.js";
+import { restorePersonalPacks } from "@/lib/wortwerk/personal-import";
 import type { WortwerkContent, PlayPack } from "@/lib/wortwerk/content.server";
 import { getOverlayPacks, subscribeOverlayPacks } from "@/lib/wortwerk/pack-loader";
 import { wortwerkStore } from "@/lib/wortwerk/store";
@@ -13,6 +15,7 @@ type PlaySettings = { enabledPackIds?: string[]; [key: string]: unknown };
 export type PlayContextValue = {
   packs: PlayPack[]; enabledPacks: PlayPack[]; selectedPack: PlayPack | undefined;
   scope: PlayScope; hydrated: boolean;
+  languages: LanguageProfile[]; difficulties: DifficultyProfile[]; personalIssues: string[];
   setPackEnabled(id: string, enabled: boolean): void;
   selectPack(id: string): void;
   refreshOverlays(): void;
@@ -27,14 +30,29 @@ function settingsValue(value: unknown): PlaySettings {
 export function PlayProvider({ content, children }: { content: WortwerkContent; children: ReactNode }) {
   const state = useWortwerkState();
   const [overlays, setOverlays] = useState<PlayPack[]>([]);
+  const languages = useMemo(() => [...new Map([...(content.languages ?? []), ...content.packs.map(pack => pack.language)].map(profile => [profile.id, profile])).values()], [content]);
+  const difficulties = useMemo(() => [...new Map([...(content.difficulties ?? []), ...content.packs.map(pack => pack.difficulty)].map(profile => [profile.id, profile])).values()], [content]);
+  const [personal, setPersonal] = useState<{ packs: PlayPack[]; enabledIds: string[]; issues: string[]; revision: string }>({ packs: [], enabledIds: [], issues: [], revision: "" });
+  const personalDocuments = state.snapshot.docs.filter(doc => doc.key.startsWith("personal.pack."));
+  const personalRevision = JSON.stringify(personalDocuments.map(doc => [doc.key, doc.updatedAt, doc.deviceId, doc.schemaVersion, doc.value]));
+  const storedPersonalIds = JSON.stringify(personalDocuments.map(doc => doc.key.slice("personal.pack.".length)));
+  const restoreLocalPacks = useCallback((revision: string) => {
+    const restored = restorePersonalPacks(languages, wortwerkStore);
+    const packs = restored.packs.flatMap(({ pack }) => {
+      const language = languages.find(profile => profile.id === pack.language);
+      const difficulty = difficulties.find(profile => profile.id === pack.difficulty);
+      return language && difficulty ? [{ pack, language, difficulty, fixture: false, resources: {} }] : [];
+    });
+    setPersonal({ packs, enabledIds: restored.packs.filter(document => document.enabledForTesting).map(document => document.pack.id), issues: restored.issues, revision });
+  }, [languages, difficulties]);
+  useEffect(() => { if (state.hydrated) restoreLocalPacks(personalRevision); }, [state.hydrated, personalRevision, restoreLocalPacks]);
   const refreshOverlays = useCallback(() => {
-    const known = content.packs;
     setOverlays(getOverlayPacks().flatMap(pack => {
-      const language = (content.languages ?? known.map(entry => entry.language)).find(profile => profile.id === pack.language);
-      const difficulty = (content.difficulties ?? known.map(entry => entry.difficulty)).find(profile => profile.id === pack.difficulty);
+      const language = languages.find(profile => profile.id === pack.language);
+      const difficulty = difficulties.find(profile => profile.id === pack.difficulty);
       return language && difficulty ? [{ pack, language, difficulty, fixture: false, resources: {} }] : [];
     }));
-  }, [content]);
+  }, [languages, difficulties]);
   useEffect(() => {
     refreshOverlays();
     const unsubscribe = subscribeOverlayPacks(refreshOverlays);
@@ -45,13 +63,20 @@ export function PlayProvider({ content, children }: { content: WortwerkContent; 
 
   const packs = useMemo(() => {
     const combined = new Map(content.packs.map(pack => [pack.pack.id, pack]));
-    for (const pack of overlays) combined.set(pack.pack.id, pack);
+    const savedIds = new Set(JSON.parse(storedPersonalIds) as string[]);
+    const restored = personal.revision === personalRevision;
+    const supportedIds = new Set(restored ? personal.packs.map(entry => entry.pack.id) : []);
+    for (const pack of overlays) {
+      if (pack.pack.id.startsWith("personal-") && savedIds.has(pack.pack.id) && !supportedIds.has(pack.pack.id)) continue;
+      combined.set(pack.pack.id, pack);
+    }
+    if (restored) for (const pack of personal.packs) combined.set(pack.pack.id, pack);
     return [...combined.values()];
-  }, [content, overlays]);
-  const settings = settingsValue(state.snapshot.docs.find(doc => doc.key === "settings")?.value);
+  }, [content, overlays, personal.packs, personal.revision, personalRevision, storedPersonalIds]);
+  const settings = settingsValue(state.snapshot.docs.find(doc => doc.key === "settings" && doc.schemaVersion === 1)?.value);
   const explicitIds = Array.isArray(settings.enabledPackIds) && settings.enabledPackIds.every(id => typeof id === "string") ? settings.enabledPackIds : undefined;
-  const enabledPacks = packs.filter(({ pack, fixture }) => explicitIds ? explicitIds.includes(pack.id) : !fixture && pack.review.status === "reviewed");
-  const selectedId = state.snapshot.docs.find(doc => doc.key === "study.pack")?.value;
+  const enabledPacks = packs.filter(({ pack, fixture }) => explicitIds ? explicitIds.includes(pack.id) : !fixture && pack.review.status === "reviewed" || personal.enabledIds.includes(pack.id));
+  const selectedId = state.snapshot.docs.find(doc => doc.key === "study.pack" && doc.schemaVersion === 1)?.value;
   const selectedPack = enabledPacks.find(pack => pack.pack.id === selectedId) ?? enabledPacks[0];
   const scopeDoc = state.snapshot.docs.find(doc => doc.key === "study.scope");
   const savedScope = scopeDoc?.value;
@@ -89,6 +114,15 @@ export function PlayProvider({ content, children }: { content: WortwerkContent; 
   }, [catalog, savedCatalog, state.hydrated]);
 
   function setPackEnabled(id: string, enabled: boolean) {
+    wortwerkStore.refresh();
+    const futureSettings = wortwerkStore.getSnapshot().docs.find(doc => doc.key === "settings" && doc.schemaVersion > 1);
+    if (futureSettings) { setPersonal(previous => ({ ...previous, issues: ["Please update the app before changing pack settings."] })); return; }
+    const personalKey = `personal.pack.${id}`;
+    const document = wortwerkStore.getDoc<{ schemaVersion?: unknown; enabledForTesting?: unknown; pack?: unknown }>(personalKey);
+    const personalEnvelope = wortwerkStore.getSnapshot().docs.find(doc => doc.key === personalKey);
+    if (personalEnvelope?.schemaVersion === 1 && document?.schemaVersion === 1 && typeof document.enabledForTesting === "boolean" && document.enabledForTesting !== enabled) {
+      wortwerkStore.setDoc(personalKey, { ...document, enabledForTesting: enabled });
+    }
     const ids = new Set(enabledPacks.map(pack => pack.pack.id));
     if (enabled) ids.add(id); else ids.delete(id);
     wortwerkStore.setDoc("settings", { ...settings, enabledPackIds: [...ids].sort() });
@@ -98,5 +132,5 @@ export function PlayProvider({ content, children }: { content: WortwerkContent; 
     if (enabledPacks.some(pack => pack.pack.id === id)) wortwerkStore.setDoc("study.pack", id);
   }
 
-  return <PlayContext.Provider value={{ packs, enabledPacks, selectedPack, scope, hydrated: state.hydrated, setPackEnabled, selectPack, refreshOverlays }}>{children}</PlayContext.Provider>;
+  return <PlayContext.Provider value={{ packs, enabledPacks, selectedPack, scope, hydrated: state.hydrated, languages, difficulties, personalIssues: personal.issues, setPackEnabled, selectPack, refreshOverlays }}>{children}</PlayContext.Provider>;
 }

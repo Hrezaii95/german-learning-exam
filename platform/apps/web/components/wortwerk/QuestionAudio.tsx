@@ -6,7 +6,7 @@ import { withPagesBaseAssetPath } from "@/lib/content/pages-base-path";
 import { stopStudyAudio } from "@/components/study/StudyAudio";
 
 /** A source-clip player. The spoken text is deliberately absent from question metadata. */
-export function QuestionAudio({ audio, playbackRate = 1 }: { audio: PackAudio; playbackRate?: number }) {
+export function QuestionAudio({ audio, playbackRate = 1, disabled = false }: { audio: PackAudio; playbackRate?: number; disabled?: boolean }) {
   const rate = Number.isFinite(playbackRate) && playbackRate >= 0.5 && playbackRate <= 2 ? playbackRate : 1;
   const element = useRef<HTMLAudioElement>(null);
   const attempt = useRef(0);
@@ -22,9 +22,13 @@ export function QuestionAudio({ audio, playbackRate = 1 }: { audio: PackAudio; p
     if (player) { player.playbackRate = rate; player.preservesPitch = true; }
   }, [rate]);
 
+  useEffect(() => {
+    if (disabled) { attempt.current += 1; element.current?.pause(); }
+  }, [disabled]);
+
   function play() {
     const player = element.current;
-    if (!player) return;
+    if (!player || disabled || state === "unavailable") return;
     const sequence = ++attempt.current;
     if (state === "playing") {
       player.pause();
@@ -60,7 +64,7 @@ export function QuestionAudio({ audio, playbackRate = 1 }: { audio: PackAudio; p
         onPause={() => { attempt.current += 1; setState("idle"); }}
         onError={() => { attempt.current += 1; setState("unavailable"); }}
       />
-      <button type="button" className="ww-button" onClick={play} disabled={state === "unavailable"}>
+      <button type="button" className="ww-button" onClick={play} disabled={disabled || state === "unavailable"}>
         {state === "unavailable" ? "Audio unavailable" : state === "playing" ? "Pause audio" : "Play audio"}
       </button>
       {audio.review === "preview" ? <span className="ww-muted">Preview voice</span> : null}

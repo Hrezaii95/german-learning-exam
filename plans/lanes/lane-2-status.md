@@ -1,19 +1,19 @@
 # Lane 2 status
 
-Updated by Lane 2 only. Lane worktree: `lane2/l2-8-authoring`. Base: `codex/live-alpha` with PR #1 documentation merged locally. Never merge to the live branch.
+Updated by Lane 2 only. Lane worktree: `lane2/l2-9-student-class-a`. Base: `codex/live-alpha` with PR #1 documentation merged locally. Never merge to the live branch.
 
 | PR | Title | State (planned / in progress / draft PR / merged / blocked) | Link | Notes |
 |---|---|---|---|---|
 | L2-1 | Pack content foundation and A1 migration | draft PR | [PR #4](https://github.com/Hrezaii95/german-learning-exam/pull/4) | Code implemented; after Lane 1 merge, A1 pack remains blocked by 11 source groups. |
-| L2-2 | Corners and Four Corners templates | draft PR | [PR #16](https://github.com/Hrezaii95/german-learning-exam/pull/16) | Implemented; production pack and release/browser gates remain open. |
-| L2-3 | Daily Run, event-derived progress and Today | draft PR | [PR #24](https://github.com/Hrezaii95/german-learning-exam/pull/24) | Implemented, including habit and dashboard embedding fixes; final release gates pending. |
-| L2-4 | Grammar and listening | draft PR | [PR #26](https://github.com/Hrezaii95/german-learning-exam/pull/26) | Six mechanics wired into Daily Run; 50 focused tests pass; final release gates pending. |
+| L2-2 | Corners and Four Corners templates | draft PR | [PR #16](https://github.com/Hrezaii95/german-learning-exam/pull/16) | Implemented; cumulative browser/export verification passes below. A1 remains external. |
+| L2-3 | Daily Run, event-derived progress and Today | draft PR | [PR #24](https://github.com/Hrezaii95/german-learning-exam/pull/24) | Implemented, including habit, narrow scopes and dashboard embedding; cumulative gates below. |
+| L2-4 | Grammar and listening | draft PR | [PR #26](https://github.com/Hrezaii95/german-learning-exam/pull/26) | Six mechanics wired into Daily Run; cumulative browser/export verification passes below. |
 | L2-5 | Speaking, reading and writing | draft PR | [PR #27](https://github.com/Hrezaii95/german-learning-exam/pull/27) | All ten mechanics integrated; self-check practice separated from mastery; 111 focused tests pass. |
 | L2-6 | Engagement, maps, story and exam | draft PR | [PR #28](https://github.com/Hrezaii95/german-learning-exam/pull/28) | Journeys, maps, timed challenges, story/exam, private deck and practice backup integrated; 98 focused tests pass. |
 | L2-7 | Book companion | draft PR | [PR #29](https://github.com/Hrezaii95/german-learning-exam/pull/29) | Book controls, confirmed position/default scope, smart filters and printing integrated; Lane 1 surface hooks remain. |
 | L2-8 | CSV authoring and preview | draft PR | [PR #30](https://github.com/Hrezaii95/german-learning-exam/pull/30) | CSV CLI, opt-in preview and shared generation-checked capability index integrated; A2 data pack included. |
 | L2-8b | Data-only A2 everyday pack | draft PR | [PR #17](https://github.com/Hrezaii95/german-learning-exam/pull/17) | Exactly ten content files, no code; all content pending review. |
-| L2-9 | Student Class A tools | in progress | — | Receipts, challenges, assignment card and personal import implemented; integration underway. |
+| L2-9 | Student Class A tools | draft PR | [PR #31](https://github.com/Hrezaii95/german-learning-exam/pull/31) | Complete cumulative Lane 2 code and evidence. All local gates except dependency audit pass; Needs Lane 3 below. |
 
 ## L2-1 implementation plan
 
@@ -44,7 +44,7 @@ The owner's latest per-slice draft PR instruction overrides the docs' single vis
 - Missing source pages and media remain absent, never guessed; pending content stays disabled by default.
 - Capability thresholds reflect available data rather than level/language identifiers, with stable deterministic output.
 
-## Gates
+## L2-1 historical gates
 
 Final verification on 2026-10-22, one command at a time. No routes or learner UI added in L2-1.
 
@@ -124,6 +124,7 @@ The data-only A2 draft independently passes schema/resource validation and 318 g
 - Call the exported book-position advance proposal/prompt from book and lesson completion surfaces. Lane 2 does not edit those pages.
 - Mount the combined Wortwerk backup bridge from the existing Settings backup flow. The owned bridge accepts legacy backups; the legacy Settings page is untouched.
 - Add the Play navigation entry when the CONTRACTS prerequisite for Lane 1 navigation integration is satisfied; the fixed routes and link contract work independently.
+- Mount "Play this sheet" through `playHref` using each existing sheet's current filters; those cheat-sheet surfaces are Lane 1-owned. Existing book/lesson actions should share the same scope and advance prompt.
 - Normal build regenerates the Lane 1-owned study dictionary from the updated source. Lane 2 restores that generated file before staging its own slice.
 
 ## L2-4 integration verification
@@ -155,3 +156,49 @@ Needs Lane 1: mount the exported advance proposal/prompt on book/lesson surfaces
 CSV authoring validates and previews before create-only writes, preserves explicit book references, and marks imported content pending. The interactive authoring route requires WORTWERK_PREVIEW=1, resets real mechanics without progress/deck writes, and its export finalizer removes disabled preview artifacts before hashing. The build loader, CLI and browser now share the actual generated-template registry, formats, assessment and per-template minima. The prior static predicate index remains a compatible foundation API.
 
 Included the separately published, exactly-ten-content-file A2 reuse pack (PR #17); its generated capability index is refreshed for the shared registry. Pack validation passes: 40 items, 39 playable templates, pending/off by default. Root focused Wortwerk suite: 38 files / 324 tests pass; an additional installed-inventory test generates and grades every enabled task without pack/language branching. All three root typechecks and lint pass. Preview physical exclusion and browser proof remain to be verified against the final export. The unresolved A1 groups remain listed above; the A2 pack does not replace that migration.
+
+## L2-9 integration verification
+
+Personal CSV packs restore through installed profiles, stay pending/off without explicit opt-in, retain teacher overlays and quarantine unsupported newer personal content. Same-timestamp LWW winners refresh the selected content. Valid opened assignment links add a Today task through an idempotent effect; raw answers and assignment completion remain event-derived. Completed, unskipped results offer a checksum receipt on request, explicitly self-reported rather than verified. Blitz challenge links validate exact pack/scope/difficulty and expose a target; sharing is explicit and base-path aware. Teacher creation/receipts dashboards remain Lane 3.
+
+Integrated Class A/exploration regressions: 35 tests pass after explicit scope setup; agent Class A flow/challenge/Run batch: 38 tests pass. Expanded browser tests cover all ten mechanics, both pack choices and fresh-device backup round trips. Review fixed typed Error Hunt, full-source dictation transcripts, stale assessment caches, personal-document revision identity and competing recorder/source audio. All focused regressions for those fixes pass. Single-item Blitz now continues until time/strikes or the documented finite 200-task cap, rather than stopping after two cards. Full release gates run next, one at a time; nothing is marked ready or merged.
+
+## Final integrated release verification
+
+The first integrated full check passed 153 files / 1,620 tests and the separate 130-file / 1,149-test web rerun, with all typechecks, lint, publication and pack validation passing. Standalone pack validation also passed for the 40-item, 39-template pending A2 pack.
+
+The first full browser run against the local Pages export completed: 151 passed, 14 failed. All existing learner journeys, all ten Wortwerk mechanics at 390/1280 px, and both pack-switch cases passed. The failures exposed two real issues: gender-only Run/Quick queues stopped after two identical templates, and restoring an enabled pack remounted BackupPanel and lost the success confirmation. Both fixes have focused regressions and pass the final full browser rerun below.
+
+Review also found that abandoned Runs incorrectly completed the daily Run quest/recap, and cumulative session updates crossing the 03:00 cutoff could move an earned check-in. Both are fixed. Habit check-ins now derive from positive cumulative effort on each recorded study date; canonical session completion still drives goals/rewards. UTC, Berlin and New York cutoff tests include spring/fall changes and reordered/replayed events. The focused habit/Run/panel batch passes 67 tests. A follow-up full check first stopped on an overly narrow inferred scheduler-array type; the explicit RunTask array fixes that error.
+
+Export preparation initially exhausted the host with Next's default eight workers, then encountered transient wrapper backup metadata. The unchanged wrapper completed successfully with two workers (CIRCLE_NODE_TOTAL=3), generating 1,630 pages. Preview artifacts are physically absent. The first smoke caught a host-created .rsync-tmp audio path; the unchanged smoke passed after synchronization settled. The final isolated composite below passed; earlier failed invocations remain recorded.
+
+Before the milestone closure, corrected-stack `npm run check` passed all three typechecks, lint, publication validation, 154 files / 1,632 tests and the separate 130-file / 1,156-test web rerun. Standalone pack validation and attribution passed. The earlier production dependency audit reported zero vulnerabilities; the final audit below supersedes it with a critical Next.js finding. No PR has been marked ready, merged or deployed.
+
+Coordination: [integration PR #20](https://github.com/Hrezaii95/german-learning-exam/pull/20) now contains an independently authored A1 migration candidate using exact-form/category duplicate identity. That branch is not imported here: this lane retains the owner's requested Lane 1 merge and its unchanged 11-group diagnostic above. The orchestrator should reconcile the candidate with the newer Lane 2 schema/registry during integration; no canonical rows or duplicate policy were silently changed by this continuation.
+
+Final spec review closed the pattern-milestone reward gap: Today and Map now share scoped goal derivation, source-backed profile facts/examples and an optional one-word transfer challenge. A fixed authored holdout is explicitly excluded from the learning-goal denominator, while the full map retains every token. No previous attempt may exist for an unfamiliar challenge, and candidates remain inside the current source/tag/page/item/skill filters. The click-only button opens the existing isolated Run without exposing the reserved ID or answer beforehand. Arbitrary map groups/missing source facts show an unavailable rule; ordinary practice can make the holdout familiar, which is reported honestly. Cached standalone Today keeps its supported per-item fallback. Six focused files / 50 tests pass, including generation/materialization of the actual one-item challenge.
+
+Before that milestone closure, normal production build passed (1,630 pages) and route smoke passed all 50 checks. The exact Pages composite built successfully but failed smoke on another host-created .rsync-tmp audio path. Final validation completed in an identical committed checkout outside the synchronized workspace; no audits/assertions were changed or skipped.
+
+### Final gate results, 2026-10-22
+
+Validated source: remote commit `7bfcd83b3fed274e9fa20c578824e4432ee05b60`, local equivalent `d88ff6c2`, exact tree `6459244d2bec303eafe8530c19096e3f17f62400`. Commands ran one at a time from `/tmp/wortwerk-release/platform` (attribution from its repo root), using the existing installed dependencies and temporary tsx IPC launcher adapter. Builds used two workers. Subsequent changes contain only this status and release evidence.
+
+| Gate | Final result | Evidence |
+|---|---|---|
+| `npm run check` | PASS | All typechecks/lint/publication; 156 files / 1,641 tests; separate web rerun 131 files / 1,160 tests. |
+| `npm run packs:validate` | PASS | A2: 40 items / 39 playable templates; pending and off by default. |
+| `npm run test:e2e` | PASS | 165 / 165, zero retries; all ten mechanics, both packs, backup twice into a clean device, Run/Quick via tap/keyboard/drag at 390/1280 px. |
+| `npm run build:web` | PASS | 1,630 pages. |
+| `npm run smoke:web-routes` | PASS | 50 checks. |
+| `npm run gates:pages` | PASS | Exact composite; 139-route manifest, 27,360 files scanned, 38 HTTP routes plus assets/404/game markers; learner-language zero findings; offline 192 files / 43 navigation routes; 722 word-card routes and 989/989 forms with audio. All eleven learner Play routes exist; zero preview artifacts. |
+| `node tools/audit-attribution.mjs` | PASS | Zero failures. |
+| `npm run audit:prod` | FAIL — Needs Lane 3 | Installed Next 16.3.8; one critical dependency finding with the two advisories below. Earlier zero-result audit is superseded. |
+| 390 px release capture | PASS | Real local-export Daily Run; question/feedback/results inspected. Reload preserves streak 1 and full-Run goal 1; Today has no horizontal overflow at 360/390/430/768 px. |
+
+Raw command logs, three full-page screenshots and reproduction notes: [Wortwerk release evidence](../../research/release-evidence/wortwerk/README.md). Browser/export proof is local, not a claim of CI or live deployment acceptance. All ten slice PRs remain open drafts into `codex/live-alpha`; none was merged.
+
+## Needs Lane 3
+
+Final `audit:prod` fails for `next@16.3.8`: [GHSA-2464-fhr4-w9xw](https://github.com/advisories/GHSA-2464-fhr4-w9xw) and [GHSA-p3m5-59mp-jv5r](https://github.com/advisories/GHSA-p3m5-59mp-jv5r). The [vendor security update](https://nextjs.org/blog/nextjs-security-update-october-14-2026) identifies 16.4.1 as patched; npm currently proposes 16.4.2. Lane 3 owns dependencies, lockfile and Next configuration. Apply an approved security update there and rerun the release gates during integration. Lane 2 did not alter those files or run an automatic force upgrade.

@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import type { ContentPack, DifficultyProfile, LanguageProfile, PackItem } from "../../packages/content/src/types/packs.js";
+import type { ContentPack, DifficultyProfile, LanguageProfile, PackItem, PackLexeme } from "../../packages/content/src/types/packs.js";
 import profileData from "../fixtures/languages/xx.json";
 import fixture from "../fixtures/packs/de-b2-sample/pack.json";
 import fixtureItems from "../fixtures/packs/de-b2-sample/items/all.json";
@@ -114,6 +114,18 @@ describe("Wortwerk literacy templates", () => {
         expect(gradeLiteracyTask(task, "Søl", profile).outcome).toBe("correct");
         expect(gradeLiteracyTask(task, "søl", profile).correct).toBe(false);
         expect(gradeLiteracyTask(task, "Soel", profile).outcome).toBe("almost");
+    });
+    it("grades the full authored source-clip transcript instead of dropping its spoken article", () => {
+        const source = pack.items.find((item): item is PackLexeme => item.type === "lexeme" && !!item.audio?.text && item.audio.text !== item.lemma)!;
+        const task = generate("write.dictation", source)!;
+        expect(task.solution.accepted).toEqual([source.audio!.text]);
+        expect(task.question.audio?.text).toBeUndefined();
+        expect(JSON.stringify(task.question)).not.toContain(source.audio!.text);
+        expect(gradeLiteracyTask(task, source.audio!.text!, profile)).toMatchObject({ correct: true, hinted: false });
+        expect(gradeLiteracyTask(task, source.lemma, profile).correct).toBe(false);
+        expect(task.feedback.answer).toBe(source.audio!.text);
+        const withoutTranscript = { ...source, audio: { src: source.audio!.src, review: source.audio!.review } };
+        expect(generate("write.dictation", withoutTranscript)!.solution.accepted).toEqual([source.lemma]);
     });
     it("balances reading choice positions across1000 deterministic tasks", () => {
         const count = [0, 0];

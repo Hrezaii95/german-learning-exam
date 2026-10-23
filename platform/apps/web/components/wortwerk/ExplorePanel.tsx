@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import type { PackItem } from "../../../../packages/content/src/types/packs.js";
-import { objectiveDimensions } from "../../../../packages/learning/src/wortwerk/progress.js";
 import type { ItemProgress } from "../../../../packages/learning/src/wortwerk/types.js";
 import { calendarDate, calendarDaysBetween, isCalendarDate } from "../../../../packages/learning/src/wortwerk/dates.js";
 import { createDailyReminderIcs, deriveBadges, deriveCollection, deriveQuests, deriveReadiness, deriveSkillStrength, deriveUnitProgress, deriveWeeklyRecap, type SkillStrength } from "../../../../packages/learning/src/wortwerk/engagement-depth.js";
@@ -17,7 +16,9 @@ import { wortwerkStore } from "@/lib/wortwerk/store";
 import { useWortwerkState } from "@/lib/wortwerk/use-wortwerk";
 import { usePlayContent } from "./PlayProvider";
 import { ProgressSummary } from "./ProgressSummary";
-import { InvestmentPanel } from "./PersonalDeck";
+import { BackupPanel } from "./BackupPanel";
+import { PersonalDeck } from "./PersonalDeck";
+import { MilestonePanel } from "./MilestonePanel";
 
 export type ExploreView = "map" | "journey" | "skills" | "progress";
 const titles: Record<ExploreView, string> = { map: "Your map", journey: "Your journey", skills: "Practice by skill", progress: "Your learning" };
@@ -36,7 +37,10 @@ function downloadText(value: string, name: string, type: string) {
 
 export function ExplorePanel({ view }: { view: ExploreView }) {
   const content = usePlayContent();
-  return content?.selectedPack ? <ExploreContent key={`${content.selectedPack.pack.id}:${view}`} view={view} selected={content.selectedPack} scope={content.scope} /> : <div className="ww-page"><section className="ww-panel"><h1>{titles[view]}</h1><p>Choose an enabled content pack to explore your practice.</p><Link className="ww-button" href="/play/packs">Choose a pack</Link></section></div>;
+  return <>
+    {content?.selectedPack ? <ExploreContent key={`${content.selectedPack.pack.id}:${view}`} view={view} selected={content.selectedPack} scope={content.scope} /> : <div className="ww-page"><section className="ww-panel"><h1>{titles[view]}</h1><p>Choose an enabled content pack to explore your practice.</p><Link className="ww-button" href="/play/packs">Choose a pack</Link></section></div>}
+    {view === "progress" ? <div className="ww-page"><BackupPanel /></div> : null}
+  </>;
 }
 function ExploreContent({ view, selected, scope }: { view: ExploreView; selected: PlayPack; scope: PlayScope }) {
   const capabilities = useMemo(() => playableCapabilities(selected.pack, selected.language, selected.difficulty, scope), [selected, scope]);
@@ -53,9 +57,8 @@ function ExploreContent({ view, selected, scope }: { view: ExploreView; selected
       if (!cell.items.some(entry => entry.id === item.id)) cell.items.push(item);
       groups.set(key, cell);
     }
-    return [...groups.values()].map(cell => { const goalItems = cell.items.filter(item => { const record = progress.get(item.id); return record && objectiveDimensions(record).length > 0; }); return { ...cell, goalItems, mapId: map.id, complete: goalItems.filter(item => progress.get(item.id)?.complete).length }; });
+    return [...groups.values()].map(cell => ({ ...cell, mapId: map.id }));
   });
-  const next = cells.filter(cell => cell.goalItems.length > 0 && cell.complete < cell.goalItems.length).sort((a, b) => (a.goalItems.length - a.complete) - (b.goalItems.length - b.complete) || b.complete - a.complete)[0];
   const units = deriveUnitProgress(selected.pack, state.progress);
   const skills = deriveSkillStrength(capabilities, state.progress);
   const cards = deriveCollection(selected.pack, state.answers, state.progress, selected.difficulty, state.now);
@@ -82,7 +85,7 @@ function ExploreContent({ view, selected, scope }: { view: ExploreView; selected
 
   return <div className="ww-page"><header className="ww-page-heading"><p className="ww-eyebrow">{selected.pack.cefr} · {selected.pack.title}</p><h1>{titles[view]}</h1><nav className="ww-actions" aria-label="Wortwerk views">{(["map", "journey", "skills", "progress"] as const).map(name => <Link key={name} className="ww-button" href={`/play/${name}`} aria-current={name === view ? "page" : undefined}>{titles[name]}</Link>)}<Link className="ww-button" href="/play">Today</Link></nav></header>
     {view === "map" ? <>
-      <section className="ww-panel"><h2>Next milestone</h2>{next ? <><h3>{next.title}</h3><p>{next.complete} / {next.goalItems.length} complete · {next.goalItems.length - next.complete} more to complete this cell.</p><Link className="ww-button" href={playHref({ ...scope, items: next.goalItems.filter(item => !progress.get(item.id)?.complete).map(item => item.id) }, { pack: selected.pack.id })}>Practise this pattern</Link></> : <p>{cells.length ? "Mapped objective milestones are complete. Self-check practice remains available on its tokens." : "Start one short session. Each supported dimension will appear on its token."}</p>}</section>
+      <section className="ww-panel"><MilestonePanel selected={selected} scope={scope} capabilities={capabilities} progress={state.progress} answers={state.answers} now={state.now} headingLevel={2} /></section>
       {selected.pack.maps.map(map => <section key={map.id} className="ww-panel"><h2>{map.title}</h2><p className="ww-muted">Each token shows its supported dimensions. Secured milestones stay filled; a due dot marks a review.</p><div className="ww-stats">{cells.filter(cell => cell.mapId === map.id).map(cell => <section key={cell.id}><h3>{cell.title}</h3>{cell.items.map(item => <MapToken key={item.id} item={item} progress={progress.get(item.id)} selected={selected} scope={scope} />)}</section>)}</div>{!cells.some(cell => cell.mapId === map.id) ? <p>No items in the current scope match this authored map.</p> : null}</section>)}
       {!selected.pack.maps.length ? <section className="ww-panel"><p>This pack has no authored map yet.</p></section> : null}
     </> : null}
@@ -90,7 +93,7 @@ function ExploreContent({ view, selected, scope }: { view: ExploreView; selected
     {view === "skills" ? <section className="ww-panel"><h2>Separate skills, from your evidence</h2>{skills.filter(skill => skill.assessment !== "self").length >= 3 ? <SkillsRadar skills={skills.filter(skill => skill.assessment !== "self")} /> : null}<div className="ww-stats">{skills.map(skill => <section key={skill.skill}><h3>{selected.language.grammarLabels[skill.skill] ?? skill.skill}</h3>{skill.assessment === "self" ? <p>Self-check practice · {skill.practised ?? 0} {skill.practised === 1 ? "item" : "items"} practised</p> : <><p>Level {skill.level} · {skill.secured} / {skill.segments} dimensions secured</p><label>Current recall strength <progress max={1} value={skill.strength} aria-label={`${skill.skill} recall strength`} style={{ width: "100%" }} />{percent(skill.strength)}</label></>}<p><Link className="ww-button" href={playHref({ ...scope, skills: [skill.skill] }, { mode: "free", pack: selected.pack.id })}>Practise this skill</Link></p></section>)}</div>{!skills.length ? <p>No playable skill is available in the current scope.</p> : null}</section> : null}
     {view === "progress" ? <>
       <ProgressSummary />
-      <InvestmentPanel />
+      <PersonalDeck />
       <section className="ww-panel"><h2>Your last seven days</h2><p>{recap.startDate} – {recap.endDate}</p><dl className="ww-stats"><div><dt>Answers reviewed</dt><dd>{recap.answered}</dd></div><div><dt>Active days</dt><dd>{recap.activeDays} / 7</dd></div><div><dt>Daily Runs complete</dt><dd>{recap.completedRuns}</dd></div><div><dt>Listening tasks</dt><dd>{recap.listeningTasks}</dd></div></dl><button className="ww-button" type="button" onClick={() => downloadText(`My practice · ${recap.startDate}–${recap.endDate}\n${recap.answered} answers · ${recap.activeDays}/7 days · ${recap.completedRuns} Daily Runs`, "practice-week.txt", "text/plain;charset=utf-8")}>Save weekly recap</button><p className="ww-muted">Year in review will use the same saved evidence when a full year is available.</p></section>
       <section className="ww-panel"><h2>Small quests for today</h2><ul>{quests.map(quest => <li key={quest.id}>{quest.complete ? "✓ " : "○ "}{quest.title} · {quest.progress} / {quest.target}</li>)}</ul><p className="ww-muted">Extra practice is optional. The daily goal and your streak stay separate.</p></section>
       <section className="ww-panel"><h2>Your collection</h2><p>{cards.filter(card => card.collected).length} / {cards.length} cards collected through unhinted retrieval.</p><div className="ww-stats">{cards.filter(card => card.collected).map(card => <article key={card.item.id} style={{ border: "1px solid var(--line, #e4ddd2)", borderStyle: card.rarity === "legendary" ? "double" : card.rarity === "rare" ? "dashed" : card.rarity === "uncommon" ? "dotted" : "solid", borderRadius: ".75rem", padding: ".75rem" }}><h3 lang={selected.language.locale}>{itemLabel(card.item)}</h3>{card.item.image ? <img src={withPagesBaseAssetPath(card.item.image)} width={100} height={100} alt="" loading="lazy" style={{ maxWidth: "100%", objectFit: "contain" }} /> : null}<p>{card.item.meaning}</p><p className="ww-muted">{card.rarity} · {card.gold ? "Gold" : card.complete ? "Complete" : "Learning"}</p>{safeSourceHref(card.item.sourceRef?.href) ? <Link href={safeSourceHref(card.item.sourceRef?.href)!}>Open source card</Link> : null}</article>)}</div><h3>Badges and titles</h3>{badges.length ? <ul>{badges.map(entry => <li key={entry.badge.id}><strong>{entry.earned ? "✓ " : "○ "}{entry.badge.title}</strong> · {entry.current} / {entry.target}{entry.badge.description ? <p>{entry.badge.description}</p> : null}{entry.titleAward ? <p>Title earned: {entry.titleAward}</p> : null}</li>)}</ul> : <p className="ww-muted">This pack has no authored badges yet.</p>}</section>
