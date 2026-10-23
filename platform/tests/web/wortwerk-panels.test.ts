@@ -42,14 +42,18 @@ function task(itemId: string, format: GeneratedTask["format"] = "recall"): Gener
 let store: WortwerkStore;
 let now: Date;
 const clock = { value: new Date() };
+// Pinned: the eligible-task count changes with the calendar date (Lane 2 follow-up),
+// so a wall-clock "now" made this suite pass or fail depending on when it ran.
+const FIXED_NOW = new Date("2026-10-22T17:00:00Z");
 beforeEach(() => {
+  vi.useFakeTimers({ toFake: ["Date"] }); vi.setSystemTime(FIXED_NOW);
   now = new Date(); clock.value = now;
   const values = new Map<string, string>();
   store = createWortwerkStore({ getItem: key => values.get(key) ?? null, setItem: (key, value) => { values.set(key, value); } }, { now: () => clock.value, deviceId: "panel-device" });
   holder.store = store;
   store.setDoc("study.scope", { v: 1 });
 });
-afterEach(() => { cleanup(); vi.restoreAllMocks(); });
+afterEach(() => { cleanup(); vi.restoreAllMocks(); vi.useRealTimers(); });
 function panels() { return createElement(Fragment, null, createElement(TodayPanel), createElement(ProgressSummary)); }
 function evidence(itemId: string, daysAgo: number, format: GeneratedTask["format"] = "recall") {
   const at = new Date(now); at.setUTCDate(at.getUTCDate() - daysAgo); clock.value = at;
