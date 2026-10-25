@@ -456,8 +456,8 @@ describe("P3A shell accessibility and responsive contract", () => {
   it("defines deliberate desktop/tablet/mobile navigation breakpoints", () => {
     // L1-9 reference breakpoints: desktop ≥1050, tablet 760–1049, mobile <760.
     expect(css).toMatch(/@media screen and \(min-width:\s*1050px\)/);
-    expect(css).toMatch(/@media screen and \(min-width:\s*760px\) and \(width < 1050px\)/);
-    expect(css).toMatch(/@media screen and \(width < 760px\)/);
+    expect(css).toMatch(/@media screen and \(min-width:\s*760px\) and \(width\s*<\s*1050px\)/);
+    expect(css).toMatch(/@media screen and \(width\s*<\s*760px\)/);
     expect(css).toContain("shell-rail");
     expect(css).toContain("shell-topnav");
     expect(css).toContain("shell-bottomnav");

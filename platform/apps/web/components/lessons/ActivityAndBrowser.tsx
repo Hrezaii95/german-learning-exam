@@ -28,12 +28,6 @@ import {
   LessonJourneyVisual,
 } from "@/components/media/InstructionalVisuals";
 import { getEnrichedActivity } from "@/lib/content/enrichment-client";
-import {
-  isPracticeGameId,
-  practiceCanonicalPath,
-  type PracticeGameId,
-} from "@/lib/games";
-import { gameTitle } from "@/components/games/GameSelector";
 import { ActivityInteraction } from "@/components/activities";
 import {
   RapidGreetingsSection,
@@ -388,27 +382,11 @@ export function ActivityScreen({
       {enrichment ? (
         <section className="panel" aria-labelledby="activity-tools-heading">
           <h2 id="activity-tools-heading">More practice</h2>
-          {(() => {
-            const practiceLinks = enrichment.gameEligibility.filter(
-              (game) =>
-                isPracticeGameId(game.gameId) &&
-                (game.state === "ready" || game.state === "partial"),
-            );
-            return practiceLinks.length > 0 ? (
-              <div className="meta-row">
-                {practiceLinks.map((game) => (
-                  <Link
-                    key={game.gameId}
-                    className="btn btn-secondary"
-                    href={practiceCanonicalPath(game.gameId as PracticeGameId)}
-                  >
-                    {gameTitle(game.gameId as PracticeGameId)}
-                  </Link>
-                ))}
-              </div>
-            ) : null;
-          })()}
-          <p style={{ marginTop: "1rem" }}><Link className="btn btn-primary" href="/practice">Open practice games</Link></p>
+          <p>Recall selected words and use lesson quizzes in Practice, or choose a content pack in Play.</p>
+          <div className="meta-row">
+            <Link className="btn btn-primary" href={appendNavigationContext("/practice", outbound)}>Open course practice</Link>
+            <Link className="btn btn-secondary" href="/play" prefetch={false}>Open Play</Link>
+          </div>
         </section>
       ) : null}
     </div>

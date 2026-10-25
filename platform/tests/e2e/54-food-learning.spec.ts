@@ -30,9 +30,21 @@ test("food prints the chosen compound and live case map",async({page},info)=>{
   await compound.selectOption("1");
   const result=page.locator(".food-compound");
   const text=await result.innerText();
+  const terms=result.locator(":scope > div > strong");
+  const labels=result.locator(":scope > div > small");
+  const selectedTerms=["der Apfel","der Saft","der Apfelsaft"];
+  const teachingLabels=["DESCRIBES THE KIND","CHOOSES THE ARTICLE","THE NEW WORD"];
+  await expect(terms).toHaveText(selectedTerms,{useInnerText:true});
+  await expect(labels).toHaveText(teachingLabels,{useInnerText:true});
+  const section=page.locator("#food-compounds");
+  await expect(section.locator(".study-save")).toHaveCount(1);
   await printLiveSheet(page,info,"food",async()=>{
     await expect(result).toBeVisible();
-    await expect(result).toContainText(text);
+    for(const leaf of await result.locator(":scope > div > strong, :scope > div > small").all())await expect(leaf).toBeVisible();
+    await expect(terms).toHaveText(selectedTerms,{useInnerText:true});
+    await expect(labels).toHaveText(teachingLabels,{useInnerText:true});
+    await expect(compound).toBeHidden();
+    for(const control of await section.locator(".study-save,.study-audio,.study-audio-button").all())await expect(control).toBeHidden();
     await expect(page.locator(".food-case-map")).toBeVisible();
   });
   await expect(compound).toHaveValue("1");

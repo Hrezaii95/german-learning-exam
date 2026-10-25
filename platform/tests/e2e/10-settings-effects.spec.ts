@@ -1,7 +1,7 @@
 import { expect, test } from "@playwright/test";
 import { gotoApp, readLearnerState, waitForLearnerState } from "./support/app";
 import { activityById } from "./support/content";
-import { playPracticeGame } from "./support/journeys";
+import { completeGradedActivity, startActivity } from "./support/journeys";
 
 /**
  * Journey 10 — change audio speed and timezone, and prove each one reaches the
@@ -108,13 +108,22 @@ test.describe("journey 10 · settings reach the surfaces that consume them", () 
   test("timezone changes the calendar day the dashboard reports a badge on", async ({
     page,
   }) => {
-    // Earn a badge so there is a date to compute.
-    await gotoApp(page, "/practice/article-choice");
+    // Earn actual course evidence through its graded UI, independently of retired games.
+    const activity = activityById("activity:lesson-02-core-professions");
+    await gotoApp(page, activity.canonicalPath);
     await waitForLearnerState(page);
-    await playPracticeGame(page, "article-choice");
-    await expect
-      .poll(async () => (await readLearnerState(page))?.events.length ?? 0)
-      .toBe(1);
+    await startActivity(page);
+    const completion = await completeGradedActivity(page);
+    expect(completion).toMatch(/You completed all \d+ source-backed questions?\./);
+    await expect(page.locator(".journey-status")).toContainText("Status: Completed");
+    await expect.poll(async () => (await readLearnerState(page))?.events.some(event =>
+      event.kind === "objectiveAttempt" && event.activityId === activity.id &&
+      event.conceptId === "lex:architekt" && event.graderOutcome === "correct",
+    ) ?? false).toBe(true);
+    expect((await readLearnerState(page))?.activityProgress).toContainEqual(expect.objectContaining({
+      activityId: activity.id,
+      progressState: "completed",
+    }));
 
     const readBadgeDate = async (): Promise<string> => {
       await gotoApp(page, "/");
