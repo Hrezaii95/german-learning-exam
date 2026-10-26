@@ -1,0 +1,48 @@
+# One-off smoke test of the Google Cloud secrets. Runs only on this branch;
+# prints HTTP status codes and model output, never the keys.
+name: Smoke GCP secrets
+on:
+  push:
+    branches: [smoke/gcp-secrets]
+permissions:
+  contents: read
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    env:
+      GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+      GCP_SERVICE_ACCOUNT: ${{ secrets.GCP_SERVICE_ACCOUNT }}
+      GOOGLE_TTS_API_KEY: ${{ secrets.GOOGLE_TTS_API_KEY }}
+      VERTEX_API_KEY: ${{ secrets.VERTEX_API_KEY }}
+      GCP_VERTEX_MODEL: ${{ secrets.GCP_VERTEX_MODEL }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+    steps:
+      - name: Secrets present
+        run: |
+          for name in GCP_PROJECT_ID GCP_SERVICE_ACCOUNT GOOGLE_TTS_API_KEY VERTEX_API_KEY GCP_VERTEX_MODEL GEMINI_API_KEY; do
+            if [ -n "${!name}" ]; then echo "$name: set"; else echo "$name: MISSING"; fi
+          done
+          echo "Vertex model: $GCP_VERTEX_MODEL"
+      - name: Cloud TTS de-DE
+        run: |
+          code=$(curl -s -o tts.json -w '%{http_code}' -X POST "https://texttospeech.googleapis.com/v1/text:synthesize?key=$GOOGLE_TTS_API_KEY" \
+            -H 'Content-Type: application/json' \
+            -d '{"input":{"text":"Guten Tag! Ich heiße Sara und komme aus Spanien."},"voice":{"languageCode":"de-DE","name":"de-DE-Neural2-C"},"audioConfig":{"audioEncoding":"MP3"}}')
+          echo "TTS HTTP $code"
+          if [ "$code" = 200 ]; then jq -r .audioContent tts.json | base64 -d > tts.mp3; echo "MP3 bytes: $(stat -c%s tts.mp3)"; else jq -c '.error | {code,status,message}' tts.json; fi
+          curl -s "https://texttospeech.googleapis.com/v1/voices?languageCode=de-DE&key=$GOOGLE_TTS_API_KEY" | jq -r '[.voices[]?.name] | length as $n | "de-DE voices available: \($n)"'
+      - name: Vertex Gemini (credit-backed)
+        run: |
+          body='{"contents":[{"role":"user","parts":[{"text":"Korrigiere diesen A1-Satz kurz auf Deutsch und erkläre den Fehler auf Englisch in einem Satz: Ich komme aus der Spanien."}]}]}'
+          code=$(curl -s -o vx.json -w '%{http_code}' -X POST "https://aiplatform.googleapis.com/v1/publishers/google/models/$GCP_VERTEX_MODEL:generateContent?key=$VERTEX_API_KEY" -H 'Content-Type: application/json' -d "$body")
+          echo "Vertex HTTP $code"
+          if [ "$code" = 200 ]; then jq -r '.candidates[0].content.parts[0].text' vx.json | head -c 600; echo; jq -c .usageMetadata vx.json; else jq -c '.error | {code,status,message}' vx.json 2>/dev/null || head -c 400 vx.json; fi
+      - name: Gemini AI Studio (no credit)
+        run: |
+          code=$(curl -s -o gm.json -w '%{http_code}' "https://generativelanguage.googleapis.com/v1beta/models?key=$GEMINI_API_KEY")
+          echo "AI Studio list-models HTTP $code"
+          [ "$code" = 200 ] || jq -c '.error | {code,status,message}' gm.json
+      - name: Key scope check (TTS key must not open Vertex)
+        run: |
+          code=$(curl -s -o /dev/null -w '%{http_code}' -X POST "https://aiplatform.googleapis.com/v1/publishers/google/models/$GCP_VERTEX_MODEL:generateContent?key=$GOOGLE_TTS_API_KEY" -H 'Content-Type: application/json' -d '{"contents":[{"role":"user","parts":[{"text":"hi"}]}]}')
+          echo "TTS key on Vertex: HTTP $code (expect 403 = correctly restricted)"
