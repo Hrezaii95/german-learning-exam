@@ -6,6 +6,7 @@
     "prestart": "node scripts/ensure-audio.js",
     "start": "npx --yes serve . -p 3456",
     "open": "start http://localhost:3456/web/",
-    "study": "npm run prestart && npx --yes serve . -p 3456"
+    "study": "npm run prestart && npx --yes serve . -p 3456",
+    "test:agent-kit": "node --test agent-kit/tests/classify.test.mjs agent-kit/tests/worker.test.mjs agent-kit/tests/gate-e2e.test.mjs"
   }
 }

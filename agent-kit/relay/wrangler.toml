@@ -1,0 +1,21 @@
+# Reference config. The normal path is deploying through the Cloudflare API
+# connector (see agent-kit/relay/DEPLOY.md); this file is only needed if you
+# ever deploy by hand with `npx wrangler deploy` from this folder.
+name = "claude-approval-relay"
+main = "worker.js"
+compatibility_date = "2026-10-01"
+workers_dev = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "claude-approval-relay"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+
+# Not secret: your numeric Telegram user id (DM the bot /whoami).
+[vars]
+TELEGRAM_OWNER_ID = "REPLACE_WITH_YOUR_TELEGRAM_USER_ID"
+
+# Secrets — set in the dashboard (Worker > Settings > Variables and Secrets)
+# or with `npx wrangler secret put <NAME>`; never commit them:
+#   TELEGRAM_BOT_TOKEN
+#   RELAY_SECRET

@@ -1,0 +1,54 @@
+{
+  "permissions": {
+    "deny": [
+      "mcp__composio"
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "NODE_USE_ENV_PROXY=1 NODE_NO_WARNINGS=1 node \"$CLAUDE_PROJECT_DIR/.claude/hooks/session-check.mjs\"",
+            "timeout": 45
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash|Edit|Write|MultiEdit|NotebookEdit|mcp__.*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "NODE_USE_ENV_PROXY=1 NODE_NO_WARNINGS=1 node \"$CLAUDE_PROJECT_DIR/.claude/hooks/approval-gate.mjs\"",
+            "timeout": 660
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "NODE_USE_ENV_PROXY=1 NODE_NO_WARNINGS=1 node \"$CLAUDE_PROJECT_DIR/.claude/hooks/notify.mjs\"",
+            "timeout": 15
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "NODE_USE_ENV_PROXY=1 NODE_NO_WARNINGS=1 node \"$CLAUDE_PROJECT_DIR/.claude/hooks/notify.mjs\"",
+            "timeout": 15
+          }
+        ]
+      }
+    ]
+  }
+}

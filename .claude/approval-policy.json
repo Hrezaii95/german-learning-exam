@@ -1,0 +1,23 @@
+{
+  "_readme": "Read by .claude/hooks/approval-gate.mjs. Agents cannot change this file without your Telegram approval. Entries are exact addresses (support@name.am) or exact domains (@name.am). '@*.example.com' also matches subdomains. Anything not listed needs your approval.",
+  "email": {
+    "self": [],
+    "support": []
+  },
+  "driveShare": {
+    "allowSelf": true
+  },
+  "approval": {
+    "timeoutSeconds": 600,
+    "fallbackWhenRelayMissing": "deny",
+    "topicMode": "project"
+  },
+  "money": {
+    "_readme": "Payment detection is built in (see .claude/hooks/lib/classify.mjs DEFAULT_MONEY). Add your own regex patterns here; they can only add checks, never remove them.",
+    "extraBashPatterns": [],
+    "extraToolNamePatterns": [],
+    "extraBrowserToolPatterns": [],
+    "extraBrowserInputPatterns": [],
+    "extraCloudflareInputPatterns": []
+  }
+}
